@@ -1,0 +1,1555 @@
+[
+ {
+  "body_hash": "847df69c95a31761",
+  "first_seen": "2026-10-26",
+  "handle": "caffe-del-sol",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/DS1.png?v=1745505972",
+  "platform": "shopify",
+  "product_id": "10713803078",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Espresso",
+   "Light-Medium Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "Caffe Del Sol",
+  "url": "https://caffevita.com/products/caffe-del-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "42757389091046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "42757459902694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "42757459935462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42757459968230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "42757460000998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "42757460033766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "42757460066534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "42757460099302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "42757460132070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42757460164838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "42757460197606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "42757460230374"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "38fb7cd4c2f65f8a",
+  "first_seen": "2026-10-26",
+  "handle": "bistro-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/Bistro.png?v=1745509559",
+  "platform": "shopify",
+  "product_id": "10720290566",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Medium Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "Bistro Blend",
+  "url": "https://caffevita.com/products/bistro-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228681117773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228681216077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228681248845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228681314381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228681412685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228681445453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "43567343665382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "43567343698150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "43567343730918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "43567343763686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "43567343796454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "43567343829222"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "758777b6dae4c2c5",
+  "first_seen": "2026-10-26",
+  "handle": "caffe-luna",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/Luna.png?v=1745509453",
+  "platform": "shopify",
+  "product_id": "10720545094",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Caffe Luna",
+  "url": "https://caffevita.com/products/caffe-luna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228681674829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228681740365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228681773133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228681805901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228681838669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228681871437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228681936973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228681969741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228682002509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228682035277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "43567349334246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "43567349367014"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "8d5ba8d01f105113",
+  "first_seen": "2026-10-26",
+  "handle": "queen-city",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/QC.png?v=1745509540",
+  "platform": "shopify",
+  "product_id": "10743412870",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Medium-Dark Roast",
+   "Post-Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "Queen City",
+  "url": "https://caffevita.com/products/queen-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228682068045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228682100813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228682133581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228682166349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228682199117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228682231885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228682264653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228682297421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228682330189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228682362957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228682395725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228682428493"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "05e635b618432898",
+  "first_seen": "2026-10-26",
+  "handle": "novacella-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/Nova.png?v=1745509684",
+  "platform": "shopify",
+  "product_id": "10743461830",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Medium-Dark Roast",
+   "coffee",
+   "decaf"
+  ],
+  "title": "Novacella Decaf",
+  "url": "https://caffevita.com/products/novacella-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228683018317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228683083853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228683182157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228683247693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228683313229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228683378765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228683477069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228683542605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228683608141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228683673677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228683739213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228683804749"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "845f8aa523ad960e",
+  "first_seen": "2026-10-26",
+  "handle": "theo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/Theo.png?v=1745509431",
+  "platform": "shopify",
+  "product_id": "10743897286",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Medium-Dark Roast",
+   "blend",
+   "coffee",
+   "organic"
+  ],
+  "title": "Theo Blend",
+  "url": "https://caffevita.com/products/theo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228685410381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228685443149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228685475917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228685508685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228685541453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228685574221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228685606989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228685639757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228685672525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228685705293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228685738061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228685770829"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "3950011ddfe849db",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/OE.png?v=1745509586",
+  "platform": "shopify",
+  "product_id": "10744052422",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Espresso",
+   "Fiore",
+   "Light-Medium Roast",
+   "blend",
+   "coffee",
+   "organic"
+  ],
+  "title": "Organic Fiore Espresso",
+  "url": "https://caffevita.com/products/organic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228685803597"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228685836365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228685869133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228685901901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228685934669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228685967437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228686000205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228686032973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228686065741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228686098509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228686131277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228686164045"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "f7d516f50cdb0cac",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/OF.png?v=1745509625",
+  "platform": "shopify",
+  "product_id": "10750067974",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Dark Roast",
+   "Fiore",
+   "blend",
+   "coffee",
+   "organic"
+  ],
+  "title": "Organic Fiore French",
+  "url": "https://caffevita.com/products/organic-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228686196813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228686229581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228686262349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228686295117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228686327885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228686360653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228686393421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228686426189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228686458957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228686491725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228686524493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228686557261"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "351f5de3b6647a01",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo-river",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/Sumatra.png?v=1745965024",
+  "platform": "shopify",
+  "product_id": "10757529158",
+  "product_type": "Single Origin",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "5lb",
+   "Medium Roast",
+   "coffee",
+   "farm direct",
+   "organic"
+  ],
+  "title": "Organic Sumatra Gayo River",
+  "url": "https://caffevita.com/products/sumatra-gayo-river",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228686590029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228686622797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228686655565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228686688333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228686721101"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228686753869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228686786637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228686819405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228686852173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228686884941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228686917709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228686950477"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "5fe1eb42692570fb",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/OD.png?v=1745509673",
+  "platform": "shopify",
+  "product_id": "196714561542",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Medium-Dark Roast",
+   "blend",
+   "coffee",
+   "decaf",
+   "organic"
+  ],
+  "title": "Organic Fiore Decaf",
+  "url": "https://caffevita.com/products/organic-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33228688457805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228688490573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33228688523341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33228688556109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33228688588877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33228688621645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "33228688654413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "33228688687181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "33228688719949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "33228688752717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "33228688785485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "33228688818253"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "028c470f35b80809",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-1",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/17.png?v=1768327935",
+  "platform": "shopify",
+  "product_id": "4567525163085",
+  "product_type": "",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "Gift",
+   "coffee",
+   "roasters choice"
+  ],
+  "title": "Roaster's Choice Blend",
+  "url": "https://caffevita.com/products/roasters-choice-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "42863615967462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "42863616000230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "42863616032998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42863616065766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "42863616098534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "42863616131302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "45116128592102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "45116128624870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "45116128657638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "45116128690406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "45116128723174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "45116128755942"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "2f5442ff39c40839",
+  "first_seen": "2026-10-26",
+  "handle": "kexp-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/KEXP12ozQTEComm.png?v=1784141093",
+  "platform": "shopify",
+  "product_id": "4930499575885",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "KEXP",
+   "Medium Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "KEXP Blend",
+  "url": "https://caffevita.com/products/kexp-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "33337242255437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "33337242288205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "33337242320973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "33337242353741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "33337242386509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "33337242419277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "43734456631526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43734456664294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "43734456697062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "43734456729830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "43734456762598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "43734456795366"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "9904111351ef06ff",
+  "first_seen": "2026-10-26",
+  "handle": "norwester-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/NorWester12oz_Front_Ecomm.png?v=1764176606",
+  "platform": "shopify",
+  "product_id": "6700892618829",
+  "product_type": "Blend",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "5lb",
+   "Light-Medium Roast",
+   "coffee"
+  ],
+  "title": "Nor'Wester",
+  "url": "https://caffevita.com/products/norwester-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "39546156908621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "39546156941389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "39546156974157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "39546157006925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "39546157039693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour over (Kalita / V60)",
+    "variant_id": "39546157072461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "39546157105229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "39546157137997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "39546157170765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "39546157203533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "39546157236301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour over (Kalita / V60)",
+    "variant_id": "39546157269069"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "9ccf1fbb93aed36f",
+  "first_seen": "2026-10-26",
+  "handle": "rotating-single-origin-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/18.png?v=1768327833",
+  "platform": "shopify",
+  "product_id": "7757032849638",
+  "product_type": "Single Origin",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "12oz",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Roaster's Choice Single Origin",
+  "url": "https://caffevita.com/products/rotating-single-origin-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42847624167654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Coarse (French Press / Cold Brew)",
+    "variant_id": "42847624200422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Medium (Drip / Chemex)",
+    "variant_id": "42847624233190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42847624265958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Fine (AeroPress)",
+    "variant_id": "42847624298726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Pourover (Kalita / V60)",
+    "variant_id": "42847624331494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45116173943014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Espresso",
+    "variant_id": "45116173975782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Fine (AeroPress)",
+    "variant_id": "45116174008550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Pourover (Kalita / V60)",
+    "variant_id": "45116174041318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Medium (Drip / Chemex)",
+    "variant_id": "45116174074086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Coarse (French Press / Cold Brew)",
+    "variant_id": "45116174106854"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "31e0bda389a9fa63",
+  "first_seen": "2026-10-26",
+  "handle": "vita-cold-shot",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/New_PDP_template.png?v=1759784103",
+  "platform": "shopify",
+  "product_id": "8657964663014",
+  "product_type": "",
+  "roaster_slug": "caffevita",
+  "tags": [],
+  "title": "Vita Cold Shot",
+  "url": "https://caffevita.com/products/vita-cold-shot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 816,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "44914052202726"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ },
+ {
+  "body_hash": "166b402a2d25929d",
+  "first_seen": "2026-10-26",
+  "handle": "vita-cold-brew-6pk",
+  "image": "https://cdn.shopify.com/s/files/1/2097/8611/files/22_c55d6d37-2bf3-4fe4-b16c-0859f06b225b.png?v=1776103799",
+  "platform": "shopify",
+  "product_id": "9690167738598",
+  "product_type": "Cold Brew",
+  "roaster_slug": "caffevita",
+  "tags": [
+   "Cans",
+   "Cold Brew",
+   "del sol"
+  ],
+  "title": "Vita Cold Brew 6pk",
+  "url": "https://caffevita.com/products/vita-cold-brew-6pk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2209,
+    "price_usd": 24.0,
+    "title": "Classic",
+    "variant_id": "47535832760550"
+   },
+   {
+    "available": true,
+    "grams": 2209,
+    "price_usd": 24.0,
+    "title": "Nitro",
+    "variant_id": "47535832793318"
+   },
+   {
+    "available": true,
+    "grams": 2209,
+    "price_usd": 24.0,
+    "title": "Mix",
+    "variant_id": "47535832826086"
+   }
+  ],
+  "vendor": "Caffe Vita Coffee Roasting Co."
+ }
+]

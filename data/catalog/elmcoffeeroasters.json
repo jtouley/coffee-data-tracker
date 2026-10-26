@@ -1,0 +1,204 @@
+[
+ {
+  "body_hash": "633429b8d0e9e3ae",
+  "first_seen": "2026-10-26",
+  "handle": "elm-seasonal-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0011/6867/0773/files/Seamless_ElmSeasonalDecafweb_fcd1a9c4-f3dd-4cfc-ac32-bc58b5046bea.jpg?v=1728062591",
+  "platform": "shopify",
+  "product_id": "7042857074741",
+  "product_type": "Coffee",
+  "roaster_slug": "elmcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "wholesale"
+  ],
+  "title": "Elm Seasonal Decaf",
+  "url": "https://elmcoffeeroasters.com/products/elm-seasonal-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz",
+    "variant_id": "41691212316725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs",
+    "variant_id": "41691212349493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5lbs",
+    "variant_id": "41691212382261"
+   }
+  ],
+  "vendor": "Elm Coffee Roasters"
+ },
+ {
+  "body_hash": "c9308101553a2d3d",
+  "first_seen": "2026-10-26",
+  "handle": "9-swans-seasonal-coffee-2",
+  "image": "https://cdn.shopify.com/s/files/1/0011/6867/0773/files/Seamless_9_Swans_web_e46c0aa4-9510-465a-a5c9-e8b0d30c0acb.jpg?v=1728061759",
+  "platform": "shopify",
+  "product_id": "772303159349",
+  "product_type": "Coffee",
+  "roaster_slug": "elmcoffeeroasters",
+  "tags": [
+   "Retail Wholebean Coffee",
+   "Subscription",
+   "wholesale"
+  ],
+  "title": "9 Swans Seasonal Coffee",
+  "url": "https://elmcoffeeroasters.com/products/9-swans-seasonal-coffee-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz",
+    "variant_id": "31763896238133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5lbs",
+    "variant_id": "31763898728501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs",
+    "variant_id": "41585441964085"
+   }
+  ],
+  "vendor": "Elm Coffee Roasters"
+ },
+ {
+  "body_hash": "0208b69b4af68215",
+  "first_seen": "2026-10-26",
+  "handle": "danche-habtamu-fikadu-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0011/6867/0773/files/Ethiopia_DancheHabtamu_ProductTemplate_SeamlessLarge.jpg?v=1765865895",
+  "platform": "shopify",
+  "product_id": "8010530291765",
+  "product_type": "Coffee",
+  "roaster_slug": "elmcoffeeroasters",
+  "tags": [
+   "Retail Wholebean Coffee",
+   "wholesale"
+  ],
+  "title": "Danche Habtamu Fikadu",
+  "url": "https://elmcoffeeroasters.com/products/danche-habtamu-fikadu-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.5,
+    "title": "10oz",
+    "variant_id": "44852985298997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2lbs",
+    "variant_id": "44852985331765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 193.5,
+    "title": "5lbs",
+    "variant_id": "44852985364533"
+   }
+  ],
+  "vendor": "Elm Coffee Roasters"
+ },
+ {
+  "body_hash": "94e70d9bd87065ba",
+  "first_seen": "2026-10-26",
+  "handle": "jejeba-habtamu-fikadu",
+  "image": "https://cdn.shopify.com/s/files/1/0011/6867/0773/files/JejebaSeamlessLarge.jpg?v=1778180778",
+  "platform": "shopify",
+  "product_id": "8105772417077",
+  "product_type": "Coffee",
+  "roaster_slug": "elmcoffeeroasters",
+  "tags": [
+   "Retail Wholebean Coffee",
+   "wholesale"
+  ],
+  "title": "Jejeba Habtamu Fikadu",
+  "url": "https://elmcoffeeroasters.com/products/jejeba-habtamu-fikadu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.5,
+    "title": "10oz",
+    "variant_id": "45107147472949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 74.0,
+    "title": "2lbs",
+    "variant_id": "45107147505717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5lbs",
+    "variant_id": "45107147538485"
+   }
+  ],
+  "vendor": "Elm Coffee Roasters"
+ },
+ {
+  "body_hash": "7a406c5e6258a892",
+  "first_seen": "2026-10-26",
+  "handle": "nelson-fabio-cordoba-tabi",
+  "image": "https://cdn.shopify.com/s/files/1/0011/6867/0773/files/Nelson_Cordoba_Product_Large_1055c368-8b5d-4671-a9f0-32f1ea0cf558.jpg?v=1778867273",
+  "platform": "shopify",
+  "product_id": "8135005405237",
+  "product_type": "Coffee",
+  "roaster_slug": "elmcoffeeroasters",
+  "tags": [
+   "Retail Wholebean Coffee",
+   "Single Origin",
+   "wholesale"
+  ],
+  "title": "Nelson Fabio Cordoba - Tabi",
+  "url": "https://elmcoffeeroasters.com/products/nelson-fabio-cordoba-tabi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz",
+    "variant_id": "45224760672309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 79.0,
+    "title": "2lbs",
+    "variant_id": "45224760705077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 188.5,
+    "title": "5lbs",
+    "variant_id": "45224760737845"
+   }
+  ],
+  "vendor": "Elm Coffee Roasters"
+ }
+]

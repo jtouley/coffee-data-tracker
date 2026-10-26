@@ -1,0 +1,372 @@
+[
+ {
+  "body_hash": "8fa6ab0099cce14d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-guatemala-swiss-water-process",
+  "image": "https://keancoffee.com/wp-content/uploads/Decaf-Guat-rotated.jpeg",
+  "platform": "woocommerce",
+  "product_id": "10609",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Decaf Guatemala Swiss Water Process",
+  "url": "https://keancoffee.com/product/decaf-guatemala-swiss-water-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.45,
+    "title": "Decaf Guatemala Swiss Water Process",
+    "variant_id": "10609:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ac4c9eda555c7e6",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-peaberry-kuta-mill-washed-process",
+  "image": "https://keancoffee.com/wp-content/uploads/1000015844.jpg",
+  "platform": "woocommerce",
+  "product_id": "11038",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Papua New Guinea Washed",
+  "url": "https://keancoffee.com/product/papua-new-guinea-peaberry-kuta-mill-washed-process/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Papua New Guinea Washed",
+    "variant_id": "11038:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "049cd9bba6d971d6",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-natural",
+  "image": "https://keancoffee.com/wp-content/uploads/Finca_Lo_Prometido.jpg",
+  "platform": "woocommerce",
+  "product_id": "11077",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Nicaragua Natural",
+  "url": "https://keancoffee.com/product/nicaragua-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Nicaragua Natural",
+    "variant_id": "11077:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51a34e636ecf13dc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-la-bolsa-natural",
+  "image": "https://keancoffee.com/wp-content/uploads/HueHue-Natural.jpg",
+  "platform": "woocommerce",
+  "product_id": "11285",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango La Bolsa Natural",
+  "url": "https://keancoffee.com/product/guatemala-huehuetenango-la-bolsa-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Guatemala Huehuetenango La Bolsa Natural",
+    "variant_id": "11285:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4d4c784438117d0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-washed-process",
+  "image": "https://keancoffee.com/wp-content/uploads/Guji-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "11420",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Washed Process",
+  "url": "https://keancoffee.com/product/ethiopia-yirgacheffe-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Ethiopia Yirgacheffe Washed Process",
+    "variant_id": "11420:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06a6ba463623dd11",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-santa-maria-de-dota-washed",
+  "image": "https://keancoffee.com/wp-content/uploads/unnamed-4.jpg",
+  "platform": "woocommerce",
+  "product_id": "11442",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Costa Rica Santa Maria de Dota Washed",
+  "url": "https://keancoffee.com/product/costa-rica-santa-maria-de-dota-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.45,
+    "title": "Costa Rica Santa Maria de Dota Washed",
+    "variant_id": "11442:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f8a42bee29bd0ad",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh-natural",
+  "image": "https://keancoffee.com/wp-content/uploads/SumatraPic.jpg",
+  "platform": "woocommerce",
+  "product_id": "11711",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Sumatra Aceh Natural",
+  "url": "https://keancoffee.com/product/sumatra-aceh-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.45,
+    "title": "Sumatra Aceh Natural",
+    "variant_id": "11711:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62478a2067f9d300",
+  "first_seen": "2026-10-26",
+  "handle": "java-washed-process",
+  "image": "https://keancoffee.com/wp-content/uploads/java-tenjolaya-2.png",
+  "platform": "woocommerce",
+  "product_id": "11939",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Java Washed Process",
+  "url": "https://keancoffee.com/product/java-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.55,
+    "title": "Java Washed Process",
+    "variant_id": "11939:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce1938c53cb8f2ec",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-washed-process",
+  "image": "https://keancoffee.com/wp-content/uploads/MexicoMayanHarvest1.png",
+  "platform": "woocommerce",
+  "product_id": "11948",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Washed Process",
+  "url": "https://keancoffee.com/product/mexico-chiapas-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.45,
+    "title": "Mexico Chiapas Washed Process",
+    "variant_id": "11948:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf872085c31b013a",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-blossom-honey",
+  "image": "https://keancoffee.com/wp-content/uploads/coffee-blossom-honey-bees-2.jpeg",
+  "platform": "woocommerce",
+  "product_id": "726",
+  "product_type": "simple",
+  "roaster_slug": "keancoffee",
+  "tags": [
+   "Loose Leaf Teas"
+  ],
+  "title": "Coffee Blossom Honey",
+  "url": "https://keancoffee.com/product/coffee-blossom-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "12",
+    "variant_id": "726:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa31361121bf181b",
+  "first_seen": "2026-10-26",
+  "handle": "pantry-provisions-golden-mean-espresso-5-lb-bag",
+  "image": "https://keancoffee.com/wp-content/uploads/IMG_5934-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "815",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Pantry Provisions Golden Mean Espresso 5-lb bag",
+  "url": "https://keancoffee.com/product/pantry-provisions-golden-mean-espresso-5-lb-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "Pantry Provisions Golden Mean Espresso 5-lb bag",
+    "variant_id": "815:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83f8bec36279de3d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-cold-brew-blend",
+  "image": "https://keancoffee.com/wp-content/uploads/IMG_7117.jpg",
+  "platform": "woocommerce",
+  "product_id": "824",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Organic Cold Brew Blend",
+  "url": "https://keancoffee.com/product/organic-cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.25,
+    "title": "Organic Cold Brew Blend",
+    "variant_id": "824:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9fd5e253022b588",
+  "first_seen": "2026-10-26",
+  "handle": "carls-blend",
+  "image": "https://keancoffee.com/wp-content/uploads/IMG_5929.jpg",
+  "platform": "woocommerce",
+  "product_id": "833",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Carl’s Blend",
+  "url": "https://keancoffee.com/product/carls-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.25,
+    "title": "Carl&#8217;s Blend",
+    "variant_id": "833:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ccb8bfefccb3567",
+  "first_seen": "2026-10-26",
+  "handle": "golden-mean-espresso-blend",
+  "image": "https://keancoffee.com/wp-content/uploads/michael-cup.png",
+  "platform": "woocommerce",
+  "product_id": "841",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Golden Mean Espresso Blend",
+  "url": "https://keancoffee.com/product/golden-mean-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.25,
+    "title": "Golden Mean Espresso Blend",
+    "variant_id": "841:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f6421b2c84184932",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://keancoffee.com/wp-content/uploads/Swiss_Water_Primary_Blue_300.png",
+  "platform": "woocommerce",
+  "product_id": "951",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://keancoffee.com/product/decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.25,
+    "title": "Decaf Espresso",
+    "variant_id": "951:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eddfd01e33c42162",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia",
+  "image": "https://keancoffee.com/wp-content/uploads/Ethiopia-Sidama-Ardi-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "959",
+  "product_type": "variable",
+  "roaster_slug": "keancoffee",
+  "tags": [],
+  "title": "Decaf Ethiopia Sidama Natural Swiss Water Process",
+  "url": "https://keancoffee.com/product/decaf-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.45,
+    "title": "Decaf Ethiopia Sidama Natural Swiss Water Process",
+    "variant_id": "959:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

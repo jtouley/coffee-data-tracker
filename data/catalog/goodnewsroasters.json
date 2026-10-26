@@ -1,0 +1,394 @@
+[
+ {
+  "body_hash": "25301f35592a3edf",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-colombia.webp",
+  "platform": "woocommerce",
+  "product_id": "3341",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://goodnewsroasters.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Colombia",
+    "variant_id": "3341:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ed413e10f44227e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-mexico.webp",
+  "platform": "woocommerce",
+  "product_id": "3343",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Fruity &amp; Bright",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Mexico",
+  "url": "https://goodnewsroasters.com/product/mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Mexico",
+    "variant_id": "3343:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "459354bae09e6b2e",
+  "first_seen": "2026-10-26",
+  "handle": "freedom-blend",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-freedom-blend.webp",
+  "platform": "woocommerce",
+  "product_id": "3350",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Blends",
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "coffee"
+  ],
+  "title": "Freedom Blend",
+  "url": "https://goodnewsroasters.com/product/freedom-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Freedom Blend",
+    "variant_id": "3350:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0700b6d25236aed7",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-el-salvador.webp",
+  "platform": "woocommerce",
+  "product_id": "3600",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "El Salvador",
+  "url": "https://goodnewsroasters.com/product/el-salvador/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "El Salvador",
+    "variant_id": "3600:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2f4cbd663a216c0",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopia",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-ethiopia.webp",
+  "platform": "woocommerce",
+  "product_id": "3682",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Fruity &amp; Bright",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Ethiopia",
+  "url": "https://goodnewsroasters.com/product/organic-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Ethiopia",
+    "variant_id": "3682:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "737e1feffe702850",
+  "first_seen": "2026-10-26",
+  "handle": "promise-land-blend",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-promise-land-blend.png",
+  "platform": "woocommerce",
+  "product_id": "4953",
+  "product_type": "simple",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Blends",
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "coffee"
+  ],
+  "title": "Promise Land Blend",
+  "url": "https://goodnewsroasters.com/product/promise-land-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Promise Land Blend",
+    "variant_id": "4953:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca70895046c8af25",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-brazil.webp",
+  "platform": "woocommerce",
+  "product_id": "5150",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Brazil",
+  "url": "https://goodnewsroasters.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Brazil",
+    "variant_id": "5150:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4e3c1f9a800bceb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-costa-rica.webp",
+  "platform": "woocommerce",
+  "product_id": "5153",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Fruity &amp; Bright",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Costa Rica",
+  "url": "https://goodnewsroasters.com/product/costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Costa Rica",
+    "variant_id": "5153:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a695b90b28dba63",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-honduras.webp",
+  "platform": "woocommerce",
+  "product_id": "5156",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Fruity &amp; Bright",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Honduras",
+  "url": "https://goodnewsroasters.com/product/honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Honduras",
+    "variant_id": "5156:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9821fffa2b5b0417",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-papua-new-guinea.webp",
+  "platform": "woocommerce",
+  "product_id": "5159",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://goodnewsroasters.com/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Papua New Guinea",
+    "variant_id": "5159:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b09187c9ae3be3d1",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-nicaragua.webp",
+  "platform": "woocommerce",
+  "product_id": "5162",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Fruity &amp; Bright",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Nicaragua",
+  "url": "https://goodnewsroasters.com/product/nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Nicaragua",
+    "variant_id": "5162:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd33fb8b106b48c2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-decaf.webp",
+  "platform": "woocommerce",
+  "product_id": "5165",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Decaf",
+   "Organic",
+   "coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://goodnewsroasters.com/product/decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Decaf",
+    "variant_id": "5165:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4082ea5b9414442",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/10/gnr-label-v2-guatemala.webp",
+  "platform": "woocommerce",
+  "product_id": "5168",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://goodnewsroasters.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Guatemala",
+    "variant_id": "5168:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "abc841cccc29cfe1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://goodnewsroasters.com/wp-content/uploads/2026/09/bag-front-badge-ALL-ROASTS.jpg",
+  "platform": "woocommerce",
+  "product_id": "5250",
+  "product_type": "variable",
+  "roaster_slug": "goodnewsroasters",
+  "tags": [
+   "Chocolatey &amp; Nutty",
+   "Organic",
+   "Single Origins",
+   "coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://goodnewsroasters.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Sumatra",
+    "variant_id": "5250:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

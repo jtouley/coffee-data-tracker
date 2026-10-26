@@ -1,0 +1,476 @@
+[
+ {
+  "body_hash": "abf73b7773ccf305",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-lote-magnolia",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Guatemala_-_Lote_Magnolia_3x4_c6d6871b-5854-44d4-a21b-c5623193a3dc.jpg?v=1792007872",
+  "platform": "shopify",
+  "product_id": "15414732751078",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "Pour Over",
+   "Raisin",
+   "coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Guatemala - Lote Magnolia",
+  "url": "https://rainyroosterroast.com/products/guatemala-lote-magnolia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Default Title",
+    "variant_id": "67707980906726"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "d68142c9e52ace15",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-las-rosas",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Guatemala_-_Finca_Las_Rosas_3x4_6a85a7a6-5295-43c9-9218-30875492d881.jpg?v=1792007841",
+  "platform": "shopify",
+  "product_id": "15414732947686",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Drip",
+   "Fruity",
+   "Pour Over",
+   "coffee",
+   "medium-light roast",
+   "single origin"
+  ],
+  "title": "Guatemala - Finca Las Rosas",
+  "url": "https://rainyroosterroast.com/products/guatemala-finca-las-rosas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.99,
+    "title": "Default Title",
+    "variant_id": "67707981431014"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "562798d29b077644",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-juniper-peak",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Jamaica_-_Blue_Mountain_Juniper_Peak_3x4_b2894710-7443-47b7-a5d0-562ab33ba545.jpg?v=1792007810",
+  "platform": "shopify",
+  "product_id": "15414942302438",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "Full Bodied",
+   "Pour Over",
+   "coffee",
+   "medium-dark roast",
+   "single origin"
+  ],
+  "title": "Jamaica - Blue Mountain Juniper Peak",
+  "url": "https://rainyroosterroast.com/products/jamaica-blue-mountain-juniper-peak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.99,
+    "title": "Default Title",
+    "variant_id": "67708708946150"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "ab7b624299908454",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Colombia_-_Huila_Pink_Bourbon_3x4_5e0a185d-de6c-4e80-8bba-f4031e3eb5b9.jpg?v=1792098602",
+  "platform": "shopify",
+  "product_id": "15423090458854",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [],
+  "title": "Colombia - Huila Pink Bourbon",
+  "url": "https://rainyroosterroast.com/products/colombia-huila-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "67778117271782"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "00eba8510ed2b2a0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Mexico-OrganicChiapasElParaisoLabel.webp?v=1783744250",
+  "platform": "shopify",
+  "product_id": "9771048009958",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Drip",
+   "Espresso",
+   "Pour Over",
+   "coffee",
+   "medium-dark roast",
+   "single origin"
+  ],
+  "title": "Mexico Organic Chiapas El Paraiso",
+  "url": "https://rainyroosterroast.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Default Title",
+    "variant_id": "47968937509094"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "0e0dfb3761d7e013",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-3",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Kenya-NyeriGichathainiAALabel.webp?v=1783745049",
+  "platform": "shopify",
+  "product_id": "9771052335334",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Drip",
+   "Pour Over",
+   "coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Kenya Nyeri Gichathaini AA",
+  "url": "https://rainyroosterroast.com/products/kenya-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "Default Title",
+    "variant_id": "47968942751974"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "cd27487d39981786",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-3",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Tanzania-MboziSongweAALabel.webp?v=1783745307",
+  "platform": "shopify",
+  "product_id": "9771054465254",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Pour Over",
+   "coffee",
+   "medium-light roast",
+   "single origin"
+  ],
+  "title": "Tanzania Mbozi Songwe AA",
+  "url": "https://rainyroosterroast.com/products/tanzania-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Default Title",
+    "variant_id": "47968945242342"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "03b1f4a50059d869",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Brazil-MachadoRecantodoEngenhoLabel.webp?v=1783745933",
+  "platform": "shopify",
+  "product_id": "9771056693478",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "Pour Over",
+   "coffee",
+   "medium-dark roast",
+   "single origin"
+  ],
+  "title": "Brazil Machado Recanto do Engenho",
+  "url": "https://rainyroosterroast.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "47968948093158"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "29ca42f399ee4e58",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Ethiopia-UragoHaroLabel.webp?v=1783746278",
+  "platform": "shopify",
+  "product_id": "9771058790630",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Espresso",
+   "French Press",
+   "Pour Over",
+   "coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Ethiopia Uraga Haro",
+  "url": "https://rainyroosterroast.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "Default Title",
+    "variant_id": "47968950714598"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "3f92b3e5d5819cdd",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-3",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Sumatra-AgedLintong5yearvintageLabel.webp?v=1783746895",
+  "platform": "shopify",
+  "product_id": "9771062886630",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "Pour Over",
+   "coffee",
+   "dark roast",
+   "single origin"
+  ],
+  "title": "Sumatra Aged Lintong (5 year vintage)",
+  "url": "https://rainyroosterroast.com/products/sumatra-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "47968963461350"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "899697f1f4b20738",
+  "first_seen": "2026-10-26",
+  "handle": "peru-3",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Peru-ComiteLaPalmaLabel.webp?v=1783747270",
+  "platform": "shopify",
+  "product_id": "9771066720486",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "French Press",
+   "Pour Over",
+   "coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Peru Comite La Palma",
+  "url": "https://rainyroosterroast.com/products/peru-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "47968970834150"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "19efa0d79f59d898",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-buku-abel",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Ethiopia_-_Buku_Abel_3x4_d5986f6f-1f8c-4c86-87e1-00062c142474.jpg?v=1792009866",
+  "platform": "shopify",
+  "product_id": "9787558101222",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Drip",
+   "Espresso",
+   "Pour Over",
+   "coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Ethiopia Buku Abel",
+  "url": "https://rainyroosterroast.com/products/ethiopia-buku-abel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "Default Title",
+    "variant_id": "48080731603174"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "6f695718f38621dc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-silvestre-velasquez",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Guatemala_-_Huehuetenango_Silvestre_Velasquez_3x4_c94bc744-0291-4644-b0d7-60e674497642.jpg?v=1792009791",
+  "platform": "shopify",
+  "product_id": "9787568193766",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Pour Over",
+   "coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Guatemala Huehuetenango Silvestre Velasquez",
+  "url": "https://rainyroosterroast.com/products/guatemala-huehuetenango-silvestre-velasquez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "48080755523814"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "f28a4c589d9923b6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-das-almas",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Brazil_-_Fazenda_das_Almas_3x4_4e78b4fa-806b-4517-b834-e5e78705710b.jpg?v=1792009660",
+  "platform": "shopify",
+  "product_id": "9790534680806",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Citric",
+   "Cold Brew",
+   "Drip",
+   "Fruity",
+   "Full Bodied",
+   "Pour Over",
+   "Raisin",
+   "coffee",
+   "medium-light roast",
+   "single origin"
+  ],
+  "title": "Brazil Fazenda das Almas",
+  "url": "https://rainyroosterroast.com/products/brazil-fazenda-das-almas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "48094497767654"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ },
+ {
+  "body_hash": "b00fc697e98a3a87",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-emerald-tolima-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0796/4301/7446/files/Colombia_-_Emerald_Bean_Single_Plot_Collection_3x4_e6ee653e-714b-4755-bae3-941b48279dbd.jpg?v=1792009512",
+  "platform": "shopify",
+  "product_id": "9868160368870",
+  "product_type": "",
+  "roaster_slug": "rainyroosterroast",
+  "tags": [
+   "AeroPress",
+   "Citric",
+   "Cold Brew",
+   "Drip",
+   "Fruity",
+   "Pour Over",
+   "coffee",
+   "medium-light roast",
+   "single origin"
+  ],
+  "title": "Colombia - Emerald Bean Single Plot Collection Gesha",
+  "url": "https://rainyroosterroast.com/products/colombia-emerald-tolima-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.99,
+    "title": "Default Title",
+    "variant_id": "48409407520998"
+   }
+  ],
+  "vendor": "Rainy Rooster Roasting"
+ }
+]

@@ -1,0 +1,749 @@
+[
+ {
+  "body_hash": "66a9fdf216812d41",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/products/Ethiopia.png?v=1648603071",
+  "platform": "shopify",
+  "product_id": "10834411150",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.caliohcoffee.com/products/ethiopia-washed-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41904968590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "41904968654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / French Press",
+    "variant_id": "41904968782"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "41904968846"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "41904968910"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "41904969038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "41904969102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.98,
+    "title": "5 lbs / Drip Brewer",
+    "variant_id": "41904969166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.98,
+    "title": "5 lbs / French Press",
+    "variant_id": "41904969294"
+   }
+  ],
+  "vendor": "Single Origin"
+ },
+ {
+  "body_hash": "555b720ccd9ce7ad",
+  "first_seen": "2026-10-26",
+  "handle": "foreman-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/files/Foreman.jpg?v=1750706803",
+  "platform": "shopify",
+  "product_id": "11197040718",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Foreman",
+  "url": "https://www.caliohcoffee.com/products/foreman-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "129451196440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44239698190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "44239698254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / French Press",
+    "variant_id": "44239698446"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 66.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "44239698510"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 66.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "44239698574"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 66.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "44239698766"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "723b0df63ad365f2",
+  "first_seen": "2026-10-26",
+  "handle": "glen-park",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/files/Glen_Park.jpg?v=1750706777",
+  "platform": "shopify",
+  "product_id": "3877864669207",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Glen Park",
+  "url": "https://www.caliohcoffee.com/products/glen-park",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29214539120663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "29214539153431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.98,
+    "title": "12 oz / French Press",
+    "variant_id": "29214539186199"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "29214539218967"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "29214539251735"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 63.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "29214539284503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "29214539317271"
+   }
+  ],
+  "vendor": "Light Roast"
+ },
+ {
+  "body_hash": "c41b9aeec54fb5c0",
+  "first_seen": "2026-10-26",
+  "handle": "samples",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/products/Foreman_0538263e-03d5-4281-b4d9-e5602d828e2b.png?v=1662523685",
+  "platform": "shopify",
+  "product_id": "3962114965527",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [],
+  "title": "Coffee Samples",
+  "url": "https://www.caliohcoffee.com/products/samples",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.0,
+    "title": "Foreman Espresso / 4 oz.",
+    "variant_id": "29501775577111"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.0,
+    "title": "Shift Work / 4 oz.",
+    "variant_id": "29501775609879"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.0,
+    "title": "Glen Park / 4 oz.",
+    "variant_id": "29501775642647"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.0,
+    "title": "Decaf / 4 oz.",
+    "variant_id": "29501775675415"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.0,
+    "title": "Seasonal Single Origin / 4 oz.",
+    "variant_id": "40383352111146"
+   }
+  ],
+  "vendor": "Calioh Coffee Roasters"
+ },
+ {
+  "body_hash": "70a5ae4f12a24cc5",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-equipment-repair",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/products/ep_thermofilter2.jpg?v=1587408911",
+  "platform": "shopify",
+  "product_id": "4417939111978",
+  "product_type": "",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "service",
+   "sesami-service"
+  ],
+  "title": "Coffee Equipment Repair",
+  "url": "https://www.caliohcoffee.com/products/coffee-equipment-repair",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "La Marzocco / 1 Group / 2 Hours",
+    "variant_id": "31432121942058"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Nuovo Simonelli / 1 Group / 2 Hours",
+    "variant_id": "31432121974826"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Slayer / 1 Group / 2 Hours",
+    "variant_id": "31432122007594"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Synesso / 1 Group / 2 Hours",
+    "variant_id": "31432122040362"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Rancilio / 1 Group / 2 Hours",
+    "variant_id": "31432122105898"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "La Marzocco / 2 Group / 2 Hours",
+    "variant_id": "31432122138666"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Nuovo Simonelli / 2 Group / 2 Hours",
+    "variant_id": "31432122171434"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Slayer / 2 Group / 2 Hours",
+    "variant_id": "31432122204202"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Synesso / 2 Group / 2 Hours",
+    "variant_id": "31432122236970"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Rancilio / 2 Group / 2 Hours",
+    "variant_id": "31432122302506"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "La Marzocco / 3 Group / 2 Hours",
+    "variant_id": "31432122335274"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Nuovo Simonelli / 3 Group / 2 Hours",
+    "variant_id": "31432122368042"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Slayer / 3 Group / 2 Hours",
+    "variant_id": "31432122400810"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Synesso / 3 Group / 2 Hours",
+    "variant_id": "31432122433578"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Rancilio / 3 Group / 2 Hours",
+    "variant_id": "31432122499114"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "La Marzocco / 4 Group / 2 Hours",
+    "variant_id": "31432122531882"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Nuovo Simonelli / 4 Group / 2 Hours",
+    "variant_id": "31432122564650"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Slayer / 4 Group / 2 Hours",
+    "variant_id": "31432122597418"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Synesso / 4 Group / 2 Hours",
+    "variant_id": "31432122630186"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Rancilio / 4 Group / 2 Hours",
+    "variant_id": "31432122695722"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Other Espresso Machine / 1 Group / 2 Hours",
+    "variant_id": "40308158398506"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Curtis Coffee Brewer / 1 Group / 2 Hours",
+    "variant_id": "40308158431274"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Grinder / 1 Group / 2 Hours",
+    "variant_id": "40308158464042"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Other Espresso Machine / 2 Group / 2 Hours",
+    "variant_id": "40308158529578"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Curtis Coffee Brewer / 2 Group / 2 Hours",
+    "variant_id": "40308158562346"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Grinder / 2 Group / 2 Hours",
+    "variant_id": "40308158595114"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Other Espresso Machine / 3 Group / 2 Hours",
+    "variant_id": "40308158660650"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Other Espresso Machine / 4 Group / 2 Hours",
+    "variant_id": "40308158791722"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Unruly Toddler / N/A / 2 Hours",
+    "variant_id": "40308159741994"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Fetco Coffee Brewer / 1 Group / 2 Hours",
+    "variant_id": "40308159873066"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Fetco Coffee Brewer / 2 Group / 2 Hours",
+    "variant_id": "40308159905834"
+   }
+  ],
+  "vendor": "Calioh Coffee"
+ },
+ {
+  "body_hash": "a1e0c80f9f651a04",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/products/Decaf_2b6a7969-6b91-4eb7-a806-de4ad80b38fa.png?v=1662518107",
+  "platform": "shopify",
+  "product_id": "48950444056",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Decaf",
+  "url": "https://www.caliohcoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "260741857304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "260754407448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.98,
+    "title": "12 oz / French Press",
+    "variant_id": "260754505752"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "260754538520"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "260754571288"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "260754669592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "260754702360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "5 lbs / Drip Brewer",
+    "variant_id": "260754735128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "5 lbs / French Press",
+    "variant_id": "260754833432"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "826ae878ce39e1dc",
+  "first_seen": "2026-10-26",
+  "handle": "shift-work-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/files/Shift_Work.jpg?v=1750706691",
+  "platform": "shopify",
+  "product_id": "9065030990",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Shift Work",
+  "url": "https://www.caliohcoffee.com/products/shift-work-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31607539982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "31607540046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.98,
+    "title": "12 oz / French Press",
+    "variant_id": "31607540110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "31607540302"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 58.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "31607540558"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 58.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "31607540622"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 58.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "31607540686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.98,
+    "title": "5 lbs / Drip Brewer",
+    "variant_id": "6887463944225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.98,
+    "title": "5 lbs / French Press",
+    "variant_id": "6887466139681"
+   }
+  ],
+  "vendor": "Dark Roast"
+ },
+ {
+  "body_hash": "fd03403e32b19610",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0994/8176/files/Guatemala.jpg?v=1750706859",
+  "platform": "shopify",
+  "product_id": "9129064782",
+  "product_type": "Coffee",
+  "roaster_slug": "caliohcoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.caliohcoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.98,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31979446094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.98,
+    "title": "12 oz / Drip Brewer",
+    "variant_id": "31979446350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.98,
+    "title": "12 oz / French Press",
+    "variant_id": "31979446798"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / Whole Bean",
+    "variant_id": "31979446990"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / Drip Brewer",
+    "variant_id": "31979447182"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 69.98,
+    "title": "2.2 lbs / French Press",
+    "variant_id": "31979447822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.98,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "31979448142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.98,
+    "title": "5 lbs / Drip Brewer",
+    "variant_id": "31979448398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.98,
+    "title": "5 lbs / French Press",
+    "variant_id": "31979448974"
+   }
+  ],
+  "vendor": "Single Origin"
+ }
+]

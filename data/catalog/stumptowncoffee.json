@@ -1,0 +1,1486 @@
+[
+ {
+  "body_hash": "31bd522c5dede1cc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huayku",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Colombia_Huayku_72.png?v=1768336269",
+  "platform": "shopify",
+  "product_id": "6766017839272",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #8eb4ce",
+   "Coffee Type: Single Origin",
+   "Creamy",
+   "Delicate",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Pour Over",
+   "Show Upsell",
+   "Spring",
+   "Straight Up"
+  ],
+  "title": "Colombia Huayku",
+  "url": "https://www.stumptowncoffee.com/products/colombia-huayku",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 25.0,
+    "title": "10.5oz",
+    "variant_id": "40006908543144"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "47370973675688"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "c65e56377542504e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-jordan",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Colombia_El_Jordan_72_1.png?v=1749494394",
+  "platform": "shopify",
+  "product_id": "6766017937576",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #8eb4ce",
+   "Caramel",
+   "Coffee Maker",
+   "Coffee Type: Single Origin",
+   "Complex",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Medium Roast",
+   "Pourover",
+   "Show Upsell",
+   "Straight Up",
+   "Winter"
+  ],
+  "title": "Colombia El Jordan",
+  "url": "https://www.stumptowncoffee.com/products/colombia-el-jordan",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 25.0,
+    "title": "10.5oz",
+    "variant_id": "40006908674216"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "43443229884584"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "1c67df94e868c4f0",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_French_72DPI.png?v=1775167656",
+  "platform": "shopify",
+  "product_id": "6766018003112",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #A78778",
+   "Bold",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Organic Coffee",
+   "Filter: Subscription Eligible",
+   "French Press",
+   "French Roast Magic Bundle: 2",
+   "Heavy",
+   "Related: 12oz-stumptown-blend-trio",
+   "Related: blend-shuffle",
+   "Related: founders-blend",
+   "Show Upsell",
+   "Winter",
+   "With Goodies"
+  ],
+  "title": "French Roast",
+  "url": "https://www.stumptowncoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "40006908772520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41686487269544"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "833f20135bff89f5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-el-injerto-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Guatemala_Injerto_72DPI.png?v=1748639553",
+  "platform": "shopify",
+  "product_id": "6766018035880",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #789bbc",
+   "Chocolate",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Single Origin",
+   "Creamy",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Filter: Subscription Eligible",
+   "I'm Not Sure",
+   "Pour Over",
+   "Related: baratza-encore-burr-grinder",
+   "Related: kalita-wave-stainless",
+   "Related: roasters-pick",
+   "Show Upsell",
+   "Straight Up",
+   "Summer"
+  ],
+  "title": "Guatemala El Injerto Bourbon",
+  "url": "https://www.stumptowncoffee.com/products/guatemala-el-injerto-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 25.0,
+    "title": "10.5oz",
+    "variant_id": "40006908805288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "47370965549224"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "a79730a2ccb1ba76",
+  "first_seen": "2026-10-26",
+  "handle": "hair-bender",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Hair_Bender_72DPI.png?v=1775167285",
+  "platform": "shopify",
+  "product_id": "6766018134184",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #70886D",
+   "Chocolate",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Espresso",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Subscription Eligible",
+   "Heavy",
+   "Related: french-roast",
+   "Related: holler-mountain",
+   "Related: homestead",
+   "Show Upsell",
+   "Winter",
+   "With Goodies"
+  ],
+  "title": "Hair Bender",
+  "url": "https://www.stumptowncoffee.com/products/hair-bender",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb",
+    "variant_id": "40006908936360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "42460851896488"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "5ad712a7a730a442",
+  "first_seen": "2026-10-26",
+  "handle": "holler-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Holler_Mt_72DPI.png?v=1775167340",
+  "platform": "shopify",
+  "product_id": "6766018166952",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #CBD3DA",
+   "Caramel",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Organic Coffee",
+   "Filter: Subscription Eligible",
+   "I'm Not Sure",
+   "Related: baratza-encore-burr-grinder",
+   "Related: blend-shuffle",
+   "Related: kalita-wave-stainless",
+   "Show Upsell",
+   "Summer",
+   "With Goodies"
+  ],
+  "title": "Holler Mountain",
+  "url": "https://www.stumptowncoffee.com/products/holler-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "40006908969128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "40006909001896"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "750d5f0b7b06833c",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-bies-penantan",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Indo_Beis_Penantan_72DPI.png?v=1748639740",
+  "platform": "shopify",
+  "product_id": "6766018363560",
+  "product_type": "Coffee/Asia Pacific",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #788e85",
+   "Bold",
+   "Brown Sugar",
+   "Caramel",
+   "Coffee Maker",
+   "Coffee Type: Single Origin",
+   "Complex",
+   "Filter: 5 LB Bags",
+   "Filter: Organic Coffee",
+   "Filter: Single Origins",
+   "Filter: Subscription Eligible",
+   "French Press",
+   "Heavy",
+   "Mild",
+   "Other",
+   "Show Upsell",
+   "Spring",
+   "Straight Up",
+   "Syrupy"
+  ],
+  "title": "Indonesia Bies Penantan",
+  "url": "https://www.stumptowncoffee.com/products/indonesia-bies-penantan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40006909231272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "47370997891240"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "d33a33eefe611cff",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-huye-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Rwanda_Huye_72DPI.png?v=1775670895",
+  "platform": "shopify",
+  "product_id": "6766018396328",
+  "product_type": "Coffee/Africa",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #a66565",
+   "Bright",
+   "Caramel",
+   "Coffee Type: Single Origin",
+   "Complex",
+   "Delicate",
+   "Fall",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Other",
+   "Pour Over",
+   "Show Upsell",
+   "Straight Up",
+   "Winter"
+  ],
+  "title": "Rwanda Huye Mountain",
+  "url": "https://www.stumptowncoffee.com/products/rwanda-huye-mountain",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40006909264040"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "47370979410088"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "d7fc1004013e55f9",
+  "first_seen": "2026-10-26",
+  "handle": "trapper-creek-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Trapper_72DPI.png?v=1775167718",
+  "platform": "shopify",
+  "product_id": "6766018429096",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #C3814C",
+   "Chocolate",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Decaf",
+   "Decaf Magic Bundle: 2",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Decaf",
+   "Filter: Subscription Eligible",
+   "Medium Roast",
+   "Related: blend-shuffle",
+   "Related: hair-bender",
+   "Related: holler-mountain",
+   "Show Upsell",
+   "Summer"
+  ],
+  "title": "Trapper Creek Decaf",
+  "url": "https://www.stumptowncoffee.com/products/trapper-creek-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "40006909362344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "40006909395112"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "9f0e2bce150fe24c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Ethiopia_SukeQuto_72.png?v=1760052696",
+  "platform": "shopify",
+  "product_id": "6766018527400",
+  "product_type": "Coffee/Africa",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #ea7f7a",
+   "Coffee Type: Single Origin",
+   "Filter: Organic Coffee",
+   "Filter: Single Origins",
+   "Related: 12oz-passport-trio",
+   "Related: baratza-encore-burr-grinder",
+   "Related: roasters-pick"
+  ],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.stumptowncoffee.com/products/ethiopia-suke-quto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40006909493416"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "48678212075688"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "30d47585775c892c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-nano-challa",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/NanoChalla2025.png?v=1755719960",
+  "platform": "shopify",
+  "product_id": "6766018756776",
+  "product_type": "Coffee/Africa",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #ea7f7a",
+   "Bright",
+   "Complex",
+   "Delicate",
+   "Fall",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "French Press",
+   "Pour Over",
+   "Show Upsell",
+   "Spring",
+   "Straight Up"
+  ],
+  "title": "Ethiopia Nano Challa",
+  "url": "https://www.stumptowncoffee.com/products/ethiopia-nano-challa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40006909722792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49403775418536"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "745724c6bab9b664",
+  "first_seen": "2026-10-26",
+  "handle": "kalita-wave-stainless",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/products/STCShopifyKalitaWaveBrewer_ProductImageTransparentPNG.png?v=1622150861",
+  "platform": "shopify",
+  "product_id": "6766022688936",
+  "product_type": "Gear/Brewers",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #d6d0c8",
+   "Filter: Brewing",
+   "Related: blend-shuffle",
+   "Related: kalita-wave-filters",
+   "Related: roasters-pick",
+   "Show Upsell",
+   "bv-exclude"
+  ],
+  "title": "Kalita Wave (Stainless)",
+  "url": "https://www.stumptowncoffee.com/products/kalita-wave-stainless",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 42.0,
+    "title": "Default Title",
+    "variant_id": "40006920274088"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "8691ed8336059290",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-coldbrew-with-oatly",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/CB_Oatly_Chocolate_32b099a4-0fa3-4d41-ad6e-34f257aba7c7.png?v=1711682763",
+  "platform": "shopify",
+  "product_id": "6769038098600",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #d1b194",
+   "Filter: OATLY"
+  ],
+  "title": "Chocolate Cold Brew with Oatly",
+  "url": "https://www.stumptowncoffee.com/products/chocolate-coldbrew-with-oatly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 417,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "40016195649704"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "29ab922281ce9c2b",
+  "first_seen": "2026-10-26",
+  "handle": "horchata-horchata-coldbrew-with-oatly",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/CB_Oatly_Horchata_isolated_1.png?v=1711682833",
+  "platform": "shopify",
+  "product_id": "6769038164136",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #c2b39a",
+   "Filter: OATLY"
+  ],
+  "title": "Horchata Cold Brew with Oatly",
+  "url": "https://www.stumptowncoffee.com/products/horchata-horchata-coldbrew-with-oatly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 417,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "40016195715240"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "3d2cfba01f2877c2",
+  "first_seen": "2026-10-26",
+  "handle": "original-coldbrew-with-oatly",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/CB_Oatly_Original_isolated_ca54971f-7ccf-4f48-b8ec-5eed9a62e11c.png?v=1711682567",
+  "platform": "shopify",
+  "product_id": "6769165238440",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #a7b3b6",
+   "Filter: OATLY"
+  ],
+  "title": "Original Cold Brew with Oatly",
+  "url": "https://www.stumptowncoffee.com/products/original-coldbrew-with-oatly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 417,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "40016620880040"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "e09a5297294a8989",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-el-puente",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Honduras_Puente_72.png?v=1749160320",
+  "platform": "shopify",
+  "product_id": "6796068618408",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #446ca9",
+   "Caramel",
+   "Chocolate",
+   "Classic",
+   "Coffee Type: Single Origin",
+   "Espresso",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Heavy",
+   "Other",
+   "Pour Over",
+   "Spring",
+   "Straight Up",
+   "Summer"
+  ],
+  "title": "Honduras El Puente",
+  "url": "https://www.stumptowncoffee.com/products/honduras-el-puente",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40107965022376"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49027769761960"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "0612f8ffc3c8e8bb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mordecofe",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Ethiopia_Mordecofe_72DPI.png?v=1748639653",
+  "platform": "shopify",
+  "product_id": "6796068683944",
+  "product_type": "Coffee/Africa",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #ea7f7a",
+   "Bright",
+   "Classic",
+   "Coffee Type: Single Origin",
+   "Filter: 5 LB Bags",
+   "Filter: Organic Coffee",
+   "Filter: Single Origins",
+   "Filter: Subscription Eligible",
+   "Pour Over",
+   "Show Upsell",
+   "Spring",
+   "Straight Up"
+  ],
+  "title": "Ethiopia Mordecofe",
+  "url": "https://www.stumptowncoffee.com/products/ethiopia-mordecofe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40107965153448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "47370987110568"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "511b4baa61a1228b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-montes-de-oro",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_CR_MontesOro_Knockout_72.png?v=1754508520",
+  "platform": "shopify",
+  "product_id": "6799230402728",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #5f8999",
+   "Bright",
+   "Classic",
+   "Coffee Type: Single Origin",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "French Press",
+   "Pour Over",
+   "Spring"
+  ],
+  "title": "Costa Rica Montes De Oro",
+  "url": "https://www.stumptowncoffee.com/products/costa-rica-montes-de-oro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40118951248040"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49884342976680"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "020d5f6a0c31569d",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-pick",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_RoastersPick_72dpi.png?v=1771349050",
+  "platform": "shopify",
+  "product_id": "6808343347368",
+  "product_type": "Coffee/Africa,Coffee/Asia Pacific,Coffee/Latin America,Gifts",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #bfac7b",
+   "Coffee Type: Subscription Only",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Filter: Subscription Eligible",
+   "Show Upsell"
+  ],
+  "title": "Roaster's Pick",
+  "url": "https://www.stumptowncoffee.com/products/roasters-pick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "40148623491240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "40148623524008"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "65f2e333ef2522f3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cantillo-family",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/products/STC-Shopify-Colombia-Cantillo_Product-Image-Transparent-PNG_EDIT.png?v=1623622712",
+  "platform": "shopify",
+  "product_id": "6821034557608",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #8eb4ce",
+   "Coffee Type: Single Origin",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Related: 12oz-passport-trio",
+   "Related: baratza-encore-burr-grinder",
+   "Related: roasters-pick",
+   "Show Upsell"
+  ],
+  "title": "Colombia Cantillo Family",
+  "url": "https://www.stumptowncoffee.com/products/colombia-cantillo-family",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "40191147180200"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "48167741882536"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "8b51f7dbf55b59b2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-bella-vista",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/BellaVistaShopify2024.png?v=1729530757",
+  "platform": "shopify",
+  "product_id": "7103716491432",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #789bbc",
+   "Caramel",
+   "Chocolate",
+   "Classic",
+   "Coffee Type: Single Origin",
+   "Complex",
+   "Espresso",
+   "Filter: 5 LB Bags",
+   "Filter: Single Origins",
+   "Pour Over",
+   "Related: baratza-encore-burr-grinder",
+   "Related: guatemala-el-injerto-bourbon",
+   "Related: roasters-pick",
+   "Spring"
+  ],
+  "title": "Guatemala Bella Vista",
+  "url": "https://www.stumptowncoffee.com/products/guatemala-bella-vista",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "41176878579880"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49403623178408"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "2f396ddcb5e9bac0",
+  "first_seen": "2026-10-26",
+  "handle": "evergreen",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Evergreen_Front_Knockout_1534x1534_72DPI.png?v=1790185423",
+  "platform": "shopify",
+  "product_id": "7166322802856",
+  "product_type": "Coffee/Africa,Coffee/Asia Pacific,Coffee/Latin America,Gifts",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #bfac7b",
+   "Show Upsell"
+  ],
+  "title": "Evergreen",
+  "url": "https://www.stumptowncoffee.com/products/evergreen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "41402054213800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 154.0,
+    "title": "5lb",
+    "variant_id": "49905073062056"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "376d78f97882e154",
+  "first_seen": "2026-10-26",
+  "handle": "ground-hair-bender",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Hair_Bender_Ground_72DPI.png?v=1775167761",
+  "platform": "shopify",
+  "product_id": "7187195625640",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #70886D",
+   "Coffee Type: Blend",
+   "Filter: Blends",
+   "Filter: Ground",
+   "Related: chemex-brewer-wood-collar",
+   "Related: hario-v60-ceramic",
+   "Related: kalita-wave-stainless",
+   "Show Upsell"
+  ],
+  "title": "Ground Hair Bender",
+  "url": "https://www.stumptowncoffee.com/products/ground-hair-bender",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41480055816360"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "e399633da85bfa1d",
+  "first_seen": "2026-10-26",
+  "handle": "ground-holler-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Holler_Mt_Ground_72DPI.png?v=1775167804",
+  "platform": "shopify",
+  "product_id": "7187210797224",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #CBD3DA",
+   "Coffee Type: Blend",
+   "Filter: Blends",
+   "Filter: Ground",
+   "Filter: Organic Coffee",
+   "Medium Roast",
+   "Show Upsell"
+  ],
+  "title": "Ground Holler Mountain",
+  "url": "https://www.stumptowncoffee.com/products/ground-holler-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Ground",
+    "variant_id": "41480099463336"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "7930bf1ac10d08f8",
+  "first_seen": "2026-10-26",
+  "handle": "peru-churupampa",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Peru_Churupampa_72DPI.png?v=1762891016",
+  "platform": "shopify",
+  "product_id": "7295365939368",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #b2bdcf",
+   "Bright",
+   "Classic",
+   "Fall",
+   "Filter: 5 LB Bags",
+   "Filter: Organic Coffee",
+   "Filter: Single Origins",
+   "Heavy",
+   "Other",
+   "Pour Over",
+   "Show Upsell",
+   "Straight Up"
+  ],
+  "title": "Peru Churupampa",
+  "url": "https://www.stumptowncoffee.com/products/peru-churupampa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "41824168640680"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49931948490920"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "a73ee86f71578ee8",
+  "first_seen": "2026-10-26",
+  "handle": "founders-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Founders_72DPI.png?v=1775167408",
+  "platform": "shopify",
+  "product_id": "7402736779432",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #7c89c7",
+   "Bold",
+   "Chocolate",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Fall",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Organic Coffee",
+   "Filter: Subscription Eligible",
+   "French Press",
+   "Heavy",
+   "Show Upsell",
+   "Straight Up",
+   "Winter",
+   "With Goodies"
+  ],
+  "title": "Founder's Blend",
+  "url": "https://www.stumptowncoffee.com/products/founders-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "42198358687912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "42198358720680"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "56fe70d24c4a0c25",
+  "first_seen": "2026-10-26",
+  "handle": "hundred-mile",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Hundred_Mile_72DPI.png?v=1775167555",
+  "platform": "shopify",
+  "product_id": "7402799890600",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #d38d7e",
+   "Bright",
+   "Caramel",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Complex",
+   "Fall",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Organic Coffee",
+   "Filter: Subscription Eligible",
+   "Medium Roast",
+   "Other",
+   "Related: blend-shuffle",
+   "Related: holler-mountain",
+   "Related: indonesia-bies-penantan",
+   "Show Upsell",
+   "With Goodies"
+  ],
+  "title": "Hundred Mile",
+  "url": "https://www.stumptowncoffee.com/products/hundred-mile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "42198486941864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "42198486974632"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "911404dacb798093",
+  "first_seen": "2026-10-26",
+  "handle": "blend-shuffle",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_BlendShuffle_B_72dpi_e256d215-f6f1-4e04-ab74-093b26005221.png?v=1771349267",
+  "platform": "shopify",
+  "product_id": "7427284598952",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #bfac7b",
+   "Coffee Type: Subscription Only",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Subscription Eligible",
+   "Show Upsell"
+  ],
+  "title": "Blend Shuffle",
+  "url": "https://www.stumptowncoffee.com/products/blend-shuffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "42279876100264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "42650524975272"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "9ac5669ac736158a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-duromina",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Ethiopia_Duromina_2023.png?v=1696819926",
+  "platform": "shopify",
+  "product_id": "7566901772456",
+  "product_type": "Coffee/Africa",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #ea7f7a",
+   "Bright",
+   "Coffee Type: Single Origin",
+   "Complex",
+   "Delicate",
+   "Filter: Organic Coffee",
+   "Filter: Single Origins",
+   "Medium Roast",
+   "Pour Over",
+   "Related: baratza-encore-burr-grinder",
+   "Related: ethiopia-mordecofe",
+   "Related: guatemala-el-injerto-bourbon",
+   "Spring",
+   "Straight Up",
+   "updated"
+  ],
+  "title": "Ethiopia Duromina",
+  "url": "https://www.stumptowncoffee.com/products/ethiopia-duromina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "42722049294504"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "49931922210984"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "ec214972fba68f18",
+  "first_seen": "2026-10-26",
+  "handle": "homestead",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Homstead_72DPI.png?v=1775167514",
+  "platform": "shopify",
+  "product_id": "7598840676520",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #e6c47d",
+   "Caramel",
+   "Classic",
+   "Coffee Maker",
+   "Coffee Type: Blend",
+   "Filter: 5 LB Bags",
+   "Filter: Blends",
+   "Filter: Subscription Eligible",
+   "I'm Not Sure",
+   "Medium Roast",
+   "Pour Over",
+   "Related: baratza-encore-burr-grinder",
+   "Related: blend-shuffle",
+   "Related: holler-mountain",
+   "Show Upsell",
+   "Spring",
+   "Straight Up"
+  ],
+  "title": "Homestead",
+  "url": "https://www.stumptowncoffee.com/products/homestead",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "42828794134696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb",
+    "variant_id": "42828794167464"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "1566c373204890ae",
+  "first_seen": "2026-10-26",
+  "handle": "original-cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Original-Cold-Brew-Stubby-label_1.png?v=1686691143",
+  "platform": "shopify",
+  "product_id": "7859871776936",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #e5e3d6",
+   "Coffee Type: Cold Brew",
+   "Medium Roast",
+   "bv-exclude"
+  ],
+  "title": "Original Cold Brew Coffee",
+  "url": "https://www.stumptowncoffee.com/products/original-cold-brew-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "43946512220328"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "ee2d1e35060ada51",
+  "first_seen": "2026-10-26",
+  "handle": "original-nitro-cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Wildwood_Can_CrowSide_72DPI_2.png?v=1788145764",
+  "platform": "shopify",
+  "product_id": "7859872432296",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #6783cb",
+   "Coffee Type: Cold Brew",
+   "bv-exclude"
+  ],
+  "title": "Original Nitro Cold Brew Coffee",
+  "url": "https://www.stumptowncoffee.com/products/original-nitro-cold-brew-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "43946521493672"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "061228788c58e5f1",
+  "first_seen": "2026-10-26",
+  "handle": "peru-timbuyacu-maragogype",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Peru_Timbuyacu_Maragogype_72.png?v=1770052847",
+  "platform": "shopify",
+  "product_id": "8138399580328",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #5b8ba2",
+   "Coffee Type: Single Origin",
+   "Filter: Single Origins"
+  ],
+  "title": "Peru Timbuyacu Maragogype",
+  "url": "https://www.stumptowncoffee.com/products/peru-timbuyacu-maragogype",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "Default Title",
+    "variant_id": "46641339596968"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "353b23991bbd35e6",
+  "first_seen": "2026-10-26",
+  "handle": "elf-parade",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/Elf_Parade_Bag_Front_V2.png?v=1728323266",
+  "platform": "shopify",
+  "product_id": "8659542802600",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #98b8ad",
+   "Coffee Type: Blend",
+   "Related: evergreen",
+   "Related: guatemala-el-injerto-bourbon",
+   "Related: indonesia-bies-penantan"
+  ],
+  "title": "Elf Parade",
+  "url": "https://www.stumptowncoffee.com/products/elf-parade",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "49963659067560"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "f930b2931e4db312",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-familia-cantillo",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Columbia_FamiliaCantillo_MockUp_72dpi_1_03032ec3-6044-48cf-83a5-d11a5fadbf68.png?v=1759439231",
+  "platform": "shopify",
+  "product_id": "9090858942632",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #bfac7b",
+   "Coffee Type: Single Origin",
+   "Filter: Single Origins",
+   "Related: ethiopia-mordecofe",
+   "Related: indonesia-bies-penantan",
+   "Related: roasters-pick"
+  ],
+  "title": "Colombia Familia Cantillo",
+  "url": "https://www.stumptowncoffee.com/products/colombia-familia-cantillo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 38.0,
+    "title": "10.5oz",
+    "variant_id": "53520016965800"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "516f8c71ad4c0934",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/4012165094_front.png?v=1755725004",
+  "platform": "shopify",
+  "product_id": "9090874343592",
+  "product_type": "Cold Brew",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #e1e3df",
+   "Coffee Type: Cold Brew",
+   "bv-exclude"
+  ],
+  "title": "Cold Brew Decaf",
+  "url": "https://www.stumptowncoffee.com/products/cold-brew-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "53520230023336"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "feef55fc44fb4184",
+  "first_seen": "2026-10-26",
+  "handle": "echo-canyon-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_EchoCanyon_Front_Knockout_1534x1534_72DPI.png?v=1790187106",
+  "platform": "shopify",
+  "product_id": "9174663037096",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #afd7be",
+   "Coffee Type: Blend",
+   "Filter: Blends",
+   "Medium Roast",
+   "Show Upsell"
+  ],
+  "title": "Echo Canyon Half-Caff",
+  "url": "https://www.stumptowncoffee.com/products/echo-canyon-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "54314823188648"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "56f8a0f5d19743c5",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karumandi",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_Kenya_Karumandi_Front_1534x1534_72.png?v=1788473367",
+  "platform": "shopify",
+  "product_id": "9191067025576",
+  "product_type": "Coffee/Latin America",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #ea7f7a",
+   "Coffee Type: Single Origin",
+   "Show Upsell"
+  ],
+  "title": "Kenya Karumandi",
+  "url": "https://www.stumptowncoffee.com/products/kenya-karumandi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 23.0,
+    "title": "10.5oz",
+    "variant_id": "54457086607528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "54457086640296"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ },
+ {
+  "body_hash": "b6ff8065b82055ce",
+  "first_seen": "2026-10-26",
+  "handle": "net-wrecker",
+  "image": "https://cdn.shopify.com/s/files/1/0495/9446/6472/files/SCR_NetWrecker_1534x1534_72dpi.png?v=1784144748",
+  "platform": "shopify",
+  "product_id": "9516469289128",
+  "product_type": "Coffee/Blends",
+  "roaster_slug": "stumptowncoffee",
+  "tags": [
+   "Blend Color: #70886D",
+   "Medium Roast",
+   "Show Upsell",
+   "bv-exclude"
+  ],
+  "title": "Net Wrecker",
+  "url": "https://www.stumptowncoffee.com/products/net-wrecker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "55754751967400"
+   }
+  ],
+  "vendor": "Stumptown Coffee"
+ }
+]

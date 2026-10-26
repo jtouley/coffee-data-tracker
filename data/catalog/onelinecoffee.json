@@ -1,0 +1,969 @@
+[
+ {
+  "body_hash": "5c5b818aa1db84c9",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-samuel-altamirano",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Mexico-Samuel-Atlamirano-Colored-Background.png?v=1790550742",
+  "platform": "shopify",
+  "product_id": "15392000377021",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Mexico Samuel Altamirano",
+  "url": "https://www.onelinecoffee.com/products/mexico-samuel-altamirano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.1,
+    "title": "4 oz. Sampler",
+    "variant_id": "67586349990077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "67586350022845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.05,
+    "title": "2# Bag",
+    "variant_id": "67586350055613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.75,
+    "title": "5# Bag",
+    "variant_id": "67586350088381"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "7eba322cf19e36ce",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-nganga",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Kenya-Nganga-AA-Colored-Background.png?v=1790551305",
+  "platform": "shopify",
+  "product_id": "15392001163453",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Kenya Nganga AA",
+  "url": "https://www.onelinecoffee.com/products/kenya-nganga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.05,
+    "title": "4 oz. Sampler",
+    "variant_id": "67586358051005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "67586358083773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.1,
+    "title": "2# Bag",
+    "variant_id": "67586358116541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.95,
+    "title": "5# Bag",
+    "variant_id": "67586358149309"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "369d5e57b2f6f034",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-hormiga",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-La-Hormiga-Colored-Background.png?v=1791749939",
+  "platform": "shopify",
+  "product_id": "15417895485629",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia La Hormiga",
+  "url": "https://www.onelinecoffee.com/products/colombia-la-hormiga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.75,
+    "title": "4 oz. Sampler",
+    "variant_id": "67738976911549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "67738976944317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.45,
+    "title": "2# Bag",
+    "variant_id": "67738976977085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.3,
+    "title": "5# Bag",
+    "variant_id": "67738977009853"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "998b6f40afcf216f",
+  "first_seen": "2026-10-26",
+  "handle": "method-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Method-Espresso-Oct-2026-Colored-Background_618554d6-8dde-49fa-b5ad-f697c326779d.png?v=1791746796",
+  "platform": "shopify",
+  "product_id": "8334330691773",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Method Blend Espresso",
+  "url": "https://www.onelinecoffee.com/products/method-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929918263485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.2,
+    "title": "5# Bag",
+    "variant_id": "46929918296253"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.85,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929918329021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2# Bag",
+    "variant_id": "46929918361789"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "fc915663aa494fcd",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-cold-brew-home-system",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/original__18877.1737489205.386.513.jpg?v=1781301317",
+  "platform": "shopify",
+  "product_id": "8334331314365",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Toddy Cold Brew Home System",
+  "url": "https://www.onelinecoffee.com/products/toddy-cold-brew-home-system",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "46929918984381"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "9fb465c9dabce8a5",
+  "first_seen": "2026-10-26",
+  "handle": "technique-blend-decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Technique-Sept-2026-2-Colored-Background.png?v=1790552660",
+  "platform": "shopify",
+  "product_id": "8334331510973",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Technique Blend Decaf Espresso",
+  "url": "https://www.onelinecoffee.com/products/technique-blend-decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929919180989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.85,
+    "title": "5# Bag",
+    "variant_id": "46929919213757"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.15,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929919246525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.25,
+    "title": "2# Bag",
+    "variant_id": "46929919279293"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "d4e8f123273c251f",
+  "first_seen": "2026-10-26",
+  "handle": "planetary-design-airscape-container-4-inch",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/OLC2--20Large.jpg?v=1785774992",
+  "platform": "shopify",
+  "product_id": "8334332100797",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Planetary Design Airscape Container (4 inch)",
+  "url": "https://www.onelinecoffee.com/products/planetary-design-airscape-container-4-inch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.5,
+    "title": "Default Title",
+    "variant_id": "46929920098493"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "7add1b921b30e931",
+  "first_seen": "2026-10-26",
+  "handle": "planetary-design-airscape-container-7-inch",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/OLC2--22Large.jpg?v=1785774960",
+  "platform": "shopify",
+  "product_id": "8334332166333",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Planetary Design Airscape Container (7 inch)",
+  "url": "https://www.onelinecoffee.com/products/planetary-design-airscape-container-7-inch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 44.0,
+    "title": "Default Title",
+    "variant_id": "46929920164029"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "ac9453c66f0a8e80",
+  "first_seen": "2026-10-26",
+  "handle": "cold-toddy-home-brew-package-with-4-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/HouseColdBrewBundle__39654.1630005332.386.513.jpg?v=1781301372",
+  "platform": "shopify",
+  "product_id": "8334333608125",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Cold Toddy Home Brew Package With 4# Coffee Bag",
+  "url": "https://www.onelinecoffee.com/products/cold-toddy-home-brew-package-with-4-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 102.25,
+    "title": "Method Blend Espresso",
+    "variant_id": "46929922130109"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 102.25,
+    "title": "Colombia el Progreso-Medium Roast",
+    "variant_id": "46929922162877"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "92961103008c6c56",
+  "first_seen": "2026-10-26",
+  "handle": "method-blend-espresso-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Method-Espresso-Oct-2026-Colored-Background_2f2c9d3f-9188-4f2b-b7ac-3057e676b57a.png?v=1791746643",
+  "platform": "shopify",
+  "product_id": "8334333673661",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Method Blend Espresso-Cold Brew",
+  "url": "https://www.onelinecoffee.com/products/method-blend-espresso-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929922195645"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 85.5,
+    "title": "4# Bag",
+    "variant_id": "46929922228413"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "68dbd11e79934fb9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-victoria",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-La-Victoria-Colored-Background.png?v=1792176175",
+  "platform": "shopify",
+  "product_id": "8334338392253",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia La Victoria",
+  "url": "https://www.onelinecoffee.com/products/colombia-la-victoria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929933762749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.25,
+    "title": "5# Bag",
+    "variant_id": "46929933795517"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.1,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929933828285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2# Bag",
+    "variant_id": "46929933861053"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "d2e6bee0837baf0f",
+  "first_seen": "2026-10-26",
+  "handle": "process-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Process-Espresso-Oct-2026-Colored-Background.png?v=1792175898",
+  "platform": "shopify",
+  "product_id": "8334342553789",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Process Blend Espresso",
+  "url": "https://www.onelinecoffee.com/products/process-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.6,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929943298237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929943331005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.55,
+    "title": "2# Bag",
+    "variant_id": "46929943363773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.05,
+    "title": "5# Bag",
+    "variant_id": "46929943396541"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "42fa4be31fd705b4",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-sochiapam",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Mexico-Sochiapam-Colored-Background.png?v=1787922034",
+  "platform": "shopify",
+  "product_id": "8334344487101",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "México Sochiapam",
+  "url": "https://www.onelinecoffee.com/products/mexico-sochiapam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.3,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929947820221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929947852989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2# Bag",
+    "variant_id": "46929947885757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5# Bag",
+    "variant_id": "46929947918525"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "797159d058ca311f",
+  "first_seen": "2026-10-26",
+  "handle": "hario-chp-600-stainless-steel-ceramic-lined-insulated-server-600ml",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/OLC2--29Large.jpg?v=1785774677",
+  "platform": "shopify",
+  "product_id": "8334345928893",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Hario CHP-600 Stainless Steel/Ceramic Lined Insulated Server (600mL)",
+  "url": "https://www.onelinecoffee.com/products/hario-chp-600-stainless-steel-ceramic-lined-insulated-server-600ml",
+  "variants": [
+   {
+    "available": true,
+    "grams": 558,
+    "price_usd": 54.5,
+    "title": "Black",
+    "variant_id": "46929951523005"
+   },
+   {
+    "available": true,
+    "grams": 558,
+    "price_usd": 54.5,
+    "title": "White",
+    "variant_id": "46929951555773"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "31dca14c4ee36024",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-de-cana",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-de-Cana-Decaf-Colored-Background.png?v=1790552365",
+  "platform": "shopify",
+  "product_id": "8334346027197",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia de Caña",
+  "url": "https://www.onelinecoffee.com/products/colombia-de-cana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.85,
+    "title": "4 oz. Sampler",
+    "variant_id": "46929951752381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "46929951785149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2# Bag",
+    "variant_id": "46929951817917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.1,
+    "title": "5# Bag",
+    "variant_id": "46929951850685"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "f717dca3e738b2b5",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-gold-mountain-pacamara-cascara",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Nicaragua-Gold-Mountain-Pacamara-Cascara-Colored-Background__95287.1778253400.386.513.png?v=1781301710",
+  "platform": "shopify",
+  "product_id": "8334346649789",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Nicaragua Gold Mountain Pacamara Cascara",
+  "url": "https://www.onelinecoffee.com/products/nicaragua-gold-mountain-pacamara-cascara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 80,
+    "price_usd": 12.6,
+    "title": "80 g Pouch",
+    "variant_id": "46929953259709"
+   },
+   {
+    "available": true,
+    "grams": 160,
+    "price_usd": 25.4,
+    "title": "160 g Pouch",
+    "variant_id": "46929953292477"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "ba368c91885463fd",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sabana-redonda",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Costa-Rica-Sabana-Redonda-Colored-Background.png?v=1785933404",
+  "platform": "shopify",
+  "product_id": "8436968128701",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Costa Rica Sabana Redonda",
+  "url": "https://www.onelinecoffee.com/products/costa-rica-sabana-redonda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.5,
+    "title": "4 oz. Sampler",
+    "variant_id": "47947525456061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "47947525488829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.75,
+    "title": "2# Bag",
+    "variant_id": "47947525521597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.65,
+    "title": "5# Bag",
+    "variant_id": "47947525554365"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "a5d2a4d7dc955c70",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-antonio",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Guatemala-San-Antonio-Colored-Background.png?v=1786306842",
+  "platform": "shopify",
+  "product_id": "8442862043325",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Guatemala San Antonio",
+  "url": "https://www.onelinecoffee.com/products/guatemala-san-antonio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.2,
+    "title": "4 oz. Sampler",
+    "variant_id": "47968288243901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "47968288276669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.45,
+    "title": "2# Bag",
+    "variant_id": "47968288309437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.3,
+    "title": "5# Bag",
+    "variant_id": "47968288342205"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "6c60f526a94c5eb4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-aurora-project",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Guatemala-Aurora-Project-Colored-Background.png?v=1786982114",
+  "platform": "shopify",
+  "product_id": "8456183742653",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Guatemala Aurora Project",
+  "url": "https://www.onelinecoffee.com/products/guatemala-aurora-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.05,
+    "title": "4 oz. Sampler",
+    "variant_id": "48069086970045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "48069087002813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.45,
+    "title": "2# Bag",
+    "variant_id": "48069087035581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.8,
+    "title": "5# Bag",
+    "variant_id": "48069087068349"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "1cf416ec0cabc914",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-otto-barrientos",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Guatemala-Otto-Barrientos-Colored-Background.png?v=1786982632",
+  "platform": "shopify",
+  "product_id": "8456223785149",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Guatemala Otto Barrientos",
+  "url": "https://www.onelinecoffee.com/products/guatemala-otto-barrientos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.2,
+    "title": "4 oz. Sampler",
+    "variant_id": "48070435143869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "48070435176637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.65,
+    "title": "2# Bag",
+    "variant_id": "48070435209405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.8,
+    "title": "5# Bag",
+    "variant_id": "48070435242173"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "aa8febe9e9570fc6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-nevado-house-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-El-Nevado-Colored-Background_b1f224d7-8950-43f5-b7da-618a4c797452.png?v=1787422427",
+  "platform": "shopify",
+  "product_id": "8467285016765",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia El Nevado (House Roast)",
+  "url": "https://www.onelinecoffee.com/products/colombia-el-nevado-house-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.7,
+    "title": "4 oz. Sampler",
+    "variant_id": "48306901450941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "48306901483709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2# Bag",
+    "variant_id": "48306901516477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.6,
+    "title": "5# Bag",
+    "variant_id": "48306901549245"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "410bc5d18fad2f76",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-nevado-house-roast-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-El-Nevado-Colored-Background_f5cb5b70-1c14-4688-828a-91fcfd7b9f90.png?v=1787423037",
+  "platform": "shopify",
+  "product_id": "8467355631805",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia El Nevado (House Roast)-Cold Brew",
+  "url": "https://www.onelinecoffee.com/products/colombia-el-nevado-house-roast-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "48306974163133"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 83.4,
+    "title": "4# Bag",
+    "variant_id": "48306974195901"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "feeb09c5f1701c11",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fortune-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Colombia-Fortune-Decaf-Colored-Background.png?v=1788786849",
+  "platform": "shopify",
+  "product_id": "8490669015229",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Colombia Fortune",
+  "url": "https://www.onelinecoffee.com/products/colombia-fortune-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.8,
+    "title": "4 oz. Sampler",
+    "variant_id": "48398401765565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "48398401798333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2# Bag",
+    "variant_id": "48398401831101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.85,
+    "title": "5# Bag",
+    "variant_id": "48398401863869"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "c40a56d6a149428a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bochessa",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Ethiopia-Bochessa-Colored-Background.png?v=1789305798",
+  "platform": "shopify",
+  "product_id": "8497325703357",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "Ethiopia Bochessa",
+  "url": "https://www.onelinecoffee.com/products/ethiopia-bochessa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.8,
+    "title": "4 oz. Sampler",
+    "variant_id": "48432587767997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. Pouch",
+    "variant_id": "48432587800765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.8,
+    "title": "2# Bag",
+    "variant_id": "48432587833533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.25,
+    "title": "5# Bag",
+    "variant_id": "48432587866301"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ },
+ {
+  "body_hash": "80e331764a5cee96",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-tres-fincas",
+  "image": "https://cdn.shopify.com/s/files/1/0778/2039/5709/files/Mexico-Tres-Fincas-Colored-Background.png?v=1789306967",
+  "platform": "shopify",
+  "product_id": "8497719705789",
+  "product_type": "",
+  "roaster_slug": "onelinecoffee",
+  "tags": [],
+  "title": "México Tres Fincas",
+  "url": "https://www.onelinecoffee.com/products/mexico-tres-fincas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.9,
+    "title": "4 oz. Sampler",
+    "variant_id": "48433171071165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Pouch",
+    "variant_id": "48433171103933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.45,
+    "title": "2# Bag",
+    "variant_id": "48433171136701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.3,
+    "title": "5# Bag",
+    "variant_id": "48433171169469"
+   }
+  ],
+  "vendor": "One Line Coffee"
+ }
+]

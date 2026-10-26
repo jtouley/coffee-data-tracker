@@ -1,0 +1,139 @@
+{
+ "26caba07939c": {
+  "body_hash": "3003f3dfbd2f48bd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "cherry",
+   "biscotti"
+  ],
+  "varietals": []
+ },
+ "2a5c0a0890c4": {
+  "body_hash": "ae473674b4cac434",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "34e55130781b": {
+  "body_hash": "22e4a39b3346e682",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "385200c2462f": {
+  "body_hash": "4a0b6d337f306c7f",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity",
+   "sugarcane",
+   "dried strawberry"
+  ],
+  "varietals": []
+ },
+ "61": {
+  "body_hash": "c26846346382d0fe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramelized brown sugar",
+   "spiced apple",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "B07P929KRB": {
+  "body_hash": "72ac3639b25e71d3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "B081JMLKM9": {
+  "body_hash": "7159fee2fcaffc0d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "ab5f5c3212e5": {
+  "body_hash": "a5a9bd10f5ba4ef9",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "macadamia",
+   "cream",
+   "dates"
+  ],
+  "varietals": []
+ }
+}

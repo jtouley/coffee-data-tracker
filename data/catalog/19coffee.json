@@ -1,0 +1,1343 @@
+[
+ {
+  "body_hash": "851f7e230850fdac",
+  "first_seen": "2026-10-26",
+  "handle": "stout-espresso",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef21/1787753917377/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef21",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Best Seller",
+   "Espresso",
+   "Light-Medium Roast"
+  ],
+  "title": "Stout Espresso",
+  "url": "https://www.19coffee.com/shopforcoffee/p/stout-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.3,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "2f11baeb-43ee-433d-be61-f5b7d0bac3e6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "6463e6f5-00e9-4e68-9433-d15ad7ba11ae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.3,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "7fdef80b-d989-4b9f-bcd0-9040b6cf84e9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.3,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "a809cf4a-99c3-408f-807b-97f81e2165ec"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.3,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "b7e990dd-607a-4d10-808f-49ad6f5c0e38"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.3,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f1a1c648-2513-49e1-afcd-491ebed1d789"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b404a438009219e",
+  "first_seen": "2026-10-26",
+  "handle": "green-light-espresso",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef27/1787753854367/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef27",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Espresso",
+   "Fair Trade",
+   "Medium-Dark Roast",
+   "Organic"
+  ],
+  "title": "Green Light Espresso",
+  "url": "https://www.19coffee.com/shopforcoffee/p/green-light-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.9,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "46aacf9f-5fda-4381-9ede-a72be906bbee"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.9,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "5c057838-1a0b-4c22-b561-0e385c336268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "715dba0f-ff1a-429e-ac8a-b89da26925c0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.9,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "9eb83d9a-a6e0-4c44-96b0-e3d0e2beb08d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.75,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "f1bfff1b-998b-474a-b0ef-8b2af2f20d5c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.9,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "f621afef-096f-412a-8dab-002a7804e875"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c2fb818ad8e0646",
+  "first_seen": "2026-10-26",
+  "handle": "organic-19-bold",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef2d/1787753859524/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef2d",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Best Seller",
+   "Blend",
+   "Fair Trade",
+   "Medium-Dark Roast",
+   "Organic"
+  ],
+  "title": "Organic 19 Bold",
+  "url": "https://www.19coffee.com/shopforcoffee/p/organic-19-bold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "14887caa-1845-47a3-aeaa-7693910eb3f7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "4bff930f-fcdc-40ad-9900-e20c1a312b71"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "8a14545f-2c34-4f07-bb2b-4257369170e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "a9e30dcc-78b1-4cab-89a7-affdba4cd97c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "beb22a5e-2fb1-4525-bba4-e830864cef3c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "fb57148b-f4e1-4991-b91f-5ef9a8825957"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f10466774aee914",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef33/1787753918675/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef33",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Fair Trade",
+   "Organic"
+  ],
+  "title": "French Roast",
+  "url": "https://www.19coffee.com/shopforcoffee/p/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.45,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "04cd7aa6-afd8-401a-91db-cc0d0e242a13"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.45,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "54381b0b-ad15-47cd-9052-45c1a1a76034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.45,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "dc4ab2cf-8216-43cb-b7b3-bd5fb46db847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.75,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "e7fe6ce9-55b3-4670-b123-1e91f9780201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.45,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "f10146b6-5459-496a-80ed-6844d0b67fd3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.45,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "f1839bf9-8a8a-4cb3-8917-d2d92d374623"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b25744f1f2de6e3c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1abfff95-97c6-4224-a231-85cbf39a80b5/ETHIOPIA+SIDAMO+.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef3f",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Fair Trade",
+   "Organic"
+  ],
+  "title": "Ethiopia Sidamo Nura Korate",
+  "url": "https://www.19coffee.com/shopforcoffee/p/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "1167fbcc-d434-45b1-a073-a2e269aca2bc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "2162c253-516c-4fdb-b23a-b38df9515d1f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "28b71bc0-f49b-4622-8b6a-9b438c89e3b1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "4215de22-fdba-4ada-a52d-e0f7c907f265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "53b4a8ae-4a88-46fb-8684-e4847dce997e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "cb3d8011-be70-401e-acd5-3fcaed09c598"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53724d8b916c7905",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-naranjo-la-rosa",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1631206827790-WI3IXYT2JKBMULC9AIDH/BRAZIL+CERRADO.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef47",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Costa Rica SHB Tarrazu La Pastora",
+  "url": "https://www.19coffee.com/shopforcoffee/p/costa-rica-naranjo-la-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.25,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "0213aeca-9cb8-4e2d-8b56-3ba4729f97b1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "13b36900-ac83-401e-8fb6-9450a8513df7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "1e6d9968-2c35-44ce-a38c-6cac61e5e01b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "41b1e0d1-0db6-4c4f-832b-0a3987d58699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "4f08940c-bc84-48bb-b39c-54b7e11b028a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "c69aa9af-7a3a-432b-9f78-7378640056a3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd0259f3ed9b4101",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef5e/1787753853083/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef5e",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Fair Trade",
+   "Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Guatemala HueHuetenango",
+  "url": "https://www.19coffee.com/shopforcoffee/p/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "30263a4a-ef6c-41ce-bebc-e42b74ff93f3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "51b379d8-0520-4b6c-8e9f-76661014bfc3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "7e40fcad-b904-480b-bb3c-be043b18318b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.45,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "b5ec6d0c-7975-4a55-bded-0d6dcbee9741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "b714f81c-369a-40d4-9769-5b028390b58b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "b77c0b91-8c3b-4fbe-974a-6c030bd32a19"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2eda2c94e73677ba",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-serranos",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1659650660920-XVASAHK3B17P3ZO1ENY9/mexico+chaiaspsas.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef66",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Best Seller",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Mexico HP Chiapas",
+  "url": "https://www.19coffee.com/shopforcoffee/p/mexico-chiapas-serranos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.6,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "20e0c891-60bb-4a0c-8983-cc821602298f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.6,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "2f90d5f6-ead2-4b4c-b890-e5f3f1f379fc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.6,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "3861be00-409b-402a-b6a5-d3ffac4f8868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.6,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "3de137b6-a0c0-445d-a633-4841199d3927"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.6,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "46e375c4-b11a-4770-9b35-2b45c3a6376a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "7b5d1f62-270a-4ef4-8670-317fa0c38ba0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9066f8e5603a57b3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-sara-ate",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1659650401614-CDPRH3MVGSW0UXSVHFDV/SUMATRA.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef6e",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Fair Trade",
+   "Full Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Sumatra Takengon Sara Ate",
+  "url": "https://www.19coffee.com/shopforcoffee/p/sumatra-takengon-sara-ate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "4882f4e4-0c0e-47a2-a791-b2bf795ada39"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "6fa60266-aa6e-4248-ab39-1ca6c3efe0b2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "86a0ab62-b460-47b3-a7df-334b4fcfa2b7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "89f54011-52d7-4615-8ebf-f16b36dbc821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.25,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "b42b5d3b-ce08-4c19-9ac8-d475fa356422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "fa30d93c-2b3d-48e6-8001-195db29aee5a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62b9ae9b3f7e74fb",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-highlands-plantation",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1635260370441-17NZWGRA2R1HN5L33O7K/PNG.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef80",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Fair Trade",
+   "Full Medium Roast",
+   "Organic"
+  ],
+  "title": "Organic Papua New Guinea Timizua A/X",
+  "url": "https://www.19coffee.com/shopforcoffee/p/papua-new-guinea-highlands-plantation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.25,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "1c19ead1-eb18-4e39-a173-3333eb83a4a1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "2d25218b-607b-4500-9bfd-df22dbd51f1b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "7b0657ae-00cd-4883-b2b0-3c7556ecef69"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "bd6beab9-bff2-4724-9ee7-ca2483114295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "bdfa0b72-bb12-4826-ba6d-8079188a9b6b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "c0505308-665d-4e63-9b27-4657928e937f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "db8e3d5bdc70492e",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-sapan-mining",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/5f5fae23c25c8e4607a6ef88/1791911650482/",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef88",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Sulawesi Toraja Sapan Minanga",
+  "url": "https://www.19coffee.com/shopforcoffee/p/sulawesi-sapan-mining",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.25,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "0804d6ae-7a69-4fc3-9e18-870af8e4aaad"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.45,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "5fd017f4-e7d9-4e65-916b-f1e95f1b2999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.45,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "90aa38be-bff2-483b-a660-d1d224d659e2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.45,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "9ae053af-8698-47f5-8af5-f97979d0af86"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.45,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "cb3887e3-b83d-421a-aace-b0853f0b2e16"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.45,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "dfd5083a-ef3c-40f1-b49b-da1c36c94c9b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "956dcda1c2fb4caa",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras-maya-royal-select",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/45cde8fa-b73b-4110-9f6d-d7994a7cf08a/decaf+hondo.jpg",
+  "platform": "squarespace",
+  "product_id": "5f5fae23c25c8e4607a6ef9e",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Decaf",
+   "Fair Trade",
+   "Full Medium Roast",
+   "Organic"
+  ],
+  "title": "Decaf Honduras Maya Royal Select",
+  "url": "https://www.19coffee.com/shopforcoffee/p/decaf-honduras-maya-royal-select",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.05,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "3095891b-ba56-4dfc-a315-1f6c62897466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.05,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "6129cbf9-d78f-4b41-8bd5-9f28e55a5781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.05,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "632ffef7-c53d-4ff8-975e-4348435cf43d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.05,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "6aa1eec2-73e3-43f6-a3f0-025b0138831e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.05,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "7dfd0aa7-6982-42f4-9a62-d352d11e00c3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "802b8cb8-1071-4cff-bc67-768436754f14"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "498f8d18e0469a2b",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1602594108785-96ORJGK91IEEBZAMIEO5/Bali%2BBlue%2BMoon.jpg",
+  "platform": "squarespace",
+  "product_id": "5f74bcf0c351c0669710e285",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://www.19coffee.com/shopforcoffee/p/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "0d6f41c6-f525-451c-ac6f-f383dfbff579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "1bb22189-6a20-4df8-940d-40f49ac768a6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "3822d0bc-954a-4237-bd20-fe0f7340217f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.1,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "72b1579a-0728-4780-8fa2-136909c934b4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "c791f21f-02ad-4661-9e9f-32cfce5a0628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "e79255d1-00ca-48af-bade-5d71d8258709"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36e5917abf58ca3e",
+  "first_seen": "2026-10-26",
+  "handle": "stout-espresso-k6amm",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/6001e76eea078457e22df4f8/1787767064954/",
+  "platform": "squarespace",
+  "product_id": "6001e76eea078457e22df4f8",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Medium Roast"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://www.19coffee.com/shopforcoffee/p/stout-espresso-k6amm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.6,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "3d11b156-03b5-4946-8a3f-f3e78ba4e404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.6,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "870b65d4-533f-4a74-ba02-188b1ad04213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.6,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "988d8f09-ccb8-4eae-9eb3-5b44686fabbd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.6,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "ae0ce37b-9c32-4d2b-8669-f998c2e18c38"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.6,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "b957bdc0-717d-4b93-b091-f059fd95c5b6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "f876b305-714d-4105-bc86-266224350e6d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c975fd0d4c55cb3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1659705741421-2TRUDMANI6J5XPPT4G40/GONZO.jpg",
+  "platform": "squarespace",
+  "product_id": "606f2f35f857220c3d025b9b",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Espresso",
+   "Fair Trade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Gonzo Espresso",
+  "url": "https://www.19coffee.com/shopforcoffee/p/kenya-aa-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "0d795ba6-6d7e-4749-a473-316739d45c3e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "165c10b7-7378-49e9-b1f2-ba5d1fd40bd5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "237f08d9-2484-487a-a321-276e1003d416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "70278b9a-24aa-4300-a38b-ddfa3869ec77"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "d8b414d5-5bb0-42b6-93b8-2ae7eb3290ae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "ed3566bf-18af-47f3-bf5f-8f67a07ee10d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce4119d8d787dcdd",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-sara-ate-tawpc",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1650381012683-9DST5362L5HZ93XR8VIM/BLUE+SKY+BLEND.jpg",
+  "platform": "squarespace",
+  "product_id": "625ece40c19b633a5e0e8a0f",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Best Seller",
+   "Blend",
+   "Fair Trade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Blue Sky Blend",
+  "url": "https://www.19coffee.com/shopforcoffee/p/sumatra-takengon-sara-ate-tawpc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "0282f207-9e89-4db3-85b4-000e068d4ab2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "4317182b-552d-4bae-92ae-4f7f52ed5ffd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "6829999c-427b-4117-a799-9b1c24437fc6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "99a3cdf6-677b-4164-b71f-0042430d30c9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "b1a924ee-bb8b-4f73-aa21-725efee9b743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "b6322d1d-66bd-4bd2-beba-ba621b5a69da"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0fbbc05bf564074",
+  "first_seen": "2026-10-26",
+  "handle": "coldbrewblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/ed225247-1b8c-48da-a8a9-0b1e00ede170/Copy+of+Albert+Einstein.jpg",
+  "platform": "squarespace",
+  "product_id": "641c7d4208a19901cc9692e2",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Best Seller",
+   "Blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.19coffee.com/shopforcoffee/p/coldbrewblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.05,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "61b4eed7-cf85-4eee-9b3a-7cea5af85a9f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.05,
+    "title": "Course blend for cold brew 12 oz",
+    "variant_id": "88877e5d-fe0e-4fdc-a85d-a6acfe58ddc7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.6,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "9922825a-0eb2-463c-9c49-dad896ec6fce"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a17f99ddd1883823",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-sara-ate-tawpc-e5tct",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1689003451192-DH0KSBKBAP1T4TR10ZIQ/19+SMOOTH.jpg",
+  "platform": "squarespace",
+  "product_id": "64ac1fdd125c8658a112a091",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Blend",
+   "Medium Roast"
+  ],
+  "title": "19 Smooth",
+  "url": "https://www.19coffee.com/shopforcoffee/p/sumatra-takengon-sara-ate-tawpc-e5tct",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.1,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "13aab90a-1c9d-4111-a59a-c1c58aafc982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "15e44b52-52d4-4507-aa8a-b1b2129ea938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "3d81fa89-14bb-402b-a6a9-245116623c15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "72c15718-3893-497b-8bc8-5836dfe2d9e0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "7fe8b6db-3c33-4016-8f8a-dccff3548c4e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "c6732e21-72f6-4350-a708-24ee19c0b4a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5d2b6acb79ba0e8c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-sara-ate-tawpc-j64ww",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/1689003503909-XNA1ENT6DT162FOFG0J0/19+SMOOTH+copy.jpg",
+  "platform": "squarespace",
+  "product_id": "64ac20e7ccd99d231bb25dc3",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Blend",
+   "Fair Trade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.19coffee.com/shopforcoffee/p/sumatra-takengon-sara-ate-tawpc-j64ww",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "01bbaa06-8840-48ba-b5b3-b7ccf4e0a39e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "044f8464-db44-46ca-ae78-55e839839396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "0b6e2459-a2ea-4419-a6f5-8ef904071747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "54e9d77b-111b-4053-ba75-792654833c44"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "ad54ffaa-eac0-4f2a-8d26-27c1f59eb416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.1,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "bb3a7a97-29b0-40e0-8ae8-67290f90e673"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49fb2609aa82be78",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/25f627ce-0e74-4941-902e-7bc425d51313/Copy+of+Web+button+template.jpg",
+  "platform": "squarespace",
+  "product_id": "64b834a957712077b1833237",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [],
+  "title": "Colombia Tolima Suave",
+  "url": "https://www.19coffee.com/shopforcoffee/p/colombia-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.35,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "0458a130-f228-469d-8770-e8a9eba5fc0a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.35,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "1c838bb8-78f5-4e6e-b9d4-ac1b01fdf21c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.35,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "a20155f9-ec95-48d3-bad6-6dc2bfc1dbd3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.35,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "b044923c-98bc-4ece-84e2-7485d7f6665b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.35,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "ec591949-be20-4e1f-82fd-e8a9fd0a7307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.65,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "fb163069-86f7-4300-a14d-cf2c4bbdb9c3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a03ce10d68d6026",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gera",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f580ddb84d8cc357cbd7b5e/db9544f8-bcb1-4715-8215-dc371ca27176/Copy+of+Ethiopia+Gera.jpg",
+  "platform": "squarespace",
+  "product_id": "65aec0a17905000afb98d5e7",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "ETHIOPIA GERA",
+  "url": "https://www.19coffee.com/shopforcoffee/p/ethiopia-gera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.2,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "0d1e445a-4f33-4121-a025-73d230a470d3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.2,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "1abf9cb1-ad23-49b0-912e-3dddbe60ff17"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.2,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "487bd598-b584-4c1f-b856-518163eb77ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.2,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "a4c603b2-6869-4664-a7f3-1f11cb83a9cc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.75,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "b4a57d3e-2412-4b91-a4c8-6addec34df47"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.2,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "b87035a0-2dad-490e-9a3a-7f2050fbcaf6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9df6af52c12ea720",
+  "first_seen": "2026-10-26",
+  "handle": "costaricahoney",
+  "image": "https://static1.squarespace.com/static/5f580ddb84d8cc357cbd7b5e/5f5fae23c25c8e4607a6ef08/668c0cd03022b338156a6e66/1792514686779/",
+  "platform": "squarespace",
+  "product_id": "668c0cd03022b338156a6e66",
+  "product_type": "",
+  "roaster_slug": "19coffee",
+  "tags": [
+   "Seasonal Special"
+  ],
+  "title": "Costa Rica Honey Processed Seasonal Special",
+  "url": "https://www.19coffee.com/shopforcoffee/p/costaricahoney",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.45,
+    "title": "Ground for French Press 12 oz",
+    "variant_id": "395336f5-11d5-45fc-9943-d2a2fac698c2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.45,
+    "title": "Ground for Espresso 12 oz",
+    "variant_id": "4ce63133-d6a1-4efc-8414-178d5e330b97"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "614955f9-a337-4c4b-ad4f-aecd663aa4af"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.45,
+    "title": "Ground for Pourover 12 oz",
+    "variant_id": "beeb3dba-e14c-4466-992f-4caf42d1ef8f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.45,
+    "title": "Ground for Drip 12 oz",
+    "variant_id": "c723cb78-23c0-4585-a244-4a95c7b31a66"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.45,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "cad7cc0b-9753-4299-8233-2c3c3bbdc300"
+   }
+  ],
+  "vendor": ""
+ }
+]

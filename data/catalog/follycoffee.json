@@ -1,0 +1,367 @@
+[
+ {
+  "body_hash": "669d196b0d53c001",
+  "first_seen": "2026-10-26",
+  "handle": "house-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/HouseBeanFront.png?v=1774020769",
+  "platform": "shopify",
+  "product_id": "8242486477058",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee subscription"
+  ],
+  "title": "House Bean",
+  "url": "https://follycoffee.com/products/house-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces",
+    "variant_id": "44017732944130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017732976898"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "ec3ac95a58ffe7b8",
+  "first_seen": "2026-10-26",
+  "handle": "classic-jo",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/ClassicFront.png?v=1774020836",
+  "platform": "shopify",
+  "product_id": "8242486509826",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee subscription"
+  ],
+  "title": "Classic Jo",
+  "url": "https://follycoffee.com/products/classic-jo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces",
+    "variant_id": "44017733075202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017733107970"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "717c13ce8e91f589",
+  "first_seen": "2026-10-26",
+  "handle": "sob-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/SOBFront.png?v=1774020914",
+  "platform": "shopify",
+  "product_id": "8242486542594",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee subscription"
+  ],
+  "title": "SOB Espresso",
+  "url": "https://follycoffee.com/products/sob-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces",
+    "variant_id": "44017733271810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017733304578"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "153afa768862f853",
+  "first_seen": "2026-10-26",
+  "handle": "winer",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/WinerFront_38315565-12a3-43c0-bb09-9819b8b792f8.png?v=1774020627",
+  "platform": "shopify",
+  "product_id": "8242486575362",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee subscription"
+  ],
+  "title": "Winer",
+  "url": "https://follycoffee.com/products/winer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces",
+    "variant_id": "44017733370114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017733402882"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "eafd292a95fff53e",
+  "first_seen": "2026-10-26",
+  "handle": "roaster-s-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/Untitleddesign_dabd0d1a-63c6-4196-b422-99f339c7184e.png?v=1775068906",
+  "platform": "shopify",
+  "product_id": "8242486640898",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://follycoffee.com/products/roaster-s-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 Ounces",
+    "variant_id": "44017733501186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "5 Lb Bag",
+    "variant_id": "44017733533954"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "847595fb1111197d",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/cold_brew_front.png?v=1774887455",
+  "platform": "shopify",
+  "product_id": "8242487361794",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "coffee",
+   "coffee beans for cold brew",
+   "coffee subscription",
+   "cold brew",
+   "cold brew coffee",
+   "cold brew subscription",
+   "free shipping",
+   "iced coffee",
+   "iced coffee beans"
+  ],
+  "title": "Cold Brew Bean",
+  "url": "https://follycoffee.com/products/cold-brew-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces",
+    "variant_id": "44017734713602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017734746370"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "ab65b276ab3c525f",
+  "first_seen": "2026-10-26",
+  "handle": "folly-s-finest",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/follys_finest_front.png?v=1774887543",
+  "platform": "shopify",
+  "product_id": "8242487460098",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "chemex coffee",
+   "coffee",
+   "coffee subscription",
+   "craft coffee",
+   "craft coffee roaster",
+   "french press",
+   "minneapolis coffee",
+   "minneapolis coffee roaster",
+   "minnesota coffee",
+   "minnesota coffee roaster",
+   "pourover coffee",
+   "specialty coffee",
+   "specialty coffee roaster"
+  ],
+  "title": "Folly's Finest",
+  "url": "https://follycoffee.com/products/folly-s-finest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "8 Ounces",
+    "variant_id": "44017734877442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 Lb Bag",
+    "variant_id": "44017734910210"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "9e7daa1a20e87cec",
+  "first_seen": "2026-10-26",
+  "handle": "hippo-campus-folly-coffee-collab",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/Untitleddesign_4.png?v=1730309869",
+  "platform": "shopify",
+  "product_id": "8242488344834",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "Hippo Campus band",
+   "Minnesota band hippo campus",
+   "coffee",
+   "coffee blend",
+   "coffee roaster",
+   "hippo campus",
+   "limited release",
+   "minneapolis",
+   "minnesota",
+   "minnesota coffee",
+   "specialty coffee",
+   "specialty coffee roaster",
+   "whole bean coffee"
+  ],
+  "title": "Folly Coffee x Hippo Campus Coffee Collaboration",
+  "url": "https://follycoffee.com/products/hippo-campus-folly-coffee-collab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "44017736417538"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "216beaebcea31bbf",
+  "first_seen": "2026-10-26",
+  "handle": "dinkytown-athletes-gameday-blend-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/Untitled_design_2_5509f24e-d7f9-4134-804d-226e0b410b41.png?v=1774447711",
+  "platform": "shopify",
+  "product_id": "8456116732162",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "Dinkytown",
+   "Dinkytown Athletes",
+   "coffee",
+   "coffee collaboration",
+   "folly coffee",
+   "minnesota",
+   "minnesota coffee",
+   "minnesota coffee roaster",
+   "specialty coffee"
+  ],
+  "title": "Dinkytown Athletes Gameday Blend- 12oz",
+  "url": "https://follycoffee.com/products/dinkytown-athletes-gameday-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 17.0,
+    "title": "Whole Bean",
+    "variant_id": "44598895673602"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 17.0,
+    "title": "Ground",
+    "variant_id": "44598895706370"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ },
+ {
+  "body_hash": "a00724c14681663d",
+  "first_seen": "2026-10-26",
+  "handle": "darkest-day-halloween-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0672/5327/2834/files/DARKEST-DAY-MOCKUP-2026-02.png?v=1790346553",
+  "platform": "shopify",
+  "product_id": "9123572482306",
+  "product_type": "Coffee",
+  "roaster_slug": "follycoffee",
+  "tags": [
+   "dark roast",
+   "folly coffee",
+   "halloween coffee",
+   "halloween roast",
+   "limited edition",
+   "limited edition coffee",
+   "limited release coffee",
+   "specialty coffee"
+  ],
+  "title": "Darkest Day Halloween Roast",
+  "url": "https://follycoffee.com/products/darkest-day-halloween-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46795879907586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 LB",
+    "variant_id": "46795879940354"
+   }
+  ],
+  "vendor": "Folly Coffee"
+ }
+]

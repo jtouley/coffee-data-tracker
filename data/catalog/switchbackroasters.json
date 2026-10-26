@@ -1,0 +1,337 @@
+[
+ {
+  "body_hash": "dace31b443d58bcb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---Pink_6b83b407-eb54-47a1-8d8b-6ba770ed9469.jpg?v=1789415059",
+  "platform": "shopify",
+  "product_id": "11069534077095",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Blend",
+   "Chocolate",
+   "Coffee",
+   "Colombia",
+   "Decaf",
+   "Espresso",
+   "Filter"
+  ],
+  "title": "Endless Summer: Colombia Pink Bourbon",
+  "url": "https://switchbackroasters.com/products/colombia-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "50987430346919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.5,
+    "title": "5lbs",
+    "variant_id": "50987430379687"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "b0e74eecff7a6ea5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-excelso-new",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---Decaf_14c3e3c0-6e64-4101-a0e1-ac7539493b49.jpg?v=1784243973",
+  "platform": "shopify",
+  "product_id": "7206773489831",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Blend",
+   "Chocolate",
+   "Coffee",
+   "Colombia",
+   "Decaf",
+   "Espresso",
+   "Filter"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://switchbackroasters.com/products/decaf-colombia-excelso-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "41899254579367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.5,
+    "title": "5lbs",
+    "variant_id": "41899254612135"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "39efd2b13f427e93",
+  "first_seen": "2026-10-26",
+  "handle": "golden-age-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---GA_62edd097-16ad-4683-a613-6f7e418e5201.jpg?v=1784243925",
+  "platform": "shopify",
+  "product_id": "7206785548455",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Blend",
+   "Chocolate",
+   "Coffee",
+   "Espresso",
+   "Nuts"
+  ],
+  "title": "Golden Age Espresso",
+  "url": "https://switchbackroasters.com/products/golden-age-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz",
+    "variant_id": "41899271487655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lbs",
+    "variant_id": "41899271520423"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "335adc71eae4207e",
+  "first_seen": "2026-10-26",
+  "handle": "institute-street-house-blend-new",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---Institute_9b0bd768-9ea6-4555-b43d-277de8f06d37.jpg?v=1784243894",
+  "platform": "shopify",
+  "product_id": "7206789742759",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Balanced",
+   "Blend",
+   "Chocolate",
+   "Coffee"
+  ],
+  "title": "Institute Street House Blend",
+  "url": "https://switchbackroasters.com/products/institute-street-house-blend-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz",
+    "variant_id": "41899278663847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lbs",
+    "variant_id": "41899278696615"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "3b16512214231e33",
+  "first_seen": "2026-10-26",
+  "handle": "cream-sugar-blend-new",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---CS_3e410b04-98a7-40c2-93d8-f517eb066775.jpg?v=1784243830",
+  "platform": "shopify",
+  "product_id": "7206845350055",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Cream & Sugar Blend",
+  "url": "https://switchbackroasters.com/products/cream-sugar-blend-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "41899359961255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb",
+    "variant_id": "41899359994023"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "a20c079e6c168712",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-subscription-1",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---SO.jpg?v=1789406247",
+  "platform": "shopify",
+  "product_id": "7648120504487",
+  "product_type": "Subscriptions",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "Filter",
+   "Single Origin"
+  ],
+  "title": "Single Origin: Roaster's Choice",
+  "url": "https://switchbackroasters.com/products/single-origin-subscription-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "43287707386023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "43301663801511"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "61bc09a63e646fc2",
+  "first_seen": "2026-10-26",
+  "handle": "switchback-retro-style",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/unisex-garment-dyed-heavyweight-t-shirt-white-front-665aab0643304.jpg?v=1717218062",
+  "platform": "shopify",
+  "product_id": "8205912342695",
+  "product_type": "",
+  "roaster_slug": "switchbackroasters",
+  "tags": [],
+  "title": "Switchback Retro Style",
+  "url": "https://switchbackroasters.com/products/switchback-retro-style",
+  "variants": [
+   {
+    "available": true,
+    "grams": 159,
+    "price_usd": 32.0,
+    "title": "S",
+    "variant_id": "45554277187751"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 32.0,
+    "title": "M",
+    "variant_id": "45554277220519"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 32.0,
+    "title": "L",
+    "variant_id": "45554277253287"
+   },
+   {
+    "available": true,
+    "grams": 230,
+    "price_usd": 32.0,
+    "title": "XL",
+    "variant_id": "45554277286055"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "61bc09a63e646fc2",
+  "first_seen": "2026-10-26",
+  "handle": "brand-showcase-blue",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/3S9A4163.jpg?v=1720786599",
+  "platform": "shopify",
+  "product_id": "8207486746791",
+  "product_type": "",
+  "roaster_slug": "switchbackroasters",
+  "tags": [],
+  "title": "Brand Showcase Blue",
+  "url": "https://switchbackroasters.com/products/brand-showcase-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 159,
+    "price_usd": 32.0,
+    "title": "S",
+    "variant_id": "45556781220007"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 32.0,
+    "title": "M",
+    "variant_id": "45556781252775"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 32.0,
+    "title": "L",
+    "variant_id": "45556781285543"
+   },
+   {
+    "available": true,
+    "grams": 230,
+    "price_usd": 32.0,
+    "title": "XL",
+    "variant_id": "45556781318311"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ },
+ {
+  "body_hash": "b5bbcfe7fbdbfa0b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ella-santos-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2777/2732/files/Switchback-Online-Coffee-Graphics---Alma_709fd615-5a54-4428-88e9-c9699914cd86.jpg?v=1784243667",
+  "platform": "shopify",
+  "product_id": "8485794709671",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "switchbackroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala - Alma",
+  "url": "https://switchbackroasters.com/products/guatemala-ella-santos-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz",
+    "variant_id": "46637350584487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb",
+    "variant_id": "46637350617255"
+   }
+  ],
+  "vendor": "Switchback Coffee Roasters"
+ }
+]

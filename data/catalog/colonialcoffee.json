@@ -1,0 +1,584 @@
+[
+ {
+  "body_hash": "0e3799f93eb49a4b",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/100_PACK-Signature.jpg?v=1744661368",
+  "platform": "shopify",
+  "product_id": "8920557093116",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "SIGNATURE BLEND",
+  "url": "https://colonialcoffee.com/products/colonial-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46962900730108"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46962900795644"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.99,
+    "title": "Pack of 80",
+    "variant_id": "47181655113980"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.99,
+    "title": "Pack of 12",
+    "variant_id": "47356628435196"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "49a8d0fa28ed8453",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-euro-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/100_PACK-Dark_Roast.jpg?v=1744661255",
+  "platform": "shopify",
+  "product_id": "8920668012796",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "EUROPEAN DARK ROAST",
+  "url": "https://colonialcoffee.com/products/colonial-euro-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46963181650172"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46963181715708"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.99,
+    "title": "Pack of 80",
+    "variant_id": "47331434266876"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "f508c4670ba59556",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-100-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/100_PACK-Colombian_48b4a311-9ce9-4032-a6da-05a71c3c8a1b.jpg?v=1744661227",
+  "platform": "shopify",
+  "product_id": "8920668045564",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "100% COLOMBIAN",
+  "url": "https://colonialcoffee.com/products/colonial-100-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46963181748476"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46963181814012"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.99,
+    "title": "Pack of 80",
+    "variant_id": "47181652721916"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.99,
+    "title": "Pack of 12",
+    "variant_id": "47356637905148"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "189e2b2ab6062088",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-100-colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/32_PACK-Decaf.jpg?v=1744660781",
+  "platform": "shopify",
+  "product_id": "8920668078332",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "100% COLOMBIAN DECAF",
+  "url": "https://colonialcoffee.com/products/colonial-100-colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46963181846780"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46963181879548"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.99,
+    "title": "Pack of 80",
+    "variant_id": "47181649445116"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "171a5bb847f33964",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-donut-shop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/100_PACK-Donut_Shop.jpg?v=1744660999",
+  "platform": "shopify",
+  "product_id": "8920668111100",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "DONUT SHOP BLEND",
+  "url": "https://colonialcoffee.com/products/colonial-donut-shop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46963181912316"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46963181945084"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.99,
+    "title": "Pack of 80",
+    "variant_id": "47181648888060"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "c2c5efbac613db79",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/32_PACK-Vanilla.jpg?v=1744660972",
+  "platform": "shopify",
+  "product_id": "8921110479100",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "FRENCH VANILLA",
+  "url": "https://colonialcoffee.com/products/colonial-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46964807074044"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46965660549372"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "27e0ebe18f3247e1",
+  "first_seen": "2026-10-26",
+  "handle": "colonial-hazelnut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/32_PACK-Hazelnut.jpg?v=1744660891",
+  "platform": "shopify",
+  "product_id": "8921110544636",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "HAZELNUT CREAM",
+  "url": "https://colonialcoffee.com/products/colonial-hazelnut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "46964807139580"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46965661303036"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "5509cc04fbd77e7f",
+  "first_seen": "2026-10-26",
+  "handle": "extra-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/81UwBxjzevL._SL1500.jpg?v=1747429411",
+  "platform": "shopify",
+  "product_id": "8921110577404",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "HIGH CAFFEINE",
+  "url": "https://colonialcoffee.com/products/extra-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 169.99,
+    "title": "Pack of 100",
+    "variant_id": "46964807172348"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "Pack of 32",
+    "variant_id": "47181660193020"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "6ef96e5c708ea1b3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-aroma",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/espressoaroma.jpg?v=1741814178",
+  "platform": "shopify",
+  "product_id": "8921341591804",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "ESPRESSO AROMA",
+  "url": "https://colonialcoffee.com/products/espresso-aroma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 Lb Ground Coffee",
+    "variant_id": "46965576171772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 Lb Whole Bean",
+    "variant_id": "46965576204540"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9a78994719328f41",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaffeinato",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/espressodecaffeinato.jpg?v=1741814349",
+  "platform": "shopify",
+  "product_id": "8921343230204",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "ESPRESSO DECAFFEINATO",
+  "url": "https://colonialcoffee.com/products/espresso-decaffeinato",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 Lb Ground Coffee",
+    "variant_id": "46965578301692"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "517a5def2210164a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-sabor",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/espressosabor.jpg?v=1741814653",
+  "platform": "shopify",
+  "product_id": "8921346670844",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "ESPRESSO SABOR",
+  "url": "https://colonialcoffee.com/products/espresso-sabor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 Lb Ground Coffee",
+    "variant_id": "46965588984060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.99,
+    "title": "2 Lb Whole Bean",
+    "variant_id": "46965589016828"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "af2db89e83183508",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/colombiandecaf.jpg?v=1741814906",
+  "platform": "shopify",
+  "product_id": "8921349423356",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "SWISS WATER COLOMBIAN DECAF",
+  "url": "https://colonialcoffee.com/products/swiss-water-colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground",
+    "variant_id": "46965593407740"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "46965593440508"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a75dba94bc87c207",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/sumatramandheling.jpg?v=1741815076",
+  "platform": "shopify",
+  "product_id": "8921351028988",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "SUMATRA MANDHELING",
+  "url": "https://colonialcoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground",
+    "variant_id": "46965600420092"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "46965600452860"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "97a22af0d2367003",
+  "first_seen": "2026-10-26",
+  "handle": "java",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/JAVA.jpg?v=1741815184",
+  "platform": "shopify",
+  "product_id": "8921351487740",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "JAVA",
+  "url": "https://colonialcoffee.com/products/java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground",
+    "variant_id": "46965603238140"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "46965603270908"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "da499b5104ce1b77",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/kenyaaa.jpg?v=1741815289",
+  "platform": "shopify",
+  "product_id": "8921354404092",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "KENYA AA",
+  "url": "https://colonialcoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Ground",
+    "variant_id": "46965605859580"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "46965605892348"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "c4523a478a89b1c7",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/brazilsantos.jpg?v=1741816055",
+  "platform": "shopify",
+  "product_id": "8921357910268",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "BRAZIL SANTOS",
+  "url": "https://colonialcoffee.com/products/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground",
+    "variant_id": "46965617688828"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "46965617721596"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4e608e71b4e7379c",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/32_PACK-Hawaiian_Kona.jpg?v=1744660135",
+  "platform": "shopify",
+  "product_id": "8921371902204",
+  "product_type": "Coffee",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "KONA BLEND",
+  "url": "https://colonialcoffee.com/products/kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 74.99,
+    "title": "Pack of 32",
+    "variant_id": "46965674377468"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 164.99,
+    "title": "Pack of 100",
+    "variant_id": "47356601696508"
+   }
+  ],
+  "vendor": "Colonial Coffee"
+ },
+ {
+  "body_hash": "3d1222e454adf81b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-pacifica",
+  "image": "https://cdn.shopify.com/s/files/1/0734/3108/9404/files/61tTaud5oJL._SL1500.jpg?v=1747427640",
+  "platform": "shopify",
+  "product_id": "8975382348028",
+  "product_type": "",
+  "roaster_slug": "colonialcoffee",
+  "tags": [],
+  "title": "ESPRESSO PACIFICA",
+  "url": "https://colonialcoffee.com/products/espresso-pacifica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.99,
+    "title": "2 Lb Whole Bean",
+    "variant_id": "47356706980092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 Lb Ground Coffee",
+    "variant_id": "47356716515580"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

@@ -1,0 +1,390 @@
+[
+ {
+  "body_hash": "045afe7cf92ad6bf",
+  "first_seen": "2026-10-26",
+  "handle": "timber-cruiser-dark-roast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/52af6041e4b0be086525e3da/1571582177707-24SAXM7MPS0JO0EF9WF2/TimberWebWide.jpg",
+  "platform": "squarespace",
+  "product_id": "52fd07bde4b0d81b4ad20789",
+  "product_type": "",
+  "roaster_slug": "whitepinecoffee",
+  "tags": [],
+  "title": "Timber Cruiser - Dark Roast Blend",
+  "url": "https://www.whitepinecoffee.com/wpcblends/timber-cruiser-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Auto Drip",
+    "variant_id": "178e9121-65c4-4f7a-a35c-8eb25c12e250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Whole Bean",
+    "variant_id": "1fbc0504-b6fd-40b4-b4e3-cac3eff13aca"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Whole Bean",
+    "variant_id": "5004e0b6-17dd-41ed-8a0a-928c320218d1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 French Press",
+    "variant_id": "683c09ed-6ade-42f1-abe1-87080c530ac0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Auto Drip",
+    "variant_id": "6a3f3e12-afbd-4ed6-bdb6-57882909835a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 French Press",
+    "variant_id": "7c688bec-9011-4545-a66d-330a16b47f3f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Auto Drip",
+    "variant_id": "898742e7-3285-4443-9f1c-ae56802975bd"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Whole Bean",
+    "variant_id": "c435f632-e1b5-46a5-ab42-ebbaaa8097b6"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 French Press",
+    "variant_id": "dd4de62d-9621-477e-bf08-9a200e7eb0a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2933b59083fe3043",
+  "first_seen": "2026-10-26",
+  "handle": "red-sash-medium-roast-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/52af6041e4b0be086525e3da/1571582484756-XRQU3JOUGPH595B9X630/RedSashWebWide.jpg",
+  "platform": "squarespace",
+  "product_id": "52fd0bd7e4b0d81b4ad2112c",
+  "product_type": "",
+  "roaster_slug": "whitepinecoffee",
+  "tags": [],
+  "title": "Red Sash - Medium Roast Decaf",
+  "url": "https://www.whitepinecoffee.com/wpcblends/red-sash-medium-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94 Whole Bean",
+    "variant_id": "633aa2e9-a3e1-4334-b24d-410f2f83d852"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47 French Press",
+    "variant_id": "6e2e9b14-4cd9-4850-a694-9efdf10546fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94 French Press",
+    "variant_id": "89eb4aba-6f2c-4e98-9936-c34cf28e1ccc"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47 Auto Drip",
+    "variant_id": "89ec8397-5763-42f8-955f-b384409f06c5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20 Auto Drip",
+    "variant_id": "8c7210d4-3b09-420b-b043-8b38a9846fc6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20 Whole Bean",
+    "variant_id": "b912ebe6-98ba-4974-a687-9ae7da1247ec"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47 Whole Bean",
+    "variant_id": "d55749ea-46ec-457c-ba91-2541c16df55e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94 Auto Drip",
+    "variant_id": "fa2dea41-7994-4ce9-ac52-53ea6fe5e3f4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20 French Press",
+    "variant_id": "fed10eae-ec94-4d81-ba4d-46327415b875"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "938a415b5a2c5b86",
+  "first_seen": "2026-10-26",
+  "handle": "saw-mill-espresso-city-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/52af6041e4b0be086525e3da/1571582335450-6JE3M00CXCPVJEG7L5O0/SawMillWebWide.jpg",
+  "platform": "squarespace",
+  "product_id": "52fd0cafe4b0d228c34fbb7c",
+  "product_type": "",
+  "roaster_slug": "whitepinecoffee",
+  "tags": [],
+  "title": "Saw Mill Espresso - City Roast",
+  "url": "https://www.whitepinecoffee.com/wpcblends/saw-mill-espresso-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Whole Bean",
+    "variant_id": "15be1e70-f78b-449f-8d94-a804c2334952"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Auto Drip",
+    "variant_id": "162cc94e-39cf-4094-af24-12a8dc842e2c"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Whole Bean",
+    "variant_id": "3b47b6fb-b207-44a6-b1b9-a4ee1bd67515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Whole Bean",
+    "variant_id": "71496081-e534-46f1-be51-01d5e3a828ee"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 French Press",
+    "variant_id": "8da66e2d-79ed-4d65-8507-0338583b0a51"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Espresso",
+    "variant_id": "90889302-7f62-47c0-ba02-94e70387ae76"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Espresso",
+    "variant_id": "92174c79-314b-4487-a280-53c5c215c864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Espresso",
+    "variant_id": "a8db86cc-ac79-41bf-82a4-d2b5ba22e1b7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "01e6959a947205c5",
+  "first_seen": "2026-10-26",
+  "handle": "river-hog-light-roast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/52af6041e4b0be086525e3da/1571582276508-D94YXETK20P5VH91DGQN/RiverHogWebWide.jpg",
+  "platform": "squarespace",
+  "product_id": "52fd0d02e4b03f845db53627",
+  "product_type": "",
+  "roaster_slug": "whitepinecoffee",
+  "tags": [],
+  "title": "River Hog - Light Roast Blend",
+  "url": "https://www.whitepinecoffee.com/wpcblends/river-hog-light-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Whole Bean",
+    "variant_id": "0ce26e16-e920-4863-80bb-ca7f237b4e63"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Auto Drip",
+    "variant_id": "21a0c0a7-37fb-43cd-9e18-e83e77dd4f74"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Auto Drip",
+    "variant_id": "7fdc73f6-4f4b-4c5e-96e9-eccff0d5bfe6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 French Press",
+    "variant_id": "96f08843-e955-44f6-8230-236a27537d7e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Whole Bean",
+    "variant_id": "a0e6f188-0983-4722-9883-ffdaa29e5960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 French Press",
+    "variant_id": "a96ceb4a-466f-4804-b653-dfc7a7804ac3"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Auto Drip",
+    "variant_id": "ec602105-0131-4473-bd2b-2ab7476ea181"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Whole Bean",
+    "variant_id": "f5d4645e-d680-4515-a2c8-dada55e6b4db"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 French Press",
+    "variant_id": "f8e527ab-1b47-47f0-a615-c4275467fd29"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9fa3dcffe5d1e19",
+  "first_seen": "2026-10-26",
+  "handle": "r22uu8nsg54gfcdiae5p1rtcfw6v4x",
+  "image": "https://images.squarespace-cdn.com/content/v1/52af6041e4b0be086525e3da/1571582119905-HJOWCJLM008YWFOGE0E7/ShantyWebWide.jpg",
+  "platform": "squarespace",
+  "product_id": "52fd1016e4b02da4a17bc716",
+  "product_type": "",
+  "roaster_slug": "whitepinecoffee",
+  "tags": [],
+  "title": "Shanty Boy - Medium Roast House Blend",
+  "url": "https://www.whitepinecoffee.com/wpcblends/r22uu8nsg54gfcdiae5p1rtcfw6v4x",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 French Press",
+    "variant_id": "0d6b6a22-64b9-454a-80e3-90662383f7cb"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Whole Bean",
+    "variant_id": "2ac08ac9-e5f4-4de8-852f-70a11ac68909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Auto Drip",
+    "variant_id": "3c47080e-3c1e-464d-840b-3636ee18ae78"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 French Press",
+    "variant_id": "46897f98-bab9-4bfd-af7e-93fece9cb6fd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Auto Drip",
+    "variant_id": "559615ac-ba80-4d6c-aee6-c488bbefe69f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 Whole Bean",
+    "variant_id": "7616f548-1551-4db2-9f8d-7dad2ac61735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz   |   $20.00 French Press",
+    "variant_id": "a6e3014d-5d7c-47ba-aeb0-db2c636ffad9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb   |   $94.00 Whole Bean",
+    "variant_id": "d0af2a82-ec15-4e11-8f18-c865a19ed4bc"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2 lb   |   $47.00 Auto Drip",
+    "variant_id": "ded982be-ae08-4752-b102-f88c277ee0e4"
+   }
+  ],
+  "vendor": ""
+ }
+]

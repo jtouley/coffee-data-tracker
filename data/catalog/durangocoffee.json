@@ -1,0 +1,1010 @@
+[
+ {
+  "body_hash": "8e42aa406d2bc6da",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-el-jardin-natural",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/09/Easperanza-Natural.png",
+  "platform": "woocommerce",
+  "product_id": "12790",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Micro Lot",
+   "Micro Lot Especial"
+  ],
+  "title": "Colombian El Jardin Natural",
+  "url": "https://durangocoffee.com/product/colombian-el-jardin-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12 Oz Bag",
+    "variant_id": "12790:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "12790:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "10d2d827ae06e68f",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/durango_italianroast_regular_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1280",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Dark Roast",
+   "House Blends"
+  ],
+  "title": "Italian Roast",
+  "url": "https://durangocoffee.com/product/italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1280:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1280:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac45dafadc8b00d1",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/06/durango_frenchroast_regular_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1285",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Dark Roast",
+   "House Blends"
+  ],
+  "title": "French Roast",
+  "url": "https://durangocoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1285:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1285:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "96d23ea15354119d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-naturally-grown-2",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/sumatra_natural_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1291",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Medium Roast",
+   "Naturally Grown"
+  ],
+  "title": "Sumatra Naturally Grown",
+  "url": "https://durangocoffee.com/product/sumatra-naturally-grown-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1291:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1291:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e49f819f19e1b50",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-naturally-grown",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/durango_frenchroast_natural_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1304",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Dark Roast",
+   "Naturally Grown"
+  ],
+  "title": "French Roast Naturally Grown",
+  "url": "https://durangocoffee.com/product/french-roast-naturally-grown/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 Oz Bag",
+    "variant_id": "1304:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "5 Lb. Bag",
+    "variant_id": "1304:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa17f8f001f9bbb2",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-costa-rica",
+  "image": "https://durangocoffee.com/wp-content/uploads/2022/10/CR-Dark-Honey-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "13201",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Dark Roast",
+   "Light Roast"
+  ],
+  "title": "Dark Costa Rica Red Honey",
+  "url": "https://durangocoffee.com/product/dark-roast-costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12 Oz Bag",
+    "variant_id": "13201:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "13201:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ecbc79ac099a573",
+  "first_seen": "2026-10-26",
+  "handle": "sinful-delight",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/06/durango_sinfuldelight_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1346",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Decaf",
+   "Flavored",
+   "Light Roast"
+  ],
+  "title": "Sinful Delight",
+  "url": "https://durangocoffee.com/product/sinful-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1346:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1346:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f527be720c2c052",
+  "first_seen": "2026-10-26",
+  "handle": "kenya_gaturiri",
+  "image": "https://durangocoffee.com/wp-content/uploads/2023/01/Kenya-bag-and-stamp.jpg",
+  "platform": "woocommerce",
+  "product_id": "13627",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "African",
+   "Light Roast",
+   "Micro Lot Especial"
+  ],
+  "title": "Kenya Gaturiri",
+  "url": "https://durangocoffee.com/product/kenya_gaturiri/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.25,
+    "title": "Kenya Gaturiri",
+    "variant_id": "13627:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4f8dcaaa609604f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/columbian_supremo_decaf_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1393",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Decaf",
+   "Light Roast"
+  ],
+  "title": "Decaf Colombian",
+  "url": "https://durangocoffee.com/product/decaf-colombian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1393:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1393:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25a3fd28c5cef0fc",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/durango_frenchroast_decaf_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1397",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://durangocoffee.com/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 Oz Bag",
+    "variant_id": "1397:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.75,
+    "title": "5 Lb. Bag",
+    "variant_id": "1397:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12d4abf2676a0c93",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/sumtra_mandelingh_decaf_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1401",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Decaf Sumatra",
+  "url": "https://durangocoffee.com/product/decaf-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1401:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1401:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e40922aaad798d0",
+  "first_seen": "2026-10-26",
+  "handle": "durango-coffee-company-decaf",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/durango_coffeeco_decaf_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1405",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Durango Coffee Company Decaf",
+  "url": "https://durangocoffee.com/product/durango-coffee-company-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "1405:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "1405:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bad5751b3655a274",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-santa-luzia",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/brazil_redbourbon_santaluzia_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1457",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Brazil Pulp Natural",
+  "url": "https://durangocoffee.com/product/brazil-fazenda-santa-luzia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 Oz Bag",
+    "variant_id": "1457:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "1457:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06fefa0be2b967cb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-sl-28",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/05/SL28-2026-Score.png",
+  "platform": "woocommerce",
+  "product_id": "18364",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Micro Lot Especial"
+  ],
+  "title": "Costa Rica Las Lajas SL-28 Natural",
+  "url": "https://durangocoffee.com/product/costa-rica-las-lajas-sl-28/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 Oz Bag",
+    "variant_id": "18364:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 30.0,
+    "title": "5 Lb. Bag",
+    "variant_id": "18364:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b473fc1c9b5df205",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-perla-negra",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/Perla-Negra-Bag-With-Score-2025.png",
+  "platform": "woocommerce",
+  "product_id": "1855",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Micro Lot Especial"
+  ],
+  "title": "Costa Rica Las Lajas Perla Negra",
+  "url": "https://durangocoffee.com/product/costa-rica-las-lajas-perla-negra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12 Oz Bag",
+    "variant_id": "1855:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "1855:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "29e11dd02019e970",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-red-honey",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/costarica_laslajas_redhoney_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "1861",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Costa Rica Las Lajas Red Honey",
+  "url": "https://durangocoffee.com/product/costa-rica-las-lajas-red-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 Oz Bag",
+    "variant_id": "1861:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "1861:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cca518380bf8d7bd",
+  "first_seen": "2026-10-26",
+  "handle": "sicobi-coop-mexican",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/02/mexican-800x800-1.png",
+  "platform": "woocommerce",
+  "product_id": "19358",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Micro Lot Especial"
+  ],
+  "title": "Sicobi Coop Mexican",
+  "url": "https://durangocoffee.com/product/sicobi-coop-mexican/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 Oz Bag",
+    "variant_id": "19358:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "19358:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "615831a805e978a6",
+  "first_seen": "2026-10-26",
+  "handle": "durango-naturaly-grown-espresso",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/02/Natural-Espresso-800x800-1.png",
+  "platform": "woocommerce",
+  "product_id": "19957",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends",
+   "Light Roast",
+   "Naturally Grown"
+  ],
+  "title": "Durango Naturaly Grown Espresso",
+  "url": "https://durangocoffee.com/product/durango-naturaly-grown-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12 Oz Bag",
+    "variant_id": "19957:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "19957:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "daa74128fd64cb51",
+  "first_seen": "2026-10-26",
+  "handle": "durango-naturally-grown-mesa-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/02/Mesa-Blend-800x800-1.png",
+  "platform": "woocommerce",
+  "product_id": "19959",
+  "product_type": "simple",
+  "roaster_slug": "durangocoffee",
+  "tags": [],
+  "title": "Durango Naturally Grown Mesa Blend",
+  "url": "https://durangocoffee.com/product/durango-naturally-grown-mesa-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "Durango Naturally Grown Mesa Blend",
+    "variant_id": "19959:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4cc663ba4c72060",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retiro-del-quisaya-natural-process-2",
+  "image": "https://durangocoffee.com/wp-content/uploads/2026/10/Natural-Merced-1.png",
+  "platform": "woocommerce",
+  "product_id": "2810",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Micro Lot Especial"
+  ],
+  "title": "Guatemala Merced Natural Process",
+  "url": "https://durangocoffee.com/product/guatemala-retiro-del-quisaya-natural-process-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12 Oz Bag",
+    "variant_id": "2810:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "2810:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0686fff517ac4ab5",
+  "first_seen": "2026-10-26",
+  "handle": "coal-bank-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/06/dcc_-coal-bank-blnd_bg-Stmp.jpg",
+  "platform": "woocommerce",
+  "product_id": "3703",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends"
+  ],
+  "title": "Coal Bank Blend",
+  "url": "https://durangocoffee.com/product/coal-bank-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 Oz Bag",
+    "variant_id": "3703:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "3703:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87e483e9de16ba61",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley",
+  "image": "https://durangocoffee.com/wp-content/uploads/2018/07/dcc_ethiopia_misti_valley_bg_-amp_stmp.jpg",
+  "platform": "woocommerce",
+  "product_id": "3766",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "African",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Misti Valley",
+  "url": "https://durangocoffee.com/product/ethiopia-misty-valley/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12 Oz Bag",
+    "variant_id": "3766:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "3766:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "46737f2e3d2d2422",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-garuda",
+  "image": "https://durangocoffee.com/wp-content/uploads/2018/07/dcc_sumatra_garuda_bg_-amp_stmp.jpg",
+  "platform": "woocommerce",
+  "product_id": "3784",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Indonesian",
+   "Medium Roast"
+  ],
+  "title": "Sumatra Garuda",
+  "url": "https://durangocoffee.com/product/sumatra-garuda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 Oz Bag",
+    "variant_id": "3784:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "3784:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df8f6bb8fa26702d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-naturally-grown",
+  "image": "https://durangocoffee.com/wp-content/uploads/2018/07/Nat-Guat-stamp-and-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "3802",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Naturally Grown"
+  ],
+  "title": "Guatemala Guaya’B Naturally Grown",
+  "url": "https://durangocoffee.com/product/guatemala-huehuetenango-naturally-grown/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12 Oz Bag",
+    "variant_id": "3802:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "3802:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "abd840e86f9ab873",
+  "first_seen": "2026-10-26",
+  "handle": "durango-deep-dark-secret",
+  "image": "https://durangocoffee.com/wp-content/uploads/2018/09/dcc_durangodeepdarksecret.jpg",
+  "platform": "woocommerce",
+  "product_id": "4047",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Dark Roast",
+   "House Blends"
+  ],
+  "title": "Durango Deep Dark Secret",
+  "url": "https://durangocoffee.com/product/durango-deep-dark-secret/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12 Oz Bag",
+    "variant_id": "4047:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.75,
+    "title": "5 Lb. Bag",
+    "variant_id": "4047:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a094de9262057119",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2018/11/dcc_holiday_blend_bg__stmp-min.jpg",
+  "platform": "woocommerce",
+  "product_id": "4293",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends",
+   "Medium Roast"
+  ],
+  "title": "Holiday Blend",
+  "url": "https://durangocoffee.com/product/holiday-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Holiday Blend",
+    "variant_id": "4293:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e6070af5c8a7009c",
+  "first_seen": "2026-10-26",
+  "handle": "durango-coffee-company-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/05/durango_coffeeco_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "822",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends",
+   "Medium Roast"
+  ],
+  "title": "Durango Coffee Company Blend",
+  "url": "https://durangocoffee.com/product/durango-coffee-company-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 Oz Bag",
+    "variant_id": "822:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "822:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "196e064465c6d11b",
+  "first_seen": "2026-10-26",
+  "handle": "durango-western-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/06/durango_westernblend_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "833",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends",
+   "Medium Roast"
+  ],
+  "title": "Durango Western Blend",
+  "url": "https://durangocoffee.com/product/durango-western-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 Oz Bag",
+    "variant_id": "833:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "833:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "719ead1d228da92f",
+  "first_seen": "2026-10-26",
+  "handle": "eldorado-blend",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/06/durango_eldorado_bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "850",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends"
+  ],
+  "title": "Eldorado Blend",
+  "url": "https://durangocoffee.com/product/eldorado-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 Oz Bag",
+    "variant_id": "850:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "850:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51a6fd94f41267dd",
+  "first_seen": "2026-10-26",
+  "handle": "durango-espresso",
+  "image": "https://durangocoffee.com/wp-content/uploads/2021/09/Esp-Bag-and-Stamp.jpeg",
+  "platform": "woocommerce",
+  "product_id": "855",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "House Blends",
+   "Medium Roast"
+  ],
+  "title": "Durango Espresso",
+  "url": "https://durangocoffee.com/product/durango-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 Oz Bag",
+    "variant_id": "855:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 Lb. Bag",
+    "variant_id": "855:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40592e1f011d9e61",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retiro-del-quisaya-washed-process",
+  "image": "https://durangocoffee.com/wp-content/uploads/2017/07/guat-retiro.jpg",
+  "platform": "woocommerce",
+  "product_id": "994",
+  "product_type": "variable",
+  "roaster_slug": "durangocoffee",
+  "tags": [
+   "Americas",
+   "Light Roast",
+   "Micro Lot Especial"
+  ],
+  "title": "Guatemala Retiro del Quisaya Washed Process",
+  "url": "https://durangocoffee.com/product/guatemala-retiro-del-quisaya-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12 Oz Bag",
+    "variant_id": "994:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5 Lb. Bag",
+    "variant_id": "994:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

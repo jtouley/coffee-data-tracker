@@ -1,0 +1,209 @@
+[
+ {
+  "body_hash": "a1a091a0f3ea7883",
+  "first_seen": "2026-10-26",
+  "handle": "3-pack-of-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "242c02bdfa07",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "3 Pack of Coffee",
+  "url": "https://www.brewhaharoasters.com/product-page/3-pack-of-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 41.79,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "13d5e178f03eaf0b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-chelchele-grade-1-natural-yirgacheffe",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3681ca94fee4",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Ethiopian - Chelchele - Grade 1 -Natural Yirgacheffe",
+  "url": "https://www.brewhaharoasters.com/product-page/ethiopian-chelchele-grade-1-natural-yirgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.49,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3514b1ff47822645",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kichwa-tembo",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6e5d3ee331bf",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Kenya - Kichwa Tembo",
+  "url": "https://www.brewhaharoasters.com/product-page/kenya-kichwa-tembo",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b441383ad820437",
+  "first_seen": "2026-10-26",
+  "handle": "will-power-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "78ce5a1544e4",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Will Power | Espresso",
+  "url": "https://www.brewhaharoasters.com/product-page/will-power-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e152ad8167e666d",
+  "first_seen": "2026-10-26",
+  "handle": "buxom-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7c0e3ba7a860",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Buxom Blend",
+  "url": "https://www.brewhaharoasters.com/product-page/buxom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "033e571660af1704",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-altura-chiapas",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8487e31d8d4a",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Mexico Altura Chiapas",
+  "url": "https://www.brewhaharoasters.com/product-page/mexico-altura-chiapas",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d92af840a76b6396",
+  "first_seen": "2026-10-26",
+  "handle": "crypto-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8e0ed0be869c",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Crypto Coffee",
+  "url": "https://www.brewhaharoasters.com/product-page/crypto-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1ad1cebfa7aecf4",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-cajamarca-regional-select",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a3641ffbb3c0",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Peru Fair Trade Organic",
+  "url": "https://www.brewhaharoasters.com/product-page/peruvian-cajamarca-regional-select",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9e01db0d243fbc7",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-gihere-ngozi-natural-process",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d58eb27e33b6",
+  "product_type": "",
+  "roaster_slug": "brewhaharoasters",
+  "tags": [],
+  "title": "Burundi Gihere Ngozi - Natural Process",
+  "url": "https://www.brewhaharoasters.com/product-page/burundi-gihere-ngozi-natural-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.49,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

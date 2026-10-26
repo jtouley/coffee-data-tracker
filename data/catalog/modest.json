@@ -1,0 +1,140 @@
+[
+ {
+  "body_hash": "cf6389c18237729b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-single-bag",
+  "image": "https://www.modest.coffee/wp-content/uploads/2017/05/decaf-guatemala-.png",
+  "platform": "generic",
+  "product_id": "269",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "DECAF Guatemala - Sierra Madre",
+  "url": "https://www.modest.coffee/product/decaf-single-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b00d6edb4051e9be",
+  "first_seen": "2026-10-26",
+  "handle": "the-pride-dark-roast-sumatra",
+  "image": "https://www.modest.coffee/wp-content/uploads/2025/06/pride-roast.png",
+  "platform": "generic",
+  "product_id": "53921",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "The PRIDE Dark Roast - Sumatra",
+  "url": "https://www.modest.coffee/product/the-pride-dark-roast-sumatra/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "432a560ca689b281",
+  "first_seen": "2026-10-26",
+  "handle": "the-collector-single-bag",
+  "image": "https://www.modest.coffee/wp-content/uploads/2017/05/KENYA-NYERI.png",
+  "platform": "generic",
+  "product_id": "COL-SB",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "Kenya - Nyeri",
+  "url": "https://www.modest.coffee/product/the-collector-single-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb0abaab1a388b58",
+  "first_seen": "2026-10-26",
+  "handle": "the-dark-single-bag",
+  "image": "https://www.modest.coffee/wp-content/uploads/2017/05/uganda-mt-elgon-the-dark.png",
+  "platform": "generic",
+  "product_id": "DRK-SB",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "Uganda - Mount Elgon",
+  "url": "https://www.modest.coffee/product/the-dark-single-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c1811c7a793daa0",
+  "first_seen": "2026-10-26",
+  "handle": "the-enthusiast-single-bag",
+  "image": "https://www.modest.coffee/wp-content/uploads/2017/05/guatemala-huehue.png",
+  "platform": "generic",
+  "product_id": "ENT-SB",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "Guatemala - Huehuetenango",
+  "url": "https://www.modest.coffee/product/the-enthusiast-single-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0377109fa759ac6e",
+  "first_seen": "2026-10-26",
+  "handle": "the-modest-single-bag",
+  "image": "https://www.modest.coffee/wp-content/uploads/2017/05/peru-cajamarca-1-1.png",
+  "platform": "generic",
+  "product_id": "MOD-SING",
+  "product_type": "",
+  "roaster_slug": "modest",
+  "tags": [],
+  "title": "Peru - Cajamarca",
+  "url": "https://www.modest.coffee/product/the-modest-single-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

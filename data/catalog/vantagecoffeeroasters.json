@@ -1,0 +1,1541 @@
+[
+ {
+  "body_hash": "8ce750ad2e3de9c9",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Burundi_2.png?v=1790274212",
+  "platform": "shopify",
+  "product_id": "10293624340723",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "wholesale"
+  ],
+  "title": "Burundi Rubagabaga Kayanza",
+  "url": "https://vantagecoffeeroasters.com/products/burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "51594342170867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "51594342203635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "51594342236403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "51594342269171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "51594342301939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "51594342334707"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "220093165cf1708b",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-marcala-royal-reserva-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Hon_Naturalguinea_nebilyer.png?v=1790274212",
+  "platform": "shopify",
+  "product_id": "10294895214835",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "wholesale"
+  ],
+  "title": "Honduran Marcala Royal Reserva Natural",
+  "url": "https://vantagecoffeeroasters.com/products/honduran-marcala-royal-reserva-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "51615215747315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "51615215780083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "51615215812851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "51615215845619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "51615215878387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "51615215911155"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "a7976ac9a4204b45",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-finca-la-bonita-giselle-soloranzo",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Giselle.png?v=1790274212",
+  "platform": "shopify",
+  "product_id": "10294897508595",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "wholesale"
+  ],
+  "title": "Honduran Finca La Bonita Giselle Solórzano",
+  "url": "https://vantagecoffeeroasters.com/products/honduran-finca-la-bonita-giselle-soloranzo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "51615237603571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "51615237636339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "51615237669107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "51615237701875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "51615237734643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "51615237767411"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "58e97ab1387c06e9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/SantaMaria.png?v=1774377643",
+  "platform": "shopify",
+  "product_id": "7789902168307",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Colombia Huila Santa Maria",
+  "url": "https://vantagecoffeeroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431021811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431054579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133449961715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46060137185523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46060137218291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46060137251059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46060137283827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46060137316595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46060137349363"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "737f3a806accbea7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/DecafColo.png?v=1774377727",
+  "platform": "shopify",
+  "product_id": "7789902201075",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://vantagecoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip",
+    "variant_id": "43133431087347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / French Press",
+    "variant_id": "43133431120115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Wholebean",
+    "variant_id": "43133450387699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Wholebean",
+    "variant_id": "48166394921203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Drip",
+    "variant_id": "48166394953971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / French Press",
+    "variant_id": "48166394986739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Wholebean",
+    "variant_id": "48166395019507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Drip",
+    "variant_id": "48166395052275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / French Press",
+    "variant_id": "48166395085043"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "c17e7b8fa56a629c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-mezzo",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Espresso.png?v=1774377769",
+  "platform": "shopify",
+  "product_id": "7789902266611",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Espresso Mezzo",
+  "url": "https://vantagecoffeeroasters.com/products/espresso-mezzo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450420467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062465220851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062465253619"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "8937ab2a1fac4b24",
+  "first_seen": "2026-10-26",
+  "handle": "estate-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Estate_d651f9e7-4fd4-43cb-90c7-2db191f690a0.png?v=1774377779",
+  "platform": "shopify",
+  "product_id": "7789902299379",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Estate Blend",
+  "url": "https://vantagecoffeeroasters.com/products/estate-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431251187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431283955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450453235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062480228595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062480261363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062480294131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062480326899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062480359667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062480392435"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "30a111ed2e21adce",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Guatemala.png?v=1774377914",
+  "platform": "shopify",
+  "product_id": "7789902332147",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://vantagecoffeeroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431316723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431349491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450518771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062684111091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062684143859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062684176627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062684209395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062684242163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062684274931"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "c600a64b48035be4",
+  "first_seen": "2026-10-26",
+  "handle": "my-favorite-things",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/MyFavoriteThings.png?v=1774378080",
+  "platform": "shopify",
+  "product_id": "7789902397683",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "My Favorite Things",
+  "url": "https://vantagecoffeeroasters.com/products/my-favorite-things",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431447795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431480563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450649843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062679228659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062679261427"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062679294195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062679326963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062679359731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062679392499"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "cc37db6f2e1f7e4b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Bali.png?v=1774378088",
+  "platform": "shopify",
+  "product_id": "7789902430451",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Organic Bali Blue Moon",
+  "url": "https://vantagecoffeeroasters.com/products/organic-bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431513331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431546099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450682611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062552973555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062553006323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062553039091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062553071859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062553104627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062553137395"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "667d325db4bf7e93",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-comsa-marcala-shg-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/HonduranMarcala.png?v=1774378096",
+  "platform": "shopify",
+  "product_id": "7789902463219",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "honduras"
+  ],
+  "title": "Organic Honduran Marcala",
+  "url": "https://vantagecoffeeroasters.com/products/organic-honduras-comsa-marcala-shg-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133431578867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133431611635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450715379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062651900147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062651932915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062651965683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062651998451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062652031219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062652063987"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "c52a3ae519df2f1d",
+  "first_seen": "2026-10-26",
+  "handle": "lolas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Lola_sBlend.png?v=1774378069",
+  "platform": "shopify",
+  "product_id": "7789906395379",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Lola's Blend",
+  "url": "https://vantagecoffeeroasters.com/products/lolas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450551539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133450584307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133450617075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062691320051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062691352819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062691385587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062691418355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062691451123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062691483891"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "2df21a50f5338ed0",
+  "first_seen": "2026-10-26",
+  "handle": "three-little-birds",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/3LB_0bc46355-1474-460c-a540-a3710c951488.png?v=1774378278",
+  "platform": "shopify",
+  "product_id": "7789906428147",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Three Little Birds",
+  "url": "https://vantagecoffeeroasters.com/products/three-little-birds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "43133450813683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "43133450846451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43133450879219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062682079475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062682112243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062682145011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062682177779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062682210547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062682243315"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "719c4b075c259e28",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/ColdBrew.png?v=1774377631",
+  "platform": "shopify",
+  "product_id": "8400346513651",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Coffee",
+  "url": "https://vantagecoffeeroasters.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "47165512515827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47165512548595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47165512581363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "48330728440051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "48330728472819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "48330728505587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / French Press",
+    "variant_id": "48330728538355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Drip",
+    "variant_id": "48330728571123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / French Press",
+    "variant_id": "48330728603891"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "7f241f231abce886",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-mezzo",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/DecafEspresso.png?v=1774377747",
+  "platform": "shopify",
+  "product_id": "8402527617267",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [],
+  "title": "Decaf Espresso Mezzo",
+  "url": "https://vantagecoffeeroasters.com/products/decaf-espresso-mezzo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44761116147955"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "81d1b4616157cc9c",
+  "first_seen": "2026-10-26",
+  "handle": "indian-monsooned-malabar",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/IndianMonsoon.png?v=1774377929",
+  "platform": "shopify",
+  "product_id": "8854549037299",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [],
+  "title": "Indian Monsooned Malabar",
+  "url": "https://vantagecoffeeroasters.com/products/indian-monsooned-malabar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50510906622195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "50510906654963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "50510906687731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "50510906720499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "50510906753267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "50510906786035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50510906818803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "50510906851571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "50510906884339"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "8536d04844c3bf3d",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Midnight.png?v=1774378074",
+  "platform": "shopify",
+  "product_id": "8854549364979",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "honduras"
+  ],
+  "title": "Midnight Blend",
+  "url": "https://vantagecoffeeroasters.com/products/midnight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "46045154574579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "46045154607347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "46045154640115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46631550877939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46631550910707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46631550943475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46631550976243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46631551009011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46631551041779"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "c8ed0e49514c1d66",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-mezzo-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Ethiopia.png?v=1774377897",
+  "platform": "shopify",
+  "product_id": "8859616706803",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "wholesale"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://vantagecoffeeroasters.com/products/decaf-espresso-mezzo-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "46686022336755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "46686022369523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "46686022402291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46686022435059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46686022467827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46686022500595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46686022533363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46686022566131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46686022598899"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "94fd7b7aca8fcd36",
+  "first_seen": "2026-10-26",
+  "handle": "the-laurel-1",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/TheLaurel.png?v=1774378201",
+  "platform": "shopify",
+  "product_id": "8863302648051",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "coffee",
+   "subscription"
+  ],
+  "title": "The Laurel",
+  "url": "https://vantagecoffeeroasters.com/products/the-laurel-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "46062699479283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Drip",
+    "variant_id": "46062699512051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / French Press",
+    "variant_id": "46062699544819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Wholebean",
+    "variant_id": "46062699577587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "46062699610355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "46062699643123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / Wholebean",
+    "variant_id": "46062699675891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "46062699708659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "46062699741427"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "fd8b64c2508b5481",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-aa-mt-elgon",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Uganda.png?v=1774378233",
+  "platform": "shopify",
+  "product_id": "9218381021427",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [],
+  "title": "Uganda AA Mt. Elgon",
+  "url": "https://vantagecoffeeroasters.com/products/uganda-aa-mt-elgon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "47745981448435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "47745981481203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "47745981513971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "47745981546739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "47745981579507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "47745981612275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "47745981645043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "47745981677811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "47745981710579"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ },
+ {
+  "body_hash": "233690eddc62206c",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-min-leo-finca-los-lirios",
+  "image": "https://cdn.shopify.com/s/files/1/0648/4135/1411/files/Min_Leo.png?v=1774377945",
+  "platform": "shopify",
+  "product_id": "9307603402995",
+  "product_type": "Coffee",
+  "roaster_slug": "vantagecoffeeroasters",
+  "tags": [
+   "honduras"
+  ],
+  "title": "Honduran Min & Leo Finca Los Lirios",
+  "url": "https://vantagecoffeeroasters.com/products/honduran-min-leo-finca-los-lirios",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "48203698143475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Drip",
+    "variant_id": "48203698176243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "48203698209011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "48203698241779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / Drip",
+    "variant_id": "48203698274547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "48203698307315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "48203698340083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Drip",
+    "variant_id": "48203698372851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "48203698405619"
+   }
+  ],
+  "vendor": "Vantage Coffee Roasters"
+ }
+]

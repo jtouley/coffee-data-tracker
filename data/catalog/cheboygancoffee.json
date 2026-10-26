@@ -1,0 +1,25 @@
+[
+ {
+  "body_hash": "46b4260827f3c5ef",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin",
+  "image": "https://www.cheboygancoffee.com/wp-content/uploads/2024/10/CCR24_Single_Origin_r4_OL.png",
+  "platform": "generic",
+  "product_id": "362",
+  "product_type": "",
+  "roaster_slug": "cheboygancoffee",
+  "tags": [],
+  "title": "Single Origin",
+  "url": "https://www.cheboygancoffee.com/product/single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": null,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

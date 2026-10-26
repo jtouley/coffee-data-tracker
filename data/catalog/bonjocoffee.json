@@ -1,0 +1,3600 @@
+[
+ {
+  "body_hash": "8ec08f2432ae2523",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-dumerso",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Ethiopia.jpg?v=1777149128",
+  "platform": "shopify",
+  "product_id": "15463682572657",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "bean:Ground",
+   "bean:Whole",
+   "process:Natural",
+   "process:Organic",
+   "profile:Floral",
+   "profile:Fruity",
+   "profile:Sweet",
+   "roast:Light"
+  ],
+  "title": "Ethiopia, Dumerso",
+  "url": "https://bonjocoffee.com/products/ethiopia-dumerso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63261462397297"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63261462430065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63261462462833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63261462495601"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63261462528369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63261462561137"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "70650ad7ab6a437c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-esmeralda",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Colombia_Esmeralda.jpg?v=1777149083",
+  "platform": "shopify",
+  "product_id": "15463685816689",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Fruity",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Single Origin"
+  ],
+  "title": "Colombia, Esmeralda",
+  "url": "https://bonjocoffee.com/products/colombia-esmeralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63261464527217"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63261464559985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63261464592753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63261464625521"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63261464658289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63261464691057"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "bc73198e8956d35a",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-baroida",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-PapuaNewGuinea.png?v=1777146712",
+  "platform": "shopify",
+  "product_id": "15463686603121",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "process:Washed",
+   "profile:Earthy",
+   "profile:Floral",
+   "profile:Fruity",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Single Origin"
+  ],
+  "title": "Papua New Guinea, Baroida Estate",
+  "url": "https://bonjocoffee.com/products/papua-new-guinea-baroida",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63261469671793"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63261469704561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63261469737329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63261469770097"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63261469802865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63261469835633"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "72a0ed3d33350c3c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kahawa-bora",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Kenya.jpg?v=1777149025",
+  "platform": "shopify",
+  "product_id": "15463687029105",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Earthy",
+   "profile:Fruity",
+   "profile:Sweet",
+   "roast:Light",
+   "type:Single Origin"
+  ],
+  "title": "Kenya, Kahawa Bora",
+  "url": "https://bonjocoffee.com/products/kenya-kahawa-bora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63261471801713"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63261471834481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63261471867249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63261471900017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63261471932785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63261471965553"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "15dbc32aa44a8290",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-blue-batak",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Sumatra_Blue_Batak.png?v=1777146382",
+  "platform": "shopify",
+  "product_id": "15463688143217",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Bestsellers",
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Earthy",
+   "profile:Spice",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Single Origin"
+  ],
+  "title": "Sumatra, Blue Batak",
+  "url": "https://bonjocoffee.com/products/sumatra-blue-batak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63261477077361"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63261477110129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63261477142897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63261477175665"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63261477208433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63261477241201"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "1aba91ec5b500bc9",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-jose-alberto-careta",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Brazil.jpg?v=1777148927",
+  "platform": "shopify",
+  "product_id": "15473577689457",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Single Origin"
+  ],
+  "title": "Brazil, Jose Alberto Careta",
+  "url": "https://bonjocoffee.com/products/brazil-jose-alberto-careta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306506928497"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306506961265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306506994033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306507026801"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306507059569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306507092337"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "f7fb7611d37b46ff",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-rincon",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Guatemala_Finca_El_Rincon.jpg?v=1777148594",
+  "platform": "shopify",
+  "product_id": "15473579458929",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Fruity",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Single Origin"
+  ],
+  "title": "Guatemala, Finca El Rincon",
+  "url": "https://bonjocoffee.com/products/guatemala-finca-el-rincon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306516988273"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306517021041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306517053809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306517086577"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306517119345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306517152113"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "3a4fca3e90796b2b",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-baroida-1",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-Java.png?v=1777146801",
+  "platform": "shopify",
+  "product_id": "15473580179825",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "process:Washed",
+   "profile:Earthy",
+   "profile:Spice",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Single Origin"
+  ],
+  "title": "Java, Kayumas Village",
+  "url": "https://bonjocoffee.com/products/papua-new-guinea-baroida-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306518593905"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306518626673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306518659441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306518692209"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306518724977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306518757745"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "7c4fe8cd7b2efc16",
+  "first_seen": "2026-10-26",
+  "handle": "miscela-bar-northern-italy-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Miscela_Bar_Espresso.jpg?v=1777148529",
+  "platform": "shopify",
+  "product_id": "15473580671345",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Bestsellers",
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Nutty",
+   "roast: Medium",
+   "type:Blend",
+   "type:Espresso"
+  ],
+  "title": "Miscela Bar, Northern Italy",
+  "url": "https://bonjocoffee.com/products/miscela-bar-northern-italy-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306520658289"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306520691057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306520723825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306520756593"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306520789361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306520822129"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "3a5fa9feddca8311",
+  "first_seen": "2026-10-26",
+  "handle": "armonia-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Armonia_Espresso_5133254c-5451-499f-8be7-f86df2a211cc.png?v=1777291244",
+  "platform": "shopify",
+  "product_id": "15473581359473",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Washed",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Blend",
+   "type:Espresso"
+  ],
+  "title": "Armonia, Southern Italy",
+  "url": "https://bonjocoffee.com/products/armonia-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306522984817"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306523017585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306523050353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306523083121"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306523115889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306523148657"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "20bc010e2db62958",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-buona-notte",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-DecafBuonaNotte.jpg?v=1777148444",
+  "platform": "shopify",
+  "product_id": "15473585258865",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Nutty",
+   "profile:Spice",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Blend",
+   "type:Decaf"
+  ],
+  "title": "Buona Notte",
+  "url": "https://bonjocoffee.com/products/decaf-buona-notte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306557391217"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306557423985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306557456753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306557489521"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306557522289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306557555057"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "3f841d20749d34ff",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-miscela-bar-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-DecafMiscelaBar.jpg?v=1777148343",
+  "platform": "shopify",
+  "product_id": "15473586438513",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Nutty",
+   "roast: Medium",
+   "type:Blend",
+   "type:Decaf",
+   "type:Espresso"
+  ],
+  "title": "Miscela Bar, Decaf",
+  "url": "https://bonjocoffee.com/products/decaf-miscela-bar-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306567123313"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306567156081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306567188849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306567221617"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306567254385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306567287153"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "6dc9f16defb325ea",
+  "first_seen": "2026-10-26",
+  "handle": "swp-mexican-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Decaf_SWP_Mexican.png?v=1777150036",
+  "platform": "shopify",
+  "product_id": "15473624220017",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Bestsellers",
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "process:Swiss Water",
+   "profile:Fruity",
+   "profile:Spice",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Decaf",
+   "type:Single Origin"
+  ],
+  "title": "Mexico, SWP Decaf",
+  "url": "https://bonjocoffee.com/products/swp-mexican-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306806231409"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306806264177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306806296945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306806329713"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306806362481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306806395249"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "1282c6d7e94b7fa1",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-FrenchRoast.png?v=1777146851",
+  "platform": "shopify",
+  "product_id": "15473638637937",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Washed",
+   "profile:Earthy",
+   "profile:Spice",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Blend"
+  ],
+  "title": "French Roast",
+  "url": "https://bonjocoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63306852598129"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63306852630897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63306852663665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63306852696433"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63306852729201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63306852761969"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "f27d26801f58736a",
+  "first_seen": "2026-10-26",
+  "handle": "freddo-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-Freddo.png?v=1777146894",
+  "platform": "shopify",
+  "product_id": "15474202509681",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Blend",
+   "type:Cold Brew"
+  ],
+  "title": "Freddo, Cold Brew",
+  "url": "https://bonjocoffee.com/products/freddo-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309473153393"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309473186161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309473218929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309473251697"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309473284465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309473317233"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "0441584abd9a6c59",
+  "first_seen": "2026-10-26",
+  "handle": "divino-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-Divino.jpg?v=1777148235",
+  "platform": "shopify",
+  "product_id": "15474202673521",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Fruity",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Blend"
+  ],
+  "title": "Divino",
+  "url": "https://bonjocoffee.com/products/divino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309474791793"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309474824561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309474857329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309474890097"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309474922865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309474955633"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "e6e9a1670a4d055d",
+  "first_seen": "2026-10-26",
+  "handle": "aroma-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-Aroma.jpg?v=1777148116",
+  "platform": "shopify",
+  "product_id": "15474216862065",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Blend"
+  ],
+  "title": "Aroma",
+  "url": "https://bonjocoffee.com/products/aroma-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309537902961"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309537935729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309537968497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309538001265"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309538034033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309538066801"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "09d55fd5fd1b8108",
+  "first_seen": "2026-10-26",
+  "handle": "classica-organic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-OrganicClassica.png?v=1777146997",
+  "platform": "shopify",
+  "product_id": "15474225873265",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "profile:Balanced",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Blend"
+  ],
+  "title": "Classica Organic",
+  "url": "https://bonjocoffee.com/products/classica-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309548290417"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309548323185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309548355953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309548388721"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309548421489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309548454257"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "ed02d60c96504aaa",
+  "first_seen": "2026-10-26",
+  "handle": "classica-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-Classica.png?v=1777142650",
+  "platform": "shopify",
+  "product_id": "15474233672049",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Bestsellers",
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast:Dark",
+   "type:Blend"
+  ],
+  "title": "Classica",
+  "url": "https://bonjocoffee.com/products/classica-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309558874481"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309558907249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309558940017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309558972785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309559005553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309559038321"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "68f5f0aa89175c76",
+  "first_seen": "2026-10-26",
+  "handle": "melodia-organica-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/BonjoCoffeeRoasters-MelodiaOrganica.jpg?v=1777147958",
+  "platform": "shopify",
+  "product_id": "15474240029041",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Natural",
+   "process:Organic",
+   "process:Washed",
+   "profile:Nutty",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Blend",
+   "type:Espresso"
+  ],
+  "title": "Melodia, Organica",
+  "url": "https://bonjocoffee.com/products/melodia-organica-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309568377201"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309568409969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309568442737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309568475505"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309568508273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309568541041"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "fa70d2908b73aa1e",
+  "first_seen": "2026-10-26",
+  "handle": "symphonia-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Symphonia_Espresso.jpg?v=1777147798",
+  "platform": "shopify",
+  "product_id": "15474249105777",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Floral",
+   "profile:Fruity",
+   "roast: Medium",
+   "type:Blend",
+   "type:Espresso"
+  ],
+  "title": "Symphonia",
+  "url": "https://bonjocoffee.com/products/symphonia-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63309585514865"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63309585547633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63309585580401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63309585613169"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63309585645937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63309585678705"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "02f12d59ac2bcd0d",
+  "first_seen": "2026-10-26",
+  "handle": "peru-bagua-grande",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Bonjo_Coffee_Roasters_-_Peru_Bagua_Grande_1192fc43-cf13-4dfa-981d-61f3a8b7a43c.jpg?v=1777147732",
+  "platform": "shopify",
+  "product_id": "15514618790257",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Organic",
+   "process:Washed",
+   "profile:Nutty",
+   "roast: Medium",
+   "type:Single Origin"
+  ],
+  "title": "Peru, Bagua Grande",
+  "url": "https://bonjocoffee.com/products/peru-bagua-grande",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63477696070001"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63477696102769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63477696135537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63477696168305"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63477696201073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63477696233841"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "19a0b1f780ac621a",
+  "first_seen": "2026-10-26",
+  "handle": "il-piacere",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Il-Piacere.jpg?v=1777394546",
+  "platform": "shopify",
+  "product_id": "15531878580593",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Subscription",
+   "subscription:Il Torrefattore",
+   "subscription:L'artigiano"
+  ],
+  "title": "Il Piacere",
+  "url": "https://bonjocoffee.com/products/il-piacere",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Classica",
+    "variant_id": "63530515333489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Classica Organic",
+    "variant_id": "63530515366257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Aroma",
+    "variant_id": "63530515399025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Divino",
+    "variant_id": "63530515431793"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Classica",
+    "variant_id": "63530515530097"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Classica Organic",
+    "variant_id": "63530515562865"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Aroma",
+    "variant_id": "63530515595633"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Divino",
+    "variant_id": "63530515628401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Classica",
+    "variant_id": "63530515726705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Classica Organic",
+    "variant_id": "63530515759473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Aroma",
+    "variant_id": "63530515792241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Divino",
+    "variant_id": "63530515825009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Classica",
+    "variant_id": "63530515923313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Classica Organic",
+    "variant_id": "63530515956081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Aroma",
+    "variant_id": "63530515988849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Divino",
+    "variant_id": "63530516021617"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Classica",
+    "variant_id": "63530516119921"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Classica Organic",
+    "variant_id": "63530516152689"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Aroma",
+    "variant_id": "63530516185457"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Divino",
+    "variant_id": "63530516218225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Classica",
+    "variant_id": "63530516316529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Classica Organic",
+    "variant_id": "63530516349297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Aroma",
+    "variant_id": "63530516382065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Divino",
+    "variant_id": "63530516414833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Armonia - Southern Italy",
+    "variant_id": "63530709188977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Brazil - Jose Alberto Careta",
+    "variant_id": "63530709221745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Buona Notte",
+    "variant_id": "63530709254513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Colombia - Esmeralda",
+    "variant_id": "63530709287281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz / Congo - Lake Kivu",
+    "variant_id": "63530709320049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz / Ethiopia - Dumerso",
+    "variant_id": "63530709352817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Freddo - Cold Brew",
+    "variant_id": "63530709385585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz / French Roast",
+    "variant_id": "63530709418353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Guatemala - Finca El Rincon",
+    "variant_id": "63530709451121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz / Java - Kayumas Village",
+    "variant_id": "63530709483889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Kenya - Kahawa Bora",
+    "variant_id": "63530709516657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12 oz / Melodia Organica",
+    "variant_id": "63530709549425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12 oz / Mexico - SWP Decaf",
+    "variant_id": "63530709582193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Miscela Bar - Decaf",
+    "variant_id": "63530709614961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz / Miscela Bar - Northern Italy",
+    "variant_id": "63530709647729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530709680497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz / Peru - Bagua Grande",
+    "variant_id": "63530709713265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz / Sumatra - Blue Batak",
+    "variant_id": "63530709746033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 oz / Symphonia",
+    "variant_id": "63530709778801"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Armonia - Southern Italy",
+    "variant_id": "63530709811569"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Brazil - Jose Alberto Careta",
+    "variant_id": "63530709844337"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Buona Notte",
+    "variant_id": "63530709877105"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Colombia - Esmeralda",
+    "variant_id": "63530709909873"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo / Congo - Lake Kivu",
+    "variant_id": "63530709942641"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo / Ethiopia - Dumerso",
+    "variant_id": "63530709975409"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Freddo - Cold Brew",
+    "variant_id": "63530710008177"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo / French Roast",
+    "variant_id": "63530710040945"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Guatemala - Finca El Rincon",
+    "variant_id": "63530710073713"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 1 kilo / Java - Kayumas Village",
+    "variant_id": "63530710106481"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Kenya - Kahawa Bora",
+    "variant_id": "63530710139249"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "Whole Bean / 1 kilo / Melodia Organica",
+    "variant_id": "63530710172017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "Whole Bean / 1 kilo / Mexico - SWP Decaf",
+    "variant_id": "63530710204785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Miscela Bar - Decaf",
+    "variant_id": "63530710237553"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 1 kilo / Miscela Bar - Northern Italy",
+    "variant_id": "63530710270321"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Whole Bean / 1 kilo / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530710303089"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo / Peru - Bagua Grande",
+    "variant_id": "63530710335857"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo / Sumatra - Blue Batak",
+    "variant_id": "63530710368625"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 1 kilo / Symphonia",
+    "variant_id": "63530710401393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Armonia - Southern Italy",
+    "variant_id": "63530710434161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Brazil - Jose Alberto Careta",
+    "variant_id": "63530710466929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Buona Notte",
+    "variant_id": "63530710499697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Colombia - Esmeralda",
+    "variant_id": "63530710532465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb / Congo - Lake Kivu",
+    "variant_id": "63530710565233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb / Ethiopia - Dumerso",
+    "variant_id": "63530710598001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Freddo - Cold Brew",
+    "variant_id": "63530710630769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb / French Roast",
+    "variant_id": "63530710663537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Guatemala - Finca El Rincon",
+    "variant_id": "63530710696305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 5 lb / Java - Kayumas Village",
+    "variant_id": "63530710729073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Kenya - Kahawa Bora",
+    "variant_id": "63530710761841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 5 lb / Melodia Organica",
+    "variant_id": "63530710794609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5 lb / Mexico - SWP Decaf",
+    "variant_id": "63530710827377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Miscela Bar - Decaf",
+    "variant_id": "63530710860145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5 lb / Miscela Bar - Northern Italy",
+    "variant_id": "63530710892913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5 lb / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530710925681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb / Peru - Bagua Grande",
+    "variant_id": "63530710958449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb / Sumatra - Blue Batak",
+    "variant_id": "63530710991217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 5 lb / Symphonia",
+    "variant_id": "63530711023985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Armonia - Southern Italy",
+    "variant_id": "63530711056753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Brazil - Jose Alberto Careta",
+    "variant_id": "63530711089521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Buona Notte",
+    "variant_id": "63530711122289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Colombia - Esmeralda",
+    "variant_id": "63530711155057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz / Congo - Lake Kivu",
+    "variant_id": "63530711187825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz / Ethiopia - Dumerso",
+    "variant_id": "63530711220593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Freddo - Cold Brew",
+    "variant_id": "63530711253361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz / French Roast",
+    "variant_id": "63530711286129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Guatemala - Finca El Rincon",
+    "variant_id": "63530711318897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz / Java - Kayumas Village",
+    "variant_id": "63530711351665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Kenya - Kahawa Bora",
+    "variant_id": "63530711384433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground / 12 oz / Melodia Organica",
+    "variant_id": "63530711417201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground / 12 oz / Mexico - SWP Decaf",
+    "variant_id": "63530711449969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Miscela Bar - Decaf",
+    "variant_id": "63530711482737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12 oz / Miscela Bar - Northern Italy",
+    "variant_id": "63530711515505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12 oz / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530711548273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz / Peru - Bagua Grande",
+    "variant_id": "63530711581041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz / Sumatra - Blue Batak",
+    "variant_id": "63530711613809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12 oz / Symphonia",
+    "variant_id": "63530711646577"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Armonia - Southern Italy",
+    "variant_id": "63530711679345"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Brazil - Jose Alberto Careta",
+    "variant_id": "63530711712113"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Buona Notte",
+    "variant_id": "63530711744881"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Colombia - Esmeralda",
+    "variant_id": "63530711777649"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo / Congo - Lake Kivu",
+    "variant_id": "63530711810417"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo / Ethiopia - Dumerso",
+    "variant_id": "63530711843185"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Freddo - Cold Brew",
+    "variant_id": "63530711875953"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo / French Roast",
+    "variant_id": "63530711908721"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Guatemala - Finca El Rincon",
+    "variant_id": "63530711941489"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "Ground / 1 kilo / Java - Kayumas Village",
+    "variant_id": "63530711974257"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Kenya - Kahawa Bora",
+    "variant_id": "63530712007025"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "Ground / 1 kilo / Melodia Organica",
+    "variant_id": "63530712039793"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "Ground / 1 kilo / Mexico - SWP Decaf",
+    "variant_id": "63530712072561"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Miscela Bar - Decaf",
+    "variant_id": "63530712105329"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "Ground / 1 kilo / Miscela Bar - Northern Italy",
+    "variant_id": "63530712138097"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "Ground / 1 kilo / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530712170865"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo / Peru - Bagua Grande",
+    "variant_id": "63530712203633"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo / Sumatra - Blue Batak",
+    "variant_id": "63530712236401"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "Ground / 1 kilo / Symphonia",
+    "variant_id": "63530712269169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Armonia - Southern Italy",
+    "variant_id": "63530712301937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Brazil - Jose Alberto Careta",
+    "variant_id": "63530712334705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Buona Notte",
+    "variant_id": "63530712367473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Colombia - Esmeralda",
+    "variant_id": "63530712400241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb / Congo - Lake Kivu",
+    "variant_id": "63530712433009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb / Ethiopia - Dumerso",
+    "variant_id": "63530712465777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Freddo - Cold Brew",
+    "variant_id": "63530712498545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb / French Roast",
+    "variant_id": "63530712531313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Guatemala - Finca El Rincon",
+    "variant_id": "63530712564081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "Ground / 5 lb / Java - Kayumas Village",
+    "variant_id": "63530712596849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Kenya - Kahawa Bora",
+    "variant_id": "63530712629617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "Ground / 5 lb / Melodia Organica",
+    "variant_id": "63530712662385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Ground / 5 lb / Mexico - SWP Decaf",
+    "variant_id": "63530712695153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Miscela Bar - Decaf",
+    "variant_id": "63530712727921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground / 5 lb / Miscela Bar - Northern Italy",
+    "variant_id": "63530712760689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Ground / 5 lb / Papua New Guinea - Baroida Estate",
+    "variant_id": "63530712793457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb / Peru - Bagua Grande",
+    "variant_id": "63530712826225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb / Sumatra - Blue Batak",
+    "variant_id": "63530712858993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "Ground / 5 lb / Symphonia",
+    "variant_id": "63530712891761"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "c151dbb93e4c5f34",
+  "first_seen": "2026-10-26",
+  "handle": "lartigiano",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/L-Artigiano.jpg?v=1777394560",
+  "platform": "shopify",
+  "product_id": "15531881005425",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Subscription",
+   "subscription:Il Piacere",
+   "subscription:Il Torrefattore"
+  ],
+  "title": "L'artigiano",
+  "url": "https://bonjocoffee.com/products/lartigiano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "63530519200113"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "63530519396721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "63530519593329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "63530519789937"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "63530519986545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "63530520183153"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "85ef8ea12f5b0380",
+  "first_seen": "2026-10-26",
+  "handle": "il-torrefattore",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Il-Torrefattore-Reserve.jpg?v=1777394515",
+  "platform": "shopify",
+  "product_id": "15543644225905",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Subscription",
+   "subscription:Il Piacere",
+   "subscription:L'artigiano"
+  ],
+  "title": "Il Torrefattore",
+  "url": "https://bonjocoffee.com/products/il-torrefattore",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Armonia - Southern Italy",
+    "variant_id": "63570177917297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Aroma",
+    "variant_id": "63570177950065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Brazil - Jose Alberto Careta",
+    "variant_id": "63570177982833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Buona Notte",
+    "variant_id": "63570178015601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Classica",
+    "variant_id": "63570178048369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Classica Organic",
+    "variant_id": "63570178081137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Colombia - Esmeralda",
+    "variant_id": "63570178113905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 12 oz / Congo - Lake Kivu",
+    "variant_id": "63570178146673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Divino",
+    "variant_id": "63570178179441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 12 oz / Ethiopia - Dumerso",
+    "variant_id": "63570178212209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Freddo - Cold Brew",
+    "variant_id": "63570178244977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 12 oz / French Roast",
+    "variant_id": "63570178277745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Guatemala - Finca El Rincon",
+    "variant_id": "63570178310513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 12 oz / Java - Kayumas Village",
+    "variant_id": "63570178343281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Kenya - Kahawa Bora",
+    "variant_id": "63570178376049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 12 oz / Melodia Organica",
+    "variant_id": "63570178408817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 12 oz / Mexico - SWP Decaf",
+    "variant_id": "63570178441585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Miscela Bar - Decaf",
+    "variant_id": "63570178474353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 12 oz / Miscela Bar - Northern Italy",
+    "variant_id": "63570178507121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 12 oz / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570178539889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Whole Bean / 12 oz / Peru - Bagua Grande",
+    "variant_id": "63570178572657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Whole Bean / 12 oz / Sumatra - Blue Batak",
+    "variant_id": "63570178605425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Whole Bean / 12 oz / Symphonia",
+    "variant_id": "63570178638193"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Armonia - Southern Italy",
+    "variant_id": "63570178670961"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Aroma",
+    "variant_id": "63570178703729"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Brazil - Jose Alberto Careta",
+    "variant_id": "63570178736497"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Buona Notte",
+    "variant_id": "63570178769265"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Classica",
+    "variant_id": "63570178802033"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Classica Organic",
+    "variant_id": "63570178834801"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Colombia - Esmeralda",
+    "variant_id": "63570178867569"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 1 kilo / Congo - Lake Kivu",
+    "variant_id": "63570178900337"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Divino",
+    "variant_id": "63570178933105"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 1 kilo / Ethiopia - Dumerso",
+    "variant_id": "63570178965873"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Freddo - Cold Brew",
+    "variant_id": "63570178998641"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 1 kilo / French Roast",
+    "variant_id": "63570179031409"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Guatemala - Finca El Rincon",
+    "variant_id": "63570179064177"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Whole Bean / 1 kilo / Java - Kayumas Village",
+    "variant_id": "63570179096945"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Kenya - Kahawa Bora",
+    "variant_id": "63570179129713"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 128.0,
+    "title": "Whole Bean / 1 kilo / Melodia Organica",
+    "variant_id": "63570179162481"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 126.0,
+    "title": "Whole Bean / 1 kilo / Mexico - SWP Decaf",
+    "variant_id": "63570179195249"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Miscela Bar - Decaf",
+    "variant_id": "63570179228017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 1 kilo / Miscela Bar - Northern Italy",
+    "variant_id": "63570179260785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 1 kilo / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570179293553"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 1 kilo / Peru - Bagua Grande",
+    "variant_id": "63570179326321"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 1 kilo / Sumatra - Blue Batak",
+    "variant_id": "63570179359089"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Whole Bean / 1 kilo / Symphonia",
+    "variant_id": "63570179391857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Armonia - Southern Italy",
+    "variant_id": "63570179424625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Aroma",
+    "variant_id": "63570179457393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Brazil - Jose Alberto Careta",
+    "variant_id": "63570179490161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Buona Notte",
+    "variant_id": "63570179522929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Classica",
+    "variant_id": "63570179555697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Classica Organic",
+    "variant_id": "63570179588465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Colombia - Esmeralda",
+    "variant_id": "63570179621233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Whole Bean / 5 lb / Congo - Lake Kivu",
+    "variant_id": "63570179654001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Divino",
+    "variant_id": "63570179686769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Whole Bean / 5 lb / Ethiopia - Dumerso",
+    "variant_id": "63570179719537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Freddo - Cold Brew",
+    "variant_id": "63570179752305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Whole Bean / 5 lb / French Roast",
+    "variant_id": "63570179785073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Guatemala - Finca El Rincon",
+    "variant_id": "63570179817841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Whole Bean / 5 lb / Java - Kayumas Village",
+    "variant_id": "63570179850609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Kenya - Kahawa Bora",
+    "variant_id": "63570179883377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "Whole Bean / 5 lb / Melodia Organica",
+    "variant_id": "63570179916145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 257.0,
+    "title": "Whole Bean / 5 lb / Mexico - SWP Decaf",
+    "variant_id": "63570179948913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Miscela Bar - Decaf",
+    "variant_id": "63570179981681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Whole Bean / 5 lb / Miscela Bar - Northern Italy",
+    "variant_id": "63570180014449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Whole Bean / 5 lb / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570180047217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Whole Bean / 5 lb / Peru - Bagua Grande",
+    "variant_id": "63570180079985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Whole Bean / 5 lb / Sumatra - Blue Batak",
+    "variant_id": "63570180112753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Whole Bean / 5 lb / Symphonia",
+    "variant_id": "63570180145521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Armonia - Southern Italy",
+    "variant_id": "63570180178289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Aroma",
+    "variant_id": "63570180211057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Brazil - Jose Alberto Careta",
+    "variant_id": "63570180243825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Buona Notte",
+    "variant_id": "63570180276593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Classica",
+    "variant_id": "63570180309361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Classica Organic",
+    "variant_id": "63570180342129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Colombia - Esmeralda",
+    "variant_id": "63570180374897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Ground / 12 oz / Congo - Lake Kivu",
+    "variant_id": "63570180407665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Divino",
+    "variant_id": "63570180440433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Ground / 12 oz / Ethiopia - Dumerso",
+    "variant_id": "63570180473201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Freddo - Cold Brew",
+    "variant_id": "63570180505969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Ground / 12 oz / French Roast",
+    "variant_id": "63570180538737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Guatemala - Finca El Rincon",
+    "variant_id": "63570180571505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "Ground / 12 oz / Java - Kayumas Village",
+    "variant_id": "63570180604273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Kenya - Kahawa Bora",
+    "variant_id": "63570180637041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "Ground / 12 oz / Melodia Organica",
+    "variant_id": "63570180669809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "Ground / 12 oz / Mexico - SWP Decaf",
+    "variant_id": "63570180702577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Miscela Bar - Decaf",
+    "variant_id": "63570180735345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "Ground / 12 oz / Miscela Bar - Northern Italy",
+    "variant_id": "63570180768113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "Ground / 12 oz / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570180800881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Ground / 12 oz / Peru - Bagua Grande",
+    "variant_id": "63570180833649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Ground / 12 oz / Sumatra - Blue Batak",
+    "variant_id": "63570180866417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Ground / 12 oz / Symphonia",
+    "variant_id": "63570180899185"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Armonia - Southern Italy",
+    "variant_id": "63570180931953"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Aroma",
+    "variant_id": "63570180964721"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Brazil - Jose Alberto Careta",
+    "variant_id": "63570180997489"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Buona Notte",
+    "variant_id": "63570181030257"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Classica",
+    "variant_id": "63570181063025"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Classica Organic",
+    "variant_id": "63570181095793"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Colombia - Esmeralda",
+    "variant_id": "63570181128561"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Ground / 1 kilo / Congo - Lake Kivu",
+    "variant_id": "63570181161329"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Divino",
+    "variant_id": "63570181194097"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Ground / 1 kilo / Ethiopia - Dumerso",
+    "variant_id": "63570181226865"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Freddo - Cold Brew",
+    "variant_id": "63570181259633"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Ground / 1 kilo / French Roast",
+    "variant_id": "63570181292401"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Guatemala - Finca El Rincon",
+    "variant_id": "63570181325169"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 118.0,
+    "title": "Ground / 1 kilo / Java - Kayumas Village",
+    "variant_id": "63570181357937"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Kenya - Kahawa Bora",
+    "variant_id": "63570181390705"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 128.0,
+    "title": "Ground / 1 kilo / Melodia Organica",
+    "variant_id": "63570181423473"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 126.0,
+    "title": "Ground / 1 kilo / Mexico - SWP Decaf",
+    "variant_id": "63570181456241"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Miscela Bar - Decaf",
+    "variant_id": "63570181489009"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 112.0,
+    "title": "Ground / 1 kilo / Miscela Bar - Northern Italy",
+    "variant_id": "63570181521777"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 116.0,
+    "title": "Ground / 1 kilo / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570181554545"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Ground / 1 kilo / Peru - Bagua Grande",
+    "variant_id": "63570181587313"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Ground / 1 kilo / Sumatra - Blue Batak",
+    "variant_id": "63570181620081"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 122.0,
+    "title": "Ground / 1 kilo / Symphonia",
+    "variant_id": "63570181652849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Armonia - Southern Italy",
+    "variant_id": "63570181685617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Aroma",
+    "variant_id": "63570181718385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Brazil - Jose Alberto Careta",
+    "variant_id": "63570181751153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Buona Notte",
+    "variant_id": "63570181783921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Classica",
+    "variant_id": "63570181816689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Classica Organic",
+    "variant_id": "63570181849457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Colombia - Esmeralda",
+    "variant_id": "63570181882225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Ground / 5 lb / Congo - Lake Kivu",
+    "variant_id": "63570181914993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Divino",
+    "variant_id": "63570181947761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Ground / 5 lb / Ethiopia - Dumerso",
+    "variant_id": "63570181980529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Freddo - Cold Brew",
+    "variant_id": "63570182013297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Ground / 5 lb / French Roast",
+    "variant_id": "63570182046065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Guatemala - Finca El Rincon",
+    "variant_id": "63570182078833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 243.0,
+    "title": "Ground / 5 lb / Java - Kayumas Village",
+    "variant_id": "63570182111601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Kenya - Kahawa Bora",
+    "variant_id": "63570182144369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "Ground / 5 lb / Melodia Organica",
+    "variant_id": "63570182177137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 257.0,
+    "title": "Ground / 5 lb / Mexico - SWP Decaf",
+    "variant_id": "63570182209905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Miscela Bar - Decaf",
+    "variant_id": "63570182242673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 231.0,
+    "title": "Ground / 5 lb / Miscela Bar - Northern Italy",
+    "variant_id": "63570182275441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 237.0,
+    "title": "Ground / 5 lb / Papua New Guinea - Baroida Estate",
+    "variant_id": "63570182308209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Ground / 5 lb / Peru - Bagua Grande",
+    "variant_id": "63570182340977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Ground / 5 lb / Sumatra - Blue Batak",
+    "variant_id": "63570182373745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 253.0,
+    "title": "Ground / 5 lb / Symphonia",
+    "variant_id": "63570182406513"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ },
+ {
+  "body_hash": "8ca972836e5881b8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-rincon-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0993/3019/5825/files/Gemini_Generated_Image_5d2g5e5d2g5e5d2g.png?v=1783707591",
+  "platform": "shopify",
+  "product_id": "15897740476785",
+  "product_type": "",
+  "roaster_slug": "bonjocoffee",
+  "tags": [
+   "Coffee Singles",
+   "Single Coffee",
+   "process:Washed",
+   "profile:Balanced",
+   "profile:Fruity",
+   "profile:Sweet",
+   "roast: Medium",
+   "type:Single Origin"
+  ],
+  "title": "Costa Rica, El Poeta",
+  "url": "https://bonjocoffee.com/products/guatemala-finca-el-rincon-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "64171037229425"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 82.0,
+    "title": "Whole Bean / 1 kilo",
+    "variant_id": "64171037262193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "64171037294961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "64171037327729"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 82.0,
+    "title": "Ground / 1 kilo",
+    "variant_id": "64171037360497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "64171037393265"
+   }
+  ],
+  "vendor": "Bonjo Coffee Roasters"
+ }
+]

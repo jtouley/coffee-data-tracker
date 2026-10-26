@@ -1,0 +1,2254 @@
+[
+ {
+  "body_hash": "9fa87df9b373d445",
+  "first_seen": "2026-10-26",
+  "handle": "3-pack-winter-sampler",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/holidaypost.png?v=1767556511",
+  "platform": "shopify",
+  "product_id": "8868324671796",
+  "product_type": "Gift Ideas",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "flavors",
+   "pack",
+   "sampler",
+   "winter"
+  ],
+  "title": "The Complete Winter Collection",
+  "url": "https://mrdapper.coffee/products/3-pack-winter-sampler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 65.99,
+    "title": "Whole Bean",
+    "variant_id": "47337098838324"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 65.99,
+    "title": "Ground",
+    "variant_id": "47337098871092"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "4b9eea415a06e6a2",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/amaretto.png?v=1767556421",
+  "platform": "shopify",
+  "product_id": "8868324802868",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "amaretto",
+   "beans",
+   "coffee",
+   "flavored",
+   "roasted"
+  ],
+  "title": "Amaretto Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/amaretto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337110503732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174660616500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49025985970484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49025986003252"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "f8eb11cf4ddecf51",
+  "first_seen": "2026-10-26",
+  "handle": "bananas-foster",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/bananasfoster.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868324966708",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "bananas",
+   "coffee",
+   "flavored",
+   "foster",
+   "roasted"
+  ],
+  "title": "Bananas Foster Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/bananas-foster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337118761268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174662615348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026035679540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026035712308"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "6921e293eff7d074",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-flavored",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/caramel.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868325818676",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Candy"
+  ],
+  "title": "Signature Caramel",
+  "url": "https://mrdapper.coffee/products/caramel-flavored",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337130819892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174665728308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026045968692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026046001460"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "f042d9c0c1c754e4",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/caramelapple.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326015284",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Candy",
+   "Carnival"
+  ],
+  "title": "Caramel Apple Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/caramel-apple",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337136292148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174664614196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026046132532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026046165300"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "117f4e317aa8cae2",
+  "first_seen": "2026-10-26",
+  "handle": "carrot-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/carrotcake.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326310196",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Dessert",
+   "Seasonal",
+   "cake",
+   "carrot",
+   "coffee",
+   "flavored",
+   "roasted"
+  ],
+  "title": "Carrot Cake Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/carrot-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337140846900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174668710196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026046329140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026046361908"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "ba53a9c81ebdd5ed",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-peanut-butter",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/chocopb.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326506804",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Candy",
+   "Dessert",
+   "butter",
+   "chocolate",
+   "flavored",
+   "peanut",
+   "roasted"
+  ],
+  "title": "Chocolate Peanut Butter Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/chocolate-peanut-butter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47337146220852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174670741812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026046918964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026046951732"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "9c05e9428915b791",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/chocolateraspberry.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326572340",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "flavored",
+   "raspberry",
+   "roasted"
+  ],
+  "title": "Chocolate Raspberry Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340204130612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174671331636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026047377716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026047410484"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "86c0945f197b02f7",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-roll",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/cinnamonroll.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326670644",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "cinnamon",
+   "coffee",
+   "flavored",
+   "roasted",
+   "roll"
+  ],
+  "title": "Cinnamon Roll Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/cinnamon-roll",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340209668404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174672412980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026047672628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026047705396"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "0c7597c698f1ac74",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-paradise",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/coconutparadise.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868326900020",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [],
+  "title": "Coconut Paradise Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/coconut-paradise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340219334964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174674215220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026049179956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026049212724"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "31c8aced2c311dd7",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/colombian.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327063860",
+  "product_type": "Single-Origin Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "beans",
+   "coffee",
+   "colombian",
+   "roasted",
+   "supremo"
+  ],
+  "title": "Colombian Supremo Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lb. / Medium / Regular",
+    "variant_id": "47340228772148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb. / Medium / Regular",
+    "variant_id": "47340228804916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lb. / Medium / Decaf",
+    "variant_id": "48120630313268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.95,
+    "title": "5 lb. / Medium / Decaf",
+    "variant_id": "48120630346036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz. / Medium / Regular",
+    "variant_id": "48174742077748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz. / Medium / Decaf",
+    "variant_id": "48174742110516"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "a5c0e7ef66258f85",
+  "first_seen": "2026-10-26",
+  "handle": "cookies-and-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/cookiesncream.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868327129396",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "cookies",
+   "cream",
+   "flavored",
+   "roasted"
+  ],
+  "title": "Cookies and Cream Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/cookies-and-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340232147252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174676771124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026054979892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026055012660"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "2bb7808e3d96ce46",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-finca-pastora",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/costarica.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327227700",
+  "product_type": "Single-Origin Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "costa",
+   "rica",
+   "roasted",
+   "with"
+  ],
+  "title": "Costa Rica Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/costa-rica-tarrazu-finca-pastora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lb. / Medium",
+    "variant_id": "47340241748276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.95,
+    "title": "5 lb. / Medium",
+    "variant_id": "47340241781044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz. / Medium",
+    "variant_id": "48174744076596"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "54a46c281a689145",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/crembrulee.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327293236",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "beans",
+   "brulee",
+   "coffee",
+   "flavored",
+   "roasted"
+  ],
+  "title": "Crème Brulee Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/creme-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340249579828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174677688628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026055733556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026055766324"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "d838910917e75358",
+  "first_seen": "2026-10-26",
+  "handle": "eggnog",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/eggnog.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327522612",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "beans",
+   "coffee",
+   "eggnog",
+   "flavored",
+   "roasted"
+  ],
+  "title": "Eggnog Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/eggnog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340253905204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174680277300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056159540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056192308"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "89d6f44cc5b52567",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/englishtoffee.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868327620916",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "english",
+   "flavored",
+   "roasted",
+   "toffee"
+  ],
+  "title": "English Toffee Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/english-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340362924340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174681030964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056257844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056290612"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "3327b5e64e92e3b5",
+  "first_seen": "2026-10-26",
+  "handle": "evening-zen-2-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/eveningzentea_5e4af54b-a031-4ba2-8d00-bbb0edd7ce9b.jpg?v=1767552909",
+  "platform": "shopify",
+  "product_id": "8868327719220",
+  "product_type": "Loose Leaf Teas",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "blend",
+   "coffee",
+   "dapper",
+   "evening",
+   "this"
+  ],
+  "title": "Evening Zen | 1 oz.",
+  "url": "https://mrdapper.coffee/products/evening-zen-2-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "47336539160884"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "be980db0024117c1",
+  "first_seen": "2026-10-26",
+  "handle": "french-toast",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/frenchtoast.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327883060",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "flavored",
+   "french",
+   "roasted",
+   "toast"
+  ],
+  "title": "French Toast Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/french-toast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340367085876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174682177844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056388916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056421684"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "f792d92864f5b6d1",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/frenchvanilla.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868327948596",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "flavored",
+   "french",
+   "roasted",
+   "vanilla"
+  ],
+  "title": "French Vanilla Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340376326452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174683259188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056552756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056585524"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "29caf9c5aa767dfb",
+  "first_seen": "2026-10-26",
+  "handle": "german-chocolate-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/germanchoco.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868328145204",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Dessert",
+   "cake",
+   "chocolate",
+   "flavored",
+   "german",
+   "roasted"
+  ],
+  "title": "German Chocolate Cake Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/german-chocolate-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340400673076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174684602676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056716596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056749364"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "9671aa8fc2410b0f",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-delight",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/gingerbreadD.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868328210740",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "delight",
+   "flavored",
+   "gingerbread",
+   "roasted"
+  ],
+  "title": "Gingerbread Delight Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/gingerbread-delight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47340407095604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174685421876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056847668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056880436"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "80fb74966453f19c",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/hazelnut.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868328374580",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "cream",
+   "flavored",
+   "hazelnut",
+   "roasted"
+  ],
+  "title": "Hazelnut Cream Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/hazelnut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349065613620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174686568756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026056945972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026056978740"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "b0a682ba3ac92c05",
+  "first_seen": "2026-10-26",
+  "handle": "highland-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/highlandgrogg.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868328440116",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "flavored",
+   "grog",
+   "highland",
+   "roasted"
+  ],
+  "title": "Highland Grog Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/highland-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349068759348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174687781172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026032894260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026032927028"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "b76586af2c92c313",
+  "first_seen": "2026-10-26",
+  "handle": "honey-nut-praline",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/honeynut.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868328505652",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "flavored",
+   "honey",
+   "praline",
+   "roasted"
+  ],
+  "title": "Honey Nut Praline Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/honey-nut-praline",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Medium",
+    "variant_id": "47349071216948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Medium",
+    "variant_id": "48174689255732"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "bc46d038f05018f8",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/irishcream.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868328636724",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "cream",
+   "flavored",
+   "irish",
+   "roasted"
+  ],
+  "title": "Irish Cream Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/irish-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349072888116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174690369844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026032763188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026032795956"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "1bd0448e05288a40",
+  "first_seen": "2026-10-26",
+  "handle": "jelly-donut",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/jellydonut.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868328800564",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "donut",
+   "flavored",
+   "jelly",
+   "roasted"
+  ],
+  "title": "Jelly Donut Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/jelly-donut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349075083572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174691483956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026042298676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026042331444"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "2c4a238ad66767b7",
+  "first_seen": "2026-10-26",
+  "handle": "mint-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/mintchoco.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868328964404",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "flavored",
+   "mint",
+   "roasted"
+  ],
+  "title": "Mint Chocolate Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/mint-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349077344564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174694924596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026031288628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026031321396"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "293574ad23b3fa65",
+  "first_seen": "2026-10-26",
+  "handle": "mr-dapper-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/DapperSignature.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868329161012",
+  "product_type": "House Blends",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "blend",
+   "coffee",
+   "dapper",
+   "roasted",
+   "signature"
+  ],
+  "title": "Mr. Dapper Signature Blend Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/mr-dapper-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 lb.",
+    "variant_id": "47349078425908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb.",
+    "variant_id": "47349078458676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz.",
+    "variant_id": "48174755381556"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "6f796277edfbab6a",
+  "first_seen": "2026-10-26",
+  "handle": "not-so-average-joe",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/fullwindsor.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "8868329390388",
+  "product_type": "House Blends",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "average",
+   "beans",
+   "coffee",
+   "rich",
+   "roasted"
+  ],
+  "title": "Full Windsor Blend Roasted Coffee",
+  "url": "https://mrdapper.coffee/products/not-so-average-joe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lb. / Medium-dark",
+    "variant_id": "47349082095924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb. / Medium-dark",
+    "variant_id": "47349082128692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz. / Medium-dark",
+    "variant_id": "48174754660660"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "8a1f85838c9c18d8",
+  "first_seen": "2026-10-26",
+  "handle": "orange-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/orangechoco.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868329455924",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "flavored",
+   "orange",
+   "roasted"
+  ],
+  "title": "Chocolate Orange  Flavored Coffee Beans",
+  "url": "https://mrdapper.coffee/products/orange-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Medium / Ground",
+    "variant_id": "47349084684596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Medium / Ground",
+    "variant_id": "48174697283892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Medium / Whole Bean",
+    "variant_id": "49007651029300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Medium / Whole Bean",
+    "variant_id": "49007651062068"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "c5da27302b742e75",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/peppermintmocha.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868329718068",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "coffee",
+   "flavored",
+   "mocha",
+   "peppermint",
+   "roasted"
+  ],
+  "title": "Peppermint Mocha Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/peppermint-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349085700404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174698758452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026031157556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026031190324"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "c0b07ba6b2690652",
+  "first_seen": "2026-10-26",
+  "handle": "power-suit",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/Powersuit_05af8dee-91fa-4658-9a66-689913317fc3.png?v=1767541193",
+  "platform": "shopify",
+  "product_id": "8868329914676",
+  "product_type": "House Blends",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "beans",
+   "coffee",
+   "power",
+   "roasted",
+   "suit"
+  ],
+  "title": "Power Suit Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/power-suit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.95,
+    "title": "2 lb. / Dark",
+    "variant_id": "47349088616756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb. / Dark",
+    "variant_id": "47349088649524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz. / Dark",
+    "variant_id": "48174753481012"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "6917999cda844294",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/pumpkinspice.png?v=1767542609",
+  "platform": "shopify",
+  "product_id": "8868330111284",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "flavored",
+   "pumpkin",
+   "roasted",
+   "spice"
+  ],
+  "title": "Pumpkin Spice Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349090779444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb. / Ground",
+    "variant_id": "47349090812212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174703903028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026031059252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026031092020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "49026031124788"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "adfec7b0b31b5970",
+  "first_seen": "2026-10-26",
+  "handle": "sa-™mores",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/smores.png?v=1767542409",
+  "platform": "shopify",
+  "product_id": "8868330504500",
+  "product_type": "Specialty Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [],
+  "title": "S'mores Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/sa-™mores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47336561017140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174705869108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026029191476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026029224244"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "95fb26862f2c4107",
+  "first_seen": "2026-10-26",
+  "handle": "santaa-™s-xmas-cookie",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/dcxc.png?v=1767542682",
+  "platform": "shopify",
+  "product_id": "8868330602804",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "Seasonal",
+   "cookie",
+   "dapper",
+   "flavored",
+   "roasted",
+   "xmas"
+  ],
+  "title": "Dapper Claus's Xmas Cookie Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/santaa-™s-xmas-cookie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47336563999028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174678638900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026028536116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026028568884"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "77020de589d69eb6",
+  "first_seen": "2026-10-26",
+  "handle": "snicker-doodle",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/snickerdoodle.png?v=1767545043",
+  "platform": "shopify",
+  "product_id": "8868330930484",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "doodle",
+   "flavored",
+   "roasted",
+   "snicker"
+  ],
+  "title": "Snicker Doodle Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/snicker-doodle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349096972596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174707310900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026020213044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026020245812"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "a65fdc8604063ea8",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/southernpecan.png?v=1767542339",
+  "platform": "shopify",
+  "product_id": "8868331028788",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "flavored",
+   "pecan",
+   "roasted",
+   "southern"
+  ],
+  "title": "Southern Pecan Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349098348852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174708457780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026019754292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026019787060"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "d05b705c12c55be8",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry-fields",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/strawberrycheese.png?v=1767503358",
+  "platform": "shopify",
+  "product_id": "8868331094324",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "cheesecake",
+   "coffee",
+   "flavored",
+   "roasted",
+   "strawberry"
+  ],
+  "title": "Strawberry Cheesecake Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/strawberry-fields",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349098873140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174713340212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026017853748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026017886516"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "0b8a29fd94580deb",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/sumatran.png?v=1766892216",
+  "platform": "shopify",
+  "product_id": "8868331192628",
+  "product_type": "Single-Origin Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "beans",
+   "coffee",
+   "roasted",
+   "sumatran"
+  ],
+  "title": "Sumatran Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/sumatran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz. / French Roast",
+    "variant_id": "48174749679924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.95,
+    "title": "2 lb. / French Roast",
+    "variant_id": "49337452101940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.99,
+    "title": "5 lb. / French Roast",
+    "variant_id": "49337452134708"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "3c2efe625a11cb24",
+  "first_seen": "2026-10-26",
+  "handle": "wild-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/blueberry.png?v=1767542121",
+  "platform": "shopify",
+  "product_id": "8868331389236",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "blueberry",
+   "coffee",
+   "flavored",
+   "roasted",
+   "wild"
+  ],
+  "title": "Wild Blueberry Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/wild-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47349102608692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174716944692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026035974452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026036007220"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "3e058e10052bd7b5",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-mocha-flavored-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/caramelmocha.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "9072169615668",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "caramel",
+   "coffee",
+   "flavored",
+   "mocha",
+   "roasted"
+  ],
+  "title": "Caramel Mocha Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/caramel-mocha-flavored-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47920733028660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174666383668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026017624372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026017657140"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "e325a31de75670fb",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel-flavored-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/saltedcaramel.png?v=1767503357",
+  "platform": "shopify",
+  "product_id": "9072170565940",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "caramel",
+   "coffee",
+   "flavored",
+   "roasted",
+   "salted"
+  ],
+  "title": "Salted Caramel Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/salted-caramel-flavored-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47920734437684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb. / Ground",
+    "variant_id": "47920734470452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174709080372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026015920436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026015953204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "49026015985972"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "6b68ae6fe4473d4b",
+  "first_seen": "2026-10-26",
+  "handle": "white-russian-flavored-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/whiterussian.png?v=1767541885",
+  "platform": "shopify",
+  "product_id": "9072171286836",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "beans",
+   "coffee",
+   "flavored",
+   "russian",
+   "white"
+  ],
+  "title": "White Russian Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/white-russian-flavored-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "47920735682868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174715732276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026042069300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026042102068"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "d0645cd4ea6b90ff",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-flavored-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/jamaicanmecrazy.png?v=1767541828",
+  "platform": "shopify",
+  "product_id": "9137788158260",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "bold",
+   "coffee",
+   "crazy",
+   "jamaican",
+   "sweet"
+  ],
+  "title": "Jamaican Me Crazy Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/jamaican-me-flavored-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "48174632075572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48174638072116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026015035700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026015068468"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "07737ba1016e25b4",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/Brazilian.png?v=1767545343",
+  "platform": "shopify",
+  "product_id": "9174499426612",
+  "product_type": "Single-Origin Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [],
+  "title": "Brazilian Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/brazilian-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz.",
+    "variant_id": "48364337692980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb.",
+    "variant_id": "48364337725748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb.",
+    "variant_id": "48364337758516"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ },
+ {
+  "body_hash": "c5e8439ba9a80117",
+  "first_seen": "2026-10-26",
+  "handle": "snicker-doodle-nutella-flavored-roasted-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0851/6023/1220/files/snickerdoodle.png?v=1767545043",
+  "platform": "shopify",
+  "product_id": "9265277436212",
+  "product_type": "Flavored Coffees",
+  "roaster_slug": "mrdapper",
+  "tags": [
+   "coffee",
+   "doodle",
+   "flavored",
+   "roasted",
+   "snicker"
+  ],
+  "title": "Snicker Doodle Nutella Flavored Roasted Coffee Beans",
+  "url": "https://mrdapper.coffee/products/snicker-doodle-nutella-flavored-roasted-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Ground",
+    "variant_id": "48871738081588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Ground",
+    "variant_id": "48871738114356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49026036236596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.95,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49026036269364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.99,
+    "title": "5 lb. / Ground",
+    "variant_id": "49337465831732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.99,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "49337465864500"
+   }
+  ],
+  "vendor": "Mr. Dapper Coffee Roasters"
+ }
+]

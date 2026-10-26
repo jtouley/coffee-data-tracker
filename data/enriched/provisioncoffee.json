@@ -1,0 +1,44 @@
+{
+ "7060865122480": {
+  "body_hash": "da7c4814f83c7c8b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "stone fruit"
+  ],
+  "varietals": []
+ },
+ "7060865253552": {
+  "body_hash": "2be6c704f41101f8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "raw honey"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra"
+  ]
+ }
+}

@@ -1,0 +1,142 @@
+[
+ {
+  "body_hash": "e762f50ca1cb3877",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/Omexicolabel.png?v=1676766637",
+  "platform": "shopify",
+  "product_id": "6092382175401",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [],
+  "title": "Mexico Chiapas",
+  "url": "https://pcroasters.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz",
+    "variant_id": "38521956958377"
+   }
+  ],
+  "vendor": "PC Roasters"
+ },
+ {
+  "body_hash": "17eaae08a63fef87",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/guatemala.png?v=1676766590",
+  "platform": "shopify",
+  "product_id": "6092398067881",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://pcroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16oz",
+    "variant_id": "38521956303017"
+   }
+  ],
+  "vendor": "PC Roasters"
+ },
+ {
+  "body_hash": "de6928091f097732",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/ethiopia.png?v=1676766573",
+  "platform": "shopify",
+  "product_id": "6253600932009",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [],
+  "title": "Ethiopia Sidamo",
+  "url": "https://pcroasters.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16oz",
+    "variant_id": "38521955385513"
+   }
+  ],
+  "vendor": "PC Roasters"
+ },
+ {
+  "body_hash": "20c7a64d893cb59a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/peru.png?v=1676766654",
+  "platform": "shopify",
+  "product_id": "6253604733097",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [],
+  "title": "Peru Cajamarca",
+  "url": "https://pcroasters.com/products/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16oz",
+    "variant_id": "38521960071337"
+   }
+  ],
+  "vendor": "PC Roasters"
+ },
+ {
+  "body_hash": "259e9b2a932cb54f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-ethiopia-yirgacheffe-1",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/honduras.png?v=1676766607",
+  "platform": "shopify",
+  "product_id": "7280413245609",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [
+   "organic"
+  ],
+  "title": "Honduras Pacavita",
+  "url": "https://pcroasters.com/products/copy-of-ethiopia-yirgacheffe-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16oz",
+    "variant_id": "41552757293225"
+   }
+  ],
+  "vendor": "PC Roasters"
+ },
+ {
+  "body_hash": "743ec3d9f206bb52",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0515/6015/3257/products/columbia.png?v=1676766547",
+  "platform": "shopify",
+  "product_id": "7280474620073",
+  "product_type": "Coffee",
+  "roaster_slug": "pcroasters",
+  "tags": [],
+  "title": "Columbia",
+  "url": "https://pcroasters.com/products/copy-of-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16oz",
+    "variant_id": "41552891117737"
+   }
+  ],
+  "vendor": "PC Roasters"
+ }
+]

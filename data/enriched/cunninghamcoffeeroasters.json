@@ -1,0 +1,160 @@
+{
+ "5e72ff8c1fbfdf37a722b344": {
+  "body_hash": "518a772f40373144",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "semi-sweet chocolate",
+   "sweet",
+   "full body"
+  ],
+  "varietals": []
+ },
+ "5e730072e857576813b87384": {
+  "body_hash": "a289980dfbc71b88",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5e9287b75e4b116e0989f23d": {
+  "body_hash": "ae45076f268b867d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5e92991210408e119cc046a4": {
+  "body_hash": "e2a21688acc91f1a",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sugarcane",
+   "orange",
+   "sweet",
+   "smooth body"
+  ],
+  "varietals": []
+ },
+ "5ecd93f68e07a301b0856702": {
+  "body_hash": "5fa6696c4df4e036",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1375,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "fruity",
+   "medium body"
+  ],
+  "varietals": []
+ },
+ "62a610e2187fc259cb25ca7d": {
+  "body_hash": "82673a5c6fc6144e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "661c64106ece244ca84ff761": {
+  "body_hash": "39921ad09db99ba2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "68bb54082a7aa214d49ad974": {
+  "body_hash": "96873e4017dd3aca",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "velvety body",
+   "low acidy profile"
+  ],
+  "varietals": []
+ },
+ "6aa072584b08934e6b0da95b": {
+  "body_hash": "030b9f3556a67e0e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "clove",
+   "almond"
+  ],
+  "varietals": []
+ }
+}

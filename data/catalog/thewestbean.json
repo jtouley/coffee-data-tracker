@@ -1,0 +1,399 @@
+[
+ {
+  "body_hash": "8de19d778ae3e9ad",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nkg-bloom-1",
+  "image": "https://cdn.shopify.com/s/files/1/2509/8232/products/WBCBags_5.png?v=1666025413",
+  "platform": "shopify",
+  "product_id": "6778376749102",
+  "product_type": "Coffee",
+  "roaster_slug": "thewestbean",
+  "tags": [
+   "Home Page Featured",
+   "ICT",
+   "Single Origin",
+   "coffee",
+   "coffee beans",
+   "subscription"
+  ],
+  "title": "Mexico",
+  "url": "https://thewestbean.com/products/mexico-nkg-bloom-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39810758934574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Drip/Pour Over",
+    "variant_id": "39810758967342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39810759000110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39810759032878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip/Pour Over",
+    "variant_id": "39810759065646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "39810759098414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "40031901777966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "40031901810734"
+   }
+  ],
+  "vendor": "The WestBean Coffee Roasters"
+ },
+ {
+  "body_hash": "0411e5eb45bc85a8",
+  "first_seen": "2026-10-26",
+  "handle": "dark-matter-1",
+  "image": "https://cdn.shopify.com/s/files/1/2509/8232/products/WBCBags.png?v=1666024865",
+  "platform": "shopify",
+  "product_id": "6778449035310",
+  "product_type": "Coffee",
+  "roaster_slug": "thewestbean",
+  "tags": [
+   "Blends",
+   "Home Page Featured",
+   "ICT",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "subscription"
+  ],
+  "title": "Dark Matter",
+  "url": "https://thewestbean.com/products/dark-matter-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39810986049582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Drip/Pour Over",
+    "variant_id": "39810986082350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39810986115118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39810986147886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip/Pour Over",
+    "variant_id": "39810986180654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "39810986213422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "40031886639150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "40031886671918"
+   }
+  ],
+  "vendor": "The WestBean Coffee Roasters"
+ },
+ {
+  "body_hash": "e6b041b581225993",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-oberon-1",
+  "image": "https://cdn.shopify.com/s/files/1/2509/8232/products/WBCBags_6.png?v=1666025500",
+  "platform": "shopify",
+  "product_id": "6778449690670",
+  "product_type": "Coffee",
+  "roaster_slug": "thewestbean",
+  "tags": [
+   "Home Page Featured",
+   "ICT",
+   "Single Origin",
+   "coffee",
+   "coffee beans",
+   "subscription"
+  ],
+  "title": "Brazil",
+  "url": "https://thewestbean.com/products/brazil-oberon-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39810987327534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Drip/Pour Over",
+    "variant_id": "39810987360302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39810987393070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39810987425838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Drip/Pour Over",
+    "variant_id": "39810987458606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "39810987491374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "40031900467246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "40031900500014"
+   }
+  ],
+  "vendor": "The WestBean Coffee Roasters"
+ },
+ {
+  "body_hash": "ffe2110842969fec",
+  "first_seen": "2026-10-26",
+  "handle": "swp-decaf-brazilian-1",
+  "image": "https://cdn.shopify.com/s/files/1/2509/8232/products/WBCBags_10.png?v=1666025802",
+  "platform": "shopify",
+  "product_id": "6778452148270",
+  "product_type": "Coffee",
+  "roaster_slug": "thewestbean",
+  "tags": [
+   "Home Page Featured",
+   "ICT",
+   "Single Origin",
+   "coffee",
+   "coffee beans",
+   "subscription"
+  ],
+  "title": "Conventional Decaf",
+  "url": "https://thewestbean.com/products/swp-decaf-brazilian-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39810992242734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Drip/Pour Over",
+    "variant_id": "39810992275502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "39810992308270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39810992341038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5 lb. / Drip/Pour Over",
+    "variant_id": "39810992373806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5 lb. / French Press",
+    "variant_id": "39810992406574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "40031969312814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "40031969345582"
+   }
+  ],
+  "vendor": "The WestBean Coffee Roasters"
+ },
+ {
+  "body_hash": "5b5bc6d39e104c05",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-sussex-1",
+  "image": "https://cdn.shopify.com/s/files/1/2509/8232/products/WBCBags_1.png?v=1666025088",
+  "platform": "shopify",
+  "product_id": "6779097251886",
+  "product_type": "Coffee",
+  "roaster_slug": "thewestbean",
+  "tags": [
+   "Blends",
+   "Home Page Featured",
+   "ICT",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "subscription"
+  ],
+  "title": "Sweet Sussex",
+  "url": "https://thewestbean.com/products/sweet-sussex-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39813194842158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Drip/Pour Over",
+    "variant_id": "39813194874926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39813194907694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39813194940462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip/Pour Over",
+    "variant_id": "39813194973230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "39813195005998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "40031879921710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "40031884083246"
+   }
+  ],
+  "vendor": "The WestBean Coffee Roasters"
+ }
+]

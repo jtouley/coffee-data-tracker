@@ -1,0 +1,1487 @@
+[
+ {
+  "body_hash": "101dfdff4c9aba4a",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Chiapas-1.png?v=1787360043",
+  "platform": "shopify",
+  "product_id": "10408886698280",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:FruitPastries-SweetBreads-AfternoonPourOvers",
+   "Elevation:1400-1600MASL-Guatemala-Mexico",
+   "Flavor:Caramel-Apricot-MilkChocolate-Lemon-MediumAcidity",
+   "Roast:Medium",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Chiapas - Organic Coffee Beans",
+  "url": "https://disciplescoffee.com/products/chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "52272006103336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "52272006136104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Regular",
+    "variant_id": "52272006168872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "52272006201640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Drip",
+    "variant_id": "52272006234408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Auto Drip",
+    "variant_id": "52272006267176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Fine",
+    "variant_id": "52272006299944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "52272006332712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Turkish",
+    "variant_id": "52272006365480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "52272006398248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "52272006431016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Regular",
+    "variant_id": "52272006463784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "52272006496552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Drip",
+    "variant_id": "52272006529320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Auto Drip",
+    "variant_id": "52272006562088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Fine",
+    "variant_id": "52272006594856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "52272006627624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Turkish",
+    "variant_id": "52272006660392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "52272006693160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "52272006725928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Regular",
+    "variant_id": "52272006758696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "52272006791464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Drip",
+    "variant_id": "52272006824232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Auto Drip",
+    "variant_id": "52272006857000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Fine",
+    "variant_id": "52272006889768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "52272006922536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Turkish",
+    "variant_id": "52272006955304"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "067dd48086c5127d",
+  "first_seen": "2026-10-26",
+  "handle": "hunduras",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Untitled_800x800px.png?v=1787361682",
+  "platform": "shopify",
+  "product_id": "10408951546152",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:FruitPastries-SweetBreads-AfternoonPourOvers",
+   "Elevation:1400-1600MASL-Guatemala-Mexico",
+   "Flavor:Caramel-Apricot-MilkChocolate-Lemon-MediumAcidity",
+   "Roast:Medium",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Honduras - Organic Coffee Beans",
+  "url": "https://disciplescoffee.com/products/hunduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "52272087662888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "52272087695656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Regular",
+    "variant_id": "52272087728424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "52272087761192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Drip",
+    "variant_id": "52272087793960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Auto Drip",
+    "variant_id": "52272087826728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Fine",
+    "variant_id": "52272087859496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "52272087892264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Turkish",
+    "variant_id": "52272087925032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "52272087957800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "52272087990568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Regular",
+    "variant_id": "52272088023336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "52272088056104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Drip",
+    "variant_id": "52272088088872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Auto Drip",
+    "variant_id": "52272088121640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Fine",
+    "variant_id": "52272088154408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "52272088187176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Turkish",
+    "variant_id": "52272088219944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "52272088252712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "52272088285480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Regular",
+    "variant_id": "52272088318248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "52272088351016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Drip",
+    "variant_id": "52272088383784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Auto Drip",
+    "variant_id": "52272088416552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Fine",
+    "variant_id": "52272088449320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "52272088482088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Turkish",
+    "variant_id": "52272088514856"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "6c79b33e549e337c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Untitleddesign-1.png?v=1787362465",
+  "platform": "shopify",
+  "product_id": "10408978841896",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:FruitPastries-SweetBreads-AfternoonPourOvers",
+   "Elevation:1400-1600MASL-Guatemala-Mexico",
+   "Flavor:Caramel-Apricot-MilkChocolate-Lemon-MediumAcidity",
+   "Roast:Medium",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Guatemala Honey Process - Organic Coffee Beans",
+  "url": "https://disciplescoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "52272125182248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "52272125215016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Regular",
+    "variant_id": "52272125247784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "52272125280552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Drip",
+    "variant_id": "52272125313320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Auto Drip",
+    "variant_id": "52272125346088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Fine",
+    "variant_id": "52272125378856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "52272125411624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Turkish",
+    "variant_id": "52272125444392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "52272125477160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "52272125509928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Regular",
+    "variant_id": "52272125542696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "52272125575464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Drip",
+    "variant_id": "52272125608232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Auto Drip",
+    "variant_id": "52272125641000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Fine",
+    "variant_id": "52272125673768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "52272125706536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 Pounds / Turkish",
+    "variant_id": "52272125739304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "52272125772072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "52272125804840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Regular",
+    "variant_id": "52272125837608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "52272125870376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Drip",
+    "variant_id": "52272125903144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Auto Drip",
+    "variant_id": "52272125935912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Fine",
+    "variant_id": "52272125968680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "52272126001448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 Pounds / Turkish",
+    "variant_id": "52272126034216"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "22125aa35a11c33b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-swiss-water-coffee-beans-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Decaf_Beans_Transparent_Background.png?v=1737315877",
+  "platform": "shopify",
+  "product_id": "10436830626088",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:EveningBrews-Lattes-NonCaffeineDrinkers",
+   "Elevation:1200-1500MASL-Mexico",
+   "Flavor:Chocolate-Hazelnut-Toffee-DriedFruit",
+   "Roast:Medium",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Decaf - Organic Swiss Water Coffee Beans",
+  "url": "https://disciplescoffee.com/products/decaf-organic-swiss-water-coffee-beans-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "52368058908968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "52368058941736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Regular",
+    "variant_id": "52368058974504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "52368059007272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Drip",
+    "variant_id": "52368059040040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "52368059105576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "52368059171112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "52368059203880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Regular",
+    "variant_id": "52368059236648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "52368059269416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Drip",
+    "variant_id": "52368059302184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.75,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "52368059367720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "52368059433256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "52368059466024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Regular",
+    "variant_id": "52368059498792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "52368059531560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Drip",
+    "variant_id": "52368059564328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "52368059629864"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "e35393e649d4d9cf",
+  "first_seen": "2026-10-26",
+  "handle": "lionhearted-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Disciples_IDLFC_Coffee_Labels-2.png?v=1789743454",
+  "platform": "shopify",
+  "product_id": "10437187567912",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:Croissants-Biscotti-LatteCappuccinoBase",
+   "Elevation:1400-2000MASL-Peru-Guatemala",
+   "Flavor:RichChocolate-BrightCitrus-Caramel",
+   "Roast:MediumDark",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Lionhearted Coffee - PREORDER",
+  "url": "https://disciplescoffee.com/products/lionhearted-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "52372058865960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / Coarse",
+    "variant_id": "52372058898728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / Drip",
+    "variant_id": "52372058997032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / Espresso",
+    "variant_id": "52372059095336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / Whole Bean",
+    "variant_id": "52372059160872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / Coarse",
+    "variant_id": "52372059193640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / Drip",
+    "variant_id": "52372059291944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / Espresso",
+    "variant_id": "52372059390248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "52372059455784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Decaf / Coarse",
+    "variant_id": "52372059488552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Decaf / Drip",
+    "variant_id": "52372059586856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Decaf / Espresso",
+    "variant_id": "52372059685160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "52372061782312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Dark / Coarse",
+    "variant_id": "52372061815080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Dark / Drip",
+    "variant_id": "52372061847848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Dark / Espresso",
+    "variant_id": "52372061880616"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "0cf276600373d935",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Guatemala_Beans_Transparent_Background.png?v=1737315910",
+  "platform": "shopify",
+  "product_id": "9527901552936",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:FruitPastries-SweetBreads-AfternoonPourOvers",
+   "Elevation:1400-1600MASL-Guatemala-Mexico",
+   "Flavor:Caramel-Apricot-MilkChocolate-Lemon-MediumAcidity",
+   "Roast:Medium",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Guatemala - Organic Coffee Beans",
+  "url": "https://disciplescoffee.com/products/guatemala-organic-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "49661695754536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "49661695787304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Regular",
+    "variant_id": "49661695820072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "49661695852840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Drip",
+    "variant_id": "49661695885608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Auto Drip",
+    "variant_id": "49661695918376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Fine",
+    "variant_id": "49661695951144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "49661695983912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Turkish",
+    "variant_id": "49661696016680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "49661696049448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "49661696082216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Regular",
+    "variant_id": "49661696114984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "49661696147752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Drip",
+    "variant_id": "49661696180520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Auto Drip",
+    "variant_id": "49661696213288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Fine",
+    "variant_id": "49661696246056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "49661696278824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Turkish",
+    "variant_id": "49661696311592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "52272057123112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "52272057155880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Regular",
+    "variant_id": "52272057188648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "52272057221416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Drip",
+    "variant_id": "52272057254184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Auto Drip",
+    "variant_id": "52272057286952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Fine",
+    "variant_id": "52272057319720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "52272057352488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Turkish",
+    "variant_id": "52272057385256"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "ff07a4436125f232",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-organic-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Nicaragua_Coffee_Beans_Transparent_Background_a6711f0f-0c95-40c5-9737-ac2dd008bc0b.png?v=1737315669",
+  "platform": "shopify",
+  "product_id": "9527914823976",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:CinnamonPastries-NuttyDesserts-MorningDripBrews",
+   "Elevation:1100-1700MASL-Nicaragua",
+   "Flavor:MilkChocolate-Citrus-Almond-BrownSugar",
+   "Roast:Dark",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Nicaragua - Organic Coffee Beans",
+  "url": "https://disciplescoffee.com/products/single-origin-organic-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "49661719380264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "49661719413032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Regular",
+    "variant_id": "49661719445800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "49661719478568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Drip",
+    "variant_id": "49661719511336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Auto Drip",
+    "variant_id": "49661719544104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Fine",
+    "variant_id": "49661719576872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "49661719609640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Turkish",
+    "variant_id": "49661719642408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "49661719675176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "49661719707944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Regular",
+    "variant_id": "49661719740712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "49661719773480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Drip",
+    "variant_id": "49661719806248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Auto Drip",
+    "variant_id": "49661719839016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Fine",
+    "variant_id": "49661719871784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "49661719904552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Turkish",
+    "variant_id": "49661719937320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "49661719970088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "49661720002856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Regular",
+    "variant_id": "49661720035624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "49661720068392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Drip",
+    "variant_id": "49661720101160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Auto Drip",
+    "variant_id": "49661720133928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Fine",
+    "variant_id": "49661720166696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "49661720199464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Turkish",
+    "variant_id": "49661720232232"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ },
+ {
+  "body_hash": "e35393e649d4d9cf",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0911/5372/7784/files/Organic_Beans_Transparent_Background.png?v=1737315966",
+  "platform": "shopify",
+  "product_id": "9527916134696",
+  "product_type": "Organic Coffee Beans",
+  "roaster_slug": "disciplescoffee",
+  "tags": [
+   "Best:Croissants-Biscotti-LatteCappuccinoBase",
+   "Elevation:1400-2000MASL-Peru-Guatemala",
+   "Flavor:RichChocolate-BrightCitrus-Caramel",
+   "Roast:MediumDark",
+   "poscafe_preparea_Barista"
+  ],
+  "title": "Espresso - Organic Coffee Blend",
+  "url": "https://disciplescoffee.com/products/organic-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "49661722231080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Coarse",
+    "variant_id": "49661722263848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Percolator",
+    "variant_id": "49661722329384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Drip",
+    "variant_id": "49661722362152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Fine",
+    "variant_id": "49661722427688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.9,
+    "title": "12 Ounces / Espresso",
+    "variant_id": "49661722460456"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "49661722525992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Coarse",
+    "variant_id": "49661722558760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Percolator",
+    "variant_id": "49661722624296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Drip",
+    "variant_id": "49661722657064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Fine",
+    "variant_id": "49661722722600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 Pounds / Espresso",
+    "variant_id": "49661722755368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "49661722820904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Coarse",
+    "variant_id": "49661722853672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Percolator",
+    "variant_id": "49661722919208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Drip",
+    "variant_id": "49661722951976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Fine",
+    "variant_id": "49661723017512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5 Pounds / Espresso",
+    "variant_id": "49661723050280"
+   }
+  ],
+  "vendor": "Disciples Coffee"
+ }
+]

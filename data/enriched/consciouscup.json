@@ -1,0 +1,283 @@
+{
+ "10100615610690": {
+  "body_hash": "d3b9e09b2f22c284",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10229956641090": {
+  "body_hash": "66d443a56b285beb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10308598137154": {
+  "body_hash": "d0e6e9bcdda6eba9",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "10330531758402": {
+  "body_hash": "e7a8395e18cbee75",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "amaretto",
+   "dried grapefruit",
+   "vanilla",
+   "winey acidity",
+   "candy-like sweetness"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "10387997851970": {
+  "body_hash": "67c6ea4edf784d09",
+  "elevation_masl_max": 1530,
+  "elevation_masl_min": 1530,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Bolivia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "red wine",
+   "burnt sugar",
+   "tangy acidity",
+   "smooth body"
+  ],
+  "varietals": [
+   "Catuai",
+   "Typica"
+  ]
+ },
+ "10388210254146": {
+  "body_hash": "8fe3adf0c7c9c610",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha"
+  ]
+ },
+ "10433290142018": {
+  "body_hash": "014c03eec84b237e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "15430203638082": {
+  "body_hash": "be4390e29c6237e4",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "honey",
+   "raspberry",
+   "red apple",
+   "dried cherry",
+   "dark chocolate"
+  ],
+  "varietals": [
+   "Sidra"
+  ]
+ },
+ "9428895924546": {
+  "body_hash": "119efd77e8fdbd1e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9492894679362": {
+  "body_hash": "5625f645195eaadb",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blueberry",
+   "cherry",
+   "chocolate fudge",
+   "pomegranate",
+   "grapefruit"
+  ],
+  "varietals": [
+   "74158"
+  ]
+ },
+ "9492948484418": {
+  "body_hash": "da20f4e81517750f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "9492964770114": {
+  "body_hash": "50f2357018e1e05b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9492969324866": {
+  "body_hash": "9bc0886500aeb475",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9492981088578": {
+  "body_hash": "ec9c529d3e8aac44",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9492983644482": {
+  "body_hash": "6fb9094d662a6e60",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9929327640898": {
+  "body_hash": "8130ed475fa9199c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

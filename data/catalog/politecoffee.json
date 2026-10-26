@@ -1,0 +1,2323 @@
+[
+ {
+  "body_hash": "91d4920c6ecb49b0",
+  "first_seen": "2026-10-26",
+  "handle": "kabarole-uganda",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/KABAROLE_02.png?v=1790360503",
+  "platform": "shopify",
+  "product_id": "15382435987638",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Anaerobic Natural",
+   "Fruity",
+   "Funky",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Uganda"
+  ],
+  "title": "KABAROLE | UGANDA",
+  "url": "https://politecoffee.com/products/kabarole-uganda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67547717763254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67547717796022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "67547717828790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67547717861558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67547717894326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Drip",
+    "variant_id": "67547717927094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67547717959862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67547717992630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Drip",
+    "variant_id": "67547718025398"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "af39fc952a051c2c",
+  "first_seen": "2026-10-26",
+  "handle": "finca-fatima-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/FINA_FATIMA_02.png?v=1790360970",
+  "platform": "shopify",
+  "product_id": "15382437527734",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Balanced",
+   "Floral",
+   "Honey",
+   "Light Roast",
+   "Mexico",
+   "New Arrival",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "FINCA FATIMA | MEXICO",
+  "url": "https://politecoffee.com/products/finca-fatima-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67547720581302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67547720614070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Drip",
+    "variant_id": "67547720646838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67547720679606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67547720712374"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2lb / Drip",
+    "variant_id": "67547720745142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67547720777910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67547720810678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Drip",
+    "variant_id": "67547720843446"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "bd7419c3fa1d09f1",
+  "first_seen": "2026-10-26",
+  "handle": "la-encantada-el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/LAENCANTADA_02.png?v=1790361192",
+  "platform": "shopify",
+  "product_id": "15382438412470",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Balanced",
+   "El Salvador",
+   "Floral",
+   "Fruity",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Sweet",
+   "Washed"
+  ],
+  "title": "LA ENCANTADA | EL SALVADOR",
+  "url": "https://politecoffee.com/products/la-encantada-el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67547721990326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67547722023094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Drip",
+    "variant_id": "67547722055862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67547722088630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67547722121398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Drip",
+    "variant_id": "67547722154166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67547722186934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67547722219702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip",
+    "variant_id": "67547722252470"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "9aca2f62efb4ecda",
+  "first_seen": "2026-10-26",
+  "handle": "ojo-de-agua-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/OJODEAGUA_02.png?v=1790361367",
+  "platform": "shopify",
+  "product_id": "15382438969526",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Floral",
+   "Fruity",
+   "Guatemala",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Sweet",
+   "Washed"
+  ],
+  "title": "OJO DE AGUA | GUATEMALA",
+  "url": "https://politecoffee.com/products/ojo-de-agua-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67547723628726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67547723661494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Drip",
+    "variant_id": "67547723694262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67547723727030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67547723759798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb / Drip",
+    "variant_id": "67547723792566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67547723825334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67547723858102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5lb / Drip",
+    "variant_id": "67547723890870"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "0e55e13a03e9b4b0",
+  "first_seen": "2026-10-26",
+  "handle": "el-diamante-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/ELDIAMANTE_01.png?v=1791559455",
+  "platform": "shopify",
+  "product_id": "15407257911478",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Colombia",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "EL DIAMANTE | COLOMBIA",
+  "url": "https://politecoffee.com/products/el-diamante-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67609807945910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67609807978678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Drip",
+    "variant_id": "67609808011446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67609808044214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67609808076982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Drip",
+    "variant_id": "67609808109750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67609808142518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67609808175286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip",
+    "variant_id": "67609808208054"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "585c7af63f0a4881",
+  "first_seen": "2026-10-26",
+  "handle": "el-espejo-1-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/ELESPEJO_1_01.png?v=1791560053",
+  "platform": "shopify",
+  "product_id": "15407258894518",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Colombia",
+   "Floral",
+   "Fruity",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "EL ESPEJO #1 | COLOMBIA",
+  "url": "https://politecoffee.com/products/el-espejo-1-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67609811321014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67609811353782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Drip",
+    "variant_id": "67609811386550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67609811419318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67609811452086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Drip",
+    "variant_id": "67609811484854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67609811517622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67609811550390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Drip",
+    "variant_id": "67609811583158"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "7516ba39c9e7a173",
+  "first_seen": "2026-10-26",
+  "handle": "el-espejo-2-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/ELESPEJO_2_01.png?v=1791560416",
+  "platform": "shopify",
+  "product_id": "15407259484342",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Colombia",
+   "Fruity",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "EL ESPEJO #2 | COLOMBIA",
+  "url": "https://politecoffee.com/products/el-espejo-2-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67609813516470"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67609813549238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Drip",
+    "variant_id": "67609813582006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67609813614774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67609813647542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb / Drip",
+    "variant_id": "67609813680310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67609813713078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67609813745846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip",
+    "variant_id": "67609813778614"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "f44812d287456a89",
+  "first_seen": "2026-10-26",
+  "handle": "villa-luna-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/VILLALUNA_01.png?v=1791560730",
+  "platform": "shopify",
+  "product_id": "15407260303542",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Colombia",
+   "Floral",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "VILLA LUNA | COLOMBIA",
+  "url": "https://politecoffee.com/products/villa-luna-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67609816006838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67609816039606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Drip",
+    "variant_id": "67609816072374"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 73.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67609816105142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 73.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67609816137910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 73.0,
+    "title": "2lb / Drip",
+    "variant_id": "67609816170678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67609816203446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67609816236214"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Drip",
+    "variant_id": "67609816268982"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "530e61b5a1a69299",
+  "first_seen": "2026-10-26",
+  "handle": "karamo-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/KARAMO_01.png?v=1791561220",
+  "platform": "shopify",
+  "product_id": "15407389868214",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Ethiopia",
+   "Floral",
+   "Fruity",
+   "Light Roast",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "KARAMO | ETHIOPIA",
+  "url": "https://politecoffee.com/products/karamo-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67610022740150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67610022772918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12oz / Drip",
+    "variant_id": "67610022805686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 83.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67610022838454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 83.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67610022871222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 83.0,
+    "title": "2lb / Drip",
+    "variant_id": "67610022903990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67610022936758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67610022969526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.0,
+    "title": "5lb / Drip",
+    "variant_id": "67610023002294"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "cc0ca697863dd66f",
+  "first_seen": "2026-10-26",
+  "handle": "los-patios-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/LOSPATIOS_01.png?v=1791562421",
+  "platform": "shopify",
+  "product_id": "15407392129206",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "ACF Coffee",
+   "Coferment",
+   "Colombia",
+   "Fruity",
+   "Funky",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "LOS PATIOS | COLOMBIA",
+  "url": "https://politecoffee.com/products/los-patios-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67610032537782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "67610032570550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz / Drip",
+    "variant_id": "67610032603318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67610032636086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67610032668854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2lb / Drip",
+    "variant_id": "67610032701622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67610032734390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67610032767158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb / Drip",
+    "variant_id": "67610032799926"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "7ca18b9a6a9483f0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/HUEHUE_WEBSITE_NEW.png?v=1762368528",
+  "platform": "shopify",
+  "product_id": "6147175383222",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Chocolatey",
+   "Drip",
+   "Espresso",
+   "Guatemala",
+   "Light-Medium Roast",
+   "Single Origin",
+   "Tier I",
+   "Washed"
+  ],
+  "title": "HUEHUETENANGO | GUATEMALA",
+  "url": "https://politecoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "39750052479158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Chemex",
+    "variant_id": "39750052511926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "39750052544694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "39750052577462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / French Press",
+    "variant_id": "39750052610230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Chemex",
+    "variant_id": "39750052642998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Drip",
+    "variant_id": "39750052675766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Espresso",
+    "variant_id": "39750052708534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39750218940598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39750221299894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "43757162463414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43757162496182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "43757162528950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43757162561718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "43757162594486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43820471189686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / v60",
+    "variant_id": "43820471222454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43820471255222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / v60",
+    "variant_id": "43820471287990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43820471320758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / v60",
+    "variant_id": "43820471353526"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "4f373971365d11d8",
+  "first_seen": "2026-10-26",
+  "handle": "friends-and-family",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/FRIENDSANDFAMILYWEBSITE_NEW.png?v=1764710276",
+  "platform": "shopify",
+  "product_id": "6572216942774",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Chocolatey",
+   "Coffee Blend",
+   "Drip",
+   "Espresso",
+   "Tier I",
+   "Washed",
+   "subscription"
+  ],
+  "title": "FRIENDS & FAMILY BLEND",
+  "url": "https://politecoffee.com/products/friends-and-family",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "39749970722998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Chemex",
+    "variant_id": "39749970755766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "39749970788534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "39749970821302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / French Press",
+    "variant_id": "39749970854070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / Chemex",
+    "variant_id": "39749970886838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / Drip",
+    "variant_id": "39749970919606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "39749970952374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39750203048118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "39750204260534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "41497169723574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / French Press",
+    "variant_id": "41497169756342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Chemex",
+    "variant_id": "41497169789110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Drip",
+    "variant_id": "41497169821878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "41497169854646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43820468666550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / v60",
+    "variant_id": "43820468699318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "43820468732086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / v60",
+    "variant_id": "43820468764854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "43820468797622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5lbs / v60",
+    "variant_id": "43820468830390"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "81e0fe723d0f6911",
+  "first_seen": "2026-10-26",
+  "handle": "brownie-points",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/BROWNIEPOINTSWEBSITE_NEW.png?v=1764710830",
+  "platform": "shopify",
+  "product_id": "7052007538870",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Chocolatey",
+   "Coffee Blend",
+   "Drip",
+   "Espresso",
+   "Medium Roast",
+   "Tier I",
+   "Washed",
+   "subscription"
+  ],
+  "title": "BROWNIE POINTS BLEND",
+  "url": "https://politecoffee.com/products/brownie-points",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / French Press",
+    "variant_id": "40638552670390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40638552703158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip",
+    "variant_id": "40638552735926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40638552768694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / French Press",
+    "variant_id": "40638552801462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40638552834230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "40638552866998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Espresso",
+    "variant_id": "40638552899766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40638552932534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40638552965302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "43757161250998"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43757161283766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "43757161316534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43757161349302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "43757161382070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43820465750198"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / v60",
+    "variant_id": "43820465782966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43820465815734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / v60",
+    "variant_id": "43820465848502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43820465881270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / v60",
+    "variant_id": "43820465914038"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "9c62544c306b3e9e",
+  "first_seen": "2026-10-26",
+  "handle": "corner-booth-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/CORNERBOOTHWEBSITE_NEW.png?v=1764716015",
+  "platform": "shopify",
+  "product_id": "7174143508662",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Chocolatey",
+   "Coffee Blend",
+   "Dark Roast",
+   "Drip",
+   "French Press",
+   "Washed",
+   "subscription"
+  ],
+  "title": "CORNER BOOTH BLEND",
+  "url": "https://politecoffee.com/products/corner-booth-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40919914840246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "40919914873014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / French Press",
+    "variant_id": "40919949476022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40919949508790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "40919949541558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40919949574326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / French Press",
+    "variant_id": "40919949607094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Chemex",
+    "variant_id": "40919949639862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Drip",
+    "variant_id": "40919949672630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "40919949705398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "41497148653750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / French Press",
+    "variant_id": "41497148686518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / Chemex",
+    "variant_id": "41497148719286"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / Drip",
+    "variant_id": "41497148752054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "41497148784822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43820450644150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / v60",
+    "variant_id": "43820450676918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "43820450709686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs / v60",
+    "variant_id": "43820450742454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "43820450775222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / v60",
+    "variant_id": "43820450807990"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "5cb8ecd9357236de",
+  "first_seen": "2026-10-26",
+  "handle": "dark-night-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/darknightbrew.png?v=1696126919",
+  "platform": "shopify",
+  "product_id": "7674824360118",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [],
+  "title": "Dark Night Brew",
+  "url": "https://politecoffee.com/products/dark-night-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "42389631205558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / French press",
+    "variant_id": "42389631238326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Chemex",
+    "variant_id": "42389631271094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42389631303862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42389631336630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Whole bean",
+    "variant_id": "42389631369398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / French press",
+    "variant_id": "42389631402166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Chemex",
+    "variant_id": "42389631434934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Drip",
+    "variant_id": "42389631467702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42389631500470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lbs / Whole bean",
+    "variant_id": "42389631533238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lbs / French press",
+    "variant_id": "42389631566006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lbs / Chemex",
+    "variant_id": "42389631598774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lbs / Drip",
+    "variant_id": "42389631631542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42389631664310"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "4217025f32548147",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe-abore-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/BOMBE_ABORE_WEBSITE_NEW.png?v=1762368495",
+  "platform": "shopify",
+  "product_id": "8138511122614",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Ethiopia",
+   "Fruity",
+   "Light Roast",
+   "Natural",
+   "Single Origin",
+   "Tier II"
+  ],
+  "title": "BOMBE ABORE | ETHIOPIA",
+  "url": "https://politecoffee.com/products/ethiopia-bombe-abore-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43726138572982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "43726138605750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Chemex",
+    "variant_id": "43726138638518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "43726138671286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Espresso",
+    "variant_id": "43726138704054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "43726138736822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / French Press",
+    "variant_id": "43726138769590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Chemex",
+    "variant_id": "43726138802358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Drip",
+    "variant_id": "43726138835126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "43726138867894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "43726138900662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / French Press",
+    "variant_id": "43726138933430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Chemex",
+    "variant_id": "43726138966198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Drip",
+    "variant_id": "43726138998966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "43726139031734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43820441272502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / v60",
+    "variant_id": "43820441305270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "43820441338038"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / v60",
+    "variant_id": "43820441370806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "43820441403574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / v60",
+    "variant_id": "43820441436342"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "f8d8d0c5827d9897",
+  "first_seen": "2026-10-26",
+  "handle": "atunka-decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/ATUNKA_DECAF_WEBSITE_NEW.png?v=1763758594",
+  "platform": "shopify",
+  "product_id": "8238113489078",
+  "product_type": "",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Chocolatey",
+   "Colombia",
+   "Decaf",
+   "Light-Medium Roast",
+   "Single Origin"
+  ],
+  "title": "ATUNKA DECAF | COLOMBIA",
+  "url": "https://politecoffee.com/products/atunka-decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44032140673206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44032140705974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44032140738742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "44032140771510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "44032140804278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / v60",
+    "variant_id": "44032140837046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "44032140869814"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44032140902582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "44032140935350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / French Press",
+    "variant_id": "44032140968118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "44032141000886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / Drip",
+    "variant_id": "44032141033654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / v60",
+    "variant_id": "44032141066422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44032141099190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44032141131958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "44032141164726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / French Press",
+    "variant_id": "44032141197494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "44032141230262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Drip",
+    "variant_id": "44032141263030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / v60",
+    "variant_id": "44032141295798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44032141328566"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "1240afcacab2da63",
+  "first_seen": "2026-10-26",
+  "handle": "classic-light-roast-profile",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/classic-profile-167991.jpg?v=1749750281",
+  "platform": "shopify",
+  "product_id": "8242454921398",
+  "product_type": "Gear",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Black Friday",
+   "Shopify Collective",
+   "Third Wave Water"
+  ],
+  "title": "Classic Light Roast Profile",
+  "url": "https://politecoffee.com/products/classic-light-roast-profile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 43,
+    "price_usd": 18.0,
+    "title": "1 Gallon (12ct)",
+    "variant_id": "44050587484342"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 29.0,
+    "title": "5 Gallon (12ct)",
+    "variant_id": "44050587517110"
+   },
+   {
+    "available": true,
+    "grams": 43,
+    "price_usd": 21.0,
+    "title": "2 Liter (20ct)",
+    "variant_id": "44050587549878"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "f1ef7d2cd216a48d",
+  "first_seen": "2026-10-26",
+  "handle": "wush-wush-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/WUSHWUSHWEBSITE.png?v=1764695490",
+  "platform": "shopify",
+  "product_id": "8369188077750",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Black Friday",
+   "Ethiopia",
+   "Fruity",
+   "Funky",
+   "Light-Medium Roast",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "WUSH WUSH | ETHIOPIA",
+  "url": "https://politecoffee.com/products/wush-wush-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44435598082230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44435598114998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Drip",
+    "variant_id": "44435598147766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44435598180534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "44435598213302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Drip",
+    "variant_id": "44435598246070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44435598278838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44435598311606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "5lb / Drip",
+    "variant_id": "44435598344374"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "8505880f526a0b2a",
+  "first_seen": "2026-10-26",
+  "handle": "aga-goro-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/AGAGORO_WEBSITE_02.png?v=1780335155",
+  "platform": "shopify",
+  "product_id": "8806595264694",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Balanced",
+   "Ethiopia",
+   "Floral",
+   "Fruity",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "AGA GORO | ETHIOPIA",
+  "url": "https://politecoffee.com/products/aga-goro-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45153465401526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45153465434294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Drip",
+    "variant_id": "45153465467062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45153465499830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "45153465532598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Drip",
+    "variant_id": "45153465565366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45153465598134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45153465630902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Drip",
+    "variant_id": "45153465663670"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "32b3b16ed50fe98e",
+  "first_seen": "2026-10-26",
+  "handle": "limited-run-k-cups-friends-and-family",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/dji_mimo_20260810_110948_20260810110948_1786378433519_photo_a92eaa88-5787-4dc6-9969-9c91f1f6357f.jpg?v=1786379241",
+  "platform": "shopify",
+  "product_id": "8852741750966",
+  "product_type": "",
+  "roaster_slug": "politecoffee",
+  "tags": [],
+  "title": "Limited Run K Cups - Friends and Family",
+  "url": "https://politecoffee.com/products/limited-run-k-cups-friends-and-family",
+  "variants": [
+   {
+    "available": true,
+    "grams": 214,
+    "price_usd": 10.2,
+    "title": "12 count Friends and Family Single Serve Pod",
+    "variant_id": "45347621142710"
+   },
+   {
+    "available": true,
+    "grams": 1850,
+    "price_usd": 70.0,
+    "title": "100 count Friends and Family Single Serve Pod",
+    "variant_id": "45347637166262"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ },
+ {
+  "body_hash": "6578b55d7172969e",
+  "first_seen": "2026-10-26",
+  "handle": "el-jardin-gesha-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0520/2463/9670/files/ELJARDINWEBSITE_02.png?v=1788290231",
+  "platform": "shopify",
+  "product_id": "8870913015990",
+  "product_type": "Beans",
+  "roaster_slug": "politecoffee",
+  "tags": [
+   "Floral",
+   "Honduras",
+   "Light Roast",
+   "New Arrival",
+   "Single Origin",
+   "Sweet",
+   "Washed"
+  ],
+  "title": "EL JARDIN GESHA | HONDURAS",
+  "url": "https://politecoffee.com/products/el-jardin-gesha-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz",
+    "variant_id": "45397977956534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "45397977989302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lb",
+    "variant_id": "45397978022070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb",
+    "variant_id": "45397978054838"
+   }
+  ],
+  "vendor": "Polite Coffee"
+ }
+]

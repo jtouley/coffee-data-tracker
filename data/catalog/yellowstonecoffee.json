@@ -1,0 +1,1664 @@
+[
+ {
+  "body_hash": "531aa80777ee0091",
+  "first_seen": "2026-10-26",
+  "handle": "headwaters-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/HEADWATERSESPRESSO.jpg?v=1714428197",
+  "platform": "shopify",
+  "product_id": "1532514566217",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "HEADWATERS ESPRESSO",
+  "url": "https://yellowstonecoffee.com/products/headwaters-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31899711078473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "31899711111241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "31899711144009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31899711176777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31899711209545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "31899711242313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "31899711275081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "31899711307849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31899711340617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "31899711373385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "31899711406153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "31899711438921"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "1cdfbe2d9bfb967b",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-la-paz",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/MEXICOOAXACA_1.jpg?v=1777922879",
+  "platform": "shopify",
+  "product_id": "15535854551113",
+  "product_type": "Single Origin",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "BOLIVIA LA PAZ - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/bolivia-la-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "55667934429257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "55667934462025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "55667934494793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55667934527561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "55667934560329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "55667934593097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55667934625865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "55667934658633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "55667934691401"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "e940ad673f60b5fc",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lam-dong",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/VIETNAM_LAM_DONG.jpg?v=1792003304",
+  "platform": "shopify",
+  "product_id": "15863919935561",
+  "product_type": "Single Origin",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "VIETNAM LAM DONG",
+  "url": "https://yellowstonecoffee.com/products/vietnam-lam-dong",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67683740844105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "67683740876873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "67683740909641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "67683740942409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "67683740975177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "67683741007945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "67683741040713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "67683741073481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "67683741106249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "67683741139017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "67683741171785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "67683741204553"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "6778a26a1dc94577",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/FRENCHROAST.jpg?v=1714503979",
+  "platform": "shopify",
+  "product_id": "2153128034377",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "FRENCH ROAST - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31899697643593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "31899697676361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "31899697709129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31899697741897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31899697774665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "31899697807433"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "31899697840201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "31899697872969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31899697905737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "31899697938505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "31899697971273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "31899698004041"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "a856d0a761edb47a",
+  "first_seen": "2026-10-26",
+  "handle": "buffalo-trail-organic-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/BUFFALOTRAIL.jpg?v=1714427515",
+  "platform": "shopify",
+  "product_id": "4568145100873",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "BUFFALO TRAIL - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/buffalo-trail-organic-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31899654291529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "31899654324297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "31899654357065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31899654389833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31899654422601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "31899654455369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "31899654488137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "31899654520905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31899654553673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "31899654586441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "31899654619209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "31899654651977"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "f7f837291174a99a",
+  "first_seen": "2026-10-26",
+  "handle": "buffalo-trail-4-oz-four-pack-organic-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/Untitled-2_847639ab-ecf7-4707-afc0-8e1dfd1d8337.jpg?v=1709843967",
+  "platform": "shopify",
+  "product_id": "4569171230793",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Buffalo Trail Sample Bags & Packs - 4 oz.",
+  "url": "https://yellowstonecoffee.com/products/buffalo-trail-4-oz-four-pack-organic-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "1 Bag / Whole Bean",
+    "variant_id": "40948021166153"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "1 Bag / Ground for Drip",
+    "variant_id": "40948021198921"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "1 Bag / Ground for French Press",
+    "variant_id": "40948021231689"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "4 Pack / Whole Bean",
+    "variant_id": "40948021264457"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "4 Pack / Ground for Drip",
+    "variant_id": "40948021297225"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "4 Pack / Ground for French Press",
+    "variant_id": "40948021329993"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "22d297c69aa5ca7b",
+  "first_seen": "2026-10-26",
+  "handle": "yellowstone-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/products/ScreenShot2021-01-04at10.29.28AM.png?v=1609781447",
+  "platform": "shopify",
+  "product_id": "4598645915721",
+  "product_type": "",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [],
+  "title": "Yellowstone Coffee Arrowhead Women's Tank",
+  "url": "https://yellowstonecoffee.com/products/yellowstone-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Green / S",
+    "variant_id": "31898888273993"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Green / M",
+    "variant_id": "31898888306761"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Green / L",
+    "variant_id": "31898888339529"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Green / XL",
+    "variant_id": "31898888372297"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Dark Gray / S",
+    "variant_id": "31898888405065"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Dark Gray / M",
+    "variant_id": "31898888437833"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Dark Gray / L",
+    "variant_id": "31898888470601"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Dark Gray / XL",
+    "variant_id": "31898888503369"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "2a90b8a691e3d16b",
+  "first_seen": "2026-10-26",
+  "handle": "barn-dog-blend-medium-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/BARNDOG.jpg?v=1714503459",
+  "platform": "shopify",
+  "product_id": "6562497527881",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "BARN DOG",
+  "url": "https://yellowstonecoffee.com/products/barn-dog-blend-medium-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39287340597321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "39287340630089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "39287340662857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "39287340695625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39287340728393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "39287340761161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "39287340793929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "39287340826697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39287340859465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "39287340892233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "39287340925001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39287340957769"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "1fc1971cb13d16fe",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-organic-single-origin-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/MEXICOCHIAPAS_1.jpg?v=1720024335",
+  "platform": "shopify",
+  "product_id": "6893607125065",
+  "product_type": "Single Origin",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "MEXICO CHIAPAS WOMEN PRODUCERS - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/mexico-chiapas-organic-single-origin-medium-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40490020700233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40490020733001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40490020765769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40490020798537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40490020831305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40490020864073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40490020896841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40490020929609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40490020962377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40490020995145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40490021027913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40490021060681"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "514f7fa76ad23e12",
+  "first_seen": "2026-10-26",
+  "handle": "halfway-creek",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/HALFWAYCREEK.jpg?v=1714503679",
+  "platform": "shopify",
+  "product_id": "6905200246857",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "HALFWAY CREEK",
+  "url": "https://yellowstonecoffee.com/products/halfway-creek",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40539584856137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40539584888905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40539584921673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40539584954441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40539584987209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40539585019977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40539585052745"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40539585085513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40539585118281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40539585151049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40539585183817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40539585216585"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "86e5e9bd4ee5a75c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/DECAFCOLOMBIA.jpg?v=1714600825",
+  "platform": "shopify",
+  "product_id": "6905200672841",
+  "product_type": "Decaf",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "DECAF COLOMBIA SUGARCANE PROCESS",
+  "url": "https://yellowstonecoffee.com/products/decaf-colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40539584266313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40539584299081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40539584331849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40539584364617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40539584397385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40539584430153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40539584462921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40539584495689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40539584528457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40539584561225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40539584593993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40539584626761"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "538adff8f5568255",
+  "first_seen": "2026-10-26",
+  "handle": "farm-stand-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/FARMSTAND.jpg?v=1714427907",
+  "platform": "shopify",
+  "product_id": "6908203434057",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "FARM STAND BREAKFAST BLEND - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/farm-stand-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40549036884041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40549036916809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40549036949577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40549036982345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40549037015113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40549037047881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40549037080649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40549037113417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40549037146185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40549037178953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40549037211721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40549037244489"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "0d2f75e412d84c2f",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/Bourbon.jpg?v=1720023858",
+  "platform": "shopify",
+  "product_id": "6910784405577",
+  "product_type": "",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "BOURBON BARREL-AGED COFFEE",
+  "url": "https://yellowstonecoffee.com/products/bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40558883340361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40558883373129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40558883405897"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "4dd7d03685d9d361",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/RWANDA_LAKE_KIVU_3.jpg?v=1719951113",
+  "platform": "shopify",
+  "product_id": "6914552725577",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "COLD BREW",
+  "url": "https://yellowstonecoffee.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40572889268297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40572889301065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40572889333833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40572889366601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40572889399369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40572889432137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40572889464905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40572889497673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40572889530441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40572889563209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40572889595977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40572889628745"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "52bbfc969a858546",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/COLOMBIAHUILA.jpg?v=1726684103",
+  "platform": "shopify",
+  "product_id": "6914553348169",
+  "product_type": "Single Origin",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "COLOMBIA HUILA",
+  "url": "https://yellowstonecoffee.com/products/colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40572891168841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40572891201609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40572891234377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "40572891267145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40572891299913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40572891332681"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40572891365449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "40572891398217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40572891430985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40572891463753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40572891496521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "40572891529289"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "0cabb77d35d71674",
+  "first_seen": "2026-10-26",
+  "handle": "free-range",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/DSC06930.jpg?v=1759332224",
+  "platform": "shopify",
+  "product_id": "6916365287497",
+  "product_type": "Autumn Seasonal",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "FREE RANGE - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/free-range",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40612072751177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "40612072783945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "40612072816713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40612072882249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "40612072915017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "40612072947785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40612073013321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "40612073046089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "40612073078857"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "598de447d440a12b",
+  "first_seen": "2026-10-26",
+  "handle": "big-sky-lift",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/BIGSKYLIFT_1.jpg?v=1714427013",
+  "platform": "shopify",
+  "product_id": "7482342209",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "BIG SKY LIFT - ORGANIC",
+  "url": "https://yellowstonecoffee.com/products/big-sky-lift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31899643215945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "31899643248713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "31899643281481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31899643314249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31899643347017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "31899643379785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "31899643412553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "31899643445321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31899643478089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "31899643510857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "31899643543625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "31899643576393"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ },
+ {
+  "body_hash": "9d997e58ab35606b",
+  "first_seen": "2026-10-26",
+  "handle": "big-timber",
+  "image": "https://cdn.shopify.com/s/files/1/1342/5959/files/BIGTIMBER.jpg?v=1714425822",
+  "platform": "shopify",
+  "product_id": "7482356609",
+  "product_type": "Blend",
+  "roaster_slug": "yellowstonecoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "BIG TIMBER",
+  "url": "https://yellowstonecoffee.com/products/big-timber",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31899646165065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "31899646197833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "31899646230601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31899646263369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31899646296137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "31899646328905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "31899646361673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Ground for Espresso",
+    "variant_id": "31899646394441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31899646427209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "31899646459977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "31899646492745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "31899646525513"
+   }
+  ],
+  "vendor": "Yellowstone Coffee Roasters"
+ }
+]

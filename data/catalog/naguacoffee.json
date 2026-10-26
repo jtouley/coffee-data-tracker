@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "364a0d30ed1879d2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": null,
+  "platform": "generic",
+  "product_id": "005",
+  "product_type": "",
+  "roaster_slug": "naguacoffee",
+  "tags": [],
+  "title": "Decaf Colombian",
+  "url": "https://www.naguacoffee.com/product-page/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c4fa6cb22be2468",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "006",
+  "product_type": "",
+  "roaster_slug": "naguacoffee",
+  "tags": [],
+  "title": "Midnight Blend",
+  "url": "https://www.naguacoffee.com/product-page/midnight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37629be936003c4c",
+  "first_seen": "2026-10-26",
+  "handle": "california-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "044428a31e3e",
+  "product_type": "",
+  "roaster_slug": "naguacoffee",
+  "tags": [],
+  "title": "Casa Naya Blend",
+  "url": "https://www.naguacoffee.com/product-page/california-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

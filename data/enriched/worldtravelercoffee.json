@@ -1,0 +1,169 @@
+{
+ "6773297741904": {
+  "body_hash": "75cb0caa113606db",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "berries",
+   "walnut",
+   "black tea"
+  ],
+  "varietals": []
+ },
+ "6774381543504": {
+  "body_hash": "070d9583595c0187",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jasmine tea",
+   "orange",
+   "stone fruit",
+   "ripe peach"
+  ],
+  "varietals": []
+ },
+ "7166138056784": {
+  "body_hash": "74e5539e43a6ebd6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7307890163792": {
+  "body_hash": "ddbaf2d4e8e1c548",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "toffee",
+   "plum",
+   "pecan"
+  ],
+  "varietals": []
+ },
+ "7307894521936": {
+  "body_hash": "7a46910fe4ebc01a",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "graham cracker",
+   "orange peel",
+   "toffee"
+  ],
+  "varietals": []
+ },
+ "7340828557392": {
+  "body_hash": "6f30e594cdc2c00f",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey"
+  ],
+  "varietals": []
+ },
+ "7341663977552": {
+  "body_hash": "5078cf97c142ef3b",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lime zest",
+   "hazelnuts",
+   "cocoa powder",
+   "sweet",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "7355467890768": {
+  "body_hash": "b669990ebeaf05e0",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "toasted almond",
+   "orange zest"
+  ],
+  "varietals": []
+ },
+ "7448234360912": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

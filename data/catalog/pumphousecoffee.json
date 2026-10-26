@@ -1,0 +1,842 @@
+[
+ {
+  "body_hash": "04f78e9581a8e982",
+  "first_seen": "2026-10-26",
+  "handle": "deep-drop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/products/DeepDrop.jpg?v=1677167801",
+  "platform": "shopify",
+  "product_id": "1373492117555",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Deep Drop Blend",
+  "url": "https://pumphousecoffee.com/products/deep-drop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb / Whole Bean",
+    "variant_id": "12376775327795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb / Drip",
+    "variant_id": "18149598855219"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb / French Press",
+    "variant_id": "18149598887987"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb / Cold Brew",
+    "variant_id": "18149598920755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18149598986291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Drip",
+    "variant_id": "18149599019059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / French Press",
+    "variant_id": "18149599051827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "18149599084595"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "19e5c3b0a7ec8ea4",
+  "first_seen": "2026-10-26",
+  "handle": "tasty-town-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/products/TastyTown.png?v=1677168366",
+  "platform": "shopify",
+  "product_id": "4471372152883",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Tasty Town Blend",
+  "url": "https://pumphousecoffee.com/products/tasty-town-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "31741404872755"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "1lb / Drip",
+    "variant_id": "31741404905523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "1lb / French Press",
+    "variant_id": "31741404938291"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "1lb / Cold Brew",
+    "variant_id": "31741404971059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31741405036595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Drip",
+    "variant_id": "31741405069363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / French Press",
+    "variant_id": "31741405102131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "31741405134899"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "cbe2839eba242680",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-coaquil-fto",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Front_f9a3e397-c6d9-4850-9bd2-aa7f3523123b.jpg?v=1741024806",
+  "platform": "shopify",
+  "product_id": "4500572209203",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "Craft Coffee",
+   "HONDURAS",
+   "coffee"
+  ],
+  "title": "Honduras - San Jerónimo",
+  "url": "https://pumphousecoffee.com/products/honduras-coaquil-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31856117907507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "31856117940275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "31856117973043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "31856118038579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31856118071347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip",
+    "variant_id": "31856118104115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "31856118136883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "31856118202419"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "61166bc338b4903c",
+  "first_seen": "2026-10-26",
+  "handle": "full-send-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/products/FullSend.png?v=1677167873",
+  "platform": "shopify",
+  "product_id": "4500628701235",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee",
+   "dark coffee",
+   "dark roast"
+  ],
+  "title": "Full Send - Dark Blend",
+  "url": "https://pumphousecoffee.com/products/full-send-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "31856413048883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Drip",
+    "variant_id": "31856413081651"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / French Press",
+    "variant_id": "31856413114419"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Cold Brew",
+    "variant_id": "31856413212723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31856413245491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5lb / Drip",
+    "variant_id": "31856413278259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5lb / French Press",
+    "variant_id": "31856413311027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "31856413376563"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "345033da29929276",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ave-de-paraiso",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Front.png?v=1713198640",
+  "platform": "shopify",
+  "product_id": "6751635079219",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [],
+  "title": "Guatemala - Blue Ayarza",
+  "url": "https://pumphousecoffee.com/products/guatemala-ave-de-paraiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40639411748915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Drip",
+    "variant_id": "40639411781683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / French Press",
+    "variant_id": "40639411814451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40639411847219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40639411912755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5lb / Drip",
+    "variant_id": "40639411945523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5lb / French Press",
+    "variant_id": "40639411978291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40639412011059"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "693db054f89dbdc0",
+  "first_seen": "2026-10-26",
+  "handle": "pumpd-cold-brew-coffee-with-kick",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Pump_d-Boxes.jpg?v=1687199504",
+  "platform": "shopify",
+  "product_id": "6901063942195",
+  "product_type": "",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [],
+  "title": "Pump'd - Cold Brew Coffee",
+  "url": "https://pumphousecoffee.com/products/pumpd-cold-brew-coffee-with-kick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4354,
+    "price_usd": 39.99,
+    "title": "Default Title",
+    "variant_id": "41238228271155"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "227c7921ca33622d",
+  "first_seen": "2026-10-26",
+  "handle": "beach-entry-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/BeachEntry.png?v=1713196339",
+  "platform": "shopify",
+  "product_id": "7163258208307",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "Craft Coffee",
+   "coffee",
+   "coffee blend",
+   "specialty coffee"
+  ],
+  "title": "Beach Entry Blend",
+  "url": "https://pumphousecoffee.com/products/beach-entry-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42041348489267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1lb / Drip",
+    "variant_id": "42041348522035"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1lb / French Press",
+    "variant_id": "42041348554803"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1lb / Cold Brew",
+    "variant_id": "42041348587571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42041348653107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Drip",
+    "variant_id": "42041348685875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press",
+    "variant_id": "42041348718643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "42041348751411"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "02dfaf151f683e20",
+  "first_seen": "2026-10-26",
+  "handle": "competing-theories-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/CompetingTheories.png?v=1713196951",
+  "platform": "shopify",
+  "product_id": "7163259322419",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "specialty coffee"
+  ],
+  "title": "Competing Theories Blend",
+  "url": "https://pumphousecoffee.com/products/competing-theories-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42041350062131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1lb / Drip",
+    "variant_id": "42041350094899"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1lb / French Press",
+    "variant_id": "42041350127667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1lb / Cold Brew",
+    "variant_id": "42041350160435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42041350225971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5lb / Drip",
+    "variant_id": "42041350258739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5lb / French Press",
+    "variant_id": "42041350291507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "42041350324275"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "6e96c26b1d00ccb0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-risaralda",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Front_b3d57b01-347a-49ae-83a6-2fcade152aef.jpg?v=1739813012",
+  "platform": "shopify",
+  "product_id": "7522488942643",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Colombia - Yinyini Microlot",
+  "url": "https://pumphousecoffee.com/products/colombia-risaralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43106360066099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Drip",
+    "variant_id": "43106360098867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press",
+    "variant_id": "43106360131635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43106360164403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43106360197171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Drip",
+    "variant_id": "43106360229939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / French Press",
+    "variant_id": "43106360262707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43106360295475"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "09bda9a7bb536670",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kayon-moutain",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Front_00b0b022-bd99-4084-a8c9-ab4b2aba1910.png?v=1790366682",
+  "platform": "shopify",
+  "product_id": "7525705547827",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ethiopia - Sidamo",
+  "url": "https://pumphousecoffee.com/products/ethiopia-guji-kayon-moutain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43156890058803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.75,
+    "title": "12oz / Drip",
+    "variant_id": "43156890091571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.75,
+    "title": "12oz / French Press",
+    "variant_id": "43156890124339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.75,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43156890157107"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "e96197f1880f5312",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-sugar-cane-processed",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Front-1.jpg?v=1752775225",
+  "platform": "shopify",
+  "product_id": "7638486876211",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee",
+   "specialty coffee"
+  ],
+  "title": "Decaf Colombia - Sugar Cane Process",
+  "url": "https://pumphousecoffee.com/products/decaf-colombia-sugar-cane-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43507932758067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Drip",
+    "variant_id": "43507932790835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / French Press",
+    "variant_id": "43507932823603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43507932856371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43507932889139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.0,
+    "title": "5lb / Drip",
+    "variant_id": "43507932921907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.0,
+    "title": "5lb / French Press",
+    "variant_id": "43507932954675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43507932987443"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "187e8213ea6e3349",
+  "first_seen": "2026-10-26",
+  "handle": "the-blend-box",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/files/Blend_Box_on_White-2.jpg?v=1771273849",
+  "platform": "shopify",
+  "product_id": "7759705604147",
+  "product_type": "",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [],
+  "title": "The Blend Box",
+  "url": "https://pumphousecoffee.com/products/the-blend-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "43931155955763"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ },
+ {
+  "body_hash": "73ee6210d29b8632",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/1192/8878/products/Front_d56b8529-3b65-4d2e-b8fa-ca224176eb6d.png?v=1677168281",
+  "platform": "shopify",
+  "product_id": "8927312579",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Brazil - Veloso Florata",
+  "url": "https://pumphousecoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12oz / Drip",
+    "variant_id": "18149791039539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12oz / French Press",
+    "variant_id": "18149791072307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12oz / Cold Brew",
+    "variant_id": "18149791105075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18149791170611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5lb / Drip",
+    "variant_id": "18149791203379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5lb / French Press",
+    "variant_id": "18149791236147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "18149791268915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30621582339"
+   }
+  ],
+  "vendor": "Pumphouse Coffee Roasters"
+ }
+]

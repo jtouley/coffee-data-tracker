@@ -1,0 +1,292 @@
+[
+ {
+  "body_hash": "dc8330956075e7eb",
+  "first_seen": "2026-10-26",
+  "handle": "100-kona",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontView-1KGR_100_-KONA_8ozWB_Flattened_1bWB.png?v=1713637518",
+  "platform": "shopify",
+  "product_id": "5517666648229",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "100% Kona",
+  "url": "https://kauaigourmetroasters.com/products/100-kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Whole Bean",
+    "variant_id": "35613949100197"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Ground for Auto-Drip",
+    "variant_id": "35613949132965"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "93f6f70dfc8d7578",
+  "first_seen": "2026-10-26",
+  "handle": "100-kauai",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewKGR_Kauai_8ozWB_Flattened_1bWB.png?v=1713637982",
+  "platform": "shopify",
+  "product_id": "5517666746533",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "100% Kauai",
+  "url": "https://kauaigourmetroasters.com/products/100-kauai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Whole Bean",
+    "variant_id": "35613949264037"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Ground for Auto-Drip",
+    "variant_id": "35613949296805"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "a329828587477dd1",
+  "first_seen": "2026-10-26",
+  "handle": "kgr-premium-roasters-selection",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewPremiumRoaster_sSelection.png?v=1713642196",
+  "platform": "shopify",
+  "product_id": "5517666910373",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "Premium Roaster's Selection",
+  "url": "https://kauaigourmetroasters.com/products/kgr-premium-roasters-selection",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "35613949821093"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Ground for Auto-Drip",
+    "variant_id": "35613949853861"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "8ff4b424e81fcfd8",
+  "first_seen": "2026-10-26",
+  "handle": "black-pot-beach-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontView-BlackPotBeachBlendWEB.png?v=1713637225",
+  "platform": "shopify",
+  "product_id": "5517667041445",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "Coffee",
+   "Coffee beans",
+   "Hawaiian Coffee",
+   "Kauai Coffee",
+   "_tab_shipping"
+  ],
+  "title": "Black Pot Beach Blend",
+  "url": "https://kauaigourmetroasters.com/products/black-pot-beach-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "35613950410917"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Ground",
+    "variant_id": "35613950443685"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "311a64f5e240f6af",
+  "first_seen": "2026-10-26",
+  "handle": "kgr-breakfast-blend-7-oz-4-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontView-BreakfastBlend.png?v=1713638795",
+  "platform": "shopify",
+  "product_id": "5517667270821",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://kauaigourmetroasters.com/products/kgr-breakfast-blend-7-oz-4-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "35613951197349"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 16.5,
+    "title": "Ground",
+    "variant_id": "35613951230117"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "f6cf615a2a65b47e",
+  "first_seen": "2026-10-26",
+  "handle": "kgr-supreme-100-hawaiian-coffee-8-oz-4-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewSupremeWB.png?v=1713643276",
+  "platform": "shopify",
+  "product_id": "5517667336357",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "Supreme",
+  "url": "https://kauaigourmetroasters.com/products/kgr-supreme-100-hawaiian-coffee-8-oz-4-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "35613951590565"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "35613951623333"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "cb743234c821c1ce",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-kgr-supreme-100-hawaiian-coffee-8-oz-4-pack-1",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewMacadamiaNut.png?v=1713641742",
+  "platform": "shopify",
+  "product_id": "5517667401893",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "Macadamia Nut",
+  "url": "https://kauaigourmetroasters.com/products/copy-of-kgr-supreme-100-hawaiian-coffee-8-oz-4-pack-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "35613951918245"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "Ground",
+    "variant_id": "35613951951013"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "48826a6e29f9a654",
+  "first_seen": "2026-10-26",
+  "handle": "kgr-10-kona-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewHanalei.png?v=1745556008",
+  "platform": "shopify",
+  "product_id": "5517667467429",
+  "product_type": "Coffee",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [
+   "_tab_shipping"
+  ],
+  "title": "KGR Hanalei Dreaming 8 oz",
+  "url": "https://kauaigourmetroasters.com/products/kgr-10-kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "35613952245925"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "35613952278693"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters"
+ },
+ {
+  "body_hash": "aeb8dd2dab0cb43f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0460/3104/4773/files/KraftBagMockup-FrontViewKGR_Decaf_8ozGRND_Flattened_1b.png?v=1713639936",
+  "platform": "shopify",
+  "product_id": "8152817500325",
+  "product_type": "",
+  "roaster_slug": "kauaigourmetroasters",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://kauaigourmetroasters.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "42235971731621"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "Ground for Auto-Drip",
+    "variant_id": "42235971764389"
+   }
+  ],
+  "vendor": "Kauai Gourmet Coffee Roasters Development"
+ }
+]

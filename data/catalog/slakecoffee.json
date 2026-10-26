@@ -1,0 +1,1229 @@
+[
+ {
+  "body_hash": "a108de67dfe3033c",
+  "first_seen": "2026-10-26",
+  "handle": "my-jam-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-20T131931.707.png?v=1768936808",
+  "platform": "shopify",
+  "product_id": "10291267404069",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "1 per",
+   "Single Origin"
+  ],
+  "title": "My Jam Colombia",
+  "url": "https://slakecoffee.com/products/my-jam-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.95,
+    "title": "8oz / 227g / Whole Bean",
+    "variant_id": "51723076895013"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "45bd0250c4cf1179",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-halo-beriti",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Legacy_MARTIN_12.png?v=1768780687",
+  "platform": "shopify",
+  "product_id": "10709239071013",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Yirgacheffe - Halo Beriti",
+  "url": "https://slakecoffee.com/products/ethiopia-yirgacheffe-halo-beriti",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "54051643359525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "54051643392293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press",
+    "variant_id": "54051643425061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "54051643457829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "54051643490597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "54051643523365"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "8482e8deb71c920a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-x",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/About_Image_Updated_1000x1000_670_x_1000_px.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8413598318885",
+  "product_type": "Espresso",
+  "roaster_slug": "slakecoffee",
+  "tags": [],
+  "title": "Espresso X",
+  "url": "https://slakecoffee.com/products/espresso-x",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45594077659429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45594077692197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "45595086782757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / French Press",
+    "variant_id": "45595086815525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Espresso",
+    "variant_id": "45595086848293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Pour Over",
+    "variant_id": "47074136228133"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "7c46ed6a3a93d28b",
+  "first_seen": "2026-10-26",
+  "handle": "art-of-darkness-1",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8415050301733",
+  "product_type": "espresso",
+  "roaster_slug": "slakecoffee",
+  "tags": [],
+  "title": "Art Of Darkness",
+  "url": "https://slakecoffee.com/products/art-of-darkness-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45601290387749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45601290486053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "45602498773285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / French Press",
+    "variant_id": "45602498806053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Espresso",
+    "variant_id": "45602498838821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Pour over",
+    "variant_id": "47074083995941"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "852b86cc32632452",
+  "first_seen": "2026-10-26",
+  "handle": "cambria-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8415081759013",
+  "product_type": "BLENDS",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Cambria Blend",
+  "url": "https://slakecoffee.com/products/cambria-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45601358545189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47080731935013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47080731967781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / French Press",
+    "variant_id": "47080732000549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Pour over",
+    "variant_id": "47080732033317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "47080732066085"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "871f6ffdf38c41c5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-gran-galops",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8428784058661",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombia Gran Galope",
+  "url": "https://slakecoffee.com/products/colombia-gran-galops",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45684098793765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "45684098826533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / French Press",
+    "variant_id": "45684098859301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Espresso",
+    "variant_id": "45684098892069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45684098924837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Pour over",
+    "variant_id": "47074106868005"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "f7f9e7ef060b6d8e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-pioneers",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/caffe-guatemala.jpg?v=1768754772",
+  "platform": "shopify",
+  "product_id": "8430982365477",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemala - Huehuetenango Pioneers",
+  "url": "https://slakecoffee.com/products/guatemala-huehuetenango-pioneers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45694218895653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "45694218928421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / French Press",
+    "variant_id": "45694218961189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Espresso",
+    "variant_id": "45694218993957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45694219026725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Pour Over",
+    "variant_id": "47074147336485"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "ba5bb86d0d97bff1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-harimu-tiger-aceh",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8431019229477",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Sumatra - Harimau Tiger - Aceh",
+  "url": "https://slakecoffee.com/products/sumatra-harimu-tiger-aceh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45694414487845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "45694414553381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / French Press",
+    "variant_id": "45694414618917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "45694414651685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45694414684453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz / Pour over",
+    "variant_id": "47074186952997"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "426c74aae69b81b2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fair-trade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8783419965733",
+  "product_type": "Single Origin",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru - Fair Trade Organic",
+  "url": "https://slakecoffee.com/products/peru-fair-trade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47061184872741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47061184905509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47061192868133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12 oz / French Press",
+    "variant_id": "47061192900901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12 oz / Espresso",
+    "variant_id": "47061192933669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12 oz / Pour Over",
+    "variant_id": "47061192966437"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "3b5c5369868bd946",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-cambria-blendsouth-beach",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8785231446309",
+  "product_type": "BLENDS",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "South Beach",
+  "url": "https://slakecoffee.com/products/copy-of-cambria-blendsouth-beach",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47065517785381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47080756642085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47080756674853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / French Press",
+    "variant_id": "47080756707621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Espresso",
+    "variant_id": "47080756740389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Pour over",
+    "variant_id": "47080756773157"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "a3112c9474952ad0",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8785636393253",
+  "product_type": "BLENDS",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Mocha Java",
+  "url": "https://slakecoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47066582647077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47080760115493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47080760148261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / French Press",
+    "variant_id": "47080760181029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Espresso",
+    "variant_id": "47080760213797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12 oz / Pour over",
+    "variant_id": "47080760246565"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "c2f70f278753ce51",
+  "first_seen": "2026-10-26",
+  "handle": "sofia",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8785682858277",
+  "product_type": "BLENDS",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Sofia",
+  "url": "https://slakecoffee.com/products/sofia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47066742980901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47080756904229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47080756936997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / French Press",
+    "variant_id": "47080756969765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Espresso",
+    "variant_id": "47080757002533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz / Pour over",
+    "variant_id": "47080757035301"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "2eff6fa9d4439c87",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-high",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "8787621413157",
+  "product_type": "BLENDS",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "coffee blends"
+  ],
+  "title": "Mountain high",
+  "url": "https://slakecoffee.com/products/mountain-high",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47074189115685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47080757461285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "47080757494053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / French Press",
+    "variant_id": "47080757526821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Pour over",
+    "variant_id": "47080757559589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Espresso",
+    "variant_id": "47080757592357"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "ca34ab42bc0ce763",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-burlap-bag-1",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_175812239.MP.jpg?v=1715297435",
+  "platform": "shopify",
+  "product_id": "9365573402917",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Sumatra - Burlap Bag #1",
+  "url": "https://slakecoffee.com/products/sumatra-burlap-bag-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865307623717"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "ad50790df6d2bad2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-burlap-bag-2",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_180411747.MP.jpg?v=1715298373",
+  "platform": "shopify",
+  "product_id": "9365581529381",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Sumatra - Burlap Bag #2",
+  "url": "https://slakecoffee.com/products/sumatra-burlap-bag-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865334231333"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "6aec4558821fe0db",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-burlap-bag-3",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_180910177.jpg?v=1715298536",
+  "platform": "shopify",
+  "product_id": "9365583626533",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Sumatra - Burlap Bag #3",
+  "url": "https://slakecoffee.com/products/sumatra-burlap-bag-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865342030117"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "880df368ef550350",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_175854552.MP.jpg?v=1715298916",
+  "platform": "shopify",
+  "product_id": "9365588967717",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Guatemala - Burlap Bag",
+  "url": "https://slakecoffee.com/products/guatemala-burlap-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865361461541"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "107ac1d04e9ae475",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-burlap-bag-1",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_180702943.jpg?v=1715299172",
+  "platform": "shopify",
+  "product_id": "9365592244517",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Honduras - Burlap Bag #1",
+  "url": "https://slakecoffee.com/products/honduras-burlap-bag-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.0,
+    "title": "Default Title",
+    "variant_id": "48865370702117"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "06c979f5c337f96b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-burlap-bag-2",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_175945778.MP.jpg?v=1715299289",
+  "platform": "shopify",
+  "product_id": "9365593948453",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Honduras - Burlap Bag #2",
+  "url": "https://slakecoffee.com/products/honduras-burlap-bag-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865373684005"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "ae15c68334efbd7c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240509_180207265.MP.jpg?v=1715299424",
+  "platform": "shopify",
+  "product_id": "9365595193637",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Costa Rica - Burlap Bag #1",
+  "url": "https://slakecoffee.com/products/costa-rica-burlap-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48865379483941"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "95f2d4488e4c9711",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-burlap-bag-2",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174919620.jpg?v=1715370576",
+  "platform": "shopify",
+  "product_id": "9371033010469",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Costa Rica - Burlap Bag #2",
+  "url": "https://slakecoffee.com/products/costa-rica-burlap-bag-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48874414407973"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "3176a02b34acf9e4",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-burlap-bag-3",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174841621.MP.jpg?v=1715370661",
+  "platform": "shopify",
+  "product_id": "9371034485029",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Costa Rica - Burlap Bag #3",
+  "url": "https://slakecoffee.com/products/costa-rica-burlap-bag-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48874416079141"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "bc693ad0dc75504e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-burlap-bag-4",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174809774.MP.jpg?v=1715370774",
+  "platform": "shopify",
+  "product_id": "9371036647717",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Costa Rica - Burlap Bag #4",
+  "url": "https://slakecoffee.com/products/costa-rica-burlap-bag-4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "48874420633893"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "826a4cbe8c20190b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-burlap-bag-5",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174738360.jpg?v=1715370891",
+  "platform": "shopify",
+  "product_id": "9371039334693",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Costa Rica - Burlap Bag #5",
+  "url": "https://slakecoffee.com/products/costa-rica-burlap-bag-5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48874425123109"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "2f8cef379f26b4e8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-burlap-bag-4",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174556236.MP.jpg?v=1715371400",
+  "platform": "shopify",
+  "product_id": "9371048313125",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Sumatra - Burlap Bag #4",
+  "url": "https://slakecoffee.com/products/sumatra-burlap-bag-4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48874445799717"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "a89e0eb05ae91eae",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-burlap-bag-5",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240510_174627693.MP.jpg?v=1715371572",
+  "platform": "shopify",
+  "product_id": "9371050869029",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Sumatra - Burlap Bag #5",
+  "url": "https://slakecoffee.com/products/sumatra-burlap-bag-5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48874450288933"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "e9eb36af1d6ca730",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240511_204248931.jpg?v=1715460535",
+  "platform": "shopify",
+  "product_id": "9372067922213",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Colombia - Burlap Bag",
+  "url": "https://slakecoffee.com/products/colombia-burlap-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.0,
+    "title": "Default Title",
+    "variant_id": "48877617643813"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "7be3c468ab1d092f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240511_204358669.jpg?v=1715460678",
+  "platform": "shopify",
+  "product_id": "9372070248741",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Brazil - Burlap Bag",
+  "url": "https://slakecoffee.com/products/brazil-burlap-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "Default Title",
+    "variant_id": "48877621215525"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "5c7540444d33d2e4",
+  "first_seen": "2026-10-26",
+  "handle": "peru-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240511_204325512.jpg?v=1715460799",
+  "platform": "shopify",
+  "product_id": "9372072018213",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Peru - Burlap Bag",
+  "url": "https://slakecoffee.com/products/peru-burlap-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "48877627113765"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "afba45560f61f64a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-burlap-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/PXL_20240511_204338316.jpg?v=1715461048",
+  "platform": "shopify",
+  "product_id": "9372075589925",
+  "product_type": "",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "merchandise"
+  ],
+  "title": "Ethiopia - Burlap Bag",
+  "url": "https://slakecoffee.com/products/ethiopia-burlap-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "Default Title",
+    "variant_id": "48877638287653"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ },
+ {
+  "body_hash": "9a84f40b446f28ca",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0791/8760/7845/files/Untitled_design_-_2026-01-18T104304.054.png?v=1768779983",
+  "platform": "shopify",
+  "product_id": "9861976162597",
+  "product_type": "decaf",
+  "roaster_slug": "slakecoffee",
+  "tags": [
+   "decaf coffee"
+  ],
+  "title": "Decaf Mexico",
+  "url": "https://slakecoffee.com/products/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50538849009957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Automatic Drip",
+    "variant_id": "50538849042725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / French Press",
+    "variant_id": "50538849075493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Espresso",
+    "variant_id": "50538849108261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Pour over",
+    "variant_id": "50538849141029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50538849173797"
+   }
+  ],
+  "vendor": "SLAKE Coffee"
+ }
+]

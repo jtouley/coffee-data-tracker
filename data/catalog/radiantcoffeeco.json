@@ -1,0 +1,1340 @@
+[
+ {
+  "body_hash": "dddd75a016e0b99e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/Mexico_Veracruz_La_Laja.jpg?v=1782415223",
+  "platform": "shopify",
+  "product_id": "10198298689851",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Citrus",
+   "Floral",
+   "Peach",
+   "Single Origin"
+  ],
+  "title": "Mexico Veracruz La laja",
+  "url": "https://radiantcoffeeroasters.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean / Light",
+    "variant_id": "50674658804027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind / Light",
+    "variant_id": "50674658836795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso grind / Light",
+    "variant_id": "50674658869563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter grind / Light",
+    "variant_id": "50674658902331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press grind / Light",
+    "variant_id": "50674658935099"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean / Light",
+    "variant_id": "50674658967867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind / Light",
+    "variant_id": "50674659000635"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind / Light",
+    "variant_id": "50674659033403"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind / Light",
+    "variant_id": "50674659066171"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind / Light",
+    "variant_id": "50674659098939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean / Light",
+    "variant_id": "50674659131707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind / Light",
+    "variant_id": "50674659164475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind / Light",
+    "variant_id": "50674659197243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind / Light",
+    "variant_id": "50674659230011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind / Light",
+    "variant_id": "50674659262779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean / Dark",
+    "variant_id": "67719323451707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind / Dark",
+    "variant_id": "67719323484475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso grind / Dark",
+    "variant_id": "67719323517243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter grind / Dark",
+    "variant_id": "67719323550011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press grind / Dark",
+    "variant_id": "67719323582779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean / Dark",
+    "variant_id": "67719323615547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind / Dark",
+    "variant_id": "67719323648315"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind / Dark",
+    "variant_id": "67719323681083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind / Dark",
+    "variant_id": "67719323713851"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind / Dark",
+    "variant_id": "67719323746619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean / Dark",
+    "variant_id": "67719323779387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind / Dark",
+    "variant_id": "67719323812155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind / Dark",
+    "variant_id": "67719323844923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind / Dark",
+    "variant_id": "67719323877691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind / Dark",
+    "variant_id": "67719323910459"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "a97de0ef63efb367",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-burbujas",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/Colombia_Burbujas_copy.jpg?v=1782414570",
+  "platform": "shopify",
+  "product_id": "10271074746683",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Caramel",
+   "Dark Chocolate"
+  ],
+  "title": "Colombia Huila Burbujas",
+  "url": "https://radiantcoffeeroasters.com/products/colombia-huila-burbujas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "50920600666427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "50920600699195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz (340 g) / Espresso grind",
+    "variant_id": "50920600731963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz (340 g) / Filter grind",
+    "variant_id": "50920600764731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz (340 g) / French Press grind",
+    "variant_id": "50920600797499"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "50920600830267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "50920600863035"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb (454 g) / Espresso grind",
+    "variant_id": "50920600895803"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb (454 g) / Filter grind",
+    "variant_id": "50920600928571"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb (454 g) / French Press grind",
+    "variant_id": "50920600961339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "50920600994107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "50920601026875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Espresso grind",
+    "variant_id": "50920601059643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Filter grind",
+    "variant_id": "50920601092411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / French Press grind",
+    "variant_id": "50920601125179"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "608fa14cdf10ed1e",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-tangara-butanyerera",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/BurundiTangaraButanyerera.jpg?v=1791409864",
+  "platform": "shopify",
+  "product_id": "15417746063675",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Brown Sugar",
+   "Chocolate",
+   "Nutty"
+  ],
+  "title": "Burundi Tangara Butanyerera",
+  "url": "https://radiantcoffeeroasters.com/products/burundi-tangara-butanyerera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "67670519677243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "67670519742779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Espresso grind",
+    "variant_id": "67670519808315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Filter grind",
+    "variant_id": "67670519873851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / French Press grind",
+    "variant_id": "67670519939387"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "67670520004923"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "67670520070459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Espresso grind",
+    "variant_id": "67670520135995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Filter grind",
+    "variant_id": "67670520201531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / French Press grind",
+    "variant_id": "67670520267067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "67670520332603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "67670520398139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Espresso grind",
+    "variant_id": "67670520463675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Filter grind",
+    "variant_id": "67670520529211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / French Press grind",
+    "variant_id": "67670520594747"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "9639a8ea1ef83ddd",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-cerro-las-ranas-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/ElSalvadorCerroLasRanas.jpg?v=1791409780",
+  "platform": "shopify",
+  "product_id": "15417747079483",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Brown Sugar",
+   "Chocolate",
+   "Nutty"
+  ],
+  "title": "El Salvador Cerro Las Ranas Honey",
+  "url": "https://radiantcoffeeroasters.com/products/el-salvador-cerro-las-ranas-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "67670522593595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "67670522659131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Espresso grind",
+    "variant_id": "67670522724667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / Filter grind",
+    "variant_id": "67670522790203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz (340 g) / French Press grind",
+    "variant_id": "67670522855739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "67670522921275"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "67670522986811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Espresso grind",
+    "variant_id": "67670523052347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / Filter grind",
+    "variant_id": "67670523117883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb (454 g) / French Press grind",
+    "variant_id": "67670523183419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "67670523248955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "67670523314491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Espresso grind",
+    "variant_id": "67670523380027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / Filter grind",
+    "variant_id": "67670523445563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs (2268 g) / French Press grind",
+    "variant_id": "67670523511099"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "16e7e828bf690b2d",
+  "first_seen": "2026-10-26",
+  "handle": "radiant-midnight-blend-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/DSF3874-Edit.jpg?v=1697659101",
+  "platform": "shopify",
+  "product_id": "8472315855163",
+  "product_type": "Dark Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Blend",
+   "Bold",
+   "Cacao",
+   "Dark Chocolate"
+  ],
+  "title": "Radiant Midnight Blend",
+  "url": "https://radiantcoffeeroasters.com/products/radiant-midnight-blend-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "45544374665531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso grind",
+    "variant_id": "45544374698299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "45544374731067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind",
+    "variant_id": "45544374763835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "45544374796603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind",
+    "variant_id": "45544374829371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter grind",
+    "variant_id": "45663820054843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press Grind",
+    "variant_id": "45663820153147"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind",
+    "variant_id": "45663820218683"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press Grind",
+    "variant_id": "45663820284219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind",
+    "variant_id": "45663820415291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press Grind",
+    "variant_id": "45663820480827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "46200344478011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "46200344510779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "46200344543547"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "ad20330fd032930b",
+  "first_seen": "2026-10-26",
+  "handle": "radiant-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/DSF3871-Edit.jpg?v=1697659744",
+  "platform": "shopify",
+  "product_id": "8473535381819",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Blend",
+   "Brown Sugar",
+   "Caramel",
+   "Chocolate"
+  ],
+  "title": "Radiant Breakfast Blend",
+  "url": "https://radiantcoffeeroasters.com/products/radiant-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "45549724762427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso grind",
+    "variant_id": "45549724827963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "45549724860731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind",
+    "variant_id": "45549724926267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "45549724991803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind",
+    "variant_id": "45549725057339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter grind",
+    "variant_id": "45663726338363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press grind",
+    "variant_id": "45663726371131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind",
+    "variant_id": "45663726403899"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind",
+    "variant_id": "45663726436667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind",
+    "variant_id": "45663726469435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind",
+    "variant_id": "45663726502203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "46200332910907"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "46200332943675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "46200332976443"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "bd0ab412c7cab963",
+  "first_seen": "2026-10-26",
+  "handle": "radiant-balanced-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/DSF3875-Edit_52382bf6-eea7-4e91-99b9-01c30c0c37a4.jpg?v=1697659664",
+  "platform": "shopify",
+  "product_id": "8473695912251",
+  "product_type": "Medium Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Blend",
+   "Brown Sugar",
+   "Caramel",
+   "Dark Chocolate"
+  ],
+  "title": "Radiant Balanced Blend",
+  "url": "https://radiantcoffeeroasters.com/products/radiant-balanced-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "45551152759099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso Grind",
+    "variant_id": "45551152791867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "45551152824635"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso Grind",
+    "variant_id": "45551152857403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "45551152890171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso Grind",
+    "variant_id": "45551152922939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter Grind",
+    "variant_id": "45663703236923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press Grind",
+    "variant_id": "45663703269691"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter Grind",
+    "variant_id": "45663703302459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press Grind",
+    "variant_id": "45663703335227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter Grind",
+    "variant_id": "45663703367995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press Grind",
+    "variant_id": "45663703400763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "46200318067003"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "46200318099771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "46200318132539"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "2ffe1d5e5d0aca08",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-minerio",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/brazil_cerrado_mineiro.jpg?v=1782415363",
+  "platform": "shopify",
+  "product_id": "8473820004667",
+  "product_type": "Light Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Brown Sugar",
+   "Chocolate",
+   "Nutty"
+  ],
+  "title": "Brazil Minas Gerais Luzia",
+  "url": "https://radiantcoffeeroasters.com/products/brazil-cerrado-minerio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Whole Bean / Light",
+    "variant_id": "45552007217467"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean / Light",
+    "variant_id": "45552007283003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean / Light",
+    "variant_id": "45552007348539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Whole Bean / Dark",
+    "variant_id": "51518887035195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Cold Brew grind / Light",
+    "variant_id": "51518887067963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Cold Brew grind / Dark",
+    "variant_id": "51518887100731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Espresso grind / Light",
+    "variant_id": "51518887133499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Espresso grind / Dark",
+    "variant_id": "51518887166267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Filter grind / Light",
+    "variant_id": "51518887199035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / Filter grind / Dark",
+    "variant_id": "51518887231803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / French Press grind / Light",
+    "variant_id": "51518887264571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz (340 g) / French Press grind / Dark",
+    "variant_id": "51518887297339"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean / Dark",
+    "variant_id": "51518887330107"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind / Light",
+    "variant_id": "51518887362875"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind / Dark",
+    "variant_id": "51518887395643"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind / Light",
+    "variant_id": "51518887428411"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso grind / Dark",
+    "variant_id": "51518887461179"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind / Light",
+    "variant_id": "51518887493947"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter grind / Dark",
+    "variant_id": "51518887526715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind / Light",
+    "variant_id": "51518887559483"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind / Dark",
+    "variant_id": "51518887592251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean / Dark",
+    "variant_id": "51518887625019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind / Light",
+    "variant_id": "51518887657787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind / Dark",
+    "variant_id": "51518887690555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind / Light",
+    "variant_id": "51518887723323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso grind / Dark",
+    "variant_id": "51518887756091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind / Light",
+    "variant_id": "51518887788859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter grind / Dark",
+    "variant_id": "51518887821627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind / Light",
+    "variant_id": "51518887854395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind / Dark",
+    "variant_id": "51518887887163"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ },
+ {
+  "body_hash": "9071efc4fd7f6624",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0784/3967/8267/files/Decaf_High_Grown_EP_1_copy.webp?v=1783389941",
+  "platform": "shopify",
+  "product_id": "8473913983291",
+  "product_type": "Dark Roast",
+  "roaster_slug": "radiantcoffeeco",
+  "tags": [
+   "Dark Chocolate",
+   "Molasses",
+   "Smokey"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://radiantcoffeeroasters.com/products/columbia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Whole Bean",
+    "variant_id": "45552582983995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Espresso Grind",
+    "variant_id": "45552583016763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Whole Bean",
+    "variant_id": "45552583049531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Espresso Grind",
+    "variant_id": "45552583082299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Whole Bean",
+    "variant_id": "45552583115067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Espresso Grind",
+    "variant_id": "45552583147835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Filter Grind",
+    "variant_id": "45661423042875"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Filter Grind",
+    "variant_id": "45661423075643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Filter Grind",
+    "variant_id": "45661423108411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / French Press grind",
+    "variant_id": "45664030753083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / French Press grind",
+    "variant_id": "45664030785851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / French Press grind",
+    "variant_id": "45664030818619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz (340 g) / Cold Brew grind",
+    "variant_id": "46200287953211"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 lb (454 g) / Cold Brew grind",
+    "variant_id": "46200287985979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs (2268 g) / Cold Brew grind",
+    "variant_id": "46200288018747"
+   }
+  ],
+  "vendor": "Radiant Coffee Roasters"
+ }
+]

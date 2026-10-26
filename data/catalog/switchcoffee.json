@@ -1,0 +1,504 @@
+[
+ {
+  "body_hash": "22016fed5b550950",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_4554.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "6567289061539",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "12oz- Colombia",
+  "url": "https://switchcoffee.co/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Whole Bean",
+    "variant_id": "39384001052835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Ground",
+    "variant_id": "39384001085603"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "1fab7d0971fde233",
+  "first_seen": "2026-10-26",
+  "handle": "dr-congo",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_4560.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "6567291453603",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "12oz- Guatemala",
+  "url": "https://switchcoffee.co/products/dr-congo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "39384008065187"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "39384008097955"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "f5f3d6c4eab35428",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month-club",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/products/ScreenShot2021-04-17at11.37.53PM.png?v=1618722334",
+  "platform": "shopify",
+  "product_id": "6567300595875",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Coffee of the Month Club",
+  "url": "https://switchcoffee.co/products/coffee-of-the-month-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.49,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39384033984675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.49,
+    "title": "Ground / 12oz",
+    "variant_id": "39384034017443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.38,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45778366955683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.38,
+    "title": "Ground / 2 lb",
+    "variant_id": "45778366988451"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "1-5oz-coffee-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/products/ScreenShot2021-04-17at11.47.04PM.png?v=1618721716",
+  "platform": "shopify",
+  "product_id": "6572605374627",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "1.5oz- Coffee Sample",
+  "url": "https://switchcoffee.co/products/1-5oz-coffee-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Colombia / Whole Bean",
+    "variant_id": "39397909758115"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Colombia / Ground",
+    "variant_id": "39397909856419"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Papua New Guinea / Whole Bean",
+    "variant_id": "39397909889187"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Papua New Guinea / Ground",
+    "variant_id": "39397909921955"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Guatemala / Whole Bean",
+    "variant_id": "39397909987491"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "Guatemala / Ground",
+    "variant_id": "39397910020259"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "0619ee5a5ece786d",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_4566.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "6704046866595",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "5lb Bag",
+  "url": "https://switchcoffee.co/products/5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Ground / Colombia",
+    "variant_id": "39802146455715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Whole Bean / Colombia",
+    "variant_id": "39802146488483"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 67.2,
+    "title": "Ground / Guatemala",
+    "variant_id": "40001710686371"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 67.2,
+    "title": "Whole Bean / Guatemala",
+    "variant_id": "40001720418467"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 67.2,
+    "title": "Ground / Kenya",
+    "variant_id": "40029944119459"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 67.2,
+    "title": "Whole Bean / Kenya",
+    "variant_id": "40029946544291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Ground / Mexico",
+    "variant_id": "47601562353827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Ground / Papua New Guinea",
+    "variant_id": "47601562386595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Whole Bean / Mexico",
+    "variant_id": "47601562419363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "Whole Bean / Papua New Guinea",
+    "variant_id": "47601562452131"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "0619ee5a5ece786d",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-bag-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_4566.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "6780401582243",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "2lb Bag",
+  "url": "https://switchcoffee.co/products/2lb-bag-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Colombia",
+    "variant_id": "40002478473379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Colombia",
+    "variant_id": "40002478506147"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Guatemala",
+    "variant_id": "40002478538915"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Guatemala",
+    "variant_id": "40002478571683"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Kenya",
+    "variant_id": "40029964796067"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Kenya",
+    "variant_id": "40029966467235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Coffee of the Month",
+    "variant_id": "45774413922467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Coffee of the Month",
+    "variant_id": "45774413955235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Mexico",
+    "variant_id": "47601564123299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Ground / Papua New Guinea",
+    "variant_id": "47601564156067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Mexico",
+    "variant_id": "47601564188835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.49,
+    "title": "Whole Bean / Papua New Guinea",
+    "variant_id": "47601564221603"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "1-5oz-coffee-sample-1",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_9602.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "7353450102947",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "1.5oz - Coffee Sample",
+  "url": "https://switchcoffee.co/products/1-5oz-coffee-sample-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Colombia / Whole Bean",
+    "variant_id": "41760508117155"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Colombia / Ground",
+    "variant_id": "41760508149923"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Papua New Guinea / Whole Bean",
+    "variant_id": "41760508182691"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Papua New Guinea / Ground",
+    "variant_id": "41760508215459"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Guatemala / Whole Bean",
+    "variant_id": "41760508248227"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 1.99,
+    "title": "Guatemala / Ground",
+    "variant_id": "41760508280995"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "54596fc8e508429e",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/IMG_4564.jpg?v=1741292440",
+  "platform": "shopify",
+  "product_id": "7989077311651",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "12oz- Kenya",
+  "url": "https://switchcoffee.co/products/12oz-kenya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "43311202205859"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground",
+    "variant_id": "43311202238627"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "c32ad9a4568005fd",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/retrowebsitelabel.png?v=1777042132",
+  "platform": "shopify",
+  "product_id": "9067305435299",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "12oz- Mexico",
+  "url": "https://switchcoffee.co/products/12oz-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Whole Bean",
+    "variant_id": "47492405199011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Ground",
+    "variant_id": "47492405231779"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ },
+ {
+  "body_hash": "58c1c46ba8d6ceba",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-mexico-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0512/5318/2627/files/Palmwebsitepictures.png?v=1777041747",
+  "platform": "shopify",
+  "product_id": "9103372288163",
+  "product_type": "Coffee",
+  "roaster_slug": "switchcoffee",
+  "tags": [],
+  "title": "12oz- Papua New Guinea",
+  "url": "https://switchcoffee.co/products/12oz-mexico-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Whole Bean",
+    "variant_id": "47601582637219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "Ground",
+    "variant_id": "47601582669987"
+   }
+  ],
+  "vendor": "Switch Coffee Co"
+ }
+]

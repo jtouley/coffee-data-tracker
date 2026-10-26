@@ -1,0 +1,232 @@
+[
+ {
+  "body_hash": "a351ba5b80378239",
+  "first_seen": "2026-10-26",
+  "handle": "Vanilla-Bourbon-p836264580",
+  "image": "https://campcreekcoffee.com/index.php/store/Vanilla-Bourbon-p836264580",
+  "platform": "generic",
+  "product_id": "00064",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Vanilla Bourbon",
+  "url": "https://campcreekcoffee.com/index.php/store/Vanilla-Bourbon-p836264580",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fbc29db1d25e56e0",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-Bags-p158398935",
+  "image": "https://campcreekcoffee.com/index.php/store/5-lb-Bags-p158398935",
+  "platform": "generic",
+  "product_id": "5lbOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "5 lb Bags",
+  "url": "https://campcreekcoffee.com/index.php/store/5-lb-Bags-p158398935",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5605c131952bac40",
+  "first_seen": "2026-10-26",
+  "handle": "Bigfoot-Blend-12-oz-p84502457",
+  "image": "https://campcreekcoffee.com/index.php/store/Bigfoot-Blend-12-oz-p84502457",
+  "platform": "generic",
+  "product_id": "BF12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Bigfoot Blend 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Bigfoot-Blend-12-oz-p84502457",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9cbf4c603941cbf3",
+  "first_seen": "2026-10-26",
+  "handle": "Colombian-12-oz-p84502458",
+  "image": "https://campcreekcoffee.com/index.php/store/Colombian-12-oz-p84502458",
+  "platform": "generic",
+  "product_id": "COL12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Colombian 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Colombian-12-oz-p84502458",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3fa6a77ae0205f4f",
+  "first_seen": "2026-10-26",
+  "handle": "Ethiopian-12-oz-p84502451",
+  "image": "https://campcreekcoffee.com/index.php/store/Ethiopian-12-oz-p84502451",
+  "platform": "generic",
+  "product_id": "EX12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Ethiopian 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Ethiopian-12-oz-p84502451",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7de9e046ae0ac943",
+  "first_seen": "2026-10-26",
+  "handle": "Squatch-Blend-12-oz-p84502463",
+  "image": "https://campcreekcoffee.com/index.php/store/Squatch-Blend-12-oz-p84502463",
+  "platform": "generic",
+  "product_id": "F5022A3C-E7D0-4806-96C4-C082C09D1FAC",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "'Squatch Blend 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Squatch-Blend-12-oz-p84502463",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b80e346f927f4619",
+  "first_seen": "2026-10-26",
+  "handle": "Old-Hwy-2-Brew-12-oz-p158398922",
+  "image": "https://campcreekcoffee.com/index.php/store/Old-Hwy-2-Brew-12-oz-p158398922",
+  "platform": "generic",
+  "product_id": "O212OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Old Hwy 2 Brew 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Old-Hwy-2-Brew-12-oz-p158398922",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb9af74ebb471bb0",
+  "first_seen": "2026-10-26",
+  "handle": "Peruvian-Decaf-12-oz-p84502454",
+  "image": "https://campcreekcoffee.com/index.php/store/Peruvian-Decaf-12-oz-p84502454",
+  "platform": "generic",
+  "product_id": "PD12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Peruvian Decaf 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Peruvian-Decaf-12-oz-p84502454",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7546e228e82e2ded",
+  "first_seen": "2026-10-26",
+  "handle": "Tanzanian-Trails-12-oz-p158416706",
+  "image": "https://campcreekcoffee.com/index.php/store/Tanzanian-Trails-12-oz-p158416706",
+  "platform": "generic",
+  "product_id": "TT12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Tanzanian Trails 12 oz",
+  "url": "https://campcreekcoffee.com/index.php/store/Tanzanian-Trails-12-oz-p158416706",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b2d1807cfe20e46",
+  "first_seen": "2026-10-26",
+  "handle": "The-Yeti-White-Coffee-p282005082",
+  "image": "https://campcreekcoffee.com/index.php/store/The-Yeti-White-Coffee-p282005082",
+  "platform": "generic",
+  "product_id": "WC12OZOLS",
+  "product_type": "",
+  "roaster_slug": "campcreekcoffee",
+  "tags": [],
+  "title": "Vanilla Bourbon Colombian",
+  "url": "https://campcreekcoffee.com/index.php/store/The-Yeti-White-Coffee-p282005082",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

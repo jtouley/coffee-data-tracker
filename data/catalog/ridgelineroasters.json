@@ -1,0 +1,468 @@
+[
+ {
+  "body_hash": "f7f62887b2d811c9",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Dark-Transparent.png?v=1744399148",
+  "platform": "shopify",
+  "product_id": "8906373726441",
+  "product_type": "12-oz-coffee",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Dark Roast Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257718341865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257718374633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257718407401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257718440169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257718472937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257718505705"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3feb03b0463adc68",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-MD-Transparent.png?v=1744399143",
+  "platform": "shopify",
+  "product_id": "8906441588969",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Medium Dark Roast Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257717194985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257717227753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257717260521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257717293289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257717326057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257717358825"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0c218a92b84b5ab8",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-medium-roasted-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Medium-Transparent.png?v=1744399100",
+  "platform": "shopify",
+  "product_id": "8906443456745",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Medium Roast Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-medium-roasted-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257716605161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257716637929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257716670697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257716703465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257716736233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257716769001"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "6c05e62fe011b604",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Light-Transparent.png?v=1744399065",
+  "platform": "shopify",
+  "product_id": "8906445291753",
+  "product_type": "12-oz-coffee",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ridgeline 12oz Light Roast Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257713852649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257713885417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257713918185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257713950953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257713983721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257714016489"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "12304d3e4e32078a",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-natural-processed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Natural-Transparent.png?v=1744399044",
+  "platform": "shopify",
+  "product_id": "8906457612521",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Natural Processed Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-natural-processed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257716080873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257716113641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257716146409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257716179177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257716211945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257716244713"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9dc95d43cbdb4add",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-decaffeinated-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Decaf-Transparent.png?v=1744399021",
+  "platform": "shopify",
+  "product_id": "8906459644137",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Decaffeinated Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-decaffeinated-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "51257715785961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Drip Grind",
+    "variant_id": "51257715818729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "51257715851497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Pour Over",
+    "variant_id": "51257715884265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "51257715917033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "51257715949801"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "31a5d74c146471e3",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Seasonal-Transparent.png?v=1744398995",
+  "platform": "shopify",
+  "product_id": "8906462986473",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Seasonal Blend Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso",
+    "variant_id": "51257715294441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Cold Brew",
+    "variant_id": "51257715327209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over",
+    "variant_id": "51257715359977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "French Press",
+    "variant_id": "51257715392745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Drip Grind",
+    "variant_id": "51257715425513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean",
+    "variant_id": "51257715458281"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9d79ef4efc74249c",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-12oz-espresso-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/8166/5257/files/left-view-PSD-mockup-Ridgeline-Espresso-Transparent.png?v=1744398937",
+  "platform": "shopify",
+  "product_id": "8906467967209",
+  "product_type": "",
+  "roaster_slug": "ridgelineroasters",
+  "tags": [],
+  "title": "Ridgeline 12oz Espresso Blend Coffee",
+  "url": "https://www.ridgelineroasters.com/products/ridgeline-12oz-espresso-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean",
+    "variant_id": "51257714114793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Drip Grind",
+    "variant_id": "51257714147561"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "French Press",
+    "variant_id": "51257714180329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over",
+    "variant_id": "51257714213097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Cold Brew",
+    "variant_id": "51257714245865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso",
+    "variant_id": "51257714278633"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

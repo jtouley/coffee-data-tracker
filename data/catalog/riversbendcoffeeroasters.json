@@ -1,0 +1,405 @@
+[
+ {
+  "body_hash": "4610f8e46cda2227",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-enthusiast-3-pack",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2023/02/spring-special.jpg",
+  "platform": "woocommerce",
+  "product_id": "2087",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Coffee Enthusiast 3-Pack",
+   "New Product",
+   "Signature Blends",
+   "Single Origin"
+  ],
+  "title": "Coffee Enthusiast 3-Pack",
+  "url": "https://www.riversbendcoffeeroasters.com/product/coffee-enthusiast-3-pack/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "Coffee Enthusiast 3-Pack",
+    "variant_id": "2087:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28388c8071933f65",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mantiqueira",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/brazil-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3210",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Brazil Mantiqueira",
+  "url": "https://www.riversbendcoffeeroasters.com/product/brazil-mantiqueira/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Brazil Mantiqueira",
+    "variant_id": "3210:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ef0d8e28e7ba883",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2023/11/breakfast-blend.png.jpg",
+  "platform": "woocommerce",
+  "product_id": "3264",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Cuppa Joe Blends"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Breakfast Blend",
+    "variant_id": "3264:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "86d5531dab22d921",
+  "first_seen": "2026-10-26",
+  "handle": "french-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2023/11/french-roast.png.jpg",
+  "platform": "woocommerce",
+  "product_id": "3373",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Cuppa Joe Blends"
+  ],
+  "title": "French-blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/french-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "French-blend",
+    "variant_id": "3373:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9cf78d0c3c051618",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-birri-heredia",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/costa-rica-12oz-bag-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3427",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Costa Rica Birri Heredia",
+  "url": "https://www.riversbendcoffeeroasters.com/product/costa-rica-birri-heredia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Costa Rica Birri Heredia",
+    "variant_id": "3427:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1df42fb5338f1e58",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/12/decafe-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3481",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/decaf-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Decaf Blend",
+    "variant_id": "3481:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7028b4a51f85dc59",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-natural",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/ethiopia-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3535",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Sidamo Natural",
+  "url": "https://www.riversbendcoffeeroasters.com/product/ethiopia-sidamo-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Ethiopia Sidamo Natural",
+    "variant_id": "3535:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "185c616afffaf1a4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/guatemala-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3643",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.riversbendcoffeeroasters.com/product/guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Guatemala Huehuetenango",
+    "variant_id": "3643:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "616dc9f0765add96",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2023/10/house-blend.png",
+  "platform": "woocommerce",
+  "product_id": "3751",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Cuppa Joe Blends"
+  ],
+  "title": "House Blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "House Blend",
+    "variant_id": "3751:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27e7c626e6fd9914",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiambu-gathugu-ab",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/kenya-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3805",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Kenya Kiambu Gathugu AB",
+  "url": "https://www.riversbendcoffeeroasters.com/product/kenya-kiambu-gathugu-ab/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Kenya Kiambu Gathugu AB",
+    "variant_id": "3805:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f04ee84c7bfa7fc",
+  "first_seen": "2026-10-26",
+  "handle": "kona",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/kona-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3859",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Kona",
+  "url": "https://www.riversbendcoffeeroasters.com/product/kona/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Kona",
+    "variant_id": "3859:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9755b093e0476b8a",
+  "first_seen": "2026-10-26",
+  "handle": "lake-house-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/lakehouse-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3913",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Lake House Blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/lake-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Lake House Blend",
+    "variant_id": "3913:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9a1724a8aee8221",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2023/10/midnight-blend.png",
+  "platform": "woocommerce",
+  "product_id": "4022",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Cuppa Joe Blends"
+  ],
+  "title": "Midnight Blend",
+  "url": "https://www.riversbendcoffeeroasters.com/product/midnight-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Midnight Blend",
+    "variant_id": "4022:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb9053f3b3caaca8",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-dukunde-kawa-ruli",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/rwanda-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "4184",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Rwanda Dukunde Kawa Ruli",
+  "url": "https://www.riversbendcoffeeroasters.com/product/rwanda-dukunde-kawa-ruli/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Rwanda Dukunde Kawa Ruli",
+    "variant_id": "4184:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eeb737546db57ebf",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-fajar-jeumpa",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/sumatra-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "4238",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Sumatra Takengon Fajar Jeumpa",
+  "url": "https://www.riversbendcoffeeroasters.com/product/sumatra-takengon-fajar-jeumpa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Sumatra Takengon Fajar Jeumpa",
+    "variant_id": "4238:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f29461551912570",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-mocca",
+  "image": "https://www.riversbendcoffeeroasters.com/wp-content/uploads/2022/11/yemen-12oz-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "4346",
+  "product_type": "variable",
+  "roaster_slug": "riversbendcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Yemen Mocca",
+  "url": "https://www.riversbendcoffeeroasters.com/product/yemen-mocca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Yemen Mocca",
+    "variant_id": "4346:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

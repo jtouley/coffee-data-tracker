@@ -1,0 +1,211 @@
+{
+ "10235425358104": {
+  "body_hash": "a388acd328674df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10235425390872": {
+  "body_hash": "a388acd328674df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10235425423640": {
+  "body_hash": "a388acd328674df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10235425489176": {
+  "body_hash": "a388acd328674df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10235425521944": {
+  "body_hash": "a388acd328674df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4572723904577": {
+  "body_hash": "3c93767d7b72ecce",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "4616330641473": {
+  "body_hash": "40ffc49461e81f1a",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "4652901105729": {
+  "body_hash": "75ee8b1b679f1875",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8246351397144": {
+  "body_hash": "534ea03c04c8dbef",
+  "elevation_masl_max": 1219,
+  "elevation_masl_min": 915,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Mundo Novo"
+  ]
+ },
+ "8246357852440": {
+  "body_hash": "2c865cd320099e81",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "9395367280920": {
+  "body_hash": "baebb0db3c940f08",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9977268896024": {
+  "body_hash": "68edb306b0b59b22",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9977277251864": {
+  "body_hash": "1e3d9fde08cf873c",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ }
+}

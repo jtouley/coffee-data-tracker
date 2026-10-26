@@ -1,0 +1,1762 @@
+[
+ {
+  "body_hash": "e4fe28e5a20eac77",
+  "first_seen": "2026-10-26",
+  "handle": "half-life-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/HalfLife.jpg?v=1641424045",
+  "platform": "shopify",
+  "product_id": "4588100616263",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "decaf",
+   "medium-dark"
+  ],
+  "title": "Blend | Half-Life | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/half-life-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32085563867207"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "32085563899975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "32085563932743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "32085563965511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32085563998279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "32085564031047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "32085564063815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "32085564096583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32085564129351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "32085564162119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "32085564194887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "32085564227655"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "50b8b3237c11fde9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/NWEspresso.jpg?v=1641424086",
+  "platform": "shopify",
+  "product_id": "4728996429895",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium-dark"
+  ],
+  "title": "Blend | Northwest Espresso | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32420074553415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "32420074586183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "32420074618951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "32420074684487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32420074717255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "32420074750023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "32420074782791"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "32420074848327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32420074881095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "32420074913863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "32420074946631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "32420075012167"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "57762794cfe0a83f",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-guatemala-huehuetenango-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Guate.jpg?v=1654388322",
+  "platform": "shopify",
+  "product_id": "7182752972997",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Single Origin | Guatemala Huehuetenango | Medium Roast",
+  "url": "https://hammerheadcoffee.com/products/single-origin-guatemala-huehuetenango-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41445239816389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "41445239849157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "41445239881925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "41445239914693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41445239947461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "41445239980229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "41445240012997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "41445240045765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41445240078533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "41445240111301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "41445240144069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "41445240176837"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "c96a5b71933acc93",
+  "first_seen": "2026-10-26",
+  "handle": "blend-baker-blend-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/BakerBlend.jpg?v=1654389726",
+  "platform": "shopify",
+  "product_id": "7182758838469",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium-dark"
+  ],
+  "title": "Blend | Baker Blend | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/blend-baker-blend-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41445248696517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "41445248729285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "41445248762053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "41445248827589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41445248860357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "41445248893125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "41445248925893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "41445248991429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41445249024197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "41445249056965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "41445249089733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "41445249155269"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "f442a3f99c2e9cdb",
+  "first_seen": "2026-10-26",
+  "handle": "blend-giving-blend-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/GivingBlend.jpg?v=1654390292",
+  "platform": "shopify",
+  "product_id": "7182761459909",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium-dark"
+  ],
+  "title": "Blend | Giving Blend | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/blend-giving-blend-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41445254234309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "41445254267077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "41445254299845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "41445254365381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41445254398149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "41445254430917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "41445254463685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "41445254529221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41445254561989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "41445254594757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "41445254627525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "41445254693061"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "44e8834e4c04b646",
+  "first_seen": "2026-10-26",
+  "handle": "blend-beluga-white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/IMG_7195.heic?v=1666712612",
+  "platform": "shopify",
+  "product_id": "7301164040389",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [],
+  "title": "Blend | Beluga | White Coffee",
+  "url": "https://hammerheadcoffee.com/products/blend-beluga-white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "1lb / Finely Ground",
+    "variant_id": "41833826386117"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "31618db34d539927",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-elvis-dark-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/VelvetElvis.jpg?v=1641424280",
+  "platform": "shopify",
+  "product_id": "89501597713",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "dark"
+  ],
+  "title": "Blend | Velvet Elvis | Dark Roast #1 Seller",
+  "url": "https://hammerheadcoffee.com/products/velvet-elvis-dark-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "701247160337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "701247193105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "701247225873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "701247291409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "701247324177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "701247356945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "701247389713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "701247455249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "701247488017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "701247520785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "701247553553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "701247619089"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "a7ff21329a7f9631",
+  "first_seen": "2026-10-26",
+  "handle": "hammerhead-stout",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Stout.jpg?v=1641424131",
+  "platform": "shopify",
+  "product_id": "90532118545",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium"
+  ],
+  "title": "Blend | Hammerhead Stout | Medium Roast",
+  "url": "https://hammerheadcoffee.com/products/hammerhead-stout",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705895202833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705895235601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705895268369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705895333905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705895366673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705895399441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705895432209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705895497745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705895530513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705895563281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705895596049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705895661585"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "058db91e803d5240",
+  "first_seen": "2026-10-26",
+  "handle": "chuckanut-gold",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/CuckanutGold.jpg?v=1641423957",
+  "platform": "shopify",
+  "product_id": "90532151313",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium"
+  ],
+  "title": "Blend | Chuckanut Gold | Medium Roast",
+  "url": "https://hammerheadcoffee.com/products/chuckanut-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705895694353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705895727121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705895759889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705895825425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705895858193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705895890961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705895923729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705895989265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705896022033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705896054801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705896087569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705896153105"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "77f3a6771a4a2da8",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-jabba",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/MochaJabba.jpg?v=1641424180",
+  "platform": "shopify",
+  "product_id": "90532184081",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium"
+  ],
+  "title": "Blend | Mocha Jabba | Medium Roast Coffee",
+  "url": "https://hammerheadcoffee.com/products/mocha-jabba",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32593748197447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "32613844156487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41541329748165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "41541329780933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "41541329813701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "41541329879237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "42308139385029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "42308139679941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705896513553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705896546321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705896579089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705896644625"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "132e0c7f77accec2",
+  "first_seen": "2026-10-26",
+  "handle": "sunnyland-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Sunnyland.jpg?v=1641424227",
+  "platform": "shopify",
+  "product_id": "90532216849",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium"
+  ],
+  "title": "Blend | Sunnyland Brew | Medium Roast",
+  "url": "https://hammerheadcoffee.com/products/sunnyland-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705896677393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705896710161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705896742929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705896808465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705896841233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705896874001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705896906769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705896972305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705897005073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705897037841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705897070609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705897136145"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "80bd300182b4900d",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/BreakfastBlend.jpg?v=1641423888",
+  "platform": "shopify",
+  "product_id": "90532315153",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "medium-dark"
+  ],
+  "title": "Blend | Breakfast  | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705898151953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705898184721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705898217489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705898283025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705898315793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705898348561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705898381329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705898446865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705898479633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705898512401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705898545169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705898610705"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "f8ba1a8aa81b01ca",
+  "first_seen": "2026-10-26",
+  "handle": "daddio",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/DaddioBlend.jpg?v=1641423997",
+  "platform": "shopify",
+  "product_id": "90532347921",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "dark"
+  ],
+  "title": "Blend | Daddio | Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/daddio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705898643473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705898676241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705898709009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705898774545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705898807313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705898840081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705898872849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705898938385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705898971153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705899003921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705899036689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705899102225"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "72b9e07e2cf3a146",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Sidamo.jpg?v=1641424458",
+  "platform": "shopify",
+  "product_id": "90532380689",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Single Origin | Ethiopia Sidamo | Medium Roast",
+  "url": "https://hammerheadcoffee.com/products/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705899134993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705899167761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705899200529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705899266065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705899298833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705899331601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705899364369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705899429905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705899462673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705899495441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705899528209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705899593745"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "0aaba7f5df391dca",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Sumatra.jpg?v=1641424512",
+  "platform": "shopify",
+  "product_id": "90532478993",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Single Origin | Sumatra | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705900609553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705900642321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705900675089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705900740625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705900773393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705900806161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705900838929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705900904465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705900937233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705900970001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705901002769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705901068305"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "72a1aaac6f5e3d00",
+  "first_seen": "2026-10-26",
+  "handle": "cals-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/Cal_sBlend.jpg?v=1641423918",
+  "platform": "shopify",
+  "product_id": "90532511761",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "dark",
+   "decaf"
+  ],
+  "title": "Blend | Cal's 1/2 Decaf & 1/2 Elvis | Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/cals-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Coarse Grind",
+    "variant_id": "31892497104967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31892502184007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31892503003207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Drip Grind",
+    "variant_id": "31892833108039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39736155406533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "39736156553413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "42308138074309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "42308138139845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "42308138205381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705901461521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705901494289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705901559825"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "1268659fadf1c2a0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cascadia",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/CascadiaDecaf.jpg?v=1643589721",
+  "platform": "shopify",
+  "product_id": "90532544529",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "decaf",
+   "medium"
+  ],
+  "title": "Blend | 100% Decaf | Medium-Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/decaf-cascadia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "705901592593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "705901625361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "705901658129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "705901723665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "705901756433"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "705901789201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "705901821969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "705901887505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "705901920273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "705901953041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "705901985809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "705902051345"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ },
+ {
+  "body_hash": "3dd9ab56438cd93f",
+  "first_seen": "2026-10-26",
+  "handle": "whatcom-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0002/1338/5233/products/WCDark.jpg?v=1641424329",
+  "platform": "shopify",
+  "product_id": "91789525009",
+  "product_type": "Coffee",
+  "roaster_slug": "hammerheadcoffee",
+  "tags": [
+   "dark"
+  ],
+  "title": "Blend | Whatcom Dark | Dark Roast",
+  "url": "https://hammerheadcoffee.com/products/whatcom-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "712604909585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "712604942353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Drip Grind",
+    "variant_id": "712604975121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "712605040657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2lb / Whole Bean",
+    "variant_id": "712605073425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Coarse Grind",
+    "variant_id": "712605106193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Drip Grind",
+    "variant_id": "712605138961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2lb / Espresso Grind",
+    "variant_id": "712605204497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "712605237265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "712605270033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Drip Grind",
+    "variant_id": "712605302801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.95,
+    "title": "5lb / Espresso Grind",
+    "variant_id": "712605368337"
+   }
+  ],
+  "vendor": "Hammerhead Coffee"
+ }
+]

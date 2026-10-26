@@ -1,0 +1,260 @@
+[
+ {
+  "body_hash": "e1602295b7019eab",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-permata-gayo",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c381a944fa51a28ba98d357/1785201574433/",
+  "platform": "squarespace",
+  "product_id": "5c381a944fa51a28ba98d357",
+  "product_type": "Single Origin",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Single Origin",
+   "Sumatra"
+  ],
+  "title": "Sumatra Permata Gayo",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/sumatra-permata-gayo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium-Dark 12 oz.",
+    "variant_id": "b60b2b37-c6d5-4249-a219-3dc5d69878ea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd1e61de5e0cbe40",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-mover",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c381d94575d1fd6a15ac269/1785201574187/",
+  "platform": "squarespace",
+  "product_id": "5c381d94575d1fd6a15ac269",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Mountain Mover",
+   "Signature Roast"
+  ],
+  "title": "Mountain Mover",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/mountain-mover",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "60ecb91f-7799-4074-acd0-48dccbd82468"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b87047e992b3e308",
+  "first_seen": "2026-10-26",
+  "handle": "two-cities-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c340d519d5abb2795cfd8d8/1581449241936-58E6JER7EKWJ5BURVGP9/Espresso+Web+copy.jpg",
+  "platform": "squarespace",
+  "product_id": "5c381ed9b8a045b8ac303b21",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Espresso",
+   "Signature Roast"
+  ],
+  "title": "Two Cities Espresso Beans",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/two-cities-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz.",
+    "variant_id": "7e148ae1-83b4-419c-8c52-3238ccc72ec9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b300d87ca5ac25d3",
+  "first_seen": "2026-10-26",
+  "handle": "artisan-decaf",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c381f7c40ec9ad8c4cfe837/1768666644880/",
+  "platform": "squarespace",
+  "product_id": "5c381f7c40ec9ad8c4cfe837",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Decaf",
+   "Signature Roast"
+  ],
+  "title": "Artisan Decaf",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/artisan-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "a4ebb2fa-2339-4c50-bc98-e8deb35da17d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8892a2fb7222f87",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c340d519d5abb2795cfd8d8/1581449319317-P5L28XKR8A57CSQH38WQ/French+Web.jpg",
+  "platform": "squarespace",
+  "product_id": "5c38200d6d2a732e1e922a2d",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "French Roast",
+   "Signature Roast"
+  ],
+  "title": "French Roast",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "1df02219-1533-4182-adfd-47ce7822cb34"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d240f183134e76f",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c3fcf370e2e720d67b666a7/1768666544372/",
+  "platform": "squarespace",
+  "product_id": "5c3fcf370e2e720d67b666a7",
+  "product_type": "Single Origin",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Mexican",
+   "Single Origin"
+  ],
+  "title": "Mexican Chiapas",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/mexican-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "c726fff1-15f8-45f1-bd2b-4368f4053527"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bfd2cb4f22c0e32",
+  "first_seen": "2026-10-26",
+  "handle": "foundry",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c400a9eaa4a999d5498b6df/1768666422386/",
+  "platform": "squarespace",
+  "product_id": "5c400a9eaa4a999d5498b6df",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Foundry",
+   "Signature Roast"
+  ],
+  "title": "Foundry",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/foundry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "1bbbc55a-ad60-4187-ac9c-96d26e2ca047"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a5b48b671e1b585",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hue-hue",
+  "image": "https://static1.squarespace.com/static/5c340d519d5abb2795cfd8d8/5c3547d588251b8960c329ef/5c400ad57924e82bb99a2b7a/1768666478166/",
+  "platform": "squarespace",
+  "product_id": "5c400ad57924e82bb99a2b7a",
+  "product_type": "Single Origin",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemala Hue Hue",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/guatemala-hue-hue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "93b08901-3789-4d80-bc75-b2321a3feea5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9cb5963e2bae23f",
+  "first_seen": "2026-10-26",
+  "handle": "theascent",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c340d519d5abb2795cfd8d8/1669053944004-ITLJSMZ14LTZT8JPW32J/Ascent.png",
+  "platform": "squarespace",
+  "product_id": "637bbdb5e6e0c321c2eddb0b",
+  "product_type": "Signature Roast",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Ascent",
+   "Signature Roast"
+  ],
+  "title": "The Ascent",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/theascent",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "1f67bf08-b98a-4ace-8277-1d876d31de99"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cfab7bc1af169fd9",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-finca-la-camelias",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c340d519d5abb2795cfd8d8/1687807404408-D3PVWO6A6V2K3B4TIWJL/Nicaragua+Finca+La+Camelias.jpg",
+  "platform": "squarespace",
+  "product_id": "6499e59ea136bf78d2832138",
+  "product_type": "Single Origin",
+  "roaster_slug": "twocitiescoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Nicaragua Finca La Camelias",
+  "url": "https://www.twocitiescoffee.com/shopcoffee/nicaragua-finca-la-camelias",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "12fccfb6-3eca-469c-aeae-32be66d248ba"
+   }
+  ],
+  "vendor": ""
+ }
+]

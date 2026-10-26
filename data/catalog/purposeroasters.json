@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "bac39865fd2a16e1",
+  "first_seen": "2026-10-26",
+  "handle": "purpose-roasters-medium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1678/9677/files/Medium_Blend_Nicks_Desk.jpg?v=1779856032",
+  "platform": "shopify",
+  "product_id": "7500855607393",
+  "product_type": "coffee",
+  "roaster_slug": "purposeroasters",
+  "tags": [],
+  "title": "Purpose Roasters Medium Blend",
+  "url": "https://purposeroasters.com/products/purpose-roasters-medium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "43714737963105"
+   }
+  ],
+  "vendor": "purpose-roasters"
+ },
+ {
+  "body_hash": "83b173a9aaeaf2b2",
+  "first_seen": "2026-10-26",
+  "handle": "purpose-roasters-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1678/9677/files/Dark_Blend_Nicks_Desk.jpg?v=1779856032",
+  "platform": "shopify",
+  "product_id": "7500873171041",
+  "product_type": "coffee",
+  "roaster_slug": "purposeroasters",
+  "tags": [],
+  "title": "Purpose Roasters Dark Blend",
+  "url": "https://purposeroasters.com/products/purpose-roasters-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "43714756771937"
+   }
+  ],
+  "vendor": "purpose-roasters"
+ },
+ {
+  "body_hash": "7ef0ead7a240cb30",
+  "first_seen": "2026-10-26",
+  "handle": "purpose-roasters-light-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1678/9677/files/NicksDesk_2_LightBlend.jpg?v=1780090486",
+  "platform": "shopify",
+  "product_id": "7572243185761",
+  "product_type": "coffee",
+  "roaster_slug": "purposeroasters",
+  "tags": [],
+  "title": "Purpose Roasters Light Blend",
+  "url": "https://purposeroasters.com/products/purpose-roasters-light-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45049952469089"
+   }
+  ],
+  "vendor": "purpose-roasters"
+ },
+ {
+  "body_hash": "374e2a9be9f1c542",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1678/9677/files/NicksDesk_2_AnytimeBlend.jpg?v=1780090576",
+  "platform": "shopify",
+  "product_id": "8148651211",
+  "product_type": "coffee",
+  "roaster_slug": "purposeroasters",
+  "tags": [],
+  "title": "Anytime Blend",
+  "url": "https://purposeroasters.com/products/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "27214366731"
+   }
+  ],
+  "vendor": "purpose-roasters"
+ }
+]

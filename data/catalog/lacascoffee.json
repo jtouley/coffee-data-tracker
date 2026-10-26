@@ -1,0 +1,1059 @@
+[
+ {
+  "body_hash": "9510a09e5630f5dc",
+  "first_seen": "2026-10-26",
+  "handle": "original-city-roast-single-cups",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1719938272968-5H0WE8TSRDHP3UUI6EV4/SC_OCR_Detail+Photo.jpg",
+  "platform": "squarespace",
+  "product_id": "59f732742774d1138bacc90a",
+  "product_type": "Single Cups,Medium Roast,Classic Roasts",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Classic Roasts",
+   "Medium Roast",
+   "Single Cups",
+   "k-cups",
+   "kcups",
+   "single cups"
+  ],
+  "title": "Original City Roast Single Cups",
+  "url": "https://www.lacascoffee.com/coffee/original-city-roast-single-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "24-count ($0.83/cup)",
+    "variant_id": "564a8860-c7f8-4f3f-b91b-462344d69bfa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.96,
+    "title": "96-count ($0.78/cup)",
+    "variant_id": "848d9a23-2b59-4022-94a1-175e3ceff2b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c84364b1cc2c4229",
+  "first_seen": "2026-10-26",
+  "handle": "original-city-roast",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f73e63109526f92098a691/1775739251972/",
+  "platform": "squarespace",
+  "product_id": "59f73e63109526f92098a691",
+  "product_type": "Classic Roasts,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "100 years",
+   "2021",
+   "Classic Roasts",
+   "Medium Roast",
+   "anniversary",
+   "centennial",
+   "coffee",
+   "coffee beans",
+   "medium"
+  ],
+  "title": "Original City Roast - our Centennial Blend",
+  "url": "https://www.lacascoffee.com/coffee/original-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "13a4845e-d998-4973-af63-99c45af5da3b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "12 oz. Medium",
+    "variant_id": "18977389-e016-42d4-bc3a-7ae2595d3a68"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.99,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "60fba2b7-a02b-41d0-873b-819787a8d108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.99,
+    "title": "5 lbs. Medium",
+    "variant_id": "eba91dc0-1175-47de-92ac-99044fa7e827"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae209ae5af63be3e",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian-decaffeinated-single-cups",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1719938393992-6WMHOJO7P9347UOTUCGE/SC_CD_Detail+Photo.jpg",
+  "platform": "squarespace",
+  "product_id": "59f88a02e31d1969f48a186a",
+  "product_type": "Single Cups,Decaf,Medium Roast,Classic Roasts",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Classic Roasts",
+   "Decaf",
+   "Medium Roast",
+   "Single Cups",
+   "k-cups",
+   "kcups",
+   "single cups"
+  ],
+  "title": "100% Colombian DECAFFEINATED Single Cups",
+  "url": "https://www.lacascoffee.com/coffee/100-colombian-decaffeinated-single-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.96,
+    "title": "96-count ($0.78/cup)",
+    "variant_id": "5967087f-dcb5-4cbb-a1a0-d78804658514"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "24-count ($0.83/cup)",
+    "variant_id": "ced92b6e-c6d1-4c1f-a630-5498f08d7058"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a79358ad8271e6e8",
+  "first_seen": "2026-10-26",
+  "handle": "dark-note-single-cups",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1719938350603-32OUTBF059CBGWXXS3G8/SC_DN_Detail+Photo.jpg",
+  "platform": "squarespace",
+  "product_id": "59f88bcd8165f5162236c6a1",
+  "product_type": "Single Cups,Select Roasts,Dark Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Dark Roast",
+   "Select Roasts",
+   "Single Cups",
+   "k-cups",
+   "kcups",
+   "single cups"
+  ],
+  "title": "Dark Note Single Cups",
+  "url": "https://www.lacascoffee.com/coffee/dark-note-single-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.96,
+    "title": "96-count ($0.78/cup)",
+    "variant_id": "5e15a9a4-a666-4882-9b44-21fe59ee37e9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "24-count ($0.83/cup)",
+    "variant_id": "83aac342-a883-4e9b-8b16-86b8573bd9a5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b093acc6e0713290",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian-decaffeinated",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f8934e9140b73d400cd66e/1775739215375/",
+  "platform": "squarespace",
+  "product_id": "59f8934e9140b73d400cd66e",
+  "product_type": "Classic Roasts,Decaf,Single Origin,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Classic Roasts",
+   "Decaf",
+   "Medium Roast",
+   "Single Origin",
+   "coffee",
+   "coffee beans"
+  ],
+  "title": "100% Colombian DECAFFEINATED",
+  "url": "https://www.lacascoffee.com/coffee/100-colombian-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.49,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "1798b01c-fa70-4a0b-8386-f08cf4b672d3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.49,
+    "title": "12 oz. Medium",
+    "variant_id": "503c6536-b10d-4069-b58f-61c8e9b4dd1c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.99,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "d8fc3d5e-83dd-4a2e-a0b6-a92e3ed1a12b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53bfcff069bd6443",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f8939de2c48368e559ada9/1775739103538/",
+  "platform": "squarespace",
+  "product_id": "59f8939de2c48368e559ada9",
+  "product_type": "",
+  "roaster_slug": "lacascoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.lacascoffee.com/coffee/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "12 oz. Medium",
+    "variant_id": "cbab61b8-9807-40e7-ad7d-bcef2eeb9c1a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d596375b89d8c13a",
+  "first_seen": "2026-10-26",
+  "handle": "lacas-dark-note",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f89478c83025f48cb17ccf/1775739115130/",
+  "platform": "squarespace",
+  "product_id": "59f89478c83025f48cb17ccf",
+  "product_type": "",
+  "roaster_slug": "lacascoffee",
+  "tags": [],
+  "title": "Lacas Dark Note",
+  "url": "https://www.lacascoffee.com/coffee/lacas-dark-note",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.99,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "993486b1-8a31-4ccb-aa69-c3eb499acaa5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz. Medium",
+    "variant_id": "9d189ee7-9c0d-4388-a32a-c586e8fd030b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "f6ea157c-a4fa-4b24-b031-b383d3c4172b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf1da2c910eb1382",
+  "first_seen": "2026-10-26",
+  "handle": "rittenhouse-fine-coffee",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f894ce24a69446e910cf1d/1775739294571/",
+  "platform": "squarespace",
+  "product_id": "59f894ce24a69446e910cf1d",
+  "product_type": "Select Roasts,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Medium Roast",
+   "Select Roasts",
+   "coffee",
+   "coffee beans",
+   "medium"
+  ],
+  "title": "Rittenhouse Fine Coffee",
+  "url": "https://www.lacascoffee.com/coffee/rittenhouse-fine-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.99,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "83b046ae-dc0b-4c81-91b3-73b6ae95a17b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "8b70a848-9355-4fc3-898d-6de12e41b403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz. Medium",
+    "variant_id": "c6587c0e-512c-4d77-999b-fe36b6f40ec7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "931f340a10672276",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f895260852296a94784cdc/1793034202725/",
+  "platform": "squarespace",
+  "product_id": "59f895260852296a94784cdc",
+  "product_type": "Dark Roast,Coffee",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.lacascoffee.com/coffee/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz. Medium",
+    "variant_id": "04eb995a-ea8b-4bb1-a0e3-9ea2d5a4d107"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "123287d3-e24c-4d77-91b9-a0d7471153f2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3e66af601e04b78",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-blend-decaffeinated",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f895a06926706020fe1870/1775739220203/",
+  "platform": "squarespace",
+  "product_id": "59f895a06926706020fe1870",
+  "product_type": "Decaf,Select Roasts,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Select Roasts",
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "medium"
+  ],
+  "title": "Café Blend DECAFFEINATED",
+  "url": "https://www.lacascoffee.com/coffee/cafe-blend-decaffeinated",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.49,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "9c36fdf9-3e7c-45c0-8433-75bdc65469c5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.49,
+    "title": "12 oz. Medium",
+    "variant_id": "f4530c36-d101-41e6-b0fc-26b9dad4310d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9b47f9b712cc25f",
+  "first_seen": "2026-10-26",
+  "handle": "lacas-espresso",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f9d1618e7b0fbba455ee3f/1775739178002/",
+  "platform": "squarespace",
+  "product_id": "59f9d1618e7b0fbba455ee3f",
+  "product_type": "Select Roasts,Dark Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Dark Roast",
+   "Select Roasts",
+   "coffee",
+   "coffee beans",
+   "dark",
+   "espresso"
+  ],
+  "title": "Lacas Espresso",
+  "url": "https://www.lacascoffee.com/coffee/lacas-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.99,
+    "title": "2 lbs. Whole Bean",
+    "variant_id": "4dac6e56-68ae-4015-831d-fecd4650b550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "b56208bc-82a7-4255-a527-9e65f5c9d62f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9c99ff2425aa62a",
+  "first_seen": "2026-10-26",
+  "handle": "lacas-decaffeinated-espresso",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f9d1e92774d14dc2d0ad8c/1775739228404/",
+  "platform": "squarespace",
+  "product_id": "59f9d1e92774d14dc2d0ad8c",
+  "product_type": "Select Roasts,Decaf,Dark Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Select Roasts",
+   "coffee",
+   "coffee beans",
+   "dark",
+   "espresso"
+  ],
+  "title": "Lacas DECAFFEINATED Espresso",
+  "url": "https://www.lacascoffee.com/coffee/lacas-decaffeinated-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "30bb2795-35c8-425e-84b3-88c4a6d1ded9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 lbs. Whole Bean",
+    "variant_id": "d2c44937-8ff7-444a-a487-2af505448296"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "004dc2437fb4e785",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f9d3f0f9619acf165cd6db/1775739145864/",
+  "platform": "squarespace",
+  "product_id": "59f9d3f0f9619acf165cd6db",
+  "product_type": "Single Origin,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin",
+   "coffee",
+   "coffee beans",
+   "medium"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://www.lacascoffee.com/coffee/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.99,
+    "title": "12 oz. Medium",
+    "variant_id": "2045cd60-eebf-475e-a912-c37a720d6fa3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.99,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "2db65478-83d6-4665-959d-100b82510911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "65f4104c-32e9-4a83-91e0-8c47b14a0e43"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c1ea5a2a2d6a1c0",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-mexican-dark-roast",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f9e8ffe31d196fa8dd8d24/1780583917337/",
+  "platform": "squarespace",
+  "product_id": "59f9e8ffe31d196fa8dd8d24",
+  "product_type": "Single Origin,Sustainable,Dark Roast,Fair Trade,Organic",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Dark Roast",
+   "Fair Trade",
+   "Organic",
+   "Single Origin",
+   "Sustainable",
+   "bold",
+   "coffee",
+   "coffee beans",
+   "dark",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Fair Trade Organic Mexican Chiapas Dark Roast",
+  "url": "https://www.lacascoffee.com/coffee/fair-trade-organic-mexican-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz. Medium",
+    "variant_id": "16178e65-645d-4f72-83a1-de95910ecf9c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 66.49,
+    "title": "5 lbs. Whole Bean",
+    "variant_id": "1b1aa2d5-55f3-43c4-8636-da6af31aeccc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "8aefde1e-6276-4deb-87d8-8a2a28e968f2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8fd21f24d5919e2c",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-nicaragua",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59f9e9d10852294c4517e59c/1777648661434/",
+  "platform": "squarespace",
+  "product_id": "59f9e9d10852294c4517e59c",
+  "product_type": "",
+  "roaster_slug": "lacascoffee",
+  "tags": [],
+  "title": "Fair Trade Organic Nicaragua",
+  "url": "https://www.lacascoffee.com/coffee/fair-trade-organic-nicaragua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.99,
+    "title": "12 oz. Medium",
+    "variant_id": "44abc337-b819-4306-991c-51fd2f67c8d3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f97daeeffc082c0",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1566233412619-CJSJTB8BMYLJ4LPRHC0J/Pumpkin+spice.png",
+  "platform": "squarespace",
+  "product_id": "59fb20942774d13bbdcd4034",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "flavored",
+   "medium",
+   "pumpkin",
+   "spice"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://www.lacascoffee.com/coffee/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz.",
+    "variant_id": "80baf77a-0cb7-41b5-a8bf-d9204047b961"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cecc9e317d73bcf9",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59fb20e78e7b0fc09eed62bf/1775739200925/",
+  "platform": "squarespace",
+  "product_id": "59fb20e78e7b0fc09eed62bf",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "flavored",
+   "medium"
+  ],
+  "title": "French Vanilla",
+  "url": "https://www.lacascoffee.com/coffee/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "0c31418b-9516-40e1-86c6-af78260094b9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "d0d9f98e-0e46-42f5-84e2-3fb4602813df"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "266b94f5a4e8408e",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaffeinated",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59fb210b9140b7ed47b0f5da/1775739232699/",
+  "platform": "squarespace",
+  "product_id": "59fb210b9140b7ed47b0f5da",
+  "product_type": "Flavored Coffee,Decaf,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "flavored",
+   "french vanilla",
+   "medium"
+  ],
+  "title": "French Vanilla DECAFFEINATED",
+  "url": "https://www.lacascoffee.com/coffee/french-vanilla-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "0f485e8b-4219-4750-809c-54df33559e75"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "175ee1914615f08d",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-cream-decaffeinated",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59fb21446c3194b1f3f8f0c2/1775739235220/",
+  "platform": "squarespace",
+  "product_id": "59fb21446c3194b1f3f8f0c2",
+  "product_type": "Flavored Coffee,Decaf,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Decaf",
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "flavored",
+   "medium"
+  ],
+  "title": "Hazelnut Cream DECAFFEINATED",
+  "url": "https://www.lacascoffee.com/coffee/hazelnut-cream-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "723d2503-4cca-499a-a587-ef1003baeed2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c8077e8d72658e8d",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-cream",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/59fb21642774d13bbdcd5224/1775739207830/",
+  "platform": "squarespace",
+  "product_id": "59fb21642774d13bbdcd5224",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "flavored",
+   "medium"
+  ],
+  "title": "Hazelnut Cream",
+  "url": "https://www.lacascoffee.com/coffee/hazelnut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "6c3e9ce2-71bc-4d38-af09-c53cadbe5602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "c5173304-4958-4045-8388-7b30f24b9692"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93c82c29f5dbbf90",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1510063229472-P47CAKACNUEPFJFP05EP/Lacas-Retail-_0005_Flavored-Chocolate-Raspberry-Ground.png",
+  "platform": "squarespace",
+  "product_id": "59fb218227ef2d0979f29cc8",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "flavored",
+   "medium"
+  ],
+  "title": "Chocolate Raspberry",
+  "url": "https://www.lacascoffee.com/coffee/chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "376c48cb-2d36-412e-abdf-21b41bf54b85"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "5b4a1ede-c059-4a95-a4a0-99a0972cbb0e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fad73bc4bbeca6ab",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1708103214727-WLMR2P7JUNTRX0Y2FUZP/Irish+Cream+sq.jpg",
+  "platform": "squarespace",
+  "product_id": "59fb21d264265feb54d161a4",
+  "product_type": "Flavored Coffee,Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Coffee",
+   "Flavored Coffee",
+   "Medium Roast",
+   "flavored",
+   "irish"
+  ],
+  "title": "Irish Cream",
+  "url": "https://www.lacascoffee.com/coffee/irish-cream",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "2e6de9ea-53ed-4130-a6e3-8cc984e6bd0d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "d556e6a6-a8ab-4c3a-9de4-095152147181"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b93ee279c6c8c93d",
+  "first_seen": "2026-10-26",
+  "handle": "winter-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1700159704617-L9TWRTLFGJ0C5ZBDZ2N6/winter+blend+photo.jpg",
+  "platform": "squarespace",
+  "product_id": "5a1c7a8ef9619afa6a87ba46",
+  "product_type": "",
+  "roaster_slug": "lacascoffee",
+  "tags": [],
+  "title": "Winter Blend",
+  "url": "https://www.lacascoffee.com/coffee/winter-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "4f49cc44-889b-41db-9271-e9ede4684d5b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f239ce3e785fa53",
+  "first_seen": "2026-10-26",
+  "handle": "banana-nut-bread",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/6f3be78c-a2cb-48fb-ad06-33ef9087caca/Banana+Nut+Bread+sq.jpg",
+  "platform": "squarespace",
+  "product_id": "5c2fb5feb8a045d8676a5399",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "flavored",
+   "medium"
+  ],
+  "title": "Banana Nut Bread",
+  "url": "https://www.lacascoffee.com/coffee/banana-nut-bread",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "a8d97c0c-764c-41d0-8821-15d24bb47eb6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1681c45d9c731813",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-caramel",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/a10be166-c247-468b-ae80-a28d6a881aba/Bourbon%2BCaramel%2Bsq.jpg",
+  "platform": "squarespace",
+  "product_id": "5d5abcf772f41b00012ecac1",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "bourbon",
+   "caramel",
+   "coffee",
+   "coffee beans",
+   "flavored",
+   "medium",
+   "sustainable"
+  ],
+  "title": "Bourbon Caramel",
+  "url": "https://www.lacascoffee.com/coffee/bourbon-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "97a2b729-10d2-49a1-8a8d-13d430dcb413"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3546f7f9311bf503",
+  "first_seen": "2026-10-26",
+  "handle": "frac-packs-original-city-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1586276484516-EMGKANQN7RFTJCTHX2UL/Lacas+Frack+Packs+-+Original+City+Roast.png",
+  "platform": "squarespace",
+  "product_id": "5e84f27735c14c46a302ca6d",
+  "product_type": "Brew Packs,Classic Roasts,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Brew Packs",
+   "Classic Roasts",
+   "Medium Roast"
+  ],
+  "title": "Brew Packs - Original City Roast",
+  "url": "https://www.lacascoffee.com/coffee/frac-packs-original-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.99,
+    "title": "",
+    "variant_id": "51a0117b-5b59-45f9-8878-1524e8c5f4e9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f220f1eccf7e1add",
+  "first_seen": "2026-10-26",
+  "handle": "frac-packs-dark-note",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/5e8cb2629112ad40b9cba37d/1752157944992/Lacas+Frack+Packs+-+Dark+Note.png",
+  "platform": "squarespace",
+  "product_id": "5e8cb2629112ad40b9cba37d",
+  "product_type": "Brew Packs,Dark Roast,Select Roasts",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Brew Packs",
+   "Dark Roast",
+   "Select Roasts"
+  ],
+  "title": "Brew Packs - Dark Note",
+  "url": "https://www.lacascoffee.com/coffee/frac-packs-dark-note",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.99,
+    "title": "",
+    "variant_id": "b653a6bd-e485-4d9a-a820-579166e24376"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25ef5328580a7bee",
+  "first_seen": "2026-10-26",
+  "handle": "frac-packs-fair-trade-organic-mexican-chiapas-dark-roast",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/5e8cb6fa4990615db5ac6690/1780583923711/Lacas+Frack+Packs+-+FTO+Mexican+Dark+Roast.png",
+  "platform": "squarespace",
+  "product_id": "5e8cb6fa4990615db5ac6690",
+  "product_type": "Single Origin,Sustainable,Dark Roast,Brew Packs,Fair Trade,Organic",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Brew Packs",
+   "Dark Roast",
+   "Fair Trade",
+   "Organic",
+   "Single Origin",
+   "Sustainable",
+   "bold",
+   "coffee",
+   "coffee beans",
+   "dark",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Brew Packs - Fair Trade Organic Mexican Chiapas Dark Roast",
+  "url": "https://www.lacascoffee.com/coffee/frac-packs-fair-trade-organic-mexican-chiapas-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 62.99,
+    "title": "",
+    "variant_id": "edb4fe80-a3dc-4f26-9526-6b1e96ff141b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "068efd7363470b8d",
+  "first_seen": "2026-10-26",
+  "handle": "frac-packs-colombian-supremo",
+  "image": "https://static1.squarespace.com/static/58e7873e440243ae10bc8093/58ebbb7dd482e94e7f6c769e/5e8cb81db731b8318f7157e4/1751905010274/",
+  "platform": "squarespace",
+  "product_id": "5e8cb81db731b8318f7157e4",
+  "product_type": "Single Origin,Medium Roast,Brew Packs",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Brew Packs",
+   "Medium Roast",
+   "Single Origin",
+   "coffee",
+   "coffee beans",
+   "medium"
+  ],
+  "title": "Brew Packs - Colombian Supremo",
+  "url": "https://www.lacascoffee.com/coffee/frac-packs-colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.99,
+    "title": "",
+    "variant_id": "5cfbb06b-67c6-44ae-b203-cb850c56b79b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d83eff3ee698a2d8",
+  "first_seen": "2026-10-26",
+  "handle": "maple-nut-crunch",
+  "image": "https://images.squarespace-cdn.com/content/v1/58e7873e440243ae10bc8093/1694200886574-X186HTTNHT5JB60JWAA8/Maple+Nut+Crunch.jpg",
+  "platform": "squarespace",
+  "product_id": "64fb72189d918a51e38a95b1",
+  "product_type": "Flavored Coffee,Medium Roast",
+  "roaster_slug": "lacascoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Medium Roast",
+   "coffee",
+   "coffee beans",
+   "crunch",
+   "flavored",
+   "maple",
+   "medium",
+   "nut",
+   "nuts"
+  ],
+  "title": "Maple Nut Crunch",
+  "url": "https://www.lacascoffee.com/coffee/maple-nut-crunch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz. Medium",
+    "variant_id": "65840671-2d98-4f7f-8e9b-938da5b4bfb9"
+   }
+  ],
+  "vendor": ""
+ }
+]

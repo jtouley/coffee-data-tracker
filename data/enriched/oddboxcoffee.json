@@ -1,0 +1,285 @@
+{
+ "10317137346622": {
+  "body_hash": "50d56ae1e9e9097e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "74110",
+   "74112",
+   "Heirloom"
+  ]
+ },
+ "10317140230206": {
+  "body_hash": "68c42b4246cf100a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "10317145342014": {
+  "body_hash": "7c1eae944f73f8e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "10317149208638": {
+  "body_hash": "504fece4e3057780",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor"
+  ]
+ },
+ "15405054165054": {
+  "body_hash": "b84b9a4fcd5a56e0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "15405060882494": {
+  "body_hash": "bb4f260483dd7a32",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8108856115262": {
+  "body_hash": "1f70303b53359868",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "8108856213566": {
+  "body_hash": "0ef8f1b78939220c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "8108856344638": {
+  "body_hash": "257078dfdc40d191",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8108856442942": {
+  "body_hash": "e722de467d90c909",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "8108856475710": {
+  "body_hash": "bdbfc1a96c2e0d4e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Batian",
+   "Ruiru 11",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "8108856541246": {
+  "body_hash": "4b0b96437f23ac00",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Catuai",
+   "Caturra",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "8108856901694": {
+  "body_hash": "ed26a864090912fb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8108856967230": {
+  "body_hash": "b7d2520504ffa72a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8108857196606": {
+  "body_hash": "335a0254c9cc2771",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8198786842686": {
+  "body_hash": "0ed6a1a999a95c6e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra"
+  ]
+ }
+}

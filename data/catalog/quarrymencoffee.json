@@ -1,0 +1,2742 @@
+[
+ {
+  "body_hash": "4f3453d858663de6",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/colombian.jpg?v=1723577771",
+  "platform": "shopify",
+  "product_id": "8467853869271",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Colombian",
+  "url": "https://quarrymencoffee.com/products/colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45417222996183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45417223028951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45417223061719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45417223094487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45417271001303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45417271034071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45417271066839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45417271099607"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541322490071"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541322522839"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541322555607"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541322588375"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "ce4b98f3da0df599",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/brazilian.jpg?v=1723577545",
+  "platform": "shopify",
+  "product_id": "8635262402775",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Brazilian",
+  "url": "https://quarrymencoffee.com/products/brazilian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423032041687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423032074455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423032107223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423032139991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423032172759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423032205527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423032238295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423032271063"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541318295767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541318328535"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541318361303"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541318394071"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "7839893ceedab11c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/guatemalan.jpg?v=1723578599",
+  "platform": "shopify",
+  "product_id": "8635264401623",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Guatemalan",
+  "url": "https://quarrymencoffee.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423038922967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423038955735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423038988503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423039021271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423039054039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423039086807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423039119575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423039152343"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541342838999"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541342871767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541342904535"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541342937303"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "9dbd029906dbfc7b",
+  "first_seen": "2026-10-26",
+  "handle": "mexican",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/mexican.jpg?v=1723579505",
+  "platform": "shopify",
+  "product_id": "8635265679575",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Mexican",
+  "url": "https://quarrymencoffee.com/products/mexican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423042068695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423042101463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423042134231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423042166999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423042199767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423042232535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423042265303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423042298071"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541371019479"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541371052247"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541371085015"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541371117783"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "b9d1a73b505b7a50",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/costa-rican.jpg?v=1723577836",
+  "platform": "shopify",
+  "product_id": "8635266891991",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Costa Rican",
+  "url": "https://quarrymencoffee.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423047114967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423047147735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423047180503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423047213271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423047246039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423047278807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423047311575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423047344343"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541336744151"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541336776919"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541336809687"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541336842455"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "acc0021ec9270fee",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/hoosier.jpg?v=1723578646",
+  "platform": "shopify",
+  "product_id": "8635268694231",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Hoosier Blend",
+  "url": "https://quarrymencoffee.com/products/sumatran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423051604183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423051636951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423051669719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423051702487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423051735255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423051768023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423051800791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423051833559"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541343789271"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541343822039"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541343854807"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541343887575"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "9760cc2da0988ecf",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/decaf.jpg?v=1723578457",
+  "platform": "shopify",
+  "product_id": "8635271610583",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Decaf Colombian",
+  "url": "https://quarrymencoffee.com/products/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423056912599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423056945367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423056978135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423057010903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423057043671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423057076439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423057109207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423057141975"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541340020951"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541340053719"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541340086487"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541340119255"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "ff5ca43e4fdaf007",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/cafe-diego.jpg?v=1723579625",
+  "platform": "shopify",
+  "product_id": "8635273871575",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Nicaraguan Cafe Diego",
+  "url": "https://quarrymencoffee.com/products/nicaraguan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423062909143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423062941911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423062974679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423063007447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423063040215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423063072983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423063105751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423063138519"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541374230743"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541374263511"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541374296279"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541374329047"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "3d1cc30dc3590963",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/mocha-java.jpg?v=1723579562",
+  "platform": "shopify",
+  "product_id": "8635390197975",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Mocha Java Blend",
+  "url": "https://quarrymencoffee.com/products/mocha-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423442952407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423442985175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423443017943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423443050711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423443083479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423443116247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423443149015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423443181783"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541372756183"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541372788951"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541372821719"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541372854487"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "acc0021ec9270fee",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/espresso.jpg?v=1723578522",
+  "platform": "shopify",
+  "product_id": "8635392491735",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://quarrymencoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423447474391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423447507159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423447539927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423447572695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423447605463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423447638231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423447670999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423447703767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541342150871"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541342183639"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541342216407"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541342249175"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "3e6cfae9f3993203",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/breakfast.jpg?v=1723577640",
+  "platform": "shopify",
+  "product_id": "8635403993303",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://quarrymencoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423470641367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423470674135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423470706903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423470739671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423470772439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423470805207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423470837975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423470870743"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541321015511"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541321048279"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541321081047"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541321113815"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "07e370712aeab1d3",
+  "first_seen": "2026-10-26",
+  "handle": "limestone-symposium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/limestone-symposium.jpg?v=1723579366",
+  "platform": "shopify",
+  "product_id": "8635405926615",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Limestone Symposium Blend",
+  "url": "https://quarrymencoffee.com/products/limestone-symposium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423473885399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423473918167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423473983703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423474016471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423474049239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423474082007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423474147543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423474180311"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541370101975"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541370134743"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541370167511"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541370200279"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "5b43708095184b54",
+  "first_seen": "2026-10-26",
+  "handle": "orange-doorhinge-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/orange-doorhinge.jpg?v=1723579694",
+  "platform": "shopify",
+  "product_id": "8635408154839",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Orange Doorhinge Blend",
+  "url": "https://quarrymencoffee.com/products/orange-doorhinge-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423478341847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423478374615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423478407383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423478440151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423478472919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423478505687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423478538455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423478571223"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Whole Bean",
+    "variant_id": "45541375410391"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Espresso Grind",
+    "variant_id": "45541375443159"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541375475927"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3lb bulk bag / French Press Grind",
+    "variant_id": "45541375508695"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "cf9eb9f8e62d7143",
+  "first_seen": "2026-10-26",
+  "handle": "prufrock-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/prufrock.jpg?v=1723579778",
+  "platform": "shopify",
+  "product_id": "8635409301719",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Prufrock Blend",
+  "url": "https://quarrymencoffee.com/products/prufrock-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423480733911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423480766679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423480799447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423480832215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423480864983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423480897751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423480930519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423480963287"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541378457815"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541378490583"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541378523351"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541378556119"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "83f0d9c97b33b452",
+  "first_seen": "2026-10-26",
+  "handle": "battleship-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/battleship.jpg?v=1723577441",
+  "platform": "shopify",
+  "product_id": "8635410579671",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Battleship Blend",
+  "url": "https://quarrymencoffee.com/products/battleship-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423483125975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423483158743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423483191511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423483224279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423483257047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423483289815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423483322583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423483355351"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541316526295"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541316559063"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541316591831"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541316624599"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "e3165d2e8796b634",
+  "first_seen": "2026-10-26",
+  "handle": "bakery-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/bakery.jpg?v=1723577165",
+  "platform": "shopify",
+  "product_id": "8635411464407",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Bakery Blend",
+  "url": "https://quarrymencoffee.com/products/bakery-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45423484993751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45423485026519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45423485059287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45423485092055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45423485124823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45423485157591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45423485190359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45423485223127"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45541266391255"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45541266424023"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45541266456791"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 43.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45541266489559"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "104cd3d0988aa639",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-1",
+  "image": "https://cdn.shopify.com/s/files/1/0696/5264/4055/files/indonesian.jpg?v=1723579211",
+  "platform": "shopify",
+  "product_id": "8663773905111",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Indonesian",
+  "url": "https://quarrymencoffee.com/products/sumatran-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Whole Bean",
+    "variant_id": "45526860234967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Espresso Grind",
+    "variant_id": "45526860267735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / Drip Brew Grind",
+    "variant_id": "45526860300503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz bag / French Press Grind",
+    "variant_id": "45526860333271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Whole Bean",
+    "variant_id": "45526860366039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Espresso Grind",
+    "variant_id": "45526860398807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45526860431575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb bulk bag / French Press Grind",
+    "variant_id": "45526860464343"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Whole Bean",
+    "variant_id": "45526883205335"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Espresso Grind",
+    "variant_id": "45526883238103"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / Drip Brew Grind",
+    "variant_id": "45526883270871"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 46.5,
+    "title": "3 lb bulk bag / French Press Grind",
+    "variant_id": "45526883303639"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "09082cba0d6f0229",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-1-pound-bags",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8739670589655",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Case of 12 one-pound bags",
+  "url": "https://quarrymencoffee.com/products/case-of-1-pound-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Indonesian",
+    "variant_id": "45768126660823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Indonesian",
+    "variant_id": "45768126693591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Indonesian",
+    "variant_id": "45768126726359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Indonesian",
+    "variant_id": "45768126759127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Nicaraguan Cafe Diego",
+    "variant_id": "45768235712727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Costa Rican",
+    "variant_id": "45768235745495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Hoosier Blend",
+    "variant_id": "45768235778263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Mexican",
+    "variant_id": "45768235811031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Guatemalan",
+    "variant_id": "45768235843799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Colombian",
+    "variant_id": "45768235876567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Brazilian",
+    "variant_id": "45768235909335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Decaf",
+    "variant_id": "45768235942103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Mocha Java Blend",
+    "variant_id": "45768235974871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Breakfast Blend",
+    "variant_id": "45768236007639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768236040407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Costa Rican",
+    "variant_id": "45768236073175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Hoosier Blend",
+    "variant_id": "45768236105943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Mexican",
+    "variant_id": "45768236138711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Guatemalan",
+    "variant_id": "45768236171479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Colombian",
+    "variant_id": "45768236204247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Brazilian",
+    "variant_id": "45768236237015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Decaf",
+    "variant_id": "45768236269783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Mocha Java Blend",
+    "variant_id": "45768236302551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Breakfast Blend",
+    "variant_id": "45768236335319"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768236368087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Costa Rican",
+    "variant_id": "45768236400855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Hoosier Blend",
+    "variant_id": "45768236433623"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Mexican",
+    "variant_id": "45768236466391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Guatemalan",
+    "variant_id": "45768236499159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Colombian",
+    "variant_id": "45768236531927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Brazilian",
+    "variant_id": "45768236564695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Decaf",
+    "variant_id": "45768236597463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Mocha Java Blend",
+    "variant_id": "45768236630231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Breakfast Blend",
+    "variant_id": "45768236662999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768236695767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Costa Rican",
+    "variant_id": "45768236728535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Hoosier Blend",
+    "variant_id": "45768236761303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Mexican",
+    "variant_id": "45768236794071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Guatemalan",
+    "variant_id": "45768236826839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Colombian",
+    "variant_id": "45768236859607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Brazilian",
+    "variant_id": "45768236892375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Decaf",
+    "variant_id": "45768236925143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Mocha Java Blend",
+    "variant_id": "45768236957911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Breakfast Blend",
+    "variant_id": "45768236990679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Espresso Blend",
+    "variant_id": "45768434548951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Bakery Blend",
+    "variant_id": "45768434581719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Battleship Blend",
+    "variant_id": "45768434614487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Prufrock Blend",
+    "variant_id": "45768434647255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Limestone Symposium Blend",
+    "variant_id": "45768434680023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Whole Bean / Orange Doorhinge",
+    "variant_id": "45768434712791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Whole Bean / Custom Blend",
+    "variant_id": "45768434745559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Espresso Blend",
+    "variant_id": "45768434778327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Bakery Blend",
+    "variant_id": "45768434811095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Battleship Blend",
+    "variant_id": "45768434843863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Prufrock Blend",
+    "variant_id": "45768434876631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Limestone Symposium Blend",
+    "variant_id": "45768434909399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Espresso Grind / Orange Doorhinge",
+    "variant_id": "45768434942167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Espresso Grind / Custom Blend",
+    "variant_id": "45768434974935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Espresso Blend",
+    "variant_id": "45768435007703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Bakery Blend",
+    "variant_id": "45768435040471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Battleship Blend",
+    "variant_id": "45768435073239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Prufrock Blend",
+    "variant_id": "45768435106007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Limestone Symposium Blend",
+    "variant_id": "45768435138775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "Drip Brew Grind / Orange Doorhinge",
+    "variant_id": "45768435171543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "Drip Brew Grind / Custom Blend",
+    "variant_id": "45768435204311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Espresso Blend",
+    "variant_id": "45768435237079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Bakery Blend",
+    "variant_id": "45768435269847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Battleship Blend",
+    "variant_id": "45768435302615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Prufrock Blend",
+    "variant_id": "45768435335383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Limestone Symposium Blend",
+    "variant_id": "45768435368151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 168.0,
+    "title": "French Press Grind / Orange Doorhinge",
+    "variant_id": "45768435400919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 180.0,
+    "title": "French Press Grind / Custom Blend",
+    "variant_id": "45768435433687"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ },
+ {
+  "body_hash": "0cef479831eb157c",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-2-five-pound-bags",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8739712958679",
+  "product_type": "Coffee",
+  "roaster_slug": "quarrymencoffee",
+  "tags": [],
+  "title": "Case of 2 five-pound bags",
+  "url": "https://quarrymencoffee.com/products/case-of-2-five-pound-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Indonesian",
+    "variant_id": "45768437432535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Nicaraguan Cafe Diego",
+    "variant_id": "45768437465303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Costa Rican",
+    "variant_id": "45768437498071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Hoosier Blend",
+    "variant_id": "45768437530839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Mexican",
+    "variant_id": "45768437563607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Guatemalan",
+    "variant_id": "45768437596375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Colombian",
+    "variant_id": "45768437629143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Brazilian",
+    "variant_id": "45768437661911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Decaf",
+    "variant_id": "45768437694679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Mocha Java Blend",
+    "variant_id": "45768437727447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Breakfast Blend",
+    "variant_id": "45768437760215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Espresso Blend",
+    "variant_id": "45768437792983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Bakery Blend",
+    "variant_id": "45768437825751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Battleship Blend",
+    "variant_id": "45768437858519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Prufrock Blend",
+    "variant_id": "45768437891287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Limestone Symposium Blend",
+    "variant_id": "45768437924055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Whole Bean / Orange Doorhinge",
+    "variant_id": "45768437956823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Whole Bean / Custom Blend",
+    "variant_id": "45768437989591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Indonesian",
+    "variant_id": "45768438022359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768438055127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Costa Rican",
+    "variant_id": "45768438087895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Hoosier Blend",
+    "variant_id": "45768438120663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Mexican",
+    "variant_id": "45768438153431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Guatemalan",
+    "variant_id": "45768438186199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Colombian",
+    "variant_id": "45768438218967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Brazilian",
+    "variant_id": "45768438251735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Decaf",
+    "variant_id": "45768438284503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Mocha Java Blend",
+    "variant_id": "45768438317271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Breakfast Blend",
+    "variant_id": "45768438350039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Espresso Blend",
+    "variant_id": "45768438382807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 130.0,
+    "title": "Espresso Grind / Bakery Blend",
+    "variant_id": "45768438415575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Battleship Blend",
+    "variant_id": "45768438448343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Prufrock Blend",
+    "variant_id": "45768438481111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Limestone Symposium Blend",
+    "variant_id": "45768438513879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Espresso Grind / Orange Doorhinge",
+    "variant_id": "45768438546647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Espresso Grind / Custom Blend",
+    "variant_id": "45768438579415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Indonesian",
+    "variant_id": "45768438612183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768438644951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Costa Rican",
+    "variant_id": "45768438677719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Hoosier Blend",
+    "variant_id": "45768438710487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Mexican",
+    "variant_id": "45768438743255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Guatemalan",
+    "variant_id": "45768438776023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Colombian",
+    "variant_id": "45768438808791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Brazilian",
+    "variant_id": "45768438841559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Decaf",
+    "variant_id": "45768438874327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Mocha Java Blend",
+    "variant_id": "45768438907095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Breakfast Blend",
+    "variant_id": "45768438939863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Espresso Blend",
+    "variant_id": "45768438972631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Bakery Blend",
+    "variant_id": "45768439005399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Battleship Blend",
+    "variant_id": "45768439038167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Prufrock Blend",
+    "variant_id": "45768439070935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Limestone Symposium Blend",
+    "variant_id": "45768439103703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "Drip Brew Grind / Orange Doorhinge",
+    "variant_id": "45768439136471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "Drip Brew Grind / Custom Blend",
+    "variant_id": "45768439169239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Indonesian",
+    "variant_id": "45768439202007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Nicaraguan Cafe Diego",
+    "variant_id": "45768439234775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Costa Rican",
+    "variant_id": "45768439267543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Hoosier Blend",
+    "variant_id": "45768439300311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Mexican",
+    "variant_id": "45768439333079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Guatemalan",
+    "variant_id": "45768439365847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Colombian",
+    "variant_id": "45768439398615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Brazilian",
+    "variant_id": "45768439431383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Decaf",
+    "variant_id": "45768439464151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Mocha Java Blend",
+    "variant_id": "45768439496919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Breakfast Blend",
+    "variant_id": "45768439529687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Espresso Blend",
+    "variant_id": "45768439562455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Bakery Blend",
+    "variant_id": "45768439595223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Battleship Blend",
+    "variant_id": "45768439627991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Prufrock Blend",
+    "variant_id": "45768439660759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Limestone Symposium Blend",
+    "variant_id": "45768439693527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 140.0,
+    "title": "French Press Grind / Orange Doorhinge",
+    "variant_id": "45768439726295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 150.0,
+    "title": "French Press Grind / Custom Blend",
+    "variant_id": "45768439759063"
+   }
+  ],
+  "vendor": "Quarrymen Coffee"
+ }
+]

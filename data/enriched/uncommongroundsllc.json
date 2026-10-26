@@ -1,0 +1,116 @@
+{
+ "7884873105510": {
+  "body_hash": "2e180cd857f201ff",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "caramel",
+   "dark chocolate",
+   "roasted nuts"
+  ],
+  "varietals": []
+ },
+ "7884873171046": {
+  "body_hash": "5369cafef444276c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cocoa",
+   "earthy",
+   "spices"
+  ],
+  "varietals": []
+ },
+ "7884873203814": {
+  "body_hash": "d674ef15cae7b3c6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bright",
+   "chocolate",
+   "magnolia"
+  ],
+  "varietals": []
+ },
+ "7884873236582": {
+  "body_hash": "b99ce9ee95184d37",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "apple crisp",
+   "stone fruit",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "7884873269350": {
+  "body_hash": "888157611bb09df9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "brown sugar",
+   "baked apple"
+  ],
+  "varietals": []
+ },
+ "7884873367654": {
+  "body_hash": "a61303fac84d4df1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "cherry",
+   "plum"
+  ],
+  "varietals": []
+ }
+}

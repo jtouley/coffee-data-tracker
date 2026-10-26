@@ -1,0 +1,745 @@
+[
+ {
+  "body_hash": "56394bc47e269420",
+  "first_seen": "2026-10-26",
+  "handle": "bare-knuckle-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/BareKnuckle-poster-PRINT.jpg?v=1771507503",
+  "platform": "shopify",
+  "product_id": "4717293895820",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Bare-Knuckle Espresso",
+  "url": "https://ironcladcoffee.com/products/bare-knuckle-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12 ounces",
+    "variant_id": "32810042130572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "Pre-Ground / 12 ounces",
+    "variant_id": "32810042163340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Whole Bean / 5 pounds",
+    "variant_id": "33169172660364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Pre-Ground / 5 pounds",
+    "variant_id": "33169177608332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 2 Pounds",
+    "variant_id": "39331577168012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "Pre-Ground / 2 Pounds",
+    "variant_id": "39331578347660"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "a3a7248ceff38971",
+  "first_seen": "2026-10-26",
+  "handle": "house-of-usher-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/PoePortrait.jpg?v=1771507446",
+  "platform": "shopify",
+  "product_id": "4717298909324",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "House of Usher Blend",
+  "url": "https://ironcladcoffee.com/products/house-of-usher-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "39333454708876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "39333455233164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "39333456085132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "39333457690764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "39333458083980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "39333458116748"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "6124ff3f343f0c6d",
+  "first_seen": "2026-10-26",
+  "handle": "steam-engine-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/SteamEngineRichmond.jpg?v=1771507416",
+  "platform": "shopify",
+  "product_id": "4717304610956",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Steam Engine Blend",
+  "url": "https://ironcladcoffee.com/products/steam-engine-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "39333462868108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "39333463457932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "39333463720076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "39333463752844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "39333464014988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "39333464539276"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "2f54d084a4ac9062",
+  "first_seen": "2026-10-26",
+  "handle": "frankenblend-series-mermoose",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/Mermoose_90d1687c-4a20-4902-903a-b812329b6771.jpg?v=1771507372",
+  "platform": "shopify",
+  "product_id": "4717324927116",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Africa",
+   "Colombia",
+   "FrankenBlends",
+   "Latin America",
+   "Mermoose"
+  ],
+  "title": "FrankenBlend Series: Mermoose",
+  "url": "https://ironcladcoffee.com/products/frankenblend-series-mermoose",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "39334999228556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "39334999359628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "39334999851148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "39334999982220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "39335000637580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "39335000735884"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "17fe0829d538b7b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-san-lazaro",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/23d7cc5c-9cbe-445b-8f5f-d1486183286a.png?v=1771507328",
+  "platform": "shopify",
+  "product_id": "5097948709004",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Coffee",
+   "Honduras",
+   "Latin America",
+   "Mission Coffee"
+  ],
+  "title": "Honduras San Lazaro",
+  "url": "https://ironcladcoffee.com/products/honduras-san-lazaro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "39333452480652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.75,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "39333452513420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "39333453725836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "39333454020748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "39333454348428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "39333454381196"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "d289a4a68476579d",
+  "first_seen": "2026-10-26",
+  "handle": "blue-riband-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/SS_United_States_arrival_New_York_proof-1.jpg?v=1771507146",
+  "platform": "shopify",
+  "product_id": "5250780233868",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Blue Riband Blend",
+  "url": "https://ironcladcoffee.com/products/blue-riband-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "34402969288844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 ounces / Pre-Ground",
+    "variant_id": "34402969321612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "34402969354380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 pounds / Pre-Ground",
+    "variant_id": "34402969387148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "39331580510348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2 pounds / Pre-Ground",
+    "variant_id": "39331581919372"
+   }
+  ],
+  "vendor": "Ironclad Coffee"
+ },
+ {
+  "body_hash": "31c442cf0eb2297b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-las-montanas",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/MontanasDecaf.png?v=1771507187",
+  "platform": "shopify",
+  "product_id": "6557975806092",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Decaf"
+  ],
+  "title": "Decaf Colombia Las Montanas",
+  "url": "https://ironcladcoffee.com/products/decaf-colombia-las-montanas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "39294236393612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12 ounces / Pre-Ground",
+    "variant_id": "39294236426380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "39294236459148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds / Pre-Ground",
+    "variant_id": "39294236491916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "39333420499084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "39333422792844"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ },
+ {
+  "body_hash": "c70c28fde4e6c40f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-worka-sakaro-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/products/Sakaro.jpg?v=1771507097",
+  "platform": "shopify",
+  "product_id": "7278942716044",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia Worka Sakaro Anaerobic Natural",
+  "url": "https://ironcladcoffee.com/products/ethiopia-worka-sakaro-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "41401557287052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12 ounces / Pre-Ground",
+    "variant_id": "41401557319820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "41401557352588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2 pounds / Pre-Ground",
+    "variant_id": "41401557385356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "41401624658060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "41401624690828"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ },
+ {
+  "body_hash": "38cbcd3585f0cc52",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-gaitania",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/files/C955B5A6-8C0C-4095-89AB-F04152CF89F4.png?v=1771507002",
+  "platform": "shopify",
+  "product_id": "7421690839180",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Latin America"
+  ],
+  "title": "Colombia Tolima Gaitania",
+  "url": "https://ironcladcoffee.com/products/colombia-tolima-gaitania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "41866648879244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12 ounces / Pre-Ground",
+    "variant_id": "41866648944780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "41866648977548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2 pounds / Pre-Ground",
+    "variant_id": "41866649010316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41866649043084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds / Pre-Ground",
+    "variant_id": "41866649075852"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ },
+ {
+  "body_hash": "8671a807a074a5de",
+  "first_seen": "2026-10-26",
+  "handle": "peru-alto-pirias",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/files/FullSizeRender_dbd32797-c865-4ffc-a989-b698e1f81978.jpg?v=1771506929",
+  "platform": "shopify",
+  "product_id": "7862534340748",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Coffee",
+   "Latin America",
+   "Peru"
+  ],
+  "title": "Peru Alto Pirias",
+  "url": "https://ironcladcoffee.com/products/peru-alto-pirias",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "43112681832588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "43112681865356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "43112681898124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "43112681930892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "43112681963660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "43112681996428"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ },
+ {
+  "body_hash": "99af23ba0832339c",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bumba-hill",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/files/sm_670824c675e4b1728586950.jpg?v=1771506535",
+  "platform": "shopify",
+  "product_id": "8988844818572",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Africa"
+  ],
+  "title": "Burundi Bumba Hill",
+  "url": "https://ironcladcoffee.com/products/burundi-bumba-hill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "46311579156620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 Ounces / Pre-Ground",
+    "variant_id": "46311579189388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 Pounds / Whole Bean",
+    "variant_id": "46311579222156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 Pounds / Pre-Ground",
+    "variant_id": "46311579254924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "46311579287692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 Pounds / Pre-Ground",
+    "variant_id": "46311579320460"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ },
+ {
+  "body_hash": "5b9e9b099b640d91",
+  "first_seen": "2026-10-26",
+  "handle": "the-blue-ridge-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0364/0416/6796/files/BRPF_Vertical_Logo-1_png.webp?v=1774553710",
+  "platform": "shopify",
+  "product_id": "9069811925132",
+  "product_type": "Coffee",
+  "roaster_slug": "ironcladcoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Colombia",
+   "Ethiopia"
+  ],
+  "title": "The Blue Ridge Blend",
+  "url": "https://ironcladcoffee.com/products/the-blue-ridge-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "46923619958924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 ounces / Pre-Ground",
+    "variant_id": "46923619991692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "46923620024460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2 pounds / Pre-Ground",
+    "variant_id": "46923620057228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "46923620089996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 pounds / Pre-Ground",
+    "variant_id": "46923620122764"
+   }
+  ],
+  "vendor": "Ironclad Coffee Roasters"
+ }
+]

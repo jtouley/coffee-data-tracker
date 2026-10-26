@@ -1,0 +1,600 @@
+[
+ {
+  "body_hash": "1f79a0a0994f305a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-star",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/darkstar-10oz.png?v=1763920442",
+  "platform": "shopify",
+  "product_id": "11570090698",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Dark Star",
+  "url": "https://littleampscoffee.com/products/dark-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "1192311521290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "1192315158538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb",
+    "variant_id": "42867512049747"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "1a50827e8a84b065",
+  "first_seen": "2026-10-26",
+  "handle": "debbie-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/debbiedecaf-10oz_304047ec-3835-4582-a547-32d23b9634e9.png?v=1763975970",
+  "platform": "shopify",
+  "product_id": "11570120842",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Debbie Decaf",
+  "url": "https://littleampscoffee.com/products/debbie-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz",
+    "variant_id": "1192447541258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 164.0,
+    "title": "5 lb",
+    "variant_id": "1192448819210"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb",
+    "variant_id": "42867536494675"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "377207d28c42888d",
+  "first_seen": "2026-10-26",
+  "handle": "earl-grey",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/earl_grey.jpg?v=1763932261",
+  "platform": "shopify",
+  "product_id": "11570223690",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Black Tea",
+   "wholesale-only"
+  ],
+  "title": "Earl Grey",
+  "url": "https://littleampscoffee.com/products/earl-grey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 29.0,
+    "title": "250g",
+    "variant_id": "45911109450"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "ac36d28abc136ab8",
+  "first_seen": "2026-10-26",
+  "handle": "harrisburg-breakfast",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/harrisburg_breakfast.jpg?v=1763932455",
+  "platform": "shopify",
+  "product_id": "11570224970",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Black Tea",
+   "wholesale-only"
+  ],
+  "title": "Harrisburg Breakfast",
+  "url": "https://littleampscoffee.com/products/harrisburg-breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 29.0,
+    "title": "250g",
+    "variant_id": "2460350414858"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "ff2c9db84b958da2",
+  "first_seen": "2026-10-26",
+  "handle": "wake-and-bake-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933_9818b4aa-07ec-42d1-9b19-5e8f95d8ff2e.jpg?v=1763931441",
+  "platform": "shopify",
+  "product_id": "15390324064339",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Wake and Bake Blend (Wake and Bake Only)",
+  "url": "https://littleampscoffee.com/products/wake-and-bake-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz",
+    "variant_id": "67568990421075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "67568990453843"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "2d378def25ee98ed",
+  "first_seen": "2026-10-26",
+  "handle": "organic-turmeric-ginger",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/tumeric_ginger.jpg?v=1763933042",
+  "platform": "shopify",
+  "product_id": "314999963658",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Herbal Tea",
+   "wholesale-only"
+  ],
+  "title": "Organic Turmeric Ginger",
+  "url": "https://littleampscoffee.com/products/organic-turmeric-ginger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 31.0,
+    "title": "250g",
+    "variant_id": "32282998603859"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "4f35e4dba9ead55b",
+  "first_seen": "2026-10-26",
+  "handle": "matcha",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/lapsang_souchong.jpg?v=1763932524",
+  "platform": "shopify",
+  "product_id": "403905118218",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Black Tea",
+   "wholesale-only"
+  ],
+  "title": "Lapsang Souchong",
+  "url": "https://littleampscoffee.com/products/matcha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250g",
+    "variant_id": "1814740664330"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "49a155018671fe01",
+  "first_seen": "2026-10-26",
+  "handle": "clatter-house",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933.jpg?v=1763931394",
+  "platform": "shopify",
+  "product_id": "4161355087955",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Blend",
+   "clatter",
+   "clatter-only",
+   "wholesale-only"
+  ],
+  "title": "Clatter House",
+  "url": "https://littleampscoffee.com/products/clatter-house",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb",
+    "variant_id": "30267260108883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb",
+    "variant_id": "42911650775123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.23,
+    "title": "12oz",
+    "variant_id": "44061735649363"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "3cc1c79f82bb6fd9",
+  "first_seen": "2026-10-26",
+  "handle": "youve-got-a-friend-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/friendblend-10oz.png?v=1763920518",
+  "platform": "shopify",
+  "product_id": "4493298958419",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Friend Blend",
+  "url": "https://littleampscoffee.com/products/youve-got-a-friend-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "31960527339603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "31975289847891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb",
+    "variant_id": "42867415547987"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "c954f4cb8202295f",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933.jpg?v=1763931394",
+  "platform": "shopify",
+  "product_id": "6543492939859",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Blend",
+   "wholesale-only"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://littleampscoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "39274423877715"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "dd80f476dfcd93c0",
+  "first_seen": "2026-10-26",
+  "handle": "overdrive-nitro-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/overdrive-can-01.png?v=1763921158",
+  "platform": "shopify",
+  "product_id": "6608412180563",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "OVERDRIVE Nitro Cold Brew",
+  "url": "https://littleampscoffee.com/products/overdrive-nitro-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 138.5,
+    "title": "Default Title",
+    "variant_id": "39443687538771"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "92668a808dff40b3",
+  "first_seen": "2026-10-26",
+  "handle": "als-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933.jpg?v=1763931394",
+  "platform": "shopify",
+  "product_id": "6616522883155",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "ALS-ONLY",
+   "Blend",
+   "wholesale-only"
+  ],
+  "title": "Al's Roast",
+  "url": "https://littleampscoffee.com/products/als-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "39459707420755"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "41061233754195"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "156e1a7620d3d9bd",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-o-spro",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933.jpg?v=1763931394",
+  "platform": "shopify",
+  "product_id": "7630634287187",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Bucket O' Spro (for Little Amps Shops only)",
+  "url": "https://littleampscoffee.com/products/bucket-o-spro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 7847,
+    "price_usd": 452.5,
+    "title": "Default Title",
+    "variant_id": "42796791791699"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "c87d13f038fceefe",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-o-spro-for-little-amps-shops-only-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_7933.jpg?v=1763931394",
+  "platform": "shopify",
+  "product_id": "7631358689363",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Bucket 4 Brew (for Little Amps Shops only)",
+  "url": "https://littleampscoffee.com/products/bucket-o-spro-for-little-amps-shops-only-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 7847,
+    "price_usd": 491.0,
+    "title": "Default Title",
+    "variant_id": "42798879703123"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "68729338a0b12c29",
+  "first_seen": "2026-10-26",
+  "handle": "into-the-void",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/intothevoid-10oz_2b0ebdaa-194a-4981-a12f-8772ea4fe3d0.png?v=1763920131",
+  "platform": "shopify",
+  "product_id": "7644625961043",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Into The Void",
+  "url": "https://littleampscoffee.com/products/into-the-void",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "42867588366419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb",
+    "variant_id": "42867590201427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5 lb",
+    "variant_id": "42867592691795"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "2d3043d8c6a4a00d",
+  "first_seen": "2026-10-26",
+  "handle": "kerehaklu",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/kerehaklu-2026-10oz.png?v=1785852183",
+  "platform": "shopify",
+  "product_id": "7664358031443",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Kerehaklu",
+  "url": "https://littleampscoffee.com/products/kerehaklu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10oz",
+    "variant_id": "42970184286291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb",
+    "variant_id": "42970184319059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5lb",
+    "variant_id": "42970184351827"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "5d6d250dba04af4a",
+  "first_seen": "2026-10-26",
+  "handle": "shoondhisa-natural",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/shoondhisa-2026-10oz_71251bf2-8822-4273-929e-c52d7d531568.png?v=1789496714",
+  "platform": "shopify",
+  "product_id": "7770368999507",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Shoondhisa Natural",
+  "url": "https://littleampscoffee.com/products/shoondhisa-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz",
+    "variant_id": "43313931518035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb",
+    "variant_id": "43313931550803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 164.0,
+    "title": "5 lb",
+    "variant_id": "43313931583571"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "33e260a06179f222",
+  "first_seen": "2026-10-26",
+  "handle": "friendo-blendo",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/IMG_8956-Edited.png?v=1775580481",
+  "platform": "shopify",
+  "product_id": "7920194125907",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [
+   "Local Delivery Only",
+   "wholesale-only"
+  ],
+  "title": "Friendo Blendo",
+  "url": "https://littleampscoffee.com/products/friendo-blendo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 204.0,
+    "title": "Default Title",
+    "variant_id": "44413691756627"
+   }
+  ],
+  "vendor": "Little Amps"
+ },
+ {
+  "body_hash": "6567c6176a5b5cda",
+  "first_seen": "2026-10-26",
+  "handle": "santa-cruz-ozolotepec",
+  "image": "https://cdn.shopify.com/s/files/1/2194/0841/files/Santa_Cruz_Ozolotepec-10oz.png?v=1787670564",
+  "platform": "shopify",
+  "product_id": "8056593678419",
+  "product_type": "Coffee",
+  "roaster_slug": "littleampscoffee",
+  "tags": [],
+  "title": "Santa Cruz Ozolotepec",
+  "url": "https://littleampscoffee.com/products/santa-cruz-ozolotepec",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz",
+    "variant_id": "45995627675731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb",
+    "variant_id": "45995627708499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb",
+    "variant_id": "45995627741267"
+   }
+  ],
+  "vendor": "Little Amps"
+ }
+]

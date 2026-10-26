@@ -1,0 +1,621 @@
+[
+ {
+  "body_hash": "537944add026cd0e",
+  "first_seen": "2026-10-26",
+  "handle": "nwtf-long-beards-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/07CF3621-F138-40E8-8D3F-98F3CEB2C5A4.jpg?v=1781154080",
+  "platform": "shopify",
+  "product_id": "10327508517167",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "First Lite NWTF Long Beards Brew",
+  "url": "https://www.ranchmanroasters.com/products/nwtf-long-beards-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "50479964127535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "50479964160303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992770224431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992770257199"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "82c43e2aa2c77eb2",
+  "first_seen": "2026-10-26",
+  "handle": "pheasants-rooster-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0343.jpg?v=1781154117",
+  "platform": "shopify",
+  "product_id": "10346610491695",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Pheasant - Rooster Roast",
+  "url": "https://www.ranchmanroasters.com/products/pheasants-rooster-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "50537054503215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "50537054535983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992769732911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992769765679"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "e38f7f1d8f14cdff",
+  "first_seen": "2026-10-26",
+  "handle": "first-lite-delta-waterfowl-delta-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0339.jpg?v=1781153755",
+  "platform": "shopify",
+  "product_id": "10402358460719",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "First Lite Delta Waterfowl Mallard Morning",
+  "url": "https://www.ranchmanroasters.com/products/first-lite-delta-waterfowl-delta-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 Oz",
+    "variant_id": "50713006309679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 Oz",
+    "variant_id": "50713006342447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992768422191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992768454959"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "dc6d3f6d09d2ce91",
+  "first_seen": "2026-10-26",
+  "handle": "range-steward-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/796B076B-D020-4DB6-8450-83D987D7D7C6.jpg?v=1781154205",
+  "platform": "shopify",
+  "product_id": "10525326836015",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Range Steward Roast",
+  "url": "https://www.ranchmanroasters.com/products/range-steward-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "51103032803631"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "51103032836399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "51524483186991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "51524483219759"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "13f18eb89942882e",
+  "first_seen": "2026-10-26",
+  "handle": "backcountry-hunters-anglers-public-grounds-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/1A4A147A-60C3-449C-8E6D-313400C00660.jpg?v=1781154265",
+  "platform": "shopify",
+  "product_id": "10654261346607",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Backcountry Hunters & Anglers Public Grounds Roast",
+  "url": "https://www.ranchmanroasters.com/products/backcountry-hunters-anglers-public-grounds-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "51524510220591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "51524510253359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "51524521034031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "51524521066799"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "51ff5b48dd7adf05",
+  "first_seen": "2026-10-26",
+  "handle": "whitetails-unlimited-full-draw-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/18F037CC-EDB4-413D-8653-81BA1003C87F.jpg?v=1781154329",
+  "platform": "shopify",
+  "product_id": "10654265114927",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Whitetails Unlimited Full Draw Roast",
+  "url": "https://www.ranchmanroasters.com/products/whitetails-unlimited-full-draw-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "51524528210223"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "51524528242991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "51524528275759"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "51524528308527"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "da026dec44582a7c",
+  "first_seen": "2026-10-26",
+  "handle": "quail-covey-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/5A6F02CF-5E0D-423D-871C-D92ED2CEB492.jpg?v=1781154460",
+  "platform": "shopify",
+  "product_id": "16008794964271",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Wild Sheep Foundation Sheep Country Roast",
+  "url": "https://www.ranchmanroasters.com/products/quail-covey-roast-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "57968113484079"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "57968113516847"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992774025519"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992774058287"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "6d667a44cf017aef",
+  "first_seen": "2026-10-26",
+  "handle": "first-lite-nwtf-long-beards-brew-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0337.jpg?v=1781154530",
+  "platform": "shopify",
+  "product_id": "16016289464623",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee",
+   "First Lite"
+  ],
+  "title": "First Lite BackCountry Hunters and Anglers Backcountry Bull Roast",
+  "url": "https://www.ranchmanroasters.com/products/first-lite-nwtf-long-beards-brew-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "58049320517935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "58049320550703"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "58049320583471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "58049320616239"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "f41f1e336a684f0f",
+  "first_seen": "2026-10-26",
+  "handle": "first-lite-national-deer-association-rut-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0340.jpg?v=1781154570",
+  "platform": "shopify",
+  "product_id": "16016298082607",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee",
+   "First Lite"
+  ],
+  "title": "First Lite National Deer Association Rut Roast",
+  "url": "https://www.ranchmanroasters.com/products/first-lite-national-deer-association-rut-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "58049311899951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "58049311932719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "58049311965487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "58049311998255"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "1f208d0ffe5e495c",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-orchard-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/15808C27-D705-4F4F-BC8C-CD05717D7499.png?v=1788556060",
+  "platform": "shopify",
+  "product_id": "16155977351471",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "Coffee",
+   "Fall"
+  ],
+  "title": "Autumn Orchard Roast",
+  "url": "https://www.ranchmanroasters.com/products/autumn-orchard-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "58429364306223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "58429364338991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "58429364371759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "58429364404527"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "91c7d5286c2471f9",
+  "first_seen": "2026-10-26",
+  "handle": "muley-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/02443FC0-2A8B-414A-8A2D-1B1DE2A66C74.jpg?v=1781153809",
+  "platform": "shopify",
+  "product_id": "9717512077615",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Mule Deer Foundation Muley Roast",
+  "url": "https://www.ranchmanroasters.com/products/muley-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "48985419284783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "48985419317551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992773632303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992773665071"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "4f610588c95420b3",
+  "first_seen": "2026-10-26",
+  "handle": "quail-covey-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0341.jpg?v=1781153887",
+  "platform": "shopify",
+  "product_id": "9717512569135",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Quail Covey Roast",
+  "url": "https://www.ranchmanroasters.com/products/quail-covey-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "48985417941295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "48985417974063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992776778031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992776810799"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "5fd8348cf82a40f7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/3C72C8CE-BDD7-407C-B04A-D9C63158C0D1.jpg?v=1781153948",
+  "platform": "shopify",
+  "product_id": "9771397710127",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Last Cast Decaf Coffee",
+  "url": "https://www.ranchmanroasters.com/products/colombia-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground / 12 OZ",
+    "variant_id": "48985420792111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground / 5 LB",
+    "variant_id": "57992772092207"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ },
+ {
+  "body_hash": "2be842cd4e91fda8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0865/1443/4351/files/IMG-0361.jpg?v=1781154017",
+  "platform": "shopify",
+  "product_id": "9771399512367",
+  "product_type": "Coffee beans",
+  "roaster_slug": "ranchmanroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Manitou Espresso Coffee",
+  "url": "https://www.ranchmanroasters.com/products/espresso-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "48985426559279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "57992770486575"
+   }
+  ],
+  "vendor": "Ranchman Roasters"
+ }
+]

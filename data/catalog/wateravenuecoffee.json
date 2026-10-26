@@ -1,0 +1,672 @@
+[
+ {
+  "body_hash": "e935041891f905c8",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-indonesia-sumatra-mutu-batak",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-024.jpg?v=1780435266",
+  "platform": "shopify",
+  "product_id": "3600282052",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Latest Release",
+   "Single Origin"
+  ],
+  "title": "Indonesia Sumatra Mutu Batak",
+  "url": "https://wateravenuecoffee.com/products/12oz-indonesia-sumatra-mutu-batak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "10684542532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5 lb bag",
+    "variant_id": "12426888511532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb bag",
+    "variant_id": "33684835434628"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "80186ef6b76bd419",
+  "first_seen": "2026-10-26",
+  "handle": "bull-run",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-014.jpg?v=1780420216",
+  "platform": "shopify",
+  "product_id": "36186532",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend"
+  ],
+  "title": "Bull Run",
+  "url": "https://wateravenuecoffee.com/products/bull-run",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "10724585734188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "33391008546948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "84009192"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "49c0ad247f76f15d",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-falls-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-019.jpg?v=1780435065",
+  "platform": "shopify",
+  "product_id": "36188492",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Velvet Falls Decaf",
+  "url": "https://wateravenuecoffee.com/products/velvet-falls-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb Bag",
+    "variant_id": "33390991769732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5 lb Bag",
+    "variant_id": "33390993637508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "84011702"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "1b29a0419083637c",
+  "first_seen": "2026-10-26",
+  "handle": "wonderland-holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/Water_Ave_2023_2_16_Layflat_Wonderlannd.png?v=1761776590",
+  "platform": "shopify",
+  "product_id": "4373745303684",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Holiday Favorites",
+   "Latest Release",
+   "blend",
+   "coffee",
+   "special blend",
+   "water avenue coffee"
+  ],
+  "title": "Wonderland",
+  "url": "https://wateravenuecoffee.com/products/wonderland-holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "45709523976344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb",
+    "variant_id": "45709524009112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "45709524041880"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "93b213b70705f8f7",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-blue-creek-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-052_e0c6860b-ae76-4038-a533-371f254a66fa.jpg?v=1780433972",
+  "platform": "shopify",
+  "product_id": "4507833988",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend",
+   "grindable",
+   "organic"
+  ],
+  "title": "Blue Creek Organic",
+  "url": "https://wateravenuecoffee.com/products/12oz-blue-creek-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "10724559388716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "28032121105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "33390814691460"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "032f12e292155273",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-canoe-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WACcoffeebags-094.jpg?v=1782253473",
+  "platform": "shopify",
+  "product_id": "4507836548",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend"
+  ],
+  "title": "Canoe",
+  "url": "https://wateravenuecoffee.com/products/12oz-canoe-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "10724594090028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "16344561092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "33390988230788"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "7d4f4bc516fe996f",
+  "first_seen": "2026-10-26",
+  "handle": "rose-city-track-club-x-water-avenue-collab",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-039.jpg?v=1780435516",
+  "platform": "shopify",
+  "product_id": "8674910109848",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [],
+  "title": "Rose City Track Club x Water Avenue Collab",
+  "url": "https://wateravenuecoffee.com/products/rose-city-track-club-x-water-avenue-collab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "46375846117528"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "1a78ee204de872b6",
+  "first_seen": "2026-10-26",
+  "handle": "rogue-valley-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-089.jpg?v=1782342620",
+  "platform": "shopify",
+  "product_id": "8870164299928",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [],
+  "title": "Rogue Valley Dark Roast",
+  "url": "https://wateravenuecoffee.com/products/rogue-valley-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "47352163893400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb",
+    "variant_id": "47352163926168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb",
+    "variant_id": "47352163958936"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "55afff38bde4d0f8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-antonio-la-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_Guatemala_San_Antonio_Shopify_Image.png?v=1761776463",
+  "platform": "shopify",
+  "product_id": "8870171082904",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Latest Release",
+   "Single Origin"
+  ],
+  "title": "Guatemala San Antonio La Paz",
+  "url": "https://wateravenuecoffee.com/products/guatemala-san-antonio-la-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "47352218058904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb bag",
+    "variant_id": "47352218091672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5 lb bag",
+    "variant_id": "47352218124440"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "27065a902078e1c7",
+  "first_seen": "2026-10-26",
+  "handle": "modern-adventure-pro-cycling-velo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-002.jpg?v=1780433550",
+  "platform": "shopify",
+  "product_id": "8931076833432",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [],
+  "title": "Modern Adventure Pro Cycling ¡VAMOS! Blend",
+  "url": "https://wateravenuecoffee.com/products/modern-adventure-pro-cycling-velo-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "47642780663960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb",
+    "variant_id": "48111883190424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb",
+    "variant_id": "48111883387032"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "15ac2be7886dafad",
+  "first_seen": "2026-10-26",
+  "handle": "portland-state-university-victors-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-058.jpg?v=1780419326",
+  "platform": "shopify",
+  "product_id": "8946658836632",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [],
+  "title": "PSU Victor's Blend",
+  "url": "https://wateravenuecoffee.com/products/portland-state-university-victors-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "47750480855192"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "9d80a5c7a33b6473",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-bochica",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-028_2f9f90aa-b352-4270-80c1-a61b3bbfcf24.jpg?v=1780419031",
+  "platform": "shopify",
+  "product_id": "9096561983640",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Latest Release",
+   "Single Origin",
+   "grindable"
+  ],
+  "title": "Colombia Bochica",
+  "url": "https://wateravenuecoffee.com/products/colombia-bochica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "48935833338008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb",
+    "variant_id": "48935833370776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb",
+    "variant_id": "48935833403544"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "51d4f05375ad810b",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-boxcar",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-035.jpg?v=1780434105",
+  "platform": "shopify",
+  "product_id": "9209943697",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend"
+  ],
+  "title": "Boxcar",
+  "url": "https://wateravenuecoffee.com/products/12oz-boxcar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "10724575772716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "33390983217284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "33452271185"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "672eb4f28fc29b86",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WACcoffeebags-084_bc1179a5-0d95-4bfc-8ad4-ecde987b4756.jpg?v=1782342401",
+  "platform": "shopify",
+  "product_id": "9219194978456",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend",
+   "organic"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://wateravenuecoffee.com/products/cold-brew-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "49329621270680"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "38b09a4d2e227d59",
+  "first_seen": "2026-10-26",
+  "handle": "ducks-fourth-quarter-fuel",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/UOFOMEDIUMPRODUCTIMAGE_4fef807e-2e04-4ce1-8dce-9d667a81bb60.png?v=1787340169",
+  "platform": "shopify",
+  "product_id": "9348804706456",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend",
+   "grindable",
+   "organic"
+  ],
+  "title": "Fourth Quarter Fuel",
+  "url": "https://wateravenuecoffee.com/products/ducks-fourth-quarter-fuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "49725831282840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "49725831315608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "49725831348376"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "de9ddd0123277f20",
+  "first_seen": "2026-10-26",
+  "handle": "quack-attack-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/UOFOSEASONALPRODUCTIMAGE.png?v=1787595489",
+  "platform": "shopify",
+  "product_id": "9352003190936",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend",
+   "grindable",
+   "organic"
+  ],
+  "title": "Quack Attack™ Roast",
+  "url": "https://wateravenuecoffee.com/products/quack-attack-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "49737518153880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "49737518186648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "49737518219416"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "3b48eb4b4687c0e3",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/UOFOLIGHTPRODUCTIMAGE.png?v=1787595910",
+  "platform": "shopify",
+  "product_id": "9352003813528",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Special Blend",
+   "grindable",
+   "organic"
+  ],
+  "title": "Early Bird Blend",
+  "url": "https://wateravenuecoffee.com/products/early-bird-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "49737519169688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb Bag",
+    "variant_id": "49737519202456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb Bag",
+    "variant_id": "49737519235224"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ },
+ {
+  "body_hash": "9129cf117166a540",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limmu-kossa",
+  "image": "https://cdn.shopify.com/s/files/1/0069/6252/files/WAC_coffee_bags-044.jpg?v=1780434992",
+  "platform": "shopify",
+  "product_id": "9867182289",
+  "product_type": "Coffee",
+  "roaster_slug": "wateravenuecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Limmu Kossa",
+  "url": "https://wateravenuecoffee.com/products/ethiopia-limmu-kossa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5LB bag",
+    "variant_id": "12427112579116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2LB bag",
+    "variant_id": "33684581220484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "37208784977"
+   }
+  ],
+  "vendor": "Water Avenue Coffee"
+ }
+]

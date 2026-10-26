@@ -1,0 +1,27 @@
+[
+ {
+  "body_hash": "b3165028d67f73c5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://coffeerepub.com/wp-content/uploads/2023/12/Espresso.png",
+  "platform": "woocommerce",
+  "product_id": "7369",
+  "product_type": "simple",
+  "roaster_slug": "mainstreetcoffee-2",
+  "tags": [
+   "Espresso"
+  ],
+  "title": "ESPRESSO",
+  "url": "https://coffeerepub.com/product/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "ESPRESSO",
+    "variant_id": "7369:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

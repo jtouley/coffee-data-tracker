@@ -1,0 +1,133 @@
+[
+ {
+  "body_hash": "1245969903d3e4b9",
+  "first_seen": "2026-10-26",
+  "handle": "gotiti-washed-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0840/9192/8888/products/DSC01383.jpg?v=1696059701",
+  "platform": "shopify",
+  "product_id": "8739930538296",
+  "product_type": "coffee beans",
+  "roaster_slug": "dillacoffee",
+  "tags": [
+   "Mixed Heirloom",
+   "Washed Process",
+   "Whole Bean"
+  ],
+  "title": "Gotiti Yirgacheffe",
+  "url": "https://dillacoffee.com/products/gotiti-washed-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium (Modern) / Whole Bean / 8oz",
+    "variant_id": "47069456630072"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium (Modern) / Drip Coffee / 8oz",
+    "variant_id": "47069456826680"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium (Modern) / French Press / 8oz",
+    "variant_id": "47069642850616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Medium (Modern) / Whole Bean / 1lb",
+    "variant_id": "49931354767672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium (Modern) / Whole Bean / 2lb",
+    "variant_id": "49931354800440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Medium (Modern) / Drip Coffee / 1lb",
+    "variant_id": "49931354833208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium (Modern) / Drip Coffee / 2lb",
+    "variant_id": "49931354865976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Medium (Modern) / French Press / 1lb",
+    "variant_id": "49931354898744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium (Modern) / French Press / 2lb",
+    "variant_id": "49931354931512"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0bd29e346903cf77",
+  "first_seen": "2026-10-26",
+  "handle": "blessings-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0840/9192/8888/files/DSC01383_a5834a32-0e5e-4290-815e-8b62b3858755.jpg?v=1701078453",
+  "platform": "shopify",
+  "product_id": "8874670817592",
+  "product_type": "coffee beans",
+  "roaster_slug": "dillacoffee",
+  "tags": [
+   "Mixed Heirloom",
+   "Washed Process",
+   "Whole Bean"
+  ],
+  "title": "Blessings Blend",
+  "url": "https://dillacoffee.com/products/blessings-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 292,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "47443980714296"
+   },
+   {
+    "available": true,
+    "grams": 292,
+    "price_usd": 16.0,
+    "title": "Chemex",
+    "variant_id": "47443980747064"
+   },
+   {
+    "available": true,
+    "grams": 292,
+    "price_usd": 16.0,
+    "title": "Drip Coffee",
+    "variant_id": "47443980779832"
+   },
+   {
+    "available": true,
+    "grams": 292,
+    "price_usd": 16.0,
+    "title": "French Press",
+    "variant_id": "47443980812600"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

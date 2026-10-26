@@ -1,0 +1,1341 @@
+[
+ {
+  "body_hash": "cad60394e6f67463",
+  "first_seen": "2026-10-26",
+  "handle": "mina-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Mina_Rica.jpg?v=1777049213",
+  "platform": "shopify",
+  "product_id": "10004466008248",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "columbia",
+   "medium roast"
+  ],
+  "title": "Mina Rica",
+  "url": "https://alteredgrounds.com/products/mina-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51455570641080"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51455570673848"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51455570706616"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51455570739384"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51455570772152"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "51455570804920"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "51455570837688"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "51455570870456"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "51455570903224"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "51455570935992"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394014699704"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394014732472"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394014765240"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394014798008"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394014830776"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "b577ede968045449",
+  "first_seen": "2026-10-26",
+  "handle": "gaucha",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Gaucha.jpg?v=1777049193",
+  "platform": "shopify",
+  "product_id": "10024257913016",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "columbia",
+   "medium roast"
+  ],
+  "title": "Gaùcha",
+  "url": "https://alteredgrounds.com/products/gaucha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51528959230136"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / French Press",
+    "variant_id": "51528959262904"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51528959295672"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Espresso",
+    "variant_id": "51528959328440"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Drip",
+    "variant_id": "51528959361208"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "51528959393976"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "51528959426744"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "51528959459512"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "51528959492280"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "51528959525048"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 91.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394286739640"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 91.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394286772408"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 91.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394286805176"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 91.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394286837944"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 91.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394286870712"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "acec9881aafb90cb",
+  "first_seen": "2026-10-26",
+  "handle": "rubies",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Rubies.jpg?v=1777049215",
+  "platform": "shopify",
+  "product_id": "10079437553848",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "medium roast"
+  ],
+  "title": "Rubies",
+  "url": "https://alteredgrounds.com/products/rubies",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51761458741432"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51761458774200"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51761458806968"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51761458839736"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51761458872504"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "51761458905272"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "51761458938040"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "51761458970808"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "51761459003576"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "51761459036344"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394660229304"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394660262072"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394660294840"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394660327608"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394660360376"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "9f217519d77d4a7e",
+  "first_seen": "2026-10-26",
+  "handle": "ravens-roost",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/IMG_0050.jpg?v=1757081402",
+  "platform": "shopify",
+  "product_id": "10079439323320",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "holiday",
+   "medium roast"
+  ],
+  "title": "Ravens Roost",
+  "url": "https://alteredgrounds.com/products/ravens-roost",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51766581657784"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51766581690552"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51766581723320"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51766581756088"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51766581788856"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "51766581821624"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "51766581854392"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "51766581887160"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "51766581919928"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "51766581952696"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "d2efd29b7f26656f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/WebsiteLabels_11_ffcd9130-fe8c-4e1e-861e-31f0915ad26b.jpg?v=1790879296",
+  "platform": "shopify",
+  "product_id": "10628570841272",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "medium roast"
+  ],
+  "title": "Mexico",
+  "url": "https://alteredgrounds.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "54226487541944"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / French Press",
+    "variant_id": "54226487574712"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "54226487607480"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "54226487640248"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Drip",
+    "variant_id": "54226487673016"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "54226487705784"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "54226487738552"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "54226487771320"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "54226487804088"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "54226487836856"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "54226487869624"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "54226487902392"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "54226487935160"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "54226487967928"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 97.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "54226488000696"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "d15a14ffb60085a9",
+  "first_seen": "2026-10-26",
+  "handle": "zeppelin",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/WebsiteLabels_12.jpg?v=1790879604",
+  "platform": "shopify",
+  "product_id": "10628572184760",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "medium roast"
+  ],
+  "title": "Zeppelin",
+  "url": "https://alteredgrounds.com/products/zeppelin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "54226491179192"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / French Press",
+    "variant_id": "54226491211960"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "54226491244728"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "54226491277496"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Drip",
+    "variant_id": "54226491310264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "54226491343032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press",
+    "variant_id": "54226491375800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Pour-Over",
+    "variant_id": "54226491408568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "54226491441336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Drip",
+    "variant_id": "54226491474104"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "54226491506872"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "54226491539640"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "54226491572408"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "54226491605176"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "54226491637944"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "566a07d50bd1a2a9",
+  "first_seen": "2026-10-26",
+  "handle": "felipe-trujillo-black-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Website_Labels.png?v=1783615172",
+  "platform": "shopify",
+  "product_id": "9944019501240",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "columbia",
+   "medium roast"
+  ],
+  "title": "Felipe Trujillo-Black Honey",
+  "url": "https://alteredgrounds.com/products/felipe-trujillo-black-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51040176931000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51040180043960"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51437212532920"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51437212565688"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51437212598456"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb / French Press",
+    "variant_id": "51437212631224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "51437212663992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb / Pour-Over",
+    "variant_id": "51437212696760"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51438330675384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb / Drip",
+    "variant_id": "51438330708152"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53395072614584"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53395072647352"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53395072680120"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53395072712888"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53395072745656"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "6f8ac429adc42890",
+  "first_seen": "2026-10-26",
+  "handle": "leather-heads",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Leather_Heads_509db8fd-05b9-439f-94c5-c330c8c4165f.jpg?v=1777049212",
+  "platform": "shopify",
+  "product_id": "9948945612984",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "Indonesia",
+   "One-time-purchase",
+   "dark roast",
+   "peru"
+  ],
+  "title": "Leather Heads",
+  "url": "https://alteredgrounds.com/products/leather-heads",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51040194953400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51040194986168"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51437206864056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / French Press",
+    "variant_id": "51437206962360"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51438225588408"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51438225621176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Pour-Over",
+    "variant_id": "51438225653944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "51438225686712"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51438265401528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Drip",
+    "variant_id": "51438265434296"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 118.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394576212152"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 118.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394576244920"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 118.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394576277688"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 118.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394576310456"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 118.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394576343224"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "57f624d75675267e",
+  "first_seen": "2026-10-26",
+  "handle": "alchemy",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Alchemy_c239cd67-eb88-4ef3-ae07-cb2a5d960743.jpg?v=1777049205",
+  "platform": "shopify",
+  "product_id": "9950330323128",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "medium roast"
+  ],
+  "title": "Alchemy",
+  "url": "https://alteredgrounds.com/products/alchemy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51046579830968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51046579863736"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51437179961528"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51437179994296"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51437180027064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press",
+    "variant_id": "51437180059832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Pour-Over",
+    "variant_id": "51437180092600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "51437180125368"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51438280802488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Drip",
+    "variant_id": "51438280835256"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394854314168"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394854346936"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394854379704"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394854412472"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394854445240"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "7bb9e9bdcefc7dd7",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Tanzania.jpg?v=1777049217",
+  "platform": "shopify",
+  "product_id": "9951647531192",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "light roast",
+   "medium roast",
+   "tanzania"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://alteredgrounds.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51053825228984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51053825261752"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / French Press",
+    "variant_id": "51437186351288"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51437186384056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press",
+    "variant_id": "51437186449592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Pour-Over",
+    "variant_id": "51437186482360"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Espresso",
+    "variant_id": "51438275952824"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Drip",
+    "variant_id": "51438275985592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "51438276018360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Drip",
+    "variant_id": "51438276051128"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53394372067512"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53394372100280"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53394372133048"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53394372165816"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53394372198584"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ },
+ {
+  "body_hash": "b1e64c57601dda06",
+  "first_seen": "2026-10-26",
+  "handle": "ninety9",
+  "image": "https://cdn.shopify.com/s/files/1/0881/5086/8152/files/Decaf.jpg?v=1777049210",
+  "platform": "shopify",
+  "product_id": "9999212019896",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "alteredgrounds",
+  "tags": [
+   "One-time-purchase",
+   "decaf",
+   "medium roast",
+   "peru"
+  ],
+  "title": "DECAF",
+  "url": "https://alteredgrounds.com/products/ninety9",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51440953262264"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / French Press",
+    "variant_id": "51440953295032"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Pour-Over",
+    "variant_id": "51440953327800"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "51440953360568"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51440953393336"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Whole Bean",
+    "variant_id": "51440953426104"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / French Press",
+    "variant_id": "51440953458872"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Pour-Over",
+    "variant_id": "51440953491640"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Espresso",
+    "variant_id": "51440953524408"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 51.0,
+    "title": "2 Ib / Drip",
+    "variant_id": "51440953557176"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 112.0,
+    "title": "5 Ib / Whole Bean",
+    "variant_id": "53395165413560"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 112.0,
+    "title": "5 Ib / French Press",
+    "variant_id": "53395165446328"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 112.0,
+    "title": "5 Ib / Pour-Over",
+    "variant_id": "53395165479096"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 112.0,
+    "title": "5 Ib / Espresso",
+    "variant_id": "53395165511864"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 112.0,
+    "title": "5 Ib / Drip",
+    "variant_id": "53395165544632"
+   }
+  ],
+  "vendor": "Altered Grounds"
+ }
+]

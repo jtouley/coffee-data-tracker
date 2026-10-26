@@ -1,0 +1,677 @@
+[
+ {
+  "body_hash": "97f166f42b4d96cc",
+  "first_seen": "2026-10-26",
+  "handle": "delaware-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/delaware-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "158",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Delaware Blend",
+  "url": "https://localcoffeeroastingco.com/product/delaware-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Delaware Blend",
+    "variant_id": "158:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eeefcac85021d942",
+  "first_seen": "2026-10-26",
+  "handle": "locals-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/local-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "159",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Local’s Blend",
+  "url": "https://localcoffeeroastingco.com/product/locals-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Local&#8217;s Blend",
+    "variant_id": "159:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a639c405e394a6f",
+  "first_seen": "2026-10-26",
+  "handle": "high-tide-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/high-tide-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "160",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "High Tide Blend",
+  "url": "https://localcoffeeroastingco.com/product/high-tide-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "High Tide Blend",
+    "variant_id": "160:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3805adfaf7c977f6",
+  "first_seen": "2026-10-26",
+  "handle": "beach-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/beach-blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "161",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Beach Blend",
+  "url": "https://localcoffeeroastingco.com/product/beach-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Beach Blend",
+    "variant_id": "161:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e67e8fddf7397eb9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/espresso-blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "162",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://localcoffeeroastingco.com/product/espresso-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Espresso Blend",
+    "variant_id": "162:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a5ab6466a3a3d6d",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/cold-brew-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "163",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://localcoffeeroastingco.com/product/cold-brew-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Cold Brew Blend",
+    "variant_id": "163:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5884a4ab52e6fcc4",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/breakfast-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "164",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://localcoffeeroastingco.com/product/breakfast-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Breakfast Blend",
+    "variant_id": "164:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c14fc16f97e9da99",
+  "first_seen": "2026-10-26",
+  "handle": "skips-decaf-blend-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/skips-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "166",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Skip’s Decaf Blend",
+  "url": "https://localcoffeeroastingco.com/product/skips-decaf-blend-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Skip&#8217;s Decaf Blend",
+    "variant_id": "166:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "462b5a0a916b80c4",
+  "first_seen": "2026-10-26",
+  "handle": "skips-decaf-espresso-wholesale-5-lb",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/decaf-espresso-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "167",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Skip’s Decaf Espresso",
+  "url": "https://localcoffeeroastingco.com/product/skips-decaf-espresso-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Skip&#8217;s Decaf Espresso",
+    "variant_id": "167:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f5e6bcd282a2838",
+  "first_seen": "2026-10-26",
+  "handle": "death-before-decaf-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "187",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Death Before Decaf",
+  "url": "https://localcoffeeroastingco.com/product/death-before-decaf-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Death Before Decaf",
+    "variant_id": "187:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f5e6bcd282a2838",
+  "first_seen": "2026-10-26",
+  "handle": "3bb-blend-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "188",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "3BB Blend",
+  "url": "https://localcoffeeroastingco.com/product/3bb-blend-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "3BB Blend",
+    "variant_id": "188:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7278f31c545e8575",
+  "first_seen": "2026-10-26",
+  "handle": "red-daisy-blend-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "190",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Red Daisy Blend",
+  "url": "https://localcoffeeroastingco.com/product/red-daisy-blend-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Red Daisy Blend",
+    "variant_id": "190:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa076b2bd7a21ebe",
+  "first_seen": "2026-10-26",
+  "handle": "shady-grove-blend-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "191",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Shady Grove Blend",
+  "url": "https://localcoffeeroastingco.com/product/shady-grove-blend-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Shady Grove Blend",
+    "variant_id": "191:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5b3b2d508668a88",
+  "first_seen": "2026-10-26",
+  "handle": "story-hill-farm-blend-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "192",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "Story Hill Farm Blend",
+  "url": "https://localcoffeeroastingco.com/product/story-hill-farm-blend-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Story Hill Farm Blend",
+    "variant_id": "192:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0a7922f61e91356",
+  "first_seen": "2026-10-26",
+  "handle": "k-roast-custom-wholesale-5-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "193",
+  "product_type": "simple",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [
+   "Wholesale Coffee"
+  ],
+  "title": "K Roast",
+  "url": "https://localcoffeeroastingco.com/product/k-roast-custom-wholesale-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "K Roast",
+    "variant_id": "193:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90557b8c86879361",
+  "first_seen": "2026-10-26",
+  "handle": "delaware-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/delaware-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "33",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Delaware Blend",
+  "url": "https://localcoffeeroastingco.com/product/delaware-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "33:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "33:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39d03d68effa14f4",
+  "first_seen": "2026-10-26",
+  "handle": "local-s-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/local-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "34",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Local’s Blend",
+  "url": "https://localcoffeeroastingco.com/product/local-s-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "34:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "34:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85791cc7b73b52a8",
+  "first_seen": "2026-10-26",
+  "handle": "high-tide-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/high-tide-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "35",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "High Tide Blend",
+  "url": "https://localcoffeeroastingco.com/product/high-tide-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "35:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "35:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "578fef08fc2efb34",
+  "first_seen": "2026-10-26",
+  "handle": "beach-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/beach-blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "36",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Beach Blend",
+  "url": "https://localcoffeeroastingco.com/product/beach-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "36:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "36:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c8392b025268af7",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/espresso-blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "37",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://localcoffeeroastingco.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "37:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "37:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "133827af9a744a14",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/cold-brew-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "38",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://localcoffeeroastingco.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "38:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "38:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25229966b26a694c",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/breakfast-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "39",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://localcoffeeroastingco.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "39:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "39:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d061a4201c6d99b1",
+  "first_seen": "2026-10-26",
+  "handle": "afternoon-delight",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/afternoon-delight.jpg",
+  "platform": "woocommerce",
+  "product_id": "40",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Afternoon Delight",
+  "url": "https://localcoffeeroastingco.com/product/afternoon-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "40:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "40:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a36fcd4b50f192e",
+  "first_seen": "2026-10-26",
+  "handle": "skip-s-decaf-blend",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/skips-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "41",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Skip’s Decaf Blend",
+  "url": "https://localcoffeeroastingco.com/product/skip-s-decaf-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "41:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "41:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b25415a0c13a4ea",
+  "first_seen": "2026-10-26",
+  "handle": "skip-s-decaf-espresso",
+  "image": "https://localcoffeeroastingco.com/wp-content/uploads/2026/07/decaf-espresso-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "42",
+  "product_type": "variable",
+  "roaster_slug": "localcoffeeroastingco",
+  "tags": [],
+  "title": "Skip’s Decaf Espresso",
+  "url": "https://localcoffeeroastingco.com/product/skip-s-decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz retail bag",
+    "variant_id": "42:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lb bag",
+    "variant_id": "42:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

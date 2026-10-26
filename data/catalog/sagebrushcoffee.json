@@ -1,0 +1,4150 @@
+[
+ {
+  "body_hash": "0059da3c059459cc",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-natural-processed-guji-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/morkata-natural-gerba-dogo-21.jpg?v=1791007761",
+  "platform": "shopify",
+  "product_id": "15387107688674",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Morkata Gata • Natural-Processed Guji Heirloom",
+  "url": "https://sagebrushcoffee.com/products/morkata-gata-natural-processed-guji-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.05,
+    "title": "12oz bag / whole bean",
+    "variant_id": "67578619429090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.73,
+    "title": "16oz bag / whole bean",
+    "variant_id": "67578619461858"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.6,
+    "title": "4lb bag / whole bean",
+    "variant_id": "67578619494626"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.6,
+    "title": "4lb bag / extra fine",
+    "variant_id": "67578645774562"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.6,
+    "title": "4lb bag / fine",
+    "variant_id": "67578645807330"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.6,
+    "title": "4lb bag / medium",
+    "variant_id": "67578645840098"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.6,
+    "title": "4lb bag / coarse",
+    "variant_id": "67578645872866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.73,
+    "title": "16oz bag / extra fine",
+    "variant_id": "67578645905634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.73,
+    "title": "16oz bag / fine",
+    "variant_id": "67578646036706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.73,
+    "title": "16oz bag / medium",
+    "variant_id": "67578646135010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.73,
+    "title": "16oz bag / coarse",
+    "variant_id": "67578646266082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.05,
+    "title": "12oz bag / extra fine",
+    "variant_id": "67578646364386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.05,
+    "title": "12oz bag / fine",
+    "variant_id": "67578646495458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.05,
+    "title": "12oz bag / medium",
+    "variant_id": "67578646626530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.05,
+    "title": "12oz bag / coarse",
+    "variant_id": "67578646921442"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "7418e590b0a2d018",
+  "first_seen": "2026-10-26",
+  "handle": "ivan-solis-mosto-natural-processed-typica",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/ivan-copey-22_fa438db3-1416-4e99-8cd0-36dc98f8377d.jpg?v=1792173028",
+  "platform": "shopify",
+  "product_id": "15418393755874",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee",
+   "Slow Bar"
+  ],
+  "title": "Ivan Solis • Mosto-Natural-Processed Typica",
+  "url": "https://sagebrushcoffee.com/products/ivan-solis-mosto-natural-processed-typica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.81,
+    "title": "12oz bag / whole bean",
+    "variant_id": "67710020616418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.47,
+    "title": "16oz bag / whole bean",
+    "variant_id": "67710020649186"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 190.67,
+    "title": "4lb bag / whole bean",
+    "variant_id": "67710020681954"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 190.67,
+    "title": "4lb bag / coarse",
+    "variant_id": "67710093230306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.47,
+    "title": "16oz bag / extra fine",
+    "variant_id": "67710093263074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.47,
+    "title": "16oz bag / fine",
+    "variant_id": "67710093590754"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 190.67,
+    "title": "4lb bag / extra fine",
+    "variant_id": "67736324702434"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 190.67,
+    "title": "4lb bag / fine",
+    "variant_id": "67736324735202"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 190.67,
+    "title": "4lb bag / medium",
+    "variant_id": "67736324767970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.47,
+    "title": "16oz bag / medium",
+    "variant_id": "67736324833506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.47,
+    "title": "16oz bag / coarse",
+    "variant_id": "67736324866274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.81,
+    "title": "12oz bag / extra fine",
+    "variant_id": "67736324899042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.81,
+    "title": "12oz bag / fine",
+    "variant_id": "67736324931810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.81,
+    "title": "12oz bag / medium",
+    "variant_id": "67736325095650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.81,
+    "title": "12oz bag / coarse",
+    "variant_id": "67736325128418"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "fd5c57150614ce59",
+  "first_seen": "2026-10-26",
+  "handle": "rio-jorco-washed-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/CARLOS-CASTRO-washed-catuai-BAG-BROWN-3-DSC00936.jpg?v=1762964615",
+  "platform": "shopify",
+  "product_id": "8845825442018",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Carlos Castro • Washed-Processed Catuai",
+  "url": "https://sagebrushcoffee.com/products/rio-jorco-washed-catuai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.37,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46416590143714"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 33.74,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46416590176482"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 116.57,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46416590209250"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "7d1abf1532928041",
+  "first_seen": "2026-10-26",
+  "handle": "don-eli-milenio-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/CARLOS-MONTERO-natural-milenio-BAG-BLACK-2-DSC00926.jpg?v=1762964607",
+  "platform": "shopify",
+  "product_id": "8857302925538",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Carlos Montero • Natural-Processed Milenio",
+  "url": "https://sagebrushcoffee.com/products/don-eli-milenio-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 47.47,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46450252579042"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 58.22,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46450252611810"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 204.16,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46450252644578"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "2f91eb435b25c41d",
+  "first_seen": "2026-10-26",
+  "handle": "ivan-solis-la-aurora-catuai-candy-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/ivan-9_4ce90fa5-e043-42fc-b6b8-35a0374573a5.jpg?v=1790099122",
+  "platform": "shopify",
+  "product_id": "8859582267618",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "Archived | Slow Bar"
+  ],
+  "title": "Ivan Solis • Candy-Natural-Processed Catuai",
+  "url": "https://sagebrushcoffee.com/products/ivan-solis-la-aurora-catuai-candy-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.44,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46459152662754"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.4,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46459152695522"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 121.28,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46459152728290"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.44,
+    "title": "12oz bag / coarse",
+    "variant_id": "46459152761058"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.44,
+    "title": "12oz bag / medium",
+    "variant_id": "46459152793826"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.44,
+    "title": "12oz bag / fine",
+    "variant_id": "46459152826594"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.44,
+    "title": "12oz bag / extra fine",
+    "variant_id": "46459152859362"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.4,
+    "title": "16oz bag / coarse",
+    "variant_id": "46459152892130"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.4,
+    "title": "16oz bag / medium",
+    "variant_id": "46459152924898"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.4,
+    "title": "16oz bag / fine",
+    "variant_id": "46459152957666"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.4,
+    "title": "16oz bag / extra fine",
+    "variant_id": "46459152990434"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 121.28,
+    "title": "4lb bag / coarse",
+    "variant_id": "46459153023202"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 121.28,
+    "title": "4lb bag / medium",
+    "variant_id": "46459153055970"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 121.28,
+    "title": "4lb bag / fine",
+    "variant_id": "46459153088738"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 121.28,
+    "title": "4lb bag / extra fine",
+    "variant_id": "46459153121506"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "6f808c03522bf6b6",
+  "first_seen": "2026-10-26",
+  "handle": "anny-ruth-yellow-honey-processed-red-bourbon-from-loma-la-gloria",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/ANNY-RUTH-yellow-honey-red-bourbon-bag-1-DSC00934.jpg?v=1762964665",
+  "platform": "shopify",
+  "product_id": "8889664733410",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Anny Ruth • Yellow-Honey-Processed Red-Bourbon",
+  "url": "https://sagebrushcoffee.com/products/anny-ruth-yellow-honey-processed-red-bourbon-from-loma-la-gloria",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.29,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46563233104098"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 33.66,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46563233136866"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 116.22,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46563233169634"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "a9b14aa15ee0b75b",
+  "first_seen": "2026-10-26",
+  "handle": "carlos-montero-anaerobic-natural-processed-villa-sarchi-from-don-eli-in-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/CARLOS-MONTERO-anaerobic-villa-sarchi-BAG-BLACK-1-DSC00924.jpg?v=1762964596",
+  "platform": "shopify",
+  "product_id": "8901733482722",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Carlos Montero • Anaerobic-Natural-Processed Villa Sarchi",
+  "url": "https://sagebrushcoffee.com/products/carlos-montero-anaerobic-natural-processed-villa-sarchi-from-don-eli-in-costa-rica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 49.19,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46608048652514"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 60.56,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46608048685282"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 212.57,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46608048718050"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "fa7236465fee8663",
+  "first_seen": "2026-10-26",
+  "handle": "huila-producers-ea-decaf-washed-processed",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/huila-producers-23.jpg?v=1792422462",
+  "platform": "shopify",
+  "product_id": "8909695746274",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Huila Producers • Washed-Processed EA Decaf Field Blend",
+  "url": "https://sagebrushcoffee.com/products/huila-producers-ea-decaf-washed-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.16,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46646114648290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.38,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46646114681058"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 144.93,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46646114713826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.16,
+    "title": "12oz bag / coarse",
+    "variant_id": "67731065929954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.16,
+    "title": "12oz bag / medium",
+    "variant_id": "67731065962722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.16,
+    "title": "12oz bag / fine",
+    "variant_id": "67731065995490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.16,
+    "title": "12oz bag / extra fine",
+    "variant_id": "67731066028258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.38,
+    "title": "16oz bag / coarse",
+    "variant_id": "67731066061026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.38,
+    "title": "16oz bag / medium",
+    "variant_id": "67731066093794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.38,
+    "title": "16oz bag / fine",
+    "variant_id": "67731066126562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.38,
+    "title": "16oz bag / extra fine",
+    "variant_id": "67731066159330"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 144.93,
+    "title": "4lb bag / coarse",
+    "variant_id": "67731066192098"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 144.93,
+    "title": "4lb bag / medium",
+    "variant_id": "67731066224866"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 144.93,
+    "title": "4lb bag / fine",
+    "variant_id": "67731066257634"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 144.93,
+    "title": "4lb bag / extra fine",
+    "variant_id": "67731066290402"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "814e63c58c5211e6",
+  "first_seen": "2026-10-26",
+  "handle": "kii-factory-washed-processed-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/Kii-factory-peaberry-DSC00529_5302fc97-90b3-4b93-8c39-3ed9f5ab30f2.jpg?v=1753302457",
+  "platform": "shopify",
+  "product_id": "8911574565090",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Rungeto Farmers Coop • Washed-Processed Peaberry",
+  "url": "https://sagebrushcoffee.com/products/kii-factory-washed-processed-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.87,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46652690268386"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 38.43,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46652690301154"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 141.36,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46652690333922"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.87,
+    "title": "12oz bag / coarse",
+    "variant_id": "46652690366690"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.87,
+    "title": "12oz bag / medium",
+    "variant_id": "46652690399458"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.87,
+    "title": "12oz bag / fine",
+    "variant_id": "46652690432226"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.87,
+    "title": "12oz bag / extra fine",
+    "variant_id": "46652690464994"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 38.43,
+    "title": "16oz bag / coarse",
+    "variant_id": "46652690497762"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 38.43,
+    "title": "16oz bag / medium",
+    "variant_id": "46652690530530"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 38.43,
+    "title": "16oz bag / fine",
+    "variant_id": "46652690563298"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 38.43,
+    "title": "16oz bag / extra fine",
+    "variant_id": "46652690596066"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 141.36,
+    "title": "4lb bag / coarse",
+    "variant_id": "46652690628834"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 141.36,
+    "title": "4lb bag / medium",
+    "variant_id": "46652690661602"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 141.36,
+    "title": "4lb bag / fine",
+    "variant_id": "46652690694370"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 141.36,
+    "title": "4lb bag / extra fine",
+    "variant_id": "46652690727138"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "c611f7940ed1453f",
+  "first_seen": "2026-10-26",
+  "handle": "sambewe-amcos-washed-processed-bourbon-heirloom-from-mbozi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/SAMBEWE-BAG-GOLD-5-DSC00900.jpg?v=1760041999",
+  "platform": "shopify",
+  "product_id": "8917398847714",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Sambewe AMCOS • Washed-Processed Bourbon & Heirloom",
+  "url": "https://sagebrushcoffee.com/products/sambewe-amcos-washed-processed-bourbon-heirloom-from-mbozi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.1,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46671649439970"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.03,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46671649472738"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 130.4,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46671649505506"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "770eb91bf5325ebb",
+  "first_seen": "2026-10-26",
+  "handle": "natalia-lezama-ramirez-anaerobic-natural-processed-gesha-from-finca-alto-gracia",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/natalia-11_9b96af7a-a5e5-45bb-af4b-82da71883d23.jpg?v=1790099440",
+  "platform": "shopify",
+  "product_id": "8922330005730",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Natalia Lezama Ramirez • Anaerobic Natural-Processed Gesha",
+  "url": "https://sagebrushcoffee.com/products/natalia-lezama-ramirez-anaerobic-natural-processed-gesha-from-finca-alto-gracia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.73,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46688074432738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.68,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46688074465506"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 195.96,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46688074498274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.73,
+    "title": "12oz bag / coarse",
+    "variant_id": "46688074531042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.73,
+    "title": "12oz bag / medium",
+    "variant_id": "46688074563810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.73,
+    "title": "12oz bag / fine",
+    "variant_id": "46688074596578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.73,
+    "title": "12oz bag / extra fine",
+    "variant_id": "46688074629346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.68,
+    "title": "16oz bag / coarse",
+    "variant_id": "46688074662114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.68,
+    "title": "16oz bag / medium",
+    "variant_id": "46688074694882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.68,
+    "title": "16oz bag / fine",
+    "variant_id": "46688074727650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.68,
+    "title": "16oz bag / extra fine",
+    "variant_id": "46688074760418"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 195.96,
+    "title": "4lb bag / coarse",
+    "variant_id": "46688074793186"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 195.96,
+    "title": "4lb bag / medium",
+    "variant_id": "46688074825954"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 195.96,
+    "title": "4lb bag / fine",
+    "variant_id": "46688074858722"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 195.96,
+    "title": "4lb bag / extra fine",
+    "variant_id": "46688074891490"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "f26b26f32d9fddb9",
+  "first_seen": "2026-10-26",
+  "handle": "rodin-villatoro-washed-processed-bourbon-caturra-alaska-lot-from-the-hoja-blanco-family-farm",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/RODIN-BAG-BLACK-4-DSC00927.jpg?v=1762964658",
+  "platform": "shopify",
+  "product_id": "8984164499682",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Rodin Villatoro • Washed-Processed Bourbon, Caturra Alaska Lot",
+  "url": "https://sagebrushcoffee.com/products/rodin-villatoro-washed-processed-bourbon-caturra-alaska-lot-from-the-hoja-blanco-family-farm",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 43.57,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46887979745506"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 52.45,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46887979778274"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 174.88,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46887979811042"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "c5321600be7493a8",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-producers-decaffeinated-caturra-typica-and-other-washed-varieties",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/chiapas-decaf-20.jpg?v=1790390847",
+  "platform": "shopify",
+  "product_id": "9010821890274",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Chiapas Producers • Decaffeinated Caturra, Typica & other Washed Varieties",
+  "url": "https://sagebrushcoffee.com/products/chiapas-producers-decaffeinated-caturra-typica-and-other-washed-varieties",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.51,
+    "title": "12oz bag / whole bean",
+    "variant_id": "46960920035554"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.63,
+    "title": "16oz bag / whole bean",
+    "variant_id": "46960920068322"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 142.95,
+    "title": "4lb bag / whole bean",
+    "variant_id": "46960920101090"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.51,
+    "title": "12oz bag / coarse",
+    "variant_id": "50504054702306"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.51,
+    "title": "12oz bag / medium",
+    "variant_id": "50504054735074"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.51,
+    "title": "12oz bag / fine",
+    "variant_id": "50504054767842"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.51,
+    "title": "12oz bag / extra fine",
+    "variant_id": "50504054800610"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.63,
+    "title": "16oz bag / coarse",
+    "variant_id": "50504054833378"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.63,
+    "title": "16oz bag / medium",
+    "variant_id": "50504054866146"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.63,
+    "title": "16oz bag / fine",
+    "variant_id": "50504054898914"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.63,
+    "title": "16oz bag / extra fine",
+    "variant_id": "50504054931682"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 142.95,
+    "title": "4lb bag / coarse",
+    "variant_id": "50504054964450"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 142.95,
+    "title": "4lb bag / medium",
+    "variant_id": "50504054997218"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 142.95,
+    "title": "4lb bag / fine",
+    "variant_id": "50504055029986"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 142.95,
+    "title": "4lb bag / extra fine",
+    "variant_id": "50504055062754"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "e0dc86706eea8e00",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-natural-processed-guji-heirloom-from-mira-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/MORKATA-GATA-natural-GOLD-6-DSC00902_d597a64b-d615-44da-84ea-4294a27c9b7a.jpg?v=1781132446",
+  "platform": "shopify",
+  "product_id": "9029911609570",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "2025 | Morkata Gata • Natural-Processed Guji Heirloom",
+  "url": "https://sagebrushcoffee.com/products/morkata-gata-natural-processed-guji-heirloom-from-mira-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.16,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47023249359074"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.47,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47023249391842"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 136.98,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47023249424610"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.16,
+    "title": "12oz bag / coarse",
+    "variant_id": "47023249457378"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.16,
+    "title": "12oz bag / medium",
+    "variant_id": "47023249490146"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.16,
+    "title": "12oz bag / fine",
+    "variant_id": "47023249522914"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.16,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47023249555682"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.47,
+    "title": "16oz bag / coarse",
+    "variant_id": "47023249588450"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.47,
+    "title": "16oz bag / medium",
+    "variant_id": "47023249621218"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.47,
+    "title": "16oz bag / fine",
+    "variant_id": "47023249653986"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 37.47,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47023249686754"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 136.98,
+    "title": "4lb bag / coarse",
+    "variant_id": "47023249719522"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 136.98,
+    "title": "4lb bag / medium",
+    "variant_id": "47023249752290"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 136.98,
+    "title": "4lb bag / fine",
+    "variant_id": "47023249785058"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 136.98,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47023249817826"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "4c6e50d1b9518b9d",
+  "first_seen": "2026-10-26",
+  "handle": "eugene-altieri-natural-processed-catuai-from-altieri-family-farms",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/EUGENE-ALTIERI-NATURAL-CATUAI-GOLD-8-DSC00906.jpg?v=1763747517",
+  "platform": "shopify",
+  "product_id": "9036953813218",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Eugene Altieri • Natural-Processed Catuai",
+  "url": "https://sagebrushcoffee.com/products/eugene-altieri-natural-processed-catuai-from-altieri-family-farms",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.63,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47047181074658"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 50.43,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47047181107426"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 184.48,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47047181140194"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "6f9234d1a2e6a4c2",
+  "first_seen": "2026-10-26",
+  "handle": "eugene-altieri-washed-processed-geisha-from-altieri-family-farms",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/eugene-altieri.jpg?v=1764194339",
+  "platform": "shopify",
+  "product_id": "9043049480418",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Eugene Altieri • Washed-Processed Gesha",
+  "url": "https://sagebrushcoffee.com/products/eugene-altieri-washed-processed-geisha-from-altieri-family-farms",
+  "variants": [
+   {
+    "available": true,
+    "grams": 70,
+    "price_usd": 38.65,
+    "title": "70g bag / whole bean",
+    "variant_id": "47150882455778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 110.75,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47150882488546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 142.87,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47150882521314"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "5660889ecf3ba873",
+  "first_seen": "2026-10-26",
+  "handle": "suchini-family-anaerobic-natural-processed-geisha-from-el-gigante-coffee-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/Suchini-family.jpg?v=1764194742",
+  "platform": "shopify",
+  "product_id": "9043055182050",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee",
+   "Slow Bar"
+  ],
+  "title": "Suchini Family • Anaerobic-Natural-Processed Gesha",
+  "url": "https://sagebrushcoffee.com/products/suchini-family-anaerobic-natural-processed-geisha-from-el-gigante-coffee-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 70,
+    "price_usd": 37.78,
+    "title": "70g bag / whole bean",
+    "variant_id": "47150904967394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 105.99,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47150905000162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 136.62,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47150905032930"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "57f84fe3a3327710",
+  "first_seen": "2026-10-26",
+  "handle": "2025-coffee-of-the-year-combo-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/coffee-of-the-year-bundle.jpg?v=1764198493",
+  "platform": "shopify",
+  "product_id": "9043079004386",
+  "product_type": "Combo Packs",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Combo Pack",
+   "Sagebrush Coffee"
+  ],
+  "title": "Coffees of the Year • Combo 2 Pack",
+  "url": "https://sagebrushcoffee.com/products/2025-coffee-of-the-year-combo-2-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 70,
+    "price_usd": 76.43,
+    "title": "two 70g bags / whole bean",
+    "variant_id": "47151031222498"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "5f2544f8655d00bf",
+  "first_seen": "2026-10-26",
+  "handle": "florencio-villatoro-washed-bourbon-el-diamante-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/florencio-7_f73359e8-7e0a-48ea-aa45-f7be5b47b3b1.jpg?v=1790099103",
+  "platform": "shopify",
+  "product_id": "9076966457570",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee",
+   "Slow Bar"
+  ],
+  "title": "Florencio Villatoro • Washed-Processed Bourbon",
+  "url": "https://sagebrushcoffee.com/products/florencio-villatoro-washed-bourbon-el-diamante-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.13,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47307322917090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.52,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47307322949858"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.26,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47307322982626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.13,
+    "title": "12oz bag / coarse",
+    "variant_id": "47307323015394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.13,
+    "title": "12oz bag / medium",
+    "variant_id": "47307323048162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.13,
+    "title": "12oz bag / fine",
+    "variant_id": "47307323080930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.13,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47307323113698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.52,
+    "title": "16oz bag / coarse",
+    "variant_id": "47307323146466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.52,
+    "title": "16oz bag / medium",
+    "variant_id": "47307323179234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.52,
+    "title": "16oz bag / fine",
+    "variant_id": "47307323212002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.52,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47307323244770"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.26,
+    "title": "4lb bag / coarse",
+    "variant_id": "47307323277538"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.26,
+    "title": "4lb bag / medium",
+    "variant_id": "47307323310306"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.26,
+    "title": "4lb bag / fine",
+    "variant_id": "47307323343074"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.26,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47307323375842"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "a8d14595d55acb45",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-competition-washed-processed-wush-wush",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/paola-washed-wush-wush-black-5-DSC00928_4b5e07c2-4135-4e5a-af75-994716a91ef3.jpg?v=1781132505",
+  "platform": "shopify",
+  "product_id": "9081737347298",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Paola & Carlos Trujillo • Competition-Washed-Processed Wush Wush",
+  "url": "https://sagebrushcoffee.com/products/paola-carlos-trujillo-competition-washed-processed-wush-wush",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 52.48,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47330822652130"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 64.45,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47330822684898"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 233.24,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47330822717666"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 52.48,
+    "title": "12oz bag / coarse",
+    "variant_id": "47330822750434"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 52.48,
+    "title": "12oz bag / medium",
+    "variant_id": "47330822783202"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 52.48,
+    "title": "12oz bag / fine",
+    "variant_id": "47330822815970"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 52.48,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47330822848738"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 64.45,
+    "title": "16oz bag / coarse",
+    "variant_id": "47330822881506"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 64.45,
+    "title": "16oz bag / medium",
+    "variant_id": "47330822914274"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 64.45,
+    "title": "16oz bag / fine",
+    "variant_id": "47330822947042"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 64.45,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47330822979810"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 233.24,
+    "title": "4lb bag / coarse",
+    "variant_id": "47330823012578"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 233.24,
+    "title": "4lb bag / medium",
+    "variant_id": "47330823045346"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 233.24,
+    "title": "4lb bag / fine",
+    "variant_id": "47330823078114"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 233.24,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47330823110882"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "d21aca06de8c5ef2",
+  "first_seen": "2026-10-26",
+  "handle": "july-jumbo-washed-processed-typica",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/july-18_ea99aded-b065-4a6f-a2df-48ab01a6e848.jpg?v=1790098964",
+  "platform": "shopify",
+  "product_id": "9090094760162",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "July Jumbo • Washed-Processed Typica",
+  "url": "https://sagebrushcoffee.com/products/july-jumbo-washed-processed-typica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.75,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47387308130530"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.67,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47387308163298"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 153.61,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47387308196066"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.75,
+    "title": "12oz bag / coarse",
+    "variant_id": "47387308228834"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.75,
+    "title": "12oz bag / medium",
+    "variant_id": "47387308261602"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.75,
+    "title": "12oz bag / fine",
+    "variant_id": "47387308294370"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.75,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47387308327138"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.67,
+    "title": "16oz bag / coarse",
+    "variant_id": "47387308359906"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.67,
+    "title": "16oz bag / medium",
+    "variant_id": "47387308392674"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.67,
+    "title": "16oz bag / fine",
+    "variant_id": "47387308425442"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.67,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47387308458210"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 153.61,
+    "title": "4lb bag / coarse",
+    "variant_id": "47387308490978"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 153.61,
+    "title": "4lb bag / medium",
+    "variant_id": "47387308523746"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 153.61,
+    "title": "4lb bag / fine",
+    "variant_id": "47387308556514"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 153.61,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47387308589282"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rodin-villatoro-natural-processed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/rodin-14_8fabb1ba-a293-4b2b-8c54-e73a4f617563.jpg?v=1790098938",
+  "platform": "shopify",
+  "product_id": "9095702315234",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Rodin Villatoro • Natural-Processed Bourbon",
+  "url": "https://sagebrushcoffee.com/products/rodin-villatoro-natural-processed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47414112911586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.93,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47414112944354"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 148.66,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47414112977122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12oz bag / coarse",
+    "variant_id": "47414113009890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12oz bag / medium",
+    "variant_id": "47414113042658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12oz bag / fine",
+    "variant_id": "47414113075426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47414113108194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.93,
+    "title": "16oz bag / coarse",
+    "variant_id": "47414113140962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.93,
+    "title": "16oz bag / medium",
+    "variant_id": "47414113173730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.93,
+    "title": "16oz bag / fine",
+    "variant_id": "47414113206498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.93,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47414113239266"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 148.66,
+    "title": "4lb bag / coarse",
+    "variant_id": "47414113272034"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 148.66,
+    "title": "4lb bag / medium",
+    "variant_id": "47414113304802"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 148.66,
+    "title": "4lb bag / fine",
+    "variant_id": "47414113337570"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 148.66,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47414113370338"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "aa7b8cce55b547ec",
+  "first_seen": "2026-10-26",
+  "handle": "minor-jimenez-red-honey-processed-catuai-from-la-cumbre",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/MINOR-JIMENEZ-red-honey-catuai-BAG-BROWN-4-DSC00938.jpg?v=1772564779",
+  "platform": "shopify",
+  "product_id": "9119898632418",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Minor Jimenez • Red-Honey-Processed Catuaí",
+  "url": "https://sagebrushcoffee.com/products/minor-jimenez-red-honey-processed-catuai-from-la-cumbre",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.67,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47509202796770"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 33.97,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47509202829538"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 122.67,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47509202862306"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-natural-processed-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/paola-paca-12_e96a9866-0c91-4ed4-ab18-8704d16c4b18.jpg?v=1790098915",
+  "platform": "shopify",
+  "product_id": "9130921001186",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee",
+   "Slow Bar"
+  ],
+  "title": "Paola Trujillo • Natural-Processed Pacamara",
+  "url": "https://sagebrushcoffee.com/products/paola-carlos-trujillo-natural-processed-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.37,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47548655141090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.34,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47548655173858"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 177.73,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47548655206626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.37,
+    "title": "12oz bag / coarse",
+    "variant_id": "47548655239394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.37,
+    "title": "12oz bag / medium",
+    "variant_id": "47548655272162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.37,
+    "title": "12oz bag / fine",
+    "variant_id": "47548655304930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.37,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47548655337698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.34,
+    "title": "16oz bag / coarse",
+    "variant_id": "47548655370466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.34,
+    "title": "16oz bag / medium",
+    "variant_id": "47548655403234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.34,
+    "title": "16oz bag / fine",
+    "variant_id": "47548655436002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.34,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47548655468770"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 177.73,
+    "title": "4lb bag / coarse",
+    "variant_id": "47548655501538"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 177.73,
+    "title": "4lb bag / medium",
+    "variant_id": "47548655534306"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 177.73,
+    "title": "4lb bag / fine",
+    "variant_id": "47548655567074"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 177.73,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47548655599842"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "999ae2b6dfbcd5dd",
+  "first_seen": "2026-10-26",
+  "handle": "arnulfo-leguizamo-washed-processed-pink-bourbon-tabi-and-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/Anulfo-8-DSC00890_33cb2447-cde8-453b-8ed8-c96eb4b116dd.jpg?v=1781132076",
+  "platform": "shopify",
+  "product_id": "9143720542434",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Arnulfo Leguizamo • Washed-Processed Pink Bourbon, Tabi, & Colombia",
+  "url": "https://sagebrushcoffee.com/products/arnulfo-leguizamo-washed-processed-pink-bourbon-tabi-and-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.79,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47599408349410"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.15,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47599408382178"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 123.44,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47599408414946"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.79,
+    "title": "12oz bag / coarse",
+    "variant_id": "47599408447714"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.79,
+    "title": "12oz bag / medium",
+    "variant_id": "47599408480482"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.79,
+    "title": "12oz bag / fine",
+    "variant_id": "47599408513250"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.79,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47599408546018"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.15,
+    "title": "16oz bag / coarse",
+    "variant_id": "47599408578786"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.15,
+    "title": "16oz bag / medium",
+    "variant_id": "47599408611554"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.15,
+    "title": "16oz bag / fine",
+    "variant_id": "47599408644322"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.15,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47599408677090"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 123.44,
+    "title": "4lb bag / coarse",
+    "variant_id": "47599408709858"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 123.44,
+    "title": "4lb bag / medium",
+    "variant_id": "47599408742626"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 123.44,
+    "title": "4lb bag / fine",
+    "variant_id": "47599408775394"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 123.44,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47599408808162"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "e625019ea0f895e4",
+  "first_seen": "2026-10-26",
+  "handle": "luyombe-washing-station-washed-processed-peaberry-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/luyombe-peaberry-brown-9-DSC00892_99f3c3a7-8c24-4608-86c6-fa75e354a457.jpg?v=1781132399",
+  "platform": "shopify",
+  "product_id": "9153934983394",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Luyombe Washing Station • Washed-Processed Peaberry Bourbon",
+  "url": "https://sagebrushcoffee.com/products/luyombe-washing-station-washed-processed-peaberry-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.35,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47632327344354"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.09,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47632327377122"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 114.59,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47632327409890"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.35,
+    "title": "12oz bag / coarse",
+    "variant_id": "47632327442658"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.35,
+    "title": "12oz bag / medium",
+    "variant_id": "47632327475426"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.35,
+    "title": "12oz bag / fine",
+    "variant_id": "47632327508194"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.35,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47632327540962"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.09,
+    "title": "16oz bag / coarse",
+    "variant_id": "47632327573730"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.09,
+    "title": "16oz bag / medium",
+    "variant_id": "47632327606498"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.09,
+    "title": "16oz bag / fine",
+    "variant_id": "47632327639266"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.09,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47632327672034"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 114.59,
+    "title": "4lb bag / coarse",
+    "variant_id": "47632327704802"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 114.59,
+    "title": "4lb bag / medium",
+    "variant_id": "47632327737570"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 114.59,
+    "title": "4lb bag / fine",
+    "variant_id": "47632327770338"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 114.59,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47632327803106"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "e0d8dd74af8a2f28",
+  "first_seen": "2026-10-26",
+  "handle": "eugene-altieri-washed-processed-caturra",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/eugene-caturra-5_066509a2-67b7-4b2d-9455-d5a7017808e9.jpg?v=1790098893",
+  "platform": "shopify",
+  "product_id": "9156838293730",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Eugene Altieri • Washed-Processed Caturra",
+  "url": "https://sagebrushcoffee.com/products/eugene-altieri-washed-processed-caturra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.61,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47640755831010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.15,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47640755863778"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 132.06,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47640755896546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.61,
+    "title": "12oz bag / coarse",
+    "variant_id": "47640755929314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.61,
+    "title": "12oz bag / medium",
+    "variant_id": "47640755962082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.61,
+    "title": "12oz bag / fine",
+    "variant_id": "47640755994850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.61,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47640756027618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.15,
+    "title": "16oz bag / coarse",
+    "variant_id": "47640756060386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.15,
+    "title": "16oz bag / medium",
+    "variant_id": "47640756093154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.15,
+    "title": "16oz bag / fine",
+    "variant_id": "47640756125922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.15,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47640756158690"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 132.06,
+    "title": "4lb bag / coarse",
+    "variant_id": "47640756191458"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 132.06,
+    "title": "4lb bag / medium",
+    "variant_id": "47640756224226"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 132.06,
+    "title": "4lb bag / fine",
+    "variant_id": "47640756256994"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 132.06,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47640756289762"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "jairo-ruiz-washed-processed-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/JAIRO-RUIZ-washed-gesha-BAG-GOLD-2-DSC00899.jpg?v=1775062325",
+  "platform": "shopify",
+  "product_id": "9157444075746",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee",
+   "archived"
+  ],
+  "title": "Jairo Ruiz • Washed-Processed Gesha",
+  "url": "https://sagebrushcoffee.com/products/jairo-ruiz-washed-processed-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.9,
+    "title": "12oz whole bean",
+    "variant_id": "47643890778338"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "8f3306d5a7c3655e",
+  "first_seen": "2026-10-26",
+  "handle": "anny-ruth-black-honey-processed-red-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/anny-black-honey-3_e6ff8508-cffe-41a7-b429-c07628c60526.jpg?v=1790098873",
+  "platform": "shopify",
+  "product_id": "9165970833634",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Anny Ruth • Black-Honey-Processed Red Bourbon",
+  "url": "https://sagebrushcoffee.com/products/anny-ruth-black-honey-processed-red-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.91,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47676556378338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.32,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47676556411106"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.64,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47676556443874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.91,
+    "title": "12oz bag / coarse",
+    "variant_id": "47676556476642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.91,
+    "title": "12oz bag / medium",
+    "variant_id": "47676556509410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.91,
+    "title": "12oz bag / fine",
+    "variant_id": "47676556542178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.91,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47676556574946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.32,
+    "title": "16oz bag / coarse",
+    "variant_id": "47676556607714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.32,
+    "title": "16oz bag / medium",
+    "variant_id": "47676556640482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.32,
+    "title": "16oz bag / fine",
+    "variant_id": "47676556673250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.32,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47676556706018"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.64,
+    "title": "4lb bag / coarse",
+    "variant_id": "47676556738786"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.64,
+    "title": "4lb bag / medium",
+    "variant_id": "47676556771554"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.64,
+    "title": "4lb bag / fine",
+    "variant_id": "47676556804322"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.64,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47676556837090"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "891e8961f033af9a",
+  "first_seen": "2026-10-26",
+  "handle": "godina-guji-washed-processed-swiss-water-decaf-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/guji-decaf-1-DSC00931_1fde815e-207e-4bd0-826a-967116473cec.jpg?v=1781132284",
+  "platform": "shopify",
+  "product_id": "9169413669090",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Guji Producers • Natural-Processed Swiss Water Decaf Heirloom",
+  "url": "https://sagebrushcoffee.com/products/godina-guji-washed-processed-swiss-water-decaf-heirloom",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 35.32,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47691821973730"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 43.19,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47691822006498"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 167.93,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47691822039266"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 35.32,
+    "title": "12oz bag / coarse",
+    "variant_id": "47691822072034"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 35.32,
+    "title": "12oz bag / medium",
+    "variant_id": "47691822104802"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 35.32,
+    "title": "12oz bag / fine",
+    "variant_id": "47691822137570"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 35.32,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47691822170338"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 43.19,
+    "title": "16oz bag / coarse",
+    "variant_id": "47691822203106"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 43.19,
+    "title": "16oz bag / medium",
+    "variant_id": "47691822235874"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 43.19,
+    "title": "16oz bag / fine",
+    "variant_id": "47691822268642"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 43.19,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47691822301410"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 167.93,
+    "title": "4lb bag / coarse",
+    "variant_id": "47691822334178"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 167.93,
+    "title": "4lb bag / medium",
+    "variant_id": "47691822366946"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 167.93,
+    "title": "4lb bag / fine",
+    "variant_id": "47691822399714"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 167.93,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47691822432482"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "5b97b9466a800b13",
+  "first_seen": "2026-10-26",
+  "handle": "marcala-producers-washed-processed-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/marcala-decaf-2-DSC00932_41a15414-e5d9-40c1-8eec-b815cb71d6cc.jpg?v=1781132421",
+  "platform": "shopify",
+  "product_id": "9169418322146",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Marcala Producers • Washed-Processed Swiss Water Decaf",
+  "url": "https://sagebrushcoffee.com/products/marcala-producers-washed-processed-swiss-water-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.62,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47691834392802"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.76,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47691834425570"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.67,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47691834458338"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.62,
+    "title": "12oz bag / coarse",
+    "variant_id": "47691834491106"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.62,
+    "title": "12oz bag / medium",
+    "variant_id": "47691834523874"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.62,
+    "title": "12oz bag / fine",
+    "variant_id": "47691834556642"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.62,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47691834589410"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.76,
+    "title": "16oz bag / coarse",
+    "variant_id": "47691834622178"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.76,
+    "title": "16oz bag / medium",
+    "variant_id": "47691834654946"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.76,
+    "title": "16oz bag / fine",
+    "variant_id": "47691834687714"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.76,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47691834720482"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.67,
+    "title": "4lb bag / coarse",
+    "variant_id": "47691834753250"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.67,
+    "title": "4lb bag / medium",
+    "variant_id": "47691834786018"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.67,
+    "title": "4lb bag / fine",
+    "variant_id": "47691834818786"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 134.67,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47691834851554"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "809544e1314610f4",
+  "first_seen": "2026-10-26",
+  "handle": "alex-urena-white-honey-processed-sl-28",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/Alex-white-honey-1_7a4722d4-31eb-4946-a076-696533fc2acc.jpg?v=1790098830",
+  "platform": "shopify",
+  "product_id": "9223252771042",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Alex Ureña • White-Honey-Processed SL-28",
+  "url": "https://sagebrushcoffee.com/products/alex-urena-white-honey-processed-sl-28",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.1,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47887836479714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.3,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47887836512482"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 227.42,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47887836545250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.1,
+    "title": "12oz bag / coarse",
+    "variant_id": "47887836578018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.1,
+    "title": "12oz bag / medium",
+    "variant_id": "47887836610786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.1,
+    "title": "12oz bag / fine",
+    "variant_id": "47887836643554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.1,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47887836676322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.3,
+    "title": "16oz bag / coarse",
+    "variant_id": "47887836709090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.3,
+    "title": "16oz bag / medium",
+    "variant_id": "47887836741858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.3,
+    "title": "16oz bag / fine",
+    "variant_id": "47887836774626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.3,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47887836807394"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 227.42,
+    "title": "4lb bag / coarse",
+    "variant_id": "47887836840162"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 227.42,
+    "title": "4lb bag / medium",
+    "variant_id": "47887836872930"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 227.42,
+    "title": "4lb bag / fine",
+    "variant_id": "47887836905698"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 227.42,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47887836938466"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "anny-ruth-unicorn-processed-red-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/anny-unicorn-18-DSC00922.jpg?v=1782546115",
+  "platform": "shopify",
+  "product_id": "9234998329570",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Archived | Sagebrush Coffee"
+  ],
+  "title": "Anny Ruth • Unicorn-Processed Red Bourbon",
+  "url": "https://sagebrushcoffee.com/products/anny-ruth-unicorn-processed-red-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / whole bean",
+    "variant_id": "47928027742434"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 40.03,
+    "title": "16oz bag / whole bean",
+    "variant_id": "47928027775202"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 147.44,
+    "title": "4lb bag / whole bean",
+    "variant_id": "47928027807970"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / coarse",
+    "variant_id": "47928027840738"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / medium",
+    "variant_id": "47928027873506"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / fine",
+    "variant_id": "47928027906274"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / extra fine",
+    "variant_id": "47928027939042"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 40.03,
+    "title": "16oz bag / coarse",
+    "variant_id": "47928027971810"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 40.03,
+    "title": "16oz bag / medium",
+    "variant_id": "47928028004578"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 40.03,
+    "title": "16oz bag / fine",
+    "variant_id": "47928028037346"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 40.03,
+    "title": "16oz bag / extra fine",
+    "variant_id": "47928028070114"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 147.44,
+    "title": "4lb bag / coarse",
+    "variant_id": "47928028102882"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 147.44,
+    "title": "4lb bag / medium",
+    "variant_id": "47928028135650"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 147.44,
+    "title": "4lb bag / fine",
+    "variant_id": "47928028168418"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 147.44,
+    "title": "4lb bag / extra fine",
+    "variant_id": "47928028201186"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "432c5a54f2d5a1ac",
+  "first_seen": "2026-10-26",
+  "handle": "emmanuel-solis-honey-processed-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/emmanuel-4_bb71e203-b531-4453-af74-a45a4f77e9d9.jpg?v=1790098806",
+  "platform": "shopify",
+  "product_id": "9310555439330",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Emmanuel Solís • Honey-Processed Catuai",
+  "url": "https://sagebrushcoffee.com/products/emmanuel-solis-honey-processed-catuai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.94,
+    "title": "12oz bag / whole bean",
+    "variant_id": "48249834766562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.36,
+    "title": "16oz bag / whole bean",
+    "variant_id": "48249834799330"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.82,
+    "title": "4lb bag / whole bean",
+    "variant_id": "48249834832098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.94,
+    "title": "12oz bag / coarse",
+    "variant_id": "48249834864866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.94,
+    "title": "12oz bag / medium",
+    "variant_id": "48249834897634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.94,
+    "title": "12oz bag / fine",
+    "variant_id": "48249834930402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.94,
+    "title": "12oz bag / extra fine",
+    "variant_id": "48249834963170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.36,
+    "title": "16oz bag / coarse",
+    "variant_id": "48249834995938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.36,
+    "title": "16oz bag / medium",
+    "variant_id": "48249835028706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.36,
+    "title": "16oz bag / fine",
+    "variant_id": "48249835061474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.36,
+    "title": "16oz bag / extra fine",
+    "variant_id": "48249835094242"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.82,
+    "title": "4lb bag / coarse",
+    "variant_id": "48249835127010"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.82,
+    "title": "4lb bag / medium",
+    "variant_id": "48249835159778"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.82,
+    "title": "4lb bag / fine",
+    "variant_id": "48249835192546"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 129.82,
+    "title": "4lb bag / extra fine",
+    "variant_id": "48249835225314"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "jenner-villatoro-anaerobic-natural-processed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/jenner-10.jpg?v=1790098792",
+  "platform": "shopify",
+  "product_id": "9314919448802",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Jenner Villatoro • Anaerobic Natural-Processed Bourbon",
+  "url": "https://sagebrushcoffee.com/products/jenner-villatoro-anaerobic-natural-processed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.07,
+    "title": "12oz bag / whole bean",
+    "variant_id": "48265430466786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.13,
+    "title": "16oz bag / whole bean",
+    "variant_id": "48265430499554"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 197.96,
+    "title": "4lb bag / whole bean",
+    "variant_id": "48265430532322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.07,
+    "title": "12oz bag / coarse",
+    "variant_id": "48265430565090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.07,
+    "title": "12oz bag / medium",
+    "variant_id": "48265430597858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.07,
+    "title": "12oz bag / fine",
+    "variant_id": "48265430630626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.07,
+    "title": "12oz bag / extra fine",
+    "variant_id": "48265430663394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.13,
+    "title": "16oz bag / coarse",
+    "variant_id": "48265430696162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.13,
+    "title": "16oz bag / medium",
+    "variant_id": "48265430728930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.13,
+    "title": "16oz bag / fine",
+    "variant_id": "48265430761698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.13,
+    "title": "16oz bag / extra fine",
+    "variant_id": "48265430794466"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 197.96,
+    "title": "4lb bag / coarse",
+    "variant_id": "48265430827234"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 197.96,
+    "title": "4lb bag / medium",
+    "variant_id": "48265430860002"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 197.96,
+    "title": "4lb bag / fine",
+    "variant_id": "48265430892770"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 197.96,
+    "title": "4lb bag / extra fine",
+    "variant_id": "48265430925538"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "alex-urena-red-honey-processed-ethiopian-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/alex-red-honey-2.jpg?v=1790098773",
+  "platform": "shopify",
+  "product_id": "9336738840802",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Alex Ureña • Red-Honey-Processed Ethiopian Heirloom",
+  "url": "https://sagebrushcoffee.com/products/alex-urena-red-honey-processed-ethiopian-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.08,
+    "title": "12oz bag / whole bean",
+    "variant_id": "48330461216994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.29,
+    "title": "16oz bag / whole bean",
+    "variant_id": "48330461249762"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 238.26,
+    "title": "4lb bag / whole bean",
+    "variant_id": "48330461282530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.08,
+    "title": "12oz bag / coarse",
+    "variant_id": "48330461315298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.08,
+    "title": "12oz bag / medium",
+    "variant_id": "48330461348066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.08,
+    "title": "12oz bag / fine",
+    "variant_id": "48330461380834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.08,
+    "title": "12oz bag / extra fine",
+    "variant_id": "48330461413602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.29,
+    "title": "16oz bag / coarse",
+    "variant_id": "48330461446370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.29,
+    "title": "16oz bag / medium",
+    "variant_id": "48330461479138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.29,
+    "title": "16oz bag / fine",
+    "variant_id": "48330461511906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.29,
+    "title": "16oz bag / extra fine",
+    "variant_id": "48330461544674"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 238.26,
+    "title": "4lb bag / coarse",
+    "variant_id": "48330461577442"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 238.26,
+    "title": "4lb bag / medium",
+    "variant_id": "48330461610210"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 238.26,
+    "title": "4lb bag / fine",
+    "variant_id": "48330461642978"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 238.26,
+    "title": "4lb bag / extra fine",
+    "variant_id": "48330461675746"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "bd2dd0265b315db5",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-washed-processed-sidra",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/paola-sidra-13_8bb94a62-ce3a-4211-9270-3bf097cb22ad.jpg?v=1790098709",
+  "platform": "shopify",
+  "product_id": "9355698340066",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Paola Trujillo • Washed-Processed Sidra",
+  "url": "https://sagebrushcoffee.com/products/paola-carlos-trujillo-washed-processed-sidra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.38,
+    "title": "12oz bag / whole bean",
+    "variant_id": "48396213715170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz bag / whole bean",
+    "variant_id": "48396213747938"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 170.96,
+    "title": "4lb bag / whole bean",
+    "variant_id": "48396213780706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.38,
+    "title": "12oz bag / coarse",
+    "variant_id": "48396213813474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.38,
+    "title": "12oz bag / medium",
+    "variant_id": "48396213846242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.38,
+    "title": "12oz bag / fine",
+    "variant_id": "48396213879010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.38,
+    "title": "12oz bag / extra fine",
+    "variant_id": "48396213911778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz bag / coarse",
+    "variant_id": "48396213944546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz bag / medium",
+    "variant_id": "48396213977314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz bag / fine",
+    "variant_id": "48396214010082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz bag / extra fine",
+    "variant_id": "48396214042850"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 170.96,
+    "title": "4lb bag / coarse",
+    "variant_id": "48396214075618"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 170.96,
+    "title": "4lb bag / medium",
+    "variant_id": "48396214108386"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 170.96,
+    "title": "4lb bag / fine",
+    "variant_id": "48396214141154"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 170.96,
+    "title": "4lb bag / extra fine",
+    "variant_id": "48396214173922"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "0927ac8ae5beb11b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-combo-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/bundle-photos_costa-rica.jpg?v=1790104087",
+  "platform": "shopify",
+  "product_id": "9366205563106",
+  "product_type": "Combo Packs",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Combo Pack",
+   "Sagebrush Coffee"
+  ],
+  "title": "Costa Rica • Combo 2 Pack",
+  "url": "https://sagebrushcoffee.com/products/costa-rica-combo-2-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.94,
+    "title": "two 12oz bags / whole bean",
+    "variant_id": "48426545283298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.94,
+    "title": "two 12oz bags / coarse",
+    "variant_id": "48426545316066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.94,
+    "title": "two 12oz bags / medium",
+    "variant_id": "48426545348834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.94,
+    "title": "two 12oz bags / fine",
+    "variant_id": "48426545381602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.94,
+    "title": "two 12oz bags / extra fine",
+    "variant_id": "48426545414370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.08,
+    "title": "two 16oz bags / whole bean",
+    "variant_id": "48426545447138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.08,
+    "title": "two 16oz bags / coarse",
+    "variant_id": "48426545479906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.08,
+    "title": "two 16oz bags / medium",
+    "variant_id": "48426545512674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.08,
+    "title": "two 16oz bags / fine",
+    "variant_id": "48426545545442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.08,
+    "title": "two 16oz bags / extra fine",
+    "variant_id": "48426545578210"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 40.34,
+    "title": "two 6oz bags / whole bean",
+    "variant_id": "67545485934818"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 40.34,
+    "title": "two 6oz bags / coarse",
+    "variant_id": "67545485967586"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 40.34,
+    "title": "two 6oz bags / medium",
+    "variant_id": "67545486000354"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 40.34,
+    "title": "two 6oz bags / fine",
+    "variant_id": "67545486033122"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 40.34,
+    "title": "two 6oz bags / extra fine",
+    "variant_id": "67545486065890"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "0927ac8ae5beb11b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-combo-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/bundle-photos_colombia_16be1947-2dd2-4850-a937-db6a122a1610.jpg?v=1790104074",
+  "platform": "shopify",
+  "product_id": "9366206447842",
+  "product_type": "Combo Packs",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Combo Pack",
+   "Sagebrush Coffee"
+  ],
+  "title": "Colombia • Combo 2 Pack",
+  "url": "https://sagebrushcoffee.com/products/colombia-combo-2-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.89,
+    "title": "two 12oz bags / whole bean",
+    "variant_id": "48426546757858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.89,
+    "title": "two 12oz bags / coarse",
+    "variant_id": "48426546790626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.89,
+    "title": "two 12oz bags / medium",
+    "variant_id": "48426546823394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.89,
+    "title": "two 12oz bags / fine",
+    "variant_id": "48426546856162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.89,
+    "title": "two 12oz bags / extra fine",
+    "variant_id": "48426546888930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 83.41,
+    "title": "two 16oz bags / whole bean",
+    "variant_id": "48426546921698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 83.41,
+    "title": "two 16oz bags / coarse",
+    "variant_id": "48426546954466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 83.41,
+    "title": "two 16oz bags / medium",
+    "variant_id": "48426546987234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 83.41,
+    "title": "two 16oz bags / fine",
+    "variant_id": "48426547020002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 83.41,
+    "title": "two 16oz bags / extra fine",
+    "variant_id": "48426547052770"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 51.81,
+    "title": "two 6oz bags / whole bean",
+    "variant_id": "67545487442146"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 51.81,
+    "title": "two 6oz bags / coarse",
+    "variant_id": "67545487474914"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 51.81,
+    "title": "two 6oz bags / medium",
+    "variant_id": "67545487507682"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 51.81,
+    "title": "two 6oz bags / fine",
+    "variant_id": "67545487540450"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 51.81,
+    "title": "two 6oz bags / extra fine",
+    "variant_id": "67545487573218"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "0927ac8ae5beb11b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-combo-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/bundle-photos_guatemala.jpg?v=1790104050",
+  "platform": "shopify",
+  "product_id": "9366208643298",
+  "product_type": "Combo Packs",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Combo Pack",
+   "Sagebrush Coffee"
+  ],
+  "title": "Guatemala • Combo 2 Pack",
+  "url": "https://sagebrushcoffee.com/products/guatemala-combo-2-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.67,
+    "title": "two 12oz bags / whole bean",
+    "variant_id": "48426550853858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.67,
+    "title": "two 12oz bags / coarse",
+    "variant_id": "48426550886626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.67,
+    "title": "two 12oz bags / medium",
+    "variant_id": "48426550919394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.67,
+    "title": "two 12oz bags / fine",
+    "variant_id": "48426550952162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.67,
+    "title": "two 12oz bags / extra fine",
+    "variant_id": "48426550984930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.11,
+    "title": "two 16oz bags / whole bean",
+    "variant_id": "48426551017698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.11,
+    "title": "two 16oz bags / coarse",
+    "variant_id": "48426551050466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.11,
+    "title": "two 16oz bags / medium",
+    "variant_id": "48426551083234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.11,
+    "title": "two 16oz bags / fine",
+    "variant_id": "48426551116002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.11,
+    "title": "two 16oz bags / extra fine",
+    "variant_id": "48426551148770"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 44.23,
+    "title": "two 6oz bags / whole bean",
+    "variant_id": "67545487671522"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 44.23,
+    "title": "two 6oz bags / coarse",
+    "variant_id": "67545487704290"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 44.23,
+    "title": "two 6oz bags / medium",
+    "variant_id": "67545487737058"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 44.23,
+    "title": "two 6oz bags / fine",
+    "variant_id": "67545487769826"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 44.23,
+    "title": "two 6oz bags / extra fine",
+    "variant_id": "67545487802594"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "0927ac8ae5beb11b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-combo-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/bundle-photos_ethiopia.jpg?v=1790104025",
+  "platform": "shopify",
+  "product_id": "9366211035362",
+  "product_type": "Combo Packs",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Combo Pack",
+   "Sagebrush Coffee"
+  ],
+  "title": "Ethiopia • Combo 2 Pack",
+  "url": "https://sagebrushcoffee.com/products/ethiopia-combo-2-pack",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 57.46,
+    "title": "two 12oz bags / whole bean",
+    "variant_id": "48426555310306"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 57.46,
+    "title": "two 12oz bags / coarse",
+    "variant_id": "48426555343074"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 57.46,
+    "title": "two 12oz bags / medium",
+    "variant_id": "48426555375842"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 57.46,
+    "title": "two 12oz bags / fine",
+    "variant_id": "48426555408610"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 57.46,
+    "title": "two 12oz bags / extra fine",
+    "variant_id": "48426555441378"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 71.05,
+    "title": "two 16oz bags / whole bean",
+    "variant_id": "48426555474146"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 71.05,
+    "title": "two 16oz bags / coarse",
+    "variant_id": "48426555506914"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 71.05,
+    "title": "two 16oz bags / medium",
+    "variant_id": "48426555539682"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 71.05,
+    "title": "two 16oz bags / fine",
+    "variant_id": "48426555572450"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 71.05,
+    "title": "two 16oz bags / extra fine",
+    "variant_id": "48426555605218"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 46.49,
+    "title": "two 6oz bags / whole bean",
+    "variant_id": "67545487868130"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 46.49,
+    "title": "two 6oz bags / coarse",
+    "variant_id": "67545487900898"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 46.49,
+    "title": "two 6oz bags / medium",
+    "variant_id": "67545487933666"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 46.49,
+    "title": "two 6oz bags / fine",
+    "variant_id": "67545487966434"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 46.49,
+    "title": "two 6oz bags / extra fine",
+    "variant_id": "67545487999202"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ },
+ {
+  "body_hash": "a6a95cfcae0a91d2",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-washed-processed-guji-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/0249/7521/files/morkata-19_a6271525-3097-4d8b-bc4a-6fd57242a08d.jpg?v=1790099076",
+  "platform": "shopify",
+  "product_id": "9375215485154",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushcoffee",
+  "tags": [
+   "Sagebrush Coffee"
+  ],
+  "title": "Morkata Gata • Washed-Processed Guji Heirloom",
+  "url": "https://sagebrushcoffee.com/products/morkata-gata-washed-processed-guji-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / whole bean",
+    "variant_id": "48452156195042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.47,
+    "title": "16oz bag / whole bean",
+    "variant_id": "48452156227810"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 151.06,
+    "title": "4lb bag / whole bean",
+    "variant_id": "48452156260578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / coarse",
+    "variant_id": "48452156293346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / medium",
+    "variant_id": "48452156326114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / fine",
+    "variant_id": "48452156358882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.92,
+    "title": "12oz bag / extra fine",
+    "variant_id": "48452156391650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.47,
+    "title": "16oz bag / coarse",
+    "variant_id": "48452156424418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.47,
+    "title": "16oz bag / medium",
+    "variant_id": "48452156457186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.47,
+    "title": "16oz bag / fine",
+    "variant_id": "48452156489954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.47,
+    "title": "16oz bag / extra fine",
+    "variant_id": "48452156522722"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 151.06,
+    "title": "4lb bag / coarse",
+    "variant_id": "48452156555490"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 151.06,
+    "title": "4lb bag / medium",
+    "variant_id": "48452156588258"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 151.06,
+    "title": "4lb bag / fine",
+    "variant_id": "48452156621026"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 151.06,
+    "title": "4lb bag / extra fine",
+    "variant_id": "48452156653794"
+   }
+  ],
+  "vendor": "Sagebrush Coffee"
+ }
+]

@@ -1,0 +1,309 @@
+[
+ {
+  "body_hash": "27fe012b5ed7b350",
+  "first_seen": "2026-10-26",
+  "handle": "catering",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/files/3.png?v=1787078513",
+  "platform": "shopify",
+  "product_id": "15860845904158",
+  "product_type": "Catering",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Graduation",
+   "Pickup",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "seasonal",
+   "upload-2026"
+  ],
+  "title": "All Meat Finger Sandwiches - 50 count tray",
+  "url": "https://nonnaskingcakes.com/products/catering",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "59803214020894"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ },
+ {
+  "body_hash": "04842a082b58e9e2",
+  "first_seen": "2026-10-26",
+  "handle": "artichoke-balls",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/files/10.png?v=1787076564",
+  "platform": "shopify",
+  "product_id": "15860875559198",
+  "product_type": "Catering",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Graduation",
+   "Pickup",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "seasonal",
+   "upload-2026"
+  ],
+  "title": "Artichoke Balls - 50 count",
+  "url": "https://nonnaskingcakes.com/products/artichoke-balls",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "59803326415134"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ },
+ {
+  "body_hash": "3c316475d5e16730",
+  "first_seen": "2026-10-26",
+  "handle": "salad",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/files/6.png?v=1787077367",
+  "platform": "shopify",
+  "product_id": "15860892008734",
+  "product_type": "Lunch",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Graduation",
+   "Pickup",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "seasonal",
+   "upload-2026"
+  ],
+  "title": "Salad",
+  "url": "https://nonnaskingcakes.com/products/salad",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Half Pan",
+    "variant_id": "59803364589854"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.0,
+    "title": "Full Pan",
+    "variant_id": "59803364622622"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ },
+ {
+  "body_hash": "3a35107bd6c43116",
+  "first_seen": "2026-10-26",
+  "handle": "mini-poor-boys",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/files/13.png?v=1787078882",
+  "platform": "shopify",
+  "product_id": "15860913144094",
+  "product_type": "Catering",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Graduation",
+   "Pickup",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "seasonal",
+   "upload-2026"
+  ],
+  "title": "Mini Poor Boys - 24 count",
+  "url": "https://nonnaskingcakes.com/products/mini-poor-boys",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 55.0,
+    "title": "Default Title",
+    "variant_id": "59803396964638"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ },
+ {
+  "body_hash": "f3fc27942d873fa9",
+  "first_seen": "2026-10-26",
+  "handle": "all-meat-finger-sandwiches-50-count-tray",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/files/3_1f1df286-13e0-4cc3-90f0-d1bca356de20.png?v=1787079372",
+  "platform": "shopify",
+  "product_id": "15860919566622",
+  "product_type": "Catering",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Graduation",
+   "Pickup",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "seasonal",
+   "upload-2026"
+  ],
+  "title": "All Meat Finger Sandwiches - 50 count tray",
+  "url": "https://nonnaskingcakes.com/products/all-meat-finger-sandwiches-50-count-tray",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "59803406762270"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ },
+ {
+  "body_hash": "a65c20ae7a222331",
+  "first_seen": "2026-10-26",
+  "handle": "king-cake-traditional-nationwide-shipping",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/products/8bda93dc149962d658a58d9bf5e07252_87b87fbb-bd75-4750-8214-4e3857b9af38.jpg?v=1743710158",
+  "platform": "shopify",
+  "product_id": "1741785694281",
+  "product_type": "King Cakes",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Kingcake",
+   "Nationwide Shipping",
+   "additional-info",
+   "jp-test",
+   "upload-2026",
+   "upload-available"
+  ],
+  "title": "King Cake Traditional (Nationwide Shipping)",
+  "url": "https://nonnaskingcakes.com/products/king-cake-traditional-nationwide-shipping",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 69.95,
+    "title": "Medium",
+    "variant_id": "15890742870089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "Large",
+    "variant_id": "43922349621534"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Shipping"
+ },
+ {
+  "body_hash": "97e5f7d1e90188eb",
+  "first_seen": "2026-10-26",
+  "handle": "king-cake-filled-medium-nationwide-shipping",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/products/Apple_ce60e65a-3bbe-4846-9088-b2b346d14c7d.jpg?v=1743710155",
+  "platform": "shopify",
+  "product_id": "2088789344329",
+  "product_type": "King Cakes",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "KinkgCake",
+   "Nationwide Shipping",
+   "additional-info",
+   "jp-test",
+   "upload-2026",
+   "upload-available"
+  ],
+  "title": "King Cake Filled - Medium (Nationwide Shipping)",
+  "url": "https://nonnaskingcakes.com/products/king-cake-filled-medium-nationwide-shipping",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "Apple",
+    "variant_id": "19037981868105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "Cream Cheese",
+    "variant_id": "43921416651038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "Cream Cheese & Pecan Praline",
+    "variant_id": "43921431691550"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "Pecan Praline",
+    "variant_id": "43921431724318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "Strawberry & Cream Cheese",
+    "variant_id": "43921431757086"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 79.95,
+    "title": "Pumpkin Cream Cheese",
+    "variant_id": "50249239920926"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Shipping"
+ },
+ {
+  "body_hash": "fc9a68c8c92c1e93",
+  "first_seen": "2026-10-26",
+  "handle": "french-macarons",
+  "image": "https://cdn.shopify.com/s/files/1/0030/6423/4057/products/frenchmacchoc.jpg?v=1615822334",
+  "platform": "shopify",
+  "product_id": "4351358206025",
+  "product_type": "Cookies",
+  "roaster_slug": "nonnaskingcakes",
+  "tags": [
+   "Cookies",
+   "Pickup",
+   "dad",
+   "easter",
+   "instore",
+   "jp-test",
+   "mother's day",
+   "patriotic",
+   "upload-2026"
+  ],
+  "title": "French Macarons",
+  "url": "https://nonnaskingcakes.com/products/french-macarons",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.4,
+    "title": "Baker's Assortment / 6 Count",
+    "variant_id": "31124852867145"
+   }
+  ],
+  "vendor": "Nonna Randazzo's Bakery"
+ }
+]

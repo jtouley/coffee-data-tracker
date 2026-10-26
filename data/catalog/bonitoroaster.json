@@ -1,0 +1,259 @@
+[
+ {
+  "body_hash": "941a021b549c7aa1",
+  "first_seen": "2026-10-26",
+  "handle": "dark-beetle",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-84-bonito-coffee-roaster-myshopify-com_r1_01E_9917.jpg?v=1786115438",
+  "platform": "shopify",
+  "product_id": "6801594908807",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Dark Beetle",
+  "url": "https://bonitocoffee.com/products/dark-beetle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45361691984007"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "b8df1b6d0057bc2b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-bonito",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-80-bonito-coffee-roaster-myshopify-com_r1_01E_9898.jpg?v=1786115667",
+  "platform": "shopify",
+  "product_id": "6801599234183",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Cafecito Espresso",
+  "url": "https://bonitocoffee.com/products/espresso-bonito",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45361692180615"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "d4558fe6556c3d9e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-7d-bonito-coffee-roaster-myshopify-com_r1_01E_9891.jpg?v=1786115438",
+  "platform": "shopify",
+  "product_id": "6801600872583",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Bonito Decaf",
+  "url": "https://bonitocoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "45361692246151"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "6af50d898eb65a4b",
+  "first_seen": "2026-10-26",
+  "handle": "catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-92-bonito-coffee-roaster-myshopify-com_r1_01E_9731.jpg?v=1786115438",
+  "platform": "shopify",
+  "product_id": "6801604214919",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Catuai",
+  "url": "https://bonitocoffee.com/products/catuai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40238163427463"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "b2fdf6cce064ee95",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-1",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-95-bonito-coffee-roaster-myshopify-com_r1_01E_9879.jpg?v=1786115448",
+  "platform": "shopify",
+  "product_id": "6869580906631",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [
+   "best seller"
+  ],
+  "title": "Bourbon",
+  "url": "https://bonitocoffee.com/products/bourbon-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "45361692541063"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "872570eceb488b54",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/Group_44_2.png?v=1790878006",
+  "platform": "shopify",
+  "product_id": "7370718544007",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "ROASTER'S CHOICE",
+  "url": "https://bonitocoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "40387748135047"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "3022c26e33d6db95",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-7b-bonito-coffee-roaster-myshopify-com_r1_01E_9893_d4eb313d-7fe2-4e9f-8385-d76e63dc62ec.jpg?v=1786547457",
+  "platform": "shopify",
+  "product_id": "7518385078407",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [
+   "best seller"
+  ],
+  "title": "Origin Blend",
+  "url": "https://bonitocoffee.com/products/copy-of-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45361692049543"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "66b98ef830f8d45d",
+  "first_seen": "2026-10-26",
+  "handle": "caturra-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-93-bonito-coffee-roaster-myshopify-com_r1_01E_9732.jpg?v=1786115438",
+  "platform": "shopify",
+  "product_id": "7518385963143",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Caturra Natural",
+  "url": "https://bonitocoffee.com/products/caturra-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "45361692377223"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "bca7f5f1c32c39d7",
+  "first_seen": "2026-10-26",
+  "handle": "pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-8c-bonito-coffee-roaster-myshopify-com_r1_01E_9900.jpg?v=1786115438",
+  "platform": "shopify",
+  "product_id": "7563075879047",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Pacamara",
+  "url": "https://bonitocoffee.com/products/pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "45361692311687"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "3532b7642b38a18c",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-82-bonito-coffee-roaster-myshopify-com_r1_01E_9905_d492c29c-3bcb-4d5a-b5a4-a9a9f838a1dc.jpg?v=1790261064",
+  "platform": "shopify",
+  "product_id": "8343352901767",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Bourbon Natural",
+  "url": "https://bonitocoffee.com/products/bourbon-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "43777192067207"
+   }
+  ],
+  "vendor": "bonito-coffee-roaster"
+ },
+ {
+  "body_hash": "5d9a553a600472a7",
+  "first_seen": "2026-10-26",
+  "handle": "parainema",
+  "image": "https://cdn.shopify.com/s/files/1/0558/1383/2839/files/web-7f-bonito-coffee-roaster-myshopify-com_r1_01E_9889_86198a46-d5e6-473a-b658-0c29ebcbefdb.jpg?v=1790191884",
+  "platform": "shopify",
+  "product_id": "8699805106311",
+  "product_type": "",
+  "roaster_slug": "bonitoroaster",
+  "tags": [],
+  "title": "Parainema",
+  "url": "https://bonitocoffee.com/products/parainema",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "45361692868743"
+   }
+  ],
+  "vendor": "Bonito Coffee Roaster"
+ }
+]

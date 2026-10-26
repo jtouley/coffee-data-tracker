@@ -1,0 +1,4579 @@
+[
+ {
+  "body_hash": "b3a8b9b5ab0e0658",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-old-towne-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014713.jpg?v=1775229877",
+  "platform": "shopify",
+  "product_id": "10434366029",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Dark",
+   "Roasted Coffee",
+   "blackfriday"
+  ],
+  "title": "Roasted - Old Towne Blend",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-old-towne-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40454627661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "40454627725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40552531725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "40552533133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42265183565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42265183629"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42265229005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42265229261"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "ecc6026e111682ac",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014719.jpg?v=1774386535",
+  "platform": "shopify",
+  "product_id": "10464353549",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Guatemala",
+   "Medium",
+   "Roasted Coffee",
+   "Washed",
+   "blackfriday"
+  ],
+  "title": "Roasted - Guatemala Quetzal",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40589624013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "40589624077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40589624141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "40589624205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42264911821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42264912077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42264926541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42264926989"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "7f8783ce941bebb6",
+  "first_seen": "2026-10-26",
+  "handle": "steve-favorites-roasted-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/IMG_1488.jpg?v=1571609660",
+  "platform": "shopify",
+  "product_id": "10507561997",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Guatemala",
+   "Roasted Coffee",
+   "Sumatra",
+   "blackfriday"
+  ],
+  "title": "Roasted - Steve’s Favorites Sample Pack",
+  "url": "https://www.bodhileafcoffee.com/products/steve-favorites-roasted-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 21.95,
+    "title": "Default Title",
+    "variant_id": "40919431053"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "5977b22316675130",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-bodhi-house-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014709.jpg?v=1774378275",
+  "platform": "shopify",
+  "product_id": "10513218637",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium",
+   "Roasted Coffee",
+   "anniversary",
+   "blackfriday"
+  ],
+  "title": "Roasted - Tiger's Tooth Espresso Blend",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-bodhi-house-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40954594893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "40954594957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40954595021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "40954595085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42264384589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42264384781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42264395341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42264395469"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "17410183d75a00b0",
+  "first_seen": "2026-10-26",
+  "handle": "gene-cafe-coffee-bean-roaster-black",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/CBR101BFront_Shopify.png?v=1637939663",
+  "platform": "shopify",
+  "product_id": "1364789569",
+  "product_type": "Home Roaster Supplies",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Home Roaster Supplies"
+  ],
+  "title": "GENE CAFE COFFEE BEAN ROASTER",
+  "url": "https://www.bodhileafcoffee.com/products/gene-cafe-coffee-bean-roaster-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 14515,
+    "price_usd": 690.0,
+    "title": "Red",
+    "variant_id": "21388200738896"
+   },
+   {
+    "available": true,
+    "grams": 14515,
+    "price_usd": 690.0,
+    "title": "Black",
+    "variant_id": "4120467841"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "fc12e15061894bc0",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaf-roasted",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014715_f7064ccc-a30e-4954-b210-614c0a9f5ba0.jpg?v=1774386430",
+  "platform": "shopify",
+  "product_id": "1375947905",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Colombia",
+   "Dark",
+   "Decaf",
+   "Medium",
+   "Roasted Coffee",
+   "blackfriday",
+   "trickortreat"
+  ],
+  "title": "Roasted - Decaf",
+  "url": "https://www.bodhileafcoffee.com/products/swiss-water-decaf-roasted",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40416304653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "40416329421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40552449549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "40552450701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42264648077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42264648653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42264663693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42264664013"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "27451dcddbd2de85",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-las-lomas-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/lomas2.jpg?v=1621288779",
+  "platform": "shopify",
+  "product_id": "1537556119632",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "washed"
+  ],
+  "title": "El Salvador Las Lomas Washed",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-las-lomas-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "12852582350928"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "24c708ac7448f09e",
+  "first_seen": "2026-10-26",
+  "handle": "steves-favorites",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/DSC09568-2.jpg?v=1571609613",
+  "platform": "shopify",
+  "product_id": "2365510337",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Steve's Favorites"
+  ],
+  "title": "Steve's Favorites - GREEN",
+  "url": "https://www.bodhileafcoffee.com/products/steves-favorites",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 133.8,
+    "title": "15 LB",
+    "variant_id": "21393817894992"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 206.6,
+    "title": "25 LB",
+    "variant_id": "21393818386512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.95,
+    "title": "5 LB",
+    "variant_id": "40733254477"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "7c0817304d66d830",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/Mandheling_1.jpg?v=1578002137",
+  "platform": "shopify",
+  "product_id": "2448596107344",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Sumatra",
+   "Wet-Hulled"
+  ],
+  "title": "Indonesia Sumatra Mandheling",
+  "url": "https://www.bodhileafcoffee.com/products/indonesia-sumatra-mandheling",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "21410744008784"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "f1838a1195d09e29",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-ethiopia-abeba",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014707.jpg?v=1774378655",
+  "platform": "shopify",
+  "product_id": "2494626103376",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Light",
+   "Roasted Coffee",
+   "blackfriday",
+   "washed"
+  ],
+  "title": "Roasted - Ethiopia Abeba",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-ethiopia-abeba",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21657439338576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "21657439371344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "21657439404112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "21657439436880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "21657439469648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "21657439502416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "21657439535184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "21657439567952"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "f49556c420ea409e",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mandheling-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/Mandheling_2.jpg?v=1619042455",
+  "platform": "shopify",
+  "product_id": "2537130328144",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Coffee Week",
+   "Green Coffee",
+   "Sumatra",
+   "Wet-Hulled"
+  ],
+  "title": "Indonesia Sumatra Mandheling - Green",
+  "url": "https://www.bodhileafcoffee.com/products/indonesia-sumatra-mandheling-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.69,
+    "title": "1 LB",
+    "variant_id": "21857163706448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.53,
+    "title": "5 LB",
+    "variant_id": "21857178091600"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 205.74,
+    "title": "20 LB",
+    "variant_id": "21857179959376"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "b4b667a5b9f9daca",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-manzanal-white-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bag-web-2603.jpg?v=1689441313",
+  "platform": "shopify",
+  "product_id": "300954484776",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Light",
+   "Natural",
+   "Roasted Coffee",
+   "blackfriday"
+  ],
+  "title": "Roasted - Costa Rica Pura Vida",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-manzanal-white-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "3019871191080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "3019871223848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "3019871256616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "3019871289384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "3019871322152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "3019871354920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "3019871387688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "3019871420456"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "83c81675b3e36cfc",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-sumatra-indonesia",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014704.jpg?v=1778602593",
+  "platform": "shopify",
+  "product_id": "33457176589",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Indonesia",
+   "Medium",
+   "Roasted Coffee",
+   "Sumatra",
+   "Wet-Hulled",
+   "blackfriday"
+  ],
+  "title": "Roasted - Indonesia Sumatra",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-sumatra-indonesia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "287353831437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "287353864205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "287353896973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "287353929741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "287353962509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "287353995277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "287354028045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "287354060813"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "e1c90719c049c672",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014712.jpg?v=1774462291",
+  "platform": "shopify",
+  "product_id": "3649869938768",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Roasted Coffee",
+   "blackfriday",
+   "cold brew"
+  ],
+  "title": "Roasted - Cold Brew Blend",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28642422489168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "28642422521936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "28642422554704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "28642422587472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "28642422620240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "28642422653008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "28642422685776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "28642422718544"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "c455af82732887be",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lotus-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/image_header_offerings_detail_2x_1.jpg?v=1585256181",
+  "platform": "shopify",
+  "product_id": "4477651255376",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Vietnam",
+   "chocolate",
+   "washed"
+  ],
+  "title": "Vietnam Lotus Washed",
+  "url": "https://www.bodhileafcoffee.com/products/vietnam-lotus-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "31911014301776"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "877687058dc5daf7",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lotus-shg-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/image_header_offerings_detail_2x_2.jpg?v=1585256167",
+  "platform": "shopify",
+  "product_id": "4501570289744",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Green Coffee Sale!",
+   "catimor",
+   "latest",
+   "newyear",
+   "stpatty",
+   "vietnam",
+   "washed"
+  ],
+  "title": "Vietnam Lotus - Green",
+  "url": "https://www.bodhileafcoffee.com/products/vietnam-lotus-shg-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.16,
+    "title": "1 LB",
+    "variant_id": "32065076265040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.26,
+    "title": "5 LB",
+    "variant_id": "32065076363344"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 178.82,
+    "title": "20 LB",
+    "variant_id": "32065076396112"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "2fc07496ec40a448",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-minas",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014705.jpg?v=1775229784",
+  "platform": "shopify",
+  "product_id": "456528527400",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Brazil",
+   "Dark",
+   "Medium",
+   "Natural",
+   "Roasted Coffee",
+   "anniversary",
+   "blackfriday"
+  ],
+  "title": "Roasted - Brazil Minas",
+  "url": "https://www.bodhileafcoffee.com/products/brazil-minas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "3806952554536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "3806952587304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "3806952620072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "3806952652840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "3806952685608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "3806952718376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "3806952751144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "3806952783912"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "cbbed6b1787f622a",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-sr540",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/CShapeSR5402_385977d2-4a17-489c-b48c-952115e29f3e.jpg?v=1593539512",
+  "platform": "shopify",
+  "product_id": "4692992491600",
+  "product_type": "Home Roaster Supplies",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Home Roaster Supplies"
+  ],
+  "title": "FRESH ROAST SR540",
+  "url": "https://www.bodhileafcoffee.com/products/fresh-roast-sr540",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9525,
+    "price_usd": 219.0,
+    "title": "Default Title",
+    "variant_id": "32616492335184"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "8239d4fb200b8372",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-sr800",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/SR800_2_1.jpg?v=1593540014",
+  "platform": "shopify",
+  "product_id": "4693000880208",
+  "product_type": "Home Roaster Supplies",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Home Roaster Supplies"
+  ],
+  "title": "FRESH ROAST SR800",
+  "url": "https://www.bodhileafcoffee.com/products/fresh-roast-sr800",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9525,
+    "price_usd": 334.0,
+    "title": "Default Title",
+    "variant_id": "32616530116688"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "092e4b4708f31a56",
+  "first_seen": "2026-10-26",
+  "handle": "rise-and-grind",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF4124-square.jpg?v=1789693678",
+  "platform": "shopify",
+  "product_id": "4822649831504",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Mexico",
+   "Roasted Coffee",
+   "trickortreat"
+  ],
+  "title": "Roasted - Rise And Grind Fall Blend",
+  "url": "https://www.bodhileafcoffee.com/products/rise-and-grind",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49352335327406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "49352335360174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground - Pour Over",
+    "variant_id": "49352335392942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground - Auto Drip",
+    "variant_id": "49352335425710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49352335458478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "49352335491246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground - Pour Over",
+    "variant_id": "49352335524014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.75,
+    "title": "5lb / Ground - Auto Drip",
+    "variant_id": "49352335556782"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "fa5854dc3962319e",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-third-eye-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014710.jpg?v=1778602540",
+  "platform": "shopify",
+  "product_id": "4827374092368",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Dark",
+   "Roasted Coffee",
+   "trickortreat"
+  ],
+  "title": "Roasted - French Roast",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-third-eye-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32961252720720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "32961252753488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "32961252786256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "32961252819024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "32961604485200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "32961604943952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "32961605042256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "32961605304400"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "42d088e4a5bff511",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-organic-honduras-copan",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bag-web-2604.jpg?v=1689441490",
+  "platform": "shopify",
+  "product_id": "4831931433040",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Roasted Coffee",
+   "blackfriday",
+   "dark",
+   "honduras",
+   "medium",
+   "washed"
+  ],
+  "title": "Roasted - Organic Honduras Copan",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-organic-honduras-copan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32980969455696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "32980969488464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "32980969521232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "32980969554000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "32980983840848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "32980986658896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "32980989247568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "32981023817808"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "b1e8282719206a05",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-bodhi-zen",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014720.jpg?v=1774378420",
+  "platform": "shopify",
+  "product_id": "5994848705",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Light",
+   "Medium",
+   "Roasted Coffee",
+   "anniversary",
+   "blackfriday"
+  ],
+  "title": "Roasted - Bodhi Zen",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-bodhi-zen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40416275405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "40416291469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40552376397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "40552378381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42264432525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42264432589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42264455885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42264455949"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "2c90050aa838ddf2",
+  "first_seen": "2026-10-26",
+  "handle": "clear-valve-bag-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/FAAF1E27-015C-41C9-8337-D8156D0D22CF.jpg?v=1608749864",
+  "platform": "shopify",
+  "product_id": "6188103925934",
+  "product_type": "Home Roaster Supplies",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Home Roaster Supplies"
+  ],
+  "title": "1/4 lb Clear Valve Bag",
+  "url": "https://www.bodhileafcoffee.com/products/clear-valve-bag-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 0.5,
+    "title": "4 oz",
+    "variant_id": "37798078054574"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "5c36edad7001b096",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pura-fruta-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/green.jpg?v=1609284403",
+  "platform": "shopify",
+  "product_id": "6199663394990",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Guatemala",
+   "Natural"
+  ],
+  "title": "Guatemala El Platanillo Pura Fruta Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-pura-fruta-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.49,
+    "title": "1 LB",
+    "variant_id": "37822505189550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.08,
+    "title": "5 LB",
+    "variant_id": "37822505222318"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 167.02,
+    "title": "20 LB",
+    "variant_id": "37822505255086"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "d1c019369cd03ac7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pura-fruta",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/commercial_155a708a-03ab-45b3-847e-1f407de9a731.jpg?v=1609284836",
+  "platform": "shopify",
+  "product_id": "6199676534958",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Guatemala",
+   "Natural"
+  ],
+  "title": "Guatemala El Platanillo Pura Fruta Natural",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-pura-fruta",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "37822525964462"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "14fd6b8f42e4d350",
+  "first_seen": "2026-10-26",
+  "handle": "kona-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/kona4_1600x1600_9ae359d0-9617-4f2b-8807-865871aecb38.jpg?v=1618429386",
+  "platform": "shopify",
+  "product_id": "6226030166190",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Coffee Week",
+   "Green Coffee",
+   "Hawaii",
+   "Kona",
+   "Natural",
+   "Various",
+   "latest",
+   "spookygood"
+  ],
+  "title": "Kona Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/kona-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 51.09,
+    "title": "1 LB",
+    "variant_id": "37880198889646"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "d1bd0e315e0bca21",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-el-mezcal-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/mexico-0032_1.jpg?v=1654026238",
+  "platform": "shopify",
+  "product_id": "6632845967534",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Mexico",
+   "washed"
+  ],
+  "title": "Mexico El Mezcal",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-el-mezcal-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "39601719738542"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "182e355bd9bba38c",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-las-lomas-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/lomas2_1.jpg?v=1621288833",
+  "platform": "shopify",
+  "product_id": "6703884173486",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Green Coffee",
+   "newelsalv",
+   "newyear",
+   "washed"
+  ],
+  "title": "El Salvador Las Lomas Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-las-lomas-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.8,
+    "title": "1 LB",
+    "variant_id": "39779110224046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 41.8,
+    "title": "5 LB",
+    "variant_id": "39779145613486"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 154.88,
+    "title": "20 LB",
+    "variant_id": "39779152265390"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "3cfa6ba9a1ca978c",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-el-mezcal-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/mexico-0032_2.jpg?v=1654029082",
+  "platform": "shopify",
+  "product_id": "6755302703278",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green",
+   "Green Coffee",
+   "Mexico",
+   "blendoff",
+   "bourbon",
+   "washed"
+  ],
+  "title": "Mexico El Mezcal - Green",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-el-mezcal-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.8,
+    "title": "1 LB",
+    "variant_id": "39868564734126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.55,
+    "title": "5 LB",
+    "variant_id": "39868564766894"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 172.48,
+    "title": "20 LB",
+    "variant_id": "39868564799662"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "d30e41c0fc9a3744",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-copan-organic-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/CAFESCOR_S_NURSERY_1_1.jpg?v=1655331177",
+  "platform": "shopify",
+  "product_id": "7094349953",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Honduras",
+   "Organic",
+   "washed"
+  ],
+  "title": "Honduras Organic Copan - Green",
+  "url": "https://www.bodhileafcoffee.com/products/honduras-copan-organic-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.09,
+    "title": "5 LB",
+    "variant_id": "28634839515216"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 155.94,
+    "title": "20 LB",
+    "variant_id": "28634839679056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.86,
+    "title": "1 LB",
+    "variant_id": "40733250509"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "e3a4f2d860e46ce7",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-esperanza-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/Jan092016_4349.jpg?v=1628622344",
+  "platform": "shopify",
+  "product_id": "7257945899182",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "washed"
+  ],
+  "title": "Costa Rica SHB Esperanza Washed",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-esperanza-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "40831922143406"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "71f7ee566e8df1d1",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-esperanza-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Jan092016_4349_7b898635-d8f2-4df7-9445-11371ba131e0.jpg?v=1787075811",
+  "platform": "shopify",
+  "product_id": "7257955074222",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Green Coffee",
+   "catuai / red catuai",
+   "shb"
+  ],
+  "title": "Costa Rica SHB Esperanza Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-esperanza-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.69,
+    "title": "1 LB",
+    "variant_id": "40831979290798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 41.28,
+    "title": "5 LB",
+    "variant_id": "40831979356334"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 152.94,
+    "title": "20 LB",
+    "variant_id": "40831979454638"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "ee8f898ed217c704",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-el-salvador-las-lomas",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014722.jpg?v=1774296400",
+  "platform": "shopify",
+  "product_id": "7392310198446",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Medium",
+   "Roasted Coffee",
+   "blackfriday"
+  ],
+  "title": "Roasted - El Salvador Las Lomas",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-el-salvador-las-lomas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41442681782446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "41442681847982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "41442681913518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "41442682011822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41442682077358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "41442682110126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "41442682142894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "41442682175662"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "038bedd22cea9304",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-slow-morning",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014708.jpg?v=1774386367",
+  "platform": "shopify",
+  "product_id": "7528204173486",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Blends",
+   "Decaf",
+   "Light",
+   "Medium",
+   "Roasted Coffee",
+   "anniversary",
+   "blackfriday"
+  ],
+  "title": "Roasted - Slow Morning (Half-Caf Blend)",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-slow-morning",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42138679017646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "42138679050414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "42138679083182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "42138679115950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42138679148718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "42138679181486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "42138679214254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "42138679247022"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "ad2c132ca94fef40",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-mexico-el-lobo",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/bagCF014703_c3e13931-6934-45e3-a2c7-d96b87074b70.jpg?v=1773421073",
+  "platform": "shopify",
+  "product_id": "7704482087086",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Light",
+   "Mexico",
+   "Roasted Coffee",
+   "blackfriday",
+   "washed"
+  ],
+  "title": "Roasted - Mexico El Lobo",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-mexico-el-lobo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43017577463982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "43017577496750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "43017577529518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "43017577562286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43017577595054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "43017577627822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "43017577660590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "43017577693358"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "c0b01c6e327ab812",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-venecia-natural-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/facy0264_6ffa78db-e41b-40ce-b694-2ce9a8c3f839.jpg?v=1787077573",
+  "platform": "shopify",
+  "product_id": "7756055314606",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Costa Rica Hacienda Sonora Venecia Natural",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-sonora-venecia-natural-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "43191406919854"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "1a2f99c746a1d043",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-venecia-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/facy0264.jpg?v=1787074844",
+  "platform": "shopify",
+  "product_id": "7756058788014",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Fruity",
+   "Green Coffee",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Costa Rica Hacienda Sonora Venecia Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-sonora-venecia-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.68,
+    "title": "1 LB",
+    "variant_id": "43191438835886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.48,
+    "title": "5 LB",
+    "variant_id": "43191438868654"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 205.57,
+    "title": "20 LB",
+    "variant_id": "43191438901422"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "4be4e5a8e706c813",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mutu-batak",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Kerinci-mill-675x450_ee25ee12-b9f7-4526-a6d7-300c84a95ad2.jpg?v=1689968560",
+  "platform": "shopify",
+  "product_id": "8024118526126",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Sumatra",
+   "Wet-Hulled"
+  ],
+  "title": "Indonesia Sumatra Mutu Batak",
+  "url": "https://www.bodhileafcoffee.com/products/indonesia-sumatra-mutu-batak",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "44091286323374"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "e586329a634d0a8b",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mutu-batak-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Kerinci-mill-675x450_2000x_649954b5-42a2-4fc5-b44e-3da64dacfd24.jpg?v=1689969226",
+  "platform": "shopify",
+  "product_id": "8024121344174",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "1",
+   "426",
+   "Djember",
+   "Garundang",
+   "Green Coffee",
+   "Sumatra",
+   "ateng",
+   "washed"
+  ],
+  "title": "Indonesia Sumatra Mutu Batak - Green",
+  "url": "https://www.bodhileafcoffee.com/products/indonesia-sumatra-mutu-batak-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.91,
+    "title": "1 LB",
+    "variant_id": "44091292090542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.32,
+    "title": "5 LB",
+    "variant_id": "44091292123310"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 227.22,
+    "title": "20 LB",
+    "variant_id": "44091292156078"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "496a18cb5d06bf9d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-finca-las-chicharras-green-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/mexico-9792_3_1_1.jpg?v=1696014743",
+  "platform": "shopify",
+  "product_id": "8084927938734",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green",
+   "Green Coffee",
+   "Mexico",
+   "bourbon",
+   "washed"
+  ],
+  "title": "Mexico Finca Las Chicharras Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-finca-las-chicharras-green-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.49,
+    "title": "1 LB",
+    "variant_id": "44242317181102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.08,
+    "title": "5 LB",
+    "variant_id": "44242317213870"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 167.02,
+    "title": "20 LB",
+    "variant_id": "44242317246638"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "4a85dce90a950d73",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gori-gesha-forest-carbonic-maceration-gr1-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ethiopia-1914-square.jpg?v=1786145042",
+  "platform": "shopify",
+  "product_id": "8225436729518",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "gorigesha",
+   "juicy"
+  ],
+  "title": "Ethiopia Gori Gesha Carbonic Natural Gr1 - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-gori-gesha-forest-carbonic-maceration-gr1-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.31,
+    "title": "1 LB",
+    "variant_id": "44713384411310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.22,
+    "title": "5 LB",
+    "variant_id": "44713384444078"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 234.26,
+    "title": "20 LB",
+    "variant_id": "44713384476846"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "2884312b1d4b7095",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-lupili-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/011-IMG_0857.jpg?v=1718131417",
+  "platform": "shopify",
+  "product_id": "8472334008494",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Tea-Like",
+   "citrusy",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Zambia Lupili AB",
+  "url": "https://www.bodhileafcoffee.com/products/zambia-lupili-ab",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "45360683778222"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "9de8124f7f5bf160",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-lupili-ab-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ETHIOPIA-WASHED-YIRGACHEFFE-KOCHERE---GREEN-bodhi-leaf-coffee-traders.jpg?v=1718131894",
+  "platform": "shopify",
+  "product_id": "8472376836270",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Tea-Like",
+   "citrusy",
+   "good for any roast level",
+   "traditional",
+   "washed",
+   "zambia"
+  ],
+  "title": "Zambia Lupili AB - Green",
+  "url": "https://www.bodhileafcoffee.com/products/zambia-lupili-ab-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.69,
+    "title": "1 LB",
+    "variant_id": "45360863674542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.78,
+    "title": "5 LB",
+    "variant_id": "45360863707310"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 188.14,
+    "title": "20 LB",
+    "variant_id": "45360863740078"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "eb2e3e900dc6a583",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-las-lomas-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/lomas1_a3abfe96-5e1b-43e8-bcdb-52468b1d29c6.jpg?v=1788892128",
+  "platform": "shopify",
+  "product_id": "8591489663150",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Natural"
+  ],
+  "title": "El Salvador Las Lomas Natural",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-las-lomas-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "45819594735790"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "c82d062f1c68f602",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-las-lomas-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/lomas1.jpg?v=1788892078",
+  "platform": "shopify",
+  "product_id": "8591490711726",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Green Coffee",
+   "Natural",
+   "newelsalv"
+  ],
+  "title": "El Salvador Las Lomas Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-las-lomas-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.49,
+    "title": "1 LB",
+    "variant_id": "45819603353774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.08,
+    "title": "5 LB",
+    "variant_id": "45819603386542"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 167.02,
+    "title": "20 LB",
+    "variant_id": "45819603419310"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "8c05d542a151c223",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-finca-las-chicharras-washed-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/mexicoCF013455_d513fb59-4620-4dbe-a135-c1c83354b62a.jpg?v=1729798719",
+  "platform": "shopify",
+  "product_id": "8602521731246",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Fruity",
+   "Green",
+   "Green Coffee",
+   "Mexico",
+   "citrusy",
+   "good for any roast level",
+   "traditional"
+  ],
+  "title": "Mexico Finca Las Chicharras Maragogype - Green",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-finca-las-chicharras-washed-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.58,
+    "title": "1 LB",
+    "variant_id": "45868703383726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.51,
+    "title": "5 LB",
+    "variant_id": "45868703416494"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 168.61,
+    "title": "20 LB",
+    "variant_id": "45868703449262"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "b4a25b4e80d2fd91",
+  "first_seen": "2026-10-26",
+  "handle": "kogu-pan-coffee-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Screenshot2024-11-19at1.04.02PM.png?v=1732050387",
+  "platform": "shopify",
+  "product_id": "8621110165678",
+  "product_type": "Home Roaster Supplies",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Home Roaster Supplies"
+  ],
+  "title": "Kogu Pan Coffee Roaster",
+  "url": "https://www.bodhileafcoffee.com/products/kogu-pan-coffee-roaster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "45951611109550"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "c337e74fa7cb3ba1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gori-gesha-forest-carbonic-maceration-gr1-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ethiopia-1908-square.jpg?v=1785960825",
+  "platform": "shopify",
+  "product_id": "8720112091310",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "gorigesha",
+   "juicy"
+  ],
+  "title": "Ethiopia Gori Gesha Wine Natural Gr1 - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-gori-gesha-forest-carbonic-maceration-gr1-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.31,
+    "title": "1 LB",
+    "variant_id": "46350768996526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.22,
+    "title": "5 LB",
+    "variant_id": "46350769029294"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 234.26,
+    "title": "20 LB",
+    "variant_id": "46350769062062"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "786079314f86015a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kochere-washed-gr2-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ETHIOPIA-HADESO-GR.-1-NATURAL---GREEN-bodhi-leaf-coffee-traders_6952c0df-f18b-4d09-ac21-bcf497000b01_1.jpg?v=1755720975",
+  "platform": "shopify",
+  "product_id": "8814778319022",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Green Coffee",
+   "Sweet",
+   "citrusy",
+   "eleven",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Ethiopia Kochere Washed Gr2  - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-kochere-washed-gr2-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.31,
+    "title": "1 LB",
+    "variant_id": "46800775970990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.31,
+    "title": "5 LB",
+    "variant_id": "46800776003758"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 199.06,
+    "title": "20 LB",
+    "variant_id": "46800776036526"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "b5731c3e9afa5103",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gori-gesha-wine-natural-gr1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ethiopia-1908-square.jpg?v=1785960825",
+  "platform": "shopify",
+  "product_id": "8819137413294",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "juicy"
+  ],
+  "title": "Ethiopia Gori Gesha Wine Natural Gr1",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-gori-gesha-wine-natural-gr1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "46827882479790"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "32962d05af74f313",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-risaralda-excelso-ea-decaf-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/IMG_6833_1_1e5b81cf-68c8-4362-b207-feb5df9d2fe7_1.jpg?v=1760627790",
+  "platform": "shopify",
+  "product_id": "8874497835182",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Colombia",
+   "Decaf",
+   "Green Coffee",
+   "South American",
+   "washed"
+  ],
+  "title": "Colombia Antioquia EA Sugarcane Decaf - Green",
+  "url": "https://www.bodhileafcoffee.com/products/colombia-risaralda-excelso-ea-decaf-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1 LB",
+    "variant_id": "47042297397422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.86,
+    "title": "5 LB",
+    "variant_id": "47042297430190"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 203.28,
+    "title": "20 LB",
+    "variant_id": "47042297462958"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "340cdf90b231efca",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-caturra-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/SONORAPICKERs_low0337.jpg?v=1787073916",
+  "platform": "shopify",
+  "product_id": "8875529175214",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Caturra",
+   "Costa Rica",
+   "Fruity",
+   "Natural",
+   "good for any roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Costa Rica Hacienda Sonora Caturra Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-sonora-caturra-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.13,
+    "title": "1 LB",
+    "variant_id": "47045857116334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.62,
+    "title": "5 LB",
+    "variant_id": "47045857149102"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 213.49,
+    "title": "20 LB",
+    "variant_id": "47045857181870"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "5084744bddf57a67",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-caturra-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/SONORAPICKERs_low0337_1a5d4740-9052-4803-a42a-6e1eff9641e3.jpg?v=1787077976",
+  "platform": "shopify",
+  "product_id": "8875531436206",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Fruity",
+   "Natural",
+   "good for any roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Costa Rica Hacienda Sonora Caturra Natural",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-sonora-caturra-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "47045861277870"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "0bcc505d5cb69b43",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-costa-rica-esperanza",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF3896-square.jpg?v=1787357140",
+  "platform": "shopify",
+  "product_id": "8892600615086",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Light",
+   "Medium",
+   "Roasted Coffee",
+   "washed"
+  ],
+  "title": "Roasted - Costa Rica Esperanza",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-costa-rica-esperanza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47085413040302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "47085413073070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "47085413105838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "47085413138606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47085413171374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "47085413204142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "47085413236910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "47085413269678"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "2650c442f0ae0585",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-vietnam-white-lotus",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF9005-square.jpg?v=1761691930",
+  "platform": "shopify",
+  "product_id": "8892601041070",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Medium",
+   "Roasted Coffee",
+   "Vietnam",
+   "washed"
+  ],
+  "title": "Roasted - Vietnam White Lotus",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-vietnam-white-lotus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47085414285486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "47085414318254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "47085414351022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "47085414383790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47085414416558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - French Press",
+    "variant_id": "47085414449326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Pour Over",
+    "variant_id": "47085414482094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.95,
+    "title": "5 lb / Ground - Auto Drip",
+    "variant_id": "47085414514862"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "eae774f7e84a11d1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-utengule-estate-ab-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Photo_Oct_01_4_02_16_PM_1.jpg?v=1718826733",
+  "platform": "shopify",
+  "product_id": "8947173228718",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "AFRICASALE",
+   "Tanzania",
+   "Tea-Like",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Tanzania Utengule Estate AB - Green",
+  "url": "https://www.bodhileafcoffee.com/products/tanzania-utengule-estate-ab-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.27,
+    "title": "1 LB",
+    "variant_id": "47265994768558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.53,
+    "title": "5 LB",
+    "variant_id": "47265994801326"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 198.35,
+    "title": "20 LB",
+    "variant_id": "47265994834094"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "cfc0a85f418b596d",
+  "first_seen": "2026-10-26",
+  "handle": "peru-laguna-de-los-condores-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/peru-3358-resize.jpg?v=1644953541",
+  "platform": "shopify",
+  "product_id": "8964058251438",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Sweet",
+   "good for any roast level",
+   "nutty",
+   "organic",
+   "peru",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "Peru San Ignacio",
+  "url": "https://www.bodhileafcoffee.com/products/peru-laguna-de-los-condores-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "47337680306350"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "249bc2e5ed54a359",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-ignacio-organic-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/peru-3358-resize_1.jpg?v=1644953303",
+  "platform": "shopify",
+  "product_id": "8964059365550",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Peru",
+   "Sweet",
+   "Washed",
+   "good for any roast level",
+   "nutty",
+   "organic",
+   "traditional"
+  ],
+  "title": "Peru San Ignacio Organic - Green",
+  "url": "https://www.bodhileafcoffee.com/products/peru-san-ignacio-organic-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.76,
+    "title": "1 LB",
+    "variant_id": "47337682075822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.61,
+    "title": "5 LB",
+    "variant_id": "47337682108590"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 224.58,
+    "title": "20 LB",
+    "variant_id": "47337682141358"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "9143ffa976665ada",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-finca-las-chicharras-washed-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Chiapas-cherry-675x450_1.jpg?v=1767977471",
+  "platform": "shopify",
+  "product_id": "8964877516974",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Mexico",
+   "Natural",
+   "Sweet",
+   "good for any roast level",
+   "traditional"
+  ],
+  "title": "Mexico Naranja EA Sugarcane Decaf",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-finca-las-chicharras-washed-copy-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "47341421199534"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "9452e18029709c5e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-finca-las-chicharras-washed-green-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Chiapas-cherry-675x450.jpg?v=1767977997",
+  "platform": "shopify",
+  "product_id": "8964881186990",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Decaf",
+   "Green",
+   "Green Coffee",
+   "Mexico",
+   "Natural",
+   "Sweet",
+   "good for any roast level",
+   "traditional"
+  ],
+  "title": "Mexico Naranja EA Sugarcane Decaf - Green",
+  "url": "https://www.bodhileafcoffee.com/products/mexico-finca-las-chicharras-washed-green-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.62,
+    "title": "1 LB",
+    "variant_id": "47341432373422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.45,
+    "title": "5 LB",
+    "variant_id": "47341432406190"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 186.91,
+    "title": "20 LB",
+    "variant_id": "47341432438958"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "d1211955410edae2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-amazonas-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/peru-3300_1.jpg?v=1623094616",
+  "platform": "shopify",
+  "product_id": "9012718436526",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Organic",
+   "Peru",
+   "Sweet",
+   "Washed",
+   "good for any roast level",
+   "traditional"
+  ],
+  "title": "Peru Amazonas - Green",
+  "url": "https://www.bodhileafcoffee.com/products/peru-amazonas-green",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.84,
+    "title": "1 LB",
+    "variant_id": "47517770317998"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 46.74,
+    "title": "5 LB",
+    "variant_id": "47517770350766"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 136.2,
+    "title": "20 LB",
+    "variant_id": "47517770383534"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "3102b0c794282f96",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-virgin-mountian-grade-a-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Screenshot2024-02-27at4.03.58PM.jpg?v=1709144885",
+  "platform": "shopify",
+  "product_id": "9037256032430",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Papua New Guinea",
+   "Sweet",
+   "good for any roast level",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "Papua New Guinea Virgin Mountain - Green",
+  "url": "https://www.bodhileafcoffee.com/products/papua-new-guinea-virgin-mountian-grade-a-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.16,
+    "title": "1 LB",
+    "variant_id": "47611798290606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.26,
+    "title": "5 LB",
+    "variant_id": "47611798323374"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 178.82,
+    "title": "20 LB",
+    "variant_id": "47611798356142"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "89afbebeb6937ae8",
+  "first_seen": "2026-10-26",
+  "handle": "kau-typica-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/BeeInFlower.jpg?v=1776722574",
+  "platform": "shopify",
+  "product_id": "9084939960494",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Coffee Week",
+   "Green Coffee",
+   "Hawaii",
+   "Kona",
+   "Natural",
+   "Various",
+   "latest"
+  ],
+  "title": "Ka'u Typica - Green",
+  "url": "https://www.bodhileafcoffee.com/products/kau-typica-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.75,
+    "title": "1 LB",
+    "variant_id": "47761031168174"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "5d53d3c99473a351",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-valentina-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/image002_1.jpg?v=1737572528",
+  "platform": "shopify",
+  "product_id": "9120304234670",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Fruity",
+   "Green Coffee",
+   "Honduras",
+   "Natural",
+   "good for light roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Honduras Finca La Valentina Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/honduras-finca-la-valentina-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.29,
+    "title": "1 LB",
+    "variant_id": "47890072240302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.63,
+    "title": "5 LB",
+    "variant_id": "47890072273070"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 198.7,
+    "title": "20 LB",
+    "variant_id": "47890072305838"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "7731b3f764b52fac",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-valentina-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/image002_2.jpg?v=1737572234",
+  "platform": "shopify",
+  "product_id": "9120306954414",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Fruity",
+   "Honduras",
+   "Natural",
+   "good for light roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Honduras Finca La Valentina Natural",
+  "url": "https://www.bodhileafcoffee.com/products/honduras-finca-la-valentina-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "47890088984750"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "665319342d46cc4f",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-honduras-finca-valentina",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF1543-square.jpg?v=1779555100",
+  "platform": "shopify",
+  "product_id": "9124180328622",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Fruity",
+   "Honduras",
+   "Light",
+   "Natural",
+   "Roasted Coffee",
+   "juicy"
+  ],
+  "title": "Roasted - Honduras Finca Valentina",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-honduras-finca-valentina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47898972749998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "47898972782766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "47898972815534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "47898972848302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47923936264366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.95,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "47923936297134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.95,
+    "title": "5lb / Ground - Pour Over",
+    "variant_id": "47923936329902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.95,
+    "title": "5lb / Ground - Auto Drip",
+    "variant_id": "47923936362670"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "e920cfc446f6c6f8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-coyolar-san-ramon-caturra-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/guatemala-2323_2_8bc6c7c4-6bec-470f-bcc9-5048e11098ea.jpg?v=1727389999",
+  "platform": "shopify",
+  "product_id": "9136829202606",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Floral",
+   "Green Coffee",
+   "Guatemala",
+   "caturra",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala Finca El Coyolar San Ramón & Caturra Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-finca-el-coyolar-san-ramon-caturra-washed-green",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.73,
+    "title": "1 LB",
+    "variant_id": "47935980175534"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 46.22,
+    "title": "5 LB",
+    "variant_id": "47935980208302"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 171.25,
+    "title": "20 LB",
+    "variant_id": "47935980241070"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "46f9e2897a2e997c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-quejina-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/guatemala-2381.jpg?v=1780422168",
+  "platform": "shopify",
+  "product_id": "9136832938158",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Guatemala",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala Finca Quejina Washed",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-finca-quejina-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "47935998623918"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "b63693777b146e28",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-quejina-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/guatemala-2381_1330f674-6601-4c7a-8527-599d4954ce36.jpg?v=1780422457",
+  "platform": "shopify",
+  "product_id": "9136833986734",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Guatemala",
+   "caturra",
+   "citrusy",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala Finca Quejina Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-finca-quejina-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.73,
+    "title": "1 LB",
+    "variant_id": "47936015630510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.22,
+    "title": "5 LB",
+    "variant_id": "47936015663278"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 171.25,
+    "title": "20 LB",
+    "variant_id": "47936015696046"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "e57ffbf8a289c784",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-mirador-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/guatemala-2449.jpg?v=1780422942",
+  "platform": "shopify",
+  "product_id": "9136836346030",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Guatemala",
+   "citrusy",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala Finca El Mirador Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-finca-el-mirador-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.73,
+    "title": "1 LB",
+    "variant_id": "47936024641710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.22,
+    "title": "5 LB",
+    "variant_id": "47936024674478"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 171.25,
+    "title": "20 LB",
+    "variant_id": "47936024707246"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "188ed67679cbd948",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-mirador-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/guatemala-2449_025d272d-16ba-4df8-bfd3-4e1efbeea4e3.jpg?v=1780423509",
+  "platform": "shopify",
+  "product_id": "9136837394606",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Guatemala",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala Finca El Mirador Washed",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-finca-el-mirador-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "47936032473262"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "cece24136974240a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-riripa-sidamo-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/ethiopia-1296-square.jpg?v=1784047501",
+  "platform": "shopify",
+  "product_id": "9180259123374",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Fruity",
+   "Green Coffee",
+   "good for light roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Ethiopia Riripa Sidamo Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-riripa-sidamo-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.73,
+    "title": "1 LB",
+    "variant_id": "48092319252654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.97,
+    "title": "5 LB",
+    "variant_id": "48092319285422"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 173.01,
+    "title": "20 LB",
+    "variant_id": "48092319318190"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "f2036c9510b666f1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-shakiso-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/PHOTO-2023-08-11-16-25-10_1.jpg?v=1694212307",
+  "platform": "shopify",
+  "product_id": "9184174080174",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "citrusy",
+   "good for any roast level",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "Ethiopia Shakiso Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-shakiso-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.07,
+    "title": "1 LB",
+    "variant_id": "48105835724974"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.58,
+    "title": "5 LB",
+    "variant_id": "48105835757742"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 194.83,
+    "title": "20 LB",
+    "variant_id": "48105835790510"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "63c05704ccb322c8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-shakiso-washed-gr2-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/PHOTO-2023-08-11-16-25-10.jpg?v=1694212112",
+  "platform": "shopify",
+  "product_id": "9184185057454",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "good for any roast level",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "Ethiopia Shakiso Washed Gr1",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-shakiso-washed-gr2-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "48105856401582"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "61fc759a216d4cf4",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-arufa-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/png_p1020021_48581374472_o.jpg?v=1651533131",
+  "platform": "shopify",
+  "product_id": "9206601056430",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Natural",
+   "Papua New Guinea",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "tropical"
+  ],
+  "title": "Papua New Guinea Arufa Natural",
+  "url": "https://www.bodhileafcoffee.com/products/papua-new-guinea-arufa-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "48889730597038"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "265cd608112c046d",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-arufa-natural-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/png_p1020021_48581374472_o_1.jpg?v=1651533171",
+  "platform": "shopify",
+  "product_id": "9206603645102",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Natural",
+   "Papua New Guinea",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "tropical"
+  ],
+  "title": "Papua New Guinea Arufa Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/papua-new-guinea-arufa-natural-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.11,
+    "title": "1 LB",
+    "variant_id": "48889741770926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.52,
+    "title": "5 LB",
+    "variant_id": "48889741803694"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 213.14,
+    "title": "20 LB",
+    "variant_id": "48889741836462"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "5342911494e94dae",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-plumeria",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/tq23okaw_771c09d1-da76-4ff9-b2c6-09ff5b70fd91.jpg?v=1737415498",
+  "platform": "shopify",
+  "product_id": "9206606758062",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Nicaragua",
+   "citrusy",
+   "good for any roast level",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "Nicaragua Plumeria",
+  "url": "https://www.bodhileafcoffee.com/products/nicaragua-plumeria",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "48889751011502"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "ecbd2f96f88c8bfb",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-segovia-green-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/tq23okaw_1_9c2fe327-765b-4f55-ae2e-91b37353f0ac.jpg?v=1737415728",
+  "platform": "shopify",
+  "product_id": "9206611116206",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Fair Trade Organic",
+   "Nicaragua",
+   "Sweet",
+   "good for any roast level",
+   "nutty",
+   "organic",
+   "traditional",
+   "washed"
+  ],
+  "title": "Nicaragua Plumeria - Green",
+  "url": "https://www.bodhileafcoffee.com/products/nicaragua-segovia-green-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.13,
+    "title": "1 LB",
+    "variant_id": "48889760546990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.12,
+    "title": "5 LB",
+    "variant_id": "48889760579758"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 178.29,
+    "title": "20 LB",
+    "variant_id": "48889760612526"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "f7cc1ab1ef84ed3c",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-virgen-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Penderisco-Coop.Salgar_1_fa3e7b22-7f2a-427c-8195-bc2e570ec65c.jpg?v=1720641449",
+  "platform": "shopify",
+  "product_id": "9206613999790",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Nicaragua",
+   "Sweet",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Nicaragua La Virgen Estate",
+  "url": "https://www.bodhileafcoffee.com/products/nicaragua-la-virgen-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "48889765331118"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "6107649507bf016e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-natural-green-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Colombia_d94fc984-5ea4-4299-98e6-f8148a3c6759.png?v=1720642065",
+  "platform": "shopify",
+  "product_id": "9207002103982",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Nicaragua",
+   "Sweet",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Nicaragua La Virgen Estate - Green",
+  "url": "https://www.bodhileafcoffee.com/products/nicaragua-jinotega-natural-green-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.78,
+    "title": "1 LB",
+    "variant_id": "48890240368814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.21,
+    "title": "5 LB",
+    "variant_id": "48890240401582"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 189.73,
+    "title": "20 LB",
+    "variant_id": "48890240434350"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "7cc281829e8da009",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-el-jardin-anaerobic-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/peru-3300_1.jpg?v=1623094616",
+  "platform": "shopify",
+  "product_id": "9207015669934",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for any roast level",
+   "juicy"
+  ],
+  "title": "Honduras El Jardin Anaerobic Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/honduras-el-jardin-anaerobic-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.27,
+    "title": "1 LB",
+    "variant_id": "48890266976430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.03,
+    "title": "5 LB",
+    "variant_id": "48890267009198"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 233.55,
+    "title": "20 LB",
+    "variant_id": "48890267041966"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "57dc7cbb900d72e0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gori-gesha-72hr-anaerobic-natural-gr1-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF1979-square.jpg?v=1786471530",
+  "platform": "shopify",
+  "product_id": "9209941786798",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "gorigesha",
+   "juicy"
+  ],
+  "title": "Ethiopia Gori Gesha 72HR Anaerobic Natural Gr1 - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-gori-gesha-72hr-anaerobic-natural-gr1-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.31,
+    "title": "1 LB",
+    "variant_id": "48903536410798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.22,
+    "title": "5 LB",
+    "variant_id": "48903536443566"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 234.26,
+    "title": "20 LB",
+    "variant_id": "48903536476334"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "4290880438c9114d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gori-gesha-double-anaerobic-natural-gr1-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/EthiopiaCF009947-square.jpg?v=1789671198",
+  "platform": "shopify",
+  "product_id": "9209950994606",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Ethiopia",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "gorigesha",
+   "juicy"
+  ],
+  "title": "Ethiopia Gori Gesha Double Anaerobic Natural Gr1 - Green",
+  "url": "https://www.bodhileafcoffee.com/products/ethiopia-gori-gesha-double-anaerobic-natural-gr1-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.31,
+    "title": "1 LB",
+    "variant_id": "48903572521134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.22,
+    "title": "5 LB",
+    "variant_id": "48903572553902"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 234.26,
+    "title": "20 LB",
+    "variant_id": "48903572586670"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "226d151c4b9fc466",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-corazon-de-jesus-geo-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/CORA26.jpg?v=1787072622",
+  "platform": "shopify",
+  "product_id": "9213806117038",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "juicy"
+  ],
+  "title": "Costa Rica Corazón de Jesús “Geo Natural” - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-corazon-de-jesus-geo-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.13,
+    "title": "1 LB",
+    "variant_id": "48920399937710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.12,
+    "title": "5 LB",
+    "variant_id": "48920399970478"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 248.69,
+    "title": "20 LB",
+    "variant_id": "48920400003246"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "c76e6af0047d47a4",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-victoria-14-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/SONORAPICKERs_low0330.jpg?v=1787073152",
+  "platform": "shopify",
+  "product_id": "9213817159854",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Fruity",
+   "Natural",
+   "good for light roast level",
+   "good for medium roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Costa Rica Hacienda Sonora Victoria 14 Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-sonora-victoria-14-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.13,
+    "title": "1 LB",
+    "variant_id": "48920465899694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.62,
+    "title": "5 LB",
+    "variant_id": "48920465932462"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 213.49,
+    "title": "20 LB",
+    "variant_id": "48920465965230"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "a542da99ade20b85",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-corazon-de-jesus-geo-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/CORA26_89fafdf8-7a72-45e9-addb-b69e0d248c7a.jpg?v=1787077109",
+  "platform": "shopify",
+  "product_id": "9213837148334",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Experimental",
+   "Fruity",
+   "Natural",
+   "good for any roast level",
+   "juicy"
+  ],
+  "title": "Costa Rica Corazon de Jesus \"Geo Natural\"",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-corazon-de-jesus-geo-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "48920535531694"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "00ce0a5da061c2f8",
+  "first_seen": "2026-10-26",
+  "handle": "laos-gor-village-washed-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/XamTaiWashed2.jpg?v=1787607262",
+  "platform": "shopify",
+  "product_id": "9219618013358",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Laos",
+   "Tea-Like",
+   "citrusy",
+   "good for light roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "Laos Gor Village Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/laos-gor-village-washed-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.24,
+    "title": "1 LB",
+    "variant_id": "48942123843758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.39,
+    "title": "5 LB",
+    "variant_id": "48942123876526"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 197.82,
+    "title": "20 LB",
+    "variant_id": "48942123909294"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "56a14a579807e492",
+  "first_seen": "2026-10-26",
+  "handle": "laos-nala-village-anerobic-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Yunicoffee_81_da786688-2229-4a54-873c-9775cfd88df9.jpg?v=1787607177",
+  "platform": "shopify",
+  "product_id": "9219661398190",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Experimental",
+   "Fruity",
+   "Green Coffee",
+   "Laos",
+   "Natural",
+   "Tea-Like",
+   "good for light roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "Laos Nala Village Anaerobic - Green",
+  "url": "https://www.bodhileafcoffee.com/products/laos-nala-village-anerobic-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.69,
+    "title": "1 LB",
+    "variant_id": "48942174404782"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.28,
+    "title": "5 LB",
+    "variant_id": "48942174437550"
+   },
+   {
+    "available": false,
+    "grams": 9072,
+    "price_usd": 223.34,
+    "title": "20 LB",
+    "variant_id": "48942174470318"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "6c8e8548890dc644",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-sonrisa-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSC_0764-16_1.jpg?v=1689100765",
+  "platform": "shopify",
+  "product_id": "9239298670766",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Green Coffee",
+   "Sweet",
+   "citrusy",
+   "good for any roast level",
+   "nutty",
+   "traditional",
+   "washed"
+  ],
+  "title": "Costa Rica La Sonrisa - Green",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-la-sonrisa-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.22,
+    "title": "1 LB",
+    "variant_id": "49287077691566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 43.8,
+    "title": "5 LB",
+    "variant_id": "49287077724334"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 162.27,
+    "title": "20 LB",
+    "variant_id": "49287077757102"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "6c8e8548890dc644",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-sonrisa",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSC_0764-16.jpg?v=1689100526",
+  "platform": "shopify",
+  "product_id": "9239300604078",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Costa Rica",
+   "Sweet",
+   "good for any roast level",
+   "nutty",
+   "traditional",
+   "washed"
+  ],
+  "title": "Costa Rica La Sonrisa",
+  "url": "https://www.bodhileafcoffee.com/products/costa-rica-la-sonrisa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "49287086276782"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "06c8c29bbc04be2c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-martin-organic-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/IMG_5639_1.jpg?v=1669850077",
+  "platform": "shopify",
+  "product_id": "9239391142062",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Guatemala",
+   "Sweet",
+   "good for any roast level",
+   "nutty",
+   "organic",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala San Martin Organic - Green",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-san-martin-organic-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.56,
+    "title": "1 LB",
+    "variant_id": "49287206109358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.41,
+    "title": "5 LB",
+    "variant_id": "49287206142126"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 168.26,
+    "title": "20 LB",
+    "variant_id": "49287206174894"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "213d6a2c075a0b6c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-martin-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/IMG_5639.jpg?v=1669835010",
+  "platform": "shopify",
+  "product_id": "9239434985646",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Guatemala",
+   "Sweet",
+   "good for any roast level",
+   "nutty",
+   "organic",
+   "traditional",
+   "washed"
+  ],
+  "title": "Guatemala San Martin Organic",
+  "url": "https://www.bodhileafcoffee.com/products/guatemala-san-martin-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "49287257718958"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "98c6045bf234d875",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-windrush-estate-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/kenya-5034.jpg?v=1788388503",
+  "platform": "shopify",
+  "product_id": "9239605837998",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Kenya",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Kenya Windrush Estate AB",
+  "url": "https://www.bodhileafcoffee.com/products/kenya-windrush-estate-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "49287726071982"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "250e41a968e780c6",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-windrush-estate-ab-green-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/kenya-5034_2be06ada-3ed9-4544-97dd-9988fe442dca.jpg?v=1788388883",
+  "platform": "shopify",
+  "product_id": "9239609639086",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Green Coffee",
+   "Kenya",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional",
+   "washed"
+  ],
+  "title": "Kenya Windrush Estate AB - Green",
+  "url": "https://www.bodhileafcoffee.com/products/kenya-windrush-estate-ab-green-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.31,
+    "title": "1 LB",
+    "variant_id": "49287754711214"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.47,
+    "title": "5 LB",
+    "variant_id": "49287754743982"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 216.66,
+    "title": "20 LB",
+    "variant_id": "49287754776750"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "aae5c0d9657aeb9d",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-laos-gor-village",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/DSF4061-square.jpg?v=1788555927",
+  "platform": "shopify",
+  "product_id": "9250826354862",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "Laos",
+   "Light",
+   "Roasted Coffee",
+   "tea like",
+   "washed"
+  ],
+  "title": "Roasted - Laos Gor Village",
+  "url": "https://www.bodhileafcoffee.com/products/roasted-laos-gor-village",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49307971289262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "49307971322030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Ground - Pour Over",
+    "variant_id": "49307971354798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Ground - Auto Drip",
+    "variant_id": "49307971387566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49307971420334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "49307971453102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "5lb / Ground - Pour Over",
+    "variant_id": "49307971485870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "5lb / Ground - Auto Drip",
+    "variant_id": "49307971518638"
+   }
+  ],
+  "vendor": "Bodhi Leaf"
+ },
+ {
+  "body_hash": "1e8e4b4c58096f71",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-reforma-geisha-natural-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/Picture7_1b03d9bd-9593-463c-95d5-be9e59f18e05.jpg?v=1788892505",
+  "platform": "shopify",
+  "product_id": "9261094666414",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Floral",
+   "Green Coffee",
+   "Natural",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "El Salvador La Reforma Geisha Natural - Green",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-la-reforma-geisha-natural-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.04,
+    "title": "1 LB",
+    "variant_id": "49329798938798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.94,
+    "title": "5 LB",
+    "variant_id": "49329798971566"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 299.9,
+    "title": "20 LB",
+    "variant_id": "49329799004334"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "17dbb32a79b18206",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-reforma-geisha-washed-green",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/picking.jpg?v=1788892329",
+  "platform": "shopify",
+  "product_id": "9261118390446",
+  "product_type": "Green Coffee",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Floral",
+   "Green Coffee",
+   "Tea-Like",
+   "citrusy",
+   "good for any roast level",
+   "traditional",
+   "washed"
+  ],
+  "title": "El Salvador La Reforma Geisha Washed - Green",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-la-reforma-geisha-washed-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.71,
+    "title": "1 LB",
+    "variant_id": "49329837244590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.12,
+    "title": "5 LB",
+    "variant_id": "49329837277358"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 241.3,
+    "title": "20 LB",
+    "variant_id": "49329837310126"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "bb88c5186aebc085",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-reforma-geisha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/products/Picture7.jpg?v=1621289211",
+  "platform": "shopify",
+  "product_id": "9261156532398",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Floral",
+   "Natural",
+   "citrusy",
+   "good for any roast level",
+   "juicy",
+   "traditional"
+  ],
+  "title": "El Salvador La Reforma Geisha Natural",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-la-reforma-geisha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "49329896652974"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ },
+ {
+  "body_hash": "2a7fc6bd195f8eda",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-reforma-geisha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0731/1669/files/picking_75f5af1b-8c7c-4a44-88ed-3a9bb06360d7.jpg?v=1788894077",
+  "platform": "shopify",
+  "product_id": "9261168885934",
+  "product_type": "Commercial",
+  "roaster_slug": "bodhileafcoffee",
+  "tags": [
+   "El Salvador",
+   "Floral",
+   "citrusy",
+   "good for any roast level",
+   "tea like",
+   "traditional",
+   "washed"
+  ],
+  "title": "El Salvador La Reforma Geisha Washed",
+  "url": "https://www.bodhileafcoffee.com/products/el-salvador-la-reforma-geisha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "49329924374702"
+   }
+  ],
+  "vendor": "Bodhi Leaf Coffee"
+ }
+]

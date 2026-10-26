@@ -1,0 +1,2688 @@
+[
+ {
+  "body_hash": "a627ad9fe727c123",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-natural-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/LE-Kenya-Natural-12oz-Badge.jpg?v=1792683646",
+  "platform": "shopify",
+  "product_id": "15438645297214",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Espresso",
+   "Limited Edition",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "KENYA LIMITED EDITION",
+  "url": "https://www.domacoffee.com/products/kenya-natural-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67938868396094"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "dac7ed0bf055264c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/SO-Brazil-Minas-Gerais-2026-12oz.jpg?v=1786977014",
+  "platform": "shopify",
+  "product_id": "2185146695742",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Espresso",
+   "Light to Medium",
+   "Single Origin"
+  ],
+  "title": "BRAZIL",
+  "url": "https://www.domacoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Chemex",
+    "variant_id": "19910694567998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Drip",
+    "variant_id": "19910706528318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / French Press",
+    "variant_id": "19910706561086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "19910706593854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "19910706659390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Drip",
+    "variant_id": "19910706692158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / French Press",
+    "variant_id": "19910706724926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "19910706757694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / Chemex",
+    "variant_id": "19910706823230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / Drip",
+    "variant_id": "19910706855998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / French Press",
+    "variant_id": "19910706888766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / Espresso",
+    "variant_id": "19910706954302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31663820341310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31663822241854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31663822700606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366601601086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "32366601633854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.5,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "32366601666622"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "4bcd55d4d2c4081e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/Colombia-Narino-12oz.jpg?v=1777649557",
+  "platform": "shopify",
+  "product_id": "2185157902398",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Espresso",
+   "Light to Medium",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "COLOMBIA",
+  "url": "https://www.domacoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Chemex",
+    "variant_id": "19910722879550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Drip",
+    "variant_id": "19910722912318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / French Press",
+    "variant_id": "19910722945086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "19910722977854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "19910723010622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Chemex",
+    "variant_id": "19910723076158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Drip",
+    "variant_id": "19910723108926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press",
+    "variant_id": "19910723141694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Espresso",
+    "variant_id": "19910723174462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "19910723207230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / Chemex",
+    "variant_id": "19910723239998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / Drip",
+    "variant_id": "19910723272766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / French Press",
+    "variant_id": "19910723305534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19910723338302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19910723371070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366604714046"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366604746814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366604779582"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "2a7786335cf4ab0c",
+  "first_seen": "2026-10-26",
+  "handle": "carmelas",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Carmela_s-12oz.jpg?v=1760539982",
+  "platform": "shopify",
+  "product_id": "2185171763262",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Light to Medium"
+  ],
+  "title": "CARMELA'S",
+  "url": "https://www.domacoffee.com/products/carmelas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "19910772949054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "19910772981822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "19910773047358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "19910773080126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "19910773112894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Chemex",
+    "variant_id": "19910773145662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Drip",
+    "variant_id": "19910773178430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / French Press",
+    "variant_id": "19910773211198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Espresso",
+    "variant_id": "19910773243966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "19910773276734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Chemex",
+    "variant_id": "19910773309502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Drip",
+    "variant_id": "19910773342270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / French Press",
+    "variant_id": "19910773375038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Espresso",
+    "variant_id": "19910773407806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "19910773440574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366601797694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "32366601830462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "32366601863230"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "afd709a7ca1d5e33",
+  "first_seen": "2026-10-26",
+  "handle": "marcos",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/MARCO_S-12oz.jpg?v=1738181869",
+  "platform": "shopify",
+  "product_id": "2208095109182",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "MARCO'S",
+  "url": "https://www.domacoffee.com/products/marcos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "20029297426494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "20029297459262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "20029297524798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20029314498622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Chemex",
+    "variant_id": "20029314990142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Chemex",
+    "variant_id": "20029323542590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "20029329113150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20029330587710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "20029330784318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Drip",
+    "variant_id": "20029335306302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Drip",
+    "variant_id": "20029335339070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / French Press",
+    "variant_id": "20029335896126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / French Press",
+    "variant_id": "20029335928894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Espresso",
+    "variant_id": "20029341696062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Espresso",
+    "variant_id": "20029341728830"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366612512830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "32366612545598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "32366612578366"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "41e0fbb38e0d14b7",
+  "first_seen": "2026-10-26",
+  "handle": "chronic",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/The-Chronic-12oz.jpg?v=1792159412",
+  "platform": "shopify",
+  "product_id": "2340161486910",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "CHRONIC",
+  "url": "https://www.domacoffee.com/products/chronic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "20652691914814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20652738183230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "20652738215998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20652738248766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "20652738281534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole Bean",
+    "variant_id": "20652738314302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "20652738347070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "20652738379838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "20652738412606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Home Espresso",
+    "variant_id": "20652738445374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "20652738478142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20652738510910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "20652738543678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "20652738576446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Home Espresso",
+    "variant_id": "20652738609214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366602190910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366602256446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366602289214"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f41c772be8d029b2",
+  "first_seen": "2026-10-26",
+  "handle": "chronic-super-dank",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/Super-Dank-12oz.jpg?v=1792159751",
+  "platform": "shopify",
+  "product_id": "2415325216830",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "CHRONIC SUPER DANK",
+  "url": "https://www.domacoffee.com/products/chronic-super-dank",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "20930524151870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20930524184638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "20930524250174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20930524315710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "20930524381246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole Bean",
+    "variant_id": "20930524414014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "20930524446782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "20930524512318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "20930524545086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Home Espresso",
+    "variant_id": "20930524610622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "20930524643390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20930524676158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "20930524708926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "20930524741694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Home Espresso",
+    "variant_id": "20930524774462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366604288062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366604320830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366604353598"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "15ef6a184e0f9554",
+  "first_seen": "2026-10-26",
+  "handle": "rubys",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/Rubys-12oz.jpg?v=1792160456",
+  "platform": "shopify",
+  "product_id": "2415356051518",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "RÜBY’S",
+  "url": "https://www.domacoffee.com/products/rubys",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "20930647294014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20930688942142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "20930688974910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20930689007678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "20930689040446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole Bean",
+    "variant_id": "20930689073214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "20930689105982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "20930689138750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "20930689171518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Espresso",
+    "variant_id": "20930689204286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "20930689237054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20930689269822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "20930689302590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "20930689335358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Espresso",
+    "variant_id": "20930689368126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366613069886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366613102654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366613168190"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f00d1b764f69560e",
+  "first_seen": "2026-10-26",
+  "handle": "virgils",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Virgil_s-12oz.jpg?v=1678107351",
+  "platform": "shopify",
+  "product_id": "2419390152766",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "VIRGIL'S",
+  "url": "https://www.domacoffee.com/products/virgils",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole bean",
+    "variant_id": "20946177261630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20946177294398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "20946177327166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20946177359934"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "20946177392702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole bean",
+    "variant_id": "20946177425470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "20946177458238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "20946177491006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "20946177523774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Espresso",
+    "variant_id": "20946177556542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "20946177589310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20946177622078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "20946177654846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "20946177687614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Espresso",
+    "variant_id": "20946177720382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366617428030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366617460798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366617493566"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "dfeec0bc5d8fd927",
+  "first_seen": "2026-10-26",
+  "handle": "vitos",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Vito_s-12oz.jpg?v=1678107430",
+  "platform": "shopify",
+  "product_id": "2419405193278",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Light to Medium"
+  ],
+  "title": "VITO'S",
+  "url": "https://www.domacoffee.com/products/vitos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole bean",
+    "variant_id": "20946218385470"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "20946218418238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "20946218483774"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "20946218516542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole bean",
+    "variant_id": "20946218549310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "20946218582078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "20946218647614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Espresso",
+    "variant_id": "20946218680382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "20946218713150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20946218745918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "20946218811454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Espresso",
+    "variant_id": "20946218844222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366618181694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366618214462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366618247230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "39819136925758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "39819136958526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "39819136991294"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "44af0da98e277405",
+  "first_seen": "2026-10-26",
+  "handle": "bella-luna",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Bella-Luna-12oz.jpg?v=1678106204",
+  "platform": "shopify",
+  "product_id": "2419425837118",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Medium to Dark",
+   "Single Origin"
+  ],
+  "title": "BELLA LUNA - DECAF",
+  "url": "https://www.domacoffee.com/products/bella-luna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Whole bean",
+    "variant_id": "20946276679742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Chemex",
+    "variant_id": "20946276712510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Drip",
+    "variant_id": "20946276745278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / French Press",
+    "variant_id": "20946276778046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Espresso",
+    "variant_id": "20946276810814"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Whole bean",
+    "variant_id": "20946276843582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Chemex",
+    "variant_id": "20946276876350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Drip",
+    "variant_id": "20946276941886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / French Press",
+    "variant_id": "20946276974654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Espresso",
+    "variant_id": "20946277040190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "20946277105726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20946277171262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Drip",
+    "variant_id": "20946277204030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / French Press",
+    "variant_id": "20946277236798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Espresso",
+    "variant_id": "20946277302334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366598586430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366598619198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366598651966"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a48849221df363fa",
+  "first_seen": "2026-10-26",
+  "handle": "jackie-oh",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Jackie-Oh-12oz.jpg?v=1678106829",
+  "platform": "shopify",
+  "product_id": "2419437043774",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "JACKIE OH - DECAF",
+  "url": "https://www.domacoffee.com/products/jackie-oh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Whole bean",
+    "variant_id": "20946304270398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Chemex",
+    "variant_id": "20946304303166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Drip",
+    "variant_id": "20946304335934"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / French Press",
+    "variant_id": "20946304368702"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Espresso",
+    "variant_id": "20946304401470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Whole bean",
+    "variant_id": "20946304434238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Chemex",
+    "variant_id": "20946304467006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Drip",
+    "variant_id": "20946304499774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / French Press",
+    "variant_id": "20946304532542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Espresso",
+    "variant_id": "20946304565310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "20946304598078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Chemex",
+    "variant_id": "20946304630846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Drip",
+    "variant_id": "20946304663614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / French Press",
+    "variant_id": "20946304696382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Espresso",
+    "variant_id": "20946304729150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366611071038"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.05,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366611136574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366611169342"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a9af2edfa99c65b9",
+  "first_seen": "2026-10-26",
+  "handle": "la-bicicletta",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/La-Bicicletta-12oz_d4cc6d4e-dff9-4717-b806-0e3156b9d732.jpg?v=1792159977",
+  "platform": "shopify",
+  "product_id": "4471383031870",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Medium to Dark",
+   "Organic"
+  ],
+  "title": "LA BICICLETTA",
+  "url": "https://www.domacoffee.com/products/la-bicicletta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Whole bean",
+    "variant_id": "31659307204670"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "31659307237438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Drip",
+    "variant_id": "31659307270206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / French Press",
+    "variant_id": "31659307302974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "31659307335742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Whole bean",
+    "variant_id": "31659307368510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Chemex",
+    "variant_id": "31659307401278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Drip",
+    "variant_id": "31659307434046"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / French Press",
+    "variant_id": "31659307466814"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Espresso",
+    "variant_id": "31659307499582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "31659307532350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Chemex",
+    "variant_id": "31659307565118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Drip",
+    "variant_id": "31659307597886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / French Press",
+    "variant_id": "31659307630654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Espresso",
+    "variant_id": "31659307663422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366611824702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366611857470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366611923006"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a0ab874ca727bccd",
+  "first_seen": "2026-10-26",
+  "handle": "deep",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/DEEP-12oz.jpg?v=1761149312",
+  "platform": "shopify",
+  "product_id": "4471384932414",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Light to Medium",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "DEEP",
+  "url": "https://www.domacoffee.com/products/deep",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Whole bean",
+    "variant_id": "31659316019262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "31659316052030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Drip",
+    "variant_id": "31659316084798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / French Press",
+    "variant_id": "31659316117566"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "31659316150334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Whole bean",
+    "variant_id": "31659316183102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Chemex",
+    "variant_id": "31659316215870"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Drip",
+    "variant_id": "31659316248638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / French Press",
+    "variant_id": "31659316281406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Espresso",
+    "variant_id": "31659316314174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "31659316346942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Chemex",
+    "variant_id": "31659316379710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Drip",
+    "variant_id": "31659316412478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / French Press",
+    "variant_id": "31659316445246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Espresso",
+    "variant_id": "31659316478014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "32366605402174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32366605434942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32366605467710"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6339191c97702a71",
+  "first_seen": "2026-10-26",
+  "handle": "dominics-1",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/products/Dominic_s-12oz.jpg?v=1678106645",
+  "platform": "shopify",
+  "product_id": "4543672385598",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Blends",
+   "Light to Medium",
+   "Organic"
+  ],
+  "title": "DOMINIC'S",
+  "url": "https://www.domacoffee.com/products/dominics-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Whole bean",
+    "variant_id": "31959677567038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "31959677599806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Drip",
+    "variant_id": "31959677632574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / French Press",
+    "variant_id": "31959677665342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "31959677698110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole bean",
+    "variant_id": "31959677894718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "31959677927486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "31959677960254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "31959677993022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Espresso",
+    "variant_id": "31959678025790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole bean",
+    "variant_id": "31959678058558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "31959678091326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "31959678124094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "31959678156862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Espresso",
+    "variant_id": "31959678189630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "31992359747646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "31992368398398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "31992377638974"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "78e906f7e848e3df",
+  "first_seen": "2026-10-26",
+  "handle": "lucias",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/Lucias-12oz.jpg?v=1792160215",
+  "platform": "shopify",
+  "product_id": "4726561570878",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Medium to Dark",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "LUCIA'S",
+  "url": "https://www.domacoffee.com/products/lucias",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32452871979070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / Chemex",
+    "variant_id": "32452872011838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / Drip",
+    "variant_id": "32452872044606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / French Press",
+    "variant_id": "32452872077374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / Espresso",
+    "variant_id": "32452872110142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.35,
+    "title": "12oz / Cold Brew",
+    "variant_id": "32452872142910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32452872175678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Chemex",
+    "variant_id": "32452872208446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Drip",
+    "variant_id": "32452872241214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / French Press",
+    "variant_id": "32452872273982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Espresso",
+    "variant_id": "32452872306750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.85,
+    "title": "2lb / Cold Brew",
+    "variant_id": "32452872339518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32452872372286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Chemex",
+    "variant_id": "32452872405054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Drip",
+    "variant_id": "32452872437822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / French Press",
+    "variant_id": "32452872470590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Espresso",
+    "variant_id": "32452872503358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.1,
+    "title": "5lb / Cold Brew",
+    "variant_id": "32452872536126"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "eef5102e4caaead1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/SO-Guatemala-Huehuetenango-12oz-badge.jpg?v=1792770652",
+  "platform": "shopify",
+  "product_id": "7077552619582",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Light to Medium",
+   "Single Origin"
+  ],
+  "title": "GUATEMALA",
+  "url": "https://www.domacoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39878432063550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "39878432096318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / French Press",
+    "variant_id": "39878432129086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Chemex",
+    "variant_id": "39878432161854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Drip",
+    "variant_id": "39878432194622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "39878432227390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39878432260158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "39878432292926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / French Press",
+    "variant_id": "39878432325694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Chemex",
+    "variant_id": "39878432358462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Drip",
+    "variant_id": "39878432391230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Espresso",
+    "variant_id": "39878432423998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39878432456766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "39878432489534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / French Press",
+    "variant_id": "39878432522302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / Chemex",
+    "variant_id": "39878432555070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / Drip",
+    "variant_id": "39878432587838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5 lb / Espresso",
+    "variant_id": "39878432620606"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6eadb33dec479e54",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/SO-Ethiopia-Natural-12oz-Badge.jpg?v=1789165481",
+  "platform": "shopify",
+  "product_id": "7688157200446",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Light to Medium",
+   "Single Origin"
+  ],
+  "title": "ETHIOPIA",
+  "url": "https://www.domacoffee.com/products/ethiopia-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41344766935102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "41344766967870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / French Press",
+    "variant_id": "41344767033406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / Chemex",
+    "variant_id": "41344767066174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / Drip",
+    "variant_id": "41344767164478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.35,
+    "title": "12 oz / Espresso",
+    "variant_id": "41344767230014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41344767262782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "41344767295550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / French Press",
+    "variant_id": "41344767328318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / Chemex",
+    "variant_id": "41344767361086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / Drip",
+    "variant_id": "41344767393854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.6,
+    "title": "2 lb / Espresso",
+    "variant_id": "41344767426622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41344767459390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "41344767492158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / French Press",
+    "variant_id": "41344767524926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / Chemex",
+    "variant_id": "41344767557694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / Drip",
+    "variant_id": "41344767590462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.1,
+    "title": "5 lb / Espresso",
+    "variant_id": "41344767623230"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "cf1cf282265bd548",
+  "first_seen": "2026-10-26",
+  "handle": "the-fermentation-project",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/FermentationProjectBags_7fe05f32-c63c-4eb3-91b2-1cb3beec1c06.jpg?v=1786569576",
+  "platform": "shopify",
+  "product_id": "8202570530878",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Espresso",
+   "Limited Edition",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "THE FERMENTATION PROJECT",
+  "url": "https://www.domacoffee.com/products/the-fermentation-project",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 40.0,
+    "title": "(4) 4oz bags / Whole Bean",
+    "variant_id": "43161884753982"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ },
+ {
+  "body_hash": "2cb733581fc21eb5",
+  "first_seen": "2026-10-26",
+  "handle": "half-caffeinated",
+  "image": "https://cdn.shopify.com/s/files/1/0102/8892/2686/files/HalfCaff-Blend-12oz.jpg?v=1789955506",
+  "platform": "shopify",
+  "product_id": "8215280812094",
+  "product_type": "Coffee Bean",
+  "roaster_slug": "domacoffee",
+  "tags": [
+   "Light to Medium",
+   "Single Origin"
+  ],
+  "title": "HALF CAFFEINATED",
+  "url": "https://www.domacoffee.com/products/half-caffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43196445130814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "43196445163582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / French Press",
+    "variant_id": "43196445196350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Chemex",
+    "variant_id": "43196445229118"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Drip",
+    "variant_id": "43196445261886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "43196445294654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43196445327422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43196445360190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / French Press",
+    "variant_id": "43196445392958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / Chemex",
+    "variant_id": "43196445425726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / Drip",
+    "variant_id": "43196445458494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.6,
+    "title": "2lb / Espresso",
+    "variant_id": "43196445491262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43196445524030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43196445556798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43196445589566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "43196445622334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43196445655102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "43196445687870"
+   }
+  ],
+  "vendor": "DOMA Coffee Roasting Company"
+ }
+]

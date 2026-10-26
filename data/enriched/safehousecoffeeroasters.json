@@ -1,0 +1,72 @@
+{
+ "55fb1a12e4b0369feb7c7fe4": {
+  "body_hash": "ba3294c72ec59a68",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "55fb1bbbe4b04f9cd303083f": {
+  "body_hash": "7bb30d8ca36d981b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5bea26cf21c67c28ef3de588": {
+  "body_hash": "7ad6cdf65eb842e7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "cherry",
+   "hazelnut",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "65cbeae929e08741c97150db": {
+  "body_hash": "0e4f9acb88fe3639",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "stone fruit",
+   "brown sugar",
+   "roasted almond"
+  ],
+  "varietals": []
+ }
+}

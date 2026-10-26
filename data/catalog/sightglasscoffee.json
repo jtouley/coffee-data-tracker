@@ -1,0 +1,3605 @@
+[
+ {
+  "body_hash": "3966767619bd9da6",
+  "first_seen": "2026-10-26",
+  "handle": "women-of-coffee-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/WoC_Colombia_bag_1.png?v=1791932975",
+  "platform": "shopify",
+  "product_id": "10253049168064",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "_badge_Made_By_Women"
+  ],
+  "title": "Women of Coffee: Colombia",
+  "url": "https://sightglasscoffee.com/products/women-of-coffee-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "50427217543360"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / French Press",
+    "variant_id": "50427217576128"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / AeroPress",
+    "variant_id": "50427217608896"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Pour Over",
+    "variant_id": "50427217641664"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Chemex",
+    "variant_id": "50427217674432"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Automatic Drip",
+    "variant_id": "50427217707200"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Percolator/Cold Brew",
+    "variant_id": "50427217739968"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "50427217772736"
+   }
+  ],
+  "vendor": "Siruma"
+ },
+ {
+  "body_hash": "1c169cdae2fbc119",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-la-guitarra-renardo-ovalle-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Guatemala_LaGuitarra_bag_1.png?v=1791933028",
+  "platform": "shopify",
+  "product_id": "10253150585024",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Gift Guide",
+   "Medium Light",
+   "New",
+   "Single Origin",
+   "_badge_New_Arrival",
+   "recharge"
+  ],
+  "title": "Guatemala, Finca La Guitarra, Renardo Ovalle",
+  "url": "https://sightglasscoffee.com/products/guatemala-finca-la-guitarra-renardo-ovalle-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50427633500352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50427633533120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50427633565888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "50427693007040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "50427693039808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "50427693072576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "50427693105344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "50427693138112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "50427693170880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "50427693203648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "50427693236416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "50427693269184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "50427693301952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "50427693334720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "50427693367488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "50427693400256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "50427693433024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "50427693465792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "50427693498560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "50427693531328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "50427693564096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "50427693596864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "50427693629632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "50427693662400"
+   }
+  ],
+  "vendor": "Renardo Ovalle"
+ },
+ {
+  "body_hash": "e05bd9e78dbccb5d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-malaki-estate-florence-jessica-marigi",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Kenya_MalakiEstate_bag_1.png?v=1791933028",
+  "platform": "shopify",
+  "product_id": "10253178306752",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Coffee Bag",
+   "Gift Guide",
+   "Single Origin",
+   "_badge_Made_By_Women",
+   "floral delicate"
+  ],
+  "title": "Kenya, Malaki Estate, Florence & Jessica Marigi",
+  "url": "https://sightglasscoffee.com/products/kenya-malaki-estate-florence-jessica-marigi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50427730657472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50427730690240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50427730723008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / French Press",
+    "variant_id": "50427730755776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / French Press",
+    "variant_id": "50427730788544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / French Press",
+    "variant_id": "50427730821312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / AeroPress",
+    "variant_id": "50427730854080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "50427730886848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "50427730919616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "50427730952384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "50427730985152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "50427731017920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Chemex",
+    "variant_id": "50427731050688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Chemex",
+    "variant_id": "50427731083456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Chemex",
+    "variant_id": "50427731116224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "50427731148992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "50427731181760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "50427731214528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "50427731247296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "50427731280064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "50427731312832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Espresso",
+    "variant_id": "50427731345600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Espresso",
+    "variant_id": "50427731378368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Espresso",
+    "variant_id": "50427731411136"
+   }
+  ],
+  "vendor": "Florence & Jessica Marigi"
+ },
+ {
+  "body_hash": "2d1ab544039d2c07",
+  "first_seen": "2026-10-26",
+  "handle": "owls-howl-organic-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Coffee-Owls-Howl-Espresso-Blend-2026-updated-bag-opt.png?v=1785900181",
+  "platform": "shopify",
+  "product_id": "1077700853875",
+  "product_type": "Espresso",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Coffee Bag",
+   "Espresso",
+   "Gift Guide",
+   "Medium",
+   "Organic",
+   "_badge_All_Time_Favorite",
+   "chocolatey deep"
+  ],
+  "title": "Owl's Howl",
+  "url": "https://sightglasscoffee.com/products/owls-howl-organic-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "15488710017139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "15488739180659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "15488739213427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "15488739246195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "15488739278963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "15488739311731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "15488739344499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "15488739377267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / French Press",
+    "variant_id": "15488739410035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Chemex",
+    "variant_id": "15488739442803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "15488739475571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Espresso",
+    "variant_id": "15488739508339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "15488739541107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "15488739573875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "15488739639411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press",
+    "variant_id": "15488739672179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Chemex",
+    "variant_id": "15488739704947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "15488739737715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Espresso",
+    "variant_id": "15488739770483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "15488739803251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "15488739836019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16451284762739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "16451293446259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "16451298033779"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "24dbbe8ee9d0e095",
+  "first_seen": "2026-10-26",
+  "handle": "banner-dark-organic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Bag-12oz-BLENDS-Organic-Banner_Dark.png?v=1758137225",
+  "platform": "shopify",
+  "product_id": "1204661977203",
+  "product_type": "Blends",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Blends",
+   "Bottomless",
+   "Coffee Bag",
+   "Dark",
+   "chocolatey deep",
+   "recharge"
+  ],
+  "title": "Banner Dark",
+  "url": "https://sightglasscoffee.com/products/banner-dark-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16451929768051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "16452012933235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "16452012966003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "16452012998771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "16452013031539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "16452013064307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "16452013097075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "16452013129843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "16452013162611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "16452013195379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / French Press",
+    "variant_id": "16452013228147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Chemex",
+    "variant_id": "16452013260915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Pour Over",
+    "variant_id": "16452013293683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Espresso",
+    "variant_id": "16452013326451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / AeroPress",
+    "variant_id": "16452013359219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "16452013391987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "16452013424755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "16452013457523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / French Press",
+    "variant_id": "16452013490291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Chemex",
+    "variant_id": "16452013523059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "16452013555827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Espresso",
+    "variant_id": "16452013588595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "16452013621363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "16452013654131"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "a724c2430fb05eec",
+  "first_seen": "2026-10-26",
+  "handle": "blueboon-organic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Coffee-Blueboon-Blend-2026-updated-bag-opt.png?v=1785899735",
+  "platform": "shopify",
+  "product_id": "1204712931443",
+  "product_type": "Blends",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Blends",
+   "Bottomless",
+   "Coffee Bag",
+   "Gift Guide",
+   "Medium",
+   "New",
+   "Organic",
+   "chocolatey deep",
+   "fruited bright",
+   "igg25_gourmet_food"
+  ],
+  "title": "Blueboon",
+  "url": "https://sightglasscoffee.com/products/blueboon-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "16053998026867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "16054102786163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "16054102851699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "16054102917235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "16054102950003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "16054103015539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "16054103048307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "16054103113843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / French Press",
+    "variant_id": "16054103212147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Chemex",
+    "variant_id": "16054103244915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "16054103310451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Espresso",
+    "variant_id": "16054103343219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "16054103408755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "16054103474291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "16054103507059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press",
+    "variant_id": "16054103605363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Chemex",
+    "variant_id": "16054103670899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "16054103736435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Espresso",
+    "variant_id": "16054103801971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "16054103900275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "16054103965811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16451763208307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "16451763568755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "16451771302003"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "b25804210bdccb65",
+  "first_seen": "2026-10-26",
+  "handle": "hunky-dory-organic-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Bag-12oz-BLENDS-Organic-Hunky_Dory.png?v=1758137738",
+  "platform": "shopify",
+  "product_id": "1205063712883",
+  "product_type": "Decaf",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Coffee Bag",
+   "Decaf",
+   "Medium Dark",
+   "Organic",
+   "chocolatey deep",
+   "floral delicate",
+   "recharge"
+  ],
+  "title": "Hunky Dory Decaf",
+  "url": "https://sightglasscoffee.com/products/hunky-dory-organic-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "12299234377843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / French Press",
+    "variant_id": "15488785088627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Chemex",
+    "variant_id": "15488785121395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "15488785154163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Espresso",
+    "variant_id": "15488785186931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / AeroPress",
+    "variant_id": "15488785219699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "15488785252467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "15488785285235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / French Press",
+    "variant_id": "15488785318003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Chemex",
+    "variant_id": "15488785350771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "15488785383539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Espresso",
+    "variant_id": "15488785416307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / AeroPress",
+    "variant_id": "15488785449075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "15488785481843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "15488785514611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / French Press",
+    "variant_id": "15488785547379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Chemex",
+    "variant_id": "15488785580147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "15488785612915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Espresso",
+    "variant_id": "15488785645683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "15488785678451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "15488785711219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "16452236771443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "16452239884403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "16452252467315"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "45ff5e3d7bbe0c41",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-series",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Single-Origin-Series-Subscription.jpg?v=1761198590",
+  "platform": "shopify",
+  "product_id": "1545686843507",
+  "product_type": "Series",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Subscription",
+   "igg25_gourmet_food"
+  ],
+  "title": "Single Origin Series",
+  "url": "https://sightglasscoffee.com/products/single-origin-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29178362101875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "29178367213683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "29178367246451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "29178367279219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "29178367311987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "29178367344755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "29178367377523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "29178367410291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "29178367443059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / French Press",
+    "variant_id": "29178367475827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / AeroPress",
+    "variant_id": "29178367508595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Pour Over",
+    "variant_id": "29178367541363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Chemex",
+    "variant_id": "29178367574131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "29178367606899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Cold Brew",
+    "variant_id": "29178367639667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb / Espresso",
+    "variant_id": "29178367672435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29178367705203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / French Press",
+    "variant_id": "29178367737971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "29178367770739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "29178367803507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Chemex",
+    "variant_id": "29178367836275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "29178367869043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "29178367901811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5lb / Espresso",
+    "variant_id": "29178367934579"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "e974fa62a4032bcd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-alcatraz-wilfredo-ule-vargas-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Colombia-Finca-Alcatraz-Caturra.png?v=1775522168",
+  "platform": "shopify",
+  "product_id": "2017499840627",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless"
+  ],
+  "title": "Colombia, Finca Alcatraz, Wilfredo Ule Vargas, Caturra",
+  "url": "https://sightglasscoffee.com/products/colombia-finca-alcatraz-wilfredo-ule-vargas-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "18438404767859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "18438404800627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "18438404833395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "18438404866163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "18438404898931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "18438404931699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "18438404964467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "18438404997235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "18438405030003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "18438405062771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "18438405095539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "18438405128307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "18438405161075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "18438405193843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "18438405226611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "18438405259379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "18438405292147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "18438405324915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "18438405357683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "18438405390451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "18438405423219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18621781278835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "18621781311603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18621781344371"
+   }
+  ],
+  "vendor": "Wilfredo Ule Vargas"
+ },
+ {
+  "body_hash": "d492ed18bb712702",
+  "first_seen": "2026-10-26",
+  "handle": "toketee-organic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Bag-12oz-BLENDS-Organic-Toketee.png?v=1762743663",
+  "platform": "shopify",
+  "product_id": "3957628862579",
+  "product_type": "Blends",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Blends",
+   "Bottomless",
+   "Coffee",
+   "Coffee Bag",
+   "Medium Dark",
+   "Organic",
+   "chocolatey deep"
+  ],
+  "title": "Toketee",
+  "url": "https://sightglasscoffee.com/products/toketee-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29578659135603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "29578659168371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "29578659201139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "29578659233907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "29578659266675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "29578659299443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "29578659332211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "29578659364979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "29578659397747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / French Press",
+    "variant_id": "29578659430515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "29578659463283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "29578659496051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Chemex",
+    "variant_id": "29578659528819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "29578659561587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "29578659594355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Espresso",
+    "variant_id": "29578659627123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29578659659891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press",
+    "variant_id": "29578659692659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "29578659725427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "29578659758195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Chemex",
+    "variant_id": "29578659790963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "29578659823731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "29578659856499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Espresso",
+    "variant_id": "29578659889267"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "f3febe37e06f8319",
+  "first_seen": "2026-10-26",
+  "handle": "crown-point-organic-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Coffee-Crown-Point-Espresso-Blend-2026-updated-bag-opt.png?v=1786063039",
+  "platform": "shopify",
+  "product_id": "4557007454323",
+  "product_type": "Espresso",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Coffee Bag",
+   "Espresso",
+   "Medium Dark",
+   "New",
+   "Organic",
+   "fruited bright"
+  ],
+  "title": "Crown Point",
+  "url": "https://sightglasscoffee.com/products/crown-point-organic-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31935442616435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "31935442649203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "31935442681971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "31935442714739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "31935442747507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "31935442780275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "31935442813043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "31935442845811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "31935442878579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / French Press",
+    "variant_id": "31935442911347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "31935442944115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "31935442976883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Chemex",
+    "variant_id": "31935443009651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "31935443042419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "31935443075187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.25,
+    "title": "2lb / Espresso",
+    "variant_id": "31935443107955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31935443140723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press",
+    "variant_id": "31935443173491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "31935443206259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "31935443239027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Chemex",
+    "variant_id": "31935443271795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "31935443304563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "31935443337331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31935443370099"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "a18be209a132de13",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-finca-san-luis-silvia-herrera-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Mexico_SilviaHerrera_Gesha_bag_1.png?v=1791933028",
+  "platform": "shopify",
+  "product_id": "7425995407552",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "_badge_Made_By_Women"
+  ],
+  "title": "Mexico, Silvia Herrera, Gesha Natural",
+  "url": "https://sightglasscoffee.com/products/mexico-finca-san-luis-silvia-herrera-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43367147962560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / French Press",
+    "variant_id": "50428655206592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "50428655239360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "50428655272128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Chemex",
+    "variant_id": "50428655304896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "50428655337664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "50428655370432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12oz / Espresso",
+    "variant_id": "50428655403200"
+   }
+  ],
+  "vendor": "Silvia Herrera"
+ },
+ {
+  "body_hash": "a74a2e6366657edd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-nueva-esperanza-david-munoz-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Honduras-David-Munoz-Nueva-Esperanza.png?v=1775522199",
+  "platform": "shopify",
+  "product_id": "7426001666240",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless"
+  ],
+  "title": "Honduras, Nueva Esperanza, David Muñoz",
+  "url": "https://sightglasscoffee.com/products/honduras-nueva-esperanza-david-munoz-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43367165788352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "43367165821120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "43367165853888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "43367165886656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "43367165919424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "43367165952192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "43367165984960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "43367166017728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43367166050496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "43367166083264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "43367166116032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43367166148800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "43367166181568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "43367166214336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "43367166247104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43367166279872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43367166312640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "43367166345408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "43367166378176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43367166410944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43367166443712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "43367166476480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "43367166509248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43367166542016"
+   }
+  ],
+  "vendor": "David Muñoz"
+ },
+ {
+  "body_hash": "1c6f549409f4d484",
+  "first_seen": "2026-10-26",
+  "handle": "blend-shuffle-series",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Blend-Shuffle-Series-Subscription_b7fa817b-6d2b-447a-95ad-05187ea9f557.jpg?v=1771384803",
+  "platform": "shopify",
+  "product_id": "7740522660032",
+  "product_type": "Series",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Subscription",
+   "igg25_gourmet_food"
+  ],
+  "title": "Blend Shuffle Series",
+  "url": "https://sightglasscoffee.com/products/blend-shuffle-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44603532050624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44603532312768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press",
+    "variant_id": "47020417515712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "47020417548480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "47020417581248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Chemex",
+    "variant_id": "47020417614016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "47020417646784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "47020417679552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "47020417712320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / French Press",
+    "variant_id": "47020417745088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "47020417777856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "47020417810624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Chemex",
+    "variant_id": "47020417843392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "47020417876160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "47020417908928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.25,
+    "title": "2lb / Espresso",
+    "variant_id": "47020417941696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47020417974464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / French Press",
+    "variant_id": "47020418007232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "47020418040000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47020418072768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Chemex",
+    "variant_id": "47020418105536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "47020418138304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "47020418171072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47020418203840"
+   }
+  ],
+  "vendor": "Sightglass Coffee"
+ },
+ {
+  "body_hash": "716b0296809e4a4e",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-abakundakawa-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Coffee-12oz-Rwanda-Abakundakawa-min.png?v=1765219745",
+  "platform": "shopify",
+  "product_id": "8369467818176",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Floral & Delicate",
+   "Fruited & Bright",
+   "Single Origin",
+   "_badge_Menu_Debut"
+  ],
+  "title": "Rwanda, Abakundakawa",
+  "url": "https://sightglasscoffee.com/products/rwanda-abakundakawa-single-origin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47016759525568"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / French Press",
+    "variant_id": "47016759558336"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Aeropress",
+    "variant_id": "47016759591104"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "47016759623872"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Chemex",
+    "variant_id": "47016759656640"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "47016759689408"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "47016759722176"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Espresso",
+    "variant_id": "47016759754944"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47016759787712"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / French Press",
+    "variant_id": "47016759820480"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Aeropress",
+    "variant_id": "47016759853248"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Pour Over",
+    "variant_id": "47016759886016"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Chemex",
+    "variant_id": "47016759918784"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "47016759951552"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "47016759984320"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Espresso",
+    "variant_id": "47016760017088"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47016760049856"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / French Press",
+    "variant_id": "47016760082624"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "47016760115392"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47016760148160"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Chemex",
+    "variant_id": "47016760180928"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "47016760213696"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "47016760246464"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47016760279232"
+   }
+  ],
+  "vendor": "Abakundakawa Cooperative"
+ },
+ {
+  "body_hash": "8db2f9cdc63a009d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-tagel-alemayehu-hambela",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Coffee-Ethiopia-Tagel-Alemayehu-Hambela-min.png?v=1764789106",
+  "platform": "shopify",
+  "product_id": "8398412316864",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "_badge_Menu_Debut"
+  ],
+  "title": "Ethiopia, Tagel Alemayehu, Hambela",
+  "url": "https://sightglasscoffee.com/products/ethiopia-tagel-alemayehu-hambela",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47117827539136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / French Press",
+    "variant_id": "47117827571904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Aeropress",
+    "variant_id": "47117827604672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "47117827637440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Chemex",
+    "variant_id": "47117827670208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "47117827702976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "47117827735744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz / Espresso",
+    "variant_id": "47117827768512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47117827801280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / French Press",
+    "variant_id": "47117827834048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Aeropress",
+    "variant_id": "47117827866816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Pour Over",
+    "variant_id": "47117827899584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Chemex",
+    "variant_id": "47117827932352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "47117827965120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "47117827997888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2lb / Espresso",
+    "variant_id": "47117828030656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47117828063424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / French Press",
+    "variant_id": "47117828096192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "47117828128960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47117828161728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Chemex",
+    "variant_id": "47117828194496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "47117828227264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "47117828260032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47117828292800"
+   }
+  ],
+  "vendor": "Tagel Alemayehu"
+ },
+ {
+  "body_hash": "58cea6b096d737f1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-alcatraz-wilfredo-ule-vargas-pink-bourbon-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/2026-August-Colombia-PinkBourbon_SM.png?v=1786579277",
+  "platform": "shopify",
+  "product_id": "8572081307840",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [],
+  "title": "Colombia, Finca Alcatraz, Wilfredo Ule Vargas, Pink Bourbon",
+  "url": "https://sightglasscoffee.com/products/colombia-finca-alcatraz-wilfredo-ule-vargas-pink-bourbon-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48261438537920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "48261438570688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "48261438603456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48261438636224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "48261438668992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "48261438701760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "48261438734528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48261438767296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48261438800064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "48261438832832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "48261438865600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48261438898368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "48261438931136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "48261438963904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "48261438996672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "48261439029440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48261439062208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "48261439094976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "48261439127744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48261439160512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "48261439193280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "48261439226048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "48261439258816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48261439291584"
+   }
+  ],
+  "vendor": "Wilfredo Ule Vargas"
+ },
+ {
+  "body_hash": "13276564f423712a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-series-1",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Fellow-Espresso-Series-1-B_01_OwlsHowl-opt.png?v=1785537125",
+  "platform": "shopify",
+  "product_id": "8620353650880",
+  "product_type": "Brewing Gear",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Fellow Wholesale",
+   "Shopify Collective"
+  ],
+  "title": "Fellow Espresso Series 1",
+  "url": "https://sightglasscoffee.com/products/espresso-series-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1499.95,
+    "title": "Black",
+    "variant_id": "48504149442752"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Malted Chocolate + Maple",
+    "variant_id": "48504149475520"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Cherry Red + Walnut",
+    "variant_id": "48504149508288"
+   }
+  ],
+  "vendor": "Fellow"
+ },
+ {
+  "body_hash": "e48ecf1b880ea08f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-worka-chelbessa-yirgacheffe-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/Sightglass-Organic-Ethiopia-Worka-Chelbessa-opt.png?v=1785813832",
+  "platform": "shopify",
+  "product_id": "8664957550784",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Africa",
+   "Bottomless",
+   "Coffee Bag",
+   "Medium Light",
+   "Organic",
+   "Single Origin",
+   "_badge_Roaster_Pick"
+  ],
+  "title": "Ethiopia, Worka Chelbessa, Yirgacheffe, Organic",
+  "url": "https://sightglasscoffee.com/products/ethiopia-worka-chelbessa-yirgacheffe-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48713330491584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "48713330524352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "48713330557120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48713330589888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "48713330622656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "48713330655424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "48713330688192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48713330720960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48713330753728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "48713330786496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "48713330819264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48713330852032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "48713330884800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "48713330917568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "48713330950336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "48713330983104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48713331015872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "48713331048640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "48713331081408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48713331114176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "48713331146944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "48713331179712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "48713331212480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48713331245248"
+   }
+  ],
+  "vendor": "Worka Chelbessa Washing Station"
+ },
+ {
+  "body_hash": "eb613ebb8e8e2214",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-rancho-la-perla-antonia-fuentes-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/2026-September-Mexico-Antonia_Fuentes-Rancho_La_Perla_Upload.png?v=1788271156",
+  "platform": "shopify",
+  "product_id": "8713361064128",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "_badge_Leaving_Soon"
+  ],
+  "title": "Mexico, Rancho La Perla, Antonia Fuentes",
+  "url": "https://sightglasscoffee.com/products/mexico-rancho-la-perla-antonia-fuentes-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48938008805568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "48938008838336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / AeroPress",
+    "variant_id": "48938008871104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48938008903872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Chemex",
+    "variant_id": "48938008936640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "48938008969408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "48938009002176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48938009034944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48938009067712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / French Press",
+    "variant_id": "48938009100480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / AeroPress",
+    "variant_id": "48938009133248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48938009166016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Chemex",
+    "variant_id": "48938009198784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "48938009231552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "48938009264320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.0,
+    "title": "2lb / Espresso",
+    "variant_id": "48938009297088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48938009329856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / French Press",
+    "variant_id": "48938009362624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "48938009395392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48938009428160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Chemex",
+    "variant_id": "48938009460928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "48938009493696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "48938009526464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48938009559232"
+   }
+  ],
+  "vendor": "Antonia Fuentes"
+ },
+ {
+  "body_hash": "e16ebaae0bdb24f5",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiangoi-aa-kirinyaga",
+  "image": "https://cdn.shopify.com/s/files/1/0027/5382/2835/files/2026-September-Kenya-Kiangoi-AA_Upload.png?v=1788271156",
+  "platform": "shopify",
+  "product_id": "8713778757824",
+  "product_type": "Single Origin",
+  "roaster_slug": "sightglasscoffee",
+  "tags": [
+   "Bottomless",
+   "Coffee Bag",
+   "Gift Guide",
+   "Single Origin",
+   "_badge_Leaving_Soon",
+   "floral delicate"
+  ],
+  "title": "Kenya, Kiangoi AA, Kirinyaga",
+  "url": "https://sightglasscoffee.com/products/kenya-kiangoi-aa-kirinyaga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48940446220480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48940446253248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48940446286016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / French Press",
+    "variant_id": "48940446318784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / French Press",
+    "variant_id": "48940446351552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / French Press",
+    "variant_id": "48940446384320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / AeroPress",
+    "variant_id": "48940446417088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / AeroPress",
+    "variant_id": "48940446449856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / AeroPress",
+    "variant_id": "48940446482624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "48940446515392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Pour Over",
+    "variant_id": "48940446548160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48940446580928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Chemex",
+    "variant_id": "48940446613696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Chemex",
+    "variant_id": "48940446646464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Chemex",
+    "variant_id": "48940446679232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Automatic Drip",
+    "variant_id": "48940446712000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Automatic Drip",
+    "variant_id": "48940446744768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Automatic Drip",
+    "variant_id": "48940446777536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Percolator/Cold Brew",
+    "variant_id": "48940446810304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Percolator/Cold Brew",
+    "variant_id": "48940446843072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Percolator/Cold Brew",
+    "variant_id": "48940446875840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48940446908608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.25,
+    "title": "2lb / Espresso",
+    "variant_id": "48940446941376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48940446974144"
+   }
+  ],
+  "vendor": "Gatina Washing Station"
+ }
+]

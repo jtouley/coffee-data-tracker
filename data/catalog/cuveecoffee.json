@@ -1,0 +1,1467 @@
+[
+ {
+  "body_hash": "898304fdf436e1df",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/ColombiaHero.png?v=1781129948",
+  "platform": "shopify",
+  "product_id": "1821106733174",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "HERO",
+   "Medium Roast",
+   "Single Origins",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Colombia",
+  "url": "https://cuveecoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577784971382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175390343286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527247773835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460281770123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460292190347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "47060186759392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47096897274080"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "507305e64ca80a6b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/BrazilHero.png?v=1781131223",
+  "platform": "shopify",
+  "product_id": "1821107519606",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "HERO",
+   "Medium Roast",
+   "Single Origins",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Brazil",
+  "url": "https://cuveecoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "19013167775862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20106777198710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527123091595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460159545483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460168097931"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "1d8a6274776a64e8",
+  "first_seen": "2026-10-26",
+  "handle": "blend-dark-roast-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/WestPoleHero.png?v=1781130926",
+  "platform": "shopify",
+  "product_id": "1821108306038",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roast",
+   "Els PW 13837",
+   "HERO",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "West Pole",
+  "url": "https://cuveecoffee.com/products/blend-dark-roast-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577795883126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175628304502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527691911307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460327809163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460332757131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Whole Bean",
+    "variant_id": "47747484877024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47815532642528"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "22e2a6e992b74d73",
+  "first_seen": "2026-10-26",
+  "handle": "jackalope-decaf-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/JackalopeDecafHero.png?v=1781131021",
+  "platform": "shopify",
+  "product_id": "1821109387382",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "HERO",
+   "Medium Roast",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Jackalope Decaf",
+  "url": "https://cuveecoffee.com/products/jackalope-decaf-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577805877366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175515385974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527597441163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33443333308555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33443350380683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "47096898486496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47096898650336"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "a397a73fede9af3d",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-medium-roast-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/ElSalvadorHero.png?v=1781131262",
+  "platform": "shopify",
+  "product_id": "1821109551222",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "El Salvador",
+   "Els PW 13837",
+   "HERO",
+   "Medium Roast",
+   "Single Origins",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "El Salvador",
+  "url": "https://cuveecoffee.com/products/el-salvador-medium-roast-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577806303350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175441592438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527400865931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460341932171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460348977291"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "0d229fb3424c15ca",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-medium-roast-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/StellaCometaHero.png?v=1781129908",
+  "platform": "shopify",
+  "product_id": "1821110239350",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Els PW 13837",
+   "Espresso",
+   "HERO",
+   "Medium Roast",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Stella Cometa",
+  "url": "https://cuveecoffee.com/products/espresso-blend-medium-roast-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577809186934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175554019446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527682310283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460225179787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460230258827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Whole Bean",
+    "variant_id": "47747577577696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47815527825632"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "7f04eef896e9fb98",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/EthiopiaHero.png?v=1781131337",
+  "platform": "shopify",
+  "product_id": "1821110665334",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "HERO",
+   "Light Roast",
+   "Medium Roast",
+   "Single Origins",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Ethiopia",
+  "url": "https://cuveecoffee.com/products/ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577811120246"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175478521974"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527503626379"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33443705979019"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33443722330251"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47173780865248"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "47173784666336"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "bbac6fc30db038d8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-medium-roast-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/Guatemala_Hero.png?v=1792533859",
+  "platform": "shopify",
+  "product_id": "1821111091318",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "Medium Roast",
+   "Single Origins",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Guatemala",
+  "url": "https://cuveecoffee.com/products/guatemala-medium-roast-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577815117942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "41236476133527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "41236480950423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "41236486914199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "41236488945815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "47879037223136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47879037681888"
+   }
+  ],
+  "vendor": "cuvee-coffee-transfer"
+ },
+ {
+  "body_hash": "b15620b210878a79",
+  "first_seen": "2026-10-26",
+  "handle": "karmadillo",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/KarmadilloHero.png?v=1781129902",
+  "platform": "shopify",
+  "product_id": "1821115089014",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roast",
+   "Els PW 13837",
+   "Espresso",
+   "HERO",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Karmadillo",
+  "url": "https://cuveecoffee.com/products/karmadillo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577842839670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175531737206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527602454667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460260929675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460268597387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Whole Bean",
+    "variant_id": "47097007145184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47097009111264"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "16f3c91aa8a92030",
+  "first_seen": "2026-10-26",
+  "handle": "emporium-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/EmporiumHero.png?v=1781129948",
+  "platform": "shopify",
+  "product_id": "1821122986102",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Els PW 13837",
+   "HERO",
+   "Medium Roast",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Emporium",
+  "url": "https://cuveecoffee.com/products/emporium-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "16577872396406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "20175464857718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "31527467384971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "33460197032075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "33460200898699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Whole Bean",
+    "variant_id": "47173787418848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.8,
+    "title": "2lb Ground - Medium (Filter)",
+    "variant_id": "47173787549920"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "f621cf158fdaeb99",
+  "first_seen": "2026-10-26",
+  "handle": "jackalope-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Jackalope5lb_7928f2d3-e056-4fed-a4d3-016e9df79df7.png?v=1571611484",
+  "platform": "shopify",
+  "product_id": "1978543407222",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "Espresso",
+   "Medium Roast",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Jackalope Decaf",
+  "url": "https://cuveecoffee.com/products/jackalope-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.3,
+    "title": "5 Pound",
+    "variant_id": "18640709943414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 68.7,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "18640709976182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "47879031161056"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "41b59b12e1af43c1",
+  "first_seen": "2026-10-26",
+  "handle": "karmadillo_wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-Karmadillo-Front-min.png?v=1571611484",
+  "platform": "shopify",
+  "product_id": "1978549960822",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roast",
+   "Els PW 13837",
+   "Espresso",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Karmadillo",
+  "url": "https://cuveecoffee.com/products/karmadillo_wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5 Pound",
+    "variant_id": "18640753229942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "18640753295478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "47096999051488"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "028e740435ce2f53",
+  "first_seen": "2026-10-26",
+  "handle": "stella-cometa",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-StellaCometa-Front-min.png?v=1571611484",
+  "platform": "shopify",
+  "product_id": "1979588968566",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Els PW 13837",
+   "Espresso",
+   "Medium Roast",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Stella Cometa",
+  "url": "https://cuveecoffee.com/products/stella-cometa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5 Pound",
+    "variant_id": "18647865786486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "18647865819254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "47879033848032"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "waltons-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/WaltonsEsp_5lb.png?v=1571611485",
+  "platform": "shopify",
+  "product_id": "2500285169782",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "Els PW 13837",
+   "Medium Roast",
+   "Wholesale",
+   "hide-retail",
+   "waltons",
+   "wholesale-only"
+  ],
+  "title": "Walton's Espresso Blend",
+  "url": "https://cuveecoffee.com/products/waltons-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5 Pound",
+    "variant_id": "22016852951158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "22016852983926"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "waltons-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/WaltonsDec_5lb.png?v=1571611485",
+  "platform": "shopify",
+  "product_id": "2500285399158",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "Els PW 13837",
+   "Medium Roast",
+   "Single Origins",
+   "Wholesale",
+   "hide-retail",
+   "waltons",
+   "wholesale-only"
+  ],
+  "title": "Walton's Decaf",
+  "url": "https://cuveecoffee.com/products/waltons-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.3,
+    "title": "5 Pound",
+    "variant_id": "22016853344374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 68.7,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "22016853377142"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "f147049b2809701d",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-Brazil-Front-min_1a6f7157-be18-42c6-8881-d22fa5b24d70.png?v=1579034364",
+  "platform": "shopify",
+  "product_id": "4453325668491",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "Medium Roast",
+   "Single Origins",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Brazil",
+  "url": "https://cuveecoffee.com/products/copy-of-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5lb",
+    "variant_id": "31832417763467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "31832417796235"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "26519cff9e502328",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-2",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-ElSalvador-Slant_a2e78b5e-8264-48c1-a2b3-a18b225e7670.png?v=1579034680",
+  "platform": "shopify",
+  "product_id": "4453336645771",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "Medium Roast",
+   "Single Origins",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "El Salvador",
+  "url": "https://cuveecoffee.com/products/el-salvador-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.3,
+    "title": "5 Pound",
+    "variant_id": "31832465637515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 68.7,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "31832465670283"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "dc63495425e9c2f5",
+  "first_seen": "2026-10-26",
+  "handle": "emporium-2",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-Emporium-Slant-min_bec98c91-e88f-4141-ae3b-bc154659c6ce.png?v=1579034841",
+  "platform": "shopify",
+  "product_id": "4453343821963",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Els PW 13837",
+   "Medium Roast",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Emporium",
+  "url": "https://cuveecoffee.com/products/emporium-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5 Pound",
+    "variant_id": "31832525439115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "31832525471883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "47879026344160"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "fd5ca41a5908db08",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-2",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Ethiopia_5lb_Front.png?v=1581085950",
+  "platform": "shopify",
+  "product_id": "4453345165451",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Els PW 13837",
+   "Light Roast",
+   "Medium Roast",
+   "Single Origins",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "Ethiopia",
+  "url": "https://cuveecoffee.com/products/ethiopia-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.2,
+    "title": "5 Pound",
+    "variant_id": "31832532582539"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 68.7,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "31832532648075"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "47096949309664"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "d12173b0fc378293",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-west-pole",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/products/Bean-5LB-Westpole-Front-min_e061e849-c684-44ae-aaff-a1e5b4fbabf7.png?v=1579035204",
+  "platform": "shopify",
+  "product_id": "4453354537099",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roast",
+   "Els PW 13837",
+   "Wholesale",
+   "hide-retail",
+   "wholesale-only"
+  ],
+  "title": "West Pole",
+  "url": "https://cuveecoffee.com/products/copy-of-west-pole",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "5 Pound",
+    "variant_id": "31832584257675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.5,
+    "title": "Case of 6 x 12oz",
+    "variant_id": "31832584290443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "47879038763232"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "6bbfc8921f76fd86",
+  "first_seen": "2026-10-26",
+  "handle": "stella-cometa-clearance-dated",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/Stella_Cometa_Clearance_Hero_b3f15a7f-5049-406b-928b-2176b27c0190.png?v=1789664730",
+  "platform": "shopify",
+  "product_id": "6179806740631",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Clearance",
+   "Els PW 13837",
+   "Medium Roast"
+  ],
+  "title": "Stella Cometa - CLEARANCE DATED",
+  "url": "https://cuveecoffee.com/products/stella-cometa-clearance-dated",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "12oz Whole Bean",
+    "variant_id": "43518019272928"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 11.9,
+    "title": "310g Whole Bean",
+    "variant_id": "46626247278816"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 11.9,
+    "title": "310g Ground - Medium (Filter)",
+    "variant_id": "53315538714848"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "53336255824096"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "53336257134816"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "53336259526880"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 11.9,
+    "title": "310g Ground - Fine (Espresso)",
+    "variant_id": "53336262705376"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 11.9,
+    "title": "310g Ground - Coarse (French Press)",
+    "variant_id": "53336263426272"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "7990be23b4cffe17",
+  "first_seen": "2026-10-26",
+  "handle": "tacodeli-dark-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/DarkRoast5lb-1V1.png?v=1716226841",
+  "platform": "shopify",
+  "product_id": "8489021767904",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roast",
+   "Els PW 13837",
+   "Wholesale",
+   "hide-retail",
+   "tacodeli",
+   "wholesale-only"
+  ],
+  "title": "Tacodeli Bold House Blend",
+  "url": "https://cuveecoffee.com/products/tacodeli-dark-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "Default Title",
+    "variant_id": "45600406995168"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "6e7d40bb0df04b36",
+  "first_seen": "2026-10-26",
+  "handle": "tacodeli-dark-house-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/MediumRoast5lb-1V1.png?v=1716227339",
+  "platform": "shopify",
+  "product_id": "8489049587936",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Els PW 13837",
+   "Light Roast",
+   "Wholesale",
+   "hide-retail",
+   "tacodeli",
+   "wholesale-only"
+  ],
+  "title": "Tacodeli Balanced Blend",
+  "url": "https://cuveecoffee.com/products/tacodeli-dark-house-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.65,
+    "title": "Default Title",
+    "variant_id": "45600579813600"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "ea2076aa0ce16e7d",
+  "first_seen": "2026-10-26",
+  "handle": "surprise-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/Roaster_sChoiceHeroImageMulti.png?v=1781206422",
+  "platform": "shopify",
+  "product_id": "8935741030624",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "All Coffee",
+   "Subscription",
+   "has-subscription",
+   "retail-only"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://cuveecoffee.com/products/surprise-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Whole Bean",
+    "variant_id": "47578552402144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "47578552434912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "47578552467680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.8,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "47578552500448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "47578552533216"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "the-espresso-pair",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/TheEspressoPair.png?v=1781129466",
+  "platform": "shopify",
+  "product_id": "9115711045856",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "espresso_start_pack",
+   "retail-only"
+  ],
+  "title": "The Espresso Pair",
+  "url": "https://cuveecoffee.com/products/the-espresso-pair",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Whole Bean",
+    "variant_id": "53440375259360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "53440375357664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "53440375455968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "53440375554272"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "the-everyday-pair",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/TheEverydayPair.png?v=1781129953",
+  "platform": "shopify",
+  "product_id": "9640217084128",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "retail-only"
+  ],
+  "title": "The Everyday Pair",
+  "url": "https://cuveecoffee.com/products/the-everyday-pair",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.95,
+    "title": "12oz Whole Bean",
+    "variant_id": "53440370802912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.95,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "53440370901216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.95,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "53440370999520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.95,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "53440371097824"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ },
+ {
+  "body_hash": "a0965409736b009b",
+  "first_seen": "2026-10-26",
+  "handle": "the-bold-pair",
+  "image": "https://cdn.shopify.com/s/files/1/0008/6743/4614/files/TheBoldPair.png?v=1781210958",
+  "platform": "shopify",
+  "product_id": "9832227406048",
+  "product_type": "Coffee",
+  "roaster_slug": "cuveecoffee",
+  "tags": [
+   "retail-only"
+  ],
+  "title": "The Bold Pair",
+  "url": "https://cuveecoffee.com/products/the-bold-pair",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Whole Bean",
+    "variant_id": "53440373653728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Fine (Espresso)",
+    "variant_id": "53440373752032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Medium (Filter)",
+    "variant_id": "53440373850336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.95,
+    "title": "12oz Ground - Coarse (French Press)",
+    "variant_id": "53440373948640"
+   }
+  ],
+  "vendor": "Cuvée Coffee"
+ }
+]

@@ -1,0 +1,1524 @@
+[
+ {
+  "body_hash": "9874f39f222b3ec0",
+  "first_seen": "2026-10-26",
+  "handle": "peach-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/IMG_2778.jpg?v=1789565112",
+  "platform": "shopify",
+  "product_id": "10040552194354",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Peach Co-Ferment",
+  "url": "https://ethnos.coffee/products/peach-co-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 33.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "50622159683890"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "cdb218272363c40a",
+  "first_seen": "2026-10-26",
+  "handle": "ethnos-flash-chill",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/IMG_2978.jpg?v=1789503325",
+  "platform": "shopify",
+  "product_id": "10131109118258",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Ethnos Flash Chill Cold Brew",
+  "url": "https://ethnos.coffee/products/ethnos-flash-chill",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Single (1)",
+    "variant_id": "50974417092914"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "4-Pack",
+    "variant_id": "50974417125682"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "fc0f618b736be947",
+  "first_seen": "2026-10-26",
+  "handle": "ethnos-paloma-coffee-soda",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/IMG_5715.heic?v=1791465842",
+  "platform": "shopify",
+  "product_id": "15418691944754",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "coffee",
+   "wholesale"
+  ],
+  "title": "Ethnos Paloma Coffee Soda",
+  "url": "https://ethnos.coffee/products/ethnos-paloma-coffee-soda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.0,
+    "title": "Single",
+    "variant_id": "67934919328050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "4-Pack",
+    "variant_id": "67934919360818"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "e6b1b918fa8c40e6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/BrazilNat_3dbb6e89-d34f-48ed-ae07-e90faf9208d7.png?v=1789564192",
+  "platform": "shopify",
+  "product_id": "4350721097837",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Natural Process",
+   "coffee"
+  ],
+  "title": "Brazil | Dark Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/brazil-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31285908602989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "31285908635757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "32170482040941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "32170485448813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39389620371565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "39389621059693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392113033522"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392113066290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "47392113099058"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "f7af6940954c931c",
+  "first_seen": "2026-10-26",
+  "handle": "honey-gold",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/HoneyGoldSquare.jpg?v=1713296637",
+  "platform": "shopify",
+  "product_id": "4779185504365",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Black Cherry",
+   "Honey Gold",
+   "Honey Process",
+   "House Drip",
+   "Medium Roast",
+   "Peanut Butter",
+   "coffee"
+  ],
+  "title": "Honey Gold | Medium Roast | Honey Process",
+  "url": "https://ethnos.coffee/products/honey-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32949467086957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "32949467119725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32949467152493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground (Drip)",
+    "variant_id": "32949467185261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39389627121773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "39389627973741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392103039282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392103072050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground (French Press)",
+    "variant_id": "47392103104818"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "6bd520f60d91824e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/Decaf.png?v=1709059029",
+  "platform": "shopify",
+  "product_id": "6561787379821",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Washed Process",
+   "coffee"
+  ],
+  "title": "Colombia | Medium Roast | Sugarcane Decaf",
+  "url": "https://ethnos.coffee/products/colombia-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39319414276205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "39319414308973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "39319414341741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "39319414374509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39389621616749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "39389622009965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392116506930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392116539698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "47392116572466"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "3fa9398a234bea48",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-espresso-appartamento",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/products/E08AFBD4-187E-4293-A7FE-82684C67BEF3.jpg?v=1626663217",
+  "platform": "shopify",
+  "product_id": "6603523522669",
+  "product_type": "Brewing Equipment",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "espresso machine",
+   "rocket"
+  ],
+  "title": "Rocket Espresso Appartamento",
+  "url": "https://ethnos.coffee/products/rocket-espresso-appartamento",
+  "variants": [
+   {
+    "available": true,
+    "grams": 20412,
+    "price_usd": 2400.0,
+    "title": "White",
+    "variant_id": "39454151671917"
+   },
+   {
+    "available": true,
+    "grams": 20412,
+    "price_usd": 2400.0,
+    "title": "Copper",
+    "variant_id": "39454151704685"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "b4bc4b873a31123f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/ColombiaNat.jpg?v=1768255665",
+  "platform": "shopify",
+  "product_id": "8614037356850",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Natural Process",
+   "coffee"
+  ],
+  "title": "Colombia | Light Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/colombia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46400041976114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "46400042008882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "46400042041650"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "46400042074418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46400042107186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "46400042139954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392106807602"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392106840370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "47392106873138"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "06df2e31d6318287",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/ColombiaWash.png?v=1709058967",
+  "platform": "shopify",
+  "product_id": "8618494558514",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Washed Process",
+   "coffee"
+  ],
+  "title": "Colombia El Nevado | Medium Roast | Washed Process",
+  "url": "https://ethnos.coffee/products/colombia-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46416188506418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "46416188539186"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "46416188571954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "46416188604722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46416188637490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "46416188670258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392053428530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392053461298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "47392053494066"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "1601016677be4c77",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/BBA.jpg?v=1714567489",
+  "platform": "shopify",
+  "product_id": "8713845834034",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "black",
+   "coffee"
+  ],
+  "title": "Old Dominick's Barrel-Aged | Medium Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/bourbon-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46841550930226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "46841551061298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 90.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "46841551126834"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 90.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "46841551225138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48471628185906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "48471628218674"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "71c6facbdd2dfa9e",
+  "first_seen": "2026-10-26",
+  "handle": "bombe-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/EthiopiaBombe.png?v=1709059043",
+  "platform": "shopify",
+  "product_id": "8895013028146",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Natural Process",
+   "coffee"
+  ],
+  "title": "Ethiopian Bombe | Light Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/bombe-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47321331106098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "47321331138866"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.2,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "47321331171634"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.2,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "47321331204402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47321331237170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Ground (Drip)",
+    "variant_id": "47321331269938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47392131744050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.2,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "47392131776818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Ground (French Press)",
+    "variant_id": "47392131809586"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "32x270g-perc-packs",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8931651813682",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Gateway"
+  ],
+  "title": "32x270g Perc Packs - Gateway",
+  "url": "https://ethnos.coffee/products/32x270g-perc-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 8647,
+    "price_usd": 324.0,
+    "title": "Default Title",
+    "variant_id": "47426400452914"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "32x270g-perc-packs-decaf",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8931663708466",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "32x270g Perc Packs Decaf - Gateway",
+  "url": "https://ethnos.coffee/products/32x270g-perc-packs-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Default Title",
+    "variant_id": "47426441806130"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "140c1a66d6553ee4",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/PhotoRoom_008_20230817_105907_471f7f71-c589-4ef6-ab64-d44f8eb5742b.jpg?v=1706646566",
+  "platform": "shopify",
+  "product_id": "9017106006322",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Natural Process",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Roaster's Choice Natural Process",
+  "url": "https://ethnos.coffee/products/roasters-choice-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole",
+    "variant_id": "47690542776626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "47691506680114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47691506712882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole",
+    "variant_id": "49001661595954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Ground (Drip)",
+    "variant_id": "49001661628722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Ground (French Press)",
+    "variant_id": "49001661661490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole",
+    "variant_id": "49001661694258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground (Drip)",
+    "variant_id": "49001661727026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground (French Press)",
+    "variant_id": "49001661759794"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "f9c88dd94b39e6b0",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-washed-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/PhotoRoom_010_20230817_105907_f66f0921-1c00-46c4-ace7-68aeda1131ee.jpg?v=1706650856",
+  "platform": "shopify",
+  "product_id": "9017282920754",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Washed Process",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Roaster's Choice Washed Process",
+  "url": "https://ethnos.coffee/products/roasters-choice-washed-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47690887987506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "47691507106098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47691507138866"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "080bb54f9b6657f3",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/PhotoRoom_006_20230817_105907_d6bec396-ba9f-44b1-9034-7680b7baa3d9.jpg?v=1706650901",
+  "platform": "shopify",
+  "product_id": "9017525109042",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Honey Process",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Roaster's Choice Honey Process",
+  "url": "https://ethnos.coffee/products/roasters-choice-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47691203313970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "47691503272242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47691503305010"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "9e2b30f045f0e9fc",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-roast-dark-roast-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/1708465645791-35fe3ace-ff2d-48b5-8bc1-8908f1fce107_1.png?v=1708465670",
+  "platform": "shopify",
+  "product_id": "9045275410738",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Rainforest Roast | Medium Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/rainforest-roast-dark-roast-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47794519277874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "47794519310642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "47794519343410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47794519474482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "47794519507250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "47794519540018"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "38ee20270c66fad5",
+  "first_seen": "2026-10-26",
+  "handle": "chronos-medium-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/Chronos.jpg?v=1714566618",
+  "platform": "shopify",
+  "product_id": "9271065444658",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "black",
+   "blend",
+   "coffee"
+  ],
+  "title": "Chronos | Medium Roast | Blend",
+  "url": "https://ethnos.coffee/products/chronos-medium-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.24,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48494300299570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.24,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "48494300332338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.24,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "48494300365106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.8,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "48494300397874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.8,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "48494300430642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.8,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "48494300463410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48494300496178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "48494300528946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "48494300561714"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "1467065f92d50a3a",
+  "first_seen": "2026-10-26",
+  "handle": "santa-marta-medium-roast-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/GuatWashSq_9f0018c0-bf3f-49de-a988-d6ef9464e303.jpg?v=1751416231",
+  "platform": "shopify",
+  "product_id": "9534896800050",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "Washed Process",
+   "coffee",
+   "womens"
+  ],
+  "title": "Santa Marta | Medium Roast",
+  "url": "https://ethnos.coffee/products/santa-marta-medium-roast-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49068962283826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "49068962316594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "49068962349362"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "49068962414898"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "49068962447666"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "49068962480434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49068962513202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "49068962545970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "49068962578738"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "38ee20270c66fad5",
+  "first_seen": "2026-10-26",
+  "handle": "moody-cat-chronos-medium-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/MoodyCatChronos.jpg?v=1721755053",
+  "platform": "shopify",
+  "product_id": "9537012236594",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "coffee",
+   "exclude-recommendations",
+   "moodycat"
+  ],
+  "title": "Moody Cat Chronos | Medium Roast | Blend",
+  "url": "https://ethnos.coffee/products/moody-cat-chronos-medium-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49073601937714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "49073601970482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "49073602003250"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "49073602036018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "49073602068786"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "49073602101554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49073602134322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "49073602167090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "49073602199858"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "38ee20270c66fad5",
+  "first_seen": "2026-10-26",
+  "handle": "brooks-grocery-chronos-medium-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/Chronos_73636bd4-05d9-4992-9ad0-3bf2d9d7a48c.jpg?v=1723424474",
+  "platform": "shopify",
+  "product_id": "9540122509618",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "brooks",
+   "exclude-recommendations"
+  ],
+  "title": "Brooks Grocery Chronos | Medium Roast | Blend",
+  "url": "https://ethnos.coffee/products/brooks-grocery-chronos-medium-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49079975051570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "49079975084338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "49079975117106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "49079975149874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "49079975182642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "49079975215410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49079975248178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "49079975280946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "49079975313714"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "1cacc5791630af1b",
+  "first_seen": "2026-10-26",
+  "handle": "brooks-grocery-brazil-dark-roast-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/Brazil_62c68a59-8644-48d7-a247-9e55fa614196.jpg?v=1723424426",
+  "platform": "shopify",
+  "product_id": "9540146233650",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "brooks",
+   "exclude-recommendations"
+  ],
+  "title": "Brooks Grocery Brazil | Dark Roast | Natural Process",
+  "url": "https://ethnos.coffee/products/brooks-grocery-brazil-dark-roast-natural-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49080012407090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "49080012439858"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "49080012472626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "49080012505394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Ground (Drip)",
+    "variant_id": "49080012538162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Ground (French Press)",
+    "variant_id": "49080012570930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49080012603698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lbs / Ground (Drip)",
+    "variant_id": "49080012636466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lbs / Ground (French Press)",
+    "variant_id": "49080012669234"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "4c3d4f5626d93c97",
+  "first_seen": "2026-10-26",
+  "handle": "liberty-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/LibertyRoast-1.png?v=1729968645",
+  "platform": "shopify",
+  "product_id": "9630826856754",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "DBG"
+  ],
+  "title": "Liberty Roast",
+  "url": "https://ethnos.coffee/products/liberty-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole",
+    "variant_id": "49462587883826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "49462587916594"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "yahweh-rophe-palmer-home-for-children-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/Untitled.jpg?v=1729175375",
+  "platform": "shopify",
+  "product_id": "9669638652210",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Yahweh Rophe | Palmer Home for Children | Medium Roast Blend",
+  "url": "https://ethnos.coffee/products/yahweh-rophe-palmer-home-for-children-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "49428059521330"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Ground (Drip)",
+    "variant_id": "49428059554098"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Ground (French Press)",
+    "variant_id": "49428059586866"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "49d2e395137cb562",
+  "first_seen": "2026-10-26",
+  "handle": "patriot-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/PatriotRoast-1.png?v=1729968703",
+  "platform": "shopify",
+  "product_id": "9677516013874",
+  "product_type": "",
+  "roaster_slug": "ethnos",
+  "tags": [
+   "DBG"
+  ],
+  "title": "Patriot Roast",
+  "url": "https://ethnos.coffee/products/patriot-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole",
+    "variant_id": "49462587949362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "49462587982130"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "63295aa4f13be22c",
+  "first_seen": "2026-10-26",
+  "handle": "wildlife-discovery",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/181EAAD9-2DA3-441B-9F6A-FDD218BA6382.jpg?v=1732455276",
+  "platform": "shopify",
+  "product_id": "9697811988786",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Wildlife Discovery",
+  "url": "https://ethnos.coffee/products/wildlife-discovery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49526756835634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (Drip)",
+    "variant_id": "49526756868402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "49526756901170"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ },
+ {
+  "body_hash": "06df2e31d6318287",
+  "first_seen": "2026-10-26",
+  "handle": "morning-glory-medium-roast-washed-process",
+  "image": "https://cdn.shopify.com/s/files/1/0030/4123/0957/files/MorningGloryMediumRoast.jpg?v=1749499136",
+  "platform": "shopify",
+  "product_id": "9877599781170",
+  "product_type": "Coffee",
+  "roaster_slug": "ethnos",
+  "tags": [],
+  "title": "Morning Glory | Medium Roast | Washed Process",
+  "url": "https://ethnos.coffee/products/morning-glory-medium-roast-washed-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "50102503407922"
+   }
+  ],
+  "vendor": "Ethnos Coffee Roasters"
+ }
+]

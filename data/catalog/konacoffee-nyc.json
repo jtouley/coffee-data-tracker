@@ -1,0 +1,353 @@
+[
+ {
+  "body_hash": "2d896c40032f37c5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-series-1",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Fellow_Series1_Presale_Lifestyle_Digital-7-NoScreen_1_1.jpg?v=1777319692",
+  "platform": "shopify",
+  "product_id": "10507460739374",
+  "product_type": "Brewers",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "Fellow Wholesale",
+   "Shopify Collective"
+  ],
+  "title": "Espresso Series 1",
+  "url": "https://konacoffee.nyc/products/espresso-series-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1499.95,
+    "title": "Black",
+    "variant_id": "51992518951214"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Malted Chocolate + Maple",
+    "variant_id": "51992518983982"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Cherry Red + Walnut",
+    "variant_id": "51992519016750"
+   }
+  ],
+  "vendor": "Fellow"
+ },
+ {
+  "body_hash": "1905ad34a035d611",
+  "first_seen": "2026-10-26",
+  "handle": "thermal-quicksip-xs-6oz-black",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/QuickSip_Thermal_6oz_Black_ecom_1000px_1.webp?v=1784645740",
+  "platform": "shopify",
+  "product_id": "10608356163886",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Thermal Quicksip - XS 6oz | Black",
+  "url": "https://konacoffee.nyc/products/thermal-quicksip-xs-6oz-black",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "52338083594542"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "1905ad34a035d611",
+  "first_seen": "2026-10-26",
+  "handle": "thermal-quicksip-6oz-black",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/QuickSip_Thermal_6oz_Black_ecom_1000px.webp?v=1784645741",
+  "platform": "shopify",
+  "product_id": "10608356196654",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Thermal Quicksip - 6oz | Black",
+  "url": "https://konacoffee.nyc/products/thermal-quicksip-6oz-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "52338083660078"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "1905ad34a035d611",
+  "first_seen": "2026-10-26",
+  "handle": "thermal-quicksip-6oz-nitro",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/QuickSip_Thermal_6oz_Nitro_Gloss_ecom_1000px.webp?v=1784645741",
+  "platform": "shopify",
+  "product_id": "10608356229422",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Thermal Quicksip - 6oz | Nitro",
+  "url": "https://konacoffee.nyc/products/thermal-quicksip-6oz-nitro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "52338083627310"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "58d10f7dcea1ad55",
+  "first_seen": "2026-10-26",
+  "handle": "brew-cork-quicksip-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Brew_Cork_Quicksip_12oz_BCQS12.png?v=1784645740",
+  "platform": "shopify",
+  "product_id": "10608356294958",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Brew Cork Quicksip - 12oz",
+  "url": "https://konacoffee.nyc/products/brew-cork-quicksip-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 350,
+    "price_usd": 31.0,
+    "title": "Default Title",
+    "variant_id": "52338083758382"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "4285a9aeefef48ea",
+  "first_seen": "2026-10-26",
+  "handle": "brew-cork-quicksip-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/BrewCorkQuicksip16oz_BCQS16.png?v=1784645740",
+  "platform": "shopify",
+  "product_id": "10608356327726",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Brew Cork Quicksip - 16oz",
+  "url": "https://konacoffee.nyc/products/brew-cork-quicksip-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 430,
+    "price_usd": 33.0,
+    "title": "Default Title",
+    "variant_id": "52338083725614"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "3fda43330949ca15",
+  "first_seen": "2026-10-26",
+  "handle": "brew-cork-quicksip-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/BrewCorkQuicksip8oz_BCQS08.png?v=1784645740",
+  "platform": "shopify",
+  "product_id": "10608356426030",
+  "product_type": "Drinkware",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "KeepCup",
+   "Shopify Collective"
+  ],
+  "title": "Brew Cork Quicksip - 8oz",
+  "url": "https://konacoffee.nyc/products/brew-cork-quicksip-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 280,
+    "price_usd": 29.0,
+    "title": "Default Title",
+    "variant_id": "52338083856686"
+   }
+  ],
+  "vendor": "KeepCup"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "lu-au",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Luau-IMG_0219-R.jpg?v=1720559763",
+  "platform": "shopify",
+  "product_id": "9460886798638",
+  "product_type": "Coffee",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "_badge_best_seller"
+  ],
+  "title": "Lū‘au",
+  "url": "https://konacoffee.nyc/products/lu-au",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Whole Beans",
+    "variant_id": "50253900448046"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "50253900480814"
+   }
+  ],
+  "vendor": "KONA COFFEE ROASTERS"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kona-reserve-100-kona-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/KonaReserve-IMG_0208-R.jpg?v=1720559763",
+  "platform": "shopify",
+  "product_id": "9460910162222",
+  "product_type": "Coffee",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [],
+  "title": "Kona Reserve",
+  "url": "https://konacoffee.nyc/products/kona-reserve-100-kona-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 39.0,
+    "title": "Whole Beans",
+    "variant_id": "50253944357166"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 39.0,
+    "title": "Drip",
+    "variant_id": "50253944389934"
+   }
+  ],
+  "vendor": "KONA COFFEE ROASTERS"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Peaberry-IMG_0210-R.jpg?v=1720559763",
+  "platform": "shopify",
+  "product_id": "9460934246702",
+  "product_type": "Coffee",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [
+   "100% Kona coffee",
+   "_badge_rare_harvest"
+  ],
+  "title": "Peaberry",
+  "url": "https://konacoffee.nyc/products/peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 49.0,
+    "title": "Whole Beans",
+    "variant_id": "50253944553774"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 49.0,
+    "title": "Drip",
+    "variant_id": "50253944586542"
+   }
+  ],
+  "vendor": "KONA COFFEE ROASTERS"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ka-u",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Kau-IMG_0209-R_88172aea-3d39-4e3c-988e-c9d3744c598e.jpg?v=1720559867",
+  "platform": "shopify",
+  "product_id": "9460951187758",
+  "product_type": "Coffee",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [],
+  "title": "Ka’u",
+  "url": "https://konacoffee.nyc/products/ka-u",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 39.0,
+    "title": "Whole Beans",
+    "variant_id": "50253946454318"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 39.0,
+    "title": "Drip",
+    "variant_id": "50253946487086"
+   }
+  ],
+  "vendor": "KONA COFFEE ROASTERS"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "moana",
+  "image": "https://cdn.shopify.com/s/files/1/0882/7502/6222/files/Moana-IMG_0215-R_553dea0b-8134-4240-be75-b1ad2d2e89f5.jpg?v=1720562875",
+  "platform": "shopify",
+  "product_id": "9495301161262",
+  "product_type": "Coffee",
+  "roaster_slug": "konacoffee-nyc",
+  "tags": [],
+  "title": "Moana",
+  "url": "https://konacoffee.nyc/products/moana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Whole Beans",
+    "variant_id": "50253896384814"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "50253896417582"
+   }
+  ],
+  "vendor": "KONA COFFEE ROASTERS"
+ }
+]

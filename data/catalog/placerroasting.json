@@ -1,0 +1,315 @@
+[
+ {
+  "body_hash": "7fa756efec43dc57",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-espresso-blend.png?v=1789151029",
+  "platform": "shopify",
+  "product_id": "8389344559170",
+  "product_type": "Blend",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "blend",
+   "espresso",
+   "medium roast"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://placerroasting.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175552376898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175552639042"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "0bbbf7e83a0979a7",
+  "first_seen": "2026-10-26",
+  "handle": "live-oak",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-live-oak.png?v=1789151038",
+  "platform": "shopify",
+  "product_id": "8389344690242",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "ethiopia",
+   "light roast",
+   "natural",
+   "single origin"
+  ],
+  "title": "Live Oak",
+  "url": "https://placerroasting.com/products/live-oak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175552868418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175553130562"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "d33daf0ce9f49dc7",
+  "first_seen": "2026-10-26",
+  "handle": "mina-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-mina-rica.png?v=1789151052",
+  "platform": "shopify",
+  "product_id": "8389344788546",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "light roast",
+   "natural",
+   "organic",
+   "peru",
+   "single origin"
+  ],
+  "title": "Mina Rica",
+  "url": "https://placerroasting.com/products/mina-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175554572354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175554834498"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "3c114b855849a5e0",
+  "first_seen": "2026-10-26",
+  "handle": "la-veta",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-la-veta.png?v=1789151036",
+  "platform": "shopify",
+  "product_id": "8389344886850",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "dark roast",
+   "mexico",
+   "single origin"
+  ],
+  "title": "La Veta",
+  "url": "https://placerroasting.com/products/la-veta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175555096642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175555358786"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "6686e0f5cffdffba",
+  "first_seen": "2026-10-26",
+  "handle": "blue-eagle",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-blue-eagle.png?v=1789151028",
+  "platform": "shopify",
+  "product_id": "8389345017922",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "guatemala",
+   "medium dark roast",
+   "natural",
+   "single origin"
+  ],
+  "title": "Blue Eagle",
+  "url": "https://placerroasting.com/products/blue-eagle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175555948610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175556210754"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "9d14008da7b97235",
+  "first_seen": "2026-10-26",
+  "handle": "miner-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-miner-blend.png?v=1789151053",
+  "platform": "shopify",
+  "product_id": "8389345116226",
+  "product_type": "Blend",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "blend",
+   "medium dark roast"
+  ],
+  "title": "Miner Blend",
+  "url": "https://placerroasting.com/products/miner-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45175556407362"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45175556669506"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "7bc633e225c483e7",
+  "first_seen": "2026-10-26",
+  "handle": "gold-run",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-gold-run.png?v=1789151033",
+  "platform": "shopify",
+  "product_id": "8393299427394",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "peaberry",
+   "single origin",
+   "tanzania",
+   "washed"
+  ],
+  "title": "Gold Run",
+  "url": "https://placerroasting.com/products/gold-run",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45190747029570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45190747062338"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "18d7e7423d6e6a6a",
+  "first_seen": "2026-10-26",
+  "handle": "granite-pass",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-granite-pass.png?v=1789151034",
+  "platform": "shopify",
+  "product_id": "8393299460162",
+  "product_type": "Single Origin",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "guatemala",
+   "jalapa",
+   "single origin",
+   "washed"
+  ],
+  "title": "Granite Pass",
+  "url": "https://placerroasting.com/products/granite-pass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45190747095106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45190747127874"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ },
+ {
+  "body_hash": "270a0826b3eaac80",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-claim",
+  "image": "https://cdn.shopify.com/s/files/1/0701/2466/6946/files/bag-midnight-claim.png?v=1789151039",
+  "platform": "shopify",
+  "product_id": "8393299492930",
+  "product_type": "Decaf",
+  "roaster_slug": "placerroasting",
+  "tags": [
+   "colombia",
+   "decaf",
+   "huila",
+   "single origin",
+   "sugarcane process"
+  ],
+  "title": "Midnight Claim",
+  "url": "https://placerroasting.com/products/midnight-claim",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "45190747160642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "45190747193410"
+   }
+  ],
+  "vendor": "Placer Roasting Company"
+ }
+]

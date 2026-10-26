@@ -1,0 +1,599 @@
+[
+ {
+  "body_hash": "1861a14812ffd351",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/monsooned-malabar-12oz-whiteBG-front-scaled.webp?v=1779787101",
+  "platform": "shopify",
+  "product_id": "8131840278667",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee",
+   "MONSOON15 Coup",
+   "rise20-coup"
+  ],
+  "title": "Monsooned Malabar | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/monsooned-malabar-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "46407393575051"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053413056651"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "1861a14812ffd351",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/monsooned-malabar-6oz-whiteBG-front-1-scaled.webp?v=1779786915",
+  "platform": "shopify",
+  "product_id": "8131840311435",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee",
+   "MONSOON15 Coup",
+   "rise20-coup"
+  ],
+  "title": "Monsooned Malabar | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/monsooned-malabar-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053408665739"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053408764043"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "220cf87be0a025ba",
+  "first_seen": "2026-10-26",
+  "handle": "smell-of-rain-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/smell-of-rain-12oz-whiteBG-front-scaled.webp?v=1779786748",
+  "platform": "shopify",
+  "product_id": "8131840344203",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "Smell of Rain | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/smell-of-rain-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053405454475"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "220cf87be0a025ba",
+  "first_seen": "2026-10-26",
+  "handle": "smell-of-rain-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/smell-of-rain-6oz-whiteBG-front-scaled.webp?v=1779786622",
+  "platform": "shopify",
+  "product_id": "8131840376971",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "Smell of Rain | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/smell-of-rain-6oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053403291787"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "6d240042918d810f",
+  "first_seen": "2026-10-26",
+  "handle": "caffeine-bliss-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/caffeine-bliss-12oz-whiteBG-front-scaled.webp?v=1779786503",
+  "platform": "shopify",
+  "product_id": "8131840409739",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "Caffeine Bliss | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/caffeine-bliss-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053401096331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053401194635"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "6d240042918d810f",
+  "first_seen": "2026-10-26",
+  "handle": "caffeine-bliss-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/caffeine-bliss-6oz-whiteBG-front-scaled.webp?v=1779786375",
+  "platform": "shopify",
+  "product_id": "8131840508043",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "Caffeine Bliss | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/caffeine-bliss-6oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053397000331"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053397098635"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "4787e0b6890985c6",
+  "first_seen": "2026-10-26",
+  "handle": "indian-summer-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/indian-summer-12oz-whiteBG-front-scaled.webp?v=1779785371",
+  "platform": "shopify",
+  "product_id": "8131840540811",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "Indian Summer | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/indian-summer-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053393232011"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053393330315"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "4787e0b6890985c6",
+  "first_seen": "2026-10-26",
+  "handle": "indian-summer-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/indian-summer-6oz-whiteBG-front-scaled.webp?v=1779783705",
+  "platform": "shopify",
+  "product_id": "8131840573579",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "Indian Summer | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/indian-summer-6-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053390774411"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053390872715"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "09ebe51a393bcf78",
+  "first_seen": "2026-10-26",
+  "handle": "bloom-mood-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/bloom-mood-6oz-whiteBG-front-scaled.webp?v=1779782762",
+  "platform": "shopify",
+  "product_id": "8131840606347",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "Bloom Mood | 6 oz",
+  "url": "https://pauljohncaffeine.com/products/bloom-mood-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053388677259"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053388775563"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "09ebe51a393bcf78",
+  "first_seen": "2026-10-26",
+  "handle": "bloom-mood-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/bloom-mood-12oz-whiteBG-front-scaled.webp?v=1779782637",
+  "platform": "shopify",
+  "product_id": "8131840639115",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "Bloom Mood | 12 oz",
+  "url": "https://pauljohncaffeine.com/products/bloom-mood-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053385400459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053385498763"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "37962f199288110e",
+  "first_seen": "2026-10-26",
+  "handle": "bangalore-dreams-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/bangalore-dreams-6oz-whiteBG-front-scaled.webp?v=1779782266",
+  "platform": "shopify",
+  "product_id": "8131840704651",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee",
+   "INDIAB20 products"
+  ],
+  "title": "Bangalore Dreams | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/bangalore-dreams-6-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053381959819"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053382058123"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "37962f199288110e",
+  "first_seen": "2026-10-26",
+  "handle": "bangalore-dreams-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/bangalore-dreams-12oz-whiteBG-front-scaled.webp?v=1779781977",
+  "platform": "shopify",
+  "product_id": "8131840737419",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee",
+   "INDIAB20 products"
+  ],
+  "title": "Bangalore Dreams | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/bangalore-dreams-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053378781323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053378879627"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "b3209f3713e807da",
+  "first_seen": "2026-10-26",
+  "handle": "no-place-like-home-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/no-place-like-home-12oz-whiteBG-front-scaled.webp?v=1779781776",
+  "platform": "shopify",
+  "product_id": "8131840770187",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "No Place like Home | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/no-place-like-home-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053376356491"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053376454795"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "b3209f3713e807da",
+  "first_seen": "2026-10-26",
+  "handle": "no-place-like-home-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/no-place-like-home-6oz-whiteBG-front-scaled.webp?v=1779781657",
+  "platform": "shopify",
+  "product_id": "8131840802955",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "No Place like Home | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/no-place-like-home-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053374095499"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053374193803"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "67b0993e45add083",
+  "first_seen": "2026-10-26",
+  "handle": "mysore-nuggets-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/mysore-nuggets-12oz-whiteBG-front-scaled.webp?v=1779781532",
+  "platform": "shopify",
+  "product_id": "8131840835723",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee"
+  ],
+  "title": "Mysore Nuggets | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/mysore-nuggets-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053371703435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053371801739"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "67b0993e45add083",
+  "first_seen": "2026-10-26",
+  "handle": "mysore-nuggets-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/mysore-nuggets-6oz-whiteBG-front-scaled.webp?v=1779781422",
+  "platform": "shopify",
+  "product_id": "8131840868491",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee"
+  ],
+  "title": "Mysore Nuggets | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/mysore-nuggets-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053368459403"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053368557707"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "1cea040c46191598",
+  "first_seen": "2026-10-26",
+  "handle": "indian-peaberry-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/indian-peaberry-12oz-whiteBG-front-scaled.webp?v=1779781342",
+  "platform": "shopify",
+  "product_id": "8131840901259",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "12ozs",
+   "Coffee",
+   "INDIAB20 products"
+  ],
+  "title": "Indian Peaberry | 12 oz.",
+  "url": "https://pauljohncaffeine.com/products/indian-peaberry-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "47053365641355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "47053365739659"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ },
+ {
+  "body_hash": "1cea040c46191598",
+  "first_seen": "2026-10-26",
+  "handle": "indian-peaberry-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0737/7682/4459/files/indian-peaberry-6oz-whiteBG-front-scaled.webp?v=1779779339",
+  "platform": "shopify",
+  "product_id": "8131840934027",
+  "product_type": "",
+  "roaster_slug": "pauljohncaffeine",
+  "tags": [
+   "6ozs",
+   "B20 Products",
+   "Coffee",
+   "INDIAB20 products"
+  ],
+  "title": "Indian Peaberry | 6 oz.",
+  "url": "https://pauljohncaffeine.com/products/indian-peaberry-6-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Whole Bean",
+    "variant_id": "47053363478667"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.99,
+    "title": "Drip",
+    "variant_id": "47053363576971"
+   }
+  ],
+  "vendor": "Paul John Caffeine"
+ }
+]

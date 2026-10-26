@@ -1,0 +1,140 @@
+[
+ {
+  "body_hash": "ca1ef293a46c76dd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-multicoop-agropecuarias-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/IMG_97206Edited.jpg?v=1791514337",
+  "platform": "shopify",
+  "product_id": "15374451343551",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Colombia Multicoop Agropecuarias Organic",
+  "url": "https://exocoffee.com/products/colombia-multicoop-agropecuarias-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "67523228369087"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ },
+ {
+  "body_hash": "0cecaab11724e84c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-chelbesa",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/BCF2F027-5D60-4389-98EC-8CA51B730173.png?v=1791903500",
+  "platform": "shopify",
+  "product_id": "15396927996095",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Chelbesa",
+  "url": "https://exocoffee.com/products/ethiopia-yirgacheffe-chelbesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "67656719302847"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ },
+ {
+  "body_hash": "08ac8401f9d86ea1",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/IMG_97031Edited.jpg?v=1791514784",
+  "platform": "shopify",
+  "product_id": "8234467360959",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Altura Superior SHG",
+  "url": "https://exocoffee.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44699414593727"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ },
+ {
+  "body_hash": "1eae3c641e7e2e59",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/IMG_97237Edited.jpg?v=1791514703",
+  "platform": "shopify",
+  "product_id": "8234469425343",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Valle De Cuaca Sugarcane Decaf",
+  "url": "https://exocoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44699442544831"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ },
+ {
+  "body_hash": "9972ee39e939684f",
+  "first_seen": "2026-10-26",
+  "handle": "devils-claw",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/IMG_97094Edited.jpg?v=1791514632",
+  "platform": "shopify",
+  "product_id": "8234470015167",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Devil's Claw Blend",
+  "url": "https://exocoffee.com/products/devils-claw",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44699443724479"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ },
+ {
+  "body_hash": "75fd6a3d5a7377ce",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena-huehuetenango-shb",
+  "image": "https://cdn.shopify.com/s/files/1/1334/4443/files/IMG_97073Edited.jpg?v=1791514543",
+  "platform": "shopify",
+  "product_id": "8610845655231",
+  "product_type": "",
+  "roaster_slug": "exocoffee",
+  "tags": [],
+  "title": "Guatemala La Morena Huehuetenango SHB",
+  "url": "https://exocoffee.com/products/guatemala-la-morena-huehuetenango-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "46179350282431"
+   }
+  ],
+  "vendor": "Exo Roast Co."
+ }
+]

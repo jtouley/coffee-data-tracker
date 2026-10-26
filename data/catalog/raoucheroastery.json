@@ -1,0 +1,603 @@
+[
+ {
+  "body_hash": "b74c6a598d5f55ae",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-pistachios",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_10cd5530-1ec3-4520-a848-0c6f7d937144.jpg?v=1773295980",
+  "platform": "shopify",
+  "product_id": "10792022409500",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR PISTACHIOS",
+  "url": "https://raoucheroastery.com/products/zaatar-pistachios",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.95,
+    "title": "8 oz",
+    "variant_id": "53975342055708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz",
+    "variant_id": "53975342088476"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "60f485da5d6a00ba",
+  "first_seen": "2026-10-26",
+  "handle": "cashews-cheddar-cheese",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_7614c1bf-d4f5-4f4a-af81-dafb65fa8f7f.png?v=1774161186",
+  "platform": "shopify",
+  "product_id": "10798391951644",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "CASHEWS CHEDDAR CHEESE",
+  "url": "https://raoucheroastery.com/products/cashews-cheddar-cheese",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.95,
+    "title": "8 oz",
+    "variant_id": "53994806214940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "16 oz",
+    "variant_id": "53994806247708"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b0effd8ea1e6b92c",
+  "first_seen": "2026-10-26",
+  "handle": "cashews-citrusy-lemon",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_f1fd17a6-807a-44dc-ba36-151c4403c612.png?v=1774161370",
+  "platform": "shopify",
+  "product_id": "10798394376476",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "CASHEWS CITRUSY LEMON",
+  "url": "https://raoucheroastery.com/products/cashews-citrusy-lemon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.95,
+    "title": "8 oz",
+    "variant_id": "53994809196828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "16 oz",
+    "variant_id": "53994809229596"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5fd23733442b1795",
+  "first_seen": "2026-10-26",
+  "handle": "kri-kri-cashews-corn-flavor",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_59f18662-c104-4dd5-ba30-8fd1babc12d2.png?v=1774164246",
+  "platform": "shopify",
+  "product_id": "10798396801308",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "KRI KRI CASHEWS CORN FLAVOR",
+  "url": "https://raoucheroastery.com/products/kri-kri-cashews-corn-flavor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.95,
+    "title": "8 oz",
+    "variant_id": "53994811982108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "16 oz",
+    "variant_id": "53994812014876"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "c3d309da3f6a0470",
+  "first_seen": "2026-10-26",
+  "handle": "kri-kri-peanuts-nachos-flavor",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_9efc069d-428c-42b5-b5e1-83064872b6d6.png?v=1774164390",
+  "platform": "shopify",
+  "product_id": "10798435729692",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "KRI KRI PEANUTS NACHOS FLAVOR",
+  "url": "https://raoucheroastery.com/products/kri-kri-peanuts-nachos-flavor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.95,
+    "title": "8 oz",
+    "variant_id": "53994861756700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "16 oz",
+    "variant_id": "53994861789468"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e7ebd0de517b6944",
+  "first_seen": "2026-10-26",
+  "handle": "kri-kri-peanuts-smokey-bbq",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_0e7e5dfe-5ce2-418f-9e91-cfef9ef10adb.png?v=1774164625",
+  "platform": "shopify",
+  "product_id": "10798439760156",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "KRI KRI PEANUTS SMOKEY BBQ",
+  "url": "https://raoucheroastery.com/products/kri-kri-peanuts-smokey-bbq",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.95,
+    "title": "8 oz",
+    "variant_id": "53994866311452"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "16 oz",
+    "variant_id": "53994866344220"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "eeccecd00187a451",
+  "first_seen": "2026-10-26",
+  "handle": "kri-kri-peanuts-sweet-corn",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_65d2382a-2783-4896-887e-ff9f45a38064.png?v=1774165138",
+  "platform": "shopify",
+  "product_id": "10798447952156",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "KRI KRI PEANUTS SWEET CORN",
+  "url": "https://raoucheroastery.com/products/kri-kri-peanuts-sweet-corn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.95,
+    "title": "8 oz",
+    "variant_id": "53994880008476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "16 oz",
+    "variant_id": "53994880041244"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "892ede6006d90602",
+  "first_seen": "2026-10-26",
+  "handle": "woodfire-cashews-with-skin",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_f836191b-dae2-48f0-b96f-96a50dc76549.png?v=1774165266",
+  "platform": "shopify",
+  "product_id": "10798449819932",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "WOODFIRE CASHEWS with SKIN",
+  "url": "https://raoucheroastery.com/products/woodfire-cashews-with-skin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.95,
+    "title": "8 oz",
+    "variant_id": "53994882400540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz",
+    "variant_id": "53994882433308"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "double-roast-small-seed",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/Double_Roasted_Small_Seed.jpg?v=1716560943",
+  "platform": "shopify",
+  "product_id": "9409052541212",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "Double Roast Small Seed",
+  "url": "https://raoucheroastery.com/products/double-roast-small-seed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.95,
+    "title": "8 oz",
+    "variant_id": "48863917080860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.95,
+    "title": "16 oz",
+    "variant_id": "48863917113628"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-salted-hazelnuts",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/Roasted_Salted_Hazelnuts.jpg?v=1716560941",
+  "platform": "shopify",
+  "product_id": "9409053262108",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "Roasted Salted Hazelnuts",
+  "url": "https://raoucheroastery.com/products/roasted-salted-hazelnuts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.95,
+    "title": "8 oz",
+    "variant_id": "48863919505692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "16 oz",
+    "variant_id": "48863919538460"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1b4b65875f9cd6f8",
+  "first_seen": "2026-10-26",
+  "handle": "smoked-krikri",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_df8d8a6b-d071-4234-96d2-babf1a4d87e8.png?v=1774164833",
+  "platform": "shopify",
+  "product_id": "9409053655324",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "roastednuts"
+  ],
+  "title": "KRI KRI PEANUTS SMOKED",
+  "url": "https://raoucheroastery.com/products/smoked-krikri",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.95,
+    "title": "8 oz",
+    "variant_id": "48863921406236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "16 oz",
+    "variant_id": "48863921439004"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "825caf3b1d50d96c",
+  "first_seen": "2026-10-26",
+  "handle": "7-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/7_SPICE.jpg?v=1716562660",
+  "platform": "shopify",
+  "product_id": "9409089274140",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "spices"
+  ],
+  "title": "7 Spice",
+  "url": "https://raoucheroastery.com/products/7-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.95,
+    "title": "4 oz",
+    "variant_id": "48864101105948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz",
+    "variant_id": "48864101138716"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "55e4e229c31bd8c3",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-pomegranate-molases",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_a13d9aaa-ca07-4728-950c-9b10aa748935.jpg?v=1773295392",
+  "platform": "shopify",
+  "product_id": "9446036996380",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR BALADI - WITH POMOGRANATE MOLASSES مع دبس الرمان",
+  "url": "https://raoucheroastery.com/products/zaatar-pomegranate-molases",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.95,
+    "title": "8 oz",
+    "variant_id": "48996748001564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "16 oz",
+    "variant_id": "48996748034332"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "c0117b6a818ec5e7",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-dakkah",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_27573509-27ec-4b7e-946e-84d1ced8a06a.jpg?v=1773295373",
+  "platform": "shopify",
+  "product_id": "9446037029148",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR DUKKAH",
+  "url": "https://raoucheroastery.com/products/zaatar-dakkah",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.95,
+    "title": "8 oz",
+    "variant_id": "48996748067100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "16 oz",
+    "variant_id": "48996748099868"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-sesame",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/roastedsesame.jpg?v=1723764220",
+  "platform": "shopify",
+  "product_id": "9446037356828",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "Roasted Sesame",
+  "url": "https://raoucheroastery.com/products/roasted-sesame",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.95,
+    "title": "16 oz",
+    "variant_id": "48996748362012"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-sunflower-kernals-pepita-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/sunflower.jpg?v=1723764232",
+  "platform": "shopify",
+  "product_id": "9446037782812",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "Roasted Sunflower Kernals (Pepita) - 16 oz",
+  "url": "https://raoucheroastery.com/products/roasted-sunflower-kernals-pepita-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.95,
+    "title": "Salted",
+    "variant_id": "48996748984604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.95,
+    "title": "Spicy",
+    "variant_id": "48996749017372"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "f13f9ca18e261430",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-halabi",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_f0ccfb61-f962-4f1f-a230-9d41ce27b55a.jpg?v=1773295063",
+  "platform": "shopify",
+  "product_id": "9446037946652",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR HALABI",
+  "url": "https://raoucheroastery.com/products/zaatar-halabi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.95,
+    "title": "8 oz",
+    "variant_id": "48996749345052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "16 oz",
+    "variant_id": "48996749377820"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "630367faa84b13fc",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-green-lebanese-zaatar",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_b929e28b-35db-4d3c-a894-8ef5f6a67a6c.jpg?v=1773294753",
+  "platform": "shopify",
+  "product_id": "9446037979420",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR W OLIVE OIL",
+  "url": "https://raoucheroastery.com/products/zaatar-green-lebanese-zaatar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.95,
+    "title": "8 oz",
+    "variant_id": "48996749410588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "16 oz",
+    "variant_id": "48996749443356"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ },
+ {
+  "body_hash": "10152182914f6119",
+  "first_seen": "2026-10-26",
+  "handle": "zaatar-baladi-lebanese-zaatar",
+  "image": "https://cdn.shopify.com/s/files/1/0872/6701/6988/files/rn-image_picker_lib_temp_b64cbd89-0dcb-4f7e-abe7-2bbafe54c443.jpg?v=1773294324",
+  "platform": "shopify",
+  "product_id": "9446038044956",
+  "product_type": "",
+  "roaster_slug": "raoucheroastery",
+  "tags": [
+   "mouneh"
+  ],
+  "title": "ZAATAR BALADI - CLASSIC",
+  "url": "https://raoucheroastery.com/products/zaatar-baladi-lebanese-zaatar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.95,
+    "title": "8 oz",
+    "variant_id": "48996749476124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "16 oz",
+    "variant_id": "48996749508892"
+   }
+  ],
+  "vendor": "RAOUCHE"
+ }
+]

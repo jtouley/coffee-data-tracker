@@ -1,0 +1,303 @@
+{
+ "1731": {
+  "body_hash": "f4f43b70505aabd0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "1747": {
+  "body_hash": "0c450348d9cc91a2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "1749": {
+  "body_hash": "592642aa01d5e420",
+  "elevation_masl_max": 1760,
+  "elevation_masl_min": 1760,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "juicy",
+   "light",
+   "blackberry",
+   "cinnamon",
+   "cocoa powder"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "1750": {
+  "body_hash": "0b8e8765d0000b7a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Pacamara"
+  ]
+ },
+ "1752": {
+  "body_hash": "2bb890487c13568c",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "1766": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1775": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1778": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1782": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1786": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1789": {
+  "body_hash": "8436ea64019689cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1980": {
+  "body_hash": "aede897193161cec",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "delicate",
+   "caramel",
+   "vanilla",
+   "chocolate"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "2036": {
+  "body_hash": "646747404d95f0cc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bakers chocolate",
+   "caramel",
+   "honey",
+   "big sweetness",
+   "cozy"
+  ],
+  "varietals": []
+ },
+ "2147": {
+  "body_hash": "6b3334ae31a7a4ca",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "2219": {
+  "body_hash": "b77ef6b5735caacf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black currant",
+   "roasted cacao",
+   "blackberry",
+   "salted cashew"
+  ],
+  "varietals": []
+ },
+ "2247": {
+  "body_hash": "24a9fe143c60f94e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "2250": {
+  "body_hash": "d772f45db3a55585",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruitcake",
+   "sugar cookie",
+   "chocolate truffle",
+   "bright",
+   "cozy"
+  ],
+  "varietals": []
+ }
+}

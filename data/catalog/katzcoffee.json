@@ -1,0 +1,3123 @@
+[
+ {
+  "body_hash": "2e29fa39f7b9cad1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/07/KC-BagsWEB2024-Tanzania.png",
+  "platform": "woocommerce",
+  "product_id": "10045",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://katzcoffee.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "10045:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "10045:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88d5d0858d5b29b3",
+  "first_seen": "2026-10-26",
+  "handle": "texas-short-bread",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/07/KC-BagsWEB2024-TXShortbread.png",
+  "platform": "woocommerce",
+  "product_id": "10503",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Creamy Vanilla, Rich Flavors, Smooth and Delicious, Texas Short Bread, Toasted Almonds",
+   "Flavored"
+  ],
+  "title": "Texas Short Bread",
+  "url": "https://katzcoffee.com/product/texas-short-bread/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "10503:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "10503:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4da938ab7eb6bfb7",
+  "first_seen": "2026-10-26",
+  "handle": "la-ofrenda",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/10/KC-BagsWEB2024-LaOfrenda-.png",
+  "platform": "woocommerce",
+  "product_id": "12990",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [],
+  "title": "La Ofrenda",
+  "url": "https://katzcoffee.com/product/la-ofrenda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "12990:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "12990:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fce95ff5165d35cb",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-creme-brulee",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/11/PumpkinCremeBrulee.png",
+  "platform": "woocommerce",
+  "product_id": "13886",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "Seasonal Pumpkin Creme Brulee",
+   "brown sugar",
+   "central america",
+   "coffee experience",
+   "fall",
+   "seasonal allure",
+   "symphony of flavors",
+   "velvety sweet cream",
+   "warm pumpkin"
+  ],
+  "title": "Pumpkin Creme Brulee",
+  "url": "https://katzcoffee.com/product/pumpkin-creme-brulee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "13886:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "13886:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d0d58fc83f1e9a7",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/11/KC-BagsWEB2024-HondurasNatural.png",
+  "platform": "woocommerce",
+  "product_id": "13930",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "cacao, central america, dried strawberry, High Acidity, honduras, light roast, mild olive, watermelon"
+  ],
+  "title": "Honduras Natural",
+  "url": "https://katzcoffee.com/product/honduras-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "13930:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "13930:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "02a43a8167a2ee6a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-chanchamayo-organic",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/09/KC-BagsWEB2024-PeruChanchamayo.png",
+  "platform": "woocommerce",
+  "product_id": "1611",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Chanchamayo, co-op members, Coffee, coffee-growing regions, communities, growing strength, local government, Norandino co-op, Organic, peru, social conditions, superior quality, support"
+  ],
+  "title": "Peru Chanchamayo Organic",
+  "url": "https://katzcoffee.com/product/peru-chanchamayo-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1611:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1611:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "15052dda0973fe03",
+  "first_seen": "2026-10-26",
+  "handle": "uhaa-1927-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/02/KC-BagsWEB2024-UHAA1927.png",
+  "platform": "woocommerce",
+  "product_id": "16902",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "UHAA – 1927 Blend",
+  "url": "https://katzcoffee.com/product/uhaa-1927-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "16902:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "16902:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0eebc9876b8578d1",
+  "first_seen": "2026-10-26",
+  "handle": "uhaa-forthecity-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/02/KC-BagsWEB2024-UHAAForTheCity.png",
+  "platform": "woocommerce",
+  "product_id": "16907",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "UHAA – #ForTheCity Blend",
+  "url": "https://katzcoffee.com/product/uhaa-forthecity-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "16907:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "16907:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cc6c0d59c843985",
+  "first_seen": "2026-10-26",
+  "handle": "uhaa-coogs-house-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/02/KC-BagsWEB2024-UHAACoogsHouse-1.png",
+  "platform": "woocommerce",
+  "product_id": "16911",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "UHAA – Coogs’ House Blend",
+  "url": "https://katzcoffee.com/product/uhaa-coogs-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "16911:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "16911:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83be1725e8a48d91",
+  "first_seen": "2026-10-26",
+  "handle": "blue-mountain-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-BlueMountain.png",
+  "platform": "woocommerce",
+  "product_id": "1799",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Blue Mountain Blend Coffee, chocolate malt, cup of perfection, delicious blend, fruit, nut, orange citrus, Roasted nuts, semi-sweet chocolate, Smooth",
+   "Signature Blends"
+  ],
+  "title": "Blue Mountain Blend",
+  "url": "https://katzcoffee.com/product/blue-mountain-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1799:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1799:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d91ca90a46f0670",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-tolima-mill-trade",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-Colombia.png",
+  "platform": "woocommerce",
+  "product_id": "1850",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "columbia, intense flavor, lingering finish, medium acidity, medium body, Medium Roast, Mill Trade, rich cup, Tolima"
+  ],
+  "title": "Colombia Tolima Mill Trade",
+  "url": "https://katzcoffee.com/product/columbia-tolima-mill-trade/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1850:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1850:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95c0f3c13444cec8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-NicaraguaJinotega.png",
+  "platform": "woocommerce",
+  "product_id": "1859",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "clean coffee, crisp coffee, Jinotega, mild citrus flavor, milk chocolate, Nicaragua, Roasted nuts, sweet vanilla, vanilla"
+  ],
+  "title": "Nicaragua Jinotega",
+  "url": "https://katzcoffee.com/product/nicaragua-jinotega/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1859:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1859:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b30deb59d638530",
+  "first_seen": "2026-10-26",
+  "handle": "key-nash-espresso",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-KeyNash.png",
+  "platform": "woocommerce",
+  "product_id": "1865",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Espresso",
+   "Signature Blends"
+  ],
+  "title": "Key Nash Espresso",
+  "url": "https://katzcoffee.com/product/key-nash-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "1865:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1865:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a039e750750e0b1",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-MochaJava.png",
+  "platform": "woocommerce",
+  "product_id": "1869",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Mocha Java Blend",
+  "url": "https://katzcoffee.com/product/mocha-java-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1869:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1869:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d57d49fba3162a1d",
+  "first_seen": "2026-10-26",
+  "handle": "snicker-nut",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-SnickerNut.png",
+  "platform": "woocommerce",
+  "product_id": "1873",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "amazing flavor, cinnamon, Daily Caffeine Fix, Decadent Taste, Delicious Cup, flavored coffee, New Favorite, Order Now, Roasted nuts, Smile, start your day, Sugar Cookie, Sweet and Nutty, vanilla"
+  ],
+  "title": "Snicker Nut",
+  "url": "https://katzcoffee.com/product/snicker-nut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "1873:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "1873:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a5215ce3220af11",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-musasa-fair-trade",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-RwandaMusasa.png",
+  "platform": "woocommerce",
+  "product_id": "1879",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "cacao, Coffee, crisp finish, Fair Trade, Musasa, plum, Rwanda, tart berry, tea-like complexity"
+  ],
+  "title": "Rwanda Musasa Fair Trade",
+  "url": "https://katzcoffee.com/product/rwanda-musasa-fair-trade/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "1879:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "1879:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d73ab4292350630d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-mill-direct",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-CostaRica.png",
+  "platform": "woocommerce",
+  "product_id": "2069",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Coffee, costa rica, creamy body, gentle finish, heavy aromatic complexity, Mill Direct, Tarrazu"
+  ],
+  "title": "Costa Rica Tarrazu Mill Direct",
+  "url": "https://katzcoffee.com/product/costa-rica-tarrazu-mill-direct/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "2069:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "2069:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ef00ad525936a7",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-cherry",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-ChocolateCoveredCherry.png",
+  "platform": "woocommerce",
+  "product_id": "2190",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "chocolate",
+   "covered cherry",
+   "flavored coffee",
+   "freshly roasted coffee",
+   "maraschino cherry",
+   "pure indulgence",
+   "rich flavor",
+   "sweet flavor",
+   "tangy flavor",
+   "valentines"
+  ],
+  "title": "Chocolate Covered Cherry",
+  "url": "https://katzcoffee.com/product/chocolate-covered-cherry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "2190:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "2190:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c8dc4644d74de907",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-delight",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-RoastersDelight.png",
+  "platform": "woocommerce",
+  "product_id": "2194",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "chocolate, floral, Jasmine, Roaster's Delight"
+  ],
+  "title": "Roaster’s Delight",
+  "url": "https://katzcoffee.com/product/roasters-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "2194:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "2194:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3974a6ce21fb1bf3",
+  "first_seen": "2026-10-26",
+  "handle": "gateway-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-GatewayBlend.png",
+  "platform": "woocommerce",
+  "product_id": "2201",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Signature Blends"
+  ],
+  "title": "Gateway Blend",
+  "url": "https://katzcoffee.com/product/gateway-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "2201:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "2201:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff598dd4dc8a9ed5",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-sugar-cookie",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-CinnamonSugarCookie.png",
+  "platform": "woocommerce",
+  "product_id": "2208",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "cinnamon, Cinnamon Sugar Cookie, Cookie, flavored, flavored coffee, sugar, Sugar Cookie, sweet notes, taste buds, vanilla"
+  ],
+  "title": "Cinnamon Sugar Cookie",
+  "url": "https://katzcoffee.com/product/cinnamon-sugar-cookie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "2208:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "2208:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28145286ebeaf89e",
+  "first_seen": "2026-10-26",
+  "handle": "crumb-cake",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/10/KC-BagsWEB2024-CrumbCake.png",
+  "platform": "woocommerce",
+  "product_id": "2212",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Crumb Cake",
+   "Delicious Cup",
+   "Flavored",
+   "brown sugar",
+   "cake",
+   "cinnamon",
+   "crumb",
+   "flavored",
+   "flavored coffee",
+   "vanilla"
+  ],
+  "title": "Crumb Cake",
+  "url": "https://katzcoffee.com/product/crumb-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "2212:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "2212:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "07e85e242059c386",
+  "first_seen": "2026-10-26",
+  "handle": "spire-motorsports-speed-brew",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/11/KC-BagsWEB2025-SpireSpeedBrew.png",
+  "platform": "woocommerce",
+  "product_id": "25688",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "NASCAR",
+   "Racing",
+   "Signature Blends",
+   "Style",
+   "community",
+   "fans",
+   "fans favorite",
+   "fast",
+   "motorsports",
+   "racing cars",
+   "speed",
+   "speed brew",
+   "spire",
+   "spire motorsports",
+   "team"
+  ],
+  "title": "Spire Motorsports: Speed Brew",
+  "url": "https://katzcoffee.com/product/spire-motorsports-speed-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "25688:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "247637089f6cbd1b",
+  "first_seen": "2026-10-26",
+  "handle": "spire-motorsports-respect",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/11/KC-BagsWEB2025-SpireRespect.png",
+  "platform": "woocommerce",
+  "product_id": "25694",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "NASCAR",
+   "Racing",
+   "Signature Blends",
+   "Style",
+   "community",
+   "fans",
+   "fans favorite",
+   "fast",
+   "motorsports",
+   "racing cars",
+   "respect",
+   "speed",
+   "spire",
+   "spire motorsports",
+   "team"
+  ],
+  "title": "Spire Motorsports: Respect",
+  "url": "https://katzcoffee.com/product/spire-motorsports-respect/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "25694:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef7016a97149b1c5",
+  "first_seen": "2026-10-26",
+  "handle": "ptsd-camp-hope-foundation-press-on",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/05/PTSDBags2025_PressOn.png",
+  "platform": "woocommerce",
+  "product_id": "32612",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "PTSD/Camp Hope Foundation: Press On",
+  "url": "https://katzcoffee.com/product/ptsd-camp-hope-foundation-press-on/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "32612:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "32612:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e7ac7028bf29946",
+  "first_seen": "2026-10-26",
+  "handle": "a-miracle-on-34th-street",
+  "image": "https://katzcoffee.com/wp-content/uploads/2021/12/KC-BagsWEB2024-AMiracleOn34.png",
+  "platform": "woocommerce",
+  "product_id": "336",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "A Miracle on 34th Street",
+  "url": "https://katzcoffee.com/product/a-miracle-on-34th-street/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "336:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "336:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "79ce92bd4e58eaee",
+  "first_seen": "2026-10-26",
+  "handle": "bravo-foxtrot",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/08/KC-BagsWEB2024-PTSDBravoZulu.png",
+  "platform": "woocommerce",
+  "product_id": "36270",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "PTSD",
+   "Signature Blends",
+   "ptsd coffee",
+   "ptsdcoffee"
+  ],
+  "title": "PTSD/Camp Hope Foundation: Bravo Zulu",
+  "url": "https://katzcoffee.com/product/bravo-foxtrot/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "36270:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "36270:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7fca4e64bbe5c4b7",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-rante-karua",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/09/Eureka2025-SulawesiRanteKarua_.png",
+  "platform": "woocommerce",
+  "product_id": "37079",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Eureka Micro Lots"
+  ],
+  "title": "Sulawesi Rante Karua",
+  "url": "https://katzcoffee.com/product/sulawesi-rante-karua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12OZ",
+    "variant_id": "37079:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2LB",
+    "variant_id": "37079:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85cf4fa3e4666b0b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-ebirahim-ahmed",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/10/Eureka2025-EthiopiaEbirahimAhmed.png",
+  "platform": "woocommerce",
+  "product_id": "38133",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Eureka Micro Lots"
+  ],
+  "title": "Ethiopia Ebirahim Ahmed",
+  "url": "https://katzcoffee.com/product/ethiopia-ebirahim-ahmed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12OZ",
+    "variant_id": "38133:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2LB",
+    "variant_id": "38133:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c8a6bd51e35c4c0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-chelbesa-anaerobic-lot-2",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/10/Eureka2025-EthiopiaChelbesaAnaerobicLot2.png",
+  "platform": "woocommerce",
+  "product_id": "38146",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Eureka Micro Lots"
+  ],
+  "title": "Ethiopia Chelbesa Anaerobic Lot 2",
+  "url": "https://katzcoffee.com/product/ethiopia-chelbesa-anaerobic-lot-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12OZ",
+    "variant_id": "38146:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2LB",
+    "variant_id": "38146:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa2ae70da6eabb37",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-royal-water-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/12/KC-BagsWEB2024-MexicoRoyalWater.png",
+  "platform": "woocommerce",
+  "product_id": "3952",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "5demayo, balanced cup, cane sugar, cinnamon, decaf, mexico, royal water, semi-sweet chocolate, subtle citrus finish"
+  ],
+  "title": "Mexico Royal Water Decaf",
+  "url": "https://katzcoffee.com/product/mexico-royal-water-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "3952:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "3952:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd57838c19a2eddc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/12/KC-BagsWEB2024-EthiopiaYirgacheffe.png",
+  "platform": "woocommerce",
+  "product_id": "4227",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "africa, Ethio Gabana Exporter, eureka, Gedeb, light roast, medium body, microlots Ethiopia, Producer, Yirgacheffe"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://katzcoffee.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "4227:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "4227:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ecc5dd599f90712",
+  "first_seen": "2026-10-26",
+  "handle": "bicentennial-dark",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/02/KC-BagsWEB2024-BicentennialDark.png",
+  "platform": "woocommerce",
+  "product_id": "479",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "bicentennial blend, bicentennial dark, blueberry, cause coffee, chocolate, Coffee, cup, organization, smoky, texas rangers, texas rangers association foundation., texas rangers police"
+  ],
+  "title": "Bicentennial Dark",
+  "url": "https://katzcoffee.com/product/bicentennial-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "479:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "479:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aaad0ae2fad34e50",
+  "first_seen": "2026-10-26",
+  "handle": "bat-city-blend-2",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-BatCity.png",
+  "platform": "woocommerce",
+  "product_id": "555",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Bat City Blend",
+  "url": "https://katzcoffee.com/product/bat-city-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "555:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "555:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ba324cbbf37fafa",
+  "first_seen": "2026-10-26",
+  "handle": "katz-kisses",
+  "image": "https://katzcoffee.com/wp-content/uploads/2023/02/KC-BagsWEB2024-KatzKisses.png",
+  "platform": "woocommerce",
+  "product_id": "5763",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Katz Kisses",
+  "url": "https://katzcoffee.com/product/katz-kisses/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "5763:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "5763:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7597df6602e002e6",
+  "first_seen": "2026-10-26",
+  "handle": "angels-wings-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-AngelsWingsDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "584",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "angels wings, decaf, flavored coffee, Ghirardelli cocoa powder, hazelnut, milk chocolate, sweet coconut"
+  ],
+  "title": "Angel’s Wings Decaf",
+  "url": "https://katzcoffee.com/product/angels-wings-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "584:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "584:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60b6136a5bcabf5f",
+  "first_seen": "2026-10-26",
+  "handle": "barton-springs",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-BartonSprings.png",
+  "platform": "woocommerce",
+  "product_id": "585",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Austin, Barton Springs, beans, Blend, caramelized sugar, earthy Indonesian coffee, full flavor, Mexican high-grown coffee, recharging spring waters, rich body, Smooth, spiritually revived, wide awake",
+   "Signature Blends"
+  ],
+  "title": "Barton Springs",
+  "url": "https://katzcoffee.com/product/barton-springs/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "585:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "585:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52f396a4a18d11da",
+  "first_seen": "2026-10-26",
+  "handle": "bayou-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-BayouBlend_EDIT.png",
+  "platform": "woocommerce",
+  "product_id": "586",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Bayou Blend",
+  "url": "https://katzcoffee.com/product/bayou-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "586:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "586:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f81f74eb5e6fbf26",
+  "first_seen": "2026-10-26",
+  "handle": "bicentennial-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Bicentennial.png",
+  "platform": "woocommerce",
+  "product_id": "587",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Cause Coffee program",
+   "Roasted nuts",
+   "Signature Blends",
+   "Texas Rangers Bicentennial Blend",
+   "mild citrus undertones",
+   "milk chocolate",
+   "sweet vanilla",
+   "texas rangers association foundation.",
+   "texas rangers police",
+   "vanilla"
+  ],
+  "title": "Bicentennial Blend",
+  "url": "https://katzcoffee.com/product/bicentennial-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "587:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "587:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6e51e201eb98b72",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-minas-gerais-direct-trade",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Brazil.png",
+  "platform": "woocommerce",
+  "product_id": "589",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Body, Brazil, citrus, Dark Chocolate, Direct Trade, Finish, Lingering, Minas Gerais, Roasted peanut, Sweet"
+  ],
+  "title": "Brazil Minas Gerais Direct Trade",
+  "url": "https://katzcoffee.com/product/brazil-minas-gerais-direct-trade/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "589:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "589:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "118ff0b2685dd714",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-turtle-pecan",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-ChocolateTurtlePecan.png",
+  "platform": "woocommerce",
+  "product_id": "594",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Chocolate Turtle Pecan",
+   "Flavored",
+   "Turtle Pecan",
+   "chocolate",
+   "creamy caramel",
+   "culinary indulgence",
+   "exotic familiar",
+   "gentle nutty notes",
+   "inspired rich flavors",
+   "light hint of pecan",
+   "pecan",
+   "unique blend",
+   "valentines"
+  ],
+  "title": "Chocolate Turtle Pecan",
+  "url": "https://katzcoffee.com/product/chocolate-turtle-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "594:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "594:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "baf65679c869bf92",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-turtle-pecan-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-ChocolateTurtlePecanDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "595",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Chocolate Fudge",
+   "Chocolate Turtle Pecan",
+   "Flavored",
+   "Salted Pecans",
+   "caramel",
+   "decaf",
+   "flavored coffee",
+   "vanilla"
+  ],
+  "title": "Chocolate Turtle Pecan Decaf",
+  "url": "https://katzcoffee.com/product/chocolate-turtle-pecan-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "595:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "595:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "656be58825154782",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut-cookie-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-CinnamonHazelnutCookieDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "597",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "cinnamon, Cookie, decaf, flavored coffee, hazelnut, Toasted Hazelnuts, vanilla"
+  ],
+  "title": "Cinnamon Hazelnut Cookie Decaf",
+  "url": "https://katzcoffee.com/product/cinnamon-hazelnut-cookie-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "597:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "597:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f5ab42dfc7958da4",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-almond-bark",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-CoconutAlmondBark.png",
+  "platform": "woocommerce",
+  "product_id": "598",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Almond, Bark, chocolate, Coconut, Cravings, flavored coffee, Nutty, Premium Coffee, Rich, Roasted Almonds, Senses, Sweet",
+   "Flavored"
+  ],
+  "title": "Coconut Almond Bark",
+  "url": "https://katzcoffee.com/product/coconut-almond-bark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "598:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "598:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51fa3fdbc62411a8",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-porter-beans",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-CoffeePorter.png",
+  "platform": "woocommerce",
+  "product_id": "599",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "brown sugar, central american beans, coffee flavor, Coffee Porter Beans, Dark Chocolate, mild citrus, Porter, Real Ale, Real Ale Brewing Co., red fruit"
+  ],
+  "title": "Coffee Porter Beans",
+  "url": "https://katzcoffee.com/product/coffee-porter-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "599:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "599:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e69881f916270a6b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-DecafEspresso.png",
+  "platform": "woocommerce",
+  "product_id": "604",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Dark Chocolate",
+   "Decaf Espresso",
+   "Espresso",
+   "bold blend",
+   "brown sugar",
+   "decaf",
+   "deep flavor",
+   "delicious espresso blend",
+   "espresso",
+   "full-bodied taste",
+   "rich blend",
+   "rich flavor",
+   "smooth finish",
+   "sweetness"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://katzcoffee.com/product/decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "604:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "604:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06350770f90a74b5",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird-blend-organic",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-EarlyBird.png",
+  "platform": "woocommerce",
+  "product_id": "605",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Early Bird Organic Blend",
+  "url": "https://katzcoffee.com/product/early-bird-blend-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "605:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "605:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d04603e98bb7729",
+  "first_seen": "2026-10-26",
+  "handle": "el-pachon",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-ElPachon.png",
+  "platform": "woocommerce",
+  "product_id": "606",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Andrew, caramel finish, creamy, customers, El Pachon, favorite, flavors, mild citrus, Roasted nuts, roaster, staff",
+   "Signature Blends"
+  ],
+  "title": "El Pachon",
+  "url": "https://katzcoffee.com/product/el-pachon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "606:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "606:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e58faea3271970b6",
+  "first_seen": "2026-10-26",
+  "handle": "enchanted-rock-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-EnchantedRock-FIX.png",
+  "platform": "woocommerce",
+  "product_id": "607",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Signature Blends"
+  ],
+  "title": "Enchanted Rock Blend",
+  "url": "https://katzcoffee.com/product/enchanted-rock-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "607:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "607:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa430ea6015dbb1d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-EthiopiaNatural.png",
+  "platform": "woocommerce",
+  "product_id": "608",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "aromatic, berry citrus finish, black tea, blueberry, Dark Chocolate, Ethiopia, floral, natural, strawberry, Sweet"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://katzcoffee.com/product/ethiopia-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "608:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "608:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "19bf59ccb5a1fccc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-dark",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-EthiopiaDarkRoast.png",
+  "platform": "woocommerce",
+  "product_id": "609",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "blueberry undertones, Coffee, Dark Chocolate, Dark Roast, Ethiopia, flavorful, pipe tobacco, smoky"
+  ],
+  "title": "Ethiopia Dark Roast",
+  "url": "https://katzcoffee.com/product/ethiopia-natural-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "609:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "609:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "baf2bc45356f60fe",
+  "first_seen": "2026-10-26",
+  "handle": "firehouse-series-classic-roast",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-HFDClassic.png",
+  "platform": "woocommerce",
+  "product_id": "610",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Firehouse Series: Classic Roast",
+  "url": "https://katzcoffee.com/product/firehouse-series-classic-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "610:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "610:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fdd692db7dcdf55e",
+  "first_seen": "2026-10-26",
+  "handle": "firehouse-series-false-alarm-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/03/KC-BagsWEB2024-HFDFalseAlarm-.png",
+  "platform": "woocommerce",
+  "product_id": "611",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [],
+  "title": "Firehouse Series: False Alarm Decaf",
+  "url": "https://katzcoffee.com/product/firehouse-series-false-alarm-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "611:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "611:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc0c963de2ebfb38",
+  "first_seen": "2026-10-26",
+  "handle": "firehouse-series-runnin-hot-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-HFDRunninHot.png",
+  "platform": "woocommerce",
+  "product_id": "612",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Coffee Cause Program",
+   "Firehouse Series",
+   "HFD Firehouse Series",
+   "Houston Fire Department",
+   "Signature Blends",
+   "brown sugar",
+   "caramel",
+   "community outreach",
+   "milk chocolate",
+   "orange zest",
+   "runnin' hot blend",
+   "safety",
+   "wellness"
+  ],
+  "title": "Firehouse Series: Runnin’ Hot Blend",
+  "url": "https://katzcoffee.com/product/firehouse-series-runnin-hot-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "612:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "612:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "76dc2f52675754f5",
+  "first_seen": "2026-10-26",
+  "handle": "firehouse-series-shift-change-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-HFDShiftChange.png",
+  "platform": "woocommerce",
+  "product_id": "613",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Firehouse Series: Shift Change Blend",
+  "url": "https://katzcoffee.com/product/firehouse-series-shift-change-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "613:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "613:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12eee14b59aad134",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-FrenchVanillaDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "615",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Coffee, decaf, flavored coffee, French Vanilla, rich vanilla",
+   "Flavored"
+  ],
+  "title": "French Vanilla Decaf",
+  "url": "https://katzcoffee.com/product/french-vanilla-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "615:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "615:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "951df928b7a6a3f7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-direct-source",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "616",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Antigua, caramel, Coffee, Direct Source, Guatemala, mild orange finish, morning brew, semi-sweet chocolate"
+  ],
+  "title": "Guatemala Antigua Direct Source",
+  "url": "https://katzcoffee.com/product/guatemala-antigua-direct-source/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "616:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "616:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a987aab57889c4f5",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-creme-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-HazelnutCremeDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "619",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Creamy Vanilla, decaf, flavored coffee, Hazelnut Creme Decaf, Toasted Hazelnuts",
+   "Flavored"
+  ],
+  "title": "Hazelnut Creme Decaf",
+  "url": "https://katzcoffee.com/product/hazelnut-creme-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "619:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e5a67befbdfa4eb",
+  "first_seen": "2026-10-26",
+  "handle": "high-octane-103",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-HighOctane.png",
+  "platform": "woocommerce",
+  "product_id": "620",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "103+",
+   "High Octane",
+   "cacao",
+   "caramelized sugars",
+   "citrus",
+   "high caffeine content",
+   "light roasted coffee",
+   "malt"
+  ],
+  "title": "High Octane 103+",
+  "url": "https://katzcoffee.com/product/high-octane-103/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "620:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "620:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37e7e183d070d349",
+  "first_seen": "2026-10-26",
+  "handle": "jumping-mouse",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-JumpingMouse.png",
+  "platform": "woocommerce",
+  "product_id": "623",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Jumping Mouse",
+  "url": "https://katzcoffee.com/product/jumping-mouse/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "623:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "623:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04c2a1b08fc89dcd",
+  "first_seen": "2026-10-26",
+  "handle": "katz-best-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-KatzBest.png",
+  "platform": "woocommerce",
+  "product_id": "624",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "bestseller, BlackFriday, Central American, classic, Coffee, house blend, Indonesian, Katz Best Blend, low acidity, smooth finish, strong body"
+  ],
+  "title": "Katz Best Blend",
+  "url": "https://katzcoffee.com/product/katz-best-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "624:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "624:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9e926fd95aa67d1",
+  "first_seen": "2026-10-26",
+  "handle": "katz-best-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-KatzBestDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "625",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Coffee, katz best decaf, mild acidity, official house blend, Smooth",
+   "Signature Blends"
+  ],
+  "title": "Katz Best Decaf",
+  "url": "https://katzcoffee.com/product/katz-best-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "625:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "625:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2bfbfd4a24a54bf6",
+  "first_seen": "2026-10-26",
+  "handle": "katz-magic",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-KatzMagic.png",
+  "platform": "woocommerce",
+  "product_id": "626",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Katz Magic",
+  "url": "https://katzcoffee.com/product/katz-magic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "626:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "626:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "66ab7ffbb175e773",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Kenya.png",
+  "platform": "woocommerce",
+  "product_id": "627",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "aroma, berry, citrus, Coffee, coffee experience, exquisite cup of coffee, faraway land, flavor, Kenya, Kenya Blend, unique coffee, wine-like acidity"
+  ],
+  "title": "Kenya",
+  "url": "https://katzcoffee.com/product/kenya/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "627:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "627:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e8f6cf681463c2d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-organic",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-MexicoChiapas.png",
+  "platform": "woocommerce",
+  "product_id": "628",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "5demayo, balanced cup, cane sugar, certified organic, chiapas, cinnamon, mexico, semi-sweet chocolate, subtle citrus finish"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://katzcoffee.com/product/mexico-chiapas-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "628:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "628:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de5ae559ab3ddbaf",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-organic-dark",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-MexicoChiapasDark.png",
+  "platform": "woocommerce",
+  "product_id": "629",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "5demayo, brown sugar finish, chiapas, chocolate, clean, Dark, mexico, notes, nutty flavor, Rich, smoky, subtle, Sweet"
+  ],
+  "title": "Mexico Chiapas Dark",
+  "url": "https://katzcoffee.com/product/mexico-chiapas-organic-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "629:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "629:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4587b64ae0adb2a8",
+  "first_seen": "2026-10-26",
+  "handle": "mexi-kali-creme",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-MexiKali.png",
+  "platform": "woocommerce",
+  "product_id": "630",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "chocolate liquor, coffee blend, creme flavored, flavored coffee, Mexi-Kali Blues, Mexi-Kali Creme Flavored Coffee, Mexican coffee, vanilla"
+  ],
+  "title": "Mexi-Kali Creme",
+  "url": "https://katzcoffee.com/product/mexi-kali-creme/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "630:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "630:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbd5aebd23eef760",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blue",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-MidnightBlue.png",
+  "platform": "woocommerce",
+  "product_id": "631",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "earthy, full-bodied, light acidity, Midnight Blue, politically charged, pungent, resinous, satisfying, smoky flavors, Smooth, traditional dark roast coffee, uninhibited, visionary"
+  ],
+  "title": "Midnight Blue",
+  "url": "https://katzcoffee.com/product/midnight-blue/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "631:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "631:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e5a899a1e818c1c",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blue-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-MidnightBlueDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "632",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "earthy, full-bodied, light acidity, Midnight Blue, politically charged, popular, pungent, resinous, satisfying, smoky flavors, Smooth, traditional dark roast coffee, uninhibited, visionary"
+  ],
+  "title": "Midnight Blue Decaf",
+  "url": "https://katzcoffee.com/product/midnight-blue-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "632:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "632:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd85ada59b86a536",
+  "first_seen": "2026-10-26",
+  "handle": "moonshine-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Moonshine.png",
+  "platform": "woocommerce",
+  "product_id": "633",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "African Coffee, balanced complexity, dark roast blend, downtown, Indonesian coffee, Moonshine Blend, Moonshine Patio Bar &amp; Grill, Red River Street, rich flavor",
+   "Signature Blends"
+  ],
+  "title": "Moonshine Blend",
+  "url": "https://katzcoffee.com/product/moonshine-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "633:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "633:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d29f7a8ae6159a31",
+  "first_seen": "2026-10-26",
+  "handle": "picos-house-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Picos.png",
+  "platform": "woocommerce",
+  "product_id": "637",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "after dinner, brown sugar, brunch, Chef Arnaldo Richards, Coffee, flavor, house blend, mexico, organic beans, Picos Restaurant, rich chocolate, smokiness"
+  ],
+  "title": "Picos House Blend",
+  "url": "https://katzcoffee.com/product/picos-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "637:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "637:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c7e30eb01f22adbb",
+  "first_seen": "2026-10-26",
+  "handle": "ptsd-camp-hope-foundation-high-speed-low-drag",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/05/PTSDBags2025_HSLD.png",
+  "platform": "woocommerce",
+  "product_id": "639",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "PTSD",
+   "Signature Blends",
+   "ptsd coffee",
+   "ptsdcoffee"
+  ],
+  "title": "PTSD/Camp Hope Foundation: High Speed Low Drag",
+  "url": "https://katzcoffee.com/product/ptsd-camp-hope-foundation-high-speed-low-drag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "639:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "639:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0920c0c517d03205",
+  "first_seen": "2026-10-26",
+  "handle": "ptsd-camp-hope-foundation-pecan-grove",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/PTSDBags2025_PecanGrove-FIX.png",
+  "platform": "woocommerce",
+  "product_id": "640",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Flavored",
+   "PTSD",
+   "ptsd coffee",
+   "ptsdcoffee"
+  ],
+  "title": "PTSD/Camp Hope Foundation: Pecan Grove",
+  "url": "https://katzcoffee.com/product/ptsd-camp-hope-foundation-pecan-grove/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "640:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "640:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b7a74c3e1b378c8",
+  "first_seen": "2026-10-26",
+  "handle": "ptsd-camp-hope-foundation-you-are-not-alone",
+  "image": "https://katzcoffee.com/wp-content/uploads/2025/05/PTSDBags2025_YANA.png",
+  "platform": "woocommerce",
+  "product_id": "641",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Blend, cause, chocolate, collaboration, Madagascar Vanilla, mission, perfection, PTSD/Camp Hope Foundation, ptsdcoffee, roasted, sacrifice, support, tart fruit, unique, Veterans, You Are Not Alone",
+   "Cause Coffee"
+  ],
+  "title": "PTSD/Camp Hope Foundation: You Are Not Alone",
+  "url": "https://katzcoffee.com/product/ptsd-camp-hope-foundation-you-are-not-alone/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "641:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "641:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "263e57aad8196b3a",
+  "first_seen": "2026-10-26",
+  "handle": "rice-university-owl-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/Rice-Owl-Blend-Bag.png",
+  "platform": "woocommerce",
+  "product_id": "644",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee"
+  ],
+  "title": "Rice University: Owl Blend",
+  "url": "https://katzcoffee.com/product/rice-university-owl-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "644:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "644:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6662e262750f6c00",
+  "first_seen": "2026-10-26",
+  "handle": "rice-university-south-main-mocha",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/Rice-South-Main-Mocha-Bag.png",
+  "platform": "woocommerce",
+  "product_id": "645",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Signature Blends"
+  ],
+  "title": "Rice University: South Main Mocha",
+  "url": "https://katzcoffee.com/product/rice-university-south-main-mocha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "645:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "645:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0078de7594cab5d2",
+  "first_seen": "2026-10-26",
+  "handle": "rice-university-twilight-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/Rice-Twilight-Blend-Bag.png",
+  "platform": "woocommerce",
+  "product_id": "646",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Signature Blends"
+  ],
+  "title": "Rice University: Twilight Blend",
+  "url": "https://katzcoffee.com/product/rice-university-twilight-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "646:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "646:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d7d6d1d30854c6ee",
+  "first_seen": "2026-10-26",
+  "handle": "seaside-caramel",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-SeasideCaramel.png",
+  "platform": "woocommerce",
+  "product_id": "648",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "balance, decadent, flavored coffee, perfect blend, Rich, sea salt, seaside caramel, Sweet, taste buds, unforgettable flavor"
+  ],
+  "title": "Seaside Caramel",
+  "url": "https://katzcoffee.com/product/seaside-caramel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "648:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "648:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "006c213f9fa4612b",
+  "first_seen": "2026-10-26",
+  "handle": "seaside-caramel-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-SeasideCaramelDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "649",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "Seaside Caramel Decaf Flavored Coffee Flavor notes Sweet caramel Sea salt"
+  ],
+  "title": "Seaside Caramel Decaf",
+  "url": "https://katzcoffee.com/product/seaside-caramel-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "649:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "649:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1b2a519e0f08bd1",
+  "first_seen": "2026-10-26",
+  "handle": "smores",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Smores.png",
+  "platform": "woocommerce",
+  "product_id": "650",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "S’mores",
+  "url": "https://katzcoffee.com/product/smores/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "650:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "650:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bdb5b409fcd94275",
+  "first_seen": "2026-10-26",
+  "handle": "smores-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-SmoresDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "651",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "coffee lovers, decaf, Delicious, flavored coffee, graham cracker, rich chocolate, S'mores Blend Decaf, sweet treat, toasted marshmallows"
+  ],
+  "title": "S’mores Decaf",
+  "url": "https://katzcoffee.com/product/smores-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "651:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "651:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b7e7deb63d97e64",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-tempesi",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Sumatra.png",
+  "platform": "woocommerce",
+  "product_id": "652",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "brown sugar, Coffee, Dark Chocolate, earl grey tea, earthy, smoky, Sumatra, Tempesi"
+  ],
+  "title": "Sumatra Tempesi",
+  "url": "https://katzcoffee.com/product/sumatra-tempesi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "652:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "652:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7477c28448725d58",
+  "first_seen": "2026-10-26",
+  "handle": "texas-chocolate-mudslide-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-TXChocolateMudslideDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "654",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "decaf, flavored coffee, Mexicali creme, rich chocolate, Texas Chocolate Mudslide, vanilla"
+  ],
+  "title": "Texas Chocolate Mudslide Decaf",
+  "url": "https://katzcoffee.com/product/texas-chocolate-mudslide-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "654:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "654:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0772bb98bfaa2ac",
+  "first_seen": "2026-10-26",
+  "handle": "texas-hill-country-pecan",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-TXHillCountryPecan.png",
+  "platform": "woocommerce",
+  "product_id": "655",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "aroma, bestseller, BlackFriday, caramel, cinnamon, Creamy Vanilla, flavor experience, flavored coffee, nutmeg, roasted pecans, texas hill country pecan"
+  ],
+  "title": "Texas Hill Country Pecan",
+  "url": "https://katzcoffee.com/product/texas-hill-country-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "655:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "655:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f7c2e9ca5b7d3685",
+  "first_seen": "2026-10-26",
+  "handle": "texas-hill-country-pecan-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-TXHillCountryPecanDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "656",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Flavored",
+   "caramel, Creamy Vanilla, decaf, popular flavor, roasted pecans, Texas Hill Country Pecan Decaf Flavored Coffee"
+  ],
+  "title": "Texas Hill Country Pecan Decaf",
+  "url": "https://katzcoffee.com/product/texas-hill-country-pecan-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "656:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "656:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd4a74ab4b4ce6f7",
+  "first_seen": "2026-10-26",
+  "handle": "tontine-espresso",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-TontineEspresso.png",
+  "platform": "woocommerce",
+  "product_id": "657",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Blend",
+   "Dark Chocolate",
+   "Espresso",
+   "Rich",
+   "Signature Blends",
+   "big",
+   "brown sugar",
+   "central america",
+   "coffees",
+   "espresso",
+   "indonesia",
+   "nicely balanced",
+   "red fruit",
+   "tontine"
+  ],
+  "title": "Tontine Espresso",
+  "url": "https://katzcoffee.com/product/tontine-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "657:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "657:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a83400015c169cda",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-espresso",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-VelvetEspresso.png",
+  "platform": "woocommerce",
+  "product_id": "658",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "BlackFriday",
+   "Espresso",
+   "Signature Blends",
+   "Velvet Espresso",
+   "balanced espresso",
+   "bestseller",
+   "brown sugar flavor",
+   "cinnamon flavor",
+   "complex espresso",
+   "dark chocolate flavor",
+   "drip coffee",
+   "orange peel flavor",
+   "popular espresso"
+  ],
+  "title": "Velvet Espresso",
+  "url": "https://katzcoffee.com/product/velvet-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "658:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "658:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53db50ef24b6584c",
+  "first_seen": "2026-10-26",
+  "handle": "voodoo-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-Voodoo.png",
+  "platform": "woocommerce",
+  "product_id": "659",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "bold flavor, coffee drinker, exclusive blend, signature blend, smooth flavor, taste the difference, unique flavor, Voodoo Blend"
+  ],
+  "title": "Voodoo Blend",
+  "url": "https://katzcoffee.com/product/voodoo-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "659:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "659:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1652fee9b877156d",
+  "first_seen": "2026-10-26",
+  "handle": "voodoo-blend-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-VoodooDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "660",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Signature Blends",
+   "caffeine-free, Dark Chocolate, decaf, dried orange peel, earthy tobacco, intense, rich flavor, signature, Voodoo Blend"
+  ],
+  "title": "Voodoo Blend Decaf",
+  "url": "https://katzcoffee.com/product/voodoo-blend-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.95,
+    "title": "10OZ",
+    "variant_id": "660:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "660:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fcdd810fc22d760f",
+  "first_seen": "2026-10-26",
+  "handle": "white-chocolate-bread-pudding",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-WhiteChocolateBreadPudding.png",
+  "platform": "woocommerce",
+  "product_id": "661",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Bourbon Flavoring, flavored coffee, seasonal, vanilla, White Chocolate Bread Pudding, White Chocolate Mousse",
+   "Flavored"
+  ],
+  "title": "White Chocolate Bread Pudding",
+  "url": "https://katzcoffee.com/product/white-chocolate-bread-pudding/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "661:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "661:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e37be7cea6126755",
+  "first_seen": "2026-10-26",
+  "handle": "white-chocolate-bread-pudding-decaf",
+  "image": "https://katzcoffee.com/wp-content/uploads/2022/03/KC-BagsWEB2024-WhiteChocolateBreadPuddingDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "662",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Bourbon Flavoring, Decaf Flavored Coffee, vanilla, White Chocolate Bread Pudding, White Chocolate Mousse",
+   "Flavored"
+  ],
+  "title": "White Chocolate Bread Pudding Decaf",
+  "url": "https://katzcoffee.com/product/white-chocolate-bread-pudding-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.95,
+    "title": "12OZ",
+    "variant_id": "662:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2LB",
+    "variant_id": "662:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a80f47774da6d9cb",
+  "first_seen": "2026-10-26",
+  "handle": "josh-williams-park-it-blend",
+  "image": "https://katzcoffee.com/wp-content/uploads/2024/02/KC-BagsWEB2024-JoshWilliamsParkIt.png",
+  "platform": "woocommerce",
+  "product_id": "8596",
+  "product_type": "variable",
+  "roaster_slug": "katzcoffee",
+  "tags": [
+   "Cause Coffee",
+   "Josh Williams",
+   "NASCAR",
+   "NASCAR Xfinity Series",
+   "No.92 Chevrolet",
+   "Park It",
+   "Park It Blend",
+   "Racing",
+   "Signature Blends",
+   "caffeine",
+   "co-sponsorship",
+   "community",
+   "hospital tour",
+   "philanthropic initiatives",
+   "short track"
+  ],
+  "title": "Josh Williams Park It Blend",
+  "url": "https://katzcoffee.com/product/josh-williams-park-it-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12OZ",
+    "variant_id": "8596:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.95,
+    "title": "2LB",
+    "variant_id": "8596:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

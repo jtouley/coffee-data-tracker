@@ -1,0 +1,104 @@
+{
+ "10175970738357": {
+  "body_hash": "5e98dfb945c6952e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruit-like sweetness",
+   "brown spice",
+   "vibrant",
+   "black tea"
+  ],
+  "varietals": []
+ },
+ "10214454591669": {
+  "body_hash": "243ac17ef250d7e4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "nutty",
+   "blue",
+   "blackberry"
+  ],
+  "varietals": []
+ },
+ "10354719719605": {
+  "body_hash": "aec9ef02cdc24a62",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smooth dark chocolate",
+   "nut butter",
+   "caramel",
+   "black cherry"
+  ],
+  "varietals": []
+ },
+ "10408335147189": {
+  "body_hash": "f37aa372cdb2a67f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smooth dark chocolate",
+   "caramel",
+   "roasted almonds",
+   "dried fruits"
+  ],
+  "varietals": []
+ },
+ "8243568410805": {
+  "body_hash": "7d64fb1d174e50dc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "nutty",
+   "mildly sweet",
+   "smooth",
+   "balanced",
+   "brown sugar",
+   "walnut",
+   "earthy"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,302 @@
+[
+ {
+  "body_hash": "836d655a4db6736d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original.jpeg",
+  "platform": "woocommerce",
+  "product_id": "27391",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Decaf Peru",
+  "url": "https://www.medleno.com/product/decaf-peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Decaf Peru",
+    "variant_id": "27391:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4941936b86d1dc53",
+  "first_seen": "2026-10-26",
+  "handle": "java-blend",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-12-scaled.jpeg",
+  "platform": "woocommerce",
+  "product_id": "27774",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Java Blend",
+  "url": "https://www.medleno.com/product/java-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Java Blend",
+    "variant_id": "27774:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "055e4f73ec801ee2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-fair-trade-organic",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5115",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Ethiopia Sidamo (Fair Trade Organic)",
+  "url": "https://www.medleno.com/product/ethiopia-sidamo-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Ethiopia Sidamo (Fair Trade Organic)",
+    "variant_id": "5115:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a95908e23c348fc",
+  "first_seen": "2026-10-26",
+  "handle": "house-espresso-blend",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-3.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5120",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "House Espresso Blend",
+  "url": "https://www.medleno.com/product/house-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "House Espresso Blend",
+    "variant_id": "5120:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bfd9c96d53109a35",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-13.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5122",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.medleno.com/product/kenya-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Kenya AA",
+    "variant_id": "5122:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a06d9dc07d2bc3f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-fair-trade-organic",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-6.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5124",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Mexico Decaf (Fair Trade Organic)",
+  "url": "https://www.medleno.com/product/mexico-decaf-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Mexico Decaf (Fair Trade Organic)",
+    "variant_id": "5124:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b45a9e9e85c7d849",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-7.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5126",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Ethiopia Harrar",
+  "url": "https://www.medleno.com/product/ethiopia-harrar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Ethiopia Harrar",
+    "variant_id": "5126:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a27a422fe6aec60f",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-fair-trade-organic",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-8.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5128",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Nicaragua Jinotega (Fair Trade Organic)",
+  "url": "https://www.medleno.com/product/nicaragua-jinotega-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Nicaragua Jinotega (Fair Trade Organic)",
+    "variant_id": "5128:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ff460198b9402a5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-asprocdegua-fair-trade-organic",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-9.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5130",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Guatemala Huehuetenango Asprocdegua (Fair Trade Organic)",
+  "url": "https://www.medleno.com/product/guatemala-huehuetenango-asprocdegua-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Guatemala Huehuetenango Asprocdegua (Fair Trade Organic)",
+    "variant_id": "5130:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6511bff4b6bdd8e4",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-11-scaled.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5134",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.medleno.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Breakfast Blend",
+    "variant_id": "5134:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23edd173f88e42f5",
+  "first_seen": "2026-10-26",
+  "handle": "arigon-blend",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-12-scaled.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5136",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Arigon Blend",
+  "url": "https://www.medleno.com/product/arigon-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Arigon Blend",
+    "variant_id": "5136:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "21b2539cfd193e35",
+  "first_seen": "2026-10-26",
+  "handle": "java-preanger",
+  "image": "https://www.medleno.com/wp-content/uploads/2022/05/original-12-scaled.jpeg",
+  "platform": "woocommerce",
+  "product_id": "5140",
+  "product_type": "variable",
+  "roaster_slug": "medleno",
+  "tags": [
+   "Roasted Coffee Beans"
+  ],
+  "title": "Java Preanger",
+  "url": "https://www.medleno.com/product/java-preanger/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Java Preanger",
+    "variant_id": "5140:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

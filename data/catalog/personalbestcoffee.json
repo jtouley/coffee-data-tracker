@@ -1,0 +1,120 @@
+[
+ {
+  "body_hash": "61bb50be3fcf5d17",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://assets.bigcartel.com/product_images/352360261/Product+Photo+Colombia.png?auto=format&fit=max&h=1200&w=1200",
+  "platform": "generic",
+  "product_id": "95943679",
+  "product_type": "",
+  "roaster_slug": "personalbestcoffee",
+  "tags": [],
+  "title": "Colombia Huila",
+  "url": "https://www.personalbestcoffee.com/product/colombia-huila",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Colombia Huila (Medium Roast - Whole Bean)",
+    "variant_id": "376839358"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Colombia Huila (Medium Roast - Ground)",
+    "variant_id": "376839361"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Colombia Huila (Light Roast - Whole Bean)",
+    "variant_id": "455213673"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Colombia Huila (Light Roast - Ground)",
+    "variant_id": "455213676"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0b23ec13327e8bf",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-villa-sarchi",
+  "image": "https://assets.bigcartel.com/product_images/357877429/IMG_4041.jpg?auto=format&fit=max&h=1200&w=1200",
+  "platform": "generic",
+  "product_id": "97871272",
+  "product_type": "",
+  "roaster_slug": "personalbestcoffee",
+  "tags": [],
+  "title": "Costa Rica Villa Sarchi",
+  "url": "https://www.personalbestcoffee.com/product/costa-rica-villa-sarchi",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Costa Rica Villa Sarchi (Medium Roast - Whole Bean)",
+    "variant_id": "385585507"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Costa Rica Villa Sarchi (Light Roast - Ground)",
+    "variant_id": "385585510"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Costa Rica Villa Sarchi (Light Roast - Whole Bean)",
+    "variant_id": "390750703"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Costa Rica Villa Sarchi (Medium Roast - Ground)",
+    "variant_id": "455213622"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20e26f0605c91b19",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://assets.bigcartel.com/product_images/357887812/IMG_4049.jpg?auto=format&fit=max&h=1200&w=1200",
+  "platform": "generic",
+  "product_id": "97871368",
+  "product_type": "",
+  "roaster_slug": "personalbestcoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.personalbestcoffee.com/product/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.0,
+    "title": "Ethiopia Yirgacheffe (Medium Roast)",
+    "variant_id": "385586101"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.0,
+    "title": "Ethiopia Yirgacheffe (Light Roast)",
+    "variant_id": "390750592"
+   }
+  ],
+  "vendor": ""
+ }
+]

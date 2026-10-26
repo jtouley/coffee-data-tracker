@@ -1,0 +1,385 @@
+[
+ {
+  "body_hash": "a5316bb06550840a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-william-mora-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/costaricaanaerobicnatural.png?v=1790880022",
+  "platform": "shopify",
+  "product_id": "15226995802187",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Anaerobic",
+   "Costa Rica",
+   "Natural",
+   "New Release",
+   "Single Origin"
+  ],
+  "title": "Costa Rica - William Mora Anaerobic Natural",
+  "url": "https://prestacoffee.com/products/costa-rica-william-mora-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz",
+    "variant_id": "67171706765387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb",
+    "variant_id": "67171706798155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb",
+    "variant_id": "67171706830923"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "40fbc0926fb4898a",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-los-naranjos-anaerobic-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/elsalvadoranaerobichoney.png?v=1790881570",
+  "platform": "shopify",
+  "product_id": "15227010449483",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Anaerobic",
+   "El Salvador",
+   "Gesha",
+   "Honey",
+   "New Release",
+   "Single Origin"
+  ],
+  "title": "El Salvador - Finca Los Naranjos - Anaerobic Honey",
+  "url": "https://prestacoffee.com/products/el-salvador-finca-los-naranjos-anaerobic-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz",
+    "variant_id": "67171851173963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb",
+    "variant_id": "67171851206731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb",
+    "variant_id": "67171851239499"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "2ae4fc4ca1747b40",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-don-eli-tematica-2-catuai-honey-reposado",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/costricadoneli.png?v=1792184875",
+  "platform": "shopify",
+  "product_id": "15249084088395",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Catuaí",
+   "Costa Rica",
+   "Honey Reposado",
+   "Natural",
+   "New Release",
+   "Single Origin"
+  ],
+  "title": "Costa Rica - Don Eli Tematica 2 - Catuaí, Honey Reposado",
+  "url": "https://prestacoffee.com/products/costa-rica-don-eli-tematica-2-catuai-honey-reposado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz",
+    "variant_id": "67259792916555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb",
+    "variant_id": "67259792949323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb",
+    "variant_id": "67259792982091"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "746c7dc3d21c7863",
+  "first_seen": "2026-10-26",
+  "handle": "group-ride-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/newgroupride_55789d67-d05b-4d08-bc55-33985b8595a1.png?v=1784678948",
+  "platform": "shopify",
+  "product_id": "6861078822987",
+  "product_type": "Blend",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Blend",
+   "Costa Rica",
+   "El Salvador",
+   "Honey",
+   "Natural"
+  ],
+  "title": "Group Ride - Rotating Blend",
+  "url": "https://prestacoffee.com/products/group-ride-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz",
+    "variant_id": "40092526968907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "40092527001675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "41078797926475"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "83278d288c28d035",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-el-vergel",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/decaf_bag_d4c08841-75d0-47ed-a2b8-76b5de324fcb.png?v=1728878765",
+  "platform": "shopify",
+  "product_id": "6861079707723",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Chocolate",
+   "Colombia",
+   "Decaf",
+   "El Vergel",
+   "Single Origin",
+   "Vanilla"
+  ],
+  "title": "Decaf Colombian Coffee – El Vergel Estate",
+  "url": "https://prestacoffee.com/products/decaf-colombia-el-vergel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz",
+    "variant_id": "40126527275083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "40126527307851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "41078808281163"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "d38893925f2f0bbb",
+  "first_seen": "2026-10-26",
+  "handle": "120-psi-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/NEW120PSI.png?v=1768335330",
+  "platform": "shopify",
+  "product_id": "6927634071627",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Blend",
+   "Ethiopia",
+   "Natural",
+   "New Release",
+   "Peru",
+   "Single Origin",
+   "Washed",
+   "espresso"
+  ],
+  "title": "120 PSI Blend",
+  "url": "https://prestacoffee.com/products/120-psi-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz",
+    "variant_id": "40275070058571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lbs",
+    "variant_id": "41196574998603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "41196575621195"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "d48932723bc736dd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-candy-blast-decaf-honey-watermelon-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/5P0A7209.jpg?v=1780515789",
+  "platform": "shopify",
+  "product_id": "7787656708171",
+  "product_type": "",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Caturra",
+   "Colombia",
+   "Decaf",
+   "Honey",
+   "Single Origin",
+   "Swiss Water Process",
+   "Washed",
+   "Washed Co-Fermentation",
+   "Watermelon",
+   "specialty coffee"
+  ],
+  "title": "Colombia - Candy Blast Decaf - Honey + Watermelon - Swiss Water Decaf",
+  "url": "https://prestacoffee.com/products/colombia-candy-blast-decaf-honey-watermelon-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "42551597039691"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "b7a45230ad6c75a8",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-cipres-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/mexico_cipres_washed.png?v=1791782219",
+  "platform": "shopify",
+  "product_id": "8057886801995",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Mexico",
+   "New Release",
+   "Single Origin",
+   "mexico washed"
+  ],
+  "title": "Mexico- Cipres- Washed",
+  "url": "https://prestacoffee.com/products/mexico-cipres-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "43046198837323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb",
+    "variant_id": "43046198870091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "43046198902859"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ },
+ {
+  "body_hash": "19c4c286e3c3245f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-koke-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0549/0176/8267/files/ethiopiakoke_316815c5-a085-4845-817d-c46f4148d4ed.png?v=1790032536",
+  "platform": "shopify",
+  "product_id": "8481891352651",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "prestacoffee",
+  "tags": [
+   "Ethiopia",
+   "Honey",
+   "Koke",
+   "New Release",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Koke - Honey Process",
+  "url": "https://prestacoffee.com/products/ethiopia-koke-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz",
+    "variant_id": "46213674238027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lb",
+    "variant_id": "46213674270795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "46213674303563"
+   }
+  ],
+  "vendor": "Presta Coffee"
+ }
+]

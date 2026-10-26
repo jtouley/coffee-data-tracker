@@ -1,0 +1,58 @@
+{
+ "68d5292ae17edb6fe4ee5b98": {
+  "body_hash": "6b2571676b55c796",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cacao",
+   "molasses",
+   "toasted nuts"
+  ],
+  "varietals": []
+ },
+ "68d52eca9f62a20a3fea59de": {
+  "body_hash": "3185cbeb7bf2db2e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "blueberries",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "68d52f43e17edb6fe4ee60f0": {
+  "body_hash": "3614038bc97b9369",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "roasted nuts",
+   "malt",
+   "citrus"
+  ],
+  "varietals": []
+ }
+}

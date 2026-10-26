@@ -1,0 +1,1639 @@
+[
+ {
+  "body_hash": "5f8f6d1be3d7cf89",
+  "first_seen": "2026-10-26",
+  "handle": "los-chelazos-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-loschelazos-26_cb49411e-67d4-4b85-83d4-35dab3f9266a.png?v=1790786669",
+  "platform": "shopify",
+  "product_id": "10322475876417",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Los Chelazos",
+  "url": "https://sweetbloomcoffee.com/products/los-chelazos-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "50584285642817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "50584285675585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "50584285708353"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "37a7dcfd5022d956",
+  "first_seen": "2026-10-26",
+  "handle": "flor-de-corazon-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-flordecorazon-26.png?v=1792514736",
+  "platform": "shopify",
+  "product_id": "10363872084033",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Flor de Corazón",
+  "url": "https://sweetbloomcoffee.com/products/flor-de-corazon-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "50755461120065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "50755461152833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "50755461185601"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "e881139244fbb579",
+  "first_seen": "2026-10-26",
+  "handle": "one-bag-roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/product1_1.png?v=1757599494",
+  "platform": "shopify",
+  "product_id": "7644572975169",
+  "product_type": "",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [],
+  "title": "One-Bag Roaster's Choice",
+  "url": "https://sweetbloomcoffee.com/products/one-bag-roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "42431374524481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "42431374557249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "42898250203201"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "9c908cb52fcdd21b",
+  "first_seen": "2026-10-26",
+  "handle": "hometown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/130598_8eff7b8a844d65b830c0d03f288db5bf.webp?v=1771350633",
+  "platform": "shopify",
+  "product_id": "7644574285889",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Hometown",
+  "url": "https://sweetbloomcoffee.com/products/hometown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "42431378653249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "42431378686017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "42898271535169"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "c89574f82cfee305",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/130602_4392fdd16670efab8381b4aaae84f8e9_3efd86be-596f-4a71-86a6-308cbbd90044.webp?v=1760565950",
+  "platform": "shopify",
+  "product_id": "7644574384193",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://sweetbloomcoffee.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "42431378784321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "42431378817089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "42898269012033"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "e881139244fbb579",
+  "first_seen": "2026-10-26",
+  "handle": "two-bag-roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/RoastersChoice2x_84d65674-5b26-4bd0-916b-d5e3a4a5fcbb.png?v=1760011800",
+  "platform": "shopify",
+  "product_id": "7644574449729",
+  "product_type": "",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [],
+  "title": "Two-Bag Roaster's Choice",
+  "url": "https://sweetbloomcoffee.com/products/two-bag-roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 oz Whole Bean",
+    "variant_id": "42431378882625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.0,
+    "title": "2 lb Whole Bean",
+    "variant_id": "42898268684353"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "2d7571fc14682da4",
+  "first_seen": "2026-10-26",
+  "handle": "gidey-hagos",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/140428_664218a5cd08b5eb70103444ce1ecb3c.webp?v=1760126635",
+  "platform": "shopify",
+  "product_id": "7676002402369",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Gidey Hagos",
+  "url": "https://sweetbloomcoffee.com/products/gidey-hagos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz Whole Bean",
+    "variant_id": "42919014531137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "42919014563905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "42919014596673"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "060ebbbbc75e1754",
+  "first_seen": "2026-10-26",
+  "handle": "bekele-kechara",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/139791_4e02e6396bed46bd4ed02d8a3c837f68.webp?v=1760126636",
+  "platform": "shopify",
+  "product_id": "7676002631745",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Bekele Kechara",
+  "url": "https://sweetbloomcoffee.com/products/bekele-kechara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz Whole Bean",
+    "variant_id": "42919014826049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.5,
+    "title": "5 lb Whole Bean",
+    "variant_id": "42919014858817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb Whole Bean",
+    "variant_id": "42919014891585"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "ef4a0cfa405cfc85",
+  "first_seen": "2026-10-26",
+  "handle": "pablo-guerrero",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/143265_42d0ee6b6cfde09188a55ba51e4b1ddc.webp?v=1760126644",
+  "platform": "shopify",
+  "product_id": "7676003811393",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Pablo Guerrero",
+  "url": "https://sweetbloomcoffee.com/products/pablo-guerrero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "42919016726593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "42919016759361"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "f8744226497403f3",
+  "first_seen": "2026-10-26",
+  "handle": "nelson-flores-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-flores-25-scaled.png?v=1761764663",
+  "platform": "shopify",
+  "product_id": "7689143353409",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Nelson Flores",
+  "url": "https://sweetbloomcoffee.com/products/nelson-flores-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "42993372495937"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "42993372528705"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "42993372561473"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "c139bf9f1d06978b",
+  "first_seen": "2026-10-26",
+  "handle": "winter-bloom-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-winterbloom-25.png?v=1762977349",
+  "platform": "shopify",
+  "product_id": "7705611075649",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Winter Bloom",
+  "url": "https://sweetbloomcoffee.com/products/winter-bloom-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "43048786821185"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.64,
+    "title": "2lb Whole Bean",
+    "variant_id": "43048786853953"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43048786886721"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "332b870d7237de10",
+  "first_seen": "2026-10-26",
+  "handle": "rambagirakawa-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-ramba-25.png?v=1767643811",
+  "platform": "shopify",
+  "product_id": "7763643957313",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Rambagirakawa",
+  "url": "https://sweetbloomcoffee.com/products/rambagirakawa-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "43241976135745"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.64,
+    "title": "2lb Whole Bean",
+    "variant_id": "43241976168513"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43241976201281"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "06c8abff34a1e3bf",
+  "first_seen": "2026-10-26",
+  "handle": "augusto-castillo-lot-2",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-castillo2-26_398d63ee-c2a0-4ec3-80aa-8e26540b789c.png?v=1768427157",
+  "platform": "shopify",
+  "product_id": "7772441804865",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Augusto Castillo Lot #2",
+  "url": "https://sweetbloomcoffee.com/products/augusto-castillo-lot-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "43266529656897"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 73.45,
+    "title": "2lb Whole Bean",
+    "variant_id": "43266529689665"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 173.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "43266529722433"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "7d700ba9aeb394d2",
+  "first_seen": "2026-10-26",
+  "handle": "elver-rodriguez",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-erodriguez-26.png?v=1768855364",
+  "platform": "shopify",
+  "product_id": "7775420219457",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Elver Rodriguez",
+  "url": "https://sweetbloomcoffee.com/products/elver-rodriguez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "43275477418049"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "43275477450817"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43275477483585"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "843f407ff10b39ee",
+  "first_seen": "2026-10-26",
+  "handle": "melao",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/MELAO_PIC.png?v=1768940664",
+  "platform": "shopify",
+  "product_id": "7775452430401",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Melao",
+  "url": "https://sweetbloomcoffee.com/products/melao",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43275723964481"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43275723997249"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43275724030017"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "24989ac50352a837",
+  "first_seen": "2026-10-26",
+  "handle": "rigoberto-herrera-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-rigo-26.png?v=1769551791",
+  "platform": "shopify",
+  "product_id": "7779176611905",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Rigoberto Herrera",
+  "url": "https://sweetbloomcoffee.com/products/rigoberto-herrera-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43310923153473"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 135.36,
+    "title": "2lb Whole Bean",
+    "variant_id": "43310924693569"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "898fd462b569c4c8",
+  "first_seen": "2026-10-26",
+  "handle": "campazi",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-campazi-26_c4a5a629-a1a7-4ce9-b916-037afc64decf.png?v=1771523808",
+  "platform": "shopify",
+  "product_id": "7800205017153",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Campazi",
+  "url": "https://sweetbloomcoffee.com/products/campazi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "43578040156225"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.64,
+    "title": "2lb Whole Bean",
+    "variant_id": "43578040188993"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43578040221761"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "28f4e8afc17db6d6",
+  "first_seen": "2026-10-26",
+  "handle": "muungano",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-muungano-26_85e689fa-10d3-46fa-ae71-97a08964831f.png?v=1772042629",
+  "platform": "shopify",
+  "product_id": "7810375909441",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Muungano",
+  "url": "https://sweetbloomcoffee.com/products/muungano",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "43603973374017"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.65,
+    "title": "2lb Whole Bean",
+    "variant_id": "43603973406785"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43603973439553"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "5aab447c007cbe62",
+  "first_seen": "2026-10-26",
+  "handle": "alejandro-padilla",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-padilla-26_6e93cf6d-60a8-48de-9169-1b91517486e7.png?v=1771972753",
+  "platform": "shopify",
+  "product_id": "7810435481665",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Alejandro Padilla",
+  "url": "https://sweetbloomcoffee.com/products/alejandro-padilla",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43603916718145"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43603916750913"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43603916783681"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "f693f9615ebd567b",
+  "first_seen": "2026-10-26",
+  "handle": "lito-cubas",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-cubas-26_e028b461-815a-4560-bbd7-729606de9401.png?v=1773259474",
+  "platform": "shopify",
+  "product_id": "7850626973761",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Lito Cubas",
+  "url": "https://sweetbloomcoffee.com/products/lito-cubas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43674653425729"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43674653458497"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 190.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43674653491265"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "1bbbbfaf3066307c",
+  "first_seen": "2026-10-26",
+  "handle": "jose-martinez-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-martinez-26.png?v=1773685838",
+  "platform": "shopify",
+  "product_id": "7855485157441",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Jose Martinez",
+  "url": "https://sweetbloomcoffee.com/products/jose-martinez-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43694850506817"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43694850539585"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43694850572353"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "36308cbe27718128",
+  "first_seen": "2026-10-26",
+  "handle": "velo-de-novia-1",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-velo-26.png?v=1773690071",
+  "platform": "shopify",
+  "product_id": "7855499182145",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Velo de Novia",
+  "url": "https://sweetbloomcoffee.com/products/velo-de-novia-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43694757969985"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43694758002753"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43694758035521"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "5f96e5f1fbb5b20e",
+  "first_seen": "2026-10-26",
+  "handle": "parcero",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-parcero-26_56fc2277-ac76-4f35-a0ff-e60db8ccdcff.png?v=1774993199",
+  "platform": "shopify",
+  "product_id": "7867120910401",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Parcero",
+  "url": "https://sweetbloomcoffee.com/products/parcero",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "43726175600705"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "43726175633473"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "43726175666241"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "2d70c7949956667a",
+  "first_seen": "2026-10-26",
+  "handle": "jorge-rojas-gesha-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-rojasg-26.png?v=1775592624",
+  "platform": "shopify",
+  "product_id": "7874199814209",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Jorge Rojas Gesha",
+  "url": "https://sweetbloomcoffee.com/products/jorge-rojas-gesha-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43753085993025"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 135.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43753086025793"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee - Shopify Plus"
+ },
+ {
+  "body_hash": "7a98d5ebf9c5a8ec",
+  "first_seen": "2026-10-26",
+  "handle": "ibonia",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-ibonia-26.png?v=1776200959",
+  "platform": "shopify",
+  "product_id": "7882317135937",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Ibonia",
+  "url": "https://sweetbloomcoffee.com/products/ibonia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole  Bean",
+    "variant_id": "43776824770625"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43776824803393"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43776824836161"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "5637bff60ac2f1fe",
+  "first_seen": "2026-10-26",
+  "handle": "rigoberto-herrera-cerro-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/RIGORIGORIGO_7ba0bb5c-3062-4e3a-9b8f-7100cb70b729.png?v=1776966767",
+  "platform": "shopify",
+  "product_id": "7888165077057",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Rigoberto Herrera",
+  "url": "https://sweetbloomcoffee.com/products/rigoberto-herrera-cerro-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 40.0,
+    "title": "6oz Whole Bean",
+    "variant_id": "43794216255553"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 200.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43794216288321"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "611f5a238e25c348",
+  "first_seen": "2026-10-26",
+  "handle": "antonio-medina-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-medina-26.png?v=1777410409",
+  "platform": "shopify",
+  "product_id": "7891895189569",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Antonio Medina",
+  "url": "https://sweetbloomcoffee.com/products/antonio-medina-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43859236847681"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "43859236880449"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43859236913217"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "71a6c3743d0091e1",
+  "first_seen": "2026-10-26",
+  "handle": "asefa-dukamo",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-asefa-26_9c74210d-0d9e-415a-af00-02752cd87d75.png?v=1778082802",
+  "platform": "shopify",
+  "product_id": "7896474517569",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee archive"
+  ],
+  "title": "Asefa Dukamo",
+  "url": "https://sweetbloomcoffee.com/products/asefa-dukamo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "43911633797185"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb  Whole Bean",
+    "variant_id": "43911633829953"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43911633862721"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "1acf94e50b04a34b",
+  "first_seen": "2026-10-26",
+  "handle": "munkaze",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-munkaze-26.png?v=1779223609",
+  "platform": "shopify",
+  "product_id": "7904585580609",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Munkaze",
+  "url": "https://sweetbloomcoffee.com/products/munkaze",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "43958799532097"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "43958799564865"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43958799597633"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "9c9db8dc32e4e414",
+  "first_seen": "2026-10-26",
+  "handle": "carlos-guamanga-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-guamanga-26.png?v=1779295533",
+  "platform": "shopify",
+  "product_id": "7905329807425",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Carlos Guamanga",
+  "url": "https://sweetbloomcoffee.com/products/carlos-guamanga-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "43959003578433"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 70.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "43959003611201"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43959003643969"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "62af430c97f77a86",
+  "first_seen": "2026-10-26",
+  "handle": "herman-salazar-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-herman-26.png?v=1780500653",
+  "platform": "shopify",
+  "product_id": "7918681096257",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Herman Salazar",
+  "url": "https://sweetbloomcoffee.com/products/herman-salazar-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.25,
+    "title": "10oz Whole Bean",
+    "variant_id": "44009651830849"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44009651863617"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 178.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "44009651896385"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "683ecd61f96f0b40",
+  "first_seen": "2026-10-26",
+  "handle": "arbey-cordoba-26",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-arbeyc-26_74434839-bcb1-4187-ba6c-267ab387bdd9.png?v=1782247575",
+  "platform": "shopify",
+  "product_id": "7937591902273",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Arbey Cordoba",
+  "url": "https://sweetbloomcoffee.com/products/arbey-cordoba-26",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44082229674049"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 76.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44082229706817"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 180.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44082229739585"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "ac0f3bbbf8953fe8",
+  "first_seen": "2026-10-26",
+  "handle": "embu-lot-2",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/embu2-26.png?v=1782404853",
+  "platform": "shopify",
+  "product_id": "7937631486017",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Embu lot #2",
+  "url": "https://sweetbloomcoffee.com/products/embu-lot-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz Whole Bean",
+    "variant_id": "44082201952321"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.64,
+    "title": "2lb Whole Bean",
+    "variant_id": "44082201985089"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44082202017857"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "1ec4d235bf9a103a",
+  "first_seen": "2026-10-26",
+  "handle": "jose-arguello",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-arguello-26.png?v=1782760816",
+  "platform": "shopify",
+  "product_id": "7942986367041",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "JOSÉ ARGÜELLO",
+  "url": "https://sweetbloomcoffee.com/products/jose-arguello",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "44103832797249"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44103832830017"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44103832862785"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "b18e87ce84c322ea",
+  "first_seen": "2026-10-26",
+  "handle": "nelson-flores-2",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-nelsonflores-26.png?v=1784668042",
+  "platform": "shopify",
+  "product_id": "7989778481217",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Nelson Flores",
+  "url": "https://sweetbloomcoffee.com/products/nelson-flores-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "44244347289665"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44244347322433"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44244347355201"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "751d1cde65a83818",
+  "first_seen": "2026-10-26",
+  "handle": "nano-challa",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-nanochalla-26.png?v=1784827175",
+  "platform": "shopify",
+  "product_id": "7989794701377",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Nano Challa",
+  "url": "https://sweetbloomcoffee.com/products/nano-challa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "44244566179905"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "44244566212673"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44244566245441"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "2561dc41b76730f5",
+  "first_seen": "2026-10-26",
+  "handle": "danche",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-danche-26.png?v=1785878553",
+  "platform": "shopify",
+  "product_id": "8003604217921",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Danche",
+  "url": "https://sweetbloomcoffee.com/products/danche",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "44307375292481"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44307375325249"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44307375358017"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "c290853a383c54e2",
+  "first_seen": "2026-10-26",
+  "handle": "familia-marin",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-familiamarin-26.png?v=1785880223",
+  "platform": "shopify",
+  "product_id": "8003789783105",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Familia Marin",
+  "url": "https://sweetbloomcoffee.com/products/familia-marin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44307333120065"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44307333152833"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44307333185601"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "db62e17444c89170",
+  "first_seen": "2026-10-26",
+  "handle": "uraga",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-uraga-26.png?v=1787166723",
+  "platform": "shopify",
+  "product_id": "8046973452353",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Uraga",
+  "url": "https://sweetbloomcoffee.com/products/uraga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44449984348225"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44449984380993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44449984413761"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "970b14633f337188",
+  "first_seen": "2026-10-26",
+  "handle": "maria-gutierrez",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-mariagutierrez-26.png?v=1787167210",
+  "platform": "shopify",
+  "product_id": "8046974992449",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Maria Gutierrez",
+  "url": "https://sweetbloomcoffee.com/products/maria-gutierrez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44449403633729"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44449403666497"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44449403699265"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "18826ce99d9079c3",
+  "first_seen": "2026-10-26",
+  "handle": "jhonny-alvarado",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/SB_10oz_BagMock_Web_MASTER_1_79a2ffcb-caaa-4bbd-a9d5-5833ec9af192.png?v=1788458405",
+  "platform": "shopify",
+  "product_id": "8062456365121",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Jhonny Alvarado",
+  "url": "https://sweetbloomcoffee.com/products/jhonny-alvarado",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44508141518913"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44508141551681"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44508141584449"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ },
+ {
+  "body_hash": "05948d391857c1d9",
+  "first_seen": "2026-10-26",
+  "handle": "wuri",
+  "image": "https://cdn.shopify.com/s/files/1/0673/6999/2257/files/sweet-bloom-wuri-26.png?v=1788888517",
+  "platform": "shopify",
+  "product_id": "8067451191361",
+  "product_type": "Coffee Offerings",
+  "roaster_slug": "sweetbloomcoffee",
+  "tags": [
+   "coffee",
+   "wholesale-coffee"
+  ],
+  "title": "Wuri",
+  "url": "https://sweetbloomcoffee.com/products/wuri",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Whole Bean",
+    "variant_id": "44537837027393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "44537837060161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44537837092929"
+   }
+  ],
+  "vendor": "Sweet Bloom Coffee"
+ }
+]

@@ -1,0 +1,843 @@
+[
+ {
+  "body_hash": "b4dfec46a2b480fa",
+  "first_seen": "2026-10-26",
+  "handle": "florencio-villatoro-washed-bourbon-el-diamante-lot",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/bdf3b547-df67-4780-9db0-3b48a83b887a.jpg?v=1769820195",
+  "platform": "shopify",
+  "product_id": "10033852186904",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Favorites for Cold Brew",
+   "Sagebrush Unroasted",
+   "Slow Bar"
+  ],
+  "title": "Florencio Villatoro • Washed-Processed Bourbon",
+  "url": "https://sagebrushunroasted.com/products/florencio-villatoro-washed-bourbon-el-diamante-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.03,
+    "title": "1lb",
+    "variant_id": "51551918358808"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 66.7,
+    "title": "7lb",
+    "variant_id": "52357789843736"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "2691e292daf0c90c",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-competition-washed-processed-wush-wush",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/ab33b758-7456-4a42-866f-7bf945ab5ee6.jpg?v=1769222165",
+  "platform": "shopify",
+  "product_id": "10042139836696",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Paola & Carlos Trujillo • Competition-Washed-Processed Wush Wush",
+  "url": "https://sagebrushunroasted.com/products/paola-carlos-trujillo-competition-washed-processed-wush-wush",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.7,
+    "title": "1lb",
+    "variant_id": "51578084884760"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 137.61,
+    "title": "7lb",
+    "variant_id": "52357830410520"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "c748e3f1882d6926",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-natural-processed-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/32b5fe35-aa13-4447-8697-83568fb97b50.jpg?v=1773449278",
+  "platform": "shopify",
+  "product_id": "10171895251224",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted",
+   "Slow Bar"
+  ],
+  "title": "Paola Trujillo • Natural-Processed Pacamara",
+  "url": "https://sagebrushunroasted.com/products/paola-carlos-trujillo-natural-processed-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.22,
+    "title": "1lb",
+    "variant_id": "51810044018968"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 121.12,
+    "title": "7lb",
+    "variant_id": "52357830476056"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "06902df375ce448a",
+  "first_seen": "2026-10-26",
+  "handle": "luyombe-washing-station-washed-processed-peaberry-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/89b11d53-8e48-4307-af6e-3d636692ebcd.jpg?v=1774673412",
+  "platform": "shopify",
+  "product_id": "10189512048920",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Favorites for Cold Brew",
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Luyombe Washing Station • Washed-Processed Peaberry Bourbon",
+  "url": "https://sagebrushunroasted.com/products/luyombe-washing-station-washed-processed-peaberry-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 7.98,
+    "title": "1lb",
+    "variant_id": "51863998923032"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 53.03,
+    "title": "7lb",
+    "variant_id": "52357829919000"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "2e70dcb239e7b008",
+  "first_seen": "2026-10-26",
+  "handle": "eugene-altieri-washed-processed-caturra",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/ee5871a6-06fa-4d46-bbc5-a8349b27bdb0.jpg?v=1775281454",
+  "platform": "shopify",
+  "product_id": "10213449105688",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted",
+   "Slow Bar"
+  ],
+  "title": "Eugene Altieri • Washed-Processed Caturra",
+  "url": "https://sagebrushunroasted.com/products/eugene-altieri-washed-processed-caturra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.43,
+    "title": "1lb",
+    "variant_id": "51894716236056"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 69.36,
+    "title": "7lb",
+    "variant_id": "52357829493016"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "f2afbacf214b7b2a",
+  "first_seen": "2026-10-26",
+  "handle": "anny-ruth-black-honey-processed-red-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/8eb5035e-3d32-4378-86a3-79ec6f3ac3ee.jpg?v=1775796406",
+  "platform": "shopify",
+  "product_id": "10234117587224",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Favorites for Cold Brew",
+   "Sagebrush Unroasted"
+  ],
+  "title": "Anny Ruth • Black-Honey-Processed Red Bourbon",
+  "url": "https://sagebrushunroasted.com/products/anny-ruth-black-honey-processed-red-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.16,
+    "title": "1lb",
+    "variant_id": "51937059045656"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 74.22,
+    "title": "7lb",
+    "variant_id": "52357829361944"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "82680d06ebb688ff",
+  "first_seen": "2026-10-26",
+  "handle": "godina-guji-washed-processed-swiss-water-decaf-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/c9f76d95-94ad-41e0-aaab-433a9d2996f3.jpg?v=1776791629",
+  "platform": "shopify",
+  "product_id": "10238065475864",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Guji Producers • Natural-Processed Swiss Water Decaf Heirloom",
+  "url": "https://sagebrushunroasted.com/products/godina-guji-washed-processed-swiss-water-decaf-heirloom",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.63,
+    "title": "1lb",
+    "variant_id": "51952717922584"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 90.64,
+    "title": "7lb",
+    "variant_id": "52357829722392"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "230230154c9c1949",
+  "first_seen": "2026-10-26",
+  "handle": "july-jumbo-washed-processed-typica",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/9443ffec-43ee-478b-8ac5-d90bfdd9673b.jpg?v=1779420832",
+  "platform": "shopify",
+  "product_id": "10282278093080",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "July Jumbo • Washed-Processed Typica",
+  "url": "https://sagebrushunroasted.com/products/july-jumbo-washed-processed-typica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.59,
+    "title": "1lb",
+    "variant_id": "52098113929496"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 103.64,
+    "title": "7lb",
+    "variant_id": "52357829787928"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "b9cbbcbac9cb5ca9",
+  "first_seen": "2026-10-26",
+  "handle": "alex-urena-white-honey-processed-sl-28",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/8e22de4e-a1dd-4543-9756-7bb280a4df07.jpg?v=1781219591",
+  "platform": "shopify",
+  "product_id": "10301007495448",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Alex Ureña • White-Honey-Processed SL-28",
+  "url": "https://sagebrushunroasted.com/products/alex-urena-white-honey-processed-sl-28",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.4,
+    "title": "1lb",
+    "variant_id": "52213367439640"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 195.52,
+    "title": "7lb",
+    "variant_id": "52357828870424"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "6933fa49d9b1d66a",
+  "first_seen": "2026-10-26",
+  "handle": "anny-ruth-unicorn-processed-red-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/cd5518db-53b6-4f91-9785-32bec23e0930.jpg?v=1782428631",
+  "platform": "shopify",
+  "product_id": "10316224037144",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Anny Ruth • Unicorn-Processed Red Bourbon",
+  "url": "https://sagebrushunroasted.com/products/anny-ruth-unicorn-processed-red-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.52,
+    "title": "1lb",
+    "variant_id": "52336517185816"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 83.23,
+    "title": "7lb",
+    "variant_id": "52357829427480"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "228b79f66abb5804",
+  "first_seen": "2026-10-26",
+  "handle": "rodin-villatoro-natural-processed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/e1ef6c8b-1a4a-49a2-a181-d028bcd30615.jpg?v=1784835269",
+  "platform": "shopify",
+  "product_id": "10352495755544",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Rodin Villatoro • Natural-Processed Bourbon",
+  "url": "https://sagebrushunroasted.com/products/rodin-villatoro-natural-processed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.8,
+    "title": "1lb",
+    "variant_id": "52432914022680"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 85.13,
+    "title": "7lb",
+    "variant_id": "52432914055448"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "98bd3929827d35ab",
+  "first_seen": "2026-10-26",
+  "handle": "emmanuel-solis-honey-processed-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/6c1ec4d5-7692-4788-8154-ab7261914403.jpg?v=1787261665",
+  "platform": "shopify",
+  "product_id": "10384852320536",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Emmanuel Solís • Honey-Processed Catuai",
+  "url": "https://sagebrushunroasted.com/products/emmanuel-solis-honey-processed-catuai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.19,
+    "title": "1lb",
+    "variant_id": "52548631986456"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 74.39,
+    "title": "7lb",
+    "variant_id": "52548632019224"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "869312f36a458b84",
+  "first_seen": "2026-10-26",
+  "handle": "jenner-villatoro-anaerobic-natural-processed-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/a125a404-1c9e-4c54-b238-ed5cf2239047.jpg?v=1787696443",
+  "platform": "shopify",
+  "product_id": "10390315172120",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Jenner Villatoro • Anaerobic Natural-Processed Bourbon",
+  "url": "https://sagebrushunroasted.com/products/jenner-villatoro-anaerobic-natural-processed-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.85,
+    "title": "1lb",
+    "variant_id": "52569772294424"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 131.97,
+    "title": "7lb",
+    "variant_id": "52569772327192"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "9058eeb7a2acf26f",
+  "first_seen": "2026-10-26",
+  "handle": "alex-urena-red-honey-processed-ethiopian-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/5b0573f1-6dee-4633-ac95-2fb57b49674e.jpg?v=1788578427",
+  "platform": "shopify",
+  "product_id": "10403052945688",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Alex Ureña • Red-Honey-Processed Ethiopian Heirloom",
+  "url": "https://sagebrushunroasted.com/products/alex-urena-red-honey-processed-ethiopian-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "1lb",
+    "variant_id": "52610490073368"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 170.25,
+    "title": "7lb",
+    "variant_id": "52610490106136"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "ce294e49b647e8d1",
+  "first_seen": "2026-10-26",
+  "handle": "paola-carlos-trujillo-washed-processed-sidra",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/66bf0334-f353-422c-b89d-c152c58a47cb.jpg?v=1789157489",
+  "platform": "shopify",
+  "product_id": "10413819363608",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Paola Trujillo • Washed-Processed Sidra",
+  "url": "https://sagebrushunroasted.com/products/paola-carlos-trujillo-washed-processed-sidra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1lb",
+    "variant_id": "52652731236632"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 106.32,
+    "title": "7lb",
+    "variant_id": "52652731269400"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "1a3813e078bebae7",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-washed-processed-guji-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/b359120c-eefa-44d3-873c-ac7bfba383f5.jpg?v=1789767668",
+  "platform": "shopify",
+  "product_id": "10426770555160",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Morkata Gata • Washed-Processed Guji Heirloom",
+  "url": "https://sagebrushunroasted.com/products/morkata-gata-washed-processed-guji-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.15,
+    "title": "1lb",
+    "variant_id": "52710286557464"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 87.41,
+    "title": "7lb",
+    "variant_id": "52710286590232"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "bd143a50235f7b63",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-natural-processed-guji-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/72b5a804-6864-4bf4-9e67-df0fa22d4e35.jpg?v=1791007792",
+  "platform": "shopify",
+  "product_id": "10452293648664",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Morkata Gata • Natural-Processed Guji Heirloom",
+  "url": "https://sagebrushunroasted.com/products/morkata-gata-natural-processed-guji-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.8,
+    "title": "1lb",
+    "variant_id": "52797623271704"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 71.77,
+    "title": "7lb",
+    "variant_id": "52797623304472"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "e4d216966f3a6ed1",
+  "first_seen": "2026-10-26",
+  "handle": "ivan-solis-mosto-natural-processed-typica",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/aff26ae9-edfb-41b4-9167-0b1f94f92328.jpg?v=1792107393",
+  "platform": "shopify",
+  "product_id": "10484406223128",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted",
+   "Slow Bar"
+  ],
+  "title": "Ivan Solis • Mosto-Natural-Processed Typica",
+  "url": "https://sagebrushunroasted.com/products/ivan-solis-mosto-natural-processed-typica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.8,
+    "title": "1lb",
+    "variant_id": "52913807360280"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 125.03,
+    "title": "7lb",
+    "variant_id": "52913807393048"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "fdeae862f718eb02",
+  "first_seen": "2026-10-26",
+  "handle": "don-eli-milenio-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/50ec028d-35bd-4fe3-b52a-04c78d5dff20.jpg?v=1743806474",
+  "platform": "shopify",
+  "product_id": "9692971729176",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Carlos Montero • Natural-Processed Milenio from Don Eli",
+  "url": "https://sagebrushunroasted.com/products/don-eli-milenio-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.17,
+    "title": "1lb",
+    "variant_id": "49906857148696"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.82,
+    "title": "2lb",
+    "variant_id": "49906857181464"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 98.46,
+    "title": "5lb",
+    "variant_id": "49906857214232"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 187.45,
+    "title": "10lb",
+    "variant_id": "49906857247000"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "9128ca6ae9ec77cc",
+  "first_seen": "2026-10-26",
+  "handle": "ivan-solis-la-aurora-catuai-candy-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/4c4b31dd-1beb-40bb-8833-43d28ee140c0.jpg?v=1773882747",
+  "platform": "shopify",
+  "product_id": "9697090666776",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted",
+   "Archived | Slow Bar"
+  ],
+  "title": "Ivan Solis • Candy-Natural-Processed Catuai from La Aurora",
+  "url": "https://sagebrushunroasted.com/products/ivan-solis-la-aurora-catuai-candy-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.94,
+    "title": "1lb",
+    "variant_id": "49917967597848"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 66.06,
+    "title": "7lb",
+    "variant_id": "52357829755160"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "322ef6af963ac5d9",
+  "first_seen": "2026-10-26",
+  "handle": "natalia-lezama-ramirez-anaerobic-natural-processed-gesha-from-finca-alto-gracia",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/b4735675-0903-4129-a759-1b072b662d21.jpg?v=1767728469",
+  "platform": "shopify",
+  "product_id": "9816941461784",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Natalia Lezama Ramirez • Anaerobic Natural-Processed Gesha from Finca Alto Gracia",
+  "url": "https://sagebrushunroasted.com/products/natalia-lezama-ramirez-anaerobic-natural-processed-gesha-from-finca-alto-gracia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.56,
+    "title": "1lb",
+    "variant_id": "50459072364824"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 130.07,
+    "title": "7lb",
+    "variant_id": "52357830377752"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "90ef32f5c8de28b4",
+  "first_seen": "2026-10-26",
+  "handle": "huila-producers-ea-decaf-washed-processed",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/7867ee59-a159-4214-809d-56210b352cd2.jpg?v=1767726177",
+  "platform": "shopify",
+  "product_id": "9819249279256",
+  "product_type": "South American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Huila Producers • Washed-Processed EA Decaf Field Blend",
+  "url": "https://sagebrushunroasted.com/products/huila-producers-ea-decaf-washed-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.21,
+    "title": "1lb",
+    "variant_id": "50466863251736"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 81.16,
+    "title": "7lb",
+    "variant_id": "50466863350040"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "aea7ba1c8fa4af1a",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-producers-decaffeinated-caturra-typica-and-other-washed-varieties-green-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/b26f386b-a011-4418-ade7-5adacce79de9.jpg?v=1761340315",
+  "platform": "shopify",
+  "product_id": "9929073230104",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "Chiapas Producers • Decaffeinated Caturra, Typica & other Washed Varieties",
+  "url": "https://sagebrushunroasted.com/products/chiapas-producers-decaffeinated-caturra-typica-and-other-washed-varieties-green-coffee-beans",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1lb",
+    "variant_id": "50809950142744"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 79.71,
+    "title": "7lb",
+    "variant_id": "50809950208280"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "d308bda49a42ce4c",
+  "first_seen": "2026-10-26",
+  "handle": "morkata-gata-washed-processed-guji-heirloom-from-mira-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9955302474008",
+  "product_type": "African Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Archived | Sagebrush Unroasted"
+  ],
+  "title": "2025 | Morkata Gata • Washed-Processed Guji Heirloom from Mira Coffee",
+  "url": "https://sagebrushunroasted.com/products/morkata-gata-washed-processed-guji-heirloom-from-mira-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.82,
+    "title": "1lb",
+    "variant_id": "50892149424408"
+   },
+   {
+    "available": false,
+    "grams": 3175,
+    "price_usd": 65.27,
+    "title": "7lb",
+    "variant_id": "52357830344984"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "47103e0b682b281f",
+  "first_seen": "2026-10-26",
+  "handle": "eugene-altieri-washed-processed-geisha-from-altieri-family-farms",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/fd1b67bf-d6f3-46be-b3b6-4ea132a69b2c.jpg?v=1764221948",
+  "platform": "shopify",
+  "product_id": "9963501125912",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted"
+  ],
+  "title": "Eugene Altieri • Washed-Processed Gesha from Altieri Family Farms",
+  "url": "https://sagebrushunroasted.com/products/eugene-altieri-washed-processed-geisha-from-altieri-family-farms",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 81.59,
+    "title": "1lb",
+    "variant_id": "51017485189400"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ },
+ {
+  "body_hash": "daf6e5918a64888a",
+  "first_seen": "2026-10-26",
+  "handle": "suchini-family-anaerobic-natural-processed-geisha-from-el-gigante-coffee-estate",
+  "image": "https://cdn.shopify.com/s/files/1/1640/8323/files/cbde3618-af2d-41cb-a0bf-128f9d14f67d.jpg?v=1764197996",
+  "platform": "shopify",
+  "product_id": "9963523670296",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "sagebrushunroasted",
+  "tags": [
+   "Sagebrush Unroasted",
+   "Slow Bar"
+  ],
+  "title": "Suchini Family • Anaerobic-Natural-Processed Gesha from El Gigante Coffee Estate",
+  "url": "https://sagebrushunroasted.com/products/suchini-family-anaerobic-natural-processed-geisha-from-el-gigante-coffee-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 77.42,
+    "title": "1lb",
+    "variant_id": "51017523724568"
+   }
+  ],
+  "vendor": "Sagebrush Unroasted"
+ }
+]

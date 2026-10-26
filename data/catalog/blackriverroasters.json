@@ -1,0 +1,2506 @@
+[
+ {
+  "body_hash": "54b6d29cda64406d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-specialty-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/DecafMexico-BlackRiverRoasters.png?v=1780237260",
+  "platform": "shopify",
+  "product_id": "10143899582765",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Honduras",
+   "Medium Roast",
+   "black river roasters",
+   "coffee",
+   "decaf",
+   "fair trade",
+   "mountain water process",
+   "organic",
+   "single origin"
+  ],
+  "title": "Organic Specialty Decaf",
+  "url": "https://blackriverroasters.com/products/organic-specialty-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "51583285526829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "51583285559597"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "51583285592365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "51583285625133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "51583285657901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "51583285690669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "51583285723437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "51583285756205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "51583285788973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "51583285821741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "51583285854509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "51583285887277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "51583285920045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "51583285952813"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "51583285985581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "51583286018349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "51583286051117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "51583286083885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "51583286116653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "51583286149421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "51583286182189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "51583286214957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "51583286247725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "51583286280493"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "26f92db675099ea0",
+  "first_seen": "2026-10-26",
+  "handle": "organic-seasonal-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/AutumnEmbers-BlackRiverRoasters.png?v=1757710422",
+  "platform": "shopify",
+  "product_id": "10239079481645",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Medium Roast",
+   "black river roasters",
+   "coffee",
+   "organic"
+  ],
+  "title": "Organic Seasonal Blend",
+  "url": "https://blackriverroasters.com/products/organic-seasonal-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "51928857510189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "51928857542957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "51928857575725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "51928857608493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "51928857641261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "51928857674029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "51928857706797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "51928857739565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "51928857772333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "51928857805101"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "51928857837869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "51928857870637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "51928857903405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "51928857936173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "51928857968941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "51928858001709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "51928858034477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "51928858067245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "51928858100013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "51928858132781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "51928858165549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "51928858198317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "51928858231085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "51928858263853"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "99d1745aa67bed94",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-san-marcos",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/GuatemalaSanMarcos-BlackRiverRoasters.png?v=1780237260",
+  "platform": "shopify",
+  "product_id": "10320824500525",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Light Roast",
+   "black river roasters",
+   "coffee",
+   "guatemala",
+   "organic",
+   "single origin"
+  ],
+  "title": "Organic Guatemala San Marcos",
+  "url": "https://blackriverroasters.com/products/organic-guatemala-san-marcos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "52257430929709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "52257430962477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "52257430995245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "52257431028013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "52257431060781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "52257431093549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "52257431126317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "52257431159085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "52257431191853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "52257431224621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "52257431257389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "52257431290157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "52257431322925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "52257431355693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "52257431388461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "52257431421229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "52257431453997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "52257431486765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "52257431519533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "52257431552301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "52257431585069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "52257431617837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "52257431650605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "52257431683373"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "c69f7c8ba59d92d3",
+  "first_seen": "2026-10-26",
+  "handle": "organic-breakfast-blend-morning-dew",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/MorningDew-BlackRiverRoasters.png?v=1757710427",
+  "platform": "shopify",
+  "product_id": "1371531968624",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Medium Roast",
+   "black river roasters",
+   "blend",
+   "breakfast blend",
+   "coffee",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Organic Breakfast Blend - Morning Dew",
+  "url": "https://blackriverroasters.com/products/organic-breakfast-blend-morning-dew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "12552296104048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "12552296136816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "12552296169584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "12552296202352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "12552296235120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "12552296267888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "12552296300656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "12552296333424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "12552296366192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "12552296398960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "12552296431728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "12552296464496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "12552296497264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "12552296530032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra-Coarse (Cold Brew)",
+    "variant_id": "12552296562800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra-Coarse (Cold Brew)",
+    "variant_id": "12552296595568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31954782093377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31954784485441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "31954785697857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "31954785992769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "31954787565633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "31954787827777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "31954788483137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "31954789630017"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "8d831adebaf91878",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/Espresso-BlackRiverRoasters.png?v=1757710455",
+  "platform": "shopify",
+  "product_id": "1401221185648",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Medium Roast",
+   "black river roasters",
+   "blend",
+   "coffee",
+   "espresso",
+   "espresso blend",
+   "fair trade",
+   "organic",
+   "specialty coffee"
+  ],
+  "title": "Organic Espresso Blend",
+  "url": "https://blackriverroasters.com/products/organic-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "12717735346288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "12717735379056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "12717735411824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "12717735477360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "12717735510128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "12717735542896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "12717735575664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "12717735608432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "12717735641200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "12717735673968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "12717735706736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "12717735739504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "12717735772272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "12717735805040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "12717735837808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "12717735870576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "31955118489665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "31955119112257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955124355137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955125010497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "31955127304257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "31955131334721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "31955131727937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "31955132710977"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "e22e7e885da61a3f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast-dark-star",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/DarkStar-BlackRiverRoasters.png?v=1757710441",
+  "platform": "shopify",
+  "product_id": "1401334464624",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Bold Roast",
+   "black river roasters",
+   "coffee",
+   "colombia",
+   "dark roast",
+   "french roast",
+   "organic",
+   "specialty coffee",
+   "timor"
+  ],
+  "title": "Organic French Roast - Dark Star",
+  "url": "https://blackriverroasters.com/products/organic-french-roast-dark-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "12718082293872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "12718082326640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "12718082359408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "12718082392176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "12718082424944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "12718082457712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "12718082490480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "12718082523248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "12718082556016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "12718082588784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "12718082621552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "12718082654320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "12718082687088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "12718082719856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "12718082752624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "12718082785392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "31955160498241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "31955161776193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955170852929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955171180609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "31955171737665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "31955173769281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "31955174162497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "31955174260801"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "6a5ede0820b964b1",
+  "first_seen": "2026-10-26",
+  "handle": "organic-house-blend-quality-hill",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/QualityHill-BlackRiverRoasters.png?v=1757962889",
+  "platform": "shopify",
+  "product_id": "2091832213569",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Light Roast",
+   "black river roasters",
+   "blend",
+   "coffee",
+   "fair trade",
+   "organic",
+   "quality hill blend",
+   "specialty coffee"
+  ],
+  "title": "Organic House Blend - Quality Hill",
+  "url": "https://blackriverroasters.com/products/organic-house-blend-quality-hill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "18253856047169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "18253856079937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "18253856112705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "18253856145473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "18253856178241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "18253856211009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "18253856243777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "18253856276545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "18253856309313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "18253856342081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "18253856407617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "18253856440385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "18253856473153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "18253856505921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "18253856538689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "18253856571457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "31955239043137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955244122177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "31955245170753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31955247005761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "31955251396673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "31955252379713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "31955255099457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "31955255459905"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "579c85b092b74187",
+  "first_seen": "2026-10-26",
+  "handle": "organic-chris-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/RoastersChoice-BlackRiverRoasters.png?v=1767630078",
+  "platform": "shopify",
+  "product_id": "3500275171393",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "black river roasters",
+   "chris' choice",
+   "coffee",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://blackriverroasters.com/products/organic-chris-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "28006737576001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "28006737608769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "28006737641537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "28006737674305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "28006737707073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "28006737739841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "28006737772609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "28006737805377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28006737838145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "28006737870913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "28006737903681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "28006737936449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "28006737969217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "28006738001985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "28006738034753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "28006738067521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "31954891374657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "31954893635649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31954895044673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "31954901729345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "31954902581313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "31954904907841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "31954927222849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "31954929582145"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "4ab2a0048f0523d2",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/MexicoChiapas-BlackRiverRoasters.png?v=1757710432",
+  "platform": "shopify",
+  "product_id": "6912185729089",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Medium Roast",
+   "black river roasters",
+   "coffee",
+   "fair trade",
+   "mexico",
+   "organic",
+   "single origin"
+  ],
+  "title": "Organic Mexico Chiapas",
+  "url": "https://blackriverroasters.com/products/organic-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "40265346252865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "40265346285633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "40265346318401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium-Fine (Keurig)",
+    "variant_id": "40265346351169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium-Fine (AeroPress)",
+    "variant_id": "40265346383937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "40265346416705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "40265346449473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "40265346482241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium-Course (Basket Drip)",
+    "variant_id": "40265346515009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "40265346547777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "40265346580545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "40265346613313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "40265346646081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "40265346678849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "40265346711617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium-Fine (Keurig)",
+    "variant_id": "40265346744385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium-Fine (AeroPress)",
+    "variant_id": "40265346777153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "40265346809921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "40265346842689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "40265346875457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium-Course (Basket Drip)",
+    "variant_id": "40265346908225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "40265346940993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "40265346973761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "40265347006529"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "24ad4544e1e2fb78",
+  "first_seen": "2026-10-26",
+  "handle": "organic-house-blend-rockin-rocket",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/RockinRocket-BlackRiverRoasters.png?v=1757710436",
+  "platform": "shopify",
+  "product_id": "9112208638253",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Bright Roast",
+   "Light Roast",
+   "black river roasters",
+   "blend",
+   "coffee",
+   "ethiopia",
+   "fair trade",
+   "organic",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Organic House Blend - Rockin' Rocket",
+  "url": "https://blackriverroasters.com/products/organic-house-blend-rockin-rocket",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "47911805944109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "47911805976877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "47911806009645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "47911806042413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "47911806075181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "47911806107949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "47911806140717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "47911806173485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "47911806206253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "47911806239021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "47911806271789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "47911806304557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "47911806337325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "47911806370093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "47911806402861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "47911806435629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "47911806468397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "47911806501165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "47911806533933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "47911806566701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "47911806599469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "47911806632237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "47911806665005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "47911806697773"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "d8ae8e289fae806f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombia-cauca-perla-de-inza",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/ColombiaCauca-BlackRiverRoasters.png?v=1757710412",
+  "platform": "shopify",
+  "product_id": "9748294435117",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Bright Roast",
+   "Medium Roast",
+   "black river roasters",
+   "coffee",
+   "colombia",
+   "organic",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Organic Colombia Cauca Perla De Inza",
+  "url": "https://blackriverroasters.com/products/organic-colombia-cauca-perla-de-inza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "49857657667885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "49857657700653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "49857657733421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "49857657766189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "49857657798957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "49857657831725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "49857657864493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "49857657897261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "49857657930029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "49857657962797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "49857657995565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "49857658028333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "49857658061101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "49857658093869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "49857658126637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "49857658159405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "49857658192173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "49857658224941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "49857658257709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "49857658290477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "49857658323245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "49857658356013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "49857658388781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "49857658421549"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "17c194e63a709936",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-comsa",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/HondurasCOMSA-BlackRiverRoasters.png?v=1757709908",
+  "platform": "shopify",
+  "product_id": "9836209340717",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Honduras",
+   "Light Roast",
+   "black river roasters",
+   "coffee",
+   "fair trade",
+   "organic",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Organic Honduras COMSA",
+  "url": "https://blackriverroasters.com/products/organic-honduras-comsa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50088341471533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "50088341504301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "50088341537069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "50088341569837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "50088341602605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "50088341635373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "50088341668141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "50088341700909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "50088341733677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "50088341766445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "50088341799213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "50088341831981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "50088341864749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "50088341897517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "50088341930285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "50088341963053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "50088341995821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "50088342028589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "50088342061357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "50088342094125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "50088342126893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "50088342159661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "50088342192429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.75,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "50088342225197"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ },
+ {
+  "body_hash": "c20a4d3d46f4c2d6",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-gayo-mandiri",
+  "image": "https://cdn.shopify.com/s/files/1/0025/2670/7824/files/SumatraMandiri-BlackRiverRoasters.png?v=1764173451",
+  "platform": "shopify",
+  "product_id": "9844464845101",
+  "product_type": "Coffee",
+  "roaster_slug": "blackriverroasters",
+  "tags": [
+   "Bright Roast",
+   "Indonesia",
+   "black river roasters",
+   "coffee",
+   "fair trade",
+   "organic",
+   "single origin",
+   "specialty coffee",
+   "sumatra"
+  ],
+  "title": "Organic Sumatra Gayo Mandiri",
+  "url": "https://blackriverroasters.com/products/organic-sumatra-gayo-mandiri",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50116081549613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Fine (Turkish)",
+    "variant_id": "50116081582381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Home Espresso)",
+    "variant_id": "50116081615149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Fine (Mocha Pot)",
+    "variant_id": "50116081647917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "50116081680685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Manual Pour Over)",
+    "variant_id": "50116081713453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Chemex)",
+    "variant_id": "50116081746221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium (Cone Drip)",
+    "variant_id": "50116081778989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Medium-Coarse (Basket Drip)",
+    "variant_id": "50116081811757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (Percolator)",
+    "variant_id": "50116081844525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Coarse (French Press)",
+    "variant_id": "50116081877293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Extra Coarse (Cold Brew)",
+    "variant_id": "50116081910061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "50116081942829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Fine (Turkish)",
+    "variant_id": "50116081975597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Home Espresso)",
+    "variant_id": "50116082008365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Fine (Mocha Pot)",
+    "variant_id": "50116082041133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Fine (Keurig, AeroPress)",
+    "variant_id": "50116082073901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Manual Pour Over)",
+    "variant_id": "50116082106669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Chemex)",
+    "variant_id": "50116082139437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium (Cone Drip)",
+    "variant_id": "50116082172205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Medium-Coarse (Basket Drip)",
+    "variant_id": "50116082204973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (Percolator)",
+    "variant_id": "50116082237741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Coarse (French Press)",
+    "variant_id": "50116082270509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 Pound / Extra Coarse (Cold Brew)",
+    "variant_id": "50116082303277"
+   }
+  ],
+  "vendor": "Black River Roasters"
+ }
+]

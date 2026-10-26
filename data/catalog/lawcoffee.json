@@ -1,0 +1,2224 @@
+[
+ {
+  "body_hash": "f7ea2610554e620a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-coffee-beans-3x5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Dark_Roast_Coffee_Beans_5lb.jpg?v=1792080336",
+  "platform": "shopify",
+  "product_id": "10585164087461",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Brazilian Coffee",
+   "Colombian Coffee",
+   "coffee",
+   "dark roast",
+   "drip coffee",
+   "kosher coffee",
+   "whole bean"
+  ],
+  "title": "Dark Roast Coffee Beans (3x5lb)",
+  "url": "https://www.lawcoffee.com/products/dark-roast-coffee-beans-3x5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 159.0,
+    "title": "Default Title",
+    "variant_id": "47840641482917"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "71d51bd34d1128de",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Sumatran_Mandheling_Coffee.jpg?v=1763509119",
+  "platform": "shopify",
+  "product_id": "221498114072",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "100% arabica",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "indonesian coffee",
+   "sumatran",
+   "sumatran mandheling coffee",
+   "whole bean"
+  ],
+  "title": "Sumatra Mandheling Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/sumatra-mandheling-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "2367092555800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Ground Coffee",
+    "variant_id": "2367092621336"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "c08051ae5536090f",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Irish_Creme_Coffee.jpg?v=1763508955",
+  "platform": "shopify",
+  "product_id": "221742858264",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "100% arabica",
+   "Brazilian Coffee",
+   "coffee",
+   "drip coffee",
+   "flavored coffee",
+   "irish creme",
+   "retail coffee"
+  ],
+  "title": "Irish Creme Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/irish-creme-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground",
+    "variant_id": "44486992494757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole bean",
+    "variant_id": "47845148655781"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "d5e90ed8122dd68a",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Hazelnut.jpg?v=1734986383",
+  "platform": "shopify",
+  "product_id": "228486512664",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "drip coffee",
+   "flavored coffee",
+   "hazelnut coffee"
+  ],
+  "title": "Hazelnut Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/hazelnut-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "2415036858392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "36834201174181"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "3bd8a731fc8e02fb",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/FrenchVanilla.jpg?v=1734986360",
+  "platform": "shopify",
+  "product_id": "228688035864",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "drip coffee",
+   "flavored coffee",
+   "french vanilla",
+   "ground coffee",
+   "ground french vanilla coffee",
+   "whole bean",
+   "whole bean french vanilla coffee"
+  ],
+  "title": "French Vanilla Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/french-vanilla-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "36834157691045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "36834176401573"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "6e8c57743e84cdc1",
+  "first_seen": "2026-10-26",
+  "handle": "404-black-tan-coffee-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Black_and_Tan_Coffee.jpg?v=1789765949",
+  "platform": "shopify",
+  "product_id": "254007017496",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "coffee",
+   "dark roast",
+   "whole bean"
+  ],
+  "title": "\"404\" Black & Tan Coffee",
+  "url": "https://www.lawcoffee.com/products/404-black-tan-coffee-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.15,
+    "title": "2lb",
+    "variant_id": "18729057681504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5lb",
+    "variant_id": "18729057714272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb",
+    "variant_id": "2840318902296"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "e28e0e9ceb44e777",
+  "first_seen": "2026-10-26",
+  "handle": "mountainview-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Mountainview_Blend_Coffee.jpg?v=1789765366",
+  "platform": "shopify",
+  "product_id": "254008229912",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Mountainview Blend Coffee",
+  "url": "https://www.lawcoffee.com/products/mountainview-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "2 lb",
+    "variant_id": "18729084256352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.75,
+    "title": "5 lb",
+    "variant_id": "18729084289120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 lb",
+    "variant_id": "2840375033880"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "ed961855d8417555",
+  "first_seen": "2026-10-26",
+  "handle": "shadowbrook-latisian-decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Latisian_Decaf_Espresso_coffee.jpg?v=1789765473",
+  "platform": "shopify",
+  "product_id": "254008557592",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "decaf",
+   "decaf espresso beans",
+   "espresso",
+   "espresso beans",
+   "whole bean"
+  ],
+  "title": "Shadowbrook Latisian Decaf Espresso",
+  "url": "https://www.lawcoffee.com/products/shadowbrook-latisian-decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.9,
+    "title": "2 lb",
+    "variant_id": "18729093202016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.0,
+    "title": "5 lb",
+    "variant_id": "18729093234784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 lb",
+    "variant_id": "2840397119512"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "b46dcefbdc8c07bb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-huila-coffee-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Artisan_Coffee_bag_of_Huila_COlombia_Coffee_beans.jpg?v=1763508724",
+  "platform": "shopify",
+  "product_id": "254008655896",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "Shadowbrook",
+   "coffee",
+   "drip coffee",
+   "single origin",
+   "whole bean"
+  ],
+  "title": "Huila Colombian Coffee",
+  "url": "https://www.lawcoffee.com/products/colombian-huila-coffee-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 lb",
+    "variant_id": "18729071411296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.75,
+    "title": "5 lb",
+    "variant_id": "18729071444064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 lb",
+    "variant_id": "2840410095640"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "f6fc00d534a21fcc",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-aa-estate-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Kenyan_AB_Coffee_Beans.jpg?v=1789765035",
+  "platform": "shopify",
+  "product_id": "254009901080",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "3rd wave",
+   "Kenya aa",
+   "Shadowbrook",
+   "coffee beans",
+   "whole bean"
+  ],
+  "title": "Kenyan AB Coffee",
+  "url": "https://www.lawcoffee.com/products/kenyan-aa-estate-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.15,
+    "title": "2 lb",
+    "variant_id": "18729078685792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.15,
+    "title": "5 lb",
+    "variant_id": "18729078718560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 lb",
+    "variant_id": "2840488083480"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "18c4a3ee7b85319a",
+  "first_seen": "2026-10-26",
+  "handle": "shadowbrook-new-wave-espresso-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_New_Wave_Espresso_bag.jpg?v=1763489227",
+  "platform": "shopify",
+  "product_id": "254010851352",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "100% arabica",
+   "Shadowbrook",
+   "coffee beans",
+   "espresso",
+   "espresso beans",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Shadowbrook New Wave Espresso Beans",
+  "url": "https://www.lawcoffee.com/products/shadowbrook-new-wave-espresso-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.9,
+    "title": "2 lb",
+    "variant_id": "18729095266400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.75,
+    "title": "5 lb",
+    "variant_id": "18729095299168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 lb",
+    "variant_id": "2840545230872"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "72ba89a12111aee7",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrado-coffee-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Brazilian_Cerrado_Coffee.jpg?v=1789765222",
+  "platform": "shopify",
+  "product_id": "254011539480",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Brazil",
+   "brazilian",
+   "coffee",
+   "shadowbrook",
+   "whole bean"
+  ],
+  "title": "Brazilian Cerrado Coffee",
+  "url": "https://www.lawcoffee.com/products/brazilian-cerrado-coffee-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.9,
+    "title": "2 lb",
+    "variant_id": "18729068888160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb",
+    "variant_id": "18729068920928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.65,
+    "title": "1 lb",
+    "variant_id": "2840587632664"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "dbd5c3415db429ae",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian-coffee-sierra-nevada-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Organic_Colombian_Sierra_de_Nevada_Coffee.jpg?v=1789765548",
+  "platform": "shopify",
+  "product_id": "254013210648",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "Shadowbrook",
+   "organic",
+   "whole bean"
+  ],
+  "title": "Organic Colombian Coffee",
+  "url": "https://www.lawcoffee.com/products/organic-colombian-coffee-sierra-nevada-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "2 lb",
+    "variant_id": "18729074360416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.25,
+    "title": "5 lb",
+    "variant_id": "18729074393184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.55,
+    "title": "1 lb",
+    "variant_id": "2840689410072"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "8768c942f601a49f",
+  "first_seen": "2026-10-26",
+  "handle": "shadowbrook-latisian-decaf-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Artisan_Coffee_Decaf_Coffee.jpg?v=1763592801",
+  "platform": "shopify",
+  "product_id": "254013898776",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "coffee beans",
+   "decaf",
+   "decaf coffee",
+   "decaf coffee beans",
+   "whole bean"
+  ],
+  "title": "ShadowBrook Latisian Decaf Coffee",
+  "url": "https://www.lawcoffee.com/products/shadowbrook-latisian-decaf-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 lb",
+    "variant_id": "18729090875488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.5,
+    "title": "5 lb",
+    "variant_id": "18729090908256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "1 lb",
+    "variant_id": "2840725225496"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "38f416e2bb99b8b3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-mandheling-grade-1-double-picked-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_994228dd-6a4f-45ba-b0e2-3b5738cb2c36.jpg?v=1735012235",
+  "platform": "shopify",
+  "product_id": "254014455832",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "indonesian coffee",
+   "single origin",
+   "sumatran",
+   "sumatran mandheling coffee",
+   "whole bean"
+  ],
+  "title": "Sumatran Mandheling Coffee",
+  "url": "https://www.lawcoffee.com/products/sumatran-mandheling-grade-1-double-picked-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb",
+    "variant_id": "18729111978080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.25,
+    "title": "5 lb",
+    "variant_id": "18729112010848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "1 lb",
+    "variant_id": "2840761991192"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "d4a6b57fe562300d",
+  "first_seen": "2026-10-26",
+  "handle": "shadowbrook-noir-espresso-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Shadowbrook_Noir_Espresso_beans.jpg?v=1763489676",
+  "platform": "shopify",
+  "product_id": "254018813976",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "espresso",
+   "espresso beans",
+   "whole bean",
+   "whole bean espresso"
+  ],
+  "title": "Shadowbrook Noir Espresso Beans",
+  "url": "https://www.lawcoffee.com/products/shadowbrook-noir-espresso-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.25,
+    "title": "2 lb",
+    "variant_id": "18729101066336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5 lb",
+    "variant_id": "18729101099104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "1 lb",
+    "variant_id": "2841017548824"
+   }
+  ],
+  "vendor": "Shadowbrook"
+ },
+ {
+  "body_hash": "3e51b3377dfc349d",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-mendez-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/Cafe_Mendez_Espresso_Beans.jpg?v=1737242650",
+  "platform": "shopify",
+  "product_id": "30338678808",
+  "product_type": "espresso",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "espresso",
+   "espresso bean"
+  ],
+  "title": "Café Mendez Espresso Beans -- 2 lb bag",
+  "url": "https://www.lawcoffee.com/products/cafe-mendez-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.5,
+    "title": "Default Title",
+    "variant_id": "147732267032"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "092f9e644922cf77",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-mendez-ground-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/cafe_mendez_ground_espresso.jpg?v=1502210268",
+  "platform": "shopify",
+  "product_id": "30524145688",
+  "product_type": "espresso",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "espresso",
+   "ground coffee",
+   "ground espresso"
+  ],
+  "title": "Café Mendez Ground Espresso -- (1 lb)",
+  "url": "https://www.lawcoffee.com/products/cafe-mendez-ground-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "Default Title",
+    "variant_id": "148026589208"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "73c2cd969d74c92c",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-mendez-ground-decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/cafe_mendez_ground_espresso_507901f9-c8da-4a90-9c44-06d5b985e8a8.jpg?v=1502210533",
+  "platform": "shopify",
+  "product_id": "30532239384",
+  "product_type": "espresso",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "decaf coffee",
+   "decaf espresso",
+   "espresso",
+   "ground coffee",
+   "ground espresso"
+  ],
+  "title": "Café Mendez Ground Decaf Espresso -- (1 lb)",
+  "url": "https://www.lawcoffee.com/products/cafe-mendez-ground-decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Default Title",
+    "variant_id": "148036747288"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "c3e7ff523ef04550",
+  "first_seen": "2026-10-26",
+  "handle": "family-reserve-21-2-5-oz-whole-kits",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/DSC06142_0029_DSC06215_7627c869-deaa-4a34-a2c2-206c068d5c51.jpg?v=1735057862",
+  "platform": "shopify",
+  "product_id": "321465391",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "drip coffee",
+   "ground coffee"
+  ],
+  "title": "Family Reserve Coffee (42 - 2.5oz)",
+  "url": "https://www.lawcoffee.com/products/family-reserve-21-2-5-oz-whole-kits",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2976,
+    "price_usd": 56.55,
+    "title": "Default Title",
+    "variant_id": "44307327647909"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "1e1ad71d63dc5e84",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/French_Vanilla_Frac_Pack.png?v=1789469509",
+  "platform": "shopify",
+  "product_id": "321469239",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "chocolate raspberry coffee",
+   "coffee",
+   "drip coffee",
+   "flavored coffee",
+   "french vanilla",
+   "french vanilla coffee",
+   "ground coffee",
+   "hazelnut coffee",
+   "pumpkin spice coffee"
+  ],
+  "title": "Flavored Coffee (Choose Flavor (24ct Frac Pack))",
+  "url": "https://www.lawcoffee.com/products/flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 51.75,
+    "title": "Pumpkin Spice Coffee (24ct-3oz)",
+    "variant_id": "1013239063"
+   },
+   {
+    "available": true,
+    "grams": 64,
+    "price_usd": 46.75,
+    "title": "Cinnamon Hazelnut Coffee (24ct-2.25oz)",
+    "variant_id": "1013239323"
+   },
+   {
+    "available": true,
+    "grams": 64,
+    "price_usd": 46.75,
+    "title": "Blueberry Coffee (24ct-2.25oz)",
+    "variant_id": "31824443998304"
+   },
+   {
+    "available": true,
+    "grams": 64,
+    "price_usd": 46.75,
+    "title": "Hazelnut & Creme Coffee (24ct-2.25oz)",
+    "variant_id": "742997711"
+   },
+   {
+    "available": true,
+    "grams": 64,
+    "price_usd": 46.75,
+    "title": "French Vanilla Coffee (24ct-2.25oz)",
+    "variant_id": "742998171"
+   },
+   {
+    "available": true,
+    "grams": 64,
+    "price_usd": 46.75,
+    "title": "Chocolate Raspberry Coffee (24ct-2.25oz)",
+    "variant_id": "742998639"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "01d76b5920255788",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian-coffee-21-2-oz-home-kits-with-filters",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Colombian_Gold_Coffee_3oz.jpg?v=1791461499",
+  "platform": "shopify",
+  "product_id": "332103347",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "ground colombian coffee",
+   "specialty coffee"
+  ],
+  "title": "Colombian Gold Coffee (24- 3oz)",
+  "url": "https://www.lawcoffee.com/products/100-colombian-coffee-21-2-oz-home-kits-with-filters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 45.5,
+    "title": "Default Title",
+    "variant_id": "768619003"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "5c0197a90e52dde5",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian-coffee-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/ColombianGold.jpg?v=1788289408",
+  "platform": "shopify",
+  "product_id": "332104871",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "drip coffee",
+   "single origin"
+  ],
+  "title": "Colombian Gold Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/100-colombian-coffee-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "768622515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground",
+    "variant_id": "768622519"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "ae963a298a0e470a",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrados-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/BrazilianCoffee.jpg?v=1734985992",
+  "platform": "shopify",
+  "product_id": "332105331",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Brazil",
+   "Brazilian Coffee",
+   "Brazilian cerrado",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "single origin",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Brazilian Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/brazilian-cerrados-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Ground Coffee",
+    "variant_id": "768624823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Beans",
+    "variant_id": "768625123"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "c904cc63aee2d10f",
+  "first_seen": "2026-10-26",
+  "handle": "certified-fair-trade-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Organic_Colombian_Coffee.jpg?v=1788731775",
+  "platform": "shopify",
+  "product_id": "332106055",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Organic",
+   "coffee",
+   "coffee beans",
+   "colombian",
+   "drip coffee",
+   "organic coffee",
+   "organic colombian",
+   "single origin"
+  ],
+  "title": "Organic Colombian Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/certified-fair-trade-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground Coffee",
+    "variant_id": "768627663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Beans",
+    "variant_id": "768627667"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "87ae66a4a0abb99a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-coffee-21-2-5-oz-home-kits",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/DarkRoast_Coffee.jpg?v=1788732112",
+  "platform": "shopify",
+  "product_id": "332106223",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "drip coffee",
+   "ground coffee",
+   "whole bean"
+  ],
+  "title": "Dark Roast Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/dark-roast-coffee-21-2-5-oz-home-kits",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "1061261335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground",
+    "variant_id": "768628003"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "7aa1370a0999e42e",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Laws_premium_decaf_coffee.jpg?v=1789087588",
+  "platform": "shopify",
+  "product_id": "332106439",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "decaf coffee",
+   "drip coffee",
+   "ground coffee",
+   "whole bean"
+  ],
+  "title": "Premium Decaf Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/decaffeinated-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole beans",
+    "variant_id": "768629783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground",
+    "variant_id": "768629787"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "333c26ca0eb36152",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee-2oz-frac-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/2oz_Decaf_Coffee_Frac_Packs.jpg?v=1790191344",
+  "platform": "shopify",
+  "product_id": "332106543",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "decaf",
+   "decaf coffee",
+   "drip coffee",
+   "ground coffee",
+   "ground decaf coffee"
+  ],
+  "title": "Premium Decaf Coffee (42ct - 2oz)",
+  "url": "https://www.lawcoffee.com/products/decaf-coffee-2oz-frac-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2381,
+    "price_usd": 52.5,
+    "title": "Default Title",
+    "variant_id": "768629963"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "fd7d56130e9d7caf",
+  "first_seen": "2026-10-26",
+  "handle": "family-reserve-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/FamilyReserve.jpg?v=1734986223",
+  "platform": "shopify",
+  "product_id": "332106655",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Subscription",
+   "coffee",
+   "dark roast"
+  ],
+  "title": "Family Reserve Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/family-reserve-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "1061260875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "1061261123"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "08cde4a305269814",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-ground-coffee-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/KenyaABCoffee.jpg?v=1734986244",
+  "platform": "shopify",
+  "product_id": "332106759",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Kenya",
+   "africa",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "kenyan coffee",
+   "single origin",
+   "whole bean"
+  ],
+  "title": "Kenya AB Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/kenya-aa-ground-coffee-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Beans",
+    "variant_id": "1061262559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground",
+    "variant_id": "768630495"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "74057a36025ecb36",
+  "first_seen": "2026-10-26",
+  "handle": "premium-house-blend-12-oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/12oz_bag_of_Law_s_House_Blend_Coffee.jpg?v=1763481554",
+  "platform": "shopify",
+  "product_id": "332108059",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "Law Coffee",
+   "coffee",
+   "coffee beans",
+   "ground coffee",
+   "house blend",
+   "whole bean"
+  ],
+  "title": "House Blend Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/premium-house-blend-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole bean",
+    "variant_id": "768636671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "768636675"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "17d51c6f2c6718df",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/12oz_Breakfast_Blend_Coffee.jpg?v=1788731688",
+  "platform": "shopify",
+  "product_id": "332108431",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "breakfast blend",
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Breakfast Blend Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/breakfast-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "768637803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Beans",
+    "variant_id": "768637807"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "44fcf4431524d263",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-whole-beans-6-lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/5lb_bag_of_WB_Law_Coffee_beans.jpg?v=1763478383",
+  "platform": "shopify",
+  "product_id": "332108591",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "breakfast blend",
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "whole bean"
+  ],
+  "title": "Breakfast Blend Coffee Beans (3 x 5lb)",
+  "url": "https://www.lawcoffee.com/products/breakfast-blend-whole-beans-6-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 157.0,
+    "title": "Default Title",
+    "variant_id": "768638215"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "1dc9678af8ae7f8f",
+  "first_seen": "2026-10-26",
+  "handle": "premium-house-blend-21-2-oz-home-kits-w-filters",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/WB_Law_Coffee_House_Blend_Frac_pack.jpg?v=1763481298",
+  "platform": "shopify",
+  "product_id": "332108839",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "colombian blend",
+   "drip coffee",
+   "ground coffee",
+   "house blend"
+  ],
+  "title": "Premium House Blend (87-2.75oz)",
+  "url": "https://www.lawcoffee.com/products/premium-house-blend-21-2-oz-home-kits-w-filters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 157.0,
+    "title": "Default Title",
+    "variant_id": "768639503"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "0aa08a043f216966",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-altura-coffee-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Mexican_Altura_Coffee.png?v=1785515249",
+  "platform": "shopify",
+  "product_id": "399888211",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "drip coffee",
+   "mexican coffee",
+   "single origin"
+  ],
+  "title": "Mexican Altura Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/mexican-altura-coffee-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Ground",
+    "variant_id": "942135395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.75,
+    "title": "Whole bean",
+    "variant_id": "942135399"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "0cbef195da1440da",
+  "first_seen": "2026-10-26",
+  "handle": "42ct-2-5oz-colombian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/2.5oz_Frac_pack_of_Laws_Colombian_Coffee.jpg?v=1763482262",
+  "platform": "shopify",
+  "product_id": "4326629965920",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Coffee",
+   "Colombian Coffee",
+   "drip coffee",
+   "ground coffee",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Colombian Coffee (64ct - 2.5oz)",
+  "url": "https://www.lawcoffee.com/products/42ct-2-5oz-colombian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 108.0,
+    "title": "Default Title",
+    "variant_id": "31064038637664"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "31ab14e4f8eb245d",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-house-blend-42ct-2-5oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Dark_Roast_Coffee_frac_pack.jpg?v=1763507861",
+  "platform": "shopify",
+  "product_id": "4326703759456",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "drip coffee",
+   "ground coffee",
+   "strong coffee"
+  ],
+  "title": "Dark Roast Coffee (42ct -2.5oz)",
+  "url": "https://www.lawcoffee.com/products/dark-roast-house-blend-42ct-2-5oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2976,
+    "price_usd": 58.5,
+    "title": "Default Title",
+    "variant_id": "31064428576864"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "3b6d4b5eedf0bab8",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-mendez-espresso-beans-8-x-2lb-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/2lb_bag_of_Cafe_Mendez_Espresso_beans.jpg?v=1763489617",
+  "platform": "shopify",
+  "product_id": "4327054573664",
+  "product_type": "espresso",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "espresso",
+   "espresso bean",
+   "whole bean"
+  ],
+  "title": "Cafe Mendez Espresso Beans (8 x 2lb)",
+  "url": "https://www.lawcoffee.com/products/cafe-mendez-espresso-beans-8-x-2lb-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 7257,
+    "price_usd": 165.0,
+    "title": "Default Title",
+    "variant_id": "31065686736992"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "5430f4eea2525ce6",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrado-coffee-24-2-75oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Brazilan_Cerrado_Coffee_Frac_Pack.jpg?v=1792069446",
+  "platform": "shopify",
+  "product_id": "4327288733792",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Brazil",
+   "Brazilian cerrado",
+   "coffee",
+   "drip coffee",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Brazilian Cerrado Coffee (24ct - 2.75oz)",
+  "url": "https://www.lawcoffee.com/products/brazilian-cerrado-coffee-24-2-75oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1873,
+    "price_usd": 43.75,
+    "title": "Default Title",
+    "variant_id": "31067179843680"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "9c4f7da9841f89ca",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-aa-coffee-24-3oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/DSC06142_0018_GenerativeFill6_5e974a93-369b-4661-908d-55b8895c26f1.jpg?v=1735057990",
+  "platform": "shopify",
+  "product_id": "4327311147104",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Kenya",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "kenya ab",
+   "kosher coffee",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Kenyan AB Coffee (24 - 3oz bags)",
+  "url": "https://www.lawcoffee.com/products/kenyan-aa-coffee-24-3oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 49.75,
+    "title": "Default Title",
+    "variant_id": "31067491926112"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "3a1afdbbe1cafd2b",
+  "first_seen": "2026-10-26",
+  "handle": "brick-city-reserve-42-3oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/WB_Law_Coffee_House_Blend_Frac_pack.jpg?v=1763481298",
+  "platform": "shopify",
+  "product_id": "4327330185312",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "drip coffee",
+   "ground coffee",
+   "sumatran"
+  ],
+  "title": "Brick City Reserve Coffee (42ct x 3oz)",
+  "url": "https://www.lawcoffee.com/products/brick-city-reserve-42-3oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3583,
+    "price_usd": 76.25,
+    "title": "Default Title",
+    "variant_id": "31067669856352"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "3312d39c2a415c88",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian-coffee-24-3oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Organic_Colombian_Coffee_bag.jpg?v=1763491434",
+  "platform": "shopify",
+  "product_id": "4327346864224",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "organic",
+   "organic coffee",
+   "organic colombian",
+   "single origin"
+  ],
+  "title": "Organic Colombian Coffee (24ct - 3oz)",
+  "url": "https://www.lawcoffee.com/products/organic-colombian-coffee-24-3oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 58.5,
+    "title": "Default Title",
+    "variant_id": "31067907358816"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "5f61e5eb6587f728",
+  "first_seen": "2026-10-26",
+  "handle": "premium-house-blend-coffee-beans-3x6lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Dark_Roast_Coffee_Beans_5lb.jpg?v=1792080336",
+  "platform": "shopify",
+  "product_id": "4356118511712",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "coffee beans",
+   "colombian blend",
+   "drip coffee",
+   "house blend",
+   "whole bean"
+  ],
+  "title": "Premium House Blend Coffee Beans (3x5lb)",
+  "url": "https://www.lawcoffee.com/products/premium-house-blend-coffee-beans-3x6lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 157.0,
+    "title": "Default Title",
+    "variant_id": "31247096053856"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "22191a65437f622f",
+  "first_seen": "2026-10-26",
+  "handle": "family-reserve-coffee-beans-3x5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Dark_Roast_Coffee_Beans_5lb.jpg?v=1792080336",
+  "platform": "shopify",
+  "product_id": "4356310302816",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "drip coffee",
+   "specialty coffee"
+  ],
+  "title": "Family Reserve Coffee Beans (3x5lb)",
+  "url": "https://www.lawcoffee.com/products/family-reserve-coffee-beans-3x5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 159.0,
+    "title": "Default Title",
+    "variant_id": "31247808659552"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "49b27833171449bb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffee-beans-3x6lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/5lb_Bag_of_WB_Law_Coffee_Colombian_Coffee_beans.jpg?v=1763481434",
+  "platform": "shopify",
+  "product_id": "4356363288672",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Colombian Coffee",
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "single origin",
+   "whole bean"
+  ],
+  "title": "Colombian Coffee Beans (3x5lbs)",
+  "url": "https://www.lawcoffee.com/products/colombian-coffee-beans-3x6lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 158.35,
+    "title": "Default Title",
+    "variant_id": "31248035119200"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "72d4d3b986672b84",
+  "first_seen": "2026-10-26",
+  "handle": "enerjava-coffee-24-2-75oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/image_8ac7ad5d-9af6-4c67-a07b-a920ad975f49.jpg?v=1573588591",
+  "platform": "shopify",
+  "product_id": "4358791200864",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "caffeine",
+   "coffee",
+   "ground coffee",
+   "strong coffee"
+  ],
+  "title": "Enerjava Coffee (Caffeine Enhanced)(24-2.75oz)",
+  "url": "https://www.lawcoffee.com/products/enerjava-coffee-24-2-75oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1873,
+    "price_usd": 48.25,
+    "title": "Default Title",
+    "variant_id": "31264640401504"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "e5aa1abec912cbd0",
+  "first_seen": "2026-10-26",
+  "handle": "premium-house-blend-96-2-5oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/DSC06142_0033_DSC06205_237ce8d4-0009-40f3-8c95-aea76fed3447.jpg?v=1735058109",
+  "platform": "shopify",
+  "product_id": "4359088341088",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "drip coffee",
+   "frac packs",
+   "ground coffee",
+   "house blend",
+   "specialty coffee"
+  ],
+  "title": "Premium House Blend Coffee (96 -2.5oz)",
+  "url": "https://www.lawcoffee.com/products/premium-house-blend-96-2-5oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 157.0,
+    "title": "Default Title",
+    "variant_id": "31265565212768"
+   }
+  ],
+  "vendor": "WB Law Coffee Co"
+ },
+ {
+  "body_hash": "8e1f4830a4203c8a",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrado-coffee-beans-3x5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Brazilian_Cerrado_Coffee_Beans_5lb.jpg?v=1792082081",
+  "platform": "shopify",
+  "product_id": "4359095615584",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Brazilian Coffee",
+   "Brazilian cerrado",
+   "brazil",
+   "coffee",
+   "drip coffee",
+   "single origin",
+   "whole bean"
+  ],
+  "title": "Brazilian Cerrado Coffee Beans (3x5lb)",
+  "url": "https://www.lawcoffee.com/products/brazilian-cerrado-coffee-beans-3x5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 160.25,
+    "title": "Default Title",
+    "variant_id": "31265589166176"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "b9abbc0b1c5188c1",
+  "first_seen": "2026-10-26",
+  "handle": "premium-decaf-coffee-beans-4x4lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/a_bag_of_Decaf_Coffee_Beans.jpg?v=1763491192",
+  "platform": "shopify",
+  "product_id": "4359099842656",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "decaf coffee",
+   "decaf coffee beans",
+   "drip coffee",
+   "whole bean"
+  ],
+  "title": "Premium Decaf Coffee Beans (3x5lbs)",
+  "url": "https://www.lawcoffee.com/products/premium-decaf-coffee-beans-4x4lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 157.5,
+    "title": "Default Title",
+    "variant_id": "31265599291488"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "a55d09ce97d85261",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-coffee-87-2-75oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Ground_Breakfast_Blend_Coffee.jpg?v=1791462873",
+  "platform": "shopify",
+  "product_id": "4359137755232",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "arabica coffee",
+   "breakfast blend",
+   "coffee",
+   "drip coffee",
+   "ground coffee"
+  ],
+  "title": "Breakfast Blend Coffee (87-2.75oz)",
+  "url": "https://www.lawcoffee.com/products/breakfast-blend-coffee-87-2-75oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 158.0,
+    "title": "Default Title",
+    "variant_id": "31265718960224"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "11bf872ff6422362",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-altura-coffee-24-3oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Mexican_Alturra_Coffee_Frac_Pack.jpg?v=1792148666",
+  "platform": "shopify",
+  "product_id": "4382557765728",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "100% arabica",
+   "coffee",
+   "drip coffee",
+   "flavored coffee",
+   "ground coffee",
+   "mexican coffee"
+  ],
+  "title": "Mexican Altura Coffee (24ct -3oz)",
+  "url": "https://www.lawcoffee.com/products/mexican-altura-coffee-24-3oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 53.5,
+    "title": "Default Title",
+    "variant_id": "31367488766048"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "bfb941758f48a6d5",
+  "first_seen": "2026-10-26",
+  "handle": "brick-city-reserve-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/DSC06142_0038_GenerativeFill19.jpg?v=1734987149",
+  "platform": "shopify",
+  "product_id": "4458171531360",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Shadowbrook",
+   "coffee",
+   "coffee blend",
+   "dark roast",
+   "drip coffee",
+   "specialty coffee",
+   "split roast",
+   "sumatran",
+   "whole bean"
+  ],
+  "title": "Brick City Reserve Coffee (1lb)",
+  "url": "https://www.lawcoffee.com/products/brick-city-reserve-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "Default Title",
+    "variant_id": "31650999894112"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "cc12eeaf476a046d",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/ChocolateRaspberry_8c299bbf-4f07-4d8b-94de-6b1d34915415.jpg?v=1734987348",
+  "platform": "shopify",
+  "product_id": "4618499850336",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "chocolate raspberry",
+   "chocolate raspberry coffee",
+   "coffee",
+   "flavored coffee",
+   "ground coffee",
+   "whole bean"
+  ],
+  "title": "Chocolate Raspberry Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/chocolate-raspberry-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "32243060932704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "32243060965472"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "ba13e475af8e51a3",
+  "first_seen": "2026-10-26",
+  "handle": "davinci-gourmet-chocolate-sauce-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/Davinci-Chocolate-Sauce.jpg?v=1602510553",
+  "platform": "shopify",
+  "product_id": "5779464061093",
+  "product_type": "Sauce",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Espresso",
+   "Sauce",
+   "chocolate sauce",
+   "hot chocolate",
+   "lattes",
+   "mocha"
+  ],
+  "title": "DaVinci Gourmet Chocolate Sauce (64oz)",
+  "url": "https://www.lawcoffee.com/products/davinci-gourmet-chocolate-sauce-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "Default Title",
+    "variant_id": "36688687333541"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "db41fdb18b86786e",
+  "first_seen": "2026-10-26",
+  "handle": "davinci-pumpkin-pie-sauce",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/pumpknspice.jpg?v=1602512775",
+  "platform": "shopify",
+  "product_id": "5779700580517",
+  "product_type": "Sauce",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "espresso",
+   "pumpkin spice",
+   "pumpkin spice latte",
+   "pumpkin spice sauce",
+   "sauce"
+  ],
+  "title": "DaVinci Pumpkin Pie Sauce (64oz)",
+  "url": "https://www.lawcoffee.com/products/davinci-pumpkin-pie-sauce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 21.99,
+    "title": "Default Title",
+    "variant_id": "36689592451237"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "a9d6a6ec6ec92ee7",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Costa_Rican_Coffee_Frac_Pack.jpg?v=1789558120",
+  "platform": "shopify",
+  "product_id": "6968445141157",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Costa Rica",
+   "coffee",
+   "costa rica tarrazu",
+   "costa rican coffee",
+   "drip coffee",
+   "ground coffee",
+   "single origin"
+  ],
+  "title": "Costa Rican Coffee SHB EP (24ct-2.5oz)",
+  "url": "https://www.lawcoffee.com/products/costa-rican-tarrazu-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 40.5,
+    "title": "Default Title",
+    "variant_id": "40557108101285"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "b8e3390b0e5c2742",
+  "first_seen": "2026-10-26",
+  "handle": "rinza-milk-cleaner",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/rinza_milk_frother_cleaner.webp?v=1763483927",
+  "platform": "shopify",
+  "product_id": "8908668567717",
+  "product_type": "Coffee Cleaner",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "cleaning solution",
+   "espresso",
+   "steam wand cleaner"
+  ],
+  "title": "Urnex Rinza Milk Cleaner",
+  "url": "https://www.lawcoffee.com/products/rinza-milk-cleaner",
+  "variants": [
+   {
+    "available": true,
+    "grams": 958,
+    "price_usd": 28.99,
+    "title": "Default Title",
+    "variant_id": "44547305472165"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "7febc9442481cac7",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza-cleaning-tablets-e16",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Urnex_cleaning_tablets.webp?v=1763477863",
+  "platform": "shopify",
+  "product_id": "8908686196901",
+  "product_type": "Coffee Cleaner",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "cleaning tablets",
+   "espresso",
+   "espresso cleaning tablets",
+   "urnex"
+  ],
+  "title": "Urnex Cafiza Cleaning Tablets (E16)",
+  "url": "https://www.lawcoffee.com/products/urnex-cafiza-cleaning-tablets-e16",
+  "variants": [
+   {
+    "available": true,
+    "grams": 121,
+    "price_usd": 19.98,
+    "title": "Default Title",
+    "variant_id": "44547518169253"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "f64686583d23a394",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-25-x-14oz",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/14oz_Coffee_Frac_Pack.jpg?v=1763479051",
+  "platform": "shopify",
+  "product_id": "8910419787941",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "banquet coffee",
+   "bulk coffee",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "lunch truck",
+   "urn coffee"
+  ],
+  "title": "House Blend Coffee (25 x 14oz)",
+  "url": "https://www.lawcoffee.com/products/house-blend-25-x-14oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9925,
+    "price_usd": 225.5,
+    "title": "Default Title",
+    "variant_id": "44567179395237"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "f7e72f742ab085c3",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-coffee-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Costa_Rican_Tarrazu_Coffee.jpg?v=1792081988",
+  "platform": "shopify",
+  "product_id": "8911940944037",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Costa Rica",
+   "coffee",
+   "drip coffee",
+   "ground coffee",
+   "single origin",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Costa Rican Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/costa-rican-coffee-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "44577273315493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole bean",
+    "variant_id": "44577273348261"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "21a69317c5be094e",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-brazilian-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/Brazilian_Green_Coffee.jpg?v=1785518556",
+  "platform": "shopify",
+  "product_id": "9741027726",
+  "product_type": "Green Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Coffee",
+   "coffee roasting",
+   "espresso",
+   "green coffee"
+  ],
+  "title": "Green Coffee: Cerrado, Brazil (5 lb)",
+  "url": "https://www.lawcoffee.com/products/green-coffee-brazilian-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.5,
+    "title": "Default Title",
+    "variant_id": "35354640590"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "895c9638c7bc45c3",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-huila-colombia-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/Green_Colombian_COffee.jpg?v=1763488754",
+  "platform": "shopify",
+  "product_id": "9741064846",
+  "product_type": "Green Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "Coffee",
+   "Colombian Coffee",
+   "colombian",
+   "green coffee",
+   "green colombian coffee"
+  ],
+  "title": "Green Coffee: Huila, Colombia (5 lb)",
+  "url": "https://www.lawcoffee.com/products/green-coffee-huila-colombia-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.25,
+    "title": "Default Title",
+    "variant_id": "35354790414"
+   }
+  ],
+  "vendor": "Law Coffee"
+ },
+ {
+  "body_hash": "ad3c6720bf384eda",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/products/Sumatran_Mandheling_Green_Coffee.jpg?v=1788698385",
+  "platform": "shopify",
+  "product_id": "9741106510",
+  "product_type": "Green Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee roasting",
+   "green coffee",
+   "sumatra"
+  ],
+  "title": "Green Coffee: Sumatra Mandheling (5 lb)",
+  "url": "https://www.lawcoffee.com/products/green-coffee-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.0,
+    "title": "Default Title",
+    "variant_id": "35354958350"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ },
+ {
+  "body_hash": "ea8da5046fb07e59",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0565/1129/files/Pumpkin_Spice_Coffee.jpg?v=1763479930",
+  "platform": "shopify",
+  "product_id": "97676722200",
+  "product_type": "Coffee",
+  "roaster_slug": "lawcoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "drip coffee",
+   "flavored coffee",
+   "ground coffee",
+   "pumpkin spice"
+  ],
+  "title": "Pumpkin Spice Coffee (12oz Bag)",
+  "url": "https://www.lawcoffee.com/products/pumpkin-spice-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "32099433939040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Ground Coffee",
+    "variant_id": "32099434004576"
+   }
+  ],
+  "vendor": "WB Law Coffee Co."
+ }
+]

@@ -1,0 +1,2620 @@
+[
+ {
+  "body_hash": "db04969e60ab0ada",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_DMR_WB.jpg?v=1690610853",
+  "platform": "shopify",
+  "product_id": "10847007238",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "Fan Favorite",
+   "Halloween",
+   "High Caffeine Content",
+   "India",
+   "Top Coffee Pick"
+  ],
+  "title": "12oz Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip Grind",
+    "variant_id": "39739944206449"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso Grind",
+    "variant_id": "39739944239217"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739944271985"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "45390155846"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "dbcbaeffba9c74bb",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_DMR.jpg?v=1718745358",
+  "platform": "shopify",
+  "product_id": "10847049158",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "High Caffeine Content",
+   "India"
+  ],
+  "title": "5lb Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739944108145"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739944140913"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739944173681"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "45390744390"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "ed4d65a57e9603b6",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-three-peckered-billy-goat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_TPBG_WB.jpg?v=1690612542",
+  "platform": "shopify",
+  "product_id": "10847128966",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Fan Favorite",
+   "Feasting Favs",
+   "High Caffeine Content",
+   "India",
+   "Indonesia",
+   "Three Peckered Billy Goat®"
+  ],
+  "title": "12oz Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-three-peckered-billy-goat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip Grind",
+    "variant_id": "39739944009841"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso Grind",
+    "variant_id": "39739944042609"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739944075377"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "45391684998"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "e4d9cfcefb2036f0",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_WWORG_9cb5d736-d46f-452c-9ecd-dc389c241a6d.jpg?v=1728509811",
+  "platform": "shopify",
+  "product_id": "11449101062",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Organic",
+   "Wicked Wolf®"
+  ],
+  "title": "5lb Organic Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943846001"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739943878769"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943911537"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46754331590"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "67b899a87407210c",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-breakfast-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_BreakfastBlend.jpg?v=1728509769",
+  "platform": "shopify",
+  "product_id": "11455987078",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Breakfast Blend",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full Caffeine",
+   "Light Roast",
+   "Raven's Brew®"
+  ],
+  "title": "5lb Breakfast Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-breakfast-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943747697"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739943780465"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943813233"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055238"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "62d4dcaf261cba15",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bruin-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_Bruin.jpg?v=1737093947",
+  "platform": "shopify",
+  "product_id": "11455987142",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "All Coffee",
+   "Bruin Blend®",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Indonesia"
+  ],
+  "title": "5lb Bruin Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-bruin-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943649393"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739943682161"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943714929"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055302"
+   }
+  ],
+  "vendor": "Bruin Blend"
+ },
+ {
+  "body_hash": "a34900247c5f5251",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-decaf-organic-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_HouseOrganicDecaf.jpg?v=1726103089",
+  "platform": "shopify",
+  "product_id": "11455987206",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Decaf",
+   "House Blend",
+   "Organic",
+   "Raven's Brew®"
+  ],
+  "title": "5lb Decaf Organic Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-decaf-organic-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 102.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943551089"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 102.95,
+    "title": "Espresso",
+    "variant_id": "39739943583857"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 102.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943616625"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 102.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055366"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "157c918dffc5c52d",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-decaf-skookum-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_SkookumDecaf_01750c78-316d-4b01-b439-390de4b90499.jpg?v=1728509270",
+  "platform": "shopify",
+  "product_id": "11455987334",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Coffees for a Caws",
+   "Decaf",
+   "Full City Roast",
+   "Skookum®  Blend"
+  ],
+  "title": "5lb Decaf Skookum® Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-decaf-skookum-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 100.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943452785"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 100.95,
+    "title": "Espresso",
+    "variant_id": "39739943485553"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 100.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943518321"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 100.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055494"
+   }
+  ],
+  "vendor": "Skookum"
+ },
+ {
+  "body_hash": "f7cad4f34049e0c8",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-ebony-pearls-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_EbonyPearls.jpg?v=1728509745",
+  "platform": "shopify",
+  "product_id": "11455987398",
+  "product_type": "French Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Ebony Pearls™",
+   "French Roast",
+   "Full Caffeine",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "5lb Ebony Pearls™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-ebony-pearls-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943321713"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739943354481"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943387249"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055558"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "435d0c868fdc8a93",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_House.jpg?v=1728509693",
+  "platform": "shopify",
+  "product_id": "11455987462",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Full Caffeine",
+   "House Blend",
+   "India",
+   "Indonesia",
+   "Raven's Brew®"
+  ],
+  "title": "5lb Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943223409"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739943256177"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943288945"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055622"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "6ccb3a475f102622",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-misty-fjords-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_MistyFjords_5f2228bd-cd21-4d2d-b335-8515a1ea5a8f.jpg?v=1728509739",
+  "platform": "shopify",
+  "product_id": "11455987526",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full Caffeine",
+   "Medium Roast",
+   "Misty Fjords™",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "5lb Misty Fjords™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-misty-fjords-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943125105"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739943157873"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943190641"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055686"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "f1a3e36aeba34c98",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-bruin-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_BruinORG_512330cc-5f72-49cd-92e6-574cda86b85f.jpg?v=1737093941",
+  "platform": "shopify",
+  "product_id": "11455987654",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "All Coffee",
+   "Bruin Blend®",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Indonesia",
+   "Organic"
+  ],
+  "title": "5lb Organic Bruin Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-bruin-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739943026801"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739943059569"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739943092337"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055814"
+   }
+  ],
+  "vendor": "Bruin Blend"
+ },
+ {
+  "body_hash": "b83e4719c16963b3",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_DMR_ORG_1efc9056-6c34-47b0-852e-859bb3caa025.jpg?v=1718745347",
+  "platform": "shopify",
+  "product_id": "11455987718",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "Organic"
+  ],
+  "title": "5lb Organic Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942928497"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739942961265"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942994033"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896055878"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "a76b0122e4640c35",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-ebony-pearls-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_EbonyPearlsORG.jpg?v=1728509715",
+  "platform": "shopify",
+  "product_id": "11455987846",
+  "product_type": "French Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Ebony Pearls™",
+   "French Roast",
+   "Full Caffeine",
+   "Organic",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "5lb Organic Ebony Pearls™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-ebony-pearls-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942764657"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739942797425"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942830193"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056006"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "df66696914cf87da",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_HouseOrganic.jpg?v=1728509706",
+  "platform": "shopify",
+  "product_id": "11455987910",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Full Caffeine",
+   "House Blend",
+   "Indonesia",
+   "Organic",
+   "Raven's Brew®"
+  ],
+  "title": "5lb Organic Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942633585"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739942666353"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942699121"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056070"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "49486131c3cf297b",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-resurrection-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_ResORG.jpg?v=1728509797",
+  "platform": "shopify",
+  "product_id": "11455988038",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Full City Roast",
+   "Indonesia",
+   "Organic",
+   "Resurrection Blend®"
+  ],
+  "title": "5lb Organic Resurrection Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-resurrection-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056198"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "46898296518"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "46898296582"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "46898296646"
+   }
+  ],
+  "vendor": "Resurrection Blend"
+ },
+ {
+  "body_hash": "ed83fd75aaf7fc93",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-organic-three-peckered-billy-goat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_TPBG_ORG.jpg?v=1718744907",
+  "platform": "shopify",
+  "product_id": "11455988102",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Indonesia",
+   "Organic",
+   "Three Peckered Billy Goat®"
+  ],
+  "title": "5lb Organic Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-organic-three-peckered-billy-goat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942502513"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Espresso",
+    "variant_id": "39739942535281"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942568049"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056262"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "78183fe071435f96",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-resurrection-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_Res.jpg?v=1728509779",
+  "platform": "shopify",
+  "product_id": "11455988230",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full City Roast",
+   "Indonesia",
+   "Resurrection Blend®"
+  ],
+  "title": "5lb Resurrection Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-resurrection-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942404209"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739942436977"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942469745"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056326"
+   }
+  ],
+  "vendor": "Resurrection Blend"
+ },
+ {
+  "body_hash": "881c3d21b0ae3f6f",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-skookum-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_Skookum.jpg?v=1728509192",
+  "platform": "shopify",
+  "product_id": "11455988358",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Coffees for a Caws",
+   "Conventional",
+   "Full Caffeine",
+   "Full City Roast",
+   "Indonesia",
+   "Skookum®  Blend"
+  ],
+  "title": "5lb Skookum® Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-skookum-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942273137"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739942305905"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942338673"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896056582"
+   }
+  ],
+  "vendor": "Skookum"
+ },
+ {
+  "body_hash": "bf3622eb27c38cb2",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-three-peckered-billy-goat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_TPBG_ffa99e73-a627-4d8a-b684-db2c8f3ce7f1.jpg?v=1718744922",
+  "platform": "shopify",
+  "product_id": "11455988422",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Feasting Favs",
+   "High Caffeine Content",
+   "India",
+   "Indonesia",
+   "Three Peckered Billy Goat®"
+  ],
+  "title": "5lb Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-three-peckered-billy-goat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942174833"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739942207601"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942240369"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896057222"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "ffc9cad3c015f85f",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_WW_761b58cd-e891-4e52-b64a-75b0dcfd7ac2.jpg?v=1728509819",
+  "platform": "shopify",
+  "product_id": "11455988486",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Wicked Wolf®"
+  ],
+  "title": "5lb Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "39739942076529"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Espresso",
+    "variant_id": "39739942109297"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942142065"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "46896057286"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "c3921b119480ac01",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-breakfast-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/files/12oz_BreakfastBlend_WB.jpg?v=1707875346",
+  "platform": "shopify",
+  "product_id": "11456377222",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Breakfast Blend",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full Caffeine",
+   "Light Roast",
+   "Raven's Brew®",
+   "Top Coffee Pick"
+  ],
+  "title": "12oz Breakfast Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-breakfast-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941945457"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739941978225"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739942010993"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900148806"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "4e2184610cb6347a",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-bruin-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Bruin_WB.jpg?v=1690615230",
+  "platform": "shopify",
+  "product_id": "11456377286",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Bruin Blend®",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Indonesia"
+  ],
+  "title": "12oz Bruin Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-bruin-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941814385"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739941847153"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941879921"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900149062"
+   }
+  ],
+  "vendor": "Bruin Blend"
+ },
+ {
+  "body_hash": "42aaaa931cf1fd9f",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-decaf-organic-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_House_WB_Organic_Decaf.jpg?v=1726103000",
+  "platform": "shopify",
+  "product_id": "11456377350",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Decaf",
+   "Feasting Favs",
+   "House Blend",
+   "Organic",
+   "Raven's Brew®"
+  ],
+  "title": "12oz Decaf Organic Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-decaf-organic-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 23.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941716081"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 23.95,
+    "title": "Espresso",
+    "variant_id": "39739941748849"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 23.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941781617"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 23.95,
+    "title": "Whole Bean",
+    "variant_id": "46900149318"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "68c8ee825a57bd22",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-decaf-skookum-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Skookum_WB_Decaf.jpg?v=1690615605",
+  "platform": "shopify",
+  "product_id": "11456377478",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Coffees for a Caws",
+   "Decaf",
+   "Full City Roast",
+   "Skookum®  Blend"
+  ],
+  "title": "12oz Decaf Skookum® Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-decaf-skookum-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 21.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941617777"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 21.95,
+    "title": "Espresso",
+    "variant_id": "39739941650545"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 21.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941683313"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 21.95,
+    "title": "Whole Bean",
+    "variant_id": "46900149638"
+   }
+  ],
+  "vendor": "Skookum"
+ },
+ {
+  "body_hash": "1c0a9f911bd2419b",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-ebony-pearls-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/files/12oz_EbonyPearls_WB.jpg?v=1707875787",
+  "platform": "shopify",
+  "product_id": "11456377606",
+  "product_type": "French Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Ebony Pearls™",
+   "French Roast",
+   "Full Caffeine",
+   "Halloween",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "12oz Ebony Pearls™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-ebony-pearls-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941519473"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739941552241"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941585009"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900149958"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "0df67fc546cdc0ee",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_House_WB.jpg?v=1690611650",
+  "platform": "shopify",
+  "product_id": "11456377734",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Full Caffeine",
+   "House Blend",
+   "India",
+   "Indonesia",
+   "Leap Day",
+   "Raven's Brew®"
+  ],
+  "title": "12oz Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941421169"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739941453937"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941486705"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900150278"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "401de8bb88852604",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-misty-fjords-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Misty_WB.jpg?v=1707876359",
+  "platform": "shopify",
+  "product_id": "11456377798",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full Caffeine",
+   "Halloween",
+   "Medium Roast",
+   "Misty Fjords™",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "12oz Misty Fjords™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-misty-fjords-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941322865"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739941355633"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941388401"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900150534"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "9b216d45df0139d4",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-bruin-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Bruin_WB_ORG.jpg?v=1690615175",
+  "platform": "shopify",
+  "product_id": "11456377862",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Bruin Blend®",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Indonesia",
+   "Organic"
+  ],
+  "title": "12oz Organic Bruin Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-bruin-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941224561"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739941257329"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941290097"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900150790"
+   }
+  ],
+  "vendor": "Bruin Blend"
+ },
+ {
+  "body_hash": "9c15b7560a5956e4",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_DMR_WB_ORG.jpg?v=1690610970",
+  "platform": "shopify",
+  "product_id": "11456377926",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "Halloween",
+   "Organic"
+  ],
+  "title": "12oz Organic Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941126257"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739941159025"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941191793"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900151046"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "6cfa486d8e569f90",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-ebony-pearls-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Ebony_WB_Organic.jpg?v=1707876115",
+  "platform": "shopify",
+  "product_id": "11456378118",
+  "product_type": "French Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Ebony Pearls™",
+   "French Roast",
+   "Full Caffeine",
+   "Halloween",
+   "Organic",
+   "Raven's Brew®",
+   "Single Origin"
+  ],
+  "title": "12oz Organic Ebony Pearls™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-ebony-pearls-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739941027953"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739941060721"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739941093489"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900153670"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "6e89bfa81d21bba7",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_House_WB_Organic.jpg?v=1690611718",
+  "platform": "shopify",
+  "product_id": "11456378182",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Full Caffeine",
+   "House Blend",
+   "Indonesia",
+   "Organic",
+   "Raven's Brew®"
+  ],
+  "title": "12oz Organic Raven’s Brew® House Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940929649"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739940962417"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940995185"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900155206"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "cbba83366087c7d3",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-resurrection-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Res_WB_ORG.jpg?v=1690614465",
+  "platform": "shopify",
+  "product_id": "11456378246",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Full City Roast",
+   "Indonesia",
+   "Organic",
+   "Resurrection Blend®"
+  ],
+  "title": "12oz Organic Resurrection Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-resurrection-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900155974"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "46900156038"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "46900156102"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "46900156166"
+   }
+  ],
+  "vendor": "Resurrection Blend"
+ },
+ {
+  "body_hash": "23c9b95ce5f82dd5",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-three-peckered-billy-goat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_TPBG_WB_ORG.jpg?v=1725992293",
+  "platform": "shopify",
+  "product_id": "11456378310",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Feasting Favs",
+   "Indonesia",
+   "Organic",
+   "Three Peckered Billy Goat®",
+   "Top Coffee Pick"
+  ],
+  "title": "12oz Organic Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-three-peckered-billy-goat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940831345"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739940864113"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940896881"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900156230"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "49fe012a17e2295d",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-organic-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Wolf_WB_ORG.jpg?v=1690613952",
+  "platform": "shopify",
+  "product_id": "11456378438",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Dark Roast",
+   "Halloween",
+   "Organic",
+   "Top Coffee Pick",
+   "Wicked Wolf®"
+  ],
+  "title": "12oz Organic Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-organic-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940700273"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Espresso",
+    "variant_id": "39739940733041"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940765809"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 20.95,
+    "title": "Whole Bean",
+    "variant_id": "46900156998"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "fa5eeeeda1fcb404",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-resurrection-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Res_WB.jpg?v=1690614401",
+  "platform": "shopify",
+  "product_id": "11456378502",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Full Caffeine",
+   "Full City Roast",
+   "Indonesia",
+   "Leap Day",
+   "Resurrection Blend®"
+  ],
+  "title": "12oz Resurrection Blend® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-resurrection-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940601969"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739940634737"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940667505"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900157254"
+   }
+  ],
+  "vendor": "Resurrection Blend"
+ },
+ {
+  "body_hash": "c1c13e6f303ad90a",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-skookum-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Skookum_WB_6b438bf2-ca0c-481d-96c1-3e6ce40a55b3.jpg?v=1690615510",
+  "platform": "shopify",
+  "product_id": "11456378566",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Coffees for a Caws",
+   "Conventional",
+   "Full Caffeine",
+   "Full City Roast",
+   "Indonesia",
+   "Skookum®  Blend",
+   "Top Coffee Pick"
+  ],
+  "title": "12oz Skookum® Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-skookum-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940503665"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739940536433"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940569201"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900157574"
+   }
+  ],
+  "vendor": "Skookum"
+ },
+ {
+  "body_hash": "e16b27041d91731c",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_Wolf_WB.jpg?v=1690613866",
+  "platform": "shopify",
+  "product_id": "11456378630",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Fan Favorite",
+   "Halloween",
+   "Wicked Wolf®"
+  ],
+  "title": "12oz Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "39739940372593"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Espresso",
+    "variant_id": "39739940405361"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Press Pot/Cold Brew",
+    "variant_id": "39739940438129"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "46900157894"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "c56e42d4685ec8eb",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-double-dead-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/12oz_DD_WB.jpg?v=1690612941",
+  "platform": "shopify",
+  "product_id": "1469785440369",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "12oz",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Double Caffeine",
+   "Double Dead™",
+   "Fan Favorite",
+   "Halloween",
+   "High Caffeine Content",
+   "India",
+   "Top Coffee Pick"
+  ],
+  "title": "12oz Double Dead® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/12oz-double-dead-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Whole Bean",
+    "variant_id": "13029537611889"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 18.95,
+    "title": "Auto Drip",
+    "variant_id": "13029537644657"
+   }
+  ],
+  "vendor": "Double Dead"
+ },
+ {
+  "body_hash": "52193c35a028e102",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-double-dead-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/2lb_DD_WB_79728560-f25a-4abf-8ba7-cc6a08e804c6.jpg?v=1720583177",
+  "platform": "shopify",
+  "product_id": "1582380318833",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "2lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Big Bag",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Double Caffeine",
+   "Double Dead™",
+   "High Caffeine Content",
+   "India",
+   "Top Coffee Pick",
+   "Under $50"
+  ],
+  "title": "2lb Double Dead® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/2lb-double-dead-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Whole Bean",
+    "variant_id": "14559009964145"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Auto Drip",
+    "variant_id": "14559010029681"
+   }
+  ],
+  "vendor": "Double Dead"
+ },
+ {
+  "body_hash": "4e2926797913d5e4",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-double-dead-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/5lb_DD.jpg?v=1718745198",
+  "platform": "shopify",
+  "product_id": "1582438678641",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "5lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Double Caffeine",
+   "Double Dead™",
+   "High Caffeine Content",
+   "India"
+  ],
+  "title": "5lb Double Dead® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/5lb-double-dead-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Whole Bean",
+    "variant_id": "14559499321457"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 89.95,
+    "title": "Auto Drip",
+    "variant_id": "14559568658545"
+   }
+  ],
+  "vendor": "Double Dead"
+ },
+ {
+  "body_hash": "9ea58ee3b36a47f6",
+  "first_seen": "2026-10-26",
+  "handle": "3oz-misty-fjords-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/3oz_MISTY.jpg?v=1711492266",
+  "platform": "shopify",
+  "product_id": "1790221844593",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "All Coffee",
+   "Central/South America",
+   "Conventional",
+   "Full Caffeine",
+   "Halloween",
+   "Just a Taste",
+   "Medium Roast",
+   "Misty Fjords™",
+   "Raven's Brew Coffee®",
+   "Raven's Brew®",
+   "Under $10"
+  ],
+  "title": "3oz Misty Fjords™ Coffee",
+  "url": "https://ravensbrewcoffee.com/products/3oz-misty-fjords-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 8.95,
+    "title": "Auto Drip Only",
+    "variant_id": "17925459542129"
+   }
+  ],
+  "vendor": "Raven"
+ },
+ {
+  "body_hash": "344cabbda3d4baf4",
+  "first_seen": "2026-10-26",
+  "handle": "3oz-three-peckered-billygoat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/3oz_TPBG.jpg?v=1711492534",
+  "platform": "shopify",
+  "product_id": "1790260248689",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Conventional",
+   "Dark Roast",
+   "Full Caffeine",
+   "High Caffeine Content",
+   "India",
+   "Indonesia",
+   "Just a Taste",
+   "Three Peckered Billy Goat®",
+   "Under $10"
+  ],
+  "title": "3oz Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/3oz-three-peckered-billygoat-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 95,
+    "price_usd": 8.95,
+    "title": "Auto Drip Only",
+    "variant_id": "17925862785137"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "23f56f3dc90e78e1",
+  "first_seen": "2026-10-26",
+  "handle": "3oz-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/3oz_Wolf.jpg?v=1711492649",
+  "platform": "shopify",
+  "product_id": "1790273912945",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "Africa",
+   "All Coffee",
+   "Central/South America",
+   "Conventional",
+   "Dark Roast",
+   "Full Caffeine",
+   "Halloween",
+   "Just a Taste",
+   "Under $10",
+   "Wicked Wolf®"
+  ],
+  "title": "3oz Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/3oz-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 8.95,
+    "title": "Auto Drip Only",
+    "variant_id": "17926017056881"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "021d5b4cf94f9fc3",
+  "first_seen": "2026-10-26",
+  "handle": "3oz-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/3oz_DEADMAN.jpg?v=1711492424",
+  "platform": "shopify",
+  "product_id": "286767120414",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "All Coffee",
+   "Central/South America",
+   "Conventional",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "Halloween",
+   "High Caffeine Content",
+   "India",
+   "Just a Taste",
+   "Under $10"
+  ],
+  "title": "3oz Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/3oz-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 8.95,
+    "title": "Auto Drip Only",
+    "variant_id": "17924606886001"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "8d34e62d0b73f151",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-three-peckered-billy-goat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/2lb_TPBG_WB_f96eda4c-042c-47a7-a093-37a8c9cc422e.jpg?v=1720583431",
+  "platform": "shopify",
+  "product_id": "3892231471217",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "2lb",
+   "Africa",
+   "All Coffee",
+   "Big Bag",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "High Caffeine Content",
+   "India",
+   "Indonesia",
+   "Three Peckered Billy Goat®",
+   "Top Coffee Pick",
+   "Under $50"
+  ],
+  "title": "2lb Three Peckered Billy Goat® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/2lb-three-peckered-billy-goat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Whole Bean",
+    "variant_id": "29245112877169"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Auto Drip",
+    "variant_id": "29245112909937"
+   }
+  ],
+  "vendor": "Three Peckered Billy Goat"
+ },
+ {
+  "body_hash": "31ab2ee9a4699c2d",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-wicked-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/2lb_WW_WB.jpg?v=1720583066",
+  "platform": "shopify",
+  "product_id": "3892245790833",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "2lb",
+   "Africa",
+   "All Coffee",
+   "Big Bag",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Top Coffee Pick",
+   "Under $50",
+   "Wicked Wolf®"
+  ],
+  "title": "2lb Wicked Wolf® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/2lb-wicked-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Whole Bean",
+    "variant_id": "29245140271217"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Auto Drip",
+    "variant_id": "29245140303985"
+   }
+  ],
+  "vendor": "Wicked Wolf"
+ },
+ {
+  "body_hash": "7a682250f3748bef",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-deadmans-reach-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/2lb_DMR_WB.jpg?v=1720583292",
+  "platform": "shopify",
+  "product_id": "3892343242865",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "2lb",
+   "Alaska Favs",
+   "All Coffee",
+   "Big Bag",
+   "Central/South America",
+   "Club",
+   "Conventional",
+   "Dark Roast",
+   "Deadman's Reach®",
+   "High Caffeine Content",
+   "India",
+   "Top Coffee Pick",
+   "Under $50"
+  ],
+  "title": "2lb Deadman's Reach® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/2lb-deadmans-reach-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Whole Bean",
+    "variant_id": "29245296377969"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 39.95,
+    "title": "Auto Drip",
+    "variant_id": "29245296410737"
+   }
+  ],
+  "vendor": "Deadman's Reach"
+ },
+ {
+  "body_hash": "29fc4064c22436ed",
+  "first_seen": "2026-10-26",
+  "handle": "3oz-double-dead",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/RBC_DD_TRIPLET_Copy.jpg?v=1711495270",
+  "platform": "shopify",
+  "product_id": "4010092920945",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "All Coffee",
+   "Conventional",
+   "Dark Roast",
+   "Double Caffeine",
+   "Double Dead™",
+   "Halloween",
+   "High Caffeine Content",
+   "Just a Taste",
+   "Under $10"
+  ],
+  "title": "3oz Double Dead® Coffee",
+  "url": "https://ravensbrewcoffee.com/products/3oz-double-dead",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 8.95,
+    "title": "Auto Drip Only",
+    "variant_id": "29530126450801"
+   }
+  ],
+  "vendor": "Double Dead"
+ },
+ {
+  "body_hash": "5804dd698b0b5290",
+  "first_seen": "2026-10-26",
+  "handle": "ravens-and-the-box-of-daylight",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/products/Raven_Box_FRCopy.jpg?v=1662063432",
+  "platform": "shopify",
+  "product_id": "6656418807921",
+  "product_type": "Books",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "Alaska Favs",
+   "Books & Calendars",
+   "Coffees for a Caws",
+   "New",
+   "Under $25"
+  ],
+  "title": "Raven and the Box of Daylight",
+  "url": "https://ravensbrewcoffee.com/products/ravens-and-the-box-of-daylight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "39596199215217"
+   }
+  ],
+  "vendor": "Raven's Brew Coffee"
+ },
+ {
+  "body_hash": "be23cfbb5832d5f1",
+  "first_seen": "2026-10-26",
+  "handle": "10oz-holiday-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/files/10oz_HolidayBlend_2025.jpg?v=1758648899",
+  "platform": "shopify",
+  "product_id": "7482730348657",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "Full Caffeine",
+   "Full City Roast",
+   "Limited Release",
+   "New"
+  ],
+  "title": "10oz Holiday Blend Coffee",
+  "url": "https://ravensbrewcoffee.com/products/10oz-holiday-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 286,
+    "price_usd": 22.95,
+    "title": "Whole Bean",
+    "variant_id": "42386306662513"
+   },
+   {
+    "available": true,
+    "grams": 286,
+    "price_usd": 22.95,
+    "title": "Auto Drip Grind",
+    "variant_id": "42389026078833"
+   }
+  ],
+  "vendor": "Limited Release"
+ },
+ {
+  "body_hash": "7673c7814a1359c3",
+  "first_seen": "2026-10-26",
+  "handle": "10oz-limited-edition-roasters-pick-archive-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2103/9669/files/LTD_Edition_RoastersPick_Seasonal.png?v=1778110217",
+  "platform": "shopify",
+  "product_id": "7637506326641",
+  "product_type": "Full City Roast Coffee",
+  "roaster_slug": "ravensbrew",
+  "tags": [
+   "Full Caffeine",
+   "Full City Roast",
+   "Limited Release",
+   "New"
+  ],
+  "title": "10oz Limited Edition: Roaster's Pick - Seasonal Blend",
+  "url": "https://ravensbrewcoffee.com/products/10oz-limited-edition-roasters-pick-archive-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 286,
+    "price_usd": 20.95,
+    "title": "Whole Bean Only",
+    "variant_id": "43183766077553"
+   }
+  ],
+  "vendor": "Limited Release"
+ }
+]

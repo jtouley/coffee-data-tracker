@@ -1,0 +1,225 @@
+{
+ "1068608978987": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "1209979273259": {
+  "body_hash": "da6e569672e4c344",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruit punch",
+   "clementine",
+   "cherry"
+  ],
+  "varietals": []
+ },
+ "1241726484523": {
+  "body_hash": "3fb968f524e1e2e1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red berry",
+   "caramel",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "1867844517931": {
+  "body_hash": "e287a061d7f2563a",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "asian pear",
+   "jade oolong",
+   "nougat",
+   "starfruit"
+  ],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "404960542763": {
+  "body_hash": "d7b2b5bf3b4e78ed",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "chocolate",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "6541118865451": {
+  "body_hash": "9234addb1f2cd064",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry cola",
+   "white grape",
+   "lime zest"
+  ],
+  "varietals": [
+   "Heirloom",
+   "Wush Wush"
+  ]
+ },
+ "6718431723563": {
+  "body_hash": "b06a16c0bc966046",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "natural wine",
+   "black cherry",
+   "raw chocolate"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "7294141792299": {
+  "body_hash": "cccd2a4f0578ad27",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "passion fruit",
+   "pineapple gummy bears",
+   "rose"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Gesha",
+   "Java",
+   "Pink Bourbon",
+   "Tabi"
+  ]
+ },
+ "7391715360811": {
+  "body_hash": "e845dd0913b155b4",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "orange",
+   "strawberry shortcake",
+   "marzipan"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Red Bourbon"
+  ]
+ },
+ "819536265259": {
+  "body_hash": "3d950c72f60de810",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "caramel",
+   "clementine"
+  ],
+  "varietals": []
+ },
+ "819616579627": {
+  "body_hash": "40c95c8785378679",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "pecan",
+   "molasses"
+  ],
+  "varietals": []
+ }
+}

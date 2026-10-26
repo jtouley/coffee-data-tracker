@@ -1,0 +1,5713 @@
+[
+ {
+  "body_hash": "fe7a87893a4091a3",
+  "first_seen": "2026-10-26",
+  "handle": "bali",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593011fbf7e0abb6ba9407c0/1774980713132/",
+  "platform": "squarespace",
+  "product_id": "593011fbf7e0abb6ba9407c0",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Certified & Organic",
+   "Indonesia",
+   "Island",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Roasted Medium"
+  ],
+  "title": "Bali Kintamani",
+  "url": "https://coffeebytheroast.com/all-coffees/bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "French - 470 F",
+    "variant_id": "4cde44ec-768f-459d-b9a5-7d47cfffbcc9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "9a6b8e23-0954-4855-85b7-6f55d6ef1a2f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Roaster's Choice",
+    "variant_id": "9e70a2d8-0dab-4880-9364-eefb13cb6765"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Vienna - 440 F",
+    "variant_id": "c30f2e42-b66c-4b1a-9ea7-70868f4f8399"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "c5620634-44fc-489c-8892-4587b8ff16dc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "City - 420 F",
+    "variant_id": "e964f2f0-dcb2-4cda-97b3-3731aec6b515"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Full City - 430 F",
+    "variant_id": "f758889a-1190-4d3f-b8d5-4f3f867e8cdc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1880903dd6338bac",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-gran-galope",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301226bf629ad57a59cb56/1774980732719/",
+  "platform": "squarespace",
+  "product_id": "59301226bf629ad57a59cb56",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Rich",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Colombia Gran Galope",
+  "url": "https://coffeebytheroast.com/all-coffees/colombia-gran-galope",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Vienna - 440 F",
+    "variant_id": "15f6e387-bc06-4715-a583-b8010d3c92cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Roaster's Choice",
+    "variant_id": "2ba12081-3abc-40fd-809c-a90b11cac5fc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "3e5ee57e-c01b-4991-b00a-2b28295d4d4b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "City - 420 F",
+    "variant_id": "4524e7d0-8c57-4201-a931-6bcbdc9b44ed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "9d7f339d-3fdc-4dcc-a98c-66b4c716d8d1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "French - 470 F",
+    "variant_id": "a1baff37-e2af-4ee3-a758-2cb12fd373ec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Full City - 430 F",
+    "variant_id": "cf19f810-5171-4605-b17d-78a18d7230d0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9188ef5f52459c0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-lake-abaya",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930133dbe6594aca36933dd/1788463492029/",
+  "platform": "squarespace",
+  "product_id": "5930133dbe6594aca36933dd",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Floral",
+   "Lively",
+   "Roasted Light",
+   "Single Origins"
+  ],
+  "title": "Ethiopia Yirgacheffe Lake Abaya",
+  "url": "https://coffeebytheroast.com/all-coffees/ethiopia-yirgacheffe-lake-abaya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.24,
+    "title": "Vienna - 440 F",
+    "variant_id": "190c9692-c255-442e-b946-d0dfda3088f0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.24,
+    "title": "Full City - 430 F",
+    "variant_id": "52c28e0a-e024-450c-9e7c-c103bfa67909"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.24,
+    "title": "City - 420 F",
+    "variant_id": "84989344-4194-44ba-9c7c-77b2d8cb1b3e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.24,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "99ee8e1b-780b-4690-9be1-033c6eb95ea2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.24,
+    "title": "Roaster's Choice",
+    "variant_id": "9b5605ad-12bb-47f4-93d8-ae68e4d8f409"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0b43f19642ba80e8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-lake-abaya",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301359db29d6546b64d902/1782156824356/",
+  "platform": "squarespace",
+  "product_id": "59301359db29d6546b64d902",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Complex",
+   "Naturally Processed",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Ethiopia Natural Lake Abaya",
+  "url": "https://coffeebytheroast.com/all-coffees/ethiopia-natural-lake-abaya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.9,
+    "title": "Vienna - 440 F",
+    "variant_id": "0e095528-4604-44c0-aa78-6b07aaf1eacf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.9,
+    "title": "Full City - 430 F",
+    "variant_id": "37fe7c42-42db-43b7-b79a-8be8d92860ed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.9,
+    "title": "Roaster's Choice",
+    "variant_id": "77923d08-ff2e-4242-a09b-c3ca6852a036"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.9,
+    "title": "City - 420 F",
+    "variant_id": "9220a1c3-699d-40cf-8697-8c28bbac346e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.9,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "c05c2cb9-c05e-4ecd-bf06-9bf22ea6a727"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "18b22a9cb8e1661c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593013641b10e38d49d7f37c/1785961944645/",
+  "platform": "squarespace",
+  "product_id": "593013641b10e38d49d7f37c",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Complex",
+   "Naturally Processed",
+   "Roasted Medium",
+   "Single Origins",
+   "wild"
+  ],
+  "title": "Ethiopia Harrar Wild Cherry",
+  "url": "https://coffeebytheroast.com/all-coffees/ethiopia-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "19d83596-0e54-466b-b173-b38d81689e86"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "Roaster's Choice",
+    "variant_id": "3f033f0d-f45b-422d-9d5c-800332d40130"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "City - 420 F",
+    "variant_id": "70b2ee41-10ed-4574-8c87-b3014cf28531"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "Vienna - 440 F",
+    "variant_id": "a3579b4a-6a81-444f-87a4-5eac4ebe31c8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "Full City - 430 F",
+    "variant_id": "a61372a4-278c-4c08-b8ac-116e89eb746b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aad530c94ae88101",
+  "first_seen": "2026-10-26",
+  "handle": "java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301397b8a79b1d4d3260e1/1774980801126/",
+  "platform": "squarespace",
+  "product_id": "59301397b8a79b1d4d3260e1",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Bold",
+   "Certified & Organic",
+   "Indonesia",
+   "Island",
+   "Naturally Processed",
+   "Organic",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Java Dadar",
+  "url": "https://coffeebytheroast.com/all-coffees/java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "French - 470 F",
+    "variant_id": "1fdca2b4-4fa9-4bb7-91d6-de0a4df0d5c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Roaster's Choice",
+    "variant_id": "5eabcbf7-5481-4d19-a1e5-ef0d8548f6c0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "85110890-ed03-45ae-b944-592bda9df20f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Vienna - 440 F",
+    "variant_id": "a9875e42-d347-4aa8-b171-3ab90999d5aa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "b0b02669-d8e1-4ee8-8cb1-8cec1522133e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "City - 420 F",
+    "variant_id": "c806fee9-8194-4730-9ca3-98c99cf32b4d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Full City - 430 F",
+    "variant_id": "e50bad34-eaf7-470b-8fc4-53a7881dab0e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "915fa95be97c19fa",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593013d015cf7daeb29927cc/1769018813674/",
+  "platform": "squarespace",
+  "product_id": "593013d015cf7daeb29927cc",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Lively",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Kenya AA Kiambu",
+  "url": "https://coffeebytheroast.com/all-coffees/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "Roaster's Choice",
+    "variant_id": "145f2984-5b09-4699-83de-fe6380ac44a6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "City - 420 F",
+    "variant_id": "34483730-34be-4c34-ade4-61417b67a322"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "Vienna - 440 F",
+    "variant_id": "5a575d78-4aac-4d82-9e3b-4fb9d24e7f46"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "Full City - 430 F",
+    "variant_id": "87d25b69-e385-4719-9a54-46dd4a88d3fb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "9685a85a-ff75-4640-a04a-f87b4a86d016"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "c42f94c5-eac4-486f-8b8b-e7ee5f036073"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c8e97e2b86b7f793",
+  "first_seen": "2026-10-26",
+  "handle": "kona",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593013debf629ad57a59e3f5/1768249615224/",
+  "platform": "squarespace",
+  "product_id": "593013debf629ad57a59e3f5",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Island",
+   "Kona",
+   "Roasted Light",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Origins",
+   "Sweet"
+  ],
+  "title": "Kona Pahala",
+  "url": "https://coffeebytheroast.com/all-coffees/kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.98,
+    "title": "City - 420 F",
+    "variant_id": "39e6b574-72e5-492d-ae76-f1cdf0e74d62"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.98,
+    "title": "Full City - 430 F",
+    "variant_id": "5c7b8e22-6810-486d-8298-53f607e40b0a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.98,
+    "title": "Vienna - 440 F",
+    "variant_id": "7a838bc5-efe2-484f-b88e-82d4e88f721d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.98,
+    "title": "Roaster's Choice",
+    "variant_id": "c414defe-1d8d-41fb-9daa-799416f708f8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "107b9b2f443d6b18",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593013fd414fb58c4dfa2379/1782156118403/",
+  "platform": "squarespace",
+  "product_id": "593013fd414fb58c4dfa2379",
+  "product_type": "Roasted Light,Certified & Organic,4th Wave,Roasted Medium,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Certified & Organic",
+   "Co-op",
+   "New",
+   "Organic",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Mexico El Triunfo Women Producers",
+  "url": "https://coffeebytheroast.com/all-coffees/mexico-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "French - 470 F",
+    "variant_id": "181b76c9-1446-4c05-b768-c049ea81fec3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "5081bbcc-7bfc-43c2-9cfd-c21368f65f75"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "Full City - 430 F",
+    "variant_id": "546e60b9-4166-47fe-9c84-730c59701aa0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "Roaster's Choice",
+    "variant_id": "5b2f1188-643e-4ca6-9c7a-849add7cab43"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "City - 420 F",
+    "variant_id": "625f073c-7c0f-4a7b-af5a-5ebe48b0d421"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "7ed5feec-e311-4637-a602-4be1b1ed0039"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.76,
+    "title": "Vienna - 440 F",
+    "variant_id": "c568e74d-d3da-41ae-9386-fdb27243dd40"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb411691157c0fe8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301408440243418431401e/1768249921391/",
+  "platform": "squarespace",
+  "product_id": "59301408440243418431401e",
+  "product_type": "Roasted Medium,Certified & Organic,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Certified & Organic",
+   "Organic",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Nicaragua Segovia",
+  "url": "https://coffeebytheroast.com/all-coffees/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "City - 420 F",
+    "variant_id": "3a5c0b4e-0a31-49f9-9fc4-52760ac26ad1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "Full City - 430 F",
+    "variant_id": "7aad1c4a-ccd7-47e3-b451-8d733e276283"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "Roaster's Choice",
+    "variant_id": "9f3e23bc-edf9-4474-aaa9-09d6b6648564"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "French - 470 F",
+    "variant_id": "c681b1cd-c631-457e-b448-4e89d31869c7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "Vienna - 440 F",
+    "variant_id": "cbff9f43-0e72-439b-a764-e7e39aac6b4d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "e5144d2d-e8f2-4c6f-bfda-14dccf1267ef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.89,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "f93b3472-a2a4-4d20-8a6e-3124a3d4b8bc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d60d50442f8dc6ec",
+  "first_seen": "2026-10-26",
+  "handle": "organic-dragon",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930141abebafb82e7e447fc/1790623769839/",
+  "platform": "squarespace",
+  "product_id": "5930141abebafb82e7e447fc",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Dark,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Certified & Organic",
+   "Co-op",
+   "Indonesia",
+   "Island",
+   "Naturally Processed",
+   "New",
+   "Organic",
+   "Rich",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Dragon",
+  "url": "https://coffeebytheroast.com/all-coffees/organic-dragon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "c034a5b7-7bd3-4469-af2c-66b648c68bf3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "City - 420 F",
+    "variant_id": "ce34ec46-386d-454b-bd01-9534de3a66cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "Vienna - 440 F",
+    "variant_id": "d92758f0-9edd-4e37-bb6d-21b0f5e01027"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "db43e1f9-7d35-4dfe-a159-50e7f42f7f02"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "French - 470 F",
+    "variant_id": "e3ddd6ec-2391-4e89-8dd2-178787f03613"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "Full City - 430 F",
+    "variant_id": "edcebb8a-dccd-4408-8a57-88fb6cc19f80"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.97,
+    "title": "Roaster's Choice",
+    "variant_id": "f75e5b86-5b4c-414b-a27f-12bfac74d748"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4e26fea386245aa",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930143ad482e9f118e141a0/1768249974313/",
+  "platform": "squarespace",
+  "product_id": "5930143ad482e9f118e141a0",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Estate",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "Sweet"
+  ],
+  "title": "Panama Boquete",
+  "url": "https://coffeebytheroast.com/all-coffees/panama-boquete",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "1b91a30f-1be9-4f97-8a21-6929edc15322"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "3d809ed8-bd49-41ee-85f7-a94782609eec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "Vienna - 440 F",
+    "variant_id": "53002762-b74e-41c3-838d-6c1197bd2af9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "Full City - 430 F",
+    "variant_id": "786bd4a4-dfad-4c88-a9d9-8a3a7ea3a88d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "City - 420 F",
+    "variant_id": "7ad0cfe4-2020-4429-99c7-b0a0dadbf9b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.97,
+    "title": "Roaster's Choice",
+    "variant_id": "892cc505-272d-43e8-9c2c-7d455b78d6f7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4a988793030774d",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930144ed2b857caa399999e/1783284767143/",
+  "platform": "squarespace",
+  "product_id": "5930144ed2b857caa399999e",
+  "product_type": "Roasted Light,Certified & Organic,Roasted Dark,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Americas",
+   "Bold",
+   "Certified & Organic",
+   "Co-op",
+   "Lively",
+   "New",
+   "Organic",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Organic Peru Las Damas de San Ignancio",
+  "url": "https://coffeebytheroast.com/all-coffees/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "City - 420 F",
+    "variant_id": "420c9571-24d8-4d0d-906a-2de81147333f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "Roaster's Choice",
+    "variant_id": "4775c28d-01d7-4bda-8a7d-bf42dbb8de7f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "Vienna - 440 F",
+    "variant_id": "82577aeb-924d-4648-a222-c2920d61b2c7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "Full City - 430 F",
+    "variant_id": "9da2538e-961a-4f64-880d-e7a3dc0060d4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "a346c292-00fa-47ab-9625-ea488e5f7c8d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a3dceee3-b36e-4a2c-a9ac-0885ce07fbeb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.84,
+    "title": "French - 470 F",
+    "variant_id": "ef63e82d-31b6-412f-878d-a2418e199b5d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f1349274360a0f2",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930145c2994cac790839173/1769019471021/",
+  "platform": "squarespace",
+  "product_id": "5930145c2994cac790839173",
+  "product_type": "Roasted Light,4th Wave,Africans,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Africans",
+   "Complex",
+   "New",
+   "Roasted Light",
+   "Single Origins",
+   "Sweet",
+   "Women's Coffee"
+  ],
+  "title": "Rwanda Women's Coffee \"Kawa Yacu\"",
+  "url": "https://coffeebytheroast.com/all-coffees/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "Roaster's Choice",
+    "variant_id": "5af63605-262c-4d43-9934-40c37932b0db"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "City - 420 F",
+    "variant_id": "7fe9c02b-05a0-4abf-b19e-791fff23ca38"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "Full City - 430 F",
+    "variant_id": "924c3cf9-a1a2-4cca-bb9a-2ae18bc7d324"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "dd3047a7-dff7-43f0-85f7-df0471842b9a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "Vienna - 440 F",
+    "variant_id": "ea5e380b-0189-418e-ab6f-765cd71afb39"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "188f2b37790203f6",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930148337c581978d6a2646/1786728952638/",
+  "platform": "squarespace",
+  "product_id": "5930148337c581978d6a2646",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Bold",
+   "Certified & Organic",
+   "Indonesia",
+   "Island",
+   "Organic",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Sumatra Mandheling",
+  "url": "https://coffeebytheroast.com/all-coffees/sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "Full City - 430 F",
+    "variant_id": "1215053b-c2bd-4b16-bbea-f5ac4e730c5c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "3f2485ba-ccff-4c43-93ba-5753290986fd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "French - 470 F",
+    "variant_id": "8b8d8b75-4924-4bf3-afd5-a45950d89d1c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "Roaster's Choice",
+    "variant_id": "8d1b7543-5eba-45d6-afd5-2b37e59add56"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "Vienna - 440 F",
+    "variant_id": "9477e38e-0ebd-48e6-b8c3-dc4b6b945661"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a3759cea-eb21-467f-bfa7-857fae43c8c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.99,
+    "title": "City - 420 F",
+    "variant_id": "d1dadff1-b827-4ebb-ac4b-e9c6d2f55cbe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b0129e23448d744",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-harimau",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301495e3df28a4eeae0428/1786728860050/",
+  "platform": "squarespace",
+  "product_id": "59301495e3df28a4eeae0428",
+  "product_type": "Roasted Medium,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Bold",
+   "Indonesia",
+   "Island",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Sumatra Harimau Tiger",
+  "url": "https://coffeebytheroast.com/all-coffees/sumatra-harimau",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Vienna - 440 F",
+    "variant_id": "0674084a-6d2d-4642-a4f6-70d23b822d92"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Roaster's Choice",
+    "variant_id": "3205d653-802f-4e33-af0e-2a595f9c8762"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "43859cf8-c53e-4972-b394-8becee038b97"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Full City - 430 F",
+    "variant_id": "6a49952b-7642-4fb0-8bc3-0a23fbdbfd0d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "City - 420 F",
+    "variant_id": "6cbc9287-f33e-48dc-89ea-f8f2ff511af9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "73d82c5c-41b6-4604-abd7-851e73f55eb2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "French - 470 F",
+    "variant_id": "8803fa9f-919d-475b-9999-8acac9a4a3b6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf903c6845938524",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593014a0d482e9f118e146b5/1771408412183/",
+  "platform": "squarespace",
+  "product_id": "593014a0d482e9f118e146b5",
+  "product_type": "Roasted Light,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Co-op",
+   "Estate",
+   "Lively",
+   "New",
+   "Roasted Light",
+   "Single Estate",
+   "Single Origins",
+   "microlot"
+  ],
+  "title": "Tanzania AA Sambewe",
+  "url": "https://coffeebytheroast.com/all-coffees/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Roaster's Choice",
+    "variant_id": "1b58842f-e126-4c9f-b9a5-93e8023ddded"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "City - 420 F",
+    "variant_id": "329c4a48-3490-42b3-bfe8-08ccdfa73aae"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Vienna - 440 F",
+    "variant_id": "9d592ded-2e96-431e-8f37-9bb0e9d95f16"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Full City - 430 F",
+    "variant_id": "d8264f86-58ab-43d5-b752-c479ce8a6869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "e104e0a2-9f5d-4189-aca1-bb57f3af1411"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b61afb39c63ce92",
+  "first_seen": "2026-10-26",
+  "handle": "uganda",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593014d14402434184314b73/1782157578200/",
+  "platform": "squarespace",
+  "product_id": "593014d14402434184314b73",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Certified & Organic",
+   "Light Roasts",
+   "Lively",
+   "Organic",
+   "Rain Forest Alliance",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "Sweet"
+  ],
+  "title": "Organic Uganda Sipi Falls",
+  "url": "https://coffeebytheroast.com/all-coffees/uganda",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Roaster's Choice",
+    "variant_id": "2072dac6-2715-488e-bd55-e5c208398177"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Full City - 430 F",
+    "variant_id": "be339a05-d7a0-48c3-94bc-fc509075ea27"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "City - 420 F",
+    "variant_id": "c275a3be-45af-48af-9001-37f80f26bf4e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "d1bc1d0c-2afc-4bbd-a3f0-dc31c26e0529"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Vienna - 440 F",
+    "variant_id": "eb7df4f0-670b-4795-8977-12fd4acc8729"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c18b2c6292632b4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593014dee58c62421ed97ce4/1782157033316/",
+  "platform": "squarespace",
+  "product_id": "593014dee58c62421ed97ce4",
+  "product_type": "Decafs,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Decaf",
+   "Decafs",
+   "Naturally Processed",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Decaf Brazil Serra Negra",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "French - 470 F",
+    "variant_id": "0be2495c-7f95-40c8-913b-039597fd35ba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Full City - 430 F",
+    "variant_id": "522f6991-f409-4a72-8c1f-2bc67d49ae28"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "55b8f2f4-1cb9-494e-90cf-d2ec5dc3397d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "City - 420 F",
+    "variant_id": "64b0c126-88ed-4a93-b99f-cf5cfc954425"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a8ae0e70-af57-4b44-8f26-28ff59d333a8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Vienna - 440 F",
+    "variant_id": "d78acb1a-7c14-4a86-83f6-4853052caa04"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Roaster's Choice",
+    "variant_id": "f9012ba4-aa25-4c59-8641-a2bb6b041ca4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4298e436a5ee7950",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593014e9bebafb82e7e45259/1774981008498/",
+  "platform": "squarespace",
+  "product_id": "593014e9bebafb82e7e45259",
+  "product_type": "Decafs,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Decaf",
+   "Decafs",
+   "Roasted Light",
+   "Single Origins",
+   "water process"
+  ],
+  "title": "Decaf Ethiopia Sidamo",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "05a04fdd-cba5-4922-a91e-e6a76e667597"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "2357a9f2-c6de-4928-a685-77066bb07210"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Vienna - 440 F",
+    "variant_id": "26b19f28-b387-4341-8f6e-091325d1d1b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Full City - 430 F",
+    "variant_id": "5eddd49e-9bfb-41b8-882b-e59170e7a2d2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "French - 470 F",
+    "variant_id": "86579738-6aac-4070-86e5-dc4713afbba5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Roaster's Choice",
+    "variant_id": "c0a34db2-d7a0-4293-be43-dda86ae929f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "City - 420 F",
+    "variant_id": "d647c040-c733-4ea1-be95-6fdb204c1b13"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4228c7018fecc855",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593014f58419c2f203c1485c/1790277106785/",
+  "platform": "squarespace",
+  "product_id": "593014f58419c2f203c1485c",
+  "product_type": "Decafs,Roasted Light,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Decaf",
+   "Decafs",
+   "New",
+   "Roasted Light",
+   "Single Origins"
+  ],
+  "title": "Decaf  Mexico Cristal",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Roaster's Choice",
+    "variant_id": "194265ad-d0b9-461a-8520-c0ba3ddf2a62"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "62414e22-d195-49b3-bc03-d4d896939669"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Vienna - 440 F",
+    "variant_id": "831ccac9-c8b9-4945-b935-a0ead8b9422d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "French - 470 F",
+    "variant_id": "9c13a99e-7815-4d55-a843-e33cd08f5590"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Full City - 430 F",
+    "variant_id": "b60f43c0-1901-43a2-94f9-a3e1cd842be3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "City - 420 F",
+    "variant_id": "c91e3276-5819-4fee-ad10-9cc7a42681cf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "e162336a-c878-408d-bc5e-6a2570ad17b4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "091915e7490e6c17",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593015016a49636edf8d51dd/1774981027604/",
+  "platform": "squarespace",
+  "product_id": "593015016a49636edf8d51dd",
+  "product_type": "Decafs,Roasted Light,Certified & Organic,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Certified & Organic",
+   "Co-op",
+   "Decaf",
+   "Decafs",
+   "Organic",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Decaf Organic Peru",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "City - 420 F",
+    "variant_id": "5d2a2fb0-ba50-4a2f-9182-3b9e81936839"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "Full City - 430 F",
+    "variant_id": "60dd7b25-949b-49bb-af80-e88100eefce8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a8cee2cd-8d0c-41c0-8d3d-eb6f519d100d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "French - 470 F",
+    "variant_id": "b1ce4527-4a7b-43ee-b3a1-0ed33da531c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "Vienna - 440 F",
+    "variant_id": "bc2ee275-dbc2-40bd-86e7-d16653b933a4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "c0a6e437-9401-42d1-8564-a576bbfa888f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.87,
+    "title": "Roaster's Choice",
+    "variant_id": "c767d052-22db-414e-8c35-5d953057737e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "581e0d67678911f5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301514e58c62421ed97fb8/1786728875322/",
+  "platform": "squarespace",
+  "product_id": "59301514e58c62421ed97fb8",
+  "product_type": "Decafs,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Decaf",
+   "Decafs",
+   "Indonesia",
+   "Island",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Decaf Sumatra Mandehling",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "173d0c9e-fa9d-4b8a-b497-48c78a9d5b80"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "Roaster's Choice",
+    "variant_id": "2233e8d9-b595-42ed-9647-a602789a4954"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "Vienna - 440 F",
+    "variant_id": "2efd12f3-950f-45a8-a027-25f569354323"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "City - 420 F",
+    "variant_id": "4aa2c309-f00e-4d66-be34-62c7ece3fbbe"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a782fe58-f8c5-4068-a318-d9467f9c0aa9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "French - 470 F",
+    "variant_id": "d425f811-5061-4890-a045-fae57eaf52b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.33,
+    "title": "Full City - 430 F",
+    "variant_id": "f76c0db3-4377-4139-bfb0-dd7d20170279"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0591bc751cfdc7c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milano",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930186d9de4bb4011225318/1788463804195/",
+  "platform": "squarespace",
+  "product_id": "5930186d9de4bb4011225318",
+  "product_type": "Espresso,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Espresso",
+   "Naturally Processed",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Espresso Milano 1906",
+  "url": "https://coffeebytheroast.com/all-coffees/espresso-milano",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.83,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "1600763d-8874-4308-89a5-e7694df69aaf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.83,
+    "title": "Vienna - 440 F",
+    "variant_id": "2b7aa043-5d85-4419-82a8-5f0547fe5c32"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.83,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "359a3bb8-b180-407e-967a-cce50ee81490"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.83,
+    "title": "Full City - 430 F",
+    "variant_id": "a4634f6f-e7f5-4355-9990-b5e5141ba813"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.83,
+    "title": "Roaster's Choice",
+    "variant_id": "b1655846-3309-446f-968a-eb98e16ab9f5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab7b77bb2008d92d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-pacifico",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593018861b10e38d49d8346a/1788463941746/",
+  "platform": "squarespace",
+  "product_id": "593018861b10e38d49d8346a",
+  "product_type": "Espresso,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Espresso",
+   "Lively",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Espresso Pacifico 1985",
+  "url": "https://coffeebytheroast.com/all-coffees/espresso-pacifico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Roaster's Choice",
+    "variant_id": "0b491b07-3c78-4f1f-b593-aed2c75ed2b7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "0b5b3ce1-9231-40ef-89ae-1122cabc4984"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Vienna - 440 F",
+    "variant_id": "3061c329-930c-4ba9-b358-9c5e7b080fcb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Full City - 430 F",
+    "variant_id": "834d6158-3b4e-44ea-8de0-2df833ea523d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "d997f022-73ff-4a5a-b387-a25d861ff622"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36a64382f372de57",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-trieste",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930189b15cf7daeb2996624/1788464198205/",
+  "platform": "squarespace",
+  "product_id": "5930189b15cf7daeb2996624",
+  "product_type": "Espresso,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Espresso",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Espresso Trieste 1948",
+  "url": "https://coffeebytheroast.com/all-coffees/espresso-trieste",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.38,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "4d8e4144-157b-4246-b5a4-7ddf52515964"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.38,
+    "title": "Roaster's Choice",
+    "variant_id": "57c2bf9e-5a41-4609-81f4-10559d30e47c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.38,
+    "title": "Full City - 430 F",
+    "variant_id": "8900867b-4ee6-4984-9e3e-9cefc8170212"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.38,
+    "title": "Vienna - 440 F",
+    "variant_id": "acae82eb-1fa8-49eb-ac42-a5654830b8ba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.38,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "bfd8b65f-56b9-486e-8a64-e0cd85543237"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af2c068145b53fda",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-mokha-java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593018d55016e1bb1ff2d639/1788464625973/",
+  "platform": "squarespace",
+  "product_id": "593018d55016e1bb1ff2d639",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Café Mokha Java 2000",
+  "url": "https://coffeebytheroast.com/all-coffees/cafe-mokha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "City - 420 F",
+    "variant_id": "4e6c5952-3c0e-4a4d-812b-98158bd821a3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "6c4c48dc-0f86-417b-be14-10c94fa4b55d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "Vienna - 440 F",
+    "variant_id": "7fd7bb8c-8dea-439a-821f-4c83344935bd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "Full City - 430 F",
+    "variant_id": "8437cd89-babf-4b6e-a048-1b01f747a5d7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "Roaster's Choice",
+    "variant_id": "8daf21bc-724d-49c9-9b27-8cbb6334b0d1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.09,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "c8f304b3-d777-4e69-bb2a-c675b6d8d6fc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e8648081259525d",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593018f320099e4181aedc3e/1788465452165/",
+  "platform": "squarespace",
+  "product_id": "593018f320099e4181aedc3e",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Cowboy Coffee 1870",
+  "url": "https://coffeebytheroast.com/all-coffees/cowboy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "Vienna - 440 F",
+    "variant_id": "1083971c-e5fe-4f86-8129-b8e9eb46f8a0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "4a87f7fb-6b61-4af5-98b8-21dea84bf97f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "City - 420 F",
+    "variant_id": "8492a462-9ed0-4daf-a500-8e8ee0db90c0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "Roaster's Choice",
+    "variant_id": "af7b9d54-c327-429d-9e8e-c8238e728e7c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "de960dc1-bc21-472d-9a84-8370039a98f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.18,
+    "title": "Full City - 430 F",
+    "variant_id": "fa5741a7-3d97-4abe-8c89-6b8e3f3ce926"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e98134dfd9d9215",
+  "first_seen": "2026-10-26",
+  "handle": "ile-de-france",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301904725e2556b7518d50/1788465197870/",
+  "platform": "squarespace",
+  "product_id": "59301904725e2556b7518d50",
+  "product_type": "Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Bold",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Ile De France 1700",
+  "url": "https://coffeebytheroast.com/all-coffees/ile-de-france",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "4444112d-ac27-443e-85c6-d65af01e58cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Vienna - 440 F",
+    "variant_id": "44e63991-f8d7-49c1-8cb7-cba107a5c8a3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "79351585-785d-4b82-b16b-3f537d7ddeaa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Full City - 430 F",
+    "variant_id": "7a472cc8-61da-4987-8bef-b3f6fd585030"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Roaster's Choice",
+    "variant_id": "aba2d98a-4ce4-4b18-af8c-306bbff177ac"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "City - 420 F",
+    "variant_id": "c9194d00-f50d-4986-9303-f2edfd22a9d1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd7e03d360e39fb4",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee-blend",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930191cd2b857caa399d56a/1767816549775/",
+  "platform": "squarespace",
+  "product_id": "5930191cd2b857caa399d56a",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Americas",
+   "Blends",
+   "Kona",
+   "Roasted Light",
+   "Roasted Medium",
+   "Sweet"
+  ],
+  "title": "Kona Coffee 1967",
+  "url": "https://coffeebytheroast.com/all-coffees/kona-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 41.27,
+    "title": "Vienna - 440 F",
+    "variant_id": "276a6553-86f4-4b14-b2d7-212427153cff"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 41.27,
+    "title": "Full City - 430 F",
+    "variant_id": "d1c17878-f0f4-4d55-bfff-d70c8dcb33eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 41.27,
+    "title": "City - 420 F",
+    "variant_id": "ed2c213b-a100-443c-b563-57302fa47629"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 41.27,
+    "title": "Roaster's Choice",
+    "variant_id": "fa2a7e19-b714-4c93-bbcd-532273345118"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "edfb9d4dc12e1ec0",
+  "first_seen": "2026-10-26",
+  "handle": "historic-mokha-java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930192a3a041161cacb97cb/1788464857260/",
+  "platform": "squarespace",
+  "product_id": "5930192a3a041161cacb97cb",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Naturally Processed",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Mokha Java 1790",
+  "url": "https://coffeebytheroast.com/all-coffees/historic-mokha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.59,
+    "title": "Full  Roast",
+    "variant_id": "e9b33ef0-8da0-42c0-b90a-ef20390f23fa"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d2af2615d9a7636",
+  "first_seen": "2026-10-26",
+  "handle": "new-orleans-roast",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301938c534a5187d71da7f/1788464908189/",
+  "platform": "squarespace",
+  "product_id": "59301938c534a5187d71da7f",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends",
+   "Sweet"
+  ],
+  "title": "New Orleans Roast 1803",
+  "url": "https://coffeebytheroast.com/all-coffees/new-orleans-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "2d1ccca1-7046-4749-85ac-37e0a4baa6a5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "Roaster's Choice",
+    "variant_id": "36e5f2eb-c8ea-47bc-a260-dcada41d7257"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "Full City - 430 F",
+    "variant_id": "529a653a-9d41-4f9a-b4c0-f112fed1999e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "Vienna - 440 F",
+    "variant_id": "751618bb-c071-446f-8bfd-822165c99722"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "City - 420 F",
+    "variant_id": "bb7a9326-4ae1-49eb-80a5-7f2268f0241c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.83,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "e8bb8dc0-b981-4eee-bb31-b15974ed0626"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dafa27e0cc540f1f",
+  "first_seen": "2026-10-26",
+  "handle": "on-the-road-buzz",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930196529687ffb1f85a96d/1775154033119/",
+  "platform": "squarespace",
+  "product_id": "5930196529687ffb1f85a96d",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "On the Road Buzz 1975",
+  "url": "https://coffeebytheroast.com/all-coffees/on-the-road-buzz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.4,
+    "title": "Full City - 430 F",
+    "variant_id": "0d92a484-1c6f-460b-ad49-6a6a60e85a59"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.4,
+    "title": "City - 420 F",
+    "variant_id": "5878edcf-ba66-4627-841d-54ac3f297200"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.4,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "5ec1d4fe-62c5-42fd-bf31-e6c15a307e3f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.4,
+    "title": "Vienna - 440 F",
+    "variant_id": "bbfb1740-eb89-4342-bf1a-2e26b94540e0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.4,
+    "title": "Roaster's Choice",
+    "variant_id": "d3dc257b-bd9b-4837-801b-6618df724b6c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "65749521cab7ea52",
+  "first_seen": "2026-10-26",
+  "handle": "san-francisco-foglifter",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301980b3db2b837ffb03ff/1788465350169/",
+  "platform": "squarespace",
+  "product_id": "59301980b3db2b837ffb03ff",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "San Francisco Foglifter 1950",
+  "url": "https://coffeebytheroast.com/all-coffees/san-francisco-foglifter",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "Roaster's Choice",
+    "variant_id": "17b3c97a-49c1-4aad-948f-184a943af430"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "Vienna - 440 F",
+    "variant_id": "378c1174-ba07-4e4e-8d05-68ec6255bee5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "City - 420 F",
+    "variant_id": "41658d81-92eb-490a-9208-c7acbbc9a660"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "6f594d34-3e2b-498f-bc99-7ff4a39da00c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "Full City - 430 F",
+    "variant_id": "8450bbd4-ef81-49aa-9223-ebcaab24bbab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.84,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "aa8f0afe-8b30-45d1-95bc-5d8e9a01caac"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e74fef9c831cb117",
+  "first_seen": "2026-10-26",
+  "handle": "wwi-roast",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5930199ae58c62421ed9b8e4/1788464457405/",
+  "platform": "squarespace",
+  "product_id": "5930199ae58c62421ed9b8e4",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Rich",
+   "Roasted Light",
+   "Signature Blends"
+  ],
+  "title": "WWI Roast 1917",
+  "url": "https://coffeebytheroast.com/all-coffees/wwi-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "1129c4e4-6555-43ec-a71b-02cac3ce0489"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Vienna - 440 F",
+    "variant_id": "14787429-466b-40c7-8745-07a4b0149d39"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "City - 420 F",
+    "variant_id": "247c6ff4-830b-4cbe-b2dc-8740205c6519"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "9bddcf11-30c7-4617-a105-2437f7850e32"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Roaster's Choice",
+    "variant_id": "a766463a-33ba-45af-a304-1eaf420caaef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.74,
+    "title": "Full City - 430 F",
+    "variant_id": "c379a436-0c8d-4261-9239-18127e52c2a2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0591bc751cfdc7c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-milano",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593019d13e00be7877be14df/1767814798525/",
+  "platform": "squarespace",
+  "product_id": "593019d13e00be7877be14df",
+  "product_type": "Espresso,Decafs,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Espresso",
+   "Naturally Processed",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Decaf Espresso Milano 1906",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-espresso-milano",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Roaster's Choice",
+    "variant_id": "2df7c954-ddc4-4b2d-a8c8-4ccadfacf6cf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "470f0c44-a52b-4ff9-96cf-939b8cc7d51e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Vienna - 440 F",
+    "variant_id": "681bb5a8-18e0-41e4-81b6-d5fde356e10d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Full City - 430 F",
+    "variant_id": "9b488de8-d9d2-4fc9-8366-da5edcf4ad30"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.39,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "e5068243-8f8c-4b1b-9ede-68b1c9adb5d5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab7b77bb2008d92d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-pacifico",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593019deebbd1ab8dcd92e67/1767814871700/",
+  "platform": "squarespace",
+  "product_id": "593019deebbd1ab8dcd92e67",
+  "product_type": "Espresso,Decafs,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Espresso",
+   "Lively",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Decaf Espresso Pacifico 1985",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-espresso-pacifico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.58,
+    "title": "Roaster's Choice",
+    "variant_id": "2bd33b3d-922e-4d45-a432-7922b2efd0b9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.58,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "32e659f9-217d-41f5-95be-35c73229c92e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.58,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "7c044522-1853-4d63-9ce3-f6751c82a474"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.58,
+    "title": "Full City - 430 F",
+    "variant_id": "b157987e-acb3-49ea-91f3-1e47bf815fd9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.58,
+    "title": "Vienna - 440 F",
+    "variant_id": "ce765973-4b81-4385-9cfc-3dc7ce89fec7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36a64382f372de57",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-trieste",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301a203a041161cacba4a8/1788464258141/",
+  "platform": "squarespace",
+  "product_id": "59301a203a041161cacba4a8",
+  "product_type": "Espresso,Decafs,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Decaf",
+   "Decafs",
+   "Espresso",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Decaf Espresso Trieste 1948",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-espresso-trieste",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.79,
+    "title": "Roaster's Choice",
+    "variant_id": "27c7cbd4-a067-435c-9732-3810fa6d72ca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.79,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "317ac9d7-cd43-4cf0-9980-2381c89141f6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.79,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "56195463-edea-43c6-b799-973639fa3e8c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.79,
+    "title": "Vienna - 440 F",
+    "variant_id": "8e383616-5473-4cf6-bbf4-979b91771bb5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.79,
+    "title": "Full City - 430 F",
+    "variant_id": "9c5fc335-d2df-4aed-b573-1fb9c77fcf37"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c16069666b8dc97",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cafe-mokha-java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301a309de4bb40112268f4/1788464701276/",
+  "platform": "squarespace",
+  "product_id": "59301a309de4bb40112268f4",
+  "product_type": "Decafs,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Complex",
+   "Decaf",
+   "Decafs",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Decaf Café Mokha Java 2000",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-cafe-mokha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "Full City - 430 F",
+    "variant_id": "411ff660-e687-4424-bd70-eca38f4b1c9b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "Vienna - 440 F",
+    "variant_id": "43d7d773-e6e3-4f80-a308-10dfe7277625"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "5b77b6a7-0cac-4607-83fa-42cda67649ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "73e16a7a-f6ce-4ea4-92f7-aaae095b577e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "City - 420 F",
+    "variant_id": "785e0df8-a6dd-4e0f-9e18-4bbefe2963e1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.29,
+    "title": "Roaster's Choice",
+    "variant_id": "bd059439-f333-4d04-920c-e7382fa76979"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88373fd4414df8d5",
+  "first_seen": "2026-10-26",
+  "handle": "cloudburst-blend-april",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301af4725e2556b751a7af/1777619396027/",
+  "platform": "squarespace",
+  "product_id": "59301af4725e2556b751a7af",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Cloudburst Blend : April",
+  "url": "https://coffeebytheroast.com/all-coffees/cloudburst-blend-april",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "d349d37a-7e01-47af-bd3c-e3bfe9f015ea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfe65e7e364a4d42",
+  "first_seen": "2026-10-26",
+  "handle": "summer-ice-july",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301b6815cf7daeb2998bc0/1785547613619/",
+  "platform": "squarespace",
+  "product_id": "59301b6815cf7daeb2998bc0",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Summer Ice : July",
+  "url": "https://coffeebytheroast.com/all-coffees/summer-ice-july",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "50f2153b-135c-4193-ba90-a1607af69cbf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e8648081259525d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cowboy-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301bc337c581978d6a840f/1788465415135/",
+  "platform": "squarespace",
+  "product_id": "59301bc337c581978d6a840f",
+  "product_type": "Decafs,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decafs",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Decaf Cowboy Coffee 1870",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-cowboy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Roaster's Choice",
+    "variant_id": "19d80e36-018e-42b1-8e87-b721b2f4725f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "6be8c88a-0b87-4209-a0ef-eeefb0c78038"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Full City - 430 F",
+    "variant_id": "6e79e7a5-0f18-482e-9b0b-7084221ab376"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "City - 420 F",
+    "variant_id": "a2f4067c-58a0-46cd-bc8b-78dd147e8fad"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Vienna - 440 F",
+    "variant_id": "b19b567d-dcc8-4c8d-99c8-3a320cc18af0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.4,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "ce918a5f-ac85-42ef-8fee-08f2f5ade6da"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "017a48acd0a51f5e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ile-de-france",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301bd5d1758e928d6081da/1788465240747/",
+  "platform": "squarespace",
+  "product_id": "59301bd5d1758e928d6081da",
+  "product_type": "Decafs,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Bold",
+   "Decaf",
+   "Decafs",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Decaf Ile De France 1700",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-ile-de-france",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "Full City - 430 F",
+    "variant_id": "117a2a33-4cd1-44d0-a203-65dc11a02b76"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "Roaster's Choice",
+    "variant_id": "549f4acb-e713-4fc6-a1b4-9326250b186b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "7c3d8692-d17a-43b2-af01-3dd53f816868"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "City - 420 F",
+    "variant_id": "d388d65c-8241-43ec-b972-4093fa54a666"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "eaefafeb-b2a2-44c4-99a4-37448928403d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.35,
+    "title": "Vienna - 440 F",
+    "variant_id": "fd466058-83a0-4742-a0e9-3b17788e28b9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d2af2615d9a7636",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-new-orleans-roast",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301bf8b8a79b1d4d32d24b/1767816622874/",
+  "platform": "squarespace",
+  "product_id": "59301bf8b8a79b1d4d32d24b",
+  "product_type": "Decafs,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Decaf New Orleans Roast 1803",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-new-orleans-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "City - 420 F",
+    "variant_id": "1f46cac5-7d86-4d63-a611-224f141117ae"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Full City - 430 F",
+    "variant_id": "6bff0ab8-44ee-4cbc-9a5c-84ec01c70731"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Vienna - 440 F",
+    "variant_id": "88075634-1ad6-4a6f-ae0b-8d84320ca40a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "94dbcecd-522a-4330-8412-adc8b353d33e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "9644ec5e-883f-4032-8d3f-7beb8c054ec7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.14,
+    "title": "Roaster's Choice",
+    "variant_id": "b4025be4-df1d-47ef-9638-7bbcc538b93e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "65749521cab7ea52",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-san-francisco-foglifter",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301c1fd1758e928d608681/1788465338402/",
+  "platform": "squarespace",
+  "product_id": "59301c1fd1758e928d608681",
+  "product_type": "Decafs,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Decaf San Francisco Foglifter 1950",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-san-francisco-foglifter",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "Full City - 430 F",
+    "variant_id": "4a690f66-3bdd-48d2-aa03-578cac214c78"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "City - 420 F",
+    "variant_id": "6a2f50fd-1a95-4540-ab76-b1f5213737be"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "Vienna - 440 F",
+    "variant_id": "d4634c82-d5c2-4725-963e-b23455933039"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "e684a66e-fbd3-409c-bddc-fc2a7675acdc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "Roaster's Choice",
+    "variant_id": "e8054785-27ca-4c83-882f-3316e026bc90"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.78,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "ecf64636-711e-49df-bc4c-2eb454c7d718"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e74fef9c831cb117",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-wwi-roast",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59301c38e6f2e1c28eb389f9/1788464390739/",
+  "platform": "squarespace",
+  "product_id": "59301c38e6f2e1c28eb389f9",
+  "product_type": "Decafs,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Rich",
+   "Roasted Light",
+   "Signature Blends"
+  ],
+  "title": "Decaf WWI Roast 1917",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-wwi-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "15c52019-83d9-42fe-a560-d4fdee2b4041"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "484c2371-b06b-44ab-890d-10b897dc556f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "Full City - 430 F",
+    "variant_id": "61668f08-94c3-41b5-9132-173e4bc24d71"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "Roaster's Choice",
+    "variant_id": "b1bb4ca6-745a-4dee-a918-092bdec9b56e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "City - 420 F",
+    "variant_id": "be9a13b2-137a-405e-b114-0de6d9c280cc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.89,
+    "title": "Vienna - 440 F",
+    "variant_id": "df48b5fa-7c74-4944-a27c-15cc59d6efe9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5470a0afa016866a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-kyoto",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396810bebafb202cc4fc66/1788463732191/",
+  "platform": "squarespace",
+  "product_id": "59396810bebafb202cc4fc66",
+  "product_type": "Espresso,Roasted Dark,Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Espresso",
+   "Floral",
+   "Lively",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Espresso Kyoto 2010",
+  "url": "https://coffeebytheroast.com/all-coffees/espresso-kyoto",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.12,
+    "title": "Roaster's Choice",
+    "variant_id": "6fea7cb4-af71-42f5-8975-5880b015b54e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.12,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "8bd18044-9234-469b-ac30-f75ea581b08d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.12,
+    "title": "Full City - 430 F",
+    "variant_id": "982a5d8f-3078-4b29-9bbb-33e4c921f923"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.12,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "9cd14e17-ac7d-49cf-8ab7-73f7a5ff7a5f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.12,
+    "title": "Vienna - 440 F",
+    "variant_id": "af9726a0-5973-4745-aba0-1c8e51425be2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91e14bfe37d0ce20",
+  "first_seen": "2026-10-26",
+  "handle": "by-roast-level",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968412994ca1d5cda951e/1767815773324/",
+  "platform": "squarespace",
+  "product_id": "593968412994ca1d5cda951e",
+  "product_type": "Roasted Dark,Roasted Light,Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "By Roast Level",
+  "url": "https://coffeebytheroast.com/all-coffees/by-roast-level",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "City - 420 F - Cotton Candy",
+    "variant_id": "5c609386-d5b6-4d8a-933c-b34e25b0233a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Northern Italian - 450 F - Cafe Mokha Java",
+    "variant_id": "641b6257-c58d-4d87-9a23-6da8264985e4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.13,
+    "title": "Full City - 430 F - Chicago Cup",
+    "variant_id": "810621b3-2876-4c20-83a4-b3c345e89dfd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "French - 470 F - Ile de France",
+    "variant_id": "8d995d1c-e4e1-4fc5-afcc-c76d18392707"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.56,
+    "title": "Vienna - 440 F - San Francisco",
+    "variant_id": "e46f3389-ca93-4e64-858f-0036719063e9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.65,
+    "title": "Southern Italian - 460 F - New Orleans Roast",
+    "variant_id": "e5fb2819-8458-4fa1-9390-b2a006d456f3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0c5895e32c6f076",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-spice-december",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968651b10e322cb178e33/1778250742493/",
+  "platform": "squarespace",
+  "product_id": "593968651b10e322cb178e33",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Complex",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Holiday Spice : December",
+  "url": "https://coffeebytheroast.com/all-coffees/holiday-spice-december",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "969812f0-0d34-405c-9db2-0e4f9ffe2f6c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56c147ddcb99720b",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-roast-november",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968886b8f5b550f1d2d48/1778250704495/",
+  "platform": "squarespace",
+  "product_id": "593968886b8f5b550f1d2d48",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Harvest Roast : November",
+  "url": "https://coffeebytheroast.com/all-coffees/harvest-roast-november",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "33d1fb9a-bec3-415d-91a8-19a94ba97c99"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a89ca98885d620c7",
+  "first_seen": "2026-10-26",
+  "handle": "black-magic-october",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5939689137c58179160929cf/1790833364820/",
+  "platform": "squarespace",
+  "product_id": "5939689137c58179160929cf",
+  "product_type": "Roasted Dark",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Bold",
+   "Coffee of the Month",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Black Magic : October",
+  "url": "https://coffeebytheroast.com/all-coffees/black-magic-october",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "3af25a78-fe3a-4c37-ae33-4394382b1c21"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b03191d02352c30a",
+  "first_seen": "2026-10-26",
+  "handle": "easy-sunrise-september",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396899d1758e7df36b5a08/1790833351446/",
+  "platform": "squarespace",
+  "product_id": "59396899d1758e7df36b5a08",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Lively",
+   "Roasted Light",
+   "Signature Blends",
+   "Sweet"
+  ],
+  "title": "Easy Sunrise : September",
+  "url": "https://coffeebytheroast.com/all-coffees/easy-sunrise-september",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "2d4446bb-8060-468b-907c-5187dc1410c4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a85fa6102e966b7",
+  "first_seen": "2026-10-26",
+  "handle": "sea-salt-breeze-august",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968c4893fc080a39ca814/1788267413765/",
+  "platform": "squarespace",
+  "product_id": "593968c4893fc080a39ca814",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Lively",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends",
+   "Sweet"
+  ],
+  "title": "Sea Salt Breeze : August",
+  "url": "https://coffeebytheroast.com/all-coffees/sea-salt-breeze-august",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "51ad6269-3576-4e46-9dca-f674f07137f8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a8150bec44c89c64",
+  "first_seen": "2026-10-26",
+  "handle": "cotton-candy-june",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968d04402433980dcadd1/1782898713459/",
+  "platform": "squarespace",
+  "product_id": "593968d04402433980dcadd1",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Lively",
+   "Roasted Light",
+   "Signature Blends",
+   "Sweet"
+  ],
+  "title": "Cotton Candy : June",
+  "url": "https://coffeebytheroast.com/all-coffees/cotton-candy-june",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "b0110e70-1caf-4ba5-958a-d8ea20632239"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "949bf0b85dccee1f",
+  "first_seen": "2026-10-26",
+  "handle": "springtime-twist-may",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968e303596e1b9d4e5f4d/1780296449355/",
+  "platform": "squarespace",
+  "product_id": "593968e303596e1b9d4e5f4d",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Floral",
+   "Lively",
+   "Roasted Light",
+   "Signature Blends",
+   "Sweet"
+  ],
+  "title": "Springtime Twist : May",
+  "url": "https://coffeebytheroast.com/all-coffees/springtime-twist-may",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "bfdbac6b-80b3-4cde-8caa-fb610d4afd3b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e6d41a496cc8a7b2",
+  "first_seen": "2026-10-26",
+  "handle": "morning-mist-march",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968ed1e5b6c8ab19054ce/1775020707344/",
+  "platform": "squarespace",
+  "product_id": "593968ed1e5b6c8ab19054ce",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee of the Month",
+   "Rich",
+   "Roasted Medium",
+   "Signature Blends"
+  ],
+  "title": "Morning Mist : March",
+  "url": "https://coffeebytheroast.com/all-coffees/morning-mist-march",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "7c9c259e-f979-49d3-bccb-33b7f950c36b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ef4f43e87896091",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-treat-february",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593968f6b8a79bc6078010ca/1772356902086/",
+  "platform": "squarespace",
+  "product_id": "593968f6b8a79bc6078010ca",
+  "product_type": "Roasted Dark",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Bold",
+   "Coffee of the Month",
+   "Complex",
+   "Rich",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Midnight Treat : February",
+  "url": "https://coffeebytheroast.com/all-coffees/midnight-treat-february",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "47ce1e9b-65bf-42f5-9962-6ded965fe859"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6b78b597d30f9b28",
+  "first_seen": "2026-10-26",
+  "handle": "midwinters-brew-january",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/593969071b10e322cb1798e1/1769924562102/",
+  "platform": "squarespace",
+  "product_id": "593969071b10e322cb1798e1",
+  "product_type": "Roasted Dark",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Bold",
+   "Coffee of the Month",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Midwinter's Brew : January",
+  "url": "https://coffeebytheroast.com/all-coffees/midwinters-brew-january",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.99,
+    "title": "",
+    "variant_id": "9e505781-f411-45be-b074-7bc66a7d33df"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ccf2722ef80b3dc9",
+  "first_seen": "2026-10-26",
+  "handle": "your-dream-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396b838419c2c9745d7fa0/1767813153858/",
+  "platform": "squarespace",
+  "product_id": "59396b838419c2c9745d7fa0",
+  "product_type": "4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Specialty Flavor",
+   "Your Dream Coffee",
+   "custom coffee"
+  ],
+  "title": "Your Dream Coffee",
+  "url": "https://coffeebytheroast.com/all-coffees/your-dream-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 42.62,
+    "title": "",
+    "variant_id": "1a16bd09-691b-4044-bdc8-384ef82766f2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2eb25e7bff7f4b88",
+  "first_seen": "2026-10-26",
+  "handle": "your-dream-coffee-collection",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396b8db8a79bc607803cbb/1767813200505/",
+  "platform": "squarespace",
+  "product_id": "59396b8db8a79bc607803cbb",
+  "product_type": "4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Coffee Collections",
+   "Specialty Flavor",
+   "Your Dream Coffee",
+   "custom coffee"
+  ],
+  "title": "Your Dream Coffee Collection",
+  "url": "https://coffeebytheroast.com/all-coffees/your-dream-coffee-collection",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 127.86,
+    "title": "",
+    "variant_id": "99e92ff1-0ea6-4129-bded-44dd7c42c0a8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f74af21afb0744c0",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-cinnamon-hazelnut",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396ba3e4fcb5a7cf71d8d8/1788465641251/",
+  "platform": "squarespace",
+  "product_id": "59396ba3e4fcb5a7cf71d8d8",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "23741ce4-2715-4044-a335-cdba22879b3f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dde9074f372593cd",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-french-vanilla",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396bb317bffca5cc3e3099/1788465679639/",
+  "platform": "squarespace",
+  "product_id": "59396bb317bffca5cc3e3099",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "French Vanilla",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "12215ba3-7dad-4836-a536-9fbf730fa302"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a9bdca70b4ecbb1",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-hazelnut-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396bbd1b10e322cb17c4dc/1788465670956/",
+  "platform": "squarespace",
+  "product_id": "59396bbd1b10e322cb17c4dc",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Hazelnut Creme",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-hazelnut-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "9edc9aa1-2ea7-49ef-9163-afd4aee6a235"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dbd757d328d1ce55",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-irish-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396beb8419c2c9745d8645/1788465688682/",
+  "platform": "squarespace",
+  "product_id": "59396beb8419c2c9745d8645",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Irish Crème",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-irish-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "ef7a9d7d-272f-4cf5-8c74-b16ac085c28b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c7a8432fcf381002",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-jamaican-me-crazy",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396c02b8a79bc60780452a/1788465732787/",
+  "platform": "squarespace",
+  "product_id": "59396c02b8a79bc60780452a",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Jamaican me Crazy®",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "7dd89b0b-3b6f-4aa1-89f6-8fc496830dde"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "019e3e812b54709c",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-mexicali-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396c0de4fcb5a7cf71e001/1788465692088/",
+  "platform": "squarespace",
+  "product_id": "59396c0de4fcb5a7cf71e001",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Mexicali Creme",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-mexicali-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "c0995bdb-34dc-4d40-9177-7f99bf4c754a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3800f04527c376a6",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-your-favorite-flavor",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396c2646c3c41c3ac6ef65/1788465635869/",
+  "platform": "squarespace",
+  "product_id": "59396c2646c3c41c3ac6ef65",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor",
+   "custom coffee"
+  ],
+  "title": "Your Favorite Flavor",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-your-favorite-flavor",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "01e651f0-d2ba-4704-be26-da5d006b2968"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2edbb08a80ed8e7e",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-contrast-pair",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396c5837c5817916096a1f/1788538055604/",
+  "platform": "squarespace",
+  "product_id": "59396c5837c5817916096a1f",
+  "product_type": "",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Coffee Collections",
+   "Gifts",
+   "Specialty Flavor"
+  ],
+  "title": "Coffee Contrast Pair",
+  "url": "https://coffeebytheroast.com/all-coffees/coffee-contrast-pair",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.78,
+    "title": "",
+    "variant_id": "a372d32c-6250-4088-b297-09ba9f843a1f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c578cd5d85ec4bc2",
+  "first_seen": "2026-10-26",
+  "handle": "egans-blend",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396c99d482e9a4effa3dfc/1788465072982/",
+  "platform": "squarespace",
+  "product_id": "59396c99d482e9a4effa3dfc",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Complex",
+   "Roasted Medium",
+   "Specialty Flavor",
+   "personalized coffee"
+  ],
+  "title": "Egan's Blend",
+  "url": "https://coffeebytheroast.com/all-coffees/egans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.65,
+    "title": "",
+    "variant_id": "da27b8f6-3d0b-4960-8397-fe262586da73"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bcdc252912c40a3a",
+  "first_seen": "2026-10-26",
+  "handle": "pops-coffees",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396ca715d5db4f9381e933/1788466435057/",
+  "platform": "squarespace",
+  "product_id": "59396ca715d5db4f9381e933",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Roasted Medium",
+   "Specialty Flavor",
+   "coffee for a cause",
+   "donation coffee",
+   "personalized coffee"
+  ],
+  "title": "PoPs Coffees",
+  "url": "https://coffeebytheroast.com/all-coffees/pops-coffees",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.53,
+    "title": "Delicious Destiny",
+    "variant_id": "3408e06b-5bf3-4e75-8ced-88ec922f4709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.7,
+    "title": "Jarvi Java Edit",
+    "variant_id": "bf63177a-f8b8-48ad-b64b-2edc5467f31d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.4,
+    "title": "Jarvi Java Edit-foglifter",
+    "variant_id": "dd95b55f-068b-404b-9fee-c43c395a799c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cbdd819e52f11fe",
+  "first_seen": "2026-10-26",
+  "handle": "swedish-cafe-blend",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396ce9e3df28736bde99e6/1788464549269/",
+  "platform": "squarespace",
+  "product_id": "59396ce9e3df28736bde99e6",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Rich",
+   "Roasted Medium",
+   "Specialty Flavor",
+   "personalized coffee"
+  ],
+  "title": "Swedish Cafe Blend",
+  "url": "https://coffeebytheroast.com/all-coffees/swedish-cafe-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.36,
+    "title": "",
+    "variant_id": "f8764e39-195a-44eb-9616-5e4e8dac5088"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "161b8c4db2f70320",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-cinnamon-hazelnut",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396cf31e5b6c8ab19099e4/1788465588456/",
+  "platform": "squarespace",
+  "product_id": "59396cf31e5b6c8ab19099e4",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Cinnamon Hazelnut",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "da22cdde-dd66-45bb-bc89-3753e10ca7c0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a15db585349533f2",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-french-vanilla",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396cffa5790a97bc57c82e/1788465572938/",
+  "platform": "squarespace",
+  "product_id": "59396cffa5790a97bc57c82e",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf French Vanilla",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "c0eaad00-182f-4be6-907b-bc07d2fa067a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5356bb57548ed7d0",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-hazelnut-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396d0aff7c50aa7898c8ce/1788465581544/",
+  "platform": "squarespace",
+  "product_id": "59396d0aff7c50aa7898c8ce",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Hazelnut Creme",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-hazelnut-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "d056f840-921d-4b99-9cd6-c7ae65d33e97"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1739617e75c851d8",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-irish-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396d14e6f2e18d532326fd/1788465563570/",
+  "platform": "squarespace",
+  "product_id": "59396d14e6f2e18d532326fd",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Irish Crème",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-irish-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "c8f02a76-7a86-46fe-b5dd-b68eae773af4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c76d24e73cd765c",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-jamaican-me-crazy",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396d45b8a79bc607805a91/1788465726456/",
+  "platform": "squarespace",
+  "product_id": "59396d45b8a79bc607805a91",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Jamaican me Crazy®",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "4cf3fed5-62b9-4ed3-9aa6-ca5a659eb84a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "649044e0b689ac8d",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-mexicali-creme",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396d52b8a79bc607805b59/1788465610679/",
+  "platform": "squarespace",
+  "product_id": "59396d52b8a79bc607805b59",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Mexicali Creme",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-mexicali-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "495d3347-75a5-4cbd-8944-01f53976ee4c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "99f0a0b601644a0c",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-your-favorite-flavor",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396d6a725e256312c93328/1788465594345/",
+  "platform": "squarespace",
+  "product_id": "59396d6a725e256312c93328",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Your Favorite Flavor",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-your-favorite-flavor",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "Decaf Your Favorite",
+    "variant_id": "c8fd24ab-2b4a-484c-bbcd-902fc100e5ed"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5cf4005adadd8c6",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-gifts",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59396da84402433980dcff2a/1768252446186/",
+  "platform": "squarespace",
+  "product_id": "59396da84402433980dcff2a",
+  "product_type": "4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Coffee Collections",
+   "Gifts",
+   "Specialty Flavor"
+  ],
+  "title": "Coffee Gifts",
+  "url": "https://coffeebytheroast.com/all-coffees/coffee-gifts",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 157.39,
+    "title": "pairs of 1/2 roast pouches five Our Coffee",
+    "variant_id": "0461f17c-64d2-4ee1-a697-14705b4e78f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 372.39,
+    "title": "pairs of 1/2 roast pouches five Roaster Gold",
+    "variant_id": "55e0ba70-a169-450a-8019-2e6c1b4f48fc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.49,
+    "title": "pairs of 1/2 roast pouches one Our Coffee",
+    "variant_id": "646e7bc5-58c6-4629-98c1-596eca5e06e0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 699.79,
+    "title": "Full roast pouches ten Roaster Gold",
+    "variant_id": "6c5951a5-e865-41c8-a9b0-a19cf4b76b18"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.98,
+    "title": "Full roast pouches one Our Coffee",
+    "variant_id": "9144e30a-c80d-417e-828d-39e0e3982f22"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 274.83,
+    "title": "Full roast pouches ten Our Coffee",
+    "variant_id": "914d76f8-f523-4099-8813-11abcbb48b0b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.49,
+    "title": "pairs of 1/2 roast pouches one Roaster Gold",
+    "variant_id": "9b3cd0fb-dfd9-47b6-9274-edafbd1a5231"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 359.89,
+    "title": "Full roast pouches five Roaster Gold",
+    "variant_id": "a1b01a14-f7f6-491f-af6c-5b69d29ba94f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 724.79,
+    "title": "pairs of 1/2 roast pouches ten Roaster Gold",
+    "variant_id": "b6b9d486-9aa1-43ad-a085-62b75ce75d44"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 74.98,
+    "title": "Full roast pouches one Roaster Gold",
+    "variant_id": "d6b8f0cc-b77b-4905-9c72-1906dc34c22d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.89,
+    "title": "Full roast pouches five Our Coffee",
+    "variant_id": "e2afcefe-fd0a-4b49-8c45-c3b1c2bcccb9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 299.83,
+    "title": "pairs of 1/2 roast pouches ten Our Coffee",
+    "variant_id": "fb311436-3817-4e87-a51d-866a30dbfa8b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5470a0afa016866a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-kyoto",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59565b6de3df2868b49d6017/1767814840191/",
+  "platform": "squarespace",
+  "product_id": "59565b6de3df2868b49d6017",
+  "product_type": "Espresso,Decafs,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "A Taste in Time",
+   "Blends",
+   "Decaf",
+   "Decafs",
+   "Espresso",
+   "Floral",
+   "Lively",
+   "Naturally Processed",
+   "Roasted Dark",
+   "Signature Blends"
+  ],
+  "title": "Decaf Espresso Kyoto 2010",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-espresso-kyoto",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.49,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "3b9b599f-792a-4730-b695-e2b9303b06ba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.49,
+    "title": "Roaster's Choice",
+    "variant_id": "4d58fcad-c9fd-4d9c-ace1-1a30f05320f3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.49,
+    "title": "Full City - 430 F",
+    "variant_id": "6ef42764-e607-4660-a483-0683a4e5fda7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.49,
+    "title": "Vienna - 440 F",
+    "variant_id": "cffa30e1-e453-42dd-a55b-c35583c8483c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.49,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "e8f8b91b-a697-4d4c-9c73-b9da1688ee90"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c99c868a320e4145",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/595e47a0d2b8577ba0a7ad31/1774980995966/",
+  "platform": "squarespace",
+  "product_id": "595e47a0d2b8577ba0a7ad31",
+  "product_type": "Decafs,Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Decaf",
+   "Decafs",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "City - 420 F",
+    "variant_id": "23dd1b9d-6233-4f2e-bfa0-21505de6e609"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "Full City - 430 F",
+    "variant_id": "59b35c79-662a-47db-8980-522f7bd99098"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "Vienna - 440 F",
+    "variant_id": "ac99c0c8-d098-4557-89e3-dbb26e0465ef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "Roaster's Choice",
+    "variant_id": "df9780fa-7c52-400e-8eef-1b7db0ff6b78"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "e33f3200-7e30-4a11-a525-0ab1e32bbab4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "e8d7f68a-0d8e-4527-9203-8855bdbb9806"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.3,
+    "title": "French - 470 F",
+    "variant_id": "f2036913-6753-4815-832c-a8f909ec8e5d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af9d503056c560e9",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cafe-frog",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/596f2b93d7bdce246a9fe372/1782159091397/",
+  "platform": "squarespace",
+  "product_id": "596f2b93d7bdce246a9fe372",
+  "product_type": "Roasted Light,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Central America",
+   "New",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Costa Rica Cafe Frog",
+  "url": "https://coffeebytheroast.com/all-coffees/costa-rica-cafe-frog",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "Vienna - 440 F",
+    "variant_id": "0156664b-ad30-4288-8869-04095a663982"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "City - 420 F",
+    "variant_id": "31048b03-6049-4d43-af4c-fd45471eadcd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "Full City - 430 F",
+    "variant_id": "80970707-6f34-49ac-9c18-d25f09e3b1e8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "Roaster's Choice",
+    "variant_id": "cf2b9142-7f78-4217-813d-f26e5c622ba3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "dd5cebbd-9398-48ed-96ed-70eb2e565f67"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4fdd76426759d9c9",
+  "first_seen": "2026-10-26",
+  "handle": "renew-roast",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/59c241b8b7411cb6bc9195a9/1788465991777/",
+  "platform": "squarespace",
+  "product_id": "59c241b8b7411cb6bc9195a9",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Roasted Medium",
+   "Specialty Flavor",
+   "coffee for a cause",
+   "donation coffee",
+   "personalized coffee"
+  ],
+  "title": "ReNew Roast",
+  "url": "https://coffeebytheroast.com/all-coffees/renew-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.7,
+    "title": "Single Roast: Vienna - 440 F",
+    "variant_id": "1ad64057-274a-4bd0-8003-4a5348aca801"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.4,
+    "title": "Roast Pair: Foglifter - 430 F/450 F",
+    "variant_id": "c412c919-3b66-46a5-8542-9542ed38a37a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f9839c94b382a69",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-geisha",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5a9ed5afc830252efa19378b/1781892495848/",
+  "platform": "squarespace",
+  "product_id": "5a9ed5afc830252efa19378b",
+  "product_type": "4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Colombia",
+   "Geisha",
+   "Microlot",
+   "New",
+   "Rich",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Estate",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Colombia Nariño Geisha",
+  "url": "https://coffeebytheroast.com/all-coffees/colombia-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.08,
+    "title": "City - 420 F",
+    "variant_id": "19400bed-15ff-47bc-ad40-fde32d7e268d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.08,
+    "title": "Vienna - 440 F",
+    "variant_id": "5a70a390-f789-4af8-b763-e686c69712c1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.08,
+    "title": "Roaster's Choice",
+    "variant_id": "8701d04b-4de9-4d34-bc49-3d52339d2e44"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.08,
+    "title": "Full City - 430 F",
+    "variant_id": "f911f2fe-9e7a-4f7f-a098-3a2d8bc646e8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.08,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "fbfc7d40-389b-48bd-a7ac-eff516c8f2df"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5322c8540a0991c6",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5a9ed694652dea947a17d022/1782156740434/",
+  "platform": "squarespace",
+  "product_id": "5a9ed694652dea947a17d022",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Estate",
+   "Roasted Light",
+   "Roaster Gold",
+   "Single Origins",
+   "South America",
+   "Sweet",
+   "microlot"
+  ],
+  "title": "Ecuador Terrazas del Pisque",
+  "url": "https://coffeebytheroast.com/all-coffees/ecuador",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.77,
+    "title": "Roaster's Choice",
+    "variant_id": "1d7ceb6b-c8c7-4a31-b07e-5cd65095cf67"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.77,
+    "title": "Full City - 430 F",
+    "variant_id": "37d4b097-c048-4041-9f0d-ca0944ffa3da"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.77,
+    "title": "City - 420 F",
+    "variant_id": "6c7e3086-cc7d-4c20-8562-a04902fc6967"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.77,
+    "title": "Vienna - 440 F",
+    "variant_id": "895fdf4e-92e7-4ea1-bcfe-7c985e23eed3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 49.77,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "af835588-1faa-46d7-868d-afb4f5813bea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "595a7388976e0d2b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-mexico",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5b9abfab575d1faf5d9a1b08/1790275828591/",
+  "platform": "squarespace",
+  "product_id": "5b9abfab575d1faf5d9a1b08",
+  "product_type": "Decafs,Roasted Light,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Decaf",
+   "Decafs",
+   "New",
+   "Roasted Light",
+   "Single Origins"
+  ],
+  "title": "Decaf Organic Mexico",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-organic-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "030ec6f7-87c0-4ac0-8dd5-f5fff30f23f3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "Roaster's Choice",
+    "variant_id": "1cefaa13-1491-4023-8c5a-33d317917e35"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "French - 470 F",
+    "variant_id": "67088d8d-f75d-481c-9868-6a7e6a34c565"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "Full City - 430 F",
+    "variant_id": "6c740f0b-616f-4c8f-9501-e0ef8f8d4ff7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "Vienna - 440 F",
+    "variant_id": "763e6963-cdf9-4ede-867d-06cf2282a5be"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "City - 420 F",
+    "variant_id": "94eb0d2a-7e1b-412c-a15e-6e3a62633705"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.67,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "a67ca248-eba0-4c4a-baca-32d988eee0b5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "598865d823cf5634",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5c4acfb96d2a7343356d7f45/1786730619458/",
+  "platform": "squarespace",
+  "product_id": "5c4acfb96d2a7343356d7f45",
+  "product_type": "Roasted Light,Roasted Medium,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Central America",
+   "Lively",
+   "Rich",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Origins",
+   "Sweet",
+   "microlot"
+  ],
+  "title": "Jamaica Blue Mountain",
+  "url": "https://coffeebytheroast.com/all-coffees/jamaica-blue-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.31,
+    "title": "City - 420 F",
+    "variant_id": "4bd7007f-d23c-460c-aa7d-55cdcbc3c00d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.31,
+    "title": "Vienna - 440 F",
+    "variant_id": "5e93e3e1-a508-4960-a551-5eb1e562efed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.31,
+    "title": "Full City - 430 F",
+    "variant_id": "603c247d-c732-4307-83a6-5140efef6f91"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.31,
+    "title": "Roaster's Choice",
+    "variant_id": "9bcfb5a9-d2ce-4bfc-b9b6-a3894be1e19a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.31,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "f4e0e9ac-541f-430b-89f8-c04cbc1d8d5f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c526f4238a3a7c1",
+  "first_seen": "2026-10-26",
+  "handle": "exploration-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5c78efac652deaaa562d7ff0/1790833703212/",
+  "platform": "squarespace",
+  "product_id": "5c78efac652deaaa562d7ff0",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Exploration Coffee",
+   "Gifts",
+   "Half Roasts",
+   "Roasted Light"
+  ],
+  "title": "Exploration Coffee, 1/2 roast bag",
+  "url": "https://coffeebytheroast.com/all-coffees/exploration-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.24,
+    "title": "",
+    "variant_id": "7171168c-4eda-48ce-a2d3-be2fe6ed93be"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53858bf695d5b3b0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-waykan",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5d3956dc66dde9000189b82a/1782156581526/",
+  "platform": "squarespace",
+  "product_id": "5d3956dc66dde9000189b82a",
+  "product_type": "Roasted Medium,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "New",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Guatemala Waykan",
+  "url": "https://coffeebytheroast.com/all-coffees/guatemala-waykan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Full City - 430 F",
+    "variant_id": "178fe691-99c6-43d6-b63b-afb9eabcf24f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "City - 420 F",
+    "variant_id": "2978e502-7e5f-4e2a-b5d9-0ac8e2039fff"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "311606b5-0533-4cdd-8502-28c6ede2f1b0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Vienna - 440 F",
+    "variant_id": "42ea03d9-3f9c-4334-8776-86efec38e82b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Roaster's Choice",
+    "variant_id": "61be871a-1193-47ca-a284-edd950e2c57a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "b17392a3-dfc1-497b-af04-52365e563ed4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4674dba954663090",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-jingle-bell-java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5de619f083bec649d364e439/1788465647122/",
+  "platform": "squarespace",
+  "product_id": "5de619f083bec649d364e439",
+  "product_type": "Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Jingle Bell Java",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-jingle-bell-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.14,
+    "title": "",
+    "variant_id": "6880c1b0-e31f-4312-97a7-93181da62c1b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b7d30df52a13c0b9",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf-jingle-bell-java",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5de61a3e483f966c5c91cc79/1788465556575/",
+  "platform": "squarespace",
+  "product_id": "5de61a3e483f966c5c91cc79",
+  "product_type": "Decafs,Roasted Light",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Decaf",
+   "Decafs",
+   "Flavored Coffee",
+   "Roasted Light",
+   "Specialty Flavor"
+  ],
+  "title": "Decaf Jingle Bell Java",
+  "url": "https://coffeebytheroast.com/all-coffees/flavored-coffee-decaf-jingle-bell-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.93,
+    "title": "",
+    "variant_id": "fd32b96e-9dca-4eff-8b15-44ac53edc693"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e1483ccf4f4d769",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cozy-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5e747a2500619b55d3dbd4e9/1774970353270/",
+  "platform": "squarespace",
+  "product_id": "5e747a2500619b55d3dbd4e9",
+  "product_type": "Decafs,Roasted Light,Certified & Organic",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Americas",
+   "Central America",
+   "Certified & Organic",
+   "Decaf",
+   "Decafs",
+   "Organic",
+   "Roasted Light",
+   "Single Origins"
+  ],
+  "title": "Decaf Cozy Coffee",
+  "url": "https://coffeebytheroast.com/all-coffees/decaf-cozy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.59,
+    "title": "City - 420 F",
+    "variant_id": "f36012a7-6b77-45ff-97e0-cbe999b167bf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eedbd36b2fe57842",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5e844366396bb10228ba1f46/1768248778967/",
+  "platform": "squarespace",
+  "product_id": "5e844366396bb10228ba1f46",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Natural",
+   "Naturally Processed",
+   "Rich",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Brazil Serra Negra",
+  "url": "https://coffeebytheroast.com/all-coffees/brazil-serra-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "09429659-977f-47f3-abb2-ca696f4a073c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "Vienna - 440 F",
+    "variant_id": "4f0b2f66-d619-4a72-9970-1ee23da2aaf9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "Full City - 430 F",
+    "variant_id": "4f511807-72be-43f3-a12c-7de9eb7f69a0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "City - 420 F",
+    "variant_id": "78914487-7036-45a2-8a14-1431f9320890"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "French - 470 F",
+    "variant_id": "baa6adb2-73f1-40e7-bd10-50a5b76e0818"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "Roaster's Choice",
+    "variant_id": "da0b8b35-7bd0-4002-81d5-cbb3fb0499ae"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.53,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "fb8a83b7-460a-4254-a65c-59a80f1f2a7e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d5735ca65ad52e17",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-geisha",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5f0c149ae08c710bad0cc3e0/1769018846253/",
+  "platform": "squarespace",
+  "product_id": "5f0c149ae08c710bad0cc3e0",
+  "product_type": "Roasted Light,Roasted Medium,Roasted Dark,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Central America",
+   "Geisha",
+   "Lively",
+   "New",
+   "Rich",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Estate",
+   "Single Origins",
+   "Sweet",
+   "microlot"
+  ],
+  "title": "Mexico Veracruz Geisha",
+  "url": "https://coffeebytheroast.com/all-coffees/mexico-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.4,
+    "title": "City - 420 F",
+    "variant_id": "2c3291dd-edea-4190-8cdf-68a26a114737"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.4,
+    "title": "Roaster's Choice",
+    "variant_id": "7b7cfc8d-3a26-404f-a83e-950e1501cd9d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.4,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "d3bdc6fa-2f02-4358-b144-0c38041d57f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.4,
+    "title": "Full City - 430 F",
+    "variant_id": "e4846d93-69e3-4b24-ad4e-d8da05614b33"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.4,
+    "title": "Vienna - 440 F",
+    "variant_id": "e6e2807b-add8-41f0-8dce-3958a802f811"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb6961bf45025935",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mutitu",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5f1011ff22b6eb303ef2d4f7/1783016465025/",
+  "platform": "squarespace",
+  "product_id": "5f1011ff22b6eb303ef2d4f7",
+  "product_type": "Roasted Light,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Africa",
+   "Lively",
+   "New",
+   "Roasted Light",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Origins",
+   "microlot"
+  ],
+  "title": "Kenya AA Mutitu",
+  "url": "https://coffeebytheroast.com/all-coffees/kenya-mutitu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "Full City - 430 F",
+    "variant_id": "25d010cd-3e78-48a7-8828-89ef2e5ddd76"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "City - 420 F",
+    "variant_id": "2ec1e0f9-d546-4a2b-95fc-fe50ccb8e5b0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "395f029d-28d2-4d49-a986-af72b71a8211"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "80e6cfd9-c708-4619-ade0-847fc0d4efd3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "Vienna - 440 F",
+    "variant_id": "c2543d2f-9844-4281-9bf1-eed7257e0de4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.89,
+    "title": "Roaster's Choice",
+    "variant_id": "f8d06b60-3108-4fc4-b7aa-5db86916dd03"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eae3e6585ff9a700",
+  "first_seen": "2026-10-26",
+  "handle": "welcome-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5f1816cf3816d43508be5bbb/1790833981758/",
+  "platform": "squarespace",
+  "product_id": "5f1816cf3816d43508be5bbb",
+  "product_type": "",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Dark Roasts",
+   "Gifts",
+   "Half Roasts",
+   "Light Roasts",
+   "Medium Roasts",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "contrast coffee",
+   "half roast pair"
+  ],
+  "title": "Welcome Coffee",
+  "url": "https://coffeebytheroast.com/all-coffees/welcome-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.47,
+    "title": "",
+    "variant_id": "59e0d4e4-4229-4caf-b6b8-10466849db54"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42b9fcb0c25c7275",
+  "first_seen": "2026-10-26",
+  "handle": "vote-coffee",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5f7b628e4551ef764c289b26/1767814276247/",
+  "platform": "squarespace",
+  "product_id": "5f7b628e4551ef764c289b26",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "American",
+   "Americas",
+   "Blends",
+   "Medium Roasts",
+   "Roasted Medium",
+   "limited edition"
+  ],
+  "title": "Vote Coffee",
+  "url": "https://coffeebytheroast.com/all-coffees/vote-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.98,
+    "title": "",
+    "variant_id": "9f010cd1-d28e-4088-84aa-13ddf425a9e3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a8b074eeb263665",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca-wc",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/5fd2160ba9eaf43bd85bc337/1777389478276/",
+  "platform": "squarespace",
+  "product_id": "5fd2160ba9eaf43bd85bc337",
+  "product_type": "Roasted Medium,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Co-op",
+   "Rich",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Colombia Cauca Women's Cooperative",
+  "url": "https://coffeebytheroast.com/all-coffees/colombia-cauca-wc",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Vienna - 440 F",
+    "variant_id": "4d594f96-fb66-495e-9dcc-d0dca044cd38"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Full City - 430 F",
+    "variant_id": "51a47df4-54d1-462d-b306-5bb8bdd42c24"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "City - 420 F",
+    "variant_id": "7f4343db-3aac-4d7b-b20a-fe0cb773d455"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Roaster's Choice",
+    "variant_id": "8e45a724-2155-4304-8f96-3b2ac0309a03"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "9156a596-273c-4841-97c6-20bc1e679c45"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "9a3bd8a6-9a33-4de0-a72c-b5a2105e61f3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "French - 470 F",
+    "variant_id": "af1cea8e-f231-4bd2-9dcb-fa7fb560cac5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a44389763be90566",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-waghi-valley",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/651d9ff48cc2d83e6f5e7ac8/1785440314088/",
+  "platform": "squarespace",
+  "product_id": "651d9ff48cc2d83e6f5e7ac8",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Asia",
+   "Complex",
+   "Floral",
+   "Island",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Papua New Guinea Waghi Valley",
+  "url": "https://coffeebytheroast.com/all-coffees/papua-new-guinea-waghi-valley",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "City - 420 F",
+    "variant_id": "30dd9e35-8a39-424c-b860-cea56f68d145"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "Full City - 430 F",
+    "variant_id": "55cbf689-e422-4d5f-9b71-7a95f426e671"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "Roaster's Choice",
+    "variant_id": "5adc8f89-e569-461a-ba51-5864b742bec4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "68a364ca-6222-497a-b291-a6060ed26674"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "French - 470 F",
+    "variant_id": "8e43759f-5313-40ea-9ccd-161e47518db8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "a59ce72c-f02c-4ff0-8312-4c48dfe78960"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.15,
+    "title": "Vienna - 440 F",
+    "variant_id": "ba12a50b-9c5d-4ecb-ac8c-d636cd95e000"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac41958a9ac284c0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-regional-select",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/666c8e1f450d551cc2cbb3a6/1791650708109/",
+  "platform": "squarespace",
+  "product_id": "666c8e1f450d551cc2cbb3a6",
+  "product_type": "Roasted Light,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Rich",
+   "Roasted Light",
+   "Single Origins"
+  ],
+  "title": "Mexico Puebla-Chichiquila",
+  "url": "https://coffeebytheroast.com/all-coffees/mexico-regional-select",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "3f87c53c-145b-4ab2-8836-93e353d75f33"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "Full City - 430 F",
+    "variant_id": "50d23c29-e1a6-4704-b1a2-f64d9f44fc2a"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "Roaster's Choice",
+    "variant_id": "75d6134b-9305-4f26-988c-c68ee7f21c81"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "City - 420 F",
+    "variant_id": "984d978c-0c56-4421-b7a7-26e9376dbe71"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "Vienna - 440 F",
+    "variant_id": "ab73f49b-c194-4c65-b066-507b7aa19f88"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "ad7b41ac-828e-4945-8179-adbfe3793eaa"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 32.05,
+    "title": "French - 470 F",
+    "variant_id": "c18cf09a-49ac-47aa-be81-def364c6769a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83cb8fd6c78f5cde",
+  "first_seen": "2026-10-26",
+  "handle": "renew-roast-2",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/66c623e8ad2d14006ccb5ba7/1788466007959/",
+  "platform": "squarespace",
+  "product_id": "66c623e8ad2d14006ccb5ba7",
+  "product_type": "Roasted Medium",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "Blends",
+   "Roasted Medium",
+   "Specialty Flavor",
+   "coffee for a cause",
+   "donation coffee",
+   "personalized coffee"
+  ],
+  "title": "ReNew Roast 2.0",
+  "url": "https://coffeebytheroast.com/all-coffees/renew-roast-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.7,
+    "title": "",
+    "variant_id": "ae21056b-faf6-4128-904e-3230b0093e3c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eba97e43eb885319",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/66ce27fcea4fa261c9b0d190/1774980842684/",
+  "platform": "squarespace",
+  "product_id": "66ce27fcea4fa261c9b0d190",
+  "product_type": "Roasted Light,Certified & Organic,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Bold",
+   "Certified & Organic",
+   "Lively",
+   "Roasted Dark",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "South America"
+  ],
+  "title": "Peru Cajamarca",
+  "url": "https://coffeebytheroast.com/all-coffees/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "Vienna - 440 F",
+    "variant_id": "338d8693-ab7e-441c-8c79-bf76c6e50435"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "City - 420 F",
+    "variant_id": "487ffaf4-62b6-4a40-a500-040dd0fbb415"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "50bbd9c7-36e1-4fde-a8d5-4a4a4a4fcab3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "French - 470 F",
+    "variant_id": "5b8d649e-dc32-4cae-957f-212f6f680f9b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "Full City - 430 F",
+    "variant_id": "81cb52ac-11a7-4007-8729-628a05897164"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "Roaster's Choice",
+    "variant_id": "99ed153c-1e4c-49ed-8e90-aebd698a6c80"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.43,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "f4ecd3a6-f6c8-45d9-930a-e2cad200edc5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ce56d9e1fc0b480",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-microlot",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/6734e11546d40b51c750c725/1775023300151/",
+  "platform": "squarespace",
+  "product_id": "6734e11546d40b51c750c725",
+  "product_type": "Roasted Medium,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Microlot",
+   "Natural",
+   "Naturally Processed",
+   "New",
+   "Rich",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Roaster Gold",
+   "Single Estate",
+   "Single Origins"
+  ],
+  "title": "Brazil Café Citro",
+  "url": "https://coffeebytheroast.com/all-coffees/brazil-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "Full City - 430 F",
+    "variant_id": "21502baa-7b43-4b20-a433-bc9d2d443f6d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "City - 420 F",
+    "variant_id": "345cdc72-fa82-44bd-931a-97f74c15d3f0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "French - 470 F",
+    "variant_id": "8902de93-cfe5-4933-ab0b-cea545cc608f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "Roaster's Choice",
+    "variant_id": "a8ebcaec-6ecd-41da-8c2c-f6e46a336530"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "a973b95e-21d0-443c-b560-9313ef3d4f82"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "Vienna - 440 F",
+    "variant_id": "ea3b94dc-1ee5-46d2-9f6e-22588c937dab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.82,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "eb7d1cb0-cffd-49a9-98cb-0f6438496755"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c7ef6e87e71eca9",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/675caf1477e51d765d87bd9e/1774980889923/",
+  "platform": "squarespace",
+  "product_id": "675caf1477e51d765d87bd9e",
+  "product_type": "Roasted Medium,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Asia",
+   "Bold",
+   "Co-op",
+   "Complex",
+   "Indonesia",
+   "Island",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Estate",
+   "Single Origins"
+  ],
+  "title": "Sulawesi Toraja",
+  "url": "https://coffeebytheroast.com/all-coffees/sulawesi-toraja",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "City - 420 F",
+    "variant_id": "20619c5c-4400-4f11-8b92-1faa6adc78e5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "Full City - 430 F",
+    "variant_id": "52e42652-5920-46bd-b346-a5e4d8065e7d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "French - 470 F",
+    "variant_id": "685b808d-b181-447c-9c87-2e16a277aea0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "Roaster's Choice",
+    "variant_id": "b4861800-8aa1-4207-82da-9523a7134648"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "da365589-4a64-4a80-8342-da8b6ed322ea"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "Vienna - 440 F",
+    "variant_id": "dd2891cc-2374-485b-9468-0e7dfc6fccfc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.04,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "e8d93c32-dece-4008-9e0e-7b8655a36ac3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2527bdc6e898d3b5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-quetzal",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/6810a221477203738c956ff9/1790972227678/",
+  "platform": "squarespace",
+  "product_id": "6810a221477203738c956ff9",
+  "product_type": "Roasted Medium,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Co-op",
+   "New",
+   "Organic Coffee",
+   "Rich",
+   "Roasted Light",
+   "Roasted Medium",
+   "Single Origins",
+   "coop",
+   "organic"
+  ],
+  "title": "Guatemala Heuheutenango Quetzal",
+  "url": "https://coffeebytheroast.com/all-coffees/guatemala-huehuetenango-quetzal",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "3cc1f8bb-c9b0-4b6b-afdb-267891f430a0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "Roaster's Choice",
+    "variant_id": "4ad7e6e1-cee0-41d4-a69c-71af64c13bbd"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "Full City - 430 F",
+    "variant_id": "5b62e32f-e625-4692-bb40-903b6860c4ba"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "City - 420 F",
+    "variant_id": "6c4ba1e1-e74c-46dd-9963-46b295f1eb54"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "Vienna - 440 F",
+    "variant_id": "744ae5fd-b6df-430d-87ab-90300af03702"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.28,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "a71c720f-46bd-49ed-9389-83fbe83c3c2a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "adbfa77bc435f75f",
+  "first_seen": "2026-10-26",
+  "handle": "timor-coop",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/686161b85a2ec417786eb13a/1789668298369/",
+  "platform": "squarespace",
+  "product_id": "686161b85a2ec417786eb13a",
+  "product_type": "Roasted Medium,Certified & Organic,Roasted Dark,4th Wave",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Certified & Organic",
+   "Coop",
+   "Indonesia",
+   "Organic",
+   "Roasted Dark",
+   "Roasted Medium",
+   "Single Origins"
+  ],
+  "title": "Organic Timor Coopertiva",
+  "url": "https://coffeebytheroast.com/all-coffees/timor-coop",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Southern Italian - 460 F",
+    "variant_id": "48d0d60b-94d9-4f02-ba41-0a88f01b60a9"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "City - 420 F",
+    "variant_id": "9390b7d2-6da1-40d1-9cd7-1f3b22164a36"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Vienna - 440 F",
+    "variant_id": "946d4be1-9827-4542-a127-7fc9fd53eb79"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Full City - 430 F",
+    "variant_id": "a78839a3-59b2-4182-9658-2d8e3406858e"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "d9d023af-f0df-4562-ab20-5573502e5583"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "Roaster's Choice",
+    "variant_id": "dbc8db3c-0142-43e0-8bfe-cbe452282321"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 31.86,
+    "title": "French - 470 F",
+    "variant_id": "ec136854-0524-4077-a90a-fa689dde61bc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40a9f0cf20c44f8c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-geisha",
+  "image": "https://static1.squarespace.com/static/554a80fee4b0992a77298957/58b82e362994caafdbc85c7f/6a6a4f9a3b50833b70fcd891/1786022007273/",
+  "platform": "squarespace",
+  "product_id": "6a6a4f9a3b50833b70fcd891",
+  "product_type": "Roasted Light,4th Wave,New",
+  "roaster_slug": "coffeebytheroast",
+  "tags": [
+   "4th Wave",
+   "Americas",
+   "Central America",
+   "Estate",
+   "Gesha",
+   "Natural Process",
+   "New",
+   "Roasted Light",
+   "Roaster Gold",
+   "Single Origins",
+   "microlot"
+  ],
+  "title": "Costa Rica Geisha",
+  "url": "https://coffeebytheroast.com/all-coffees/costa-rica-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.67,
+    "title": "City - 420 F",
+    "variant_id": "25a3e6f8-a523-4991-adec-e0340f463800"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.67,
+    "title": "Roaster's Choice",
+    "variant_id": "579e34f8-926c-4ac8-b44b-b9a6f1dbbbc4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.67,
+    "title": "Full City - 430 F",
+    "variant_id": "9bb37171-7757-4bc4-8107-275d9055deec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.67,
+    "title": "Northern Italian - 450 F",
+    "variant_id": "cfb45e78-3381-46c6-bb04-02f750e2325b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 47.67,
+    "title": "Vienna - 440 F",
+    "variant_id": "d0eaf125-f75b-4990-840b-f8efd908a29e"
+   }
+  ],
+  "vendor": ""
+ }
+]

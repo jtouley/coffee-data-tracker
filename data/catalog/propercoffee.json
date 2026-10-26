@@ -1,0 +1,186 @@
+[
+ {
+  "body_hash": "7c10a9a1af475edd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1bac12131ced",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Colombia - Swiss Water DECAF 5lb",
+  "url": "https://www.propercoffee.org/product-page/colombia-swiss-water-decaf-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80e4b1966f177096",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-blend-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7fdd60038ae8",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Flagship Blend 5lb",
+  "url": "https://www.propercoffee.org/product-page/flagship-blend-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "833211e65511ba42",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9b39666e42cd",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "DECAF Colombia",
+  "url": "https://www.propercoffee.org/product-page/decaf-colombia-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f7e34cbcf1afe94",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-guatamala-cimarron-organic-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9cb4d7fd0ff0",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Guatemala - Cimarron (Organic) 12oz",
+  "url": "https://www.propercoffee.org/product-page/copy-of-guatamala-cimarron-organic-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a6f67fd868fe00d",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-blend-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a9b1ba5bf466",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Flagship Blend",
+  "url": "https://www.propercoffee.org/product-page/flagship-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80e4b1966f177096",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-blend-retail-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d275fd1172be",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Flagship Blend Retail 12oz",
+  "url": "https://www.propercoffee.org/product-page/flagship-blend-retail-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c10a9a1af475edd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d876d6dfa590",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Colombia - Swiss Water DECAF Retail 12oz",
+  "url": "https://www.propercoffee.org/product-page/colombia-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0b61325114c90809",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-el-quiche",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ebb074821624",
+  "product_type": "",
+  "roaster_slug": "propercoffee",
+  "tags": [],
+  "title": "Brazil - Minas",
+  "url": "https://www.propercoffee.org/product-page/guatemala-el-quiche",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

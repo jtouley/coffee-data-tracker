@@ -1,0 +1,114 @@
+{
+ "15660254560337": {
+  "body_hash": "c7ad8a58c4bbc359",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1600,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "15660270977105": {
+  "body_hash": "8555418230de238b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "15710680580177": {
+  "body_hash": "cb07a51191dc9163",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1950,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry",
+   "mango",
+   "herbal tea"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "15737774276689": {
+  "body_hash": "6873eaef97a5b0cd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ },
+ "15924720894033": {
+  "body_hash": "971e02a70c47cd3c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "hazelnut",
+   "orange"
+  ],
+  "varietals": [
+   "Catimor",
+   "Caturra"
+  ]
+ },
+ "16400335142993": {
+  "body_hash": "3243f455b6c52bad",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "goji berry",
+   "almond"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

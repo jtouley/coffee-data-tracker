@@ -1,0 +1,327 @@
+[
+ {
+  "body_hash": "a01e4a61d369ef3b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peruvian",
+  "image": "https://images.squarespace-cdn.com/content/v1/5429e80ae4b0c4481f22faf5/1592496694544-1N2X1WVINDI2RDPX0EUI/FARMhouseSQU+decafperucopy-14.png",
+  "platform": "squarespace",
+  "product_id": "5eeb7725fb2789673c1c9e4f",
+  "product_type": "",
+  "roaster_slug": "farmhouseroasters",
+  "tags": [],
+  "title": "Decaf Peruvian",
+  "url": "https://www.farmhouseroasters.com/coffee/p/decaf-peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "1d589bc9-692c-4b59-b29b-0cc1c157837d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "2c5ff8c6-02c1-43bf-9b2c-9b6edea9c91f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "2dfb7e0f-b2b8-4179-963b-096a992ff466"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Flat Drip",
+    "variant_id": "389b6343-c487-4057-ac41-fc41808e0aca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "3bc6edf8-fd9e-4ea5-ba0b-931191143f85"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "94f39fd5-80c0-4385-85ea-2ef0bb932eca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Coarse/Cold Brew",
+    "variant_id": "a6cb606c-9f68-44b8-a9c7-0b670e3074eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "bc6f1fa6-f838-453d-9043-3b4ce691cee7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69c2201e39ee5162",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopian-sidamo",
+  "image": "https://static1.squarespace.com/static/5429e80ae4b0c4481f22faf5/564be9cde4b0fea2b3599896/5eeb7c655119dc0eb9bb6a7e/1787690626120/",
+  "platform": "squarespace",
+  "product_id": "5eeb7c655119dc0eb9bb6a7e",
+  "product_type": "",
+  "roaster_slug": "farmhouseroasters",
+  "tags": [],
+  "title": "Decaf Ethiopian Sidamo",
+  "url": "https://www.farmhouseroasters.com/coffee/p/decaf-ethiopian-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "0babfd3d-2dfa-49b6-90cc-e35f10cc775b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "1315980f-e714-49a9-b77f-3bdf97b7edfa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "63c0ae41-3675-4aff-973f-2f599dade992"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Coarse/Cold Brew",
+    "variant_id": "6ad58293-2f0b-47e9-b937-93e78d9f7874"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Flat Drip",
+    "variant_id": "beaab59b-cb85-479c-8121-f68fcb5688e6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "e24e8f17-553b-431a-929f-1f35492a76b7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "e3e9a3c9-33cd-464b-af32-6b89ae0d06f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "f46bcc24-6dce-4e1e-8a2b-03ca62c7b42d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "68d8974a81355168",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://static1.squarespace.com/static/5429e80ae4b0c4481f22faf5/564be9cde4b0fea2b3599896/5eeb8781d9527673560ee7f8/1787690626296/",
+  "platform": "squarespace",
+  "product_id": "5eeb8781d9527673560ee7f8",
+  "product_type": "",
+  "roaster_slug": "farmhouseroasters",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.farmhouseroasters.com/coffee/p/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "1aa30c71-4204-427b-97ca-dd311cdafd02"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "2491c708-d702-4ba5-8610-9c77b36971bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Coarse/Cold Brew",
+    "variant_id": "3d41c2e6-fd8c-4eb1-b406-814a6dba861c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "498adf69-262f-406b-b261-02fb2f80bc79"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Flat Drip",
+    "variant_id": "7c08d7ed-e51d-4672-82a8-4c19418bbc6c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "aa67e378-6b84-4d3d-b824-c53a4d482086"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "ace1a341-94bf-4534-84fd-7c95e3a468b8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "dedd7911-8ce5-4a81-b868-a6314161f4f2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d309ca8b7a363114",
+  "first_seen": "2026-10-26",
+  "handle": "farmhouse-blend",
+  "image": "https://static1.squarespace.com/static/5429e80ae4b0c4481f22faf5/564be9cde4b0fea2b3599896/5eeb8d37fe16767562f8f8e9/1787690627594/",
+  "platform": "squarespace",
+  "product_id": "5eeb8d37fe16767562f8f8e9",
+  "product_type": "",
+  "roaster_slug": "farmhouseroasters",
+  "tags": [],
+  "title": "Farmhouse Blend",
+  "url": "https://www.farmhouseroasters.com/coffee/p/farmhouse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "1a4e04a6-41fc-49c1-b816-d6ee00540ae9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Coarse/Cold Brew",
+    "variant_id": "27977a56-a0c7-4cac-95bd-ce1709282332"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Flat Drip",
+    "variant_id": "3fb240cf-9d58-4be9-ab37-8ee58c8ea856"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "51f49c86-5580-44e5-acd6-6d00af421918"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "66c54fa8-ad26-4595-b8da-d2e982b25b3b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "a23ceeee-ec9e-43b0-8dc3-2483fac3fd43"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "ba847941-cbf6-4e9d-83e6-7777abbb1876"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "d5c4efca-33db-46b3-a22b-1874217e13bd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e8215146ca1a567",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://static1.squarespace.com/static/5429e80ae4b0c4481f22faf5/564be9cde4b0fea2b3599896/5eeb8e73c01b4460c6c81c6f/1787690628398/",
+  "platform": "squarespace",
+  "product_id": "5eeb8e73c01b4460c6c81c6f",
+  "product_type": "",
+  "roaster_slug": "farmhouseroasters",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.farmhouseroasters.com/coffee/p/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "b722d340-c056-491a-a521-f66e63276af6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "edb340f1-3d78-4603-abf2-2d415efa3236"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "fe027c5c-10b3-4096-8fe1-5ce8f59b3e62"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,760 @@
+[
+ {
+  "body_hash": "e0f60874a62aa6aa",
+  "first_seen": "2026-10-26",
+  "handle": "black-mamba",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Black_Mamba_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748624433",
+  "platform": "shopify",
+  "product_id": "7479176364193",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Organic",
+   "Single origins",
+   "Whole bean Coffee"
+  ],
+  "title": "Colombian 'Black Mamba'",
+  "url": "https://singlespeedcoffeeroasters.com/products/black-mamba",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42338291384481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42338291450017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42338291482785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42338291515553"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "afc782c0259be974",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Cold_Brew.png?v=1739476716",
+  "platform": "shopify",
+  "product_id": "7479178363041",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Organic",
+   "Whole bean Coffee"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378302521505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378302652577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs Bulk / Whole Bean",
+    "variant_id": "42378302750881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs Bulk / Drip",
+    "variant_id": "42378302849185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / cold brew",
+    "variant_id": "44521823010977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs Bulk / cold brew",
+    "variant_id": "44521823043745"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "61b8d01fd61804aa",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-cattleya",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Colombia_Cattleya_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748624063",
+  "platform": "shopify",
+  "product_id": "7479178920097",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Single origins",
+   "Whole bean Coffee"
+  ],
+  "title": "Colombian - Cattleya",
+  "url": "https://singlespeedcoffeeroasters.com/products/columbian-cattleya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378359111841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378359177377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378359308449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378359373985"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "dd5e8c41fefd6498",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tesoros-volcanicos",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Costa_Rican_Tesoros_Volcanicos_Single_Speed_Coffee_Roasters.jpg?v=1748624604",
+  "platform": "shopify",
+  "product_id": "7479179903137",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Costa Rican - Tesoros Volcanicos",
+  "url": "https://singlespeedcoffeeroasters.com/products/costa-rican-tesoros-volcanicos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378390438049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378390503585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378390634657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378390700193"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "e5675ccd77585f1b",
+  "first_seen": "2026-10-26",
+  "handle": "danger-monkey",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Danger_Monkey_Single_Speed_Coffee_Roasters_In_House_Blend.jpg?v=1748633010",
+  "platform": "shopify",
+  "product_id": "7479181082785",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Organic",
+   "Whole bean Coffee",
+   "blend"
+  ],
+  "title": "Danger Monkey: A Single Speed Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/danger-monkey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378411376801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378411442337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378411606177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378411671713"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "66007cb3c8b4f92d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Decaf_Columbia_Single_Speed_Coffee_Roasters.jpg?v=1748624849",
+  "platform": "shopify",
+  "product_id": "7479181705377",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Whole bean Coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://singlespeedcoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378420584609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378420650145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378420813985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378420879521"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "094367ead5cac9b2",
+  "first_seen": "2026-10-26",
+  "handle": "the-flagship-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/The_Flagship_Espresso_Blend_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748633319",
+  "platform": "shopify",
+  "product_id": "7479182524577",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Whole bean Coffee"
+  ],
+  "title": "The Flagship Espresso Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/the-flagship-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378442375329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42378442408097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378442604705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Espresso",
+    "variant_id": "42378442637473"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "5baec316d3935db5",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/ethiopia_yirgacheffe_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748633747",
+  "platform": "shopify",
+  "product_id": "7479182819489",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://singlespeedcoffeeroasters.com/products/copy-of-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378535764129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378535829665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378535960737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378536026273"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "ff1c1c6f014d8ecb",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/HondurasBendicion.png?v=1786048234",
+  "platform": "shopify",
+  "product_id": "7479184949409",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Organic",
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Honduras Bendicion Natural",
+  "url": "https://singlespeedcoffeeroasters.com/products/organic-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378639671457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378639736993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378639966369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378640031905"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roastes"
+ },
+ {
+  "body_hash": "41b24e344688be6d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Sumatra_Mandheling_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748625434",
+  "platform": "shopify",
+  "product_id": "7479185506465",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Organic",
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://singlespeedcoffeeroasters.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378659135649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378659201185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378659332257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378659397793"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "9a4de4210b5059c1",
+  "first_seen": "2026-10-26",
+  "handle": "wake-up-and-kiss-me",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Wake_Up_And_Kiss_Me-_A_Single_Speed_Blend_Flagstaff_Coffee.jpg?v=1748633991",
+  "platform": "shopify",
+  "product_id": "7479187898529",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Whole bean Coffee"
+  ],
+  "title": "Wake Up and Kiss Me: A Single Speed Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/wake-up-and-kiss-me",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378679517345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378679582881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378679713953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378679779489"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "3700a4a86d45fa2e",
+  "first_seen": "2026-10-26",
+  "handle": "work-ethic",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/DSCF6962.jpg?v=1739474575",
+  "platform": "shopify",
+  "product_id": "7479188521121",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Organic",
+   "Whole bean Coffee"
+  ],
+  "title": "Work Ethic: A Single Speed Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/work-ethic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42378688561313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42378688626849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "42378688757921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "42378688823457"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "b8667e0d35039e94",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Roasters_Choice.png?v=1739476530",
+  "platform": "shopify",
+  "product_id": "7722063462561",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic",
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Roasters Choice",
+  "url": "https://singlespeedcoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43094297084065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "43094297182369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "43094297313441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Drip",
+    "variant_id": "43094297411745"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "42c5f019acd284bb",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-beans-barrel-aged-nicaraguan",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Whiskey_Beans_barrel_aged_Nicaraguan_-_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748630992",
+  "platform": "shopify",
+  "product_id": "7745827143841",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Whole bean Coffee",
+   "specialty"
+  ],
+  "title": "Whiskey Beans (barrel aged) Nicaraguan",
+  "url": "https://singlespeedcoffeeroasters.com/products/whiskey-beans-barrel-aged-nicaraguan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43152625893537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12oz / Drip",
+    "variant_id": "44493459292321"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "936de76ad36f0a73",
+  "first_seen": "2026-10-26",
+  "handle": "cold-start-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/v10_3.5x3.jpg?v=1731687285",
+  "platform": "shopify",
+  "product_id": "8163313221793",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Cold Start Coffee",
+  "url": "https://singlespeedcoffeeroasters.com/products/cold-start-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole Bean - 12oz Branded Bag",
+    "variant_id": "44720395747489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Medium - 12oz Branded Bag",
+    "variant_id": "44720395780257"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indian-gardens-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Sosta-Indian_Gardens.png?v=1744668711",
+  "platform": "shopify",
+  "product_id": "8224064110753",
+  "product_type": "",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Indian Gardens Cold Brew Blend",
+  "url": "https://singlespeedcoffeeroasters.com/products/indian-gardens-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "44908455067809"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ },
+ {
+  "body_hash": "ccc59b43a7aec102",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-virgen-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9297/7057/files/Nicaragua_La_Virgen_Estate_Single_Speed_Coffee_Roasters_Flagstaff.jpg?v=1748627932",
+  "platform": "shopify",
+  "product_id": "8234281238689",
+  "product_type": "Coffee",
+  "roaster_slug": "singlespeedcoffeeroasters",
+  "tags": [
+   "Organic",
+   "Single Origin",
+   "Whole bean Coffee"
+  ],
+  "title": "Nicaragua La Virgen Estate",
+  "url": "https://singlespeedcoffeeroasters.com/products/nicaragua-la-virgen-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44938212180129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (Bulk Kraft Bag) / Whole Bean",
+    "variant_id": "44938212212897"
+   }
+  ],
+  "vendor": "Single Speed Coffee Roasters"
+ }
+]

@@ -1,0 +1,716 @@
+[
+ {
+  "body_hash": "d3ba5d6d8eb77325",
+  "first_seen": "2026-10-26",
+  "handle": "old-whalers-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/Costa_rica_tarrazu.png?v=1732047841",
+  "platform": "shopify",
+  "product_id": "3659425185872",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Old Whaler's Blend",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/old-whalers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "28695876632656"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "paper cone",
+    "variant_id": "28695876665424"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "paper flat",
+    "variant_id": "28695876698192"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "metal cone",
+    "variant_id": "28695876730960"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "french press",
+    "variant_id": "28695876763728"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "espresso",
+    "variant_id": "28695876796496"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "76bff9a2e0e27f62",
+  "first_seen": "2026-10-26",
+  "handle": "highland-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/highland_blend_label.png?v=1732047994",
+  "platform": "shopify",
+  "product_id": "3659427741776",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Highland Blend",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/highland-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "28695883284560"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper cone",
+    "variant_id": "28695883317328"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper flat",
+    "variant_id": "28695883350096"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "metal cone",
+    "variant_id": "28695883382864"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "french press",
+    "variant_id": "28695883415632"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "espresso",
+    "variant_id": "28695883448400"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "51f34eaa8e3b9fac",
+  "first_seen": "2026-10-26",
+  "handle": "san-francisco-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/san_francisco_blend_red.png?v=1732047985",
+  "platform": "shopify",
+  "product_id": "3659429281872",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "San Francisco Blend",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/san-francisco-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "28695889215568"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper cone",
+    "variant_id": "28695889248336"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper flat",
+    "variant_id": "28695889281104"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "metal cone",
+    "variant_id": "28695889313872"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "28695889346640"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "espresso",
+    "variant_id": "28695889379408"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "3bb3b64346148318",
+  "first_seen": "2026-10-26",
+  "handle": "morningside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/morningside_blend_red.png?v=1732048516",
+  "platform": "shopify",
+  "product_id": "3659431444560",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Morningside Blend",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/morningside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "28695897931856"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper cone",
+    "variant_id": "28695897964624"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper flat",
+    "variant_id": "28695897997392"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "metal cone",
+    "variant_id": "28695898030160"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "french press",
+    "variant_id": "28695898062928"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "espresso",
+    "variant_id": "28695898095696"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "b5dc06ca2607fe96",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/organic_fairetrade_peru_red.png?v=1732048516",
+  "platform": "shopify",
+  "product_id": "3659439898704",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Fair Trade/Organic Peru",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/fair-trade-organic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "28695944462416"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "paper cone",
+    "variant_id": "28695944527952"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "paper flat",
+    "variant_id": "28695944560720"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "metal cone",
+    "variant_id": "28695944626256"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "28695944659024"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "espresso",
+    "variant_id": "28695944724560"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "39089e4f421f78df",
+  "first_seen": "2026-10-26",
+  "handle": "organic-highland-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/highland_blend_decaf_label.png?v=1732046695",
+  "platform": "shopify",
+  "product_id": "3659442126928",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Fair Trade/Organic Highland Blend Decaf",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/organic-highland-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "28695964319824"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "28695964352592"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Cold Brew",
+    "variant_id": "28695964385360"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Paper Flat",
+    "variant_id": "28695964418128"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "28695964450896"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "28695964483664"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "b6c49bec562fdf2d",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-maker",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/products/ToddyColdBrewSystem.png?v=1681441030",
+  "platform": "shopify",
+  "product_id": "4503380328528",
+  "product_type": "Merchandise",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Toddy Cold Brew System- LOW STOCK",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/toddy-maker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1043,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "32075893407824"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "4fd0ccf5ef477a31",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/guatemala_antigua_red.png?v=1732048745",
+  "platform": "shopify",
+  "product_id": "4503595253840",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Guatemala Antigua",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/guatemala-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "whole bean",
+    "variant_id": "32097319387216"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "paper cone",
+    "variant_id": "32097319419984"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "paper flat",
+    "variant_id": "32097319452752"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "metal cone",
+    "variant_id": "32097319485520"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "french press",
+    "variant_id": "32097319518288"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 19.0,
+    "title": "espresso",
+    "variant_id": "32097319551056"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a001bec13d76046d",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/organic_sumatra_label.png?v=1732049404",
+  "platform": "shopify",
+  "product_id": "4503598628944",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Fair Trade/Organic Sumatra",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/fair-trade-organic-sumatra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "Whole bean",
+    "variant_id": "32097329971280"
+   },
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper cone",
+    "variant_id": "32097330004048"
+   },
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper flat",
+    "variant_id": "32097330036816"
+   },
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "metal cone",
+    "variant_id": "32097330069584"
+   },
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "french press",
+    "variant_id": "32097330102352"
+   },
+   {
+    "available": false,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "espresso",
+    "variant_id": "32097330135120"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8f3afb4609370c7a",
+  "first_seen": "2026-10-26",
+  "handle": "orion-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/the_orion_label.png?v=1732048198",
+  "platform": "shopify",
+  "product_id": "4829082484816",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Orion Blend (Espresso Blend)",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/orion-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "32968320942160"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "paper cone",
+    "variant_id": "32968320974928"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "paper flat",
+    "variant_id": "32968321007696"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "metal cone",
+    "variant_id": "32968321040464"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "32968321073232"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "espresso",
+    "variant_id": "32968321106000"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "4bf163bdb440b2c2",
+  "first_seen": "2026-10-26",
+  "handle": "goat-bros-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/goat_bros_faire_label.png?v=1732048282",
+  "platform": "shopify",
+  "product_id": "6831327805520",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [
+   "coffee beans",
+   "dark roast",
+   "organic",
+   "signature blend"
+  ],
+  "title": "G.O.A.T. Bros Blend",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/goat-bros-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "whole bean",
+    "variant_id": "40151185490000"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper cone",
+    "variant_id": "40151186145360"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "paper flat",
+    "variant_id": "40151186178128"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "metal cone",
+    "variant_id": "40151186276432"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "french press",
+    "variant_id": "40151186309200"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 21.0,
+    "title": "espresso",
+    "variant_id": "40151186571344"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "87244b021c5d99a2",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-rotation-new",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/Dark_Roast_Rotation_2_9910bf7d-9e61-4d9e-ad11-261793e8c7ff.png?v=1732221743",
+  "platform": "shopify",
+  "product_id": "7134985814096",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Dark Roast Rotation (NEW)",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/dark-roast-rotation-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 709,
+    "price_usd": 42.0,
+    "title": "Default Title",
+    "variant_id": "41019212496976"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a570a57191bff741",
+  "first_seen": "2026-10-26",
+  "handle": "freshmakers-choice-new",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/Freshmaker_s_Choice.png?v=1731599777",
+  "platform": "shopify",
+  "product_id": "7134986338384",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Freshmaker's Choice (NEW!)",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/freshmakers-choice-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 709,
+    "price_usd": 42.0,
+    "title": "Default Title",
+    "variant_id": "41019214921808"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "662a1d03fff1438e",
+  "first_seen": "2026-10-26",
+  "handle": "stainless-steel-2-quart-coffee-canister-by-airscape",
+  "image": "https://cdn.shopify.com/s/files/1/0234/9347/6432/files/AirscapeStainlessSteelMediumCanister2Quarts-2.jpg?v=1734735592",
+  "platform": "shopify",
+  "product_id": "7138309800016",
+  "product_type": "Merchandise",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Stainless Steel 2 Quart Coffee Canister by Airscape",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/stainless-steel-2-quart-coffee-canister-by-airscape",
+  "variants": [
+   {
+    "available": false,
+    "grams": 499,
+    "price_usd": 36.0,
+    "title": "White",
+    "variant_id": "41029186715728"
+   },
+   {
+    "available": false,
+    "grams": 499,
+    "price_usd": 36.0,
+    "title": "Copper",
+    "variant_id": "41029186748496"
+   },
+   {
+    "available": false,
+    "grams": 499,
+    "price_usd": 36.0,
+    "title": "Black",
+    "variant_id": "41029186781264"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "lisa-jern-2-dark-roasts-every-week-decaf-once-a-month",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7248121856080",
+  "product_type": "Coffee by the Bag",
+  "roaster_slug": "sanfranciscocoffeeroastingco",
+  "tags": [],
+  "title": "Lisa Jern (2 DARK ROASTS every week, DECAF once a month)",
+  "url": "https://www.sanfranciscocoffeeroastingco.com/products/lisa-jern-2-dark-roasts-every-week-decaf-once-a-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "41426635030608"
+   }
+  ],
+  "vendor": "San Francisco Coffee Roasting Co"
+ }
+]

@@ -1,0 +1,224 @@
+{
+ "5f1b7f200f881948c75c9867": {
+  "body_hash": "e02ef7e1a7eab712",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "lemon",
+   "plum"
+  ],
+  "varietals": []
+ },
+ "5fcfdff7a81a80360e85b076": {
+  "body_hash": "96885a6afd6af299",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cacao fruit",
+   "green apple",
+   "pineapple"
+  ],
+  "varietals": []
+ },
+ "66aac4c553c0e54a182b5f5d": {
+  "body_hash": "355e27d25b7447d8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "buttery",
+   "malty",
+   "golden raisin"
+  ],
+  "varietals": []
+ },
+ "67ef2e1566c5252a6475df65": {
+  "body_hash": "715452fd41345df1",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peach",
+   "white cranberries",
+   "lively",
+   "bright"
+  ],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "67ef2ebe9dca6722c0051ed3": {
+  "body_hash": "4c5c49cabc20e336",
+  "elevation_masl_max": 1820,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "kiwi",
+   "concord grape",
+   "molasses"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "6824d65fec210e0c0c96d76e": {
+  "body_hash": "ff144fa81a75fc09",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cacao fruit",
+   "green apple",
+   "pineapple"
+  ],
+  "varietals": []
+ },
+ "6824d6c6061ed81e75e3184a": {
+  "body_hash": "ff144fa81a75fc09",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cacao fruit",
+   "green apple",
+   "pineapple"
+  ],
+  "varietals": []
+ },
+ "6824d707e357915224715227": {
+  "body_hash": "e02ef7e1a7eab712",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "lemon",
+   "plum"
+  ],
+  "varietals": []
+ },
+ "6824d741fe334e4bf29fe887": {
+  "body_hash": "e02ef7e1a7eab712",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "lemon",
+   "plum"
+  ],
+  "varietals": []
+ },
+ "6824d81cb7f4221ea6aedb10": {
+  "body_hash": "b87cf0616d34198c",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "melon",
+   "dark chocolate",
+   "magnolia"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "6824d8638637293e5f5b3a52": {
+  "body_hash": "b87cf0616d34198c",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "melon",
+   "dark chocolate",
+   "magnolia"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ }
+}

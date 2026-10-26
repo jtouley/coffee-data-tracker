@@ -1,0 +1,1316 @@
+[
+ {
+  "body_hash": "50d56ae1e9e9097e",
+  "first_seen": "2026-10-26",
+  "handle": "mrs-tigest-wako-ethiopia-light",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/mrsTigest_90512030-19fc-436e-8783-08243e56984c.png?v=1790619195",
+  "platform": "shopify",
+  "product_id": "10317137346622",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Ethiopia",
+   "Featured",
+   "Light Roast",
+   "Natural",
+   "Natural Process",
+   "Odd Box Coffee",
+   "Oddyssey"
+  ],
+  "title": "Mrs. Tigest Wako - Ethiopia - Light",
+  "url": "https://oddboxcoffee.com/products/mrs-tigest-wako-ethiopia-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "50527045386302"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "French Press (Coarse)",
+    "variant_id": "50527045419070"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Drip (Medium)",
+    "variant_id": "50527045451838"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Espresso (Fine)",
+    "variant_id": "50527045484606"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "68c42b4246cf100a",
+  "first_seen": "2026-10-26",
+  "handle": "el-suconusco-mexico-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/elSuconusco.png?v=1790619182",
+  "platform": "shopify",
+  "product_id": "10317140230206",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Medium Roast",
+   "Mexico",
+   "Odd Box Coffee",
+   "Washed"
+  ],
+  "title": "El Suconusco - Mexico - Medium",
+  "url": "https://oddboxcoffee.com/products/el-suconusco-mexico-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50527050072126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "50527050104894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "50527050137662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "50527050170430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50527054397502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "50527054430270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "50527054463038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "50527054495806"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7c1eae944f73f8e8",
+  "first_seen": "2026-10-26",
+  "handle": "nueva-segovia-nicaragua-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/nuevaSegovia.png?v=1790619158",
+  "platform": "shopify",
+  "product_id": "10317145342014",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Medium Roast",
+   "Nicaragua",
+   "Odd Box Coffee",
+   "Washed"
+  ],
+  "title": "Nueva Segovia - Nicaragua - Medium",
+  "url": "https://oddboxcoffee.com/products/nueva-segovia-nicaragua-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50527056724030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "50527056756798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "50527056789566"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "50527056822334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50527056855102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "50527056887870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "50527056920638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "50527056953406"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "504fece4e3057780",
+  "first_seen": "2026-10-26",
+  "handle": "bener-meriah-sumatra-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/benerMeriah_7d89eabd-3010-4f8f-8224-d12b6ffc8b10.png?v=1790619142",
+  "platform": "shopify",
+  "product_id": "10317149208638",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Dark Roast",
+   "Featured",
+   "Odd Box Coffee",
+   "Sumatra",
+   "Wet-hulled"
+  ],
+  "title": "Bener Meriah - Sumatra -  Dark",
+  "url": "https://oddboxcoffee.com/products/bener-meriah-sumatra-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50527062655038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "50527062687806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "50527062720574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "50527062753342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50527062786110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "50527062818878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "50527062851646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "50527062884414"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b84b9a4fcd5a56e0",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-odd-box-staples",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/benerMeriah_7d89eabd-3010-4f8f-8224-d12b6ffc8b10.png?v=1790619142",
+  "platform": "shopify",
+  "product_id": "15405054165054",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Dark Roast",
+   "Medium Roast",
+   "Odd Box Coffee"
+  ],
+  "title": "Roasters Choice - Odd Box Staples",
+  "url": "https://oddboxcoffee.com/products/roasters-choice-odd-box-staples",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67812779065406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "67812779098174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "67812779130942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "67812779163710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67812779196478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "67812779229246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "67812779262014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "67812779294782"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "bb4f260483dd7a32",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-a-coffee-oddyssey",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/benerMeriah_7d89eabd-3010-4f8f-8224-d12b6ffc8b10.png?v=1790619142",
+  "platform": "shopify",
+  "product_id": "15405060882494",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Light Roast",
+   "Odd Box Coffee",
+   "Oddyssey",
+   "Reserve"
+  ],
+  "title": "Roasters Choice - A Coffee Oddyssey",
+  "url": "https://oddboxcoffee.com/products/roasters-choice-a-coffee-oddyssey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67812787847230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "67812787879998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "67812787912766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "67812787945534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67812787978302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "67812788011070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "67812788043838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "67812788076606"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1f70303b53359868",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-chiapas-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/decafDeCanaMed.png?v=1790118758",
+  "platform": "shopify",
+  "product_id": "8108856115262",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Dark Roast",
+   "Decaf",
+   "Medium Roast",
+   "Odd Box Coffee"
+  ],
+  "title": "Decaf Colombia - Medium / Dark",
+  "url": "https://oddboxcoffee.com/products/decaf-chiapas-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz / Espresso (Fine)",
+    "variant_id": "43150416937022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz / Drip (Medium)",
+    "variant_id": "43150416969790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz / French Press (Coarse)",
+    "variant_id": "43150417002558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium / 5lb / Espresso (Fine)",
+    "variant_id": "43150417035326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium / 5lb / Drip (Medium)",
+    "variant_id": "43150417068094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium / 5lb / French Press (Coarse)",
+    "variant_id": "43150417100862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Dark / 12oz / Espresso (Fine)",
+    "variant_id": "43150417133630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Dark / 12oz / Drip (Medium)",
+    "variant_id": "43150417166398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Dark / 12oz / French Press (Coarse)",
+    "variant_id": "43150417199166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark / 5lb / Espresso (Fine)",
+    "variant_id": "43150417231934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark / 5lb / Drip (Medium)",
+    "variant_id": "43150417264702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark / 5lb / French Press (Coarse)",
+    "variant_id": "43150417297470"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz / Whole Bean",
+    "variant_id": "43150544633918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium / 5lb / Whole Bean",
+    "variant_id": "43150544666686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Dark / 12oz / Whole Bean",
+    "variant_id": "43150544699454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark / 5lb / Whole Bean",
+    "variant_id": "43150544732222"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0ef8f1b78939220c",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-do-cruzeiro-brazil-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/fazendaIrmasPereira.png?v=1790118759",
+  "platform": "shopify",
+  "product_id": "8108856213566",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Brazil",
+   "Medium Roast",
+   "Natural",
+   "Odd Box Coffee"
+  ],
+  "title": "Fazenda Irmas Pereira - Brazil - Medium",
+  "url": "https://oddboxcoffee.com/products/fazenda-do-cruzeiro-brazil-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43150513209406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "43150513242174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "43150513274942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "43150513307710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43150513340478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "43150513373246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "43150513406014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "43150513438782"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "257078dfdc40d191",
+  "first_seen": "2026-10-26",
+  "handle": "halo-beriti-ethiopia-light",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/haloBeriti.png?v=1790118759",
+  "platform": "shopify",
+  "product_id": "8108856344638",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Ethiopia",
+   "Light Roast",
+   "Odd Box Coffee",
+   "Oddyssey",
+   "Washed"
+  ],
+  "title": "Halo Beriti - Ethiopia - Light",
+  "url": "https://oddboxcoffee.com/products/halo-beriti-ethiopia-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43150495449150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "43150495481918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "43150495514686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "43150495547454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43150495580222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "43150495612990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "43150495645758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "43150495678526"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e722de467d90c909",
+  "first_seen": "2026-10-26",
+  "handle": "kindeng-papua-new-guinea-light",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/kindeng.png?v=1790118759",
+  "platform": "shopify",
+  "product_id": "8108856442942",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Brazil",
+   "Light Roast",
+   "Natural Process",
+   "Odd Box Coffee",
+   "Oddyssey"
+  ],
+  "title": "Kindeng - Papua New Guinea - Light",
+  "url": "https://oddboxcoffee.com/products/kindeng-papua-new-guinea-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "43150488633406"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press (Coarse)",
+    "variant_id": "43150488666174"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip (Medium)",
+    "variant_id": "43150488698942"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso (Fine)",
+    "variant_id": "43150488731710"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "bdbfc1a96c2e0d4e",
+  "first_seen": "2026-10-26",
+  "handle": "kirinyaga-kenya-light",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/kirinyaga.png?v=1790118759",
+  "platform": "shopify",
+  "product_id": "8108856475710",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Kenya",
+   "Light Roast",
+   "Odd Box Coffee",
+   "Oddyssey",
+   "Washed"
+  ],
+  "title": "Ruarai - Kenya - Light",
+  "url": "https://oddboxcoffee.com/products/kirinyaga-kenya-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "43150490435646"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "French Press (Coarse)",
+    "variant_id": "43150490468414"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Drip (Medium)",
+    "variant_id": "43150490501182"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Espresso (Fine)",
+    "variant_id": "43150490533950"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4b0b96437f23ac00",
+  "first_seen": "2026-10-26",
+  "handle": "peru-asociacion-de-productores-chirinos-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/peruVDark.png?v=1790118760",
+  "platform": "shopify",
+  "product_id": "8108856541246",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Dark Roast",
+   "Odd Box Coffee",
+   "Peru",
+   "Washed"
+  ],
+  "title": "Peru - Cajamarca - Dark / Very Dark",
+  "url": "https://oddboxcoffee.com/products/peru-asociacion-de-productores-chirinos-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Dark / 12oz / Whole Bean",
+    "variant_id": "43150480900158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Dark / 12oz / French Press (Coarse)",
+    "variant_id": "43150480932926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Dark / 12oz / Drip (Medium)",
+    "variant_id": "43150480965694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Dark / 12oz / Espresso (Fine)",
+    "variant_id": "43150480998462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Very Dark / 12oz / Whole Bean",
+    "variant_id": "43150481031230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Very Dark / 12oz / French Press (Coarse)",
+    "variant_id": "43150481063998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Very Dark / 12oz / Drip (Medium)",
+    "variant_id": "43150481096766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Very Dark / 12oz / Espresso (Fine)",
+    "variant_id": "43150481129534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Dark / 5lb / Whole Bean",
+    "variant_id": "43150481162302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Dark / 5lb / French Press (Coarse)",
+    "variant_id": "43150481195070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Dark / 5lb / Drip (Medium)",
+    "variant_id": "43150481227838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Dark / 5lb / Espresso (Fine)",
+    "variant_id": "43150481260606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Very Dark / 5lb / Whole Bean",
+    "variant_id": "43150481293374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Very Dark / 5lb / French Press (Coarse)",
+    "variant_id": "43150481326142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Very Dark / 5lb / Drip (Medium)",
+    "variant_id": "43150481358910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "Very Dark / 5lb / Espresso (Fine)",
+    "variant_id": "43150481391678"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "ed26a864090912fb",
+  "first_seen": "2026-10-26",
+  "handle": "pantomime-blend-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/pantomime.png?v=1790118760",
+  "platform": "shopify",
+  "product_id": "8108856901694",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Espresso",
+   "Medium Roast",
+   "Natural",
+   "Odd Box Coffee",
+   "Washed"
+  ],
+  "title": "Pantomime - Blend - Medium",
+  "url": "https://oddboxcoffee.com/products/pantomime-blend-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43150447935550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "43150447968318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "43150448001086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "43150448033854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43150448066622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "43150448099390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "43150448132158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "43150448164926"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b7d2520504ffa72a",
+  "first_seen": "2026-10-26",
+  "handle": "roast-range-sample-box",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/roastRange9.png?v=1790193824",
+  "platform": "shopify",
+  "product_id": "8108856967230",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Dark Roast",
+   "Odd Box Coffee",
+   "Peru",
+   "Sample",
+   "Washed"
+  ],
+  "title": "Roast Range Sample Box",
+  "url": "https://oddboxcoffee.com/products/roast-range-sample-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "43150526087230"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press (Coarse)",
+    "variant_id": "43150526119998"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip (Medium)",
+    "variant_id": "43150526152766"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso (Fine)",
+    "variant_id": "43150526185534"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "335a0254c9cc2771",
+  "first_seen": "2026-10-26",
+  "handle": "summertime-blend-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/summertime.png?v=1790118760",
+  "platform": "shopify",
+  "product_id": "8108857196606",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Cold Brew",
+   "Dark Roast",
+   "Featured",
+   "Natural",
+   "Odd Box Coffee",
+   "Washed"
+  ],
+  "title": "Summertime - Blend - Dark",
+  "url": "https://oddboxcoffee.com/products/summertime-blend-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42986307551294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press (Coarse)",
+    "variant_id": "42986307584062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "42986307616830"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso (Fine)",
+    "variant_id": "42986307649598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42986307682366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / French Press (Coarse)",
+    "variant_id": "42986307715134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Drip (Medium)",
+    "variant_id": "42986307747902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso (Fine)",
+    "variant_id": "42986307780670"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0ed6a1a999a95c6e",
+  "first_seen": "2026-10-26",
+  "handle": "el-tombo-colombia-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1509/8942/files/colombiaMedium.png?v=1790619756",
+  "platform": "shopify",
+  "product_id": "8198786842686",
+  "product_type": "",
+  "roaster_slug": "oddboxcoffee",
+  "tags": [
+   "ALL COFFEE",
+   "Colombia",
+   "Dark Roast",
+   "Medium Roast",
+   "Odd Box Coffee"
+  ],
+  "title": "Colombia - Medium / Dark",
+  "url": "https://oddboxcoffee.com/products/el-tombo-colombia-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Espresso (Fine)",
+    "variant_id": "43150420803646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Drip (Medium)",
+    "variant_id": "43150420836414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / French Press (Coarse)",
+    "variant_id": "43150420869182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium / 5lb / Espresso (Fine)",
+    "variant_id": "43150420901950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium / 5lb / Drip (Medium)",
+    "variant_id": "43150420934718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium / 5lb / French Press (Coarse)",
+    "variant_id": "43150420967486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Dark / 12oz / Espresso (Fine)",
+    "variant_id": "43150421000254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Dark / 12oz / Drip (Medium)",
+    "variant_id": "43150421033022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Dark / 12oz / French Press (Coarse)",
+    "variant_id": "43150421065790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Dark / 5lb / Espresso (Fine)",
+    "variant_id": "43150421098558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Dark / 5lb / Drip (Medium)",
+    "variant_id": "43150421131326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Dark / 5lb / French Press (Coarse)",
+    "variant_id": "43150421164094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Whole Bean",
+    "variant_id": "43150424965182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium / 5lb / Whole Bean",
+    "variant_id": "43150424997950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Dark / 12oz / Whole Bean",
+    "variant_id": "43150425030718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Dark / 5lb / Whole Bean",
+    "variant_id": "43150425063486"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

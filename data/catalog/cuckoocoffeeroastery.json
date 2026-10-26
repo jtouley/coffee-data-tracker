@@ -1,0 +1,612 @@
+[
+ {
+  "body_hash": "677e7b96270a5159",
+  "first_seen": "2026-10-26",
+  "handle": "mystic-trip",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Mystic-Trip-June2026.jpg?v=1781456005",
+  "platform": "shopify",
+  "product_id": "6640639967301",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Mystic Trip Ethiopia Blend",
+  "url": "https://cuckoocoffeeroastery.com/products/mystic-trip",
+  "variants": [
+   {
+    "available": true,
+    "grams": 289,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39535039643717"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "786a7b0915212cc3",
+  "first_seen": "2026-10-26",
+  "handle": "black-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Black2.jpg?v=1775663084",
+  "platform": "shopify",
+  "product_id": "6676815478853",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Cuckoo BLACK Blend",
+  "url": "https://cuckoocoffeeroastery.com/products/black-dark-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 292,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "39689038626885"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "a2f40b660a5c256d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Mexico-La-Laja-Honey_a47c0973-8797-4162-b8e6-6f8a392200f4.jpg?v=1775753294",
+  "platform": "shopify",
+  "product_id": "6758398394437",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Mexico La Laja Honey",
+  "url": "https://cuckoocoffeeroastery.com/products/mexico-la-laja-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 306,
+    "price_usd": 14.75,
+    "title": "Default Title",
+    "variant_id": "40099993583685"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "1d53731931f9fa49",
+  "first_seen": "2026-10-26",
+  "handle": "white-bear-lake-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/WBL_f93c2f4f-f214-4913-9f54-54b08da524b7.jpg?v=1775673226",
+  "platform": "shopify",
+  "product_id": "6860806062149",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [
+   "Blend"
+  ],
+  "title": "White Bear Lake Blend",
+  "url": "https://cuckoocoffeeroastery.com/products/white-bear-lake-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.25,
+    "title": "Default Title",
+    "variant_id": "40453297569861"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "11db0479d00610b5",
+  "first_seen": "2026-10-26",
+  "handle": "cuckoo-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/SPRO.jpg?v=1775663234",
+  "platform": "shopify",
+  "product_id": "7927854465093",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "SPRO",
+  "url": "https://cuckoocoffeeroastery.com/products/cuckoo-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 289,
+    "price_usd": 14.75,
+    "title": "Default Title",
+    "variant_id": "44534295167045"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "399602e34b232a27",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-esmeralda-ea-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Decaf-Mexico.jpg?v=1788017398",
+  "platform": "shopify",
+  "product_id": "7959230578757",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Mexico DECAF",
+  "url": "https://cuckoocoffeeroastery.com/products/mexico-esmeralda-ea-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "44654477770821"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "f375ba7ea2cf5140",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Bali-Blue-Moon2.jpg?v=1789664685",
+  "platform": "shopify",
+  "product_id": "7965640687685",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Bali Blue Moon",
+  "url": "https://cuckoocoffeeroastery.com/products/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "44673432354885"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "5fa72f31a79c078c",
+  "first_seen": "2026-10-26",
+  "handle": "grand-marais-north-shore-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Grand-Marais-Blend2.jpg?v=1783897362",
+  "platform": "shopify",
+  "product_id": "8043797512261",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Grand Marais North Shore Blend",
+  "url": "https://cuckoocoffeeroastery.com/products/grand-marais-north-shore-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 14.75,
+    "title": "Default Title",
+    "variant_id": "44860539109445"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "a628a342520fd362",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-hill-of-frogs-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/El-Salvador-Hill-of-Frogs.jpg?v=1780932765",
+  "platform": "shopify",
+  "product_id": "8115208486981",
+  "product_type": "",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "El Salvador Hill of Frogs Honey",
+  "url": "https://cuckoocoffeeroastery.com/products/el-salvador-hill-of-frogs-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "45117733011525"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "6047b6c047a4b518",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-yuppie-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Colombia-Yuppie.jpg?v=1781186698",
+  "platform": "shopify",
+  "product_id": "8121672171589",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Colombia Yuppie Natural",
+  "url": "https://cuckoocoffeeroastery.com/products/colombia-yuppie-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45138940461125"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "a41141006dd1424e",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-edelweiss-estate-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Tanzania-ED-Peaberry.jpg?v=1783616236",
+  "platform": "shopify",
+  "product_id": "8166602080325",
+  "product_type": "",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Tanzania Edelweiss Estate Peaberry",
+  "url": "https://cuckoocoffeeroastery.com/products/tanzania-edelweiss-estate-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "45316547477573"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "26482c8198f6364d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lake-tawar",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Sumatra-Lake-Tawar_c32029b1-6ceb-4db9-afee-1e9be9f6c9c3.jpg?v=1786546678",
+  "platform": "shopify",
+  "product_id": "8225790853189",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Sumatra Lake Tawar",
+  "url": "https://cuckoocoffeeroastery.com/products/sumatra-lake-tawar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "45541907628101"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "ec726d082a97a2b9",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-dung-k-no",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Vietnam-Dung-Kno.jpg?v=1787323104",
+  "platform": "shopify",
+  "product_id": "8239135064133",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Vietnam Dung K’No",
+  "url": "https://cuckoocoffeeroastery.com/products/vietnam-dung-k-no",
+  "variants": [
+   {
+    "available": false,
+    "grams": 295,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "45579412209733"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "6f8c636ba0c414c2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-supernatural",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Ethiopia-Supernatural.jpg?v=1787274093",
+  "platform": "shopify",
+  "product_id": "8239136997445",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Ethiopia Supernatural",
+  "url": "https://cuckoocoffeeroastery.com/products/ethiopia-supernatural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 295,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "45579420926021"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "6658438df9492c53",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-18-rabbit-black-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Honduras-18Rabbit.jpg?v=1787331181",
+  "platform": "shopify",
+  "product_id": "8241309581381",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Honduras 18 Rabbit Black Honey",
+  "url": "https://cuckoocoffeeroastery.com/products/honduras-18-rabbit-black-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45587992477765"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "f4ad4eb3a147f8db",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-coopepalmares",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/CostaRica-Cooperpalmares.jpg?v=1787856351",
+  "platform": "shopify",
+  "product_id": "8255263572037",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Costa Rica COOPEPALMARES",
+  "url": "https://cuckoocoffeeroastery.com/products/costa-rica-coopepalmares",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.5,
+    "title": "Default Title",
+    "variant_id": "45634044592197"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "5a3967b373c07541",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Brazil-Mogiana2.jpg?v=1787951864",
+  "platform": "shopify",
+  "product_id": "8255285198917",
+  "product_type": "",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Brazil Mogiana Natural",
+  "url": "https://cuckoocoffeeroastery.com/products/brazil-mogiana-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45634113306693"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "0ec4651422e1474d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nayarita",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Mexico-Nayarita2.jpg?v=1788016695",
+  "platform": "shopify",
+  "product_id": "8259446210629",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Mexico Nayarita",
+  "url": "https://cuckoocoffeeroastery.com/products/mexico-nayarita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.75,
+    "title": "Default Title",
+    "variant_id": "45647030157381"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "1c323e5d9f4edcac",
+  "first_seen": "2026-10-26",
+  "handle": "half-decaf-ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Half-Decaf-Ethiopia-Guji.jpg?v=1788018944",
+  "platform": "shopify",
+  "product_id": "8261298585669",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "HALF DECAF Ethiopia Guji",
+  "url": "https://cuckoocoffeeroastery.com/products/half-decaf-ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "45653886337093"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "fe7c78949d9d7860",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Ethiopia-Misty-Valley.jpg?v=1789661234",
+  "platform": "shopify",
+  "product_id": "8293613273157",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Ethiopia Misty Valley Natural",
+  "url": "https://cuckoocoffeeroastery.com/products/ethiopia-misty-valley-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 295,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45787347615813"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "1f2381921cff796f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-lux-melange",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Honduras-Lux-Melenge.jpg?v=1789684107",
+  "platform": "shopify",
+  "product_id": "8293627363397",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Honduras Lux Melange",
+  "url": "https://cuckoocoffeeroastery.com/products/honduras-lux-melange",
+  "variants": [
+   {
+    "available": true,
+    "grams": 238,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "45787399946309"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "4015b2efc0bfa6f3",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-mocca",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Yemen-Ansi-Mocca2.jpg?v=1789753933",
+  "platform": "shopify",
+  "product_id": "8293653184581",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Yemen Ansi Mocca",
+  "url": "https://cuckoocoffeeroastery.com/products/yemen-mocca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 238,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45787530985541"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "eb01e07d2299ccab",
+  "first_seen": "2026-10-26",
+  "handle": "thailand-lanna",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Thailand-Lanna-Coffee.jpg?v=1789686684",
+  "platform": "shopify",
+  "product_id": "8293927944261",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Thailand Lanna",
+  "url": "https://cuckoocoffeeroastery.com/products/thailand-lanna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 14.25,
+    "title": "Default Title",
+    "variant_id": "45788889645125"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "56f147f57a9efaa4",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-cocaine-4-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Bolivia-Cocaine-4-Coffee.jpg?v=1789744405",
+  "platform": "shopify",
+  "product_id": "8294395183173",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Bolivia Cocaine 4 Coffee",
+  "url": "https://cuckoocoffeeroastery.com/products/bolivia-cocaine-4-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 295,
+    "price_usd": 14.25,
+    "title": "Default Title",
+    "variant_id": "45791269027909"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "d0c9ddc255567c46",
+  "first_seen": "2026-10-26",
+  "handle": "cuckoo-666",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/666-2026-01.jpg?v=1791507954",
+  "platform": "shopify",
+  "product_id": "8323982753861",
+  "product_type": "",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [
+   "Chocolate",
+   "Colombia",
+   "Natural",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "CUCKOO.666 PRE-ORDER",
+  "url": "https://cuckoocoffeeroastery.com/products/cuckoo-666",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45957339676741"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ },
+ {
+  "body_hash": "8ac3874142f8ebbb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-durato-bombe-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0222/1500/0128/files/Ethiopia-Sidamo-Bombe.jpg?v=1791677702",
+  "platform": "shopify",
+  "product_id": "8326883573829",
+  "product_type": "Coffee",
+  "roaster_slug": "cuckoocoffeeroastery",
+  "tags": [],
+  "title": "Ethiopia Sidamo Durato Bombe Natural",
+  "url": "https://cuckoocoffeeroastery.com/products/ethiopia-sidamo-durato-bombe-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 295,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45975540760645"
+   }
+  ],
+  "vendor": "Cuckoo Coffee Roastery"
+ }
+]

@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "signature-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/594d813f17bffc20091d5adc/1531419577390-WQRARYZ5U63C3YVIBRDQ/image-asset.jpeg",
+  "platform": "squarespace",
+  "product_id": "5b461d538a922d6e7a44e00b",
+  "product_type": "",
+  "roaster_slug": "tastefullyroasted",
+  "tags": [],
+  "title": "Signature Blend Coffee (12oz)",
+  "url": "https://www.tastefullyroasted.com/shop/signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "ece210d9-18c8-46ec-9922-00872772f454"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-columbian-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/594d813f17bffc20091d5adc/1531419658555-N2ICMHKJERMDFS56D5GB/image-asset.jpeg",
+  "platform": "squarespace",
+  "product_id": "5b479bd870a6ad5a7949bc79",
+  "product_type": "",
+  "roaster_slug": "tastefullyroasted",
+  "tags": [],
+  "title": "French Roast Columbian Coffee (12oz)",
+  "url": "https://www.tastefullyroasted.com/shop/french-roast-columbian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "e3b8c067-b389-4932-90e7-2b3ea82396dc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/594d813f17bffc20091d5adc/1533229428046-FZAVDTU9TNJJTY6NHNWU/image-asset.jpeg",
+  "platform": "squarespace",
+  "product_id": "5b63395a562fa74dad33047e",
+  "product_type": "",
+  "roaster_slug": "tastefullyroasted",
+  "tags": [],
+  "title": "Breakfast Blend Coffee (12oz)",
+  "url": "https://www.tastefullyroasted.com/shop/breakfast-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "fe049603-f179-49b9-ab2d-ddd7b26e635d"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "f2683a5c55738542",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon",
+  "image": "https://static1.squarespace.com/static/592092b937c581b43fce05c5/59625c81a5790a63d73a46c3/59625da26b8f5b5620bc4090/1791283854913/",
+  "platform": "squarespace",
+  "product_id": "59625da26b8f5b5620bc4090",
+  "product_type": "",
+  "roaster_slug": "independentroasters",
+  "tags": [],
+  "title": "Sumatra, Indonesia",
+  "url": "https://independentroasters.com/shop-coffee/sumatra-takengon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz",
+    "variant_id": "a941784a-9ee5-4ee5-bd5a-c1100285779d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74b0dbe88b682cb8",
+  "first_seen": "2026-10-26",
+  "handle": "mayan-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/592092b937c581b43fce05c5/8e0a0a17-6395-4ec9-9de0-9ab69cff9710/559EC44D-5D66-4CEA-877D-50CA3A923444-70249-00001E22469FAEB2.jpg",
+  "platform": "squarespace",
+  "product_id": "596262a38419c269d9c64da2",
+  "product_type": "",
+  "roaster_slug": "independentroasters",
+  "tags": [],
+  "title": "Decaf  Mexico",
+  "url": "https://independentroasters.com/shop-coffee/mayan-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz",
+    "variant_id": "ed459708-665b-48c2-a232-a26972942306"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d5f05b0861c28e3",
+  "first_seen": "2026-10-26",
+  "handle": "mayan-decaf-gggl7-wk3g6",
+  "image": "https://images.squarespace-cdn.com/content/v1/592092b937c581b43fce05c5/1624291219917-CXNBH138Y7DU3XFJ1XP2/286FB7EA-43E4-4509-B036-23D50901BA54-1186-00000052BD61064D.jpg",
+  "platform": "squarespace",
+  "product_id": "59f334a171c10bb49d3199c6",
+  "product_type": "",
+  "roaster_slug": "independentroasters",
+  "tags": [],
+  "title": "Chiapas, Mexico",
+  "url": "https://independentroasters.com/shop-coffee/mayan-decaf-gggl7-wk3g6",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz",
+    "variant_id": "2c3e7308-d3b8-41b5-a879-d68267d56df0"
+   }
+  ],
+  "vendor": ""
+ }
+]

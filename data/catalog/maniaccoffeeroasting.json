@@ -1,0 +1,1550 @@
+[
+ {
+  "body_hash": "ebdb2e191ef61bda",
+  "first_seen": "2026-10-26",
+  "handle": "a-nice-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/ANiceColdBrew-1.jpg?v=1674940017",
+  "platform": "shopify",
+  "product_id": "3950939340897",
+  "product_type": "Cold Brew Coffee",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "african",
+   "central american",
+   "coffee",
+   "cold brew",
+   "south american"
+  ],
+  "title": "A Nice Cold Brew",
+  "url": "https://maniaccoffeeroasting.com/products/a-nice-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "29527395270753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz French Press",
+    "variant_id": "29527395369057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081221582945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204906545429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204907594005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204919292181"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "5ba099d77096b400",
+  "first_seen": "2026-10-26",
+  "handle": "bellinghamster-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Bellinghamster-1.jpg?v=1674940109",
+  "platform": "shopify",
+  "product_id": "4539601453153",
+  "product_type": "Breakfast Blend",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Breakfast",
+   "Cinnamon Raisin Bread",
+   "Fragrant",
+   "Honey",
+   "Roast_Medium",
+   "Warm Spice",
+   "coffee"
+  ],
+  "title": "Bellinghamster Blend",
+  "url": "https://maniaccoffeeroasting.com/products/bellinghamster-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31927833624673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31927833657441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31927833690209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz French Press",
+    "variant_id": "31927833722977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081102307425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686061817953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686064111713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204927713557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204929384725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204930367765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204932628757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204935676181"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "0d9f065691310a7e",
+  "first_seen": "2026-10-26",
+  "handle": "the-darkness",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/TheDarkness-1.jpg?v=1674940833",
+  "platform": "shopify",
+  "product_id": "4539601977441",
+  "product_type": "Dark Roast",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Chocolate",
+   "Cola",
+   "Dark",
+   "Earthy",
+   "Roast_Dark",
+   "coffee"
+  ],
+  "title": "The Darkness",
+  "url": "https://maniaccoffeeroasting.com/products/the-darkness",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31927836737633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31927836770401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31927836803169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz French Press",
+    "variant_id": "31927836835937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32090468057185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686088589409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686088687713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44205000425749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44205000556821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44205003309333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44205005865237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44205005930773"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "25a1aa93f4d76dce",
+  "first_seen": "2026-10-26",
+  "handle": "ravens-eye-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Raven_sEye-1.jpg?v=1674940756",
+  "platform": "shopify",
+  "product_id": "4539614920801",
+  "product_type": "Dark Roast",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Charity_Whatcom Humane Society",
+   "Chocolate",
+   "Rich",
+   "Roast_Dark",
+   "coffee"
+  ],
+  "title": "Raven's Eye",
+  "url": "https://maniaccoffeeroasting.com/products/ravens-eye-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31927916986465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31927917019233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31927917052001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz French Press",
+    "variant_id": "31927917084769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "32093064626273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686082297953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "39686084362337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204993970453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204994199829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204994920725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204997476629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204997509397"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "c4288314c07b68c1",
+  "first_seen": "2026-10-26",
+  "handle": "cobra-kai-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/CobraKai-1.jpg?v=1674940180",
+  "platform": "shopify",
+  "product_id": "4539643723873",
+  "product_type": "Medium Roast",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Roast_Medium",
+   "coffee"
+  ],
+  "title": "Cobra Kai",
+  "url": "https://maniaccoffeeroasting.com/products/cobra-kai-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31928047763553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31928047796321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31928047829089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz French Press",
+    "variant_id": "31928047861857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081117315169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686070861921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686072238177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204938428693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204940427541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204941377813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204945604885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204948291861"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "16aecfac8894cd82",
+  "first_seen": "2026-10-26",
+  "handle": "home-is-where-the-heart-is-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/HomeIsWhere-1.jpg?v=1674940343",
+  "platform": "shopify",
+  "product_id": "4545296597089",
+  "product_type": "Dark Roast",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Charity_Whatcom Opportunity Council",
+   "Chocolate",
+   "Dark",
+   "Roast_Dark",
+   "Smooth",
+   "coffee"
+  ],
+  "title": "Home is Where the Heart Is",
+  "url": "https://maniaccoffeeroasting.com/products/home-is-where-the-heart-is-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31947284086881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31947284119649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31947284152417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz French Press",
+    "variant_id": "31947284185185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081131241569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686079184993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686079283297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204979028245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204979093781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204979126549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag Drip(Flat Basket)",
+    "variant_id": "44204979159317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.75,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204979257621"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "5a8f0d9318c8a00b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-alectrona",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/ExpressoAlectrona-1.jpg?v=1674940281",
+  "platform": "shopify",
+  "product_id": "4553806151777",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Bright",
+   "Buttery",
+   "Espresso",
+   "coffee"
+  ],
+  "title": "Espresso Alectrona",
+  "url": "https://maniaccoffeeroasting.com/products/espresso-alectrona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31977786835041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081125671009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Espresso",
+    "variant_id": "32127646400609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (Espresso Grind)",
+    "variant_id": "44204837273877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204963004693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Espresso)",
+    "variant_id": "44204966215957"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "9b95308d77c646bb",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-royale",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/DecafRoyale_01.jpg?v=1674940246",
+  "platform": "shopify",
+  "product_id": "4553820962913",
+  "product_type": "Decaf",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Bright",
+   "Buttery",
+   "Decaf",
+   "coffee"
+  ],
+  "title": "Decaf Royale (Swiss Water Process)",
+  "url": "https://maniaccoffeeroasting.com/products/decaf-royale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31977870557281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31977870590049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31977870622817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz French Press",
+    "variant_id": "31977870655585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081119248481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "32127034753121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686075449441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686076203105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204956713237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204957139221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204957827349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204958220565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204958908693"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "5660d1a72e6a5381",
+  "first_seen": "2026-10-26",
+  "handle": "central-america-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Mexico-1.jpg?v=1674940146",
+  "platform": "shopify",
+  "product_id": "4553840263265",
+  "product_type": "Single Origin",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Floral",
+   "Medium",
+   "Mild Acidity",
+   "Roast_Medium",
+   "Single Origin",
+   "Warm Spice",
+   "coffee"
+  ],
+  "title": "Mexico Dana Montana",
+  "url": "https://maniaccoffeeroasting.com/products/central-america-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31977905193057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31977905225825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31977905258593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz French Press",
+    "variant_id": "31977905291361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081110007905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686067388513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686067945569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204932759829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204934103317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204934136085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204934299925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb (French Press)",
+    "variant_id": "44204934529301"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "45db278744c8f931",
+  "first_seen": "2026-10-26",
+  "handle": "africa-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Ethiopia-1.jpg?v=1674940069",
+  "platform": "shopify",
+  "product_id": "4556084281441",
+  "product_type": "Single Origin",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Citrus",
+   "Fruit",
+   "Light Body",
+   "Lively Acidity",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Natural Yirgacheffe Gr1",
+  "url": "https://maniaccoffeeroasting.com/products/africa-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31988017922145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31988017987681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31988018020449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz French Press",
+    "variant_id": "31988018085985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32081053876321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686090817633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686091210849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204910543125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204913525013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Drip (Cone Basket)",
+    "variant_id": "44204920078613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Drip (Flat Basket)",
+    "variant_id": "44204924666133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204926402837"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "409a33eab6078cdf",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Sumatra-2.jpg?v=1674940605",
+  "platform": "shopify",
+  "product_id": "4556090572897",
+  "product_type": "Single Origin",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Earthy",
+   "Heavy body",
+   "Medium Acidity",
+   "Roast_Medium",
+   "Single Origin",
+   "Stone Fruit",
+   "coffee"
+  ],
+  "title": "Sumatra Queen Ketiara",
+  "url": "https://maniaccoffeeroasting.com/products/indonesia-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "31988031455329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "31988031488097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "31988031520865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz French Press",
+    "variant_id": "31988031553633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "32093051388001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686079414369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686080856161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204986990869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204987253013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204987285781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204987777301"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204991054101"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "f95ba235c0fd960a",
+  "first_seen": "2026-10-26",
+  "handle": "half-feinated",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Half-Feinated-1.jpg?v=1674940312",
+  "platform": "shopify",
+  "product_id": "4805257330785",
+  "product_type": "",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Decaf Blend",
+   "Half-Caf",
+   "Roast_Medium",
+   "coffee"
+  ],
+  "title": "Half-feinated",
+  "url": "https://maniaccoffeeroasting.com/products/half-feinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "32818467700833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "32818467733601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "32818467766369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz French Press",
+    "variant_id": "32818467799137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole bean",
+    "variant_id": "32818467831905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Flat Basket)",
+    "variant_id": "39686078070881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Drip (Cone Basket)",
+    "variant_id": "39686078693473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (French Press)",
+    "variant_id": "44204976242965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204976996629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Cone Basket)",
+    "variant_id": "44204978012437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag Drip (Flat Basket)",
+    "variant_id": "44204978372885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (French Press)",
+    "variant_id": "44204978831637"
+   }
+  ],
+  "vendor": "Maniac Coffee Roasters"
+ },
+ {
+  "body_hash": "70f2a3358e91256e",
+  "first_seen": "2026-10-26",
+  "handle": "spro-2-electric-boogaloo",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/SproElectricBoogaloo-1.jpg?v=1674939765",
+  "platform": "shopify",
+  "product_id": "8033288814869",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Buttery",
+   "Cinnamon Raisin Bread",
+   "Earthy",
+   "Espresso",
+   "Lively Acidity",
+   "coffee"
+  ],
+  "title": "'Spro 2: Electric Boogaloo",
+  "url": "https://maniaccoffeeroasting.com/products/spro-2-electric-boogaloo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "43992986681621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Espresso",
+    "variant_id": "43992986812693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43992986845461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb (Espresso Grind)",
+    "variant_id": "44204822266133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204897501461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Espresso)",
+    "variant_id": "44204914966805"
+   }
+  ],
+  "vendor": "Maniac Coffee"
+ },
+ {
+  "body_hash": "6ce21a269ce50040",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-royale",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/DecafExpressoRoyale-1.jpg?v=1674940217",
+  "platform": "shopify",
+  "product_id": "8039128367381",
+  "product_type": "Decaf",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Decaf",
+   "Decaf Blend",
+   "Decaf Coffee",
+   "Espresso",
+   "coffee"
+  ],
+  "title": "Decaf Espresso Royale (Swiss Water Process)",
+  "url": "https://maniaccoffeeroasting.com/products/decaf-espresso-royale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "44012191449365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz Espresso",
+    "variant_id": "44012191580437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44012191613205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5LB (Espresso Grind)",
+    "variant_id": "44204833997077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Whole Bean)",
+    "variant_id": "44204952879381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Bag (Espresso)",
+    "variant_id": "44204954910997"
+   }
+  ],
+  "vendor": "Maniac Coffee Roasters"
+ },
+ {
+  "body_hash": "4263febeda131ff5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-corazon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Columbia-1.jpg?v=1675894424",
+  "platform": "shopify",
+  "product_id": "8097695039765",
+  "product_type": "Single Origin",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Citrus",
+   "Cola",
+   "Fragrant",
+   "Light Body",
+   "Low acid",
+   "Roast_Medium",
+   "Single Origin",
+   "coffee",
+   "south american"
+  ],
+  "title": "Colombia El Corazon",
+  "url": "https://maniaccoffeeroasting.com/products/colombia-el-corazon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "44259496624405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "44259496657173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "44259496689941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz French Press",
+    "variant_id": "44259496722709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Whole Bean",
+    "variant_id": "44259496755477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Drip (Flat Basket)",
+    "variant_id": "44259496788245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Drip (Cone Basket)",
+    "variant_id": "44259496821013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB (French Press)",
+    "variant_id": "44259496853781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB  Bag Whole Bean",
+    "variant_id": "44259496886549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag Drip (Flat Basket)",
+    "variant_id": "44259496919317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag Drip (Cone Basket)",
+    "variant_id": "44259496952085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag French Press",
+    "variant_id": "44259496984853"
+   }
+  ],
+  "vendor": "Maniac Coffee Roasters"
+ },
+ {
+  "body_hash": "06bd0633dd94d44c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-daterra-villa-borghesi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4912/9313/products/Brazil-1.jpg?v=1675894347",
+  "platform": "shopify",
+  "product_id": "8097695531285",
+  "product_type": "Single Origin",
+  "roaster_slug": "maniaccoffeeroasting",
+  "tags": [
+   "Breakfast",
+   "Chocolate",
+   "Low acid",
+   "Nutty",
+   "Rich",
+   "Roast_Medium",
+   "Single Origin",
+   "coffee",
+   "order coffee",
+   "south american"
+  ],
+  "title": "Brazil Daterra Villa Borghesi",
+  "url": "https://maniaccoffeeroasting.com/products/brazil-daterra-villa-borghesi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "44259507765525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Flat Basket)",
+    "variant_id": "44259507798293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz Drip (Cone Basket)",
+    "variant_id": "44259507831061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz French Press",
+    "variant_id": "44259507863829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Whole Bean",
+    "variant_id": "44259507896597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Drip (Flat Basket)",
+    "variant_id": "44259507929365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB Drip (Cone Basket)",
+    "variant_id": "44259507962133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5LB (French Press)",
+    "variant_id": "44259507994901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag Whole Bean",
+    "variant_id": "44259508027669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag Drip (Flat Basket)",
+    "variant_id": "44259508060437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag Drip (Cone Basket)",
+    "variant_id": "44259508093205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB Bag (French Press)",
+    "variant_id": "44259508125973"
+   }
+  ],
+  "vendor": "Maniac Coffee Roasters"
+ }
+]

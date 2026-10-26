@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "dadfcdf5221b7f6b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4e22521d6a0c",
+  "product_type": "",
+  "roaster_slug": "offdutycoffee",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://www.offdutycoffee.com/product-page/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "222e96b4df4ccf33",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mexico-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "57521d8a30ff",
+  "product_type": "",
+  "roaster_slug": "offdutycoffee",
+  "tags": [],
+  "title": "Mexico Decaf Mountain Water Process",
+  "url": "https://www.offdutycoffee.com/product-page/copy-of-mexico-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7cf51f862840211",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-popayan",
+  "image": null,
+  "platform": "generic",
+  "product_id": "679aa88a9133",
+  "product_type": "",
+  "roaster_slug": "offdutycoffee",
+  "tags": [],
+  "title": "Colombia Popayan",
+  "url": "https://www.offdutycoffee.com/product-page/colombia-popayan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30f1883ccb6fa510",
+  "first_seen": "2026-10-26",
+  "handle": "base-camp-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "79b9ec805f6e",
+  "product_type": "",
+  "roaster_slug": "offdutycoffee",
+  "tags": [],
+  "title": "Base Camp House Blend",
+  "url": "https://www.offdutycoffee.com/product-page/base-camp-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30f1883ccb6fa510",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-asdecafe",
+  "image": null,
+  "platform": "generic",
+  "product_id": "96d699e0f589",
+  "product_type": "",
+  "roaster_slug": "offdutycoffee",
+  "tags": [],
+  "title": "Guatemala ASDECAFE",
+  "url": "https://www.offdutycoffee.com/product-page/guatemala-asdecafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

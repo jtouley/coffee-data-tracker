@@ -1,0 +1,3960 @@
+[
+ {
+  "body_hash": "a80d8626b686e4d8",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_0d9b3562-2784-40ba-b528-97eef31d060b.jpg?v=1595908337",
+  "platform": "shopify",
+  "product_id": "5356185092252",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://clearlakecoffeeroasters.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904622071964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904622104732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904622170268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1 LB / Standard",
+    "variant_id": "34904622203036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904622235804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904622268572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904622301340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904622334108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904622366876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904622399644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904622432412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904622465180"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "ec479dbff6e1f702",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_3f1cf670-fccd-428e-a9be-2093fe10ca9d.jpg?v=1593973612",
+  "platform": "shopify",
+  "product_id": "5356185125020",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://clearlakecoffeeroasters.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904622563484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904622596252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904622629020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904622661788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904622694556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904622760092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904622792860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904622825628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904622858396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904622891164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904622923932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904622956700"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "94fd8cc4d4ca6396",
+  "first_seen": "2026-10-26",
+  "handle": "gourmet-donut-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_435983d2-906b-444a-9aff-9cc7e6e96ee0.jpg?v=1595907595",
+  "platform": "shopify",
+  "product_id": "5356185452700",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Gourmet Donut Shop",
+  "url": "https://clearlakecoffeeroasters.com/products/gourmet-donut-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904623644828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904623677596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904623710364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904623743132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904623775900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904623808668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904623841436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904623874204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904623906972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904623972508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904624005276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904624038044"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "835c01689d7dcb47",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1d1c8029-af9c-4b61-b966-a3bb9d3161f6.jpg?v=1595907701",
+  "platform": "shopify",
+  "product_id": "5356185551004",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Half Caff Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904624201884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904624234652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904624267420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904624300188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904624332956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904624365724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904624398492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904624431260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904624464028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904624496796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904624529564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904624562332"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "ff4ce5313ab79ee6",
+  "first_seen": "2026-10-26",
+  "handle": "african-kahawa-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_3f66b093-58d0-4029-aabb-6e9aae317eee.jpg?v=1619846466",
+  "platform": "shopify",
+  "product_id": "5356185976988",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "African Kahawa Blend -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/african-kahawa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904626823324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904626856092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904626888860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904626921628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904626954396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904626987164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904627019932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904627052700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904627085468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904627118236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904627151004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904627216540"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "456129422b7b3021",
+  "first_seen": "2026-10-26",
+  "handle": "latin-american-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1ed80f9a-64b5-45ff-8529-1d4530a5f71a.jpg?v=1595908453",
+  "platform": "shopify",
+  "product_id": "5356186108060",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Latin American Blend -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/latin-american-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904627708060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904627773596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904627806364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904627871900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904627937436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904627970204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904628068508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904628101276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904628166812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904628232348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904628297884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904628330652"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "75382332a03eb6b8",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1eadd920-e021-4120-a622-df988555330a.jpg?v=1593973650",
+  "platform": "shopify",
+  "product_id": "5356186402972",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Caramel",
+  "url": "https://clearlakecoffeeroasters.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904630231196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904630263964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904630296732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904630329500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904630362268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904630395036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904630427804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904630526108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904630591644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904630624412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904630657180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904630689948"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "7dd5cc262ae10c6d",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_8d37952d-da65-4fda-9ad2-1288b656d3c9.jpg?v=1593973652",
+  "platform": "shopify",
+  "product_id": "5356186534044",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Chocolate Hazelnut",
+  "url": "https://clearlakecoffeeroasters.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904631017628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904631050396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904631083164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904631115932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904631148700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904631181468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904631214236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904631247004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904631279772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904631312540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904631345308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904631378076"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "d2019ea8bd234f63",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_9d0a2d5c-be33-48ef-a4d1-ee5858040bff.jpg?v=1595907768",
+  "platform": "shopify",
+  "product_id": "5356187254940",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Hazelnut",
+  "url": "https://clearlakecoffeeroasters.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904632918172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904632950940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904632983708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904633016476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904633049244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904633082012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904633114780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904633147548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904633180316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904633213084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904633245852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904633278620"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "ba791919f546cc42",
+  "first_seen": "2026-10-26",
+  "handle": "african-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_2748f1da-633f-475e-bb7e-01636ad2dcd5.jpg?v=1595907126",
+  "platform": "shopify",
+  "product_id": "5356187418780",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "African Espresso - Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/african-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904633606300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904633639068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904633671836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904633704604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904633737372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904633770140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904633802908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904633835676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904633868444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904633901212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904633933980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904633966748"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "e7430d6fca66ebf2",
+  "first_seen": "2026-10-26",
+  "handle": "6-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_96b2b457-b4e0-4d7c-bbfd-de20f8869589.jpg?v=1595911048",
+  "platform": "shopify",
+  "product_id": "5356188041372",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "6 Bean Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/6-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904635441308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904635474076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904635506844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904635539612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904635572380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904635605148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904635637916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904635670684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904635703452"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "49fed79772a548a7",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_f478f330-dda9-4233-963a-75a506c4697e.jpg?v=1595909480",
+  "platform": "shopify",
+  "product_id": "5356188270748",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Peru -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904636063900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904636096668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904636129436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904636162204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904636194972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904636227740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904636260508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904636293276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904636326044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904636358812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904636424348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904636457116"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "fe119315d9e83342",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_7d42847b-973a-466f-acb5-7a18ff502994.jpg?v=1595907646",
+  "platform": "shopify",
+  "product_id": "5356188893340",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala - Certified Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904638292124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904638324892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904638357660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904638390428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904638455964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904638488732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904638521500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904638554268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904638587036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904638652572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904638685340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904638718108"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "3a541361175ad773",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_f5aba603-9e73-499b-9cb0-a9ddbe07dba9.jpg?v=1595911997",
+  "platform": "shopify",
+  "product_id": "5356189188252",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Natural -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904639537308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904639570076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904639602844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904639635612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904639668380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904639701148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904639733916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904639766684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904639799452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904639832220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904639864988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904639897756"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "8968659bb0705839",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_8e630803-bbf6-4118-be3b-c6757f344483.jpg?v=1593973712",
+  "platform": "shopify",
+  "product_id": "5356189745308",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904641044636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904641077404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904641110172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904641142940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904641175708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904641208476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904641241244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904641274012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904641339548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904641372316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904641437852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904641470620"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "0f39d96486ab5d52",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_d37ec848-b083-4ef3-a9b0-d5dadcbe48fc.jpg?v=1593973715",
+  "platform": "shopify",
+  "product_id": "5356189974684",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Brazil Santos -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904641896604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904641929372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904641962140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904641994908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904642027676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904642060444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904642093212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904642125980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904642158748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904642191516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904642224284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904642289820"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "6a8e847784abaf7c",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_97c79666-4396-4b3d-9123-4dd950f29143.jpg?v=1593973727",
+  "platform": "shopify",
+  "product_id": "5356190597276",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Bali Blue -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/bali-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904644026524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904644059292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904644092060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904644124828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904644157596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904644190364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904644223132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904644255900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904644288668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904644321436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904644354204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904644386972"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "097699a41bd6ed79",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_e33d03e0-cf7f-4b66-983e-da20bb6c6ec2.jpg?v=1593973731",
+  "platform": "shopify",
+  "product_id": "5356190826652",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Coffee",
+  "url": "https://clearlakecoffeeroasters.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Coarse",
+    "variant_id": "34904644845724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Coarse",
+    "variant_id": "34904644878492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Coarse",
+    "variant_id": "34904644911260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Coarse",
+    "variant_id": "34904644944028"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "bb0171db8fa9771c",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_b36f69ee-5863-449b-998c-52783ebbf1f2.jpg?v=1595909881",
+  "platform": "shopify",
+  "product_id": "5356191252636",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Pumpkin Spice",
+  "url": "https://clearlakecoffeeroasters.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904645894300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904645927068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904645959836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904645992604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904646025372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904646058140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904646090908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904646123676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904646156444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904646189212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904646221980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904646254748"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "e12ade7a990c37a5",
+  "first_seen": "2026-10-26",
+  "handle": "asian-plateau-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_9b70b4fc-64b7-42e9-b131-1d3817350144.jpg?v=1593973742",
+  "platform": "shopify",
+  "product_id": "5356191547548",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Asian Plateau Blend -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/asian-plateau-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904646680732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904646713500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904646746268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904646779036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904646811804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904646844572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904646877340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904646910108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904646942876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904646975644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904647008412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904647073948"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "d2e61d6592bcc772",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_7c254dff-758d-473a-b537-013b45374748.jpg?v=1593973754",
+  "platform": "shopify",
+  "product_id": "5356192268444",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://clearlakecoffeeroasters.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904648777884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904648810652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904648843420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904648876188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904648908956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904648941724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904648974492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904649007260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904649040028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904649072796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904649105564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904649138332"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "8f7ffc02948a3808",
+  "first_seen": "2026-10-26",
+  "handle": "cinnabun",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_695f442d-0fb5-4faa-9178-eda024f2be78.jpg?v=1593973755",
+  "platform": "shopify",
+  "product_id": "5356192333980",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Cinnabun",
+  "url": "https://clearlakecoffeeroasters.com/products/cinnabun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904649302172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904649334940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904649367708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904649400476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904649433244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904649466012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904649498780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904649531548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904649564316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904649597084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904649629852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904649662620"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "2bcc7e4e002ad3dd",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_f6e8626e-a081-4920-9063-ef3d6db9e2c9.jpg?v=1595910634",
+  "platform": "shopify",
+  "product_id": "5356193153180",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Tanzania -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904651825308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904651858076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904651890844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904651923612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904651956380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904651989148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904652021916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904652054684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904652087452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904652120220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904652152988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904652185756"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "4c740784118155c8",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1b60dd6b-c0a1-48e8-b768-932985fea3b2.jpg?v=1595907528",
+  "platform": "shopify",
+  "product_id": "5356193251484",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "French Vanilla",
+  "url": "https://clearlakecoffeeroasters.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904652447900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904652480668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904652513436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904652546204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904652578972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904652611740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904652644508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904652677276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904652710044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904652742812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904652775580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904652808348"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "1021fcc63b4b6c3d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_d012dacb-42a3-4385-8804-b3ab1c560bef.jpg?v=1595909177",
+  "platform": "shopify",
+  "product_id": "5356193906844",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Mexico -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904654020764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904654053532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904654086300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904654119068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904654184604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904654217372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904654250140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904654282908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904654315676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904654348444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904654381212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904654413980"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "b06b6e7a6734de67",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_a9134bac-251d-4af0-8200-dddcdd890a61.jpg?v=1593973786",
+  "platform": "shopify",
+  "product_id": "5356194005148",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Gesha - Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904654643356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904654676124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904654708892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904654741660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904654774428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904654807196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904654839964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904654872732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904654905500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904654938268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904654971036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904655003804"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "0c044bca2487498a",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1f6cc918-5ac5-4ce4-bcf0-a335b91c39a2.jpg?v=1593973806",
+  "platform": "shopify",
+  "product_id": "5356195020956",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Breakfast Blend +",
+  "url": "https://clearlakecoffeeroasters.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904658870428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904658903196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904659001500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904659034268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904659099804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904659132572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904659198108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904659263644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904659296412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904659361948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904659394716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904659460252"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "75920b14e700bc6a",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_8b80d9a3-43c1-4335-ae98-5f36f73cbaca.jpg?v=1595908023",
+  "platform": "shopify",
+  "product_id": "5356195283100",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "House Blend -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904661065884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904661098652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904661131420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904661164188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904661196956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904661229724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904661262492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904661295260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904661328028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904661360796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904661459100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904661524636"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "abdbf09cf415d151",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_6a831295-6262-44fa-9864-442adb810c14.jpg?v=1595907921",
+  "platform": "shopify",
+  "product_id": "5356195938460",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Fireside Blend - Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904662507676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904662540444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904662573212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904662605980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904662671516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904662704284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904662737052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904662769820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904662802588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904662835356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904662868124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904662900892"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "f72e12f54779fcc3",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_977ce8fe-fb3e-4190-a9e9-73ef6c67f618.jpg?v=1593973823",
+  "platform": "shopify",
+  "product_id": "5356196003996",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/breakfast-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904663031964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904663064732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904663097500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904663130268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904663163036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904663195804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904663228572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904663261340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904663294108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904663326876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904663359644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904663392412"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "4f7064bb8608fa53",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_76e171ef-facf-4558-b635-e3305f37ebf0.jpg?v=1595908585",
+  "platform": "shopify",
+  "product_id": "5356196888732",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Mexican Chocolate",
+  "url": "https://clearlakecoffeeroasters.com/products/mexican-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904664834204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904664866972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904664899740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904664932508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904664965276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904664998044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904665030812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904665063580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904665096348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904665129116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904665161884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904665194652"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "69ae5fec3323d245",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_08534de9-0127-4f22-a68f-6d64c14842ce.jpg?v=1595909417",
+  "platform": "shopify",
+  "product_id": "5356198068380",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Papua New Guinea -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904667553948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904667586716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904667619484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904667652252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904667685020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904667717788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904667750556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904667816092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904667881628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904667947164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904668012700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904668078236"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "498b14c004e31a66",
+  "first_seen": "2026-10-26",
+  "handle": "mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_382d001e-3093-48e3-9c78-ddf3bfb2afc1.jpg?v=1595909268",
+  "platform": "shopify",
+  "product_id": "5356198101148",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Mocha",
+  "url": "https://clearlakecoffeeroasters.com/products/mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904667783324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904667848860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904667914396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904667979932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904668045468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904668111004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904668176540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904668242076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904668307612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904668340380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904668373148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904668405916"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "32991b4d0ec62978",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-2",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_b2ea9d6b-2e80-4180-aed7-11668f864ed9.jpg?v=1593973899",
+  "platform": "shopify",
+  "product_id": "5356199477404",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Sweetheart Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/breakfast-blend-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904672895132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904672927900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904672960668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904672993436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904673026204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904673058972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904673091740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904673124508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904673157276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904673190044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904673222812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904673255580"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "75d579193f46dd0f",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_1a125eb6-7141-4b59-bf13-c3cb70502a90.jpg?v=1593973944",
+  "platform": "shopify",
+  "product_id": "5356201279644",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Cowboy Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/cowboy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Standard",
+    "variant_id": "34904678170780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Espresso",
+    "variant_id": "34904678236316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904678269084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904678301852"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904678334620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904678400156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904678432924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904678465692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904678498460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904678531228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904678563996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904678629532"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "e551ef7c00159447",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/newest_bag_with_blank_label_s8i6t1_01da9958-3747-4b87-a047-5036828b85fd.jpg?v=1595909352",
+  "platform": "shopify",
+  "product_id": "5356205179036",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Nicaragua -  Fair Trade Organic",
+  "url": "https://clearlakecoffeeroasters.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Standard",
+    "variant_id": "34904694456476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Espresso",
+    "variant_id": "34904694489244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34904694522012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Standard",
+    "variant_id": "34904694554780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "34904694587548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "34904694620316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "34904694653084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "34904694685852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "34904694718620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Standard",
+    "variant_id": "34904694751388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "34904694784156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "34904694816924"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "f3292304db0577a2",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-with-a-side-of-galapagos-tortoise-ecuador-guillermo-lomas-sidra-1207-12-oz-whole-bean-light-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/CLCR_bag_custom_2020.jpg?v=1619691910",
+  "platform": "shopify",
+  "product_id": "6708443611292",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Coffee with a Side of Galapagos Tortoise Ecuador Guillermo Lomas Sidra 16 oz whole bean light coffee",
+  "url": "https://clearlakecoffeeroasters.com/products/coffee-with-a-side-of-galapagos-tortoise-ecuador-guillermo-lomas-sidra-1207-12-oz-whole-bean-light-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "whole bean",
+    "variant_id": "39795680247964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "ground",
+    "variant_id": "39795680280732"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "51a33c5d948da75b",
+  "first_seen": "2026-10-26",
+  "handle": "the-cookie-dough-coffee-brazil-canaan-estate-medium-coffee-by-clear-lake-coffee-roasters-on-sale-now-just-a-few-bags-left-get-yours-before-it-runs-out",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/CLCR_bag_custom_2020_a398b3b4-4916-400c-a0fa-b456e8512f1b.jpg?v=1619749183",
+  "platform": "shopify",
+  "product_id": "6710000746652",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "The Cookie Dough Coffee - Brazil Canaan Estate medium coffee By Clear Lake Coffee Roasters - On sale now, just a few bags left, get yours before it runs out!",
+  "url": "https://clearlakecoffeeroasters.com/products/the-cookie-dough-coffee-brazil-canaan-estate-medium-coffee-by-clear-lake-coffee-roasters-on-sale-now-just-a-few-bags-left-get-yours-before-it-runs-out",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "ground",
+    "variant_id": "39801403998364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "whole bean",
+    "variant_id": "39801404031132"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "a204f651c45761f7",
+  "first_seen": "2026-10-26",
+  "handle": "a-classic-romantic-costa-rican-costa-rica-reserve-16-oz-whole-bean-medium-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/CLCR_bag_custom_2020_7437a444-d588-4f4f-8857-4bd855375581.jpg?v=1619751062",
+  "platform": "shopify",
+  "product_id": "6710050619548",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "A Classic, Romantic Costa Rican Costa Rica Reserve 16 oz whole bean medium coffee",
+  "url": "https://clearlakecoffeeroasters.com/products/a-classic-romantic-costa-rican-costa-rica-reserve-16-oz-whole-bean-medium-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "whole bean",
+    "variant_id": "39801560170652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "ground",
+    "variant_id": "39801560203420"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "fc449f2792996d10",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-and-spice-guatemala-finca-nuevo-vinas-16-oz-whole-bean-medium-coffee-by-clear-lake-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/CLCR_bag_custom_2020_44f6143a-a425-44ef-ae2e-a3a8e7eec48f.jpg?v=1619751219",
+  "platform": "shopify",
+  "product_id": "6710055501980",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Chocolate and Spice Guatemala Finca Nuevo Vinas 16 oz whole bean medium coffee By Clear Lake Coffee Roasters",
+  "url": "https://clearlakecoffeeroasters.com/products/chocolate-and-spice-guatemala-finca-nuevo-vinas-16-oz-whole-bean-medium-coffee-by-clear-lake-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "whole bean",
+    "variant_id": "39801574949020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "ground",
+    "variant_id": "39801574981788"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "89ea50e9faef53f8",
+  "first_seen": "2026-10-26",
+  "handle": "surf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/ScreenShot2022-07-01at8.33.31PM.png?v=1656725818",
+  "platform": "shopify",
+  "product_id": "7327151095964",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Surf Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/surf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "41734677037212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "41734677069980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41734677102748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "41734677135516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "41734677168284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41734677201052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Standard",
+    "variant_id": "41734677233820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "41734677266588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41734677299356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Standard",
+    "variant_id": "41734705938588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Espresso",
+    "variant_id": "41734705971356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Whole Bean",
+    "variant_id": "41734706004124"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "6377ace8da725dc2",
+  "first_seen": "2026-10-26",
+  "handle": "yacht-club-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/products/ScreenShot2022-07-01at8.53.03PM.png?v=1656726894",
+  "platform": "shopify",
+  "product_id": "7327173181596",
+  "product_type": "Coffee",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Yacht Club Blend",
+  "url": "https://clearlakecoffeeroasters.com/products/yacht-club-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Standard",
+    "variant_id": "41734710231196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "41734710263964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41734710296732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Standard",
+    "variant_id": "41734710329500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "41734710362268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41734710395036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Standard",
+    "variant_id": "41734710427804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "41734710460572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41734710493340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Standard",
+    "variant_id": "41734710526108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Espresso",
+    "variant_id": "41734710558876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12 oz (340 grams) / Whole Bean",
+    "variant_id": "41734710591644"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "4e4a3f6f28fb6661",
+  "first_seen": "2026-10-26",
+  "handle": "blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/files/CAB3D62D-052A-4142-B275-5F0DCEEC65A5.jpg?v=1712535045",
+  "platform": "shopify",
+  "product_id": "7952116187292",
+  "product_type": "",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "BLEND - ESPRESSO",
+  "url": "https://clearlakecoffeeroasters.com/products/blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 43.75,
+    "title": "Default Title",
+    "variant_id": "43392312737948"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "3ad2459adc184260",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/files/E1B1B049-EFAC-407D-BF52-2C89B0336202_1_201_a.jpg?v=1712536034",
+  "platform": "shopify",
+  "product_id": "7952116678812",
+  "product_type": "",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Peru - Top Cajamarca  Toffee, good sweetness, Almond Roca, golden raisin",
+  "url": "https://clearlakecoffeeroasters.com/products/copy-of-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "43392313622684"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "1e95d3701bda8900",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-peru-organic-top-cajamarca-toffee-good-sweetness-almond-roca-golden-raisin",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/files/E1B1B049-EFAC-407D-BF52-2C89B0336202_1_201_a_6056295e-df15-41a0-9c43-95f9e97e55f5.jpg?v=1712535992",
+  "platform": "shopify",
+  "product_id": "7952120217756",
+  "product_type": "",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Brazil Eagle Mogiana  Chocolate, honey, almond, dried fruits",
+  "url": "https://clearlakecoffeeroasters.com/products/copy-of-peru-organic-top-cajamarca-toffee-good-sweetness-almond-roca-golden-raisin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.25,
+    "title": "Default Title",
+    "variant_id": "43392323813532"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "2edebd2719cbd1d3",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-peru-organic-top-cajamarca-toffee-good-sweetness-almond-roca-golden-raisin-1",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/files/E1B1B049-EFAC-407D-BF52-2C89B0336202_1_201_a_66605e84-7574-4865-9b28-5812fdc3c05b.jpg?v=1712535923",
+  "platform": "shopify",
+  "product_id": "7952121856156",
+  "product_type": "",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "Rwanda - Nyarusiza Washing Station Plum, pomegranate, black cherry, dark chocolate",
+  "url": "https://clearlakecoffeeroasters.com/products/copy-of-peru-organic-top-cajamarca-toffee-good-sweetness-almond-roca-golden-raisin-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "Default Title",
+    "variant_id": "43392329121948"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ },
+ {
+  "body_hash": "89d0d6a9bd0d3084",
+  "first_seen": "2026-10-26",
+  "handle": "the-coffee-roaster-s-playbook-how-to-create-launch-and-grow-a-profitable-specialty-coffee-brand-in-the-contemporary-market-by-zach-j-stachon-paperback-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0424/4439/0556/files/book-cover-the-coffee-roaster-s-playbook-how-to-create-launch-and-grow-a-profitable-specialty-coffee-brand-in-the-contemporary-market-by-zach-j-stachon.png?v=1765308844",
+  "platform": "shopify",
+  "product_id": "8703370625180",
+  "product_type": "",
+  "roaster_slug": "clearlakecoffeeroasters",
+  "tags": [],
+  "title": "The Coffee Roaster’s Playbook How to Create, Launch and Grow a Profitable Specialty Coffee Brand in the Contemporary Market By Zach J. Stachon Paperback edition",
+  "url": "https://clearlakecoffeeroasters.com/products/the-coffee-roaster-s-playbook-how-to-create-launch-and-grow-a-profitable-specialty-coffee-brand-in-the-contemporary-market-by-zach-j-stachon-paperback-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Default Title",
+    "variant_id": "45741117669532"
+   }
+  ],
+  "vendor": "Clear Lake Coffee Roasters"
+ }
+]

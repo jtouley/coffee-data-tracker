@@ -1,0 +1,489 @@
+[
+ {
+  "body_hash": "a32d4f3dde464535",
+  "first_seen": "2026-10-26",
+  "handle": "hometown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Blended-Hometown-Blend.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "1859463807045",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Hometown Blend",
+  "url": "https://hometownroasters.com/products/hometown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "17600769949765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "17602108653637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "17602404941893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "17602569240645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "17602733670469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Grind (Auto Drip) / 5lb",
+    "variant_id": "17602760278085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "17602813263941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Coarse Grind / 5lb",
+    "variant_id": "17602833678405"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "9a976b5938aaf541",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Blended-Midnight-Blend.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "1859625386053",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Midnight Blend",
+  "url": "https://hometownroasters.com/products/midnight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "17603213230149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "17603213262917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "17603213328453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "17603213393989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "17603213623365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Grind (Auto Drip) / 5lb",
+    "variant_id": "17603213688901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "17603213852741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Coarse Grind / 5lb",
+    "variant_id": "17603213951045"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "22c366bc70b3528a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-hulia",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Columbian-Single-Origin.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "1859678994501",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Colombia Huila",
+  "url": "https://hometownroasters.com/products/colombia-hulia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "17603983409221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "17603983441989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "17603983507525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "17603983573061"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "18420f0ac7a68035",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Guatemala-Single-Origin.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "1859709796421",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Guatemala Huehue SHB EP- Union Cantinil",
+  "url": "https://hometownroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "17604437082181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "17604437114949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "17604437180485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "17604437246021"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "004b765516a3cf81",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-don-roberto",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Costa-Rica-Single-Origin.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "1859745579077",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Costa Rica Tarrazu La Pastora",
+  "url": "https://hometownroasters.com/products/costa-rica-tarrazu-don-roberto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "17604998922309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "17604998955077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Medium-Fine Grind / 12oz",
+    "variant_id": "17604998987845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "17604999020613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "17604999086149"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "a6946a54dd44bebf",
+  "first_seen": "2026-10-26",
+  "handle": "queen-city-espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Blended-Queen-City.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "2023909949509",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Queen City Espresso",
+  "url": "https://hometownroasters.com/products/queen-city-espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "19141492604997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "19141492637765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "19141492703301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "19141492768837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "19141492932677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Grind (Auto Drip) / 5lb",
+    "variant_id": "19141492965445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "19141493030981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Coarse Grind / 5lb",
+    "variant_id": "19141493063749"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "0f1ee93b61264a5a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-pulpit-rock",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Blended-Pulpit-Rock.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "2023922139205",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Organic Pulpit Rock",
+  "url": "https://hometownroasters.com/products/organic-pulpit-rock",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "19141578620997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Medium Grind (Auto Drip) / 12oz",
+    "variant_id": "19141578653765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Fine Grind / 12oz",
+    "variant_id": "19141578719301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Coarse Grind / 12oz",
+    "variant_id": "19141578784837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "19141578948677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Grind (Auto Drip) / 5lb",
+    "variant_id": "19141578981445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "19141579046981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Coarse Grind / 5lb",
+    "variant_id": "19141579079749"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0056/5732/9733/files/Hometown-Coffee-Label-Columbian-Decaf-Single-Origin.jpg?v=1737038770",
+  "platform": "shopify",
+  "product_id": "4509443555389",
+  "product_type": "All Products",
+  "roaster_slug": "hometownroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://hometownroasters.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31972305567805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Medium Grind (Auto Drip)",
+    "variant_id": "31972305600573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine Grind",
+    "variant_id": "31972305633341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse Grind",
+    "variant_id": "31972305666109"
+   }
+  ],
+  "vendor": "Hometown Coffee Roasters"
+ }
+]

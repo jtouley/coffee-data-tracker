@@ -1,0 +1,1322 @@
+[
+ {
+  "body_hash": "975c119881f2f1dd",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-fino-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/EspressoNoirBlend.jpg?v=1640206241",
+  "platform": "shopify",
+  "product_id": "7225396134062",
+  "product_type": "Espresso Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Expresso",
+   "Italian Roasted",
+   "coffee"
+  ],
+  "title": "Espresso Noir Blend",
+  "url": "https://laviecoffeeroasters.com/products/espresso-fino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869198848174"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869198880942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869198913710"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869198946478"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869198979246"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42869199012014"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "26b6ca3e04e2f020",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/DarkRoastBlendtan.jpg?v=1629745180",
+  "platform": "shopify",
+  "product_id": "7230720409774",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Dark Roast Blend",
+  "url": "https://laviecoffeeroasters.com/products/dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41015660183726"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828342071470"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828342104238"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828342137006"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828342169774"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.86,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828342202542"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "3f2066c5ffde536d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/OrganicDarkRoastBlendGreen.jpg?v=1629749914",
+  "platform": "shopify",
+  "product_id": "7230750884014",
+  "product_type": "Organic Dark Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Dark Roast Organic",
+   "Expresso",
+   "Organic Coffee",
+   "coffee"
+  ],
+  "title": "Organic Dark Roast Blend",
+  "url": "https://laviecoffeeroasters.com/products/organic-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016205279406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828496310446"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828496343214"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828496375982"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828496408750"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828496441518"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "4c3a4f4c643d35ba",
+  "first_seen": "2026-10-26",
+  "handle": "organic-light-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/OrganicLightRoastBlendGreen.jpg?v=1629750038",
+  "platform": "shopify",
+  "product_id": "7233801257134",
+  "product_type": "Organic Light Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Organic Light Roast Blend",
+  "url": "https://laviecoffeeroasters.com/products/organic-light-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016215404718"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828526194862"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828526227630"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828526260398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828526293166"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828526325934"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "16fdd3b383e136d2",
+  "first_seen": "2026-10-26",
+  "handle": "heaven-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/HeavenBlendTan.jpg?v=1629749635",
+  "platform": "shopify",
+  "product_id": "7233806106798",
+  "product_type": "Dark, Light or Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Dark Roast Organic",
+   "Light roast",
+   "Light roast organic",
+   "Medium roast organic",
+   "certified organic coffee",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Heaven Blend",
+  "url": "https://laviecoffeeroasters.com/products/heaven-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016182505646"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828466983086"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828467015854"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828467048622"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828467081390"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.3,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828467114158"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "a391c6ef8ec1d101",
+  "first_seen": "2026-10-26",
+  "handle": "water-processed-decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/Water-ProcessedDecafEspressoBlue.jpg?v=1629750485",
+  "platform": "shopify",
+  "product_id": "7233839825070",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Colombian coffee",
+   "Decaf Espresso",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Water-Processed Decaf Espresso",
+  "url": "https://laviecoffeeroasters.com/products/water-processed-decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016296374446"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828567154862"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828567187630"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828567220398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828567253166"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828567285934"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "c55d88f660b4caff",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh-takengon",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/SumatraAcehTakengonLav.jpg?v=1629750220",
+  "platform": "shopify",
+  "product_id": "7233853456558",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Sumatran coffee",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Sumatra Aceh Takengon",
+  "url": "https://laviecoffeeroasters.com/products/sumatra-aceh-takengon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016273338542"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828547920046"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828547985582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828548018350"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828548051118"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.68,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828548116654"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "6c356baf1cbac789",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-san-agustin",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/ColombiaSanAgustinLav.jpg?v=1629744891",
+  "platform": "shopify",
+  "product_id": "7233864958126",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "San Agustin coffee",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Colombia San Agustin",
+  "url": "https://laviecoffeeroasters.com/products/colombia-san-agustin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41015831462062"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828339646638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828339679406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828339712174"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828339744942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828339777710"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "c5f5e653761cccee",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-durato-bombe",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/EthiopiaDuratoBombeLav.jpg?v=1629748176",
+  "platform": "shopify",
+  "product_id": "7233880162478",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Ethiopian coffee",
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Ethiopia Durato Bombe",
+  "url": "https://laviecoffeeroasters.com/products/ethiopia-durato-bombe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41015934255278"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828353605806"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828353638574"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828353671342"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828353704110"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828353736878"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "f2c8d5d70ba9c660",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-huehuatenango-mam",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/GuatamalaHuehuatenangoMAMLav.jpg?v=1629748867",
+  "platform": "shopify",
+  "product_id": "7233892974766",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Guatemalan coffee",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Guatamala Huehuatenango MAM",
+  "url": "https://laviecoffeeroasters.com/products/guatamala-huehuatenango-mam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41016045797550"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828370972846"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828371005614"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828371071150"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828371103918"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.05,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828371136686"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "3ef3e57359400610",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-guatamala-huehuatenango-mam",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/BrazilCerradoLav.jpg?v=1629746702",
+  "platform": "shopify",
+  "product_id": "7233926430894",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [
+   "Brazilian coffee",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://laviecoffeeroasters.com/products/copy-of-guatamala-huehuatenango-mam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41015798268078"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828331258030"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828331290798"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828331323566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828331356334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "41828331389102"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/ColombiaHoneyFR.jpg?v=1651704543",
+  "platform": "shopify",
+  "product_id": "7640910201006",
+  "product_type": "Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Honey",
+  "url": "https://laviecoffeeroasters.com/products/colombia-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / Whole Bean / In Stock",
+    "variant_id": "43962239680686"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / French Press / In Stock",
+    "variant_id": "43962239713454"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / Cold Brew / In Stock",
+    "variant_id": "43962239746222"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / Paper Filter / In Stock",
+    "variant_id": "43962239778990"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / Chemex / In Stock",
+    "variant_id": "43962239811758"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT / Espresso / In Stock",
+    "variant_id": "43962239844526"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/ColombiaNarinoFR.jpg?v=1651704622",
+  "platform": "shopify",
+  "product_id": "7640911413422",
+  "product_type": "Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Nariño",
+  "url": "https://laviecoffeeroasters.com/products/colombia-narino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Whole Bean / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972060846"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / French Press / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972093614"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Cold Brew / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972126382"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Paper Filter / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972159150"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Chemex / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972191918"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Espresso / ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes",
+    "variant_id": "42868972224686"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-special-process",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/ColombiaSpecialProcessFR.jpg?v=1651704669",
+  "platform": "shopify",
+  "product_id": "7640912101550",
+  "product_type": "",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Special Process",
+  "url": "https://laviecoffeeroasters.com/products/colombia-special-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869040513198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / French Press",
+    "variant_id": "42869040545966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869040578734"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869040611502"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869040644270"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869040677038"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "90787c7addd4afa5",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/ElSalvadorNaturalFR.jpg?v=1651704739",
+  "platform": "shopify",
+  "product_id": "7640913445038",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "El Salvador Natural",
+  "url": "https://laviecoffeeroasters.com/products/el-salvador-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / Whole Bean / 16 oz",
+    "variant_id": "42869153726638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / French Press / 16 oz",
+    "variant_id": "42869153759406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / Cold Brew / 16 oz",
+    "variant_id": "42869153792174"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / Paper Filter / 16 oz",
+    "variant_id": "42869153824942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / Chemex / 16 oz",
+    "variant_id": "42869153857710"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "ORDERS OF 3 OR MORE POUNDS (MIX OR MATCH ANY COFFEE FLAVOR) RECEIVE A 10% DISCOUNT. Can not be combined with special discount codes / Espresso / 16 oz",
+    "variant_id": "42869153890478"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/EthiopiaBombeFR.jpg?v=1651704768",
+  "platform": "shopify",
+  "product_id": "7640914297006",
+  "product_type": "Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Bombe",
+  "url": "https://laviecoffeeroasters.com/products/ethiopia-bombe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869260026030"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / French Press",
+    "variant_id": "42869260058798"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869260091566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869260124334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869260157102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869260222638"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheff-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/EthiopiaYirgacheffNaturalFR.jpg?v=1651704815",
+  "platform": "shopify",
+  "product_id": "7640915017902",
+  "product_type": "",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheff Natural",
+  "url": "https://laviecoffeeroasters.com/products/ethiopia-yirgacheff-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869277753518"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / French Press",
+    "variant_id": "42869277786286"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869277819054"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869277851822"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869277884590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869277917358"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "2435563d5f9eca88",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural-cosma",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/HondurasNaturalCosmaFR.jpg?v=1651704934",
+  "platform": "shopify",
+  "product_id": "7640918261934",
+  "product_type": "",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Natural Cosma",
+  "url": "https://laviecoffeeroasters.com/products/honduras-natural-cosma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869360394414"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / French Press",
+    "variant_id": "42869360427182"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869360459950"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869360492718"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869360525486"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869360558254"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "2435563d5f9eca88",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/HondurasNaturalFR.jpg?v=1651704972",
+  "platform": "shopify",
+  "product_id": "7640918884526",
+  "product_type": "",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Natural",
+  "url": "https://laviecoffeeroasters.com/products/honduras-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869346435246"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / French Press",
+    "variant_id": "42869346468014"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869346500782"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869346533550"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869346599086"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.1,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869346631854"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/KenyaFR.jpg?v=1651705024",
+  "platform": "shopify",
+  "product_id": "7640919769262",
+  "product_type": "Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Kenya",
+  "url": "https://laviecoffeeroasters.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869369274542"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / French Press",
+    "variant_id": "42869369307310"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869369340078"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869369372846"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869369405614"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869369438382"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-washedfr",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/NicaraguaWashedFR.jpg?v=1651705063",
+  "platform": "shopify",
+  "product_id": "7640920653998",
+  "product_type": "",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Nicaragua Washed",
+  "url": "https://laviecoffeeroasters.com/products/nicaragua-washedfr",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869379334318"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / French Press",
+    "variant_id": "42869379367086"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869379399854"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869379432622"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869379465390"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869379498158"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ },
+ {
+  "body_hash": "0b75bb4a7bf89f66",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-black-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0582/5327/9406/products/CostaRicanBlackHoneyWeb.jpg?v=1651767964",
+  "platform": "shopify",
+  "product_id": "7642382827694",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "laviecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rican Black Honey",
+  "url": "https://laviecoffeeroasters.com/products/costa-rican-black-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42869103526062"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / French Press",
+    "variant_id": "42869103558830"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42869103591598"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42869103624366"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "42869103657134"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz / Espresso",
+    "variant_id": "42869103689902"
+   }
+  ],
+  "vendor": "LaVie Coffee Roasters"
+ }
+]

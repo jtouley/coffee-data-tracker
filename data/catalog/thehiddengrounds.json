@@ -1,0 +1,685 @@
+[
+ {
+  "body_hash": "fa789ed5987c1b38",
+  "first_seen": "2026-10-26",
+  "handle": "popayan-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-popayan-reserve-typographic.png?v=1790439221",
+  "platform": "shopify",
+  "product_id": "10292984512822",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "coffee",
+   "colombia",
+   "origin",
+   "popay",
+   "reserve"
+  ],
+  "title": "Colombia Popayán Reserve",
+  "url": "https://thehiddengrounds.com/products/popayan-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "52483582066998"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "52483582099766"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483582132534"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "52483582165302"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "52483582198070"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483582230838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "52483582263606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52483582296374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483582329142"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "ea44ba604318c998",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-san-sebastian",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-colombia-san-sebastian-typographic.png?v=1790439227",
+  "platform": "shopify",
+  "product_id": "10292992409910",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "coffee",
+   "colombia",
+   "fruit",
+   "sebasti",
+   "with"
+  ],
+  "title": "Colombia San Sebastián",
+  "url": "https://thehiddengrounds.com/products/colombia-san-sebastian",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "52483625484598"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "52483625517366"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483625550134"
+   },
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 47.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "52483625582902"
+   },
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 47.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "52483625615670"
+   },
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 47.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483625648438"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "52483625681206"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52483625713974"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "52483625746742"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "d4a4c5a83492f270",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-ethiopia-yirgacheffe-typographic.png?v=1790439240",
+  "platform": "shopify",
+  "product_id": "10397701931318",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "cocoa",
+   "ethiopia",
+   "kembata",
+   "orange",
+   "strawberry"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://thehiddengrounds.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "53222678102326"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "53222678135094"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "53222678167862"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "456940ab0897aa77",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-colombia-honey-process-typographic.png?v=1790439216",
+  "platform": "shopify",
+  "product_id": "8511040258358",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "brown",
+   "colombia",
+   "honey",
+   "origin",
+   "process"
+  ],
+  "title": "Colombia Honey Process",
+  "url": "https://thehiddengrounds.com/products/colombia-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "45859567632694"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "45859567665462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "45859567698230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48606863720758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606863753526"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "48606863786294"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606863819062"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "48606863851830"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606863884598"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "7de307c9bb3b9b1e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kembata-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-ethiopia-kembata-natural-typographic.png?v=1790439236",
+  "platform": "shopify",
+  "product_id": "8511052808502",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "cocoa",
+   "ethiopia",
+   "kembata",
+   "orange",
+   "strawberry"
+  ],
+  "title": "Ethiopia Kembata Natural",
+  "url": "https://thehiddengrounds.com/products/ethiopia-kembata-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "45859676487990"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "48606873387318"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606873420086"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "308a4321aa3a8888",
+  "first_seen": "2026-10-26",
+  "handle": "rosebud-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-rosebud-espresso-typographic.png?v=1790439288",
+  "platform": "shopify",
+  "product_id": "8511063327030",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "blend",
+   "chocolatey",
+   "dark",
+   "espresso",
+   "rosebud"
+  ],
+  "title": "Rosebud Espresso",
+  "url": "https://thehiddengrounds.com/products/rosebud-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "45859778003254"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "45859778036022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "45859778068790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48606880694582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606880727350"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "48606880760118"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606880792886"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "48606880825654"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606880858422"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "2f35401a535a1373",
+  "first_seen": "2026-10-26",
+  "handle": "roaster-recommended",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-roaster-recommended-typographic.png?v=1790439284",
+  "platform": "shopify",
+  "product_id": "8527630369078",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "coffee",
+   "order",
+   "recommended",
+   "roast",
+   "roaster"
+  ],
+  "title": "Roaster Recommended",
+  "url": "https://thehiddengrounds.com/products/roaster-recommended",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "45954493677878"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "45954493710646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "45954493743414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48606876270902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606876303670"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "48606876336438"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606876369206"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "48606876401974"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 56.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "48606876434742"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "0797d9d3e87b8522",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-diofanor-ruiz-la-divisa-java",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-la-divisa-java-natural-typographic.png?v=1790438883",
+  "platform": "shopify",
+  "product_id": "9902216905014",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "colombia coffee",
+   "diofanor ruiz",
+   "java coffee",
+   "la divisa",
+   "natural coffee",
+   "single origin coffee",
+   "specialty coffee"
+  ],
+  "title": "Colombia Diofanor Ruiz — La Divisa Java Natural",
+  "url": "https://thehiddengrounds.com/products/colombia-diofanor-ruiz-la-divisa-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "51162197524790"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "51162197557558"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51162197590326"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 100.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "51162197623094"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 100.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "51162197655862"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 100.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51162197688630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "51162197721398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51162197754166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51162197786934"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ },
+ {
+  "body_hash": "797be9ec4f9fa37a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0668/9279/2118/files/hg-colombia-decaf-coffee-typographic.png?v=1790439231",
+  "platform": "shopify",
+  "product_id": "9928004075830",
+  "product_type": "Decaf Coffee",
+  "roaster_slug": "thehiddengrounds",
+  "tags": [
+   "colombia",
+   "decaf",
+   "naturally",
+   "process",
+   "sugarcane"
+  ],
+  "title": "Colombia Sugarcane Process Decaf",
+  "url": "https://thehiddengrounds.com/products/colombia-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Beans",
+    "variant_id": "51201585414454"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground for Espresso",
+    "variant_id": "51201585447222"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51201585479990"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Whole Beans",
+    "variant_id": "51201585512758"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Ground for Espresso",
+    "variant_id": "51201585545526"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.0,
+    "title": "2.5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51201585578294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "51201585611062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51201585643830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 lb / Ground for Drip/Pour Over/Aeropress",
+    "variant_id": "51201585676598"
+   }
+  ],
+  "vendor": "Hidden Grounds Coffee"
+ }
+]

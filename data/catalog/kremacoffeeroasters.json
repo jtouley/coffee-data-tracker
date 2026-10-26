@@ -1,0 +1,2408 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tupacs-revolt-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/coffeebags-183.jpg?v=1699466219",
+  "platform": "shopify",
+  "product_id": "4754470994057",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Tupac's Revolt (Peru)",
+  "url": "https://kremacoffeeroasters.com/products/tupacs-revolt-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (unground)",
+    "variant_id": "33063488356489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "33063488389257"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "e53d153b6a904c43",
+  "first_seen": "2026-10-26",
+  "handle": "meridas-mural-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/coffeebags-192.jpg?v=1699466007",
+  "platform": "shopify",
+  "product_id": "4754475679881",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Hollis Holla (Guatemala)",
+  "url": "https://kremacoffeeroasters.com/products/meridas-mural-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean (unground) / 12oz",
+    "variant_id": "33063512899721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "33063512932489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean (unground) / 5lb",
+    "variant_id": "41694793040009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "41694793072777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "41694793105545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "41694793138313"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "53b6a462f8f2ad2a",
+  "first_seen": "2026-10-26",
+  "handle": "king-kaleeb-collab-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/coffeebags-191.jpg?v=1699466057",
+  "platform": "shopify",
+  "product_id": "4754483413129",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "King Kaleeb Collab (Ethiopia)",
+  "url": "https://kremacoffeeroasters.com/products/king-kaleeb-collab-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean (unground) / 12oz",
+    "variant_id": "33063555825801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 12oz",
+    "variant_id": "33063555858569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean (unground) / 5lb",
+    "variant_id": "41694804705417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground - Drip / 5lb",
+    "variant_id": "41694804738185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / 12oz",
+    "variant_id": "41694804770953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground - French Press / 5lb",
+    "variant_id": "41694804803721"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "df58248c414f342c",
+  "first_seen": "2026-10-26",
+  "handle": "la-madre-de-monte-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/coffeebags-189.jpg?v=1699465964",
+  "platform": "shopify",
+  "product_id": "4754492752009",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Bogotá (decaf)",
+  "url": "https://kremacoffeeroasters.com/products/la-madre-de-monte-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (unground) / 12oz",
+    "variant_id": "33063596621961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground / 12oz",
+    "variant_id": "33063596654729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean (unground) / 5lb",
+    "variant_id": "41694790975625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / 5lb",
+    "variant_id": "41694791008393"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "0d3cd03d730263d1",
+  "first_seen": "2026-10-26",
+  "handle": "krema-kicks-cancer-1",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/KKC3567.jpg?v=1722981407",
+  "platform": "shopify",
+  "product_id": "7823859449993",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "KREMA KICKS CANCER",
+  "url": "https://kremacoffeeroasters.com/products/krema-kicks-cancer-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42881480884361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Fine / 12oz",
+    "variant_id": "42881480949897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Medium / 12oz",
+    "variant_id": "42881481015433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Coarse / 12oz",
+    "variant_id": "42881481080969"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kremas-city-blend-plainfield",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/PlainfieldCityBlend.jpg?v=1732723300",
+  "platform": "shopify",
+  "product_id": "7927537795209",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Krema City Blend Plainfield",
+  "url": "https://kremacoffeeroasters.com/products/kremas-city-blend-plainfield",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43161573785737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43161573818505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Fine / 12oz",
+    "variant_id": "43161573851273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Fine / 5lb",
+    "variant_id": "43161573884041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Medium / 12oz",
+    "variant_id": "43161573916809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Medium / 5lb",
+    "variant_id": "43161573949577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Coarse / 12oz",
+    "variant_id": "43161573982345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Coarse / 5lb",
+    "variant_id": "43161574015113"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kremas-city-blend-lockport",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/LockportCityBlend.jpg?v=1732725034",
+  "platform": "shopify",
+  "product_id": "7927552213129",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Krema City Blend Lockport",
+  "url": "https://kremacoffeeroasters.com/products/kremas-city-blend-lockport",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43161605767305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43161605800073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Fine / 12oz",
+    "variant_id": "43161605832841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Fine / 5lb",
+    "variant_id": "43161605865609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Medium / 12oz",
+    "variant_id": "43161605898377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Medium / 5lb",
+    "variant_id": "43161605931145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Coarse / 12oz",
+    "variant_id": "43161605963913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Coarse / 5lb",
+    "variant_id": "43161605996681"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kremas-city-blend-north-aurora",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/NorthAuroraCityBlend.jpg?v=1732725034",
+  "platform": "shopify",
+  "product_id": "7927552344201",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Krema City Blend North Aurora",
+  "url": "https://kremacoffeeroasters.com/products/kremas-city-blend-north-aurora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43161609109641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43161609142409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Fine / 12oz",
+    "variant_id": "43161609175177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Fine / 5lb",
+    "variant_id": "43161609207945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Medium / 12oz",
+    "variant_id": "43161609240713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Medium / 5lb",
+    "variant_id": "43161609273481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Coarse / 12oz",
+    "variant_id": "43161609306249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Coarse / 5lb",
+    "variant_id": "43161609339017"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kremas-city-blend-tinley-park",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/TinleyParkCityBlend_c204d414-2ea8-4143-8935-5a6a5a68a4dd.jpg?v=1732725152",
+  "platform": "shopify",
+  "product_id": "7927552475273",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Krema City Blend Tinley Park",
+  "url": "https://kremacoffeeroasters.com/products/kremas-city-blend-tinley-park",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43161609699465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43161609732233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Fine / 12oz",
+    "variant_id": "43161609765001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Fine / 5lb",
+    "variant_id": "43161609797769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Medium / 12oz",
+    "variant_id": "43161609830537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Medium / 5lb",
+    "variant_id": "43161609863305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Coarse / 12oz",
+    "variant_id": "43161609896073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground - Coarse / 5lb",
+    "variant_id": "43161609928841"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "57f29191756694af",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/sunday-9709.jpg?v=1733337579",
+  "platform": "shopify",
+  "product_id": "7931277115529",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://kremacoffeeroasters.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "45936425533577"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Ground for Cold Brew",
+    "variant_id": "45936425566345"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "73cc85cce2c53ea4",
+  "first_seen": "2026-10-26",
+  "handle": "bda-kindercrew-fundraiser-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/BDADanceCoffeeBags_aa27f9e2-91f6-40b7-bf05-306e0392fbd7.png?v=1765845044",
+  "platform": "shopify",
+  "product_id": "8389049712777",
+  "product_type": "",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "BDA Kindercrew Fundraiser \"Studio Blend\" Coffee",
+  "url": "https://kremacoffeeroasters.com/products/bda-kindercrew-fundraiser-coffee-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sloane B",
+    "variant_id": "45058252963977"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Carsyn C",
+    "variant_id": "45058252996745"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Reagan C",
+    "variant_id": "45058253029513"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Elliana H",
+    "variant_id": "45058253062281"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Rylie P",
+    "variant_id": "45058253095049"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Daniel R",
+    "variant_id": "45058253127817"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lilah S",
+    "variant_id": "45058253160585"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emilia",
+    "variant_id": "45058253193353"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sloane B",
+    "variant_id": "45058253226121"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Carsyn C",
+    "variant_id": "45058253258889"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Reagan C",
+    "variant_id": "45058253291657"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Elliana H",
+    "variant_id": "45058253324425"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Rylie P",
+    "variant_id": "45058253357193"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Daniel R",
+    "variant_id": "45058253389961"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lilah S",
+    "variant_id": "45058253422729"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emilia",
+    "variant_id": "45058253455497"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Eleanor M",
+    "variant_id": "45062968770697"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Eleanor M",
+    "variant_id": "45062968803465"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "73cc85cce2c53ea4",
+  "first_seen": "2026-10-26",
+  "handle": "bda-performance-team-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/BDADanceCoffeeBags.png?v=1765845020",
+  "platform": "shopify",
+  "product_id": "8389050237065",
+  "product_type": "",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "BDA Performance Team \"Studio Blend\" Coffee",
+  "url": "https://kremacoffeeroasters.com/products/bda-performance-team-coffee-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emma B",
+    "variant_id": "45058253783177"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emma B",
+    "variant_id": "45058254045321"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Victoria C",
+    "variant_id": "45058258665609"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ellie G",
+    "variant_id": "45058258698377"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Reagan J",
+    "variant_id": "45058258731145"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Gemma L",
+    "variant_id": "45058258763913"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Oaklyn M",
+    "variant_id": "45058258796681"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Eliana P",
+    "variant_id": "45058258829449"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emelia L",
+    "variant_id": "45058258862217"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Peyton J",
+    "variant_id": "45058258894985"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Maddie M",
+    "variant_id": "45058258927753"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Parker P",
+    "variant_id": "45058258960521"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Vivian P",
+    "variant_id": "45058258993289"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sophia C",
+    "variant_id": "45058259026057"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emilia D",
+    "variant_id": "45058259058825"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Victoria C",
+    "variant_id": "45058259091593"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ellie G",
+    "variant_id": "45058259124361"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Reagan J",
+    "variant_id": "45058259157129"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Gemma L",
+    "variant_id": "45058259189897"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Oaklyn M",
+    "variant_id": "45058259222665"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Eliana P",
+    "variant_id": "45058259255433"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emelia L",
+    "variant_id": "45058259288201"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Peyton J",
+    "variant_id": "45058259320969"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Maddie M",
+    "variant_id": "45058259353737"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Parker P",
+    "variant_id": "45058259386505"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Vivian P",
+    "variant_id": "45058259419273"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sophia C",
+    "variant_id": "45058259452041"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emilia D",
+    "variant_id": "45058259484809"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Caroline B",
+    "variant_id": "45058260566153"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Violet H",
+    "variant_id": "45058260598921"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Adelyn M",
+    "variant_id": "45058260631689"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Eleanor O",
+    "variant_id": "45058260664457"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Quinn S",
+    "variant_id": "45058260697225"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Delaney E",
+    "variant_id": "45058260729993"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lainie N",
+    "variant_id": "45058260762761"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Rory B",
+    "variant_id": "45058260795529"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Mia C",
+    "variant_id": "45058260828297"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Brynn C",
+    "variant_id": "45058260861065"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Selena D",
+    "variant_id": "45058260893833"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Abby G",
+    "variant_id": "45058260926601"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Laila J",
+    "variant_id": "45058260959369"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Brooklyn K",
+    "variant_id": "45058260992137"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Elaina M",
+    "variant_id": "45058261024905"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Claire M",
+    "variant_id": "45058261057673"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Rose O",
+    "variant_id": "45058261090441"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Laekin S",
+    "variant_id": "45058261123209"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Liliana V",
+    "variant_id": "45058261155977"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Nevaeh B",
+    "variant_id": "45058261188745"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Grace D",
+    "variant_id": "45058261221513"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Jordan H",
+    "variant_id": "45058261254281"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lydia L",
+    "variant_id": "45058261287049"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Jaliah L",
+    "variant_id": "45058261319817"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ylenia L",
+    "variant_id": "45058261352585"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / GiGi L",
+    "variant_id": "45058261385353"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Abbie O",
+    "variant_id": "45058261418121"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Vivian O",
+    "variant_id": "45058261450889"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Avery R",
+    "variant_id": "45058261483657"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Connor S",
+    "variant_id": "45058261516425"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lilith S",
+    "variant_id": "45058261549193"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Olivia S",
+    "variant_id": "45058261581961"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Heatherly E",
+    "variant_id": "45058261614729"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Caroline B",
+    "variant_id": "45058261647497"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Violet H",
+    "variant_id": "45058261680265"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Adelyn M",
+    "variant_id": "45058261713033"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Eleanor O",
+    "variant_id": "45058261745801"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Quinn S",
+    "variant_id": "45058261778569"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Delaney E",
+    "variant_id": "45058261811337"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lainie N",
+    "variant_id": "45058261844105"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Rory B",
+    "variant_id": "45058261876873"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Mia C",
+    "variant_id": "45058261909641"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Brynn C",
+    "variant_id": "45058261942409"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Selena D",
+    "variant_id": "45058261975177"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Abby G",
+    "variant_id": "45058262007945"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Laila J",
+    "variant_id": "45058262040713"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Brooklyn K",
+    "variant_id": "45058262073481"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Elaina M",
+    "variant_id": "45058262106249"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Claire M",
+    "variant_id": "45058262139017"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Rose O",
+    "variant_id": "45058262171785"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Laekin S",
+    "variant_id": "45058262204553"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Liliana V",
+    "variant_id": "45058262237321"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Nevaeh B",
+    "variant_id": "45058262270089"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Grace D",
+    "variant_id": "45058262302857"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Jordan H",
+    "variant_id": "45058262335625"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lydia L",
+    "variant_id": "45058262368393"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Jaliah L",
+    "variant_id": "45058262401161"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ylenia L",
+    "variant_id": "45058262433929"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / GiGi L",
+    "variant_id": "45058262466697"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Abbie O",
+    "variant_id": "45058262499465"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Vivian O",
+    "variant_id": "45058262532233"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Avery R",
+    "variant_id": "45058262565001"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Connor S",
+    "variant_id": "45058262597769"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lilith S",
+    "variant_id": "45058262630537"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Olivia S",
+    "variant_id": "45058262663305"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Heatherly E",
+    "variant_id": "45058262696073"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ },
+ {
+  "body_hash": "73cc85cce2c53ea4",
+  "first_seen": "2026-10-26",
+  "handle": "bda-company-fundraiser-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0369/0725/3897/files/BDADanceCoffeeBags_aa27f9e2-91f6-40b7-bf05-306e0392fbd7.png?v=1765845044",
+  "platform": "shopify",
+  "product_id": "8389060493449",
+  "product_type": "",
+  "roaster_slug": "kremacoffeeroasters",
+  "tags": [],
+  "title": "BDA Company Fundraiser \"Studio Blend\" Coffee",
+  "url": "https://kremacoffeeroasters.com/products/bda-company-fundraiser-coffee-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Adriana A",
+    "variant_id": "45058298806409"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Adriana A",
+    "variant_id": "45058299068553"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Charlotte A",
+    "variant_id": "45058308538505"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sloane A",
+    "variant_id": "45058308571273"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Taryn B",
+    "variant_id": "45058308604041"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Arriea B",
+    "variant_id": "45058308636809"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Nora B",
+    "variant_id": "45058308669577"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Cecelia B",
+    "variant_id": "45058308702345"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Taylor B",
+    "variant_id": "45058308735113"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Isabella CA",
+    "variant_id": "45058308767881"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Olivia Ch",
+    "variant_id": "45058308800649"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Olivia C",
+    "variant_id": "45058308833417"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sophia C",
+    "variant_id": "45058308866185"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ella C",
+    "variant_id": "45058308898953"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Olivia Co",
+    "variant_id": "45058308931721"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Dylan C",
+    "variant_id": "45058308964489"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Jerome C",
+    "variant_id": "45058308997257"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Jaslene D",
+    "variant_id": "45058309030025"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Shae D",
+    "variant_id": "45058309062793"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Grayson D",
+    "variant_id": "45058309095561"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sadie D",
+    "variant_id": "45058309128329"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Isa F",
+    "variant_id": "45058309161097"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Kaitlyn G",
+    "variant_id": "45058309193865"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Haley G",
+    "variant_id": "45058309226633"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Bridgette G",
+    "variant_id": "45058309259401"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Josie G",
+    "variant_id": "45058309292169"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Blaire G",
+    "variant_id": "45058309324937"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Reese G",
+    "variant_id": "45058309357705"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emilia H",
+    "variant_id": "45058309390473"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Julianne H",
+    "variant_id": "45058309423241"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Anya H",
+    "variant_id": "45058309456009"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Gracelyn H",
+    "variant_id": "45058309488777"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Madelyn H",
+    "variant_id": "45058309521545"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Zoey J",
+    "variant_id": "45058309554313"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Kennedy K",
+    "variant_id": "45058309587081"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / McKinley K",
+    "variant_id": "45058309619849"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lilly L",
+    "variant_id": "45058309652617"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lucy L",
+    "variant_id": "45058309685385"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Leah M",
+    "variant_id": "45058309718153"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ashlyn M",
+    "variant_id": "45058309750921"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Declan M",
+    "variant_id": "45058309783689"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Audrey M",
+    "variant_id": "45058309816457"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Kinley M",
+    "variant_id": "45058309849225"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Malia M",
+    "variant_id": "45058309881993"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Teagan M",
+    "variant_id": "45058309914761"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Morgan O",
+    "variant_id": "45058309947529"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Scarlett O",
+    "variant_id": "45058309980297"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Stella O",
+    "variant_id": "45058310013065"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Anahlia O",
+    "variant_id": "45058310045833"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ellie P",
+    "variant_id": "45058310078601"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Mia P",
+    "variant_id": "45058310111369"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Reagan P",
+    "variant_id": "45058310144137"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Riley P",
+    "variant_id": "45058310176905"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Evie P",
+    "variant_id": "45058310209673"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Penelope R",
+    "variant_id": "45058310242441"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Mihaela R",
+    "variant_id": "45058310275209"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Erin R",
+    "variant_id": "45058310307977"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Quinn R",
+    "variant_id": "45058310340745"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Sofia S",
+    "variant_id": "45058310373513"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lauren S",
+    "variant_id": "45058310406281"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Kenzie S",
+    "variant_id": "45058310439049"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Aubrey T",
+    "variant_id": "45058310471817"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Tierney T",
+    "variant_id": "45058310504585"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Kinley T",
+    "variant_id": "45058310537353"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Addie U",
+    "variant_id": "45058310570121"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Destiny V",
+    "variant_id": "45058310602889"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Bailee V",
+    "variant_id": "45058310635657"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Lila V",
+    "variant_id": "45058310668425"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Emery V",
+    "variant_id": "45058310701193"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Harper V",
+    "variant_id": "45058310733961"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Drew V",
+    "variant_id": "45058310766729"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Addyson V",
+    "variant_id": "45058310799497"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Ashley W",
+    "variant_id": "45058310832265"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean / Isabella W",
+    "variant_id": "45058310865033"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Charlotte A",
+    "variant_id": "45058310897801"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sloane A",
+    "variant_id": "45058310930569"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Taryn B",
+    "variant_id": "45058310963337"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Arriea B",
+    "variant_id": "45058310996105"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Nora B",
+    "variant_id": "45058311028873"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Cecelia B",
+    "variant_id": "45058311061641"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Taylor B",
+    "variant_id": "45058311094409"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Isabella CA",
+    "variant_id": "45058311127177"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Olivia Ch",
+    "variant_id": "45058311159945"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Olivia C",
+    "variant_id": "45058311192713"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sophia C",
+    "variant_id": "45058311225481"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ella C",
+    "variant_id": "45058311258249"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Olivia Co",
+    "variant_id": "45058311291017"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Dylan C",
+    "variant_id": "45058311323785"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Jerome C",
+    "variant_id": "45058311356553"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Jaslene D",
+    "variant_id": "45058311389321"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Shae D",
+    "variant_id": "45058311422089"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Grayson D",
+    "variant_id": "45058311454857"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sadie D",
+    "variant_id": "45058311487625"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Isa F",
+    "variant_id": "45058311520393"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Kaitlyn G",
+    "variant_id": "45058311553161"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Haley G",
+    "variant_id": "45058311585929"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Bridgette G",
+    "variant_id": "45058311618697"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Josie G",
+    "variant_id": "45058311651465"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Blaire G",
+    "variant_id": "45058311684233"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Reese G",
+    "variant_id": "45058311717001"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emilia H",
+    "variant_id": "45058311749769"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Julianne H",
+    "variant_id": "45058311782537"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Anya H",
+    "variant_id": "45058311815305"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Gracelyn H",
+    "variant_id": "45058311848073"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Madelyn H",
+    "variant_id": "45058311880841"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Zoey J",
+    "variant_id": "45058311913609"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Kennedy K",
+    "variant_id": "45058311946377"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / McKinley K",
+    "variant_id": "45058311979145"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lilly L",
+    "variant_id": "45058312011913"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lucy L",
+    "variant_id": "45058312044681"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Leah M",
+    "variant_id": "45058312077449"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ashlyn M",
+    "variant_id": "45058312110217"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Declan M",
+    "variant_id": "45058312142985"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Audrey M",
+    "variant_id": "45058312175753"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Kinley M",
+    "variant_id": "45058312208521"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Malia M",
+    "variant_id": "45058312241289"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Teagan M",
+    "variant_id": "45058312274057"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Morgan O",
+    "variant_id": "45058312306825"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Scarlett O",
+    "variant_id": "45058312339593"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Stella O",
+    "variant_id": "45058312372361"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Anahlia O",
+    "variant_id": "45058312405129"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ellie P",
+    "variant_id": "45058312437897"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Mia P",
+    "variant_id": "45058312470665"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Reagan P",
+    "variant_id": "45058312503433"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Riley P",
+    "variant_id": "45058312536201"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Evie P",
+    "variant_id": "45058312568969"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Penelope R",
+    "variant_id": "45058312601737"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Mihaela R",
+    "variant_id": "45058312634505"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Erin R",
+    "variant_id": "45058312667273"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Quinn R",
+    "variant_id": "45058312700041"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Sofia S",
+    "variant_id": "45058312732809"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lauren S",
+    "variant_id": "45058312765577"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Kenzie S",
+    "variant_id": "45058312798345"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Aubrey T",
+    "variant_id": "45058312831113"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Tierney T",
+    "variant_id": "45058312863881"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Kinley T",
+    "variant_id": "45058312896649"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Addie U",
+    "variant_id": "45058312929417"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Destiny V",
+    "variant_id": "45058312962185"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Bailee V",
+    "variant_id": "45058312994953"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Lila V",
+    "variant_id": "45058313027721"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Emery V",
+    "variant_id": "45058313060489"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Harper V",
+    "variant_id": "45058313093257"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Drew V",
+    "variant_id": "45058313126025"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Addyson V",
+    "variant_id": "45058313158793"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Ashley W",
+    "variant_id": "45058313191561"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground / Isabella W",
+    "variant_id": "45058313224329"
+   }
+  ],
+  "vendor": "Krema Coffee House"
+ }
+]

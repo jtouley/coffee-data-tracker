@@ -1,0 +1,3680 @@
+[
+ {
+  "body_hash": "3f45215197bcae72",
+  "first_seen": "2026-10-26",
+  "handle": "collections-dark-roast-jackd",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Jackd_12oz_Front.png?v=1781796270",
+  "platform": "shopify",
+  "product_id": "1138073862180",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "bar-color-#A06D24"
+  ],
+  "title": "JACK'D",
+  "url": "https://www.snakeriverroastingco.com/products/collections-dark-roast-jackd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "10297195692068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "10297195724836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "10297195757604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "10297195790372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "10297195823140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "10297195855908"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "8c6b822185ae6544",
+  "first_seen": "2026-10-26",
+  "handle": "collections-morning-coffee-samples-kirbys-tram-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Kirbys_4oz_Front.png?v=1784061731",
+  "platform": "shopify",
+  "product_id": "4359132512292",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Dark",
+   "bar-color-#995035",
+   "stocking"
+  ],
+  "title": "Kirby's First Tram",
+  "url": "https://www.snakeriverroastingco.com/products/collections-morning-coffee-samples-kirbys-tram-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194614562852"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194614595620"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "686b6fc85401b2fe",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-size-roam-blend-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Roam_4oz_Front_2f2b89ec-ae00-4e53-a0e8-0e1ce4b87992.png?v=1784063691",
+  "platform": "shopify",
+  "product_id": "4359137132580",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "bar-color-#546A6C",
+   "stocking"
+  ],
+  "title": "Roam Wyoming Blend",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-size-roam-blend-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194649100324"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194649165860"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "abd046eea006476a",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-lithium-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Lithium_4oz_Front_15df501e-4fe5-4e30-a972-fdfc931da1ea.png?v=1784063641",
+  "platform": "shopify",
+  "product_id": "4359141031972",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Light",
+   "bar-color-#545454",
+   "stocking"
+  ],
+  "title": "Lithium",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-lithium-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194678591524"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194678624292"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "3d64d106b36bfe1e",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-gs-supafly-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GsSupafly_4oz_Front_edbc2b67-8fa7-43c2-8bb4-c7513dd796ba.png?v=1784063075",
+  "platform": "shopify",
+  "product_id": "4359147946020",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "bar-color-#638A6E",
+   "stocking"
+  ],
+  "title": "G's Supafly Stone Dry",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-gs-supafly-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194725679140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194725711908"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "c2179e7a5702cc65",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-deadmans-bar-espresso-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Deadmans_4oz_Front_7e7b5ae5-1086-42a3-93a1-9037e2c24332.png?v=1784062388",
+  "platform": "shopify",
+  "product_id": "4359151026212",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Espresso",
+   "Sample Light",
+   "bar-color-#7CA097",
+   "stocking"
+  ],
+  "title": "Deadman's Bar",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-deadmans-bar-espresso-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194744619044"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194744651812"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "bedf9e5c97df020b",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-big-kahuna-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_BigKahuna_4oz_Front_80eed14e-84e1-41f2-81b8-21332f0d0fdb.png?v=1784062197",
+  "platform": "shopify",
+  "product_id": "4359157809188",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "bar-color-#4b5b75",
+   "stocking"
+  ],
+  "title": "Big Kahuna",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-big-kahuna-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194781974564"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194782007332"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "1c92fcdb0adbaef4",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-gros-ventre-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GrosVentre_4oz_Front_ece7a57e-ba6d-480f-baff-1f7f91a5020e.png?v=1784063036",
+  "platform": "shopify",
+  "product_id": "4359160922148",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Dark",
+   "bar-color-#846C5E",
+   "stocking"
+  ],
+  "title": "Gros Ventre",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-gros-ventre-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194808090660"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194808123428"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "821066c41afcab1c",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-fishs-morning-cast-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Fishs_4oz_Front_f1f7cd15-a109-48fe-afb0-9638e2dd4a03.png?v=1784062933",
+  "platform": "shopify",
+  "product_id": "4359182254116",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Dark",
+   "bar-color-#CAABA0",
+   "stocking"
+  ],
+  "title": "Fish's Morning Cast",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-fishs-morning-cast-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31194959446052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31194959478820"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "58cba9bffbf18645",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-lazy-river-decaf-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_LazyRiver_4oz_Front_f58eb59b-ff2d-4fb4-a21f-ce55a5e62d86.png?v=1784063597",
+  "platform": "shopify",
+  "product_id": "4359195197476",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Espresso",
+   "Sample Light",
+   "bar-color-#9EC7B9",
+   "stocking"
+  ],
+  "title": "Lazy River (Decaf)",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-lazy-river-decaf-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195038285860"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195038318628"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "6789139a8b39df24",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-papua-new-guinea-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Papua_4oz_Front.png?v=1784061852",
+  "platform": "shopify",
+  "product_id": "4359223377956",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "Sample Origin",
+   "bar-color-#D1AE90",
+   "stocking"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-papua-new-guinea-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195217035300"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195217068068"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0b40d720d78b46cb",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-fall-creek-decaf-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_FallCreek_4oz_Front_3e3b446d-e3c9-447e-8ae7-526db197ecf9.png?v=1784062871",
+  "platform": "shopify",
+  "product_id": "4359226327076",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Espresso",
+   "Sample Light",
+   "bar-color-#F4CB78",
+   "stocking"
+  ],
+  "title": "Fall Creek (DECAF)",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-fall-creek-decaf-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195245281316"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195245314084"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "5f5593596e3b3d6f",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-brazil-coffee-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Brazil_4oz_Front_22335b0d-603a-4c2c-bb87-06de0a387fff.png?v=1784062291",
+  "platform": "shopify",
+  "product_id": "4359254540324",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "Sample Origin",
+   "bar-color-#C65C54",
+   "stocking"
+  ],
+  "title": "Brazil",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-brazil-coffee-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195401093156"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195401125924"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "067f62261020979f",
+  "first_seen": "2026-10-26",
+  "handle": "collections-world-coffees-ethiopia-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Ethiopia_4oz_Front_a8bfffcf-027a-43a4-be6b-19743c3c8174.png?v=1784062618",
+  "platform": "shopify",
+  "product_id": "4359257227300",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "Sample Origin",
+   "bar-color-#EDC4BE",
+   "stocking"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.snakeriverroastingco.com/products/collections-world-coffees-ethiopia-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195429109796"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195429142564"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0477b6b4368cd910",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-honduras-coffee-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Honduras_4oz_Front_b640d38a-1ff3-49f2-8b6e-571eec541d12.png?v=1784063223",
+  "platform": "shopify",
+  "product_id": "4359264239652",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Medium",
+   "Sample Origin",
+   "bar-color-#BC7D61",
+   "stocking"
+  ],
+  "title": "Honduras",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-honduras-coffee-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195484684324"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195484717092"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "a77cd68050689415",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-wild-iris-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_WildIris_4oz_Front_629e15e9-7b1c-46ac-9407-48eccc42d102.png?v=1784063819",
+  "platform": "shopify",
+  "product_id": "4359266959396",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Espresso",
+   "Sample Light",
+   "bar-color-#CC84A2",
+   "stocking"
+  ],
+  "title": "Wild iris",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-wild-iris-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195506999332"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195507032100"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "ef973ab41aa4dec0",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-jackd-br-dark-roast-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Jackd_4oz_Front_40251448-eaa7-433b-9a5f-cca5fb4065fa.png?v=1784063273",
+  "platform": "shopify",
+  "product_id": "4359278559268",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Dark",
+   "bar-color-#A06D24",
+   "stocking"
+  ],
+  "title": "Jack'd",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-jackd-br-dark-roast-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195588427812"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195588460580"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "4f7153af5972eb96",
+  "first_seen": "2026-10-26",
+  "handle": "collections-sample-sizes-white-spider-taster",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_WhiteSpider_4oz_Front_a97b838b-9819-455e-b155-e3d620ecca5a.png?v=1784063788",
+  "platform": "shopify",
+  "product_id": "4359318962212",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Espresso",
+   "Sample Light",
+   "bar-color-#282828",
+   "stocking"
+  ],
+  "title": "White Spider",
+  "url": "https://www.snakeriverroastingco.com/products/collections-sample-sizes-white-spider-taster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "31195790442532"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "31195790475300"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "61c815d8bc6cba4d",
+  "first_seen": "2026-10-26",
+  "handle": "collections-energizing-blends-lithium-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Lithium_12oz_Front.png?v=1781795582",
+  "platform": "shopify",
+  "product_id": "543914459172",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Light",
+   "Cris' Favorites",
+   "bar-color-#545454"
+  ],
+  "title": "LITHIUM",
+  "url": "https://www.snakeriverroastingco.com/products/collections-energizing-blends-lithium-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "7093070331940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground",
+    "variant_id": "7093070364708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "7093070397476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "7093070430244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "7093070463012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "7093070495780"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "d2d365b10f870982",
+  "first_seen": "2026-10-26",
+  "handle": "collections-adventure-series-roam-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Roam_12oz_Front.png?v=1781795225",
+  "platform": "shopify",
+  "product_id": "703171330084",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Cait's Favorites",
+   "Coffee Collection",
+   "Coffee Collection Medium",
+   "Mekki's Favorites",
+   "Most Popular",
+   "bar-color-#4b5b75",
+   "bar-color-#546A6C"
+  ],
+  "title": "ROAM WYOMING BLEND",
+  "url": "https://www.snakeriverroastingco.com/products/collections-adventure-series-roam-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "7946189766692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Ground",
+    "variant_id": "7946189799460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "7946189832228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "7946189864996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "7946189897764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "7946189930532"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "f1c01b183fc24d57",
+  "first_seen": "2026-10-26",
+  "handle": "collections-light-roasts-guatemala-ella",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GuatemalaElla_12oz_Front_036bd78b-2a25-4e6e-ae30-bce5887f4be6.png?v=1781796722",
+  "platform": "shopify",
+  "product_id": "7772030042361",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Light",
+   "Coffee Collection Origin",
+   "bar-color-#DDA634"
+  ],
+  "title": "GUATEMALA ELLA",
+  "url": "https://www.snakeriverroastingco.com/products/collections-light-roasts-guatemala-ella",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43307507843321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground",
+    "variant_id": "43307507876089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "43307507908857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "43307507941625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43307507974393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "43307508007161"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "c2179e7a5702cc65",
+  "first_seen": "2026-10-26",
+  "handle": "collections-espresso-blends-deadmans-bar",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Deadmans_12oz_Front.png?v=1781796339",
+  "platform": "shopify",
+  "product_id": "7853662405",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Coffee Collection Espresso",
+   "bar-color-#7CA097"
+  ],
+  "title": "DEADMAN'S BAR",
+  "url": "https://www.snakeriverroastingco.com/products/collections-espresso-blends-deadmans-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "29469232837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29469232901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "29469232965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "29469233029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "29469233093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "29469233157"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "821066c41afcab1c",
+  "first_seen": "2026-10-26",
+  "handle": "collections-morning-coffees-fishs-morning-cast",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Fishs_12oz_Front.png?v=1781796189",
+  "platform": "shopify",
+  "product_id": "7853662597",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "bar-color-#CAABA0"
+  ],
+  "title": "FISH'S MORNING CAST",
+  "url": "https://www.snakeriverroastingco.com/products/collections-morning-coffees-fishs-morning-cast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "29469233349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29469233413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "29469233477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "29469233541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "29469233605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "29469233669"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "3d64d106b36bfe1e",
+  "first_seen": "2026-10-26",
+  "handle": "collections-rich-smooth-coffees-gs-supafly",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GsSupafly_12oz_Front.png?v=1781795275",
+  "platform": "shopify",
+  "product_id": "7853662917",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Medium",
+   "Most Popular",
+   "bar-color-#638A6E"
+  ],
+  "title": "G'S SUPAFLY",
+  "url": "https://www.snakeriverroastingco.com/products/collections-rich-smooth-coffees-gs-supafly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "29469233989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29469234053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "29469234117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "29469234181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "29469234245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "29469234309"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "58cba9bffbf18645",
+  "first_seen": "2026-10-26",
+  "handle": "collections-decaf-coffees-lazy-river-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_LazyRiver_12oz_Front.png?v=1781795738",
+  "platform": "shopify",
+  "product_id": "7853663109",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Espresso",
+   "Coffee Collection Medium",
+   "Cris' Favorites",
+   "Mekki's Favorites",
+   "bar-color-#9EC7B9"
+  ],
+  "title": "LAZY RIVER DECAF",
+  "url": "https://www.snakeriverroastingco.com/products/collections-decaf-coffees-lazy-river-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47083381096697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground",
+    "variant_id": "47083381129465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47083381162233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "47083381195001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47083381227769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "47083381260537"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "1c92fcdb0adbaef4",
+  "first_seen": "2026-10-26",
+  "handle": "collections-french-roast-gros-ventre",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GrosVentre_12oz_Front.png?v=1781795343",
+  "platform": "shopify",
+  "product_id": "7853663365",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "bar-color-#846C5E"
+  ],
+  "title": "GROS VENTRE",
+  "url": "https://www.snakeriverroastingco.com/products/collections-french-roast-gros-ventre",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "29469235077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29469235141"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "29469235205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "29469235269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "29469235333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "29469235397"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "4387537abcd57e52",
+  "first_seen": "2026-10-26",
+  "handle": "collections-half-caff-coffees-lunch-counter-br",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_LunchCounter_12oz_Front.png?v=1781795693",
+  "platform": "shopify",
+  "product_id": "7919873458425",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Cait's Favorites",
+   "Coffee Collection",
+   "Coffee Collection Espresso",
+   "Coffee Collection Medium",
+   "Cris' Favorites",
+   "Mekki's Favorites",
+   "bar-color-#81C3DF"
+  ],
+  "title": "LUNCH COUNTER (HALF-CAFF)",
+  "url": "https://www.snakeriverroastingco.com/products/collections-half-caff-coffees-lunch-counter-br",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43813120049401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "43813120082169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "43813120114937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "43813120147705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43813120180473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "43813120213241"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "1b9bc9980f0c2ef9",
+  "first_seen": "2026-10-26",
+  "handle": "collections-morning-blends-golden-hour",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GoldenHour_12oz_Front.png?v=1781796378",
+  "platform": "shopify",
+  "product_id": "7960912986361",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Medium",
+   "Most Popular"
+  ],
+  "title": "GOLDEN HOUR",
+  "url": "https://www.snakeriverroastingco.com/products/collections-morning-blends-golden-hour",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43975290814713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground",
+    "variant_id": "43975290847481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43975290880249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "43975290913017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44018445582585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "44018446663929"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "7e86829b57267e14",
+  "first_seen": "2026-10-26",
+  "handle": "big-kahuna-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_edb4cfaf-2d40-409a-8672-e430fb4891f2.jpg?v=1700198601",
+  "platform": "shopify",
+  "product_id": "7969683308793",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#4b5b75"
+  ],
+  "title": "BIG KAHUNA",
+  "url": "https://www.snakeriverroastingco.com/products/big-kahuna-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006161940729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006161973497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006162006265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006162039033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006162071801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006162104569"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "64ca8781f45d9705",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-brazil-br-heavy-sweet-aftertaste",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_3703fd46-1d41-4215-9aee-b046c51fae9a.jpg?v=1700198557",
+  "platform": "shopify",
+  "product_id": "7969684521209",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Single Origin",
+   "Recharge Subscription Coffee",
+   "bar-color-#C65C54"
+  ],
+  "title": "BRAZIL",
+  "url": "https://www.snakeriverroastingco.com/products/copy-of-brazil-br-heavy-sweet-aftertaste",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006177997049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Ground",
+    "variant_id": "44006178029817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006178062585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006178095353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006178128121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006178160889"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "90c740f4a467f29f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-cascade-canyon-summer-blend-br-textured-syrupy-rich",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_4b859de2-9801-464c-b429-ff776d925729.jpg?v=1700198531",
+  "platform": "shopify",
+  "product_id": "7969684619513",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#D3837A"
+  ],
+  "title": "CASCADE CANYON",
+  "url": "https://www.snakeriverroastingco.com/products/copy-of-cascade-canyon-summer-blend-br-textured-syrupy-rich",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45419735482617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "45419735515385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45419735548153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2lb / Ground",
+    "variant_id": "45419735580921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45419735613689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5lb / Ground",
+    "variant_id": "45419735646457"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "3848a1e4d37581ef",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-deadmans-bar-br-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_3e3b211e-c265-469c-853b-ed87f96b5b67.jpg?v=1700198513",
+  "platform": "shopify",
+  "product_id": "7969684848889",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Espresso",
+   "Recharge Subscription Coffee",
+   "bar-color-#7CA097"
+  ],
+  "title": "DEADMAN'S BAR",
+  "url": "https://www.snakeriverroastingco.com/products/copy-of-deadmans-bar-br-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006180159737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006180192505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006180225273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006180258041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006180290809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006180323577"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "933c07e078658a78",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-ethiopia-br-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_00de3001-8a91-4d29-9a69-abfff6f2a366.jpg?v=1700198489",
+  "platform": "shopify",
+  "product_id": "7969685045497",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Espresso",
+   "Recharge Light",
+   "Recharge Single Origin",
+   "Recharge Subscription Coffee",
+   "bar-color-#EDC4BE"
+  ],
+  "title": "ETHIOPIA",
+  "url": "https://www.snakeriverroastingco.com/products/copy-of-ethiopia-br-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006180454649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Ground",
+    "variant_id": "44006180487417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006180520185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006180552953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006180585721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006180618489"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "11ac9e68029cae9c",
+  "first_seen": "2026-10-26",
+  "handle": "fall-creek-decaf-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_7b71d0a7-d998-453e-a239-7d9e8c29baaf.jpg?v=1700197687",
+  "platform": "shopify",
+  "product_id": "7969685143801",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#F4CB78"
+  ],
+  "title": "FALL CREEK (DECAF)",
+  "url": "https://www.snakeriverroastingco.com/products/fall-creek-decaf-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006180880633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006180913401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006180946169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006180978937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006181011705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006181044473"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "177a303d096f9ad2",
+  "first_seen": "2026-10-26",
+  "handle": "fishs-morning-cast",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_ca5f8f00-1e48-41ee-8471-93aa17312865.jpg?v=1700198134",
+  "platform": "shopify",
+  "product_id": "7969685274873",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#CAABA0"
+  ],
+  "title": "FISH'S MORNING CAST",
+  "url": "https://www.snakeriverroastingco.com/products/fishs-morning-cast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006181241081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006181273849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006181306617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006181339385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006181372153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006181404921"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "013ca7f701a6690e",
+  "first_seen": "2026-10-26",
+  "handle": "gs-supafly-stone-dry",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_794a3b8b-3ae1-4b2b-8660-9a06b48a98ef.jpg?v=1700197664",
+  "platform": "shopify",
+  "product_id": "7969685373177",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#638A6E"
+  ],
+  "title": "G'S SUPAFLY",
+  "url": "https://www.snakeriverroastingco.com/products/gs-supafly-stone-dry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006181503225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006181535993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006181568761"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006181601529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006181634297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006181667065"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "1080919d3684120c",
+  "first_seen": "2026-10-26",
+  "handle": "gros-ventre",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_9423d32f-9df1-4736-83ae-711ec844f6a6.jpg?v=1700197645",
+  "platform": "shopify",
+  "product_id": "7969685930233",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#846C5E"
+  ],
+  "title": "GROS VENTRE",
+  "url": "https://www.snakeriverroastingco.com/products/gros-ventre",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006182387961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006182420729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006182453497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006182486265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006182519033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006182551801"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "9476334f890dc214",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ella",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_dba6981f-3716-4b6d-ab85-8a7a95cfb22a.jpg?v=1700198076",
+  "platform": "shopify",
+  "product_id": "7969686159609",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Light",
+   "Recharge Single Origin",
+   "Recharge Subscription Coffee",
+   "bar-color-#9599C6"
+  ],
+  "title": "GUATEMALA ELLA",
+  "url": "https://www.snakeriverroastingco.com/products/guatemala-ella",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006183043321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Ground",
+    "variant_id": "44006183076089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006183108857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006183141625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006183174393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006183207161"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0477b6b4368cd910",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_19ee6890-c516-4c66-9a14-17cfbe203cbe.jpg?v=1700198049",
+  "platform": "shopify",
+  "product_id": "7969686323449",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Single Origin",
+   "Recharge Subscription Coffee",
+   "bar-color-#BC7D61"
+  ],
+  "title": "HONDURAS",
+  "url": "https://www.snakeriverroastingco.com/products/honduras-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006183600377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006183633145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006183665913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006183698681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006183731449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006183764217"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "e5fdf331212f3348",
+  "first_seen": "2026-10-26",
+  "handle": "jackd",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_66722d8e-cf1a-435d-8d41-d435d6f4ec95.jpg?v=1700198025",
+  "platform": "shopify",
+  "product_id": "7969686454521",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#A06D24"
+  ],
+  "title": "JACK'D",
+  "url": "https://www.snakeriverroastingco.com/products/jackd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006183928057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006183960825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006183993593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006184026361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006184059129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006184091897"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "f5282649476c3948",
+  "first_seen": "2026-10-26",
+  "handle": "kirbys-first-tram-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_bc80de62-43d6-40dd-8e0d-0859c01f1b9d.jpg?v=1700197622",
+  "platform": "shopify",
+  "product_id": "7969686552825",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "bar-color-#995035"
+  ],
+  "title": "KIRBY'S FIRST TRAM",
+  "url": "https://www.snakeriverroastingco.com/products/kirbys-first-tram-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006184288505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006184321273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006184354041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006184386809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006184419577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006184452345"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0b193c512554296f",
+  "first_seen": "2026-10-26",
+  "handle": "lazy-river-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_812d5b73-0d5f-449c-b3c7-bc39bb224f89.jpg?v=1700197603",
+  "platform": "shopify",
+  "product_id": "7969686782201",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Espresso",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#9EC7B9"
+  ],
+  "title": "LAZY RIVER (DECAF)",
+  "url": "https://www.snakeriverroastingco.com/products/lazy-river-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006185435385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006185468153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006185500921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006185533689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006185566457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006185599225"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "4387537abcd57e52",
+  "first_seen": "2026-10-26",
+  "handle": "lunch-counter-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_98842fce-3196-4394-bf04-621d0af8a3e6.jpg?v=1700198685",
+  "platform": "shopify",
+  "product_id": "7969687273721",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Espresso",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#81C3DF"
+  ],
+  "title": "LUNCH COUNTER (HALF-CAFF)",
+  "url": "https://www.snakeriverroastingco.com/products/lunch-counter-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006187041017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground",
+    "variant_id": "44006187073785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006187106553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006187139321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006187172089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006187204857"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "275d075f1cac71d0",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_a361743b-bf79-476a-b4fd-2ca1df9c5138.jpg?v=1700197990",
+  "platform": "shopify",
+  "product_id": "7969687437561",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Dark",
+   "Recharge Medium",
+   "Recharge Single Origin",
+   "Recharge Subscription Coffee",
+   "bar-color-#D1AE90"
+  ],
+  "title": "PAPUA NEW GUINEA",
+  "url": "https://www.snakeriverroastingco.com/products/papua-new-guinea-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006187598073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Ground",
+    "variant_id": "44006187630841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006187663609"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006187696377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006187729145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006187761913"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "2abdc0dfb9cb1187",
+  "first_seen": "2026-10-26",
+  "handle": "roam-wyoming-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_c5cb912b-aa29-484b-a293-84ee6b49b70c.jpg?v=1700197800",
+  "platform": "shopify",
+  "product_id": "7969687535865",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#546A6C"
+  ],
+  "title": "ROAM WYOMING BLEND",
+  "url": "https://www.snakeriverroastingco.com/products/roam-wyoming-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006187860217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Ground",
+    "variant_id": "44006187892985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006187925753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006187958521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006187991289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006188024057"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "39004cc661ade7e1",
+  "first_seen": "2026-10-26",
+  "handle": "white-spider-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_407a73ad-6f73-4ccb-9b4a-217cf0e9ae4b.jpg?v=1700197714",
+  "platform": "shopify",
+  "product_id": "7969687765241",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Espresso",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#282828"
+  ],
+  "title": "WHITE SPIDER",
+  "url": "https://www.snakeriverroastingco.com/products/white-spider-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006188810489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Ground",
+    "variant_id": "44006188843257"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006188876025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006188908793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006188941561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006188974329"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "9fd6b49ba3ebcd6f",
+  "first_seen": "2026-10-26",
+  "handle": "wild-iris",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_ef1006ea-f5b8-4bc7-a10e-15b1cb9f367c.jpg?v=1700197570",
+  "platform": "shopify",
+  "product_id": "7969688223993",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Espresso",
+   "Recharge Light",
+   "Recharge Subscription Coffee",
+   "bar-color-#CC84A2"
+  ],
+  "title": "WILD IRIS",
+  "url": "https://www.snakeriverroastingco.com/products/wild-iris",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44006189334777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12 oz / Ground",
+    "variant_id": "44006189367545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44006189400313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2 lbs / Ground",
+    "variant_id": "44006189433081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44006189465849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5 lbs / Ground",
+    "variant_id": "44006189498617"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "6dd9a550c85da6a7",
+  "first_seen": "2026-10-26",
+  "handle": "lithium-1",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/1_b4b1353d-192a-4844-a10f-09ad92fe6315.jpg?v=1700198658",
+  "platform": "shopify",
+  "product_id": "8010795745529",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Hide Quick Shop",
+   "Pure Subscription",
+   "Recharge Light",
+   "Recharge Subscription Coffee",
+   "bar-color-#545454"
+  ],
+  "title": "LITHIUM",
+  "url": "https://www.snakeriverroastingco.com/products/lithium-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44129938309369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12 oz / Ground",
+    "variant_id": "44129938342137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44129938374905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2 lbs / Ground",
+    "variant_id": "44129938407673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44129938440441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5 lbs / Ground",
+    "variant_id": "44129938473209"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "5f5593596e3b3d6f",
+  "first_seen": "2026-10-26",
+  "handle": "collections-classic-blends-brazil-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Brazil_12oz_Front.png?v=1781795859",
+  "platform": "shopify",
+  "product_id": "8204719749",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Coffee Collection Origin",
+   "Cris' Favorites",
+   "bar-color-#C65C54"
+  ],
+  "title": "BRAZIL",
+  "url": "https://www.snakeriverroastingco.com/products/collections-classic-blends-brazil-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32197271045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32197271109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32197271173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32197271237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32197271301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32197271365"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "6789139a8b39df24",
+  "first_seen": "2026-10-26",
+  "handle": "collections-global-coffees-papua-new-guinea-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Papua_12oz_Front.png?v=1781795906",
+  "platform": "shopify",
+  "product_id": "8204827141",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Coffee Collection Medium",
+   "Coffee Collection Origin",
+   "bar-color-#D1AE90"
+  ],
+  "title": "PAPUA NEW GUINEA",
+  "url": "https://www.snakeriverroastingco.com/products/collections-global-coffees-papua-new-guinea-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32198210245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32198210309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32198210437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32198210501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32198210629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32198210693"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "067f62261020979f",
+  "first_seen": "2026-10-26",
+  "handle": "collections-world-coffees-ethiopia-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Ethiopia_12oz_Front.png?v=1781796073",
+  "platform": "shopify",
+  "product_id": "8204892037",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Espresso",
+   "Coffee Collection Light",
+   "Coffee Collection Origin",
+   "Mekki's Favorites",
+   "bar-color-#EDC4BE"
+  ],
+  "title": "ETHIOPIA",
+  "url": "https://www.snakeriverroastingco.com/products/collections-world-coffees-ethiopia-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32198756613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32198756677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32198756741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32198756805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32198756869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32198756933"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0477b6b4368cd910",
+  "first_seen": "2026-10-26",
+  "handle": "collections-world-coffees-honduras-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Honduras_12oz_Front.png?v=1781796550",
+  "platform": "shopify",
+  "product_id": "8204946629",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Coffee Collection Origin",
+   "bar-color-#BC7D61"
+  ],
+  "title": "HONDURAS",
+  "url": "https://www.snakeriverroastingco.com/products/collections-world-coffees-honduras-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32199219269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32199219333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32199219397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32199219461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32199219525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32199219589"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0c84cf4ac2a9ef94",
+  "first_seen": "2026-10-26",
+  "handle": "collections-smooth-blends-cascade-canyon-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Cascade_12oz_Front.png?v=1781796653",
+  "platform": "shopify",
+  "product_id": "8204980229",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "bar-color-#D3837A"
+  ],
+  "title": "CASCADE CANYON",
+  "url": "https://www.snakeriverroastingco.com/products/collections-smooth-blends-cascade-canyon-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45397955936505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground",
+    "variant_id": "45397955969273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45397956002041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "45397956034809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45397956067577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "45397956100345"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "4f7153af5972eb96",
+  "first_seen": "2026-10-26",
+  "handle": "collections-premium-blends-white-spider-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_WhiteSpider_12oz_Front.png?v=1781795399",
+  "platform": "shopify",
+  "product_id": "8204992773",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Cait's Favorites",
+   "Coffee Collection",
+   "Coffee Collection Espresso",
+   "Coffee Collection Medium",
+   "Cris' Favorites",
+   "Most Popular",
+   "bar-color-#282828"
+  ],
+  "title": "WHITE SPIDER",
+  "url": "https://www.snakeriverroastingco.com/products/collections-premium-blends-white-spider-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32199672709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32199672837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32199672901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32199673029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32199673157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32199673221"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "8c6b822185ae6544",
+  "first_seen": "2026-10-26",
+  "handle": "collections-morning-coffees-kirbys-first-tram",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_Kirbys_12oz_Front.png?v=1781795110",
+  "platform": "shopify",
+  "product_id": "8205028549",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Cait's Favorites",
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Mekki's Favorites",
+   "Most Popular",
+   "bar-color-#995035"
+  ],
+  "title": "KIRBY'S FIRST TRAM",
+  "url": "https://www.snakeriverroastingco.com/products/collections-morning-coffees-kirbys-first-tram",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "32199948485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32199948549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "32199948613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "32199948677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "32199948741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32199948805"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0b40d720d78b46cb",
+  "first_seen": "2026-10-26",
+  "handle": "collections-decaf-coffees-fall-creek-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_FallCreek_12oz_Front.png?v=1781795803",
+  "platform": "shopify",
+  "product_id": "8205054021",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "bar-color-#F4CB78"
+  ],
+  "title": "FALL CREEK (DECAF)",
+  "url": "https://www.snakeriverroastingco.com/products/collections-decaf-coffees-fall-creek-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47083378245881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground",
+    "variant_id": "47083378278649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47083378311417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "47083378344185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47083378376953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "47083378409721"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "20bfde36b5a69dbb",
+  "first_seen": "2026-10-26",
+  "handle": "monty-blend-made-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_MADE_12oz_Front.png?v=1781903677",
+  "platform": "shopify",
+  "product_id": "8259483566329",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Recharge Subscription Coffee",
+   "Shop",
+   "bar-color-#0976A7"
+  ],
+  "title": "MADE x SRRCo Monty Blend",
+  "url": "https://www.snakeriverroastingco.com/products/monty-blend-made-collaboration",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44860219916537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44860219949305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44860219982073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12oz / Ground",
+    "variant_id": "44951042097401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2lb / Ground",
+    "variant_id": "44951042130169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5lb / Ground",
+    "variant_id": "44951042162937"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0c100c48307d7ed8",
+  "first_seen": "2026-10-26",
+  "handle": "gentlemans-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_MountainDandy_12oz_Front.png?v=1781903738",
+  "platform": "shopify",
+  "product_id": "8259925082361",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Recharge Dark",
+   "Recharge Subscription Coffee",
+   "Shop",
+   "Subscription",
+   "bar-color-#1C3F38"
+  ],
+  "title": "Mountain Dandy x SRRCo, Gentleman's Blend",
+  "url": "https://www.snakeriverroastingco.com/products/gentlemans-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44860873605369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44860873638137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44860873670905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Ground",
+    "variant_id": "44951042719993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2lb / Ground",
+    "variant_id": "44951042752761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5lb / Ground",
+    "variant_id": "44951042785529"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "0c100c48307d7ed8",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-dandy-x-srrco-gentlemans-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_MountainDandy_12oz_Front.png?v=1781903738",
+  "platform": "shopify",
+  "product_id": "8492696076537",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Dark",
+   "Shop",
+   "bar-color-#1C3F38"
+  ],
+  "title": "Mountain Dandy x SRRCo, Gentleman's Blend",
+  "url": "https://www.snakeriverroastingco.com/products/mountain-dandy-x-srrco-gentlemans-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45417786605817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45417786638585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45417786671353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground",
+    "variant_id": "45417786704121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Ground",
+    "variant_id": "45417786736889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Ground",
+    "variant_id": "45417786769657"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "20bfde36b5a69dbb",
+  "first_seen": "2026-10-26",
+  "handle": "made-x-srrco-monty-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_MADE_12oz_Front.png?v=1781903677",
+  "platform": "shopify",
+  "product_id": "8492704366841",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection Medium",
+   "Shop",
+   "bar-color-#0976A7"
+  ],
+  "title": "MADE x SRRCo Monty Blend",
+  "url": "https://www.snakeriverroastingco.com/products/made-x-srrco-monty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45417797386489"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45417797419257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45417797452025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground",
+    "variant_id": "45417797484793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Ground",
+    "variant_id": "45417797517561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Ground",
+    "variant_id": "45417797550329"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "bedf9e5c97df020b",
+  "first_seen": "2026-10-26",
+  "handle": "collections-exotic-blends-big-kahuna-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_BigKahuna_12oz_Front.png?v=1781795448",
+  "platform": "shopify",
+  "product_id": "8676325573",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Medium",
+   "Most Popular",
+   "bar-color-#4b5b75"
+  ],
+  "title": "BIG KAHUNA",
+  "url": "https://www.snakeriverroastingco.com/products/collections-exotic-blends-big-kahuna-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "37755924677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground",
+    "variant_id": "37755924741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "37755924805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "37755924869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "37755924933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "37755924997"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "90c740f4a467f29f",
+  "first_seen": "2026-10-26",
+  "handle": "cascade-canyon",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_CascadeCanyon_4oz_Front_a6f096b5-8256-47ab-b3f1-1a9d1b18f48c.png?v=1784062352",
+  "platform": "shopify",
+  "product_id": "8727664427257",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Sample",
+   "Sample Dark",
+   "bar-color-#D3837A"
+  ],
+  "title": "Cascade Canyon",
+  "url": "https://www.snakeriverroastingco.com/products/cascade-canyon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "46276272357625"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Ground",
+    "variant_id": "46276272390393"
+   }
+  ],
+  "vendor": "Snake River Roasting Co."
+ },
+ {
+  "body_hash": "f1c01b183fc24d57",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ella-2",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GuatemalaElla_4oz_Front_17eed123-8747-4743-b12c-8a5b36c13eef.png?v=1784063121",
+  "platform": "shopify",
+  "product_id": "8727668293881",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Sample Light",
+   "Sample Origin",
+   "Samples",
+   "bar-color-#DDA634"
+  ],
+  "title": "Guatemala Ella",
+  "url": "https://www.snakeriverroastingco.com/products/guatemala-ella-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "46276282646777"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4oz / Ground",
+    "variant_id": "46276282679545"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "1ada0272b99f1d56",
+  "first_seen": "2026-10-26",
+  "handle": "the-good-roast-coffee-community",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_GoodRoast_12oz_Front.png?v=1781795501",
+  "platform": "shopify",
+  "product_id": "8828168831225",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee",
+   "Coffee Collection Medium",
+   "bar-color-#CD5831"
+  ],
+  "title": "The Good Roast",
+  "url": "https://www.snakeriverroastingco.com/products/the-good-roast-coffee-community",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46527583551737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground",
+    "variant_id": "46527583584505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46527583617273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Ground",
+    "variant_id": "46527583650041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46527583682809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Ground",
+    "variant_id": "46527583715577"
+   }
+  ],
+  "vendor": "Snake River Roasting Co."
+ },
+ {
+  "body_hash": "82217e7bade69ddc",
+  "first_seen": "2026-10-26",
+  "handle": "the-good-roast-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/TheGoodRoast_Front.jpg?v=1748892516",
+  "platform": "shopify",
+  "product_id": "8828202615033",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Pure Subscription",
+   "Recharge Medium",
+   "Recharge Subscription Coffee",
+   "bar-color-#CD5831"
+  ],
+  "title": "The Good Roast",
+  "url": "https://www.snakeriverroastingco.com/products/the-good-roast-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46527656788217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46527656820985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46527656853753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.4,
+    "title": "12oz / Ground",
+    "variant_id": "46529604878585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2lb / Ground",
+    "variant_id": "46529604911353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5lb / Ground",
+    "variant_id": "46529604944121"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ },
+ {
+  "body_hash": "a77cd68050689415",
+  "first_seen": "2026-10-26",
+  "handle": "collections-floral-coffees-wild-iris-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2007/9339/files/SRRC_CoffeeBag_Mockup_WildIris_12oz_Front.png?v=1781795632",
+  "platform": "shopify",
+  "product_id": "916577878052",
+  "product_type": "Coffee",
+  "roaster_slug": "snakeriverroastingco",
+  "tags": [
+   "Coffee Collection",
+   "Coffee Collection Espresso",
+   "Coffee Collection Light",
+   "Mekki's Favorites",
+   "bar-color-#CC84A2"
+  ],
+  "title": "WILD IRIS",
+  "url": "https://www.snakeriverroastingco.com/products/collections-floral-coffees-wild-iris-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "9249090338852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Ground",
+    "variant_id": "9249090371620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "9249090404388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs / Ground",
+    "variant_id": "9249090437156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "9249090469924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Ground",
+    "variant_id": "9249090502692"
+   }
+  ],
+  "vendor": "Snake River Roasting Co"
+ }
+]

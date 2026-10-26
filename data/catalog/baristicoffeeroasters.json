@@ -1,0 +1,3306 @@
+[
+ {
+  "body_hash": "f7fa0df2b45bc574",
+  "first_seen": "2026-10-26",
+  "handle": "box-of-colombia-regular-supremo-of-15-lbs",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "141495861269",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "Box of Colombia Regular Supremo of 24 Lbs.",
+  "url": "https://www.baristicoffeeroasters.com/products/box-of-colombia-regular-supremo-of-15-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6804,
+    "price_usd": 171.2,
+    "title": "Default Title",
+    "variant_id": "2026785079317"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "35521648ea65fffa",
+  "first_seen": "2026-10-26",
+  "handle": "tomato-sauce-passata-di-pomodoro",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/passata-di-pomodori-800x1000.jpg?v=1537561277",
+  "platform": "shopify",
+  "product_id": "1415996997749",
+  "product_type": "Specialty Item",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "TOMATO SAUCE- PASSATA DI POMODORO",
+  "url": "https://www.baristicoffeeroasters.com/products/tomato-sauce-passata-di-pomodoro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 2.45,
+    "title": "Default Title",
+    "variant_id": "12523261886581"
+   }
+  ],
+  "vendor": "Baristi Market"
+ },
+ {
+  "body_hash": "bf84cc97ee50497e",
+  "first_seen": "2026-10-26",
+  "handle": "lemon-linguini",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/LemonLinguine_500G.jpg?v=1522184562",
+  "platform": "shopify",
+  "product_id": "277324791829",
+  "product_type": "Specialty Item",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "Lemon Linguini",
+  "url": "https://www.baristicoffeeroasters.com/products/lemon-linguini",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 6.45,
+    "title": "Default Title",
+    "variant_id": "3506922258453"
+   }
+  ],
+  "vendor": "Baristi Market"
+ },
+ {
+  "body_hash": "fa23d91c61f94fc7",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-coffee-supremo-regular",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_d83d9346-e92e-4a07-801c-51689a946530.jpg?v=1572289247",
+  "platform": "shopify",
+  "product_id": "4308970995810",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia French Vanilla Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-coffee-supremo-regular",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990125695074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990125727842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990125760610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990125793378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990125826146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990125891682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990125924450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990125957218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990125989986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990126022754"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990126284898"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990126317666"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990126350434"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990126383202"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990126415970"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990126481506"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990126514274"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990126547042"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990126579810"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.75,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990126612578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990126841954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990126874722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990126907490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990126940258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990126973026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990127038562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990127071330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990127104098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990127136866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990127169634"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 228.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637419040965"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "3aefe83f25ab4398",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-parfait",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "4309019295842",
+  "product_type": "",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "Hazelnut Parfait",
+  "url": "https://www.baristicoffeeroasters.com/products/hazelnut-parfait",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1 Pound",
+    "variant_id": "30990331871330"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 Pounds",
+    "variant_id": "30990331904098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5.0 Pounds",
+    "variant_id": "30990331969634"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.42,
+    "title": "3 oz (80 Packets)",
+    "variant_id": "45637574852805"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bd2bb00c6df850aa",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-french-vanilla-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_340f150a-dcf0-4e2e-966f-99493bc2fed6.jpg?v=1572289546",
+  "platform": "shopify",
+  "product_id": "4309021163618",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Jamaican Me Crazy® Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-french-vanilla-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990339407970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990339440738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990339473506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990339506274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990339539042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990339571810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990339604578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990339637346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990339670114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990339702882"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990339735650"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990339768418"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990339801186"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990339833954"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990339866722"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990339899490"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990339932258"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990339965026"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990339997794"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990340030562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990340063330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990340096098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990340128866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990340161634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990340194402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990340227170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990340259938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990340292706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990340325474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990340358242"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637417992389"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "4d1c062a271fd245",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_6639007f-4f7d-4b3f-a529-dcca29d1fcd4.jpg?v=1572289406",
+  "platform": "shopify",
+  "product_id": "4309021524066",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Hazelnut Parfait Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990341832802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990341865570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990341898338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990341931106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990341963874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990341996642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990342029410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990342062178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990342094946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990342127714"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990342160482"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990342193250"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990342226018"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990342258786"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990342291554"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990342324322"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990342357090"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990342389858"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990342422626"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990342455394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990342488162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990342520930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990342553698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990342586466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990342619234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990342652002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990342684770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990342717538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990342750306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990342783074"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637418746053"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "ef18ab7dfe321e41",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-copy-of-copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_ce67bb88-da38-44f5-bbc5-0aa464ef671d.jpg?v=1572290279",
+  "platform": "shopify",
+  "product_id": "4309021786210",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Pumpkin Spice Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-copy-of-copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990346059874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990346092642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990346125410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990346158178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990346190946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990346223714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990346256482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990346289250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990346322018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990346354786"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990346387554"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990346420322"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990346453090"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990346485858"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990346518626"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990346551394"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990346584162"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990346616930"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990346649698"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990346682466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990346715234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990346748002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990346780770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990346813538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990346846306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990346879074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990346911842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990346944610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990346977378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990347010146"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637416321221"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bce70cffd4705ca4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_531ebfee-9557-4511-ab21-e575e6da9e7e.jpg?v=1572288653",
+  "platform": "shopify",
+  "product_id": "4309024800866",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Blueberry Creme Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990356840546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990356873314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990356906082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990356938850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990356971618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990357004386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990357037154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990357069922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990357102690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.6,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990357135458"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990357168226"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990357200994"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990357233762"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990357266530"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990357299298"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990357332066"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990357364834"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990357397602"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990357430370"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990357463138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990357495906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990357528674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990357561442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990357594210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990357626978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990357659746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990357692514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990357725282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990357758050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990357790818"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637439979717"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bce70cffd4705ca4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_99ffe3b3-c2cb-4421-aab1-81e930b2517e.jpg?v=1572288862",
+  "platform": "shopify",
+  "product_id": "4309028503650",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Caramel Delight Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990361854050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990361886818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990361952354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990361985122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990362017890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990362083426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990362116194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990362148962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990362181730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990362214498"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990362247266"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990362280034"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990362312802"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990362345570"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990362411106"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990362443874"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990362476642"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990362509410"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990362542178"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.92,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990362574946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990362607714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990362640482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990362673250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990362706018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990362738786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990362771554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990362804322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990362837090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990362869858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990362902626"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 225.6,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637439062213"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bce70cffd4705ca4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-2",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_c97c7688-4590-4f5a-bfff-8af05a3d230c.jpg?v=1572289005",
+  "platform": "shopify",
+  "product_id": "4309037613154",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Cinnamon Passion Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990377222242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990377255010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990377287778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990377320546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990377353314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990377386082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990377418850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990377451618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990377484386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990377517154"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990377549922"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990377582690"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990377615458"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990377648226"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990377680994"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990377713762"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990377746530"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990377779298"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990377812066"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990377844834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990377877602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990377910370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990377943138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990377975906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990378008674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990378041442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990378074210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990378106978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990378139746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990378172514"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 225.6,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637438374085"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bce70cffd4705ca4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-3",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_5da69398-98ad-4510-a013-a1e8fbe1b047.jpg?v=1572290404",
+  "platform": "shopify",
+  "product_id": "4309037875298",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Swiss Chocolate Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-pumpkin-spice-flavored-regular-coffee-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990378762338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990378795106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990378827874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990378860642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990378893410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990378926178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990378958946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990378991714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990379024482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990379057250"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990379090018"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990379122786"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990379155554"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990379188322"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990379221090"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990379253858"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990379286626"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990379319394"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990379352162"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990379384930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990379417698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990379450466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990379483234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990379516002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990379548770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990379581538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990379614306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990379647074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990379679842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990379712610"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637416517829"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "bce70cffd4705ca4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-blueberry-creme-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours_1bb930cb-9223-4b0d-86da-7b910ab2912d.jpg?v=1572288554",
+  "platform": "shopify",
+  "product_id": "4309038170210",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Toasted Almond Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-blueberry-creme-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990380367970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990380400738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990380433506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990380466274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990380499042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990380531810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990380564578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990380597346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990380630114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990380662882"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990380695650"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990380728418"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990380761186"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990380793954"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990380826722"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990380859490"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990380892258"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990380925026"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990380957794"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990380990562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990381023330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990381056098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990381088866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990381121634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990381154402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990381187170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990381219938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990381252706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990381285474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990381318242"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 224.0,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637417042117"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "6ab0c81f2b7db84f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-colombia-toasted-almond-flavored-regular-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/100_Columbian_3oz_Flavours.jpg?v=1572275867",
+  "platform": "shopify",
+  "product_id": "4309038465122",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Bourbon Pecan Flavoured Regular Coffee",
+  "url": "https://www.baristicoffeeroasters.com/products/copy-of-100-colombia-toasted-almond-flavored-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "30990381613154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "30990381645922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "30990381678690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "30990381711458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "30990381744226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Whole Bean",
+    "variant_id": "30990381776994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Auto Drip",
+    "variant_id": "30990381809762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Keurig Refillables",
+    "variant_id": "30990381842530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / French Press",
+    "variant_id": "30990381875298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.92,
+    "title": "1.0 Pound / French / Percolator",
+    "variant_id": "30990381908066"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "30990381940834"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "30990381973602"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990382006370"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "30990382039138"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "30990382071906"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Whole Bean",
+    "variant_id": "30990382104674"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Auto Drip",
+    "variant_id": "30990382137442"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Keurig Refillables",
+    "variant_id": "30990382170210"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / French Press",
+    "variant_id": "30990382202978"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 52.3,
+    "title": "2.5 pounds / French / Percolator",
+    "variant_id": "30990382235746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "30990382268514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "30990382301282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig Refillables",
+    "variant_id": "30990382334050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "30990382366818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "30990382399586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "30990382432354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Auto Drip",
+    "variant_id": "30990382465122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Keurig Refillables",
+    "variant_id": "30990382497890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / French Press",
+    "variant_id": "30990382530658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Percolator",
+    "variant_id": "30990382563426"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 226.4,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637439488197"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "669d25dfbeb26a88",
+  "first_seen": "2026-10-26",
+  "handle": "nespresso",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/IMG_5438Dc.jpg?v=1587476338",
+  "platform": "shopify",
+  "product_id": "4399582675042",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "NESPRESSO DECAFFEINATO",
+  "url": "https://www.baristicoffeeroasters.com/products/nespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 65.0,
+    "title": "Default Title",
+    "variant_id": "31518457069666"
+   }
+  ],
+  "vendor": "Baristi Market"
+ },
+ {
+  "body_hash": "b88366d8f666e420",
+  "first_seen": "2026-10-26",
+  "handle": "red-sweet-mild-peppadews",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/81P-PsGE02L._SY679.jpg?v=1526047491",
+  "platform": "shopify",
+  "product_id": "775020871800",
+  "product_type": "Specialty Item",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "RED SWEET MILD PEPPADEWS",
+  "url": "https://www.baristicoffeeroasters.com/products/red-sweet-mild-peppadews",
+  "variants": [
+   {
+    "available": true,
+    "grams": 635,
+    "price_usd": 5.75,
+    "title": "Default Title",
+    "variant_id": "8651736023160"
+   }
+  ],
+  "vendor": "Baristi Market"
+ },
+ {
+  "body_hash": "b88366d8f666e420",
+  "first_seen": "2026-10-26",
+  "handle": "red-sweet-hot-peppadews",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/71S18_alUlL._AC_UL320_SR210_320.jpg?v=1526049093",
+  "platform": "shopify",
+  "product_id": "775047184504",
+  "product_type": "Specialty Item",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "RED SWEET HOT PEPPADEWS",
+  "url": "https://www.baristicoffeeroasters.com/products/red-sweet-hot-peppadews",
+  "variants": [
+   {
+    "available": true,
+    "grams": 635,
+    "price_usd": 5.75,
+    "title": "Default Title",
+    "variant_id": "8651765710968"
+   }
+  ],
+  "vendor": "Baristi Market"
+ },
+ {
+  "body_hash": "7b61abd375e7ab2e",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-lbs-100-colombia-coffee-supremo-regular",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/PRODUCT_LABELS_BARISTI_0916.jpg?v=1548354646",
+  "platform": "shopify",
+  "product_id": "8124301062",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Coffee - Supremo Regular",
+  "url": "https://www.baristicoffeeroasters.com/products/1-2-lbs-100-colombia-coffee-supremo-regular",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "27482935494"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "27482935622"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / Keurig Refillables",
+    "variant_id": "27482935686"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "27482935750"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "27482935878"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.48,
+    "title": "1.0 Pound / Standard / Espresso",
+    "variant_id": "27482935942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / Whole Bean",
+    "variant_id": "27482936006"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / Auto Drip",
+    "variant_id": "27482936070"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / Keurig Refillables",
+    "variant_id": "27482936134"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / French Press",
+    "variant_id": "27482936198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / Percolator",
+    "variant_id": "27482936262"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1.0 Pound / French Style / Espresso",
+    "variant_id": "27482936390"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / Whole Bean",
+    "variant_id": "27482936454"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / Auto Drip",
+    "variant_id": "27482936518"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / Keurig Refillables",
+    "variant_id": "27482936582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / French Press",
+    "variant_id": "27482936646"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / Percolator",
+    "variant_id": "27482936710"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.5,
+    "title": "1.0 Pound / Italian Style Espresso / Espresso",
+    "variant_id": "27482936774"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / Whole Bean",
+    "variant_id": "27482936838"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / Auto Drip",
+    "variant_id": "27482936902"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / Keurig Refillables",
+    "variant_id": "27482936966"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / French Press",
+    "variant_id": "27482937030"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / Percolator",
+    "variant_id": "27482937094"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.7,
+    "title": "2.5 Pounds / Standard / Espresso",
+    "variant_id": "27482937158"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / Whole Bean",
+    "variant_id": "27482937222"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / Auto Drip",
+    "variant_id": "27482937286"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / Keurig Refillables",
+    "variant_id": "27482937350"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / French Press",
+    "variant_id": "27482937414"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / Percolator",
+    "variant_id": "27482937478"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.75,
+    "title": "2.5 Pounds / French Style / Espresso",
+    "variant_id": "27482937542"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 Pounds / Italian Style Espresso / Whole Bean",
+    "variant_id": "27482937606"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 Pounds / Italian Style Espresso / Auto Drip",
+    "variant_id": "27482937670"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 Pounds / Italian Style Espresso / French Press",
+    "variant_id": "27482937798"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 Pounds / Italian Style Espresso / Percolator",
+    "variant_id": "27482937862"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 Pounds / Italian Style Espresso / Espresso",
+    "variant_id": "27482937990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / Whole Bean",
+    "variant_id": "27482938054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / Auto Drip",
+    "variant_id": "27482938118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / Keurig Refillables",
+    "variant_id": "27482938182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / French Press",
+    "variant_id": "27482938246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / Percolator",
+    "variant_id": "27482938310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.4,
+    "title": "5 Pounds / Standard / Espresso",
+    "variant_id": "27482938374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / Whole Bean",
+    "variant_id": "27482938438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / Auto Drip",
+    "variant_id": "27482938502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / Keurig Refillables",
+    "variant_id": "27482938566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / French Press",
+    "variant_id": "27482938630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / Percolator",
+    "variant_id": "27482938758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 Pounds / French Style / Espresso",
+    "variant_id": "27482938886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / Whole Bean",
+    "variant_id": "27482938950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / Auto Drip",
+    "variant_id": "27482939078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / Keurig Refillables",
+    "variant_id": "27482939206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / French Press",
+    "variant_id": "27482939398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / Percolator",
+    "variant_id": "27482939462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.75,
+    "title": "5 Pounds / Italian Style Espresso / Espresso",
+    "variant_id": "27482939526"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 312.0,
+    "title": "3 oz (80 packets) / Standard / Auto Drip",
+    "variant_id": "45645561495749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 7.76,
+    "title": "1/2 Lb (1 Bag) / French Style / Whole Bean",
+    "variant_id": "50727317668037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 7.76,
+    "title": "1/2 Lb (1 Bag) / Italian Style Espresso / Whole Bean",
+    "variant_id": "50727317700805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1 Lb (1 Bag) / French Style / Whole Bean",
+    "variant_id": "50727317766341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1 Lb (1 Bag) / Italian Style Espresso / Whole Bean",
+    "variant_id": "50727317799109"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 38.75,
+    "title": "2.5 Lb (1 Bag) / French Style / Whole Bean",
+    "variant_id": "50727317864645"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 38.75,
+    "title": "2.5 Lb (1 Bag) / Italian Style Espresso / Whole Bean",
+    "variant_id": "50727317897413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.5,
+    "title": "5 Lb (1 Bag) / French Style / Whole Bean",
+    "variant_id": "50727317962949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.5,
+    "title": "5 Lb (1 Bag) / Italian Style Espresso / Whole Bean",
+    "variant_id": "50727317995717"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "e9377006c37f2858",
+  "first_seen": "2026-10-26",
+  "handle": "1-lbs-100-colombia-coffee-swiss-water-decaf-process-excelso",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/PRODUCT_LABELS_BARISTI_09162.jpg?v=1472759077",
+  "platform": "shopify",
+  "product_id": "8124491078",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Coffee - Swiss Water Decaf Process Excelso",
+  "url": "https://www.baristicoffeeroasters.com/products/1-lbs-100-colombia-coffee-swiss-water-decaf-process-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / Whole Bean",
+    "variant_id": "27483227270"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / Auto Drip",
+    "variant_id": "27483227398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / Keurig/Keurig Refill",
+    "variant_id": "27483227462"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / French Press",
+    "variant_id": "27483227526"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / Percolator",
+    "variant_id": "27483227590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Standard / Espresso",
+    "variant_id": "27483227654"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / Whole Bean",
+    "variant_id": "27483228230"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / Auto Drip",
+    "variant_id": "27483228294"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / Keurig/Keurig Refill",
+    "variant_id": "27483228358"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / French Press",
+    "variant_id": "27483228422"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / Percolator",
+    "variant_id": "27483228486"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.56,
+    "title": "1.0 Pound / Italian Style Espresso / Espresso",
+    "variant_id": "27483228550"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / Whole Bean",
+    "variant_id": "27483228614"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / Auto Drip",
+    "variant_id": "27483228678"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / Keurig/Keurig Refill",
+    "variant_id": "27483228742"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / French Press",
+    "variant_id": "27483228806"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / Percolator",
+    "variant_id": "27483228870"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Standard / Espresso",
+    "variant_id": "27483228934"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / Whole Bean",
+    "variant_id": "27483229446"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / Auto Drip",
+    "variant_id": "27483229510"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / Keurig/Keurig Refill",
+    "variant_id": "27483229574"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / French Press",
+    "variant_id": "27483229638"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / Percolator",
+    "variant_id": "27483229702"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.4,
+    "title": "2.5 pounds / Italian Style Espresso / Espresso",
+    "variant_id": "27483229766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Whole Bean",
+    "variant_id": "27483229830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Auto Drip",
+    "variant_id": "27483229958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Keurig/Keurig Refill",
+    "variant_id": "27483230150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / French Press",
+    "variant_id": "27483230278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Percolator",
+    "variant_id": "27483230470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Standard / Espresso",
+    "variant_id": "27483230662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / French / Whole Bean",
+    "variant_id": "27483230726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / Whole Bean",
+    "variant_id": "27483231238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / Auto Drip",
+    "variant_id": "27483231302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / Keurig/Keurig Refill",
+    "variant_id": "27483231430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / French Press",
+    "variant_id": "27483231494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / Percolator",
+    "variant_id": "27483231686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.6,
+    "title": "5 pounds / Italian Style Espresso / Espresso",
+    "variant_id": "27483231878"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 308.4,
+    "title": "3 oz (80 Packets) / Standard / Auto Drip",
+    "variant_id": "45637425758405"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "3c41cb840300cbbe",
+  "first_seen": "2026-10-26",
+  "handle": "2-lbs-100-colombia-coffee-supremo-regular-whole-green-bean",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/orange_label.jpg?v=1482169926",
+  "platform": "shopify",
+  "product_id": "8124502022",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Coffee - Whole Green Bean - Swiss Water Decaf Excelso",
+  "url": "https://www.baristicoffeeroasters.com/products/2-lbs-100-colombia-coffee-supremo-regular-whole-green-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.9,
+    "title": "1 pounds",
+    "variant_id": "45640634564805"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ },
+ {
+  "body_hash": "2bb6532ed2bf73dc",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombia-coffee-supremo-regular-green-bean-2-pounds",
+  "image": "https://cdn.shopify.com/s/files/1/1431/0822/products/green.jpg?v=1482169899",
+  "platform": "shopify",
+  "product_id": "8130027014",
+  "product_type": "Coffee",
+  "roaster_slug": "baristicoffeeroasters",
+  "tags": [],
+  "title": "100% Colombia Coffee - Whole Green Bean - Supremo Regular",
+  "url": "https://www.baristicoffeeroasters.com/products/100-colombia-coffee-supremo-regular-green-bean-2-pounds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.9,
+    "title": "Popayan Region / 1 pound",
+    "variant_id": "45642206281925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.9,
+    "title": "Huila Region / 1 pound",
+    "variant_id": "45642206314693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.9,
+    "title": "Bucaramanga Region / 1 pound",
+    "variant_id": "45642206347461"
+   }
+  ],
+  "vendor": "Baristi Coffee Roasters"
+ }
+]

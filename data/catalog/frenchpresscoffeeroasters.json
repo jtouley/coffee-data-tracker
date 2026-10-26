@@ -1,0 +1,789 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/label2-clientdeliver2-2.jpg?v=1704745893",
+  "platform": "shopify",
+  "product_id": "8230575734999",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Espresso Cold Brew",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/espresso-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "44370893930711"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/label4.jpg?v=1704746059",
+  "platform": "shopify",
+  "product_id": "8230575767767",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Organic Honduras Cold Brew",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/organic-honduras-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "44370894061783"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-sumatra-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/label1.jpg?v=1704746040",
+  "platform": "shopify",
+  "product_id": "8230575800535",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Indonesian Sumatra Cold Brew",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/indonesian-sumatra-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "44370894192855"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "1dabc629795144e8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/espresso.jpg?v=1704745868",
+  "platform": "shopify",
+  "product_id": "8230580191447",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.25,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370916114647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.25,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370916147415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.25,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370916180183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.25,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370916212951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.69,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370916245719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.69,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370916278487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.69,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370916311255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.69,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370916344023"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "0c2d2135a7b4f56b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-santa-barbara",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30478.jpg?v=1704745739",
+  "platform": "shopify",
+  "product_id": "8230580224215",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Colombian Santa Barbara",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/colombian-santa-barbara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370916376791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370916409559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370916442327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370916475095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370916507863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370916540631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370916573399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370916606167"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "5ceeeab4e370c05b",
+  "first_seen": "2026-10-26",
+  "handle": "decaffienated-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/decafmogiana.jpg?v=1704745823",
+  "platform": "shopify",
+  "product_id": "8230580256983",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Decaffienated Brazil",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/decaffienated-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370916638935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370916671703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370916704471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370916737239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370916770007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370916802775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370916835543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370916868311"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "9c41688f04bbab0e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-marcala",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30485.jpg?v=1704746069",
+  "platform": "shopify",
+  "product_id": "8230580289751",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Organic Honduras Marcala",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/organic-honduras-marcala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370916901079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370916933847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370916966615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370916999383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370917032151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370917064919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370917097687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370917130455"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "6382bf20ad94b703",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30489.jpg?v=1704745705",
+  "platform": "shopify",
+  "product_id": "8230580322519",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Brazilian",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/brazilian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370917163223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370917195991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370917228759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370917261527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370917294295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370917327063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370917359831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.13,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370917392599"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "2ec62aca952867ec",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30483.jpg?v=1704746037",
+  "platform": "shopify",
+  "product_id": "8230580355287",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Indonesian Sumatra",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/indonesian-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370917425367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370917458135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370917490903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370917523671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.31,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370917556439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.31,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370917589207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.31,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370917621975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.31,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370917654743"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "c1c2e9d1cee87f6e",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guineau",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30490.jpg?v=1704746102",
+  "platform": "shopify",
+  "product_id": "8230580388055",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Papua New Guineau",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/papua-new-guineau",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370917687511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370917720279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370917753047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370917785815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370917818583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370917851351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370917884119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.56,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370917916887"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "e9f99b7fa94c0dc0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-antigua-los-volcanoes",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30498.jpg?v=1704745979",
+  "platform": "shopify",
+  "product_id": "8230580420823",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Guatemalan Antigua Los Volcanoes",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/guatemalan-antigua-los-volcanoes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370918015191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370918047959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370918080727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370918113495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.81,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370918146263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.81,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370918179031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.81,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370918211799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.81,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370918244567"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "09c27c4bb7551ccb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-la-pastora",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/files/frenchpress30495_422d6eb5-d09c-47ff-8d45-63a7a2fa8f30.jpg?v=1704745796",
+  "platform": "shopify",
+  "product_id": "8230580453591",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Pound"
+  ],
+  "title": "Costa Rican La pastora",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/costa-rican-la-pastora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Fine / 1 lb",
+    "variant_id": "44370918277335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Medium / 1 lb",
+    "variant_id": "44370918310103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Coarse / 1 lb",
+    "variant_id": "44370918342871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44370918375639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Fine / 5 lb",
+    "variant_id": "44370918408407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Medium / 5 lb",
+    "variant_id": "44370918441175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Coarse / 5 lb",
+    "variant_id": "44370918473943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44370918506711"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ },
+ {
+  "body_hash": "c9b20cb8fc7deb80",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-mokka-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0677/9538/6583/products/4cb860_59878c1fe2104745a3c14eab40d27f02_mv2.jpg?v=1704400942",
+  "platform": "shopify",
+  "product_id": "8668338487511",
+  "product_type": "",
+  "roaster_slug": "frenchpresscoffeeroasters",
+  "tags": [
+   "Special Reserve"
+  ],
+  "title": "Yemen Mokka Peaberry  8oz",
+  "url": "https://www.frenchpresscoffeeroasters.com/products/yemen-mokka-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Fine",
+    "variant_id": "45536380977367"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Medium",
+    "variant_id": "45536381010135"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Coarse",
+    "variant_id": "45536381042903"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Whole Bean",
+    "variant_id": "45536381075671"
+   }
+  ],
+  "vendor": "The French Press Coffee Roasters"
+ }
+]

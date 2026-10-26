@@ -1,0 +1,137 @@
+{
+ "15445983625460": {
+  "body_hash": "dfe9ef10b53a1b2f",
+  "elevation_masl_max": 2250,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "74112",
+   "Heirloom"
+  ]
+ },
+ "15446011805940": {
+  "body_hash": "994be8d7602533cd",
+  "elevation_masl_max": 2400,
+  "elevation_masl_min": 2300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "74158"
+  ]
+ },
+ "9149304635636": {
+  "body_hash": "599be197e61bc788",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9221567480052": {
+  "body_hash": "176525b7974ad9e9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9243258716404": {
+  "body_hash": "1fced30c7c173ff1",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "9553875009780": {
+  "body_hash": "b6dc344a18f538b9",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Batian",
+   "Ruiru 11",
+   "Sl28"
+  ]
+ },
+ "9592305778932": {
+  "body_hash": "e02f7fe213bc2922",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "9636907450612": {
+  "body_hash": "e446b87d5a520a3d",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

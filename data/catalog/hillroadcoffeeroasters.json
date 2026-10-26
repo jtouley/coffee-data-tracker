@@ -1,0 +1,298 @@
+[
+ {
+  "body_hash": "f6c4024d8e950759",
+  "first_seen": "2026-10-26",
+  "handle": "ferndale-espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/e25a134f-88ee-46e6-8724-f7749262d1b7/FERN+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "60180321cf4b097cfcc36b77",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Ferndale Blend",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/ferndale-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb.",
+    "variant_id": "18a0cbed-e206-44d1-a159-c7e7e8764212"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz.",
+    "variant_id": "341c99db-e75a-4ac2-9644-447d5128848c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz.",
+    "variant_id": "e5cd0840-bdcc-44ef-803d-c376c91cbfd1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1062eacda6ae5b7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/99aa577c-04b6-4af1-80e7-7b6a422c7a09/GUAT+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "609da0ca6497073a4c8f7c8e",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb.",
+    "variant_id": "2d358af0-6597-475f-9c0a-559b405f77fb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz.",
+    "variant_id": "5bcfb744-47de-4dfe-bfac-bff4ca111036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz.",
+    "variant_id": "b4a1627d-ac76-4064-b804-06c9e5a42a45"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b64ace76f6e842a8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo-y5sh6",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/eadef3f8-1f46-4909-bbe5-4e9ed60a7008/BRAZ+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "616a050543fa300a06e4b3e9",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/brazil-salmo-y5sh6",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz.",
+    "variant_id": "3fc5f81b-8e63-4b42-900c-3083132a4d65"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8 oz.",
+    "variant_id": "75553931-7426-46af-a26f-6e62a38aa67c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb.",
+    "variant_id": "b9bcf118-a63b-4562-89e1-1c482f145005"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3de7920ceed16444",
+  "first_seen": "2026-10-26",
+  "handle": "ferndale-espresso-blend-fr93b",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/c3b6c312-163c-402e-9a41-50d92b82ae70/KUECH+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "6487260a221be03abd1fd2a4",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Kuechler Blend",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/ferndale-espresso-blend-fr93b",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz.",
+    "variant_id": "639b5512-ede1-44e7-a7a1-19e64502194b"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8 oz.",
+    "variant_id": "7c22c0e4-ad84-484f-ab38-0ec22a669999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb.",
+    "variant_id": "a08ff7b8-de81-481f-8847-54e7f4555c36"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4338535b3def854d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo-y5sh6-97mbb",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/59444e8d-36cc-4890-8051-332df09c8bc7/COLO+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "653fc9694d2eee3bcacee836",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/brazil-salmo-y5sh6-97mbb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb.",
+    "variant_id": "180c7a2f-1d30-4950-940b-7214ad7fd1b7"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8 oz.",
+    "variant_id": "d006a1f5-348c-461f-ad3c-8b1552e2d466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz.",
+    "variant_id": "fc58177f-b366-4db2-9534-9365f8147da1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39ba4eb1fbc63720",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/845b4e6e-cc21-4d0a-bbfb-1df38cfe33a8/ETH+GUJI+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "65ad52237ffcdb1958917d01",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb.",
+    "variant_id": "56f852c9-b6d0-4b4a-8807-24fb17487f96"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz.",
+    "variant_id": "59431007-1689-4c4d-aa83-4517c256b7ff"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 oz.",
+    "variant_id": "fc9d63b4-f531-4829-bb3d-34834d5059c9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "828269707efb62b2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-antio-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/cfe58f06-838e-451f-9e71-c90cd54e6d5f/DECAF+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "65d606ea7209a273c7a9da5f",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Colombia - [DECAF]",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/colombia-antio-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb.",
+    "variant_id": "85a83fdf-97c6-44e1-a468-d11b54f30df2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz.",
+    "variant_id": "ceb65351-6b5d-4a6a-83ce-40d7040db96f"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8 oz.",
+    "variant_id": "d1ea54b0-450e-49cf-9f1e-5c2599d3406b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b8c6645f2047ea5",
+  "first_seen": "2026-10-26",
+  "handle": "peru-8arfn",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d2bd65606c9cb0001ef689d/65c3c5af-9845-436c-9e80-a4002a74adcb/HOND+THUMBNAIL.png",
+  "platform": "squarespace",
+  "product_id": "697658c65f2535501c15b2d7",
+  "product_type": "",
+  "roaster_slug": "hillroadcoffeeroasters",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://www.hillroadcoffeeroasters.com/wholebean/peru-8arfn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb.",
+    "variant_id": "0f6f7809-52ee-4336-8cd5-575345fb3244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz.",
+    "variant_id": "179cc7de-a8a5-4feb-abfa-f175713e8c6c"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz.",
+    "variant_id": "1ffbfce2-4675-48bc-ad9e-f15ce70e434d"
+   }
+  ],
+  "vendor": ""
+ }
+]

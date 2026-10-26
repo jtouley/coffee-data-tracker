@@ -1,0 +1,214 @@
+[
+ {
+  "body_hash": "b1aea5f6f34912c0",
+  "first_seen": "2026-10-26",
+  "handle": "baklava",
+  "image": "https://images.squarespace-cdn.com/content/v1/582c8b7237c581c2a8b25553/1697561421303-N5SIJKLEMHB1P9MCPP7S/Baklava.png",
+  "platform": "squarespace",
+  "product_id": "590fc7f21b10e315446ce1e8",
+  "product_type": "",
+  "roaster_slug": "staufs",
+  "tags": [],
+  "title": "Baklava",
+  "url": "https://www.staufs.com/flavored/baklava",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk ChemeX SWP Decaf",
+    "variant_id": "00394263-6987-4cef-9b85-09b42af5346d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb Espresso SWP Decaf",
+    "variant_id": "078baf8a-ba4b-4446-82ac-68cf162eae24"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk Drip Regular",
+    "variant_id": "12e86ef1-0fb8-4d15-8b80-e647bb676f93"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb ChemeX Regular",
+    "variant_id": "16b4cba4-77ff-43de-ab8d-a8b62cb59387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk Fine SWP Decaf",
+    "variant_id": "2aa2c745-87ec-4ccf-93e7-be1902ef455d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk Whole Bean SWP Decaf",
+    "variant_id": "2e0c182b-7fbc-4571-9cd3-87c077178ff4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb ChemeX SWP Decaf",
+    "variant_id": "3c7aea21-37a1-4731-92e2-3f85008d94ad"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk Whole Bean Regular",
+    "variant_id": "3fce2db4-d9b2-4914-b854-e534c5339481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk Espresso Regular",
+    "variant_id": "449b7d0f-8ca9-4e27-8273-bb7f6600b1ed"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb Whole Bean Regular",
+    "variant_id": "4eb64e07-4137-496b-823a-3da97052f84a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb Fine Regular",
+    "variant_id": "4fae66ec-50cf-42e5-a750-b077ceb4b39a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk Fine Regular",
+    "variant_id": "5f5b0177-bc05-4324-a8f0-dbda2c39e843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk Drip SWP Decaf",
+    "variant_id": "6eafa2c5-a857-4d12-8f56-b13f58fbd890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb Fine SWP Decaf",
+    "variant_id": "6f4bf7e4-6480-4e5c-8ca7-8453300c2ff0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk Toddy SWP Decaf",
+    "variant_id": "7444abe0-a90d-48a8-b3ad-821cd449eff4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb Drip Regular",
+    "variant_id": "7855708c-14c5-4537-8b38-9b24933a79ef"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb Espresso Regular",
+    "variant_id": "78df46a5-06e3-49a9-beb0-c70793db0b65"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk Toddy Regular",
+    "variant_id": "900ac5ed-34df-4b24-a614-c517f252e6b8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk French Press SWP Decaf",
+    "variant_id": "afa378cf-1a61-4be4-92c5-1d4423637c1b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk ChemeX Regular",
+    "variant_id": "bec57569-5a87-4ee5-8baf-790a8f305112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb Drip SWP Decaf",
+    "variant_id": "c1bb1311-3c38-4757-bc32-c43dd316d8a9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb - bulk Espresso SWP Decaf",
+    "variant_id": "d0111036-7c0a-4828-8eb7-89d4e2762c43"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb French Press Regular",
+    "variant_id": "d2df1435-0157-4bfd-8a05-f2b43320eb22"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb Toddy Regular",
+    "variant_id": "d69fc751-e740-4861-b5fd-8bfaed806866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb - bulk French Press Regular",
+    "variant_id": "dd3e1513-1a2f-4a19-a9c8-1a911459befd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb Toddy SWP Decaf",
+    "variant_id": "e3ec7ebe-a295-4472-bd48-2f7b0bfcbca3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb Whole Bean SWP Decaf",
+    "variant_id": "f211cb24-2fe8-486e-b890-3c99dddf294b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb French Press SWP Decaf",
+    "variant_id": "f2fe2297-b5f1-47e4-940b-41b789e6f26a"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,153 @@
+{
+ "6601026207917": {
+  "body_hash": "448c3707038e378a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "well-rounded",
+   "caramelized brown sugar"
+  ],
+  "varietals": []
+ },
+ "6601026240685": {
+  "body_hash": "588e8f44cc15236e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "graham cracker",
+   "roasted marshmallow"
+  ],
+  "varietals": []
+ },
+ "6601026273453": {
+  "body_hash": "11f455e170a172ad",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey"
+  ],
+  "varietals": []
+ },
+ "6601026306221": {
+  "body_hash": "6388233a9f65781c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "juicy",
+   "orange blossom"
+  ],
+  "varietals": []
+ },
+ "6601026338989": {
+  "body_hash": "22bb9596523aa2f8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "6601027027117": {
+  "body_hash": "c5838999d0fbd8ee",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black cherry",
+   "toasted almond",
+   "rich cocoa"
+  ],
+  "varietals": []
+ },
+ "7254384410797": {
+  "body_hash": "b410886ecd7e9f40",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "juicy",
+   "fruity",
+   "red candy apple",
+   "ripe strawberry"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "7254422257837": {
+  "body_hash": "bea2f54ec29f799b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "passionfruit",
+   "vanilla bean",
+   "dulce de leche",
+   "orange blossom"
+  ],
+  "varietals": [
+   "Pacamara"
+  ]
+ }
+}

@@ -1,0 +1,324 @@
+[
+ {
+  "body_hash": "5a0eead825680689",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://www.bakersfieldroasting.com/product-images/decaf-12oz.png",
+  "platform": "generic",
+  "product_id": "0f47bc17-2867-4002-ea68-940086212b43",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.bakersfieldroasting.com/product-page/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbcb5b3b1e30dffa",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-nari%C3%B1o-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/colombia-12oz.png",
+  "platform": "generic",
+  "product_id": "1cd04e95-e5a2-3eb0-bc4a-2305953b828e",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.bakersfieldroasting.com/product-page/columbia-nari%C3%B1o-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "505b4693e9554aa3",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-coast-blend",
+  "image": "https://www.bakersfieldroasting.com/seasonal-coffee/autumn-blend.png",
+  "platform": "generic",
+  "product_id": "308ed600-c14b-1cf9-2317-5d60f07f1bda",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Autumn Blend",
+  "url": "https://www.bakersfieldroasting.com/product-page/pacific-coast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7af894c17991e567",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/el-salvador-12oz.png",
+  "platform": "generic",
+  "product_id": "40cd830e-7019-4bdf-b6b6-6a585b2673c6",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "El Salvador Ahuachapan",
+  "url": "https://www.bakersfieldroasting.com/product-page/el-salvador-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60c3fde24a456611",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-martin-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/peru-san-martin-12oz.png",
+  "platform": "generic",
+  "product_id": "423d5d25-5ee0-4fd0-95f3-e2462c57bd5e",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Peru San Martin",
+  "url": "https://www.bakersfieldroasting.com/product-page/peru-san-martin-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "119bc0b33d8b698a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/french-roast-12oz.png",
+  "platform": "generic",
+  "product_id": "51fdf7fe-4313-cc0e-2ced-7d0d6b63760d",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.bakersfieldroasting.com/product-page/italian-roast-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "db0db121de9f13c5",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/peru-12oz.png",
+  "platform": "generic",
+  "product_id": "693531a1-0e6d-8d4c-457c-76a02706a692",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Peru Cajamarca",
+  "url": "https://www.bakersfieldroasting.com/product-page/peru-cajamarca-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb5439cccef5e264",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://www.bakersfieldroasting.com/product-images/rwanda.png",
+  "platform": "generic",
+  "product_id": "86bf7b4b-07d7-f202-6852-e4be60d6564f",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Rwanda Migina",
+  "url": "https://www.bakersfieldroasting.com/product-page/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4cad9f50a454afb4",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://www.bakersfieldroasting.com/product-images/costa-rica.png",
+  "platform": "generic",
+  "product_id": "af42038c-771a-e1be-81c0-e63e719e0180",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.bakersfieldroasting.com/product-page/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49424c33a45ac726",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/nicaragua-12oz.png",
+  "platform": "generic",
+  "product_id": "c6cb6316-956e-4fbf-961e-8f31795c7025",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Nicaragua",
+  "url": "https://www.bakersfieldroasting.com/product-page/nicaragua-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c39f2e0086e87aef",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-12oz-1",
+  "image": "https://www.bakersfieldroasting.com/product-images/espresso-blend-12oz.png",
+  "platform": "generic",
+  "product_id": "c8330dad-7d81-6ed7-371c-278e7619b9c3",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.bakersfieldroasting.com/product-page/espresso-blend-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "22975c66a24f55d5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-12oz",
+  "image": "https://www.bakersfieldroasting.com/product-images/guatemala-12oz.png",
+  "platform": "generic",
+  "product_id": "d0095a6e-96ff-3c8d-81bd-3d3fb1f1c90c",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Guatemala Candelaria",
+  "url": "https://www.bakersfieldroasting.com/product-page/guatemala-huehuetenango-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59639cb2a7d395a2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://www.bakersfieldroasting.com/product-images/kenya-12oz.png",
+  "platform": "generic",
+  "product_id": "db2da791-5974-acd3-f1c3-5cdc92c93dad",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Kenya",
+  "url": "https://www.bakersfieldroasting.com/product-page/kenya",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0cf286294ce2ed3",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://www.bakersfieldroasting.com/product-images/breakfast-blend-v2.png",
+  "platform": "generic",
+  "product_id": "f2071052-bcc0-a2dc-2224-1e799e6d05e3",
+  "product_type": "",
+  "roaster_slug": "bakersfieldroasting",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.bakersfieldroasting.com/product-page/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

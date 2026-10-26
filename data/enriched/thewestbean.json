@@ -1,0 +1,97 @@
+{
+ "6778376749102": {
+  "body_hash": "8de19d778ae3e9ad",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "tangerine",
+   "toffee brittle",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "6778449035310": {
+  "body_hash": "0411e5eb45bc85a8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "rich cocoa",
+   "black pepper",
+   "syrupy"
+  ],
+  "varietals": []
+ },
+ "6778449690670": {
+  "body_hash": "e6b041b581225993",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dark chocolate",
+   "peanut butter",
+   "cola"
+  ],
+  "varietals": []
+ },
+ "6778452148270": {
+  "body_hash": "ffe2110842969fec",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "clove",
+   "full-bodied",
+   "lime seltzer"
+  ],
+  "varietals": []
+ },
+ "6779097251886": {
+  "body_hash": "5b5bc6d39e104c05",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "apricot jam",
+   "caramel",
+   "molasses"
+  ],
+  "varietals": []
+ }
+}

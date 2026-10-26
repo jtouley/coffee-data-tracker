@@ -1,0 +1,1764 @@
+[
+ {
+  "body_hash": "2c316b3a0e9253b7",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-cinnamon-twist",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Bourbon-Cinnamon-Twist---Front.png?v=1770929345",
+  "platform": "shopify",
+  "product_id": "10299076608316",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored",
+   "Single Cup"
+  ],
+  "title": "Bourbon Cinnamon Twist",
+  "url": "https://puroast.com/products/bourbon-cinnamon-twist",
+  "variants": [
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 36.0,
+    "title": "2 x 12 Cups",
+    "variant_id": "52738337734972"
+   },
+   {
+    "available": true,
+    "grams": 816,
+    "price_usd": 89.0,
+    "title": "72 Cups",
+    "variant_id": "52738337767740"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "6076743e45675f14",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cinnamon-crunch",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Chocolate-Cinnamon-Crunch---Front.png?v=1770930174",
+  "platform": "shopify",
+  "product_id": "10299078934844",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored",
+   "Single Cup"
+  ],
+  "title": "Chocolate Cinnamon Crunch",
+  "url": "https://puroast.com/products/chocolate-cinnamon-crunch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 36.0,
+    "title": "2 x 12 Cups",
+    "variant_id": "52738351104316"
+   },
+   {
+    "available": true,
+    "grams": 816,
+    "price_usd": 89.0,
+    "title": "72 Cups",
+    "variant_id": "52738351137084"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "4a50b18e32f27b37",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf-pods",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/French-Roast-Decaf---Front.png?v=1770932456",
+  "platform": "shopify",
+  "product_id": "10299103510844",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Decaffeinated",
+   "Pods",
+   "Single Cup"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://puroast.com/products/french-roast-decaf-pods",
+  "variants": [
+   {
+    "available": true,
+    "grams": 275,
+    "price_usd": 32.5,
+    "title": "2 x 12 Cups",
+    "variant_id": "52738458026300"
+   },
+   {
+    "available": true,
+    "grams": 816,
+    "price_usd": 92.0,
+    "title": "72 Cups",
+    "variant_id": "52738458059068"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "bff891572c726c73",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-house-blend-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Half-Caff-House-Blend-2.5lb.png?v=1719329263",
+  "platform": "shopify",
+  "product_id": "10452288733500",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "half-caff"
+  ],
+  "title": "Half Caff House Blend — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/half-caff-house-blend-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 149.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205078844"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 149.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205111612"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "272ba1710440749b",
+  "first_seen": "2026-10-26",
+  "handle": "dark-french-roast-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Dark-French-Roast-2.5lb.png?v=1719329209",
+  "platform": "shopify",
+  "product_id": "10452288766268",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Dark French Roast — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/dark-french-roast-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 135.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205013308"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 135.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205046076"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "0d44468179bea5a9",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-French-Roast-Decaf-2.5lb.png?v=1719329250",
+  "platform": "shopify",
+  "product_id": "10452288799036",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "decaf"
+  ],
+  "title": "French Roast Decaf — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/french-roast-decaf-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205144380"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205177148"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "74bcc706d0983340",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Bourbon-Pecan-Torte-2.5lb.png?v=1719329467",
+  "platform": "shopify",
+  "product_id": "10452288864572",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Bourbon Pecan Torte — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/bourbon-pecan-torte-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Drip Grind",
+    "variant_id": "53984205242684"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Whole Bean",
+    "variant_id": "53984205275452"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "09903399f2ddd6bc",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-french-roast-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Half-Caff-French-Roast-2.5lb.png?v=1719329324",
+  "platform": "shopify",
+  "product_id": "10452288897340",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "half-caff"
+  ],
+  "title": "Half Caff French Roast — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/half-caff-french-roast-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 149.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205308220"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 149.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205340988"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "11caa232d9dcc6d5",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-roast-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Italian-Espresso-Roast-2.5lb.png?v=1719329221",
+  "platform": "shopify",
+  "product_id": "10452289290556",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Italian Espresso Roast — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/italian-espresso-roast-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 135.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205766972"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 135.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205799740"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "b5d55f92d2c55f49",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-2.5lb.png?v=1719329379",
+  "platform": "shopify",
+  "product_id": "10452289323324",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "House Blend — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/house-blend-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 133.0,
+    "title": "Drip Grind",
+    "variant_id": "53984205832508"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 133.0,
+    "title": "Whole Bean",
+    "variant_id": "53984205865276"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "cb2fcbb2c9efa9ee",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Mocha-Java-2.5lb.png?v=1719329313",
+  "platform": "shopify",
+  "product_id": "10452289388860",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Mocha Java — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/mocha-java-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Drip Grind",
+    "variant_id": "53984205898044"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Whole Bean",
+    "variant_id": "53984205930812"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "b44679305271d142",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-decaf-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-Decaf-2.5lb.png?v=1719329333",
+  "platform": "shopify",
+  "product_id": "10452289421628",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "decaf"
+  ],
+  "title": "House Blend Decaf — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/house-blend-decaf-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Drip Grind",
+    "variant_id": "53984205963580"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Whole Bean",
+    "variant_id": "53984205996348"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "067dcaf9767376dd",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Hazelnut-2.5lb.png?v=1719329299",
+  "platform": "shopify",
+  "product_id": "10452289454396",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Hazelnut — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/hazelnut-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Drip Grind",
+    "variant_id": "53984206029116"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Whole Bean",
+    "variant_id": "53984206061884"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "eb10dae2c4d5d3c0",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-caramel-kahlua-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-Caramel-Kahlua-2.5lb.png?v=1719329285",
+  "platform": "shopify",
+  "product_id": "10452290076988",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Vanilla Caramel Kahlua — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/vanilla-caramel-kahlua-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Drip Grind",
+    "variant_id": "53984207175996"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Whole Bean",
+    "variant_id": "53984207241532"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "ff34ad178bcd6b5f",
+  "first_seen": "2026-10-26",
+  "handle": "ugandan-single-origin-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Ugandan-Single-Origin-2.5lb.png?v=1719329232",
+  "platform": "shopify",
+  "product_id": "10452290109756",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "single-origin"
+  ],
+  "title": "Ugandan Single Origin — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/ugandan-single-origin-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 152.6,
+    "title": "Drip Grind",
+    "variant_id": "53984207077692"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 152.6,
+    "title": "Whole Bean",
+    "variant_id": "53984207110460"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "0c52745048dde9bf",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-decaf-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-Decaf-2.5lb.png?v=1719329273",
+  "platform": "shopify",
+  "product_id": "10452290142524",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "decaf"
+  ],
+  "title": "Vanilla Decaf — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/vanilla-decaf-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Drip Grind",
+    "variant_id": "53984207143228"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Whole Bean",
+    "variant_id": "53984207208764"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "71beafa5e82cd115",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-decaf-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Mocha-Java-Decaf-2.5lb.png?v=1719329348",
+  "platform": "shopify",
+  "product_id": "10452290175292",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack",
+   "decaf"
+  ],
+  "title": "Mocha Java Decaf — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/mocha-java-decaf-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Drip Grind",
+    "variant_id": "53984207274300"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 163.8,
+    "title": "Whole Bean",
+    "variant_id": "53984207307068"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "f68968ce7e9a1f32",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-business-case-4-2-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-2.5lb.png?v=1719329364",
+  "platform": "shopify",
+  "product_id": "10452290208060",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "2.5lb",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Vanilla — Business Case (4 × 2.5 LB)",
+  "url": "https://puroast.com/products/vanilla-business-case-4-2-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Drip Grind",
+    "variant_id": "53984207339836"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 127.4,
+    "title": "Whole Bean",
+    "variant_id": "53984207372604"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "0bb3a97a44a35794",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-colombian-supremo-business-case-8-20-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Colombian_Supremo-20_oz_-_Sinclair_Broadcasting_-_Copy.png?v=1747662536",
+  "platform": "shopify",
+  "product_id": "10452291518780",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20oz",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Coffeehouse Colombian Supremo — Business Case (8 × 20 oz)",
+  "url": "https://puroast.com/products/coffeehouse-colombian-supremo-business-case-8-20-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 165.2,
+    "title": "Drip Grind",
+    "variant_id": "53984208814396"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 165.2,
+    "title": "Whole Bean",
+    "variant_id": "53984208847164"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "e3c22213e78a57e1",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-decaf-business-case-8-20-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-Decaf-20_oz_Sinclair_Broadcasting.png?v=1747662572",
+  "platform": "shopify",
+  "product_id": "10452291617084",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20oz",
+   "b2b",
+   "business",
+   "case-pack",
+   "decaf"
+  ],
+  "title": "Coffeehouse Decaf — Business Case (8 × 20 oz)",
+  "url": "https://puroast.com/products/coffeehouse-decaf-business-case-8-20-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.6,
+    "title": "Drip Grind",
+    "variant_id": "53984208978236"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.6,
+    "title": "Whole Bean",
+    "variant_id": "53984209011004"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "2c6ad680bda5f698",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-bourbon-pecan-business-case-8-20-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Bourbon_Pecan_20_oz_Ground_-_Sinclair_Broadcasting.png?v=1747662536",
+  "platform": "shopify",
+  "product_id": "10452291715388",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20oz",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Coffeehouse Bourbon Pecan — Business Case (8 × 20 oz)",
+  "url": "https://puroast.com/products/coffeehouse-bourbon-pecan-business-case-8-20-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 176.4,
+    "title": "Drip Grind",
+    "variant_id": "53984209076540"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 176.4,
+    "title": "Whole Bean",
+    "variant_id": "53984209109308"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "d57f128eb7caeaba",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-blend-business-case-8-20-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-20_oz_-_Sinclair_Broadcasting_-_Copy.png?v=1747662546",
+  "platform": "shopify",
+  "product_id": "10452291748156",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20oz",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Coffeehouse Blend — Business Case (8 × 20 oz)",
+  "url": "https://puroast.com/products/coffeehouse-blend-business-case-8-20-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 165.2,
+    "title": "Drip Grind",
+    "variant_id": "53984209174844"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 165.2,
+    "title": "Whole Bean",
+    "variant_id": "53984209207612"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "628dd64ef822569a",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-french-roast-business-case-8-20-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-French-Roast-20_oz_Ground_-_Sinclair_Broadcasting.png?v=1747662536",
+  "platform": "shopify",
+  "product_id": "10452291846460",
+  "product_type": "Business Case Pack",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20oz",
+   "b2b",
+   "business",
+   "case-pack"
+  ],
+  "title": "Coffeehouse French Roast — Business Case (8 × 20 oz)",
+  "url": "https://puroast.com/products/coffeehouse-french-roast-business-case-8-20-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 165.2,
+    "title": "Drip Grind",
+    "variant_id": "53984209273148"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 168.2,
+    "title": "Whole Bean",
+    "variant_id": "53984209305916"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "3958e7e5265a1490",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Cold-Brew-Blend-20oz.png?v=1787888982",
+  "platform": "shopify",
+  "product_id": "10470741573948",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "20oz",
+   "All Products",
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://puroast.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "20 oz / Coarse",
+    "variant_id": "54029449855292"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "a0bd09459c09dd5a",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-spice-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/PUROAST-20oz-AUTUMN-SPICE-NO-GRIND-TYPE.png?v=1792617961",
+  "platform": "shopify",
+  "product_id": "15432153203004",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "20 oz bag",
+   "20oz",
+   "All Products",
+   "Flavored",
+   "Medium"
+  ],
+  "title": "Autumn Spice",
+  "url": "https://puroast.com/products/autumn-spice-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "67786373988668"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "67786374021436"
+   }
+  ],
+  "vendor": "Puroast Coffee"
+ },
+ {
+  "body_hash": "bb9b0edd487ec96c",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-coffeehouse-blend-1-25-lb-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/20oz-CHB-NO-GRIND-TYPE.png?v=1719329789",
+  "platform": "shopify",
+  "product_id": "8676866490684",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "All Products",
+   "Medium"
+  ],
+  "title": "Coffeehouse Blend",
+  "url": "https://puroast.com/products/low-acid-coffeehouse-blend-1-25-lb-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "46730372317500"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "46730372350268"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "c4bbbb20b615c0f1",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-french-roast-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-French-Roast-Decaf-2.5lb.png?v=1719329250",
+  "platform": "shopify",
+  "product_id": "8676866523452",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Dark",
+   "Decaffeinated"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://puroast.com/products/low-acid-french-roast-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730372383036"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730372415804"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730372448572"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730372481340"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "ef7ac0e79ca15ee4",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-2.5lb.png?v=1719329379",
+  "platform": "shopify",
+  "product_id": "8676866556220",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Medium"
+  ],
+  "title": "House Blend",
+  "url": "https://puroast.com/products/low-acid-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730372514108"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730372546876"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730372579644"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730372612412"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "872ef3bf71e43453",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-coffeehouse-bourbon-pecan-1-25-lb-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/20oz-CHBP-NO-GRIND-TYPE.png?v=1719329807",
+  "platform": "shopify",
+  "product_id": "8676866621756",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Coffeehouse Bourbon Pecan",
+  "url": "https://puroast.com/products/low-acid-coffeehouse-bourbon-pecan-1-25-lb-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 31.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "46730372809020"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 31.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "46730372874556"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "e773301520d0f2e5",
+  "first_seen": "2026-10-26",
+  "handle": "ugandan-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Ugandan-Single-Origin-2.5lb.png?v=1719329232",
+  "platform": "shopify",
+  "product_id": "8676866687292",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Medium"
+  ],
+  "title": "Ugandan Single Origin",
+  "url": "https://puroast.com/products/ugandan-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730373660988"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730373693756"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730373726524"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730373759292"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "e01372b275fc858c",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-dark-french-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Dark-French-Roast-2.5lb.png?v=1719329209",
+  "platform": "shopify",
+  "product_id": "8676866752828",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Dark"
+  ],
+  "title": "Dark French Roast",
+  "url": "https://puroast.com/products/low-acid-dark-french-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730373824828"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730373857596"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 92.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730373890364"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 92.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730373923132"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "32ad748aabbb0a50",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-vanilla-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-Decaf-2.5lb.png?v=1719329273",
+  "platform": "shopify",
+  "product_id": "8676866818364",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Vanilla Decaf",
+  "url": "https://puroast.com/products/low-acid-vanilla-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730373988668"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374021436"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374054204"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730374086972"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "81e50937ae31f47e",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-half-caff-house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Half-Caff-House-Blend-2.5lb.png?v=1719329263",
+  "platform": "shopify",
+  "product_id": "8676866851132",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Decaffeinated",
+   "Medium"
+  ],
+  "title": "Half Caff House Blend",
+  "url": "https://puroast.com/products/low-acid-half-caff-house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730374119740"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374152508"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 102.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374185276"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 102.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730374218044"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "87cfbfb822e40683",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-half-caff-french-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Half-Caff-French-Roast-2.5lb.png?v=1719329324",
+  "platform": "shopify",
+  "product_id": "8676866949436",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Dark",
+   "Decaffeinated"
+  ],
+  "title": "Half Caff French Roast",
+  "url": "https://puroast.com/products/low-acid-half-caff-french-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730374316348"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 53.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374349116"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 102.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374381884"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 102.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730374414652"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "4acffee9f8adc903",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-espresso-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Italian-Espresso-Roast-2.5lb.png?v=1719329221",
+  "platform": "shopify",
+  "product_id": "8676867014972",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Dark"
+  ],
+  "title": "Italian Espresso Roast",
+  "url": "https://puroast.com/products/low-acid-espresso-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730374512956"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374545724"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 92.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374578492"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 92.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730374611260"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "947c2e43f0fedb4b",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-coffeehouse-decaf-1-25-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/20oz-CHD-NO-GRIND-TYPE.png?v=1719329798",
+  "platform": "shopify",
+  "product_id": "8676867047740",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "All Products",
+   "Decaffeinated"
+  ],
+  "title": "Coffeehouse Decaf",
+  "url": "https://puroast.com/products/low-acid-coffeehouse-decaf-1-25-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 38.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "46730374644028"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 38.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "46730374676796"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "c6296e91f5dcf95a",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-vanilla-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-2.5lb.png?v=1719329364",
+  "platform": "shopify",
+  "product_id": "8676867113276",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Vanilla",
+  "url": "https://puroast.com/products/low-acid-vanilla-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730374709564"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374742332"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374775100"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730374807868"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "f753e56e1379af3d",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-hazelnut-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Hazelnut-2.5lb.png?v=1719329299",
+  "platform": "shopify",
+  "product_id": "8676867178812",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Hazelnut",
+  "url": "https://puroast.com/products/low-acid-hazelnut-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730374906172"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730374938940"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730374971708"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730375004476"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "286fce7634a57aaa",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-mocha-java-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Mocha-Java-2.5lb.png?v=1719329313",
+  "platform": "shopify",
+  "product_id": "8676867244348",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Mocha Java",
+  "url": "https://puroast.com/products/low-acid-mocha-java-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730375233852"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730375266620"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730375299388"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730375332156"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "27663eb482326777",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-house-blend-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-House-Blend-Decaf-2.5lb.png?v=1719329333",
+  "platform": "shopify",
+  "product_id": "8676867342652",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Decaffeinated",
+   "Medium"
+  ],
+  "title": "House Blend Decaf",
+  "url": "https://puroast.com/products/low-acid-house-blend-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730375430460"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730375463228"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730375495996"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730375528764"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "48628df87d9b9a43",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-mocha-java-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Mocha-Java-Decaf-2.5lb.png?v=1719329348",
+  "platform": "shopify",
+  "product_id": "8676867375420",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Mocha Java Decaf",
+  "url": "https://puroast.com/products/low-acid-mocha-java-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730375561532"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 58.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730375594300"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730375627068"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 113.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730375659836"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "888a87fe81665395",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-bourbon-pecan-torte-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Bourbon-Pecan-Torte-2.5lb.png?v=1719329467",
+  "platform": "shopify",
+  "product_id": "8676867539260",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Bourbon Pecan Torte",
+  "url": "https://puroast.com/products/low-acid-bourbon-pecan-torte-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730375889212"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730375921980"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730375954748"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730375987516"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "18f8bd73d4eac5fb",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-vanilla-caramel-kahlua-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/Puroast-Vanilla-Caramel-Kahlua-2.5lb.png?v=1719329285",
+  "platform": "shopify",
+  "product_id": "8676867637564",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "All Products",
+   "Flavored"
+  ],
+  "title": "Vanilla Caramel Kahlua",
+  "url": "https://puroast.com/products/low-acid-vanilla-caramel-kahlua-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Drip Grind",
+    "variant_id": "46730376085820"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.5,
+    "title": "2.5 LB / Whole Bean",
+    "variant_id": "46730376118588"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Drip Grind",
+    "variant_id": "46730376151356"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 87.0,
+    "title": "2 x 2.5 LB / Whole Bean",
+    "variant_id": "46730376184124"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "2e3e14849007bb8f",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-coffeehouse-french-roast-1-25-lb-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/20oz-CHFR-NO-GRIND-TYPE.png?v=1719329779",
+  "platform": "shopify",
+  "product_id": "8676867703100",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "All Products",
+   "Dark"
+  ],
+  "title": "Coffeehouse French Roast",
+  "url": "https://puroast.com/products/low-acid-coffeehouse-french-roast-1-25-lb-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "46730376282428"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "46730376315196"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "c77dd2900442943d",
+  "first_seen": "2026-10-26",
+  "handle": "coffeehouse-colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0818/2733/2412/files/PR-BAG-MR-20oz-CCS.png?v=1723824002",
+  "platform": "shopify",
+  "product_id": "9653397848380",
+  "product_type": "All Products",
+  "roaster_slug": "puroast",
+  "tags": [
+   "$20 - 1.25 LB",
+   "20 oz bag",
+   "All Products",
+   "Medium"
+  ],
+  "title": "Coffeehouse Colombian Supremo",
+  "url": "https://puroast.com/products/coffeehouse-colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Drip Grind / 20 oz",
+    "variant_id": "49950008443196"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 20 oz",
+    "variant_id": "49950008475964"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ }
+]

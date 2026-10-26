@@ -1,0 +1,707 @@
+[
+ {
+  "body_hash": "4c49f9bedf2f3807",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Copper_Door_Coffee_Roasters_Rawanda_Roast_Coffee_Beans_Angled_View.png?v=1782332211",
+  "platform": "shopify",
+  "product_id": "10520798167349",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "Africa",
+   "Medium Roast",
+   "Woman produced"
+  ],
+  "title": "Rwanda Coffee Beans",
+  "url": "https://copperdoorcoffee.com/products/rwanda-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Whole Beans / 12oz",
+    "variant_id": "52909835026741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Ground | Drip / 12oz",
+    "variant_id": "52909835059509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Ground | Chemex / 12oz",
+    "variant_id": "52909835092277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Ground | French Press / 12oz",
+    "variant_id": "52909835125045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Whole Beans / 2lbs",
+    "variant_id": "52909839319349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Ground | Drip / 2lbs",
+    "variant_id": "52909839352117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Ground | Chemex / 2lbs",
+    "variant_id": "52909839384885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Ground | French Press / 2lbs",
+    "variant_id": "52909839417653"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "7fed336c78f742d1",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Porta_Aperta_Espresso_Beans.png?v=1782334077",
+  "platform": "shopify",
+  "product_id": "341308247",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "1200-2400 MASL",
+   "Baking Spice",
+   "Blends",
+   "Brazil",
+   "Cacao Nibs",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "Espresso",
+   "Huila",
+   "Minas Gerais",
+   "Region South Minas",
+   "Subscription",
+   "Toasted Walnut"
+  ],
+  "title": "Porta Aperta Espresso Blend",
+  "url": "https://copperdoorcoffee.com/products/espresso-blend-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36812427853974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Drip / 12oz",
+    "variant_id": "41162162634902"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Drip / 2 lb",
+    "variant_id": "41162162667670"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Chemex / 12oz",
+    "variant_id": "41162162700438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Chemex / 2 lb",
+    "variant_id": "41162162733206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | French Press / 12oz",
+    "variant_id": "41162162765974"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | French Press / 2 lb",
+    "variant_id": "41162162798742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "792188343"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "c96bd4c5ab355ecc",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-mama-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Midnight_Mama_French_Roast_Coffee_Beans_angle.png?v=1782333534",
+  "platform": "shopify",
+  "product_id": "7390701191318",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Chocolate",
+   "Dark Roast",
+   "French Roast",
+   "Limited Release",
+   "Tobacco",
+   "Walnut",
+   "flavored coffee"
+  ],
+  "title": "Midnight Mama Coffee Beans",
+  "url": "https://copperdoorcoffee.com/products/midnight-mama-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Bean",
+    "variant_id": "41510235078806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Drip",
+    "variant_id": "41510235111574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Chemex",
+    "variant_id": "41510235144342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | French Press",
+    "variant_id": "41510235177110"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "a5543f06f63ab204",
+  "first_seen": "2026-10-26",
+  "handle": "las-esmeraldas-colombia-decaf-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Las_Esmaraldas_Colombia_Decaf_Coffee-1.png?v=1782333387",
+  "platform": "shopify",
+  "product_id": "8223840829749",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "1500-2200 MASL",
+   "Colombia",
+   "Decaf",
+   "Erika Perez",
+   "Grape Juice",
+   "Hibiscus",
+   "Las Esmeraldas",
+   "Light Roast",
+   "Strawberry",
+   "Subscription",
+   "Sugarcane Decaf",
+   "Washed",
+   "Woman produced"
+  ],
+  "title": "Las Esmeraldas Colombia Decaf Coffee",
+  "url": "https://copperdoorcoffee.com/products/las-esmeraldas-colombia-decaf-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Beans",
+    "variant_id": "44818873188661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground | Drip",
+    "variant_id": "44818873221429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground | Chemex",
+    "variant_id": "44818873254197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground | French Press",
+    "variant_id": "44818873286965"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "2711aec21489b60f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-nascentes-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Brazil_Nascentes_Coffee_Beans.png?v=1782333322",
+  "platform": "shopify",
+  "product_id": "8492067586357",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "1200-1400 MASL",
+   "Brazil",
+   "Chamomile",
+   "Coffee",
+   "Medium Roast",
+   "Minas Gerais",
+   "Natural Process",
+   "Nuts",
+   "Red Apple",
+   "Woman produced"
+  ],
+  "title": "Brazil Nascentes Coffee Beans",
+  "url": "https://copperdoorcoffee.com/products/brazil-nascentes-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Beans",
+    "variant_id": "47289405604149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Ground | Drip",
+    "variant_id": "47289405636917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Ground | French Press",
+    "variant_id": "47289405669685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Ground | Chemex",
+    "variant_id": "47289405702453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Whole Beans",
+    "variant_id": "47289405735221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Ground | Drip",
+    "variant_id": "47289405767989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Ground | French Press",
+    "variant_id": "47289405800757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs / Ground | Chemex",
+    "variant_id": "47289405833525"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "1462d4b2a5fe25ab",
+  "first_seen": "2026-10-26",
+  "handle": "four-sisters-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Four_Sisters_Espresso_Beans.png?v=1782333806",
+  "platform": "shopify",
+  "product_id": "9139785798",
+  "product_type": "",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "1200-2400 MASL",
+   "Blends",
+   "Brazil",
+   "Caramel",
+   "Chocolate Ganache",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "Espresso",
+   "Guatemala",
+   "Key Lime",
+   "Natural",
+   "Oak",
+   "Subscription",
+   "Washed"
+  ],
+  "title": "Four Sisters Espresso Beans",
+  "url": "https://copperdoorcoffee.com/products/four-sisters-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Bean / 12oz.",
+    "variant_id": "33342694214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Drip / 12oz.",
+    "variant_id": "33342694342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "36812438798486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Drip / 2lb",
+    "variant_id": "36812441845910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Chemex / 12oz.",
+    "variant_id": "41162141630614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Chemex / 2lb",
+    "variant_id": "41162141663382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | French Press / 12oz.",
+    "variant_id": "41162141696150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | French Press / 2lb",
+    "variant_id": "41162141728918"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "9f11f62b48dc7ce2",
+  "first_seen": "2026-10-26",
+  "handle": "shady-lady-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Shady_Lady_Coffee_Beans_from_Copper_Door_Coffee_Roasters.png?v=1782332952",
+  "platform": "shopify",
+  "product_id": "9458518753589",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "1200-2400 MASL",
+   "2024",
+   "Black Cherry",
+   "Blends",
+   "Coffee",
+   "Colombia",
+   "Ethiopia",
+   "Huila",
+   "Lemon Zest",
+   "Medium Roast",
+   "Mixed Berry",
+   "Natural",
+   "Subscription",
+   "Sumatra",
+   "Various Farms",
+   "Washed",
+   "Yirgacheffe"
+  ],
+  "title": "Shady Lady Blend Coffee",
+  "url": "https://copperdoorcoffee.com/products/shady-lady-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "49047399301429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "49047399334197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Drip / 12oz",
+    "variant_id": "49047399366965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Drip / 2 lb",
+    "variant_id": "49047399399733"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Chemex / 12oz",
+    "variant_id": "49047399432501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Chemex / 2 lb",
+    "variant_id": "49047399465269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | French Press / 12oz",
+    "variant_id": "49047399498037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | French Press / 2 lb",
+    "variant_id": "49047399530805"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "f986233277bacd77",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-santa-elena-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Costa_Rica_Coffee_Beans_Tarrazu.png?v=1782332821",
+  "platform": "shopify",
+  "product_id": "9458539888949",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "Central America",
+   "Coffee",
+   "Costa Rica",
+   "Hibiscus",
+   "Honeydew",
+   "Honeyed",
+   "Medium Roast",
+   "Pistachio",
+   "Santa Elena Estate",
+   "South America",
+   "Tarrazú",
+   "Woman produced"
+  ],
+  "title": "Costa Rica Tarrazu Coffee",
+  "url": "https://copperdoorcoffee.com/products/costa-rica-santa-elena-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Beans / 12oz",
+    "variant_id": "49047445143861"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Drip / 12oz",
+    "variant_id": "49047445176629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Beans / 2lbs",
+    "variant_id": "49047445209397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Drip / 2lbs",
+    "variant_id": "49047445242165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | Chemex / 12oz",
+    "variant_id": "49047506354485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | Chemex / 2lbs",
+    "variant_id": "49047506387253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Ground | French Press / 12oz",
+    "variant_id": "49047506420021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Ground | French Press / 2lbs",
+    "variant_id": "49047506452789"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ },
+ {
+  "body_hash": "615b7f0a3deadb4b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0614/7877/files/Copper_Door_Coffees_Guatemala_Huehuetenango_Roast.png?v=1782332424",
+  "platform": "shopify",
+  "product_id": "9459320914229",
+  "product_type": "Coffee",
+  "roaster_slug": "copperdoorcoffee",
+  "tags": [
+   "Almond",
+   "Apricot",
+   "CODECH Co-op",
+   "Coffee",
+   "Fair Trade",
+   "Guatemala",
+   "Isabel Ramirez Gasper",
+   "Medium Roast",
+   "Milk Chocolate",
+   "Organic",
+   "Woman produced"
+  ],
+  "title": "Guatemala Huehuetenango Coffee Beans",
+  "url": "https://copperdoorcoffee.com/products/guatemala-huehuetenango-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Whole",
+    "variant_id": "49050607092021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground | Drip",
+    "variant_id": "49050607124789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground | Chemex",
+    "variant_id": "49050607157557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz / Ground | French Press",
+    "variant_id": "49050607190325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs / Whole",
+    "variant_id": "49050607223093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs / Ground | Drip",
+    "variant_id": "49050607255861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs / Ground | Chemex",
+    "variant_id": "49050607288629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lbs / Ground | French Press",
+    "variant_id": "49050607321397"
+   }
+  ],
+  "vendor": "Copper Door Coffee"
+ }
+]

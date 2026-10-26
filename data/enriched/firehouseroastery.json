@@ -1,0 +1,300 @@
+{
+ "2071": {
+  "body_hash": "f2c0bcfcb6cbbc98",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3101": {
+  "body_hash": "2e95d323ec93f15f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3105": {
+  "body_hash": "4a8029712f550efd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3109": {
+  "body_hash": "dd0adf84f6a6859d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3113": {
+  "body_hash": "c696c2c09603977b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3117": {
+  "body_hash": "199f5e2ce9f239e5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3121": {
+  "body_hash": "0eaf9d3dab9924e1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3137": {
+  "body_hash": "4cfbab3ab627868e",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Catuai",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "3141": {
+  "body_hash": "2f4f3404bf479722",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "3870": {
+  "body_hash": "53816ce5b66b2d42",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "clean",
+   "citrus acidity",
+   "sweet caramel",
+   "butterscotch",
+   "silky body"
+  ],
+  "varietals": [
+   "Catimor",
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "3874": {
+  "body_hash": "8d913bea0c020842",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity",
+   "medium body",
+   "clean",
+   "bakers chocolate",
+   "lime"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra"
+  ]
+ },
+ "3881": {
+  "body_hash": "2b41098201134327",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "3885": {
+  "body_hash": "1ddcc30e164a7c1b",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Pacas"
+  ]
+ },
+ "3889": {
+  "body_hash": "d0cf4c64eaa440e9",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "3893": {
+  "body_hash": "acbf1d2dc6535fdd",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "stone fruit"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "3898": {
+  "body_hash": "bf77057ea87960b9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tart",
+   "sweet",
+   "clean",
+   "green apple",
+   "green grape",
+   "chocolate"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ }
+}

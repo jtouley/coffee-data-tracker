@@ -1,0 +1,842 @@
+[
+ {
+  "body_hash": "c752d1495843ac14",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-12-3-hand-columbian-donkey-br-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/CM_FM_AN_BURLAP_4x6_d2974897-fc74-4b69-9b28-1d32dcee2152.png?v=1747678864",
+  "platform": "shopify",
+  "product_id": "2095777251426",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [
+   "Whole Bean Coffee",
+   "blends",
+   "cafe mule"
+  ],
+  "title": "Frosted Muzzle - Medium Roast",
+  "url": "https://www.ironmulecoffee.com/products/copy-of-12-3-hand-columbian-donkey-br-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "19596999426146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "19597065846882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "19597079117922"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "40543819268194"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "40543819300962"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "40543819333730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "40543819366498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "40543819399266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "40543819432034"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "de062a8da60a0c7e",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-frosted-muzzle-breakfast-blend-br-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/CM_LF_AN_BURLAP_4x6_429dd123-769d-41bd-9e64-0218c15b5e0e.png?v=1747678792",
+  "platform": "shopify",
+  "product_id": "2095805268066",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [
+   "Whole Bean Coffee",
+   "blends",
+   "cafe mule"
+  ],
+  "title": "Long Fuzzy Ears - Med-Dark Roast",
+  "url": "https://www.ironmulecoffee.com/products/copy-of-frosted-muzzle-breakfast-blend-br-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "19597099368546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "19597099401314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "19597099434082"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "40543808258146"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "40543808290914"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "40543808323682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "40543808356450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "40543808389218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "40543808421986"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "5e6d3331c2fa8044",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-long-fuzzy-ears-blend-br-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/CM_MM_AN_BURLAP_4x6_d35214c5-e8fc-43a7-9999-811195e45846.png?v=1747678710",
+  "platform": "shopify",
+  "product_id": "2095806906466",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [
+   "Whole Bean Coffee",
+   "blends",
+   "cafe mule"
+  ],
+  "title": "Midnight Mule - Dark Roast",
+  "url": "https://www.ironmulecoffee.com/products/copy-of-long-fuzzy-ears-blend-br-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "19597113360482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "19597113393250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "19597113426018"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "40543824707682"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "40543824740450"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 27.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "40543824773218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "40543824805986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "40543824838754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.28,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "40543824871522"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "74eb373e53b59654",
+  "first_seen": "2026-10-26",
+  "handle": "paradigm-espresso-blend-b-12-oz-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IronsideParadigmPhoto.jpg?v=1729106897",
+  "platform": "shopify",
+  "product_id": "2148434378850",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Paradigm Espresso Blend",
+  "url": "https://www.ironmulecoffee.com/products/paradigm-espresso-blend-b-12-oz-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "19798037856354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "20060300148834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "20060300181602"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "40516680319074"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "40516680351842"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "40516680384610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "40516680417378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "40516680450146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "40516680482914"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "243d18740cc9ec97",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-b-12-oz-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_8117.jpg?v=1734728246",
+  "platform": "shopify",
+  "product_id": "3830010839138",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.ironmulecoffee.com/products/ethiopia-yirgacheffe-b-12-oz-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "29100217368674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "29100217401442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "29100217434210"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "40543832965218"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "40543832997986"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "40543833030754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "40543833063522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "40543833096290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "40543833129058"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "967e8cec63def246",
+  "first_seen": "2026-10-26",
+  "handle": "draft-mule-runaway-wagon-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_6775.jpg?v=1719956441",
+  "platform": "shopify",
+  "product_id": "6858363240546",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Runaway Wagon - Dark Roast (GROUND, only)",
+  "url": "https://www.ironmulecoffee.com/products/draft-mule-runaway-wagon-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "1 Bag (12 oz)",
+    "variant_id": "40546755280994"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 21.89,
+    "title": "2 Bags (24 oz total)",
+    "variant_id": "40546755313762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.28,
+    "title": "5 Pounds - Save 15%",
+    "variant_id": "40546755346530"
+   }
+  ],
+  "vendor": "Café Mulé & Ironside Roasting Co."
+ },
+ {
+  "body_hash": "967e8cec63def246",
+  "first_seen": "2026-10-26",
+  "handle": "draft-mule-plowman-medium-dark-roast-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_6779.jpg?v=1719956371",
+  "platform": "shopify",
+  "product_id": "6885203542114",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Plowman - Med-Dark Roast (GROUND, only)",
+  "url": "https://www.ironmulecoffee.com/products/draft-mule-plowman-medium-dark-roast-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "1 Bag (12 oz)",
+    "variant_id": "40546752626786"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 21.98,
+    "title": "2 Bags (24 oz total)",
+    "variant_id": "40546752659554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.28,
+    "title": "5 Pounds - Save 15%",
+    "variant_id": "40546752921698"
+   }
+  ],
+  "vendor": "Café Mulé & Ironside Roasting Co."
+ },
+ {
+  "body_hash": "967e8cec63def246",
+  "first_seen": "2026-10-26",
+  "handle": "draft-mule-logger-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_6777.jpg?v=1719956315",
+  "platform": "shopify",
+  "product_id": "6959475556450",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Logger - Medium Roast (GROUND, only)",
+  "url": "https://www.ironmulecoffee.com/products/draft-mule-logger-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.99,
+    "title": "1 Bag (12 oz)",
+    "variant_id": "40614721683554"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 21.98,
+    "title": "2 Bags (24 oz total)",
+    "variant_id": "40614721716322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.28,
+    "title": "5 Pounds - Save 15%",
+    "variant_id": "40614721749090"
+   }
+  ],
+  "vendor": "Café Mulé & Ironside Roasting Co."
+ },
+ {
+  "body_hash": "03dacc3dd9a484ad",
+  "first_seen": "2026-10-26",
+  "handle": "natural-nic-br-b-natural-process-milk-chocolate-red-apple-juicy-b",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IronsideNicaraguaPhoto.jpg?v=1729106805",
+  "platform": "shopify",
+  "product_id": "7165767319650",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Nicely Nuanced Nic",
+  "url": "https://www.ironmulecoffee.com/products/natural-nic-br-b-natural-process-milk-chocolate-red-apple-juicy-b",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "41217882816610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "41217882849378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "41217882882146"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "41217882914914"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "41217882947682"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "41217882980450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "41217883013218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "41217883045986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "41217883078754"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "eab02bb22f40f65f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-tenejapa",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_7593_1.jpg?v=1744067994",
+  "platform": "shopify",
+  "product_id": "7329717256290",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [],
+  "title": "Mexico Tenejapa",
+  "url": "https://www.ironmulecoffee.com/products/mexico-tenejapa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Whole Bean",
+    "variant_id": "41857648623714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / French Press",
+    "variant_id": "41857648656482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12 oz) / Drip Grind",
+    "variant_id": "41857648689250"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Whole Bean",
+    "variant_id": "41857648722018"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / French Press",
+    "variant_id": "41857648754786"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24 oz total) / Drip Grind",
+    "variant_id": "41857648787554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "41857648820322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "41857648853090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "41857648885858"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "5d91aaaf9059cd1d",
+  "first_seen": "2026-10-26",
+  "handle": "dead-broke-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/DeadBrokeDecaf.jpg?v=1779391364",
+  "platform": "shopify",
+  "product_id": "7700196360290",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [
+   "cafe mule"
+  ],
+  "title": "Dead Broke Decaf",
+  "url": "https://www.ironmulecoffee.com/products/dead-broke-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / Whole Bean",
+    "variant_id": "42955047207010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / French Press",
+    "variant_id": "42955047239778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / Drip Grind",
+    "variant_id": "42955047272546"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / Whole Bean",
+    "variant_id": "42955047305314"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / French Press",
+    "variant_id": "42955047338082"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / Drip Grind",
+    "variant_id": "42955047370850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "42955047403618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "42955047436386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "42955047469154"
+   }
+  ],
+  "vendor": "Café Mulé"
+ },
+ {
+  "body_hash": "c7857da3aae27a62",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0981/6576/files/IMG_8412.jpg?v=1781206692",
+  "platform": "shopify",
+  "product_id": "7724002115682",
+  "product_type": "Coffee",
+  "roaster_slug": "ironsideroasting",
+  "tags": [
+   "Ironside",
+   "Whole Bean Coffee",
+   "single origin"
+  ],
+  "title": "Colombia Single Origin",
+  "url": "https://www.ironmulecoffee.com/products/colombia-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / Whole Bean",
+    "variant_id": "43015180812386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / Drip Grind",
+    "variant_id": "43015180845154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "1 Bag (12oz) / French Press",
+    "variant_id": "43015180877922"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / Whole Bean",
+    "variant_id": "43015180910690"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / Drip Grind",
+    "variant_id": "43015180943458"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 31.98,
+    "title": "2 Bags (24oz total) / French Press",
+    "variant_id": "43015180976226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Whole Bean",
+    "variant_id": "43015181008994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / Drip Grind",
+    "variant_id": "43015181041762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.59,
+    "title": "5 Pounds - Save 15% / French Press",
+    "variant_id": "43015181074530"
+   }
+  ],
+  "vendor": "Café Mulé & Ironside Roasting Co."
+ }
+]

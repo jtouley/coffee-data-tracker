@@ -1,0 +1,224 @@
+[
+ {
+  "body_hash": "fed95a49cc1b11ca",
+  "first_seen": "2026-10-26",
+  "handle": "namballe",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/Namballe1_860c5330-176e-4361-8de2-916eeb1e2f58.png?v=1782598932",
+  "platform": "shopify",
+  "product_id": "2444155977833",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Peru - Namballe",
+  "url": "https://www.cimarronroasters.com/products/namballe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.0,
+    "title": "250 grams",
+    "variant_id": "21825127972969"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1 kilogram",
+    "variant_id": "21825128005737"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 100.0,
+    "title": "2 kilograms",
+    "variant_id": "21825128038505"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ },
+ {
+  "body_hash": "2dd838674144025d",
+  "first_seen": "2026-10-26",
+  "handle": "courthouse",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/CourthouseFront.png?v=1722204385",
+  "platform": "shopify",
+  "product_id": "3223484995",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Courthouse",
+  "url": "https://www.cimarronroasters.com/products/courthouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 44.0,
+    "title": "1 kilogram",
+    "variant_id": "17243241987"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 82.0,
+    "title": "2 kilograms",
+    "variant_id": "17520884867"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 12.0,
+    "title": "250 grams",
+    "variant_id": "23568616195"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ },
+ {
+  "body_hash": "2e53f4cbcd23da89",
+  "first_seen": "2026-10-26",
+  "handle": "chimney-rock",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/ChimneyRockFront.png?v=1722204122",
+  "platform": "shopify",
+  "product_id": "3227659139",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Chimney Rock",
+  "url": "https://www.cimarronroasters.com/products/chimney-rock",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 44.0,
+    "title": "1 kilogram",
+    "variant_id": "17243236035"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 82.0,
+    "title": "2 kilograms",
+    "variant_id": "17520832899"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 12.0,
+    "title": "250 grams",
+    "variant_id": "23568586627"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ },
+ {
+  "body_hash": "dba4c89bfcf3a58f",
+  "first_seen": "2026-10-26",
+  "handle": "shut-eye",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/Shut-EyeFront.png?v=1722204781",
+  "platform": "shopify",
+  "product_id": "3227690307",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Shut-Eye Decaf",
+  "url": "https://www.cimarronroasters.com/products/shut-eye",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 48.0,
+    "title": "1 kilogram",
+    "variant_id": "17243286147"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250 grams",
+    "variant_id": "23568661955"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 92.0,
+    "title": "2 kilograms",
+    "variant_id": "3410930401304"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ },
+ {
+  "body_hash": "a3eec00aafb57037",
+  "first_seen": "2026-10-26",
+  "handle": "dpdogo",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/DPDogoSodu1.png?v=1786805793",
+  "platform": "shopify",
+  "product_id": "3227709571",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Ethiopia - Dry Process Dogo Sodu",
+  "url": "https://www.cimarronroasters.com/products/dpdogo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 58.0,
+    "title": "1 kilogram",
+    "variant_id": "17243267011"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 112.0,
+    "title": "2 kilograms",
+    "variant_id": "17520792067"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 15.5,
+    "title": "250 grams",
+    "variant_id": "23568528259"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ },
+ {
+  "body_hash": "482c170b1152d814",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0650/1643/files/Roaster_sChoiceFront.png?v=1722204871",
+  "platform": "shopify",
+  "product_id": "3233456323",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "cimarronroasters",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://www.cimarronroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1 kilogram",
+    "variant_id": "17243271555"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250 grams",
+    "variant_id": "23568788867"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 104.0,
+    "title": "2 kilograms",
+    "variant_id": "40597449375849"
+   }
+  ],
+  "vendor": "Cimarron Coffee Roasters"
+ }
+]

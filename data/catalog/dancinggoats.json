@@ -1,0 +1,5362 @@
+[
+ {
+  "body_hash": "8f469d7440aa1afb",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dancing-goats-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Decaf_Dancing_Goats_Blend.jpg?v=1764952854",
+  "platform": "shopify",
+  "product_id": "4167321485421",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Decaf",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "Decaf Dancing Goats®",
+  "url": "https://www.dancinggoats.com/products/decaf-dancing-goats-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763882807405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763882840173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763882872941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763882905709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763882938477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763882971245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763883004013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763883102317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763883167853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763883757677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763883855981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763883921517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763883987053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763884052589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763884150893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763884216429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763884281965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763884413037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763884511341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763884576877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "32972263981165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881243160685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881243193453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881243226221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881243258989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881243291757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881243324525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881243357293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881243390061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881243422829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881243455597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881243488365"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "24e19af6e68f2d11",
+  "first_seen": "2026-10-26",
+  "handle": "dancing-goats-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Dancing_Goats_Blend.jpg?v=1764952820",
+  "platform": "shopify",
+  "product_id": "4167325450349",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "Dancing Goats® Blend",
+  "url": "https://www.dancinggoats.com/products/dancing-goats-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763876483181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763876515949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763876548717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763876581485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763876614253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763876647021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763876679789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763876712557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763876745325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763876778093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763876810861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763876843629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763876876397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763876909165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763876941933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763876974701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763877007469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763877040237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763877073005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763877105773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763877138541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763877171309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881242570861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881242603629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881242636397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881242669165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881242701933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881242734701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881242767469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881242800237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881242833005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881242865773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881242898541"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "cee9c197af813d0c",
+  "first_seen": "2026-10-26",
+  "handle": "bohemian-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Bohemian_Blend.jpg?v=1764952797",
+  "platform": "shopify",
+  "product_id": "4169286320237",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "Bohemian",
+  "url": "https://www.dancinggoats.com/products/bohemian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763857805421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763857838189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763857870957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763857903725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763857936493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763857969261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763858002029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763858034797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763858067565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763858100333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763858133101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763858165869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763858198637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763858231405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763858264173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763858296941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763858329709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763858362477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763858395245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763858428013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763858460781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763858493549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881239818349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881239851117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881239883885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881239916653"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881239949421"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881239982189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881240014957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881240047725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881240080493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881240113261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881240146029"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "6273d396a70d46ca",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-standard",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_French_Roast.jpg?v=1764952720",
+  "platform": "shopify",
+  "product_id": "4169301164141",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "medium-dark"
+  ],
+  "title": "French Roast",
+  "url": "https://www.dancinggoats.com/products/french-roast-standard",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763807441005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763807473773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763807506541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763807539309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763807572077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763807604845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763807637613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763807670381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763807703149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763807735917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763807768685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763807801453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763807834221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763807866989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763807899757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763807932525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763807965293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763807998061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763808030829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763808063597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763808096365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763808129133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881245192301"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881245225069"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881245257837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881245290605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881245323373"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881245356141"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881245388909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881245421677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881245454445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881245487213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881245519981"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "5865e9afb3591e40",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_FTO_French.jpg?v=1764952688",
+  "platform": "shopify",
+  "product_id": "4169326657645",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Fair Trade",
+   "Organic",
+   "medium-dark"
+  ],
+  "title": "Organic Fair-Trade French Roast",
+  "url": "https://www.dancinggoats.com/products/organic-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763942903917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763942936685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763942969453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763943002221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763943034989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763943067757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763943100525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763943133293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763943166061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763943198829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763943231597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763943264365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763943297133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763943329901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763943362669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763943395437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763943428205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763943460973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763943493741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763943526509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763943559277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763943592045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881248305261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881248338029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881248370797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881248403565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881248436333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881248469101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881248501869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881248534637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881248567405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881248600173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881248632941"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "d6ae4557565b38e6",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-guatemala-el-volcan",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_FTO_Guatemala_El_Volcan.jpg?v=1764952607",
+  "platform": "shopify",
+  "product_id": "4169327116397",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Fair Trade",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Organic Fair-Trade Guatemala El Volcan",
+  "url": "https://www.dancinggoats.com/products/fair-trade-organic-guatemala-el-volcan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763959091309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763959124077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763959156845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763959189613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763959222381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763959255149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763959287917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763959320685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763959353453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763959386221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763959418989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763959451757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763959484525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763959550061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763959582829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763959615597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763959648365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763959681133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763959713901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763959746669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763959779437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763959812205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881248764013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881248796781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881248829549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881248862317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881248895085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881248927853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881248960621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881248993389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881249026157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881249058925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881249091693"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "67051b479940edc7",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Italian_Roast.jpg?v=1764952562",
+  "platform": "shopify",
+  "product_id": "4169341698157",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.dancinggoats.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763905679469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763905745005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763905777773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763905810541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763905843309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763905876077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763905908845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763905941613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763905974381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763906007149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763906039917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763906072685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763906105453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763906138221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763906170989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763906203757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763906236525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763906269293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763906302061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763906334829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763906367597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763906400365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881247158381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881247191149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881247223917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881247256685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881247289453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881247322221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881247354989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881247387757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881247420525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881247453293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881247486061"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "1e16c0c4c9922d09",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-minita-del-sol",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Costa_Rica_La_Minita_Tarrazu.jpg?v=1764952532",
+  "platform": "shopify",
+  "product_id": "4169341861997",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "light-medium"
+  ],
+  "title": "Costa Rica La Minita Tarrazu",
+  "url": "https://www.dancinggoats.com/products/costa-rica-la-minita-del-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30297993019501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30297993052269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30297993085037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30297993117805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30297993150573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30297993183341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30297993216109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30297993314413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30297993347181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30297993379949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30297993412717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30297993445485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30297993478253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30297993511021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30297993543789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30297993576557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30297993609325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30297993642093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30297993740397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30297993773165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30297993805933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30297993838701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881241522285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881241555053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881241587821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881241620589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881241653357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881241686125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881241718893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881241751661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881241784429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881241817197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881241849965"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "b3fd8b172f77f74a",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Mocha_Java.jpg?v=1764952500",
+  "platform": "shopify",
+  "product_id": "4169341927533",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "medium"
+  ],
+  "title": "Mocha Java Blend",
+  "url": "https://www.dancinggoats.com/products/mocha-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763922129005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763922194541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763922260077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763922292845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763922391149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763922456685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763922489453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763922554989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763922587757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763922620525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763922653293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763922686061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763922718829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763922751597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763922784365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763922817133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763922849901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763922882669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763922915437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763922948205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763922980973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763923013741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881247748205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881247780973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881247813741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881247846509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881247879277"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881247912045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881247944813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881247977581"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881248010349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881248043117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881248075885"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "d393afc7535e5f74",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_FTO_PeruDecaf.jpg?v=1769802754",
+  "platform": "shopify",
+  "product_id": "4169358704749",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Fair Trade",
+   "Organic",
+   "light-medium"
+  ],
+  "title": "Decaf Organic Peru",
+  "url": "https://www.dancinggoats.com/products/organic-decaf-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763936940141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763937005677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763937038445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763937071213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763937103981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763937169517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763937300589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763937333357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763937366125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763937398893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763937431661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763937464429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763937497197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763937529965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763937562733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763937595501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763937628269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763937661037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763937693805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763937726573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763937759341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763937792109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881243586669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881243619437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881243652205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881243684973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881243717741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881243750509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881243783277"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881243816045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881243848813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881243881581"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881243914349"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "b3017e787bd120aa",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Sumatra_Mutu_Batak.jpg?v=1764952434",
+  "platform": "shopify",
+  "product_id": "4169358868589",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "medium"
+  ],
+  "title": "Sumatra Mutu Batak",
+  "url": "https://www.dancinggoats.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763989565549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763989598317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763989663853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763989696621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763989729389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763989762157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763989794925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763989827693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763989860461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763989893229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763989925997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763989958765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763989991533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763990024301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763990057069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763990089837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763990122605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763990155373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763990188141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763990220909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763990253677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763990286445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881250369645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881250402413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881250435181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881250467949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881250500717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881250533485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881250566253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881250599021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881250631789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881250664557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881250697325"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "d87278e7303db843",
+  "first_seen": "2026-10-26",
+  "handle": "vesuvio-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Vesuvio_Blend.jpg?v=1764952348",
+  "platform": "shopify",
+  "product_id": "4169359196269",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "medium-dark"
+  ],
+  "title": "Vesuvio",
+  "url": "https://www.dancinggoats.com/products/vesuvio-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763994218605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763994251373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763994284141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763994316909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763994349677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763994382445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763994415213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763994447981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763994480749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763994513517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763994546285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763994579053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763994611821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763994644589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763994677357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763994710125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763994742893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763994775661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763994808429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763994841197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763994873965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763994906733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881250926701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881250959469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881250992237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881251025005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881251057773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881251090541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881251123309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881251156077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881251188845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881251221613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881251254381"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "756e04ef2b783e89",
+  "first_seen": "2026-10-26",
+  "handle": "organic-whirling-dervish-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_FTO_Whirling_Dervish.jpg?v=1764952328",
+  "platform": "shopify",
+  "product_id": "4169372565613",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Fair Trade",
+   "Organic",
+   "medium"
+  ],
+  "title": "Organic Whirling Dervish",
+  "url": "https://www.dancinggoats.com/products/organic-whirling-dervish-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763949949037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763949981805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763950014573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763950047341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763950080109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763950112877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763950145645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763950178413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763950211181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763950243949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763950309485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763950342253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763950407789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763950473325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763950538861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763950604397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763950669933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763950735469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763950801005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763950866541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763950932077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763950997613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881249812589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881249845357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881249878125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881249910893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881249943661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881249976429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881250009197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881250041965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881250074733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881250107501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881250140269"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "8f160a05675dd560",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-whirling-dervish-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Decaf_Whirling_Dervish.jpg?v=1764952292",
+  "platform": "shopify",
+  "product_id": "4169372794989",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Decaf",
+   "Fair Trade",
+   "Organic",
+   "medium"
+  ],
+  "title": "Decaf Organic Whirling Dervish",
+  "url": "https://www.dancinggoats.com/products/organic-decaf-whirling-dervish-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "30763954405485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "30763954438253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "30763954471021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "30763954536557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "30763954602093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "30763954634861"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "30763954700397"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "30763954733165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "30763954765933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "30763954798701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "30763954831469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "30763954864237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "30763954897005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "30763954929773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "30763954962541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "30763954995309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "30763955028077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "30763955060845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "30763955093613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "30763955126381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "30763955159149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "30763955191917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881244110957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881244143725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881244176493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881244209261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881244242029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881244274797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881244307565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881244340333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881244373101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881244405869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881244438637"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "b7542234bf2a3df7",
+  "first_seen": "2026-10-26",
+  "handle": "hario-mini-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/products/BB_PRODUCT_Hario-Mini-Mill-Coffee-Grinder_TL-4012_PRIMARY.png?v=1604452919",
+  "platform": "shopify",
+  "product_id": "4258820685933",
+  "product_type": "Merchandise",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Grinder"
+  ],
+  "title": "Hario Slim Coffee Mill",
+  "url": "https://www.dancinggoats.com/products/hario-mini-mill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "30764086362221"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "47fa715c7fc677ef",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-home-cold-brew-system",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/products/BB_PRODUCT_Toddy-Home-Cold-Brew-System_BR-2317_PRIMARY.png?v=1603760964",
+  "platform": "shopify",
+  "product_id": "4832919945325",
+  "product_type": "Merchandise",
+  "roaster_slug": "dancinggoats",
+  "tags": [],
+  "title": "Toddy Home Cold Brew System",
+  "url": "https://www.dancinggoats.com/products/toddy-home-cold-brew-system",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.95,
+    "title": "Default Title",
+    "variant_id": "33126609223789"
+   }
+  ],
+  "vendor": "Toddy"
+ },
+ {
+  "body_hash": "09dc402ff1dc103b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Ethiopia_Sidamo_Guji.jpg?v=1764952257",
+  "platform": "shopify",
+  "product_id": "4839033274477",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "medium"
+  ],
+  "title": "Ethiopia Sidamo Guji",
+  "url": "https://www.dancinggoats.com/products/ethiopia-sidamo-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "33145904529517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "33145904562285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "33145904627821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "33145904660589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "33145904693357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "33145904726125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "33145904758893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "33145904791661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "33145904824429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "33145904857197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "33145904889965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "33145904922733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "33145904955501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "33145904988269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "33145905021037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "33145905053805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "33145905086573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "33145905119341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "33145905152109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "33145905184877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "33145905217645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "33145905250413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "40881244635245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "40881244668013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "40881244700781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "40881244733549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "40881244766317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "40881244799085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "40881244831853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "40881244864621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "40881244897389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "40881244930157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "40881244962925"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "8d884288ca4f12f0",
+  "first_seen": "2026-10-26",
+  "handle": "puddles-pity-party-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Puddles_Pity_Party.jpg?v=1764952225",
+  "platform": "shopify",
+  "product_id": "6563868770413",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Puddles Pity Party®",
+  "url": "https://www.dancinggoats.com/products/puddles-pity-party-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "39325915644013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "39325915676781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "39325915709549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "39325915742317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "39325915775085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "39325915807853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "39325915840621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "39325915873389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "39325915906157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "39325915938925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "39325915971693"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "b6bdd80f05f07871",
+  "first_seen": "2026-10-26",
+  "handle": "the-multitasker-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Multitasker.jpg?v=1764858041",
+  "platform": "shopify",
+  "product_id": "6564187537517",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "alton brown",
+   "medium-dark"
+  ],
+  "title": "The Multitasker™",
+  "url": "https://www.dancinggoats.com/products/the-multitasker-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "39327165546605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "39327165579373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "39327165612141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "39327165644909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "39327165677677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "39327165710445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "39327165743213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "39327165775981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "39327165808749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "39327165841517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "39327165874285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "43741141172333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "43741141205101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "43741141237869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "43741141270637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "43741141303405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "43741141336173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "43741141368941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "43741141401709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "43741141434477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "43741141467245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "43741141500013"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "3d3cf8f13f9e91dc",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-puddles-pity-party®-night-coffee-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Decaf_Puddles_Pity_Party.jpg?v=1764952184",
+  "platform": "shopify",
+  "product_id": "6566253658221",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "medium-dark"
+  ],
+  "title": "Puddles Pity Party® Night Coffee",
+  "url": "https://www.dancinggoats.com/products/copy-of-puddles-pity-party®-night-coffee-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "39331745661037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "39331745693805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "39331745726573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "39331745759341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "39331745792109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "39331745824877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "39331745857645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "39331745890413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "39331745923181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "39331745955949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "39331745988717"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "657f301a9af879b5",
+  "first_seen": "2026-10-26",
+  "handle": "hario-skerton-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/products/BB_PRODUCT_Hario-Skerton-Plus-Coffee-Grinder_TL-4011_PRIMARY.png?v=1622067695",
+  "platform": "shopify",
+  "product_id": "6580241367149",
+  "product_type": "Merchandise",
+  "roaster_slug": "dancinggoats",
+  "tags": [],
+  "title": "Hario Skerton Plus",
+  "url": "https://www.dancinggoats.com/products/hario-skerton-plus",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.25,
+    "title": "Default Title",
+    "variant_id": "39381347008621"
+   }
+  ],
+  "vendor": "Hario"
+ },
+ {
+  "body_hash": "06ef9c52d61d4462",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/DG_ROASTERS_CHOICE_BLEND.png?v=1764630716",
+  "platform": "shopify",
+  "product_id": "6641936564333",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "roasters choice"
+  ],
+  "title": "Roaster's Choice Blend",
+  "url": "https://www.dancinggoats.com/products/roasters-choice-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "39606847471725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "39606847504493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "39606847537261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "39606847570029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "39606847602797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "39606847635565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "39606847668333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "39606847701101"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "39606847733869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "39606847766637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "39606847799405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "44932767121517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "44932767154285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "44932767187053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "44932767219821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "44932767252589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "44932767285357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "44932767318125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "44932767350893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "44932767383661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "44932767416429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "44932767449197"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "ba73c4f4f1abd669",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/DG_ROASTERS_CHOICE_SO.png?v=1764630672",
+  "platform": "shopify",
+  "product_id": "6650795032685",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Single Origin",
+   "roasters choice"
+  ],
+  "title": "Roaster's Choice Single Origin",
+  "url": "https://www.dancinggoats.com/products/roasters-choice-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "39636584530029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "39636584562797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "39636584595565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "39636584628333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "39636584661101"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "39636584693869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "39636584726637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "39636584759405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "39636584792173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "39636584824941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "39636584857709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "44932035936365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "44932035969133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "44932036001901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "44932036034669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "44932036067437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "44932036100205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "44932036132973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "44932036165741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "44932036198509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "44932036231277"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "44932036264045"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "b8eb7b1e0e1344b3",
+  "first_seen": "2026-10-26",
+  "handle": "dancing-ghosts",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/DancingGhosts_Product.png?v=1790183379",
+  "platform": "shopify",
+  "product_id": "7540810874989",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dancing Ghosts Halloween Blend",
+  "url": "https://www.dancinggoats.com/products/dancing-ghosts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "41831877574765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "41831877640301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "41831877771373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "41831877869677"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "c5255f2ed87a49e7",
+  "first_seen": "2026-10-26",
+  "handle": "flow-state-omniroast",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Flow_State_Omni.jpg?v=1764952036",
+  "platform": "shopify",
+  "product_id": "7681203601517",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "medium"
+  ],
+  "title": "Flow State Omniroast",
+  "url": "https://www.dancinggoats.com/products/flow-state-omniroast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "42652773449837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "42652773482605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "42652773515373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "42652773548141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "42652773580909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "42652773613677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "42652773646445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "42652773679213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "42652773711981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "42652773744749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "42652773777517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "42652773810285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "42652773843053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "42652773875821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "42652773908589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "42652773941357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "42652773974125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "42652774006893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "42652774039661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "42652774072429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "42652774105197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "42652774137965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "42652774170733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "42652774203501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "42652774236269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "42652774269037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "42652774301805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "42652774334573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "42652774367341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "42652774400109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "42652774432877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "42652774465645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "42652774498413"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "af4a6aef94d4725f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-sicobi",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/12oz_Mexico_Sicobi.jpg?v=1764951940",
+  "platform": "shopify",
+  "product_id": "7868643082349",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "light-medium"
+  ],
+  "title": "Mexico Sicobi",
+  "url": "https://www.dancinggoats.com/products/mexico-sicobi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "43624957608045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "43624957640813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "43624957673581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "43624957706349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "43624957739117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "43624957771885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "43624957804653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "43624957837421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "43624957870189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "43624957902957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "43624957935725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "43624957968493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "43624958001261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "43624958034029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "43624958066797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "43624958099565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "43624958132333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "43624958165101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "43624958197869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "43624958230637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "43624958263405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "43624958296173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "43624958328941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "43624958361709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "43624958394477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "43624958427245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "43624958460013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "43624958492781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "43624958525549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "43624958558317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "43624958591085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "43624958623853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "43624958656621"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ },
+ {
+  "body_hash": "35d4555a1807f32a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-duromina",
+  "image": "https://cdn.shopify.com/s/files/1/0259/2273/2141/files/DG_EthDur_SO_label.png?v=1786041781",
+  "platform": "shopify",
+  "product_id": "8189915562093",
+  "product_type": "Coffee",
+  "roaster_slug": "dancinggoats",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "light-medium"
+  ],
+  "title": "Ethiopia Duromina",
+  "url": "https://www.dancinggoats.com/products/ethiopia-duromina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Wholebean",
+    "variant_id": "45558890070125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Percolator",
+    "variant_id": "45558890102893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / French Press / Toddy",
+    "variant_id": "45558890135661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Flat / Chemex",
+    "variant_id": "45558890168429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Gold Cone",
+    "variant_id": "45558890201197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Flat",
+    "variant_id": "45558890233965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Paper Cone",
+    "variant_id": "45558890266733"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Stovetop Espresso",
+    "variant_id": "45558890299501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Steam Espresso",
+    "variant_id": "45558890332269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Pump Espresso",
+    "variant_id": "45558890365037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz. Bag / Turkish",
+    "variant_id": "45558890397805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Wholebean",
+    "variant_id": "45558890430573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Percolator",
+    "variant_id": "45558890463341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / French Press / Toddy",
+    "variant_id": "45558890496109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "45558890528877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Gold Cone",
+    "variant_id": "45558890561645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Paper Flat",
+    "variant_id": "45558890594413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Paper Cone",
+    "variant_id": "45558890627181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Stovetop Espresso",
+    "variant_id": "45558890659949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Steam Espresso",
+    "variant_id": "45558890692717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Pump Espresso",
+    "variant_id": "45558890725485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2 lb. Bag / Turkish",
+    "variant_id": "45558890758253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Wholebean",
+    "variant_id": "45558890791021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Percolator",
+    "variant_id": "45558890823789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / French Press / Toddy",
+    "variant_id": "45558890856557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Gold Flat / Chemex",
+    "variant_id": "45558890889325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Gold Cone",
+    "variant_id": "45558890922093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Paper Flat",
+    "variant_id": "45558890954861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Paper Cone",
+    "variant_id": "45558890987629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Stovetop Espresso",
+    "variant_id": "45558891020397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Steam Espresso",
+    "variant_id": "45558891053165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Pump Espresso",
+    "variant_id": "45558891085933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb. Bag / Turkish",
+    "variant_id": "45558891118701"
+   }
+  ],
+  "vendor": "Dancing Goats® Coffee"
+ }
+]

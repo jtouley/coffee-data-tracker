@@ -1,0 +1,1390 @@
+[
+ {
+  "body_hash": "f94f3b1739f6ec04",
+  "first_seen": "2026-10-26",
+  "handle": "plains-drifter",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/plaindrifters_ab30ec78-7e88-44bb-9e97-ae91abd74067.png?v=1762250820",
+  "platform": "shopify",
+  "product_id": "12152416633150",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "balanced coffee",
+   "bulk coffee",
+   "business coffee",
+   "cafe coffee",
+   "coffee",
+   "coffee blend",
+   "coffee for employees",
+   "coffee roasted in Montana",
+   "cold brew coffee",
+   "commercial coffee",
+   "drip coffee",
+   "easy drinking coffee",
+   "everyday coffee",
+   "first bag coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "large bag coffee",
+   "low bitterness coffee",
+   "medium coffee",
+   "medium roast",
+   "medium roast coffee",
+   "medium starter coffee",
+   "not too bitter coffee",
+   "office coffee",
+   "one pound coffee",
+   "ranch coffee",
+   "restaurant coffee",
+   "smooth coffee",
+   "smooth coffee not bitter",
+   "smooth everyday coffee",
+   "smooth not bitter coffee",
+   "starter coffee",
+   "subscription coffee",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Plains Drifter Medium Coffee Blend",
+  "url": "https://wildcalf.com/products/plains-drifter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52505815679294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "52505815712062"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "52505815744830"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "52505815777598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "52505815810366"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "52505815843134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52505815875902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "52505815908670"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "9c9653bab11bbdc2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-natural-light-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/IMG_3528.jpg?v=1726852210",
+  "platform": "shopify",
+  "product_id": "12427741233470",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "Ethiopia coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "drip coffee",
+   "fresh roasted coffee",
+   "fruit forward coffee",
+   "ground coffee",
+   "light coffee",
+   "light roast",
+   "one pound coffee",
+   "pour over coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Ethiopia Guji Natural Light Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/ethiopia-guji-natural-light-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "53663032705342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "53663032738110"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "53663032770878"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "53663032803646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "53663035326782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "53663036014910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "53663036047678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "53663036145982"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "7d622955deaf281c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra-medium-dark-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/IMG_3505.jpg?v=1726851675",
+  "platform": "shopify",
+  "product_id": "2363815264316",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "Brazil coffee",
+   "French press coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "cold brew coffee",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "medium dark coffee",
+   "medium dark roast",
+   "one pound coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Brazil Serra Negra Medium-Dark Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/brazil-serra-negra-medium-dark-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21284573970492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "21284574003260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "21284574036028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "21284574068796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "21284574101564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39888495902819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "39888495935587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "51379464438078"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "227edf733c741be2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/IMG_3568.jpg?v=1726852467",
+  "platform": "shopify",
+  "product_id": "3873991852092",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "Colombia coffee",
+   "French press coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "decaf coffee",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "medium coffee",
+   "medium roast",
+   "one pound coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Colombia Decaf Coffee",
+  "url": "https://wildcalf.com/products/colombia-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29641601220668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "29641601253436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "29641601286204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "29641601318972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50338334081342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "50338334114110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50338334146878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "50338334179646"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "2a027fce5b7cd042",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-wahgi-valley-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/WhatsApp_Image_2024-09-20_at_22.04.19.jpg?v=1726851883",
+  "platform": "shopify",
+  "product_id": "4613470847075",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "Papua New Guinea coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "medium coffee",
+   "one pound coffee",
+   "pour over coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Papua New Guinea Wahgi Valley Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/papua-new-guinea-wahgi-valley-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32617478127715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "32617478160483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44905257894206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44905260187966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "51379491143998"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "51379491176766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "51379491209534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "51379491242302"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "2455ae63168f672e",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-dark-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/DSC1168.jpg?v=1726852057",
+  "platform": "shopify",
+  "product_id": "4646523797603",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "French press coffee",
+   "Kenya coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "dark coffee",
+   "dark roast",
+   "drip coffee",
+   "espresso style coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "one pound coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Kenya Dark Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/kenya-dark-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39528558100579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39528558133347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39528558166115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39528558198883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39528558231651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39528558264419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "53830745686334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "53830745719102"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "5f408283fa8ff25e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-medium-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/IMG_3543.jpg?v=1674156994",
+  "platform": "shopify",
+  "product_id": "6539307384931",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "French press coffee",
+   "Guatemala coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "medium coffee",
+   "medium roast",
+   "one pound coffee",
+   "pour over coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Guatemala Huehuetenango Medium Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/guatemala-huehuetenango-medium-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39268782211171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39268782243939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39268782276707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39268782309475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39268782342243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39268782375011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "53830745751870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "53830745784638"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "8142f3a80eec4c44",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala-light-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/IMG_3477.jpg?v=1642540045",
+  "platform": "shopify",
+  "product_id": "658697650236",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "Honduras coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "light coffee",
+   "light roast",
+   "one pound coffee",
+   "pour over coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Honduras Marcala Light Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/honduras-marcala-light-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44905105260862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "44905105686846"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "51379505398078"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "7912630911036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "8935725269052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "8999576862780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "8999583842364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "9219370025020"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "06083fdd1685b821",
+  "first_seen": "2026-10-26",
+  "handle": "run-wild-medium-speciality-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/img_3410.jpg?v=1687473457",
+  "platform": "shopify",
+  "product_id": "6597102567523",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "award winning coffee",
+   "beginner coffee",
+   "bulk coffee",
+   "business coffee",
+   "cafe coffee",
+   "coffee",
+   "coffee blend",
+   "coffee for employees",
+   "coffee roasted in Montana",
+   "commercial coffee",
+   "drip coffee",
+   "easy drinking coffee",
+   "first bag coffee",
+   "first time coffee",
+   "first time customer coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "large bag coffee",
+   "light coffee",
+   "light medium coffee",
+   "light medium roast",
+   "light roast coffee",
+   "lighter roast coffee",
+   "low bitterness coffee",
+   "not too bitter coffee",
+   "office coffee",
+   "one pound coffee",
+   "pour over coffee",
+   "ranch coffee",
+   "restaurant coffee",
+   "smooth coffee",
+   "smooth coffee not bitter",
+   "smooth everyday coffee",
+   "smooth not bitter coffee",
+   "starter coffee",
+   "subscription coffee",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Run Wild Light-Medium Coffee Blend",
+  "url": "https://wildcalf.com/products/run-wild-medium-speciality-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39446123249763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39446123282531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39446123315299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39446123348067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39446123380835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39446123413603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50124405145918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "50124405178686"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "8c3f10aec06dfbb6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra-dark-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/IMG_3592.jpg?v=1726857043",
+  "platform": "shopify",
+  "product_id": "6629022466147",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "Brazil coffee",
+   "French press coffee",
+   "bulk coffee",
+   "coffee",
+   "coffee roasted in Montana",
+   "dark coffee",
+   "dark roast",
+   "drip coffee",
+   "espresso style coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "one pound coffee",
+   "single origin coffee",
+   "whole bean coffee"
+  ],
+  "title": "Brazil Serra Negra Dark Single-Origin Coffee",
+  "url": "https://wildcalf.com/products/brazil-serra-negra-dark-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39547188379747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39547188412515"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39547188445283"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39547188478051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39547188510819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39547188543587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39547188576355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "39547188609123"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "4db329c722a68b32",
+  "first_seen": "2026-10-26",
+  "handle": "cattle-barons-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/IMG_3422.jpg?v=1687471943",
+  "platform": "shopify",
+  "product_id": "6641882431587",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "bulk coffee",
+   "business coffee",
+   "cafe coffee",
+   "coffee",
+   "coffee blend",
+   "coffee for employees",
+   "coffee roasted in Montana",
+   "commercial coffee",
+   "dark coffee",
+   "dark medium coffee",
+   "dark medium roast",
+   "dark roast coffee",
+   "darker roast coffee",
+   "drip coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "large bag coffee",
+   "office coffee",
+   "one pound coffee",
+   "ranch coffee",
+   "restaurant coffee",
+   "subscription coffee",
+   "weekend coffee",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Cattle Baron's Reserve Dark-Medium Coffee Blend",
+  "url": "https://wildcalf.com/products/cattle-barons-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39583076548707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39583076581475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39583076614243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39583076647011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50124411896126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "50124411928894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50124411961662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "50124411994430"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "5c4cd72e3cc9cb82",
+  "first_seen": "2026-10-26",
+  "handle": "5-wire",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/IMG_3413.jpg?v=1687471956",
+  "platform": "shopify",
+  "product_id": "6641910874211",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "bulk coffee",
+   "business coffee",
+   "cafe coffee",
+   "coffee",
+   "coffee blend",
+   "coffee for employees",
+   "coffee roasted in Montana",
+   "commercial coffee",
+   "dark coffee",
+   "dark medium coffee",
+   "dark medium roast",
+   "dark roast coffee",
+   "darker roast coffee",
+   "drip coffee",
+   "espresso beans",
+   "espresso coffee",
+   "espresso roast",
+   "espresso style coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "large bag coffee",
+   "office coffee",
+   "one pound coffee",
+   "ranch coffee",
+   "restaurant coffee",
+   "subscription coffee",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "5 Wire Dark-Medium Coffee Blend",
+  "url": "https://wildcalf.com/products/5-wire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39583169118307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39583169151075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39583169183843"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39583169216611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39888497344611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39888497377379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39888497410147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "39888497442915"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "c34a8a3e146ec760",
+  "first_seen": "2026-10-26",
+  "handle": "morning-kick",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/products/IMG_3442.jpg?v=1687471928",
+  "platform": "shopify",
+  "product_id": "6641917100131",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [
+   "1 lb coffee",
+   "1 pound coffee",
+   "12 ounce coffee",
+   "12 oz coffee",
+   "16 ounce coffee",
+   "16 oz coffee",
+   "2 lb coffee",
+   "5 lb coffee",
+   "French press coffee",
+   "breakfast blend",
+   "bulk coffee",
+   "business coffee",
+   "cafe coffee",
+   "coffee",
+   "coffee blend",
+   "coffee for employees",
+   "coffee roasted in Montana",
+   "commercial coffee",
+   "drip coffee",
+   "easy drinking coffee",
+   "first bag coffee",
+   "first time coffee",
+   "fresh roasted coffee",
+   "ground coffee",
+   "large bag coffee",
+   "light coffee",
+   "light medium coffee",
+   "light medium roast",
+   "light roast coffee",
+   "lighter roast coffee",
+   "low bitterness coffee",
+   "morning coffee",
+   "morning starter coffee",
+   "not too bitter coffee",
+   "office coffee",
+   "one pound coffee",
+   "ranch coffee",
+   "restaurant coffee",
+   "smooth coffee",
+   "smooth coffee not bitter",
+   "smooth morning coffee",
+   "smooth not bitter coffee",
+   "starter coffee",
+   "subscription coffee",
+   "travel mug coffee",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Morning Kick Light-Medium Breakfast Blend",
+  "url": "https://wildcalf.com/products/morning-kick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39583186223203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Pre-Ground",
+    "variant_id": "39583186255971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39583186288739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Pre-Ground",
+    "variant_id": "39583186321507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39888499081315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Pre-Ground",
+    "variant_id": "39888499114083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39888499146851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Pre-Ground",
+    "variant_id": "39888499179619"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ },
+ {
+  "body_hash": "470be73955f6bd91",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-medium-sweet-and-cocoa",
+  "image": "https://cdn.shopify.com/s/files/1/0058/7218/9500/files/holiday_blend_1.png?v=1762282948",
+  "platform": "shopify",
+  "product_id": "6670053081187",
+  "product_type": "Coffee - Whole Bean",
+  "roaster_slug": "wildcalf",
+  "tags": [],
+  "title": "New! Holiday Blend 2025/2026",
+  "url": "https://wildcalf.com/products/holiday-blend-medium-sweet-and-cocoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39659538710627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Pre-Ground / 12oz",
+    "variant_id": "39659538743395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "50124389515582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "50124389548350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Pre-Ground / 2lbs",
+    "variant_id": "50124389581118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Pre-Ground / 5lbs",
+    "variant_id": "50124389613886"
+   }
+  ],
+  "vendor": "Wild Calf Coffee"
+ }
+]

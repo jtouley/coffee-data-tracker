@@ -1,0 +1,2645 @@
+[
+ {
+  "body_hash": "9113c00f544f379d",
+  "first_seen": "2026-10-26",
+  "handle": "don-pepe-de-monte-azul",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Mexico_Don-Pepe-de-Monte-Azul_12oz_Angl.jpg?v=1785867362",
+  "platform": "shopify",
+  "product_id": "11123244531748",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Citrus",
+   "Dark Chocolate",
+   "Nuts",
+   "Quiz Single Origin",
+   "Single Origin",
+   "exclude"
+  ],
+  "title": "Don Pepe de Monte Azul",
+  "url": "https://www.espressorepublic.com/products/don-pepe-de-monte-azul",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "51208238989348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "51208239022116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "51208239054884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "51208239087652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "51208239120420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "51208239153188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "51208239185956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "51208239218724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "51208239251492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "51208239284260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "51208239317028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "51208239349796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "51208239382564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "51208239415332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "51208239448100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "51208239480868"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "1151a3ae581212a5",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-mirador-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Colombia_Finca-El-Mirador-Pink-Bourbon_12oz_Angl.jpg?v=1785873079",
+  "platform": "shopify",
+  "product_id": "11123247284260",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Finca El Mirador Pink Bourbon",
+  "url": "https://www.espressorepublic.com/products/finca-el-mirador-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.1,
+    "title": "12oz",
+    "variant_id": "51208266285092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 188.0,
+    "title": "5lb",
+    "variant_id": "51208266317860"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "9fd890b71224ce41",
+  "first_seen": "2026-10-26",
+  "handle": "reku-habtamu",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Ethiopia_Reku-Habtamu_12oz_Angl.jpg?v=1785878261",
+  "platform": "shopify",
+  "product_id": "11123310428196",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Nuts",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Stone Fruit",
+   "Tropical & Exotic",
+   "exclude"
+  ],
+  "title": "Reku Habtamu",
+  "url": "https://www.espressorepublic.com/products/reku-habtamu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "51208537276452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "51208537309220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "51208537341988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "51208537374756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "51208537407524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "51208537440292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "51208537473060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "51208537505828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "51208537538596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "51208537571364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "51208537604132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "51208537636900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "51208537669668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "51208537702436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "51208537735204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "51208537767972"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "c7983e10c27b8d27",
+  "first_seen": "2026-10-26",
+  "handle": "sidamo",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Ethiopia_Sidamo_12oz_Angl.jpg?v=1785878487",
+  "platform": "shopify",
+  "product_id": "11123311083556",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Nuts",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Stone Fruit",
+   "Tropical & Exotic",
+   "exclude"
+  ],
+  "title": "Sidamo",
+  "url": "https://www.espressorepublic.com/products/sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "51208541863972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "51208541896740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "51208541929508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "51208541962276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "51208541995044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "51208542027812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "51208542060580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "51208542093348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "51208542126116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "51208542158884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "51208542191652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "51208542224420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "51208542257188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "51208542289956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "51208542322724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "51208542355492"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "60bb95de1d476347",
+  "first_seen": "2026-10-26",
+  "handle": "agrelia",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Colombia_Argelia_12oz_Angl.jpg?v=1792622960",
+  "platform": "shopify",
+  "product_id": "15395426828324",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Argelia",
+  "url": "https://www.espressorepublic.com/products/agrelia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz",
+    "variant_id": "67583965036580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb",
+    "variant_id": "67583965069348"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "81e13bd24cd360fe",
+  "first_seen": "2026-10-26",
+  "handle": "cali-classic",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Cali_Classic_Espresso_12oz_Angled_3a996379-4b26-41f9-afc2-02a6d8fd873a.jpg?v=1708468831",
+  "platform": "shopify",
+  "product_id": "1562417463332",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Citrus",
+   "Coffee",
+   "Espresso",
+   "Milk Chocolate",
+   "Quiz Espresso",
+   "Stone Fruit",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Cali Classic Espresso®",
+  "url": "https://www.espressorepublic.com/products/cali-classic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole",
+    "variant_id": "12117688746020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986470948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Percolator",
+    "variant_id": "42040470568996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / French Press",
+    "variant_id": "42040470601764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Chemex",
+    "variant_id": "42040470634532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Kalita",
+    "variant_id": "42040470667300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / K Cup",
+    "variant_id": "42040470700068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42040470732836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Turkish",
+    "variant_id": "42040470765604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Percolator",
+    "variant_id": "42040470798372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / French Press",
+    "variant_id": "42040470831140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Chemex",
+    "variant_id": "42040470863908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Kalita",
+    "variant_id": "42040470896676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / K Cup",
+    "variant_id": "42040470929444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Espresso",
+    "variant_id": "42040470962212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Turkish",
+    "variant_id": "42040470994980"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "c2aea85f88c862a7",
+  "first_seen": "2026-10-26",
+  "handle": "dark-star",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Dark_Star_Espresso_12oz_Angled_127b180a-3c8f-4373-9f85-c2fe5db00466.jpg?v=1688754259",
+  "platform": "shopify",
+  "product_id": "1562508558372",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Coffee",
+   "Dark Chocolate",
+   "Espresso",
+   "Quiz Espresso",
+   "Subscription",
+   "Vanilla",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Dark Star® Espresso",
+  "url": "https://www.espressorepublic.com/products/dark-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole",
+    "variant_id": "12118157131812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986438180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Percolator",
+    "variant_id": "42040471027748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / French Press",
+    "variant_id": "42040471060516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Chemex",
+    "variant_id": "42040471093284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Kalita",
+    "variant_id": "42040471126052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / K Cup",
+    "variant_id": "42040471158820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Espresso",
+    "variant_id": "42040471191588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Turkish",
+    "variant_id": "42040471224356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Percolator",
+    "variant_id": "42040471257124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / French Press",
+    "variant_id": "42040471289892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Chemex",
+    "variant_id": "42040471322660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Kalita",
+    "variant_id": "42040471355428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / K Cup",
+    "variant_id": "42040471388196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Espresso",
+    "variant_id": "42040471420964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Turkish",
+    "variant_id": "42040471453732"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "774e9abebafb13d6",
+  "first_seen": "2026-10-26",
+  "handle": "helios",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Helios_House_Blend_12oz_Front.jpg?v=1708467785",
+  "platform": "shopify",
+  "product_id": "1562516520996",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Caramel",
+   "Coffee",
+   "Milk Chocolate",
+   "Nuts",
+   "Quiz Blend",
+   "Stone Fruit",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Helios House Blend®",
+  "url": "https://www.espressorepublic.com/products/helios",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole",
+    "variant_id": "12118176956452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986405412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Percolator",
+    "variant_id": "42040472698916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / French Press",
+    "variant_id": "42040472731684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Chemex",
+    "variant_id": "42040472764452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Kalita",
+    "variant_id": "42040472797220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / K Cup",
+    "variant_id": "42040472829988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Espresso",
+    "variant_id": "42040472862756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Turkish",
+    "variant_id": "42040472895524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Percolator",
+    "variant_id": "42040472928292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / French Press",
+    "variant_id": "42040472961060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Chemex",
+    "variant_id": "42040472993828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Kalita",
+    "variant_id": "42040473026596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / K Cup",
+    "variant_id": "42040473059364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Espresso",
+    "variant_id": "42040473092132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb / Turkish",
+    "variant_id": "42040473124900"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "2493a6cd11fc4cb8",
+  "first_seen": "2026-10-26",
+  "handle": "illumination",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Illumination_Espresso_12oz_Angled_720eeb98-6a8b-4382-b0a8-b3ec6a8a79d7.jpg?v=1708469415",
+  "platform": "shopify",
+  "product_id": "1562527531044",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Citrus",
+   "Dark Chocolate",
+   "Espresso",
+   "Quiz Espresso",
+   "Single-origin",
+   "Stone Fruit",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Illumination Espresso®",
+  "url": "https://www.espressorepublic.com/products/illumination",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "12118236626980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986372644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "42040474107940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "42040474140708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "42040474173476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "42040474206244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "42040474239012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "42040474271780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "42040474304548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / Percolator",
+    "variant_id": "42040474337316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / French Press",
+    "variant_id": "42040474370084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / Chemex",
+    "variant_id": "42040474402852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / Kalita",
+    "variant_id": "42040474435620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / K Cup",
+    "variant_id": "42040474468388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / Espresso",
+    "variant_id": "42040474501156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.25,
+    "title": "5lb / Turkish",
+    "variant_id": "42040474533924"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "la-traffic",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Chino_Valley_Blend_12oz_Angled_26.jpg?v=1785878537",
+  "platform": "shopify",
+  "product_id": "1562535133220",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Caramel",
+   "Coffee",
+   "Dark Chocolate",
+   "Quiz Blend",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Chino Valley Blend",
+  "url": "https://www.espressorepublic.com/products/la-traffic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole",
+    "variant_id": "12118242754596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986339876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Percolator",
+    "variant_id": "42040477679652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / French Press",
+    "variant_id": "42040477712420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Chemex",
+    "variant_id": "42040477745188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Kalita",
+    "variant_id": "42040477777956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / K Cup",
+    "variant_id": "42040477810724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42040477843492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Turkish",
+    "variant_id": "42040477876260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Percolator",
+    "variant_id": "42040477909028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / French Press",
+    "variant_id": "42040477941796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Chemex",
+    "variant_id": "42040477974564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Kalita",
+    "variant_id": "42040478007332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / K Cup",
+    "variant_id": "42040478040100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Espresso",
+    "variant_id": "42040478072868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb / Turkish",
+    "variant_id": "42040478105636"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "7d68ecb1c408fcc8",
+  "first_seen": "2026-10-26",
+  "handle": "black-goat",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/BLACKGOAT.jpg?v=1594245154",
+  "platform": "shopify",
+  "product_id": "1562549190692",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Berries",
+   "Blends",
+   "Caramel",
+   "Coffee",
+   "Dark Chocolate",
+   "Subscription",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Black Goat® Turkish Coffee",
+  "url": "https://www.espressorepublic.com/products/black-goat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz",
+    "variant_id": "12118280929316"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "7ff8946bbb0ea30d",
+  "first_seen": "2026-10-26",
+  "handle": "plato",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Plato_Espresso_12oz_Angled_9be29e6d-3249-46e6-9785-f2f76bbfaed5.jpg?v=1708469157",
+  "platform": "shopify",
+  "product_id": "1562556039204",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Caramel",
+   "Citrus",
+   "Coffee",
+   "Dark Chocolate",
+   "Espresso",
+   "Honey",
+   "Quiz Espresso",
+   "Stone Fruit",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Plato Espresso®",
+  "url": "https://www.espressorepublic.com/products/plato",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "12118292004900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986307108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "42040478269476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "42040478302244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "42040478335012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "42040478367780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "42040478400548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "42040478433316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "42040478466084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040478498852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040478531620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040478564388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040478597156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040478629924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040478662692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040478695460"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "b17eda1d8a923c54",
+  "first_seen": "2026-10-26",
+  "handle": "cabin-fever",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Cabin_Fever_Blend_12oz_Angled_26.jpg?v=1785877664",
+  "platform": "shopify",
+  "product_id": "1562564558884",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Caramel",
+   "Coffee",
+   "Milk Chocolate",
+   "Quiz Blend",
+   "Subscription",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Cabin Fever®",
+  "url": "https://www.espressorepublic.com/products/cabin-fever",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "12118322511908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986274340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "42040478924836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "42040478957604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "42040478990372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "42040479023140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "42040479055908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "42040479088676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "42040479121444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040479154212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040479186980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040479219748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040479252516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040479285284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040479318052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040479350820"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/Espresso_Republic_Decaf_Classic_Espresso_12oz_Angled.jpg?v=1671756645",
+  "platform": "shopify",
+  "product_id": "1562571800612",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Grapes",
+   "Honey",
+   "Quiz Decaf",
+   "Quiz Espresso",
+   "Stone Fruit",
+   "Subscription",
+   "exclude"
+  ],
+  "title": "Decaf Classic Espresso",
+  "url": "https://www.espressorepublic.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole",
+    "variant_id": "12118334963748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343986241572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Percolator",
+    "variant_id": "42040479416356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / French Press",
+    "variant_id": "42040479449124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Chemex",
+    "variant_id": "42040479481892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Kalita",
+    "variant_id": "42040479514660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / K Cup",
+    "variant_id": "42040479547428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42040479580196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Turkish",
+    "variant_id": "42040479612964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040479645732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040479678500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040479711268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040479744036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040479776804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040479809572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040479842340"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "86e395152832d2ff",
+  "first_seen": "2026-10-26",
+  "handle": "thermo-er-red-type-travel-tumbler",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/ER-Thermos.jpg?v=1598054115",
+  "platform": "shopify",
+  "product_id": "4326722437156",
+  "product_type": "Merchandise",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "exclude",
+   "merchandise"
+  ],
+  "title": "Espresso Republic Thermos",
+  "url": "https://www.espressorepublic.com/products/thermo-er-red-type-travel-tumbler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 21.95,
+    "title": "Default Title",
+    "variant_id": "31064938577956"
+   }
+  ],
+  "vendor": "Thermos"
+ },
+ {
+  "body_hash": "f2796a38a0f47b07",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza-cleaning-powder",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/Urnex-Cafiza.jpg?v=1598040317",
+  "platform": "shopify",
+  "product_id": "4326731939876",
+  "product_type": "Equipment",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "cleaners",
+   "exclude"
+  ],
+  "title": "Urnex Cafiza Cleaning Powder",
+  "url": "https://www.espressorepublic.com/products/urnex-cafiza-cleaning-powder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 612,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "31064981110820"
+   }
+  ],
+  "vendor": "Urnex"
+ },
+ {
+  "body_hash": "5792be5e091a88c7",
+  "first_seen": "2026-10-26",
+  "handle": "angeleno-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Angeleno_Dark_Roast_Coffee_12oz_Angledd_9e246090-fae0-42b9-bfa0-42e88ed14d9b.jpg?v=1708467183",
+  "platform": "shopify",
+  "product_id": "4636658696228",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Chocolate",
+   "Nuts",
+   "Quiz Blend",
+   "Subscription",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Angeleno Dark Roast®",
+  "url": "https://www.espressorepublic.com/products/angeleno-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole",
+    "variant_id": "31973563793444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343985029156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Percolator",
+    "variant_id": "42040468799524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / French Press",
+    "variant_id": "42040468832292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Chemex",
+    "variant_id": "42040468865060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Kalita",
+    "variant_id": "42040468897828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / K Cup",
+    "variant_id": "42040468930596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Espresso",
+    "variant_id": "42040468963364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Turkish",
+    "variant_id": "42040468996132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040469028900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040469061668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040469094436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040469127204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040469159972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040469192740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040469225508"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "aecbb3ac2933e721",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/Espresso_Republic_Midnight_Roast_Decaf_Coffee_12oz_Angled.jpg?v=1671756273",
+  "platform": "shopify",
+  "product_id": "4636665643044",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Dark Chocolate",
+   "Decaf",
+   "Quiz Decaf",
+   "Stone Fruit",
+   "Subscription",
+   "Sweet Tobacco",
+   "exclude"
+  ],
+  "title": "Midnight Roast® Decaf",
+  "url": "https://www.espressorepublic.com/products/midnight-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole",
+    "variant_id": "31973577687076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343984996388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Percolator",
+    "variant_id": "42040480497700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / French Press",
+    "variant_id": "42040480530468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Chemex",
+    "variant_id": "42040480563236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Kalita",
+    "variant_id": "42040480596004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / K Cup",
+    "variant_id": "42040480628772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42040480661540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Turkish",
+    "variant_id": "42040480694308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040480727076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040480759844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040480792612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040480825380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040480858148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040480890916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040480923684"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "b40f8f4bb4f6ece8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pocketbru",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/Colombia-Pocketrbu.jpg?v=1596050477",
+  "platform": "shopify",
+  "product_id": "4773224185892",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Single Origin",
+   "exclude",
+   "pocketbru"
+  ],
+  "title": "Colombia Pocketbru",
+  "url": "https://www.espressorepublic.com/products/colombia-pocketbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 54,
+    "price_usd": 3.95,
+    "title": "2-pack",
+    "variant_id": "32218470318116"
+   },
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 24.75,
+    "title": "12-pack",
+    "variant_id": "32343981948964"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "ce83c7007ab9bbe6",
+  "first_seen": "2026-10-26",
+  "handle": "angeleno-dark-roast-pocketbru",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/angeleno-dark-roast-pocketbru.jpg?v=1596564168",
+  "platform": "shopify",
+  "product_id": "4823856054308",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "exclude",
+   "pocketbru"
+  ],
+  "title": "Angeleno Dark Roast® Pocketbru",
+  "url": "https://www.espressorepublic.com/products/angeleno-dark-roast-pocketbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 54,
+    "price_usd": 3.95,
+    "title": "2-pack",
+    "variant_id": "32276282048548"
+   },
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 24.75,
+    "title": "12-pack",
+    "variant_id": "32343980736548"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "ce83c7007ab9bbe6",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-pocketbru",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/ethiopia-pocketbru.jpg?v=1596564195",
+  "platform": "shopify",
+  "product_id": "4823857987620",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Africa",
+   "exclude",
+   "pocketbru"
+  ],
+  "title": "Ethiopia Pocketbru",
+  "url": "https://www.espressorepublic.com/products/ethiopia-pocketbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 54,
+    "price_usd": 3.95,
+    "title": "2-pack",
+    "variant_id": "32276283752484"
+   },
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 24.75,
+    "title": "12-pack",
+    "variant_id": "32343980703780"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "8ed8fbe74c5e44fd",
+  "first_seen": "2026-10-26",
+  "handle": "chino-valley-blend-pocketbru",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/chino-valley-blend-pocketbru.jpg?v=1596564183",
+  "platform": "shopify",
+  "product_id": "4823866376228",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "exclude",
+   "pocketbru"
+  ],
+  "title": "Chino Valley Blend Pocketbru",
+  "url": "https://www.espressorepublic.com/products/chino-valley-blend-pocketbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 54,
+    "price_usd": 3.95,
+    "title": "2-pack",
+    "variant_id": "32276292894756"
+   },
+   {
+    "available": true,
+    "grams": 295,
+    "price_usd": 24.75,
+    "title": "12-pack",
+    "variant_id": "32343980605476"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "471d5206bfd5ba15",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Cold_Brew_Blend_12oz_Angled-26.jpg?v=1785878671",
+  "platform": "shopify",
+  "product_id": "4861530439716",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Cold Brew",
+   "Dark Chocolate",
+   "Nuts",
+   "Quiz Blend",
+   "Subscription",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.espressorepublic.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole",
+    "variant_id": "32323172073508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Whole",
+    "variant_id": "32343980310564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Percolator",
+    "variant_id": "42040481120292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / French Press",
+    "variant_id": "42040481153060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Chemex",
+    "variant_id": "42040481185828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Kalita",
+    "variant_id": "42040481218596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / K Cup",
+    "variant_id": "42040481251364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42040481284132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Turkish",
+    "variant_id": "42040481316900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040481349668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040481382436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040481415204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040481447972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040481480740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040481513508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040481546276"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "fb39daadfb1a833d",
+  "first_seen": "2026-10-26",
+  "handle": "saint-anthony-industries-bt-wedge-distribution-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/products/BT-Wedge.jpg?v=1599598109",
+  "platform": "shopify",
+  "product_id": "4882921783332",
+  "product_type": "Equipment",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Brewers",
+   "exclude"
+  ],
+  "title": "Saint Anthony Industries BT Wedge Distribution Tool",
+  "url": "https://www.espressorepublic.com/products/saint-anthony-industries-bt-wedge-distribution-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 149.0,
+    "title": "Default Title",
+    "variant_id": "32351935201316"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "77334781b341f48c",
+  "first_seen": "2026-10-26",
+  "handle": "finca-tamana",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Colombia_Finca-Tamana_12oz_Angl.jpg?v=1742335203",
+  "platform": "shopify",
+  "product_id": "6968366759972",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Honey",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Tropical & Exotic",
+   "exclude"
+  ],
+  "title": "Finca Tamana",
+  "url": "https://www.espressorepublic.com/products/finca-tamana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Whole",
+    "variant_id": "40070018367524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole",
+    "variant_id": "40070018400292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Percolator",
+    "variant_id": "42168869355556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / French Press",
+    "variant_id": "42168869388324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Chemex",
+    "variant_id": "42168869421092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Kalita",
+    "variant_id": "42168869453860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / K Cup",
+    "variant_id": "42168869486628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Espresso",
+    "variant_id": "42168869519396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "12oz / Turkish",
+    "variant_id": "42168869552164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42168869584932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / French Press",
+    "variant_id": "42168869617700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42168869650468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42168869683236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42168869716004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42168869748772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42168869781540"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "530c866a9a197cb1",
+  "first_seen": "2026-10-26",
+  "handle": "diner-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Diner_Dark_Roast_Coffee_12oz_Angled_26.jpg?v=1785878720",
+  "platform": "shopify",
+  "product_id": "7092303659044",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Chocolate",
+   "Nuts",
+   "Quiz Blend",
+   "Subscription",
+   "Warm Spices",
+   "exclude"
+  ],
+  "title": "Diner Dark Roast",
+  "url": "https://www.espressorepublic.com/products/diner-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Whole",
+    "variant_id": "40353797079076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Whole",
+    "variant_id": "40353797111844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Percolator",
+    "variant_id": "42040482758692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / French Press",
+    "variant_id": "42040482791460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Chemex",
+    "variant_id": "42040482824228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Kalita",
+    "variant_id": "42040482856996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / K Cup",
+    "variant_id": "42040482889764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Espresso",
+    "variant_id": "42040482922532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12oz / Turkish",
+    "variant_id": "42040482955300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42040482988068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / French Press",
+    "variant_id": "42040483020836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42040483053604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42040483086372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42040483119140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42040483151908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42040483184676"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ },
+ {
+  "body_hash": "f3441ef693a61d3e",
+  "first_seen": "2026-10-26",
+  "handle": "boquete",
+  "image": "https://cdn.shopify.com/s/files/1/0098/7119/6196/files/Espresso_Republic_Single-Origin_Panama_Boquete_12oz_Angl.jpg?v=1785877535",
+  "platform": "shopify",
+  "product_id": "7968072794148",
+  "product_type": "Coffee",
+  "roaster_slug": "espressorepublic",
+  "tags": [
+   "Americas",
+   "Honey",
+   "Milk Chocolate",
+   "Quiz Single Origin",
+   "Single Origin",
+   "Stone Fruit"
+  ],
+  "title": "Boquete",
+  "url": "https://www.espressorepublic.com/products/boquete",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Whole",
+    "variant_id": "42689488846884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Whole",
+    "variant_id": "42689488879652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Percolator",
+    "variant_id": "42689491501092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / French Press",
+    "variant_id": "42689491533860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Chemex",
+    "variant_id": "42689491566628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Kalita",
+    "variant_id": "42689491599396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / K Cup",
+    "variant_id": "42689491632164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Espresso",
+    "variant_id": "42689491664932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.7,
+    "title": "12oz / Turkish",
+    "variant_id": "42689491697700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Percolator",
+    "variant_id": "42689491730468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / French Press",
+    "variant_id": "42689491763236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Chemex",
+    "variant_id": "42689491796004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Kalita",
+    "variant_id": "42689491828772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / K Cup",
+    "variant_id": "42689491861540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Espresso",
+    "variant_id": "42689491894308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb / Turkish",
+    "variant_id": "42689491927076"
+   }
+  ],
+  "vendor": "Espresso Republic"
+ }
+]

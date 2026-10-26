@@ -1,0 +1,318 @@
+[
+ {
+  "body_hash": "a3bce366076e0541",
+  "first_seen": "2026-10-26",
+  "handle": "morning-hunt-blend-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/products/Morning_Hunt_Blend_5_lb_whole_bean_coffee_bag_by_Ludwig_Coffee.png?v=1784917818",
+  "platform": "shopify",
+  "product_id": "15627320983625",
+  "product_type": "5 Pound Whole Bean Bag",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "5 Pound Coffee",
+   "5 lb Coffee",
+   "Bulk Coffee",
+   "Bulk Whole Bean Coffee",
+   "Morning Hunt",
+   "Signature Blend",
+   "Whole Bean Coffee",
+   "whole-bean"
+  ],
+  "title": "Morning Hunt Blend — 5 lb Whole Bean Coffee",
+  "url": "https://www.ludwigcoffee.com/products/morning-hunt-blend-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 119.0,
+    "title": "Default Title",
+    "variant_id": "55844446568521"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "c3665118320f2b29",
+  "first_seen": "2026-10-26",
+  "handle": "morning-hunt-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/MorningHunt2040.png?v=1770165795",
+  "platform": "shopify",
+  "product_id": "4597632139337",
+  "product_type": "Morning Hunt Blend",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Alpine Roast",
+   "Espresso Suitable",
+   "Italian Roast",
+   "Medium Dark Roast",
+   "Morning Coffee",
+   "New",
+   "Ritual Coffee",
+   "Seasonal Blend",
+   "Structured Blend",
+   "Whole Bean Coffee",
+   "tag"
+  ],
+  "title": "Morning Hunt Blend",
+  "url": "https://www.ludwigcoffee.com/products/morning-hunt-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "40132207935561"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "627d1bbdee3f9cf4",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Nicaragua2040.png?v=1692410757",
+  "platform": "shopify",
+  "product_id": "4597846802505",
+  "product_type": "Nicaraguan Coffee",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Balanced Coffee",
+   "Catuaí",
+   "Citrus Notes",
+   "Cocoa Finish",
+   "Espresso Friendly",
+   "Medium Roast",
+   "Nicaragua Coffee",
+   "Nueva Segovia",
+   "Pour Over Coffee",
+   "Single Origin Coffee",
+   "Whole Bean Coffee"
+  ],
+  "title": "Nicaraguan Single Origin Coffee",
+  "url": "https://www.ludwigcoffee.com/products/nicaragua-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "39379872645193"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "cb67d3ce5f9f7206",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Guatemala2040.png?v=1770165371",
+  "platform": "shopify",
+  "product_id": "4597846999113",
+  "product_type": "Guatemalan Coffee",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Chocolate Notes",
+   "Citrus Brightness",
+   "Cobán",
+   "Guatemala Coffee",
+   "High Elevation Coffee",
+   "Medium Roast",
+   "Red Bourbon",
+   "Single Origin Coffee",
+   "Specialty Coffee Brooklyn",
+   "Vanilla Notes",
+   "Whole Bean Coffee"
+  ],
+  "title": "Guatemala Single Origin Coffee",
+  "url": "https://www.ludwigcoffee.com/products/guatemala-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "39379872153673"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "057a79bc448c8aa3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-top-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Colombia2040.png?v=1770165396",
+  "platform": "shopify",
+  "product_id": "4597847294025",
+  "product_type": "Colombian Coffee",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Brooklyn Roasted",
+   "Caramel Sweetness",
+   "Caturra Varietal",
+   "Cherry Notes",
+   "Citrus Acidity",
+   "Cocoa Finish",
+   "Colombian Coffee",
+   "Dark Roast",
+   "Espresso Coffee",
+   "Espresso Roast",
+   "Huila Coffee",
+   "Single Origin",
+   "Specialty Coffee Brooklyn",
+   "Whole Bean Coffee"
+  ],
+  "title": "Colombia Single Origin Coffee",
+  "url": "https://www.ludwigcoffee.com/products/colombia-top-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "39379855933513"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "6393f92a1f9c9e35",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Ethiopia2040.png?v=1692410431",
+  "platform": "shopify",
+  "product_id": "6592145064009",
+  "product_type": "Ethiopian Coffee",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "African Coffee",
+   "Brooklyn Roasted",
+   "Ethiopia Limmu",
+   "Ethiopian Coffee",
+   "Heirloom Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee",
+   "Specialty Coffee Brooklyn",
+   "Whole Bean Coffee"
+  ],
+  "title": "Ethiopia Single Origin Coffee",
+  "url": "https://www.ludwigcoffee.com/products/ethiopia-single-origin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "39379701301321"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "c1582f2ccd44f487",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/products/Morning_Hunt_Blend_5_lb_whole_bean_coffee_bag_by_Ludwig_Coffee.png?v=1784917818",
+  "platform": "shopify",
+  "product_id": "6592279511113",
+  "product_type": "5 Pound Whole Bean Bag",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "5 Pound Coffee",
+   "5 lb Coffee",
+   "Bulk Coffee",
+   "Bulk Whole Bean Coffee",
+   "Café Supply",
+   "High Volume Coffee",
+   "Office Coffee",
+   "Whole Bean Coffee",
+   "Wholesale Coffee"
+  ],
+  "title": "Whole Bean Coffee, Brazil (La Blonde Blend), 5 Lbs Bulk Bag",
+  "url": "https://www.ludwigcoffee.com/products/5-lb-whole-bean-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "Default Title",
+    "variant_id": "39379906494537"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "1b41047043a6bdca",
+  "first_seen": "2026-10-26",
+  "handle": "curiosity-limited-edition-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Curiosity2040.png?v=1692409733",
+  "platform": "shopify",
+  "product_id": "6596515201097",
+  "product_type": "Curiosity Blend",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Medium Roast Coffee",
+   "Whole Bean Coffee",
+   "artisan coffee",
+   "brooklyn roasted coffee",
+   "coffee series",
+   "craft roasted coffee",
+   "curiosity blend",
+   "limited edition coffee",
+   "limited release",
+   "premium coffee",
+   "rotating blend",
+   "small batch coffee",
+   "specialty coffee blend"
+  ],
+  "title": "Curiosity – Limited Edition Medium Roast Whole Bean Coffee",
+  "url": "https://www.ludwigcoffee.com/products/curiosity-limited-edition-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "39391041585225"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ },
+ {
+  "body_hash": "bea9ccef4884e5fb",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-la-blonde-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0114/8436/4858/files/Brazil_Bag.png?v=1735496182",
+  "platform": "shopify",
+  "product_id": "7382967353417",
+  "product_type": "",
+  "roaster_slug": "ludwigcoffee",
+  "tags": [
+   "Balanced Coffee",
+   "Blond Roast",
+   "Brazilian Coffee",
+   "Brooklyn Roasted",
+   "Coffee Blend",
+   "Espresso & Drip",
+   "Espresso Friendly",
+   "La Blonde",
+   "Medium Roast",
+   "Morning Coffee",
+   "Structured Roast",
+   "The Coffee Series",
+   "Whole Bean Coffee",
+   "small batch coffee"
+  ],
+  "title": "Brazil Single Origin Coffee (La Blonde Blend)",
+  "url": "https://www.ludwigcoffee.com/products/brazil-la-blonde-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "41952577454153"
+   }
+  ],
+  "vendor": "Ludwig Coffee"
+ }
+]

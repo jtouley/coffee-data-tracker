@@ -1,0 +1,859 @@
+[
+ {
+  "body_hash": "bf97917583d3d603",
+  "first_seen": "2026-10-26",
+  "handle": "meow-light-roast-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_Meow_900x900_7b0df630-09dd-48d3-b4d4-f8d1c10445c0.jpg?v=1568318698",
+  "platform": "shopify",
+  "product_id": "108841173022",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Coffee Beans",
+   "Light Roast",
+   "Raygun",
+   "collaborations"
+  ],
+  "title": "Meow That's What I Call Light Roast! - Light Roast Coffee Blend",
+  "url": "https://www.rossstreetroasting.com/products/meow-light-roast-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "1388961595422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Drip/med)",
+    "variant_id": "1388961628190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (French Press/coarse)",
+    "variant_id": "1388961660958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Espresso/fine)",
+    "variant_id": "1388961693726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "1388961726494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Drip/med)",
+    "variant_id": "1388961759262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (French Press/coarse)",
+    "variant_id": "1388961792030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Espresso/fine)",
+    "variant_id": "1388961824798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "1388961857566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Drip/med)",
+    "variant_id": "1388961890334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (French Press/coarse)",
+    "variant_id": "1388961923102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Espresso/fine)",
+    "variant_id": "1388961955870"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "5192fed8cd9090e1",
+  "first_seen": "2026-10-26",
+  "handle": "back-40-northern-italian-roast-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/RSR-Bag-Back40-12OZ.jpg?v=1600787071",
+  "platform": "shopify",
+  "product_id": "1088711196708",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Direct Trade",
+   "Medium-Dark Roast",
+   "espresso"
+  ],
+  "title": "The Back 40 - Traditional Northern Italian Roast for Espresso",
+  "url": "https://www.rossstreetroasting.com/products/back-40-northern-italian-roast-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "36430156071062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Medium/Drip)",
+    "variant_id": "36430159511702"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Coarse/French Press)",
+    "variant_id": "36430168752278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Fine/Espresso)",
+    "variant_id": "36430170357910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "9990357581860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Medium/Drip)",
+    "variant_id": "9990358401060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Coarse/French Press)",
+    "variant_id": "9990358433828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Fine/Espresso)",
+    "variant_id": "9990358466596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9990358499364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Medium/Drip)",
+    "variant_id": "9990358532132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Coarse/French Press)",
+    "variant_id": "9990358564900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Fine/Espresso)",
+    "variant_id": "9990358597668"
+   }
+  ],
+  "vendor": "Ross Street Roasting Co."
+ },
+ {
+  "body_hash": "2bbd474d55b6962b",
+  "first_seen": "2026-10-26",
+  "handle": "kula-peaberry-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_KulaPeaberry_900x900_0c70132f-e0a0-4c19-a1ff-9b08f7a3b1f6.jpg?v=1561650010",
+  "platform": "shopify",
+  "product_id": "417874706468",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Coffee Beans",
+   "Direct Trade",
+   "Fresh Coffee Beans",
+   "Light-Medium Roast",
+   "Papua New Guinea"
+  ],
+  "title": "Kula Peaberry - Papua New Guinea Light-Medium Roast Relationship Coffee",
+  "url": "https://www.rossstreetroasting.com/products/kula-peaberry-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "5318681231396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "5318681264164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "5318681296932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Drip/med)",
+    "variant_id": "5318681329700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Espresso/fine)",
+    "variant_id": "5318681362468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Espresso/fine)",
+    "variant_id": "5318681395236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Drip/med)",
+    "variant_id": "5318681428004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Espresso/fine)",
+    "variant_id": "5318681460772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (French Press/coarse)",
+    "variant_id": "5318681493540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (French Press/coarse)",
+    "variant_id": "5318681526308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (French Press/coarse)",
+    "variant_id": "5318681559076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Drip/med)",
+    "variant_id": "5318681591844"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "05d56299b07b06bc",
+  "first_seen": "2026-10-26",
+  "handle": "family-tradition-brazilian-coffee-seibt-family-farm-cerrado-mineiro-region",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_FamilyTradition_900x900_2af7b671-ecdb-4f71-8214-b75a816693a1.png?v=1615214871",
+  "platform": "shopify",
+  "product_id": "6562256683190",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [],
+  "title": "Family Tradition - Brazilian Coffee, Seibt Family Farm, Cerrado Mineiro Region",
+  "url": "https://www.rossstreetroasting.com/products/family-tradition-brazilian-coffee-seibt-family-farm-cerrado-mineiro-region",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39319406018742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39319406051510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39319406084278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Medium/Drip)",
+    "variant_id": "39319430299830"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Coarse/French Press)",
+    "variant_id": "39319432265910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Fine/Espresso)",
+    "variant_id": "39319434199222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Medium/Drip)",
+    "variant_id": "39319435313334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Coarse/French Press)",
+    "variant_id": "39319435870390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Fine/Espresso)",
+    "variant_id": "39319436722358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Medium/Drip)",
+    "variant_id": "39319437934774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Coarse/French Press)",
+    "variant_id": "39319442096310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Fine/Espresso)",
+    "variant_id": "39319443833014"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "6e8cb2e56c2751df",
+  "first_seen": "2026-10-26",
+  "handle": "cool-it-yo-decaf-colombian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_CoolItYo_900x900_f7061f72-dc63-4012-8721-e83b599311fc.png?v=1620223917",
+  "platform": "shopify",
+  "product_id": "6695722942646",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Colombia"
+  ],
+  "title": "Cool It, Yo! - DECAF Colombian Coffee",
+  "url": "https://www.rossstreetroasting.com/products/cool-it-yo-decaf-colombian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39690322673846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Medium/Drip)",
+    "variant_id": "39690322706614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Coarse/French Press)",
+    "variant_id": "39690322739382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground (Fine/Espresso)",
+    "variant_id": "39690322772150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39690322804918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb / Ground (Medium/Drip)",
+    "variant_id": "39690322837686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb / Ground (Coarse/French Press)",
+    "variant_id": "39690322870454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb / Ground (Fine/Espresso)",
+    "variant_id": "39690322903222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39690322935990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground (Medium/Drip)",
+    "variant_id": "39690322968758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground (Coarse/French Press)",
+    "variant_id": "39690323001526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground (Fine/Espresso)",
+    "variant_id": "39690323034294"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "0c7c4823f32c52c4",
+  "first_seen": "2026-10-26",
+  "handle": "breville-bambino-plus-small-home-espresso-maker",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/files/BES500USCM_CAROUSEL0.jpg?v=1724873572",
+  "platform": "shopify",
+  "product_id": "8786182570242",
+  "product_type": "Coffee Gear",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [],
+  "title": "Breville Bambino Plus - Small Home Espresso Maker",
+  "url": "https://www.rossstreetroasting.com/products/breville-bambino-plus-small-home-espresso-maker",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 499.95,
+    "title": "Default Title",
+    "variant_id": "45452596478210"
+   }
+  ],
+  "vendor": "Breville"
+ },
+ {
+  "body_hash": "d807d661368cee30",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-divine-inspiration-relationship-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/files/rsr_12oz_DivineInspiration_900x900_3a62b70e-d531-43c3-93c3-d8879f607500.png?v=1695396282",
+  "platform": "shopify",
+  "product_id": "9296873232",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Coffee Beans",
+   "Direct Trade",
+   "Divine Inspiration",
+   "Fresh Coffee Beans",
+   "Medium Roast",
+   "Nicaragua"
+  ],
+  "title": "Divine Inspiration - Nicaraguan Light-Medium Roast Relationship Coffee",
+  "url": "https://www.rossstreetroasting.com/products/nicaragua-divine-inspiration-relationship-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "36993021136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "36993021200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "36993021328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Drip/med)",
+    "variant_id": "36993185168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Espresso/fine)",
+    "variant_id": "36993198992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Espresso/fine)",
+    "variant_id": "36993240080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Drip/med)",
+    "variant_id": "36993243920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Espresso/fine)",
+    "variant_id": "36993285456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (French Press/coarse)",
+    "variant_id": "36993304848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (French Press/coarse)",
+    "variant_id": "36993335056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (French Press/coarse)",
+    "variant_id": "36993413712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Drip/med)",
+    "variant_id": "36993423440"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "7ca624f0f8e089c7",
+  "first_seen": "2026-10-26",
+  "handle": "jacks-feed-store-medium-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_Jacks_900x900_292d3549-f0c9-4387-8bcd-30ae42cf156c.jpg?v=1556653426",
+  "platform": "shopify",
+  "product_id": "9296986512",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Coffee Beans",
+   "Fresh Coffee Beans",
+   "Jack's Feed Store",
+   "Medium Roast"
+  ],
+  "title": "Jack's Feed Store - Medium Roast Coffee Blend",
+  "url": "https://www.rossstreetroasting.com/products/jacks-feed-store-medium-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "36993866000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Drip/med)",
+    "variant_id": "36993866064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (French Press/coarse)",
+    "variant_id": "36993866128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Espresso/fine)",
+    "variant_id": "36993866192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "36993866256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Drip/med)",
+    "variant_id": "36993866320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (French Press/coarse)",
+    "variant_id": "36993866384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Espresso/fine)",
+    "variant_id": "36993866448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "36993866512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Drip/med)",
+    "variant_id": "36993866640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (French Press/coarse)",
+    "variant_id": "36993866704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Espresso/fine)",
+    "variant_id": "36993866768"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ },
+ {
+  "body_hash": "5183ba17a2c55938",
+  "first_seen": "2026-10-26",
+  "handle": "bohemian-gothic-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1505/8342/products/rsr_120z_Bohemian_900x900_21ed47ea-fd0d-4a5e-b619-ef129fb06d78.jpg?v=1568318871",
+  "platform": "shopify",
+  "product_id": "9306727952",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "rossstreetroasting",
+  "tags": [
+   "Bohemian Gothic",
+   "Coffee Beans",
+   "Dark Roast",
+   "Fresh Coffee Beans"
+  ],
+  "title": "Bohemian Gothic - Dark Roast Coffee Blend",
+  "url": "https://www.rossstreetroasting.com/products/bohemian-gothic-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37059154192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Drip/med)",
+    "variant_id": "37059154256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (French Press/coarse)",
+    "variant_id": "37059154320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground (Espresso/fine)",
+    "variant_id": "37059154384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "37059154448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Drip/med)",
+    "variant_id": "37059154512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (French Press/coarse)",
+    "variant_id": "37059154704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground (Espresso/fine)",
+    "variant_id": "37059154768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37059154832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Drip/med)",
+    "variant_id": "37059154896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (French Press/coarse)",
+    "variant_id": "37059154960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground (Espresso/fine)",
+    "variant_id": "37059155024"
+   }
+  ],
+  "vendor": "Ross Street Roasting"
+ }
+]

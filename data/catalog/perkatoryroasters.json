@@ -1,0 +1,976 @@
+[
+ {
+  "body_hash": "6cf9d8a2f470b19c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_3467_1.jpg?v=1757433287",
+  "platform": "shopify",
+  "product_id": "7518417158368",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Decaf- Colombia Sugarcane Process",
+  "url": "https://www.perkatoryroasters.com/products/decaf-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43874060665056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Ground-Coarse / 12 oz",
+    "variant_id": "43874060697824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Ground- Medium / 12 oz",
+    "variant_id": "43874060730592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Ground- Fine / 12 oz",
+    "variant_id": "43874060763360"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "Whole Bean / 1 kg",
+    "variant_id": "47431358644448"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "Ground-Coarse / 1 kg",
+    "variant_id": "47431358677216"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "Ground- Medium / 1 kg",
+    "variant_id": "47431358709984"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "Ground- Fine / 1 kg",
+    "variant_id": "47431358742752"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "b81e5c275af05223",
+  "first_seen": "2026-10-26",
+  "handle": "shop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_0105.jpg?v=1757432783",
+  "platform": "shopify",
+  "product_id": "7518417944800",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Shop Blend",
+  "url": "https://www.perkatoryroasters.com/products/shop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Fine",
+    "variant_id": "42907168145632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Medium",
+    "variant_id": "42907168178400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "42907168211168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "42907168440544"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Whole Bean",
+    "variant_id": "45271081025760"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Fine",
+    "variant_id": "45271081058528"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Medium",
+    "variant_id": "45271081091296"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Coarse",
+    "variant_id": "45271081124064"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "0394e1ff044a5f83",
+  "first_seen": "2026-10-26",
+  "handle": "solstice",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_0108_0931b8da-b7f0-409e-aa1f-b5235d2af735.jpg?v=1757432730",
+  "platform": "shopify",
+  "product_id": "7518418141408",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Solstice",
+  "url": "https://www.perkatoryroasters.com/products/solstice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Fine",
+    "variant_id": "42907202257120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Medium",
+    "variant_id": "42907202289888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Coarse",
+    "variant_id": "42907202322656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "42907202355424"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Whole Bean",
+    "variant_id": "45271083286752"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Fine",
+    "variant_id": "45271083319520"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Medium",
+    "variant_id": "45271083352288"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Coarse",
+    "variant_id": "45271083385056"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "9e3c07b137b01e1e",
+  "first_seen": "2026-10-26",
+  "handle": "three-witches-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_0102.jpg?v=1757432645",
+  "platform": "shopify",
+  "product_id": "7518418305248",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Three Witches Blend",
+  "url": "https://www.perkatoryroasters.com/products/three-witches-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Fine",
+    "variant_id": "42907169718496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Medium",
+    "variant_id": "42907169751264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "42907169784032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "42907169816800"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Whole Bean",
+    "variant_id": "45271086137568"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Fine",
+    "variant_id": "45271086170336"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Medium",
+    "variant_id": "45271086203104"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.75,
+    "title": "1 kg / Coarse",
+    "variant_id": "45271086235872"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "979ae1096b79b921",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_0113.jpg?v=1757432577",
+  "platform": "shopify",
+  "product_id": "7518418469088",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "New England Blend",
+  "url": "https://www.perkatoryroasters.com/products/new-england-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Fine",
+    "variant_id": "42907226243296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Medium",
+    "variant_id": "42907226276064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Coarse",
+    "variant_id": "42907226308832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "42907226341600"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Whole Bean",
+    "variant_id": "45271078043872"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Fine",
+    "variant_id": "45271078076640"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Medium",
+    "variant_id": "45271078109408"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 43.5,
+    "title": "1 kg / Coarse",
+    "variant_id": "45271078142176"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "28b1166a6c07fe1f",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/products/2V1A7517_websize_720x_b73c1baf-24ec-478e-b235-a7f5e676791a.jpg?v=1652936564",
+  "platform": "shopify",
+  "product_id": "7680170229984",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Roaster's Choice (12oz)",
+  "url": "https://www.perkatoryroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Whole Bean",
+    "variant_id": "43867540685024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Fine",
+    "variant_id": "43867540717792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Medium",
+    "variant_id": "43867540750560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Coarse",
+    "variant_id": "43867540783328"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "46b4ad5ad4398872",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-and-shop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/products/whiteowlroastersubscription_1_0760888a-eb9d-4da1-b0f4-cad9d0541c13.jpg?v=1653376835",
+  "platform": "shopify",
+  "product_id": "7686127190240",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Roaster's Choice and Shop Blend",
+  "url": "https://www.perkatoryroasters.com/products/roasters-choice-and-shop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Whole Bean",
+    "variant_id": "43867537965280"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Fine",
+    "variant_id": "43867537998048"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Medium",
+    "variant_id": "43867538030816"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Coarse",
+    "variant_id": "43867538063584"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "46b4ad5ad4398872",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-and-new-england-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/products/whiteowlroastersubscription_1_b23439bd-e8c6-4d28-b840-11d06832617c.jpg?v=1653382560",
+  "platform": "shopify",
+  "product_id": "7686228771040",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Roaster's Choice and New England Blend",
+  "url": "https://www.perkatoryroasters.com/products/roasters-choice-and-new-england-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Whole Bean",
+    "variant_id": "43867537572064"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Fine",
+    "variant_id": "43867537604832"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Medium",
+    "variant_id": "43867537637600"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Coarse",
+    "variant_id": "43867537670368"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "36b7d62bfee9b50e",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-and-three-witches-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/products/whiteowlroastersubscription_1_ec01385d-fad7-4db0-85fc-473342211a79.jpg?v=1653385723",
+  "platform": "shopify",
+  "product_id": "7686273564896",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Roaster's Choice and Three Witches Espresso",
+  "url": "https://www.perkatoryroasters.com/products/roasters-choice-and-three-witches-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Whole Bean",
+    "variant_id": "43867540291808"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Fine",
+    "variant_id": "43867540324576"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Medium",
+    "variant_id": "43867540357344"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "Coarse",
+    "variant_id": "43867540390112"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "06e4ab6bada1d680",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-1kg",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/products/2V1A7517_websize_720x_b73c1baf-24ec-478e-b235-a7f5e676791a.jpg?v=1652936564",
+  "platform": "shopify",
+  "product_id": "8837261525216",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Roaster's Choice (1kg)",
+  "url": "https://www.perkatoryroasters.com/products/roasters-choice-1kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.5,
+    "title": "Whole Bean",
+    "variant_id": "47072965263584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.5,
+    "title": "Fine",
+    "variant_id": "47072965296352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.5,
+    "title": "Medium",
+    "variant_id": "47072965329120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.5,
+    "title": "Coarse",
+    "variant_id": "47072965361888"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "f1fbd1d51d5fedcd",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-zanzibar-peaberry-variety-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_1585_1.jpg?v=1757431902",
+  "platform": "shopify",
+  "product_id": "8876303843552",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Tanzania Zanzibar Peaberry Variety - 12oz",
+  "url": "https://www.perkatoryroasters.com/products/tanzania-zanzibar-peaberry-variety-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "Whole Bean",
+    "variant_id": "47310424015072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "Coarse",
+    "variant_id": "47310424047840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "Medium",
+    "variant_id": "47310424080608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "Fine",
+    "variant_id": "47310424113376"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "ae327edcb44a22a4",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-canned-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/0092680C-5AE2-4056-9233-D5875AC01E8D_1_1.jpg?v=1757431740",
+  "platform": "shopify",
+  "product_id": "8928441991392",
+  "product_type": "Misc.",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Tanzania Canned Cold Brew",
+  "url": "https://www.perkatoryroasters.com/products/tanzania-canned-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 19.0,
+    "title": "4 Pack",
+    "variant_id": "47551349981408"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 45.0,
+    "title": "12 Pack",
+    "variant_id": "47551350014176"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 28.0,
+    "title": "6 Pack",
+    "variant_id": "47879361396960"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "f035cfd52cca9000",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-voz-atitlan-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_3262_1.jpg?v=1757431522",
+  "platform": "shopify",
+  "product_id": "8963939565792",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Guatemala La Voz Atitlan 12oz",
+  "url": "https://www.perkatoryroasters.com/products/guatemala-la-voz-atitlan-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Whole Bean",
+    "variant_id": "47680721748192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Fine",
+    "variant_id": "47680721780960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Coarse",
+    "variant_id": "47680721813728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Medium",
+    "variant_id": "47680721846496"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "f0ecc14ec36414f3",
+  "first_seen": "2026-10-26",
+  "handle": "all-hallows-eve-blend-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_3922.jpg?v=1759352163",
+  "platform": "shopify",
+  "product_id": "8995108094176",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "All Hallows Eve Blend 12oz",
+  "url": "https://www.perkatoryroasters.com/products/all-hallows-eve-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "47812527423712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Fine",
+    "variant_id": "47812527456480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Coarse",
+    "variant_id": "47812527489248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Medium",
+    "variant_id": "47812527522016"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "60144b8f13b08243",
+  "first_seen": "2026-10-26",
+  "handle": "support-local-crewneck",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/unisex-garment-dyed-sweatshirt-pepper-back-68e670e107f9d.jpg?v=1759932660",
+  "platform": "shopify",
+  "product_id": "9004278382816",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Support Local Crewneck",
+  "url": "https://www.perkatoryroasters.com/products/support-local-crewneck",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 60.0,
+    "title": "S",
+    "variant_id": "47841333936352"
+   },
+   {
+    "available": true,
+    "grams": 417,
+    "price_usd": 60.0,
+    "title": "M",
+    "variant_id": "47841333969120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 60.0,
+    "title": "L",
+    "variant_id": "47841334001888"
+   },
+   {
+    "available": true,
+    "grams": 490,
+    "price_usd": 60.0,
+    "title": "XL",
+    "variant_id": "47841334034656"
+   },
+   {
+    "available": true,
+    "grams": 558,
+    "price_usd": 62.0,
+    "title": "2XL",
+    "variant_id": "47841334067424"
+   },
+   {
+    "available": true,
+    "grams": 572,
+    "price_usd": 62.0,
+    "title": "3XL",
+    "variant_id": "47841334100192"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "3ff55f3f305c2cad",
+  "first_seen": "2026-10-26",
+  "handle": "death-before-decaf-crop-top",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/womens-crop-top-black-front-68e675ac6fd20.jpg?v=1759933873",
+  "platform": "shopify",
+  "product_id": "9004282740960",
+  "product_type": "",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Death Before Decaf Crop Top",
+  "url": "https://www.perkatoryroasters.com/products/death-before-decaf-crop-top",
+  "variants": [
+   {
+    "available": true,
+    "grams": 88,
+    "price_usd": 30.0,
+    "title": "XS",
+    "variant_id": "47841350648032"
+   },
+   {
+    "available": true,
+    "grams": 88,
+    "price_usd": 30.0,
+    "title": "S",
+    "variant_id": "47841350680800"
+   },
+   {
+    "available": true,
+    "grams": 88,
+    "price_usd": 30.0,
+    "title": "M",
+    "variant_id": "47841350713568"
+   },
+   {
+    "available": true,
+    "grams": 94,
+    "price_usd": 30.0,
+    "title": "L",
+    "variant_id": "47841350746336"
+   },
+   {
+    "available": true,
+    "grams": 94,
+    "price_usd": 30.0,
+    "title": "XL",
+    "variant_id": "47841350779104"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "964cb2f55c493d31",
+  "first_seen": "2026-10-26",
+  "handle": "death-before-decaf-crewneck",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_4770.jpg?v=1763926970",
+  "platform": "shopify",
+  "product_id": "9076663222496",
+  "product_type": "Shirts & Tops",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Death Before Decaf Crewneck",
+  "url": "https://www.perkatoryroasters.com/products/death-before-decaf-crewneck",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "Large",
+    "variant_id": "48170787700960"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "Medium",
+    "variant_id": "48170787733728"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "3XL",
+    "variant_id": "48170787766496"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "Small",
+    "variant_id": "48170787799264"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "XL",
+    "variant_id": "48170787832032"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.8,
+    "title": "2XL",
+    "variant_id": "48170787864800"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ },
+ {
+  "body_hash": "8d3e08a55a2f0e5a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mokamba-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5668/9120/files/IMG_5129.jpg?v=1777014777",
+  "platform": "shopify",
+  "product_id": "9690454425824",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "perkatoryroasters",
+  "tags": [],
+  "title": "Ethiopia Mokamba 12oz",
+  "url": "https://www.perkatoryroasters.com/products/ethiopia-mokamba-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.75,
+    "title": "Whole Bean",
+    "variant_id": "52078717796576"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.75,
+    "title": "Fine",
+    "variant_id": "52078717829344"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.75,
+    "title": "Coarse",
+    "variant_id": "52078717862112"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.75,
+    "title": "Medium",
+    "variant_id": "52078717894880"
+   }
+  ],
+  "vendor": "Perkatory Coffee Roasters"
+ }
+]

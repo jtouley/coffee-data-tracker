@@ -1,0 +1,1604 @@
+[
+ {
+  "body_hash": "04692f4be299482f",
+  "first_seen": "2026-10-26",
+  "handle": "45th-parallel-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12oz45thParallelBlendWB.png?v=1787322804",
+  "platform": "shopify",
+  "product_id": "15215374860651",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "45th Parallel Blend",
+  "url": "https://leelanaucoffee.com/products/45th-parallel-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746690752875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746690785643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746690818411"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "04692f4be299482f",
+  "first_seen": "2026-10-26",
+  "handle": "45th-parallel-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecaf45thParallelBlendWB.png?v=1787322871",
+  "platform": "shopify",
+  "product_id": "15215374893419",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "45th Parallel Blend Decaf",
+  "url": "https://leelanaucoffee.com/products/45th-parallel-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746690916715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746690949483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746690982251"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "5ce4357991724610",
+  "first_seen": "2026-10-26",
+  "handle": "bakery-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozBakeryBlendWB.png?v=1787322894",
+  "platform": "shopify",
+  "product_id": "15215374926187",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Bakery Blend",
+  "url": "https://leelanaucoffee.com/products/bakery-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746691047787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746691080555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746691113323"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "802a1631c2c7a6c5",
+  "first_seen": "2026-10-26",
+  "handle": "bakery-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafBakeryBlendWB.png?v=1787322945",
+  "platform": "shopify",
+  "product_id": "15215374958955",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Bakery Blend Decaf",
+  "url": "https://leelanaucoffee.com/products/bakery-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746691211627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746691244395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746691277163"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "848eca40fb0b5fbe",
+  "first_seen": "2026-10-26",
+  "handle": "banana-nut-bread-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafBananaNutBreadWB.png?v=1787322988",
+  "platform": "shopify",
+  "product_id": "15215375024491",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Banana Nut Bread Decaf",
+  "url": "https://leelanaucoffee.com/products/banana-nut-bread-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746691473771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746691506539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746691539307"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "7c92610c7ba55726",
+  "first_seen": "2026-10-26",
+  "handle": "blend-six",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozBlendSixWB.png?v=1787323193",
+  "platform": "shopify",
+  "product_id": "15215375057259",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Blend Six",
+  "url": "https://leelanaucoffee.com/products/blend-six",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746691604843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746691637611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746691670379"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "8dc0336f1e204293",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-glen-arbor",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozCafeGlenArborWB.png?v=1787323178",
+  "platform": "shopify",
+  "product_id": "15215375090027",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Cafe Glen Arbor",
+  "url": "https://leelanaucoffee.com/products/cafe-glen-arbor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746691735915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746691768683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746691801451"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "f0311df933247dbf",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-and-pralines-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafCaramel_PralinesWB.png?v=1787323074",
+  "platform": "shopify",
+  "product_id": "15215375155563",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Caramel and Pralines Decaf",
+  "url": "https://leelanaucoffee.com/products/caramel-and-pralines-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692030827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746692063595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746692096363"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "85bd8d536a618541",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cherry-festival-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafChocolateCherryFestivalWB.png?v=1787323089",
+  "platform": "shopify",
+  "product_id": "15215375221099",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Chocolate Cherry Festival Decaf",
+  "url": "https://leelanaucoffee.com/products/chocolate-cherry-festival-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692424043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746692456811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746692489579"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "2cfe05e65bfe250b",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cream-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafCoconutCreamWB.png?v=1787323104",
+  "platform": "shopify",
+  "product_id": "15215375319403",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Coconut Cream Decaf",
+  "url": "https://leelanaucoffee.com/products/coconut-cream-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692620651"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746692653419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746692686187"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "fdd85950cce4cc27",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozColombiaWB.png?v=1787323307",
+  "platform": "shopify",
+  "product_id": "15215375352171",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Colombia",
+  "url": "https://leelanaucoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692718955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746692751723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746692784491"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "81059e63d25a9da1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafColombiaWB.png?v=1787323533",
+  "platform": "shopify",
+  "product_id": "15215375384939",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://leelanaucoffee.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692850027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746692882795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746692915563"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "d0b2e75a9438efa8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozColombiaDark.png?v=1787323319",
+  "platform": "shopify",
+  "product_id": "15215375417707",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Colombia Dark",
+  "url": "https://leelanaucoffee.com/products/colombia-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746692981099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693013867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693046635"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "bf0194cfc4aa96a1",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozCostaRicaWB.png?v=1787323335",
+  "platform": "shopify",
+  "product_id": "15215375450475",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Costa Rica",
+  "url": "https://leelanaucoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693144939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693177707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693210475"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "e422fc6e992572a7",
+  "first_seen": "2026-10-26",
+  "handle": "dutch-bavarian-chocolate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafDutchBavarianChocolateWB.png?v=1787323679",
+  "platform": "shopify",
+  "product_id": "15215375548779",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Dutch Bavarian Chocolate Decaf",
+  "url": "https://leelanaucoffee.com/products/dutch-bavarian-chocolate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693472619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693505387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693538155"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "ba6a11c5c8e53516",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozEthiopiaWB.png?v=1787323354",
+  "platform": "shopify",
+  "product_id": "15215375581547",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Ethiopia",
+  "url": "https://leelanaucoffee.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693636459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693669227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693701995"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "575f6dc89c368c13",
+  "first_seen": "2026-10-26",
+  "handle": "foothills-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozFoothillsBlendWB.png?v=1787323360",
+  "platform": "shopify",
+  "product_id": "15215375614315",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Foothills Blend",
+  "url": "https://leelanaucoffee.com/products/foothills-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693734763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693767531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693800299"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "63d1795510e14b60",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozFrenchRoastWB.png?v=1787323365",
+  "platform": "shopify",
+  "product_id": "15215375647083",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "French Roast",
+  "url": "https://leelanaucoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693833067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693865835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693898603"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "9428819889f66bc1",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafFrenchRoastWB.png?v=1787323529",
+  "platform": "shopify",
+  "product_id": "15215375679851",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://leelanaucoffee.com/products/french-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746693931371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746693964139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746693996907"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "56bdb8a349881b82",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafFrenchVanillaWB.png?v=1787323683",
+  "platform": "shopify",
+  "product_id": "15215375745387",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "French Vanilla Decaf",
+  "url": "https://leelanaucoffee.com/products/french-vanilla-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746694193515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746694226283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746694259051"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "8d38682f858e9b6d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozGuatemalaWB.png?v=1787323371",
+  "platform": "shopify",
+  "product_id": "15215375778155",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Guatemala",
+  "url": "https://leelanaucoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746694324587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746694357355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746694390123"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "dfeef0c8550bd36b",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafHazelnutWB.png?v=1787323688",
+  "platform": "shopify",
+  "product_id": "15215375843691",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Hazelnut Decaf",
+  "url": "https://leelanaucoffee.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746694553963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746694586731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746694619499"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "c29b1af26a4474d0",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozItalianRoastWB.png?v=1787323375",
+  "platform": "shopify",
+  "product_id": "15215375909227",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Italian Roast",
+  "url": "https://leelanaucoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746694717803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746694750571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746694783339"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "fdf7e79f4ed5e63b",
+  "first_seen": "2026-10-26",
+  "handle": "lakers-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozLakersBlendWB.png?v=1787323380",
+  "platform": "shopify",
+  "product_id": "15215375941995",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Lakers Blend",
+  "url": "https://leelanaucoffee.com/products/lakers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746694881643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746694914411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746694947179"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "a93c35ecc7fa5ff5",
+  "first_seen": "2026-10-26",
+  "handle": "leelanau-cherry",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozLeelanauCherryWB.png?v=1787323623",
+  "platform": "shopify",
+  "product_id": "15215376007531",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Leelanau Cherry",
+  "url": "https://leelanaucoffee.com/products/leelanau-cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746695307627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746695340395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746695373163"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "a93c35ecc7fa5ff5",
+  "first_seen": "2026-10-26",
+  "handle": "leelanau-cherry-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafLeelanauCherryWB.png?v=1787323692",
+  "platform": "shopify",
+  "product_id": "15215376105835",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Leelanau Cherry Decaf",
+  "url": "https://leelanaucoffee.com/products/leelanau-cherry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746695504235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746695537003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746695569771"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "bd9a008b6c72a5f0",
+  "first_seen": "2026-10-26",
+  "handle": "leelanau-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozLeelanauEspressoBlendWB.png?v=1787323385",
+  "platform": "shopify",
+  "product_id": "15215376138603",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Leelanau Espresso Blend",
+  "url": "https://leelanaucoffee.com/products/leelanau-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746695635307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746695668075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746695700843"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "24d6aaec790a0c81",
+  "first_seen": "2026-10-26",
+  "handle": "leelanau-espresso-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafLeelanauEspressoBlendWB.png?v=1787323513",
+  "platform": "shopify",
+  "product_id": "15215376171371",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Leelanau Espresso Blend Decaf",
+  "url": "https://leelanaucoffee.com/products/leelanau-espresso-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746695766379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746695799147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746695831915"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "f9ed62d7036f078e",
+  "first_seen": "2026-10-26",
+  "handle": "manitou-blueberry-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafManitouBlueberryWB.png?v=1787323696",
+  "platform": "shopify",
+  "product_id": "15215376236907",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Manitou Blueberry Decaf",
+  "url": "https://leelanaucoffee.com/products/manitou-blueberry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696061291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696094059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696126827"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "c1c02e9c13eb268d",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozMochaJavaWB.png?v=1787323390",
+  "platform": "shopify",
+  "product_id": "15215376302443",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Mocha Java",
+  "url": "https://leelanaucoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696225131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696257899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696290667"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "a4046906bd37f7ff",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozOrganicColombiaWB.png?v=1787323490",
+  "platform": "shopify",
+  "product_id": "15215376335211",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Organic Colombia",
+  "url": "https://leelanaucoffee.com/products/organic-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696356203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696388971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696421739"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "cbb07469d669abac",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozOrganicGuatamalaWB.png?v=1787323478",
+  "platform": "shopify",
+  "product_id": "15215376367979",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Organic Guatemala",
+  "url": "https://leelanaucoffee.com/products/organic-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696487275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696520043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696552811"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "2fd2578a123f85b7",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozOrganicSumatraWB.png?v=1787323483",
+  "platform": "shopify",
+  "product_id": "15215376400747",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Organic Sumatra",
+  "url": "https://leelanaucoffee.com/products/organic-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696618347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696651115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696683883"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "0cbebe143c33e444",
+  "first_seen": "2026-10-26",
+  "handle": "snickercookie-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafSnickercookieWB.png?v=1787323700",
+  "platform": "shopify",
+  "product_id": "15215376466283",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Snickercookie Decaf",
+  "url": "https://leelanaucoffee.com/products/snickercookie-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746696913259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746696946027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746696978795"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "53c19b683df3aea2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozSumatraWB.png?v=1787323457",
+  "platform": "shopify",
+  "product_id": "15215376531819",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Sumatra",
+  "url": "https://leelanaucoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697077099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697109867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697142635"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "6c7f237baf841d0c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozSumatraDarkWB_7d3b0cea-39bb-4514-8ecf-16d8782ed916.png?v=1787323826",
+  "platform": "shopify",
+  "product_id": "15215376564587",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Sumatra Dark",
+  "url": "https://leelanaucoffee.com/products/sumatra-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697240939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697273707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697306475"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "13f8ac9c488690a8",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-almond-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafVanillaAlmondWB.png?v=1787323767",
+  "platform": "shopify",
+  "product_id": "15215376630123",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Vanilla Almond Decaf",
+  "url": "https://leelanaucoffee.com/products/vanilla-almond-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697470315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697503083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697535851"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "36a7d2af83c227bf",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-nut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozVanillaNutCreamWB.png?v=1787323781",
+  "platform": "shopify",
+  "product_id": "15215376662891",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Light",
+   "Vanilla"
+  ],
+  "title": "Vanilla Nut Cream",
+  "url": "https://leelanaucoffee.com/products/vanilla-nut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697568619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697601387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697634155"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "36a7d2af83c227bf",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-nut-cream-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozDecafVanillaNutCreamWB.png?v=1787323758",
+  "platform": "shopify",
+  "product_id": "15215376695659",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Vanilla Nut Cream Decaf",
+  "url": "https://leelanaucoffee.com/products/vanilla-nut-cream-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697666923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697699691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697732459"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ },
+ {
+  "body_hash": "e3079248597c41e7",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0991/7913/5339/files/12ozViennaRoastWB.png?v=1787323806",
+  "platform": "shopify",
+  "product_id": "15215376761195",
+  "product_type": "",
+  "roaster_slug": "leelanaucoffee",
+  "tags": [
+   "Coffee",
+   "Premium Non-flavored"
+  ],
+  "title": "Vienna Roast",
+  "url": "https://leelanaucoffee.com/products/vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "53746697797995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "53746697830763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53746697863531"
+   }
+  ],
+  "vendor": "Leelanau Coffee"
+ }
+]

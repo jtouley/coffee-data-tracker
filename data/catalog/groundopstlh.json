@@ -1,0 +1,277 @@
+[
+ {
+  "body_hash": "27386812bff888b0",
+  "first_seen": "2026-10-26",
+  "handle": "missing-in-action-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/3bcd9583-4784-4143-93d8-eab23e2d7453/GO+Coffee+Bag+Mockups-05.png",
+  "platform": "squarespace",
+  "product_id": "66f83dedec23625cb6750340",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Missing in Action Decaf Blend",
+  "url": "https://groundopstlh.com/store/p/missing-in-action-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "295816de-fb2d-4b1e-9eb8-2dff31ffa897"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Custom Grind",
+    "variant_id": "918e2bb3-642f-48d2-8453-96c48f8689eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "da37288a-3e8c-49dd-b0a6-e3bb27758409"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4afa7773ba2499c7",
+  "first_seen": "2026-10-26",
+  "handle": "bravo-zulu-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/bb18c002-5c99-4a4b-8c2b-eec316b9dc33/GO+Coffee+Bag+Mockups-01.png",
+  "platform": "squarespace",
+  "product_id": "66f83e662a8f4518f51ac3ab",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Bravo Zulu Blend",
+  "url": "https://groundopstlh.com/store/p/bravo-zulu-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "15333f5a-2546-43d8-afa6-90e4054dd64f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Custom Grind",
+    "variant_id": "550c9dd4-fe40-4cb7-a7cd-83b68672432d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "a6ee9137-ff05-45f7-bdd7-b018036ad12a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80182d0be599b2a8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/a70aaab9-c923-4aa4-bd51-a33473622a5f/GO+Coffee+Bag+Mockups-03.png",
+  "platform": "squarespace",
+  "product_id": "66f83f0961185d3d8ecb8b5c",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Depth Charge Espresso Blend",
+  "url": "https://groundopstlh.com/store/p/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Custom Grind",
+    "variant_id": "1eecbaa7-cae4-4177-800a-35a0b3efdc50"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "b8ae5ea3-d268-4281-9e5b-ac973595dfd4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "bd66e0e2-34d3-42de-8e3a-180a9491797a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0e7ce1beade4279",
+  "first_seen": "2026-10-26",
+  "handle": "cuban-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/05647898-e0fa-4ebe-b4f4-913a474126f0/GO+Coffee+Bag+Mockups-02.png",
+  "platform": "squarespace",
+  "product_id": "66f83f5a2aefa062fa45b58c",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Cuban Roast",
+  "url": "https://groundopstlh.com/store/p/cuban-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "1b3779fb-dc0b-4ae9-b6e4-ad3f7786b9ef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "717902a1-8ef3-4bd8-b0eb-588cfc26e7de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Custom Grind",
+    "variant_id": "7184c77d-f9ad-4e0c-83a6-7a07492f44df"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25dad74b4fc8b2cf",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/361a21f1-60a7-4a83-9cdd-0c25534a5322/GO+Coffee+Bag+Mockups-04.png",
+  "platform": "squarespace",
+  "product_id": "66f83fa59981695ff3f26b30",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Guatemala Roast",
+  "url": "https://groundopstlh.com/store/p/guatemala-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Custom Grind",
+    "variant_id": "34424921-1968-4912-a7ca-609894a2e2cc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "c147e462-a017-413d-92ed-120288999a38"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "cff2842e-8d32-402c-a11d-f9092f910fbe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce4c8c88f3542e54",
+  "first_seen": "2026-10-26",
+  "handle": "catering-coffee96oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/3f00be2f-e08e-4f63-aa4e-cc0cc3ddeee5/photo-1671225146283-c6aae20a9d07.jpg",
+  "platform": "squarespace",
+  "product_id": "67180d87bd32d801cc478c6f",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Coffee | 96 oz To-Go Container",
+  "url": "https://groundopstlh.com/store/p/catering-coffee96oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Add Sugar + Creamer",
+    "variant_id": "e73ba6b2-a706-4bd4-b424-a46328fa79f9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "No Sugar or Creamer",
+    "variant_id": "ed259784-5f49-4f5c-b6d4-c7df60c8243c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "853b9851df5e6aab",
+  "first_seen": "2026-10-26",
+  "handle": "coffeesmallcambro",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/3f00be2f-e08e-4f63-aa4e-cc0cc3ddeee5/photo-1671225146283-c6aae20a9d07.jpg",
+  "platform": "squarespace",
+  "product_id": "67227efb6df95d78fead29e2",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Coffee | 2.5 Gallon Cambro",
+  "url": "https://groundopstlh.com/store/p/coffeesmallcambro",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "No Sugar or Creamer",
+    "variant_id": "59c4ff0d-f582-42bb-ae10-009dad9f2633"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Add Sugar + Creamer",
+    "variant_id": "bfddb642-1604-4791-aa86-eced748a8c7c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9cd224c95f2537e",
+  "first_seen": "2026-10-26",
+  "handle": "coffeelargecambro",
+  "image": "https://images.squarespace-cdn.com/content/v1/66f80694a42a346e9acd4383/3f00be2f-e08e-4f63-aa4e-cc0cc3ddeee5/photo-1671225146283-c6aae20a9d07.jpg",
+  "platform": "squarespace",
+  "product_id": "67227fa6e5656e7e7e273721",
+  "product_type": "",
+  "roaster_slug": "groundopstlh",
+  "tags": [],
+  "title": "Coffee | 5 Gallon Cambro",
+  "url": "https://groundopstlh.com/store/p/coffeelargecambro",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 150.0,
+    "title": "Add Sugar + Creamer",
+    "variant_id": "892b2bc2-5096-4352-8537-49cd98b2d966"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 150.0,
+    "title": "No Sugar or Creamer",
+    "variant_id": "94899640-688b-441a-917d-3b2dddb1c246"
+   }
+  ],
+  "vendor": ""
+ }
+]

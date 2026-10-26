@@ -1,0 +1,1495 @@
+[
+ {
+  "body_hash": "9f59d9508a81f224",
+  "first_seen": "2026-10-26",
+  "handle": "sample-coffee-box",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/SampleBox_4afe1c22-50ce-43a0-be6e-93378a86c790.jpg?v=1759510956",
+  "platform": "shopify",
+  "product_id": "10078861590845",
+  "product_type": "",
+  "roaster_slug": "reservacoffee",
+  "tags": [],
+  "title": "Sample Coffee Box",
+  "url": "https://www.reservacoffee.com/products/sample-coffee-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 383,
+    "price_usd": 25.0,
+    "title": "Wholebean",
+    "variant_id": "50777147605309"
+   },
+   {
+    "available": true,
+    "grams": 383,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "50777147638077"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "17dc7dc930d33026",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-travel-brew-kit",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/CoffeeKit.jpg?v=1761257763",
+  "platform": "shopify",
+  "product_id": "10109498786109",
+  "product_type": "",
+  "roaster_slug": "reservacoffee",
+  "tags": [],
+  "title": "Coffee Travel Brew Kit",
+  "url": "https://www.reservacoffee.com/products/coffee-travel-brew-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.25,
+    "title": "Ground",
+    "variant_id": "50932714930493"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.25,
+    "title": "Wholebean",
+    "variant_id": "50932714963261"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "96f630c0b8ff43d0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-honey-process-guji-goro",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/gogogu1.png?v=1780321650",
+  "platform": "shopify",
+  "product_id": "10325250736445",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Origin: Ethiopia",
+   "Process: Washed",
+   "Roast: Light",
+   "Single origin"
+  ],
+  "title": "Ethiopia Uraga Gogogu",
+  "url": "https://www.reservacoffee.com/products/ethiopia-honey-process-guji-goro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.49,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "51656731328829"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "bb6548f243c230ed",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-el-aguila",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/Mex1.png?v=1783344205",
+  "platform": "shopify",
+  "product_id": "10405449367869",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Organic",
+   "Origin: Mexico",
+   "Process: Washed",
+   "Roast: Medium-Dark"
+  ],
+  "title": "Mexico Chiapas El Aguila",
+  "url": "https://www.reservacoffee.com/products/mexico-chiapas-el-aguila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "51931276050749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "51931276083517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "51931276116285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "51931276149053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "51931276181821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.39,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "51931276214589"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "aa115f815a11d978",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-buesaco-don-fernando-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/gesha-buesaco-1-mountains.jpg?v=1789759381",
+  "platform": "shopify",
+  "product_id": "10517274001725",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Origin: Colombia",
+   "Process: Washed",
+   "Roast: Light",
+   "Single origin"
+  ],
+  "title": "Colombia Buesaco Don Fernando Gesha",
+  "url": "https://www.reservacoffee.com/products/colombia-buesaco-don-fernando-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.49,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "53107325534525"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "8f59c34f610b66d0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-durato-bombe-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/Mex1_eb6d2046-550b-4de5-a11d-9551c4c8f6ce.png?v=1789759320",
+  "platform": "shopify",
+  "product_id": "10517274460477",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Origin: Ethiopia",
+   "Process: Natural",
+   "Roast: Light",
+   "Single origin"
+  ],
+  "title": "Ethiopia Sidama Durato Bombe Natural",
+  "url": "https://www.reservacoffee.com/products/ethiopia-sidama-durato-bombe-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 19.95,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "53107326255421"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "cd1b29aa709ac9e3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/1.png?v=1709138011",
+  "platform": "shopify",
+  "product_id": "5721270723",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Origin: Guatemala",
+   "Process: Washed",
+   "Roast: Medium-Dark"
+  ],
+  "title": "Guatemala Antigua Santo Domingo",
+  "url": "https://www.reservacoffee.com/products/guatemala-antigua-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / Whole Bean",
+    "variant_id": "43746593538365"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / Whole Bean",
+    "variant_id": "46548205142333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / Espresso",
+    "variant_id": "47886648115517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / Pour Over",
+    "variant_id": "47886648148285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / Drip",
+    "variant_id": "47886648181053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / French Press",
+    "variant_id": "47886648213821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "47886648246589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "47886648279357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "47886648312125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "47886648344893"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / Espresso",
+    "variant_id": "47886648377661"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / Pour Over",
+    "variant_id": "47886648410429"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / Drip",
+    "variant_id": "47886648443197"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / French Press",
+    "variant_id": "47886648475965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.58,
+    "title": "2 lb. bag / Cold Brew",
+    "variant_id": "47886651294013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "47886651326781"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 122.73,
+    "title": "Case of 40 - 2 oz. packets / Cold Brew",
+    "variant_id": "47886651359549"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / Whole Bean",
+    "variant_id": "49554961105213"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / Espresso",
+    "variant_id": "49554961137981"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / Pour Over",
+    "variant_id": "49554961170749"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / Drip",
+    "variant_id": "49554961203517"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / French Press",
+    "variant_id": "49554961236285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.37,
+    "title": "10 oz. bag / Cold Brew",
+    "variant_id": "49554961269053"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / Whole Bean",
+    "variant_id": "49554963005757"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / Espresso",
+    "variant_id": "49554963169597"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / Pour Over",
+    "variant_id": "49554963300669"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / Drip",
+    "variant_id": "49554963530045"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / French Press",
+    "variant_id": "49554963693885"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.2,
+    "title": "Case of 6 - 10 oz. bags / Cold Brew",
+    "variant_id": "49554963923261"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / Whole Bean",
+    "variant_id": "51710085038397"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / Espresso",
+    "variant_id": "51710085071165"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / Pour Over",
+    "variant_id": "51710085103933"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / Drip",
+    "variant_id": "51710085136701"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / French Press",
+    "variant_id": "51710085169469"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 122.73,
+    "title": "Case of 20 - 4 oz. packets / Cold Brew",
+    "variant_id": "51710085202237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.41,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "8770180284523"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "4b4ece839f2bcf82",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fair-trade-organic-sierra-nevada",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/3a.png?v=1709137537",
+  "platform": "shopify",
+  "product_id": "6846497292353",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Fair Trade",
+   "Organic",
+   "Origin: Colombia",
+   "Roast: Light-Medium"
+  ],
+  "title": "Colombia Fair Trade Organic Sierra Nevada Magdalena",
+  "url": "https://www.reservacoffee.com/products/colombia-fair-trade-organic-sierra-nevada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "40053736341569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / Whole Bean",
+    "variant_id": "43746607006013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / Espresso",
+    "variant_id": "47886638874941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / Pour Over",
+    "variant_id": "47886638907709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / Drip",
+    "variant_id": "47886638940477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / French Press",
+    "variant_id": "47886638973245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "47886639006013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "47886639038781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "47886639071549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "47886639104317"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / Whole Bean",
+    "variant_id": "47886641496381"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / Espresso",
+    "variant_id": "47886641529149"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / Pour Over",
+    "variant_id": "47886641561917"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / Drip",
+    "variant_id": "47886641594685"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / French Press",
+    "variant_id": "47886641627453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.74,
+    "title": "2 lb. bag / Cold Brew",
+    "variant_id": "47886650507581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.8,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "47886650540349"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 124.74,
+    "title": "Case of 40 - 2 oz. packets / Cold Brew",
+    "variant_id": "47886650573117"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / Whole Bean",
+    "variant_id": "49554899894589"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / Espresso",
+    "variant_id": "49554900320573"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / Pour Over",
+    "variant_id": "49554900648253"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / Drip",
+    "variant_id": "49554901369149"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / French Press",
+    "variant_id": "49554901991741"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.77,
+    "title": "10 oz. bag / Cold Brew",
+    "variant_id": "49554902286653"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / Whole Bean",
+    "variant_id": "49554907398461"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / Espresso",
+    "variant_id": "49554907889981"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / Pour Over",
+    "variant_id": "49554908119357"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / Drip",
+    "variant_id": "49554909135165"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / French Press",
+    "variant_id": "49554909299005"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 94.61,
+    "title": "Case of 6 - 10 oz. bags / Cold Brew",
+    "variant_id": "49554909593917"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "0e1b433030386d0e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/4.png?v=1709138118",
+  "platform": "shopify",
+  "product_id": "817229463659",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Decaf",
+   "Origin: Guatemala",
+   "Roast: Medium",
+   "Swiss Water Process"
+  ],
+  "title": "Decaf Guatemala Swiss Water Process",
+  "url": "https://www.reservacoffee.com/products/decaf-colombia-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "32251081392193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / Whole Bean",
+    "variant_id": "43746603270461"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / Whole Bean",
+    "variant_id": "46548262224189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / Espresso",
+    "variant_id": "47886646870333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / Pour Over",
+    "variant_id": "47886646903101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / Drip",
+    "variant_id": "47886646935869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / French Press",
+    "variant_id": "47886646968637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "47886647001405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "47886647034173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "47886647066941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "47886647099709"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / Espresso",
+    "variant_id": "47886647132477"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / Pour Over",
+    "variant_id": "47886647165245"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / Drip",
+    "variant_id": "47886647198013"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / French Press",
+    "variant_id": "47886647230781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.54,
+    "title": "2 lb. bag / Cold Brew",
+    "variant_id": "47886651097405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.31,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "47886651130173"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 149.26,
+    "title": "Case of 40 - 2 oz. packets / Cold Brew",
+    "variant_id": "47886651162941"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / Whole Bean",
+    "variant_id": "49554945114429"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / Espresso",
+    "variant_id": "49554945343805"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / Pour Over",
+    "variant_id": "49554945638717"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / Drip",
+    "variant_id": "49554945933629"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / French Press",
+    "variant_id": "49554946130237"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.95,
+    "title": "10 oz. bag / Cold Brew",
+    "variant_id": "49554946294077"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / Whole Bean",
+    "variant_id": "49554946982205"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / Espresso",
+    "variant_id": "49554947244349"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / Pour Over",
+    "variant_id": "49554947572029"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / Drip",
+    "variant_id": "49554947801405"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / French Press",
+    "variant_id": "49554947932477"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 113.73,
+    "title": "Case of 6 - 10 oz. bags / Cold Brew",
+    "variant_id": "49554948096317"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "bef2a4a1ba17e684",
+  "first_seen": "2026-10-26",
+  "handle": "reserva-vintage-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/2.png?v=1709138205",
+  "platform": "shopify",
+  "product_id": "9323637774",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Blend",
+   "Origin: Colombia",
+   "Origin: Guatemala",
+   "Roast: Medium-Dark"
+  ],
+  "title": "Reserva Vintage Espresso",
+  "url": "https://www.reservacoffee.com/products/reserva-vintage-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "32245908144193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / Whole Bean",
+    "variant_id": "43746577973565"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / Whole Bean",
+    "variant_id": "46548876067133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / Espresso",
+    "variant_id": "47886649721149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / Pour Over",
+    "variant_id": "47886649753917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / Drip",
+    "variant_id": "47886649786685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / French Press",
+    "variant_id": "47886649819453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "47886649852221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "47886649884989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "47886649917757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "47886649950525"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / Espresso",
+    "variant_id": "47886649983293"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / Pour Over",
+    "variant_id": "47886650016061"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / Drip",
+    "variant_id": "47886650048829"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / French Press",
+    "variant_id": "47886650081597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.57,
+    "title": "2 lb. bag / Cold Brew",
+    "variant_id": "47886651621693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.39,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "47886651654461"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 129.33,
+    "title": "Case of 40 - 2 oz. packets / Cold Brew",
+    "variant_id": "47886651687229"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / Whole Bean",
+    "variant_id": "49554978734397"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / Espresso",
+    "variant_id": "49554978865469"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / Pour Over",
+    "variant_id": "49554979127613"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / Drip",
+    "variant_id": "49554979848509"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / French Press",
+    "variant_id": "49554980012349"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.36,
+    "title": "10 oz. bag / Cold Brew",
+    "variant_id": "49554980307261"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / Espresso",
+    "variant_id": "49554980766013"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / Pour Over",
+    "variant_id": "49554981093693"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / Drip",
+    "variant_id": "49554981257533"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / French Press",
+    "variant_id": "49554981355837"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / Cold Brew",
+    "variant_id": "49554981421373"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 98.18,
+    "title": "Case of 6 - 10 oz. bags / Whole Bean",
+    "variant_id": "49554998755645"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "e0bde6df7b1fcce5",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/HondurasOrganic.jpg?v=1714498526",
+  "platform": "shopify",
+  "product_id": "9365546664253",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Organic",
+   "Origin: Honduras",
+   "Process: Washed",
+   "Roast: Medium"
+  ],
+  "title": "Honduras Santa Rosa De Copan - Organic",
+  "url": "https://www.reservacoffee.com/products/honduras-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / Whole Bean",
+    "variant_id": "48612498866493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / Espresso",
+    "variant_id": "48612498899261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / Pour Over",
+    "variant_id": "48612498932029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / Drip",
+    "variant_id": "48612498964797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / French Press",
+    "variant_id": "48612498997565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2 lb. bag / Cold Brew",
+    "variant_id": "48612499030333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / Whole Bean",
+    "variant_id": "48612499063101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / Espresso",
+    "variant_id": "48612499095869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / Pour Over",
+    "variant_id": "48612499128637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / Drip",
+    "variant_id": "48612499161405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / French Press",
+    "variant_id": "48612499194173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.71,
+    "title": "5 lb. bag / Cold Brew",
+    "variant_id": "48612499226941"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / Whole Bean",
+    "variant_id": "48612499259709"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / Espresso",
+    "variant_id": "48612499292477"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / Pour Over",
+    "variant_id": "48612499325245"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / Drip",
+    "variant_id": "48612499358013"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / French Press",
+    "variant_id": "48612499390781"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 119.03,
+    "title": "Case of 40 - 2 oz. packets / Cold Brew",
+    "variant_id": "48612499423549"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / Whole Bean",
+    "variant_id": "49554972999997"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / Espresso",
+    "variant_id": "49554973294909"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / Pour Over",
+    "variant_id": "49554973524285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / Drip",
+    "variant_id": "49554973819197"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / French Press",
+    "variant_id": "49554974245181"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.89,
+    "title": "10 oz. Bag / Cold Brew",
+    "variant_id": "49554974474557"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / Whole Bean",
+    "variant_id": "49554975228221"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / Espresso",
+    "variant_id": "49554975359293"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / Pour Over",
+    "variant_id": "49554975752509"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / Drip",
+    "variant_id": "49554975949117"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / French Press",
+    "variant_id": "49554976309565"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 95.32,
+    "title": "Case of 6 - 10 oz. bag / Cold Brew",
+    "variant_id": "49554976440637"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "dabc1bed17e936e4",
+  "first_seen": "2026-10-26",
+  "handle": "eel-mirador-catiope-strawberry-co-ferment-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/gotiti_3.png?v=1777575149",
+  "platform": "shopify",
+  "product_id": "9696258163005",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Origin: Ethiopia",
+   "Process: Washed",
+   "Roast: Light",
+   "Single origin"
+  ],
+  "title": "Ethiopia Yirgacheffe Banko Gotiti",
+  "url": "https://www.reservacoffee.com/products/eel-mirador-catiope-strawberry-co-ferment-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.49,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "49566292181309"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ },
+ {
+  "body_hash": "8f5349a109032c6c",
+  "first_seen": "2026-10-26",
+  "handle": "vaqueros-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1178/1642/files/Vaquero_Roast_w_Bgnd_995_x_1492_px_5761c5a6-54dc-4b78-b050-99804e39e480.png?v=1729259072",
+  "platform": "shopify",
+  "product_id": "9699437642045",
+  "product_type": "Coffee",
+  "roaster_slug": "reservacoffee",
+  "tags": [
+   "Organic",
+   "Origin: Mexico",
+   "Roast: Dark"
+  ],
+  "title": "Vaqueros Roast - Organic",
+  "url": "https://www.reservacoffee.com/products/vaqueros-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "49495386915133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Wholebean",
+    "variant_id": "49495386947901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 116.09,
+    "title": "Case of 6 - 12 oz. / Ground",
+    "variant_id": "49538365489469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 116.09,
+    "title": "Case of 6 - 12 oz. / Wholebean",
+    "variant_id": "49538365522237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.7,
+    "title": "2PK - 12 oz. / Ground",
+    "variant_id": "49554968772925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.7,
+    "title": "2PK - 12 oz. / Wholebean",
+    "variant_id": "49554968805693"
+   }
+  ],
+  "vendor": "Reserva Coffee Roasters"
+ }
+]

@@ -1,0 +1,4155 @@
+[
+ {
+  "body_hash": "6ac47097619129f4",
+  "first_seen": "2026-10-26",
+  "handle": "tip-of-andes-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_30.png?v=1743613289",
+  "platform": "shopify",
+  "product_id": "8848268165336",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Buffalo Soldier",
+  "url": "https://stiverscoffee.com/products/tip-of-andes-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322243748056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322243780824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322243813592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322243846360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322243879128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322243911896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329024168152"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "bd004e19f8248656",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_31.png?v=1743613589",
+  "platform": "shopify",
+  "product_id": "8848271311064",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://stiverscoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322249810136"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322249842904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322249875672"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322249908440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322249941208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322249973976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329022660824"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "2afef00749877611",
+  "first_seen": "2026-10-26",
+  "handle": "praise-him-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_33.png?v=1743613883",
+  "platform": "shopify",
+  "product_id": "8848274260184",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Praise Her",
+  "url": "https://stiverscoffee.com/products/praise-him-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322255184088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322255216856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322255249624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322255282392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322255315160"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322255347928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329015320792"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "59982bcffff5da55",
+  "first_seen": "2026-10-26",
+  "handle": "praise-her-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_34.png?v=1743614088",
+  "platform": "shopify",
+  "product_id": "8848275243224",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Jungle Java",
+  "url": "https://stiverscoffee.com/products/praise-her-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322257412312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322257445080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322257477848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322257510616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322257543384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322257576152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329015124184"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "ef99966c729f6725",
+  "first_seen": "2026-10-26",
+  "handle": "jungle-java-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_35.png?v=1743614931",
+  "platform": "shopify",
+  "product_id": "8848283074776",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Purple Wildcat",
+  "url": "https://stiverscoffee.com/products/jungle-java-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322282152152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322282184920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322282217688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322282250456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322282283224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322282315992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329013911768"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "5a16aa3ee59b4d4b",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_36.png?v=1743615054",
+  "platform": "shopify",
+  "product_id": "8848287563992",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://stiverscoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322288410840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322288443608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322288476376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322288509144"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322288541912"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322288574680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329011060952"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "1f110401094e3004",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_37.png?v=1743615182",
+  "platform": "shopify",
+  "product_id": "8848288579800",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://stiverscoffee.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322291851480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322291884248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322291917016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322291949784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322291982552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322292015320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329010536664"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "9ed0f1ce60d5767f",
+  "first_seen": "2026-10-26",
+  "handle": "tip-of-andes-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_40.png?v=1743615520",
+  "platform": "shopify",
+  "product_id": "8848289267928",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Blond",
+  "url": "https://stiverscoffee.com/products/tip-of-andes-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322294014168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322294046936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322294079704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322294112472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322294145240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322294178008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328958107864"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "adacdfab24011b58",
+  "first_seen": "2026-10-26",
+  "handle": "light-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_39.png?v=1743615432",
+  "platform": "shopify",
+  "product_id": "8848290119896",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Medium",
+  "url": "https://stiverscoffee.com/products/light-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322295193816"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322295226584"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322295259352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322295292120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322295324888"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322295357656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328957354200"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "7a29a941446f7b10",
+  "first_seen": "2026-10-26",
+  "handle": "vienese",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_41.png?v=1743615675",
+  "platform": "shopify",
+  "product_id": "8848292217048",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Viennese",
+  "url": "https://stiverscoffee.com/products/vienese",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322300567768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322300600536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322300633304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322300666072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322300698840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322300731608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328954241240"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "f4c3afc0ce3a4423",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_42.png?v=1743615818",
+  "platform": "shopify",
+  "product_id": "8848293167320",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "French",
+  "url": "https://stiverscoffee.com/products/viennese-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322302107864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322302140632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322302173400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322302206168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322302238936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322302271704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328952996056"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "9671d602087dd1bd",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_43.png?v=1743615973",
+  "platform": "shopify",
+  "product_id": "8848295002328",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Italian",
+  "url": "https://stiverscoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322306040024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322306072792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322306105560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322306138328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322306171096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322306203864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328952864984"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "afe4e393adf1bc64",
+  "first_seen": "2026-10-26",
+  "handle": "italian-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/ethiopia.jpg?v=1762438021",
+  "platform": "shopify",
+  "product_id": "8848296149208",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://stiverscoffee.com/products/italian-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322310168792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322310201560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322310234328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322310267096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322310299864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322310332632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328910135512"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "37341d5609efdefd",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/kenya_1.jpg?v=1762437653",
+  "platform": "shopify",
+  "product_id": "8848299360472",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://stiverscoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322314887384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322314920152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322314952920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322314985688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322315018456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322315051224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328906924248"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "07b917b66b96583d",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/tanzania_1.jpg?v=1762437862",
+  "platform": "shopify",
+  "product_id": "8848300474584",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://stiverscoffee.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322317377752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322317410520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322317443288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322317476056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322317508824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322317541592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328903844056"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "b36ff48d91e59fba",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/rwanda.jpg?v=1762436875",
+  "platform": "shopify",
+  "product_id": "8848301424856",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Rwanda",
+  "url": "https://stiverscoffee.com/products/tanzania-peaberry-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322319999192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322320031960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322320064728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322320097496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322320130264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322320163032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328903549144"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "7bc58d94b6a50ade",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Brazil.jpg?v=1762437439",
+  "platform": "shopify",
+  "product_id": "8848302932184",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://stiverscoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322321572056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322321604824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322321637592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322321670360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322321703128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322321735896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328966824152"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "21e4e08d20eda427",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/colombia.jpg?v=1762436793",
+  "platform": "shopify",
+  "product_id": "8848304013528",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://stiverscoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322323898584"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322323931352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322323964120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322323996888"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322324029656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322324062424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328964595928"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "3bfee6541fb4ad5f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Costa_Rica_60ad0c51-5858-4f47-ad92-4373f57de3d5.jpg?v=1762436161",
+  "platform": "shopify",
+  "product_id": "8848305324248",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://stiverscoffee.com/products/colombia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322326126808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322326159576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322326192344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322326225112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322326257880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322326290648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328964268248"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "7ecbfb180716d73e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/nicaragua.jpg?v=1762436961",
+  "platform": "shopify",
+  "product_id": "8848308961496",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Nicaragua",
+  "url": "https://stiverscoffee.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322331402456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322331435224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322331467992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322331500760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322331533528"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322331566296"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328948408536"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "2f0a08c5ba7fc0b7",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/mexico_2.jpg?v=1762437410",
+  "platform": "shopify",
+  "product_id": "8848310632664",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Mexican Chiapas",
+  "url": "https://stiverscoffee.com/products/mexican-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322337333464"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322337366232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322337399000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322337431768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322337464536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322337497304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328941101272"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "f30d94ce93f14af3",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/mexico_2.jpg?v=1762437410",
+  "platform": "shopify",
+  "product_id": "8848313090264",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Mexican Chiapas Decaf",
+  "url": "https://stiverscoffee.com/products/mexican-chiapas-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322342707416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322342740184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322342772952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322342805720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322342838488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322342871256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328995725528"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "91e27ed92aeaa485",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Brazil.jpg?v=1762437439",
+  "platform": "shopify",
+  "product_id": "8848314433752",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Brazil Decaf",
+  "url": "https://stiverscoffee.com/products/brazil-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322347753688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322347786456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322347819224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322347851992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322347884760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322347917528"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328994250968"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "335502e71630c0cb",
+  "first_seen": "2026-10-26",
+  "handle": "houe-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T115434.796.png?v=1743699313",
+  "platform": "shopify",
+  "product_id": "8848316334296",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "House Blend Decaf",
+  "url": "https://stiverscoffee.com/products/houe-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322350407896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322350440664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322350473432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322350506200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322350538968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322350571736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328990154968"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "7534dfa701333088",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/peru4_1.jpg?v=1762436549",
+  "platform": "shopify",
+  "product_id": "8848317710552",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Peru",
+  "url": "https://stiverscoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322353357016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322353389784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322353422552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322353455320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322353488088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322353520856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328940183768"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "c38dab9d2cea7746",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_57.png?v=1743618281",
+  "platform": "shopify",
+  "product_id": "8848319709400",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://stiverscoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322357158104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322357190872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322357223640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322357256408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322357289176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322357321944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328939528408"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "5df24321fda8de89",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_58.png?v=1743618416",
+  "platform": "shopify",
+  "product_id": "8848320299224",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Java Estate",
+  "url": "https://stiverscoffee.com/products/java-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322360893656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322360926424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322360959192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322360991960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322361024728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322361057496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328939430104"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "2569a17b5e84cb3e",
+  "first_seen": "2026-10-26",
+  "handle": "indian-monsoon",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/indonesia_1.jpg?v=1762438677",
+  "platform": "shopify",
+  "product_id": "8848321675480",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Indian Monsoon",
+  "url": "https://stiverscoffee.com/products/indian-monsoon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322364432600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322364465368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322364498136"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322364530904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322364563672"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322364596440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328935858392"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "726da3ed4443c6df",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_60.png?v=1743618697",
+  "platform": "shopify",
+  "product_id": "8848322887896",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "New Guinea",
+  "url": "https://stiverscoffee.com/products/new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322367906008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322367938776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322367971544"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322368004312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322368037080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322368069848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50328932712664"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "688ea3230d5aa3c9",
+  "first_seen": "2026-10-26",
+  "handle": "buffalo-soldier-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_70.png?v=1743620221",
+  "platform": "shopify",
+  "product_id": "8848341139672",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Red Tail",
+  "url": "https://stiverscoffee.com/products/buffalo-soldier-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322400182488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322400215256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322400248024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322400280792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322400313560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322400346328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329008111832"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "bf6dc797a88dad80",
+  "first_seen": "2026-10-26",
+  "handle": "new-orleans",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_71.png?v=1743620327",
+  "platform": "shopify",
+  "product_id": "8848341893336",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "New Orleans",
+  "url": "https://stiverscoffee.com/products/new-orleans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50322403492056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50322403524824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50322403557592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50322403590360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50322403623128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50322403655896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329005359320"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "9a9b9110c15ad375",
+  "first_seen": "2026-10-26",
+  "handle": "one-love-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_73.png?v=1743691827",
+  "platform": "shopify",
+  "product_id": "8848914186456",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Hazelnut",
+  "url": "https://stiverscoffee.com/products/one-love-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325381578968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325381611736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325381644504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325381677272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325381710040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325381742808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329172050136"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "53d69738226543d3",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_76.png?v=1743692331",
+  "platform": "shopify",
+  "product_id": "8848916381912",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Caramel Vanilla",
+  "url": "https://stiverscoffee.com/products/caramel-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325390098648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325390131416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325390164184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325390196952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325390229720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325390262488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329162088664"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "c95c97b8fa645c8e",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_79.png?v=1743693464",
+  "platform": "shopify",
+  "product_id": "8848920805592",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Southern Pecan",
+  "url": "https://stiverscoffee.com/products/southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325416116440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325416149208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325416181976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325416214744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325416247512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325416280280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329156878552"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "eb8ef07cb1ea9c66",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-ole-mole",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_81.png?v=1743693712",
+  "platform": "shopify",
+  "product_id": "8848922542296",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Chocolate Ole Mole",
+  "url": "https://stiverscoffee.com/products/chocolate-ole-mole",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325421031640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325421064408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325421097176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325421129944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325421162712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325421195480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329151766744"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "d9815de33c4df721",
+  "first_seen": "2026-10-26",
+  "handle": "pralines-and-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_82.png?v=1743693839",
+  "platform": "shopify",
+  "product_id": "8848923427032",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Pralines and Creme",
+  "url": "https://stiverscoffee.com/products/pralines-and-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325425783000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325425815768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325425848536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325425881304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325425914072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325425946840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329149472984"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "2d81f049c149ad0e",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_83.png?v=1743694069",
+  "platform": "shopify",
+  "product_id": "8848926310616",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Chocolate",
+  "url": "https://stiverscoffee.com/products/chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325435482328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325435515096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325435547864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325435580632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325435613400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325435646168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329145147608"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "4ba3571552c27750",
+  "first_seen": "2026-10-26",
+  "handle": "maple-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_85.png?v=1743694247",
+  "platform": "shopify",
+  "product_id": "8848934928600",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Maple Pecan",
+  "url": "https://stiverscoffee.com/products/maple-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325445411032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325445443800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325445476568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325445509336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325445542104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325445574872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329140134104"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "8f7be6a4020e8b00",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-strawberry",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_98.png?v=1743695791",
+  "platform": "shopify",
+  "product_id": "8848948363480",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Chocolate Strawberry",
+  "url": "https://stiverscoffee.com/products/chocolate-strawberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325496135896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325496168664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325496201432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325496234200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325496266968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325496299736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329046155480"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "e6ada09cf4f1dc6f",
+  "first_seen": "2026-10-26",
+  "handle": "berry-berry",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website_99.png?v=1743695986",
+  "platform": "shopify",
+  "product_id": "8848948592856",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Berry Berry",
+  "url": "https://stiverscoffee.com/products/berry-berry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325499150552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325499183320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325499216088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325499248856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325499281624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325499314392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329043304664"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "1e46736ddc5ab101",
+  "first_seen": "2026-10-26",
+  "handle": "peanut-butter-truffle",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T111152.110.png?v=1743696776",
+  "platform": "shopify",
+  "product_id": "8848952525016",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Peanut Butter Truffle",
+  "url": "https://stiverscoffee.com/products/peanut-butter-truffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325534408920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325534441688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325534474456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325534507224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325534539992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325534572760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50329035505880"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "856c02d5ef9d81ea",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T113715.420.png?v=1743698256",
+  "platform": "shopify",
+  "product_id": "8848959439064",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Hawaiian Kona",
+  "url": "https://stiverscoffee.com/products/hawaiian-kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325568094424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Cold Brew",
+    "variant_id": "50325568127192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Espresso",
+    "variant_id": "50325568159960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "French Press",
+    "variant_id": "50325568192728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Keurig",
+    "variant_id": "50325568225496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Percolator",
+    "variant_id": "50325568258264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "50328926552280"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "871ad2bb56e0ea14",
+  "first_seen": "2026-10-26",
+  "handle": "mr-stivers",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T114534.080.png?v=1743698837",
+  "platform": "shopify",
+  "product_id": "8848961994968",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Mr. Stivers",
+  "url": "https://stiverscoffee.com/products/mr-stivers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "50325584150744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "50325584183512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "50325584216280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "50325584249048"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "50325584281816"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "50325584314584"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "50329002508504"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "96a215b9ba28e273",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T115300.836.png?v=1743699200",
+  "platform": "shopify",
+  "product_id": "8848963076312",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "English Toffee Decaf",
+  "url": "https://stiverscoffee.com/products/english-toffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325593456856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325593489624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325593522392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325593555160"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325593587928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325593620696"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50328987861208"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "eb18fc5499ee1a4c",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T120111.195.png?v=1743699736",
+  "platform": "shopify",
+  "product_id": "8848966877400",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Chocolate Decaf",
+  "url": "https://stiverscoffee.com/products/chocolate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325611086040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325611118808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325611151576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325611184344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325611217112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325611249880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50328987074776"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "84493083d96ff5f9",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T120311.675.png?v=1743699829",
+  "platform": "shopify",
+  "product_id": "8848967336152",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "French Vanilla Decaf",
+  "url": "https://stiverscoffee.com/products/french-vanilla-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325613412568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325613445336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325613478104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325613510872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325613543640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325613576408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50328888049880"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "2123d39997f5adab",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/website-2025-04-03T120501.673.png?v=1743699942",
+  "platform": "shopify",
+  "product_id": "8848967762136",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Hazelnut Decaf",
+  "url": "https://stiverscoffee.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "50325616197848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "50325616230616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "50325616263384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "50325616296152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "50325616328920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "50325616361688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "50328985829592"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "cc349908ab05b03a",
+  "first_seen": "2026-10-26",
+  "handle": "founders-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/FoundersReserve.webp?v=1764029171",
+  "platform": "shopify",
+  "product_id": "9077971583192",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Founders Reserve",
+  "url": "https://stiverscoffee.com/products/founders-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Automatic Drip",
+    "variant_id": "51115920457944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Cold Brew",
+    "variant_id": "51115920490712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Espresso",
+    "variant_id": "51115920523480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "French Press",
+    "variant_id": "51115920556248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Keurig",
+    "variant_id": "51115920589016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Percolator",
+    "variant_id": "51115920621784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "51115920654552"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/coconutdecaf.jpg?v=1766495998",
+  "platform": "shopify",
+  "product_id": "9101858799832",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Coconut Decaf",
+  "url": "https://stiverscoffee.com/products/coconut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Automatic Drip",
+    "variant_id": "51228454453464"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Cold Brew",
+    "variant_id": "51228454486232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "51228454519000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "French Press",
+    "variant_id": "51228454551768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Keurig",
+    "variant_id": "51228454584536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Percolator",
+    "variant_id": "51228454617304"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "9d68754234b96e03",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/honduras.jpg?v=1771265642",
+  "platform": "shopify",
+  "product_id": "9139470926040",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://stiverscoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "51399492108504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "51399492141272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "51399492174040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "51399492206808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "51399492239576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "51399492272344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "51399492305112"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "4decda436300f024",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Coffee_Bag_mockups_CARIBBEAN_QUEEN_1_2.png?v=1775593491",
+  "platform": "shopify",
+  "product_id": "9183579242712",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Caribbean Queen",
+  "url": "https://stiverscoffee.com/products/hazelnut-decaf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Automatic Drip",
+    "variant_id": "51539885162712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Cold Brew",
+    "variant_id": "51539885195480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Espresso",
+    "variant_id": "51539885228248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "French Press",
+    "variant_id": "51539885261016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Keurig",
+    "variant_id": "51539885293784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Percolator",
+    "variant_id": "51539885326552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Whole Bean",
+    "variant_id": "51539885359320"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "00260c1068c81b46",
+  "first_seen": "2026-10-26",
+  "handle": "caribbean-queen-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/CoffeeBagmockups_DominicanRepublic_7.png?v=1775593625",
+  "platform": "shopify",
+  "product_id": "9183581700312",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Dominican Republic",
+  "url": "https://stiverscoffee.com/products/caribbean-queen-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Automatic Drip",
+    "variant_id": "51539887325400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Cold Brew",
+    "variant_id": "51539887358168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Espresso",
+    "variant_id": "51539887390936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "French Press",
+    "variant_id": "51539887423704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Keurig",
+    "variant_id": "51539887456472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Percolator",
+    "variant_id": "51539887489240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Whole Bean",
+    "variant_id": "51539887522008"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "5440eba39ffed80e",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Coffee_Bag_mockups_CALYPSO_BLEND_3_d39244b6-2794-470a-b59e-e07c9c118c68.png?v=1775593739",
+  "platform": "shopify",
+  "product_id": "9183585140952",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Calypso Blend",
+  "url": "https://stiverscoffee.com/products/dominican-republic-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Automatic Drip",
+    "variant_id": "51539889094872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Cold Brew",
+    "variant_id": "51539889127640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Espresso",
+    "variant_id": "51539889160408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "French Press",
+    "variant_id": "51539889193176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Keurig",
+    "variant_id": "51539889225944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Percolator",
+    "variant_id": "51539889258712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Whole Bean",
+    "variant_id": "51539889291480"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "f443f62eb2ac5f70",
+  "first_seen": "2026-10-26",
+  "handle": "calypso-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Coffee_Bag_mockups_Haitian_Blue_Mountain_1_2.png?v=1775593842",
+  "platform": "shopify",
+  "product_id": "9183587172568",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Haitian Blue Mountain",
+  "url": "https://stiverscoffee.com/products/calypso-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Automatic Drip",
+    "variant_id": "51539889815768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Cold Brew",
+    "variant_id": "51539889848536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Espresso",
+    "variant_id": "51539889881304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "French Press",
+    "variant_id": "51539889914072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Keurig",
+    "variant_id": "51539889946840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Percolator",
+    "variant_id": "51539889979608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Whole Bean",
+    "variant_id": "51539890012376"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "8d06dfffcfd0b81a",
+  "first_seen": "2026-10-26",
+  "handle": "haitian-blue-mountain-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/Coffee_Bag_mockups_Puerto_Rican_1_2.png?v=1775593933",
+  "platform": "shopify",
+  "product_id": "9183588778200",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Puerto Rico",
+  "url": "https://stiverscoffee.com/products/haitian-blue-mountain-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Automatic Drip",
+    "variant_id": "51539890471128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Cold Brew",
+    "variant_id": "51539890503896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Espresso",
+    "variant_id": "51539890536664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "French Press",
+    "variant_id": "51539890569432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Keurig",
+    "variant_id": "51539890602200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Percolator",
+    "variant_id": "51539890634968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Whole Bean",
+    "variant_id": "51539890667736"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "919098b185c23bed",
+  "first_seen": "2026-10-26",
+  "handle": "bali",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/pexels-tomfisk-35428411_1.jpg?v=1776014457",
+  "platform": "shopify",
+  "product_id": "9211130282200",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Bali",
+  "url": "https://stiverscoffee.com/products/bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "51554559557848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "51554559590616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "51554559623384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "51554559656152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "51554559688920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "51554559721688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "51554559754456"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "5d62f8518a7e0203",
+  "first_seen": "2026-10-26",
+  "handle": "44-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/ColorMeCoffee_44Reserve_WEB.png?v=1777473886",
+  "platform": "shopify",
+  "product_id": "9221686919384",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "44 Reserve",
+  "url": "https://stiverscoffee.com/products/44-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51583014076632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51583014109400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51583014142168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51583014174936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51583014207704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51583014240472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51583014273240"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "3be2dbbf2368f550",
+  "first_seen": "2026-10-26",
+  "handle": "mr-stivers-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/vietnam.jpg?v=1780067955",
+  "platform": "shopify",
+  "product_id": "9260311347416",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Vietnam: Son La Select SHG",
+  "url": "https://stiverscoffee.com/products/mr-stivers-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "51740502720728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "51740502753496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "51740502786264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "51740502819032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "51740502851800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "51740502884568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "51740502917336"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "a7270091830bb103",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-son-la-select-shg-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/elsalvador.jpg?v=1780069256",
+  "platform": "shopify",
+  "product_id": "9260321407192",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "El Salvador: Finca La Esperanza Santa Ana",
+  "url": "https://stiverscoffee.com/products/vietnam-son-la-select-shg-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Automatic Drip",
+    "variant_id": "51740564062424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Cold Brew",
+    "variant_id": "51740564127960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "51740564193496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "51740564259032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Keurig",
+    "variant_id": "51740564324568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "51740564390104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "51740564455640"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "a1d1318b24676cbc",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-la-esperanza-santa-ana-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9261177503960",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Sample Pack (Central America)",
+  "url": "https://stiverscoffee.com/products/el-salvador-finca-la-esperanza-santa-ana-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51744900120792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51744900153560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51744900186328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51744900219096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51744900251864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51744900284632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51744900317400"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "10940ae8552c8e17",
+  "first_seen": "2026-10-26",
+  "handle": "central-america-sample-pack-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9261177831640",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Sample Pack (South America)",
+  "url": "https://stiverscoffee.com/products/central-america-sample-pack-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51744906084568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51744906117336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51744906150104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51744906182872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51744906215640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51744906248408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51744906281176"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "411323bceb6a257b",
+  "first_seen": "2026-10-26",
+  "handle": "south-america-sample-pack-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9261178323160",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Sample Pack (Indonesia)",
+  "url": "https://stiverscoffee.com/products/south-america-sample-pack-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51744914571480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51744914604248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51744914637016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51744914669784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51744914702552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51744914735320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51744914768088"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "e23131865cc9bf45",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sample-pack-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9261178487000",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Sample Pack (Africa)",
+  "url": "https://stiverscoffee.com/products/indonesia-sample-pack-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51744915718360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51744915751128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51744915783896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51744915816664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51744915849432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51744915882200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51744915914968"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ },
+ {
+  "body_hash": "8d9f79eedf9f21cd",
+  "first_seen": "2026-10-26",
+  "handle": "puerto-rico-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0745/9782/6776/files/panama.jpg?v=1781614755",
+  "platform": "shopify",
+  "product_id": "9281603109080",
+  "product_type": "",
+  "roaster_slug": "stiverscoffee",
+  "tags": [],
+  "title": "Panama",
+  "url": "https://stiverscoffee.com/products/puerto-rico-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Automatic Drip",
+    "variant_id": "51830522478808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Cold Brew",
+    "variant_id": "51830522511576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "51830522544344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "51830522577112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Keurig",
+    "variant_id": "51830522609880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Percolator",
+    "variant_id": "51830522642648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "51830522675416"
+   }
+  ],
+  "vendor": "Stivers Coffee Inc"
+ }
+]

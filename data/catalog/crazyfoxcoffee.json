@@ -1,0 +1,3504 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "1948259156055",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "bold",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.crazyfoxcoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / whole bean",
+    "variant_id": "19532092244055"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / keurig",
+    "variant_id": "19532092276823"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / french press",
+    "variant_id": "19532092309591"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / auto-drip",
+    "variant_id": "19532092342359"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / espresso",
+    "variant_id": "19532092407895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "19532092440663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / keurig",
+    "variant_id": "19532092473431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / french press",
+    "variant_id": "19532092506199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "19532092538967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / espresso",
+    "variant_id": "19532092571735"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "19532092604503"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / keurig",
+    "variant_id": "19532092637271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / french press",
+    "variant_id": "19532092670039"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "19532092702807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / espresso",
+    "variant_id": "19532092735575"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "1792e113d17bb73b",
+  "first_seen": "2026-10-26",
+  "handle": "back-porch-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/back_porch_blend_PRINT.jpg?v=1415066601",
+  "platform": "shopify",
+  "product_id": "261266641",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold",
+   "dark",
+   "dark roast",
+   "latin american",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "Back Porch Blend",
+  "url": "https://www.crazyfoxcoffee.com/products/back-porch-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "1000995764"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19602427204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "19608832260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608832324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608832388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608832452"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608832516"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608832580"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608832644"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608832708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608832772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608832836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.94,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608832900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608832964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608833092"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "86d4f1a13af2f587",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/images_q_tbn_ANd9GcSL7DHjw8O35v4PLDD7DKe6O0oW8pehezhdZyyl2eKd5COb9eSj.jpeg?v=1395551791",
+  "platform": "shopify",
+  "product_id": "262260717",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "latin american",
+   "medium",
+   "single origin"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://www.crazyfoxcoffee.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19602427076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "19608831364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608831428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608831492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608831556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608831620"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "19608831684"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608831748"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608831812"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608831876"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608831940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608832004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608832068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608832132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608832196"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "38bf614b29fbbde4",
+  "first_seen": "2026-10-26",
+  "handle": "columbian",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/basic_label_PRINT3.jpg?v=1415066977",
+  "platform": "shopify",
+  "product_id": "262271417",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "latin american",
+   "medium",
+   "single origin"
+  ],
+  "title": "Colombian Santa Barbara Estate",
+  "url": "https://www.crazyfoxcoffee.com/products/columbian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Dark",
+    "variant_id": "19608829380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press / Dark",
+    "variant_id": "19608829444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Dark",
+    "variant_id": "19608829508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig / Dark",
+    "variant_id": "19608829572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso / Dark",
+    "variant_id": "19608829636"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Dark",
+    "variant_id": "19608829700"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press / Dark",
+    "variant_id": "19608829764"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Dark",
+    "variant_id": "19608829828"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig / Dark",
+    "variant_id": "19608829892"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso / Dark",
+    "variant_id": "19608829956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Dark",
+    "variant_id": "19608830020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press / Dark",
+    "variant_id": "19608830084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Dark",
+    "variant_id": "19608830148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig / Dark",
+    "variant_id": "19608830212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso / Dark",
+    "variant_id": "19608830276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Medium",
+    "variant_id": "19608830340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press / Medium",
+    "variant_id": "19608830404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Medium",
+    "variant_id": "19608830468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig / Medium",
+    "variant_id": "19608830532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso / Medium",
+    "variant_id": "19608830596"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Medium",
+    "variant_id": "19608830660"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press / Medium",
+    "variant_id": "19608830724"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Medium",
+    "variant_id": "19608830788"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig / Medium",
+    "variant_id": "19608830852"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso / Medium",
+    "variant_id": "19608830916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Medium",
+    "variant_id": "19608830980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press / Medium",
+    "variant_id": "19608831044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Medium",
+    "variant_id": "19608831108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig / Medium",
+    "variant_id": "19608831172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso / Medium",
+    "variant_id": "19608831236"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "d055a1c6b6230b28",
+  "first_seen": "2026-10-26",
+  "handle": "dawn-s-early-light",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/dawn_s_early_light_PRINT.jpg?v=1415067073",
+  "platform": "shopify",
+  "product_id": "262273325",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "breakfast blend",
+   "latin american",
+   "medium"
+  ],
+  "title": "Dawn's Early Light",
+  "url": "https://www.crazyfoxcoffee.com/products/dawn-s-early-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608828420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608828484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608828548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608828612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "19608828676"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608828740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608828804"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608828868"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608828932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608828996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608829060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608829124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608829188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608829252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "608070625"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6561b81e947f7ffa",
+  "first_seen": "2026-10-26",
+  "handle": "hoot-owl-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/hoot_owl_blend_final2_64119723-228c-48dc-8939-82e2c20e9436.jpeg?v=1464368638",
+  "platform": "shopify",
+  "product_id": "262692013",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold",
+   "dark",
+   "latin american",
+   "medium-dark"
+  ],
+  "title": "Hoot Owl Blend",
+  "url": "https://www.crazyfoxcoffee.com/products/hoot-owl-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19602426180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19602426308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "19608810500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608810564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608810628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608810692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608810756"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "19608810820"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608810884"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608810948"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608811012"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608811076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608811204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608811268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608811332"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8c39945faebe84d4",
+  "first_seen": "2026-10-26",
+  "handle": "guatamalan",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/basic_label_PRINT4.jpg?v=1415067160",
+  "platform": "shopify",
+  "product_id": "262696705",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "dark",
+   "latin american",
+   "medium",
+   "medium-dark",
+   "rain forest",
+   "rain forest certified",
+   "single origin"
+  ],
+  "title": "Guatemalan SHB HHT Huixoc Rainforest Certified",
+  "url": "https://www.crazyfoxcoffee.com/products/guatamalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Dark",
+    "variant_id": "1001007252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Medium",
+    "variant_id": "1035005380"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Medium",
+    "variant_id": "1035005820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Dark",
+    "variant_id": "1035019120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Medium",
+    "variant_id": "1035019640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press / Dark",
+    "variant_id": "19608826308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Dark",
+    "variant_id": "19608826372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig / Dark",
+    "variant_id": "19608826500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso / Dark",
+    "variant_id": "19608826564"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press / Dark",
+    "variant_id": "19608826692"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Dark",
+    "variant_id": "19608826756"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig / Dark",
+    "variant_id": "19608826884"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso / Dark",
+    "variant_id": "19608826948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press / Dark",
+    "variant_id": "19608827012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Dark",
+    "variant_id": "19608827140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig / Dark",
+    "variant_id": "19608827204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso / Dark",
+    "variant_id": "19608827332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press / Medium",
+    "variant_id": "19608827396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Medium",
+    "variant_id": "19608827460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig / Medium",
+    "variant_id": "19608827588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso / Medium",
+    "variant_id": "19608827652"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press / Medium",
+    "variant_id": "19608827716"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Medium",
+    "variant_id": "19608827780"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig / Medium",
+    "variant_id": "19608827844"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso / Medium",
+    "variant_id": "19608827908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press / Medium",
+    "variant_id": "19608828036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Medium",
+    "variant_id": "19608828100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig / Medium",
+    "variant_id": "19608828164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso / Medium",
+    "variant_id": "19608828228"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Dark",
+    "variant_id": "608921393"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "0000a534e4285766",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/decaf.jpg?v=1406923290",
+  "platform": "shopify",
+  "product_id": "262700277",
+  "product_type": "Decaf",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "decaf",
+   "latin american",
+   "medium",
+   "single origin",
+   "water processed"
+  ],
+  "title": "Brazil Decaf",
+  "url": "https://www.crazyfoxcoffee.com/products/brazil-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "19608824964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608825028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608825092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608825156"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608825220"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "19608825284"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608825348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608825412"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608825476"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608825540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608825604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608825668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608825732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608825796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608825860"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "199133b8e6e14fb5",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-nut-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/CinnamonNut.jpg?v=1406924591",
+  "platform": "shopify",
+  "product_id": "330692937",
+  "product_type": "Flavored",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "cinnamon",
+   "flavored",
+   "latin american",
+   "medium",
+   "nut",
+   "single origin",
+   "snickerdoodle"
+  ],
+  "title": "Cinnamon Nut Creme",
+  "url": "https://www.crazyfoxcoffee.com/products/cinnamon-nut-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Regular",
+    "variant_id": "19608817860"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Decaf",
+    "variant_id": "19608817988"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Regular",
+    "variant_id": "19608818052"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Decaf",
+    "variant_id": "19608818116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Regular",
+    "variant_id": "19608818180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Decaf",
+    "variant_id": "19608818244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Regular",
+    "variant_id": "19608818308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Decaf",
+    "variant_id": "19608818372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Regular",
+    "variant_id": "19608818436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Decaf",
+    "variant_id": "19608818500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Regular",
+    "variant_id": "19608818564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Decaf",
+    "variant_id": "19608818628"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "015ad503d4ced288",
+  "first_seen": "2026-10-26",
+  "handle": "rhondas-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/Rhonda_s_choice.png?v=1446480669",
+  "platform": "shopify",
+  "product_id": "3411198852",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "latin american",
+   "light",
+   "single origin"
+  ],
+  "title": "Rhonda's Choice",
+  "url": "https://www.crazyfoxcoffee.com/products/rhondas-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "19608811524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608811652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608811716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608811780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608811844"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608811908"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608812036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608812164"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608812228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608812356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608812420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608812484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608812548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608812612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "9994489860"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "4292cf1bae4c9d4d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-gayo-linge-1",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/basic_label_PRINT5.jpg?v=1415067574",
+  "platform": "shopify",
+  "product_id": "352309153",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "bold",
+   "dark roast",
+   "fair trade",
+   "organic",
+   "single origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.crazyfoxcoffee.com/products/organic-sumatra-gayo-linge-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean / Dark",
+    "variant_id": "1001009352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean / Dark",
+    "variant_id": "1035022524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press / Dark",
+    "variant_id": "19608813956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip / Dark",
+    "variant_id": "19608814020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig / Dark",
+    "variant_id": "19608814084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso / Dark",
+    "variant_id": "19608814148"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press / Dark",
+    "variant_id": "19608814212"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip / Dark",
+    "variant_id": "19608814276"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig / Dark",
+    "variant_id": "19608814340"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso / Dark",
+    "variant_id": "19608814404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press / Dark",
+    "variant_id": "19608814468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip / Dark",
+    "variant_id": "19608814532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig / Dark",
+    "variant_id": "19608814596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso / Dark",
+    "variant_id": "19608814660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean / Dark",
+    "variant_id": "876449397"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "ecc4a0d59de56d7c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-costa-rican-la-amistad",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/basic_label_PRINT2.jpg?v=1415067261",
+  "platform": "shopify",
+  "product_id": "352339281",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "medium roast",
+   "organic",
+   "single origin"
+  ],
+  "title": "Costa Rican SHB Tarrazu \"Don Miguel\" (Natural) Micro Lot",
+  "url": "https://www.crazyfoxcoffee.com/products/organic-costa-rican-la-amistad",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19608812932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19608812996"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19608813060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19608813124"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "19608813188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19608813252"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19608813316"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19608813380"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19608813444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608813508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608813572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608813636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608813700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608813764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40262836387927"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6b9ffdeed11c8a0c",
+  "first_seen": "2026-10-26",
+  "handle": "campcook-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/basic_label_ethiopia_yirg.jpg?v=1418413208",
+  "platform": "shopify",
+  "product_id": "393140164",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.crazyfoxcoffee.com/products/campcook-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "1056538404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "Auto-Drip",
+    "variant_id": "1056538408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "Pour Over",
+    "variant_id": "41618590400599"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "901446894e4979fa",
+  "first_seen": "2026-10-26",
+  "handle": "2-stroke-smoke-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/2-stroke_smoke.jpg?v=1454935923",
+  "platform": "shopify",
+  "product_id": "4351828932",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold",
+   "dark",
+   "dark roast",
+   "espresso",
+   "latin american",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "2-Stroke Smoke Espresso Blend",
+  "url": "https://www.crazyfoxcoffee.com/products/2-stroke-smoke-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "14543149060"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "14543149188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19597106308"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19597209668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19597303492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19597337668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19597367300"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19597405892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "19602417860"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "19602418052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "19608810180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "19608810244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "19608810308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "19608810372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "19608810436"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "fe6eb9ebc33680b8",
+  "first_seen": "2026-10-26",
+  "handle": "amphibious-assault",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/amphibious-assault.jpg?v=1464894743",
+  "platform": "shopify",
+  "product_id": "5022924420",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold",
+   "dark",
+   "dark roast",
+   "latin american"
+  ],
+  "title": "Amphibious Assault",
+  "url": "https://www.crazyfoxcoffee.com/products/amphibious-assault",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "19911026116"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "19911026244"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "19911026308"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "19911026436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "19911026500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "19911026628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / keurig",
+    "variant_id": "19911026692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / french press",
+    "variant_id": "19911026820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "19911026884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / espresso",
+    "variant_id": "19911027012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "19911027716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / keurig",
+    "variant_id": "19911028100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / french press",
+    "variant_id": "19911028164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "19911028292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / espresso",
+    "variant_id": "19911028420"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f0bc63a48c34b84a",
+  "first_seen": "2026-10-26",
+  "handle": "battle-of-berryville",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/Battle_of_Berryville_Coffee.jpg?v=1464896359",
+  "platform": "shopify",
+  "product_id": "5023003204",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "bold"
+  ],
+  "title": "Battle of Berryville",
+  "url": "https://www.crazyfoxcoffee.com/products/battle-of-berryville",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.25,
+    "title": "8 oz / Whole bean",
+    "variant_id": "19912373636"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.25,
+    "title": "8 oz / keurig",
+    "variant_id": "19912373700"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.25,
+    "title": "8 oz / french press",
+    "variant_id": "19912373764"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.25,
+    "title": "8 oz / Auto-drip",
+    "variant_id": "19912373892"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.25,
+    "title": "8 oz / Espresso",
+    "variant_id": "19912373956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "16 oz / Whole bean",
+    "variant_id": "19912374020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "16 oz / keurig",
+    "variant_id": "19912374084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "16 oz / french press",
+    "variant_id": "19912374148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "16 oz / Auto-drip",
+    "variant_id": "19912374212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19912374276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.25,
+    "title": "2 lb / Whole bean",
+    "variant_id": "19912374340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.25,
+    "title": "2 lb / keurig",
+    "variant_id": "19912374468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.25,
+    "title": "2 lb / french press",
+    "variant_id": "19912374532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.25,
+    "title": "2 lb / Auto-drip",
+    "variant_id": "19912374660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.25,
+    "title": "2 lb / Espresso",
+    "variant_id": "19912374788"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "04471eb0c60d7c32",
+  "first_seen": "2026-10-26",
+  "handle": "bob-o-link",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/bob-o-link.jpg?v=1464900212",
+  "platform": "shopify",
+  "product_id": "5023281476",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [],
+  "title": "Bob-O-Link",
+  "url": "https://www.crazyfoxcoffee.com/products/bob-o-link",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "19916146436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "19916146564"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "19916146756"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto-Drip",
+    "variant_id": "19916146884"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "19916147012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole bean",
+    "variant_id": "19916147140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "19916147268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "19916147460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto-Drip",
+    "variant_id": "19916147652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "19916147780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Whole bean",
+    "variant_id": "19916147908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / French Press",
+    "variant_id": "19916148036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Keurig",
+    "variant_id": "19916148228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Auto-Drip",
+    "variant_id": "19916148356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Espresso",
+    "variant_id": "19916148548"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "3a5c76000ab3f293",
+  "first_seen": "2026-10-26",
+  "handle": "daughter-of-the-stars-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/daughter_decaf.jpg?v=1465847870",
+  "platform": "shopify",
+  "product_id": "5074143940",
+  "product_type": "Decaf",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "battlefield blend",
+   "decaf"
+  ],
+  "title": "Daughter of the stars decaf",
+  "url": "https://www.crazyfoxcoffee.com/products/daughter-of-the-stars-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "20352172164"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "20352172228"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Kuerig",
+    "variant_id": "20352172292"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto-Drip",
+    "variant_id": "20352172356"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "20352172420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / Whole bean",
+    "variant_id": "20352172484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / French Press",
+    "variant_id": "20352172548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / Kuerig",
+    "variant_id": "20352172612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / Auto-Drip",
+    "variant_id": "20352172676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / Espresso",
+    "variant_id": "20352172740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Whole bean",
+    "variant_id": "20352172804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / French Press",
+    "variant_id": "20352172932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Kuerig",
+    "variant_id": "20352172996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Auto-Drip",
+    "variant_id": "20352173060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "20352173124"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "436b159bf71691c3",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-reviver-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/HDR_coffee_side1_5bbca515-2208-4ba0-bd84-bf61aeef3cfb.jpg?v=1465848457",
+  "platform": "shopify",
+  "product_id": "5074183108",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "battlefield blend"
+  ],
+  "title": "Downtown Reviver Blend",
+  "url": "https://www.crazyfoxcoffee.com/products/downtown-reviver-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "20352562180"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / French Press",
+    "variant_id": "20352562244"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Keurig",
+    "variant_id": "20352562436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Auto-Drip",
+    "variant_id": "20352562564"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / Esspresso",
+    "variant_id": "20352562756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "20352563012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / French Press",
+    "variant_id": "20352563204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "20352563268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Auto-Drip",
+    "variant_id": "20352563396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / Esspresso",
+    "variant_id": "20352563588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "20352563716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / French Press",
+    "variant_id": "20352563908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Keurig",
+    "variant_id": "20352563972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Auto-Drip",
+    "variant_id": "20352564100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / Esspresso",
+    "variant_id": "20352564228"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "be0e260c9d80576d",
+  "first_seen": "2026-10-26",
+  "handle": "stonewalls-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/stonewalls-sunrise.jpg?v=1465848845",
+  "platform": "shopify",
+  "product_id": "5074225220",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "battlefield blend"
+  ],
+  "title": "Stonewall's Sunrise",
+  "url": "https://www.crazyfoxcoffee.com/products/stonewalls-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "20352952068"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz / French Press",
+    "variant_id": "20352952196"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz / Keurig",
+    "variant_id": "20352952260"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz / Auto-Drip",
+    "variant_id": "20352952388"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz / Espresso",
+    "variant_id": "20352952516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "20352952644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / French Press",
+    "variant_id": "20352952772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Keurig",
+    "variant_id": "20352952900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Auto-Drip",
+    "variant_id": "20352953028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Espresso",
+    "variant_id": "20352953156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "20352953284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb / French Press",
+    "variant_id": "20352953412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb / Keurig",
+    "variant_id": "20352953668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb / Auto-Drip",
+    "variant_id": "20352953924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.5,
+    "title": "2 lb / Espresso",
+    "variant_id": "20352954052"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "fcc5186d796918ef",
+  "first_seen": "2026-10-26",
+  "handle": "our-colombian-lite",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/columbian-lite.jpg?v=1465930934",
+  "platform": "shopify",
+  "product_id": "5079269956",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "half-caf",
+   "latin american"
+  ],
+  "title": "Our Colombian Lite",
+  "url": "https://www.crazyfoxcoffee.com/products/our-colombian-lite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "20390761220"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "20390761284"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "20390761348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20390761412"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "20390761476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "20390761540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / keurig",
+    "variant_id": "20390761604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / french press",
+    "variant_id": "20390761668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20390761732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / espresso",
+    "variant_id": "20390761796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "20390761860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / keurig",
+    "variant_id": "20390761924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / french press",
+    "variant_id": "20390761988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20390762052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / espresso",
+    "variant_id": "20390762116"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f552008f7c8969f5",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-highland-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/tanzania-highland.jpg?v=1465931060",
+  "platform": "shopify",
+  "product_id": "5079280708",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "african",
+   "bold",
+   "dark",
+   "dark roast",
+   "single origin"
+  ],
+  "title": "Tanzania Highland-Peaberry",
+  "url": "https://www.crazyfoxcoffee.com/products/tanzania-highland-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "20390918468"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "20390918532"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "20390918724"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20390918788"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "20390918916"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "20390918980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / keurig",
+    "variant_id": "20390919172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / french press",
+    "variant_id": "20390919236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20390919364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / espresso",
+    "variant_id": "20390919492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "20390919556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / keurig",
+    "variant_id": "20390919684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / french press",
+    "variant_id": "20390919748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20390919940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / espresso",
+    "variant_id": "20390920004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "37711653201"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "60851d02c923cd69",
+  "first_seen": "2026-10-26",
+  "handle": "the-full-monty-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/full-monty.jpg?v=1465931750",
+  "platform": "shopify",
+  "product_id": "5079315012",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold"
+  ],
+  "title": "The \"Full Monty\" Blend",
+  "url": "https://www.crazyfoxcoffee.com/products/the-full-monty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "20391415236"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "20391415300"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "20391415364"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20391415492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "20391415556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "20391415620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / keurig",
+    "variant_id": "20391415684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / french press",
+    "variant_id": "20391415748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20391415812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / espresso",
+    "variant_id": "20391415876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "20391415940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / keurig",
+    "variant_id": "20391416004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / french press",
+    "variant_id": "20391416068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20391416132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / espresso",
+    "variant_id": "20391416196"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "c917e1a2c456e880",
+  "first_seen": "2026-10-26",
+  "handle": "indian-mysore-nuggets",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/indian-mysore.jpg?v=1466008501",
+  "platform": "shopify",
+  "product_id": "5085472452",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [],
+  "title": "Indian Mysore Nuggets",
+  "url": "https://www.crazyfoxcoffee.com/products/indian-mysore-nuggets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "20449447620"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "20449447748"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "20449447812"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20449447940"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "20449448004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / whole bean",
+    "variant_id": "20449448132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / keurig",
+    "variant_id": "20449448196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / french press",
+    "variant_id": "20449448260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20449448324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "16 oz / espresso",
+    "variant_id": "20449448452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "20449448516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / keurig",
+    "variant_id": "20449448580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / french press",
+    "variant_id": "20449448644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20449448772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.95,
+    "title": "2 lb / espresso",
+    "variant_id": "20449448836"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f10cdb2bf44d8f6c",
+  "first_seen": "2026-10-26",
+  "handle": "jubal-s-jolt",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/jubals-jolt.jpg?v=1466008714",
+  "platform": "shopify",
+  "product_id": "5085520324",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "battlefield blend"
+  ],
+  "title": "Jubal’s Jolt",
+  "url": "https://www.crazyfoxcoffee.com/products/jubal-s-jolt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / whole bean",
+    "variant_id": "20449805700"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / keurig",
+    "variant_id": "20449805764"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / french press",
+    "variant_id": "20449805892"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20449806020"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.5,
+    "title": "8 oz / espresso",
+    "variant_id": "20449806084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / whole bean",
+    "variant_id": "20449806212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / keurig",
+    "variant_id": "20449806340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / french press",
+    "variant_id": "20449806404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20449806532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.25,
+    "title": "16 oz / espresso",
+    "variant_id": "20449806596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / whole bean",
+    "variant_id": "20449806724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / keurig",
+    "variant_id": "20449806916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / french press",
+    "variant_id": "20449807044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20449807236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / espresso",
+    "variant_id": "20449807428"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "be1f4b6a077ee393",
+  "first_seen": "2026-10-26",
+  "handle": "general-lees-reveille",
+  "image": "https://cdn.shopify.com/s/files/1/0395/7661/products/General_Lee_s_Reveille.jpg?v=1466009402",
+  "platform": "shopify",
+  "product_id": "5085558148",
+  "product_type": "Blend",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "Charitable blend",
+   "battlefield blend",
+   "bold",
+   "espresso"
+  ],
+  "title": "General Lee's Reveille",
+  "url": "https://www.crazyfoxcoffee.com/products/general-lees-reveille",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / whole bean",
+    "variant_id": "20450447428"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / keurig",
+    "variant_id": "20450447492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / french press",
+    "variant_id": "20450447620"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / auto-drip",
+    "variant_id": "20450447684"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / espresso",
+    "variant_id": "20450447748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "16 oz / whole bean",
+    "variant_id": "20450447876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "16 oz / keurig",
+    "variant_id": "20450448004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "16 oz / french press",
+    "variant_id": "20450448068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "16 oz / auto-drip",
+    "variant_id": "20450448132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "16 oz / espresso",
+    "variant_id": "20450448260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / whole bean",
+    "variant_id": "20450448388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb / keurig",
+    "variant_id": "20450448452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.75,
+    "title": "2 lb / french press",
+    "variant_id": "20450448708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.75,
+    "title": "2 lb / auto-drip",
+    "variant_id": "20450448772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.75,
+    "title": "2 lb / espresso",
+    "variant_id": "20450448900"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "frostys-favorite",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6663322501207",
+  "product_type": "Flavored",
+  "roaster_slug": "crazyfoxcoffee",
+  "tags": [
+   "blend",
+   "bold",
+   "dark",
+   "dark roast",
+   "latin american",
+   "medium",
+   "medium-dark"
+  ],
+  "title": "Frosty's Favorite",
+  "url": "https://www.crazyfoxcoffee.com/products/frostys-favorite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39503185543255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / French Press",
+    "variant_id": "39503185576023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / Auto Drip",
+    "variant_id": "39503185608791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / Keurig",
+    "variant_id": "39503185641559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "16 oz / Espresso",
+    "variant_id": "39503185674327"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "39503185707095"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / French Press",
+    "variant_id": "39503185739863"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / Auto Drip",
+    "variant_id": "39503185772631"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / Keurig",
+    "variant_id": "39503185805399"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.95,
+    "title": "8 oz / Espresso",
+    "variant_id": "39503185838167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "39503185903703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5 Lb / French Press",
+    "variant_id": "39503185936471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5 Lb / Auto Drip",
+    "variant_id": "39503185969239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5 Lb / Keurig",
+    "variant_id": "39503186002007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5 Lb / Espresso",
+    "variant_id": "39503186034775"
+   }
+  ],
+  "vendor": "Crazy Fox Coffee Roasting Company"
+ }
+]

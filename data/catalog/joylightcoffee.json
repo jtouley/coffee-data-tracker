@@ -1,0 +1,650 @@
+[
+ {
+  "body_hash": "7eaf3555103d49d0",
+  "first_seen": "2026-10-26",
+  "handle": "golden-hour-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/GoldenHourProductPhotoNOTEXT.jpg?v=1762362059",
+  "platform": "shopify",
+  "product_id": "10268548596023",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Golden Hour *Seasonal Blend*",
+  "url": "https://joylightcoffee.com/products/golden-hour-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51035646165303"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "51035646198071"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 48.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "51035646329143"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 48.0,
+    "title": "28 oz / Drip",
+    "variant_id": "51035646361911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51043451470135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "51043451502903"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "a4ff2ed25b069f61",
+  "first_seen": "2026-10-26",
+  "handle": "john-rodriguez-advanced-washed-papayo",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/30A7792.jpg?v=1786572857",
+  "platform": "shopify",
+  "product_id": "10461299736887",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "John Rodríguez Advanced Washed Papayo",
+  "url": "https://joylightcoffee.com/products/john-rodriguez-advanced-washed-papayo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz",
+    "variant_id": "51776798130487"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 64.0,
+    "title": "28 oz",
+    "variant_id": "51776798163255"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "01fca97bf77cdd3c",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-for-a-cause-guatemala-atitlan",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/Y-KnotAtitlanProductPhoto.jpg?v=1776086280",
+  "platform": "shopify",
+  "product_id": "10498233925943",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Coffee For A Cause: Guatemala Atitlán",
+  "url": "https://joylightcoffee.com/products/coffee-for-a-cause-guatemala-atitlan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "51956188545335"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 37.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "51956188578103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51956188610871"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Drip",
+    "variant_id": "52638483284279"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 37.0,
+    "title": "28 oz / Drip",
+    "variant_id": "52638483317047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Drip",
+    "variant_id": "52638483349815"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "dca8694f06c48df4",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mara-estate-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/KenyaMaraEstateProductPhoto.jpg?v=1781637368",
+  "platform": "shopify",
+  "product_id": "10781399580983",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Kenya Mara Estate Anaerobic Natural",
+  "url": "https://joylightcoffee.com/products/kenya-mara-estate-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "52485354881335"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "52485354914103"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 56.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "52485354946871"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 56.0,
+    "title": "28 oz / Drip",
+    "variant_id": "52485354979639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52485355012407"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "6ec2e51a609e1ffc",
+  "first_seen": "2026-10-26",
+  "handle": "kaleidoscope",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/30A7697.jpg?v=1782146420",
+  "platform": "shopify",
+  "product_id": "10782084464951",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [
+   "subscriptions"
+  ],
+  "title": "Kaleidoscope",
+  "url": "https://joylightcoffee.com/products/kaleidoscope",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "52488015479095"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Drip",
+    "variant_id": "52488015511863"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 50.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "52488015544631"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 50.0,
+    "title": "28 oz / Drip",
+    "variant_id": "52488015577399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52488015610167"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "e52f2bb9adb572c5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-rio-negra-pink-bourbon-lactic",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/ColombiaRioNegroPinkBourbonLactic.jpg?v=1790024527",
+  "platform": "shopify",
+  "product_id": "10981042651447",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Colombia Rio Negro Pink Bourbon Lactic",
+  "url": "https://joylightcoffee.com/products/colombia-finca-rio-negra-pink-bourbon-lactic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz",
+    "variant_id": "53021702193463"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 62.0,
+    "title": "28 oz",
+    "variant_id": "53021702226231"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz",
+    "variant_id": "53047542808887"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "61bf06db67740112",
+  "first_seen": "2026-10-26",
+  "handle": "reserve-001-jorge-rojas-natural-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/Screenshot2026-10-15at2.55.29PM.png?v=1792094148",
+  "platform": "shopify",
+  "product_id": "11019404706103",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Reserve #001: Jorge Rojas Natural Geisha",
+  "url": "https://joylightcoffee.com/products/reserve-001-jorge-rojas-natural-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 24.0,
+    "title": "100g Tin",
+    "variant_id": "53350692520247"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "8e0a1e228bba1077",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-grade-1-worka",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/YirgacheffeProductPhoto_b8d93bb5-7446-4590-9a95-d4819c328f93.jpg?v=1737409951",
+  "platform": "shopify",
+  "product_id": "8114456625463",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [
+   "drip",
+   "subscriptions"
+  ],
+  "title": "Ethiopia Yirgacheffe Natural",
+  "url": "https://joylightcoffee.com/products/ethiopia-yirgacheffe-grade-1-worka",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44407192781111"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 51.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "44407192813879"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "46225770414391"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 51.0,
+    "title": "28 oz / Drip",
+    "variant_id": "46225770545463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49861488050487"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "4c93f4c30db352e3",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/Organic_Guatemala_Product_Photo.png?v=1777932247",
+  "platform": "shopify",
+  "product_id": "8114457805111",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "joylightcoffee",
+  "tags": [
+   "drip",
+   "immersion",
+   "subscriptions"
+  ],
+  "title": "Guatemala Huehuetenango Washed",
+  "url": "https://joylightcoffee.com/products/guatamala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44407197663543"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "44407197729079"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Drip",
+    "variant_id": "46225434575159"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / French Press",
+    "variant_id": "46225434640695"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "46225434673463"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Drip",
+    "variant_id": "46225434706231"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / French Press",
+    "variant_id": "46225434771767"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Espresso",
+    "variant_id": "46225434804535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49861482316087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49990342050103"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "eb44d169cb62e35b",
+  "first_seen": "2026-10-26",
+  "handle": "untitled-sep2_07-14",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/After_Hours_2.0_Product_Photo.png?v=1766086699",
+  "platform": "shopify",
+  "product_id": "8730565738807",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [
+   "subscriptions"
+  ],
+  "title": "After Hours Decaf",
+  "url": "https://joylightcoffee.com/products/untitled-sep2_07-14",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "47603027804471"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Drip",
+    "variant_id": "47603027837239"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 46.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "47603027968311"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 46.0,
+    "title": "28 oz / Drip",
+    "variant_id": "47603028001079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49861499420983"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "0d5142b8ce964856",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-la-esperanza-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/ColombiaYoungProducersProductPhoto.jpg?v=1752529207",
+  "platform": "shopify",
+  "product_id": "9873540579639",
+  "product_type": "",
+  "roaster_slug": "joylightcoffee",
+  "tags": [],
+  "title": "Colombia Young Producers Lot",
+  "url": "https://joylightcoffee.com/products/colombia-finca-la-esperanza-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "49726329389367"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Drip",
+    "variant_id": "49726329422135"
+   },
+   {
+    "available": false,
+    "grams": 794,
+    "price_usd": 55.0,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "50860111036727"
+   },
+   {
+    "available": false,
+    "grams": 794,
+    "price_usd": 55.0,
+    "title": "28 oz / Drip",
+    "variant_id": "50860111069495"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52231716766007"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ },
+ {
+  "body_hash": "41923be64fe40323",
+  "first_seen": "2026-10-26",
+  "handle": "luminary",
+  "image": "https://cdn.shopify.com/s/files/1/0716/2170/6039/files/30A4434-5.jpg?v=1734731788",
+  "platform": "shopify",
+  "product_id": "9992291811639",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "joylightcoffee",
+  "tags": [
+   "drip",
+   "immersion",
+   "subscriptions"
+  ],
+  "title": "Luminary",
+  "url": "https://joylightcoffee.com/products/luminary",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "50079109415223"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Drip",
+    "variant_id": "50079109447991"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / French Press",
+    "variant_id": "50079109513527"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "50079109546295"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Whole Bean",
+    "variant_id": "50079109579063"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Drip",
+    "variant_id": "50079109611831"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / French Press",
+    "variant_id": "50079109677367"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.5,
+    "title": "28 oz / Espresso",
+    "variant_id": "50079109710135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50079109742903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Drip",
+    "variant_id": "52099561292087"
+   }
+  ],
+  "vendor": "Joylight Coffee Roasters"
+ }
+]

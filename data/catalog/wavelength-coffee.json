@@ -1,0 +1,278 @@
+[
+ {
+  "body_hash": "b83bf08ba1a2db8b",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-rimiro-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/WCR_PS250904-29_b2ed9b66-3859-4d01-8649-b95274aa1a99.jpg?v=1758729463",
+  "platform": "shopify",
+  "product_id": "10096675192964",
+  "product_type": "Burundi",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Burundi / Rimiro Natural",
+  "url": "https://www.wavelength-coffee.com/products/burundi-rimiro-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "51024829251716"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "753766d1f2bfe562",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-ubuto",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/MG_1981-3.jpg?v=1770756699",
+  "platform": "shopify",
+  "product_id": "10193401282692",
+  "product_type": "Burundi",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Burundi / Karuzi Ubuto",
+  "url": "https://www.wavelength-coffee.com/products/burundi-ubuto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "51410026725508"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "a35ff8a904905760",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-mwp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Mexico-decaf-1-small.jpg?v=1785351889",
+  "platform": "shopify",
+  "product_id": "10406110822532",
+  "product_type": "Mexico",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Mexico / MWP Decaf",
+  "url": "https://www.wavelength-coffee.com/products/mexico-mwp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "52534772564100"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "530b2946e5f89d2a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-mundo-maya",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Mexico-mundomaya-1-small.jpg?v=1785351889",
+  "platform": "shopify",
+  "product_id": "10414504575108",
+  "product_type": "Mexico",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Mexico / Mundo Maya",
+  "url": "https://www.wavelength-coffee.com/products/mexico-mundo-maya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "52555702206596"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "5e1187c8a3d4a468",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-malebo-project",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Ethiopia-malebo-1-small.jpg?v=1785351889",
+  "platform": "shopify",
+  "product_id": "10421483896964",
+  "product_type": "Ethiopia",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Ethiopia / Malebo Project",
+  "url": "https://www.wavelength-coffee.com/products/ethiopia-malebo-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "52577709981828"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "bd5cacdd9a6d5dc2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-martin-asproguate-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Guatemala-san-martin-1-small.jpg?v=1788551668",
+  "platform": "shopify",
+  "product_id": "10440899821700",
+  "product_type": "Guatemala",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Guatemala / San Martin Asproguate Organic",
+  "url": "https://www.wavelength-coffee.com/products/guatemala-san-martin-asproguate-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "52633673433220"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "e1ddcb0a6be23e94",
+  "first_seen": "2026-10-26",
+  "handle": "peru-flores-de-luya",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Flores-de-Luya-1-small.jpg?v=1788552026",
+  "platform": "shopify",
+  "product_id": "10478134263940",
+  "product_type": "Peru",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Peru / Flores de Luya",
+  "url": "https://www.wavelength-coffee.com/products/peru-flores-de-luya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "52766357553284"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "0eeb2e919a97a7b5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-espejo-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Espejo-pink-bourbon-1-small.jpg?v=1788879035",
+  "platform": "shopify",
+  "product_id": "10482921930884",
+  "product_type": "Colombia",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Colombia / El Espejo Pink Bourbon",
+  "url": "https://www.wavelength-coffee.com/products/colombia-el-espejo-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "52783727870084"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "f2e1e8642a1c8814",
+  "first_seen": "2026-10-26",
+  "handle": "transformation-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/WCR_PS250904-26.jpg?v=1758147355",
+  "platform": "shopify",
+  "product_id": "8233806266500",
+  "product_type": "Colombia",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Colombia / Transformation Blend",
+  "url": "https://www.wavelength-coffee.com/products/transformation-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "44840445771908"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "ee5c303157a1b008",
+  "first_seen": "2026-10-26",
+  "handle": "leon-henao",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/Leon-henao.jpg?v=1763600372",
+  "platform": "shopify",
+  "product_id": "9994592026756",
+  "product_type": "Colombia",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Colombia / Leon Henao / Los Acientos",
+  "url": "https://www.wavelength-coffee.com/products/leon-henao",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "50481301487748"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "fb6c7196e0d4d49b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-estate-la-minita",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/laminita-certs.png?v=1758729164",
+  "platform": "shopify",
+  "product_id": "9998102429828",
+  "product_type": "Colombia",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Costa Rica / Hacienda La Minita",
+  "url": "https://www.wavelength-coffee.com/products/costa-rica-tarrazu-estate-la-minita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "50506747543684"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ },
+ {
+  "body_hash": "7e04683c6bf46021",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9812/1604/files/WCR_PS250904-27.png?v=1758146435",
+  "platform": "shopify",
+  "product_id": "9998271086724",
+  "product_type": "Tanzania",
+  "roaster_slug": "wavelength-coffee",
+  "tags": [],
+  "title": "Tanzania / Peaberry",
+  "url": "https://www.wavelength-coffee.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "50508795609220"
+   }
+  ],
+  "vendor": "Wavelength Coffee Roasters"
+ }
+]

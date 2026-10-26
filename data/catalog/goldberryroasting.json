@@ -1,0 +1,7604 @@
+[
+ {
+  "body_hash": "72276acd7fa925a1",
+  "first_seen": "2026-10-26",
+  "handle": "river-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/River_Roast_Bag.png?v=1746044772",
+  "platform": "shopify",
+  "product_id": "10128476504338",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Medium Roast",
+   "South America",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "River Roast",
+  "url": "https://goldberryroasting.com/products/river-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51249096130834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51249096163602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51249096196370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51249096229138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51249096261906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51249096294674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51249096327442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51249096360210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51249096392978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51249096425746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51249096458514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51249096491282"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616545042"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199616577810"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616610578"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199616643346"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ashland-count-park-district-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/park_sdistrict.jpg?v=1746193973",
+  "platform": "shopify",
+  "product_id": "10129369530642",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "customblend",
+   "medium-light roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Ashland County Park District Blend",
+  "url": "https://goldberryroasting.com/products/ashland-count-park-district-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616479506"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground For Drip Brewer",
+    "variant_id": "52199616512274"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "vinyl-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/vinyl.png?v=1748984736",
+  "platform": "shopify",
+  "product_id": "10154451632402",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "customblend"
+  ],
+  "title": "Vinyl Blend",
+  "url": "https://goldberryroasting.com/products/vinyl-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51345065935122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51345065967890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51345066000658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51345066033426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51345066066194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51345066098962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51345066131730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51345066164498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51345066197266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51345066230034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51345066262802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51345066295570"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616348434"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199616381202"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616413970"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199616446738"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cowgirl-coffee-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/cowgirlcoffee_2.png?v=1751984615",
+  "platform": "shopify",
+  "product_id": "10163844022546",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Cowgirl Coffee - House Blend",
+  "url": "https://goldberryroasting.com/products/cowgirl-coffee-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51388300984594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51388301050130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51388301115666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51388301181202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51388301246738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51388301312274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Cold Brew",
+    "variant_id": "51453713350930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Cold Brew",
+    "variant_id": "51453713383698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Cold Brew",
+    "variant_id": "51453713416466"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616250130"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616282898"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Cold Brew",
+    "variant_id": "52199616315666"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "565345b1c12b888b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-nyanja",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Kenya_bag_5bf6e755-6283-4eec-b4d4-048c7ae2c54e.png?v=1764372952",
+  "platform": "shopify",
+  "product_id": "10218112319762",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "Ethiopia",
+   "Light Roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Kenya AA: Nyanja",
+  "url": "https://goldberryroasting.com/products/kenya-aa-nyanja",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51606403678482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51606403711250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51606403744018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51606403776786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51606403809554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51606403842322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51606403875090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51606403907858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51606403940626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51606403973394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51606404006162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51606404038930"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616119058"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616151826"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199616184594"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199616217362"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "a32581eadf732b81",
+  "first_seen": "2026-10-26",
+  "handle": "the-coffee-house-house-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10220777406738",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Medium Roast",
+   "b2b-the-coffee-house",
+   "customblend"
+  ],
+  "title": "The Coffee House - House Blend",
+  "url": "https://goldberryroasting.com/products/the-coffee-house-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51616080888082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51616080920850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51616080953618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51616080986386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51616081019154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51616081051922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51616081084690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51616081117458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51616081150226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51616081182994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51616081215762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51616081248530"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199615987986"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199616020754"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199616053522"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199616086290"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ohio-state-reformatory-cafe",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10252491030802",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "b2b",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Ohio State Reformatory Cafe",
+  "url": "https://goldberryroasting.com/products/ohio-state-reformatory-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Watchtower Espresso Blend / 12 oz / Whole Bean",
+    "variant_id": "51722806558994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Watchtower Espresso Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722806591762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Watchtower Espresso Blend / 5 lb / Whole Bean",
+    "variant_id": "51722806886674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Watchtower Espresso Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722806919442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Zihuatanejo Cafe Mexicano / 12 oz / Whole Bean",
+    "variant_id": "51722807214354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Zihuatanejo Cafe Mexicano / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722807247122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Zihuatanejo Cafe Mexicano / 5 lb / Whole Bean",
+    "variant_id": "51722807542034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Zihuatanejo Cafe Mexicano / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722807574802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Warden's Widow Dark Blend / 12 oz / Whole Bean",
+    "variant_id": "51722807869714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Warden's Widow Dark Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722807902482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Warden's Widow Dark Blend / 5 lb / Whole Bean",
+    "variant_id": "51722808197394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Warden's Widow Dark Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722808230162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Up All Night Dark Blend / 12 oz / Whole Bean",
+    "variant_id": "51722808525074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Up All Night Dark Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722808557842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Up All Night Dark Blend / 5 lb / Whole Bean",
+    "variant_id": "51722808852754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Up All Night Dark Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722808885522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Lights out Decaf / 12 oz / Whole Bean",
+    "variant_id": "51722809180434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Lights out Decaf / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722809213202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Lights out Decaf / 5 lb / Whole Bean",
+    "variant_id": "51722809508114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Lights out Decaf / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722809540882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Get Busy Brewin House Blend / 12 oz / Whole Bean",
+    "variant_id": "51722959585554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Get Busy Brewin House Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722959618322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Get Busy Brewin House Blend / 5 lb / Whole Bean",
+    "variant_id": "51722959716626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Get Busy Brewin House Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722959749394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Morning Roll Call Breakfast Blend / 12 oz / Whole Bean",
+    "variant_id": "51722959847698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Morning Roll Call Breakfast Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51722959880466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Morning Roll Call Breakfast Blend / 5 lb / Whole Bean",
+    "variant_id": "51722959978770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Morning Roll Call Breakfast Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51722960011538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Watchtower Espresso Blend / 1 lb / Whole Bean",
+    "variant_id": "52199615398162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Watchtower Espresso Blend / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615430930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Get Busy Brewin House Blend / 1 lb / Whole Bean",
+    "variant_id": "52199615463698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Get Busy Brewin House Blend / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615496466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Zihuatanejo Cafe Mexicano / 1 lb / Whole Bean",
+    "variant_id": "52199615529234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Zihuatanejo Cafe Mexicano / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615562002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Warden's Widow Dark Blend / 1 lb / Whole Bean",
+    "variant_id": "52199615594770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Warden's Widow Dark Blend / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615627538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Up All Night Dark Blend / 1 lb / Whole Bean",
+    "variant_id": "52199615660306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Up All Night Dark Blend / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615693074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Lights out Decaf / 1 lb / Whole Bean",
+    "variant_id": "52199615725842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Lights out Decaf / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615758610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Morning Roll Call Breakfast Blend / 1 lb / Whole Bean",
+    "variant_id": "52199615791378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Morning Roll Call Breakfast Blend / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52199615824146"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "inn-at-honey-run-blends",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/1631354316611.jpg?v=1765552533",
+  "platform": "shopify",
+  "product_id": "10268947906834",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Inn At Honey Run",
+  "url": "https://goldberryroasting.com/products/inn-at-honey-run-blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Tarragon Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51783797801234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Tarragon Blend / 12 oz / Whole Bean",
+    "variant_id": "51783797834002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Tarragon Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51783797932306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Tarragon Blend / 5 lb / Whole Bean",
+    "variant_id": "51783797965074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Honey Run Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51783798063378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Honey Run Blend / 12 oz / Whole Bean",
+    "variant_id": "51783798096146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Honey Run Blend / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51783798194450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Honey Run Blend / 5 lb / Whole Bean",
+    "variant_id": "51783798227218"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "90bd7ac6a378969a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Mexico_Bag_f7c592b6-374a-4c8a-bdaa-d46afe7fecf9.png?v=1766083441",
+  "platform": "shopify",
+  "product_id": "10272507003154",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "direct trade",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Mexico",
+  "url": "https://goldberryroasting.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51807506792722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51807506825490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51807506858258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51807506891026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51807506923794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51807506956562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51807506989330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51807507022098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51807507054866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51807507087634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51807507120402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51807507153170"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199615267090"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199615299858"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199615332626"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199615365394"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "847308a188f623da",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nocturno-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Mexico_Nocturno_Bag.png?v=1766088472",
+  "platform": "shopify",
+  "product_id": "10272532300050",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "South America",
+   "dark roast",
+   "direct trade",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Mexico Nocturno",
+  "url": "https://goldberryroasting.com/products/mexico-nocturno-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "51807567577362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "51807567610130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51807567642898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "51807567675666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "51807567708434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "51807567741202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "51807567773970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "51807567806738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "51807567839506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "51807567872274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51807567905042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "51807567937810"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199615136018"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199615168786"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199615201554"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199615234322"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "92f2ada45b565728",
+  "first_seen": "2026-10-26",
+  "handle": "blends-and-signature-roasts-sampler-box",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/SignatureBlends.jpg?v=1784057882",
+  "platform": "shopify",
+  "product_id": "10328322212114",
+  "product_type": "",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "samplebox"
+  ],
+  "title": "Signature Box",
+  "url": "https://goldberryroasting.com/products/blends-and-signature-roasts-sampler-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "52149927280914"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Ground - Drip Brewer",
+    "variant_id": "52149927313682"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Ground - French Press",
+    "variant_id": "52149927346450"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "lees-private-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10331798241554",
+  "product_type": "",
+  "roaster_slug": "goldberryroasting",
+  "tags": [],
+  "title": "Lee's Private Blend",
+  "url": "https://goldberryroasting.com/products/lees-private-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52171576017170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52171576606994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52244222968082"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "substance-church",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10335828377874",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Substance Church Blend",
+  "url": "https://goldberryroasting.com/products/substance-church",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52195920347410"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52195920380178"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52195920412946"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52195920445714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52195920478482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52195920511250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52195920544018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52195920576786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52195920740626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52195920773394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52195920806162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52195920838930"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rise-n-shine-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10336223985938",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Medium Roast",
+   "South America",
+   "customblend",
+   "direct trade",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Rise N Shine Blend",
+  "url": "https://goldberryroasting.com/products/rise-n-shine-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52197464441106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52197464473874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52197464506642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52197464539410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52197464703250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52197464736018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52197464768786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52197464801554"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199615004946"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199615037714"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199615070482"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199615103250"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "day-drift-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10340395385106",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Medium Roast",
+   "central america",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Day Drift Blend",
+  "url": "https://goldberryroasting.com/products/day-drift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52220774973714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52220775006482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52220775235858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52220775268626"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52220775366930"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52220775399698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Cold Brew",
+    "variant_id": "52364175966482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Cold Brew",
+    "variant_id": "52364175999250"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Cold Brew",
+    "variant_id": "52364176032018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52424565063954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52424565096722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Cold Brew",
+    "variant_id": "52424565129490"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "150fed0e5a245451",
+  "first_seen": "2026-10-26",
+  "handle": "marandos-cafe-sarahs-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Marando_sCafeCoffeeSticker.png?v=1778860431",
+  "platform": "shopify",
+  "product_id": "10356471267602",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Marando's Cafe - Sarah's Blend",
+  "url": "https://goldberryroasting.com/products/marandos-cafe-sarahs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52274760646930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52274760679698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52274760778002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52274760810770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52274760909074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52274760941842"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52274761040146"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52274761072914"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kingwood-gardens-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10357633843474",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Kingwood Gardens Blend",
+  "url": "https://goldberryroasting.com/products/kingwood-gardens-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52283538997522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52283539030290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52283539063058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52283539095826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52283539128594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52283539161362"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52283539194130"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52283539226898"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "partner-blend-base-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Screenshot2026-06-08115007.png?v=1780933839",
+  "platform": "shopify",
+  "product_id": "10366442406162",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Mechanics Bank",
+  "url": "https://goldberryroasting.com/products/partner-blend-base-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52357668274450"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52357668307218"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52357668339986"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52357668372754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52357668405522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52357668438290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52357668471058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52357668503826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52357668536594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52357668569362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52357668602130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52357668634898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52357668667666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52357668700434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52357668733202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52357668765970"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dorm-dudes-real",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/DORMDUDES.jpg?v=1781719857",
+  "platform": "shopify",
+  "product_id": "10369066008850",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Dorm Dudes",
+  "url": "https://goldberryroasting.com/products/dorm-dudes-real",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52375633821970"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52375633854738"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52375633887506"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52375633920274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52375633953042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52375633985810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52375634018578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52375634051346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52375634084114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52375634116882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52375634149650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52375634182418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52375634215186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52375634247954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52375634280722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52375634313490"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "partner-blend-base-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Screenshot_2026-06-19_101706.png?v=1781878663",
+  "platform": "shopify",
+  "product_id": "10371021209874",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Stela's Ice Cream Shoppe & Coffee House",
+  "url": "https://goldberryroasting.com/products/partner-blend-base-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Dark / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52390749962514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Dark / 1 lb / Ground for Espresso",
+    "variant_id": "52390749995282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Dark / 1 lb / Whole Bean",
+    "variant_id": "52390750028050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Dark / 1 lb / Ground for French Press",
+    "variant_id": "52390750060818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Dark / 5 lb / Ground for Drip Brewer",
+    "variant_id": "52390750093586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Dark / 5 lb / Ground for Espresso",
+    "variant_id": "52390750126354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Dark / 5 lb / Whole Bean",
+    "variant_id": "52390750159122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Dark / 5 lb / Ground for French Press",
+    "variant_id": "52390750191890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Medium / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52390751273234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Espresso / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52390751306002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Decaf / 1 lb / Ground for Drip Brewer",
+    "variant_id": "52390751338770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Medium / 1 lb / Ground for Espresso",
+    "variant_id": "52390751371538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Espresso / 1 lb / Ground for Espresso",
+    "variant_id": "52390751404306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Decaf / 1 lb / Ground for Espresso",
+    "variant_id": "52390751437074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Medium / 1 lb / Whole Bean",
+    "variant_id": "52390751469842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Espresso / 1 lb / Whole Bean",
+    "variant_id": "52390751502610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Decaf / 1 lb / Whole Bean",
+    "variant_id": "52390751535378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Medium / 1 lb / Ground for French Press",
+    "variant_id": "52390751568146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Espresso / 1 lb / Ground for French Press",
+    "variant_id": "52390751600914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.75,
+    "title": "Stela's Decaf / 1 lb / Ground for French Press",
+    "variant_id": "52390751633682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Medium / 5 lb / Ground for Drip Brewer",
+    "variant_id": "52390751666450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Espresso / 5 lb / Ground for Drip Brewer",
+    "variant_id": "52390751699218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Decaf / 5 lb / Ground for Drip Brewer",
+    "variant_id": "52390751731986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Medium / 5 lb / Ground for Espresso",
+    "variant_id": "52390751764754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Espresso / 5 lb / Ground for Espresso",
+    "variant_id": "52390751797522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Decaf / 5 lb / Ground for Espresso",
+    "variant_id": "52390751830290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Medium / 5 lb / Whole Bean",
+    "variant_id": "52390751863058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Espresso / 5 lb / Whole Bean",
+    "variant_id": "52390751895826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Decaf / 5 lb / Whole Bean",
+    "variant_id": "52390751928594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Medium / 5 lb / Ground for French Press",
+    "variant_id": "52390751961362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Espresso / 5 lb / Ground for French Press",
+    "variant_id": "52390751994130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.75,
+    "title": "Stela's Decaf / 5 lb / Ground for French Press",
+    "variant_id": "52390752026898"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "a3fb8fc431ee1123",
+  "first_seen": "2026-10-26",
+  "handle": "halcyon-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Halcyon_bag.png?v=1782932039",
+  "platform": "shopify",
+  "product_id": "10377881714962",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Halcyon Blend",
+  "url": "https://goldberryroasting.com/products/halcyon-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52456472871186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52456472903954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52456472936722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52456472969490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52456473002258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52456473035026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52456473067794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52456473100562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52456473133330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52456473166098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52456473198866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52456473231634"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52456473264402"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52456473297170"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52456473329938"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52456473362706"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "821a4d1359fd4dfc",
+  "first_seen": "2026-10-26",
+  "handle": "methods-box",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Methods1_6768d273-4b12-4272-b267-5c5921e1775d.jpg?v=1788461420",
+  "platform": "shopify",
+  "product_id": "10402820718866",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "b2c-only"
+  ],
+  "title": "Methods Box",
+  "url": "https://goldberryroasting.com/products/methods-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "52580718706962"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "core-community-church-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/corechurchlabel_1.png?v=1789479139",
+  "platform": "shopify",
+  "product_id": "10433819083026",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Core Community Church Blend",
+  "url": "https://goldberryroasting.com/products/core-community-church-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52710404882706"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52710404915474"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52710404948242"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52710404981010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52710405013778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52710405046546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52710405079314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52710405112082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52710405144850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52710405177618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52710405210386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52710405243154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52710405275922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52710405308690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52710405341458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52710405374226"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sleeping-bear-resort",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15399338049810",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Sleeping Bear Resort",
+  "url": "https://goldberryroasting.com/products/sleeping-bear-resort",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Sleeping Bear Resort Blend / 3 oz / Ground for Drip Brewer",
+    "variant_id": "67600702931218"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Sleeping Bear Resort Blend / 3 oz / Whole Bean",
+    "variant_id": "67600702996754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Sleeping Bear Resort Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "67600703062290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Sleeping Bear Resort Blend / 12 oz / Whole Bean",
+    "variant_id": "67600703127826"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Traverse City Cottage Co Blend / 3 oz / Ground for Drip Brewer",
+    "variant_id": "67600712597778"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Traverse City Cottage Co Blend / 3 oz / Whole Bean",
+    "variant_id": "67600712630546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Traverse City Cottage Co Blend / 12 oz / Ground for Drip Brewer",
+    "variant_id": "67600712663314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Traverse City Cottage Co Blend / 12 oz / Whole Bean",
+    "variant_id": "67600712696082"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bellwether-farm-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/bellwether_1.png?v=1791992627",
+  "platform": "shopify",
+  "product_id": "15404892750098",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Bellwether Blend",
+  "url": "https://goldberryroasting.com/products/bellwether-farm-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "67616475578642"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "67616475611410"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "67616475644178"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "67616475676946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "67616475709714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "67616475742482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67616475775250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "67616475808018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "67616475840786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "67616475873554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "67616475906322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "67616475939090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "67616475971858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "67616476004626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "67616476037394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "67616476070162"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "2c94b605ccaeb366",
+  "first_seen": "2026-10-26",
+  "handle": "haiti-zombie-desert",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Zombie2-Website.jpg?v=1792754679",
+  "platform": "shopify",
+  "product_id": "15409136206098",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Limited Release",
+   "Medium Roast",
+   "dup-review-publication",
+   "medium-dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Haiti Zombie Desert",
+  "url": "https://goldberryroasting.com/products/haiti-zombie-desert",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67630032060690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "67630032093458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "67630032126226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "67630032158994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "67640859558162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "67640859590930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "67640859623698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "67640859656466"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "99142d7bf20575a8",
+  "first_seen": "2026-10-26",
+  "handle": "goldberrys-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Goldberry_s_Blend_Bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "2708154089557",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Goldberry's Blend",
+  "url": "https://goldberryroasting.com/products/goldberrys-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195401191509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "23195401224277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "23195401257045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "23195401289813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "23195401322581"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "23195401355349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298038366293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298038399061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298038431829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796576710930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796576842002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796576874770"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199624179986"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199624212754"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199624245522"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199624278290"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "22962f6902357b37",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Brazil_Bag.png?v=1764370339",
+  "platform": "shopify",
+  "product_id": "2708154122325",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Brazil",
+  "url": "https://goldberryroasting.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195401453653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "23195401486421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "23195401519189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "23195401551957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "23195401584725"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "23195401617493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298038464597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298038530133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298038562901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796576416018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796576448786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796576481554"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199624048914"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199624081682"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199624114450"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199624147218"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/DecafBag.png?v=1764371187",
+  "platform": "shopify",
+  "product_id": "2708154220629",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "decaf",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Decaf",
+  "url": "https://goldberryroasting.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195401846869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "23195401879637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "23195401912405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "23195401945173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "23195401977941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "23195402010709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298038595669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298038628437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298038661205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796575826194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796575891730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796576088338"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199623917842"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199623950610"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199623983378"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199624016146"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "33660e6e03d87973",
+  "first_seen": "2026-10-26",
+  "handle": "flores",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Sumatra_Bag_fb0629fd-42dc-4cea-b1db-2414d3be407f.png?v=1772572558",
+  "platform": "shopify",
+  "product_id": "2708154384469",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Indonesian",
+   "dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Sumatra",
+  "url": "https://goldberryroasting.com/products/flores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195403223125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "23195403255893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "23195403288661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "23195403321429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "23195403354197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "23195403386965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298038693973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298038726741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298038759509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796574187794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796574220562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796574253330"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199623688466"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199623721234"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199623754002"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199623786770"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "dcf00b01a2b4cd13",
+  "first_seen": "2026-10-26",
+  "handle": "cornucopia",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/cornucopia_bag_2.png?v=1790168451",
+  "platform": "shopify",
+  "product_id": "2708154450005",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "medium-dark roast",
+   "seasonal",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Cornucopia Autumn Blend",
+  "url": "https://goldberryroasting.com/products/cornucopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195403747413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "23195403845717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298038857813"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298038890581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298038923349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "39396699373653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "39396699406421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "39396699439189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "39396699471957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796576579858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796576612626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796576645394"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199623426322"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199623459090"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199623491858"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199623524626"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "631268c44f428f85",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-extract-kit-small",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/vanilla3.jpg?v=1637818612",
+  "platform": "shopify",
+  "product_id": "2708154482773",
+  "product_type": "Vanilla",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "vanilla"
+  ],
+  "title": "Mexican Vanilla Extract Kit",
+  "url": "https://goldberryroasting.com/products/vanilla-extract-kit-small",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "23195404009557"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hudson-and-essex",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/s608421575400892400_p64_i1_w2000.jpg?v=1571007886",
+  "platform": "shopify",
+  "product_id": "2708154712149",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Hudson and Essex",
+  "url": "https://goldberryroasting.com/products/hudson-and-essex",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Super-Six: House Blend / 12 oz Retail Bag / Whole Bean",
+    "variant_id": "23195404730453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Hornet: Espresso Blend / 12 oz Retail Bag / Whole Bean",
+    "variant_id": "23195404795989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Terraplane: Decaf / 12 oz Retail Bag / Whole Bean",
+    "variant_id": "50159180972306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Super-Six: House Blend / 12 oz Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185068306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Super-Six: House Blend / 12 oz Retail Bag / Ground - Espresso",
+    "variant_id": "50159185101074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Super-Six: House Blend / 12 oz Retail Bag / Ground - French Press",
+    "variant_id": "50159185133842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Super-Six: House Blend / 1 Lb Retail Bag / Whole Bean",
+    "variant_id": "50159185166610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Super-Six: House Blend / 1 Lb Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185199378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Super-Six: House Blend / 1 Lb Retail Bag / Ground - Espresso",
+    "variant_id": "50159185232146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Super-Six: House Blend / 1 Lb Retail Bag / Ground - French Press",
+    "variant_id": "50159185264914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Super-Six: House Blend / 5 Lb Bulk Bag / Whole Bean",
+    "variant_id": "50159185297682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Super-Six: House Blend / 5 Lb Bulk Bag / Ground - Drip Brewer",
+    "variant_id": "50159185330450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Super-Six: House Blend / 5 Lb Bulk Bag / Ground - Espresso",
+    "variant_id": "50159185363218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Super-Six: House Blend / 5 Lb Bulk Bag / Ground - French Press",
+    "variant_id": "50159185395986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Hornet: Espresso Blend / 12 oz Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185428754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Hornet: Espresso Blend / 12 oz Retail Bag / Ground - Espresso",
+    "variant_id": "50159185461522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Hornet: Espresso Blend / 12 oz Retail Bag / Ground - French Press",
+    "variant_id": "50159185494290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Hornet: Espresso Blend / 1 Lb Retail Bag / Whole Bean",
+    "variant_id": "50159185527058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Hornet: Espresso Blend / 1 Lb Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185559826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Hornet: Espresso Blend / 1 Lb Retail Bag / Ground - Espresso",
+    "variant_id": "50159185592594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Hornet: Espresso Blend / 1 Lb Retail Bag / Ground - French Press",
+    "variant_id": "50159185625362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Hornet: Espresso Blend / 5 Lb Bulk Bag / Whole Bean",
+    "variant_id": "50159185658130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Hornet: Espresso Blend / 5 Lb Bulk Bag / Ground - Drip Brewer",
+    "variant_id": "50159185690898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Hornet: Espresso Blend / 5 Lb Bulk Bag / Ground - Espresso",
+    "variant_id": "50159185723666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Hornet: Espresso Blend / 5 Lb Bulk Bag / Ground - French Press",
+    "variant_id": "50159185756434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Terraplane: Decaf / 12 oz Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185789202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Terraplane: Decaf / 12 oz Retail Bag / Ground - Espresso",
+    "variant_id": "50159185821970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Terraplane: Decaf / 12 oz Retail Bag / Ground - French Press",
+    "variant_id": "50159185854738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Terraplane: Decaf / 1 Lb Retail Bag / Whole Bean",
+    "variant_id": "50159185887506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Terraplane: Decaf / 1 Lb Retail Bag / Ground - Drip Brewer",
+    "variant_id": "50159185920274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Terraplane: Decaf / 1 Lb Retail Bag / Ground - Espresso",
+    "variant_id": "50159185953042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Terraplane: Decaf / 1 Lb Retail Bag / Ground - French Press",
+    "variant_id": "50159185985810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Terraplane: Decaf / 5 Lb Bulk Bag / Whole Bean",
+    "variant_id": "50159186018578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Terraplane: Decaf / 5 Lb Bulk Bag / Ground - Drip Brewer",
+    "variant_id": "50159186051346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Terraplane: Decaf / 5 Lb Bulk Bag / Ground - Espresso",
+    "variant_id": "50159186084114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Terraplane: Decaf / 5 Lb Bulk Bag / Ground - French Press",
+    "variant_id": "50159186116882"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "landolls-mohican-castle",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/s608421575400892400_p65_i1_w1800.jpg?v=1571007888",
+  "platform": "shopify",
+  "product_id": "2708154744917",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Landoll's Mohican Castle",
+  "url": "https://goldberryroasting.com/products/landolls-mohican-castle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "French Connection / 12 oz / Ground - Drip Brewer",
+    "variant_id": "39401921511509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "French Connection / 12 oz / Ground - French Press",
+    "variant_id": "39401921544277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "French Connection / 12 oz / Whole Bean",
+    "variant_id": "39401921577045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Private Reserve / 12 oz / Ground - Drip Brewer",
+    "variant_id": "39401921609813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Private Reserve / 12 oz / Ground - French Press",
+    "variant_id": "39401921642581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Private Reserve / 12 oz / Whole Bean",
+    "variant_id": "39401921675349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "French Connection / 5 lb / Ground - Drip Brewer",
+    "variant_id": "39401921708117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "French Connection / 5 lb / Ground - French Press",
+    "variant_id": "39401921740885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "French Connection / 5 lb / Whole Bean",
+    "variant_id": "39401921773653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Private Reserve / 5 lb / Ground - Drip Brewer",
+    "variant_id": "39401921806421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Private Reserve / 5 lb / Ground - French Press",
+    "variant_id": "39401921839189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Private Reserve / 5 lb / Whole Bean",
+    "variant_id": "39401921871957"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "7f5b81971088f98d",
+  "first_seen": "2026-10-26",
+  "handle": "black-river-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/BlackRiverBag.png?v=1764370945",
+  "platform": "shopify",
+  "product_id": "2708154777685",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "medium-light roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Black River Espresso Blend",
+  "url": "https://goldberryroasting.com/products/black-river-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195405516885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "23195405549653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "23195405582421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039087189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298039119957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298039152725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48795577090322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48795577254162"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199623164178"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199623196946"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199623229714"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199623262482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199623295250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199623328018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52199623360786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199623393554"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "1067a719b817134f",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-squeezed-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Fresh_Squeezed_Bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "2708154843221",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "Blend",
+   "Light Roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Fresh Squeezed Cold Brew Blend",
+  "url": "https://goldberryroasting.com/products/fresh-squeezed-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23195405975637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039218261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298039251029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Cold Brew",
+    "variant_id": "39391018614869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "39391022481493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Cold Brew",
+    "variant_id": "39391024382037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796575432978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796575531282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199622902034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Cold Brew",
+    "variant_id": "52199622934802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199622967570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199623000338"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199623033106"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Cold Brew",
+    "variant_id": "52199623065874"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199623098642"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199623131410"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "forbes-farmstead-market",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/s608421575400892400_p70_i1_w636.jpg?v=1571007895",
+  "platform": "shopify",
+  "product_id": "2708154941525",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Forbes Farmstead Market",
+  "url": "https://goldberryroasting.com/products/forbes-farmstead-market",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Black Fork / 3 oz / Whole Bean",
+    "variant_id": "23195406598229"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 3.65,
+    "title": "Clear Fork / 3 oz / Whole Bean",
+    "variant_id": "23195406663765"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Black Fork / 3 oz / Ground",
+    "variant_id": "45544272888082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Black Fork / 12 oz / Whole Bean",
+    "variant_id": "45544272920850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Black Fork / 12 oz / Ground",
+    "variant_id": "45544272953618"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 3.65,
+    "title": "Clear Fork / 3 oz / Ground",
+    "variant_id": "45544272986386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "Clear Fork / 12 oz / Whole Bean",
+    "variant_id": "45544273019154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "Clear Fork / 12 oz / Ground",
+    "variant_id": "45544273051922"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "07d015cf891de2e8",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Papua_Bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "2708155007061",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Indonesian",
+   "dark roast",
+   "medium-dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://goldberryroasting.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "23317276885077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039349333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298039382101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298039414869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "39396699734101"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "39396699766869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796573729042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796573794578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199622476050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199622508818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52199622541586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199622574354"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199622607122"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199622639890"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199622672658"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199622705426"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "06d46d49c0b0e211",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Ethiopia_bag_3193f687-352c-45dd-a076-ac74bc64331a.png?v=1788546414",
+  "platform": "shopify",
+  "product_id": "4257431191637",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "Ethiopia",
+   "Light Roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Ethiopia",
+  "url": "https://goldberryroasting.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "30716139765845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "30716139798613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "30716139831381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "30716139864149"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "30716139896917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "30716139929685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039447637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298039480405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298039513173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796573663506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796573860114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796573892882"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199622181138"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199622213906"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199622246674"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199622279442"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "b64caaa5d6519b04",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Colombia_Bag.png?v=1764371730",
+  "platform": "shopify",
+  "product_id": "4488421015637",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Colombia",
+  "url": "https://goldberryroasting.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31657216737365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "31657216770133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31657216802901"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "31657216835669"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "31657216868437"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "31657216901205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039808085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298039840853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298039873621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796575564050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796575629586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796575760658"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199622017298"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199622050066"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199622082834"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199622115602"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "her-home-team",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/HowardHannahLabel.png?v=1655315117",
+  "platform": "shopify",
+  "product_id": "4502683746389",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Howard Hannah - Real Estate Services",
+  "url": "https://goldberryroasting.com/products/her-home-team",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31697433657429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12 oz / Ground",
+    "variant_id": "31697433690197"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "72235ddcb226f29d",
+  "first_seen": "2026-10-26",
+  "handle": "manana-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Manana_Bag.png?v=1764371567",
+  "platform": "shopify",
+  "product_id": "4508457533525",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "medium-light roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Mañana Breakfast Blend",
+  "url": "https://goldberryroasting.com/products/manana-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31710352900181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground For Espresso",
+    "variant_id": "31712177684565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground For Drip Brewer",
+    "variant_id": "31712177717333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "31712177782869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground For Espresso",
+    "variant_id": "31712177815637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground For Drip Brewer",
+    "variant_id": "31712177848405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298039906389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground For Drip Brewer",
+    "variant_id": "39298039939157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground For Espresso",
+    "variant_id": "39298039971925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796584608018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796584640786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796584673554"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199621886226"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground For Drip Brewer",
+    "variant_id": "52199621918994"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199621951762"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground For Espresso",
+    "variant_id": "52199621984530"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "15d708df8911f99a",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-smoked",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/vanilla_bean_bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "4508459892821",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Vanilla Bean Smoked Coffee",
+  "url": "https://goldberryroasting.com/products/vanilla-smoked",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31710355193941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "31712181223509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31712181256277"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz (1 pot sample) / Whole Bean",
+    "variant_id": "39944281653333"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz (1 pot sample) / Ground for Drip Brewer",
+    "variant_id": "39944281686101"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz (1 pot sample) / Ground for Espresso",
+    "variant_id": "39944281718869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "39944281751637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "39944281784405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "39944281817173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39944281849941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39944281882709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39944281915477"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz (1 pot sample) / Ground for French Press",
+    "variant_id": "48796573270290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796573303058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796573335826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796573368594"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "fffeebffbd4e0747",
+  "first_seen": "2026-10-26",
+  "handle": "tuxedo-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Tuxedo_Bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "4520930410581",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "sumatra"
+  ],
+  "title": "Tuxedo - Dark Blend",
+  "url": "https://goldberryroasting.com/products/tuxedo-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "31747989012565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "31747989045333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31747989078101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39298040070229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39298040102997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39298040135765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796572975378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796573040914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199621624082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199621656850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52199621689618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199621722386"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199621755154"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199621787922"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199621820690"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199621853458"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "fig-and-oak-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/FigandOakLabel.png?v=1608585342",
+  "platform": "shopify",
+  "product_id": "4824150409301",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Fig and Oak Blend",
+  "url": "https://goldberryroasting.com/products/fig-and-oak-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32937529901141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.25,
+    "title": "12 oz / Ground",
+    "variant_id": "32937529933909"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "61bc76bba35db226",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-sierra-norte",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Mexico_SN_Bag.png?v=1764370762",
+  "platform": "shopify",
+  "product_id": "6573357072469",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "direct trade",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Mexico - Sierra Norte",
+  "url": "https://goldberryroasting.com/products/mexico-sierra-norte",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39353055608917"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "39353055641685"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "39353055674453"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "39353055707221"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "39353055739989"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "39353055772757"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39353055805525"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39353055838293"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39353055871061"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796573991186"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796574056722"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796574122258"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199621361938"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199621394706"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199621427474"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199621460242"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "11159ab0a9f3a970",
+  "first_seen": "2026-10-26",
+  "handle": "avi-food-systems",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6585009766485",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "AVI Oberlin College",
+  "url": "https://goldberryroasting.com/products/avi-food-systems",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Decaf / 12 oz retail bag / Whole Bean",
+    "variant_id": "39392025313365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Decaf / 12 oz retail bag / Ground",
+    "variant_id": "39392025444437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "Decaf / 5 lb / Ground",
+    "variant_id": "39392025706581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "Decaf / 5 lb / Whole Bean",
+    "variant_id": "39741081485397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.5,
+    "title": "Honduras - House Roast / 5 lb / Ground",
+    "variant_id": "52587407343890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.5,
+    "title": "Honduras - House Roast / 5 lb / Whole Bean",
+    "variant_id": "52587407376658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Honduras - House Roast / 12 oz retail bag / Ground",
+    "variant_id": "52587407409426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Honduras - House Roast / 12 oz retail bag / Whole Bean",
+    "variant_id": "52587407442194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.5,
+    "title": "Honduras - Dark Roast / 5 lb / Ground",
+    "variant_id": "52587407474962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.5,
+    "title": "Honduras - Dark Roast / 5 lb / Whole Bean",
+    "variant_id": "52587407507730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Honduras - Dark Roast / 12 oz retail bag / Ground",
+    "variant_id": "52587407540498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "Honduras - Dark Roast / 12 oz retail bag / Whole Bean",
+    "variant_id": "52587407573266"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "ba6c082d99fe8002",
+  "first_seen": "2026-10-26",
+  "handle": "bombadils-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/bombadil_bag.png?v=1764372052",
+  "platform": "shopify",
+  "product_id": "6586104512597",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Bombadil's Blend",
+  "url": "https://goldberryroasting.com/products/bombadils-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39396698980437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "39396699013205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "39396699045973"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "39396699078741"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "39396699111509"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "39396699144277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39396699177045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "39396699209813"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "39396699242581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796573466898"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796573499666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796573565202"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199621099794"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199621132562"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199621165330"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199621198098"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "thompson-blend-retail",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6784244023381",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Monarch Surfaces",
+  "url": "https://goldberryroasting.com/products/thompson-blend-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz - Monarch Blend - Whole Bean",
+    "variant_id": "40130339274837"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz - Monarch Blend - Ground",
+    "variant_id": "40130339373141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz - Monarch Blend - Whole Bean",
+    "variant_id": "40130339471445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz - Monarch Blend - Ground",
+    "variant_id": "40130339569749"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.25,
+    "title": "Withywindle Tea - 1 oz Bag",
+    "variant_id": "51391012929810"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 14.5,
+    "title": "Withywindle Tea - 2 oz Bag",
+    "variant_id": "51391012962578"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pump-grind-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/products/PumpandGrindLOGO.png?v=1659557788",
+  "platform": "shopify",
+  "product_id": "6806587834453",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "b2b",
+   "customblend",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Pump & Grind Cafe",
+  "url": "https://goldberryroasting.com/products/pump-grind-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "House Blend / 12 oz Retail / Whole Bean",
+    "variant_id": "40192948011093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "House Blend / 12 oz Retail / Ground - Drip",
+    "variant_id": "40192948043861"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "House Blend / 12 oz Retail / Ground - Espresso",
+    "variant_id": "40192948076629"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "House Blend / 12 oz Retail / Ground - Cold Brew",
+    "variant_id": "40192948109397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "House Blend / 5 lb Bulk / Whole Bean",
+    "variant_id": "40192948142165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "House Blend / 5 lb Bulk / Ground - Drip",
+    "variant_id": "40192948174933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "House Blend / 5 lb Bulk / Ground - Espresso",
+    "variant_id": "40192948207701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "House Blend / 5 lb Bulk / Ground - Cold Brew",
+    "variant_id": "40192948240469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Espresso Blend / 12 oz Retail / Whole Bean",
+    "variant_id": "40192948273237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Espresso Blend / 12 oz Retail / Ground - Drip",
+    "variant_id": "40192948306005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Espresso Blend / 12 oz Retail / Ground - Espresso",
+    "variant_id": "40192948338773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Espresso Blend / 12 oz Retail / Ground - Cold Brew",
+    "variant_id": "40192948371541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Espresso Blend / 5 lb Bulk / Whole Bean",
+    "variant_id": "40192948404309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Espresso Blend / 5 lb Bulk / Ground - Drip",
+    "variant_id": "40192948437077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Espresso Blend / 5 lb Bulk / Ground - Espresso",
+    "variant_id": "40192948469845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Espresso Blend / 5 lb Bulk / Ground - Cold Brew",
+    "variant_id": "40192948502613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Sumatra - Dark Roast / 12 oz Retail / Whole Bean",
+    "variant_id": "40192948535381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Sumatra - Dark Roast / 12 oz Retail / Ground - Drip",
+    "variant_id": "40192948568149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Sumatra - Dark Roast / 12 oz Retail / Ground - Espresso",
+    "variant_id": "40192948600917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Sumatra - Dark Roast / 12 oz Retail / Ground - Cold Brew",
+    "variant_id": "40192948633685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Sumatra - Dark Roast / 5 lb Bulk / Whole Bean",
+    "variant_id": "40192948666453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Sumatra - Dark Roast / 5 lb Bulk / Ground - Drip",
+    "variant_id": "40192948699221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Sumatra - Dark Roast / 5 lb Bulk / Ground - Espresso",
+    "variant_id": "40192948731989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Sumatra - Dark Roast / 5 lb Bulk / Ground - Cold Brew",
+    "variant_id": "40192948764757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Decaf / 12 oz Retail / Whole Bean",
+    "variant_id": "40192948797525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Decaf / 12 oz Retail / Ground - Drip",
+    "variant_id": "40192948830293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Decaf / 12 oz Retail / Ground - Espresso",
+    "variant_id": "40192948863061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Decaf / 12 oz Retail / Ground - Cold Brew",
+    "variant_id": "40192948895829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Decaf / 5 lb Bulk / Whole Bean",
+    "variant_id": "40192948928597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Decaf / 5 lb Bulk / Ground - Drip",
+    "variant_id": "40192948961365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Decaf / 5 lb Bulk / Ground - Espresso",
+    "variant_id": "40192948994133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.5,
+    "title": "Decaf / 5 lb Bulk / Ground - Cold Brew",
+    "variant_id": "40192949026901"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "House Blend / 1 lb Retail / Whole Bean",
+    "variant_id": "44345992741138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "House Blend / 1 lb Retail / Ground - Drip",
+    "variant_id": "44345992773906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "House Blend / 1 lb Retail / Ground - Espresso",
+    "variant_id": "44345992806674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "House Blend / 1 lb Retail / Ground - Cold Brew",
+    "variant_id": "44345992839442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Espresso Blend / 1 lb Retail / Whole Bean",
+    "variant_id": "44345996378386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Espresso Blend / 1 lb Retail / Ground - Drip",
+    "variant_id": "44345996411154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Espresso Blend / 1 lb Retail / Ground - Espresso",
+    "variant_id": "44345996443922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Espresso Blend / 1 lb Retail / Ground - Cold Brew",
+    "variant_id": "44345996476690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Sumatra - Dark Roast / 1 lb Retail / Whole Bean",
+    "variant_id": "44345996509458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Sumatra - Dark Roast / 1 lb Retail / Ground - Drip",
+    "variant_id": "44345996542226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Sumatra - Dark Roast / 1 lb Retail / Ground - Espresso",
+    "variant_id": "44345996574994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Sumatra - Dark Roast / 1 lb Retail / Ground - Cold Brew",
+    "variant_id": "44345996607762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Decaf / 1 lb Retail / Whole Bean",
+    "variant_id": "44345996640530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Decaf / 1 lb Retail / Ground - Drip",
+    "variant_id": "44345996673298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Decaf / 1 lb Retail / Ground - Espresso",
+    "variant_id": "44345996706066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Decaf / 1 lb Retail / Ground - Cold Brew",
+    "variant_id": "44345996738834"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dutch-kitchen-bulk",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6853442732117",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend",
+   "private label",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Dutch Kitchen Bulk",
+  "url": "https://goldberryroasting.com/products/dutch-kitchen-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lbs / Brazil / Ground",
+    "variant_id": "40359230570581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lbs / Brazil / Whole Bean",
+    "variant_id": "40359230603349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lbs / Decaf / Ground",
+    "variant_id": "40359230636117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lbs / Decaf / Whole Bean",
+    "variant_id": "40359230668885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lbs / Brazil / Ground for French Press",
+    "variant_id": "48796571304210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5 lbs / Decaf / Ground for French Press",
+    "variant_id": "48796571402514"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "fc58a846e1596234",
+  "first_seen": "2026-10-26",
+  "handle": "loudwater-light-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Loudwater_Bag.png?v=1764370340",
+  "platform": "shopify",
+  "product_id": "8120021942546",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "Blend",
+   "Ethiopia",
+   "Kenya",
+   "Light Roast",
+   "mexico",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Loudwater Light Blend",
+  "url": "https://goldberryroasting.com/products/loudwater-light-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "44441666879762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "52190413390098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52190413422866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "52190413455634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "52190413488402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52190413521170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52190413553938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52190413586706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52190413619474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "52190413652242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52190413685010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "52190413717778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "52190413750546"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52190413783314"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52190413816082"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52190413848850"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "7f5b81971088f98d",
+  "first_seen": "2026-10-26",
+  "handle": "8-sisters-bakery",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/8-sisttersLOGO.jpg?v=1736280584",
+  "platform": "shopify",
+  "product_id": "8275939885330",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Medium Roast",
+   "South America",
+   "customblend",
+   "medium-light roast"
+  ],
+  "title": "8 Sisters Bakery House Roast",
+  "url": "https://goldberryroasting.com/products/8-sisters-bakery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "45003585126674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45003585192210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45003585323282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "45003585356050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796571205906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796571435282"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199618347282"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199618380050"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199618412818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199618445586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199618478354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199618511122"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "15da0f098b43980f",
+  "first_seen": "2026-10-26",
+  "handle": "goldberry-sampler-box",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/SingleOrigins_2d185c74-8bd5-462f-9858-3fb9cfe4472a.jpg?v=1784057599",
+  "platform": "shopify",
+  "product_id": "8318723784978",
+  "product_type": "",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "samplebox"
+  ],
+  "title": "Origins Box",
+  "url": "https://goldberryroasting.com/products/goldberry-sampler-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "45188331307282"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Ground - Drip Brewer",
+    "variant_id": "45188331340050"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Ground - French Press",
+    "variant_id": "45188331405586"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tres-fronteras",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/TresFronteraslabel.png?v=1736280577",
+  "platform": "shopify",
+  "product_id": "8834232746258",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "customblend"
+  ],
+  "title": "Tres Fronteras",
+  "url": "https://goldberryroasting.com/products/tres-fronteras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 705.0,
+    "title": "30 bags / 1 lb / Whole Bean",
+    "variant_id": "47261594091794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 705.0,
+    "title": "30 bags / 1 lb / Ground",
+    "variant_id": "47261594714386"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "2afb5c16714f6319",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/whiskey_barrel_bag.png?v=1764372668",
+  "platform": "shopify",
+  "product_id": "8914219565330",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "South America",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Whiskey Barrel Aged Coffee",
+  "url": "https://goldberryroasting.com/products/whiskey-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47514396131602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground - Drip Brewer",
+    "variant_id": "47514396164370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "47514396197138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "49230297235730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Ground - Drip Brewer",
+    "variant_id": "49230297301266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Ground - Espresso",
+    "variant_id": "49230297366802"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 6.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52149924561170"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 6.0,
+    "title": "3 oz / Ground - Drip Brewer",
+    "variant_id": "52149924593938"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 6.0,
+    "title": "3 oz / Ground - Espresso",
+    "variant_id": "52149924626706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199618248978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb / Ground - Drip Brewer",
+    "variant_id": "52199618281746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb / Ground - Espresso",
+    "variant_id": "52199618314514"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "3f1bcf9d1c5689a5",
+  "first_seen": "2026-10-26",
+  "handle": "welsh-hills-inn-house-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/image_27e5cb7a-fcbd-4279-b2dc-03a16000c5fa.png?v=1736280574",
+  "platform": "shopify",
+  "product_id": "9061095899410",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Indonesian",
+   "customblend",
+   "dark roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Dakota’s Morning Kickstart",
+  "url": "https://goldberryroasting.com/products/welsh-hills-inn-house-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48008285683986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "48008285716754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "48008285749522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48008285782290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "48008285815058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "48008285847826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48008285880594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "48008285913362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48008285946130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796569764114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796569829650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796569895186"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199618117906"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199618150674"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199618183442"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199618216210"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "df32c365aad28f9c",
+  "first_seen": "2026-10-26",
+  "handle": "ashland-chamber-connections-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9079641407762",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "South America",
+   "customblend"
+  ],
+  "title": "Ashland Chamber - Connections Blend",
+  "url": "https://goldberryroasting.com/products/ashland-chamber-connections-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "48073726198034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "48073726230802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48073726263570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48073726394642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "48073726427410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48073726460178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796570091794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796570288402"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199617560850"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199617593618"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199617626386"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199617659154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "52199617691922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "52199617724690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "52199617757458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "52199617790226"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "999f027a74aaf269",
+  "first_seen": "2026-10-26",
+  "handle": "first-commonwealth-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/FirstCommonwealthlabel.png?v=1736280569",
+  "platform": "shopify",
+  "product_id": "9083487355154",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "Blend",
+   "Medium Roast",
+   "customblend",
+   "private label",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "First Commonwealth Blend",
+  "url": "https://goldberryroasting.com/products/first-commonwealth-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48091809612050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "48091809644818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "48091809677586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48091809710354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "48091809743122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "48091809775890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48091809808658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "48091809841426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48091809874194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48796570026258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48796570124562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48796570190098"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199617429778"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199617462546"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199617495314"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199617528082"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "twisted-ivy-custom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/twistedivylabel.png?v=1713531558",
+  "platform": "shopify",
+  "product_id": "9326914994450",
+  "product_type": "",
+  "roaster_slug": "goldberryroasting",
+  "tags": [],
+  "title": "Twisted Ivy Custom Blend",
+  "url": "https://goldberryroasting.com/products/twisted-ivy-custom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.75,
+    "title": "3 oz / Ground",
+    "variant_id": "48829049733394"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.75,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "48829049766162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz / Ground",
+    "variant_id": "48829049798930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48829049831698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Ground",
+    "variant_id": "48829049864466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48829049897234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb / Ground",
+    "variant_id": "48829049930002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48829049962770"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "d1d48d28439b44c6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/Honduras_Terrerito_Bag.png?v=1782840982",
+  "platform": "shopify",
+  "product_id": "9327154495762",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "Medium Roast",
+   "central america",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Honduras: Finca Terrerito",
+  "url": "https://goldberryroasting.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Drip Brewer",
+    "variant_id": "48829518119186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "48829518151954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48829518184722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "48829518217490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Drip Brewer",
+    "variant_id": "48829518250258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for Espresso",
+    "variant_id": "48829518283026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48829518315794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for French Press",
+    "variant_id": "48829518381330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Drip Brewer",
+    "variant_id": "48829518414098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for Espresso",
+    "variant_id": "48829518446866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48829518479634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "48829518512402"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Whole Bean",
+    "variant_id": "52199617003794"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Drip Brewer",
+    "variant_id": "52199617036562"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for French Press",
+    "variant_id": "52199617069330"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "3 oz / Ground for Espresso",
+    "variant_id": "52199617102098"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "6c1eff14147bbfbc",
+  "first_seen": "2026-10-26",
+  "handle": "avi-foodsystems",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9969156882706",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "B2B-only",
+   "b2b",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "AVI Foodsystems",
+  "url": "https://goldberryroasting.com/products/avi-foodsystems",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "House Roast - Brazil / 5 lb / Ground",
+    "variant_id": "50778445611282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Dark Blend / 5 lb / Ground",
+    "variant_id": "50778445644050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Light Blend / 5 lb / Ground",
+    "variant_id": "50778445676818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Decaf / 5 lb / Ground",
+    "variant_id": "50778445709586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Vanilla Bean Smoked / 5 lb / Ground",
+    "variant_id": "50778445742354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Goldberry's Blend / 5 lb / Ground",
+    "variant_id": "50778445775122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "House Roast - Brazil / 5 lb / Whole Bean",
+    "variant_id": "50778445807890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Dark Blend / 5 lb / Whole Bean",
+    "variant_id": "50778445840658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Light Blend / 5 lb / Whole Bean",
+    "variant_id": "50778445873426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Decaf / 5 lb / Whole Bean",
+    "variant_id": "50778445906194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Vanilla Bean Smoked / 5 lb / Whole Bean",
+    "variant_id": "50778445938962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Goldberry's Blend / 5 lb / Whole Bean",
+    "variant_id": "50778445971730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Mexico -Sierra Norte / 5 lb / Ground",
+    "variant_id": "50778452984082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Mexico -Sierra Norte / 5 lb / Whole Bean",
+    "variant_id": "50778453016850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "House Roast - Brazil / 12oz retail bag / Ground",
+    "variant_id": "51722685022482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Mexico -Sierra Norte / 12oz retail bag / Ground",
+    "variant_id": "51722685055250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Dark Blend / 12oz retail bag / Ground",
+    "variant_id": "51722685120786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Decaf / 12oz retail bag / Ground",
+    "variant_id": "51722685153554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Light Blend / 12oz retail bag / Ground",
+    "variant_id": "51722685186322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Vanilla Bean Smoked / 12oz retail bag / Ground",
+    "variant_id": "51722685219090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Goldberry's Blend / 12oz retail bag / Ground",
+    "variant_id": "51722685251858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "House Roast - Brazil / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685284626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Mexico -Sierra Norte / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685317394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Dark Blend / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685382930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Decaf / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685415698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Light Blend / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685448466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Vanilla Bean Smoked / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685481234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Goldberry's Blend / 12oz retail bag / Whole Bean",
+    "variant_id": "51722685514002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Loudwater Light Blend / 5 lb / Ground",
+    "variant_id": "52099454304530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.5,
+    "title": "Loudwater Light Blend / 5 lb / Whole Bean",
+    "variant_id": "52099454337298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Loudwater Light Blend / 12oz retail bag / Ground",
+    "variant_id": "52099454370066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Loudwater Light Blend / 12oz retail bag / Whole Bean",
+    "variant_id": "52099454402834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Cornucopia Autumn Blend / 5 lb / Ground",
+    "variant_id": "67644049424658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "Cornucopia Autumn Blend / 5 lb / Whole Bean",
+    "variant_id": "67644049457426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Cornucopia Autumn Blend / 12oz retail bag / Ground",
+    "variant_id": "67644049490194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.9,
+    "title": "Cornucopia Autumn Blend / 12oz retail bag / Whole Bean",
+    "variant_id": "67644049522962"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ },
+ {
+  "body_hash": "a7780e1cb6cb9349",
+  "first_seen": "2026-10-26",
+  "handle": "howling-pines-evergreen-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/5899/7589/files/HowlingPines.png?v=1736280559",
+  "platform": "shopify",
+  "product_id": "9975006986514",
+  "product_type": "Roasted Coffee Beans",
+  "roaster_slug": "goldberryroasting",
+  "tags": [
+   "African",
+   "B2B-only",
+   "Ethiopia",
+   "Light Roast",
+   "customblend",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Howling Pines Tree Farm",
+  "url": "https://goldberryroasting.com/products/howling-pines-evergreen-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Evergreen / 12 oz / Ground for Drip Brewer",
+    "variant_id": "50794867294482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Evergreen / 12 oz / Whole Bean",
+    "variant_id": "50794867360018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Evergreen / 1 lb / Ground for Drip Brewer",
+    "variant_id": "50794867425554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Evergreen / 1 lb / Whole Bean",
+    "variant_id": "50794867491090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Evergreen / 5 lb / Ground for Drip Brewer",
+    "variant_id": "50794867556626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Evergreen / 5 lb / Whole Bean",
+    "variant_id": "50794867622162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Snowy Pines / 12 oz / Ground for Drip Brewer",
+    "variant_id": "51743187829010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Snowy Pines / 12 oz / Whole Bean",
+    "variant_id": "51743187861778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Snowy Pines / 1 lb / Ground for Drip Brewer",
+    "variant_id": "51743187894546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Snowy Pines / 1 lb / Whole Bean",
+    "variant_id": "51743187927314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Snowy Pines / 5 lb / Ground for Drip Brewer",
+    "variant_id": "51743187960082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Snowy Pines / 5 lb / Whole Bean",
+    "variant_id": "51743187992850"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Evergreen / 3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616676114"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Evergreen / 3 oz / Whole Bean",
+    "variant_id": "52199616708882"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Snowy Pines / 3 oz / Ground for Drip Brewer",
+    "variant_id": "52199616741650"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.0,
+    "title": "Snowy Pines / 3 oz / Whole Bean",
+    "variant_id": "52199616774418"
+   }
+  ],
+  "vendor": "Goldberry Roasting Company"
+ }
+]

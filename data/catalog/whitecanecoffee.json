@@ -1,0 +1,845 @@
+[
+ {
+  "body_hash": "9efc2f8eb6b258cf",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-beans-8oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/68ad65895599a2051cc63232/f1b9d3a1-683c-469a-a8cd-e506a4d4a156/Copy+of+1+lb.png",
+  "platform": "squarespace",
+  "product_id": "691481ba03d8727c4c8248a9",
+  "product_type": "",
+  "roaster_slug": "whitecanecoffee",
+  "tags": [],
+  "title": "Allegheny Espresso Beans 8oz",
+  "url": "https://www.beanbankcoffee.com/shop/p/espresso-beans-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.99,
+    "title": "",
+    "variant_id": "17a2a879-769d-4c23-94ce-b65d82a2c98d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92274caf03ccdd96",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-ground-coffee-16oz-38kxk",
+  "image": "https://images.squarespace-cdn.com/content/v1/68ad65895599a2051cc63232/2e7bc56d-2ef9-406d-8150-e3e1674668bb/Copy+of+Copy+of+Copy+of+Copy+of+Copy+of+1+lb.jpg",
+  "platform": "squarespace",
+  "product_id": "69148f82ecfc0f1689a35356",
+  "product_type": "",
+  "roaster_slug": "whitecanecoffee",
+  "tags": [],
+  "title": "Flavored Ground Coffee",
+  "url": "https://www.beanbankcoffee.com/shop/p/flavored-ground-coffee-16oz-38kxk",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Blueberry Vanilla Decaf",
+    "variant_id": "0152eea5-3263-4bda-b332-d9effa838b31"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Jamaican Me Crazy Regular",
+    "variant_id": "04775689-d281-4008-be07-828975bf2c62"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Bourbon Pecan Regular",
+    "variant_id": "04ac5f71-4fe3-479f-8d9c-eb902ac59b96"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Spiced Butter Rum Decaf",
+    "variant_id": "0aed7be5-21db-437b-a994-479a0f599295"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Jamaican Me Crazy Decaf",
+    "variant_id": "0bb4bace-e772-4f3e-8cf2-83c08aedf296"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Spiced Butter Rum Regular",
+    "variant_id": "0bcb4e3d-df09-4f2b-b2e0-98218d93c57d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Sinful Delight Decaf",
+    "variant_id": "0e0f7fae-bc8a-4c7b-bb79-a7ae1cc27ba3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Blueberry Vanilla Regular",
+    "variant_id": "0fffbc69-3806-4018-ae72-62850e90c6ff"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Maple Bacon Decaf",
+    "variant_id": "1a901d49-6d14-4275-b5f4-9a8a56fa61fa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "English Toffee Decaf",
+    "variant_id": "3abf6085-11be-498b-a5c6-acd8e0d73aa5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "French Vanilla Decaf",
+    "variant_id": "4c42f3a3-ce39-457d-8d50-6072859349a4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Irish Cream Decaf",
+    "variant_id": "4dd2835f-3c6c-40eb-8ad1-945e38df0acb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Bourbon Pecan Decaf",
+    "variant_id": "57b95cce-1104-44f9-b74f-545332cde3fb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Caramel Dream Regular",
+    "variant_id": "660f17d5-c286-426c-aaaa-663b5f0eb0cc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "French Vanilla Regular",
+    "variant_id": "689ab2c8-5772-4a54-b59e-c716c5cb4afe"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "English Toffee Regular",
+    "variant_id": "73255082-1ea0-4257-9bf7-fab1cb4c8d20"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Hazelnut Decaf",
+    "variant_id": "74e8f432-53a8-4a8e-bbd6-1396b385438d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Vanilla Hazelnut Regular",
+    "variant_id": "7fbcf592-de04-40d7-a479-47600b64aec3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Peanut Butter Cup Regular",
+    "variant_id": "96a0f129-2ab0-47bc-a206-97555e6c614f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Maple Bacon Regular",
+    "variant_id": "9d936f38-10b9-483c-baa5-f1758bc5396f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Sinful Delight Regular",
+    "variant_id": "9ea7f0e1-ba0c-42cb-b0e6-39cfb24e1570"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Caramel Dream Decaf",
+    "variant_id": "a4d2d64c-c582-4b2a-a0a2-66ced3c83dc8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Hazelnut Regular",
+    "variant_id": "a79cdb70-e05f-44e0-a24b-044bfc785bde"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Amaretto Regular",
+    "variant_id": "b341002c-dd6a-4d07-ad94-6fe6d2657acc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Angel Kiss Regular",
+    "variant_id": "bcfa0dd6-95cc-46dc-9515-ef103df41a2a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Amaretto Decaf",
+    "variant_id": "bf6edff0-505b-4fb7-83c4-3e083b3f3150"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Chocolate Indulgence Regular",
+    "variant_id": "c30976ac-7edd-4672-b473-bdb7f6983512"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Irish Cream Regular",
+    "variant_id": "c6b1f433-ac3f-4a62-8619-dcba35f634c4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Peanut Butter Cup Decaf",
+    "variant_id": "cdf200b8-13d2-41ec-909e-cd0a9bcdfb2e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Raspberry Vanilla Decaf",
+    "variant_id": "dc037675-6e1a-4a6e-b2b0-7fefba1e5b18"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Chocolate Indulgence Decaf",
+    "variant_id": "e187ef73-67d6-4776-959b-e62b4f408e7d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Angel Kiss Decaf",
+    "variant_id": "ed47af05-882c-455b-bfe8-96c57093c1d8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Raspberry Vanilla Regular",
+    "variant_id": "f07ece20-5944-441d-961c-b1eb6db76521"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.99,
+    "title": "Vanilla Hazelnut Decaf",
+    "variant_id": "f22c888a-4e25-4aa0-b0ef-5e3ffad90d4f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95af922c1b25583b",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-ground-coffee-16oz-cr2hd-md337",
+  "image": "https://images.squarespace-cdn.com/content/v1/68ad65895599a2051cc63232/78152268-076c-40e7-99df-d71f32937c4b/Copy+of+Copy+of+Copy+of+Copy+of+Copy+of+Copy+of+Copy+of+Copy+of+1+lb.png",
+  "platform": "squarespace",
+  "product_id": "691c3249d41179736b63aaba",
+  "product_type": "",
+  "roaster_slug": "whitecanecoffee",
+  "tags": [],
+  "title": "Cold Brew Coffee Packets – 4 Pack",
+  "url": "https://www.beanbankcoffee.com/shop/p/flavored-ground-coffee-16oz-cr2hd-md337",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Angel Kiss Regular",
+    "variant_id": "0d2c0f82-bab6-4733-8a0e-6536b48d8e44"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Vanilla Hazelnut Regular",
+    "variant_id": "10e23b73-056a-40e1-a062-13be93266891"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Irish Cream Decaf",
+    "variant_id": "13a630ec-1596-4512-b3f1-4441036c6511"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Maple Bacon Regular",
+    "variant_id": "1c21f710-551b-48d8-857e-5e2dd491458b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Jamaican Me Crazy Decaf",
+    "variant_id": "268a434e-120b-4b06-879c-0d7d563a2355"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Vanilla Hazelnut Decaf",
+    "variant_id": "275a7814-ba82-43e0-8614-5d7672be0f22"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Jamaican Me Crazy Regular",
+    "variant_id": "281a1be9-69dc-4982-a0c3-670b9415f933"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Chocolate Indulgence Regular",
+    "variant_id": "2821d45a-d962-4dd9-8ae9-5befccfa534d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Blueberry Vanilla Decaf",
+    "variant_id": "3420d702-f552-41fd-8640-5c4a404f6a32"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Sinful Delight Regular",
+    "variant_id": "38713c8f-bd8d-425f-9073-93e3e997289b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "English Toffee Regular",
+    "variant_id": "392f08c8-2a81-44e3-a467-d317bbcd04a7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Angel Kiss Decaf",
+    "variant_id": "3c527299-d61e-4a05-b0ac-86a2fb0a6532"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Spiced Butter Rum Regular",
+    "variant_id": "4439fc92-ceef-4fb9-9786-2b4e86c24342"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Maple Bacon Decaf",
+    "variant_id": "45486a8c-2b30-4f3a-a6e1-c535b3fe8f59"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Peanut Butter Cup Decaf",
+    "variant_id": "47f09878-bc39-4915-9564-0ba956a47281"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Caramel Dream Decaf",
+    "variant_id": "5081d8a5-37d9-467b-80ab-1ee9d01aca8d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Amaretto Decaf",
+    "variant_id": "5c04bb64-6ecb-47a6-be92-54941bf22f6e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Decaf Decaf",
+    "variant_id": "62de5b90-3adf-4b9a-808c-66b724a2a6b9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Bourbon Pecan Regular",
+    "variant_id": "657c5585-3174-4407-aee2-89fad374c4be"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Spiced Butter Rum Decaf",
+    "variant_id": "7c5dccf8-71f8-4be3-8c97-223f1e8213fe"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Bourbon Pecan Decaf",
+    "variant_id": "8868504f-ef90-4af0-b01a-bafdee9e8724"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Amaretto Regular",
+    "variant_id": "92e2d298-85d2-4275-8ddd-35b8eb542eb6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Irish Cream Regular",
+    "variant_id": "989ff6f4-0218-44ea-8c90-5c5c63d5b88b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "French Vanilla Regular",
+    "variant_id": "a554d19a-d9f1-451c-8a73-9ba62fb1f5bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "French Vanilla Decaf",
+    "variant_id": "b47c5258-2a75-4909-91c6-c55f12154f14"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "English Toffee Decaf",
+    "variant_id": "b667eafa-40df-460d-be74-4ee7e2cfc075"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Sinful Delight Decaf",
+    "variant_id": "c6ffa466-73e9-4973-a086-3998977ca14b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Hazelnut Decaf",
+    "variant_id": "c89085b6-cf32-42d5-9e32-a61e03ae215d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Peanut Butter Cup Regular",
+    "variant_id": "cda51c90-ab9f-4d04-9414-76aa33440574"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Hazelnut Regular",
+    "variant_id": "d700e957-90d0-4f42-bf0d-b60bc0c72270"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Caramel Dream Regular",
+    "variant_id": "d8d64467-0365-4858-97ce-c411ad614d39"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Chocolate Indulgence Decaf",
+    "variant_id": "dc242e98-ffdd-4b95-a2cd-f4ca12774ca5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Blueberry Vanilla Regular",
+    "variant_id": "e63fde25-ed9a-4a26-969f-4215039583c0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "High-Yield Regular",
+    "variant_id": "f1d8b059-2c9a-41f0-9f1c-8150e7d5aa23"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dee7a5bfb98c8d8f",
+  "first_seen": "2026-10-26",
+  "handle": "product-3-szb2y-gzh2r-bz4tx-skbym",
+  "image": "https://images.squarespace-cdn.com/content/v1/68ad65895599a2051cc63232/dde3bd89-9826-4678-a414-06df8f9648f4/Copy+of+1+lb.png",
+  "platform": "squarespace",
+  "product_id": "691c347da1760555dc0e61be",
+  "product_type": "",
+  "roaster_slug": "whitecanecoffee",
+  "tags": [],
+  "title": "Ground Beans",
+  "url": "https://www.beanbankcoffee.com/shop/p/product-3-szb2y-gzh2r-bz4tx-skbym",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Lighthouse",
+    "variant_id": "0761f58d-daf0-46d6-b7d4-7be011f1d129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Breakfast",
+    "variant_id": "0a14fedc-ae97-46e6-9366-57476126e84a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Decaf",
+    "variant_id": "1ebdc409-5d2e-457e-8cd2-36b34bc91c1a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Donut",
+    "variant_id": "21f03a8d-5dfc-417c-aba3-7956fdbc515b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb No Day ZZ",
+    "variant_id": "233eb47c-33f6-4074-8e7e-d3de48bb4b81"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Donut",
+    "variant_id": "2ee13342-6506-49d7-837d-50e818a78f9d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2lb Colombian",
+    "variant_id": "34b4f2fa-74c0-4876-ae96-4257a2ba8604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Balanced Ledger",
+    "variant_id": "352928cc-db06-4710-937a-8fbbc462b675"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Old  Bank Notes",
+    "variant_id": "63681ac3-0a0a-4306-b73e-03ab163a4d30"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Breakfast",
+    "variant_id": "6c8ca467-205a-44d5-8028-2954c9062bdb"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Discovery Blend",
+    "variant_id": "75524a89-c2e0-4626-8765-efa87ed6c42e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Colombian",
+    "variant_id": "91cb950d-e798-4203-ac22-debd049c281e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Old  Bank Notes",
+    "variant_id": "a9c7c694-76db-4b51-8704-96227216deed"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Discovery Blend",
+    "variant_id": "af697c2c-8c54-4cae-9f32-07307297e3df"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Lighthouse",
+    "variant_id": "b93c9b22-aa45-4a18-92a2-a67ddbca01da"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Dragon",
+    "variant_id": "bcd5ec91-53cb-43e5-9f2f-fc8243ad1f75"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Dragon",
+    "variant_id": "e3dfb211-2560-4a73-a72e-a5de3236fdca"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Decaf",
+    "variant_id": "e983a742-3800-4d49-981b-43f47b8f1050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb No Day ZZ",
+    "variant_id": "ea564551-063d-4411-b373-86b4149489dc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Balanced Ledger",
+    "variant_id": "f789dcc2-14ea-4498-89ac-bdda1591c2a7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fff0940f0e289f63",
+  "first_seen": "2026-10-26",
+  "handle": "product-3-szb2y-gzh2r-bz4tx-skbym-hpcxp",
+  "image": "https://images.squarespace-cdn.com/content/v1/68ad65895599a2051cc63232/c1dafd5d-38b1-4467-aeda-670a512d6f60/whole+bean.png",
+  "platform": "squarespace",
+  "product_id": "692aacdc4728d3103b416ead",
+  "product_type": "",
+  "roaster_slug": "whitecanecoffee",
+  "tags": [],
+  "title": "Whole Beans",
+  "url": "https://www.beanbankcoffee.com/shop/p/product-3-szb2y-gzh2r-bz4tx-skbym-hpcxp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Decaf",
+    "variant_id": "2406fea0-a488-4552-ae3c-4019d4e6a45f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Donut",
+    "variant_id": "254ee706-9054-48bf-8ca6-bdbd64e036ae"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Dragon",
+    "variant_id": "27db29b8-2060-4899-a73f-38054f14a5a5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Dragon",
+    "variant_id": "40078aaa-ee9f-4de9-ac42-58beea466d5e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Colombian",
+    "variant_id": "43bb02ba-6fd8-418a-9218-358d3ce32395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Old Bank Notes",
+    "variant_id": "500c508a-f15f-429a-92d1-ebec1ef170bd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Decaf",
+    "variant_id": "66f06544-9b8a-4a23-9081-0feabddee9a8"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb No Day ZZ",
+    "variant_id": "9083131c-39ab-4b83-8e74-9f9458b58a9c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Discovery Blend",
+    "variant_id": "950fbf58-951c-4fc6-9b2e-14260bff0db3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Old Bank Notes",
+    "variant_id": "d1407ec0-fc8a-4ef7-ad3f-32a585e92668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Balanced Ledger",
+    "variant_id": "d9e0e34c-3a08-4b78-8635-ff72ebc13795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb No Day ZZ",
+    "variant_id": "db08febc-8378-4324-bba1-4cea85c96cc5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Breakfast",
+    "variant_id": "dfcf6d1d-eaaf-49dd-9403-9143ecbb9a6e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Donut",
+    "variant_id": "e0de1019-b1d3-4d78-bf70-0f1f38a4c0af"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Colombian",
+    "variant_id": "ecf313a7-7550-40d3-a718-7123b38f2785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Breakfast",
+    "variant_id": "ed1156d3-d668-44fa-ac17-134858878624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Discovery Blend",
+    "variant_id": "f1e406c8-87d4-4a5d-8fb6-4e81604d820d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Lighthouse",
+    "variant_id": "f840e3bd-158c-49b7-a822-8f6c9f578d92"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2lb Lighthouse",
+    "variant_id": "f9d818f0-c8d0-40e2-8171-d99dd1f2f35a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb Balanced Ledger",
+    "variant_id": "feea2656-e3e5-4567-a2fd-d0714abf9276"
+   }
+  ],
+  "vendor": ""
+ }
+]

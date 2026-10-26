@@ -1,0 +1,162 @@
+[
+ {
+  "body_hash": "da7c4814f83c7c8b",
+  "first_seen": "2026-10-26",
+  "handle": "prickly-pear-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0612/4925/7648/files/12oz_Bag_Prickly_Pear_2024.png?v=1729029369",
+  "platform": "shopify",
+  "product_id": "7060865122480",
+  "product_type": "",
+  "roaster_slug": "provisioncoffee",
+  "tags": [
+   "Blend",
+   "Coffees",
+   "Espresso",
+   "Shop",
+   "Washed",
+   "import_2022_03_17_222730"
+  ],
+  "title": "Prickly Pear l Blend",
+  "url": "https://provisioncoffee.com/products/prickly-pear-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41819195179184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "41819195211952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine (Turkish/Espresso)",
+    "variant_id": "43134163419312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium (Pour Over/Home Brewer)",
+    "variant_id": "43134163452080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse (French Press/Cold Brew)",
+    "variant_id": "43134163484848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Fine (Turkish/Espresso)",
+    "variant_id": "43134163517616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Medium (Pour Over/Home Brewer)",
+    "variant_id": "43134163550384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Coarse (French Press/Cold Brew)",
+    "variant_id": "43134163583152"
+   }
+  ],
+  "vendor": "Provision Coffee"
+ },
+ {
+  "body_hash": "2be6c704f41101f8",
+  "first_seen": "2026-10-26",
+  "handle": "ponderosa-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0612/4925/7648/files/12oz_Bag_Ponderosa_2024.png?v=1729029257",
+  "platform": "shopify",
+  "product_id": "7060865253552",
+  "product_type": "",
+  "roaster_slug": "provisioncoffee",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Burundi",
+   "Coffees",
+   "Dark Roast",
+   "Shop",
+   "Washed",
+   "import_2022_03_17_222730"
+  ],
+  "title": "Ponderosa l Blend",
+  "url": "https://provisioncoffee.com/products/ponderosa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine (Turkish/Espresso)",
+    "variant_id": "41819193737392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Fine (Turkish/Espresso)",
+    "variant_id": "41819193770160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium (Pour Over/Home Brewer)",
+    "variant_id": "43134156931248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse (French Press/Cold Brew)",
+    "variant_id": "43134156964016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Medium (Pour Over/Home Brewer)",
+    "variant_id": "43134156996784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Coarse (French Press/Cold Brew)",
+    "variant_id": "43134157029552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43134163124400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43134163157168"
+   }
+  ],
+  "vendor": "Provision Coffee"
+ }
+]

@@ -1,0 +1,212 @@
+{
+ "6666354983084": {
+  "body_hash": "dd841a98becc444e",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6666379133100": {
+  "body_hash": "9907b2cefb1d4819",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6680914952364": {
+  "body_hash": "7a7e44246da93a2e",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "full city light",
+   "natural varietal bourbon",
+   "caturra",
+   "heirloom"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "6680915181740": {
+  "body_hash": "1e576f71f14014f4",
+  "elevation_masl_max": 1050,
+  "elevation_masl_min": 1050,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Mundo Novo"
+  ]
+ },
+ "7552734003372": {
+  "body_hash": "3332e18932322d9a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7557809373356": {
+  "body_hash": "bab6aa3c2d9d15fc",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "masl"
+  ],
+  "varietals": [
+   "74110",
+   "74112"
+  ]
+ },
+ "7558315475116": {
+  "body_hash": "6c8ac8d40d2bb2cf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7743323799724": {
+  "body_hash": "f1c8562f2bc9f581",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "7743355388076": {
+  "body_hash": "0af0433876712dd0",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8151497638060": {
+  "body_hash": "07f10fb01ebb5317",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8151504191660": {
+  "body_hash": "d597ea5ee182e348",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "8151508320428": {
+  "body_hash": "db0ab15b55655796",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ }
+}

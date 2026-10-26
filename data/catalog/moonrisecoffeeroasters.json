@@ -1,0 +1,1098 @@
+[
+ {
+  "body_hash": "01a3400e23e8f820",
+  "first_seen": "2026-10-26",
+  "handle": "local-paradise",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Local_Paradise.jpg?v=1763146301",
+  "platform": "shopify",
+  "product_id": "7473046847547",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Local Paradise",
+  "url": "https://moonrisecoffeeroasters.com/products/local-paradise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "42552674484283"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42552674517051"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42552674549819"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42552674582587"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "c6f97628cabd84b2",
+  "first_seen": "2026-10-26",
+  "handle": "local-paradise-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Full_Moon.jpg?v=1763146976",
+  "platform": "shopify",
+  "product_id": "7496374648891",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Full Moon",
+  "url": "https://moonrisecoffeeroasters.com/products/local-paradise-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "42876498772027"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42876498804795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42876498837563"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42876498870331"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "50effe19897eb815",
+  "first_seen": "2026-10-26",
+  "handle": "local-paradise-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Cold_Moon_Moonrise_Coffee.jpg?v=1767998769",
+  "platform": "shopify",
+  "product_id": "7496378187835",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Cold Moon",
+  "url": "https://moonrisecoffeeroasters.com/products/local-paradise-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "42876794503227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42876794535995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42876794568763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42876794601531"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "eec469bca19f1cf6",
+  "first_seen": "2026-10-26",
+  "handle": "cold-moon-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Dark_Early-Mokha_Java.jpg?v=1763147866",
+  "platform": "shopify",
+  "product_id": "7496383889467",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Dark & Early",
+  "url": "https://moonrisecoffeeroasters.com/products/cold-moon-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "42877282549819"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42877282582587"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42877282615355"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42877282648123"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "a2bdc3eadcde34da",
+  "first_seen": "2026-10-26",
+  "handle": "dark-early-mokha-java-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Philosopher_s_Blend.jpg?v=1763148575",
+  "platform": "shopify",
+  "product_id": "7496389984315",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Philosopher’s Blend",
+  "url": "https://moonrisecoffeeroasters.com/products/dark-early-mokha-java-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "42877746282555"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42877746315323"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42877746348091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42877746380859"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "4961597bed707bd8",
+  "first_seen": "2026-10-26",
+  "handle": "grand-lanai",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Grand_Lanai.jpg?v=1763149385",
+  "platform": "shopify",
+  "product_id": "7496416919611",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Grand Lanai",
+  "url": "https://moonrisecoffeeroasters.com/products/grand-lanai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Whole Bean",
+    "variant_id": "42879198953531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42879198986299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42879199019067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42879199051835"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "45c2f8311cda6f94",
+  "first_seen": "2026-10-26",
+  "handle": "grand-lanai-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Maui_Mahina.jpg?v=1763149570",
+  "platform": "shopify",
+  "product_id": "7496419672123",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Maui Mahina",
+  "url": "https://moonrisecoffeeroasters.com/products/grand-lanai-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "Whole Bean",
+    "variant_id": "42879429836859"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42879429869627"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42879429902395"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42879429935163"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "0272d44456c3001d",
+  "first_seen": "2026-10-26",
+  "handle": "ohana",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Ohana.jpg?v=1763149714",
+  "platform": "shopify",
+  "product_id": "7496423637051",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Ohana Blend",
+  "url": "https://moonrisecoffeeroasters.com/products/ohana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Whole Bean",
+    "variant_id": "42879655673915"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "42879655706683"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "42879655739451"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "42879655772219"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "6c1f63f66acba0fb",
+  "first_seen": "2026-10-26",
+  "handle": "ohana-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Columbia_Pitalito_Supremo.jpg?v=1763421588",
+  "platform": "shopify",
+  "product_id": "7498869243963",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Pitalito Supremo",
+  "url": "https://moonrisecoffeeroasters.com/products/ohana-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43015632158779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015632191547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015632224315"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015632257083"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "ea149dcdbe90dcbf",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-pitalito-supremo-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Columbia_Valle_Del_Cauca_De-Caff.jpg?v=1763421781",
+  "platform": "shopify",
+  "product_id": "7498869538875",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Valle Del Cauca Decaf",
+  "url": "https://moonrisecoffeeroasters.com/products/columbia-pitalito-supremo-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43015633043515"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015633076283"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015633109051"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015633141819"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "9f07fee087cb4650",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-valle-del-cauca-de-caff-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Costa_Rica_Jaguar_Honey.jpg?v=1763422050",
+  "platform": "shopify",
+  "product_id": "7498869899323",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Jaguar Honey",
+  "url": "https://moonrisecoffeeroasters.com/products/columbia-valle-del-cauca-de-caff-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43015634845755"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015634878523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015634911291"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015634944059"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "96565c8ea0efdd35",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chapas",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Mexico_Chapas.jpg?v=1763422215",
+  "platform": "shopify",
+  "product_id": "7498870259771",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Mexico Chiapas",
+  "url": "https://moonrisecoffeeroasters.com/products/mexico-chapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "43015636090939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015636123707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015636156475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015636189243"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "8278f39775dbad34",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Guatemala_Antigua.jpg?v=1763422341",
+  "platform": "shopify",
+  "product_id": "7498870849595",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Antigua",
+  "url": "https://moonrisecoffeeroasters.com/products/guatemala-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "43015640318011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015640350779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015640383547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015640416315"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "26de22f42ed4cfce",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-hot-springs",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Costa_Rica_Hot_Springs.jpg?v=1763422436",
+  "platform": "shopify",
+  "product_id": "7498871111739",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Hot Springs",
+  "url": "https://moonrisecoffeeroasters.com/products/costa-rica-hot-springs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "43015641301051"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015641333819"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015641366587"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015641399355"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "1057966de3694ac5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Brazil_Cerrado.jpg?v=1763422569",
+  "platform": "shopify",
+  "product_id": "7498871242811",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Brazil Cerrado",
+  "url": "https://moonrisecoffeeroasters.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "43015642021947"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015642054715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015642087483"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015642120251"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "b876147994793c10",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Ethiopia_Yirgacheffe.jpg?v=1763422703",
+  "platform": "shopify",
+  "product_id": "7498871504955",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://moonrisecoffeeroasters.com/products/brazil-cerrado-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "43015643267131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015643299899"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015643332667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015643365435"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "c54dadb5f02d3ce2",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-java",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Indonesia_Java.jpg?v=1763422850",
+  "platform": "shopify",
+  "product_id": "7498878287931",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Indonesia Java",
+  "url": "https://moonrisecoffeeroasters.com/products/indonesia-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "43015680950331"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015680983099"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015681015867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015681048635"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "7e34b01a229c8821",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-simbai",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Papua_New_Guinea_Simbai.jpg?v=1763423005",
+  "platform": "shopify",
+  "product_id": "7498880221243",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Papua New Guinea Simbai",
+  "url": "https://moonrisecoffeeroasters.com/products/papua-new-guinea-simbai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "43015694712891"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015694745659"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015694778427"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015694811195"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "fceddbe1c0fb2eb3",
+  "first_seen": "2026-10-26",
+  "handle": "ohana-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Peru_Junin_Chanchamayu.jpg?v=1763423582",
+  "platform": "shopify",
+  "product_id": "7498881269819",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Peru Junin Chanchamayu",
+  "url": "https://moonrisecoffeeroasters.com/products/ohana-copy-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43015704838203"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015704870971"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015704903739"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015704936507"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "4b697ee08aabdb4e",
+  "first_seen": "2026-10-26",
+  "handle": "all-stars",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/All_Stars_Blend.jpg?v=1763423694",
+  "platform": "shopify",
+  "product_id": "7498881695803",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "All Stars Blend",
+  "url": "https://moonrisecoffeeroasters.com/products/all-stars",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Whole Bean",
+    "variant_id": "43015705821243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015705854011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015705886779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015705919547"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "f2f698cafc968914",
+  "first_seen": "2026-10-26",
+  "handle": "all-stars-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Nicaragua_Jinotega.jpg?v=1763423858",
+  "platform": "shopify",
+  "product_id": "7498881826875",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Nicaragua Jinotega",
+  "url": "https://moonrisecoffeeroasters.com/products/all-stars-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "43015706935355"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43015706968123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43015707000891"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43015707033659"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "7aaf69427e1463d5",
+  "first_seen": "2026-10-26",
+  "handle": "big-kahuna-5-pounds",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Moonrise-37.jpg?v=1768955401",
+  "platform": "shopify",
+  "product_id": "7526939295803",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Big Kahuna | 5 Pounds",
+  "url": "https://moonrisecoffeeroasters.com/products/big-kahuna-5-pounds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / Local Paradise",
+    "variant_id": "43150363623483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Course Grind (Cold Brew/French Press) / Local Paradise",
+    "variant_id": "43150791245883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium Grind (Filter Brew) / Local Paradise",
+    "variant_id": "43150791278651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Fine Grind (Espresso) / Local Paradise",
+    "variant_id": "43150791311419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / Full Moon",
+    "variant_id": "43150814806075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Whole Bean / Cold Moon",
+    "variant_id": "43150814838843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Whole Bean / Philosopher’s Blend",
+    "variant_id": "43150814871611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Course Grind (Cold Brew/French Press) / Full Moon",
+    "variant_id": "43150814904379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Course Grind (Cold Brew/French Press) / Cold Moon",
+    "variant_id": "43150814937147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Course Grind (Cold Brew/French Press) / Philosopher’s Blend",
+    "variant_id": "43150814969915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Medium Grind (Filter Brew) / Full Moon",
+    "variant_id": "43150815002683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Medium Grind (Filter Brew) / Cold Moon",
+    "variant_id": "43150815035451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Medium Grind (Filter Brew) / Philosopher’s Blend",
+    "variant_id": "43150815068219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Fine Grind (Espresso) / Full Moon",
+    "variant_id": "43150815100987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Fine Grind (Espresso) / Cold Moon",
+    "variant_id": "43150815133755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Fine Grind (Espresso) / Philosopher’s Blend",
+    "variant_id": "43150815166523"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ },
+ {
+  "body_hash": "584404f07b809c68",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0639/5438/7003/files/Moonrise_Coffee_Website_2.png?v=1770151403",
+  "platform": "shopify",
+  "product_id": "7559470121019",
+  "product_type": "",
+  "roaster_slug": "moonrisecoffeeroasters",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://moonrisecoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 60.0,
+    "title": "Whole Bean",
+    "variant_id": "43279092744251"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 60.0,
+    "title": "Medium Grind (Filter Brew)",
+    "variant_id": "43279092777019"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 60.0,
+    "title": "Fine Grind (Espresso)",
+    "variant_id": "43279092809787"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 60.0,
+    "title": "Course Grind (Cold Brew/French Press)",
+    "variant_id": "43279100608571"
+   }
+  ],
+  "vendor": "Moonrise Coffee Roasters"
+ }
+]

@@ -1,0 +1,169 @@
+{
+ "438355722251": {
+  "body_hash": "f4792436fd0584d1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "toffee",
+   "molasses",
+   "chocolate",
+   "yellow apple",
+   "cashew"
+  ],
+  "varietals": []
+ },
+ "438417588235": {
+  "body_hash": "abd2ea37e97a5187",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fig",
+   "stone fruit",
+   "dates"
+  ],
+  "varietals": []
+ },
+ "4463580282966": {
+  "body_hash": "f4b555e74279bcf3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "molasses",
+   "cane sugar"
+  ],
+  "varietals": []
+ },
+ "4599839195222": {
+  "body_hash": "056c46e64685c0a1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "huckleberry",
+   "date"
+  ],
+  "varietals": []
+ },
+ "7305612787883": {
+  "body_hash": "1ba809cd64c1a11c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7778703507627": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9450373387": {
+  "body_hash": "fbcb2687f8b15e24",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "nougat",
+   "syrupy",
+   "very soft acidity"
+  ],
+  "varietals": []
+ },
+ "9450374987": {
+  "body_hash": "63b23becd5828445",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "rich",
+   "nuts"
+  ],
+  "varietals": []
+ },
+ "9450376331": {
+  "body_hash": "f3a02aa73b71b3e9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "green apple",
+   "sugar cane",
+   "citrus"
+  ],
+  "varietals": []
+ }
+}

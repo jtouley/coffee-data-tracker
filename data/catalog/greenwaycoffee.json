@@ -1,0 +1,154 @@
+[
+ {
+  "body_hash": "67d1d312797f2842",
+  "first_seen": "2026-10-26",
+  "handle": "modern-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0533/5728/1471/files/f37b21f5-ae88-4773-ba11-de2c1d3b5ab6.png?v=1782764332",
+  "platform": "shopify",
+  "product_id": "6656737738943",
+  "product_type": "coffee",
+  "roaster_slug": "greenwaycoffee",
+  "tags": [],
+  "title": "Modern Blend",
+  "url": "https://greenwaycoffee.com/products/modern-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300g",
+    "variant_id": "41834143613119"
+   },
+   {
+    "available": true,
+    "grams": 2500,
+    "price_usd": 110.0,
+    "title": "2.5kg",
+    "variant_id": "41834143645887"
+   }
+  ],
+  "vendor": "Greenway Coffee"
+ },
+ {
+  "body_hash": "0985206ee8a9c30e",
+  "first_seen": "2026-10-26",
+  "handle": "mid-century-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0533/5728/1471/files/Midcentury.png?v=1752259955",
+  "platform": "shopify",
+  "product_id": "6656739442879",
+  "product_type": "coffee",
+  "roaster_slug": "greenwaycoffee",
+  "tags": [
+   "Central-America",
+   "South-America"
+  ],
+  "title": "Mid-Century Blend",
+  "url": "https://greenwaycoffee.com/products/mid-century-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300g",
+    "variant_id": "41834142105791"
+   },
+   {
+    "available": true,
+    "grams": 2500,
+    "price_usd": 110.0,
+    "title": "2.5kg",
+    "variant_id": "41834142138559"
+   }
+  ],
+  "vendor": "Greenway Coffee"
+ },
+ {
+  "body_hash": "82e4e44c46a69416",
+  "first_seen": "2026-10-26",
+  "handle": "contemporary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0533/5728/1471/files/8b73a190-60ce-4669-8345-ac74fe0148f8.png?v=1782764412",
+  "platform": "shopify",
+  "product_id": "6656744292543",
+  "product_type": "coffee",
+  "roaster_slug": "greenwaycoffee",
+  "tags": [
+   "Africa"
+  ],
+  "title": "Contemporary Blend",
+  "url": "https://greenwaycoffee.com/products/contemporary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300g",
+    "variant_id": "41834146562239"
+   },
+   {
+    "available": true,
+    "grams": 2500,
+    "price_usd": 110.0,
+    "title": "2.5kg",
+    "variant_id": "41834146595007"
+   }
+  ],
+  "vendor": "Greenway Coffee"
+ },
+ {
+  "body_hash": "3f20ec2bd4ad9301",
+  "first_seen": "2026-10-26",
+  "handle": "minimalism-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0533/5728/1471/files/Minimalism.png?v=1773689759",
+  "platform": "shopify",
+  "product_id": "6656746586303",
+  "product_type": "coffee",
+  "roaster_slug": "greenwaycoffee",
+  "tags": [
+   "South-America"
+  ],
+  "title": "Minimalism Decaf",
+  "url": "https://greenwaycoffee.com/products/minimalism-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 329,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "39694668333247"
+   }
+  ],
+  "vendor": "Greenway Coffee"
+ },
+ {
+  "body_hash": "1cf05d59f87b0e56",
+  "first_seen": "2026-10-26",
+  "handle": "relampago-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0533/5728/1471/files/b8d3bd29-ed2b-4fe5-b358-50e1a0c5512c.png?v=1788804776",
+  "platform": "shopify",
+  "product_id": "8358855999679",
+  "product_type": "",
+  "roaster_slug": "greenwaycoffee",
+  "tags": [
+   "Central-America"
+  ],
+  "title": "Mafafas | Mexico",
+  "url": "https://greenwaycoffee.com/products/relampago-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300g",
+    "variant_id": "45312176193727"
+   },
+   {
+    "available": true,
+    "grams": 2500,
+    "price_usd": 110.0,
+    "title": "2.5kg",
+    "variant_id": "45312176226495"
+   }
+  ],
+  "vendor": "Greenway Coffee"
+ }
+]

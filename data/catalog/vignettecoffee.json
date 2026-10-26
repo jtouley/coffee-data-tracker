@@ -1,0 +1,639 @@
+[
+ {
+  "body_hash": "13f365a63bf90281",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karimikui-aa-double-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Rungeto_Coffee_Cooperative_Kenya.jpg?v=1790729485",
+  "platform": "shopify",
+  "product_id": "15378147082410",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Kenya Karimikui AA - Double Washed",
+  "url": "https://vignettecoffee.com/products/kenya-karimikui-aa-double-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "67538895012010"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "67538895044778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb",
+    "variant_id": "67538895077546"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "1378e95518aad924",
+  "first_seen": "2026-10-26",
+  "handle": "east-java-ijen-highlands-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Lake_of_Mt._Ijen.jpg?v=1775094927",
+  "platform": "shopify",
+  "product_id": "15384274698410",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "East Java Ijen Highlands - Anaerobic Natural",
+  "url": "https://vignettecoffee.com/products/east-java-ijen-highlands-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "67563509809322"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb",
+    "variant_id": "67563509842090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb",
+    "variant_id": "67563509874858"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "c4f58450de83f5bf",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-de-cana",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/products/vignette.coffeebag.singleorigin.decaf.decafdecanahuila.png?v=1654797978",
+  "platform": "shopify",
+  "product_id": "7330483699882",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Colombia Decaf de Caña - Huila",
+  "url": "https://vignettecoffee.com/products/colombia-decaf-de-cana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "43072333283498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "43072333316266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "43116560515242"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "561ccaf6fd58fac6",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-brew-guide",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/products/5790CD4E-2EB1-40A8-BBC1-21C1B6DEB5A2.jpg?v=1653261619",
+  "platform": "shopify",
+  "product_id": "7375243804842",
+  "product_type": "Guides",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Brew Guide"
+  ],
+  "title": "Espresso Brew Guide",
+  "url": "https://vignettecoffee.com/products/espresso-brew-guide",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "42967396712618"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "14887b864378d249",
+  "first_seen": "2026-10-26",
+  "handle": "milkadamia-macadamia-milk-formula-barista-32-fl-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/milkadamia.jpg?v=1703449254",
+  "platform": "shopify",
+  "product_id": "7911013613738",
+  "product_type": "Grocery",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Grocery"
+  ],
+  "title": "Milkadamia Macadamia Milk, Formula Barista, 32 fl oz",
+  "url": "https://vignettecoffee.com/products/milkadamia-macadamia-milk-formula-barista-32-fl-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1006,
+    "price_usd": 5.5,
+    "title": "Default Title",
+    "variant_id": "45335709614250"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "fab75240386771ac",
+  "first_seen": "2026-10-26",
+  "handle": "golden-key-medium-roast-house-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/products/vignette.coffeebag.goldenkey.png?v=1651103621",
+  "platform": "shopify",
+  "product_id": "7995002192042",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Blends",
+   "Espresso"
+  ],
+  "title": "Golden Key - Medium Roast House Blend",
+  "url": "https://vignettecoffee.com/products/golden-key-medium-roast-house-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "46126207565994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb",
+    "variant_id": "46126207697066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb",
+    "variant_id": "46126207729834"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "4699e3850790e9f1",
+  "first_seen": "2026-10-26",
+  "handle": "nightshade-dark-roast-house-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/products/vignette.coffeebag.nightshade.png?v=1651103689",
+  "platform": "shopify",
+  "product_id": "7995002749098",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Blends",
+   "Espresso"
+  ],
+  "title": "Nightshade - Dark Roast House Blend",
+  "url": "https://vignettecoffee.com/products/nightshade-dark-roast-house-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "46126212513962"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb",
+    "variant_id": "46126212645034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 lb",
+    "variant_id": "46126212677802"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "e8441d6eacdb8d83",
+  "first_seen": "2026-10-26",
+  "handle": "toll-roasting",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8081700520106",
+  "product_type": "",
+  "roaster_slug": "vignettecoffee",
+  "tags": [],
+  "title": "Toll Roasting",
+  "url": "https://vignettecoffee.com/products/toll-roasting",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 2.0,
+    "title": "Default Title",
+    "variant_id": "46537413951658"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "321c243301a6fbde",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-cristal-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/cafeimportsmexicoamsa-24.jpg?v=1760561952",
+  "platform": "shopify",
+  "product_id": "8232323055786",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Mexico Cristal - Dark Roast",
+  "url": "https://vignettecoffee.com/products/mexico-cristal-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "47400118452394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "47400118485162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "47400118517930"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "f008391f12a3ee84",
+  "first_seen": "2026-10-26",
+  "handle": "peru-efrain-carhuallocllo-extended-fermentation-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Efrain_Carhuallocllo_with_his_depulper.jpg?v=1775076279",
+  "platform": "shopify",
+  "product_id": "8411899756714",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Perú Efrain Carhuallocllo - Extended Fermentation Washed Gesha",
+  "url": "https://vignettecoffee.com/products/peru-efrain-carhuallocllo-extended-fermentation-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz",
+    "variant_id": "48166995361962"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 91.0,
+    "title": "2 lb",
+    "variant_id": "48166995394730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 203.0,
+    "title": "5 lb",
+    "variant_id": "48166995427498"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "83918c4909ed8af6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-carlos-antigua-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Freshly-picked_coffee_cherries_at_San_Carlos.png?v=1753124181",
+  "platform": "shopify",
+  "product_id": "8436407173290",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Guatemala San Carlos - Antigua - Washed",
+  "url": "https://vignettecoffee.com/products/guatemala-san-carlos-antigua-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "48304387457194"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "48304387489962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "48304387522730"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "8ea749c0195fe29a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cerro-san-luis-micromill-yellow-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Cafe_Imports_Cerrro_San_Luis_2020_VP-33-2021-11-09-144029.jpg?v=1698106331",
+  "platform": "shopify",
+  "product_id": "8589872922794",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Costa Rica Cerro San Luis Micromill - Yellow Honey",
+  "url": "https://vignettecoffee.com/products/costa-rica-cerro-san-luis-micromill-yellow-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "49003880382634"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb",
+    "variant_id": "49003880415402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb",
+    "variant_id": "49003880448170"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "ae1f645af7df5ca7",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-las-flores-natural-yellow-catuai-roger-dominguez",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Cafe_Imports_Honduras_Roger_Dominguez_VP-11-2021-12-08-172429.jpg?v=1738785601",
+  "platform": "shopify",
+  "product_id": "8596585644202",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Honduras Las Flores - Natural Yellow Catuai - Roger Dominguez",
+  "url": "https://vignettecoffee.com/products/honduras-las-flores-natural-yellow-catuai-roger-dominguez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "49044190068906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lb",
+    "variant_id": "49044190101674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb",
+    "variant_id": "49044190134442"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "d4c46cd02ad456c7",
+  "first_seen": "2026-10-26",
+  "handle": "fall-seasonal-blend-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Fall_Blend_Website.heic?v=1760561952",
+  "platform": "shopify",
+  "product_id": "8605230432426",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "New Releases"
+  ],
+  "title": "Fall Seasonal Blend 2026",
+  "url": "https://vignettecoffee.com/products/fall-seasonal-blend-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "49131773755562"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb",
+    "variant_id": "49131773788330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb",
+    "variant_id": "49131773821098"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "bc661d45dd521a21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mr-getaneh-girma-natural-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Cafe_Imports_Ethiopia_Mr_Getaneh_Girmacoffeenatural.jpg?v=1789418326",
+  "platform": "shopify",
+  "product_id": "8627157565610",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Mr. Getaneh Girma - Idido - Natural Yirgacheffe",
+  "url": "https://vignettecoffee.com/products/ethiopia-mr-getaneh-girma-natural-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "49253961236650"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "49253961269418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb",
+    "variant_id": "49253961302186"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "bb5b0377dc3dec81",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca-excelso-fully-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Cafe_Imports_Colombia_Gran_Galopecoffee.jpg?v=1768949496",
+  "platform": "shopify",
+  "product_id": "8627236700330",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Espresso",
+   "New Releases",
+   "Single Origin"
+  ],
+  "title": "Colombia Cauca Excelso - Fully Washed",
+  "url": "https://vignettecoffee.com/products/colombia-cauca-excelso-fully-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "49254905282730"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "49254905315498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "49254905348266"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ },
+ {
+  "body_hash": "fde02994c7d64645",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bekele-gemeda-washed-yirgacheffe-1",
+  "image": "https://cdn.shopify.com/s/files/1/0617/9219/0634/files/Cafe_Imports_Ethiopia_Bekele_Gemeda-3-2024-07-18-203625.jpg?v=1723573053",
+  "platform": "shopify",
+  "product_id": "8627257606314",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "vignettecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Bekele Gemeda - Washed Yirgacheffe",
+  "url": "https://vignettecoffee.com/products/ethiopia-bekele-gemeda-washed-yirgacheffe-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "49254951125162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb",
+    "variant_id": "49254951157930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb",
+    "variant_id": "49254951190698"
+   }
+  ],
+  "vendor": "Vignette Coffee Roasters"
+ }
+]

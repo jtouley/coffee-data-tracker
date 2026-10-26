@@ -1,0 +1,449 @@
+[
+ {
+  "body_hash": "e3270f582d85340d",
+  "first_seen": "2026-10-26",
+  "handle": "black-forest-beans-12-oz",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2016/05/1.png",
+  "platform": "woocommerce",
+  "product_id": "163",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Best Sellers",
+   "Blends",
+   "Coffee Beans",
+   "Subscription"
+  ],
+  "title": "Black Forest Blend",
+  "url": "https://www.northwoodsroasterie.com/product/black-forest-beans-12-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "163:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "163:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5 lbs.",
+    "variant_id": "163:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d02ebf7c2d1eddbc",
+  "first_seen": "2026-10-26",
+  "handle": "northern-blend-decaf",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2016/05/2.png",
+  "platform": "woocommerce",
+  "product_id": "164",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Blends",
+   "Coffee Beans",
+   "Subscription"
+  ],
+  "title": "Northern Decaf",
+  "url": "https://www.northwoodsroasterie.com/product/northern-blend-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz.",
+    "variant_id": "164:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "164:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lbs.",
+    "variant_id": "164:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d40f40609d3c9b39",
+  "first_seen": "2026-10-26",
+  "handle": "red-rooster-espresso-beans-12-oz",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2016/05/3.png",
+  "platform": "woocommerce",
+  "product_id": "165",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Blends",
+   "Coffee Beans",
+   "Subscription"
+  ],
+  "title": "Red Rooster Espresso",
+  "url": "https://www.northwoodsroasterie.com/product/red-rooster-espresso-beans-12-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz.",
+    "variant_id": "165:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lbs",
+    "variant_id": "165:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lbs.",
+    "variant_id": "165:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e257137dbc32038f",
+  "first_seen": "2026-10-26",
+  "handle": "lakeshore-blend",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2016/05/4.png",
+  "platform": "woocommerce",
+  "product_id": "1890",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Blends",
+   "Coffee Beans",
+   "Subscription"
+  ],
+  "title": "Lakeshore Blend",
+  "url": "https://www.northwoodsroasterie.com/product/lakeshore-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz.",
+    "variant_id": "1890:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "1890:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5 lbs.",
+    "variant_id": "1890:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d2f8018b45830b5",
+  "first_seen": "2026-10-26",
+  "handle": "natural-harrar",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/7.png",
+  "platform": "woocommerce",
+  "product_id": "273",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Harrar",
+  "url": "https://www.northwoodsroasterie.com/product/natural-harrar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "273:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 lbs.",
+    "variant_id": "273:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5 lbs.",
+    "variant_id": "273:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0811d67a7765096a",
+  "first_seen": "2026-10-26",
+  "handle": "yirg-z",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/8.png",
+  "platform": "woocommerce",
+  "product_id": "280",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Yirg Z",
+  "url": "https://www.northwoodsroasterie.com/product/yirg-z/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "280:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 lbs.",
+    "variant_id": "280:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5 lbs.",
+    "variant_id": "280:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b8d21164f8c7de8e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/9.png",
+  "platform": "woocommerce",
+  "product_id": "318",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://www.northwoodsroasterie.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "318:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs.",
+    "variant_id": "318:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs.",
+    "variant_id": "318:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73640acb23297931",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/14.png",
+  "platform": "woocommerce",
+  "product_id": "332",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://www.northwoodsroasterie.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "332:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs.",
+    "variant_id": "332:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs.",
+    "variant_id": "332:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1f4624f4c1faf6d",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/10.png",
+  "platform": "woocommerce",
+  "product_id": "346",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Peru",
+  "url": "https://www.northwoodsroasterie.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "346:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs.",
+    "variant_id": "346:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs.",
+    "variant_id": "346:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47556019d98d9f98",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2023/06/12.png",
+  "platform": "woocommerce",
+  "product_id": "353",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Coffee Beans",
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.northwoodsroasterie.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "353:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs.",
+    "variant_id": "353:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs.",
+    "variant_id": "353:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5306f3b9487131cc",
+  "first_seen": "2026-10-26",
+  "handle": "1-pound-northern-blend",
+  "image": "https://www.northwoodsroasterie.com/wp-content/uploads/2016/05/6.png",
+  "platform": "woocommerce",
+  "product_id": "52",
+  "product_type": "variable",
+  "roaster_slug": "northwoodsroasterie",
+  "tags": [
+   "Best Sellers",
+   "Blends",
+   "Coffee Beans",
+   "Subscription"
+  ],
+  "title": "Northern Blend",
+  "url": "https://www.northwoodsroasterie.com/product/1-pound-northern-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "52:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "52:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5 lb.",
+    "variant_id": "52:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

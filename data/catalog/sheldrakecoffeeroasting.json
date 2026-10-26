@@ -1,0 +1,3292 @@
+[
+ {
+  "body_hash": "da2ac498d25faba7",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10297536053439",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "estate",
+   "java"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "50478914732223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "50478914764991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "50478914797759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "50478914830527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "50478914863295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Coffee Pods (8)",
+    "variant_id": "50478914896063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.75,
+    "title": "5# Whole Bean",
+    "variant_id": "50478914928831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.75,
+    "title": "5# French Press",
+    "variant_id": "50478914961599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.75,
+    "title": "5# Auto Drip",
+    "variant_id": "50478914994367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.75,
+    "title": "5# Manual Drip",
+    "variant_id": "50478915027135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.75,
+    "title": "5# Espresso",
+    "variant_id": "50478915059903"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "a7edc26697e568b6",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Italian_Roast_-_DECAF.png?v=1775633004",
+  "platform": "shopify",
+  "product_id": "1409707396",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "Decaf Coffee",
+   "Decafs",
+   "italian"
+  ],
+  "title": "Italian Roast - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/italian-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "5019690436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "5019690500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "5019690564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "5019690628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "5019690692"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "93efbae2e3766006",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Vienna_Roast_-_DECAF.png?v=1775632990",
+  "platform": "shopify",
+  "product_id": "1409750852",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "Decaf Coffee",
+   "Decafs",
+   "vienna"
+  ],
+  "title": "Vienna Roast - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/vienna-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39792453255359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39792455319743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39792459514047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39792461119679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39792462495935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "5019859844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "5019859908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "5019859972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "5019860036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "5019860100"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "2ce8a60dbe41db9e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Colombian_Supremo.png?v=1775639213",
+  "platform": "shopify",
+  "product_id": "297134697",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "colombian",
+   "supremo"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5# Whole Bean",
+    "variant_id": "39769205080255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5# French Press",
+    "variant_id": "39769205637311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5# Auto Drip",
+    "variant_id": "39769208029375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.75,
+    "title": "5# Espresso",
+    "variant_id": "39786115629247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969433"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "9d70cabce46cb309",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Ethiopian_Yirgacheffe.png?v=1775639197",
+  "platform": "shopify",
+  "product_id": "297139789",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "ethiopian",
+   "moka"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/ethiopian-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Whole Bean",
+    "variant_id": "39786189193407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# French Press",
+    "variant_id": "39786189291711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Auto Drip",
+    "variant_id": "39786189422783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Manual Drip",
+    "variant_id": "39786189815999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Espresso",
+    "variant_id": "39786189848767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969685"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969693"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "394e535359fd5312",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-huehuetanago",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Guatemalan_Huehuetenango.png?v=1775639184",
+  "platform": "shopify",
+  "product_id": "297141265",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "guatemalan"
+  ],
+  "title": "Guatemalan Huehuetenango",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/guatemalan-huehuetanago",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786324000959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39786324590783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786326196415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786329735359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39786330783935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969965"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969989"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969997"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "a6d09eb765d0e3e4",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/files/Jamaican_Blue_Mountain.jpg?v=1775639160",
+  "platform": "shopify",
+  "product_id": "297142449",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "blue mountain",
+   "jamaica",
+   "jamaican"
+  ],
+  "title": "Jamaican Blue Mountain",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/jamaica-blue-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 340.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786633855167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 340.0,
+    "title": "5# French Press",
+    "variant_id": "39786636640447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 340.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786643652799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 340.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786652270783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 340.0,
+    "title": "5# Espresso",
+    "variant_id": "39786656301247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970085"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970117"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "3d8105c54256df12",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Kenya_AA.png?v=1775639133",
+  "platform": "shopify",
+  "product_id": "297144585",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Kenya",
+   "Origin",
+   "Origins"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Whole Bean",
+    "variant_id": "39786722230463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# French Press",
+    "variant_id": "39786724688063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Auto Drip",
+    "variant_id": "39786725736639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Manual Drip",
+    "variant_id": "39786730848447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Espresso",
+    "variant_id": "39786737238207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970285"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970289"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "745b0515107c16eb",
+  "first_seen": "2026-10-26",
+  "handle": "kona-greenwell-farms",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Kona_Greenwell_Farms.png?v=1775639124",
+  "platform": "shopify",
+  "product_id": "297145445",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "greenwell",
+   "hawaii",
+   "hawaiian",
+   "kona"
+  ],
+  "title": "Kona Greenwell Farms",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/kona-greenwell-farms",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 259.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39786773217471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 259.25,
+    "title": "5# French Press",
+    "variant_id": "39786778656959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 259.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39786780000447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 259.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39786783310015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 259.25,
+    "title": "5# Espresso",
+    "variant_id": "39786784325823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970393"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "0c38a4ddfaeb2241",
+  "first_seen": "2026-10-26",
+  "handle": "la-minita-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/La_Minita_Costa_Rican.png?v=1775639116",
+  "platform": "shopify",
+  "product_id": "297148117",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "HOLIDAY",
+   "Origin",
+   "Origins",
+   "central american",
+   "costa rica",
+   "costa rican",
+   "fair trade",
+   "holiday gift ideas",
+   "la minita",
+   "organic"
+  ],
+  "title": "La Minita Costa Rican",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/la-minita-costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Whole Bean",
+    "variant_id": "39786796548287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# French Press",
+    "variant_id": "39786798153919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Auto Drip",
+    "variant_id": "39786801758399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Manual Drip",
+    "variant_id": "39786803691711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Espresso",
+    "variant_id": "39786804707519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970437"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "028d57aa3372c97f",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-custepec",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Mexican_Custepec.png?v=1775639104",
+  "platform": "shopify",
+  "product_id": "297149061",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "mexican"
+  ],
+  "title": "Mexican Custepec",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/mexican-custepec",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39787650744511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39787655299263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39787657429183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39787658215615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39787659034815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970469"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970477"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970481"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "0d818a829da52069",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Sumatra_Mandheling.png?v=1775639095",
+  "platform": "shopify",
+  "product_id": "297149865",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "sumatra"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39792067608767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39792068853951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39792069902527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39792070623423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39792071868607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970733"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970741"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "eca85de00cd6446f",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Tanzanian_Peaberry.png?v=1775639085",
+  "platform": "shopify",
+  "product_id": "297150953",
+  "product_type": "ORIGINS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Origin",
+   "Origins",
+   "peaberry",
+   "tanzanian"
+  ],
+  "title": "Tanzanian Peaberry",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/tanzanian-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39792084877503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39792089891007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39792092086463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39792096084159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39792100376767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970781"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970789"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "cce4b510f9b252d8",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Vienna_Roast.png?v=1775639075",
+  "platform": "shopify",
+  "product_id": "297161021",
+  "product_type": "DARK ROAST",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "vienna"
+  ],
+  "title": "Vienna Roast",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39792436674751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39792438247615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39792440246463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39792443654335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39792445391039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970893"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970925"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "baccac4e5247ae84",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/French_Roast.png?v=1775639064",
+  "platform": "shopify",
+  "product_id": "297162753",
+  "product_type": "DARK ROAST",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "french"
+  ],
+  "title": "French Roast",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786203185343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39786213376191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786216554687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786221502655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39786223435967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969901"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969913"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "76170d1703914c9a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Italian_Roast.png?v=1775639010",
+  "platform": "shopify",
+  "product_id": "297164817",
+  "product_type": "DARK ROAST",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "italian"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39786432200895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39786438492351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39786440360127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39786443407551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39786447241407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970077"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "ae017c10f5c42b6f",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Colombian_-_DECAF.png?v=1775639000",
+  "platform": "shopify",
+  "product_id": "297165853",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Colombian",
+   "Decaf",
+   "Decafs",
+   "Origin",
+   "Origins"
+  ],
+  "title": "Colombian - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39769171853503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39769183715519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39769187582143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39769193382079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39769194528959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969393"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "db9ab2f125d29bfc",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/French_Roast_-_DECAF.png?v=1775638994",
+  "platform": "shopify",
+  "product_id": "297168069",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "Decafs"
+  ],
+  "title": "French Roast - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/french-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Whole Bean",
+    "variant_id": "39786237100223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# French Press",
+    "variant_id": "39786240704703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Manual Drip",
+    "variant_id": "39786245652671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Auto Drip",
+    "variant_id": "39786245783743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Espresso",
+    "variant_id": "39786248274111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969953"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "81cba4422d62cee0",
+  "first_seen": "2026-10-26",
+  "handle": "a-tout-va-bien-costa-rican-french",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/A_Tout_va_Bien_-_Costa_Rican_French.png?v=1775638986",
+  "platform": "shopify",
+  "product_id": "297169861",
+  "product_type": "Blends",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "Costa Rican",
+   "french"
+  ],
+  "title": "A Tout va Bien - Costa Rican & French",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/a-tout-va-bien-costa-rican-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# French Press",
+    "variant_id": "39762311676095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Whole Bean",
+    "variant_id": "39762359746751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Auto Drip",
+    "variant_id": "39762372985023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Manual Drip",
+    "variant_id": "39762378064063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5# Espresso",
+    "variant_id": "39762380423359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean - 16 oz.",
+    "variant_id": "706715857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "French Press - 16 oz.",
+    "variant_id": "715672829"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715673273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715674025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715674665"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "2cd9cd78a876a338",
+  "first_seen": "2026-10-26",
+  "handle": "after-dinner-blend-ethiopian-java-french",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/After_Dinner_Blend_-_Ethiopian_Sumatra_French.png?v=1775638976",
+  "platform": "shopify",
+  "product_id": "297172005",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee"
+  ],
+  "title": "After Dinner Blend - Ethiopian, Sumatra & French",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/after-dinner-blend-ethiopian-java-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Whole Bean",
+    "variant_id": "39769002803391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - French Press",
+    "variant_id": "39769004409023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Auto Drip",
+    "variant_id": "39769007947967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Manual Drip",
+    "variant_id": "39769012240575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Espresso",
+    "variant_id": "39769012601023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968525"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715968529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip-16 oz.",
+    "variant_id": "715968533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso-16 oz.",
+    "variant_id": "715968537"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "32c643553c832cbd",
+  "first_seen": "2026-10-26",
+  "handle": "alans-blend-kenya-and-java",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Alan_s_Blend_-_Kenya_and_Sumatra.png?v=1775638969",
+  "platform": "shopify",
+  "product_id": "297172433",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "Kenya",
+   "java"
+  ],
+  "title": "Alan's Blend - Kenya and Sumatra",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/alans-blend-kenya-and-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Whole Bean",
+    "variant_id": "39769014468799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - French Press",
+    "variant_id": "39769015812287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Auto Drip",
+    "variant_id": "39769016533183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Manual Drip",
+    "variant_id": "39769017942207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# - Espresso",
+    "variant_id": "39769018433727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715968569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715968573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715968577"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "3e711e01b80acddd",
+  "first_seen": "2026-10-26",
+  "handle": "pollys-blend-colombian-mexican",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Mike_s_Blend_-_Colombian_Mexican.png?v=1775638961",
+  "platform": "shopify",
+  "product_id": "297173481",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "Colombian",
+   "Mexican"
+  ],
+  "title": "Mike's Blend - Colombian & Mexican",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/pollys-blend-colombian-mexican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39787746295999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39787755733183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39787758846143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39787778080959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970597"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970605"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970613"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "eb77cf52e5ea28ab",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-colombian-brasil-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/House_Blend_-_Colombian_Brasil_Costa_Rican.png?v=1775638935",
+  "platform": "shopify",
+  "product_id": "297174209",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Brazil",
+   "Coffee",
+   "Colombian",
+   "Costa Rican",
+   "brasil",
+   "sunrise"
+  ],
+  "title": "House Blend - Colombian, Brasil & Costa Rican",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/house-blend-colombian-brasil-costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786406150335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39786413457599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786419519679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786422403263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39786423419071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970029"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970037"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "815d4ef4c9d2a9bd",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-excelso-mexican-french",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Breakfast_Blend_-_Colombian_Mexican_French_Roast.png?v=1775638918",
+  "platform": "shopify",
+  "product_id": "297175157",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "Colombian",
+   "Mexican"
+  ],
+  "title": "Breakfast Blend - Colombian, Mexican & French Roast",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/breakfast-blend-excelso-mexican-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Whole Bean",
+    "variant_id": "39769071976639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - French Press",
+    "variant_id": "39769073549503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Auto Drip",
+    "variant_id": "39769077842111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Manual Drip",
+    "variant_id": "39769078366399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Espresso",
+    "variant_id": "39769086263487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715968649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715968653"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715968657"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "f21f9d0cccb54e46",
+  "first_seen": "2026-10-26",
+  "handle": "black-velvet-supremo-french",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Black_Velvet_-_Colombian_French_Roast.png?v=1775638910",
+  "platform": "shopify",
+  "product_id": "297175545",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "Colombian"
+  ],
+  "title": "Black Velvet - Colombian & French Roast",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/black-velvet-supremo-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Whole Bean",
+    "variant_id": "39769026789567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - French Press",
+    "variant_id": "39769027248319"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Auto Drip",
+    "variant_id": "39769029607615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Manual Drip",
+    "variant_id": "39769032523967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# - Espresso",
+    "variant_id": "39769036816575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968605"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715968609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715968613"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715968617"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "5e4fa2c5ee33467f",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java-ethiopian-moka-and-java",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Moka_Java_-_Ethiopian_Moka_Java.png?v=1775638895",
+  "platform": "shopify",
+  "product_id": "297177117",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Moka Java - Ethiopian Moka & Java",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/moka-java-ethiopian-moka-and-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39787791122623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39787797512383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39787804000447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39787804229823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39787806556351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715970537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715970557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715970561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715970565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715970569"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "e61929fa8916fd0c",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Hazelnut.png?v=1775638886",
+  "platform": "shopify",
+  "product_id": "297179413",
+  "product_type": "FLAVORED",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Flavored Coffee",
+   "hazelnut"
+  ],
+  "title": "Hazelnut",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/cafe-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786338287807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39786341236927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786342777023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786343563455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39786346217663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715968761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715968769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715968777"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "8b7d2efee3741a4d",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-macadamia-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Macadamia_Nut.png?v=1775638879",
+  "platform": "shopify",
+  "product_id": "297185445",
+  "product_type": "FLAVORED",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Macadamia"
+  ],
+  "title": "Macadamia Nut",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/cafe-macadamia-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39787303927999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39787326767295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39787341250751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39787465113791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39787474550975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715968977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715968997"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969009"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "e66d39cd340df50d",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-macadamia-nut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Macadamia_Nut_-_DECAF.png?v=1775638870",
+  "platform": "shopify",
+  "product_id": "297185733",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Macadamia"
+  ],
+  "title": "Macadamia Nut - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/cafe-macadamia-nut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39787620958399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39787622039743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39787625742527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39787626365119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39787627020479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969049"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "cec574481fb70edc",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-vanilla-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Vanilla_Nut.png?v=1775638642",
+  "platform": "shopify",
+  "product_id": "297185977",
+  "product_type": "FLAVORED",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Flavored Coffee",
+   "vanilla"
+  ],
+  "title": "Vanilla Nut",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/cafe-vanilla-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39792374939839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39792377987263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39792381853887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39792386932927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39792391389375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969205"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969229"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969237"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "68f1065e82716361",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-vanilla-nut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Vanilla_Nut_-_DECAF.png?v=1775638629",
+  "platform": "shopify",
+  "product_id": "297186169",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Decaf Coffee",
+   "Decafs",
+   "Flavored",
+   "Flavored Decaf Coffee",
+   "vanilla"
+  ],
+  "title": "Vanilla Nut - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/cafe-vanilla-nut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39792407511231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39792410853567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39792414392511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39792420618431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39792423403711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969349"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "13fde3ed2997a572",
+  "first_seen": "2026-10-26",
+  "handle": "french-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/French_Caramel.png?v=1775638616",
+  "platform": "shopify",
+  "product_id": "297186513",
+  "product_type": "FLAVORED",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Flavored Coffee",
+   "caramel",
+   "french"
+  ],
+  "title": "French Caramel",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/french-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Whole Bean",
+    "variant_id": "39786190373055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# French Press",
+    "variant_id": "39786190536895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Auto Drip",
+    "variant_id": "39786191225023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Manual Drip",
+    "variant_id": "39786193551551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5# Espresso",
+    "variant_id": "39786193649855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969773"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969805"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "57ce5b12f17680a7",
+  "first_seen": "2026-10-26",
+  "handle": "french-caramel-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/French_Caramel_-_DECAF.png?v=1775638605",
+  "platform": "shopify",
+  "product_id": "297186717",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Decafs",
+   "Flavored",
+   "Flavored Decaf Coffee"
+  ],
+  "title": "French Caramel - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/french-caramel-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39786195878079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39786196238527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39786196402367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39786196795583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39786199285951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "715969841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "715969861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "715969865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "715969869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "715969873"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "dc3f0ed6c7ce62ca",
+  "first_seen": "2026-10-26",
+  "handle": "virginia-peanuts",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/files/sheldrake_holiday25_0057.jpg?v=1763677545",
+  "platform": "shopify",
+  "product_id": "300113813",
+  "product_type": "PEANUTS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Gift",
+   "Peanuts",
+   "holiday gift ideas"
+  ],
+  "title": "Virginia Peanuts",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/virginia-peanuts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.25,
+    "title": "One pound bag",
+    "variant_id": "5549931972"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "cf2cfb7ac60f5025",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Hazelnut_-_DECAF.png?v=1775633039",
+  "platform": "shopify",
+  "product_id": "344554469",
+  "product_type": "DECAF",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Decaf Coffee",
+   "Decafs",
+   "Flavored",
+   "Flavored Coffee",
+   "Flavored Decaf Coffee",
+   "hazelnut"
+  ],
+  "title": "Hazelnut - DECAF",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "39786349691071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "39786357457087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "39786364174527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "39786370433215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "39786391863487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Decaf Auto Drip -16 oz.",
+    "variant_id": "845226177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Decaf Espresso -16 oz.",
+    "variant_id": "845226181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Decaf French Press -16 oz.",
+    "variant_id": "845226185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Decaf Manual Drip -16 oz.",
+    "variant_id": "845226189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Decaf Whole Bean -16 oz.",
+    "variant_id": "845226193"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "c6eedb14b7390f06",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-maker",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/toddy_1.jpg?v=1590261238",
+  "platform": "shopify",
+  "product_id": "4557966934082",
+  "product_type": "Supplies",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "brewer",
+   "cold brew",
+   "maker",
+   "toddy"
+  ],
+  "title": "Toddy Maker",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/toddy-maker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 989,
+    "price_usd": 39.95,
+    "title": "Default Title",
+    "variant_id": "32020245938242"
+   }
+  ],
+  "vendor": "Toddy"
+ },
+ {
+  "body_hash": "72c3fba7290b6d6e",
+  "first_seen": "2026-10-26",
+  "handle": "rens-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/products/Ren_s_Blend.png?v=1776046443",
+  "platform": "shopify",
+  "product_id": "6234827194559",
+  "product_type": "BLENDS",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "blends",
+   "brasil sunrise",
+   "java",
+   "sumatra"
+  ],
+  "title": "Ren's Blend",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/rens-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "37896177582271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "37896177615039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "37896177647807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "37896177680575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "37896177713343"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ },
+ {
+  "body_hash": "efdb8ea2fe3654ae",
+  "first_seen": "2026-10-26",
+  "handle": "supre-chefe",
+  "image": "https://cdn.shopify.com/s/files/1/0382/3409/files/Supre-Chefe.png?v=1776045669",
+  "platform": "shopify",
+  "product_id": "7649216004287",
+  "product_type": "Blends",
+  "roaster_slug": "sheldrakecoffeeroasting",
+  "tags": [
+   "Blend",
+   "Blends",
+   "Coffee",
+   "chocolate",
+   "colombian",
+   "ethiopian"
+  ],
+  "title": "Supre-Chefe",
+  "url": "https://www.sheldrakecoffeeroasting.com/products/supre-chefe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Auto Drip -16 oz.",
+    "variant_id": "42815288115391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Espresso -16 oz.",
+    "variant_id": "42815288148159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "French Press -16 oz.",
+    "variant_id": "42815288180927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Manual Drip -16 oz.",
+    "variant_id": "42815288213695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean -16 oz.",
+    "variant_id": "42815288246463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Whole Bean",
+    "variant_id": "42815288279231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# French Press",
+    "variant_id": "42815288311999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Auto Drip",
+    "variant_id": "42815288344767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Manual Drip",
+    "variant_id": "42815288377535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.25,
+    "title": "5# Espresso",
+    "variant_id": "42815288410303"
+   }
+  ],
+  "vendor": "sheldrakecoffee"
+ }
+]

@@ -1,0 +1,5451 @@
+[
+ {
+  "body_hash": "9c49d9c779085090",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/EthiopiaLA_2.png?v=1635976794",
+  "platform": "shopify",
+  "product_id": "1546157621359",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Ethiopia | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13739616305263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14203373060207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "34002188140682"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "34002195316874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "34155981602954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "40059059404956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41168152428700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41168154460316"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46672902881504"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "83b4cadebdb5c2c6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/swiss_and_mountain-water-600x200.png?v=1762815836",
+  "platform": "shopify",
+  "product_id": "1546203398255",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Decaf",
+   "Single Origin",
+   "retail"
+  ],
+  "title": "Single Origin | Decaf Water Process | Med/Dark Roast",
+  "url": "https://barnyardcoffee.com/products/decaf-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "13740291227759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14204163653743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34172347809930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "34266681802890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "34266687635594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744386904220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "37709156909212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "41083295301788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41168080109724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970887778528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43970887811296"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716430553312"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean",
+    "variant_id": "48379238744288"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind",
+    "variant_id": "48379238777056"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Keurig Grind",
+    "variant_id": "48379238809824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Espresso Grind",
+    "variant_id": "48744874311904"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "8079d1838427356c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/GuatemalaLA_2.png?v=1765203675",
+  "platform": "shopify",
+  "product_id": "1546505322607",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Guatemala | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13743991881839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14203523530863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "34071911956618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "34071914053770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36252704211100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36252705751196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744425898140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "44472436195552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "44472436228320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "44472436261088"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716500807904"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "7abaac766764e471",
+  "first_seen": "2026-10-26",
+  "handle": "byc-espresso-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/BYCBlendLA_2.png?v=1781535153",
+  "platform": "shopify",
+  "product_id": "1546539204719",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Blend | BYC Espresso | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/byc-espresso-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "13744317988975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "13744318316655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744998027420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36745001074844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36745004056732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "42124474056928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "42301560652000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2LB | Coarse Grind",
+    "variant_id": "42422060220640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43611480785120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43970880012512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "43970882175200"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716404338912"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean (24 Pk)",
+    "variant_id": "48082197610720"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24 Pk)",
+    "variant_id": "48082197643488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Espresso Grind",
+    "variant_id": "50803273957600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Espresso Grind",
+    "variant_id": "50803273990368"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "52602423247072"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "52602423279840"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "1bf93eaacde537e3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/HondurasLA.png?v=1639071575",
+  "platform": "shopify",
+  "product_id": "1546672701551",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Honduras | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13745821024367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "17514139746415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744435957916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36744437399708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36744438612124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "42519904714976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "42519905042656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "46657419411680"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46667139481824"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "708313247fc3ac1c",
+  "first_seen": "2026-10-26",
+  "handle": "llama-drama",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/LlamaDramaLA_2.png?v=1636133882",
+  "platform": "shopify",
+  "product_id": "1546690625647",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Blend | Llama Drama | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/llama-drama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13746113839215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "13746114068591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36560020766876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36560025911452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744443658396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41176931565724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41176932548764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970884206816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "43970884436192"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.25,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716429308128"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "8f2862d56e599cbd",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/MexicanChiapasLA_2.png?v=1637034394",
+  "platform": "shopify",
+  "product_id": "1546714316911",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Mexican Chiapas  | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/mexican-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13746452070511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14532823875695"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744455061660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36744456306844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36744457158812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41219074392220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41219075473564"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46667150885088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Espresso Grind",
+    "variant_id": "46899884097760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46899889963232"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "ae759e1b47602d7e",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/PeruLA_2.png?v=1635977844",
+  "platform": "shopify",
+  "product_id": "1546741612655",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Peru | Med/Dark Roast",
+  "url": "https://barnyardcoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13746805047407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "13746805244015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34156006375562"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "34162418712714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "34162420285578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "36252680781980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "36252685107356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744483864732"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46667153211616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "52641782661344"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "68939c1077346792",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/SumatraLA_2.png?v=1635977475",
+  "platform": "shopify",
+  "product_id": "1546762354799",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "Single Origin | SUMATRA | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "13747068600431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14203652800623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34156015583370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2LB | Whole Bean",
+    "variant_id": "37597918036124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2LB | Medium Grind",
+    "variant_id": "37597919903900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB | Whole Bean",
+    "variant_id": "37597921280156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB | Coarse Grind",
+    "variant_id": "37600078200988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "39848189460636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2LB | Coarse Grind",
+    "variant_id": "43879210123488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43971157754080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB | Medium Grind",
+    "variant_id": "44591713091808"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716595507424"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "7f67f66dc969b96f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/BrazilLA_2.png?v=1635976074",
+  "platform": "shopify",
+  "product_id": "1574869434479",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Brazil Natural | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/brazil-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "14085005705327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "14085653332079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744370520220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "36744372879516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36744373993628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "40059096268956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41168110616732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "41168113991836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43879209304288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43879209533664"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46822977339616"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "50a4c991c3c27ead",
+  "first_seen": "2026-10-26",
+  "handle": "farmhouse",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/FarmhouseLA_2.png?v=1635979534",
+  "platform": "shopify",
+  "product_id": "2053901451375",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "Farmhouse",
+   "retail"
+  ],
+  "title": "Blend | Farmhouse | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/farmhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "19579739537519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "19579739570287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "33677282410634"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "33677296205962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean | Biggest Savings",
+    "variant_id": "34091996545162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind | Biggest Savings",
+    "variant_id": "34092002345098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34092008964234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744957493404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43185566056672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind | Biggest Savings",
+    "variant_id": "43185567367392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43928624234720"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716427112672"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean (24Pk)",
+    "variant_id": "48082197020896"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24Pk)",
+    "variant_id": "48082197053664"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "e2f471e2d76ae7ca",
+  "first_seen": "2026-10-26",
+  "handle": "ubuntu",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/UbuntuLACrop.png?v=1635195069",
+  "platform": "shopify",
+  "product_id": "2155196252271",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "my little kate cod",
+   "retail"
+  ],
+  "title": "Blend | UBUNTU - My Little Kate Cod | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/ubuntu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "20295697301615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "20295697334383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36745016672412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "40533489844380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "40533491646620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "40533492924572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41131503354012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 LB | Med Grind",
+    "variant_id": "41131507220636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "42572849938656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "42572850135264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43970889515232"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716431274208"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "3f75a3ff9133f753",
+  "first_seen": "2026-10-26",
+  "handle": "coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Coconut_Infusion_12ozWebsite.jpg?v=1627268136",
+  "platform": "shopify",
+  "product_id": "2190709457007",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Coconut",
+  "url": "https://barnyardcoffee.com/products/coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "20528004300911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "31165022994570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "34155588157578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34155589959818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "34262628761738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36679829291164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36679872807068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36679881457820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "40248822923420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "40248823414940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970906456288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970906489056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970907046112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970907078880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970907111648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970907144416"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "41af14c975c39439",
+  "first_seen": "2026-10-26",
+  "handle": "pouch-farmhouse-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/imagejpg_51771752-2c0f-4b5c-9dc9-e7fdef9ccd9f.jpg?v=1558590553",
+  "platform": "shopify",
+  "product_id": "2233617186927",
+  "product_type": "Custom Pk",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark Roast",
+   "Pouch"
+  ],
+  "title": "Pouch | Farmhouse | Dark Roast | 1.8 oz | Ground | 7-Pack",
+  "url": "https://barnyardcoffee.com/products/pouch-farmhouse-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 17.95,
+    "title": "7-Pk of 1.8 oz",
+    "variant_id": "20768812400751"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "b3c19427aa72bcee",
+  "first_seen": "2026-10-26",
+  "handle": "pouch-byc-med",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/imagejpg_961b9fd4-63f0-41d6-af01-d7340bbf6fbf.jpg?v=1559284467",
+  "platform": "shopify",
+  "product_id": "2233626525807",
+  "product_type": "Custom Pk",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Medium Roast",
+   "Pouch"
+  ],
+  "title": "Pouch  |  BYC | Med Roast |  1.8 oz | Ground  | 7-Pack",
+  "url": "https://barnyardcoffee.com/products/pouch-byc-med",
+  "variants": [
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 17.95,
+    "title": "7-Pk 1.8 oz",
+    "variant_id": "20768894386287"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "a321f4907ef3dcad",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Gingerbread12oz2.png?v=1675268614",
+  "platform": "shopify",
+  "product_id": "2239662522479",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Gingerbread",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Gingerbread | Seasonal Flavor",
+  "url": "https://barnyardcoffee.com/products/gingerbread",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Reg | Whole Bean | 12oz",
+    "variant_id": "20801416659055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Whole Bean | 12oz",
+    "variant_id": "31015618805898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Reg | Coarse Grind | 12oz",
+    "variant_id": "34805610938524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Coarse Grind | 12oz",
+    "variant_id": "34805612085404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Reg | Medium Grind | 12oz",
+    "variant_id": "36870905397404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Reg | Keurig Grind | 12oz",
+    "variant_id": "36870913032348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Medium Grind | 12oz",
+    "variant_id": "36870923190428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Keurig Grind | 12oz",
+    "variant_id": "36886581051548"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pods | Keurig Machines Only",
+    "variant_id": "46568185888992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "Reg | Whole Bean | 2lb",
+    "variant_id": "46568265056480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "Reg | Medium Grind | 2lb",
+    "variant_id": "46568265482464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "DECAF | Whole Bean | 2lb",
+    "variant_id": "46568266727648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "DECAF | Medium Grind | 2lb",
+    "variant_id": "46568266924256"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "DECAF | 18 Count | K Pods | Keurig Machines Only",
+    "variant_id": "46698208493792"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "d4d64b9f96b49869",
+  "first_seen": "2026-10-26",
+  "handle": "cock-a-doodle-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/image.jpg?v=1671125478",
+  "platform": "shopify",
+  "product_id": "2240653164655",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Cock-A-Doodle Brew  |  Med/Dark Roast",
+  "url": "https://barnyardcoffee.com/products/cock-a-doodle-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "20805786894447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "20805786927215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "35210740629660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744461910172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36744465842332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36744469479580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "40606349394076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41168311681180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41168312598684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43970882535648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970882797792"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716424392928"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "46731618549984"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "46731618582752"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean (24 Pk)",
+    "variant_id": "48082194825440"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24 Pk)",
+    "variant_id": "48082194858208"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "08b0bde3f0ccd4f7",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast-white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/White_Coffee_Label_BYC.png?v=1752002139",
+  "platform": "shopify",
+  "product_id": "3854752055407",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Espresso",
+   "Single Origin",
+   "White Coffee"
+  ],
+  "title": "Single Origin | Espresso Roast | White Coffee | 2 LB Bag",
+  "url": "https://barnyardcoffee.com/products/espresso-roast-white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "Bulk | 2 lb Whole Bean | Valve Sealed Bag",
+    "variant_id": "46254289518816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "Bulk | 2 lb Fine Grind | Valve Sealed Bag",
+    "variant_id": "46254289551584"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "56a18182a4227881",
+  "first_seen": "2026-10-26",
+  "handle": "png",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/PNGWeb.jpg?v=1639071286",
+  "platform": "shopify",
+  "product_id": "3876477468783",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Papua New Guinea | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/png",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "29212994732143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "29212994797679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36744360099996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36744362295452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36744365113500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41143825957020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "41168128868508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41168136470684"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46667152097504"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "818b8d088cce82a9",
+  "first_seen": "2026-10-26",
+  "handle": "sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Coffeeandbeans.png?v=1623462737",
+  "platform": "shopify",
+  "product_id": "3923103023215",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [],
+  "title": "4 Bag | Sample Pack | 8 oz Per Bag",
+  "url": "https://barnyardcoffee.com/products/sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 41.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "40131062890652"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 41.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "40131062923420"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 41.95,
+    "title": "8 oz | Keurig Grind",
+    "variant_id": "40131062956188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 41.95,
+    "title": "8 oz | Coarse Grind",
+    "variant_id": "40131065970844"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "de02ec07dc5721b2",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/English_Toffee_12_ozWebsite.jpg?v=1627268339",
+  "platform": "shopify",
+  "product_id": "3961112494191",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "cold brew",
+   "english toffee",
+   "flavored coffee"
+  ],
+  "title": "Flavored | English Toffee | TOP SELLER!",
+  "url": "https://barnyardcoffee.com/products/english-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "29508949835887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "32314236043402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34155910660234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "34155924488330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "34215255081098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36680005583004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36680014790812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36680029733020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "40248815911068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "40248816369820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970893381856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970893414624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970894037216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970894069984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970894102752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970894135520"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machine Only",
+    "variant_id": "46258694357216"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | DECAF | Keurig Machine Only",
+    "variant_id": "46258696159456"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "edc52559fd2fe712",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/PeppermintMochaLA_2.png?v=1635964304",
+  "platform": "shopify",
+  "product_id": "4293204312202",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Gingerbread",
+   "Peppermint Mocha",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Peppermint Mocha | Seasonal Flavor",
+  "url": "https://barnyardcoffee.com/products/peppermint-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "30918733496458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "32314248298634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "36679213875356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36679221936284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36679225049244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36679228653724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36679230357660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "36679232716956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43762794954976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43762795413728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43762795708640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43762796396768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "44159048057056"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46561805828320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "46669299712224"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "c9604d9b29ae87bb",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cherry",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Chocolate_Cherry_12oz.jpg?v=1623464906",
+  "platform": "shopify",
+  "product_id": "4293209096330",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Amaretto",
+   "Gingerbread",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Chocolate Cherry",
+  "url": "https://barnyardcoffee.com/products/chocolate-cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "30918750535818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "31165017784458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "36679685931164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36679698481308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36679703199900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36679714209948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36679718895772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "36679722008732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43970915696864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43970915729632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970915762400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970915795168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970915827936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970915860704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970915893472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970915926240"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 count | K Pod | Keurig Machines Only",
+    "variant_id": "46603070767328"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 count | Decaf | K Pod | Keurig Machines Only",
+    "variant_id": "46603075125472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "46669295190240"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "d22585f756f279bb",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Colombia_LA.png?v=1646788292",
+  "platform": "shopify",
+  "product_id": "4349911400586",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Colombian | Medium Roast",
+  "url": "https://barnyardcoffee.com/products/single-origin-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean | 12 oz",
+    "variant_id": "31188794802314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Medium Grind | 12 oz",
+    "variant_id": "31188794835082"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2lb | Whole Bean",
+    "variant_id": "35929362333852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2lb | Medium Grind",
+    "variant_id": "35929365119132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Keurig Grind | 12 oz",
+    "variant_id": "36744339259548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2lb | Coarse Grind",
+    "variant_id": "42519898521824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5lb | Whole Bean",
+    "variant_id": "42519900127456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5lb | Medium Grind",
+    "variant_id": "42519900324064"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "Whole Bean | 8 oz",
+    "variant_id": "53585103421664"
+   }
+  ],
+  "vendor": "Barnyard Coffee"
+ },
+ {
+  "body_hash": "50ac606e49042289",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Mocha_Coconut.jpg?v=1623466377",
+  "platform": "shopify",
+  "product_id": "4747299422346",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Mocha Coconut",
+  "url": "https://barnyardcoffee.com/products/mocha-coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "33071042855050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "33071042887818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "34155880349834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "34155886903434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "35748543201436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36680083013788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36680105066652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36680106901660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "40248803754140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "40248805163164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970951282912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970951315680"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "7b56f6869e69a9b8",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-orange",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Chocolate_Orange_12ozWebsite.jpg?v=1627274401",
+  "platform": "shopify",
+  "product_id": "5034444193930",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Chocolate Orange",
+  "url": "https://barnyardcoffee.com/products/chocolate-orange",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "33744636870794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "33744636936330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "36679747600540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36679755038876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36679759003804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "36679771259036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "36679778402460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "36679784333468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43970926051552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43970926084320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970926117088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970926149856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970926182624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970926215392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970926248160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970926280928"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 count | K Pod | Keurig Machines Only",
+    "variant_id": "47673538969824"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "07af0dc26d15b21a",
+  "first_seen": "2026-10-26",
+  "handle": "white-chocolate-macadamia",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/White_Choc_Macadamia_Website.jpg?v=1627268053",
+  "platform": "shopify",
+  "product_id": "5043645907082",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | White Chocolate Macadamia",
+  "url": "https://barnyardcoffee.com/products/white-chocolate-macadamia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "33771386634378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "35071162679452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Ground",
+    "variant_id": "35071180308636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36926959157404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43970957082848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43970957115616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970957148384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970957181152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "45918228480224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "45918230348000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "45918231429344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Ground",
+    "variant_id": "45918233821408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "5 lb | Whole Bean",
+    "variant_id": "46669225492704"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "e28fafaf05f663c5",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Caramel_Pecan_12ozWebsite.jpg?v=1627274231",
+  "platform": "shopify",
+  "product_id": "5043665141898",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Caramel Pecan",
+  "url": "https://barnyardcoffee.com/products/caramel-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46580307329248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "46580307362016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "46580307394784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "46580307427552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "46580307460320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "46580307493088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "46580307525856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46580307558624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "46580307591392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Whole Bean",
+    "variant_id": "46698694738144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Med Grind",
+    "variant_id": "46698694770912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Keurig Grind",
+    "variant_id": "46698694803680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Coarse Grind",
+    "variant_id": "46698694836448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Whole Bean",
+    "variant_id": "46725515575520"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Med Grind",
+    "variant_id": "46725515608288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Keurig Grind",
+    "variant_id": "46725515641056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Coarse Grind",
+    "variant_id": "46725515673824"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Medium Grind (25 Pk)",
+    "variant_id": "48187016446176"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Keurig Grind (25 Pk)",
+    "variant_id": "48187016478944"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "686b1d48dcd060e7",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-almond-bliss",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Coconut_Almond_Bliss.jpg?v=1623464676",
+  "platform": "shopify",
+  "product_id": "5536688373916",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Coconut Almond Bliss",
+  "url": "https://barnyardcoffee.com/products/coconut-almond-bliss",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "35645075751068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "35645075783836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "35645075816604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "35645075849372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "35645075882140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "35645125722268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "39691905171612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "39691912282268"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "e91a11eb800fa8eb",
+  "first_seen": "2026-10-26",
+  "handle": "banana-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Banana_DreamWebsite.jpg?v=1627269751",
+  "platform": "shopify",
+  "product_id": "5647449456796",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee",
+   "retail"
+  ],
+  "title": "Flavored | Banana Dream",
+  "url": "https://barnyardcoffee.com/products/banana-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "36105037152412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "36105037185180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36105037217948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36679253328028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "37743541092508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "37743545352348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "37743547908252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "40233361539228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43971071541472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43971071574240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43971071607008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43971071639776"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46374974718176"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "4034f20a882053d6",
+  "first_seen": "2026-10-26",
+  "handle": "danish-pastry",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Danish_Pastry_12_ozWebsite.jpg?v=1627268506",
+  "platform": "shopify",
+  "product_id": "5720328863900",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Danish Pastry",
+  "url": "https://barnyardcoffee.com/products/danish-pastry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.95,
+    "title": "REG | Whole Bean",
+    "variant_id": "36353588592796"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.95,
+    "title": "REG | Medium Grind",
+    "variant_id": "36353588625564"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.95,
+    "title": "REG | Coarse Grind",
+    "variant_id": "36353588658332"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.95,
+    "title": "REG | Keurig Grind",
+    "variant_id": "36679921959068"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "abf66f7dea1dc42a",
+  "first_seen": "2026-10-26",
+  "handle": "barnyard-black",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/BarnyardBlackLA_2.png?v=1636213329",
+  "platform": "shopify",
+  "product_id": "5794584559772",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Barnyard Black | Very Dark Roast",
+  "url": "https://barnyardcoffee.com/products/barnyard-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "36559845458076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "36559845490844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36559845556380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36559845589148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "36559845621916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean | Biggest Savings",
+    "variant_id": "36559845654684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind | Biggest Savings",
+    "variant_id": "36559845687452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36745054421148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43440831889632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind | Biggest Savings",
+    "variant_id": "43440832905440"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716407779552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46571733582048"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "0e6a479c146bb40b",
+  "first_seen": "2026-10-26",
+  "handle": "blend-barn-owl-half-caff-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/BarnOwlLA_2.png?v=1636214702",
+  "platform": "shopify",
+  "product_id": "5797662523548",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Barn Owl - Half Caff | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-barn-owl-half-caff-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "36571594457244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "36571594522780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "36571594588316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "36571594621084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Medium Grind",
+    "variant_id": "36571594653852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Whole Bean | Biggest Savings",
+    "variant_id": "36571594686620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Medium Grind | Biggest Savings",
+    "variant_id": "36571594719388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "36745030697116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Keurig Grind",
+    "variant_id": "43785420669152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Coarse Grind",
+    "variant_id": "43785421127904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Coarse Grind | Biggest Savings",
+    "variant_id": "43785421881568"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716604453088"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "858ec30a9379d9bd",
+  "first_seen": "2026-10-26",
+  "handle": "blend-home-town-hero-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/HometownHeroLA_3.png?v=1636134813",
+  "platform": "shopify",
+  "product_id": "6022200590492",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "retail"
+  ],
+  "title": "Blend | Hometown Hero | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-home-town-hero-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "37188484104348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "37188484137116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "37188484169884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "37188484202652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "41177010798748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "41177015287964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41177016631452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41177020629148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43988521517280"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716611563744"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "39f5f475412dc4c1",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Hazelnut.jpg?v=1623466538",
+  "platform": "shopify",
+  "product_id": "6154285613212",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Hazelnut",
+  "url": "https://barnyardcoffee.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "37609529180316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "37609529213084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "37609529245852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Ground",
+    "variant_id": "37609529278620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "37609564799132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "37609565814940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "37609569616028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "37609571418268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43971075408096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43971075440864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43971075473632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43971075506400"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "47114412359904"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "9ba6ec497a8a2002",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-cinnamon",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Cinnamon_Bunz.jpg?v=1623464529",
+  "platform": "shopify",
+  "product_id": "6154330800284",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Cinnamon Dolce",
+   "Gingerbread",
+   "Peppermint Mocha",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Cinnamon Bunz",
+  "url": "https://barnyardcoffee.com/products/sweet-cinnamon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "37609609592988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "37609609625756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "37609609658524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "37609609691292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "37609609724060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "37609609756828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "37609609789596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "37609609822364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43970932801760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43970932834528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970932867296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970932900064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970932932832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970932965600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970932998368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970933031136"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46374985138400"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | Decaf | K Pod | Keurig Machines Only",
+    "variant_id": "46698220028128"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "3f08d589dbef2187",
+  "first_seen": "2026-10-26",
+  "handle": "blend-get-your-goat-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/GetYourGoatLA_2.png?v=1636215118",
+  "platform": "shopify",
+  "product_id": "6606780891292",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Get Your Goat  |  Light Roast",
+  "url": "https://barnyardcoffee.com/products/blend-get-your-goat-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "39430946979996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "39430947012764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "39430947045532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "41180791177372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "41180793864348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "41180796354716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "41180797337756"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716428390624"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "ed4477b89e55168f",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/CopyofEnglishToffee_3.png?v=1688748645",
+  "platform": "shopify",
+  "product_id": "6680679252124",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "caramel",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Caramel",
+  "url": "https://barnyardcoffee.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "39691822399644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz  | Medium Grind",
+    "variant_id": "39691822432412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "39691822465180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "39691822497948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Whole Bean",
+    "variant_id": "44079282618592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Medium Grind",
+    "variant_id": "44079282749664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Keurig Grind",
+    "variant_id": "44079283470560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Coarse Grind",
+    "variant_id": "44079283503328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "44159028297952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Medium Grind",
+    "variant_id": "44159049990368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "46568245330144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Whole Bean",
+    "variant_id": "46568247197920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46725671157984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB  | DECAF | Keurig Grind",
+    "variant_id": "46725671190752"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46725693276384"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | DECAF | K Pod | Keurig Machine Only",
+    "variant_id": "47192174756064"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "2540a8179cdc3b2c",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-muffin",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Blueberry_Muffin.jpg?v=1623464343",
+  "platform": "shopify",
+  "product_id": "6805650997404",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee",
+   "retail"
+  ],
+  "title": "Flavored | Blueberry Muffin",
+  "url": "https://barnyardcoffee.com/products/blueberry-muffin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "40124460826780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "40124460859548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "40124460892316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "40124460925084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "40124460957852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "40124460990620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "40124461023388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "40165699715228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43971069116640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43971069149408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43971069182176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43971069214944"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46667165040864"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "4180995ae660a37f",
+  "first_seen": "2026-10-26",
+  "handle": "party-favors",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Anniversary_Label.png?v=1767049912",
+  "platform": "shopify",
+  "product_id": "7601374003424",
+  "product_type": "Custom Pk",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [],
+  "title": "Party Favors | 24 Count | 2 oz  Your Choice of Coffee",
+  "url": "https://barnyardcoffee.com/products/party-favors",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1559,
+    "price_usd": 89.95,
+    "title": "Reg | Medium Grind Set of 24",
+    "variant_id": "42725870633184"
+   },
+   {
+    "available": true,
+    "grams": 1559,
+    "price_usd": 89.95,
+    "title": "Reg | Whole Bean Set of 24",
+    "variant_id": "42725884100832"
+   },
+   {
+    "available": true,
+    "grams": 1559,
+    "price_usd": 89.95,
+    "title": "Decaf | Medium Grind Set of 24",
+    "variant_id": "46557809311968"
+   },
+   {
+    "available": true,
+    "grams": 1559,
+    "price_usd": 89.95,
+    "title": "Decaf | Whole Bean Grind Set of 24",
+    "variant_id": "46557809344736"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "ba7395a03fe19f92",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Coconut_Cake.jpg?v=1651600766",
+  "platform": "shopify",
+  "product_id": "7654006423776",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Coconut Cake",
+  "url": "https://barnyardcoffee.com/products/coconut-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "42773526184160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "42773526216928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz | Keurig Grind",
+    "variant_id": "42773526249696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "42773526282464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "42773526315232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "42773526348000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "42773526380768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "42773526413536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "42773526446304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "42773526479072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43970899181792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43970899214560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Whole Bean",
+    "variant_id": "43970900000992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Med Grind",
+    "variant_id": "43970900033760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Keurig Grind",
+    "variant_id": "43970900066528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Decaf | Coarse Grind",
+    "variant_id": "43970900099296"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "754f939e911ec79d",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/Pumpkin_Pie.jpg?v=1664040777",
+  "platform": "shopify",
+  "product_id": "7867233730784",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee",
+   "retail"
+  ],
+  "title": "Flavored | Pumpkin Pie | Seasonal Flavor",
+  "url": "https://barnyardcoffee.com/products/pumpkin-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "REG | Whole Bean | 12oz",
+    "variant_id": "43448895176928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "REG | Medium Grind | 12oz",
+    "variant_id": "43448895209696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "REG | Keurig Grind | 12oz",
+    "variant_id": "43448895242464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "REG | Coarse Grind | Cold Brew | 12oz",
+    "variant_id": "43448895275232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Whole Bean | 12oz",
+    "variant_id": "43448895308000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Medium Grind | 12oz",
+    "variant_id": "43448895340768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Keurig Grind | 12oz",
+    "variant_id": "43448895373536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "DECAF | Coarse Grind | 12oz",
+    "variant_id": "43448895406304"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.95,
+    "title": "18 Count | DECAF | K Pod",
+    "variant_id": "46309838717152"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46309839438048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "REG | Whole Bean | 2lb",
+    "variant_id": "46533901844704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "REG | Medium Grind | 2lb",
+    "variant_id": "46533903679712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "REG | Keurig Grind | 2lb",
+    "variant_id": "46533907054816"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "5d8147ab67fb66a3",
+  "first_seen": "2026-10-26",
+  "handle": "blend-lighthouse-med-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/LighthouseBlend_2.png?v=1672683867",
+  "platform": "shopify",
+  "product_id": "7969825456352",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "retail"
+  ],
+  "title": "Blend | Lighthouse | Med Roast",
+  "url": "https://barnyardcoffee.com/products/blend-lighthouse-med-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "43774274765024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "43774274797792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "43774274830560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "43774274863328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43774274896096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "43774274928864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43774274961632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "43774274994400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "43774275027168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "43774275059936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43774285807840"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45195235295456"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "46731625988320"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "46731626021088"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean (24 Pk)",
+    "variant_id": "48082194039008"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24 Pk)",
+    "variant_id": "48082194071776"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "884d1197f66360b0",
+  "first_seen": "2026-10-26",
+  "handle": "blend-great-horned-owl-half-caff-very-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/products/GreatHornedOwlBlend_3.png?v=1673217068",
+  "platform": "shopify",
+  "product_id": "7972608049376",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Great Horned Owl - Half Caff | Very Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-great-horned-owl-half-caff-very-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "43785402286304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "43785402319072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "43785402351840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "43785402384608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43785402417376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Medium Grind",
+    "variant_id": "43785402450144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Whole Bean | Biggest Savings",
+    "variant_id": "43785402482912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Medium Grind | Biggest Savings",
+    "variant_id": "43785402515680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Keurig Grind",
+    "variant_id": "43785411723488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Coarse Grind",
+    "variant_id": "43785412640992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Coarse Grind | Biggest Savings",
+    "variant_id": "43785414246624"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "45716608418016"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "bb00a978574caca6",
+  "first_seen": "2026-10-26",
+  "handle": "louisiana-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/Louisiana_Pecan.png?v=1785342469",
+  "platform": "shopify",
+  "product_id": "7982234403040",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee",
+   "retail"
+  ],
+  "title": "Flavored | Louisiana Pecan",
+  "url": "https://barnyardcoffee.com/products/louisiana-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "43815942291680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "43815942324448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "43815942357216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "43815942389984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Whole Bean",
+    "variant_id": "43815942422752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Med Grind",
+    "variant_id": "43815942455520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Keurig Grind",
+    "variant_id": "43815942488288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Decaf | Coarse Grind",
+    "variant_id": "43815942521056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "43971082125536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "43971082158304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "43971082191072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "43971082256608"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46374990381280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "46669260914912"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "c503d30dde632eb3",
+  "first_seen": "2026-10-26",
+  "handle": "candy-bar",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/CandyBar.png?v=1683999487",
+  "platform": "shopify",
+  "product_id": "8045734428896",
+  "product_type": "Flavored",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "coconut coffee",
+   "cold brew",
+   "flavored coffee"
+  ],
+  "title": "Flavored | Candy Bar",
+  "url": "https://barnyardcoffee.com/products/candy-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "44011378606304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "44011378639072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "44011378671840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "44011378704608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Whole Bean",
+    "variant_id": "44011378737376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Med Grind",
+    "variant_id": "44011378770144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Keurig Grind",
+    "variant_id": "44011378802912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | DECAF | Coarse Grind",
+    "variant_id": "44011378835680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "44011385618656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "44011386011872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "44011387453664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "44011389059296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Whole Bean",
+    "variant_id": "44011389157600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Med Grind",
+    "variant_id": "44011389190368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Coarse Grind",
+    "variant_id": "44011390730464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.95,
+    "title": "2 LB | DECAF | Keurig Grind",
+    "variant_id": "44011391713504"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machine Only",
+    "variant_id": "47192173019360"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "559ea7c195ab0e6e",
+  "first_seen": "2026-10-26",
+  "handle": "honey-maple-granola-10-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/Granola10oz.png?v=1790359939",
+  "platform": "shopify",
+  "product_id": "8423726907616",
+  "product_type": "Grocery",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [],
+  "title": "Honey Maple Granola | 10 oz",
+  "url": "https://barnyardcoffee.com/products/honey-maple-granola-10-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 10.95,
+    "title": "10 oz Bag",
+    "variant_id": "45401585385696"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters LLC"
+ },
+ {
+  "body_hash": "cd1e7e725ed7609e",
+  "first_seen": "2026-10-26",
+  "handle": "blend-os-black_tan",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/O_s_Blend.png?v=1743295102",
+  "platform": "shopify",
+  "product_id": "8660832977120",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Organic Coffee"
+  ],
+  "title": "Blend | O's BLACK & TAN | Med-Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-os-black_tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46175445090528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "46175445123296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "46175445156064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "46175445188832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "46175445221600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "46175445254368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "46175445287136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46175445319904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "46175445352672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "46175445385440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Med Grind",
+    "variant_id": "46175445418208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "46175445450976"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "2fbf19fa51e2e996",
+  "first_seen": "2026-10-26",
+  "handle": "blend-geaux-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/GeauxEspresso.png?v=1733959533",
+  "platform": "shopify",
+  "product_id": "8759256088800",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Geaux Espresso | Medium Roast * New Release *",
+  "url": "https://barnyardcoffee.com/products/blend-geaux-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "46695236534496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "46695236567264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "46695236600032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "46695236632800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "46695236665568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "46695236698336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "46695236731104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "46695236763872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "46695236796640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "46695236829408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "46695236862176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "46695236894944"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Keurig Grind (24 Pk)",
+    "variant_id": "48186995441888"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24 Pk)",
+    "variant_id": "48186995474656"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "11aafda5b708f938",
+  "first_seen": "2026-10-26",
+  "handle": "blend-bayou-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/GeauxEspressoNew.png?v=1744484378",
+  "platform": "shopify",
+  "product_id": "8858788593888",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Organic Coffee"
+  ],
+  "title": "Blend | Bayou Blend | Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-bayou-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "47192489984224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Med Grind",
+    "variant_id": "47192490016992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "47192490049760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "47192490082528"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "47192490115296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "47192490148064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Med Grind",
+    "variant_id": "47192490180832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "47192490213600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "47192490246368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "47192490279136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Med Grind",
+    "variant_id": "47192490311904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "47192490344672"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "5645ee10a2e7a2ed",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-guatemala-direct-trade-med",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/Screenshot_2025-12-08_081848.png?v=1765203675",
+  "platform": "shopify",
+  "product_id": "9091014852832",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Single Origin | Guatemala | Direct Trade | Light/Med * New Release *",
+  "url": "https://barnyardcoffee.com/products/single-origin-guatemala-direct-trade-med",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "48391152238816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "48391152271584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "48391152304352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "48391152337120"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 24.95,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "48391152369888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "48391152402656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "48391152435424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "48391152468192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "48391152500960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "48391152533728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "48391152566496"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "48391219249376"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "48391219282144"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.95,
+    "title": "8 oz | Keurig Grind",
+    "variant_id": "48391219314912"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.95,
+    "title": "8 oz | Coarse Grind",
+    "variant_id": "48391219347680"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "40b4daf37d168402",
+  "first_seen": "2026-10-26",
+  "handle": "blend-screech-owl-half-caff-med-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/Copy_of_Barn_Owl_3.png?v=1769816875",
+  "platform": "shopify",
+  "product_id": "9166151516384",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | Screech Owl - Half Caff | Med Roast",
+  "url": "https://barnyardcoffee.com/products/blend-screech-owl-half-caff-med-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "48629435007200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "48629435039968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "48629435072736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "48629435105504"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "48629435138272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "48629435171040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Medium Grind",
+    "variant_id": "48629435203808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Espresso Grind",
+    "variant_id": "48629435236576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB Coarse Grind",
+    "variant_id": "48629435269344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Whole Bean | Biggest Savings",
+    "variant_id": "48629435302112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Medium Grind | Biggest Savings",
+    "variant_id": "48629435334880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB Coarse Grind | Biggest Savings",
+    "variant_id": "48629435367648"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ },
+ {
+  "body_hash": "728ce13e403b398d",
+  "first_seen": "2026-10-26",
+  "handle": "blend-mayors-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0043/0086/5647/files/Mayor_s_Blend_12_2_4x5_Roll.png?v=1784925431",
+  "platform": "shopify",
+  "product_id": "9979055964384",
+  "product_type": "Roasted",
+  "roaster_slug": "barnyardcoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "retail"
+  ],
+  "title": "Blend | City Mayor Blend  |  Med/Dark Roast",
+  "url": "https://barnyardcoffee.com/products/blend-mayors-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Whole Bean",
+    "variant_id": "53641704603872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Medium Grind",
+    "variant_id": "53641704636640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Keurig Grind",
+    "variant_id": "53641704669408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz | Coarse Grind",
+    "variant_id": "53641704702176"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.5,
+    "title": "18 Count | K Pod | Keurig Machines Only",
+    "variant_id": "53641704734944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Whole Bean",
+    "variant_id": "53641704767712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Medium Grind",
+    "variant_id": "53641704800480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Keurig Grind",
+    "variant_id": "53641704833248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.95,
+    "title": "2 LB | Coarse Grind",
+    "variant_id": "53641704866016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Whole Bean",
+    "variant_id": "53641704898784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Medium Grind",
+    "variant_id": "53641704931552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5 LB | Coarse Grind",
+    "variant_id": "53641704964320"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Whole Bean",
+    "variant_id": "53641704997088"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz | Medium Grind",
+    "variant_id": "53641705029856"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Whole Bean (24 Pk)",
+    "variant_id": "53641705062624"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 89.95,
+    "title": "2 oz | Pouch Medium Grind (24 Pk)",
+    "variant_id": "53641705095392"
+   }
+  ],
+  "vendor": "Barnyard Coffee Roasters"
+ }
+]

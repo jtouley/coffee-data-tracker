@@ -1,0 +1,406 @@
+[
+ {
+  "body_hash": "15696dfa717d4243",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-women-producer-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2020/07/Nicaragua-Country-Flag.png?fit=494%2C480&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "11006",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Central America",
+   "Nicaragua",
+   "coffee beans",
+   "single origin",
+   "women producers"
+  ],
+  "title": "Nicaragua",
+  "url": "https://springtownroasters.com/product/nicaragua-women-producer-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "11006:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8c6b5a4ee2635be",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-blueberry",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2020/07/Nicaragua-Country-Flag.png?fit=494%2C480&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "11952",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Beans",
+   "Central America",
+   "Natural process",
+   "Nicaragua",
+   "coffee",
+   "coffee beans"
+  ],
+  "title": "Nicaragua Blueberry",
+  "url": "https://springtownroasters.com/product/nicaragua-blueberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "11952:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d831ea76a71e27d5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Ethiopia-Country-Flag-white.jpg?fit=1191%2C924&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "12148",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "African coffee",
+   "Arabica",
+   "Beans",
+   "Ethiopia bean",
+   "Natural process",
+   "coffee beans",
+   "single origin"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://springtownroasters.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "12148:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85a5ce55ee593c88",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Colombia-Country-Flag.png?fit=723%2C923&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "269",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Colombia beans",
+   "Organic",
+   "coffee beans",
+   "single origin",
+   "women producers"
+  ],
+  "title": "Colombia",
+  "url": "https://springtownroasters.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "269:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7fb46809d5d3a0a7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-processed-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Ethiopia-Country-Flag-white.jpg?fit=1191%2C924&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "271",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "African coffee",
+   "Arabica",
+   "Beans",
+   "Ethiopia bean",
+   "Natural process",
+   "coffee beans",
+   "single origin"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://springtownroasters.com/product/ethiopia-natural-processed-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "271:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9cfa33470b835d37",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-women-producer-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Guatemala-Country-Flag.jpg?fit=640%2C673&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "274",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Fair Trade",
+   "Guatemala",
+   "Organic",
+   "coffee beans",
+   "single origin",
+   "women producers"
+  ],
+  "title": "Guatemala",
+  "url": "https://springtownroasters.com/product/guatemala-women-producer-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "274:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f67883f98a415fd7",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-women-producer-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Mexico-Country-Flag.jpg?fit=780%2C553&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "285",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Fair Trade",
+   "Mexico coffee",
+   "Organic",
+   "coffee beans",
+   "single origin",
+   "women producers"
+  ],
+  "title": "Mexico",
+  "url": "https://springtownroasters.com/product/mexico-women-producer-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "285:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53c4c7932590b146",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fair-trade-organic",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/Peru-Flag-Map.jpg?fit=924%2C1342&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "299",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Fair Trade",
+   "Organic",
+   "Peru coffee",
+   "coffee beans",
+   "single origin"
+  ],
+  "title": "Peru",
+  "url": "https://springtownroasters.com/product/peru-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "299:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a9bb29952d99935e",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2017/12/tanzania-country-flag.jpg?fit=300%2C370&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "303",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "African coffee",
+   "Arabica",
+   "Beans",
+   "Tanzania",
+   "coffee beans",
+   "peaberry"
+  ],
+  "title": "Tanzania",
+  "url": "https://springtownroasters.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "303:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6fb142136b3fd6b0",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-fair-trade-organic",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2018/08/PNG-Flag-Map.jpg?fit=768%2C527&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "570",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Fair Trade",
+   "Indonesia bean",
+   "Organic",
+   "beans",
+   "coffee beans",
+   "single origin"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://springtownroasters.com/product/papua-new-guinea-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "570:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc80ad2487337948",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2018/12/Costa-Rica-Flag.jpg?fit=971%2C924&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "633",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Costa Rica",
+   "Tarrazu",
+   "beans",
+   "single origin",
+   "women producers"
+  ],
+  "title": "Costa Rica",
+  "url": "https://springtownroasters.com/product/costa-rica-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "633:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24d92c5d5244ccbb",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee-beans",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2019/01/Colombia-Decaf.jpg?fit=350%2C350&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "685",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Colombia beans",
+   "EA process",
+   "decaf",
+   "microlot",
+   "single origin"
+  ],
+  "title": "Decaf",
+  "url": "https://springtownroasters.com/product/decaf-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "685:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51cb0f58ae3ee3fc",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-honey-processed-coffee",
+  "image": "https://i0.wp.com/springtownroasters.com/wp-content/uploads/2018/12/Costa-Rica-Flag.jpg?fit=971%2C924&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "695",
+  "product_type": "variable",
+  "roaster_slug": "springtownroasters",
+  "tags": [
+   "Arabica",
+   "Beans",
+   "Costa Rica bean",
+   "Tarrazu",
+   "beans",
+   "honey process",
+   "single origin"
+  ],
+  "title": "Costa Rica Honey Process",
+  "url": "https://springtownroasters.com/product/costa-rica-honey-processed-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "695:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

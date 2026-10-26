@@ -1,0 +1,472 @@
+[
+ {
+  "body_hash": "6f29db2f50fc4a3e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/colombia.png",
+  "platform": "woocommerce",
+  "product_id": "20992",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Medium roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Colombia",
+  "url": "https://bcbccoffeeroasters.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Colombia",
+    "variant_id": "20992:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7276afc44499d287",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/honduras-dark.png",
+  "platform": "woocommerce",
+  "product_id": "20995",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Dark roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Honduras",
+  "url": "https://bcbccoffeeroasters.com/product/honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Honduras",
+    "variant_id": "20995:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3e17189d1ae258bd",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/brazil.png",
+  "platform": "woocommerce",
+  "product_id": "20998",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Dark roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Brazil",
+  "url": "https://bcbccoffeeroasters.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Brazil",
+    "variant_id": "20998:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb2170f6018e4666",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/kenya-1.png",
+  "platform": "woocommerce",
+  "product_id": "21001",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Kenya",
+  "url": "https://bcbccoffeeroasters.com/product/kenya/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Kenya",
+    "variant_id": "21001:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3a5164e8029061f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-light",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/costa-rica-lite.png",
+  "platform": "woocommerce",
+  "product_id": "21004",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Costa Rica Light",
+  "url": "https://bcbccoffeeroasters.com/product/costa-rica-light/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Costa Rica Light",
+    "variant_id": "21004:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8bd588a87a1c2ba2",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/Rwanda-light-2-scaled-e1773109935139.png",
+  "platform": "woocommerce",
+  "product_id": "21007",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Rwanda light",
+  "url": "https://bcbccoffeeroasters.com/product/rwanda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Rwanda light",
+    "variant_id": "21007:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eff12780f3d27077",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/El-Salvador-2-copy-3.png",
+  "platform": "woocommerce",
+  "product_id": "21010",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Medium roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "El Salvador",
+  "url": "https://bcbccoffeeroasters.com/product/el-salvador/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "El Salvador",
+    "variant_id": "21010:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eed9ab0b80306d7f",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/peru.png",
+  "platform": "woocommerce",
+  "product_id": "21011",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Medium roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Peru",
+  "url": "https://bcbccoffeeroasters.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Peru",
+    "variant_id": "21011:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44a699f3d5b9b783",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/P.N.G-2-e1764867850998.png",
+  "platform": "woocommerce",
+  "product_id": "21014",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://bcbccoffeeroasters.com/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Papua New Guinea",
+    "variant_id": "21014:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0a0573dd70a4797",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/guatemala-e1764874237375.png",
+  "platform": "woocommerce",
+  "product_id": "21016",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Medium roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Guatemala",
+  "url": "https://bcbccoffeeroasters.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Guatemala",
+    "variant_id": "21016:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9df230dafecd5f7e",
+  "first_seen": "2026-10-26",
+  "handle": "dark",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/Nicaragua-Dark-3-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "21021",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Dark roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Nicaragua Dark",
+  "url": "https://bcbccoffeeroasters.com/product/dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Nicaragua Dark",
+    "variant_id": "21021:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8395253318bb34fd",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-starter-plan",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/Yellow-BG-1.png",
+  "platform": "woocommerce",
+  "product_id": "21027",
+  "product_type": "variable",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Coffee Starter Plan",
+  "url": "https://bcbccoffeeroasters.com/product/coffee-starter-plan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Coffee Starter Plan",
+    "variant_id": "21027:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "340c6d4e5cc81fe2",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-lover-plan",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/04/Red-BG-COPY.png",
+  "platform": "woocommerce",
+  "product_id": "21039",
+  "product_type": "variable",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Coffee Lover Plan",
+  "url": "https://bcbccoffeeroasters.com/product/coffee-lover-plan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "Coffee Lover Plan",
+    "variant_id": "21039:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04d026240753ad35",
+  "first_seen": "2026-10-26",
+  "handle": "jairo-peach",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2025/12/Jairo-Peach-1.png",
+  "platform": "woocommerce",
+  "product_id": "21432",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "Special Offering"
+  ],
+  "title": "Jairo Peach – Pink Bourbon",
+  "url": "https://bcbccoffeeroasters.com/product/jairo-peach/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 42.0,
+    "title": "Jairo Peach &#8211; Pink Bourbon",
+    "variant_id": "21432:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1577c3aa13f2e6df",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2026/03/House-Blend-2-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "21550",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "Medium roast coffee",
+   "blend"
+  ],
+  "title": "House Blend",
+  "url": "https://bcbccoffeeroasters.com/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "House Blend",
+    "variant_id": "21550:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54583d136c081076",
+  "first_seen": "2026-10-26",
+  "handle": "genesis-espresso-blend",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2020/05/Genesis-Blend-copy-2-1.png",
+  "platform": "woocommerce",
+  "product_id": "2377",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Dark roast coffee",
+   "Medium roast coffee",
+   "One Time Purchase",
+   "Special Offering"
+  ],
+  "title": "Genesis Espresso Blend",
+  "url": "https://bcbccoffeeroasters.com/product/genesis-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Genesis Espresso Blend",
+    "variant_id": "2377:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efd211256d1d4e85",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2020/05/mexico-2.png",
+  "platform": "woocommerce",
+  "product_id": "2381",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Medium roast coffee",
+   "One Time Purchase"
+  ],
+  "title": "Mexico",
+  "url": "https://bcbccoffeeroasters.com/product/mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Mexico",
+    "variant_id": "2381:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e366fd5e294fb55d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://bcbccoffeeroasters.com/wp-content/uploads/2020/05/El-Salvador-2-copy-3.png",
+  "platform": "woocommerce",
+  "product_id": "2382",
+  "product_type": "simple",
+  "roaster_slug": "bcbccoffeeroasters",
+  "tags": [
+   "Light roast coffee",
+   "One Time Purchase",
+   "Special Offering"
+  ],
+  "title": "Ethiopia",
+  "url": "https://bcbccoffeeroasters.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Ethiopia",
+    "variant_id": "2382:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

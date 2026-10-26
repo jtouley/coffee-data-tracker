@@ -1,0 +1,1504 @@
+[
+ {
+  "body_hash": "66cbf3ab9cf4a56a",
+  "first_seen": "2026-10-26",
+  "handle": "firefly-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/firefly-9955764.png?v=1788987970",
+  "platform": "shopify",
+  "product_id": "7541749678238",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Firefly",
+  "url": "https://oldworldcoffeeroasters.com/products/firefly-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42769962533022"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "42769962565790"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "42769962598558"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "42769962631326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (33% Savings) / Whole Bean",
+    "variant_id": "42769962664094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (33% Savings) / Coarse (French Press)",
+    "variant_id": "42769962696862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (33% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42769962729630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (33% Savings) / Fine (Espresso)",
+    "variant_id": "42769962762398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (37% Savings) / Whole Bean",
+    "variant_id": "42769962795166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (37% Savings) / Coarse (French Press)",
+    "variant_id": "42769962827934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (37% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42769962860702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (37% Savings) / Fine (Espresso)",
+    "variant_id": "42769962893470"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "9d7c90417681e482",
+  "first_seen": "2026-10-26",
+  "handle": "flume-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/flume-8498796.png?v=1783021986",
+  "platform": "shopify",
+  "product_id": "7541750268062",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [],
+  "title": "Flume",
+  "url": "https://oldworldcoffeeroasters.com/products/flume-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42769968005278"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "42769968038046"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Medium (Drip)",
+    "variant_id": "42769968070814"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "42769968103582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.75,
+    "title": "2 lbs (28% Savings) / Whole Bean",
+    "variant_id": "42769968136350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.75,
+    "title": "2 lbs (28% Savings) / Coarse (French Press)",
+    "variant_id": "42769968169118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.75,
+    "title": "2 lbs (28% Savings) / Medium (Drip)",
+    "variant_id": "42769968201886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.75,
+    "title": "2 lbs (28% Savings) / Fine (Espresso)",
+    "variant_id": "42769968234654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.75,
+    "title": "5 lbs (31% Savings) / Whole Bean",
+    "variant_id": "42769968267422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.75,
+    "title": "5 lbs (31% Savings) / Coarse (French Press)",
+    "variant_id": "42769968300190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.75,
+    "title": "5 lbs (31% Savings) / Medium (Drip)",
+    "variant_id": "42769968332958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.75,
+    "title": "5 lbs (31% Savings) / Fine (Espresso)",
+    "variant_id": "42769968365726"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "764d33ff3a602bb6",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/goldenhour_1.png?v=1782152745",
+  "platform": "shopify",
+  "product_id": "7560871313566",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Subscription",
+   "last-item"
+  ],
+  "title": "Roasters Choice Single Origin",
+  "url": "https://oldworldcoffeeroasters.com/products/roasters-choice-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42820073783454"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Course (French Press)",
+    "variant_id": "42820073816222"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "42820073848990"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "42820073881758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lbs (21% Savings) / Whole Bean",
+    "variant_id": "42820073914526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lbs (21% Savings) / Course (French Press)",
+    "variant_id": "42820073947294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820073980062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "42820074012830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "42820074045598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "5 lbs (21% Savings) / Course (French Press)",
+    "variant_id": "42820074078366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820074111134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "42820074143902"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "8342dbb67a34d5e8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/decaf_1.png?v=1760717932",
+  "platform": "shopify",
+  "product_id": "7560895070366",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Esmeralda Decaf",
+  "url": "https://oldworldcoffeeroasters.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42820141383838"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "42820141416606"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "42820141449374"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "42820141482142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (21% Savings) / Whole Bean",
+    "variant_id": "42820141514910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "42820141547678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820141580446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "42820141613214"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.5,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "42820141645982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.5,
+    "title": "5 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "42820141678750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.5,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820141711518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.5,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "42820141744286"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "b06e13c671258a8b",
+  "first_seen": "2026-10-26",
+  "handle": "staple-blends-rotating-weekly-selection",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/staple-blends-rotating-weekly-selection-6052768.png?v=1782193402",
+  "platform": "shopify",
+  "product_id": "7560912535710",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "last-item"
+  ],
+  "title": "Staple Blends Rotating Weekly Selection",
+  "url": "https://oldworldcoffeeroasters.com/products/staple-blends-rotating-weekly-selection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42820177592478"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz / Course (French Press)",
+    "variant_id": "42820177658014"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "42820177690782"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "42820177723550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (20% Savings) / Whole Bean",
+    "variant_id": "42820177756318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (20% Savings) / Course (French Press)",
+    "variant_id": "42820177789086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (20% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820177821854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs (20% Savings) / Fine (Espresso)",
+    "variant_id": "42820177854622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "42820177887390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (21% Savings) / Course (French Press)",
+    "variant_id": "42820177920158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "42820177952926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "42820177985694"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "2395a9f1b8fb0fc6",
+  "first_seen": "2026-10-26",
+  "handle": "breville-the-grind-control",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/breville-the-grind-control-540286.jpg?v=1732634485",
+  "platform": "shopify",
+  "product_id": "8136766816414",
+  "product_type": "Coffee Maker",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Merchandise"
+  ],
+  "title": "Breville - the Grind Control",
+  "url": "https://oldworldcoffeeroasters.com/products/breville-the-grind-control",
+  "variants": [
+   {
+    "available": true,
+    "grams": 7298,
+    "price_usd": 399.95,
+    "title": "Brushed Stainless Steel",
+    "variant_id": "44546508030110"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "8de43adcf9890959",
+  "first_seen": "2026-10-26",
+  "handle": "breville-the-milk-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/breville-the-milk-cafe-528541.jpg?v=1732634485",
+  "platform": "shopify",
+  "product_id": "8136958967966",
+  "product_type": "Milk Frother",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [],
+  "title": "Breville - the Milk Cafe",
+  "url": "https://oldworldcoffeeroasters.com/products/breville-the-milk-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1569,
+    "price_usd": 199.95,
+    "title": "Brushed Stainless Steel",
+    "variant_id": "44549585305758"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "163a56f79ece4277",
+  "first_seen": "2026-10-26",
+  "handle": "breville-58mm-naked-portafilter",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/breville-58mm-naked-portafilter-141470.jpg?v=1732634483",
+  "platform": "shopify",
+  "product_id": "8136969978014",
+  "product_type": "Espresso Accessories",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [],
+  "title": "Breville - 58mm Naked Portafilter",
+  "url": "https://oldworldcoffeeroasters.com/products/breville-58mm-naked-portafilter",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.95,
+    "title": "Default Title",
+    "variant_id": "44530535956638"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "47ed8c56fc0d69a2",
+  "first_seen": "2026-10-26",
+  "handle": "breville-the-puck-sucker",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/breville-the-puck-sucker-892836.jpg?v=1732634486",
+  "platform": "shopify",
+  "product_id": "8136972992670",
+  "product_type": "Espresso Accessories",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [],
+  "title": "Breville - the Puck Sucker",
+  "url": "https://oldworldcoffeeroasters.com/products/breville-the-puck-sucker",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.95,
+    "title": "Default Title",
+    "variant_id": "44530539266206"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "df67c79e50857727",
+  "first_seen": "2026-10-26",
+  "handle": "breville-the-dosing-funnel",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/breville-the-dosing-funnel-221582.jpg?v=1732634487",
+  "platform": "shopify",
+  "product_id": "8136988754078",
+  "product_type": "Espresso Accessories",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [],
+  "title": "Breville - the Dosing Funnel",
+  "url": "https://oldworldcoffeeroasters.com/products/breville-the-dosing-funnel",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Default Title",
+    "variant_id": "44530560172190"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "28c8fde3a1338c53",
+  "first_seen": "2026-10-26",
+  "handle": "team-no-sleep-hang-loose-crop-top",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/team-no-sleep-hang-loose-crop-top-567483.jpg?v=1732303101",
+  "platform": "shopify",
+  "product_id": "8144623501470",
+  "product_type": "",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Merchandise"
+  ],
+  "title": "Team No Sleep (Hang Loose) Crop Top",
+  "url": "https://oldworldcoffeeroasters.com/products/team-no-sleep-hang-loose-crop-top",
+  "variants": [
+   {
+    "available": true,
+    "grams": 266,
+    "price_usd": 65.0,
+    "title": "S",
+    "variant_id": "44546416771230"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 65.0,
+    "title": "M",
+    "variant_id": "44546416803998"
+   },
+   {
+    "available": true,
+    "grams": 320,
+    "price_usd": 65.0,
+    "title": "L",
+    "variant_id": "44546416836766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "XL",
+    "variant_id": "44546416869534"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 65.0,
+    "title": "2XL",
+    "variant_id": "44546416902302"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "18fc12e4f516fac4",
+  "first_seen": "2026-10-26",
+  "handle": "fruity-1",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/catimor-natural-9006701.png?v=1782193401",
+  "platform": "shopify",
+  "product_id": "8232858943646",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Catimor Natural",
+  "url": "https://oldworldcoffeeroasters.com/products/fruity-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (18% Savings) / Whole Bean",
+    "variant_id": "45280420462750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (18% Savings) / Coarse (French Press)",
+    "variant_id": "45280420495518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (18% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280420528286"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (18% Savings) / Fine (Espresso)",
+    "variant_id": "45280420561054"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280420593822"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280420626590"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280420659358"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280420692126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lbs (18% Savings) / Whole Bean",
+    "variant_id": "45280420724894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lbs (18% Savings) / Coarse (French Press)",
+    "variant_id": "45280420757662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lbs (18% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280420790430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lbs (18% Savings) / Fine (Espresso)",
+    "variant_id": "45280420823198"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "b330602595c8dfd0",
+  "first_seen": "2026-10-26",
+  "handle": "natural-honey-so-1",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/pacamara_1.png?v=1785874254",
+  "platform": "shopify",
+  "product_id": "8232860713118",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Pacamara CM Natural",
+  "url": "https://oldworldcoffeeroasters.com/products/natural-honey-so-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280427638942"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280427671710"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280427704478"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280427737246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.87,
+    "title": "2 lbs (21% Savings) / Whole Bean",
+    "variant_id": "45280427770014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.87,
+    "title": "2 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "45280427802782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.87,
+    "title": "2 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280427835550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.87,
+    "title": "2 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "45280427868318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.68,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "45280427901086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.68,
+    "title": "5 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "45280427933854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.68,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280427966622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.68,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "45280427999390"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "0f38196f5885ab5c",
+  "first_seen": "2026-10-26",
+  "handle": "nuanced-1",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/pacamara-washed-2092910.png?v=1782193401",
+  "platform": "shopify",
+  "product_id": "8232864153758",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Pacamara Washed",
+  "url": "https://oldworldcoffeeroasters.com/products/nuanced-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280435372190"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280435404958"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280435437726"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280435470494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (16% Savings) / Whole Bean",
+    "variant_id": "45280435503262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (16% Savings) / Coarse (French Press)",
+    "variant_id": "45280435536030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (16% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280435568798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (16% Savings) / Fine (Espresso)",
+    "variant_id": "45280435601566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lbs (16% Savings) / Whole Bean",
+    "variant_id": "45280435634334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lbs (16% Savings) / Coarse (French Press)",
+    "variant_id": "45280435667102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lbs (16% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280435699870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lbs (16% Savings) / Fine (Espresso)",
+    "variant_id": "45280435732638"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "3f2f0e772d08cbff",
+  "first_seen": "2026-10-26",
+  "handle": "staple-so-3",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/garzon-3806471.png?v=1789567994",
+  "platform": "shopify",
+  "product_id": "8232868053150",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Garzón",
+  "url": "https://oldworldcoffeeroasters.com/products/staple-so-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280438780062"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280438812830"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280438845598"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280438878366"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.9,
+    "title": "2 lbs (20% Savings) / Whole Bean",
+    "variant_id": "45280438911134"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.9,
+    "title": "2 lbs (20% Savings) / Coarse (French Press)",
+    "variant_id": "45280438943902"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.9,
+    "title": "2 lbs (20% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280438976670"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.9,
+    "title": "2 lbs (20% Savings) / Fine (Espresso)",
+    "variant_id": "45280439009438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.24,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "45280439042206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.24,
+    "title": "5 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "45280439074974"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.24,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280439107742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.24,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "45280439140510"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "7e2bf7b63437a1e1",
+  "first_seen": "2026-10-26",
+  "handle": "staple-so-1",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/finca-escenica-farm-blend-5620841.png?v=1788408128",
+  "platform": "shopify",
+  "product_id": "8232871067806",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Finca Escenica Farm Blend",
+  "url": "https://oldworldcoffeeroasters.com/products/staple-so-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280446742686"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280446775454"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280446808222"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280446840990"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (20% Savings) / Whole Bean",
+    "variant_id": "45280446873758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (20% Savings) / Coarse (French Press)",
+    "variant_id": "45280446906526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (20% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280446939294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.4,
+    "title": "2 lbs (20% Savings) / Fine (Espresso)",
+    "variant_id": "45280446972062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "45280447004830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "45280447037598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280447070366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.0,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "45280447103134"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "6f3b023a5c270462",
+  "first_seen": "2026-10-26",
+  "handle": "staple-so-2",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/ella-6102731.png?v=1782773407",
+  "platform": "shopify",
+  "product_id": "8232873492638",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "ELLA",
+  "url": "https://oldworldcoffeeroasters.com/products/staple-so-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280457785502"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280457818270"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280457851038"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280457883806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.89,
+    "title": "2 lbs (20% Savings) / Whole Bean",
+    "variant_id": "45280457916574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.89,
+    "title": "2 lbs (20% Savings) / Coarse (French Press)",
+    "variant_id": "45280457949342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.89,
+    "title": "2 lbs (20% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280457982110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.89,
+    "title": "2 lbs (20% Savings) / Fine (Espresso)",
+    "variant_id": "45280458014878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.72,
+    "title": "5 lbs (21% Savings) / Whole Bean",
+    "variant_id": "45280458047646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.72,
+    "title": "5 lbs (21% Savings) / Coarse (French Press)",
+    "variant_id": "45280458080414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.72,
+    "title": "5 lbs (21% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280458113182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.72,
+    "title": "5 lbs (21% Savings) / Fine (Espresso)",
+    "variant_id": "45280458145950"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "1a91bffc8c563324",
+  "first_seen": "2026-10-26",
+  "handle": "seasonal-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/harvest-8938019.png?v=1790727967",
+  "platform": "shopify",
+  "product_id": "8232877359262",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Harvest",
+  "url": "https://oldworldcoffeeroasters.com/products/seasonal-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45280478494878"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "45280478527646"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "45280478560414"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "45280478593182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lbs (23% Savings) / Whole Bean",
+    "variant_id": "45280478625950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lbs (23% Savings) / Coarse (French Press)",
+    "variant_id": "45280478658718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lbs (23% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280478691486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lbs (23% Savings) / Fine (Espresso)",
+    "variant_id": "45280478724254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (23% Savings) / Whole Bean",
+    "variant_id": "45280478757022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (23% Savings) / Coarse (French Press)",
+    "variant_id": "45280478789790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (23% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "45280478822558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (23% Savings) / Fine (Espresso)",
+    "variant_id": "45280478855326"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ },
+ {
+  "body_hash": "b72c10bb1dabdbc2",
+  "first_seen": "2026-10-26",
+  "handle": "dusk-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1992/8393/files/dusk-1671527.png?v=1788987969",
+  "platform": "shopify",
+  "product_id": "8683925799070",
+  "product_type": "Coffee",
+  "roaster_slug": "oldworldcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dusk",
+  "url": "https://oldworldcoffeeroasters.com/products/dusk-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lbs (33% Savings) / Whole Bean",
+    "variant_id": "46709992259742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lbs (33% Savings) / Coarse (French Press)",
+    "variant_id": "46709992292510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lbs (33% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "46709992325278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lbs (33% Savings) / Fine (Espresso)",
+    "variant_id": "46709992358046"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "46709992390814"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.5,
+    "title": "10 oz / Coarse (French Press)",
+    "variant_id": "46709992423582"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.5,
+    "title": "10 oz / Medium (Drip - Pour Over)",
+    "variant_id": "46709992456350"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.5,
+    "title": "10 oz / Fine (Espresso)",
+    "variant_id": "46709992489118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5 lbs (37% Savings) / Whole Bean",
+    "variant_id": "46709992521886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5 lbs (37% Savings) / Coarse (French Press)",
+    "variant_id": "46709992554654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5 lbs (37% Savings) / Medium (Drip - Pour Over)",
+    "variant_id": "46709992587422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5 lbs (37% Savings) / Fine (Espresso)",
+    "variant_id": "46709992620190"
+   }
+  ],
+  "vendor": "Old World Coffee Roasters"
+ }
+]

@@ -1,0 +1,345 @@
+[
+ {
+  "body_hash": "c9d41ff70cd45a56",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8613_145ad7e7-7a70-45e8-b4d8-3d8c8108ae8e.jpg?v=1792175440",
+  "platform": "shopify",
+  "product_id": "7686888980543",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.blueflamecoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Whole Beans",
+    "variant_id": "41407771148351"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Coarse Ground",
+    "variant_id": "41407771181119"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Drip Ground",
+    "variant_id": "41407771213887"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Whole Beans",
+    "variant_id": "41407771246655"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Coarse Ground",
+    "variant_id": "41407771279423"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Drip Ground",
+    "variant_id": "41407771312191"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "b79582d236c5c506",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8614_b9ae507f-e3d9-4803-bbf2-c152cd9bdefc.jpg?v=1792175333",
+  "platform": "shopify",
+  "product_id": "7691373903935",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://www.blueflamecoffee.com/products/house-blend-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Whole Beans",
+    "variant_id": "41407689883711"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Whole Beans",
+    "variant_id": "41407689916479"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Coarse Ground",
+    "variant_id": "41407691128895"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Drip Ground",
+    "variant_id": "41407691161663"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Coarse Ground",
+    "variant_id": "41407691194431"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Drip Ground",
+    "variant_id": "41407691227199"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "b5d9423c4507c88e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8615_b2964ba6-68f2-4666-a849-3cd8e8d4b743.jpg?v=1792104269",
+  "platform": "shopify",
+  "product_id": "7691383210047",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.blueflamecoffee.com/products/colombia-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Whole Beans",
+    "variant_id": "41407758270527"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Coarse Ground",
+    "variant_id": "41407758303295"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.0,
+    "title": "250g / 8.8oz / Drip Ground",
+    "variant_id": "41407758336063"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Whole Beans",
+    "variant_id": "41407758368831"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Coarse Ground",
+    "variant_id": "41407758401599"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 27.0,
+    "title": "500g / 17.6oz / Drip Ground",
+    "variant_id": "41407758434367"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "7ca9223a7499dd46",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8616_e6c78915-3ea3-47f1-87b7-014bbb1fdcae.jpg?v=1792104084",
+  "platform": "shopify",
+  "product_id": "7691409031231",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://www.blueflamecoffee.com/products/guatemala-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Whole Beans",
+    "variant_id": "41407696142399"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Coarse Ground",
+    "variant_id": "41407696175167"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Drip Ground",
+    "variant_id": "41407696207935"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Whole Beans",
+    "variant_id": "41407696240703"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Coarse Ground",
+    "variant_id": "41407696273471"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz / Drip Ground",
+    "variant_id": "41407696306239"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "3bcc8db657458649",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8621_ef86ef70-39e4-404a-9a4d-45f304f79ba1.jpg?v=1792103965",
+  "platform": "shopify",
+  "product_id": "7691409326143",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Ethiopia",
+  "url": "https://www.blueflamecoffee.com/products/ethiopia-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Whole Beans",
+    "variant_id": "41407692603455"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Coarse Ground",
+    "variant_id": "41407692636223"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz / Drip Ground",
+    "variant_id": "41407692668991"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 29.0,
+    "title": "500g / 17.6oz / Whole Beans",
+    "variant_id": "41407692701759"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 29.0,
+    "title": "500g / 17.6oz / Coarse Ground",
+    "variant_id": "41407692734527"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 29.0,
+    "title": "500g / 17.6oz / Drip Ground",
+    "variant_id": "41407692767295"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "a412505cfe6b7715",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8617_bcfc7046-7811-44fa-b225-caa4c1695440.jpg?v=1792175902",
+  "platform": "shopify",
+  "product_id": "8433247682623",
+  "product_type": "Conventional",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.blueflamecoffee.com/products/decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.5,
+    "title": "250g / 8.8oz",
+    "variant_id": "44133503172671"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "500g / 17.6oz",
+    "variant_id": "44133503205439"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ },
+ {
+  "body_hash": "4f2ff99607379147",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0081/5104/0063/files/IMG_8624.jpg?v=1792177761",
+  "platform": "shopify",
+  "product_id": "8433262198847",
+  "product_type": "",
+  "roaster_slug": "blueflamecoffee",
+  "tags": [],
+  "title": "Pacific Blend Cold Brew Extract",
+  "url": "https://www.blueflamecoffee.com/products/pacific-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Default Title",
+    "variant_id": "44133555732543"
+   }
+  ],
+  "vendor": "Blue Flame Coffee"
+ }
+]

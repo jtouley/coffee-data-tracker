@@ -1,0 +1,774 @@
+[
+ {
+  "body_hash": "dfe9ef10b53a1b2f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-habtamu-goro",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Ethiopia-Habtamu-Goro.jpg?v=1792636855",
+  "platform": "shopify",
+  "product_id": "15445983625460",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopian Habtamu Goro",
+  "url": "https://www.owlcoffeeroasters.com/products/ethiopian-habtamu-goro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "67855168995572"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "67855169028340"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / Aeropress",
+    "variant_id": "67855169061108"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "67855169093876"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "67855169126644"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz / French Press",
+    "variant_id": "67855169159412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67855169192180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "67855169224948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Aeropress",
+    "variant_id": "67855169257716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "67855169290484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "67855169323252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "67855169356020"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "994be8d7602533cd",
+  "first_seen": "2026-10-26",
+  "handle": "bekele-belachew-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Bekele-Belachew_101af43b-e708-4ba5-a903-5e3b0fd7a0ec.jpg?v=1792975219",
+  "platform": "shopify",
+  "product_id": "15446011805940",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Bekele Belachew Anaerobic Natural",
+  "url": "https://www.owlcoffeeroasters.com/products/bekele-belachew-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "67855264776436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "67855264809204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / Aeropress",
+    "variant_id": "67855264841972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "67855264874740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "67855264907508"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz / French Press",
+    "variant_id": "67855264940276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67855264973044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "67855265005812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / Aeropress",
+    "variant_id": "67855265038580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "67855265071348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "67855265104116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz / French Press",
+    "variant_id": "67855265136884"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "599be197e61bc788",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Espresso_cup.jpg?v=1759179588",
+  "platform": "shopify",
+  "product_id": "9149304635636",
+  "product_type": "",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Roasters Choice",
+  "url": "https://www.owlcoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "Whole Bean",
+    "variant_id": "46960031269108"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "Espresso",
+    "variant_id": "46960031334644"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "Aeropress",
+    "variant_id": "46960031432948"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "V60 / Pour Over",
+    "variant_id": "46960031465716"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "French Press",
+    "variant_id": "46960031531252"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 29.0,
+    "title": "Drip Coffee",
+    "variant_id": "47048975745268"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "176525b7974ad9e9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Espresso-Blend.jpg?v=1763736418",
+  "platform": "shopify",
+  "product_id": "9221567480052",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.owlcoffeeroasters.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "47211310285044"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "47211310317812"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / Aeropress",
+    "variant_id": "47211310350580"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "47211310383348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "47211310416116"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.5,
+    "title": "8 oz / French Press",
+    "variant_id": "47211310448884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47211310481652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "47211310514420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / Aeropress",
+    "variant_id": "47211310547188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "47211310579956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "47211310612724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz / French Press",
+    "variant_id": "47211310645492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48828573843700"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "1fced30c7c173ff1",
+  "first_seen": "2026-10-26",
+  "handle": "hacienda-barbara",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Hacienda-Barbar.jpg?v=1765769429",
+  "platform": "shopify",
+  "product_id": "9243258716404",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Hacienda Barbara",
+  "url": "https://www.owlcoffeeroasters.com/products/hacienda-barbara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "47309691486452"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "47309691519220"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Aeropress",
+    "variant_id": "47309691551988"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "47309691584756"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "47309691617524"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / French Press",
+    "variant_id": "47309691650292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47309691683060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "47309691715828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Aeropress",
+    "variant_id": "47309691748596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "47309691781364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "47309691814132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "47309691846900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48828586033396"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "b6dc344a18f538b9",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gitare-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Kenya-Gitare-AB.jpg?v=1784200604",
+  "platform": "shopify",
+  "product_id": "9553875009780",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gitare AB",
+  "url": "https://www.owlcoffeeroasters.com/products/kenya-gitare-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "48860981690612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / Espresso",
+    "variant_id": "48860981723380"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / Aeropress",
+    "variant_id": "48860981756148"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "48860981788916"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "48860981821684"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8 oz / French Press",
+    "variant_id": "48860981854452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48860981887220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48860981919988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / Aeropress",
+    "variant_id": "48860981952756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "48860981985524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "48860982018292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48860982051060"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "e02f7fe213bc2922",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-santa-lucia-casona",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Honduras-Santa-Lucia_26ce9cb9-01c8-4da9-9a36-e5e0cf53eae8.jpg?v=1787223666",
+  "platform": "shopify",
+  "product_id": "9592305778932",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Honduras Santa Lucia Casona",
+  "url": "https://www.owlcoffeeroasters.com/products/honduras-santa-lucia-casona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "49075333398772"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "49075333431540"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / Aeropress",
+    "variant_id": "49075333464308"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "49075333497076"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "49075333529844"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 39.0,
+    "title": "8 oz / French Press",
+    "variant_id": "49075333562612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49075721830644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / Espresso",
+    "variant_id": "49075721863412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "49075721896180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / V60 / Pour Over",
+    "variant_id": "49075721928948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "49075721961716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz / French Press",
+    "variant_id": "49075721994484"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ },
+ {
+  "body_hash": "e446b87d5a520a3d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habtamu-danche",
+  "image": "https://cdn.shopify.com/s/files/1/0779/4222/7188/files/Ethiopia-Habtamu-Danche.jpg?v=1788173453",
+  "platform": "shopify",
+  "product_id": "9636907450612",
+  "product_type": "coffee",
+  "roaster_slug": "owlcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopian Habtamu Fekadu Aga Danche",
+  "url": "https://www.owlcoffeeroasters.com/products/ethiopia-habtamu-danche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "49289788391668"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "49289788424436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Aeropress",
+    "variant_id": "49289788457204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / V60 / Pour Over",
+    "variant_id": "49289788489972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Drip Coffee",
+    "variant_id": "49289788522740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / French Press",
+    "variant_id": "49289788555508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49289929130228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "49289929162996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / Aeropress",
+    "variant_id": "49289929195764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / V60 / Pour Over",
+    "variant_id": "49289929228532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "49289929261300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.5,
+    "title": "12 oz / French Press",
+    "variant_id": "49289929294068"
+   }
+  ],
+  "vendor": "O.W.L Coffee Roasters"
+ }
+]

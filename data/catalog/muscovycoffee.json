@@ -1,0 +1,255 @@
+[
+ {
+  "body_hash": "bada3f8d811d3a85",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0024/4288/7281/files/WhiteCoffeeBags2_ba0c3ade-b06d-4896-a2fc-2a8d56da6465.jpg?v=1713879956",
+  "platform": "shopify",
+  "product_id": "6949789499505",
+  "product_type": "Retail Roasted Coffee",
+  "roaster_slug": "muscovycoffee",
+  "tags": [],
+  "title": "Muscovy Espresso",
+  "url": "https://www.muscovycoffee.com/products/brazil-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Whole Bean",
+    "variant_id": "40461412401265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / French Press",
+    "variant_id": "40461412434033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Drip",
+    "variant_id": "40461412466801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "40461412499569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "40461412532337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / Drip",
+    "variant_id": "40461412565105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Cold Brew",
+    "variant_id": "40461412597873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Espresso",
+    "variant_id": "40874146365553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "40874146398321"
+   }
+  ],
+  "vendor": "Muscovy Coffee Roasters"
+ },
+ {
+  "body_hash": "f5526ba234731be1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0024/4288/7281/files/WhiteCoffeeBags2_f3fdc49f-eac0-49ef-94ed-e6f656fd71f6.jpg?v=1713880527",
+  "platform": "shopify",
+  "product_id": "7082055303281",
+  "product_type": "Retail Roasted Coffee",
+  "roaster_slug": "muscovycoffee",
+  "tags": [],
+  "title": "Colombia Nariño - Decaf",
+  "url": "https://www.muscovycoffee.com/products/colombia-narino-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce / Whole Bean",
+    "variant_id": "40874151772273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "40874151805041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce / Drip",
+    "variant_id": "40874151837809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce / French Press",
+    "variant_id": "40874151870577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 Pounds / Drip",
+    "variant_id": "40874151903345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 Pounds / French Press",
+    "variant_id": "40874151936113"
+   }
+  ],
+  "vendor": "Muscovy Coffee Roasters"
+ },
+ {
+  "body_hash": "5d6b785126ea3301",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-las-nubes",
+  "image": "https://cdn.shopify.com/s/files/1/0024/4288/7281/products/WhiteCoffeeBags2_f3fdc49f-eac0-49ef-94ed-e6f656fd71f6.jpg?v=1625604539",
+  "platform": "shopify",
+  "product_id": "7186791104625",
+  "product_type": "Retail Roasted Coffee",
+  "roaster_slug": "muscovycoffee",
+  "tags": [],
+  "title": "Colombia Palmera",
+  "url": "https://www.muscovycoffee.com/products/colombia-las-nubes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounce / Whole Bean",
+    "variant_id": "41141495890033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "41141495922801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounce / Drip",
+    "variant_id": "41141495955569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounce / French Press",
+    "variant_id": "41141495988337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 Pounds / Drip",
+    "variant_id": "41141496021105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5 Pounds / French Press",
+    "variant_id": "41141496053873"
+   }
+  ],
+  "vendor": "Muscovy Coffee Roasters"
+ },
+ {
+  "body_hash": "1414bc666e99249c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0024/4288/7281/products/WhiteCoffeeBags2_61a4654d-926a-4a19-86b2-ec2a822883bc.jpg?v=1625604571",
+  "platform": "shopify",
+  "product_id": "7829086371953",
+  "product_type": "Retail Roasted Coffee",
+  "roaster_slug": "muscovycoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.muscovycoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Whole Bean",
+    "variant_id": "44535410458737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / French Press",
+    "variant_id": "44535410491505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounce / Drip",
+    "variant_id": "44535410524273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "44535410557041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "44535410589809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5 Pound / Drip",
+    "variant_id": "44535410622577"
+   }
+  ],
+  "vendor": "Muscovy Coffee Roasters"
+ }
+]

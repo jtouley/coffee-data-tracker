@@ -1,0 +1,756 @@
+[
+ {
+  "body_hash": "fc28ac12bff2e037",
+  "first_seen": "2026-10-26",
+  "handle": "low-rider",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/LOW_RIDER_Front_01.png?v=1773435918",
+  "platform": "shopify",
+  "product_id": "6555206975643",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "LOW RIDER - DECAF",
+  "url": "https://amigoroasters.com/products/low-rider",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "39483309424795"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681031930011"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681031962779"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681031995547"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681032028315"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681032061083"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681032093851"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681032126619"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "a83525d7ec48d8c8",
+  "first_seen": "2026-10-26",
+  "handle": "jefa",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/JEFA_Front_01.png?v=1773435977",
+  "platform": "shopify",
+  "product_id": "6555212087451",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "JEFA",
+  "url": "https://amigoroasters.com/products/jefa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "39483287568539"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681032159387"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681032192155"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681032224923"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681032257691"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681032290459"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681032323227"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681032355995"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "df680cd612cb5cba",
+  "first_seen": "2026-10-26",
+  "handle": "wake-n-bake",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/WAKE_N_BAKE_Front_01.png?v=1773435778",
+  "platform": "shopify",
+  "product_id": "7281932927131",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "WAKE N BAKE",
+  "url": "https://amigoroasters.com/products/wake-n-bake",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "41950077157531"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681032847515"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681032880283"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681032913051"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681032945819"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681032978587"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681033011355"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681033044123"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "4f9e60a3905aa51f",
+  "first_seen": "2026-10-26",
+  "handle": "old-school",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/OLD_SCHOOL_FRONT_01.png?v=1774371482",
+  "platform": "shopify",
+  "product_id": "7742457675931",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "OLD SCHOOL",
+  "url": "https://amigoroasters.com/products/old-school",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "43676685303963"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681033306267"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681033339035"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681033371803"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681033404571"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681033437339"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681033470107"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681033502875"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "3c7b0163313d5fdc",
+  "first_seen": "2026-10-26",
+  "handle": "fruit-naps",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/DSCF9654-87.png?v=1790270130",
+  "platform": "shopify",
+  "product_id": "7866095370395",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "FRUIT NAPS",
+  "url": "https://amigoroasters.com/products/fruit-naps",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "44110182973595"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681033535643"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681033568411"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681033601179"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681033633947"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681033666715"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681033699483"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681033732251"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "a1693c3762c13fd9",
+  "first_seen": "2026-10-26",
+  "handle": "three-guey",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/THREE_GUEY_Front_01.png?v=1773435841",
+  "platform": "shopify",
+  "product_id": "8349600710811",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "THREE-GÜEY",
+  "url": "https://amigoroasters.com/products/three-guey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "45854891114651"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681033765019"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681033797787"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681033830555"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681033863323"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681033896091"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681033928859"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681033961627"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "fcf5dd00809ac6b2",
+  "first_seen": "2026-10-26",
+  "handle": "finca-og",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/FINCA_OG_Front_01.png?v=1773420330",
+  "platform": "shopify",
+  "product_id": "8386945613979",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "FINCA OG",
+  "url": "https://amigoroasters.com/products/finca-og",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "46000937042075"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681033994395"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681034027163"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681034059931"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681034092699"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681034125467"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681034158235"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681034191003"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "b7a1b9b24d20174e",
+  "first_seen": "2026-10-26",
+  "handle": "flower-power",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/DSCF9648-85.png?v=1790270169",
+  "platform": "shopify",
+  "product_id": "8490803527835",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [
+   "sub-available"
+  ],
+  "title": "FLOWER POWER",
+  "url": "https://amigoroasters.com/products/flower-power",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "46435125526683"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681034453147"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681034485915"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681034518683"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681034551451"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681034584219"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681034616987"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681034649755"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "ab0762d60b9ead36",
+  "first_seen": "2026-10-26",
+  "handle": "tandem-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/tandemroastfront_1.png?v=1765839771",
+  "platform": "shopify",
+  "product_id": "8812902383771",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [],
+  "title": "TANDEM ROAST",
+  "url": "https://amigoroasters.com/products/tandem-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "47676082389147"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground drip",
+    "variant_id": "47681036910747"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground espresso",
+    "variant_id": "47681036943515"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground cold brew",
+    "variant_id": "47681036976283"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47681037009051"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground drip",
+    "variant_id": "47681037041819"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground espresso",
+    "variant_id": "47681037074587"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb / Ground cold brew",
+    "variant_id": "47681037107355"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "c1ff000d83fb681f",
+  "first_seen": "2026-10-26",
+  "handle": "finca-anarquia",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/1_a0e226bd-8218-4da4-844c-0d163ea705a8.png?v=1792713203",
+  "platform": "shopify",
+  "product_id": "9396459143323",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [],
+  "title": "ANARQUÍA",
+  "url": "https://amigoroasters.com/products/finca-anarquia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "49891481813147"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5lb",
+    "variant_id": "49891481845915"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "fc4ea1fd2eab8430",
+  "first_seen": "2026-10-26",
+  "handle": "el-caracol",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/2_45711c03-23e2-4a89-ba89-cf1160458b50.png?v=1792713251",
+  "platform": "shopify",
+  "product_id": "9396461076635",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [],
+  "title": "EL CARACOL",
+  "url": "https://amigoroasters.com/products/el-caracol",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "49891478274203"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5lb",
+    "variant_id": "49891478306971"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ },
+ {
+  "body_hash": "5f926a6ecd276bee",
+  "first_seen": "2026-10-26",
+  "handle": "tres-hermanos",
+  "image": "https://cdn.shopify.com/s/files/1/0520/9532/0219/files/4_cc531150-6d1b-46f4-9a28-e45cfe430f39.png?v=1792713268",
+  "platform": "shopify",
+  "product_id": "9396461240475",
+  "product_type": "Coffee",
+  "roaster_slug": "amigoroasters",
+  "tags": [],
+  "title": "TRES HERMANOS",
+  "url": "https://amigoroasters.com/products/tres-hermanos",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "49872825745563"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5lb",
+    "variant_id": "49872825778331"
+   }
+  ],
+  "vendor": "Amigo Coffee Roasters"
+ }
+]

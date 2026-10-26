@@ -1,0 +1,135 @@
+{
+ "8375145431345": {
+  "body_hash": "aa95fa1350eef7a1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity",
+   "tropical",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8375148740913": {
+  "body_hash": "6c4025e79ed1fe0d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "citrus",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "8375149494577": {
+  "body_hash": "a5a7c9ec39f4ae61",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fruity",
+   "tropical",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8375152542001": {
+  "body_hash": "063ea391f4a0c00a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity",
+   "tropical",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8375158997297": {
+  "body_hash": "0e0b4eee804595f3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity",
+   "tropical",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8375159554353": {
+  "body_hash": "dfd6a2ea6b7d74aa",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "fruity",
+   "tropical",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8379174453553": {
+  "body_hash": "668afdd2bcc0c0a8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "citrus",
+   "nutty"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,709 @@
+[
+ {
+  "body_hash": "f030b1c68e348be4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-1",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/4.19_VCR_Honduras_3784818a-e87f-4cd7-90fe-03d22e6dbeb1.jpg?v=1778736978",
+  "platform": "shopify",
+  "product_id": "15103425052976",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://visiblecoffeeroasters.com/products/honduras-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "66777573097776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "66777573130544"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "66777573163312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "66777573196080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "66777573228848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "66777573261616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "66777573294384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "66777573327152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "66777573359920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "66777573392688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "66777573425456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "66777573458224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "66777573490992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "66777573523760"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "c937e08238305791",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/IMG_3573.jpg?v=1784332089",
+  "platform": "shopify",
+  "product_id": "15180783616304",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://visiblecoffeeroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "67379123454256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "67379123487024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "67379123519792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "67379123552560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "67379123585328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "67379123618096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "67379123650864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67379123683632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "67379123716400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "67379123749168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "67379123781936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "67379123814704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "67379123847472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "67379123880240"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "89447c660725e6cc",
+  "first_seen": "2026-10-26",
+  "handle": "founder-s-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/4.19_VCR_House_d667275d-7697-4885-a447-ea70236ab21a.jpg?v=1778736100",
+  "platform": "shopify",
+  "product_id": "9603964141872",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://visiblecoffeeroasters.com/products/founder-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "49090998174000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "49090998206768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49090998239536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "49090998272304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49090998305072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "49090998337840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "49090998370608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "49090998403376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49090998436144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "49090998468912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49090998501680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "49090998534448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "49146589511984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49146589544752"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "4efa45a01a517ddd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-founder-s-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/4.19_VCR_Decaf_f93c67fd-770f-4728-b72d-3bac5a82d59c.jpg?v=1778736778",
+  "platform": "shopify",
+  "product_id": "9603966992688",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "Decaf House Blend",
+  "url": "https://visiblecoffeeroasters.com/products/decaf-founder-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "49090999025968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "49090999058736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49090999091504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "49090999124272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49090999157040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "49090999189808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "49090999222576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "49090999255344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49090999288112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "49090999320880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49090999353648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "49090999386416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "49146588922160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49146588954928"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "3d850a7ab32762b4",
+  "first_seen": "2026-10-26",
+  "handle": "visible-coffee-roast-of-the-month-club",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/visible-89.jpg?v=1726253469",
+  "platform": "shopify",
+  "product_id": "9607408091440",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "Visible Coffee Roast of the Month Club",
+  "url": "https://visiblecoffeeroasters.com/products/visible-coffee-roast-of-the-month-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Default Title",
+    "variant_id": "49102591525168"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "55a997ff746e06ce",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/4.19_VCR_South_America_dd7457fe-7b7a-4aaa-9d3a-2a4d23099ee9.jpg?v=1778736071",
+  "platform": "shopify",
+  "product_id": "9752468521264",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "South American Blend",
+  "url": "https://visiblecoffeeroasters.com/products/mexico-oaxaca-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "49558868656432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "49558868689200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "49558868721968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49558868754736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "49558868787504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49558868820272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "49558868853040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49558868885808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "49558868918576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "49558868951344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49558868984112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "49558869016880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49558869049648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "49558869082416"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ },
+ {
+  "body_hash": "2b132accc8abcccd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0873/0981/2016/files/4.19_VCR_Guatemala_51ec79a6-ed39-4a41-ba09-efc0da5bfa18.jpg?v=1778736044",
+  "platform": "shopify",
+  "product_id": "9752503025968",
+  "product_type": "",
+  "roaster_slug": "visiblecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://visiblecoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "49558955557168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Extra Fine (Turkish)",
+    "variant_id": "49558955589936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Fine (Espresso)",
+    "variant_id": "49558955622704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49558955655472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium (Drip | Pour Over)",
+    "variant_id": "49558955688240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49558955721008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "16oz / Coarse (Cold Brew | French Press)",
+    "variant_id": "49558955753776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49558955786544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Extra Fine (Turkish)",
+    "variant_id": "49558955819312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine (Espresso)",
+    "variant_id": "49558955852080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Fine (Aeropress | Mokapot)",
+    "variant_id": "49558955884848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium (Drip | Pour Over)",
+    "variant_id": "49558955917616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium-Coarse (Metal Filter | Chemex)",
+    "variant_id": "49558955950384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse (Cold Brew | French Press)",
+    "variant_id": "49558955983152"
+   }
+  ],
+  "vendor": "Visible Coffee Roasters"
+ }
+]

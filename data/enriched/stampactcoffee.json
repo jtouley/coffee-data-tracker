@@ -1,0 +1,263 @@
+{
+ "1317173788731": {
+  "body_hash": "fc4ec72f2a103844",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "complex character",
+   "cacao",
+   "stone fruit intense",
+   "full bodied"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Heirloom",
+   "Typica"
+  ]
+ },
+ "1515282792507": {
+  "body_hash": "12e909ed77cb1c13",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "blackberry",
+   "biscuit",
+   "cola"
+  ],
+  "varietals": [
+   "Ruiru 11",
+   "Sl28"
+  ]
+ },
+ "2177099300923": {
+  "body_hash": "46d010ea462ba274",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "plum",
+   "caramel",
+   "bakers chocolate",
+   "black tea"
+  ],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo"
+  ]
+ },
+ "4666782449723": {
+  "body_hash": "fac7b6b2007c8ddc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "rich in",
+   "dark chocolate",
+   "almond",
+   "heavy body"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "7443649790203": {
+  "body_hash": "8e638e43f059ca0a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "complex in character",
+   "praline"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "8225161740539": {
+  "body_hash": "93442a051e7d5253",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red grapes",
+   "candy apple",
+   "caramel"
+  ],
+  "varietals": [
+   "Caturra",
+   "Mundo Novo"
+  ]
+ },
+ "8336385736955": {
+  "body_hash": "89a51a232706975e",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "berry jam",
+   "spice",
+   "butterscotch"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "9314178072827": {
+  "body_hash": "6eb2939b1cb4d8ee",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "9373185900795": {
+  "body_hash": "9c693fb44556c558",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "candied tropical fruit",
+   "floral",
+   "elegant"
+  ],
+  "varietals": [
+   "Gesha"
+  ]
+ },
+ "9403442757883": {
+  "body_hash": "787d2628fe91a29f",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "candied berries",
+   "melon",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "9417554690299": {
+  "body_hash": "7e9c546d4b2826d3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dates",
+   "brown sugar",
+   "candied plum"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "9427797672187": {
+  "body_hash": "555a3c41d4c09fa3",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1950,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "white peach",
+   "floral",
+   "orange sorbet"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

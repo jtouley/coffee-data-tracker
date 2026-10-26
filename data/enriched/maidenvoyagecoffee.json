@@ -1,0 +1,86 @@
+{
+ "6807d3abaa04043fdb218d71": {
+  "body_hash": "728e0b44211d1175",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo"
+  ]
+ },
+ "680c0dae0020954130374f0f": {
+  "body_hash": "1d93678e265b6367",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "680c0dd20020954130374f24": {
+  "body_hash": "31f817d1e7babd92",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "680c0de5aa04043fdb2520bf": {
+  "body_hash": "e9afc80103930cc8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "680c0df98099fc548e738cd4": {
+  "body_hash": "aae52e7ae207e225",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

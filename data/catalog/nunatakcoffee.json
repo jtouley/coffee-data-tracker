@@ -1,0 +1,255 @@
+[
+ {
+  "body_hash": "7fcbfd9c0dada4a8",
+  "first_seen": "2026-10-26",
+  "handle": "marsh-mud-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2504/2568/products/20190920_132947.jpg?v=1580765019",
+  "platform": "shopify",
+  "product_id": "1279870763044",
+  "product_type": "Beans",
+  "roaster_slug": "nunatakcoffee",
+  "tags": [
+   "blends",
+   "bold",
+   "chocolate",
+   "dark roast",
+   "smooth",
+   "tobacco"
+  ],
+  "title": "Marsh Mud",
+  "url": "https://www.nunatakcoffee.com/products/marsh-mud-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "11007216910372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Fine",
+    "variant_id": "11007216943140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Coarse",
+    "variant_id": "11007216975908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41971431768100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Fine",
+    "variant_id": "41971431800868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Coarse",
+    "variant_id": "41971431833636"
+   }
+  ],
+  "vendor": "Nunatak Coffee"
+ },
+ {
+  "body_hash": "c01a8a7cb57ff49d",
+  "first_seen": "2026-10-26",
+  "handle": "raven-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2504/2568/products/20190920_132921.jpg?v=1580764926",
+  "platform": "shopify",
+  "product_id": "1279962906660",
+  "product_type": "Beans",
+  "roaster_slug": "nunatakcoffee",
+  "tags": [
+   "blends",
+   "blueberry",
+   "bright",
+   "chocolate",
+   "espresso",
+   "nutty"
+  ],
+  "title": "Raven Espresso",
+  "url": "https://www.nunatakcoffee.com/products/raven-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "11007453528100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Fine",
+    "variant_id": "11007453560868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Coarse",
+    "variant_id": "11007453593636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41971432718372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Fine",
+    "variant_id": "41971432751140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Coarse",
+    "variant_id": "41971432783908"
+   }
+  ],
+  "vendor": "Nunatak Coffee"
+ },
+ {
+  "body_hash": "01377833e2643710",
+  "first_seen": "2026-10-26",
+  "handle": "blends",
+  "image": "https://cdn.shopify.com/s/files/1/2504/2568/products/20190920_133023.jpg?v=1580765105",
+  "platform": "shopify",
+  "product_id": "344104534052",
+  "product_type": "Beans",
+  "roaster_slug": "nunatakcoffee",
+  "tags": [
+   "blends"
+  ],
+  "title": "Wild",
+  "url": "https://www.nunatakcoffee.com/products/blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Fine",
+    "variant_id": "11007191416868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Coarse",
+    "variant_id": "11007199412260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41971434979364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Fine",
+    "variant_id": "41971435012132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Coarse",
+    "variant_id": "41971435044900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "4538855292964"
+   }
+  ],
+  "vendor": "Nunatak Coffee"
+ },
+ {
+  "body_hash": "9c1ecd30bf8ff0ee",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird",
+  "image": "https://cdn.shopify.com/s/files/1/2504/2568/products/early_bird.jpg?v=1588950077",
+  "platform": "shopify",
+  "product_id": "4629489123364",
+  "product_type": "Beans",
+  "roaster_slug": "nunatakcoffee",
+  "tags": [
+   "blends",
+   "bright",
+   "chocolate",
+   "smooth"
+  ],
+  "title": "Early Bird",
+  "url": "https://www.nunatakcoffee.com/products/early-bird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "31951334637604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Fine",
+    "variant_id": "31951334670372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "1 lb. / Ground-Coarse",
+    "variant_id": "31951334703140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41971428261924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Fine",
+    "variant_id": "41971428294692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 lb. / Ground-Coarse",
+    "variant_id": "41971428327460"
+   }
+  ],
+  "vendor": "Nunatak Coffee"
+ }
+]

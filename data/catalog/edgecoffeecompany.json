@@ -1,0 +1,106 @@
+[
+ {
+  "body_hash": "41a20b31efe7dbc8",
+  "first_seen": "2026-10-26",
+  "handle": "pure-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0410/4686/8126/products/LAW_0494.jpg?v=1646516513",
+  "platform": "shopify",
+  "product_id": "5363104317598",
+  "product_type": "Pure Health Coffee",
+  "roaster_slug": "edgecoffeecompany",
+  "tags": [
+   "Buy with Prime",
+   "MCF",
+   "Mold Free",
+   "Social Enterprise",
+   "Toxin Free",
+   "clean coffee",
+   "fair trade",
+   "health",
+   "health coffee",
+   "mold free coffee",
+   "nootropic",
+   "optimize",
+   "organic",
+   "performance",
+   "premium",
+   "pure",
+   "specialty",
+   "spo-default",
+   "spo-enabled"
+  ],
+  "title": "Pure Health Coffee",
+  "url": "https://edgecoffeecompany.com/products/pure-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.95,
+    "title": "Whole Bean",
+    "variant_id": "36220881469598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.95,
+    "title": "Ground",
+    "variant_id": "36220881502366"
+   }
+  ],
+  "vendor": "Edge Coffee Company"
+ },
+ {
+  "body_hash": "22cb2a5e820b72f4",
+  "first_seen": "2026-10-26",
+  "handle": "all-day-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0410/4686/8126/files/BAS_3868.jpg?v=1696886970",
+  "platform": "shopify",
+  "product_id": "7447069589662",
+  "product_type": "",
+  "roaster_slug": "edgecoffeecompany",
+  "tags": [
+   "Buy with Prime",
+   "MCF",
+   "optimize"
+  ],
+  "title": "All Day Decaf",
+  "url": "https://edgecoffeecompany.com/products/all-day-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.95,
+    "title": "Default Title",
+    "variant_id": "42458978680990"
+   }
+  ],
+  "vendor": "Edge Coffee Company"
+ },
+ {
+  "body_hash": "22cb2a5e820b72f4",
+  "first_seen": "2026-10-26",
+  "handle": "all-day-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/0410/4686/8126/files/BAS_3868.jpg?v=1696886970",
+  "platform": "shopify",
+  "product_id": "7931356315806",
+  "product_type": "",
+  "roaster_slug": "edgecoffeecompany",
+  "tags": [
+   "Buy with Prime",
+   "MCF",
+   "optimize"
+  ],
+  "title": "All Day Decaf!",
+  "url": "https://edgecoffeecompany.com/products/all-day-decaf-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 24.95,
+    "title": "Default Title",
+    "variant_id": "43924216807582"
+   }
+  ],
+  "vendor": "Edge Coffee Company"
+ }
+]

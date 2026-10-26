@@ -1,0 +1,966 @@
+[
+ {
+  "body_hash": "f5da4b205e6be444",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/Sumatra_Putra_Gayo.png?v=1780140236",
+  "platform": "shopify",
+  "product_id": "6658262171720",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Putra Gayo, Sumatra",
+  "url": "https://madcattercoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "39609304121416"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / French Press (Course)",
+    "variant_id": "39609304154184"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "39609304186952"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "39609304219720"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Cold Brew (Extra Course)",
+    "variant_id": "39609304252488"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "39609304285256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39609304318024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press (Course)",
+    "variant_id": "39609304350792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "39609304383560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "39609304416328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Cold Brew (Extra Course)",
+    "variant_id": "39609304449096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "39609304481864"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "bf3e58056b6c4ccf",
+  "first_seen": "2026-10-26",
+  "handle": "nine-lives-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/Nine_Lives_Espresso.png?v=1780139647",
+  "platform": "shopify",
+  "product_id": "6760396324936",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Nine Lives Espresso",
+  "url": "https://madcattercoffee.com/products/nine-lives-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "39949006045256"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "39949006078024"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "39949006110792"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "39949006143560"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "39949006176328"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "39949006209096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39949006241864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "39949006274632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "39949006307400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "39949006340168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "39949006372936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "39949006405704"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "b47c4aa91f55a69c",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-zoomies",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/Midnight_Zoomies.png?v=1780139613",
+  "platform": "shopify",
+  "product_id": "6763915280456",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Midnight Zoomies",
+  "url": "https://madcattercoffee.com/products/midnight-zoomies",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "39962343964744"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "39962343997512"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "39962344030280"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "39962344063048"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "39962344095816"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "39962344128584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "39962344161352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "39962344194120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "39962344226888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "39962344259656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "39962344292424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "39962344325192"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-101",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6898149687368",
+  "product_type": "Ticket",
+  "roaster_slug": "madcattercoffee",
+  "tags": [],
+  "title": "Espresso 101",
+  "url": "https://madcattercoffee.com/products/espresso-101",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "40361084944456"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-nine-lives-5-pounds",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6976360185928",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [],
+  "title": "Espresso Nine Lives - 5 Pounds",
+  "url": "https://madcattercoffee.com/products/espresso-nine-lives-5-pounds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "Default Title",
+    "variant_id": "40625950687304"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "c41ce22d2672546f",
+  "first_seen": "2026-10-26",
+  "handle": "las-moritas-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/Guatemala_9c7061f8-b87c-49a3-b1aa-11991cf28b2a.png?v=1780139504",
+  "platform": "shopify",
+  "product_id": "6997963014216",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Finca Las Moritas - El Progreso, Guatemala",
+  "url": "https://madcattercoffee.com/products/las-moritas-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "40755599081544"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "40755599114312"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "40755599147080"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "40755599179848"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "40755599212616"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "40755599245384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "40755599278152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "40755599310920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "40755599343688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "40755599376456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "40755599409224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "40755599441992"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "fc08ef996cede4c0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-mountain-water-processed-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/Decaf_Sugarcane_d5ffe454-cb6f-4b5a-9967-24e9ace80118.png?v=1780140143",
+  "platform": "shopify",
+  "product_id": "7064548999240",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Colombia - Sugarcane Process",
+  "url": "https://madcattercoffee.com/products/decaf-colombia-mountain-water-processed-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "41141897068616"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "41141897101384"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "41141897134152"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "41141897166920"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "41141897199688"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "41141897232456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41141897265224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "41141897297992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "41141897330760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "41141897363528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "41141897396296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "41141897429064"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "d3070acbc34e641f",
+  "first_seen": "2026-10-26",
+  "handle": "cerrado-brazil-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/MadDark.png?v=1780488583",
+  "platform": "shopify",
+  "product_id": "7064997494856",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Mad Dark",
+  "url": "https://madcattercoffee.com/products/cerrado-brazil-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "41145770410056"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "41145770442824"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "41145770475592"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "41145770508360"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "41145770541128"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "41145770573896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41145770606664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "41145770639432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "41145770672200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "41145770704968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "41145770737736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "41145770770504"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "1b9a9ea3336205a5",
+  "first_seen": "2026-10-26",
+  "handle": "brayan-moncayo-narino-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/BrayanGesha.png?v=1783991810",
+  "platform": "shopify",
+  "product_id": "7088457089096",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Brayan Moncayo Gesha - Narino, Colombia",
+  "url": "https://madcattercoffee.com/products/brayan-moncayo-narino-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "41210674315336"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "41210674348104"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "41210674380872"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "41210674413640"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "41210674446408"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "41210674479176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41210674511944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "41210674544712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "41210674577480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "41210674610248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "41210674643016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "41210674675784"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "70fc3144282a8e45",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-kwiso-villobos-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/CostRicaHoney.png?v=1787692664",
+  "platform": "shopify",
+  "product_id": "7120972972104",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Costa Rica - Finca San Cayetano Honey Microlot",
+  "url": "https://madcattercoffee.com/products/costa-rica-kwiso-villobos-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "41328823566408"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "41328823599176"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "41328823631944"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "41328823664712"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "41328823697480"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "41328823730248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41328823763016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "41328823795784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "41328823828552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "41328823861320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "41328823894088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "41328823926856"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ },
+ {
+  "body_hash": "256f12d624e55585",
+  "first_seen": "2026-10-26",
+  "handle": "birbisa-sidamo-ethiopia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0551/3281/5432/files/EthiopiaBanko.png?v=1788965757",
+  "platform": "shopify",
+  "product_id": "7130819231816",
+  "product_type": "",
+  "roaster_slug": "madcattercoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ethiopia - Banko Gotiti Yirgacheffe",
+  "url": "https://madcattercoffee.com/products/birbisa-sidamo-ethiopia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / Whole Bean",
+    "variant_id": "41355472633928"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / French Press (Coarse)",
+    "variant_id": "41355472666696"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / Pourover (Medium Fine)",
+    "variant_id": "41355472699464"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / Drip (Medium Fine)",
+    "variant_id": "41355472732232"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / Cold Brew (Extra Coarse)",
+    "variant_id": "41355472765000"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. / Espresso (Fine)",
+    "variant_id": "41355472797768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "41355472830536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / French Press (Coarse)",
+    "variant_id": "41355472863304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Pourover (Medium Fine)",
+    "variant_id": "41355472896072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Drip (Medium Fine)",
+    "variant_id": "41355472928840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Cold Brew (Extra Coarse)",
+    "variant_id": "41355472961608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. / Espresso (Fine)",
+    "variant_id": "41355472994376"
+   }
+  ],
+  "vendor": "Mad Catter Coffee Roasters"
+ }
+]

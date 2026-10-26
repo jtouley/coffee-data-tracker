@@ -1,0 +1,541 @@
+[
+ {
+  "body_hash": "3c6c48afeb5c32c0",
+  "first_seen": "2026-10-26",
+  "handle": "members-only",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e4c27ae4b07dc946a774d5/1695936660500/",
+  "platform": "squarespace",
+  "product_id": "51e4c27ae4b07dc946a774d5",
+  "product_type": "Medium Roast",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Members Only",
+  "url": "https://radcoffeecompany.com/coffeeblends/members-only",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "14dded65-8d93-4455-8b17-e2e60eb389d7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "6a6b14f2-2b6e-4277-9da3-7322ca0a7619"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "8c3314be-594c-4fe6-abbd-0b7ad53805ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "8c62b25d-8af8-4af5-8a79-2cf54b03ea16"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "8ee56298-c25a-48d5-9500-db25ffa46864"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f559383114a50c6d",
+  "first_seen": "2026-10-26",
+  "handle": "el-guapo",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e4c2f8e4b007de262ffec0/1695936819769/",
+  "platform": "squarespace",
+  "product_id": "51e4c2f8e4b007de262ffec0",
+  "product_type": "Medium Roast,Espresso Roasts",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Espresso Roasts",
+   "Medium Roast"
+  ],
+  "title": "El Guapo",
+  "url": "https://radcoffeecompany.com/coffeeblends/el-guapo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "029af7f0-7b24-4cf4-87b0-75fc5518043d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "160d9462-5a88-4a1b-bf27-e124e18e701d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "8707281c-b340-474c-b6e0-3ccfb2a746ec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "9690781b-f44c-480d-aa3e-3c31db86fe26"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "e0a8083c-c77b-4ae1-84b3-0388041655dc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f440a07d00f98b2a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-swiss-water-decaf",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e5d1f3e4b0d763e06630be/1695936962855/",
+  "platform": "squarespace",
+  "product_id": "51e5d1f3e4b0d763e06630be",
+  "product_type": "Medium-Dark Roast,Espresso Roasts",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Espresso Roasts",
+   "Medium-Dark Roast"
+  ],
+  "title": "Decaf",
+  "url": "https://radcoffeecompany.com/coffeeblends/honduras-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "4dd7701a-b149-4bd5-bad2-2000a9c79b81"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "720990e5-7c5c-4153-a51e-644781c4ec75"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "8ff65130-d951-405e-a1f7-462317f1a93f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "b350779a-389c-48e0-b260-103fefdf076a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "cece0ae5-b562-4b36-a03a-58a52d4a3e91"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "34b8d96069ba714c",
+  "first_seen": "2026-10-26",
+  "handle": "flaming-geyser-espresso",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e5d23ee4b0ab6dfb7ed239/1695936759326/",
+  "platform": "squarespace",
+  "product_id": "51e5d23ee4b0ab6dfb7ed239",
+  "product_type": "Medium-Dark Roast,Medium Roast,Espresso Roasts",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Espresso Roasts",
+   "Medium Roast",
+   "Medium-Dark Roast"
+  ],
+  "title": "Flaming Geyser Espresso",
+  "url": "https://radcoffeecompany.com/coffeeblends/flaming-geyser-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "22f539de-e715-452d-bb71-ef5a5213557c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "63b4b27d-1d5c-40e8-a8cc-e738ac5474df"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "68e94fc4-9977-4039-bf58-fc1aa7b9f24d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "92dc2d1e-8cb4-46f6-a46d-3fb8ac452ea2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "d4e09632-6b75-4b7a-9945-f8bf7f793291"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "96f14e376fe5a5b8",
+  "first_seen": "2026-10-26",
+  "handle": "aviator",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e5d287e4b06781994de72a/1695937113393/",
+  "platform": "squarespace",
+  "product_id": "51e5d287e4b06781994de72a",
+  "product_type": "Dark Roast,Espresso Roasts",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Dark Roast",
+   "Espresso Roasts"
+  ],
+  "title": "Aviator",
+  "url": "https://radcoffeecompany.com/coffeeblends/aviator",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "4edc5488-7254-4adb-95e8-4256fa33b3ac"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "4fae6b57-bb42-4711-a8cf-709a06789f01"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "5fa8ab80-e53f-43f5-8db0-dac4f2e76085"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "6376e2ed-aa61-476c-8dd7-8b8a44121cf8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "7f1cc4ef-b71f-42e4-b47b-1027889d04aa"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ccbce6dd9862331",
+  "first_seen": "2026-10-26",
+  "handle": "carmen-sandiego-1",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/51e5d2d1e4b05a62d6842da9/1695937066519/",
+  "platform": "squarespace",
+  "product_id": "51e5d2d1e4b05a62d6842da9",
+  "product_type": "Dark Roast",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Carmen Sandiego",
+  "url": "https://radcoffeecompany.com/coffeeblends/carmen-sandiego-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "02dcb95d-a8b8-490c-b34b-17ad9a8c8c78"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "10af449c-0bad-4c78-a4a3-e0f1773751da"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "1ac70a39-659a-497a-97e3-93725038b300"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "789bcc4a-4eef-4f5d-9ea2-752de9eabe01"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "c6d78140-06ab-450f-b02b-0d120d3c8c76"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d14034c03d15fe4",
+  "first_seen": "2026-10-26",
+  "handle": "truffle-shuffle",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/530bc787e4b06fd38718788e/1695936480494/",
+  "platform": "squarespace",
+  "product_id": "530bc787e4b06fd38718788e",
+  "product_type": "Medium-Dark Roast,Medium Roast",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Medium Roast",
+   "Medium-Dark Roast"
+  ],
+  "title": "Truffle Shuffle",
+  "url": "https://radcoffeecompany.com/coffeeblends/truffle-shuffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "15fdbc57-10f4-4b0f-974d-55ccf204d86d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "d20f4db2-7634-4db2-80e4-5f5ec838dc8e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "d333ef3c-7076-4b18-a950-316346ab5c63"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "e33e17df-4255-43e1-a070-36fd8f652be1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "ff7fa09c-d0fa-4768-9581-846ec9b1a38c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb05993c7e967ed1",
+  "first_seen": "2026-10-26",
+  "handle": "godfathers-blend",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/530bc933e4b05ce0640ee7ef/1695936707893/",
+  "platform": "squarespace",
+  "product_id": "530bc933e4b05ce0640ee7ef",
+  "product_type": "Dark Roast",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Godfather's Blend",
+  "url": "https://radcoffeecompany.com/coffeeblends/godfathers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "105c2e8a-8cb5-417a-bf1c-dc9752b98bc8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "66e0a417-16fd-40f3-80d5-91235b3d798f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "9d0bb70f-bfb4-4da0-91c7-506829bdba56"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "adeac49b-58ce-4a2d-9965-2bc0e1830167"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "e701c5a8-17ae-4755-ba8a-9836dfaaabe6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "07ab5a27624d32cc",
+  "first_seen": "2026-10-26",
+  "handle": "members-only-dj64n",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/5a6a4e399140b7347629fae6/1695936614933/",
+  "platform": "squarespace",
+  "product_id": "5a6a4e399140b7347629fae6",
+  "product_type": "Medium-Dark Roast,Medium Roast",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Medium Roast",
+   "Medium-Dark Roast"
+  ],
+  "title": "Sumatra",
+  "url": "https://radcoffeecompany.com/coffeeblends/members-only-dj64n",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "46cba1f5-58e1-4cb3-ad8b-e926f12c6b4a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "53b3539f-b0c2-4607-aee4-3ca812a967a6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "57f7077a-ee18-4493-bb17-34c625426b9a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "957870ce-f144-4da6-97a5-04f7781c87f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "c91cddf4-79a3-4cc0-b8c5-5d0802b6e6fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "626027ca10b3991d",
+  "first_seen": "2026-10-26",
+  "handle": "dangerzone",
+  "image": "https://static1.squarespace.com/static/51c06aa7e4b033abfa09ea60/51c06aa8e4b033abfa09ea6c/5cd9f7f8084fea0001f1b27f/1695937022789/",
+  "platform": "squarespace",
+  "product_id": "5cd9f7f8084fea0001f1b27f",
+  "product_type": "Medium Roast,Medium-Dark Roast,Espresso Roasts",
+  "roaster_slug": "radroastingcompany",
+  "tags": [
+   "Espresso Roasts",
+   "Medium Roast",
+   "Medium-Dark Roast"
+  ],
+  "title": "Danger Zone",
+  "url": "https://radcoffeecompany.com/coffeeblends/dangerzone",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "French Press",
+    "variant_id": "14c885df-f7ab-438b-a3bf-38ca18307146"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Espresso",
+    "variant_id": "61ce5a91-7ded-4e21-9832-f1ac163f68d6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "827dc0b1-c123-429c-a8f1-f93a17ef80e7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Machine Drip",
+    "variant_id": "d0df274e-2ea2-4fcf-b1e9-c187ee5000ad"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Percolator",
+    "variant_id": "f36dbbce-3df3-4019-9776-2834c163cbef"
+   }
+  ],
+  "vendor": ""
+ }
+]

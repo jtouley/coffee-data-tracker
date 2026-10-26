@@ -1,0 +1,403 @@
+[
+ {
+  "body_hash": "609b3883f52a4f6e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-buana-mandiri-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/SUM_5e184c05-ec8b-405a-bd32-a32965afdf80.png?v=1789532448",
+  "platform": "shopify",
+  "product_id": "8521973760172",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Sumatra - Bener Meriah (RWS)",
+  "url": "https://kopanicoffee.com/products/sumatra-buana-mandiri-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "46112086458540"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "4319c7eaccbdfc35",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-buana-mandiri-bcws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/Sumatrawholesale.png?v=1786982877",
+  "platform": "shopify",
+  "product_id": "8521987063980",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Sumatra - Bener Meriah (BCWS)",
+  "url": "https://kopanicoffee.com/products/sumatra-buana-mandiri-bcws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Default Title",
+    "variant_id": "46112154615980"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "484316262cddb1b1",
+  "first_seen": "2026-10-26",
+  "handle": "east-java-natural-mt-ijen",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/JAVA_e424fcc3-0c43-4f3b-b6ed-d5194ed98132.png?v=1789532410",
+  "platform": "shopify",
+  "product_id": "8570870530220",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [
+   "Limited-Release",
+   "Single-Origin"
+  ],
+  "title": "East Java Natural - Mt. Ijen",
+  "url": "https://kopanicoffee.com/products/east-java-natural-mt-ijen",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "46317774766252"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "484316262cddb1b1",
+  "first_seen": "2026-10-26",
+  "handle": "east-java-natural-mt-ijen-rws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/JAVA.png?v=1789532376",
+  "platform": "shopify",
+  "product_id": "8661748252844",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "East Java Natural - Mt. Ijen (RWS)",
+  "url": "https://kopanicoffee.com/products/east-java-natural-mt-ijen-rws",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "46769887609004"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "196dd62b3ed6d6f6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/COL_e74b65dd-45d5-4942-a700-d48cfde855f9.png?v=1789531909",
+  "platform": "shopify",
+  "product_id": "8663289757868",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Colombia Supremo",
+  "url": "https://kopanicoffee.com/products/colombia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "46775381360812"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "196dd62b3ed6d6f6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-rws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/COL_7c1f4c0e-b055-40fa-96ff-6cca6625ba39.png?v=1789531866",
+  "platform": "shopify",
+  "product_id": "8669899096236",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Colombia Supremo (RWS)",
+  "url": "https://kopanicoffee.com/products/colombia-supremo-rws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "46798524350636"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "29bff7c9e8049f5f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-bcws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/Colombiawholesale.png?v=1786982520",
+  "platform": "shopify",
+  "product_id": "8669899686060",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Colombia Supremo (BCWS)",
+  "url": "https://kopanicoffee.com/products/colombia-supremo-bcws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "46798530969772"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "d2a285af8d28ac81",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-bener-meriah",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/SUM_5c4918f2-db82-4a66-932f-e49e03310245.png?v=1789531831",
+  "platform": "shopify",
+  "product_id": "8669900636332",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Sumatra - Bener Meriah",
+  "url": "https://kopanicoffee.com/products/sumatra-bener-meriah",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "46798541029548"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "29bff7c9e8049f5f",
+  "first_seen": "2026-10-26",
+  "handle": "soft-sips-custom-blend-bcws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/SoftLuxBlend.png?v=1786982404",
+  "platform": "shopify",
+  "product_id": "8676065771692",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Soft Sips Custom Blend (BCWS)",
+  "url": "https://kopanicoffee.com/products/soft-sips-custom-blend-bcws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "46829008650412"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "1be2aa48e2156e22",
+  "first_seen": "2026-10-26",
+  "handle": "soft-sips-custom-blend-rws-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8676067377324",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Soft Sips Custom Blend (RWS)",
+  "url": "https://kopanicoffee.com/products/soft-sips-custom-blend-rws-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "46829013336236"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "a89c0c2807f24e02",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/ETH_20da8d76-e221-4be9-962e-cb12f5e810a2.png?v=1789531765",
+  "platform": "shopify",
+  "product_id": "8679948779692",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Ethiopia Guji",
+  "url": "https://kopanicoffee.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "46854457393324"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "a89c0c2807f24e02",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-rws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/ETH_1657f3b9-576b-49f3-8708-f5626a41d505.png?v=1789531797",
+  "platform": "shopify",
+  "product_id": "8679952580780",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Ethiopia Guji (RWS)",
+  "url": "https://kopanicoffee.com/products/ethiopia-guji-rws",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "46854475350188"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "fd8cd9f28a36f70e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-bcws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/Ethiopiawhoelsale_8e330cdc-839e-4cbe-8b23-84ed8747f24d.png?v=1786982339",
+  "platform": "shopify",
+  "product_id": "8679952973996",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Ethiopia Guji (BCWS)",
+  "url": "https://kopanicoffee.com/products/ethiopia-guji-bcws",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Default Title",
+    "variant_id": "46854476693676"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "fea1816bee2a2268",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras-swp",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/DECAFHONDURAS.png?v=1789400249",
+  "platform": "shopify",
+  "product_id": "8702295867564",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [
+   "Decaf",
+   "Single-Origin"
+  ],
+  "title": "Decaf | Honduras SWP",
+  "url": "https://kopanicoffee.com/products/decaf-honduras-swp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "46976910393516"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "fea1816bee2a2268",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras-swp-rws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/DECAFHONDURAS.png?v=1789400249",
+  "platform": "shopify",
+  "product_id": "8760671404204",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Decaf | Honduras SWP (RWS)",
+  "url": "https://kopanicoffee.com/products/decaf-honduras-swp-rws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "47205831213228"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "bc9091af5032a67a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras-swp-bcws",
+  "image": "https://cdn.shopify.com/s/files/1/0663/5811/6524/files/DEACFWS.png?v=1789586788",
+  "platform": "shopify",
+  "product_id": "8760671600812",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Decaf | Honduras SWP (BCWS)",
+  "url": "https://kopanicoffee.com/products/decaf-honduras-swp-bcws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 100.0,
+    "title": "Default Title",
+    "variant_id": "47205832589484"
+   }
+  ],
+  "vendor": "Kopani"
+ },
+ {
+  "body_hash": "bcba5f85e38974a1",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-comodo-custom-blend-rws",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9599993774252",
+  "product_type": "",
+  "roaster_slug": "kopanicoffee",
+  "tags": [],
+  "title": "Cafe Comodo Custom Blend (RWS)",
+  "url": "https://kopanicoffee.com/products/cafe-comodo-custom-blend-rws",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "47550970986668"
+   }
+  ],
+  "vendor": "Kopani"
+ }
+]

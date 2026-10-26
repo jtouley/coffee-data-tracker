@@ -1,0 +1,366 @@
+[
+ {
+  "body_hash": "c73b35986c6481bd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/58dd3833ff7c50a91e1851aa/1673968161451-WM1RFL1VWGMLIDO7VX29/decaf.jpg",
+  "platform": "squarespace",
+  "product_id": "5b0d821af950b7e3a2cf55b3",
+  "product_type": "Coffee",
+  "roaster_slug": "comacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Cauca, Colombia (Decaf)",
+  "url": "https://www.comacoffee.com/coffee/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lbs Espresso",
+    "variant_id": "21e068cf-bff9-42bc-9651-22e28aef9c9f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lbs Drip",
+    "variant_id": "4974d746-ddc1-4deb-919b-17b66e4a4924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. French Press/Cold Brew",
+    "variant_id": "52af943c-c465-4c92-9332-ee3bad96a15d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "54d20197-2675-4dd5-b117-b40ab2641ba8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. Whole Bean",
+    "variant_id": "6eb81acf-0dce-4ed0-b7f2-0cf2fe096410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5lbs Espresso",
+    "variant_id": "8a7f755e-ba62-462d-95bc-d2c82534ad6c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lbs French Press/Cold Brew",
+    "variant_id": "91c2da26-7379-485d-918a-0bc1da76fbef"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5lbs Drip",
+    "variant_id": "9acfad64-8f1c-42f6-8ba5-7be9b5ed5479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5lbs Whole Bean",
+    "variant_id": "beb55309-0d27-4b55-9550-fef75fa7c15b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. Espresso",
+    "variant_id": "ca34bb62-d898-405e-bda7-ed921b2a8105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. Drip",
+    "variant_id": "d553d6cf-42cf-4c3d-92fa-6b0286193bf9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5lbs French Press/Cold Brew",
+    "variant_id": "fef2e8b0-ff00-4fb0-8254-4bb2913b2c0f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9813f2d8e88ff6b7",
+  "first_seen": "2026-10-26",
+  "handle": "storyteller",
+  "image": "https://images.squarespace-cdn.com/content/v1/58dd3833ff7c50a91e1851aa/dae57601-e126-4e4c-b1db-8ee4570a9776/story+new.png",
+  "platform": "squarespace",
+  "product_id": "5cafb7e39b747a0a40451efd",
+  "product_type": "Coffee",
+  "roaster_slug": "comacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Storyteller Blend",
+  "url": "https://www.comacoffee.com/coffee/storyteller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz French Press / Cold Brew",
+    "variant_id": "15f962a8-f2f5-4329-b074-18fa93ec576b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Espresso",
+    "variant_id": "3ad1a160-2e7d-40cf-8c4a-50def2d97f9f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Drip",
+    "variant_id": "44086365-e701-442b-a593-85414183d8e4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Espresso",
+    "variant_id": "446adf69-bcb7-4082-946d-09953725a4dc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "45dc9a1e-e068-4b9b-bd86-d7896d02f49a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Espresso",
+    "variant_id": "4a8f2d3a-a42d-439c-927e-54f7cf37f518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "5f233a00-47a2-4d8b-af7a-3cfc72d259ec"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs French Press / Cold Brew",
+    "variant_id": "63bd5461-64b2-447a-9868-012f1f5112a3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Whole Bean",
+    "variant_id": "7a4a2e7a-b038-4fa4-aed1-e679f0684584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "c2771b37-6bd8-4996-a78f-7a69866ab354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Drip",
+    "variant_id": "f0efd70f-0e85-4442-b34b-e4344761d266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs French Press / Cold Brew",
+    "variant_id": "f9fe8cea-de45-42b9-99d9-4a5002fc908c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11e68ce98690babe",
+  "first_seen": "2026-10-26",
+  "handle": "obsdian",
+  "image": "https://static1.squarespace.com/static/58dd3833ff7c50a91e1851aa/58dd39cc86e6c0bdd9fa209a/61f303cef774d90c3e506ae1/1768256013912/",
+  "platform": "squarespace",
+  "product_id": "61f303cef774d90c3e506ae1",
+  "product_type": "Coffee",
+  "roaster_slug": "comacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Obsidian",
+  "url": "https://www.comacoffee.com/coffee/obsdian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Espresso",
+    "variant_id": "06c7638b-b075-4e0d-9428-7e3e6e378858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Drip",
+    "variant_id": "349442b7-9476-42f9-826e-967275c629d8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Espresso",
+    "variant_id": "402b77c5-6195-4a5d-bd42-b529e293ac37"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "488d94a1-a0a4-4aac-b030-94f42c9c8cef"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lbs French Press / Cold Brew",
+    "variant_id": "5e86421c-1eba-4917-bc10-ea48d5db703a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Espresso",
+    "variant_id": "8ba0a0d8-d5c0-47b5-9ef8-dc9d0d4f9973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Whole Bean",
+    "variant_id": "9a27d5f6-490c-4353-847b-87ebd56132eb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Drip",
+    "variant_id": "a87000f0-0633-4ab9-9396-dfa4c6bfbc23"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "acfa71df-cdca-4eea-82b1-51977be6c69b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "b404e4ea-489c-4ed3-8dfd-f5df0798dfec"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs French Press / Cold Brew",
+    "variant_id": "df6f89d8-4bbb-47cb-a9fa-9fe38361d2e5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz French Press / Cold Brew",
+    "variant_id": "f54305db-4833-43dd-971b-98c423d8028e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ba919303147c661",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-worka-sakaro",
+  "image": "https://images.squarespace-cdn.com/content/v1/58dd3833ff7c50a91e1851aa/f28a290d-140f-4600-9ea3-2d923dd8ae42/worka+file.png",
+  "platform": "squarespace",
+  "product_id": "69dd6ab80d7cda50fe26a72b",
+  "product_type": "",
+  "roaster_slug": "comacoffee",
+  "tags": [],
+  "title": "Ethiopia Worka Sakaro",
+  "url": "https://www.comacoffee.com/coffee/ethiopia-worka-sakaro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz ground- espresso",
+    "variant_id": "036904f5-a40c-4ec1-a31a-407bf5f3c9fe"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs ground- drip",
+    "variant_id": "27bee67c-e391-438e-b824-d5804d7d36ef"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lbs whole bean",
+    "variant_id": "b08af80d-8ce6-4a49-8957-871a927c3c15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz whole bean",
+    "variant_id": "c1999d12-fa89-4bab-a1ff-7e1662fdc0da"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz ground- drip",
+    "variant_id": "d1213bf0-7473-4a89-9cc1-bacf64799143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs whole bean",
+    "variant_id": "ef70f670-5e8b-4360-8611-575a7b55f9a8"
+   }
+  ],
+  "vendor": ""
+ }
+]

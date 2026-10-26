@@ -1,0 +1,117 @@
+{
+ "562113eee4b03bf3899d8b8c": {
+  "body_hash": "fbc54e93613c1f31",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "floral",
+   "spices"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "56211524e4b0306d245fcd10": {
+  "body_hash": "8a3985eb4bef5d4d",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruity",
+   "nuanced"
+  ],
+  "varietals": []
+ },
+ "5621154de4b015f422b0114e": {
+  "body_hash": "3880af7dc4b8b09f",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "rich",
+   "bold"
+  ],
+  "varietals": []
+ },
+ "5a04bfeb085229bb2bef0aba": {
+  "body_hash": "f2a34e1417fc0b61",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 2150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "stone fruit",
+   "sweet"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "6001c62572df2871a1bebd0a": {
+  "body_hash": "61616920d9e4980b",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruity",
+   "chocolate"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ },
+ "69279c8518ed673989000739": {
+  "body_hash": "9a712c573375493e",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "smooth",
+   "mild"
+  ],
+  "varietals": []
+ }
+}

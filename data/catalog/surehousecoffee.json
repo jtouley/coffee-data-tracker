@@ -1,0 +1,442 @@
+[
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "fairtrade-woo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-11.jpg?v=1758491288",
+  "platform": "shopify",
+  "product_id": "9844196049186",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Fairtrade \"Woo\" Blend",
+  "url": "https://www.surehousecoffee.com/products/fairtrade-woo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50311148241186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50311148273954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50311148306722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50311148339490"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "full-steam-ahead-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-6.jpg?v=1758490695",
+  "platform": "shopify",
+  "product_id": "9850403553570",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Full Steam Ahead Espresso",
+  "url": "https://www.surehousecoffee.com/products/full-steam-ahead-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330572914978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330572947746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330572980514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330573013282"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "joyful-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-8.jpg?v=1758490590",
+  "platform": "shopify",
+  "product_id": "9850406273314",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Joyful Breakfast Blend",
+  "url": "https://www.surehousecoffee.com/products/joyful-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330577633570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330577666338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330577699106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330577731874"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-20.jpg?v=1758490029",
+  "platform": "shopify",
+  "product_id": "9850408534306",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.surehousecoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330582352162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330582384930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330582417698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330582450466"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-21.jpg?v=1758489950",
+  "platform": "shopify",
+  "product_id": "9850408763682",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.surehousecoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330582679842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330582712610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330582745378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330582778146"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-25.jpg?v=1758489872",
+  "platform": "shopify",
+  "product_id": "9850408993058",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Rwanda",
+  "url": "https://www.surehousecoffee.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330583007522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330583040290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330583073058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330583105826"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "peru-norte",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-22.jpg?v=1758488614",
+  "platform": "shopify",
+  "product_id": "9850411155746",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Peru Norte",
+  "url": "https://www.surehousecoffee.com/products/peru-norte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330592411938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330592444706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330592477474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330592510242"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-19.jpg?v=1758487735",
+  "platform": "shopify",
+  "product_id": "9850411385122",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.surehousecoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330593067298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330593100066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330593132834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330593165602"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "mwp-mexico-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-14.jpg?v=1758487304",
+  "platform": "shopify",
+  "product_id": "9850411417890",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "MWP Mexico Decaf",
+  "url": "https://www.surehousecoffee.com/products/mwp-mexico-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330593362210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330593394978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330593427746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330593460514"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ },
+ {
+  "body_hash": "8ff9c46c387b83ba",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0956/0486/7362/files/SureHouseBranding2025-3.jpg?v=1758486390",
+  "platform": "shopify",
+  "product_id": "9850411647266",
+  "product_type": "",
+  "roaster_slug": "surehousecoffee",
+  "tags": [],
+  "title": "Ethiopian",
+  "url": "https://www.surehousecoffee.com/products/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50330593820962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz. / Ground",
+    "variant_id": "50330593853730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "50330593886498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "50330593919266"
+   }
+  ],
+  "vendor": "Sure House Coffee"
+ }
+]

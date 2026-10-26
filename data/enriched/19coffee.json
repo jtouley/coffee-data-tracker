@@ -1,0 +1,438 @@
+{
+ "5f5fae23c25c8e4607a6ef21": {
+  "body_hash": "851f7e230850fdac",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "baker's chocolate",
+   "light citrus"
+  ],
+  "varietals": []
+ },
+ "5f5fae23c25c8e4607a6ef27": {
+  "body_hash": "4b404a438009219e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smoky",
+   "black licorice"
+  ],
+  "varietals": []
+ },
+ "5f5fae23c25c8e4607a6ef2d": {
+  "body_hash": "4c2fb818ad8e0646",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "smoky"
+  ],
+  "varietals": []
+ },
+ "5f5fae23c25c8e4607a6ef33": {
+  "body_hash": "5f10466774aee914",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smoky",
+   "licorice",
+   "cacao"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Pacas"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef3f": {
+  "body_hash": "b25744f1f2de6e3c",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemongrass",
+   "floral",
+   "peach"
+  ],
+  "varietals": []
+ },
+ "5f5fae23c25c8e4607a6ef47": {
+  "body_hash": "53724d8b916c7905",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "lemon",
+   "peach"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef5e": {
+  "body_hash": "fd0259f3ed9b4101",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond",
+   "brown sugar",
+   "dark chocolate",
+   "orange"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef66": {
+  "body_hash": "2eda2c94e73677ba",
+  "elevation_masl_max": 1000,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "orange",
+   "red apple"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef6e": {
+  "body_hash": "9066f8e5603a57b3",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bakers chocolate",
+   "cedar",
+   "molasses"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef80": {
+  "body_hash": "62b9ae9b3f7e74fb",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dried fruit",
+   "milk chocolate",
+   "molasses"
+  ],
+  "varietals": [
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef88": {
+  "body_hash": "db8e3d5bdc70492e",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bakers chocolate",
+   "black licorice",
+   "syrupy"
+  ],
+  "varietals": [
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "5f5fae23c25c8e4607a6ef9e": {
+  "body_hash": "956dcda1c2fb4caa",
+  "elevation_masl_max": 1699,
+  "elevation_masl_min": 1295,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "meyer lemon"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "5f74bcf0c351c0669710e285": {
+  "body_hash": "498f8d18e0469a2b",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bakers chocolate",
+   "black licorice",
+   "pepper",
+   "vanilla"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "6001e76eea078457e22df4f8": {
+  "body_hash": "36e5917abf58ca3e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "baker's chocolate",
+   "light citrus"
+  ],
+  "varietals": []
+ },
+ "606f2f35f857220c3d025b9b": {
+  "body_hash": "3c975fd0d4c55cb3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "625ece40c19b633a5e0e8a0f": {
+  "body_hash": "ce4119d8d787dcdd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "641c7d4208a19901cc9692e2": {
+  "body_hash": "e0fbbc05bf564074",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "64ac1fdd125c8658a112a091": {
+  "body_hash": "a17f99ddd1883823",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "64ac20e7ccd99d231bb25dc3": {
+  "body_hash": "5d2b6acb79ba0e8c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "64b834a957712077b1833237": {
+  "body_hash": "49fb2609aa82be78",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "peach",
+   "tangerine"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "65aec0a17905000afb98d5e7": {
+  "body_hash": "1a03ce10d68d6026",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry",
+   "pineapple",
+   "peach",
+   "blueberry"
+  ],
+  "varietals": []
+ },
+ "668c0cd03022b338156a6e66": {
+  "body_hash": "9df6af52c12ea720",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jam",
+   "honey",
+   "black cherry"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

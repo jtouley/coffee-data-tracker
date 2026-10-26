@@ -1,0 +1,457 @@
+[
+ {
+  "body_hash": "96833db2edfefd61",
+  "first_seen": "2026-10-26",
+  "handle": "four-leftys",
+  "image": "https://novocoffee.com/wp-content/uploads/2024/03/Four-Leftys-1.png",
+  "platform": "woocommerce",
+  "product_id": "34501",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Best Seller",
+   "Blends"
+  ],
+  "title": "Four Leftys",
+  "url": "https://novocoffee.com/product/four-leftys/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "34501:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2lbs",
+    "variant_id": "34501:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "34501:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04ebca11d5c84bf2",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://novocoffee.com/wp-content/uploads/2024/03/Cold-Brew-Blend-1.png",
+  "platform": "woocommerce",
+  "product_id": "34527",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://novocoffee.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "34527:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2lbs",
+    "variant_id": "34527:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "34527:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "726b4ae9d18a0729",
+  "first_seen": "2026-10-26",
+  "handle": "gesha-cascara",
+  "image": "https://novocoffee.com/wp-content/uploads/2024/03/Cascara.png",
+  "platform": "woocommerce",
+  "product_id": "34743",
+  "product_type": "simple",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Limited",
+   "Tea"
+  ],
+  "title": "Gesha Cascara",
+  "url": "https://novocoffee.com/product/gesha-cascara/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Gesha Cascara",
+    "variant_id": "34743:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1f977415b7d5920",
+  "first_seen": "2026-10-26",
+  "handle": "gesha-coffee-flower",
+  "image": "https://novocoffee.com/wp-content/uploads/2024/03/Flower.png",
+  "platform": "woocommerce",
+  "product_id": "34745",
+  "product_type": "simple",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Limited",
+   "Tea"
+  ],
+  "title": "Gesha Coffee Flower",
+  "url": "https://novocoffee.com/product/gesha-coffee-flower/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Gesha Coffee Flower",
+    "variant_id": "34745:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da0de1d9e0d5cf89",
+  "first_seen": "2026-10-26",
+  "handle": "buesaco",
+  "image": "https://novocoffee.com/wp-content/uploads/2024/06/Buesaco-website.webp",
+  "platform": "woocommerce",
+  "product_id": "35379",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Americas",
+   "Featured",
+   "Single Origin"
+  ],
+  "title": "Buesaco",
+  "url": "https://novocoffee.com/product/buesaco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "35379:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2lbs",
+    "variant_id": "35379:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "35379:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ba7824971a01a80",
+  "first_seen": "2026-10-26",
+  "handle": "danche",
+  "image": "https://novocoffee.com/wp-content/uploads/2025/01/Danche-website-shadow.webp",
+  "platform": "woocommerce",
+  "product_id": "39318",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Africa",
+   "Single Origin"
+  ],
+  "title": "Danche",
+  "url": "https://novocoffee.com/product/danche/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "39318:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2lbs",
+    "variant_id": "39318:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5lbs",
+    "variant_id": "39318:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24c10ff6d85d556b",
+  "first_seen": "2026-10-26",
+  "handle": "denargo",
+  "image": "https://novocoffee.com/wp-content/uploads/2025/07/Denargo.webp",
+  "platform": "woocommerce",
+  "product_id": "41578",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Best Seller",
+   "Blends",
+   "Espresso"
+  ],
+  "title": "Denargo",
+  "url": "https://novocoffee.com/product/denargo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41578:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2lbs",
+    "variant_id": "41578:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "41578:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7efe611902e3a7aa",
+  "first_seen": "2026-10-26",
+  "handle": "thundercloud",
+  "image": "https://novocoffee.com/wp-content/uploads/2025/07/ThunderCloud.webp",
+  "platform": "woocommerce",
+  "product_id": "41698",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Best Seller",
+   "Blends",
+   "Espresso"
+  ],
+  "title": "ThunderCloud",
+  "url": "https://novocoffee.com/product/thundercloud/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41698:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2lbs",
+    "variant_id": "41698:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "41698:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d12ab9c8bf723ebc",
+  "first_seen": "2026-10-26",
+  "handle": "all-day-decaf",
+  "image": "https://novocoffee.com/wp-content/uploads/2025/07/AllDayDecaf.webp",
+  "platform": "woocommerce",
+  "product_id": "41712",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Americas",
+   "Single Origin"
+  ],
+  "title": "All Day Decaf",
+  "url": "https://novocoffee.com/product/all-day-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41712:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2lbs",
+    "variant_id": "41712:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "41712:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06629a924cde6019",
+  "first_seen": "2026-10-26",
+  "handle": "java-frinsa",
+  "image": "https://novocoffee.com/wp-content/uploads/2026/07/Java-Frinsa-Website-shadowUSE.webp",
+  "platform": "woocommerce",
+  "product_id": "45960",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Featured",
+   "Pacific",
+   "Single Origin"
+  ],
+  "title": "Java Frinsa",
+  "url": "https://novocoffee.com/product/java-frinsa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "45960:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2lbs",
+    "variant_id": "45960:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "45960:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cfb92ff6e887f5ee",
+  "first_seen": "2026-10-26",
+  "handle": "elite-honey",
+  "image": "https://novocoffee.com/wp-content/uploads/2026/08/Elite-Honey-WEBSITE.webp",
+  "platform": "woocommerce",
+  "product_id": "46375",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Americas",
+   "Single Origin"
+  ],
+  "title": "Elite Honey",
+  "url": "https://novocoffee.com/product/elite-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "46375:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2lbs",
+    "variant_id": "46375:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5lbs",
+    "variant_id": "46375:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03190c547d9f28e5",
+  "first_seen": "2026-10-26",
+  "handle": "elite",
+  "image": "https://novocoffee.com/wp-content/uploads/2026/09/Elite-Washed-WEBSITE.webp",
+  "platform": "woocommerce",
+  "product_id": "46428",
+  "product_type": "variable",
+  "roaster_slug": "novocoffee",
+  "tags": [
+   "Americas",
+   "Single Origin"
+  ],
+  "title": "Elite",
+  "url": "https://novocoffee.com/product/elite/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "46428:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2lbs",
+    "variant_id": "46428:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "46428:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,815 @@
+[
+ {
+  "body_hash": "1772ddc7cf287c30",
+  "first_seen": "2026-10-26",
+  "handle": "giveback-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/2603_UC_Website_12ozBag_Front_GivebackBlend_1440x1440_69450b69-4554-40c5-8b5c-4fb959b39f9a.png?v=1774035368",
+  "platform": "shopify",
+  "product_id": "10106538492208",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Giveback Blend",
+  "url": "https://upcoffeeroasters.com/products/giveback-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "51098796294448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "51098796327216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "51098796359984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "51098796392752"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "a5c2e43210707068",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/2507_UC_Website_12ozBag_Front_Rwanda_1440x1440_b1e4ee20-d876-4995-8bb6-2e3e0ca4c6ba.png?v=1779255606",
+  "platform": "shopify",
+  "product_id": "15101592731952",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Rwanda",
+  "url": "https://upcoffeeroasters.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "66766861336880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "66766861369648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.5,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "66766861402416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.5,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "66766861435184"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "7056aee53254b215",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_PapuaNewGuinea.png?v=1742225087",
+  "platform": "shopify",
+  "product_id": "9562790822192",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://upcoffeeroasters.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973609730352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973609763120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973609795888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973609828656"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "8a6b86ea7b2c54e6",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_Sumatra.png?v=1742225085",
+  "platform": "shopify",
+  "product_id": "9562791641392",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://upcoffeeroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973633519920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973633552688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973633585456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973633618224"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "6956f54f4e29f455",
+  "first_seen": "2026-10-26",
+  "handle": "matador-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_MatadorEspresso.png?v=1742225085",
+  "platform": "shopify",
+  "product_id": "9562795770160",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Matador Espresso",
+  "url": "https://upcoffeeroasters.com/products/matador-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973586170160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground - Drip",
+    "variant_id": "48973586268464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973586334000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Ground - Drip",
+    "variant_id": "48973586399536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground - Espresso",
+    "variant_id": "50240609222960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Ground - Espresso",
+    "variant_id": "50240609255728"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "c1166aba8eb66aa7",
+  "first_seen": "2026-10-26",
+  "handle": "black-lotus-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_BlackLotusEspresso.png?v=1742225084",
+  "platform": "shopify",
+  "product_id": "9562797408560",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Black Lotus Espresso",
+  "url": "https://upcoffeeroasters.com/products/black-lotus-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973441958192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973441990960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973442023728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973442056496"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "aa25595150417faf",
+  "first_seen": "2026-10-26",
+  "handle": "house-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_HouseDecaf.png?v=1742225084",
+  "platform": "shopify",
+  "product_id": "9562798391600",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "House Decaf",
+  "url": "https://upcoffeeroasters.com/products/house-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973577781552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973577814320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973577847088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973577879856"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "3c7872f4e0034770",
+  "first_seen": "2026-10-26",
+  "handle": "red-sombrero",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_RedSombrero.png?v=1742225083",
+  "platform": "shopify",
+  "product_id": "9562799079728",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Red Sombrero",
+  "url": "https://upcoffeeroasters.com/products/red-sombrero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973626638640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973626671408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973626704176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973626736944"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "6576b831c2cbfa69",
+  "first_seen": "2026-10-26",
+  "handle": "minnesota-mudd",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_MinnesotaMudd.png?v=1742225082",
+  "platform": "shopify",
+  "product_id": "9562799702320",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Minnesota Mudd",
+  "url": "https://upcoffeeroasters.com/products/minnesota-mudd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973595509040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973595541808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973595574576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973595607344"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "20531d2495cdfdfe",
+  "first_seen": "2026-10-26",
+  "handle": "nocaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_NoCafEspresso.png?v=1742225081",
+  "platform": "shopify",
+  "product_id": "9562800226608",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "NoCaf Espresso",
+  "url": "https://upcoffeeroasters.com/products/nocaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973602226480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973602259248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973602292016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973602324784"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "a67d7342630e2885",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-del-fuego",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_CafeDelFuego.png?v=1742225081",
+  "platform": "shopify",
+  "product_id": "9562801111344",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Café Del Fuego",
+  "url": "https://upcoffeeroasters.com/products/cafe-del-fuego",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973490651440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973490684208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973490716976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973490749744"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "1ec4ce9121c60f8c",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_BreakfastBlend.png?v=1742225080",
+  "platform": "shopify",
+  "product_id": "9562801668400",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://upcoffeeroasters.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973475873072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973475905840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973475938608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973475971376"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "ce667ead89504f0d",
+  "first_seen": "2026-10-26",
+  "handle": "angry-bull",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_AngryBull.png?v=1742225079",
+  "platform": "shopify",
+  "product_id": "9562802094384",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Angry Bull",
+  "url": "https://upcoffeeroasters.com/products/angry-bull",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973404012848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973404045616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973404078384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973404111152"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "9d2ee9e0ffd14a27",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_12ozBag_Front_Peru.png?v=1742225078",
+  "platform": "shopify",
+  "product_id": "9562802684208",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Peru",
+  "url": "https://upcoffeeroasters.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973620642096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973620674864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973620707632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973620740400"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "84096bc298b7a066",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/2506_UCR_Website_12ozBag_Front_Ethiopia_Washed_1440x1440_b9d7b4f7-aaf2-45bf-a278-5260f5486bc9.png?v=1751297620",
+  "platform": "shopify",
+  "product_id": "9562803175728",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Ethiopia – Washed",
+  "url": "https://upcoffeeroasters.com/products/ethiopia-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973548159280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973548192048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973548224816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973548257584"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "938d1401f6daebd2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/2405_UCR_Website_12ozBag_Front_Colombia_1440x1440_c919bf5b-a450-43dc-b891-42f6e59d8744.png?v=1742225077",
+  "platform": "shopify",
+  "product_id": "9562804584752",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://upcoffeeroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "48973508084016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 Ounces / Ground",
+    "variant_id": "48973508149552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "48973508182320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "48973508215088"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "36a84b8d3095d664",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/2411_UCR_Website_Guatemala_1440x1440_b2ba1b58-eebe-4eb6-b8d0-f6423c16c497.png?v=1742225076",
+  "platform": "shopify",
+  "product_id": "9641917808944",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://upcoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "49212848996656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 Ounces / Ground",
+    "variant_id": "49212849029424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Lb Bag / Whole Bean",
+    "variant_id": "49212849062192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Lb Bag / Ground",
+    "variant_id": "49212849094960"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ },
+ {
+  "body_hash": "24b8baf4f1e6129a",
+  "first_seen": "2026-10-26",
+  "handle": "up-coffee-long-sleeve",
+  "image": "https://cdn.shopify.com/s/files/1/0880/3631/1344/files/UCR_Web_Apparel_UpCoffeeLongSleeve_Front_1440x1440_2411_4ff9be44-ee37-4050-b964-ceec4cb4e3bc.png?v=1742225073",
+  "platform": "shopify",
+  "product_id": "9644138561840",
+  "product_type": "",
+  "roaster_slug": "upcafe",
+  "tags": [],
+  "title": "Up Coffee Long Sleeve",
+  "url": "https://upcoffeeroasters.com/products/up-coffee-long-sleeve",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "S",
+    "variant_id": "49219877175600"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "M",
+    "variant_id": "49219877208368"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "L",
+    "variant_id": "49219877241136"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "XL",
+    "variant_id": "49219877273904"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "2XL",
+    "variant_id": "49219877306672"
+   }
+  ],
+  "vendor": "UpCoffeeRoasters"
+ }
+]

@@ -1,0 +1,1696 @@
+[
+ {
+  "body_hash": "7717e3d6c50ed204",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-caramels",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Coffee-Caramels.jpg?v=1770134920",
+  "platform": "shopify",
+  "product_id": "10472647819429",
+  "product_type": "Sundries",
+  "roaster_slug": "colectivocoffee",
+  "tags": [],
+  "title": "Coffee Caramels (2-Pack)",
+  "url": "https://colectivo.com/products/coffee-caramels",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "47466689003685"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "ccb89f191dfc6b26",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-mountain-of-flowers",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Guatemala_Mountain_Flowers_Web_1_21c8ea65-dcc6-411d-8e58-477f12f4532c.jpg?v=1790738342",
+  "platform": "shopify",
+  "product_id": "1047461764",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Central America",
+   "Featured Coffee",
+   "Light Roast",
+   "Seasonal Coffee",
+   "Single Origin"
+  ],
+  "title": "Guatemala Mountain of Flowers",
+  "url": "https://colectivo.com/products/guatemala-mountain-of-flowers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "44052709540005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "44052709572773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "44052709605541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "44052709638309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "44052709671077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "44052709703845"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "6d6ff66ad0c96b0b",
+  "first_seen": "2026-10-26",
+  "handle": "yeli-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/YeliBlend_Product-Photo.jpg?v=1777666384",
+  "platform": "shopify",
+  "product_id": "10559274713253",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Featured Coffee",
+   "Light Roast",
+   "New"
+  ],
+  "title": "Yeli Blend",
+  "url": "https://colectivo.com/products/yeli-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "47784407466149"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "beebb47dd3ee3ef9",
+  "first_seen": "2026-10-26",
+  "handle": "e2e-test",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10721707131045",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Test"
+  ],
+  "title": "E2E Test",
+  "url": "https://colectivo.com/products/e2e-test",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 1.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48185586614437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 1.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48185658081445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 1.0,
+    "title": "Drip / 12oz",
+    "variant_id": "48213409136805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 1.0,
+    "title": "Drip / 5lb",
+    "variant_id": "48213409333413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 1.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48293167661221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 1.0,
+    "title": "Drip / 2lb",
+    "variant_id": "48293167693989"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "b9e64c497f3066cb",
+  "first_seen": "2026-10-26",
+  "handle": "botanica",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Botanica_Web_2.jpg?v=1789072455",
+  "platform": "shopify",
+  "product_id": "10753019183269",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Fair Trade",
+   "Medium Roast",
+   "Organic/Fair Trade"
+  ],
+  "title": "Botanica",
+  "url": "https://colectivo.com/products/botanica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "48264706621605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "48264706654373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "48264706687141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "48264706719909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "48264706752677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "48264706785445"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "247723e3a42da082",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sl28-hermanos-aguilera",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/CostaRica_SL28_Web.jpg?v=1790186914",
+  "platform": "shopify",
+  "product_id": "10779734409381",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Featured Coffee",
+   "New",
+   "Seasonal Coffee"
+  ],
+  "title": "Costa Rica SL28 Hermanos Aguilera",
+  "url": "https://colectivo.com/products/costa-rica-sl28-hermanos-aguilera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.95,
+    "title": "Default Title",
+    "variant_id": "50518834348197"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "eb2fc10fcfadde5a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-kokowagayo",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/SS_Sumatra_Kokowagayo_Web.jpg?v=1790695330",
+  "platform": "shopify",
+  "product_id": "10793367634085",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Fair Trade - Organic",
+   "Featured Coffee",
+   "Light Roast",
+   "New",
+   "Organic/Fair Trade",
+   "Single Origin"
+  ],
+  "title": "FTO Sumatra KOKOWAGAYO",
+  "url": "https://colectivo.com/products/sumatra-kokowagayo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "50548194967717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "50548195000485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "50548195033253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "50548195066021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "50548195098789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "50548195131557"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "9b6f3228c795bba5",
+  "first_seen": "2026-10-26",
+  "handle": "co-optiva",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-co-optiva-2025.jpg?v=1757948877",
+  "platform": "shopify",
+  "product_id": "123393366",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Coffee Flight",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Medium Roast",
+   "Organic/Fair Trade"
+  ],
+  "title": "Co-Optiva",
+  "url": "https://colectivo.com/products/co-optiva",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "25080117576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "280445578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345152835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977556172965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977556238501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977556304037"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "793238b15521d270",
+  "first_seen": "2026-10-26",
+  "handle": "blue-heeler",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-blue-heeler-2025.jpg?v=1757948903",
+  "platform": "shopify",
+  "product_id": "123405056",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "2lb",
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Coffee Flight",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Medium Roast",
+   "Organic/Fair Trade"
+  ],
+  "title": "Blue Heeler",
+  "url": "https://colectivo.com/products/blue-heeler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "280460032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "280460036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345152547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977569575077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977569607845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977569640613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Whole Bean / 2 Pound Bag",
+    "variant_id": "42526198136997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Coarse / 2 Pound Bag",
+    "variant_id": "42542161854629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Drip / 2 Pound Bag",
+    "variant_id": "42542162477221"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "08b8ae3373003bd0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dream-harder",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0004_colectivo_bag_2024_005_1f51503d-243d-4709-a38d-d7de0cf92f15.webp?v=1706130973",
+  "platform": "shopify",
+  "product_id": "123415334",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Blends",
+   "Decaf",
+   "Light Roast"
+  ],
+  "title": "Decaf Dream Harder",
+  "url": "https://colectivo.com/products/decaf-dream-harder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "280478782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "280478786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977548800165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977548832933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977548865701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.95,
+    "title": "Whole Bean / 2 Pound Bag",
+    "variant_id": "44284384936101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.95,
+    "title": "Coarse / 2 Pound Bag",
+    "variant_id": "44284384968869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.95,
+    "title": "Drip / 2 Pound Bag",
+    "variant_id": "44284385001637"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "b70d4c64a95f8c4f",
+  "first_seen": "2026-10-26",
+  "handle": "black-and-tan",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-black-and-tan-2025.jpg?v=1757948935",
+  "platform": "shopify",
+  "product_id": "124407892",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "2lb",
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Coffee Flight",
+   "Dark Roast",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Organic/Fair Trade"
+  ],
+  "title": "Black and Tan",
+  "url": "https://colectivo.com/products/black-and-tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282690566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282690568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345151401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977570853029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977570885797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977570918565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Whole Bean / 2 Pound Bag",
+    "variant_id": "42526196301989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Coarse / 2 Pound Bag",
+    "variant_id": "42542164443301"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Drip / 2 Pound Bag",
+    "variant_id": "42542164574373"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "b1faeaac81de2b48",
+  "first_seen": "2026-10-26",
+  "handle": "del-sol",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0012_colectivo_bag_2024_0013_cbaa95f1-2d4b-46d8-8d7d-58757d8905ce.webp?v=1706130960",
+  "platform": "shopify",
+  "product_id": "124408016",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "2lb",
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Light Roast"
+  ],
+  "title": "Del Sol",
+  "url": "https://colectivo.com/products/del-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282691164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282691166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977529761957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977529794725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977529827493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Whole Bean / 2 Pound Bag",
+    "variant_id": "42526189355173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Coarse / 2 Pound Bag",
+    "variant_id": "42542166311077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Drip / 2 Pound Bag",
+    "variant_id": "42542166507685"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "4274de7ab07c5bde",
+  "first_seen": "2026-10-26",
+  "handle": "velo",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-velo-2025.jpg?v=1757948712",
+  "platform": "shopify",
+  "product_id": "124408308",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "2lb",
+   "5lb",
+   "Best Sellers",
+   "Blends",
+   "Caffeinated",
+   "Dark Roast",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Organic/Fair Trade"
+  ],
+  "title": "Velo",
+  "url": "https://colectivo.com/products/velo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282692392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282692394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345155215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977510068389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977510101157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977510133925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Whole Bean / 2 Pound Bag",
+    "variant_id": "42526192468133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Coarse / 2 Pound Bag",
+    "variant_id": "42535231946917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "Drip / 2 Pound Bag",
+    "variant_id": "42542165557413"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "e615acf489f73c6b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Colombia-Paso-Fino.jpg?v=1772031832",
+  "platform": "shopify",
+  "product_id": "124408690",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Caffeinated",
+   "Light Roast",
+   "Single Origin",
+   "South America"
+  ],
+  "title": "Colombia Paso Fino",
+  "url": "https://colectivo.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282693612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282693614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977552568485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977552601253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977552634021"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "9b38af8f40d64d25",
+  "first_seen": "2026-10-26",
+  "handle": "dark-sumatra-highlands",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-dark-sumatra-2025.jpg?v=1757948853",
+  "platform": "shopify",
+  "product_id": "124411286",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Best Sellers",
+   "Caffeinated",
+   "Dark Roast",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Organic/Fair Trade",
+   "Single Origin",
+   "Sumatra"
+  ],
+  "title": "Dark Sumatra Highlands",
+  "url": "https://colectivo.com/products/dark-sumatra-highlands",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282700374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282700376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977551585445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977551618213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977551650981"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "c698cf543e7cb067",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-velo",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0002_colectivo_bag_2024_003_f82f57c4-4221-4161-81d7-872afbba777e.webp?v=1706130941",
+  "platform": "shopify",
+  "product_id": "124413124",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Blends",
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Decaf Velo",
+  "url": "https://colectivo.com/products/decaf-velo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282707112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282707114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977532186789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977532219557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977532252325"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "6bbbe33e574651e2",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-toro",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0001_colectivo_bag_2024_002_316d230d-7f41-4199-9b11-77c6e2c6112b.webp?v=1706130946",
+  "platform": "shopify",
+  "product_id": "124413126",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Blends",
+   "Caffeinated",
+   "Espresso",
+   "Medium Roast"
+  ],
+  "title": "Toro",
+  "url": "https://colectivo.com/products/espresso-toro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282707150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282707152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345154039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977522815141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977522847909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977522880677"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "3fb5e48781826def",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-decaf-maxico-2025.jpg?v=1757948832",
+  "platform": "shopify",
+  "product_id": "124413138",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Decaf",
+   "Fair Trade",
+   "Fair Trade - Organic",
+   "Light Roast",
+   "Mexico",
+   "Organic/Fair Trade",
+   "Single Origin"
+  ],
+  "title": "Decaf Mexico",
+  "url": "https://colectivo.com/products/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "282707312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "282707314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "345153577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977533071525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977533104293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977533137061"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "877f2a3bfa915253",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-kulaktik",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Mexico-Kulaktik-Product-Photo_1.jpg?v=1753882903",
+  "platform": "shopify",
+  "product_id": "160260299",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Fair Trade - Organic",
+   "Light Roast",
+   "Mexico",
+   "Organic/Fair Trade",
+   "Seasonal Coffee",
+   "Single Origin"
+  ],
+  "title": "Mexico Kulaktik",
+  "url": "https://colectivo.com/products/mexico-kulaktik",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "367344413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "367344417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "367344427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977494274213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977494306981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977494339749"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "b94d9d70ea03a69c",
+  "first_seen": "2026-10-26",
+  "handle": "hot-cocoa-mix-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Hot-Cocoa-Mix.jpg?v=1710341161",
+  "platform": "shopify",
+  "product_id": "183630141",
+  "product_type": "Sundries",
+  "roaster_slug": "colectivocoffee",
+  "tags": [],
+  "title": "Hot Cocoa Mix",
+  "url": "https://colectivo.com/products/hot-cocoa-mix-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "Default Title",
+    "variant_id": "420336497"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "7a2782427c14eee2",
+  "first_seen": "2026-10-26",
+  "handle": "indigo",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo-indigo-light.jpg?v=1729265469",
+  "platform": "shopify",
+  "product_id": "702310219831",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Blends",
+   "Caffeinated",
+   "Coffee Flight",
+   "Light Roast"
+  ],
+  "title": "Indigo",
+  "url": "https://colectivo.com/products/indigo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977506332837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977506365605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977506398373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "8376179130423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "8376179163191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "8376179228727"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "71dc167e35e5104d",
+  "first_seen": "2026-10-26",
+  "handle": "wisconsin-badger-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/BadgerBlend_2026_Web.jpg?v=1787073507",
+  "platform": "shopify",
+  "product_id": "7954447368357",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Fair Trade - Organic",
+   "Featured Coffee",
+   "Light Roast",
+   "New",
+   "Organic/Fair Trade",
+   "college"
+  ],
+  "title": "Badger Blend™",
+  "url": "https://colectivo.com/products/wisconsin-badger-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "48167050870949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "48167050903717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "48167050936485"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "7821c87362fc2305",
+  "first_seen": "2026-10-26",
+  "handle": "revel",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0013_colectivo_bag_2024_0014_92339bcf-c78e-4f43-9980-f13b554856bb.webp?v=1706129515",
+  "platform": "shopify",
+  "product_id": "8215850877093",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Blends",
+   "Caffeinated",
+   "Medium Roast"
+  ],
+  "title": "Revel",
+  "url": "https://colectivo.com/products/revel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "42437179408549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "42437179441317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "42437179474085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "42437179506853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "42437179539621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "42437179572389"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "e0b31ae5da80ac75",
+  "first_seen": "2026-10-26",
+  "handle": "granola-11oz",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Troubadour-Granola.jpg?v=1710341167",
+  "platform": "shopify",
+  "product_id": "8381407658149",
+  "product_type": "Sundries",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Troubadour Granola",
+  "url": "https://colectivo.com/products/granola-11oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 7.75,
+    "title": "Default Title",
+    "variant_id": "42925422674085"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "6e02e82091b32c1e",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-canarinho",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/colectivo_bag_master_0007_colectivo_bag_2024_008_38e33371-ba5b-46f8-b3b1-16cabc254c33.webp?v=1706130456",
+  "platform": "shopify",
+  "product_id": "8439459656",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "5lb",
+   "Best Sellers",
+   "Caffeinated",
+   "Medium Roast",
+   "Single Origin",
+   "South America"
+  ],
+  "title": "Brazil Canarinho",
+  "url": "https://colectivo.com/products/brazil-canarinho",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "28414754376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "28414754504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "28414754824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "41977567248549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "41977567281317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "41977567314085"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "0c72c7883151c19e",
+  "first_seen": "2026-10-26",
+  "handle": "test-rafael",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Brazil-Seasonal-icon-01.svg?v=1738865895",
+  "platform": "shopify",
+  "product_id": "8778128064677",
+  "product_type": "",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Test",
+   "Testing Only"
+  ],
+  "title": "[Test] Rafael",
+  "url": "https://colectivo.com/products/test-rafael",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.0,
+    "title": "Whole Bean",
+    "variant_id": "44058285670565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.0,
+    "title": "Coarse",
+    "variant_id": "44058285703333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 66.0,
+    "title": "Drip",
+    "variant_id": "44058285736101"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "a4a1eaf39566c258",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-juana-gaspar",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/FF_Guatemala_Juana_Gaspar_Web.jpg?v=1791921037",
+  "platform": "shopify",
+  "product_id": "8827819917477",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Caffeinated",
+   "Central America",
+   "Featured Coffee",
+   "Featured Farm",
+   "Light Roast",
+   "Seasonal Coffee"
+  ],
+  "title": "Guatemala Juana Gaspar",
+  "url": "https://colectivo.com/products/guatemala-juana-gaspar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "44188638806181"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "f4a2d44ab37713a0",
+  "first_seen": "2026-10-26",
+  "handle": "test-rafael-6-month",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/seasonal-colombia-luz-mila-masabuel_icon-01.svg?v=1738865895",
+  "platform": "shopify",
+  "product_id": "8954465452197",
+  "product_type": "",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Test",
+   "Testing Only"
+  ],
+  "title": "[Test] Rafael - 6 Month",
+  "url": "https://colectivo.com/products/test-rafael-6-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 132.0,
+    "title": "Whole Bean",
+    "variant_id": "44809029976229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 132.0,
+    "title": "Coarse",
+    "variant_id": "44809030008997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 132.0,
+    "title": "Drip",
+    "variant_id": "44809030041765"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ },
+ {
+  "body_hash": "0ad0381d822431d1",
+  "first_seen": "2026-10-26",
+  "handle": "fto-harvest-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0215/8796/files/Harvest_Blend_2026_Web.jpg?v=1789571374",
+  "platform": "shopify",
+  "product_id": "9213366075557",
+  "product_type": "Coffee",
+  "roaster_slug": "colectivocoffee",
+  "tags": [
+   "Blends",
+   "Fair Trade - Organic",
+   "Featured Coffee",
+   "Medium Roast",
+   "New",
+   "Organic/Fair Trade"
+  ],
+  "title": "FTO Harvest Blend",
+  "url": "https://colectivo.com/products/fto-harvest-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "45891522560165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Coarse / 12oz Bag",
+    "variant_id": "45891522592933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Drip / 12oz Bag",
+    "variant_id": "45891522625701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 Pound Bag",
+    "variant_id": "45891540549797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5 Pound Bag",
+    "variant_id": "45891540582565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5 Pound Bag",
+    "variant_id": "45891540615333"
+   }
+  ],
+  "vendor": "Colectivo Coffee"
+ }
+]

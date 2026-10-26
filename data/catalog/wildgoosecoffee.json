@@ -1,0 +1,1267 @@
+[
+ {
+  "body_hash": "a93c3ecc28606487",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-othaya-gura",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Kenya_Gura.png?v=1786473069",
+  "platform": "shopify",
+  "product_id": "1405774266429",
+  "product_type": "",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Kenya Othaya Gura",
+  "url": "https://www.wildgoosecoffee.com/products/kenya-othaya-gura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "12580288626749"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "12580288659517"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "12580288692285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "12580288725053"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "12580288757821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "12580288790589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "12580288823357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "12580288856125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "12580288888893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "12580288921661"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "2c9c25bbd1f5c750",
+  "first_seen": "2026-10-26",
+  "handle": "steenwick",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/products/SteenwickBlend.png?v=1599680359",
+  "platform": "shopify",
+  "product_id": "153685809",
+  "product_type": "Coffee - Hidden",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [],
+  "title": "Steenwick Blend",
+  "url": "https://www.wildgoosecoffee.com/products/steenwick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "351784033"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "351784035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10 oz / Ground (Cone Filter)",
+    "variant_id": "351784037"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10 oz / Ground (Flat-Bottom Filter)",
+    "variant_id": "351784039"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "351784041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "7355680620605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "7355684061245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lbs / Ground (Cone Filter)",
+    "variant_id": "7355685044285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lbs / Ground (Flat-Bottom Filter)",
+    "variant_id": "7355687305277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "7355689566269"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "4472e1abd528908c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Decaf_Brazil.png?v=1786473071",
+  "platform": "shopify",
+  "product_id": "3668616151101",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Brazil",
+  "url": "https://www.wildgoosecoffee.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "28529871028285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "28529871061053"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "28529871093821"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "28529871126589"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "28529871159357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "28529871192125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "28529871224893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "28529871257661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "28529871290429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "28529871323197"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "0e94358677b45ca5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Brazil_Mogiana.png?v=1786473071",
+  "platform": "shopify",
+  "product_id": "4326421508",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "Subscriptions"
+  ],
+  "title": "Brazil Mogiana",
+  "url": "https://www.wildgoosecoffee.com/products/brazil-mogiana-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "14385537220"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "14385537284"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "14385537348"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "14385537412"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "14385537476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "7355191361597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "7355485814845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "7355486896189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "7355488698429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "7355494170685"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "b3ba7ae7b9ff32bd",
+  "first_seen": "2026-10-26",
+  "handle": "misty-mountain-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Misty_Mountain_Blend.png?v=1786473069",
+  "platform": "shopify",
+  "product_id": "4429173915709",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Misty Mountain Blend",
+  "url": "https://www.wildgoosecoffee.com/products/misty-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "31646064476221"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "31646064508989"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "31646064541757"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "31646064574525"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "31646064607293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "31646064640061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "31646064672829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "31646064705597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "31646064738365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "31646064771133"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "bccf9326afac31e7",
+  "first_seen": "2026-10-26",
+  "handle": "ascension-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Ascension_Blend.png?v=1786473069",
+  "platform": "shopify",
+  "product_id": "4429174865981",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Ascension Blend",
+  "url": "https://www.wildgoosecoffee.com/products/ascension-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "31646070603837"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "31646070636605"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "31646070669373"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "31646070702141"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "31646070734909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "31646070767677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "31646070800445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "31646070833213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "31646070865981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "31646070898749"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "710f21d0b72d09a8",
+  "first_seen": "2026-10-26",
+  "handle": "nightfall-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Nightfall.png?v=1786473071",
+  "platform": "shopify",
+  "product_id": "4518471893053",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Nightfall Dark Roast",
+  "url": "https://www.wildgoosecoffee.com/products/nightfall-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "32009490235453"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "32009490268221"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "32009490300989"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "32009490333757"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "32009490366525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.25,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32009490399293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.25,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "32009490432061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.25,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "32009490464829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.25,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "32009490497597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.25,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "32009490530365"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "cc8393cc75a79bcf",
+  "first_seen": "2026-10-26",
+  "handle": "blue-river-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Blue_River.png?v=1786473069",
+  "platform": "shopify",
+  "product_id": "6600400961597",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Blue River (Cold Brew) Blend",
+  "url": "https://www.wildgoosecoffee.com/products/blue-river-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "39373207830589"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "39373207863357"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "39373207896125"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "39373207928893"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "39373207961661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "39373207994429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "39373208027197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "39373208059965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "39373208092733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "39373208125501"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "c19d1474283a280d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-liquidambar",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Honduras_Liquidambar.png?v=1792786539",
+  "platform": "shopify",
+  "product_id": "6926094368829",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Honduras Finca Liquidambar",
+  "url": "https://www.wildgoosecoffee.com/products/honduras-finca-liquidambar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "40343384522813"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "40343384555581"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "40343384588349"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "40343384621117"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "40343384653885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "40343384686653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "40343384719421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "40343384752189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "40343384784957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "40343384817725"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "2c85afd56e986497",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-terra-verde",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Colombia_Palestina.png?v=1786473069",
+  "platform": "shopify",
+  "product_id": "6935690149949",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Colombia Palestina",
+  "url": "https://www.wildgoosecoffee.com/products/colombia-terra-verde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "40362033053757"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "40362033086525"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "40362033119293"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "40362033152061"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "40362033184829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "40362033217597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "40362033250365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "40362033283133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "40362033315901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "40362033348669"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "ad1a06955a7b8897",
+  "first_seen": "2026-10-26",
+  "handle": "canned-cold-brew-black",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Blue_River_4-pack.jpg?v=1743637921",
+  "platform": "shopify",
+  "product_id": "7390597414973",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Blue River Blend (4-pack)",
+  "url": "https://www.wildgoosecoffee.com/products/canned-cold-brew-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1506,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "41453152862269"
+   }
+  ],
+  "vendor": "Wild Goose Coffee Roasters"
+ },
+ {
+  "body_hash": "b4e0ea43e61d2e1e",
+  "first_seen": "2026-10-26",
+  "handle": "canned-cold-brew-red-line",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Shandy_4-pack.jpg?v=1743638041",
+  "platform": "shopify",
+  "product_id": "7390597677117",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Coffee Shandy (4-pack)",
+  "url": "https://www.wildgoosecoffee.com/products/canned-cold-brew-red-line",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1506,
+    "price_usd": 18.5,
+    "title": "Default Title",
+    "variant_id": "41451270996029"
+   }
+  ],
+  "vendor": "Wild Goose Coffee Roasters"
+ },
+ {
+  "body_hash": "045f94a2c9e65c88",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-los-volcanoes",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Guatemala_Los_Volcanoes_fc8b6f91-3c93-4599-a397-da456f6292a1.png?v=1786473071",
+  "platform": "shopify",
+  "product_id": "7469192806461",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Espressos",
+   "Single Origin Coffees"
+  ],
+  "title": "Guatemala Los Volcanoes",
+  "url": "https://www.wildgoosecoffee.com/products/guatemala-los-volcanoes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "41661083811901"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "41661083844669"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "41661083877437"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "41661083910205"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "41661083942973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "41661083975741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "41661084008509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "41661084041277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "41661084074045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "41661084106813"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "7c0c949f93e5fd5a",
+  "first_seen": "2026-10-26",
+  "handle": "fundamentals-of-espresso-friday-nov-15th",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Espresso-Class.heic?v=1732583159",
+  "platform": "shopify",
+  "product_id": "7528340652093",
+  "product_type": "",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [],
+  "title": "Fundamentals of Espresso",
+  "url": "https://www.wildgoosecoffee.com/products/fundamentals-of-espresso-friday-nov-15th",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "December 12 (1pm)",
+    "variant_id": "43235740352573"
+   }
+  ],
+  "vendor": "Wild Goose Coffee Roasters"
+ },
+ {
+  "body_hash": "1164b77be6ea91c5",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-cupping-roastery-tour",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Cupping-Class.heic?v=1732583159",
+  "platform": "shopify",
+  "product_id": "7528341995581",
+  "product_type": "",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Classes"
+  ],
+  "title": "Coffee Tasting & Roastery Tour",
+  "url": "https://www.wildgoosecoffee.com/products/coffee-cupping-roastery-tour",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "December 12 (11am)",
+    "variant_id": "43239217463357"
+   }
+  ],
+  "vendor": "Wild Goose Coffee Roasters"
+ },
+ {
+  "body_hash": "5be193999b8212da",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-hambela-buku",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Ethiopia_Hambela_Buku.png?v=1787610663",
+  "platform": "shopify",
+  "product_id": "7970786607165",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Ethiopia Hambela Buku",
+  "url": "https://www.wildgoosecoffee.com/products/ethiopia-hambela-buku",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "43515612037181"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "43515612069949"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "43515612102717"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "43515612135485"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "43515612168253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43515612201021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Ground (Espresso)",
+    "variant_id": "43515612233789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Ground (Drip)",
+    "variant_id": "43515612266557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Ground (Coarse)",
+    "variant_id": "43515612299325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Ground (French Press)",
+    "variant_id": "43515612332093"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "5f0f8d137df39e89",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kigenzi-valley",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/BC0A6609.jpg?v=1790885432",
+  "platform": "shopify",
+  "product_id": "8045410353213",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [],
+  "title": "Uganda Kigenzi Valley **Special Release** (Roast Date Oct. 15)",
+  "url": "https://www.wildgoosecoffee.com/products/uganda-kigenzi-valley",
+  "variants": [
+   {
+    "available": true,
+    "grams": 175,
+    "price_usd": 28.0,
+    "title": "175g / Whole Bean Only",
+    "variant_id": "43747256172605"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ },
+ {
+  "body_hash": "c9494f1825146d3c",
+  "first_seen": "2026-10-26",
+  "handle": "peru-selva-andina",
+  "image": "https://cdn.shopify.com/s/files/1/0261/8585/files/Peru_Selva_Andina.png?v=1792013283",
+  "platform": "shopify",
+  "product_id": "8066239922237",
+  "product_type": "Coffee",
+  "roaster_slug": "wildgoosecoffee",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Peru Selva Andina",
+  "url": "https://www.wildgoosecoffee.com/products/peru-selva-andina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "43819361075261"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Espresso)",
+    "variant_id": "43819361108029"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Drip)",
+    "variant_id": "43819361140797"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (Coarse)",
+    "variant_id": "43819361173565"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Ground (French Press)",
+    "variant_id": "43819361206333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43819361239101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Espresso)",
+    "variant_id": "43819361271869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Drip)",
+    "variant_id": "43819361304637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (Coarse)",
+    "variant_id": "43819361337405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 lbs / Ground (French Press)",
+    "variant_id": "43819361370173"
+   }
+  ],
+  "vendor": "wildgoosecoffee/shop"
+ }
+]

@@ -1,0 +1,454 @@
+[
+ {
+  "body_hash": "920b320bba162347",
+  "first_seen": "2026-10-26",
+  "handle": "working-joe-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/60405f90bfa30c002d101623/1623255997603-9QST7CCSGGC88B39CZ21/rr_working_joe.png",
+  "platform": "squarespace",
+  "product_id": "6046526aeb8199366174b8bb",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Working Joe Everyday Dark Roast",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/working-joe-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "084c5739-71ef-430a-acb4-5dbb242c4cd4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Grind",
+    "variant_id": "3f998bcd-bb5c-40a5-9a79-6035a574df0e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Turkish Grind",
+    "variant_id": "58e0ac72-feba-49df-9f62-d99302448699"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press Grind",
+    "variant_id": "acef7a66-ca8d-4253-830d-62cc490b070e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso Grind",
+    "variant_id": "e13a2082-2b96-4caf-b39d-e0ab57185b04"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc1bdd828622f3a7",
+  "first_seen": "2026-10-26",
+  "handle": "bistro-espresso-dark-roast",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/6046526ceb8199366174b8f7/1787771161076/",
+  "platform": "squarespace",
+  "product_id": "6046526ceb8199366174b8f7",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Bistro Espresso",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/bistro-espresso-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press Grind",
+    "variant_id": "413c9131-5042-45be-a0c6-11e433a0b156"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Turkish Grind",
+    "variant_id": "bc385a57-141b-431c-8f33-b3ffc8c488a9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Grind",
+    "variant_id": "c6175a7d-e01e-47ae-8622-de745300cd7c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "cd152307-8ea6-4383-a02d-af9e48ddcb3a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso Grind",
+    "variant_id": "d8b4ddb9-d97f-4307-a559-9062a923113b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9eaebd897377e41c",
+  "first_seen": "2026-10-26",
+  "handle": "c06zmxpx5l7autglmrz031fbc1sir5",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/6046526deb8199366174b90a/1787771161081/",
+  "platform": "squarespace",
+  "product_id": "6046526deb8199366174b90a",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Vilas Bridge Blend",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/c06zmxpx5l7autglmrz031fbc1sir5",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Turkish Grind",
+    "variant_id": "0f23d7f1-452f-4cd0-a5e7-ef63927ba49a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "5edfa7bc-6003-4dd9-827c-b97d2d83e190"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Grind",
+    "variant_id": "7807a59d-f1e0-4679-8a12-5d6f11f9de24"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press Grind",
+    "variant_id": "95da477f-f70a-4266-b29b-740272eb43f2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso Grind",
+    "variant_id": "f901de37-f0e7-4a6e-afc3-2b04374c8d77"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "50b9cca1b428b9a0",
+  "first_seen": "2026-10-26",
+  "handle": "actually-good-decaf",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/6046526eeb8199366174b910/1787771161086/",
+  "platform": "squarespace",
+  "product_id": "6046526eeb8199366174b910",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Actually Good Decaf",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/actually-good-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso Grind",
+    "variant_id": "2c7d9480-05ab-4bdd-9be3-ef6f573690ec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "6c963377-4d03-4b92-aeb1-262f1099cc94"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "9d02e587-52a0-43e4-ab9d-e7d6b1c617fe"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "af3bcc1f-7802-4443-ab33-5d4507a79544"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Turkish Grind",
+    "variant_id": "cafbe44a-6712-4ff1-a84c-e243fa0dc01e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2727813008b1bce0",
+  "first_seen": "2026-10-26",
+  "handle": "hoity-toity-medium-or-dark-roast",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/6046526feb8199366174b92e/1787771161098/",
+  "platform": "squarespace",
+  "product_id": "6046526feb8199366174b92e",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Hoity Toity Medium Roast",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/hoity-toity-medium-or-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Drip Grind",
+    "variant_id": "0c40d392-6fbf-4284-af9b-3f951f7249c1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "620d6e1c-258a-46fb-a537-14684c80381e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Espresso Grind",
+    "variant_id": "976b6036-5f73-4b3d-b9e2-124c163247bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "French Press Grind",
+    "variant_id": "b323f68c-91c0-446e-a77b-9ba2ab8ecccf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Turkish Grind",
+    "variant_id": "dce92b36-c849-4736-b590-8f3319ce0511"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2659bcf5b4eeaf61",
+  "first_seen": "2026-10-26",
+  "handle": "falling-leaves-medium-light-roast",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/6046527beb8199366174ba11/1787771161121/",
+  "platform": "squarespace",
+  "product_id": "6046527beb8199366174ba11",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Indian Monsoon Malabar Medium Golden Roast",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/falling-leaves-medium-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Turkish Grind",
+    "variant_id": "384c37f1-ce94-41dd-97f9-e65e178fa58f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso Grind",
+    "variant_id": "b7322b72-7863-4843-9a3f-9a71583ff3be"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "ec33a07c-43a0-4941-ae8f-3278567bef9f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "eda5a587-30c2-4312-89df-a0ef5496154e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "f8ddfd6e-b6bd-4651-a0a1-6171152bb0f5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a9c0ef97a332c2a4",
+  "first_seen": "2026-10-26",
+  "handle": "you-asked-for-it-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/60405f90bfa30c002d101623/1623256315695-LRT6J6A9WUN38A5NG2WA/rr_you_asked_for_it.png",
+  "platform": "squarespace",
+  "product_id": "6046528eeb8199366174bbab",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "You Asked for It Extra Dark Roast",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/you-asked-for-it-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "5af7d6c6-de8a-4b71-b8e9-5edb623678f5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Turkish",
+    "variant_id": "684bbd26-1200-4a59-b982-51652a68d439"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "8bcd5b4f-6c7a-43a7-ba4f-f40806282719"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "992ab4dc-6315-47a9-9571-86bb2ae17af2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "f4150181-9a34-4d6b-8feb-20b6427eed5c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "973c13ddadddedf2",
+  "first_seen": "2026-10-26",
+  "handle": "railroad-sumatra",
+  "image": "https://static1.squarespace.com/static/60405f90bfa30c002d101623/60464bd8d96d3c28190b8213/60465290eb8199366174bbd7/1787771161193/",
+  "platform": "squarespace",
+  "product_id": "60465290eb8199366174bbd7",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Railroad Sumatra",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/railroad-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Turkish",
+    "variant_id": "0156ec48-e1d3-4bff-9013-9a164d30b61f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "2960a2d4-184b-4a8d-83e4-477507a72ee5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "49493eab-2a92-4a1e-a776-e4d1a0eb865e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "4aa57815-cad1-4b83-9fb1-e7d06d8c3c38"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "7df92e4c-019c-4995-9ad8-038b3ec1861f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7ceedd7d478e5bf",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-dark-roast-limited-edition",
+  "image": "https://images.squarespace-cdn.com/content/v1/60405f90bfa30c002d101623/1674311620352-DKR23QVWSYXUIY3EONL0/Tanzania.JPG",
+  "platform": "squarespace",
+  "product_id": "6308ee4f100c4a40f45efdc6",
+  "product_type": "",
+  "roaster_slug": "rockinghamroasters",
+  "tags": [],
+  "title": "Tanzania Dark Roast",
+  "url": "https://www.rockinghamroasters.coffee/shop/p/tanzania-dark-roast-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "drip",
+    "variant_id": "5faf6e26-534a-4875-bdfe-05c99ec23324"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "french press",
+    "variant_id": "6e6cea8e-6621-43e7-b240-592aeafae3b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "whole bean",
+    "variant_id": "e01d2bf2-636b-4e59-b2fe-45219f2ed377"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "espresso",
+    "variant_id": "f050553f-b627-4f3f-b09b-04851f94a3d2"
+   }
+  ],
+  "vendor": ""
+ }
+]

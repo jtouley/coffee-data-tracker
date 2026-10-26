@@ -1,0 +1,551 @@
+[
+ {
+  "body_hash": "dd841a98becc444e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/products/EthiopiaHarrar.jpg?v=1628551851",
+  "platform": "shopify",
+  "product_id": "6666354983084",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Ethiopia Harrar",
+  "url": "https://www.aveleyfarmscoffee.com/products/ethiopia-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean",
+    "variant_id": "39684265181356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip",
+    "variant_id": "39684265214124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "French Press",
+    "variant_id": "39684265246892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Pour Over",
+    "variant_id": "39684265279660"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "9907b2cefb1d4819",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/products/AveleyFarmsColdBrew.jpg?v=1628552422",
+  "platform": "shopify",
+  "product_id": "6666379133100",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Cold Brew",
+  "url": "https://www.aveleyfarmscoffee.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "39626658611372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "French Press",
+    "variant_id": "39626658644140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Pour Over",
+    "variant_id": "41144420565164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Drip",
+    "variant_id": "41144420597932"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "7a7e44246da93a2e",
+  "first_seen": "2026-10-26",
+  "handle": "loring-street-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/products/LoringStreetEspresso.jpg?v=1628552076",
+  "platform": "shopify",
+  "product_id": "6680914952364",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Loring Street Espresso",
+  "url": "https://www.aveleyfarmscoffee.com/products/loring-street-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "39684242538668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "39684242571436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso",
+    "variant_id": "39684242604204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "39684242636972"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "1e576f71f14014f4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-loring-street-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/products/BrazilIpe.jpg?v=1628552276",
+  "platform": "shopify",
+  "product_id": "6680915181740",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Brazil Ipe",
+  "url": "https://www.aveleyfarmscoffee.com/products/copy-of-loring-street-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean",
+    "variant_id": "39684242899116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press",
+    "variant_id": "39684242931884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over",
+    "variant_id": "39684242964652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip",
+    "variant_id": "39684242997420"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "3332e18932322d9a",
+  "first_seen": "2026-10-26",
+  "handle": "aveley-farms-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/products/AveleyFarmsDecaf_1.jpg?v=1672343901",
+  "platform": "shopify",
+  "product_id": "7552734003372",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Aveley Farms Decaf",
+  "url": "https://www.aveleyfarmscoffee.com/products/aveley-farms-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "42888847524012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "42888847556780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "42888847589548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Pour Over",
+    "variant_id": "42888847622316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Wholebean",
+    "variant_id": "43020270567596"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "bab6aa3c2d9d15fc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/EthiopiaGuji-1_1.jpg?v=1761840268",
+  "platform": "shopify",
+  "product_id": "7557809373356",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Ethiopia Guji",
+  "url": "https://www.aveleyfarmscoffee.com/products/ethiopia-bombe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Wholebean",
+    "variant_id": "42335932776620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "42335932809388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "42335932842156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over",
+    "variant_id": "42335932874924"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "6c8ac8d40d2bb2cf",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-el-sauce",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/EmpasEspresso-2_1.jpg?v=1761840995",
+  "platform": "shopify",
+  "product_id": "7558315475116",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Empa's Espresso",
+  "url": "https://www.aveleyfarmscoffee.com/products/ecuador-el-sauce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Wholebean",
+    "variant_id": "42337890402476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "42337890435244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "42337890468012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over",
+    "variant_id": "42337890500780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso",
+    "variant_id": "44907835719852"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "f1c8562f2bc9f581",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-indio",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/AveleyFarms-10_2.jpg?v=1700832008",
+  "platform": "shopify",
+  "product_id": "7743323799724",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Costa Rica El Indio",
+  "url": "https://www.aveleyfarmscoffee.com/products/costa-rica-el-indio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "42888742305964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "42888742338732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso",
+    "variant_id": "42888742371500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over",
+    "variant_id": "42888742404268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "wholebean",
+    "variant_id": "47266371010732"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "0af0433876712dd0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-guacacayo-regional",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/AveleyFarms-5_2.jpg?v=1761841392",
+  "platform": "shopify",
+  "product_id": "7743355388076",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Colombia Huila Natural",
+  "url": "https://www.aveleyfarmscoffee.com/products/colombia-guacacayo-regional",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "42888839233708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Presss",
+    "variant_id": "42888839463084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "42888839495852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Pour Over",
+    "variant_id": "42888839528620"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "07f10fb01ebb5317",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-halo-beriti",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/EthiopiaQabballe-1_1.jpg?v=1761838761",
+  "platform": "shopify",
+  "product_id": "8151497638060",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Ethiopia Qabballe",
+  "url": "https://www.aveleyfarmscoffee.com/products/ethiopia-natural-halo-beriti",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Wholebean",
+    "variant_id": "44129091780780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "44129091813548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over",
+    "variant_id": "44129091846316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "44129091879084"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "d597ea5ee182e348",
+  "first_seen": "2026-10-26",
+  "handle": "la-primavera-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/FlorDeApia-1_1.jpg?v=1761839994",
+  "platform": "shopify",
+  "product_id": "8151504191660",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "Flor De Apia- Colombian",
+  "url": "https://www.aveleyfarmscoffee.com/products/la-primavera-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Wholebean",
+    "variant_id": "44129103708332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "44129103741100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over",
+    "variant_id": "44129103773868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "44129103806636"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ },
+ {
+  "body_hash": "db0ab15b55655796",
+  "first_seen": "2026-10-26",
+  "handle": "el-pilar-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0562/4001/3484/files/ElCamilo-2_2.jpg?v=1761839014",
+  "platform": "shopify",
+  "product_id": "8151508320428",
+  "product_type": "Coffee",
+  "roaster_slug": "aveleyfarmscoffee",
+  "tags": [],
+  "title": "El Camilo - Colombia",
+  "url": "https://www.aveleyfarmscoffee.com/products/el-pilar-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Wholebean",
+    "variant_id": "44129109508268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "44129109541036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over",
+    "variant_id": "44129109573804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "44129109606572"
+   }
+  ],
+  "vendor": "Aveley Farms"
+ }
+]

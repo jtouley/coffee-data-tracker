@@ -1,0 +1,1225 @@
+[
+ {
+  "body_hash": "a9b7041fd94d6688",
+  "first_seen": "2026-10-26",
+  "handle": "bali-moon-bali",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/01/Bali-mockup-2-e1784263792426.png",
+  "platform": "woocommerce",
+  "product_id": "13238",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bali Moon (Bali)",
+  "url": "https://badbeanscoffee.com/shop/bali-moon-bali/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "13238:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lb",
+    "variant_id": "13238:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b768a9788707e215",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-bali-moon-indonesia",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/03/Bali-Medium-4-oz-mockup.png",
+  "platform": "woocommerce",
+  "product_id": "14655",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "Medium Roast Coffee"
+  ],
+  "title": "Bad Mini – Bali Moon – (Indonesia)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-bali-moon-indonesia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Bali Moon &#8211; (Indonesia)",
+    "variant_id": "14655:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28c499fcefd1e798",
+  "first_seen": "2026-10-26",
+  "handle": "solterra-panama",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/04/Solterra-light-mockup2-1.png",
+  "platform": "woocommerce",
+  "product_id": "15882",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Solterra (Panama)",
+  "url": "https://badbeanscoffee.com/shop/solterra-panama/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "15882:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "15882:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "15882:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf70ab703df19794",
+  "first_seen": "2026-10-26",
+  "handle": "impala-rwanda",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/04/Impala-light-mockup1-1-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "15898",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Impala (Rwanda)",
+  "url": "https://badbeanscoffee.com/shop/impala-rwanda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "15898:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "15898:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "15898:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c86c76c8dd4102b",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-solterra-panama",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/04/Panama-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "15943",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Solterra – (Panama)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-solterra-panama/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Solterra &#8211; (Panama)",
+    "variant_id": "15943:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f2794a3fc535651",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-impala-rwanda",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2024/04/Rwanda-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "15954",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Impala – (Rwanda)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-impala-rwanda/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Impala &#8211; (Rwanda)",
+    "variant_id": "15954:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06167abb32c37844",
+  "first_seen": "2026-10-26",
+  "handle": "bad-banger-high-caffeine-blend",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/04/Bad-Banger-mockup-4-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "19275",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Blend",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bad Banger! (High-Caffeine Blend)",
+  "url": "https://badbeanscoffee.com/shop/bad-banger-high-caffeine-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "19275:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "19275:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "19275:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "748bc6164b1cc585",
+  "first_seen": "2026-10-26",
+  "handle": "buka-papua-new-guinea",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2025/01/PNG-shelf-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "21530",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Grind",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "medium roast coffee"
+  ],
+  "title": "Buka (Papua New Guinea)",
+  "url": "https://badbeanscoffee.com/shop/buka-papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "21530:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lb",
+    "variant_id": "21530:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "K-Cups (12)",
+    "variant_id": "21530:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0869d1d589482cd9",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-buka-papua-new-guinea",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2025/05/PNG-medium-mock-copy-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "21829",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Medium Roast Coffee"
+  ],
+  "title": "Bad Mini – Buka (Papua New Guinea)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-buka-papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Buka (Papua New Guinea)",
+    "variant_id": "21829:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9df8fb5febb170cf",
+  "first_seen": "2026-10-26",
+  "handle": "tchapalo-yakous-taste",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2025/11/Tchapalo-new-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "24419",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast Coffee",
+   "Grind",
+   "Medium Roast Coffee",
+   "Specialty Blends",
+   "Specialty Roast",
+   "Whole Bean",
+   "dark roast coffee"
+  ],
+  "title": "Tchapalo (Yakou’s Taste)",
+  "url": "https://badbeanscoffee.com/shop/tchapalo-yakous-taste/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "24419:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "K-Cups (10)",
+    "variant_id": "24419:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69e3d5c1263446e7",
+  "first_seen": "2026-10-26",
+  "handle": "49-jazz-el-salvador",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/06/49-Jazz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26221",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "coffee",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "49′ Jazz (El Salvador)",
+  "url": "https://badbeanscoffee.com/shop/49-jazz-el-salvador/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "26221:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "26221:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "26221:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebde169c1262ac78",
+  "first_seen": "2026-10-26",
+  "handle": "zombie-haiti",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/06/Zombie-Haiti-mockup-shelf-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26223",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "coffee",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Zombie (Haiti)",
+  "url": "https://badbeanscoffee.com/shop/zombie-haiti/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "26223:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lb",
+    "variant_id": "26223:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "K-Cups (12)",
+    "variant_id": "26223:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a623daaaf5129172",
+  "first_seen": "2026-10-26",
+  "handle": "cumbre-bolivia",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/06/Cumbre-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26225",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "coffee",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Cumbre (Bolivia)",
+  "url": "https://badbeanscoffee.com/shop/cumbre-bolivia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "26225:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "26225:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "858f1f65d76a4e45",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-zombie-haiti",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/07/Zombie-Haiti-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26560",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bad Mini – Zombie (Haiti)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-zombie-haiti/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Zombie (Haiti)",
+    "variant_id": "26560:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f52b0abf079a44c8",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-cumbre-bolivia",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/07/Cumbre-Bolivia-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26575",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bad Mini – Cumbre (Bolivia)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-cumbre-bolivia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211;  Cumbre (Bolivia)",
+    "variant_id": "26575:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1cd893dd0c7cd194",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-49-jazz-el-salvador",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2026/07/49-Jazz-El-Salvador-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "26582",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Sample Pack",
+   "Sample Packs",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bad Mini – 49′ Jazz (El Salvador)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-49-jazz-el-salvador/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; 49&#8242; Jazz (El Salvador)",
+    "variant_id": "26582:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30e27b2054f2238f",
+  "first_seen": "2026-10-26",
+  "handle": "bad-beans-coffee-original-coffee-rub",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2021/01/BBC-OG-Rub-mock1-e1686020518859-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "2919",
+  "product_type": "simple",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Coffee Rub"
+  ],
+  "title": "Bad Beans Coffee – Original Coffee Rub™",
+  "url": "https://badbeanscoffee.com/shop/bad-beans-coffee-original-coffee-rub/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Bad Beans Coffee &#8211; Original Coffee Rub™",
+    "variant_id": "2919:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a9cc18a986e4e460",
+  "first_seen": "2026-10-26",
+  "handle": "blondie-costa-rica",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2014/06/Blondie-CR-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "302",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Grind",
+   "Light Roast Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "coffee",
+   "light roast coffee",
+   "organic"
+  ],
+  "title": "Blondie (Costa Rica)",
+  "url": "https://badbeanscoffee.com/shop/blondie-costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "302:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lb",
+    "variant_id": "302:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4596d37d4122e105",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-cusco-peru",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Cusco-Peru-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4689",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Medium Roast Coffee",
+   "coffee",
+   "medium roast coffee",
+   "organic"
+  ],
+  "title": "Bad Mini – Cusco (Peru )",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-cusco-peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Cusco (Peru )",
+    "variant_id": "4689:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2bb4d16afa2aec91",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-darth-roast-french",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Darth-Roast-4oz-shelf-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4720",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "coffee",
+   "dark roast coffee",
+   "organic"
+  ],
+  "title": "Bad Mini – Darth Roast – (French)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-darth-roast-french/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Darth Roast &#8211; (French)",
+    "variant_id": "4720:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "565cbe4c8a002452",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-decaf-bali",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Decaf-Bali-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4725",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Decaf Roast Coffee",
+   "coffee",
+   "decaf roast coffee",
+   "organic"
+  ],
+  "title": "Bad Mini – Decaf (Bali)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-decaf-bali/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Decaf (Bali)",
+    "variant_id": "4725:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0b5348e149ccae44",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-doctor-house-our-secret-blend",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Doctor-House-4oz-shelf-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4729",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Medium Roast Coffee",
+   "coffee",
+   "medium roast coffee",
+   "organic"
+  ],
+  "title": "Bad Mini – Doctor House – (Our secret blend)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-doctor-house-our-secret-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Doctor House &#8211; (Our secret blend)",
+    "variant_id": "4729:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7848474e8db4ce7c",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-blondie-costa-rica",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Blondie-CR-4-oz-mockup-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4733",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Light Roast Coffee",
+   "coffee",
+   "light roast coffee",
+   "organic"
+  ],
+  "title": "Bad Mini – Blondie – (Costa Rica)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-blondie-costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Blondie &#8211; (Costa Rica)",
+    "variant_id": "4733:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6447454236fce90e",
+  "first_seen": "2026-10-26",
+  "handle": "bad-minis-5-bag-sample-pack",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2022/04/Mix-and-Match-1.png",
+  "platform": "woocommerce",
+  "product_id": "4865",
+  "product_type": "mix-and-match",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis",
+   "Dark Roast Coffee",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Sample Pack",
+   "Sample Packs",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bad Minis – 5 Bag Sample Pack",
+  "url": "https://badbeanscoffee.com/shop/bad-minis-5-bag-sample-pack/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Bad Minis &#8211; 5 Bag Sample Pack",
+    "variant_id": "4865:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "700714a7a81961a2",
+  "first_seen": "2026-10-26",
+  "handle": "doctor-house-our-secret-blend",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2020/03/Doctor-House-shelf-2.0-copy.png",
+  "platform": "woocommerce",
+  "product_id": "816",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Originals",
+   "Blend",
+   "Grind",
+   "Medium Roast Coffee",
+   "Whole Bean",
+   "coffee",
+   "medium roast coffee"
+  ],
+  "title": "Doctor House (Our secret blend)",
+  "url": "https://badbeanscoffee.com/shop/doctor-house-our-secret-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "816:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lb",
+    "variant_id": "816:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aeee65ccfde40e9f",
+  "first_seen": "2026-10-26",
+  "handle": "darth-roast-french",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2020/03/Darth-Roast-shelf-2.0-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "875",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Originals",
+   "Blend",
+   "Dark Roast Coffee",
+   "Grind",
+   "Whole Bean",
+   "coffee",
+   "dark roast coffee"
+  ],
+  "title": "Darth Roast (French)",
+  "url": "https://badbeanscoffee.com/shop/darth-roast-french/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "875:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lb",
+    "variant_id": "875:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "K-Cups (12)",
+    "variant_id": "875:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "45f43c017c8fc752",
+  "first_seen": "2026-10-26",
+  "handle": "carnival-brazil",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Brazil-Light-mock-copy.png",
+  "platform": "woocommerce",
+  "product_id": "9460",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Carnival(Brazil)",
+  "url": "https://badbeanscoffee.com/shop/carnival-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "9460:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "9460:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "9460:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a063875006ce9e49",
+  "first_seen": "2026-10-26",
+  "handle": "bongo-flava-tanzania",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Tanzania-Light-mock-copy.png",
+  "platform": "woocommerce",
+  "product_id": "9471",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Bongo Flava (Tanzania)",
+  "url": "https://badbeanscoffee.com/shop/bongo-flava-tanzania/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "9471:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "9471:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "9471:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32e1d24d99fb5cb9",
+  "first_seen": "2026-10-26",
+  "handle": "lava-fruit-sulawesi",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Sulawesi-Light-mock-1-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "9500",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Dark Roast Coffee",
+   "Grind",
+   "Light Roast Coffee",
+   "Medium Roast Coffee",
+   "Red Label",
+   "Single Origin",
+   "Whole Bean",
+   "dark roast coffee",
+   "light roast coffee",
+   "medium roast coffee"
+  ],
+  "title": "Lava Fruit (Sulawesi)",
+  "url": "https://badbeanscoffee.com/shop/lava-fruit-sulawesi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "9500:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lb",
+    "variant_id": "9500:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "K-Cups (12)",
+    "variant_id": "9500:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "008fb2f2aee26eed",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-goteo-de-miel-mexico",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Mexico-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "9614",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Goteo de Miel – (Mexico)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-goteo-de-miel-mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Goteo de Miel &#8211; (Mexico)",
+    "variant_id": "9614:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a3350176994f0da1",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-carnival-brazil",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Brazil-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "9631",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Carnival – (Brazil)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-carnival-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Carnival &#8211; (Brazil)",
+    "variant_id": "9631:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efb72c734cf579e1",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-bongo-flava-tanzania",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Tanzania-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "9637",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Bongo Flava – (Tanzania)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-bongo-flava-tanzania/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Bongo Flava &#8211; (Tanzania)",
+    "variant_id": "9637:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd69466f094fe6ff",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-tinto-colombia",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Colombia-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "9643",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Tinto – (Colombia)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-tinto-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Tinto &#8211; (Colombia)",
+    "variant_id": "9643:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a6692d238dc519f",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-lava-fruit-sulawesi",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/Sulawesi-Light-4oz-mock-copy-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "9649",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Lava Fruit – (Sulawesi)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-lava-fruit-sulawesi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Lava Fruit &#8211; (Sulawesi)",
+    "variant_id": "9649:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8198a6d966d120c2",
+  "first_seen": "2026-10-26",
+  "handle": "bad-mini-honeybear-dominican-republic",
+  "image": "https://badbeanscoffee.com/wp-content/uploads/2023/05/DR-Light-4oz-mock.png",
+  "platform": "woocommerce",
+  "product_id": "9655",
+  "product_type": "variable",
+  "roaster_slug": "badbeanscoffee",
+  "tags": [
+   "Bad Minis"
+  ],
+  "title": "Bad Mini – Honeybear – (Dominican Republic)",
+  "url": "https://badbeanscoffee.com/shop/bad-mini-honeybear-dominican-republic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Bad Mini &#8211; Honeybear &#8211; (Dominican Republic)",
+    "variant_id": "9655:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

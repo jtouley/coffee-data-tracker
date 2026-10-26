@@ -1,0 +1,112 @@
+[
+ {
+  "body_hash": "97843f6a746ec157",
+  "first_seen": "2026-10-26",
+  "handle": "blackbird",
+  "image": "https://images.squarespace-cdn.com/content/v1/56df2f3060b5e996983eb88d/a31f36f0-cd2a-46bc-bfb6-134ab76bf628/Screenshot+2025-05-13+130741.png",
+  "platform": "squarespace",
+  "product_id": "56e5b356c6fc082c757bb3e8",
+  "product_type": "BLENDS",
+  "roaster_slug": "phoenixcoffee",
+  "tags": [
+   "BLENDS",
+   "blue moon",
+   "dark",
+   "dark roast",
+   "smoky",
+   "smooth"
+  ],
+  "title": "Blackbird: Dark Blend",
+  "url": "https://phoenixcoffee.com/shop/blackbird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "4b375abe-76b9-4ab9-b15c-a0d172c2da64"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "5774f864-2510-4a00-be63-0d19aab3a8d7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c247a860d3358db5",
+  "first_seen": "2026-10-26",
+  "handle": "firebird",
+  "image": "https://images.squarespace-cdn.com/content/v1/56df2f3060b5e996983eb88d/75f49aec-c679-4b1e-bb8c-60bcd8a8ad7e/Screenshot+2025-05-13+130712.png",
+  "platform": "squarespace",
+  "product_id": "56e5b5a54d088e29142380aa",
+  "product_type": "BLENDS",
+  "roaster_slug": "phoenixcoffee",
+  "tags": [
+   "BLENDS",
+   "blend",
+   "complex",
+   "creamy",
+   "dark cherry",
+   "espresso"
+  ],
+  "title": "Firebird: House Blend",
+  "url": "https://phoenixcoffee.com/shop/firebird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 pounds",
+    "variant_id": "35c2f450-b820-4eb6-9cff-b15a186673d8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounce",
+    "variant_id": "631c9ab5-9950-45db-a5c2-dba90c2d6677"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd98741fdf10ce5e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-roberto-ccori-nltmm",
+  "image": "https://images.squarespace-cdn.com/content/v1/56df2f3060b5e996983eb88d/43595caa-cd18-49cf-8acb-b3f27e0bcd89/Screenshot+2026-06-08+102847.png",
+  "platform": "squarespace",
+  "product_id": "6a3018f340ed1a248e4ec225",
+  "product_type": "SINGLE ORIGIN COFFEE",
+  "roaster_slug": "phoenixcoffee",
+  "tags": [
+   "SINGLE ORIGIN COFFEE",
+   "cherry",
+   "ethiopia",
+   "single origin",
+   "washed"
+  ],
+  "title": "Musa Abalulesa: Ethiopia",
+  "url": "https://phoenixcoffee.com/shop/peru-roberto-ccori-nltmm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "3121f9be-ed6c-43e5-801f-c934e6137227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5lb",
+    "variant_id": "fd60435f-65ef-456d-a99e-21625aefff72"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,867 @@
+[
+ {
+  "body_hash": "9561c5658eb5461e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/HONDURAS_10_OZ.._BAG.jpg?v=1777667982",
+  "platform": "shopify",
+  "product_id": "10089982460190",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "medium roast",
+   "single-origin",
+   "whole bean"
+  ],
+  "title": "Honduras",
+  "url": "https://mississippimudcoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "51807805112606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "51807805145374"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "7223b6dcc1923d70",
+  "first_seen": "2026-10-26",
+  "handle": "limited-release-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/ColombiaWB-10oz.jpg?v=1787163792",
+  "platform": "shopify",
+  "product_id": "15862209446174",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "limited release",
+   "medium roast",
+   "single-origin",
+   "whole bean"
+  ],
+  "title": "Limited Release: Colombia",
+  "url": "https://mississippimudcoffee.com/products/limited-release-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Default Title",
+    "variant_id": "59808266223902"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "160e35d2766532cf",
+  "first_seen": "2026-10-26",
+  "handle": "hario-mini-slim-ceramic-coffee-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/71sgr7jhavl._sl1500_b8bb2717-e89c-4602-a6e5-ce6770d7c015.jpg?v=1787858996",
+  "platform": "shopify",
+  "product_id": "15870594711838",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Hario Mini Slim+ Ceramic Coffee Mill",
+  "url": "https://mississippimudcoffee.com/products/hario-mini-slim-ceramic-coffee-mill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "Default Title",
+    "variant_id": "59854631371038"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "5f759a4623c60015",
+  "first_seen": "2026-10-26",
+  "handle": "hario-flex-pour-over-coffee-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/brewkit04_2_082b8fe3-3db8-43f0-b577-c601fcceb32f.jpg?v=1787859001",
+  "platform": "shopify",
+  "product_id": "15870594941214",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Hario Flex Pour Over Coffee Kit",
+  "url": "https://mississippimudcoffee.com/products/hario-flex-pour-over-coffee-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1728,
+    "price_usd": 156.15,
+    "title": "Default Title",
+    "variant_id": "59854631600414"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "d61890155c2e338e",
+  "first_seen": "2026-10-26",
+  "handle": "kalita-wave-155-basic-pour-over-coffee-kit-stainless-steel",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/kwbasickitss-155_6918dc07-5278-4b64-974c-e1f11274edf0.jpg?v=1787859064",
+  "platform": "shopify",
+  "product_id": "15870596219166",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Kalita Wave 155 Basic Pour Over Coffee Kit - Stainless Steel",
+  "url": "https://mississippimudcoffee.com/products/kalita-wave-155-basic-pour-over-coffee-kit-stainless-steel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 46.75,
+    "title": "Default Title",
+    "variant_id": "59854634156318"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "9031317c41b16eb3",
+  "first_seen": "2026-10-26",
+  "handle": "kalita-wave-155-pro-pour-over-coffee-kit-stainless-steel",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/kw155kit_white_e8491d90-4b1a-4334-b673-89c3ec315139.jpg?v=1787859064",
+  "platform": "shopify",
+  "product_id": "15870596350238",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Kalita Wave 155 Pro  Pour Over Coffee Kit - Stainless Steel",
+  "url": "https://mississippimudcoffee.com/products/kalita-wave-155-pro-pour-over-coffee-kit-stainless-steel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 69.51,
+    "title": "Default Title",
+    "variant_id": "59854634320158"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "ffd36ca58ee0e198",
+  "first_seen": "2026-10-26",
+  "handle": "kalita-wave-185-pro-pour-over-coffee-kit-stainless-steel",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/kw185kit_403a923d-354c-423b-bcfa-46a3cbaa8bb7.jpg?v=1787859064",
+  "platform": "shopify",
+  "product_id": "15870596383006",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Kalita Wave 185 Pro Pour Over Coffee Kit - Stainless Steel",
+  "url": "https://mississippimudcoffee.com/products/kalita-wave-185-pro-pour-over-coffee-kit-stainless-steel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 74.8,
+    "title": "Default Title",
+    "variant_id": "59854634385694"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "8e5b44fcb9842e13",
+  "first_seen": "2026-10-26",
+  "handle": "kalita-wave-style-pour-over-coffee-brew-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/kwstylekit_wht_df86b7e0-33cf-48bf-8b4b-ac93215096e1.jpg?v=1787859064",
+  "platform": "shopify",
+  "product_id": "15870596743454",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Kalita Wave Style Pour Over Coffee Brew Kit",
+  "url": "https://mississippimudcoffee.com/products/kalita-wave-style-pour-over-coffee-brew-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 67.2,
+    "title": "Default Title",
+    "variant_id": "59854634680606"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "2e24b946251e8ed5",
+  "first_seen": "2026-10-26",
+  "handle": "hario-skerton-pro-ceramic-coffee-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/hario-skerton-pro-grinder.jpg?v=1787859066",
+  "platform": "shopify",
+  "product_id": "15870596808990",
+  "product_type": "WARES",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Hario Skerton Pro Ceramic Coffee Mill",
+  "url": "https://mississippimudcoffee.com/products/hario-skerton-pro-ceramic-coffee-mill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Default Title",
+    "variant_id": "59854634811678"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "0c5ae735449078c4",
+  "first_seen": "2026-10-26",
+  "handle": "limited-release-kenya-nyeri",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Kenya_Bag-art2.jpg?v=1791817834",
+  "platform": "shopify",
+  "product_id": "15932390244638",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "limited release",
+   "medium roast",
+   "single-origin",
+   "whole bean"
+  ],
+  "title": "Limited Release: Kenya Nyeri",
+  "url": "https://mississippimudcoffee.com/products/limited-release-kenya-nyeri",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Default Title",
+    "variant_id": "60099896541470"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "1ef7582151a96c7e",
+  "first_seen": "2026-10-26",
+  "handle": "mississippi-mud-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Mississippi_Mud_Blend_10_oz..jpg?v=1779145624",
+  "platform": "shopify",
+  "product_id": "9674674569502",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Mississippi Mud Signature Blend",
+  "url": "https://mississippimudcoffee.com/products/mississippi-mud-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49489984454942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49489984487710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49489984520478"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "9c4956881d9aa674",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Espresso_Dark_Roast_10_OZ.._BAG.jpg?v=1791397122",
+  "platform": "shopify",
+  "product_id": "9674773528862",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "dark roast espresso beans",
+   "espresso",
+   "espresso beans",
+   "whole bean"
+  ],
+  "title": "Espresso Dark Roast",
+  "url": "https://mississippimudcoffee.com/products/espresso-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490337431838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490340413726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490340446494"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "2e767a4e5c11db19",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Mocha_Java_10_oz..jpg?v=1779146127",
+  "platform": "shopify",
+  "product_id": "9674782015774",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Mocha Java",
+  "url": "https://mississippimudcoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490391892254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490391925022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490391957790"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "aaec69ed45554b72",
+  "first_seen": "2026-10-26",
+  "handle": "big-muddy-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/MMUD_BIG_MUDDY_WB-10oz.jpg?v=1751889920",
+  "platform": "shopify",
+  "product_id": "9674782048542",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "whole bean"
+  ],
+  "title": "Big Muddy Dark Roast",
+  "url": "https://mississippimudcoffee.com/products/big-muddy-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490391990558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490392023326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490392056094"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "a0b31215b7fc2b72",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/MMUD-WB-cafe-espresso.jpg?v=1791389019",
+  "platform": "shopify",
+  "product_id": "9674782081310",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "espresso",
+   "espresso beans",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Cafe Espresso Blend",
+  "url": "https://mississippimudcoffee.com/products/cafe-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490392088862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490392121630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490392154398"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "db3af0b11630df45",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-swiss-water-process-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/2lb-MMUD-Decaf-Swiss-Water-Process.jpg?v=1751889916",
+  "platform": "shopify",
+  "product_id": "9674782212382",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Decaf Medium Roast, Swiss Water® Process",
+  "url": "https://mississippimudcoffee.com/products/decaf-swiss-water-process-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490392449310"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 94.99,
+    "title": "5lb",
+    "variant_id": "49490392482078"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "8a062804c8c6f43d",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/2lb-MMUD-French-Vanilla-SANS.jpg?v=1751889910",
+  "platform": "shopify",
+  "product_id": "9674798924062",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "flavored coffee",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "French Vanilla",
+  "url": "https://mississippimudcoffee.com/products/french-vanilla-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490467946782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490467979550"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "c1880d2a4ab9a078",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/2lb-MMUD-Hazelnut-SANS.jpg?v=1751889905",
+  "platform": "shopify",
+  "product_id": "9674799022366",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "flavored coffee",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Hazelnut",
+  "url": "https://mississippimudcoffee.com/products/hazelnut-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490468176158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490468208926"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "18606acee15a502f",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/highlander-grogg-whole-bean-2lb-bag_jpg.jpg?v=1751889903",
+  "platform": "shopify",
+  "product_id": "9674799120670",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "flavored coffee",
+   "grogg",
+   "highland grog",
+   "highlander grogg",
+   "light roast",
+   "whole bean"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://mississippimudcoffee.com/products/highlander-grogg-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490468274462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.99,
+    "title": "5lb",
+    "variant_id": "49490468307230"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "7772de2565f4e358",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Italian_Roast_WB-10oz.jpg?v=1787002863",
+  "platform": "shopify",
+  "product_id": "9674799186206",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "decaf",
+   "decaffeinated",
+   "swiss water process",
+   "whole bean"
+  ],
+  "title": "Italian Roast",
+  "url": "https://mississippimudcoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "Regular / 2lb",
+    "variant_id": "49490468471070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Regular / 5lb",
+    "variant_id": "49490468503838"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 94.99,
+    "title": "Decaf / 5lb",
+    "variant_id": "49608380350750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "Decaf / 2lb",
+    "variant_id": "49662552736030"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Regular / 10 oz",
+    "variant_id": "59798251438366"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Decaf / 10 oz",
+    "variant_id": "59798251471134"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "de46f3a75ae06e3d",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/Italian_Espresso_2lb.jpg?v=1791395600",
+  "platform": "shopify",
+  "product_id": "9674799218974",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "espresso",
+   "whole bean"
+  ],
+  "title": "Italian Roast Espresso",
+  "url": "https://mississippimudcoffee.com/products/italian-roast-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490468569374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490468602142"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "9ed220ac81fd9139",
+  "first_seen": "2026-10-26",
+  "handle": "pioneer-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/MMUD_PIONEER_WB-10oz_b528a005-cab2-421c-9392-2123750bb8f6.jpg?v=1751889892",
+  "platform": "shopify",
+  "product_id": "9674799382814",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Pioneer Medium Roast",
+  "url": "https://mississippimudcoffee.com/products/pioneer-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490469159198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490469191966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49490469224734"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "0c00ffd829e81dee",
+  "first_seen": "2026-10-26",
+  "handle": "sierra-negra-dark-roast-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/MMUD-WB-sierra-negra.jpg?v=1791388903",
+  "platform": "shopify",
+  "product_id": "9674799415582",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "espresso",
+   "whole bean"
+  ],
+  "title": "Sierra Negra Dark Roast Espresso",
+  "url": "https://mississippimudcoffee.com/products/sierra-negra-dark-roast-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "49490469290270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49490469323038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.99,
+    "title": "5lb",
+    "variant_id": "49490469355806"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "d062ee062da13f55",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-mud-pie-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/MMUD_MUD_PIE_WB-2_lb.jpg?v=1751889887",
+  "platform": "shopify",
+  "product_id": "9716006256926",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "chocolate mud pie",
+   "flavored coffee",
+   "flavored whole bean coffee",
+   "medium roast",
+   "mississippi mud pie",
+   "mud pie",
+   "whole bean"
+  ],
+  "title": "Chocolate Mud Pie",
+  "url": "https://mississippimudcoffee.com/products/chocolate-mud-pie-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "49622522626334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "49622522659102"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ },
+ {
+  "body_hash": "ae1b27c7c6ab4a13",
+  "first_seen": "2026-10-26",
+  "handle": "french-chicory-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0916/6258/2046/files/10oz-French_Chicory_Bag.jpg?v=1762797740",
+  "platform": "shopify",
+  "product_id": "9925247271198",
+  "product_type": "Ground Coffee",
+  "roaster_slug": "mississippimudcoffee",
+  "tags": [
+   "dark roast",
+   "gift idea"
+  ],
+  "title": "French Chicory Blend",
+  "url": "https://mississippimudcoffee.com/products/french-chicory-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10oz",
+    "variant_id": "50330375389470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.99,
+    "title": "2lb",
+    "variant_id": "60049068687646"
+   }
+  ],
+  "vendor": "Mississippi Mud Coffee"
+ }
+]

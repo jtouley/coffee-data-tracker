@@ -1,0 +1,669 @@
+[
+ {
+  "body_hash": "8a52f3f90d293921",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-single-serve",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/05/03085503/New_French-Roast-10oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "1075",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Subscribe and Save"
+  ],
+  "title": "French Roast",
+  "url": "https://www.newenglandcoffee.com/product/french-roast-single-serve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.99,
+    "title": "French Roast",
+    "variant_id": "1075:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1ab0b7b06075a77",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-heritage-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2020/08/24075451/LTO-HB-600.jpg",
+  "platform": "woocommerce",
+  "product_id": "110745",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts"
+  ],
+  "title": "New England Heritage Blend®",
+  "url": "https://www.newenglandcoffee.com/product/new-england-heritage-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "New England Heritage Blend®",
+    "variant_id": "110745:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5790da31039ee244",
+  "first_seen": "2026-10-26",
+  "handle": "newport-coffee-roasters-castle-hill",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2020/10/03085309/NEC_ExclusiveBags_CastleHill.jpg",
+  "platform": "woocommerce",
+  "product_id": "116546",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "Newport Coffee Traders® Castle Hill",
+  "url": "https://www.newenglandcoffee.com/product/newport-coffee-roasters-castle-hill/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Newport Coffee Traders® Castle Hill",
+    "variant_id": "116546:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c56c0840be0bc00",
+  "first_seen": "2026-10-26",
+  "handle": "newport-coffee-roasters-cliff-walk",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2020/10/03085306/NEC_ExclusiveBags_CliffWalk.jpg",
+  "platform": "woocommerce",
+  "product_id": "116554",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Newport Coffee Traders® Cliff Walk",
+  "url": "https://www.newenglandcoffee.com/product/newport-coffee-roasters-cliff-walk/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Newport Coffee Traders® Cliff Walk",
+    "variant_id": "116554:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f80612d7e07d19ea",
+  "first_seen": "2026-10-26",
+  "handle": "sabro-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2021/01/03085026/NEC_ExclusiveBags_SabroBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "124189",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Subscribe and Save"
+  ],
+  "title": "Sabro™ Flavored Coffee Blend",
+  "url": "https://www.newenglandcoffee.com/product/sabro-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Sabro™ Flavored Coffee Blend",
+    "variant_id": "124189:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "514e5c227030487a",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-breakfast-blend-decaffeinated",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085815/New_Breakfast-Blend-Decaf-10oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "132",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Decaffeinated",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "New England Breakfast Blend Decaffeinated",
+  "url": "https://www.newenglandcoffee.com/product/new-england-breakfast-blend-decaffeinated/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.49,
+    "title": "New England Breakfast Blend Decaffeinated",
+    "variant_id": "132:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "660fb48531290c2e",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-breakfast-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085815/New_Breakfast-Blend-12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "154",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "New England Breakfast Blend®",
+  "url": "https://www.newenglandcoffee.com/product/new-england-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.49,
+    "title": "New England Breakfast Blend®",
+    "variant_id": "154:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b025edf281c5a1f",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-eyeopener",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085812/New_Eyeopener-Blend-9oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "16",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "New England EyeOpener Blend®",
+  "url": "https://www.newenglandcoffee.com/product/new-england-eyeopener/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.49,
+    "title": "New England EyeOpener Blend®",
+    "variant_id": "16:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "625a4230cf66e886",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-dark-roast",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085304/NEC_ExclusiveBags_ColombianSupremoDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "162",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Colombian Supremo Dark Roast",
+  "url": "https://www.newenglandcoffee.com/product/colombian-supremo-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Colombian Supremo Dark Roast",
+    "variant_id": "162:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc1273f70b354d52",
+  "first_seen": "2026-10-26",
+  "handle": "san-francisco-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085304/NEC_ExclusiveBags_SanFranciscoBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "171",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "San Francisco Blend",
+  "url": "https://www.newenglandcoffee.com/product/san-francisco-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "San Francisco Blend",
+    "variant_id": "171:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d21ff2bcdbebb11",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-especial",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2023/02/03085323/NEC22-33_Griswold-Darkwater-10oz-Render_Espresso-Especiale_AngleLeft-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "178214",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Subscribe and Save"
+  ],
+  "title": "Espresso Especiale™",
+  "url": "https://www.newenglandcoffee.com/product/espresso-especial/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Espresso Especiale&trade;",
+    "variant_id": "178214:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b2cfeb7d1f205205",
+  "first_seen": "2026-10-26",
+  "handle": "the-komodo-dragon-blend-2",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2025/08/03084821/Komodo-Website-product.png",
+  "platform": "woocommerce",
+  "product_id": "248896",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "The Komodo Dragon Blend",
+  "url": "https://www.newenglandcoffee.com/product/the-komodo-dragon-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.99,
+    "title": "The Komodo Dragon Blend",
+    "variant_id": "248896:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd79e49b83b24e9c",
+  "first_seen": "2026-10-26",
+  "handle": "roast-to-order",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2025/12/05094331/NEC-Rift-Landing-detail-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "252611",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Roast to Order",
+   "Subscribe and Save"
+  ],
+  "title": "Roast-To-Order",
+  "url": "https://www.newenglandcoffee.com/product/roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Roast-To-Order",
+    "variant_id": "252611:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2823cb168036f3ba",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-house-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2026/03/31103630/NEC_11oz-House-Blend-Render-Left-ANGLE-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "263482",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Donut Shop",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "New England House Blend",
+  "url": "https://www.newenglandcoffee.com/product/new-england-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.49,
+    "title": "New England House Blend",
+    "variant_id": "263482:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43c479cd729887ea",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast-decaffeinated",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085304/NEC_ExclusiveBags_DecafViennaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "285",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Decaffeinated",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Vienna Roast Decaffeinated",
+  "url": "https://www.newenglandcoffee.com/product/vienna-roast-decaffeinated/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Vienna Roast Decaffeinated",
+    "variant_id": "285:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "755bc74ec4dc564b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085308/NEC_ExclusiveBags_ColombianExcelsoBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "302",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "Colombian Excelso Blend®",
+  "url": "https://www.newenglandcoffee.com/product/colombian-excelso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Colombian Excelso Blend®",
+    "variant_id": "302:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52f2d41fba972623",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085308/NEC_ExclusiveBags_GuatemalaAntigua.jpg",
+  "platform": "woocommerce",
+  "product_id": "313",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "Guatemala Antigua",
+  "url": "https://www.newenglandcoffee.com/product/guatemala-antigua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Guatemala Antigua",
+    "variant_id": "313:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d784cbd25c7d3453",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-city-roast",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085308/NEC_ExclusiveBags_NewEnglandCityRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "325",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Exclusive",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "New England City Roast",
+  "url": "https://www.newenglandcoffee.com/product/new-england-city-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "New England City Roast",
+    "variant_id": "325:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "50926b596281522b",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-full-city-roast",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085305/NEC_ExclusiveBags_NewEnglandFullCityRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "348",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "New England Full City Roast",
+  "url": "https://www.newenglandcoffee.com/product/new-england-full-city-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "New England Full City Roast",
+    "variant_id": "348:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a4857c3115f12dc",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-especiale",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085305/NEC_ExclusiveBags_EspressoEspeciale.jpg",
+  "platform": "woocommerce",
+  "product_id": "359",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Espresso Especiale™",
+  "url": "https://www.newenglandcoffee.com/product/espresso-especiale/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Espresso Especiale™",
+    "variant_id": "359:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93ed23a6e8214e00",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085305/NEC_ExclusiveBags_ViennaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "365",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Vienna Roast",
+  "url": "https://www.newenglandcoffee.com/product/vienna-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Vienna Roast",
+    "variant_id": "365:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d16f0b52f60359d",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085306/NEC_ExclusiveBags_ItalianRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "376",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Exclusive",
+   "Subscribe and Save"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.newenglandcoffee.com/product/italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.25,
+    "title": "Italian Roast",
+    "variant_id": "376:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39ded2970046479c",
+  "first_seen": "2026-10-26",
+  "handle": "donut-shop-blend",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2013/04/03085816/New_Donut-Shop-11oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "444",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Donut Shop",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "New England Donut Shop Blend®",
+  "url": "https://www.newenglandcoffee.com/product/donut-shop-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.49,
+    "title": "New England Donut Shop Blend®",
+    "variant_id": "444:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f937b9a7ee4dc3b",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blueberry",
+  "image": "https://cdn.newenglandcoffee.com/wp-content/uploads/2019/02/03085819/Breakfast-Blueberry-Duo-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "81117",
+  "product_type": "variable",
+  "roaster_slug": "newenglandcoffee",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Gift Ideas &amp; Novelty Items",
+   "Light &amp; Medium Roasts",
+   "Subscribe and Save"
+  ],
+  "title": "Breakfast Blend & Blueberry Cobbler",
+  "url": "https://www.newenglandcoffee.com/product/breakfast-blueberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Breakfast Blend &#038; Blueberry Cobbler",
+    "variant_id": "81117:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

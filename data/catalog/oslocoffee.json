@@ -1,0 +1,992 @@
+[
+ {
+  "body_hash": "e1107163df1a5ec9",
+  "first_seen": "2026-10-26",
+  "handle": "odin-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0250/7918/5456/products/odin-front.png?v=1560378947",
+  "platform": "shopify",
+  "product_id": "3747412410416",
+  "product_type": "Coffee",
+  "roaster_slug": "oslocoffee",
+  "tags": [],
+  "title": "Odin Espresso",
+  "url": "https://oslocoffee.com/products/odin-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "28780286214192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28780286279728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "28922372325424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cold Brew",
+    "variant_id": "28922372423728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Percolator",
+    "variant_id": "28922373570608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Percolator",
+    "variant_id": "28922373636144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Chemex",
+    "variant_id": "28922374324272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Chemex",
+    "variant_id": "28922374389808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "28922375536688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "28922375602224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Flat Bottom Mesh",
+    "variant_id": "28922375995440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Mesh",
+    "variant_id": "28922376060976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Flat Bottom Paper",
+    "variant_id": "28922378158128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Paper",
+    "variant_id": "28922378223664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Universal",
+    "variant_id": "28922381008944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Universal",
+    "variant_id": "28922381074480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cone Mesh",
+    "variant_id": "28922382024752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Mesh",
+    "variant_id": "28922382090288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cone Paper",
+    "variant_id": "28922382975024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Paper",
+    "variant_id": "28922383040560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Stovetop Espresso",
+    "variant_id": "28922385006640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Stovetop Espresso",
+    "variant_id": "28922385072176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Turkish",
+    "variant_id": "28922385104944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Turkish",
+    "variant_id": "28922385170480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "28922385203248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "28922385268784"
+   }
+  ],
+  "vendor": "Oslo Coffee Roasters"
+ },
+ {
+  "body_hash": "258a4671c721186e",
+  "first_seen": "2026-10-26",
+  "handle": "thor-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0250/7918/5456/products/thor-front.png?v=1560379150",
+  "platform": "shopify",
+  "product_id": "3747430858800",
+  "product_type": "Coffee",
+  "roaster_slug": "oslocoffee",
+  "tags": [],
+  "title": "Thor House Blend",
+  "url": "https://oslocoffee.com/products/thor-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28780331270192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28780331335728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "28922398900272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cold Brew",
+    "variant_id": "28922398965808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Percolator",
+    "variant_id": "28922398998576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Percolator",
+    "variant_id": "28922399129648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "28922400866352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Chemex",
+    "variant_id": "28922400931888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "28922402111536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "28922402275376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Mesh",
+    "variant_id": "28922403160112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Mesh",
+    "variant_id": "28922403225648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Paper",
+    "variant_id": "28922407616560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Paper",
+    "variant_id": "28922407682096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Universal",
+    "variant_id": "28922411024432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Universal",
+    "variant_id": "28922411089968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Mesh",
+    "variant_id": "28922412826672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Mesh",
+    "variant_id": "28922412990512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Paper",
+    "variant_id": "28922414661680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Paper",
+    "variant_id": "28922414727216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Stovetop Espresso",
+    "variant_id": "28922414825520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Stovetop Espresso",
+    "variant_id": "28922414891056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish",
+    "variant_id": "28922415120432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Turkish",
+    "variant_id": "28922415185968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "28922417479728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "28922417545264"
+   }
+  ],
+  "vendor": "Oslo Coffee Roasters"
+ },
+ {
+  "body_hash": "05522d30ea562fd6",
+  "first_seen": "2026-10-26",
+  "handle": "freya-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0250/7918/5456/products/freya-front.png?v=1560378780",
+  "platform": "shopify",
+  "product_id": "3747435774000",
+  "product_type": "Coffee",
+  "roaster_slug": "oslocoffee",
+  "tags": [],
+  "title": "Freya Dark Roast",
+  "url": "https://oslocoffee.com/products/freya-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28780340805680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28780340871216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "28922123616304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cold Brew",
+    "variant_id": "28922123714608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Percolator",
+    "variant_id": "28922132693040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Percolator",
+    "variant_id": "28922132791344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "28922134921264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Chemex",
+    "variant_id": "28922135085104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "28922136461360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "28922136625200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Mesh",
+    "variant_id": "28922138034224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Mesh",
+    "variant_id": "28922138099760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Paper",
+    "variant_id": "28922140033072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Paper",
+    "variant_id": "28922140098608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Universal",
+    "variant_id": "28922141016112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Universal",
+    "variant_id": "28922141114416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Mesh",
+    "variant_id": "28922144063536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Mesh",
+    "variant_id": "28922144129072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Paper",
+    "variant_id": "28922145243184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Paper",
+    "variant_id": "28922145472560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Stovetop Espresso",
+    "variant_id": "28922147274800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Stovetop Espresso",
+    "variant_id": "28922147569712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish",
+    "variant_id": "28922148945968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Turkish",
+    "variant_id": "28922149044272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "28922149929008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "28922150125616"
+   }
+  ],
+  "vendor": "Oslo Coffee Roasters"
+ },
+ {
+  "body_hash": "e55105c67aefce5f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0250/7918/5456/products/brazil-front.png?v=1560378652",
+  "platform": "shopify",
+  "product_id": "3747444916272",
+  "product_type": "Coffee",
+  "roaster_slug": "oslocoffee",
+  "tags": [],
+  "title": "Decaf House Blend",
+  "url": "https://oslocoffee.com/products/decaf-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28780357484592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28780357550128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "28922062536752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cold Brew",
+    "variant_id": "28922065256496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Percolator",
+    "variant_id": "28922073841712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Percolator",
+    "variant_id": "28922073907248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "28922078036016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Chemex",
+    "variant_id": "28922078330928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "28922079674416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "28922079739952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Mesh",
+    "variant_id": "28922089766960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Mesh",
+    "variant_id": "28922089832496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Paper",
+    "variant_id": "28922093502512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Paper",
+    "variant_id": "28922094059568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Universal",
+    "variant_id": "28922096189488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Universal",
+    "variant_id": "28922096418864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Mesh",
+    "variant_id": "28922099236912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Mesh",
+    "variant_id": "28922099367984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Paper",
+    "variant_id": "28922101727280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Paper",
+    "variant_id": "28922101792816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Stovetop Espresso",
+    "variant_id": "28922103201840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Stovetop Espresso",
+    "variant_id": "28922103267376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish",
+    "variant_id": "28922105692208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Turkish",
+    "variant_id": "28922105757744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "28922107068464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "28922107134000"
+   }
+  ],
+  "vendor": "Oslo Coffee Roasters"
+ },
+ {
+  "body_hash": "c272c9e9bcec7bd4",
+  "first_seen": "2026-10-26",
+  "handle": "golden-tree-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0250/7918/5456/products/GOLDENTREE-SHOPIFY.png?v=1744665035",
+  "platform": "shopify",
+  "product_id": "3747449831472",
+  "product_type": "Coffee",
+  "roaster_slug": "oslocoffee",
+  "tags": [],
+  "title": "Golden Tree Blend",
+  "url": "https://oslocoffee.com/products/golden-tree-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28780367413296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "28780367478832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "28922349977648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cold Brew",
+    "variant_id": "28922350043184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Percolator",
+    "variant_id": "28922350108720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Percolator",
+    "variant_id": "28922350174256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "28922350207024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Chemex",
+    "variant_id": "28922350272560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "28922350436400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / French Press",
+    "variant_id": "28922350501936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Mesh",
+    "variant_id": "28922350862384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Mesh",
+    "variant_id": "28922350927920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Flat Bottom Paper",
+    "variant_id": "28922351386672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Flat Bottom Paper",
+    "variant_id": "28922351452208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Universal",
+    "variant_id": "28922356826160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Universal",
+    "variant_id": "28922356891696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Mesh",
+    "variant_id": "28922357088304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Mesh",
+    "variant_id": "28922357153840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Paper",
+    "variant_id": "28922361610288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Cone Paper",
+    "variant_id": "28922361675824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Stovetop Espresso",
+    "variant_id": "28922362298416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Stovetop Espresso",
+    "variant_id": "28922362363952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish",
+    "variant_id": "28922364428336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Turkish",
+    "variant_id": "28922364493872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "28922365345840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 Pound / Espresso",
+    "variant_id": "28922365411376"
+   }
+  ],
+  "vendor": "Oslo Coffee Roasters"
+ }
+]

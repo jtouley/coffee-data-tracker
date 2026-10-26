@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "f6f83869f78a60aa",
+  "first_seen": "2026-10-26",
+  "handle": "fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0021/2395/6288/products/FallBlend-108678.png?v=1696456662",
+  "platform": "generic",
+  "product_id": "4307fdbb1915",
+  "product_type": "",
+  "roaster_slug": "mountainmamaroasters",
+  "tags": [],
+  "title": "Fall Blend",
+  "url": "https://mauchchunkcoffee.com/products/fall-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e2bcca33edf1d2f",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0021/2395/6288/files/Breakfast_Blend__Mauch_Chunk_Coffee_Company.webp?v=1748393245",
+  "platform": "generic",
+  "product_id": "89a57c4c6bdf",
+  "product_type": "",
+  "roaster_slug": "mountainmamaroasters",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://mauchchunkcoffee.com/products/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ef3772b3c2e7f97",
+  "first_seen": "2026-10-26",
+  "handle": "ratio-six-specialty-coffee-maker",
+  "image": "https://cdn.shopify.com/s/files/1/0021/2395/6288/products/ratio6-black-A3_2048x2048_c6733bc8-ea67-40a6-a0e3-7da9e02559d3.jpg?v=1661475861",
+  "platform": "generic",
+  "product_id": "a3dd29176a4b",
+  "product_type": "",
+  "roaster_slug": "mountainmamaroasters",
+  "tags": [],
+  "title": "Ratio Six Coffee Maker",
+  "url": "https://mauchchunkcoffee.com/products/ratio-six-specialty-coffee-maker/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 365.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d2b9e1c4a47c256",
+  "first_seen": "2026-10-26",
+  "handle": "signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0021/2395/6288/files/Signature_Blend__Mauch_Chunk_Coffee_Company.webp?v=1748393282",
+  "platform": "generic",
+  "product_id": "be093240712c",
+  "product_type": "",
+  "roaster_slug": "mountainmamaroasters",
+  "tags": [],
+  "title": "Signature Blend",
+  "url": "https://mauchchunkcoffee.com/products/signature-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bffb93914d198cf",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian-valle-del-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0021/2395/6288/files/Decaf_Colombian_Valle_del_Cauca__Mauch_Chunk_Coffee_Company.webp?v=1748390297",
+  "platform": "generic",
+  "product_id": "ec90a5446bb7",
+  "product_type": "",
+  "roaster_slug": "mountainmamaroasters",
+  "tags": [],
+  "title": "Decaf Colombian Valle del Cauca",
+  "url": "https://mauchchunkcoffee.com/products/decaf-colombian-valle-del-cauca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

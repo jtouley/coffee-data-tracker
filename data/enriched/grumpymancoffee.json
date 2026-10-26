@@ -1,0 +1,21 @@
+{
+ "dd8ec4871d94": {
+  "body_hash": "5f03c3997a6d5591",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dry fruits",
+   "dark chocolate",
+   "citrus"
+  ],
+  "varietals": []
+ }
+}

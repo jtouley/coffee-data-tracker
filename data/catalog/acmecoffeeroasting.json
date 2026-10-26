@@ -1,0 +1,165 @@
+[
+ {
+  "body_hash": "f54bd327276fbcf7",
+  "first_seen": "2026-10-26",
+  "handle": "acme-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_f1c661f4-a28d-4a39-9f88-63552162d438.png?v=1618593437",
+  "platform": "shopify",
+  "product_id": "458491860",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "Acme Decaf 16 oz.",
+  "url": "https://acmecoffeeroasting.com/products/acme-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.0,
+    "title": "Pound",
+    "variant_id": "1307277456"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "87e8e0e89fe2f68d",
+  "first_seen": "2026-10-26",
+  "handle": "seasonal-varietals",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_66a84ff3-bc10-49cb-8f5f-e95e8ce7beee.png?v=1641277016",
+  "platform": "shopify",
+  "product_id": "458492092",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [
+   "local"
+  ],
+  "title": "Roaster's Choice     -16 oz.",
+  "url": "https://acmecoffeeroasting.com/products/seasonal-varietals",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 28.0,
+    "title": "Pound",
+    "variant_id": "1307278328"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "f19eb4c859d1bf6f",
+  "first_seen": "2026-10-26",
+  "handle": "powerglide-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_737bf2b4-8330-49d1-946f-e13e63867438.png?v=1618593267",
+  "platform": "shopify",
+  "product_id": "458492628",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "Powerglide Blend 16 oz.",
+  "url": "https://acmecoffeeroasting.com/products/powerglide-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 21.0,
+    "title": "Pound",
+    "variant_id": "1307279648"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "3442bb3289d63a81",
+  "first_seen": "2026-10-26",
+  "handle": "motor-city-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_2cde70d4-32c0-428a-8a99-473601c71988.png?v=1618596806",
+  "platform": "shopify",
+  "product_id": "458492840",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "Motor City Espresso 16 oz",
+  "url": "https://acmecoffeeroasting.com/products/motor-city-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.0,
+    "title": "Pound",
+    "variant_id": "1307280132"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "bdaefcbf726ed284",
+  "first_seen": "2026-10-26",
+  "handle": "90-weight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_531d8448-687e-420a-921a-fb60677e2d6e.png?v=1618593090",
+  "platform": "shopify",
+  "product_id": "458493040",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "90 Weight Blend 16 oz.",
+  "url": "https://acmecoffeeroasting.com/products/90-weight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Pound",
+    "variant_id": "15262526212"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "07519ca27be82433",
+  "first_seen": "2026-10-26",
+  "handle": "road-dog-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_6d450fb8-6e55-44b4-829b-e14ba2f564dc.png?v=1618591948",
+  "platform": "shopify",
+  "product_id": "458493164",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "Road Dog Blend 16 oz",
+  "url": "https://acmecoffeeroasting.com/products/road-dog-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 21.0,
+    "title": "Pound",
+    "variant_id": "1307281396"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ },
+ {
+  "body_hash": "87dbc79d6117a6f0",
+  "first_seen": "2026-10-26",
+  "handle": "valve-job-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0777/8031/products/image_9e02dbe3-4936-41a3-b4ec-3fa216e01b4b.png?v=1618592940",
+  "platform": "shopify",
+  "product_id": "458493324",
+  "product_type": "",
+  "roaster_slug": "acmecoffeeroasting",
+  "tags": [],
+  "title": "Valve Job Blend 16 oz.",
+  "url": "https://acmecoffeeroasting.com/products/valve-job-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 21.0,
+    "title": "Pound",
+    "variant_id": "1307281952"
+   }
+  ],
+  "vendor": "Acme Coffee Roasting Co"
+ }
+]

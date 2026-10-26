@@ -1,0 +1,111 @@
+[
+ {
+  "body_hash": "0a0bada8f0e96f53",
+  "first_seen": "2026-10-26",
+  "handle": "unisex-sweatshirt",
+  "image": "https://cdn.shopify.com/s/files/1/0897/7616/1062/files/unisex-crew-neck-sweatshirt-sand-front-6921dca0718a7.jpg?v=1763826861",
+  "platform": "shopify",
+  "product_id": "10312217788710",
+  "product_type": "",
+  "roaster_slug": "roastcoffeehouse",
+  "tags": [],
+  "title": "roast crewneck",
+  "url": "https://www.roastcoffeehouse.com/products/unisex-sweatshirt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 332,
+    "price_usd": 48.0,
+    "title": "S",
+    "variant_id": "51711232049446"
+   },
+   {
+    "available": true,
+    "grams": 391,
+    "price_usd": 48.0,
+    "title": "M",
+    "variant_id": "51711232082214"
+   },
+   {
+    "available": true,
+    "grams": 414,
+    "price_usd": 48.0,
+    "title": "L",
+    "variant_id": "51711232114982"
+   },
+   {
+    "available": true,
+    "grams": 462,
+    "price_usd": 48.0,
+    "title": "XL",
+    "variant_id": "51711232147750"
+   },
+   {
+    "available": true,
+    "grams": 544,
+    "price_usd": 52.0,
+    "title": "2XL",
+    "variant_id": "51711232180518"
+   }
+  ],
+  "vendor": "Roast Coffee House"
+ },
+ {
+  "body_hash": "c6df9c00827d5b74",
+  "first_seen": "2026-10-26",
+  "handle": "roast-st-pattys-crew-neck",
+  "image": "https://cdn.shopify.com/s/files/1/0897/7616/1062/files/unisex-crew-neck-sweatshirt-military-green-front-678ea6326fe34.jpg?v=1737401915",
+  "platform": "shopify",
+  "product_id": "9976577753382",
+  "product_type": "",
+  "roaster_slug": "roastcoffeehouse",
+  "tags": [],
+  "title": "roast St. Patty's Crewneck",
+  "url": "https://www.roastcoffeehouse.com/products/roast-st-pattys-crew-neck",
+  "variants": [
+   {
+    "available": true,
+    "grams": 332,
+    "price_usd": 48.0,
+    "title": "S",
+    "variant_id": "49969348968742"
+   },
+   {
+    "available": true,
+    "grams": 391,
+    "price_usd": 48.0,
+    "title": "M",
+    "variant_id": "49969349001510"
+   },
+   {
+    "available": true,
+    "grams": 414,
+    "price_usd": 48.0,
+    "title": "L",
+    "variant_id": "49969349034278"
+   },
+   {
+    "available": true,
+    "grams": 462,
+    "price_usd": 48.0,
+    "title": "XL",
+    "variant_id": "49969349067046"
+   },
+   {
+    "available": true,
+    "grams": 544,
+    "price_usd": 52.0,
+    "title": "2XL",
+    "variant_id": "49969349099814"
+   },
+   {
+    "available": true,
+    "grams": 564,
+    "price_usd": 52.0,
+    "title": "3XL",
+    "variant_id": "49969349132582"
+   }
+  ],
+  "vendor": "Roast Coffee House"
+ }
+]

@@ -1,0 +1,2146 @@
+[
+ {
+  "body_hash": "6a02a024832340d5",
+  "first_seen": "2026-10-26",
+  "handle": "summer-sun-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-sampler-mockups.jpg?v=1709661695",
+  "platform": "shopify",
+  "product_id": "8561235034343",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [
+   "#Coffee #freshroasted #freshroastedcoffee #flavorcountry"
+  ],
+  "title": "Summer Sun  12 oz. Sample Pack",
+  "url": "https://pathfindercoffee.shop/products/summer-sun-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 17.0,
+    "title": "Whole bean",
+    "variant_id": "48184509169895"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 17.0,
+    "title": "Ground coarse (French Press)",
+    "variant_id": "48184509202663"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 17.0,
+    "title": "Ground medium (drip)",
+    "variant_id": "48184509235431"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 17.0,
+    "title": "Ground fine (espresso)",
+    "variant_id": "48184509268199"
+   }
+  ],
+  "vendor": "Pathfinder Coffee Roasters"
+ },
+ {
+  "body_hash": "1d137453b6e354fc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yrgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-sand-bg1_af4e5db1-da8f-49cc-8414-05ce3c284298.jpg?v=1709659855",
+  "platform": "shopify",
+  "product_id": "8690874810599",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [
+   "#Coffee #freshroasted #freshroastedcoffee #flavorcountry"
+  ],
+  "title": "Ethiopia Organic Kochere G2 Yrgichaffe",
+  "url": "https://pathfindercoffee.shop/products/ethiopia-yrgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Whole Bean",
+    "variant_id": "48759610015975"
+   },
+   {
+    "available": false,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground fine (espresso)",
+    "variant_id": "48759610048743"
+   },
+   {
+    "available": false,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground medium (drip)",
+    "variant_id": "48759610081511"
+   },
+   {
+    "available": false,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground Coarse (french press",
+    "variant_id": "48759610114279"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Whole Bean",
+    "variant_id": "48759610147047"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground fine (espresso)",
+    "variant_id": "48759610179815"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground medium (drip)",
+    "variant_id": "48759610245351"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground Coarse (french press",
+    "variant_id": "48759610278119"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "48759610310887"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Ground fine (espresso)",
+    "variant_id": "48759610343655"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Ground medium (drip)",
+    "variant_id": "48759610376423"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Ground Coarse (french press",
+    "variant_id": "48759610409191"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48759610441959"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground fine (espresso)",
+    "variant_id": "48759610474727"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (drip)",
+    "variant_id": "48759610507495"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press",
+    "variant_id": "48759610540263"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48759610573031"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground fine (espresso)",
+    "variant_id": "48759610605799"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground medium (drip)",
+    "variant_id": "48759610638567"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground Coarse (french press",
+    "variant_id": "48759610671335"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50379587223783"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground fine (espresso)",
+    "variant_id": "50379587256551"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (drip)",
+    "variant_id": "50379587289319"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press",
+    "variant_id": "50379587322087"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "445922c0e037f0bc",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-sand-bg8-french-van.jpg?v=1712592243",
+  "platform": "shopify",
+  "product_id": "8752911057127",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [
+   "#Coffee #freshroasted #freshroastedcoffee #flavorcountry"
+  ],
+  "title": "French Vanilla",
+  "url": "https://pathfindercoffee.shop/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Whole Bean",
+    "variant_id": "49041672274151"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground fine (espresso)",
+    "variant_id": "49041672306919"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground Medium (drip)",
+    "variant_id": "49041672339687"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground Coarse (french press)",
+    "variant_id": "49041672372455"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Whole Bean",
+    "variant_id": "49041672405223"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground fine (espresso)",
+    "variant_id": "49041672437991"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground Medium (drip)",
+    "variant_id": "49041672470759"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground Coarse (french press)",
+    "variant_id": "49041672503527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49041672536295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground fine (espresso)",
+    "variant_id": "49041672569063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Medium (drip)",
+    "variant_id": "49041672601831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "49041672634599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49041672667367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground fine (espresso)",
+    "variant_id": "49041672700135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Medium (drip)",
+    "variant_id": "49041672732903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "49041672765671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49697565933799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground fine (espresso)",
+    "variant_id": "49697565966567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground Medium (drip)",
+    "variant_id": "49697565999335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground Coarse (french press)",
+    "variant_id": "49697566032103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50379587780839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground fine (espresso)",
+    "variant_id": "50379587813607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Medium (drip)",
+    "variant_id": "50379587846375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "50379587879143"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609672253671"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "51609672319207"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (drip)",
+    "variant_id": "51609672351975"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (French press)",
+    "variant_id": "51609672417511"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "ab8b65afd4ad027b",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-sand-bg8-hazelnut.jpg?v=1712592336",
+  "platform": "shopify",
+  "product_id": "8752913023207",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [
+   "#Coffee #freshroasted #freshroastedcoffee #flavorcountry"
+  ],
+  "title": "Hazelnut",
+  "url": "https://pathfindercoffee.shop/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Whole Bean",
+    "variant_id": "49041684529383"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground fine (espresso)",
+    "variant_id": "49041684562151"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground Medium (drip)",
+    "variant_id": "49041684594919"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 g / Ground Coarse (french press)",
+    "variant_id": "49041684627687"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Whole Bean",
+    "variant_id": "49041684660455"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground fine (espresso)",
+    "variant_id": "49041684693223"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground Medium (drip)",
+    "variant_id": "49041684725991"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz / Ground Coarse (french press)",
+    "variant_id": "49041684758759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49041684791527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground fine (espresso)",
+    "variant_id": "49041684824295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Medium (drip)",
+    "variant_id": "49041684857063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "49041684889831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49041684922599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground fine (espresso)",
+    "variant_id": "49041684955367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Medium (drip)",
+    "variant_id": "49041684988135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "49041685020903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49707496702183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground fine (espresso)",
+    "variant_id": "49708325699815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground medium (drip)",
+    "variant_id": "49708331434215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb / Ground coarse (French press)",
+    "variant_id": "49708334514407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50379590828263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground fine (espresso)",
+    "variant_id": "50379590893799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Medium (drip)",
+    "variant_id": "50379590926567"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground coarse (French press)",
+    "variant_id": "50379591057639"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609667993831"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground fine (espresso)",
+    "variant_id": "51609668157671"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Medium (drip)",
+    "variant_id": "51609670516967"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (French press)",
+    "variant_id": "51609671139559"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "c0d2da34acf9fc99",
+  "first_seen": "2026-10-26",
+  "handle": "ben-s-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-all-mockups_a0b89b6a-1388-4967-85f9-85a44b0c0af4.jpg?v=1721568046",
+  "platform": "shopify",
+  "product_id": "8969132507367",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "Ben’s Blend",
+  "url": "https://pathfindercoffee.shop/products/ben-s-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "49988897898727"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "49988897931495"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "49988897964263"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "49988897997031"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "49988898029799"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "49988898062567"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "49988898095335"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "49988898128103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "49988898160871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "49988898193639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "49988898226407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "49988898259175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49988898291943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "49988898324711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "49988898357479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "49988898390247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49988898423015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "49988898455783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "49988898488551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "49988898521319"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50379566514407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "50379566547175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "50379566579943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "50379566612711"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "51609642762471"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609642828007"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "51609655640295"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "51609656099047"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "6eab94820b56c106",
+  "first_seen": "2026-10-26",
+  "handle": "template",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-el-salvador.jpg?v=1765317702",
+  "platform": "shopify",
+  "product_id": "9411948708071",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "El Salvador Santa Ana SHG",
+  "url": "https://pathfindercoffee.shop/products/template",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "51604983382247"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "51604983415015"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "51604983447783"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "51604983480551"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51604983513319"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "51604983546087"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "51604983578855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "51604983611623"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "51604983644391"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "51604983677159"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "51604983709927"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "51604983742695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "51604983775463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "51604983808231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "51604983840999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "51604983873767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51604983906535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "51604983939303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "51604983972071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "51604984004839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51604984037607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "51604984070375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "51604984103143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "51604984135911"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "51609659637991"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "51609660653799"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "51609660817639"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609661604071"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "d81bddc9a6a74166",
+  "first_seen": "2026-10-26",
+  "handle": "peru-warmikuna-womens-coffe",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-peru-warmikuna.jpg?v=1784475868",
+  "platform": "shopify",
+  "product_id": "9411950248167",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "Peru Warmikuna Women's Coffee",
+  "url": "https://pathfindercoffee.shop/products/peru-warmikuna-womens-coffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "51604994326759"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "51604994359527"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "51604994392295"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "51604994425063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51604994457831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "51604994490599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "51604994523367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "51604994556135"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "51604994588903"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "51604994621671"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "51604994654439"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "51604994687207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "51604994719975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "51604994752743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "51604994785511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "51604994818279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51604994851047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "51604994883815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "51604994916583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "51604994949351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51604994982119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "51604995014887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "51604995047655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "51604995080423"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609658130663"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground FIne (espresso)",
+    "variant_id": "51609658491111"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "51609658622183"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "51609658818791"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "132d5d11d785d56e",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-lahamenegu-eastern-highlands-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-png.jpg?v=1765317642",
+  "platform": "shopify",
+  "product_id": "9411950870759",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "Papua New Guinea Lahamenegu Eastern Highlands Organic",
+  "url": "https://pathfindercoffee.shop/products/papua-new-guinea-lahamenegu-eastern-highlands-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "51604996030695"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "51604996063463"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "51604996096231"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "51604996128999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51604996161767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "51604996194535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "51604996227303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "51604996260071"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "51604996292839"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "51604996325607"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "51604996358375"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "51604996391143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "51604996423911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "51604996456679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "51604996489447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "51604996522215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51604996554983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "51604996587751"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "51604996620519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "51604996653287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51604996686055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "51604996718823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "51604996751591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "51604996784359"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51609658917095"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "51609658949863"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "51609659310311"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "51609659539687"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "f41177b35142184b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-swiss-water-process-decaf-hg-ep-2025",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-hundras-decaf-swiss-process.jpg?v=1775474951",
+  "platform": "shopify",
+  "product_id": "9489726374119",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "HONDURAS ORGANIC SWISS WATER PROCESS DECAF HG EP 2025",
+  "url": "https://pathfindercoffee.shop/products/honduras-organic-swiss-water-process-decaf-hg-ep-2025",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "51884818366695"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "51884818399463"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "51884818432231"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "51884818464999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51884818497767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "51884818530535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "51884818563303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "51884818596071"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "51884818628839"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "51884818661607"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "51884818694375"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "51884818727143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "51884818759911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "51884818792679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "51884818825447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "51884818858215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51884818890983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "51884818923751"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "51884818956519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "51884818989287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51884819022055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "51884819054823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "51884819087591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "51884819120359"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "51884819153127"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground FIne (espresso)",
+    "variant_id": "51884819185895"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "51884819218663"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "51884819251431"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "27cd78d811279ff2",
+  "first_seen": "2026-10-26",
+  "handle": "template-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-brazil-dark-roast.jpg?v=1784475698",
+  "platform": "shopify",
+  "product_id": "9626210304231",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "Brazil Salmo Plus Dark Roast",
+  "url": "https://pathfindercoffee.shop/products/template-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "52293212307687"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "52293212340455"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "52293212373223"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "52293212405991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52293212438759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "52293212471527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "52293212504295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "52293212537063"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "52293212569831"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "52293212602599"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "52293212635367"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "52293212668135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "52293212700903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "52293212733671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "52293212766439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "52293212799207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "52293212831975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "52293212864743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "52293212897511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "52293212930279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52293212963047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "52293212995815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "52293213028583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "52293213061351"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "52293213094119"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "52293213126887"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "52293213159655"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "52293213192423"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ },
+ {
+  "body_hash": "f915ac93244a3beb",
+  "first_seen": "2026-10-26",
+  "handle": "uganda",
+  "image": "https://cdn.shopify.com/s/files/1/0670/8084/7591/files/pathfinder-coffee-front-mockup-uganda-kasese.jpg?v=1786218689",
+  "platform": "shopify",
+  "product_id": "9663065587943",
+  "product_type": "",
+  "roaster_slug": "pathfindercoffee",
+  "tags": [],
+  "title": "RWENZORI KASESE NATURAL",
+  "url": "https://pathfindercoffee.shop/products/uganda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Whole Bean",
+    "variant_id": "52460368003303"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Fine (espresso)",
+    "variant_id": "52460368036071"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground medium (regular drip)",
+    "variant_id": "52460368068839"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 12.0,
+    "title": "225 Grams / Ground Coarse (french press)",
+    "variant_id": "52460368101607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52460368134375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Fine (espresso)",
+    "variant_id": "52460368167143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground medium (regular drip)",
+    "variant_id": "52460368199911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Ground Coarse (french press)",
+    "variant_id": "52460368232679"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Whole Bean",
+    "variant_id": "52460368265447"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Fine (espresso)",
+    "variant_id": "52460368298215"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground medium (regular drip)",
+    "variant_id": "52460368330983"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 21.0,
+    "title": "15 oz (mail order) / Ground Coarse (french press)",
+    "variant_id": "52460368363751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Whole Bean",
+    "variant_id": "52460368396519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Fine (espresso)",
+    "variant_id": "52460368429287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground medium (regular drip)",
+    "variant_id": "52460368462055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz (local) / Ground Coarse (french press)",
+    "variant_id": "52460368494823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "52460368527591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Fine (espresso)",
+    "variant_id": "52460368560359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground medium (regular drip)",
+    "variant_id": "52460368593127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Ground Coarse (french press)",
+    "variant_id": "52460368625895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52460368658663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb / Ground Fine (espresso)",
+    "variant_id": "52460368691431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground medium (regular drip)",
+    "variant_id": "52460368724199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb / Ground Coarse (french press)",
+    "variant_id": "52460368756967"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "52460368789735"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Fine (espresso)",
+    "variant_id": "52460368822503"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground medium (regular drip)",
+    "variant_id": "52460368855271"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground Coarse (french press)",
+    "variant_id": "52460368888039"
+   }
+  ],
+  "vendor": "Pathfinder Coffee"
+ }
+]

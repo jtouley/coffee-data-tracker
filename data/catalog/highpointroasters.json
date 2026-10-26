@@ -1,0 +1,744 @@
+[
+ {
+  "body_hash": "4a7cf9155baf9474",
+  "first_seen": "2026-10-26",
+  "handle": "malawi-mzuzu",
+  "image": "https://highpointroasters.com/wp-content/uploads/2021/08/Malawi-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "15597",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Coffee in One Pound Bags",
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Malawi Mzuzu",
+  "url": "https://highpointroasters.com/product/malawi-mzuzu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Malawi Mzuzu",
+    "variant_id": "15597:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d0b10b00134290c",
+  "first_seen": "2026-10-26",
+  "handle": "mississippi-magnolia-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2021/08/1200px-Flag_of_Mississippijpgcrop.jpg",
+  "platform": "woocommerce",
+  "product_id": "1581",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags",
+   "Coffee in One Pound Bags"
+  ],
+  "title": "Mississippi Magnolia Blend",
+  "url": "https://highpointroasters.com/product/mississippi-magnolia-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Mississippi Magnolia Blend",
+    "variant_id": "1581:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3d4f1dba28b35c0",
+  "first_seen": "2026-10-26",
+  "handle": "trifecta-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2023/05/Trifecta.png",
+  "platform": "woocommerce",
+  "product_id": "18151",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags",
+   "Coffee in One Pound Bags"
+  ],
+  "title": "Trifecta Blend",
+  "url": "https://highpointroasters.com/product/trifecta-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Trifecta Blend",
+    "variant_id": "18151:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ea8d9a14758e58a3",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2023/10/COLDBREW.png",
+  "platform": "woocommerce",
+  "product_id": "18581",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://highpointroasters.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Cold Brew Blend",
+    "variant_id": "18581:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "043ef3c24d095103",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-lupili",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Zambia.png",
+  "platform": "woocommerce",
+  "product_id": "21365",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Zambia Lupili",
+  "url": "https://highpointroasters.com/product/zambia-lupili/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Zambia Lupili",
+    "variant_id": "21365:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac6edbdf8b392020",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-2",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Peaberry.jpg",
+  "platform": "woocommerce",
+  "product_id": "298",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://highpointroasters.com/product/tanzania-peaberry-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Tanzania Peaberry",
+    "variant_id": "298:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd9d9e8b7384d35c",
+  "first_seen": "2026-10-26",
+  "handle": "the-new-albany-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/courthouse.jpg",
+  "platform": "woocommerce",
+  "product_id": "30",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "New Albany Blend",
+  "url": "https://highpointroasters.com/product/the-new-albany-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "New Albany Blend",
+    "variant_id": "30:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73a4f24b816a1bf1",
+  "first_seen": "2026-10-26",
+  "handle": "the-stearman-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/stearman.jpg",
+  "platform": "woocommerce",
+  "product_id": "33",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Stearman Blend",
+  "url": "https://highpointroasters.com/product/the-stearman-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Stearman Blend",
+    "variant_id": "33:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9367e66e79b3f9b1",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/CAMPfire.jpg",
+  "platform": "woocommerce",
+  "product_id": "36",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Campfire Blend",
+  "url": "https://highpointroasters.com/product/campfire-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Campfire Blend",
+    "variant_id": "36:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4f7d0f95881f4a7",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Espresso-Roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "38",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://highpointroasters.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Espresso Blend",
+    "variant_id": "38:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "100076bbbd3b1f1f",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/House-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "40",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "House Blend",
+  "url": "https://highpointroasters.com/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "House Blend",
+    "variant_id": "40:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad8b9f52d097e1eb",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/BREAKFAST.jpg",
+  "platform": "woocommerce",
+  "product_id": "42",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://highpointroasters.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Breakfast Blend",
+    "variant_id": "42:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51a7e32bdd00df00",
+  "first_seen": "2026-10-26",
+  "handle": "dr-ellis-blend",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/standardsquare.jpg",
+  "platform": "woocommerce",
+  "product_id": "44",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Dr. Ellis Blend",
+  "url": "https://highpointroasters.com/product/dr-ellis-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Dr. Ellis Blend",
+    "variant_id": "44:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d1c27106954361e",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/French-Roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "46",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "French Roast",
+  "url": "https://highpointroasters.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "French Roast",
+    "variant_id": "46:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3fca09cae75b10c4",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Mocha-Java.jpg",
+  "platform": "woocommerce",
+  "product_id": "48",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Blended Coffees in One Pound Bags"
+  ],
+  "title": "Mocha Java",
+  "url": "https://highpointroasters.com/product/mocha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Mocha Java",
+    "variant_id": "48:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b573fe5f732bf357",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-oberon",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "50",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Brazil Oberon",
+  "url": "https://highpointroasters.com/product/brazil-oberon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Brazil Oberon",
+    "variant_id": "50:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "07f14fcc2415e415",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-shb-ep-veta-de-oro",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Costa-Rica.jpg",
+  "platform": "woocommerce",
+  "product_id": "52",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Costa Rica",
+  "url": "https://highpointroasters.com/product/costa-rica-shb-ep-veta-de-oro/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Costa Rica",
+    "variant_id": "52:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a6b5dfb3a6bedee9",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-100-organic",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Nic.jpg",
+  "platform": "woocommerce",
+  "product_id": "54",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Nicaragua 100% Organic",
+  "url": "https://highpointroasters.com/product/nicaragua-100-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Nicaragua 100% Organic",
+    "variant_id": "54:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8239598e470cf995",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Peru.jpg",
+  "platform": "woocommerce",
+  "product_id": "56",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Peru",
+  "url": "https://highpointroasters.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Peru",
+    "variant_id": "56:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "703302eaa99462fc",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Ethiopia1.jpg",
+  "platform": "woocommerce",
+  "product_id": "58",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://highpointroasters.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Ethiopia Yirgacheffe",
+    "variant_id": "58:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a6242ebe4585d46",
+  "first_seen": "2026-10-26",
+  "handle": "kona-fancy",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/standardsquare.jpg",
+  "platform": "woocommerce",
+  "product_id": "60",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Kona Fancy",
+  "url": "https://highpointroasters.com/product/kona-fancy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.99,
+    "title": "Kona Fancy",
+    "variant_id": "60:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fc250a300474675",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-genuine-antiqua",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Guatamala.jpg",
+  "platform": "woocommerce",
+  "product_id": "62",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Guatemala Genuine Antiqua",
+  "url": "https://highpointroasters.com/product/guatemala-genuine-antiqua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Guatemala Genuine Antiqua",
+    "variant_id": "62:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5caf4e1cdcac8ca1",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-grade-1",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Indonesia.jpg",
+  "platform": "woocommerce",
+  "product_id": "64",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Indonesia Sumatra Grade 1",
+  "url": "https://highpointroasters.com/product/indonesia-sumatra-grade-1/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Indonesia Sumatra Grade 1",
+    "variant_id": "64:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69a58037eb19cb9e",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-keekorok",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Kenya.jpg",
+  "platform": "woocommerce",
+  "product_id": "66",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Kenya AA – Keekorok",
+  "url": "https://highpointroasters.com/product/kenya-aa-keekorok/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "Kenya AA &#8211; Keekorok",
+    "variant_id": "66:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e65641f8b33d4d79",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "70",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Colombia Excelso",
+  "url": "https://highpointroasters.com/product/colombia-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Colombia Excelso",
+    "variant_id": "70:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a1fa16c6bb8a8ba",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/PNG1.jpg",
+  "platform": "woocommerce",
+  "product_id": "72",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://highpointroasters.com/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Papua New Guinea",
+    "variant_id": "72:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03229f577bf70627",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-100-organic",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/Mexico.jpg",
+  "platform": "woocommerce",
+  "product_id": "74",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Single Origin Coffee in One Pound Bags"
+  ],
+  "title": "Mexico 100% Organic",
+  "url": "https://highpointroasters.com/product/mexico-100-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Mexico 100% Organic",
+    "variant_id": "74:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0989a399d9d009c",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-decaf",
+  "image": "https://highpointroasters.com/wp-content/uploads/2014/04/House-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "76",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Decaffeinated Coffee in One Pound Bags"
+  ],
+  "title": "DECAF House Blend",
+  "url": "https://highpointroasters.com/product/house-blend-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "DECAF House Blend",
+    "variant_id": "76:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "444eb8b0bb97fb6a",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-coffee-beans-12-lb",
+  "image": "https://highpointroasters.com/wp-content/uploads/2016/04/beans.jpg",
+  "platform": "woocommerce",
+  "product_id": "886",
+  "product_type": "variable",
+  "roaster_slug": "highpointroasters",
+  "tags": [
+   "Snacks / Candy"
+  ],
+  "title": "Chocolate Covered Coffee Beans",
+  "url": "https://highpointroasters.com/product/chocolate-covered-coffee-beans-12-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 10.0,
+    "title": "1/4 Pound",
+    "variant_id": "886:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2 Pound",
+    "variant_id": "886:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.0,
+    "title": "1 Pound",
+    "variant_id": "886:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

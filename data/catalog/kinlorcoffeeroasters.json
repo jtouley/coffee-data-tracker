@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "ba88162983921135",
+  "first_seen": "2026-10-26",
+  "handle": "test-product-1",
+  "image": "https://cdn.shopify.com/s/files/1/0634/5346/2701/files/PROLETARIAT_ESPRESSO_BLEND_PRODUCT_THUMBNAIL_1_eac9fe93-197a-4dad-acf3-5799a3d9ce9b.png?v=1760493053",
+  "platform": "shopify",
+  "product_id": "8350683988141",
+  "product_type": "",
+  "roaster_slug": "kinlorcoffeeroasters",
+  "tags": [],
+  "title": "Proletariat Espresso Blend",
+  "url": "https://kinlorcoffeeroasters.com/products/test-product-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "45017539477677"
+   }
+  ],
+  "vendor": "Kinlor Coffee Roasters"
+ },
+ {
+  "body_hash": "1c9d817d7fbbffad",
+  "first_seen": "2026-10-26",
+  "handle": "test-product-2",
+  "image": "https://cdn.shopify.com/s/files/1/0634/5346/2701/files/BrazilSuperFineNaturalPRODUCTTHUMBNAIL1.png?v=1760487730",
+  "platform": "shopify",
+  "product_id": "8355464577197",
+  "product_type": "",
+  "roaster_slug": "kinlorcoffeeroasters",
+  "tags": [],
+  "title": "Brazil Super Fine Natural",
+  "url": "https://kinlorcoffeeroasters.com/products/test-product-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "45029484757165"
+   }
+  ],
+  "vendor": "Kinlor Coffee Roasters"
+ },
+ {
+  "body_hash": "93b586141473083a",
+  "first_seen": "2026-10-26",
+  "handle": "test-product-3",
+  "image": "https://cdn.shopify.com/s/files/1/0634/5346/2701/files/Vietnam_Black_Lotus_Anaerobic_Natural_PRODUCT_THUMBNAIL_1.png?v=1760474745",
+  "platform": "shopify",
+  "product_id": "8355464675501",
+  "product_type": "",
+  "roaster_slug": "kinlorcoffeeroasters",
+  "tags": [],
+  "title": "Vietnam Anaerobic Natural",
+  "url": "https://kinlorcoffeeroasters.com/products/test-product-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "45029484855469"
+   }
+  ],
+  "vendor": "Kinlor Coffee Roasters"
+ }
+]

@@ -1,0 +1,167 @@
+[
+ {
+  "body_hash": "48dfb6c4c980c85d",
+  "first_seen": "2026-10-26",
+  "handle": "home-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0342/3925/0476/files/image.heic?v=1685647415",
+  "platform": "shopify",
+  "product_id": "4734216962092",
+  "product_type": "coffee",
+  "roaster_slug": "homecoffeesf",
+  "tags": [
+   "beans",
+   "coffee"
+  ],
+  "title": "Sunset Blend",
+  "url": "https://homecoffeesf.com/products/home-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz",
+    "variant_id": "33924450713644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lbs",
+    "variant_id": "33924457725996"
+   }
+  ],
+  "vendor": "Home"
+ },
+ {
+  "body_hash": "4dd73eb8f74f88ca",
+  "first_seen": "2026-10-26",
+  "handle": "cappaccino-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0342/3925/0476/files/image_80cd5ad6-1bf3-4db1-ac95-a06ad6417acd.heic?v=1685647818",
+  "platform": "shopify",
+  "product_id": "4734221484076",
+  "product_type": "coffee",
+  "roaster_slug": "homecoffeesf",
+  "tags": [
+   "beans",
+   "coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe Koke",
+  "url": "https://homecoffeesf.com/products/cappaccino-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10 oz",
+    "variant_id": "33924438818860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lbs",
+    "variant_id": "33924445536300"
+   }
+  ],
+  "vendor": "Home"
+ },
+ {
+  "body_hash": "8946b914416370f3",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0342/3925/0476/files/image_6146f1d0-1688-4a00-9b68-e7fd8e92cde8.heic?v=1685647696",
+  "platform": "shopify",
+  "product_id": "5222827458604",
+  "product_type": "coffee",
+  "roaster_slug": "homecoffeesf",
+  "tags": [
+   "beans",
+   "coffee"
+  ],
+  "title": "Peru Organic Cajamarca",
+  "url": "https://homecoffeesf.com/products/peru-organic-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10 oz",
+    "variant_id": "34128765255724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lbs",
+    "variant_id": "34128779280428"
+   }
+  ],
+  "vendor": "Home"
+ },
+ {
+  "body_hash": "a57e894d622d16cb",
+  "first_seen": "2026-10-26",
+  "handle": "richmond-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0342/3925/0476/files/image_6348ff7b-8893-406a-9efc-3804c1760ff3.heic?v=1685647541",
+  "platform": "shopify",
+  "product_id": "7054687994007",
+  "product_type": "coffee",
+  "roaster_slug": "homecoffeesf",
+  "tags": [
+   "beans",
+   "coffee"
+  ],
+  "title": "Richmond Blend",
+  "url": "https://homecoffeesf.com/products/richmond-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz",
+    "variant_id": "40628293402775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lbs",
+    "variant_id": "40628293435543"
+   }
+  ],
+  "vendor": "Home"
+ },
+ {
+  "body_hash": "d38af7491d6c3dfa",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0342/3925/0476/files/image_12fb58d2-91cf-484f-906f-47d2a576d708.heic?v=1685730293",
+  "platform": "shopify",
+  "product_id": "8014445805719",
+  "product_type": "coffee",
+  "roaster_slug": "homecoffeesf",
+  "tags": [
+   "beans",
+   "coffee"
+  ],
+  "title": "Decaf Colombia Royal Select Water Process",
+  "url": "https://homecoffeesf.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10 oz",
+    "variant_id": "43130132398231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lbs",
+    "variant_id": "43130132430999"
+   }
+  ],
+  "vendor": "Home"
+ }
+]

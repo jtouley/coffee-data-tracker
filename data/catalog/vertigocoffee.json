@@ -1,0 +1,248 @@
+[
+ {
+  "body_hash": "0444fc8c193f2e0a",
+  "first_seen": "2026-10-26",
+  "handle": "mission-blend",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2018/11/Mission_web-1.png",
+  "platform": "woocommerce",
+  "product_id": "239",
+  "product_type": "variable",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mission Blend",
+  "url": "https://vertigocoffee.com/product/mission-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "239:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "239:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "peru-pueblo-libre",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2021/01/Peru-Pueblo-Libre.png",
+  "platform": "woocommerce",
+  "product_id": "2441",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Peru Pueblo Libre",
+  "url": "https://vertigocoffee.com/product/peru-pueblo-libre/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Peru Pueblo Libre",
+    "variant_id": "2441:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1969ac8b332f2a2",
+  "first_seen": "2026-10-26",
+  "handle": "baroque",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2018/11/Baroque_web-1.png",
+  "platform": "woocommerce",
+  "product_id": "263",
+  "product_type": "variable",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Baroque",
+  "url": "https://vertigocoffee.com/product/baroque/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "263:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "263:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-tierra-lenca",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2021/05/Tierra-Lenca-WEB.png",
+  "platform": "woocommerce",
+  "product_id": "2658",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Honduras Tierra Lenca",
+  "url": "https://vertigocoffee.com/product/honduras-tierra-lenca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Honduras Tierra Lenca",
+    "variant_id": "2658:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "hunapu",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2018/11/Hunapu-WEB.png",
+  "platform": "woocommerce",
+  "product_id": "267",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala Hunapú",
+  "url": "https://vertigocoffee.com/product/hunapu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Guatemala Hunapú",
+    "variant_id": "267:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-taratu",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2018/12/ETHIOPIA-BANKO-TARATU-web.png",
+  "platform": "woocommerce",
+  "product_id": "290",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopia Banko Taratu",
+  "url": "https://vertigocoffee.com/product/ethiopia-banko-taratu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Ethiopia Banko Taratu",
+    "variant_id": "290:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-penas-blancas",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2023/05/Colombia-Penas-Blancas.png",
+  "platform": "woocommerce",
+  "product_id": "3671",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia Peñas Blancas",
+  "url": "https://vertigocoffee.com/product/colombia-penas-blancas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Colombia Peñas Blancas",
+    "variant_id": "3671:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a78e57ab1a73441",
+  "first_seen": "2026-10-26",
+  "handle": "monks-momentum",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2018/11/Monks_Momentum_web.png",
+  "platform": "woocommerce",
+  "product_id": "43",
+  "product_type": "variable",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Monk’s Momentum Espresso",
+  "url": "https://vertigocoffee.com/product/monks-momentum/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "43:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb",
+    "variant_id": "43:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78584c5746822771",
+  "first_seen": "2026-10-26",
+  "handle": "stasis-decaf",
+  "image": "https://vertigocoffee.com/wp-content/uploads/2019/04/Stasis-Decaf-WEB.png",
+  "platform": "woocommerce",
+  "product_id": "580",
+  "product_type": "simple",
+  "roaster_slug": "vertigocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Stasis Decaf",
+  "url": "https://vertigocoffee.com/product/stasis-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Stasis Decaf",
+    "variant_id": "580:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

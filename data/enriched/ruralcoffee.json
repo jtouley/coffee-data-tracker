@@ -1,0 +1,385 @@
+{
+ "4423436697740": {
+  "body_hash": "0ce7767f2ff67977",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "toasted nuts",
+   "subtle spice"
+  ],
+  "varietals": []
+ },
+ "4423956627596": {
+  "body_hash": "17e7d8bcaac026ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "nutty sweetness",
+   "subtle spice"
+  ],
+  "varietals": []
+ },
+ "4423999914124": {
+  "body_hash": "7819f371c3f8cc7c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4424008106124": {
+  "body_hash": "8a3701176dbddbf4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4424020590732": {
+  "body_hash": "f4645399574a8393",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "licorice",
+   "prominent spicy accents"
+  ],
+  "varietals": []
+ },
+ "4424028979340": {
+  "body_hash": "26edfbfb9f0c924b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "nutmeg",
+   "roasted nut shell"
+  ],
+  "varietals": []
+ },
+ "4424044380300": {
+  "body_hash": "dfe8666f2f91902e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "tropical fruit",
+   "mild roasted nut",
+   "dark chocolate hints"
+  ],
+  "varietals": []
+ },
+ "4424057192588": {
+  "body_hash": "d381d3119552c77f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold chocolate",
+   "mild blueberry",
+   "apricot"
+  ],
+  "varietals": []
+ },
+ "4424068333708": {
+  "body_hash": "506bae75e59ee998",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dried fruit",
+   "black currant",
+   "roasted almonds"
+  ],
+  "varietals": []
+ },
+ "4424075214988": {
+  "body_hash": "b32967d70b3a10c3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4424084816012": {
+  "body_hash": "19acbd07fda61f13",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "dark chocolate",
+   "mild roasted nuts",
+   "tropical fruit"
+  ],
+  "varietals": []
+ },
+ "5841432707235": {
+  "body_hash": "ce643bb3b611cd0c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6702891597987": {
+  "body_hash": "e43b28afd9ac89f8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6702902345891": {
+  "body_hash": "247dc896111d78b6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Dominican Republic",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6712949735587": {
+  "body_hash": "09106c74b3ab0dda",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "subtle spice",
+   "berry"
+  ],
+  "varietals": []
+ },
+ "8100351869161": {
+  "body_hash": "32d4e2efb0b325c8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Dominican Republic",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8128251592937": {
+  "body_hash": "56ca39bb2926cfaf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Pacas"
+  ]
+ },
+ "8849795776745": {
+  "body_hash": "3b635e0bfa9d3767",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Dominican Republic",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8849796038889": {
+  "body_hash": "76fe19fdc75bb8af",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Dominican Republic",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "8849796464873": {
+  "body_hash": "4a546c82de17fa25",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "8849796530409": {
+  "body_hash": "eb65bc57501923f7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "subtle florals",
+   "nutty",
+   "mild sweetness"
+  ],
+  "varietals": []
+ },
+ "8849796792553": {
+  "body_hash": "4add9277de546738",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "gentle spice",
+   "vibrant berry accents"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,1888 @@
+[
+ {
+  "body_hash": "9fbfa1e36ee06c57",
+  "first_seen": "2026-10-26",
+  "handle": "texas-pecan-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/IMG_1327.PNG?v=1540565740",
+  "platform": "shopify",
+  "product_id": "1668510056514",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "beans",
+   "central america",
+   "coffee",
+   "new",
+   "south america",
+   "specialty"
+  ],
+  "title": "Texas Pecan Coffee",
+  "url": "https://jackmormoncoffee.com/products/texas-pecan-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. Sample",
+    "variant_id": "13849713082434"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. Sample",
+    "variant_id": "13908975059010"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter / 2 oz. Sample",
+    "variant_id": "13908975091778"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. Sample",
+    "variant_id": "13908975124546"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter / 2 oz. Sample",
+    "variant_id": "13908975157314"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. Sample",
+    "variant_id": "13908975190082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 16 oz. bag",
+    "variant_id": "46055646396673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "French Press / 16 oz. bag",
+    "variant_id": "46055646429441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Paper Filter / 16 oz. bag",
+    "variant_id": "46055646462209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Espresso / 16 oz. bag",
+    "variant_id": "46055646494977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Metal Filter / 16 oz. bag",
+    "variant_id": "46055646527745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Aeropress / 16 oz. bag",
+    "variant_id": "46055646560513"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "6437255f5826baca",
+  "first_seen": "2026-10-26",
+  "handle": "78-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/IMG_2230.jpg?v=1547758458",
+  "platform": "shopify",
+  "product_id": "1717534097474",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "78",
+   "africa",
+   "beans",
+   "central america",
+   "coffee",
+   "espresso",
+   "medium",
+   "new",
+   "south america"
+  ],
+  "title": "78 Espresso Blend",
+  "url": "https://jackmormoncoffee.com/products/78-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. Sample",
+    "variant_id": "40530472501427"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. Sample",
+    "variant_id": "40530472534195"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter / 2 oz. Sample",
+    "variant_id": "40530472566963"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. Sample",
+    "variant_id": "40530472599731"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. Sample",
+    "variant_id": "40530472632499"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Turkish / 2 oz. Sample",
+    "variant_id": "40530472665267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz. Zippered bag",
+    "variant_id": "46055570309377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "French Press / 12 oz. Zippered bag",
+    "variant_id": "46055570342145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Paper Filter / 12 oz. Zippered bag",
+    "variant_id": "46055570374913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Aeropress / 12 oz. Zippered bag",
+    "variant_id": "46055570407681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Espresso / 12 oz. Zippered bag",
+    "variant_id": "46055570440449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Turkish / 12 oz. Zippered bag",
+    "variant_id": "46055570473217"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter / 2 oz. Sample",
+    "variant_id": "46055972995329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Metal Filter / 12 oz. Zippered bag",
+    "variant_id": "46055973028097"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "f244919d4d2f26fb",
+  "first_seen": "2026-10-26",
+  "handle": "wild-forest-taman-dadar-java-indonesia",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/files/IMG20250428203033.jpg?v=1745894036",
+  "platform": "shopify",
+  "product_id": "1859007381570",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "Taman Dadar",
+   "beans",
+   "coffee",
+   "far east",
+   "indonesia",
+   "java",
+   "organic"
+  ],
+  "title": "Wild Forest Taman Dadar - Java, Indonesia",
+  "url": "https://jackmormoncoffee.com/products/wild-forest-taman-dadar-java-indonesia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean",
+    "variant_id": "46255936012545"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press",
+    "variant_id": "46255936045313"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Metal Filter",
+    "variant_id": "46255936078081"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Paper Filter",
+    "variant_id": "46255936110849"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Aeropress",
+    "variant_id": "46255936143617"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso",
+    "variant_id": "46255936176385"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Turkish",
+    "variant_id": "46255936209153"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Other-Write In Notes",
+    "variant_id": "46255936241921"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "342f49753adb07f4",
+  "first_seen": "2026-10-26",
+  "handle": "bella-carmona",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/FullSizeRender_15.jpg?v=1444703982",
+  "platform": "shopify",
+  "product_id": "2430865477",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "antigua",
+   "beans",
+   "central america",
+   "coffee",
+   "guatemala"
+  ],
+  "title": "Bella Carmona",
+  "url": "https://jackmormoncoffee.com/products/bella-carmona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. Sample",
+    "variant_id": "40530346246323"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. Sample",
+    "variant_id": "40530346279091"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter/ Drip / 2 oz. Sample",
+    "variant_id": "40530346311859"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter/ Drip / 2 oz. Sample",
+    "variant_id": "40530346344627"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. Sample",
+    "variant_id": "40530346377395"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. Sample",
+    "variant_id": "40530346442931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz. zippered bag",
+    "variant_id": "46055563919617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "French Press / 12 oz. zippered bag",
+    "variant_id": "46055563952385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Metal Filter/ Drip / 12 oz. zippered bag",
+    "variant_id": "46055563985153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Paper Filter/ Drip / 12 oz. zippered bag",
+    "variant_id": "46055564017921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Aeropress / 12 oz. zippered bag",
+    "variant_id": "46055564050689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Espresso / 12 oz. zippered bag",
+    "variant_id": "46055564083457"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "99ffbdde5649ba36",
+  "first_seen": "2026-10-26",
+  "handle": "cuarenteno",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/qt.jpg?v=1425526427",
+  "platform": "shopify",
+  "product_id": "439360244",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "beans",
+   "central america",
+   "coffee",
+   "mexico"
+  ],
+  "title": "Cuarenteño",
+  "url": "https://jackmormoncoffee.com/products/cuarenteno",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "40530750013619"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "40530750046387"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter/ Drip / 2 oz. sample",
+    "variant_id": "40530750079155"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter/ Drip / 2 oz. sample",
+    "variant_id": "40530750144691"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "40530750210227"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. sample",
+    "variant_id": "40530750242995"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Turkish / 2 oz. sample",
+    "variant_id": "40530750275763"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Mokapot / 2 oz. sample",
+    "variant_id": "42782929879297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 16 oz. bag",
+    "variant_id": "46055648624897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "French Press / 16 oz. bag",
+    "variant_id": "46055648657665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Metal Filter/ Drip / 16 oz. bag",
+    "variant_id": "46055648690433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Paper Filter/ Drip / 16 oz. bag",
+    "variant_id": "46055648723201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Aeropress / 16 oz. bag",
+    "variant_id": "46055648755969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Mokapot / 16 oz. bag",
+    "variant_id": "46055648788737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Espresso / 16 oz. bag",
+    "variant_id": "46055648821505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Turkish / 16 oz. bag",
+    "variant_id": "46055648854273"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "35f31d83b5859a0e",
+  "first_seen": "2026-10-26",
+  "handle": "toraja",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/sapanminanga1.jpg?v=1578508858",
+  "platform": "shopify",
+  "product_id": "4394183721026",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "Medium-Dark",
+   "beans",
+   "coffee",
+   "far east",
+   "indonesia",
+   "medium"
+  ],
+  "title": "Toraja - Indonesia",
+  "url": "https://jackmormoncoffee.com/products/toraja",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "31520273072194"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "31520273104962"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter / 2 oz. sample",
+    "variant_id": "31520273137730"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter / 2 oz. sample",
+    "variant_id": "31520273170498"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. sample",
+    "variant_id": "31520273203266"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "31520273236034"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Turkish / 2 oz. sample",
+    "variant_id": "31520273268802"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Moka Pot / 2 oz. sample",
+    "variant_id": "42209014677761"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz. zippered bag",
+    "variant_id": "46237201957121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12 oz. zippered bag",
+    "variant_id": "46237201989889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Metal Filter / 12 oz. zippered bag",
+    "variant_id": "46237202022657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Paper Filter / 12 oz. zippered bag",
+    "variant_id": "46237202055425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Aeropress / 12 oz. zippered bag",
+    "variant_id": "46237202088193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Moka Pot / 12 oz. zippered bag",
+    "variant_id": "46237202120961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12 oz. zippered bag",
+    "variant_id": "46237202153729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Turkish / 12 oz. zippered bag",
+    "variant_id": "46237202186497"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "2e12b8335c1d9ff1",
+  "first_seen": "2026-10-26",
+  "handle": "harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/HARRAR.jpg?v=1427336549",
+  "platform": "shopify",
+  "product_id": "451767312",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "africa",
+   "beans",
+   "coffee",
+   "ethiopia",
+   "light"
+  ],
+  "title": "Queen City Harar",
+  "url": "https://jackmormoncoffee.com/products/harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Whole Bean",
+    "variant_id": "46055577747713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / French Press",
+    "variant_id": "46055577780481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Metal Filter/ Drip",
+    "variant_id": "46055577813249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Paper Filter/ Drip",
+    "variant_id": "46055577846017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Aeropress",
+    "variant_id": "46055577878785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Moka Pot",
+    "variant_id": "46055577911553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Light / Espresso",
+    "variant_id": "46055577944321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Whole Bean",
+    "variant_id": "46760202109185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / French Press",
+    "variant_id": "46760202141953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Metal Filter/ Drip",
+    "variant_id": "46760202174721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Paper Filter/ Drip",
+    "variant_id": "46760202207489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Aeropress",
+    "variant_id": "46760202240257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Moka Pot",
+    "variant_id": "46760202273025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Dark / Espresso",
+    "variant_id": "46760202305793"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "3edd16a272324f68",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/sapanminanga1_1cbca34a-8dab-4387-8ec3-3f1e72a67249.jpg?v=1591899723",
+  "platform": "shopify",
+  "product_id": "4575772540994",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [],
+  "title": "Sumatran Mandheling Decaf",
+  "url": "https://jackmormoncoffee.com/products/indonesian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "whole bean",
+    "variant_id": "32094550753346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "french press",
+    "variant_id": "32094550786114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "metal fliter",
+    "variant_id": "32094550818882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "paper filter",
+    "variant_id": "32094550851650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "aeropress",
+    "variant_id": "32094550884418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "espresso",
+    "variant_id": "32094550917186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "turkish",
+    "variant_id": "32094550949954"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "92771ab02865c4d5",
+  "first_seen": "2026-10-26",
+  "handle": "takengon-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/saraate1.jpg?v=1669401430",
+  "platform": "shopify",
+  "product_id": "570073028",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Medium-Dark",
+   "beans",
+   "far east",
+   "indonesia",
+   "sumatra"
+  ],
+  "title": "Takengon - Sumatra",
+  "url": "https://jackmormoncoffee.com/products/takengon-mandheling",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean",
+    "variant_id": "1837540996"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "08a0c46e21690888",
+  "first_seen": "2026-10-26",
+  "handle": "santa-maria",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/santamaria2-1.jpg?v=1646062507",
+  "platform": "shopify",
+  "product_id": "5752354501",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "beans",
+   "central america",
+   "coffee",
+   "costa rica",
+   "light"
+  ],
+  "title": "Santa Maria de Dota AA - Costa Rica",
+  "url": "https://jackmormoncoffee.com/products/santa-maria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "43987689898241"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter / 2 oz. sample",
+    "variant_id": "43987689931009"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter / 2 oz. sample",
+    "variant_id": "43987689963777"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aero Press / 2 oz. sample",
+    "variant_id": "43987689996545"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Mokapot / 2 oz. sample",
+    "variant_id": "43987690029313"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "43987690062081"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Turkish / 2 oz. sample",
+    "variant_id": "43987690094849"
+   },
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "43987692716289"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 12 oz. zippered bag",
+    "variant_id": "46254464237825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press / 12 oz. zippered bag",
+    "variant_id": "46254464270593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Metal Filter / 12 oz. zippered bag",
+    "variant_id": "46254464303361"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Paper Filter / 12 oz. zippered bag",
+    "variant_id": "46254464336129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Aero Press / 12 oz. zippered bag",
+    "variant_id": "46254464368897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Mokapot / 12 oz. zippered bag",
+    "variant_id": "46254464401665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso / 12 oz. zippered bag",
+    "variant_id": "46254464434433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Turkish / 12 oz. zippered bag",
+    "variant_id": "46254464467201"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "5c6a706fa43ddc98",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-mogiana",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/BrazilDecaf.jpg?v=1610480704",
+  "platform": "shopify",
+  "product_id": "6179814899891",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "beans",
+   "central america",
+   "coffee",
+   "decaf",
+   "new"
+  ],
+  "title": "Decaf Brazil Mogiana",
+  "url": "https://jackmormoncoffee.com/products/decaf-brazil-mogiana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "37957575606451"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "French Press",
+    "variant_id": "37957575639219"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Metal Filter",
+    "variant_id": "37957575671987"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Paper Filter",
+    "variant_id": "37957575704755"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Aeropress",
+    "variant_id": "37957575737523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Espresso",
+    "variant_id": "37957575770291"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "Turkish",
+    "variant_id": "37957575803059"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "ee86b67c27af9ec5",
+  "first_seen": "2026-10-26",
+  "handle": "blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/bluemoon3-2.jpg?v=1640902091",
+  "platform": "shopify",
+  "product_id": "7524702847233",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "bali",
+   "beans",
+   "coffee",
+   "far east",
+   "indonesia"
+  ],
+  "title": "Blue Moon - Bali",
+  "url": "https://jackmormoncoffee.com/products/blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "42284670877953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "French Press",
+    "variant_id": "42284671009025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Metal Filter",
+    "variant_id": "42284671140097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Paper Filter",
+    "variant_id": "42284671271169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Aeropress",
+    "variant_id": "42284671402241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Moka Pot",
+    "variant_id": "42284671533313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Espresso",
+    "variant_id": "42284671664385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Turkish",
+    "variant_id": "42284671795457"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "acd40a77aaed5d79",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-aa-faq-ecotact-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/kamoini2-1.jpg?v=1643492883",
+  "platform": "shopify",
+  "product_id": "7561670295809",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "africa",
+   "beans",
+   "coffee",
+   "kenya",
+   "light"
+  ],
+  "title": "Chinga AA - Kenya, Nyeri Othaya",
+  "url": "https://jackmormoncoffee.com/products/copy-of-aa-faq-ecotact-kenya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "42408447607041"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "42408447803649"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Metal Filter / 2 oz. sample",
+    "variant_id": "42408448000257"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Paper Filter / 2 oz. sample",
+    "variant_id": "42408448196865"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Aeropress / 2 oz. sample",
+    "variant_id": "42408448393473"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Moka Pot / 2 oz. sample",
+    "variant_id": "42408448590081"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "42408448786689"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.5,
+    "title": "Turkish / 2 oz. sample",
+    "variant_id": "42408448983297"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Whole Bean / 12 oz. zippered bag",
+    "variant_id": "46237229908225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "French Press / 12 oz. zippered bag",
+    "variant_id": "46237229940993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Metal Filter / 12 oz. zippered bag",
+    "variant_id": "46237229973761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Paper Filter / 12 oz. zippered bag",
+    "variant_id": "46237230006529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Aeropress / 12 oz. zippered bag",
+    "variant_id": "46237230039297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Moka Pot / 12 oz. zippered bag",
+    "variant_id": "46237230072065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Espresso / 12 oz. zippered bag",
+    "variant_id": "46237230104833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Turkish / 12 oz. zippered bag",
+    "variant_id": "46237230137601"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "ba914e07e677fe07",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/guatshb2.jpg?v=1672327656",
+  "platform": "shopify",
+  "product_id": "7983541264",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "beans",
+   "central america",
+   "coffee",
+   "decaf",
+   "guatemala",
+   "medium",
+   "new"
+  ],
+  "title": "Decaf Guatemala",
+  "url": "https://jackmormoncoffee.com/products/decaf-guatemala",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean",
+    "variant_id": "26557085904"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press",
+    "variant_id": "26557085968"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Metal Filter/Drip",
+    "variant_id": "26557086032"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Paper Filter/Drip",
+    "variant_id": "26557086096"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso",
+    "variant_id": "26557086160"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Aeropress",
+    "variant_id": "43686333677825"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Mokapot",
+    "variant_id": "43686333710593"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "10b3e7ea05b11b8a",
+  "first_seen": "2026-10-26",
+  "handle": "finca-medina-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/files/Guatemala-medina4.jpg?v=1685994125",
+  "platform": "shopify",
+  "product_id": "8014787346689",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "beans",
+   "central america",
+   "coffee",
+   "guatemala",
+   "light",
+   "medium"
+  ],
+  "title": "Finca Medina - Antigua, Guatemala",
+  "url": "https://jackmormoncoffee.com/products/finca-medina-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean",
+    "variant_id": "43916855738625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press",
+    "variant_id": "43916855771393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Metal Filter",
+    "variant_id": "43916855804161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Paper Filter",
+    "variant_id": "43916855836929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Aeropress",
+    "variant_id": "43916855869697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Moka Pot",
+    "variant_id": "43916855902465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso",
+    "variant_id": "43916855935233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Turkish",
+    "variant_id": "43916855968001"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "09993f0f59448d49",
+  "first_seen": "2026-10-26",
+  "handle": "red-sea-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/red_sea.JPG?v=1583248333",
+  "platform": "shopify",
+  "product_id": "8018438352",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "africa",
+   "beans",
+   "blend",
+   "coffee",
+   "ethiopia",
+   "yemen"
+  ],
+  "title": "Red Sea Blend",
+  "url": "https://jackmormoncoffee.com/products/red-sea-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "26807493008"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "26807493072"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter/Drip / 2 oz. sample",
+    "variant_id": "26807493136"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter/Drip / 2 oz. sample",
+    "variant_id": "26807493200"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "26807493328"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. sample",
+    "variant_id": "42865354211585"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Mokapot / 2 oz. sample",
+    "variant_id": "42865354244353"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Turkish / 2 oz. sample",
+    "variant_id": "42865354277121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz. zippered bag",
+    "variant_id": "46255970025729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12 oz. zippered bag",
+    "variant_id": "46255970058497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Metal Filter/Drip / 12 oz. zippered bag",
+    "variant_id": "46255970091265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Paper Filter/Drip / 12 oz. zippered bag",
+    "variant_id": "46255970124033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Aeropress / 12 oz. zippered bag",
+    "variant_id": "46255970156801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Mokapot / 12 oz. zippered bag",
+    "variant_id": "46255970189569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12 oz. zippered bag",
+    "variant_id": "46255970222337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Turkish / 12 oz. zippered bag",
+    "variant_id": "46255970255105"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "eabbab76f91e4b7e",
+  "first_seen": "2026-10-26",
+  "handle": "cuarenteno-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/files/chocolon.jpg?v=1746037072",
+  "platform": "shopify",
+  "product_id": "8726472458497",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "beans",
+   "central america",
+   "coffee",
+   "mexico"
+  ],
+  "title": "Chocolon",
+  "url": "https://jackmormoncoffee.com/products/cuarenteno-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Whole Bean / 2 oz. sample",
+    "variant_id": "46049992245505"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "French Press / 2 oz. sample",
+    "variant_id": "46049992278273"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Metal Filter/ Drip / 2 oz. sample",
+    "variant_id": "46049992311041"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Paper Filter/ Drip / 2 oz. sample",
+    "variant_id": "46049992343809"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Aeropress / 2 oz. sample",
+    "variant_id": "46049992376577"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Mokapot / 2 oz. sample",
+    "variant_id": "46049992409345"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "Espresso / 2 oz. sample",
+    "variant_id": "46049992442113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 12 oz. Zippered Bag",
+    "variant_id": "46050070167809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "French Press / 12 oz. Zippered Bag",
+    "variant_id": "46050070200577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Metal Filter/ Drip / 12 oz. Zippered Bag",
+    "variant_id": "46050070233345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Paper Filter/ Drip / 12 oz. Zippered Bag",
+    "variant_id": "46050070266113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Aeropress / 12 oz. Zippered Bag",
+    "variant_id": "46050070298881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Mokapot / 12 oz. Zippered Bag",
+    "variant_id": "46050070331649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Espresso / 12 oz. Zippered Bag",
+    "variant_id": "46050070364417"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "7bc86bc612d8f2a9",
+  "first_seen": "2026-10-26",
+  "handle": "nebilyer-valley-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/1200px-Flag_of_Papua_New_Guinea_svg.png?v=1674593590",
+  "platform": "shopify",
+  "product_id": "9014350119169",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "Dark Roast",
+   "Medium-Dark",
+   "beans",
+   "coffee",
+   "far east"
+  ],
+  "title": "Nebilyer Valley - Papua New Guinea",
+  "url": "https://jackmormoncoffee.com/products/nebilyer-valley-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "47571923861761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press",
+    "variant_id": "47571923894529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Metal Filter/Drip",
+    "variant_id": "47571923927297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Paper Filter/Drip",
+    "variant_id": "47571923960065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Aeropress",
+    "variant_id": "47571923992833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Moka Pot",
+    "variant_id": "47571924025601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "47571924058369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "47571924091137"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ },
+ {
+  "body_hash": "cec3f09ace22869c",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-mirbe-gasha-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0789/8997/products/Ethiopia-Yirgacheffe-Halo-Bariti-30kg2.jpg?v=1665265141",
+  "platform": "shopify",
+  "product_id": "9014351659265",
+  "product_type": "Coffee",
+  "roaster_slug": "jackmormoncoffee",
+  "tags": [
+   "africa",
+   "beans",
+   "coffee",
+   "ethiopia",
+   "light",
+   "yirgacheffe"
+  ],
+  "title": "Yirgacheffe Hirbe Gasha - Ethiopia",
+  "url": "https://jackmormoncoffee.com/products/yirgacheffe-mirbe-gasha-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Whole Bean",
+    "variant_id": "47571930448129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "French Press",
+    "variant_id": "47571930480897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Metal Filter",
+    "variant_id": "47571930513665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Paper Filter",
+    "variant_id": "47571930546433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Aeropress",
+    "variant_id": "47571930579201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Moka Pot",
+    "variant_id": "47571930611969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Espresso",
+    "variant_id": "47571930644737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Turkish",
+    "variant_id": "47571930677505"
+   }
+  ],
+  "vendor": "Jack Mormon Coffee Co."
+ }
+]

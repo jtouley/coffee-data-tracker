@@ -1,0 +1,665 @@
+[
+ {
+  "body_hash": "c82561e8b4a2f8e6",
+  "first_seen": "2026-10-26",
+  "handle": "1-lb-brazil-sul-de-minas-17-18-fc-ss",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/956BDFF7-D177-4F51-88EE-31153B28A620.heic?v=1705680290",
+  "platform": "shopify",
+  "product_id": "4436327235626",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Cabin Fever (Brazil) - Medium/Dark Roast",
+  "url": "https://moundsviewroasters.com/products/1-lb-brazil-sul-de-minas-17-18-fc-ss",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31494669336618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31494669369386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31782732726314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31782733611050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "31782734692394"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "0dafe76b4a7b44e9",
+  "first_seen": "2026-10-26",
+  "handle": "1-lb-peru-cajamarca-norandino-fto-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/4D1BCEF0-2C25-4EBE-9462-124EE33CCFB4.heic?v=1705680356",
+  "platform": "shopify",
+  "product_id": "4436329070634",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Trailside (Peru) - Medium Roast",
+  "url": "https://moundsviewroasters.com/products/1-lb-peru-cajamarca-norandino-fto-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "31494673137706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31494673170474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31782754287658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31782754746410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31782757400618"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "92968436bc5ff60d",
+  "first_seen": "2026-10-26",
+  "handle": "1lb-lakefront-livin-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/0EC0BADE-A9FD-4ABC-A5FF-8BB41BA66AD3.heic?v=1705680339",
+  "platform": "shopify",
+  "product_id": "4473133695018",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Lakefront Livin' (Guatemala) - Medium Roast",
+  "url": "https://moundsviewroasters.com/products/1lb-lakefront-livin-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31621581897770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31621581930538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31782767231018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31782767493162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "31782768312362"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "013680252db7baba",
+  "first_seen": "2026-10-26",
+  "handle": "1-lb-calm-waters-decaf-honduras-preorder",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/products/image_a40fa8c9-618d-421a-8971-1cce0c372253.jpg?v=1593567815",
+  "platform": "shopify",
+  "product_id": "4482349400106",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Calm Waters DECAF - Medium/ Dark Roast",
+  "url": "https://moundsviewroasters.com/products/1-lb-calm-waters-decaf-honduras-preorder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31655413710890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31655413743658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31782775849002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31782776143914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 pounds",
+    "variant_id": "39265643069482"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "8eabafe59fee5fe9",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-ridge-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/B04FD135-14D2-4C8B-AF77-9ADDDD5D1779.heic?v=1706212216",
+  "platform": "shopify",
+  "product_id": "4532601684010",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Valley Grove (Honduras) - Medium/ Dark Roast",
+  "url": "https://moundsviewroasters.com/products/sunrise-ridge-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31835687682090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31835687714858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31835687747626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31835687780394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "31835687813162"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "0b1218f73ef67211",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-companionbrazil",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/0727BC28-32E8-4A5F-ABDB-53F1B8270A53.heic?v=1705680328",
+  "platform": "shopify",
+  "product_id": "4559089860650",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Campfire Companion (Brazil) - Dark Roast",
+  "url": "https://moundsviewroasters.com/products/campfire-companionbrazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "31923673104426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "31923673137194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "31923673169962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "31923673202730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "31923673235498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Ground - 5lbs",
+    "variant_id": "44799303516202"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "2eec6f893904963c",
+  "first_seen": "2026-10-26",
+  "handle": "mounds-view-medley-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/893D7B04-A7B3-45C0-87CF-60F361906F73.jpg?v=1729272156",
+  "platform": "shopify",
+  "product_id": "6616825298986",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Mounds View Medley - Espresso Blend",
+  "url": "https://moundsviewroasters.com/products/mounds-view-medley-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39467629477930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "39467629510698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39467629543466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground / 12oz",
+    "variant_id": "39467629576234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground / 1lb",
+    "variant_id": "39467629609002"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "975aa2afd74b907f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-roasters-reserve-colombia-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/0211794E-2935-4D35-BBE3-367A6C8F71C4.heic?v=1705691907",
+  "platform": "shopify",
+  "product_id": "6796513771562",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "River’s Edge (Colombia - Natural)- Medium Roast",
+  "url": "https://moundsviewroasters.com/products/copy-of-roasters-reserve-colombia-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "40041785524266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "40041785557034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "40041785589802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "40041785622570"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "98b0de49bc5609c7",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-reserve-ethiopia-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/image_67193345.jpg?v=1719178478",
+  "platform": "shopify",
+  "product_id": "6869124907050",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Hillcrest Haven (Ethiopian - Natural) - Medium Roast",
+  "url": "https://moundsviewroasters.com/products/roasters-reserve-ethiopia-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "40346628325418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "40346628358186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "40346628390954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "40346628423722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5lb",
+    "variant_id": "41825873723434"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "aa8074f553431499",
+  "first_seen": "2026-10-26",
+  "handle": "boscage-in-the-bottoms-costa-rica-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/files/WhatsApp_Image_2024-06-26_at_10.41.27_07501a1b.jpg?v=1719416508",
+  "platform": "shopify",
+  "product_id": "7381138702378",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Boscage in the Bottoms (Costa Rica) - Medium Roast",
+  "url": "https://moundsviewroasters.com/products/boscage-in-the-bottoms-costa-rica-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "41838794375210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground - 12 oz",
+    "variant_id": "41838794407978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "41838794440746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "41838794473514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean - 5 lbs",
+    "variant_id": "41838794506282"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "27242b304cd91b59",
+  "first_seen": "2026-10-26",
+  "handle": "ridge-runner-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0265/1992/8874/products/image_1079105e-8740-46be-8cee-663d757bf840.jpg?v=1625624018",
+  "platform": "shopify",
+  "product_id": "7727272165418",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Ridge Runner - Espresso Blend",
+  "url": "https://moundsviewroasters.com/products/ridge-runner-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43782026559530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "43782026592298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43782026625066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground / 12oz",
+    "variant_id": "43782026657834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground / 1lb",
+    "variant_id": "43782026690602"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "b3f149bfdce5a599",
+  "first_seen": "2026-10-26",
+  "handle": "la-piedad-ridge-colombia-washed-medium-roast",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7844080025642",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "La Piedad Ridge (Colombia - Washed)- Medium Roast",
+  "url": "https://moundsviewroasters.com/products/la-piedad-ridge-colombia-washed-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean - 12 oz",
+    "variant_id": "44225536098346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground - 12 oz",
+    "variant_id": "44225536131114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean - 1 lb",
+    "variant_id": "44225536163882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ground - 1 lb",
+    "variant_id": "44225536196650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean - 5lb",
+    "variant_id": "44225551106090"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ },
+ {
+  "body_hash": "bf42b81866f1a7c7",
+  "first_seen": "2026-10-26",
+  "handle": "wide-awake-espresso-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7911581646890",
+  "product_type": "",
+  "roaster_slug": "moundsviewroasters",
+  "tags": [],
+  "title": "Wide Awake - Espresso Blend",
+  "url": "https://moundsviewroasters.com/products/wide-awake-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44457961553962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "44457961586730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44457961619498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.25,
+    "title": "Ground / 12oz",
+    "variant_id": "44457961652266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Ground / 1lb",
+    "variant_id": "44457961685034"
+   }
+  ],
+  "vendor": "Mounds View Roasters"
+ }
+]

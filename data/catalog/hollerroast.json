@@ -1,0 +1,385 @@
+[
+ {
+  "body_hash": "5fe0179b71e3cc7f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-rfa",
+  "image": "https://hollerroast.com/wp-content/uploads/Honduras-product_500X500_202205.png",
+  "platform": "woocommerce",
+  "product_id": "10298",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Signature Coffees"
+  ],
+  "title": "Honduras RFA",
+  "url": "https://hollerroast.com/product/honduras-rfa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb.",
+    "variant_id": "10298:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1eb849b7b99eaaeb",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-cooled",
+  "image": "https://hollerroast.com/wp-content/uploads/Jacks-Bourbon-Cooled-Sumatran-product_202511.png",
+  "platform": "woocommerce",
+  "product_id": "1337",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Africa",
+   "Get Coffee"
+  ],
+  "title": "Jack’s Bourbon Cooled Sumatran",
+  "url": "https://hollerroast.com/product/bourbon-cooled/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Jack&#8217;s Bourbon Cooled Sumatran",
+    "variant_id": "1337:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e01b6fe3ed25f5b6",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-espresso-bites",
+  "image": "https://hollerroast.com/wp-content/uploads/Espresso-Bites-product-image_202511.png",
+  "platform": "woocommerce",
+  "product_id": "15354",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Holiday",
+   "Seasonal Coffee"
+  ],
+  "title": "Dark Chocolate Espresso Bites",
+  "url": "https://hollerroast.com/product/dark-chocolate-espresso-bites/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "1 Ounce Sample",
+    "variant_id": "15354:0"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 3.0,
+    "title": "3 Ounce",
+    "variant_id": "15354:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 3.0,
+    "title": "6 Ounce",
+    "variant_id": "15354:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b7c5ad1eb82fdd4c",
+  "first_seen": "2026-10-26",
+  "handle": "classic-coffee-tin",
+  "image": "https://hollerroast.com/wp-content/uploads/Coffee-tins-red-bg-product-image_202510-1-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "16343",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Classic Coffee Tin",
+  "url": "https://hollerroast.com/product/classic-coffee-tin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb.",
+    "variant_id": "16343:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "574d4c7004ebc831",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-fto",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_sumatra_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "2277",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Asia",
+   "Seasonal Coffee"
+  ],
+  "title": "Sumatra FTO",
+  "url": "https://hollerroast.com/product/sumatra-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb.",
+    "variant_id": "2277:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2704005fe4792267",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_coldbrew_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "2455",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://hollerroast.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb.",
+    "variant_id": "2455:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "308cb24b18623bb5",
+  "first_seen": "2026-10-26",
+  "handle": "purely-colombian",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_colombia_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "2510",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Purely Colombia",
+  "url": "https://hollerroast.com/product/purely-colombian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 lb.",
+    "variant_id": "2510:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7bc6d2a6a85d459",
+  "first_seen": "2026-10-26",
+  "handle": "dark-horse-25",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_darkhorse_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "3031",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Darkhorse 25",
+  "url": "https://hollerroast.com/product/dark-horse-25/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 lb.",
+    "variant_id": "3031:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "15f8e8bfb9f91ed1",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-blend",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_bucket_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "3271",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Signature Coffees"
+  ],
+  "title": "Buckét Blend",
+  "url": "https://hollerroast.com/product/bucket-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 lb",
+    "variant_id": "3271:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "576fe20586882653",
+  "first_seen": "2026-10-26",
+  "handle": "holler-roast",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_houseblend_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "360",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Holler Roast Blend",
+  "url": "https://hollerroast.com/product/holler-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb.",
+    "variant_id": "360:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f16463969e36c288",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_malabar_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "3907",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Signature Coffees"
+  ],
+  "title": "Monsooned Malabar",
+  "url": "https://hollerroast.com/product/monsooned-malabar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "3907:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9132f8d71911d80",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_brazil_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "763",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Signature Coffees",
+   "South America"
+  ],
+  "title": "Brazil",
+  "url": "https://hollerroast.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb.",
+    "variant_id": "763:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d11f0003da37aa3",
+  "first_seen": "2026-10-26",
+  "handle": "patricksreserve",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_patrick_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "798",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Get Coffee",
+   "Holiday",
+   "Signature Coffees"
+  ],
+  "title": "Patrick’s Private Reserve",
+  "url": "https://hollerroast.com/product/patricksreserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb.",
+    "variant_id": "798:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b2027c716b43632e",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month",
+  "image": "https://hollerroast.com/wp-content/uploads/template_bag_coffeemonth_400x400.jpg",
+  "platform": "woocommerce",
+  "product_id": "8884",
+  "product_type": "variable",
+  "roaster_slug": "hollerroast",
+  "tags": [
+   "Featured",
+   "Holiday",
+   "Signature Coffees"
+  ],
+  "title": "Coffee of the Month",
+  "url": "https://hollerroast.com/product/coffee-of-the-month/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 78.0,
+    "title": "Coffee of the Month",
+    "variant_id": "8884:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

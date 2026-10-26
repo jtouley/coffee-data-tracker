@@ -1,0 +1,1736 @@
+[
+ {
+  "body_hash": "301a76990f2d7872",
+  "first_seen": "2026-10-26",
+  "handle": "black-swan-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/coffee-roaster-fort-worth-black-swan-espresso.jpg?v=1701373140",
+  "platform": "shopify",
+  "product_id": "10203838354",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [],
+  "title": "Black Swan Espresso - Brazil",
+  "url": "https://www.novelcoffeeroasters.com/products/black-swan-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012436459678"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012436492446"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip/Filter",
+    "variant_id": "43012436590750"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012436885662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012436918430"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip/Filter",
+    "variant_id": "43012437016734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012437311646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012437344414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip/Filter",
+    "variant_id": "43012437442718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012437737630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012437770398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip/Filter",
+    "variant_id": "43012437868702"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "43012456906910"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "43012456972446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "43012457037982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43012457103518"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46657941373086"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46657941438622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46657941504158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46657941569694"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "1a2439dc82127682",
+  "first_seen": "2026-10-26",
+  "handle": "el-nevado-del-huila-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/novelcoffeeroasters-el-nevado-edl-huila-colombia.jpg?v=1790620875",
+  "platform": "shopify",
+  "product_id": "10292950728862",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Seasonal Single-Origin"
+  ],
+  "title": "El Nevado del Huila - Colombia",
+  "url": "https://www.novelcoffeeroasters.com/products/el-nevado-del-huila-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "50523255865502"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "50523255898270"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "50523255931038"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "50523255963806"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "50523255996574"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50523256029342"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "50523256062110"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Drip",
+    "variant_id": "50523256094878"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / French Press",
+    "variant_id": "50523256127646"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "50523256160414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50523256193182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "50523256225950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "50523256258718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "50523256291486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "50523256324254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50523256357022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "50523256389790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "50523256422558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "50523256455326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "50523256488094"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "c21202a3c498bead",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/coffee-roaster-fort-worth-decaf.jpg?v=1701361885",
+  "platform": "shopify",
+  "product_id": "3853593018391",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Year-Round Coffee"
+  ],
+  "title": "Decaf - Colombia",
+  "url": "https://www.novelcoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "29150207803415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "31483671838784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41684510605470"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "42739673596062"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012520837278"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012520870046"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "43012520902814"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012521197726"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012521230494"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip",
+    "variant_id": "43012521263262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012521558174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012521590942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43012521623710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012521918622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012521951390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43012521984158"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46659328147614"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46659328213150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46659328278686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46659328344222"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "3ed51016aabb4e50",
+  "first_seen": "2026-10-26",
+  "handle": "tried-true",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/coffee-roaster-fort-worth-filter-blend-tried-and-true.jpg?v=1701373422",
+  "platform": "shopify",
+  "product_id": "4253021241367",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Year-Round Coffee"
+  ],
+  "title": "Tried & True - Blend",
+  "url": "https://www.novelcoffeeroasters.com/products/tried-true",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "30714027081751"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "30714027114519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "30714027147287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41110918365342"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012546265246"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012546298014"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "43012546330782"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012546625694"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012546658462"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip",
+    "variant_id": "43012546691230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012546986142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012547018910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43012547051678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012547346590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012547379358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43012547412126"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46658107900062"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46658107965598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46658108031134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46658108096670"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "09b5e5eab98b3a96",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/2024-novelcoffeeroasters-roasters-choice01.jpg?v=1709161899",
+  "platform": "shopify",
+  "product_id": "4396107956288",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://www.novelcoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "31466453663808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "31466453696576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "31466453729344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31466453827648"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012489085086"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012489117854"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "43012489150622"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012489445534"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012489478302"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Drip",
+    "variant_id": "43012489511070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012489805982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012489838750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43012489871518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012490887326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012490920094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43012490952862"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46659313107102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46659313172638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46659313238174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46659313303710"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "9ab4b58c9633d7c8",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/coffee-roaster-fort-worth-cold-brew.jpg?v=1701374096",
+  "platform": "shopify",
+  "product_id": "7273071870110",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Year-Round Coffee"
+  ],
+  "title": "Cold Brew - Blend",
+  "url": "https://www.novelcoffeeroasters.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "41896624226462"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41896624259230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41896624291998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41896624390302"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012464541854"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012464574622"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "43012464607390"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012464705694"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012464738462"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip",
+    "variant_id": "43012464771230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012464869534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012464902302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43012464935070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012465033374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012465066142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43012465098910"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46659335651486"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46659335684254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46659335717022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46659335749790"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "8fdac080849c5047",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/novel-coffee-roasters-half-caff-blend.jpg?v=1744222507",
+  "platform": "shopify",
+  "product_id": "8240771530910",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Seasonal Single-Origin"
+  ],
+  "title": "Half-Caff - Blend",
+  "url": "https://www.novelcoffeeroasters.com/products/half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "45315327295646"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "45315327361182"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "45315327393950"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "45315327426718"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "45315327688862"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "45315327754398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "45315327787166"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip",
+    "variant_id": "45315327819934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45315328082078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "45315328147614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "45315328180382"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "45315328213150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45315328475294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "45315328540830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45315328573598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45315328606366"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46659330801822"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46659330867358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46659330932894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46659330998430"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "c8c1d33cc4351f02",
+  "first_seen": "2026-10-26",
+  "handle": "rogue-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/coffee-roaster-fort-worth-rogue-espresso.jpg?v=1701373357",
+  "platform": "shopify",
+  "product_id": "8556083346",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Year-Round Coffee"
+  ],
+  "title": "Rogue Espresso - Blend",
+  "url": "https://www.novelcoffeeroasters.com/products/rogue-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "28526895506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "28526932178"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39466183622814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40452396114"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "43012496097438"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "43012496130206"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "43012496162974"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "43012496457886"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / French Press",
+    "variant_id": "43012496490654"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Drip",
+    "variant_id": "43012496523422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "43012496818334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43012496851102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43012496883870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "43012497178782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43012497211550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43012497244318"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46644682588318"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46644682653854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46644682719390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46644682784926"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "5c79ca90244a6496",
+  "first_seen": "2026-10-26",
+  "handle": "sierra-azul-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/novel-coffee-roasters-sierra-azul-mexico2.jpg?v=1769630731",
+  "platform": "shopify",
+  "product_id": "8604127658142",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Seasonal Single-Origin"
+  ],
+  "title": "Sierra Azul - Mexico",
+  "url": "https://www.novelcoffeeroasters.com/products/sierra-azul-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "46446511620254"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "46446511653022"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "46446511685790"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "46446511718558"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "46446511882398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Drip",
+    "variant_id": "46446511915166"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / French Press",
+    "variant_id": "46446511947934"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "46446511980702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46446512144542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "46446512177310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46446512210078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46446512242846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46446512406686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "46446512439454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46446512472222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46446512504990"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 20.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "46659357802654"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "46659357868190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46659357933726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46659357999262"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "7246aff53aa3e4f9",
+  "first_seen": "2026-10-26",
+  "handle": "belarminio-ramirez-natural-dominican-republic",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/novel-coffee-roasters-ramirez-natural-single-origin.jpg?v=1785952778",
+  "platform": "shopify",
+  "product_id": "8819327697054",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Seasonal Single-Origin"
+  ],
+  "title": "Belarminio Ramirez Natural - Dominican Republic",
+  "url": "https://www.novelcoffeeroasters.com/products/belarminio-ramirez-natural-dominican-republic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "48084393754782"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "48084393787550"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "48084393820318"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "48084393853086"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "48084393885854"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48084393918622"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "48084393951390"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb / Drip",
+    "variant_id": "48084393984158"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb / French Press",
+    "variant_id": "48084394016926"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "48084394049694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48084394082462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48084394115230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48084394147998"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48084394180766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "48084394213534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48084394246302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48084394279070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48084394311838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48084394344606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "48084394377374"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ },
+ {
+  "body_hash": "68e30f5cbd79d5c3",
+  "first_seen": "2026-10-26",
+  "handle": "biru-bekele-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1509/3428/files/novel-coffee-roasters-biru-bekele-ethiopia1.jpg?v=1788209430",
+  "platform": "shopify",
+  "product_id": "8865077297310",
+  "product_type": "",
+  "roaster_slug": "novelcoffeeroasters",
+  "tags": [
+   "Seasonal Single-Origin"
+  ],
+  "title": "Biru Bekele - Ethiopia",
+  "url": "https://www.novelcoffeeroasters.com/products/biru-bekele-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 22.0,
+    "title": "10.93 oz / Whole Bean",
+    "variant_id": "48219612020894"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 22.0,
+    "title": "10.93 oz / Espresso",
+    "variant_id": "48219612053662"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 22.0,
+    "title": "10.93 oz / Drip",
+    "variant_id": "48219612086430"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 22.0,
+    "title": "10.93 oz / French Press",
+    "variant_id": "48219612119198"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 22.0,
+    "title": "10.93 oz / Cold Brew",
+    "variant_id": "48219612151966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48219612184734"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1 lb / Espresso",
+    "variant_id": "48219612217502"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1 lb / Drip",
+    "variant_id": "48219612250270"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1 lb / French Press",
+    "variant_id": "48219612283038"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "1 lb / Cold Brew",
+    "variant_id": "48219612315806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48219612348574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48219612381342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48219612414110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48219612446878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "48219612479646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48219612512414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48219612545182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48219612577950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48219612610718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "48219612643486"
+   }
+  ],
+  "vendor": "Novel Coffee Roasters"
+ }
+]

@@ -1,0 +1,1277 @@
+[
+ {
+  "body_hash": "f817649d74ff9bfa",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/COWBOY-BLEND-324x432.jpg?v=1749403578",
+  "platform": "shopify",
+  "product_id": "7491176726618",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Cowboy Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/cowboy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193699569754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193699602522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193699635290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193699668058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193699700826"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "8ee4dbef9011ffaf",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/00-DSC_9677-BREAKFAST-BLEND-copy-324x432.jpg?v=1749404033",
+  "platform": "shopify",
+  "product_id": "7491179970650",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193694720090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193694752858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193694785626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193694818394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193694851162"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "2b0bb90b4f100311",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/00-DSC_9677-COSTA-RICAN-copy-324x432.jpg?v=1749404542",
+  "platform": "shopify",
+  "product_id": "7491181707354",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Costa Rican",
+  "url": "https://www.hiddenpeakscoffee.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193693147226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193693179994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193693212762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193693245530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193693278298"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "b0abddd2f3897c78",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/OrganicEthiopian.jpg?v=1755654956",
+  "platform": "shopify",
+  "product_id": "7550710546522",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Organic Ethiopian",
+  "url": "https://www.hiddenpeakscoffee.com/products/organic-ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193727160410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193727193178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193727225946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193727258714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193727291482"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "faf18e1ca9f310a7",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/FrenchRoast.jpg?v=1755655060",
+  "platform": "shopify",
+  "product_id": "7550710874202",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.hiddenpeakscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193728077914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193728110682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193728143450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193728176218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193728208986"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "1d9100aeff44fce8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/Guatemalan.jpg?v=1755655132",
+  "platform": "shopify",
+  "product_id": "7550710972506",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Guatemalan",
+  "url": "https://www.hiddenpeakscoffee.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193731682394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193731715162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193731747930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193731780698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193731813466"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "1d9100aeff44fce8",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/HawaiianBlend.jpg?v=1755655251",
+  "platform": "shopify",
+  "product_id": "7550711005274",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Hawaiian Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/hawaiian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193731846234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193731879002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193731911770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193731944538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193731977306"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "8ba4332d25bc339f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexican",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/OrganicMexican.jpg?v=1755655340",
+  "platform": "shopify",
+  "product_id": "7550711070810",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Organic Mexican",
+  "url": "https://www.hiddenpeakscoffee.com/products/organic-mexican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Whole Bean",
+    "variant_id": "42193732042842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193732075610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193732108378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193732141146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193732173914"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "330ad6ae7b48e9e8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peruvian",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/OrganicPeruvian.jpg?v=1755655404",
+  "platform": "shopify",
+  "product_id": "7550711431258",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Organic Peruvian",
+  "url": "https://www.hiddenpeakscoffee.com/products/organic-peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Whole Bean",
+    "variant_id": "42193735450714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193735483482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193735516250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193735549018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193735581786"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "a1cdc9bd9a1291ce",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/KenyaAA.jpg?v=1755655466",
+  "platform": "shopify",
+  "product_id": "7550711464026",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://www.hiddenpeakscoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "42193735614554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193735647322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193735680090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193735712858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193735745626"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "bd92ef7c700aa79a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/ItalianRoast.jpg?v=1755655532",
+  "platform": "shopify",
+  "product_id": "7550711562330",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://www.hiddenpeakscoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193737089114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193737121882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193737154650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193737187418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193737220186"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "98982c99f3c47a7f",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/Sumatra.jpg?v=1755655636",
+  "platform": "shopify",
+  "product_id": "7550711824474",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.hiddenpeakscoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "42193738989658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193739022426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193739055194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193739087962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193739120730"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "71d93d9e557f2104",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/NewGuineaPeaberry.jpg?v=1755655687",
+  "platform": "shopify",
+  "product_id": "7550712283226",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "New Guinea Peaberry",
+  "url": "https://www.hiddenpeakscoffee.com/products/new-guinea-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193740660826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193740693594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193740726362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193740759130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193740791898"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "189f7009be2678e0",
+  "first_seen": "2026-10-26",
+  "handle": "park-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/ParkCityBlend.jpg?v=1755655802",
+  "platform": "shopify",
+  "product_id": "7550712447066",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Park City Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/park-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193741086810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193741119578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193741152346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193741185114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193741217882"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "0b9741e4d52fd50f",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/ViennaBlend.jpg?v=1755655871",
+  "platform": "shopify",
+  "product_id": "7550712512602",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Vienna Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/vienna-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193741283418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193741316186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193741348954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193741381722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193741414490"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "d8f8c77a6dd1fd09",
+  "first_seen": "2026-10-26",
+  "handle": "primo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/PrimoEspresso.jpg?v=1755655954",
+  "platform": "shopify",
+  "product_id": "7550712578138",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Primo Espresso",
+  "url": "https://www.hiddenpeakscoffee.com/products/primo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193741480026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193741512794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193741545562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193741578330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193741611098"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "3ca252be828f57da",
+  "first_seen": "2026-10-26",
+  "handle": "telluride-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/TellurideBlend.jpg?v=1755656020",
+  "platform": "shopify",
+  "product_id": "7550712643674",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Telluride Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/telluride-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193741676634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193741709402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193741742170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193741774938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193741807706"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "e3233f5a2358a5aa",
+  "first_seen": "2026-10-26",
+  "handle": "wasatch-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/WasatchBlend.jpg?v=1755656075",
+  "platform": "shopify",
+  "product_id": "7550712741978",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Wasatch Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/wasatch-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193741938778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193741971546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193742004314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193742037082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193742069850"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "4b0bce235db4aecc",
+  "first_seen": "2026-10-26",
+  "handle": "snake-creek-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/SnakeCreekBlend.jpg?v=1755656123",
+  "platform": "shopify",
+  "product_id": "7550712840282",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Snake Creek Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/snake-creek-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "42193743315034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193743347802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193743380570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193743413338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193743446106"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "59f76233963ca3f3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/Honduras.jpg?v=1755656549",
+  "platform": "shopify",
+  "product_id": "7550713725018",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://www.hiddenpeakscoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193745739866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193745772634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193745805402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193745838170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193745870938"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "b52b911fc6548000",
+  "first_seen": "2026-10-26",
+  "handle": "organic-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/OrganicNicaragua.jpg?v=1755656650",
+  "platform": "shopify",
+  "product_id": "7550713888858",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Organic Nicaragua",
+  "url": "https://www.hiddenpeakscoffee.com/products/organic-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193747312730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193747345498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193747378266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193747411034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193747443802"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "d33d2893d5dbc3ba",
+  "first_seen": "2026-10-26",
+  "handle": "panama",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/Panama.jpg?v=1755656733",
+  "platform": "shopify",
+  "product_id": "7550713987162",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Panama",
+  "url": "https://www.hiddenpeakscoffee.com/products/panama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "42193747542106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Coarse/French Press",
+    "variant_id": "42193747574874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193747607642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193747640410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Finest/Espresso",
+    "variant_id": "42193747673178"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "3ca252be828f57da",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/ColombianDecaf.jpg?v=1755656909",
+  "platform": "shopify",
+  "product_id": "7550714282074",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Colombian Decaf",
+  "url": "https://www.hiddenpeakscoffee.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "42193751179354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193751212122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193751244890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193751277658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193751310426"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "3ca252be828f57da",
+  "first_seen": "2026-10-26",
+  "handle": "french-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/FrenchDecaf.jpg?v=1755656972",
+  "platform": "shopify",
+  "product_id": "7550714347610",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "French Decaf",
+  "url": "https://www.hiddenpeakscoffee.com/products/french-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Whole Bean",
+    "variant_id": "42193751375962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193751408730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193751441498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193751474266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193751507034"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ },
+ {
+  "body_hash": "3ca252be828f57da",
+  "first_seen": "2026-10-26",
+  "handle": "fiesta-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/8046/5242/files/FiestaBlend.jpg?v=1755657298",
+  "platform": "shopify",
+  "product_id": "7550714773594",
+  "product_type": "",
+  "roaster_slug": "hiddenpeakscoffee",
+  "tags": [],
+  "title": "Fiesta Blend",
+  "url": "https://www.hiddenpeakscoffee.com/products/fiesta-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Whole Bean",
+    "variant_id": "42193754226778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Coarse/French Press",
+    "variant_id": "42193754259546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Medium/Auto Drip",
+    "variant_id": "42193754292314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Fine/Cone Filter",
+    "variant_id": "42193754325082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Finest/Espresso",
+    "variant_id": "42193754357850"
+   }
+  ],
+  "vendor": "Hidden Peaks Coffee & Roasting Co."
+ }
+]

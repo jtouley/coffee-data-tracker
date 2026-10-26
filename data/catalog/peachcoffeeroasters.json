@@ -1,0 +1,1949 @@
+[
+ {
+  "body_hash": "be37b32603452678",
+  "first_seen": "2026-10-26",
+  "handle": "small-town-light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Small-Town-Light-Roast-Blend-Peach-Coffee-Roasters-34822827.jpg?v=1698766560",
+  "platform": "shopify",
+  "product_id": "1797942771781",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Colombia",
+   "Ethiopia",
+   "Flavor Bright",
+   "Flavor Floral",
+   "Flavor Fruity",
+   "Flavor Hazelnut",
+   "Medium/Light Roast",
+   "Region Colombia",
+   "Region Ethiopia",
+   "light roast",
+   "retail"
+  ],
+  "title": "Small Town - Light Roast Blend",
+  "url": "https://www.peachcoffeeroasters.com/products/small-town-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "42359355441408"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground",
+    "variant_id": "42359355474176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.6,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42359355506944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.6,
+    "title": "2 lb / Ground",
+    "variant_id": "42359355539712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42359355572480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.95,
+    "title": "5 lb / Ground",
+    "variant_id": "42359355605248"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "a61d43cd6b39700a",
+  "first_seen": "2026-10-26",
+  "handle": "dirty-south",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Dark-Roast-Blend-Peach-Coffee-Roasters-34823172.jpg?v=1698767157",
+  "platform": "shopify",
+  "product_id": "1797952700485",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Colombia",
+   "Dark Roast",
+   "Flavor Brown Sugar",
+   "Flavor Chocolate",
+   "Flavor Hazelnut",
+   "Flavor Smooth",
+   "Flavor Syrup",
+   "Flavor Syrupy",
+   "Region Colombia",
+   "Subscription",
+   "retail",
+   "wholesale"
+  ],
+  "title": "Dirty South - Medium/Dark Roast Blend",
+  "url": "https://www.peachcoffeeroasters.com/products/dirty-south",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Ground",
+    "variant_id": "16806510067781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.26,
+    "title": "2 lb / Ground",
+    "variant_id": "19516624666693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.11,
+    "title": "5 lb / Ground",
+    "variant_id": "19516683354181"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "42359391584512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.26,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42359391617280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.11,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42359391650048"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "6c5dd3dbf53fd8da",
+  "first_seen": "2026-10-26",
+  "handle": "ga-400",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/GA-400-Medium-Roast-Blend-Peach-Coffee-Roasters.jpg?v=1721186777",
+  "platform": "shopify",
+  "product_id": "1797960630341",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Colombia",
+   "Espresso",
+   "Espresso Blends",
+   "Flavor Chocolate",
+   "Flavor Creamy",
+   "Flavor Dried Fruit",
+   "Flavor Honeydew",
+   "Flavor Syrup",
+   "Flavor Syrupy",
+   "Medium Roast",
+   "Region Colombia",
+   "light medium roast",
+   "light roast",
+   "retail"
+  ],
+  "title": "GA 400 - Medium Roast Blend",
+  "url": "https://www.peachcoffeeroasters.com/products/ga-400",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "16806651920453"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Ground",
+    "variant_id": "16806651953221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.74,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "19516717301829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.74,
+    "title": "2 lb / Ground",
+    "variant_id": "19516717793349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.3,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "19516720578629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.3,
+    "title": "5 lb / Ground",
+    "variant_id": "19516720840773"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "8f0cf573e4a0f0eb",
+  "first_seen": "2026-10-26",
+  "handle": "ds",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Dirty-South---WS-Peach-Coffee-Roasters-1693490789126.jpg?v=1693490791",
+  "platform": "shopify",
+  "product_id": "1873307729989",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Flavor Chocolate",
+   "Flavor Hazelnut",
+   "Flavor Syrup",
+   "Flavor Syrupy",
+   "Region Colombia",
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Dirty South - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/ds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.1,
+    "title": "10oz / Whole Bean",
+    "variant_id": "17805612580933"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.1,
+    "title": "10oz / Ground",
+    "variant_id": "17805612646469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.76,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "17805612679237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.76,
+    "title": "2lbs / Ground",
+    "variant_id": "17805612744773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "17805612810309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.65,
+    "title": "5lbs / Ground",
+    "variant_id": "17805612875845"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.63,
+    "title": "8oz / Whole Bean",
+    "variant_id": "42620355051776"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.63,
+    "title": "8oz / Ground",
+    "variant_id": "42620355084544"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "03c0da0cf4f8bc5f",
+  "first_seen": "2026-10-26",
+  "handle": "ga-402",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/GA-400---WS-Peach-Coffee-Roasters-1693490830894.jpg?v=1762779616",
+  "platform": "shopify",
+  "product_id": "1873314119749",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Flavor Chocolate",
+   "Flavor Creamy",
+   "Flavor Honeydew",
+   "Region Colombia",
+   "Region Zambia",
+   "Subscription",
+   "light medium roast",
+   "light roast",
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "GA 400 - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/ga-402",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.35,
+    "title": "10oz / Whole Bean",
+    "variant_id": "17805713145925"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.35,
+    "title": "10oz / Ground",
+    "variant_id": "17805713178693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.75,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "17805713211461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.75,
+    "title": "2lbs / Ground",
+    "variant_id": "17805713244229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.13,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "17805713276997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.13,
+    "title": "5lbs / Ground",
+    "variant_id": "17805713309765"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.28,
+    "title": "8oz / Whole Bean",
+    "variant_id": "42620385231104"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.28,
+    "title": "8oz / Ground",
+    "variant_id": "42620385263872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.75,
+    "title": "2lbs / Espresso - Fine Grind",
+    "variant_id": "48626386567424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.13,
+    "title": "5lbs / Espresso - Fine Grind",
+    "variant_id": "48626386600192"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "eb22a16240f9e61f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-dirty-south-1",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Small-Town---WS-Peach-Coffee-Roasters-1693493745748.jpg?v=1693493746",
+  "platform": "shopify",
+  "product_id": "1873320411205",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Flavor Bright",
+   "Flavor Floral",
+   "Flavor Fruity",
+   "Medium Roast",
+   "light medium roast",
+   "light roast",
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Small Town - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/copy-of-dirty-south-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.6,
+    "title": "10oz / Whole Bean",
+    "variant_id": "17805802111045"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.6,
+    "title": "10oz / Ground",
+    "variant_id": "17805802143813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.75,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "17805802209349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.75,
+    "title": "2lbs / Ground",
+    "variant_id": "17805802274885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.63,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "17805802340421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.63,
+    "title": "5lbs / Ground",
+    "variant_id": "17805802373189"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.6,
+    "title": "10oz / Coarse Ground for Cold Brew",
+    "variant_id": "19637754658885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.75,
+    "title": "2lbs / Coarse Ground for Cold Brew",
+    "variant_id": "19637755084869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.63,
+    "title": "5lbs / Coarse Ground for Cold Brew",
+    "variant_id": "19637756067909"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.36,
+    "title": "8oz / Whole Bean",
+    "variant_id": "42620382052608"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.36,
+    "title": "8oz / Ground",
+    "variant_id": "42620382085376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.63,
+    "title": "5lbs Cafe Refillable Bag / Coarse Ground for Cold Brew",
+    "variant_id": "43157375254784"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "59392f3305b091ef",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Decaf---Downtown-Connector---WS-Peach-Coffee-Roasters-1693490717675.jpg?v=1693490756",
+  "platform": "shopify",
+  "product_id": "1873322704965",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "decaf blends",
+   "flavor smooth",
+   "flavor sweet",
+   "flavor vanilla",
+   "region colombia",
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Decaf - Downtown Connector - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/decaf-colombia-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.35,
+    "title": "10oz / Whole Bean",
+    "variant_id": "17805828063301"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.35,
+    "title": "10oz / Ground",
+    "variant_id": "17805828096069"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.27,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "17805828128837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.27,
+    "title": "2lbs / Ground",
+    "variant_id": "17805828161605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.92,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "17805828194373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.92,
+    "title": "5lbs / Ground",
+    "variant_id": "17805828227141"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.36,
+    "title": "8oz / Whole Bean",
+    "variant_id": "42620405907712"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.36,
+    "title": "8oz / Ground",
+    "variant_id": "42620405940480"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "fea1ede4723e07f1",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-dirty-south-2",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Red-Clay---WS-Peach-Coffee-Roasters-1693492660631.jpg?v=1693492661",
+  "platform": "shopify",
+  "product_id": "2036205060165",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Red Clay - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/copy-of-dirty-south-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.93,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "19215754199109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.93,
+    "title": "2lbs / Coarse Ground For Nitro",
+    "variant_id": "19215754231877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.06,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "19215754264645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.06,
+    "title": "5lbs / Coarse Ground For Nitro",
+    "variant_id": "19215754297413"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.1,
+    "title": "10oz / Whole Bean",
+    "variant_id": "32272954163260"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.1,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "32272954490940"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.63,
+    "title": "8oz / Whole Bean",
+    "variant_id": "42620392997120"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.36,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "42620393062656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.06,
+    "title": "5lbs Cafe Refillable Bag / Coarse Ground For Nitro",
+    "variant_id": "43157376401664"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "e26b71f24295304a",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-connector-decaf-swiss-water-process-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Downtown-Connector-Decaf-Peach-Coffee-Roasters-34823439.jpg?v=1698767881",
+  "platform": "shopify",
+  "product_id": "3862587867205",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Decaf Blends",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Flavor Vanilla",
+   "decaf",
+   "decaf coffee",
+   "region colombia",
+   "retail"
+  ],
+  "title": "Downtown Connector Decaf",
+  "url": "https://www.peachcoffeeroasters.com/products/downtown-connector-decaf-swiss-water-process-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "29180984852549"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10 oz / Ground",
+    "variant_id": "29180984885317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.59,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "29180984918085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.59,
+    "title": "2 lb / Ground",
+    "variant_id": "29180984950853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.66,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "29180984983621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.66,
+    "title": "5 lb / Ground",
+    "variant_id": "29180985016389"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "cfbce6ea051712e4",
+  "first_seen": "2026-10-26",
+  "handle": "cafiza",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/products/Cafiza-20oz-Peach-Coffee-Roasters-1645397428.jpg?v=1645397429",
+  "platform": "shopify",
+  "product_id": "3933634756677",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "shoelace-exclude"
+  ],
+  "title": "Cafiza 20oz",
+  "url": "https://www.peachcoffeeroasters.com/products/cafiza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 397,
+    "price_usd": 12.99,
+    "title": "Default Title",
+    "variant_id": "29424394895429"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "a296842ef03c5953",
+  "first_seen": "2026-10-26",
+  "handle": "selva-negra-natural-nicaragua-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Nicaragua_-Selva-Negra---WS-Peach-Coffee-Roasters-1693492618323.jpg?v=1693492619",
+  "platform": "shopify",
+  "product_id": "4576011812924",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Nicaragua, Selva Negra - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/selva-negra-natural-nicaragua-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.64,
+    "title": "10oz / Whole Bean",
+    "variant_id": "32272982507580"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.65,
+    "title": "10oz / Ground",
+    "variant_id": "32272982540348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.49,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32272982573116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.49,
+    "title": "2lb / Ground",
+    "variant_id": "32272982605884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32272982638652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.5,
+    "title": "5lb / Ground",
+    "variant_id": "32272982671420"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "b3bc20ed6a0b5d0a",
+  "first_seen": "2026-10-26",
+  "handle": "selva-negra-nicaragua-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Nicaragua_-Selva-Negra-Medium-Roast-Full-Natural-Peach-Coffee-Roasters-34824039.jpg?v=1735958209",
+  "platform": "shopify",
+  "product_id": "4579973595196",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Coffee Bundle",
+   "Flavor Caramel",
+   "Flavor Dried Fruit",
+   "Flavor Heavy Body",
+   "Flavor Sweet",
+   "Micro lot",
+   "Region Nicaragua",
+   "Single Origin",
+   "flavor juicy",
+   "single estate"
+  ],
+  "title": "Nicaragua, Selva Negra - Medium Roast - Full Natural",
+  "url": "https://www.peachcoffeeroasters.com/products/selva-negra-nicaragua-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "32284489121852"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground",
+    "variant_id": "32284489154620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.88,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32284489187388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.88,
+    "title": "2lb / Ground",
+    "variant_id": "32284489220156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.29,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32284489252924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.29,
+    "title": "5lb / Ground",
+    "variant_id": "32284489285692"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "fea1ede4723e07f1",
+  "first_seen": "2026-10-26",
+  "handle": "red-clay-espresso-dark-roast-nitro-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Red-Clay-Dark-Roast-Blend-Peach-Coffee-Roasters-34823312.jpg?v=1698767597",
+  "platform": "shopify",
+  "product_id": "4580009312316",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Dark Roast",
+   "Flavor Brown Sugar",
+   "Flavor Chocolate",
+   "Flavor Hazelnut",
+   "Flavor Heavy Body",
+   "Flavor Smooth",
+   "Flavor Syrupy"
+  ],
+  "title": "Red Clay - Dark Roast Blend",
+  "url": "https://www.peachcoffeeroasters.com/products/red-clay-espresso-dark-roast-nitro-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "32284570091580"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground",
+    "variant_id": "32284570124348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.26,
+    "title": "2lb / Whole Bean",
+    "variant_id": "32284570157116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.26,
+    "title": "2lb / Ground",
+    "variant_id": "32284570189884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32284570222652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5lb / Ground",
+    "variant_id": "32284570255420"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "a5bafd621d16b459",
+  "first_seen": "2026-10-26",
+  "handle": "rescue-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Rescue-Roast-Medium-Roast-Washed-Peach-Coffee-Roasters-35080623.jpg?v=1700243887",
+  "platform": "shopify",
+  "product_id": "4584962195516",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Flavor Caramel",
+   "Flavor Chocolate",
+   "Flavor Creamy",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Medium Roast",
+   "Region Colombia",
+   "Subscription",
+   "retail",
+   "shoelace-exclude"
+  ],
+  "title": "Rescue Roast - Medium Roast - Washed",
+  "url": "https://www.peachcoffeeroasters.com/products/rescue-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "32299002069052"
+   },
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 21.0,
+    "title": "Ground",
+    "variant_id": "32299002101820"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "the-creek-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/products/The-Creek-Blend---WS-Peach-Coffee-Roasters-1645397911.jpg?v=1645397912",
+  "platform": "shopify",
+  "product_id": "6082397143231",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "The Creek Blend - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/the-creek-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37518366900415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2lb / Ground",
+    "variant_id": "37518366933183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.4,
+    "title": "5lb / Whole Bean",
+    "variant_id": "37518366965951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.4,
+    "title": "5lb / Ground",
+    "variant_id": "37518366998719"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ws-ga-400-north-point",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/products/WS---GA-400---North-Point-Peach-Coffee-Roasters-1655812969.heic?v=1655812971",
+  "platform": "shopify",
+  "product_id": "7661342851328",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "WS - North Point - GA 400",
+  "url": "https://www.peachcoffeeroasters.com/products/ws-ga-400-north-point",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 4.5,
+    "title": "Ground",
+    "variant_id": "43661642367232"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "9c450f2a79780220",
+  "first_seen": "2026-10-26",
+  "handle": "ws-sebastian-ramirez-stay-peachy",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Sebastian.png?v=1752524830",
+  "platform": "shopify",
+  "product_id": "8735732859136",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "WS Sebastian Ramirez \"Stay Peachy\"",
+  "url": "https://www.peachcoffeeroasters.com/products/ws-sebastian-ramirez-stay-peachy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 17.97,
+    "title": "6oz / Whole Bean",
+    "variant_id": "45340017754368"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 17.97,
+    "title": "6oz / Ground",
+    "variant_id": "45340017787136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 77.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46656745701632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 77.99,
+    "title": "2lb / Ground",
+    "variant_id": "46656745734400"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "momo-blend-2-0",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8885267136768",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Momo Blend 2.0",
+  "url": "https://www.peachcoffeeroasters.com/products/momo-blend-2-0",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "10oz",
+    "variant_id": "46026548216064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2lb",
+    "variant_id": "46026548248832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "5lb",
+    "variant_id": "46026548281600"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ga-400-8oz-custom-order",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9064780235008",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [],
+  "title": "GA 400 8oz - Custom Order",
+  "url": "https://www.peachcoffeeroasters.com/products/ga-400-8oz-custom-order",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Whole Bean",
+    "variant_id": "46560730022144"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Ground",
+    "variant_id": "46560730054912"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "03c0da0cf4f8bc5f",
+  "first_seen": "2026-10-26",
+  "handle": "ga-400-ws-hen-mother",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/GA-400---WS-Peach-Coffee-Roasters-1693490830894.jpg?v=1762779616",
+  "platform": "shopify",
+  "product_id": "9076961607936",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Flavor Chocolate",
+   "Flavor Creamy",
+   "Flavor Honeydew",
+   "Region Colombia",
+   "Region Zambia",
+   "light medium roast",
+   "light roast",
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "GA 400 - WS - Hen Mother",
+  "url": "https://www.peachcoffeeroasters.com/products/ga-400-ws-hen-mother",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.63,
+    "title": "8oz / Whole Bean",
+    "variant_id": "46607362261248"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.63,
+    "title": "8oz / Ground",
+    "variant_id": "46607362294016"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.6,
+    "title": "10oz / Whole Bean",
+    "variant_id": "46607362326784"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.6,
+    "title": "10oz / Ground",
+    "variant_id": "46607362359552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.64,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "46607362392320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.64,
+    "title": "2lbs / Ground",
+    "variant_id": "46607362425088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.55,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46607362457856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.55,
+    "title": "5lbs Cafe Refillable Bag / Whole Bean",
+    "variant_id": "46607362490624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.55,
+    "title": "5lbs / Ground",
+    "variant_id": "46607362523392"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "9c450f2a79780220",
+  "first_seen": "2026-10-26",
+  "handle": "sebastian-ramirez-stay-peachy",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Colombia_Blank.png?v=1753293038",
+  "platform": "shopify",
+  "product_id": "9098549264640",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Colombia",
+   "Flavor Fruity",
+   "Medium/Light Roast",
+   "Micro lot",
+   "Natural",
+   "Natural Process",
+   "Region Colombia",
+   "Single Origin",
+   "flavor peach",
+   "retail",
+   "single estate"
+  ],
+  "title": "Sebastian Ramirez \"Stay Peachy\"",
+  "url": "https://www.peachcoffeeroasters.com/products/sebastian-ramirez-stay-peachy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 32.0,
+    "title": "6oz / Whole Bean",
+    "variant_id": "46693560090880"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 32.0,
+    "title": "6oz / Ground",
+    "variant_id": "46693560123648"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "ef57c7557369000b",
+  "first_seen": "2026-10-26",
+  "handle": "ga400-coffee-bag-enamel-pin",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/2-DSC_0108.jpg?v=1758952571",
+  "platform": "shopify",
+  "product_id": "9186564243712",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [],
+  "title": "GA400 Coffee Bag Enamel Pin",
+  "url": "https://www.peachcoffeeroasters.com/products/ga400-coffee-bag-enamel-pin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "47051259511040"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "ef57c7557369000b",
+  "first_seen": "2026-10-26",
+  "handle": "ga400-coffee-bag-enamel-pin-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/2-DSC_0108.jpg?v=1758952571",
+  "platform": "shopify",
+  "product_id": "9186572140800",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "GA400 Coffee Bag Enamel Pin WS",
+  "url": "https://www.peachcoffeeroasters.com/products/ga400-coffee-bag-enamel-pin-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 3.5,
+    "title": "Default Title",
+    "variant_id": "47051279892736"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hood-canal-ga-400-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/HoodCanalBag.png?v=1762781962",
+  "platform": "shopify",
+  "product_id": "9237055439104",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "shoelace-exclude",
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Hood Canal - GA 400 - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/hood-canal-ga-400-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "47247062040832"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10oz / Ground",
+    "variant_id": "47247062073600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.75,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "47247062106368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.75,
+    "title": "2lbs / Ground",
+    "variant_id": "47247062139136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.13,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47247062171904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.13,
+    "title": "5lbs / Ground",
+    "variant_id": "47247062237440"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sorensens-battle-brew",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9266042863872",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-only"
+  ],
+  "title": "Sorensens Battle Brew",
+  "url": "https://www.peachcoffeeroasters.com/products/sorensens-battle-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Whole Bean / Medium (GA 400) - 10oz",
+    "variant_id": "47339630756096"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Whole Bean / Dark (Dirty South - 10oz",
+    "variant_id": "47339630788864"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Whole Bean / Decaf - 10oz",
+    "variant_id": "47339630821632"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Whole Bean / LTO - Sidama - 8oz",
+    "variant_id": "47339630854400"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Whole Bean / LTO - Guatemala - 8oz",
+    "variant_id": "47339630887168"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Ground / Medium (GA 400) - 10oz",
+    "variant_id": "47339630919936"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Ground / Dark (Dirty South - 10oz",
+    "variant_id": "47339630952704"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 9.0,
+    "title": "Ground / Decaf - 10oz",
+    "variant_id": "47339630985472"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Ground / LTO - Sidama - 8oz",
+    "variant_id": "47339631018240"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Ground / LTO - Guatemala - 8oz",
+    "variant_id": "47339631051008"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "a5bafd621d16b459",
+  "first_seen": "2026-10-26",
+  "handle": "rescue-roast-medium-roast-washed-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/Rescue-Roast-Medium-Roast-Washed-Peach-Coffee-Roasters-35080623.jpg?v=1700243887",
+  "platform": "shopify",
+  "product_id": "9410505376000",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee Bundle",
+   "Flavor Caramel",
+   "Flavor Chocolate",
+   "Flavor Creamy",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Medium Roast",
+   "Region Colombia",
+   "Subscription",
+   "retail",
+   "shoelace-exclude"
+  ],
+  "title": "Rescue Roast - Medium Roast - Washed - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/rescue-roast-medium-roast-washed-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 12.0,
+    "title": "Whole Bean",
+    "variant_id": "48583552041216"
+   },
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 12.0,
+    "title": "Ground",
+    "variant_id": "48583552073984"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "198bc93c94181e1a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-rfp-medium-light-roast-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/GeshaPeruTubeImage_c3c38b42-c366-4cf4-8c7f-ea23332bfad3.png?v=1789139671",
+  "platform": "shopify",
+  "product_id": "9441710801152",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru Gesha Natural - Medium-Light Roast - Single Origin",
+  "url": "https://www.peachcoffeeroasters.com/products/peru-rfp-medium-light-roast-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 31.0,
+    "title": "6oz / Whole Bean",
+    "variant_id": "48691495403776"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 31.0,
+    "title": "6oz / Ground",
+    "variant_id": "48691495436544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 95.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49738362650880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 95.0,
+    "title": "2lb / Ground",
+    "variant_id": "49738362683648"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "198bc93c94181e1a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-gesha-natural-medium-light-roast-single-origin-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/GeshaPeruTubeImage_95635033-3849-4aae-9fd4-9387378ea630.png?v=1789141336",
+  "platform": "shopify",
+  "product_id": "9476961108224",
+  "product_type": "",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru Gesha Natural - Medium-Light Roast - Single Origin - WS",
+  "url": "https://www.peachcoffeeroasters.com/products/peru-gesha-natural-medium-light-roast-single-origin-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 16.16,
+    "title": "6oz / Whole Bean",
+    "variant_id": "48826981941504"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 16.16,
+    "title": "6oz / Ground",
+    "variant_id": "48826981974272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.37,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48827033518336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.37,
+    "title": "2lb / Ground",
+    "variant_id": "48827033551104"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "452a628e76b414f2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-shantawene-natural-anaerobic-medium-light-roast-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/EthiopiaShantaweneBagPhoto.png?v=1789050842",
+  "platform": "shopify",
+  "product_id": "9666608759040",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Ethiopia",
+   "Flavor Blueberry",
+   "Flavor Bright",
+   "Flavor Honeydew",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Micro lot",
+   "Region Ethiopia",
+   "Single Origin",
+   "flavor juicy",
+   "single estate"
+  ],
+  "title": "Ethiopia Sidama Shantawene Natural Anaerobic - Medium-Light Roast - Single Origin",
+  "url": "https://www.peachcoffeeroasters.com/products/ethiopia-sidama-shantawene-natural-anaerobic-medium-light-roast-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49724359082240"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Ground",
+    "variant_id": "49724359115008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 76.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49724359147776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 76.0,
+    "title": "2lb / Ground",
+    "variant_id": "49724359180544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49724359213312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Ground",
+    "variant_id": "49724359246080"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-shantawene-natural-anaerobic-medium-light-roast-single-origin-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/EthiopiaShantaweneBagPhoto.png?v=1789050842",
+  "platform": "shopify",
+  "product_id": "9666631270656",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Ethiopia",
+   "Flavor Blueberry",
+   "Flavor Bright",
+   "Flavor Honeydew",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Micro lot",
+   "Region Ethiopia",
+   "Single Origin",
+   "flavor juicy",
+   "single estate"
+  ],
+  "title": "Ethiopia Sidama Shantawene Natural Anaerobic - Medium-Light Roast - Single Origin - ws",
+  "url": "https://www.peachcoffeeroasters.com/products/ethiopia-sidama-shantawene-natural-anaerobic-medium-light-roast-single-origin-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.22,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49724474523904"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.22,
+    "title": "10oz / Ground",
+    "variant_id": "49724474556672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49724474589440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb / Ground",
+    "variant_id": "49724474622208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49724474654976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.5,
+    "title": "5lb / Ground",
+    "variant_id": "49724474687744"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "41e572c2deb47b08",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-soloman-hameso-boku-natural-medium-light-roast-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/EthiopiaBokuBagPhoto.png?v=1789052233",
+  "platform": "shopify",
+  "product_id": "9666666168576",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Ethiopia",
+   "Flavor Blueberry",
+   "Flavor Bright",
+   "Flavor Honeydew",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Micro lot",
+   "Region Ethiopia",
+   "Single Origin",
+   "flavor juicy",
+   "single estate"
+  ],
+  "title": "Ethiopia Sidama Soloman Hameso Boku Natural - Medium-Light Roast - Single Origin",
+  "url": "https://www.peachcoffeeroasters.com/products/ethiopia-sidama-soloman-hameso-boku-natural-medium-light-roast-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49724663562496"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Ground",
+    "variant_id": "49724663595264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49724663628032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2lb / Ground",
+    "variant_id": "49724663660800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49724663693568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Ground",
+    "variant_id": "49724663726336"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-soloman-hameso-boku-natural-medium-light-roast-single-origin-ws",
+  "image": "https://cdn.shopify.com/s/files/1/0062/6999/3029/files/EthiopiaBokuBagPhoto.png?v=1789052233",
+  "platform": "shopify",
+  "product_id": "9666673148160",
+  "product_type": "Coffee",
+  "roaster_slug": "peachcoffeeroasters",
+  "tags": [
+   "Ethiopia",
+   "Flavor Blueberry",
+   "Flavor Bright",
+   "Flavor Honeydew",
+   "Flavor Smooth",
+   "Flavor Sweet",
+   "Micro lot",
+   "Region Ethiopia",
+   "Single Origin",
+   "flavor juicy",
+   "single estate"
+  ],
+  "title": "Ethiopia Sidama Soloman Hameso Boku Natural - Medium-Light Roast - Single Origin - ws",
+  "url": "https://www.peachcoffeeroasters.com/products/ethiopia-sidama-soloman-hameso-boku-natural-medium-light-roast-single-origin-ws",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.9,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49724711764224"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.9,
+    "title": "10oz / Ground",
+    "variant_id": "49724711796992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49724711829760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground",
+    "variant_id": "49724711862528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49724711895296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Ground",
+    "variant_id": "49724711928064"
+   }
+  ],
+  "vendor": "Peach Coffee Roasters"
+ }
+]

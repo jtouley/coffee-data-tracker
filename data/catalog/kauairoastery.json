@@ -1,0 +1,669 @@
+[
+ {
+  "body_hash": "0fc61fbb74a523fb",
+  "first_seen": "2026-10-26",
+  "handle": "100-kau-hawaii-island",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/kau-1.png",
+  "platform": "woocommerce",
+  "product_id": "112",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Hawaii Island",
+   "Hawaiian Estate Coffees",
+   "Kau"
+  ],
+  "title": "100% Kau, Hawaii Island",
+  "url": "https://kauairoastery.com/product/100-kau-hawaii-island/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "8 oz",
+    "variant_id": "112:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz",
+    "variant_id": "112:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 30.0,
+    "title": "5 lb",
+    "variant_id": "112:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d75987dba74155d0",
+  "first_seen": "2026-10-26",
+  "handle": "100-maui-maui-island",
+  "image": "https://kauairoastery.com/wp-content/uploads/2018/08/Maui.png",
+  "platform": "woocommerce",
+  "product_id": "118",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Hawaiian Estate Coffees",
+   "Maui",
+   "Maui Island"
+  ],
+  "title": "100% Maui",
+  "url": "https://kauairoastery.com/product/100-maui-maui-island/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "8 oz",
+    "variant_id": "118:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16 oz",
+    "variant_id": "118:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 30.0,
+    "title": "5 lb",
+    "variant_id": "118:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a71dd6f19c2a808c",
+  "first_seen": "2026-10-26",
+  "handle": "kauai-highlands",
+  "image": "https://kauairoastery.com/wp-content/uploads/2018/08/KH.png",
+  "platform": "woocommerce",
+  "product_id": "142",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Kauai Highlands",
+   "Signature Blends"
+  ],
+  "title": "Kauai Highlands",
+  "url": "https://kauairoastery.com/product/kauai-highlands/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "142:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "142:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "142:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e7efc86a82430a3",
+  "first_seen": "2026-10-26",
+  "handle": "waimea-canyon",
+  "image": "https://kauairoastery.com/wp-content/uploads/2018/08/Waimea-.png",
+  "platform": "woocommerce",
+  "product_id": "156",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Signature Blends",
+   "Waimea Canyon"
+  ],
+  "title": "Waimea Canyon",
+  "url": "https://kauairoastery.com/product/waimea-canyon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "156:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "156:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "156:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9f0e9afd006995a1",
+  "first_seen": "2026-10-26",
+  "handle": "pakala",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/pakala.png",
+  "platform": "woocommerce",
+  "product_id": "160",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Pakala",
+   "Signature Blends"
+  ],
+  "title": "Pakala Dark Roast Coffee Blend",
+  "url": "https://kauairoastery.com/product/pakala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "160:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "160:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "160:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "142f70000126f2f8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-aurea-natural",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/Brazil-1.png",
+  "platform": "woocommerce",
+  "product_id": "184",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Brazil",
+   "Global Estate Coffees",
+   "Single Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://kauairoastery.com/product/brazil-fazenda-aurea-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "184:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "184:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "184:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93b993338d4a90b0",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-ignacio",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/Peru.png",
+  "platform": "woocommerce",
+  "product_id": "190",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Global Estate Coffees",
+   "Peru",
+   "Single Origin"
+  ],
+  "title": "Peru, San Ignacio Organic",
+  "url": "https://kauairoastery.com/product/peru-san-ignacio/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "190:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "190:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "190:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42a520e31a484a48",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/espresso.png",
+  "platform": "woocommerce",
+  "product_id": "202",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Signature Blends",
+   "espresso"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://kauairoastery.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "202:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "202:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "202:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a66fb05c7b70ab23",
+  "first_seen": "2026-10-26",
+  "handle": "water-processed-decaf",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/11/decaf.png",
+  "platform": "woocommerce",
+  "product_id": "206",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Colombia",
+   "Decaf",
+   "Signature Blends"
+  ],
+  "title": "Decaf, Water Processed",
+  "url": "https://kauairoastery.com/product/water-processed-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "206:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "206:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "206:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ed87c79ca21e1d0",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffees",
+  "image": "https://kauairoastery.com/wp-content/uploads/2018/09/8oz-Bag-Flavored-Buttered-Rum-wb-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "218",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Flavored Coffees",
+   "Signature Blends"
+  ],
+  "title": "Flavored Coffees",
+  "url": "https://kauairoastery.com/product/flavored-coffees/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Flavored Coffees",
+    "variant_id": "218:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62c5ccb31f430839",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://kauairoastery.com/wp-content/uploads/2021/09/8oz-Bag-Colombia-wb.png",
+  "platform": "woocommerce",
+  "product_id": "3638",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Colombia",
+   "Global Estate Coffees",
+   "Single Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://kauairoastery.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "3638:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "3638:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "3638:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "be000e6c5b2f8cd1",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-blend-cold-brew",
+  "image": "https://kauairoastery.com/wp-content/uploads/2021/09/8oz-Bag-Toddy-wb.png",
+  "platform": "woocommerce",
+  "product_id": "3643",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Cold Brew",
+   "Signature Blends",
+   "Toddy"
+  ],
+  "title": "Toddy Blend – Cold Brew",
+  "url": "https://kauairoastery.com/product/toddy-blend-cold-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "3643:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "3643:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "3643:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59bdba069cd028d8",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://kauairoastery.com/wp-content/uploads/2021/09/8oz-Bag-French-Roast-wb.png",
+  "platform": "woocommerce",
+  "product_id": "3648",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "French Roast",
+   "Global Estate Coffees"
+  ],
+  "title": "French Roast",
+  "url": "https://kauairoastery.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "3648:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "3648:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "3648:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ef2a2c91ca314bd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://kauairoastery.com/wp-content/uploads/2019/06/8oz-Bag-Guatemala-wb.png",
+  "platform": "woocommerce",
+  "product_id": "449",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Global Estate Coffees",
+   "Guatemala",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://kauairoastery.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "449:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "449:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "449:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33a6c566d4a3fc92",
+  "first_seen": "2026-10-26",
+  "handle": "parrish-collection-blend",
+  "image": "https://kauairoastery.com/wp-content/uploads/2026/02/parrish-coffee-bag.png",
+  "platform": "woocommerce",
+  "product_id": "6609",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Parrish Blends"
+  ],
+  "title": "Parrish Collection Blend",
+  "url": "https://kauairoastery.com/product/parrish-collection-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "6609:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "6609:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3552877c9c6a616",
+  "first_seen": "2026-10-26",
+  "handle": "100-kauai",
+  "image": "https://kauairoastery.com/wp-content/uploads/2026/03/100-kokee-farms-kauai-coffee.png",
+  "platform": "woocommerce",
+  "product_id": "6663",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Hawaiian Estate Coffees",
+   "Kauai",
+   "Kokee Farms"
+  ],
+  "title": "100% Kauai",
+  "url": "https://kauairoastery.com/product/100-kauai/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "8 oz",
+    "variant_id": "6663:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 40.0,
+    "title": "1 lb",
+    "variant_id": "6663:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "6663:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d41458a9226c5bf",
+  "first_seen": "2026-10-26",
+  "handle": "peaberry",
+  "image": "https://kauairoastery.com/wp-content/uploads/2026/04/peaberry-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "6737",
+  "product_type": "variable",
+  "roaster_slug": "kauairoastery",
+  "tags": [
+   "Global Estate Coffees",
+   "organic"
+  ],
+  "title": "Peaberry",
+  "url": "https://kauairoastery.com/product/peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8 oz",
+    "variant_id": "6737:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "6737:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lb",
+    "variant_id": "6737:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

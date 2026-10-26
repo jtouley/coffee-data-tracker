@@ -1,0 +1,299 @@
+[
+ {
+  "body_hash": "534beae74aca59f9",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-ethiopia-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/ethiopia_a2661dbf-449e-4045-86b9-16e1143c5c5c.jpg?v=1780643813",
+  "platform": "shopify",
+  "product_id": "7456725139678",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions",
+   "ROASTED COFFEE"
+  ],
+  "title": "Ethiopia Single Origin Coffee Beans",
+  "url": "https://mosaicroasters.com/products/single-origin-ethiopia-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz",
+    "variant_id": "42529217446110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.95,
+    "title": "5 lbs",
+    "variant_id": "42529217478878"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 64.95,
+    "title": "2.5 lbs",
+    "variant_id": "44261590597854"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "665247575c9024fb",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-brazil-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/brazil_e28ee5c4-1c08-42cc-952e-34eb56c55c14.jpg?v=1780643765",
+  "platform": "shopify",
+  "product_id": "7522615689438",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Brazil Single Origin Coffee Beans",
+  "url": "https://mosaicroasters.com/products/single-origin-brazil-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz",
+    "variant_id": "45435225145566"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.95,
+    "title": "2.5 lbs",
+    "variant_id": "45435225178334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs",
+    "variant_id": "45435225211102"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "bf275f80c5aba92a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/guatemala.jpg?v=1780641700",
+  "platform": "shopify",
+  "product_id": "7548101066974",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Guatemala Single Origin Coffee Beans",
+  "url": "https://mosaicroasters.com/products/guatemala-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "42529227243742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lbs",
+    "variant_id": "42529227276510"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 59.95,
+    "title": "2.5 lbs",
+    "variant_id": "44261591253214"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "b5d1dab4922391d4",
+  "first_seen": "2026-10-26",
+  "handle": "medovik-honey-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/rn-image_picker_lib_temp_81825ca7-38b7-401c-bea3-7034b880f4b8.webp?v=1778966526",
+  "platform": "shopify",
+  "product_id": "7581958406366",
+  "product_type": "Cake",
+  "roaster_slug": "mosaicroasters",
+  "tags": [],
+  "title": "Medovik Honey Cake",
+  "url": "https://mosaicroasters.com/products/medovik-honey-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.95,
+    "title": "8\" Round",
+    "variant_id": "42553584255198"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 79.95,
+    "title": "10\" Round",
+    "variant_id": "42553584287966"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 139.95,
+    "title": "16\"x12\" Rectangle",
+    "variant_id": "42553584353502"
+   }
+  ],
+  "vendor": "Mosaic Baking & Pastry"
+ },
+ {
+  "body_hash": "a66ac06e1d0ce8ae",
+  "first_seen": "2026-10-26",
+  "handle": "nutty-berry-union-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/Nutty_Berry_Union.jpg?v=1780641066",
+  "platform": "shopify",
+  "product_id": "7839489687774",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions"
+  ],
+  "title": "Nutty Berry Union Blend Coffee Beans",
+  "url": "https://mosaicroasters.com/products/nutty-berry-union-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz",
+    "variant_id": "43530498310366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lbs",
+    "variant_id": "43530498343134"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 59.95,
+    "title": "2.5 lbs",
+    "variant_id": "44261590368478"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "4eb515204f247daa",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/Mexico_Decaf.jpg?v=1780639236",
+  "platform": "shopify",
+  "product_id": "8102023266526",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions",
+   "ROASTED COFFEE"
+  ],
+  "title": "Mexico Decaf Single Origin Coffee Beans",
+  "url": "https://mosaicroasters.com/products/mexico-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "44295038927070"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 59.95,
+    "title": "2.5 lbs",
+    "variant_id": "44295038959838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5 lbs",
+    "variant_id": "44295038992606"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "08c5fea804d72de7",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/House_Blend.jpg?v=1780632106",
+  "platform": "shopify",
+  "product_id": "8102026707166",
+  "product_type": "Coffee",
+  "roaster_slug": "mosaicroasters",
+  "tags": [
+   "Joy subscriptions",
+   "wholesale"
+  ],
+  "title": "Mosaic House Blend Coffee Beans",
+  "url": "https://mosaicroasters.com/products/house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz",
+    "variant_id": "44295040303326"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 54.95,
+    "title": "2.5 lbs",
+    "variant_id": "44295040336094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lbs",
+    "variant_id": "44295040368862"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ },
+ {
+  "body_hash": "377d62ec903ba5cb",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-blossom-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0612/8864/4830/files/Jorge_1_9123e4d3-8635-4f12-92de-e4a05d3b2537.jpg?v=1778970439",
+  "platform": "shopify",
+  "product_id": "8508769075422",
+  "product_type": "Honey",
+  "roaster_slug": "mosaicroasters",
+  "tags": [],
+  "title": "Coffee Blossom Honey – Finca El Apiario, 12 oz",
+  "url": "https://mosaicroasters.com/products/coffee-blossom-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 15.95,
+    "title": "Default Title",
+    "variant_id": "45427492585694"
+   }
+  ],
+  "vendor": "Mosaic Coffee Roasters"
+ }
+]

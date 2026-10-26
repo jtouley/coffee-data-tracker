@@ -1,0 +1,295 @@
+[
+ {
+  "body_hash": "13fa33fe14923251",
+  "first_seen": "2026-10-26",
+  "handle": "sentinel-light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0060/1092/9241/files/VR-Product-Sentinel-Front_v01.png?v=1785349376",
+  "platform": "shopify",
+  "product_id": "10926419181727",
+  "product_type": "Coffee",
+  "roaster_slug": "veteranroasters",
+  "tags": [],
+  "title": "Sentinel | Light Roast Coffee",
+  "url": "https://veteranroasters.com/products/sentinel-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / Caffeinated / 12oz",
+    "variant_id": "62840133058719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean / Caffeinated / 1lb",
+    "variant_id": "62840133091487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Whole Bean / Caffeinated / 5lb",
+    "variant_id": "62840133124255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground / Caffeinated / 12oz",
+    "variant_id": "62840133157023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "Ground / Caffeinated / 1lb",
+    "variant_id": "62840133189791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Ground / Caffeinated / 5lb",
+    "variant_id": "62840133222559"
+   }
+  ],
+  "vendor": "Veteran Roasters"
+ },
+ {
+  "body_hash": "9469a1cbafa661f3",
+  "first_seen": "2026-10-26",
+  "handle": "reveille-roast-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0060/1092/9241/files/VR-Product-ReveilleRoast-Front_v01.png?v=1785350201",
+  "platform": "shopify",
+  "product_id": "10926422753439",
+  "product_type": "Coffee",
+  "roaster_slug": "veteranroasters",
+  "tags": [],
+  "title": "Reveille Roast | Medium Roast Coffee",
+  "url": "https://veteranroasters.com/products/reveille-roast-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "62840167694495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "62840167727263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "62840167760031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Ground / 12oz",
+    "variant_id": "62840167792799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "Ground / 1lb",
+    "variant_id": "62840167825567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.0,
+    "title": "Ground / 5lb",
+    "variant_id": "62840167858335"
+   }
+  ],
+  "vendor": "Veteran Roasters"
+ },
+ {
+  "body_hash": "9177bad0f44158ce",
+  "first_seen": "2026-10-26",
+  "handle": "at-ease-medium-roast-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0060/1092/9241/files/VR-Product-AtEaseDecaf-Front_v01.png?v=1785350437",
+  "platform": "shopify",
+  "product_id": "10926423769247",
+  "product_type": "Coffee",
+  "roaster_slug": "veteranroasters",
+  "tags": [
+   "Coffee",
+   "Coffee Beans"
+  ],
+  "title": "At Ease | Medium Roast Decaf Coffee",
+  "url": "https://veteranroasters.com/products/at-ease-medium-roast-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "62840188534943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "62840188567711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "62840188600479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Ground / 12oz",
+    "variant_id": "62840188633247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "Ground / 1lb",
+    "variant_id": "62840188666015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "Ground / 5lb",
+    "variant_id": "62840188698783"
+   }
+  ],
+  "vendor": "Veteran Roasters"
+ },
+ {
+  "body_hash": "a4b5e8c799dd044f",
+  "first_seen": "2026-10-26",
+  "handle": "night-ops-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0060/1092/9241/files/VR-Product-NightOps-Front_v01.png?v=1785350531",
+  "platform": "shopify",
+  "product_id": "10926424096927",
+  "product_type": "Coffee",
+  "roaster_slug": "veteranroasters",
+  "tags": [],
+  "title": "Night Ops | Dark Roast Coffee",
+  "url": "https://veteranroasters.com/products/night-ops-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / Caffeinated / 12oz",
+    "variant_id": "62840189255839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean / Caffeinated / 1lb",
+    "variant_id": "62840189288607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Whole Bean / Caffeinated / 5lb",
+    "variant_id": "62840189321375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground / Caffeinated / 12oz",
+    "variant_id": "62840189354143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "Ground / Caffeinated / 1lb",
+    "variant_id": "62840189386911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Ground / Caffeinated / 5lb",
+    "variant_id": "62840189419679"
+   }
+  ],
+  "vendor": "Veteran Roasters"
+ },
+ {
+  "body_hash": "a137f986e96b8103",
+  "first_seen": "2026-10-26",
+  "handle": "rally-point-darkest-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0060/1092/9241/files/VR-Product-RallyPoint-Front_v01.png?v=1785350686",
+  "platform": "shopify",
+  "product_id": "10926424588447",
+  "product_type": "Coffee",
+  "roaster_slug": "veteranroasters",
+  "tags": [],
+  "title": "Rally Point | Darkest Roast Coffee",
+  "url": "https://veteranroasters.com/products/rally-point-darkest-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / Caffeinated / 12oz",
+    "variant_id": "62840191352991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean / Caffeinated / 1lb",
+    "variant_id": "62840191385759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Whole Bean / Caffeinated / 5lb",
+    "variant_id": "62840191418527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground / Caffeinated / 12oz",
+    "variant_id": "62840191451295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "Ground / Caffeinated / 1lb",
+    "variant_id": "62840191484063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Ground / Caffeinated / 5lb",
+    "variant_id": "62840191516831"
+   }
+  ],
+  "vendor": "Veteran Roasters"
+ }
+]

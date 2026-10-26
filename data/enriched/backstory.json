@@ -1,0 +1,186 @@
+{
+ "10777906544805": {
+  "body_hash": "f8d765645fca9196",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "apricot",
+   "nougat"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Maragogype",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "5464449384613": {
+  "body_hash": "3418b9ef1e2e6920",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6870204186789": {
+  "body_hash": "07e71a3a43b25b3d",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "berries",
+   "lemon curd"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "7895945576613": {
+  "body_hash": "8ac65abc317dd6d8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7896147165349": {
+  "body_hash": "26288ebd94afb898",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7896163909797": {
+  "body_hash": "44a940e738c444fe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7896168235173": {
+  "body_hash": "b7f5b4f5150c22e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7896172167333": {
+  "body_hash": "662f5886ad6ae76f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8249587531941": {
+  "body_hash": "bc0bd9b9bd1b8722",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "tangerine"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ },
+ "8659754194": {
+  "body_hash": "86605c107954c7aa",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8976160030885": {
+  "body_hash": "695a62e6a443ba6e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

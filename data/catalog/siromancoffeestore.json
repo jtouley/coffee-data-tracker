@@ -1,0 +1,96 @@
+[
+ {
+  "body_hash": "dbd28353e40e1b8e",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-medium-roast",
+  "image": "https://siromancoffeestore.com/wp-content/uploads/2026/08/11111.png",
+  "platform": "woocommerce",
+  "product_id": "1349",
+  "product_type": "variable",
+  "roaster_slug": "siromancoffeestore",
+  "tags": [
+   "beans",
+   "coffee beans"
+  ],
+  "title": "Siroman Coffee – Fresh Organic Viennese Medium Roast Coffee Beans",
+  "url": "https://siromancoffeestore.com/product/viennese-medium-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 23.15,
+    "title": "4oz",
+    "variant_id": "1349:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.15,
+    "title": "12oz",
+    "variant_id": "1349:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.15,
+    "title": "1lb",
+    "variant_id": "1349:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.15,
+    "title": "2lb",
+    "variant_id": "1349:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 23.15,
+    "title": "4lb",
+    "variant_id": "1349:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80e5adc33d93f2ce",
+  "first_seen": "2026-10-26",
+  "handle": "kozakava",
+  "image": "https://siromancoffeestore.com/wp-content/uploads/2021/04/kozakava.jpg",
+  "platform": "woocommerce",
+  "product_id": "2804",
+  "product_type": "variable",
+  "roaster_slug": "siromancoffeestore",
+  "tags": [
+   "beans",
+   "coffee beans"
+  ],
+  "title": "KOZAKAVA Organic Fresh Medium Roast (Ukrainian Style) Coffee Beans",
+  "url": "https://siromancoffeestore.com/product/kozakava/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.87,
+    "title": "12oz",
+    "variant_id": "2804:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.87,
+    "title": "1lb",
+    "variant_id": "2804:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.87,
+    "title": "2lb",
+    "variant_id": "2804:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

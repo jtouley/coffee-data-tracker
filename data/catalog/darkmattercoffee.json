@@ -1,0 +1,1842 @@
+[
+ {
+  "body_hash": "f397e25347ed385f",
+  "first_seen": "2026-10-26",
+  "handle": "machete-barrel-aged-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/products/MacheteBag_Front.png?v=1657749009",
+  "platform": "shopify",
+  "product_id": "10117951375",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "barrel aged",
+   "coffee",
+   "limited"
+  ],
+  "title": "Machete (Barrel Aged Blend)",
+  "url": "https://www.darkmattercoffee.com/products/machete-barrel-aged-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "31647462588510"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Drip Grind",
+    "variant_id": "31647463735390"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Press Pot Grind",
+    "variant_id": "31647472582750"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Espresso Grind",
+    "variant_id": "31647474974814"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Pour Over Grind",
+    "variant_id": "31647475892318"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "d1ce5356290bbb1a",
+  "first_seen": "2026-10-26",
+  "handle": "charlie-benantes-the-devil-you-know",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Benante-Bag_DevilYouKnow_Front-_Full-Res.png?v=1723482717",
+  "platform": "shopify",
+  "product_id": "1489026613342",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Benante's Blend",
+   "Charlie Benante",
+   "Devil You Know",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "limited"
+  ],
+  "title": "Charlie Benante's The Devil You Know",
+  "url": "https://www.darkmattercoffee.com/products/charlie-benantes-the-devil-you-know",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "13058930966622"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 24.0,
+    "title": "Drip Grind",
+    "variant_id": "13058930999390"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 24.0,
+    "title": "Press Pot Grind",
+    "variant_id": "13058931032158"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 24.0,
+    "title": "Espresso Grind",
+    "variant_id": "13058931064926"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 24.0,
+    "title": "Pour Over Grind",
+    "variant_id": "31585142505566"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "197938b94ef2f9c9",
+  "first_seen": "2026-10-26",
+  "handle": "when-stars-align-chicago-stars-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Render-Chicago-Stars.png?v=1791207937",
+  "platform": "shopify",
+  "product_id": "15412918714462",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Chicago Stars",
+   "Chris Orta",
+   "Limited Blend",
+   "Peru",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "el salvador",
+   "october"
+  ],
+  "title": "When Stars Align - Chicago Stars Collaboration",
+  "url": "https://www.darkmattercoffee.com/products/when-stars-align-chicago-stars-collaboration",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "67629579796574"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "67629579829342"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Espresso Grind",
+    "variant_id": "67629579862110"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Press Pot Grind",
+    "variant_id": "67629579894878"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Pour Over Grind",
+    "variant_id": "67629579927646"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "6e04ee7f9151cb7c",
+  "first_seen": "2026-10-26",
+  "handle": "balthvs-manifest",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Bag-Balthvs-2026.png?v=1791234381",
+  "platform": "shopify",
+  "product_id": "15413177811038",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "Mexico",
+   "balthvs",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "colombia",
+   "el salvador",
+   "october"
+  ],
+  "title": "Balthvs Manifest",
+  "url": "https://www.darkmattercoffee.com/products/balthvs-manifest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "67630933082206"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "67630933114974"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Espresso Grind",
+    "variant_id": "67630933147742"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Press Pot Grind",
+    "variant_id": "67630933180510"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Pour Over Grind",
+    "variant_id": "67630933213278"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "024ae3bb3b34cfa7",
+  "first_seen": "2026-10-26",
+  "handle": "ofrenda-1",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Bag_Render-Ofrenda-2026.png?v=1791817302",
+  "platform": "shopify",
+  "product_id": "15434595237982",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Chris Orta",
+   "Limited Blend",
+   "Mexico",
+   "coffee",
+   "october",
+   "ofrenda"
+  ],
+  "title": "Ofrenda",
+  "url": "https://www.darkmattercoffee.com/products/ofrenda-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "67725882196062"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "67725882228830"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Espresso Grind",
+    "variant_id": "67725882261598"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Press Pot Grind",
+    "variant_id": "67725882294366"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Pour Over Grind",
+    "variant_id": "67725882327134"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "52575682d1cd2bef",
+  "first_seen": "2026-10-26",
+  "handle": "ofrenda-coffee-cold-8-pack-2",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Ofrenda-cold-can-2026.png?v=1791818091",
+  "platform": "shopify",
+  "product_id": "15434617421918",
+  "product_type": "Coffee Cold",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Chris Orta",
+   "Coffee Cold",
+   "Limited Blend",
+   "Mexico",
+   "ofrenda"
+  ],
+  "title": "Ofrenda Coffee Cold 8-Pack",
+  "url": "https://www.darkmattercoffee.com/products/ofrenda-coffee-cold-8-pack-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 36.0,
+    "title": "Default Title",
+    "variant_id": "67725977813086"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "d70c56973e62b80a",
+  "first_seen": "2026-10-26",
+  "handle": "origami-pour-over",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Origami-Red_Medium_69637f31-6c9d-48c9-87fd-c5a5e6748caa.png?v=1726781285",
+  "platform": "shopify",
+  "product_id": "1601063485534",
+  "product_type": "Extraction tools",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "dripper",
+   "japan",
+   "origami",
+   "origami pour over",
+   "pour over"
+  ],
+  "title": "Origami Pour Over (Medium)",
+  "url": "https://www.darkmattercoffee.com/products/origami-pour-over",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Green",
+    "variant_id": "15895276224606"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Purple",
+    "variant_id": "15987185483870"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Brown",
+    "variant_id": "29073835491422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Pink",
+    "variant_id": "29073837752414"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Navy Blue",
+    "variant_id": "29073837883486"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Red",
+    "variant_id": "29073837949022"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Orange",
+    "variant_id": "29073837981790"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Yellow",
+    "variant_id": "29073838178398"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "White",
+    "variant_id": "31512571871326"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Black",
+    "variant_id": "31512572297310"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Turquoise",
+    "variant_id": "32002600501342"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "d30c4e47f44e027a",
+  "first_seen": "2026-10-26",
+  "handle": "sin",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Decaf-Bag-_Shopify.png?v=1763072003",
+  "platform": "shopify",
+  "product_id": "1673134538846",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "coffee",
+   "coffee-new-expired",
+   "decaf",
+   "portfolio"
+  ],
+  "title": "¡Sin Cafeína! (Decaf)",
+  "url": "https://www.darkmattercoffee.com/products/sin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "16078552989790"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 23.0,
+    "title": "Drip Grind",
+    "variant_id": "16078751039582"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 23.0,
+    "title": "Espresso Grind",
+    "variant_id": "16078751072350"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 23.0,
+    "title": "Press Pot Grind",
+    "variant_id": "16078751105118"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 23.0,
+    "title": "Pour Over Grind",
+    "variant_id": "31585151385694"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "a2f82f11dc232ec1",
+  "first_seen": "2026-10-26",
+  "handle": "starry-eyes",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/products/StarryEyesBag_Front.png?v=1681242422",
+  "platform": "shopify",
+  "product_id": "3766776004",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "night",
+   "starry",
+   "starry eyes"
+  ],
+  "title": "Starry Eyes (Dark Roast)",
+  "url": "https://www.darkmattercoffee.com/products/starry-eyes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Whole bean",
+    "variant_id": "11471101188"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Drip Grind",
+    "variant_id": "12346653605982"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Espresso Grind",
+    "variant_id": "12346675003486"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Press Pot Grind",
+    "variant_id": "12346676707422"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Pour Over Grind",
+    "variant_id": "31603734249566"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "131799944c9a557a",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-blood-5lb-bulk-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/5lb_UB_New_Bag.png?v=1775233481",
+  "platform": "shopify",
+  "product_id": "4566738272350",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "5 lb",
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "Unicorn Blood 5 LB (Espresso Blend)",
+  "url": "https://www.darkmattercoffee.com/products/unicorn-blood-5lb-bulk-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Whole Bean",
+    "variant_id": "31785823699038"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Drip Grind",
+    "variant_id": "31785823731806"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Press Pot Grind",
+    "variant_id": "31785823764574"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Espresso Grind",
+    "variant_id": "31785823797342"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Pour Over Grind",
+    "variant_id": "32124046671966"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "3de8c25dc534ece1",
+  "first_seen": "2026-10-26",
+  "handle": "giant-steps-5lb-bulk-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/5lb_SE_New_Bag.png?v=1775233541",
+  "platform": "shopify",
+  "product_id": "4566741483614",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "5 lb",
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "Starry Eyes 5 LB (Dark Roast)",
+  "url": "https://www.darkmattercoffee.com/products/giant-steps-5lb-bulk-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Whole Bean",
+    "variant_id": "31785831956574"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Drip Grind",
+    "variant_id": "31785831989342"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Press Pot Grind",
+    "variant_id": "31785832022110"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Espresso Grind",
+    "variant_id": "31785832054878"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Pour Over Grind",
+    "variant_id": "32124041429086"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "c0fee99acfc142b7",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-walk-chocolate-bar",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/BarraDeLaCasaChocolateBarAwardUpdate_1c26b28b-7dba-415e-afb8-b92df2dddc4d.png?v=1696871841",
+  "platform": "shopify",
+  "product_id": "4785827938398",
+  "product_type": "Chocolate",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "chocolate"
+  ],
+  "title": "Sleep Walk Chocolate Barra De La Casa",
+  "url": "https://www.darkmattercoffee.com/products/sleep-walk-chocolate-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "Barra De La Casa",
+    "variant_id": "32279526015070"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "Barra De La Casa 4-Pack",
+    "variant_id": "39382998974558"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "e135b1fb00042a1c",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-walk-4-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DrinkingChocolate4-Pack.png?v=1704389888",
+  "platform": "shopify",
+  "product_id": "6577497047134",
+  "product_type": "Chocolate",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [],
+  "title": "4 Pack Regular Drinking Chocolate",
+  "url": "https://www.darkmattercoffee.com/products/sleep-walk-4-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39382812852318"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "d15b3ff746050575",
+  "first_seen": "2026-10-26",
+  "handle": "black-splash-coffee-cold",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/BlackSplace-Can-_Shopify.png?v=1762970421",
+  "platform": "shopify",
+  "product_id": "6682371981406",
+  "product_type": "Coffee Cold",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Black Splash",
+   "Brown Acid",
+   "Chocolate City",
+   "Coffee Cold",
+   "Vanilla Suburbs",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "Black Splash Coffee Cold 8-Pack",
+  "url": "https://www.darkmattercoffee.com/products/black-splash-coffee-cold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 36.0,
+    "title": "Assorted Portfolio 8-pack",
+    "variant_id": "39701718401118"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 36.0,
+    "title": "Black Splash 8-pack",
+    "variant_id": "39701718433886"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "0f50a8789ddfdbed",
+  "first_seen": "2026-10-26",
+  "handle": "black-angels-mirrors-dmc-exclusive-splatter",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/products/LP_DarkMatter_RAINBOW_2_Edited.png?v=1673297387",
+  "platform": "shopify",
+  "product_id": "6688531972190",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Austin",
+   "black angels",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "exclusive",
+   "music",
+   "psychedelic",
+   "record",
+   "texas",
+   "vinyl"
+  ],
+  "title": "Black Angels - Wilderness of Mirrors 2LP DMC Exclusive Splatter Vinyl",
+  "url": "https://www.darkmattercoffee.com/products/black-angels-mirrors-dmc-exclusive-splatter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 36.0,
+    "title": "Default Title",
+    "variant_id": "39716393222238"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "d7f3f46171953464",
+  "first_seen": "2026-10-26",
+  "handle": "acrylic-origami-pour-over-small",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/products/CoralOrigami_Both.png?v=1665080715",
+  "platform": "shopify",
+  "product_id": "6726765674590",
+  "product_type": "Extraction tools",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "dripper",
+   "japan",
+   "origami",
+   "origami pour over",
+   "pour over"
+  ],
+  "title": "Acrylic Origami Pour Over (Small)",
+  "url": "https://www.darkmattercoffee.com/products/acrylic-origami-pour-over-small",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Black",
+    "variant_id": "39816439922782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Clear",
+    "variant_id": "39816439955550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "pink",
+    "variant_id": "39816440021086"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Green",
+    "variant_id": "39816441626718"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "ff044f639398ca9e",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-walk-chocolate-barra-de-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Cafe_Chocolate-Bar_Edited-_Shopify.png?v=1726589748",
+  "platform": "shopify",
+  "product_id": "6777076547678",
+  "product_type": "Chocolate",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "chocolate"
+  ],
+  "title": "Sleep Walk Chocolate Cafe",
+  "url": "https://www.darkmattercoffee.com/products/sleep-walk-chocolate-barra-de-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "Sleep Walk Chocolate Cafe 4-Pack",
+    "variant_id": "39970578792542"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "Sleep Walk Chocolate Cafe",
+    "variant_id": "39970578890846"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "49aec2f8e99bdf38",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-walk-chocolate-picante",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/PicanteChocolateBarAwardUpdate_bbbf354e-d968-4106-85d6-c2147caa7bde.png?v=1696872177",
+  "platform": "shopify",
+  "product_id": "6777077727326",
+  "product_type": "Chocolate",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "chocolate"
+  ],
+  "title": "Sleep Walk Chocolate Picante",
+  "url": "https://www.darkmattercoffee.com/products/sleep-walk-chocolate-picante",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "Picante 4-Pack",
+    "variant_id": "39970581086302"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Picante",
+    "variant_id": "39970581151838"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "b0cff2808e3d3066",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-blood-coffee-cold",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/UnicornBlood-Cans-Trio-_Shopify.png?v=1762816785",
+  "platform": "shopify",
+  "product_id": "6788436426846",
+  "product_type": "Coffee Cold",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Coffee Cold",
+   "coffee-new-expired",
+   "unicorn blood"
+  ],
+  "title": "Unicorn Blood Coffee Cold 8-Pack",
+  "url": "https://www.darkmattercoffee.com/products/unicorn-blood-coffee-cold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 36.0,
+    "title": "Unicorn Blood Coffee Cold",
+    "variant_id": "39997782687838"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "b43659f54edbf359",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-walk-frontera-chocolate-collection-4-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/SleepWalkFrontera4-PackBox_Front.png?v=1700675743",
+  "platform": "shopify",
+  "product_id": "6864034922590",
+  "product_type": "Chocolate",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Holidank2023",
+   "chocolate"
+  ],
+  "title": "Sleep Walk Frontera Chocolate Collection 4-Packs",
+  "url": "https://www.darkmattercoffee.com/products/sleep-walk-frontera-chocolate-collection-4-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 191,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "40185313591390"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "35accb0b0a1b29ce",
+  "first_seen": "2026-10-26",
+  "handle": "get-the-fuck-out-of-bed",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/GTFOB_2025_Bag-_Shopify.png?v=1742236676",
+  "platform": "shopify",
+  "product_id": "7352837701726",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Get the fuck out of bed",
+   "Limited Blend",
+   "coffee",
+   "coffee-new-expired",
+   "colombia",
+   "guatemala",
+   "martin atkins"
+  ],
+  "title": "Get the Fuck Out of Bed",
+  "url": "https://www.darkmattercoffee.com/products/get-the-fuck-out-of-bed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "41569048625246"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "41569048658014"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Espresso Grind",
+    "variant_id": "41569048690782"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Press Pot Grind",
+    "variant_id": "41569048723550"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Pour Over Grind",
+    "variant_id": "41569048756318"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "4098da12a5943fea",
+  "first_seen": "2026-10-26",
+  "handle": "marky-ramones-beat-on-the-bowery",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Marky-Ramone-2025-Bag-_Shopify1.png?v=1764706873",
+  "platform": "shopify",
+  "product_id": "7453278863454",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Bowery Beat",
+   "Marky Ramone",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "colombia",
+   "finca san jeronimo miramar",
+   "guatemala"
+  ],
+  "title": "Marky Ramone's Bowery Beat!",
+  "url": "https://www.darkmattercoffee.com/products/marky-ramones-beat-on-the-bowery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "42019867885662"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "42019867918430"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Espresso Grind",
+    "variant_id": "42019867951198"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42019867983966"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42019868016734"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "4098da12a5943fea",
+  "first_seen": "2026-10-26",
+  "handle": "marky-ramones-bowery-beat-holiday-coffee-tin",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/PXL_20261008_173136903.PORTRAIT_2.jpg?v=1791481245",
+  "platform": "shopify",
+  "product_id": "7508083310686",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "colombia",
+   "finca san jeronimo miramar",
+   "guatemala"
+  ],
+  "title": "Marky Ramone's Bowery Beat! Limited Coffee Tin",
+  "url": "https://www.darkmattercoffee.com/products/marky-ramones-bowery-beat-holiday-coffee-tin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "42240608370782"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 30.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "42240608403550"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 30.0,
+    "title": "Espresso Grind",
+    "variant_id": "42240608436318"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 30.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42240608469086"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 30.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42240608501854"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "2d920431a08ff2d0",
+  "first_seen": "2026-10-26",
+  "handle": "jimbob-isaac-x-a-love-supreme-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Bag_Render-A-Love-Supreme-2026.png?v=1784066742",
+  "platform": "shopify",
+  "product_id": "7570040160350",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "coffee",
+   "coffee-new-expired"
+  ],
+  "title": "Raul Sisniega x A Love Supreme (House Blend)",
+  "url": "https://www.darkmattercoffee.com/products/jimbob-isaac-x-a-love-supreme-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "42459561263198"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Drip Grind",
+    "variant_id": "42459561295966"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Espresso Grind",
+    "variant_id": "42459561328734"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42459561361502"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42459561394270"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "9ef384cfac4931e6",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-blood-1kg-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/UB_Kilo.png?v=1779137587",
+  "platform": "shopify",
+  "product_id": "7645585211486",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "Unicorn Blood 1kg (Espresso Blend)",
+  "url": "https://www.darkmattercoffee.com/products/unicorn-blood-1kg-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "42774942908510"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Drip Grind",
+    "variant_id": "42774942941278"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42774942974046"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Espresso Grind",
+    "variant_id": "42774943006814"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42774943039582"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "5783218c9a177ab3",
+  "first_seen": "2026-10-26",
+  "handle": "a-love-supreme-1kg-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/LS_Kilo.png?v=1779137685",
+  "platform": "shopify",
+  "product_id": "7645585899614",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "5 lb",
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "A Love Supreme 1kg (House Blend)",
+  "url": "https://www.darkmattercoffee.com/products/a-love-supreme-1kg-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "42774944972894"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Drip Grind",
+    "variant_id": "42774945005662"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Espresso Grind",
+    "variant_id": "42774945038430"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42774945071198"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42774945103966"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "e91436e82c72dfee",
+  "first_seen": "2026-10-26",
+  "handle": "starry-eyes-1kg-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/SE_Kilo.png?v=1779137795",
+  "platform": "shopify",
+  "product_id": "7645586063454",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "5 lb",
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "Starry Eyes 1kg (Dark Roast)",
+  "url": "https://www.darkmattercoffee.com/products/starry-eyes-1kg-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "42774945529950"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Drip Grind",
+    "variant_id": "42774945562718"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42774945595486"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Espresso Grind",
+    "variant_id": "42774945628254"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42774945661022"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "176ae1200e20ecc9",
+  "first_seen": "2026-10-26",
+  "handle": "raul-sisniega-x-unicorn-blood-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Bag_Render-Unicorn-Blood-2026.png?v=1784066680",
+  "platform": "shopify",
+  "product_id": "7698315771998",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "coffee",
+   "coffee-new-expired",
+   "espresso",
+   "italian espresso",
+   "portfolio",
+   "unicorn blood"
+  ],
+  "title": "Raul Sisniega x Unicorn Blood (Espresso Blend)",
+  "url": "https://www.darkmattercoffee.com/products/raul-sisniega-x-unicorn-blood-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Whole bean",
+    "variant_id": "42989010976862"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Drip Grind",
+    "variant_id": "42989011009630"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Espresso Grind",
+    "variant_id": "42989011042398"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Press Pot Grind",
+    "variant_id": "42989011075166"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Pour Over Grind",
+    "variant_id": "42989011107934"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "75916065540b099f",
+  "first_seen": "2026-10-26",
+  "handle": "crimson-canal-pt-two-collab-with-the-ray-bradbury-center",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Crimson-Canal-pt2-2026.png?v=1788208919",
+  "platform": "shopify",
+  "product_id": "7755559338078",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration"
+  ],
+  "title": "Crimson Canal Pt. Two -Collab with The Ray Bradbury Center",
+  "url": "https://www.darkmattercoffee.com/products/crimson-canal-pt-two-collab-with-the-ray-bradbury-center",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43243919966302"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "43243919999070"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Espresso Grind",
+    "variant_id": "43243920031838"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Press Pot Grind",
+    "variant_id": "43243920064606"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Pour Over Grind",
+    "variant_id": "43243920097374"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "51af773d24de2094",
+  "first_seen": "2026-10-26",
+  "handle": "anthrax-cursum-perficio",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Anthrax-Coffee-2026.png?v=1788450721",
+  "platform": "shopify",
+  "product_id": "7755578638430",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "anthrax",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "el salvador",
+   "nicaragua",
+   "september"
+  ],
+  "title": "Anthrax - Cursum Perficio",
+  "url": "https://www.darkmattercoffee.com/products/anthrax-cursum-perficio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "43244031901790"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "43244031934558"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Espresso Grind",
+    "variant_id": "43244031967326"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Press Pot Grind",
+    "variant_id": "43244032000094"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Pour Over Grind",
+    "variant_id": "43244032032862"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "498dcf02239ff87a",
+  "first_seen": "2026-10-26",
+  "handle": "gloria-1",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/GLORIA-2026.png?v=1788979346",
+  "platform": "shopify",
+  "product_id": "7760995319902",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "coffee",
+   "coffee-new-expired",
+   "el salvador",
+   "gloria",
+   "honduras",
+   "kawaii",
+   "september"
+  ],
+  "title": "Gloria",
+  "url": "https://www.darkmattercoffee.com/products/gloria-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "43289655967838"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "43289656000606"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Espresso Grind",
+    "variant_id": "43289656033374"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Press Pot Grind",
+    "variant_id": "43289656066142"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 26.0,
+    "title": "Pour Over Grind",
+    "variant_id": "43289656098910"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "2d5049e6cbbfee96",
+  "first_seen": "2026-10-26",
+  "handle": "gloria-coffee-cold-8-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Gloria-Cans-2026.png?v=1788987510",
+  "platform": "shopify",
+  "product_id": "7762270847070",
+  "product_type": "Coffee Cold",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "coffee-new-expired",
+   "collaboration",
+   "el salvador",
+   "gloria",
+   "honduras",
+   "kawaii"
+  ],
+  "title": "Gloria Coffee Cold 8-Pack",
+  "url": "https://www.darkmattercoffee.com/products/gloria-coffee-cold-8-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "43295926419550"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "7ee9b9e0c7bb7496",
+  "first_seen": "2026-10-26",
+  "handle": "yeti-dmc-8oz-rambler-stag-red",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/unnamed.png?v=1788984109",
+  "platform": "shopify",
+  "product_id": "7762403754078",
+  "product_type": "Glassware",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "dark matter logo",
+   "gift",
+   "glassware",
+   "tumbler"
+  ],
+  "title": "YETI DMC 8oz Rambler (Stag Red)",
+  "url": "https://www.darkmattercoffee.com/products/yeti-dmc-8oz-rambler-stag-red",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "43297019592798"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "6f871f4f35abad7a",
+  "first_seen": "2026-10-26",
+  "handle": "rise-against",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/Bag_Render-Rise-Against-2026.png?v=1789482217",
+  "platform": "shopify",
+  "product_id": "7770551156830",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "anthrax",
+   "coffee",
+   "coffee-new-expired",
+   "collaboration",
+   "el salvador",
+   "nicaragua",
+   "september"
+  ],
+  "title": "Rise Against",
+  "url": "https://www.darkmattercoffee.com/products/rise-against",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "43334179323998"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "43334179356766"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Espresso Grind",
+    "variant_id": "43334179389534"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Press Pot Grind",
+    "variant_id": "43334179422302"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 27.0,
+    "title": "Pour Over Grind",
+    "variant_id": "43334179455070"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "e8fb6132ed4624d3",
+  "first_seen": "2026-10-26",
+  "handle": "rise-against-coffee-cold-8-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-Rise-Against-cold-can-2026.png?v=1789655476",
+  "platform": "shopify",
+  "product_id": "7770606862430",
+  "product_type": "Coffee Cold",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "Mexico",
+   "coffee-new-expired",
+   "collaboration",
+   "el salvador",
+   "riot fest",
+   "rise against"
+  ],
+  "title": "Rise Against Coffee Cold 8-Pack",
+  "url": "https://www.darkmattercoffee.com/products/rise-against-coffee-cold-8-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "43334245777502"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "7394708914fd32ea",
+  "first_seen": "2026-10-26",
+  "handle": "under-the-rainbow-october-limited-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/DMC-BAG-Under-the-Rainbow.png?v=1790688322",
+  "platform": "shopify",
+  "product_id": "9062031786078",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "Limited Blend",
+   "coffee",
+   "coffee-new-expired",
+   "el salvador",
+   "guatemala",
+   "humboldt park",
+   "october"
+  ],
+  "title": "Under the Rainbow (October Limited Blend)",
+  "url": "https://www.darkmattercoffee.com/products/under-the-rainbow-october-limited-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "48967919861854"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Drip Coffee Grind",
+    "variant_id": "48967919894622"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Espresso Grind",
+    "variant_id": "48967919927390"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Press Pot Grind",
+    "variant_id": "48967919960158"
+   },
+   {
+    "available": true,
+    "grams": 445,
+    "price_usd": 25.0,
+    "title": "Pour Over Grind",
+    "variant_id": "48967919992926"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ },
+ {
+  "body_hash": "5e0cb675f107ba78",
+  "first_seen": "2026-10-26",
+  "handle": "a-love-supreme-5lb-bulk-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0294/6861/files/5lb_LS_New_Bag.png?v=1775233512",
+  "platform": "shopify",
+  "product_id": "9179742084",
+  "product_type": "Coffee",
+  "roaster_slug": "darkmattercoffee",
+  "tags": [
+   "5 lb",
+   "bulk",
+   "coffee-new-expired",
+   "portfolio"
+  ],
+  "title": "A Love Supreme 5 LB (House Blend)",
+  "url": "https://www.darkmattercoffee.com/products/a-love-supreme-5lb-bulk-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Whole Bean",
+    "variant_id": "31777830600798"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Drip Grind",
+    "variant_id": "31777830633566"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Press Pot Grind",
+    "variant_id": "31777830666334"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Espresso Grind",
+    "variant_id": "31777830699102"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Pour Over Grind",
+    "variant_id": "32124036382814"
+   }
+  ],
+  "vendor": "Dark Matter Coffee"
+ }
+]

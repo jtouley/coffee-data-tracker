@@ -1,0 +1,178 @@
+[
+ {
+  "body_hash": "4ccad706a1fbb353",
+  "first_seen": "2026-10-26",
+  "handle": "product-3-szb2y-gzh2r-zmrhg",
+  "image": "https://images.squarespace-cdn.com/content/v1/691e2916a125050c68bca1df/80026a08-4946-4132-95a7-21d934309470/Colombian.png",
+  "platform": "squarespace",
+  "product_id": "691e297faf06c272ec90a1bd",
+  "product_type": "",
+  "roaster_slug": "picuscoffeeroasters",
+  "tags": [],
+  "title": "Colombia Supremo Alco Bolivar",
+  "url": "https://www.picuscoffeeroasters.com/shop/p/product-3-szb2y-gzh2r-zmrhg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "24 Count K-Cup",
+    "variant_id": "45db10cb-bbc6-4e8a-afd9-2bd5048c5817"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 Count K-Cup",
+    "variant_id": "a7f7246f-22c4-4a7d-a163-34193e1ba501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "e46bdbf8-c77b-4df6-bd88-8ce048e98de8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "fb114b66-1fd5-4ae4-a5d5-c5f780eddb36"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc40130b73b3622c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://images.squarespace-cdn.com/content/v1/691e2916a125050c68bca1df/4d571968-4cb6-49e7-b012-0433d4364cc3/Coasta+Rica.jpg",
+  "platform": "squarespace",
+  "product_id": "692f5dbc2b205c03dbb3f838",
+  "product_type": "",
+  "roaster_slug": "picuscoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Tarrazu 12oz Whole Bean",
+  "url": "https://www.picuscoffeeroasters.com/shop/p/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 Count K-Cup",
+    "variant_id": "02545f90-0026-4c64-86b1-b433d620ec05"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "09995201-e3d2-48c5-ba44-a0edfb292f77"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "24 Count K-Cup",
+    "variant_id": "1410b3bf-d716-4bd9-9a68-fc38f12d0998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "e5d68e3e-0efe-4f37-8f9a-ffb8704968e7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a6c8df9dee59855",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-jasmin-shb-12oz-whole-bean",
+  "image": "https://images.squarespace-cdn.com/content/v1/691e2916a125050c68bca1df/d9b0521e-000c-4103-9278-f415121b5d53/2025-12-23_110246.jpg",
+  "platform": "squarespace",
+  "product_id": "695531983f4b3e6c55df10ff",
+  "product_type": "",
+  "roaster_slug": "picuscoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Jasmin SHB",
+  "url": "https://www.picuscoffeeroasters.com/shop/p/guatemala-jasmin-shb-12oz-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "24 Count K-Cup",
+    "variant_id": "09f16beb-0acf-4a20-a0ad-b5c8d3d164f0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 Count K-Cup",
+    "variant_id": "11149915-978e-4834-acce-c916fe80fd57"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "58a0bd19-9ab9-40ef-bf4b-f61d7fffd89b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "866b212a-f46c-40b3-9a11-c955726ceb99"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac4a7c7efd26bb92",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja-hg-ep-8oz-or-12oz-whole-bean",
+  "image": "https://images.squarespace-cdn.com/content/v1/691e2916a125050c68bca1df/743c9d76-ad85-4a0a-895d-df2a8cb9c25a/Mexico+La+Laja.png",
+  "platform": "squarespace",
+  "product_id": "69b0797f4760651bbaaa5c6d",
+  "product_type": "",
+  "roaster_slug": "picuscoffeeroasters",
+  "tags": [],
+  "title": "Mexico La Laja HG EP",
+  "url": "https://www.picuscoffeeroasters.com/shop/p/mexico-la-laja-hg-ep-8oz-or-12oz-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Ground",
+    "variant_id": "7a791bce-d220-41c9-aaf8-6d7e89a1751b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 Count K-Cup",
+    "variant_id": "bf30e09e-ac2c-4f34-afff-4a73975a4f51"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "24 Count K-Cup",
+    "variant_id": "d404eab7-6eac-4591-a5d0-9172153d904f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "fae24502-3e73-4492-9d32-ae5f00db9050"
+   }
+  ],
+  "vendor": ""
+ }
+]

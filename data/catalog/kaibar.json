@@ -1,0 +1,749 @@
+[
+ {
+  "body_hash": "3fd2624b44112ee3",
+  "first_seen": "2026-10-26",
+  "handle": "java-kai-coffee-shop-kauai-milk-glasses",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2026-01-29at11.36.06AM.png?v=1769723261",
+  "platform": "shopify",
+  "product_id": "10342245957925",
+  "product_type": "Mugs",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "aloha",
+   "classic sugar skull",
+   "dancing skull",
+   "diner mug",
+   "drink coffee or die",
+   "east side",
+   "eastside",
+   "island",
+   "java kai",
+   "java kai coffee",
+   "kauai",
+   "love aloha kauai",
+   "mug",
+   "mugs",
+   "pineapple",
+   "skull",
+   "skull island",
+   "sugarskull",
+   "summer",
+   "surf",
+   "surf skull",
+   "white"
+  ],
+  "title": "Java Kai Coffee Shop Kauai Milk Glasses",
+  "url": "https://javakai.com/products/java-kai-coffee-shop-kauai-milk-glasses",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 25.0,
+    "title": "White / Single Cup",
+    "variant_id": "51981063291173"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 47.0,
+    "title": "White / Set of 2",
+    "variant_id": "51981063323941"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 25.0,
+    "title": "Light Green / Single Cup",
+    "variant_id": "51981063356709"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 47.0,
+    "title": "Light Green / Set of 2",
+    "variant_id": "51981063389477"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 25.0,
+    "title": "Light Blue / Single Cup",
+    "variant_id": "51981063422245"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 47.0,
+    "title": "Light Blue / Set of 2",
+    "variant_id": "51981063455013"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "e45f5c6f4cd9b76d",
+  "first_seen": "2026-10-26",
+  "handle": "java-kai-air-freshener-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/IMG_1480_8d238106-57d5-4fd6-9973-d770a0d2563b.jpg?v=1776894132",
+  "platform": "shopify",
+  "product_id": "10420906230053",
+  "product_type": "GEAR",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "island",
+   "kauai",
+   "new",
+   "skull"
+  ],
+  "title": "Single Use Coffee Packs",
+  "url": "https://javakai.com/products/java-kai-air-freshener-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 3.0,
+    "title": "Rainbow Bourbon - Light Roast / Single",
+    "variant_id": "52262803505445"
+   },
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 10.0,
+    "title": "Rainbow Bourbon - Light Roast / 4 - Pack",
+    "variant_id": "52262803538213"
+   },
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 3.0,
+    "title": "Surfer Blend - Medium Roast / Single",
+    "variant_id": "52262803570981"
+   },
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 10.0,
+    "title": "Surfer Blend - Medium Roast / 4 - Pack",
+    "variant_id": "52262803603749"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "9574088d4a594c91",
+  "first_seen": "2026-10-26",
+  "handle": "embroidered-skull-java-kai-or-die-crop-tank",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/18200D07-DBD6-493B-870E-61DD0EA47BC9.jpg?v=1786295956",
+  "platform": "shopify",
+  "product_id": "10605665354021",
+  "product_type": "",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "new"
+  ],
+  "title": "Java Kai or Die Crop Tank",
+  "url": "https://javakai.com/products/embroidered-skull-java-kai-or-die-crop-tank",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "Small",
+    "variant_id": "53021866098981"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "Medium",
+    "variant_id": "53021866164517"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "Large",
+    "variant_id": "53021866230053"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "XS",
+    "variant_id": "53021872652581"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 40.0,
+    "title": "XL",
+    "variant_id": "53021872685349"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "14311279465b7c35",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-05-04at8.12.12PM.png?v=1746427335",
+  "platform": "shopify",
+  "product_id": "113484900",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "beans",
+   "coffee",
+   "java kai"
+  ],
+  "title": "Single Fin Espresso Beans",
+  "url": "https://javakai.com/products/espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.8,
+    "title": "12oz",
+    "variant_id": "259316550"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz",
+    "variant_id": "33166213283979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "38208538631"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "96bbf3f19a6b1cde",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-processed-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/IMG-3453.jpg?v=1791865745",
+  "platform": "shopify",
+  "product_id": "2088524349499",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "Hawaii",
+   "Kai Bar Roasters",
+   "coffee",
+   "drink coffee or die",
+   "east side",
+   "eastside",
+   "eastside kauai",
+   "java kai",
+   "javakai",
+   "kai bar",
+   "kai bar coffee roasters",
+   "kauai",
+   "light roast coffee",
+   "love aloha kauai",
+   "nicaragua coffee",
+   "pineapple",
+   "surf"
+  ],
+  "title": "Swiss Water Processed Decaf Beans",
+  "url": "https://javakai.com/products/swiss-water-processed-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.8,
+    "title": "12oz",
+    "variant_id": "20254560976955"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz",
+    "variant_id": "33166369980555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "41478588858525"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "f56c7c2aeae6dafe",
+  "first_seen": "2026-10-26",
+  "handle": "100-kauai-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-05-04at9.17.39PM.png?v=1746429487",
+  "platform": "shopify",
+  "product_id": "2315318849",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "Hawaii",
+   "coffee",
+   "drink coffee or die",
+   "eastside kauai",
+   "java kai",
+   "javakai",
+   "kauai"
+  ],
+  "title": "100% Kauai Beans",
+  "url": "https://javakai.com/products/100-kauai-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 245.0,
+    "title": "5lb",
+    "variant_id": "41533450125469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12oz",
+    "variant_id": "7614445441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.0,
+    "title": "16oz",
+    "variant_id": "7614604865"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "eeb53b4d707864db",
+  "first_seen": "2026-10-26",
+  "handle": "surfer-blend-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-05-04at9.31.24PM.png?v=1746430300",
+  "platform": "shopify",
+  "product_id": "359567681",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "Hawaii",
+   "coffee",
+   "drink coffee or die",
+   "east side",
+   "eastside",
+   "eastside kauai",
+   "guatemala",
+   "in house roasted coffee",
+   "java kai",
+   "java kai coffee",
+   "java kai surfer",
+   "javakai",
+   "kai bar coffee roasters",
+   "kauai",
+   "love aloha kauai",
+   "medium-dark roast",
+   "of java kai",
+   "papua new guinea",
+   "sexy",
+   "smooth"
+  ],
+  "title": "Surfer Blend Beans",
+  "url": "https://javakai.com/products/surfer-blend-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz",
+    "variant_id": "33166357725323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "41478573818013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.8,
+    "title": "12oz",
+    "variant_id": "911663821"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "bfb6242d1340e656",
+  "first_seen": "2026-10-26",
+  "handle": "new-8oz-kai-bar-scene-miir",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-07-01at12.04.21PM.png?v=1751407501",
+  "platform": "shopify",
+  "product_id": "5937498488989",
+  "product_type": "GEAR",
+  "roaster_slug": "kaibar",
+  "tags": [],
+  "title": "8oz MIIR // Java Kai x Dead Gringos // Black or White",
+  "url": "https://javakai.com/products/new-8oz-kai-bar-scene-miir",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "White",
+    "variant_id": "41321268117661"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Black",
+    "variant_id": "41321268150429"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "b472e0298dd9f679",
+  "first_seen": "2026-10-26",
+  "handle": "21oz-hydro-always-kauai-black",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-07-01at12.08.10PM.png?v=1751407748",
+  "platform": "shopify",
+  "product_id": "6961041342621",
+  "product_type": "GEAR",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "eastside kauai",
+   "java kai kauai",
+   "kauai"
+  ],
+  "title": "21oz Hydro // Always Kauai // Black",
+  "url": "https://javakai.com/products/21oz-hydro-always-kauai-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Default Title",
+    "variant_id": "40849779785885"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "c45f8fd351a650c2",
+  "first_seen": "2026-10-26",
+  "handle": "java-kai-or-die-crop-top-black",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-07-17at11.39.07AM.png?v=1752788444",
+  "platform": "shopify",
+  "product_id": "7361907392669",
+  "product_type": "",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "new"
+  ],
+  "title": "Java Kai or Die! Crop Top//Black",
+  "url": "https://javakai.com/products/java-kai-or-die-crop-top-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 38.0,
+    "title": "Small",
+    "variant_id": "42242644246685"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "Medium",
+    "variant_id": "42242644279453"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 38.0,
+    "title": "Large",
+    "variant_id": "42242644312221"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 38.0,
+    "title": "XL",
+    "variant_id": "42242651816093"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "464bd8fda2f93cf3",
+  "first_seen": "2026-10-26",
+  "handle": "skull-island-air-freshener",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-07-01at11.39.59AM.png?v=1751406012",
+  "platform": "shopify",
+  "product_id": "8057108431141",
+  "product_type": "GEAR",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "island",
+   "kauai",
+   "new",
+   "skull"
+  ],
+  "title": "Java Kai Air Freshener",
+  "url": "https://javakai.com/products/skull-island-air-freshener",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 9.95,
+    "title": "Mint Cucumber",
+    "variant_id": "50683860779301"
+   },
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 9.95,
+    "title": "Pineapple Dream",
+    "variant_id": "50683860812069"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "7af89fb447102ef9",
+  "first_seen": "2026-10-26",
+  "handle": "mystery-roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Beige_Minimalist_Mood_Photo_Collage.png?v=1746438248",
+  "platform": "shopify",
+  "product_id": "8627583582501",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "new"
+  ],
+  "title": "Mystery Roasters Choice",
+  "url": "https://javakai.com/products/mystery-roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.8,
+    "title": "single bag",
+    "variant_id": "46690826289445"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "d7ef713dbabb7bea",
+  "first_seen": "2026-10-26",
+  "handle": "the-darkness-our-darkest-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-05-04at9.21.48PM.png?v=1746430135",
+  "platform": "shopify",
+  "product_id": "8935765639461",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "beans",
+   "coffee",
+   "java kai"
+  ],
+  "title": "The Darkness — Our Darkest Roast",
+  "url": "https://javakai.com/products/the-darkness-our-darkest-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.8,
+    "title": "12oz",
+    "variant_id": "47547942437157"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz",
+    "variant_id": "47547942469925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "47547942502693"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "f5c665d3b1c0adda",
+  "first_seen": "2026-10-26",
+  "handle": "el-gato-50-50",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-05-04at7.13.18PM.png?v=1746425354",
+  "platform": "shopify",
+  "product_id": "9752745869605",
+  "product_type": "Beans",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "beans",
+   "coffee",
+   "java kai"
+  ],
+  "title": "EL GATO 50/50 - light and bright",
+  "url": "https://javakai.com/products/el-gato-50-50",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "50145479655717"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz",
+    "variant_id": "50145479688485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb",
+    "variant_id": "50145479721253"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "c1f629386553e678",
+  "first_seen": "2026-10-26",
+  "handle": "summer-java-kai-mugs",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/Screenshot2025-06-30at11.29.03AM.png?v=1751318950",
+  "platform": "shopify",
+  "product_id": "9898967466277",
+  "product_type": "Mugs",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "aloha",
+   "classic sugar skull",
+   "dancing skull",
+   "diner mug",
+   "drink coffee or die",
+   "east side",
+   "eastside",
+   "island",
+   "java kai",
+   "java kai coffee",
+   "kauai",
+   "love aloha kauai",
+   "mug",
+   "mugs",
+   "pineapple",
+   "skull",
+   "skull island",
+   "sugarskull",
+   "summer",
+   "surf",
+   "surf skull",
+   "white"
+  ],
+  "title": "Rainbow Java Kai Mugs",
+  "url": "https://javakai.com/products/summer-java-kai-mugs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 22.0,
+    "title": "Pink",
+    "variant_id": "50679340269861"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Green",
+    "variant_id": "50679340302629"
+   },
+   {
+    "available": false,
+    "grams": 431,
+    "price_usd": 22.0,
+    "title": "Turquoise",
+    "variant_id": "50679340335397"
+   }
+  ],
+  "vendor": "Java Kai"
+ },
+ {
+  "body_hash": "552f5e0335d4ba1e",
+  "first_seen": "2026-10-26",
+  "handle": "skull-muscle-crop",
+  "image": "https://cdn.shopify.com/s/files/1/0150/0792/files/FullSizeRender_7800aeff-4dd9-4328-adfb-6c6389f0863d.jpg?v=1755765062",
+  "platform": "shopify",
+  "product_id": "9912890851621",
+  "product_type": "",
+  "roaster_slug": "kaibar",
+  "tags": [
+   "new"
+  ],
+  "title": "Java Kai Surf Skull //Crop Tank",
+  "url": "https://javakai.com/products/skull-muscle-crop",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Small / Army Green",
+    "variant_id": "50755845849381"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Medium / Army Green",
+    "variant_id": "50755845882149"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Large / Army Green",
+    "variant_id": "50755845914917"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Small / Cream",
+    "variant_id": "50755934748965"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Medium / Cream",
+    "variant_id": "50755934781733"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "Large / Cream",
+    "variant_id": "50755934814501"
+   }
+  ],
+  "vendor": "Java Kai"
+ }
+]

@@ -1,0 +1,295 @@
+[
+ {
+  "body_hash": "1b6ce99248629d94",
+  "first_seen": "2026-10-26",
+  "handle": "candy-blast",
+  "image": "https://www.aerisroasting.com/assets/products/candy-blast-bag.jpg",
+  "platform": "generic",
+  "product_id": "candy-blast",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Candy Blast",
+  "url": "https://www.aerisroasting.com/coffee/candy-blast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.0,
+    "title": "Candy Blast · 8 oz",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 50.0,
+    "title": "Candy Blast · 1 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e002f7296cf48526",
+  "first_seen": "2026-10-26",
+  "handle": "el-vergel",
+  "image": "https://www.aerisroasting.com/assets/products/el-vergel.jpg",
+  "platform": "generic",
+  "product_id": "el-vergel",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Honey Mountain",
+  "url": "https://www.aerisroasting.com/coffee/el-vergel/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Honey Mountain · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Honey Mountain · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3aab3767893b37b2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-decaf",
+  "image": "https://www.aerisroasting.com/assets/products/ethiopia-decaf.jpg",
+  "platform": "generic",
+  "product_id": "ethiopia-decaf",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Ethiopia Decaf",
+  "url": "https://www.aerisroasting.com/coffee/ethiopia-decaf/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Ethiopia Decaf · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Ethiopia Decaf · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0dfdbf03fac3510f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://www.aerisroasting.com/assets/products/ethiopia-natural.jpg",
+  "platform": "generic",
+  "product_id": "ethiopia-natural",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Matte Matosa",
+  "url": "https://www.aerisroasting.com/coffee/ethiopia-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Matte Matosa · 12 oz",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ddd1b13628001f8c",
+  "first_seen": "2026-10-26",
+  "handle": "finca-cloza",
+  "image": "https://www.aerisroasting.com/assets/products/cloza.jpg",
+  "platform": "generic",
+  "product_id": "finca-cloza",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Finca Cloza",
+  "url": "https://www.aerisroasting.com/coffee/finca-cloza/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Finca Cloza · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Finca Cloza · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c41a0ab065a2b778",
+  "first_seen": "2026-10-26",
+  "handle": "full-bloom",
+  "image": "https://www.aerisroasting.com/assets/products/full-bloom.jpg",
+  "platform": "generic",
+  "product_id": "full-bloom",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Full Bloom",
+  "url": "https://www.aerisroasting.com/coffee/full-bloom/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Full Bloom · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Full Bloom · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "987ad927af9afa24",
+  "first_seen": "2026-10-26",
+  "handle": "kiddos",
+  "image": "https://www.aerisroasting.com/assets/products/kiddos.jpg",
+  "platform": "generic",
+  "product_id": "kiddos",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "The Kiddos'",
+  "url": "https://www.aerisroasting.com/coffee/kiddos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "The Kiddos' · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "The Kiddos' · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b90eb81f050f7860",
+  "first_seen": "2026-10-26",
+  "handle": "peru-chorro",
+  "image": "https://www.aerisroasting.com/assets/products/peru.jpg",
+  "platform": "generic",
+  "product_id": "peru-chorro",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Estrellas de Cajamarca",
+  "url": "https://www.aerisroasting.com/coffee/peru-chorro/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Estrellas de Cajamarca · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Estrellas de Cajamarca · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d73066bfe99b21f9",
+  "first_seen": "2026-10-26",
+  "handle": "regalito",
+  "image": "https://www.aerisroasting.com/assets/products/regalito.jpg",
+  "platform": "generic",
+  "product_id": "regalito",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "El Regalito",
+  "url": "https://www.aerisroasting.com/coffee/regalito/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "El Regalito · 1 lb",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "El Regalito · 5 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "290c073a431f389e",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry",
+  "image": "https://www.aerisroasting.com/assets/products/strawberry.jpg",
+  "platform": "generic",
+  "product_id": "strawberry",
+  "product_type": "Specialty Coffee",
+  "roaster_slug": "aerisroasting",
+  "tags": [],
+  "title": "Juicy Strawberry",
+  "url": "https://www.aerisroasting.com/coffee/strawberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "Juicy Strawberry · 8 oz",
+    "variant_id": "0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "Juicy Strawberry · 1 lb",
+    "variant_id": "1"
+   }
+  ],
+  "vendor": ""
+ }
+]

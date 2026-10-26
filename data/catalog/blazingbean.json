@@ -1,0 +1,871 @@
+[
+ {
+  "body_hash": "cbc2a348402f1aa2",
+  "first_seen": "2026-10-26",
+  "handle": "two-dog-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_c72168c3-f00a-43c7-a0b3-189262bb9a3e.png?v=1732901948",
+  "platform": "shopify",
+  "product_id": "2503755530300",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "blend",
+   "brazil",
+   "breakfast",
+   "clearwater",
+   "coffee",
+   "cold brew",
+   "colombian",
+   "dark",
+   "florida",
+   "fresh",
+   "local",
+   "medium",
+   "roasted",
+   "roaster",
+   "small business",
+   "smooth",
+   "whole bean"
+  ],
+  "title": "Two Dog Blend",
+  "url": "https://blazingbean.com/products/two-dog-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz. - $19.50",
+    "variant_id": "22554339967036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "22554339999804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz - $15.85",
+    "variant_id": "42554840973470"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "9d58b1478e88f37a",
+  "first_seen": "2026-10-26",
+  "handle": "coda-di-topo-italian-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_a3137377-71d5-4986-a9a5-d369cc8db390.png?v=1732902180",
+  "platform": "shopify",
+  "product_id": "2526715936828",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "berry",
+   "blend",
+   "body",
+   "chocolate",
+   "classic espresso",
+   "clearwater",
+   "coffee",
+   "creamy",
+   "dark",
+   "espresso",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "small business",
+   "traditional",
+   "whole bean"
+  ],
+  "title": "Coda di Topo Italian Espresso Blend",
+  "url": "https://blazingbean.com/products/coda-di-topo-italian-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "22554191921212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85",
+    "variant_id": "22554233602108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "22554280951868"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "3952b144917c7cb3",
+  "first_seen": "2026-10-26",
+  "handle": "luna-tic-espresso-blend-classic-original",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1.png?v=1732902606",
+  "platform": "shopify",
+  "product_id": "2526774001724",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "classic espresso",
+   "clearwater",
+   "coffee",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "roaster",
+   "small"
+  ],
+  "title": "LUNA-TIC ESPRESSO BLEND - Classic Original",
+  "url": "https://blazingbean.com/products/luna-tic-espresso-blend-classic-original",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "22554484113468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz. - $15.85",
+    "variant_id": "22554958626876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "22554958659644"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "74e8001cff8db655",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian-sierra-nevada-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_7a12ee71-c2e5-481c-9874-5dea3dcbabec.png?v=1732903311",
+  "platform": "shopify",
+  "product_id": "2526963892284",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "body",
+   "chocolate",
+   "clearwater",
+   "coffee",
+   "creamy",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "roaster"
+  ],
+  "title": "Organic Colombian Sierra Nevada Sol Naciente RFA (Rain Forest Alliance)",
+  "url": "https://blazingbean.com/products/organic-colombian-sierra-nevada-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Medium",
+    "variant_id": "22555947204668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Dark",
+    "variant_id": "22555947237436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85 / Medium",
+    "variant_id": "22555947335740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85 / Dark",
+    "variant_id": "22555947368508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Medium",
+    "variant_id": "22555947401276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Dark",
+    "variant_id": "22555947434044"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "0badfaad059c469c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian-sidamo-scfcu-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_ac31f5a7-43f8-4855-9e85-28ed9b8d84a5.png?v=1732902355",
+  "platform": "shopify",
+  "product_id": "2532623253564",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Ethiopian",
+   "Organic",
+   "Sidamo",
+   "berry",
+   "clearwater",
+   "coffee",
+   "dark",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "medium roast",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roasted",
+   "roaster",
+   "smooth",
+   "whole bean"
+  ],
+  "title": "Organic Ethiopian Sidamo SCFCU Fair Trade",
+  "url": "https://blazingbean.com/products/organic-ethiopian-sidamo-scfcu-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Light",
+    "variant_id": "22587698643004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Dark",
+    "variant_id": "22587698675772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz. - $15.85 / Light",
+    "variant_id": "22587698774076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz. - $15.86 / Dark",
+    "variant_id": "22587698806844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Light",
+    "variant_id": "22587698839612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Dark",
+    "variant_id": "22587698872380"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "51945f93480c3cd5",
+  "first_seen": "2026-10-26",
+  "handle": "organic-fto-sumatra-aceh-ketiara-adsenia-grade-1-triple-picked",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_3d9008fc-3f0f-4551-a144-574cdf849b1d.png?v=1732903133",
+  "platform": "shopify",
+  "product_id": "2532637507644",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "Sumatra",
+   "body",
+   "bold",
+   "clearwater",
+   "coffee",
+   "dark",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roaster",
+   "small business",
+   "traditional",
+   "whole bean"
+  ],
+  "title": "Organic Sumatra Mandheling GR1- Fair Trade",
+  "url": "https://blazingbean.com/products/organic-fto-sumatra-aceh-ketiara-adsenia-grade-1-triple-picked",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb - $19.50 / dark",
+    "variant_id": "22587722104892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85 / dark",
+    "variant_id": "22587722170428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / dark",
+    "variant_id": "22587722203196"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "4963ad60891b2425",
+  "first_seen": "2026-10-26",
+  "handle": "bubs-blend-reduced-caffeine-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_398952c3-42ac-4e5e-9ba4-d501314bc4b0.png?v=1732901686",
+  "platform": "shopify",
+  "product_id": "2535635681340",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "berry",
+   "body",
+   "chocolate",
+   "clearwater",
+   "coffee",
+   "dark",
+   "espresso",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "medium",
+   "medium roast",
+   "no oil",
+   "non oil",
+   "non oily",
+   "reduced caffeine",
+   "rich",
+   "roaster",
+   "small",
+   "traditional",
+   "water process",
+   "whole bean"
+  ],
+  "title": "Bub's Blend Reduced Caffeine Espresso Blend",
+  "url": "https://blazingbean.com/products/bubs-blend-reduced-caffeine-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "22605458735164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz. - $15.85",
+    "variant_id": "22606381940796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "22606381973564"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "b41ab411a3f833f7",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fernando-sarreta-sitio-sao-francisco",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_33000570-b762-4fb8-8732-b8c32be642e9.png?v=1732903493",
+  "platform": "shopify",
+  "product_id": "3903146852412",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "body",
+   "brazil",
+   "chocolate",
+   "clearwater",
+   "coffee",
+   "creamy",
+   "dark",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "medium roast",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roasted",
+   "roaster",
+   "small business",
+   "smooth",
+   "whole bean"
+  ],
+  "title": "Brazil Fazenda Sul de Minas Salto",
+  "url": "https://blazingbean.com/products/brazil-fernando-sarreta-sitio-sao-francisco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Medium",
+    "variant_id": "29830933184572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50 / Dark",
+    "variant_id": "29830933217340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85 / Medium",
+    "variant_id": "29830933315644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85 / Dark",
+    "variant_id": "29830933348412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Medium",
+    "variant_id": "29830933381180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / Dark",
+    "variant_id": "29830933413948"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "d6b4fda9e9e5877d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-shb-huehuetenango-asobagri-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_c8ea4291-4060-426c-b907-eefc2c475584.png?v=1732903686",
+  "platform": "shopify",
+  "product_id": "3903170543676",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Fair Trade",
+   "Guatemalan",
+   "Huehuetenango",
+   "body",
+   "chocolate",
+   "clearwater",
+   "coffee",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "medium roast",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roaster",
+   "small business",
+   "smooth",
+   "whole bean"
+  ],
+  "title": "Guatemala SHB Huehuetenango - FAIR TRADE",
+  "url": "https://blazingbean.com/products/organic-guatemala-shb-huehuetenango-asobagri-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb - $19.50",
+    "variant_id": "29831057014844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85",
+    "variant_id": "29831057080380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "29831057113148"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "9b271d8c5b3ae7f6",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_64071e26-5912-448d-847d-843ed0d39670.png?v=1732903024",
+  "platform": "shopify",
+  "product_id": "5721189548190",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "blend",
+   "brazil",
+   "breakfast",
+   "clearwater",
+   "coffee",
+   "cold brew",
+   "colombian",
+   "dark",
+   "florida",
+   "fresh",
+   "local",
+   "medium",
+   "roasted",
+   "roaster",
+   "small business",
+   "smooth",
+   "whole bean"
+  ],
+  "title": "Seasonal Selection Blend",
+  "url": "https://blazingbean.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "36219314045086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12oz. - $15.85",
+    "variant_id": "36219314110622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "36219314143390"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "a534e34c72c79add",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-shb-san-ignacio-rio-amoju",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_158c5dec-e6d3-464d-a9d6-16a425e176da.png?v=1732903995",
+  "platform": "shopify",
+  "product_id": "7119555952798",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "Sumatra",
+   "body",
+   "bold",
+   "clearwater",
+   "coffee",
+   "dark",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roaster",
+   "small business",
+   "traditional",
+   "whole bean"
+  ],
+  "title": "Organic Peru SHB La Florida Co-op",
+  "url": "https://blazingbean.com/products/organic-peru-shb-san-ignacio-rio-amoju",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz - $15.85 / medium",
+    "variant_id": "41374284841118"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb - $19.50 / medium",
+    "variant_id": "41374284873886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60 / medium",
+    "variant_id": "41374284906654"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "baf21e0572e437d8",
+  "first_seen": "2026-10-26",
+  "handle": "brown-velvet-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_1_d8b07f68-4f83-420d-a1d0-3540a942946d.png?v=1732902766",
+  "platform": "shopify",
+  "product_id": "7126447194270",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "berry",
+   "blend",
+   "body",
+   "chocolate",
+   "classic espresso",
+   "clearwater",
+   "coffee",
+   "creamy",
+   "dark",
+   "espresso",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "small business",
+   "traditional",
+   "whole bean"
+  ],
+  "title": "Brown Velvet Espresso Blend",
+  "url": "https://blazingbean.com/products/brown-velvet-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "41398705389726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85",
+    "variant_id": "41398705455262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "5 lb - $91.50",
+    "variant_id": "41398705488030"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "e714210d10a1fb61",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Screenshot_2024-11-03_at_10.40.40_AM.png?v=1730648621",
+  "platform": "shopify",
+  "product_id": "7488389316766",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Two Dog",
+   "choc",
+   "chocolate",
+   "coffee",
+   "delivery",
+   "free",
+   "fresh",
+   "fresh roasted",
+   "shipping",
+   "small business",
+   "subscription",
+   "whole bean"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://blazingbean.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz",
+    "variant_id": "42577526980766"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "cfb7639a1b8c521f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-colombian-sugarcane-royal-select-mwp-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Untitleddesign_a87ab53f-4b84-4287-a6b9-1092fbf10ca5.png?v=1732894483",
+  "platform": "shopify",
+  "product_id": "7598860632222",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "Organic",
+   "Peru",
+   "body",
+   "chocolate",
+   "clearwater",
+   "coffee",
+   "decaf",
+   "flavorful",
+   "florida",
+   "fresh",
+   "local",
+   "medium roast",
+   "mountain",
+   "no oil",
+   "non oil",
+   "non oily",
+   "rich",
+   "roasted",
+   "roaster",
+   "small",
+   "smooth",
+   "swiss",
+   "traditional",
+   "water process",
+   "whole bean"
+  ],
+  "title": "DECAF Organic Royal Select MWP - Fair Trade, variable origin",
+  "url": "https://blazingbean.com/products/decaf-organic-colombian-sugarcane-royal-select-mwp-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz - $19.50",
+    "variant_id": "42913949450398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.85,
+    "title": "12 oz. - $15.85",
+    "variant_id": "42913949483166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.6,
+    "title": "5 lb - $91.60",
+    "variant_id": "42913949515934"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ },
+ {
+  "body_hash": "e475caf369197439",
+  "first_seen": "2026-10-26",
+  "handle": "kyoto-blend-a-special-collaboration-with-bonsai-beverage-co-perfect-for-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0092/9254/6108/files/Screenshot2025-02-06at11.32.59AM.png?v=1738859592",
+  "platform": "shopify",
+  "product_id": "8202223681694",
+  "product_type": "whole bean coffee",
+  "roaster_slug": "blazingbean",
+  "tags": [
+   "clearwater",
+   "coffee",
+   "local"
+  ],
+  "title": "Kyoto Blend - A Special Collaboration with Bonsai Beverage Co.|Perfect for Cold Brew!",
+  "url": "https://blazingbean.com/products/kyoto-blend-a-special-collaboration-with-bonsai-beverage-co-perfect-for-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "45070801698974"
+   }
+  ],
+  "vendor": "Blazing Bean Roasters"
+ }
+]

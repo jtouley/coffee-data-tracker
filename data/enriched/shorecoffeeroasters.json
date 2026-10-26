@@ -1,0 +1,178 @@
+{
+ "8957312270613": {
+  "body_hash": "85a0f4251b506f72",
+  "elevation_masl_max": 2500,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8957312827669": {
+  "body_hash": "a67a85ad230987ec",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9105611456789": {
+  "body_hash": "8918a1ae7835a5c0",
+  "elevation_masl_max": 2500,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9208756535573": {
+  "body_hash": "7c55ad06813c3f76",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9287452950805": {
+  "body_hash": "20cc13160d1cfec8",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "9362428625173": {
+  "body_hash": "5c7b36abe3347b8d",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Wush Wush"
+  ]
+ },
+ "9436187099413": {
+  "body_hash": "0f53bd3b18a6f37e",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9436787081493": {
+  "body_hash": "afb67e78b68d0c09",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9622473670933": {
+  "body_hash": "50c05cf10ce04be1",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "9622476521749": {
+  "body_hash": "1eedf747b356b9ca",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "9622477701397": {
+  "body_hash": "c3e9ff364ce8ee99",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ }
+}

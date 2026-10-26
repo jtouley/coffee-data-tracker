@@ -1,0 +1,338 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kick-start",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo5.jpg?v=1555473677",
+  "platform": "shopify",
+  "product_id": "1171662012463",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Kick Start!",
+  "url": "https://captainscoffee.com/products/kick-start",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "11322402471983"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "f9b88b591f520911",
+  "first_seen": "2026-10-26",
+  "handle": "big-wave-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/image.jpg?v=1520714224",
+  "platform": "shopify",
+  "product_id": "296672198703",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [
+   "Beans",
+   "Blend"
+  ],
+  "title": "Fishermen's Blend",
+  "url": "https://captainscoffee.com/products/big-wave-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1123758309423"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "85334f7eb47db0f5",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_9cac5f2f-39ec-45f0-9b56-cf71909f1685.jpg?v=1518049818",
+  "platform": "shopify",
+  "product_id": "296686321711",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [
+   "Beans",
+   "Indonesian"
+  ],
+  "title": "Sulawese Toraja",
+  "url": "https://captainscoffee.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1123946889263"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "363753e2d223624a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_dca38dda-1e94-4969-841d-123bf94388dd.jpg?v=1518049866",
+  "platform": "shopify",
+  "product_id": "296687206447",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [
+   "Beans",
+   "Indonesian"
+  ],
+  "title": "Sumatra",
+  "url": "https://captainscoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1123958849583"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_e4aa02d0-4c2c-4283-a380-d8feda9c768c.jpg?v=1517272064",
+  "platform": "shopify",
+  "product_id": "324868603951",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://captainscoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1516955205679"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tsunami-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_11ab5312-42ae-4b6f-b1e5-928e3f7c7b20.jpg?v=1517272161",
+  "platform": "shopify",
+  "product_id": "324874960943",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Tsunami Blend",
+  "url": "https://captainscoffee.com/products/tsunami-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1517032538159"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "burning-daylight",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_a7810622-1d24-401a-ba22-6f13b04e231f.jpg?v=1517272224",
+  "platform": "shopify",
+  "product_id": "324877320239",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Burning Daylight",
+  "url": "https://captainscoffee.com/products/burning-daylight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1517056262191"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ogranic-peru",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_71229d87-648a-42af-b39b-30473c101f27.jpg?v=1517272320",
+  "platform": "shopify",
+  "product_id": "324878925871",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Organic Peru",
+  "url": "https://captainscoffee.com/products/ogranic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "1517062357039"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_258911b1-bac5-4ce5-beda-f2962125a81b.jpg?v=1518049057",
+  "platform": "shopify",
+  "product_id": "508376023087",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Organic Nicaragua",
+  "url": "https://captainscoffee.com/products/organic-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "6827951357999"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "big-wave-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_500f6fcf-ece6-4dc8-8f8f-14bb1dd7b323.jpg?v=1518049118",
+  "platform": "shopify",
+  "product_id": "508377464879",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Big Wave Espresso",
+  "url": "https://captainscoffee.com/products/big-wave-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "6827952963631"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_c48f2ebb-f875-4a6c-9387-352cf74ba142.jpg?v=1518049355",
+  "platform": "shopify",
+  "product_id": "508381691951",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "El Salvador",
+  "url": "https://captainscoffee.com/products/el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "6827960860719"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "d5651e908c3c2664",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_36231846-e0f3-4060-a88a-fcd903d1db00.jpg?v=1518049400",
+  "platform": "shopify",
+  "product_id": "508383166511",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://captainscoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "6827964661807"
+   }
+  ],
+  "vendor": "Captain's Coffee"
+ },
+ {
+  "body_hash": "8324b25678698cf7",
+  "first_seen": "2026-10-26",
+  "handle": "paupua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/logo3_560ac7ed-8e90-4299-95ad-3837d6255ff6.jpg?v=1615929681",
+  "platform": "shopify",
+  "product_id": "6545421762607",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "captainscoffee",
+  "tags": [
+   "captains coffee",
+   "coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://captainscoffee.com/products/paupua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "39277907509295"
+   }
+  ],
+  "vendor": "Captain's Coffee Roasting Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexican-esmeralda",
+  "image": "https://cdn.shopify.com/s/files/1/2824/5700/products/image.png?v=1523576203",
+  "platform": "shopify",
+  "product_id": "655195013167",
+  "product_type": "",
+  "roaster_slug": "captainscoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Mexican Esmeralda",
+  "url": "https://captainscoffee.com/products/decaf-mexican-esmeralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "Default Title",
+    "variant_id": "7554143584303"
+   }
+  ],
+  "vendor": "Captains Coffee Roasting Company"
+ }
+]

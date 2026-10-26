@@ -1,0 +1,289 @@
+[
+ {
+  "body_hash": "3e49d3ce8cb42033",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-ethiopian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6558.heic?v=1772478885",
+  "platform": "shopify",
+  "product_id": "8824246567048",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "Swiss Water Ethiopian Decaf",
+  "url": "https://camproast.com/products/swiss-water-ethiopian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "whole bean",
+    "variant_id": "45011096207496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "drip brew",
+    "variant_id": "45011096240264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "french press",
+    "variant_id": "45011096273032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "fine / espresso",
+    "variant_id": "45011096305800"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "5772102c36c7021e",
+  "first_seen": "2026-10-26",
+  "handle": "dark-sky-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6588.heic?v=1772478884",
+  "platform": "shopify",
+  "product_id": "8824247156872",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "Dark Sky Blend",
+  "url": "https://camproast.com/products/dark-sky-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "whole bean",
+    "variant_id": "45011091554440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "drip brew",
+    "variant_id": "45011091587208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "french press",
+    "variant_id": "45011091619976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "fine / espresso",
+    "variant_id": "45011091652744"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "7699fc927672b3e4",
+  "first_seen": "2026-10-26",
+  "handle": "the-blowing-rock-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6564.heic?v=1772478885",
+  "platform": "shopify",
+  "product_id": "8824247222408",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "The Blowing Rock Blend",
+  "url": "https://camproast.com/products/the-blowing-rock-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "whole bean",
+    "variant_id": "45011092439176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "drip brew",
+    "variant_id": "45011092471944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "french press",
+    "variant_id": "45011092504712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "fine / espresso",
+    "variant_id": "45011092537480"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "32250a2feca93b79",
+  "first_seen": "2026-10-26",
+  "handle": "black-butter-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6584.heic?v=1772478884",
+  "platform": "shopify",
+  "product_id": "8824247287944",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "BLACK BUTTER BLEND",
+  "url": "https://camproast.com/products/black-butter-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "whole bean",
+    "variant_id": "45011090735240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "drip brew",
+    "variant_id": "45011090768008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "french press",
+    "variant_id": "45011090800776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "fine / espresso",
+    "variant_id": "45011090833544"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "8eaa0db8caeabf45",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6575.heic?v=1772478885",
+  "platform": "shopify",
+  "product_id": "8824247320712",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "Mocha Java Blend",
+  "url": "https://camproast.com/products/mocha-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "whole bean",
+    "variant_id": "45032251949192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium",
+    "variant_id": "45032251981960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse",
+    "variant_id": "45032252014728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine",
+    "variant_id": "45032252047496"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "e87edf5be14b238c",
+  "first_seen": "2026-10-26",
+  "handle": "halfsies-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/IMG-6557.heic?v=1772478885",
+  "platform": "shopify",
+  "product_id": "8824247779464",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "Halfsies (half caff)",
+  "url": "https://camproast.com/products/halfsies-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "whole bean",
+    "variant_id": "45011088572552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "drip brew",
+    "variant_id": "45011088605320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "french press",
+    "variant_id": "45011088638088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "fine / espresso",
+    "variant_id": "45011088670856"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ },
+ {
+  "body_hash": "46fdbff7a2d9e500",
+  "first_seen": "2026-10-26",
+  "handle": "oktoberfest-2025-early-release-seasonal-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/9586/6760/files/27ED68E9-5F80-444D-9816-13A63EAADBAF.png?v=1788180844",
+  "platform": "shopify",
+  "product_id": "8824248303752",
+  "product_type": "",
+  "roaster_slug": "camproast",
+  "tags": [],
+  "title": "Oktoberfest 2026  - seasonal light roast",
+  "url": "https://camproast.com/products/oktoberfest-2025-early-release-seasonal-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44760896012424"
+   }
+  ],
+  "vendor": "Camp Coffee Roasters of Blowing Rock, NC"
+ }
+]

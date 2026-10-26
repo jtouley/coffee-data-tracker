@@ -1,0 +1,6314 @@
+[
+ {
+  "body_hash": "ea782235e67110a7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kieni",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/kieni_bag.jpg?v=1542157083",
+  "platform": "shopify",
+  "product_id": "10075641350",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kieni AA",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kieni",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5Lb Bag",
+    "variant_id": "12915660783650"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "42715440213"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "75d52034ed0becb3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fanny-villota",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/FANNY.png?v=1531369858",
+  "platform": "shopify",
+  "product_id": "10075671686",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Fanny Villota",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-fanny-villota",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625603133474"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "814639753b6b05b0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-sinai",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Colombia-El_sinai-_case_coffee.png?v=1531369857",
+  "platform": "shopify",
+  "product_id": "10463034438",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia El Sinai",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-el-sinai",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625486479394"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "45ef265ebaabb5fe",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yukro",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/YUKRO-ETHIOPIA-_CASE-COFFEE.png?v=1531369877",
+  "platform": "shopify",
+  "product_id": "10527789973",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Yukro",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-yukro",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "12625750294562"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7eadd386ee525b4d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-concepcion-buena-vista",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Guetamala_Buena_Vista.jpg?v=1568235182",
+  "platform": "shopify",
+  "product_id": "10550543317",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Concepcion Buena Vista",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-concepcion-buena-vista",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12625760059426"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "29612264259618"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "64352246131f413c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-reko",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/reko_bag_6c4dee6c-1495-46da-83fa-1446fe10cc20.png?v=1554140620",
+  "platform": "shopify",
+  "product_id": "10603267989",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Reko",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-reko",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12625739186210"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "15849884057634"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a5862d80235d07ce",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mathareini",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/MATHAREINI-KENYA-COFFEE.png?v=1531369909",
+  "platform": "shopify",
+  "product_id": "10668544277",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Mathareini",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-mathareini",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625844076578"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "575a36189438d79a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-chelelektu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Ethiopia-Chelelektu-Coffee.png?v=1531369873",
+  "platform": "shopify",
+  "product_id": "10847959509",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Chelelektu",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-chelelektu",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "12625697472546"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "be6d9918e15e7148",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retana-yellow-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Guatemala-Retana-Yellow_bourbon-coffee.png?v=1531369883",
+  "platform": "shopify",
+  "product_id": "10870690197",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Retana Yellow Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-retana-yellow-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625781555234"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "3ba465ebd833cddc",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gondo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Kenya-Gondo-Coffee.png?v=1531369899",
+  "platform": "shopify",
+  "product_id": "10870800405",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gondo",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gondo",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625833984034"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b2eea320c1ca9e30",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-gutiti",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ETHIOPIA-BANKGO_GUTITI-COFFEE.png?v=1531369872",
+  "platform": "shopify",
+  "product_id": "11483159061",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Banko Gutiti",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-banko-gutiti",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625692819490"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "77c11d91cff1507b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiamuriuki",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KIAMURIUKI-kenya-coffee.png?v=1531369902",
+  "platform": "shopify",
+  "product_id": "11483211029",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kiamuriuki",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kiamuriuki",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625838964770"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "14db6d9f5299a502",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-pedro-necta",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/SPN.jpg?v=1542156900",
+  "platform": "shopify",
+  "product_id": "1361390862370",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala San Pedro Necta",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-san-pedro-necta",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12625791189026"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lb Bag",
+    "variant_id": "12899617570850"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a2f2a17618cd4c6c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-biftu-gudina",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/BIFTU_GUDINA.jpg?v=1531369872",
+  "platform": "shopify",
+  "product_id": "1377750089762",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Biftu Gudina",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-biftu-gudina",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "12877382877218"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e1321b25a3cbc4c7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-folie",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GuatemalaLaFolie.jpg?v=1595353702",
+  "platform": "shopify",
+  "product_id": "1377750646818",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Folie",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-folie",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "15941288296482"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "28730579386402"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a9d76c7053da75df",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gathaithi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Kenyagathathi.jpg?v=1590086200",
+  "platform": "shopify",
+  "product_id": "1433873940514",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gathaithi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gathaithi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12440097554466"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Bag",
+    "variant_id": "12440097587234"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "0f140a6260316150",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-aragon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GUATEMALAARAGON2.jpg?v=1600978632",
+  "platform": "shopify",
+  "product_id": "1500123922466",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Aragon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-aragon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32888737235005"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32888737267773"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "10585de7defba5a0",
+  "first_seen": "2026-10-26",
+  "handle": "honduaras",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GERARDO_TREJO.png?v=1565195529",
+  "platform": "shopify",
+  "product_id": "1530181189666",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Gerardo Trejo",
+  "url": "https://www.casecoffeeroasters.com/products/honduaras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12695385309218"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "12695498752034"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8d911aa31d357545",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gedeb",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/gedeb.jpg?v=1542156711",
+  "platform": "shopify",
+  "product_id": "1568411451426",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Gedeb",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-gedeb",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "12877355581474"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5Lb Bag",
+    "variant_id": "12877355614242"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b5e5dcf67e9f2728",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-divisio",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/EL_DIVISIO_BAG.jpg?v=1542664267",
+  "platform": "shopify",
+  "product_id": "1612865077282",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia El Diviso",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-el-divisio",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "15408139206690"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "15408139239458"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "4cee6f7704d8bf77",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kainamui",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/kenya_kainamui_good_food_awards.jpg?v=1573590218",
+  "platform": "shopify",
+  "product_id": "1669719851042",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Kenya Kainamui",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kainamui",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "15901428645922"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "15901428678690"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "931ba7dfc93403cc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-borboya",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/BORBOYA.jpg?v=1547571902",
+  "platform": "shopify",
+  "product_id": "1679355772962",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Borboya",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-borboya",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "16319997607970"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cee0eba72fb2bdef",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-las-mercedes",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/las_mercedes.jpg?v=1555281992",
+  "platform": "shopify",
+  "product_id": "1699358015522",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Las Mercedes",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-las-mercedes",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "15992864768034"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lb Bag",
+    "variant_id": "15992864800802"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cb31e08df7d38c1d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-florida",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LA_FLORIDA.jpg?v=1549998737",
+  "platform": "shopify",
+  "product_id": "1707497586722",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Florida",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-florida",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "16020451885090"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "16020482359330"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "fc6f4c5422d18302",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-chorongi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/CHORONGI.jpg?v=1550696888",
+  "platform": "shopify",
+  "product_id": "1717205237794",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Chorongi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-chorongi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "16054523854882"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "16054523887650"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "922981c7c98e3900",
+  "first_seen": "2026-10-26",
+  "handle": "jose-uribe-lasso",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LUIS_T.png?v=1553287374",
+  "platform": "shopify",
+  "product_id": "1780693041186",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombia Luis Titimbo",
+  "url": "https://www.casecoffeeroasters.com/products/jose-uribe-lasso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "16311178330146"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "16320264208418"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e9f329b103a0f29c",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-ibisi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/RWANDA.jpg?v=1554149798",
+  "platform": "shopify",
+  "product_id": "1803594629154",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Rwanda Ibisi Mountain",
+  "url": "https://www.casecoffeeroasters.com/products/rwanda-ibisi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "16413400104994"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Bag",
+    "variant_id": "16413400137762"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c0d72f8ad3758461",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kianderi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KENYA-KIANDERI-CASE_COFFEE.png?v=1531369904",
+  "platform": "shopify",
+  "product_id": "187038531618",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kianderi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kianderi",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625840865314"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b8cb8c5b6451e41b",
+  "first_seen": "2026-10-26",
+  "handle": "hi-five-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CaseWebImageHi-FiveNew-02.jpg?v=1750202398",
+  "platform": "shopify",
+  "product_id": "191044288546",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Hi-Five Blend",
+  "url": "https://www.casecoffeeroasters.com/products/hi-five-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "2566249742370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lbs Bag",
+    "variant_id": "2566249775138"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "63fdd7b5feba5172",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gora-kone",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GORA_KONE.jpg?v=1563417985",
+  "platform": "shopify",
+  "product_id": "3663169552418",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Gora Kone",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-gora-kone",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "28517057101858"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "28517057134626"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "03ad60b86159094d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixban",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/IXBAN_BAG.jpg?v=1563418106",
+  "platform": "shopify",
+  "product_id": "3734657269794",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Ixban",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-ixban",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "28730185449506"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "28730584334370"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8bfcde3e94f1203b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gaturiri-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GATURIRI_BAG.jpg?v=1563418063",
+  "platform": "shopify",
+  "product_id": "3748184883234",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gaturiri AA",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gaturiri-aa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "28796518137890"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "28796518170658"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "42b50fb447daa1d8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-debo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ETHIOPIA_DEBO_BAG.png?v=1563411107",
+  "platform": "shopify",
+  "product_id": "3752872575010",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Debo",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-debo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "28822783655970"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "28822822846498"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7e27d1005bd2a0b3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-porfiria-martinez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/PORIFIRA.jpg?v=1563411163",
+  "platform": "shopify",
+  "product_id": "3819194089506",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala  Porfiria Martinez",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-porfiria-martinez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "29104902340642"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lb Bag",
+    "variant_id": "29104902373410"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "fdaa07def337412c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-dika-gabe",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/DIKA_GABE.png?v=1531369875",
+  "platform": "shopify",
+  "product_id": "385466564642",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Dika Gabe",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-dika-gabe",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625712611362"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "eef4a993e1472622",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-dimtu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Ethiopia_dimtu_good_food_awards.jpg?v=1573590187",
+  "platform": "shopify",
+  "product_id": "3883463835682",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Dimtu",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-dimtu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "29424399482914"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "29424399515682"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "29874301e20c88fc",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/kenyaGachatha.png?v=1584387681",
+  "platform": "shopify",
+  "product_id": "402615500834",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31602668896317"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31602668929085"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f4e2549aad4b7709",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-ardi-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ardi_bag.jpg?v=1578080049",
+  "platform": "shopify",
+  "product_id": "4100106453026",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Ardi Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-ardi-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "30126786215970"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "30126786248738"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "db721f43bb7eb78e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-joel-guzman",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JOEL_GUZMAN_HONDURAS.jpg?v=1574195151",
+  "platform": "shopify",
+  "product_id": "4344257675325",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Joel Guzman",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-joel-guzman",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31288432361533"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31288432394301"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "da1c07ce6d792bb8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-tsegaye-maka",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/TESGAYE_MAKA_COFFEE.jpg?v=1576014289",
+  "platform": "shopify",
+  "product_id": "4358824198205",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Tsegaye Maka",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-tsegaye-maka",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31399968079933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31399968112701"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d2244f6acc337ac5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jose-rivera",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JOSE_RIVERA_BAG.png?v=1577814804",
+  "platform": "shopify",
+  "product_id": "4371477266493",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Jose Rivera",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-jose-rivera",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "31480368365629"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lb Bag",
+    "variant_id": "31480368398397"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "3f6e2294063b4223",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Suke.jpg?v=1613080109",
+  "platform": "shopify",
+  "product_id": "4374669983805",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31490770468925"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31490770501693"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "178fafda776242ae",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-anibal-chavez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ANIBAL_CHAVEZ.png?v=1579111925",
+  "platform": "shopify",
+  "product_id": "4376615682109",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Anibal Chavez",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-anibal-chavez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31496859713597"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31496859746365"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b56e03bbaedc4d60",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-rene-mamani",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/RENE1.jpg?v=1613080152",
+  "platform": "shopify",
+  "product_id": "4385195589693",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia René Mamani",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-rene-mamani",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31519555420221"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31519555452989"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "18802ca02172e0e3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gatomboya",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KENYA_GATOMBOYA.jpg?v=1582661278",
+  "platform": "shopify",
+  "product_id": "4393940418621",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gatomboya",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gatomboya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31547334983741"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31547335016509"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "82623e356cce47e3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karatu-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Kenya_Karatu_peaberry.jpg?v=1582688496",
+  "platform": "shopify",
+  "product_id": "4402244583485",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karatu Peaberry",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karatu-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31568716922941"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31568716955709"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "3464dfa475ccc887",
+  "first_seen": "2026-10-26",
+  "handle": "peru-freddy-bermeo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/FREDDY_B.jpg?v=1531369919",
+  "platform": "shopify",
+  "product_id": "442377994274",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Peru Freddy Bermeo",
+  "url": "https://www.casecoffeeroasters.com/products/peru-freddy-bermeo",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625852137506"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7a084b4a1c44891e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-guayabo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ColombiaElGuaybo.jpg?v=1590080723",
+  "platform": "shopify",
+  "product_id": "4429624705085",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia El Guayabo",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-el-guayabo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31647423856701"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31647423889469"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8147ad39e334f370",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-merced",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/lamerced.jpg?v=1588357947",
+  "platform": "shopify",
+  "product_id": "4454693175357",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Merced",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-merced",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31746065825853"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31746065891389"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "db891f206ffac4c9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-los-suspiros",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GuatemalaLosSuspiros_38d66dca-efc3-4712-9b24-5fb1fb892eff.jpg?v=1591897722",
+  "platform": "shopify",
+  "product_id": "4476570533949",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Los Suspiros",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-los-suspiros",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31834817855549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31834817888317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "46d9f003026ed369",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/CASEKENYAGACHATHA.jpg?v=1595353854",
+  "platform": "shopify",
+  "product_id": "4487623016509",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha AA",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-aa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "31881226125373"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "31881226158141"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "18613ed261692208",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gathaithi-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/gathathi.png?v=1611205040",
+  "platform": "shopify",
+  "product_id": "4487625408573",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gathaithi AB",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gathaithi-ab",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31881232252989"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31881232285757"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cd5008bebedad2f2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-nano-challa",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/NANOCHALLA_ETHIOPIA.jpg?v=1591897483",
+  "platform": "shopify",
+  "product_id": "4493999276093",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Nano Challa",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-nano-challa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz bag",
+    "variant_id": "31909375770685"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31909375803453"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "be2dc027c1f14517",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo-beriti",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ETHIOPIAHALOBERITI2.jpg?v=1601073163",
+  "platform": "shopify",
+  "product_id": "4515030925373",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Halo Beriti",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-halo-beriti",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "31997240344637"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "31997240377405"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b4416da452d59995",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-highlands-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/EthiopiaGujiNatural.png?v=1595882279",
+  "platform": "shopify",
+  "product_id": "4517897011261",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji Highlands Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-guji-highlands-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32007646543933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32007646576701"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cb186b90cc774590",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-gerardo-trejo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GERARDOTREJO1.jpg?v=1604705906",
+  "platform": "shopify",
+  "product_id": "4810100277309",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Gerardo Trejo",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-gerardo-trejo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32890725302333"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32890725335101"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e43c2bf88c42856b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-wachuri",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/WACHURIcopy.jpg?v=1616972014",
+  "platform": "shopify",
+  "product_id": "4818209210429",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Wachuri",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-wachuri",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32910316011581"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32910316044349"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e5af2e6cf4a27915",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-jose-madrid",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JOSEMADRID.jpg?v=1604693951",
+  "platform": "shopify",
+  "product_id": "4828983132221",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Jose Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-jose-madrid",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32940788547645"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32940788580413"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "0c72fa9065b48945",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-luis-lopez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/COLOMBIALUISLOPEZ.jpg?v=1607115460",
+  "platform": "shopify",
+  "product_id": "4836779556925",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Luis Lopez",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-luis-lopez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "32962737733693"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "32962737766461"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "be104ef2e0334435",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-juan-contreras",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/juanc.png?v=1611249108",
+  "platform": "shopify",
+  "product_id": "4855019601981",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Juan Contreras",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-juan-contreras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "33002963959869"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "33002963992637"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1d9dbfe0917ff725",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-maria-elsi-chavez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/MARIAELSI_2082x_68701996-d05e-4d22-97dd-00f50f6ac2e8.png?v=1611205131",
+  "platform": "shopify",
+  "product_id": "4857759629373",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Maria Elsi Chavez",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-maria-elsi-chavez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "33007224979517"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "33007225012285"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1598b320f2da6bd1",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karatu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KARATU.png?v=1612727378",
+  "platform": "shopify",
+  "product_id": "4871864549437",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karatu",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karatu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "33031780106301"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "33031780139069"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c367f4b62591393a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-denilson-madrid",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/DENILSONMADRID.png?v=1612727473",
+  "platform": "shopify",
+  "product_id": "4871864877117",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Denilson Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-denilson-madrid",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "33031775977533"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "33031776010301"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5272c1dffdaac289",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gaikundu-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GAIKUNDU_PB.png?v=1531369897",
+  "platform": "shopify",
+  "product_id": "533452947490",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gaikundu Peaberry",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gaikundu-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625827037218"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "baf11e1a2059e26a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-joya",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LA_JOYA_c44a2d2b-dd10-41d6-b16c-040eddc3dc3b.jpg?v=1577814626",
+  "platform": "shopify",
+  "product_id": "564322205730",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Joya",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-joya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "12625645207586"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "16652522029090"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c0b1eef06246add1",
+  "first_seen": "2026-10-26",
+  "handle": "peru-sebastion-carvajal",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Asset_2_copy.jpg?v=1531369920",
+  "platform": "shopify",
+  "product_id": "571919990818",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Peru Sebastion Carvajal",
+  "url": "https://www.casecoffeeroasters.com/products/peru-sebastion-carvajal",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "12625853349922"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e4f9e6a429c02751",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ngurueri",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/NGURUERI.jpg?v=1531369912",
+  "platform": "shopify",
+  "product_id": "571931295778",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Ngurueri",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-ngurueri",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625847386146"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "868a281b6601afdc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hunapu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Guatemala_Hunapu_Case_Coffee_Roasters.png?v=1531369882",
+  "platform": "shopify",
+  "product_id": "592114352162",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Hunapu",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-hunapu",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "Default Title",
+    "variant_id": "12625768480802"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "18e93fcb8937e492",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guracho",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ETHIOPIA_GURACHO.jpg?v=1531369876",
+  "platform": "shopify",
+  "product_id": "603562672162",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guracho",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-guracho",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625727094818"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "2fd6cd09862d8ccd",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gicherori",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GICHERORI.jpg?v=1531369898",
+  "platform": "shopify",
+  "product_id": "629048148002",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gicherori",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gicherori",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "Default Title",
+    "variant_id": "12915664453666"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "94857f412fd469d8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-isaac-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ISAAC.jpg?v=1531369861",
+  "platform": "shopify",
+  "product_id": "629049753634",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Isaac Paz",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-isaac-paz",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "12625627152418"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "470ff23f87a74c45",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jesus-delgado",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JUSUSDELGADO.png?v=1614364854",
+  "platform": "shopify",
+  "product_id": "6537537683517",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Jesús Delgado",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-jesus-delgado",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39251401932861"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39251401965629"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a209d8a1fe18878a",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-pedro-flores",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/pedro1.jpg?v=1619192696",
+  "platform": "shopify",
+  "product_id": "6546577457213",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Pedro Flores",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-pedro-flores",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39267242704957"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39267242737725"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "06d54856afa70945",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gaikundo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Gaikundo.jpg?v=1623171722",
+  "platform": "shopify",
+  "product_id": "6555162607677",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gaikundo",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gaikundo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39283229425725"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39283229458493"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9b427a9d7d6cbac4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jorge-morales",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JORGEMORALES.png?v=1617836965",
+  "platform": "shopify",
+  "product_id": "6555162869821",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Jorge Morales",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-jorge-morales",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39283230015549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39283230048317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d4a705ea221312b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-nelson-ramirez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Nelson.jpg?v=1623171671",
+  "platform": "shopify",
+  "product_id": "6561022148669",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Nelson Ramirez",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-nelson-ramirez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "39294474682429"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5Lb Bag",
+    "variant_id": "39294474715197"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a98bbd9f19e8a13c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-ana-espana",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ANAESAPNA.jpg?v=1619121193",
+  "platform": "shopify",
+  "product_id": "6561022312509",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Ana España",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-ana-espana",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39294480187453"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5LB Bag",
+    "variant_id": "39294480220221"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7c95a84f82ea1d12",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bishan-dimio",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Bishan_ab42ce9b-4f98-4096-b21a-51ae5913b008.jpg?v=1623171689",
+  "platform": "shopify",
+  "product_id": "6569921183805",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Bishan Dimo",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-bishan-dimio",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "39311917383741"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39311917416509"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7346c7e1a3a4d552",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gora-kone-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Gora.jpg?v=1623171655",
+  "platform": "shopify",
+  "product_id": "6572280152125",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Gora Kone",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-gora-kone-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39317210726461"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39317210759229"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "66c6d65377dc026a",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GachathaCOFFEE.png?v=1623709647",
+  "platform": "shopify",
+  "product_id": "6583662313533",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39339713921085"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39339713953853"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6010252f6c78179e",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karatu-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KenyaKaratuCoffee.jpg?v=1623706609",
+  "platform": "shopify",
+  "product_id": "6583694786621",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karatu",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karatu-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39339793678397"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39339793711165"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c03e52d35153029a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retana-yellow-bourbon-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GuatemalaRetana.jpg?v=1624647900",
+  "platform": "shopify",
+  "product_id": "6587135885373",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Retana Yellow Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-retana-yellow-bourbon-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39347194429501"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39347194462269"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "24d53d3fa70ad00a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixban-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/IxbanNew.jpg?v=1624648202",
+  "platform": "shopify",
+  "product_id": "6587136802877",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Ixban",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-ixban-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39347194069053"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39347194101821"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "60fb6009086168de",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/SUKE11.png?v=1629849177",
+  "platform": "shopify",
+  "product_id": "6600139767869",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39372585271357"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39372585304125"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "4f65d89be2aee4b6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nima",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Nima.png?v=1628183072",
+  "platform": "shopify",
+  "product_id": "6603002576957",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Nima",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-nima",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39378882232381"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39378882265149"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ed6f9f552e44300c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-folie",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Folie.jpg?v=1634592309",
+  "platform": "shopify",
+  "product_id": "6608935583805",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Folie",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-folie",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39391370215485"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39391370248253"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "529497ad81cc3a5a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-wuri",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Wuri.jpg?v=1632510482",
+  "platform": "shopify",
+  "product_id": "6610720522301",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Wuri",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-wuri",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39394358165565"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39394358198333"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ef138158e5eb202e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gora-kone-natural-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GORAKONE.jpg?v=1631030297",
+  "platform": "shopify",
+  "product_id": "6613090009149",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Gora Kone Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-gora-kone-natural-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39399250100285"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39399250133053"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "34eec5140d6c2157",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-canoguitas",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/CAN3.jpg?v=1631572721",
+  "platform": "shopify",
+  "product_id": "6615065264189",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Canoguitas",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-canoguitas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39403554996285"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39403555029053"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a40d97e57a8bbc85",
+  "first_seen": "2026-10-26",
+  "handle": "denilson-madrid",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/DENILSONMADRID.jpg?v=1631817399",
+  "platform": "shopify",
+  "product_id": "6615910416445",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Denilson Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/denilson-madrid",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39405381287997"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39405381320765"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c3246cebd6540205",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gaturiri-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KENYAGATURIRI.jpg?v=1632506622",
+  "platform": "shopify",
+  "product_id": "6618282590269",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gaturiri Peaberry",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gaturiri-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39409788289085"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39409788321853"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7937b1b30193e5f6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-arturo-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ARTUROPAZ.png?v=1634588740",
+  "platform": "shopify",
+  "product_id": "6628012916797",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Arturo Paz 2",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-arturo-paz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39433535619133"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39433535651901"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1a612ace9c81612e",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gathaithi-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GATHAITHI.png?v=1634589084",
+  "platform": "shopify",
+  "product_id": "6628014882877",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gathaithi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gathaithi-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39433540993085"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39433541025853"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "69d73d7200fb930b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo-beriti-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Halo2_800x_jpg.webp?v=1647363315",
+  "platform": "shopify",
+  "product_id": "6639744352317",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Halo Beriti Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-halo-beriti-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39467411439677"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39467411472445"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "17119657143f90c5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo-beriti-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Halo1_800x_jpg.webp?v=1647363356",
+  "platform": "shopify",
+  "product_id": "6639751004221",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Halo Beriti",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-halo-beriti-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39470492123197"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39470492155965"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "be2c0bd802379dc8",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-los-quetzales-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LOSQU.jpg?v=1636418526",
+  "platform": "shopify",
+  "product_id": "6639751888957",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Los Quetzales Honey",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-los-quetzales-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39467465572413"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39467465605181"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "280b338fc91454a6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-jose-madrid-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JoseMadrid_800x_jpg.webp?v=1644338656",
+  "platform": "shopify",
+  "product_id": "6648999280701",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Jose Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-jose-madrid-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39500024086589"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39500024119357"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ab5a7fc33b0181fa",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-cumbre",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LACUMBRE.jpg?v=1638821945",
+  "platform": "shopify",
+  "product_id": "6659938680893",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "El Salvador La Cumbre SL-34",
+  "url": "https://www.casecoffeeroasters.com/products/el-salvador-la-cumbre",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "39528062943293"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39528062976061"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f5b545d623381a0d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-juan-contreras-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JuanCo.jpg?v=1641323430",
+  "platform": "shopify",
+  "product_id": "6679068115005",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Juan Contreras Honey",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-juan-contreras-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39588042145853"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39588042178621"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c4bbb72855acd548",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gatyomboya-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GAT.jpg?v=1643653294",
+  "platform": "shopify",
+  "product_id": "6703698903101",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gatomboya Peaberry",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gatyomboya-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39705397231677"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39705397264445"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9794d70ca7a217fb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aurora-lorena",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Aurora.jpg?v=1643756010",
+  "platform": "shopify",
+  "product_id": "6707066503229",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Aurora Lorena",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-aurora-lorena",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39705727336509"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39705727369277"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "0fd325fb48c6f8da",
+  "first_seen": "2026-10-26",
+  "handle": "peru-eli-chilcon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ELICHILCON.jpg?v=1644873521",
+  "platform": "shopify",
+  "product_id": "6718328242237",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Peru Eli Chilcon",
+  "url": "https://www.casecoffeeroasters.com/products/peru-eli-chilcon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39752783593533"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39752783626301"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "328a5a591aead1ff",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-denilson-madrid-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Denilsonmadridcoffee.jpg?v=1646159579",
+  "platform": "shopify",
+  "product_id": "6728973320253",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Denilson Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-denilson-madrid-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "39795824394301"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39795824427069"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "59ec6d4a7c5a469f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-hartume",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/EHartume_800x_jpg.webp?v=1652991463",
+  "platform": "shopify",
+  "product_id": "6738249187389",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Hartume",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-hartume",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "39818981244989"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "39818981277757"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "230aee5529cfcfa3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cesar-arroyo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/CESARARROYO.png?v=1648577497",
+  "platform": "shopify",
+  "product_id": "6749907419197",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Cesar Arroyo",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-cesar-arroyo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39854275002429"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39854275035197"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "64b74e9c59fd8d3a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-libo-parreno",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Libo2.png?v=1650235995",
+  "platform": "shopify",
+  "product_id": "6763073601597",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Libo Parreño",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-libo-parreno",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39893503541309"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39893503574077"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ad7da936d5f8c92f",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-julio-gonzales",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JULIOG.jpg?v=1652726990",
+  "platform": "shopify",
+  "product_id": "6778316324925",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Julio Gonzales",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-julio-gonzales",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39938805170237"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39938805203005"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6f477c410ddba0cb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-rosa-elena",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ROSAELENA.png?v=1653002807",
+  "platform": "shopify",
+  "product_id": "6779552202813",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Rosa Elena",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-rosa-elena",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39942860668989"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39942860701757"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "31d0484f6510a9f4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nima-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/GUATEMALANIMA.jpg?v=1652979716",
+  "platform": "shopify",
+  "product_id": "6780306915389",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Nima",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-nima-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39945176383549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb Bag",
+    "variant_id": "39945176416317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6944ae10bcc7805b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-maduro-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/MADURO.jpg?v=1653925637",
+  "platform": "shopify",
+  "product_id": "6788321443901",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Maduro Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-maduro-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39965914431549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39965914464317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e53c9302fe670e15",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-reko-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/REKO.png?v=1654714975",
+  "platform": "shopify",
+  "product_id": "6796049973309",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Reko",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-reko-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "39986133336125"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "39986133368893"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5272446538274fe8",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-pedro-flores-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/PEDROFLORES.png?v=1656358512",
+  "platform": "shopify",
+  "product_id": "6822596509757",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Pedro Flores",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-pedro-flores-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40036921638973"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40036921671741"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9093480cb46e926f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retana-yellow-bourbon-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Gutatemalaretana.jpg?v=1657580462",
+  "platform": "shopify",
+  "product_id": "6832670441533",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Retana Yellow Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-retana-yellow-bourbon-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40063756140605"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40063756173373"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "3a6e787adcf1104f",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karinga",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Karinga1.jpg?v=1658008230",
+  "platform": "shopify",
+  "product_id": "6836748255293",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karinga",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karinga",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40074609819709"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40074609852477"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9b1bc7845fca4bf1",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-cumbre-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/NewCoffeeCaseBagImage-012.png?v=1662053548",
+  "platform": "shopify",
+  "product_id": "6874671022141",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "El Salvador La Cumbre Honey Process",
+  "url": "https://www.casecoffeeroasters.com/products/el-salvador-la-cumbre-honey-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "40206483652669"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40206483685437"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "22dae7d04170afd6",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-julilo-paallio",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/BoliviaJulio.jpg?v=1662053806",
+  "platform": "shopify",
+  "product_id": "6874677477437",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Julio Palli",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-julilo-paallio",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40206500102205"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40206500134973"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "806063e0f999dcc2",
+  "first_seen": "2026-10-26",
+  "handle": "suke-quto-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/SukeQuotoNatural.png?v=1663796374",
+  "platform": "shopify",
+  "product_id": "6889513812029",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto Natural",
+  "url": "https://www.casecoffeeroasters.com/products/suke-quto-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "40253477781565"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40253477814333"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "2501578274119ce5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Sukew_800x_jpg.webp?v=1668550711",
+  "platform": "shopify",
+  "product_id": "6889514172477",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40253478240317"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40253478273085"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e412d6054189f60b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KenyaGachatha_c7ac28f7-8d15-454b-a065-1269e43d5d40.png?v=1663796497",
+  "platform": "shopify",
+  "product_id": "6889514631229",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40253479944253"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40253479977021"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e42d8f796fe8c107",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-mauricio-mamani",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/MAUR.jpg?v=1664910030",
+  "platform": "shopify",
+  "product_id": "6898758910013",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Mauricio Mamani",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-mauricio-mamani",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40281981681725"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40281981714493"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c142a8c668c076c6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixban-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ixanguatemala.png?v=1666044184",
+  "platform": "shopify",
+  "product_id": "6910314840125",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Ixban",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-ixban-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40315374436413"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40315374469181"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "fa13b2bedb633ea4",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-cumbre-pacamara-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ELSALVADORLACUMBRE.png?v=1668222922",
+  "platform": "shopify",
+  "product_id": "6939833958461",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "El Salvador La Cumbre Pacamara Natural",
+  "url": "https://www.casecoffeeroasters.com/products/el-salvador-la-cumbre-pacamara-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz Bag",
+    "variant_id": "40380689809469"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b30fe1a35ee41d2e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-denilson-madrid-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/HONDURASDENILSONMADRID.png?v=1668450526",
+  "platform": "shopify",
+  "product_id": "6941514858557",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Denilson Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-denilson-madrid-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40377371918397"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40377371951165"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b82ce0145d4efc93",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/HOLIDAYPRODUCT.jpg?v=1669217604",
+  "platform": "shopify",
+  "product_id": "6947093381181",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Holiday Blend - Collector's Jar",
+  "url": "https://www.casecoffeeroasters.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "40394898374717"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5a38548ebf9a2be3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-elizabeth-trujillo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Elizabeth.png?v=1669661857",
+  "platform": "shopify",
+  "product_id": "6951156219965",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Elizabeth Trujillo",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-elizabeth-trujillo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40403686621245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40403686654013"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "279a5a7be0aba827",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-los-palomas",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LAsPAlomas.png?v=1670259471",
+  "platform": "shopify",
+  "product_id": "6955443159101",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Las Palomas",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-los-palomas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40414189191229"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40414189223997"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "0952aae618044b40",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-buncho-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Buncho.png?v=1670351456",
+  "platform": "shopify",
+  "product_id": "6956008767549",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Buncho Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-buncho-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40415677775933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40415677808701"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "3563f44156b58724",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-aragon-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/Aragon.png?v=1672695525",
+  "platform": "shopify",
+  "product_id": "6969354813501",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Aragon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-aragon-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40446594875453"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40446594908221"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d0f35dce71288f96",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-githungururu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/111_png.webp?v=1678820905",
+  "platform": "shopify",
+  "product_id": "6969572327485",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kithungururu",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-githungururu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40447434424381"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40447434457149"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cdd63006c163e8f3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sandra-milena",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/SandramileneaColombia.png?v=1674509100",
+  "platform": "shopify",
+  "product_id": "6979203891261",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Sandra Milena",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-sandra-milena",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40472655298621"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40472655331389"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6d7bda61080fffb6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-joya-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/LAJOYA.png?v=1676322890",
+  "platform": "shopify",
+  "product_id": "6994097471549",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Joya Natural",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-joya-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "40511405031485"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40511405064253"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "93fbebe2853ecf8b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-jose-perez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/joseper.jpg?v=1676325811",
+  "platform": "shopify",
+  "product_id": "6994097733693",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Jose Perez",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-jose-perez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40511406440509"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40511406473277"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "37f55919b6afe63a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-juan-fransico",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/JUANF.png?v=1678483898",
+  "platform": "shopify",
+  "product_id": "7009112916029",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Juan Francisco",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-juan-fransico",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40543578390589"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40543578423357"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "495e7bf42abab337",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-worka-sakro",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/EthiopiaWorkaSakro.png?v=1678741076",
+  "platform": "shopify",
+  "product_id": "7009922383933",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Worka Sakaro",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-worka-sakro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40545899479101"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40545899511869"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "85c87efc72cfa864",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karatu-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KenyaKaratu.png?v=1681403896",
+  "platform": "shopify",
+  "product_id": "7020061327421",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karatu",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karatu-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "40578513731645"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40578513764413"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "988bf6ff913f6a52",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-oscar-leandro",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Oscarbag.png?v=1683149204",
+  "platform": "shopify",
+  "product_id": "7031332175933",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Oscar Leandro",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-oscar-leandro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40609832370237"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40609832403005"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "96df068461e95aed",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mulish",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/MULISHBAG.png?v=1686604031",
+  "platform": "shopify",
+  "product_id": "7040564265021",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Mulish",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-mulish",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40643238625341"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40643238658109"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "dd9ccdc51c9877c6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-jose-flores",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/JoseFlores_800x_png.webp?v=1692984513",
+  "platform": "shopify",
+  "product_id": "7042317811773",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Jose Flores",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-jose-flores",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40651486527549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40651486560317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1525d8cebd490d26",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kamwangi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KamwangiKenya.png?v=1688745574",
+  "platform": "shopify",
+  "product_id": "7049634611261",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kamwangi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kamwangi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40675136634941"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40675136667709"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "aaaea6a49d2f39da",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-aragon-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GuatemalaAragon.png?v=1688745911",
+  "platform": "shopify",
+  "product_id": "7049639460925",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Aragon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-aragon-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40675138830397"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40675138863165"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d756822de2a240e7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Sukequto_800x_png.webp?v=1700259234",
+  "platform": "shopify",
+  "product_id": "7066862485565",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40721408393277"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40721408458813"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "bf2625ebb6572522",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jesus-solarte",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/JesusSolarteBag.png?v=1692892993",
+  "platform": "shopify",
+  "product_id": "7068514156605",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Jesús Solarte",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-jesus-solarte",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40726569287741"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40726569320509"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "84fc22858319610e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-edin-lopez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/EdinLopez.png?v=1694460642",
+  "platform": "shopify",
+  "product_id": "7110251085885",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Edin Lopez",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-edin-lopez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "40747354062909"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "40747354095677"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "2b1152c96d3b1d84",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GachathaW_800x_bea84c50-8327-4952-955a-e3724e893dea.webp?v=1712760441",
+  "platform": "shopify",
+  "product_id": "7122540855357",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40786883280957"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40786883313725"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a4fb90bd4697d857",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-pedro-flores-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/PedroFloresBag.png?v=1696883879",
+  "platform": "shopify",
+  "product_id": "7122543837245",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Pedro Flores",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-pedro-flores-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40786903990333"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40786904023101"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d7c591d29fcc1e96",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/SukeNaturalBAg.png?v=1696883993",
+  "platform": "shopify",
+  "product_id": "7122543935549",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40786904285245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "40786904318013"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1775ff67fca7893c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-luz-divia-fierro-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LuzFierropink.png?v=1700606279",
+  "platform": "shopify",
+  "product_id": "7151239692349",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Luz Divia Fierro - Pink Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-luz-divia-fierro-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "40869013979197"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5LB Bag",
+    "variant_id": "40869014011965"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f9748ec76df282b6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retana-yellow-bourbon-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/retanabagyellow.png?v=1700606314",
+  "platform": "shopify",
+  "product_id": "7151240446013",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Retana - Yellow Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-retana-yellow-bourbon-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40869448646717"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Bag",
+    "variant_id": "40869448679485"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f11a21cbdda66eb1",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-denilson-madrid-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/DenilsonMadrid_c9177f8e-cc6e-4018-95ff-e292d7e42fc5.png?v=1700241372",
+  "platform": "shopify",
+  "product_id": "7151241330749",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Denilson Madrid",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-denilson-madrid-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40869445304381"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lb Bag",
+    "variant_id": "40869445337149"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e4c893634d5448be",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Holidaybag.png?v=1701124988",
+  "platform": "shopify",
+  "product_id": "7160570118205",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Holiday Blend",
+  "url": "https://www.casecoffeeroasters.com/products/holiday-blend-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40885892612157"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "40885892677693"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c71e8dfa6f6231dd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-buena-vista",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/BuenaVistaBag.png?v=1702939977",
+  "platform": "shopify",
+  "product_id": "7175474118717",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Buena Vista",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-buena-vista",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40923745517629"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "40923745550397"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "91f81d1968424dd4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-taratu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/BANKOBAG.png?v=1704228201",
+  "platform": "shopify",
+  "product_id": "7184423452733",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Banko Taratu",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-banko-taratu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "40945576738877"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "40945576771645"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ee741eb87e458492",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kanamui",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KenyaKainamui.png?v=1714152631",
+  "platform": "shopify",
+  "product_id": "7321271828541",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kainamui",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kanamui",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41275608006717"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41275608039485"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b018ede20158d98f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-nelin-guzman-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/NELINGUZMAN.png?v=1720548759",
+  "platform": "shopify",
+  "product_id": "7398806519869",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Nelin Guzman - Honey Process",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-nelin-guzman-honey-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41464489508925"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag",
+    "variant_id": "41464489541693"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9332ca5ef15b3fbe",
+  "first_seen": "2026-10-26",
+  "handle": "edin-lopez-sl-28",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/EdinLopezSL28.png?v=1720463257",
+  "platform": "shopify",
+  "product_id": "7426398552125",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Edin Lopez SL-28",
+  "url": "https://www.casecoffeeroasters.com/products/edin-lopez-sl-28",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41525237841981"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5LB Bag",
+    "variant_id": "41525237874749"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "1239684f5831cb4d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-jollymex",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Jolimex.png?v=1723840858",
+  "platform": "shopify",
+  "product_id": "7459250864189",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Jolimex",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-jollymex",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41636975050813"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41636975083581"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "4596c927b5b7fad4",
+  "first_seen": "2026-10-26",
+  "handle": "honuras-marzo-munoz",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/MarzoM.png?v=1726175934",
+  "platform": "shopify",
+  "product_id": "7484561784893",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Marzo Munoz",
+  "url": "https://www.casecoffeeroasters.com/products/honuras-marzo-munoz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41691321565245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41691321598013"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7572459161696824",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-joya-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LaJoyap.png?v=1726853828",
+  "platform": "shopify",
+  "product_id": "7488088473661",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Joya - Pink Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-joya-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "41697900265533"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "41697900298301"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "15cb268b3415e58b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-tartan",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Banko_b0b77850-d21b-4b80-b318-d1752dddb0a4.png?v=1729629751",
+  "platform": "shopify",
+  "product_id": "7510103654461",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Banko Taratu",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-banko-tartan",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "41756669050941"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41756669083709"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "7937b1b30193e5f6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-arturo-paz-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ARPAZ.png?v=1730746598",
+  "platform": "shopify",
+  "product_id": "7518251515965",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Arturo Paz 1",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-arturo-paz-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "41795170074685"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41795170107453"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "60eae3b91975e6ae",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-cumbre-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LACumbre.png?v=1731442935",
+  "platform": "shopify",
+  "product_id": "7522173190205",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "El Salvador La Cumbre Natural",
+  "url": "https://www.casecoffeeroasters.com/products/el-salvador-la-cumbre-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "41812446773309"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41812446806077"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d4baa4ee6f24a891",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-4",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KenyaGachatha.png?v=1731442903",
+  "platform": "shopify",
+  "product_id": "7522173780029",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41812451131453"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41812451164221"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8ec6c20ea878e9d6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-folie-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LaFolie.png?v=1731442876",
+  "platform": "shopify",
+  "product_id": "7522173976637",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Folie",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-folie-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41812455653437"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41812455686205"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "4ecb37255526dca6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-gerardo-trejo-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GerardoTrejoBag_f97a9d6b-2ce3-4fae-a858-1a93fac2a988.png?v=1733170892",
+  "platform": "shopify",
+  "product_id": "7530724950077",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Gerardo Trejo",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-gerardo-trejo-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41846196731965"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41846196764733"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a1f93cafcdeb05a1",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kianderi-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KIANDER.png?v=1736288140",
+  "platform": "shopify",
+  "product_id": "7551893045309",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kianderi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kianderi-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "41923901325373"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41923901358141"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "49411fae13a0e046",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-5",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/SukeBag.png?v=1737492935",
+  "platform": "shopify",
+  "product_id": "7558371082301",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "41959948550205"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41959948582973"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6a2196b831076923",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-arturo-paz-pacas",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ArtoPazBag_7bbdff1a-5235-43d8-b292-d60678b0d70a.png?v=1738098470",
+  "platform": "shopify",
+  "product_id": "7562174431293",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Arturo Paz",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-arturo-paz-pacas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "41977221709885"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "41977221742653"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "98c4837799a23ced",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-txol-witz",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/TxolWitzbag.png?v=1738100832",
+  "platform": "shopify",
+  "product_id": "7562208641085",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Txol Witz",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-txol-witz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "41977276006461"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "41977276039229"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9636d5c7bf8d1a12",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-rosado-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ElRPink.png?v=1739814304",
+  "platform": "shopify",
+  "product_id": "7575956095037",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia El Rosado - Pink Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-el-rosado-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42022837485629"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42022837518397"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ee2900c9bfe957a8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-retana-yellow-bourbon-4",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GuatemalaRetana.png?v=1743537821",
+  "platform": "shopify",
+  "product_id": "7605803253821",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Retana Yellow Bourbon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-retana-yellow-bourbon-4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "42241503002685"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "42241503035453"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "07d9198823ac61c3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-roberto-lopez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ColombiaRobertoLopez.png?v=1743538170",
+  "platform": "shopify",
+  "product_id": "7605806334013",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Roberto Lopez",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-roberto-lopez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42241510146109"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42241510178877"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9f99b5ec79caf391",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kainamui-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Kainamui.png?v=1744394561",
+  "platform": "shopify",
+  "product_id": "7611862089789",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kainamui",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kainamui-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42267396767805"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42267396800573"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8c760947be353638",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-julio-gonzales-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/JULIOGBAG-01.jpg?v=1750285082",
+  "platform": "shopify",
+  "product_id": "7615380291645",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Bolivia Julio Gonzales",
+  "url": "https://www.casecoffeeroasters.com/products/bolivia-julio-gonzales-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42281350365245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42281350398013"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f6e840a44ae9d313",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-buena-vista-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/BUENAVISTA.jpg?v=1750285150",
+  "platform": "shopify",
+  "product_id": "7634736218173",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Buena Vista",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-buena-vista-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "42357002305597"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42357002338365"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ef89b10b1a3bed78",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-joya-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LAJOYABAG.jpg?v=1750285024",
+  "platform": "shopify",
+  "product_id": "7639440195645",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Joya",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-joya-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42373842534461"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42373842567229"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ecad07847cdde3bf",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marzo-munoz",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/MARZOBAG.jpg?v=1750284988",
+  "platform": "shopify",
+  "product_id": "7643444805693",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Marzo Munoz",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-marzo-munoz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "42394765951037"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag",
+    "variant_id": "42394765983805"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "700ab56895a3cdcf",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kayon-mountain-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KAYONMTNBAG-01.png?v=1751320985",
+  "platform": "shopify",
+  "product_id": "7647180161085",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Kayon Mountain Natural",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-kayon-mountain-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42413097386045"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "42413097418813"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6e9793df15882a54",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-5",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GACHATHABAG-02.png?v=1753294733",
+  "platform": "shopify",
+  "product_id": "7671207755837",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42488122310717"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag",
+    "variant_id": "42488122343485"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b758776e03cbbb48",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-folie-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LAFOLIEBAG-01.png?v=1753294702",
+  "platform": "shopify",
+  "product_id": "7671211130941",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Folie",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-folie-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42488129552445"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB BAg",
+    "variant_id": "42488129585213"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "410b8dfab1724320",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-bella-elizabeth",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/BELLAELIZABETHBAG-02.png?v=1753294783",
+  "platform": "shopify",
+  "product_id": "7671211622461",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Bella Elizabeth",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-bella-elizabeth",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "42488130142269"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5LB Bag",
+    "variant_id": "42488130175037"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "a7f25507f441f57e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-6",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/SUKE-01.png?v=1757963029",
+  "platform": "shopify",
+  "product_id": "7703656792125",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-suke-quto-6",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42585745063997"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag",
+    "variant_id": "42585745096765"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "0583676ea4d666e0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-palma",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LAPALMA.png?v=1757607723",
+  "platform": "shopify",
+  "product_id": "7703657545789",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Palma",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-palma",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "42585752895549"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42585752928317"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ac7663718eba18f5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-aragon-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/AragonBag-02.png?v=1759179251",
+  "platform": "shopify",
+  "product_id": "7711537725501",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Aragon",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-aragon-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42615444766781"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "42615444799549"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "e54c75828950234f",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karatu-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KENYAKARATUBAG-01.png?v=1759253369",
+  "platform": "shopify",
+  "product_id": "7712215072829",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karatu",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karatu-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42618025181245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "42618025214013"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "56935554c56594b2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-chelelektu-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CHELELEKTU-02.jpg?v=1762448664",
+  "platform": "shopify",
+  "product_id": "7735396466749",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Chelelektu",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-chelelektu-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42693220925501"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag",
+    "variant_id": "42693220958269"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "cff100f4a539875a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-teodosa-moreno",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/TEODOSA-01.png?v=1764104504",
+  "platform": "shopify",
+  "product_id": "7752507326525",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Teodosa Moreno",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-teodosa-moreno",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42747208597565"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42747208630333"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "d66a03f486bc64b3",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Holiday-01.png?v=1764106279",
+  "platform": "shopify",
+  "product_id": "7752534982717",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Holiday Blend",
+  "url": "https://www.casecoffeeroasters.com/products/holiday-blend-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "42747255980093"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "b638810469a4a372",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-chorongi-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CHORONGIBAG-01.png?v=1764964387",
+  "platform": "shopify",
+  "product_id": "7758067335229",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Chorongi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-chorongi-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "42781599989821"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42781600022589"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "607446b965251111",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-shakiso",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/SHAKISO-01.png?v=1767640143",
+  "platform": "shopify",
+  "product_id": "7777581662269",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Shakiso",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-shakiso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "42876276834365"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "42876276867133"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "01df095024e1d7f3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-arturo-paz-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ARTUROPAZ-02.png?v=1767640330",
+  "platform": "shopify",
+  "product_id": "7777587331133",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Arturo Paz",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-arturo-paz-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42876283781181"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42876283813949"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "eb2f3137a86548b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduars-gerardo-trejo",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GERARDOTREJOPACAS-01.png?v=1769017892",
+  "platform": "shopify",
+  "product_id": "7789332594749",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduars Gerardo trejo",
+  "url": "https://www.casecoffeeroasters.com/products/honduars-gerardo-trejo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42935478911037"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42935478943805"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "98a280f4eace6573",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kuri-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KURIMOUNTAIN-01.png?v=1769110894",
+  "platform": "shopify",
+  "product_id": "7790303543357",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Kuri Mountain",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-kuri-mountain",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "42942628790333"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Bag",
+    "variant_id": "42942628823101"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6dd77b7d5197360e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jose-narvaez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/JOSENARVAEZ-02.png?v=1770502293",
+  "platform": "shopify",
+  "product_id": "7805043277885",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Jose Narvaez",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-jose-narvaez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "42984262565949"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Bag",
+    "variant_id": "42984262598717"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "260dd71720b2ea4f",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gachatha-6",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GACHATHABAG-02_0354fe1b-4259-4d65-8971-8669c8c041d5.png?v=1770763014",
+  "platform": "shopify",
+  "product_id": "7806155522109",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gachatha",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gachatha-6",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "42989091389501"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "42989091422269"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5d2d4fc47cb6bbb2",
+  "first_seen": "2026-10-26",
+  "handle": "gerardo-trejo-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GERARDOTREJO-02.png?v=1772739639",
+  "platform": "shopify",
+  "product_id": "7820404817981",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Gerardo Trejo - Geisha",
+  "url": "https://www.casecoffeeroasters.com/products/gerardo-trejo-geisha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12oz Bag",
+    "variant_id": "43027610599485"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8bba83570c2c057f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marzo-munoz-1",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/MARZOMUNOZ-01.png?v=1773194730",
+  "platform": "shopify",
+  "product_id": "7822815166525",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Marzo Munoz",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-marzo-munoz-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "43035638300733"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43035638333501"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "eb90d6c92c873546",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gathithi",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GATHITHIBAG-01.png?v=1774899685",
+  "platform": "shopify",
+  "product_id": "7833167069245",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Gathaithi",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-gathithi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "43074456944701"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43074456977469"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "687c5f2c895a1b60",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-joya-2",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LAJOYABAG-01.png?v=1775506120",
+  "platform": "shopify",
+  "product_id": "7836820308029",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia La Joya",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-la-joya-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "43088241918013"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43088241950781"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "406dbb55ac3f3c0d",
+  "first_seen": "2026-10-26",
+  "handle": "hondurads-geovany-rivera",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GEOVANYRIVERABAG-01.png?v=1777399903",
+  "platform": "shopify",
+  "product_id": "7849235152957",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Geovany Rivera",
+  "url": "https://www.casecoffeeroasters.com/products/hondurads-geovany-rivera",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "43138231631933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43138231664701"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "76940d204f2e6b49",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-gerardo-trejo-sl-28-varietal",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/GERARDOSL28-01.png?v=1777400871",
+  "platform": "shopify",
+  "product_id": "7849238298685",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Gerardo Trejo SL-28 Varietal",
+  "url": "https://www.casecoffeeroasters.com/products/honduras-gerardo-trejo-sl-28-varietal",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz Bag",
+    "variant_id": "43138251358269"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Bag",
+    "variant_id": "43138251391037"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "309223e0cad5dc90",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kii",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KIIBAG-01.png?v=1777916359",
+  "platform": "shopify",
+  "product_id": "7851675254845",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kii",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-kii",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Retail Bag",
+    "variant_id": "43148444794941"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43148444827709"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "2e7cf8a0290fa61f",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-getup",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/KENYAGETUYA-01.png?v=1779910243",
+  "platform": "shopify",
+  "product_id": "7887631876157",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Getuya",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-getup",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "43235765649469"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43235765682237"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6a8d7cee1f618a37",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-abdo-aba-mecha",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ABOABA-01.png?v=1783097439",
+  "platform": "shopify",
+  "product_id": "7916416237629",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Abdo Aba Mecha",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-abdo-aba-mecha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "43320132501565"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43320132534333"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "07bc2131051a5b46",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-chorongi-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CHORONGIBAG-01_60ff0f87-8c49-4ebb-9f80-5d40298a6672.png?v=1784576153",
+  "platform": "shopify",
+  "product_id": "7934602739773",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Chorongi AA",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-chorongi-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "43373586939965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Bag",
+    "variant_id": "43373586972733"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "af1f989779f8f19a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-folie-3",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/LAFOLIEBAG-01_ea67ad5d-e2e8-46eb-820b-90c7c83b1c74.png?v=1784576441",
+  "platform": "shopify",
+  "product_id": "7934613094461",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Folie",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-folie-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "43373596246077"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43373596278845"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "57da8cd1a759539e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-esperanza",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ESPERANZABAG-01.png?v=1784576615",
+  "platform": "shopify",
+  "product_id": "7934620336189",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala La Esperanza",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-la-esperanza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz Bag",
+    "variant_id": "43373609877565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Bag",
+    "variant_id": "43373609910333"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5dc48f4713438d2b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-nelson-chavez",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/NELSONBAG-01.png?v=1786130357",
+  "platform": "shopify",
+  "product_id": "7953873436733",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Nelson Chavez",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-nelson-chavez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "43436129615933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Bag",
+    "variant_id": "43436129648701"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "ce87afc5750a4e9a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-chuito",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/Chuito-01.png?v=1789505258",
+  "platform": "shopify",
+  "product_id": "8014118453309",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Chuito",
+  "url": "https://www.casecoffeeroasters.com/products/guatemala-chuito",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "43627155062845"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "43627155095613"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "f544053d4e9911e5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-taratu-double-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/BANKTARATUBAG-02.png?v=1790785907",
+  "platform": "shopify",
+  "product_id": "8043611488317",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Banko Taratu - Double Washed",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-banko-taratu-double-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "43742735073341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag",
+    "variant_id": "43742735106109"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "9bc8555220e91f5f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-anasora-natural-process-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/ANASORABAG-01.png?v=1792087108",
+  "platform": "shopify",
+  "product_id": "8068046127165",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Anasora Natural Process",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-anasora-natural-process-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "43828230717501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag",
+    "variant_id": "43828230750269"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "6b6aa275e0673883",
+  "first_seen": "2026-10-26",
+  "handle": "epiphany",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CaseWebImageEpiphany.jpg?v=1750202354",
+  "platform": "shopify",
+  "product_id": "846307331",
+  "product_type": "Coffee",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Epiphany House Blend",
+  "url": "https://www.casecoffeeroasters.com/products/epiphany",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "2363265027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5Lbs Bag",
+    "variant_id": "31411593158"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5921945501519ba4",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karindunu",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/KAROGOTO.png?v=1531369900",
+  "platform": "shopify",
+  "product_id": "8767734790",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Karogoto",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-karindunu",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "Default Title",
+    "variant_id": "40316411142"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "5fabce4ed9000c41",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-deri",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/DERI.png?v=1531369874",
+  "platform": "shopify",
+  "product_id": "8767737990",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Deri",
+  "url": "https://www.casecoffeeroasters.com/products/ethiopia-deri",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "36239651654"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "8236c530646cca73",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ruiruiru",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/RUIRUIRU.png?v=1531369914",
+  "platform": "shopify",
+  "product_id": "9471185222",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Ruiruiru",
+  "url": "https://www.casecoffeeroasters.com/products/kenya-ruiruiru",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "42056881414"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "c4c87fa27b5de66a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/files/CaseWebImageDecaf.jpg?v=1750202496",
+  "platform": "shopify",
+  "product_id": "9472981638",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://www.casecoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Bag",
+    "variant_id": "35111524934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5Lbs Bag",
+    "variant_id": "35160300230"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "2f32162f23df9df2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-esperanza",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/ESPERANZA_copy.png?v=1531369916",
+  "platform": "shopify",
+  "product_id": "9484701062",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Peru Esperanza",
+  "url": "https://www.casecoffeeroasters.com/products/peru-esperanza",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "42918398293"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ },
+ {
+  "body_hash": "97d81b70420feb2b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-manzanares",
+  "image": "https://cdn.shopify.com/s/files/1/0886/8548/products/MANZANARES1.png?v=1531369865",
+  "platform": "shopify",
+  "product_id": "9578852678",
+  "product_type": "",
+  "roaster_slug": "casecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Manzanares",
+  "url": "https://www.casecoffeeroasters.com/products/colombia-manzanares",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "12625663131682"
+   }
+  ],
+  "vendor": "Case Coffee Roasters"
+ }
+]

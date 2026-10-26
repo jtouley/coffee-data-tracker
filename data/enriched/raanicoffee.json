@@ -1,0 +1,175 @@
+{
+ "7631919382590": {
+  "body_hash": "5d87e5a8894499b0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "pomegranate"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "7631919644734": {
+  "body_hash": "07f17f1a11c43df0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "mixed berries",
+   "chocolate",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "7631919874110": {
+  "body_hash": "75df0f1f7001b019",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "black tea",
+   "blackberries"
+  ],
+  "varietals": []
+ },
+ "7631920201790": {
+  "body_hash": "5f9253c594b2243b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "India",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mulberry",
+   "honey",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "7631920431166": {
+  "body_hash": "caaa732849439cae",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "India",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "toffee",
+   "red apples"
+  ],
+  "varietals": []
+ },
+ "7631920660542": {
+  "body_hash": "b236ba9e382b6947",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "grapes",
+   "hazelnuts"
+  ],
+  "varietals": []
+ },
+ "7631920824382": {
+  "body_hash": "682e31794a08a207",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "mandarin"
+  ],
+  "varietals": []
+ },
+ "7631920988222": {
+  "body_hash": "f866644bd58b7165",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "black currant",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "7760751394878": {
+  "body_hash": "6fb6073f19ec5a0e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lychee",
+   "mango",
+   "rose tea"
+  ],
+  "varietals": []
+ }
+}

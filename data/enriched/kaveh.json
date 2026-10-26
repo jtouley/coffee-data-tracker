@@ -1,0 +1,70 @@
+{
+ "10141857743161": {
+  "body_hash": "2413272ee6bc93cb",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "apricot",
+   "strawberry",
+   "cola"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "10145432731961": {
+  "body_hash": "d21433ea528200e2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9962014245177": {
+  "body_hash": "537e969cb0b8d9a5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "India",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "9987978625337": {
+  "body_hash": "8207511867ad15b5",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

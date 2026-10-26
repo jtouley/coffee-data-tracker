@@ -1,0 +1,130 @@
+[
+ {
+  "body_hash": "3a26b265f182c82f",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-racer-blend-medium-dark-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0574/3093/3588/files/Coffee_2.png?v=1738034740",
+  "platform": "shopify",
+  "product_id": "7568308469844",
+  "product_type": "Whole Coffee Bean",
+  "roaster_slug": "motolatteroaster",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Café Racer – Whole Bean Excelsa Coffee (Medium-Dark Roast)",
+  "url": "https://motolatteroaster.com/products/cafe-racer-blend-medium-dark-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz",
+    "variant_id": "41729828585556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz",
+    "variant_id": "41729828651092"
+   }
+  ],
+  "vendor": "MOTO LATTE ROASTER"
+ },
+ {
+  "body_hash": "582e77a5be2191fc",
+  "first_seen": "2026-10-26",
+  "handle": "race-fuel-blend-medium-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0574/3093/3588/files/Coffee_1.png?v=1738034772",
+  "platform": "shopify",
+  "product_id": "7568308699220",
+  "product_type": "",
+  "roaster_slug": "motolatteroaster",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Race Fuel – Whole Bean Excelsa Coffee (Medium Roast)",
+  "url": "https://motolatteroaster.com/products/race-fuel-blend-medium-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz",
+    "variant_id": "41729829142612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz",
+    "variant_id": "41729829208148"
+   }
+  ],
+  "vendor": "MOTO LATTE ROASTER"
+ },
+ {
+  "body_hash": "7ed45bdc984e2353",
+  "first_seen": "2026-10-26",
+  "handle": "superleggera-blend-light-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0574/3093/3588/files/Coffee_4.png?v=1738034788",
+  "platform": "shopify",
+  "product_id": "7568308994132",
+  "product_type": "",
+  "roaster_slug": "motolatteroaster",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Superleggera – Whole Bean Excelsa Coffee (Light Roast)",
+  "url": "https://motolatteroaster.com/products/superleggera-blend-light-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz",
+    "variant_id": "41729829699668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz",
+    "variant_id": "41729829765204"
+   }
+  ],
+  "vendor": "MOTO LATTE ROASTER"
+ },
+ {
+  "body_hash": "4e57f0db30eedf3e",
+  "first_seen": "2026-10-26",
+  "handle": "full-throttle-blend-dark-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0574/3093/3588/files/Coffee_3.png?v=1738034755",
+  "platform": "shopify",
+  "product_id": "7568310108244",
+  "product_type": "",
+  "roaster_slug": "motolatteroaster",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Full Throttle – Whole Bean Excelsa Coffee (Dark Roast)",
+  "url": "https://motolatteroaster.com/products/full-throttle-blend-dark-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz",
+    "variant_id": "41729831829588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz",
+    "variant_id": "41729831895124"
+   }
+  ],
+  "vendor": "MOTO LATTE ROASTER"
+ }
+]

@@ -1,0 +1,888 @@
+[
+ {
+  "body_hash": "62cba2ce029aace3",
+  "first_seen": "2026-10-26",
+  "handle": "the-42-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/89ed9e65-1b40-4a25-8bd9-78ff63e7da76.png?v=1781582334",
+  "platform": "shopify",
+  "product_id": "8883105005628",
+  "product_type": "Espresso",
+  "roaster_slug": "imua",
+  "tags": [
+   "Hawaii coffee",
+   "Hawaii roasted coffee",
+   "artisan coffee roasted",
+   "artisan roasted coffee",
+   "best espresso beans",
+   "bold coffee blend",
+   "caffeine free coffee",
+   "cappuccino coffee beans",
+   "chocolate coffee notes",
+   "craft coffee",
+   "crema rich espresso",
+   "espresso beans",
+   "espresso blend",
+   "fair trade coffee",
+   "home espresso beans",
+   "imua coffee",
+   "kauai coffee",
+   "kauai roasted",
+   "latte coffee beans",
+   "medium roast",
+   "medium roast coffee",
+   "organic coffee",
+   "premium coffee beans",
+   "small batch coffee",
+   "specialty coffee",
+   "specialty espresso",
+   "whole bean coffee"
+  ],
+  "title": "42 Espresso | Signature Espresso Blend | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/the-42-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553825480764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Drip (Medium)",
+    "variant_id": "45553825513532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553825546300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553825579068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553825611836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553825644604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Drip (Medium)",
+    "variant_id": "45553825677372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553825710140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553825742908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553825775676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553825808444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Drip (Medium)",
+    "variant_id": "45553825841212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553825873980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553825906748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553825939516"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ },
+ {
+  "body_hash": "70c675fa862a6173",
+  "first_seen": "2026-10-26",
+  "handle": "howzit-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/CBglassIMUA.png?v=1781584664",
+  "platform": "shopify",
+  "product_id": "8883105726524",
+  "product_type": "Cold Brew Coffee",
+  "roaster_slug": "imua",
+  "tags": [
+   "Hawaii coffee",
+   "almond notes",
+   "artisan coffee roasted",
+   "best coffee for cold brew",
+   "caffeine free coffee",
+   "chemical free decaf",
+   "chocolate coffee notes",
+   "chocolate notes",
+   "coarse ground coffee",
+   "cold brew beans",
+   "cold brew coffee",
+   "craft coffee",
+   "decaf beans",
+   "fair trade coffee",
+   "home cold brew",
+   "iced coffee beans",
+   "imua coffee",
+   "kauai coffee",
+   "kauai roasted",
+   "low acid coffee",
+   "medium roast",
+   "medium roast coffee",
+   "organic coffee",
+   "premium coffee beans",
+   "small batch coffee",
+   "smooth coffee blend",
+   "specialty coffee",
+   "whole bean coffee"
+  ],
+  "title": "Howzit Cold Brew Coffee | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/howzit-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553768792124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Drip (Medium)",
+    "variant_id": "45553768824892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553768857660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553768890428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553768923196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553768955964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Drip (Medium)",
+    "variant_id": "45553768988732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553769021500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553769054268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553769087036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse (Best for French Press and Cold Brew)",
+    "variant_id": "45553769119804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Drip (Medium)",
+    "variant_id": "45553769152572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine (Espresso and Moka Pots)",
+    "variant_id": "45553769185340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Extra Fine (Turkish Coffee)",
+    "variant_id": "45553769218108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean (Best for storage)",
+    "variant_id": "45553769250876"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ },
+ {
+  "body_hash": "7091b6297e95fb21",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/7adfaf45-3025-4508-b76e-885b7486a3bf.png?v=1781659427",
+  "platform": "shopify",
+  "product_id": "8883150291004",
+  "product_type": "Decaf Coffee",
+  "roaster_slug": "imua",
+  "tags": [
+   "almond notes",
+   "caffeine free coffee",
+   "chemical free decaf",
+   "chocolate notes",
+   "decaf beans",
+   "decaf coffee",
+   "evening coffee",
+   "fair trade coffee",
+   "gentle coffee",
+   "imua coffee",
+   "kauai roasted",
+   "low acidity coffee",
+   "medium roast",
+   "mexico coffee",
+   "mountain water process",
+   "no caffeine coffee",
+   "organic coffee",
+   "single origin coffee",
+   "smooth coffee",
+   "stomach friendly coffee",
+   "swiss water process",
+   "whole bean coffee"
+  ],
+  "title": "Organic Decaf Mexico Coffee | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/organic-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean",
+    "variant_id": "45553758437436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean",
+    "variant_id": "45553758470204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean",
+    "variant_id": "45553758502972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45553761353788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45553761386556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine - Espresso",
+    "variant_id": "45553761419324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45553761452092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45553761484860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45553761517628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine - Espresso",
+    "variant_id": "45553761550396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45553761583164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45553761615932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45553761648700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine - Espresso",
+    "variant_id": "45553761681468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45553761714236"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ },
+ {
+  "body_hash": "fefa5200a07e522b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-coffee-imua-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/520a1b3b-0fb2-43ee-b4de-734728c4db86.png?v=1782248688",
+  "platform": "shopify",
+  "product_id": "8948229865532",
+  "product_type": "Sumatra Coffee",
+  "roaster_slug": "imua",
+  "tags": [
+   "aceh coffee",
+   "almond notes",
+   "bell pepper notes",
+   "earthy coffee",
+   "fair trade coffee",
+   "fresh roasted coffee",
+   "heavy body coffee",
+   "imua coffee",
+   "indonesia coffee",
+   "kauai roasted",
+   "kauai roasted coffee",
+   "lemongrass noties",
+   "low acid coffee",
+   "low acidity coffee",
+   "medium roast",
+   "organic coffee",
+   "premium coffee beans",
+   "single origin coffee",
+   "small batch coffee",
+   "smooth coffee",
+   "specialty coffee",
+   "sumatra coffee",
+   "sumatra gayo",
+   "wet hulled coffee",
+   "whole bean coffee"
+  ],
+  "title": "Organic Sumatra Coffee | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/organic-sumatra-coffee-imua-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse (French Press and Cold Brew)",
+    "variant_id": "45556332920892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Flat-Bottom Drip",
+    "variant_id": "45556332986428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine (Cone Drip Coffee and Pour Over)",
+    "variant_id": "45556333019196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Espresso",
+    "variant_id": "45556333051964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse (French Press and Cold Brew)",
+    "variant_id": "45556333084732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Flat-Bottom Drip",
+    "variant_id": "45556333150268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine (Cone Drip Coffee and Pour Over)",
+    "variant_id": "45556333183036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Espresso",
+    "variant_id": "45556333215804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse (French Press and Cold Brew)",
+    "variant_id": "45556333248572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Flat-Bottom Drip",
+    "variant_id": "45556333314108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine (Cone Drip Coffee and Pour Over)",
+    "variant_id": "45556333346876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Espresso",
+    "variant_id": "45556333379644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean",
+    "variant_id": "45712024633404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean",
+    "variant_id": "45712024666172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean",
+    "variant_id": "45712024698940"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ },
+ {
+  "body_hash": "cf2ca10f49f901b5",
+  "first_seen": "2026-10-26",
+  "handle": "organic-boliva-coffee-imua-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/Bolivia3.jpg?v=1783373377",
+  "platform": "shopify",
+  "product_id": "8967742783548",
+  "product_type": "Bolivia Coffee",
+  "roaster_slug": "imua",
+  "tags": [
+   "artisan coffee roasted",
+   "bolivia coffee",
+   "bolivian coffee",
+   "bright acidity coffee",
+   "cherry notes",
+   "chocolate notes",
+   "cranberry notes",
+   "evening coffee",
+   "fair trade coffee",
+   "fresh roasted coffee",
+   "fruit forward coffee",
+   "high altitude coffee",
+   "imua coffee",
+   "kauai roasted",
+   "kauai roasted coffee",
+   "la paz coffee",
+   "organic coffee",
+   "premium coffee beans",
+   "single origin coffee",
+   "small batch coffee",
+   "smooth coffee",
+   "specialty coffee",
+   "stomach friendly coffee",
+   "washed process coffee",
+   "whole bean coffee"
+  ],
+  "title": "Organic Boliva Coffee | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/organic-boliva-coffee-imua-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean",
+    "variant_id": "45755920285756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45755920318524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45755920351292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine - Espresso",
+    "variant_id": "45755920384060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45755920416828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean",
+    "variant_id": "45755920449596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45755920482364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45755920515132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine - Espresso",
+    "variant_id": "45755920547900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45755920580668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean",
+    "variant_id": "45755920613436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45755920646204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45755920678972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine - Espresso",
+    "variant_id": "45755920711740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45755920744508"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ },
+ {
+  "body_hash": "748b4015d641e6c8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-coffee-imua-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0707/9326/5212/files/Guatemala2.1.png?v=1783660640",
+  "platform": "shopify",
+  "product_id": "8980872593468",
+  "product_type": "Guatemala Coffee",
+  "roaster_slug": "imua",
+  "tags": [
+   "arabica coffee",
+   "artisan coffee roasted",
+   "bright acidity coffee",
+   "craft coffee",
+   "fair trade coffee",
+   "fresh roasted coffee",
+   "gourmet coffee",
+   "ground coffee",
+   "guatemala coffee",
+   "hawaii coffee roaster",
+   "high altitude coffee",
+   "huehuetenango",
+   "imua coffee",
+   "imua coffee roasters",
+   "indigenous producers",
+   "kauai roasted",
+   "kauai roasted coffee",
+   "medium roast",
+   "organic coffee",
+   "premium coffee beans",
+   "single origin coffee",
+   "small batch coffee",
+   "specialty coffee",
+   "stomach friendly coffee",
+   "washed process coffee",
+   "whole bean coffee",
+   "women grown coffee"
+  ],
+  "title": "Organic Guatemala Coffee | IMUA Coffee Roasters",
+  "url": "https://www.imua.coffee/products/organic-guatemala-coffee-imua-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 0 - Whole Bean",
+    "variant_id": "45829658673212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45829658705980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45829658738748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 3 - Fine - Espresso",
+    "variant_id": "45829658771516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounce / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45829658804284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 0 - Whole Bean",
+    "variant_id": "45829658837052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45829658869820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45829658902588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 3 - Fine - Espresso",
+    "variant_id": "45829658935356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16 ounce (1 lb) / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45829658968124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 0 - Whole Bean",
+    "variant_id": "45829659000892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 1 - Coarse - French Press and Cold Brew",
+    "variant_id": "45829659033660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 2 - Drip - Drip Coffee and Pour Over",
+    "variant_id": "45829659066428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 3 - Fine - Espresso",
+    "variant_id": "45829659099196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / 4 - Turkish Fine - Turkish Coffee",
+    "variant_id": "45829659131964"
+   }
+  ],
+  "vendor": "IMUA Coffee Roasters"
+ }
+]

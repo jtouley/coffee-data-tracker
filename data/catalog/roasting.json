@@ -1,0 +1,2105 @@
+[
+ {
+  "body_hash": "5f4f1633426b18a1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-geisha",
+  "image": "https://roasting.com/wp-content/uploads/2026/05/Geisha.jpg",
+  "platform": "woocommerce",
+  "product_id": "1150610",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Degree of Roast 2"
+  ],
+  "title": "Colombia Gesha (½ lb)",
+  "url": "https://roasting.com/shop/single-origin/americas/colombia-geisha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.5,
+    "title": "Colombia Gesha (½ lb)",
+    "variant_id": "1150610:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbae3a56319677de",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-veracruz-natural",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/mexico_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "1151471",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Mexico Veracruz Natural",
+  "url": "https://roasting.com/shop/coffee/natural/mexico-veracruz-natural/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Mexico Veracruz Natural",
+    "variant_id": "1151471:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f20edd37771fc264",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-organic-honey",
+  "image": "https://roasting.com/wp-content/uploads/2026/09/Uganda.png",
+  "platform": "woocommerce",
+  "product_id": "1152003",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Uganda Organic Honey",
+  "url": "https://roasting.com/shop/coffee/organic/uganda-organic-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.5,
+    "title": "Uganda Organic Honey",
+    "variant_id": "1152003:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "842b522f912ded34",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-decaf-organic",
+  "image": "https://roasting.com/wp-content/uploads/2022/10/honduras_decaf_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "133708",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 2",
+   "Organic"
+  ],
+  "title": "Honduras Decaf Organic",
+  "url": "https://roasting.com/shop/coffee/decaf/honduras-decaf-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Honduras Decaf Organic",
+    "variant_id": "133708:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "14812414c8ba657a",
+  "first_seen": "2026-10-26",
+  "handle": "am-blend",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/blend_edit2-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13423",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Degree of Roast 2"
+  ],
+  "title": "AM Blend",
+  "url": "https://roasting.com/shop/coffee/blends/am-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "AM Blend",
+    "variant_id": "13423:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c5ca7f20d20c415",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/brazil_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13429",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 3",
+   "Single Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://roasting.com/shop/single-origin/americas/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Brazil",
+    "variant_id": "13429:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d22dfd2bb3b1303",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13433",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://roasting.com/shop/single-origin/americas/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Colombia",
+    "variant_id": "13433:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8842c00e7675c385",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_decaf-edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13436",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 2"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://roasting.com/shop/coffee/decaf/colombia-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Colombia Decaf",
+    "variant_id": "13436:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12f51a7fd91b7119",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13438",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Colombia Organic",
+  "url": "https://roasting.com/shop/coffee/organic/colombia-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Colombia Organic",
+    "variant_id": "13438:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e522fd2a9e9419d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/costa-rica_edit-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13442",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Single Origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://roasting.com/shop/single-origin/americas/costa-rica/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "Costa Rica",
+    "variant_id": "13442:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3504bc164839813e",
+  "first_seen": "2026-10-26",
+  "handle": "komodo-decaf-organic-swiss-water",
+  "image": "https://roasting.com/wp-content/uploads/2023/02/decaf_edit-4.jpg",
+  "platform": "woocommerce",
+  "product_id": "134950",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 3",
+   "Organic"
+  ],
+  "title": "Komodo Decaf Organic",
+  "url": "https://roasting.com/shop/coffee/decaf/komodo-decaf-organic-swiss-water/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Komodo Decaf Organic",
+    "variant_id": "134950:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20aedf1e5c8c73d5",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/04/peru_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "135799",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Peru Organic",
+  "url": "https://roasting.com/shop/coffee/organic/peru-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Peru Organic",
+    "variant_id": "135799:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2300781c275d74e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-natural",
+  "image": "https://roasting.com/wp-content/uploads/2023/06/Nicaragua-Natural-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "136327",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Nicaragua Natural",
+  "url": "https://roasting.com/shop/coffee/natural/nicaragua-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Nicaragua Natural",
+    "variant_id": "136327:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1e28b4ccb31ea06",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/blend_edit2-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13633",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Degree of Roast 3"
+  ],
+  "title": "Mocha Java",
+  "url": "https://roasting.com/shop/coffee/blends/mocha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Mocha Java",
+    "variant_id": "13633:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b754d758e2e2a55e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/mexico_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "136348",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Single Origin"
+  ],
+  "title": "Mexico Oaxaca",
+  "url": "https://roasting.com/shop/single-origin/americas/mexico-oaxaca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "Mexico Oaxaca",
+    "variant_id": "136348:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae49ce2a66469b4e",
+  "first_seen": "2026-10-26",
+  "handle": "holiday",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/Holiday-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "13644",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Holiday Blend",
+  "url": "https://roasting.com/shop/coffee/blends/holiday/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Holiday Blend",
+    "variant_id": "13644:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c457490850b6ec43",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/decaf_edit-4-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13648",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 3.5"
+  ],
+  "title": "Espresso Decaf",
+  "url": "https://roasting.com/shop/coffee/decaf/espresso-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso Decaf",
+    "variant_id": "13648:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cda43946bdb06847",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/decaf_edit-4-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13652",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 3.5",
+   "Organic"
+  ],
+  "title": "Espresso Decaf Organic",
+  "url": "https://roasting.com/shop/coffee/decaf/espresso-decaf-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso Decaf Organic",
+    "variant_id": "13652:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d32fa0ceb7731af0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mocha-decaf-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_decafedit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13653",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 2.5",
+   "Natural"
+  ],
+  "title": "Ethiopia Decaf Natural",
+  "url": "https://roasting.com/shop/coffee/decaf/ethiopia-mocha-decaf-organic/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Ethiopia Decaf Natural",
+    "variant_id": "13653:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "835859d2e2f9d71c",
+  "first_seen": "2026-10-26",
+  "handle": "house-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/decaf_edit-4-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13655",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 2.5"
+  ],
+  "title": "House Decaf",
+  "url": "https://roasting.com/shop/coffee/decaf/house-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "House Decaf",
+    "variant_id": "13655:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0571f2d2c21e333c",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/decaf_edit-4-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13659",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 3"
+  ],
+  "title": "Mocca Java Decaf",
+  "url": "https://roasting.com/shop/coffee/decaf/mocha-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Mocca Java Decaf",
+    "variant_id": "13659:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ecc54b04a0bf9085",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_decaf-edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13663",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 3"
+  ],
+  "title": "Sumatra Decaf",
+  "url": "https://roasting.com/shop/coffee/decaf/sumatra-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.5,
+    "title": "Sumatra Decaf",
+    "variant_id": "13663:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b2bba28e43131be",
+  "first_seen": "2026-10-26",
+  "handle": "english-breakfast-decaf",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/Black-Tea-2-600x600-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13684",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Black Teas",
+   "Teas"
+  ],
+  "title": "English Breakfast Decaf",
+  "url": "https://roasting.com/shop/teas/black-teas/english-breakfast-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.95,
+    "title": "English Breakfast Decaf",
+    "variant_id": "13684:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbb858419c890153",
+  "first_seen": "2026-10-26",
+  "handle": "india-black-nilgiris",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/Black-Tea-2-600x600-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13685",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Black Teas",
+   "Teas"
+  ],
+  "title": "India Black Nilgiris",
+  "url": "https://roasting.com/shop/teas/black-teas/india-black-nilgiris/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.95,
+    "title": "India Black Nilgiris",
+    "variant_id": "13685:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c8eca2bb217cb1f",
+  "first_seen": "2026-10-26",
+  "handle": "china-white-pai-mu",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/Black-Tea-5-1-600x600-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13734",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Teas",
+   "White Teas"
+  ],
+  "title": "China White Pai Mu",
+  "url": "https://roasting.com/shop/teas/white-teas/china-white-pai-mu/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 7.95,
+    "title": "China White Pai Mu",
+    "variant_id": "13734:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a9139704df14772",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-organic-smithsonian-bird-friendly",
+  "image": "https://roasting.com/wp-content/uploads/2020/12/costa-rica_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13867",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 1.5",
+   "Organic"
+  ],
+  "title": "Costa Rica Organic",
+  "url": "https://roasting.com/shop/coffee/organic/costa-rica-organic-smithsonian-bird-friendly/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Costa Rica Organic",
+    "variant_id": "13867:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1d063b96f2adfc0",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-honey",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/el-salvador_edit-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13868",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Single Origin"
+  ],
+  "title": "El Salvador Honey",
+  "url": "https://roasting.com/shop/single-origin/americas/el-salvador-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "El Salvador Honey",
+    "variant_id": "13868:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc1b3b9ec7c16175",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-longberry-harrar-natural",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13871",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Longberry Natural",
+  "url": "https://roasting.com/shop/coffee/natural/ethiopia-longberry-harrar-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Ethiopia Longberry Natural",
+    "variant_id": "13871:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d98793732537d32",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed-fto",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13879",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Washed FTO",
+  "url": "https://roasting.com/shop/coffee/organic/ethiopia-washed-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Ethiopia Washed FTO",
+    "variant_id": "13879:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3948a1d9200dc701",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-fto",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13881",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://roasting.com/shop/coffee/natural/ethiopia-natural-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Ethiopia Natural",
+    "variant_id": "13881:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "095f52068a61cf0f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/guatemala_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13883",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://roasting.com/shop/single-origin/americas/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Guatemala",
+    "variant_id": "13883:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9ed4ed9e48e2ac0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fair-trade-organic",
+  "image": "https://roasting.com/wp-content/uploads/2020/12/guatemala_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13886",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Guatemala FTO",
+  "url": "https://roasting.com/shop/coffee/organic/guatemala-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Guatemala FTO",
+    "variant_id": "13886:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "15b4fe475c36a3b3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-liquidambar-yellow-honey",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/honduras_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13888",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Honduras Organic Liquidambar",
+  "url": "https://roasting.com/shop/coffee/organic/honduras-organic-liquidambar-yellow-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Honduras Organic Liquidambar",
+    "variant_id": "13888:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd9a82a2150bccc9",
+  "first_seen": "2026-10-26",
+  "handle": "java",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/java_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13896",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Java",
+  "url": "https://roasting.com/shop/single-origin/asian-pacific/java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Java",
+    "variant_id": "13896:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c789a717affbac6",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/kenya_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13900",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Kenya",
+  "url": "https://roasting.com/shop/single-origin/africa/kenya/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Kenya",
+    "variant_id": "13900:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c1ea47fbe633028",
+  "first_seen": "2026-10-26",
+  "handle": "kona-washed",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/kona_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13915",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Kona 100% Washed",
+  "url": "https://roasting.com/shop/single-origin/americas/kona-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Kona 100% Washed",
+    "variant_id": "13915:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd79762e3cfcd7c6",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/mexico_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13916",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Mexico Organic",
+  "url": "https://roasting.com/shop/coffee/organic/mexico-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Mexico Organic",
+    "variant_id": "13916:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d54c3e4a15f607e",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/new-guinea-organic_edit2-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "13918",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "New Guinea Organic",
+  "url": "https://roasting.com/shop/coffee/organic/new-guinea-organic/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "New Guinea Organic",
+    "variant_id": "13918:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "726e31f213798ebe",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/nicaragua_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "13920",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Nicaragua FTO",
+  "url": "https://roasting.com/shop/coffee/organic/nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "Nicaragua FTO",
+    "variant_id": "13920:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "592153a04aa56333",
+  "first_seen": "2026-10-26",
+  "handle": "panama",
+  "image": "https://roasting.com/wp-content/uploads/2020/12/panama.jpg",
+  "platform": "woocommerce",
+  "product_id": "13922",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Panama",
+  "url": "https://roasting.com/shop/single-origin/americas/panama/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Panama",
+    "variant_id": "13922:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "476f774e38ed045a",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sulawesi-celebes_edit-1-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14060",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 3",
+   "Single Origin"
+  ],
+  "title": "Sulawesi",
+  "url": "https://roasting.com/shop/single-origin/asian-pacific/sulawesi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Sulawesi",
+    "variant_id": "14060:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "419dc4579e4ebd49",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14062",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 3",
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://roasting.com/shop/single-origin/asian-pacific/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Sumatra",
+    "variant_id": "14062:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2d78001f144de41",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14064",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Sumatra Organic",
+  "url": "https://roasting.com/shop/coffee/organic/sumatra-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Sumatra Organic",
+    "variant_id": "14064:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "debe14d0957936ca",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/tanzania_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14066",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Tanzania",
+  "url": "https://roasting.com/shop/single-origin/africa/tanzania/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Tanzania",
+    "variant_id": "14066:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6cf0d1d78a590601",
+  "first_seen": "2026-10-26",
+  "handle": "yemen",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/yemen_edit-1-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14068",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 2.5",
+   "Single Origin"
+  ],
+  "title": "Yemen Mocca",
+  "url": "https://roasting.com/shop/single-origin/asian-pacific/yemen/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Yemen Mocca",
+    "variant_id": "14068:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9471f11d01059ea4",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/dark-blend_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14134",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Darker Roasts",
+   "Degree of Roast 4.5"
+  ],
+  "title": "Espresso",
+  "url": "https://roasting.com/shop/coffee/blends/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso",
+    "variant_id": "14134:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47f5c7f4179eda4d",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-2",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/dark-blend_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14142",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Darker Roasts",
+   "Degree of Roast 5"
+  ],
+  "title": "French Roast",
+  "url": "https://roasting.com/shop/coffee/blends/french-roast-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Roast",
+    "variant_id": "14142:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "46fc9c220317333a",
+  "first_seen": "2026-10-26",
+  "handle": "silverfork-blend",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/dark-blend_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14145",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Darker Roasts",
+   "Degree of Roast 4"
+  ],
+  "title": "Silverfork Blend",
+  "url": "https://roasting.com/shop/coffee/blends/silverfork-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Silverfork Blend",
+    "variant_id": "14145:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b125a715f27707a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/brazil_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14747",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Brazil Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/brazil-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "Brazil Unroasted",
+    "variant_id": "14747:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "08f788d91c27dbc1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_decaf-edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14752",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Colombia Decaf Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/colombia-decaf-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Colombia Decaf Unroasted",
+    "variant_id": "14752:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "632d87f9fed7bd3f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto-unroasted-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14755",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Colombia Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/colombia-fto-unroasted-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Colombia Organic Unroasted",
+    "variant_id": "14755:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0da7c6b7b86ab136",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-unroasted-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/el-salvador_edit-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "14758",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "El Salvador Natural Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/el-salvador-unroasted-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "El Salvador Natural Unroasted",
+    "variant_id": "14758:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3991914a700f71f9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-longberry-harrar-green-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14761",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Ethiopia Longberry Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/ethiopia-longberry-harrar-green-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Ethiopia Longberry Unroasted",
+    "variant_id": "14761:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a66c29afb24aef06",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mocha-decaf-green-fto-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_decafedit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14763",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Ethiopia Decaf Natural Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/ethiopia-mocha-decaf-green-fto-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Ethiopia Decaf Natural Unroasted",
+    "variant_id": "14763:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc7c6b20cd87e7f9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed-green-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14764",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Ethiopia Washed Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/ethiopia-washed-green-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Ethiopia Washed Organic Unroasted",
+    "variant_id": "14764:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c51712946a14f4c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-unroasted-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/guatemala_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "14766",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Guatemala Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/guatemala-unroasted-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Guatemala Unroasted",
+    "variant_id": "14766:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8097e7bd4af5bfc9",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsoon-malabar-unroasted-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/indian-monsoon-malabar_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14770",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "India Monsoon Malabar Unroasted *price per 2 lbs*",
+  "url": "https://roasting.com/shop/green-beans-2/india-monsoon-malabar-unroasted-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 24.95,
+    "title": "India Monsoon Malabar Unroasted *price per 2 lbs*",
+    "variant_id": "14770:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0a83a2b38114dbe",
+  "first_seen": "2026-10-26",
+  "handle": "java-unroasted-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/java_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "14772",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Java Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/java-unroasted-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.5,
+    "title": "Java Unroasted",
+    "variant_id": "14772:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f671dd7bf62188d8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/colombia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16779",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Colombia Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/colombia-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Colombia Unroasted",
+    "variant_id": "16779:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa77a5045ef5ba40",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2020/12/guatemala_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "16783",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Guatemala Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/guatemala-organic-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Guatemala Organic Unroasted",
+    "variant_id": "16783:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b27afd00177d8dc",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/new-guinea-organic_edit2-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16786",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "New Guinea Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/new-guinea-organic-unroasted/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "New Guinea Organic Unroasted",
+    "variant_id": "16786:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2060e007833c1a0",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sulawesi-celebes_edit-1-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16788",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Sulawesi Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/sulawesi-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Sulawesi Unroasted",
+    "variant_id": "16788:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "705c33718b8e0eee",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/tanzania_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16796",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Tanzania Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/tanzania-peaberry-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.5,
+    "title": "Tanzania Unroasted",
+    "variant_id": "16796:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e9ea1c41d1374eb",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/kenya_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16798",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Kenya Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/kenya-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Kenya Unroasted",
+    "variant_id": "16798:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e57a470fed2ba182",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16800",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Ethiopia Natural Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/ethiopia-natural-organic-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Ethiopia Natural Organic Unroasted",
+    "variant_id": "16800:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3448b54e2407e5f9",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/04/peru_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16804",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Peru Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/peru-organic-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Peru Organic Unroasted",
+    "variant_id": "16804:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a073b6ee970f910",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16806",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Sumatra FTO Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/sumatra-organic-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Sumatra FTO Unroasted",
+    "variant_id": "16806:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f51a9c90f91595d3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16808",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Sumatra Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/sumatra-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.75,
+    "title": "Sumatra Unroasted",
+    "variant_id": "16808:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dda9a2df60810710",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/costa-rica_edit-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "16810",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Costa Rica Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/costa-rica-unroasted/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 23.5,
+    "title": "Costa Rica Unroasted",
+    "variant_id": "16810:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2545db3a23ed44c4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-fto",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/honduras_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "18402",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Degree of Roast 2",
+   "Green Beans"
+  ],
+  "title": "Honduras FTO Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/honduras-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Honduras FTO Unroasted",
+    "variant_id": "18402:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2b62d1a7a258902",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-2",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/mexico_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "18405",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Mexico Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/mexico-organic-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Mexico Organic Unroasted",
+    "variant_id": "18405:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4260009baaf73cf",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/Coffee-of-the-Month.jpg",
+  "platform": "woocommerce",
+  "product_id": "18613",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Degree of Roast 3",
+   "Month",
+   "Natural"
+  ],
+  "title": "Coffee of the Month: Guatemala",
+  "url": "https://roasting.com/shop/coffee/natural/coffee-of-the-month/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Coffee of the Month: Guatemala",
+    "variant_id": "18613:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa306a5323d7ef1d",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-fto-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/nicaragua_edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "18623",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Degree of Roast 2",
+   "Green Beans"
+  ],
+  "title": "Nicaragua FTO Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/nicaragua-fto-unroasted/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 23.5,
+    "title": "Nicaragua FTO Unroasted",
+    "variant_id": "18623:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a7b0d3204b476bc",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/sumatra_decaf-edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "35372",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Sumatra Decaf Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/sumatra-decaf-unroasted/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Sumatra Decaf Unroasted",
+    "variant_id": "35372:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1089aec6ae13c11e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-organic-unroasted",
+  "image": "https://roasting.com/wp-content/uploads/2020/11/mexico_decaf-edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "35373",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Green Beans"
+  ],
+  "title": "Mexico Decaf Organic Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/mexico-decaf-organic-unroasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Mexico Decaf Organic Unroasted",
+    "variant_id": "35373:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0fda87d0c2a9912",
+  "first_seen": "2026-10-26",
+  "handle": "bali-organic-micro-lot",
+  "image": "https://roasting.com/wp-content/uploads/2025/12/Bali.jpg",
+  "platform": "woocommerce",
+  "product_id": "646609",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Asian Pacific",
+   "Coffee",
+   "Degree of Roast 3",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Bali Organic Micro-lot",
+  "url": "https://roasting.com/shop/coffee/organic/bali-organic-micro-lot/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "Bali Organic Micro-lot",
+    "variant_id": "646609:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "713c7a97e905728c",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-organic",
+  "image": "https://roasting.com/wp-content/uploads/2026/01/mexico_decaf-edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "647126",
+  "product_type": "variable",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Degree of Roast 2"
+  ],
+  "title": "Mexico Decaf Organic",
+  "url": "https://roasting.com/shop/coffee/decaf/mexico-decaf-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Mexico Decaf Organic",
+    "variant_id": "647126:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bc805c43ab3f856",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-longberry-green-price-per-2-lbs",
+  "image": "https://roasting.com/wp-content/uploads/2021/07/ethiopia_edit-300x300-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "85835",
+  "product_type": "simple",
+  "roaster_slug": "roasting",
+  "tags": [
+   "Degree of Roast 2.5",
+   "Green Beans"
+  ],
+  "title": "Ethiopia Longberry Unroasted",
+  "url": "https://roasting.com/shop/green-beans-2/ethiopia-longberry-green-price-per-2-lbs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Ethiopia Longberry Unroasted",
+    "variant_id": "85835:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

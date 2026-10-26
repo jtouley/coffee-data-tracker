@@ -1,0 +1,630 @@
+[
+ {
+  "body_hash": "06e2726caba2f4e5",
+  "first_seen": "2026-10-26",
+  "handle": "elliottis-blend",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/elliotts-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "1039",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Elliott’s Blend",
+  "url": "https://www.daybreakcoffee.com/product/elliottis-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Elliott&#8217;s Blend",
+    "variant_id": "1039:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a97a63a2c7cebd8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-wush-wush-natural",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2020/12/ethiopia-wush-wush.jpg",
+  "platform": "woocommerce",
+  "product_id": "10454",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Africa &amp; Arabian",
+   "Coffee"
+  ],
+  "title": "Ethiopia Wush Wush",
+  "url": "https://www.daybreakcoffee.com/product/ethiopia-wush-wush-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Ethiopia Wush Wush",
+    "variant_id": "10454:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae5969d55d0dc445",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2020/06/img_1361.jpg",
+  "platform": "woocommerce",
+  "product_id": "14521",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Organic"
+  ],
+  "title": "Mexico Altura FTO",
+  "url": "https://www.daybreakcoffee.com/product/mexico-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Mexico Altura FTO",
+    "variant_id": "14521:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92f02b61576a3e92",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-obsession-decaf",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/06/decaf-midnight-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "1516",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Midnight Obsession Decaf",
+  "url": "https://www.daybreakcoffee.com/product/midnight-obsession-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Midnight Obsession Decaf",
+    "variant_id": "1516:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7007ca2a8e5ab5c7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-placer",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2018/11/tino-martinez-8-e1535158637145.jpg",
+  "platform": "woocommerce",
+  "product_id": "21976",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee"
+  ],
+  "title": "Colombia El Placer",
+  "url": "https://www.daybreakcoffee.com/product/colombia-el-placer/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Colombia El Placer",
+    "variant_id": "21976:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62dfd87964590a6f",
+  "first_seen": "2026-10-26",
+  "handle": "hazenut-decaf",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/06/decaf-hazelnut-gray-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "2652",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Hazelnut Decaf",
+  "url": "https://www.daybreakcoffee.com/product/hazenut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Hazelnut Decaf",
+    "variant_id": "2652:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ec919e2956de91a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-decaf",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/06/decaf-espresso-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "2673",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Daybreak Espresso Decaf",
+  "url": "https://www.daybreakcoffee.com/product/italian-espresso-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Daybreak Espresso Decaf",
+    "variant_id": "2673:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30b5bc0d326f9f8a",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-butternut-decaf",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/06/decaf-tbn-gray-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "2736",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Flavored"
+  ],
+  "title": "Toasted Butternut Decaf",
+  "url": "https://www.daybreakcoffee.com/product/toasted-butternut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Toasted Butternut Decaf",
+    "variant_id": "2736:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b64aa8c40023e60b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2018/09/yirgacheffe-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "6269",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Africa &amp; Arabian",
+   "Coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.daybreakcoffee.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Ethiopia Yirgacheffe",
+    "variant_id": "6269:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c5492978a43ea595",
+  "first_seen": "2026-10-26",
+  "handle": "daybreak-breakfast-blend-decaf",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/decaf-dbb-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "633",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Breakfast Blend Decaf",
+  "url": "https://www.daybreakcoffee.com/product/daybreak-breakfast-blend-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Breakfast Blend Decaf",
+    "variant_id": "633:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b2248c4d1eb11f75",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-natural-misty-valley-2",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2018/10/sundrying-fase-1mistyvalley.jpg",
+  "platform": "woocommerce",
+  "product_id": "6412",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Africa &amp; Arabian",
+   "Coffee"
+  ],
+  "title": "Ethiopia Misty Valley",
+  "url": "https://www.daybreakcoffee.com/product/ethiopian-natural-misty-valley-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Ethiopia Misty Valley",
+    "variant_id": "6412:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b7fc2fda2508ea0e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-excelso",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2018/11/colombian-blue-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "6492",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee"
+  ],
+  "title": "Colombia Excelso",
+  "url": "https://www.daybreakcoffee.com/product/colombia-excelso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Colombia Excelso",
+    "variant_id": "6492:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f34aa53648d0996d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2019/01/brazil-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "6583",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee"
+  ],
+  "title": "Brazil Natural",
+  "url": "https://www.daybreakcoffee.com/product/brazil-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Brazil Natural",
+    "variant_id": "6583:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "199ceca4bef4c0c4",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-imara",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2019/03/screenshot-2024-12-18-at-19-23-39-interamerican-coffee-kenya-nguvu-aa.png",
+  "platform": "woocommerce",
+  "product_id": "6709",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Africa &amp; Arabian",
+   "Coffee"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.daybreakcoffee.com/product/kenya-imara/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Kenya AA",
+    "variant_id": "6709:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3ce8a6f8fac5515",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hue-hue-fair-trade-organic",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/guatemalan-blue-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "6775",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Organic"
+  ],
+  "title": "Guatemala Huehue FTO",
+  "url": "https://www.daybreakcoffee.com/product/guatemala-hue-hue-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Guatemala Huehue FTO",
+    "variant_id": "6775:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d714917a5538b66d",
+  "first_seen": "2026-10-26",
+  "handle": "la-minita-tarrazu",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/la-minita-tarrazu-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "748",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Americas",
+   "Coffee"
+  ],
+  "title": "Costa Rica La Minita",
+  "url": "https://www.daybreakcoffee.com/product/la-minita-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Costa Rica La Minita",
+    "variant_id": "748:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74f06fa52ff5a9de",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-fto",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/sumatra-fto-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "771",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pacific"
+  ],
+  "title": "Sumatra Mandheling FTO",
+  "url": "https://www.daybreakcoffee.com/product/sumatra-mandheling-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Sumatra Mandheling FTO",
+    "variant_id": "771:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b6e6e6134407a9c",
+  "first_seen": "2026-10-26",
+  "handle": "daybreak-breakfast-blend",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/dbb-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "772",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.daybreakcoffee.com/product/daybreak-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Breakfast Blend",
+    "variant_id": "772:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7cad1b0d2aca63a0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo-fto",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2020/04/sumatra-gayo-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "7752",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pacific"
+  ],
+  "title": "Sumatra Gayo",
+  "url": "https://www.daybreakcoffee.com/product/sumatra-gayo-fto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Sumatra Gayo",
+    "variant_id": "7752:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "121357a5647311fa",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/mocha-java-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "777",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.daybreakcoffee.com/product/mocha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Mocha Java",
+    "variant_id": "777:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "61169ab7c5fd6180",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-blend",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/espresso-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "782",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee"
+  ],
+  "title": "Daybreak Espresso",
+  "url": "https://www.daybreakcoffee.com/product/italian-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Daybreak Espresso",
+    "variant_id": "782:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "55f85581b9314036",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-french-roast",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/05/11267703_10153717856666729_971678989_n.jpg",
+  "platform": "woocommerce",
+  "product_id": "783",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roasts"
+  ],
+  "title": "Sumatra French Roast",
+  "url": "https://www.daybreakcoffee.com/product/sumatra-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Sumatra French Roast",
+    "variant_id": "783:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e2b2be1ba53cea6",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-roast",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/viennese-roast-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "784",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roasts"
+  ],
+  "title": "Viennese Roast",
+  "url": "https://www.daybreakcoffee.com/product/viennese-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Viennese Roast",
+    "variant_id": "784:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0dbf2d90db5b14d",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://www.daybreakcoffee.com/wp-content/uploads/2015/03/french-roast-wb-jpeg.jpg",
+  "platform": "woocommerce",
+  "product_id": "810",
+  "product_type": "variable",
+  "roaster_slug": "daybreakcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roasts"
+  ],
+  "title": "French Roast",
+  "url": "https://www.daybreakcoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "French Roast",
+    "variant_id": "810:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

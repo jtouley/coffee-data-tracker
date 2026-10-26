@@ -1,0 +1,401 @@
+[
+ {
+  "body_hash": "0655380cc85ef581",
+  "first_seen": "2026-10-26",
+  "handle": "wolf-4-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Coffee_4_Pack_Square_1400x1400_bf5abe17-48f2-4130-9ce1-c454926eca14.png?v=1792782354",
+  "platform": "shopify",
+  "product_id": "1933844807798",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [],
+  "title": "Wolf 4-Pack",
+  "url": "https://www.wolfcoffee.com/products/wolf-4-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1461,
+    "price_usd": 79.2,
+    "title": "Default Title",
+    "variant_id": "18338346860662"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "126194be8dec64ed",
+  "first_seen": "2026-10-26",
+  "handle": "org-extra-dark-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Extra_Dark_French_Roast_800x1400_25b3c724-1d13-47d1-9df4-7cd22a51e145.png?v=1792781111",
+  "platform": "shopify",
+  "product_id": "4509867049078",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Extra Dark French Roast",
+  "url": "https://www.wolfcoffee.com/products/org-extra-dark-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779017588854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779017621622"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "864edf8659cfaee0",
+  "first_seen": "2026-10-26",
+  "handle": "org-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_French_Roast_800x1400_568c9a03-279e-4a0b-bc23-5625f0de45e1.png?v=1792781196",
+  "platform": "shopify",
+  "product_id": "4509867081846",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic French Roast",
+  "url": "https://www.wolfcoffee.com/products/org-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779017850998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779017883766"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "ff86afd2875e1928",
+  "first_seen": "2026-10-26",
+  "handle": "org-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Espresso_Roast_800x1400_fe051fdc-e343-402a-883d-95eef9a70bcb.png?v=1792781244",
+  "platform": "shopify",
+  "product_id": "4509867147382",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Espresso Roast",
+  "url": "https://www.wolfcoffee.com/products/org-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779018211446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779018244214"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "254798df7668a9f9",
+  "first_seen": "2026-10-26",
+  "handle": "org-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_House_Blend_800x1400_f45dea0a-1f6d-4cf2-becc-b42baab2d137.png?v=1792781382",
+  "platform": "shopify",
+  "product_id": "4509867245686",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic House Blend",
+  "url": "https://www.wolfcoffee.com/products/org-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779018506358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779018539126"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "11624f7227b56763",
+  "first_seen": "2026-10-26",
+  "handle": "org-mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Mocha_Java_800x1400_deb3ede1-c2ad-4ff7-a4e2-8f9ec6b2d641.png?v=1792781433",
+  "platform": "shopify",
+  "product_id": "4509867343990",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Mocha Java",
+  "url": "https://www.wolfcoffee.com/products/org-mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779020734582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779020767350"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "aa22f7013f03562a",
+  "first_seen": "2026-10-26",
+  "handle": "org-decaf-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Decaf_House_Blend_800x1400_7d96b171-fa4f-4c49-82b2-fcd65aba61af.png?v=1792781627",
+  "platform": "shopify",
+  "product_id": "4509867475062",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Decaf House Blend",
+  "url": "https://www.wolfcoffee.com/products/org-decaf-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 ounces",
+    "variant_id": "31779021062262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "5 pounds",
+    "variant_id": "31779021095030"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "13783d6249038374",
+  "first_seen": "2026-10-26",
+  "handle": "org-city-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_City_Roast_800x1400_47bb1c8e-afe8-497a-ae63-110221a1d66e.png?v=1792781577",
+  "platform": "shopify",
+  "product_id": "4509888675958",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic City Roast",
+  "url": "https://www.wolfcoffee.com/products/org-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779091742838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779091775606"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "5af890353e053816",
+  "first_seen": "2026-10-26",
+  "handle": "org-wake-up-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Wake_Up_Blend_800x1400_991f2ec9-4526-4422-87cf-6a724a602aca.png?v=1792781313",
+  "platform": "shopify",
+  "product_id": "4509910794358",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Wake Up Blend",
+  "url": "https://www.wolfcoffee.com/products/org-wake-up-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "31779196534902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "31779196567670"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "8bdf379ef1402bb9",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/products/roasters-choice-662709.jpg?v=1698433502",
+  "platform": "shopify",
+  "product_id": "4594792988790",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [],
+  "title": "Roasters Choice",
+  "url": "https://www.wolfcoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "32094343594102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "32094343626870"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "91e23fd005c31e5c",
+  "first_seen": "2026-10-26",
+  "handle": "65-chocolate-mocha-bar-with-wolf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/products/volo-65-chocolate-mocha-bar-with-wolf-coffee-and-cream-106590.jpg?v=1698433502",
+  "platform": "shopify",
+  "product_id": "6684228616391",
+  "product_type": "Merchandise",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Holiday",
+   "Merchandise"
+  ],
+  "title": "Volo 65% Chocolate Mocha Bar with Wolf Coffee and Cream",
+  "url": "https://www.wolfcoffee.com/products/65-chocolate-mocha-bar-with-wolf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 82,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "39797232533703"
+   }
+  ],
+  "vendor": "Wolf Coffee Co."
+ },
+ {
+  "body_hash": "485b32d1d6556f3a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-costeaux-bakery-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Costeaux_Centennial_Blend_800x1400_9b5dafeb-b21d-421f-899d-a918f9d54a0f.png?v=1792781522",
+  "platform": "shopify",
+  "product_id": "8244295696605",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Costeaux Bakery Blend",
+  "url": "https://www.wolfcoffee.com/products/organic-costeaux-bakery-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "44227161456861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "44227161489629"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ },
+ {
+  "body_hash": "189440c63dcb0e21",
+  "first_seen": "2026-10-26",
+  "handle": "organic-vintners-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0036/2944/9334/files/Wolf_Vintners_Roast_800x1400_fae431e1-e698-4b76-ada2-e83eb32fde3c.png?v=1792780958",
+  "platform": "shopify",
+  "product_id": "9523274481885",
+  "product_type": "Coffee",
+  "roaster_slug": "wolfcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Vintner's Roast",
+  "url": "https://www.wolfcoffee.com/products/organic-vintners-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "48028179497181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 pounds",
+    "variant_id": "48028179529949"
+   }
+  ],
+  "vendor": "Wolf Coffee"
+ }
+]

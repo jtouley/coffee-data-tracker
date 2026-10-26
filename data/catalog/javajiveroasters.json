@@ -1,0 +1,1359 @@
+[
+ {
+  "body_hash": "e1e667fe4307dff1",
+  "first_seen": "2026-10-26",
+  "handle": "elsewhere-house-blend-5-lb-bulk",
+  "image": null,
+  "platform": "generic",
+  "product_id": "019156201d8f",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Elsewhere House Blend - 5 lb bulk",
+  "url": "https://www.javajiveroasters.com/product-page/elsewhere-house-blend-5-lb-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32a7550c9f43c9ff",
+  "first_seen": "2026-10-26",
+  "handle": "twilight-snowfall-12-oz-complex-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1016047361371",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Twilight Snowfall- 12 oz Complex Coffee Blend",
+  "url": "https://www.javajiveroasters.com/product-page/twilight-snowfall-12-oz-complex-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ad642fa85b6167b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1097767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Brazil 12oz. fresh roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf3d6fa869bace86",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fundraiser-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1173767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Organic Fair Trade Single Origin Peru",
+  "url": "https://www.javajiveroasters.com/product-page/peru-fundraiser-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3092126e7ca22ed1",
+  "first_seen": "2026-10-26",
+  "handle": "comet-soccer-blend-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "11ddf54d9104",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Comet Soccer Blend 12 oz.",
+  "url": "https://www.javajiveroasters.com/product-page/comet-soccer-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9f936cd5805014c4",
+  "first_seen": "2026-10-26",
+  "handle": "elsewhere-decaf-samplers-2-oz-resale",
+  "image": null,
+  "platform": "generic",
+  "product_id": "133a4cd6193f",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "DECAF Samplers - 2 oz resale",
+  "url": "https://www.javajiveroasters.com/product-page/elsewhere-decaf-samplers-2-oz-resale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 3.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80364cfa4f246bac",
+  "first_seen": "2026-10-26",
+  "handle": "butter-pecan-12-oz-fresh-roasted-flavored-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1353739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Butter Pecan 12 oz-Fresh Roasted Flavored Coffee",
+  "url": "https://www.javajiveroasters.com/product-page/butter-pecan-12-oz-fresh-roasted-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c08321d0512d50af",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-decaf-mexico-12oz-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1606767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "DECAF Mexico 12oz",
+  "url": "https://www.javajiveroasters.com/product-page/copy-of-decaf-mexico-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a323b67be4addb28",
+  "first_seen": "2026-10-26",
+  "handle": "bonfire-nights-blend-12oz-fresh-roasted-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1681379286171",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bonfire Nights Blend 12oz. fresh roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/bonfire-nights-blend-12oz-fresh-roasted-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "331e1c4a0840235c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-americano",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2510739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Espresso Americano",
+  "url": "https://www.javajiveroasters.com/product-page/espresso-americano",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c90f943e2108fe1",
+  "first_seen": "2026-10-26",
+  "handle": "special-dark-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "254c00ce5db5",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Special Dark Roast",
+  "url": "https://www.javajiveroasters.com/product-page/special-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de48ea2759581b27",
+  "first_seen": "2026-10-26",
+  "handle": "waupaca-farmers-market-blend-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "281a413a0386",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Waupaca Farmers Market Blend 12oz",
+  "url": "https://www.javajiveroasters.com/product-page/waupaca-farmers-market-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf4a8d42e46ea066",
+  "first_seen": "2026-10-26",
+  "handle": "white-label-11",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2c8fe414e2d9",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Got Your Six-12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/white-label-11",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c876993c346f5f1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-single-origin-12oz-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "307fc04969a0",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Colombia Single Origin 12oz Coffee",
+  "url": "https://www.javajiveroasters.com/product-page/colombia-single-origin-12oz-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e2a31838bb76cf00",
+  "first_seen": "2026-10-26",
+  "handle": "bean-adventurous",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3186739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bean Adventurous-12 oz fresh-roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/bean-adventurous",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b6b6d2392f35c65",
+  "first_seen": "2026-10-26",
+  "handle": "love-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "320739426851",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Love Blend Fresh Roasted Gourmet Coffee 12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/love-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c3c39aa6aad027b9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-electrique-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3219770135671",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Espresso Electrique",
+  "url": "https://www.javajiveroasters.com/product-page/espresso-electrique-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa6a4a7523aa1625",
+  "first_seen": "2026-10-26",
+  "handle": "black-gold",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3875739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Black Gold Gourmet Coffee Blend-12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/black-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "295d78c5868438f4",
+  "first_seen": "2026-10-26",
+  "handle": "elsewhere-decaf-12-oz-resale",
+  "image": null,
+  "platform": "generic",
+  "product_id": "448722ae23bc",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Elsewhere DECAF - 12 oz resale",
+  "url": "https://www.javajiveroasters.com/product-page/elsewhere-decaf-12-oz-resale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04aab3c8a0d84a09",
+  "first_seen": "2026-10-26",
+  "handle": "elsewhere-house-blend-12-oz-resale",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4830cb0ff554",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Elsewhere House Blend - 12 oz resale",
+  "url": "https://www.javajiveroasters.com/product-page/elsewhere-house-blend-12-oz-resale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "924ca4f2fe2e24a2",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-electrique",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4860739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Espresso 51 DECAF",
+  "url": "https://www.javajiveroasters.com/product-page/espresso-electrique",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a565aec998b40b0e",
+  "first_seen": "2026-10-26",
+  "handle": "java-cold-cold-brew-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4b1be805fe58",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Java Cold-Cold Brew Blend",
+  "url": "https://www.javajiveroasters.com/product-page/java-cold-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b74c578b369803d",
+  "first_seen": "2026-10-26",
+  "handle": "best-dad-in-the-world-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4c5bf11601c9",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Best Dad in the World blend",
+  "url": "https://www.javajiveroasters.com/product-page/best-dad-in-the-world-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f3394aa76e9a4cb",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5681767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bali Blue Moon",
+  "url": "https://www.javajiveroasters.com/product-page/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5415d302b05cf190",
+  "first_seen": "2026-10-26",
+  "handle": "creamery-blend-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6298767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Cream O' The Crop 12oz. fresh roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/creamery-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "261a8d902414b770",
+  "first_seen": "2026-10-26",
+  "handle": "love-you-mom-12-oz-fresh-roasted-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6f7e15b96d7d",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Love You, Mom-12 oz fresh-roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/love-you-mom-12-oz-fresh-roasted-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "099561ffa75446c8",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee-flavored-coffee-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7414739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "English Toffee Flavored Coffee 12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/english-toffee-flavored-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "worship-blend-victory-church-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7719a5478bec",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Worship Blend-Victory Church (12 oz)",
+  "url": "https://www.javajiveroasters.com/product-page/worship-blend-victory-church-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f248b435b3c19f68",
+  "first_seen": "2026-10-26",
+  "handle": "mid-watch-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "79378e29194d",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Mid-Watch-12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/mid-watch-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f899523b3176eee1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-single-origin-roasted-coffee-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7989046035671",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Ethiopia Single Origin Roasted Coffee 12oz",
+  "url": "https://www.javajiveroasters.com/product-page/ethiopia-single-origin-roasted-coffee-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d614b64b74bfb960",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8124767148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Sumatra 12oz - fresh roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "860cbdd1e0545c98",
+  "first_seen": "2026-10-26",
+  "handle": "gca-legacy-blend-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8451fe114b2b",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "GCA Legacy Makers Blend 12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/gca-legacy-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6cb1c1197c21b986",
+  "first_seen": "2026-10-26",
+  "handle": "calico-blonde-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8585996427873",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Calico Blonde Espresso",
+  "url": "https://www.javajiveroasters.com/product-page/calico-blonde-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5926a7515fa1a859",
+  "first_seen": "2026-10-26",
+  "handle": "fireworks-show",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8721739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Fireworks Show Cold Brew Blend",
+  "url": "https://www.javajiveroasters.com/product-page/fireworks-show",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30250c296239a5ae",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-blend-12-oz-fresh-roasted-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8955308497371",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Hazelnut Blend-12 oz fresh roasted coffee",
+  "url": "https://www.javajiveroasters.com/product-page/hazelnut-blend-12-oz-fresh-roasted-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c08321d0512d50af",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-loot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8ca6b70b4ec8",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "DECAF Mexico-Loot",
+  "url": "https://www.javajiveroasters.com/product-page/decaf-mexico-loot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e2e2affcf215f5a",
+  "first_seen": "2026-10-26",
+  "handle": "1908-heritage-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8d02a56a6d3d",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "1908 Heritage Blend",
+  "url": "https://www.javajiveroasters.com/product-page/1908-heritage-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a793f432936c1dd",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme-12-oz-fresh-roasted-flavored-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9574739148861",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Irish Creme 12 oz-Fresh Roasted Flavored Coffee",
+  "url": "https://www.javajiveroasters.com/product-page/irish-creme-12-oz-fresh-roasted-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a467cff17023d22",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg-wild-rose-sadd-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9672cc82457b",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Highlander Grogg-Wild Rose SADD-12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/highlander-grogg-wild-rose-sadd-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e10fdf60cd82382f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fundraiser-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "97c869afc55f",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bonfire Nights GCA Fundraiser 12 oz.",
+  "url": "https://www.javajiveroasters.com/product-page/colombia-fundraiser-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf6bf59c24326aae",
+  "first_seen": "2026-10-26",
+  "handle": "summer-s-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9dc33d492563",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Summer's Blend",
+  "url": "https://www.javajiveroasters.com/product-page/summer-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "saints-blend-victory-church-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a3d859537d54",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Saints Blend-Victory Church DECAF",
+  "url": "https://www.javajiveroasters.com/product-page/saints-blend-victory-church-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7de1fe1392722b0b",
+  "first_seen": "2026-10-26",
+  "handle": "artillery-espresso-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a8fd31ca99b3",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Artillery Espresso-12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/artillery-espresso-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "636eee36fa6b4143",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ae5e47ed468e",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Fair Trade Organic Peru GCA Fundraiser 12 oz.",
+  "url": "https://www.javajiveroasters.com/product-page/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "generations-blend-victory-church-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b001aff120ac",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Generations Blend-Victory Church (12 oz)",
+  "url": "https://www.javajiveroasters.com/product-page/generations-blend-victory-church-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0cae189edf904d9",
+  "first_seen": "2026-10-26",
+  "handle": "casino-blend-12-oz-resale",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b68806b9dbda",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "REGULAR Casino Brew-12 oz resale",
+  "url": "https://www.javajiveroasters.com/product-page/casino-blend-12-oz-resale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ee43b67e2d299c1",
+  "first_seen": "2026-10-26",
+  "handle": "java-safari",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b6dade3bee7d",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Java Safari",
+  "url": "https://www.javajiveroasters.com/product-page/java-safari",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "501b4c470973af64",
+  "first_seen": "2026-10-26",
+  "handle": "fto-sumatra-barnwood",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b6e2fcef3c57",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "FTO Sumatra-Barnwood 12 oz bags",
+  "url": "https://www.javajiveroasters.com/product-page/fto-sumatra-barnwood",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "winter-s-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bd6cdefa817b",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Winter's Blend",
+  "url": "https://www.javajiveroasters.com/product-page/winter-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8eaacf70f7d88919",
+  "first_seen": "2026-10-26",
+  "handle": "casino-bulk-regular-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c499f01cdcd6",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Casino Bulk REGULAR Coffee by the lb",
+  "url": "https://www.javajiveroasters.com/product-page/casino-bulk-regular-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "826292f42b7771f2",
+  "first_seen": "2026-10-26",
+  "handle": "loot-sumatra-10",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c6632b0ee7ee",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Loot-Sumatra $12.50",
+  "url": "https://www.javajiveroasters.com/product-page/loot-sumatra-10",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "19e2c3ee155d0f96",
+  "first_seen": "2026-10-26",
+  "handle": "wild-hornets-smooth-pass-blend-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c9c430805265",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Wild Hornets Smooth Pass Blend 12 oz.",
+  "url": "https://www.javajiveroasters.com/product-page/wild-hornets-smooth-pass-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78c00399dc87791e",
+  "first_seen": "2026-10-26",
+  "handle": "till-i-collapse-waupaca-dance-team-blend-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d8bc1ef89244",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Till I Collapse Waupaca Dance Team Blend- 12 oz",
+  "url": "https://www.javajiveroasters.com/product-page/till-i-collapse-waupaca-dance-team-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c58bc98ce702ee0d",
+  "first_seen": "2026-10-26",
+  "handle": "this-is-my-black-friday-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e1fef0cc4e6c",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "THIS IS MY BLACK FRIDAY BLEND",
+  "url": "https://www.javajiveroasters.com/product-page/this-is-my-black-friday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed29f269290e00eb",
+  "first_seen": "2026-10-26",
+  "handle": "bountiful-complex-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f315347c3b54",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bountiful- Complex Blend",
+  "url": "https://www.javajiveroasters.com/product-page/bountiful-complex-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9783bba1f6b1068d",
+  "first_seen": "2026-10-26",
+  "handle": "1913-house-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f8d4482f960c",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "1913 House Blend",
+  "url": "https://www.javajiveroasters.com/product-page/1913-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3fdfb5215af0ad1c",
+  "first_seen": "2026-10-26",
+  "handle": "elsewhere-house-decaf-5-lb-bulk",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fc294e915137",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Elsewhere DECAF - 5 lb bulk",
+  "url": "https://www.javajiveroasters.com/product-page/elsewhere-house-decaf-5-lb-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "nations-blend-victory-church-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fd057b9c337b",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Nations Blend-Victory Church (12 oz)",
+  "url": "https://www.javajiveroasters.com/product-page/nations-blend-victory-church-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c570798a37a8c06",
+  "first_seen": "2026-10-26",
+  "handle": "bonfire-nights-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fe59d2228271",
+  "product_type": "",
+  "roaster_slug": "javajiveroasters",
+  "tags": [],
+  "title": "Bonfire Nights Blend",
+  "url": "https://www.javajiveroasters.com/product-page/bonfire-nights-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

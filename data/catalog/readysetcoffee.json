@@ -1,0 +1,1272 @@
+[
+ {
+  "body_hash": "759f0956e5f98712",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Brazil_SiteBag_2025.png?v=1749061968",
+  "platform": "shopify",
+  "product_id": "4309619703859",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Brazil",
+   "Go Buddha",
+   "Medium/Dark Roast",
+   "Nutty",
+   "Roasted Retail Coffee",
+   "Single Origin",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://readysetcoffee.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "30994182537267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "30994182570035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "30994182668339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "30994182733875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "30994182766643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "32632889737267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "32632898027571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "32746425647155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "39473943740467"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "3b5a424ef6f7d99c",
+  "first_seen": "2026-10-26",
+  "handle": "positively-placebo-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Decaf_Placebo_Mexico_2025.png?v=1760917014",
+  "platform": "shopify",
+  "product_id": "4309646082099",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Nutty",
+   "Single Origin",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Positively Placebo Decaf (MWP)",
+  "url": "https://readysetcoffee.com/products/positively-placebo-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "30994294505523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "30994294571059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "30994294603827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "30994294636595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "30994294669363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "30994294702131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "30994294734899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "39451472035891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "39485313581107"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "5b950b8aa1413e97",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/products/SumatraMandheling1.png?v=1600425769",
+  "platform": "shopify",
+  "product_id": "4309660500019",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Cedar",
+   "Dark/Medium Roast",
+   "Go Buddha",
+   "Indonesia",
+   "Peppery",
+   "Single Origin",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://readysetcoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "30994359615539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "30994359648307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "30994359713843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "30994359812147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "30994359877683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "32252920102963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "39248477028403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "39451500249139"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "8d05dfefc176f482",
+  "first_seen": "2026-10-26",
+  "handle": "garage-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/RS_BlendBags_Deep_Track_2026.png?v=1769693047",
+  "platform": "shopify",
+  "product_id": "4309676752947",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Blend",
+   "Deep Tracks",
+   "Medium/Dark Roast",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Garage Blend Deep Track",
+  "url": "https://readysetcoffee.com/products/garage-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "30994414174259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "30994414207027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "30994414239795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "30994414272563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "30994414305331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "30994414338099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "30994414370867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "32746427383859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "39480012701747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Drip",
+    "variant_id": "44588650168371"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "20176d1c3873dc84",
+  "first_seen": "2026-10-26",
+  "handle": "amplifire",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/RS_BlendBags_Amplifire.png?v=1760915238",
+  "platform": "shopify",
+  "product_id": "4746161881139",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Blend",
+   "Go Buddha",
+   "Medium/Dark Roast",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Amplifire Roaster's Blend",
+  "url": "https://readysetcoffee.com/products/amplifire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32746136141875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "32746136174643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "32746136207411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "32746136240179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "32746136272947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "32746136305715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "32746136404019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "32746423713843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "39485312008243"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "a4fac7686970e38f",
+  "first_seen": "2026-10-26",
+  "handle": "witches-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/RS_BlendBags_Witches_Brew_26.png?v=1790859702",
+  "platform": "shopify",
+  "product_id": "6839731028019",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Witches Brew",
+  "url": "https://readysetcoffee.com/products/witches-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41015074848819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "41015074881587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "41015074914355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "41015074947123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "41015074979891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "41015075012659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "41015075045427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "41015075078195"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "d83bd2a72b9fee37",
+  "first_seen": "2026-10-26",
+  "handle": "hi-fi-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/RS_BlendBags_HI-FI.png?v=1760915546",
+  "platform": "shopify",
+  "product_id": "6848340852787",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Brazil",
+   "Go Buddha",
+   "Medium/Dark Roast",
+   "Nutty",
+   "Single Origin",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Hi Fi Espresso Blend",
+  "url": "https://readysetcoffee.com/products/hi-fi-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41043636944947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "41043636977715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "41043637010483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "41043637043251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "41043637076019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "41043637108787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "41043637141555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "41043637174323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41043637469235"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "cbab213e54bf7036",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-manos-de-mujer-organic-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/products/HondoSiteBagcopy.png?v=1668022299",
+  "platform": "shopify",
+  "product_id": "6859346477107",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Fruity",
+   "Light Roast",
+   "Roasted Retail Coffee",
+   "Single Origin",
+   "Sweet",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Honduras Manos de Mujer, Organic, Fair Trade",
+  "url": "https://readysetcoffee.com/products/honduras-manos-de-mujer-organic-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41090353823795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "41090353856563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "41090353889331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "41090353922099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "41090353954867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "41090353987635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "41090354020403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "41090354053171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41090354348083"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "7b5ace516a72abf5",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Chiapas_1080x_6113c36a-c493-4153-b92c-8c85d20ca1f6.png?v=1682620553",
+  "platform": "shopify",
+  "product_id": "6913189478451",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Cold Brew",
+   "Green Apple",
+   "Medium Roast",
+   "Milk Chocolate",
+   "Roasted Retail Coffee",
+   "Single Origin",
+   "Sweet",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://readysetcoffee.com/products/copy-of-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41276458565683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "41276458598451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "41276458631219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "41276458663987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "41276458696755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Aeropress",
+    "variant_id": "41276458729523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "41276458762291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "41276458795059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41276459089971"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roaming-biscuit-brazil-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Screenshot2025-01-20at9.45.18AM_ae495eb0-662d-447e-b772-714bdc80a04c.png?v=1737384367",
+  "platform": "shopify",
+  "product_id": "6953612836915",
+  "product_type": "",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Roaming Biscuit",
+   "spo-cs-disabled",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "wholesale"
+  ],
+  "title": "Roaming Biscuit BRAZIL",
+  "url": "https://readysetcoffee.com/products/roaming-biscuit-brazil-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42949271257139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "5lb / Drip",
+    "variant_id": "42949271289907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42949271322675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz / Drip",
+    "variant_id": "42949271355443"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "1376d70a8758112e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Peru_2024.png?v=1726151152",
+  "platform": "shopify",
+  "product_id": "7371782389811",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "spo-cs-disabled",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Peru Cajamarca, Organic, Fair Trade",
+  "url": "https://readysetcoffee.com/products/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42498447015987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "42498447048755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "42498447081523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "42498447114291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "42498447147059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "42498447179827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "42498447212595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42498447409203"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-therapy-volcanes-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Screenshot_2024-12-23_at_12.44.32_PM.png?v=1734975907",
+  "platform": "shopify",
+  "product_id": "7488355565619",
+  "product_type": "",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "coffee therapy",
+   "spo-cs-disabled",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "wholesale"
+  ],
+  "title": "Coffee Therapy LOS VOLCANES (Medium Roast)",
+  "url": "https://readysetcoffee.com/products/coffee-therapy-volcanes-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42883819569203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip",
+    "variant_id": "42883819601971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42883819634739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12oz / Drip",
+    "variant_id": "42883819667507"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "bce7c4ffe5771638",
+  "first_seen": "2026-10-26",
+  "handle": "saint-ignatius-5lb-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Saint_Ignatius_High_School_Logo_df6ac8cb-0c5d-4dde-acc9-eee1c3825fb8.png?v=1736446039",
+  "platform": "shopify",
+  "product_id": "7500360056883",
+  "product_type": "",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Saint ignatius",
+   "wholesale"
+  ],
+  "title": "Saint Ignatius DECAF | 5 LB",
+  "url": "https://readysetcoffee.com/products/saint-ignatius-5lb-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "42916911939635"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "9f6c5bc41830a681",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-hulia",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/ColombiaHuila2025website.png?v=1745411372",
+  "platform": "shopify",
+  "product_id": "7572113784883",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Blood Orange",
+   "Roasted Retail Coffee",
+   "Single Origin",
+   "Sweet",
+   "Vanilla",
+   "Walnut",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Colombia Hulia",
+  "url": "https://readysetcoffee.com/products/columbia-hulia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43288273944627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "43288273977395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "43288274010163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "43288274042931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "43288274075699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "43288274108467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "43288274141235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43288274174003"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "4e512dd8f2e6debd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gera-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/files/Ethiopian_2024_website_bag.png?v=1749231727",
+  "platform": "shopify",
+  "product_id": "7598167392307",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Fruity",
+   "Light Roast",
+   "Single Origin",
+   "Sweet",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "Ethiopia GERA Estate",
+  "url": "https://readysetcoffee.com/products/ethiopia-gera-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43376536617011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "43376536649779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "43376536682547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "43376536715315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "43376536748083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "43376536780851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "43376536813619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "43376536846387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43376536879155"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "john-cafe-test-coffee-decaf",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7811005612083",
+  "product_type": "",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "John B cafe",
+   "spo-cs-disabled",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "wholesale"
+  ],
+  "title": "John Cafe Test Coffee Decaf",
+  "url": "https://readysetcoffee.com/products/john-cafe-test-coffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "44172568068147"
+   }
+  ],
+  "vendor": "Ready Set!"
+ },
+ {
+  "body_hash": "74391be9018433c3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-los-volcanes-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0101/7099/0643/products/LosVolcanesWebimage2.png?v=1625001031",
+  "platform": "shopify",
+  "product_id": "7879884767283",
+  "product_type": "Roasted Coffee 12oz",
+  "roaster_slug": "readysetcoffee",
+  "tags": [
+   "Fruity",
+   "Light Roast",
+   "Roasted Retail Coffee",
+   "Single Origin",
+   "Sweet",
+   "Volcanes",
+   "spo-cs-disabled",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Guatemala Antigua Los Volcanes",
+  "url": "https://readysetcoffee.com/products/guatemala-antigua-los-volcanes-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44504103551027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Drip",
+    "variant_id": "44504103583795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Chemex",
+    "variant_id": "44504103616563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Hario",
+    "variant_id": "44504103649331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | French Press",
+    "variant_id": "44504103682099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | AeroPress",
+    "variant_id": "44504103714867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Espresso",
+    "variant_id": "44504103747635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Ground | Cold Brew",
+    "variant_id": "44504103780403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44504103813171"
+   }
+  ],
+  "vendor": "Ready Set!"
+ }
+]

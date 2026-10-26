@@ -1,0 +1,114 @@
+{
+ "7473878728787": {
+  "body_hash": "b547488e9473b9c0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "walnut",
+   "chocolate",
+   "spice"
+  ],
+  "varietals": []
+ },
+ "7473879253075": {
+  "body_hash": "c7ff7cefe0fb6cf7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cinnamon",
+   "incense",
+   "dark fruits",
+   "spice"
+  ],
+  "varietals": []
+ },
+ "7473879449683": {
+  "body_hash": "ee7a869de7ad0746",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "lemongrass",
+   "soft fruit",
+   "floral",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "7473881022547": {
+  "body_hash": "f22128fc74dc2865",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7473881481299": {
+  "body_hash": "25f69db0ed9570e7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smoky",
+   "spicy",
+   "chocolatey"
+  ],
+  "varietals": []
+ },
+ "8006333038675": {
+  "body_hash": "56bbb0fa5f81b932",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "milk chocolate",
+   "orange"
+  ],
+  "varietals": []
+ }
+}

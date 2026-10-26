@@ -1,0 +1,510 @@
+[
+ {
+  "body_hash": "a2286fdf42e71b64",
+  "first_seen": "2026-10-26",
+  "handle": "backporch",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/9f26cf4f-88e2-4e25-b3ab-fab33498945a/Backporch_Flagship_Backporch.jpg",
+  "platform": "squarespace",
+  "product_id": "534805b8e4b0d938823fbf0d",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Backporch",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/backporch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground for Drip",
+    "variant_id": "3e3d5d63-9b7b-40a1-850d-a55265c1a58f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Whole Bean",
+    "variant_id": "4b67bc6a-793f-4803-8c7a-1c24329387a5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "5a5ed6f8-0887-440f-a29b-550049d1dfef"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "7afe81e1-9e62-41f0-b066-48d5c3a81772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Ground for Drip",
+    "variant_id": "ae00b737-e6cf-4cec-a462-725f9ba053b0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Ground for Drip",
+    "variant_id": "f3106840-8a50-403c-b3fa-aff668e1cad6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ffcb0a814d1f413",
+  "first_seen": "2026-10-26",
+  "handle": "daybreak",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/8adf6bcf-c5aa-4ff7-8521-66251d950d31/Backporch_Flagship_Daybreak.jpg",
+  "platform": "squarespace",
+  "product_id": "534d6f95e4b0bb4b40770cb7",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Daybreak",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/daybreak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Whole Bean",
+    "variant_id": "27e630f2-c16d-4617-8eda-c840c5ccd709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Ground for Drip",
+    "variant_id": "d3a73b4d-6bc2-4f3e-af8d-5fabaaee1a78"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "d41bf5bd-d95c-40d6-a2ab-daf4d9811faf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "e1ac339d-81b8-4951-89f5-d3fb344ab2fd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground for Drip",
+    "variant_id": "f282488b-b218-4c98-ae95-fa7f1e4683f6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Ground for Drip",
+    "variant_id": "fa79b8b4-d7ec-4457-9349-60bb16bfe646"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "062b129e83b2d20b",
+  "first_seen": "2026-10-26",
+  "handle": "peloton",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/374119d8-f6fa-41e9-a4f8-61af35f60f2c/Backporch_Flagship_Peloton.jpg",
+  "platform": "squarespace",
+  "product_id": "55afd796e4b006aa02083f56",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Peloton",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/peloton",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "1b4e3fb0-05eb-475b-8bd7-f687eb5eea5b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "28a94a88-cce5-411c-a62c-996e8413e18e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Whole Bean",
+    "variant_id": "722ca53f-2003-44d1-a20d-556bc88ec680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Ground for Drip",
+    "variant_id": "9d0acdcd-d1b9-474c-87b1-787eaee3152f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground for Drip",
+    "variant_id": "b412a3e6-5ea2-4a1c-92c6-fcf8b5debc9a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Ground for Drip",
+    "variant_id": "bfd22140-c5b9-4133-9a00-922b69916c1a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a92cbe3c7c8aa92",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/b48a8118-f911-4125-bcc3-fc49ca8b43f4/Backporch_Flagship_Decaf.jpg",
+  "platform": "squarespace",
+  "product_id": "5a7363cc419202457b287a29",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground for Drip",
+    "variant_id": "45d2f85b-c7b0-424c-b0cb-d61d77e8964b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5 lb Ground for Drip",
+    "variant_id": "958af133-66d2-46f5-81aa-d5d75e573fb4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Ground for Drip",
+    "variant_id": "9911ad99-e2f4-4655-b9b3-4560488c7907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "d67649bd-a842-4a82-a1d7-4405c644097d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "f6aa1b02-816d-40b0-b307-5c5f4dd2d94a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5 lb Whole Bean",
+    "variant_id": "f996f751-3efa-4d29-a7fc-2e84f4d329c1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a116a6288855dfa3",
+  "first_seen": "2026-10-26",
+  "handle": "single-track",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/4b9c2c28-2ea0-4789-b12f-7be4798cdd80/Backporch_Flagship_SingleTrack.jpg",
+  "platform": "squarespace",
+  "product_id": "5e0247ea7645b07c061409f9",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Single Track",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/single-track",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground for Drip",
+    "variant_id": "3de0d172-7d4e-4d36-ae20-56f5310aaddf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Whole Bean",
+    "variant_id": "4ef97eb3-c8b9-4c39-922d-a30f0276966f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb Ground for Drip",
+    "variant_id": "53fa4d73-ae80-46cb-928d-a46b300e9624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Whole Bean",
+    "variant_id": "54b1e286-42e0-4645-963d-ba9322cddc89"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "5aeb7822-d60b-4b4e-8d04-161d48870a33"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb Ground for Drip",
+    "variant_id": "6d7e6499-f6ec-402a-811e-10cf96b2cf67"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b976e18d6a63bef",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karinga-peaberry-snwcs-ky7h6-pmkjf-96s3h-djkyh-ma7k4-93zmh-kcl9b-rn9nc-gsgfr-8w7f4-ndesm-c98p2-b75wb-gw8dy-nbtpw",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/0e355dcd-9f7c-408e-b893-48a242569358/NewCostaRicaweb.png",
+  "platform": "squarespace",
+  "product_id": "669ee1339be4c149758978a0",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica La Minita Estate",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/kenya-karinga-peaberry-snwcs-ky7h6-pmkjf-96s3h-djkyh-ma7k4-93zmh-kcl9b-rn9nc-gsgfr-8w7f4-ndesm-c98p2-b75wb-gw8dy-nbtpw",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "2dfedceb-f314-4a13-b69e-89f769f07bf9"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb Ground for Drip",
+    "variant_id": "4d838e3f-ed2c-4f41-8dea-3a9845c0be0a"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Ground for Drip",
+    "variant_id": "b453d8b9-bd9f-488b-85d9-1ef836ad8c18"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "c0ca7e88-f69f-42f4-990d-c22f2b0eb588"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9b120fa66eeefa7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karinga-peaberry-snwcs-ky7h6-pmkjf-96s3h-djkyh-ma7k4-93zmh-kcl9b-rn9nc-gsgfr-8w7f4-ndesm-7bztl-cazby-hhm8f",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/848c9e8b-2681-4ca9-b3c1-9f86968dbcfe/Artboard+1.jpg",
+  "platform": "squarespace",
+  "product_id": "67ffeabb62084c40fcff6446",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Sidama Natural Process",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/kenya-karinga-peaberry-snwcs-ky7h6-pmkjf-96s3h-djkyh-ma7k4-93zmh-kcl9b-rn9nc-gsgfr-8w7f4-ndesm-7bztl-cazby-hhm8f",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "59c2804c-aa5c-4d3d-9c25-21843df09ade"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "836a8a45-0103-4358-9fa2-0b1803e03874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb Ground for Drip",
+    "variant_id": "88cb042e-687c-4674-a2d9-247cc1b102dd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lbs Ground for Drip",
+    "variant_id": "939f4e0f-3e38-486d-8f32-212e67801c21"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Ground for Drip",
+    "variant_id": "b2972929-990f-4b84-b3e8-35d804caa94e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "dd421dc4-d82f-4f00-b275-69ce8b8d8e9d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "852f93e58de6f4c5",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/b3c6f532-02e3-4a0a-a331-1b4a7fca0e14/Artboard+2.jpg",
+  "platform": "squarespace",
+  "product_id": "69f3ea56c8a2ae6eea3fd8b1",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Kenya Kirinyaga Kiamugumo AA",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Ground for Drip",
+    "variant_id": "49468e17-038c-481f-81a5-bbbba4049591"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Whole Bean",
+    "variant_id": "4d9c231f-7a32-45d0-bb3e-dc71316bb94c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "4dd573c1-8f42-4afd-9d13-66c5d9049afe"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "9caa3a18-c50c-4b2c-a1bf-80bc62977bf4"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Ground for Drip",
+    "variant_id": "d876ac7f-0dc5-41d7-897d-e56b7fbd3875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground for Drip",
+    "variant_id": "f026c339-7e27-4a1e-ad78-8c6ee913286f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc4dd184626bc226",
+  "first_seen": "2026-10-26",
+  "handle": "honey-bear-mexico",
+  "image": "https://images.squarespace-cdn.com/content/v1/534738bae4b08984da50e291/222e9f36-34fe-4156-8891-4eb6f40d842e/Backporch_ShowcaseSeries_HoneyBearMexico.jpg",
+  "platform": "squarespace",
+  "product_id": "6a863c859b8b4c53cd5dcade",
+  "product_type": "",
+  "roaster_slug": "backporchcoffeeroasters",
+  "tags": [],
+  "title": "Honey Bear  Mexico Las Lajas Yellow Honey",
+  "url": "https://www.backporchcoffeeroasters.com/buyonline/p/honey-bear-mexico",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "33006c01-efde-429c-be44-f84eb21cd7f8"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. Whole Bean",
+    "variant_id": "52afd120-6ae0-4958-9611-d388ec755471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb Ground for Drip",
+    "variant_id": "769e062b-9a29-40f7-a40b-326963e3acfc"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs Ground for Drip",
+    "variant_id": "cc1412cb-89f6-49de-8040-4130209f8083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz. Ground for Drip",
+    "variant_id": "dcbddbf6-e276-4583-9f66-39cda4a9587d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "df571a78-e9b6-4014-80dd-bd8b70eb48cc"
+   }
+  ],
+  "vendor": ""
+ }
+]

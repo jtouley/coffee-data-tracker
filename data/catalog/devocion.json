@@ -1,0 +1,1289 @@
+[
+ {
+  "body_hash": "8fd51db046d0ada2",
+  "first_seen": "2026-10-26",
+  "handle": "mirolindo-women-in-coffee-10oz-goody",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/MIROLINDO-WOMEN-IN-COFFEE-Devocion-141820180.png?v=1787352647",
+  "platform": "shopify",
+  "product_id": "15521271447923",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "Coffee",
+   "black_crow_do_not_cross_sell",
+   "black_crow_do_not_replenish",
+   "black_crow_do_not_subscribe",
+   "goody",
+   "grind",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "MIROLINDO - WOMEN IN COFFEE - 10oz - GOODY",
+  "url": "https://www.devocion.com/products/mirolindo-women-in-coffee-10oz-goody",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.6,
+    "title": "Whole Bean",
+    "variant_id": "64274488689011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.6,
+    "title": "Ground",
+    "variant_id": "64274488721779"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "464eeb9b51a5f1ba",
+  "first_seen": "2026-10-26",
+  "handle": "la-riviera-culturing-niu",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/LA-RIVIERA-CULTURING-NIU-Devocion-142214556.png?v=1789062870",
+  "platform": "shopify",
+  "product_id": "15539510870387",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "Limited Edition Coffees",
+   "New Coffee",
+   "grind",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "LA RIVIERA CULTURING NIU",
+  "url": "https://www.devocion.com/products/la-riviera-culturing-niu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Whole Bean",
+    "variant_id": "64629590032755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Aeropress",
+    "variant_id": "64629590065523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Espresso",
+    "variant_id": "64629590098291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Chemex",
+    "variant_id": "64629590131059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Cold Brew",
+    "variant_id": "64629590163827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Pour Over",
+    "variant_id": "64629590196595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "French Press",
+    "variant_id": "64629590229363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Moka Pot",
+    "variant_id": "64629590262131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.0,
+    "title": "Auto Drip",
+    "variant_id": "64629590294899"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "92d8a67ed4f14f59",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-colombia-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Honey-12oz-Devocion-45102948.png?v=1746657596",
+  "platform": "shopify",
+  "product_id": "427734621",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "grind",
+   "honey",
+   "multigift",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "HONEY",
+  "url": "https://www.devocion.com/products/coffee-colombia-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "1014006939668"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "1125870557"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "1125870561"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "1125870565"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "1125870569"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "1125870585"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "1125870593"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "1125870601"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "1125870609"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "59f1884746e28d0c",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-toro",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/TORO-8oz-Devocion-45106166.png?v=1746657746",
+  "platform": "shopify",
+  "product_id": "427740973",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "grind",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled",
+   "toro"
+  ],
+  "title": "TORO",
+  "url": "https://www.devocion.com/products/house-blend-coffee-toro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "1013972729876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "1125883033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "1125883041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "1125883045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "1125883049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "1125883053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "1125883057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "1125883061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "1125883065"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "3a678b8cc7a7262e",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-wild-forest",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Wild-Forest-12oz-Devocion-45103796.png?v=1746657634",
+  "platform": "shopify",
+  "product_id": "427746489",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "grind",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled",
+   "wild forest"
+  ],
+  "title": "WILD FOREST",
+  "url": "https://www.devocion.com/products/house-blend-coffee-wild-forest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "1014150561812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "1125893305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "1125893309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "1125893317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "1125893321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "1125893325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "1125893329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "1125893333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "1125893341"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "2d2fe4ea0256ca3c",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-el-sol",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/El-Sol-12oz-Devocion-45102880.png?v=1746657592",
+  "platform": "shopify",
+  "product_id": "4330288447603",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "el sol",
+   "grind",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "EL SOL",
+  "url": "https://www.devocion.com/products/house-blend-coffee-el-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "31078567575667"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "31078567608435"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "31078567641203"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "31078567673971"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "31078567706739"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "31078567739507"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "31078567772275"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "31078567805043"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "31078567837811"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "1c8d9536c7b374d1",
+  "first_seen": "2026-10-26",
+  "handle": "special-edition-coffee-red-barrel",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Red-Barrel-12oz-Devocion-45103244.png?v=1746657611",
+  "platform": "shopify",
+  "product_id": "4426288562291",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "Limited Edition Coffees",
+   "Standalone",
+   "aa_size",
+   "grind",
+   "lim",
+   "multigift",
+   "red barrel",
+   "retail",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "RED BARREL",
+  "url": "https://www.devocion.com/products/special-edition-coffee-red-barrel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Whole Bean",
+    "variant_id": "31450441777267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Aeropress",
+    "variant_id": "31450441810035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Espresso",
+    "variant_id": "31450441842803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Chemex",
+    "variant_id": "31450441875571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Cold Brew",
+    "variant_id": "31450441908339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Pour Over",
+    "variant_id": "31450441941107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "French Press",
+    "variant_id": "31450441973875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Moka Pot",
+    "variant_id": "31450442006643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Auto Drip",
+    "variant_id": "31450442039411"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "e69717e4eac27477",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Decaf-12oz-Devocion-45102647.png?v=1746657583",
+  "platform": "shopify",
+  "product_id": "4442715553907",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "aa_size",
+   "decaf",
+   "grind",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "DECAF",
+  "url": "https://www.devocion.com/products/house-blend-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "31504490266739"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "31504490299507"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "31504490332275"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "31504490365043"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "31504490397811"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "31504490430579"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "31504490463347"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "31504490496115"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "31504490528883"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "224ecaafc919d876",
+  "first_seen": "2026-10-26",
+  "handle": "mirolindo-women-in-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/MIROLINDO-WOMEN-IN-COFFEE-Devocion-141820180.png?v=1787352647",
+  "platform": "shopify",
+  "product_id": "7270823428211",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "Coffee",
+   "Limited Edition Coffees",
+   "aa_size",
+   "grind",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "MIROLINDO - WOMEN IN COFFEE",
+  "url": "https://www.devocion.com/products/mirolindo-women-in-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Whole Bean",
+    "variant_id": "40994482356339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Aeropress",
+    "variant_id": "40994482389107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Espresso",
+    "variant_id": "40994482421875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Chemex",
+    "variant_id": "40994482454643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Cold Brew",
+    "variant_id": "40994482487411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Pour Over",
+    "variant_id": "40994482520179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "French Press",
+    "variant_id": "40994482552947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Moka Pot",
+    "variant_id": "40994482585715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Auto Drip",
+    "variant_id": "40994482618483"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "0dc03e06f05f8e30",
+  "first_seen": "2026-10-26",
+  "handle": "el-diviso-ombligon",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/EL-DIVISO-OMBLIGON-Devocion-143642462.png?v=1791225741",
+  "platform": "shopify",
+  "product_id": "7332906041459",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "Coffee",
+   "Limited Edition Coffees",
+   "New Coffee",
+   "grind",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "EL DIVISO OMBLIGÓN",
+  "url": "https://www.devocion.com/products/el-diviso-ombligon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Whole Bean",
+    "variant_id": "41135965798515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Aeropress",
+    "variant_id": "41135965831283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Espresso",
+    "variant_id": "41135965864051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Chemex",
+    "variant_id": "41135965896819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Cold Brew",
+    "variant_id": "41135965929587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Pour Over",
+    "variant_id": "41135965962355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "French Press",
+    "variant_id": "41135965995123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Moka Pot",
+    "variant_id": "41135966027891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.5,
+    "title": "Auto Drip",
+    "variant_id": "41135966060659"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "19cdf43683bbd3af",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-sombra",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/SOMBRA-10oz-GOODY-Devocion-45107534.png?v=1746657813",
+  "platform": "shopify",
+  "product_id": "7441162207347",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "grind",
+   "multigift",
+   "retail",
+   "sombra",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "SOMBRA",
+  "url": "https://www.devocion.com/products/house-blend-coffee-sombra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "41430471082099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "41430471114867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "41430471147635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "41430471180403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "41430471213171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "41430471245939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "41430471278707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "41430471311475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "41430471344243"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "513bae4a2ad236c9",
+  "first_seen": "2026-10-26",
+  "handle": "villa-pastora-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/VILLA-PASTORA-NATURAL-Devocion-45098932.png?v=1746657420",
+  "platform": "shopify",
+  "product_id": "7711970066547",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "Limited Edition Coffees",
+   "New Coffee",
+   "grind",
+   "multigift",
+   "spo-default"
+  ],
+  "title": "VILLA PASTORA NATURAL",
+  "url": "https://www.devocion.com/products/villa-pastora-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Whole Bean",
+    "variant_id": "42110074519667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Aeropress",
+    "variant_id": "42110074552435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Espresso",
+    "variant_id": "42110074585203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Chemex",
+    "variant_id": "42110074617971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Cold Brew",
+    "variant_id": "42110074650739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Pour Over",
+    "variant_id": "42110074683507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "French Press",
+    "variant_id": "42110074716275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Moka Pot",
+    "variant_id": "42110074749043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "Auto Drip",
+    "variant_id": "42110074781811"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "de8753bfdafe2893",
+  "first_seen": "2026-10-26",
+  "handle": "miti-miti-half-caff-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Miti-Miti-Half-Caff-12oz-Devocion-45103157.png?v=1746657607",
+  "platform": "shopify",
+  "product_id": "7717887639667",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "aa_size",
+   "grind",
+   "miti miti",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "MITI MITI - HALF CAFF",
+  "url": "https://www.devocion.com/products/miti-miti-half-caff-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "42122046931059"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "42122046963827"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "42122046996595"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "42122047029363"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "42122047062131"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "42122047094899"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "42122047127667"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "42122047160435"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "42122047193203"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "e9612879ffd73f3c",
+  "first_seen": "2026-10-26",
+  "handle": "dorado",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/DORADO-Devocion-142075626.png?v=1788536973",
+  "platform": "shopify",
+  "product_id": "7729663148147",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "Coffee",
+   "Limited Edition Coffees",
+   "grind",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "DORADO",
+  "url": "https://www.devocion.com/products/dorado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "42152916123763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "42152916156531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "42152916189299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "42152916222067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "42152916254835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "42152916287603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "42152916320371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "42152916353139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "42152916385907"
+   }
+  ],
+  "vendor": "Devoción"
+ },
+ {
+  "body_hash": "0c2bca76a21ab576",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-citrus",
+  "image": "https://cdn.shopify.com/s/files/1/0734/9587/files/Citrus-12oz-Devocion-45102519.png?v=1746657578",
+  "platform": "shopify",
+  "product_id": "9604216714",
+  "product_type": "RT Sold Coffee",
+  "roaster_slug": "devocion",
+  "tags": [
+   "12oz",
+   "Coffee",
+   "House Blends",
+   "Standalone",
+   "aa_size",
+   "citrus",
+   "grind",
+   "multigift",
+   "retail",
+   "spo-default",
+   "spo-disabled"
+  ],
+  "title": "CITRUS",
+  "url": "https://www.devocion.com/products/house-blend-coffee-citrus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Whole Bean",
+    "variant_id": "34056467018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Aeropress",
+    "variant_id": "39929405079667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Chemex",
+    "variant_id": "39929421168755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Cold Brew",
+    "variant_id": "39929421201523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Espresso",
+    "variant_id": "39929421234291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "French Press",
+    "variant_id": "39929421267059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Moka Pot",
+    "variant_id": "39929421299827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Pour Over",
+    "variant_id": "39929421332595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "Auto Drip",
+    "variant_id": "39929421365363"
+   }
+  ],
+  "vendor": "Devoción"
+ }
+]

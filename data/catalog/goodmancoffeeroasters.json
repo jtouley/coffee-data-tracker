@@ -1,0 +1,814 @@
+[
+ {
+  "body_hash": "cfb727a137ee5115",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-corquin-copan",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615405749758-6DCST2GC68R31LPE76E5/honduras.jpg",
+  "platform": "squarespace",
+  "product_id": "6049217976bcc251abe25e83",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Honduras: Corquin, Copan Natural",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/honduras-corquin-copan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "GROUND",
+    "variant_id": "84e638c4-c3e0-4aaa-a511-ef8d79d83d30"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "adbe6a21-6a6c-40dc-8a58-332e0907ccd3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "722d05e4ed82c069",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-corquin-copan-1",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615406571560-K1CYWLUD2G5PYES2OR7K/honduras.jpg",
+  "platform": "squarespace",
+  "product_id": "604923475bc367287bd63f13",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Honduras: Corquin, Copan Washed",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/honduras-corquin-copan-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "3b296b2c-394c-4a40-9885-4c2f04676623"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "b75c92cc-d836-468c-a88a-a4412b5a8d43"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615409529329-VTYJEDL8S12KQGSFUC8D/Papua+New+Guinea.jpg",
+  "platform": "squarespace",
+  "product_id": "6049311c5cf1e8539b564686",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "coffee"
+  ],
+  "title": "Papua New Guinea: Jiawaka Province",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/papua-new-guinea",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "",
+    "variant_id": "9ae2d4db-802a-4342-b196-78b62724a582"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "india-malabar",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615409915849-M2C1DY39K36QTZDAU0ZG/India.jpg",
+  "platform": "squarespace",
+  "product_id": "604932b6c046300ea30dadcf",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "India: Malabar",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/india-malabar",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "539cb644-19cf-45c7-a592-5e5ac9e54485"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "8083af4c-8246-482f-9b60-a27c42096923"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-cerro-pecul",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615410033321-KAMIZ90HMVUMU9MSCS4H/Guatemala.jpg",
+  "platform": "squarespace",
+  "product_id": "6049332d2601dd038841b8fd",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala: Cerro Pecul",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/guatemala-cerro-pecul",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "06606e24-55b3-4c6f-854f-bf53e4d7ec2b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "c5777267-4362-4526-a9ab-bd38e82b2ab5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615410404616-CN5XRFRZXT0ZQGW206OM/Mexican.jpg",
+  "platform": "squarespace",
+  "product_id": "604934b05cf1e8539b56bd2a",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico: Chiapas",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "GROUND",
+    "variant_id": "14410b01-b2e1-4540-ad32-1595bf927c10"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "6a056ff6-7193-45ae-ae99-8ec1085c2b8e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-mbeya",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615410510662-Z3IQK1G3KPS9HGCPEFYD/tanzanian+country.jpg",
+  "platform": "squarespace",
+  "product_id": "60493504cfc3a24eb8ab50a6",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Tanzanian: Mbeya",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/tanzanian-mbeya",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "GROUND",
+    "variant_id": "3032efc8-b25f-4692-a940-ea5ba62b4ff9"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "cdf274ef-4086-4ce4-8377-0913f80ef6e7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b95790aba88db71",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615411338603-X1XS96IH09OTEEK09NMI/Peru.jpg",
+  "platform": "squarespace",
+  "product_id": "6049385ff07aa24d9dd3e863",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Peru: Cajamarca",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "e70e3b4a-80f4-4133-84ec-46b3fb54ad5d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "GROUND",
+    "variant_id": "f6848536-f692-4c41-830e-3b3e4b5dfc52"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-riacho-das-varas",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/f126b09f-9025-468f-821e-5664519117da/brazil.png",
+  "platform": "squarespace",
+  "product_id": "604938a40838ff64cd25fb9b",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Brazil",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/brazil-riacho-das-varas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "GROUND",
+    "variant_id": "1f6e0c35-79c1-4ab9-b6c3-72b9bebf08f0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "ac29ac69-d671-4f1f-b305-ad51f4807fdf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-gedeo",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615411552610-55EZEMIR0869OXZI5NQ4/Ethiopian+w.jpg",
+  "platform": "squarespace",
+  "product_id": "60493918fd08723216f1a011",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopia: Gedeb",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/ethiopia-yirgacheffe-gedeo",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "WHOLE BEAN",
+    "variant_id": "2583f4ce-ec03-45fb-93b7-3dcba6d672f9"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "GROUND",
+    "variant_id": "90b9d030-9c31-43c0-b7bc-23f674702bbb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42821047d463c783",
+  "first_seen": "2026-10-26",
+  "handle": "chattanooga-whiskey-barrel-aged",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1615411640170-GXGD289MUBDI9AH8U520/Chatt+Whisk+Barrel+aged.jpg",
+  "platform": "squarespace",
+  "product_id": "60493979b0792f0446910f44",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Chattanooga Whiskey Barrel Aged",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/chattanooga-whiskey-barrel-aged",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "WHOLE BEAN",
+    "variant_id": "3a2dcb78-65d3-4c9f-a058-8ac3fd28f85b"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "GROUND",
+    "variant_id": "bb8ee649-795f-447a-a094-bda203e32804"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c32c888a85ba5fb",
+  "first_seen": "2026-10-26",
+  "handle": "vdrsqdz0ifct5hh1z8izwnn4gnwzaa",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1622654599048-CJ4OPIOYDN53YG291SY2/collab+photo+website.jpg",
+  "platform": "squarespace",
+  "product_id": "60afb4b3e388261755d7da95",
+  "product_type": "Coffee,Ventola,Exotics Series",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Exotics Series",
+   "Ventola"
+  ],
+  "title": "Colombia Experimental Series: Unblended/Ventola Collaboration",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/vdrsqdz0ifct5hh1z8izwnn4gnwzaa",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "Frozen Cherry",
+    "variant_id": "3bd2fd3f-f6d1-4cfa-b254-aa2c44c856d7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "Kombucha",
+    "variant_id": "6782a4fb-9904-46c9-9ab3-46339bf5126f"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "Wine & Induction",
+    "variant_id": "afd0789b-d8a6-485f-9210-21a71e92d36a"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "Rum",
+    "variant_id": "ba60eaa7-dad4-4b47-88fe-0e63660869cf"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "Pink Bourbon",
+    "variant_id": "ecfb5cb6-6d99-418b-b5af-3253cf032095"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "360x7616qu5khnza4iljmbzg3ji3qh",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1623273223887-CAIQPFZW6A53JGYSOQJN/Sumatra+L.jpg",
+  "platform": "squarespace",
+  "product_id": "60c12dccf4e19b289802c560",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra: Lintongnihuta",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/360x7616qu5khnza4iljmbzg3ji3qh",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "GROUND",
+    "variant_id": "191e841f-7860-4a60-864a-f39f25657532"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "WHOLE BEAN",
+    "variant_id": "6672c8cd-a879-4141-a3a5-ac0871ed2e43"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "63b64a71c8d49874",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1642785041207-QQAP5XIJD3E7DVYD4OVL/Colombia%2Bcountry.jpg",
+  "platform": "squarespace",
+  "product_id": "61eae8ab3c15550416ca9aad",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "GROUND",
+    "variant_id": "055d402b-ffcb-4047-8d6c-1a4a39a372ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "1dc54698-b04f-493f-aa11-69b1f3a41b60"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "congo-timu-south-kivu",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1643654284902-9H3AWITBV8HPBJCS8WZJ/congo+web.jpg",
+  "platform": "squarespace",
+  "product_id": "61f82bb83e5f8530513f5024",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Congo Timu: South Kivu",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/congo-timu-south-kivu",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "e89210cf-49f9-47d8-b38e-08d382db2804"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "f9c7fdad-3e92-4fd6-a691-004d3c0d7946"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64cc7a2ced463a9b",
+  "first_seen": "2026-10-26",
+  "handle": "shred-roast-12oz-bag",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1665771697326-QAFAZ5OO21D8CDEBS6AN/shred%2Broast%2Bbag.jpg",
+  "platform": "squarespace",
+  "product_id": "634080886513fa3afa130bac",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "SHRED ROAST",
+   "coffee"
+  ],
+  "title": "SHRED ROAST 12oz bag",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/shred-roast-12oz-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "GROUND",
+    "variant_id": "777678d6-1fa7-44d0-b9a7-7c7f081955de"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "WHOLE BEAN",
+    "variant_id": "ffe652fb-78be-4a23-ac4b-a25cfb2a469d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f110b5ea21c278c0",
+  "first_seen": "2026-10-26",
+  "handle": "exotics-series-colombia-guava-banana",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1668200531981-NE5O2J6WYUDX38CM9T9Y/exotics%2Bphoto.jpg",
+  "platform": "squarespace",
+  "product_id": "636eb6882b948c6721beefd4",
+  "product_type": "Coffee,Exotics Series",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Exotics Series"
+  ],
+  "title": "Exotics Series: Colombia Guava & Banana",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/exotics-series-colombia-guava-banana",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "WHOLE BEAN",
+    "variant_id": "024ed350-2820-4413-8c94-185223e925b4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.49,
+    "title": "GROUND",
+    "variant_id": "f8ac9afe-21da-44cb-8c79-4a40b84eafbb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7159bac21a2b5431",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed-carolina-ramirez",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1671223784754-UQZKWVUU6XH8LQYDHGHW/Colombia%2Bcountry.jpg",
+  "platform": "squarespace",
+  "product_id": "639cd1aaeff08045fe38e516",
+  "product_type": "Coffee,Ventola",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Ventola"
+  ],
+  "title": "Colombia: Washed, Carolina Ramirez",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/colombia-washed-carolina-ramirez",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "115f52f9-35b3-403e-b446-dd03e7121de8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "GROUND",
+    "variant_id": "b4fd7842-022d-40af-81f8-db8159e640e0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eeb5d57c37583ce7",
+  "first_seen": "2026-10-26",
+  "handle": "102-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1680290102165-AUY1WXY7CT9YE9M4W2I4/102+logo.jpg",
+  "platform": "squarespace",
+  "product_id": "64272a7bfc8f111028ad4b2d",
+  "product_type": "Whole Bean,Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Whole Bean"
+  ],
+  "title": "102 Blend",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/102-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "381d5535-4c9d-4c98-9e19-98a758dd0752"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "b70aa19e-e98c-4772-9a9b-b96877b553e1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a4b0edeacd27237",
+  "first_seen": "2026-10-26",
+  "handle": "goodmans-espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1680291242236-GYRRT295Z1VNRN759VHU/espresso+logo.jpg",
+  "platform": "squarespace",
+  "product_id": "642732eefc8f111028ad5680",
+  "product_type": "Coffee,Whole Bean",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Whole Bean"
+  ],
+  "title": "Goodman's Espresso Blend",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/goodmans-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "GROUND",
+    "variant_id": "37cde308-b4b9-4890-b015-f2477238cf5e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "b721f7c7-2776-4667-8ffe-0929622df4a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9851570477c86cb6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-black-condor",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1671223784754-UQZKWVUU6XH8LQYDHGHW/Colombia%2Bcountry.jpg",
+  "platform": "squarespace",
+  "product_id": "64b961968cc53c16015ba936",
+  "product_type": "Coffee",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "coffee",
+   "colombia"
+  ],
+  "title": "Colombia: Black Condor",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/colombia-black-condor",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "GROUND",
+    "variant_id": "999da96d-1b65-4971-ab45-0a5d55646d63"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "b70f56d9-77df-4e83-b478-0c612e37e799"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d1ab072ff14f122",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-anaerobic-higa",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1689957765259-JA25JG7TMMBAFDX68QCV/Rwanda.jpg",
+  "platform": "squarespace",
+  "product_id": "64bab38b8cc53c16015ca717",
+  "product_type": "Coffee,Whole Bean",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Whole Bean",
+   "coffee",
+   "fruity",
+   "rwanda",
+   "specialty",
+   "top shelf"
+  ],
+  "title": "Rwanda: Anaerobic Natural",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/rwanda-anaerobic-higa",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "9f135bcd-3d0b-40a3-9e4a-2edee0583586"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "GROUND",
+    "variant_id": "f957bb68-a805-4617-a37c-45d7284039c0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b007532f11ff4afa",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1703099794074-9V0U1CR7SSFS0M09C7IM/Costa+Rica.jpg",
+  "platform": "squarespace",
+  "product_id": "65833d6d1fcb7f541736d408",
+  "product_type": "",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/costa-rica",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "53508a84-3b18-4a77-8800-6833dbaf1e47"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "915da6a755249627",
+  "first_seen": "2026-10-26",
+  "handle": "goodmancoffee-pullandpour-brazil",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b8ee154c3c16aefe3209ec2/1714936220953-83DCK0XAZDYR5LG23UCI/brazil.png",
+  "platform": "squarespace",
+  "product_id": "6637cf4e61689a56db4909d3",
+  "product_type": "Coffee,Exotics Series,Whole Bean",
+  "roaster_slug": "goodmancoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Exotics Series",
+   "Whole Bean",
+   "bright coffee",
+   "chocolate",
+   "coffee",
+   "fruity",
+   "hazelnut",
+   "light roast"
+  ],
+  "title": "Brazil: Goodman X Pull & Pour X Vinhal coffee collaboration",
+  "url": "https://www.goodmancoffeeroasters.com/coffee/goodmancoffee-pullandpour-brazil",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Grape Starfruit 12oz",
+    "variant_id": "4c2448ae-d7ae-41da-bdec-c02daa9f3df4"
+   },
+   {
+    "available": false,
+    "grams": 125,
+    "price_usd": 25.0,
+    "title": "set of 3x4.4oz of all 3 offerings",
+    "variant_id": "59798528-1113-4ac9-bd78-4278075091f1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Chocolate Hazelnut 12oz",
+    "variant_id": "80af496d-61bb-4158-8cc5-fc67dee8ab05"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Honey Propolis 12oz",
+    "variant_id": "b6550913-e29a-44c3-b84c-22b3e9c0068f"
+   }
+  ],
+  "vendor": ""
+ }
+]

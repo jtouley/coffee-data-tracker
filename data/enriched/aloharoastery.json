@@ -1,0 +1,304 @@
+{
+ "09e8a16eecfc": {
+  "body_hash": "2def5a23f38c6bd5",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "rasberry",
+   "floral",
+   "dark chocolate"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "1210835ca8f1": {
+  "body_hash": "c49c6b57d387dd33",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond",
+   "chocolate",
+   "cream"
+  ],
+  "varietals": []
+ },
+ "1304381600ea": {
+  "body_hash": "a2f2b499c1681190",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cherry",
+   "pinapple",
+   "honey"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "254247cbf478": {
+  "body_hash": "b11f5f63a46baf4b",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "papaya",
+   "lime",
+   "caramel"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "5c86890f92e2": {
+  "body_hash": "dda7e847f1ff6139",
+  "elevation_masl_max": 1780,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "strawberry",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "68bd95bb2e99": {
+  "body_hash": "8aa586612dbdd7cd",
+  "elevation_masl_max": 1533,
+  "elevation_masl_min": 1533,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "pineapple",
+   "mango",
+   "caramel"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Sarchimor"
+  ]
+ },
+ "81ae9c2d667a": {
+  "body_hash": "e3290015c43c3aff",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "butterscotch",
+   "brown sugar"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "a3647dff9551": {
+  "body_hash": "4d0d06394f1fcdb2",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "red apple",
+   "honey",
+   "apricot jam"
+  ],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "a7a3d1c84c81": {
+  "body_hash": "3d985afdc9c4e66f",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry",
+   "vanilla",
+   "caramel"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "b63096680c0d": {
+  "body_hash": "c1b8f733fbbe1321",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "honey roasted peanuts"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "d93f0f7b3bbb": {
+  "body_hash": "4460000cbbddb089",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "raspberry",
+   "plum",
+   "cola"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra"
+  ]
+ },
+ "df6a7ed0ca6d": {
+  "body_hash": "25a3e2dd78ab9622",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry",
+   "apple",
+   "cocoa"
+  ],
+  "varietals": [
+   "Catimor",
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "f8b15b31e4f2": {
+  "body_hash": "05c327dab715f2d3",
+  "elevation_masl_max": 1150,
+  "elevation_masl_min": 1150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cocoa",
+   "almond",
+   "cream"
+  ],
+  "varietals": []
+ },
+ "fc95d6ce3270": {
+  "body_hash": "40aa06d50d9aa3a9",
+  "elevation_masl_max": 1350,
+  "elevation_masl_min": 1150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond",
+   "honey",
+   "cocoa"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ }
+}

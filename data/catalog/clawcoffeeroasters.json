@@ -1,0 +1,3018 @@
+[
+ {
+  "body_hash": "9a37cf638d39a494",
+  "first_seen": "2026-10-26",
+  "handle": "bernards-espresso-euphoria",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Bernards_Espresso.png?v=1738868805",
+  "platform": "shopify",
+  "product_id": "7344293511399",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Bernard's Espresso Euphoria",
+  "url": "https://clawcoffeeroasters.com/products/bernards-espresso-euphoria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42249986343143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42249986375911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42249986408679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42249986441447"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "42506561552615"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "42506561585383"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "42506561618151"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "42506561650919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50925869400295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50925869433063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50925869465831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50925869498599"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "94ac81d9368f4cf7",
+  "first_seen": "2026-10-26",
+  "handle": "coming-soon",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Sumatra_c4f7ec7d-176c-454c-9cc3-205f348af774.png?v=1738716909",
+  "platform": "shopify",
+  "product_id": "7439391326439",
+  "product_type": "Southeast Asia Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://clawcoffeeroasters.com/products/coming-soon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42426195345639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42426195378407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42426195411175"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42426195443943"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42506592420071"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42506592452839"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42506592485607"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42506592518375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926064271591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926064304359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926064337127"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926064369895"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "b8256bd52e6c87dd",
+  "first_seen": "2026-10-26",
+  "handle": "flair-witch-project",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/MokaJava_82182f0e-951c-472c-ab23-e950d2568e80.png?v=1777661934",
+  "platform": "shopify",
+  "product_id": "7440755785959",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Dark"
+  ],
+  "title": "Moka Java",
+  "url": "https://clawcoffeeroasters.com/products/flair-witch-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42250023567591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 56.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42250023600359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42250023633127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42250023665895"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42506582032615"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42506582065383"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42506582098151"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42506582130919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926049755367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926049788135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926049820903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926049853671"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "021e3b3e2cd797dc",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/PNG_6c7bba2b-3f6c-469d-810e-b2d25d3448ad.png?v=1777665373",
+  "platform": "shopify",
+  "product_id": "7454479712487",
+  "product_type": "Southeast Asia Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://clawcoffeeroasters.com/products/papua-new-guinea-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42250025992423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42250026025191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42250026057959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42250026090727"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42506585735399"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42506585800935"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42506585899239"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42506585964775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926059454695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926059487463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926059520231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926059552999"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "2c835aff88e43ad6",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-bam-bam-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/ColombianBamBam25.png?v=1763069009",
+  "platform": "shopify",
+  "product_id": "7454496653543",
+  "product_type": "South American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Columbia",
+   "Organic",
+   "Single Origin",
+   "South America"
+  ],
+  "title": "Colombian Bam Bam",
+  "url": "https://clawcoffeeroasters.com/products/columbian-bam-bam-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 OZ",
+    "variant_id": "42249997418727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind- Espresso / 12 OZ",
+    "variant_id": "42249997451495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 OZ",
+    "variant_id": "42249997484263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 OZ",
+    "variant_id": "42249997517031"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 OZ (3lbs)",
+    "variant_id": "42506562863335"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind- Espresso / 48 OZ (3lbs)",
+    "variant_id": "42506562896103"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 OZ (3lbs)",
+    "variant_id": "42506562928871"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 OZ (3lbs)",
+    "variant_id": "42506562961639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "50925902102759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind- Espresso / 5LB",
+    "variant_id": "50925902135527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5LB",
+    "variant_id": "50925902168295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5LB",
+    "variant_id": "50925902201063"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "ae2e4838d3d80a45",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Brazil_Mogiana.png?v=1752873927",
+  "platform": "shopify",
+  "product_id": "7454499569895",
+  "product_type": "South American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Medium",
+   "Single Origin"
+  ],
+  "title": "Brazilian Stash - Fazenda Sao Luiz",
+  "url": "https://clawcoffeeroasters.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "42249996435687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind- Espresso / 12 oz Bag",
+    "variant_id": "42249996468455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind  - Drip / 12 oz Bag",
+    "variant_id": "42249996501223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 12 oz Bag",
+    "variant_id": "42249996533991"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz Bag (3lbs)",
+    "variant_id": "42506550477031"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind- Espresso / 48 oz Bag (3lbs)",
+    "variant_id": "42506550509799"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind  - Drip / 48 oz Bag (3lbs)",
+    "variant_id": "42506550542567"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 48 oz Bag (3lbs)",
+    "variant_id": "42506550575335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50925888995559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind- Espresso / 5lb",
+    "variant_id": "50925889028327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind  - Drip / 5lb",
+    "variant_id": "50925889061095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50925889093863"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "26fa275366d9470f",
+  "first_seen": "2026-10-26",
+  "handle": "winter-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Winterful_db7a1933-7c42-4798-9cee-f133263a5316.png?v=1777661486",
+  "platform": "shopify",
+  "product_id": "7460395188455",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Dark",
+   "Limited Edition",
+   "WinterKids"
+  ],
+  "title": "Winterful Blend",
+  "url": "https://clawcoffeeroasters.com/products/winter-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42250027204839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12oz",
+    "variant_id": "42250027237607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12oz",
+    "variant_id": "42250027270375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "42250027303143"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42506598711527"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42506598744295"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42506598777063"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42506598809831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926077542631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926077575399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926077608167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926077640935"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "1c2cba7b614d3202",
+  "first_seen": "2026-10-26",
+  "handle": "driftwood-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Driftwood.png?v=1777662114",
+  "platform": "shopify",
+  "product_id": "7462501613799",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Coffee",
+   "Medium"
+  ],
+  "title": "Driftwood Blend",
+  "url": "https://clawcoffeeroasters.com/products/driftwood-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42249387147495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42249387180263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind- Drip / 12 oz",
+    "variant_id": "42249387213031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind- French Press - Cold Brew / 12 oz",
+    "variant_id": "42249387245799"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "42506575839463"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "42506575872231"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind- Drip / 48 oz (3lbs)",
+    "variant_id": "42506575937767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind- French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "42506576036071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50925996245223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50925996277991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind- Drip / 5lb",
+    "variant_id": "50925996310759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind- French Press - Cold Brew / 5lb",
+    "variant_id": "50925996343527"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "6fa19c12edba9a01",
+  "first_seen": "2026-10-26",
+  "handle": "bow-line-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Jibboo_a278a864-43b6-4e79-a81d-dbf5c202593b.png?v=1777661958",
+  "platform": "shopify",
+  "product_id": "7479957160167",
+  "product_type": "",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso",
+   "Medium"
+  ],
+  "title": "Jibboo Blend",
+  "url": "https://clawcoffeeroasters.com/products/bow-line-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42250025238759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42250025271527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42250025304295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42250025337063"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "42506580984039"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "42506581016807"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "42506581049575"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "42506581082343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926045004007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926045036775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926045069543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926045102311"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "990b6e4d17cc43b4",
+  "first_seen": "2026-10-26",
+  "handle": "destiny-unground",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/DestinyUnground_65302fb9-6666-4244-b73d-d1bcde63f899.png?v=1777662212",
+  "platform": "shopify",
+  "product_id": "7490466840807",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Destiny Unground",
+  "url": "https://clawcoffeeroasters.com/products/destiny-unground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42240502628583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42249099116775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind  - Drip / 12 oz",
+    "variant_id": "42249099149543"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42249099182311"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "42506570399975"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "42506570432743"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind  - Drip / 48 oz (3lbs)",
+    "variant_id": "42506570465511"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "42506570498279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50925988282599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50925988315367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind  - Drip / 5lb",
+    "variant_id": "50925988348135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse  Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50925988380903"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "898cc7d8b2757b54",
+  "first_seen": "2026-10-26",
+  "handle": "this-one-is-peru-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/peru_9c86de19-58bc-4603-815f-615e466c7bb7.png?v=1777660288",
+  "platform": "shopify",
+  "product_id": "7491901685991",
+  "product_type": "South American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "This One’s Peru",
+  "url": "https://clawcoffeeroasters.com/products/this-one-is-peru-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42250028187879"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12oz",
+    "variant_id": "42250028220647"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12oz",
+    "variant_id": "42250028253415"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "42250028286183"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42506598088935"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42506598121703"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42506598154471"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42506598187239"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926072660199"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926072692967"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926072725735"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926072758503"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "2a72a10594b42125",
+  "first_seen": "2026-10-26",
+  "handle": "valentines-special-flowers-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Foghorn_54511ab4-4b84-4c19-8e11-175dd5ad9abf.png?v=1739311902",
+  "platform": "shopify",
+  "product_id": "7501512835303",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Foghorn Blend",
+  "url": "https://clawcoffeeroasters.com/products/valentines-special-flowers-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 Ounces",
+    "variant_id": "42631646019815"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 Ounces (3lbs)",
+    "variant_id": "42631646052583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind / 12 Ounces",
+    "variant_id": "42631646150887"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind / 48 Ounces (3lbs)",
+    "variant_id": "42631646183655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind / 12 Ounces",
+    "variant_id": "42631646216423"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind / 48 Ounces (3lbs)",
+    "variant_id": "42631646249191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine / 12 Ounces",
+    "variant_id": "42631687209191"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine / 48 Ounces (3lbs)",
+    "variant_id": "42631687241959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926037303527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine / 5lb",
+    "variant_id": "50926037336295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind / 5lb",
+    "variant_id": "50926037369063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind / 5lb",
+    "variant_id": "50926037401831"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "edfd244766421da8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/EthiopiaYirgacheffe_207e2bb8-fa8f-46ba-bac8-8296b89ac659.png?v=1777662880",
+  "platform": "shopify",
+  "product_id": "7533188612327",
+  "product_type": "African Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Light",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Yirgacheffe - Edido",
+  "url": "https://clawcoffeeroasters.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42426193281255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "42426193314023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "42426193346791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "42426193379559"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "42506580033767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "42506580066535"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "42506580099303"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "42506580132071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926035599591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926035632359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926035665127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926035697895"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "67e52b796a3adc00",
+  "first_seen": "2026-10-26",
+  "handle": "the-great-divide",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/TheGreatDivide_699f7028-97c5-49c9-a242-4f1c1f447860.png?v=1739311847",
+  "platform": "shopify",
+  "product_id": "7748270489831",
+  "product_type": "Decaffeinated Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "The Great Divide - Half Caff Blend",
+  "url": "https://clawcoffeeroasters.com/products/the-great-divide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42873972949223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12oz",
+    "variant_id": "42873985466599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12oz",
+    "variant_id": "42873985499367"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "42996977926375"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "42996977959143"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "42996977991911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "42996978024679"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "42996978057447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926069580007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926069612775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926069645543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926069678311"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "a2b216d2b751b049",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/EthiopiaGuji_882b4c16-deb8-4086-9759-7bf7ad12e78e.png?v=1777662844",
+  "platform": "shopify",
+  "product_id": "7935624380647",
+  "product_type": "African Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Medium",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://clawcoffeeroasters.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43710965776615"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "43710965809383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "43710965842151"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "43710965874919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "43710965907687"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "43710965940455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "43710965973223"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "43710966005991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926006436071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926006468839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926006501607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926006534375"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "178ea2d46a571ba6",
+  "first_seen": "2026-10-26",
+  "handle": "frankys-fresh-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/FrankysFreshRoast.png?v=1693875753",
+  "platform": "shopify",
+  "product_id": "8382586454247",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Franky's Fresh Roast",
+  "url": "https://clawcoffeeroasters.com/products/frankys-fresh-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "46703913173223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso",
+    "variant_id": "46703913205991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip",
+    "variant_id": "46703913238759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew",
+    "variant_id": "46703913271527"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "381d50cbae3b833d",
+  "first_seen": "2026-10-26",
+  "handle": "taste",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Taste_f1f65239-094a-4194-aa6c-23fc34307975.png?v=1777661654",
+  "platform": "shopify",
+  "product_id": "8754975572199",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Taste",
+  "url": "https://clawcoffeeroasters.com/products/taste",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "49056765477095"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "49056765509863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12oz",
+    "variant_id": "49056765542631"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "49056765575399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12oz",
+    "variant_id": "49056765608167"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "49056765640935"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "49056765673703"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "49056765706471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926066860263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926066893031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926066925799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926066958567"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "87f33bddff450c42",
+  "first_seen": "2026-10-26",
+  "handle": "small-craft-advisory",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/SmallCraftAdviosry.png?v=1771708494",
+  "platform": "shopify",
+  "product_id": "8981270167783",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Small Craft Advisory",
+  "url": "https://clawcoffeeroasters.com/products/small-craft-advisory",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "50061650985191"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "50061651017959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "50061651050727"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "50061651083495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "50061651116263"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "50061651149031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "50061651181799"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "50061651214567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926062698727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926062731495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926062764263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926062797031"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "44c8fa4779451b3d",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/TanzaniaPeaberry_3726922a-f05b-484c-840e-537986ad933c.png?v=1738868829",
+  "platform": "shopify",
+  "product_id": "9012893450471",
+  "product_type": "African Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://clawcoffeeroasters.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50253840023783"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "50253840056551"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12oz",
+    "variant_id": "50253840089319"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "50253840122087"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12oz",
+    "variant_id": "50253840154855"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "50253840187623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "50253840220391"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "50253840253159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926065615079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926065647847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926065680615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926065713383"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "93112cf8ef679163",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-reserva-pacavita-shg-ep",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Honduras_3befb6a4-27b9-4aca-b5d3-f44fadcc8f70.png?v=1767738260",
+  "platform": "shopify",
+  "product_id": "9084383396071",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Honduras Reserva Pacavita SHG EP",
+  "url": "https://clawcoffeeroasters.com/products/honduras-reserva-pacavita-shg-ep",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "50620555165927"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz Bag (3lbs)",
+    "variant_id": "50620555198695"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz Bag",
+    "variant_id": "50620555231463"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz Bag (3lbs)",
+    "variant_id": "50620555264231"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz Bag",
+    "variant_id": "50620555296999"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 oz Bag (3lbs)",
+    "variant_id": "50620555329767"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz Bag",
+    "variant_id": "50620555362535"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz Bag (3lbs)",
+    "variant_id": "50620555395303"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926042874087"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926042906855"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926042939623"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926042972391"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "82a24f41df66296a",
+  "first_seen": "2026-10-26",
+  "handle": "oh-buoy",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Oh_Buoy.png?v=1738337900",
+  "platform": "shopify",
+  "product_id": "9104292806887",
+  "product_type": "Coffee - Blends",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Oh Buoy - Dark Espresso Blend",
+  "url": "https://clawcoffeeroasters.com/products/oh-buoy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "50678117007591"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "50678117040359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "50678117073127"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 3lb",
+    "variant_id": "50678117105895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "50678117138663"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 3lb",
+    "variant_id": "50678117171431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "50678117204199"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "50678117236967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50926055031015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50926055063783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50926055096551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50926055129319"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "13036915d5912704",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-antioquia-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/ColombianSwissWaterDecaf.png?v=1747236141",
+  "platform": "shopify",
+  "product_id": "9186797322471",
+  "product_type": "Decaffeinated Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Antioquia Swiss Water Decaf",
+  "url": "https://clawcoffeeroasters.com/products/colombia-antioquia-swiss-water-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "50961820352743"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 48oz Bag (3lbs)",
+    "variant_id": "50961820385511"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine - Espresso / 12oz Bag",
+    "variant_id": "50961820418279"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine - Espresso / 48oz Bag (3lbs)",
+    "variant_id": "50961820451047"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium - Drip - Pour Over / 12oz Bag",
+    "variant_id": "50961820483815"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium - Drip - Pour Over / 48oz Bag (3lbs)",
+    "variant_id": "50961820516583"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse - French Press - Cold Brew / 12oz Bag",
+    "variant_id": "50961820549351"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse - French Press - Cold Brew / 48oz Bag (3lbs)",
+    "variant_id": "50961820582119"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50961845420263"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine - Espresso / 5lb",
+    "variant_id": "50961845453031"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium - Drip - Pour Over / 5lb",
+    "variant_id": "50961845485799"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse - French Press - Cold Brew / 5lb",
+    "variant_id": "50961845518567"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "1256004770cfe4ab",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-faro-coffee-hub-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/ColumbiaPinkBourbon_f30c7a19-c804-42f8-a3f6-37824e8e04ab.png?v=1747333319",
+  "platform": "shopify",
+  "product_id": "9186833727719",
+  "product_type": "South American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [],
+  "title": "Colombia - El Faro Pink Bourbon",
+  "url": "https://clawcoffeeroasters.com/products/colombia-el-faro-coffee-hub-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "50962014044391"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 48 oz (3lb)",
+    "variant_id": "50962014077159"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "50962014109927"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lb)",
+    "variant_id": "50962014142695"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "50962014175463"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Medium Grind - Drip / 48 oz (3lb)",
+    "variant_id": "50962014208231"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "50962014240999"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lb)",
+    "variant_id": "50962014273767"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50962014961895"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "50962014994663"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "50962015027431"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "50962015060199"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "e1ea066aefb5e578",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-bastilla-anaerobic-yeast-fermention",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Nicaragua_Yeast_Ferm_2025.png?v=1752869025",
+  "platform": "shopify",
+  "product_id": "9282602074343",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America",
+   "Coffee",
+   "Medium",
+   "Single Origin"
+  ],
+  "title": "Nicaragua La Bastilla Anaerobic Yeast Fermention",
+  "url": "https://clawcoffeeroasters.com/products/nicaragua-la-bastilla-anaerobic-yeast-fermention",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "51191020093671"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 3lb Bag",
+    "variant_id": "51191020126439"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso - Fine Grind / 12oz Bag",
+    "variant_id": "51191020159207"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Espresso - Fine Grind / 3lb Bag",
+    "variant_id": "51191020191975"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind - Drip Machine / 12oz Bag",
+    "variant_id": "51191020224743"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Medium Grind - Drip Machine / 3lb Bag",
+    "variant_id": "51191020257511"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz Bag",
+    "variant_id": "51191020290279"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 58.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb Bag",
+    "variant_id": "51191020323047"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb Bag",
+    "variant_id": "51191024353511"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Espresso - Fine Grind / 5lb Bag",
+    "variant_id": "51191024386279"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind - Drip Machine / 5lb Bag",
+    "variant_id": "51191024419047"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb Bag",
+    "variant_id": "51191024451815"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "e661d0890ecbc03c",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-bastilla-estates-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/Nicaragua_Honey_a7fbd402-8837-49af-902c-48620d4d1d10.png?v=1738100769",
+  "platform": "shopify",
+  "product_id": "9294818443495",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Nicaragua La Bastilla Estates - Natural",
+  "url": "https://clawcoffeeroasters.com/products/nicaragua-la-bastilla-estates-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "51230019551463"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 3lb",
+    "variant_id": "51230019584231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51230019616999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso - Fine Grind / 12oz",
+    "variant_id": "51230019649767"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Espresso - Fine Grind / 3lb",
+    "variant_id": "51230019682535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Espresso - Fine Grind / 5lb",
+    "variant_id": "51230019715303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium Grind - Drip Machine / 12oz",
+    "variant_id": "51230019748071"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind - Drip Machine / 3lb",
+    "variant_id": "51230019780839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium Grind - Drip Machine / 5lb",
+    "variant_id": "51230019813607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12oz",
+    "variant_id": "51230019846375"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 3lb",
+    "variant_id": "51230019879143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "51230019911911"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "fdef27f24ac334d0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sugarcane-decaf-valle-del-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/ColombiaSugarcaneDecaf2025_d2d7cac9-1f87-4805-896f-035f7539dd90.png?v=1763067386",
+  "platform": "shopify",
+  "product_id": "9396447314151",
+  "product_type": "Decaffeinated Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Sugarcane Decaf - Valle Del Cauca",
+  "url": "https://clawcoffeeroasters.com/products/colombia-sugarcane-decaf-valle-del-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "51551227511015"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 48oz Bag (3lbs)",
+    "variant_id": "51551227543783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51551227576551"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine - Espresso / 12oz Bag",
+    "variant_id": "51551227609319"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine - Espresso / 48oz Bag (3lbs)",
+    "variant_id": "51551227642087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine - Espresso / 5lb",
+    "variant_id": "51551227674855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium - Drip - Pour Over / 12oz Bag",
+    "variant_id": "51551227707623"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium - Drip - Pour Over / 48oz Bag (3lbs)",
+    "variant_id": "51551227740391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium - Drip - Pour Over / 5lb",
+    "variant_id": "51551227773159"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse - French Press - Cold Brew / 12oz Bag",
+    "variant_id": "51551227805927"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse - French Press - Cold Brew / 48oz Bag (3lbs)",
+    "variant_id": "51551227838695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse - French Press - Cold Brew / 5lb",
+    "variant_id": "51551227871463"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "b454185282f78f86",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-san-diego-honey-shb-pura-vida",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/CostaRica_2832d018-eaa0-4e07-b542-bc47ddb3c813.png?v=1777662810",
+  "platform": "shopify",
+  "product_id": "9433241780455",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America",
+   "Costa Rica",
+   "Light",
+   "Medium"
+  ],
+  "title": "Costa Rica Tarrazú San Diego Honey SHB - Pura Vida",
+  "url": "https://clawcoffeeroasters.com/products/costa-rica-tarrazu-san-diego-honey-shb-pura-vida",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "51678946885863"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "51678946918631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51678946951399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "51678946984167"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "51678947016935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "51678947049703"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "51678947082471"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "51678947115239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "51678947148007"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "51678947180775"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "51678947213543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "51678947246311"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "1a3d8baea8c26493",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/GuatemalaSantaRosa.png?v=1774722160",
+  "platform": "shopify",
+  "product_id": "9497494913255",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America",
+   "Medium",
+   "Single Origin"
+  ],
+  "title": "Guatemala - Santa Rosa",
+  "url": "https://clawcoffeeroasters.com/products/guatemala-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "51927812276455"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "51927812309223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51927812341991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "51927812374759"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "51927812407527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "51927812440295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "51927812473063"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "51927812505831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "51927812538599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "51927812571367"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 53.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "51927812604135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "51927812636903"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "d11ea3e91a49a118",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-lactic-anaerobic-fermentation",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/CostaRicaLacticAnaerobic.png?v=1786737691",
+  "platform": "shopify",
+  "product_id": "9599986270439",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America",
+   "Costa Rica",
+   "Light",
+   "Medium"
+  ],
+  "title": "Costa Rica Tarrazú Lactic Anaerobic Fermentation",
+  "url": "https://clawcoffeeroasters.com/products/costa-rica-tarrazu-lactic-anaerobic-fermentation",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "52229668241639"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "52229668274407"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "52229668307175"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "52229668339943"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "52229668372711"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "52229668405479"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "52229668438247"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "52229668471015"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "52229668503783"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "52229668536551"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "52229668569319"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "52229668602087"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ },
+ {
+  "body_hash": "b51872bc90360ede",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-bella-vista-tres-rios",
+  "image": "https://cdn.shopify.com/s/files/1/0607/0566/9351/files/CostaRicaBellavista.png?v=1786737376",
+  "platform": "shopify",
+  "product_id": "9668703912167",
+  "product_type": "Central American Coffee",
+  "roaster_slug": "clawcoffeeroasters",
+  "tags": [
+   "Central America",
+   "Costa Rica",
+   "Light",
+   "Medium"
+  ],
+  "title": "Costa Rica Bella Vista - Tres Rios",
+  "url": "https://clawcoffeeroasters.com/products/costa-rica-bella-vista-tres-rios",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "52478592680167"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 48 oz (3lbs)",
+    "variant_id": "52478592712935"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "52478592745703"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine Grind - Espresso / 12 oz",
+    "variant_id": "52478592778471"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Fine Grind - Espresso / 48 oz (3lbs)",
+    "variant_id": "52478592811239"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine Grind - Espresso / 5lb",
+    "variant_id": "52478592844007"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium Grind - Drip / 12 oz",
+    "variant_id": "52478592876775"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Medium Grind - Drip / 48 oz (3lbs)",
+    "variant_id": "52478592909543"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium Grind - Drip / 5lb",
+    "variant_id": "52478592942311"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 12 oz",
+    "variant_id": "52478592975079"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 48 oz (3lbs)",
+    "variant_id": "52478593007847"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Grind - French Press - Cold Brew / 5lb",
+    "variant_id": "52478593040615"
+   }
+  ],
+  "vendor": "Claw Coffee Roasters"
+ }
+]

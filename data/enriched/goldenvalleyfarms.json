@@ -1,0 +1,559 @@
+{
+ "10670991212849": {
+  "body_hash": "3667375a44e9e15a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10718044422449": {
+  "body_hash": "2875662bf24dfbe9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fig",
+   "caramel",
+   "subtle earthy"
+  ],
+  "varietals": []
+ },
+ "10803098288433": {
+  "body_hash": "3cdc562368d99a30",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10834077581617": {
+  "body_hash": "ba296221bc2a2893",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "flood of herbal",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4714047144026": {
+  "body_hash": "1393de1177a22eeb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "flood of herbal",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4714093772890": {
+  "body_hash": "21d9b0bb716ae83f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4714095673434": {
+  "body_hash": "1de07aa3d9efa2b6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "maple",
+   "figs"
+  ],
+  "varietals": []
+ },
+ "4720792797274": {
+  "body_hash": "f6c3b724721fe625",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "4720793976922": {
+  "body_hash": "3e3f09c5d96704bd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "full-bodied",
+   "oaky",
+   "toasty"
+  ],
+  "varietals": []
+ },
+ "4720795222106": {
+  "body_hash": "02b91c5fce9b6f93",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "spice",
+   "smooth herbal"
+  ],
+  "varietals": []
+ },
+ "4720795418714": {
+  "body_hash": "506c3ec0680458b9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "spicy",
+   "bold floral"
+  ],
+  "varietals": []
+ },
+ "4720795713626": {
+  "body_hash": "a44a3ce8e1f42efa",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hearty",
+   "full-bodied"
+  ],
+  "varietals": []
+ },
+ "4720796106842": {
+  "body_hash": "f4600aa8e27fd2c3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "spicy",
+   "herbal",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4720796401754": {
+  "body_hash": "98fab97b346c5357",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweetened medjool dates",
+   "floral",
+   "cocoa finsih"
+  ],
+  "varietals": []
+ },
+ "4720797646938": {
+  "body_hash": "58e7f218018b4348",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almonds"
+  ],
+  "varietals": []
+ },
+ "4720798040154": {
+  "body_hash": "2ecdac7ad8dd787d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smoky",
+   "citrus"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "4720798629978": {
+  "body_hash": "b4194deeda2ed928",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bold",
+   "aggressive"
+  ],
+  "varietals": []
+ },
+ "4720798728282": {
+  "body_hash": "ec27cc95d5d12d59",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold",
+   "aggressive"
+  ],
+  "varietals": []
+ },
+ "4730524303450": {
+  "body_hash": "66d034a4e4b3025c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fresh herbal",
+   "oaky"
+  ],
+  "varietals": []
+ },
+ "4742841040986": {
+  "body_hash": "a86ed0a9d81d527e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold",
+   "aggressive"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "4742842056794": {
+  "body_hash": "cb54cb38f1e1ea58",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bold",
+   "aggressive"
+  ],
+  "varietals": []
+ },
+ "4742842646618": {
+  "body_hash": "6df2993dd7da53c6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "spicy",
+   "herbal",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4742843695194": {
+  "body_hash": "f2aba2a04c20484a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "flood of herbal",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4803304783962": {
+  "body_hash": "1a0a4533d6951363",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4824045060186": {
+  "body_hash": "6a514c386bc196b8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "nuts"
+  ],
+  "varietals": []
+ },
+ "4830344446042": {
+  "body_hash": "19fea83aaad7d438",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold",
+   "aggressive"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "4830344609882": {
+  "body_hash": "f0fecffb6196f6b7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "maple",
+   "fig"
+  ],
+  "varietals": []
+ },
+ "6538306322522": {
+  "body_hash": "335a5b83142802db",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "flavor of caramel",
+   "citrus"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "8215201153329": {
+  "body_hash": "9721d118438ffce7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "full-bodied",
+   "oaky",
+   "toasty"
+  ],
+  "varietals": []
+ },
+ "8580407656753": {
+  "body_hash": "3edbc92b237308ec",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hearty",
+   "full-bodied"
+  ],
+  "varietals": []
+ },
+ "9155326640433": {
+  "body_hash": "1ca046c6c72bf56f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "citrus"
+  ],
+  "varietals": []
+ }
+}

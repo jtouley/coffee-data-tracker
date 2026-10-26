@@ -1,0 +1,330 @@
+[
+ {
+  "body_hash": "5fbe9478f7793bc0",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-cuevas-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/CC-Tanzania-Av2x1000.png?v=1627400904",
+  "platform": "shopify",
+  "product_id": "5742891696294",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee"
+  ],
+  "title": "12 oz. Tanzania Single Origin",
+  "url": "https://www.cuevascoffee.com/products/12-oz-cuevas-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean",
+    "variant_id": "37024070336678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "37024070369446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "37024070402214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "37024070434982"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "c778691bf3173f95",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-colombia-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/CC-Colombia-Ax1000v3.png?v=1611937243",
+  "platform": "shopify",
+  "product_id": "5742919647398",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [],
+  "title": "12 oz. Colombia Single Origin",
+  "url": "https://www.cuevascoffee.com/products/12-oz-colombia-single-origin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean",
+    "variant_id": "37024057491622"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "37024057524390"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "37024057557158"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "37024057589926"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "54ba0050fd96a7c1",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-bolivian-single-origin-cuevas-farm-limited",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/BOLIVIA-Ax1000.png?v=1627396334",
+  "platform": "shopify",
+  "product_id": "5742925152422",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee",
+   "Cuevas Coffee Select"
+  ],
+  "title": "12 oz. Bolivia Single Origin - Cuevas Farm - Limited Availability",
+  "url": "https://www.cuevascoffee.com/products/12-oz-bolivian-single-origin-cuevas-farm-limited",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean",
+    "variant_id": "37024071286950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "40347472265382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "40347473182886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "40347476197542"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "5b207f25f14de6af",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-central-american-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/CC-Guatemala-Av2x1000.png?v=1627397141",
+  "platform": "shopify",
+  "product_id": "5742928429222",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee"
+  ],
+  "title": "12 oz. Guatemala Single Origin",
+  "url": "https://www.cuevascoffee.com/products/12-oz-central-american-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean",
+    "variant_id": "37024065880230"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "37024065912998"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "37024065945766"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "37024065978534"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "4cfe2ce8b4a6526f",
+  "first_seen": "2026-10-26",
+  "handle": "the-devils-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/CC-TheDevilsBrew-Ax1000v2.png?v=1627401146",
+  "platform": "shopify",
+  "product_id": "5948951658662",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee"
+  ],
+  "title": "12 oz. The Devil's Brew - Dark Roast",
+  "url": "https://www.cuevascoffee.com/products/the-devils-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean",
+    "variant_id": "37075900825766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "37075900858534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "37075900891302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "37075900924070"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "5f949e618d47ad51",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-o-g-cuevas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/CC-OG-Cuevas-Blend-Ax1000.png?v=1627399422",
+  "platform": "shopify",
+  "product_id": "6061673709734",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee"
+  ],
+  "title": "12 oz. O.G. Cuevas Blend",
+  "url": "https://www.cuevascoffee.com/products/12-oz-o-g-cuevas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean",
+    "variant_id": "37506305032358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Fine \"Espresso\"",
+    "variant_id": "37506305065126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Medium \"Drip\"",
+    "variant_id": "37506305097894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Ground - Coarse \"French Press\"",
+    "variant_id": "37506305130662"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ },
+ {
+  "body_hash": "d7b45050f918ed7e",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-whole-bean-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0476/5699/2934/products/5-CC-Colombia-AV2x1000.png?v=1627401349",
+  "platform": "shopify",
+  "product_id": "6070214852774",
+  "product_type": "Coffee",
+  "roaster_slug": "cuevascoffee",
+  "tags": [
+   "12 oz Coffee"
+  ],
+  "title": "5 lb. Whole Bean Bags",
+  "url": "https://www.cuevascoffee.com/products/5-lb-whole-bean-bags",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "5 lb. Colombia Single Origin Whole Bean",
+    "variant_id": "37543995343014"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "5 lb. Guatemala Single Origin Whole Bean",
+    "variant_id": "37543995375782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "5 lb. Tanzania Single Origin Whole Bean",
+    "variant_id": "37543995408550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "5 lb. The Devils Brew Dark Roast Whole Bean",
+    "variant_id": "37543995441318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "5 lb. O.G. Cuevas Blend Whole Bean",
+    "variant_id": "37543995474086"
+   }
+  ],
+  "vendor": "Cuevas Coffee"
+ }
+]

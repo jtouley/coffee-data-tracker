@@ -1,0 +1,5277 @@
+[
+ {
+  "body_hash": "bb95a517db6a65b5",
+  "first_seen": "2026-10-26",
+  "handle": "timor-royal-select-decaf-coffee",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Royal-Timor-Select-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "11995",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Single Origin",
+   "cocoa",
+   "cream",
+   "decaf",
+   "decaf coffee",
+   "decaf coffee beans",
+   "malt",
+   "organic",
+   "swiss water processed",
+   "timor"
+  ],
+  "title": "Royal Timor Select Decaf SWP",
+  "url": "https://canopycoffeeroasters.com/product/timor-royal-select-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "11995:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "11995:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35485daaed77c12b",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrado-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "12558",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Brazilian",
+   "Cerrado",
+   "Green Coffee",
+   "cerrado region",
+   "cocoa",
+   "green coffee beans",
+   "walnut"
+  ],
+  "title": "Brazilian Cerrado -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/brazilian-cerrado-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.21,
+    "title": "Brazilian Cerrado -green coffee beans",
+    "variant_id": "12558:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8434ef2a3962883",
+  "first_seen": "2026-10-26",
+  "handle": "lake-to-lake-blend-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Peru.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12563",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Costa Rica",
+   "Green Coffee",
+   "Peru",
+   "brown sugar",
+   "cafe",
+   "central america",
+   "cinnamon",
+   "creamy dark chocolate",
+   "light body",
+   "medium acidity",
+   "medley",
+   "orange",
+   "organic"
+  ],
+  "title": "Lake to Lake Blend -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/lake-to-lake-blend-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.99,
+    "title": "Lake to Lake Blend -green coffee beans",
+    "variant_id": "12563:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df697db7bd2c5099",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-half-caffeinated-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Colombia-Cherries1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12567",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "caramel",
+   "chocolate",
+   "cocoa",
+   "colombian",
+   "colombian decaf",
+   "colombian supremo",
+   "half-caffeinnated",
+   "lemon",
+   "orange"
+  ],
+  "title": "Colombian Half-caffeinated -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/colombian-half-caffeinated-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.21,
+    "title": "Colombian Half-caffeinated -green coffee beans",
+    "variant_id": "12567:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7fba1f118cf3ad7f",
+  "first_seen": "2026-10-26",
+  "handle": "canopy-blend-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Tanzania-Peaberry.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12572",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "africa",
+   "black tea",
+   "chocolate syrup",
+   "citrus",
+   "flavored coffee",
+   "full bodied",
+   "green coffee beans",
+   "lemon",
+   "masters touch",
+   "rich",
+   "sumatra"
+  ],
+  "title": "Canopy Blend -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/canopy-blend-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.38,
+    "title": "Canopy Blend -green coffee beans",
+    "variant_id": "12572:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a1ec58c162f7929",
+  "first_seen": "2026-10-26",
+  "handle": "cambium-blend-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/04/Ethiopian-Natural-Sidamo1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12584",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "Moka",
+   "africa",
+   "bittersweet chocolate",
+   "cedar",
+   "complex",
+   "green coffee beans",
+   "indonesia",
+   "java",
+   "medium roast",
+   "toffee"
+  ],
+  "title": "Cambium Blend -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/cambium-blend-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.32,
+    "title": "Cambium Blend -green coffee beans",
+    "variant_id": "12584:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "267cccfdc635b652",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Guatemala.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12600",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "French",
+   "Green Coffee",
+   "cherry",
+   "cocoa",
+   "cream",
+   "dark chocolate",
+   "dark roast",
+   "green coffee beans",
+   "guatemala",
+   "orange",
+   "organic peru",
+   "red apple",
+   "roast"
+  ],
+  "title": "French Roast Blend -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/french-roast-blend-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.85,
+    "title": "French Roast Blend -green coffee beans",
+    "variant_id": "12600:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8fde253919b74314",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/04/Colombia-Decaf1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12606",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "caramel",
+   "clean",
+   "colombian",
+   "green coffee beans",
+   "milk chocolate",
+   "orange",
+   "rich",
+   "smooth"
+  ],
+  "title": "Colombian Decaf -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/colombian-decaf-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.96,
+    "title": "Colombian Decaf -green coffee beans",
+    "variant_id": "12606:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0814b7731ccb2e99",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-decaf-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/04/Mexican-Decaf.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12619",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "Mexican",
+   "clean",
+   "creamy almond",
+   "decaf",
+   "decaf coffee",
+   "milk chocolate",
+   "natural",
+   "rich",
+   "smooth"
+  ],
+  "title": "Mexican Decaf -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/mexican-decaf-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.26,
+    "title": "Mexican Decaf -green coffee beans",
+    "variant_id": "12619:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7bdf94204467082c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Guatemala.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12627",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "bakers chocolate",
+   "cedar",
+   "patio dried",
+   "rich",
+   "smooth",
+   "sumatra",
+   "swiss water decaf"
+  ],
+  "title": "Sumatra Decaf -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/sumatra-decaf-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.44,
+    "title": "Sumatra Decaf -green coffee beans",
+    "variant_id": "12627:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f6c845b819194390",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Costa-Rica-Coffee-Cherries.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12632",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Costa Rica",
+   "Green Coffee",
+   "brown sugar",
+   "cafe",
+   "green coffee beans",
+   "honey",
+   "orange",
+   "organic"
+  ],
+  "title": "Costa Rican -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/costa-rica-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.72,
+    "title": "Costa Rican -green coffee beans",
+    "variant_id": "12632:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "65f0e7d5bbba2ee8",
+  "first_seen": "2026-10-26",
+  "handle": "peru-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Peru.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12637",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "Organic Coffees",
+   "Peru",
+   "black licorice",
+   "cafe",
+   "cherry",
+   "chocolate",
+   "fair trade",
+   "green coffee beans",
+   "light body",
+   "mild acidity",
+   "organic",
+   "women led"
+  ],
+  "title": "Peru -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/peru-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.25,
+    "title": "Peru -green coffee beans",
+    "variant_id": "12637:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53c885be90fa7410",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Colombia-Cherries1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12641",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "caramel",
+   "columbian",
+   "green coffee beans",
+   "heady aroma",
+   "high acidity",
+   "medium acidity",
+   "milk chocolate",
+   "orange",
+   "rich flavor",
+   "supremo"
+  ],
+  "title": "Colombian Supremo -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/colombian-supremo-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.43,
+    "title": "Colombian Supremo -green coffee beans",
+    "variant_id": "12641:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b15567c10f2b89ba",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-harrar-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Colombia-Cherries1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12645",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Ethiopian",
+   "Green Coffee",
+   "cedar",
+   "fruity wine",
+   "full body",
+   "green coffee beans",
+   "harrar",
+   "heirloom",
+   "medium acidity",
+   "milk chocolate",
+   "toffee"
+  ],
+  "title": "Ethiopian Harrar -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/ethiopian-harrar-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.62,
+    "title": "Ethiopian Harrar -green coffee beans",
+    "variant_id": "12645:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c3543ffae29e1389",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-gold-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Guatemala.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12649",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "brown sugar",
+   "fruity",
+   "full bodied",
+   "gold",
+   "green coffee beans",
+   "guatemalan",
+   "honey",
+   "huehuetenango",
+   "red apple",
+   "rich"
+  ],
+  "title": "Guatemalan Gold -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/guatemalan-gold-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.45,
+    "title": "Guatemalan Gold -green coffee beans",
+    "variant_id": "12649:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d4b2bbfcb13cced4",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-el-chile-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Honduras.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12653",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "almond",
+   "chile",
+   "green coffee beans",
+   "honduran",
+   "lemon",
+   "medium roast",
+   "milk chocolate",
+   "organic"
+  ],
+  "title": "Honduran El Chile -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/honduran-el-chile-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.25,
+    "title": "Honduran El Chile -green coffee beans",
+    "variant_id": "12653:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "66b226e1b9dd959f",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Sulawesi-Toraja.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12657",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "full bodied",
+   "green coffee beans",
+   "honey",
+   "lemon",
+   "low acidity",
+   "mellow",
+   "milk chocolate",
+   "sulawesi",
+   "toraja"
+  ],
+  "title": "Sulawesi Toraja -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/sulawesi-toraja-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.46,
+    "title": "Sulawesi Toraja -green coffee beans",
+    "variant_id": "12657:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "96dc84209eb95c66",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lake-tago-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Guatemala.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12661",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "black licorice",
+   "cherry",
+   "chocolate",
+   "exceptionally rich",
+   "fair trade",
+   "full body",
+   "green coffee beans",
+   "mandheling",
+   "organic",
+   "sumatra"
+  ],
+  "title": "Sumatra Lake Tago -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/sumatra-lake-tago-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.99,
+    "title": "Sumatra Lake Tago -green coffee beans",
+    "variant_id": "12661:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7eb7def44df37047",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-green-coffee-beans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2021/03/Tanzania-Peaberry1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12665",
+  "product_type": "simple",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Green Coffee",
+   "Tanzanian",
+   "black tea",
+   "green coffee beans",
+   "honey",
+   "lemon",
+   "medium bodied",
+   "peaberry",
+   "sweetly acidic",
+   "wonderfully aromatic"
+  ],
+  "title": "Tanzanian Peaberry -green coffee beans",
+  "url": "https://canopycoffeeroasters.com/product/tanzanian-peaberry-green-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.98,
+    "title": "Tanzanian Peaberry -green coffee beans",
+    "variant_id": "12665:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "05e70dc72504ac99",
+  "first_seen": "2026-10-26",
+  "handle": "winter-wonderland",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Winter-Wonderland-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1278",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "christmas blend",
+   "vanilla",
+   "white chocolate",
+   "winter",
+   "wonderland"
+  ],
+  "title": "Winter Wonderland",
+  "url": "https://canopycoffeeroasters.com/product/winter-wonderland/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1278:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1278:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c7b1646c9608d3c",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-white-chocolate",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Vanilla-White-Chocolate-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1288",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "classic vanilla",
+   "creamy white chocolate",
+   "vanilla",
+   "white chocolate",
+   "winter"
+  ],
+  "title": "Vanilla White Chocolate",
+  "url": "https://canopycoffeeroasters.com/product/vanilla-white-chocolate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1288:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1288:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3acd224d4caf9418",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-nut",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Vanilla-Nut-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1292",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "nut",
+   "premium nuts",
+   "supreme vanilla",
+   "vanilla"
+  ],
+  "title": "Vanilla Nut",
+  "url": "https://canopycoffeeroasters.com/product/vanilla-nut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1292:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1292:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a19c5a4948e99eb",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-almond",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Toasted-Almond-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1296",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "classic almond",
+   "toasted almond"
+  ],
+  "title": "Toasted Almond",
+  "url": "https://canopycoffeeroasters.com/product/toasted-almond/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1296:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1296:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3bde37b6807404d1",
+  "first_seen": "2026-10-26",
+  "handle": "sugar-cookie",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sugar-Cookie-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1300",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "sprinking of sugar",
+   "sugar cookie",
+   "traditional bakehouse cookie",
+   "winter"
+  ],
+  "title": "Sugar Cookie",
+  "url": "https://canopycoffeeroasters.com/product/sugar-cookie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1300:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1300:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4cd1ebc817e2102",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Southern-Pecan-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1316",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "fall",
+   "pecan",
+   "roasted pecans",
+   "southern",
+   "touch of maple"
+  ],
+  "title": "Southern Pecan",
+  "url": "https://canopycoffeeroasters.com/product/southern-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1316:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1316:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8db11bb14842331",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Snickerdoodle-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1320",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "cinnamon",
+   "classic sugar cookie",
+   "hazelnut",
+   "snickerdoodle",
+   "vanilla",
+   "winter"
+  ],
+  "title": "Snickerdoodle",
+  "url": "https://canopycoffeeroasters.com/product/snickerdoodle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1320:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1320:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "109d925205c30157",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-nut-cream",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Raspberry-Nut-Cream-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1324",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "almond",
+   "cream",
+   "nut",
+   "raspberry",
+   "red raspberries",
+   "winter"
+  ],
+  "title": "Raspberry Nut & Cream",
+  "url": "https://canopycoffeeroasters.com/product/raspberry-nut-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1324:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1324:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "96c51b23a6b1c614",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-caramel-crunch",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Rainforest-Caramel-Crunch-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1328",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "caramel",
+   "crunch",
+   "fall",
+   "hazelnut",
+   "rainforest",
+   "tropical coconut"
+  ],
+  "title": "Rainforest Caramel Crunch",
+  "url": "https://canopycoffeeroasters.com/product/rainforest-caramel-crunch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1328:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1328:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "34af89b3e796523f",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pie-spice",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Pumpkin-Pie-Spice-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1332",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "fall",
+   "pie",
+   "pumpkin",
+   "spice"
+  ],
+  "title": "Pumpkin Pie Spice",
+  "url": "https://canopycoffeeroasters.com/product/pumpkin-pie-spice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1332:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1332:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6cabdc4a7819b05",
+  "first_seen": "2026-10-26",
+  "handle": "candied-pecans",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Candied-Pecans-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1336",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "caramelized sugar coated pecans",
+   "fall",
+   "pecan",
+   "pralines",
+   "rich cream",
+   "winter"
+  ],
+  "title": "Candied Pecans",
+  "url": "https://canopycoffeeroasters.com/product/candied-pecans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1336:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1336:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "294e070d796079f2",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-candy-cane",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Peppermint-Candy-Cane-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1340",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "candy",
+   "cane",
+   "holiday favorite",
+   "peppermint",
+   "traditional",
+   "winter"
+  ],
+  "title": "Peppermint Candy Cane",
+  "url": "https://canopycoffeeroasters.com/product/peppermint-candy-cane/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1340:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1340:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "afdd6d2c5fe73e9f",
+  "first_seen": "2026-10-26",
+  "handle": "orange-creamsicle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Orange-Creamsicle-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1348",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "creamsicle",
+   "creamy vanilla",
+   "orange",
+   "orange liqueur"
+  ],
+  "title": "Orange Creamsicle",
+  "url": "https://canopycoffeeroasters.com/product/orange-creamsicle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1348:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1348:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "881d4539c52208fb",
+  "first_seen": "2026-10-26",
+  "handle": "sea-salt-caramel",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sea-Salt-Caramel-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1356",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "caramel",
+   "caramelized sugar",
+   "fall",
+   "salt",
+   "sea"
+  ],
+  "title": "Sea Salt Caramel",
+  "url": "https://canopycoffeeroasters.com/product/sea-salt-caramel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1356:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1356:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "815807b28e75d9a8",
+  "first_seen": "2026-10-26",
+  "handle": "mudslide",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Mudslide-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1360",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "chocoholic",
+   "mudslide",
+   "rich dark chocolate"
+  ],
+  "title": "Mudslide",
+  "url": "https://canopycoffeeroasters.com/product/mudslide/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1360:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1360:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5823f213a71403ed",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-doodle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Mocha-Doodle-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1364",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Mocha",
+   "cinnamon",
+   "hazelnut cookie",
+   "vanilla",
+   "winter"
+  ],
+  "title": "Mocha Doodle",
+  "url": "https://canopycoffeeroasters.com/product/mocha-doodle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1364:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1364:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "441463e7491e80b4",
+  "first_seen": "2026-10-26",
+  "handle": "mistletoe-mocha",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Mistletoe-Mocha-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1368",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "Mocha",
+   "mint",
+   "mistletoe",
+   "rich chocolate flavor",
+   "winter"
+  ],
+  "title": "Mistletoe Mocha",
+  "url": "https://canopycoffeeroasters.com/product/mistletoe-mocha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1368:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1368:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d2df738bd2f3472",
+  "first_seen": "2026-10-26",
+  "handle": "mint-chocolate-chip",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Mint-Chocolate-Chip-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1372",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "chocolate chip",
+   "dark chocolate chips",
+   "mint",
+   "winter"
+  ],
+  "title": "Mint Chocolate Chip",
+  "url": "https://canopycoffeeroasters.com/product/mint-chocolate-chip/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1372:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1372:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95d2392996d9f5c5",
+  "first_seen": "2026-10-26",
+  "handle": "maple-nut-crunch",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Maple-Nut-Curnch-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1376",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "crunch",
+   "fall",
+   "maple",
+   "mixed nuts",
+   "nut",
+   "pure maple extract"
+  ],
+  "title": "Maple Nut Crunch",
+  "url": "https://canopycoffeeroasters.com/product/maple-nut-crunch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1376:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1376:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0d7568f9b073103",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-dark-roast",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Honduran-Dark-Roast-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "13769",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Single",
+   "almond",
+   "chile",
+   "honduran",
+   "lemon",
+   "medium roast",
+   "milk chocolate",
+   "organic"
+  ],
+  "title": "Honduran Dark Roast",
+  "url": "https://canopycoffeeroasters.com/product/honduran-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "13769:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "13769:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9614270e23a8f71e",
+  "first_seen": "2026-10-26",
+  "handle": "linzer-torte",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Linzer-Torte-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1380",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "french vanilla",
+   "linzer",
+   "raspberry",
+   "toasted almond",
+   "torte",
+   "winter"
+  ],
+  "title": "Linzer Torte",
+  "url": "https://canopycoffeeroasters.com/product/linzer-torte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1380:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1380:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75bf955a6e7b168f",
+  "first_seen": "2026-10-26",
+  "handle": "kahlua-cream",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Kahlua-Cream-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1384",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Kahlua",
+   "cream",
+   "creamy coffee liqueur",
+   "winter"
+  ],
+  "title": "Kahlua & Cream",
+  "url": "https://canopycoffeeroasters.com/product/kahlua-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1384:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1384:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd523def17b0f357",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Jingle-Bell-Java-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1388",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "Jingle",
+   "bell",
+   "caramel",
+   "cinnamon",
+   "java",
+   "rum",
+   "seasonal blend",
+   "vanilla",
+   "winter"
+  ],
+  "title": "Jingle Bell Java",
+  "url": "https://canopycoffeeroasters.com/product/jingle-bell-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1388:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1388:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd33a36133c26fac",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Jazzy-Java-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1392",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "bell",
+   "cinnamon",
+   "java",
+   "jazzy",
+   "southern pecan",
+   "spicy blend"
+  ],
+  "title": "Jazzy Java",
+  "url": "https://canopycoffeeroasters.com/product/jazzy-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1392:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1392:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd491a9830ad2d52",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-nuts",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Jamaican-Me-Nuts-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1396",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Kahlua",
+   "caramel",
+   "jamaican",
+   "me",
+   "nuts",
+   "vanilla nut"
+  ],
+  "title": "Jamaican Me Nuts",
+  "url": "https://canopycoffeeroasters.com/product/jamaican-me-nuts/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1396:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1396:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark-half-caf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sumatra-Dark-Half-Caf-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "13962",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "Decaf Coffees",
+   "blended coffee",
+   "decaf",
+   "half-caf",
+   "lake",
+   "sumatra",
+   "tago"
+  ],
+  "title": "Sumatra Dark Half-Caf",
+  "url": "https://canopycoffeeroasters.com/product/sumatra-dark-half-caf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "13962:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "13962:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47c08066eedf122c",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Jamaican-Me-Crazy-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1400",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Kahlua",
+   "caramel",
+   "crazy",
+   "jamaican",
+   "me",
+   "rich blend",
+   "vanilla"
+  ],
+  "title": "Jamaican Me Crazy",
+  "url": "https://canopycoffeeroasters.com/product/jamaican-me-crazy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1400:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1400:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9ed80cf62a2c15c",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Irish-Cream-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1404",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Irish",
+   "cream",
+   "irish liqueur"
+  ],
+  "title": "Irish Cream",
+  "url": "https://canopycoffeeroasters.com/product/irish-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1404:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1404:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0dba776b49f55384",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Highlander-Grogg-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1408",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "butterscotch",
+   "flavorful blend",
+   "grogg",
+   "highlander",
+   "irish cream"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://canopycoffeeroasters.com/product/highlander-grogg/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1408:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1408:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "900973dc01b71846",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Hazelnut-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1413",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "exceptionally smooth",
+   "full bodied",
+   "hazelnut",
+   "well balanced"
+  ],
+  "title": "Hazelnut",
+  "url": "https://canopycoffeeroasters.com/product/hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1413:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1413:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dbbd0bc9564a686d",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Hawaiian-Hazelnut-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1417",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Hawaiian",
+   "hazelnut",
+   "ripe coconut",
+   "velvety hazelnut"
+  ],
+  "title": "Hawaiian Hazelnut",
+  "url": "https://canopycoffeeroasters.com/product/hawaiian-hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1417:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1417:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "448dca5c2abecde2",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-latte",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Gingerbread-Latte-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1421",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "gingerbread",
+   "latte",
+   "sweet warm cream",
+   "winter"
+  ],
+  "title": "Gingerbread Latte",
+  "url": "https://canopycoffeeroasters.com/product/gingerbread-latte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1421:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1421:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2db511efa08db54e",
+  "first_seen": "2026-10-26",
+  "handle": "german-chocolate-cake",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/German-Chocolate-Cake-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1425",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "German",
+   "cake",
+   "caramel",
+   "coconut",
+   "creamy chocolate",
+   "winter"
+  ],
+  "title": "German Chocolate Cake",
+  "url": "https://canopycoffeeroasters.com/product/german-chocolate-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1425:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1425:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7bb5efcd87a58379",
+  "first_seen": "2026-10-26",
+  "handle": "frosty-favorite",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Frosty-Favorite-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1429",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "cinnamon sugar",
+   "favorite",
+   "frosty",
+   "graham cracker",
+   "hazelnut",
+   "vanilla",
+   "winter"
+  ],
+  "title": "Frosty Favorite",
+  "url": "https://canopycoffeeroasters.com/product/frosty-favorite/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1429:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.99,
+    "title": "2LB",
+    "variant_id": "1429:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f1abb76ddc0f74d",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/French-Vanilla-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1433",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "French",
+   "hint of cream",
+   "imported vanilla",
+   "rich taste",
+   "vanilla"
+  ],
+  "title": "French Vanilla",
+  "url": "https://canopycoffeeroasters.com/product/french-vanilla/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1433:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1433:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ed91f9578539b03",
+  "first_seen": "2026-10-26",
+  "handle": "cranberry-creme",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Cranberry-Cream-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1449",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "cranberry",
+   "creme",
+   "rich vanilla cream",
+   "tantalizing cranberry",
+   "winter"
+  ],
+  "title": "Cranberry Creme",
+  "url": "https://canopycoffeeroasters.com/product/cranberry-creme/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1449:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1449:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "431d9987325922ec",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-rum-cake",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Cinnamon-Rum-Cake-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1453",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "cake",
+   "cinnamon",
+   "rum",
+   "vanilla"
+  ],
+  "title": "Cinnamon Rum Cake",
+  "url": "https://canopycoffeeroasters.com/product/cinnamon-rum-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1453:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1453:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64b37d3c8ce67a3e",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Cinnamon-Hazelnut-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1457",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "cinnamon",
+   "hazelnut",
+   "light cinnamon",
+   "rich hazelnut",
+   "vanilla"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://canopycoffeeroasters.com/product/cinnamon-hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1457:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1457:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad33c9106788b13f",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Chocolate-Raspberry-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1461",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "chocolate",
+   "classic chocolate",
+   "fresh raspberry",
+   "raspberry",
+   "winter"
+  ],
+  "title": "Chocolate Raspberry",
+  "url": "https://canopycoffeeroasters.com/product/chocolate-raspberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1461:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1461:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cb6cd49b35ecc46f",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-nitemare",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Chocolate-Nitemare-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1469",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "chocolate",
+   "german chocolate cake",
+   "nitemare"
+  ],
+  "title": "Chocolate Nitemare",
+  "url": "https://canopycoffeeroasters.com/product/chocolate-nitemare/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1469:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1469:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f81d45a2193baa7",
+  "first_seen": "2026-10-26",
+  "handle": "cherries-jubilee",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Cherries-Jubilee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1478",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "cherries",
+   "jubilee",
+   "winter"
+  ],
+  "title": "Cherries Jubilee",
+  "url": "https://canopycoffeeroasters.com/product/cherries-jubilee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1478:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1478:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b46f10371e83445",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-cream",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Caramel-Cream-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1482",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "butter",
+   "caramel",
+   "cream",
+   "fall",
+   "smooth caramelized sugar"
+  ],
+  "title": "Caramel Cream",
+  "url": "https://canopycoffeeroasters.com/product/caramel-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1482:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1482:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "064a65578c757998",
+  "first_seen": "2026-10-26",
+  "handle": "california-gold",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/California-Gold-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1486",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "california",
+   "creamy vanilla",
+   "gold",
+   "toasted almonds"
+  ],
+  "title": "California Gold",
+  "url": "https://canopycoffeeroasters.com/product/california-gold/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1486:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1486:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "743f6154b4bfead6",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Bourbon-Pecan-Torte-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1494",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "bourbon",
+   "fall",
+   "pecan",
+   "pecan pie",
+   "torte"
+  ],
+  "title": "Bourbon Pecan Torte",
+  "url": "https://canopycoffeeroasters.com/product/bourbon-pecan-torte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1494:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1494:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0e11a7490572131",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-coffee-cake",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Blueberry-Coffee-Cake-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1498",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blueberry",
+   "Flavored Coffee",
+   "cinnamon",
+   "coffee",
+   "coffeecake",
+   "ripe blueberries"
+  ],
+  "title": "Blueberry Coffee Cake",
+  "url": "https://canopycoffeeroasters.com/product/blueberry-coffee-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1498:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1498:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a54f164c2ea3d2e3",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Amaretto-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1506",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "almonds",
+   "amaretto",
+   "cherries"
+  ],
+  "title": "Amaretto",
+  "url": "https://canopycoffeeroasters.com/product/amaretto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1506:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1506:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d218af452bbbc443",
+  "first_seen": "2026-10-26",
+  "handle": "almond-joy",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Almond-Joy-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1510",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "almond",
+   "coconut",
+   "dark chocolate",
+   "flavorful cup",
+   "joy",
+   "toasted almond"
+  ],
+  "title": "Almond Joy",
+  "url": "https://canopycoffeeroasters.com/product/almond-joy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1510:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1510:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c18902fffc11ab96",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/French-Roast-Blend-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1514",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Dark Roast",
+   "French",
+   "Organic Coffees",
+   "cherry",
+   "cocoa",
+   "cream",
+   "dark chocolate",
+   "dark roast",
+   "guatemala",
+   "orange",
+   "organic peru",
+   "red apple",
+   "roast"
+  ],
+  "title": "French Roast Blend",
+  "url": "https://canopycoffeeroasters.com/product/french-roast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1514:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1514:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d94dcb8d49e6453e",
+  "first_seen": "2026-10-26",
+  "handle": "roma-decaf-espresso",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Decaf-Espresso-Blend-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1518",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Espresso",
+   "bright",
+   "decaf",
+   "decaf coffee",
+   "espresso",
+   "espresso drinks",
+   "less earthy",
+   "roma",
+   "spicy"
+  ],
+  "title": "Decaf Espresso Blend",
+  "url": "https://canopycoffeeroasters.com/product/roma-decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1518:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1518:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3cb6d061a5d189e",
+  "first_seen": "2026-10-26",
+  "handle": "cambium-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Cambium-Blend-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1522",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Moka",
+   "africa",
+   "bittersweet chocolate",
+   "cambium",
+   "cambium blend",
+   "cedar",
+   "complex",
+   "indonesia",
+   "java",
+   "medium roast",
+   "toffee"
+  ],
+  "title": "Cambium Blend",
+  "url": "https://canopycoffeeroasters.com/product/cambium-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1522:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1522:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eea1d872d773b570",
+  "first_seen": "2026-10-26",
+  "handle": "taproot-espresso-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Taproot-Espresso-Blend-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1526",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Ethiopian",
+   "bakers chocolate",
+   "brazil",
+   "cedar",
+   "crema",
+   "espresso",
+   "espresso blend",
+   "italian",
+   "milano",
+   "rich body",
+   "syrup",
+   "taproot",
+   "taproot espresso",
+   "toffee"
+  ],
+  "title": "Taproot Espresso Blend",
+  "url": "https://canopycoffeeroasters.com/product/taproot-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "12-oz",
+    "variant_id": "1526:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1526:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d31eeb826791faa",
+  "first_seen": "2026-10-26",
+  "handle": "canopy-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Canopy-Blend-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1530",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "africa",
+   "black tea",
+   "chocolate syrup",
+   "citrus",
+   "flavored coffee",
+   "full bodied",
+   "lemon",
+   "masters touch",
+   "rich",
+   "sumatra"
+  ],
+  "title": "Canopy Blend",
+  "url": "https://canopycoffeeroasters.com/product/canopy-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1530:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1530:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39c6c1b9e7999afd",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-half-caffeinated",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Colombian-Half-Caf-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1534",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Decaf Coffees",
+   "caramel",
+   "chocolate",
+   "cocoa",
+   "colombian",
+   "colombian decaf",
+   "colombian supremo",
+   "decaf",
+   "decaf coffee",
+   "half-caffeinnated",
+   "lemon",
+   "orange"
+  ],
+  "title": "Colombian Half-caffeinated",
+  "url": "https://canopycoffeeroasters.com/product/colombian-half-caffeinated/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1534:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1534:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b351d7d9663fc7af",
+  "first_seen": "2026-10-26",
+  "handle": "lake-to-lake-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Lake-to-Lake-Blend-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1538",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "brown sugar",
+   "cafe",
+   "central america",
+   "cinnamon",
+   "creamy dark chocolate",
+   "lake",
+   "lake to lake",
+   "lake to lake blend",
+   "light body",
+   "medium acidity",
+   "medley",
+   "orange"
+  ],
+  "title": "Lake to Lake Blend",
+  "url": "https://canopycoffeeroasters.com/product/lake-to-lake-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1538:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1538:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af91255652f08922",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Breakfast-Blend-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1542",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blends",
+   "blend",
+   "brazilian coffee",
+   "breakfast",
+   "cocoa",
+   "mellow",
+   "smooth",
+   "walnut"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://canopycoffeeroasters.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1542:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1542:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "511ccd5652563708",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sumatra-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1546",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Single Origin",
+   "bakers chocolate",
+   "cedar",
+   "patio dried",
+   "rich",
+   "smooth",
+   "sumatra",
+   "swiss water decaf"
+  ],
+  "title": "Sumatra Decaf SWP",
+  "url": "https://canopycoffeeroasters.com/product/sumatra-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1546:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1546:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f8ced2497d85dd9",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Mexican-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1550",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Single Origin",
+   "Mexican",
+   "clean",
+   "creamy almond",
+   "decaf",
+   "decaf coffee",
+   "milk chocolate",
+   "natural",
+   "rich",
+   "smooth"
+  ],
+  "title": "Mexican Decaf MWP",
+  "url": "https://canopycoffeeroasters.com/product/mexican-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1550:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1550:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8fde253919b74314",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Colombian-Castillo-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1554",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Single Origin",
+   "caramel",
+   "clean",
+   "colombian",
+   "decaf",
+   "decaf coffee",
+   "milk chocolate",
+   "orange",
+   "rich",
+   "smooth"
+  ],
+  "title": "Colombian Decaf MC",
+  "url": "https://canopycoffeeroasters.com/product/colombian-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1554:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1554:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb1d6dd9020366ee",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-mugina",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Rwanda-Mugina-WB-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "1558",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Rwanda",
+   "Single",
+   "apricot",
+   "brown sugar",
+   "medium bodied",
+   "orange",
+   "sweetly acidic",
+   "wonderfully aromatic"
+  ],
+  "title": "Rwanda Mugina",
+  "url": "https://canopycoffeeroasters.com/product/rwanda-mugina/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1558:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1558:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a9786c1926c69b1b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lake-tago",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sumatra-Lake-Tago-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1562",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Single",
+   "black licorice",
+   "cherry",
+   "chocolate",
+   "exceptionally rich",
+   "fair trade",
+   "full body",
+   "mandheling",
+   "organic",
+   "sumatra"
+  ],
+  "title": "Sumatra Lake Tago",
+  "url": "https://canopycoffeeroasters.com/product/sumatra-lake-tago/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1562:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1562:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "726591594e622907",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-highlands",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Sulawesi-Highlands-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1566",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Single",
+   "full bodied",
+   "honey",
+   "lemon",
+   "low acidity",
+   "mellow",
+   "milk chocolate",
+   "sulawesi",
+   "toraja"
+  ],
+  "title": "Sulawesi Highlands",
+  "url": "https://canopycoffeeroasters.com/product/sulawesi-highlands/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1566:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1566:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "666887ef604baf9d",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-medium-roast",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Honduran-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1570",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Single",
+   "almond",
+   "chile",
+   "honduran",
+   "lemon",
+   "medium roast",
+   "milk chocolate",
+   "organic"
+  ],
+  "title": "Honduran",
+  "url": "https://canopycoffeeroasters.com/product/honduran-medium-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1570:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1570:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd87b367fd985655",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-gold",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Guatemalan-Gold-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1574",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Single",
+   "brown sugar",
+   "fruity",
+   "full bodied",
+   "gold",
+   "guatemalan",
+   "honey",
+   "huehuetenango",
+   "red apple",
+   "rich"
+  ],
+  "title": "Guatemalan Gold",
+  "url": "https://canopycoffeeroasters.com/product/guatemalan-gold/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1574:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1574:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1c0e2d86ae692d8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-queen-city",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Ethiopian-Queen-City-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1578",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Ethiopian",
+   "Single",
+   "cedar",
+   "fruity wine",
+   "full body",
+   "harrar",
+   "heirloom",
+   "medium acidity",
+   "milk chocolate",
+   "toffee"
+  ],
+  "title": "Ethiopian Queen City",
+  "url": "https://canopycoffeeroasters.com/product/ethiopian-queen-city/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1578:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1578:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f72017fbc8fc03aa",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Colombian-Supremo-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1582",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Single",
+   "caramel",
+   "columbian",
+   "heady aroma",
+   "high acidity",
+   "medium acidity",
+   "milk chocolate",
+   "orange",
+   "rich flavor",
+   "supremo"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://canopycoffeeroasters.com/product/colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1582:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1582:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de73b71d69ea012b",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Peru-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1586",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Organic Coffees",
+   "Peru",
+   "Single",
+   "black licorice",
+   "cafe",
+   "cherry",
+   "chocolate",
+   "fair trade",
+   "light body",
+   "mild acidity",
+   "organic",
+   "women led"
+  ],
+  "title": "Peru",
+  "url": "https://canopycoffeeroasters.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1586:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1586:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ddae21305f08dc2d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Costa-Rican-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1590",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Costa Rica",
+   "Organic Coffees",
+   "Single",
+   "brown sugar",
+   "cafe",
+   "honey",
+   "orange",
+   "organic"
+  ],
+  "title": "Costa Rican",
+  "url": "https://canopycoffeeroasters.com/product/costa-rican/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1590:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1590:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb035a417dd95c3c",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cerrado",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Brazil-Cerrado-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1594",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Brazilian",
+   "Cerrado",
+   "Single",
+   "cerrado region",
+   "cocoa",
+   "walnut"
+  ],
+  "title": "Brazilian Cerrado",
+  "url": "https://canopycoffeeroasters.com/product/brazilian-cerrado/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1594:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1594:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "199d9b8545e859ba",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-spice",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/10/Autumn-Spice-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1631",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee",
+   "Holiday Flavors",
+   "autumn",
+   "cinnamon",
+   "cocoa",
+   "fall",
+   "pumpkin",
+   "spice"
+  ],
+  "title": "Autumn Spice",
+  "url": "https://canopycoffeeroasters.com/product/autumn-spice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "1631:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "1631:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3fb4c88e9ae968b",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Jamaican-Me-Crazy-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1711",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Kahlua",
+   "caramel",
+   "crazy",
+   "decaf",
+   "decaf coffee",
+   "jamaican",
+   "me",
+   "vanilla"
+  ],
+  "title": "Jamaican Me Crazy Decaf",
+  "url": "https://canopycoffeeroasters.com/product/jamaican-me-crazy-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1711:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1711:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "81423caaea75cbf1",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-smores",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2026/06/Campfire-Smores-WB-1.png",
+  "platform": "woocommerce",
+  "product_id": "17149",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Flavored Coffee"
+  ],
+  "title": "Campfire S’mores",
+  "url": "https://canopycoffeeroasters.com/product/campfire-smores/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12oz",
+    "variant_id": "17149:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "2-Pound",
+    "variant_id": "17149:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad5ff861d5f8f64d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-winter-wonderland",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2020/01/Winter-Wonderland-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "1715",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "christmas",
+   "vanilla",
+   "white chocolate",
+   "winter",
+   "wonderland"
+  ],
+  "title": "Winter Wonderland Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-winter-wonderland/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1715:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1715:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "729bbca2b58ce7db",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vanilla-white-chocolate",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Vanilla-White-Chocolate-Wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1719",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "classic vanilla",
+   "creamy white chocolate",
+   "vanilla",
+   "white chocolate"
+  ],
+  "title": "Vanilla White Chocolate Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-vanilla-white-chocolate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1719:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1719:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6fd92bf50f824ce",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vanilla-nut",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Vanilla-Nut-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1723",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "nut",
+   "premium nuts",
+   "supreme vanilla",
+   "vanilla"
+  ],
+  "title": "Vanilla Nut Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-vanilla-nut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1723:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1723:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de463afac6618a6b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-toasted-almond",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Toasted-Almond-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1727",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "flavored coffee",
+   "toasted almond"
+  ],
+  "title": "Toasted Almond Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-toasted-almond/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1727:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1727:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "153dace708d647d6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sugar-cookie",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Sugar-Cookie-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1735",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "bakehouse cookie",
+   "dusting of sugar",
+   "sugar cookie"
+  ],
+  "title": "Sugar Cookie Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-sugar-cookie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1735:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1735:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ac7f0c628ea5ed7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-strawberry-shortcake",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Strawberry-Shortcake-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1739",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "buttery biscuit",
+   "ripe strawberries",
+   "shortcake",
+   "strawberry shortcake"
+  ],
+  "title": "Strawberry Shortcake Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-strawberry-shortcake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1739:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1739:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af50f874890d8a33",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-spiced-butter-rum",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Spiced-Butter-Rum-Wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1747",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Spiced",
+   "butter",
+   "rum",
+   "warm butter"
+  ],
+  "title": "Spiced Butter Rum Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-spiced-butter-rum/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1747:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1747:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b95c0d174297aec",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-southern-pecan",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Southern-Pecan-Wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1751",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "maple",
+   "pecan",
+   "roasted pecan",
+   "southern"
+  ],
+  "title": "Southern Pecan Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-southern-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1751:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1751:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "178d9063d50b358b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-snickerdoodle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Snickerdoodle-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1755",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "cinnamon",
+   "classic sugar cookie",
+   "hazelnut",
+   "snickerdoodle",
+   "vanilla"
+  ],
+  "title": "Snickerdoodle Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-snickerdoodle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1755:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1755:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c515e547d15b57d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sea-salt-caramel",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Sea-Salt-Caramel-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1759",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "caramel",
+   "caramelized sugar",
+   "salt",
+   "sea"
+  ],
+  "title": "Sea Salt Caramel Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-sea-salt-caramel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1759:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1759:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11f49b8b2cd81693",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-raspberry-nut-cream",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Raspberry-Nut-Cream-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1763",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "almond",
+   "cream",
+   "decaf",
+   "decaf coffee",
+   "nut",
+   "raspberry",
+   "red raspberry"
+  ],
+  "title": "Raspberry Nut & Cream Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-raspberry-nut-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1763:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1763:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2958cfc60ad0064e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-rainforest-caramel-crunch",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Rainforest-Caramel-Crunch-Wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1767",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "caramel",
+   "crunch",
+   "decaf",
+   "decaf coffee",
+   "hazelnut",
+   "rainforest",
+   "tropical coconut"
+  ],
+  "title": "Rainforest Caramel Crunch Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-rainforest-caramel-crunch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1767:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1767:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "08653ad0beedf5c6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-pumpkin-pie-spice",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Pumpkin-Pie-Spice-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1771",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "decaf",
+   "decaf coffee",
+   "holiday favorite",
+   "pie",
+   "pumpkin",
+   "spice"
+  ],
+  "title": "Pumpkin Pie Spice Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-pumpkin-pie-spice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1771:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1771:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f01a6c1405179c89",
+  "first_seen": "2026-10-26",
+  "handle": "candied-pecans-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Candied-Pecans.jpg",
+  "platform": "woocommerce",
+  "product_id": "1775",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "caramelized sugar",
+   "decaf",
+   "decaf coffee",
+   "pecan",
+   "pralines",
+   "rich cream"
+  ],
+  "title": "Candied Pecans Decaf",
+  "url": "https://canopycoffeeroasters.com/product/candied-pecans-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1775:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1775:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aedbd8e5a0a0b015",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peppermint-candy-cane",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Peppermint-Candy-Cane-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1782",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "candy",
+   "cane",
+   "decaf",
+   "decaf coffee",
+   "holiday",
+   "peppermint"
+  ],
+  "title": "Peppermint Candy Cane Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-peppermint-candy-cane/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1782:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1782:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "395a4e8a4ba50f86",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-orange-creamsicle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Orange-Creamsicle-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1790",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "creamsicle",
+   "creamy vanilla",
+   "decaf",
+   "decaf coffee",
+   "orange",
+   "orange liqueur"
+  ],
+  "title": "Orange Creamsicle Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-orange-creamsicle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1790:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1790:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4313d4fe368567f4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mudslide",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Mudlside-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1798",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "chocoholic",
+   "dark chocolate",
+   "decaf",
+   "decaf coffee",
+   "mudslide"
+  ],
+  "title": "Mudslide Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-mudslide/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1798:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1798:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4888b5da8108b211",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mocha-doodle",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Mocha-Doodle-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1802",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Mocha",
+   "cinnamon",
+   "cookie",
+   "decaf",
+   "decaf coffee",
+   "doodle",
+   "hazelnut",
+   "vanilla"
+  ],
+  "title": "Mocha Doodle Decaf",
+  "url": "https://canopycoffeeroasters.com/product/decaf-mocha-doodle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1802:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1802:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84a732368bfa9703",
+  "first_seen": "2026-10-26",
+  "handle": "mistletoe-mocha-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Mistletoe-Mocha-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1806",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "Mocha",
+   "decaf",
+   "decaf coffee",
+   "mint",
+   "mistletoe",
+   "rich mocha"
+  ],
+  "title": "Mistletoe Mocha Decaf",
+  "url": "https://canopycoffeeroasters.com/product/mistletoe-mocha-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1806:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1806:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4a710abe7613154",
+  "first_seen": "2026-10-26",
+  "handle": "mint-chocolate-chip-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Mint-Chocolate-Chip-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1810",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "chocolate chip",
+   "decaf",
+   "decaf coffee",
+   "mint"
+  ],
+  "title": "Mint Chocolate Chip Decaf",
+  "url": "https://canopycoffeeroasters.com/product/mint-chocolate-chip-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1810:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1810:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c990b9051cbd75c",
+  "first_seen": "2026-10-26",
+  "handle": "maple-nut-crunch-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Maple-Nut-Crunch-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1814",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "crunch",
+   "decaf",
+   "decaf coffee",
+   "maple",
+   "maple extract",
+   "nut"
+  ],
+  "title": "Maple Nut Crunch Decaf",
+  "url": "https://canopycoffeeroasters.com/product/maple-nut-crunch-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1814:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1814:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d10dfe13c9bf94e5",
+  "first_seen": "2026-10-26",
+  "handle": "linzer-torte-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Linzer-Torte-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1818",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "decaf",
+   "decaf coffee",
+   "doodle",
+   "french vanilla",
+   "linzer",
+   "raspberry",
+   "toasted almond",
+   "torte"
+  ],
+  "title": "Linzer Torte Decaf",
+  "url": "https://canopycoffeeroasters.com/product/linzer-torte-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1818:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1818:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef0335fa9181c96d",
+  "first_seen": "2026-10-26",
+  "handle": "kahlua-cream-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Kahlua-Cream-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1822",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Kahlua",
+   "coffee liqueur",
+   "cream",
+   "decaf",
+   "decaf coffee"
+  ],
+  "title": "Kahlua & Cream Decaf",
+  "url": "https://canopycoffeeroasters.com/product/kahlua-cream-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1822:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1822:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4de2cc85f9e73d53",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Jingle-Bell-Java-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1826",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "Jingle",
+   "bell",
+   "caramel",
+   "cinnamon",
+   "decaf",
+   "decaf coffee",
+   "java",
+   "rum",
+   "seasonal",
+   "vanilla"
+  ],
+  "title": "Jingle Bell Java Decaf",
+  "url": "https://canopycoffeeroasters.com/product/jingle-bell-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1826:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1826:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "721ce8f173e203b0",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Jazzy-Java-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1830",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "bell",
+   "cinnamon",
+   "decaf",
+   "decaf coffee",
+   "doodle",
+   "java",
+   "jazzy",
+   "southern pecan",
+   "spicy"
+  ],
+  "title": "Jazzy Java Decaf",
+  "url": "https://canopycoffeeroasters.com/product/jazzy-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1830:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1830:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab98ec2f1554b788",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-nuts-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Jamaican-Me-Nuts-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1834",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Kahlua",
+   "caramel",
+   "decaf",
+   "decaf coffee",
+   "doodle",
+   "jamaican",
+   "me",
+   "nuts",
+   "vanilla"
+  ],
+  "title": "Jamaican Me Nuts Decaf",
+  "url": "https://canopycoffeeroasters.com/product/jamaican-me-nuts-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1834:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1834:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe51bc82a0d3f8f8",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Irish-Cream-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1839",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Irish",
+   "cream",
+   "decaf",
+   "decaf coffee",
+   "doodle",
+   "irish liqeuer"
+  ],
+  "title": "Irish Cream Decaf",
+  "url": "https://canopycoffeeroasters.com/product/irish-cream-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1839:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1839:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "920eac88a718ba80",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Highlander-Grogg-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1843",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "butterscotch",
+   "decaf",
+   "decaf coffee",
+   "grogg",
+   "highlander",
+   "irish cream"
+  ],
+  "title": "Highlander Grogg Decaf",
+  "url": "https://canopycoffeeroasters.com/product/highlander-grogg-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1843:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1843:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ab1094976e66c78",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Hazelnut-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1847",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "decaf",
+   "decaf coffee",
+   "full bodied",
+   "hazelnut",
+   "nutty",
+   "smooth",
+   "well balanced"
+  ],
+  "title": "Hazelnut Decaf",
+  "url": "https://canopycoffeeroasters.com/product/hazelnut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1847:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1847:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "029e2e1a6320d808",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Hawaiian-Hazelnut-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1851",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Hawaiian",
+   "decaf",
+   "decaf coffee",
+   "hawaiian coconut",
+   "hazelnut",
+   "velvety hazelnut"
+  ],
+  "title": "Hawaiian Hazelnut Decaf",
+  "url": "https://canopycoffeeroasters.com/product/hawaiian-hazelnut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1851:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1851:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ba08a3e97be73cf",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-latte-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Gingerbread-Latte-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1855",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "decaf",
+   "decaf coffee",
+   "gingerbread",
+   "latte",
+   "sweet warm cream"
+  ],
+  "title": "Gingerbread Latte Decaf",
+  "url": "https://canopycoffeeroasters.com/product/gingerbread-latte-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1855:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1855:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd18a19712272cb7",
+  "first_seen": "2026-10-26",
+  "handle": "german-chocolate-cake-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/German-Chocolate-Cake-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1860",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "German",
+   "cake",
+   "caramel",
+   "chocolate",
+   "coconut",
+   "decaf",
+   "decaf coffee",
+   "pecans"
+  ],
+  "title": "German Chocolate Cake Decaf",
+  "url": "https://canopycoffeeroasters.com/product/german-chocolate-cake-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1860:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1860:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9cb52ff74d78b6a7",
+  "first_seen": "2026-10-26",
+  "handle": "frosty-favorite-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Frosty-Favorite-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1864",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "cinnamon sugar",
+   "decaf",
+   "decaf coffee",
+   "favorite",
+   "frosty",
+   "graham cracker",
+   "hazelnut",
+   "vanilla",
+   "winter"
+  ],
+  "title": "Frosty Favorite Decaf",
+  "url": "https://canopycoffeeroasters.com/product/frosty-favorite-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1864:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2LB",
+    "variant_id": "1864:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b21de7f7db7649ef",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/French-Vanilla-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1871",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "French",
+   "decaf",
+   "decaf coffee",
+   "hint of cream",
+   "vanilla"
+  ],
+  "title": "French Vanilla Decaf",
+  "url": "https://canopycoffeeroasters.com/product/french-vanilla-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1871:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1871:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83837623af816edf",
+  "first_seen": "2026-10-26",
+  "handle": "almond-joy-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Almond-Joy-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1906",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "almond",
+   "coconut",
+   "dark chocolate",
+   "decaf",
+   "decaf coffee",
+   "joy",
+   "toasted almond"
+  ],
+  "title": "Almond Joy Decaf",
+  "url": "https://canopycoffeeroasters.com/product/almond-joy-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1906:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1906:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1dc5cfbfedc0ebb",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Amaretto-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1910",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "almonds",
+   "amaretto",
+   "cherries",
+   "decaf",
+   "decaf coffee"
+  ],
+  "title": "Amaretto Decaf",
+  "url": "https://canopycoffeeroasters.com/product/amaretto-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1910:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1910:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c6e90d11e469c689",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-spice-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Autumn-Spice-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1914",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "autumn",
+   "cinnamon",
+   "cocoa",
+   "decaf",
+   "decaf coffee",
+   "pumpkin",
+   "spice"
+  ],
+  "title": "Autumn Spice Decaf",
+  "url": "https://canopycoffeeroasters.com/product/autumn-spice-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1914:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1914:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7847187b4e045f6d",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-coffee-cake-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Blueberry-Coffeecake-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1922",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Blueberry",
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "cinnamon",
+   "coffeecake",
+   "decaf",
+   "decaf coffee",
+   "ripe blueberries"
+  ],
+  "title": "Blueberry Coffee Cake Decaf",
+  "url": "https://canopycoffeeroasters.com/product/blueberry-coffee-cake-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1922:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1922:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aad95361af56c2da",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/BPT-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1926",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "bourbon",
+   "decaf",
+   "decaf coffee",
+   "pecan",
+   "pecan pie",
+   "torte"
+  ],
+  "title": "Bourbon Pecan Torte Decaf",
+  "url": "https://canopycoffeeroasters.com/product/bourbon-pecan-torte-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1926:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1926:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "757f8a332b8c2fda",
+  "first_seen": "2026-10-26",
+  "handle": "butter-rum-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Butter-Rum-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1930",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "aromatic rum",
+   "butter",
+   "decaf",
+   "decaf coffee",
+   "rum",
+   "velvety warm butter"
+  ],
+  "title": "Butter Rum Decaf",
+  "url": "https://canopycoffeeroasters.com/product/butter-rum-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1930:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1930:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cb091a5f62b53ec6",
+  "first_seen": "2026-10-26",
+  "handle": "california-gold-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/California-Gold-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1934",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "california",
+   "creamy vanilla",
+   "decaf",
+   "decaf coffee",
+   "gold",
+   "toasted almonds"
+  ],
+  "title": "California Gold Decaf",
+  "url": "https://canopycoffeeroasters.com/product/california-gold-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1934:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1934:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04c96027f35a6750",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-cream-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Caramel-Cream-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1938",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "butter",
+   "caramel",
+   "cream",
+   "decaf",
+   "decaf coffee",
+   "smooth caramel sugar"
+  ],
+  "title": "Caramel Cream Decaf",
+  "url": "https://canopycoffeeroasters.com/product/caramel-cream-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1938:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1938:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cecf01459b4e5613",
+  "first_seen": "2026-10-26",
+  "handle": "cherries-jubilee-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Cherries-Jubilee-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1942",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "cherries",
+   "decaf",
+   "decaf coffee",
+   "jubilee",
+   "sweet cherries"
+  ],
+  "title": "Cherries Jubilee Decaf",
+  "url": "https://canopycoffeeroasters.com/product/cherries-jubilee-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1942:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1942:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c238d81b3ff950ac",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-nitemare-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2023/01/Chocolate-Nitemare-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1950",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "chocolate",
+   "decaf",
+   "decaf coffee",
+   "german chocolate cake",
+   "nitemare"
+  ],
+  "title": "Chocolate Nitemare Decaf",
+  "url": "https://canopycoffeeroasters.com/product/chocolate-nitemare-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1950:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1950:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c70ac1985a59e8f7",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Chocolate-Raspberry-WB-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1958",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "chocolate",
+   "classic chocolate",
+   "decaf",
+   "decaf coffee",
+   "fresh",
+   "raspberry"
+  ],
+  "title": "Chocolate Raspberry Decaf",
+  "url": "https://canopycoffeeroasters.com/product/chocolate-raspberry-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1958:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1958:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4cb052261989d09c",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Cinnamon-Hazelnut-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1962",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "cinnamon",
+   "decaf",
+   "decaf coffee",
+   "hazelnut",
+   "sugar",
+   "vanilla"
+  ],
+  "title": "Cinnamon Hazelnut Decaf",
+  "url": "https://canopycoffeeroasters.com/product/cinnamon-hazelnut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1962:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1962:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "77dc3e78e4b29266",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-rum-cake-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Cinnamon-Rum-Cake-WB.jpg",
+  "platform": "woocommerce",
+  "product_id": "1966",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "cake",
+   "cinnamon",
+   "decaf",
+   "decaf coffee",
+   "rum",
+   "vanilla"
+  ],
+  "title": "Cinnamon Rum Cake Decaf",
+  "url": "https://canopycoffeeroasters.com/product/cinnamon-rum-cake-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1966:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1966:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf35adc0cb95d6e1",
+  "first_seen": "2026-10-26",
+  "handle": "cranberry-creme-decaf",
+  "image": "https://canopycoffeeroasters.com/wp-content/uploads/2018/11/Cranberry-Creme.jpg",
+  "platform": "woocommerce",
+  "product_id": "1970",
+  "product_type": "variable",
+  "roaster_slug": "canopycoffeeroasters",
+  "tags": [
+   "Decaf Coffees",
+   "Decaf Flavored",
+   "Holiday Flavors",
+   "cranberry",
+   "creme",
+   "decaf",
+   "decaf coffee",
+   "warm cream"
+  ],
+  "title": "Cranberry Creme Decaf",
+  "url": "https://canopycoffeeroasters.com/product/cranberry-creme-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz",
+    "variant_id": "1970:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "2-Pound",
+    "variant_id": "1970:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

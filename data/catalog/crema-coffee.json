@@ -1,0 +1,1602 @@
+[
+ {
+  "body_hash": "2a81e88dbb0a9fb9",
+  "first_seen": "2026-10-26",
+  "handle": "first-draft",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/FirstDraftWebPhoto-1.jpg?v=1784825970",
+  "platform": "shopify",
+  "product_id": "10310891733299",
+  "product_type": "",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "First Draft",
+  "url": "https://crema-coffee.com/products/first-draft",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lbs",
+    "variant_id": "53660871786803"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "d77002ee8670994a",
+  "first_seen": "2026-10-26",
+  "handle": "gotiti-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/GotitiWebPhoto.jpg?v=1784320575",
+  "platform": "shopify",
+  "product_id": "10317670678835",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Gotiti - Ethiopia",
+  "url": "https://crema-coffee.com/products/gotiti-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "53675344494899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "53675344527667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "53675344560435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / French Press",
+    "variant_id": "53675344593203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "53675344625971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "53675344658739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "53675344691507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "53675344724275"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "53675344757043"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "53675344789811"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "53675344822579"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "53675344855347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "53675344888115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "53675344920883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "53675344953651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "53675344986419"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "53675345019187"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "53675345051955"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "53675345084723"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "53675345117491"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "cb385b500fb97584",
+  "first_seen": "2026-10-26",
+  "handle": "kivanga-estate-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/KivangaEstateWebPhoto.jpg?v=1784749486",
+  "platform": "shopify",
+  "product_id": "10331752300851",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "Kivanga Estate - Kenya",
+  "url": "https://crema-coffee.com/products/kivanga-estate-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "53699213754675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "53699213787443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "53699213820211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz / French Press",
+    "variant_id": "53699213852979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "53699213885747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "53699213918515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "53699213951283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "53699213984051"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "53699214016819"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "53699214049587"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "53699214082355"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 120.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "53699214115123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "53699214147891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "53699214180659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "53699214213427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "53699214246195"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "53699214278963"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "53699214311731"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "53699214344499"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 360.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "53699214377267"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "bca01e732fe706f0",
+  "first_seen": "2026-10-26",
+  "handle": "equinox-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/EquinoxWebPhoto.jpg?v=1789758969",
+  "platform": "shopify",
+  "product_id": "15393205027123",
+  "product_type": "",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "blend",
+   "roasters choice"
+  ],
+  "title": "Equinox - Seasonal Blend",
+  "url": "https://crema-coffee.com/products/equinox-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67585249444147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "67585249476915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "67585249509683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "67585249542451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "67585249575219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs / Drip Coffee",
+    "variant_id": "67585249607987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs / Pour Over",
+    "variant_id": "67585249640755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "67585249673523"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs / Whole Bean",
+    "variant_id": "67585249706291"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs / Drip Coffee",
+    "variant_id": "67585249739059"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs / Pour Over",
+    "variant_id": "67585249771827"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs / French Press",
+    "variant_id": "67585249804595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "67585249837363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Drip Coffee",
+    "variant_id": "67585249870131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Pour Over",
+    "variant_id": "67585249902899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / French Press",
+    "variant_id": "67585249935667"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs / Whole Bean",
+    "variant_id": "67585249968435"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs / Drip Coffee",
+    "variant_id": "67585250001203"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs / Pour Over",
+    "variant_id": "67585250033971"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs / French Press",
+    "variant_id": "67585250066739"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "51063f2e0ff8c0c5",
+  "first_seen": "2026-10-26",
+  "handle": "don-mayo-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/DonMayoWebPhoto.jpg?v=1791493690",
+  "platform": "shopify",
+  "product_id": "15398080217395",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "coffee",
+   "roasters choice",
+   "single origin"
+  ],
+  "title": "Don Mayo - Costa Rica",
+  "url": "https://crema-coffee.com/products/don-mayo-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67603487621427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "67603487654195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "67603487686963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "67603487719731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "67603487752499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "67603487785267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "67603487818035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "67603487850803"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "67603487883571"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "67603487916339"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "67603487949107"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "67603487981875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "67603488014643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "67603488047411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "67603488080179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "67603488112947"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "67603488145715"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "67603488178483"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "67603488211251"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "67603488244019"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "f017f8e2223a7c89",
+  "first_seen": "2026-10-26",
+  "handle": "arbegona-anaerobic-natural-limited-release-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/Arbegona2026-WebPhoto-1.jpg?v=1791492558",
+  "platform": "shopify",
+  "product_id": "15398117015859",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "coffee",
+   "limited release"
+  ],
+  "title": "Arbegona Anaerobic Natural Limited Release - Ethiopia",
+  "url": "https://crema-coffee.com/products/arbegona-anaerobic-natural-limited-release-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.0,
+    "title": "8 oz (whole bean only)",
+    "variant_id": "67603659587891"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "a18a5836e9a92a86",
+  "first_seen": "2026-10-26",
+  "handle": "bensa-kokosa-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/BensaKokosaWebPhoto.jpg?v=1792700993",
+  "platform": "shopify",
+  "product_id": "15398130483507",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Bensa Kokosa - Ethiopia",
+  "url": "https://crema-coffee.com/products/bensa-kokosa-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67603714572595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "67603714605363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "67603714638131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12 oz / French Press",
+    "variant_id": "67603714670899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "67603714703667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "67603714736435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "67603714769203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "67603714801971"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 126.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "67603714834739"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 126.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "67603714867507"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 126.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "67603714900275"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 126.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "67603714933043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "67603714965811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "67603714998579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "67603715031347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "67603715064115"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 380.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "67603715096883"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 380.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "67603715129651"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 380.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "67603715162419"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 380.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "67603715195187"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "a7c719425fc033dc",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-blossom-honey-el-apiario",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/Food_Honey_White.jpg?v=1689611123",
+  "platform": "shopify",
+  "product_id": "8338813583667",
+  "product_type": "",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "gift",
+   "pantry",
+   "under25"
+  ],
+  "title": "Coffee Blossom Honey",
+  "url": "https://crema-coffee.com/products/coffee-blossom-honey-el-apiario",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "45358021607731"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "663677c99c329582",
+  "first_seen": "2026-10-26",
+  "handle": "tres-banderas",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/Coffee_TresBanderas_2024.jpg?v=1728915491",
+  "platform": "shopify",
+  "product_id": "8338814566707",
+  "product_type": "Blend",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "blend",
+   "coffee",
+   "switchyards"
+  ],
+  "title": "Tres Banderas",
+  "url": "https://crema-coffee.com/products/tres-banderas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45358027866419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "45358027931955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45358028030259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45358028095795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "45358028161331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "45358028194099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "45358028226867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "45358028259635"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "45358028292403"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "45358028325171"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "45358028357939"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "45358028390707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "45358028423475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "45358028456243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "45358028489011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "45358028521779"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "45358028554547"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "45358028587315"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "45358028620083"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "45358028652851"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 400.0,
+    "title": "20 lbs (Save $7/lb) / Whole Bean",
+    "variant_id": "45358028685619"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 400.0,
+    "title": "20 lbs (Save $7/lb) / Drip Coffee",
+    "variant_id": "45358028718387"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 400.0,
+    "title": "20 lbs (Save $7/lb) / Pour Over",
+    "variant_id": "45358028751155"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 400.0,
+    "title": "20 lbs (Save $7/lb) / French Press",
+    "variant_id": "45358028783923"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "5278f15c589246dd",
+  "first_seen": "2026-10-26",
+  "handle": "staycation-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/Coffee_StaycationDecaf_2024.jpg?v=1728915876",
+  "platform": "shopify",
+  "product_id": "8338816991539",
+  "product_type": "",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "coffee",
+   "decaf",
+   "switchyards"
+  ],
+  "title": "Staycation Decaf",
+  "url": "https://crema-coffee.com/products/staycation-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45358046085427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "45358046118195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45358046150963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45358046183731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "45358046216499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "45358046249267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "45358046282035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "45358046314803"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "45358046347571"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "45358046380339"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "45358046413107"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 87.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "45358046445875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "45358046478643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "45358046511411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "45358046544179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "45358046576947"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "45358046609715"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "45358046642483"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "45358046708019"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "45358046740787"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "d96e1418b250f0be",
+  "first_seen": "2026-10-26",
+  "handle": "33-cups-of-coffee-journal",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/Booklet_33CupsOfCoffee_NewLogo.jpg?v=1692127699",
+  "platform": "shopify",
+  "product_id": "8339167969587",
+  "product_type": "",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "books",
+   "under25"
+  ],
+  "title": "33 Cups of Coffee Journal",
+  "url": "https://crema-coffee.com/products/33-cups-of-coffee-journal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "45360457580851"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "d4613feb00d2af75",
+  "first_seen": "2026-10-26",
+  "handle": "yabitu-koba-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/YabituKoba2026WebPhoto.jpg?v=1792703327",
+  "platform": "shopify",
+  "product_id": "9778035458355",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "roasters choice",
+   "single origin"
+  ],
+  "title": "Yabitu Koba - Ethiopia",
+  "url": "https://crema-coffee.com/products/yabitu-koba-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51686742688051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "51686742720819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "51686742753587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz / French Press",
+    "variant_id": "51686742786355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "51686742819123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "51686742851891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "51686742884659"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "51686742917427"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 99.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "51686742950195"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 99.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "51686742982963"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 99.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "51686743015731"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 99.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "51686743048499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "51686743081267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "51686743114035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "51686743146803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "51686743179571"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 290.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "51686743212339"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 290.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "51686743245107"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 290.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "51686743277875"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 290.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "51686743310643"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ },
+ {
+  "body_hash": "a7f0fe076ed6fb07",
+  "first_seen": "2026-10-26",
+  "handle": "shimmer",
+  "image": "https://cdn.shopify.com/s/files/1/0775/2974/3667/files/ShimmerWebPhoto.jpg?v=1761337587",
+  "platform": "shopify",
+  "product_id": "9924574511411",
+  "product_type": "Single Origin",
+  "roaster_slug": "crema-coffee",
+  "tags": [
+   "best seller",
+   "coffee",
+   "roasters choice",
+   "s.o."
+  ],
+  "title": "Shimmer - Ethiopia",
+  "url": "https://crema-coffee.com/products/shimmer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52567895212339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Drip Coffee",
+    "variant_id": "52567895245107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "52567895277875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / French Press",
+    "variant_id": "52567895310643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "52567895343411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "52567895376179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "52567895408947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lbs (Save $2/lb) / French Press",
+    "variant_id": "52567895441715"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3 lbs (Save $2/lb) / Whole Bean",
+    "variant_id": "52567895474483"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3 lbs (Save $2/lb) / Drip Coffee",
+    "variant_id": "52567895507251"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3 lbs (Save $2/lb) / Pour Over",
+    "variant_id": "52567895540019"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3 lbs (Save $2/lb) / French Press",
+    "variant_id": "52567895572787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs (Save $3/lb) / Whole Bean",
+    "variant_id": "52567895605555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs (Save $3/lb) / Drip Coffee",
+    "variant_id": "52567895638323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs (Save $3/lb) / Pour Over",
+    "variant_id": "52567895671091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs (Save $3/lb) / French Press",
+    "variant_id": "52567895703859"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10 lbs (Save $6/lb) / Whole Bean",
+    "variant_id": "52567895736627"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10 lbs (Save $6/lb) / Drip Coffee",
+    "variant_id": "52567895769395"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10 lbs (Save $6/lb) / Pour Over",
+    "variant_id": "52567895802163"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10 lbs (Save $6/lb) / French Press",
+    "variant_id": "52567895834931"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 420.0,
+    "title": "20 lbs (Save $7/lb) / Whole Bean",
+    "variant_id": "52567895867699"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 420.0,
+    "title": "20 lbs (Save $7/lb) / Drip Coffee",
+    "variant_id": "52567895900467"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 420.0,
+    "title": "20 lbs (Save $7/lb) / Pour Over",
+    "variant_id": "52567895933235"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 420.0,
+    "title": "20 lbs (Save $7/lb) / French Press",
+    "variant_id": "52567895966003"
+   }
+  ],
+  "vendor": "Crema Coffee Roasters"
+ }
+]

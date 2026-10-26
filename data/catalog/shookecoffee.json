@@ -1,0 +1,268 @@
+[
+ {
+  "body_hash": "6e9a7381239b6008",
+  "first_seen": "2026-10-26",
+  "handle": "strike-valley-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/products/strikevalleyespresso2.jpg?v=1625179830",
+  "platform": "shopify",
+  "product_id": "6881211613350",
+  "product_type": "",
+  "roaster_slug": "shookecoffee",
+  "tags": [],
+  "title": "Strike Valley Espresso",
+  "url": "https://www.shookecoffee.com/products/strike-valley-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "40559616491686"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "40559616524454"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "40559616557222"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "40559616589990"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ },
+ {
+  "body_hash": "eab36523b1330d2e",
+  "first_seen": "2026-10-26",
+  "handle": "boulder-mountain-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/products/BoulderMountain.jpg?v=1634677079",
+  "platform": "shopify",
+  "product_id": "7116549816486",
+  "product_type": "Coffee",
+  "roaster_slug": "shookecoffee",
+  "tags": [],
+  "title": "Boulder Mountain Breakfast Blend",
+  "url": "https://www.shookecoffee.com/products/boulder-mountain-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41551256715430"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "41551256748198"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "41551256780966"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "41551256813734"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ },
+ {
+  "body_hash": "2163df9fd442db37",
+  "first_seen": "2026-10-26",
+  "handle": "cathedral-valley",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/products/CathedralValleyUse.jpg?v=1656169604",
+  "platform": "shopify",
+  "product_id": "7340051529894",
+  "product_type": "Coffee",
+  "roaster_slug": "shookecoffee",
+  "tags": [],
+  "title": "Cathedral Valley Blend",
+  "url": "https://www.shookecoffee.com/products/cathedral-valley",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "42518975611046"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "42518975643814"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "42518975676582"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 18.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "42518975709350"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ },
+ {
+  "body_hash": "d8608bb5b84ecc2b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-altura",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/files/20240830-113719.jpg?v=1725152120",
+  "platform": "shopify",
+  "product_id": "8285872029862",
+  "product_type": "Coffee",
+  "roaster_slug": "shookecoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Altura",
+  "url": "https://www.shookecoffee.com/products/mexico-chiapas-altura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "45771377475750"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "45771377508518"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "45771377541286"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "45771377574054"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ },
+ {
+  "body_hash": "cff870bc1f380de2",
+  "first_seen": "2026-10-26",
+  "handle": "brazilaltamogiana",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/files/Brazil_Alta_Mogiana.jpg?v=1736187337",
+  "platform": "shopify",
+  "product_id": "8376532271270",
+  "product_type": "Coffee",
+  "roaster_slug": "shookecoffee",
+  "tags": [
+   "organically-grown"
+  ],
+  "title": "Brazil Alta Mogiana",
+  "url": "https://www.shookecoffee.com/products/brazilaltamogiana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "46053269012646"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "46053269045414"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "46053269078182"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "46053269110950"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ },
+ {
+  "body_hash": "f9d32e537c1626e0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0564/7433/7446/files/GuatemalaHuehuetenango4x4_edited-1.jpg?v=1753457976",
+  "platform": "shopify",
+  "product_id": "8535975166118",
+  "product_type": "Coffee",
+  "roaster_slug": "shookecoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.shookecoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "46536148713638"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Fine (Moka/Espresso)",
+    "variant_id": "46536148746406"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Medium (Percolator/Drip)",
+    "variant_id": "46536148779174"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.0,
+    "title": "Coarse (French press/Pour over)",
+    "variant_id": "46536148811942"
+   }
+  ],
+  "vendor": "Shooke Coffee Roasters"
+ }
+]

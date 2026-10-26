@@ -1,0 +1,1090 @@
+[
+ {
+  "body_hash": "4f60399e110188c9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Colombia_12oz.jpg?v=1789659353",
+  "platform": "shopify",
+  "product_id": "2448125034575",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Light Roast",
+   "Varietals"
+  ],
+  "title": "Colombia Organic",
+  "url": "https://kalanicoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21654509879375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "21654510141519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "21654510174287"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "32253501767759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42472823881986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "42472823914754"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "f59ffd911c96b2f2",
+  "first_seen": "2026-10-26",
+  "handle": "oceania-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Roma_12oz.jpg?v=1789657463",
+  "platform": "shopify",
+  "product_id": "2449383096399",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Roma Blend Organic",
+  "url": "https://kalanicoffee.com/products/oceania-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21658156171343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "21658156204111"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "21658156269647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42473519939842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "42473519972610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43581055303938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43581055336706"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "04f5f1a7d4b3cc54",
+  "first_seen": "2026-10-26",
+  "handle": "savannah-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/savannah_12oz_bac05754-1dc8-4e75-afc7-5f4a2c8fffd9.jpg?v=1789657394",
+  "platform": "shopify",
+  "product_id": "2449383817295",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Medium Roast",
+   "google channel"
+  ],
+  "title": "Savannah Blend Organic",
+  "url": "https://kalanicoffee.com/products/savannah-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21658162462799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "21658162495567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "21658162561103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "21658162593871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "32254182588495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42473529377026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "42473529409794"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "924c0687fecf26b1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Sumatra_12oz.jpg?v=1789657368",
+  "platform": "shopify",
+  "product_id": "2449916690511",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Medium Roast",
+   "Varietals"
+  ],
+  "title": "Sumatra Organic",
+  "url": "https://kalanicoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21660840951887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "21660840984655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "21660841017423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "32253663445071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "32386175434831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42473538617602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "42473538650370"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "0d10868668cb5659",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Peru_12oz.jpg?v=1789658044",
+  "platform": "shopify",
+  "product_id": "2449934647375",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Light Roast",
+   "Varietals"
+  ],
+  "title": "Peru Organic",
+  "url": "https://kalanicoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "21660882960463"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "21660882993231"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "21660883025999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "32254172135503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42473504997634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "42473505030402"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "963b445157d8d10c",
+  "first_seen": "2026-10-26",
+  "handle": "aloha-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Aloha_12oz_440dcf63-60d8-40b7-8800-7b687ff819a2.jpg?v=1789659385",
+  "platform": "shopify",
+  "product_id": "8023830757634",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Light Roast",
+   "Varietals"
+  ],
+  "title": "Aloha Blend Organic",
+  "url": "https://kalanicoffee.com/products/aloha-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707155218690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707155251458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707155284226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707155316994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707155480834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707155513602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43707162919170"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "a6b7b44af66e0003",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Espresso_12oz.jpg?v=1789658426",
+  "platform": "shopify",
+  "product_id": "8023876796674",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Medium Roast",
+   "google channel"
+  ],
+  "title": "Espresso Blend  Organic",
+  "url": "https://kalanicoffee.com/products/espresso-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707210137858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707210170626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707210203394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707210236162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43707210268930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707210465538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707210498306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43711556485378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43711556518146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Espresso Grind",
+    "variant_id": "43711556616450"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "b2fb782d918c2739",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Decaf_12oz_Bag_cdae3739-df23-4928-a176-4786fc0a262c.jpg?v=1789658715",
+  "platform": "shopify",
+  "product_id": "8023897243906",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Decaf Organic Coffee",
+  "url": "https://kalanicoffee.com/products/decaf-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707235664130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707235696898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707235729666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707235762434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43707235795202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707235991810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707236024578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Grind",
+    "variant_id": "46051284353282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Espresso Grind",
+    "variant_id": "46051291005186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Grind",
+    "variant_id": "46051291431170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "46100872888578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "46100872921346"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "b2931ea32634a2db",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/French_12oz.jpg?v=1789658356",
+  "platform": "shopify",
+  "product_id": "8023918182658",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "French Roast  Organic",
+  "url": "https://kalanicoffee.com/products/french-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707258339586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707258372354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707258405122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707258437890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707258667266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707258700034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43707260141826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43707260567810"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "786e4c7f5b9056fa",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Ethiopia_12oz.jpg?v=1789658395",
+  "platform": "shopify",
+  "product_id": "8024186388738",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Medium Roast",
+   "Varietals"
+  ],
+  "title": "Ethiopia Organic",
+  "url": "https://kalanicoffee.com/products/ethiopia-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707579564290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707579597058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707579629826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707579662594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "43707579695362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707579924738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707579957506"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "dad591b726ed2b83",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Italian_12oz.jpg?v=1789658319",
+  "platform": "shopify",
+  "product_id": "8024206835970",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Italian Roast Organic",
+  "url": "https://kalanicoffee.com/products/italian-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43707610136834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43707610169602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43707610202370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43707610235138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43707610267906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43707610464514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43707610497282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43707615838466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43707616461058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Espresso Grind",
+    "variant_id": "43707616919810"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "73e44fde0115fe4e",
+  "first_seen": "2026-10-26",
+  "handle": "kalani-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Kalani.Blend_12oz_49e1bfc5-651c-4f53-95fa-138f2804925b.jpg?v=1789662089",
+  "platform": "shopify",
+  "product_id": "8024613093634",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Kalani Blend  Organic",
+  "url": "https://kalanicoffee.com/products/kalani-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43708100149506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43708100182274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43708100215042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43708100247810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43708100411650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43708100444418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43708100477186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43708100509954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "47446661890306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "47446661923074"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "e6d4a5c06ae77237",
+  "first_seen": "2026-10-26",
+  "handle": "mesoamerica-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Mesoamerica_12oz_ef690b04-da98-4e53-9bae-fb44939fd2f5.jpg?v=1789658220",
+  "platform": "shopify",
+  "product_id": "8028147187970",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Medium Roast",
+   "google channel"
+  ],
+  "title": "Mesoamerica Blend Organic",
+  "url": "https://kalanicoffee.com/products/mesoamerica-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43712148406530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43712148439298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43712148734210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43712148766978"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ },
+ {
+  "body_hash": "9e35b955551a6365",
+  "first_seen": "2026-10-26",
+  "handle": "oceania-blend-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0082/5897/7871/files/Oceania_12oz.jpg?v=1789658173",
+  "platform": "shopify",
+  "product_id": "8028150169858",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "kalanicoffee",
+  "tags": [
+   "All Coffee",
+   "Bean",
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Oceania Blend Organic",
+  "url": "https://kalanicoffee.com/products/oceania-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43712160235778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "43712160268546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Cone Filter",
+    "variant_id": "43712160301314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / French Press",
+    "variant_id": "43712160334082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43712160366850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43712160563458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "43712160596226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Cone Filter",
+    "variant_id": "43712160628994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43712160661762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Espresso Grind",
+    "variant_id": "43712160694530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "43712163479810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb / Turkish Grind",
+    "variant_id": "43712164462850"
+   }
+  ],
+  "vendor": "Kalani Organica Coffee"
+ }
+]

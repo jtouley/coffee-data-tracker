@@ -1,0 +1,4038 @@
+[
+ {
+  "body_hash": "14a00bfbc75f85b2",
+  "first_seen": "2026-10-26",
+  "handle": "finca-las-dos-marias-washed",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2023/11/dosmarias1-e1700255837510.jpg",
+  "platform": "woocommerce",
+  "product_id": "10184",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Microlots",
+   "Nicaragua",
+   "Organic (Green)",
+   "Past Crop"
+  ],
+  "title": "(PAST CROP) Nicaragua: Organic Finca Las Dos Marias Washed, Venecia (Green)",
+  "url": "https://currentcroproasting.com/product/finca-las-dos-marias-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.0,
+    "title": "1/2 LB",
+    "variant_id": "10184:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "1LB",
+    "variant_id": "10184:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.0,
+    "title": "3LB",
+    "variant_id": "10184:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.0,
+    "title": "5LB",
+    "variant_id": "10184:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6eed53ac5574a36",
+  "first_seen": "2026-10-26",
+  "handle": "india-cherry-robusta",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/03/Cherry-Robusta_IMG_7657-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "12272",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Asia",
+   "India"
+  ],
+  "title": "India: Cherry Robusta, Karnataka (Green)",
+  "url": "https://currentcroproasting.com/product/india-cherry-robusta/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 LB",
+    "variant_id": "12272:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "1LB",
+    "variant_id": "12272:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 10.5,
+    "title": "3LB",
+    "variant_id": "12272:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.5,
+    "title": "5LB",
+    "variant_id": "12272:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "741c3ae2d9f4e113",
+  "first_seen": "2026-10-26",
+  "handle": "bali-organic-blue-moon-kintamani-highlands",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/BALIBEANS-detail-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "1941",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Bali",
+   "Indonesia",
+   "Organic (Green)"
+  ],
+  "title": "Bali: Organic Blue Moon, Kintamani Highlands (Green)",
+  "url": "https://currentcroproasting.com/product/bali-organic-blue-moon-kintamani-highlands/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "1941:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "1941:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "1941:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "1941:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c36dd3b0113b5a0f",
+  "first_seen": "2026-10-26",
+  "handle": "bali-organic-kintamani-kintamani-highlands",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Bali20Kintamani-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "1946",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Bali",
+   "Indonesia"
+  ],
+  "title": "Bali: Kintamani, Kintamani Highlands (Green)",
+  "url": "https://currentcroproasting.com/product/bali-organic-kintamani-kintamani-highlands/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "1946:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "1946:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "1946:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "1946:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a3df21bbf0678004",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-organic-caranavi-fto-la-paz-department",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/BOLOCOL-detail-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "1956",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Bolivia",
+   "Fair Trade",
+   "Organic (Green)",
+   "South America"
+  ],
+  "title": "Bolivia: Organic Caranavi FTO, La Paz Department (Green)",
+  "url": "https://currentcroproasting.com/product/bolivia-organic-caranavi-fto-la-paz-department/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "1956:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "1956:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "1956:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "1956:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca41e121f69e5e31",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-dutra-14-16-matas-de-minas",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Brazil20Dutra201-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "1994",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Brazil",
+   "South America"
+  ],
+  "title": "Brazil: Fazenda Dutra 14/16, Matas de Minas (Green)",
+  "url": "https://currentcroproasting.com/product/brazil-fazenda-dutra-14-16-matas-de-minas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.5,
+    "title": "1/2 LB",
+    "variant_id": "1994:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.5,
+    "title": "1LB",
+    "variant_id": "1994:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 9.5,
+    "title": "3LB",
+    "variant_id": "1994:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.5,
+    "title": "5LB",
+    "variant_id": "1994:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf8efee54ce5b1e4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-ea-cauca",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Colombia20Excelso20EA20Process20Closeup-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2091",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Colombia",
+   "Decaf",
+   "South America"
+  ],
+  "title": "Colombia: Decaf EA, Cauca (Green)",
+  "url": "https://currentcroproasting.com/product/colombia-decaf-ea-cauca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2091:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2091:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2091:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2091:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3520988ebb8c876",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-reserva-del-patron-narino",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/49-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2141",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Colombia",
+   "South America"
+  ],
+  "title": "Colombia: Reserva Del Patron, Nariño (Green)",
+  "url": "https://currentcroproasting.com/product/colombia-reserva-del-patron-narino/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2141:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2141:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2141:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2141:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3048f950cf95fdc7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-ep-huila",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/53-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2146",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Colombia",
+   "South America"
+  ],
+  "title": "Colombia: Supremo EP (Green), Huila",
+  "url": "https://currentcroproasting.com/product/colombia-supremo-ep-huila/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2146:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2146:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2146:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2146:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1107ffb647ac74c0",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-minita-estate-tarrazu",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/62-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2185",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Costa Rica",
+   "Featured Farm",
+   "RFA Certified"
+  ],
+  "title": "Costa Rica: La Minita Estate, Tarrazu (Green)",
+  "url": "https://currentcroproasting.com/product/costa-rica-la-minita-estate-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2185:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2185:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2185:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2185:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8c16b34fa49b018",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-organic-ramirez-natural-jarabacoa",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/DOMRAMZORG-detail-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2205",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Caribbean",
+   "Dominican Republic",
+   "Organic (Green)"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Natural, Jarabacoa (Green)",
+  "url": "https://currentcroproasting.com/product/dominican-republic-organic-ramirez-natural-jarabacoa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2205:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2205:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2205:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2205:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "63bd00f9e27cdbf5",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-organic-ramirez-red-honey-jarabacoa",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/105-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2221",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Caribbean",
+   "Dominican Republic",
+   "Organic (Green)"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Red Honey, Jarabacoa (Green)",
+  "url": "https://currentcroproasting.com/product/dominican-republic-organic-ramirez-red-honey-jarabacoa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2221:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2221:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2221:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2221:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8186717c3ccd4e21",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-organic-ramirez-washed-jarabacoa",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/DOMRAMZORG-detail-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2226",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Caribbean",
+   "Dominican Republic",
+   "Organic (Green)"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Washed, Jarabacoa (Green)",
+  "url": "https://currentcroproasting.com/product/dominican-republic-organic-ramirez-washed-jarabacoa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2226:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2226:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2226:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2226:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "306d2bd2d30dfd57",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-durato-bombe-sidamo",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Ethiopia20Sidamo20Durato20Bombe-compress.png",
+  "platform": "woocommerce",
+  "product_id": "2260",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia: Durato Bombe, Sidamo (Green)",
+  "url": "https://currentcroproasting.com/product/ethiopia-durato-bombe-sidamo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2260:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2260:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2260:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2260:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0cebb654e1947dbe",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-konga-g1-yirgacheffe",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/69-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2280",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia: Organic Konga G2, Yirgacheffe",
+  "url": "https://currentcroproasting.com/product/ethiopia-konga-g1-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2280:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2280:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2280:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2280:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35968670637f3c15",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley-yirgacheffe",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/118Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2290",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia: Misty Valley, Yirgacheffe (Green)",
+  "url": "https://currentcroproasting.com/product/ethiopia-misty-valley-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2290:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2290:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2290:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2290:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "074c0c20020519dc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hht-shb-huehuetenango",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/31-Guatemala-Huehuetenango-SHB-EP-GUATHHTSB-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2359",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Guatemala"
+  ],
+  "title": "Guatemala: HHT SHB, Huehuetenango (Green)",
+  "url": "https://currentcroproasting.com/product/guatemala-hht-shb-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2359:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2359:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2359:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2359:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "547a184317b61e4f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-del-cafe-peaberry-antigua",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Guatemala20La20Flor20Peaberry20Closeup-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2364",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Featured Farm",
+   "Guatemala"
+  ],
+  "title": "Guatemala: La Flor Del Cafe Peaberry, Antigua (Green)",
+  "url": "https://currentcroproasting.com/product/guatemala-la-flor-del-cafe-peaberry-antigua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2364:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2364:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2364:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2364:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3446457dab434e13",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-del-cafe-antigua",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/22-Guatemala-La-Flor-del-Cafe-Antigua-GUATANT-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2369",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Featured Farm",
+   "Guatemala"
+  ],
+  "title": "Guatemala: La Flor Del Cafe, Antigua (Green)",
+  "url": "https://currentcroproasting.com/product/guatemala-la-flor-del-cafe-antigua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2369:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2369:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2369:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2369:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8f33ea9f0d0a989",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-natural-marcala",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/115Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2462",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Honduras",
+   "Organic (Green)"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Natural, Marcala (Green)",
+  "url": "https://currentcroproasting.com/product/honduras-organic-18-rabbit-natural-marcala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2462:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2462:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2462:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2462:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5d75dd0c06bf93bd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-washed-marcala",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/117Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2481",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Honduras",
+   "Organic (Green)"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Washed, Marcala (Green)",
+  "url": "https://currentcroproasting.com/product/honduras-organic-18-rabbit-washed-marcala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2481:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2481:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2481:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2481:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cb30ec7661e0eacc",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsooned-malabar-aa-karnataka",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/35-India-Monsoon-Malabar-AA-INDMAL-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2496",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Asia",
+   "India"
+  ],
+  "title": "India: Monsooned Malabar AA, Karnataka (Green)",
+  "url": "https://currentcroproasting.com/product/india-monsooned-malabar-aa-karnataka/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 12.6,
+    "title": "14oz",
+    "variant_id": "2496:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 12.6,
+    "title": "2.5LB",
+    "variant_id": "2496:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2496:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.6,
+    "title": "6oz",
+    "variant_id": "2496:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd6adfae347b2d03",
+  "first_seen": "2026-10-26",
+  "handle": "java-blawan-estate-east-java",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/23-Java-Government-Estate-Blawan-JAVAGOVT-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2520",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Indonesia",
+   "Java"
+  ],
+  "title": "Java: Blawan Estate, East Java (Green)",
+  "url": "https://currentcroproasting.com/product/java-blawan-estate-east-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2520:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2520:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2520:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2520:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c555c0eb92568cd9",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-select-plus-aa-kiambu-county",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/25-Kenya-AA-KENKIGAN-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2555",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Kenya"
+  ],
+  "title": "Kenya: Select Plus AA, Kiambu County (Green)",
+  "url": "https://currentcroproasting.com/product/kenya-select-plus-aa-kiambu-county/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2555:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2555:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2555:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2555:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c89c4d668338668",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja-honey-tlaltetela-veracruz",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Mexico20La20Laja20Honey20Closeup-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2572",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Mexico",
+   "North America"
+  ],
+  "title": "Mexico: La Laja Honey, Veracruz (Green)",
+  "url": "https://currentcroproasting.com/product/mexico-la-laja-honey-tlaltetela-veracruz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2572:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2572:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2572:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2572:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e578230ffc771f94",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-cepco-oaxaca",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/MEXORGOAX-detail-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2582",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Fair Trade",
+   "Mexico",
+   "North America",
+   "Organic (Green)"
+  ],
+  "title": "Mexico: Organic Cepco Oaxaca, Oaxaca (Green)",
+  "url": "https://currentcroproasting.com/product/mexico-organic-cepco-oaxaca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2582:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2582:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2582:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2582:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ffa4f35105048e09",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-rancho-san-francisco-chiapas",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/26-Mexico-Chiapas-MEXCHIAPAS-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2598",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Mexico",
+   "North America"
+  ],
+  "title": "Mexico: Rancho San Francisco, Chiapas (Green)",
+  "url": "https://currentcroproasting.com/product/mexico-rancho-san-francisco-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2598:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2598:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2598:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2598:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3fb8f439cc2911b4",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-turquesa-hg-chiapas",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/26-Mexico-Chiapas-MEXCHIAPAS-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2603",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Mexico",
+   "North America"
+  ],
+  "title": "Mexico: Turquesa HG, Chiapas (Green)",
+  "url": "https://currentcroproasting.com/product/mexico-turquesa-hg-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2603:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2603:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2603:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2603:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92f5a43796b1bf59",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-finca-la-esperanza-san-martin",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/peru20la20esperanza1-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2680",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Organic (Green)",
+   "Peru",
+   "RFA Certified",
+   "South America"
+  ],
+  "title": "Peru: Organic Finca La Esperanza, San Martin (Green)",
+  "url": "https://currentcroproasting.com/product/peru-organic-finca-la-esperanza-san-martin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "2680:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "2680:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "2680:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "2680:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6d4902442abbcac",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-la-florida-selva-central",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Organic-Peru-La-Florida-FTO-2-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "2685",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Fair Trade",
+   "Organic (Green)",
+   "Peru",
+   "South America"
+  ],
+  "title": "Peru: Organic La Florida, Selva Central (Green)",
+  "url": "https://currentcroproasting.com/product/peru-organic-la-florida-selva-central/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2685:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2685:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2685:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2685:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cff072349035368c",
+  "first_seen": "2026-10-26",
+  "handle": "seasoning-beans",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Seasoning20Beans-compress.png",
+  "platform": "woocommerce",
+  "product_id": "2708",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Seasoning Beans"
+  ],
+  "title": "Seasoning Beans (Green)",
+  "url": "https://currentcroproasting.com/product/seasoning-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 5.75,
+    "title": "1/2 LB",
+    "variant_id": "2708:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.75,
+    "title": "1LB",
+    "variant_id": "2708:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 5.75,
+    "title": "3LB",
+    "variant_id": "2708:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.75,
+    "title": "5LB",
+    "variant_id": "2708:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74740ab9de5f2090",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-g1",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2026/01/mandheling-scaled-e1771965988764.jpg",
+  "platform": "woocommerce",
+  "product_id": "2750",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Indonesia",
+   "Sumatra"
+  ],
+  "title": "Sumatra: Mandheling G1, Aceh (Green)",
+  "url": "https://currentcroproasting.com/product/sumatra-mandheling-g1/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "2750:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "2750:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "2750:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "2750:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1dc81e2ddfa6d991",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-chaff-collector-top",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/11/sr-top-cap.jpg",
+  "platform": "woocommerce",
+  "product_id": "3066",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Parts"
+  ],
+  "title": "Fresh Roast SR800 and SR540 Chaff Collector Top",
+  "url": "https://currentcroproasting.com/product/fresh-roast-chaff-collector-top/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Fresh Roast SR800 and SR540 Chaff Collector Top",
+    "variant_id": "3066:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "474380da2d634c82",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-early-model-chaff-basket-300340500700",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/11/SR-Chaff-Collector.jpg",
+  "platform": "woocommerce",
+  "product_id": "3068",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Parts"
+  ],
+  "title": "Fresh Roast Early Model Chaff Basket (300,340,500,700)",
+  "url": "https://currentcroproasting.com/product/fresh-roast-early-model-chaff-basket-300340500700/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.95,
+    "title": "Fresh Roast Early Model Chaff Basket (300,340,500,700)",
+    "variant_id": "3068:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af6d271979eba651",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-roasting-chamber-540",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/11/540-chamber-600_300x300.jpg",
+  "platform": "woocommerce",
+  "product_id": "3070",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Parts"
+  ],
+  "title": "Fresh Roast Roasting Chamber 540",
+  "url": "https://currentcroproasting.com/product/fresh-roast-roasting-chamber-540/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.95,
+    "title": "Fresh Roast Roasting Chamber 540",
+    "variant_id": "3070:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "148cbb24cc9e3477",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-roasting-chamber-800",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/sr800-glass-full-700.jpg",
+  "platform": "woocommerce",
+  "product_id": "3071",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Parts"
+  ],
+  "title": "Fresh Roast Roasting Chamber 800",
+  "url": "https://currentcroproasting.com/product/fresh-roast-roasting-chamber-800/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 34.95,
+    "title": "Fresh Roast Roasting Chamber 800",
+    "variant_id": "3071:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d836130d34082402",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lintong-tiger-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/06/PXL_20240621_194942575-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "42335",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Indonesia",
+   "Roast-To-Order",
+   "Sumatra"
+  ],
+  "title": "Sumatra: Tiger, Lintong (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/sumatra-lintong-tiger-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "42335:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB",
+    "variant_id": "42335:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "42335:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "660a9cfee8d3e33d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yemen-red-sea-blend",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/08/PXL_20240821_175731481-scaled-e1724269106978.jpg",
+  "platform": "woocommerce",
+  "product_id": "45738",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Asia",
+   "Blend",
+   "Ethiopia",
+   "Yemen"
+  ],
+  "title": "Ethiopia/Yemen: Red Sea (Blend, Green)",
+  "url": "https://currentcroproasting.com/product/ethiopia-yemen-red-sea-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.6,
+    "title": "1/2 LB",
+    "variant_id": "45738:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "1LB",
+    "variant_id": "45738:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.6,
+    "title": "3LB",
+    "variant_id": "45738:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.6,
+    "title": "5LB",
+    "variant_id": "45738:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "21e4d6f4ea3a4728",
+  "first_seen": "2026-10-26",
+  "handle": "panama-janson-farms-geisha",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/Panama20Geisha20512-compress-e1771966207318.png",
+  "platform": "woocommerce",
+  "product_id": "45851",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Panama",
+   "Premium"
+  ],
+  "title": "Panama: Janson Farms Geisha, Volcan High Lands (Green)",
+  "url": "https://currentcroproasting.com/product/panama-janson-farms-geisha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.84,
+    "title": "1/2 LB",
+    "variant_id": "45851:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.84,
+    "title": "1LB",
+    "variant_id": "45851:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 39.84,
+    "title": "3LB",
+    "variant_id": "45851:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 39.84,
+    "title": "5LB",
+    "variant_id": "45851:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-reserva-154lbs-wholesale",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "47033",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Wholesale",
+   "Wholesale Local"
+  ],
+  "title": "Colombia: Reserva del Patron – Full Bag (154LB) REMAINDER",
+  "url": "https://currentcroproasting.com/product/colombia-reserva-154lbs-wholesale/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 554.4,
+    "title": "154 lbs",
+    "variant_id": "47033:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "092fbf3870450835",
+  "first_seen": "2026-10-26",
+  "handle": "peru-la-florida-12oz-full-city-roasted-11-14",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/11/florida.jpg",
+  "platform": "woocommerce",
+  "product_id": "48349",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Roasted Coffee Beans",
+   "Peru",
+   "Roasted Coffee",
+   "South America"
+  ],
+  "title": "Peru: La Florida, 12oz (Full City [medium], Roasted 1/15/26)",
+  "url": "https://currentcroproasting.com/product/peru-la-florida-12oz-full-city-roasted-11-14/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "48349:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b8e7e0a92536987",
+  "first_seen": "2026-10-26",
+  "handle": "philippines-mt-apo-honey-mindinao",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8597-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "54568",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Asia",
+   "Microlots",
+   "New!",
+   "Philippines",
+   "Premium"
+  ],
+  "title": "Philippines: Mt. Apo Honey, Mindinao (Green)",
+  "url": "https://currentcroproasting.com/product/philippines-mt-apo-honey-mindinao/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "1/2 LB",
+    "variant_id": "54568:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1LB",
+    "variant_id": "54568:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.5,
+    "title": "3LB",
+    "variant_id": "54568:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.5,
+    "title": "5LB",
+    "variant_id": "54568:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "752d1bc102dbee95",
+  "first_seen": "2026-10-26",
+  "handle": "mt-apo-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "54682",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Roasted Coffee Beans",
+   "Asia",
+   "Philippines",
+   "Roast-To-Order"
+  ],
+  "title": "Back in Stock! Philippines: Mt. Apo Honey, Mindinao (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/mt-apo-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz - $28",
+    "variant_id": "54682:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2LB - $56",
+    "variant_id": "54682:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "5LB $125",
+    "variant_id": "54682:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7fa80aebc331ccf",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-reserva-del-patron-narino-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/10/reserva.jpg",
+  "platform": "woocommerce",
+  "product_id": "55072",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Colombia",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Colombia: Reserva del Patron, Nariño (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/colombia-reserva-del-patron-narino-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55072:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55072:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55072:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9207ef7889a3c0d1",
+  "first_seen": "2026-10-26",
+  "handle": "india-cherry-robusta-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55098",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Asia",
+   "India",
+   "Roast-To-Order",
+   "Robusta"
+  ],
+  "title": "India: Cherry Robusta, Karnataka (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/india-cherry-robusta-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55098:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55098:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB $100",
+    "variant_id": "55098:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ac781ba5c3df375",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55102",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Bali",
+   "Indonesia",
+   "Roast-To-Order"
+  ],
+  "title": "Bali: Kintamani, Kintamani Highlands (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/bali-kintamani-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55102:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55102:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55102:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2362d123f73554b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/06/La_Flor_del_Guat-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55106",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Featured Farm",
+   "Guatemala",
+   "Roast-To-Order"
+  ],
+  "title": "Guatemala: La Flor del Cafe, Antigua (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/guatemala-la-flor-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55106:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55106:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55106:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b6889ab96530c59",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-del-cafe-peaberry-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/06/PXL_20240621_204636986-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55111",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Featured Farm",
+   "Guatemala",
+   "Roast-To-Order"
+  ],
+  "title": "Guatemala: La Flor del Cafe Peaberry, Antigua (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/guatemala-la-flor-del-cafe-peaberry-roast-to-order/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55111:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55111:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55111:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9bfc55d33d36441c",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-red-honey-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/06/Red-Honey-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55130",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Caribbean",
+   "Dominican Republic",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Red Honey, Jarabacoa (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/dominican-republic-red-honey-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55130:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55130:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55130:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4286e700c9764697",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-rancho-san-francisco-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55135",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Mexico",
+   "North America",
+   "Roast-To-Order"
+  ],
+  "title": "Mexico: Rancho San Francisco, Chiapas (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/mexico-rancho-san-francisco-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55135:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55135:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55135:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b4b0f827ad6c4bc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yemen-red-sea-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55139",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Blend",
+   "Roast-To-Order"
+  ],
+  "title": "Ethiopia/Yemen: Red Sea (Blend, Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/ethiopia-yemen-red-sea-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55139:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55139:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55139:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc7522715da8bd24",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-sapan-minanga-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55147",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Indonesia",
+   "Roast-To-Order",
+   "Sulawesi"
+  ],
+  "title": "Sulawesi: Toraja Sapan Minanga, Tana Toraja (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/sulawesi-toraja-sapan-minanga-roast-to-order/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55147:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55147:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55147:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82e7b384111d6a1e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-natural-marcala-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55179",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Honduras",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Natural, Marcala (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/honduras-organic-18-rabbit-natural-marcala-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55179:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55179:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55179:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4d863e62d6df4b2",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-washed-marcala-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55183",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Honduras",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Washed, Marcala (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/honduras-organic-18-rabbit-washed-marcala-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55183:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55183:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55183:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e510ac32bb620fa2",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-organic-caranavi-fto-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/10/caranavi.jpg",
+  "platform": "woocommerce",
+  "product_id": "55215",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Fair Trade",
+   "Organic",
+   "Organic (Green)",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Bolivia: Organic Caranavi FTO, La Paz Department (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/bolivia-organic-caranavi-fto-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55215:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55215:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB $100",
+    "variant_id": "55215:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b952beb8b5821048",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-cepco-oaxaca-oaxaca-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/06/PXL_20240621_194914641-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55223",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Mexico",
+   "North America",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Mexico: Organic Cepco Oaxaca, Oaxaca (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/mexico-organic-cepco-oaxaca-oaxaca-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "55223:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "55223:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "55223:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sample-kit",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "55230",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [],
+  "title": "Indonesia Sample Kit",
+  "url": "https://currentcroproasting.com/product/indonesia-sample-kit/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Indonesia Sample Kit",
+    "variant_id": "55230:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92610f81318c8d10",
+  "first_seen": "2026-10-26",
+  "handle": "chicory-roasted",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/01/IMG_5197-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "5991",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Chicory",
+   "Tea &amp; Chicory"
+  ],
+  "title": "India: Chicory, Roasted and Ground",
+  "url": "https://currentcroproasting.com/product/chicory-roasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.95,
+    "title": "1LB",
+    "variant_id": "5991:0"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 5.95,
+    "title": "6 oz",
+    "variant_id": "5991:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "095f40abf32fa994",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-ea-cauca-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60708",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Colombia",
+   "Decaf",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Colombia: Decaf EA, Cauca (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/colombia-decaf-ea-cauca-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60708:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60708:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60708:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3da41feb4ad2c59",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-dos-marias-washed-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60765",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Nicaragua",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Nicaragua: Organic Finca Las Dos Marias Washed, Venecia (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/nicaragua-dos-marias-washed-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz - $22",
+    "variant_id": "60765:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.7,
+    "title": "2LB - $44",
+    "variant_id": "60765:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.7,
+    "title": "5LB - $100",
+    "variant_id": "60765:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75cf74d56fd8d318",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-durato-bombe-sidamo-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/05/Durato-R2O.jpg",
+  "platform": "woocommerce",
+  "product_id": "60770",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "Ethiopia",
+   "Featured Farm",
+   "Roast-To-Order"
+  ],
+  "title": "Ethiopia: Durato Bombe, Sidamo (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/ethiopia-durato-bombe-sidamo-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60770:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60770:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60770:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe5d02c7eef4e258",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-dutra-matas-de-minas-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60776",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Brazil",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Brazil: Fazenda Dutra, Matas de Minas (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/brazil-fazenda-dutra-matas-de-minas-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.6,
+    "title": "12oz - $22",
+    "variant_id": "60776:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.6,
+    "title": "2LB - $44",
+    "variant_id": "60776:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.6,
+    "title": "5LB - $100",
+    "variant_id": "60776:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "10907639cd9f046e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-finca-la-esperanza-organic-san-martin-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60784",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Organic",
+   "Peru",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Peru: Organic Finca La Esperanza, San Martin (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/peru-finca-la-esperanza-organic-san-martin-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60784:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60784:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60784:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5096e1ea5bbe0346",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hht-huehuetenango-roast-to-order-copy",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/11/hht-shb.jpg",
+  "platform": "woocommerce",
+  "product_id": "60794",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Guatemala",
+   "Roast-To-Order"
+  ],
+  "title": "Guatemala: HHT SHB, Huehuetenango (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/guatemala-hht-huehuetenango-roast-to-order-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60794:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60794:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60794:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "19c69900c85b11da",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-la-florida-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/11/florida.jpg",
+  "platform": "woocommerce",
+  "product_id": "60804",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Organic",
+   "Peru",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Peru: Organic La Florida, Selva Central (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/peru-organic-la-florida-roast-to-order/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60804:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60804:1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60804:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a39c3b7992dbeb84",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja-honey-tlaltetela-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60847",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Mexico",
+   "North America",
+   "Roast-To-Order"
+  ],
+  "title": "Mexico: La Laja Honey, Tlaltetela (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/mexico-la-laja-honey-tlaltetela-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60847:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60847:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60847:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6e3b31585626ea8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley-yirgacheffe-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/05/IMG_8977-scaled-e1750367243318.jpg",
+  "platform": "woocommerce",
+  "product_id": "60863",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Roasted Coffee Beans",
+   "Ethiopia",
+   "Roast-To-Order"
+  ],
+  "title": "Ethiopia: Misty Valley, Yirgacheffe (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/ethiopia-misty-valley-yirgacheffe-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60863:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60863:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60863:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "978723e83783cb1e",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsooned-malabar-karnataka-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60867",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Asia",
+   "India",
+   "Roast-To-Order"
+  ],
+  "title": "India: Monsooned Malabar, Karnataka (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/india-monsooned-malabar-karnataka-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60867:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60867:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60867:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59b3366472959598",
+  "first_seen": "2026-10-26",
+  "handle": "dominic-republic-organic-ramirez-natural-jarabacoa-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60884",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Caribbean",
+   "Dominican Republic",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Dominic Republic: Organic Ramirez Natural, Jarabacoa (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/dominic-republic-organic-ramirez-natural-jarabacoa-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60884:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60884:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60884:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce813cecc9c76f57",
+  "first_seen": "2026-10-26",
+  "handle": "dominic-republic-organic-ramirez-washed-jarabacoa-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60888",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Caribbean",
+   "Dominican Republic",
+   "Organic",
+   "Roast-To-Order"
+  ],
+  "title": "Dominic Republic: Organic Ramirez Washed, Jarabacoa (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/dominic-republic-organic-ramirez-washed-jarabacoa-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60888:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60888:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60888:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eafff2b61197f439",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-select-plus-aa-kiambu-county-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/05/Select-R2O.jpg",
+  "platform": "woocommerce",
+  "product_id": "60897",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "Kenya",
+   "Roast-To-Order"
+  ],
+  "title": "Kenya: Select Plus AA, Kiambu County (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/kenya-select-plus-aa-kiambu-county-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "60897:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "60897:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "60897:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acb576f46059a7c4",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-ethiopia-queen-city-harrar",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2026/02/queen-city-scaled-e1771967953161.jpg",
+  "platform": "woocommerce",
+  "product_id": "60950",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia: Queen City, Harrar (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-ethiopia-queen-city-harrar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "60950:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "60950:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "60950:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "60950:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad230af728690e8c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-queen-city-harrar-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/05/Queen-R2O.jpg",
+  "platform": "woocommerce",
+  "product_id": "61083",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Roasted Coffee Beans",
+   "Ethiopia",
+   "Roast-To-Order"
+  ],
+  "title": "Ethiopia: Queen City, Harrar (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/ethiopia-queen-city-harrar-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "61083:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB",
+    "variant_id": "61083:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "61083:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "389b8cafac0198d9",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-turquesa-hg-chiapas-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "61246",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Mexico",
+   "North America",
+   "Roast-To-Order"
+  ],
+  "title": "Mexico: Turquesa HG, Chiapas (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/mexico-turquesa-hg-chiapas-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "61246:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB",
+    "variant_id": "61246:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "61246:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6c218d1ee16a92e",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-brazil-oberon-cerrado-green",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2022/10/50-Product-compress.jpg",
+  "platform": "woocommerce",
+  "product_id": "67623",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Brazil",
+   "South America"
+  ],
+  "title": "Brazil: Oberon, Cerrado (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-brazil-oberon-cerrado-green/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "67623:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "67623:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "67623:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "67623:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1de7a1d3945f7e3",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-mt-elgon-bugisu-green",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2026/01/elgon-scaled-e1771965943452.jpg",
+  "platform": "woocommerce",
+  "product_id": "67628",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Uganda"
+  ],
+  "title": "Uganda: Mt. Elgon, Bugisu (Green)",
+  "url": "https://currentcroproasting.com/product/uganda-mt-elgon-bugisu-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "67628:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "67628:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "67628:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "67628:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51972bdbd4bd9613",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-oberon-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "67688",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Roasted Coffee Beans",
+   "Brazil",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Brazil: Oberon, Cerrado (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/brazil-oberon-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "67688:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB",
+    "variant_id": "67688:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "67688:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ad18130ca4216c6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-asdecafe-huehuetenango-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "68723",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Guatemala",
+   "Roast-To-Order"
+  ],
+  "title": "Guatemala: Organic Asdecafe, Huehuetenango (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/guatemala-organic-asdecafe-huehuetenango-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "68723:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "68723:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "68723:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c887eea28bf57f8b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-guatemala-ccrs-house-espresso-blend-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "69874",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Roasted Coffee Beans",
+   "Blend",
+   "Central America",
+   "Guatemala",
+   "New!",
+   "Peru",
+   "Roast-To-Order",
+   "Roasted Coffee",
+   "South America"
+  ],
+  "title": "New Addition! Peru/Guatemala: CCRS House Espresso Blend (Roast to Order)",
+  "url": "https://currentcroproasting.com/product/peru-guatemala-ccrs-house-espresso-blend-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "69874:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "2LB",
+    "variant_id": "69874:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5LB",
+    "variant_id": "69874:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ca5a85a1e34915b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-ep-huila-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "69930",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Colombia",
+   "Roast-To-Order",
+   "South America"
+  ],
+  "title": "Colombia: Supremo EP, Huila (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/colombia-supremo-ep-huila-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "69930:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "69930:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "69930:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a709da7c9a525f10",
+  "first_seen": "2026-10-26",
+  "handle": "java-blawan-estate-east-java-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "69973",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Indonesia",
+   "Java",
+   "Roast-To-Order"
+  ],
+  "title": "Java: Blawan Estate, East Java (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/java-blawan-estate-east-java-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "69973:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "69973:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "69973:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "440045edcc9b0ec8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-olomega-shg-jinotega",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "70090",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "Nicaragua"
+  ],
+  "title": "Nicaragua: Olomega SHG, Jinotega (Green)",
+  "url": "https://currentcroproasting.com/product/nicaragua-olomega-shg-jinotega/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.55,
+    "title": "1/2 LB",
+    "variant_id": "70090:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.55,
+    "title": "1LB",
+    "variant_id": "70090:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 11.55,
+    "title": "3LB",
+    "variant_id": "70090:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.55,
+    "title": "5LB",
+    "variant_id": "70090:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5af236562ae90eec",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-panama-finca-la-cantera-shb-ep-boquete-green",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "70091",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "New!",
+   "Panama"
+  ],
+  "title": "Panama – Finca La Cantera SHB EP, Boquete (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-panama-finca-la-cantera-shb-ep-boquete-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.5,
+    "title": "1/2 LB",
+    "variant_id": "70091:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.5,
+    "title": "1LB",
+    "variant_id": "70091:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 9.5,
+    "title": "3LB",
+    "variant_id": "70091:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.5,
+    "title": "5LB",
+    "variant_id": "70091:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0e2559a700d1fe4",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-el-salvador-santa-ana-ilamatepeq-santa-ana-green",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "70279",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Central America",
+   "El Salvador",
+   "New!"
+  ],
+  "title": "El Salvador – Santa Ana Ilamatepeq, Santa Ana (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-el-salvador-santa-ana-ilamatepeq-santa-ana-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 8.5,
+    "title": "1/2 LB",
+    "variant_id": "70279:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.5,
+    "title": "1LB",
+    "variant_id": "70279:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 8.5,
+    "title": "3LB",
+    "variant_id": "70279:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.5,
+    "title": "5LB",
+    "variant_id": "70279:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2821f951670c778c",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-sumatra-lake-toba-lintong-green",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2026/07/Lake-Toba.webp",
+  "platform": "woocommerce",
+  "product_id": "70512",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Indonesia",
+   "New!",
+   "Sumatra"
+  ],
+  "title": "Sumatra – Lake Toba, Lintong (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-sumatra-lake-toba-lintong-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.5,
+    "title": "1/2 LB",
+    "variant_id": "70512:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "1LB",
+    "variant_id": "70512:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 10.5,
+    "title": "3LB",
+    "variant_id": "70512:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.5,
+    "title": "5LB",
+    "variant_id": "70512:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ffd2b59543b3eae3",
+  "first_seen": "2026-10-26",
+  "handle": "panama-finca-la-cantera-boquete-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "70539",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "New!",
+   "Panama",
+   "Roast-To-Order"
+  ],
+  "title": "Panama: Finca La Cantera, Boquete (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/panama-finca-la-cantera-boquete-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "70539:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "70539:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "70539:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "afc35ef90d4f8dba",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-ilamatepeq-santa-ana-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "70543",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "El Salvador",
+   "New!",
+   "Roast-To-Order"
+  ],
+  "title": "El Salvador: Ilamatepeq, Santa Ana (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/el-salvador-ilamatepeq-santa-ana-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz - $22",
+    "variant_id": "70543:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB - $44",
+    "variant_id": "70543:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB - $100",
+    "variant_id": "70543:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91e54b221daacfec",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lake-toba-lintong-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "70561",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Indonesia",
+   "Roast-To-Order",
+   "Sumatra"
+  ],
+  "title": "Sumatra: Lake Toba, Lintong (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/sumatra-lake-toba-lintong-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "70561:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2LB",
+    "variant_id": "70561:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "70561:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbe82107c83715c0",
+  "first_seen": "2026-10-26",
+  "handle": "panama-janson-farms-geisha-volcan-high-lands-roast-to-order",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2025/03/IMG_8596-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "70574",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Central America",
+   "Panama",
+   "Roast-To-Order"
+  ],
+  "title": "Panama: Janson Farms Geisha, Volcan High Lands (Roast-to-Order)",
+  "url": "https://currentcroproasting.com/product/panama-janson-farms-geisha-volcan-high-lands-roast-to-order/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12oz - $55",
+    "variant_id": "70574:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2LB - $110",
+    "variant_id": "70574:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.0,
+    "title": "5LB - $250",
+    "variant_id": "70574:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc5d5ab7bcb2387e",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-ethiopia-gedeb-worka-sakaro-g1-yirgacheffe-green",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "71880",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Africa",
+   "All Specialty Green Coffee Beans",
+   "Ethiopia",
+   "New!"
+  ],
+  "title": "New Arrival! Ethiopia: Gedeb Worka Sakaro G1, Yirgacheffe (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-ethiopia-gedeb-worka-sakaro-g1-yirgacheffe-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.5,
+    "title": "1/2 LB",
+    "variant_id": "71880:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1LB",
+    "variant_id": "71880:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.5,
+    "title": "3LB",
+    "variant_id": "71880:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5LB",
+    "variant_id": "71880:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a8242451d1aece9",
+  "first_seen": "2026-10-26",
+  "handle": "new-arrival-peru-organic-decaf-sol-y-cafe-cajamarca-green",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "71886",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "All Specialty Green Coffee Beans",
+   "Peru",
+   "South America"
+  ],
+  "title": "New Arrival! Peru: Organic Decaf Sol y Cafe, Cajamarca (Green)",
+  "url": "https://currentcroproasting.com/product/new-arrival-peru-organic-decaf-sol-y-cafe-cajamarca-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "1/2 LB",
+    "variant_id": "71886:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1LB",
+    "variant_id": "71886:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 14.0,
+    "title": "3LB",
+    "variant_id": "71886:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5LB",
+    "variant_id": "71886:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "41bbdc8a1826581a",
+  "first_seen": "2026-10-26",
+  "handle": "valve-bags-pack-of-10",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2024/01/processed-FD5F5F8C-9558-4546-9807-CA6702BE3EEB.jpeg",
+  "platform": "woocommerce",
+  "product_id": "8334",
+  "product_type": "variable",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Accessories"
+  ],
+  "title": "Coffee Storage Bags w/valve and window (8 or 16oz)",
+  "url": "https://currentcroproasting.com/product/valve-bags-pack-of-10/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 5.0,
+    "title": "8oz",
+    "variant_id": "8334:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "16 oz",
+    "variant_id": "8334:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "65d99d8d37687196",
+  "first_seen": "2026-10-26",
+  "handle": "cooler",
+  "image": "https://currentcroproasting.com/wp-content/uploads/2023/12/Cool-3.jpeg.webp",
+  "platform": "woocommerce",
+  "product_id": "9991",
+  "product_type": "simple",
+  "roaster_slug": "currentcroproasting",
+  "tags": [
+   "Roaster Accessories",
+   "Roaster Parts"
+  ],
+  "title": "Dual-Basket Coffee Bean Cooler",
+  "url": "https://currentcroproasting.com/product/cooler/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Dual-Basket Coffee Bean Cooler",
+    "variant_id": "9991:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

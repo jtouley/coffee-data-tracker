@@ -1,0 +1,217 @@
+[
+ {
+  "body_hash": "2fff1bbd4a2deefb",
+  "first_seen": "2026-10-26",
+  "handle": "gazebo-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/Gazebo_Art_plus_Name.png?v=1782424363",
+  "platform": "shopify",
+  "product_id": "11050393960615",
+  "product_type": "",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "Gazebo - Decaf",
+  "url": "https://newheightscoffee.com/products/gazebo-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "50916446404775"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 80.0,
+    "title": "1kg",
+    "variant_id": "50916446437543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "50916446470311"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ },
+ {
+  "body_hash": "e01cf9f8b5b72f33",
+  "first_seen": "2026-10-26",
+  "handle": "the-boulevard",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/Boulevard_Art_plus_Name.png?v=1782424373",
+  "platform": "shopify",
+  "product_id": "11050394091687",
+  "product_type": "",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "The Boulevard - Daily Blend",
+  "url": "https://newheightscoffee.com/products/the-boulevard",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "50916454695079"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg",
+    "variant_id": "50916454727847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "50916454760615"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ },
+ {
+  "body_hash": "9935b1dd08dc6918",
+  "first_seen": "2026-10-26",
+  "handle": "the-neighborhood-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/Neighborhood_Art_plus_Name_a6d030f2-c79a-437e-97f9-a0c93a60d630.png?v=1782424376",
+  "platform": "shopify",
+  "product_id": "11050394157223",
+  "product_type": "",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "The Neighborhood - Espresso Blend",
+  "url": "https://newheightscoffee.com/products/the-neighborhood-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "50916450533543"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg",
+    "variant_id": "50916450566311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "50916450599079"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ },
+ {
+  "body_hash": "52f751d74b16bb08",
+  "first_seen": "2026-10-26",
+  "handle": "haf-calf",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/Half_Calf_Art_plus_Name.png?v=1782424382",
+  "platform": "shopify",
+  "product_id": "11050394222759",
+  "product_type": "",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "Half-Calf",
+  "url": "https://newheightscoffee.com/products/haf-calf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "50916447027367"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 80.0,
+    "title": "1kg",
+    "variant_id": "50916447060135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "50916447092903"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ },
+ {
+  "body_hash": "1e5d6f6df692efbf",
+  "first_seen": "2026-10-26",
+  "handle": "esmeralda-mendoza",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/Esmeralda_Art_plus_Name.png?v=1782424378",
+  "platform": "shopify",
+  "product_id": "11050394386599",
+  "product_type": "Coffee",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "Esmeralda Mendoza",
+  "url": "https://newheightscoffee.com/products/esmeralda-mendoza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "50916455743655"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg",
+    "variant_id": "50916455776423"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ },
+ {
+  "body_hash": "3fc5c1d28a5b7997",
+  "first_seen": "2026-10-26",
+  "handle": "la-nueva-montana",
+  "image": "https://cdn.shopify.com/s/files/1/0759/5527/3895/files/lanuevamontana.png?v=1790099684",
+  "platform": "shopify",
+  "product_id": "11188402454695",
+  "product_type": "Coffee",
+  "roaster_slug": "newheightscoffeeroasters",
+  "tags": [],
+  "title": "La Nueva Montaña",
+  "url": "https://newheightscoffee.com/products/la-nueva-montana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "51401749823655"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg",
+    "variant_id": "51401749856423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb",
+    "variant_id": "51401749889191"
+   }
+  ],
+  "vendor": "New Heights Coffee Roasters"
+ }
+]

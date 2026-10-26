@@ -1,0 +1,182 @@
+[
+ {
+  "body_hash": "1ebcfb90c0958956",
+  "first_seen": "2026-10-26",
+  "handle": "whole-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6548/1060/products/morningmagicwithblue.png?v=1664650561",
+  "platform": "shopify",
+  "product_id": "1613009715300",
+  "product_type": "Coffee",
+  "roaster_slug": "thebeanbro",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Roast"
+  ],
+  "title": "Morning Magic Roast",
+  "url": "https://thebeanbro.com/products/whole-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "15471361130596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31353755598948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42697832267929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Ground / 5lb",
+    "variant_id": "42697832300697"
+   }
+  ],
+  "vendor": "The Bean Bro"
+ },
+ {
+  "body_hash": "e8f599d7e126d17a",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-roast-whole-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6548/1060/products/Campfirewithblue.png?v=1664650526",
+  "platform": "shopify",
+  "product_id": "2333693018212",
+  "product_type": "",
+  "roaster_slug": "thebeanbro",
+  "tags": [],
+  "title": "Campfire Roast",
+  "url": "https://thebeanbro.com/products/campfire-roast-whole-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "20998021513316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31353748521060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42697831055513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Ground / 5lb",
+    "variant_id": "42697831088281"
+   }
+  ],
+  "vendor": "The Bean Bro"
+ },
+ {
+  "body_hash": "d148b67f87cdf9e8",
+  "first_seen": "2026-10-26",
+  "handle": "black-bear",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6548/1060/files/BlackBearwithblue.png?v=1684162904",
+  "platform": "shopify",
+  "product_id": "2720505364580",
+  "product_type": "",
+  "roaster_slug": "thebeanbro",
+  "tags": [],
+  "title": "Black Bear Roast",
+  "url": "https://thebeanbro.com/products/black-bear",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "23938303131748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31353745571940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42697827516569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Ground / 5lb",
+    "variant_id": "42697827549337"
+   }
+  ],
+  "vendor": "The Bean Bro"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "longboard-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6548/1060/products/IMG_1508.png?v=1682089178",
+  "platform": "shopify",
+  "product_id": "7652281385113",
+  "product_type": "Coffee",
+  "roaster_slug": "thebeanbro",
+  "tags": [],
+  "title": "Longboard Roast",
+  "url": "https://thebeanbro.com/products/longboard-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "43110666240153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Ground 12oz",
+    "variant_id": "43110666272921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "43110666305689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Ground 5lb",
+    "variant_id": "43110666338457"
+   }
+  ],
+  "vendor": "The Bean Bro"
+ }
+]

@@ -1,0 +1,485 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ontario-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0cdf859a0980",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Ontario Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/ontario-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "maple-bourbon",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0ed3ba972e3c",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Maple Bourbon",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/maple-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "niagara-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "11ad028ba6eb",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Niagara Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/niagara-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pena-flor-guatemalan",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4152f539a021",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Antigua",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/pena-flor-guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4f6d4f261589",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "taste-of-italy-italian-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "57b9c442ee61",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Taste of Italy Italian Roast",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/taste-of-italy-italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5ef3119ae17b",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Swiss Water Decaf",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "huron-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "74f3d1a75f3a",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Huron Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/huron-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-hazelnut",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7fcd25f0e853",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Decaf Hazelnut",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/decaf-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8940d8df3b3f",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Kona Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "superior-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9292d4ff3da1",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Superior Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/superior-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "79c83234e466fdab",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a659864051bf",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "detroit-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "adf967ad2f28",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Detroit Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/detroit-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-vanilla",
+  "image": null,
+  "platform": "generic",
+  "product_id": "be9a645de428",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Decaf French Vanilla",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/decaf-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "erie-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c5d8d0385d72",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Erie Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/erie-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "michigan-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "cfc74f6da85f",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Michigan Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/michigan-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hydro-power-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e111e037c283",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Hydro Power Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/hydro-power-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "st-clair-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e1ec131e46ad",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "St. Clair Blend",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/st-clair-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e72c629cc5a9",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-pumpkin-spice",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e748fc450fa8",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Decaf Pumpkin Spice",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/decaf-pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "global-vistas-guatemala",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f7520492cf83",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffeeroasters",
+  "tags": [],
+  "title": "Global Vistas Guatemala",
+  "url": "https://www.greatlakescoffeeroasters.com/product-page/global-vistas-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

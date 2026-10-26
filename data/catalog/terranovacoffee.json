@@ -1,0 +1,2644 @@
+[
+ {
+  "body_hash": "8ec9dad6f327794e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Decaf_Peru_Organic_Swiss_Water_Decaf_ca6033a2-c870-4bc6-bbf8-22deb9dda0e1.png?v=1781886013",
+  "platform": "shopify",
+  "product_id": "10211564060978",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Organic",
+   "Shop",
+   "Single Origin"
+  ],
+  "title": "Decaf Peru Coffee, 1 lb Bag",
+  "url": "https://terranovacoffee.net/products/decaf-peru-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "51305658417458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "51305658450226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "51305658482994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "51305658515762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "51305658548530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "51305658581298"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "395b40ae0b0c215b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Decaf_Mexico_Organic_Swiss_Water_Decaf_4da820bf-22c6-4846-93c3-b42a578a4805.png?v=1781886012",
+  "platform": "shopify",
+  "product_id": "10211587064114",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Decaf",
+   "Light Roast",
+   "Organic",
+   "Shop",
+   "Single Origin"
+  ],
+  "title": "Decaf Mexico Coffee, 1 lb Bag",
+  "url": "https://terranovacoffee.net/products/decaf-mexico-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "51305692496178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "51305692528946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "51305692561714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "51305692594482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "51305692627250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "51305692660018"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "30aa5c8adf219d3c",
+  "first_seen": "2026-10-26",
+  "handle": "peru-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/PERU4x4BINLABEL.png?v=1781278178",
+  "platform": "shopify",
+  "product_id": "10222034682162",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Peru 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/peru-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "51380032700722"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "51380032733490"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "51380032766258"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "51380032799026"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "51380032831794"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "51380032864562"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "395b40ae0b0c215b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/DECAFMEXICO.png?v=1781278264",
+  "platform": "shopify",
+  "product_id": "10230773252402",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Decaf Mexico 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/decaf-mexico-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "51419690336562"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "51419690369330"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "51419690402098"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "51419690434866"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "51419690467634"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "51419690500402"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "202f73a5122fb664",
+  "first_seen": "2026-10-26",
+  "handle": "big-dipper-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Big_Dipper_0685bf0c-ba03-4a4d-aabc-70aff5462534.png?v=1774565802",
+  "platform": "shopify",
+  "product_id": "1324102917",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Big Dipper Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/big-dipper-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4111026181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4111026245"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4111026309"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4111026373"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647754006834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647754039602"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "25e1f1fb146492f4",
+  "first_seen": "2026-10-26",
+  "handle": "equatorial-bold-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/EBOLD._transparent_png.png?v=1774460656",
+  "platform": "shopify",
+  "product_id": "1329483973",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Equatorial Bold Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/equatorial-bold-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4126720389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4126720453"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4126720517"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4126720581"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647938654514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647938687282"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "8795cc61275192b2",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_French_Roast_Dark_Roast_coffee.jpg?v=1745581025",
+  "platform": "shopify",
+  "product_id": "1329505541",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "French Roast Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/french-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4126812933"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4126812997"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4126813061"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4126813189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648018313522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648018346290"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "f74606107b9bd64f",
+  "first_seen": "2026-10-26",
+  "handle": "red-house-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Red_House.png?v=1774568067",
+  "platform": "shopify",
+  "product_id": "1329556677",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Medium Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Red House Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/red-house-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4126968005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4126968133"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4126968197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4126968261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648178254130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648178319666"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "c77365fcec12de32",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Colombia_8d4ba476-ee93-4b9d-b6ee-0a81740d32ea.png?v=1774566080",
+  "platform": "shopify",
+  "product_id": "1329591749",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Medium Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Colombia Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/colombia-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4127088133"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4127088197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4127088261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4127088325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647813513522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647813546290"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "031ee72e9537fb98",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-organic-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/GUATEMALA.png?v=1774563226",
+  "platform": "shopify",
+  "product_id": "1329717893",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Medium Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Guatemala Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/guatemalan-organic-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4127462917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4127462981"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4127463045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4127463109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648069824818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648069857586"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "24beb4dd6ef7b33c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/ETHIOPIA_cddda6b2-909d-4342-8444-986f2f3d53d9.png?v=1774563128",
+  "platform": "shopify",
+  "product_id": "1329766533",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Light Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Ethiopia Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/ethiopian-yirgacheffe-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4127679493"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4127679557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4127679621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4127679685"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647983677746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647983710514"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "b66df791f35fa1c1",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/MEXICO_b8f07da5-56b0-492f-869c-fc675c69afd3.png?v=1774563357",
+  "platform": "shopify",
+  "product_id": "1329779525",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Light Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Mexico Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/mexico-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4127722629"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4127722693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4127722757"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4127722821"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648106230066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648106262834"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "360c48439a2edfcb",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-congo-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Congo_4f20413b-0c05-4165-9342-9eed11ad9c17.png?v=1774565988",
+  "platform": "shopify",
+  "product_id": "1329809733",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Congo Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/terra-nova-congo-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4127855941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4127856005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4127856069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4127856133"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47442204524850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "47442205573426"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "1db983f4ecf3fddc",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/DECAF_ESPRESSO.png?v=1774567819",
+  "platform": "shopify",
+  "product_id": "1329960517",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Decaf Espresso Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/decaf-espresso-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128441733"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128441797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128441861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128441925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647863976242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647864009010"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "fdf4cef7b95ce2ee",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/DECAF_FRENCH_ROAST.png?v=1774568251",
+  "platform": "shopify",
+  "product_id": "1329970373",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Organic"
+  ],
+  "title": "Decaf French Roast Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/decaf-french-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128494149"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128494213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128494277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128494341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647898939698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647899005234"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "0145a6bf9e4f9e77",
+  "first_seen": "2026-10-26",
+  "handle": "moonlight-decaf-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/MLD_f58e9b25-b475-45ed-ae46-17cdab02f695.png?v=1774565857",
+  "platform": "shopify",
+  "product_id": "1329973189",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Moonlight Decaf Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/moonlight-decaf-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128507909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128507973"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128508037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128508101"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648118190386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648118223154"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "7745ccf4348428e5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/ESPRESSO_a698c8c8-744a-477f-8991-fc90dfe22e77.png?v=1774563066",
+  "platform": "shopify",
+  "product_id": "1329978245",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic",
+   "Subscription"
+  ],
+  "title": "Espresso Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/espresso-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128547141"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128547205"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128547269"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128547333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647960379698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647960412466"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "7560dc9ac4738366",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/PNG_430577cc-5366-4a4a-8850-6d406eb1d42e.png?v=1774567862",
+  "platform": "shopify",
+  "product_id": "1329981317",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Dark Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Papua New Guinea Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/papua-new-guinea-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128567941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128568005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128568069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128568133"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648158593330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648158626098"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "30aa5c8adf219d3c",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-peru-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/organic_coffee_peru.png?v=1782480939",
+  "platform": "shopify",
+  "product_id": "1329984581",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Peru Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/terra-nova-peru-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128586885"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128586949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128587013"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128587077"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44809061007666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44809061040434"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "b963605890f37438",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/SUMATRA_c18737b1-baf7-42d4-91ae-aa484b93fd51.png?v=1774563278",
+  "platform": "shopify",
+  "product_id": "1329986437",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Medium Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Sumatra Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/sumatra-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128600197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128600261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128600325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128600389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648192901426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648192934194"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "f7cbf9afc13de902",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-blend-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Fireside_10b68072-9c74-40f2-bdb5-cf0d9a61a6e5.png?v=1774563480",
+  "platform": "shopify",
+  "product_id": "1329988805",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Fireside Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/fireside-blend-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "4128613253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "4128613317"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "4128613381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "4128613445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648143159602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648143192370"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "2ea09527181c8681",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/HONDURAS.png?v=1774563309",
+  "platform": "shopify",
+  "product_id": "4626030624854",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Light Roast",
+   "Organic",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Honduras Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/honduras-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "32192497746006"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "32192497778774"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "32192497811542"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "32192497844310"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44648094236978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44648094269746"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "5f0eeb47115c3fc1",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-brazil-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Brazil_6d5d8ccb-bf8a-4f9f-b989-268a661cc5f0.png?v=1774562887",
+  "platform": "shopify",
+  "product_id": "5017897762902",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast",
+   "Organic",
+   "Shop",
+   "Single Origin"
+  ],
+  "title": "Brazil Coffee, 1 lb Bag",
+  "url": "https://terranovacoffee.net/products/terra-nova-brazil-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "39254613557334"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "39254613590102"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "39254613622870"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "39254613655638"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "39254613688406"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647780745522"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "4e7f7dd66934cb4d",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-eclipse-half-caf-coffee-1-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Eclipse_c9def051-630e-43dd-b302-98032e585a8b.png?v=1774565923",
+  "platform": "shopify",
+  "product_id": "6722580774998",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Eclipse Half-Caf Coffee, 1 lb. Bag",
+  "url": "https://terranovacoffee.net/products/terra-nova-eclipse-half-caf-coffee-1-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "39754847846486"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "39754847879254"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "39754847912022"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "39754847944790"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "44647924629810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "44647924662578"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "2fd8d10eddbd0036",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Colombia_medium_roast_label.png?v=1712521501",
+  "platform": "shopify",
+  "product_id": "8986061340978",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Colombia 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/colombia-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566872084786"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566872117554"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566872150322"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566872183090"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566872215858"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566872248626"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "8ec9dad6f327794e",
+  "first_seen": "2026-10-26",
+  "handle": "congo-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/DECAFPERU4x4BINLABEL.png?v=1781278240",
+  "platform": "shopify",
+  "product_id": "8986068058418",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Decaf Peru 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/congo-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566889779506"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566889812274"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566889845042"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566889877810"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566889910578"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566889943346"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "0d12dc32c0dbbddc",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Decaf_Espresso_water_processed_Dark_roast_Label.png?v=1712521148",
+  "platform": "shopify",
+  "product_id": "8986070155570",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Decaf Espresso 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/decaf-espresso-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566894989618"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566895022386"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566895055154"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566895087922"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566895120690"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566895153458"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "a91a9bcc5092c46b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Decaf_French_Roast_water_processed_Darkest_Roast_label.png?v=1712520931",
+  "platform": "shopify",
+  "product_id": "8986073628978",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Decaf French Roast 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/decaf-french-roast-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566905082162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566905114930"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566905147698"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566905180466"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566905213234"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566905246002"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "c2c795ff22c2dc1a",
+  "first_seen": "2026-10-26",
+  "handle": "equatorial-bold-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Equatorial_Bold_Dark_roast_label.png?v=1712520001",
+  "platform": "shopify",
+  "product_id": "8986082410802",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Equatorial Bold 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/equatorial-bold-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566934016306"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566934049074"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566934081842"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566934114610"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566934147378"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566934180146"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "aa8fe1ce5fac1ab2",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Espresso_Dark_roast_label.png?v=1712519692",
+  "platform": "shopify",
+  "product_id": "8986083787058",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Espresso 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/espresso-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566936998194"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566937030962"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566937063730"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566937096498"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566937129266"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566937162034"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "8079a10924cb937a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Ethiopia_light_roast_label.png?v=1712332639",
+  "platform": "shopify",
+  "product_id": "8986084835634",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Ethiopia 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/ethiopia-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566944600370"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566944633138"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566944665906"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566944698674"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566944731442"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566944764210"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "58e233cec2e451a0",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_French_Roast_Dark_Roast_label.png?v=1712330473",
+  "platform": "shopify",
+  "product_id": "8986100334898",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "French Roast 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/french-roast-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47566995849522"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47566995882290"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47566995915058"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47566995947826"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47566995980594"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47566996013362"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "2d269297623d8822",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Guatemala_Medium_Roast_label.png?v=1712330255",
+  "platform": "shopify",
+  "product_id": "8986102989106",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Guatemala 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/guatemala-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567000437042"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567000469810"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567000502578"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567000535346"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567000568114"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567000600882"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "b20df516a8962636",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Honduras_Light_Roast_label.png?v=1712330055",
+  "platform": "shopify",
+  "product_id": "8986104987954",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Honduras 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/honduras-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567015084338"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567015117106"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567015149874"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567015182642"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567015215410"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567015248178"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "52f3dc12ac80d129",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Mexico_Light_Roast_label.png?v=1712329785",
+  "platform": "shopify",
+  "product_id": "8986110886194",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Mexico 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/mexico-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567023767858"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567023800626"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567023833394"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567023866162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567023898930"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567023931698"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "6ec75e689b63e2e6",
+  "first_seen": "2026-10-26",
+  "handle": "moonlight-decaf-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Moonlight_Decaf_water_processed_Medium_Roast_label.png?v=1712328838",
+  "platform": "shopify",
+  "product_id": "8986116882738",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Moonlight Decaf 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/moonlight-decaf-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567036252466"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567036285234"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567036318002"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567036350770"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567036383538"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567036416306"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "dbbfd93cccaae979",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Papua_New_Guinea_Dark_Roast_label.png?v=1712328250",
+  "platform": "shopify",
+  "product_id": "8986121535794",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Papua New Guinea 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/papua-new-guinea-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567043232050"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567043264818"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567043297586"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567043330354"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567043363122"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567043395890"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "4dc31b6d26ce0ee2",
+  "first_seen": "2026-10-26",
+  "handle": "red-house-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Red_House_Medium_Roast_label.png?v=1712327708",
+  "platform": "shopify",
+  "product_id": "8986123960626",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Red House 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/red-house-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567048409394"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567048442162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567048474930"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567048507698"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567048540466"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567048573234"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "4247fe0208e0ee67",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-4-oz-deluxe-sample-1",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_USDA_Organic_Sumatra_Medium_Roast_label.png?v=1712326889",
+  "platform": "shopify",
+  "product_id": "8986125238578",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Sumatra 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/sumatra-4-oz-deluxe-sample-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567052439858"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567052505394"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567052538162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567052570930"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567052603698"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567052636466"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "ce101097ab64be8c",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-4-oz-deluxe-sample",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_Organic_Coffee_4_ounce_Sample_Pack_general.jpg?v=1712320532",
+  "platform": "shopify",
+  "product_id": "8986147127602",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Roaster's Choice 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/roasters-choice-4-oz-deluxe-sample",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "47567148220722"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "47567148253490"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "47567148286258"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "47567148319026"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "47567148351794"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "47567148384562"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "d72992db02bb0c4c",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-fireside-coffee-1-lb-bag-add-on",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Terra_Nova_Organic_Fireside_Dark_Roast.png?v=1774563480",
+  "platform": "shopify",
+  "product_id": "9693104472370",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [],
+  "title": "Terra Nova Fireside Coffee, 1 lb. Bag Add On",
+  "url": "https://terranovacoffee.net/products/terra-nova-fireside-coffee-1-lb-bag-add-on",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "49510821429554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "49510821462322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "49510821495090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "49510821527858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "49510821560626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "49510821593394"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "41e101acdb85fddc",
+  "first_seen": "2026-10-26",
+  "handle": "terra-nova-congo-coffee-1-lb-bag-add-on",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Congo_4f20413b-0c05-4165-9342-9eed11ad9c17.png?v=1774565988",
+  "platform": "shopify",
+  "product_id": "9693108961586",
+  "product_type": "Coffee",
+  "roaster_slug": "terranovacoffee",
+  "tags": [],
+  "title": "Terra Nova Congo Coffee, 1 lb. Bag Add On",
+  "url": "https://terranovacoffee.net/products/terra-nova-congo-coffee-1-lb-bag-add-on",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "49510868943154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "49510868975922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "49510869008690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "49510869041458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "49510869074226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish",
+    "variant_id": "49510869106994"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ },
+ {
+  "body_hash": "98a36ea95b68737a",
+  "first_seen": "2026-10-26",
+  "handle": "congo-4-oz-deluxe-sample-1",
+  "image": "https://cdn.shopify.com/s/files/1/0923/4002/files/Organic_Fair_Trade_Congo_Coffee_Medium_Roast.jpg?v=1774565988",
+  "platform": "shopify",
+  "product_id": "9967775875378",
+  "product_type": "",
+  "roaster_slug": "terranovacoffee",
+  "tags": [
+   "exclude_rebuy"
+  ],
+  "title": "Congo 4 oz Deluxe Sample",
+  "url": "https://terranovacoffee.net/products/congo-4-oz-deluxe-sample-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Whole Bean",
+    "variant_id": "50411338629426"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Coarse (French Press, Cold Brew)",
+    "variant_id": "50411338662194"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Medium (Auto-Drip, Chemex, Keurig)",
+    "variant_id": "50411338694962"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Fine (Pourover, Aeropress)",
+    "variant_id": "50411338727730"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Espresso (Espresso, Moka Pot)",
+    "variant_id": "50411338760498"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Turkish",
+    "variant_id": "50411338793266"
+   }
+  ],
+  "vendor": "Terra Nova Coffee"
+ }
+]

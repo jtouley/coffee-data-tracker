@@ -1,0 +1,158 @@
+{
+ "10308002775288": {
+  "body_hash": "4534d126bc04de07",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "watermelon",
+   "cantaloupe",
+   "creamy"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "10308005495032": {
+  "body_hash": "d2c03780ccadfd19",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dark plum",
+   "milk chocolate",
+   "tart orange"
+  ],
+  "varietals": [
+   "Caturra",
+   "Mundo Novo",
+   "Sarchimor"
+  ]
+ },
+ "8846510096632": {
+  "body_hash": "4787bb96c6bf149e",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1600,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "raw sugar",
+   "berry",
+   "stone fruit"
+  ],
+  "varietals": []
+ },
+ "8864907755768": {
+  "body_hash": "d435de3623b5a189",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8885392736504": {
+  "body_hash": "6dc7b8fa0a146591",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra"
+  ]
+ },
+ "8905501802744": {
+  "body_hash": "456526a274c5affb",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1950,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "stone fruit",
+   "nougat",
+   "raw sugar"
+  ],
+  "varietals": []
+ },
+ "8905506291960": {
+  "body_hash": "f0beb15dba80658a",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "raisin",
+   "raspberry"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "9049415680248": {
+  "body_hash": "e4cc6420d5220718",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

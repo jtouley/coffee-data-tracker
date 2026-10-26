@@ -1,0 +1,332 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/5a9319bf0d9297895c9643c5/1774534739242/",
+  "platform": "squarespace",
+  "product_id": "5a9319bf0d9297895c9643c5",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Bali Blue Moon, Full Medium Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "5a9662ec-5679-45f5-a609-63f995c368af"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag",
+    "variant_id": "8c3f54a3-fae6-4028-b1c8-e31216eec3d8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-maya-royal-select-decaf",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/5db986d54b050219e8c289ab/1774534922645/",
+  "platform": "squarespace",
+  "product_id": "5db986d54b050219e8c289ab",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic DECAF Maya, Dark Roast – 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-maya-royal-select-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag",
+    "variant_id": "36a1eeb1-7770-4173-b7ff-25c7673bd1c7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "dd1c66c0-93c1-42f3-babf-a931a247ad3d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-manos-de-mujer",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/5e348ff5239e650b843334e3/1774462817635/",
+  "platform": "squarespace",
+  "product_id": "5e348ff5239e650b843334e3",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Honduras \"Manos de Mujer\" - Dark Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-honduras-manos-de-mujer",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag",
+    "variant_id": "1ed1daae-2dea-47f2-b261-0986860a8d67"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "4087361f-e72e-4142-a05a-86ffb7859b2f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-nicaragua-san-juan-del-rio-coco",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a92d0833917ee828d5f20fa/100e0dbd-3e36-4075-854f-5ed35982c4fb/Organic+Nicaragua+San+Juan+Del+Rio+Coco+Coffee+Drying+Beds.png",
+  "platform": "squarespace",
+  "product_id": "61b265a85e49dc1370ab523a",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Nicaragua San Juan Del Rio Coco, Dark Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-nicaragua-san-juan-del-rio-coco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "21bd1002-365c-43ac-b0c6-8e22344668a0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "f210524d-7d27-4ad0-9ed4-e765d0fe0e4c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "java-taman-dadar",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/620be5c207f17c77f01622f0/1774462916554/",
+  "platform": "squarespace",
+  "product_id": "620be5c207f17c77f01622f0",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Java Taman Dadar, Full Medium Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/java-taman-dadar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "d0f1acce-43f0-4b22-819c-16e680b46adb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "de7fdb47-3212-4390-976f-1968ef0e341f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombia-cauca-perla-de-inza-2dgtb-56hp2",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/651c3c572ffba17220000b9e/1774459358085/",
+  "platform": "squarespace",
+  "product_id": "651c3c572ffba17220000b9e",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Colombia Tolima Suave, Medium Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-colombia-cauca-perla-de-inza-2dgtb-56hp2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "45f73c27-10b4-4ed0-979c-87fae6dbe65d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "6f2a0643-5d4d-4cfe-a312-08df653f96f8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "san-ignacio-rio-amoju-alpes-amazonicos",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/67d9b19636ce38604f866eb4/1774534829034/",
+  "platform": "squarespace",
+  "product_id": "67d9b19636ce38604f866eb4",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Peru Rio Amoju 'Alpes Amazonicas,' Dark Roast  - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/san-ignacio-rio-amoju-alpes-amazonicos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "47fa4643-6aca-4dd1-b465-c45b987d1186"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag",
+    "variant_id": "d19beec2-849f-4ae4-91e9-4ec94e5e4dfa"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopia-sidama-guji",
+  "image": "https://static1.squarespace.com/static/5a92d0833917ee828d5f20fa/5a92d2528165f549b5b18fab/681124df477203738cb15649/1774463037600/",
+  "platform": "squarespace",
+  "product_id": "681124df477203738cb15649",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Ethiopia Sidama Guji - Light Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-ethiopia-sidama-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "8b03b4ef-6fc1-4c9b-bfb6-6ec27b21f52b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "c9fc05be-3cbb-4726-8bb7-93acd285b1a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-guayab",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a92d0833917ee828d5f20fa/83072b06-72cf-4811-b94e-f13bb532b7a2/Guatemala+Guaya%27B+Organic+Fair+Trade+Coffee+Huehuetenango+Coffee+Cherries.png",
+  "platform": "squarespace",
+  "product_id": "68486189c8bb952bcfc7c85d",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Guatemala Guaya'B, Medium Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-guatemala-guayab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "265fb5d4-b151-4d9f-9b3a-4566e2cc6ff0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "c67a2c8e-a685-49a5-96fb-bb1a727783d9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a92d0833917ee828d5f20fa/9f7d7972-b915-4eb8-98f2-f26227fffdeb/Finca+Santa+Rosa+Coffee+Cherries+Processing+Organic+Mexico+Chiapas+Coffee.png",
+  "platform": "squarespace",
+  "product_id": "68d43b7732e1d9080075dc20",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Mexico Chiapas Light Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag",
+    "variant_id": "434fa746-e082-4f26-907c-977101eb0139"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "70555838-9fca-48cf-acbd-f6691a17e910"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-mandheling",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a92d0833917ee828d5f20fa/1713899185941-KXPINLRCOLEZ8EREUTKM/Screen+Shot+2024-04-23+at+3.05.25+PM.png",
+  "platform": "squarespace",
+  "product_id": "68d43dd25980b6573cdf2420",
+  "product_type": "",
+  "roaster_slug": "yupcoffee",
+  "tags": [],
+  "title": "Organic Sumatra Mandheling, Full Medium Roast - 1 Pound or 5 Pound Bag",
+  "url": "https://www.yupcoffee.com/shop/organic-sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Five-Pound Bag (80oz)",
+    "variant_id": "6a55968b-db47-4aa8-9c3c-db1114ea4330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "One-Pound Bag (16oz)",
+    "variant_id": "aeb60f01-ecba-4d64-b058-8c5b498cb83f"
+   }
+  ],
+  "vendor": ""
+ }
+]

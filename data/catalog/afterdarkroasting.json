@@ -1,0 +1,221 @@
+[
+ {
+  "body_hash": "e9a7e8691ab17c3f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_6a950ec1-ea07-4081-ad8a-c3af1403d723.heic?v=1690896783",
+  "platform": "shopify",
+  "product_id": "7221084553402",
+  "product_type": "",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Brazil",
+   "bag"
+  ],
+  "title": "Brazilian",
+  "url": "https://afterdarkroastingcompany.com/products/brazil-mogiana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Medium",
+    "variant_id": "41875577536698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Medium",
+    "variant_id": "41875577700538"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ },
+ {
+  "body_hash": "80924fcec67b3973",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lintong-sigumpar-village",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_6d7084da-ddad-46e0-b844-bf78cdc86e5e.heic?v=1690896924",
+  "platform": "shopify",
+  "product_id": "7221084717242",
+  "product_type": "",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Sumatra",
+   "bag"
+  ],
+  "title": "Sumatra",
+  "url": "https://afterdarkroastingcompany.com/products/sumatra-lintong-sigumpar-village",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Medium-Dark",
+    "variant_id": "41875577962682"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground 12oz) / Medium-Dark",
+    "variant_id": "41875578126522"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ },
+ {
+  "body_hash": "fc846a871c2df183",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-inz-veredas-vecinas",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_b2ffa642-b5da-41d2-ae8a-d9f759a1a6ff.heic?v=1690896816",
+  "platform": "shopify",
+  "product_id": "7221084979386",
+  "product_type": "",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Columbia",
+   "Columbian",
+   "Shop",
+   "bag",
+   "import_2022_09_29_131416"
+  ],
+  "title": "Colombian",
+  "url": "https://afterdarkroastingcompany.com/products/colombia-inz-veredas-vecinas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Medium",
+    "variant_id": "41875579044026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Medium",
+    "variant_id": "41875579207866"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ },
+ {
+  "body_hash": "ffc68ba4dcd17632",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_4be8012d-3574-4126-b57e-9b05f9af82ce.heic?v=1690896722",
+  "platform": "shopify",
+  "product_id": "7221085208762",
+  "product_type": "",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Costa Rica",
+   "Costa Rican",
+   "Shop",
+   "bag",
+   "import_2022_09_29_131416"
+  ],
+  "title": "Costa Rica",
+  "url": "https://afterdarkroastingcompany.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Medium",
+    "variant_id": "41875580059834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Medium",
+    "variant_id": "41875580256442"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ },
+ {
+  "body_hash": "8c342874e0584327",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-shb-ep",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_0476ae19-daaf-47e5-b2a2-0d8ea3de74d7.heic?v=1690896951",
+  "platform": "shopify",
+  "product_id": "7221085634746",
+  "product_type": "",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Peru",
+   "Peruvian",
+   "bag"
+  ],
+  "title": "Peru",
+  "url": "https://afterdarkroastingcompany.com/products/peru-organic-shb-ep",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Medium-Dark",
+    "variant_id": "41875580879034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Dark",
+    "variant_id": "41875580911802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Medium-Dark",
+    "variant_id": "41875581010106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Dark",
+    "variant_id": "41875581042874"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ },
+ {
+  "body_hash": "9e240f9aa70ec7a4",
+  "first_seen": "2026-10-26",
+  "handle": "tom-s-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0629/9792/1978/files/image_110738b5-3b81-414b-8dd5-f4c8e4732599.heic?v=1690897383",
+  "platform": "shopify",
+  "product_id": "7417280168122",
+  "product_type": "Blend",
+  "roaster_slug": "afterdarkroasting",
+  "tags": [
+   "Blend",
+   "bag"
+  ],
+  "title": "Tom’s Blend",
+  "url": "https://afterdarkroastingcompany.com/products/tom-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean (12oz) / Dark",
+    "variant_id": "42548200112314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground (12oz) / Dark",
+    "variant_id": "42548200210618"
+   }
+  ],
+  "vendor": "After Dark Roasting Company"
+ }
+]

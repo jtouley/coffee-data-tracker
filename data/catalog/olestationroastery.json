@@ -1,0 +1,380 @@
+[
+ {
+  "body_hash": "6ef19edc4cb7823d",
+  "first_seen": "2026-10-26",
+  "handle": "oak-island-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/OI_Edit.png?v=1784913412",
+  "platform": "shopify",
+  "product_id": "7031357669427",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Oak Island Roast",
+  "url": "https://olestationroastery.com/products/oak-island-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "41630675435571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "GROUND / 5 LB",
+    "variant_id": "41630676975667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "41630677008435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "WHOLE BEAN / 5 LB",
+    "variant_id": "41630677041203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "GROUND / 2 LB",
+    "variant_id": "42952233484339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "WHOLE BEAN / 2 LB",
+    "variant_id": "44383318081587"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ },
+ {
+  "body_hash": "1bc5159b7d094de2",
+  "first_seen": "2026-10-26",
+  "handle": "sugar-tit",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/ST_Edit.png?v=1784913371",
+  "platform": "shopify",
+  "product_id": "7031359307827",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Sugar Tit Roast",
+  "url": "https://olestationroastery.com/products/sugar-tit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "41630682546227"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "GROUND / 5 LB",
+    "variant_id": "41630682578995"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "41630682611763"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "WHOLE BEAN / 5 LB",
+    "variant_id": "41630682644531"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "GROUND / 2 LB",
+    "variant_id": "42952234991667"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "WHOLE BEAN / 2 LB",
+    "variant_id": "44383317950515"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ },
+ {
+  "body_hash": "35e5fdec473358f4",
+  "first_seen": "2026-10-26",
+  "handle": "palmetto-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/PS_Edit.png?v=1784825287",
+  "platform": "shopify",
+  "product_id": "7031359701043",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Palmetto Sunrise Roast",
+  "url": "https://olestationroastery.com/products/palmetto-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "41630683627571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "GROUND / 5 LB",
+    "variant_id": "41630683660339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "41630683693107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "WHOLE BEAN / 5 LB",
+    "variant_id": "41630683725875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "GROUND / 2 LB",
+    "variant_id": "42952234041395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "WHOLE BEAN / 2 LB",
+    "variant_id": "44383316279347"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ },
+ {
+  "body_hash": "43de3e20d811b194",
+  "first_seen": "2026-10-26",
+  "handle": "reidville-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/RR_Edit.png?v=1784913313",
+  "platform": "shopify",
+  "product_id": "7031360487475",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Reidville Roast",
+  "url": "https://olestationroastery.com/products/reidville-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "41630684315699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "GROUND / 5 LB",
+    "variant_id": "41630684348467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "41630684381235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "WHOLE BEAN / 5 LB",
+    "variant_id": "41630684414003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "GROUND / 2 LB",
+    "variant_id": "42952234467379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "WHOLE BEAN / 2 LB",
+    "variant_id": "44383314903091"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ },
+ {
+  "body_hash": "e5888e4bf0641504",
+  "first_seen": "2026-10-26",
+  "handle": "afterdark",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/AD_Edit.png?v=1784822625",
+  "platform": "shopify",
+  "product_id": "7044065722419",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "AfterDark",
+  "url": "https://olestationroastery.com/products/afterdark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "41683730759731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "GROUND / 5 LB",
+    "variant_id": "41683730792499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "41683730825267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.99,
+    "title": "WHOLE BEAN / 5 LB",
+    "variant_id": "41683730858035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "GROUND / 2 LB",
+    "variant_id": "42952227192883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "WHOLE BEAN / 2 LB",
+    "variant_id": "44383313330227"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ },
+ {
+  "body_hash": "725c306b4f216210",
+  "first_seen": "2026-10-26",
+  "handle": "cential-perk",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/DC6B94D2-20DC-47B5-BF8E-20480CD3E203.jpg?v=1759279626",
+  "platform": "shopify",
+  "product_id": "7678731911219",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Cential Perk",
+  "url": "https://olestationroastery.com/products/cential-perk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "43662785937459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "43662786035763"
+   }
+  ],
+  "vendor": " Ole Station Roastery"
+ },
+ {
+  "body_hash": "8e1f947b1448ba1d",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0583/9732/7411/files/738EE882-9C96-43BF-9DD8-201237E676BD.png?v=1791993012",
+  "platform": "shopify",
+  "product_id": "8012061409331",
+  "product_type": "COFFEE",
+  "roaster_slug": "olestationroastery",
+  "tags": [
+   "COFFEE"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://olestationroastery.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.99,
+    "title": "GROUND / 10 OZ",
+    "variant_id": "45055017189427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "GROUND / 12 OZ",
+    "variant_id": "45055017222195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.99,
+    "title": "WHOLE BEAN / 10 OZ",
+    "variant_id": "45055017254963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "WHOLE BEAN / 12 OZ",
+    "variant_id": "45055017287731"
+   }
+  ],
+  "vendor": "Ole Station Roastery"
+ }
+]

@@ -1,0 +1,476 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "jojo-proprietary-blend",
+  "image": "https://cartelroasting.co/wp-content/uploads/2023/08/Screen_Shot_2023-01-09_at_3.23.32_PM.png",
+  "platform": "woocommerce",
+  "product_id": "13381",
+  "product_type": "simple",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "JOJO Blend 20 Pounds (4 bags)",
+  "url": "https://cartelroasting.co/shop/jojo-proprietary-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 0.0,
+    "title": "JOJO Blend 20 Pounds (4 bags)",
+    "variant_id": "13381:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "upward-blend",
+  "image": "https://cartelroasting.co/wp-content/uploads/2023/08/upward_blend_badge.png",
+  "platform": "woocommerce",
+  "product_id": "13539",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Upward Blend",
+  "url": "https://cartelroasting.co/shop/upward-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5 lbs",
+    "variant_id": "13539:0"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 0.0,
+    "title": "Frack Pack 10 lbs (40 x 4 oz packs)",
+    "variant_id": "13539:1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12 oz",
+    "variant_id": "13539:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 0.0,
+    "title": "2 lbs",
+    "variant_id": "13539:3"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 0.0,
+    "title": "Frack Pack 8 lbs (32 x 4 oz packs)",
+    "variant_id": "13539:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16e69fbe087fe0d3",
+  "first_seen": "2026-10-26",
+  "handle": "give-back-blend-girls-rock-phoenix",
+  "image": "https://cartelroasting.co/wp-content/uploads/2025/07/GBB-girls-rock-SIDE.png",
+  "platform": "woocommerce",
+  "product_id": "42278",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Give Back Blend: Girls Rock! Phoenix",
+  "url": "https://cartelroasting.co/shop/give-back-blend-girls-rock-phoenix/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42278:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs",
+    "variant_id": "42278:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs",
+    "variant_id": "42278:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "962b7bdc4ad9c729",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-moon-autumn-seasonal-blend",
+  "image": "https://cartelroasting.co/wp-content/uploads/2025/09/HMB-Side-mockup.png",
+  "platform": "woocommerce",
+  "product_id": "44744",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "COF",
+   "Coffee",
+   "Holiday/Gifts"
+  ],
+  "title": "Harvest Moon",
+  "url": "https://cartelroasting.co/shop/harvest-moon-autumn-seasonal-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "44744:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35cb81e5606caf6a",
+  "first_seen": "2026-10-26",
+  "handle": "blend-forty-eight",
+  "image": "https://cartelroasting.co/wp-content/uploads/2022/12/B48-GCA-award-mockup-SIDE.png",
+  "platform": "woocommerce",
+  "product_id": "5313",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Blend Forty Eight",
+  "url": "https://cartelroasting.co/shop/blend-forty-eight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "5313:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "5313:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs",
+    "variant_id": "5313:2"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 20.0,
+    "title": "2 oz",
+    "variant_id": "5313:3"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 20.0,
+    "title": "20 lbs",
+    "variant_id": "5313:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs",
+    "variant_id": "5313:5"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 20.0,
+    "title": "8 lbs",
+    "variant_id": "5313:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d82f1a25aaaeaeb",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-santa-clara",
+  "image": "https://cartelroasting.co/wp-content/uploads/2026/09/guatemala-finca-santa-clara-12-oz-SIDE.webp",
+  "platform": "woocommerce",
+  "product_id": "60412",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "COF",
+   "Coffee"
+  ],
+  "title": "Guatemala Finca Santa Clara",
+  "url": "https://cartelroasting.co/shop/guatemala-finca-santa-clara/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz",
+    "variant_id": "60412:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz",
+    "variant_id": "60412:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.5,
+    "title": "2 lbs",
+    "variant_id": "60412:2"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 25.5,
+    "title": "2 oz",
+    "variant_id": "60412:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.5,
+    "title": "5 lbs",
+    "variant_id": "60412:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "904ccf3791ae3636",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-san-pedro-sochiapam",
+  "image": "https://cartelroasting.co/wp-content/uploads/2026/09/mexico-san-pedro-side.webp",
+  "platform": "woocommerce",
+  "product_id": "60463",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "COF",
+   "Coffee",
+   "Retail"
+  ],
+  "title": "Mexico San Pedro Sochiapam",
+  "url": "https://cartelroasting.co/shop/mexico-san-pedro-sochiapam/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz",
+    "variant_id": "60463:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "60463:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lbs",
+    "variant_id": "60463:2"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 23.0,
+    "title": "2 oz",
+    "variant_id": "60463:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.0,
+    "title": "5 lbs",
+    "variant_id": "60463:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dde2c193f3fb3bc6",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-don-sabino-natural",
+  "image": "https://cartelroasting.co/wp-content/uploads/2026/09/don-sabino-mockup-SIDE.webp",
+  "platform": "woocommerce",
+  "product_id": "60666",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "COF",
+   "Coffee"
+  ],
+  "title": "Costa Rica Don Sabino Natural",
+  "url": "https://cartelroasting.co/shop/costa-rica-don-sabino-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz",
+    "variant_id": "60666:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "60666:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lbs",
+    "variant_id": "60666:2"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 28.0,
+    "title": "2 oz",
+    "variant_id": "60666:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "5 lbs",
+    "variant_id": "60666:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbf6f20939355f2a",
+  "first_seen": "2026-10-26",
+  "handle": "desert-city-dark",
+  "image": "https://cartelroasting.co/wp-content/uploads/2022/07/DCD-bag-mockup-new-2025.png",
+  "platform": "woocommerce",
+  "product_id": "787",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Desert City Dark",
+  "url": "https://cartelroasting.co/shop/desert-city-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "787:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "787:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs",
+    "variant_id": "787:2"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 20.0,
+    "title": "2 oz",
+    "variant_id": "787:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5 lbs",
+    "variant_id": "787:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "108fcfa090e3046a",
+  "first_seen": "2026-10-26",
+  "handle": "double-star-decaf",
+  "image": "https://cartelroasting.co/wp-content/uploads/2022/07/DSD-2026-side-mockup-1.png",
+  "platform": "woocommerce",
+  "product_id": "791",
+  "product_type": "variable",
+  "roaster_slug": "cartelroasting",
+  "tags": [
+   "Coffee",
+   "Retail"
+  ],
+  "title": "Double Star Decaf",
+  "url": "https://cartelroasting.co/shop/double-star-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "791:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lbs",
+    "variant_id": "791:1"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 21.0,
+    "title": "2 oz",
+    "variant_id": "791:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lbs",
+    "variant_id": "791:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

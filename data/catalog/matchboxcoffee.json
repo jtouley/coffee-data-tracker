@@ -1,0 +1,62 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rock-creek-whb",
+  "image": "https://cdn.shopify.com/s/files/1/0612/5984/1687/files/4d403328-0c9a-4904-9295-37e5bb33964e.jpg?v=1719777017",
+  "platform": "shopify",
+  "product_id": "8465810587799",
+  "product_type": "Coffee",
+  "roaster_slug": "matchboxcoffee",
+  "tags": [],
+  "title": "Rock Creek WHB",
+  "url": "https://matchboxcoffee.com/products/rock-creek-whb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Whole Bean",
+    "variant_id": "44409929564311"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Ground",
+    "variant_id": "44409929597079"
+   }
+  ],
+  "vendor": "Matchbox Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-coffee-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0612/5984/1687/files/2fb1b276-850e-44fc-b485-6c1803485370.jpg?v=1720629402",
+  "platform": "shopify",
+  "product_id": "8476063432855",
+  "product_type": "Coffee",
+  "roaster_slug": "matchboxcoffee",
+  "tags": [],
+  "title": "Mountain Coffee Dark Roast",
+  "url": "https://matchboxcoffee.com/products/mountain-coffee-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "44437505015959"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "44437505048727"
+   }
+  ],
+  "vendor": "Matchbox Coffee"
+ }
+]

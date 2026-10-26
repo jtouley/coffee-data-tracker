@@ -1,0 +1,250 @@
+[
+ {
+  "body_hash": "b1106eb20d8c2b0e",
+  "first_seen": "2026-10-26",
+  "handle": "bouquet-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web.jpg?v=1770768667",
+  "platform": "shopify",
+  "product_id": "255881838630",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Bouquet",
+  "url": "https://themillsacramento.com/products/bouquet-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz.",
+    "variant_id": "2582305734694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 Pounds",
+    "variant_id": "39501985710135"
+   }
+  ],
+  "vendor": "Bouquet Coffee Roasters"
+ },
+ {
+  "body_hash": "57ce51c07c0525be",
+  "first_seen": "2026-10-26",
+  "handle": "herbal-honey-bear",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/products/IMG_3915.jpg?v=1669073309",
+  "platform": "shopify",
+  "product_id": "6734702084151",
+  "product_type": "merchendise",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "Goods",
+   "Herbal Tea",
+   "tea"
+  ],
+  "title": "Honey Bear",
+  "url": "https://themillsacramento.com/products/herbal-honey-bear",
+  "variants": [
+   {
+    "available": true,
+    "grams": 626,
+    "price_usd": 22.0,
+    "title": "Orange Blossom 2025 Harvest",
+    "variant_id": "40052227473463"
+   },
+   {
+    "available": true,
+    "grams": 626,
+    "price_usd": 22.0,
+    "title": "Rio Wildflower 2025 Harvest",
+    "variant_id": "40265657876535"
+   }
+  ],
+  "vendor": "Bouquet Coffee Roasters"
+ },
+ {
+  "body_hash": "f8e9234c8fd25a77",
+  "first_seen": "2026-10-26",
+  "handle": "luminary",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web11.jpg?v=1770831744",
+  "platform": "shopify",
+  "product_id": "7414844784695",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Luminary",
+  "url": "https://themillsacramento.com/products/luminary",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz.",
+    "variant_id": "42102261448759"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "8ecec162dfca87ff",
+  "first_seen": "2026-10-26",
+  "handle": "matriarch",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web4.jpg?v=1770831938",
+  "platform": "shopify",
+  "product_id": "7414849142839",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Matriarch",
+  "url": "https://themillsacramento.com/products/matriarch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz.",
+    "variant_id": "42102271049783"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "b50b4a8d71a5700c",
+  "first_seen": "2026-10-26",
+  "handle": "night-bloom",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web2.jpg?v=1770832020",
+  "platform": "shopify",
+  "product_id": "7414864740407",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Night Bloom",
+  "url": "https://themillsacramento.com/products/night-bloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz.",
+    "variant_id": "42102291791927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 Pounds",
+    "variant_id": "50217479110711"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "bf0ebde9e83c3481",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-quiche-natural",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web5.jpg?v=1771446983",
+  "platform": "shopify",
+  "product_id": "7414938796087",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Guatemala Quiche Natural",
+  "url": "https://themillsacramento.com/products/guatemala-quiche-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz.",
+    "variant_id": "42102399893559"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "d25cc6daf3afd130",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-palo-de-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/Ccoffee_Tags_for_web6.jpg?v=1770832374",
+  "platform": "shopify",
+  "product_id": "7414942138423",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Colombia Palo De Rosa",
+  "url": "https://themillsacramento.com/products/colombia-palo-de-rosa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz.",
+    "variant_id": "42102422929463"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "1a3e1aa29b27e3f0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca-honey",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/new_sos_tags.jpg?v=1773940689",
+  "platform": "shopify",
+  "product_id": "7426079883319",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Colombia– Cauca Honey",
+  "url": "https://themillsacramento.com/products/colombia-cauca-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz.",
+    "variant_id": "42145931427895"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ },
+ {
+  "body_hash": "c966889b2db0341c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-embu-ena",
+  "image": "https://cdn.shopify.com/s/files/1/2492/4092/files/new_sos_tags2.jpg?v=1773941338",
+  "platform": "shopify",
+  "product_id": "7426080571447",
+  "product_type": "Coffee",
+  "roaster_slug": "bouquetcoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya– Embu Ena",
+  "url": "https://themillsacramento.com/products/kenya-embu-ena",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz.",
+    "variant_id": "42145936277559"
+   }
+  ],
+  "vendor": "The Mill Coffee Roasting & Tea Studio"
+ }
+]

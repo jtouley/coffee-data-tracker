@@ -1,0 +1,1049 @@
+[
+ {
+  "body_hash": "bc540fdd1ec16867",
+  "first_seen": "2026-10-26",
+  "handle": "cafiza-20oz",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/cafiza-566g-front.webp?v=1695757240",
+  "platform": "shopify",
+  "product_id": "10025931342142",
+  "product_type": "",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "supplies"
+  ],
+  "title": "Cafiza - 20oz",
+  "url": "https://thegreatnorthcoffee.com/products/cafiza-20oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 622,
+    "price_usd": 10.0,
+    "title": "Default Title",
+    "variant_id": "47299643834686"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "betterday-labels-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/EspressoBlend.png?v=1706125019",
+  "platform": "shopify",
+  "product_id": "10772320452926",
+  "product_type": "Packaging",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "bagsandlabels",
+   "noindex"
+  ],
+  "title": "Betterday Labels - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/betterday-labels-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Espresso",
+    "variant_id": "48528174973246"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - La Pirámide",
+    "variant_id": "48528175006014"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Brew Blend",
+    "variant_id": "48528175137086"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Encantada",
+    "variant_id": "50012501573950"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - La Conserva",
+    "variant_id": "53771651744062"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Angostura Decaf",
+    "variant_id": "53771651776830"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Familia Siles",
+    "variant_id": "54682045710654"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Betterday - Pitalito Especial",
+    "variant_id": "54682045743422"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cafe57-labels-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/Culturas_3c90f0e5-970e-4985-bf88-d8af9a420f3c.png?v=1707248634",
+  "platform": "shopify",
+  "product_id": "10802586091838",
+  "product_type": "Packaging",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "bagsandlabels",
+   "noindex"
+  ],
+  "title": "Cafe57 Labels - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/cafe57-labels-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Culturas - Blend",
+    "variant_id": "48716976947518"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Los Taitas - Colombia",
+    "variant_id": "48716976980286"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Decaf - El Pico",
+    "variant_id": "53771649417534"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Andino - Peru",
+    "variant_id": "54279875789118"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Concordia - Nicaragua",
+    "variant_id": "54279875821886"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Laboya - Colombia",
+    "variant_id": "54279875854654"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Amanecer - Guatemala",
+    "variant_id": "54682006782270"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "0ef253c061291715",
+  "first_seen": "2026-10-26",
+  "handle": "deep-waters",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/Deep-Waters-PDP_7045cfae-12fb-4da8-9cd6-6842fb75dacd.png?v=1708461009",
+  "platform": "shopify",
+  "product_id": "10820673667390",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Deep Waters",
+  "url": "https://thegreatnorthcoffee.com/products/deep-waters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "48790798500158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54102223356222"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 63.5,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102223388990"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 63.5,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102223421758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102223454526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54102223487294"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "5f1ba8c2f0d4d2a2",
+  "first_seen": "2026-10-26",
+  "handle": "catlin-gabel-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/Catlin-Gabel-Label-White.png?v=1710265412",
+  "platform": "shopify",
+  "product_id": "10869141635390",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Catlin Gabel Blend",
+  "url": "https://thegreatnorthcoffee.com/products/catlin-gabel-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "52169492857150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54102207168830"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102207201598"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102207234366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102207267134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54102207299902"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "439fe16088b72300",
+  "first_seen": "2026-10-26",
+  "handle": "siete-hermanos-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/SieteHermanos-PDP-12oz_22fcfe16-fbdc-4c10-ad04-2414f6cd895f.png?v=1714430317",
+  "platform": "shopify",
+  "product_id": "11087813607742",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Siete Hermanos",
+  "url": "https://thegreatnorthcoffee.com/products/siete-hermanos-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "49531816706366"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb",
+    "variant_id": "54102242459966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb",
+    "variant_id": "54102242492734"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "7e508bd195fdf9df",
+  "first_seen": "2026-10-26",
+  "handle": "oat-alpha-amylase",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/amylase_new_pic_ghost_1080x_508fb4e4-e197-45a3-8625-16518b7a3636.webp?v=1726259905",
+  "platform": "shopify",
+  "product_id": "11405263733054",
+  "product_type": "Supplies",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "noindex",
+   "tgn-only"
+  ],
+  "title": "Oat - Alpha Amylase",
+  "url": "https://thegreatnorthcoffee.com/products/oat-alpha-amylase",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "50395628241214"
+   }
+  ],
+  "vendor": "tgn-only"
+ },
+ {
+  "body_hash": "e3deeed32cbcf03f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-cacao-powder-14oz",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "11407732146494",
+  "product_type": "Supplies",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "noindex",
+   "tgn-only"
+  ],
+  "title": "Organic Cacao Powder- 14oz",
+  "url": "https://thegreatnorthcoffee.com/products/organic-cacao-powder-14oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 12.25,
+    "title": "Default Title",
+    "variant_id": "50405655216446"
+   }
+  ],
+  "vendor": "tgn-only"
+ },
+ {
+  "body_hash": "d4c72651a1019b7e",
+  "first_seen": "2026-10-26",
+  "handle": "tomas-pinacho-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/12ozTomasPDP.png?v=1732653367",
+  "platform": "shopify",
+  "product_id": "11412541997374",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Tomas Pinacho",
+  "url": "https://thegreatnorthcoffee.com/products/tomas-pinacho-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "50417555669310"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102244557118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lbs / Espresso Roast",
+    "variant_id": "54102244589886"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "come-back-coffee-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/ComeBack-HouseBlend.png?v=1738783620",
+  "platform": "shopify",
+  "product_id": "11795473727806",
+  "product_type": "",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "comebackcoffee",
+   "noindex"
+  ],
+  "title": "Come Back House Blend - DRIP Profile",
+  "url": "https://thegreatnorthcoffee.com/products/come-back-coffee-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "12oz",
+    "variant_id": "51288116298046"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.25,
+    "title": "2.5lb",
+    "variant_id": "54102208774462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.5,
+    "title": "5lb",
+    "variant_id": "54102208807230"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "come-back-label-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/ComeBack-HouseBlend_5947a92d-323b-4b81-ac38-41c893348286.png?v=1738784281",
+  "platform": "shopify",
+  "product_id": "11795485458750",
+  "product_type": "",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "comebackcoffee",
+   "noindex"
+  ],
+  "title": "Come Back Label - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/come-back-label-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Default Title",
+    "variant_id": "51288139661630"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "bd683ef8f85470f2",
+  "first_seen": "2026-10-26",
+  "handle": "oat-potassium-phosphate-dibasic-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/a-4_snack_sack__25264.webp?v=1747325607",
+  "platform": "shopify",
+  "product_id": "11908762468670",
+  "product_type": "Supplies",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "noindex",
+   "tgn-only"
+  ],
+  "title": "Snack Sack Stand Up Bag (1000/Case)",
+  "url": "https://thegreatnorthcoffee.com/products/oat-potassium-phosphate-dibasic-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4481,
+    "price_usd": 96.99,
+    "title": "Default Title",
+    "variant_id": "51724299010366"
+   }
+  ],
+  "vendor": "tgn-only"
+ },
+ {
+  "body_hash": "e93e84c2d372f209",
+  "first_seen": "2026-10-26",
+  "handle": "white-pan-liner-12x16-half-sheet-1000-case-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/9X12_GREASE_SHEETS__41280.jpg?v=1747327735",
+  "platform": "shopify",
+  "product_id": "11908778066238",
+  "product_type": "Supplies",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "noindex",
+   "tgn-only"
+  ],
+  "title": "Natural Grease Resistant Sheets, Full Size , 3 Packs of 1000 (3000/Case)",
+  "url": "https://thegreatnorthcoffee.com/products/white-pan-liner-12x16-half-sheet-1000-case-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 7874,
+    "price_usd": 41.99,
+    "title": "Default Title",
+    "variant_id": "51724628689214"
+   }
+  ],
+  "vendor": "tgn-only"
+ },
+ {
+  "body_hash": "a3912e9fce67fc0c",
+  "first_seen": "2026-10-26",
+  "handle": "angostura-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/AngosturaDecafPDP.png?v=1750871503",
+  "platform": "shopify",
+  "product_id": "11944177697086",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Angostura Decaf",
+  "url": "https://thegreatnorthcoffee.com/products/angostura-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "51905715372350"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb",
+    "variant_id": "54102194127166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb",
+    "variant_id": "54102194159934"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "7aed1a071ba0e179",
+  "first_seen": "2026-10-26",
+  "handle": "familia-siles",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/FamiliaSiles-PDP_e25bcea5-e67c-4b31-b1cb-802d02acb91a.png?v=1783479399",
+  "platform": "shopify",
+  "product_id": "12513239564606",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Familia Siles",
+  "url": "https://thegreatnorthcoffee.com/products/familia-siles",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "53867740561726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54102227321150"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102227353918"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102227386686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102227419454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54102227452222"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "91b23365e6cb458b",
+  "first_seen": "2026-10-26",
+  "handle": "pitalito-especial",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/Pitalito-PDP_f833a4f1-3310-4cdc-a18b-68cbe1e29839.png?v=1786050689",
+  "platform": "shopify",
+  "product_id": "12554481140030",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Pitalito Especial",
+  "url": "https://thegreatnorthcoffee.com/products/pitalito-especial",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "54038891135294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54102238855486"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102238888254"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102238921022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102238953790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54102238986558"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "e71174dffe829426",
+  "first_seen": "2026-10-26",
+  "handle": "kickstep",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/12ozKickstepPDP.png?v=1732653262",
+  "platform": "shopify",
+  "product_id": "8140389482814",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "Kickstep",
+  "url": "https://thegreatnorthcoffee.com/products/kickstep",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "44570623770942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54102230303038"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 63.5,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102230335806"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 63.5,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54102230368574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102230401342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54102230434110"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "a88ea120f7b39f15",
+  "first_seen": "2026-10-26",
+  "handle": "la-piramide-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/12ozPiramidePDP.png?v=1732653319",
+  "platform": "shopify",
+  "product_id": "8142586315070",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "La Pirámide",
+  "url": "https://thegreatnorthcoffee.com/products/la-piramide-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "44578494480702"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102233973054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102234038590"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "ce65cf543f30c7d4",
+  "first_seen": "2026-10-26",
+  "handle": "la-conserva-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/12oz_Conserva_PDP.png?v=1732653153",
+  "platform": "shopify",
+  "product_id": "8142586872126",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "La Conserva",
+  "url": "https://thegreatnorthcoffee.com/products/la-conserva-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "44578495988030"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102231777598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102231810366"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Espresso Roast",
+    "variant_id": "54466511077694"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Espresso Roast",
+    "variant_id": "54466511110462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Espresso Roast",
+    "variant_id": "54466511143230"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "6b66ef772d8376df",
+  "first_seen": "2026-10-26",
+  "handle": "la-danta-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/Danta-V2-PDP.png?v=1786397110",
+  "platform": "shopify",
+  "product_id": "8217042911550",
+  "product_type": "Retail",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [],
+  "title": "La Danta",
+  "url": "https://thegreatnorthcoffee.com/products/la-danta-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Filter Roast",
+    "variant_id": "44898836971838"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 66.0,
+    "title": "2.5 lb / Filter Roast",
+    "variant_id": "54102233121086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Filter Roast",
+    "variant_id": "54102233186622"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "56ee21b04d8fd02f",
+  "first_seen": "2026-10-26",
+  "handle": "labels-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/products/TGNLabels-JPEG.jpg?v=1685736786",
+  "platform": "shopify",
+  "product_id": "8346554302782",
+  "product_type": "Packaging",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "bagsandlabels",
+   "noindex"
+  ],
+  "title": "Labels - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/labels-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Kickstep - Blend",
+    "variant_id": "45426203427134"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Deep Waters - Blend",
+    "variant_id": "54110605902142"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "La Pirámide - Colombia",
+    "variant_id": "54110605934910"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "La Conserva - Guatemala",
+    "variant_id": "54110605967678"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Angostura Decaf - Mexico",
+    "variant_id": "54110606065982"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Familia Siles - Nicaragua",
+    "variant_id": "54682041909566"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "La Danta - Peru",
+    "variant_id": "54682041942334"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Pitalito Especial - Colombia",
+    "variant_id": "54682041975102"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "gem-label-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/files/gem-label-draft.jpg?v=1686342012",
+  "platform": "shopify",
+  "product_id": "8362285465918",
+  "product_type": "Packaging",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "gemcoffee",
+   "noindex"
+  ],
+  "title": "GEM Label - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/gem-label-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.2,
+    "title": "Default Title",
+    "variant_id": "45496485871934"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "communal-labels-no-roast-date",
+  "image": "https://cdn.shopify.com/s/files/1/0722/0294/4830/products/Communal-Espresso.jpg?v=1692136076",
+  "platform": "shopify",
+  "product_id": "9664927859006",
+  "product_type": "Packaging",
+  "roaster_slug": "thegreatnorthcoffee",
+  "tags": [
+   "bagsandlabels",
+   "noindex"
+  ],
+  "title": "Communal Labels - No Roast Date",
+  "url": "https://thegreatnorthcoffee.com/products/communal-labels-no-roast-date",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Espresso",
+    "variant_id": "46528982384958"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - La Pirámide",
+    "variant_id": "54110606098750"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Decaf",
+    "variant_id": "54110606131518"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Tule",
+    "variant_id": "54110606164286"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Haven",
+    "variant_id": "54110606197054"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - La Danta",
+    "variant_id": "54110606229822"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Spring Blend",
+    "variant_id": "54110606262590"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.32,
+    "title": "Communal - Rancho Carmen",
+    "variant_id": "54110606295358"
+   }
+  ],
+  "vendor": "Great North Coffee"
+ }
+]

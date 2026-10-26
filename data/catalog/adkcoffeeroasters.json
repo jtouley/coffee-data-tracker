@@ -1,0 +1,2530 @@
+[
+ {
+  "body_hash": "743d953d1adfd78b",
+  "first_seen": "2026-10-26",
+  "handle": "banana-nut-bread-bnn-nut-brd1",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Bourbon_Pecan_Pie.jpg?v=1790049468",
+  "platform": "shopify",
+  "product_id": "8750116667588",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Bourbon Pecan Pie",
+  "url": "https://adkcoffeeroasters.com/products/banana-nut-bread-bnn-nut-brd1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791477690564"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind(pour-over) / 8 oz",
+    "variant_id": "46791477723332"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791477756100"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind(French Press) / 8 oz",
+    "variant_id": "46791477788868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46958980530372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46958980563140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind(pour-over) / 1 lb",
+    "variant_id": "46958980595908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind(pour-over) / 5 lb",
+    "variant_id": "46958980628676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46958980661444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46958980694212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind(French Press) / 1 lb",
+    "variant_id": "46958980726980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind(French Press) / 5 lb",
+    "variant_id": "46958980759748"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "b4d8b608ee996b24",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Irish_Cream_1lb.webp?v=1790050504",
+  "platform": "shopify",
+  "product_id": "8750116700356",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Irish Cream",
+  "url": "https://adkcoffeeroasters.com/products/irish-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791477854404"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791477887172"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791477919940"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791477952708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46959035285700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46959035318468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46959035351236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46959035384004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46959035416772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46959035449540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46959035482308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46959035515076"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "60a98e1a81709cd3",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/French_Vanilla_1lb.webp?v=1790051355",
+  "platform": "shopify",
+  "product_id": "8750116733124",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "French Vanilla",
+  "url": "https://adkcoffeeroasters.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791478051012"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791478083780"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791478116548"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791478149316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46960206545092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46960206577860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46960206610628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46960206643396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46960206676164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46960206708932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46960206741700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46960206774468"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "3f115e8426afc13c",
+  "first_seen": "2026-10-26",
+  "handle": "maple-nut-crunch",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Maple_Nut_Crunch_1lb.webp?v=1790052059",
+  "platform": "shopify",
+  "product_id": "8750116831428",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Maple Nut Crunch",
+  "url": "https://adkcoffeeroasters.com/products/maple-nut-crunch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791478575300"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791478608068"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791478640836"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791478673604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46954029580484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46954029613252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46954029646020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46954029678788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46954029711556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46954029744324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46954029777092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46954029809860"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "1890eaea8844ee7b",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-crme",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Hazelnut_CrA_me_1lb.webp?v=1790052688",
+  "platform": "shopify",
+  "product_id": "8750116929732",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Hazelnut Crème",
+  "url": "https://adkcoffeeroasters.com/products/hazelnut-crme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791479099588"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791479132356"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791479165124"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791479197892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46958692892868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46958692925636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46958692958404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46958692991172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46958693023940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46958693056708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46958693089476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46958693122244"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "1d13ba25767f760d",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-dream",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Coconut_Dream_1lb.webp?v=1790060696",
+  "platform": "shopify",
+  "product_id": "8750117126340",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Coconut Dream",
+  "url": "https://adkcoffeeroasters.com/products/coconut-dream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791480246468"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791480279236"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791480312004"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791480344772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46960370909380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46960370942148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46960370974916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46960371007684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46960371040452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46960371073220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46960371105988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46960371138756"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "899b7c8682a994c9",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-strawberry",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Chocolate_Covered_Strawberry_1lb.webp?v=1790061169",
+  "platform": "shopify",
+  "product_id": "8750117290180",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Chocolate Covered Strawberry",
+  "url": "https://adkcoffeeroasters.com/products/chocolate-covered-strawberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791481098436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791481131204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791481163972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791481196740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46960466755780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46960466788548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46960466821316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46960466854084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46960466886852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46960466919620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46960466952388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46960466985156"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "aa32049c2b4a80cb",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-chocolate-twist",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Vanilla-Chocolate_Twist_1lb.webp?v=1790061519",
+  "platform": "shopify",
+  "product_id": "8750117454020",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Vanilla-Chocolate Twist",
+  "url": "https://adkcoffeeroasters.com/products/vanilla-chocolate-twist",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 11.0,
+    "title": "Whole Bean",
+    "variant_id": "46791481819332"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press)",
+    "variant_id": "46791481852100"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over)",
+    "variant_id": "46791481884868"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 11.0,
+    "title": "Drip Grind",
+    "variant_id": "46791481917636"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "7d12fa58385e1935",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Amaretto_1lb.webp?v=1790061779",
+  "platform": "shopify",
+  "product_id": "8750117552324",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Amaretto",
+  "url": "https://adkcoffeeroasters.com/products/amaretto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791482376388"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791482409156"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791482441924"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791482474692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46960260350148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46960260382916"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46960260415684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46960260448452"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46960260481220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46960260513988"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46960260546756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46960260579524"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "3ca34aa358d7f1e0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Espresso_Blend_1lb.webp?v=1790062135",
+  "platform": "shopify",
+  "product_id": "8750117683396",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://adkcoffeeroasters.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791483097284"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791483130052"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791483162820"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791483195588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953420652740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953420685508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953420718276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953420751044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953420783812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953420816580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953420849348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953420882116"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "9445768b20cef951",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Guatemala_HueHueTenango_1lb.webp?v=1790062333",
+  "platform": "shopify",
+  "product_id": "8750118207684",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Guatemala HueHueTenango",
+  "url": "https://adkcoffeeroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791485227204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791485259972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791485292740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791485325508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953489432772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953489465540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953489498308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953489531076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953489563844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953489596612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953489629380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953489662148"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "e1b577a6b5355ce3",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Mocha_Java_1lb.webp?v=1790062410",
+  "platform": "shopify",
+  "product_id": "8750118273220",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://adkcoffeeroasters.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791485554884"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791485587652"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791485620420"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791485653188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953636397252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953636430020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953636462788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953636495556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953636528324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953636561092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953636593860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953636626628"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "885d826b3cb431f5",
+  "first_seen": "2026-10-26",
+  "handle": "count-regular-adkcups",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/12_Count_Regular_ADKcups.webp?v=1790062562",
+  "platform": "shopify",
+  "product_id": "8750118338756",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Regular ADKcups",
+  "url": "https://adkcoffeeroasters.com/products/count-regular-adkcups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 11.0,
+    "title": "Double Dark (Dark Roast) / 12",
+    "variant_id": "46791485849796"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 11.0,
+    "title": "Fireside Blend (A great blend of Light and Dark roast coffees) / 12",
+    "variant_id": "46791485882564"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 11.0,
+    "title": "Adirondack Morning Blend (Light Roast) / 12",
+    "variant_id": "46791485915332"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 11.0,
+    "title": "Blonde Brazil  (Light Roast) / 12",
+    "variant_id": "46791485948100"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 11.0,
+    "title": "Sumatra Mandehling (Dark Roast) / 12",
+    "variant_id": "46791485980868"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 22.0,
+    "title": "Double Dark (Dark Roast) / 24",
+    "variant_id": "46953022881988"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 33.0,
+    "title": "Double Dark (Dark Roast) / 36",
+    "variant_id": "46953022914756"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 61.0,
+    "title": "Double Dark (Dark Roast) / 72",
+    "variant_id": "46953022947524"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 22.0,
+    "title": "Fireside Blend (A great blend of Light and Dark roast coffees) / 24",
+    "variant_id": "46953022980292"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 33.0,
+    "title": "Fireside Blend (A great blend of Light and Dark roast coffees) / 36",
+    "variant_id": "46953023013060"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 61.0,
+    "title": "Fireside Blend (A great blend of Light and Dark roast coffees) / 72",
+    "variant_id": "46953023045828"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 22.0,
+    "title": "Adirondack Morning Blend (Light Roast) / 24",
+    "variant_id": "46953023078596"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 33.0,
+    "title": "Adirondack Morning Blend (Light Roast) / 36",
+    "variant_id": "46953023111364"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 61.0,
+    "title": "Adirondack Morning Blend (Light Roast) / 72",
+    "variant_id": "46953023144132"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 22.0,
+    "title": "Blonde Brazil  (Light Roast) / 24",
+    "variant_id": "46953023176900"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 33.0,
+    "title": "Blonde Brazil  (Light Roast) / 36",
+    "variant_id": "46953023209668"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 61.0,
+    "title": "Blonde Brazil  (Light Roast) / 72",
+    "variant_id": "46953023242436"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 22.0,
+    "title": "Sumatra Mandehling (Dark Roast) / 24",
+    "variant_id": "46953023275204"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 33.0,
+    "title": "Sumatra Mandehling (Dark Roast) / 36",
+    "variant_id": "46953023307972"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 61.0,
+    "title": "Sumatra Mandehling (Dark Roast) / 72",
+    "variant_id": "46953023340740"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "0e44729929193ec9",
+  "first_seen": "2026-10-26",
+  "handle": "adirondack-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Adirondack_Decaf_1lb.webp?v=1790062845",
+  "platform": "shopify",
+  "product_id": "8750118666436",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Adirondack Decaf",
+  "url": "https://adkcoffeeroasters.com/products/adirondack-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791487324356"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791487357124"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791487389892"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791487422660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953507979460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953508012228"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953508044996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953508077764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953508110532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953508143300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953508176068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953508208836"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "f94648f456c2dc7a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Ethiopian_Harrar_1lb.webp?v=1790068717",
+  "platform": "shopify",
+  "product_id": "8750118994116",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopian Harrar",
+  "url": "https://adkcoffeeroasters.com/products/ethiopian-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791488438468"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791488471236"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791488504004"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791488536772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953468985540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953469018308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953469051076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953469083844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953469116612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953469149380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953469182148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953469214916"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "f0017bd965ec1876",
+  "first_seen": "2026-10-26",
+  "handle": "blonde-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Blonde_Brazil_1lb.webp?v=1790068890",
+  "platform": "shopify",
+  "product_id": "8750119157956",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Blonde Brazil",
+  "url": "https://adkcoffeeroasters.com/products/blonde-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791489323204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791489355972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791489388740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Fine Grind (Pour-0ver) / 8 oz",
+    "variant_id": "46791489421508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953899884740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953899917508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953899950276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953899983044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953900015812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953900048580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine Grind (Pour-0ver) / 1 lb",
+    "variant_id": "46953900081348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Fine Grind (Pour-0ver) / 5 lb",
+    "variant_id": "46953900114116"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "bdee031372fd5e7f",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Fireside_Blend_1lb.webp?v=1790069084",
+  "platform": "shopify",
+  "product_id": "8750119354564",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Fireside Blend",
+  "url": "https://adkcoffeeroasters.com/products/fireside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791490175172"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791490207940"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Course Grind (French Grind) / 8 oz",
+    "variant_id": "46791490240708"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791490273476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953188982980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953189015748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953189048516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953189081284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Course Grind (French Grind) / 1 lb",
+    "variant_id": "46953189114052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Course Grind (French Grind) / 5 lb",
+    "variant_id": "46953189146820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953189179588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953189212356"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "0f2fe0a8579e0de4",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandehling",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Sumatra_Mandehling_1lb.webp?v=1790069317",
+  "platform": "shopify",
+  "product_id": "8750119715012",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Sumatra Mandehling",
+  "url": "https://adkcoffeeroasters.com/products/sumatra-mandehling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791491715268"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791491748036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791491780804"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791491813572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953250619588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953250652356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953250685124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953250717892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953250750660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953250783428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953250816196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953250848964"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "d76ac30b23fc6ef3",
+  "first_seen": "2026-10-26",
+  "handle": "adirondack-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Adirondack_Morning_Blend_1lb.webp?v=1790069418",
+  "platform": "shopify",
+  "product_id": "8750119747780",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Adirondack Morning Blend",
+  "url": "https://adkcoffeeroasters.com/products/adirondack-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Coarse Grind(French Press) / 8 oz",
+    "variant_id": "46791491911876"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Fine Grind(pour-over) / 8 oz",
+    "variant_id": "46791491944644"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791491977412"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791492010180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Coarse Grind(French Press) / 1 lb",
+    "variant_id": "46953210282180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Coarse Grind(French Press) / 5 lb",
+    "variant_id": "46953210314948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine Grind(pour-over) / 1 lb",
+    "variant_id": "46953210347716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Fine Grind(pour-over) / 5 lb",
+    "variant_id": "46953210380484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953210413252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953210446020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953210478788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953210511556"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "fbcdc43b9cf9c7f6",
+  "first_seen": "2026-10-26",
+  "handle": "count-decaf-adkcups",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/12_Count_Decaf_ADKcups.webp?v=1790069683",
+  "platform": "shopify",
+  "product_id": "8750119813316",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Decaf ADKcups",
+  "url": "https://adkcoffeeroasters.com/products/count-decaf-adkcups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "Hazelnut Decaf / 12",
+    "variant_id": "46791492403396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "Adirondack Morning Decaf / 12",
+    "variant_id": "46791492436164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "French Vanilla Decaf / 12",
+    "variant_id": "46791492468932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "Salted Caramel Decaf / 12",
+    "variant_id": "46791492501700"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 22.0,
+    "title": "Hazelnut Decaf / 24",
+    "variant_id": "46953048244420"
+   },
+   {
+    "available": true,
+    "grams": 1043,
+    "price_usd": 33.0,
+    "title": "Hazelnut Decaf / 36",
+    "variant_id": "46953048277188"
+   },
+   {
+    "available": true,
+    "grams": 1633,
+    "price_usd": 61.0,
+    "title": "Hazelnut Decaf / 72",
+    "variant_id": "46953048309956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Adirondack Morning Decaf / 24",
+    "variant_id": "46953048342724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Adirondack Morning Decaf / 36",
+    "variant_id": "46953048375492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Adirondack Morning Decaf / 72",
+    "variant_id": "46953048408260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "French Vanilla Decaf / 24",
+    "variant_id": "46953048441028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "French Vanilla Decaf / 36",
+    "variant_id": "46953048473796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "French Vanilla Decaf / 72",
+    "variant_id": "46953048506564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Salted Caramel Decaf / 24",
+    "variant_id": "46953048539332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Salted Caramel Decaf / 36",
+    "variant_id": "46953048572100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.0,
+    "title": "Salted Caramel Decaf / 72",
+    "variant_id": "46953048604868"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "11f08c3ea58549d5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Brazil_Cerrado_1_lb.webp?v=1790069910",
+  "platform": "shopify",
+  "product_id": "8750119878852",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Brazil Cerrado",
+  "url": "https://adkcoffeeroasters.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791492763844"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791492796612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791492829380"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791492862148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953536716996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953536749764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953536782532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953536815300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953536848068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953536880836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953536913604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953536946372"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "e5cb9a5719434757",
+  "first_seen": "2026-10-26",
+  "handle": "dark-magic",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/1lb_Dark_Magic.jpg?v=1790070119",
+  "platform": "shopify",
+  "product_id": "8750119944388",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Dark Magic",
+  "url": "https://adkcoffeeroasters.com/products/dark-magic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791493157060"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791493189828"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind / 8 oz",
+    "variant_id": "46791493222596"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "French Press / 8 oz",
+    "variant_id": "46791493255364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953551855812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953551888580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953551921348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953551954116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind / 1 lb",
+    "variant_id": "46953551986884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind / 5 lb",
+    "variant_id": "46953552019652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "French Press / 1 lb",
+    "variant_id": "46953552052420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "46953552085188"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "087f65bde947621b",
+  "first_seen": "2026-10-26",
+  "handle": "premium-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Premium_Colombian_1_lb.webp?v=1790070315",
+  "platform": "shopify",
+  "product_id": "8750120009924",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Premium Colombian",
+  "url": "https://adkcoffeeroasters.com/products/premium-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791493484740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791493517508"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791493550276"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791493583044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953586229444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953586262212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953586294980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953586327748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953586360516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953586393284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953586426052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953586458820"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "ff51ced55815b7aa",
+  "first_seen": "2026-10-26",
+  "handle": "double-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Double_Dark_Blend_1lb.webp?v=1790070460",
+  "platform": "shopify",
+  "product_id": "8750120042692",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Double Dark Blend",
+  "url": "https://adkcoffeeroasters.com/products/double-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791493648580"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Course Grind( French Press) / 8 oz",
+    "variant_id": "46791493681348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791493714116"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791493746884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953454207172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953454239940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind( French Press) / 1 lb",
+    "variant_id": "46953454272708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Course Grind( French Press) / 5 lb",
+    "variant_id": "46953454305476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953454338244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953454371012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953454403780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953454436548"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ },
+ {
+  "body_hash": "f6644dd4a588f67a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0757/8884/5252/files/Decaf_Espresso_Blend_1lb.webp?v=1790070547",
+  "platform": "shopify",
+  "product_id": "8750120075460",
+  "product_type": "",
+  "roaster_slug": "adkcoffeeroasters",
+  "tags": [],
+  "title": "Decaf Espresso Blend",
+  "url": "https://adkcoffeeroasters.com/products/decaf-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "46791493812420"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Course Grind (French Press) / 8 oz",
+    "variant_id": "46791493845188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 8 oz",
+    "variant_id": "46791493877956"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Fine Grind (pour-over) / 8 oz",
+    "variant_id": "46791493910724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46953609855172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46953609887940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Course Grind (French Press) / 1 lb",
+    "variant_id": "46953609920708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Course Grind (French Press) / 5 lb",
+    "variant_id": "46953609953476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Drip Grind / 1 lb",
+    "variant_id": "46953609986244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip Grind / 5 lb",
+    "variant_id": "46953610019012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine Grind (pour-over) / 1 lb",
+    "variant_id": "46953610051780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Fine Grind (pour-over) / 5 lb",
+    "variant_id": "46953610084548"
+   }
+  ],
+  "vendor": "adkcoffeeroasters"
+ }
+]

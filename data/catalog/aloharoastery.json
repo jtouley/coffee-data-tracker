@@ -1,0 +1,324 @@
+[
+ {
+  "body_hash": "2def5a23f38c6bd5",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-chimbu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "09e8a16eecfc",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "PAPUA NEW GUINEA - CHIMBU",
+  "url": "https://www.aloharoastery.com/product-page/papua-new-guinea-chimbu",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c49c6b57d387dd33",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1210835ca8f1",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "COLOMBIA - DECAF",
+  "url": "https://www.aloharoastery.com/product-page/colombia-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2f2b499c1681190",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-san-jose",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1304381600ea",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "COSTA RICA - SAN JOSE",
+  "url": "https://www.aloharoastery.com/product-page/costa-rica-san-jose",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b11f5f63a46baf4b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-nariño",
+  "image": null,
+  "platform": "generic",
+  "product_id": "254247cbf478",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "COLOMBIA - CAUCA",
+  "url": "https://www.aloharoastery.com/product-page/colombia-nariño",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dda7e847f1ff6139",
+  "first_seen": "2026-10-26",
+  "handle": "panama-chiriqui",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5c86890f92e2",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "EL SALVADOR - APANECA",
+  "url": "https://www.aloharoastery.com/product-page/panama-chiriqui",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8aa586612dbdd7cd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-chimaltenango",
+  "image": null,
+  "platform": "generic",
+  "product_id": "68bd95bb2e99",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "GUATEMALA - CHIMALTENANGO",
+  "url": "https://www.aloharoastery.com/product-page/guatemala-chimaltenango",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3290015c43c3aff",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-grade-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "81ae9c2d667a",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "SUMATRA - MANDHELING GRADE 1",
+  "url": "https://www.aloharoastery.com/product-page/sumatra-mandheling-grade-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d0d06394f1fcdb2",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-quito",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a3647dff9551",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "ECUADOR - QUITO",
+  "url": "https://www.aloharoastery.com/product-page/ecuador-quito",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d985afdc9c4e66f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-siguatepeque",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a7a3d1c84c81",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "HONDURAS - LA PAZ",
+  "url": "https://www.aloharoastery.com/product-page/honduras-siguatepeque",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1b8f733fbbe1321",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b63096680c0d",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "PERU - CAJAMARCA",
+  "url": "https://www.aloharoastery.com/product-page/peru-cajamarca",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4460000cbbddb089",
+  "first_seen": "2026-10-26",
+  "handle": "panama-chiriqui-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d93f0f7b3bbb",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "MEXICO - CHIAPAS",
+  "url": "https://www.aloharoastery.com/product-page/panama-chiriqui-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25a3e2dd78ab9622",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-madriz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "df6a7ed0ca6d",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "NICARAGUA - ESTELI",
+  "url": "https://www.aloharoastery.com/product-page/nicaragua-madriz",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "05c327dab715f2d3",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mantiqueira",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f8b15b31e4f2",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "BRAZIL - MANTIQUEIRA",
+  "url": "https://www.aloharoastery.com/product-page/brazil-mantiqueira",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40aa06d50d9aa3a9",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mantiqueir",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fc95d6ce3270",
+  "product_type": "",
+  "roaster_slug": "aloharoastery",
+  "tags": [],
+  "title": "BRAZIL - SAO PAULO",
+  "url": "https://www.aloharoastery.com/product-page/brazil-mantiqueir",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

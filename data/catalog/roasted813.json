@@ -1,0 +1,300 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-50-50",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/roasted.jpg?v=1613421213",
+  "platform": "shopify",
+  "product_id": "6196811497658",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Turkish 50/50",
+  "url": "https://roasted813.com/products/turkish-50-50",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38098886754490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Without Cardamom (Haal) / 1lb",
+    "variant_id": "38098886787258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38098886820026"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/roasted1.jpg?v=1613421273",
+  "platform": "shopify",
+  "product_id": "6196811792570",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Turkish Dark",
+  "url": "https://roasted813.com/products/turkish-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38099834667194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Without Cardamom (Haal) / 1lb",
+    "variant_id": "38099834699962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38099834732730"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-light",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/roasted2.jpg?v=1613421293",
+  "platform": "shopify",
+  "product_id": "6196811989178",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Turkish Light",
+  "url": "https://roasted813.com/products/turkish-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38098939936954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Without Cardamom (Haal) / 1lb",
+    "variant_id": "38098939969722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38098940002490"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-mixed-nuts",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/PhotoFeb09_123204PM.jpg?v=1612994651",
+  "platform": "shopify",
+  "product_id": "6200834654394",
+  "product_type": "Nuts",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Roasted! Mixed Nuts",
+  "url": "https://roasted813.com/products/roasted-mixed-nuts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "1lb",
+    "variant_id": "38101778104506"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "deluxe-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/PhotoFeb12_115651AM.jpg?v=1613252586",
+  "platform": "shopify",
+  "product_id": "6203812905146",
+  "product_type": "Specialty Foods",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Deluxe Honey",
+  "url": "https://roasted813.com/products/deluxe-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "Default Title",
+    "variant_id": "38047465111738"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "4dfe82e68aebffe8",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-dark-65-35",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/PhotoFeb12_121649PM.jpg?v=1613421232",
+  "platform": "shopify",
+  "product_id": "6212354244794",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Turkish Dark 65/35",
+  "url": "https://roasted813.com/products/turkish-dark-65-35",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38098932203706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Without Cardamom (Haal) / 1lb",
+    "variant_id": "38098932236474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38098932269242"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "ecca7f6544b3fd9d",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-light-65-35",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/PhotoFeb12_120412PM.jpg?v=1613421254",
+  "platform": "shopify",
+  "product_id": "6212355293370",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Turkish Light 65/35",
+  "url": "https://roasted813.com/products/turkish-light-65-35",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38098963136698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Without Cardamom (Haal) / 1lb",
+    "variant_id": "38098963169466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38098963202234"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "saudi",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/roasted3.jpg?v=1613421311",
+  "platform": "shopify",
+  "product_id": "6212356210874",
+  "product_type": "Coffee",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Saudi",
+  "url": "https://roasted813.com/products/saudi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "With Cardamom (Haal) / 1lb",
+    "variant_id": "38098865488058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Without Cardomom (Haal) / 1lb",
+    "variant_id": "38098865520826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "With Extra Cardamom (Haal) / 1lb",
+    "variant_id": "38098882363578"
+   }
+  ],
+  "vendor": "Roasted813"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0513/8173/1514/products/image_c7e9248b-d91f-4604-b2a0-0c13a9aab2eb.jpg?v=1614739836",
+  "platform": "shopify",
+  "product_id": "6544733241530",
+  "product_type": "Sweets",
+  "roaster_slug": "roasted813",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://roasted813.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb",
+    "variant_id": "39287057023162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.99,
+    "title": ".5lb",
+    "variant_id": "39287057055930"
+   }
+  ],
+  "vendor": "Roasted813"
+ }
+]

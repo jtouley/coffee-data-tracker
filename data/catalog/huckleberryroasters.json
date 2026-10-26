@@ -1,0 +1,691 @@
+[
+ {
+  "body_hash": "e1562bfc8376c79d",
+  "first_seen": "2026-10-26",
+  "handle": "blue-orchid",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2025_Blue_Orchid.webp?v=1760149145",
+  "platform": "generic",
+  "product_id": "BLUEORCHB-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Blue Orchid Blend",
+  "url": "https://www.huckleberryroasters.com/shop/products/blue-orchid",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "BLUEORCHB-WB-12OZ",
+    "variant_id": "BLUEORCHB-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "BLUEORCHB-WB-2LB",
+    "variant_id": "BLUEORCHB-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "BLUEORCHB-WB-5LB",
+    "variant_id": "BLUEORCHB-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e8ff18359e7c58d",
+  "first_seen": "2026-10-26",
+  "handle": "bom-senso",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2025BomSenso.webp?v=1760564209",
+  "platform": "generic",
+  "product_id": "BOMST-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Bom Senso Dark Roast",
+  "url": "https://www.huckleberryroasters.com/shop/products/bom-senso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "BOMST-WB-12OZ",
+    "variant_id": "BOMST-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "BOMST-WB-2LB",
+    "variant_id": "BOMST-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "BOMST-WB-5LB",
+    "variant_id": "BOMST-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7cd43dde889c27ae",
+  "first_seen": "2026-10-26",
+  "handle": "civitas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Civitas.webp?v=1731321499",
+  "platform": "generic",
+  "product_id": "CIV-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Civitas",
+  "url": "https://www.huckleberryroasters.com/shop/products/civitas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "CIV-WB-12OZ",
+    "variant_id": "CIV-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "CIV-WB-2LB",
+    "variant_id": "CIV-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "CIV-WB-5LB",
+    "variant_id": "CIV-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a229597bbdf94046",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-danche",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Ethiopia_Danche.webp?v=1787086522",
+  "platform": "generic",
+  "product_id": "ETHD-1-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Ethiopia Danche",
+  "url": "https://www.huckleberryroasters.com/shop/products/ethiopia-danche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "ETHD-1-12OZ-WB",
+    "variant_id": "ETHD-1-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "ETHD-1-2LB-WB",
+    "variant_id": "ETHD-1-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "ETHD-1-5LB-WB",
+    "variant_id": "ETHD-1-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e742b6d1da72862",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-haro-beddame-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Ethiopia_Haro_Beddame_Natural.webp?v=1785959464",
+  "platform": "generic",
+  "product_id": "ETHHBN-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Ethiopia Haro Beddame Natural",
+  "url": "https://www.huckleberryroasters.com/shop/products/ethiopia-haro-beddame-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "ETHHBN-12OZ-WB",
+    "variant_id": "ETHHBN-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "ETHHBN-2LB-WB",
+    "variant_id": "ETHHBN-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "ETHHBN-5LB-WB",
+    "variant_id": "ETHHBN-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0be9ba92980bc2e",
+  "first_seen": "2026-10-26",
+  "handle": "flores-belas",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2025_Flores_Belas.webp?v=1760563015",
+  "platform": "generic",
+  "product_id": "FLOB-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Flores Belas",
+  "url": "https://www.huckleberryroasters.com/shop/products/flores-belas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "FLOB-WB-12OZ",
+    "variant_id": "FLOB-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "FLOB-WB-2LB",
+    "variant_id": "FLOB-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "FLOB-WB-5LB",
+    "variant_id": "FLOB-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a455e3764e245cc7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-don-zabala-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Don_Zabala.webp?v=1788887846",
+  "platform": "generic",
+  "product_id": "GUADZ-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Guatemala Don Zabala Microlot",
+  "url": "https://www.huckleberryroasters.com/shop/products/guatemala-don-zabala-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "GUADZ-WB-12OZ",
+    "variant_id": "GUADZ-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "GUADZ-WB-2LB",
+    "variant_id": "GUADZ-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "GUADZ-WB-5LB",
+    "variant_id": "GUADZ-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b1b13f7389d04f1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-atitlan-aprocafe",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Atitlan_Aprocafe.webp?v=1788887706",
+  "platform": "generic",
+  "product_id": "GUATAPROEG-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Guatemala Atitlán Aprocafé",
+  "url": "https://www.huckleberryroasters.com/shop/products/guatemala-atitlan-aprocafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "GUATAPROEG-WB-12OZ",
+    "variant_id": "GUATAPROEG-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "GUATAPROEG-WB-2LB",
+    "variant_id": "GUATAPROEG-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "GUATAPROEG-WB-5LB",
+    "variant_id": "GUATAPROEG-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8095e7f5bf25365",
+  "first_seen": "2026-10-26",
+  "handle": "india-gundikhan-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Gundikan_Natural.webp?v=1790177012",
+  "platform": "generic",
+  "product_id": "INDGNM-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "India Gundikhan Natural",
+  "url": "https://www.huckleberryroasters.com/shop/products/india-gundikhan-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "INDGNM-12OZ-WB",
+    "variant_id": "INDGNM-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "INDGNM-2LB-WB",
+    "variant_id": "INDGNM-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "INDGNM-5LB-WB",
+    "variant_id": "INDGNM-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a94a9b5fbfcdf7f3",
+  "first_seen": "2026-10-26",
+  "handle": "india-gundikhan-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Gundikan_Washed.webp?v=1790176931",
+  "platform": "generic",
+  "product_id": "INDGW-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "India Gundikhan Washed",
+  "url": "https://www.huckleberryroasters.com/shop/products/india-gundikhan-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "INDGW-12OZ-WB",
+    "variant_id": "INDGW-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "INDGW-2LB-WB",
+    "variant_id": "INDGW-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "INDGW-5LB-WB",
+    "variant_id": "INDGW-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "67b7b6309195f938",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-rukira",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Kenya_Rukira.webp?v=1791915640",
+  "platform": "generic",
+  "product_id": "KENR-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Kenya Rukira",
+  "url": "https://www.huckleberryroasters.com/shop/products/kenya-rukira",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "KENR-12OZ-WB",
+    "variant_id": "KENR-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "KENR-2LB-WB",
+    "variant_id": "KENR-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "KENR-5LB-WB",
+    "variant_id": "KENR-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03ff5fde6c8ddda6",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-amigos-mozonte",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Amigos_Mozonte.webp?v=1787087144",
+  "platform": "generic",
+  "product_id": "NICAM-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Nicaragua Amigos Mozonte",
+  "url": "https://www.huckleberryroasters.com/shop/products/nicaragua-amigos-mozonte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "NICAM-12OZ-WB",
+    "variant_id": "NICAM-12OZ-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "NICAM-2LB-WB",
+    "variant_id": "NICAM-2LB-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "NICAM-5LB-WB",
+    "variant_id": "NICAM-5LB-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74b5aaf242bfc083",
+  "first_seen": "2026-10-26",
+  "handle": "phantom-limb-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Phantom_20Limb_20Blend_a11dcb10-64d3-4986-8cec-2d988e5c65be.webp?v=1731321520",
+  "platform": "generic",
+  "product_id": "PHANLIMBB-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Phantom Limb Blend (Good Food Awards Winner!)",
+  "url": "https://www.huckleberryroasters.com/shop/products/phantom-limb-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PHANLIMBB-WB-12OZ",
+    "variant_id": "PHANLIMBB-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "PHANLIMBB-WB-2LB",
+    "variant_id": "PHANLIMBB-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "PHANLIMBB-WB-5LB",
+    "variant_id": "PHANLIMBB-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e99d212ef6685c5",
+  "first_seen": "2026-10-26",
+  "handle": "adventurous-single-origin-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Roaster_s_20Choice.webp?v=1732551450",
+  "platform": "generic",
+  "product_id": "ROASCHOIA-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Roaster's Choice - Adventurous",
+  "url": "https://www.huckleberryroasters.com/shop/products/adventurous-single-origin-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "ROASCHOIA-WB-12OZ",
+    "variant_id": "ROASCHOIA-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "ROASCHOIA-WB-2LB",
+    "variant_id": "ROASCHOIA-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "ROASCHOIA-WB-5LB",
+    "variant_id": "ROASCHOIA-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d96e6bc7e1a17a51",
+  "first_seen": "2026-10-26",
+  "handle": "classic-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Roaster_s_20Choice_24fbbd58-2f00-4dc3-ab4f-8ec624ec6bd6.webp?v=1732551452",
+  "platform": "generic",
+  "product_id": "ROASCHOICC-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Roaster's Choice - Classic Coffee",
+  "url": "https://www.huckleberryroasters.com/shop/products/classic-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "ROASCHOICC-WB-12OZ",
+    "variant_id": "ROASCHOICC-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "ROASCHOICC-WB-2LB",
+    "variant_id": "ROASCHOICC-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "ROASCHOICC-WB-5LB",
+    "variant_id": "ROASCHOICC-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb27058e3d47fc29",
+  "first_seen": "2026-10-26",
+  "handle": "skeleton-key-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Skeleton_20Key_20Decaf.webp?v=1731321491",
+  "platform": "generic",
+  "product_id": "SKELKEYD-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Skeleton Key Decaf",
+  "url": "https://www.huckleberryroasters.com/shop/products/skeleton-key-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "SKELKEYD-WB-12OZ",
+    "variant_id": "SKELKEYD-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.5,
+    "title": "SKELKEYD-WB-2LB",
+    "variant_id": "SKELKEYD-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.25,
+    "title": "SKELKEYD-WB-5LB",
+    "variant_id": "SKELKEYD-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "huck-x-red-rocks-sound-check-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026RedRocksSoundCheckBlend.webp?v=1779460964",
+  "platform": "generic",
+  "product_id": "SOUCB-12OZ-WB",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "HUCK x Red Rocks Sound Check Blend",
+  "url": "https://www.huckleberryroasters.com/shop/products/huck-x-red-rocks-sound-check-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "SOUCB-12OZ-WB",
+    "variant_id": "SOUCB-12OZ-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "08778cfd214c4344",
+  "first_seen": "2026-10-26",
+  "handle": "sound-and-vision-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/Sound_VisionBlend.webp?v=1731321608",
+  "platform": "generic",
+  "product_id": "SOUVB-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Sound & Vision Blend",
+  "url": "https://www.huckleberryroasters.com/shop/products/sound-and-vision-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "SOUVB-WB-12OZ",
+    "variant_id": "SOUVB-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "SOUVB-WB-2LB",
+    "variant_id": "SOUVB-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "SOUVB-WB-5LB",
+    "variant_id": "SOUVB-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8304ed5ac8ef4244",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-sipi-falls-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0299/9077/files/2026_Sipi_Falls_Natural.webp?v=1782959527",
+  "platform": "generic",
+  "product_id": "UGANSF-WB-12OZ",
+  "product_type": "",
+  "roaster_slug": "huckleberryroasters",
+  "tags": [],
+  "title": "Uganda Sipi Falls Natural",
+  "url": "https://www.huckleberryroasters.com/shop/products/uganda-sipi-falls-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "UGANSF-WB-12OZ",
+    "variant_id": "UGANSF-WB-12OZ"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "UGANSF-WB-2LB",
+    "variant_id": "UGANSF-WB-2LB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "UGANSF-WB-5LB",
+    "variant_id": "UGANSF-WB-5LB"
+   }
+  ],
+  "vendor": ""
+ }
+]

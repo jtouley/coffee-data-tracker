@@ -1,0 +1,122 @@
+[
+ {
+  "body_hash": "309fe277b5281ea4",
+  "first_seen": "2026-10-26",
+  "handle": "shulamite",
+  "image": "https://cdn.shopify.com/s/files/1/0644/9922/0565/files/photo_2026-06-13_12-53-22.jpg?v=1782363845",
+  "platform": "shopify",
+  "product_id": "7396216668245",
+  "product_type": "",
+  "roaster_slug": "shalomcoffeeroasting",
+  "tags": [],
+  "title": "Shulamite",
+  "url": "https://shalomcoffeeroasting.com/products/shulamite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "42490495402069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42490506412117"
+   }
+  ],
+  "vendor": "Shalom Coffee Roasting"
+ },
+ {
+  "body_hash": "a9afe0e6f1e353f9",
+  "first_seen": "2026-10-26",
+  "handle": "cerro-las-ranas",
+  "image": "https://cdn.shopify.com/s/files/1/0644/9922/0565/files/Labels_4x5in__20260904_141525_0002.png?v=1788909846",
+  "platform": "shopify",
+  "product_id": "7531924881493",
+  "product_type": "",
+  "roaster_slug": "shalomcoffeeroasting",
+  "tags": [],
+  "title": "Cerro Las Ranas",
+  "url": "https://shalomcoffeeroasting.com/products/cerro-las-ranas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42960610426965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "42960610459733"
+   }
+  ],
+  "vendor": "Shalom Coffee Roasting"
+ },
+ {
+  "body_hash": "8d431f59de01892d",
+  "first_seen": "2026-10-26",
+  "handle": "buku-abel",
+  "image": "https://cdn.shopify.com/s/files/1/0644/9922/0565/files/Labels_4x5in__20260910_093023_0002.png?v=1789324086",
+  "platform": "shopify",
+  "product_id": "7539349520469",
+  "product_type": "",
+  "roaster_slug": "shalomcoffeeroasting",
+  "tags": [],
+  "title": "Buku",
+  "url": "https://shalomcoffeeroasting.com/products/buku-abel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42960619307093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "42960619339861"
+   }
+  ],
+  "vendor": "Shalom Coffee Roasting"
+ },
+ {
+  "body_hash": "d549bb3fa976342a",
+  "first_seen": "2026-10-26",
+  "handle": "uraga-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0644/9922/0565/files/IMG_20260930_135254_166.jpg?v=1790815565",
+  "platform": "shopify",
+  "product_id": "8490661773397",
+  "product_type": "",
+  "roaster_slug": "shalomcoffeeroasting",
+  "tags": [],
+  "title": "Uraga Decaf",
+  "url": "https://shalomcoffeeroasting.com/products/uraga-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "46251547623509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "46251547656277"
+   }
+  ],
+  "vendor": "Shalom Coffee Roasting"
+ }
+]

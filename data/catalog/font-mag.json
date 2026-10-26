@@ -1,0 +1,550 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "broken-arrow-reserve-medium-caramel-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/53ef0c6c-7ada-4932-a984-1c0a80de67ab.png?v=1778167802",
+  "platform": "shopify",
+  "product_id": "10137487689",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [
+   "Blend",
+   "Coffee Blend",
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Broken Arrow Reserve 16oz Bag",
+  "url": "https://font-mag.com/products/broken-arrow-reserve-medium-caramel-16oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.4,
+    "title": "1lb / Whole Bean",
+    "variant_id": "41488393545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Drip",
+    "variant_id": "41488393673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Fine",
+    "variant_id": "41488393737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Coarse/French Press",
+    "variant_id": "46036424265"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cafiza-20-oz-container-espresso-cleaner",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/33b9ae20-9fe8-45bf-8f1d-a51bba986de1.webp?v=1774975331",
+  "platform": "shopify",
+  "product_id": "10168139645204",
+  "product_type": "Soap and Cleaners",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Cafiza 20 oz container espresso cleaner",
+  "url": "https://font-mag.com/products/cafiza-20-oz-container-espresso-cleaner",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.62,
+    "title": "Default Title",
+    "variant_id": "52291952345364"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rinza-milk-frother-cleaner-tablets-12-m61-ux120-12-for-newco-cafe-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/69b1a6c0-7b11-4d82-9fd5-9ae199dccdbc.png?v=1774975341",
+  "platform": "shopify",
+  "product_id": "10168139874580",
+  "product_type": "Soap and Cleaners",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Rinza Milk Frother Cleaner Tablets # 12-M61-UX120-12 (for Newco Cafe Espresso)",
+  "url": "https://font-mag.com/products/rinza-milk-frother-cleaner-tablets-12-m61-ux120-12-for-newco-cafe-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "52291952705812"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "d144ae5fa91295e1",
+  "first_seen": "2026-10-26",
+  "handle": "pumpjack-premium-medium-blend-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/47ca9b72-4d0e-4a51-aaa0-13f1606b7223.png?v=1759165015",
+  "platform": "shopify",
+  "product_id": "103434190857",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Pumpjack Premium 16oz Bag",
+  "url": "https://font-mag.com/products/pumpjack-premium-medium-blend-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "1344099844105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Medium / Coarse/French Press",
+    "variant_id": "1344099876873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Medium / Fine",
+    "variant_id": "1344099909641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Medium / Drip",
+    "variant_id": "1344099942409"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "c43740605ce4b7b1",
+  "first_seen": "2026-10-26",
+  "handle": "pourspace-medium-roast-nutty-brazil-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/Pourspace-Print_2x-8_a6529ad6-84f2-4b4e-a049-4acc6db15480.png?v=1759166103",
+  "platform": "shopify",
+  "product_id": "12555059209",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Pourspace 16oz Bag",
+  "url": "https://font-mag.com/products/pourspace-medium-roast-nutty-brazil-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "575416926217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Coarse/French Press",
+    "variant_id": "575456837641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Drip",
+    "variant_id": "575459524617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Fine",
+    "variant_id": "575464669193"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "72693121033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Coarse/French Press",
+    "variant_id": "72693153801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Drip",
+    "variant_id": "72693186569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Fine",
+    "variant_id": "72693252105"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "72212d3306cde9db",
+  "first_seen": "2026-10-26",
+  "handle": "gate-duty-medium-roast-low-acid-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/00fa2ad9-8dfa-4b7e-a421-84b398d98e47.png?v=1759165084",
+  "platform": "shopify",
+  "product_id": "213561212937",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Gate Duty 16oz Bag",
+  "url": "https://font-mag.com/products/gate-duty-medium-roast-low-acid-16oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "2193614962697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Dark / Coarse/French Press",
+    "variant_id": "2193614995465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Dark / Drip",
+    "variant_id": "2193615028233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Dark / Fine",
+    "variant_id": "2193615061001"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "8d25eeffe032246c",
+  "first_seen": "2026-10-26",
+  "handle": "pirogue-dark-roast-brazil-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/4ebc6112-679a-4c11-b265-1e91daad4fc8.png?v=1759295310",
+  "platform": "shopify",
+  "product_id": "213563932681",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Pirogue 16oz Bag",
+  "url": "https://font-mag.com/products/pirogue-dark-roast-brazil-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Extra Dark / Whole Bean",
+    "variant_id": "2193639243785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Extra Dark / Coarse/French Press",
+    "variant_id": "2193639276553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Extra Dark / Drip",
+    "variant_id": "2193639309321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Extra Dark / Fine",
+    "variant_id": "2193639342089"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "acc93a789fd107bb",
+  "first_seen": "2026-10-26",
+  "handle": "downshift-decaf-medium-roast-colombia-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/fb8fd365-4112-492a-9ec7-96c6e5599d7f.png?v=1759165090",
+  "platform": "shopify",
+  "product_id": "4592092577870",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Downshift Decaf 16oz Bag",
+  "url": "https://font-mag.com/products/downshift-decaf-medium-roast-colombia-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "31896944312398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Coarse/French Press",
+    "variant_id": "31896944345166"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Drip",
+    "variant_id": "31896944377934"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Fine",
+    "variant_id": "31896944410702"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "cb2486bf97402705",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza-powder",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/5efad75a-d03c-42e0-98d7-ff888f61e8c4.jpg?v=1754601273",
+  "platform": "shopify",
+  "product_id": "4783676719182",
+  "product_type": "Soap and Cleaners",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Urnex Cafiza Powder",
+  "url": "https://font-mag.com/products/urnex-cafiza-powder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 621,
+    "price_usd": 17.94,
+    "title": "Default Title",
+    "variant_id": "32449648394318"
+   }
+  ],
+  "vendor": "Fontana Coffee Roasters"
+ },
+ {
+  "body_hash": "8bd232921d272e3b",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-grindz-g01",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/products/17-g01-ux430_hires.jpg?v=1594312808",
+  "platform": "shopify",
+  "product_id": "4783680159822",
+  "product_type": "",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Urnex Grindz G01",
+  "url": "https://font-mag.com/products/urnex-grindz-g01",
+  "variants": [
+   {
+    "available": true,
+    "grams": 481,
+    "price_usd": 29.64,
+    "title": "Default Title",
+    "variant_id": "32449656913998"
+   }
+  ],
+  "vendor": "Fontana Coffee Roasters"
+ },
+ {
+  "body_hash": "94379a3b81df5628",
+  "first_seen": "2026-10-26",
+  "handle": "mule-kick-extra-dark-roast-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/383c146c-6a23-4391-b502-96b7024acbb8.png?v=1759165075",
+  "platform": "shopify",
+  "product_id": "4848486973518",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Mule Kick 16oz Bag",
+  "url": "https://font-mag.com/products/mule-kick-extra-dark-roast-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "32661470576718"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Coarse/French Press",
+    "variant_id": "51356594143508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Drip",
+    "variant_id": "51356594176276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Fine",
+    "variant_id": "51356594209044"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "792dfd5931a729ea",
+  "first_seen": "2026-10-26",
+  "handle": "tough-nut-hand-cleaner-made-with-walnut-shells-single-bottle-400ml",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/829c7eeb-0a96-4b82-8657-6551bc21a0a5.jpg?v=1713301485",
+  "platform": "shopify",
+  "product_id": "6725897945166",
+  "product_type": "Cleaners",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Tough Nut Hand Cleaner",
+  "url": "https://font-mag.com/products/tough-nut-hand-cleaner-made-with-walnut-shells-single-bottle-400ml",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.44,
+    "title": "Default Title",
+    "variant_id": "39744624623694"
+   }
+  ],
+  "vendor": "Tough Nut"
+ },
+ {
+  "body_hash": "37a6fbb02c5fcb97",
+  "first_seen": "2026-10-26",
+  "handle": "back-pasture-decaf-blend-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/26df62c3-d0b2-40e1-ad12-d6ea4481aaa2_d13fea0b-6734-4b11-832b-d37f7b94ac28.png?v=1759165158",
+  "platform": "shopify",
+  "product_id": "9147775058196",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Back Pasture Decaf  16oz Bag",
+  "url": "https://font-mag.com/products/back-pasture-decaf-blend-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50177491108116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 lb / Coarse/French Press",
+    "variant_id": "50177491140884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 lb / Drip",
+    "variant_id": "50177491173652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1 lb / Fine",
+    "variant_id": "50177491206420"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ },
+ {
+  "body_hash": "40028235a65b7bb8",
+  "first_seen": "2026-10-26",
+  "handle": "marecage-decaf-dark-roast-brazil-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2214/0207/files/703c2e0a-6ad3-45e7-91f7-34e2ec843beb.png?v=1759165053",
+  "platform": "shopify",
+  "product_id": "9777764335892",
+  "product_type": "Fontana Retail",
+  "roaster_slug": "font-mag",
+  "tags": [],
+  "title": "Marécage Decaf 16oz",
+  "url": "https://font-mag.com/products/marecage-decaf-dark-roast-brazil-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "51356523200788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Coarse/French Press",
+    "variant_id": "51356523233556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Fine",
+    "variant_id": "51356523266324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Drip",
+    "variant_id": "51356523299092"
+   }
+  ],
+  "vendor": "Font Coffee Roasters"
+ }
+]

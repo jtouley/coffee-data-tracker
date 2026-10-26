@@ -1,0 +1,250 @@
+{
+ "1034": {
+  "body_hash": "f855204337212e5b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "maple syrup",
+   "blackberry",
+   "juice"
+  ],
+  "varietals": []
+ },
+ "1061": {
+  "body_hash": "4ee3742e5ab47332",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "v anilla",
+   "molasses",
+   "low acidity"
+  ],
+  "varietals": []
+ },
+ "1089": {
+  "body_hash": "063a2680a0151434",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "b lack currant",
+   "raisin",
+   "heavy body"
+  ],
+  "varietals": [
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "1116": {
+  "body_hash": "66e38d7cf6f9d0cd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "d ark chocolate",
+   "clove",
+   "smokey"
+  ],
+  "varietals": []
+ },
+ "1224": {
+  "body_hash": "e30a7aa50c1b5dbd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "rich",
+   "fruity",
+   "earthy"
+  ],
+  "varietals": []
+ },
+ "1265": {
+  "body_hash": "4f938677017d79b0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "s mooth",
+   "nutty",
+   "light body"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "1460": {
+  "body_hash": "72d76977bfaba02f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "raspberry",
+   "cocoa",
+   "bright"
+  ],
+  "varietals": []
+ },
+ "2679": {
+  "body_hash": "a30368719606d26e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3158": {
+  "body_hash": "56c059b4879f3d93",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1735,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honeydew melon",
+   "grapefruit"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "3452": {
+  "body_hash": "2bce0840c24d18d8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "816": {
+  "body_hash": "8f2f3edf50498e29",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honey",
+   "walnut",
+   "clean"
+  ],
+  "varietals": []
+ },
+ "843": {
+  "body_hash": "c0921eb8d0a62b82",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "apple",
+   "earthy"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "873": {
+  "body_hash": "86c4abfa5313a88e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bitter chocolate",
+   "oily",
+   "dark",
+   "smokey"
+  ],
+  "varietals": []
+ }
+}

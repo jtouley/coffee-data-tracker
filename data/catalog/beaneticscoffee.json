@@ -1,0 +1,6331 @@
+[
+ {
+  "body_hash": "0141a16474bd97ee",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-acatenango-organic-beanetics-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/hf_20261013_193410_4bebb954-6037-43a8-ac48-15322535b5bc.png?v=1791920117",
+  "platform": "shopify",
+  "product_id": "15424289833060",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Acatenango",
+   "Guatemala",
+   "beanetics-reserve",
+   "limited",
+   "medium-light roast",
+   "micro-lot",
+   "organic",
+   "single origin",
+   "washed",
+   "whole bean"
+  ],
+  "title": "Guatemalan Acatenango Organic — Beanetics Reserve",
+  "url": "https://beaneticscoffee.com/products/guatemalan-acatenango-organic-beanetics-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "67701401256036"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "50ba3c4aac6e2f3e",
+  "first_seen": "2026-10-26",
+  "handle": "atomic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard2_11.png?v=1743874368",
+  "platform": "shopify",
+  "product_id": "7270437748836",
+  "product_type": "Signature Blend",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Dark Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "Signature Blend",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Atomic Espresso",
+  "url": "https://beaneticscoffee.com/products/atomic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42244548755556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42244548788324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42244548821092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42244548853860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42244548886628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42244548919396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42244548952164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42244548984932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42244549017700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42244549050468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42244549083236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42244549116004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42244549148772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42244549181540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42244549214308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42244549247076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42244549279844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42244549312612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42276350525540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42276350591076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42276350656612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42276350722148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42276350754916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42276350820452"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42594659827812"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42594659860580"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42594659893348"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42594659926116"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42594659958884"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42594659991652"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42594660024420"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42594660089956"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652998553700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652998586468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652998619236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652998652004"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284240150628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284240183396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284240216164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284240248932"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "a2dcdd306bad48f2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_9a137fb3-069b-46a6-8335-8f7fb49732b4.png?v=1743874364",
+  "platform": "shopify",
+  "product_id": "7278676115556",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Africa",
+   "Medium-Dark Roast",
+   "Roasted Beans",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://beaneticscoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284884230244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284884263012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284884295780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284884328548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284884361316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284884394084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284884426852"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284884492388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284884525156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284884557924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284884590692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284884623460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284884656228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284884688996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284884721764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284884787300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284884820068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284884852836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284884885604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284884918372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284884951140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284884983908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284885016676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284885082212"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596027859044"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596027891812"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596027924580"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596027957348"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596027990116"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596028022884"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596028055652"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596028121188"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652998291556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652998324324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652998357092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652998389860"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284408381540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284408414308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284408447076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284408479844"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indian-monsoon",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_eb8e6a5a-7af7-4d5a-ac49-e8b815d7a11b.png?v=1743874350",
+  "platform": "shopify",
+  "product_id": "7278678081636",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Asia",
+   "Indonesian",
+   "Medium Roast",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Indian Monsooned",
+  "url": "https://beaneticscoffee.com/products/indian-monsoon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284905922660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284905955428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284905988196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284906020964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284906053732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284906119268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284906152036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284906217572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284906250340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284906283108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284906315876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284906348644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284906381412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284906414180"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284906446948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284906545252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284906578020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284906610788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284906643556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284906676324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284906709092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284906807396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284906938468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284907102308"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596030611556"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596030644324"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596030677092"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596030709860"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596030742628"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596030775396"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596030808164"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596030873700"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652997505124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652997537892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652997570660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652997603428"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284409200740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284409233508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284409266276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284409299044"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "90c38e719a77ca94",
+  "first_seen": "2026-10-26",
+  "handle": "lucy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard2_9.png?v=1743874344",
+  "platform": "shopify",
+  "product_id": "7278679228516",
+  "product_type": "Signature Blend",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Medium-Dark Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "Signature Blend",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Lucy Blend",
+  "url": "https://beaneticscoffee.com/products/lucy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284920832100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284920864868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284920897636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284920930404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284920963172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284920995940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284921028708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284921094244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284921127012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284921159780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284921192548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284921225316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284921258084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284921290852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284921323620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284921389156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284921421924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284921454692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284921487460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284921520228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284921552996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284921585764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284921618532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284921684068"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596031692900"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596031725668"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596031758436"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596031791204"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596031823972"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596031856740"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596031889508"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596031955044"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652996948068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652996980836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652997013604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652997046372"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284411199588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284411232356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284411265124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284411297892"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "3b993f437a9ac0ab",
+  "first_seen": "2026-10-26",
+  "handle": "woolly-mammoth",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/1_eba10594-b2f9-4869-8613-352bc32a852f.png?v=1747170037",
+  "platform": "shopify",
+  "product_id": "7278679359588",
+  "product_type": "Signature Blend",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Light Roast",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "Signature Blend",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Woolly Mammoth",
+  "url": "https://beaneticscoffee.com/products/woolly-mammoth",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284923420772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284923453540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284923486308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284923519076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284923551844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284923584612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284923617380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284923682916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284923715684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284923748452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284923781220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284923813988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284923846756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284923879524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284923912292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284923977828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284924010596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284924043364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284924076132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284924108900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284924141668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284924174436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284924207204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284924272740"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596040409188"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596040441956"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596040474724"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596040507492"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596040540260"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596040573028"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596040605796"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596040671332"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652996685924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652996718692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652996751460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652996784228"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284416311396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284416344164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284416376932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284416409700"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "2defe47f470b7539",
+  "first_seen": "2026-10-26",
+  "handle": "cro-magnon",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard2_10.png?v=1743874337",
+  "platform": "shopify",
+  "product_id": "7278679752804",
+  "product_type": "Signature Blend",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Medium-Dark Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "Signature Blend",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Cro Magnon",
+  "url": "https://beaneticscoffee.com/products/cro-magnon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284927549540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284927582308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284927615076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284927647844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284927680612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284927713380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284927746148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284927811684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284927844452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284927877220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284927909988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284927942756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284927975524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284928008292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284928041060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284928106596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284928139364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284928172132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284928204900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284928237668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284928270436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284928303204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284928335972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284928401508"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596019830884"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596019863652"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596019896420"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596019929188"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596019961956"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596019994724"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596020027492"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596020093028"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652995080292"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652995113060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652995145828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652995178596"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284406251620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284406284388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284406317156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284406349924"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "a136f4d16a39d44a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandhling",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-sumatran.png?v=1743874328",
+  "platform": "shopify",
+  "product_id": "7278682669156",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Asia",
+   "Dark Roast",
+   "Indonesian",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://beaneticscoffee.com/products/sumatra-mandhling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284945997924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284946030692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284946063460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284946096228"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284946128996"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284946161764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284946194532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284946260068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284946292836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284946325604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284946358372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284946391140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284946423908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284946456676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284946489444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284946554980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284946587748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284946620516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284946653284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284946686052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284946718820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284946751588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284946784356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284946849892"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596037886052"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596037918820"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596037951588"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596037984356"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596038017124"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596038049892"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596038082660"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596038148196"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652994359396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652994392164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652994424932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652994457700"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284414083172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284414115940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284414148708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284414181476"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "4f39067385083bcc",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon-organically-grown",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-balibluemoon.png?v=1743874321",
+  "platform": "shopify",
+  "product_id": "7278683619428",
+  "product_type": "Organic",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Asia",
+   "Indonesian",
+   "Medium Roast",
+   "Organic",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Bali Blue Moon — Organically Grown Indonesian Coffee | Beanetics",
+  "url": "https://beaneticscoffee.com/products/bali-blue-moon-organically-grown",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284953993316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284954026084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284954058852"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284954091620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284954124388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284954157156"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284954189924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284954255460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284954288228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284954320996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284954353764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284954386532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284954419300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284954452068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284954484836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284954550372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284954583140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284954615908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284954648676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284954681444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284954714212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284954746980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284954779748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284954845284"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596015439972"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596015472740"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596015538276"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596015571044"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596015603812"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596015636580"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596015669348"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596015734884"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652993900644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652993933412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652993966180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652993998948"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284400910436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284400943204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284400975972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284401008740"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "0bbb3b25913a46d7",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-roast-conventional",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-colombian.png?v=1743874318",
+  "platform": "shopify",
+  "product_id": "7278684405860",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Colombian Single Origin | Beanetics",
+  "url": "https://beaneticscoffee.com/products/colombian-roast-conventional",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284958548068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284958580836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284958613604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284958679140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284958711908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284958744676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284958842980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284958908516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284958941284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284958974052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284959006820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284959039588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284959072356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284959105124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284959137892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284959203428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284959236196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284959268964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284959301732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284959334500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284959367268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284959400036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284959432804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284959498340"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596018323556"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596018356324"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596018389092"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596018421860"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596018454628"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596018487396"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596018520164"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596018585700"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652993671268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652993704036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652993736804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652993769572"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284405530724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284405563492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284405596260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284405629028"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "b0b8d06cf24a9712",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-huehuetanango",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-guathuhuetenango.png?v=1743874315",
+  "platform": "shopify",
+  "product_id": "7278685093988",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Guatemalan Huehuetanango",
+  "url": "https://beaneticscoffee.com/products/guatemalan-huehuetanango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284965036132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284965068900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284965101668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284965134436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284965167204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284965199972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284965232740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284965298276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284965331044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284965363812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284965396580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284965429348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284965462116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284965494884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284965527652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284965593188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284965625956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284965658724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284965691492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284965724260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284965757028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284965789796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284965822564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284965888100"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596030087268"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596030120036"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596030152804"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596030185572"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596030218340"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596030251108"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596030283876"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596030349412"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652993441892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652993474660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652993507428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652993540196"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "ab2a8e41a136310c",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-brazilian.png?v=1743874311",
+  "platform": "shopify",
+  "product_id": "7278686666852",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Light Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "South America",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Brazilian Roast",
+  "url": "https://beaneticscoffee.com/products/brazilian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284973621348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284973654116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284973686884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284973719652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284973752420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284973785188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284973817956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284973883492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284973916260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284973949028"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284973981796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284974014564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284974047332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284974080100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284974112868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284974178404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284974211172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284974243940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284974276708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284974309476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284974342244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284974375012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284974407780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284974506084"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596016914532"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596016980068"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596017012836"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596017045604"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596017078372"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596017111140"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596017143908"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596017209444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652993212516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652993245284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652993278052"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652993310820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284403761252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284403794020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284403826788"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284403859556"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "ca7a9d2323376130",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-mayan",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-decafmayan.png?v=1743874299",
+  "platform": "shopify",
+  "product_id": "7278688927844",
+  "product_type": "Decaf",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Organic",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Decaf Mayan",
+  "url": "https://beaneticscoffee.com/products/decaffeinated-mayan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42284992233572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42284992266340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42284992299108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42284992331876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42284992364644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42284992397412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42284992430180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42284992495716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42284992528484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42284992561252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42284992594020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42284992626788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42284992659556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42284992692324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42284992725092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42284992790628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42284992823396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42284992856164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42284992888932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42284992921700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42284992954468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42284992987236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42284993020004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42284993118308"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596022354020"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596022386788"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596022419556"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596022452324"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596022485092"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596022517860"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596022550628"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596022616164"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652992262244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652992295012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652992327780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652992360548"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284406972516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284407005284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284407038052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284407070820"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "a7a7e8787170fb3c",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-aa-1",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_250a13a3-5843-4dfb-8747-167487de4b43.png?v=1743874280",
+  "platform": "shopify",
+  "product_id": "7312902881380",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Africa",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Kenya AA",
+  "url": "https://beaneticscoffee.com/products/kenyan-aa-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42402567192676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42402567225444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42402567258212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42402567290980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42402567323748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42402567356516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42402567389284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42402567454820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652989935716"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "49162509058148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49162509090916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "49162509123684"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "49162509156452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "49162509189220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "49162509221988"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "49162509254756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "49162509287524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "49162509320292"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "49162509353060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "49162509385828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "49162509418596"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "49162509451364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "49162509484132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "49162509516900"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "49162509549668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "49162509582436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "49162509615204"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "49162509647972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "49162509680740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "49162509713508"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "49162509746276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "49162509779044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "49162509811812"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "49162509844580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "49162509877348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "49162509910116"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "c89a41cec43eff73",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-organically-grown-1",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-sulawesi_baa21ad9-3062-491e-8dce-7283c095c537.png?v=1743874277",
+  "platform": "shopify",
+  "product_id": "7312919986276",
+  "product_type": "Organic",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Asia",
+   "Organic",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Sulawesi - Organically Grown",
+  "url": "https://beaneticscoffee.com/products/sulawesi-organically-grown-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42402658680932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42402658713700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42402658746468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42402658779236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42402658812004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42402658844772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42402658877540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42402658943076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652988887140"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "49162509942884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "49162509975652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "49162510008420"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "49162510041188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "49162510073956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "49162510106724"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "49162510139492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "49162510172260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "49162510205028"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "49162510237796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "49162510270564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "49162510303332"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "49162510336100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "49162510368868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "49162510401636"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "49162510434404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "49162510467172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "49162510499940"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "49162510532708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "49162510565476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "49162510598244"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "49162510631012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "49162510663780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "49162510696548"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "49162510729316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "49162510762084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "49162510794852"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "ad1cfae53b259947",
+  "first_seen": "2026-10-26",
+  "handle": "big-bang",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard2_8.png?v=1743874270",
+  "platform": "shopify",
+  "product_id": "7322147192932",
+  "product_type": "Signature Blend",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "Signature Blend",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Big Bang",
+  "url": "https://beaneticscoffee.com/products/big-bang",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42433033044068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42433033076836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42433033109604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42433033142372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42433033175140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42433033207908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42433033240676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42433033306212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42433033338980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42433033371748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42433033404516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42433033437284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42433033470052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42433033502820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42433033535588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42433033601124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42433033633892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42433033666660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42433033699428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42433033732196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42433033764964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42433033797732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42433033830500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42433033896036"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596016259172"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596016291940"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596016324708"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596016357476"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596016390244"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596016423012"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596016455780"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596016521316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652988166244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652988199012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652988231780"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652988264548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284402286692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284402319460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284402352228"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284402384996"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "40e8ff64ec925019",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-organic-sierra-santa-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_67a5e716-fe8b-441e-b99b-af324f136227.png?v=1743874265",
+  "platform": "shopify",
+  "product_id": "7322606108772",
+  "product_type": "Organic",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "bestseller",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Sierra Santa Rosa — Organically Grown Colombian Coffee | Beanetics",
+  "url": "https://beaneticscoffee.com/products/colombian-organic-sierra-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42435152019556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42435152052324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42435152085092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42435152117860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42435152150628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42435152183396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42435152216164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42435152281700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42435152314468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42435152347236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42435152380004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42435152412772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42435152445540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42435152478308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42435152511076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42435152576612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42435152609380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42435152642148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42435152674916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42435152707684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42435152740452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42435152773220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42435152805988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42435152871524"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596017537124"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596017569892"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596017602660"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596017635428"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596017668196"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596017700964"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596017733732"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596017799268"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652987838564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652987871332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652987904100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652987936868"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284404777060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284404809828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284404842596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284404875364"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "180d4c8b616da023",
+  "first_seen": "2026-10-26",
+  "handle": "buzz-kill-box",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/6_ad87d419-c5cc-4044-9db0-b5e5cc199c8d.png?v=1746813155",
+  "platform": "shopify",
+  "product_id": "7325172432996",
+  "product_type": "",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Subscription",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Buzz Kill Box",
+  "url": "https://beaneticscoffee.com/products/buzz-kill-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Whole Bean",
+    "variant_id": "42553000362084"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / French Press",
+    "variant_id": "42553000394852"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Chemex",
+    "variant_id": "42553000427620"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Auto Drip",
+    "variant_id": "42553000460388"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Espresso",
+    "variant_id": "42553000493156"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Pour Over",
+    "variant_id": "42553000525924"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Aeropress",
+    "variant_id": "42553000558692"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Turkish",
+    "variant_id": "42553000624228"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Whole Bean",
+    "variant_id": "42595837771876"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / French Press",
+    "variant_id": "42595837804644"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Chemex",
+    "variant_id": "42595837837412"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Auto Drip",
+    "variant_id": "42595837870180"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Espresso",
+    "variant_id": "42595837902948"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Pour Over",
+    "variant_id": "42595837935716"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Aeropress",
+    "variant_id": "42595837968484"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Turkish",
+    "variant_id": "42595838034020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Whole Bean",
+    "variant_id": "42595838066788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / French Press",
+    "variant_id": "42595838099556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Chemex",
+    "variant_id": "42595838132324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Auto Drip",
+    "variant_id": "42595838165092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Espresso",
+    "variant_id": "42595838197860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Pour Over",
+    "variant_id": "42595838230628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Aeropress",
+    "variant_id": "42595838263396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Turkish",
+    "variant_id": "42595838328932"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Moka Pot",
+    "variant_id": "45652987314276"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Moka Pot",
+    "variant_id": "45652987347044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Moka Pot",
+    "variant_id": "45652987379812"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Cold Brew",
+    "variant_id": "48284404023396"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "2 / Cold Brew",
+    "variant_id": "48284404056164"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "3+ / Cold Brew",
+    "variant_id": "48284404088932"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "cc82f6d29167cc56",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-box",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Balanced_Brew.png?v=1746813155",
+  "platform": "shopify",
+  "product_id": "7326302634084",
+  "product_type": "",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Subscription",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Balanced Brew Box",
+  "url": "https://beaneticscoffee.com/products/medium-roast-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Whole Bean",
+    "variant_id": "42552994758756"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / French Press",
+    "variant_id": "42552994791524"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Chemex",
+    "variant_id": "42552994857060"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Auto Drip",
+    "variant_id": "42552994889828"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Espresso",
+    "variant_id": "42552994955364"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Pour Over",
+    "variant_id": "42552994988132"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Aeropress",
+    "variant_id": "42552995053668"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Turkish",
+    "variant_id": "42552995151972"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Whole Bean",
+    "variant_id": "42594790899812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Whole Bean",
+    "variant_id": "42594790932580"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / French Press",
+    "variant_id": "42594790965348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / French Press",
+    "variant_id": "42594790998116"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Chemex",
+    "variant_id": "42594791030884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Chemex",
+    "variant_id": "42594791063652"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Auto Drip",
+    "variant_id": "42594791096420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Auto Drip",
+    "variant_id": "42594791129188"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Espresso",
+    "variant_id": "42594791161956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Espresso",
+    "variant_id": "42594791194724"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Pour Over",
+    "variant_id": "42594791227492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Pour Over",
+    "variant_id": "42594791260260"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Aeropress",
+    "variant_id": "42594791293028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Aeropress",
+    "variant_id": "42594791325796"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Turkish",
+    "variant_id": "42594791424100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Turkish",
+    "variant_id": "42594791456868"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Moka Pot",
+    "variant_id": "45652986953828"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.95,
+    "title": "2 / Moka Pot",
+    "variant_id": "45652986986596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "3+ / Moka Pot",
+    "variant_id": "45652987052132"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "1 / Cold Brew",
+    "variant_id": "48284399861860"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "2 / Cold Brew",
+    "variant_id": "48284399894628"
+   },
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 35.0,
+    "title": "3+ / Cold Brew",
+    "variant_id": "48284399927396"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "adeb4810cbc61911",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_eebe439c-cb80-4d79-b031-2524badbf777.png?v=1743874236",
+  "platform": "shopify",
+  "product_id": "7334789972068",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Guatemalan Antigua",
+  "url": "https://beaneticscoffee.com/products/guatemalan-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42502081577060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42502081609828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "42502081642596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42502081675364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42502081708132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "42502081740900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "42502081773668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42502081839204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "42502081871972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "42502081904740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "42502081937508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "42502081970276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "42502082003044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "42502082035812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "42502082068580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "42502082134116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42502082166884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42502082199652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "42502082232420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42502082265188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42502082297956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "42502082330724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "42502082363492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42502082429028"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "42596029530212"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "42596029562980"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "42596029595748"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "42596029628516"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "42596029661284"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "42596029694052"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "42596029726820"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "42596029792356"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652986036324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652986069092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652986101860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652986134628"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284408578148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284408610916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284408643684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284408676452"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "ff75f2aa0444927f",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-blue-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/JamaicanBlueMountain_1.png?v=1743874204",
+  "platform": "shopify",
+  "product_id": "7962931069028",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Light Roast",
+   "Limited Release",
+   "North America",
+   "Roasted Beans",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Jamaican Blue Mountain",
+  "url": "https://beaneticscoffee.com/products/jamaican-blue-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Whole Bean",
+    "variant_id": "44920945836132"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / French Press",
+    "variant_id": "44920945868900"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Chemex",
+    "variant_id": "44920945901668"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Auto Drip",
+    "variant_id": "44920945934436"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Espresso",
+    "variant_id": "44920945967204"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Pour Over",
+    "variant_id": "44920945999972"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Aeropress",
+    "variant_id": "44920946032740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Turkish",
+    "variant_id": "44920946098276"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Moka Pot",
+    "variant_id": "45652983611492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.0,
+    "title": "8 oz. / Cold Brew",
+    "variant_id": "48284409725028"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "3ae20bdabaa2db41",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/1_317d91e9-0fd7-4479-a2d2-39e44a499822.png?v=1743874198",
+  "platform": "shopify",
+  "product_id": "7966418403428",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "South America",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "El Salvador",
+  "url": "https://beaneticscoffee.com/products/el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "44971309105252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "44971309138020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Chemex",
+    "variant_id": "44971309170788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "44971309203556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "44971309236324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Pour Over",
+    "variant_id": "44971309269092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Aeropress",
+    "variant_id": "44971309301860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "44971309367396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "44971309400164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "44971309432932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Chemex",
+    "variant_id": "44971309465700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "44971309498468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Espresso",
+    "variant_id": "44971309531236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Pour Over",
+    "variant_id": "44971309564004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Aeropress",
+    "variant_id": "44971309596772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Turkish",
+    "variant_id": "44971309662308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "44971309695076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "44971309727844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Chemex",
+    "variant_id": "44971309760612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "44971309793380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "44971309826148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Pour Over",
+    "variant_id": "44971309858916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Aeropress",
+    "variant_id": "44971309891684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "44971309957220"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Whole Bean",
+    "variant_id": "44971309989988"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / French Press",
+    "variant_id": "44971310022756"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Chemex",
+    "variant_id": "44971310055524"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Auto Drip",
+    "variant_id": "44971310088292"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Espresso",
+    "variant_id": "44971310121060"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Pour Over",
+    "variant_id": "44971310153828"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Aeropress",
+    "variant_id": "44971310186596"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Turkish",
+    "variant_id": "44971310252132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "45652983152740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Moka Pot",
+    "variant_id": "45652983185508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "45652983218276"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Moka Pot",
+    "variant_id": "45652983251044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "48284408152164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 lb. / Cold Brew",
+    "variant_id": "48284408184932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "48284408217700"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 14.95,
+    "title": "9 oz. / Cold Brew",
+    "variant_id": "48284408250468"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "f8c368efc63df390",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-organic-sierra-santa-rosa-ccan",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_67a5e716-fe8b-441e-b99b-af324f136227.png?v=1743874265",
+  "platform": "shopify",
+  "product_id": "8034553069668",
+  "product_type": "Organic",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Colombian Organic Sierra Santa Rosa (CCAN)",
+  "url": "https://beaneticscoffee.com/products/colombian-organic-sierra-santa-rosa-ccan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45613557907556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / French Press",
+    "variant_id": "45613557940324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Chemex",
+    "variant_id": "45613557973092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "45613558005860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Espresso",
+    "variant_id": "45613558038628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Pour Over",
+    "variant_id": "45613558071396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Aeropress",
+    "variant_id": "45613558104164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Turkish",
+    "variant_id": "45613558169700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Moka Pot",
+    "variant_id": "45652982464612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Cold Brew",
+    "variant_id": "48284405334116"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "817168c424370ca4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mayan-ccan",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/WebCard-decafmayan_234eecdc-6496-4ed0-b8ea-3c187d86e08a.png?v=1743874289",
+  "platform": "shopify",
+  "product_id": "8034553397348",
+  "product_type": "Decaf",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Try",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Decaf Mayan (CCAN)",
+  "url": "https://beaneticscoffee.com/products/decaf-mayan-ccan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45613562265700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / French Press",
+    "variant_id": "45613562298468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Chemex",
+    "variant_id": "45613562331236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Auto Drip",
+    "variant_id": "45613562364004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Espresso",
+    "variant_id": "45613562396772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45613562429540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Aeropress",
+    "variant_id": "45613562462308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Turkish",
+    "variant_id": "45613562527844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Moka Pot",
+    "variant_id": "45652982399076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "48284397207652"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "7ac40b9f14700f3c",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-organic-ccan",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Placard1_127d3cc8-47b6-4565-9995-1d240ff73f4b.png?v=1743874232",
+  "platform": "shopify",
+  "product_id": "8034554085476",
+  "product_type": "Organic",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Latin American",
+   "Medium Roast",
+   "Roasted Beans",
+   "Roasted Coffee",
+   "wrapped:blocks:hide:44906181132388",
+   "wrapped:blocks:hide:44906181754980"
+  ],
+  "title": "Peruvian Organic (CCAN)",
+  "url": "https://beaneticscoffee.com/products/peruvian-organic-ccan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45613580157028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / French Press",
+    "variant_id": "45613580189796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Chemex",
+    "variant_id": "45613580222564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "45613580255332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Espresso",
+    "variant_id": "45613580288100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Pour Over",
+    "variant_id": "45613580320868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Aeropress",
+    "variant_id": "45613580353636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Turkish",
+    "variant_id": "45613580419172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Moka Pot",
+    "variant_id": "45652982333540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz. / Cold Brew",
+    "variant_id": "48284392554596"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ },
+ {
+  "body_hash": "34b0221ae994a0b7",
+  "first_seen": "2026-10-26",
+  "handle": "10-round-brush",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/Brush.png?v=1761750324",
+  "platform": "shopify",
+  "product_id": "8191723831396",
+  "product_type": "WARES",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "10\" Round Brush",
+  "url": "https://beaneticscoffee.com/products/10-round-brush",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.99,
+    "title": "Default Title",
+    "variant_id": "46908235972708"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "af59abd000d7bacf",
+  "first_seen": "2026-10-26",
+  "handle": "mizudashi-cold-brew-coffee-maker-black-1000ml",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/12.png?v=1761760998",
+  "platform": "shopify",
+  "product_id": "8191723962468",
+  "product_type": "WARES",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Mizudashi Cold Brew Coffee Maker - Black, 1000ml",
+  "url": "https://beaneticscoffee.com/products/mizudashi-cold-brew-coffee-maker-black-1000ml",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "Default Title",
+    "variant_id": "46908236005476"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "e04f93c9ebf007ff",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-organic-micro-lot-series",
+  "image": "https://cdn.shopify.com/s/files/1/0611/0180/1572/files/hf_20261013_210226_ab328aed-a343-4f1d-b252-e8e359a8f264.png?v=1791925451",
+  "platform": "shopify",
+  "product_id": "8649751363684",
+  "product_type": "Coffee",
+  "roaster_slug": "beaneticscoffee",
+  "tags": [
+   "Honduras",
+   "limited",
+   "micro-lot",
+   "organic",
+   "single origin",
+   "whole bean"
+  ],
+  "title": "Honduran Organic — Beanetics Reserve",
+  "url": "https://beaneticscoffee.com/products/honduran-organic-micro-lot-series",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "48826167033956"
+   }
+  ],
+  "vendor": "Beanetics Coffee Roasters"
+ }
+]

@@ -1,0 +1,4253 @@
+[
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "breakfastblend",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c329ee4b0b6031fbd5e64/1746105294069/",
+  "platform": "squarespace",
+  "product_id": "561c329ee4b0b6031fbd5e64",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "breakfast blend",
+   "coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/breakfastblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "1c5027c7-2404-467d-bcc1-be2ddb78984e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "1d1cc6aa-b950-458b-943b-d42dd7b4db61"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "1e331324-722b-4755-b035-583f6b3a4d60"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "30a94424-9b8a-4fad-94d4-276f791302ff"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "349870d5-1650-4c9d-bc33-167803c9e7df"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "4004e18b-cba1-4511-a4e6-bab68098667a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "57c26843-d58e-459a-9e80-9640d4f305f2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "620fd3d4-0991-4d82-a96a-6ac40177c8e0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "6aa6660d-9239-4d59-a1c2-0655f874e2e9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "96b09e84-7a61-4a09-9bd9-db20613779a1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "ab8c86b3-699b-4234-bde2-e77527265089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "ae3cda61-78b6-4209-b379-cea0b4b5bebe"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "c315bc9f-18ee-4bbb-9258-89f39ca45441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "d21b95a4-123e-4e2e-bdac-9515329c08f3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "d37470ee-c713-4d58-8be3-92329d8c8e91"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "f41a6a88-729e-4001-b09a-5d2ed86f3ec4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c32d7e4b0ad2124484683/1746105300125/",
+  "platform": "squarespace",
+  "product_id": "561c32d7e4b0ad2124484683",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "house blend",
+   "medium roast"
+  ],
+  "title": "House Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "2c80789b-d0ed-4b6e-8466-a049c27f2aca"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "3bd5a006-ada2-403d-9e14-ca82d381bcd6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "7b3f4956-65e1-4506-93bd-372c84e1f462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "85b6a544-b509-4167-9e7b-08b766713102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "88970cb9-ce50-499b-8b72-60a34bdca5d5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "99110f47-f739-4c21-8d00-fa5882196020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "9aee3be9-ce16-4a95-b3d0-dfd6a518b6d2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "a5b58667-dd07-468a-a409-23ef768deb87"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "a7aa91aa-52f2-4c41-b606-18b46dbd290d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "b0e7cea5-7f56-485d-8fcd-d09444866028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "b43ad12a-ade6-4218-87a1-a90528cd6f8f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "c08168b9-69ad-4e52-87dd-04733ad3f2ac"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "cf4a8208-1033-465b-a15f-61056d354572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "d2c59fd9-da1d-4590-94c9-7db64fc22b6c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "f7cb1b2f-6a12-4d09-a930-5170093d999b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "fee82e10-6e56-45be-be66-51fdc0584b2e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "frenchroast",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c3302e4b08015d02d6023/1746105298256/",
+  "platform": "squarespace",
+  "product_id": "561c3302e4b08015d02d6023",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "dark roast",
+   "french roast"
+  ],
+  "title": "French Roast",
+  "url": "https://www.fairhoperoasting.com/coffee/frenchroast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "297c7302-b2a3-43db-b783-54b923a46fb8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "2df64894-85e2-4cf3-b2c0-7f5c502fc1d7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "3484536d-c607-4ea6-b2ff-d64b258a8e09"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "3a6ad709-c668-4407-ba0d-89686892eaae"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "3cc45ced-4ed9-4f5a-8374-362989bb69ec"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "7759bf5d-cd0a-4608-a16c-0c42702fba8c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "8a06aefe-3804-41ec-b51e-198249562069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "8cc92e88-1eca-42f5-b037-b2a056ba1a19"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "922dd17e-4611-4888-9cf9-789c4e4a0e7e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "a89ab5f7-c383-4b3d-8916-4b698ad4604d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "b988c12d-a889-45d0-a13d-91b498535c61"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "c16a2984-4574-4806-84eb-b2c851bf494c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "c49a72a4-a27a-4b75-866e-2d172feb1418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "dcadb3cd-3c76-4f46-8f57-2b8b036b742f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "f06d9b08-4e2a-4bd7-9cc5-f91f1c7086f6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "f9cdd25c-db71-423e-b5b2-bd7d051fc69c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "italianroast",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c332ce4b0601b7c7cdff9/1746105300411/",
+  "platform": "squarespace",
+  "product_id": "561c332ce4b0601b7c7cdff9",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "dark roast",
+   "italian roast"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.fairhoperoasting.com/coffee/italianroast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "0e0d345d-22fb-40a1-80b7-1aa9b2698a57"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "141fb890-f8f2-4fb8-af70-81813cb7ba8c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "14a6fde2-a47b-4770-a627-976543bfe864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "24e56639-a94e-4a6b-9126-87289cf15a91"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "27b0021e-8b7f-4ea4-b7d7-18d91f070655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "2e431409-9da7-4961-83d7-3373f7504dbb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "379f9d91-ea8a-40a5-b176-e051b96ed48f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "5c689ef6-5755-4dc3-b2d7-833954e4c27d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "5dbb90ef-5a7a-4bcb-8f84-d8db5ed30b17"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "7ec2be43-6183-4a53-9a6a-1c1f15d2b39b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "8ca04601-fdb0-4e32-ab25-9b3dab9590e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "9df94817-aa7f-4b15-a1dc-72a1861846e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "ba33fc73-2dbe-4212-8bfd-82bfbadbe441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "be8ed885-632c-47a1-8f1a-2cd923249083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "d72986f8-51dc-43f5-b2a4-9596f9c7b034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "fc4afb08-939b-428c-b8b4-4cc869d25a0a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "decafhouse",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c33f1e4b0237fee7f7d89/1746105295637/",
+  "platform": "squarespace",
+  "product_id": "561c33f1e4b0237fee7f7d89",
+  "product_type": "Decaffeinated,Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "Decaffeinated"
+  ],
+  "title": "Decaf House Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/decafhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "03a3d21f-a4f5-4108-9e0c-b6d48d72aae9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "1d3fe603-d049-4109-94eb-317b20abb711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "290941ad-70b5-4764-8953-0caf5fb9dad1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "410d0eef-b912-4d9c-a34a-e649d7adbad9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "4996f0f4-9017-49c8-8cad-3972bf6d76c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "59bc26d5-9325-4e81-b9eb-bbe62856230b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "67c9bb8e-9f7e-4caf-980b-51cfb4a3b960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "7c441916-fe26-4116-933a-aa73675a3aaf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "7db76d84-6b15-46fd-96e9-9224b0262b59"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "7e0a5117-3114-4031-aa73-897f18963813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "9d548481-bfb1-4bc9-94a1-17f58165fd18"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "a7837eb3-6a94-4834-ae4a-ae062c629868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "b65b2441-0516-4d94-88a9-5632b6cc0c8f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "bab2a42c-75fc-4d54-beee-ba80d07074fb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "c9ff95b1-f239-4d9b-a06f-856f4b07793d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "f901a5c4-b40e-4bc1-b6b0-0111cb46c6d1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "fairhopeespresso",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c343ce4b013e4851f3cef/1746105298061/",
+  "platform": "squarespace",
+  "product_id": "561c343ce4b013e4851f3cef",
+  "product_type": "Espresso,Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "coffee",
+   "espresso",
+   "medium roast"
+  ],
+  "title": "Fairhope Espresso",
+  "url": "https://www.fairhoperoasting.com/coffee/fairhopeespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "0c6b9d73-6868-408b-bb99-f4f07631f2f0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.25,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "1af31b2c-07b6-4e3c-936b-bfacd93827e4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.25,
+    "title": "32 ounces Ground No",
+    "variant_id": "29005f3d-b190-4116-8363-b1e7130ba3be"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "44bfd7c5-9caf-4d43-bf76-1dd3c8398f14"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "5b208f62-462f-4a2c-bdb2-64fba64d4529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "6788313c-63c4-4021-a1fb-5ac155129064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.25,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "6cd1b9ff-b4c5-4da0-bef2-f33e9f571e1a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.25,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "98889917-5003-41dd-955d-74bb550b9479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "a4cbbeee-cea4-4182-b4e8-a8acb2eff23d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "b12e8c4e-2dce-4af6-8759-40042e07d7f0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "5lb Ground No",
+    "variant_id": "c91eb64b-b02d-4f22-8732-9d906a8fccac"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "d52d8025-edd5-4d8c-bb12-baa997e22eb9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "d9dbf2ed-83e7-483a-b4b6-7c8eb6025222"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "e185a1c7-4c91-4a9e-8c02-bed14c074343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "f23fdd48-b5ba-47f5-8534-f9b76ecb8149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 ounces Ground No",
+    "variant_id": "fed1a022-3413-4e6a-8752-842c3f7c5c0e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1690923223675-R8AATSCT0HA4IEILYWCU/Ethiopia+Sidamo.png",
+  "platform": "squarespace",
+  "product_id": "561c34dce4b06427095f796c",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.fairhoperoasting.com/coffee/ethiopian-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "19930f2c-20d4-446f-92ca-5c1405326e80"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "1d31e440-d2fe-4ef1-9f6a-81ecd7fc5297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "23e28a3e-5e4f-475f-8445-169ae2044cf2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "2f097fcd-93b1-4d24-ae13-89f746ab68c6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "393850b3-80a5-42d5-8c51-fdbdf34bf271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "632d3f8f-e155-4420-bc7d-af75731eb9a2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "8965aa03-b9ed-4f98-873e-b280d8c15770"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "9d282255-76a5-4520-b569-89d4076eb8ee"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "a233459b-d5ac-4069-8b78-190f59e817cb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "a40e2049-ea7c-47d0-956b-654baef94f68"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "a87bc74a-0871-4978-a9a9-f89424cad82f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "c55d76ec-805e-42e3-91df-12d6f3407d89"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "e0dd9356-4c0f-44ba-bc54-a91242db4105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "e2ba6db3-b0f3-4cf9-b922-780bcbda54f6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "e89e363c-6ed3-4c5c-98c0-3f5637a79a5e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "eb19fe1d-3cee-4a5d-9e91-af564caf9708"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "toastedpecan",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561c34efe4b05f5ec77c34d5/1746105305305/",
+  "platform": "squarespace",
+  "product_id": "561c34efe4b05f5ec77c34d5",
+  "product_type": "Blends,Flavored",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "Flavored",
+   "coffee",
+   "medium roast",
+   "pecan"
+  ],
+  "title": "Toasted Pecan",
+  "url": "https://www.fairhoperoasting.com/coffee/toastedpecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "08ba6a36-27b6-401e-86eb-3828ddcfab41"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "0bfbd5fb-0b7e-4d88-8377-448b49f6d363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "3097d8d5-e94d-487f-9810-da1f3ed427c9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "30de255f-258f-447e-83de-901d3e39899b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "339d8480-4687-495f-96dc-5199e36e0f71"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "3de3dcf4-ed5e-444d-a210-3622f81269aa"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "629001e2-91c6-4738-a2d9-85175ac6584d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "6582dd1e-1e60-4a5c-8788-6badd63c5bee"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "65ce3ad0-844d-45d1-87ac-a0a4ff82b259"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "9cf2bf45-7917-4561-86e9-a444e89f6c7f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "9f7c74f5-739f-479a-a452-fecddf3a9505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "a3cbe195-72d2-4767-8241-ca5be886e469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "a92a049e-b500-4945-b67c-c5fefb1ce3a7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "acf2fe6a-109f-49a4-a97d-593c13724f1c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "ad761277-9083-4a4d-a72d-07a26a7ca40c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "d7a41d8d-5e79-445f-8d5c-64750cc0c87d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "fairhope-blend",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/561ea151e4b0f3773675cbe0/1746105297403/",
+  "platform": "squarespace",
+  "product_id": "561ea151e4b0f3773675cbe0",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "fairhope blend",
+   "medium roast"
+  ],
+  "title": "Fairhope Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/fairhope-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "28e141ce-1bc3-44f4-858f-0d29c4a7f778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "38270cc1-aed2-45fd-a844-2c563ed0b935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "39a2d71a-2c9b-4143-be7b-438a97544e39"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "5022cf66-8776-4b25-ba5c-4c5f42144a80"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "5f72b03b-1874-402e-9d61-70e15476cfb2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "67412109-7955-4359-8da1-bfdc4c8dcbf1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "7ad9a3e6-01db-44cc-8f84-d89cdc68fe38"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "9acfd478-b09b-4f5c-8334-6876ce1c1b48"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "9b3aac17-ff74-43af-8454-c18ac7312800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "9c0ec9f9-9815-4dbe-b077-1b7a528def67"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "a680ddf5-b980-4bd7-aa5f-2239a3be3860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "bfb3a5dd-1c7e-4777-96e6-864819c86903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "c11e384f-dbaa-491b-a0d1-e3d7ad799eb3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "c1a4d1bf-92bf-494b-83f2-b21c49ad18c8"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "d02c0971-5e55-427c-bb6f-4d723055c3c8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "e87306b7-33c9-4cde-85bd-f49c41d5934a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/566f56174bf118d6d87fb278/1746105299411/",
+  "platform": "squarespace",
+  "product_id": "566f56174bf118d6d87fb278",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Holiday Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "086d1ab0-4ad7-40d7-9d62-4d57f0107adc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "2ab269ae-2d80-411e-9168-6e4eb220fc48"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "31e28f3f-17da-44bf-8841-5e9604afc324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "34095b66-8e8a-4058-9707-165c0a597468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "45588544-e9bf-4398-8de3-d9ddb4f6d10f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "6a4423cd-d76f-4199-bcbc-59265f29939a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "8280d0e6-0ffe-4329-bf9d-0816cd48fbe2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "ac08607c-58b5-40f3-a996-cd10312a60a4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "b58e76a9-07bb-40da-8458-89e02f20cce8"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "bbc11f77-0c89-44c1-9578-d272b47416bf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "c08dbca6-790a-459f-93b7-129bf68bd6ee"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "d494bab6-bd75-498b-9407-dbb9b65a3dc2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "d9e702aa-cff4-4b80-b256-1d985f9781d6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "dfccd500-cc87-4895-a155-8b07da50bdfe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "f1e7b318-8390-49b4-b6ef-1532528c5a2e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "f8f51608-a30c-4b02-9ec5-276b8864fe57"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "papua",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538082434657-ZUXT7FAM2BA7XSIJI0BV/Papua.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad44a6e2c48395bb4f4e66",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "medium roast",
+   "sumatra"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.fairhoperoasting.com/coffee/papua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "0707a444-93c9-43a4-9715-1c76024948d4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "0a5edd15-a814-48eb-9820-8003fb3ca534"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "141faeae-fb8c-4e17-b370-d34ca122b31b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "16f52a29-4666-4e7e-a1e5-489b9e080029"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "1879a95e-8338-449b-9880-209dedca131d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "48b1d7e6-d94e-4d09-abbc-33341581a05b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "4c15ad4f-3694-47f1-995a-7eb7dcec9c64"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "53d8a945-0c9c-4714-b453-e490fcb80466"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "68388874-39ab-463b-a19f-a714f699ab0f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "76da230d-7947-4e23-a408-16b979c0fc66"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "8e56d9e6-ba9c-449a-832c-b7ce3aa7052e"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "aaf87115-a055-49db-b8f6-2d6acf62b5d6"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "c9245ed5-edef-483e-b273-543c4f3b8182"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "e72e9807-219a-41de-9473-23ba84abe387"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "eb95b547-b9f5-406a-ac61-656a1bddefa6"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "eefe4a10-66a5-42c7-83e7-7bb9a4ea7763"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-pzr6g",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/5bad44b71905f4f55b08aa2c/1746105297202/",
+  "platform": "squarespace",
+  "product_id": "5bad44b71905f4f55b08aa2c",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.fairhoperoasting.com/coffee/ethiopian-yirgacheffe-pzr6g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "04d043da-e55b-40b7-960d-9b654e865af7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "24d1b4f1-cfd8-4cde-9e1f-8a672bca76e9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "38c49d9d-83b8-4d17-868c-fb7ed6117f14"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "39fa907d-25f5-4526-b7e3-8bde1a507cd4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "3d0e03e5-496c-4a22-bc3c-df1c679cda0e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "7415117e-ac78-47a7-b2fe-1051c2c08f58"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "7a67dc52-b71a-48aa-9af8-0ce70c66b482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "8434b607-dba1-473e-80dd-05b7e91c45c1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "940b8299-f06b-4a09-83ac-541bc86fdb3b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "a8963bf5-809e-4b5b-b6d2-9266bbac754d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "bf65150b-5672-411c-a4ff-c8a9412574af"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "cc36b10f-adac-4a6f-901d-65f4dbcd5151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "d4435cc2-4c38-44d9-a92a-c2d6bb2afe50"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "d71a43ba-af67-41a5-ac42-166cb06ff518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "f53aaa21-47da-4f5c-a080-0256a512ae64"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "f83374dc-a7e6-4c32-b85f-b25347346c91"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "peaberry",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538082521801-TN55MQIP8PLNS6K27L4N/Tanzania.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad46a224a6947c579fa6a1",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "medium roast",
+   "sumatra"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://www.fairhoperoasting.com/coffee/peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "0311f44d-3054-4d39-9311-d4abbc287920"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "12e17794-25cc-42f8-97c7-7f9ed58d9b07"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "1691a1d4-b4c0-43ed-9df6-ad834c9b857b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "35c3d2a4-d5e0-4046-a5f0-0582f2c732da"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "3c0a47c7-7ed8-4ae0-b6f9-626087b9b937"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "40a28507-7e8b-4ba6-9b12-a7be8c554ce0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "50b9b92a-6f01-48db-bcce-f511c29f804f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "710f4218-aa9a-4f73-92ff-5becc9adb96c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "9986f3d0-22ca-494d-b59e-1714a9e7fe9b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "a34598c9-39bc-4196-ae74-a914eb9f53b4"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "b483ac18-b238-408e-b439-d3bb047bf29f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "bb85c8bd-6c70-4cfc-9c34-46b3467cacef"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "c33d8f93-5676-4233-a507-fc41bd49fc3c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "de936c2f-0dbe-47ee-a319-480a68179ef2"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "e950beb3-d2c5-494c-8326-a39a205aeae9"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "ee5ed5c0-3a9a-4049-8da7-75252c492501"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538082603043-F3OWUGQKC8AO37P6TFUU/Brazil.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad46f9ec212dd642c123e1",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Brazil",
+  "url": "https://www.fairhoperoasting.com/coffee/brazil",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "13ce5634-ee43-427a-9329-fd74f50d2dcf"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "5849a96a-d905-4937-84a3-74be21595299"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "5b4dd4e9-1dd4-4568-bead-764547f10e16"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "6fe0d744-345c-4806-a247-da6b2c3c5975"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "6fea7a93-b623-4360-9c5b-2cb072e9b476"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "779df08f-3a5a-438d-97fe-a9e7f5d36a97"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "7e17d6e6-9c3c-4d7c-92ff-3364ef18c8f5"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "9b7bb684-73fd-4dc2-be4e-267177c16433"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "a4945389-2e96-4f6f-bb98-5a263d713787"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "c056596d-0b3f-411d-96c1-6079c42d7948"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "c2e23ea2-bcef-4e92-949c-137066d0882f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "df09d340-56af-4cd5-a4b0-ced04e02a870"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "e2d85f91-d53b-4994-ab8d-f74c4e91e700"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "edb6c04f-1be5-4994-afe4-fbab595dd0b5"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "ef81486f-48e9-4682-821c-4cef8e5625f3"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "f6ba0218-1af6-4111-8752-b8d023d1682d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538082712709-IJRZMXLPEB4V7OH0C1VE/Colombia.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad474ae2c48395bb4f73cb",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Colombia Supremo",
+  "url": "https://www.fairhoperoasting.com/coffee/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "170b06db-dacc-4d4e-9e70-764e46905882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "24348d05-3d99-4ead-b3cb-37c2c5ffb94d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "2515577c-5569-4a99-8cb2-23e9816e61a4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "35089ec9-a5f8-457a-a59e-5df445a3d47c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "3dd07e43-cfe6-476e-8c51-d39919110577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "4c16c66f-d5a4-4a69-a240-369b274ea356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "4f1b2a49-48e3-4525-99e3-77c35b290acb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "66022a70-e20e-464c-92ff-98af94150e2b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "6dff173a-9e0b-4835-8724-7ff465e651da"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "7c944e17-65ce-44ba-9fbf-36bc787ba545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "8b3317de-51f8-4bcc-94cf-78975c360192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "98de7ded-dbf9-411a-8a91-068e94fd01fd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "9eb2b906-44ef-443a-9b51-0808f73cb0a7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "aaafeb20-f3b4-40c9-adf7-813c790663d0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "cb91d3fe-b8cd-4661-8bcf-eaaa6916ae65"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "d0963856-586e-4a45-beaf-50095ecc65df"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "costarica",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538082869701-G703CK91X9CW9D7XMT3D/Costa+Rica.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad47ecc830253edfcd0151",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.fairhoperoasting.com/coffee/costarica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "0c91b660-f13f-45a5-9043-8fd1e2f90987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "1552a2e8-28f0-4bd8-8f90-f908d3530d49"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "2a310e01-6069-44f1-be3d-47367f25b7b1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "33f44bec-fe7c-45b1-a36d-4d3779198ed2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "3c7317fd-b48d-4677-9018-cfa77a2f4eb0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "44b0b189-d669-4636-81df-bc1094362d68"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "536d0c52-096b-412b-b2f5-7b96421b8713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "5dee085d-1832-4798-bf8d-63c1ef933d61"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "75c5f28a-c16c-40ae-a11e-81c1691c449d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "7b18a8ab-6749-4ae5-ae5e-05571f3885a4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "82727e4b-224a-4e1f-a1a8-a7f5359eff54"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "835623ef-e3ab-4468-aee7-57c4827c0577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "aca632d2-52c7-4ba9-a3cc-6ef03ea0ff20"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "ae70d379-486a-41a1-92fa-b9f009ab039c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "b8a1f30f-757c-4414-a48d-9218a8bfee07"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "bc3548f1-5b06-47ac-8c0f-057dbe72349a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "elsalvador",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538083219600-M3URWH3O9U4X6DDXO3AE/El+Salvador.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad495eb208fc0fd13e2e11",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "El Salvador",
+  "url": "https://www.fairhoperoasting.com/coffee/elsalvador",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "145425d6-78dc-4e4d-a617-aee48599a165"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "18be144f-66c6-43d1-9fb5-62da162c3ae2"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "193ce1c7-e2c1-49a2-9abb-9a952e1ad332"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "3575381e-a32f-4c88-ad0a-1c2429e2b42b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "78259054-0c8d-49e1-a2c2-75d03d5a4c8e"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "7d60447e-9d21-4dd0-970d-0c9c943050df"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "88a6307d-f662-4922-a21f-b356073e68c2"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "8c25ba79-18f9-4312-afe8-a583b332b69c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "9526f050-5f14-4693-998a-186c074a825f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "95e3fdc8-119a-4a67-93ad-e5ab8157dc53"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "d27620b0-f52b-4c84-9f62-ec41c186a6bd"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "dce655fe-421d-4976-9229-0b6308631040"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "dee2cb31-8f05-41f2-b5a7-cf56f9a95ed4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "e299f413-b716-40e4-b568-d2ec610b80d7"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "f0f81120-7456-4aa5-b467-fd52932386f4"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "fb4de188-a2bf-490b-a670-55ab0931e8b3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538083352066-8DNDKMI5INF8ICPWZDEG/Honduras.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad49e61905f4f55b08f424",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Honduras Highgrown",
+  "url": "https://www.fairhoperoasting.com/coffee/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "0e2c88a7-d433-4a83-888f-40958aceffbc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "16bbb6b8-9c8e-4a7f-bc4f-44d48d3a3339"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "1f7c844d-f5e0-49ee-9a5b-23b86b4b111c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "22ce49a0-3ac3-4d7f-9df8-d6e8849f6c11"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "330a6c08-7c6d-48d7-a29e-9ed5e28bf666"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "3f87defb-e89e-4c19-84db-49ce62c7ea0b"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "49268aad-3dd2-49a4-901a-ad56cf622085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "6fa59c07-7d69-43d3-86a3-914ace90b6c5"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "7eae680a-fc3c-4456-90a7-93b3c153a524"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "c37a3e39-870b-4777-b113-1e797b61057b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "c89e7484-ff7c-4560-a0e5-6e621f9a4078"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "d2d67b7f-bd1d-4572-b8e9-0d0339582ac8"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "dbd35b3b-5aec-41a7-97e5-a056215a32f6"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "f3909cfa-8f9c-4b81-addc-118b66108764"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "f6f5cae3-71cc-4f8b-ba31-cf1fe82a6c6c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "fa4e5c1c-d9cd-4589-9c73-fa5599112786"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538083454752-7KGTNCC65C5MTNOPWEZ7/Guatemala.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad4a44e4966b40cfed8bfa",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Guatemala Antigua",
+  "url": "https://www.fairhoperoasting.com/coffee/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "012e5e16-d0bd-4648-bd4e-f5867f675080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "038b8564-266c-4f49-a620-ebda29c43766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "131b1c53-9e34-49b6-be4b-0c5722e83cac"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "18ac9a7e-7f90-4311-8edf-affdfdebbd74"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "46a04941-3cf0-4d9f-ba8e-59499b40ad55"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "5dab1acd-a279-4872-8607-2e3881d009ae"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "66b27511-1f55-4546-a38a-e872a5fbcc71"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "825b9e74-876c-467e-bcd9-935669075094"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "8e32b02d-d268-4e23-b6f9-39a685468eb0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "946d7a78-5db0-4979-8fca-a315e2b095d7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "af909bb3-8070-4099-8bcb-5562f1274143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "b396fd82-c6f6-4046-ab3a-947bb43ca005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "d7bbdcdc-c97e-4c9e-bb1c-b4f521b01bdc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "e4901f28-edf0-4581-835a-343b3fced082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "f9eabd7f-f3a3-4bae-9464-a186bdfa1f4c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "fecf179c-58da-4d40-970a-76d79bee2a26"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "kenyaaa",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538083543038-COZ7OIMFEU57MWVOJD8L/Kenya+AA.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad4aad8165f5e2ad170c8e",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Kenya AA",
+  "url": "https://www.fairhoperoasting.com/coffee/kenyaaa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "08ff7165-e85c-469d-87cd-96861537787e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "321aebe7-b467-40d4-97e1-7b75f33aefec"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "3c1fe1bb-51b3-4d1c-9471-62ff11c4beb4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "3cffe564-5c3e-4a80-8e26-8a541ccb3676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "5b227606-cfe6-4d2e-b241-7b1b7c95a842"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "6bde63fb-dff7-4658-a327-d1e48e1cd599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "705de48f-5673-480e-9684-1a8109ff937a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "8594c83b-2ffc-4a4c-9472-5d0e655c4b64"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "8d23e7a2-c9e0-4065-81dd-35c30330d9a4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "8e1c2f75-4b35-42ff-abe1-b4a337957ca0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "961a232c-8d0e-4d3d-b323-cdef7be482a3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "a78eea25-535f-4570-9f2b-a2517efa2b0f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "aa706b58-6a0d-4a93-883e-6f29e7f9c2e9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "cd1ee145-fda0-4a72-8033-47e3b2261cfb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "d8d374bd-c9a4-403f-9ecd-86590beacde7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "f5f59512-eb17-4d3f-a07c-3cd6fd5b5cec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538084121170-ROQRVXWUU8SD1KJ40QV5/Peru.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad4b8a0d9297f5ed519ac2",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Peru Chanchamayo",
+  "url": "https://www.fairhoperoasting.com/coffee/peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "3a9ee323-ef07-4d86-8e1f-c80d03af594b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "43d9fd9e-1442-4595-b75d-4397253259ad"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "64b55684-919e-4565-a47e-97fb1d10432c"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "74c169a1-d680-4dcf-9bfe-2c24fd80598d"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "79d4be52-404d-4b2a-9477-d16f13ceedb1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "ab30bd8d-134b-422f-89c8-801711183e75"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "aec52404-f6cc-4543-b28f-4e9d4566fde5"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "b17ac31e-c9eb-4d2a-8252-517c7933c1b1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "bac8a0e8-650d-42e6-b2ce-41495f512df3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "d0c80122-d226-4c83-b570-34afb3b6e3ac"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "d217634a-c5dc-477f-9400-622abee77ae9"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "e0d138d6-9645-4dc2-9605-87bdedfab275"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "e8bfac5d-a3c6-4f26-95a2-87865484b6d4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "ea0d2e31-62e4-4ddf-9ff9-1f367cc4379a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "ebae07fa-67aa-429f-af59-bbd0f8ec2988"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "f66f3d60-fdf5-452b-9d81-e3738f97f91d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9df547f32dd28498",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1538083982714-DQK183P14QH3Z1WS7L1H/Nicaragua.jpg",
+  "platform": "squarespace",
+  "product_id": "5bad4c4fe5e5f0ab8462fb61",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Nicaragua Madriz",
+  "url": "https://www.fairhoperoasting.com/coffee/nicaragua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "00322c1c-7d8f-4ea7-b040-1debab769658"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "2d06db50-4bf0-45a6-b57d-49ab494cbaf6"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "2ddcc0a6-e2a9-4065-9fbd-eda39339f5de"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "4b538c40-59af-4258-88b3-f9b5adb35701"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "51a4be49-e0a7-4f2e-bece-b5f088089332"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "5e2f40bc-30dd-4ac5-9932-7b1f0d8fa420"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "6c897293-cd53-4ff0-b348-1c2d04b8c007"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "6cc83e5c-6406-4397-9a4f-d093beef7360"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "6f20a554-9e99-4054-be82-bfa2f03b80d4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "8fb09b35-b30f-4fae-b110-fd2a908137f8"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "916b6b5a-5f14-48fa-a803-34068456f76f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "a2089574-a0fa-4254-8a86-f3536ecd5deb"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "bae768b7-b623-402b-a94d-98ad2d719283"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "d621a4e5-f326-4146-96eb-0972205bede8"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "e775e48e-eb7c-423d-be71-4309e0960d88"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "faf46bcf-a4b0-4e12-a8bb-644998cff168"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiaguji",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1554136279064-LCSO16FCQAX5L7WLCUU3/Ethiopia+Guji.jpg",
+  "platform": "squarespace",
+  "product_id": "5ca23c28e79c7020b919f875",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://www.fairhoperoasting.com/coffee/ethiopiaguji",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "1ed77370-7f17-4d1c-a1b9-21328a38df8e"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "289a1aad-8fa6-462e-beff-5953974fe6fd"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "3b63b0ae-858a-4cfb-b2d6-995ed52469ae"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "50470d14-2bb3-40e4-98cf-30a5dd5e0fe3"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "53746a9d-770a-4511-ba89-755368d67803"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "5bf3e151-44b7-4086-8dd5-bf2fa78dedc1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "62ff10f2-9c65-44b3-8ee2-00b01cef36dd"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "9400a69c-6efe-4bcf-9b22-2f6fa2c87bc4"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "98cc02aa-fc0a-47a7-8695-cf0310f4dbea"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "afeab471-efad-4022-a3ea-c91c3e1621ec"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "ebe95184-92e4-4719-86ba-e40836b511e5"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "ecd3a9c8-de8d-4273-8f7b-ca3cbbcd2c28"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "f273cd6c-4ac0-4002-ac80-7a86f04609c1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "f51337c9-fd23-4b70-b5c1-d7afb9ea3fd3"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "fc54a250-e921-46e8-81a5-97a608549344"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "fe7c78ab-af9b-4af2-9364-52b2e36f928a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "zimbabwe",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1554136250643-P4RGED08WXE1QM2UJTX8/Zimbabwe.jpg",
+  "platform": "squarespace",
+  "product_id": "5ca23c5c0022910001445723",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Zimbabwe AAA",
+  "url": "https://www.fairhoperoasting.com/coffee/zimbabwe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "09e1ab02-bc9f-4d9a-bc3e-d616bc0fff60"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "0ada816b-57af-494b-bdba-6e19073203af"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "1dabf5b7-c3b4-4943-a69d-e519d189d7f9"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "37be5667-70c0-43bd-a52f-cfe6d43a95ba"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "3ac1e7f0-68ff-4e3e-bde3-a80eb7534de2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "487fb7b1-7569-4992-9b76-9a1a272c61eb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "5293e5e8-e957-45a1-89de-8230a4711da6"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "5a1a0728-0775-47de-a2c5-840567a7830b"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "7f60ab96-571a-498b-b1b1-b412c33c5d5b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "8bbeff3f-7042-405d-906b-e85be59c54ba"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "8e7386d0-ca60-4ec8-b801-47063a874aae"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "9bdd5571-236a-4861-a1f3-57ad40f4ff95"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "a1c44755-2a93-4c63-a05a-c82e58584423"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "caf9d963-fb31-4e02-b622-4cf1533d7719"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "cf8f124e-d6d4-47ea-9aa0-de22545bc0b1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "e174237f-cf4e-4326-a359-517ff3518d6d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "myanmar",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1554136359795-XTUPGH0RWA9BEDF8A3BR/Myanmar.jpg",
+  "platform": "squarespace",
+  "product_id": "5ca23cf953450ac98255a538",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Myanmar Mandalay",
+  "url": "https://www.fairhoperoasting.com/coffee/myanmar",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "061fd7cb-19b1-4e31-a276-1b105de8f033"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "0641f554-0bef-48cc-82cd-1f7a29650feb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "247f8c6e-3940-49b0-af92-f188aa1be72a"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "25adb42e-b02e-4154-a66b-7e3404eb15ce"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "2b1c322f-15d9-401b-88e6-170b03d37a10"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "49538312-4bf8-4ba7-9b8c-102c06f1fc02"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "686bd086-dc3f-4f87-9c8c-1937f447bf99"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "75f6973b-3e97-44f3-952a-d4441448ef76"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "ac07e861-0e57-4897-adc8-b803c8757a2f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "bad6feb2-ba3c-47a3-863a-120fed3bec4c"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "c00b0abe-777f-420e-b679-c4d4767e787d"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "c97e61a5-03d8-4d72-8ef6-abfeabb0e092"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "cfa12bb6-6347-4c0b-8703-ba71a7b33476"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "d1bb3468-87b9-47aa-b443-a9b0208db08d"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "e45833af-0e14-4b75-b3e3-0b9a4eff7b31"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "fd21b3cd-4e52-4212-bf8d-b3f8486356fb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1554136449359-2NN2OKOE69B6ONTFAVCF/Mexico.jpg",
+  "platform": "squarespace",
+  "product_id": "5ca23d44971a181a1856a580",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Mexico Chiapas Turquesa",
+  "url": "https://www.fairhoperoasting.com/coffee/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "06df256a-030a-4c14-a628-1b91fa61f448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "15dd89f7-2726-47df-a95b-4254e3c1c93e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "4234cf84-4d29-43b2-97ed-73e8826d5a69"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "49e66370-ab40-4a99-a1ab-e8a8683ff088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "60c59977-6d48-4f95-b669-70ec0a3b678e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "8474c56e-6965-41fb-8828-a148f2615731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "a38abb98-b7cf-4517-8e1c-e5b50a4d4a48"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "d235c083-3772-4829-a094-185623d2e5d0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "d61bc2e9-ef1e-43ab-9b3c-4e5c3ab5be28"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "dde87480-432b-4323-b3da-d34646c6694a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "de8856b4-c0be-469d-ac18-b3e45f5b5b23"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "e5a34f12-b292-4894-8e21-21ca76cc5cbf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "e8b50f7d-1801-4524-967f-fc043c47795b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "f502323e-7182-4a3b-b0ba-0230b92db4bf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "f65193cf-77f4-424e-aa87-6d43d9f27ec5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "f924d48e-e104-4531-8af9-1aa40ac0d861"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "costaricahp",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1612894398688-XSGT9FCNP9Z2C7HOISLZ/Costa+Rica+HONEY+PROCESS.jpg",
+  "platform": "squarespace",
+  "product_id": "6022d03744bc442c02c2235d",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Costa Rica Honey Processed",
+  "url": "https://www.fairhoperoasting.com/coffee/costaricahp",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "049080cd-bc5c-43d4-a90d-1c3d0c247dba"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "1c11acea-ac06-4159-b1f7-05c55ac1508c"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "35ead273-ecae-4f81-9b7b-928b99fd3988"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "36f62014-5ebb-4e18-a0ee-656e426dbf92"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "377e8eb6-3db2-4f8d-9ebc-9414abcf09be"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "3c9b153f-fe1a-4d3e-8b9a-234fd523bf25"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "4062e2e4-0319-4a3f-88e5-0ef209afa484"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "5d700520-d5d1-4542-9db6-86374e1f42c0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "6041fe19-e632-4bc4-bcd2-84d23cc11cf1"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "64591a5f-a3d7-4351-9c09-7813cf7fe824"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "9dcca1c8-949a-4292-a062-9fa885b4bb44"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "c0c65c27-c23a-45c2-8d85-469bcf460962"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "c3261b61-9782-45e3-9b29-4316f58c1001"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "e166ac15-6a77-4ebd-b24d-fdfd73d4f029"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "f062e2e4-4016-406a-8c6f-3a166ef0355f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "f23ed61d-c1c1-440d-a2c8-58c1cbe78504"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "malabar",
+  "image": "https://static1.squarespace.com/static/55e9c91fe4b0ab8467771241/55ef0c8ee4b02a6ccd3e8b0e/60b7ae2a37717319fbbc5df9/1765990431498/",
+  "platform": "squarespace",
+  "product_id": "60b7ae2a37717319fbbc5df9",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Monsooned Malabar",
+  "url": "https://www.fairhoperoasting.com/coffee/malabar",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "011e0c3c-8560-4a24-84fa-187486788ec3"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "1d36cd1c-c9d5-4602-bce0-cbbcfabb94cb"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "214f7980-191d-4d89-919a-827d1005117c"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "4cdd9e87-e514-4367-8dd5-5150e7b0121b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "54841ced-fe35-49ac-a524-5db6457b3f5e"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "77645a2e-a2ed-48d8-b2d3-1542fde6bee4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "7f8e0a90-114d-4e17-9456-f28817dbd1f6"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "9ab658f3-cfee-475a-a846-c8cf861f97a5"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "a3e8a34e-a41e-4540-ad90-8c7525f8485a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "abac1204-e5e7-40b7-b75d-51de1b0547cb"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "c20c6637-2e20-407a-97d3-6b34754c3810"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "c3d5c152-2f70-4adf-ba53-540e74eaf0b1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "e4a92144-bc5f-40c2-80b5-abd9c218be77"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "e7b87c05-846f-4db2-9d34-67f46ac8b37c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "e811089c-aac4-455c-9eec-94d0da56a5e4"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "fb02a448-a074-4d8f-ae05-7459f7fccede"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "moms-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1683846595161-ZEN0R13E7G0YKHCYTE3D/Moms+Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "645d73ea335dd71d81598037",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "house blend",
+   "medium roast"
+  ],
+  "title": "Mom's Blend",
+  "url": "https://www.fairhoperoasting.com/coffee/moms-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "1a542fe5-480b-4a8d-8f69-db52eadf0b46"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "38318ee7-09a5-4996-a829-b02e3dcbde46"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "3e1c8bc3-1213-49e0-b809-2b32447a0915"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "65dbf733-7c5c-4677-a6cf-2d4fdb640405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "7089dfae-77f8-4cf2-b317-0326bd136274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "741594ca-6be0-484a-8720-c8f7a6d0ac74"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "79214d6b-2d04-4cde-a492-a449187bc88d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "aea1a248-dcb0-44b9-abaf-bb1a00c51579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "b96fc6b1-8615-410c-a868-e258871cb713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "c771c1a4-dc4a-4690-b42a-2f033f17e184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "d2bb2889-7487-4260-af0f-a46a6cd8f4da"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "df6bafc7-3bd3-4d4a-ab05-6f2ede4397c1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "ec479b1a-df98-455d-82ff-17304d837f31"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "f7b3a9c9-e032-4d82-9ee2-37c0ab722dbd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "f9cb894a-d0a3-4170-bf2f-33bab0863668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "fbe4050e-b311-4bae-880e-67e7639eb320"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "gulfcoastroast",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1685140982749-4UK3WBMF0M8CL3ZK5AMP/Gulf+Coast+Roast.jpg",
+  "platform": "squarespace",
+  "product_id": "647135e20c28727467f42453",
+  "product_type": "Blends",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Blends",
+   "coffee",
+   "house blend",
+   "medium roast"
+  ],
+  "title": "Gulf Coast Roast",
+  "url": "https://www.fairhoperoasting.com/coffee/gulfcoastroast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground No",
+    "variant_id": "09bb605e-0a4b-4fb0-928f-f0e55bdf09b9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "0e75d667-e334-453e-984f-cd78521ed35a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "23a4b415-2aa1-4885-9144-0792eba68cf9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "340cfc95-76d7-488e-9f06-5dad73ea98a5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "410f3319-33b4-4b05-9ca5-fdcaddda0a9d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "4a41ad62-ca74-4b88-8474-b19317eee48e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "67476f74-9117-4b7a-87fb-cfe0b1035597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "6d1db72e-0b7d-4e3e-b466-439339f27451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "6e8d8c74-7374-47cb-b37d-9f41a90db936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "8b1892ce-bfed-41f0-8822-1e800c824338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "b376579f-eff6-4f14-8d16-503c88cd79a2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Ground No",
+    "variant_id": "c0f20a4e-0adf-4d3d-b36d-b034258aa42a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground No",
+    "variant_id": "dd2cc5e4-d669-43f3-9f63-d0b15a292da8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "32 ounces Ground No",
+    "variant_id": "e1d508b0-75c8-4590-97c1-5bcc5be2399d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "f27f6c0f-dcc1-4bea-98ed-59a46a925175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "f43c2d97-e3ad-49a5-b728-ce3c8a1a9737"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiaharrar",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1690921983915-N0IHGOOCVJDJZ7ZGMJS4/Ethiopia+Harrar.jpg",
+  "platform": "squarespace",
+  "product_id": "64c96be30f0eac6aa2857d30",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Light Roast",
+   "Single Origin",
+   "coffee",
+   "ethiopian"
+  ],
+  "title": "Ethiopia Harrar",
+  "url": "https://www.fairhoperoasting.com/coffee/ethiopiaharrar",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "15ce1e92-77f0-4721-9896-68d47f277b7a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "36ca05ec-7304-4f00-b7f5-1e21cf7c1362"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "39bd7b4e-cd18-4fb4-9855-eb598e10e61a"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "40c5157b-03f6-42eb-82e4-8115b0ee0055"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "4f4b7b2d-0f40-4c29-b9d6-d764fc4c88d7"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "527b8dc4-0a25-461e-bf8d-916a6f46647d"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "736cc540-39af-463e-a4fd-a222f482643b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "91095d19-705b-4f1b-8167-65ed6702edc5"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "a5c6281b-731e-4bcd-9293-ce6b8459c649"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "b2b6c8bc-fb60-47bb-b19c-1986b0e9b3f9"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "b67e259c-e837-422b-8678-70767dfbf263"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "b6e6290d-dba1-4585-8746-1c6c08c5842f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "b72bef13-ab52-432b-b244-d18b071eb0ef"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "b7907615-a536-47f9-a09d-3a13c040f801"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "e4a5b686-4bf2-4a62-b735-c88db5bc4213"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "f6990c6d-b22c-4610-afb8-9c1b310f12fb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39cd6818b19a7d21",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiamokamba",
+  "image": "https://images.squarespace-cdn.com/content/v1/55e9c91fe4b0ab8467771241/1690922226864-FRYNVOL5FLOIXN9YAQZR/Ethiopia+Mokamba.jpg",
+  "platform": "squarespace",
+  "product_id": "64c96c85f115242869261b8f",
+  "product_type": "Single Origin",
+  "roaster_slug": "fairhoperoasting",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "ethiopian",
+   "medium roast"
+  ],
+  "title": "Ethiopia Mokamba",
+  "url": "https://www.fairhoperoasting.com/coffee/ethiopiamokamba",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean No",
+    "variant_id": "0f4ab69c-7b4a-47dd-8c1b-6cb9261bf07f"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground No",
+    "variant_id": "1a2d40cd-10c4-4246-b715-46e539878323"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground Yes",
+    "variant_id": "450a53c5-4078-4bfa-9aec-6a5cd263caff"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean Yes",
+    "variant_id": "4edf37ab-c94b-4246-8b93-7a44f0e9c12e"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground No",
+    "variant_id": "58453323-4a20-4a25-84ca-c12ef3b8c229"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Whole Bean Yes",
+    "variant_id": "643f8fa2-2e99-4aea-9197-b0fb03cacd26"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean Yes",
+    "variant_id": "67f1f704-69e0-4668-bfbf-b30d83d0a202"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Ground Yes",
+    "variant_id": "7673b49e-4eda-45ef-91ed-ffca08a22d3c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Whole Bean No",
+    "variant_id": "7bc52500-d4a0-4896-bfa3-944e9be7dc23"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Whole Bean No",
+    "variant_id": "a129b2ae-c36c-4cb0-862d-f3d850c35b7b"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5lb Ground No",
+    "variant_id": "a501cc19-dd9f-4a1f-aeb6-9f1ec25a7673"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean Yes",
+    "variant_id": "b224eb9d-ad3d-40fa-9518-058f1e7999ea"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 33.75,
+    "title": "32 ounces Whole Bean No",
+    "variant_id": "b6c2a261-b48a-48a0-9aa3-9bc80c349a6e"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "16 ounces Ground Yes",
+    "variant_id": "be57f16f-c1d8-4457-9c32-26e768ba2c20"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground No",
+    "variant_id": "cd74c4a6-5cb9-4049-aafe-3142ba554ba9"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12 ounces Ground Yes",
+    "variant_id": "d1c2f08b-293b-4a4e-97e9-23ec3cc20887"
+   }
+  ],
+  "vendor": ""
+ }
+]

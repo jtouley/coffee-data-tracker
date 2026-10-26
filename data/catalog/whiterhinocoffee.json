@@ -1,0 +1,1918 @@
+[
+ {
+  "body_hash": "ae2e3d95a1c63d07",
+  "first_seen": "2026-10-26",
+  "handle": "belt-lind-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FUJI9464_copy.png?v=1761250532",
+  "platform": "shopify",
+  "product_id": "7806793580707",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White",
+   "Best Sellers",
+   "Blend",
+   "Medium Blend",
+   "Subscription"
+  ],
+  "title": "Belt Line Blend (Drip Blend)",
+  "url": "https://whiterhinocoffee.com/products/belt-lind-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42793524756643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "42793524789411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42793524822179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "42793524887715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42793524920483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42793528328355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42808687165603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43261099180195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43261099212963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43261099245731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43261099278499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43261099311267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "43261099344035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43261099376803"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "1c67346034898a1e",
+  "first_seen": "2026-10-26",
+  "handle": "hidden-eagle-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FUJI9461_copy_1a847613-803e-4ef2-b42e-1944156dc778.png?v=1761250735",
+  "platform": "shopify",
+  "product_id": "7806797938851",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White",
+   "Best Sellers",
+   "Blend",
+   "Subscription"
+  ],
+  "title": "Hidden Eagle (Espresso Blend)",
+  "url": "https://whiterhinocoffee.com/products/hidden-eagle-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42793522626723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42793522659491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "42793522692259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42793522725027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42793522757795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "42793522790563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42793522823331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43261101277347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43261101310115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43261101342883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43261101375651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43261101408419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "43261101441187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43261101473955"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "c2f981fd16ac0b59",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Decaf_Dark_Square.png?v=1761252937",
+  "platform": "shopify",
+  "product_id": "7806820647075",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White",
+   "Best Sellers",
+   "Subscription",
+   "Subscription Medium Roast",
+   "Subscription Roasts"
+  ],
+  "title": "Decaf",
+  "url": "https://whiterhinocoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42793559523491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42793559556259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "42793559589027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42793559621795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42793559654563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "42793559687331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42793559720099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43261105504419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43261105537187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43261105569955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43261105602723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43261105635491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "43261105668259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43261105701027"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "961d40ca646eea9a",
+  "first_seen": "2026-10-26",
+  "handle": "belt-line-blend-5lbs-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkDailyDose.png?v=1788294003",
+  "platform": "shopify",
+  "product_id": "7910452592803",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White"
+  ],
+  "title": "Daily Dose",
+  "url": "https://whiterhinocoffee.com/products/belt-line-blend-5lbs-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43080305770659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Drip / 12oz",
+    "variant_id": "43080305836195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Cold Brew / 12oz",
+    "variant_id": "43080305868963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Espresso* / 12oz",
+    "variant_id": "43080305901731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47726939668643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Drip / 5lb",
+    "variant_id": "47726939734179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Cold Brew / 5lb",
+    "variant_id": "47726939766947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Espresso* / 5lb",
+    "variant_id": "47726939799715"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "ba27180eba3b11c1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-5lbs-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkBuzzkill.png?v=1788294809",
+  "platform": "shopify",
+  "product_id": "7910453215395",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [],
+  "title": "Buzzkill (Decaf)",
+  "url": "https://whiterhinocoffee.com/products/decaf-5lbs-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 63.0,
+    "title": "Whole Bean",
+    "variant_id": "43080307245219"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 63.0,
+    "title": "Drip",
+    "variant_id": "43080307310755"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 63.0,
+    "title": "Cold Brew",
+    "variant_id": "43080307343523"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 63.0,
+    "title": "Espresso*",
+    "variant_id": "43080307376291"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "b3f38e0053edcda7",
+  "first_seen": "2026-10-26",
+  "handle": "hidden-eagle-espresso-5lbs-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkFineLine.png?v=1788293891",
+  "platform": "shopify",
+  "product_id": "7910453608611",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White"
+  ],
+  "title": "Fine Line (Espresso)",
+  "url": "https://whiterhinocoffee.com/products/hidden-eagle-espresso-5lbs-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43080315568291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Drip / 12oz",
+    "variant_id": "43080315633827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Cold Brew / 12oz",
+    "variant_id": "43080315666595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Espresso* / 12oz",
+    "variant_id": "43080315699363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47625657450659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Drip / 5lb",
+    "variant_id": "47625657516195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Cold Brew / 5lb",
+    "variant_id": "47625657548963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Espresso* / 5lb",
+    "variant_id": "47625657581731"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "306269961a5313b9",
+  "first_seen": "2026-10-26",
+  "handle": "variety-syrups-1l",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Monin_Line_Up.jpg?v=1792075069",
+  "platform": "shopify",
+  "product_id": "7910461800611",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [],
+  "title": "Variety Syrups - 750ml",
+  "url": "https://whiterhinocoffee.com/products/variety-syrups-1l",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Vanilla",
+    "variant_id": "43080482160803"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Hazelnut",
+    "variant_id": "43080482193571"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Sugar-Free Vanilla",
+    "variant_id": "43080482226339"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Sugar-Free Hazelnut",
+    "variant_id": "43080482259107"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Pure Sugar Cane",
+    "variant_id": "43080482291875"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Almond",
+    "variant_id": "43080482324643"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Peppermint",
+    "variant_id": "43080482357411"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Lavender Lemon",
+    "variant_id": "43080482390179"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Apple",
+    "variant_id": "43542062366883"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Cinnamon",
+    "variant_id": "67693355565219"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Caramel",
+    "variant_id": "67693372375203"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "3009271c58ced441",
+  "first_seen": "2026-10-26",
+  "handle": "64oz-sauces",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/products/Hollander.jpg?v=1680880294",
+  "platform": "shopify",
+  "product_id": "7971901210787",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [],
+  "title": "Variety Sauces - 64oz",
+  "url": "https://whiterhinocoffee.com/products/64oz-sauces",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Caramel",
+    "variant_id": "43259749007523"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Dark Chocolate",
+    "variant_id": "43259749040291"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "White Chocolate",
+    "variant_id": "43259749073059"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "c68b0d4dbed4fff2",
+  "first_seen": "2026-10-26",
+  "handle": "eversys-coffee-cleaning-tabs-62ct",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/products/ES-CB-62.jpg?v=1680876704",
+  "platform": "shopify",
+  "product_id": "8000538411171",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [],
+  "title": "Eversys Coffee Cleaning Tabs (62ct)",
+  "url": "https://whiterhinocoffee.com/products/eversys-coffee-cleaning-tabs-62ct",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "43344647651491"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "bca0b765f45c2a27",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-belt-line-blend-4oz-pack-ground",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8000582975651",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "OC"
+  ],
+  "title": "Our Coffee Blend - 3.5oz Packs",
+  "url": "https://whiterhinocoffee.com/products/copy-of-belt-line-blend-4oz-pack-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 42.0,
+    "title": "10ct",
+    "variant_id": "43344897409187"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "20ct",
+    "variant_id": "43344897441955"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 157.5,
+    "title": "40ct",
+    "variant_id": "43344897474723"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "743d172fac621a98",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Summer_Cold_Brew.jpg?v=1697042781",
+  "platform": "shopify",
+  "product_id": "8088823038115",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White",
+   "Blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://whiterhinocoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43611895464099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "43611895496867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "43611895529635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "43611895562403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "43611895595171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "43611895627939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "43611895660707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43611895693475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43611895726243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / French Press",
+    "variant_id": "43611895759011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Drip",
+    "variant_id": "43611895791779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43611895824547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "43611895857315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43611895890083"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "4113c4e00dfbcd35",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kayon-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FUJI9460_copy.png?v=1761250816",
+  "platform": "shopify",
+  "product_id": "8375728242851",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Best Sellers",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Kayon Mountain",
+  "url": "https://whiterhinocoffee.com/products/ethiopia-kayon-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44444578545827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44444578611363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "44444578644131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "44444578676899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "44444578709667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "44444578742435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "44444578775203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44444578807971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44444578840739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / French Press",
+    "variant_id": "44444578873507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Drip",
+    "variant_id": "44444578906275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "44444578939043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "44444578971811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Espresso",
+    "variant_id": "44444579004579"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hanks-espresso-brown-boot-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504234672291",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Hank's Espresso",
+  "url": "https://whiterhinocoffee.com/products/hanks-espresso-brown-boot-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740002283683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740002316451"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bootstrap-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504241029283",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Bootstrap Blend",
+  "url": "https://whiterhinocoffee.com/products/bootstrap-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740013228195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740013260963"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "clydes-roast",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504242077859",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Clyde's Roast",
+  "url": "https://whiterhinocoffee.com/products/clydes-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740015751331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740015784099"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bison-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504242307235",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Bison Blend",
+  "url": "https://whiterhinocoffee.com/products/bison-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740016210083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740016242851"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dicks-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504242536611",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Dick's Blend",
+  "url": "https://whiterhinocoffee.com/products/dicks-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740016767139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740016799907"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kayon-mountain-1",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504242765987",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Ethiopia Kayon Mountain",
+  "url": "https://whiterhinocoffee.com/products/ethiopia-kayon-mountain-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz - Retail",
+    "variant_id": "44740017193123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb - Bulk",
+    "variant_id": "44740017225891"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santa-lucia",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504245190819",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Brazil Santa Lucia",
+  "url": "https://whiterhinocoffee.com/products/brazil-santa-lucia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740023812259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740023845027"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "peru-lima-norte",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8504247222435",
+  "product_type": "",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "brownboot"
+  ],
+  "title": "Peru Lima Norte",
+  "url": "https://whiterhinocoffee.com/products/peru-lima-norte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz - Retail",
+    "variant_id": "44740028792995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb - Bulk",
+    "variant_id": "44740028825763"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "belt-line-blend-5lbs-bulk-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8631281418403",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "gold",
+   "hpumc",
+   "login with shop",
+   "shop",
+   "wholesale"
+  ],
+  "title": "Belong Blend",
+  "url": "https://whiterhinocoffee.com/products/belt-line-blend-5lbs-bulk-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 63.0,
+    "title": "Whole Bean",
+    "variant_id": "45366047342755"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 85.0,
+    "title": "Drip - Large",
+    "variant_id": "45366047375523"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 85.0,
+    "title": "Drip - Small",
+    "variant_id": "45366047408291"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 85.0,
+    "title": "Cold Brew",
+    "variant_id": "45366047441059"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 85.0,
+    "title": "Espresso*",
+    "variant_id": "45366047473827"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "050130e04a3d1063",
+  "first_seen": "2026-10-26",
+  "handle": "giddy-up",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Label_Mockup_GIDDY_Square.png?v=1779285462",
+  "platform": "shopify",
+  "product_id": "8638555127971",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Best Sellers",
+   "Blend",
+   "Subscription",
+   "dark roast",
+   "login with shop",
+   "shop"
+  ],
+  "title": "Giddy Up",
+  "url": "https://whiterhinocoffee.com/products/giddy-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45393476780195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45393476812963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "45393476845731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "45393476878499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "45393476911267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "45393476944035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "45393476976803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45393477009571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45393477042339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "45393477075107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "45393477107875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "45393477140643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "45393477173411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "45393477206179"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "03218641c8ebc537",
+  "first_seen": "2026-10-26",
+  "handle": "hugs-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Screenshot2024-12-02at2.58.58PM.png?v=1733173148",
+  "platform": "shopify",
+  "product_id": "8649532211363",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Blend",
+   "Hugs",
+   "shop",
+   "wholesale"
+  ],
+  "title": "Hugs Blend",
+  "url": "https://whiterhinocoffee.com/products/hugs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45432780259491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45432780292259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / French Press",
+    "variant_id": "45432780325027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Drip",
+    "variant_id": "45432780357795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Pour Over",
+    "variant_id": "45432780390563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Aeropress",
+    "variant_id": "45432780423331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "12oz / Espresso",
+    "variant_id": "45432780456099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45432780488867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45432780521635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / French Press",
+    "variant_id": "45432780554403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Drip",
+    "variant_id": "45432780587171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "45432780619939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "45432780652707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.5,
+    "title": "5lb / Espresso",
+    "variant_id": "45432780685475"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz / Drip",
+    "variant_id": "46290618646691"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "c2f981fd16ac0b59",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-copy-maddie-1",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/Decaf.jpg?v=1697040189",
+  "platform": "shopify",
+  "product_id": "8659358843043",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Best Sellers",
+   "Subscription",
+   "Subscription Medium Roast",
+   "Subscription Roasts"
+  ],
+  "title": "Decaf",
+  "url": "https://whiterhinocoffee.com/products/decaf-copy-maddie-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45467589640355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45467589673123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "45467589705891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "45467589738659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "45467589771427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "45467589804195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "45467589836963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45467589869731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45467589902499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "45467589935267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "45467589968035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "45467590000803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "45467590033571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "45467590066339"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "baff9d9a3dfee11e",
+  "first_seen": "2026-10-26",
+  "handle": "rotating-bulk-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkKayonMountain.png?v=1788294035",
+  "platform": "shopify",
+  "product_id": "8725018312867",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Best Sellers",
+   "Single Origin",
+   "wholesale"
+  ],
+  "title": "Rotating Bulk Single Origin",
+  "url": "https://whiterhinocoffee.com/products/rotating-bulk-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45703595884707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45703595917475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "45703595950243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "45703595983011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "45703596015779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "45703596048547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "45703596081315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45703596114083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45703596146851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / French Press",
+    "variant_id": "45703596179619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Drip",
+    "variant_id": "45703596212387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "45703596245155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "45703596277923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "5lb / Espresso",
+    "variant_id": "45703596310691"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "789cf28f027c65c7",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend-bulk-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkIcebreaker.png?v=1788294736",
+  "platform": "shopify",
+  "product_id": "9072792207523",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White",
+   "Blend"
+  ],
+  "title": "Icebreaker (Cold Brew)",
+  "url": "https://whiterhinocoffee.com/products/cold-brew-blend-bulk-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47518433444003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "47518433476771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / French Press",
+    "variant_id": "47518433509539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Drip",
+    "variant_id": "47518433542307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47518433575075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "47518433607843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47518433640611"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ },
+ {
+  "body_hash": "1035daa65f57feba",
+  "first_seen": "2026-10-26",
+  "handle": "icebreaker-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0419/9199/5555/files/FineFolkAfterHours.png?v=1788294245",
+  "platform": "shopify",
+  "product_id": "9238469902499",
+  "product_type": "Coffee",
+  "roaster_slug": "whiterhinocoffee",
+  "tags": [
+   "Baylor Scott & White"
+  ],
+  "title": "After Hours (Dark Roast)",
+  "url": "https://whiterhinocoffee.com/products/icebreaker-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48072313536675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48072313569443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Drip / 12oz",
+    "variant_id": "48072313602211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Drip / 5lb",
+    "variant_id": "48072313634979"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Cold Brew / 12oz",
+    "variant_id": "48072313667747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Cold Brew / 5lb",
+    "variant_id": "48072313700515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.6,
+    "title": "Espresso* / 12oz",
+    "variant_id": "48072313733283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.0,
+    "title": "Espresso* / 5lb",
+    "variant_id": "48072313766051"
+   }
+  ],
+  "vendor": "White Rhino Coffee"
+ }
+]

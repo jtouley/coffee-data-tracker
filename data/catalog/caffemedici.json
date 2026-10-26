@@ -1,0 +1,2106 @@
+[
+ {
+  "body_hash": "bd8cfa55fa69d450",
+  "first_seen": "2026-10-26",
+  "handle": "clarksville-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Clarksville2026-SIDE.png?v=1779313380",
+  "platform": "shopify",
+  "product_id": "4497396727886",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "House Blends",
+   "coffee"
+  ],
+  "title": "Clarksville Blend",
+  "url": "https://mediciroasting.com/products/clarksville-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "31951854338126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "31951854370894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "31951854403662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31951854436430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "31951854469198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "31951854501966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "31951854534734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40323484549303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43354346946812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "44039042302204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "44039042334972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "44039042367740"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.8,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "46744054268156"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "29177d44265da77d",
+  "first_seen": "2026-10-26",
+  "handle": "la-famiglia-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/LaFamiglia2026-SIDE.png?v=1779313247",
+  "platform": "shopify",
+  "product_id": "4497405182030",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "House Blends",
+   "coffee"
+  ],
+  "title": "La Famiglia Espresso Blend",
+  "url": "https://mediciroasting.com/products/la-famiglia-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "31951918596174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "31951918628942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "31951918661710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31951918694478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "31951918727246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "31951918760014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "31951918792782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40323500572855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44039100301564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "44039100334332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "44039100367100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "44039100399868"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.8,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "46744231641340"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "06d45de4ffa11539",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Decaf_2025_-_SIDE.png?v=1754688393",
+  "platform": "shopify",
+  "product_id": "4497414062158",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Colombian Coffee",
+   "House Blends",
+   "coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://mediciroasting.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31951865020494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "31951865053262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "31951865086030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "31951865118798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31951865151566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Drip",
+    "variant_id": "31951865184334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "31951865217102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "31951865249870"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44039078674684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Drip",
+    "variant_id": "44039078740220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "44039078772988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "44039078805756"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.45,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "48819569787132"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.45,
+    "title": "8oz Sample Size / Drip",
+    "variant_id": "48819569819900"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.45,
+    "title": "8oz Sample Size / Pour Over/Cone",
+    "variant_id": "48819569852668"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.45,
+    "title": "8oz Sample Size / French Press/Cold Brew",
+    "variant_id": "48819569885436"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "eea079896e236813",
+  "first_seen": "2026-10-26",
+  "handle": "notte-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Notte_-_white_-_SIDE.png?v=1754688444",
+  "platform": "shopify",
+  "product_id": "4661833957454",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "House Blends",
+   "coffee"
+  ],
+  "title": "Notte Dark Roast",
+  "url": "https://mediciroasting.com/products/notte-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32073068249166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "32073068281934"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "32073068314702"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "32073068347470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32073068380238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "32073068445774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "32073068511310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "32073068544078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44039244087548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "44039244120316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "44039244153084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "44039244185852"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.8,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "47199452725500"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "ec42e82613687f64",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/BreakfastBlend2026-SIDE.png?v=1786716538",
+  "platform": "shopify",
+  "product_id": "8089275728124",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "House Blends",
+   "coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://mediciroasting.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44452640063740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "44452640096508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "44452640129276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "44452640162044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44452640194812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "44452640227580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "44452640260348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "44452640293116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44452640325884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "44452640358652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "44452640391420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "44452640424188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.8,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "46665150136572"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "fc12afbc6df17553",
+  "first_seen": "2026-10-26",
+  "handle": "rosella-tonic-250g",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8762084950268",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Rosella (Herbal Tonic) 1000g",
+  "url": "https://mediciroasting.com/products/rosella-tonic-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1179,
+    "price_usd": 187.2,
+    "title": "Default Title",
+    "variant_id": "46487482728700"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "2f7e8932376ead7d",
+  "first_seen": "2026-10-26",
+  "handle": "ambrosia-black-1000g",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8762090881276",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Ambrosia (Black) 1000g",
+  "url": "https://mediciroasting.com/products/ambrosia-black-1000g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 187.2,
+    "title": "Default Title",
+    "variant_id": "46487534502140"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "0ab05c6aca7baa35",
+  "first_seen": "2026-10-26",
+  "handle": "morning-mist-green-250g",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8762093043964",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Morning Mist (Green) 250g",
+  "url": "https://mediciroasting.com/products/morning-mist-green-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.8,
+    "title": "Default Title",
+    "variant_id": "46487543742716"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "d1b8a81dae136e4c",
+  "first_seen": "2026-10-26",
+  "handle": "malabar-herbal-tonic-250g",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8762093568252",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Malabar (Herbal Tonic) 250g",
+  "url": "https://mediciroasting.com/products/malabar-herbal-tonic-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.8,
+    "title": "Default Title",
+    "variant_id": "46487545118972"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "fc12afbc6df17553",
+  "first_seen": "2026-10-26",
+  "handle": "rosella-herbal-tonic-50g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/DSC4069.webp?v=1727275990",
+  "platform": "shopify",
+  "product_id": "8762125418748",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Rosella (Herbal Tonic) 50g",
+  "url": "https://mediciroasting.com/products/rosella-herbal-tonic-50g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "46487730979068"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "0ab05c6aca7baa35",
+  "first_seen": "2026-10-26",
+  "handle": "morning-mist-green-50g-retail",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/MORNINGMIST7621.webp?v=1727275943",
+  "platform": "shopify",
+  "product_id": "8762244530428",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Morning Mist (Green) 50g",
+  "url": "https://mediciroasting.com/products/morning-mist-green-50g-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "46488222400764"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "2f7e8932376ead7d",
+  "first_seen": "2026-10-26",
+  "handle": "ambrosia-black-50g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/AMBROSIA7534.webp?v=1727275831",
+  "platform": "shopify",
+  "product_id": "8762245153020",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Ambrosia (Black) 50g",
+  "url": "https://mediciroasting.com/products/ambrosia-black-50g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "46488223777020"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "d1b8a81dae136e4c",
+  "first_seen": "2026-10-26",
+  "handle": "malabar-herbal-tonic-50g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/MALABAR7575.webp?v=1727275912",
+  "platform": "shopify",
+  "product_id": "8762245349628",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Malabar (Herbal Tonic) 50g",
+  "url": "https://mediciroasting.com/products/malabar-herbal-tonic-50g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "46488224039164"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "e791d9d78133d3eb",
+  "first_seen": "2026-10-26",
+  "handle": "true-north-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/TRUENORTH-SIDE_1.png?v=1745867041",
+  "platform": "shopify",
+  "product_id": "8958055809276",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [],
+  "title": "True North Blend",
+  "url": "https://mediciroasting.com/products/true-north-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47116435882236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "47116435915004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "47116435947772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47116435980540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "47116436013308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "47116436046076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47116436078844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "47116436111612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "47116436144380"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.8,
+    "title": "8oz / Whole Bean",
+    "variant_id": "47116436177148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "47120923197692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "47120923230460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "47120923263228"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "e0ecd28e668e2dac",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-sierra-magica-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/SierraMagica-SIDE.png?v=1759232333",
+  "platform": "shopify",
+  "product_id": "9104739074300",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Mexico Sierra Mágica Washed",
+  "url": "https://mediciroasting.com/products/mexico-sierra-magica-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48146553438460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48146553471228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "48146553503996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "48146553536764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48146553569532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48146553602300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / Drip",
+    "variant_id": "48146553635068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "48146553667836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48146553700604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48146553733372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip",
+    "variant_id": "48146553766140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "48146553798908"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "48146553831676"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "673c9e75e8860b15",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-anasora-guji-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/AnasoraGuji-SIDE_b133bfc8-52ac-4700-88c2-7e77f46099e8.png?v=1760452433",
+  "platform": "shopify",
+  "product_id": "9129233416444",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Anasora Guji Natural",
+  "url": "https://mediciroasting.com/products/ethiopia-anasora-guji-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48238672969980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48238673002748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "48238673035516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "48238673068284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48238673101052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48238673133820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Drip",
+    "variant_id": "48238673166588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "48238673199356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48238673232124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48238673264892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Drip",
+    "variant_id": "48238673297660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "48238673330428"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "48238673363196"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "5a69036400e8acd5",
+  "first_seen": "2026-10-26",
+  "handle": "oakwood-la-famiglia",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Oakwood-LaFamiglia.png?v=1766435383",
+  "platform": "shopify",
+  "product_id": "9197189333244",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "coffee",
+   "wholesale-only"
+  ],
+  "title": "Oakwood La Famiglia",
+  "url": "https://mediciroasting.com/products/oakwood-la-famiglia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48620613271804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "48620613304572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "48620613337340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "48620613370108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48620613402876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "48620613435644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "48620613468412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "48620613501180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48620613533948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "48620613566716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "48620613599484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "48620613632252"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "cdfe0af4b80ea34b",
+  "first_seen": "2026-10-26",
+  "handle": "oakwood-headwaters",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Oakwood-Headwaters.png?v=1766436822",
+  "platform": "shopify",
+  "product_id": "9197192151292",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "coffee",
+   "wholesale-only"
+  ],
+  "title": "Oakwood Headwaters",
+  "url": "https://mediciroasting.com/products/oakwood-headwaters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48620634538236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "48620634571004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "48620634603772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "48620634636540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48620634669308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Drip",
+    "variant_id": "48620634702076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "48620634734844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "48620634767612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48620634800380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Drip",
+    "variant_id": "48620634833148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "48620634865916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "48620634898684"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "7694d170aa67802a",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-cyiya-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Cyiya2026-SIDE.png?v=1772214717",
+  "platform": "shopify",
+  "product_id": "9240415011068",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Rwanda Cyiya Washed",
+  "url": "https://mediciroasting.com/products/rwanda-cyiya-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48758530212092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48758530244860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Drip",
+    "variant_id": "48758530277628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "48758530310396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48758530343164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48758530375932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Drip",
+    "variant_id": "48758530408700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "48758530441468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48758530474236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48758530507004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Drip",
+    "variant_id": "48758530539772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "48758530572540"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "48758530605308"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "fe19817d31093721",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-gotiti-natural-anaerobic-pineapple-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/PineappleCoFerment.png?v=1779312820",
+  "platform": "shopify",
+  "product_id": "9240417140988",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Banko Gotiti Natural Anaerobic Pineapple Co-ferment",
+  "url": "https://mediciroasting.com/products/ethiopia-banko-gotiti-natural-anaerobic-pineapple-co-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "48758535323900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48758535356668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48758535389436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb / Drip",
+    "variant_id": "48758535422204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb / French Press / Cold Brew",
+    "variant_id": "48758535454972"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "bd936d1dcc3f5b78",
+  "first_seen": "2026-10-26",
+  "handle": "cactus-moon-lodge-clarksville-ground-8oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Clarksville-FRONT.png?v=1754688404",
+  "platform": "shopify",
+  "product_id": "9262818984188",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "House Blends",
+   "coffee",
+   "wholesale-only"
+  ],
+  "title": "Cactus Moon Lodge Clarksville (Ground) 8oz Bag",
+  "url": "https://mediciroasting.com/products/cactus-moon-lodge-clarksville-ground-8oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.8,
+    "title": "Default Title",
+    "variant_id": "48852378747132"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "7102bdd4a2c54e6e",
+  "first_seen": "2026-10-26",
+  "handle": "cactus-moon-lodge-decaf-ground-8oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Decaf2025-FRONT.png?v=1754688393",
+  "platform": "shopify",
+  "product_id": "9262826914044",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "House Blends",
+   "coffee",
+   "wholesale-only"
+  ],
+  "title": "Cactus Moon Lodge Decaf (Ground) 8oz Bag",
+  "url": "https://mediciroasting.com/products/cactus-moon-lodge-decaf-ground-8oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.45,
+    "title": "Default Title",
+    "variant_id": "48852402962684"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "94bf709f82617017",
+  "first_seen": "2026-10-26",
+  "handle": "peru-hermanos-guerreros-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/HermanosGuerreros-SIDE.png?v=1779313313",
+  "platform": "shopify",
+  "product_id": "9275362181372",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Peru Hermanos Guerreros Natural",
+  "url": "https://mediciroasting.com/products/peru-hermanos-guerreros-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48901905580284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48901905613052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "48901905645820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "48901905678588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48901905711356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "48901905744124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Drip",
+    "variant_id": "48901905776892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "48901905809660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48901905842428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48901905875196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Drip",
+    "variant_id": "48901905907964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "48901905940732"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "48901905973500"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "e726be94d5eb9fd8",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/Cajamarca2026-SIDE_cfff202f-a943-479a-be2e-ed8944633649.png?v=1777665708",
+  "platform": "shopify",
+  "product_id": "9325397672188",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Peru Cajamarca Washed",
+  "url": "https://mediciroasting.com/products/peru-cajamarca-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49045154955516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "49045154988284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "49045155021052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "49045155053820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49045155086588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "49045155119356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Drip",
+    "variant_id": "49045155152124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "49045155184892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49045155217660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "49045155250428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Drip",
+    "variant_id": "49045155283196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "49045155315964"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "49045155348732"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "718b01b40487ce3b",
+  "first_seen": "2026-10-26",
+  "handle": "clear-heart-white-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/ClearHeartWhite-dryleaf_c3b67c64-90dc-4057-965b-6aea7d1bdcbb.webp?v=1779129772",
+  "platform": "shopify",
+  "product_id": "9338899857660",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Clear Heart (White) 250g",
+  "url": "https://mediciroasting.com/products/clear-heart-white-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 67.6,
+    "title": "Default Title",
+    "variant_id": "49116602663164"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "b260cf5f8c330f11",
+  "first_seen": "2026-10-26",
+  "handle": "honey-alpine-black-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/honeyalpineblackleaf.webp?v=1779130601",
+  "platform": "shopify",
+  "product_id": "9338905559292",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Honey Alpine (Black) 250g",
+  "url": "https://mediciroasting.com/products/honey-alpine-black-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 88.4,
+    "title": "Default Title",
+    "variant_id": "49116686450940"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "a54f67a7d037ff60",
+  "first_seen": "2026-10-26",
+  "handle": "magnolia-aroma-oolong-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/MagnoliaAromaArtboard1.webp?v=1779130785",
+  "platform": "shopify",
+  "product_id": "9338907492604",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Magnolia Aroma (Oolong) 250g",
+  "url": "https://mediciroasting.com/products/magnolia-aroma-oolong-250g",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 110.5,
+    "title": "Default Title",
+    "variant_id": "49116733669628"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "fd132a4bf8de45fe",
+  "first_seen": "2026-10-26",
+  "handle": "chamomile-herbal-tonic-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/CHAMOMILE7590.webp?v=1779131161",
+  "platform": "shopify",
+  "product_id": "9338910867708",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "Chamomile (Herbal Tonic) 250g",
+  "url": "https://mediciroasting.com/products/chamomile-herbal-tonic-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "49116759687420"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "47f3be66f4df22f8",
+  "first_seen": "2026-10-26",
+  "handle": "la-kouju-green-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/LaKouju5830.webp?v=1779131453",
+  "platform": "shopify",
+  "product_id": "9338912047356",
+  "product_type": "",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "Tea",
+   "wholesale-only"
+  ],
+  "title": "La Kouju (Green) 250g",
+  "url": "https://mediciroasting.com/products/la-kouju-green-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 88.4,
+    "title": "Default Title",
+    "variant_id": "49116761489660"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "f73b2c22ae335d84",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-paraiso-morcego",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/ParaisoMorcego-SIDE.png?v=1786716457",
+  "platform": "shopify",
+  "product_id": "9398389702908",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Brazil Paraíso Morcego Natural",
+  "url": "https://mediciroasting.com/products/brazil-paraiso-morcego",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50414893367548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "50414893400316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "50414893433084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press/ Cold Brew",
+    "variant_id": "50414893465852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50414893498620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "50414893531388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Drip",
+    "variant_id": "50414893564156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press/ Cold Brew",
+    "variant_id": "50414893596924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50414893629692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "50414893662460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Drip",
+    "variant_id": "50414893695228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press/ Cold Brew",
+    "variant_id": "50414893727996"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz Sample Size / Whole Bean",
+    "variant_id": "50414893760764"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ },
+ {
+  "body_hash": "cde03bafc0f2fce1",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0270/9392/5966/files/BirthdayBlend-SIDE.png?v=1788359517",
+  "platform": "shopify",
+  "product_id": "9443226190076",
+  "product_type": "Coffee",
+  "roaster_slug": "caffemedici",
+  "tags": [
+   "All",
+   "House Blends",
+   "coffee",
+   "gift"
+  ],
+  "title": "Birthday Blend",
+  "url": "https://mediciroasting.com/products/birthday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51020258607356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "51020258640124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over/Cone",
+    "variant_id": "51020258672892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "51020258705660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51020258738428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Drip",
+    "variant_id": "51020258771196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Pour Over/Cone",
+    "variant_id": "51020258803964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press/Cold Brew",
+    "variant_id": "51020258836732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51020258869500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Drip",
+    "variant_id": "51020258902268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Pour Over/Cone",
+    "variant_id": "51020258935036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "51020258967804"
+   }
+  ],
+  "vendor": "Medici Roasting"
+ }
+]

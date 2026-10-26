@@ -1,0 +1,593 @@
+[
+ {
+  "body_hash": "27afc4514b7783c3",
+  "first_seen": "2026-10-26",
+  "handle": "slightly-skewed",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-SlightlySkewedV210oz_3dab3693-936b-4864-9f2e-82acdf5f4e2d.jpg?v=1781104958",
+  "platform": "shopify",
+  "product_id": "1850213793903",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Slightly Skewed House Blend",
+  "url": "https://evermorecoffee.com/products/slightly-skewed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10oz bag",
+    "variant_id": "42005269283047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb bag",
+    "variant_id": "42005269315815"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "ef645219f044759f",
+  "first_seen": "2026-10-26",
+  "handle": "live-wire-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore_-_Web_Square-Live_Wire_V2_10oz.jpg?v=1780535090",
+  "platform": "shopify",
+  "product_id": "1850215825519",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Live Wire Espresso Blend",
+  "url": "https://evermorecoffee.com/products/live-wire-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10oz bag",
+    "variant_id": "42005271412967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb bag",
+    "variant_id": "42005271445735"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "dacfa35fecb1e821",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkinhead-halloween-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-Pumpkinhead202510oz.jpg?v=1758746905",
+  "platform": "shopify",
+  "product_id": "7057891066013",
+  "product_type": "",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Pumpkinhead Halloween Blend",
+  "url": "https://evermorecoffee.com/products/pumpkinhead-halloween-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "41125547442333"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "f9842380b5e792b4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-condor-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-CondorDecafV210oz.jpg?v=1758141769",
+  "platform": "shopify",
+  "product_id": "7765533622503",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Colombia Condor Decaf",
+  "url": "https://evermorecoffee.com/products/colombia-condor-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz bag",
+    "variant_id": "42940523741415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb bag",
+    "variant_id": "42940523774183"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "79ad230c9b3177be",
+  "first_seen": "2026-10-26",
+  "handle": "cold-start-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-ColdStartV210oz.jpg?v=1758142049",
+  "platform": "shopify",
+  "product_id": "7881823289575",
+  "product_type": "",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Cold Start Cold Brew Blend",
+  "url": "https://evermorecoffee.com/products/cold-start-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz",
+    "variant_id": "51268026368231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb",
+    "variant_id": "51268026400999"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "52f11be0e89e2e35",
+  "first_seen": "2026-10-26",
+  "handle": "dawn-patrol",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/products/DSCF3692.jpg?v=1672275703",
+  "platform": "shopify",
+  "product_id": "8277872148711",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Dawn Patrol",
+  "url": "https://evermorecoffee.com/products/dawn-patrol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz bag",
+    "variant_id": "45819509539047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb Bag",
+    "variant_id": "51268036460775"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "9f723b8176f51b33",
+  "first_seen": "2026-10-26",
+  "handle": "night-rider",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-NightRider.jpg?v=1755036628",
+  "platform": "shopify",
+  "product_id": "9069327352039",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Blends",
+   "Seasonal"
+  ],
+  "title": "Night Rider",
+  "url": "https://evermorecoffee.com/products/night-rider",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz",
+    "variant_id": "50571875582183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.0,
+    "title": "2lb",
+    "variant_id": "50571875614951"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "58d283f1ebc9354a",
+  "first_seen": "2026-10-26",
+  "handle": "hibiscus-berry",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/IMG_0412.jpg?v=1763571778",
+  "platform": "shopify",
+  "product_id": "9215259803879",
+  "product_type": "",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Hibiscus Berry Herbal Blend",
+  "url": "https://evermorecoffee.com/products/hibiscus-berry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "51070540087527"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "c5e0a0f362dab2cb",
+  "first_seen": "2026-10-26",
+  "handle": "airscape®-classic-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/whiteairscapemedium_241f82ce-343e-4491-8d8f-7546b13fa8fe.webp?v=1764305950",
+  "platform": "shopify",
+  "product_id": "9410040168679",
+  "product_type": "",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Airscape® Classic Coffee Canister",
+  "url": "https://evermorecoffee.com/products/airscape®-classic-coffee-canister",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "White",
+    "variant_id": "51597658915047"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "740e45c551c631f5",
+  "first_seen": "2026-10-26",
+  "handle": "night-rider-holiday-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/IMG_0930.png?v=1764784552",
+  "platform": "shopify",
+  "product_id": "9412557570279",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Blends",
+   "Seasonal"
+  ],
+  "title": "Night Rider Holiday Edition",
+  "url": "https://evermorecoffee.com/products/night-rider-holiday-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz",
+    "variant_id": "51607932666087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.0,
+    "title": "2lb",
+    "variant_id": "51607932698855"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "8355cec787173670",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-santa-maria",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Santa_Maria.jpg?v=1773337481",
+  "platform": "shopify",
+  "product_id": "9449802793191",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Colombia Huila Santa Maria",
+  "url": "https://evermorecoffee.com/products/colombia-huila-santa-maria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz bag",
+    "variant_id": "51753154543847"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lb bag",
+    "variant_id": "51753154576615"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "338c36d1ec2dbe85",
+  "first_seen": "2026-10-26",
+  "handle": "banana-bread-rooibos",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/IMG_4168.jpg?v=1778773677",
+  "platform": "shopify",
+  "product_id": "9538302968039",
+  "product_type": "",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Banana Bread Rooibos Blend",
+  "url": "https://evermorecoffee.com/products/banana-bread-rooibos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 95,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "52066807415015"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "cb40c0a4b1c306c1",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-edition-live-wire-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-LiveWireV210oz.jpg?v=1758140648",
+  "platform": "shopify",
+  "product_id": "9543495909607",
+  "product_type": "blend",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Blends",
+   "Meraki Edition"
+  ],
+  "title": "Meraki Edition Live Wire Espresso Blend",
+  "url": "https://evermorecoffee.com/products/meraki-edition-live-wire-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "10oz bag",
+    "variant_id": "52081354014951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb bag",
+    "variant_id": "52081354047719"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "7891ca6acc62133f",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-edition-colombia-huila-santa-maria",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Santa_Maria.jpg?v=1773337481",
+  "platform": "shopify",
+  "product_id": "9543528317159",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Meraki Edition"
+  ],
+  "title": "Meraki Edition Colombia Huila Santa Maria",
+  "url": "https://evermorecoffee.com/products/meraki-edition-colombia-huila-santa-maria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz bag",
+    "variant_id": "52081500160231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2lb bag",
+    "variant_id": "52081500192999"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "b0ca5eec839b55d0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-cerro-azul",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-HondurasCerroAzul10oz.png?v=1781628156",
+  "platform": "shopify",
+  "product_id": "9592633000167",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Honduras Cerro Azul",
+  "url": "https://evermorecoffee.com/products/honduras-cerro-azul",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz bag",
+    "variant_id": "52214464282855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb bag",
+    "variant_id": "52214464315623"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "2a5badca949e4d31",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-edition-honduras-cerro-azul",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-HondurasCerroAzul10oz.png?v=1781628156",
+  "platform": "shopify",
+  "product_id": "9594695516391",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Meraki Edition"
+  ],
+  "title": "Meraki Edition Honduras Cerro Azul",
+  "url": "https://evermorecoffee.com/products/meraki-edition-honduras-cerro-azul",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz bag",
+    "variant_id": "52220533997799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb bag",
+    "variant_id": "52220534030567"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "5f5e3d980bbdeade",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gera-estate-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore_-_Web_Square_-_Ethiopia_Gera_Estate_-_10oz.png?v=1784904615",
+  "platform": "shopify",
+  "product_id": "9648333193447",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Meraki Edition"
+  ],
+  "title": "Ethiopia Gera Estate",
+  "url": "https://evermorecoffee.com/products/ethiopia-gera-estate-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz bag",
+    "variant_id": "52400295936231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb bag",
+    "variant_id": "52400295968999"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "c769d2c45074b768",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-edition-ethiopia-gera-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore_-_Web_Square_-_Ethiopia_Gera_Estate_-_10oz.png?v=1784904615",
+  "platform": "shopify",
+  "product_id": "9655219388647",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [
+   "Meraki Edition"
+  ],
+  "title": "Meraki Edition Ethiopia Gera Estate",
+  "url": "https://evermorecoffee.com/products/meraki-edition-ethiopia-gera-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz bag",
+    "variant_id": "52424636104935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb bag",
+    "variant_id": "52424636137703"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "a44cd6d751cb0fec",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-guji-shakiso",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-EthiopiaSidamoGujiShakiso10oz.jpg?v=1789409015",
+  "platform": "shopify",
+  "product_id": "9715432653031",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Ethiopia Sidama Guji Shakiso",
+  "url": "https://evermorecoffee.com/products/ethiopia-sidama-guji-shakiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz bag",
+    "variant_id": "52633506906343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb bag",
+    "variant_id": "52633506939111"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ },
+ {
+  "body_hash": "0b42817071d63439",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-edition-ethiopia-sidama-guji-shakiso",
+  "image": "https://cdn.shopify.com/s/files/1/0061/2751/7807/files/Evermore-WebSquare-EthiopiaSidamoGujiShakiso10oz.jpg?v=1789409015",
+  "platform": "shopify",
+  "product_id": "9715444941031",
+  "product_type": "single origin",
+  "roaster_slug": "evermorecoffee",
+  "tags": [],
+  "title": "Meraki Edition Ethiopia Sidama Guji Shakiso",
+  "url": "https://evermorecoffee.com/products/meraki-edition-ethiopia-sidama-guji-shakiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz bag",
+    "variant_id": "52633558417639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb bag",
+    "variant_id": "52633558450407"
+   }
+  ],
+  "vendor": "Evermore Coffee Roasters"
+ }
+]

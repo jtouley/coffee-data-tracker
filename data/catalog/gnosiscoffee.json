@@ -1,0 +1,1161 @@
+[
+ {
+  "body_hash": "80b4185a17b8f834",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-lupili",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/BlackLabelWeb-MainTemplate_13.png?v=1791818710",
+  "platform": "shopify",
+  "product_id": "15377876746349",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Zambia Lupili",
+  "url": "https://gnosiscoffee.com/products/zambia-lupili",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67705064882285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Drip",
+    "variant_id": "67705064915053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / French Press",
+    "variant_id": "67705064947821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "67705064980589"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 49.95,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "67705065013357"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "3cd33a60f4fb81e3",
+  "first_seen": "2026-10-26",
+  "handle": "peru-swiss-water-decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/peru-swiss-water-decaf-coffee.png?v=1784824566",
+  "platform": "shopify",
+  "product_id": "6809771081837",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Peru DECAF",
+  "url": "https://gnosiscoffee.com/products/peru-swiss-water-decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40073938796653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "40073938829421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "40073938862189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "40073938894957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40073939058797"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.5,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40231395917933"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.5,
+    "title": "3oz / Drip",
+    "variant_id": "40231395950701"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.5,
+    "title": "3oz / French Press",
+    "variant_id": "40231395983469"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.5,
+    "title": "3oz / Pour Over",
+    "variant_id": "40231396016237"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "9e4da8e01c84ba22",
+  "first_seen": "2026-10-26",
+  "handle": "sophia-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/sophia-blend-espresso-coffee.png?v=1784824535",
+  "platform": "shopify",
+  "product_id": "6809776029805",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Sophia Blend",
+  "url": "https://gnosiscoffee.com/products/sophia-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40073967009901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40073967042669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40073967075437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40073967108205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40073967272045"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40231401226349"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40231401259117"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40231401291885"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40231401324653"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "b8546d5ce9cf0b88",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/guatemala-huehuetenango-coffee-bag.png?v=1784824326",
+  "platform": "shopify",
+  "product_id": "6813529440365",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://gnosiscoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40088214601837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40088214634605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40088214667373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40088214700141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40088214863981"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40231372292205"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40231372324973"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40231372357741"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40231372390509"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "5d694db8d3018ca5",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-san-diego-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/costa-rica-honey-coffee-tarrazu.png?v=1784823666",
+  "platform": "shopify",
+  "product_id": "6871429841005",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Costa Rica Honey",
+  "url": "https://gnosiscoffee.com/products/costa-rica-san-diego-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40268567543917"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40268567576685"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40268567609453"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40268567642221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40268567674989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "40268567707757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "40268567740525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "40268567773293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40268567806061"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "4e09c54cf3067f4b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/ethiopia-yirgacheffe-kochere-coffee.png?v=1784824246",
+  "platform": "shopify",
+  "product_id": "6871435313261",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://gnosiscoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40268614074477"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40268614140013"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40268614172781"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40268614205549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40268614238317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "40268614271085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "40268614303853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "40268614336621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40268614369389"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "8771b7367e14f51d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/brazil-cerrado-coffee-medium-roast.png?v=1784823303",
+  "platform": "shopify",
+  "product_id": "6883586801773",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Brazil",
+  "url": "https://gnosiscoffee.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40305682907245"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40305682940013"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40305682972781"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40305683005549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40305683038317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40305683071085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40305683103853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40305683136621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40305683169389"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "f4b18f931fe843ca",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/brazil-dark-roast-coffee-cerrado.png?v=1784823975",
+  "platform": "shopify",
+  "product_id": "6899845005421",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Dark Roast",
+  "url": "https://gnosiscoffee.com/products/brazil-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40356006199405"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40356006232173"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40356006264941"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40356006297709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40356006330477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40356006363245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40356006396013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40356006428781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40356006461549"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "3a610f220ff6051c",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/Burundi_Web_2.png?v=1723832304",
+  "platform": "shopify",
+  "product_id": "6902572089453",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Burundi",
+  "url": "https://gnosiscoffee.com/products/burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40364782944365"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40364782977133"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40364783009901"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40364783042669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40364783075437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40364783108205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40364783140973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40364783173741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40364783206509"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "2582798c945ff491",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/honduras-18-rabbit-coffee-marcala.png?v=1784824384",
+  "platform": "shopify",
+  "product_id": "6902590079085",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Honduras",
+  "url": "https://gnosiscoffee.com/products/honduras-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40364841599085"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40364841631853"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40364841664621"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40364841697389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40364841730157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "40364841762925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "40364841795693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "40364841828461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40364841861229"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "3482ba421e4d0146",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/house-blend-coffee-medium-roast.png?v=1784824430",
+  "platform": "shopify",
+  "product_id": "7139120676973",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "House Blend",
+  "url": "https://gnosiscoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "40823156670573"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "40823156703341"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "40823156736109"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "40823156768877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40823156801645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "40823156834413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "40823156867181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "40823156899949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "40823156932717"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "f425df6e48fe2e6f",
+  "first_seen": "2026-10-26",
+  "handle": "dominican",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/dominican-republic-coffee-jarabacoa.png?v=1784824075",
+  "platform": "shopify",
+  "product_id": "7613727965293",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Dominican Republic",
+  "url": "https://gnosiscoffee.com/products/dominican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "42088069890157"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "42088069922925"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "42088069955693"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "42088069988461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42088070021229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "42088070053997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "42088070086765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "42088070119533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "42088070152301"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "f34574371d9e6904",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/colombia-antioquia-coffee-bag.png?v=1784823387",
+  "platform": "shopify",
+  "product_id": "7618827649133",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Colombia Mina Rica",
+  "url": "https://gnosiscoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "42109291233389"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "42109291266157"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "42109291298925"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "42109291331693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42109291364461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "42109291397229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "42109291429997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "42109291462765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "42109291495533"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "00ac77ada08fb279",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/papua-new-guinea-coffee-nebilyer-valley.png?v=1784824460",
+  "platform": "shopify",
+  "product_id": "7935676317805",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://gnosiscoffee.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Whole Bean",
+    "variant_id": "43820780126317"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Drip",
+    "variant_id": "43820780159085"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / French Press",
+    "variant_id": "43820780191853"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.25,
+    "title": "3oz / Pour Over",
+    "variant_id": "43820780224621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43820780257389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Drip",
+    "variant_id": "43820780290157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / French Press",
+    "variant_id": "43820780322925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "43820780355693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb (Whole Bean Only) / Whole Bean",
+    "variant_id": "43820780388461"
+   }
+  ],
+  "vendor": "Gnosis"
+ },
+ {
+  "body_hash": "f32b5aa7ed10222e",
+  "first_seen": "2026-10-26",
+  "handle": "red-bourbon-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0554/4869/8989/files/Red_Bourbon_Decaf_Coffee_Colombia.png?v=1784822698",
+  "platform": "shopify",
+  "product_id": "8152383258733",
+  "product_type": "",
+  "roaster_slug": "gnosiscoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Red Bourbon DECAF",
+  "url": "https://gnosiscoffee.com/products/red-bourbon-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45446811385965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Drip",
+    "variant_id": "45446811418733"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / French Press",
+    "variant_id": "45446811451501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Pour Over",
+    "variant_id": "45446811484269"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 59.95,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45446811517037"
+   }
+  ],
+  "vendor": "Gnosis"
+ }
+]

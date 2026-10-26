@@ -1,0 +1,163 @@
+[
+ {
+  "body_hash": "109e8ae995a3126c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-1",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/1698680728585-VSN6VR5S98LGKA71M3BT/LITTLE+GOAT_ESPRESSO_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "5b9179c1cd83665fd192a4d2",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "42e1f6f9-9fff-4cfe-921e-041d1324f080"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c9649aaba0b62a1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/1698680049249-HJSBL0NP5F1DSDZRLWA6/LITTLE+GOAT_ETHIOPIA_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "5b917a5c40ec9a83813ea189",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Ethiopia",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.25,
+    "title": "",
+    "variant_id": "e66eb088-a2aa-4976-bf50-ba892633e188"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d83ee91a495619ea",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/1698680581794-YJZ4AQ3W7TFMXNCXY0FA/LITTLE+GOAT_DECAF_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "5b918a106d2a734fd70fded9",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.5,
+    "title": "",
+    "variant_id": "77d3ca00-209b-46f5-8226-88f6e8dbeaa6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "151092f30f58da09",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/95746110-1e8c-4018-a743-61b352101465/LITTLE+GOAT_BRAZIL_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "5f0c7371f463b63fc97e823a",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "ff80e385-7cea-432f-aae0-776ac8c53c45"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bc6ea6fa081bd00",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/c4da3d43-5864-4a6d-8e8f-6d35d5d2eccd/LITTLE+GOAT_COLOMBIA_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "653fd08bb00d14145d2adfd1",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "f930dc73-1ca1-4874-a332-05a61636df9f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b32b305942f1b7a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra25",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/676e16e7-e055-4948-aa00-b6aed4907035/LITTLE+GOAT_SUMATRA_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "67465a586f7f2825ebae3a2f",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/sumatra25",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.25,
+    "title": "",
+    "variant_id": "295451b8-9e4d-4cfc-abed-646d767f3bd9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "77ae1d21c5994a73",
+  "first_seen": "2026-10-26",
+  "handle": "png",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b6791fc1aef1d39fd8e3f36/d5f2dd89-9a68-46bd-99e7-3e5deecbf5bf/LITTLE+GOAT_PAPAU+NEW+GUINEA_SQUARE.jpg",
+  "platform": "squarespace",
+  "product_id": "69b414e8e819302963d965ed",
+  "product_type": "",
+  "roaster_slug": "littlegoatcoffeeroasting",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://www.littlegoatcoffeeroasting.com/shop/png",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.25,
+    "title": "",
+    "variant_id": "c3014ff2-062c-4713-9fe9-2dda88a0e4cb"
+   }
+  ],
+  "vendor": ""
+ }
+]

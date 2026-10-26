@@ -1,0 +1,1290 @@
+[
+ {
+  "body_hash": "e02b9754293c81f0",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-cedro-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_El_Cedro_web_10oz.png?v=1781649430",
+  "platform": "shopify",
+  "product_id": "10002519785719",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Finca El Cedro • Peru",
+  "url": "https://commonplacecoffee.com/products/finca-el-cedro-peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz",
+    "variant_id": "50861194150135"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 61.75,
+    "title": "2lb",
+    "variant_id": "50861194182903"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5lb",
+    "variant_id": "50861194215671"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "ff6997499bf5b251",
+  "first_seen": "2026-10-26",
+  "handle": "summer-solstice-bukeye",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Summer_Solstice_Bukeye_web_12oz.png?v=1782438315",
+  "platform": "shopify",
+  "product_id": "10009559466231",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Summer Solstice: Bukeye",
+  "url": "https://commonplacecoffee.com/products/summer-solstice-bukeye",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "50881342341367"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "50881342374135"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "50881342406903"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "2fbac22a8ebe1a8e",
+  "first_seen": "2026-10-26",
+  "handle": "shoondhisa",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Shoondhisa10ozMockup.png?v=1786647647",
+  "platform": "shopify",
+  "product_id": "10052695589111",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Shoondhisa • Ethiopia",
+  "url": "https://commonplacecoffee.com/products/shoondhisa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.25,
+    "title": "10oz",
+    "variant_id": "51022107574519"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.25,
+    "title": "2lb",
+    "variant_id": "51022107607287"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.5,
+    "title": "5lb",
+    "variant_id": "51022107640055"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "fb1a067a97b195e2",
+  "first_seen": "2026-10-26",
+  "handle": "nesru-aba-nura-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Nesru12ozbagfront.png?v=1787775421",
+  "platform": "shopify",
+  "product_id": "10063500148983",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Nesru Aba Nura • Ethiopia",
+  "url": "https://commonplacecoffee.com/products/nesru-aba-nura-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "51071242600695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "51071242633463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "51071242666231"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "8e715c50598388fd",
+  "first_seen": "2026-10-26",
+  "handle": "cooperativa-el-porvenir",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Cooperativa_El_Porvenir_web_12oz.png?v=1788446613",
+  "platform": "shopify",
+  "product_id": "10074090701047",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Cooperativa El Porvenir • Guatemala",
+  "url": "https://commonplacecoffee.com/products/cooperativa-el-porvenir",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "51112177598711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb",
+    "variant_id": "51112177631479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5lb",
+    "variant_id": "51112177664247"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "4ec030f308143f69",
+  "first_seen": "2026-10-26",
+  "handle": "full-potential-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Full_Potential_Blend_web_10oz.png?v=1788983094",
+  "platform": "shopify",
+  "product_id": "10075560116471",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Limited Duration"
+  ],
+  "title": "Full Potential Blend",
+  "url": "https://commonplacecoffee.com/products/full-potential-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz",
+    "variant_id": "51116212551927"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.75,
+    "title": "2lb",
+    "variant_id": "51116212584695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb",
+    "variant_id": "51116212617463"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "c8c8bebc9a1cca19",
+  "first_seen": "2026-10-26",
+  "handle": "ratnagiri-estate-roasters-choice-india",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Ratnagiri_Estate_R.C._web_10oz.png?v=1790197503",
+  "platform": "shopify",
+  "product_id": "10107773911287",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Ratnagiri Estate (Roaster's Choice) • India",
+  "url": "https://commonplacecoffee.com/products/ratnagiri-estate-roasters-choice-india",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.75,
+    "title": "10oz",
+    "variant_id": "51207446692087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.5,
+    "title": "2lb",
+    "variant_id": "51207446724855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.5,
+    "title": "5lb",
+    "variant_id": "51207446757623"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "d5aecfb6d6dfda27",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-acacia-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_La_Acacia_Yoro_web_8oz.png?v=1792693673",
+  "platform": "shopify",
+  "product_id": "10159362539767",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Finca La Acacia • Honduras",
+  "url": "https://commonplacecoffee.com/products/finca-la-acacia-honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 21.25,
+    "title": "8oz",
+    "variant_id": "51385145590007"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "2292cab2bc8fe4ef",
+  "first_seen": "2026-10-26",
+  "handle": "bohemian-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/bohemian-blend-12oz-smaller.png?v=1711806764",
+  "platform": "shopify",
+  "product_id": "8118568124663",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Bohemian Blend",
+  "url": "https://commonplacecoffee.com/products/bohemian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "44446342283511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "44446342316279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "44446342349047"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "dbc6de7f8a9ddc27",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-kunjin",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/kunjin-12oz-smaller.png?v=1711764899",
+  "platform": "shopify",
+  "product_id": "8118568157431",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Kunjin • Papua New Guinea",
+  "url": "https://commonplacecoffee.com/products/papua-new-guinea-kunjin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "44446342381815"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "44446342414583"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "44446342447351"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "01e6a137a6d7265f",
+  "first_seen": "2026-10-26",
+  "handle": "heartmender-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/heartmender-espresso-12oz-smaller.png?v=1711806702",
+  "platform": "shopify",
+  "product_id": "8118568222967",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Heartmender Espresso",
+  "url": "https://commonplacecoffee.com/products/heartmender-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12oz",
+    "variant_id": "44446342512887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.5,
+    "title": "2lb",
+    "variant_id": "44446342545655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.0,
+    "title": "5lb",
+    "variant_id": "44446342578423"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "561759c5213b72c5",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/morning-blend-12oz-smaller.png?v=1711806754",
+  "platform": "shopify",
+  "product_id": "8118568452343",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Morning Blend",
+  "url": "https://commonplacecoffee.com/products/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "44446342906103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "2lb",
+    "variant_id": "44446342938871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.75,
+    "title": "5lb",
+    "variant_id": "44446342971639"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "eaa7623ef65d2074",
+  "first_seen": "2026-10-26",
+  "handle": "perpetual-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/perpetual-12oz.png?v=1710645716",
+  "platform": "shopify",
+  "product_id": "8118568485111",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Perpetual Espresso",
+  "url": "https://commonplacecoffee.com/products/perpetual-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "44446343004407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "2lb",
+    "variant_id": "44446343037175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.75,
+    "title": "5lb",
+    "variant_id": "44446343069943"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "1c51c4738c1dbe42",
+  "first_seen": "2026-10-26",
+  "handle": "commonplace-hot-cocoa-tins",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Cocoa_Tin_web.png?v=1792171530",
+  "platform": "shopify",
+  "product_id": "8118568878327",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Commonplace Hot Cocoa Tins",
+  "url": "https://commonplacecoffee.com/products/commonplace-hot-cocoa-tins",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.75,
+    "title": "Default Title",
+    "variant_id": "44446346346743"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "f46b2868362fb22a",
+  "first_seen": "2026-10-26",
+  "handle": "all-day-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/products/all-day-blend-12oz-smaller.png?v=1710645864",
+  "platform": "shopify",
+  "product_id": "8118569959671",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "All Day Blend",
+  "url": "https://commonplacecoffee.com/products/all-day-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "5lb",
+    "variant_id": "44446352670967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.75,
+    "title": "2lb",
+    "variant_id": "44446352703735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "44446352736503"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "19597d21582d2ea0",
+  "first_seen": "2026-10-26",
+  "handle": "sorens-project",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Sorens_Project_web_12oz.png?v=1762807808",
+  "platform": "shopify",
+  "product_id": "8118570090743",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Soren’s Project • Colombia",
+  "url": "https://commonplacecoffee.com/products/sorens-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "44446352998647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb",
+    "variant_id": "44446353031415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5lb",
+    "variant_id": "44446353064183"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "ccfd1addf53f63b4",
+  "first_seen": "2026-10-26",
+  "handle": "yuki-minami-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/12oz_Yuki_2025_bag_front.png?v=1743522193",
+  "platform": "shopify",
+  "product_id": "8270434959607",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Yuki Minami • Brazil",
+  "url": "https://commonplacecoffee.com/products/yuki-minami-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "44827265695991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "44827272446199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "44827272642807"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "f05ec2f53cfbe221",
+  "first_seen": "2026-10-26",
+  "handle": "mixtape-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/mixtapeblend12ozproductphoto.png?v=1719410912",
+  "platform": "shopify",
+  "product_id": "8355012378871",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Mixtape Blend",
+  "url": "https://commonplacecoffee.com/products/mixtape-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12oz",
+    "variant_id": "45011834896631"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "2lb",
+    "variant_id": "45011834929399"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 121.5,
+    "title": "5lb",
+    "variant_id": "45011834962167"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "5b104ed1c2baf964",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mina-rica-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/decaf_mina_rica_12oz_product_photo_2024.png?v=1729625654",
+  "platform": "shopify",
+  "product_id": "9541092376823",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Decaf Mina Rica • Colombia",
+  "url": "https://commonplacecoffee.com/products/decaf-mina-rica-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "49170811584759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.25,
+    "title": "2lb",
+    "variant_id": "49170811617527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb",
+    "variant_id": "49170811650295"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "97dc21612e0e8964",
+  "first_seen": "2026-10-26",
+  "handle": "winter-solstice-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Winter_Solstice_web_12oz.png?v=1764178258",
+  "platform": "shopify",
+  "product_id": "9558697083127",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Winter Solstice Blend",
+  "url": "https://commonplacecoffee.com/products/winter-solstice-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "49241151766775"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "49241151799543"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "49241151832311"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "9a0e03cc55098440",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-bendicion-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_La_Bendicion_web_12oz.png?v=1765996933",
+  "platform": "shopify",
+  "product_id": "9572009410807",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Finca La Bendición • Nicaragua",
+  "url": "https://commonplacecoffee.com/products/finca-la-bendicion-nicaragua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "49285991006455"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb",
+    "variant_id": "49285991039223"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb",
+    "variant_id": "49285991071991"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "688d493829bc43c8",
+  "first_seen": "2026-10-26",
+  "handle": "ninga-hill-burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Ninga_Hill_web_10oz.png?v=1777672833",
+  "platform": "shopify",
+  "product_id": "9662767857911",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Ninga Hill • Burundi",
+  "url": "https://commonplacecoffee.com/products/ninga-hill-burundi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.25,
+    "title": "10oz",
+    "variant_id": "49672374518007"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.25,
+    "title": "2lb",
+    "variant_id": "49672374550775"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.5,
+    "title": "5lb",
+    "variant_id": "49672374583543"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "546085434f418b94",
+  "first_seen": "2026-10-26",
+  "handle": "reynolds-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Reynolds_12oz_bag_front.png?v=1751295746",
+  "platform": "shopify",
+  "product_id": "9691196752119",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Reynolds' Blend",
+  "url": "https://commonplacecoffee.com/products/reynolds-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "49768161640695"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.75,
+    "title": "2lb",
+    "variant_id": "49768161673463"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 124.75,
+    "title": "5lb",
+    "variant_id": "49768161706231"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "a9412568053473bb",
+  "first_seen": "2026-10-26",
+  "handle": "teojomulco-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/TeoMockup12oz.png?v=1791480538",
+  "platform": "shopify",
+  "product_id": "9807343321335",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Teojomulco • Mexico",
+  "url": "https://commonplacecoffee.com/products/teojomulco-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz",
+    "variant_id": "50158893236471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.5,
+    "title": "2lb",
+    "variant_id": "50158893269239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.25,
+    "title": "5lb",
+    "variant_id": "50158893302007"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "dc69ead587d62e94",
+  "first_seen": "2026-10-26",
+  "handle": "ratnagiri-estate-india",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Ratnagiri_Estate_S.O._web_10oz.png?v=1790196653",
+  "platform": "shopify",
+  "product_id": "9813500526839",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Ratnagiri Estate • India",
+  "url": "https://commonplacecoffee.com/products/ratnagiri-estate-india",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10oz",
+    "variant_id": "50180915724535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.25,
+    "title": "2lb",
+    "variant_id": "50180915757303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.75,
+    "title": "5lb",
+    "variant_id": "50180915790071"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "d53bfee3b8174063",
+  "first_seen": "2026-10-26",
+  "handle": "masha-kween-uganda",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Masha_Kween_web_12oz.png?v=1763670386",
+  "platform": "shopify",
+  "product_id": "9847901749495",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Masha Kween • Uganda",
+  "url": "https://commonplacecoffee.com/products/masha-kween-uganda",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "50281884418295"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.74,
+    "title": "2lb",
+    "variant_id": "50281884451063"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.75,
+    "title": "5lb",
+    "variant_id": "50281884483831"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "d056181fffc20d5d",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-salvaje-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_La_Salvaje_web_8oz.png?v=1767817108",
+  "platform": "shopify",
+  "product_id": "9880079466743",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Limited Duration"
+  ],
+  "title": "Finca La Salvaje • Honduras",
+  "url": "https://commonplacecoffee.com/products/finca-la-salvaje-honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 23.25,
+    "title": "8oz",
+    "variant_id": "50406889750775"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 84.0,
+    "title": "2lb",
+    "variant_id": "50407420100855"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 198.25,
+    "title": "5lb",
+    "variant_id": "50407422427383"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "8397a0a56542872e",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-roca-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_La_Roca_web_10oz_58bac7f6-b22d-488b-8b2b-749cdb188fd3.png?v=1770647969",
+  "platform": "shopify",
+  "product_id": "9898448847095",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Finca La Roca • Colombia",
+  "url": "https://commonplacecoffee.com/products/finca-la-roca-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.75,
+    "title": "10oz",
+    "variant_id": "50474256400631"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 65.5,
+    "title": "2lb",
+    "variant_id": "50474256433399"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 154.5,
+    "title": "5lb",
+    "variant_id": "50474256466167"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "bffa7a6f3107a38a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-abdo-aba-mecha-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Decaf_Abdo_Aba_Mecha_web_12oz.png?v=1771537096",
+  "platform": "shopify",
+  "product_id": "9907565658359",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Decaf Abdo Aba Mecha • Ethiopia",
+  "url": "https://commonplacecoffee.com/products/decaf-abdo-aba-mecha-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.75,
+    "title": "12oz",
+    "variant_id": "50501733548279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb",
+    "variant_id": "50501733581047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.5,
+    "title": "5lb",
+    "variant_id": "50501733613815"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "49263f69f1dd9270",
+  "first_seen": "2026-10-26",
+  "handle": "aak-cooperative-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/AAK_Cooperative_web_12oz.png?v=1771881983",
+  "platform": "shopify",
+  "product_id": "9910193455351",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "AAK Cooperative • Papua New Guinea",
+  "url": "https://commonplacecoffee.com/products/aak-cooperative-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz",
+    "variant_id": "50513905811703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.25,
+    "title": "2lb",
+    "variant_id": "50513905844471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.25,
+    "title": "5lb",
+    "variant_id": "50513905877239"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "7f8d5413553de138",
+  "first_seen": "2026-10-26",
+  "handle": "finca-corintio-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_Corintio_web_10oz.png?v=1774471789",
+  "platform": "shopify",
+  "product_id": "9933027705079",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Finca Corintio • Honduras",
+  "url": "https://commonplacecoffee.com/products/finca-corintio-honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10oz",
+    "variant_id": "50621339074807"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2lb",
+    "variant_id": "50621339107575"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5lb",
+    "variant_id": "50621339140343"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "f6e288878e05f775",
+  "first_seen": "2026-10-26",
+  "handle": "hulikere-estate-india",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Hulikere_Estate_web_12oz.png?v=1775138912",
+  "platform": "shopify",
+  "product_id": "9939851378935",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Hulikere Estate • India",
+  "url": "https://commonplacecoffee.com/products/hulikere-estate-india",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz",
+    "variant_id": "50643942441207"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.75,
+    "title": "2lb",
+    "variant_id": "50643942473975"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb",
+    "variant_id": "50643942506743"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "c0b65d443f65d881",
+  "first_seen": "2026-10-26",
+  "handle": "mazateca-mujeres-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Mazateca_Mujeres_web_10oz.png?v=1775676163",
+  "platform": "shopify",
+  "product_id": "9948769550583",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Mazateca Mujeres • Mexico",
+  "url": "https://commonplacecoffee.com/products/mazateca-mujeres-mexico",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz",
+    "variant_id": "50670747287799"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2lb",
+    "variant_id": "50670747320567"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.75,
+    "title": "5lb",
+    "variant_id": "50670747353335"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "de4aefca356d28bc",
+  "first_seen": "2026-10-26",
+  "handle": "finca-un-regalo-de-dios-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/RDD_Cafe_Exclusive_12oz_bag_front.png?v=1784654250",
+  "platform": "shopify",
+  "product_id": "9979397472503",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Finca Un Regalo De Dios • Nicaragua",
+  "url": "https://commonplacecoffee.com/products/finca-un-regalo-de-dios-nicaragua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12oz",
+    "variant_id": "50794345431287"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "453902531fbd39ce",
+  "first_seen": "2026-10-26",
+  "handle": "tanger-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Tanger_Blend_web_12oz.png?v=1783025414",
+  "platform": "shopify",
+  "product_id": "9989138809079",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Tanger Blend",
+  "url": "https://commonplacecoffee.com/products/tanger-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "50823112458487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.25,
+    "title": "2lb",
+    "variant_id": "50823112491255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb",
+    "variant_id": "50823112524023"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ },
+ {
+  "body_hash": "985c6b4ee6772631",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-sendero-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0685/4731/3911/files/Finca_El_Sendero_web_8oz.png?v=1780510299",
+  "platform": "shopify",
+  "product_id": "9991133724919",
+  "product_type": "",
+  "roaster_slug": "commonplacecoffee",
+  "tags": [],
+  "title": "Finca El Sendero • Colombia",
+  "url": "https://commonplacecoffee.com/products/finca-el-sendero-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 21.25,
+    "title": "8oz",
+    "variant_id": "50827743592695"
+   }
+  ],
+  "vendor": "Commonplace Coffee"
+ }
+]

@@ -1,0 +1,4148 @@
+[
+ {
+  "body_hash": "0be48aa4d24e04e1",
+  "first_seen": "2026-10-26",
+  "handle": "signature-black-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/DSC09737.jpg?v=1783427401",
+  "platform": "shopify",
+  "product_id": "10245561483348",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Canned Signature Black Cold Brew",
+  "url": "https://www.uncommoncoffeeroasters.com/products/signature-black-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.5,
+    "title": "Default Title",
+    "variant_id": "47329135853652"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "dd81f8035f8396d9",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/pinkbourbon.png?v=1786551008",
+  "platform": "shopify",
+  "product_id": "10273142276180",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership",
+   "Specialty",
+   "Varietal"
+  ],
+  "title": "Pink Bourbon (Limited Roast)",
+  "url": "https://www.uncommoncoffeeroasters.com/products/pink-bourbon-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47497521823828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "47497521922132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Drip / 12oz",
+    "variant_id": "47497522020436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "47497522118740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "47497522217044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "47497522315348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47502551318612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "47502551351380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Drip / 2lb",
+    "variant_id": "47502551384148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.0,
+    "title": "Auto-Drip / 2lb",
+    "variant_id": "47502551416916"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Fine (Cone) / 2lb",
+    "variant_id": "47502551449684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Ground for Espresso / 2lb",
+    "variant_id": "47502551482452"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "57a2b482dd2383a1",
+  "first_seen": "2026-10-26",
+  "handle": "spooky-blend-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/DSC01093.jpg?v=1789653004",
+  "platform": "shopify",
+  "product_id": "10305182695508",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Spooky Blend 2026",
+  "url": "https://www.uncommoncoffeeroasters.com/products/spooky-blend-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47692745572436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "47692745605204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "47692745637972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "47692745670740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "47692745703508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "47692745736276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "47692745769044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "47692745801812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Drip / 5LB",
+    "variant_id": "47692745834580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "47692745867348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "47692745900116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "47692745932884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "47692745965652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "47692745998420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "47692746031188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "47692746063956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "47692746096724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "47692746129492"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a8aa6f101b7b6c37",
+  "first_seen": "2026-10-26",
+  "handle": "bernardo-ponce",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/bernardopagforwebste.jpg?v=1791483698",
+  "platform": "shopify",
+  "product_id": "10325880668244",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership",
+   "Specialty",
+   "Varietal"
+  ],
+  "title": "Bernardo Ponce",
+  "url": "https://www.uncommoncoffeeroasters.com/products/bernardo-ponce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47778194325588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "47778194358356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "47778194391124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "47778194423892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "47778194456660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "47778194489428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "47778194522196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "47778194554964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Drip / 5LB",
+    "variant_id": "47778194587732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "47778194620500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "47778194653268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "47778194686036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "47778194718804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "47778194751572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "47778194784340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "47778194817108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "47778194849876"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "47778194882644"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e4d0fc5d32840e32",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/IMG_0297.heic?v=1791921365",
+  "platform": "shopify",
+  "product_id": "10334246142036",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [],
+  "title": "12oz Coffee Canister",
+  "url": "https://www.uncommoncoffeeroasters.com/products/12oz-coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "47824424960084"
+   }
+  ],
+  "vendor": "Uncommon Coffee Roasters"
+ },
+ {
+  "body_hash": "57f2bb0f5269a9a9",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/DarkChocolateEspressoBeans2025.jpg?v=1743350605",
+  "platform": "shopify",
+  "product_id": "6927653240916",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "goods"
+  ],
+  "title": "Dark Chocolate Espresso Beans",
+  "url": "https://www.uncommoncoffeeroasters.com/products/dark-chocolate-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.0,
+    "title": "Default Title",
+    "variant_id": "40386847211604"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4e7fae8cae64eb60",
+  "first_seen": "2026-10-26",
+  "handle": "milk-chocolate-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/MilkChocolateEspressoBeans2025.jpg?v=1743350531",
+  "platform": "shopify",
+  "product_id": "6927660023892",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "goods"
+  ],
+  "title": "Milk Chocolate Espresso Beans",
+  "url": "https://www.uncommoncoffeeroasters.com/products/milk-chocolate-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.0,
+    "title": "Default Title",
+    "variant_id": "40386900590676"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "6dfb6652e2851e02",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/colombiapaz.png?v=1784819027",
+  "platform": "shopify",
+  "product_id": "6927697707092",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership",
+   "Specialty",
+   "Varietal"
+  ],
+  "title": "Colombia (Paz)",
+  "url": "https://www.uncommoncoffeeroasters.com/products/colombia-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40387166240852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40387166273620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40387166306388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40387166339156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40387166371924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40387166404692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40387166437460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40387166470228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40387166502996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40387166535764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40387166568532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40387166601300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40387166634068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40387166666836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40387166699604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40387166732372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40387166765140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40387166797908"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "af46b5b55dcd393a",
+  "first_seen": "2026-10-26",
+  "handle": "love-wins-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/lovewins.jpg?v=1784813352",
+  "platform": "shopify",
+  "product_id": "6927711371348",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Love Wins Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/love-wins-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40387253731412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40387253764180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40387253796948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40387253829716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40387253862484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40387253895252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40387253928020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40387253960788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40387253993556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40387254026324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40387254059092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40387254091860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "whole bean / 12oz",
+    "variant_id": "41972605026388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "whole bean / 2LB",
+    "variant_id": "41972605059156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "whole bean / 5LB",
+    "variant_id": "41972605091924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "coarse / 12oz",
+    "variant_id": "41972605124692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "coarse / 2LB",
+    "variant_id": "41972605157460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "coarse / 5LB",
+    "variant_id": "41972605190228"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "ee5bb8b491d5bf94",
+  "first_seen": "2026-10-26",
+  "handle": "zalmari-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/zalmari.jpg?v=1784820049",
+  "platform": "shopify",
+  "product_id": "6927723233364",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership"
+  ],
+  "title": "Zalmari Estate LIMITED EDITION",
+  "url": "https://www.uncommoncoffeeroasters.com/products/zalmari-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40387333947476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "40387333980244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40387334013012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40387334045780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40387334078548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40387334111316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432269623380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432269656148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432269688916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432269721684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432269754452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432269787220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432269819988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432269852756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432269885524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432269918292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432269951060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432269983828"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4cba62bf3143d559",
+  "first_seen": "2026-10-26",
+  "handle": "wild-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/ethiopia.jpg?v=1784817529",
+  "platform": "shopify",
+  "product_id": "6927727820884",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.uncommoncoffeeroasters.com/products/wild-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40387358359636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40387358392404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40387358425172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40387358457940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40387358490708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40387358523476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432265035860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432265068628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432265101396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432265134164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432265166932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432265199700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432265232468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432265265236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432265298004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432265330772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432265363540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432265396308"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a4e9cec72670ba3c",
+  "first_seen": "2026-10-26",
+  "handle": "black-tan",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/black_tan.jpg?v=1784812659",
+  "platform": "shopify",
+  "product_id": "6932871708756",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Black & Tan",
+  "url": "https://www.uncommoncoffeeroasters.com/products/black-tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398164951124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398164983892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398165016660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398165049428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398165082196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398165114964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432262709332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432262742100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432262774868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432262807636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432262840404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432262873172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432262905940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432262938708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432262971476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432263004244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432263037012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432263069780"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "c09c4b5a55695326",
+  "first_seen": "2026-10-26",
+  "handle": "twilight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/twilight.jpg?v=1784815203",
+  "platform": "shopify",
+  "product_id": "6932871839828",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Twilight Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/twilight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398165278804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398165311572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398165344340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398165377108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398165409876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398165442644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432260841556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432260874324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432260907092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432260939860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432260972628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432261005396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432261038164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432261070932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432261103700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432261136468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432261169236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432261202004"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "f5ff534bad0ddfaf",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/brazil.jpg?v=1784817774",
+  "platform": "shopify",
+  "product_id": "6932872003668",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://www.uncommoncoffeeroasters.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398165672020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398165704788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398165737556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398165770324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398165803092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398165835860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432259498068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432259530836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432259563604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432259596372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432259629140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432259661908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432259694676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432259727444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432259760212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432259792980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432259825748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432259858516"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "f145a5fef105843c",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/coldbrew_e73e4775-a600-4d08-a0e8-3df66a94a29a.jpg?v=1785340050",
+  "platform": "shopify",
+  "product_id": "6932872495188",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398170619988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398170652756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40398170685524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398170718292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398170751060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398170783828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432258089044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432258121812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432258154580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432258187348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432258220116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432258252884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432258285652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432258318420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432258351188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432258383956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432258416724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432258449492"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "dcda60a1c1dca057",
+  "first_seen": "2026-10-26",
+  "handle": "cultivo-people-s-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/peoples.jpg?v=1784813488",
+  "platform": "shopify",
+  "product_id": "6932872855636",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "People’s Choice",
+  "url": "https://www.uncommoncoffeeroasters.com/products/cultivo-people-s-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398173765716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398173798484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40398173831252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398173864020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398173896788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398173929556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432249765972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432249798740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432249831508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432249864276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432249897044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432249929812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432249962580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432249995348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432250028116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432250060884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432250093652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432250126420"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "47854d716a0cfb57",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/decafmexico.jpg?v=1784818100",
+  "platform": "shopify",
+  "product_id": "6932872953940",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Decaf Mexico",
+  "url": "https://www.uncommoncoffeeroasters.com/products/decaf-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398174814292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398174847060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40398174879828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398174912596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398174945364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398174978132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432246849620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432246882388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432246915156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432246947924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432246980692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432247013460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432247046228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432247078996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432247111764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432247144532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432247177300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432247210068"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "44a95a5319652767",
+  "first_seen": "2026-10-26",
+  "handle": "classic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/ClassicEspresso.jpg?v=1784812634",
+  "platform": "shopify",
+  "product_id": "6932873052244",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Espresso, Classic Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/classic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398177140820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398177173588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398177206356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398177239124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398177271892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398177304660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432241639508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432241672276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432241705044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432241737812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432241770580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432241803348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432241836116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432241868884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432241901652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432241934420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432241967188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432241999956"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "52e0dea211570d76",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/houseespresso.jpg?v=1784813042",
+  "platform": "shopify",
+  "product_id": "6932873117780",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Espresso, House Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/espresso-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398177402964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398177435732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398177468500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398177501268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398177534036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398177566804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432240164948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432240197716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432240230484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432240263252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432240296020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432240328788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432240361556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432240394324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432240427092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432240459860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432240492628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432240525396"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "2573c2e902df3d78",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/guatemala_3c249415-de0c-4382-8737-319ef5a8fa6f.jpg?v=1784817839",
+  "platform": "shopify",
+  "product_id": "6932873150548",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.uncommoncoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398177599572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398177632340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398177665108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398177697876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398177730644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398177763412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432237346900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432237379668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432237412436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432237445204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432237477972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432237510740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432237543508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432237576276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432237609044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432237641812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432237674580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432237707348"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "319b6a400feef73d",
+  "first_seen": "2026-10-26",
+  "handle": "lake-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/lakehouse.jpg?v=1784813084",
+  "platform": "shopify",
+  "product_id": "6932873183316",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Lake House Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/lake-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398177796180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398177828948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "40398177861716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398177894484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398177927252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398177960020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432235642964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432235675732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432235708500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432235741268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432235774036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432235806804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432235839572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432235872340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432235905108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432235937876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432235970644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432236003412"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7780d3011e803907",
+  "first_seen": "2026-10-26",
+  "handle": "legacy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/legacyblend.jpg?v=1784813184",
+  "platform": "shopify",
+  "product_id": "6932873412692",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Legacy Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/legacy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398178680916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398178713684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398178746452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398178779220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398178811988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398178844756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432229777492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432229810260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432229843028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432229875796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432229908564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432229941332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432229974100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432230006868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432230039636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432230072404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432230105172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432230137940"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "dc54d494b0040fee",
+  "first_seen": "2026-10-26",
+  "handle": "pride-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/pride.jpg?v=1784814657",
+  "platform": "shopify",
+  "product_id": "6932873805908",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty",
+   "lgbtq+",
+   "pride",
+   "pride blend"
+  ],
+  "title": "Pride Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/pride-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398180843604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398180876372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398180909140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398180941908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398180974676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398181007444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432222502996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432222535764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432222568532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432222601300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432222634068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432222666836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432222699604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432222732372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432222765140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432222797908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432222830676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432222863444"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b65108db8ebf4ff0",
+  "first_seen": "2026-10-26",
+  "handle": "sundown-half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/sundown_2308d32b-1668-4c77-a760-f2f61f286d98.jpg?v=1785414646",
+  "platform": "shopify",
+  "product_id": "6932874100820",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Sundown Half-Caff Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/sundown-half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40398183694420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "40398183727188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "40398183759956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "40398183792724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "40398183825492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "40398183858260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "40432210051156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "40432210083924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "40432210116692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "40432210149460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "40432210182228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "40432210214996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "40432210247764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "40432210280532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "40432210313300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "40432210346068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "40432210378836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "40432210411604"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5224643b285c3bba",
+  "first_seen": "2026-10-26",
+  "handle": "villa-sarchi",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/villasarchi.jpg?v=1784820315",
+  "platform": "shopify",
+  "product_id": "7500397936724",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership",
+   "Varietal"
+  ],
+  "title": "Villa Sarchi LIMITED EDITION",
+  "url": "https://www.uncommoncoffeeroasters.com/products/villa-sarchi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "41518451785812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "41518451884116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / 12oz",
+    "variant_id": "41518451982420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "41518452080724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "41518452179028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "41518452277332"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7f990131d50f4157",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-espresso-beans-milk-or-dark-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/DarkChocolateEspressoBeans2025_690970eb-ad39-4513-9e22-dd5d775077a1.jpg?v=1744313751",
+  "platform": "shopify",
+  "product_id": "7656987295828",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [],
+  "title": "Chocolate Espresso Beans (milk or dark chocolate)",
+  "url": "https://www.uncommoncoffeeroasters.com/products/chocolate-espresso-beans-milk-or-dark-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Dark Chocolate",
+    "variant_id": "42000608952404"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Milk Chocolate",
+    "variant_id": "42000608985172"
+   }
+  ],
+  "vendor": "Uncommon Coffee Roasters"
+ },
+ {
+  "body_hash": "080a79f18daf0dae",
+  "first_seen": "2026-10-26",
+  "handle": "your-custom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/YOUR_CUSTOM_BLEND.png?v=1746561060",
+  "platform": "shopify",
+  "product_id": "7678857183316",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Your Custom Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/your-custom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42055678001236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "42055678034004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "42055678066772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "42055678099540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "42055678132308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "42055678165076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Drip / 12oz",
+    "variant_id": "42055678197844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Drip / 2LB",
+    "variant_id": "42055678230612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Drip / 5LB",
+    "variant_id": "42055678263380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "42055678296148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "42055678328916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "42055678361684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "42055678394452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "42055678427220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "42055678459988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "42055678492756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "42055678525524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "42055678558292"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "01ec2896e08451a7",
+  "first_seen": "2026-10-26",
+  "handle": "alta-bloom",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/altabloom_92c69171-8adf-425a-9c99-804396bedc33.jpg?v=1784812533",
+  "platform": "shopify",
+  "product_id": "7785256681556",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Alta Bloom",
+  "url": "https://www.uncommoncoffeeroasters.com/products/alta-bloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42526794252372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42526794285140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "42526794317908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Auto-Drip",
+    "variant_id": "42526794350676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Cone)",
+    "variant_id": "42526794383444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "42526794416212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "42526794448980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Coarse",
+    "variant_id": "42526794481748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Drip",
+    "variant_id": "42526794514516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Auto-Drip",
+    "variant_id": "42526794547284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Fine (Cone)",
+    "variant_id": "42526794580052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "42526794612820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "42526794645588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Coarse",
+    "variant_id": "42526794678356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Drip",
+    "variant_id": "42526794711124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Auto-Drip",
+    "variant_id": "42526794743892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Fine (Cone)",
+    "variant_id": "42526794776660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Ground for Espresso",
+    "variant_id": "42526794809428"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3866dee581d0b918",
+  "first_seen": "2026-10-26",
+  "handle": "amigas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/amigas.jpg?v=1784820959",
+  "platform": "shopify",
+  "product_id": "7785262481492",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Amiga's Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/amigas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42526848188500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42526848221268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "42526848254036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Auto-Drip",
+    "variant_id": "42526848286804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine (Cone)",
+    "variant_id": "42526848319572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "42526848352340"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3220937dc892eeab",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/decafhonduras_fec6bf69-88ce-4a2b-868c-46bccc80aca6.jpg?v=1784818273",
+  "platform": "shopify",
+  "product_id": "7785283649620",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Decaf Honduras",
+  "url": "https://www.uncommoncoffeeroasters.com/products/decaf-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42527068618836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "42527068651604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "42527068684372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "42527068717140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "42527068749908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "42527068782676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12oz",
+    "variant_id": "42527068815444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "42527068848212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Drip / 5LB",
+    "variant_id": "42527068880980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "42527068913748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "42527068946516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "42527068979284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "42527069012052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "42527069044820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "42527069077588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "42527069110356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "42527069143124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "42527069175892"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b00333fac3212c85",
+  "first_seen": "2026-10-26",
+  "handle": "rigoberto-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/rigobertopaz_9ec0d392-a26e-45e2-aa7c-d495d35bcda9.jpg?v=1784819844",
+  "platform": "shopify",
+  "product_id": "7785283878996",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Partnership",
+   "Specialty",
+   "Varietal"
+  ],
+  "title": "Rigoberto Paz",
+  "url": "https://www.uncommoncoffeeroasters.com/products/rigoberto-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42527070257236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "42527070290004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "42527070322772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "42527070355540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "42527070388308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "42527070421076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "42527070453844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2LB",
+    "variant_id": "42527070486612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Drip / 5LB",
+    "variant_id": "42527070519380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "42527070552148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "42527070584916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "42527070617684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "42527070650452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "42527070683220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "42527070715988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "42527070748756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "42527070781524"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "42527070814292"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8126fa466b33a7fd",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-1",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/sumatra_40e74e25-4fbe-478b-ba6a-f530d30b9eb0.jpg?v=1784818483",
+  "platform": "shopify",
+  "product_id": "7785283944532",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.uncommoncoffeeroasters.com/products/sumatra-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42527071240276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2LB",
+    "variant_id": "42527071273044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "42527071305812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "42527071338580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Coarse / 2LB",
+    "variant_id": "42527071371348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5LB",
+    "variant_id": "42527071404116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip / 12oz",
+    "variant_id": "42527071436884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / 2LB",
+    "variant_id": "42527071469652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Drip / 5LB",
+    "variant_id": "42527071502420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Auto-Drip / 12oz",
+    "variant_id": "42527071535188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Auto-Drip / 2LB",
+    "variant_id": "42527071567956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Auto-Drip / 5LB",
+    "variant_id": "42527071600724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Fine (Cone) / 12oz",
+    "variant_id": "42527071633492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Fine (Cone) / 2LB",
+    "variant_id": "42527071666260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Fine (Cone) / 5LB",
+    "variant_id": "42527071699028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "42527071731796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground for Espresso / 2LB",
+    "variant_id": "42527071764564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Ground for Espresso / 5LB",
+    "variant_id": "42527071797332"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a5126ea93f30a255",
+  "first_seen": "2026-10-26",
+  "handle": "bom-dia-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/bomdia.jpg?v=1784812794",
+  "platform": "shopify",
+  "product_id": "7788858212436",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Bom Dia Blend",
+  "url": "https://www.uncommoncoffeeroasters.com/products/bom-dia-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42548103544916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42548103577684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "42548103610452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Auto-Drip",
+    "variant_id": "42548103643220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Cone)",
+    "variant_id": "42548103675988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "42548103708756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "42548103741524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Coarse",
+    "variant_id": "42548103774292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Drip",
+    "variant_id": "42548103807060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Auto-Drip",
+    "variant_id": "42548103839828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Fine (Cone)",
+    "variant_id": "42548103872596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "42548103905364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "42548103938132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Coarse",
+    "variant_id": "42548103970900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Drip",
+    "variant_id": "42548104003668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Auto-Drip",
+    "variant_id": "42548104036436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Fine (Cone)",
+    "variant_id": "42548104069204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Ground for Espresso",
+    "variant_id": "42548104101972"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "90b6a21b89891337",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0566/3018/1972/files/lovetobrewit.jpg?v=1784813224",
+  "platform": "shopify",
+  "product_id": "7831076405332",
+  "product_type": "",
+  "roaster_slug": "uncommoncoffeeroasters",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Love to Brew it",
+  "url": "https://www.uncommoncoffeeroasters.com/products/decaf-honduras-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "42674321948756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "42674321981524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Coarse / 2 lb",
+    "variant_id": "42674322047060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Coarse / 5 lb",
+    "variant_id": "42674322079828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "42674322145364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "42674322178132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Auto-Drip / 2 lb",
+    "variant_id": "42674322243668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Auto-Drip / 5 lb",
+    "variant_id": "42674322276436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine (Cone) / 2 lb",
+    "variant_id": "42674322341972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Fine (Cone) / 5 lb",
+    "variant_id": "42674322374740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Ground for Espresso / 2 lb",
+    "variant_id": "42674322440276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Ground for Espresso / 5 lb",
+    "variant_id": "42674322473044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42848170147924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42848170180692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "42848170213460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Auto-Drip / 12 oz",
+    "variant_id": "42848170246228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Cone) / 12 oz",
+    "variant_id": "42848170278996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12 oz",
+    "variant_id": "42848170311764"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

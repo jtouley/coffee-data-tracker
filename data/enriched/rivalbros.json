@@ -1,0 +1,1221 @@
+{
+ "10048049119539": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10288743088435": {
+  "body_hash": "fe3c582ce7b67c32",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "10288744169779": {
+  "body_hash": "89b514be19d21254",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "10310708592947": {
+  "body_hash": "66c5ad951ba4fb14",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "pink lemonade",
+   "caramel",
+   "rose hips"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "10310710821171": {
+  "body_hash": "66c5ad951ba4fb14",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "pink lemonade",
+   "caramel",
+   "rose hips"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "10310711804211": {
+  "body_hash": "66c5ad951ba4fb14",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "pink lemonade",
+   "caramel",
+   "rose hips"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "10428397650227": {
+  "body_hash": "b45f99c0297f4468",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10459683225907": {
+  "body_hash": "a8dd841244fad9f0",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "black tea",
+   "pineapple syrup",
+   "melon"
+  ],
+  "varietals": []
+ },
+ "10459709014323": {
+  "body_hash": "a8dd841244fad9f0",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "black tea",
+   "pineapple syrup",
+   "melon"
+  ],
+  "varietals": []
+ },
+ "10459714486579": {
+  "body_hash": "a8dd841244fad9f0",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "black tea",
+   "pineapple syrup",
+   "melon"
+  ],
+  "varietals": []
+ },
+ "10459736965427": {
+  "body_hash": "15ae5252973116af",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "peach",
+   "black tea",
+   "chambord"
+  ],
+  "varietals": []
+ },
+ "10459746861363": {
+  "body_hash": "15ae5252973116af",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "peach",
+   "black tea",
+   "chambord"
+  ],
+  "varietals": []
+ },
+ "10459749187891": {
+  "body_hash": "15ae5252973116af",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "peach",
+   "black tea",
+   "chambord"
+  ],
+  "varietals": []
+ },
+ "10477642744115": {
+  "body_hash": "66e0937b9c3bd48e",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "berry jam",
+   "milk chocolate",
+   "watermelon candy"
+  ],
+  "varietals": []
+ },
+ "10477645594931": {
+  "body_hash": "66e0937b9c3bd48e",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "berry jam",
+   "milk chocolate",
+   "watermelon candy"
+  ],
+  "varietals": []
+ },
+ "10477646709043": {
+  "body_hash": "66e0937b9c3bd48e",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "berry jam",
+   "milk chocolate",
+   "watermelon candy"
+  ],
+  "varietals": []
+ },
+ "8077337821491": {
+  "body_hash": "26b8f09ca7d2f321",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "s'mores",
+   "caramel apples",
+   "fudge"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra",
+   "Pacas"
+  ]
+ },
+ "8087394582835": {
+  "body_hash": "0839a0a03057c2a6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "8087397499187": {
+  "body_hash": "564ae8da1467bb85",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "8087399170355": {
+  "body_hash": "d71b9716dcd84c4e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "8087410245939": {
+  "body_hash": "3ab4d05f0e96bd7b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "8087412539699": {
+  "body_hash": "9939e90dee658b67",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "8087414374707": {
+  "body_hash": "fd76f3872893c6fb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "8139914445107": {
+  "body_hash": "366b5a6742d2d954",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8211021857075": {
+  "body_hash": "fd18a41c6cb8ecbe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8211022381363": {
+  "body_hash": "4227795c75aa180d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8261219418419": {
+  "body_hash": "1d5acc085e614890",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8261222793523": {
+  "body_hash": "7008e5ad83c664ed",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8445268951347": {
+  "body_hash": "26b8f09ca7d2f321",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "s'mores",
+   "caramel apples",
+   "fudge"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra",
+   "Pacas"
+  ]
+ },
+ "8934755172659": {
+  "body_hash": "366b5a6742d2d954",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9316757045555": {
+  "body_hash": "b61397b36730066b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9316772970803": {
+  "body_hash": "fb49a349906e3a72",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9551392506163": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9553307140403": {
+  "body_hash": "564ae8da1467bb85",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "9553307271475": {
+  "body_hash": "564ae8da1467bb85",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "9553307599155": {
+  "body_hash": "02c822fca77cc8d0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9553308287283": {
+  "body_hash": "dea82d20242f35af",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9553308516659": {
+  "body_hash": "dea82d20242f35af",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9553308680499": {
+  "body_hash": "9939e90dee658b67",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9553308844339": {
+  "body_hash": "9939e90dee658b67",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9553309761843": {
+  "body_hash": "3ab4d05f0e96bd7b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9553309827379": {
+  "body_hash": "3ab4d05f0e96bd7b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9553309925683": {
+  "body_hash": "02c822fca77cc8d0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9553311334707": {
+  "body_hash": "f9a5565a6aa98eb3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9553311596851": {
+  "body_hash": "f9a5565a6aa98eb3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9553312514355": {
+  "body_hash": "e60c2987b478f76b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9553312776499": {
+  "body_hash": "e60c2987b478f76b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9553313792307": {
+  "body_hash": "fd76f3872893c6fb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "9553313956147": {
+  "body_hash": "fd76f3872893c6fb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "9565555491123": {
+  "body_hash": "d5ccdb20e4f5590d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9609593028915": {
+  "body_hash": "60da1ea6d20baadd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9634255339827": {
+  "body_hash": "26b8f09ca7d2f321",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "s'mores",
+   "caramel apples",
+   "fudge"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra",
+   "Pacas"
+  ]
+ },
+ "9634260386099": {
+  "body_hash": "fd76f3872893c6fb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ },
+ "9634262024499": {
+  "body_hash": "8574a116d4592fe7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9634263695667": {
+  "body_hash": "3ab4d05f0e96bd7b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9634265432371": {
+  "body_hash": "8c7bd5f224e8db62",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9670925484339": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9751849074995": {
+  "body_hash": "8a45950868065ead",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9751889772851": {
+  "body_hash": "7d11b6bdb5fe2312",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9805634240819": {
+  "body_hash": "18f7fbc8a263ea21",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9813133295923": {
+  "body_hash": "d43b22c672c9d038",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9931408277811": {
+  "body_hash": "fe3c582ce7b67c32",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "marzipan",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "9931459756339": {
+  "body_hash": "89b514be19d21254",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cherry cordial",
+   "malt",
+   "candied nuts"
+  ],
+  "varietals": []
+ },
+ "9931463459123": {
+  "body_hash": "f79fd1e93b68c079",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "9931466113331": {
+  "body_hash": "a3ab7686d3f5f53c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "smores",
+   "caramel apples",
+   "fudge"
+  ],
+  "varietals": []
+ },
+ "9931467686195": {
+  "body_hash": "96d6c0475a779ba0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cocoa",
+   "shortbread"
+  ],
+  "varietals": []
+ }
+}

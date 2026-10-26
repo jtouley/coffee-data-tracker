@@ -1,0 +1,732 @@
+[
+ {
+  "body_hash": "2d671a4bb734353f",
+  "first_seen": "2026-10-26",
+  "handle": "la-chorrera",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_LA_CHORRERA_Webshop.png?v=1774893904",
+  "platform": "shopify",
+  "product_id": "10181967675675",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Aruzi",
+   "Black Fox",
+   "Bourbon",
+   "Colombia",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Latin America",
+   "Single Origin",
+   "Washed",
+   "new"
+  ],
+  "title": "La Chorrera",
+  "url": "https://blackfoxcoffee.com/products/la-chorrera",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 27.0,
+    "title": "250g",
+    "variant_id": "51939716137243"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "3746e302325e7f2e",
+  "first_seen": "2026-10-26",
+  "handle": "el-pincel",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_El_Pincel_Webshop.png?v=1786989563",
+  "platform": "shopify",
+  "product_id": "10404287643931",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Aruzi",
+   "Black Fox",
+   "Bourbon",
+   "Colombia",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Latin America",
+   "Single Origin",
+   "Washed",
+   "new"
+  ],
+  "title": "El Pincel",
+  "url": "https://blackfoxcoffee.com/products/el-pincel",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 24.0,
+    "title": "250g",
+    "variant_id": "53428909736219"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "be479e4c2246f1bf",
+  "first_seen": "2026-10-26",
+  "handle": "el-diviso",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Sweven_Diviso_Webshop.png?v=1787842827",
+  "platform": "shopify",
+  "product_id": "10411766022427",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Advanced Natural",
+   "Colombia",
+   "Drip",
+   "Latin America",
+   "Natural",
+   "Omblignon",
+   "Single Origin",
+   "Sweven",
+   "new"
+  ],
+  "title": "El Diviso",
+  "url": "https://blackfoxcoffee.com/products/el-diviso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 200,
+    "price_usd": 40.0,
+    "title": "200g",
+    "variant_id": "53801697640731"
+   }
+  ],
+  "vendor": "Sweven"
+ },
+ {
+  "body_hash": "ce2045eb57643881",
+  "first_seen": "2026-10-26",
+  "handle": "buku-hambela",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Sweven_Buku_Webshop_03f6aaf9-4abc-4681-af95-67981a7e522d.png?v=1787844715",
+  "platform": "shopify",
+  "product_id": "10411770872091",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Drip",
+   "Ethiopia",
+   "Filter",
+   "Natural",
+   "Single Origin",
+   "Sweven",
+   "new"
+  ],
+  "title": "Buku Hambela",
+  "url": "https://blackfoxcoffee.com/products/buku-hambela",
+  "variants": [
+   {
+    "available": false,
+    "grams": 200,
+    "price_usd": 26.0,
+    "title": "200g",
+    "variant_id": "53801727230235"
+   }
+  ],
+  "vendor": "Sweven"
+ },
+ {
+  "body_hash": "8440c3d9bafd49af",
+  "first_seen": "2026-10-26",
+  "handle": "majorelle",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Sweven_Marjorelle_Webshop.png?v=1787844694",
+  "platform": "shopify",
+  "product_id": "10411774312731",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Double Anaerobic",
+   "Drip",
+   "Ecuador",
+   "Filter",
+   "Latin America",
+   "Sidra",
+   "Single Origin",
+   "Sweven",
+   "Washed",
+   "new"
+  ],
+  "title": "Majorelle",
+  "url": "https://blackfoxcoffee.com/products/majorelle",
+  "variants": [
+   {
+    "available": false,
+    "grams": 200,
+    "price_usd": 42.0,
+    "title": "200g",
+    "variant_id": "53801736405275"
+   }
+  ],
+  "vendor": "Sweven"
+ },
+ {
+  "body_hash": "263bdc504232b54e",
+  "first_seen": "2026-10-26",
+  "handle": "lalesa-ephtah",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/SM_LALESA_Webstore.png?v=1787850023",
+  "platform": "shopify",
+  "product_id": "10419996524827",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Drip",
+   "Ethiopia",
+   "Ethiopia Landraces",
+   "Extended Fermentation",
+   "Natural",
+   "Single Origin",
+   "Square Mile",
+   "new"
+  ],
+  "title": "Lalesa Ephtah",
+  "url": "https://blackfoxcoffee.com/products/lalesa-ephtah",
+  "variants": [
+   {
+    "available": false,
+    "grams": 350,
+    "price_usd": 43.0,
+    "title": "350g",
+    "variant_id": "53829193924891"
+   }
+  ],
+  "vendor": "Square Mile"
+ },
+ {
+  "body_hash": "f270a0ab14c58dea",
+  "first_seen": "2026-10-26",
+  "handle": "gifted-estate-pb",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_Gifted_Estate_PB.png?v=1789936135",
+  "platform": "shopify",
+  "product_id": "10469982601499",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Black Fox",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Kenya",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Gifted Estate PB",
+  "url": "https://blackfoxcoffee.com/products/gifted-estate-pb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.0,
+    "title": "250g",
+    "variant_id": "54002934841627"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "eb972875be522484",
+  "first_seen": "2026-10-26",
+  "handle": "duromina",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_Duromina.png?v=1789936427",
+  "platform": "shopify",
+  "product_id": "10469984305435",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Black Fox",
+   "Drip",
+   "Espresso",
+   "Ethiopia",
+   "Filter",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Duromina",
+  "url": "https://blackfoxcoffee.com/products/duromina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 23.0,
+    "title": "250g",
+    "variant_id": "54002966036763"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "72b1a3b95c87052b",
+  "first_seen": "2026-10-26",
+  "handle": "bochesa",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/OBADIAH_BOCHESA_Webshop_8fa5ba88-43dd-4340-8641-dadd5c6bc446.png?v=1792097048",
+  "platform": "shopify",
+  "product_id": "10506183180571",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Drip",
+   "Espresso",
+   "Ethiopia",
+   "Obadiah",
+   "Single Origin",
+   "Washed",
+   "new"
+  ],
+  "title": "Bochesa",
+  "url": "https://blackfoxcoffee.com/products/bochesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 31.0,
+    "title": "250g",
+    "variant_id": "54179036758299"
+   }
+  ],
+  "vendor": "Obadiah"
+ },
+ {
+  "body_hash": "e1b4798718cc81b8",
+  "first_seen": "2026-10-26",
+  "handle": "lalesa",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/OBADIAH_LALESA_Webshop_ef659b7c-ebcc-4234-8eeb-1f595b23cb71.png?v=1792097026",
+  "platform": "shopify",
+  "product_id": "10506202186011",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Black Honey",
+   "Drip",
+   "Espresso",
+   "Ethiopia",
+   "Honey",
+   "Obadiah",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Lalesa",
+  "url": "https://blackfoxcoffee.com/products/lalesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250g",
+    "variant_id": "54179211477275"
+   }
+  ],
+  "vendor": "Obadiah"
+ },
+ {
+  "body_hash": "1a6939669f528f18",
+  "first_seen": "2026-10-26",
+  "handle": "daterra-aramosa",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Monogram_DATERRA_RARE.png?v=1792103753",
+  "platform": "shopify",
+  "product_id": "10506822254875",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Anaerobic",
+   "Aramosa",
+   "Brazil",
+   "Daterra",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Latin America",
+   "Monogram",
+   "Natural",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Daterra Aramosa",
+  "url": "https://blackfoxcoffee.com/products/daterra-aramosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 200,
+    "price_usd": 31.0,
+    "title": "200g",
+    "variant_id": "54181072109851"
+   }
+  ],
+  "vendor": "Monogram"
+ },
+ {
+  "body_hash": "14e9d8c815603eed",
+  "first_seen": "2026-10-26",
+  "handle": "daterra-pearl-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Monogram_DATERRA_PEARL.png?v=1792103305",
+  "platform": "shopify",
+  "product_id": "10506854891803",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Brazil",
+   "Daterra",
+   "Drip",
+   "Espresso",
+   "Latin America",
+   "Monogram",
+   "Natural",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Daterra Pearl Espresso",
+  "url": "https://blackfoxcoffee.com/products/daterra-pearl-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.0,
+    "title": "300g",
+    "variant_id": "54181109268763"
+   }
+  ],
+  "vendor": "Monogram"
+ },
+ {
+  "body_hash": "cacc3180f1ca78d3",
+  "first_seen": "2026-10-26",
+  "handle": "gedeb-lalesa",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Monogram_LALESA.png?v=1792102992",
+  "platform": "shopify",
+  "product_id": "10506860429595",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Drip",
+   "Espresso",
+   "Ethiopia",
+   "Ethiopia Landraces",
+   "Filter",
+   "Latin America",
+   "Monogram",
+   "Natural",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Gedeb Lalesa",
+  "url": "https://blackfoxcoffee.com/products/gedeb-lalesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "300g",
+    "variant_id": "54181117329691"
+   }
+  ],
+  "vendor": "Monogram"
+ },
+ {
+  "body_hash": "9ab47f52fe5773c1",
+  "first_seen": "2026-10-26",
+  "handle": "chelbesa-ephtah",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/SM_CHELBESA_EPHTAH_Webstore_109f085f-1dbf-44aa-bf2a-89a2f034b9f8.png?v=1792101432",
+  "platform": "shopify",
+  "product_id": "10519771775259",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Drip",
+   "Ethiopia",
+   "Ethiopia Landraces",
+   "Extended Fermentation",
+   "Single Origin",
+   "Square Mile",
+   "Washed",
+   "new"
+  ],
+  "title": "Chelbesa Ephtah",
+  "url": "https://blackfoxcoffee.com/products/chelbesa-ephtah",
+  "variants": [
+   {
+    "available": true,
+    "grams": 350,
+    "price_usd": 27.0,
+    "title": "350g",
+    "variant_id": "54212764696859"
+   }
+  ],
+  "vendor": "Square Mile"
+ },
+ {
+  "body_hash": "386d4325329ad992",
+  "first_seen": "2026-10-26",
+  "handle": "karinga-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_Karinga_AA_Webshop.png?v=1792104685",
+  "platform": "shopify",
+  "product_id": "10532366811419",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Africa",
+   "Black Fox",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Kenya",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Karinga AA",
+  "url": "https://blackfoxcoffee.com/products/karinga-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.0,
+    "title": "250g",
+    "variant_id": "54258299535643"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "7bae51c3283a9fec",
+  "first_seen": "2026-10-26",
+  "handle": "all-day-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_ALL_DAY_2026_Webshop.png?v=1774893933",
+  "platform": "shopify",
+  "product_id": "5986917515421",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Black Fox",
+   "Blend",
+   "Colombia",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Latin America",
+   "Single Origin",
+   "new"
+  ],
+  "title": "All Day",
+  "url": "https://blackfoxcoffee.com/products/all-day-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 22.0,
+    "title": "250g",
+    "variant_id": "37621823570077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb",
+    "variant_id": "41436427616413"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "ef81fa1826e77063",
+  "first_seen": "2026-10-26",
+  "handle": "red-brick-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/SM_RB_0826_Webstore.png?v=1787850117",
+  "platform": "shopify",
+  "product_id": "5991040024733",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Blend",
+   "Costa Rica",
+   "Espresso",
+   "Guatemala",
+   "Honey Process",
+   "Latin America",
+   "Square Mile",
+   "Washed",
+   "new"
+  ],
+  "title": "Red Brick",
+  "url": "https://blackfoxcoffee.com/products/red-brick-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 350,
+    "price_usd": 26.0,
+    "title": "350g",
+    "variant_id": "37636390584477"
+   }
+  ],
+  "vendor": "Square Mile"
+ },
+ {
+  "body_hash": "abc100f9c42a97bf",
+  "first_seen": "2026-10-26",
+  "handle": "takesi-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/CC_TAKESI_NEW_Webshop_68ab89ae-981f-45e0-809f-7aa264572546.png?v=1718137194",
+  "platform": "shopify",
+  "product_id": "6632887877789",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Bolivia",
+   "Coffee Collective",
+   "Drip",
+   "Geisha",
+   "Latin America",
+   "Single Origin",
+   "Washed",
+   "new"
+  ],
+  "title": "Takesi Geisha",
+  "url": "https://blackfoxcoffee.com/products/takesi-geisha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 120,
+    "price_usd": 70.0,
+    "title": "120g",
+    "variant_id": "39576405377181"
+   }
+  ],
+  "vendor": "Coffee Collective"
+ },
+ {
+  "body_hash": "a9499e4f41befc71",
+  "first_seen": "2026-10-26",
+  "handle": "all-night-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_All_Night_NEW_Webshop.png?v=1737046635",
+  "platform": "shopify",
+  "product_id": "7217116905629",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Black Fox",
+   "Colombia",
+   "Decaf",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Latin America",
+   "Single Origin",
+   "new"
+  ],
+  "title": "All Night Decaf",
+  "url": "https://blackfoxcoffee.com/products/all-night-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.0,
+    "title": "250g",
+    "variant_id": "41671831224477"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "761e294ccce63fdd",
+  "first_seen": "2026-10-26",
+  "handle": "tony-medina",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/BFC_TONY_MEDINA_Webshop.png?v=1701968320",
+  "platform": "shopify",
+  "product_id": "8795993932059",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Black Fox",
+   "Drip",
+   "Espresso",
+   "Filter",
+   "Guatemala",
+   "Latin America",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Tony Medina",
+  "url": "https://blackfoxcoffee.com/products/tony-medina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 23.0,
+    "title": "250g",
+    "variant_id": "47303303495963"
+   }
+  ],
+  "vendor": "Black Fox Coffee"
+ },
+ {
+  "body_hash": "01f4f9760d8fcbb5",
+  "first_seen": "2026-10-26",
+  "handle": "how-to-make-the-best-coffee-at-home",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/Blackfox_Apr13_2023_6152Large.png?v=1710880374",
+  "platform": "shopify",
+  "product_id": "8965343215899",
+  "product_type": "Equipment",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Black Fox",
+   "Book",
+   "Merchandise",
+   "Square Mile",
+   "new"
+  ],
+  "title": "How To Make The Best Coffee At Home",
+  "url": "https://blackfoxcoffee.com/products/how-to-make-the-best-coffee-at-home",
+  "variants": [
+   {
+    "available": false,
+    "grams": 587,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "48072173814043"
+   }
+  ],
+  "vendor": "Square Mile"
+ },
+ {
+  "body_hash": "369eb64347748216",
+  "first_seen": "2026-10-26",
+  "handle": "santa-colomba",
+  "image": "https://cdn.shopify.com/s/files/1/0466/2162/2429/files/OBADIAH_COLOMBA_2_Webshop.png?v=1792097082",
+  "platform": "shopify",
+  "product_id": "9625211371803",
+  "product_type": "Coffee",
+  "roaster_slug": "blackfoxcoffee",
+  "tags": [
+   "Brazil",
+   "Drip",
+   "Espresso",
+   "Latin America",
+   "Natural",
+   "Obadiah",
+   "Single Origin",
+   "new"
+  ],
+  "title": "Santa Colomba",
+  "url": "https://blackfoxcoffee.com/products/santa-colomba",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 27.0,
+    "title": "250g",
+    "variant_id": "49299203555611"
+   }
+  ],
+  "vendor": "Obadiah"
+ }
+]

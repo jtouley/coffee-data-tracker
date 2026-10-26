@@ -1,0 +1,428 @@
+[
+ {
+  "body_hash": "a807d158b5b54125",
+  "first_seen": "2026-10-26",
+  "handle": "steep-beans-for-coffee-shops",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/FullSizeRender.jpg?v=1743629508",
+  "platform": "shopify",
+  "product_id": "8747967873263",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "STEEP Custom Roasts - 6 lb Bags",
+  "url": "https://steepcoffeeroastery.com/products/steep-beans-for-coffee-shops",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "45794909880559"
+   }
+  ],
+  "vendor": "STEEP Coffee Roastery"
+ },
+ {
+  "body_hash": "b44df28c2258ade3",
+  "first_seen": "2026-10-26",
+  "handle": "trailhead-coffee-guatemala-cubulco-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/4253393D-961A-4B5A-908C-FFB89555DA91.jpg?v=1773103439",
+  "platform": "shopify",
+  "product_id": "9050597425391",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Trailhead Coffee - Guatemala Antigua - Medium Roast",
+  "url": "https://steepcoffeeroastery.com/products/trailhead-coffee-guatemala-cubulco-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812461498607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812461531375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812461564143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812461596911"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0bda6c433a8e74a9",
+  "first_seen": "2026-10-26",
+  "handle": "trailhead-coffee-guatemala-cubulco-medium-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/5F89B58E-F70D-4E2F-BD15-371EC41AA86A.jpg?v=1773103439",
+  "platform": "shopify",
+  "product_id": "9050602111215",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Foothills Decaf - Mexico Mountain - Medium Dark",
+  "url": "https://steepcoffeeroastery.com/products/trailhead-coffee-guatemala-cubulco-medium-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812488040687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812488073455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812488106223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812488138991"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5cfedb3aff1f214d",
+  "first_seen": "2026-10-26",
+  "handle": "summit-coffee-indonesia-sumatra-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/EA0F93C7-8821-494C-AF84-F0BCB04C5918.jpg?v=1773103440",
+  "platform": "shopify",
+  "product_id": "9050613547247",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Summit Coffee - Indonesia Sumatra - Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/summit-coffee-indonesia-sumatra-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812547973359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812548006127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812548038895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812548071663"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "cfab67d67e44353d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-coffee-blend-3-bean-blend-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/D7F0C1E5-03B9-4502-98ED-C4E78DBEEDF1.jpg?v=1773103440",
+  "platform": "shopify",
+  "product_id": "9050615644399",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Espresso Coffee Blend - 3 Bean Blend - Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/espresso-coffee-blend-3-bean-blend-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812556689647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812556722415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812556755183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812556787951"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Whole Bean 6#",
+    "variant_id": "50075957264623"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3bd8d32453dc43b1",
+  "first_seen": "2026-10-26",
+  "handle": "single-track-coffee-brazil-cerrado-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/BE821702-6641-4B3A-AF8B-D331819B8D36.jpg?v=1773103439",
+  "platform": "shopify",
+  "product_id": "9050618134767",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Single Track Coffee - Brazil Cerrado - Medium Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/single-track-coffee-brazil-cerrado-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812577759471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812577792239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812577825007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812577857775"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b36fd659377a93c6",
+  "first_seen": "2026-10-26",
+  "handle": "ridgeline-coffee-kenya-aa-guama-dark-roast-1",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/FullSizeRender_dfecdccb-6c89-4705-b54c-c977e02f8b1b.jpg?v=1773143879",
+  "platform": "shopify",
+  "product_id": "9050620035311",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Ridgeline Coffee - Kenya AA Guama - Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/ridgeline-coffee-kenya-aa-guama-dark-roast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812587557103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812587589871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812587622639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812587655407"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7f2629a22e9c77e4",
+  "first_seen": "2026-10-26",
+  "handle": "foothills-half-caff-mexico-mountain-medium-dark-1",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/3A0377CE-13D0-4B5B-8913-EDD19843ECF9.jpg?v=1773103439",
+  "platform": "shopify",
+  "product_id": "9050641432815",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Foothills Half Caf - Mexico Mountain - Medium dark",
+  "url": "https://steepcoffeeroastery.com/products/foothills-half-caff-mexico-mountain-medium-dark-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46812659974383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46812660007151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46812660039919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46812660072687"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9ed2d4bcb4851acc",
+  "first_seen": "2026-10-26",
+  "handle": "timberline-coffee-costa-rica-tarrazu-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/11E35365-79FD-4ED2-8CD1-27A09DA8F33A.jpg?v=1773103442",
+  "platform": "shopify",
+  "product_id": "9051251900655",
+  "product_type": "Whole bean",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Timberline Coffee - Costa Rica Tarrazu - Medium Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/timberline-coffee-costa-rica-tarrazu-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "46815683313903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Course Grind",
+    "variant_id": "46815683346671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Standard Grind",
+    "variant_id": "46815683379439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "46815683412207"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 120.0,
+    "title": "Whole Bean 6#",
+    "variant_id": "50076246409455"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "877ff610b188a9dd",
+  "first_seen": "2026-10-26",
+  "handle": "traverse",
+  "image": "https://cdn.shopify.com/s/files/1/0709/7689/7263/files/A8839913-356D-4822-A885-2CC3F76FE2C1.jpg?v=1773103440",
+  "platform": "shopify",
+  "product_id": "9236141474031",
+  "product_type": "",
+  "roaster_slug": "steepcoffeeroastery",
+  "tags": [],
+  "title": "Traverse- Indonesia Sumatra-Dark Roast",
+  "url": "https://steepcoffeeroastery.com/products/traverse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Standard Grind",
+    "variant_id": "47808477593839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Fine Grind",
+    "variant_id": "47808488046831"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Coarse Grind",
+    "variant_id": "50555273019631"
+   }
+  ],
+  "vendor": "STEEP Coffee Roastery "
+ }
+]

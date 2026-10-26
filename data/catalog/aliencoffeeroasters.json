@@ -1,0 +1,825 @@
+[
+ {
+  "body_hash": "0e5c2a125e4ea158",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Brazil_8_oz_coffee_beans.jpg?v=1661882199",
+  "platform": "shopify",
+  "product_id": "6922210934979",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "alien coffee roasters",
+   "best",
+   "brazilian coffee",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "medium roast",
+   "roasted coffee",
+   "terrestrial blend",
+   "unique coffee",
+   "whole bean coffee"
+  ],
+  "title": "Brazilian Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/brazilian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41971308429507"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41971308462275"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41971308495043"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41971308527811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41971308560579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41971308593347"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "456738c8f91baeba",
+  "first_seen": "2026-10-26",
+  "handle": "bean-me-up",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Bean_Me_Up_8_oz.jpg?v=1658135850",
+  "platform": "shopify",
+  "product_id": "6925952221379",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "bean me up",
+   "best",
+   "caffinated",
+   "celestial blend",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "light roast coffee bean",
+   "light roast coffee bean blend",
+   "roasted coffee",
+   "unique coffee",
+   "whole bean coffee"
+  ],
+  "title": "Bean Me Up",
+  "url": "https://www.aliencoffeeroasters.com/products/bean-me-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz",
+    "variant_id": "41902875771075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz",
+    "variant_id": "41972888797379"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "e681b721488cc9f2",
+  "first_seen": "2026-10-26",
+  "handle": "dark-side-of-the-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Dark_Side_of_the_Moon_8_oz.jpg?v=1658136573",
+  "platform": "shopify",
+  "product_id": "6925953990851",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "alien coffee roasters",
+   "best",
+   "caffinated",
+   "celestial blend",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "dark side of the moon",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "roasted coffee",
+   "unique coffee",
+   "whole bean coffee"
+  ],
+  "title": "Dark Side of the Moon",
+  "url": "https://www.aliencoffeeroasters.com/products/dark-side-of-the-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz",
+    "variant_id": "41971328745667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz",
+    "variant_id": "41971328778435"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "d083bd2856b5f7b5",
+  "first_seen": "2026-10-26",
+  "handle": "men-in-black",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Men_in_Black_8_oz.jpg?v=1658137137",
+  "platform": "shopify",
+  "product_id": "6925954678979",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "celestial blend",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "men in black",
+   "unique coffee"
+  ],
+  "title": "Men in Black",
+  "url": "https://www.aliencoffeeroasters.com/products/men-in-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz",
+    "variant_id": "41972950040771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz",
+    "variant_id": "41972950073539"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "bb6cd3515fe58e89",
+  "first_seen": "2026-10-26",
+  "handle": "take-me-to-your-leader",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Take_Me_to_Your_Leader_8_oz.jpg?v=1658137519",
+  "platform": "shopify",
+  "product_id": "6925961527491",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "celestial blend",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "medium roast",
+   "take me to your leader",
+   "unique coffee"
+  ],
+  "title": "Take Me to Your Leader",
+  "url": "https://www.aliencoffeeroasters.com/products/take-me-to-your-leader",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz",
+    "variant_id": "41971355451587"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz",
+    "variant_id": "41971355484355"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "02b303a8c2a2c486",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Guatemala_8_oz_coffee_beans.jpg?v=1661886012",
+  "platform": "shopify",
+  "product_id": "6925970276547",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "guatemalan coffee",
+   "light roast",
+   "meduim roast",
+   "terrestrial blend",
+   "unique coffee"
+  ],
+  "title": "Guatemalan Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/guatemalan-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41972793999555"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41972794032323"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41972794065091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41972794097859"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41972794130627"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41972794163395"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "6df8a8139133b4ac",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Costa_Rica_8_oz_coffee_beans.jpg?v=1661884144",
+  "platform": "shopify",
+  "product_id": "6925972177091",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "alien coffee roasters",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "costa rican coffe",
+   "dark roast",
+   "fun coffee",
+   "light roast",
+   "medium roast",
+   "roasted coffee",
+   "terrestrial blend",
+   "unique coffee",
+   "whole bean coffee"
+  ],
+  "title": "Costa Rican Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/costa-rica-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41971312984259"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41971313017027"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41971313049795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41971313082563"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41971313115331"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41971313148099"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "36dcd06816a54844",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Colombia_8_oz_coffee_beans.jpg?v=1661883713",
+  "platform": "shopify",
+  "product_id": "6925976076483",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "columbian coffee",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "medium roast",
+   "roasted coffee",
+   "terrestrial blend",
+   "unique coffee",
+   "whole bean coffee"
+  ],
+  "title": "Colombian Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/colombian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41971311575235"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41971311608003"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41971311640771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41971311673539"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41971311706307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41971311739075"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "3d1ae27626cf633e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Sumatra_8_oz_coffee_beans.jpg?v=1661886685",
+  "platform": "shopify",
+  "product_id": "6925978239171",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "meduim roast",
+   "sumatran coffee",
+   "terrestrial blend",
+   "unique coffee"
+  ],
+  "title": "Sumatran Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/sumatran-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41972828766403"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41972828799171"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41972828831939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41972828864707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41972828897475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41972828930243"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "f905eda1954d24cf",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Ethiopia_8_oz_coffee_beans.jpg?v=1661885636",
+  "platform": "shopify",
+  "product_id": "6925983875267",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "ethiopian coffee",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "medium roast",
+   "terrestrial blend",
+   "unique coffee"
+  ],
+  "title": "Ethiopian Coffee",
+  "url": "https://www.aliencoffeeroasters.com/products/ethiopian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41972792328387"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41972792361155"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41972792393923"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41972792426691"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41972792459459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41972792492227"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "b990d339ae28818f",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Tanzania_Peaberry_16_oz_coffee_beans.jpg?v=1661886949",
+  "platform": "shopify",
+  "product_id": "7229773611203",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "meduim roast",
+   "tanzanian Peaberry coffee",
+   "terrestrial blend",
+   "unique coffee"
+  ],
+  "title": "Tanzanian Peaberry",
+  "url": "https://www.aliencoffeeroasters.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41971294240963"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41971294273731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41971300499651"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41971300532419"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41971300565187"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41971300597955"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "ed61263027785d38",
+  "first_seen": "2026-10-26",
+  "handle": "swamp-gass",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Swam_Gas_8_oz.jpg?v=1658137213",
+  "platform": "shopify",
+  "product_id": "7229778755779",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "alien coffee",
+   "best",
+   "caffinated",
+   "celestial blend",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "medium roast",
+   "swamp gas",
+   "unique coffee"
+  ],
+  "title": "Swamp Gas",
+  "url": "https://www.aliencoffeeroasters.com/products/swamp-gass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz",
+    "variant_id": "41972908818627"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz",
+    "variant_id": "41972908851395"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ },
+ {
+  "body_hash": "4976c28ebe1bc71e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0598/5946/8483/products/Nicaragua_16_oz_coffee_beans.jpg?v=1661886342",
+  "platform": "shopify",
+  "product_id": "7306013868227",
+  "product_type": "Coffee",
+  "roaster_slug": "aliencoffeeroasters",
+  "tags": [
+   "Nicaragua coffee",
+   "alien coffee",
+   "best",
+   "caffinated",
+   "coffee",
+   "coffee bean",
+   "coffee beans",
+   "dark roast",
+   "delicious coffee",
+   "fun coffee",
+   "funny coffee",
+   "light roast",
+   "medium roast",
+   "terrestrial blend",
+   "unique coffee"
+  ],
+  "title": "Nicaraguan",
+  "url": "https://www.aliencoffeeroasters.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.51,
+    "title": "8oz / Light Roast",
+    "variant_id": "41971374948547"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.51,
+    "title": "8oz / Medium Roast",
+    "variant_id": "41971374981315"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.51,
+    "title": "8oz / Dark Roast",
+    "variant_id": "41971375014083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.51,
+    "title": "16oz / Light Roast",
+    "variant_id": "41971375046851"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.51,
+    "title": "16oz / Medium Roast",
+    "variant_id": "41971375079619"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.51,
+    "title": "16oz / Dark Roast",
+    "variant_id": "41971375112387"
+   }
+  ],
+  "vendor": "Alien Coffee Roasters"
+ }
+]

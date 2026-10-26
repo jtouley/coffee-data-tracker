@@ -1,0 +1,252 @@
+[
+ {
+  "body_hash": "2176c2b571055daf",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1721.jpg",
+  "platform": "woocommerce",
+  "product_id": "1286",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://lescheneauxcoffeeroasters.com/product/organic-guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Guatemala",
+    "variant_id": "1286:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cae4c8478b9cfa43",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_2076.jpg",
+  "platform": "woocommerce",
+  "product_id": "1287",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Ethiopia",
+  "url": "https://lescheneauxcoffeeroasters.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Ethiopia",
+    "variant_id": "1287:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8dc7203d3c35a77b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1717.jpg",
+  "platform": "woocommerce",
+  "product_id": "1288",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://lescheneauxcoffeeroasters.com/product/organic-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Sumatra",
+    "variant_id": "1288:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d4ab55aa764972e",
+  "first_seen": "2026-10-26",
+  "handle": "les-cheneaux-roast",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1698.jpg",
+  "platform": "woocommerce",
+  "product_id": "1290",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Les Cheneaux Roast",
+  "url": "https://lescheneauxcoffeeroasters.com/product/les-cheneaux-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Les Cheneaux Roast",
+    "variant_id": "1290:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f1d3107653e19e5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1702.jpg",
+  "platform": "woocommerce",
+  "product_id": "1298",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Mexico Decaf",
+  "url": "https://lescheneauxcoffeeroasters.com/product/mexico-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Mexico Decaf",
+    "variant_id": "1298:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfd974652df4ab13",
+  "first_seen": "2026-10-26",
+  "handle": "barrel-back-espresso",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1688.jpg",
+  "platform": "woocommerce",
+  "product_id": "1302",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Barrel Back (Espresso)",
+  "url": "https://lescheneauxcoffeeroasters.com/product/barrel-back-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Barrel Back (Espresso)",
+    "variant_id": "1302:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "361dae7266d14e46",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1713.jpg",
+  "platform": "woocommerce",
+  "product_id": "1305",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Brazil",
+  "url": "https://lescheneauxcoffeeroasters.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Brazil",
+    "variant_id": "1305:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-cristal",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1708.jpg",
+  "platform": "woocommerce",
+  "product_id": "1308",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Mexico Cristal",
+  "url": "https://lescheneauxcoffeeroasters.com/product/mexico-cristal/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Mexico Cristal",
+    "variant_id": "1308:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2021/12/IMG_1677.jpg",
+  "platform": "woocommerce",
+  "product_id": "1310",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Merchandise"
+  ],
+  "title": "Chocolate Covered Espresso Beans",
+  "url": "https://lescheneauxcoffeeroasters.com/product/chocolate-covered-espresso-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 6.5,
+    "title": "Chocolate Covered Espresso Beans",
+    "variant_id": "1310:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73f628847c21a12f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://lescheneauxcoffeeroasters.com/wp-content/uploads/2023/11/original.jpeg",
+  "platform": "woocommerce",
+  "product_id": "2618",
+  "product_type": "simple",
+  "roaster_slug": "lescheneauxcoffeeroasters",
+  "tags": [
+   "Bags Of Coffee"
+  ],
+  "title": "Costa Rica",
+  "url": "https://lescheneauxcoffeeroasters.com/product/costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Costa Rica",
+    "variant_id": "2618:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

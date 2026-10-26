@@ -1,0 +1,1090 @@
+[
+ {
+  "body_hash": "8a9b12a8641d76ad",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-light",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/yirg_lite_12_oz_908208c2-6568-43cb-b63e-c38867041c29.png?v=1791506986",
+  "platform": "shopify",
+  "product_id": "7326644994206",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Light Roast Coffee Beans",
+   "Single Origin",
+   "Specialty"
+  ],
+  "title": "Ethiopia Yirgacheffe| Light",
+  "url": "https://whiteoakmountaincoffee.com/products/ethiopia-yirgacheffe-light",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42032089956510"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground",
+    "variant_id": "42032089989278"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45828104093854"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45828104126622"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45828104159390"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45828104192158"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45828104323230"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45828104355998"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45828104388766"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120096465054"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120096497822"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120096530590"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194987917470"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518867378334"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "7da4af5e5d48254f",
+  "first_seen": "2026-10-26",
+  "handle": "trailside-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/trailside_12_oz_38b1db7b-d1f6-4396-9357-7c43355efaf3.png?v=1791506943",
+  "platform": "shopify",
+  "product_id": "7326651777182",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Medium Dark Roast Coffee Beans"
+  ],
+  "title": "Trailside",
+  "url": "https://whiteoakmountaincoffee.com/products/trailside-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42032144449694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45828059168926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45828059234462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45828059267230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45828059299998"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45828059365534"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45828059398302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45828059431070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45828059496606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "45866648109214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "45866648141982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "45866648174750"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194879586462"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518867083422"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "b23281a6983a67c4",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/campfire_12_oz_e785150a-f5cc-48ff-9e17-90e073fcb121.png?v=1791506900",
+  "platform": "shopify",
+  "product_id": "7326656463006",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Dark Roasted Coffee Beans",
+   "French Roast"
+  ],
+  "title": "Campfire",
+  "url": "https://whiteoakmountaincoffee.com/products/campfire-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45828032102558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45828032168094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45828032233630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45828032299166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45828032364702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45828032430238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120096039070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120096071838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120096104606"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194920087710"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518866100382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50518999695518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50519044292766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50519070081182"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "91e7e375cbe2be56",
+  "first_seen": "2026-10-26",
+  "handle": "james-co-espresso-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/james_co_12_oz_2.png?v=1791507284",
+  "platform": "shopify",
+  "product_id": "7326659870878",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Espresso",
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "James Co. Espresso",
+  "url": "https://whiteoakmountaincoffee.com/products/james-co-espresso-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42032254550174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45827980361886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45827980394654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "45827980427422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45827980460190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45827980492958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45827980525726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "45827980558494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45827980591262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45827980624030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45827980656798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "45827980689566"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194861826206"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518621749406"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "0fb0ca07658d1304",
+  "first_seen": "2026-10-26",
+  "handle": "starry-night-medium-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/starry_12_oz_01975638-8f6c-4578-a330-43ed40c745b9.png?v=1791506799",
+  "platform": "shopify",
+  "product_id": "7326662819998",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Decaf",
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Starry Night",
+  "url": "https://whiteoakmountaincoffee.com/products/starry-night-medium-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42032276701342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45827633086622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45827633152158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45827633184926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45827633217694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45827633283230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45827633315998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45827633348766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45827633414302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120087191710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120087224478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120087257246"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194587328670"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518955786398"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "a646c2e2994eb92c",
+  "first_seen": "2026-10-26",
+  "handle": "story-time-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/storytime_12_oz_3335e115-4504-4f7b-a0a1-f1d69e768bdf.png?v=1791506733",
+  "platform": "shopify",
+  "product_id": "7326671700126",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Cold brew",
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Story Time",
+  "url": "https://whiteoakmountaincoffee.com/products/story-time-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42032306323614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45827327131806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45827327197342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45827327230110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45827327262878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45827327328414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45827327361182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45827327393950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45827327459486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120086798494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120086831262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120086864030"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194810904734"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 5.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518863806622"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "b2b9f65f144b960e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/yirg_med_12_oz_d302a012-0ec4-4f8c-aeee-601a5be6db11.png?v=1791506695",
+  "platform": "shopify",
+  "product_id": "7508111556766",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Medium Roast Coffee Beans",
+   "Single Origin",
+   "Specialty"
+  ],
+  "title": "Ethiopia Yirgacheffe | Medium",
+  "url": "https://whiteoakmountaincoffee.com/products/ethiopia-yirgacheffe-medium",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42650117701790"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground",
+    "variant_id": "45827108798622"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45827108864158"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45827108896926"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45827108929694"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45827108995230"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45827109027998"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45827109060766"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45827109126302"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120086470814"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120086503582"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120086536350"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48195004825758"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518863708318"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "6a1aa801eabddebc",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/sumatra_12_oz_6c03afeb-9e64-4a72-9aec-683b5bd86fa9.png?v=1791506641",
+  "platform": "shopify",
+  "product_id": "7963281260702",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Medium Roast Coffee Beans",
+   "Single Origin",
+   "Specialty"
+  ],
+  "title": "Sumatra Takengon",
+  "url": "https://whiteoakmountaincoffee.com/products/sumatra-takengon-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44025261392030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground",
+    "variant_id": "44025261424798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45826994929822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45826994962590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45826994995358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45826995028126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45826995159198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45826995191966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45826995224734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120085946526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120085979294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120086012062"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194965733534"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518863577246"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ },
+ {
+  "body_hash": "320c48a59e2fd035",
+  "first_seen": "2026-10-26",
+  "handle": "mellow-moonlight-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0623/8316/1502/files/mellow_12_oz_8a5db544-698d-4cff-a099-56af7e86883a.png?v=1791506564",
+  "platform": "shopify",
+  "product_id": "8154709164190",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "womcoffee",
+  "tags": [
+   "12oz",
+   "2lb",
+   "5lb",
+   "Blend",
+   "Medium Roast Coffee Beans",
+   "Specialty"
+  ],
+  "title": "Mellow Moonlight",
+  "url": "https://whiteoakmountaincoffee.com/products/mellow-moonlight-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44642903490718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground",
+    "variant_id": "44642903523486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Espresso",
+    "variant_id": "45826972352670"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45826972385438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Ground",
+    "variant_id": "45826972418206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / Espresso",
+    "variant_id": "45826972483742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45826972516510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Ground",
+    "variant_id": "45826972549278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / Espresso",
+    "variant_id": "45826972614814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / French Press / Cold Brew",
+    "variant_id": "46120077525150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "2 lb / French Press / Cold Brew",
+    "variant_id": "46120077557918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5 lb / French Press / Cold Brew",
+    "variant_id": "46120077590686"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Whole Bean",
+    "variant_id": "48194734260382"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 7.99,
+    "title": "3oz Sampler / Ground",
+    "variant_id": "50518621094046"
+   }
+  ],
+  "vendor": "White Oak Mountain Coffee"
+ }
+]

@@ -1,0 +1,212 @@
+[
+ {
+  "body_hash": "1ac47427ab6da075",
+  "first_seen": "2026-10-26",
+  "handle": "alex-portillo",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/10oz-bag-mockup-Alex-Portillo-2026.png?v=1791332882",
+  "platform": "shopify",
+  "product_id": "15400815886573",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "ALEX PORTILLO",
+  "url": "https://rockfordroasting.co/products/alex-portillo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 28.5,
+    "title": "285 G",
+    "variant_id": "67597623296237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5 Lbs",
+    "variant_id": "67597623329005"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "aa98c12636e15418",
+  "first_seen": "2026-10-26",
+  "handle": "symbol",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/symbol26b.webp?v=1790336965",
+  "platform": "shopify",
+  "product_id": "8920153063661",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "SYMBOL",
+  "url": "https://rockfordroasting.co/products/symbol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "285G (10OZ)",
+    "variant_id": "47621097947373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5LB",
+    "variant_id": "47621097980141"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "2987efb84f7666d5",
+  "first_seen": "2026-10-26",
+  "handle": "solstice",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/Solstice.png?v=1737597611",
+  "platform": "shopify",
+  "product_id": "8920153194733",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "SOLSTICE",
+  "url": "https://rockfordroasting.co/products/solstice",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "285G (10OZ)",
+    "variant_id": "47621099782381"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 124.5,
+    "title": "5LB",
+    "variant_id": "47621099815149"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "2e07ecf27affc5d2",
+  "first_seen": "2026-10-26",
+  "handle": "starlite",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/starlite_94ddd3a3-40ee-47fd-9d68-70927f522562.png?v=1773417169",
+  "platform": "shopify",
+  "product_id": "8920153981165",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "STARLITE (Decaf)",
+  "url": "https://rockfordroasting.co/products/starlite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "285G (10OZ)",
+    "variant_id": "47621104074989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB",
+    "variant_id": "47621104107757"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "eb8b7964ccd8740d",
+  "first_seen": "2026-10-26",
+  "handle": "las-torres",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/LasTorres.png?v=1746799521",
+  "platform": "shopify",
+  "product_id": "8992146292973",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "LAS TORRES",
+  "url": "https://rockfordroasting.co/products/las-torres",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "285G (10OZ)",
+    "variant_id": "48075713970413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5LB",
+    "variant_id": "48075714003181"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "7d5d3cdd5d1c11fd",
+  "first_seen": "2026-10-26",
+  "handle": "nahun-fernandez",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/10oz-bag-mockup-Nahun-Fernandez-2026.png?v=1777910171",
+  "platform": "shopify",
+  "product_id": "9360581853421",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "NAHUN FERNANDEZ",
+  "url": "https://rockfordroasting.co/products/nahun-fernandez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 27.5,
+    "title": "285g",
+    "variant_id": "49930721460461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lbs",
+    "variant_id": "49930721493229"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ },
+ {
+  "body_hash": "294803fe32294e91",
+  "first_seen": "2026-10-26",
+  "handle": "big-tree",
+  "image": "https://cdn.shopify.com/s/files/1/0732/5886/0781/files/10oz-bag-mockup-Big-Tree-2026-lime-leaf.png?v=1787756399",
+  "platform": "shopify",
+  "product_id": "9473523679469",
+  "product_type": "",
+  "roaster_slug": "rockfordroasting",
+  "tags": [],
+  "title": "BIG TREE",
+  "url": "https://rockfordroasting.co/products/big-tree",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285G",
+    "variant_id": "50538028466413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.5,
+    "title": "5 Lb",
+    "variant_id": "50538028499181"
+   }
+  ],
+  "vendor": "Rockford Roasting Co."
+ }
+]

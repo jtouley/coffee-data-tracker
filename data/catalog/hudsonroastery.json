@@ -1,0 +1,650 @@
+[
+ {
+  "body_hash": "4742aeb959ed933c",
+  "first_seen": "2026-10-26",
+  "handle": "prison-alley",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_prisonalley_1x1_0181805f-084f-456d-bdee-89dd9274cb9a.jpg?v=1792788124",
+  "platform": "shopify",
+  "product_id": "10072825037082",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark"
+  ],
+  "title": "Prison Alley \"Welcome to the Big House\"",
+  "url": "https://hudsonroastery.com/products/prison-alley",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "51466634625306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51466634658074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Coarse / 12 oz",
+    "variant_id": "51466634690842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "51466634723610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Fine / 12 oz",
+    "variant_id": "51466634756378"
+   }
+  ],
+  "vendor": "Roast Style: Dark"
+ },
+ {
+  "body_hash": "3ba87e242017b63b",
+  "first_seen": "2026-10-26",
+  "handle": "dutchess-of-the-valley-fairest-of-them-all",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_dutchessofthevalley_1x1_1aaa9043-08f6-4455-b2a2-6e6f5b6eca6c.jpg?v=1792788149",
+  "platform": "shopify",
+  "product_id": "10173221241114",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Dutchess of the Valley \"Fairest of Them All\"",
+  "url": "https://hudsonroastery.com/products/dutchess-of-the-valley-fairest-of-them-all",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "51860466073882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51860466106650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Coarse / 12 oz",
+    "variant_id": "51860466139418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "51860466172186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Fine / 12 oz",
+    "variant_id": "51860466204954"
+   }
+  ],
+  "vendor": "Roast Style: Medium Dark"
+ },
+ {
+  "body_hash": "ca7c391e4673ec01",
+  "first_seen": "2026-10-26",
+  "handle": "lil-calf",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_lilcalf_1x1_67ecc3ed-3ee6-4ccf-9a2a-fbcf2847b5aa.jpg?v=1792788175",
+  "platform": "shopify",
+  "product_id": "10225208656154",
+  "product_type": "Roast Style: Dark",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark",
+   "Decaf"
+  ],
+  "title": "Lil' Calf \"All Herd, No Stampede\"",
+  "url": "https://hudsonroastery.com/products/lil-calf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Fine",
+    "variant_id": "52200196473114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Coarse",
+    "variant_id": "52200196505882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Auto Drip",
+    "variant_id": "52200196538650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Whole Bean",
+    "variant_id": "52374551822618"
+   }
+  ],
+  "vendor": "1/2 Caffeinated"
+ },
+ {
+  "body_hash": "fc6d06632b5c691b",
+  "first_seen": "2026-10-26",
+  "handle": "rip-van-winkle",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_ripvanwinkle_1x1_9709baa9-7883-4df0-96df-ece1902ec156.jpg?v=1792787951",
+  "platform": "shopify",
+  "product_id": "8990100291866",
+  "product_type": "Roast Style: Medium",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Rip Van Winkle                                                                                              \"Our Signature Blend\"",
+  "url": "https://hudsonroastery.com/products/rip-van-winkle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943049543962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943049576730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943049609498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943049642266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "51047269892378"
+   }
+  ],
+  "vendor": "Roast Style: Medium"
+ },
+ {
+  "body_hash": "b9f73c93b82b96ef",
+  "first_seen": "2026-10-26",
+  "handle": "diamond-st-viennese-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_diamondstreet_1x1_34200755-5049-43e7-b930-3051f1168155.jpg?v=1792787988",
+  "platform": "shopify",
+  "product_id": "8990109597978",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark"
+  ],
+  "title": "Diamond St. Viennese Blend            \"Deep Sultry Seduction\"",
+  "url": "https://hudsonroastery.com/products/diamond-st-viennese-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943065108762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943065141530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943065174298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943065207066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047267500314"
+   }
+  ],
+  "vendor": "Roast Style: Dark"
+ },
+ {
+  "body_hash": "de380348e30189fc",
+  "first_seen": "2026-10-26",
+  "handle": "catskill-campfire",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_catskillcampfire_1x1_b2e80729-ada4-44a8-b779-6614076f8a07.jpg?v=1792787916",
+  "platform": "shopify",
+  "product_id": "8990126539034",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Catskill Campfire \"Where It All Began\"",
+  "url": "https://hudsonroastery.com/products/catskill-campfire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943094763802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943094796570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943094829338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943094862106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047266255130"
+   }
+  ],
+  "vendor": "Roast Style: Medium"
+ },
+ {
+  "body_hash": "c376124481ed3063",
+  "first_seen": "2026-10-26",
+  "handle": "the-hendrick-hudson",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_hendrickhudson_1x1_c7418634-746e-4baf-a005-8189965d1d13.jpg?v=1792788070",
+  "platform": "shopify",
+  "product_id": "8990130503962",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "The Hendrick Hudson                                                                \"Explore the Indulgence\"",
+  "url": "https://hudsonroastery.com/products/the-hendrick-hudson",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943106363674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943106396442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943106429210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943106461978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047264813338"
+   }
+  ],
+  "vendor": "Roast Style: Medium"
+ },
+ {
+  "body_hash": "90fba86dad81ac4e",
+  "first_seen": "2026-10-26",
+  "handle": "hudson-opera-house-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_operahouse_1x1_93b6734f-62a4-47cb-bd8b-0f9113da948a.jpg?v=1792788016",
+  "platform": "shopify",
+  "product_id": "8990139646234",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark",
+   "Espresso"
+  ],
+  "title": "Hudson Opera House Espresso  \"Rich and Luxurious\"",
+  "url": "https://hudsonroastery.com/products/hudson-opera-house-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943125762330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943125795098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943125827866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943125860634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047262322970"
+   }
+  ],
+  "vendor": "Roast Style: Dark"
+ },
+ {
+  "body_hash": "bbd0bd23bfe79b72",
+  "first_seen": "2026-10-26",
+  "handle": "taconic-traveler",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_taconictraveler_1x1_c6ad0205-cf22-4012-a7b3-7c9f83bc7fa3.jpg?v=1791904485",
+  "platform": "shopify",
+  "product_id": "8990141448474",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Taconic Traveler \"Driven Deliciousness\"",
+  "url": "https://hudsonroastery.com/products/taconic-traveler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943128809754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943128842522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943128875290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943128908058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047259963674"
+   }
+  ],
+  "vendor": "Roast Style: Medium Dark"
+ },
+ {
+  "body_hash": "b0aab76ea129e95c",
+  "first_seen": "2026-10-26",
+  "handle": "hudson-athens-lighthouse-decaffeinated",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_hudsonathens_1x1_d8f55e38-f4c7-434d-a02e-e4b5e062b153.jpg?v=1792788043",
+  "platform": "shopify",
+  "product_id": "8990145839386",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark",
+   "Decaf"
+  ],
+  "title": "Hudson/Athens Lighthouse Decaffeinated    \"Shines the Light\"",
+  "url": "https://hudsonroastery.com/products/hudson-athens-lighthouse-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943139229978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943139262746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943139295514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943139328282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047258194202"
+   }
+  ],
+  "vendor": "Roast Style: Dark Decaffeinated"
+ },
+ {
+  "body_hash": "ef902a32501d6507",
+  "first_seen": "2026-10-26",
+  "handle": "bootleg-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_bootlegreserve_1x1_28540cb8-0fb4-4172-8836-5f85a7717b20.jpg?v=1791905713",
+  "platform": "shopify",
+  "product_id": "8990148591898",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Bootleg Reserve                                          \"Commit to the Crime\"",
+  "url": "https://hudsonroastery.com/products/bootleg-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47943143620890"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "Coarse / 12 oz",
+    "variant_id": "47943143653658"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "47943143686426"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "Fine / 12 oz",
+    "variant_id": "47943143719194"
+   }
+  ],
+  "vendor": "Roast Style: Medium"
+ },
+ {
+  "body_hash": "11ef966c94da59d7",
+  "first_seen": "2026-10-26",
+  "handle": "spook-rock-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/KS_HR_berkshirebonfire_1x1_246b64c6-8416-4699-9d10-73d0517e072c.jpg?v=1792788097",
+  "platform": "shopify",
+  "product_id": "9728788300058",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [
+   "Dark"
+  ],
+  "title": "Berkshire Bonfire                                                                 \"And the Journey Continues\"",
+  "url": "https://hudsonroastery.com/products/spook-rock-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "50078637916442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse / 12 oz",
+    "variant_id": "50078637949210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Auto Drip / 12 oz",
+    "variant_id": "50078637981978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / 12 oz",
+    "variant_id": "50078638014746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51047254556954"
+   }
+  ],
+  "vendor": "Roast Style: Dark"
+ },
+ {
+  "body_hash": "e7eaf9a217daf4c4",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-experience",
+  "image": "https://cdn.shopify.com/s/files/1/0863/0897/8970/files/RoastRoom3.jpg?v=1741359091",
+  "platform": "shopify",
+  "product_id": "9824407879962",
+  "product_type": "",
+  "roaster_slug": "hudsonroastery",
+  "tags": [],
+  "title": "Coffee Roasting Experience",
+  "url": "https://hudsonroastery.com/products/coffee-experience",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "50370619343130"
+   }
+  ],
+  "vendor": "Hudson Roastery "
+ }
+]

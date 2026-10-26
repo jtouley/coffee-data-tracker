@@ -1,0 +1,1387 @@
+[
+ {
+  "body_hash": "5a8624a9250db837",
+  "first_seen": "2026-10-26",
+  "handle": "el-mirador-pink-champagne-process",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/MIRADOR-CHAMPAGNE-PROCESS.jpg?v=1753472514",
+  "platform": "shopify",
+  "product_id": "10073844908321",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "El Mirador - Pink Champagne Process",
+  "url": "https://vestacoffee.com/products/el-mirador-pink-champagne-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12oz",
+    "variant_id": "51514893631777"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "e2749269ee6bb94a",
+  "first_seen": "2026-10-26",
+  "handle": "wush-wush-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/WUSH0WUSH_067719c2-6266-4c0c-8df6-4ab549ca0ec7.jpg?v=1753476352",
+  "platform": "shopify",
+  "product_id": "10073975390497",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Wush Wush - Anaerobic Natural",
+  "url": "https://vestacoffee.com/products/wush-wush-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12oz",
+    "variant_id": "51515023917345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5lb",
+    "variant_id": "51515023950113"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "7f046e66a0daa10d",
+  "first_seen": "2026-10-26",
+  "handle": "chelchele-natural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/chelchele-ethiopia-natural.jpg?v=1757355334",
+  "platform": "shopify",
+  "product_id": "10125221462305",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Chelchele - Natural Ethiopia",
+  "url": "https://vestacoffee.com/products/chelchele-natural-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "51793744363809"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "51793744396577"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "7df930aaa0055312",
+  "first_seen": "2026-10-26",
+  "handle": "dale-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/dale-sidamo-ethiopia-washed.jpg?v=1759526728",
+  "platform": "shopify",
+  "product_id": "10150056984865",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dalé - Ethiopia",
+  "url": "https://vestacoffee.com/products/dale-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "51880300577057"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 112.5,
+    "title": "5lb",
+    "variant_id": "51880300609825"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "c241c60f6afa9f08",
+  "first_seen": "2026-10-26",
+  "handle": "aleta-wondo-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/aleta-wondo-ethiopia.jpg?v=1775070398",
+  "platform": "shopify",
+  "product_id": "10305626210593",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Aleta Wondo - Ethiopia",
+  "url": "https://vestacoffee.com/products/aleta-wondo-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "52527919399201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "52527919431969"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "0b47da28ba32ddea",
+  "first_seen": "2026-10-26",
+  "handle": "mae-suai-thailand",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/mae-suai-coffee.jpg?v=1775070677",
+  "platform": "shopify",
+  "product_id": "10305632960801",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mae Suai - Thailand",
+  "url": "https://vestacoffee.com/products/mae-suai-thailand",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12oz",
+    "variant_id": "52527942009121"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb",
+    "variant_id": "52527942041889"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "3240d321b9b2e9ba",
+  "first_seen": "2026-10-26",
+  "handle": "kamwangi-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/kanya-kamwangi.jpg?v=1777415357",
+  "platform": "shopify",
+  "product_id": "10332938567969",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kamwangi - Kenya",
+  "url": "https://vestacoffee.com/products/kamwangi-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "52615181467937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "52615181500705"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "3c8eae2d286e5268",
+  "first_seen": "2026-10-26",
+  "handle": "la-flor-cultured-natural-elias-shady-bayter",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/la-flor-colombia.jpg?v=1784835957",
+  "platform": "shopify",
+  "product_id": "10450754470177",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "La Flor, Cultured Natural - Elías & Shady Bayter",
+  "url": "https://vestacoffee.com/products/la-flor-cultured-natural-elias-shady-bayter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12oz",
+    "variant_id": "53070147191073"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "189123f018594b53",
+  "first_seen": "2026-10-26",
+  "handle": "papayo-wushwush-elias-shady-bayter",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/papayo-wushwush-colombia.jpg?v=1784836424",
+  "platform": "shopify",
+  "product_id": "10450755387681",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Wush Wush + Papayo, Anaerobic Natural - Elías & Shady Bayter",
+  "url": "https://vestacoffee.com/products/papayo-wushwush-elias-shady-bayter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12oz",
+    "variant_id": "53070150041889"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "c7f7fdd6cc044cb8",
+  "first_seen": "2026-10-26",
+  "handle": "demicha-natural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/ethiopia-demicha-natural-process.jpg?v=1791846565",
+  "platform": "shopify",
+  "product_id": "10587654783265",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Demicha - Natural Ethiopia",
+  "url": "https://vestacoffee.com/products/demicha-natural-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "53708369723681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "53708369756449"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "ff6edf3d4aaabee5",
+  "first_seen": "2026-10-26",
+  "handle": "manzanares-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/colombia-manzanares.jpg?v=1791847136",
+  "platform": "shopify",
+  "product_id": "10587659108641",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Manzanares - Colombia",
+  "url": "https://vestacoffee.com/products/manzanares-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "53708406128929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "53708406161697"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "873bf7a6bc32930a",
+  "first_seen": "2026-10-26",
+  "handle": "single-serve-specialty-coffee-packs",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/goose-bumps-coffee.jpg?v=1689881370",
+  "platform": "shopify",
+  "product_id": "1452514672695",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Single-Serve 'Goose Bumps' Coffee 10 Pack",
+  "url": "https://vestacoffee.com/products/single-serve-specialty-coffee-packs",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "12986422100023"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "e8cfdfafe2f6dc2b",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-honey-el-apiario",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/coffee-blossom-honey.jpg?v=1550599598",
+  "platform": "shopify",
+  "product_id": "1476773609527",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Coffee Honey - El Apiario - Guatemala",
+  "url": "https://vestacoffee.com/products/coffee-honey-el-apiario",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "13094069633079"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "a7ac16455ba9b12f",
+  "first_seen": "2026-10-26",
+  "handle": "cauca-ea-decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/decaf.jpg?v=1674692429",
+  "platform": "shopify",
+  "product_id": "1558293086263",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Cauca Decaf - Colombia",
+  "url": "https://vestacoffee.com/products/cauca-ea-decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "41317095014550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb",
+    "variant_id": "41317095047318"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "971c7b6274b5ab61",
+  "first_seen": "2026-10-26",
+  "handle": "monte-alban-oaxaca-pluma",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/monte-alban-oaxaca-coffee.jpg?v=1739315041",
+  "platform": "shopify",
+  "product_id": "1694864113719",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Monte Alban - Oaxaca",
+  "url": "https://vestacoffee.com/products/monte-alban-oaxaca-pluma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "39901605560470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb",
+    "variant_id": "39901605593238"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "ef42e1108455016b",
+  "first_seen": "2026-10-26",
+  "handle": "single-serve-goddess-coffee-10-pack",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/IMG_8206.jpg?v=1577127087",
+  "platform": "shopify",
+  "product_id": "4416787251337",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Single-Serve 'Goddess' Coffee 10 Pack",
+  "url": "https://vestacoffee.com/products/single-serve-goddess-coffee-10-pack",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "31480604655753"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "a00f6f80686105d9",
+  "first_seen": "2026-10-26",
+  "handle": "angel-mountain-el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/angels-mountain-el-salvador.jpg?v=1729627468",
+  "platform": "shopify",
+  "product_id": "51929415704",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Angel Mountain - El Salvador",
+  "url": "https://vestacoffee.com/products/angel-mountain-el-salvador",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "45039268888865"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb",
+    "variant_id": "45039268921633"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "0f9e8081b6f4582b",
+  "first_seen": "2026-10-26",
+  "handle": "goddess-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/goddess-bag-new_8b106972-c849-4142-a41e-a5e9a028c92e.jpg?v=1739314967",
+  "platform": "shopify",
+  "product_id": "575576604727",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Goddess Blend",
+  "url": "https://vestacoffee.com/products/goddess-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb",
+    "variant_id": "13739156570167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "7389674373175"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "28edf4508a1e2b56",
+  "first_seen": "2026-10-26",
+  "handle": "mundayo-natural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/mundayo-natural-ethiopia_8c3a6a20-fa1d-4ab3-9661-af23e560532c.jpg?v=1726696540",
+  "platform": "shopify",
+  "product_id": "6006494560406",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mundayo - Natural Ethiopia",
+  "url": "https://vestacoffee.com/products/mundayo-natural-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "37335595450518"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 112.5,
+    "title": "5lb",
+    "variant_id": "37335595483286"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "874a696fff2d4c4d",
+  "first_seen": "2026-10-26",
+  "handle": "double-down-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/double-down-coffee-blend.jpg?v=1739315468",
+  "platform": "shopify",
+  "product_id": "6008950390934",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Double Down Blend",
+  "url": "https://vestacoffee.com/products/double-down-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "37345421721750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb",
+    "variant_id": "37345421754518"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "38eca40d281bcec1",
+  "first_seen": "2026-10-26",
+  "handle": "el-obraje-caturra-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/el-obraje-colombia-natural.jpg?v=1619114535",
+  "platform": "shopify",
+  "product_id": "6694544408726",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "El Obraje - Caturra Natural",
+  "url": "https://vestacoffee.com/products/el-obraje-caturra-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "39688218935446"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "200f4888e2b2aef8",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-talk-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/sweet-talk-blend_91193d1e-cbd5-4f8a-a440-a31d8f7ae757.jpg?v=1745863363",
+  "platform": "shopify",
+  "product_id": "6694558269590",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sweet Talk Blend",
+  "url": "https://vestacoffee.com/products/sweet-talk-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "39688326086806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb",
+    "variant_id": "41409926299798"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "9aa2d02cc686394a",
+  "first_seen": "2026-10-26",
+  "handle": "legese-borsamo-natural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/legese-brasmo-ethiopia-natural.jpg?v=1633031922",
+  "platform": "shopify",
+  "product_id": "7151941845142",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Legese Borsamo - Natural Ethiopia",
+  "url": "https://vestacoffee.com/products/legese-borsamo-natural-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "40872150728854"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5lb",
+    "variant_id": "40872150761622"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "124f0d79f788e7d2",
+  "first_seen": "2026-10-26",
+  "handle": "yirgz-washed-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/yirg-z-yirgacheffe.jpg?v=1633032248",
+  "platform": "shopify",
+  "product_id": "7151955214486",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "YirgZ - Washed Yirgacheffe",
+  "url": "https://vestacoffee.com/products/yirgz-washed-yirgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "40872189362326"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb",
+    "variant_id": "40872189395094"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "67bece3dae5626c7",
+  "first_seen": "2026-10-26",
+  "handle": "el-obraje-gesha-maracaturra",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/javier-solis-anaerobic-process_8c718623-f6c3-4908-ae83-855e9e0a58f6.jpg?v=1633032930",
+  "platform": "shopify",
+  "product_id": "7151994667158",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "El Obraje - Gesha & Maracaturra",
+  "url": "https://vestacoffee.com/products/el-obraje-gesha-maracaturra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "40872331411606"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "b4792f5bb57c6a33",
+  "first_seen": "2026-10-26",
+  "handle": "javier-solis-anaerobic-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/javier-solis-anaerobic-natural-26.jpg?v=1770180696",
+  "platform": "shopify",
+  "product_id": "7261239443606",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Javier Solis - Anaerobic Natural",
+  "url": "https://vestacoffee.com/products/javier-solis-anaerobic-catuai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "41102284193942"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "328565f78b83f400",
+  "first_seen": "2026-10-26",
+  "handle": "minor-jimenez-honey-caturra-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/minor-jiminez-tarrazu-coffee.jpg?v=1739315240",
+  "platform": "shopify",
+  "product_id": "7301244387478",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Minor Jimenez - Washed Catuai",
+  "url": "https://vestacoffee.com/products/minor-jimenez-honey-caturra-catuai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "41221499388054"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "41221499420822"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "760b5ea3382b38c9",
+  "first_seen": "2026-10-26",
+  "handle": "gedeb-natural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/ethiopia-gedeb.jpg?v=1651174529",
+  "platform": "shopify",
+  "product_id": "7451370553494",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Gedeb - Natural Ethiopia",
+  "url": "https://vestacoffee.com/products/gedeb-natural-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "41723917631638"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb",
+    "variant_id": "41723917664406"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "6fbcaee991ea7cb0",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gaturiri",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/kenya-gaturiri.jpg?v=1652821160",
+  "platform": "shopify",
+  "product_id": "7468315410582",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kenya Gaturiri",
+  "url": "https://vestacoffee.com/products/kenya-gaturiri",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "42027246977174"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "42027247009942"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "629accb05b87e446",
+  "first_seen": "2026-10-26",
+  "handle": "peru-incahuasi-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/peru-incahuasi.jpg?v=1652821388",
+  "platform": "shopify",
+  "product_id": "7468324749462",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Peru Incahuasi Natural",
+  "url": "https://vestacoffee.com/products/peru-incahuasi-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "41785801867414"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "046c321c70352338",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bonde-yeast-process",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/bonde.jpg?v=1674681909",
+  "platform": "shopify",
+  "product_id": "7581465182358",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopia Bonde Yeast Process",
+  "url": "https://vestacoffee.com/products/ethiopia-bonde-yeast-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "42114518646934"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "42114518679702"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "ad7b5559ae58e60f",
+  "first_seen": "2026-10-26",
+  "handle": "don-eli-anaerobic-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/don-eli-honey-anaeroboc.jpg?v=1770180871",
+  "platform": "shopify",
+  "product_id": "8009864347937",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Don Eli - Anaerobic Honey",
+  "url": "https://vestacoffee.com/products/don-eli-anaerobic-catuai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz",
+    "variant_id": "44062454382881"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "9374ef956c52fede",
+  "first_seen": "2026-10-26",
+  "handle": "ayarza-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/ayarza-natural-guatemala.jpg?v=1700521415",
+  "platform": "shopify",
+  "product_id": "8009866084641",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ayarza Natural - Guatemala",
+  "url": "https://vestacoffee.com/products/ayarza-guatemala",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "44062463820065"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "44062463852833"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "d26f74202091b51d",
+  "first_seen": "2026-10-26",
+  "handle": "el-uberrimo-gesha-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/uberromo-gesha.jpg?v=1674681712",
+  "platform": "shopify",
+  "product_id": "8027021738273",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "El Ubérrimo Gesha - Colombia",
+  "url": "https://vestacoffee.com/products/el-uberrimo-gesha-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz",
+    "variant_id": "44126899994913"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "e677a2eeed027814",
+  "first_seen": "2026-10-26",
+  "handle": "arsosala-g1-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/arsosala-ethiopia.jpg?v=1726696157",
+  "platform": "shopify",
+  "product_id": "8037303812385",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Arsosala G1 - Ethiopia",
+  "url": "https://vestacoffee.com/products/arsosala-g1-ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "44172036538657"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb",
+    "variant_id": "44172036571425"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "c9688a663a8f6457",
+  "first_seen": "2026-10-26",
+  "handle": "kanzu-lot-19-rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/products/kanzu.jpg?v=1679950507",
+  "platform": "shopify",
+  "product_id": "8188636135713",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kanzu Lot #19 - Rwanda, Nyamasheke",
+  "url": "https://vestacoffee.com/products/kanzu-lot-19-rwanda",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "44830039048481"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb",
+    "variant_id": "44830039081249"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "dcb30222977e2f83",
+  "first_seen": "2026-10-26",
+  "handle": "finca-juan-martin-natural-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/finca-juan-martin-pink-bourbon.jpg?v=1693433497",
+  "platform": "shopify",
+  "product_id": "8577100972321",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Finca Juan Martin - Pink Bourbon Natural",
+  "url": "https://vestacoffee.com/products/finca-juan-martin-natural-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "46683688796449"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "a124db37953e8a4a",
+  "first_seen": "2026-10-26",
+  "handle": "pueblo-libre-peru",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/pueblo-libre-peru.jpg?v=1693434305",
+  "platform": "shopify",
+  "product_id": "8577195704609",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Pueblo Libre - Peru",
+  "url": "https://vestacoffee.com/products/pueblo-libre-peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "46684013297953"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "46684149186849"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "f52960e8b7711192",
+  "first_seen": "2026-10-26",
+  "handle": "loma-la-gloria-pacamara-honey",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/loma-la-gloria-el-salvador-red-honey.jpg?v=1731961890",
+  "platform": "shopify",
+  "product_id": "8757852274977",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Loma La Gloria - Pacamara Honey",
+  "url": "https://vestacoffee.com/products/loma-la-gloria-pacamara-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "47157009056033"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "73145dbfe329a677",
+  "first_seen": "2026-10-26",
+  "handle": "goose-bumps-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/goose-bumps-blend-espresso_3612e3a1-49d3-41fb-984b-b7a818d753f1.jpg?v=1726696018",
+  "platform": "shopify",
+  "product_id": "9367371918",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Goose Bumps Espresso Blend",
+  "url": "https://vestacoffee.com/products/goose-bumps-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "33755840974"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "381085712408"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "da947c5d92d3db17",
+  "first_seen": "2026-10-26",
+  "handle": "monteblanco-blueberry-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/MONTEBLANCO-BLUEBERRY-COFERMENT.jpg?v=1753472808",
+  "platform": "shopify",
+  "product_id": "9547861852449",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Monteblanco Blueberry Co-ferment",
+  "url": "https://vestacoffee.com/products/monteblanco-blueberry-co-ferment",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12oz",
+    "variant_id": "49870420246817"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5lb",
+    "variant_id": "51666763219233"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "94d459fe32872139",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-severino-natural-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/fazenda-severino-brazil.jpg?v=1726696854",
+  "platform": "shopify",
+  "product_id": "9677706199329",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Fazenda Severino Natural",
+  "url": "https://vestacoffee.com/products/fazenda-severino-natural-brazil",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "50312785068321"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb",
+    "variant_id": "50312785101089"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "b67d6cc8e69c7ef2",
+  "first_seen": "2026-10-26",
+  "handle": "finca-san-carlos-el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/el-salvador-finca-sancarlosjpg.jpg?v=1739313822",
+  "platform": "shopify",
+  "product_id": "9863609450785",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Finca San Carlos - El Salvador",
+  "url": "https://vestacoffee.com/products/finca-san-carlos-el-salvador",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "50887104987425"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb",
+    "variant_id": "50887105020193"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "0d352b714a490f99",
+  "first_seen": "2026-10-26",
+  "handle": "thailand-mae-chedi-chang-mai-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/mae-chedi-thai-coffee.jpg?v=1740777233",
+  "platform": "shopify",
+  "product_id": "9893351227681",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mae Chedi - Anaerobic Red Honey",
+  "url": "https://vestacoffee.com/products/thailand-mae-chedi-chang-mai-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz",
+    "variant_id": "50986445406497"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "dd059679e65a9a6f",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-finca-la-josefina-anaerobic",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/finca-la-josefina-ecuador-coffee.jpg?v=1740778824",
+  "platform": "shopify",
+  "product_id": "9893383340321",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Finca La Josefina - Anaerobic Washed",
+  "url": "https://vestacoffee.com/products/ecuador-finca-la-josefina-anaerobic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "50986486890785"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "3e2deb336f3c4fd0",
+  "first_seen": "2026-10-26",
+  "handle": "el-mirador-catiope-spring-process",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/el-mirador-elkin-guzman-spring-coffee.jpg?v=1740779412",
+  "platform": "shopify",
+  "product_id": "9893387075873",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "El Mirador - Catiope Spring Process",
+  "url": "https://vestacoffee.com/products/el-mirador-catiope-spring-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz",
+    "variant_id": "50986498359585"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ },
+ {
+  "body_hash": "d09bed1f97dafc92",
+  "first_seen": "2026-10-26",
+  "handle": "boomer-blend-half-caffeinated-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7664/files/boomer-blend-half-caff.jpg?v=1747863020",
+  "platform": "shopify",
+  "product_id": "9993364930849",
+  "product_type": "Whole Beans",
+  "roaster_slug": "vestacoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Boomer Blend - Half Caffeinated Blend",
+  "url": "https://vestacoffee.com/products/boomer-blend-half-caffeinated-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "51296854147361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb",
+    "variant_id": "51296854180129"
+   }
+  ],
+  "vendor": "VESTA Coffee Roasters"
+ }
+]

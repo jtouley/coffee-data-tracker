@@ -1,0 +1,3663 @@
+[
+ {
+  "body_hash": "b06b023efe046494",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-cobbler",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/Blueberry_Bag.jpg?v=1782243253",
+  "platform": "shopify",
+  "product_id": "10756892852534",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Blueberry Cobbler",
+  "url": "https://savannahcoffee.com/products/blueberry-cobbler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "54149654413622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "54149654446390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "54149654479158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "54149654511926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "54149654544694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "54149654577462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "54149654610230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "54149654642998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "54149654675766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "54149654708534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "54149654741302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "54149654774070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "54149654806838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "54149654839606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "54149654872374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "54149654905142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "54149654937910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "54149654970678"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "bf96be2b24d14e51",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/Guatemala_Bag.jpg?v=1782243253",
+  "platform": "shopify",
+  "product_id": "10760567292214",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Guatemala Organic",
+  "url": "https://savannahcoffee.com/products/guatemala-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "54168150966582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "54168150999350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "54168151032118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "54168151064886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "54168151097654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "54168151130422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "54168151163190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "54168151195958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "54168166826294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "54168166859062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "54168166891830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "54168166924598"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "118e1912519563ef",
+  "first_seen": "2026-10-26",
+  "handle": "swamp-fox-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/Swamp_Fox_Espresso.jpg?v=1697551776",
+  "platform": "shopify",
+  "product_id": "8850732548406",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast",
+   "RoastersChoice"
+  ],
+  "title": "Swamp Fox Espresso",
+  "url": "https://savannahcoffee.com/products/swamp-fox-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47254061252918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47254061285686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47254061318454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47254061351222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47254061383990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47254061416758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326894817590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326894850358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326894883126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326894915894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326894948662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326894981430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568207511862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568207544630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568207577398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568207610166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568207642934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568207675702"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "61bfd2e4fd75fecb",
+  "first_seen": "2026-10-26",
+  "handle": "moon-river",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/Moon_River.jpg?v=1698000176",
+  "platform": "shopify",
+  "product_id": "8863191138614",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Moon River",
+  "url": "https://savannahcoffee.com/products/moon-river",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47304447951158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47304448049462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47304448147766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326907957558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326907990326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326908023094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568593977654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568594010422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568594043190"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "e4c845cc72858ac3",
+  "first_seen": "2026-10-26",
+  "handle": "daufuskie",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/Daufuskie.jpg?v=1698000560",
+  "platform": "shopify",
+  "product_id": "8863193727286",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Daufuskie",
+  "url": "https://savannahcoffee.com/products/daufuskie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47305161769270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47305161802038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47305161834806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47305678553398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326913888566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326913921334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326913954102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326913986870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568569434422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568569467190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568569499958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568569532726"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "3010a0ff3b4923a4",
+  "first_seen": "2026-10-26",
+  "handle": "plantation-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/HostessCityBlend.png?v=1762985591",
+  "platform": "shopify",
+  "product_id": "8863195922742",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Hostess City Blend",
+  "url": "https://savannahcoffee.com/products/plantation-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47305926345014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47305926377782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47305926410550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47305926443318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47305926476086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47305926508854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47305926541622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / French Press Grind / 12oz",
+    "variant_id": "47305926574390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326919426358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326919491894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326919524662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326919590198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326919655734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326919688502"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326919754038"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / French Press Grind / 2lb. Bag",
+    "variant_id": "47326919786806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568559800630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568559833398"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568559866166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568559898934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568559931702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568559964470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568559997238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / French Press Grind / 5lb. Bag",
+    "variant_id": "47568560030006"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "0256a73e9b606b4e",
+  "first_seen": "2026-10-26",
+  "handle": "low-country-breakfast",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/LowCountryBreakfast.jpg?v=1698001061",
+  "platform": "shopify",
+  "product_id": "8863197298998",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Low Country Breakfast",
+  "url": "https://savannahcoffee.com/products/low-country-breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47306324017462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47306324050230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47306324148534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47306324246838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47306324410678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47306324607286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47306324803894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / French Press Grind / 12oz",
+    "variant_id": "47306324967734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326927913270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326927946038"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326927978806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326928011574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326928044342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326928077110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326928109878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / French Press Grind / 2lb. Bag",
+    "variant_id": "47326928142646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568556163382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568556196150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568556228918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568556261686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568556294454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568556327222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568556359990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / French Press Grind / 5lb. Bag",
+    "variant_id": "47568556392758"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "d8b9e1ddb630c300",
+  "first_seen": "2026-10-26",
+  "handle": "captains-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/CaptainsChoice.jpg?v=1698001206",
+  "platform": "shopify",
+  "product_id": "8863198445878",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "BlendChoice",
+   "Medium Roast",
+   "RoastersChoice"
+  ],
+  "title": "Captain's Choice",
+  "url": "https://savannahcoffee.com/products/captains-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47306608902454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47306608935222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47306608967990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47306609000758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47306609033526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47306609066294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47306609099062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / French Press Grind / 12oz",
+    "variant_id": "47306609131830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326948753718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326948786486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326948819254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326948852022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326948884790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326948917558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326948950326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / French Press Grind / 2lb. Bag",
+    "variant_id": "47326948983094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47532002017590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47532002050358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47532002083126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47532002115894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47532002148662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47532002181430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47532002214198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / French Press Grind / 5lb. Bag",
+    "variant_id": "47532002246966"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "1d1ea1959192f502",
+  "first_seen": "2026-10-26",
+  "handle": "beach-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/BeachHouseBlend.jpg?v=1698002211",
+  "platform": "shopify",
+  "product_id": "8863200313654",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast",
+   "RoastersChoice"
+  ],
+  "title": "Beach House Blend",
+  "url": "https://savannahcoffee.com/products/beach-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47306996285750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47306996318518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47306996351286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47306996384054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327431131446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327431164214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327431196982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327431229750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568283402550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568283435318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568283468086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568283500854"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "e6289d1a307c3194",
+  "first_seen": "2026-10-26",
+  "handle": "savannah-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/SavannahBlend.jpg?v=1698002827",
+  "platform": "shopify",
+  "product_id": "8863209881910",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Savannah Blend",
+  "url": "https://savannahcoffee.com/products/savannah-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47309554778422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47309554909494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47309555007798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47309555106102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327387091254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327387124022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327387156790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327387189558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568538468662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568538501430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568538534198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568538599734"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "59fc6cdca7f75aec",
+  "first_seen": "2026-10-26",
+  "handle": "good-evil-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/GoodEvilBlend.jpg?v=1698003106",
+  "platform": "shopify",
+  "product_id": "8863212503350",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Good & Evil Blend",
+  "url": "https://savannahcoffee.com/products/good-evil-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47309941145910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47309941178678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47309941211446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47309941244214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326986830134"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326986862902"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326986895670"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326986928438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568499310902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568499343670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568499376438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568499409206"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "13c3eeb43e0b3d29",
+  "first_seen": "2026-10-26",
+  "handle": "misty-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/MistyMorningBlend.jpg?v=1698003206",
+  "platform": "shopify",
+  "product_id": "8863213945142",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Misty Morning Blend",
+  "url": "https://savannahcoffee.com/products/misty-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47310220591414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47310220624182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47310220656950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47310220689718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327352619318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327352652086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327352684854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327352717622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568481714486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568481747254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568481780022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568481812790"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "3e28f1ad937f16f8",
+  "first_seen": "2026-10-26",
+  "handle": "factors-walk",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/FactorsWalk.jpg?v=1698003347",
+  "platform": "shopify",
+  "product_id": "8863215059254",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Factor's Walk",
+  "url": "https://savannahcoffee.com/products/factors-walk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47310398652726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47310398751030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47310398849334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47310398980406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326979162422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326979195190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326979227958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47326979260726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568441606454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568441639222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568441671990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568441704758"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "48b53024910cbacf",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/ColdBrewBlend.jpg?v=1698007475",
+  "platform": "shopify",
+  "product_id": "8863216861494",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://savannahcoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47310836760886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47310836859190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47310836924726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47310836990262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327423594806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327423627574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327423660342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327423693110"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "42f663c68692de02",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/FrenchVanilla.jpg?v=1698013061",
+  "platform": "shopify",
+  "product_id": "8863325913398",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "French Vanilla",
+  "url": "https://savannahcoffee.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322394722614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322394755382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322394788150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322394820918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322394853686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322394886454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326985158966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326985191734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326985224502"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326985257270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326985290038"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326985322806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "49299917799734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "49299917832502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "49299917865270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "49299917898038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "49299917930806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "49299917963574"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "8c587012330bfea2",
+  "first_seen": "2026-10-26",
+  "handle": "savannah-pecans",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/SavannahPecans.jpg?v=1698013435",
+  "platform": "shopify",
+  "product_id": "8863329845558",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Savannah Pecan",
+  "url": "https://savannahcoffee.com/products/savannah-pecans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322438664502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322438697270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322438730038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322438762806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322438795574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322438828342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47322732036406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47322732069174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47322732101942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47322732134710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47322732167478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47322732200246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47322732233014"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "96ede489b7dc025f",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-supreme",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/HazelnutSupreme.jpg?v=1698013518",
+  "platform": "shopify",
+  "product_id": "8863330664758",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Hazelnut Supreme",
+  "url": "https://savannahcoffee.com/products/hazelnut-supreme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322449346870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322449379638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322449412406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322449445174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322449477942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322449510710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47326989517110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47326989582646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326989615414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47326989648182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47326989680950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47326989713718"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "dd3324c15f96a19f",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-caramel-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/RainforestCaramelNut.jpg?v=1698013657",
+  "platform": "shopify",
+  "product_id": "8863332827446",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Rainforest Caramel Nut",
+  "url": "https://savannahcoffee.com/products/rainforest-caramel-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322476970294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322477003062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322477068598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322477101366"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322477134134"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322477166902"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327383650614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327383683382"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327383716150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327383748918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327383781686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327383814454"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "f80798105ab50037",
+  "first_seen": "2026-10-26",
+  "handle": "pecan-praline",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/PecanPraline.jpg?v=1698013724",
+  "platform": "shopify",
+  "product_id": "8863333974326",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Pecan Praline",
+  "url": "https://savannahcoffee.com/products/pecan-praline",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322489192758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322489225526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322489258294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322489291062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322489323830"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322489356598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327357206838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327357239606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327357272374"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327357305142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327357337910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327357370678"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "0a02f7d6d93193b1",
+  "first_seen": "2026-10-26",
+  "handle": "savannah-seduction",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/SavannahSeduction.jpg?v=1698013823",
+  "platform": "shopify",
+  "product_id": "8863335121206",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Savannah Seduction",
+  "url": "https://savannahcoffee.com/products/savannah-seduction",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322501742902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322501808438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322501873974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322501939510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322502005046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322502070582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327396528438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327396561206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327396593974"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327396626742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327396659510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327396692278"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "d932662a1309f7c4",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/CaramelPecan.jpg?v=1698013952",
+  "platform": "shopify",
+  "product_id": "8863336792374",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Caramel Pecan",
+  "url": "https://savannahcoffee.com/products/caramel-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322514882870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322514915638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322514948406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322514981174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322515013942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322515046710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327427723574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327427756342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327427789110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327427821878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327427854646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327427887414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568401957174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568401989942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568402022710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568402055478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568402088246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568402121014"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "2d387e6fe1092e33",
+  "first_seen": "2026-10-26",
+  "handle": "savannah-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/SavannahSunrise.jpg?v=1698014566",
+  "platform": "shopify",
+  "product_id": "8863343444278",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Savannah Sunrise",
+  "url": "https://savannahcoffee.com/products/savannah-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322586579254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322586612022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322586644790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322586677558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322586710326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322586743094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327397675318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327397708086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327397740854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327397773622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327397806390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327397839158"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "8c8beecfcaac8c53",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/PumpkinSpice.jpg?v=1698014724",
+  "platform": "shopify",
+  "product_id": "8863343903030",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Pumpkin Pie",
+  "url": "https://savannahcoffee.com/products/pumpkin-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322590839094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322590871862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322590904630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322590937398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322590970166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322591002934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327371034934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327371067702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327371133238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327371166006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327371231542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327371297078"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "faa32ea88bf9eb02",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/PumpkinPecans.jpg?v=1698014810",
+  "platform": "shopify",
+  "product_id": "8863346229558",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "BlendChoice",
+   "Medium Roast"
+  ],
+  "title": "Pumpkin Pecan",
+  "url": "https://savannahcoffee.com/products/pumpkin-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322614071606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322614104374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322614137142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322614169910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322614202678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322614235446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327363367222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327363399990"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327363432758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327363465526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327363498294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327363531062"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "be45a7842d94d5ed",
+  "first_seen": "2026-10-26",
+  "handle": "tybee-island-coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/TybeeIslandCoconut.jpg?v=1698015368",
+  "platform": "shopify",
+  "product_id": "8863351013686",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Tybee Island Coconut",
+  "url": "https://savannahcoffee.com/products/tybee-island-coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47322666533174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47322666565942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322666598710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47322666631478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47322666664246"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47322666697014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327403770166"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327403802934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327403835702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327403868470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327403901238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327403934006"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "b35cc857271e61de",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/ColombiaSupremo.jpg?v=1698075592",
+  "platform": "shopify",
+  "product_id": "8864689324342",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Colombia Supremo - Light",
+  "url": "https://savannahcoffee.com/products/colombia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327454331190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327454363958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327454396726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327454429494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327454462262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327454495030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47327454527798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327454560566"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47327454593334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327454626102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327454658870"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327454691638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568423977270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568424010038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568424042806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568424075574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568424108342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568424141110"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "c4d73c0df373c71b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/PeruOrganic.jpg?v=1698076006",
+  "platform": "shopify",
+  "product_id": "8864696041782",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Peru Organic",
+  "url": "https://savannahcoffee.com/products/peru-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327488377142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327488409910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327488442678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327488475446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327488508214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327488540982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "48138425073974"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "48138425106742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "48138425139510"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "35a6b81a9b0ad753",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/SumatraMandehling.png?v=1762986719",
+  "platform": "shopify",
+  "product_id": "8864700694838",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://savannahcoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327522619702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327522652470"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327522718006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327522783542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327522816310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327522849078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "53905853251894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "53905853284662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "53905853317430"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "90387d5689869e5c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/EthiopiaYirgacheffe.jpg?v=1698076545",
+  "platform": "shopify",
+  "product_id": "8864702759222",
+  "product_type": "Light Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://savannahcoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327535071542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327535104310"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327535137078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327535169846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327535202614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327535235382"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "7ddbd130680304d0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/ColombiaSupremoDark.jpg?v=1698076989",
+  "platform": "shopify",
+  "product_id": "8864707576118",
+  "product_type": "Dark Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Colombia Supremo - Dark",
+  "url": "https://savannahcoffee.com/products/colombia-supremo-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327556632886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327556665654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327556698422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327556731190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327556763958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327556796726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "47327556829494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "47327556862262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "47327556895030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "47327556927798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327556960566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327556993334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47327571804470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327571837238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / French Press Grind / 12oz",
+    "variant_id": "47327571870006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / French Press Grind / 2lb. Bag",
+    "variant_id": "47327571902774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Whole Bean / 5lb. Bag",
+    "variant_id": "47568430661942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Drip Grind / 5lb. Bag",
+    "variant_id": "47568430694710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / French Press Grind / 5lb. Bag",
+    "variant_id": "47568430727478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Regular / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568430760246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Whole Bean / 5lb. Bag",
+    "variant_id": "47568430793014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Drip Grind / 5lb. Bag",
+    "variant_id": "47568430825782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / French Press Grind / 5lb. Bag",
+    "variant_id": "47568430858550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Decaf / Fine Grind for Espresso / 5lb. Bag",
+    "variant_id": "47568430891318"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "b7e840811c9d35de",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/CostaRicaTarrazu.jpg?v=1698077149",
+  "platform": "shopify",
+  "product_id": "8864713605430",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://savannahcoffee.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "47327580455222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "47327580487990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "47327580520758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "47327580553526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / French Press Grind / 12oz",
+    "variant_id": "47327580586294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / French Press Grind / 2lb. Bag",
+    "variant_id": "47327580619062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "47327580651830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "47327580684598"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-man",
+  "image": "https://cdn.shopify.com/s/files/1/0835/0508/6774/files/PumpkinSpice_53540a4a-df73-45f0-beb9-3bd3ec3770e6.jpg?v=1710874187",
+  "platform": "shopify",
+  "product_id": "9170308825398",
+  "product_type": "Medium Roast",
+  "roaster_slug": "savannahcoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Gingerbread",
+  "url": "https://savannahcoffee.com/products/gingerbread-man",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Whole Bean / 12oz",
+    "variant_id": "48354813411638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Whole Bean / 2lb. Bag",
+    "variant_id": "48354813444406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Drip Grind / 12oz",
+    "variant_id": "48354813477174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Drip Grind / 2lb. Bag",
+    "variant_id": "48354813509942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Regular / Fine Grind for Espresso / 12oz",
+    "variant_id": "48354813542710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Regular / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "48354813575478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Whole Bean / 12oz",
+    "variant_id": "48354813608246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Whole Bean / 2lb. Bag",
+    "variant_id": "48354813641014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Drip Grind / 12oz",
+    "variant_id": "48354813673782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Drip Grind / 2lb. Bag",
+    "variant_id": "48354813706550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Decaf / Fine Grind for Espresso / 12oz",
+    "variant_id": "48354813739318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Decaf / Fine Grind for Espresso / 2lb. Bag",
+    "variant_id": "48354813772086"
+   }
+  ],
+  "vendor": "Savannah Coffee Roasters"
+ }
+]

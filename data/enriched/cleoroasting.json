@@ -1,0 +1,96 @@
+{
+ "10274024620224": {
+  "body_hash": "2064f394a061ef99",
+  "elevation_masl_max": 2280,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6169392316608": {
+  "body_hash": "10e4a3d6b6a4460d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8011062378688": {
+  "body_hash": "afc08a5b76658e2f",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "candied almond",
+   "milk chocolate",
+   "citrus"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "8509981262016": {
+  "body_hash": "28b277054a059edb",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "8633816154304": {
+  "body_hash": "3bbf18903649d9f3",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "lemon",
+   "juicy body"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra"
+  ]
+ }
+}

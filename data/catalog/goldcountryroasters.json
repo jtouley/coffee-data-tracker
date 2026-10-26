@@ -1,0 +1,2898 @@
+[
+ {
+  "body_hash": "a08d2edafbad03c0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Sumatra_94ae67c8-b09f-4611-a049-ebc502ed03a5.png?v=1790137261",
+  "platform": "shopify",
+  "product_id": "10228457504802",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Indonesia"
+  ],
+  "title": "Sumatra",
+  "url": "https://goldcountryroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "50417117691938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "50417117724706"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "50417117757474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Coarse / 1lb",
+    "variant_id": "50417117790242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "50417117823010"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "50417117855778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "50417117888546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "50417117921314"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "50417117954082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Autodrip / 1lb",
+    "variant_id": "50417117986850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "50417118019618"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "50417118052386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine / 1lb",
+    "variant_id": "50417118085154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "50417118117922"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "50417118150690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "50417118183458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "50417118216226"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "50417118248994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "50417118281762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "50417118314530"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "50417118347298"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "1b3f9c966866685a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-cabana",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/GCR_French.png?v=1759783424",
+  "platform": "shopify",
+  "product_id": "3787546853410",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "South America"
+  ],
+  "title": "GCR French Roast",
+  "url": "https://goldcountryroasters.com/products/colombia-la-cabana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "31201812217890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Coarse / 1lb",
+    "variant_id": "31201812250658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Regular Perc / 1lb",
+    "variant_id": "31201812283426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "31201812316194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Autodrip / 1lb",
+    "variant_id": "31201812348962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Fine / 1lb",
+    "variant_id": "31201812381730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "31201812414498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "31201812447266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb (Bulk)",
+    "variant_id": "31562836246562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse / 5lb (Bulk)",
+    "variant_id": "31562836410402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Regular Perc / 5lb (Bulk)",
+    "variant_id": "31562836443170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Electric Perc / 5lb (Bulk)",
+    "variant_id": "31562836475938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Autodrip / 5lb (Bulk)",
+    "variant_id": "31562836574242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine / 5lb (Bulk)",
+    "variant_id": "31562836607010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Espresso 1 / 5lb (Bulk)",
+    "variant_id": "31562836639778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Espresso 2 / 5lb (Bulk)",
+    "variant_id": "31562836672546"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391315636258"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391315669026"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Regular Perc / 8oz",
+    "variant_id": "44391315701794"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391315734562"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391315767330"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391315800098"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391315832866"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391315865634"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "9a2c64b25c6051ad",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/CostaRica.png?v=1754454800",
+  "platform": "shopify",
+  "product_id": "3787559010338",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Central America",
+   "Light Roast"
+  ],
+  "title": "Costa Rica",
+  "url": "https://goldcountryroasters.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "28978859409442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "28978859442210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "28978859474978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "28978859540514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "28978859573282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "28978859606050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "28978859638818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "31562849157154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "31562849189922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "31562849222690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "31562849255458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "31562849288226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "31562849320994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "31562849353762"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391302004770"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391302037538"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391302070306"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391302103074"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391302135842"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391302168610"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391302201378"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "f2eb803f2f3a75bc",
+  "first_seen": "2026-10-26",
+  "handle": "murphys-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/MurphysBlend.png?v=1754455754",
+  "platform": "shopify",
+  "product_id": "3787651547170",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Indonesia/ South Pacific",
+   "Medium Roast",
+   "Signature Blend"
+  ],
+  "title": "Murphys Blend",
+  "url": "https://goldcountryroasters.com/products/murphys-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "28979006439458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "28979006504994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "28979006537762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "28979006570530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "28979006603298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "28979006636066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "28979006668834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "31563073880098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "31563073912866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "31563073945634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "31563073978402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "31563074011170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "31563074043938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "31563074076706"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391380680738"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391380713506"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391380746274"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391380779042"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391380811810"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391380844578"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391380877346"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "2a7620430a8771f8",
+  "first_seen": "2026-10-26",
+  "handle": "arnold-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Arnold_d0b9c533-6380-4b5b-8396-90cd97e503f0.png?v=1754452645",
+  "platform": "shopify",
+  "product_id": "3787660886050",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Indonesia/ South Pacific",
+   "Signature Blend"
+  ],
+  "title": "Arnold Blend",
+  "url": "https://goldcountryroasters.com/products/arnold-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "31534531805218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "31534531837986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "31534531870754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "31534531903522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "31534531936290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "31534531969058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "31534532001826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (Bulk)",
+    "variant_id": "31534551695394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (Bulk)",
+    "variant_id": "31534551728162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (Bulk)",
+    "variant_id": "31534551760930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (Bulk)",
+    "variant_id": "31534551793698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (Bulk)",
+    "variant_id": "31534551826466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (Bulk)",
+    "variant_id": "31534551859234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (Bulk)",
+    "variant_id": "31534551892002"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391281131554"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391281164322"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391281197090"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391281229858"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391281262626"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391281295394"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391281328162"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "d8088d4dc59a5f70",
+  "first_seen": "2026-10-26",
+  "handle": "gcr-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/EspressoBlend_c19e06be-bcc0-487d-9f3a-d8df5c10f3fb.png?v=1754455016",
+  "platform": "shopify",
+  "product_id": "3787677761570",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Signature Blend"
+  ],
+  "title": "GCR Espresso Blend",
+  "url": "https://goldcountryroasters.com/products/gcr-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole / 1lb",
+    "variant_id": "28979048251426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "28979048284194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "28979048316962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "28979048349730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "28979048382498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "28979048415266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "28979048448034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole / 5lb (bulk)",
+    "variant_id": "31562867703842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "31562867736610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "31562867769378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "31562867802146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "31562867834914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "31562867867682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "31562867900450"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole / 8oz",
+    "variant_id": "44391315013666"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391315046434"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391315079202"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391315111970"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391315144738"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391315177506"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391315210274"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "f98643d4c8eee7a6",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/PeruDecaf.png?v=1754456481",
+  "platform": "shopify",
+  "product_id": "3787699879970",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Organically Grown",
+   "South America"
+  ],
+  "title": "Peru Decaf",
+  "url": "https://goldcountryroasters.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "28979076661282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Coarse / 1lb",
+    "variant_id": "28979076694050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "28979076726818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Autodrip / 1lb",
+    "variant_id": "28979076759586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Fine / 1lb",
+    "variant_id": "28979076792354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "28979076825122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "28979076857890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "31563077746722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "31563077779490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "31563077812258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "31563077877794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "31563077910562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "31563077943330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "31563077976098"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391412531234"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391412564002"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391412596770"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391412629538"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391412662306"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391412695074"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391412727842"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "e8c4863dbba029ec",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-colombia-la-cabana-smbc-rfa",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/GCR_Italian.png?v=1759783386",
+  "platform": "shopify",
+  "product_id": "7304983674914",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "South America"
+  ],
+  "title": "GCR Italian Roast",
+  "url": "https://goldcountryroasters.com/products/copy-of-colombia-la-cabana-smbc-rfa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "41341960880162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb (Bulk)",
+    "variant_id": "41341960912930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Coarse / 1lb",
+    "variant_id": "41341960945698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse / 5lb (Bulk)",
+    "variant_id": "41341960978466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Regular Perc / 1lb",
+    "variant_id": "41341961011234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Regular Perc / 5lb (Bulk)",
+    "variant_id": "41341961044002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "41341961076770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Electric Perc / 5lb (Bulk)",
+    "variant_id": "41341961109538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Autodrip / 1lb",
+    "variant_id": "41341961142306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Autodrip / 5lb (Bulk)",
+    "variant_id": "41341961175074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Fine / 1lb",
+    "variant_id": "41341961207842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine / 5lb (Bulk)",
+    "variant_id": "41341961240610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "41341961273378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Espresso 1 / 5lb (Bulk)",
+    "variant_id": "41341961306146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "41341961338914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Espresso 2 / 5lb (Bulk)",
+    "variant_id": "41341961371682"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391316127778"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391316160546"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Regular Perc / 8oz",
+    "variant_id": "44391316193314"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391316226082"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391316258850"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391316291618"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391316324386"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391316357154"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "0c5f1bf2b07b73aa",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Ethiopia.png?v=1754454928",
+  "platform": "shopify",
+  "product_id": "7363045818402",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Africa",
+   "Light Roast"
+  ],
+  "title": "Ethiopia",
+  "url": "https://goldcountryroasters.com/products/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "41565092118562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Whole Bean / 5lb (Bulk)",
+    "variant_id": "41565092151330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Coarse / 1lb",
+    "variant_id": "41565092184098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Coarse / 5lb (Bulk)",
+    "variant_id": "41565092216866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "41565092249634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Electric Perc / 5lb (Bulk)",
+    "variant_id": "41565092282402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Autodrip / 1lb",
+    "variant_id": "41565092315170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Autodrip / 5lb (Bulk)",
+    "variant_id": "41565092347938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Fine / 1lb",
+    "variant_id": "41565092380706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Fine / 5lb (Bulk)",
+    "variant_id": "41565092413474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "41565092446242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Espresso 1 / 5lb (Bulk)",
+    "variant_id": "41565092479010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "41565092511778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.2,
+    "title": "Espresso 2 / 5lb (Bulk)",
+    "variant_id": "41565092544546"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391302856738"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391302889506"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391302922274"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391302955042"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391302987810"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391303020578"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391303053346"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "e54e8d4a3a3e8021",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Brazil_15cba9ba-27ee-4a88-9fe1-03617610aabe.png?v=1754453035",
+  "platform": "shopify",
+  "product_id": "7363048701986",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Medium Roast",
+   "South America"
+  ],
+  "title": "Brazil",
+  "url": "https://goldcountryroasters.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "41565101391906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "41565101424674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Coarse / 1lb",
+    "variant_id": "41565101457442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "41565101490210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "41565101522978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "41565101555746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine / 1lb",
+    "variant_id": "41565101588514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "41565101621282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Autodrip / 1lb",
+    "variant_id": "41565101654050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "41565101686818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "41565101719586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "41565101752354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "41565101785122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "41565101817890"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391296663586"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391296696354"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391296729122"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391296761890"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391296794658"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391296827426"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391296860194"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "b50f4e43358c7fd9",
+  "first_seen": "2026-10-26",
+  "handle": "angels-camp-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/AngelsCamp.png?v=1754451909",
+  "platform": "shopify",
+  "product_id": "7901652516898",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Indonesia/ South Pacific",
+   "Medium Roast",
+   "Signature Blend"
+  ],
+  "title": "Angels Camp Blend",
+  "url": "https://goldcountryroasters.com/products/angels-camp-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "43466161881122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (Bulk)",
+    "variant_id": "43466161913890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "43466161946658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (Bulk)",
+    "variant_id": "43466161979426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "43466162012194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (Bulk)",
+    "variant_id": "43466162044962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "43466162077730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (Bulk)",
+    "variant_id": "43466162110498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "43466162143266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (Bulk)",
+    "variant_id": "43466162176034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "43466162208802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (Bulk)",
+    "variant_id": "43466162241570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "43466162274338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (Bulk)",
+    "variant_id": "43466162307106"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44382451499042"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44382451531810"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44382451564578"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44382451597346"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44382451630114"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44382451662882"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44382451695650"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "48046bad4b8324d0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/HondurasOrg.png?v=1754591832",
+  "platform": "shopify",
+  "product_id": "8034109063202",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Light Roast",
+   "Organically Grown"
+  ],
+  "title": "Honduras",
+  "url": "https://goldcountryroasters.com/products/honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "44052045234210"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "44052045266978"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Coarse / 1lb",
+    "variant_id": "44052045299746"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "44052045332514"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "44052045365282"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "44052045398050"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Autodrip / 1lb",
+    "variant_id": "44052045430818"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "44052045463586"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine / 1lb",
+    "variant_id": "44052045496354"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "44052045529122"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "44052045561890"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "44052045594658"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "44052045627426"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "44052045660194"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44391340310562"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44391340343330"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44391340376098"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44391340408866"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44391340441634"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44391340474402"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44391340507170"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "8d251e3fdec8de20",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-copy-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Nicaragua_Org.png?v=1764176220",
+  "platform": "shopify",
+  "product_id": "8100955979810",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Central America",
+   "Medium Roast",
+   "Organically Grown"
+  ],
+  "title": "Nicaragua",
+  "url": "https://goldcountryroasters.com/products/nicaragua-copy-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "44418837512226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "44418837544994"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44418837577762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "44418837610530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "44418837643298"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44418837676066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "44418837708834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "44418837741602"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44418837774370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "44418837807138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "44418837839906"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44418837872674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "44418837905442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "44418837938210"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44418837970978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "44418838003746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "44418838036514"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44418838069282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "44418838102050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "44418838134818"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44418838167586"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "29e12df9f0ddd311",
+  "first_seen": "2026-10-26",
+  "handle": "premium-decaf-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/MexicoDecaf.png?v=1764176561",
+  "platform": "shopify",
+  "product_id": "8147614433314",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Mexico Decaf",
+  "url": "https://goldcountryroasters.com/products/premium-decaf-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "44579510419490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "44579510452258"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44579510485026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Coarse / 1lb",
+    "variant_id": "44579510517794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "44579510550562"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44579510583330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "44579510616098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "44579510648866"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44579510681634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Autodrip / 1lb",
+    "variant_id": "44579510714402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "44579510747170"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44579510779938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Fine / 1lb",
+    "variant_id": "44579510812706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "44579510845474"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44579510878242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "44579510911010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "44579510943778"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44579510976546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "44579511009314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "44579511042082"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44579511074850"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "e0d42c7993194669",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Guatemala.png?v=1764177400",
+  "platform": "shopify",
+  "product_id": "8147725877282",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Central America",
+   "Medium Roast"
+  ],
+  "title": "Guatemala",
+  "url": "https://goldcountryroasters.com/products/guatemala-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "44579633922082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "44579633954850"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "44579633987618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "44579634020386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "44579634053154"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "44579634085922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "44579634118690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "44579634151458"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "44579634184226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Autodrip / 1lb",
+    "variant_id": "44579634216994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "44579634249762"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "44579634282530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Fine / 1lb",
+    "variant_id": "44579634315298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "44579634348066"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "44579634380834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "44579634413602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "44579634446370"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "44579634479138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.25,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "44579634511906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.6,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "44579634544674"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "44579634577442"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "244ce6ff2de069e1",
+  "first_seen": "2026-10-26",
+  "handle": "jans-sidewinder-bbq-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Jan_s_Sidewinder_Spill_Image.jpg?v=1777579763",
+  "platform": "shopify",
+  "product_id": "8329685598242",
+  "product_type": "",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Gift"
+  ],
+  "title": "Jan's Sidewinder Grill Blend",
+  "url": "https://goldcountryroasters.com/products/jans-sidewinder-bbq-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "45046371385378"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "f3acd0e264af3513",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-smbc",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Costa_Rica_Org_SMBC.png?v=1777578616",
+  "platform": "shopify",
+  "product_id": "8399014232098",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Central America",
+   "Light Roast"
+  ],
+  "title": "Costa Rica - Bird Friendly",
+  "url": "https://goldcountryroasters.com/products/costa-rica-smbc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "45318522535970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "45318522568738"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "45318522601506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Coarse / 1lb",
+    "variant_id": "45318522634274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "45318522667042"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "45318522699810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "45318522732578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "45318522765346"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "45318522798114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Autodrip / 1lb",
+    "variant_id": "45318522830882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "45318522863650"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "45318522896418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Fine / 1lb",
+    "variant_id": "45318522929186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "45318522961954"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "45318522994722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "45318523027490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "45318523060258"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "45318523093026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.75,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "45318523125794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.81,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "45318523158562"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "45318523191330"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ },
+ {
+  "body_hash": "4deac808e17f99ff",
+  "first_seen": "2026-10-26",
+  "handle": "java-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0060/0863/5426/files/Java.png?v=1777921668",
+  "platform": "shopify",
+  "product_id": "8403843350562",
+  "product_type": "Coffee",
+  "roaster_slug": "goldcountryroasters",
+  "tags": [
+   "Dark Roast",
+   "Indonesia"
+  ],
+  "title": "Java",
+  "url": "https://goldcountryroasters.com/products/java-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "45332987183138"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Whole Bean / 5lb (bulk)",
+    "variant_id": "45332987215906"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "45332987248674"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Coarse / 1lb",
+    "variant_id": "45332987281442"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Coarse / 5lb (bulk)",
+    "variant_id": "45332987314210"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Coarse / 8oz",
+    "variant_id": "45332987346978"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Electric Perc / 1lb",
+    "variant_id": "45332987379746"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Electric Perc / 5lb (bulk)",
+    "variant_id": "45332987412514"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Electric Perc / 8oz",
+    "variant_id": "45332987445282"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Autodrip / 1lb",
+    "variant_id": "45332987478050"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Autodrip / 5lb (bulk)",
+    "variant_id": "45332987510818"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Autodrip / 8oz",
+    "variant_id": "45332987543586"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Fine / 1lb",
+    "variant_id": "45332987576354"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Fine / 5lb (bulk)",
+    "variant_id": "45332987609122"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Fine / 8oz",
+    "variant_id": "45332987641890"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 1 / 1lb",
+    "variant_id": "45332987674658"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 1 / 5lb (bulk)",
+    "variant_id": "45332987707426"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 1 / 8oz",
+    "variant_id": "45332987740194"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 2 / 1lb",
+    "variant_id": "45332987772962"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.4,
+    "title": "Espresso 2 / 5lb (bulk)",
+    "variant_id": "45332987805730"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.25,
+    "title": "Espresso 2 / 8oz",
+    "variant_id": "45332987838498"
+   }
+  ],
+  "vendor": "Gold Country Roasters"
+ }
+]

@@ -1,0 +1,920 @@
+[
+ {
+  "body_hash": "9d92af84389da69d",
+  "first_seen": "2026-10-26",
+  "handle": "lillys-guatemala-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Lilly_4abb3e32-f8d7-465c-9d12-8f133698f0fc.jpg?v=1741905385",
+  "platform": "shopify",
+  "product_id": "7296922124442",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium Roast",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Lilly's Guatemala | Medium Roast",
+  "url": "https://www.sweltercoffee.com/products/lillys-guatemala-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41806656929946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "41806656962714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "41806656995482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Course (French Press)",
+    "variant_id": "41806657028250"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41806657061018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (Espresso)",
+    "variant_id": "41806657093786"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (Drip)",
+    "variant_id": "41806657126554"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Course (French Press)",
+    "variant_id": "41806657159322"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "7075c96952ad33e0",
+  "first_seen": "2026-10-26",
+  "handle": "rosalbas-mexico-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Rosalba_726e4e7c-1e0d-4fc2-999b-a574a86540a4.jpg?v=1764509678",
+  "platform": "shopify",
+  "product_id": "7473856675994",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium Roast",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Rosalba's Mexico | Medium Roast",
+  "url": "https://www.sweltercoffee.com/products/rosalbas-mexico-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42435015180442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "42435015213210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "42435015245978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "42435015278746"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "42435015311514"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "42435015344282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "42435015377050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "42435015409818"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "41f63497ef068423",
+  "first_seen": "2026-10-26",
+  "handle": "charlottes-drc-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Charlotte.jpg?v=1764509678",
+  "platform": "shopify",
+  "product_id": "7473893572762",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium dark",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Charlotte's DRC | Medium-Dark Roast",
+  "url": "https://www.sweltercoffee.com/products/charlottes-drc-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42435091693722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "42435091726490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "42435091759258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "42435091792026"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "42435091824794"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "42435091857562"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "42435091890330"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "42435091923098"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "280ef272a29310c1",
+  "first_seen": "2026-10-26",
+  "handle": "fridas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Frida_M.jpg?v=1780519653",
+  "platform": "shopify",
+  "product_id": "7874639003802",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Dark roast",
+   "Medium dark",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Frida's Blend | Dark Roast",
+  "url": "https://www.sweltercoffee.com/products/fridas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43763258523802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "43763258556570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "43763258589338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "43763258622106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43763258654874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "43763258687642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "43763258720410"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "43763258753178"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "dd2d46a5133b4859",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-storage-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/IMG_2535.jpg?v=1741885408",
+  "platform": "shopify",
+  "product_id": "7886011236506",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Coffee storage canister",
+  "url": "https://www.sweltercoffee.com/products/coffee-storage-canister",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "small - 1lb / 500g",
+    "variant_id": "43814272204954"
+   },
+   {
+    "available": false,
+    "grams": 1000,
+    "price_usd": 41.0,
+    "title": "large - 2.5lb / 1kg",
+    "variant_id": "43814272237722"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "524eb0c88bbc6821",
+  "first_seen": "2026-10-26",
+  "handle": "varshinis-india",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Varshini_6945647e-eae9-4814-a29e-21f20e536291.jpg?v=1741882771",
+  "platform": "shopify",
+  "product_id": "8007219871898",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium Roast",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Varshini's India | Medium Roast",
+  "url": "https://www.sweltercoffee.com/products/varshinis-india",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44213622800538"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "44213622833306"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "44213622866074"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "44213622898842"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44213622931610"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "44213622964378"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "44213622997146"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "44213623029914"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "9618082e3f9254bc",
+  "first_seen": "2026-10-26",
+  "handle": "atnagos-ethiopia-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Atnago_62eaeb10-cbdb-43a5-8e35-f09aac0e73a7.jpg?v=1740861368",
+  "platform": "shopify",
+  "product_id": "8444640624794",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium light",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Atnago's Ethiopia | Medium-Light Roast",
+  "url": "https://www.sweltercoffee.com/products/atnagos-ethiopia-single-origin-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45550286373018"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "45550286405786"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "45550286438554"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "45550286471322"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45550286504090"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "45550286536858"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "45550286569626"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "45550286602394"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "22cd2c34f5053bac",
+  "first_seen": "2026-10-26",
+  "handle": "asomujer-decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Asomujer_Decaf.jpg?v=1747339428",
+  "platform": "shopify",
+  "product_id": "8501975253146",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium Roast",
+   "decaf",
+   "single origin"
+  ],
+  "title": "Asomujer Decaf Colombia | Medium Roast",
+  "url": "https://www.sweltercoffee.com/products/asomujer-decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45744274112666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "45744274145434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (Drip)",
+    "variant_id": "45744274178202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Course (French press)",
+    "variant_id": "45744274210970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45744274243738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (Espresso)",
+    "variant_id": "45744274276506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (Drip)",
+    "variant_id": "45744274309274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Course (French press)",
+    "variant_id": "45744274342042"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "328298ac474545ad",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-tour-women-of-latin-america",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/Coffee-Tour-box_Women-Of-Latin-America.png?v=1768590502",
+  "platform": "shopify",
+  "product_id": "8619720704154",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Gift Packs",
+   "Gifts",
+   "Specialty Coffee"
+  ],
+  "title": "Women of Latin America Coffee Tour | 3 Single-Origin Coffees",
+  "url": "https://www.sweltercoffee.com/products/coffee-tour-women-of-latin-america",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Wholebean",
+    "variant_id": "46538481434778"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Fine (espresso)",
+    "variant_id": "46538481467546"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Medium (drip)",
+    "variant_id": "46538481500314"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Coarse (french press)",
+    "variant_id": "46538481533082"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "c73223b7614e0cff",
+  "first_seen": "2026-10-26",
+  "handle": "women-of-africa-coffee-tour-3-single-origin-coffees",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/Coffee-Tour-box_Women-Of-Africa.png?v=1768590561",
+  "platform": "shopify",
+  "product_id": "8653020102810",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Gift Packs",
+   "Gifts",
+   "Specialty Coffee"
+  ],
+  "title": "Women of Africa Coffee Tour | 3 Single-Origin Coffees",
+  "url": "https://www.sweltercoffee.com/products/women-of-africa-coffee-tour-3-single-origin-coffees",
+  "variants": [
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Wholebean",
+    "variant_id": "46676071153818"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Fine (espresso)",
+    "variant_id": "46676071186586"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Medium (drip)",
+    "variant_id": "46676071219354"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Coarse (french press)",
+    "variant_id": "46676071252122"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "0e1ba6b0eb48da2d",
+  "first_seen": "2026-10-26",
+  "handle": "agasakes-rwanda-medium-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Agasake_whitebackground.jpg?v=1780519842",
+  "platform": "shopify",
+  "product_id": "8879092400282",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium light",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Agasake's Rwanda | Medium-Light Roast",
+  "url": "https://www.sweltercoffee.com/products/agasakes-rwanda-medium-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47698750668954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "47698750701722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "47698750734490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "47698750767258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47698750800026"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "47698750832794"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "47698750865562"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "47698750898330"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "e7577920ee7c8dab",
+  "first_seen": "2026-10-26",
+  "handle": "mayras-costa-rica-medium-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/12oz_origins_Mayra_103b9a02-7ad1-4cc1-a327-43b683a5b266.jpg?v=1778271810",
+  "platform": "shopify",
+  "product_id": "8884851277978",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Medium light",
+   "Specialty Coffee",
+   "single origin"
+  ],
+  "title": "Mayra's Costa Rica | Medium-Light Roast",
+  "url": "https://www.sweltercoffee.com/products/mayras-costa-rica-medium-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47719975813274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Fine (espresso)",
+    "variant_id": "47719975846042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Medium (drip)",
+    "variant_id": "47719975878810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Coarse (french press)",
+    "variant_id": "47719975911578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47719975944346"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Fine (espresso)",
+    "variant_id": "47719975977114"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Medium (drip)",
+    "variant_id": "47719976009882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Coarse (french press)",
+    "variant_id": "47719976042650"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ },
+ {
+  "body_hash": "51ea5d7e7167c669",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-tin",
+  "image": "https://cdn.shopify.com/s/files/1/0595/0482/0378/files/Holiday-Blend-Coffee-Tin_ca2951d3-795d-4b42-a1f2-8b6b8e1fa753.jpg?v=1790013992",
+  "platform": "shopify",
+  "product_id": "9162883924122",
+  "product_type": "",
+  "roaster_slug": "sweltercoffee",
+  "tags": [
+   "Gift Packs",
+   "Medium Roast",
+   "Medium_Roast",
+   "Specialty Coffee"
+  ],
+  "title": "Holiday Blend with Limited Edition Tin",
+  "url": "https://www.sweltercoffee.com/products/holiday-blend-tin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "As soon as possible* / Coarse",
+    "variant_id": "49285672272026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Early December (for holiday day gift) / Coarse",
+    "variant_id": "49285672304794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "By December 15 (for holiday day gift) / Coarse",
+    "variant_id": "49285672337562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "As soon as possible* / Whole Bean",
+    "variant_id": "49285679284378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "As soon as possible* / Fine",
+    "variant_id": "49285679317146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "As soon as possible* / Medium",
+    "variant_id": "49285679349914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Early December (for holiday day gift) / Whole Bean",
+    "variant_id": "49285679382682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Early December (for holiday day gift) / Fine",
+    "variant_id": "49285679415450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Early December (for holiday day gift) / Medium",
+    "variant_id": "49285679448218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "By December 15 (for holiday day gift) / Whole Bean",
+    "variant_id": "49285679480986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "By December 15 (for holiday day gift) / Fine",
+    "variant_id": "49285679513754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "By December 15 (for holiday day gift) / Medium",
+    "variant_id": "49285679546522"
+   }
+  ],
+  "vendor": "Swelter Coffee"
+ }
+]

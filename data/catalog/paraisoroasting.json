@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "64f5f9b37b0607aa",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "007",
+  "product_type": "",
+  "roaster_slug": "paraisoroasting",
+  "tags": [],
+  "title": "Single Origin Coffee - Cameroon Koutaba Monastery",
+  "url": "https://www.paraisoroasting.com/product-page/single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6adf496fd389a212",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-grand-rising-morning-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "361283a0d3b1",
+  "product_type": "",
+  "roaster_slug": "paraisoroasting",
+  "tags": [],
+  "title": "House Blend Coffee - Grand Rising Morning Blend",
+  "url": "https://www.paraisoroasting.com/product-page/house-blend-grand-rising-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82d2991d0a6c2f4b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-coffee-black-velvet",
+  "image": null,
+  "platform": "generic",
+  "product_id": "be84f75789b2",
+  "product_type": "",
+  "roaster_slug": "paraisoroasting",
+  "tags": [],
+  "title": "Espresso Blend Coffee - Black Velvet",
+  "url": "https://www.paraisoroasting.com/product-page/espresso-blend-coffee-black-velvet",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e2d37fc8b716fbc",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-central-african-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f725be3e5463",
+  "product_type": "",
+  "roaster_slug": "paraisoroasting",
+  "tags": [],
+  "title": "French Roast Coffee - Mount Oku After Dark",
+  "url": "https://www.paraisoroasting.com/product-page/french-roast-central-african-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

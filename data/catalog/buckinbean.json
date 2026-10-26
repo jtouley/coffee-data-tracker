@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "44e75c461bc41de0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-2",
+  "image": "https://buckinbean.com/wp-content/uploads/2021/07/closeupdecafhonduras_2560.jpg",
+  "platform": "generic",
+  "product_id": "5046",
+  "product_type": "",
+  "roaster_slug": "buckinbean",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://buckinbean.com/product/decaf-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d05867e776f031f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://buckinbean.com/wp-content/uploads/2021/07/espressoCloseup1_2560.jpg",
+  "platform": "generic",
+  "product_id": "5056",
+  "product_type": "",
+  "roaster_slug": "buckinbean",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://buckinbean.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "certified-organic-papua-new-guinea",
+  "image": "https://buckinbean.com/wp-content/uploads/2021/06/sumatra_ketiarafrench-scaled.jpg",
+  "platform": "generic",
+  "product_id": "5190",
+  "product_type": "",
+  "roaster_slug": "buckinbean",
+  "tags": [],
+  "title": "Certified Organic Papua New Guinea",
+  "url": "https://buckinbean.com/product/certified-organic-papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

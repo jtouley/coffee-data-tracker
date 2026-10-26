@@ -1,0 +1,629 @@
+[
+ {
+  "body_hash": "5cb7ee84de0b8f9f",
+  "first_seen": "2026-10-26",
+  "handle": "artesia-decaf",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-artesia-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3515",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Broad",
+   "Exclusive",
+   "Flavorful",
+   "Reserve Blends"
+  ],
+  "title": "Artesia ‘Decaf’",
+  "url": "https://abitaroasting.com/product/artesia-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1 lb",
+    "variant_id": "3515:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5 lb",
+    "variant_id": "3515:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da836444d33ec575",
+  "first_seen": "2026-10-26",
+  "handle": "black-tan",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-black-tan.jpg",
+  "platform": "woocommerce",
+  "product_id": "3516",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Balanced",
+   "Mellow",
+   "Reserve Blends",
+   "Thick"
+  ],
+  "title": "Black & Tan",
+  "url": "https://abitaroasting.com/product/black-tan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3516:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3516:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ff41c8ad622dd32",
+  "first_seen": "2026-10-26",
+  "handle": "cameo",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-cameo-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3517",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Complex",
+   "Fragrant",
+   "Nutty",
+   "Reserve Blends",
+   "Silky"
+  ],
+  "title": "Cameo",
+  "url": "https://abitaroasting.com/product/cameo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1 lb",
+    "variant_id": "3517:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5 lb",
+    "variant_id": "3517:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ec596039d973ea",
+  "first_seen": "2026-10-26",
+  "handle": "city-blend",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-city-blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3518",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Mellow",
+   "Mineral",
+   "Reserve Blends",
+   "Smokey"
+  ],
+  "title": "City Blend",
+  "url": "https://abitaroasting.com/product/city-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3518:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3518:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2facb8706a5db4e",
+  "first_seen": "2026-10-26",
+  "handle": "princess-abita",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-princess-abita-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3519",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Full",
+   "Reserve Blends",
+   "Rich",
+   "Uncommon"
+  ],
+  "title": "Princess Abita",
+  "url": "https://abitaroasting.com/product/princess-abita/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3519:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3519:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1aa349abe63000a7",
+  "first_seen": "2026-10-26",
+  "handle": "round-a-bout",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-round-a-bout-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3520",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Creamy",
+   "Fragrant",
+   "Reserve Blends",
+   "Sweet"
+  ],
+  "title": "Round-A-Bout",
+  "url": "https://abitaroasting.com/product/round-a-bout/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3520:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3520:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3bdafba83a47c60",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-supremo",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-single-origin-columbian-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3521",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Columbian Supremo",
+  "url": "https://abitaroasting.com/product/columbian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3521:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3521:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e2bfe564d2c5898c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-single-origin-sumatra-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3522",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://abitaroasting.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "1 lb",
+    "variant_id": "3522:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 16.95,
+    "title": "5 lb",
+    "variant_id": "3522:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f6fbc69325b901b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-single-origin-ethiopian-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3523",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://abitaroasting.com/product/ethiopian-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1 lb",
+    "variant_id": "3523:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5 lb",
+    "variant_id": "3523:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a0dae37500696a5c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-single-origin-brazil-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3524",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Brazil Santos",
+  "url": "https://abitaroasting.com/product/brazil-santos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3524:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3524:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6df3d61d2441c2d5",
+  "first_seen": "2026-10-26",
+  "handle": "long-branch",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-blend-long-branch-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3537",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Reserve Blends"
+  ],
+  "title": "Long Branch",
+  "url": "https://abitaroasting.com/product/long-branch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.95,
+    "title": "1 lb",
+    "variant_id": "3537:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3537:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e50d42583a2926e",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://abitaroasting.com/wp-content/uploads/ARCsoutherpecan-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "3539",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Southern Pecan",
+  "url": "https://abitaroasting.com/product/southern-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "3539:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3539:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd7bbe16980760c9",
+  "first_seen": "2026-10-26",
+  "handle": "king-cake",
+  "image": "https://abitaroasting.com/wp-content/uploads/Abita-Roasting-Co.-King-Cake-Coffee-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3543",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "King Cake",
+  "url": "https://abitaroasting.com/product/king-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1 lb",
+    "variant_id": "3543:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5 lb",
+    "variant_id": "3543:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b13318ef07a0bfd4",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-marshmallow",
+  "image": "https://abitaroasting.com/wp-content/uploads/ARCtoastedmarshmallow-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "3556",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Toasted Marshmallow",
+  "url": "https://abitaroasting.com/product/toasted-marshmallow/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "3556:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3556:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efa4ea026aea0ef6",
+  "first_seen": "2026-10-26",
+  "handle": "peanut-butter-chocolate",
+  "image": "https://abitaroasting.com/wp-content/uploads/ARCpeanutbutter-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "3558",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Peanut Butter Chocolate",
+  "url": "https://abitaroasting.com/product/peanut-butter-chocolate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "3558:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "3558:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8965f92160da9ac6",
+  "first_seen": "2026-10-26",
+  "handle": "campfire",
+  "image": "https://abitaroasting.com/wp-content/uploads/campfire-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4510",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Campfire",
+  "url": "https://abitaroasting.com/product/campfire/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "4510:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "4510:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a04a966d156421f1",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://abitaroasting.com/wp-content/uploads/caramel-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4513",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Caramel",
+  "url": "https://abitaroasting.com/product/caramel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "4513:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "4513:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "773b524c33d77256",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-bean",
+  "image": "https://abitaroasting.com/wp-content/uploads/vanilla-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "4516",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Vanilla Bean",
+  "url": "https://abitaroasting.com/product/vanilla-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz",
+    "variant_id": "4516:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.95,
+    "title": "5 lb",
+    "variant_id": "4516:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6afb0336e626c5dc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://abitaroasting.com/wp-content/uploads/abita-roasting-coffee-single-origin-guatemala-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4826",
+  "product_type": "variable",
+  "roaster_slug": "abitaroasting",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemalan",
+  "url": "https://abitaroasting.com/product/guatemalan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1 lb",
+    "variant_id": "4826:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5 lb",
+    "variant_id": "4826:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,210 @@
+{
+ "667d632213b0641f9227de0e": {
+  "body_hash": "dd6761475470c0dd",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "68f0f6ab989f0e4c223bbdea": {
+  "body_hash": "8114834a1805acf3",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Batian",
+   "Bourbon"
+  ]
+ },
+ "68f0fbc24454802b90d657cf": {
+  "body_hash": "59844823a9991cf2",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "6936e424bd9b294d7dac9123": {
+  "body_hash": "fb71e9e931641d7f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "698c93d846d3385d96e0a488": {
+  "body_hash": "680c27f6bdff5d52",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "698c9754a867ab58efd20f78": {
+  "body_hash": "fa34ea8ca5dc436d",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6a0b32e6cd83a25306e0d1ec": {
+  "body_hash": "19ac595417c654be",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "6a4fba8a13df207dca0fec49": {
+  "body_hash": "68861c7cd638ba19",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "6a95db10e0315d634dcd07c3": {
+  "body_hash": "db5e51ff300c97fa",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6a982b7bca363210440fa374": {
+  "body_hash": "21b409cee6642c00",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha"
+  ]
+ },
+ "6a982d3612d78714cd49fab5": {
+  "body_hash": "d082a63092c56cab",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "6abd3045df41b6622e6a05c9": {
+  "body_hash": "01b364210fa5d142",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 1950,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "74158"
+  ]
+ }
+}

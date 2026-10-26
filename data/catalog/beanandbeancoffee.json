@@ -1,0 +1,3316 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "4oz-espresso-paper-hot-cups-1000pcs",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/4oz_hot1.png?v=1764773815",
+  "platform": "shopify",
+  "product_id": "10061315997971",
+  "product_type": "Accessories",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "compass"
+  ],
+  "title": "B&B 4oz Espresso Paper Hot Cups 1000pcs (4oz, 20 Bags of 50)",
+  "url": "https://beannbeancoffee.com/products/4oz-espresso-paper-hot-cups-1000pcs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 115.0,
+    "title": "Default Title",
+    "variant_id": "52057327239443"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "dd24b7411d3a76dc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-azahar-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/colombia_pink_bourbon.png?v=1784390444",
+  "platform": "shopify",
+  "product_id": "10066584502547",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Colombia",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Colombia Azahar El Rosado Washed Pink Bourbon",
+  "url": "https://beannbeancoffee.com/products/colombia-azahar-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52074156130579"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52074156163347"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52140671205651"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "03ec7e83724dff70",
+  "first_seen": "2026-10-26",
+  "handle": "panama-lerida-gesha-lot5",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/lerida_lot_5_1.png?v=1784390059",
+  "platform": "shopify",
+  "product_id": "10069674393875",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Lérida Estate Lot 5 Montaña Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/panama-lerida-gesha-lot5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 62.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52083381960979"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "fce7ed122736015f",
+  "first_seen": "2026-10-26",
+  "handle": "panama-garrido-red-catuai-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/panama_garrido_red_catuai1.png?v=1784390506",
+  "platform": "shopify",
+  "product_id": "10076119302419",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Panama Garrido Red Catuai Washed",
+  "url": "https://beannbeancoffee.com/products/panama-garrido-red-catuai-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52102956417299"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "37498b220c4140d6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-inmaculada-gesha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Colombia_immaculada.png?v=1784390771",
+  "platform": "shopify",
+  "product_id": "10081505181971",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Colombia",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Colombia Immaculada Gesha Natural",
+  "url": "https://beannbeancoffee.com/products/colombia-inmaculada-gesha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 44.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52117983854867"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 299.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52117983887635"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "db82fe07fb18d170",
+  "first_seen": "2026-10-26",
+  "handle": "panama-lerida-lot6-gesha-bh",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/leridalot6.png?v=1784390047",
+  "platform": "shopify",
+  "product_id": "10083065037075",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Lérida Estate Lot 6 Gesha Cold Room Black Honey",
+  "url": "https://beannbeancoffee.com/products/panama-lerida-lot6-gesha-bh",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 62.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52121588891923"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "197d2df35edaf869",
+  "first_seen": "2026-10-26",
+  "handle": "los-nogales-caturra-low-caf",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/losNogaleslowcap.png?v=1784390571",
+  "platform": "shopify",
+  "product_id": "10084308746515",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Decaf",
+   "All Types_Single Origin",
+   "Origin_Colombia",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Los Nogales Caturra Low Caf",
+  "url": "https://beannbeancoffee.com/products/los-nogales-caturra-low-caf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 29.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52126294409491"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 29.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52126294442259"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 29.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52126294475027"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 227.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52126294507795"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 227.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "52126294540563"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 227.0,
+    "title": "5lb / Espresso",
+    "variant_id": "52126294573331"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52459627544851"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "d59eb156bcce7f34",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-hafi-bourbon-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/burundi_hafi_updated.png?v=1784390457",
+  "platform": "shopify",
+  "product_id": "10113145733395",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Burundi",
+   "Tasting Notes_Chocolatey & Nutty",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Burundi Hafi Bourbon Natural",
+  "url": "https://beannbeancoffee.com/products/burundi-hafi-bourbon-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52276877984019"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52276878016787"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52276878049555"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52277131411731"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "52277131444499"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso",
+    "variant_id": "52277131477267"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "4c75585bed476622",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-incuti-bourbon-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/burundi_incuti_updated.png?v=1784390533",
+  "platform": "shopify",
+  "product_id": "10113229455635",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Burundi",
+   "Tasting Notes_Chocolatey & Nutty",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Burundi Incuti Bourbon Washed",
+  "url": "https://beannbeancoffee.com/products/burundi-incuti-bourbon-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52277135540499"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52277135573267"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52277135606035"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52277135638803"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "52277135671571"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso",
+    "variant_id": "52277135704339"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "e7ea5a5336bf7098",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Colombia_Huila_Geisha_Washed.png?v=1761223866",
+  "platform": "shopify",
+  "product_id": "10136494997779",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Colombia",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Colombia Las Palmas Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/colombia-huila-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 63.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52402973147411"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 26.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52526881931539"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "cf6737bd47ed6047",
+  "first_seen": "2026-10-26",
+  "handle": "altieri-dilgo-mima-estate-gesha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Altieri_Gesha_4oz_purple_96c1a1c0-0468-4add-8f7c-33fee7d93186.png?v=1784390275",
+  "platform": "shopify",
+  "product_id": "10142129553683",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Altieri Dilgo Mima Estate Gesha Natural 2025 [Score: 91.0]",
+  "url": "https://beannbeancoffee.com/products/altieri-dilgo-mima-estate-gesha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 78.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52432377446675"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "f98a4751b92d35f5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gogogu4",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Ethiopia_Guji_Gogogu_1.png?v=1784390494",
+  "platform": "shopify",
+  "product_id": "10146489696531",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Ethiopia",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Ethiopia Guji Gogogu #4",
+  "url": "https://beannbeancoffee.com/products/ethiopia-guji-gogogu4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 28.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52452827496723"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 28.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52452827529491"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 28.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52452827562259"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52466878841107"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "52466878873875"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Espresso",
+    "variant_id": "52466878906643"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "bf29dd97a60028c3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-palestina-bourbon-aji",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Colombia_Palestina_Bourbon_Aji.png?v=1784390123",
+  "platform": "shopify",
+  "product_id": "10163485868307",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Colombia",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Colombia Palestina Bourbon Aji",
+  "url": "https://beannbeancoffee.com/products/colombia-palestina-bourbon-aji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 22.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52526939472147"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 45.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52526939504915"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "06710c9299671adf",
+  "first_seen": "2026-10-26",
+  "handle": "panama-esmeralda-gesha-tumaco-5nc",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/EsmeraldaGesha4oz.png?v=1784390911",
+  "platform": "shopify",
+  "product_id": "10163497664787",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Hacienda La Esmeralda Gesha Natural Tumaco 5NC [Score: 92.75]",
+  "url": "https://beannbeancoffee.com/products/panama-esmeralda-gesha-tumaco-5nc",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 119.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52527047246099"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "86238025154a6af7",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-triangulo-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Triangulo_2.png?v=1770658166",
+  "platform": "shopify",
+  "product_id": "10170396246291",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Honduras",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Honduras Santa Lucia Triangulo Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/honduras-triangulo-gesha-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 26.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52550545211667"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 63.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52550545244435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 400.0,
+    "title": "80oz / Whole Bean",
+    "variant_id": "52550554288403"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "137a6fa77f5a8c1f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-mierisch-casona-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Casona_2.png?v=1784390873",
+  "platform": "shopify",
+  "product_id": "10170400932115",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Honduras",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Honduras Santa Lucia Casona Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/honduras-finca-mierisch-casona-gesha-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 26.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52550559793427"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 63.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52550559826195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 400.0,
+    "title": "80oz / Whole Bean",
+    "variant_id": "52550559858963"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "4892f39ef3d250ef",
+  "first_seen": "2026-10-26",
+  "handle": "2025-panama-gesha-box",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/GMB_SIZED_TEMPLATE_1_45db30f0-5265-4e85-83a5-0a4b2c5bc856.png?v=1784390643",
+  "platform": "shopify",
+  "product_id": "10213373706515",
+  "product_type": "Gift Sets",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Bundles",
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "2025 Panama Gesha Box: Esmeralda, Altieri, Janson",
+  "url": "https://beannbeancoffee.com/products/2025-panama-gesha-box",
+  "variants": [
+   {
+    "available": false,
+    "grams": 60,
+    "price_usd": 120.0,
+    "title": "3 x 60 g Bags / Whole Bean",
+    "variant_id": "52712111800595"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "5fbe73907bc0161c",
+  "first_seen": "2026-10-26",
+  "handle": "panama-hle-guabo-3banc",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/EsmeraldaGesha4oz.png?v=1784390911",
+  "platform": "shopify",
+  "product_id": "10215056245011",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Hacienda La Esmeralda Gesha Natural Guabo 3 BANC [Score: 91.25]",
+  "url": "https://beannbeancoffee.com/products/panama-hle-guabo-3banc",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 119.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52718472397075"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "52549a695773971c",
+  "first_seen": "2026-10-26",
+  "handle": "panama-hle-montana6fb",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/EsmeraldaGesha4oz.png?v=1784390911",
+  "platform": "shopify",
+  "product_id": "10235955216659",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Panama Hacienda La Esmeralda Gesha Washed Montaña 6 FB [Score: 92.00]",
+  "url": "https://beannbeancoffee.com/products/panama-hle-montana6fb",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 119.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "52819687899411"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "beea3188ef3c09cd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-jimma",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Ethiopia_jimma_1.png?v=1784390656",
+  "platform": "shopify",
+  "product_id": "10239261016339",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Origin_Ethiopia",
+   "Tasting Notes_Floral & Delicate",
+   "bfcm"
+  ],
+  "title": "Ethiopia Jimma",
+  "url": "https://beannbeancoffee.com/products/ethiopia-jimma",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52831615713555"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52831615746323"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52831615779091"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52831615811859"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "52831615844627"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Espresso",
+    "variant_id": "52831615877395"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "b4ef1972d308bbca",
+  "first_seen": "2026-10-26",
+  "handle": "elida-catuai-naturalasd",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/IMG-1920.png?v=1784389710",
+  "platform": "shopify",
+  "product_id": "10272889241875",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Elida Estate Catuai Reserva Natural ASD",
+  "url": "https://beannbeancoffee.com/products/elida-catuai-naturalasd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 28.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52971721589011"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 182.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "54367555387667"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "3d534dc7adc428ec",
+  "first_seen": "2026-10-26",
+  "handle": "elida-vuelta-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/ElidaVuelta.png?v=1784390733",
+  "platform": "shopify",
+  "product_id": "10293849391379",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Panama Elida Estate Vuelta Gesha Washed DRD",
+  "url": "https://beannbeancoffee.com/products/elida-vuelta-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 90.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "53620388364563"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "4c6b763c43e5b8d1",
+  "first_seen": "2026-10-26",
+  "handle": "taiwan-rb-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Taiwan_Alishan_Gesha_Washed_3.png?v=1771520878",
+  "platform": "shopify",
+  "product_id": "10310291030291",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Taiwan",
+   "Tasting Notes_Floral & Delicate",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Taiwan Alishan Royal Bean Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/taiwan-rb-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 88.88,
+    "title": "4oz / Whole Bean",
+    "variant_id": "53836174426387"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "a6cbbab239cf5740",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-sf-gesha2722",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/SFGesha2722.png?v=1784390174",
+  "platform": "shopify",
+  "product_id": "10322987286803",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Guatemala Santa Felisa Gesha 2722 Natural",
+  "url": "https://beannbeancoffee.com/products/guatemala-sf-gesha2722",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 47.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "53885993812243"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "fad7af1b50c2356e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-g2",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Ethiopia.png?v=1784389758",
+  "platform": "shopify",
+  "product_id": "10325259878675",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Origin_Ethiopia",
+   "Tasting Notes_Floral & Delicate",
+   "bfcm"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://beannbeancoffee.com/products/ethiopia-sidamo-g2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "53890484535571"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "53890484568339"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "53890484601107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53890484633875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "53890484666643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53890484699411"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "cd890c3bfa9bebd5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-sf-african-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/SF_African_Gesha.png?v=1784390406",
+  "platform": "shopify",
+  "product_id": "10325405368595",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Guatemala Santa Felisa African Gesha Washed",
+  "url": "https://beannbeancoffee.com/products/guatemala-sf-african-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 37.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "53890680717587"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 244.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53890680815891"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "816fd7ebb80e3d60",
+  "first_seen": "2026-10-26",
+  "handle": "panama-hachi-coffee-project-gin",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Hachi_Project.png?v=1784390758",
+  "platform": "shopify",
+  "product_id": "10344967045395",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "app-featured",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Panama Hachi Coffee Project “GIN” 銀",
+  "url": "https://beannbeancoffee.com/products/panama-hachi-coffee-project-gin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 32.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "53950667358483"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 225.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "54367540707603"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "d108427adbf9fe3e",
+  "first_seen": "2026-10-26",
+  "handle": "panama-finca-lerida-catuai-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/LERIDA-medium.png?v=1784390097",
+  "platform": "shopify",
+  "product_id": "10353119559955",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Panama Finca Lerida Catuai Washed",
+  "url": "https://beannbeancoffee.com/products/panama-finca-lerida-catuai-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53975137255699"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 27.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "53975138468115"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "f5aa3a08032e4940",
+  "first_seen": "2026-10-26",
+  "handle": "panama-janson-gesha-washed-1010",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/jamie_at_brewers.png?v=1775577912",
+  "platform": "shopify",
+  "product_id": "10359144677651",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Jamie's Competition Coffee: Panama Janson Gesha Washed 1010",
+  "url": "https://beannbeancoffee.com/products/panama-janson-gesha-washed-1010",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 63.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "54000036970771"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "521333f3661c506d",
+  "first_seen": "2026-10-26",
+  "handle": "panama-hle-porton5afb",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/esmeralda_porton_2.png?v=1784161364",
+  "platform": "shopify",
+  "product_id": "10385678631187",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Panama Hacienda La Esmeralda Gesha Washed Portón 5AFB [Score: 92.00]",
+  "url": "https://beannbeancoffee.com/products/panama-hle-porton5afb",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 119.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "54110944887059"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "d1d3463cb21ef5ee",
+  "first_seen": "2026-10-26",
+  "handle": "altieri-mima-gs-nat-chombi",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Altieri_Chombi_1.png?v=1784161349",
+  "platform": "shopify",
+  "product_id": "10385728471315",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Altieri Chombi Mima Estate Gesha Natural [Score: 91.50]",
+  "url": "https://beannbeancoffee.com/products/altieri-mima-gs-nat-chombi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 78.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "54111174885651"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "7ca664e83b81b375",
+  "first_seen": "2026-10-26",
+  "handle": "minas-gerais-yellow-catucai",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/MINASGERAISYELLOWCATUCAI10.9.png?v=1783510827",
+  "platform": "shopify",
+  "product_id": "10454891036947",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Brazil",
+   "Tasting Notes_Floral & Delicate"
+  ],
+  "title": "Minas Gerais Yellow Catucai [Score: 92.3]",
+  "url": "https://beannbeancoffee.com/products/minas-gerais-yellow-catucai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 28.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "54393462685971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "54444506808595"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "9e4cd7774bfc11cf",
+  "first_seen": "2026-10-26",
+  "handle": "panama-lerida-catuai-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/LERIDAhoneylight.png?v=1784390110",
+  "platform": "shopify",
+  "product_id": "10466895790355",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Panama Finca Lerida Catuai Honey",
+  "url": "https://beannbeancoffee.com/products/panama-lerida-catuai-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 27.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "54450029822227"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "54450029854995"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "051140d1c48670c6",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-soledad-sidra-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/sidra.png?v=1787073765",
+  "platform": "shopify",
+  "product_id": "10504324579603",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Ecuador",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Pepe Ecuador Soledad Sidra Washed",
+  "url": "https://beannbeancoffee.com/products/ecuador-soledad-sidra-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 35.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "54580345274643"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "11b2af96895fead4",
+  "first_seen": "2026-10-26",
+  "handle": "sitio-da-torre-red-obata",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/red_obata_10.9oz_1.png?v=1788276346",
+  "platform": "shopify",
+  "product_id": "10524825911571",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Brazil",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "app-featured"
+  ],
+  "title": "Sítio da Torre Red Obatã Washed",
+  "url": "https://beannbeancoffee.com/products/sitio-da-torre-red-obata",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "54639592636691"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "97ce84d88fc1efbc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-yabitu-koba-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Ethiopia_guji_10.9.png?v=1789561459",
+  "platform": "shopify",
+  "product_id": "10536518254867",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Ethiopia",
+   "app-featured"
+  ],
+  "title": "Ethiopia Guji Yabitu Koba Washed",
+  "url": "https://beannbeancoffee.com/products/ethiopia-guji-yabitu-koba-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "54686709612819"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "9a302f945a0625d7",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-incuti-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/burundi_bag_2.png?v=1791557145",
+  "platform": "shopify",
+  "product_id": "15396087824659",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Burundi",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Burundi Incuti Bourbon Washed",
+  "url": "https://beannbeancoffee.com/products/burundi-incuti-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "67629899972883"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "07b87efc3f915e3e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-downtown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Downtown.png?v=1784390557",
+  "platform": "shopify",
+  "product_id": "1658484981829",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Blends",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Downtown Blend, Organic & Fair Trade",
+  "url": "https://beannbeancoffee.com/products/organic-downtown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "31932513484869"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "31932513615941"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "31932513747013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932514140229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932514271301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932514402373"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "498f358e0c27fe4e",
+  "first_seen": "2026-10-26",
+  "handle": "bean-bean-hawaiian-kona-extra-fancy",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/KONA.png?v=1692905984",
+  "platform": "shopify",
+  "product_id": "1658488881221",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Hawaii",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Hawaii Kona Extra Fancy",
+  "url": "https://beannbeancoffee.com/products/bean-bean-hawaiian-kona-extra-fancy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 81.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "31932525674565"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 81.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "31932525805637"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 81.0,
+    "title": "11oz / Espresso",
+    "variant_id": "31932525936709"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 33.0,
+    "title": "4oz (MINI SAMPLER BAG) / Whole Bean",
+    "variant_id": "46741220557075"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "51d58e8852b62076",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Indonesia.png?v=1784390251",
+  "platform": "shopify",
+  "product_id": "4535249207365",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Indonesia",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Indonesia Sumatra, Organic & Fair Trade",
+  "url": "https://beannbeancoffee.com/products/indonesian-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "31932527738949"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "31932527870021"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "31932528001093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932528394309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932528525381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932528656453"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "cee58495adc3ec5b",
+  "first_seen": "2026-10-26",
+  "handle": "black-honey-las-lajas-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/products/blackhoney50.png?v=1784389852",
+  "platform": "shopify",
+  "product_id": "4535251828805",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Costa Rica",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Costa Rica Las Lajas Black Honey",
+  "url": "https://beannbeancoffee.com/products/black-honey-las-lajas-costa-rican",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 26.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "31932493791301"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 26.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "31932493824069"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 26.0,
+    "title": "11oz / Espresso",
+    "variant_id": "31932494086213"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932494446661"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932494479429"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932494741573"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "a262c9d2c1e982d4",
+  "first_seen": "2026-10-26",
+  "handle": "red-honey-las-lajas-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/products/redhoney60.png?v=1784389792",
+  "platform": "shopify",
+  "product_id": "4535251959877",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Costa Rica",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Costa Rica Las Lajas Red Honey",
+  "url": "https://beannbeancoffee.com/products/red-honey-las-lajas-costa-rican",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 26.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "31932500148293"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 26.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "31932500181061"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 26.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "31932500443205"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932500803653"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932500836421"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932501098565"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "0f187684e8e43817",
+  "first_seen": "2026-10-26",
+  "handle": "peru-las-damas-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/products/perulasdamas60.png?v=1784389775",
+  "platform": "shopify",
+  "product_id": "4560616915013",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Peru",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm",
+   "fb_category_24"
+  ],
+  "title": "Peru Las Damas, Organic & Fair Trade",
+  "url": "https://beannbeancoffee.com/products/peru-las-damas-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "31932529606725"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "31932529737797"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "31932529868869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932530262085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932530393157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932530524229"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50719698157843"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "86f5a7be486e56c9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Ethiopia_Sidamo.png?v=1784390618",
+  "platform": "shopify",
+  "product_id": "4560616980549",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Origin_Ethiopia",
+   "Tasting Notes_Floral & Delicate",
+   "bfcm"
+  ],
+  "title": "Ethiopia Sidamo, Organic & Fair Trade",
+  "url": "https://beannbeancoffee.com/products/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "31932517154885"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "31932517285957"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "31932517417029"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31932517810245"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "31932517941317"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Espresso",
+    "variant_id": "31932518072389"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "3f831713a1e935b6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-felisa-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/products/gesha98-1870.png?v=1784389745",
+  "platform": "shopify",
+  "product_id": "4560617308229",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Guatemala",
+   "Tasting Notes_Floral & Delicate",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Santa Felisa Gesha Washed Coffee",
+  "url": "https://beannbeancoffee.com/products/guatemala-santa-felisa-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 45.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "31932522463301"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 45.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "31932522594373"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 45.0,
+    "title": "11oz / Espresso",
+    "variant_id": "31932522725445"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 286.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47798575661331"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 286.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "47798575792403"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 286.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47798575890707"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "4b376bbdc7afedfa",
+  "first_seen": "2026-10-26",
+  "handle": "panama-janson-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Janson_Gesha_4oz_4b199452-16f9-434a-b76d-4bf4f1260447.png?v=1784390706",
+  "platform": "shopify",
+  "product_id": "6627017162821",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Janson Gesha Washed 997",
+  "url": "https://beannbeancoffee.com/products/panama-janson-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 35.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50071783407891"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 62.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "50071783702803"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "d0deb9b6159cc504",
+  "first_seen": "2026-10-26",
+  "handle": "seasonal-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/seasonal_decaf.png?v=1756302864",
+  "platform": "shopify",
+  "product_id": "6627079553093",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Decaf",
+   "All Types_Single Origin",
+   "Origin_Mexico",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Seasonal Decaf",
+  "url": "https://beannbeancoffee.com/products/seasonal-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39458309111877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "39458309242949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Espresso",
+    "variant_id": "39458309341253"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "52699349713171"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "52699349745939"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "52699349778707"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "0986cae1a587dcbf",
+  "first_seen": "2026-10-26",
+  "handle": "winter-wonder",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Winter_wonder_1.png?v=1784390419",
+  "platform": "shopify",
+  "product_id": "8031801803027",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [],
+  "title": "Winter Wonder",
+  "url": "https://beannbeancoffee.com/products/winter-wonder",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "44066572271891"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "44066572402963"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "44066572501267"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44066572861715"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "44066572992787"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "44066573091091"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "c8eaea3d001c9f77",
+  "first_seen": "2026-10-26",
+  "handle": "fancy-diner-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/FDC.png?v=1764778480",
+  "platform": "shopify",
+  "product_id": "8246845669651",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Brazil",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Fancy Diner Coffee",
+  "url": "https://beannbeancoffee.com/products/fancy-diner-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "44850459771155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44850459836691"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "46781613605139"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "46781613703443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "46781614194963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46781614293267"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 11.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "47463952777491"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "ac7cfbda89e40640",
+  "first_seen": "2026-10-26",
+  "handle": "queens-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Queens_Blend.png?v=1764778758",
+  "platform": "shopify",
+  "product_id": "8538871431443",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Blends",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Brazil",
+   "Tasting Notes_Chocolatey & Nutty",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Queens Blend Coffee",
+  "url": "https://beannbeancoffee.com/products/queens-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "46051006415123"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "46051006546195"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 25.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "46051006644499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46051007004947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "46051007136019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46051007234323"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "1d973f0812cd2ad0",
+  "first_seen": "2026-10-26",
+  "handle": "rio-nights",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Rio_Nights_updated.png?v=1784390861",
+  "platform": "shopify",
+  "product_id": "8539275526419",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Brazil",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm",
+   "chocolatey"
+  ],
+  "title": "Rio Nights",
+  "url": "https://beannbeancoffee.com/products/rio-nights",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "46052708909331"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "46052709040403"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "46052709138707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46052709499155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "46052709630227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46052709728531"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "ac1a3243d1680fe1",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/tanzania_1.png?v=1690564392",
+  "platform": "shopify",
+  "product_id": "8539498709267",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Fair Trade",
+   "Ethical Sourcing_Organic",
+   "Tasting Notes_Chocolatey & Nutty",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Honduras Manos De Mujer",
+  "url": "https://beannbeancoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "46053276844307"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "46053276975379"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "46053277073683"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46053277434131"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "46053277565203"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46053277663507"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "4f11c29e0d2348d5",
+  "first_seen": "2026-10-26",
+  "handle": "good-day-sunshine",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/GDS_1.png?v=1764778961",
+  "platform": "shopify",
+  "product_id": "9312507396371",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Blends",
+   "Origin_Brazil",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Good Day Sunshine",
+  "url": "https://beannbeancoffee.com/products/good-day-sunshine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "48776232599827"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "48776232730899"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "48776232829203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48776233222419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "48776233353491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48776233484563"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "ce26ec26642dc935",
+  "first_seen": "2026-10-26",
+  "handle": "elida-estate-gesha-washed-score-91-50",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Elida_Gesha_4oz_3fc7276d-5346-46b1-b862-ec1f1ca3e433.png?v=1723737469",
+  "platform": "shopify",
+  "product_id": "9561415254291",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Elida Estate Gesha Washed [Score: 91.50]",
+  "url": "https://beannbeancoffee.com/products/elida-estate-gesha-washed-score-91-50",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 83.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "49425937039635"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "0d0f003cf3a702d0",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-lucia-mamani",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Bolivia_f4b35a16-9f45-450b-b735-4f09da8442f5.png?v=1723737206",
+  "platform": "shopify",
+  "product_id": "9619968917779",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Bolivia",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Bolivia Lucia Mamani",
+  "url": "https://beannbeancoffee.com/products/bolivia-lucia-mamani",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "49623225270547"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "49623225401619"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Espresso",
+    "variant_id": "49623225499923"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 11.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "49623225565459"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 11.0,
+    "title": "4oz / Drip / Pourover",
+    "variant_id": "49623225696531"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 11.0,
+    "title": "4oz / Espresso",
+    "variant_id": "49623225794835"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49623225860371"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "49623225991443"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Espresso",
+    "variant_id": "49623226089747"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "2e25717584319027",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Kenya.png?v=1725035056",
+  "platform": "shopify",
+  "product_id": "9657994150163",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Kenya",
+   "Tasting Notes_Chocolatey & Nutty",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm"
+  ],
+  "title": "Kenya Peaberry",
+  "url": "https://beannbeancoffee.com/products/kenya-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "49756309061907"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "49756309192979"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "49756309291283"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49756309651731"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "49756309782803"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5lb / Espresso",
+    "variant_id": "49756309881107"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "646c85b6dafb2af0",
+  "first_seen": "2026-10-26",
+  "handle": "altieri-mima-estate-gesha-washed-score-90-5",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Altieri_Gesha_4oz_purple_1.png?v=1731950305",
+  "platform": "shopify",
+  "product_id": "9658003521811",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Altieri Mima Estate Gesha Washed [Score: 90.5]",
+  "url": "https://beannbeancoffee.com/products/altieri-mima-estate-gesha-washed-score-90-5",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 65.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "49756331966739"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 179.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "49853984145683"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "36f8c18f56db7a7f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Decaf_367360ab-03b9-4695-b43b-8337622a9931.png?v=1726857241",
+  "platform": "shopify",
+  "product_id": "9662574657811",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Decaf",
+   "All Types_Single Origin",
+   "Origin_Colombia",
+   "Tasting Notes_Chocolatey & Nutty",
+   "bfcm"
+  ],
+  "title": "Colombia Sugarcane Decaf",
+  "url": "https://beannbeancoffee.com/products/colombia-sugarcane-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Whole Bean",
+    "variant_id": "49776966664467"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Drip / Pourover",
+    "variant_id": "49776966795539"
+   },
+   {
+    "available": false,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "10.9oz / Espresso",
+    "variant_id": "49776966893843"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49776967254291"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Drip / Pourover",
+    "variant_id": "49776967385363"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 143.0,
+    "title": "5lb / Espresso",
+    "variant_id": "49776967483667"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "e0f92e7c797cf38f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-felisa-dwarf-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Santa_Felisa_Dwarf_Gesha_1.png?v=1726771751",
+  "platform": "shopify",
+  "product_id": "9680810606867",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "bfcm",
+   "extrafancy"
+  ],
+  "title": "Guatemala Santa Felisa Dwarf Gesha",
+  "url": "https://beannbeancoffee.com/products/guatemala-santa-felisa-dwarf-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 41.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "49830329319699"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 41.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "49830329450771"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 41.0,
+    "title": "11oz / Espresso",
+    "variant_id": "49830329549075"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "f2f2d7dce211b1ac",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-yellow-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Yellow_Catuai.png?v=1726843141",
+  "platform": "shopify",
+  "product_id": "9682926010643",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "Origin_Guatemala",
+   "bfcm"
+  ],
+  "title": "Guatemala Santa Felisa Yellow Catuai",
+  "url": "https://beannbeancoffee.com/products/guatemala-santa-yellow-catuai",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 25.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "49833742762259"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 25.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "49833742893331"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 25.0,
+    "title": "11oz / Espresso",
+    "variant_id": "49833742991635"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "31eacfd40c4f2076",
+  "first_seen": "2026-10-26",
+  "handle": "hacienda-la-esmeralda-canas-verdes-estate-gesha-natural-score-92-0",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Esmeralda_Gesha_4oz.png?v=1729533532",
+  "platform": "shopify",
+  "product_id": "9714824446227",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Gesha",
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Panama",
+   "Panama_Gesha",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy",
+   "fb_category_24"
+  ],
+  "title": "Panama Hacienda La Esmeralda Gesha Natural Tumaco 3NC [Score: 92.0]",
+  "url": "https://beannbeancoffee.com/products/hacienda-la-esmeralda-canas-verdes-estate-gesha-natural-score-92-0",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 127.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "49943929258259"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "15g (one dose) / Whole Bean",
+    "variant_id": "50417109238035"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "3496628c220fe487",
+  "first_seen": "2026-10-26",
+  "handle": "sample-pack-case",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/SamplePack2.png?v=1784161689",
+  "platform": "shopify",
+  "product_id": "9741298336019",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "Tasting Notes_Chocolatey & Nutty",
+   "bloom-default",
+   "chocolatey",
+   "gifting"
+  ],
+  "title": "Coffee Sample Pack Case",
+  "url": "https://beannbeancoffee.com/products/sample-pack-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 25 / Whole Bean",
+    "variant_id": "50075066663187"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 25 / Ground (Autodrip)",
+    "variant_id": "50075066695955"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 50 / Whole Bean",
+    "variant_id": "50075066728723"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 50 / Ground (Autodrip)",
+    "variant_id": "50075066761491"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 100 / Whole Bean",
+    "variant_id": "50075066794259"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Peru Las Damas (Medium Roast) 4 oz / 100 / Ground (Autodrip)",
+    "variant_id": "50075066827027"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 25 / Whole Bean",
+    "variant_id": "50075066859795"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 25 / Ground (Autodrip)",
+    "variant_id": "50075066892563"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 50 / Whole Bean",
+    "variant_id": "50075066925331"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 50 / Ground (Autodrip)",
+    "variant_id": "50075066958099"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 100 / Whole Bean",
+    "variant_id": "50075066990867"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Downtown Blend (Medium Roast) 4 oz / 100 / Ground (Autodrip)",
+    "variant_id": "50075067023635"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 25 / Whole Bean",
+    "variant_id": "50075067056403"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 25 / Ground (Autodrip)",
+    "variant_id": "50075067089171"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 50 / Whole Bean",
+    "variant_id": "50075067121939"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 50 / Ground (Autodrip)",
+    "variant_id": "50075067154707"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 100 / Whole Bean",
+    "variant_id": "50075067187475"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Rio Nights (Medium-Dark Roast) 4 oz / 100 / Ground (Autodrip)",
+    "variant_id": "50075067220243"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 25 / Whole Bean",
+    "variant_id": "50075067253011"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 220.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 25 / Ground (Autodrip)",
+    "variant_id": "50075067285779"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 50 / Whole Bean",
+    "variant_id": "50075067318547"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 385.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 50 / Ground (Autodrip)",
+    "variant_id": "50075067351315"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 100 / Whole Bean",
+    "variant_id": "50075067384083"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 750.0,
+    "title": "Fancy Diner Coffee (Dark Roast) 4 oz / 100 / Ground (Autodrip)",
+    "variant_id": "50075067416851"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "af152830f87c4f89",
+  "first_seen": "2026-10-26",
+  "handle": "my-sweet-valentine",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/My_Sweet_Valentine_1.png?v=1736876497",
+  "platform": "shopify",
+  "product_id": "9793103560979",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Organic",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Brazil",
+   "Tasting Notes_Chocolatey & Nutty",
+   "chocolatey"
+  ],
+  "title": "My Sweet Valentine",
+  "url": "https://beannbeancoffee.com/products/my-sweet-valentine",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "50307404333331"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Drip / Pourover",
+    "variant_id": "50307404464403"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Espresso",
+    "variant_id": "50307404562707"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "81dae5b4be52ec1a",
+  "first_seen": "2026-10-26",
+  "handle": "taiwan-alishan-jing-long-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/TaiwanGeshaWashedcoffee.png?v=1784390303",
+  "platform": "shopify",
+  "product_id": "9794131067155",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Taiwan",
+   "extrafancy"
+  ],
+  "title": "Taiwan Alishan Jing Long Gesha Washed 璟隆咖啡莊園",
+  "url": "https://beannbeancoffee.com/products/taiwan-alishan-jing-long-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 63.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50310175457555"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "7998ccc2fac5b112",
+  "first_seen": "2026-10-26",
+  "handle": "taiwan-alishan-zou-zhou-yuan-estate-gesha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/TaiwanGeshaNatural_12f5e87f-7744-4fd0-8391-bca7b01c6d6f.png?v=1784390343",
+  "platform": "shopify",
+  "product_id": "9794267283731",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Taiwan",
+   "extrafancy"
+  ],
+  "title": "Taiwan Alishan Zou Zhou Yuan Estate Gesha Natural 鄒築園",
+  "url": "https://beannbeancoffee.com/products/taiwan-alishan-zou-zhou-yuan-estate-gesha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 63.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50310573785363"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "15g (one shot wonder) / Whole Bean",
+    "variant_id": "50433323172115"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "a711e9d2eb0a773f",
+  "first_seen": "2026-10-26",
+  "handle": "pepe-jijon-wave-cold-ferment-typica",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/ColdWaveFermentPepeCoffeeBagonFarmBackground_1.png?v=1784161315",
+  "platform": "shopify",
+  "product_id": "9855896813843",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Ecuador",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy"
+  ],
+  "title": "Ecuador La Soledad Pepe Jijon Wave Cold Ferment Typica Mejorado",
+  "url": "https://beannbeancoffee.com/products/pepe-jijon-wave-cold-ferment-typica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 45.0,
+    "title": "4oz / Whole",
+    "variant_id": "50544868786451"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "f7aaa70a5e3a6853",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-putushio-typica-mejorado-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Putushio2222TypicaCoffeeBagongreenfarmbackgroundwithsolarpanel.png?v=1784161299",
+  "platform": "shopify",
+  "product_id": "9855902548243",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Ecuador",
+   "Tasting Notes_Floral & Delicate",
+   "Tasting Notes_Fruity & Bright",
+   "extrafancy"
+  ],
+  "title": "Ecuador Putushio Typica Mejorado Washed",
+  "url": "https://beannbeancoffee.com/products/ecuador-putushio-typica-mejorado-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 35.0,
+    "title": "4oz / Whole",
+    "variant_id": "50544871244051"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "596d3ba693b17843",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cusco-evelina-pereyra",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Peru_Cusco_Evelina_Pereyra.png?v=1784390316",
+  "platform": "shopify",
+  "product_id": "9915956658451",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Peru",
+   "Tasting Notes_Fruity & Bright",
+   "fb_category_24"
+  ],
+  "title": "Peru Cusco Evelina Pereyra",
+  "url": "https://beannbeancoffee.com/products/peru-cusco-evelina-pereyra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 24.5,
+    "title": "11oz / Whole Bean",
+    "variant_id": "50890632790291"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50890632986899"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52074941448467"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "67d60486aff8246a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-puno-hermanos-quilla-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Peru_Puno_Hermanos_Quilla_Bourbon.png?v=1784390211",
+  "platform": "shopify",
+  "product_id": "9915965931795",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Peru",
+   "Tasting Notes_Fruity & Bright",
+   "fb_category_24"
+  ],
+  "title": "Peru Puno Hermanos Quilla Bourbon",
+  "url": "https://beannbeancoffee.com/products/peru-puno-hermanos-quilla-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 14.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "50890920689939"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 24.5,
+    "title": "11oz / Whole Bean",
+    "variant_id": "50890920722707"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51864608276755"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "dfb3efde1bbb9ddc",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-kanzu-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Rwanda_Nyamasheke_Kanzu_Natural_Lot_3_Bourbon_Washed.png?v=1784390393",
+  "platform": "shopify",
+  "product_id": "9963557290259",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Origin_Rwanda",
+   "Tasting Notes_Fruity & Bright",
+   "fb_category_24"
+  ],
+  "title": "Rwanda Nyamasheke Kanzu Natural Lot #3 Bourbon",
+  "url": "https://beannbeancoffee.com/products/rwanda-kanzu-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 16.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "51470148993299"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 24.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "51470149026067"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5b / Whole Bean",
+    "variant_id": "51978928685331"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ },
+ {
+  "body_hash": "29733d188608847e",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-2025-auction-lot-caranavi-gesha-washed-los-rodriguez",
+  "image": "https://cdn.shopify.com/s/files/1/0052/2420/2309/files/Bolivia_Auction_2_32d52961-c3a5-485b-8318-d22a4798dfc8.png?v=1784161283",
+  "platform": "shopify",
+  "product_id": "9991146504467",
+  "product_type": "Coffee",
+  "roaster_slug": "beanandbeancoffee",
+  "tags": [
+   "All Types_Single Origin",
+   "Ethical Sourcing_Women Powered",
+   "Origin_Bolivia",
+   "Tasting Notes_Fruity & Bright",
+   "bfcm",
+   "extrafancy"
+  ],
+  "title": "Ultra Light - Los Rodriguez Collection No.3 Auction Lot - Bolivia Caranavi Gesha Washed Mosto",
+  "url": "https://beannbeancoffee.com/products/bolivia-2025-auction-lot-caranavi-gesha-washed-los-rodriguez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 59.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "51772931539219"
+   }
+  ],
+  "vendor": "Bean & Bean Coffee Roasters"
+ }
+]

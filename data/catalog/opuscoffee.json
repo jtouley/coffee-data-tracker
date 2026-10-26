@@ -1,0 +1,852 @@
+[
+ {
+  "body_hash": "af461420735a1514",
+  "first_seen": "2026-10-26",
+  "handle": "florida-proof-limited-release-2026",
+  "image": "https://opuscoffee.com/wp-content/uploads/Bourbon-Coffee.png",
+  "platform": "woocommerce",
+  "product_id": "10884",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Gifts",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Florida Proof – Limited Release 2026",
+  "url": "https://opuscoffee.com/product/florida-proof-limited-release-2026/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "10884:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c43ef6e7757af7c7",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-finca-brumas-del-zurqui",
+  "image": "https://opuscoffee.com/wp-content/uploads/noteworthy.png",
+  "platform": "woocommerce",
+  "product_id": "12522",
+  "product_type": "simple",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Reserve"
+  ],
+  "title": "Costa Rica Finca Brumas del Zurquí",
+  "url": "https://opuscoffee.com/product/costa-rica-finca-brumas-del-zurqui/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Costa Rica Finca Brumas del Zurquí",
+    "variant_id": "12522:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5fea60a0fda77227",
+  "first_seen": "2026-10-26",
+  "handle": "peru-aprysa-dark-roast",
+  "image": "https://opuscoffee.com/wp-content/uploads/Untitled-design-27.png",
+  "platform": "woocommerce",
+  "product_id": "15223",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Single Origin",
+   "single origin"
+  ],
+  "title": "Peru Aprysa",
+  "url": "https://opuscoffee.com/product/peru-aprysa-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "15223:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "15223:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7c744ea6c483763",
+  "first_seen": "2026-10-26",
+  "handle": "choose-your-new-coffee-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/Website_Images_CoffeeBags_House-scaled-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "17286",
+  "product_type": "grouped",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Subscriptions"
+  ],
+  "title": "Choose Your New Coffee Blend",
+  "url": "https://opuscoffee.com/product/choose-your-new-coffee-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.0,
+    "title": "Choose Your New Coffee Blend",
+    "variant_id": "17286:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "377f39dd7b9aa698",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-kochere",
+  "image": "https://opuscoffee.com/wp-content/uploads/Kochere-1.png",
+  "platform": "woocommerce",
+  "product_id": "17394",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Single Origin",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Ethiopia – Yirgacheffe – Kochere",
+  "url": "https://opuscoffee.com/product/ethiopia-yirgacheffe-kochere/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "17394:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.0,
+    "title": "5lbs",
+    "variant_id": "17394:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73826c0d0b188710",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-finca-sircof",
+  "image": "https://opuscoffee.com/wp-content/uploads/Costa-Rica-Finca-Sircof-.png",
+  "platform": "woocommerce",
+  "product_id": "18013",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "New Arrivals",
+   "Single Origin",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Costa Rica Finca Sircof",
+  "url": "https://opuscoffee.com/product/costa-rica-finca-sircof/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "18013:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.0,
+    "title": "5lbs",
+    "variant_id": "18013:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d4b28ee2525a545",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-comsa-natural-reserve",
+  "image": "https://opuscoffee.com/wp-content/uploads/honduras-comsa-natural-reserve.png",
+  "platform": "woocommerce",
+  "product_id": "18199",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "New Arrivals",
+   "Single Origin",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Honduras COMSA Natural Reserve",
+  "url": "https://opuscoffee.com/product/honduras-comsa-natural-reserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "18199:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.5,
+    "title": "5lbs",
+    "variant_id": "18199:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d29ed2f40ab7341e",
+  "first_seen": "2026-10-26",
+  "handle": "fest-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/fest-TN-1.png",
+  "platform": "woocommerce",
+  "product_id": "1833",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast",
+   "New Arrivals",
+   "med/dark"
+  ],
+  "title": "Fest Blend",
+  "url": "https://opuscoffee.com/product/fest-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.5,
+    "title": "Fest Blend",
+    "variant_id": "1833:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95079ca9f8693228",
+  "first_seen": "2026-10-26",
+  "handle": "spurriers-5th-anniversary-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/spurriers-5th-anniversary.png",
+  "platform": "woocommerce",
+  "product_id": "18332",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast",
+   "New Arrivals",
+   "Spurrier Collection",
+   "summer"
+  ],
+  "title": "Spurrier’s 5th Anniversary Blend",
+  "url": "https://opuscoffee.com/product/spurriers-5th-anniversary-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz",
+    "variant_id": "18332:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.5,
+    "title": "5lbs",
+    "variant_id": "18332:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2511632f9a4562af",
+  "first_seen": "2026-10-26",
+  "handle": "opus-coffee-fest-window-decal",
+  "image": "https://opuscoffee.com/wp-content/uploads/FEST-Window-Decal.png",
+  "platform": "woocommerce",
+  "product_id": "18553",
+  "product_type": "simple",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "gainesville"
+  ],
+  "title": "Opus Coffee & FEST Window Decal",
+  "url": "https://opuscoffee.com/product/opus-coffee-fest-window-decal/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Opus Coffee &#038; FEST Window Decal",
+    "variant_id": "18553:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef50755bf8dba09e",
+  "first_seen": "2026-10-26",
+  "handle": "coachs-signature-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/spurrrier-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "228",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Gifts",
+   "Spurrier Collection",
+   "blends",
+   "dark roast",
+   "spurrier"
+  ],
+  "title": "Coach’s Signature Blend",
+  "url": "https://opuscoffee.com/product/coachs-signature-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Coach&#8217;s Signature Blend",
+    "variant_id": "228:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e2611e385eb2bfe4",
+  "first_seen": "2026-10-26",
+  "handle": "two-a-days-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/Two-a-days-1.png",
+  "platform": "woocommerce",
+  "product_id": "242",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Gifts",
+   "Medium Roast",
+   "Spurrier Collection",
+   "gainesville",
+   "medium roast"
+  ],
+  "title": "Two-A-Days Blend",
+  "url": "https://opuscoffee.com/product/two-a-days-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Two-A-Days Blend",
+    "variant_id": "242:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84fc5e88ae72f14f",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/house-1-2.png",
+  "platform": "woocommerce",
+  "product_id": "295",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast",
+   "blends",
+   "gainesville",
+   "medium roast"
+  ],
+  "title": "House Blend",
+  "url": "https://opuscoffee.com/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "295:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "295:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "399c4af585c67840",
+  "first_seen": "2026-10-26",
+  "handle": "heartbeat-espresso-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/heartbeat-tn-3.png",
+  "platform": "woocommerce",
+  "product_id": "309",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Espresso",
+   "Heartbeat Series",
+   "blends",
+   "heartbeat",
+   "med/dark"
+  ],
+  "title": "Heartbeat Espresso Blend",
+  "url": "https://opuscoffee.com/product/heartbeat-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "309:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "309:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1693c36d994a0e63",
+  "first_seen": "2026-10-26",
+  "handle": "misty-mountain-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/misty-mountain-2-1.png",
+  "platform": "woocommerce",
+  "product_id": "339",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Medium Roast",
+   "blends",
+   "med/dark"
+  ],
+  "title": "Misty Mountain Blend",
+  "url": "https://opuscoffee.com/product/misty-mountain-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "339:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lbs",
+    "variant_id": "339:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "be42ccda9ca48057",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-guji",
+  "image": "https://opuscoffee.com/wp-content/uploads/ethiopia-2.png",
+  "platform": "woocommerce",
+  "product_id": "353",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Ethiopia Sidamo Guji",
+  "url": "https://opuscoffee.com/product/ethiopia-sidamo-guji/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "353:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "353:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4201a3fc5a638cc",
+  "first_seen": "2026-10-26",
+  "handle": "dark-star-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/dak-star-bag-1.png",
+  "platform": "woocommerce",
+  "product_id": "367",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "blends",
+   "dark roast"
+  ],
+  "title": "Dark Star Blend",
+  "url": "https://opuscoffee.com/product/dark-star-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "367:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "367:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9d17e54a3c25510",
+  "first_seen": "2026-10-26",
+  "handle": "satchels-blend-2",
+  "image": "https://opuscoffee.com/wp-content/uploads/satchels-blend-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "381",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast",
+   "med/dark",
+   "single origin"
+  ],
+  "title": "Satchel’s Blend",
+  "url": "https://opuscoffee.com/product/satchels-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "381:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "381:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "148fd0231e5389e4",
+  "first_seen": "2026-10-26",
+  "handle": "swamp-coast-seasonal-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/swamp-coast-2-1.png",
+  "platform": "woocommerce",
+  "product_id": "395",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast",
+   "blends",
+   "med/dark"
+  ],
+  "title": "Swamp Coast Blend",
+  "url": "https://opuscoffee.com/product/swamp-coast-seasonal-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "395:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lbs",
+    "variant_id": "395:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "607af5d23ccaaaf2",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://opuscoffee.com/wp-content/uploads/mexico-chiapas-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "3994",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Single Origin",
+   "blends",
+   "med/dark"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://opuscoffee.com/product/mexico-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz",
+    "variant_id": "3994:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.5,
+    "title": "5lbs",
+    "variant_id": "3994:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "afe4a13503eacfd1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-asopap-co-op",
+  "image": "https://opuscoffee.com/wp-content/uploads/colombia-aspop-1-2.png",
+  "platform": "woocommerce",
+  "product_id": "4218",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin",
+   "blends",
+   "medium roast"
+  ],
+  "title": "Colombia ASOPAP Co-op",
+  "url": "https://opuscoffee.com/product/colombia-asopap-co-op/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "4218:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "4218:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1d5e2461758d62c",
+  "first_seen": "2026-10-26",
+  "handle": "1884-porters-quarters-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/porters-1.png",
+  "platform": "woocommerce",
+  "product_id": "4264",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "1884 Porters Quarters Blend",
+  "url": "https://opuscoffee.com/product/1884-porters-quarters-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "4264:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lbs",
+    "variant_id": "4264:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "21db1f549500904c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://opuscoffee.com/wp-content/uploads/decaf-house-1-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "440",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Decaf",
+   "blends",
+   "medium roast"
+  ],
+  "title": "Decaf House Blend",
+  "url": "https://opuscoffee.com/product/decaf-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "440:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "440:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5fd22e4eca757f85",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://opuscoffee.com/wp-content/uploads/guatemala-1.png",
+  "platform": "woocommerce",
+  "product_id": "4960",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin",
+   "blends",
+   "medium roast"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://opuscoffee.com/product/guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "4960:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lbs",
+    "variant_id": "4960:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c57de7e0f2966f4",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-santa-teresa-de-mogoton-catuai-natural",
+  "image": "https://opuscoffee.com/wp-content/uploads/nicaragua-2.png",
+  "platform": "woocommerce",
+  "product_id": "6307",
+  "product_type": "variable",
+  "roaster_slug": "opuscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin",
+   "blends",
+   "medium roast"
+  ],
+  "title": "Nicaragua Santa Teresa de Mogoton Catuai Natural",
+  "url": "https://opuscoffee.com/product/nicaragua-santa-teresa-de-mogoton-catuai-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "6307:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5lbs",
+    "variant_id": "6307:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

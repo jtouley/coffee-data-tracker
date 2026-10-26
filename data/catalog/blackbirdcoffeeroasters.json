@@ -1,0 +1,1048 @@
+[
+ {
+  "body_hash": "4e4a2d18c594ecb1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-amaca",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/COLOMBIAEXCELSO_cae42c59-c483-4a4a-baa8-cae307865b48.png?v=1791498804&width=1920",
+  "platform": "generic",
+  "product_id": "COL-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Colombia Excelso",
+  "url": "https://blackbirdcoffeeroasters.com/products/colombia-amaca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "COL-12oz-CG",
+    "variant_id": "COL-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "COL-12oz-FG",
+    "variant_id": "COL-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "COL-12oz-MG",
+    "variant_id": "COL-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "COL-12oz-WB",
+    "variant_id": "COL-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "COL-2lb-CG",
+    "variant_id": "COL-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "COL-2lb-FG",
+    "variant_id": "COL-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "COL-2lb-MG",
+    "variant_id": "COL-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "COL-2lb-WB",
+    "variant_id": "COL-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "COL-5lb-CG",
+    "variant_id": "COL-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "COL-5lb-FG",
+    "variant_id": "COL-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "COL-5lb-MG",
+    "variant_id": "COL-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "COL-5lb-WB",
+    "variant_id": "COL-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e60a72545de898cb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-copy",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/DECAFMEXICO_1.png?v=1791499000&width=1920",
+  "platform": "generic",
+  "product_id": "DEC-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://blackbirdcoffeeroasters.com/products/colombia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "DEC-12oz-CG",
+    "variant_id": "DEC-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "DEC-12oz-FG",
+    "variant_id": "DEC-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "DEC-12oz-MG",
+    "variant_id": "DEC-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "DEC-12oz-WB",
+    "variant_id": "DEC-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "DEC-2lb-CG",
+    "variant_id": "DEC-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "DEC-2lb-FG",
+    "variant_id": "DEC-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "DEC-2lb-MG",
+    "variant_id": "DEC-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "DEC-2lb-WB",
+    "variant_id": "DEC-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "DEC-5lb-CG",
+    "variant_id": "DEC-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "DEC-5lb-FG",
+    "variant_id": "DEC-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "DEC-5lb-MG",
+    "variant_id": "DEC-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "DEC-5lb-WB",
+    "variant_id": "DEC-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e93787c598dcf75c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/ETHIOPIASIDAMO_e4eb2673-b536-4299-9ad5-5c11d428a5da.png?v=1791500303&width=1920",
+  "platform": "generic",
+  "product_id": "ETH-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Sidamo",
+  "url": "https://blackbirdcoffeeroasters.com/products/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "ETH-12oz-CG",
+    "variant_id": "ETH-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "ETH-12oz-FG",
+    "variant_id": "ETH-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "ETH-12oz-MG",
+    "variant_id": "ETH-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "ETH-12oz-WB",
+    "variant_id": "ETH-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "ETH-2lb-CG",
+    "variant_id": "ETH-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "ETH-2lb-FG",
+    "variant_id": "ETH-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "ETH-2lb-MG",
+    "variant_id": "ETH-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "ETH-2lb-WB",
+    "variant_id": "ETH-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "ETH-5lb-CG",
+    "variant_id": "ETH-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "ETH-5lb-FG",
+    "variant_id": "ETH-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "ETH-5lb-MG",
+    "variant_id": "ETH-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "ETH-5lb-WB",
+    "variant_id": "ETH-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1dee890f0035fd16",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pablo-and-eva-del-cid-family-lot",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/GUATEMALAPABLO_EVADELCIDFAMILYLOT_0b046d11-8e7f-4171-b72c-77b3bad0b4bf.png?v=1791500623&width=1920",
+  "platform": "generic",
+  "product_id": "GUAT-FAM-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Pablo and Eva del Cid Family Lot",
+  "url": "https://blackbirdcoffeeroasters.com/products/guatemala-pablo-and-eva-del-cid-family-lot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "GUAT-FAM-12oz-WB",
+    "variant_id": "GUAT-FAM-12oz-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a50861767098fdbc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-oriente",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/GUATEMALAORIENTE_bc0960ec-8636-4a68-93cf-f7ca13570260.png?v=1791500464&width=1920",
+  "platform": "generic",
+  "product_id": "GUAT-ORI-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Oriente",
+  "url": "https://blackbirdcoffeeroasters.com/products/guatemala-oriente",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "GUAT-ORI-12oz-CG",
+    "variant_id": "GUAT-ORI-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "GUAT-ORI-12oz-FG",
+    "variant_id": "GUAT-ORI-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "GUAT-ORI-12oz-MG",
+    "variant_id": "GUAT-ORI-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "GUAT-ORI-12oz-WB",
+    "variant_id": "GUAT-ORI-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "GUAT-ORI-2lb-FG",
+    "variant_id": "GUAT-ORI-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "GUAT-ORI-2lb-MG",
+    "variant_id": "GUAT-ORI-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "GUAT-ORI-2lb-WB",
+    "variant_id": "GUAT-ORI-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "Guat-Ori-2lb-CG",
+    "variant_id": "Guat-Ori-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Guat-Ori-5lb-CG",
+    "variant_id": "Guat-Ori-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Guat-Ori-5lb-FG",
+    "variant_id": "Guat-Ori-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Guat-Ori-5lb-MG",
+    "variant_id": "Guat-Ori-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Guat-Ori-5lb-WB",
+    "variant_id": "Guat-Ori-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60472c747bcf6497",
+  "first_seen": "2026-10-26",
+  "handle": "moondance",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/MOONDANCEHOUSEBLEND.png?v=1791501181&width=1920",
+  "platform": "generic",
+  "product_id": "MD-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Moondance",
+  "url": "https://blackbirdcoffeeroasters.com/products/moondance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MD-12oz-CG",
+    "variant_id": "MD-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MD-12oz-FG",
+    "variant_id": "MD-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MD-12oz-MG",
+    "variant_id": "MD-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MD-12oz-WB",
+    "variant_id": "MD-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MD-2lb-CG",
+    "variant_id": "MD-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MD-2lb-FG",
+    "variant_id": "MD-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MD-2lb-MG",
+    "variant_id": "MD-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MD-2lb-WB",
+    "variant_id": "MD-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MD-5lb-CG",
+    "variant_id": "MD-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MD-5lb-FG",
+    "variant_id": "MD-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MD-5lb-MG",
+    "variant_id": "MD-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MD-5lb-WB",
+    "variant_id": "MD-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d16c5c1326c2f204",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-cristal",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/MEXICOLALAJA_1e88e61a-8779-47d5-beda-c1030f09b9d3.png?v=1791499049&width=1920",
+  "platform": "generic",
+  "product_id": "MEX-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Mexico La Laja",
+  "url": "https://blackbirdcoffeeroasters.com/products/mexico-cristal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MEX-12oz-CG",
+    "variant_id": "MEX-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MEX-12oz-FG",
+    "variant_id": "MEX-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MEX-12oz-MG",
+    "variant_id": "MEX-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "MEX-12oz-WB",
+    "variant_id": "MEX-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MEX-2lb-CG",
+    "variant_id": "MEX-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MEX-2lb-FG",
+    "variant_id": "MEX-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MEX-2lb-MG",
+    "variant_id": "MEX-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "MEX-2lb-WB",
+    "variant_id": "MEX-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MEX-5lb-CG",
+    "variant_id": "MEX-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MEX-5lb-FG",
+    "variant_id": "MEX-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MEX-5lb-MG",
+    "variant_id": "MEX-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "MEX-5lb-WB",
+    "variant_id": "MEX-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "264b158372369bf1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-single-origin",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/SUMATRAMANDHELING_12ce5cfd-5b95-4d04-9c83-b6d7866225ec.png?v=1791499402&width=1920",
+  "platform": "generic",
+  "product_id": "SUM-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Sumatra Mandheling",
+  "url": "https://blackbirdcoffeeroasters.com/products/sumatra-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "SUM-12oz-CG",
+    "variant_id": "SUM-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "SUM-12oz-FG",
+    "variant_id": "SUM-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "SUM-12oz-MG",
+    "variant_id": "SUM-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "SUM-12oz-WB",
+    "variant_id": "SUM-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "SUM-2lb-CG",
+    "variant_id": "SUM-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "SUM-2lb-FG",
+    "variant_id": "SUM-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "SUM-2lb-MG",
+    "variant_id": "SUM-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "SUM-2lb-WB",
+    "variant_id": "SUM-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "SUM-5lb-CG",
+    "variant_id": "SUM-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "SUM-5lb-FG",
+    "variant_id": "SUM-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "SUM-5lb-MG",
+    "variant_id": "SUM-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "SUM-5lb-WB",
+    "variant_id": "SUM-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3bae58e331cc496a",
+  "first_seen": "2026-10-26",
+  "handle": "tupelo-honey",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/TupeloHoney_b36a426e-2028-44eb-afbd-32a16650907e.png?v=1791501421&width=1920",
+  "platform": "generic",
+  "product_id": "TH-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Tupelo Honey",
+  "url": "https://blackbirdcoffeeroasters.com/products/tupelo-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "TH-12oz-CG",
+    "variant_id": "TH-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "TH-12oz-FG",
+    "variant_id": "TH-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "TH-12oz-MG",
+    "variant_id": "TH-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "TH-12oz-WB",
+    "variant_id": "TH-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "TH-2lb-CG",
+    "variant_id": "TH-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "TH-2lb-FG",
+    "variant_id": "TH-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "TH-2lb-MG",
+    "variant_id": "TH-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "TH-2lb-WB",
+    "variant_id": "TH-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "TH-5lb-CG",
+    "variant_id": "TH-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "TH-5lb-FG",
+    "variant_id": "TH-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "TH-5lb-MG",
+    "variant_id": "TH-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "TH-5lb-WB",
+    "variant_id": "TH-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f32f83d1c4ad099",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-rwenzori",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/UGUANDARWENZORI_d423881d-8ff2-43a1-87fb-8a7b7b71232a.png?v=1791499653&width=1920",
+  "platform": "generic",
+  "product_id": "UGA-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Uganda Rwenzori",
+  "url": "https://blackbirdcoffeeroasters.com/products/uganda-rwenzori",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "UGA-12oz-CG",
+    "variant_id": "UGA-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "UGA-12oz-FG",
+    "variant_id": "UGA-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "UGA-12oz-MG",
+    "variant_id": "UGA-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "UGA-12oz-WB",
+    "variant_id": "UGA-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "UGA-2lb-CG",
+    "variant_id": "UGA-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "UGA-2lb-FG",
+    "variant_id": "UGA-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "UGA-2lb-MG",
+    "variant_id": "UGA-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "UGA-2lb-WB",
+    "variant_id": "UGA-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "UGA-5lb-CG",
+    "variant_id": "UGA-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "UGA-5lb-FG",
+    "variant_id": "UGA-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "UGA-5lb-MG",
+    "variant_id": "UGA-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "UGA-5lb-WB",
+    "variant_id": "UGA-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b9c5dd7ea1a0093",
+  "first_seen": "2026-10-26",
+  "handle": "unity-espresso-blend-1",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/UNITYESPRESSOBLEND.png?v=1791501307&width=1920",
+  "platform": "generic",
+  "product_id": "UNI-12oz-WB",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Unity Espresso Blend",
+  "url": "https://blackbirdcoffeeroasters.com/products/unity-espresso-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UNI-12oz-CG",
+    "variant_id": "UNI-12oz-CG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UNI-12oz-FG",
+    "variant_id": "UNI-12oz-FG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UNI-12oz-MG",
+    "variant_id": "UNI-12oz-MG"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UNI-12oz-WB",
+    "variant_id": "UNI-12oz-WB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "UNI-2lb-CG",
+    "variant_id": "UNI-2lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "UNI-2lb-FG",
+    "variant_id": "UNI-2lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "UNI-2lb-MG",
+    "variant_id": "UNI-2lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "UNI-2lb-WB",
+    "variant_id": "UNI-2lb-WB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "UNI-5lb-CG",
+    "variant_id": "UNI-5lb-CG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "UNI-5lb-FG",
+    "variant_id": "UNI-5lb-FG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "UNI-5lb-MG",
+    "variant_id": "UNI-5lb-MG"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "UNI-5lb-WB",
+    "variant_id": "UNI-5lb-WB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "deb46272340ebe25",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-martin",
+  "image": "https://blackbirdcoffeeroasters.com/cdn/shop/files/PERUSANMARTIN_2.png?v=1791500872&width=1920",
+  "platform": "generic",
+  "product_id": "da0099fdf76f",
+  "product_type": "",
+  "roaster_slug": "blackbirdcoffeeroasters",
+  "tags": [],
+  "title": "Peru San Martin",
+  "url": "https://blackbirdcoffeeroasters.com/products/peru-san-martin",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": null,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

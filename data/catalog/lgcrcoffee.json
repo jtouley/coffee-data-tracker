@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "3207553ea98bfec7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1ccefb3849ed",
+  "product_type": "",
+  "roaster_slug": "lgcrcoffee",
+  "tags": [],
+  "title": "Guatemalan 12 oz",
+  "url": "https://www.lgcrcoffee.com/product-page/guatemalan-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73a4bf181bf99187",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "28b109c77b96",
+  "product_type": "",
+  "roaster_slug": "lgcrcoffee",
+  "tags": [],
+  "title": "West End Blend 12 oz",
+  "url": "https://www.lgcrcoffee.com/product-page/ethiopian-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "300fa87fd7ac8c16",
+  "first_seen": "2026-10-26",
+  "handle": "wake-the-lake-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6359b0f8b407",
+  "product_type": "",
+  "roaster_slug": "lgcrcoffee",
+  "tags": [],
+  "title": "Wake the Lake 12 oz",
+  "url": "https://www.lgcrcoffee.com/product-page/wake-the-lake-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2011c29ed9df0727",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-artisan-blend-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "91d4632348b8",
+  "product_type": "",
+  "roaster_slug": "lgcrcoffee",
+  "tags": [],
+  "title": "Artisan Blend 12 oz",
+  "url": "https://www.lgcrcoffee.com/product-page/copy-of-artisan-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a0040dd5e4ec9a2f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d9eb7294e0a8",
+  "product_type": "",
+  "roaster_slug": "lgcrcoffee",
+  "tags": [],
+  "title": "DECAF 12 oz",
+  "url": "https://www.lgcrcoffee.com/product-page/colombia-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

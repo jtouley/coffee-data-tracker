@@ -1,0 +1,140 @@
+[
+ {
+  "body_hash": "323d2ff970682645",
+  "first_seen": "2026-10-26",
+  "handle": "ocean-ave-blend-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2d1b15a6d4c6",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Ocean Ave Blend 1lb",
+  "url": "https://www.carmelcoffee.com/product-page/ocean-ave-blend-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5410034ba0d9d12d",
+  "first_seen": "2026-10-26",
+  "handle": "decafe-dark-french-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "655631ab6480",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Decafe Dark French 1lb",
+  "url": "https://www.carmelcoffee.com/product-page/decafe-dark-french-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e43ca9e361ed266b",
+  "first_seen": "2026-10-26",
+  "handle": "dark-french-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8076f67d96bf",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Dark French 1lb",
+  "url": "https://www.carmelcoffee.com/product-page/dark-french-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cff08f2136131f1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-single-origin-organic-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "84c88451b9cd",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Sumatra SINGLE ORIGIN Organic Coffee",
+  "url": "https://www.carmelcoffee.com/product-page/sumatra-single-origin-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a455d4dae164bd07",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8c2336b0b01e",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Espresso 1lb",
+  "url": "https://www.carmelcoffee.com/product-page/espresso-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8391ed049258b37",
+  "first_seen": "2026-10-26",
+  "handle": "carmel-sunrise-blend-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a78a8580b72b",
+  "product_type": "",
+  "roaster_slug": "carmelcoffee",
+  "tags": [],
+  "title": "Carmel Sunrise Blend 1lb",
+  "url": "https://www.carmelcoffee.com/product-page/carmel-sunrise-blend-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

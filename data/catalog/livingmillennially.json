@@ -1,0 +1,92 @@
+[
+ {
+  "body_hash": "476fd5525dd4a7bc",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roasted-coffee-k6xgj-k46d4-hmf6c",
+  "image": "https://images.squarespace-cdn.com/content/v1/62a0f9e414a6c520491bd6be/f8f5dc57-cb32-45e5-b0d3-b12bebc4e307/Decaf+Bag.png",
+  "platform": "squarespace",
+  "product_id": "67abc043df5299146d2bf4e6",
+  "product_type": "",
+  "roaster_slug": "livingmillennially",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.livingmillennially.com/mademillennially/p/fresh-roasted-coffee-k6xgj-k46d4-hmf6c",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "14ddb753-4d3b-4864-b844-17c8c9ad0b51"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Ground",
+    "variant_id": "dee5f04e-a06c-4d73-8b36-6676efa39ff6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d9c52b7dcf733da",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roasted-coffee-k6xgj-k46d4-2xe92",
+  "image": "https://images.squarespace-cdn.com/content/v1/62a0f9e414a6c520491bd6be/7ec5ccbe-bb12-4d75-a388-f965e994cef2/Apartment+Blend.png",
+  "platform": "squarespace",
+  "product_id": "68ee96bed66a63059f1c0e97",
+  "product_type": "",
+  "roaster_slug": "livingmillennially",
+  "tags": [],
+  "title": "Apartment Blend",
+  "url": "https://www.livingmillennially.com/mademillennially/p/fresh-roasted-coffee-k6xgj-k46d4-2xe92",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "99e7f2d7-b934-451b-9ae2-e9cdcfac6aa5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Ground",
+    "variant_id": "bbc0cdb9-50fa-461d-8b44-8accba428880"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c6aa1c16a7bcf87",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roasted-coffee-k6xgj-k46d4-2xe92-sym78",
+  "image": "https://images.squarespace-cdn.com/content/v1/62a0f9e414a6c520491bd6be/6634174a-79b7-4b2a-bbcd-11ba41b7c9e4/LM.png",
+  "platform": "squarespace",
+  "product_id": "69f4f3f8d9a07f26c83ea56d",
+  "product_type": "",
+  "roaster_slug": "livingmillennially",
+  "tags": [],
+  "title": "5lb Bag of Coffee",
+  "url": "https://www.livingmillennially.com/mademillennially/p/fresh-roasted-coffee-k6xgj-k46d4-2xe92-sym78",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "Ground",
+    "variant_id": "42f120e1-e482-4b1c-9f89-26be6e8be564"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "a186e774-ceee-4e9e-b552-3a5a018e45e4"
+   }
+  ],
+  "vendor": ""
+ }
+]

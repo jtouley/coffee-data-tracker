@@ -1,0 +1,70 @@
+{
+ "7396216668245": {
+  "body_hash": "309fe277b5281ea4",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7531924881493": {
+  "body_hash": "a9afe0e6f1e353f9",
+  "elevation_masl_max": 1780,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "7539349520469": {
+  "body_hash": "8d431f59de01892d",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8490661773397": {
+  "body_hash": "d549bb3fa976342a",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 2300,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

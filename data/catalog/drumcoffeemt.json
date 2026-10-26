@@ -1,0 +1,922 @@
+[
+ {
+  "body_hash": "cb8d09526d1ec9da",
+  "first_seen": "2026-10-26",
+  "handle": "luigi-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/LuigiR01V01.png?v=1637943802",
+  "platform": "shopify",
+  "product_id": "6877391847582",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Luigi Espresso Blend",
+  "url": "https://drumcoffeeroasting.com/products/luigi-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lbs.",
+    "variant_id": "40480854081694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz",
+    "variant_id": "40480864731294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb",
+    "variant_id": "42497406206178"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "189417c580062414",
+  "first_seen": "2026-10-26",
+  "handle": "airto-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/AirtoR01V01.png?v=1637943770",
+  "platform": "shopify",
+  "product_id": "6877406527646",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "beans",
+   "website"
+  ],
+  "title": "Airto Blend",
+  "url": "https://drumcoffeeroasting.com/products/airto-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz",
+    "variant_id": "40480960184478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lb",
+    "variant_id": "40480960217246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2 lb",
+    "variant_id": "42497396113634"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "9c146a979efa140a",
+  "first_seen": "2026-10-26",
+  "handle": "jopo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/JoPoR01V01.png?v=1637943822",
+  "platform": "shopify",
+  "product_id": "6877410328734",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "JoPo Blend",
+  "url": "https://drumcoffeeroasting.com/products/jopo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz",
+    "variant_id": "40480994164894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lb",
+    "variant_id": "40480994197662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2 lb",
+    "variant_id": "42497410924770"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "44a76eedb3915fe3",
+  "first_seen": "2026-10-26",
+  "handle": "elvin-african-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/ElvinR01V01.png?v=1637943827",
+  "platform": "shopify",
+  "product_id": "6935146332318",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Elvin African Blend",
+  "url": "https://drumcoffeeroasting.com/products/elvin-african-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz",
+    "variant_id": "40703875776670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5 lb",
+    "variant_id": "40703875842206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb",
+    "variant_id": "42497408303330"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "9079f6d49b56cada",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-lake-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Rwanda-sholi_82a69e90-9d2d-4cb6-948a-fb0792f584f7.jpg?v=1722886123",
+  "platform": "shopify",
+  "product_id": "6935165501598",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Rwanda Sholi - Natural",
+  "url": "https://drumcoffeeroasting.com/products/rwanda-lake-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "40703925321886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5lb",
+    "variant_id": "40703925354654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb",
+    "variant_id": "44152793530594"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "bb46e446e612f3ec",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/DecafR02V01.png?v=1681877041",
+  "platform": "shopify",
+  "product_id": "6965786345630",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://drumcoffeeroasting.com/products/decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz",
+    "variant_id": "40804384637086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb",
+    "variant_id": "40804384669854"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb",
+    "variant_id": "42497412006114"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "57d5a8fcf100001a",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-el-pastoral-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Nicaragua-FincaElPastoral-OrgainicR02V01OPTION2_22af641d-28c1-40bf-8323-205c127a2f63.jpg?v=1722886119",
+  "platform": "shopify",
+  "product_id": "7469557842146",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Nicaragua Finca El Pastoral",
+  "url": "https://drumcoffeeroasting.com/products/nicaragua-el-pastoral-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42141532160226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5 lb",
+    "variant_id": "42141532192994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb",
+    "variant_id": "42497418133730"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "df07eca5eba34cd8",
+  "first_seen": "2026-10-26",
+  "handle": "santa-elena-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/CostaRica-SantaElena-HoneyWashedR02V01.png?v=1643126598",
+  "platform": "shopify",
+  "product_id": "7520107299042",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Santa Elena Honey Process",
+  "url": "https://drumcoffeeroasting.com/products/santa-elena-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42342253494498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5 lb",
+    "variant_id": "42342253527266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb",
+    "variant_id": "42497418821858"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "cd81f72135c73cfe",
+  "first_seen": "2026-10-26",
+  "handle": "santa-elena-washed-process",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/products/CostaRica-SantaElena-WashedOPTION2R02V01copy.png?v=1643126601",
+  "platform": "shopify",
+  "product_id": "7520125026530",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Santa Elena Washed Process",
+  "url": "https://drumcoffeeroasting.com/products/santa-elena-washed-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "42342272663778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5 lb",
+    "variant_id": "42342272696546"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb",
+    "variant_id": "42497424720098"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "25cb6e3d3860c792",
+  "first_seen": "2026-10-26",
+  "handle": "max-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Max_R02V01.png?v=1772609783",
+  "platform": "shopify",
+  "product_id": "7673182716130",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Max Blend",
+  "url": "https://drumcoffeeroasting.com/products/max-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz",
+    "variant_id": "42683457601762"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb",
+    "variant_id": "42683457634530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5 lb",
+    "variant_id": "42683457667298"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "80ec333735916130",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sur-de-bolivar",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Colombia-BolivarR02V01.png?v=1684876029",
+  "platform": "shopify",
+  "product_id": "7726239285474",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Colombia Sur de Bolivar",
+  "url": "https://drumcoffeeroasting.com/products/colombia-sur-de-bolivar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz",
+    "variant_id": "42820902486242"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb",
+    "variant_id": "42820902519010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb",
+    "variant_id": "42820902551778"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "6c51f8749163cea9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-dame-dabaye",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Ethiopia-Guji_DameDebaye2023R02V01copy.jpg?v=1733334858",
+  "platform": "shopify",
+  "product_id": "7866423378146",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Ethiopia Guji Dame Dabaye",
+  "url": "https://drumcoffeeroasting.com/products/ethiopia-guji-dame-dabaye",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "43348566540514"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb",
+    "variant_id": "43348566573282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 lb",
+    "variant_id": "43348566606050"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ranch-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8089186009314",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Wholesale"
+  ],
+  "title": "Ranch Blend",
+  "url": "https://drumcoffeeroasting.com/products/ranch-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz",
+    "variant_id": "44070428213474"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "per Lb",
+    "variant_id": "44070428246242"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roamin-espresso-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8089421414626",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Wholesale"
+  ],
+  "title": "Roamin Espresso Blend",
+  "url": "https://drumcoffeeroasting.com/products/roamin-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.5,
+    "title": "12oz",
+    "variant_id": "44071071744226"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Per Lb",
+    "variant_id": "44071071776994"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roamin-drip-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8089422889186",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Wholesale"
+  ],
+  "title": "Roamin Drip Blend",
+  "url": "https://drumcoffeeroasting.com/products/roamin-drip-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz",
+    "variant_id": "44071076462818"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Per Lb",
+    "variant_id": "44071076495586"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "045ffe8b5a1f2341",
+  "first_seen": "2026-10-26",
+  "handle": "peru-chirinos",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/PeruChirinos_fa25bd1c-e610-417d-b81d-eb29882f3a5d.jpg?v=1722886103",
+  "platform": "shopify",
+  "product_id": "8156071035106",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Peru Chirinos",
+  "url": "https://drumcoffeeroasting.com/products/peru-chirinos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Retailer",
+    "variant_id": "44362997039330"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 Pounds",
+    "variant_id": "44362997072098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 Pounds",
+    "variant_id": "44362997104866"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "344be0d5c277485c",
+  "first_seen": "2026-10-26",
+  "handle": "drum-airscape-canisters",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/IMG-7578.jpg?v=1697414616",
+  "platform": "shopify",
+  "product_id": "8164567187682",
+  "product_type": "Merchandise",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Merchandise"
+  ],
+  "title": "Drum Airscape Canisters",
+  "url": "https://drumcoffeeroasting.com/products/drum-airscape-canisters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "Small - 1 qt/.5 lbs",
+    "variant_id": "44394084368610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Medium - 2 qt/1 lbs",
+    "variant_id": "44394084401378"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "Large - 1 kilo/2 lbs",
+    "variant_id": "44394084434146"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "925c8488c93ae2e1",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-java-kayumas-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Indonesia_Java_Kaymus_5192b62f-1da9-49cd-8f5a-6ea6523e01d6.jpg?v=1722886098",
+  "platform": "shopify",
+  "product_id": "8574801248482",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Indonesia Java Kayumas",
+  "url": "https://drumcoffeeroasting.com/products/indonesia-java-kayumas-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "45506447442146"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "45506447474914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "45506447507682"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "9f052944294335b6",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-guracho-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Mexico_Dana_Montana_2_25.jpg?v=1740772296",
+  "platform": "shopify",
+  "product_id": "8842229055714",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Mexico Dana Montana Especial",
+  "url": "https://drumcoffeeroasting.com/products/ethiopia-guji-guracho-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "46399964283106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 lb",
+    "variant_id": "46399964315874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb",
+    "variant_id": "46399964348642"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "05d14f82b4c2d8c9",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-dana-montana-especial-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/GuatemalaElGuaya_b2_25.jpg?v=1740772310",
+  "platform": "shopify",
+  "product_id": "8842230694114",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Guatemala El Guaya'b",
+  "url": "https://drumcoffeeroasting.com/products/mexico-dana-montana-especial-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "46399970214114"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb",
+    "variant_id": "46399970246882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5 lb",
+    "variant_id": "46399970279650"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "77f6baafd3497ecb",
+  "first_seen": "2026-10-26",
+  "handle": "bebop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/BeBop_Blend.png?v=1764727451",
+  "platform": "shopify",
+  "product_id": "8926702633186",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "website"
+  ],
+  "title": "Bebop Blend",
+  "url": "https://drumcoffeeroasting.com/products/bebop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz",
+    "variant_id": "46700864340194"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 LB",
+    "variant_id": "46700864372962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 LB",
+    "variant_id": "46700864405730"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "2981c1c7fc24d284",
+  "first_seen": "2026-10-26",
+  "handle": "organic-viola-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Viola_1.jpg?v=1772609773",
+  "platform": "shopify",
+  "product_id": "9120070664418",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Viola Blend",
+  "url": "https://drumcoffeeroasting.com/products/organic-viola-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz",
+    "variant_id": "47509868576994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb",
+    "variant_id": "47509868609762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb",
+    "variant_id": "47509868642530"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "318787ddd6f125a7",
+  "first_seen": "2026-10-26",
+  "handle": "organic-viola-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0587/2271/3758/files/Art1.jpg?v=1772678624",
+  "platform": "shopify",
+  "product_id": "9121785905378",
+  "product_type": "Beans",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Organic",
+   "website"
+  ],
+  "title": "Organic Art Blend",
+  "url": "https://drumcoffeeroasting.com/products/organic-viola-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz",
+    "variant_id": "47512935989474"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb",
+    "variant_id": "47512936022242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5 lb",
+    "variant_id": "47512936055010"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rainbow-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9279749751010",
+  "product_type": "",
+  "roaster_slug": "drumcoffeemt",
+  "tags": [
+   "Bulk Coffee",
+   "Wholesale",
+   "beans"
+  ],
+  "title": "Rainbow Blend",
+  "url": "https://drumcoffeeroasting.com/products/rainbow-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.5,
+    "title": "Per LB",
+    "variant_id": "48090356023522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12 oz",
+    "variant_id": "48090356056290"
+   }
+  ],
+  "vendor": "Drum Coffee"
+ }
+]

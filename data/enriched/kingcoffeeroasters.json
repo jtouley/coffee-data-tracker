@@ -1,0 +1,77 @@
+{
+ "6a069ab8ea5c316731931902": {
+  "body_hash": "c8b0550980bfcf03",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "graham cracker",
+   "orange"
+  ],
+  "varietals": []
+ },
+ "6a069ab8ea5c316731931907": {
+  "body_hash": "05e46942ce56c70b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "graham cracker"
+  ],
+  "varietals": []
+ },
+ "6a069ab8ea5c31673193190b": {
+  "body_hash": "6e1aa07fc9de8468",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "graham cracker",
+   "orange"
+  ],
+  "varietals": []
+ },
+ "6ac4650dec1dfb0e49f0d703": {
+  "body_hash": "f1cd3d42936f755f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "almond",
+   "vanilla"
+  ],
+  "varietals": []
+ }
+}

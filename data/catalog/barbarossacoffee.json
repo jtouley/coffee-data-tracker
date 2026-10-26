@@ -1,0 +1,1379 @@
+[
+ {
+  "body_hash": "ed2938f10114e1d1",
+  "first_seen": "2026-10-26",
+  "handle": "organic-panama-boquete-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/organic-panama-boquete-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "3881",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "Boquete Coffee",
+   "COFFEE",
+   "Organic",
+   "Organic Panama Boquete Coffee",
+   "Organic Panama Coffee",
+   "Panama Boquete Coffee",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Organic Panama Boquete Coffee",
+  "url": "https://barbarossacoffee.com/product/organic-panama-boquete-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz.",
+    "variant_id": "3881:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 14.0,
+    "title": "2.2 pounds",
+    "variant_id": "3881:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz.",
+    "variant_id": "3881:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d712683dee1f81c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/ethiopian-yirgacheffe-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3991",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Ethiopian Yirgacheffe Coffee",
+  "url": "https://barbarossacoffee.com/product/ethiopian-yirgacheffe-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "3991:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "3991:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "3991:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ec9c388d05e2c4",
+  "first_seen": "2026-10-26",
+  "handle": "anchor-blend-espresso-blend",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/anchor-blend-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3992",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE"
+  ],
+  "title": "Anchor Blend Espresso Blend",
+  "url": "https://barbarossacoffee.com/product/anchor-blend-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.96,
+    "title": "12 oz.",
+    "variant_id": "3992:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 16.96,
+    "title": "2.2 pounds",
+    "variant_id": "3992:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.96,
+    "title": "8 oz.",
+    "variant_id": "3992:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23b861b8ac1ebb8d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-honey-processed-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/costa-rica-honey-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3993",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Costa Rican – Honey Processed – Coffee",
+  "url": "https://barbarossacoffee.com/product/costa-rican-honey-processed-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "3993:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "3993:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "3993:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9724941f477dea80",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-jasmin-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/guatemala-jazmin-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3994",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Guatemala Antigua Jasmin Coffee",
+  "url": "https://barbarossacoffee.com/product/guatemala-antigua-jasmin-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "3994:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "3994:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "3994:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e161754c582f4738",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona-blend",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/hawaiian-kona-blend-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3995",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE"
+  ],
+  "title": "Hawaiian Kona Blend",
+  "url": "https://barbarossacoffee.com/product/hawaiian-kona-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12 oz.",
+    "variant_id": "3995:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 22.99,
+    "title": "2.2 pounds",
+    "variant_id": "3995:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.99,
+    "title": "8 oz.",
+    "variant_id": "3995:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "19b6cff59239a694",
+  "first_seen": "2026-10-26",
+  "handle": "captains-breakfast-blend-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/captains-breakfast-blend-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3997",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE"
+  ],
+  "title": "Captain’s Breakfast Blend Coffee",
+  "url": "https://barbarossacoffee.com/product/captains-breakfast-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.96,
+    "title": "12 oz.",
+    "variant_id": "3997:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 16.96,
+    "title": "2.2 pounds",
+    "variant_id": "3997:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.96,
+    "title": "8 oz.",
+    "variant_id": "3997:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2747bfea51c56f3",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/colombia-supremo-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "3998",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Colombian Supremo Coffee",
+  "url": "https://barbarossacoffee.com/product/colombian-supremo-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "3998:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "3998:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "3998:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "271d222a83ac7369",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/burundi-kayanza-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4000",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Burundi Coffee",
+  "url": "https://barbarossacoffee.com/product/burundi-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz.",
+    "variant_id": "4000:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.0,
+    "title": "2.2 pounds",
+    "variant_id": "4000:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz.",
+    "variant_id": "4000:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a4ddbbfa5b6807f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/ethiopia-sidamo-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4002",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Ethiopian Sidamo Coffee",
+  "url": "https://barbarossacoffee.com/product/ethiopian-sidamo-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz.",
+    "variant_id": "4002:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 13.5,
+    "title": "2.2 pounds",
+    "variant_id": "4002:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8 oz.",
+    "variant_id": "4002:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3ae514303acc7d2",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-sumatra-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/indonesia-sumatra-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4003",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Indonesian Sumatra Coffee",
+  "url": "https://barbarossacoffee.com/product/indonesian-sumatra-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz.",
+    "variant_id": "4003:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 13.5,
+    "title": "2.2 pounds",
+    "variant_id": "4003:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8 oz.",
+    "variant_id": "4003:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3e6a2ce039bd854b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/yacht-club-cold-brew-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4004",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE"
+  ],
+  "title": "Yacht Club Cold Brew Coffee",
+  "url": "https://barbarossacoffee.com/product/cold-brew-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 oz.",
+    "variant_id": "4004:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 14.49,
+    "title": "2.2 pounds",
+    "variant_id": "4004:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.49,
+    "title": "8 oz.",
+    "variant_id": "4004:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "963cac3e395ff56b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limu-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/ethiopia-limu-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4013",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Ethiopia Limu Coffee",
+  "url": "https://barbarossacoffee.com/product/ethiopia-limu-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz.",
+    "variant_id": "4013:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.5,
+    "title": "2.2 pounds",
+    "variant_id": "4013:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8 oz.",
+    "variant_id": "4013:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd5ed5cf04d6f895",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-rwenzori-kisinga-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/uganda-rwenzori-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4014",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Uganda Rwenzori Kisinga Coffee",
+  "url": "https://barbarossacoffee.com/product/uganda-rwenzori-kisinga-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz.",
+    "variant_id": "4014:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 14.0,
+    "title": "2.2 pounds",
+    "variant_id": "4014:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz.",
+    "variant_id": "4014:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a858d1d41abef4e5",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-orange-bourbon-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/el-salvador-orange-bourbon-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4015",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "El Salvador Orange Bourbon Coffee",
+  "url": "https://barbarossacoffee.com/product/el-salvador-orange-bourbon-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz.",
+    "variant_id": "4015:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 15.0,
+    "title": "2.2 pounds",
+    "variant_id": "4015:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8 oz.",
+    "variant_id": "4015:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9724941f477dea80",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/10/guatemala-la-morena-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4039",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Guatemala La Morena",
+  "url": "https://barbarossacoffee.com/product/guatemala-la-morena/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz.",
+    "variant_id": "4039:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.5,
+    "title": "2.2 pounds",
+    "variant_id": "4039:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8 oz.",
+    "variant_id": "4039:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "639834231b941e1a",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2021/11/nicaragua-jinotega-coffee-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "4825",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS"
+  ],
+  "title": "Nicaragua Jinotega Coffee",
+  "url": "https://barbarossacoffee.com/product/nicaragua-jinotega-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "4825:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "4825:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "4825:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dr-congo-kivu-organic-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/01/2-DR-CONGO-KIVU-8-OZ.jpg",
+  "platform": "woocommerce",
+  "product_id": "5417",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "RARE COFFEE SERIES"
+  ],
+  "title": "Dr Congo Kivu Organic Coffee",
+  "url": "https://barbarossacoffee.com/product/dr-congo-kivu-organic-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.4,
+    "title": "12 oz.",
+    "variant_id": "5417:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.4,
+    "title": "2.2 pounds",
+    "variant_id": "5417:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.4,
+    "title": "8 oz.",
+    "variant_id": "5417:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-casa-verde-organic-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/01/3-COLOMBIA-TOLIMA-8oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "5422",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "RARE COFFEE SERIES"
+  ],
+  "title": "Colombia – Tolima Casa Verde Organic Coffee",
+  "url": "https://barbarossacoffee.com/product/colombia-tolima-casa-verde-organic-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.4,
+    "title": "12 oz.",
+    "variant_id": "5422:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.4,
+    "title": "2.2 pounds",
+    "variant_id": "5422:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.4,
+    "title": "8 oz.",
+    "variant_id": "5422:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ad4c744bfa6fe17",
+  "first_seen": "2026-10-26",
+  "handle": "barbarossa-coffee-brazil-natural-coffee-bean",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/05/3.jpg",
+  "platform": "woocommerce",
+  "product_id": "5795",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS",
+   "brazil",
+   "cocoa",
+   "natural",
+   "raisin"
+  ],
+  "title": "Brazil Natural Coffee",
+  "url": "https://barbarossacoffee.com/product/barbarossa-coffee-brazil-natural-coffee-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz.",
+    "variant_id": "5795:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 16.0,
+    "title": "2.2 pounds",
+    "variant_id": "5795:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz.",
+    "variant_id": "5795:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1cb1868d41116dab",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-bugisu-organic-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/05/23.jpg",
+  "platform": "woocommerce",
+  "product_id": "5920",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "Organic",
+   "RARE COFFEE SERIES",
+   "beans",
+   "bugisu",
+   "chocolate",
+   "coffee",
+   "honeydrew",
+   "melon",
+   "uganda"
+  ],
+  "title": "Uganda Bugisu Organic Coffee",
+  "url": "https://barbarossacoffee.com/product/uganda-bugisu-organic-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "5920:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 22.0,
+    "title": "2.2 pounds",
+    "variant_id": "5920:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8 oz.",
+    "variant_id": "5920:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20312a45b07882e8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/07/Guatemala-La-Morena-Sticker.jpg",
+  "platform": "woocommerce",
+  "product_id": "6056",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE",
+   "green coffee",
+   "green coffee beans",
+   "guatemala la morena",
+   "unroasted coffee beans"
+  ],
+  "title": "Guatemala La Morena Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/guatemala-la-morena-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1 pound",
+    "variant_id": "6056:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 11.99,
+    "title": "5 pounds",
+    "variant_id": "6056:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da0be1e02eec8c4d",
+  "first_seen": "2026-10-26",
+  "handle": "captains-breakfast-blend-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/07/greencoffee-sticker-1000-×-1000-px-3.jpg",
+  "platform": "woocommerce",
+  "product_id": "6072",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE",
+   "captains breakfast blend",
+   "green coffee",
+   "green coffee beans",
+   "unroasted coffee beans"
+  ],
+  "title": "Captain’s Breakfast Blend Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/captains-breakfast-blend-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1 pound",
+    "variant_id": "6072:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 11.99,
+    "title": "5 pounds",
+    "variant_id": "6072:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dr-congo-kivu-organic-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/07/Congo-Kivu-Organic-Sticker.jpg",
+  "platform": "woocommerce",
+  "product_id": "6080",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE"
+  ],
+  "title": "Dr Congo Kivu Organic Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/dr-congo-kivu-organic-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.9,
+    "title": "1 pound",
+    "variant_id": "6080:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 12.9,
+    "title": "5 pounds",
+    "variant_id": "6080:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ad4c744bfa6fe17",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/07/Brazil-natural-sticker.jpg",
+  "platform": "woocommerce",
+  "product_id": "6088",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE",
+   "brazil",
+   "cocoa",
+   "natural",
+   "raisin"
+  ],
+  "title": "Brazil Natural Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/brazil-natural-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "1 pound",
+    "variant_id": "6088:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 10.99,
+    "title": "5 pounds",
+    "variant_id": "6088:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4fe2b097df1ed985",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-rwenzori-kisinga-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/07/Uganda-Riwenzori-Kisinga-1po-.jpg",
+  "platform": "woocommerce",
+  "product_id": "6096",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE"
+  ],
+  "title": "Uganda Rwenzori Kisinga Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/uganda-rwenzori-kisinga-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1 pound",
+    "variant_id": "6096:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 11.99,
+    "title": "5 pounds",
+    "variant_id": "6096:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e5de4bc07e61a713",
+  "first_seen": "2026-10-26",
+  "handle": "barbarossa-coffee-special-christmas-blend-2025",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2022/11/Christmas-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "6339",
+  "product_type": "simple",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE"
+  ],
+  "title": "Barbarossa Coffee Special Christmas Blend 2025",
+  "url": "https://barbarossacoffee.com/product/barbarossa-coffee-special-christmas-blend-2025/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "12 oz.",
+    "variant_id": "6339:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "244faa64eab67e44",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-unroasted-green-coffee-beans",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2023/04/104.jpg",
+  "platform": "woocommerce",
+  "product_id": "6809",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "GREEN COFFEE",
+   "ethiopia",
+   "green coffee",
+   "green coffee beans",
+   "unroasted",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopian Yirgacheffe Unroasted Green Coffee Beans",
+  "url": "https://barbarossacoffee.com/product/ethiopian-yirgacheffe-unroasted-green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1 pound",
+    "variant_id": "6809:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz.",
+    "variant_id": "6809:1"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 11.99,
+    "title": "2.2 pounds",
+    "variant_id": "6809:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 11.99,
+    "title": "5 pounds",
+    "variant_id": "6809:3"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "8 oz.",
+    "variant_id": "6809:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e5de4bc07e61a713",
+  "first_seen": "2026-10-26",
+  "handle": "oasis-blend-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2023/09/1.png",
+  "platform": "woocommerce",
+  "product_id": "7009",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE",
+   "oasis blend"
+  ],
+  "title": "Oasis Blend Coffee",
+  "url": "https://barbarossacoffee.com/product/oasis-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.22,
+    "title": "12 oz.",
+    "variant_id": "7009:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 17.22,
+    "title": "2.2 pounds",
+    "variant_id": "7009:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.22,
+    "title": "8 oz.",
+    "variant_id": "7009:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5899a5bdb781d372",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2023/09/106.jpg",
+  "platform": "woocommerce",
+  "product_id": "7037",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "Organic",
+   "RARE COFFEE SERIES",
+   "honduras"
+  ],
+  "title": "Honduras Organic Coffee",
+  "url": "https://barbarossacoffee.com/product/honduras-organic-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.4,
+    "title": "12 oz.",
+    "variant_id": "7037:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 13.4,
+    "title": "2.2 pounds",
+    "variant_id": "7037:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.4,
+    "title": "8 oz.",
+    "variant_id": "7037:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "607fcbb52fed7f63",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2023/12/1.png",
+  "platform": "woocommerce",
+  "product_id": "7201",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "100 Kona",
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS",
+   "beans",
+   "coffee",
+   "rich",
+   "sweet"
+  ],
+  "title": "Hawaiian Kona Coffee",
+  "url": "https://barbarossacoffee.com/product/hawaiian-kona-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 46.9,
+    "title": "12 oz.",
+    "variant_id": "7201:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 46.9,
+    "title": "2.2 pounds",
+    "variant_id": "7201:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 46.9,
+    "title": "8 oz.",
+    "variant_id": "7201:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "314d0146803439f2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-gallard-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2024/01/Peru-Gallard-8oz.png",
+  "platform": "woocommerce",
+  "product_id": "7276",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "SPECIAL SINGLE ORIGIN BEANS",
+   "chocolate",
+   "hazelnut",
+   "lemongrass",
+   "peru gallard"
+  ],
+  "title": "Peru Gallard Coffee",
+  "url": "https://barbarossacoffee.com/product/peru-gallard-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.9,
+    "title": "12 oz.",
+    "variant_id": "7276:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 21.9,
+    "title": "2.2 pounds",
+    "variant_id": "7276:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 21.9,
+    "title": "8 oz.",
+    "variant_id": "7276:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c4f41e4ff2765b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-bourbon-decaf-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2024/01/Honduras-Bourbon-8oz.png",
+  "platform": "woocommerce",
+  "product_id": "7284",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "COFFEE",
+   "DECAF",
+   "bourbon",
+   "decaf",
+   "honduras"
+  ],
+  "title": "Honduras Bourbon Decaf Coffee",
+  "url": "https://barbarossacoffee.com/product/honduras-bourbon-decaf-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.9,
+    "title": "12 oz.",
+    "variant_id": "7284:0"
+   },
+   {
+    "available": false,
+    "grams": 998,
+    "price_usd": 22.9,
+    "title": "2.2 pounds",
+    "variant_id": "7284:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.9,
+    "title": "8 oz.",
+    "variant_id": "7284:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ac5451f5276849b",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-blend-coffee",
+  "image": "https://barbarossacoffee.com/wp-content/uploads/2024/07/Untitled-design-8.jpg",
+  "platform": "woocommerce",
+  "product_id": "7489",
+  "product_type": "variable",
+  "roaster_slug": "barbarossacoffee",
+  "tags": [
+   "BARBAROSSA BLENDS",
+   "COFFEE",
+   "campfire blend",
+   "earthy",
+   "woody"
+  ],
+  "title": "Campfire Blend Coffee",
+  "url": "https://barbarossacoffee.com/product/campfire-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.9,
+    "title": "12 oz.",
+    "variant_id": "7489:0"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 14.9,
+    "title": "2.2 pounds",
+    "variant_id": "7489:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.9,
+    "title": "8 oz.",
+    "variant_id": "7489:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

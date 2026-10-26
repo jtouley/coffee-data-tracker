@@ -1,0 +1,2830 @@
+[
+ {
+  "body_hash": "6bce268beb6eb46f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-romelia-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/ROMEILIASITE.png?v=1790621148",
+  "platform": "shopify",
+  "product_id": "10323697303688",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Costa Rica: Romelia SHB, Palmichal",
+  "url": "https://coffeebeancorral.com/products/costa-rica-romelia-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "50541841580168"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "f7527e89474445ba",
+  "first_seen": "2026-10-26",
+  "handle": "cbc-blend-big-black",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/0fb2ed6d-5422-4cff-842a-c0705a27d0de.webp?v=1790629054",
+  "platform": "shopify",
+  "product_id": "10323895484552",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "CBC Blend: Big Black",
+  "url": "https://coffeebeancorral.com/products/cbc-blend-big-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "Default Title",
+    "variant_id": "50542245937288"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "77fad5f707911d4a",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kaweri-robusta-mubende",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/UGANDAROBUSTA.png?v=1790711453",
+  "platform": "shopify",
+  "product_id": "15393975009416",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Uganda: Kaweri Robusta, Mubende",
+  "url": "https://coffeebeancorral.com/products/uganda-kaweri-robusta-mubende",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.5,
+    "title": "Default Title",
+    "variant_id": "67584661487752"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "71c625f5e75ec1fe",
+  "first_seen": "2026-10-26",
+  "handle": "m6-pro-700g-coffee-roaster-artisan-system-version-2-sealed",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/M6pro-01.jpg?v=1791815984",
+  "platform": "shopify",
+  "product_id": "15412536082568",
+  "product_type": "Coffee Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "Espresso Outlet LLC",
+   "Shopify Collective"
+  ],
+  "title": "M6 Pro 700g Coffee Roaster (Artisan System) - Version 2 Sealed",
+  "url": "https://coffeebeancorral.com/products/m6-pro-700g-coffee-roaster-artisan-system-version-2-sealed",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 2349.0,
+    "title": "Black",
+    "variant_id": "67657801203848"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 2349.0,
+    "title": "White",
+    "variant_id": "67657801236616"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 2799.0,
+    "title": "Rust",
+    "variant_id": "67657801269384"
+   }
+  ],
+  "vendor": "Espresso Outlet LLC"
+ },
+ {
+  "body_hash": "e3c1ea262f8d5ad3",
+  "first_seen": "2026-10-26",
+  "handle": "bali-organic-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_9858_0bc5d6de-195a-4406-a774-ba4f66b83790.jpg?v=1782686403",
+  "platform": "shopify",
+  "product_id": "8927612240008",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Bali: Organic Blue Moon, Kintamani Highlands",
+  "url": "https://coffeebeancorral.com/products/bali-organic-blue-moon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "Default Title",
+    "variant_id": "46123985240200"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e00f3cb1d310d89c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-bucaramanga-el-gato-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_9967.jpg?v=1782686406",
+  "platform": "shopify",
+  "product_id": "8927612272776",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Colombia: El Gato Supremo, Bucaramanga",
+  "url": "https://coffeebeancorral.com/products/colombia-bucaramanga-el-gato-supremo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "46123985338504"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "ece9b77627ac6ca1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/53-Grid_7b3fd819-4bbf-47b2-8e4e-36324fcfbfd9.jpg?v=1782686407",
+  "platform": "shopify",
+  "product_id": "8927612305544",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Colombia: Supremo EP, Huila",
+  "url": "https://coffeebeancorral.com/products/colombia-supremo-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.45,
+    "title": "Default Title",
+    "variant_id": "46123985404040"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "9ac1c6b737e0e9e5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-organic-ft-sierra-nevada",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/COLOSIERNEVA-detail.jpg?v=1782686408",
+  "platform": "shopify",
+  "product_id": "8927612371080",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Colombia: Organic Sierra Nevada FTO, Santa Marta",
+  "url": "https://coffeebeancorral.com/products/colombia-organic-ft-sierra-nevada",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.35,
+    "title": "Default Title",
+    "variant_id": "46123985436808"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "8cfd66829f09256f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-narino-reserva-del-patron",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/49-Product.jpg?v=1782686410",
+  "platform": "shopify",
+  "product_id": "8927612403848",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Colombia: Reserva Del Patron, Narino",
+  "url": "https://coffeebeancorral.com/products/colombia-supremo-narino-reserva-del-patron",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.25,
+    "title": "Default Title",
+    "variant_id": "46123985535112"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "09aca0ae6c75375e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-conquistador-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0379.jpg?v=1782686413",
+  "platform": "shopify",
+  "product_id": "8927612436616",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Costa Rica: El Conquistador, Tarrazu",
+  "url": "https://coffeebeancorral.com/products/costa-rica-el-conquistador-tarrazu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "Default Title",
+    "variant_id": "46123985600648"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "a0bb14da35418e9b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-laminita-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0389_648afcb3-6945-423d-bd73-3a1a4381e689.jpg?v=1782686412",
+  "platform": "shopify",
+  "product_id": "8927612534920",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Costa Rica: La Minita Estate, Tarrazu",
+  "url": "https://coffeebeancorral.com/products/costa-rica-laminita-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "46123985666184"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "44564113f4ae0629",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-organic-yirgacheffe-misty-valley-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8369.jpg?v=1782686417",
+  "platform": "shopify",
+  "product_id": "8927612665992",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Ethiopia: Misty Valley, Yirgacheffe",
+  "url": "https://coffeebeancorral.com/products/ethiopian-organic-yirgacheffe-misty-valley-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.25,
+    "title": "Default Title",
+    "variant_id": "46212240703624"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1fa37e7279e37e0a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-organic-limu-g2",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Ethiopia_Limu_Front.jpg?v=1782686418",
+  "platform": "shopify",
+  "product_id": "8927612698760",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Ethiopia: Organic Limu G2, Oromia",
+  "url": "https://coffeebeancorral.com/products/ethiopian-organic-limu-g2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.85,
+    "title": "Default Title",
+    "variant_id": "46123985830024"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "9ce510bd192999b8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-queen-city-harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/longberry_201_b3847ddf-f727-4ffc-8ea9-1e824e2a3741.png?v=1782686419",
+  "platform": "shopify",
+  "product_id": "8927612731528",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Ethiopia: Queen City, Harrar",
+  "url": "https://coffeebeancorral.com/products/ethiopia-queen-city-harrar",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.6,
+    "title": "Default Title",
+    "variant_id": "45909009498248"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "f4166eb4ba25aed8",
+  "first_seen": "2026-10-26",
+  "handle": "ferdelance-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0994.jpg?v=1782686420",
+  "platform": "shopify",
+  "product_id": "8927612797064",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Ferdelance",
+  "url": "https://coffeebeancorral.com/products/ferdelance-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "46123985961096"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "c93161523ac1307c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-asobagri-huehuetenango-shb-ft",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_9831.jpg?v=1782686424",
+  "platform": "shopify",
+  "product_id": "8927612993672",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Guatemala: Organic Asdecafe SHB, Huehuetenango",
+  "url": "https://coffeebeancorral.com/products/guatemala-organic-asobagri-huehuetenango-shb-ft",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.25,
+    "title": "Default Title",
+    "variant_id": "46123987304584"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "7079e16da14a7424",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-la-flor-del-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/22-Guatemala-La-Flor-del-Cafe-Antigua-GUATANT-2_b50582f7-05d3-44d3-b4ab-8b0e1e346f18.jpg?v=1782686424",
+  "platform": "shopify",
+  "product_id": "8927613059208",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Guatemala: La Flor Del Cafe, Antigua",
+  "url": "https://coffeebeancorral.com/products/guatemala-antigua-la-flor-del-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.95,
+    "title": "Default Title",
+    "variant_id": "46123987337352"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1e90717214a2b21c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0087_87f8c0c1-02bf-4892-b30e-47c7d65512e2.jpg?v=1782686426",
+  "platform": "shopify",
+  "product_id": "8927613091976",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Guatemala: HHT SHB, Huehuetenango",
+  "url": "https://coffeebeancorral.com/products/guatemala-huehuetenango-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "46123987402888"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d04d3889acb2e66b",
+  "first_seen": "2026-10-26",
+  "handle": "indian-mysore-extra-bold-nuggets",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0276.jpg?v=1782686430",
+  "platform": "shopify",
+  "product_id": "8927613288584",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "India: Mysore Nuggets, Chikmagalur District",
+  "url": "https://coffeebeancorral.com/products/indian-mysore-extra-bold-nuggets",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.85,
+    "title": "Default Title",
+    "variant_id": "45909019459720"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "fef87c6ca0d1d46a",
+  "first_seen": "2026-10-26",
+  "handle": "kope-kapuna-cbc-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1022.jpg?v=1782686433",
+  "platform": "shopify",
+  "product_id": "8927613452424",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Kope Kapuna",
+  "url": "https://coffeebeancorral.com/products/kope-kapuna-cbc-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "46123987566728"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "4fce9c612a008631",
+  "first_seen": "2026-10-26",
+  "handle": "onobeanos-latte-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1001_efd22759-475d-4db1-8162-d02b2eb727c6.jpg?v=1782686435",
+  "platform": "shopify",
+  "product_id": "8927613550728",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Onobeano's Latte",
+  "url": "https://coffeebeancorral.com/products/onobeanos-latte-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "46123987665032"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "2922848bef3d9808",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0310_5f520345-0860-4819-9b45-c6d476b76ea5.jpg?v=1782686437",
+  "platform": "shopify",
+  "product_id": "8927613583496",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Mexico: La Laja Honey, Tlaltetela, Veracruz",
+  "url": "https://coffeebeancorral.com/products/mexico-la-laja-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "46123987697800"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "f09b4d3bfa23f0d0",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-organic-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1111.jpg?v=1782686438",
+  "platform": "shopify",
+  "product_id": "8927613616264",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Mexico: Organic Mocabe HG, Chiapas",
+  "url": "https://coffeebeancorral.com/products/mexican-organic-chiapas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.85,
+    "title": "Default Title",
+    "variant_id": "46123987730568"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "a211ced64f1bfeb6",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-organic-oaxaca-ft",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/MEXORGOAX-detail.jpg?v=1782686439",
+  "platform": "shopify",
+  "product_id": "8927613681800",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Mexico: Organic Cepco Oaxaca, Oaxaca",
+  "url": "https://coffeebeancorral.com/products/mexican-organic-oaxaca-ft",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.85,
+    "title": "Default Title",
+    "variant_id": "46123987796104"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "ad9fcc84891e1c02",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-la-florida-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8299_20copy_4aa6aba0-488e-44a9-871d-f1a778f41c89.jpg?v=1782686440",
+  "platform": "shopify",
+  "product_id": "8927613714568",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Peru: Organic La Florida, Selva Central",
+  "url": "https://coffeebeancorral.com/products/peru-organic-la-florida-fto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.2,
+    "title": "Default Title",
+    "variant_id": "46123987894408"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "0be70b258a389425",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-to-perfection-labels-5-pack",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8927613812872",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "\"Roasted to Perfection\" labels - 5 pack",
+  "url": "https://coffeebeancorral.com/products/roasted-to-perfection-labels-5-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "45909029290120"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "755d88f6008b277d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-grade-1",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0347.jpg?v=1782686444",
+  "platform": "shopify",
+  "product_id": "8927613878408",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "LABORDAY",
+   "LABORDAY26",
+   "Overstock"
+  ],
+  "title": "Sumatra: Mandheling G1, Aceh",
+  "url": "https://coffeebeancorral.com/products/sumatra-mandheling-grade-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.0,
+    "title": "Default Title",
+    "variant_id": "46123988189320"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "38defc957489fb6b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic-mandehling-ft",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/SUMOMAND-detail.jpg?v=1782686445",
+  "platform": "shopify",
+  "product_id": "8927613943944",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Sumatra: Organic Mandheling, Aceh",
+  "url": "https://coffeebeancorral.com/products/sumatra-organic-mandehling-ft",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.6,
+    "title": "Default Title",
+    "variant_id": "46123988222088"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "688bd122e66ae725",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0265.jpg?v=1782686446",
+  "platform": "shopify",
+  "product_id": "8927613976712",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Tanzania Peaberry, Kilimanjaro",
+  "url": "https://coffeebeancorral.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.15,
+    "title": "Default Title",
+    "variant_id": "46123988287624"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1bfc56f22c25ed5d",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-organic-bugisu",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_9811_96c6347a-426b-4ba0-b873-c2bf7581e290.jpg?v=1782686448",
+  "platform": "shopify",
+  "product_id": "8927614075016",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Uganda: Organic Bugisu, Sipi Falls",
+  "url": "https://coffeebeancorral.com/products/uganda-organic-bugisu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.75,
+    "title": "Default Title",
+    "variant_id": "46123991892104"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d2e4fc2fe3cf83ae",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/urnex-cafiza_1452bbdf-8c28-4553-b330-8eeaa4fa39ab.jpg?v=1782686449",
+  "platform": "shopify",
+  "product_id": "8927614107784",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Urnex CAFIZA",
+  "url": "https://coffeebeancorral.com/products/urnex-cafiza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 181,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "45909036630152"
+   }
+  ],
+  "vendor": "Urnex"
+ },
+ {
+  "body_hash": "b81c6ecc6b43cdc9",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cleancaf",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/urnex-cleancaf_926f599e-77f3-432a-a8bb-b84f7a35360c.jpg?v=1782686450",
+  "platform": "shopify",
+  "product_id": "8927614173320",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Urnex CLEANCAF",
+  "url": "https://coffeebeancorral.com/products/urnex-cleancaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "45909036662920"
+   }
+  ],
+  "vendor": "Urnex"
+ },
+ {
+  "body_hash": "68cbe9714fcb6093",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-grindz",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/urnex-grindz_6dfd6eaa-bdaf-408e-b9b8-f22a417be8d2.jpg?v=1782686451",
+  "platform": "shopify",
+  "product_id": "8927614206088",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Urnex GRINDZ",
+  "url": "https://coffeebeancorral.com/products/urnex-grindz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "45909039054984"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "617a4d0f3e4d1b9c",
+  "first_seen": "2026-10-26",
+  "handle": "valved-coffee-bags-pack-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/D35947FF-2E96-44EC-A09B-2FDC0B45656C.jpg?v=1782686602",
+  "platform": "shopify",
+  "product_id": "8927614238856",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Valved Coffee Bags (pack of 10)",
+  "url": "https://coffeebeancorral.com/products/valved-coffee-bags-pack-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.0,
+    "title": "1 lb",
+    "variant_id": "45911520837768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 9.0,
+    "title": "1/2 lb",
+    "variant_id": "45911520870536"
+   }
+  ],
+  "vendor": "No Manufacturer"
+ },
+ {
+  "body_hash": "831004d8b0e3a66a",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquette-shb-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1281.jpg?v=1782686452",
+  "platform": "shopify",
+  "product_id": "8927614304392",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Panama: Finca La Santa SHB EP, Boquete",
+  "url": "https://coffeebeancorral.com/products/panama-boquette-shb-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "Default Title",
+    "variant_id": "46123992154248"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d6d5618da6d89a94",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-aa-arokara",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0331.jpg?v=1782686453",
+  "platform": "shopify",
+  "product_id": "8927614337160",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Papua New Guinea: Arokara AA, Eastern Highlands",
+  "url": "https://coffeebeancorral.com/products/papua-new-guinea-aa-arokara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.45,
+    "title": "Default Title",
+    "variant_id": "45909041512584"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "a4536bbb317b986e",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-a-mile-high",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1275.jpg?v=1782686456",
+  "platform": "shopify",
+  "product_id": "8927614435464",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Papua New Guinea: Mile High A, Eastern Highlands",
+  "url": "https://coffeebeancorral.com/products/papua-new-guinea-a-mile-high",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.3,
+    "title": "Default Title",
+    "variant_id": "46123992416392"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "80082101a488e445",
+  "first_seen": "2026-10-26",
+  "handle": "haitian-blue-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0224.jpg?v=1782686458",
+  "platform": "shopify",
+  "product_id": "8927614501000",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Haiti: Organic Haitian Blue, Norde",
+  "url": "https://coffeebeancorral.com/products/haitian-blue-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "46123995299976"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "6d8348ecc7affd72",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-18-rabbit-organic-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8288_25b2e028-5cfe-428b-9b5a-02120e5ba526.jpg?v=1782686461",
+  "platform": "shopify",
+  "product_id": "8927614599304",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Washed, Marcala",
+  "url": "https://coffeebeancorral.com/products/honduras-18-rabbit-organic-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.3,
+    "title": "Default Title",
+    "variant_id": "46212243095688"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d552c3e5e32e7ded",
+  "first_seen": "2026-10-26",
+  "handle": "highlands-cbc-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1064.jpg?v=1782686464",
+  "platform": "shopify",
+  "product_id": "8927614697608",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Verso l'Alto Blend",
+  "url": "https://coffeebeancorral.com/products/highlands-cbc-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "46124000870536"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "3f813ff1c06ef21f",
+  "first_seen": "2026-10-26",
+  "handle": "four-horsemen-cbc-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1015.jpg?v=1782686465",
+  "platform": "shopify",
+  "product_id": "8927614730376",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Four Horsemen",
+  "url": "https://coffeebeancorral.com/products/four-horsemen-cbc-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.3,
+    "title": "Default Title",
+    "variant_id": "46124003885192"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "59a4aca5f381392d",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-organic-ramirez-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_9764.jpg?v=1782686466",
+  "platform": "shopify",
+  "product_id": "8927614763144",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Red Honey, Jarabacoa",
+  "url": "https://coffeebeancorral.com/products/dominican-republic-organic-ramirez-honey-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.55,
+    "title": "Default Title",
+    "variant_id": "45909046591624"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1e5710df1f764fe4",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-gladiola",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0400_b64e0c71-50aa-4eeb-a688-dbbe5ea347de.jpg?v=1782686467",
+  "platform": "shopify",
+  "product_id": "8927614828680",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Costa Rica: La Gladiola, Tarrazu",
+  "url": "https://coffeebeancorral.com/products/costa-rica-la-gladiola",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 7.7,
+    "title": "Default Title",
+    "variant_id": "45909046657160"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "ed02354147803959",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8247.jpg?v=1782686468",
+  "platform": "shopify",
+  "product_id": "8927614861448",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Natural, Marcala",
+  "url": "https://coffeebeancorral.com/products/honduras-organic-18-rabbit-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.6,
+    "title": "Default Title",
+    "variant_id": "46212242342024"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "3d49820a9bfa90d8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-hht-royal-select-mwp-decaf-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1115.jpg?v=1782686470",
+  "platform": "shopify",
+  "product_id": "8927614959752",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Guatemala: Decaf HHT Royal Select, Huehuetenango",
+  "url": "https://coffeebeancorral.com/products/guatemala-organic-hht-royal-select-mwp-decaf-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "Default Title",
+    "variant_id": "46124004114568"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "740362dd4bd7b015",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-organic-ramirez-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0219.jpg?v=1782686471",
+  "platform": "shopify",
+  "product_id": "8927614992520",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Dominican Republic: Organic Ramirez Washed, Jarabacoa",
+  "url": "https://coffeebeancorral.com/products/dominican-republic-organic-ramirez-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "Default Title",
+    "variant_id": "46212243554440"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e366986e5babe3dd",
+  "first_seen": "2026-10-26",
+  "handle": "33-cups-of-coffee-cupping-journal",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/33CUP_b0923bec-76fa-48af-90ca-54e9d2f9f47b.jpg?v=1782686472",
+  "platform": "shopify",
+  "product_id": "8927615058056",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "33 Cups of Coffee Cupping Journal",
+  "url": "https://coffeebeancorral.com/products/33-cups-of-coffee-cupping-journal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "45909051539592"
+   }
+  ],
+  "vendor": "33 Books Co."
+ },
+ {
+  "body_hash": "a9932ef3f7513b27",
+  "first_seen": "2026-10-26",
+  "handle": "33-roasts-a-coffee-roasting-log",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/33ROASTS_d5a31833-46d9-4eba-b6f5-aaf689a23b1e.jpg?v=1782686605",
+  "platform": "shopify",
+  "product_id": "8927615090824",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "33 Roasts: A Coffee Roasting Log",
+  "url": "https://coffeebeancorral.com/products/33-roasts-a-coffee-roasting-log",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "1 book",
+    "variant_id": "45911521034376"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 35.0,
+    "title": "6 pack",
+    "variant_id": "45911521067144"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 60.0,
+    "title": "10 pack",
+    "variant_id": "45911521099912"
+   }
+  ],
+  "vendor": "33 Books Co."
+ },
+ {
+  "body_hash": "c713053fd731236b",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-sr540-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/fresh-roast-sr540.jpg?v=1782686473",
+  "platform": "shopify",
+  "product_id": "8927615189128",
+  "product_type": "Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "has-sample-packs"
+  ],
+  "title": "Fresh Roast SR540 Roaster",
+  "url": "https://coffeebeancorral.com/products/fresh-roast-sr540-roaster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 8165,
+    "price_usd": 219.0,
+    "title": "Default Title",
+    "variant_id": "45909053997192"
+   }
+  ],
+  "vendor": "Fresh Roast"
+ },
+ {
+  "body_hash": "993ffad48db34307",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-santa-margarita",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0342_dbd30049-7043-476b-a446-af639ecaf606.jpg?v=1782686475",
+  "platform": "shopify",
+  "product_id": "8927615221896",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Guatemala: Finca Santa Margarita, Acatenango",
+  "url": "https://coffeebeancorral.com/products/guatemala-finca-santa-margarita",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.9,
+    "title": "Default Title",
+    "variant_id": "46124009521288"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "3150171f3803b702",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-oberon-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/brazil-oberon-natural.jpg?v=1782686476",
+  "platform": "shopify",
+  "product_id": "8927615254664",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Brazil: Oberon, Cerrado",
+  "url": "https://coffeebeancorral.com/products/brazil-oberon-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.25,
+    "title": "Default Title",
+    "variant_id": "46124009554056"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "ed6347c676fcce39",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hht-finca-vallaure-shb",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0384_9a2bf9ca-8a51-4da4-8cde-b427d95db9c0.jpg?v=1782686477",
+  "platform": "shopify",
+  "product_id": "8927615320200",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Guatemala: Finca Vallure, Huehuetenango",
+  "url": "https://coffeebeancorral.com/products/guatemala-hht-finca-vallaure-shb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.65,
+    "title": "Default Title",
+    "variant_id": "45909056454792"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "8ef4703a712ba443",
+  "first_seen": "2026-10-26",
+  "handle": "haiti-high-elevation-blue-pine",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0368_b2917763-e1fb-4f26-8757-54577be16801.jpg?v=1782686478",
+  "platform": "shopify",
+  "product_id": "8927615352968",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Haiti: Blue Pine, Central Plateau",
+  "url": "https://coffeebeancorral.com/products/haiti-high-elevation-blue-pine",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.1,
+    "title": "Default Title",
+    "variant_id": "46124009980040"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1842964128e07c13",
+  "first_seen": "2026-10-26",
+  "handle": "haiti-high-elevation-savanne-zombie",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0357.jpg?v=1782686480",
+  "platform": "shopify",
+  "product_id": "8927615418504",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Haiti: Savanne Zombie, Central Plateau",
+  "url": "https://coffeebeancorral.com/products/haiti-high-elevation-savanne-zombie",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.35,
+    "title": "Default Title",
+    "variant_id": "46124015157384"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "dcbde42973a88341",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate-kayumas",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0281_a2e91f5f-dfee-4a5a-a699-ae5f46a57883.jpg?v=1782686483",
+  "platform": "shopify",
+  "product_id": "8927615549576",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Java: Blawan Estate, East Java",
+  "url": "https://coffeebeancorral.com/products/java-estate-kayumas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.55,
+    "title": "Default Title",
+    "variant_id": "46124015550600"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "8fbd19d802c0b8e4",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-roasting-chamber-540",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/540-chamber-600_300x300_d60724e4-b937-4184-b8c0-db11b1c257aa.jpg?v=1782686483",
+  "platform": "shopify",
+  "product_id": "8927615582344",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Fresh Roast Roasting Chamber 540",
+  "url": "https://coffeebeancorral.com/products/fresh-roast-roasting-chamber-540",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 34.05,
+    "title": "Default Title",
+    "variant_id": "45909061369992"
+   }
+  ],
+  "vendor": "Fresh Roast"
+ },
+ {
+  "body_hash": "8ba4f99da9f072ec",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-finca-la-esperanza-fto-rfa",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8301_39a25518-6dc2-48c4-ab2e-99c57f062b48.jpg?v=1782686485",
+  "platform": "shopify",
+  "product_id": "8927615647880",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Peru: Organic Finca La Esperanza G1, San Martin",
+  "url": "https://coffeebeancorral.com/products/peru-organic-finca-la-esperanza-fto-rfa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.35,
+    "title": "Default Title",
+    "variant_id": "46124015681672"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d9e6af9a126ff986",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-roasting-chamber-800",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/sr800-glass-full-700_97e333d5-96a9-46e9-bec3-c7c9d09ee3ca.jpg?v=1782686485",
+  "platform": "shopify",
+  "product_id": "8927615713416",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Fresh Roast Roasting Chamber 800",
+  "url": "https://coffeebeancorral.com/products/fresh-roast-roasting-chamber-800",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 38.45,
+    "title": "Default Title",
+    "variant_id": "45909063794824"
+   }
+  ],
+  "vendor": "Fresh Roast"
+ },
+ {
+  "body_hash": "2e32301526811b7d",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roast-chaff-collector-top",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/sr-top-cap_4bdee480-faeb-474d-95b0-d718145e0709.jpg?v=1782686486",
+  "platform": "shopify",
+  "product_id": "8927615746184",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Fresh Roast Chaff Collector Top",
+  "url": "https://coffeebeancorral.com/products/fresh-roast-chaff-collector-top",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 18.65,
+    "title": "Default Title",
+    "variant_id": "45909063827592"
+   }
+  ],
+  "vendor": "Fresh Roast"
+ },
+ {
+  "body_hash": "8b201a246e688987",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian-organic-caranavi-la-paz-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1087.jpg?v=1782686489",
+  "platform": "shopify",
+  "product_id": "8927615844488",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Bolivia: Organic Caranavi FTO, La Paz Department",
+  "url": "https://coffeebeancorral.com/products/bolivian-organic-caranavi-la-paz-fto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.85,
+    "title": "Default Title",
+    "variant_id": "46212244144264"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "71e6e76e3340791c",
+  "first_seen": "2026-10-26",
+  "handle": "morning-glory-organic-decaf-blend-swp",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/organic-decaf-morning-glory-blend_743456fc-0b3f-4bfe-ab04-037d1d542c23.jpg?v=1782686489",
+  "platform": "shopify",
+  "product_id": "8927615877256",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Multi Origin: Decaf Morning Glory, Multi Origin Blend",
+  "url": "https://coffeebeancorral.com/products/morning-glory-organic-decaf-blend-swp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.35,
+    "title": "Default Title",
+    "variant_id": "46124021022856"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "19d1120031a0c535",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-ea-process",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1140.jpg?v=1782686490",
+  "platform": "shopify",
+  "product_id": "8927615942792",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Colombia: Decaf EA, Cauca",
+  "url": "https://coffeebeancorral.com/products/colombia-decaf-ea-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "46124021088392"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "dfa00dee89ad8cfd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-kingdom-growers-shg-montecillos",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1204.jpg?v=1782686493",
+  "platform": "shopify",
+  "product_id": "8927616008328",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "LABORDAY26"
+  ],
+  "title": "Honduras: Kingdom Growers SHG, Montecillos",
+  "url": "https://coffeebeancorral.com/products/honduras-kingdom-growers-shg-montecillos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.55,
+    "title": "Default Title",
+    "variant_id": "46124026691720"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "a884e6a9fc22096f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-turquesa-hg-ep",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0321.jpg?v=1782686494",
+  "platform": "shopify",
+  "product_id": "8927616073864",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "LABORDAY26",
+   "Overstock"
+  ],
+  "title": "Mexico: Turquesa HG, Chiapas",
+  "url": "https://coffeebeancorral.com/products/mexico-chiapas-turquesa-hg-ep",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.25,
+    "title": "Default Title",
+    "variant_id": "46124026724488"
+   }
+  ],
+  "vendor": "InterAmerican Coffee"
+ },
+ {
+  "body_hash": "da91a2dbc7801e2e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-sidamo-durato-bombe-grade-1",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8325_2fa93a0d-e40e-42bd-8aae-53d756fae072.jpg?v=1782686498",
+  "platform": "shopify",
+  "product_id": "8927616172168",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Ethiopia: Durato Bombe, Sidamo",
+  "url": "https://coffeebeancorral.com/products/ethiopia-natural-sidamo-durato-bombe-grade-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.7,
+    "title": "Default Title",
+    "variant_id": "46124026953864"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "27bc87de38e79233",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-select-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0305.jpg?v=1782686500",
+  "platform": "shopify",
+  "product_id": "8927616336008",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Kenya: Select Plus AA, Kiambu County",
+  "url": "https://coffeebeancorral.com/products/kenya-aa-select-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "46124034326664"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "869dd476f26c8ccd",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-la-esperanza-rfa-shg",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0405_6d43a2bd-c9cf-4ab3-ba20-b6a4f335f1b3.jpg?v=1782686501",
+  "platform": "shopify",
+  "product_id": "8927616368776",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "El Salvador: Finca La Esperanza, Santa Ana",
+  "url": "https://coffeebeancorral.com/products/el-salvador-finca-la-esperanza-rfa-shg",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.3,
+    "title": "Default Title",
+    "variant_id": "46124034392200"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "f243e1ac64f27ec8",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-robusta",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0247_42aa9619-cf89-449d-a833-66c64cd0c670.jpg?v=1782686502",
+  "platform": "shopify",
+  "product_id": "8927616434312",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Vietnam: Robusta, Central Highlands",
+  "url": "https://coffeebeancorral.com/products/vietnam-robusta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.85,
+    "title": "Default Title",
+    "variant_id": "46124034621576"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "4cf80e1dd30f4a33",
+  "first_seen": "2026-10-26",
+  "handle": "panama-janson-farm-geisha-531",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Janson_20Geisha_20full.jpg?v=1782686507",
+  "platform": "shopify",
+  "product_id": "8927616499848",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Panama: Janson Farms Geisha, Volcan High Lands",
+  "url": "https://coffeebeancorral.com/products/panama-janson-farm-geisha-531",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 47.15,
+    "title": "Default Title",
+    "variant_id": "46124034654344"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "abf2dfd1c9a1ec7e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-yellow-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8224_6482cf59-bbda-4ca1-946b-9cf83233f110.jpg?v=1782686505",
+  "platform": "shopify",
+  "product_id": "8927616532616",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Yellow, Marcala",
+  "url": "https://coffeebeancorral.com/products/honduras-organic-18-rabbit-yellow-honey-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46212241490056"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "248dea56c0c92e24",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-18-rabbit-red-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/18_20Rabbit_20Red.jpg?v=1782686506",
+  "platform": "shopify",
+  "product_id": "8927616565384",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Honduras: Organic 18 Rabbit Red, Marcala",
+  "url": "https://coffeebeancorral.com/products/honduras-organic-18-rabbit-red-honey-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46212241129608"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1ef427d401181086",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-peaberry-plus-1516",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0293.jpg?v=1782686507",
+  "platform": "shopify",
+  "product_id": "8927616598152",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Kenya: Peaberry Plus 15/16, Kirinyaga County",
+  "url": "https://coffeebeancorral.com/products/kenya-peaberry-plus-1516",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.85,
+    "title": "Default Title",
+    "variant_id": "46124039471240"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e0009b4294866e06",
+  "first_seen": "2026-10-26",
+  "handle": "india-cherry-robusta",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1263.jpg?v=1782686513",
+  "platform": "shopify",
+  "product_id": "8927616729224",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "India: Cherry Robusta",
+  "url": "https://coffeebeancorral.com/products/india-cherry-robusta",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 5.2,
+    "title": "Default Title",
+    "variant_id": "46124039700616"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "483e6bc5eb8a44ec",
+  "first_seen": "2026-10-26",
+  "handle": "kona-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1246.jpg?v=1782686513",
+  "platform": "shopify",
+  "product_id": "8927616761992",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Hawaii: Kona Peaberry, Mauka Honaunau District",
+  "url": "https://coffeebeancorral.com/products/kona-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 46.15,
+    "title": "Default Title",
+    "variant_id": "45909078802568"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "677517e695afa891",
+  "first_seen": "2026-10-26",
+  "handle": "high-octane-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1058.jpg?v=1782686515",
+  "platform": "shopify",
+  "product_id": "8927616860296",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: High Octane Robusta Blend",
+  "url": "https://coffeebeancorral.com/products/high-octane-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.9,
+    "title": "Default Title",
+    "variant_id": "46124046123144"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "c651dc527eb8b25e",
+  "first_seen": "2026-10-26",
+  "handle": "5donate-to-own-a-tree-project",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/OwnATree_03b35869-a853-427b-b974-4374bfa567c2.jpg?v=1782686515",
+  "platform": "shopify",
+  "product_id": "8927616893064",
+  "product_type": "Coffee Charities",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "(5) Trees Donated to Own-a-Tree Project",
+  "url": "https://coffeebeancorral.com/products/5donate-to-own-a-tree-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.25,
+    "title": "Default Title",
+    "variant_id": "45909081260168"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "8edee105f6b4f6f3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-tiger-lintong",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Sumatra_20Tiger_5ad2473d-fcaa-4002-9454-227a29c84dc8.jpg?v=1782686517",
+  "platform": "shopify",
+  "product_id": "8927616958600",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Sumatra: Tiger, Lintong",
+  "url": "https://coffeebeancorral.com/products/sumatra-tiger-lintong",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "46124046254216"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e666ec5993f75f25",
+  "first_seen": "2026-10-26",
+  "handle": "dual-basket-coffee-bean-cooler",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Cool_203_dc1b5648-5c69-4bf6-adcc-bc365b3c4922.jpg?v=1782686519",
+  "platform": "shopify",
+  "product_id": "8927617024136",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Dual Basket Coffee Bean Cooler",
+  "url": "https://coffeebeancorral.com/products/dual-basket-coffee-bean-cooler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9525,
+    "price_usd": 69.0,
+    "title": "Default Title",
+    "variant_id": "45909083848840"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "320f707584abed96",
+  "first_seen": "2026-10-26",
+  "handle": "lcd-wattage-meter",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Watt_20Meter_20BLK-07.png?v=1782686522",
+  "platform": "shopify",
+  "product_id": "8927617122440",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "LCD Wattage Meter",
+  "url": "https://coffeebeancorral.com/products/lcd-wattage-meter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "45909086273672"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "63fb6a052939c1c0",
+  "first_seen": "2026-10-26",
+  "handle": "digital-timer",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Timer_20GRN-01.png?v=1782686523",
+  "platform": "shopify",
+  "product_id": "8927617155208",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Digital Timer",
+  "url": "https://coffeebeancorral.com/products/digital-timer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.0,
+    "title": "Default Title",
+    "variant_id": "45909086306440"
+   }
+  ],
+  "vendor": "No Manufacturer"
+ },
+ {
+  "body_hash": "d564677a512e5527",
+  "first_seen": "2026-10-26",
+  "handle": "timor-organic-heritage-reserve-fto-timor-coop",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Timor_20Heritage2.jpg?v=1782686524",
+  "platform": "shopify",
+  "product_id": "8927617220744",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Timor: Organic Heritage Reserve FTO, East Timor",
+  "url": "https://coffeebeancorral.com/products/timor-organic-heritage-reserve-fto-timor-coop",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 10.4,
+    "title": "Default Title",
+    "variant_id": "46124047696008"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "3aa5d85aabdb3a79",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-organic-yergacheffe-konga-g2",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Konga_20G2_20front1_118824b7-4835-47f5-9ac3-24eeb7ab6d9e.jpg?v=1782686526",
+  "platform": "shopify",
+  "product_id": "8927617286280",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Ethiopia: Organic Konga G2, Yirgacheffe",
+  "url": "https://coffeebeancorral.com/products/ethiopian-organic-yergacheffe-konga-g2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.25,
+    "title": "Default Title",
+    "variant_id": "45909088764040"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "3b855325f86e67f8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-las-segovias-coop-shg-san-juan-del-rio",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Las_20Segovias_20full_201_810f709c-d20e-4bf4-9aaa-dc31a084aefe.jpg?v=1782686533",
+  "platform": "shopify",
+  "product_id": "8927617581192",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Nicaragua: Las Segovias Coop SHG, San Juan del Rio Coco",
+  "url": "https://coffeebeancorral.com/products/nicaragua-las-segovias-coop-shg-san-juan-del-rio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.5,
+    "title": "Default Title",
+    "variant_id": "46124047958152"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "04be2e73bfb66570",
+  "first_seen": "2026-10-26",
+  "handle": "seasoning-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/seasoning-beans_eb4436cc-6d6d-4e39-bf0e-a9d560c169dd.png?v=1782686534",
+  "platform": "shopify",
+  "product_id": "8927617613960",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Seasoning Beans",
+  "url": "https://coffeebeancorral.com/products/seasoning-beans",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 6.25,
+    "title": "Default Title",
+    "variant_id": "45909096071304"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "85629956172d600c",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-to-perfection-labels-10-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_5819_83304640-d184-423e-aaac-56e3fae924db.jpg?v=1782686542",
+  "platform": "shopify",
+  "product_id": "8927618007176",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "\"Roasted to Perfection\" labels - 10 pack",
+  "url": "https://coffeebeancorral.com/products/roasted-to-perfection-labels-10-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "Default Title",
+    "variant_id": "45909101314184"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "b43f5c2fc9113057",
+  "first_seen": "2026-10-26",
+  "handle": "valenta-3-deluxe-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Untitled_20design_20_284_29_3f3afdd5-2ab2-41a7-9ae1-b306bdf45e8b.jpg?v=1782686545",
+  "platform": "shopify",
+  "product_id": "8927618105480",
+  "product_type": "Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Valenta 3 Deluxe Commercial Roaster, 21 Lbs./Hr.",
+  "url": "https://coffeebeancorral.com/products/valenta-3-deluxe-roaster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 13608,
+    "price_usd": 5900.0,
+    "title": "Default Title",
+    "variant_id": "45909103771784"
+   }
+  ],
+  "vendor": "Coffee Crafters"
+ },
+ {
+  "body_hash": "862d70995e9c116b",
+  "first_seen": "2026-10-26",
+  "handle": "valenta-8-deluxe-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Untitled_20design_20_285_29.jpg?v=1782686545",
+  "platform": "shopify",
+  "product_id": "8927618138248",
+  "product_type": "Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Valenta 8 Commercial Roaster, Up to 48 Lbs./Hr.",
+  "url": "https://coffeebeancorral.com/products/valenta-8-deluxe-roaster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 13608,
+    "price_usd": 8800.0,
+    "title": "Default Title",
+    "variant_id": "45909103804552"
+   }
+  ],
+  "vendor": "Coffee Crafters"
+ },
+ {
+  "body_hash": "576a77fe5293469d",
+  "first_seen": "2026-10-26",
+  "handle": "valenta-12-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Screenshot_202025-05-20_20142354_0cd65b8a-b821-4e96-a2bb-067fd464a9ad.png?v=1782686546",
+  "platform": "shopify",
+  "product_id": "8927618203784",
+  "product_type": "Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Valenta 12 Commercial Roaster, Up to 72 Lbs./Hr.",
+  "url": "https://coffeebeancorral.com/products/valenta-12-roaster",
+  "variants": [
+   {
+    "available": true,
+    "grams": 13608,
+    "price_usd": 12500.0,
+    "title": "Default Title",
+    "variant_id": "45909106196616"
+   }
+  ],
+  "vendor": "Coffee Crafters"
+ },
+ {
+  "body_hash": "2a50d9d1a5f63734",
+  "first_seen": "2026-10-26",
+  "handle": "valenta-18-roaster",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Screenshot_202025-05-20_20140444.png?v=1782686547",
+  "platform": "shopify",
+  "product_id": "8927618236552",
+  "product_type": "Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Valenta 18 Commercial Roaster, Up to 108 Lbs./Hr.",
+  "url": "https://coffeebeancorral.com/products/valenta-18-roaster",
+  "variants": [
+   {
+    "available": false,
+    "grams": 13608,
+    "price_usd": 17500.0,
+    "title": "Default Title",
+    "variant_id": "45909106229384"
+   }
+  ],
+  "vendor": "Coffee Crafters"
+ },
+ {
+  "body_hash": "76b625806278b0e3",
+  "first_seen": "2026-10-26",
+  "handle": "avalanche-1400-destoner",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Screenshot_202025-05-21_20123710_0e1d00df-8dc5-43ec-980d-8abca1b25c50.png?v=1782686548",
+  "platform": "shopify",
+  "product_id": "8927618269320",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Coffee Crafters Avalanche 1400 Destoner",
+  "url": "https://coffeebeancorral.com/products/avalanche-1400-destoner",
+  "variants": [
+   {
+    "available": true,
+    "grams": 13608,
+    "price_usd": 1495.0,
+    "title": "Default Title",
+    "variant_id": "45909106262152"
+   }
+  ],
+  "vendor": "Coffee Crafters"
+ },
+ {
+  "body_hash": "2cc79370d06a5ceb",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-son-la-shg-son-la",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Vietnam_Son_La_2_d216b60e-3ace-4d60-9931-86211c427d48.jpg?v=1782686552",
+  "platform": "shopify",
+  "product_id": "8927618465928",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "LABORDAY26",
+   "Overstock"
+  ],
+  "title": "Vietnam: Son La Select SHG, Son La",
+  "url": "https://coffeebeancorral.com/products/vietnam-son-la-shg-son-la",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.65,
+    "title": "Default Title",
+    "variant_id": "46124048285832"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "96124db807121525",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-organic-apolo",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8267_20copy.jpg?v=1782686564",
+  "platform": "shopify",
+  "product_id": "8927618957448",
+  "product_type": "Bulk Green - Organic",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Bolivia: Organic Apolo, La Paz Department",
+  "url": "https://coffeebeancorral.com/products/bolivia-organic-apolo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.15,
+    "title": "Default Title",
+    "variant_id": "46212319576200"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "b0221be81186865b",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-organic-decaf-bali-hai-indonesia-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_8211.jpg?v=1782686404",
+  "platform": "shopify",
+  "product_id": "8927710150792",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Indonesia: Organic Decaf Bali Hai, Indonesia Blend",
+  "url": "https://coffeebeancorral.com/products/indonesia-organic-decaf-bali-hai-indonesia-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.95,
+    "title": "Default Title",
+    "variant_id": "45911422271624"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "4efe982de8c18cff",
+  "first_seen": "2026-10-26",
+  "handle": "naturals-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Naturals_Sample_Pack.png?v=1782686567",
+  "platform": "shopify",
+  "product_id": "8957709222024",
+  "product_type": "Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Naturals Sample Pack",
+  "url": "https://coffeebeancorral.com/products/naturals-sample-pack",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "46139716534408"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "193295fc9eebb78a",
+  "first_seen": "2026-10-26",
+  "handle": "around-the-world-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Around_20the_20World_Sample_Pack_57352635-ac24-4a07-93cd-ec036da83afc.png?v=1782686572",
+  "platform": "shopify",
+  "product_id": "8957709320328",
+  "product_type": "Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Around The World Sample Pack",
+  "url": "https://coffeebeancorral.com/products/around-the-world-sample-pack",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 18.85,
+    "title": "Default Title",
+    "variant_id": "46139716632712"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "9bd14c3d921524d7",
+  "first_seen": "2026-10-26",
+  "handle": "western-organic-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Western_20Organic_Sample_Pack_8dfbaa4e-b27d-4da7-9ebd-13699a4c8716.png?v=1782686579",
+  "platform": "shopify",
+  "product_id": "8957709451400",
+  "product_type": "Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Western Organic Coffees Sample Pack",
+  "url": "https://coffeebeancorral.com/products/western-organic-coffees-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 22.75,
+    "title": "Default Title",
+    "variant_id": "46139716796552"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "1cc1f73337459a9c",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Indonesia_Sample_Pack_d52a6788-3871-431e-85c7-4304df04f1a8.png?v=1782686582",
+  "platform": "shopify",
+  "product_id": "8957709516936",
+  "product_type": "Coffee Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Indonesian Coffees Sample Pack",
+  "url": "https://coffeebeancorral.com/products/indonesian-coffees-sample-pack",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 21.85,
+    "title": "Default Title",
+    "variant_id": "46139716862088"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d5c67a3a882e3439",
+  "first_seen": "2026-10-26",
+  "handle": "central-american-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Central_20American_Sample_Pack.png?v=1782686592",
+  "platform": "shopify",
+  "product_id": "8957712334984",
+  "product_type": "Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Central American Coffees Sample Pack",
+  "url": "https://coffeebeancorral.com/products/central-american-coffees-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 22.25,
+    "title": "Default Title",
+    "variant_id": "46139732656264"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d8ae1e5d47ea84ea",
+  "first_seen": "2026-10-26",
+  "handle": "african-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/African_Sample_Pack_463e6561-4b91-4630-a1d7-882da7389476.png?v=1782686593",
+  "platform": "shopify",
+  "product_id": "8957712367752",
+  "product_type": "Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "African Coffees Sample Pack",
+  "url": "https://coffeebeancorral.com/products/african-coffees-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "46139732689032"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e3c2bf4ecb1fdd20",
+  "first_seen": "2026-10-26",
+  "handle": "m10-dual-system-1-2kg-coffee-roaster-kaleido-artisan-version-2-sealed-120v",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/M10dualsystem-01.jpg?v=1783546653",
+  "platform": "shopify",
+  "product_id": "8971792679048",
+  "product_type": "Coffee Roaster",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "Espresso Outlet LLC",
+   "Shopify Collective"
+  ],
+  "title": "M10 Dual System 1.2kg Coffee Roaster (Kaleido & Artisan) - Version 2 Sealed - 120V",
+  "url": "https://coffeebeancorral.com/products/m10-dual-system-1-2kg-coffee-roaster-kaleido-artisan-version-2-sealed-120v",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2879.0,
+    "title": "Black",
+    "variant_id": "46176113229960"
+   }
+  ],
+  "vendor": "Espresso Outlet LLC"
+ },
+ {
+  "body_hash": "578103f639c52205",
+  "first_seen": "2026-10-26",
+  "handle": "red-sea",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1007_jpg.webp?v=1783718999",
+  "platform": "shopify",
+  "product_id": "8975673884808",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "LABORDAY26"
+  ],
+  "title": "Red Sea",
+  "url": "https://coffeebeancorral.com/products/red-sea",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46204491006088"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "5eb0c1e552c9ede8",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-kalossi-tana-toraja",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_0050.jpg?v=1782686443",
+  "platform": "shopify",
+  "product_id": "8987722678408",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "Sulawesi: Kalossi, Tana Toraja",
+  "url": "https://coffeebeancorral.com/products/sulawesi-kalossi-tana-toraja",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.35,
+    "title": "Default Title",
+    "variant_id": "46222048624776"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "76b1e6aa604ed9f4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cattleya-excelso",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/53-Product.jpg?v=1782686407",
+  "platform": "shopify",
+  "product_id": "8992801554568",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS",
+   "Overstock"
+  ],
+  "title": "Colombia: Cattleya,Excelso",
+  "url": "https://coffeebeancorral.com/products/colombia-cattleya-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.8,
+    "title": "Default Title",
+    "variant_id": "46239940083848"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "170d71f29d87b875",
+  "first_seen": "2026-10-26",
+  "handle": "cbc-blend-citrus-sting",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/IMG_1015.jpg?v=1782686465",
+  "platform": "shopify",
+  "product_id": "8992809844872",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [
+   "ALL-GREEN_COFFEE_BEANS"
+  ],
+  "title": "CBC Blend: Citrus Sting",
+  "url": "https://coffeebeancorral.com/products/cbc-blend-citrus-sting",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.85,
+    "title": "Default Title",
+    "variant_id": "46239974097032"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "75cce439e1dde2d9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-paula-20-brix-finca-santa-elena",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/1.png?v=1788276797",
+  "platform": "shopify",
+  "product_id": "9110244884616",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Colombia Paula 20 Brix, Finca Santa Elena",
+  "url": "https://coffeebeancorral.com/products/colombia-paula-20-brix-finca-santa-elena",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "46426430570632"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "9a601db39556ac71",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-decaf-sol-y-cafe-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/perudecafsite.png?v=1787851435",
+  "platform": "shopify",
+  "product_id": "9117899161736",
+  "product_type": "Bulk Green Coffee",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Peru: Organic Decaf Sol Y Cafe, Cajamarca",
+  "url": "https://coffeebeancorral.com/products/peru-organic-decaf-sol-y-cafe-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.35,
+    "title": "Default Title",
+    "variant_id": "46456657838216"
+   }
+  ],
+  "vendor": "InterAmerican Coffee"
+ },
+ {
+  "body_hash": "2c749a33775d8bd3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-del-cafe-antigua-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Laflorpb.png?v=1789670915",
+  "platform": "shopify",
+  "product_id": "9123569172616",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Guatemala La Flor del Cafe Antigua Peaberry",
+  "url": "https://coffeebeancorral.com/products/guatemala-la-flor-del-cafe-antigua-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.1,
+    "title": "Default Title",
+    "variant_id": "46471328170120"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "52cc0676edbb59ff",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gedeb-worka-sakaro-g1-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/1_013066be-1bc9-4729-8752-71ec299a5f74.png?v=1788973256",
+  "platform": "shopify",
+  "product_id": "9135171567752",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Ethiopia: Gedeb Worka Sakaro G1 Anaerobic, Yirgacheffe",
+  "url": "https://coffeebeancorral.com/products/ethiopia-gedeb-worka-sakaro-g1-yirgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.6,
+    "title": "Default Title",
+    "variant_id": "46502921240712"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "2ad9af909ca2621e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-supernatural-guji-hambela-benti-nenka",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/ETHSUP_ca9196c7-cb32-4cbc-9f20-1b60d77c93f0.png?v=1788974058",
+  "platform": "shopify",
+  "product_id": "9135179792520",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Ethiopia Supernatural Guji, Hambela Benti Nenka",
+  "url": "https://coffeebeancorral.com/products/ethiopia-supernatural-guji-hambela-benti-nenka",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 11.25,
+    "title": "Default Title",
+    "variant_id": "46502958203016"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "e7d9b5a671528d43",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-aroian-bavyeyi-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/2_e4574239-6cbe-43c8-b20c-ce39da6541c2.png?v=1789405668",
+  "platform": "shopify",
+  "product_id": "9140724727944",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Burundi Aroian Bavyeyi, Ngozi Province Natural Micro Lot",
+  "url": "https://coffeebeancorral.com/products/burundi-aroian-bavyeyi-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 9.3,
+    "title": "Default Title",
+    "variant_id": "46519641637000"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "a9c762e0c568bd22",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-ramirez-natural-jarabacoa",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/Screenshot2026-09-14143626.png?v=1789414611",
+  "platform": "shopify",
+  "product_id": "9140778860680",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Dominican Republic: Ramirez Natural, Jarabacoa",
+  "url": "https://coffeebeancorral.com/products/dominican-republic-ramirez-natural-jarabacoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.05,
+    "title": "Default Title",
+    "variant_id": "46519801118856"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "d577dcabdf3b508d",
+  "first_seen": "2026-10-26",
+  "handle": "south-american-sample-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/South_20American_Sample_Pack_b7c782ca-d18b-4152-a898-962c9890ff26.png?v=1789504808",
+  "platform": "shopify",
+  "product_id": "9142761029768",
+  "product_type": "Coffee Sets",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "South American Sample Kit",
+  "url": "https://coffeebeancorral.com/products/south-american-sample-kit",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 33.45,
+    "title": "Default Title",
+    "variant_id": "46527664652424"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "baabb35e8cc09e63",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-17-18",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/CERRADO.png?v=1790612038",
+  "platform": "shopify",
+  "product_id": "9142778560648",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "Brazil, Cerrado 17/18",
+  "url": "https://coffeebeancorral.com/products/brazil-cerrado-17-18",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 6.95,
+    "title": "Default Title",
+    "variant_id": "46527695814792"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ },
+ {
+  "body_hash": "b77ae06de1ac6396",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-san-miguel",
+  "image": "https://cdn.shopify.com/s/files/1/0729/1043/8536/files/elsalman.png?v=1789661211",
+  "platform": "shopify",
+  "product_id": "9145096503432",
+  "product_type": "Bulk Green - Conventional",
+  "roaster_slug": "coffeebeancorral",
+  "tags": [],
+  "title": "El Salvador San Miguel, Ahuachapán",
+  "url": "https://coffeebeancorral.com/products/el-salvador-san-miguel",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "46539050942600"
+   }
+  ],
+  "vendor": "Coffee Bean Corral"
+ }
+]

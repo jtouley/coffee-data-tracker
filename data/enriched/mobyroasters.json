@@ -1,0 +1,78 @@
+{
+ "4c123776ec5b": {
+  "body_hash": "3279554457dc0146",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cocoa",
+   "orange marmalade",
+   "dark cherry"
+  ],
+  "varietals": []
+ },
+ "b8b51b06e19d": {
+  "body_hash": "af9d07c8fc885ecc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "orange zest",
+   "apricot"
+  ],
+  "varietals": []
+ },
+ "eeab2c7aaca8": {
+  "body_hash": "d9f32056bbc243f1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fig",
+   "cinnamon",
+   "molasses"
+  ],
+  "varietals": []
+ },
+ "ffb3265e4d39": {
+  "body_hash": "886b82fd9ee93f8b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apple",
+   "brown sugar",
+   "hazelnut",
+   "chocolate"
+  ],
+  "varietals": []
+ }
+}

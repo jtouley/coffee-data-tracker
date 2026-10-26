@@ -1,0 +1,53 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "halfwit-pocket-tee",
+  "image": "https://images.squarespace-cdn.com/content/v1/55dcee1be4b07137c6a83fc6/1689089285923-1F8X5ZL7T0FIQKY55BYT/IMG_8944.jpeg",
+  "platform": "squarespace",
+  "product_id": "63d430f931372c305493f939",
+  "product_type": "",
+  "roaster_slug": "halfwitcoffee",
+  "tags": [],
+  "title": "Halfwit Tri-blend Pocket T",
+  "url": "https://www.halfwitcoffee.com/hw-tshirts/halfwit-pocket-tee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "x-small",
+    "variant_id": "3fb78919-f95b-4ff1-9290-41931d2b559a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "x-large",
+    "variant_id": "71f32731-3e9f-4098-a272-1bb90bcf6b31"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Small",
+    "variant_id": "969540e0-3009-4f76-9385-3fe88004a295"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Large",
+    "variant_id": "a004b9a9-83ce-488c-b9f4-c3f610dcb638"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium",
+    "variant_id": "cc63dadc-536e-48a5-aebb-51c3673d224f"
+   }
+  ],
+  "vendor": ""
+ }
+]

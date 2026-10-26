@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "c9c8c4265f6ddc33",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "16b3bd45a670",
+  "product_type": "",
+  "roaster_slug": "lynxroasters",
+  "tags": [],
+  "title": "Espresso Blend, 13oz",
+  "url": "https://www.lynxroasters.com/product-page/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e2d738981c07f4ab",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": null,
+  "platform": "generic",
+  "product_id": "366615376135191",
+  "product_type": "",
+  "roaster_slug": "lynxroasters",
+  "tags": [],
+  "title": "Mexico Chiapas Organic 13oz",
+  "url": "https://www.lynxroasters.com/product-page/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf639e37ed79d67d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": null,
+  "platform": "generic",
+  "product_id": "693b3ac361ef",
+  "product_type": "",
+  "roaster_slug": "lynxroasters",
+  "tags": [],
+  "title": "Guatemala Organic Honey Process",
+  "url": "https://www.lynxroasters.com/product-page/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44245beab7f31e8b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8daadf11e6ca",
+  "product_type": "",
+  "roaster_slug": "lynxroasters",
+  "tags": [],
+  "title": "Papua New Guinea Organic Decaf, 13oz",
+  "url": "https://www.lynxroasters.com/product-page/peru-organic-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "26a058203affe901",
+  "first_seen": "2026-10-26",
+  "handle": "brasil-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "aebf457877e5",
+  "product_type": "",
+  "roaster_slug": "lynxroasters",
+  "tags": [],
+  "title": "Brasil Natural, 13oz",
+  "url": "https://www.lynxroasters.com/product-page/brasil-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

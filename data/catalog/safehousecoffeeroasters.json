@@ -1,0 +1,192 @@
+[
+ {
+  "body_hash": "ba3294c72ec59a68",
+  "first_seen": "2026-10-26",
+  "handle": "periodic-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/55f9c1bee4b076f8157c4a3e/3e9128b8-500c-45a7-b728-f9d4ffab14fc/PLENTY+2026+playtest+%28Copy%29+-+Coffee+Logo+Design+Template.png",
+  "platform": "squarespace",
+  "product_id": "55fb1a12e4b0369feb7c7fe4",
+  "product_type": "",
+  "roaster_slug": "safehousecoffeeroasters",
+  "tags": [],
+  "title": "PERIODIC ESPRESSO",
+  "url": "https://www.safehousecoffeeroasters.com/new-products/periodic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Wholesale Bag",
+    "variant_id": "0c85951e-443e-407c-b1b3-54edc4bceaf7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Bulk Bag",
+    "variant_id": "1f666e00-fd53-4002-b493-16c6adfe310b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Retail Bag",
+    "variant_id": "ab142289-eb8e-4d71-a786-e213bc431e5a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7bb30d8ca36d981b",
+  "first_seen": "2026-10-26",
+  "handle": "periodic-espresso-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/55f9c1bee4b076f8157c4a3e/3d1f9960-1422-49ab-883c-9074f38bf72a/DECAF+PERIODIC+ESPRESSO+label+ad+2025+%28Copy%29.png",
+  "platform": "squarespace",
+  "product_id": "55fb1bbbe4b04f9cd303083f",
+  "product_type": "",
+  "roaster_slug": "safehousecoffeeroasters",
+  "tags": [],
+  "title": "PERIODIC Espresso | Decaf",
+  "url": "https://www.safehousecoffeeroasters.com/new-products/periodic-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Wholesale Bag Wholebean",
+    "variant_id": "6d15b5ac-8e13-4f8c-9f8e-314970e6d2a3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Bulk Bag Wholebean",
+    "variant_id": "bf3a6bf7-a150-4415-815b-95f90a689262"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Retail Bag Wholebean",
+    "variant_id": "fb16e986-3b77-4ac7-bf6d-ec3266e43491"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ad6cdf65eb842e7",
+  "first_seen": "2026-10-26",
+  "handle": "colombiadecaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/55f9c1bee4b076f8157c4a3e/d31cd8c3-343f-40ed-acf4-85c70a695b59/Colombia+Cauca+Valley+DECAF+label+Ad+2025.png",
+  "platform": "squarespace",
+  "product_id": "5bea26cf21c67c28ef3de588",
+  "product_type": "",
+  "roaster_slug": "safehousecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Valle del Cauca Sugarcane Decaf",
+  "url": "https://www.safehousecoffeeroasters.com/new-products/colombiadecaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Wholebean Wholesale Bag",
+    "variant_id": "36691e71-a774-4980-9f3d-40ec596ba4ea"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Wholebean Retail Bag",
+    "variant_id": "53b82ea7-725c-4e5c-9db6-7f4600349d73"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Ground Bulk Bag",
+    "variant_id": "5907a0a3-b886-4536-852e-4790088b978b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Retail Bag Ground",
+    "variant_id": "82e43249-adcb-4d7b-a5f4-201318845342"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Wholebean Bulk Bag",
+    "variant_id": "9568eb77-1cbd-4b69-a0f3-71e250440b18"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Wholesale Bag Ground",
+    "variant_id": "b0ff327b-91f5-43a0-b6b3-106221e09164"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e4f9acb88fe3639",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-pitalito",
+  "image": "https://images.squarespace-cdn.com/content/v1/55f9c1bee4b076f8157c4a3e/b1a5245c-2163-42d8-a6aa-4f8a5b50a7c9/Colombia+Huila+El+Tiple+2026+playtest+-+Coffee+Logo+Design+Template+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "65cbeae929e08741c97150db",
+  "product_type": "",
+  "roaster_slug": "safehousecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Huila El Tiple Pitalito Supremo",
+  "url": "https://www.safehousecoffeeroasters.com/new-products/colombia-huila-pitalito",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground Retail Bag",
+    "variant_id": "8007b97f-42f5-4afa-999a-3ee51d60663e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Wholebean Retail Bag",
+    "variant_id": "8aec2d60-4766-4f96-88d6-a0a7e6a9e724"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Ground Wholesale Bag",
+    "variant_id": "bfe6ac29-bb0d-4c97-9571-c515c53d6882"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Ground Bulk Bag",
+    "variant_id": "c17eb5f3-f8cb-438c-a7e2-68265165099c"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Wholesale Bag Wholebean",
+    "variant_id": "e061fbcf-c573-4c86-bbf0-b754fb46afd4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Wholebean Bulk Bag",
+    "variant_id": "eb60ebae-1924-45e5-991b-55f720cdad32"
+   }
+  ],
+  "vendor": ""
+ }
+]

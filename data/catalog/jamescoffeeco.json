@@ -1,0 +1,732 @@
+[
+ {
+  "body_hash": "c0e8f9e5bd0dc483",
+  "first_seen": "2026-10-26",
+  "handle": "peter-mckinnon-golden-hour-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/GoldenHourBlend.jpg?v=1772521215",
+  "platform": "shopify",
+  "product_id": "349422518308",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "0-20",
+   "Blend",
+   "Collab",
+   "Peter McKinnon",
+   "david's pick",
+   "espresso",
+   "mckinnon",
+   "subscription"
+  ],
+  "title": "Golden Hour Blend",
+  "url": "https://jamescoffeeco.com/products/peter-mckinnon-golden-hour-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40759309402155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip (Medium Grind)",
+    "variant_id": "40759309434923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40759309467691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso (Fine Grind)",
+    "variant_id": "40759309500459"
+   }
+  ],
+  "vendor": "James x McKinnon"
+ },
+ {
+  "body_hash": "46fc3b7ddc690ac2",
+  "first_seen": "2026-10-26",
+  "handle": "shop-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/SHOP-BLEND-2026.jpg?v=1791872818",
+  "platform": "shopify",
+  "product_id": "382476723",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Blend",
+   "coffee",
+   "david's pick"
+  ],
+  "title": "Shop Blend",
+  "url": "https://jamescoffeeco.com/products/shop-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40212644233259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip (Medium Grind)",
+    "variant_id": "40758726885419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40758726918187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Fine Grind)",
+    "variant_id": "40758726950955"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Drip (Medium Grind)",
+    "variant_id": "40758726983723"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40758727016491"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Espresso (Fine Grind)",
+    "variant_id": "40758727049259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "41127794016299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Drip (Medium Grind)",
+    "variant_id": "41127794049067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "41127794081835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs / Espresso (Fine Grind)",
+    "variant_id": "41127794114603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "896162995"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "695647067fc2d7a9",
+  "first_seen": "2026-10-26",
+  "handle": "night-owl",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/NIGHT-OWL.jpg?v=1791872329",
+  "platform": "shopify",
+  "product_id": "382479175",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Blend",
+   "coffee",
+   "david's pick",
+   "espresso",
+   "night",
+   "subscription"
+  ],
+  "title": "Night Owl Blend",
+  "url": "https://jamescoffeeco.com/products/night-owl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40212637941803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip (Medium Grind)",
+    "variant_id": "40759306321963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40759306354731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Fine Grind)",
+    "variant_id": "40759306387499"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Drip (Medium Grind)",
+    "variant_id": "40759306420267"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40759306453035"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Espresso (Fine Grind)",
+    "variant_id": "40759306485803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "40813722042411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Drip (Medium Grind)",
+    "variant_id": "40813722075179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40813722107947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs / Espresso (Fine Grind)",
+    "variant_id": "40813722140715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "896169175"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "f51481382930f079",
+  "first_seen": "2026-10-26",
+  "handle": "white-owl-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/WHITE-OWL-2.jpg?v=1791873087",
+  "platform": "shopify",
+  "product_id": "382494859",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "0-20",
+   "Blend",
+   "coffee",
+   "david's pick",
+   "diego",
+   "espresso",
+   "gift box",
+   "james",
+   "subscription",
+   "white"
+  ],
+  "title": "White Owl Blend",
+  "url": "https://jamescoffeeco.com/products/white-owl-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip (Medium Grind)",
+    "variant_id": "40759307698219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40759307730987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Fine Grind)",
+    "variant_id": "40759307763755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "896206875"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "a9f0d131b9520daa",
+  "first_seen": "2026-10-26",
+  "handle": "white-owl-1kg",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/products/White-Owl---1kg-James-Coffee-Co.-1677992978_df33d26f-98cf-495f-abed-d8757c19bc2d.jpg?v=1678005366",
+  "platform": "shopify",
+  "product_id": "4873316401195",
+  "product_type": "Hidden",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "bodied",
+   "coffee",
+   "even",
+   "notes",
+   "white"
+  ],
+  "title": "White Owl - 1kg",
+  "url": "https://jamescoffeeco.com/products/white-owl-1kg",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1000,
+    "price_usd": 40.0,
+    "title": "1kg",
+    "variant_id": "33080085413931"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "0331f63975c8d715",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-el-canal-direct-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/EL-CANAL-HONDO.jpg?v=1791947731",
+  "platform": "shopify",
+  "product_id": "6928000811051",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Direct-Trade Honduras El Cañal",
+  "url": "https://jamescoffeeco.com/products/honduras-el-canal-direct-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "40321306984491"
+   },
+   {
+    "available": true,
+    "grams": 451,
+    "price_usd": 23.0,
+    "title": "Drip (Medium Grind)",
+    "variant_id": "40760454250539"
+   },
+   {
+    "available": true,
+    "grams": 451,
+    "price_usd": 23.0,
+    "title": "Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40760454283307"
+   },
+   {
+    "available": true,
+    "grams": 451,
+    "price_usd": 23.0,
+    "title": "Espresso (Fine Grind)",
+    "variant_id": "40760454316075"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/GUATEMALA.jpg?v=1791873928",
+  "platform": "shopify",
+  "product_id": "7037662167083",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Guatemala Huehuetenango Washed",
+  "url": "https://jamescoffeeco.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40610876653611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip (Medium Grind)",
+    "variant_id": "40760453201963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40760453234731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso (Fine Grind)",
+    "variant_id": "40760453267499"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "0edb4860d0a758d9",
+  "first_seen": "2026-10-26",
+  "handle": "duplicate-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/Espresso-event-calendar-app-45817864.jpg?v=1708747677",
+  "platform": "shopify",
+  "product_id": "7150777696299",
+  "product_type": "",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://jamescoffeeco.com/products/duplicate-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "Ticket",
+    "variant_id": "40898049900587"
+   }
+  ],
+  "vendor": "event-calendar-app"
+ },
+ {
+  "body_hash": "0edb4860d0a758d9",
+  "first_seen": "2026-10-26",
+  "handle": "duplicate-espresso-2",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/Espresso-event-calendar-app-45817924.jpg?v=1708747680",
+  "platform": "shopify",
+  "product_id": "7150914175019",
+  "product_type": "",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://jamescoffeeco.com/products/duplicate-espresso-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "Ticket",
+    "variant_id": "40898317680683"
+   }
+  ],
+  "vendor": "event-calendar-app"
+ },
+ {
+  "body_hash": "79c4464e49225231",
+  "first_seen": "2026-10-26",
+  "handle": "highpoint-100-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/LAST-LIGHT.jpg?v=1791873584",
+  "platform": "shopify",
+  "product_id": "7228796010539",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Blend",
+   "subscription"
+  ],
+  "title": "Last Light Decaf Blend",
+  "url": "https://jamescoffeeco.com/products/highpoint-100-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41104036397099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip (Medium Grind)",
+    "variant_id": "41104036429867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press (Coarse Grind0",
+    "variant_id": "41104036462635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso (Fine Grind)",
+    "variant_id": "41104036495403"
+   }
+  ],
+  "vendor": "James Coffee"
+ },
+ {
+  "body_hash": "7a80919d48f0719d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mokamba-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/MOKAMBA-2026.jpg?v=1791873892",
+  "platform": "shopify",
+  "product_id": "7263227674667",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Mokamba Natural",
+  "url": "https://jamescoffeeco.com/products/ethiopia-mokamba-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41150064066603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Drip (Medium Grind)",
+    "variant_id": "41150064099371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "41150064132139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.95,
+    "title": "12 oz / Espresso (Fine Grind)",
+    "variant_id": "41150064164907"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed-finca-palmichal",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/FINCA-COLOMBIA-2026.jpg?v=1791873305",
+  "platform": "shopify",
+  "product_id": "7263232131115",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "0-20",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Colombia Finca Palmichal Washed",
+  "url": "https://jamescoffeeco.com/products/colombia-washed-finca-palmichal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41150071963691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Drip (Medium Grind)",
+    "variant_id": "41150071996459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "41150072029227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso (Fine Grind)",
+    "variant_id": "41150072061995"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "810c2bbc60f664d3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-san-vicente-direct-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/BOURBON-HONDO-2026.jpg?v=1791872296",
+  "platform": "shopify",
+  "product_id": "7721275523115",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "Single Origin",
+   "new"
+  ],
+  "title": "Direct-Trade Honduras San Vicente",
+  "url": "https://jamescoffeeco.com/products/honduras-san-vicente-direct-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 366,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "42423638851627"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 23.0,
+    "title": "Drip (Medium Grind)",
+    "variant_id": "42423638884395"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.0,
+    "title": "Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "42423638917163"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.0,
+    "title": "Espresso (Fine Grind)",
+    "variant_id": "42423638949931"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ },
+ {
+  "body_hash": "e6b8e72a0ffcd962",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0651/6375/files/ROASTERS-CHOICE-2026.jpg?v=1791873980",
+  "platform": "shopify",
+  "product_id": "996287555",
+  "product_type": "Coffee",
+  "roaster_slug": "jamescoffeeco",
+  "tags": [
+   "0-20",
+   "Club",
+   "availability",
+   "choice",
+   "coffee",
+   "espresso",
+   "james",
+   "roaster",
+   "subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://jamescoffeeco.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "40759307010091"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 21.0,
+    "title": "Drip (Medium Grind)",
+    "variant_id": "40759307042859"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.0,
+    "title": "Cold Brew/French Press (Coarse Grind)",
+    "variant_id": "40759307075627"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.0,
+    "title": "Espresso (Fine Grind)",
+    "variant_id": "40759307108395"
+   }
+  ],
+  "vendor": "James Coffee Co."
+ }
+]

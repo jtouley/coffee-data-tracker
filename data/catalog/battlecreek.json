@@ -1,0 +1,364 @@
+[
+ {
+  "body_hash": "bbf1850e8c42ef1d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-viejo-caldas-decaf-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/decaf_straight_on.jpg?v=1790100487",
+  "platform": "shopify",
+  "product_id": "7125520449600",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [
+   "box"
+  ],
+  "title": "Brazil Decaf | Whole Bean Coffee",
+  "url": "https://battlecreek.coffee/products/colombia-viejo-caldas-decaf-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz Box",
+    "variant_id": "40593822941248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag",
+    "variant_id": "40593822974016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "41103244525632"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "6152a64d94cf59d0",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-pot-labels",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/pot_mockuo.png?v=1759338699",
+  "platform": "shopify",
+  "product_id": "7170262466624",
+  "product_type": "",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Coffee Pot Labels",
+  "url": "https://battlecreek.coffee/products/coffee-pot-labels",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "House",
+    "variant_id": "40760956682304"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Decaf",
+    "variant_id": "40760956715072"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Other (type in order notes)",
+    "variant_id": "40760956747840"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "a2388aa45f59ebd1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/box_web_mockupsstraight_on_box_30444ad2-90f6-4d7e-8431-2909ecb4c622.jpg?v=1767287807",
+  "platform": "shopify",
+  "product_id": "7184321544256",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [
+   "box"
+  ],
+  "title": "Sumatra | Whole Bean Coffee",
+  "url": "https://battlecreek.coffee/products/sumatra-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Box",
+    "variant_id": "40825994510400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Bag",
+    "variant_id": "40825994543168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "41103244460096"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "b176b85ecb624c8c",
+  "first_seen": "2026-10-26",
+  "handle": "starling-blend-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/Starlingstraightonbox.jpg?v=1777569084",
+  "platform": "shopify",
+  "product_id": "7225240944704",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [
+   "box"
+  ],
+  "title": "Starling Blend | Whole Bean Coffee",
+  "url": "https://battlecreek.coffee/products/starling-blend-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Box",
+    "variant_id": "40986177568832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb bag",
+    "variant_id": "40986177601600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Bag",
+    "variant_id": "41103244165184"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "539bd12b6c1e328f",
+  "first_seen": "2026-10-26",
+  "handle": "warbler",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/warbler-label.jpg?v=1791226260",
+  "platform": "shopify",
+  "product_id": "7290404569152",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Warbler",
+  "url": "https://battlecreek.coffee/products/warbler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Box",
+    "variant_id": "41370473332800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Bag",
+    "variant_id": "41370473365568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "41370473398336"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "8f4a2737900eb2b5",
+  "first_seen": "2026-10-26",
+  "handle": "vireo",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/vireo-label.jpg?v=1791228997",
+  "platform": "shopify",
+  "product_id": "7290669531200",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Vireo",
+  "url": "https://battlecreek.coffee/products/vireo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Box",
+    "variant_id": "41371170111552"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag",
+    "variant_id": "41371170144320"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag",
+    "variant_id": "41371170177088"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "514e92ffc35ced4c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-mr-mangeche-derso",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/Cafe_Imports_Ethiopia_Mr_Mengeche_Derso-2-2025-03-28-193705_a38fe070-4458-4551-807c-1a0558b5795e.jpg?v=1791227246",
+  "platform": "shopify",
+  "product_id": "7291128807488",
+  "product_type": "Coffee",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe - Mr. Mengeche Derso",
+  "url": "https://battlecreek.coffee/products/ethiopia-yirgacheffe-mr-mangeche-derso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Box",
+    "variant_id": "41372817326144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Bag",
+    "variant_id": "41372817358912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb Bag",
+    "variant_id": "41372817391680"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "089e6cc2b9bc42c6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/mastercol_ancestral_resized_1.webp?v=1790865422",
+  "platform": "shopify",
+  "product_id": "7291129004096",
+  "product_type": "",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Colombia Huila",
+  "url": "https://battlecreek.coffee/products/colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Box",
+    "variant_id": "41372817686592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb Bag",
+    "variant_id": "41372817719360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb Bag",
+    "variant_id": "41372817752128"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "4d31d2b2a214103b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/B97D26A6-EA53-463A-8D26-34138C81A90A.jpg?v=1790190732",
+  "platform": "shopify",
+  "product_id": "7291129626688",
+  "product_type": "",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Brazil Serra Negra",
+  "url": "https://battlecreek.coffee/products/brazil-serra-negra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz Box",
+    "variant_id": "41372821749824"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb Bag",
+    "variant_id": "41372821782592"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Bag",
+    "variant_id": "41372821815360"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ },
+ {
+  "body_hash": "862ed13d6b86c555",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-anaerobic-natural-lopez-family-farm",
+  "image": "https://cdn.shopify.com/s/files/1/0277/0704/8000/files/FincaT_2025_headshots-66_0003_Background.jpg?v=1790000208",
+  "platform": "shopify",
+  "product_id": "7291129921600",
+  "product_type": "",
+  "roaster_slug": "battlecreek",
+  "tags": [],
+  "title": "Honduras - Anaerobic Natural - Lopez Family Farm",
+  "url": "https://battlecreek.coffee/products/honduras-anaerobic-natural-lopez-family-farm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz Box",
+    "variant_id": "41372824830016"
+   }
+  ],
+  "vendor": "Battlecreek Coffee Roasters"
+ }
+]

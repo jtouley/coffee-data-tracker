@@ -1,0 +1,248 @@
+{
+ "6054": {
+  "body_hash": "13eeabd40137f919",
+  "elevation_masl_max": 1730,
+  "elevation_masl_min": 1730,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "guava",
+   "raspberry"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "6058": {
+  "body_hash": "49f44d65ea3a1915",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6214": {
+  "body_hash": "c0090f36735bc770",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1650,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bakers chocolate",
+   "berries",
+   "brown sugar",
+   "lime"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6217": {
+  "body_hash": "c1de116768b0ee44",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red grapes",
+   "sweet caramel",
+   "melon",
+   "lemon"
+  ],
+  "varietals": [
+   "Catimor"
+  ]
+ },
+ "6228": {
+  "body_hash": "6e73d0759e888da2",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "caramel",
+   "almond"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "6247": {
+  "body_hash": "f8c15ecc612f72b9",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2050,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jasmine",
+   "blackberry",
+   "apricot",
+   "chocolate"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6252": {
+  "body_hash": "6137cbd7488a112a",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toffee",
+   "chocolate",
+   "raspberry"
+  ],
+  "varietals": [
+   "Tabi"
+  ]
+ },
+ "6388": {
+  "body_hash": "0cd4bcc29be3b8a7",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet chocolate",
+   "caramel",
+   "burnt orange"
+  ],
+  "varietals": []
+ },
+ "6666": {
+  "body_hash": "f1f5bfc5cdf3ebaa",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cranberry jam",
+   "mulled spice",
+   "boozy",
+   "cacao"
+  ],
+  "varietals": []
+ },
+ "6902": {
+  "body_hash": "bd1d83654b88c0c9",
+  "elevation_masl_max": 1380,
+  "elevation_masl_min": 1380,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jammy red grape",
+   "caramel",
+   "red fruit juice",
+   "syrupy"
+  ],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "8037": {
+  "body_hash": "288568249a733a6a",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1650,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "toffee",
+   "dark chocolate",
+   "caremel"
+  ],
+  "varietals": []
+ },
+ "8887": {
+  "body_hash": "de8bfd9491814dda",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jasmine",
+   "black tea",
+   "cooked lime",
+   "berry"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

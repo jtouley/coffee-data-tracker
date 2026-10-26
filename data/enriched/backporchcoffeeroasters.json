@@ -1,0 +1,172 @@
+{
+ "534805b8e4b0d938823fbf0d": {
+  "body_hash": "a2286fdf42e71b64",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "peanut butter",
+   "orange citrus"
+  ],
+  "varietals": []
+ },
+ "534d6f95e4b0bb4b40770cb7": {
+  "body_hash": "2ffcb0a814d1f413",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "brown sugar",
+   "full body"
+  ],
+  "varietals": []
+ },
+ "55afd796e4b006aa02083f56": {
+  "body_hash": "062b129e83b2d20b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "toffee",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "5a7363cc419202457b287a29": {
+  "body_hash": "2a92cbe3c7c8aa92",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "cherry",
+   "chocolate cake"
+  ],
+  "varietals": []
+ },
+ "5e0247ea7645b07c061409f9": {
+  "body_hash": "a116a6288855dfa3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "citrus",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "669ee1339be4c149758978a0": {
+  "body_hash": "4b976e18d6a63bef",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "brown sugar",
+   "sweet orange citrus",
+   "vanilla",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "67ffeabb62084c40fcff6446": {
+  "body_hash": "e9b120fa66eeefa7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "69f3ea56c8a2ae6eea3fd8b1": {
+  "body_hash": "852f93e58de6f4c5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "blackberry",
+   "rhubarb",
+   "brown sugar",
+   "coconut"
+  ],
+  "varietals": []
+ },
+ "6a863c859b8b4c53cd5dcade": {
+  "body_hash": "cc4dd184626bc226",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "nougat",
+   "honey"
+  ],
+  "varietals": []
+ }
+}

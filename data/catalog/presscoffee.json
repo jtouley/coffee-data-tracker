@@ -1,0 +1,5811 @@
+[
+ {
+  "body_hash": "52a4b12eaddc3348",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-castillo-decaf-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-castillo-decaf_1067x.png?v=1694623142",
+  "platform": "generic",
+  "product_id": "06cb23603b29",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Castillo Decaf Coffee",
+  "url": "https://presscoffee.com/products/colombia-castillo-decaf-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1285280d37096db4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-diluvio-spiced-caturron-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-el-diluvio_1500x.png?v=1658181687",
+  "platform": "generic",
+  "product_id": "06ed8dba4a15",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia El Diluvio Spiced Caturron",
+  "url": "https://presscoffee.com/products/colombia-el-diluvio-spiced-caturron-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 136.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 136.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 136.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 136.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a0169c62c430aa45",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-las-marias-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-las-marias_1080x.png?v=1674836984",
+  "platform": "generic",
+  "product_id": "13c0ae18b064",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Las Marias Coffee",
+  "url": "https://presscoffee.com/products/colombia-las-marias-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3533ce65335508b0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-bella-vista-mayan-harvest",
+  "image": "https://presscoffee.com/cdn/shop/products/MexicoBellaVistaMayanHarvest_720x.png?v=1658180388",
+  "platform": "generic",
+  "product_id": "1d1f51abcc74",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Bella Vista Mayan Harvest Coffee",
+  "url": "https://presscoffee.com/products/mexico-bella-vista-mayan-harvest",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 94.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "636d82f4b06dffe4",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca",
+  "image": "https://presscoffee.com/cdn/shop/products/MexicoOaxaca_720x.png?v=1658179822",
+  "platform": "generic",
+  "product_id": "211b05e7f939",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Oaxaca Coffee",
+  "url": "https://presscoffee.com/products/mexico-oaxaca",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ae60c6e604b956d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-yellow-bourbon-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/brazil-yellow-bourbon_7a0df4c3-9a7f-4391-b9ec-0d1b3aff99c3_801x.png?v=1691184119",
+  "platform": "generic",
+  "product_id": "2122310ad6e8",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Brazil Yellow Bourbon Coffee",
+  "url": "https://presscoffee.com/products/brazil-yellow-bourbon-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e16677b55ef34d4f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-serrano-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/mexico-chiapas-serrano-1_1200x.png?v=1658181988",
+  "platform": "generic",
+  "product_id": "224c8c05d14c",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Serrano Coffee",
+  "url": "https://presscoffee.com/products/mexico-chiapas-serrano-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 124.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 124.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 124.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 124.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03dd835794d85bc0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-la-providencia-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/guatemala-finca-la-providencia-1_1500x.png?v=1658182646",
+  "platform": "generic",
+  "product_id": "24d290580e51",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala Finca La Providencia Palhu Coffee",
+  "url": "https://presscoffee.com/products/guatemala-finca-la-providencia-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aefe3020c39ebe74",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-leonardo-gutierrez-sanchez-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/Mexico-Leonardo_5c592db9-3ef1-4380-896a-d03aff7fb496_1080x.png?v=1669355947",
+  "platform": "generic",
+  "product_id": "24e103b0ab48",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Leonardo Gutierrez Sanchez Coffee",
+  "url": "https://presscoffee.com/products/mexico-leonardo-gutierrez-sanchez-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b93dda5099067685",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-chiquixji-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/guatemala-chiquixji-2_1500x.png?v=1665165030",
+  "platform": "generic",
+  "product_id": "37a3402f40eb",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala Chiquixji Coffee",
+  "url": "https://presscoffee.com/products/guatemala-chiquixji-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aeac81476d5d5f23",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-zamora-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/ecuador-zamora_fbf7f508-c674-473a-b44e-d429516cc6f3_1067x.png?v=1695835429",
+  "platform": "generic",
+  "product_id": "3902d0a83d7f",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Ecuador Zamora Coffee",
+  "url": "https://presscoffee.com/products/ecuador-zamora-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24b724d96f677fd3",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-mayan-harvest-womens-group-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/mexico-mayan-harvest_801x.png?v=1691184343",
+  "platform": "generic",
+  "product_id": "3dd612d35600",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Mayan Harvest Women's Group Coffee",
+  "url": "https://presscoffee.com/products/mexico-mayan-harvest-womens-group-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7a17706b6e93346",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-coffee-aponte",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-aponte-2_1500x.png?v=1658862290",
+  "platform": "generic",
+  "product_id": "410ddc3970b6",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Aponté's Guardians Coffee",
+  "url": "https://presscoffee.com/products/colombia-coffee-aponte",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5043688f79bc9d75",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-garita-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/guatemala-la-garita_1080x.png?v=1672759894",
+  "platform": "generic",
+  "product_id": "426e0113557e",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala La Garita Coffee",
+  "url": "https://presscoffee.com/products/guatemala-la-garita-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a4f4982cbb36dc6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-spirits-gesha-summer-2023-allocation",
+  "image": "https://presscoffee.com/cdn/shop/files/Allocation-Product-Image_800x.png?v=1689356001",
+  "platform": "generic",
+  "product_id": "443628f38b7e",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Spirits Gesha | Summer 2023 Allocation",
+  "url": "https://presscoffee.com/products/colombia-spirits-gesha-summer-2023-allocation",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd9c40245a514d64",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-finca-danilo-natural",
+  "image": "https://presscoffee.com/cdn/shop/products/CostaRicaFincaDanilo_720x.png?v=1658179849",
+  "platform": "generic",
+  "product_id": "4b54a425349f",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Costa Rica Finca Danilo Coffee",
+  "url": "https://presscoffee.com/products/costa-rica-finca-danilo-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32673e9a342d9edc",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-red-bourbon-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/brazil-red-bourbon_801x.png?v=1691184071",
+  "platform": "generic",
+  "product_id": "4d1d7224619c",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Brazil Red Bourbon Coffee",
+  "url": "https://presscoffee.com/products/brazil-red-bourbon-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69c4ea7ae30c2d10",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cusco-fabiana-duenas-llacta-washed",
+  "image": "https://presscoffee.com/cdn/shop/products/PeruCuscoFabianaDuenasLlacta_720x.png?v=1658180085",
+  "platform": "generic",
+  "product_id": "4d5ddd480f5e",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Cusco Fabiana Dueñas Llacta Coffee",
+  "url": "https://presscoffee.com/products/peru-cusco-fabiana-duenas-llacta-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7320d48d21ef9d9b",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-aak-coop-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/papa-new-guinea-aak-coop_1080x.png?v=1677602911",
+  "platform": "generic",
+  "product_id": "514392bb7adf",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Papua New Guinea AAK Coop Coffee",
+  "url": "https://presscoffee.com/products/papua-new-guinea-aak-coop-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a98e9fe185384f3",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/el-salvador-finca-el-gobiado_1080x.png?v=1680120488",
+  "platform": "generic",
+  "product_id": "5722aec671bc",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "El Salvador Finca El Gobiado Coffee",
+  "url": "https://presscoffee.com/products/el-salvador-finca-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a143747f078aa3dd",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-sipi-falls-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/uganda-sipi-falls_801x.png?v=1691184821",
+  "platform": "generic",
+  "product_id": "57c257bef837",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Uganda Sipi Falls Coffee",
+  "url": "https://presscoffee.com/products/uganda-sipi-falls-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbed1a6194990b50",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bavyeyi-ii",
+  "image": "https://presscoffee.com/cdn/shop/products/BurundiBavyeyi_afd5767c-06d9-4e3d-9dac-fdbc568e1833_720x.png?v=1658180615",
+  "platform": "generic",
+  "product_id": "5c2545a295ee",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Burundi Bavyeyi II Coffee",
+  "url": "https://presscoffee.com/products/burundi-bavyeyi-ii",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b67ebcdba75ac82d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aruzi-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-aruzi_9a4c71d5-5e5a-49d6-be2d-ecfd05bff2ca_1000x.png?v=1697062426",
+  "platform": "generic",
+  "product_id": "631e35557125",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Aruzi Coffee",
+  "url": "https://presscoffee.com/products/colombia-aruzi-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 161.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 161.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 161.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 161.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2fed807f946cb16d",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-loja-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/ecuador-loja_1500x.png?v=1662481941",
+  "platform": "generic",
+  "product_id": "688a985398cd",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Ecuador Loja Coffee",
+  "url": "https://presscoffee.com/products/ecuador-loja-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "983e85519cdf8c5d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cafe-agricola-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/Brazil-Cafe-Agricola_1080x.png?v=1673559672",
+  "platform": "generic",
+  "product_id": "6c6242dc009b",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Brazil Cafe Agricola Coffee",
+  "url": "https://presscoffee.com/products/brazil-cafe-agricola-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "973622fb71b41a03",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-serrano-altura",
+  "image": "https://presscoffee.com/cdn/shop/products/MexicoChiapasSerranoAltura_720x.png?v=1658180740",
+  "platform": "generic",
+  "product_id": "6d5b9b1f39f5",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Serrano Altura Coffee",
+  "url": "https://presscoffee.com/products/mexico-chiapas-serrano-altura",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 89.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 89.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 89.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 89.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95a2d485f59f052c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-java-koji-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-java-koji_1080x.png?v=1682703023",
+  "platform": "generic",
+  "product_id": "6d676254994f",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Java Koji Coffee",
+  "url": "https://presscoffee.com/products/colombia-java-koji-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d47386391d5c9c13",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ayarza-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/guatemala-ayarza_801x.png?v=1691184242",
+  "platform": "generic",
+  "product_id": "6d7ffa3a4d04",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala Ayarza Coffee",
+  "url": "https://presscoffee.com/products/guatemala-ayarza-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b755d9f399a3cea",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aji-bourbon-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-aji-bourbon-coffee_801x.png?v=1692036214",
+  "platform": "generic",
+  "product_id": "75d46661d4ba",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Aji Bourbon Coffee",
+  "url": "https://presscoffee.com/products/colombia-aji-bourbon-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f0ad35352526234",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-inteligencia-washed",
+  "image": "https://presscoffee.com/cdn/shop/products/GuatemalaLaInteligenciaWashed_720x.png?v=1658179985",
+  "platform": "generic",
+  "product_id": "77f38952fc27",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala La Inteligencia Coffee (Washed)",
+  "url": "https://presscoffee.com/products/guatemala-la-inteligencia-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 117.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 117.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 117.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 117.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7732d493d37d7e13",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-johan-vergara-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-johan-vergara_1080x.png?v=1669055610",
+  "platform": "generic",
+  "product_id": "7ac886b3b19b",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Johan Vergara Coffee",
+  "url": "https://presscoffee.com/products/colombia-johan-vergara-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 68.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42932e947b4cc722",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-matagalpa-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/Blends_1080x.png?v=1670430654",
+  "platform": "generic",
+  "product_id": "816cc4378ada",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Nicaragua Matagalpa Coffee",
+  "url": "https://presscoffee.com/products/nicaragua-matagalpa-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f62396fdaec355af",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-coffee-el-vergel-pacamara",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-el-vergel-pacamara_1080x.png?v=1669358327",
+  "platform": "generic",
+  "product_id": "88d502285b96",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia El Vergel Pacamara Coffee",
+  "url": "https://presscoffee.com/products/colombia-coffee-el-vergel-pacamara",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a3dec83dc0c0600",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-gaia-estate-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/tanzania-gaia-estate_1500x.png?v=1663781390",
+  "platform": "generic",
+  "product_id": "989d5afebc63",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Tanzania Gaia Estate Coffee",
+  "url": "https://presscoffee.com/products/tanzania-gaia-estate-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d37433a953db01e8",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-san-juan-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/Bolivia-San-Juan-1_1500x.png?v=1658182160",
+  "platform": "generic",
+  "product_id": "997937f072b6",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Bolivia San Juan Coffee",
+  "url": "https://presscoffee.com/products/bolivia-san-juan-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 106.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27d40e3d499293de",
+  "first_seen": "2026-10-26",
+  "handle": "blend-sample-box",
+  "image": "https://presscoffee.com/cdn/shop/products/Blend_Sample1_cb96c31a-228d-4afd-846e-c36e16f66058_1500x.jpg?v=1614015079",
+  "platform": "generic",
+  "product_id": "BLNDBOX",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Blend Sample Box",
+  "url": "https://presscoffee.com/products/blend-sample-box",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "BLNDBOX",
+    "variant_id": "BLNDBOX"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2fe18edb74aed231",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-banana-guava",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaBananaGuava_720x.png?v=1658180820",
+  "platform": "generic",
+  "product_id": "BanGuav12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Banana Guava",
+  "url": "https://presscoffee.com/products/colombia-banana-guava",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "BanGuav12ozDRP",
+    "variant_id": "BanGuav12ozDRP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "BanGuav12ozFP",
+    "variant_id": "BanGuav12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "BanGuav12ozSPRO",
+    "variant_id": "BanGuav12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "BanGuav12ozWB",
+    "variant_id": "BanGuav12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "BanGuav5lbDRP",
+    "variant_id": "BanGuav5lbDRP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "BanGuav5lbFP",
+    "variant_id": "BanGuav5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "BanGuav5lbSPRO",
+    "variant_id": "BanGuav5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "BanGuav5lbWB",
+    "variant_id": "BanGuav5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0efddd882ea9ec68",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-esperanza",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaLaEsperanza_720x.png?v=1658179581",
+  "platform": "generic",
+  "product_id": "CE12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia La Esperanza Coffee",
+  "url": "https://presscoffee.com/products/colombia-esperanza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CE12ozDR",
+    "variant_id": "CE12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CE12ozFP",
+    "variant_id": "CE12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CE12ozSPRO",
+    "variant_id": "CE12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CE12ozWB",
+    "variant_id": "CE12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "CE5lbDR",
+    "variant_id": "CE5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "CE5lbFP",
+    "variant_id": "CE5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "CE5lbSPRO",
+    "variant_id": "CE5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "CE5lbWB",
+    "variant_id": "CE5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93efb3061d600029",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-primavera",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombialaPrimavera1_1500x.png?v=1658181445",
+  "platform": "generic",
+  "product_id": "CLPL12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia la Primavera Coffee",
+  "url": "https://presscoffee.com/products/colombia-la-primavera",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CLPL12ozDR",
+    "variant_id": "CLPL12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CLPL12ozFP",
+    "variant_id": "CLPL12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CLPL12ozSPRO",
+    "variant_id": "CLPL12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "CLPL12ozWB",
+    "variant_id": "CLPL12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "CLPL5lbDR",
+    "variant_id": "CLPL5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "CLPL5lbFP",
+    "variant_id": "CLPL5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "CLPL5lbSPRO",
+    "variant_id": "CLPL5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "CLPL5lbWB",
+    "variant_id": "CLPL5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0f280e2c9b22940",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed",
+  "image": "https://presscoffee.com/cdn/shop/files/ethiopia-yirgacheffe_5b3130c0-4b84-4727-9286-9412662b9ce5_801x.png?v=1691184749",
+  "platform": "generic",
+  "product_id": "EG212ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Coffee",
+  "url": "https://presscoffee.com/products/ethiopia-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6010,
+    "price_usd": 21.0,
+    "title": "EG212ozDR",
+    "variant_id": "EG212ozDR"
+   },
+   {
+    "available": true,
+    "grams": 6010,
+    "price_usd": 21.0,
+    "title": "EG212ozFP",
+    "variant_id": "EG212ozFP"
+   },
+   {
+    "available": true,
+    "grams": 6010,
+    "price_usd": 21.0,
+    "title": "EG212ozSPRO",
+    "variant_id": "EG212ozSPRO"
+   },
+   {
+    "available": true,
+    "grams": 6010,
+    "price_usd": 21.0,
+    "title": "EG212ozWB",
+    "variant_id": "EG212ozWB"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 123.0,
+    "title": "EG25lbDR",
+    "variant_id": "EG25lbDR"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 123.0,
+    "title": "EG25lbFP",
+    "variant_id": "EG25lbFP"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 123.0,
+    "title": "EG25lbSPRO",
+    "variant_id": "EG25lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 123.0,
+    "title": "EG25lbWB",
+    "variant_id": "EG25lbWB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "EG2lbDR",
+    "variant_id": "EG2lbDR"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "EG2lbFP",
+    "variant_id": "EG2lbFP"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "EG2lbSPRO",
+    "variant_id": "EG2lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "EG2lbWB",
+    "variant_id": "EG2lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84bb5e8116a3cfb0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-coffee-el-amate-y-anexos",
+  "image": "https://presscoffee.com/cdn/shop/products/guatemela-one-of-a-kind-14---1_1500x.png?v=1658182055",
+  "platform": "generic",
+  "product_id": "GUA-WB-12oz",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala El Amate y Anexos",
+  "url": "https://presscoffee.com/products/guatemala-coffee-el-amate-y-anexos",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "GUA-DRP-12oz",
+    "variant_id": "GUA-DRP-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "GUA-DRP-5lb",
+    "variant_id": "GUA-DRP-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "GUA-FP-12oz",
+    "variant_id": "GUA-FP-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "GUA-FP-5lb",
+    "variant_id": "GUA-FP-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "GUA-SPRO-12oz",
+    "variant_id": "GUA-SPRO-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "GUA-SPRO-5lb",
+    "variant_id": "GUA-SPRO-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "GUA-WB-12oz",
+    "variant_id": "GUA-WB-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "GUA-WB-5lb",
+    "variant_id": "GUA-WB-5lb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dda07e3d852115ac",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-karla-portillo-limited",
+  "image": "https://presscoffee.com/cdn/shop/products/HondurasKarlaPortillo_720x.png?v=1658180812",
+  "platform": "generic",
+  "product_id": "HOND12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Honduras Karla Portillo Coffee",
+  "url": "https://presscoffee.com/products/honduras-karla-portillo-limited",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "HOND12ozDRP",
+    "variant_id": "HOND12ozDRP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "HOND12ozFP",
+    "variant_id": "HOND12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "HOND12ozSPRO",
+    "variant_id": "HOND12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "HOND12ozWB",
+    "variant_id": "HOND12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "HOND5lbDRP",
+    "variant_id": "HOND5lbDRP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "HOND5lbFP",
+    "variant_id": "HOND5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "HOND5lbSPRO",
+    "variant_id": "HOND5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "HOND5lbWB",
+    "variant_id": "HOND5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ac3b74991dd5014",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-la-paz",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaFincaLaPaz_720x.png?v=1658180562",
+  "platform": "generic",
+  "product_id": "LAPAZ12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Finca la Paz Coffee",
+  "url": "https://presscoffee.com/products/colombia-finca-la-paz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "LAPAZ12ozDR",
+    "variant_id": "LAPAZ12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "LAPAZ12ozFP",
+    "variant_id": "LAPAZ12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "LAPAZ12ozSPRO",
+    "variant_id": "LAPAZ12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "LAPAZ12ozWB",
+    "variant_id": "LAPAZ12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "LAPAZ5lbDR",
+    "variant_id": "LAPAZ5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "LAPAZ5lbFP",
+    "variant_id": "LAPAZ5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "LAPAZ5lbSPRO",
+    "variant_id": "LAPAZ5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "LAPAZ5lbWB",
+    "variant_id": "LAPAZ5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bab280e1fc690107",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-grapos-altura",
+  "image": "https://presscoffee.com/cdn/shop/products/MexicoGrapos_1080x.png?v=1658181175",
+  "platform": "generic",
+  "product_id": "MEXGA12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico GRAPOS Altura",
+  "url": "https://presscoffee.com/products/mexico-grapos-altura",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "MEXGA12ozDR",
+    "variant_id": "MEXGA12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "MEXGA12ozFP",
+    "variant_id": "MEXGA12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "MEXGA12ozSPRO",
+    "variant_id": "MEXGA12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "MEXGA12ozWB",
+    "variant_id": "MEXGA12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "MEXGA5lbDR",
+    "variant_id": "MEXGA5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "MEXGA5lbFP",
+    "variant_id": "MEXGA5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "MEXGA5lbSPRO",
+    "variant_id": "MEXGA5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "MEXGA5lbWB",
+    "variant_id": "MEXGA5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a52cdd47dc32d85",
+  "first_seen": "2026-10-26",
+  "handle": "origin-blend-sample-box",
+  "image": "https://presscoffee.com/cdn/shop/products/Blend-SO_Sample1_1500x.jpg?v=1658179872",
+  "platform": "generic",
+  "product_id": "ORGNBLNDBOX",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Origin + Blend Sample Box",
+  "url": "https://presscoffee.com/products/origin-blend-sample-box",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "ORGNBLNDBOX",
+    "variant_id": "ORGNBLNDBOX"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ccaa2025fae9ac0",
+  "first_seen": "2026-10-26",
+  "handle": "peru-eiser-carranza-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/peru-eiser-carranza_1080x.png?v=1673464426",
+  "platform": "generic",
+  "product_id": "PEC-WB-12oz",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Eiser Carranza Coffee",
+  "url": "https://presscoffee.com/products/peru-eiser-carranza-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PEC-DRP-12oz",
+    "variant_id": "PEC-DRP-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PEC-DRP-5lb",
+    "variant_id": "PEC-DRP-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PEC-ESP-12oz",
+    "variant_id": "PEC-ESP-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PEC-ESP-5lb",
+    "variant_id": "PEC-ESP-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PEC-FP-12oz",
+    "variant_id": "PEC-FP-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PEC-FP-5lb",
+    "variant_id": "PEC-FP-5lb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PEC-WB-12oz",
+    "variant_id": "PEC-WB-12oz"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PEC-WB-5lb",
+    "variant_id": "PEC-WB-5lb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "00d43e623c0d356b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cinco-corazones-gesha",
+  "image": "https://presscoffee.com/cdn/shop/products/PeruCincoCorazonesGesha_720x.png?v=1658180584",
+  "platform": "generic",
+  "product_id": "PRCIN12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Cinco Corazones Gesha Coffee",
+  "url": "https://presscoffee.com/products/peru-cinco-corazones-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PRCIN12ozDR",
+    "variant_id": "PRCIN12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PRCIN12ozFP",
+    "variant_id": "PRCIN12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PRCIN12ozSPRO",
+    "variant_id": "PRCIN12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "PRCIN12ozWB",
+    "variant_id": "PRCIN12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PRCIN5lbDR",
+    "variant_id": "PRCIN5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PRCIN5lbFP",
+    "variant_id": "PRCIN5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PRCIN5lbSPRO",
+    "variant_id": "PRCIN5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "PRCIN5lbWB",
+    "variant_id": "PRCIN5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c19d050261bd6ad8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-ramiro-suarez",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaRamiroSuarez_720x.png?v=1658180667",
+  "platform": "generic",
+  "product_id": "RAMSUAR12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Ramiro Suarez Coffee",
+  "url": "https://presscoffee.com/products/colombia-ramiro-suarez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RAMSUAR12ozDR",
+    "variant_id": "RAMSUAR12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RAMSUAR12ozFP",
+    "variant_id": "RAMSUAR12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RAMSUAR12ozSPRO",
+    "variant_id": "RAMSUAR12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RAMSUAR12ozWB",
+    "variant_id": "RAMSUAR12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RAMSUAR5lbDR",
+    "variant_id": "RAMSUAR5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RAMSUAR5lbFP",
+    "variant_id": "RAMSUAR5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RAMSUAR5lbSPRO",
+    "variant_id": "RAMSUAR5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RAMSUAR5lbWB",
+    "variant_id": "RAMSUAR5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bcc6185ea14a5881",
+  "first_seen": "2026-10-26",
+  "handle": "rsp-decaf",
+  "image": "https://presscoffee.com/cdn/shop/files/Mexico-Decaf_869x.png?v=1758901577",
+  "platform": "generic",
+  "product_id": "RSP12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Mexico Decaf Coffee",
+  "url": "https://presscoffee.com/products/rsp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RSP12ozDR",
+    "variant_id": "RSP12ozDR"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RSP12ozFP",
+    "variant_id": "RSP12ozFP"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RSP12ozSPRO",
+    "variant_id": "RSP12ozSPRO"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "RSP12ozWB",
+    "variant_id": "RSP12ozWB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "RSP2lbDR",
+    "variant_id": "RSP2lbDR"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "RSP2lbFP",
+    "variant_id": "RSP2lbFP"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "RSP2lbSPRO",
+    "variant_id": "RSP2lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "RSP2lbWB",
+    "variant_id": "RSP2lbWB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RSP5lbDR",
+    "variant_id": "RSP5lbDR"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RSP5lbFP",
+    "variant_id": "RSP5lbFP"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RSP5lbSPRO",
+    "variant_id": "RSP5lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "RSP5lbWB",
+    "variant_id": "RSP5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a67ba88f89da477",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-decaf-1_801x.png?v=1765835636",
+  "platform": "generic",
+  "product_id": "RSPETH12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Decaf Coffee",
+  "url": "https://presscoffee.com/products/colombia-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "RSPETH12ozDR",
+    "variant_id": "RSPETH12ozDR"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "RSPETH12ozFP",
+    "variant_id": "RSPETH12ozFP"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "RSPETH12ozSPRO",
+    "variant_id": "RSPETH12ozSPRO"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "RSPETH12ozWB",
+    "variant_id": "RSPETH12ozWB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "RSPETH2lbDR",
+    "variant_id": "RSPETH2lbDR"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "RSPETH2lbFP",
+    "variant_id": "RSPETH2lbFP"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "RSPETH2lbSPRO",
+    "variant_id": "RSPETH2lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "RSPETH2lbWB",
+    "variant_id": "RSPETH2lbWB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "RSPETH5lbDR",
+    "variant_id": "RSPETH5lbDR"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "RSPETH5lbFP",
+    "variant_id": "RSPETH5lbFP"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "RSPETH5lbSPRO",
+    "variant_id": "RSPETH5lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "RSPETH5lbWB",
+    "variant_id": "RSPETH5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60025de2e9000d9d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-sample-box",
+  "image": "https://presscoffee.com/cdn/shop/products/Espresso_Sample1_29c715ec-82ea-4b63-93fd-f941c5b79b4b_1500x.jpg?v=1614015068",
+  "platform": "generic",
+  "product_id": "SPROBOX",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Espresso Sample Box",
+  "url": "https://presscoffee.com/products/espresso-sample-box",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "SPROBOX",
+    "variant_id": "SPROBOX"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1a88b25cc865241",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://presscoffee.com/cdn/shop/files/sumatra-mandheling_09675843-322b-49bb-8c4a-a332b9f53052_801x.png?v=1691185073",
+  "platform": "generic",
+  "product_id": "SU12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Sumatra Takengon Mandheling Coffee",
+  "url": "https://presscoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "SU12ozDR",
+    "variant_id": "SU12ozDR"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "SU12ozFP",
+    "variant_id": "SU12ozFP"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "SU12ozSPRO",
+    "variant_id": "SU12ozSPRO"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "SU12ozWB",
+    "variant_id": "SU12ozWB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "SU2lbDR",
+    "variant_id": "SU2lbDR"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "SU2lbFP",
+    "variant_id": "SU2lbFP"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "SU2lbSPRO",
+    "variant_id": "SU2lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "SU2lbWB",
+    "variant_id": "SU2lbWB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "SU5lbDR",
+    "variant_id": "SU5lbDR"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "SU5lbFP",
+    "variant_id": "SU5lbFP"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "SU5lbSPRO",
+    "variant_id": "SU5lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "SU5lbWB",
+    "variant_id": "SU5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a75fd190a7a28afe",
+  "first_seen": "2026-10-26",
+  "handle": "union-espresso",
+  "image": "https://presscoffee.com/cdn/shop/files/Union-espresso_a8d3063d-217a-4efc-94a8-030a5bf0e8bc_801x.png?v=1691182067",
+  "platform": "generic",
+  "product_id": "UN12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Union Espresso",
+  "url": "https://presscoffee.com/products/union-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UN12ozDR",
+    "variant_id": "UN12ozDR"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UN12ozFP",
+    "variant_id": "UN12ozFP"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UN12ozSPRO",
+    "variant_id": "UN12ozSPRO"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "UN12ozWB",
+    "variant_id": "UN12ozWB"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "UN2lbDR",
+    "variant_id": "UN2lbDR"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "UN2lbFP",
+    "variant_id": "UN2lbFP"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "UN2lbSPRO",
+    "variant_id": "UN2lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "UN2lbWB",
+    "variant_id": "UN2lbWB"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "UN5lbDR",
+    "variant_id": "UN5lbDR"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "UN5lbFP",
+    "variant_id": "UN5lbFP"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "UN5lbSPRO",
+    "variant_id": "UN5lbSPRO"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "UN5lbWB",
+    "variant_id": "UN5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e5403686d910607",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-guatemala-la-inteligencia-washed",
+  "image": "https://presscoffee.com/cdn/shop/products/GuatemalaVistaAlBosque_720x.png?v=1658180395",
+  "platform": "generic",
+  "product_id": "VISTBOS12ozWB",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala Vista al Bosque Coffee",
+  "url": "https://presscoffee.com/products/copy-of-guatemala-la-inteligencia-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "VISTBOS12ozDR",
+    "variant_id": "VISTBOS12ozDR"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "VISTBOS12ozFP",
+    "variant_id": "VISTBOS12ozFP"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "VISTBOS12ozSPRO",
+    "variant_id": "VISTBOS12ozSPRO"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "VISTBOS12ozWB",
+    "variant_id": "VISTBOS12ozWB"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "VISTBOS5lbDR",
+    "variant_id": "VISTBOS5lbDR"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "VISTBOS5lbFP",
+    "variant_id": "VISTBOS5lbFP"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "VISTBOS5lbSPRO",
+    "variant_id": "VISTBOS5lbSPRO"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "VISTBOS5lbWB",
+    "variant_id": "VISTBOS5lbWB"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1961ca31d427517a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cusco-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/peru-cusco_1000x.png?v=1698429553",
+  "platform": "generic",
+  "product_id": "a1309347f38a",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Cusco Coffee",
+  "url": "https://presscoffee.com/products/peru-cusco-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f045e9940fcaf33e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-campo-hermoso-yellow-bourbon-limited-release",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaCampoHermosoYellowBourbon_720x.png?v=1658180416",
+  "platform": "generic",
+  "product_id": "a1e116087aac",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Campo Hermoso Yellow Bourbon Coffee",
+  "url": "https://presscoffee.com/products/colombia-campo-hermoso-yellow-bourbon-limited-release",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6cb6fee6185b1107",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ayarza-natural",
+  "image": "https://presscoffee.com/cdn/shop/products/GuatemalaAyarzaWineSeries_720x.png?v=1658179855",
+  "platform": "generic",
+  "product_id": "a73ee08e68ce",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Guatemala Ayarza Wine Series Coffee",
+  "url": "https://presscoffee.com/products/guatemala-ayarza-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e200afc44fd668c",
+  "first_seen": "2026-10-26",
+  "handle": "timor-leste-lebudu-kraic-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/timor-leste_1080x.png?v=1682703138",
+  "platform": "generic",
+  "product_id": "b047793a123b",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Timor-Leste Lebudu Kraic Coffee",
+  "url": "https://presscoffee.com/products/timor-leste-lebudu-kraic-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0408f9effeb64ea7",
+  "first_seen": "2026-10-26",
+  "handle": "peru-sapa-inka-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/Allocation-Product-Image_4a333c9c-25ae-4169-81f6-dd7d5eb5170b_800x.png?v=1689356322",
+  "platform": "generic",
+  "product_id": "bb0631539dc4",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Sapa Inka Coffee | Spring Allocation",
+  "url": "https://presscoffee.com/products/peru-sapa-inka-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e00206fac1006986",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-san-juan-coffee-single-origin",
+  "image": "https://presscoffee.com/cdn/shop/files/bolivia-san-juan_801x.png?v=1693255918",
+  "platform": "generic",
+  "product_id": "bed94a707562",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Bolivia San Juan Coffee",
+  "url": "https://presscoffee.com/products/bolivia-san-juan-coffee-single-origin",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 48.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 111.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11fcc9cff7e36fa0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-campo-hermoso-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/colombia-finca-campo-hermoso_1080x.png?v=1669358388",
+  "platform": "generic",
+  "product_id": "c1fd11ced9f2",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Finca Campo Hermoso Coffee",
+  "url": "https://presscoffee.com/products/colombia-finca-campo-hermoso-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 156.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa2cd7aa3d1dff2e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-chiroso-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/colombia-chiroso_801x.png?v=1691184306",
+  "platform": "generic",
+  "product_id": "cb56374cedad",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Chiroso Coffee",
+  "url": "https://presscoffee.com/products/colombia-chiroso-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 194.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9f9b53b8aea17c89",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/nicaragua-jinotega_dcee314f-fbcb-4a91-b6ca-4f058fc8bdf7_801x.png?v=1691184266",
+  "platform": "generic",
+  "product_id": "cd475eef93e1",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Nicaragua Jinotega Coffee",
+  "url": "https://presscoffee.com/products/nicaragua-jinotega-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-orange-striped-wush-wush-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/Allocation-box-transparent-bg_050006ff-a254-46e8-ad05-9d33c4a94feb_720x.png?v=1670447371",
+  "platform": "generic",
+  "product_id": "d521992dd0ae",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia Orange Striped Wush Wush Coffee",
+  "url": "https://presscoffee.com/products/colombia-orange-striped-wush-wush-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0d5e1306c21e297",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-nccl-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/zambia-NCCL_1080x.png?v=1683743397",
+  "platform": "generic",
+  "product_id": "da161f93daed",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Zambia NCCL Coffee",
+  "url": "https://presscoffee.com/products/zambia-nccl-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 53.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "304dd98c8ca59082",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-vergel-pacamara",
+  "image": "https://presscoffee.com/cdn/shop/products/ColombiaElVergelPacamaro_720x.png?v=1658180734",
+  "platform": "generic",
+  "product_id": "e1fec7e6e76e",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia El Vergel Pacamara Coffee",
+  "url": "https://presscoffee.com/products/colombia-el-vergel-pacamara",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 38.0,
+    "title": "",
+    "variant_id": "3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf3f63260a32c1ca",
+  "first_seen": "2026-10-26",
+  "handle": "panama-finca-teresa-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/panama-finca-teresa_89c68263-5708-4df2-b967-f4cd1b5feec0_801x.png?v=1691184027",
+  "platform": "generic",
+  "product_id": "e55918b96a0d",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Panama Finca Teresa Coffee",
+  "url": "https://presscoffee.com/products/panama-finca-teresa-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9518b813f63fb5be",
+  "first_seen": "2026-10-26",
+  "handle": "peru-el-bebedero",
+  "image": "https://presscoffee.com/cdn/shop/products/PeruElBebedero_720x.png?v=1658180401",
+  "platform": "generic",
+  "product_id": "e6ab833a0d1a",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru El Bebedero Coffee",
+  "url": "https://presscoffee.com/products/peru-el-bebedero",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "26c1867bc68c8969",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-san-adolfo-peach-fermented-coffee-2023-winter-allocation",
+  "image": "https://presscoffee.com/cdn/shop/files/Allocation-Product-Image_e58600dc-d8db-4630-9bbe-10c164925354_800x.png?v=1701296155",
+  "platform": "generic",
+  "product_id": "e7df1cad5685",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Colombia San Adolfo | Peach Fermented Coffee | 2023 Winter Allocation",
+  "url": "https://presscoffee.com/products/colombia-san-adolfo-peach-fermented-coffee-2023-winter-allocation",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "139b1ec03bc5d651",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-william-mora-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/costa-rica-william-mora-2023_1080x.png?v=1699904775",
+  "platform": "generic",
+  "product_id": "e90b6f3fd90f",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Costa Rica WIlliam Mora Coffee",
+  "url": "https://presscoffee.com/products/costa-rica-william-mora-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 72.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 167.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbfc50201d7af022",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-konyu-coffee",
+  "image": "https://presscoffee.com/cdn/shop/files/12_15Kenya_bag1_3040x.png?v=1702316949",
+  "platform": "generic",
+  "product_id": "ec7f25e2653d",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Kenya Konyu Coffee",
+  "url": "https://presscoffee.com/products/kenya-konyu-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 63.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c70d05f4b9fb1fe",
+  "first_seen": "2026-10-26",
+  "handle": "peru-incahuasi-coffee",
+  "image": "https://presscoffee.com/cdn/shop/products/peru-incahuasi_1500x.png?v=1660761761",
+  "platform": "generic",
+  "product_id": "f12423009bdb",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Incahuasi Coffee",
+  "url": "https://presscoffee.com/products/peru-incahuasi-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd5722d44ea3cc40",
+  "first_seen": "2026-10-26",
+  "handle": "peru-finca-tasta-anaerobic",
+  "image": "https://presscoffee.com/cdn/shop/products/peru-finca-tasta_1080x.png?v=1669358237",
+  "platform": "generic",
+  "product_id": "f7b9d8b86950",
+  "product_type": "",
+  "roaster_slug": "presscoffee",
+  "tags": [],
+  "title": "Peru Finca Tasta Coffee",
+  "url": "https://presscoffee.com/products/peru-finca-tasta-anaerobic",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "10"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "11"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.0,
+    "title": "",
+    "variant_id": "7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 133.0,
+    "title": "",
+    "variant_id": "8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "9"
+   }
+  ],
+  "vendor": ""
+ }
+]

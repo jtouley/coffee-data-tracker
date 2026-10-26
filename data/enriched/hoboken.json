@@ -1,0 +1,92 @@
+{
+ "10188476285219": {
+  "body_hash": "74747cfdce569e18",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fresh pastry",
+   "mandarin orange",
+   "chocolate"
+  ],
+  "varietals": [
+   "Catuai",
+   "Geisha"
+  ]
+ },
+ "4377439305812": {
+  "body_hash": "782b17cf0e25770f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "full-bodied"
+  ],
+  "varietals": []
+ },
+ "4377444745300": {
+  "body_hash": "8316aeedc9af3492",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "full body"
+  ],
+  "varietals": []
+ },
+ "4437875327060": {
+  "body_hash": "eda402f60082ac1c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "4545785823316": {
+  "body_hash": "1ef3f4340bb92015",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Villa Sarchi"
+  ]
+ }
+}

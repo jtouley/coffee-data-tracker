@@ -1,0 +1,150 @@
+{
+ "7048660779157": {
+  "body_hash": "c6a518fa8c5e1e9c",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Catuai",
+   "Maragogype",
+   "Typica",
+   "Yellow Bourbon"
+  ]
+ },
+ "7197327360149": {
+  "body_hash": "3546f0e3d83d339b",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "7197358588053": {
+  "body_hash": "43029eef5bb922c8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "graham cracker"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "7197365797013": {
+  "body_hash": "4b7799569350e1c7",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "7304021377173": {
+  "body_hash": "bd40fee161009e83",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7307583193237": {
+  "body_hash": "299d6b71f4e7acd2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8861492773013": {
+  "body_hash": "8474913b45ad32be",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "8868977508501": {
+  "body_hash": "c3c63e8294870258",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1200,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "black tea",
+   "toasted almond",
+   "pear"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ }
+}

@@ -1,0 +1,624 @@
+[
+ {
+  "body_hash": "074f56ff89141a3b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-60846f30e375cf2c.webp?v=1791124342",
+  "platform": "shopify",
+  "product_id": "8048642162766",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Honduras",
+   "Medium Roast",
+   "Organic",
+   "Whole Bean"
+  ],
+  "title": "Honduras Organic | Medium Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/honduras-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44579493183566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44579493216334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44579493249102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44579493281870"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "cb974f029af0080d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bisage",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-61dadc61d0d344e8.webp?v=1791124384",
+  "platform": "shopify",
+  "product_id": "8048642195534",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Medium Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Brazilian Bisage | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/brazil-bisage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Medium-dark / Espresso",
+    "variant_id": "44559082389582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Medium-dark / Cold brew",
+    "variant_id": "44577978712142"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Medium-dark / Drip",
+    "variant_id": "44577978744910"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Medium-dark / Whole bean",
+    "variant_id": "44578031370318"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "cc63c523905508cd",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bisage-gift",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-4d04b75e87ea8a48.png?v=1791483785",
+  "platform": "shopify",
+  "product_id": "8048642228302",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Gift",
+   "Medium Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Gift Coffee Prism – Brazilian Bisage | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/brazil-bisage-gift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 18.0,
+    "title": "Whole bean",
+    "variant_id": "44579256467534"
+   },
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "44579256500302"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "1560033a36747024",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-a0b6051815696661.webp?v=1791124354",
+  "platform": "shopify",
+  "product_id": "8048642326606",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Honduras",
+   "Medium Dark Roast",
+   "Organic",
+   "Whole Bean"
+  ],
+  "title": "Honduras Organic | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/honduras-organic-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44579577823310"
+   },
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44579577856078"
+   },
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44579577888846"
+   },
+   {
+    "available": true,
+    "grams": 453,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44579577921614"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "fb1d3002d1247678",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-51495dd36d2b79bb.webp?v=1791124368",
+  "platform": "shopify",
+  "product_id": "8048642359374",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Honduras",
+   "Organic",
+   "Whole Bean"
+  ],
+  "title": "Honduras Organic | Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/honduras-organic-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44579609346126"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44579609378894"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44579609411662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44579609444430"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "56917ca10d87a45c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bisage-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-df14e66daecfeae0.webp?v=1791124376",
+  "platform": "shopify",
+  "product_id": "8048642424910",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Brazilian Bisage | Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/brazil-bisage-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Whole bean",
+    "variant_id": "44579189850190"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Cold brew",
+    "variant_id": "44579189882958"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Drip",
+    "variant_id": "44579189915726"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Espresso",
+    "variant_id": "44579189948494"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "65be4b986e5045c5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bisage-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-8c5a6a81ebdec518.png?v=1791370599",
+  "platform": "shopify",
+  "product_id": "8048642490446",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Brazil",
+   "Bulk",
+   "Coffee",
+   "Ground",
+   "Medium Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Brazilian Bisage | Medium-Dark Roast | 5 lb",
+  "url": "https://tribecoffeecorporation.com/products/brazil-bisage-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 79.0,
+    "title": "Whole bean",
+    "variant_id": "44579219767374"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 79.0,
+    "title": "Cold brew",
+    "variant_id": "44579219800142"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 79.0,
+    "title": "Espresso",
+    "variant_id": "44579219832910"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 79.0,
+    "title": "Drip",
+    "variant_id": "44579219865678"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "625dd611c8dd4e63",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-bribri",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/image.png?v=1792412134",
+  "platform": "shopify",
+  "product_id": "8048642555982",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Costa Rica",
+   "Medium Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Costa Rica BriBri | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/costa-rica-bribri",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44578145992782"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44578146025550"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44578146058318"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44578146091086"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "7ae45ebd1d2fd467",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-kiche",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/guatemala-k-iche-coffee-bag-mockup.png?v=1792412590",
+  "platform": "shopify",
+  "product_id": "8048642588750",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Ground",
+   "Guatemala",
+   "Medium Dark Roast",
+   "Whole Bean"
+  ],
+  "title": "Guatemala K'iche' | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/guatemala-kiche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44578233745486"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44578233778254"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44578233811022"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44578233843790"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "c21cc2fdeb5c9ee8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-kogi-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-colombia-kogi-product_74ead8e6-a506-4547-a421-8c13a3569f00.png?v=1792412476",
+  "platform": "shopify",
+  "product_id": "8144660004942",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Drip",
+   "Ground",
+   "Medium Roast"
+  ],
+  "title": "Colombia Kogi | Medium Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/colombia-kogi-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44578075967566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44578076000334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44578076033102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44578076065870"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "c4334547339ed614",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-maya-decaf-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/tribe-design-734a67dc0f031334.png?v=1792411552",
+  "platform": "shopify",
+  "product_id": "8146588074062",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "Mexico",
+   "Whole Bean"
+  ],
+  "title": "Mexico Maya Decaf | Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/mexico-maya-decaf-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole bean",
+    "variant_id": "44579157409870"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Cold brew",
+    "variant_id": "44579157442638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "44579157475406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "44579157508174"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "8d99ff6a14ec72b2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/peru-organic-bag-mockup.png?v=1792420092",
+  "platform": "shopify",
+  "product_id": "8154847838286",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [],
+  "title": "Peru Organic Grade 1 | Medium-Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/peru-organic-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44602444873806"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44602444906574"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44602444939342"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44602444972110"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ },
+ {
+  "body_hash": "26517bcf9133c3b3",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-medium-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0692/7230/5742/files/image_37f6e62f-87b0-49c0-a737-7fe731f30df5.png?v=1792421991",
+  "platform": "shopify",
+  "product_id": "8154899415118",
+  "product_type": "Coffee",
+  "roaster_slug": "tribecoffeecorporation",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe | Medium Dark Roast | 16 oz (1 lb)",
+  "url": "https://tribecoffeecorporation.com/products/ethiopia-yirgacheffe-medium-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole bean",
+    "variant_id": "44602979745870"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Cold brew",
+    "variant_id": "44602979778638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "44602979811406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Drip",
+    "variant_id": "44602979844174"
+   }
+  ],
+  "vendor": "Tribe Coffee Vero Beach"
+ }
+]

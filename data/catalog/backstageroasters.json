@@ -1,0 +1,625 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-rodrigo-sanchez-monteblanco",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/11/JAR_MONTEBLANCO.png",
+  "platform": "woocommerce",
+  "product_id": "2340",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Colombia Rodrigo Sanchez Monteblanco",
+  "url": "https://backstageroasters.com/product/colombia-rodrigo-sanchez-monteblanco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.5,
+    "title": "Colombia Rodrigo Sanchez Monteblanco",
+    "variant_id": "2340:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-alemida-barreto-nutella",
+  "image": "https://backstageroasters.com/wp-content/uploads/2024/03/Brazil-Nutella-F-1.png",
+  "platform": "woocommerce",
+  "product_id": "3226",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Brazil Nutella",
+  "url": "https://backstageroasters.com/product/brazil-alemida-barreto-nutella/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.6,
+    "title": "Brazil Nutella",
+    "variant_id": "3226:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "directors-cut-blend",
+  "image": "https://backstageroasters.com/wp-content/uploads/2024/04/Directors-Cut-1.png",
+  "platform": "woocommerce",
+  "product_id": "3376",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Director’s Cut Blend",
+  "url": "https://backstageroasters.com/product/directors-cut-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Director&#8217;s Cut Blend",
+    "variant_id": "3376:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-box-honduras",
+  "image": "https://backstageroasters.com/wp-content/uploads/2024/07/Coldbrew_Box_Mockup_Honduras_SanRafael-scaled-e1783361112996.png",
+  "platform": "woocommerce",
+  "product_id": "3893",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Cold brew kava"
+  ],
+  "title": "Cold Brew Box – Honduras San Rafael",
+  "url": "https://backstageroasters.com/product/cold-brew-box-honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Cold Brew Box &#8211; Honduras San Rafael",
+    "variant_id": "3893:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-box-indonesia",
+  "image": "https://backstageroasters.com/wp-content/uploads/2024/07/Coldbrew_Box_Mockup_IND-scaled-e1783361063785.png",
+  "platform": "woocommerce",
+  "product_id": "3945",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Cold brew kava"
+  ],
+  "title": "Cold Brew Box – Indonesia Asman Arianto",
+  "url": "https://backstageroasters.com/product/cold-brew-box-indonesia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Cold Brew Box &#8211; Indonesia Asman Arianto",
+    "variant_id": "3945:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cacao",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/02/Brazil-Cacao-250g.png",
+  "platform": "woocommerce",
+  "product_id": "5079",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [],
+  "title": "Brazil, Cacao",
+  "url": "https://backstageroasters.com/product/brazil-cacao/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Brazil, Cacao",
+    "variant_id": "5079:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-hazel-honey",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/03/Brazil-Hazel-Honey-E-1.png",
+  "platform": "woocommerce",
+  "product_id": "5173",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Brazil Hazel Honey",
+  "url": "https://backstageroasters.com/product/brazil-hazel-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.2,
+    "title": "Brazil Hazel Honey",
+    "variant_id": "5173:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-naturali-kolumbijos-kava-be-kofeino",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/02/Decaf_Atunkaa.png",
+  "platform": "woocommerce",
+  "product_id": "5795",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Colombia Atunkaa Decaf",
+  "url": "https://backstageroasters.com/product/colombia-decaf-naturali-kolumbijos-kava-be-kofeino/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Colombia Atunkaa Decaf",
+    "variant_id": "5795:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-amigos-geisha",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/10/Colombia-Fincamigos.png",
+  "platform": "woocommerce",
+  "product_id": "6483",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Colombia Finca Amigos Geisha",
+  "url": "https://backstageroasters.com/product/colombia-finca-amigos-geisha/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Colombia Finca Amigos Geisha",
+    "variant_id": "6483:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-salama-decaf-kava-be-kofeino",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/11/Ethiopia_Decaf_Salama.png",
+  "platform": "woocommerce",
+  "product_id": "6833",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Ethiopia Salama Decaf",
+  "url": "https://backstageroasters.com/product/ethiopia-salama-decaf-kava-be-kofeino/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Ethiopia Salama Decaf",
+    "variant_id": "6833:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-miwu",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/12/Uganda_MIWU.png",
+  "platform": "woocommerce",
+  "product_id": "7371",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Uganda Miwu",
+  "url": "https://backstageroasters.com/product/uganda-miwu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Uganda Miwu",
+    "variant_id": "7371:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-san-rafael",
+  "image": "https://backstageroasters.com/wp-content/uploads/2025/12/Honduras-San-Rafael.png",
+  "platform": "woocommerce",
+  "product_id": "7384",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Honduras San Rafael",
+  "url": "https://backstageroasters.com/product/honduras-san-rafael/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Honduras San Rafael",
+    "variant_id": "7384:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-la-rosita",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/02/Honduras_La_Rosita_200g-copy.png",
+  "platform": "woocommerce",
+  "product_id": "7632",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Honduras La Rosita",
+  "url": "https://backstageroasters.com/product/honduras-la-rosita/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Honduras La Rosita",
+    "variant_id": "7632:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-buna-espresso",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/02/Ethiopia-Sidamo-Buna-Filter.png",
+  "platform": "woocommerce",
+  "product_id": "7811",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Ethiopia Sidamo Buna",
+  "url": "https://backstageroasters.com/product/ethiopia-buna-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Ethiopia Sidamo Buna",
+    "variant_id": "7811:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-cerro-negro",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/03/Honduras-Cerro-Negro.png",
+  "platform": "woocommerce",
+  "product_id": "7987",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Honduras Cerro Negro",
+  "url": "https://backstageroasters.com/product/honduras-cerro-negro/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.9,
+    "title": "Honduras Cerro Negro",
+    "variant_id": "7987:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kilele",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/05/Kenya_Kilele.png",
+  "platform": "woocommerce",
+  "product_id": "8317",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Kenya Kilele",
+  "url": "https://backstageroasters.com/product/kenya-kilele/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Kenya Kilele",
+    "variant_id": "8317:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "thailand-doi-saket",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/05/Thailand_Doi_Saket_Natural_2026.png",
+  "platform": "woocommerce",
+  "product_id": "8336",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Thailand Doi Saket",
+  "url": "https://backstageroasters.com/product/thailand-doi-saket/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Thailand Doi Saket",
+    "variant_id": "8336:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-diviso-aji",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/07/Colombia_El_Diviso_Aji_200g-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "8719",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Colombia El Diviso Aji",
+  "url": "https://backstageroasters.com/product/colombia-el-diviso-aji/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.5,
+    "title": "Colombia El Diviso Aji",
+    "variant_id": "8719:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-kayumas",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/07/Indonesia_Kayumas.png",
+  "platform": "woocommerce",
+  "product_id": "8726",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Indonesia Kayumas",
+  "url": "https://backstageroasters.com/product/indonesia-kayumas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Indonesia Kayumas",
+    "variant_id": "8726:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/02/Mogiana.png",
+  "platform": "woocommerce",
+  "product_id": "894",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Brazil, Mogiana",
+  "url": "https://backstageroasters.com/product/brazil-mogiana/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Brazil, Mogiana",
+    "variant_id": "894:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "thailand-mae-suai-kenyan-style",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/08/Thailand_Mae_Suai_KYW.png",
+  "platform": "woocommerce",
+  "product_id": "8979",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Thailand Mae Suai (Kenyan style)",
+  "url": "https://backstageroasters.com/product/thailand-mae-suai-kenyan-style/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Thailand Mae Suai (Kenyan style)",
+    "variant_id": "8979:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "backstage-blend",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/02/Backstage-Blend-3.png",
+  "platform": "woocommerce",
+  "product_id": "904",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Backstage Blend",
+  "url": "https://backstageroasters.com/product/backstage-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Backstage Blend",
+    "variant_id": "904:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-espresso-2-5-kg",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/02/2.5KG-BAG_BRAZIL-MOGIANA.png",
+  "platform": "woocommerce",
+  "product_id": "928",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Brazil, Mogiana (ESPRESSO) 2.5 KG",
+  "url": "https://backstageroasters.com/product/brazil-mogiana-espresso-2-5-kg/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2500,
+    "price_usd": 75.0,
+    "title": "Brazil, Mogiana (ESPRESSO) 2.5 KG",
+    "variant_id": "928:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-asman-arianto",
+  "image": "https://backstageroasters.com/wp-content/uploads/2023/02/L_AsmanArianto.png",
+  "platform": "woocommerce",
+  "product_id": "947",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Indonesia Asman Arianto Honey",
+  "url": "https://backstageroasters.com/product/indonesia-asman-arianto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Indonesia Asman Arianto Honey",
+    "variant_id": "947:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karimikui",
+  "image": "https://backstageroasters.com/wp-content/uploads/2026/10/Kenya_Karimikui_Kirinyaga.png",
+  "platform": "woocommerce",
+  "product_id": "9560",
+  "product_type": "variable",
+  "roaster_slug": "backstageroasters",
+  "tags": [
+   "Rūšinė kava"
+  ],
+  "title": "Kenya Karimikui",
+  "url": "https://backstageroasters.com/product/kenya-karimikui/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kenya Karimikui",
+    "variant_id": "9560:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

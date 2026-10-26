@@ -1,0 +1,600 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "24",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Organic Colombian",
+  "url": "https://blackbayoucoffeeroasters.com/product/organic-colombian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "24:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "24:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "24:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-huehuetenango",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "29",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Guatemalan Huehuetenango",
+  "url": "https://blackbayoucoffeeroasters.com/product/guatemalan-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "29:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "29:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "29:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yiragacheffe",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "33",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Ethiopian Yiragacheffe",
+  "url": "https://blackbayoucoffeeroasters.com/product/ethiopian-yiragacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "33:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "33:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "33:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-mokasida",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "37",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Ethiopian Mokasida",
+  "url": "https://blackbayoucoffeeroasters.com/product/ethiopian-mokasida/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "37:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "37:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "37:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-terrazu",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "41",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Costa Rican Terrazu",
+  "url": "https://blackbayoucoffeeroasters.com/product/costa-rican-terrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "41:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "41:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "41:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-mountain-water-processed-decaf",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "45",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "columbian",
+   "organic"
+  ],
+  "title": "Mexican Mountain water (Processed Decaf)",
+  "url": "https://blackbayoucoffeeroasters.com/product/mexican-mountain-water-processed-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "45:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "45:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "45:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-on-the-bayou",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "49",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Blends",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "Sunrise on the bayou",
+  "url": "https://blackbayoucoffeeroasters.com/product/sunrise-on-the-bayou/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "49:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "49:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "49:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "black-bayou-blend",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "53",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Blends",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "Black Bayou Blend",
+  "url": "https://blackbayoucoffeeroasters.com/product/black-bayou-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "53:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "53:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "53:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rougarou",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "57",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Blends",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "Rougarou",
+  "url": "https://blackbayoucoffeeroasters.com/product/rougarou/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "57:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "57:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "57:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "new-orleans-style-with-chicory",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "61",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Blends",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "New Orleans style with chicory",
+  "url": "https://blackbayoucoffeeroasters.com/product/new-orleans-style-with-chicory/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "61:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "61:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "61:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "african-gold",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "65",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Blends",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "African Gold",
+  "url": "https://blackbayoucoffeeroasters.com/product/african-gold/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "65:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "65:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "65:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-supremo",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "69",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Espresso",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "Espresso Supremo",
+  "url": "https://blackbayoucoffeeroasters.com/product/espresso-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "69:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "69:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "69:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-italia",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "73",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Espresso",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "Espresso Italia",
+  "url": "https://blackbayoucoffeeroasters.com/product/espresso-italia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "73:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "73:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "73:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-espresso",
+  "image": "https://blackbayoucoffeeroasters.com/wp-content/uploads/2026/07/oldlogo.jpg",
+  "platform": "woocommerce",
+  "product_id": "77",
+  "product_type": "variable",
+  "roaster_slug": "blackbayoucoffeeroasters",
+  "tags": [
+   "Espresso",
+   "bayou",
+   "blend",
+   "columbian",
+   "organic",
+   "sunrise"
+  ],
+  "title": "French Roast Espresso",
+  "url": "https://blackbayoucoffeeroasters.com/product/french-roast-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "77:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "3lb",
+    "variant_id": "77:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "77:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

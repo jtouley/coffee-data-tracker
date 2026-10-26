@@ -1,0 +1,257 @@
+[
+ {
+  "body_hash": "14a8a737ae5a4d52",
+  "first_seen": "2026-10-26",
+  "handle": "veracruz-ixhuatlan-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-SINGLE-ORIGIN_VCIX.png?v=1790176721",
+  "platform": "shopify",
+  "product_id": "10320793862232",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "SINGLE ORIGIN"
+  ],
+  "title": "Veracruz Ixhuatlan - Mexico",
+  "url": "https://threeshipscoffee.com/products/veracruz-ixhuatlan-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz (283g)",
+    "variant_id": "50525353345112"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "d6e426fc5c4284e1",
+  "first_seen": "2026-10-26",
+  "handle": "bavyeyi-burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-SINGLE-ORIGIN_bavyeyi.png?v=1790868667",
+  "platform": "shopify",
+  "product_id": "15400780660824",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "SINGLE ORIGIN"
+  ],
+  "title": "Bavyeyi - Burundi",
+  "url": "https://threeshipscoffee.com/products/bavyeyi-burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz (283g)",
+    "variant_id": "67597241909336"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "33d1cfd9a3f7c933",
+  "first_seen": "2026-10-26",
+  "handle": "shiptown-tidewater-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-BLENDSSHIPHONBRA.png?v=1789564152",
+  "platform": "shopify",
+  "product_id": "7468594692184",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "BLEND"
+  ],
+  "title": "Shiptown Espresso Blend",
+  "url": "https://threeshipscoffee.com/products/shiptown-tidewater-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz (340g)",
+    "variant_id": "40708654170200"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb (1361g)",
+    "variant_id": "40711341801560"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "fea85113f43f95a0",
+  "first_seen": "2026-10-26",
+  "handle": "monte-lenta-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-BLENDS_monte_80ff218d-2446-442a-862b-7bf75aa9be3b.png?v=1779288220",
+  "platform": "shopify",
+  "product_id": "8440001724504",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "BLEND"
+  ],
+  "title": "Monte Lenta - Costa Rica",
+  "url": "https://threeshipscoffee.com/products/monte-lenta-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ",
+    "variant_id": "43092417871960"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 74.0,
+    "title": "3 LB",
+    "variant_id": "67674571669592"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "8e53fd86a112ffbe",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-jardin-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-SINGLE-ORIGIN_JARDINWEB.png?v=1787828680",
+  "platform": "shopify",
+  "product_id": "8951958667352",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "SINGLE ORIGIN"
+  ],
+  "title": "Finca El Jardin - Honduras",
+  "url": "https://threeshipscoffee.com/products/finca-el-jardin-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz (283g)",
+    "variant_id": "44666522402904"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "47cc164666ee638d",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-virginia-commonwealth-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-BLENDS_Sweetva.png?v=1787917498",
+  "platform": "shopify",
+  "product_id": "8953501417560",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "BLEND"
+  ],
+  "title": "Sweet Virginia Commonwealth Blend",
+  "url": "https://threeshipscoffee.com/products/sweet-virginia-commonwealth-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz (340g)",
+    "variant_id": "44671888097368"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb (1361g)",
+    "variant_id": "44671888130136"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "a94dbd8f5cd9eb40",
+  "first_seen": "2026-10-26",
+  "handle": "asprotimana-cooperative-decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-SINGLE-ORIGIN_aspdecaf.png?v=1788255529",
+  "platform": "shopify",
+  "product_id": "8958601756760",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "SINGLE ORIGIN"
+  ],
+  "title": "Asprotimana Cooperative Decaf - Colombia",
+  "url": "https://threeshipscoffee.com/products/asprotimana-cooperative-decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz (283g)",
+    "variant_id": "44689791418456"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "85cfa651dd35f37d",
+  "first_seen": "2026-10-26",
+  "handle": "tigers-whisker-grand-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-TIGERS.png?v=1789573176",
+  "platform": "shopify",
+  "product_id": "9033154035800",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "BLEND"
+  ],
+  "title": "Tiger's Whisker - Grand Blend",
+  "url": "https://threeshipscoffee.com/products/tigers-whisker-grand-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 OZ",
+    "variant_id": "44822414360664"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ },
+ {
+  "body_hash": "c7e3defae598771b",
+  "first_seen": "2026-10-26",
+  "handle": "kamathura-washed-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0250/3681/6472/files/TSCR-BAG-2026-SINGLE-ORIGIN_kamathura_redo.png?v=1790001340",
+  "platform": "shopify",
+  "product_id": "9038561837144",
+  "product_type": "Single Origin Coffee",
+  "roaster_slug": "threeshipscoffee",
+  "tags": [
+   "ALL COFFEE",
+   "SINGLE ORIGIN"
+  ],
+  "title": "Kamathura Washed - Kenya",
+  "url": "https://threeshipscoffee.com/products/kamathura-washed-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz (283g)",
+    "variant_id": "44835807887448"
+   }
+  ],
+  "vendor": "Three Ships Coffee"
+ }
+]

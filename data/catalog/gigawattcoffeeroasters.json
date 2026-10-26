@@ -1,0 +1,1285 @@
+[
+ {
+  "body_hash": "5bdc31856e036f05",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-canned-cold-brew.jpg?v=1758056299",
+  "platform": "shopify",
+  "product_id": "7374756282557",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 4.99,
+    "title": "1 can",
+    "variant_id": "42412918046909"
+   },
+   {
+    "available": true,
+    "grams": 5352,
+    "price_usd": 49.99,
+    "title": "12-pack",
+    "variant_id": "42412996362429"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "5d985e6dd3b996ea",
+  "first_seen": "2026-10-26",
+  "handle": "cameroon-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-cameroon-freshly-roasted-small-batch-medium-dark-roast-10oz.jpg?v=1737024086",
+  "platform": "shopify",
+  "product_id": "7381943419069",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "single origin"
+  ],
+  "title": "Cameroon Mount Oku Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/cameroon-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434255683773"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434255716541"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434255749309"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434255814845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45182809669821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45182809702589"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45182809735357"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45182809768125"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "901f1303e9e5eb79",
+  "first_seen": "2026-10-26",
+  "handle": "sigri-estate-peaberry-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-sigri-estate-peaberry-papua-new-guinea-medium-roast-single-origin-10oz.jpg?v=1749670218",
+  "platform": "shopify",
+  "product_id": "7381943451837",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [],
+  "title": "Sigri Estate Peaberry Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/sigri-estate-peaberry-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434255913149"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434255945917"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434255978685"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434256044221"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "ea10682b72ea3053",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-coffee-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-organic-honduran-dark-coffee-dark-roast-10oz.jpg?v=1742057957",
+  "platform": "shopify",
+  "product_id": "7381943582909",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "_badge_Limited_Release",
+   "single origin"
+  ],
+  "title": "Honduran Coffee - Dark Roast",
+  "url": "https://www.gigawattcoffeeroasters.com/products/honduran-coffee-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "44962806923453"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "44962806956221"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "44962806988989"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "44962807021757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46826181722301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "46826181755069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "46826181787837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "46826181820605"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "6ddda35170669ad6",
+  "first_seen": "2026-10-26",
+  "handle": "indian-malabar-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-indian-malabar-aa-medium-roast-single-origin-10oz..jpg?v=1737777955",
+  "platform": "shopify",
+  "product_id": "7381943648445",
+  "product_type": "single origin",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "single origin"
+  ],
+  "title": "Indian Malabar Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/indian-malabar-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434256502973"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434256535741"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434256568509"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434256634045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45077902491837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45077902524605"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45077902557373"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45077902590141"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "73cc47a8723b0608",
+  "first_seen": "2026-10-26",
+  "handle": "gigawatt-coffee-sample-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-sample-packs-five-3oz-bags-live-wire-kite-key-luminosity-honduran-costa-rican.jpg?v=1788836080",
+  "platform": "shopify",
+  "product_id": "7381943746749",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "gifts"
+  ],
+  "title": "Gigawatt Coffee Sample Packs",
+  "url": "https://www.gigawattcoffeeroasters.com/products/gigawatt-coffee-sample-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 420,
+    "price_usd": 21.99,
+    "title": "Ground",
+    "variant_id": "42434257780925"
+   },
+   {
+    "available": true,
+    "grams": 420,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "42434257813693"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "1dec42c9f2b2984f",
+  "first_seen": "2026-10-26",
+  "handle": "live-wire-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-live-wire-espresso-blend-arabica-dark-roast-smooth-balanced-espresso-coffee-10oz.jpg?v=1737024303",
+  "platform": "shopify",
+  "product_id": "7381943779517",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "_badge_Best_Seller",
+   "blend",
+   "espresso"
+  ],
+  "title": "Live Wire Espresso Blend",
+  "url": "https://www.gigawattcoffeeroasters.com/products/live-wire-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434257879229"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434257911997"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434257944765"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434258010301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45088444743869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45088444776637"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45088444809405"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45088444842173"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "2255822b73dc93e1",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-costa-rican-dota-tarrazu-light-roast-single-origin-10oz.jpg?v=1737023755",
+  "platform": "shopify",
+  "product_id": "7381943812285",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "single origin"
+  ],
+  "title": "Costa Rican Tarrazu",
+  "url": "https://www.gigawattcoffeeroasters.com/products/costa-rican-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434258075837"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434258108605"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434258141373"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434258206909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45088376619197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45088376651965"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45088376684733"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45088376717501"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "856a4820988e7653",
+  "first_seen": "2026-10-26",
+  "handle": "static-resistor-decaf-water-processed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-static-resistor-decaf-water-processed-coffee-dark-roast-10oz.jpg?v=1737028265",
+  "platform": "shopify",
+  "product_id": "7381943845053",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "decaf",
+   "single origin"
+  ],
+  "title": "Static Resistor Decaf Water Processed Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/static-resistor-decaf-water-processed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434258272445"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434258305213"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434258337981"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434258403517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45782945398973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45782945431741"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45782945464509"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45782945497277"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "ed47e8f2ec633a32",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduran-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-organic-honduran-coffee-medium-light-roast-blueberry-notes-10oz_1.jpg?v=1737027671",
+  "platform": "shopify",
+  "product_id": "7381943910589",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "single origin"
+  ],
+  "title": "Organic Honduran Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/organic-honduran-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434258665661"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434258698429"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434258731197"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434258796733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45088453034173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45088453066941"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45088453099709"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45088453132477"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "ede8e5a9fb848fce",
+  "first_seen": "2026-10-26",
+  "handle": "luminosity-breakfast-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-luminosity-breakfast-blend-coffee-medium-roast-small-batch-10oz.jpg?v=1737027337",
+  "platform": "shopify",
+  "product_id": "7381943943357",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "blend"
+  ],
+  "title": "Luminosity Breakfast Blend",
+  "url": "https://www.gigawattcoffeeroasters.com/products/luminosity-breakfast-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434258862269"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434258895037"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434258927805"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434258993341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45088433537213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45088433569981"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45088433602749"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45088433635517"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "0fa8172fb440909b",
+  "first_seen": "2026-10-26",
+  "handle": "kite-key-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-kite-key-blend-medium-dark-roast-best-selling-10oz.jpg?v=1749684197",
+  "platform": "shopify",
+  "product_id": "7381943976125",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "_badge_Best_Seller",
+   "blend"
+  ],
+  "title": "Kite & Key Blend",
+  "url": "https://www.gigawattcoffeeroasters.com/products/kite-key-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "42434259058877"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "42434259091645"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "42434259124413"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "42434259189949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45088442876093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45088442908861"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45088442941629"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45088442974397"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "ddd24dd5aeabafab",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-barrel-aged-series-medium-roast-limited-release-10oz.jpg?v=1737027110",
+  "platform": "shopify",
+  "product_id": "7456669335741",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [],
+  "title": "Barrel Aged Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 14.99,
+    "title": "Whole Bean Only",
+    "variant_id": "42744852644029"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "4d37a1594192c252",
+  "first_seen": "2026-10-26",
+  "handle": "black-bag-series",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-black-bag-series-medium-roast-artisanal-small-batch-limited-release-10oz.jpg?v=1737780565",
+  "platform": "shopify",
+  "product_id": "7482786742461",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "_badge_Best_Seller"
+  ],
+  "title": "Black Bag Series",
+  "url": "https://www.gigawattcoffeeroasters.com/products/black-bag-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 14.99,
+    "title": "Whole Bean",
+    "variant_id": "42859719590077"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 14.99,
+    "title": "Drip",
+    "variant_id": "43181484277949"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 14.99,
+    "title": "Pourover",
+    "variant_id": "43181486112957"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 14.99,
+    "title": "French Press",
+    "variant_id": "43181489619133"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "3cf79437754a2945",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-half-caff-kite-key-blend-static-resistor-decaf-two-bags-10oz.jpg?v=1788797351",
+  "platform": "shopify",
+  "product_id": "7553195081917",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "half caff"
+  ],
+  "title": "Half Caff Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/half-caff-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "43225760137405"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 24.99,
+    "title": "Drip",
+    "variant_id": "43225760170173"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 24.99,
+    "title": "Pourover",
+    "variant_id": "43225760202941"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 24.99,
+    "title": "French Press",
+    "variant_id": "43225760235709"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "142560c016df2888",
+  "first_seen": "2026-10-26",
+  "handle": "wahgi-valley-papua-new-guinea-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-wahgi-valley-papua-new-guinea-medium-light-roast-single-origin-10oz..jpg?v=1737027870",
+  "platform": "shopify",
+  "product_id": "7593579184317",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "_badge_ SOLD OUT"
+  ],
+  "title": "Wahgi Valley Papua New Guinea Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/wahgi-valley-papua-new-guinea-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Whole Bean",
+    "variant_id": "43413956460733"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Drip",
+    "variant_id": "43413956493501"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Pourover",
+    "variant_id": "43413956526269"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "French Press",
+    "variant_id": "43413956559037"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "f8c34373a7661a86",
+  "first_seen": "2026-10-26",
+  "handle": "discovery-coffee-sample-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-kite-key-blend-bestselling-medium-dark-roast-coffee-sampler-3oz.jpg?v=1737780194",
+  "platform": "shopify",
+  "product_id": "7853673611453",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "gifts"
+  ],
+  "title": "Discovery Coffee Sample Packs",
+  "url": "https://www.gigawattcoffeeroasters.com/products/discovery-coffee-sample-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Kite & Key Blend",
+    "variant_id": "44413092298941"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Kite & Key Blend",
+    "variant_id": "44413092331709"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Luminosity Blend",
+    "variant_id": "44413098983613"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Organic Honduran Coffee",
+    "variant_id": "44413099016381"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Luminosity Blend",
+    "variant_id": "44413099049149"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Organic Honduran Coffee",
+    "variant_id": "44413099081917"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Live Wire Espresso Blend",
+    "variant_id": "44413130178749"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Live Wire Espresso Blend",
+    "variant_id": "44413130211517"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Wahgi Valley Kinmuga",
+    "variant_id": "44413130244285"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Wahgi Valley Kinmuga",
+    "variant_id": "44413130277053"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Cameroonian Mount Oku",
+    "variant_id": "44413130309821"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Cameroonian Mount Oku",
+    "variant_id": "44413130342589"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Indian Malabar Coffee AA",
+    "variant_id": "44413130375357"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Indian Malabar Coffee AA",
+    "variant_id": "44413130408125"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Costa Rican Tarrazu",
+    "variant_id": "44414314709181"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Costa Rican Tarrazu",
+    "variant_id": "44414314741949"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Whole Bean / Sigri Estate Peaberry Coffee",
+    "variant_id": "45143577919677"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.39,
+    "title": "Ground / Sigri Estate Peaberry Coffee",
+    "variant_id": "45143577952445"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "cad4ba0202a1ac59",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-coffee-santa-hedwirges",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-santa-hedwirges-brazilian-coffee-medium-roast-single-origin-10oz.jpg?v=1737780767",
+  "platform": "shopify",
+  "product_id": "7875046768829",
+  "product_type": "",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [],
+  "title": "Brazilian Coffee Santa Hedwirges",
+  "url": "https://www.gigawattcoffeeroasters.com/products/brazilian-coffee-santa-hedwirges",
+  "variants": [
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Whole Bean",
+    "variant_id": "44480528351421"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Drip",
+    "variant_id": "44480528384189"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "French Press",
+    "variant_id": "44480528416957"
+   },
+   {
+    "available": false,
+    "grams": 298,
+    "price_usd": 13.99,
+    "title": "Pourover",
+    "variant_id": "44480528449725"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "6e0108c21e3a5915",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-mexican-chiapas-coffee-single-origin-medium-roast-10oz.jpg?v=1749684355",
+  "platform": "shopify",
+  "product_id": "8022625550525",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "Subscription",
+   "single origin"
+  ],
+  "title": "Mexican Chiapas Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/mexican-chiapas-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "45143788978365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45143789011133"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "45143789043901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45143789076669"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "45143789109437"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45143789142205"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "45143789174973"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45143789207741"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ },
+ {
+  "body_hash": "8f4b2e41ca96e033",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0627/9708/6909/files/gigawatt-coffee-organic-ethiopian-guji-coffee-medium-roast-single-origin-10oz.jpg?v=1749688376",
+  "platform": "shopify",
+  "product_id": "8022668247229",
+  "product_type": "Coffee",
+  "roaster_slug": "gigawattcoffeeroasters",
+  "tags": [
+   "_badge_NEW"
+  ],
+  "title": "Organic Ethiopian Guji Coffee",
+  "url": "https://www.gigawattcoffeeroasters.com/products/organic-ethiopian-guji",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 10 oz",
+    "variant_id": "45143880368317"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45143880401085"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Drip / 10 oz",
+    "variant_id": "45143880433853"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45143880466621"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "Pourover / 10 oz",
+    "variant_id": "45143880499389"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Pourover / 5 lb",
+    "variant_id": "45143880532157"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "French Press / 10 oz",
+    "variant_id": "45143880564925"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45143880597693"
+   }
+  ],
+  "vendor": "Gigawatt Coffee Roasters"
+ }
+]

@@ -1,0 +1,261 @@
+{
+ "6835013615714": {
+  "body_hash": "d729b0f106090e1e",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "almond",
+   "toffee",
+   "citric"
+  ],
+  "varietals": []
+ },
+ "6835060146274": {
+  "body_hash": "f42ca82a48ce3e69",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "caramel",
+   "grape",
+   "lemon"
+  ],
+  "varietals": []
+ },
+ "6835064340578": {
+  "body_hash": "e3c51d0cc6422692",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "citric",
+   "lemon",
+   "black tea"
+  ],
+  "varietals": []
+ },
+ "6837052112994": {
+  "body_hash": "5c3ce0f6da6e68a9",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "sweet",
+   "tobacco"
+  ],
+  "varietals": []
+ },
+ "6837427994722": {
+  "body_hash": "0e6afaacb1af2eb4",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "apricot",
+   "vanilla",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "6837430124642": {
+  "body_hash": "8d0e6c4c9374c0e3",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "tobacco",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "6837431173218": {
+  "body_hash": "46f290a465f4b9a6",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "black currant",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "6838821388386": {
+  "body_hash": "d5ae3a46f3ee01f3",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "lemon",
+   "coco"
+  ],
+  "varietals": []
+ },
+ "6838825517154": {
+  "body_hash": "526065f539a89bc7",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toasted",
+   "walnut",
+   "toffee",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "6838827319394": {
+  "body_hash": "50f8e5fd4765f669",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "toffee",
+   "vanilla",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "6849704689762": {
+  "body_hash": "d80578e7fe272656",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "citric",
+   "lemon",
+   "black tea"
+  ],
+  "varietals": []
+ },
+ "6849705541730": {
+  "body_hash": "98a0ee9655760aa1",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "tobacco",
+   "chocolate",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "7448615878754": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7448616009826": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

@@ -1,0 +1,628 @@
+[
+ {
+  "body_hash": "d1c4f6459fbbda8d",
+  "first_seen": "2026-10-26",
+  "handle": "dawn-patrol",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/DawnPatrol.png?v=1605828622",
+  "platform": "shopify",
+  "product_id": "2501355589",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Dawn Patrol",
+  "url": "https://www.stokedroasters.com/products/dawn-patrol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "25516998864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "32143270992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32143380368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7271086981"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "3247de231fae3b6c",
+  "first_seen": "2026-10-26",
+  "handle": "bluebird",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/Bluebird.png?v=1606157236",
+  "platform": "shopify",
+  "product_id": "2501378245",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Bluebird",
+  "url": "https://www.stokedroasters.com/products/bluebird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "8119027073138"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "8119034380402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "8119038148722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "8119039459442"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "ff0de1db68ee6499",
+  "first_seen": "2026-10-26",
+  "handle": "double-overhead",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/DoubleOverhead.png?v=1605828667",
+  "platform": "shopify",
+  "product_id": "2501385349",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Double Overhead",
+  "url": "https://www.stokedroasters.com/products/double-overhead",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "25517032784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "32143877712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32143918992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7271198405"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "ac000f29ca9108b5",
+  "first_seen": "2026-10-26",
+  "handle": "whiteout-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/WhiteoutDecaf.png?v=1605829143",
+  "platform": "shopify",
+  "product_id": "2501393093",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Whiteout (Decaf)",
+  "url": "https://www.stokedroasters.com/products/whiteout-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "25517277520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "32144458704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32144493584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7271223685"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "b7314bd28c40ef27",
+  "first_seen": "2026-10-26",
+  "handle": "soul-session",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/SoulSession.png?v=1605829046",
+  "platform": "shopify",
+  "product_id": "2501404933",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Soul Session",
+  "url": "https://www.stokedroasters.com/products/soul-session",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "12546228912215"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "25517252240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "32144335952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7271255813"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "3312f331f32d532d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/SingleOrigin.png?v=1605828977",
+  "platform": "shopify",
+  "product_id": "2501460549",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Rotating Single Origin",
+  "url": "https://www.stokedroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "32145658960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1lb Bag",
+    "variant_id": "32145659280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32145659408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "7271456645"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "b26d80a0b835662e",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/Espresso_ec550fe5-57bf-44a3-aa1e-5eaca2472c70.png?v=1605828715",
+  "platform": "shopify",
+  "product_id": "2501479173",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Espresso",
+  "url": "https://www.stokedroasters.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32145428752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7014353862684"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "7014369755164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "7014402392092"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "aeae0080ec358f3c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/DecafEspresso.png?v=1605828752",
+  "platform": "shopify",
+  "product_id": "2501481541",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Espresso (Decaf)",
+  "url": "https://www.stokedroasters.com/products/espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb bag",
+    "variant_id": "41350692880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag",
+    "variant_id": "41350692944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz bag",
+    "variant_id": "41350700112"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz bag",
+    "variant_id": "7271517573"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "f938ed4d6a0c8f9c",
+  "first_seen": "2026-10-26",
+  "handle": "first-tracks",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/FirstTracks.png?v=1605828912",
+  "platform": "shopify",
+  "product_id": "2614559877",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "First Tracks",
+  "url": "https://www.stokedroasters.com/products/first-tracks",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "25517305232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "32143981904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "32144000208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "7613803525"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "a69764ca0383c617",
+  "first_seen": "2026-10-26",
+  "handle": "first-light",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/FirstLight.png?v=1605828854",
+  "platform": "shopify",
+  "product_id": "3959544741975",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "First Light",
+  "url": "https://www.stokedroasters.com/products/first-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "29563864350807"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "29563864383575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb Bag",
+    "variant_id": "29563864416343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "29563864449111"
+   }
+  ],
+  "vendor": "Stoked Roasters and Coffeehouse"
+ },
+ {
+  "body_hash": "1600908c6228d02f",
+  "first_seen": "2026-10-26",
+  "handle": "fallstoke",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/Fallstoke_45e4b699-b34a-403d-871a-59286f33b6a0.png?v=1605828819",
+  "platform": "shopify",
+  "product_id": "6347130885",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "FALLSTOKE",
+  "url": "https://www.stokedroasters.com/products/fallstoke",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Bag",
+    "variant_id": "1408235339804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1lb Bag",
+    "variant_id": "1408235372572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb Bag",
+    "variant_id": "1408235405340"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4oz Bag",
+    "variant_id": "20881277637"
+   }
+  ],
+  "vendor": "Stoked Roasters + Coffeehouse"
+ },
+ {
+  "body_hash": "4c85604fb5910f1a",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/S.O.Espresso.png?v=1605829021",
+  "platform": "shopify",
+  "product_id": "6467085317",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Single Origin Espresso (Rotating)",
+  "url": "https://www.stokedroasters.com/products/single-origin-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "21404074501"
+   }
+  ],
+  "vendor": "STOKED Roasters + Coffeehouse"
+ },
+ {
+  "body_hash": "d6cd48ac0025b21d",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/1030/4469/products/bag_bulk_orange.jpg?v=1489522808",
+  "platform": "shopify",
+  "product_id": "8523478864",
+  "product_type": "Coffee",
+  "roaster_slug": "stokedroasters",
+  "tags": [
+   "Subscription"
+  ],
+  "title": "Bulk Bag (5lbs)",
+  "url": "https://www.stokedroasters.com/products/5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Dawn Patrol (Breakfast Blend)",
+    "variant_id": "32146897168"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Soul Session (Medium Roast)",
+    "variant_id": "32146897232"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Bluebird (Medium-Dark Roast)",
+    "variant_id": "32146897296"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "First Tracks (Dark Roast)",
+    "variant_id": "32146897360"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Double Overhead (French Roast)",
+    "variant_id": "32146897424"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Whiteout Decaf (Medium Roast)",
+    "variant_id": "32146897552"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Espresso Blend (Medium Roast)",
+    "variant_id": "32146897616"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Single Origin Espresso (Rotating Medium Roast)",
+    "variant_id": "32146897680"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Single Origin (Light- Medium Roast)",
+    "variant_id": "32146897744"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Single Origin (Medium-Dark Roast)",
+    "variant_id": "32146897808"
+   },
+   {
+    "available": true,
+    "grams": 2313,
+    "price_usd": 95.0,
+    "title": "Seasonal Stoke",
+    "variant_id": "32146897872"
+   }
+  ],
+  "vendor": "STOKED Roasters + Coffeehouse"
+ }
+]

@@ -1,0 +1,409 @@
+[
+ {
+  "body_hash": "9eb3e8ced3cce497",
+  "first_seen": "2026-10-26",
+  "handle": "horseshoe-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/products/BW-HorseshoeStrong-Productbag.png?v=1636571412",
+  "platform": "shopify",
+  "product_id": "6862512586939",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "ground",
+   "k-cup",
+   "medium dark roast",
+   "whole bean"
+  ],
+  "title": "HorseShoe Strong - Medium/Dark Roast",
+  "url": "https://bwblacksmith.com/products/horseshoe-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Ground / 1 lb",
+    "variant_id": "40397189513403"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "40397189546171"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "French Press / 1 lb",
+    "variant_id": "40397189578939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Cold Brew / 1 lb",
+    "variant_id": "42037699608763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Rivet (K-Cups) / 1 lb",
+    "variant_id": "42037703114939"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 110.0,
+    "title": "Ground / 6 lbs",
+    "variant_id": "47836828500155"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 6 lbs",
+    "variant_id": "47836828532923"
+   }
+  ],
+  "vendor": "BW Wholesale"
+ },
+ {
+  "body_hash": "8d5a66c7ccaacb50",
+  "first_seen": "2026-10-26",
+  "handle": "coal-black-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/products/BW-CoalBlack-Productbag.png?v=1636571282",
+  "platform": "shopify",
+  "product_id": "6862787641531",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "dark roast",
+   "ground",
+   "k-cups",
+   "whole bean"
+  ],
+  "title": "Coal Black - Dark Roast",
+  "url": "https://bwblacksmith.com/products/coal-black-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "40398626848955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "40398626881723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "French Press / 12 oz",
+    "variant_id": "40398626914491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Cold Brew / 12 oz",
+    "variant_id": "40398635368635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Rivet (K-Cups) / 12 oz",
+    "variant_id": "42037689942203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "47836826173627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47836826206395"
+   }
+  ],
+  "vendor": "BW Wholesale"
+ },
+ {
+  "body_hash": "36a237fa5dfacc50",
+  "first_seen": "2026-10-26",
+  "handle": "forge-fuel-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/products/BW-ForgeFuel-Productbag.png?v=1636571174",
+  "platform": "shopify",
+  "product_id": "6862801141947",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "ground",
+   "k-cup",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Forge Fuel - Medium Roast",
+  "url": "https://bwblacksmith.com/products/forge-fuel-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "40398751727803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "40398751760571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "French Press / 12 oz",
+    "variant_id": "40398751793339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Cold Brew / 12 oz",
+    "variant_id": "40398751826107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Rivet (K-Cups) / 12 oz",
+    "variant_id": "42037653110971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "47836829909179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47836829941947"
+   }
+  ],
+  "vendor": "BW Wholesale"
+ },
+ {
+  "body_hash": "36a237fa5dfacc50",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/products/BW-ForgeFuel-Productbag_c01af3e3-1ff9-4ba7-b747-45834570530c.png?v=1649262331",
+  "platform": "shopify",
+  "product_id": "7455060033723",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "ground",
+   "k-cup",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Decaf Medium Roast",
+  "url": "https://bwblacksmith.com/products/decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "42767041265851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42767041298619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "French Press / 12 oz",
+    "variant_id": "42767041331387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Cold Brew / 12 oz",
+    "variant_id": "42767041364155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Rivet (K-Cups) / 12 oz",
+    "variant_id": "42767041396923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "47836790390971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47836790423739"
+   }
+  ],
+  "vendor": "BW Blacksmith"
+ },
+ {
+  "body_hash": "bd8f114997eb8a56",
+  "first_seen": "2026-10-26",
+  "handle": "beans-forge-fuel-1-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/files/Screenshot2024-02-23132307.png?v=1712602204",
+  "platform": "shopify",
+  "product_id": "7934495621307",
+  "product_type": "",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Forge Fuel 1 LB",
+  "url": "https://bwblacksmith.com/products/beans-forge-fuel-1-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "45857274233019"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9eb3e8ced3cce497",
+  "first_seen": "2026-10-26",
+  "handle": "iron-grip-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/files/Blacksmith-Coffee-Company-Espresso-Roast-v2.png?v=1778798662",
+  "platform": "shopify",
+  "product_id": "8172652495035",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "ground",
+   "k-cup",
+   "medium dark roast",
+   "whole bean"
+  ],
+  "title": "Iron Grip - Espresso Roast",
+  "url": "https://bwblacksmith.com/products/iron-grip-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "46915149430971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46915151626427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "47836784165051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "47836784197819"
+   }
+  ],
+  "vendor": "BW Wholesale"
+ },
+ {
+  "body_hash": "9eb3e8ced3cce497",
+  "first_seen": "2026-10-26",
+  "handle": "iron-grip-espresso-roast-6lb-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0574/7726/7643/files/Blacksmith-Coffee-Company-Espresso-Roast-v2.png?v=1778798662",
+  "platform": "shopify",
+  "product_id": "8254824808635",
+  "product_type": "Coffee",
+  "roaster_slug": "bwblacksmith",
+  "tags": [
+   "Coffee",
+   "Fresh Roasted",
+   "cold brew",
+   "ground",
+   "k-cup",
+   "medium dark roast",
+   "whole bean"
+  ],
+  "title": "Iron Grip - Espresso Roast (6lb bags)",
+  "url": "https://bwblacksmith.com/products/iron-grip-espresso-roast-6lb-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 110.0,
+    "title": "Ground",
+    "variant_id": "47235772186811"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 110.0,
+    "title": "Whole Bean",
+    "variant_id": "47235772219579"
+   }
+  ],
+  "vendor": "BW Wholesale"
+ }
+]

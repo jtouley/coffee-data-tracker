@@ -1,0 +1,1225 @@
+[
+ {
+  "body_hash": "b5bb60f07fb5d1a0",
+  "first_seen": "2026-10-26",
+  "handle": "captain-bert-s-breakfast-blend",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9943-scaled.jpg?v=1683693081&width=1707",
+  "platform": "generic",
+  "product_id": "CB12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Captain Bert’s Breakfast Blend",
+  "url": "https://lighthouseroasters.com/products/captain-bert-s-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12c",
+    "variant_id": "CB12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12f",
+    "variant_id": "CB12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12m",
+    "variant_id": "CB12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12mc",
+    "variant_id": "CB12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12mf",
+    "variant_id": "CB12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "CB12wb",
+    "variant_id": "CB12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80cg",
+    "variant_id": "cb80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80fg",
+    "variant_id": "cb80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80mc",
+    "variant_id": "cb80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80mf",
+    "variant_id": "cb80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80mg",
+    "variant_id": "cb80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "cb80wb",
+    "variant_id": "cb80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1d7d5a53aa12bcde",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://lighthouseroasters.com/cdn/shop/files/Decaf_Resize.jpg?v=1788382826&width=1344",
+  "platform": "generic",
+  "product_id": "D12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Decaf Blend",
+  "url": "https://lighthouseroasters.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12c",
+    "variant_id": "D12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12f",
+    "variant_id": "D12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12m",
+    "variant_id": "D12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12mc",
+    "variant_id": "D12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12mf",
+    "variant_id": "D12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "D12wb",
+    "variant_id": "D12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80cg",
+    "variant_id": "db80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80fg",
+    "variant_id": "db80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80mc",
+    "variant_id": "db80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80mf",
+    "variant_id": "db80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80mg",
+    "variant_id": "db80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "db80wb",
+    "variant_id": "db80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "edba41f5a74d0d4f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-3",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9939-scaled_ece5ecfc-fc9f-4a6f-98ce-63a93bf208b7.jpg?v=1683693404&width=1707",
+  "platform": "generic",
+  "product_id": "E12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://lighthouseroasters.com/products/espresso-blend-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12c",
+    "variant_id": "E12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12f",
+    "variant_id": "E12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12m",
+    "variant_id": "E12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12mc",
+    "variant_id": "E12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12mf",
+    "variant_id": "E12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "E12wb",
+    "variant_id": "E12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80cg",
+    "variant_id": "eb80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80fg",
+    "variant_id": "eb80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80mc",
+    "variant_id": "eb80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80mf",
+    "variant_id": "eb80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80mg",
+    "variant_id": "eb80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "eb80wb",
+    "variant_id": "eb80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6866ae23915b887",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9914-scaled.jpg?v=1683693239&width=1707",
+  "platform": "generic",
+  "product_id": "F12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://lighthouseroasters.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12c",
+    "variant_id": "F12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12f",
+    "variant_id": "F12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12m",
+    "variant_id": "F12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12mc",
+    "variant_id": "F12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12mf",
+    "variant_id": "F12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "F12wb",
+    "variant_id": "F12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80cg",
+    "variant_id": "fr80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80fg",
+    "variant_id": "fr80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80mc",
+    "variant_id": "fr80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80mf",
+    "variant_id": "fr80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80mg",
+    "variant_id": "fr80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 126.0,
+    "title": "fr80wb",
+    "variant_id": "fr80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "437dcc22aef61e01",
+  "first_seen": "2026-10-26",
+  "handle": "french-sumatra",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9942-scaled.jpg?v=1683693249&width=1707",
+  "platform": "generic",
+  "product_id": "FS12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "French Sumatra",
+  "url": "https://lighthouseroasters.com/products/french-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12c",
+    "variant_id": "FS12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12f",
+    "variant_id": "FS12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12m",
+    "variant_id": "FS12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12mc",
+    "variant_id": "FS12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12mf",
+    "variant_id": "FS12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "FS12wb",
+    "variant_id": "FS12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80cg",
+    "variant_id": "fs80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80fg",
+    "variant_id": "fs80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80mc",
+    "variant_id": "fs80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80mf",
+    "variant_id": "fs80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80mg",
+    "variant_id": "fs80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "fs80wb",
+    "variant_id": "fs80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae03781a17e45f54",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-nyeri-gura-peaberry",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9934-scaled.jpg?v=1761011796&width=1707",
+  "platform": "generic",
+  "product_id": "K12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://lighthouseroasters.com/products/kenya-nyeri-gura-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12c",
+    "variant_id": "K12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12f",
+    "variant_id": "K12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12m",
+    "variant_id": "K12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12mc",
+    "variant_id": "K12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12mf",
+    "variant_id": "K12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "K12wb",
+    "variant_id": "K12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80c",
+    "variant_id": "K80c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80f",
+    "variant_id": "K80f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80m",
+    "variant_id": "K80m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80mc",
+    "variant_id": "K80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80mf",
+    "variant_id": "K80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "K80wb",
+    "variant_id": "K80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5015005bd99925ef",
+  "first_seen": "2026-10-26",
+  "handle": "lighthouse-blend",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9944-scaled.jpg?v=1683693288&width=1707",
+  "platform": "generic",
+  "product_id": "LB12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Lighthouse Blend",
+  "url": "https://lighthouseroasters.com/products/lighthouse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12c",
+    "variant_id": "LB12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12f",
+    "variant_id": "LB12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12m",
+    "variant_id": "LB12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12mc",
+    "variant_id": "LB12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12mf",
+    "variant_id": "LB12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "LB12wb",
+    "variant_id": "LB12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80cg",
+    "variant_id": "lb80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80fg",
+    "variant_id": "lb80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80mc",
+    "variant_id": "lb80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80mf",
+    "variant_id": "lb80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80mg",
+    "variant_id": "lb80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "lb80wb",
+    "variant_id": "lb80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b62b2910714edeea",
+  "first_seen": "2026-10-26",
+  "handle": "lighthouse-roasters-guide-to-making-espresso",
+  "image": "https://lighthouseroasters.com/cdn/shop/files/Coffee_Booklet_Cover_Page_01.jpg?v=1761166857&width=1650",
+  "platform": "generic",
+  "product_id": "LRBSH",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Lighthouse Roasters Guide to Making Espresso",
+  "url": "https://lighthouseroasters.com/products/lighthouse-roasters-guide-to-making-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "LRBSH",
+    "variant_id": "LRBSH"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2e1015bb7afc73f",
+  "first_seen": "2026-10-26",
+  "handle": "mocca-java",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9920-scaled.jpg?v=1683693278&width=1707",
+  "platform": "generic",
+  "product_id": "MJ12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Mocha-Java",
+  "url": "https://lighthouseroasters.com/products/mocca-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12c",
+    "variant_id": "MJ12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12f",
+    "variant_id": "MJ12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12m",
+    "variant_id": "MJ12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12mc",
+    "variant_id": "MJ12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12mf",
+    "variant_id": "MJ12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "MJ12wb",
+    "variant_id": "MJ12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80cg",
+    "variant_id": "mj80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80fg",
+    "variant_id": "mj80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80mc",
+    "variant_id": "mj80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80mf",
+    "variant_id": "mj80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80mg",
+    "variant_id": "mj80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "mj80wb",
+    "variant_id": "mj80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37d12d3aa3e41c81",
+  "first_seen": "2026-10-26",
+  "handle": "natural-processed-ethiopia-guji-1",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9933-scaled_1cd99def-a49e-4f9a-a059-e52f7ef06583.jpg?v=1683693309&width=1707",
+  "platform": "generic",
+  "product_id": "NE12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe 1 Supernatural Banko Gotiti",
+  "url": "https://lighthouseroasters.com/products/natural-processed-ethiopia-guji-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12c",
+    "variant_id": "NE12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12f",
+    "variant_id": "NE12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12m",
+    "variant_id": "NE12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12mc",
+    "variant_id": "NE12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12mf",
+    "variant_id": "NE12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "NE12wb",
+    "variant_id": "NE12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80cg",
+    "variant_id": "ne80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80fg",
+    "variant_id": "ne80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80mc",
+    "variant_id": "ne80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80mf",
+    "variant_id": "ne80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80mg",
+    "variant_id": "ne80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 144.0,
+    "title": "ne80wb",
+    "variant_id": "ne80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "450026f57bbceb5a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9923-scaled.jpg?v=1683693297&width=1707",
+  "platform": "generic",
+  "product_id": "S12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Sumatra Takengon IKA Mandheling",
+  "url": "https://lighthouseroasters.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12c",
+    "variant_id": "S12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12f",
+    "variant_id": "S12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12m",
+    "variant_id": "S12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12mc",
+    "variant_id": "S12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12mf",
+    "variant_id": "S12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "S12wb",
+    "variant_id": "S12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80cg",
+    "variant_id": "s80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80fg",
+    "variant_id": "s80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80mc",
+    "variant_id": "s80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80mf",
+    "variant_id": "s80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80mg",
+    "variant_id": "s80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.0,
+    "title": "s80wb",
+    "variant_id": "s80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7efa875a19b10b17",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-1",
+  "image": "https://lighthouseroasters.com/cdn/shop/products/Lighthouse-9931-scaled_b7625635-2af2-4781-b026-cd0c5b65425c.jpg?v=1683693321&width=1707",
+  "platform": "generic",
+  "product_id": "WE12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Halo Bariti",
+  "url": "https://lighthouseroasters.com/products/ethiopia-yirgacheffe-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12c",
+    "variant_id": "WE12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12f",
+    "variant_id": "WE12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12m",
+    "variant_id": "WE12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12mc",
+    "variant_id": "WE12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12mf",
+    "variant_id": "WE12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "WE12wb",
+    "variant_id": "WE12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80cg",
+    "variant_id": "we80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80fg",
+    "variant_id": "we80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80mc",
+    "variant_id": "we80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80mf",
+    "variant_id": "we80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80mg",
+    "variant_id": "we80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 132.5,
+    "title": "we80wb",
+    "variant_id": "we80wb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75a42d292d916a25",
+  "first_seen": "2026-10-26",
+  "handle": "washington-wild",
+  "image": "https://lighthouseroasters.com/cdn/shop/files/WashWildLogoRedo.jpg?v=1787932190&width=1885",
+  "platform": "generic",
+  "product_id": "WW12wb",
+  "product_type": "",
+  "roaster_slug": "lighthouseroasters",
+  "tags": [],
+  "title": "Washington Wild Coffee Blend: A Brew with a Purpose",
+  "url": "https://lighthouseroasters.com/products/washington-wild",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12c",
+    "variant_id": "WW12c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12f",
+    "variant_id": "WW12f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12m",
+    "variant_id": "WW12m"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12mc",
+    "variant_id": "WW12mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12mf",
+    "variant_id": "WW12mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "WW12wb",
+    "variant_id": "WW12wb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80cg",
+    "variant_id": "ww80cg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80fg",
+    "variant_id": "ww80fg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80mc",
+    "variant_id": "ww80mc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80mf",
+    "variant_id": "ww80mf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80mg",
+    "variant_id": "ww80mg"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "ww80wb",
+    "variant_id": "ww80wb"
+   }
+  ],
+  "vendor": ""
+ }
+]

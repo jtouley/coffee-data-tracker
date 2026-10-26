@@ -1,0 +1,152 @@
+[
+ {
+  "body_hash": "b7b0d48129ae7b5f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://static1.squarespace.com/static/59c196de29f1870809bc9b9d/59c1b8596f4ca36e46f331b6/59c426cce45a7ca04e632f6a/1736116254683/",
+  "platform": "squarespace",
+  "product_id": "59c426cce45a7ca04e632f6a",
+  "product_type": "Single Origin Coffees",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Colombia",
+  "url": "https://www.toastedandroasted.com/shop-coffee/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.5,
+    "title": "",
+    "variant_id": "95b65450-8828-46c5-a638-c94d6c21b7cc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85977bd8f987bb10",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://static1.squarespace.com/static/59c196de29f1870809bc9b9d/59c1b8596f4ca36e46f331b6/59c4270729f187cc6f913e47/1790355963060/",
+  "platform": "squarespace",
+  "product_id": "59c4270729f187cc6f913e47",
+  "product_type": "Single Origin Coffees",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Brazil",
+  "url": "https://www.toastedandroasted.com/shop-coffee/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "16430cdc-5947-40b1-9143-a2225eda19ce"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2eed649d2c6e0a11",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf",
+  "image": "https://static1.squarespace.com/static/59c196de29f1870809bc9b9d/59c1b8596f4ca36e46f331b6/59c4274ce9bfdfb12ac17fd5/1790263296432/",
+  "platform": "squarespace",
+  "product_id": "59c4274ce9bfdfb12ac17fd5",
+  "product_type": "Single Origin Coffees",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Mexico Decaf - Swiss Water Process",
+  "url": "https://www.toastedandroasted.com/shop-coffee/brazil-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "",
+    "variant_id": "62ba4392-4c27-4b7a-b74c-eaa375626dd4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eab277d85b899b83",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://static1.squarespace.com/static/59c196de29f1870809bc9b9d/59c1b8596f4ca36e46f331b6/5a51564153450aea1702d729/1785609312511/",
+  "platform": "squarespace",
+  "product_id": "5a51564153450aea1702d729",
+  "product_type": "Single Origin Coffees",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Single Origin Coffees"
+  ],
+  "title": "Nicaragua",
+  "url": "https://www.toastedandroasted.com/shop-coffee/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "eabad1cf-9487-48a1-a52e-b27a31f1b253"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc751aec2b9b32b0",
+  "first_seen": "2026-10-26",
+  "handle": "community-coffee-blend",
+  "image": "https://static1.squarespace.com/static/59c196de29f1870809bc9b9d/59c1b8596f4ca36e46f331b6/5e751e1be19208568c8794ba/1790355971696/",
+  "platform": "squarespace",
+  "product_id": "5e751e1be19208568c8794ba",
+  "product_type": "Our Signature Blends",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Our Signature Blends"
+  ],
+  "title": "Community Coffee Blend",
+  "url": "https://www.toastedandroasted.com/shop-coffee/community-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "8d928aca-04c5-432f-b976-18bded676307"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc987c26ea8516d1",
+  "first_seen": "2026-10-26",
+  "handle": "stay-at-home-coffee-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/59c196de29f1870809bc9b9d/1587331088568-SJF5DPNTCJH3ISU3MD2T/store.jpg",
+  "platform": "squarespace",
+  "product_id": "5e9a29a9fac4021d8f8c4146",
+  "product_type": "Our Signature Blends",
+  "roaster_slug": "toastedandroasted",
+  "tags": [
+   "Our Signature Blends"
+  ],
+  "title": "20/20 Coffee Blend",
+  "url": "https://www.toastedandroasted.com/shop-coffee/stay-at-home-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "a8bed282-4680-4981-be56-2703f173bd11"
+   }
+  ],
+  "vendor": ""
+ }
+]

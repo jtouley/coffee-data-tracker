@@ -1,0 +1,844 @@
+[
+ {
+  "body_hash": "52b120b47ccc1dcd",
+  "first_seen": "2026-10-26",
+  "handle": "ancora-d-oro",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/AncoraDoro.jpg?v=1500999257",
+  "platform": "shopify",
+  "product_id": "7748612043",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Blend",
+   "Body - Medium",
+   "Brightness - Medium",
+   "Coffee"
+  ],
+  "title": "Ancora d’Oro",
+  "url": "https://ancoracoffee.com/products/ancora-d-oro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24879702539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24879702603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Medium",
+    "variant_id": "24879702667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Fine",
+    "variant_id": "24879702731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55726449291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55726470731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55726482123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55726501707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55726570251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55726591115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55726603979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55726617867"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "848ffde0215c66e0",
+  "first_seen": "2026-10-26",
+  "handle": "ancora-d-oro-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/AncoraDoroDECAF.jpg?v=1501004360",
+  "platform": "shopify",
+  "product_id": "7748628811",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Blend",
+   "Body - Medium",
+   "Brightness - Medium",
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Ancora d’Oro Decaf",
+  "url": "https://ancoracoffee.com/products/ancora-d-oro-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24879797195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24879797259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Medium",
+    "variant_id": "24879797323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Fine",
+    "variant_id": "24879797387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55723963147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55723984139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55724001099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55724031179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55724091019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55724125771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55724130635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55724154059"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "079fab176f085c43",
+  "first_seen": "2026-10-26",
+  "handle": "black-thunder",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/BlackThunder.jpg?v=1501076439",
+  "platform": "shopify",
+  "product_id": "7750919307",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Body - Full",
+   "Brightness - Low",
+   "Coffee",
+   "French Roast"
+  ],
+  "title": "Black Thunder",
+  "url": "https://ancoracoffee.com/products/black-thunder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24885183883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24885183947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Medium",
+    "variant_id": "24885184011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz / Fine",
+    "variant_id": "24885184075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55725713419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55725723339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55725740491"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55725758731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55725813131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55725817547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55725843979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55725847563"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "7978bbbaacb65fab",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-anei",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/Colombia.jpg?v=1501076543",
+  "platform": "shopify",
+  "product_id": "7750926091",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Body - Medium",
+   "Brightness - Low",
+   "Coffee",
+   "Colombia"
+  ],
+  "title": "Colombia",
+  "url": "https://ancoracoffee.com/products/colombia-anei",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24885208395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24885208459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium",
+    "variant_id": "24885208523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine",
+    "variant_id": "24885208587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55726872523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55726885195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55726909899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55726930891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55726980811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55727029835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55727046859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55727060107"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "53a463e3e67af6a8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ccda",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/Guatemala_18404f22-62ae-4c38-aee6-e15e811fdb9d.jpg?v=1501076669",
+  "platform": "shopify",
+  "product_id": "7750931211",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Body - Medium",
+   "Brightness - High",
+   "Coffee",
+   "Guatemala",
+   "RFA"
+  ],
+  "title": "Guatemala",
+  "url": "https://ancoracoffee.com/products/guatemala-ccda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24885268555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24885268619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium",
+    "variant_id": "24885268683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine",
+    "variant_id": "24885268747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55727873419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55727894411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55727931275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55728003595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55728059851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55728082827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55728125707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55728157515"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "ebf0b4c37e9a6eb6",
+  "first_seen": "2026-10-26",
+  "handle": "black-and-tan",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/BlacknTan.jpg?v=1501076381",
+  "platform": "shopify",
+  "product_id": "7750943755",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Blend",
+   "Body - Full",
+   "Brightness - Medium",
+   "Coffee",
+   "French Roast"
+  ],
+  "title": "Black and Tan",
+  "url": "https://ancoracoffee.com/products/black-and-tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24885398219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24885398283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium",
+    "variant_id": "24885398347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine",
+    "variant_id": "24885398411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55724879755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55724933195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55725383755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55725398987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55725504139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55725526859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55725541963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55725576971"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "669415731ad41bc9",
+  "first_seen": "2026-10-26",
+  "handle": "ancora-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/products/AncoraEspresso.jpg?v=1501076352",
+  "platform": "shopify",
+  "product_id": "7750957515",
+  "product_type": "Espresso",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Blend",
+   "Body - Full",
+   "Brightness - High",
+   "Coffee",
+   "Espresso",
+   "RFA"
+  ],
+  "title": "Ancora Espresso",
+  "url": "https://ancoracoffee.com/products/ancora-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "24885463883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Coarse",
+    "variant_id": "24885463947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Medium",
+    "variant_id": "24885464011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Fine",
+    "variant_id": "24885464075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "55896737547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "55896761291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Medium",
+    "variant_id": "55896776907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.95,
+    "title": "2 lb / Fine",
+    "variant_id": "55896795083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "55896843851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "55896866251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Medium",
+    "variant_id": "55896959563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lb / Fine",
+    "variant_id": "55896981643"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ },
+ {
+  "body_hash": "0d1809539d4b0bd9",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-moon",
+  "image": "https://cdn.shopify.com/s/files/1/1594/0549/files/Seasonal_harvestmoon_coffeepage_898cc859-8976-4248-b6ad-b6177c030f40.png?v=1756503854",
+  "platform": "shopify",
+  "product_id": "903234093092",
+  "product_type": "Coffee",
+  "roaster_slug": "ancoracoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Harvest Moon",
+  "url": "https://ancoracoffee.com/products/harvest-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "9174101131300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse",
+    "variant_id": "9174101164068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium",
+    "variant_id": "9174101196836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine",
+    "variant_id": "9174101229604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "9174101262372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Coarse",
+    "variant_id": "9174101295140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Medium",
+    "variant_id": "9174101327908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.95,
+    "title": "2 lb / Fine",
+    "variant_id": "9174101360676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "9174101393444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Coarse",
+    "variant_id": "9174101426212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Medium",
+    "variant_id": "9174101458980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.95,
+    "title": "5 lb / Fine",
+    "variant_id": "9174101491748"
+   }
+  ],
+  "vendor": "ancoracoffee"
+ }
+]

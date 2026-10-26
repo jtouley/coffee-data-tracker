@@ -1,0 +1,80 @@
+{
+ "7500855607393": {
+  "body_hash": "bac39865fd2a16e1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "fruit",
+   "sweetness",
+   "brown spice"
+  ],
+  "varietals": []
+ },
+ "7500873171041": {
+  "body_hash": "83b173a9aaeaf2b2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "caramel",
+   "honey",
+   "milk chocolate",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "7572243185761": {
+  "body_hash": "7ef0ead7a240cb30",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity tart mouthfeel",
+   "smooth quick",
+   "soft"
+  ],
+  "varietals": []
+ },
+ "8148651211": {
+  "body_hash": "374e2a9be9f1c542",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberries",
+   "bright",
+   "citrus acidity"
+  ],
+  "varietals": []
+ }
+}

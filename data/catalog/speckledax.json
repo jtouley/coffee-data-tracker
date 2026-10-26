@@ -1,0 +1,314 @@
+[
+ {
+  "body_hash": "db35aee769fea432",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-2",
+  "image": "https://speckledax.com/wp-content/uploads/2021/02/Mex-red-5-January-20-2025-at-12.41.48-3.png",
+  "platform": "woocommerce",
+  "product_id": "12598",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://speckledax.com/product/ethiopia-suke-quto-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "12598:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2 lbs",
+    "variant_id": "12598:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.0,
+    "title": "5 lbs",
+    "variant_id": "12598:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98d6addefef9a383",
+  "first_seen": "2026-10-26",
+  "handle": "early-riser",
+  "image": "https://speckledax.com/wp-content/uploads/2023/12/earlyriser.png",
+  "platform": "woocommerce",
+  "product_id": "128",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Early Riser",
+  "url": "https://speckledax.com/product/early-riser/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "128:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs",
+    "variant_id": "128:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5 lbs",
+    "variant_id": "128:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35a8683010a1fc6b",
+  "first_seen": "2026-10-26",
+  "handle": "sock-saunders-dark-roast",
+  "image": "https://speckledax.com/wp-content/uploads/2024/04/sock.png",
+  "platform": "woocommerce",
+  "product_id": "132",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Sock Saunders Dark Roast Coffee",
+  "url": "https://speckledax.com/product/sock-saunders-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "132:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lbs",
+    "variant_id": "132:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 lbs",
+    "variant_id": "132:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c513818830c98bf0",
+  "first_seen": "2026-10-26",
+  "handle": "chickadee-decaf",
+  "image": "https://speckledax.com/wp-content/uploads/2024/04/10190F24-068B-4DE8-B77C-6189C33ED746-3.png",
+  "platform": "woocommerce",
+  "product_id": "136",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Chickadee Decaf Coffee",
+  "url": "https://speckledax.com/product/chickadee-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz",
+    "variant_id": "136:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.5,
+    "title": "2 lbs",
+    "variant_id": "136:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5 lbs",
+    "variant_id": "136:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "478bb13e36538b90",
+  "first_seen": "2026-10-26",
+  "handle": "bird-dog",
+  "image": "https://speckledax.com/wp-content/uploads/2024/04/596569A8-3E72-4A18-8A4F-918FA2EDE39F-4.png",
+  "platform": "woocommerce",
+  "product_id": "140",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Bird Dog Coffee",
+  "url": "https://speckledax.com/product/bird-dog/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "140:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs",
+    "variant_id": "140:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5 lbs",
+    "variant_id": "140:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b648d20019fea1e3",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cuatro-vientos-anaerobic-natural",
+  "image": "https://speckledax.com/wp-content/uploads/2026/10/My-project-copy-April-06-2025-at-12.48.32-1-4-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "44462",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Costa Rica Cuatro Vientos Anaerobic Natural",
+  "url": "https://speckledax.com/product/costa-rica-cuatro-vientos-anaerobic-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "44462:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.0,
+    "title": "2 lbs",
+    "variant_id": "44462:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "5 lbs",
+    "variant_id": "44462:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d40dd89255769ba8",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-red-5-de-december",
+  "image": "https://speckledax.com/wp-content/uploads/2025/01/red-5.png",
+  "platform": "woocommerce",
+  "product_id": "44673",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Mexico Red 5 de Diciembre San Isidro Zoquiapam",
+  "url": "https://speckledax.com/product/mexico-red-5-de-december/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "44673:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2 lbs",
+    "variant_id": "44673:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.0,
+    "title": "5 lbs",
+    "variant_id": "44673:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "957572de888747df",
+  "first_seen": "2026-10-26",
+  "handle": "map-40-mokha-java",
+  "image": "https://speckledax.com/wp-content/uploads/2024/04/2A314721-F21C-4764-BFF9-347A42E4FF08.png",
+  "platform": "woocommerce",
+  "product_id": "86",
+  "product_type": "variable",
+  "roaster_slug": "speckledax",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Map 40 Mokha Java",
+  "url": "https://speckledax.com/product/map-40-mokha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "86:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs",
+    "variant_id": "86:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5 lbs",
+    "variant_id": "86:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

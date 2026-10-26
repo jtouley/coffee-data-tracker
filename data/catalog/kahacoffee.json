@@ -1,0 +1,5264 @@
+[
+ {
+  "body_hash": "795945d5bbc07a19",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-medley-3-pack-2-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyU10percentmediumroastmedley2lb.jpg?v=1791493486",
+  "platform": "shopify",
+  "product_id": "15406483669228",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Medium Roast Medley 3-Pack 2 lb",
+  "url": "https://kahacoffee.com/products/medium-roast-medley-3-pack-2-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.2,
+    "title": "Whole Bean",
+    "variant_id": "67639865475308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.2,
+    "title": "Drip Coffee Maker / Percolator",
+    "variant_id": "67639865508076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.2,
+    "title": "French Press",
+    "variant_id": "67639865540844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.2,
+    "title": "Pour Over",
+    "variant_id": "67639865573612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.2,
+    "title": "Moka Pot",
+    "variant_id": "67639865606380"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "c7afe65d43af785b",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-el-camino-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/Mockup-12oz-Happy-Medium.jpg?v=1680795707",
+  "platform": "shopify",
+  "product_id": "7848948105452",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Happy Medium Blend",
+  "url": "https://kahacoffee.com/products/copy-of-el-camino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43568875372780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43568875405548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "43568875438316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43568875471084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43568875503852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43568885039340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43568885072108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43568885104876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43568885137644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43568885170412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43568885203180"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43568885235948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43568885268716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43568885301484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43568885334252"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "f72496790e0987cd",
+  "first_seen": "2026-10-26",
+  "handle": "vertical-espresso-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/Mockup-12oz-Vertical-Espresso.jpg?v=1680813065",
+  "platform": "shopify",
+  "product_id": "7906447065324",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "VERTICAL Espresso Blend",
+  "url": "https://kahacoffee.com/products/vertical-espresso-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43768611012844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43768611045612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43768611078380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43768611111148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43768611143916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43768611176684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "43768611209452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43768611242220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43768611274988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43768611307756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43768611340524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43768611373292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43768611406060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43768611438828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43768611471596"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "29b67631bd0c1685",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-decaf-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/kaha_decaf_mw_logo_12_oz.jpg?v=1729612242",
+  "platform": "shopify",
+  "product_id": "7906449686764",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Smooth",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Decaf Blend",
+  "url": "https://kahacoffee.com/products/kaha-decaf-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43768616124652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43768616157420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43768616190188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43768616222956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43768616255724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43768616288492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "French Press / 12 oz",
+    "variant_id": "43768616321260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43768616354028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43768616386796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43768616419564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43768616452332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43768616485100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43768616517868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43768616550636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43768616583404"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "34c2e2fbf29e43fb",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify12ozsumatra.jpg?v=1778763312",
+  "platform": "shopify",
+  "product_id": "7907006185708",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Sumatra",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Sumatra",
+  "url": "https://kahacoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43769865240812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43769865273580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43769865306348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43769865339116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43769865371884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43769865404652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "French Press / 12 oz",
+    "variant_id": "43769865437420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "43769865470188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "43769865502956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43769865535724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43769865568492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43769865601260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.25,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43769865634028"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43769865666796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43769865699564"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "535219daa9937d8f",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-fall-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_12_oz_fall_blend_new_seasonal.jpg?v=1788268974",
+  "platform": "shopify",
+  "product_id": "7907117760748",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "Amesbury Coffee",
+   "Fall Blend",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Fall Blend",
+  "url": "https://kahacoffee.com/products/kaha-fall-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43770172604652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770172637420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770172670188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43770172702956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770172735724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770172768492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "French Press / 12 oz",
+    "variant_id": "43770172801260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770172834028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770172866796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43770172899564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770172932332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770172965100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43770172997868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770173030636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770173063404"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "2d64d59f38a68726",
+  "first_seen": "2026-10-26",
+  "handle": "kia-kaha-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/Mockup-12oz-Kia-Kaha.jpg?v=1764730997",
+  "platform": "shopify",
+  "product_id": "7907118317804",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kia Kaha Blend",
+  "url": "https://kahacoffee.com/products/kia-kaha-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43770173980908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770174013676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770174046444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43770174079212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770174111980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770174144748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "43770174177516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770174210284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770174243052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43770174275820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770174308588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770174341356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43770174374124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770174406892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770174439660"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "20c4377dfb96891f",
+  "first_seen": "2026-10-26",
+  "handle": "el-camino-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_12oz_El_Camino_Back_in_Stock.jpg?v=1761572195",
+  "platform": "shopify",
+  "product_id": "7907121004780",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Complex",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Light Roast Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "El Camino Blend",
+  "url": "https://kahacoffee.com/products/el-camino-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43770184433900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770184466668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770184499436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "43770184532204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770184564972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770184597740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "43770184630508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770184663276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770184696044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "43770184728812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770184761580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770184794348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "43770184827116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770184859884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770184892652"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "20c4377dfb96891f",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-el-camino-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_El_Camino_Back_in_Stock.jpg?v=1776552713",
+  "platform": "shopify",
+  "product_id": "7907123233004",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Clementine",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Light Roast Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "El Camino Blend",
+  "url": "https://kahacoffee.com/products/2-lb-el-camino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770189742316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770189840620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770189938924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770190037228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770190135532"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "34c2e2fbf29e43fb",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_sumatra.jpg?v=1778763335",
+  "platform": "shopify",
+  "product_id": "7907123691756",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Sumatra",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Sumatra",
+  "url": "https://kahacoffee.com/products/2-lb-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770191085804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770191184108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770191282412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770191380716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770191479020"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "34c2e2fbf29e43fb",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_5_lb_sumatra.jpg?v=1778763351",
+  "platform": "shopify",
+  "product_id": "7907124019436",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Sumatra",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Sumatra",
+  "url": "https://kahacoffee.com/products/5-lb-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770192658668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770192756972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770192855276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770192953580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770193051884"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "20c4377dfb96891f",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-el-camino-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify5lbelcaminobackinstock.jpg?v=1772036627",
+  "platform": "shopify",
+  "product_id": "7907124871404",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Light Roast Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "El Camino Blend",
+  "url": "https://kahacoffee.com/products/5-lb-el-camino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770194591980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770194690284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770194788588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770194886892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770194985196"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "5f6b69e005fac0a0",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-happy-medium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/2LBHappyMediumBGRemoved_Straightened_458e02fa-2721-42ab-9cd4-3e210313c799.png?v=1680899308",
+  "platform": "shopify",
+  "product_id": "7907126051052",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Clementine",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Happy Medium Blend",
+  "url": "https://kahacoffee.com/products/2-lb-happy-medium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770197999852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770198098156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770198196460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770198294764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770198393068"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "5f6b69e005fac0a0",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-happy-medium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/5LBHappyMediumBGRemoved_Straightned_b417c092-6db3-402f-876c-198be044acee.png?v=1680899497",
+  "platform": "shopify",
+  "product_id": "7907127296236",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Happy Medium Blend",
+  "url": "https://kahacoffee.com/products/5-lb-happy-medium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770199671020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770199769324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770199867628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770199965932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770200064236"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "29b67631bd0c1685",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-kaha-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/kaha_decaf_new_2lb_mw_logo_2.jpg?v=1729613279",
+  "platform": "shopify",
+  "product_id": "7907128770796",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Decaf Blend",
+  "url": "https://kahacoffee.com/products/2-lb-kaha-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43770202325228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43770202423532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43770202521836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43770202620140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43770202718444"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "29b67631bd0c1685",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-kaha-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/kaha_decaf_new_5lb_mw_logo_2.jpg?v=1729613130",
+  "platform": "shopify",
+  "product_id": "7907130147052",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Decaf Blend",
+  "url": "https://kahacoffee.com/products/5-lb-kaha-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43770205372652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43770205470956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43770205569260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43770205667564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43770205765868"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "2d64d59f38a68726",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-kia-kaha-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/5LBKiaKahaBGRemoved_Straightned_ab401082-40d9-4d1b-97bb-140987dbcf7f.png?v=1681138304",
+  "platform": "shopify",
+  "product_id": "7907834659052",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kia Kaha Blend",
+  "url": "https://kahacoffee.com/products/5-lb-kia-kaha-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43772522889452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43772522987756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43772523086060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43772523184364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43772523282668"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "f72496790e0987cd",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-vertical-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/5LBVerticalEspressoBGRemoved_Straightned_a760dd21-1798-4e39-9fa6-70e070d67655.png?v=1681139464",
+  "platform": "shopify",
+  "product_id": "7907839049964",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "VERTICAL Espresso Blend",
+  "url": "https://kahacoffee.com/products/5-lb-vertical-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43772547694828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43772547793132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "43772547891436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43772547989740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43772548088044"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "2e01701312749e7f",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-kaha-fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify5lbfallblendnewseasonal.jpg?v=1788269634",
+  "platform": "shopify",
+  "product_id": "7907840164076",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "Amesbury Coffee",
+   "Fall Blend",
+   "Filter Coffee",
+   "French Press",
+   "Green Coffee Bean",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Fall Blend",
+  "url": "https://kahacoffee.com/products/5-lb-kaha-fall-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43772560015596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "43772560113900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "French Press / 5 lb",
+    "variant_id": "43772560212204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "43772560310508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.75,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "43772560408812"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "2d64d59f38a68726",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-kia-kaha-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/2LBKiaKahaBGRemoved_Straightened_bfb5cdc0-0a9a-48d1-b70e-9c0e010076df.png?v=1681142347",
+  "platform": "shopify",
+  "product_id": "7907877912812",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kia Kaha Blend",
+  "url": "https://kahacoffee.com/products/2-lb-kia-kaha-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43772700885228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43772700983532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43772701081836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43772701180140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43772701278444"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "147ef52b8aea1655",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-vertical-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/products/2LBVerticalEspressoBGRemoved_Straightened_b0ce1bd6-33cf-44f0-af3b-5efe5518667f.png?v=1681142520",
+  "platform": "shopify",
+  "product_id": "7907878371564",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "VERTICAL Espresso Blend",
+  "url": "https://kahacoffee.com/products/2-lb-vertical-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43772709339372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43772709437676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "43772709535980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43772709634284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43772709732588"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "4ade8171f2eec34e",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-kaha-fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_fall_blend_new_seasonal_blend.jpg?v=1788269209",
+  "platform": "shopify",
+  "product_id": "7907879747820",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "Amesbury Coffee",
+   "Clementine",
+   "Fall Blend",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Green Coffee Bean",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Fall Blend",
+  "url": "https://kahacoffee.com/products/2-lb-kaha-fall-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43772713238764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "43772713337068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "43772713435372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "43772713533676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "43772713631980"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "bad6a6d55cbf0e8d",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/KAHA_Half_Caff_12_oz_bag_mockup.png?v=1729622963",
+  "platform": "shopify",
+  "product_id": "8514860941548",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Smooth",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Half Caff Blend",
+  "url": "https://kahacoffee.com/products/kaha-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45276883550444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45276883583212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45276883615980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "45276883648748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45276883681516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45276883714284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "French Press / 12 oz",
+    "variant_id": "45276883747052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45276883779820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45276883812588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "45276883845356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45276883878124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45276883910892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "45276883943660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45276883976428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45276884009196"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "bad6a6d55cbf0e8d",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-half-caff-blend-2-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/2_lb_kaha_half_caff_product.jpg?v=1729622984",
+  "platform": "shopify",
+  "product_id": "8514893381868",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Half Caff Blend 2 lb",
+  "url": "https://kahacoffee.com/products/kaha-half-caff-blend-2-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45277084319980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45277084352748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45277084385516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45277084418284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45277084451052"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "bad6a6d55cbf0e8d",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-half-caff-blend-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/5_lb_kaha_half_caff_product.jpg?v=1729622984",
+  "platform": "shopify",
+  "product_id": "8514906620140",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Decaf",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "KAHA Half Caff Blend 5 lb",
+  "url": "https://kahacoffee.com/products/kaha-half-caff-blend-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45277180231916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45277180264684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45277180297452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45277180330220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45277180362988"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "d7ff96f25d306597",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_12_oz_cold_brew.jpg?v=1763315205",
+  "platform": "shopify",
+  "product_id": "8529006952684",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Cold Brew",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kaha Cold Brew",
+  "url": "https://kahacoffee.com/products/kaha-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45310558175468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45310558208236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45310558241004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "45310558273772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45310558306540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45310558339308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "45310558372076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45310558404844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45310558437612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "45310558470380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45310558503148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45310558535916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "45310558568684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45310558601452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45310558634220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Cold Brew - Coarse / 12 oz",
+    "variant_id": "45310592942316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Cold Brew - Coarse / 2 lb",
+    "variant_id": "45310600446188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Cold Brew - Coarse / 5 lb",
+    "variant_id": "45310611554540"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "d7ff96f25d306597",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-cold-brew-2lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_cold_brew.jpg?v=1763315205",
+  "platform": "shopify",
+  "product_id": "8529179279596",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Clementine",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kaha Cold Brew - 2lb",
+  "url": "https://kahacoffee.com/products/kaha-cold-brew-2lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45310881497324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45310881530092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45310881562860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45310881595628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45310881628396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Cold Brew - Coarse / 2 lb",
+    "variant_id": "45310882152684"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "d7ff96f25d306597",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-cold-brew-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify5lbcoldbrew.jpg?v=1763318289",
+  "platform": "shopify",
+  "product_id": "8529181343980",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kaha Cold Brew - 5 lb",
+  "url": "https://kahacoffee.com/products/kaha-cold-brew-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45310887362796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45310887395564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45310887428332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45310887461100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45310887493868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Cold Brew - Coarse / 5 lb",
+    "variant_id": "45310888214764"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "0d271843907fad64",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-tabz-z61-1",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/4250002_1000.png?v=1720535764",
+  "platform": "shopify",
+  "product_id": "8577130660076",
+  "product_type": "Coffee Cleaning Products",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "Coffee Cleaning Products",
+   "Urnex"
+  ],
+  "title": "Urnex Cafiza Espresso Cleaner E16 Tablets",
+  "url": "https://kahacoffee.com/products/urnex-tabz-z61-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 150,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45453431963884"
+   }
+  ],
+  "vendor": "KAHA Coffee Roasters"
+ },
+ {
+  "body_hash": "f3d4a47d216d4e0c",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza-espresso-cleaner-powder",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/4250000_1000.png?v=1720536302",
+  "platform": "shopify",
+  "product_id": "8577138983148",
+  "product_type": "Coffee Cleaning Products",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "Coffee Cleaning Products",
+   "Urnex"
+  ],
+  "title": "Urnex Cafiza Espresso Cleaner Powder",
+  "url": "https://kahacoffee.com/products/urnex-cafiza-espresso-cleaner-powder",
+  "variants": [
+   {
+    "available": false,
+    "grams": 567,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "45453464666348"
+   }
+  ],
+  "vendor": "KAHA Coffee Roasters"
+ },
+ {
+  "body_hash": "06478ac0024bbabc",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify12ozNewEnglandBlendnonew.jpg?v=1764730997",
+  "platform": "shopify",
+  "product_id": "8692100923628",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "New England Blend",
+  "url": "https://kahacoffee.com/products/new-england-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45831572881644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45831572914412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45831572947180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "45831572979948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45831573012716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45831573045484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "French Press / 12 oz",
+    "variant_id": "45831573078252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "45831573111020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "French Press / 5 lb",
+    "variant_id": "45831573143788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "45831573176556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45831573209324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45831573242092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "45831573274860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45831573307628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45831573340396"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "06478ac0024bbabc",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-blend-dark-roast-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_New_England_Blend_back_in_stock.jpg?v=1776546869",
+  "platform": "shopify",
+  "product_id": "8695229415660",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "New England Blend Dark Roast 2 lb Bag",
+  "url": "https://kahacoffee.com/products/new-england-blend-dark-roast-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45843161055468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45843161088236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "45843161121004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45843161153772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45843161186540"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "06478ac0024bbabc",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-blend-dark-roast-5-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify5lbNewEnglandBlendbackinstock.jpg?v=1776553089",
+  "platform": "shopify",
+  "product_id": "8695252222188",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "New England Blend Dark Roast 5 lb Bag",
+  "url": "https://kahacoffee.com/products/new-england-blend-dark-roast-5-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45843230261484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45843230294252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "French Press / 5 lb",
+    "variant_id": "45843230327020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45843230359788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45843230392556"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "78b532354995d952",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_Guatemala_Huehuetenango_12_oz_back_in_stock_b04fe721-a7bd-49cb-9224-086ca730dbf8.jpg?v=1763264547",
+  "platform": "shopify",
+  "product_id": "8707656843500",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://kahacoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45884903129324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45884903162092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45884903194860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "45884903227628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45884903260396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45884903293164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "45884903325932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45884903358700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45884903391468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "45884903424236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45884903457004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45884903489772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "45884903522540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45884903555308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45884903588076"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "78b532354995d952",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyGuatemalaHuehuetenango2lbbackinstock.jpg?v=1763313890",
+  "platform": "shopify",
+  "product_id": "8707694559468",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Clementine",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Guatemala Huehuetenango 2 lb Bag",
+  "url": "https://kahacoffee.com/products/guatemala-huehuetenango-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45885016572140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45885016604908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45885016637676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45885016670444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45885016703212"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "bd7b81216ee06540",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-5-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyGuatemalaHuehuetenango5lbbackinstock.jpg?v=1763318628",
+  "platform": "shopify",
+  "product_id": "8707697901804",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Guatemala Huehuetenango 5 lb Bag",
+  "url": "https://kahacoffee.com/products/guatemala-huehuetenango-5-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45885026500844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45885026533612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45885026566380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45885026599148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45885026631916"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "3663adf084a4f6ff",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-iced-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_kaha_iced_coffee_blend_12oz_bag.png?v=1740509959",
+  "platform": "shopify",
+  "product_id": "8707703636204",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kaha Iced Coffee Blend",
+  "url": "https://kahacoffee.com/products/kaha-iced-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45885042229484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45885042262252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45885042295020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "45885042327788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45885042360556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45885042393324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "45885042426092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45885042458860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45885042491628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "45885042524396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45885042557164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45885042589932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "45885042622700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45885042655468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45885042688236"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "3663adf084a4f6ff",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-iced-coffee-blend-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_kaha_iced_coffee_blend_2lb_bag.png?v=1740509959",
+  "platform": "shopify",
+  "product_id": "8707733684460",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Clementine",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "cold coffee",
+   "home page",
+   "iced coffee"
+  ],
+  "title": "Kaha Iced Coffee Blend 2 lb Bag",
+  "url": "https://kahacoffee.com/products/kaha-iced-coffee-blend-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45885160489196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "45885160521964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "45885160554732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "45885160587500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "45885160620268"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "3663adf084a4f6ff",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-iced-coffee-blend-5-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_kaha_iced_coffee_blend_5lb_bag.png?v=1740509959",
+  "platform": "shopify",
+  "product_id": "8707737321708",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Kaha Iced Coffee Blend 5 lb Bag",
+  "url": "https://kahacoffee.com/products/kaha-iced-coffee-blend-5-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45885170155756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "45885170188524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "45885170221292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "45885170254060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "45885170286828"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "b3e77f2dcf3d1b9e",
+  "first_seen": "2026-10-26",
+  "handle": "diagonal-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify12ozdiagonalespresso.jpg?v=1778762423",
+  "platform": "shopify",
+  "product_id": "8803121955052",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Diagonal Espresso Blend",
+  "url": "https://kahacoffee.com/products/diagonal-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46197480554732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46197480587500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46197480620268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "46197480653036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46197480685804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46197480718572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "French Press / 12 oz",
+    "variant_id": "46197480751340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "46197480784108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "French Press / 5 lb",
+    "variant_id": "46197480816876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "46197480849644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46197480882412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46197480915180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "46197480947948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46197480980716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46197481013484"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "b3e77f2dcf3d1b9e",
+  "first_seen": "2026-10-26",
+  "handle": "diagonal-espresso-blend-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_diagonal_espresso_2lb.jpg?v=1776552604",
+  "platform": "shopify",
+  "product_id": "8803154460908",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Diagonal Espresso Blend 2 lb Bag",
+  "url": "https://kahacoffee.com/products/diagonal-espresso-blend-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46197587050732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46197587083500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "French Press / 2 lb",
+    "variant_id": "46197587116268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46197587149036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46197587181804"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "b3e77f2dcf3d1b9e",
+  "first_seen": "2026-10-26",
+  "handle": "diagonal-espresso-blend-5-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_diagonal_espresso_5lb.jpg?v=1776554390",
+  "platform": "shopify",
+  "product_id": "8803166355692",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Diagonal Espresso Blend 5 lb Bag",
+  "url": "https://kahacoffee.com/products/diagonal-espresso-blend-5-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46197626470636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46197626503404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "French Press / 5 lb",
+    "variant_id": "46197626536172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46197626568940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46197626601708"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "b424bcb3f4f71837",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-2-pack-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyespresso2pack10percent12oz.jpg?v=1760449665",
+  "platform": "shopify",
+  "product_id": "8832900366572",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee"
+  ],
+  "title": "Espresso 2-Pack 12 oz",
+  "url": "https://kahacoffee.com/products/espresso-2-pack-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.42,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46273335722220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.42,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "46273335820524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.42,
+    "title": "French Press / 12 oz",
+    "variant_id": "46273335918828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.42,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "46273336017132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.42,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "46273336115436"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "9d7bde659a93bf65",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-2-pack-2-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyespresso2pack10percent2lb.jpg?v=1760449519",
+  "platform": "shopify",
+  "product_id": "8833293877484",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Espresso",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "cold coffee",
+   "home page"
+  ],
+  "title": "Espresso 2-Pack 2 lb",
+  "url": "https://kahacoffee.com/products/espresso-2-pack-2-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.85,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46273871380716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.85,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46273871413484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.85,
+    "title": "French Press / 2 lb",
+    "variant_id": "46273871446252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.85,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46273871479020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.85,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46273871511788"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "cdb9d336b4392230",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-2-pack-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify5lbespresso2pack.png?v=1742321927",
+  "platform": "shopify",
+  "product_id": "8833299841260",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee"
+  ],
+  "title": "Espresso 2-Pack 5 lb",
+  "url": "https://kahacoffee.com/products/espresso-2-pack-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.54,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46273879343340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.54,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46273879376108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.54,
+    "title": "French Press / 5 lb",
+    "variant_id": "46273879408876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.54,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46273879441644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.54,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46273879474412"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "96a4cb95d8bea2eb",
+  "first_seen": "2026-10-26",
+  "handle": "happy-medium-blend-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyhappymedium6oz_9e10ada8-678f-486e-95e7-9f43c0ad1b51.png?v=1755626613",
+  "platform": "shopify",
+  "product_id": "8988766666988",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Happy Medium Blend 6 oz",
+  "url": "https://kahacoffee.com/products/happy-medium-blend-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742405873900"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742405906668"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742405939436"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742405972204"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742406004972"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "21126dfa06a381d5",
+  "first_seen": "2026-10-26",
+  "handle": "iced-coffee-blend-6-oz-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyicedcoffeeblend6oz.png?v=1755627376",
+  "platform": "shopify",
+  "product_id": "8988778561772",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "KAHA Iced Coffee Blend 6 oz",
+  "url": "https://kahacoffee.com/products/iced-coffee-blend-6-oz-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742413934828"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742413967596"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742414000364"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742414033132"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742414065900"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "a90b6bfb0e81f4f8",
+  "first_seen": "2026-10-26",
+  "handle": "kia-kaha-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifykiakahablend6oz.png?v=1764722359",
+  "platform": "shopify",
+  "product_id": "8988782592236",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Kia Kaha Blend 6 oz",
+  "url": "https://kahacoffee.com/products/kia-kaha-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742430974188"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742431006956"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742431039724"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742431072492"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742431105260"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "cea8bf347e633fb4",
+  "first_seen": "2026-10-26",
+  "handle": "vertical-espresso-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyverticalespressoblend6oz.png?v=1755628955",
+  "platform": "shopify",
+  "product_id": "8988796027116",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Vertical Espresso Blend 6 oz",
+  "url": "https://kahacoffee.com/products/vertical-espresso-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742455288044"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742455320812"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742455353580"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742455386348"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742455419116"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "eb8130e14a4dc8d6",
+  "first_seen": "2026-10-26",
+  "handle": "el-camino-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_6_oz_el_camino.jpg?v=1778594261",
+  "platform": "shopify",
+  "product_id": "8988799009004",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "El Camino Blend 6 oz",
+  "url": "https://kahacoffee.com/products/el-camino-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742468722924"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742468755692"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742468788460"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742468821228"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742468853996"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "29b67631bd0c1685",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-decaf-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifykahadecaf6oz.png?v=1755630754",
+  "platform": "shopify",
+  "product_id": "8988801728748",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "KAHA Decaf 6 oz",
+  "url": "https://kahacoffee.com/products/kaha-decaf-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742476161260"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742476194028"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742476226796"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742476259564"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742476292332"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "d4b9a2a20e9adbdc",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-half-caff-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifykahahalfcaff6oz.png?v=1755639491",
+  "platform": "shopify",
+  "product_id": "8988879487212",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "KAHA Half Caff Blend 6 oz",
+  "url": "https://kahacoffee.com/products/kaha-half-caff-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46742655140076"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46742655172844"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46742655205612"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46742655238380"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46742655271148"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "a623a8a7ce3350ae",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyGuatemalaHuehuetenango6oz.jpg?v=1772030637",
+  "platform": "shopify",
+  "product_id": "8989332996332",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Guatemala Huehuetenango 6 oz",
+  "url": "https://kahacoffee.com/products/guatemala-huehuetenango-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46744040145132"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46744040177900"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46744040210668"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46744040243436"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46744040276204"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "e25e25ea437794af",
+  "first_seen": "2026-10-26",
+  "handle": "kaha-cold-brew-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify6ozcoldbrew.jpg?v=1772031734",
+  "platform": "shopify",
+  "product_id": "8989333586156",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "KAHA Cold Brew 6 oz",
+  "url": "https://kahacoffee.com/products/kaha-cold-brew-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46744041849068"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46744041881836"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46744041914604"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46744041947372"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46744041980140"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "12aa9586e408a775",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_6_oz_sumatra.jpg?v=1778763275",
+  "platform": "shopify",
+  "product_id": "8989333946604",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Sumatra 6 oz",
+  "url": "https://kahacoffee.com/products/sumatra-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46744045617388"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46744045650156"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "French Press / 6 oz",
+    "variant_id": "46744045682924"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46744045715692"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46744045748460"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "c792da97e844bc45",
+  "first_seen": "2026-10-26",
+  "handle": "new-england-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify6oznewenglandblend_b3cf8bd6-a6aa-4362-8d01-c614017b6815.jpg?v=1778593700",
+  "platform": "shopify",
+  "product_id": "8989334831340",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "New England Blend 6 oz",
+  "url": "https://kahacoffee.com/products/new-england-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46744052105452"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46744052138220"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "French Press / 6 oz",
+    "variant_id": "46744052170988"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46744052203756"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46744052236524"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "e539a0861cd850c4",
+  "first_seen": "2026-10-26",
+  "handle": "diagonal-espresso-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify6ozdiagonalespresso.jpg?v=1778763031",
+  "platform": "shopify",
+  "product_id": "8989335093484",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Diagonal Espresso Blend 6 oz",
+  "url": "https://kahacoffee.com/products/diagonal-espresso-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46744053186796"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46744053219564"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "French Press / 6 oz",
+    "variant_id": "46744053252332"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46744053285100"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 10.25,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46744053317868"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "5b1a34166f4b1639",
+  "first_seen": "2026-10-26",
+  "handle": "fall-blend-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyfallblend6oz.jpg?v=1756846675",
+  "platform": "shopify",
+  "product_id": "9003645403372",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Fall Blend 6 oz",
+  "url": "https://kahacoffee.com/products/fall-blend-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46783984730348"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46783984763116"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "French Press / 6 oz",
+    "variant_id": "46783984795884"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46783984828652"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46783984861420"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "795945d5bbc07a19",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-medley-3-pack-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopifyU10percentmediumroastmedley12oz.jpg?v=1791493722",
+  "platform": "shopify",
+  "product_id": "9034829955308",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Dark Roast",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Medium Roast Medley 3-Pack 12 oz",
+  "url": "https://kahacoffee.com/products/medium-roast-medley-3-pack-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.25,
+    "title": "Whole Bean",
+    "variant_id": "46871416275180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.25,
+    "title": "Drip Coffee Maker / Percolator",
+    "variant_id": "46871416307948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.25,
+    "title": "French Press",
+    "variant_id": "46871416340716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.25,
+    "title": "Pour Over",
+    "variant_id": "46871416373484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 53.25,
+    "title": "Moka Pot",
+    "variant_id": "46871416406252"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "be4045dbb7dae8f7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify12ozguatemalablueayarza.jpg?v=1778590229",
+  "platform": "shopify",
+  "product_id": "9046728147180",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Guatemala Blue Ayarza",
+  "url": "https://kahacoffee.com/products/guatemala-blue-ayarza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46902933881068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46902933913836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46902933946604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "46902933979372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46902934012140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46902934044908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "46902934077676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "46902934110444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "46902934143212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "46902934175980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46902934208748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46902934241516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "46902934274284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46902934307052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46902934339820"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "5dae612a43b5f889",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify6ozguatemalablueayarzann.jpg?v=1778593629",
+  "platform": "shopify",
+  "product_id": "9046784540908",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Guatemala Blue Ayarza Dark Roast 6 oz",
+  "url": "https://kahacoffee.com/products/guatemala-blue-ayarza-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46903163388140"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46903163420908"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46903163453676"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46903163486444"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46903163519212"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "be4045dbb7dae8f7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza-5-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_5_lb_Guatemala_Blue_Ayarza_fc510b5e-154e-49d8-b36c-f07c8bd4e507.jpg?v=1778590247",
+  "platform": "shopify",
+  "product_id": "9049784811756",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Guatemala Blue Ayarza 5 lb Bag",
+  "url": "https://kahacoffee.com/products/guatemala-blue-ayarza-5-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46907166327020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46907166359788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "46907166392556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46907166425324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46907166458092"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "be4045dbb7dae8f7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_guatemala_blue_ayarza.jpg?v=1778588903",
+  "platform": "shopify",
+  "product_id": "9065530294508",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "home page",
+   "natural processed"
+  ],
+  "title": "Guatemala Blue Ayarza 2 lb Bag",
+  "url": "https://kahacoffee.com/products/guatemala-blue-ayarza-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46947828269292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46947828302060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "46947828334828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46947828367596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46947828400364"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "2dfa9ee89a9e6e59",
+  "first_seen": "2026-10-26",
+  "handle": "horizontal-medium-roast-espresso-6-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify6ozhorizontalespressonn.jpg?v=1778442612",
+  "platform": "shopify",
+  "product_id": "9066984603884",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "6 oz bags",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean"
+  ],
+  "title": "Horizontal Medium Roast Espresso 6 oz",
+  "url": "https://kahacoffee.com/products/horizontal-medium-roast-espresso-6-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 6 oz",
+    "variant_id": "46949997314284"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Drip Coffee Maker / Percolator / 6 oz",
+    "variant_id": "46949997347052"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "French Press / 6 oz",
+    "variant_id": "46949997379820"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Pour Over / 6 oz",
+    "variant_id": "46949997412588"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 8.99,
+    "title": "Moka Pot / 6 oz",
+    "variant_id": "46949997445356"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "751bf52b7aba2627",
+  "first_seen": "2026-10-26",
+  "handle": "horizontal-medium-roast-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify12ozhorizontalespresso_ba89e526-c535-4c0b-bfda-c3a8b4516c60.jpg?v=1778441923",
+  "platform": "shopify",
+  "product_id": "9067013570796",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "12 oz bag",
+   "Amesbury Coffee",
+   "Espresso",
+   "Filter Coffee",
+   "French Press",
+   "Ground Coffee",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Horizontal Medium Roast Espresso",
+  "url": "https://kahacoffee.com/products/horizontal-medium-roast-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46950072090860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46950072123628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46950072156396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Drip Coffee Maker / Percolator / 12 oz",
+    "variant_id": "46950072189164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46950072221932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46950072254700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "French Press / 12 oz",
+    "variant_id": "46950072287468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "46950072320236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "46950072353004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Pour Over / 12 oz",
+    "variant_id": "46950072385772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46950072418540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46950072451308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.49,
+    "title": "Moka Pot / 12 oz",
+    "variant_id": "46950072484076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46950072516844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46950072549612"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "751bf52b7aba2627",
+  "first_seen": "2026-10-26",
+  "handle": "horizontal-medium-roast-espresso-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_2_lb_horizontal_espresso_c73fc8ef-ee72-4622-9c71-b4501f5c4362.jpg?v=1778441937",
+  "platform": "shopify",
+  "product_id": "9067402821868",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "2 lb bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "French Press",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "home page",
+   "natural processed"
+  ],
+  "title": "Horizontal Medium Roast Espresso 2 lb Bag",
+  "url": "https://kahacoffee.com/products/horizontal-medium-roast-espresso-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46950626197740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Drip Coffee Maker / Percolator / 2 lb",
+    "variant_id": "46950626230508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "French Press / 2 lb",
+    "variant_id": "46950626263276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Pour Over / 2 lb",
+    "variant_id": "46950626296044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Moka Pot / 2 lb",
+    "variant_id": "46950626328812"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ },
+ {
+  "body_hash": "751bf52b7aba2627",
+  "first_seen": "2026-10-26",
+  "handle": "horizontal-medium-roast-espresso-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/2624/6498/files/shopify_5_lb_horizontal_espresso_246f4d87-b251-493e-80fc-26c5e8528d99.jpg?v=1778441949",
+  "platform": "shopify",
+  "product_id": "9067436966124",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kahacoffee",
+  "tags": [
+   "5 LB bag",
+   "Amesbury Coffee",
+   "Balanced",
+   "Filter Coffee",
+   "Fruit forward",
+   "Ground Coffee",
+   "Medium Roast",
+   "North Shore Coffee",
+   "Washed Process Coffee",
+   "Whole Bean",
+   "Wholesale Coffee",
+   "home page"
+  ],
+  "title": "Horizontal Medium Roast Espresso 5 lb Bag",
+  "url": "https://kahacoffee.com/products/horizontal-medium-roast-espresso-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46950664208620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Drip Coffee Maker / Percolator / 5 lb",
+    "variant_id": "46950664241388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "French Press / 5 lb",
+    "variant_id": "46950664274156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Pour Over / 5 lb",
+    "variant_id": "46950664306924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.99,
+    "title": "Moka Pot / 5 lb",
+    "variant_id": "46950664339692"
+   }
+  ],
+  "vendor": "Kaha Coffee Roasters, Inc"
+ }
+]

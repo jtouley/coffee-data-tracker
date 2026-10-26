@@ -1,0 +1,1277 @@
+[
+ {
+  "body_hash": "34e56b75ed183033",
+  "first_seen": "2026-10-26",
+  "handle": "ceres",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Light_VT_CeresBlend.png?v=1629979788",
+  "platform": "shopify",
+  "product_id": "1475297083475",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Light"
+  ],
+  "title": "Ceres Blend",
+  "url": "https://802coffee.com/products/ceres",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz",
+    "variant_id": "39700578697299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2 lb",
+    "variant_id": "39700578730067"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "a1ba72cba10aeae0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-la-concordia",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_MexicoConcordia.png?v=1792109645",
+  "platform": "shopify",
+  "product_id": "15409132699731",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Mexico Chiapas La Concordia",
+  "url": "https://802coffee.com/products/mexico-chiapas-la-concordia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "67689042739283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb",
+    "variant_id": "67689042772051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5lb",
+    "variant_id": "67689042804819"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "7a3670a97e117e01",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_Mocha_JavaOrgOnly.png?v=1733170953",
+  "platform": "shopify",
+  "product_id": "3829451292755",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Medium"
+  ],
+  "title": "Mocha Java",
+  "url": "https://802coffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "32164500668499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "32164500701267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "32164500734035"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "1f642d33dc8687e8",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-a-few-caffs-short-of-a-herd",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Dark_AFewCaffs_db3c944e-a8e4-49ba-9d21-7bf94780584b.png?v=1637182196",
+  "platform": "shopify",
+  "product_id": "4100875518035",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Decaf",
+   "Half Caf"
+  ],
+  "title": "A Few Caffs Short of a Herd",
+  "url": "https://802coffee.com/products/copy-of-a-few-caffs-short-of-a-herd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "30138391068755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "30138391101523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "30138391134291"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "140c23d58dfcc57d",
+  "first_seen": "2026-10-26",
+  "handle": "vermont-sunrise-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_VT_Sunrise_Organic.png?v=1763494201",
+  "platform": "shopify",
+  "product_id": "4721008902227",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Light"
+  ],
+  "title": "Vermont Sunrise Blend",
+  "url": "https://802coffee.com/products/vermont-sunrise-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz",
+    "variant_id": "32333939441747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2 lb",
+    "variant_id": "32333939474515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5 lb",
+    "variant_id": "32333939507283"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "0b7f4639f6a41688",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-sapan-minanga",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Darks_AllSulawesi_Toraja_Minan.png?v=1636567472",
+  "platform": "shopify",
+  "product_id": "6639753887827",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Dark",
+   "Oceana",
+   "Single Origin"
+  ],
+  "title": "Sulawesi Toraja Sapan Minanga",
+  "url": "https://802coffee.com/products/sulawesi-toraja-sapan-minanga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "39506227167315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "39506227200083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "39506240274515"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1lb",
+    "variant_id": "43162539982931"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "afee91b68f450ef6",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/LIght_Cold_Brew_Blend.png?v=1654874378",
+  "platform": "shopify",
+  "product_id": "6781445800019",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Light"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://802coffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "40022744399955"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "1lb",
+    "variant_id": "40022744432723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "40022744465491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "40022744498259"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "f8b7682dbece3b72",
+  "first_seen": "2026-10-26",
+  "handle": "monarch-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Medium_MonarchBlend.png?v=1665013865",
+  "platform": "shopify",
+  "product_id": "6876581265491",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Monarch Blend",
+  "url": "https://802coffee.com/products/monarch-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "40336926572627"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb",
+    "variant_id": "40336926605395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "40336926638163"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "330bad25cb792716",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_All_no_ftoCOLOMBO_PEDREGAL_LARGE_FINAL_44444db9-6ef2-4517-86f7-6789dfa0574b.png?v=1709560383",
+  "platform": "shopify",
+  "product_id": "6939875180627",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Colombia Pink Bourbon",
+  "url": "https://802coffee.com/products/colombia-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "40517436047443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "40517436080211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "40517436112979"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "8b5f2472fdadca33",
+  "first_seen": "2026-10-26",
+  "handle": "dominican-republic-ramirez-estate-2",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_DominicanRepublic_Natural.png?v=1701374505",
+  "platform": "shopify",
+  "product_id": "7110794674259",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Dominican Republic Ramirez Estate",
+  "url": "https://802coffee.com/products/dominican-republic-ramirez-estate-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "41200774021203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "2lb",
+    "variant_id": "41200774053971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5lb",
+    "variant_id": "41200774086739"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "1e240db00064ef22",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-paloma",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_Colombia_Poloma_nocerts_1.png?v=1767792628",
+  "platform": "shopify",
+  "product_id": "7418652196947",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Colombia La Paloma",
+  "url": "https://802coffee.com/products/colombia-la-paloma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "42082266185811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "42082266218579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "42082266251347"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "cc73f68d836d9ad2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-esmeralda",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_COLOMBO_Esmerelda.png?v=1728416383",
+  "platform": "shopify",
+  "product_id": "7454711382099",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Colombia La Esmeralda",
+  "url": "https://802coffee.com/products/colombia-la-esmeralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "42225460641875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "42225460674643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "42225460707411"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "c23369f2ed6d64b8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-antioquia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_COLOMBIA_DECAF_LARGE_bb6ef0e3-d36e-4728-b220-67df0fd44dca.png?v=1732106407",
+  "platform": "shopify",
+  "product_id": "7476092371027",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Medium"
+  ],
+  "title": "Colombia Antioquia Decaf",
+  "url": "https://802coffee.com/products/colombia-antioquia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "42312243380307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "42312243413075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "42312243445843"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "26af6c5a8f8c2c7f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limu-gera-genji-copy",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_Ethiopia_Guji.png?v=1735649613",
+  "platform": "shopify",
+  "product_id": "7501029212243",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "African"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://802coffee.com/products/ethiopia-limu-gera-genji-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "42398419222611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "42398419255379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "42398419288147"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "dd7bb16156d9df79",
+  "first_seen": "2026-10-26",
+  "handle": "drc",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_DRC_Natural2.png?v=1791203553",
+  "platform": "shopify",
+  "product_id": "7596392513619",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "African",
+   "Single Origin"
+  ],
+  "title": "Democratic Republic of Congo",
+  "url": "https://802coffee.com/products/drc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "42684410036307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb",
+    "variant_id": "42684410069075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5lb",
+    "variant_id": "42684410101843"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "e8f6fe6883d6b85b",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-kateshi-estate",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_Zambia-Aner-Natural.png?v=1747332100",
+  "platform": "shopify",
+  "product_id": "7598662484051",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "African"
+  ],
+  "title": "Zambia Kateshi Estate",
+  "url": "https://802coffee.com/products/zambia-kateshi-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "42692966940755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb",
+    "variant_id": "42692966973523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5lb",
+    "variant_id": "42692967006291"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "42dafe8f21eca7ec",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-silencio",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_All_no_fto-Colombia-Silencio.png?v=1757591647",
+  "platform": "shopify",
+  "product_id": "7679367053395",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Colombia El Silencio",
+  "url": "https://802coffee.com/products/colombia-el-silencio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "43022155677779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "43022155710547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "43022155743315"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "c37a25465b984171",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-tierra-bendita",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_ElSalvador_TierraBendita.png?v=1763496696",
+  "platform": "shopify",
+  "product_id": "7758571765843",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "El Salvador Tierra Bendita",
+  "url": "https://802coffee.com/products/el-salvador-tierra-bendita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "43271084081235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "43271084114003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "43271084146771"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "9c416e4e35feebe3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-bendicion",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_Honduras_Bendicion.png?v=1767793120",
+  "platform": "shopify",
+  "product_id": "7796312473683",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "Honduras Finca La Bendición",
+  "url": "https://802coffee.com/products/honduras-finca-la-bendicion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "43403520213075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "43403520245843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "43403520278611"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "9148e12453f5d8ca",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-tierra-bendita-copy",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_El_Salvador_Las_Veraneras.png?v=1775591265",
+  "platform": "shopify",
+  "product_id": "7910152470611",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Single Origin"
+  ],
+  "title": "El Salvador Las Veraneras",
+  "url": "https://802coffee.com/products/el-salvador-tierra-bendita-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "44273343103059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "2lb",
+    "variant_id": "44273343135827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb",
+    "variant_id": "44273343168595"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "d1861dd60cd4c752",
+  "first_seen": "2026-10-26",
+  "handle": "the-fermentation-project",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/IMG_7100.png?v=1785438117",
+  "platform": "shopify",
+  "product_id": "8033502232659",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Light",
+   "Single Origin"
+  ],
+  "title": "The Fermentation Project",
+  "url": "https://802coffee.com/products/the-fermentation-project",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "Default Title",
+    "variant_id": "45887210291283"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "4cc440e58915bb08",
+  "first_seen": "2026-10-26",
+  "handle": "bobs-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_HouseNewOrg.png?v=1733170817",
+  "platform": "shopify",
+  "product_id": "8666323849",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Medium"
+  ],
+  "title": "House Blend",
+  "url": "https://802coffee.com/products/bobs-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz",
+    "variant_id": "29138467337"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.75,
+    "title": "2lb",
+    "variant_id": "486217351177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5lb",
+    "variant_id": "486217383945"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "8d64f179a3e0687b",
+  "first_seen": "2026-10-26",
+  "handle": "senate-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/senate.png?v=1490383098",
+  "platform": "shopify",
+  "product_id": "8671798921",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Dark"
+  ],
+  "title": "Senate Blend",
+  "url": "https://802coffee.com/products/senate-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz",
+    "variant_id": "29205565065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.75,
+    "title": "2lb",
+    "variant_id": "474494205961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.5,
+    "title": "5lb",
+    "variant_id": "483631661065"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "c52fb302bc65889f",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Dark_House_Decaf_Organic.png?v=1763494370",
+  "platform": "shopify",
+  "product_id": "8671822025",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Decaf"
+  ],
+  "title": "House Blend Decaf",
+  "url": "https://802coffee.com/products/house-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29205715017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "486268764169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "486268829705"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "6f9b4eb6e3063768",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Medium_Espresso.png?v=1606064718",
+  "platform": "shopify",
+  "product_id": "8671904713",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "Medium"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://802coffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb",
+    "variant_id": "21249092255827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5lb",
+    "variant_id": "21249092288595"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1lb",
+    "variant_id": "29206239241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "32315554791507"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "aa9fa4eba7e75c2b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/LIght_HONDO_MANOS_LARGE_0d9a9626-0119-4ad3-a4af-535e54f00d54.png?v=1791203466",
+  "platform": "shopify",
+  "product_id": "8671921161",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Light",
+   "Single Origin"
+  ],
+  "title": "Honduras Marcala Manos de Mujer",
+  "url": "https://802coffee.com/products/honduras-marcala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "12963963011155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "12963963043923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29206304585"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "731c358384f33beb",
+  "first_seen": "2026-10-26",
+  "handle": "peru-1",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Dark_Peru-LasDamas2.png?v=1776687341",
+  "platform": "shopify",
+  "product_id": "8697999881",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "Peru \"Las Damas\"",
+  "url": "https://802coffee.com/products/peru-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29352656649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "39482484916307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "486372147209"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "2cd86580ff8d03dd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sierra-nevada",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Dark_Colombia_Tolima.png?v=1741271364",
+  "platform": "shopify",
+  "product_id": "8698004937",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "Colombia Tolima",
+  "url": "https://802coffee.com/products/colombia-sierra-nevada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29352828617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "885408890889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "885408923657"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "0da769bb3de5349e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_Peru_Decaf_Organic.png?v=1763494317",
+  "platform": "shopify",
+  "product_id": "8698709513",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Peru Decaf",
+  "url": "https://802coffee.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29360747721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "699846164489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "699846197257"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "a2215c4c69156a7d",
+  "first_seen": "2026-10-26",
+  "handle": "mayan-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Mayan.png?v=1538151525",
+  "platform": "shopify",
+  "product_id": "8698710025",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "American",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Mayan Decaf",
+  "url": "https://802coffee.com/products/mayan-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29360758793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "699923759113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "699923791881"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "15e8c4c422ec01cf",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-sidamo-1",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/files/Medium_Ethiopia_Sidamo.png?v=1763494273",
+  "platform": "shopify",
+  "product_id": "8698710601",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "African",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Natural Sidamo",
+  "url": "https://802coffee.com/products/ethiopia-natural-sidamo-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "29360765961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lb",
+    "variant_id": "885119516681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb",
+    "variant_id": "885119549449"
+   }
+  ],
+  "vendor": "802 Coffee"
+ },
+ {
+  "body_hash": "e604365cae1c4e83",
+  "first_seen": "2026-10-26",
+  "handle": "bernies-beans",
+  "image": "https://cdn.shopify.com/s/files/1/1668/7973/products/Bernie-sBeansLABELfinal_1.jpg?v=1626264221",
+  "platform": "shopify",
+  "product_id": "8992871561",
+  "product_type": "Coffee",
+  "roaster_slug": "802coffee",
+  "tags": [
+   "Blend",
+   "Medium"
+  ],
+  "title": "Bernie's Beans",
+  "url": "https://802coffee.com/products/bernies-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "32291097673"
+   }
+  ],
+  "vendor": "802 Coffee"
+ }
+]

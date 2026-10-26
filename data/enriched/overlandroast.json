@@ -1,0 +1,193 @@
+{
+ "15414003138804": {
+  "body_hash": "3296f83c6189f7f9",
+  "elevation_masl_max": 1250,
+  "elevation_masl_min": 1130,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "graham cracker",
+   "hazelnut",
+   "milk chocolate",
+   "molasses",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "15414005235956": {
+  "body_hash": "a2bf0d7f270bda89",
+  "elevation_masl_max": 1250,
+  "elevation_masl_min": 1130,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "brown sugar",
+   "graham cracker",
+   "hazelnut",
+   "milk chocolate",
+   "molasses",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "7872152633588": {
+  "body_hash": "286453c6e1f8130a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "7927471538420": {
+  "body_hash": "26ee34f77fabf45f",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fruit",
+   "cereal",
+   "sweet",
+   "sugary"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "8089598853364": {
+  "body_hash": "0d526b2cd5ababb4",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fruit",
+   "cereal",
+   "sweet",
+   "sugary"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "8198928335092": {
+  "body_hash": "459bee344128a85a",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cashew",
+   "pear",
+   "green tea"
+  ],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo"
+  ]
+ },
+ "8317789831412": {
+  "body_hash": "e85612eea6d5f45d",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "chocolate",
+   "raisin"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Caturra"
+  ]
+ },
+ "8946747375860": {
+  "body_hash": "6f11729a1ef4acd6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cacao",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "9030486622452": {
+  "body_hash": "53654635eae99f2d",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "black tea",
+   "dried cherries",
+   "dried fruit",
+   "jasmine",
+   "honeysuckle"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

@@ -1,0 +1,761 @@
+[
+ {
+  "body_hash": "8419469476ec25a6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_Guatemala-Huehuetenango-Update111422.jpg?v=1668443838",
+  "platform": "shopify",
+  "product_id": "1478322520176",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Guatemala"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://briosocoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "13574903365744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31618213445719"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "32399758852183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124217491543"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "045bc8304ef42de0",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_Cold-Brew-Blend.jpg?v=1626694603",
+  "platform": "shopify",
+  "product_id": "1478344638576",
+  "product_type": "Blends",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Blend",
+   "cold brew"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://briosocoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "13575275970672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31618174746711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124211069015"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "40304423305303"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "181f3c4e6b3a9ec9",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-brioso",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_Espresso-Brioso.jpg?v=1626694109",
+  "platform": "shopify",
+  "product_id": "1478349291632",
+  "product_type": "Blends",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Blend",
+   "espresso",
+   "espresso brioso"
+  ],
+  "title": "Espresso Brioso",
+  "url": "https://briosocoffee.com/products/espresso-brioso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "13575390756976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31618192998487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124214607959"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "40304421961815"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "ecbadfa6f4f414b2",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milano",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_Espresso-Milano.jpg?v=1626696198",
+  "platform": "shopify",
+  "product_id": "1478353092720",
+  "product_type": "Blends",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Blend",
+   "espresso",
+   "espresso milano"
+  ],
+  "title": "Espresso Milano",
+  "url": "https://briosocoffee.com/products/espresso-milano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "13575480967280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31618195095639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124214870103"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "40304424484951"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "650f2aa542e22726",
+  "first_seen": "2026-10-26",
+  "handle": "house-party",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_House-Party.jpg?v=1626694329",
+  "platform": "shopify",
+  "product_id": "1569034338416",
+  "product_type": "Blends",
+  "roaster_slug": "briosocoffee",
+  "tags": [],
+  "title": "House Party",
+  "url": "https://briosocoffee.com/products/house-party",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz bag",
+    "variant_id": "15597604733040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31618130083927"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124217983063"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "40304426057815"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "2103aa1c6a135484",
+  "first_seen": "2026-10-26",
+  "handle": "bakery-blend-dark-profile",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/BriosoCoffee_12ozBag_Bakery-Blend.jpg?v=1626697450",
+  "platform": "shopify",
+  "product_id": "2014948917335",
+  "product_type": "Blends",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Bakery Blend - Dark Profile",
+  "url": "https://briosocoffee.com/products/bakery-blend-dark-profile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz bag",
+    "variant_id": "19839218384983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "31619869442135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "40124210348119"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "40304422584407"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "03c4df165d00fe96",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-dimebag",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/products/Dimebag_1.jpg?v=1678127559",
+  "platform": "shopify",
+  "product_id": "3933866066007",
+  "product_type": "Staff Pick",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Single Origin",
+   "dimebag"
+  ],
+  "title": "Roaster's Choice Dimebag",
+  "url": "https://briosocoffee.com/products/roasters-choice-dimebag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "varying size",
+    "variant_id": "29423587852375"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "80e02532bc14c4a5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_MexicoDecaf-062824.png?v=1719597951",
+  "platform": "shopify",
+  "product_id": "6599023722583",
+  "product_type": "Decaf",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Mexico",
+   "decaf"
+  ],
+  "title": "Mexico Decaf",
+  "url": "https://briosocoffee.com/products/mexico-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "39397462343767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "39397462376535"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "39397462409303"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "b8e79490e4c18640",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cerro-san-luis",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_CostaRicaCerroSanLuis.png?v=1753546820",
+  "platform": "shopify",
+  "product_id": "7269776064599",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Costa Rica",
+   "Single Origin",
+   "Yellow Honey"
+  ],
+  "title": "Costa Rica Cerro San Luis",
+  "url": "https://briosocoffee.com/products/costa-rica-cerro-san-luis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz Bag",
+    "variant_id": "41188349509719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "41188349542487"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "41188349575255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb bag",
+    "variant_id": "41188349608023"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "bfaab8b3f7f3bb9b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-alto-el-vapor",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_CURIOSITIES_CostaRicaAltoElVapor-2025.png?v=1764085211",
+  "platform": "shopify",
+  "product_id": "7341561905239",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Anaerobic Natural",
+   "Costa Rica",
+   "Curiosities",
+   "Single Origin"
+  ],
+  "title": "Costa Rica Alto El Vapor",
+  "url": "https://briosocoffee.com/products/costa-rica-alto-el-vapor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz bag",
+    "variant_id": "41439765921879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2lb bag",
+    "variant_id": "41694147313751"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "5797443d71ca4005",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-perla-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_CURIOSITIES_CostaRiceLasLajasPerlaNegra.png?v=1762791404",
+  "platform": "shopify",
+  "product_id": "7511744774231",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Costa Rica",
+   "Curiosities",
+   "H17",
+   "Perla Negra Natural",
+   "Single Origin"
+  ],
+  "title": "Costa Rica Las Lajas Perla Negra",
+  "url": "https://briosocoffee.com/products/costa-rica-las-lajas-perla-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12oz bag",
+    "variant_id": "42102253256791"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb bag",
+    "variant_id": "42102253289559"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 10.0,
+    "title": "dimebag",
+    "variant_id": "42112131203159"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "ba41b0cff78dcc80",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-veracruz-ixhautlan",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_MexicoVeracruzIxhautlan.png?v=1775239008",
+  "platform": "shopify",
+  "product_id": "7615130697815",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Mexico",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "Mexico Veracruz Ixhautlan",
+  "url": "https://briosocoffee.com/products/mexico-veracruz-ixhautlan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Bag",
+    "variant_id": "42659629891671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "42659629924439"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "42659629957207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb bag",
+    "variant_id": "42659629989975"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "9e8e9e82c52d0b81",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-collasyuo-la-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_BoliviaCollasyuoLaPaz.png?v=1782323410",
+  "platform": "shopify",
+  "product_id": "7675894693975",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Bolivia",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "Bolivia Collasyuo La Paz",
+  "url": "https://briosocoffee.com/products/bolivia-collasyuo-la-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "43980830048343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "43980830081111"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "43980830113879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb bag",
+    "variant_id": "43980830146647"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "8e5a53f626fb82ba",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-quebrada-onda",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_HondurasFincaQuebradaOnda.png?v=1787063791",
+  "platform": "shopify",
+  "product_id": "7740456468567",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Honduras",
+   "Honey",
+   "Single Origin"
+  ],
+  "title": "Honduras Finca Quebrada Onda",
+  "url": "https://briosocoffee.com/products/honduras-finca-quebrada-onda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Bag",
+    "variant_id": "44176075128919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "44176075161687"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "44176075194455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb bag",
+    "variant_id": "44176075227223"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "80b42f79acf871c7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-condor",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_ColombiaHuilaCondor.png?v=1789674310",
+  "platform": "shopify",
+  "product_id": "7783557529687",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "Colombia Huila Condor",
+  "url": "https://briosocoffee.com/products/colombia-huila-condor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Bag",
+    "variant_id": "44308342833239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "44308342866007"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "44308342898775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb bag",
+    "variant_id": "44308342931543"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "1593ffa04fb97c86",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-borbon-wonder",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_ColombiaBorbonWonder.png?v=1789674613",
+  "platform": "shopify",
+  "product_id": "7783562313815",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Anaerobic Natural",
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Colombia Borbon Wonder",
+  "url": "https://briosocoffee.com/products/colombia-borbon-wonder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz Bag",
+    "variant_id": "44308350173271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "44308350206039"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "44308350238807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2lb bag",
+    "variant_id": "44308350271575"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ },
+ {
+  "body_hash": "5a07f69a0cc0e7b1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-konga",
+  "image": "https://cdn.shopify.com/s/files/1/0033/6445/4512/files/BriosoCoffee_12ozBag_EthiopiaYirgacheffeKonga.png?v=1791840253",
+  "platform": "shopify",
+  "product_id": "7819078303831",
+  "product_type": "Origin Coffee",
+  "roaster_slug": "briosocoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin",
+   "natural"
+  ],
+  "title": "Ethiopia Yirgacheffe Konga",
+  "url": "https://briosocoffee.com/products/ethiopia-yirgacheffe-konga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Bag",
+    "variant_id": "44443571257431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag ($15 off!)",
+    "variant_id": "44443571290199"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Dimebag ($10 of this coffee)",
+    "variant_id": "44443571322967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb bag",
+    "variant_id": "44443571355735"
+   }
+  ],
+  "vendor": "Brioso Coffee"
+ }
+]

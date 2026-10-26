@@ -1,0 +1,100 @@
+{
+ "5a7892199140b74f759b4092": {
+  "body_hash": "96b1c5c13b562284",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricot",
+   "hibiscus",
+   "peanut butter",
+   "caramel",
+   "baker's chocolate"
+  ],
+  "varietals": []
+ },
+ "5a789399e4966bc51160d8d2": {
+  "body_hash": "1c7cb69d776ec7a1",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dried jasmine",
+   "cooked berry",
+   "lemongrass",
+   "cooked grapefruit"
+  ],
+  "varietals": []
+ },
+ "5a7893db71c10bdbadc9c304": {
+  "body_hash": "91d5dc224f14231b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "molasses",
+   "herbs",
+   "spices",
+   "baker's chocolate"
+  ],
+  "varietals": []
+ },
+ "5a7893f80d92975d5f3cf124": {
+  "body_hash": "89f342f260914ae7",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramelized sugar",
+   "toasted almond",
+   "roasted peanut"
+  ],
+  "varietals": []
+ },
+ "5a789413652dea27894f5da9": {
+  "body_hash": "7e115344449e5d00",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 800,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "roasted nut"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,1055 @@
+[
+ {
+  "body_hash": "26db7e74b204e6f5",
+  "first_seen": "2026-10-26",
+  "handle": "gingerdead-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Gingerdead_9oz_Ground_Angle_DTC.jpg?v=1791810310",
+  "platform": "shopify",
+  "product_id": "10197341044791",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Gingerdead",
+   "LTO Coffee"
+  ],
+  "title": "Gingerdead Coffee",
+  "url": "https://www.deathwishcoffee.com/products/gingerdead-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "1 bag",
+    "variant_id": "67586922119223"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 27.98,
+    "title": "2 bags",
+    "variant_id": "67586922151991"
+   },
+   {
+    "available": true,
+    "grams": 1417,
+    "price_usd": 69.95,
+    "title": "5 bags",
+    "variant_id": "67586922184759"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "91d91624be49c648",
+  "first_seen": "2026-10-26",
+  "handle": "dark-spirits-chocolate-rumball",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Dark_Spirits_Chocolate_Rum_Ball_A1-_1_OE.jpg?v=1792760232",
+  "platform": "shopify",
+  "product_id": "192924352525",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Dark Spirits",
+   "LTO Coffee",
+   "Society of Strong Coffee"
+  ],
+  "title": "Dark Spirits Chocolate Rum Ball Coffee",
+  "url": "https://www.deathwishcoffee.com/products/dark-spirits-chocolate-rumball",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 bag",
+    "variant_id": "39983629828151"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 59.98,
+    "title": "Whole Bean / 2 bags",
+    "variant_id": "67637562114103"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 149.95,
+    "title": "Whole Bean / 5 bags",
+    "variant_id": "67637562146871"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "efe8520a480963f0",
+  "first_seen": "2026-10-26",
+  "handle": "death-wish-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Dark_Roast_16oz_Ground_Angle_DTC_A4_2.jpg?v=1726752263",
+  "platform": "shopify",
+  "product_id": "263612097",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Dark",
+   "Dark Roast",
+   "Intro Offer",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Dark Roast Coffee",
+  "url": "https://www.deathwishcoffee.com/products/death-wish-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "2413985169421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "2414002503693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Ground / 2 lbs",
+    "variant_id": "3436627623949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "3436706430989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Ground / 5 lbs",
+    "variant_id": "3436746801165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "3436752928781"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Ground / 3 lbs",
+    "variant_id": "40258822012983"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Whole Bean / 3 lbs",
+    "variant_id": "40258822045751"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "056bb3308eccde91",
+  "first_seen": "2026-10-26",
+  "handle": "valhalla-java-odin-force-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Valhalla_Java_12oz_Ground_Front_A1_2.jpg?v=1733925443",
+  "platform": "shopify",
+  "product_id": "272081685",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "National Coffee Day",
+   "Subscription",
+   "Valhalla Java",
+   "Valhalla Java Odinforce Blend"
+  ],
+  "title": "Valhalla Java Odinforce Blend",
+  "url": "https://www.deathwishcoffee.com/products/valhalla-java-odin-force-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1102,
+    "price_usd": 44.99,
+    "title": "Ground / 3 bags",
+    "variant_id": "40192503906359"
+   },
+   {
+    "available": true,
+    "grams": 1102,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 3 bags",
+    "variant_id": "40192503939127"
+   },
+   {
+    "available": true,
+    "grams": 735,
+    "price_usd": 31.98,
+    "title": "Ground / 2 bags",
+    "variant_id": "40216565121079"
+   },
+   {
+    "available": true,
+    "grams": 735,
+    "price_usd": 31.98,
+    "title": "Whole Bean / 2 bags",
+    "variant_id": "40216565153847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Ground / 5 lbs",
+    "variant_id": "40480500109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "40480530125"
+   },
+   {
+    "available": true,
+    "grams": 367,
+    "price_usd": 15.99,
+    "title": "Ground / 1 bag",
+    "variant_id": "638652625"
+   },
+   {
+    "available": true,
+    "grams": 367,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 bag",
+    "variant_id": "638749409"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "5f70baa52fde40b6",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Medium_Roast_16oz_Ground_Angle_DTC_A4_2.jpg?v=1726752632",
+  "platform": "shopify",
+  "product_id": "4657897373751",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Intro Offer",
+   "Medium",
+   "Medium Roast",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Medium Roast Coffee",
+  "url": "https://www.deathwishcoffee.com/products/medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "32485212061751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "32485212094519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Ground / 2 lbs",
+    "variant_id": "32485212127287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "32485212160055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Ground / 5 lbs",
+    "variant_id": "32485212192823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "32485212225591"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Ground / 3 lbs",
+    "variant_id": "40258823159863"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Whole Bean / 3 lbs",
+    "variant_id": "40258823192631"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "421bc4c1ddd679e0",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Blueberry_14oz_Ground_Angle_DTC_A1-_1.jpg?v=1753387757",
+  "platform": "shopify",
+  "product_id": "6659484516407",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Blue and Buried",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Blueberry Coffee",
+  "url": "https://www.deathwishcoffee.com/products/blueberry-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 19.99,
+    "title": "Ground / 1 bag",
+    "variant_id": "41793034584119"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 39.98,
+    "title": "Ground / 2 bags",
+    "variant_id": "41793034616887"
+   },
+   {
+    "available": true,
+    "grams": 1984,
+    "price_usd": 84.99,
+    "title": "Ground / 5 bags",
+    "variant_id": "41793034649655"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "d3a92fd8347ffb83",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Espresso_Roast_14oz_Ground_Angle_DTC_A5_2.jpg?v=1726755281",
+  "platform": "shopify",
+  "product_id": "6669374816311",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Dark",
+   "Dark Roast",
+   "Espresso Roast",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Espresso Roast Coffee",
+  "url": "https://www.deathwishcoffee.com/products/espresso-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.99,
+    "title": "Ground / 1 bag",
+    "variant_id": "39781001134135"
+   },
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 1 bag",
+    "variant_id": "39781001166903"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 39.98,
+    "title": "Ground / 2 bags",
+    "variant_id": "39781001199671"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 39.98,
+    "title": "Whole Bean / 2 bags",
+    "variant_id": "39781001232439"
+   },
+   {
+    "available": true,
+    "grams": 2551,
+    "price_usd": 93.99,
+    "title": "Ground / 6 bags",
+    "variant_id": "39781001265207"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 93.99,
+    "title": "Whole Bean / 6 bags",
+    "variant_id": "39781001297975"
+   },
+   {
+    "available": true,
+    "grams": 1276,
+    "price_usd": 59.97,
+    "title": "Ground / 3 bags",
+    "variant_id": "39792105848887"
+   },
+   {
+    "available": true,
+    "grams": 1276,
+    "price_usd": 59.97,
+    "title": "Whole Bean / 3 bags",
+    "variant_id": "39792107520055"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "ad1b3f2e09703e8a",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Vanilla_14oz_Ground_Angle_DTC_A2-_1.jpg?v=1726759714",
+  "platform": "shopify",
+  "product_id": "6812324823095",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Death Wish Coffee",
+   "LTO Coffee",
+   "Medium Roast",
+   "National Coffee Day",
+   "Subscription",
+   "Vanilla"
+  ],
+  "title": "Vanilla Coffee",
+  "url": "https://www.deathwishcoffee.com/products/vanilla-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 19.99,
+    "title": "1 bag",
+    "variant_id": "40191150129207"
+   },
+   {
+    "available": true,
+    "grams": 850,
+    "price_usd": 39.98,
+    "title": "2 bags",
+    "variant_id": "40197116526647"
+   },
+   {
+    "available": true,
+    "grams": 2126,
+    "price_usd": 84.99,
+    "title": "5 bags",
+    "variant_id": "40197116559415"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "6aa08682918cfb1d",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Chocolate_Hazelnut_14oz_Ground_Angle_DTC_A2_2.jpg?v=1726759081",
+  "platform": "shopify",
+  "product_id": "6812324921399",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Chocolate Hazelnut",
+   "Death Wish Coffee",
+   "LTO Coffee",
+   "Medium Roast",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Chocolate Hazelnut Coffee",
+  "url": "https://www.deathwishcoffee.com/products/chocolate-hazelnut-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 415,
+    "price_usd": 19.99,
+    "title": "1 bag",
+    "variant_id": "40191150096439"
+   },
+   {
+    "available": true,
+    "grams": 831,
+    "price_usd": 39.98,
+    "title": "2 bags",
+    "variant_id": "40196434001975"
+   },
+   {
+    "available": true,
+    "grams": 2077,
+    "price_usd": 84.99,
+    "title": "5 bags",
+    "variant_id": "40196434034743"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "fec4d7f8e6f895a4",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-caramel-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Coconut_Caramel_9oz_Ground_Angle_Cathedral_DTC_A3.jpg?v=1768571331",
+  "platform": "shopify",
+  "product_id": "6859957239863",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Coconut Caramel",
+   "LTO Coffee",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Coconut Caramel Coffee",
+  "url": "https://www.deathwishcoffee.com/products/coconut-caramel-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 413,
+    "price_usd": 13.99,
+    "title": "1 bag",
+    "variant_id": "41380587110455"
+   },
+   {
+    "available": true,
+    "grams": 413,
+    "price_usd": 27.98,
+    "title": "2 bags",
+    "variant_id": "41380587143223"
+   },
+   {
+    "available": true,
+    "grams": 413,
+    "price_usd": 69.95,
+    "title": "5 bags",
+    "variant_id": "41380587175991"
+   }
+  ],
+  "vendor": "Death Wish Coffee Company"
+ },
+ {
+  "body_hash": "0aeee25fa2a40687",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Light_Roast_16oz_Ground_Angle_DTC_A1_2.jpg?v=1727439735",
+  "platform": "shopify",
+  "product_id": "7156764475447",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Intro Offer",
+   "Light Roast",
+   "National Coffee Day",
+   "Subscription"
+  ],
+  "title": "Light Roast Coffee",
+  "url": "https://www.deathwishcoffee.com/products/light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "41224639217719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Ground / 2 lbs",
+    "variant_id": "41224639250487"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Ground / 3 lbs",
+    "variant_id": "41224639283255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41224639316023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41224639348791"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "41224639381559"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Whole Bean / 3 lbs",
+    "variant_id": "41224639414327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41224639447095"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "b1ed20955ed06566",
+  "first_seen": "2026-10-26",
+  "handle": "maple-cinnamon-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Maple_Cinnamon_9oz_Ground_Angle_DTC_A1.jpg?v=1773934706",
+  "platform": "shopify",
+  "product_id": "7330615623735",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "LTO Coffee",
+   "Maple Cinnamon"
+  ],
+  "title": "Maple Cinnamon Coffee",
+  "url": "https://www.deathwishcoffee.com/products/maple-cinnamon-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 277,
+    "price_usd": 13.99,
+    "title": "1 bag",
+    "variant_id": "41847427432503"
+   },
+   {
+    "available": true,
+    "grams": 553,
+    "price_usd": 27.98,
+    "title": "2 bags",
+    "variant_id": "41847427465271"
+   },
+   {
+    "available": true,
+    "grams": 1383,
+    "price_usd": 69.95,
+    "title": "5 bags",
+    "variant_id": "41847427498039"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "94683116222e2d9b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-cold-brew-coffee-unsweetened",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Multiserve_Dark_Roast_48oz_Front_A1_DTC_Callouts_Rev.jpg?v=1786481352",
+  "platform": "shopify",
+  "product_id": "7345274486839",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Cold Brew",
+   "Dark Roast",
+   "Multiserve"
+  ],
+  "title": "Dark Roast, Cold Brew Coffee, Unsweetened",
+  "url": "https://www.deathwishcoffee.com/products/organic-cold-brew-coffee-unsweetened",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1758,
+    "price_usd": 5.99,
+    "title": "Default Title",
+    "variant_id": "41890881044535"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "e6a7efd813b9fc45",
+  "first_seen": "2026-10-26",
+  "handle": "classic-cold-brew-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/RTD_Classic_Tray_Angle_Retailer_DTC_A1_FT.jpg?v=1775143084",
+  "platform": "shopify",
+  "product_id": "7366891962423",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Canned",
+   "Canned Lattes",
+   "LTO Coffee",
+   "Subscription"
+  ],
+  "title": "Classic Cold Brew Latte",
+  "url": "https://www.deathwishcoffee.com/products/classic-cold-brew-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4309,
+    "price_usd": 39.99,
+    "title": "12 Pack",
+    "variant_id": "41990810959927"
+   },
+   {
+    "available": true,
+    "grams": 8618,
+    "price_usd": 79.99,
+    "title": "24 Pack",
+    "variant_id": "41990810992695"
+   },
+   {
+    "available": true,
+    "grams": 12927,
+    "price_usd": 119.99,
+    "title": "36 Pack",
+    "variant_id": "41990811025463"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "3295a8c5d541bcc5",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-cold-brew-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/RTD_Mocha_Tray_Angle_Retailer_DTC_A3_FT.jpg?v=1775143293",
+  "platform": "shopify",
+  "product_id": "7366892027959",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Canned",
+   "Canned Lattes",
+   "LTO Coffee",
+   "Subscription"
+  ],
+  "title": "Mocha Cold Brew Latte",
+  "url": "https://www.deathwishcoffee.com/products/mocha-cold-brew-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4309,
+    "price_usd": 39.99,
+    "title": "12 Pack",
+    "variant_id": "41990810501175"
+   },
+   {
+    "available": true,
+    "grams": 8618,
+    "price_usd": 79.99,
+    "title": "24 Pack",
+    "variant_id": "41990810533943"
+   },
+   {
+    "available": true,
+    "grams": 12927,
+    "price_usd": 119.99,
+    "title": "36 Pack",
+    "variant_id": "41990810566711"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "8c37d4e768e3f5e6",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-cold-brew-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/RTD_Vanilla_Tray_Angle_Retailer_DTC_A3_FT.jpg?v=1775144456",
+  "platform": "shopify",
+  "product_id": "7366892159031",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Canned",
+   "Canned Lattes",
+   "LTO Coffee",
+   "Subscription"
+  ],
+  "title": "Vanilla Cold Brew Latte",
+  "url": "https://www.deathwishcoffee.com/products/vanilla-cold-brew-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4309,
+    "price_usd": 39.99,
+    "title": "12 Pack",
+    "variant_id": "41990791004215"
+   },
+   {
+    "available": true,
+    "grams": 8618,
+    "price_usd": 79.99,
+    "title": "24 Pack",
+    "variant_id": "41990791036983"
+   },
+   {
+    "available": true,
+    "grams": 12927,
+    "price_usd": 119.99,
+    "title": "36 Pack",
+    "variant_id": "41990791069751"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "d69eca109d7932d2",
+  "first_seen": "2026-10-26",
+  "handle": "power-surge-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Power_Surge_16oz_Ground_Angle_DTC_A1_FTO.jpg?v=1773241929",
+  "platform": "shopify",
+  "product_id": "7420854370359",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "Power Surge",
+   "Subscription"
+  ],
+  "title": "Power Surge Coffee",
+  "url": "https://www.deathwishcoffee.com/products/power-surge-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "42123932336183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Ground / 2 lbs",
+    "variant_id": "42123932368951"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Ground / 3 lbs",
+    "variant_id": "42123932401719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Ground / 5 lbs",
+    "variant_id": "42123932434487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "42123932467255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "42123932500023"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.97,
+    "title": "Whole Bean / 3 lbs",
+    "variant_id": "42123932532791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "42123932565559"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "668bc2cd3e30b6fc",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-cold-brew-latte",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/RTD_Caramel_Tray_Angle_Retailer_DTC_A1_FT.jpg?v=1773241555",
+  "platform": "shopify",
+  "product_id": "7422029496375",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Canned",
+   "Canned Lattes",
+   "Subscription"
+  ],
+  "title": "Caramel Cold Brew Latte",
+  "url": "https://www.deathwishcoffee.com/products/caramel-cold-brew-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4309,
+    "price_usd": 39.99,
+    "title": "12 Pack",
+    "variant_id": "42127696068663"
+   },
+   {
+    "available": true,
+    "grams": 8618,
+    "price_usd": 79.99,
+    "title": "24 Pack",
+    "variant_id": "42127696101431"
+   },
+   {
+    "available": true,
+    "grams": 12927,
+    "price_usd": 119.99,
+    "title": "36 Pack",
+    "variant_id": "42127696134199"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "dd381bf5b34eca35",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-10oz",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Light_Roast_10oz_Ground_Angle_Cathedral_DTC_FTO.jpg?v=1784050347",
+  "platform": "shopify",
+  "product_id": "7474092671031",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [],
+  "title": "Light Roast Coffee (10oz Ground)",
+  "url": "https://www.deathwishcoffee.com/products/light-roast-10oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 11.99,
+    "title": "Default Title",
+    "variant_id": "42284735168567"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "8228dd7786995096",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast-cold-brew-coffee-48oz",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/Multiserve_Espresso_Roast_48oz_Front_A1_DTC_Callouts-_1.jpg?v=1786474213",
+  "platform": "shopify",
+  "product_id": "7502387511351",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Cold Brew",
+   "Espresso Roast",
+   "Multiserve"
+  ],
+  "title": "Espresso Roast, Cold Brew Coffee, Unsweetened",
+  "url": "https://www.deathwishcoffee.com/products/espresso-roast-cold-brew-coffee-48oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1758,
+    "price_usd": 5.99,
+    "title": "Default Title",
+    "variant_id": "42379014438967"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ },
+ {
+  "body_hash": "fbe5ee47b66edd68",
+  "first_seen": "2026-10-26",
+  "handle": "white-chocolate-pistachio-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0271/7209/files/White_Chocolate_Pistachio_9oz_Ground_Angle_DTC_Full.jpg?v=1790171631",
+  "platform": "shopify",
+  "product_id": "7502772076599",
+  "product_type": "Coffee",
+  "roaster_slug": "deathwishcoffee",
+  "tags": [
+   "Bagged",
+   "LTO Coffee",
+   "White Chocolate Pistachio"
+  ],
+  "title": "White Chocolate Pistachio Coffee",
+  "url": "https://www.deathwishcoffee.com/products/white-chocolate-pistachio-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "1 bag",
+    "variant_id": "42380283346999"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 27.98,
+    "title": "2 bags",
+    "variant_id": "42446944141367"
+   },
+   {
+    "available": true,
+    "grams": 1417,
+    "price_usd": 69.95,
+    "title": "5 bags",
+    "variant_id": "42446944174135"
+   }
+  ],
+  "vendor": "Death Wish Coffee"
+ }
+]

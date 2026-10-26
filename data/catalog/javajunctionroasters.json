@@ -1,0 +1,329 @@
+[
+ {
+  "body_hash": "4a06a08f27e94e28",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-kenya-aa-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "177",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "African Coffee",
+   "Arabica",
+   "Bright Acidity",
+   "Coffee",
+   "Fruity Notes",
+   "Full Body",
+   "Kenyan Coffee",
+   "Light Roast",
+   "Single Origin Coffee"
+  ],
+  "title": "Kenya AA",
+  "url": "https://javajunctionroasters.com/product/kenya-aa-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kenya AA",
+    "variant_id": "177:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d32f6492969a7b9",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-papua-new-guinea-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "179",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Coffee",
+   "Dark Chocolate Notes",
+   "Earthy Notes",
+   "Light Roast",
+   "Single Origin Coffee",
+   "Tropical Fruit Notes"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://javajunctionroasters.com/product/papua-new-guinea-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Papua New Guinea",
+    "variant_id": "179:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa039dfd91770ab7",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-java-estate-coffee2.webp",
+  "platform": "woocommerce",
+  "product_id": "182",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Chocolate Notes.",
+   "Coffee",
+   "Earthy Notes",
+   "Full Body",
+   "Indonesian Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Java Estate",
+  "url": "https://javajunctionroasters.com/product/java-estate-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Java Estate",
+    "variant_id": "182:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "440e9f259155eb7d",
+  "first_seen": "2026-10-26",
+  "handle": "java-junction-morning-blend-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-morning-blend-coffee2.webp",
+  "platform": "woocommerce",
+  "product_id": "183",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Citrus Notes",
+   "Coffee",
+   "Coffee Blend",
+   "Coffee Blends",
+   "Medium Body",
+   "Medium Roast",
+   "Smooth Coffee"
+  ],
+  "title": "Java Junction Morning Blend",
+  "url": "https://javajunctionroasters.com/product/java-junction-morning-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Java Junction Morning Blend",
+    "variant_id": "183:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a498bf1d88551e2a",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf-coffee-beans",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-decaf-french-roast-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "184",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Bold Coffee",
+   "Caramelized",
+   "Coffee",
+   "Dark Roast",
+   "Decaf Coffee",
+   "Decaffeinated",
+   "French Roast",
+   "Full Body",
+   "Low Acidity",
+   "Smoky"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://javajunctionroasters.com/product/french-roast-decaf-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Roast Decaf",
+    "variant_id": "184:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2f2f1eb9439a91f",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-french-roast-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "185",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Bold Coffee",
+   "Caramelized",
+   "Coffee",
+   "Coffee Blends",
+   "Dark Roast",
+   "French Roast",
+   "Full Body",
+   "Low Acidity",
+   "Smoky"
+  ],
+  "title": "French Roast",
+  "url": "https://javajunctionroasters.com/product/french-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Roast",
+    "variant_id": "185:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1a9299f57a140a5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-coffee-beans",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-espresso-blend-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "186",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Bold Coffee",
+   "Coffee",
+   "Coffee Blend",
+   "Coffee Blends",
+   "Dark Roast",
+   "Espresso",
+   "Full Body",
+   "Smooth Coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://javajunctionroasters.com/product/espresso-blend-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Espresso Blend",
+    "variant_id": "186:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9291109a4f16bcc7",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-ethiopian-mocha-java-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "187",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Chocolate Notes.",
+   "Coffee",
+   "Coffee Blend",
+   "Coffee Blends",
+   "Ethiopian Coffee",
+   "Full Body",
+   "Indonesian Coffee"
+  ],
+  "title": "Ethiopian Mocha Java",
+  "url": "https://javajunctionroasters.com/product/mocha-java-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ethiopian Mocha Java",
+    "variant_id": "187:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d10ce37aa399a6b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/08/java-junction-columbian-decaf2.webp",
+  "platform": "woocommerce",
+  "product_id": "189",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Arabica",
+   "Balanced Coffee",
+   "Coffee",
+   "Colombian Coffee",
+   "Decaf Coffee",
+   "Decaffeinated",
+   "Light Roast",
+   "Single Origin Coffee",
+   "Smooth Coffee"
+  ],
+  "title": "Colombian Decaf",
+  "url": "https://javajunctionroasters.com/product/colombian-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Colombian Decaf",
+    "variant_id": "189:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "add47189d8c1d567",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-coffee",
+  "image": "https://javajunctionroasters.com/wp-content/uploads/2026/09/java-junction-pumpkin-spice-flavored-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "949",
+  "product_type": "variable",
+  "roaster_slug": "javajunctionroasters",
+  "tags": [
+   "Coffee",
+   "Decaf Coffee",
+   "Decaffeinated",
+   "Fall Coffee",
+   "Flavored Coffee",
+   "Flavored Decaf Coffee",
+   "Pumpkin Coffee",
+   "Pumpkin Spice",
+   "Seasonal Coffee"
+  ],
+  "title": "Pumpkin Spice Coffee",
+  "url": "https://javajunctionroasters.com/product/pumpkin-spice-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Pumpkin Spice Coffee",
+    "variant_id": "949:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

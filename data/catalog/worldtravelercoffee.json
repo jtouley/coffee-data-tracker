@@ -1,0 +1,1084 @@
+[
+ {
+  "body_hash": "75cb0caa113606db",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/colombiaWEBSITEcopy.jpg?v=1770998447",
+  "platform": "shopify",
+  "product_id": "6773297741904",
+  "product_type": "Whole Beans",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Colombia Excelso",
+  "url": "https://worldtravelercoffee.com/products/colombia-cauca-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39980502777936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Espresso",
+    "variant_id": "39980502810704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Pour Over",
+    "variant_id": "39980502843472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Cold Brew",
+    "variant_id": "39980502876240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Drip Coffee",
+    "variant_id": "39980502909008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39980502941776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39980502974544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "39980503007312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "39980503040080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "39980503072848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "39980503105616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39980503138384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "39980503171152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "39980503203920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "39980503236688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "39980503269456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "39980503302224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "39980503334992"
+   }
+  ],
+  "vendor": "Excelso, Single-Origin"
+ },
+ {
+  "body_hash": "070d9583595c0187",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/ethiopiaWEBSITE.jpg?v=1770929527",
+  "platform": "shopify",
+  "product_id": "6774381543504",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://worldtravelercoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "39984696557648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / Espresso",
+    "variant_id": "39984696590416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / Drip Coffee",
+    "variant_id": "39984696623184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / Cold Brew",
+    "variant_id": "39984696655952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / Pour Over",
+    "variant_id": "39984696688720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "39984696721488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39984696754256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "39984696787024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "39984696819792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "39984696852560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "39984696885328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39984696918096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "39984696950864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "39984696983632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "39984697016400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "39984697049168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "39984697081936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "39984697114704"
+   }
+  ],
+  "vendor": "Guji, Single-Origin"
+ },
+ {
+  "body_hash": "74e5539e43a6ebd6",
+  "first_seen": "2026-10-26",
+  "handle": "gla-partnering-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/GLA-partnrblnd-shopify_a0a9fa9b-a935-4475-9527-7aaf1ff44899.jpg?v=1746308541",
+  "platform": "shopify",
+  "product_id": "7166138056784",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "GLA Partnering Blend",
+  "url": "https://worldtravelercoffee.com/products/gla-partnering-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Default Title",
+    "variant_id": "41140300415056"
+   }
+  ],
+  "vendor": "World Traveler Coffee Roasters "
+ },
+ {
+  "body_hash": "ddbaf2d4e8e1c548",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-altura-veracruz",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/mexicoWEBSITE.jpg?v=1771604344",
+  "platform": "shopify",
+  "product_id": "7307890163792",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "Mexico Altura Veracruz",
+  "url": "https://worldtravelercoffee.com/products/mexico-altura-veracruz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42017624784976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42017624817744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "42017624850512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42017624883280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42017624916048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / French Press",
+    "variant_id": "42017624948816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "42017624981584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42017625014352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "42017625047120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "42017625079888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "42017625112656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "42017625145424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42017625178192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42017625210960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "42017625243728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "42017625276496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "42017625309264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "42017625342032"
+   }
+  ],
+  "vendor": "Veracruz, Mexico"
+ },
+ {
+  "body_hash": "7a46910fe4ebc01a",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/coldbrewWEBSITE.jpg?v=1771605812",
+  "platform": "shopify",
+  "product_id": "7307894521936",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://worldtravelercoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42017654308944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42017654341712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "42017654374480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42017654407248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42017654440016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / French Press",
+    "variant_id": "42017654472784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "42017654505552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42017654538320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "42017654571088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "42017654603856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "42017654636624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "42017654669392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42017654702160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42017654734928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "42017654767696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "42017654800464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "42017654833232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "42017654866000"
+   }
+  ],
+  "vendor": "East Africa & Central America"
+ },
+ {
+  "body_hash": "6f30e594cdc2c00f",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-ahuachapan",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/ElSalvadorWEBSITE_2_2a2aebd9-4f98-4525-8692-313164b8231a.jpg?v=1774627441",
+  "platform": "shopify",
+  "product_id": "7340828557392",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "El Salvador, Ahuachapan",
+  "url": "https://worldtravelercoffee.com/products/el-salvador-ahuachapan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42146614181968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42146614214736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "42146614247504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42146614280272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42146614313040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12oz / French Press",
+    "variant_id": "42146614345808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "42146614378576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42146614411344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "42146614444112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "42146614476880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "42146614509648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "42146614542416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42146614575184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42146614607952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "42146614640720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "42146614673488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "42146614706256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "42146614739024"
+   }
+  ],
+  "vendor": "Ahuachapan, El Salvador"
+ },
+ {
+  "body_hash": "5078cf97c142ef3b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-2",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/BrazilWebsiteNEW.jpg?v=1789144521",
+  "platform": "shopify",
+  "product_id": "7341663977552",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "Brazil, Cerrado",
+  "url": "https://worldtravelercoffee.com/products/brazil-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42189980401744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42189980434512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Pour Over",
+    "variant_id": "42189980467280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42189980500048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42189980532816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / French Press",
+    "variant_id": "42189980565584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "42189980598352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42189980631120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "42189980663888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "42189980696656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "42189980729424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "42189980762192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42189980794960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42189980827728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "42189980860496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "42189980893264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "42189980926032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "42189980958800"
+   }
+  ],
+  "vendor": "Alta Mogiana, Brazil"
+ },
+ {
+  "body_hash": "b669990ebeaf05e0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fraijanes",
+  "image": "https://cdn.shopify.com/s/files/1/0224/8028/9872/files/NEWESTguatemalaWEBSITE.jpg?v=1777651527",
+  "platform": "shopify",
+  "product_id": "7355467890768",
+  "product_type": "",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [],
+  "title": "Guatemala, Fraijanes",
+  "url": "https://worldtravelercoffee.com/products/guatemala-fraijanes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42319199010896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "42319199043664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42319199076432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "42319199109200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42319199141968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "42319199174736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "42319199207504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Espresso",
+    "variant_id": "42319199240272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Pour Over",
+    "variant_id": "42319199273040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Cold Brew",
+    "variant_id": "42319199305808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / Drip Coffee",
+    "variant_id": "42319199338576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lbs / French Press",
+    "variant_id": "42319199371344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42319199404112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "42319199436880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Pour Over",
+    "variant_id": "42319199469648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "42319199502416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / Drip Coffee",
+    "variant_id": "42319199535184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs / French Press",
+    "variant_id": "42319199567952"
+   }
+  ],
+  "vendor": "Fraijanes, Guatemala"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "franchise-whole-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7448234360912",
+  "product_type": "Coffee",
+  "roaster_slug": "worldtravelercoffee",
+  "tags": [
+   "Franchisee"
+  ],
+  "title": "Whole Beans",
+  "url": "https://worldtravelercoffee.com/products/franchise-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 8165,
+    "price_usd": 171.0,
+    "title": "Espresso Blend - 18 lb bucket",
+    "variant_id": "42984162328656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "Whole Beans, drip assortment - 5 lb bucket",
+    "variant_id": "42984162361424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "Decaf Blend - 5 lb bucket",
+    "variant_id": "42984162394192"
+   },
+   {
+    "available": true,
+    "grams": 1588,
+    "price_usd": 33.25,
+    "title": "Cold Brew Batch - 3.5 lb",
+    "variant_id": "42984162426960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.25,
+    "title": "Whole Beans, assortment - 12oz bags",
+    "variant_id": "42984162459728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.25,
+    "title": "Whole Beans, Espresso - 12oz bags",
+    "variant_id": "43013566627920"
+   }
+  ],
+  "vendor": "World Traveler Coffee Roasters "
+ }
+]

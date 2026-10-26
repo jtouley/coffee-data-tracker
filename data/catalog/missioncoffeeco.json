@@ -1,0 +1,354 @@
+[
+ {
+  "body_hash": "50430c95540b50a8",
+  "first_seen": "2026-10-26",
+  "handle": "black-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/products/Tea-Clean-2of7-_1.jpg?v=1657212475",
+  "platform": "shopify",
+  "product_id": "166386073628",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "BLACK HOUSE BLEND",
+  "url": "https://www.missioncoffeeco.com/products/black-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz.",
+    "variant_id": "1972321255452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb.",
+    "variant_id": "1972321320988"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "7281446452da886b",
+  "first_seen": "2026-10-26",
+  "handle": "extract-intro-to-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/products/MEDU_Espresso_Nov2018_d3c89c86-ae51-4700-8f2e-a213bdf8d52d.jpg?v=1620729026",
+  "platform": "shopify",
+  "product_id": "4160560693380",
+  "product_type": "Classes",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Education",
+   "Espresso"
+  ],
+  "title": "EXTRACT: Intro to Espresso",
+  "url": "https://www.missioncoffeeco.com/products/extract-intro-to-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "TBD",
+    "variant_id": "32249983533188"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "be7148d9eb33eb8b",
+  "first_seen": "2026-10-26",
+  "handle": "kodiak-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/products/Tea-Clean-3of7-_1.jpg?v=1657212600",
+  "platform": "shopify",
+  "product_id": "4334094852",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "KODIAK ESPRESSO",
+  "url": "https://www.missioncoffeeco.com/products/kodiak-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz.",
+    "variant_id": "14431714948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lb.",
+    "variant_id": "14431761092"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "6bc647a19cf1915c",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-refill-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/products/Products_5of5.jpg?v=1620729031",
+  "platform": "shopify",
+  "product_id": "4782911488132",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Growler",
+   "Refill",
+   "To Go",
+   "cold brew"
+  ],
+  "title": "Cold Brew 64oz",
+  "url": "https://www.missioncoffeeco.com/products/cold-brew-refill-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.5,
+    "title": "Default Title",
+    "variant_id": "33186262417540"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "76f30d23b05fe014",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-caldas-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/products/Cleaned-Bags-1of3-_1.jpg?v=1657212550",
+  "platform": "shopify",
+  "product_id": "55545561116",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "COLOMBIA DECAF",
+  "url": "https://www.missioncoffeeco.com/products/colombia-caldas-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "550587400220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.75,
+    "title": "5lb",
+    "variant_id": "550587465756"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "98e0297c34c7401c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-mineiro",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/files/PXL_20240508_141420424_2.jpg?v=1715178657",
+  "platform": "shopify",
+  "product_id": "8415240487169",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Brazil, Cerrado Mineiro",
+  "url": "https://www.missioncoffeeco.com/products/brazil-cerrado-mineiro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "47805003268353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 lb",
+    "variant_id": "47805003301121"
+   }
+  ],
+  "vendor": "Mission Coffee"
+ },
+ {
+  "body_hash": "63301c88f931b181",
+  "first_seen": "2026-10-26",
+  "handle": "storymaker-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/files/DSCF0345_2.jpg?v=1733235951",
+  "platform": "shopify",
+  "product_id": "8650863247617",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Storymaker Blend",
+  "url": "https://www.missioncoffeeco.com/products/storymaker-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz.",
+    "variant_id": "45808349446401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lbs.",
+    "variant_id": "45808349479169"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 69.5,
+    "title": "3 lb.",
+    "variant_id": "46674511626497"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 251.0,
+    "title": "Case (four 3 lb. Bags)",
+    "variant_id": "46674548687105"
+   }
+  ],
+  "vendor": "Mission Coffee "
+ },
+ {
+  "body_hash": "baed8cf1c09402cb",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-the-reds",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/files/DSCF0435_2.jpg?v=1734643153",
+  "platform": "shopify",
+  "product_id": "8668379382017",
+  "product_type": "Coffee",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Nicaragua:  The Reds",
+  "url": "https://www.missioncoffeeco.com/products/nicaragua-the-reds",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "45901473087745"
+   }
+  ],
+  "vendor": "Mission Coffee Co. LLC"
+ },
+ {
+  "body_hash": "67e7ff3354c5eeac",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/files/MexicoDecaf.jpg?v=1756388110",
+  "platform": "shopify",
+  "product_id": "8898444853505",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [],
+  "title": "Decaf Blend",
+  "url": "https://www.missioncoffeeco.com/products/decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz.",
+    "variant_id": "46674580340993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb.",
+    "variant_id": "46674580373761"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.5,
+    "title": "3 lb",
+    "variant_id": "46674580406529"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 251.0,
+    "title": "Case (four 3 lb. Bags)",
+    "variant_id": "46674580439297"
+   }
+  ],
+  "vendor": "Mission Coffee "
+ },
+ {
+  "body_hash": "b7ffc9fc4cc1c506",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0971/8552/files/DSCF2295_2.jpg?v=1770064165",
+  "platform": "shopify",
+  "product_id": "8974544699649",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeco",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.missioncoffeeco.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "47698693259521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb",
+    "variant_id": "47698693292289"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 69.5,
+    "title": "3 lb",
+    "variant_id": "47698693325057"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 251.0,
+    "title": "Case (four 3 lb. bags)",
+    "variant_id": "47698693357825"
+   }
+  ],
+  "vendor": "Mission Coffee "
+ }
+]

@@ -1,0 +1,4274 @@
+[
+ {
+  "body_hash": "2c31d81339ccc6d4",
+  "first_seen": "2026-10-26",
+  "handle": "el-conacaste-java-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/El_Conacaste-Java_Variety-PDP.png?v=1791290661",
+  "platform": "shopify",
+  "product_id": "15393862877261",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "El Conacaste – Java Variety",
+  "url": "https://counterculturecoffee.com/products/el-conacaste-java-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "67578675691597"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c641aa80d34b5e47",
+  "first_seen": "2026-10-26",
+  "handle": "laba-gesha-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Laba_Gesha_Nat_Sun-2026-PDP.png?v=1792172694",
+  "platform": "shopify",
+  "product_id": "15422020026445",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Laba Gesha - Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/laba-gesha-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "67712506658893"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "de97d65dde8ae10f",
+  "first_seen": "2026-10-26",
+  "handle": "los-charapanos-1",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Los_charapanos_12oz_2023.png?v=1692722224",
+  "platform": "shopify",
+  "product_id": "6732304515149",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Los Charapanos",
+  "url": "https://counterculturecoffee.com/products/los-charapanos-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "39638167552077"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "9cb27f63ff277477",
+  "first_seen": "2026-10-26",
+  "handle": "la-viuda",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/La_Viuda_PDP.png?v=1764687115",
+  "platform": "shopify",
+  "product_id": "6732305760333",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "La Viuda",
+  "url": "https://counterculturecoffee.com/products/la-viuda",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz bag",
+    "variant_id": "40405454323789"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0550127f6586f06a",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-slow-motion",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/SlowMotion_Main.jpg?v=1749045978",
+  "platform": "shopify",
+  "product_id": "6732315689037",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__F47F66",
+   "origin__year-round-blend",
+   "roastlevel__medium-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Slow Motion – Decaf",
+  "url": "https://counterculturecoffee.com/products/12-oz-slow-motion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "39666525208653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "39666525241421"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "39666527174733"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "276be819ee484cb6",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-hologram",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Hologram_Main.jpg?v=1749046044",
+  "platform": "shopify",
+  "product_id": "6732315754573",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bestseller",
+   "coffee",
+   "color__CFABF2",
+   "origin__year-round-blend",
+   "recommended",
+   "roastlevel__medium-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Hologram",
+  "url": "https://counterculturecoffee.com/products/12-oz-hologram",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "39666522652749"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "39666522685517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "39666522718285"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "e49a2e825595dc5e",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-forty-six",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FortySix_Main.jpg?v=1749046003",
+  "platform": "shopify",
+  "product_id": "6732315787341",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__95C0E2",
+   "origin__year-round-blend",
+   "roastlevel__dark-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Forty-Six",
+  "url": "https://counterculturecoffee.com/products/12-oz-forty-six",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "39666516820045"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "39666516852813"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "39666516885581"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c18a98e9f0add9d7",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-la-golondrina",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_LaGolondrina_12oz_2024.png?v=1729868912",
+  "platform": "shopify",
+  "product_id": "6732317163597",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bestseller",
+   "coffee",
+   "color__F58320",
+   "gg_under_25",
+   "organic",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "La Golondrina",
+  "url": "https://counterculturecoffee.com/products/12-oz-la-golondrina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "39668534509645"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 56.0,
+    "title": "24 oz",
+    "variant_id": "39668534542413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.0,
+    "title": "5 lb",
+    "variant_id": "39668534575181"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "33137a80b3bdb62e",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-gradient",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Gradient_Main.jpg?v=1749045907",
+  "platform": "shopify",
+  "product_id": "6732317261901",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__CF80A8",
+   "origin__colombia",
+   "origin__year-round-blend",
+   "roastlevel__dark-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Gradient",
+  "url": "https://counterculturecoffee.com/products/12-oz-gradient",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "39666519572557"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "39666519605325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "39666519638093"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "3860cde1ba712dd0",
+  "first_seen": "2026-10-26",
+  "handle": "nuevo-amanecer-3",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Nuevo-Amanecer_2025_PDP.png?v=1765464768",
+  "platform": "shopify",
+  "product_id": "6732327288909",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__F58320",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Nuevo Amanecer",
+  "url": "https://counterculturecoffee.com/products/nuevo-amanecer-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz",
+    "variant_id": "40451558408269"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2c6aa3bab2580a0e",
+  "first_seen": "2026-10-26",
+  "handle": "perennial",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Perennial_PDP_gallery2.jpg?v=1776379243",
+  "platform": "shopify",
+  "product_id": "6732339806285",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "roastlevel__medium-dark-roast"
+  ],
+  "title": "Perennial",
+  "url": "https://counterculturecoffee.com/products/perennial",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz box",
+    "variant_id": "40118963241037"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 52.0,
+    "title": "24 oz",
+    "variant_id": "41710235582541"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb",
+    "variant_id": "41710239383629"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5395c0d3c2547f61",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-k-uychi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Kuychi_decaf_12oz_2023.png?v=1692644734",
+  "platform": "shopify",
+  "product_id": "6732345638989",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "decaf",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Decaf K’uychi",
+  "url": "https://counterculturecoffee.com/products/decaf-k-uychi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40022121185357"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "792eb512b04acd60",
+  "first_seen": "2026-10-26",
+  "handle": "cueva-de-los-llanos-2",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_cuevadelosllanos_2024.png?v=1710178575",
+  "platform": "shopify",
+  "product_id": "6732346196045",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__F58320"
+  ],
+  "title": "Cueva de los Llanos",
+  "url": "https://counterculturecoffee.com/products/cueva-de-los-llanos-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40088597299277"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "171531ce3f126b37",
+  "first_seen": "2026-10-26",
+  "handle": "incahuasi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Incahuasi_2026_PDP.png?v=1774376081",
+  "platform": "shopify",
+  "product_id": "6732349505613",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Incahuasi",
+  "url": "https://counterculturecoffee.com/products/incahuasi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "39638216376397"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "33995730f700f63a",
+  "first_seen": "2026-10-26",
+  "handle": "buchiro-2",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Buchiro_2025_PDP.png?v=1741276930",
+  "platform": "shopify",
+  "product_id": "6732351897677",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Buchiro",
+  "url": "https://counterculturecoffee.com/products/buchiro-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "39638222635085"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "9e82bbdfee1c6a2c",
+  "first_seen": "2026-10-26",
+  "handle": "fast-forward-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FastForward_Main.jpg?v=1749045784",
+  "platform": "shopify",
+  "product_id": "6732364447821",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bestseller",
+   "coffee",
+   "color_BFE9F3",
+   "origin__year-round-blend",
+   "roastlevel__medium-light-roast",
+   "roastlevel__medium-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Fast Forward",
+  "url": "https://counterculturecoffee.com/products/fast-forward-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "39666515411021"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.5,
+    "title": "24 oz",
+    "variant_id": "39666515443789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb",
+    "variant_id": "39666515476557"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "cb1268909f78708a",
+  "first_seen": "2026-10-26",
+  "handle": "big-trouble",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/BigTrouble_Main.jpg?v=1749045429",
+  "platform": "shopify",
+  "product_id": "6732364546125",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bestseller",
+   "coffee",
+   "color__BBE590",
+   "origin__year-round-blend",
+   "recommended",
+   "roastlevel__dark-roast",
+   "roastlevel__medium-dark-roast",
+   "roastlevel__medium-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Big Trouble",
+  "url": "https://counterculturecoffee.com/products/big-trouble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz",
+    "variant_id": "39657673097293"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.5,
+    "title": "24 oz",
+    "variant_id": "39657673130061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5 lb",
+    "variant_id": "39657673162829"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2a3c19e22b83714b",
+  "first_seen": "2026-10-26",
+  "handle": "apollo",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Apollo_Main-2.jpg?v=1751920985",
+  "platform": "shopify",
+  "product_id": "6732364611661",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__FEFF9F",
+   "origin__ethiopia",
+   "origin__year-round-blend",
+   "recommended",
+   "roastlevel__medium-light-roast",
+   "roastlevel__medium-roast",
+   "subscription",
+   "whole bean",
+   "year-round"
+  ],
+  "title": "Apollo",
+  "url": "https://counterculturecoffee.com/products/apollo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "39665657348173"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "39665657380941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "39665657413709"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c2114cfa21a18022",
+  "first_seen": "2026-10-26",
+  "handle": "juan-escobar-gaspar",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Juana_Gaspar_LR-2026_PDP.png?v=1786734233",
+  "platform": "shopify",
+  "product_id": "6741668855885",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF5C35",
+   "organic",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Juana Gaspar",
+  "url": "https://counterculturecoffee.com/products/juan-escobar-gaspar",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz box",
+    "variant_id": "40126848499789"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "86c8a48180053126",
+  "first_seen": "2026-10-26",
+  "handle": "idido",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Idido_2025_PDP_4.png?v=1751383499",
+  "platform": "shopify",
+  "product_id": "6801620729933",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bestseller",
+   "coffee",
+   "color__FF8D6B",
+   "organic",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Idido",
+  "url": "https://counterculturecoffee.com/products/idido",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "39871623266381"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "155f8a2232f9fbec",
+  "first_seen": "2026-10-26",
+  "handle": "finca-pashapa-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaPashapa_12oz_2024_1.png?v=1729086776",
+  "platform": "shopify",
+  "product_id": "6815351341133",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color_3BBFAD",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__dark-roast",
+   "single-origin"
+  ],
+  "title": "Finca Pashapa – Dark Roast",
+  "url": "https://counterculturecoffee.com/products/finca-pashapa-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40134723469389"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5b063831ca4d86d6",
+  "first_seen": "2026-10-26",
+  "handle": "valle-inca",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/ValleInca_2026_PDP.png?v=1769720798",
+  "platform": "shopify",
+  "product_id": "6840070832205",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Valle Inca",
+  "url": "https://counterculturecoffee.com/products/valle-inca",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "41520556212301"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "f8ca9b1a0066b9b9",
+  "first_seen": "2026-10-26",
+  "handle": "santafe",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Santafe_12oz_2024.png?v=1734025120",
+  "platform": "shopify",
+  "product_id": "6840081645645",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__F58320",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Santafé",
+  "url": "https://counterculturecoffee.com/products/santafe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40332615483469"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "e28ad899d202a585",
+  "first_seen": "2026-10-26",
+  "handle": "field-trip",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FT2026_Square.jpg?v=1767714163",
+  "platform": "shopify",
+  "product_id": "6843035549773",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "roastlevel__medium-light-roast"
+  ],
+  "title": "Field Trip",
+  "url": "https://counterculturecoffee.com/products/field-trip",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz box",
+    "variant_id": "40337320935501"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 52.0,
+    "title": "24 oz",
+    "variant_id": "41517484343373"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb",
+    "variant_id": "41517491683405"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5bd0c83f103bca53",
+  "first_seen": "2026-10-26",
+  "handle": "urcunina",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/products/Urcunina_12oz_bag_2023.png?v=1674274929",
+  "platform": "shopify",
+  "product_id": "6843067859021",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Urcunina",
+  "url": "https://counterculturecoffee.com/products/urcunina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40290863808589"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "40606b49deaf9842",
+  "first_seen": "2026-10-26",
+  "handle": "mpemba",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/mpemba_2025_PDP.png?v=1746110586",
+  "platform": "shopify",
+  "product_id": "6843143618637",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Mpemba",
+  "url": "https://counterculturecoffee.com/products/mpemba",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40021738160205"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "1600f81e9a93d1b7",
+  "first_seen": "2026-10-26",
+  "handle": "mpemba-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Mpemba-Natural-Sundried_2026_PDP.png?v=1772134424",
+  "platform": "shopify",
+  "product_id": "6843146338381",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Mpemba – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/mpemba-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40021741207629"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "50b5a1e316d8548a",
+  "first_seen": "2026-10-26",
+  "handle": "abel-salinas",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/AbelSalinas_2026_PDP.png?v=1772219128",
+  "platform": "shopify",
+  "product_id": "6852190601293",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Abel Salinas",
+  "url": "https://counterculturecoffee.com/products/abel-salinas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.0,
+    "title": "12 oz",
+    "variant_id": "40298404184141"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "367d76cf5eeafa82",
+  "first_seen": "2026-10-26",
+  "handle": "toldopamba-subscriber-exclusive",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Toldopamba_2026_PDP.png?v=1769194275",
+  "platform": "shopify",
+  "product_id": "6856770355277",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Toldopamba – Special Process",
+  "url": "https://counterculturecoffee.com/products/toldopamba-subscriber-exclusive",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "40064873365581"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2ffcc961fcac4e19",
+  "first_seen": "2026-10-26",
+  "handle": "damian-espinoza",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Damian-Espinoza_2026_PDP.png?v=1771536762",
+  "platform": "shopify",
+  "product_id": "6857976578125",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Damian Espinoza",
+  "url": "https://counterculturecoffee.com/products/damian-espinoza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "40068198170701"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c108592da4484f65",
+  "first_seen": "2026-10-26",
+  "handle": "damian-espinoza-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Damian_espinoza_natural_sundried_singlelot_12oz_2023.png?v=1692721225",
+  "platform": "shopify",
+  "product_id": "6857978511437",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Damian Espinoza – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/damian-espinoza-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "40068199579725"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "17025683e70381fa",
+  "first_seen": "2026-10-26",
+  "handle": "yacuanquer",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Yacuanquer_12oz.png?v=1692722374",
+  "platform": "shopify",
+  "product_id": "6858500603981",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Yacuanquer",
+  "url": "https://counterculturecoffee.com/products/yacuanquer",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "40069435883597"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0e487d7c85d69ce9",
+  "first_seen": "2026-10-26",
+  "handle": "nueva-llusta",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Nueva-Llusta_2026_PDP.png?v=1772829449",
+  "platform": "shopify",
+  "product_id": "6862204403789",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Nueva Llusta",
+  "url": "https://counterculturecoffee.com/products/nueva-llusta",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "41762901065805"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "26988b81c1dec4ee",
+  "first_seen": "2026-10-26",
+  "handle": "buchiro-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Buchiro_NaturalSundried_2026_PDP.png?v=1776732107",
+  "platform": "shopify",
+  "product_id": "6862209286221",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Buchiro – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/buchiro-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40357301551181"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "a0d4d0fc75521fe0",
+  "first_seen": "2026-10-26",
+  "handle": "lucio-luque-gesha-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/products/LucioLuque_4oz_card.jpg?v=1682127454",
+  "platform": "shopify",
+  "product_id": "6863083929677",
+  "product_type": "coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Lucio Luque – Gesha Variety",
+  "url": "https://counterculturecoffee.com/products/lucio-luque-gesha-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12oz box",
+    "variant_id": "40079475179597"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 19.0,
+    "title": "4oz bag",
+    "variant_id": "40079475212365"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "82df8c7a556c9f71",
+  "first_seen": "2026-10-26",
+  "handle": "buliza-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/products/Buliza_Dark_Roast_12oz_bag2022.png?v=1682084341",
+  "platform": "shopify",
+  "product_id": "6863435497549",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Buliza Dark Roast",
+  "url": "https://counterculturecoffee.com/products/buliza-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "40080691167309"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "97cd8f863ece9565",
+  "first_seen": "2026-10-26",
+  "handle": "iridescent",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/2026_10_Counter_Culture_Holiday3742.jpg?v=1792674794",
+  "platform": "shopify",
+  "product_id": "6866666651725",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "blend",
+   "limited-release",
+   "roastlevel__medium-roast"
+  ],
+  "title": "Iridescent",
+  "url": "https://counterculturecoffee.com/products/iridescent",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz box",
+    "variant_id": "40197670731853"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 52.0,
+    "title": "24 oz",
+    "variant_id": "41394744393805"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb",
+    "variant_id": "41394746425421"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c79f7897e76589a1",
+  "first_seen": "2026-10-26",
+  "handle": "equilibrium",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Screenshot2026-07-11at11.37.32AM.png?v=1783784503",
+  "platform": "shopify",
+  "product_id": "6866666717261",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "blend",
+   "limited-release",
+   "roastlevel__medium-light-roast"
+  ],
+  "title": "Equilibrium",
+  "url": "https://counterculturecoffee.com/products/equilibrium",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz box",
+    "variant_id": "40090609385549"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 52.0,
+    "title": "24 oz",
+    "variant_id": "41932539166797"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb",
+    "variant_id": "41932556533837"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "da42a34631daa9ee",
+  "first_seen": "2026-10-26",
+  "handle": "la-hierba-santa",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/LaHierbaSanta_BUFFER.png?v=1768236714",
+  "platform": "shopify",
+  "product_id": "6867042336845",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "La Hierba Santa",
+  "url": "https://counterculturecoffee.com/products/la-hierba-santa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "40091294335053"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5d139503f01a38bd",
+  "first_seen": "2026-10-26",
+  "handle": "makali-subscriber-exclusive",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Makali_12oz_bag_2023_994c88b1-b120-4392-9b61-aeaa5ad28aa8.png?v=1683825595",
+  "platform": "shopify",
+  "product_id": "6868240728141",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Makali – Subscriber Exclusive",
+  "url": "https://counterculturecoffee.com/products/makali-subscriber-exclusive",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "40093534814285"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "b4e438e789e78122",
+  "first_seen": "2026-10-26",
+  "handle": "kabeywa",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Kabeywa_12oz_2023.png?v=1692721980",
+  "platform": "shopify",
+  "product_id": "6868246495309",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "origin__uganda",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Kabeywa",
+  "url": "https://counterculturecoffee.com/products/kabeywa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "40099502850125"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "8ee20e099904c02b",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-victoria",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Finca-La-Victoria_12oz_2024.png?v=1723476707",
+  "platform": "shopify",
+  "product_id": "6872266571853",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FDBBCB",
+   "origin__nicaragua",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca La Victoria",
+  "url": "https://counterculturecoffee.com/products/finca-la-victoria",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "40099502227533"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "431c0546e8052f4e",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-puente",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-El-Puente_2025_PDP_2.png?v=1755693840",
+  "platform": "shopify",
+  "product_id": "6873223102541",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca El Puente",
+  "url": "https://counterculturecoffee.com/products/finca-el-puente",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40101588336717"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "bb21f3894863552d",
+  "first_seen": "2026-10-26",
+  "handle": "kabeywa-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Kabeywa_natural_sundried_12oz_2023.png?v=1692721721",
+  "platform": "shopify",
+  "product_id": "6873646432333",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Kabeywa – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/kabeywa-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "40101626675277"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "41b3607f5a8747a5",
+  "first_seen": "2026-10-26",
+  "handle": "dambi-udo-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_DambiUdo-NaturalSundried_12oz_2024_1.png?v=1732032476",
+  "platform": "shopify",
+  "product_id": "6876115664973",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Dambi Udo – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/dambi-udo-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "40107007443021"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c0e8277b82de6376",
+  "first_seen": "2026-10-26",
+  "handle": "cueva-de-los-llanos-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CuevaDeLosLLanos.jpg?v=1688133526",
+  "platform": "shopify",
+  "product_id": "6876145549389",
+  "product_type": "coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Cueva de los Llanos – Pink Bourbon Variety",
+  "url": "https://counterculturecoffee.com/products/cueva-de-los-llanos-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 30.0,
+    "title": "4 oz bag",
+    "variant_id": "40107308974157"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "34ede84d74d6a87e",
+  "first_seen": "2026-10-26",
+  "handle": "pablo-cordoba",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Pablo-Cordoba_2026_PDP.png?v=1777056981",
+  "platform": "shopify",
+  "product_id": "6877649174605",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Pablo Cordoba",
+  "url": "https://counterculturecoffee.com/products/pablo-cordoba",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz",
+    "variant_id": "40109126647885"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ddc5b2158608078f",
+  "first_seen": "2026-10-26",
+  "handle": "concepcion-huista",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Concepcion_huista_12oz_2023.png?v=1692648001",
+  "platform": "shopify",
+  "product_id": "6884107518029",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "organic",
+   "origin__guatemala",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Concepción Huista",
+  "url": "https://counterculturecoffee.com/products/concepcion-huista",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40119726506061"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "34e09b11e63774d6",
+  "first_seen": "2026-10-26",
+  "handle": "finca-santa-elena",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-Santa-Elena_PDP.png?v=1782404973",
+  "platform": "shopify",
+  "product_id": "6884109516877",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca Santa Elena",
+  "url": "https://counterculturecoffee.com/products/finca-santa-elena",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40119728275533"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c74d4a9cb06b8ab1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-urcunina",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Urcunina_decaf_12oz_2023.png?v=1692644990",
+  "platform": "shopify",
+  "product_id": "6886828015693",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "decaf",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "roastlevel__medium-light-roast",
+   "roastlevel__medium-roast",
+   "single-origin"
+  ],
+  "title": "Decaf Urcunina",
+  "url": "https://counterculturecoffee.com/products/decaf-urcunina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "40122986823757"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5162f9e36e752bd6",
+  "first_seen": "2026-10-26",
+  "handle": "gundhikan-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Gundikhan-Estate_12oz_2024.png?v=1722524327",
+  "platform": "shopify",
+  "product_id": "6887459127373",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Gundikhan Estate",
+  "url": "https://counterculturecoffee.com/products/gundhikan-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "40126849417293"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "835ab1d60b001cc7",
+  "first_seen": "2026-10-26",
+  "handle": "finca-santa-elena-pacamara-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FincaSantaElena_Pacamara_2025_PDP_1.png?v=1753213012",
+  "platform": "shopify",
+  "product_id": "6888219148365",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca Santa Elena – Pacamara Variety",
+  "url": "https://counterculturecoffee.com/products/finca-santa-elena-pacamara-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "40128519831629"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "518c64d4e019273c",
+  "first_seen": "2026-10-26",
+  "handle": "kamavindi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Kamavindi-2026-PDP.png?v=1783291492",
+  "platform": "shopify",
+  "product_id": "6888219213901",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FB91A3",
+   "limited-release",
+   "origin__kenya",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Kamavindi",
+  "url": "https://counterculturecoffee.com/products/kamavindi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz",
+    "variant_id": "40134803882061"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "3de8f67ca89a87d4",
+  "first_seen": "2026-10-26",
+  "handle": "finca-aurora-anaerobic-java",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_aurora_anaerobic_java_12oz_2023.png?v=1692647375",
+  "platform": "shopify",
+  "product_id": "6889714712653",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca Aurora – Anaerobic Java",
+  "url": "https://counterculturecoffee.com/products/finca-aurora-anaerobic-java",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "40134720127053"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "95c4f1493ddff7b3",
+  "first_seen": "2026-10-26",
+  "handle": "kabtamu-family-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_kabtamu_family_12oz_2023.png?v=1693586717",
+  "platform": "shopify",
+  "product_id": "6889714745421",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Kabtamu Family – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/kabtamu-family-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40134721667149"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "9309f6f0711d2568",
+  "first_seen": "2026-10-26",
+  "handle": "rio-de-abejas",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Rio_de_Abejas_2026_PDP.png?v=1779124024",
+  "platform": "shopify",
+  "product_id": "6892178964557",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color_8D1B60",
+   "origin__single-origin",
+   "origin_mexico",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Rio de Abejas",
+  "url": "https://counterculturecoffee.com/products/rio-de-abejas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "40134805717069"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2ba8138ef583f705",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-victoria-maragogipe-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaLaVictoria_MaragogipeVariety_2025_pdp.png?v=1757203143",
+  "platform": "shopify",
+  "product_id": "6892179685453",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca La Victoria – Maragogipe Variety",
+  "url": "https://counterculturecoffee.com/products/finca-la-victoria-maragogipe-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "40136985870413"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "85708db92277f8c0",
+  "first_seen": "2026-10-26",
+  "handle": "sharbo-maro",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Sharbo_Maro_LR-2026_PDP.png?v=1790347855",
+  "platform": "shopify",
+  "product_id": "6894165065805",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__FF8D6B",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Sharbo Maro",
+  "url": "https://counterculturecoffee.com/products/sharbo-maro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "40139512348749"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c05d08f37a054a51",
+  "first_seen": "2026-10-26",
+  "handle": "san-miguel",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/San_Miguel-2026-PDP.png?v=1782411766",
+  "platform": "shopify",
+  "product_id": "6895650766925",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF5C35",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "San Miguel",
+  "url": "https://counterculturecoffee.com/products/san-miguel",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40143007678541"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c501c421087312de",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-victoria-java-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-La-Victoria-Java-Variety_PDP.png?v=1763497067",
+  "platform": "shopify",
+  "product_id": "6895651651661",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca La Victoria – Java Variety",
+  "url": "https://counterculturecoffee.com/products/finca-la-victoria-java-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "40143009677389"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "157346ce3d9a9611",
+  "first_seen": "2026-10-26",
+  "handle": "kushikamana",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Kushikamana_12oz_2023_5a47ea32-fe45-4687-8fd1-01051c05dc3e.png?v=1700235638",
+  "platform": "shopify",
+  "product_id": "6895652077645",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Kushikamana",
+  "url": "https://counterculturecoffee.com/products/kushikamana",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40143025340493"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "6816d5395b0183e8",
+  "first_seen": "2026-10-26",
+  "handle": "finca-nuguo-gesha-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FincaNuguoPDP1.jpg?v=1765416518",
+  "platform": "shopify",
+  "product_id": "6898326110285",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "gift",
+   "limited-release",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca Nuguo - Gesha Variety 4oz Tin",
+  "url": "https://counterculturecoffee.com/products/finca-nuguo-gesha-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 120.0,
+    "title": "4 oz",
+    "variant_id": "40146492096589"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0f11b96e7c3966dd",
+  "first_seen": "2026-10-26",
+  "handle": "cinco-de-junio",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Cinco-de-Junio_PDP.png?v=1758637735",
+  "platform": "shopify",
+  "product_id": "6899087114317",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__FDBBCB",
+   "organic",
+   "origin__nicaragua",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Cinco de Junio",
+  "url": "https://counterculturecoffee.com/products/cinco-de-junio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40147526811725"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c45a9fd260a11bce",
+  "first_seen": "2026-10-26",
+  "handle": "muthonjo",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Muthonjo_12oz_2023_1.png?v=1695237212",
+  "platform": "shopify",
+  "product_id": "6901541863501",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Muthonjo",
+  "url": "https://counterculturecoffee.com/products/muthonjo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz",
+    "variant_id": "40154099351629"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ebd586fdcfe58617",
+  "first_seen": "2026-10-26",
+  "handle": "sipacapa-1",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Sipacapa_12oz_2024_1.png?v=1727103312",
+  "platform": "shopify",
+  "product_id": "6901906145357",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color__FF5C35",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Sipacapa",
+  "url": "https://counterculturecoffee.com/products/sipacapa-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40154938736717"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0cd6a748d42f14d6",
+  "first_seen": "2026-10-26",
+  "handle": "jabanto-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Jabanto-nat_2025_PDP_1.png?v=1755015989",
+  "platform": "shopify",
+  "product_id": "6901913747533",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8D6B",
+   "organic",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Jabanto – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/jabanto-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40154944471117"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "69c0b86143db4b2b",
+  "first_seen": "2026-10-26",
+  "handle": "hassan-assalol-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Group48096929_1.jpg?v=1776199888",
+  "platform": "shopify",
+  "product_id": "6901915942989",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Hassan Assalol - Natural Sundried  **SOLD OUT**",
+  "url": "https://counterculturecoffee.com/products/hassan-assalol-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 28.0,
+    "title": "4 oz",
+    "variant_id": "40154950762573"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "9bff3211cdc084ff",
+  "first_seen": "2026-10-26",
+  "handle": "okolu-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Okoluu-NaturalSundried-pdp.png?v=1784680897",
+  "platform": "shopify",
+  "product_id": "6909673668685",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin",
+   "whole bean"
+  ],
+  "title": "Okoluu – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/okolu-natural-sundried",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "40179980140621"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2f5dead009e40536",
+  "first_seen": "2026-10-26",
+  "handle": "finca-nueva-armenia",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaNuevaArmenia_12oz_2024.png?v=1756411598",
+  "platform": "shopify",
+  "product_id": "6909673701453",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Finca Nueva Armenia",
+  "url": "https://counterculturecoffee.com/products/finca-nueva-armenia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40181780381773"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "77ba851dbd44b9e8",
+  "first_seen": "2026-10-26",
+  "handle": "guchienda",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Guchienda-2026-PDP.png?v=1789671546",
+  "platform": "shopify",
+  "product_id": "6917718245453",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FB91A3",
+   "origin__kenya",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Guchienda",
+  "url": "https://counterculturecoffee.com/products/guchienda",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 oz",
+    "variant_id": "40196691624013"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "3bb1261069106876",
+  "first_seen": "2026-10-26",
+  "handle": "12-days-of-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/12days_temp_b4107419-e993-4b6a-945b-a4c23ec054c5.jpg?v=1730901530",
+  "platform": "shopify",
+  "product_id": "6922874355789",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Twelve Days of Coffee - SOLD OUT",
+  "url": "https://counterculturecoffee.com/products/12-days-of-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 150.0,
+    "title": "12 - 4oz bags",
+    "variant_id": "40210082594893"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "b2b48ccb471c40ff",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Apollo24oz_NoStamp.png?v=1767629210",
+  "platform": "shopify",
+  "product_id": "6925023608909",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "bulk-coffee",
+   "coffee"
+  ],
+  "title": "Bulk Coffee",
+  "url": "https://counterculturecoffee.com/products/bulk-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.5,
+    "title": "Big Trouble / 24oz",
+    "variant_id": "40217409650765"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Gradient / 24oz",
+    "variant_id": "40217415909453"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.5,
+    "title": "Fast Forward / 24oz",
+    "variant_id": "40217416204365"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Apollo / 24oz",
+    "variant_id": "40217417285709"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Slow Motion / 24oz",
+    "variant_id": "40217418629197"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Hologram / 24oz",
+    "variant_id": "40217424035917"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Forty-Six / 24oz",
+    "variant_id": "40218039255117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Apollo / 5lb",
+    "variant_id": "41337327452237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Big Trouble / 5lb",
+    "variant_id": "41337327485005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Fast Forward / 5lb",
+    "variant_id": "41337327517773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Forty-Six / 5lb",
+    "variant_id": "41337327550541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Gradient / 5lb",
+    "variant_id": "41337327583309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Hologram / 5lb",
+    "variant_id": "41337327616077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Slow Motion / 5lb",
+    "variant_id": "41337327648845"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "Even Keel Half-Caff / 24oz",
+    "variant_id": "41415364837453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Even Keel Half-Caff / 5lb",
+    "variant_id": "41415365165133"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5930826dd2960c66",
+  "first_seen": "2026-10-26",
+  "handle": "asuvim",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/ASUVIM_PDP.png?v=1764701200",
+  "platform": "shopify",
+  "product_id": "6931756941389",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF5C35",
+   "origin__guatemala",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "ASUVIM",
+  "url": "https://counterculturecoffee.com/products/asuvim",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "40226706522189"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "bb85d5dd21737194",
+  "first_seen": "2026-10-26",
+  "handle": "ngaratua",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Ngarutua_PDP.png?v=1761244425",
+  "platform": "shopify",
+  "product_id": "6934805643341",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FB91A3",
+   "origin__kenya",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Ngarutua",
+  "url": "https://counterculturecoffee.com/products/ngaratua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "40233192489037"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "e9e5022ffae18dba",
+  "first_seen": "2026-10-26",
+  "handle": "buliza",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_buliza_12oz_2024.png?v=1704209998",
+  "platform": "shopify",
+  "product_id": "6979562504269",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Buliza",
+  "url": "https://counterculturecoffee.com/products/buliza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40356194353229"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "4cf7e30c053d88bb",
+  "first_seen": "2026-10-26",
+  "handle": "urcunina-extended-fermentation",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_urcunina_extended-fermentation_12oz_2024.png?v=1706548815",
+  "platform": "shopify",
+  "product_id": "6997699199053",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "color__F58320",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast"
+  ],
+  "title": "Urcunina – Extended Fermentation",
+  "url": "https://counterculturecoffee.com/products/urcunina-extended-fermentation",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40471414734925"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "4999ac1fa60d53da",
+  "first_seen": "2026-10-26",
+  "handle": "valle-del-santuario",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_valledelsantuario_12oz_2024.png?v=1707246076",
+  "platform": "shopify",
+  "product_id": "7004087124045",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Valle Del Santuario",
+  "url": "https://counterculturecoffee.com/products/valle-del-santuario",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40464412541005"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "adf1a3a1a3256446",
+  "first_seen": "2026-10-26",
+  "handle": "yacuri",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Brewtag_yacuri_12oz_2024.png?v=1707400476",
+  "platform": "shopify",
+  "product_id": "7004803104845",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Yacuri",
+  "url": "https://counterculturecoffee.com/products/yacuri",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40469013332045"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "f6b9d31e22845864",
+  "first_seen": "2026-10-26",
+  "handle": "eladio-chamba-anaerobic-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/EladioChamba_AnaerobicWashed_2025_PDP.png?v=1742827130",
+  "platform": "shopify",
+  "product_id": "7007522521165",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Eladio Chamba - Anaerobic Washed",
+  "url": "https://counterculturecoffee.com/products/eladio-chamba-anaerobic-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz",
+    "variant_id": "40479146213453"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "cb50840ecd07c8a2",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-year-round-blends",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Big_Trouble_gallery_aae2ecbf-154b-4bdb-91a5-5b721324f6fb.jpg?v=1708531574",
+  "platform": "shopify",
+  "product_id": "7012976230477",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "12oz Year-Round Blends",
+  "url": "https://counterculturecoffee.com/products/12oz-year-round-blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz Slow Motion",
+    "variant_id": "40497069195341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz Apollo",
+    "variant_id": "40497072439373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Big Trouble",
+    "variant_id": "40497072472141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Fast Forward",
+    "variant_id": "40497072504909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz Forty-Six",
+    "variant_id": "40497072537677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz Gradient",
+    "variant_id": "40497072570445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12 oz Hologram",
+    "variant_id": "40497072603213"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "b1271ebaec1f6204",
+  "first_seen": "2026-10-26",
+  "handle": "alto-ihuamaca",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_alto_ohuamaca_12oz_2024copy.png?v=1709214916",
+  "platform": "shopify",
+  "product_id": "7014394495053",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Alto Ihuamaca",
+  "url": "https://counterculturecoffee.com/products/alto-ihuamaca",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40502982901837"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "be005f3044807e0c",
+  "first_seen": "2026-10-26",
+  "handle": "intango-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_intango_12oz_2024.png?v=1710178199",
+  "platform": "shopify",
+  "product_id": "7030916907085",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Intango – Dark Roast",
+  "url": "https://counterculturecoffee.com/products/intango-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "40554788454477"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5c327e46303271e1",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-puente-gesha-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-El-Puente_Gesha_PDP.png?v=1762284846",
+  "platform": "shopify",
+  "product_id": "7050528194637",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca El Puente - Gesha Variety",
+  "url": "https://counterculturecoffee.com/products/finca-el-puente-gesha-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz",
+    "variant_id": "40632710955085"
+   }
+  ],
+  "vendor": "Counter Culture Coffee"
+ },
+ {
+  "body_hash": "60bf07e907d6b0da",
+  "first_seen": "2026-10-26",
+  "handle": "nelson-melo",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_nelsonmelo_12oz_2024.png?v=1712150420",
+  "platform": "shopify",
+  "product_id": "7068970123341",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "color__FF8300",
+   "organic",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast"
+  ],
+  "title": "Nelson Melo",
+  "url": "https://counterculturecoffee.com/products/nelson-melo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "40690251268173"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "7a811697f42d56b1",
+  "first_seen": "2026-10-26",
+  "handle": "finca-virgen-de-copacabana",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaVirgendeCopacabana_12oz_2024.png?v=1712773649",
+  "platform": "shopify",
+  "product_id": "7082013196365",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca Virgen de Copacabana",
+  "url": "https://counterculturecoffee.com/products/finca-virgen-de-copacabana",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "40733953556557"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0b0bc378f9ea7f26",
+  "first_seen": "2026-10-26",
+  "handle": "even-keel",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/UpdatedEvenKeel.jpg?v=1768416866",
+  "platform": "shopify",
+  "product_id": "7093247377485",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "organic",
+   "origin__year-round-blend",
+   "recommended",
+   "roastlevel__medium-roast",
+   "subscription",
+   "year-round"
+  ],
+  "title": "Even Keel Half-Caff",
+  "url": "https://counterculturecoffee.com/products/even-keel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "40803325313101"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.5,
+    "title": "24 oz",
+    "variant_id": "40822725476429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lb",
+    "variant_id": "40822727606349"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "07aca033b1dcca2c",
+  "first_seen": "2026-10-26",
+  "handle": "kuychi",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/K_uychi_2025_PDP.png?v=1747661858",
+  "platform": "shopify",
+  "product_id": "7141669896269",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "hidden"
+  ],
+  "title": "K’uychi",
+  "url": "https://counterculturecoffee.com/products/kuychi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "40874822959181"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "7b9aaeec017fb272",
+  "first_seen": "2026-10-26",
+  "handle": "intango",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/intango_2025_PDP_1.png?v=1766769129",
+  "platform": "shopify",
+  "product_id": "7141683101773",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Intango",
+  "url": "https://counterculturecoffee.com/products/intango",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40874864115789"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "62c5d7b1972f3c86",
+  "first_seen": "2026-10-26",
+  "handle": "pedro-patana",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Pedro-Patana_12oz_bag_2021.png?v=1715282419",
+  "platform": "shopify",
+  "product_id": "7182810611789",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Pedro Patana",
+  "url": "https://counterculturecoffee.com/products/pedro-patana",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "40951721820237"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "cf2bda14ef0d7d77",
+  "first_seen": "2026-10-26",
+  "handle": "luis-huayhua",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Mockup-bag_Luis-HuayHua.png?v=1715801508",
+  "platform": "shopify",
+  "product_id": "7190538813517",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Luis Huayhua",
+  "url": "https://counterculturecoffee.com/products/luis-huayhua",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41009867915341"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "6734f5b293ee1720",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Mountain-Harvest_2025_PDP.png?v=1747503004",
+  "platform": "shopify",
+  "product_id": "7201024507981",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "origin__uganda",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Mountain Harvest",
+  "url": "https://counterculturecoffee.com/products/mountain-harvest",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "40989301899341"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "af5a7fb4dd2dbd9c",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-harvest-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Mountain-Harvest-Peaberry_12oz_2024.png?v=1719853714",
+  "platform": "shopify",
+  "product_id": "7289166266445",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Mountain Harvest Peaberry",
+  "url": "https://counterculturecoffee.com/products/mountain-harvest-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "41173217214541"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "f874638eb933cdaa",
+  "first_seen": "2026-10-26",
+  "handle": "finca-santa-elena-pacamara-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaSantaElena_12oz_2024.png?v=1719861803",
+  "platform": "shopify",
+  "product_id": "7289167118413",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca Santa Elena - Pacamara Honey",
+  "url": "https://counterculturecoffee.com/products/finca-santa-elena-pacamara-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 367,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "41172999372877"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "00aec8fe37d035fa",
+  "first_seen": "2026-10-26",
+  "handle": "gemini",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Gemini_Front_2185d9b0-aa28-4634-8098-277948adeb62.jpg?v=1719963240",
+  "platform": "shopify",
+  "product_id": "7290114965581",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "gemini",
+   "gemini_coffee"
+  ],
+  "title": "Gemini",
+  "url": "https://counterculturecoffee.com/products/gemini",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz box",
+    "variant_id": "41176713592909"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ea91005b3e36bda0",
+  "first_seen": "2026-10-26",
+  "handle": "cold-hearted",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/ColdHearted1-3.jpg?v=1722026989",
+  "platform": "shopify",
+  "product_id": "7310817951821",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "Featured",
+   "archive",
+   "blend",
+   "gift",
+   "limited-release",
+   "origin__colombia",
+   "origin__ethiopia",
+   "roastlevel__medium-roast",
+   "whole bean",
+   "year-round"
+  ],
+  "title": "Cold Hearted",
+  "url": "https://counterculturecoffee.com/products/cold-hearted",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "41223122354253"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c728bc3440e9a6eb",
+  "first_seen": "2026-10-26",
+  "handle": "shiferaw-dukale-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/ShiferawDukele_NaturalSundried-2026-pdp.png?v=1791554252",
+  "platform": "shopify",
+  "product_id": "7310837350477",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "organic",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Shiferaw Dukale - Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/shiferaw-dukale-natural-sundried",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "41223240220749"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "6991d28372067257",
+  "first_seen": "2026-10-26",
+  "handle": "pompilio-garcia-luna",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/pompilio_2025_PDP.png?v=1746110264",
+  "platform": "shopify",
+  "product_id": "7324887187533",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Pompilio Garcia Luna",
+  "url": "https://counterculturecoffee.com/products/pompilio-garcia-luna",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz Pompilio Garcia Luna",
+    "variant_id": "41264606576717"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "83bed1154e7a152a",
+  "first_seen": "2026-10-26",
+  "handle": "duromina",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Duromina_2025_PDP.png?v=1747402236",
+  "platform": "shopify",
+  "product_id": "7330824749133",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "color__FF8D6B",
+   "organic",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Duromina",
+  "url": "https://counterculturecoffee.com/products/duromina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz Duromina",
+    "variant_id": "41282877784141"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "9ca5bbb13f22ca75",
+  "first_seen": "2026-10-26",
+  "handle": "gigantic",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_gigantic_2024_8c5d697f-046b-42c1-a27f-bf29c094f069.png?v=1727267870",
+  "platform": "shopify",
+  "product_id": "7345026695245",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "blend",
+   "roastlevel__light-roast"
+  ],
+  "title": "Gigantic",
+  "url": "https://counterculturecoffee.com/products/gigantic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "41326271725645"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "4279d8e31077fe2a",
+  "first_seen": "2026-10-26",
+  "handle": "cafenor-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_cafenor-pacamara_12oz_2024.png?v=1726752870",
+  "platform": "shopify",
+  "product_id": "7346749505613",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "CaféNor Pacamara",
+  "url": "https://counterculturecoffee.com/products/cafenor-pacamara",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "41331017973837"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "05c13253d935950a",
+  "first_seen": "2026-10-26",
+  "handle": "muriama-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/MuriamaEstate_PDP_1.jpg?v=1757630206",
+  "platform": "shopify",
+  "product_id": "7358542413901",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__kenya",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Muriama Estate",
+  "url": "https://counterculturecoffee.com/products/muriama-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz",
+    "variant_id": "41377622851661"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "a83c8c5b2f99e34f",
+  "first_seen": "2026-10-26",
+  "handle": "kamwea-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_Kamwea-Estate_12oz_2024.png?v=1729615676",
+  "platform": "shopify",
+  "product_id": "7361641250893",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Kamwea Estate",
+  "url": "https://counterculturecoffee.com/products/kamwea-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz Kamwea Estate",
+    "variant_id": "41384587984973"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2da041949475d308",
+  "first_seen": "2026-10-26",
+  "handle": "kanelite-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_KaneliteEstate_12oz_2024.png?v=1730731401",
+  "platform": "shopify",
+  "product_id": "7366273761357",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden"
+  ],
+  "title": "Kanelite Estate",
+  "url": "https://counterculturecoffee.com/products/kanelite-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41397670674509"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ebb4f7c7c98df68a",
+  "first_seen": "2026-10-26",
+  "handle": "el-batan",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_ElBatan_12oz_2024.png?v=1733157793",
+  "platform": "shopify",
+  "product_id": "7382295314509",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "El Batan",
+  "url": "https://counterculturecoffee.com/products/el-batan",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41450220847181"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "1f18b431bda1b6f0",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-hermosa-gesha-dual-process",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/CCC_FincaLaHermosaGesha_DualProcess_12oz_2024.png?v=1734621812",
+  "platform": "shopify",
+  "product_id": "7390925160525",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF5C35",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca La Hermosa Gesha – Dual Process",
+  "url": "https://counterculturecoffee.com/products/finca-la-hermosa-gesha-dual-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41472599916621"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "a69df3930c60df4c",
+  "first_seen": "2026-10-26",
+  "handle": "la-palestina",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/La-Palestina_Marshell-Variety_PDP.png?v=1764785113",
+  "platform": "shopify",
+  "product_id": "7413866594381",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "La Palestina - Marshell Variety",
+  "url": "https://counterculturecoffee.com/products/la-palestina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "41543379714125"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "4c9507b270e5b922",
+  "first_seen": "2026-10-26",
+  "handle": "burera",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Burera_2026_PDP_1.png?v=1770325675",
+  "platform": "shopify",
+  "product_id": "7421928472653",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Burera",
+  "url": "https://counterculturecoffee.com/products/burera",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41573908938829"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "4ceed787490343d8",
+  "first_seen": "2026-10-26",
+  "handle": "yonal-fernandez",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/YonalFernandez_2025_PDP.png?v=1739217926",
+  "platform": "shopify",
+  "product_id": "7423060967501",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Yonal Fernandez",
+  "url": "https://counterculturecoffee.com/products/yonal-fernandez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41574953320525"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "d020bf8a57e4e296",
+  "first_seen": "2026-10-26",
+  "handle": "borderlands",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Borderlands_2025_PDP_3.png?v=1765464020",
+  "platform": "shopify",
+  "product_id": "7434940416077",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Borderlands",
+  "url": "https://counterculturecoffee.com/products/borderlands",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz",
+    "variant_id": "41600925302861"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "97b46383cec8c930",
+  "first_seen": "2026-10-26",
+  "handle": "organica",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/OrganicaMicrolot_SOS_2026_PDP_1f891a7a-314d-416d-8ebb-04aa81ccc2d4.png?v=1773071522",
+  "platform": "shopify",
+  "product_id": "7434955653197",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Orgánica Microlot",
+  "url": "https://counterculturecoffee.com/products/organica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "41601047068749"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "c196dd506df8309e",
+  "first_seen": "2026-10-26",
+  "handle": "eudis-orosco-gesha-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/EudisOrosco-GeshaVariety_2025_PDP.png?v=1741277544",
+  "platform": "shopify",
+  "product_id": "7442173722701",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Eudis Orosco - Gesha Variety",
+  "url": "https://counterculturecoffee.com/products/eudis-orosco-gesha-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 41.0,
+    "title": "12 oz",
+    "variant_id": "41631231705165"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "a157da0940acc075",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Birthday_Blend_2026_PDP.png?v=1773757438",
+  "platform": "shopify",
+  "product_id": "7443913343053",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "limited-release"
+  ],
+  "title": "Birthday Blend",
+  "url": "https://counterculturecoffee.com/products/birthday-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "41637388353613"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "5e7fbeb813d55b4c",
+  "first_seen": "2026-10-26",
+  "handle": "borderlands-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/BorderlandsMicrolot_2025_PDP.png?v=1744904777",
+  "platform": "shopify",
+  "product_id": "7463853555789",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Borderlands Microlot",
+  "url": "https://counterculturecoffee.com/products/borderlands-microlot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41729060667469"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "f5da3a7b6b47022f",
+  "first_seen": "2026-10-26",
+  "handle": "urcunina-anaerobic-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Urcunina-AnaerobicHoney_2025_PDP.png?v=1745336574",
+  "platform": "shopify",
+  "product_id": "7463854407757",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "limited-release",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Urcunina - Anaerobic Honey",
+  "url": "https://counterculturecoffee.com/products/urcunina-anaerobic-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "41729142292557"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "b818ac569f11434a",
+  "first_seen": "2026-10-26",
+  "handle": "la-golondrina-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/LaGolondrina_HONEY_2026_PDP.png?v=1775225717",
+  "platform": "shopify",
+  "product_id": "7473448976461",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "limited-release",
+   "organic",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "La Golondrina – Honey Processed",
+  "url": "https://counterculturecoffee.com/products/la-golondrina-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz",
+    "variant_id": "41753509724237"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "b4fb2a411f1aba70",
+  "first_seen": "2026-10-26",
+  "handle": "sipi-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Sipi_Natural_Sundried-2026-PDP.png?v=1779976387",
+  "platform": "shopify",
+  "product_id": "7502652538957",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "origin__uganda",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Sipi - Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/sipi-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "41854806884429"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "05aed5fa74344def",
+  "first_seen": "2026-10-26",
+  "handle": "arnulfo-dias-pacamara-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/ArnulfoDias_PacamaraHoney_2025_PDP.png?v=1749566089",
+  "platform": "shopify",
+  "product_id": "7503021277261",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Arnulfo Días – Pacamara Honey",
+  "url": "https://counterculturecoffee.com/products/arnulfo-dias-pacamara-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "41856579240013"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "a581ae4f3314d73b",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-hermosa-pink-bourbon-variety",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa-Pink_Bourbon-2026-PDP.png?v=1783966600",
+  "platform": "shopify",
+  "product_id": "7510967877709",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca La Hermosa - Pink Bourbon Variety",
+  "url": "https://counterculturecoffee.com/products/finca-la-hermosa-pink-bourbon-variety",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "41884008218701"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "70da3c5db53c02e8",
+  "first_seen": "2026-10-26",
+  "handle": "sanctuary",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Sanctuary_Standard.png?v=1758558130",
+  "platform": "shopify",
+  "product_id": "7559168688205",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "blend",
+   "limited-release",
+   "roastlevel__medium-roast"
+  ],
+  "title": "Sanctuary",
+  "url": "https://counterculturecoffee.com/products/sanctuary",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "42081621606477"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "6b0f24951ae69b83",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-puente-sl-28",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-El-Puente_SL28_PDP.png?v=1758638730",
+  "platform": "shopify",
+  "product_id": "7569802428493",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Finca El Puente SL-28 Variety",
+  "url": "https://counterculturecoffee.com/products/finca-el-puente-sl-28",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz",
+    "variant_id": "42120345190477"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "34dca918ee729f9a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-idido",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Decaf-Idido_PDP.png?v=1759169472",
+  "platform": "shopify",
+  "product_id": "7572099498061",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "color__FF8D6B",
+   "decaf",
+   "organic",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "single-origin"
+  ],
+  "title": "Decaf Idido",
+  "url": "https://counterculturecoffee.com/products/decaf-idido",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "42128230711373"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "aa882c52c1dfbf04",
+  "first_seen": "2026-10-26",
+  "handle": "hugo-ruiz",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Hugo-Ruiz_PDP.png?v=1759415780",
+  "platform": "shopify",
+  "product_id": "7578574684237",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Hugo Ruiz",
+  "url": "https://counterculturecoffee.com/products/hugo-ruiz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz Hugo Ruiz",
+    "variant_id": "42147268165709"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "09eb5addd14963e2",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-hermosa",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca-La-Hermosa_2025_PDP.png?v=1761323678",
+  "platform": "shopify",
+  "product_id": "7594121953357",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "bestseller",
+   "color__FF5C35",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin",
+   "whole bean"
+  ],
+  "title": "Finca La Hermosa",
+  "url": "https://counterculturecoffee.com/products/finca-la-hermosa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "42287511404621"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ac0948e75855e5ac",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-puente-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/FincaElPuente_Honey-2026-PDP.png?v=1787844951",
+  "platform": "shopify",
+  "product_id": "7610173063245",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "coffee",
+   "color_3BBFAD",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca El Puente - Honey Processed",
+  "url": "https://counterculturecoffee.com/products/finca-el-puente-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 367,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "42378552311885"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "d3f270d3271c39bd",
+  "first_seen": "2026-10-26",
+  "handle": "mabono-honey-processed",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Mabono_Honey-2026_PDP.png?v=1782411883",
+  "platform": "shopify",
+  "product_id": "7624730869837",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__single-origin",
+   "origin__uganda",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Mabono Honey Processed",
+  "url": "https://counterculturecoffee.com/products/mabono-honey-processed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "42439369687117"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "7bafb2125851c153",
+  "first_seen": "2026-10-26",
+  "handle": "ruronzi-natural-sundried",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Ruronzi_Nat_2026_PDP.png?v=1767721049",
+  "platform": "shopify",
+  "product_id": "7663254732877",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Ruronzi – Natural Sundried",
+  "url": "https://counterculturecoffee.com/products/ruronzi-natural-sundried",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "42571464507469"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "86ccd8f84501a54f",
+  "first_seen": "2026-10-26",
+  "handle": "el-buen-pastor",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/El-Buen-Pastor_2026_PDP.png?v=1768241038",
+  "platform": "shopify",
+  "product_id": "7670203514957",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "El Buen Pastor",
+  "url": "https://counterculturecoffee.com/products/el-buen-pastor",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "42594569289805"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0872baf2f1abe6f0",
+  "first_seen": "2026-10-26",
+  "handle": "fundochamba-1",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Fundochamba_2025_PDP_2.png?v=1769798812",
+  "platform": "shopify",
+  "product_id": "7681576140877",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Fundochamba",
+  "url": "https://counterculturecoffee.com/products/fundochamba-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "42638090764365"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "8cd0bfe224720dea",
+  "first_seen": "2026-10-26",
+  "handle": "esgar-fernandez",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Esgar-Fernandez_2026_PDP.png?v=1774378767",
+  "platform": "shopify",
+  "product_id": "7750497534029",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Esgar Fernandez",
+  "url": "https://counterculturecoffee.com/products/esgar-fernandez",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "42814902141005"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "cba12f8af2a8cc8a",
+  "first_seen": "2026-10-26",
+  "handle": "fundochamba-extended-fermentation",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Fundochamba_Extended_Fermentation_2026_PDP.png?v=1774894846",
+  "platform": "shopify",
+  "product_id": "7755847270477",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Fundochamba - Extended Fermentation",
+  "url": "https://counterculturecoffee.com/products/fundochamba-extended-fermentation",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "42828119539789"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "355962b26d8a4b54",
+  "first_seen": "2026-10-26",
+  "handle": "nueva-llusta-copy-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Nueva-Llusta-Microlot_2026_PDP.png?v=1775241071",
+  "platform": "shopify",
+  "product_id": "7761079566413",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive"
+  ],
+  "title": "Nueva Llusta - Microlot",
+  "url": "https://counterculturecoffee.com/products/nueva-llusta-copy-microlot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "42841619890253"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "195c005ba09239cd",
+  "first_seen": "2026-10-26",
+  "handle": "bijao",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Bijao_2026_PDP.png?v=1777488294",
+  "platform": "shopify",
+  "product_id": "7790390673485",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "color__FF8300",
+   "origin__colombia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Bijao",
+  "url": "https://counterculturecoffee.com/products/bijao",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "42936065589325"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "0cf509c5adfabf6b",
+  "first_seen": "2026-10-26",
+  "handle": "incahuasi-sl9",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Incahuasi_SL9-2026_PDP.png?v=1780334843",
+  "platform": "shopify",
+  "product_id": "7835366948941",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Incahuasi SL9 Variety",
+  "url": "https://counterculturecoffee.com/products/incahuasi-sl9",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "43062576939085"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "2811bf2bcfc85a49",
+  "first_seen": "2026-10-26",
+  "handle": "lucio-luque",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Lucio_Luque-2026_PDP.png?v=1781652440",
+  "platform": "shopify",
+  "product_id": "7856519807053",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "limited-release",
+   "organic",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Lucio Luque",
+  "url": "https://counterculturecoffee.com/products/lucio-luque",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12 oz",
+    "variant_id": "43135411814477"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "743ec818db820dd5",
+  "first_seen": "2026-10-26",
+  "handle": "finca-santa-elena-pacamara-honey-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_Santa_Elena-Pacamara_Honey-PDP.png?v=1784032270",
+  "platform": "shopify",
+  "product_id": "7893100232781",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca Santa Elena – Pacamara Honey",
+  "url": "https://counterculturecoffee.com/products/finca-santa-elena-pacamara-honey-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "43249587781709"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "fb69d6d3fed115b3",
+  "first_seen": "2026-10-26",
+  "handle": "pascual-marcos-cardona",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Pascual_Marcos_Cardona-2026-PDP.png?v=1784741791",
+  "platform": "shopify",
+  "product_id": "7900900065357",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "organic",
+   "origin__guatemala",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Pascual Marcos Cardona",
+  "url": "https://counterculturecoffee.com/products/pascual-marcos-cardona",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "43291633254477"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "6fd02f58afa93371",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-puente-anaerobic-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_El_Puente-Anaerobic-2026-Pack.png?v=1786033506",
+  "platform": "shopify",
+  "product_id": "7916608913485",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca El Puente – Anaerobic Washed",
+  "url": "https://counterculturecoffee.com/products/finca-el-puente-anaerobic-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "43365816303693"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "32783f854ad6d016",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-hermosa-pacamara-variety-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa-Pacamara-2026-PDP.png?v=1787593016",
+  "platform": "shopify",
+  "product_id": "7942307840077",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "hidden",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca La Hermosa - Pacamara Variety",
+  "url": "https://counterculturecoffee.com/products/finca-la-hermosa-pacamara-variety-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "43508169932877"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "ba3198b83f20a14e",
+  "first_seen": "2026-10-26",
+  "handle": "worka-chelbessa",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Worka_Chelbessa-2026-PDP.png?v=1788974940",
+  "platform": "shopify",
+  "product_id": "7965226860621",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "color__FF8D6B",
+   "hidden",
+   "origin__ethiopia",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Worka Chelbessa",
+  "url": "https://counterculturecoffee.com/products/worka-chelbessa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 367,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "43745038139469"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ },
+ {
+  "body_hash": "1e5fc9b338038a7d",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-hermosa-pink-bourbon-variety-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0249/4283/7837/files/Finca_La_Hermosa_Orange_Bourbon-2026-PDP.png?v=1789663119",
+  "platform": "shopify",
+  "product_id": "7985436819533",
+  "product_type": "Coffee",
+  "roaster_slug": "counterculturecoffee",
+  "tags": [
+   "archive",
+   "origin__single-origin",
+   "roastlevel__light-roast",
+   "single-origin"
+  ],
+  "title": "Finca La Hermosa - Orange Bourbon Variety",
+  "url": "https://counterculturecoffee.com/products/finca-la-hermosa-pink-bourbon-variety-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz",
+    "variant_id": "43797544599629"
+   }
+  ],
+  "vendor": "Counter Culture Coffee - Retail"
+ }
+]

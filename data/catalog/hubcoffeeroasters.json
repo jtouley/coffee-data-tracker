@@ -1,0 +1,650 @@
+[
+ {
+  "body_hash": "c4a39fbadaaebef1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-lorenzo",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/LorenzoCompostable-Bag-Mockup.jpg?v=1791857533",
+  "platform": "shopify",
+  "product_id": "15432441725164",
+  "product_type": "Coffee",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Light Roast",
+   "NEW",
+   "S.O.",
+   "SINGLE ORIGIN",
+   "coffee"
+  ],
+  "title": "Guatemala Lorenzo",
+  "url": "https://hubcoffeeroasters.com/products/guatemala-lorenzo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "67712178356460"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "67712178389228"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "67712178421996"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Whole Bean",
+    "variant_id": "67712178454764"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Espresso",
+    "variant_id": "67712178487532"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Drip",
+    "variant_id": "67712178520300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Whole Bean",
+    "variant_id": "67712178553068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Espresso",
+    "variant_id": "67712178585836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Drip",
+    "variant_id": "67712178618604"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "fb8045224180f640",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pasqual",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/PascualCompostable-Bag-Mockup.jpg?v=1791857489",
+  "platform": "shopify",
+  "product_id": "15432448606444",
+  "product_type": "Coffee",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Light Roast",
+   "NEW",
+   "S.O.",
+   "SINGLE ORIGIN",
+   "coffee"
+  ],
+  "title": "Guatemala Pascual",
+  "url": "https://hubcoffeeroasters.com/products/guatemala-pasqual",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "67712200409324"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "67712200442092"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "67712200474860"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Whole Bean",
+    "variant_id": "67712200507628"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Espresso",
+    "variant_id": "67712200540396"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Drip",
+    "variant_id": "67712200573164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (~200 cups) / Whole Bean",
+    "variant_id": "67792029155564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (~200 cups) / Ground for Espresso",
+    "variant_id": "67792029188332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (~200 cups) / Ground for Drip",
+    "variant_id": "67792029221100"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "946516b8a7016da6",
+  "first_seen": "2026-10-26",
+  "handle": "thirty-2-cheney",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/Hub-32-Cheney.png?v=1735577734",
+  "platform": "shopify",
+  "product_id": "7476930576620",
+  "product_type": "Coffee",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Blends and Espresso",
+   "Espresso",
+   "Holiday",
+   "Medium Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "THIRTY-2 CHENEY",
+  "url": "https://hubcoffeeroasters.com/products/thirty-2-cheney",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "42153662316780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "42153662349548"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg (2.2 lbs) / Whole Bean",
+    "variant_id": "43341682114796"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "48401052795116"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "48401052827884"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "6ea239831c5f5d5d",
+  "first_seen": "2026-10-26",
+  "handle": "breakaway",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/Breakaway.png?v=1741025918",
+  "platform": "shopify",
+  "product_id": "7481803669740",
+  "product_type": "",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Blends and Espresso",
+   "Medium Roast",
+   "blend",
+   "coffee"
+  ],
+  "title": "BREAKAWAY",
+  "url": "https://hubcoffeeroasters.com/products/breakaway",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "42173270393068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "42173270425836"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg (2.2 lbs) / Whole Bean",
+    "variant_id": "43341651673324"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "48401071177964"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "48401071210732"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg (2.2 lbs) / Ground for Espresso",
+    "variant_id": "48401071243500"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg (2.2 lbs) / Ground for Drip",
+    "variant_id": "48401071276268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "48401071309036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "48401071341804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "K-Cup (12 Pack) / Ground for Drip",
+    "variant_id": "48401071374572"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "deb0f79eaa34a8e2",
+  "first_seen": "2026-10-26",
+  "handle": "clandestino",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/HUB-Clandestino_897989e4-953d-4dc1-9743-cf55c68dddf3.png?v=1778777192",
+  "platform": "shopify",
+  "product_id": "7481808191724",
+  "product_type": "",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Blends and Espresso",
+   "Dark Roast",
+   "Holiday",
+   "blend",
+   "coffee"
+  ],
+  "title": "CLANDESTINO",
+  "url": "https://hubcoffeeroasters.com/products/clandestino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 24.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "42173282484460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "42173282517228"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1 kg (2.2 lbs) / Whole Bean",
+    "variant_id": "43341653147884"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 24.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "48401046274284"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 24.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "48401046307052"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1 kg (2.2 lbs) / Ground for Espresso",
+    "variant_id": "48401046372588"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1 kg (2.2 lbs) / Ground for Drip",
+    "variant_id": "48401046405356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "48401046470892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "48401046503660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "K-Cup (12 Pack) / Ground for Drip",
+    "variant_id": "48401064919276"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "74599f5e53eecb38",
+  "first_seen": "2026-10-26",
+  "handle": "morning-howl",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/MorningHowl.png?v=1778776678",
+  "platform": "shopify",
+  "product_id": "7876612980972",
+  "product_type": "",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Blends and Espresso"
+  ],
+  "title": "MORNING HOWL | Nevada Athletics",
+  "url": "https://hubcoffeeroasters.com/products/morning-howl",
+  "variants": [
+   {
+    "available": false,
+    "grams": 363,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "43655488700652"
+   }
+  ],
+  "vendor": "Hub Coffee Roasters"
+ },
+ {
+  "body_hash": "f6decfbc4b50985f",
+  "first_seen": "2026-10-26",
+  "handle": "one-speed-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/OneSpeed-Decaf.png?v=1738608059",
+  "platform": "shopify",
+  "product_id": "8443774697708",
+  "product_type": "",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Blends and Espresso",
+   "Decaf",
+   "Seed to Cup"
+  ],
+  "title": "ONE SPEED DECAF",
+  "url": "https://hubcoffeeroasters.com/products/one-speed-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 27.0,
+    "title": "300 g (10.58 oz)",
+    "variant_id": "45084132868332"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 72.0,
+    "title": "1 kg (2.2 lbs)",
+    "variant_id": "45084132901100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lbs",
+    "variant_id": "45084132933868"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "f93dcd0d0587c5fb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/Compostable-Bag-Mockup-Sidama_8bfba751-066e-435a-ba92-2981490c497e.png?v=1792001475",
+  "platform": "shopify",
+  "product_id": "9328337354988",
+  "product_type": "Coffee",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Light Roast",
+   "NEW",
+   "S.O.",
+   "SINGLE ORIGIN",
+   "Top Tier",
+   "coffee"
+  ],
+  "title": "Ethiopia Sidama",
+  "url": "https://hubcoffeeroasters.com/products/ethiopia-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 29.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "48011456643308"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Whole Bean",
+    "variant_id": "48011456676076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Whole Bean",
+    "variant_id": "48011456708844"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 29.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "48401053483244"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 29.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "48401053516012"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Espresso",
+    "variant_id": "48401053548780"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Drip",
+    "variant_id": "48401053581548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Espresso",
+    "variant_id": "48401053614316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Drip",
+    "variant_id": "48401053647084"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ },
+ {
+  "body_hash": "394690856c9a2723",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-aquiares-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4347/3644/files/Compostable-Bag-Mockup-Aquiares.jpg?v=1786047624",
+  "platform": "shopify",
+  "product_id": "9355553308908",
+  "product_type": "Coffee",
+  "roaster_slug": "hubcoffeeroasters",
+  "tags": [
+   "Light Roast",
+   "NEW",
+   "S.O.",
+   "SINGLE ORIGIN",
+   "coffee"
+  ],
+  "title": "Costa Rica - Aquiares Estate",
+  "url": "https://hubcoffeeroasters.com/products/costa-rica-aquiares-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Whole Bean",
+    "variant_id": "48103300497644"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Whole Bean",
+    "variant_id": "48103300530412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Whole Bean",
+    "variant_id": "48103300563180"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Ground for Espresso",
+    "variant_id": "48401075568876"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300 g (10.58 oz) / Ground for Drip",
+    "variant_id": "48401075601644"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Espresso",
+    "variant_id": "48401075634412"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 64.0,
+    "title": "1 kg (~80 cups) / Ground for Drip",
+    "variant_id": "48401075667180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Espresso",
+    "variant_id": "48401075699948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs (~200 cups) / Ground for Drip",
+    "variant_id": "48401075732716"
+   }
+  ],
+  "vendor": "Hub Coffee Reno"
+ }
+]

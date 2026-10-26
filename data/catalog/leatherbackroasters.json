@@ -1,0 +1,402 @@
+[
+ {
+  "body_hash": "8a7cf6fd146423e0",
+  "first_seen": "2026-10-26",
+  "handle": "deep-sea-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Deep-Sea-2026.png?v=1787592250",
+  "platform": "shopify",
+  "product_id": "6840196923568",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso",
+   "Year-Round",
+   "retail-only"
+  ],
+  "title": "Deep Sea",
+  "url": "https://leatherbackroasters.com/products/deep-sea-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.8,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40938731798704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.8,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "40938731831472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "40946658934960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "41013631385776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.25,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42444857442480"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "815315d85ad73d24",
+  "first_seen": "2026-10-26",
+  "handle": "blue-heron-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Blue-Heron-2026.png?v=1787592249",
+  "platform": "shopify",
+  "product_id": "7202790637744",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso",
+   "Year-Round",
+   "retail-only"
+  ],
+  "title": "Blue Heron",
+  "url": "https://leatherbackroasters.com/products/blue-heron-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42045208625328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42045208658096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "42045208690864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "42045208723632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42444792692912"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "39947e48a7d3fe33",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-night-dive",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Night-Dive-Decaf-2026.png?v=1787592249",
+  "platform": "shopify",
+  "product_id": "7312366633136",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Year-Round",
+   "retail-only"
+  ],
+  "title": "Night Dive Sugarcane Decaf",
+  "url": "https://leatherbackroasters.com/products/decaf-colombia-night-dive",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42574724038832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "42574724071600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "42574724137136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "42574724169904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44882228117680"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "7a4366e00285d417",
+  "first_seen": "2026-10-26",
+  "handle": "wrong-notes-only-ryan-devlin",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Wrong_Notes_Only-Product-2026-10oz.png?v=1767988913",
+  "platform": "shopify",
+  "product_id": "7456965591216",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Coffee",
+   "retail-only"
+  ],
+  "title": "Wrong Notes Only",
+  "url": "https://leatherbackroasters.com/products/wrong-notes-only-ryan-devlin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "43112478638256"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "Ground (Drip Coffee) / 10oz",
+    "variant_id": "43112478736560"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "0470f054a7a84472",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-alejandro-ariza",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Alejandro-Colombia-Castillo-2026.png?v=1787592249",
+  "platform": "shopify",
+  "product_id": "7778134950064",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Coffee",
+   "Single-Origin",
+   "Unblended-Collections",
+   "retail-only"
+  ],
+  "title": "Colombia Alejandro Ariza",
+  "url": "https://leatherbackroasters.com/products/colombia-alejandro-ariza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44170513416368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44170513449136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44170513481904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "44170513514672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "44170513547440"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "5663b5037f20d391",
+  "first_seen": "2026-10-26",
+  "handle": "big-wave-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Big-Wave-2026.png?v=1787592249",
+  "platform": "shopify",
+  "product_id": "7970580332720",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Espresso",
+   "Year-Round",
+   "retail-only"
+  ],
+  "title": "Big Wave",
+  "url": "https://leatherbackroasters.com/products/big-wave-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.8,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44828316369072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44828316401840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.25,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44828316434608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.8,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "44828316467376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "44828316500144"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "bcfcc28b4262c369",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-thiago-corsi-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/Thiago-Corsi-Brazil-2026.png?v=1787592249",
+  "platform": "shopify",
+  "product_id": "8087766696112",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Coffee",
+   "Single-origin",
+   "retail-only"
+  ],
+  "title": "Brazil Thiago Corsi",
+  "url": "https://leatherbackroasters.com/products/brazil-thiago-corsi-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45472040288432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "45472040321200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45472040353968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "Ground (Drip Coffee) / 12oz",
+    "variant_id": "45472040386736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.5,
+    "title": "Ground (Drip Coffee) / 2lb",
+    "variant_id": "45472040419504"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ },
+ {
+  "body_hash": "bdae36b6867467a9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon-alejandro-ariza",
+  "image": "https://cdn.shopify.com/s/files/1/0589/1781/4448/files/PinkBourbon-2026.png?v=1787767126",
+  "platform": "shopify",
+  "product_id": "8103351255216",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "leatherbackroasters",
+  "tags": [
+   "Coffee",
+   "Single-Origin",
+   "Unblended-Collections",
+   "retail-only"
+  ],
+  "title": "Colombia Pink Bourbon Experiment – Alejandro Ariza",
+  "url": "https://leatherbackroasters.com/products/colombia-pink-bourbon-alejandro-ariza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45522565529776"
+   }
+  ],
+  "vendor": "Leatherback Roasters"
+ }
+]

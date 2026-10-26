@@ -1,0 +1,1026 @@
+[
+ {
+  "body_hash": "e01ab8058f7ffd53",
+  "first_seen": "2026-10-26",
+  "handle": "classic-blend-box",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Blend-Box-1000.jpg?v=1731725468",
+  "platform": "shopify",
+  "product_id": "10126267285668",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "shipping only"
+  ],
+  "title": "Ladro Classic Blend Box",
+  "url": "https://caffeladro.com/products/classic-blend-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 57.75,
+    "title": "Default Title",
+    "variant_id": "50525682401444"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "2fd1b0d4085213d6",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-artichoke-quiche",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Artichoke-Quiche.png?v=1753214426",
+  "platform": "shopify",
+  "product_id": "10140305064100",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "artichoke",
+   "breakfast",
+   "catering",
+   "goat cheese",
+   "healthy",
+   "lunch",
+   "pastry",
+   "red pepper",
+   "savory"
+  ],
+  "title": "Roasted Artichoke, Red Pepper, & Goat Cheese Quiche",
+  "url": "https://caffeladro.com/products/roasted-artichoke-quiche",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 63.55,
+    "title": "Roasted Artichoke, Red Pepper, & Goat Cheese Quiche",
+    "variant_id": "50579130187940"
+   }
+  ],
+  "vendor": "Ladro Bakery"
+ },
+ {
+  "body_hash": "30c6cd1850310050",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-idiwili-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Tanzania_Idiwili_Peaberry_2025.png?v=1761353216",
+  "platform": "shopify",
+  "product_id": "10295718084772",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "African coffee",
+   "Best Online Coffee",
+   "Buy Coffee Online",
+   "Coffee",
+   "Ladro Coffee",
+   "Light Roast Coffee",
+   "Order Coffee Beans Online",
+   "Seattle Coffee",
+   "Tanzania",
+   "Whole Bean",
+   "shipping only",
+   "single origin coffee"
+  ],
+  "title": "Tanzania Idiwili Peaberry",
+  "url": "https://caffeladro.com/products/tanzania-idiwili-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51151494971556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "12oz / Drip Grind (Brewer)",
+    "variant_id": "51151495004324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "12oz / Fine Drip Grind (Pourover)",
+    "variant_id": "51151495037092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "12oz / French Press Grind",
+    "variant_id": "51151495069860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.2,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "51151495102628"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "f52d7885da776b48",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-for-good-series",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Product_Image.png?v=1787778509",
+  "platform": "shopify",
+  "product_id": "10383235285156",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Buy Coffee Online",
+   "Coffee",
+   "Coffee For Good",
+   "Dark Roast",
+   "Office Coffee",
+   "Online Coffee",
+   "Pride",
+   "Seattle Coffee",
+   "Trans Rights",
+   "Whole Bean Coffee",
+   "dark roast coffee",
+   "shipping only"
+  ],
+  "title": "Coffee for Good Series - Backpack Brigade",
+  "url": "https://caffeladro.com/products/coffee-for-good-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "Whole Bean",
+    "variant_id": "51457385660580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "Drip Grind (Brewer)",
+    "variant_id": "51457385693348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "Fine Drip Grind (Pour over)",
+    "variant_id": "51457385726116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "French Press Grind",
+    "variant_id": "51457385758884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "Espresso Grind",
+    "variant_id": "51457385791652"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "d45bd7dfa534dc77",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-familia-mendez",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/El-Sal-FMendez_2026.jpg?v=1791503637",
+  "platform": "shopify",
+  "product_id": "10663385202852",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "African coffee",
+   "Best Online Coffee",
+   "Buy Coffee Online",
+   "Coffee",
+   "Ladro Coffee",
+   "Light Roast Coffee",
+   "Order Coffee Beans Online",
+   "Seattle Coffee",
+   "Tanzania",
+   "Whole Bean",
+   "shipping only",
+   "single origin coffee"
+  ],
+  "title": "El Salvador Familia Mendez",
+  "url": "https://caffeladro.com/products/el-salvador-familia-mendez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53850156466340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Drip Grind (Brewer)",
+    "variant_id": "53850156499108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Fine Drip Grind (Pourover)",
+    "variant_id": "53850156531876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / French Press Grind",
+    "variant_id": "53850156564644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "53850156597412"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "9d304e8c40867c48",
+  "first_seen": "2026-10-26",
+  "handle": "ladro-blend-signature-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Ladro-White-BG-Front---1500px_b39d204d-d3d9-4dff-90d3-b9ea8ae5b4c6.jpg?v=1726512534",
+  "platform": "shopify",
+  "product_id": "8399663825060",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Best Online Coffee",
+   "Buy Coffee Online",
+   "Coffee",
+   "Espresso",
+   "Espresso Beans",
+   "Ladro Coffee",
+   "Medium Roast",
+   "Order Coffee Beans Online",
+   "Seattle Coffee",
+   "Whole Bean",
+   "shipping only"
+  ],
+  "title": "Ladro Blend",
+  "url": "https://caffeladro.com/products/ladro-blend-signature-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45080414290084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45173949399204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45173949431972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / French Press Grind",
+    "variant_id": "45173950251172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Drip Grind (Brewer)",
+    "variant_id": "45173950283940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Fine Drip Grind (Pourover)",
+    "variant_id": "45173950316708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "45173950349476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "45173950382244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "45173950415012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Fine Drip Grind (Pourover)",
+    "variant_id": "45173950447780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "45173950480548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "46242407317668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "46242407710884"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "01707eb35d82decd",
+  "first_seen": "2026-10-26",
+  "handle": "diablo-ladros-renowned-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Diablo_2026.png?v=1788913683",
+  "platform": "shopify",
+  "product_id": "8399663923364",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Coffee",
+   "Italian",
+   "Seattle coffee",
+   "brew",
+   "dark roast coffee",
+   "dark roast whole bean coffee",
+   "direct trade",
+   "drip",
+   "fair trade",
+   "french",
+   "fto",
+   "low acidity",
+   "organic",
+   "shipping only",
+   "smooth"
+  ],
+  "title": "Diablo",
+  "url": "https://caffeladro.com/products/diablo-ladros-renowned-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45080414388388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "45148102721700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Drip Grind (Brewer)",
+    "variant_id": "45148102754468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Fine Drip Grind (Pourover)",
+    "variant_id": "45148102787236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "45148102820004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45148102852772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "45148102885540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "45148102918308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Fine Drip Grind (Pourover)",
+    "variant_id": "45148102951076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "45148102983844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45148103016612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "46242389557412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "46242390114468"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "151312ae0af9287e",
+  "first_seen": "2026-10-26",
+  "handle": "fremont-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Fremont_2026.png?v=1788913627",
+  "platform": "shopify",
+  "product_id": "8399663988900",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Buy Coffee Online",
+   "Coffee",
+   "Fair trade",
+   "Medium Roast",
+   "Office Coffee",
+   "Online Coffee",
+   "Organic Coffee",
+   "Seattle Coffee",
+   "Whole Bean Coffee",
+   "shipping only"
+  ],
+  "title": "Fremont",
+  "url": "https://caffeladro.com/products/fremont-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45080414486692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "45148269379748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Drip Grind (Brewer)",
+    "variant_id": "45148269412516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Fine Grind (Pourover)",
+    "variant_id": "45148269445284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45148269510820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "45148269543588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "45148269576356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "45148269641892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45148269674660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "46240098320548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "46240098943140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "50572278562980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Fine Grind (Pourover)",
+    "variant_id": "50572307955876"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "4629f2cd457986e2",
+  "first_seen": "2026-10-26",
+  "handle": "queen-anne",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Queen-Anne-White-BG-Front---1500px.jpg?v=1726512444",
+  "platform": "shopify",
+  "product_id": "8399664087204",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "City Roast",
+   "City Roast Coffee",
+   "Coffee",
+   "Ladro Queen Anne",
+   "Light Roast Coffee",
+   "Online Coffee",
+   "Order Seattle Coffee",
+   "Queen Anne Blend",
+   "Seattle Coffee",
+   "Whole Bean",
+   "shipping only"
+  ],
+  "title": "Queen Anne",
+  "url": "https://caffeladro.com/products/queen-anne",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45080414584996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / French Press Grind",
+    "variant_id": "45173986066596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Drip Grind (Brewer)",
+    "variant_id": "45173986099364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Fine Drip Grind (Pour over)",
+    "variant_id": "45173986132132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.7,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "45173986164900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45173986197668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "45173986230436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "45173986263204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Fine Drip Grind (Pour over)",
+    "variant_id": "45173986295972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "45173986328740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45173986361508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "46242416787620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.5,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "50572413730980"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "a45866b874e6cc41",
+  "first_seen": "2026-10-26",
+  "handle": "ladro-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Decaf-White-BG-Front---1500px.jpg?v=1726512434",
+  "platform": "shopify",
+  "product_id": "8399664513188",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Coffee",
+   "decaffeinated",
+   "no caffeine",
+   "shipping only",
+   "swiss water process"
+  ],
+  "title": "Ladro Decaf",
+  "url": "https://caffeladro.com/products/ladro-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45080415142052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "45173941534884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Drip Grind (Brewer)",
+    "variant_id": "45173941567652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Fine Drip Grind (Pourover)",
+    "variant_id": "45173941600420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "45173941633188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.6,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45173941665956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.6,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "45173941698724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.6,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "45173941731492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.6,
+    "title": "2 lb / Fine Drip Grind (Pourover)",
+    "variant_id": "45173941764260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.6,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "45173941797028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45173941829796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "50572522619044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "50572522913956"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "5c96220196bcf27c",
+  "first_seen": "2026-10-26",
+  "handle": "online-gift-certificate-1",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/Ladro-Shopify-ProductImages-OnlineGiftCard-1000px_b594104b-274f-402c-b544-cf2bd7831556.png?v=1722364181",
+  "platform": "shopify",
+  "product_id": "8753064607908",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "shipping only"
+  ],
+  "title": "Online Gift Certificate- For ONLINE shopping only",
+  "url": "https://caffeladro.com/products/online-gift-certificate-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "$20.00",
+    "variant_id": "46091637227684"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "$40.00",
+    "variant_id": "46091637260452"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.0,
+    "title": "$60.00",
+    "variant_id": "46091637293220"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "$80.00",
+    "variant_id": "46091637325988"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "$100.00",
+    "variant_id": "46091637358756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "$50.00 (2lb bag!)",
+    "variant_id": "51169600077988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "110.00 (5lb Bag!)",
+    "variant_id": "51201732968612"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ },
+ {
+  "body_hash": "22eca26742086986",
+  "first_seen": "2026-10-26",
+  "handle": "fireside",
+  "image": "https://cdn.shopify.com/s/files/1/0430/3093/7764/files/FS_2026_12oz.jpg?v=1790724150",
+  "platform": "shopify",
+  "product_id": "8804599529636",
+  "product_type": "",
+  "roaster_slug": "caffeladro",
+  "tags": [
+   "Coffee",
+   "Online Coffee",
+   "dark roast coffee",
+   "fair trade",
+   "holiday",
+   "seasonal",
+   "shipping only"
+  ],
+  "title": "Fireside",
+  "url": "https://caffeladro.com/products/fireside",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.05,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46257410900132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.05,
+    "title": "12 oz / Fine Grind (Pourover)",
+    "variant_id": "46257410932900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.05,
+    "title": "12 oz / Drip Grind (Brewer)",
+    "variant_id": "46257410965668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.05,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "46257410998436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.05,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "46257411031204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46257411227812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / Drip Grind (Brewer)",
+    "variant_id": "46257411260580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.25,
+    "title": "5 lb / French Press Grind",
+    "variant_id": "46257411293348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.8,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51142920077476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.8,
+    "title": "2 lb / Fine Grind (Pourover)",
+    "variant_id": "51142920110244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.8,
+    "title": "2 lb / Drip Grind (Brewer)",
+    "variant_id": "51142920143012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.8,
+    "title": "2 lb / French Press Grind",
+    "variant_id": "51142920175780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.8,
+    "title": "2 lb / Espresso Grind",
+    "variant_id": "51142920208548"
+   }
+  ],
+  "vendor": "Ladro Roasting"
+ }
+]

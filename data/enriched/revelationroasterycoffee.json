@@ -1,0 +1,296 @@
+{
+ "5729156235427": {
+  "body_hash": "4efef9383affb580",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guinea",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "dried fruit",
+   "milk chocolate",
+   "caramel",
+   "citrus",
+   "orange"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "5880881479843": {
+  "body_hash": "6e66fd5fb1b7fa74",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "caramel",
+   "cinnamon",
+   "lemon",
+   "orange",
+   "dried fruit"
+  ],
+  "varietals": []
+ },
+ "6085167120547": {
+  "body_hash": "ab5f58155f5f61d4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "necatarine",
+   "red currant",
+   "orange citrus"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6085179310243": {
+  "body_hash": "cbdc240a217628fd",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "black cherry",
+   "honey",
+   "caramel",
+   "almond",
+   "medium acidity",
+   "heavy body"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "6635072749731": {
+  "body_hash": "929e9666e718480d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black tea",
+   "cherry",
+   "honey",
+   "plum",
+   "caramel",
+   "orange citrus",
+   "heavy body",
+   "medium acidity"
+  ],
+  "varietals": []
+ },
+ "7068879782051": {
+  "body_hash": "0244670afa9ea26f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7379800424611": {
+  "body_hash": "89f5c36c54c93613",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "7489650753699": {
+  "body_hash": "61c88d1f07ad20e3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Zambia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7514624491683": {
+  "body_hash": "0ffa6c8990b89d5d",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1950,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet",
+   "berry",
+   "floral"
+  ],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "7911957135523": {
+  "body_hash": "fee8ff300abdfbc9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "nutty",
+   "citrus",
+   "red fruit",
+   "medium acidity",
+   "creamy body"
+  ],
+  "varietals": []
+ },
+ "7911971160227": {
+  "body_hash": "3f8c78eaef6b499c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7911982497955": {
+  "body_hash": "8c36821cf2048ef4",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bright",
+   "pink grapefruit",
+   "champagne"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "8210561335459": {
+  "body_hash": "c0c164fa4b3b10b5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8210563956899": {
+  "body_hash": "b35bfecb546a34cd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9027010953379": {
+  "body_hash": "0640c209e7516718",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mellow amaretto",
+   "cooked grapefruit",
+   "mild candy-like sweetness"
+  ],
+  "varietals": []
+ }
+}

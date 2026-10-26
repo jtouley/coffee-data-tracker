@@ -1,0 +1,574 @@
+[
+ {
+  "body_hash": "5174d3290d7c3a65",
+  "first_seen": "2026-10-26",
+  "handle": "ketne9safwuf0xuxif0oe8j7j5tq4a",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/99eb0cbb-c4ef-4065-850f-fc338323e053/11.png",
+  "platform": "squarespace",
+  "product_id": "63d1694880532a55e7f626f1",
+  "product_type": "Single Bags",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Single Bags"
+  ],
+  "title": "Howdy, Iowa Light Roast - 12 oz. bag",
+  "url": "https://www.littlescratchcoffee.com/shop/ketne9safwuf0xuxif0oe8j7j5tq4a",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.5,
+    "title": "Ground Bean",
+    "variant_id": "21774659-b173-42cf-ab48-d66b50ebcadc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "32604629-3570-4c11-aab4-a998e91e1fdb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a7aaabfd317603e",
+  "first_seen": "2026-10-26",
+  "handle": "earth-signs-medium-roast-12-oz-bag",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/e29b5e77-1118-4c25-acda-f4185c50c886/10.png",
+  "platform": "squarespace",
+  "product_id": "63d16da180532a55e7f62ad9",
+  "product_type": "Single Bags",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Single Bags"
+  ],
+  "title": "Earth Signs Medium Roast - 12 oz. bag",
+  "url": "https://www.littlescratchcoffee.com/shop/earth-signs-medium-roast-12-oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "c4255cd8-e89b-4101-9122-a6e5139f98b7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.5,
+    "title": "Ground Bean",
+    "variant_id": "c89d2fac-eaa9-40d4-a18a-2e3821e2336e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ccf74ab1eed8bbc1",
+  "first_seen": "2026-10-26",
+  "handle": "stoic-farmer-dark-roast-12-oz-bag",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/ed4e3c33-cc04-4d18-930f-11819381c780/13.png",
+  "platform": "squarespace",
+  "product_id": "63d16e6a1a1d235bf535aa49",
+  "product_type": "Single Bags",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Single Bags"
+  ],
+  "title": "Stoic Farmer Dark Roast - 12 oz bag",
+  "url": "https://www.littlescratchcoffee.com/shop/stoic-farmer-dark-roast-12-oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "affba073-1dee-499c-bdfc-a6b239647875"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.5,
+    "title": "Ground Bean",
+    "variant_id": "bc0bc897-6ea3-4c54-81d4-1b4e0fa42407"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f58e72ab724a3a14",
+  "first_seen": "2026-10-26",
+  "handle": "pinhook-premium-espresso-12-oz-bag",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/3c4488e2-89e5-42f5-90ec-d5b885e08c6d/12.png",
+  "platform": "squarespace",
+  "product_id": "63d19a9d1a1d235bf535db9b",
+  "product_type": "Single Bags",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Single Bags"
+  ],
+  "title": "Pinhook Premium - Espresso 12 oz. bag",
+  "url": "https://www.littlescratchcoffee.com/shop/pinhook-premium-espresso-12-oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.6,
+    "title": "Ground Bean",
+    "variant_id": "48e2f979-3c0a-46eb-9b69-9aff7e925f27"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.1,
+    "title": "Whole Bean",
+    "variant_id": "49cf62fc-e8b9-48e6-bed5-0d23e0acd2b6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6365c60baf9ceb75",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-subscription",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/48403545-ce8b-4849-a2fc-13c977801499/15.png",
+  "platform": "squarespace",
+  "product_id": "63d92fcf1a1d235bf53a8716",
+  "product_type": "Coffee Subscriptions",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Coffee Subscriptions"
+  ],
+  "title": "Long Distance Little Scratch Membership",
+  "url": "https://www.littlescratchcoffee.com/shop/coffee-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 834.0,
+    "title": "12 month four 12 oz bags",
+    "variant_id": "29201c34-531b-4f46-a990-e5dbde0fa8f3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 654.0,
+    "title": "12 month three 12 oz bags",
+    "variant_id": "4727c0c1-4f05-480e-b6f3-8a178d6fae90"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 118.5,
+    "title": "3 month two 12 oz bags",
+    "variant_id": "48942552-6422-4117-bf74-aaa1087b156b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 208.5,
+    "title": "3 month four 12 oz bags",
+    "variant_id": "5df854c6-8343-4eda-b7b6-3130ea6c2b6a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 573.0,
+    "title": "6 month five pound bulk bag (unsealed)",
+    "variant_id": "880e0655-367b-4dbb-ae5e-5c0a336146ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1146.0,
+    "title": "12 month five pound bulk bag (unsealed)",
+    "variant_id": "8a739bd9-b523-4896-91a3-ce49887bd9c9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 237.0,
+    "title": "6 month two 12 oz bags",
+    "variant_id": "a448ec1d-5cb9-425b-9984-44ae2c5e6fb4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 327.0,
+    "title": "6 month three 12 oz bags",
+    "variant_id": "a6a809c8-1c2d-413d-a0fb-a552988a8111"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 286.5,
+    "title": "3 month five pound bulk bag (unsealed)",
+    "variant_id": "a7ed8fd3-837b-44f3-a3e7-dae2c16aa2ed"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 417.0,
+    "title": "6 month four 12 oz bags",
+    "variant_id": "c2ee22d5-5863-4fc3-b66d-26653550e85e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 163.5,
+    "title": "3 month three 12 oz bags",
+    "variant_id": "df013be8-e9b4-4025-a598-20cfe366c409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 474.0,
+    "title": "12 month two 12 oz bags",
+    "variant_id": "fc80b345-cecb-4656-af28-7bb3ec79fd44"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "38b34c86f924a94d",
+  "first_seen": "2026-10-26",
+  "handle": "local-little-scratch-membership",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/643194eb-0978-4d4a-9dcd-030dcff3d07d/16.png",
+  "platform": "squarespace",
+  "product_id": "65ba59a06db635043358eb88",
+  "product_type": "Coffee Subscriptions",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [
+   "Coffee Subscriptions"
+  ],
+  "title": "Local Little Scratch Membership",
+  "url": "https://www.littlescratchcoffee.com/shop/local-little-scratch-membership",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 892.8,
+    "title": "four lbs twelve months 1 drink included",
+    "variant_id": "09109c11-4cbf-4388-adf5-e2476d56e06a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 343.8,
+    "title": " three lbs six months 1 drink included",
+    "variant_id": "0bd8cc17-27d2-474c-b7b5-938778327d1a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 402.0,
+    "title": "4 bags six months 2 drinks included",
+    "variant_id": "0dd01146-6d95-47ef-8377-76e33277eda7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 438.0,
+    "title": "2 bags twelve months 2 drinks included",
+    "variant_id": "1233394c-b1b2-479e-9f4e-70357c5561ee"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 446.4,
+    "title": "four lbs six months 1 drink included",
+    "variant_id": "1cd6c579-64f4-47bb-97ac-086dec80f562"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1098.0,
+    "title": "five lbs twelve months 1 drink included",
+    "variant_id": "3527ec81-189f-4687-8c5d-1491052173d2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 798.0,
+    "title": "4 bags twelve months 2 drinks included",
+    "variant_id": "360901ae-b111-4a71-b2a0-7f7ecfcbea42"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1146.0,
+    "title": "five lbs twelve months 2 drinks included",
+    "variant_id": "418eb3d4-43f6-4921-a4cb-a853bfeff87b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 312.0,
+    "title": "3 bags six months 2 drinks included",
+    "variant_id": "479cc6b3-d82a-4804-b958-ad0b83e0928e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 432.0,
+    "title": "2 bags twelve months 1 drink included",
+    "variant_id": "4970906d-9c26-45d3-9d78-2449ee5143cd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 792.0,
+    "title": "4 bags twelve months 1 drink included",
+    "variant_id": "56c152a1-9655-475d-9213-7ef7181a938d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 612.0,
+    "title": "3 bags twelve months 1 drink included",
+    "variant_id": "57eb0292-61fb-4c05-81d7-8b3a9be6334b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 306.0,
+    "title": "3 bags six months 1 drink included",
+    "variant_id": "6837569d-1bd5-4b20-8870-1e97b95213c0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 216.0,
+    "title": "2 bags six months 1 drink included",
+    "variant_id": "683d1d37-f0a7-451c-8ac7-7c034f23aabd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 735.6,
+    "title": " three lbs twelve months 2 drinks included",
+    "variant_id": "6e901f01-63f3-4ad8-acad-bf3e6a41b98f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 367.8,
+    "title": " three lbs six months 2 drinks included",
+    "variant_id": "6eaf3ae3-4642-4ff9-a741-e32b8c8a8e27"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 573.0,
+    "title": "five lbs six months 2 drinks included",
+    "variant_id": "7ae372e6-4803-4543-899f-6a72fef5c445"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 940.8,
+    "title": "four lbs twelve months 2 drinks included",
+    "variant_id": "7c66027c-9167-442d-8d29-ec61aef24720"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 618.0,
+    "title": "3 bags twelve months 2 drinks included",
+    "variant_id": "7efa9132-07da-4586-8ebb-031178758a6b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 396.0,
+    "title": "4 bags six months 1 drink included",
+    "variant_id": "96d165c6-c58f-41aa-9793-2f43d450afee"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 222.0,
+    "title": "2 bags six months 2 drinks included",
+    "variant_id": "9be36b1f-60e1-4973-b4c5-b43ac4173ff9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 470.4,
+    "title": "four lbs six months 2 drinks included",
+    "variant_id": "b0e402f8-e366-4bf9-9dea-f746ff3b8213"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 549.0,
+    "title": "five lbs six months 1 drink included",
+    "variant_id": "d7a6a10c-9161-4f5a-9c35-8191a0d00d6e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 687.6,
+    "title": " three lbs twelve months 1 drink included",
+    "variant_id": "ed9edd44-ce49-49d4-971a-912d2312b538"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf7c55655b9fecbc",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-coffee-2-5",
+  "image": "https://images.squarespace-cdn.com/content/v1/55bea299e4b0bcd817e5f8ce/f19bf4b9-1e8d-4122-ad1c-47b35cd58c91/coffee+by+the+pound+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "67a25acee2bd8f12677b62cd",
+  "product_type": "",
+  "roaster_slug": "littlescratchcoffee",
+  "tags": [],
+  "title": "Bulk Beans (two to five lbs.)",
+  "url": "https://www.littlescratchcoffee.com/shop/bulk-coffee-2-5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Earth Signs Medium 5#",
+    "variant_id": "03672c88-cfff-4205-ae3c-4709ea72f283"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 78.0,
+    "title": "Pinhook Premium Med-Dark 4#",
+    "variant_id": "17b59480-7cad-4a2e-82b6-ef5c498c3583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Stoic Farmer Dark 5#",
+    "variant_id": "2167f3c0-3da5-418f-a5b2-17ea8e6efe63"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 68.4,
+    "title": "Howdy Iowa Light 4#",
+    "variant_id": "2cf1e90f-0fad-47ae-8990-7e7d7c40a0bd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.5,
+    "title": "Howdy Iowa Light 5#",
+    "variant_id": "2e53d2d3-972e-436f-8691-3440ea608bbb"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 58.5,
+    "title": "Chilltop Uncaffeinated 3#",
+    "variant_id": "476ce976-ca4a-47fb-8804-70ffa1add60a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 58.5,
+    "title": "Pinhook Premium Med-Dark 3#",
+    "variant_id": "4dc6eaeb-f082-4885-b4b7-b5dc044eb4af"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "Pinhook Premium Med-Dark 5#",
+    "variant_id": "593be589-498f-4c46-be84-95026af4ffb6"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 68.4,
+    "title": "Stoic Farmer Dark 4#",
+    "variant_id": "62ad0c9b-5c72-4de6-9684-0aa348d05b17"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.2,
+    "title": "Earth Signs Medium 2#",
+    "variant_id": "70f6ec96-3b6e-4444-a335-22022ae1fa41"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 68.4,
+    "title": "Earth Signs Medium 4#",
+    "variant_id": "726fae87-8b52-4142-8b46-cc3e518ad47f"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.3,
+    "title": "Stoic Farmer Dark 3#",
+    "variant_id": "7e9f9769-92ae-4556-8d45-38ef02721915"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.3,
+    "title": "Earth Signs Medium 3#",
+    "variant_id": "90317808-cc0d-4640-bd82-b59e9ae8dd29"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Chilltop Uncaffeinated 2#",
+    "variant_id": "a35cd111-0e0f-437d-aa15-3411552139fe"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Pinhook Premium Med-Dark 2#",
+    "variant_id": "a4522994-0ebf-424f-b803-fe649baba4bd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.2,
+    "title": "Howdy Iowa Light 2#",
+    "variant_id": "ab172d30-a824-47e7-9c5d-40380ce81145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "Chilltop Uncaffeinated 5#",
+    "variant_id": "ac72a516-a517-42d7-9a33-089cf478df70"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.2,
+    "title": "Stoic Farmer Dark 2#",
+    "variant_id": "b2b6bbb3-cfba-4f5d-9e06-c7f99a11b9e7"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 78.0,
+    "title": "Chilltop Uncaffeinated 4#",
+    "variant_id": "e2af6203-40e5-40fb-8817-b4a3bc2a615b"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.3,
+    "title": "Howdy Iowa Light 3#",
+    "variant_id": "e5163ceb-6b84-4d9d-802a-8330f2c2a139"
+   }
+  ],
+  "vendor": ""
+ }
+]

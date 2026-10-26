@@ -1,0 +1,1173 @@
+[
+ {
+  "body_hash": "b3c1e5a51487cd87",
+  "first_seen": "2026-10-26",
+  "handle": "three-ravens",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Three_Ravens.png?v=1756504381",
+  "platform": "shopify",
+  "product_id": "8485800575114",
+  "product_type": "medium roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "decaf",
+   "drip",
+   "espresso",
+   "medium roast"
+  ],
+  "title": "Three Ravens Decaf",
+  "url": "https://veltonscoffee.com/products/three-ravens",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "46053924241546"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for espresso",
+    "variant_id": "46053924274314"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for drip",
+    "variant_id": "46053924307082"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for french press",
+    "variant_id": "46053924339850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46053924372618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46053924405386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46053924438154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46053924470922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46053924503690"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46053924536458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46053924569226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46053924601994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "46053924634762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for espresso",
+    "variant_id": "46053924667530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for drip",
+    "variant_id": "46053924700298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for french press",
+    "variant_id": "46053924733066"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "ff6d858110cea049",
+  "first_seen": "2026-10-26",
+  "handle": "twilight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Twilight.png?v=1756504348",
+  "platform": "shopify",
+  "product_id": "8486066487434",
+  "product_type": "dark roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "dark roast",
+   "drip"
+  ],
+  "title": "Twilight Blend",
+  "url": "https://veltonscoffee.com/products/twilight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "46054254149770"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for espresso",
+    "variant_id": "46054254182538"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for drip",
+    "variant_id": "46054254215306"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for french press",
+    "variant_id": "46054254248074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46054254280842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46054254313610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46054254346378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46054254379146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46054254411914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46054254444682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46054254477450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46054254510218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "46054254542986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for espresso",
+    "variant_id": "46054254575754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for drip",
+    "variant_id": "46054254608522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for french press",
+    "variant_id": "46054254641290"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "d137b27d713a0735",
+  "first_seen": "2026-10-26",
+  "handle": "twilight-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Treehouse.png?v=1756504394",
+  "platform": "shopify",
+  "product_id": "8486231670922",
+  "product_type": "medium roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "drip",
+   "medium roast"
+  ],
+  "title": "Treehouse Blend",
+  "url": "https://veltonscoffee.com/products/twilight-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "46054437453962"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for espresso",
+    "variant_id": "46054437486730"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for drip",
+    "variant_id": "46054437519498"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for french press",
+    "variant_id": "46054437552266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46054437585034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46054437617802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46054437650570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46054437683338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46054437716106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46054437748874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46054437781642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46054437814410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "46054437847178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for espresso",
+    "variant_id": "46054437879946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for drip",
+    "variant_id": "46054437912714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for french press",
+    "variant_id": "46054437945482"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "bf03ab8272fa57a2",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nayarita",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Mexico.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "8494844739722",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "espresso",
+   "mexico",
+   "natural"
+  ],
+  "title": "Mexico Nayarita (Natural)",
+  "url": "https://veltonscoffee.com/products/mexico-nayarita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46072934465674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46072934498442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46072934531210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46072934563978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46072934596746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46072934629514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46072934662282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46072934695050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "46072946458762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for espresso",
+    "variant_id": "46072946491530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for drip",
+    "variant_id": "46072946524298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for french press",
+    "variant_id": "46072946557066"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "e97f3b61513a703f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-condado-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Brazil.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "8494850474122",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "brazil",
+   "pulped natural"
+  ],
+  "title": "Brazil Condado Estate",
+  "url": "https://veltonscoffee.com/products/brazil-condado-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46072947343498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46072947376266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46072947409034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46072947441802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46072947474570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46072947507338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46072947540106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46072947572874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "46072947605642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for espresso",
+    "variant_id": "46072947638410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for drip",
+    "variant_id": "46072947671178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs / Grind for french press",
+    "variant_id": "46072947703946"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "15359dbca3500ef0",
+  "first_seen": "2026-10-26",
+  "handle": "bonsaiblend",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Bonsai.png?v=1756504363",
+  "platform": "shopify",
+  "product_id": "8512775094410",
+  "product_type": "medium roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "espresso",
+   "medium roast"
+  ],
+  "title": "Bonsai Blend",
+  "url": "https://veltonscoffee.com/products/bonsaiblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "46134304243850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "46134304276618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "46134304309386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "46134304342154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Whole bean",
+    "variant_id": "46134304374922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "46134304407690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "46134304440458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "46134304473226"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Whole bean",
+    "variant_id": "46134304505994"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for espresso",
+    "variant_id": "46134304538762"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for drip",
+    "variant_id": "46134304571530"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Grind for french press",
+    "variant_id": "46134304604298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "46134304637066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for espresso",
+    "variant_id": "46134304669834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for drip",
+    "variant_id": "46134304702602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Grind for french press",
+    "variant_id": "46134304735370"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "0cd5d2aed623eb9f",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-muranga-gondo-aa-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Ethiopia.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "8682961830026",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Chelchele (Natural)",
+  "url": "https://veltonscoffee.com/products/kenya-muranga-gondo-aa-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "47123880706186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "47123880738954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "47123880771722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "47123880804490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12 oz / Whole bean",
+    "variant_id": "47123880837258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "47123880870026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "47123880902794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "47123880935562"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "0cb75746c08b3be1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-aa-itumpi-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Tanzania.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "9027505389706",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [],
+  "title": "Tanzania AA Mbilidino",
+  "url": "https://veltonscoffee.com/products/tanzania-aa-itumpi-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "48093950509194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "48093950541962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "48093950574730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "48093950607498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole bean",
+    "variant_id": "48093950640266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "48093950673034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "48093950705802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "48093950738570"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "ef3813eb98ae0c8d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-pampojila-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Guatemala.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "9202471075978",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [],
+  "title": "Guatemala Finca La Bolsa",
+  "url": "https://veltonscoffee.com/products/guatemala-finca-pampojila-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "49760584073354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "49760584106122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "49760584138890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "49760584171658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole bean",
+    "variant_id": "49760584204426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "49760584237194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "49760584269962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "49760584302730"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "70e0a8ecb25b7b4a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-montano-jaguar-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Costa_Rica.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "9240732237962",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "anaerobic honey",
+   "costa rica"
+  ],
+  "title": "Costa Rica Finca El Mango (Honey)",
+  "url": "https://veltonscoffee.com/products/costa-rica-montano-jaguar-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "49871972106378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "49871972139146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "49871972171914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "49871972204682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole bean",
+    "variant_id": "49871972237450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "49871972270218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "49871972302986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "49871972335754"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "3bc15ce1d53504e3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-las-garzas-natural-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Colombia.png?v=1756504523",
+  "platform": "shopify",
+  "product_id": "9240754913418",
+  "product_type": "light roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [],
+  "title": "Colombia Narino - Aponte (Honey)",
+  "url": "https://veltonscoffee.com/products/colombia-tolima-las-garzas-natural-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "49872002547850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "49872002580618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "49872002613386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "49872002646154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole bean",
+    "variant_id": "49872002678922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "49872002711690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "49872002744458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "49872002777226"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ },
+ {
+  "body_hash": "c1f8467b97d56b77",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-dung-kno-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0682/8484/2122/files/Vietnam.png?v=1756504524",
+  "platform": "shopify",
+  "product_id": "9240915280010",
+  "product_type": "medium roast",
+  "roaster_slug": "veltonscoffee",
+  "tags": [
+   "colombia",
+   "washed"
+  ],
+  "title": "Vietnam Dung K'no (Anaerobic Natural)",
+  "url": "https://veltonscoffee.com/products/vietnam-dung-kno-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole bean",
+    "variant_id": "49872240083082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for espresso",
+    "variant_id": "49872240115850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for drip",
+    "variant_id": "49872240148618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Grind for french press",
+    "variant_id": "49872240181386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole bean",
+    "variant_id": "49872240214154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for espresso",
+    "variant_id": "49872240246922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for drip",
+    "variant_id": "49872240279690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Grind for french press",
+    "variant_id": "49872240312458"
+   }
+  ],
+  "vendor": "Velton's Coffee"
+ }
+]

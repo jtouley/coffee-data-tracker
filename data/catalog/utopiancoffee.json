@@ -1,0 +1,1330 @@
+[
+ {
+  "body_hash": "55639434b18d2a57",
+  "first_seen": "2026-10-26",
+  "handle": "newunion",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/union-regenerative-organic-certified-1539565.jpg?v=1754730278",
+  "platform": "shopify",
+  "product_id": "10135974543672",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "ROC",
+   "coffee"
+  ],
+  "title": "Union - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/newunion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50881799127352"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50881799160120"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50881799192888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50881799225656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50881799258424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50881799291192"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "4e8c9af921360d14",
+  "first_seen": "2026-10-26",
+  "handle": "newobsidian",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/obsidian-regenerative-organic-certified-5570243.png?v=1787123708",
+  "platform": "shopify",
+  "product_id": "10135974609208",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "CR",
+   "ROC",
+   "coffee",
+   "coffee review"
+  ],
+  "title": "Obsidian - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/newobsidian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50881799389496"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50881799422264"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 19.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50881799455032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50881799487800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50881799520568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50881799553336"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "b40b7c635c4555a5",
+  "first_seen": "2026-10-26",
+  "handle": "newpearl",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/pearl-9913424.jpg?v=1754730348",
+  "platform": "shopify",
+  "product_id": "10135974773048",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Pearl",
+  "url": "https://utopiancoffee.com/products/newpearl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50881800470840"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50881800503608"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50881800536376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50881800569144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50881800601912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50881800634680"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "f0ef580d202fbb53",
+  "first_seen": "2026-10-26",
+  "handle": "newespresso-volo",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/espresso-volo-5372591.jpg?v=1754730275",
+  "platform": "shopify",
+  "product_id": "10135974936888",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Espresso Volo",
+  "url": "https://utopiancoffee.com/products/newespresso-volo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50881801617720"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50881801650488"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50881801683256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50881801716024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50881801748792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50881801781560"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "5ea3a04405ebbda7",
+  "first_seen": "2026-10-26",
+  "handle": "newflying-jewel",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/flying-jewel-4390492.png?v=1766574353",
+  "platform": "shopify",
+  "product_id": "10135975067960",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "CR",
+   "coffee",
+   "coffee review"
+  ],
+  "title": "Flying Jewel",
+  "url": "https://utopiancoffee.com/products/newflying-jewel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50881802043704"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50881802076472"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50881802109240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50881802142008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50881802174776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50881802207544"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "5f49e5a5cda074c4",
+  "first_seen": "2026-10-26",
+  "handle": "10-9-rotating-single-origin-selections",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/109-rotating-single-origin-selections-1652083.png?v=1754647473",
+  "platform": "shopify",
+  "product_id": "10143103418680",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "subscription-product"
+  ],
+  "title": "Rotating Single Origin Selections",
+  "url": "https://utopiancoffee.com/products/10-9-rotating-single-origin-selections",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.5,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "50933563294008"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.5,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "50933563326776"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.5,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "50933563359544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50945429143864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50945429176632"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "69f73f42e0f8281a",
+  "first_seen": "2026-10-26",
+  "handle": "10-9-dark-only-selections",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/109-dark-only-selections-6603654.png?v=1754647473",
+  "platform": "shopify",
+  "product_id": "10143103615288",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "subscription-product"
+  ],
+  "title": "Dark-Only Selections",
+  "url": "https://utopiancoffee.com/products/10-9-dark-only-selections",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Whole Bean / 10.93oz",
+    "variant_id": "50933564834104"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Ground - Drip / 10.93oz",
+    "variant_id": "50933564866872"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Ground - French Press / 10.93oz",
+    "variant_id": "50933564899640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50945489436984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50945489469752"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "6eb3be4f501fc4bc",
+  "first_seen": "2026-10-26",
+  "handle": "10-9-medium-only-selections",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/109-medium-only-selections-6706827.png?v=1754647473",
+  "platform": "shopify",
+  "product_id": "10143103746360",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "subscription-product"
+  ],
+  "title": "Medium-Only Selections",
+  "url": "https://utopiancoffee.com/products/10-9-medium-only-selections",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Whole Bean / 10.93oz",
+    "variant_id": "50933565948216"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Ground - Drip / 10.93oz",
+    "variant_id": "50933565980984"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Ground - French Press / 10.93oz",
+    "variant_id": "50933566013752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "50945500774712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "50945500807480"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "e5161fa468267ce1",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-journal",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/33-cups-of-coffee-pocket-coffee-journal-1010380.png?v=1763665554",
+  "platform": "shopify",
+  "product_id": "10260142817592",
+  "product_type": "Taxable Goods & Merchandise",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "33 Cups of Coffee - Pocket Coffee Journal",
+  "url": "https://utopiancoffee.com/products/coffee-journal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "51378022089016"
+   }
+  ],
+  "vendor": "33 Books"
+ },
+ {
+  "body_hash": "fbfd2dbab80c40e1",
+  "first_seen": "2026-10-26",
+  "handle": "created-co-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/created-co-coffee-canister-7775790.png?v=1763748367",
+  "platform": "shopify",
+  "product_id": "10261842493752",
+  "product_type": "Taxable Goods & Merchandise",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "Brewing",
+   "Gifts"
+  ],
+  "title": "Created Co - Coffee Canister",
+  "url": "https://utopiancoffee.com/products/created-co-coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 44.0,
+    "title": "Default Title",
+    "variant_id": "51383379755320"
+   }
+  ],
+  "vendor": "Created Co"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-deri-fahmi-wate",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/ethiopia-deri-fahmi-wate-3000407.png?v=1769143028",
+  "platform": "shopify",
+  "product_id": "10280534409528",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "CR",
+   "coffee",
+   "coffee review"
+  ],
+  "title": "Ethiopia Deri Fahmi Wate",
+  "url": "https://utopiancoffee.com/products/ethiopia-deri-fahmi-wate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "51466623451448"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "51466623484216"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "51466623516984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "51466623549752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "51466623582520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51466623615288"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karindundu-aa-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/kenya-karindundu-aa-8997383.png?v=1780743428",
+  "platform": "shopify",
+  "product_id": "10280577499448",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya Karindundu AA",
+  "url": "https://utopiancoffee.com/products/kenya-karindundu-aa-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "51466773397816"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "51466773430584"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 23.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "51466773463352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "51466773496120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "51466773528888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51466773561656"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "peru-familia-tocto-regenerative-organic-certified®",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/peru-familia-tocto-regenerative-organic-certified-5509749.png?v=1767402908",
+  "platform": "shopify",
+  "product_id": "10313484665144",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "ROC",
+   "coffee"
+  ],
+  "title": "Peru Familia Tocto - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/peru-familia-tocto-regenerative-organic-certified®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "51571358794040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "51571358826808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51571358859576"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "51571358892344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "51571358925112"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "51571358957880"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dark-peru-familia-tocto-regenerative-organic-certified®",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/Peru_Familia_Tocto.png?v=1767205551",
+  "platform": "shopify",
+  "product_id": "10313494954296",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "ROC",
+   "coffee"
+  ],
+  "title": "Dark Peru Familia Tocto - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/dark-peru-familia-tocto-regenerative-organic-certified®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "51571400114488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "51571400147256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51571400180024"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "51571400212792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "51571400245560"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "51571400278328"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-veracruz",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/decaf-mexico-veracruz-3681871.png?v=1769723174",
+  "platform": "shopify",
+  "product_id": "10351593750840",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Mexico Veracruz",
+  "url": "https://utopiancoffee.com/products/decaf-mexico-veracruz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "51669156725048"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "51669156757816"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "51669156790584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "51669156823352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "51669156856120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "51669156888888"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "thai-huai-mae-liam",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/thai-huai-mae-liam-9319691.png?v=1782897968",
+  "platform": "shopify",
+  "product_id": "10756881875256",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Thai Huai Mae Liam",
+  "url": "https://utopiancoffee.com/products/thai-huai-mae-liam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "52584636875064"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "52584636907832"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "52584636940600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "52584636973368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "52584637006136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "52584637038904"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "755d8b9bc9ac4e8c",
+  "first_seen": "2026-10-26",
+  "handle": "peru-chirinos-regenerative-organic-certified®",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/peru-chirinos-regenerative-organic-certified-7076548.png?v=1785466510",
+  "platform": "shopify",
+  "product_id": "10771273482552",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Peru Chirinos Geisha- Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/peru-chirinos-regenerative-organic-certified®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 8oz",
+    "variant_id": "52630012395832"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "peru-joel-silva-regenerative-organic-certified®",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/peru-joel-silva-regenerative-organic-certified-9989122.png?v=1789609387",
+  "platform": "shopify",
+  "product_id": "10773564064056",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "CR",
+   "ROC",
+   "coffee",
+   "coffee review"
+  ],
+  "title": "Peru Joel Silva - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/peru-joel-silva-regenerative-organic-certified®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "52639901417784"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "52639901450552"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "52639901483320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "52639901516088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "52639901548856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "52639901581624"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "india-pearl-mountain-estate-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/india-pearl-mountain-estate-8594027.png?v=1784969357",
+  "platform": "shopify",
+  "product_id": "10792340488504",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "India Pearl Mountain Estate",
+  "url": "https://utopiancoffee.com/products/india-pearl-mountain-estate-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "52689272832312"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "52689272865080"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "52689272897848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "52689272930616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "52689272963384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "52689272996152"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "canopy",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/canopy-3321892.png?v=1785466510",
+  "platform": "shopify",
+  "product_id": "10799728361784",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Canopy",
+  "url": "https://utopiancoffee.com/products/canopy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "52719848915256"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "52719848948024"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "52719848980792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "52719849013560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "52719849046328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "52719849079096"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "canopy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/timor-leste-lebudu-kraik-8057590.png?v=1791018070",
+  "platform": "shopify",
+  "product_id": "10935150739768",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Timor Leste Lebudu Kraik",
+  "url": "https://utopiancoffee.com/products/canopy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "53070842822968"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "53070842855736"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "53070842888504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "53070842921272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "53070842954040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53070842986808"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "umber-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/umber-blend-3141953.png?v=1791680889",
+  "platform": "shopify",
+  "product_id": "10943706005816",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Umber Blend",
+  "url": "https://utopiancoffee.com/products/umber-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "53117819322680"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "53117819355448"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "53117819388216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "53117819420984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "53117819453752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53117819486520"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dark-honduras-aprocomsa",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/dark-honduras-aprocomsa-3224401.png?v=1791763751",
+  "platform": "shopify",
+  "product_id": "10945949204792",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Dark Honduras APROCOMSA",
+  "url": "https://utopiancoffee.com/products/dark-honduras-aprocomsa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "53125295964472"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "53125295997240"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 21.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "53125296030008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "53125296062776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "53125296095544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53125296128312"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "peru-marshall-finca-churupampa-regenerative-organic-certified®",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9619/8712/files/peru-marshall-finca-churupampa-regenerative-organic-certified-1997710.png?v=1791846624",
+  "platform": "shopify",
+  "product_id": "10946979856696",
+  "product_type": "Coffee",
+  "roaster_slug": "utopiancoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Peru Marshall Finca Churupampa - Regenerative Organic Certified®",
+  "url": "https://utopiancoffee.com/products/peru-marshall-finca-churupampa-regenerative-organic-certified®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 10.9oz",
+    "variant_id": "53126808338744"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - Drip / 10.9oz",
+    "variant_id": "53126808371512"
+   },
+   {
+    "available": true,
+    "grams": 309,
+    "price_usd": 24.0,
+    "title": "Ground - French Press / 10.9oz",
+    "variant_id": "53126808404280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "53126808437048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Ground - Drip / 2lb",
+    "variant_id": "53126808469816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "53126808502584"
+   }
+  ],
+  "vendor": "UtopianCoffee"
+ }
+]

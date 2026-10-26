@@ -1,0 +1,811 @@
+[
+ {
+  "body_hash": "d613635d74fa63e4",
+  "first_seen": "2026-10-26",
+  "handle": "watering-hole-colombia-peru-blend-small-batch-coffee-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_phtot.watering_hole.jpg?v=1734315835",
+  "platform": "shopify",
+  "product_id": "10575425929534",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Watering Hole - Colombia/Peru Blend",
+  "url": "https://frontiercoffeeroasters.com/products/watering-hole-colombia-peru-blend-small-batch-coffee-medium-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47730665914686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47730665947454"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590078796094"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "1c10f78b7960ff66",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-santos-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_photo.general_store.jpg?v=1734315021",
+  "platform": "shopify",
+  "product_id": "10575906832702",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "General Store - Brazilian Santos Coffee Beans",
+  "url": "https://frontiercoffeeroasters.com/products/brazilian-santos-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47731455787326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47731455820094"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590067228990"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "43fdde78fda7f896",
+  "first_seen": "2026-10-26",
+  "handle": "blue-mountain-jamaican-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/IMG-9995.jpg?v=1731536075",
+  "platform": "shopify",
+  "product_id": "11265925382462",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Blue Mountain Jamaican Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/blue-mountain-jamaican-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 68.95,
+    "title": "12oz Whole Bean",
+    "variant_id": "49967384199486"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "ee4a0f1b35ef8787",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_phtot.shaman.jpg?v=1734315681",
+  "platform": "shopify",
+  "product_id": "11407522758974",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Shaman - Dark Roast Espresso Beans",
+  "url": "https://frontiercoffeeroasters.com/products/dark-roast-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50404964663614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50404964696382"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "38db2448255b014a",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Trail_Boss_Panama_Medium_Roast.jpg?v=1734315769",
+  "platform": "shopify",
+  "product_id": "11542046966078",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Trail Boss - Panama Boquete Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/panama-boquete-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50620843098430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50620843131198"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50620843163966"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "197b41bb427125d1",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-sumatra-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Conductor_Small_Batch_Coffee.jpg?v=1731981199",
+  "platform": "shopify",
+  "product_id": "11542749577534",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Conductor: Indonesian Sumatra Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/indonesian-sumatra-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50621815554366"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50621815587134"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50621815619902"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "9e3af0ea766ab14a",
+  "first_seen": "2026-10-26",
+  "handle": "small-batch-italian-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/462553490_8973250922725280_8564180274228098695_n.jpg?v=1731537971",
+  "platform": "shopify",
+  "product_id": "11544173904190",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "Bushwhacker - Italian Roast Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/small-batch-italian-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50623816335678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50623816401214"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50623816466750"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "2fd36ac9f1a10be1",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-moon-fall-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Harvest_Moon_Coffee_Still_Life.png?v=1791072033",
+  "platform": "shopify",
+  "product_id": "12632466260286",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Harvest Moon: Fall Blend Coffee PRE-ORDER",
+  "url": "https://frontiercoffeeroasters.com/products/harvest-moon-fall-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "54544928833854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "54544928899390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pod (Box of 12)",
+    "variant_id": "54544928964926"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "128b67022784a939",
+  "first_seen": "2026-10-26",
+  "handle": "prairie-christmas-christmas-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Prairie_Christmas_Coffee_in_a_Cozy_Cafe.png?v=1791070941",
+  "platform": "shopify",
+  "product_id": "12632586715454",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Prairie Christmas: Christmas Blend Coffee PRE-ORDER",
+  "url": "https://frontiercoffeeroasters.com/products/prairie-christmas-christmas-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "54545150411070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "54545150476606"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pod (Box of 12)",
+    "variant_id": "54545150542142"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "4ef2c95e38d06c89",
+  "first_seen": "2026-10-26",
+  "handle": "happy-trails-indonesia-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Happy_Trails_East_Java_Coffee.png?v=1792330612",
+  "platform": "shopify",
+  "product_id": "12666011517246",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Happy Trails: Indonesia Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/happy-trails-indonesia-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "54645245280574"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "54645245346110"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pod (Box of 12)",
+    "variant_id": "54645245411646"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "3e529a58bc27cb5d",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_phtot.gunslinger.jpg?v=1734315088",
+  "platform": "shopify",
+  "product_id": "9834523525438",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Gunslinger - Mexican Chiapas Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/mexican-chiapas-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "46933993193790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "46933993226558"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590067687742"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "57d9749365a552f1",
+  "first_seen": "2026-10-26",
+  "handle": "trailblazer-ethiopian-yirgacheffe-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_photo.trailblazer.jpg?v=1734315792",
+  "platform": "shopify",
+  "product_id": "9878512304446",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Trailblazer - Ethiopian Yirgacheffe Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/trailblazer-ethiopian-yirgacheffe-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590078402878"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50619703460158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50619707457854"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "6986132c7945f65a",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Product_photo.Jehu.jpg?v=1734315203",
+  "platform": "shopify",
+  "product_id": "9878548545854",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Jehu (yay-hoo) - 100% Colombian Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/100-colombian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "46978751136062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "46978751168830"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50411210801470"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean Decaf",
+    "variant_id": "50611435503934"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground Decaf",
+    "variant_id": "50611435536702"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods Decaf (Box of 12)",
+    "variant_id": "50611435569470"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "c6299055588f2f9e",
+  "first_seen": "2026-10-26",
+  "handle": "showstopper-guatemala-huehuetenango-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Showstopper_Guatemala_Small_Batch_Coffee.jpg?v=1731981199",
+  "platform": "shopify",
+  "product_id": "9878629089598",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Showstopper - Guatemala Huehuetenango Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/showstopper-guatemala-huehuetenango-coffee-beans",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590077452606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "50612724891966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50612726563134"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "3d608fcdfb4bdb83",
+  "first_seen": "2026-10-26",
+  "handle": "summary-justice-small-batch-french-dark-roast-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_photo.summary_justice1.jpg?v=1734315718",
+  "platform": "shopify",
+  "product_id": "9878730670398",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Summary Justice - French Dark Roast Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/summary-justice-small-batch-french-dark-roast-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "46978849767742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "46978849833278"
+   },
+   {
+    "available": false,
+    "grams": 5443,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590077878590"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "f7314a3753f9ffba",
+  "first_seen": "2026-10-26",
+  "handle": "homesteader-medium-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_phtot.homesteader.jpg?v=1734315150",
+  "platform": "shopify",
+  "product_id": "9936430137662",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Homesteader: Medium Dark Roast Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/homesteader-medium-dark-roast-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47057918918974"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47057918951742"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pod (Box of 12)",
+    "variant_id": "50392196546878"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean Decaf",
+    "variant_id": "50602232774974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground Decaf",
+    "variant_id": "50602232807742"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pod Decaf (Box of 12)",
+    "variant_id": "50602232840510"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "23a750b303ca2411",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/High_Roller_Small_Batch_Coffee_Honduras.jpg?v=1731981199",
+  "platform": "shopify",
+  "product_id": "9936452124990",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "High Roller - Honduras Coffee Beans",
+  "url": "https://frontiercoffeeroasters.com/products/honduras-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47057954996542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47057955029310"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590074700094"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "3f51f883697835d1",
+  "first_seen": "2026-10-26",
+  "handle": "cookie-tanzanian-peaberry-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/product_photo.cookie.jpg?v=1734311476",
+  "platform": "shopify",
+  "product_id": "9938116903230",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Cookie - Tanzanian Peaberry Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/cookie-tanzanian-peaberry-coffee-beans",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47062643179838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47062643212606"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590019027262"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "ae9a756541802183",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Thundering_Herd_Small_Batch_Coffee_Colombia_Peru_Blend.jpg?v=1732109659",
+  "platform": "shopify",
+  "product_id": "9945052119358",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Thundering Herd - Peruvian Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/peruvian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47085078839614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "47085078872382"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590078042430"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ },
+ {
+  "body_hash": "2c853115d391e966",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0819/6322/1310/files/Schoolhouse_Costa_Rican_Small_Batch_Coffee.jpg?v=1732068899",
+  "platform": "shopify",
+  "product_id": "9945071616318",
+  "product_type": "",
+  "roaster_slug": "frontiercoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Light Roast"
+  ],
+  "title": "Schoolhouse: Costa Rican Coffee",
+  "url": "https://frontiercoffeeroasters.com/products/costa-rican-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "47085157974334"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Coffee Pods (Box of 12)",
+    "variant_id": "50590076731710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Ground",
+    "variant_id": "50611939967294"
+   }
+  ],
+  "vendor": "Frontier Coffee Roasters"
+ }
+]

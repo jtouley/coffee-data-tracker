@@ -1,0 +1,323 @@
+[
+ {
+  "body_hash": "e45281924ed920a6",
+  "first_seen": "2026-10-26",
+  "handle": "earth-tones-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/IMG_3944.jpg?v=1737062871",
+  "platform": "shopify",
+  "product_id": "6326872277167",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [
+   "Locally Roasted"
+  ],
+  "title": "Earth Tones Espresso",
+  "url": "https://arrowrootcoffee.com/products/earth-tones-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "38380018991279"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 60oz Bag",
+    "variant_id": "43065339904175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12oz Bag",
+    "variant_id": "43065339936943"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 100.0,
+    "title": "Ground / 60oz Bag",
+    "variant_id": "43065339969711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Whole Bean / 32oz Bag",
+    "variant_id": "44799637094575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground / 32oz Bag",
+    "variant_id": "44799637127343"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ },
+ {
+  "body_hash": "c87284054721fb6f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/IMG_1398.jpg?v=1707854341",
+  "platform": "shopify",
+  "product_id": "6326925000879",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [],
+  "title": "Colombia Sugarcane Decaf",
+  "url": "https://arrowrootcoffee.com/products/colombia-sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "38401322418351"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 60oz Bag",
+    "variant_id": "43070673944751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12oz Bag",
+    "variant_id": "43070673977519"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 100.0,
+    "title": "Ground / 60oz Bag",
+    "variant_id": "43070674010287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Whole Bean / 32oz Bag",
+    "variant_id": "44799642960047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "Ground / 32oz Bag",
+    "variant_id": "44799642992815"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ },
+ {
+  "body_hash": "931a0b25ebd9d253",
+  "first_seen": "2026-10-26",
+  "handle": "nightfall-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/IMG_3939.jpg?v=1737063193",
+  "platform": "shopify",
+  "product_id": "8144295395503",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [
+   "Locally Roasted"
+  ],
+  "title": "Nightfall - Dark Blend",
+  "url": "https://arrowrootcoffee.com/products/nightfall-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "44819326140591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 32oz Bag",
+    "variant_id": "44819326173359"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 60oz Bag",
+    "variant_id": "44819326206127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12oz Bag",
+    "variant_id": "44819326238895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground / 32oz Bag",
+    "variant_id": "44819326271663"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Ground / 60oz Bag",
+    "variant_id": "44819326304431"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ },
+ {
+  "body_hash": "e9f8c3368d6c15ec",
+  "first_seen": "2026-10-26",
+  "handle": "daybreak-half-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/IMG_3942.jpg?v=1738774328",
+  "platform": "shopify",
+  "product_id": "8145415667887",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [
+   "Locally Roasted"
+  ],
+  "title": "Daybreak - Half-Caf Blend",
+  "url": "https://arrowrootcoffee.com/products/daybreak-half-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "44824888311983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 32oz Bag",
+    "variant_id": "44824888344751"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 60oz Bag",
+    "variant_id": "44824888377519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12oz Bag",
+    "variant_id": "44824888410287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground / 32oz Bag",
+    "variant_id": "44824888443055"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Ground / 60oz Bag",
+    "variant_id": "44824888475823"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ },
+ {
+  "body_hash": "b828cea815d67320",
+  "first_seen": "2026-10-26",
+  "handle": "honeycomb-honey-process-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/IMG_4184.jpg?v=1739461277",
+  "platform": "shopify",
+  "product_id": "8145415798959",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [
+   "Locally Roasted"
+  ],
+  "title": "Honeycomb - Breakfast Blend",
+  "url": "https://arrowrootcoffee.com/products/honeycomb-honey-process-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "44824888672431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 32oz Bag",
+    "variant_id": "44824888705199"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 60oz Bag",
+    "variant_id": "44824888737967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground / 12oz Bag",
+    "variant_id": "44824888770735"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground / 32oz Bag",
+    "variant_id": "44824888803503"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 105.0,
+    "title": "Ground / 60oz Bag",
+    "variant_id": "44824888836271"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ },
+ {
+  "body_hash": "8b6828714ca19214",
+  "first_seen": "2026-10-26",
+  "handle": "pre-order-the-fermentation-project-tasting-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0545/4105/8223/files/Fermentation_Project.webp?v=1786885859",
+  "platform": "shopify",
+  "product_id": "8672273334447",
+  "product_type": "Coffee",
+  "roaster_slug": "arrowrootcoffee",
+  "tags": [],
+  "title": "[Pre-Order] The Fermentation Project Tasting Kit",
+  "url": "https://arrowrootcoffee.com/products/pre-order-the-fermentation-project-tasting-kit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "Default Title",
+    "variant_id": "47369410117807"
+   }
+  ],
+  "vendor": "Arrowroot Coffee Co."
+ }
+]

@@ -1,0 +1,1815 @@
+[
+ {
+  "body_hash": "4b633a355ba2021a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/yirgacheffe-ethiopiastrider-coffee-roastersstrider-coffee-roasters-9385333.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "6288276259007",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Ethiopia",
+   "Yirgacheffe"
+  ],
+  "title": "Yirgacheffe Coffee - From Ethiopia",
+  "url": "https://www.stridercoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38095169913023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38095172010175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38095173976255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38095175385279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38095183118527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38095187607743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38095259107519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38095264645311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38095267365055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38095269920959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38095272149183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38095273722047"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "ed322d136c20bdb4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffee-k-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/ethiopia-yirgacheffe-k-cups-100-arabica-coffeestrider-coffee-roastersstrider-coffee-roasters-1347966.jpg?v=1778112368",
+  "platform": "shopify",
+  "product_id": "6297823707327",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Ethiopia",
+   "K Cups"
+  ],
+  "title": "Ethiopia Yirgacheffe K Cups - 100% Arabica Coffee",
+  "url": "https://www.stridercoffee.com/products/ethiopia-yirgacheffee-k-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 13.5,
+    "title": "Default Title",
+    "variant_id": "38095346729151"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "9e4a76ce0369b1cc",
+  "first_seen": "2026-10-26",
+  "handle": "takengon-gr1",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/mandheling-sumatrastrider-coffee-roastersstrider-coffee-roasters-8765918.jpg?v=1760710650",
+  "platform": "shopify",
+  "product_id": "6300332261567",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Manhelding",
+   "Sumatra",
+   "Takengon"
+  ],
+  "title": "Sumatra Mandheling Coffee Blend",
+  "url": "https://www.stridercoffee.com/products/takengon-gr1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38102686204095"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38102686236863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38102686269631"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38102686302399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38102686335167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38102686367935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38102686400703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38102686433471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38102686466239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38102686499007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38102686531775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38102686564543"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "1d3691b4da0ea5b8",
+  "first_seen": "2026-10-26",
+  "handle": "tarrazu-la-pastora-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/tarrazu-la-pastora-costa-ricastrider-coffee-roastersstrider-coffee-roasters-1414350.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "6300478275775",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Costa Rica",
+   "Tarrazu"
+  ],
+  "title": "Tarrazu La Pastora | Costa Rica",
+  "url": "https://www.stridercoffee.com/products/tarrazu-la-pastora-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38103163109567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38103163142335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38103163175103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38103163240639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38103163273407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38103163306175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38103163338943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38103163371711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38103163404479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38103163437247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38103163470015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38103163502783"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "e17e80ced7028ab5",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-hg-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/chiapas-hg-mexicostrider-coffee-roastersstrider-coffee-roasters-8168621.jpg?v=1760710665",
+  "platform": "shopify",
+  "product_id": "6317550305471",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Colombia",
+   "Drip Brew",
+   "Pour Over",
+   "Tolima"
+  ],
+  "title": "Mexican Chiapas HG Coffee Beans",
+  "url": "https://www.stridercoffee.com/products/chiapas-hg-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38149420351679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38149420384447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38149420417215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38149420449983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38149420482751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38149420515519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38149420548287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38149420581055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38149420613823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38149420646591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38149420679359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38149420712127"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "fc46da17e022c3f7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mogiana-swp-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/decaf-mogiana-mwp-brazilstrider-coffee-roastersstrider-coffee-roasters-6182953.jpg?v=1760710652",
+  "platform": "shopify",
+  "product_id": "6317577928895",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Decaf",
+   "Drip Brew",
+   "SWP"
+  ],
+  "title": "Brazilian Decaf Mogiana MWP Coffee",
+  "url": "https://www.stridercoffee.com/products/decaf-mogiana-swp-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38149482447039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38149482479807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38149482512575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38149482545343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38149482578111"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38149482610879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38149482643647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38149482676415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38149482709183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38149482741951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38149482774719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38149482807487"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "269e698aebe86e75",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/signature-espresso-brazilstrider-coffee-roastersstrider-coffee-roasters-2723286.jpg?v=1760710649",
+  "platform": "shopify",
+  "product_id": "6317633798335",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "espresso"
+  ],
+  "title": "Brazilian Signature Espresso Blend",
+  "url": "https://www.stridercoffee.com/products/espresso-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38149715525823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38149715558591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38149715591359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38149715624127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38149715656895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38149715689663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38149715722431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38149715755199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38149715787967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38149715820735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38149715853503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38149715886271"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "fc8530e897f07791",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-costa-rica-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/breakfast-blend-costa-rica-brazilstrider-coffee-roastersstrider-coffee-roasters-1531329.jpg?v=1760710650",
+  "platform": "shopify",
+  "product_id": "6317724270783",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Costa Rica",
+   "Drip Brew",
+   "Pour Over",
+   "Tarrazu",
+   "brazil",
+   "breakfast"
+  ],
+  "title": "Breakfast Blend | Costa Rica & Brazil",
+  "url": "https://www.stridercoffee.com/products/breakfast-blend-costa-rica-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38150070108351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38150070206655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38150070534335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38150070567103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38150070599871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38150070632639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38150070665407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38150070698175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38150070730943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38150070763711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38150070796479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38150070829247"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "b5770c369e1cab43",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-brazil-1",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/cafe-blend-brazilstrider-coffee-roastersstrider-coffee-roasters-1964033.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "6317774766271",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "espresso"
+  ],
+  "title": "Cafe Blend Brazil: Rich & Smooth",
+  "url": "https://www.stridercoffee.com/products/house-blend-brazil-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38150262390975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38150262423743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38150262456511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38150262489279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38150262522047"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38150262554815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38150262587583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38150262620351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38150262653119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38150262685887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38150262718655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38150262751423"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "3d6deca1a68d2af4",
+  "first_seen": "2026-10-26",
+  "handle": "kaldis-blend-ethiopia-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/kaldis-blend-ethiopia-brazilstrider-coffee-roastersstrider-coffee-roasters-8280647.jpg?v=1760710659",
+  "platform": "shopify",
+  "product_id": "6320835035327",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Ethiopia",
+   "Pour Over",
+   "Yirgacheffe",
+   "brazil"
+  ],
+  "title": "Kaldi's Blend | Ethiopia & Brazil",
+  "url": "https://www.stridercoffee.com/products/kaldis-blend-ethiopia-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38161324376255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38161324409023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38161324441791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38161324474559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38161324507327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38161324540095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38161324572863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38161324605631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38161324638399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38161324671167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38161324703935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38161324736703"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "a5b4c6698e8f77e1",
+  "first_seen": "2026-10-26",
+  "handle": "kartika-blend-sumatra-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/kartika-blend-sumatra-brazilstrider-coffee-roastersstrider-coffee-roasters-1959992.jpg?v=1760710662",
+  "platform": "shopify",
+  "product_id": "6320910532799",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Sumatra",
+   "brazil",
+   "espresso"
+  ],
+  "title": "Kartika Blend | Sumatra & Brazil",
+  "url": "https://www.stridercoffee.com/products/kartika-blend-sumatra-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "38161525670079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Drip / 12 oz",
+    "variant_id": "38161525702847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Course / 12 oz",
+    "variant_id": "38161525735615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Pour Over Fine / 12 oz",
+    "variant_id": "38161525768383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "French Press / 12 oz",
+    "variant_id": "38161525801151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Espresso / 12 oz",
+    "variant_id": "38161525866687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Whole Bean / 5 LBS",
+    "variant_id": "38161525899455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Drip / 5 LBS",
+    "variant_id": "38161525932223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Course / 5 LBS",
+    "variant_id": "38161525997759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Pour Over Fine / 5 LBS",
+    "variant_id": "38161526063295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "French Press / 5 LBS",
+    "variant_id": "38161526096063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "Espresso / 5 LBS",
+    "variant_id": "38161526128831"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "705cd2f27bd919a9",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-la-pastora-k-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/costa-rica-tarrazu-la-pastora-k-cupsstrider-coffee-roastersstrider-coffee-roasters-2641022.jpg?v=1778112366",
+  "platform": "shopify",
+  "product_id": "7067321827519",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Costa Rica",
+   "K Cups"
+  ],
+  "title": "Costa Rica Tarrazu La Pastora | K Cups",
+  "url": "https://www.stridercoffee.com/products/costa-rica-tarrazu-la-pastora-k-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 13.5,
+    "title": "Default Title",
+    "variant_id": "41020862103743"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "b32c23ddbd89435e",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-k-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/morning-boost-k-cups-breakfast-blendstrider-coffee-roastersstrider-coffee-roasters-4601032.jpg?v=1778112367",
+  "platform": "shopify",
+  "product_id": "7067335655615",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Costa Rica",
+   "K Cups",
+   "breakfast"
+  ],
+  "title": "Morning Boost K Cups | Breakfast Blend",
+  "url": "https://www.stridercoffee.com/products/breakfast-blend-k-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 13.5,
+    "title": "Default Title",
+    "variant_id": "41020885500095"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "ea98fc0b70f8771d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-k-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/chiapas-k-cups-bold-smooth-mexican-coffeestrider-coffee-roastersstrider-coffee-roasters-6869109.jpg?v=1778112366",
+  "platform": "shopify",
+  "product_id": "7378210455743",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Cafe",
+   "House",
+   "K Cups",
+   "Mexico"
+  ],
+  "title": "Chiapas K Cups - Bold & Smooth Mexican Coffee",
+  "url": "https://www.stridercoffee.com/products/mexico-chiapas-k-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "Default Title",
+    "variant_id": "42041195167935"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "8416619b6c712cee",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-breakfast-blend-costa-rica-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-breakfasts-blend-medium-roast-whole-bean-coffee-costa-rica-specialty-coffee-12-ozstrider-coffee-roastersstrider-coffee-roasters-8664729.jpg?v=1760710658",
+  "platform": "shopify",
+  "product_id": "7451350859967",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Costa Rica",
+   "Drip Brew",
+   "Pour Over",
+   "Tarrazu",
+   "brazil",
+   "breakfast"
+  ],
+  "title": "Costa Rica Breakfast Blend Whole Bean Coffee, 12 oz by Strider Roasters",
+  "url": "https://www.stridercoffee.com/products/copy-of-breakfast-blend-costa-rica-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42248943075519"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "a8ff644274ee8447",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-cafe-blend-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-cafe-blend-whole-bean-medium-roast-brazil-specialty-coffee-12-ozstrider-coffee-roastersstrider-coffee-roasters-9675512.jpg?v=1760710654",
+  "platform": "shopify",
+  "product_id": "7451365474495",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Cafe",
+   "drip",
+   "espresso",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters Brazil Cafe Blend - Specialty Whole Bean 12 oz",
+  "url": "https://www.stridercoffee.com/products/copy-of-cafe-blend-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249013952703"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "c1076a02a1c2e759",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-mexico-chiapas-whole-bean-medium-roast-dark-chocolate-and-toffee-specialty-coffee-12-ouncestrider-coffee-roastersstrider-coffee-roasters-5764737.jpg?v=1760710659",
+  "platform": "shopify",
+  "product_id": "7451374452927",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Chiapas",
+   "Chocolate",
+   "Cold brew",
+   "Desert",
+   "Drip Brew",
+   "Mexico",
+   "Pour Over",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters Mexico Chiapas Whole Bean 12 oz Dark Chocolate Toffee Medium Roast",
+  "url": "https://www.stridercoffee.com/products/chiapas-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249057173695"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "651ee2174e3707f8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-brazil-mogian-decaf-medium-roast-whole-bean-water-process-decaf-specialty-coffee-12-ounce-chemical-free-decafstrider-coffee-roastersstri-7310094.jpg?v=1760710658",
+  "platform": "shopify",
+  "product_id": "7451380908223",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Decaf",
+   "Drip Brew",
+   "Mountain water process",
+   "SWP",
+   "drip",
+   "espresso",
+   "mogiana",
+   "water decaf",
+   "water process"
+  ],
+  "title": "Strider Brazil Mogian Decaf: Water Processed Medium Roast 12oz Whole Bean",
+  "url": "https://www.stridercoffee.com/products/brazil-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249084829887"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "d4df6035df792e07",
+  "first_seen": "2026-10-26",
+  "handle": "kaldis-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-ethiopian-blend-kaldis-coffee-medium-roast-whole-bean-specialty-coffee-12-ounce-brazil-blendstrider-coffee-roastersstrider-coffee-roaste-8252202.jpg?v=1760710653",
+  "platform": "shopify",
+  "product_id": "7451384873151",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Ethiopia",
+   "Pour Over",
+   "Yirgacheffe",
+   "brazil"
+  ],
+  "title": "Strider Coffee Roasters Ethiopian Blend, Medium Roast Whole Bean Specialty Coffee 12oz",
+  "url": "https://www.stridercoffee.com/products/kaldis-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249104228543"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "3d141612f06d60e7",
+  "first_seen": "2026-10-26",
+  "handle": "kartika-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-kartika-blend-whole-bean-medium-dark-roast-sumatra-blend-specialty-coffee-12-ounce-brazil-coffeestrider-coffee-roastersstrider-coffee-ro-7425653.jpg?v=1760710649",
+  "platform": "shopify",
+  "product_id": "7451389231295",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Sumatra",
+   "brazil",
+   "espresso",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters Kartika Blend 12 oz Whole Bean Specialty Coffee",
+  "url": "https://www.stridercoffee.com/products/kartika-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249129132223"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "8c778db9d6c7c73b",
+  "first_seen": "2026-10-26",
+  "handle": "mandheling-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-sumatra-mandheling-dark-roast-whole-bean-indonesia-specialty-coffee-12-oz-coffee-giftsstrider-coffee-roastersstrider-coffee-roasters-4958408.jpg?v=1760710658",
+  "platform": "shopify",
+  "product_id": "7451394441407",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Manhelding",
+   "Sumatra",
+   "indonesia",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters Sumatra Mandheling Dark Roast Whole Bean 12 oz, Specialty Coffee",
+  "url": "https://www.stridercoffee.com/products/mandheling-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249168847039"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "c8dd2f2174f43291",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-espresso-blend-dark-roast-whole-bean-specialty-coffee-brazil-blend-12-ounce-coffee-giftsstrider-coffee-roastersstrider-coffee-roasters-8862971.jpg?v=1760710654",
+  "platform": "shopify",
+  "product_id": "7451400306879",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Drip Brew",
+   "drip",
+   "espresso",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters, Espresso Blend, Dark Roast, Whole Bean, Specialty Coffee, Brazil Blend, 12 ounce, Coffee Gifts",
+  "url": "https://www.stridercoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249214820543"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "b4c79075d7c3998a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-costa-rica-tarrazu-light-roast-whole-bean-specialty-coffee-12-ounce-coffee-giftsstrider-coffee-roastersstrider-coffee-roasters-6822198.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "7451405091007",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "12 ounce",
+   "Costa Rica",
+   "Tarrazu",
+   "la pastora",
+   "light roast",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Costa Rica Tarrazu Specialty Coffee - 12 oz Whole Bean Light Roast Gift",
+  "url": "https://www.stridercoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249229926591"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "7061f75a56fd4c80",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-ethiopia-yirgacheffe-light-roast-whole-bean-specialty-coffee-pour-over-12-ouncestrider-coffee-roastersstrider-coffee-roasters-2167567.jpg?v=1760710649",
+  "platform": "shopify",
+  "product_id": "7451407286463",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "12 ounce",
+   "Ethiopia",
+   "Yirgacheffe",
+   "light roast",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters, Ethiopia Yirgacheffe, Light Roast, Whole Bean, Specialty Coffee, Pour Over, 12 ounce",
+  "url": "https://www.stridercoffee.com/products/yirgacheffe-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42249247424703"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "8eefba5fd351913d",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-cafe-blend-ground-medium-roast-brazil-specialty-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-cafe-blend-ground-medium-roast-brazil-specialty-coffee-12-ozstrider-coffee-roastersstrider-coffee-roasters-7048742.jpg?v=1760710659",
+  "platform": "shopify",
+  "product_id": "7474611093695",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Cafe",
+   "drip",
+   "espresso",
+   "medium roast",
+   "whole bean"
+  ],
+  "title": "Strider Cafe Blend Ground Medium Roast Brazil Specialty Coffee 12oz",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-cafe-blend-ground-medium-roast-brazil-specialty-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311362379967"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "47aabd1b76a86826",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-ethiopia-yirgacheffe-light-roast-ground-specialty-coffee-pour-over-12-ounce",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-ethiopia-yirgacheffe-light-roast-ground-specialty-coffee-pour-over-12-ouncestrider-coffee-roastersstrider-coffee-roasters-3400749.jpg?v=1760710659",
+  "platform": "shopify",
+  "product_id": "7474614927551",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "12 ounce",
+   "Ethiopia",
+   "Yirgacheffe",
+   "light roast",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Ethiopia Yirgacheffe Specialty Coffee, Light Roast, 12oz Ground",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-ethiopia-yirgacheffe-light-roast-ground-specialty-coffee-pour-over-12-ounce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311373422783"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "3868bb6c4259d27d",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-costa-rica-tarrazu-light-roast-ground-specialty-coffee-12-ounce-coffee-gifts",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-costa-rica-tarrazu-light-roast-ground-specialty-coffee-12-ounce-coffee-giftsstrider-coffee-roastersstrider-coffee-roasters-6362343.jpg?v=1760710664",
+  "platform": "shopify",
+  "product_id": "7474617090239",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "12 ounce",
+   "Costa Rica",
+   "Tarrazu",
+   "la pastora",
+   "light roast",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters, Costa Rica Tarrazu, Light Roast, Ground, Specialty Coffee, 12 ounce,",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-costa-rica-tarrazu-light-roast-ground-specialty-coffee-12-ounce-coffee-gifts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311378501823"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "c043425842117ec4",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-sumatra-mandheling-dark-roast-ground-indonesia-specialty-coffee-12-oz-coffee-gifts",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-sumatra-mandheling-dark-roast-ground-indonesia-specialty-coffee-12-oz-coffee-giftsstrider-coffee-roastersstrider-coffee-roasters-1710599.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "7474619941055",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Manhelding",
+   "Sumatra",
+   "indonesia",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Sumatra Mandheling Dark Roast Ground Coffee - 12 oz",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-sumatra-mandheling-dark-roast-ground-indonesia-specialty-coffee-12-oz-coffee-gifts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311383351487"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "cf9b10abff2f6c54",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-kartika-blend-ground-dark-roast-sumatra-brazil-blend-specialty-coffee-12-ounce-brazil-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-kartika-blend-ground-dark-roast-sumatra-brazil-blend-specialty-coffee-12-ounce-brazil-coffeestrider-coffee-roastersstrider-coffee-roaste-8898223.jpg?v=1760710658",
+  "platform": "shopify",
+  "product_id": "7474621513919",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Sumatra",
+   "brazil",
+   "espresso",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Strider Coffee Roasters Kartika Blend - Dark Roast Sumatra Brazil Coffee - 12oz",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-kartika-blend-ground-dark-roast-sumatra-brazil-blend-specialty-coffee-12-ounce-brazil-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311385940159"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "8cf981cd492e061b",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-brazil-mogiana-decaf-medium-roast-ground-water-process-decaf-specialty-coffee-12-ounce-chemical-free-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-brazil-mogiana-decaf-medium-roast-ground-water-process-decaf-specialty-coffee-12-ounce-chemical-free-decafstrider-coffee-roastersstrider-3455441.jpg?v=1760710662",
+  "platform": "shopify",
+  "product_id": "7474623709375",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Brazil",
+   "Decaf",
+   "Drip Brew",
+   "Mountain water process",
+   "SWP",
+   "drip",
+   "espresso",
+   "mogiana",
+   "water decaf",
+   "water process"
+  ],
+  "title": "Strider Coffee Roasters Brazil Mogiana Decaf Medium Ground 12oz Specialty",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-brazil-mogiana-decaf-medium-roast-ground-water-process-decaf-specialty-coffee-12-ounce-chemical-free-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311390658751"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "ac93cf07dd658b67",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-kalids-blend-ground-ethiopian-blend-medium-roast-specialty-coffee-12-ounce-brazil-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-kalids-blend-ground-ethiopian-blend-medium-roast-specialty-coffee-12-ounce-brazil-blendstrider-coffee-roastersstrider-coffee-roasters-7576165.jpg?v=1760710651",
+  "platform": "shopify",
+  "product_id": "7474627412159",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Drip Brew",
+   "Ethiopia",
+   "Pour Over",
+   "Yirgacheffe",
+   "brazil"
+  ],
+  "title": "Kalid's Blend: Ethiopian Specialty Coffee, Medium Roast, 12oz",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-kalids-blend-ground-ethiopian-blend-medium-roast-specialty-coffee-12-ounce-brazil-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311398326463"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "280d23663c911957",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-mexico-chiapas-ground-medium-roast-dark-chocolate-and-toffee-specialty-coffee-12-ounce",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-mexico-chiapas-ground-medium-roast-dark-chocolate-and-toffee-specialty-coffee-12-ouncestrider-coffee-roastersstrider-coffee-roasters-5168817.jpg?v=1760710658",
+  "platform": "shopify",
+  "product_id": "7474629017791",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Chiapas",
+   "Chocolate",
+   "Cold brew",
+   "Desert",
+   "Drip Brew",
+   "Mexico",
+   "Pour Over",
+   "whole bean"
+  ],
+  "title": "Mexican Chiapas Ground Coffee, Dark Chocolate and Toffee Flavors, 12 oz",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-mexico-chiapas-ground-medium-roast-dark-chocolate-and-toffee-specialty-coffee-12-ounce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311401439423"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "da5957c592dff04c",
+  "first_seen": "2026-10-26",
+  "handle": "strider-coffee-roasters-breakfasts-blend-medium-roast-ground-coffee-costa-rica-specialty-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/products/strider-coffee-roasters-breakfasts-blend-medium-roast-ground-coffee-costa-rica-specialty-coffee-12-ozstrider-coffee-roastersstrider-coffee-roasters-3009860.jpg?v=1760710650",
+  "platform": "shopify",
+  "product_id": "7474631246015",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Costa Rica",
+   "Drip Brew",
+   "Pour Over",
+   "Tarrazu",
+   "brazil",
+   "breakfast"
+  ],
+  "title": "Costa Rican Breakfast Blend Ground Coffee, 12 oz by Strider Coffee",
+  "url": "https://www.stridercoffee.com/products/strider-coffee-roasters-breakfasts-blend-medium-roast-ground-coffee-costa-rica-specialty-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "42311408353471"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "23f92a9f91221e29",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-shandy-canned-cold-brew-coffee-strider-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/coffee-shandy-canned-cold-brew-coffee-strider-coffee-roastersstrider-coffee-roastersstrider-coffee-roasters-8605767.jpg?v=1779189607",
+  "platform": "shopify",
+  "product_id": "8223762940095",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Canned Coffee"
+  ],
+  "title": "Coffee Shandy - Canned Cold Brew Coffee | Strider Coffee Roasters",
+  "url": "https://www.stridercoffee.com/products/coffee-shandy-canned-cold-brew-coffee-strider-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "44654233223359"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "fc46da17e022c3f7",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-decaf-2-pounds",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/brazil-mogiana-decaf-2-poundsstrider-coffee-roastersstrider-coffee-roasters-5667226.webp?v=1773223625",
+  "platform": "shopify",
+  "product_id": "8341728329919",
+  "product_type": "",
+  "roaster_slug": "stridercoffee",
+  "tags": [],
+  "title": "Brazil Mogiana Decaf - 2 pounds",
+  "url": "https://www.stridercoffee.com/products/brazil-mogiana-decaf-2-pounds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.98,
+    "title": "Whole Bean",
+    "variant_id": "45267221020863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.98,
+    "title": "Ground",
+    "variant_id": "45267221053631"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ },
+ {
+  "body_hash": "3bc75699117dff30",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-cold-brew-coffee-4-pack-canned-ready-to-drink-coffee-strider-coffee-roasters",
+  "image": "https://cdn.shopify.com/s/files/1/0268/8457/1327/files/ethiopia-cold-brew-coffee-4-pack-canned-ready-to-drink-coffee-strider-coffee-roastersstrider-coffee-roastersstrider-coffee-roasters-1080358.jpg?v=1773886510",
+  "platform": "shopify",
+  "product_id": "8367852847295",
+  "product_type": "Coffee",
+  "roaster_slug": "stridercoffee",
+  "tags": [
+   "Canned Coffee",
+   "Ethiopia"
+  ],
+  "title": "Ethiopia Cold Brew Coffee 4-pack | Canned Ready-to-drink Coffee | Strider Coffee Roasters",
+  "url": "https://www.stridercoffee.com/products/ethiopia-cold-brew-coffee-4-pack-canned-ready-to-drink-coffee-strider-coffee-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45338298908863"
+   }
+  ],
+  "vendor": "Strider Coffee Roasters"
+ }
+]

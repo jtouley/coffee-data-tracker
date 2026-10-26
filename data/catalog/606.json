@@ -1,0 +1,184 @@
+[
+ {
+  "body_hash": "afcb4bf00d9053d4",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://www.606.coffee/wp-content/uploads/2023/04/img_coffee_bag_karibu.jpg",
+  "platform": "woocommerce",
+  "product_id": "1610",
+  "product_type": "simple",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Burundi",
+  "url": "https://www.606.coffee/product/burundi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz(Whole Bean) $14.00",
+    "variant_id": "1610:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "710a5ef3de69ba19",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://www.606.coffee/wp-content/uploads/2023/04/img_coffee_bag_house_blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "1684",
+  "product_type": "simple",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "House Blend",
+  "url": "https://www.606.coffee/product/house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz(Whole Bean) $16.00",
+    "variant_id": "1684:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce8098013b369cf0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://www.606.coffee/wp-content/uploads/2023/04/img_coffee_bag_espresso_blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "1688",
+  "product_type": "simple",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.606.coffee/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz(Whole Bean) $16.00",
+    "variant_id": "1688:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49d4fc14f1ce1f95",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo-plus-natural",
+  "image": "https://www.606.coffee/wp-content/uploads/2023/04/img_coffee_bag_salmo_plus.jpg",
+  "platform": "woocommerce",
+  "product_id": "1693",
+  "product_type": "simple",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Brazil Salmo Plus Natural",
+  "url": "https://www.606.coffee/product/brazil-salmo-plus-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz(Whole Bean) $16.00",
+    "variant_id": "1693:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "586da3a7a7736880",
+  "first_seen": "2026-10-26",
+  "handle": "finca-cloza",
+  "image": "https://www.606.coffee/wp-content/uploads/2024/06/img_coffee_bag_finca_clozajpg.jpg",
+  "platform": "woocommerce",
+  "product_id": "1714",
+  "product_type": "simple",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Finca Cloza",
+  "url": "https://www.606.coffee/product/finca-cloza/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz(Whole Bean) $16.00",
+    "variant_id": "1714:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c16e720e1f37b36",
+  "first_seen": "2026-10-26",
+  "handle": "1team1fight",
+  "image": "https://www.606.coffee/wp-content/uploads/2019/03/51801896_2148151455266398_7781677435438759936_o.jpg",
+  "platform": "woocommerce",
+  "product_id": "520",
+  "product_type": "variable",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "One Team One Fight Blend",
+  "url": "https://www.606.coffee/product/1team1fight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz - $14.00",
+    "variant_id": "520:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6976333045f3b46e",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-montanita",
+  "image": "https://www.606.coffee/wp-content/uploads/2021/02/Montanita-12oz-WHITE.jpg",
+  "platform": "woocommerce",
+  "product_id": "522",
+  "product_type": "variable",
+  "roaster_slug": "606",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Finca La Montañita",
+  "url": "https://www.606.coffee/product/finca-la-montanita/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "8oz(Whole Bean) $15.00",
+    "variant_id": "522:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz(Whole Bean) $21.00",
+    "variant_id": "522:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

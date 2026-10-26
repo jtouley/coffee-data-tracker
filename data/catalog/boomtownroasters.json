@@ -1,0 +1,4616 @@
+[
+ {
+  "body_hash": "3afb0e6314845876",
+  "first_seen": "2026-10-26",
+  "handle": "lumberjack",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/lumberjack.png?v=1786119102",
+  "platform": "shopify",
+  "product_id": "9108109787292",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "colombia",
+   "ground",
+   "guatemala",
+   "house",
+   "jack",
+   "lumber",
+   "lumberjack",
+   "medium",
+   "roast"
+  ],
+  "title": "Lumberjack",
+  "url": "https://www.boomtownroasters.com/products/lumberjack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341868122268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341868155036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341868187804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341868220572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341868253340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341868286108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341868318876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341868351644"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "76441f0b0dbf3f82",
+  "first_seen": "2026-10-26",
+  "handle": "starlite-beach",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/starlite.png?v=1786119926",
+  "platform": "shopify",
+  "product_id": "9108109820060",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "blend",
+   "breakfast",
+   "coffee",
+   "ground",
+   "guatemala",
+   "light",
+   "mexico",
+   "roast",
+   "starlight",
+   "starlite"
+  ],
+  "title": "Starlite Beach",
+  "url": "https://www.boomtownroasters.com/products/starlite-beach",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341938475164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341938507932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341938540700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341938573468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341938606236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341938639004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341938671772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341938704540"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "05b40e9a25d5ee20",
+  "first_seen": "2026-10-26",
+  "handle": "shoreline",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/Shoreline.png?v=1786119670",
+  "platform": "shopify",
+  "product_id": "9108109852828",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "colombia",
+   "colombian",
+   "columbia",
+   "costa",
+   "costa rica",
+   "dark",
+   "dark roast",
+   "ground",
+   "heavy",
+   "rica",
+   "roast",
+   "robust",
+   "savory",
+   "shoreline",
+   "smokey",
+   "smoky"
+  ],
+  "title": "Shoreline",
+  "url": "https://www.boomtownroasters.com/products/shoreline",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341932970140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341933002908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341933035676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341933068444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341933101212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341933133980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341933166748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341933199516"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "3a998d4ceeeece19",
+  "first_seen": "2026-10-26",
+  "handle": "winter-wonderland",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/winterwonderland.png?v=1786121633",
+  "platform": "shopify",
+  "product_id": "9108110377116",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "bean",
+   "caramel",
+   "christmas",
+   "coconut",
+   "coffee",
+   "flavor",
+   "flavored",
+   "ground",
+   "hazelnut",
+   "roast",
+   "seasonal",
+   "whole",
+   "winter",
+   "yule"
+  ],
+  "title": "Winter Wonderland",
+  "url": "https://www.boomtownroasters.com/products/winter-wonderland",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341951484060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341951516828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341951549596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341951582364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341951615132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341951647900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341951680668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341951713436"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "b28be3ed4357dfbc",
+  "first_seen": "2026-10-26",
+  "handle": "beachside-bonfire",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/beachsidebonfire.png?v=1781202081",
+  "platform": "shopify",
+  "product_id": "9108110475420",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Beachside Bonfire",
+  "url": "https://www.boomtownroasters.com/products/beachside-bonfire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47316222443676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47316222476444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47316222509212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47316222541980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47316222574748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47316222607516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47316222640284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47316222673052"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "07c10f60236f9cbc",
+  "first_seen": "2026-10-26",
+  "handle": "double-shift-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/Doubleshift.png?v=1786117948",
+  "platform": "shopify",
+  "product_id": "9108110672028",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "blend",
+   "brazil",
+   "brazilian",
+   "coffee",
+   "colombia",
+   "colombian",
+   "columbia",
+   "dark",
+   "dark roast",
+   "espresso",
+   "ethiopia",
+   "ground",
+   "guatemala",
+   "guatemalan",
+   "heavy",
+   "india",
+   "latte",
+   "roast",
+   "robust",
+   "robusta",
+   "savory",
+   "yirgacheffe"
+  ],
+  "title": "Double Shift Espresso",
+  "url": "https://www.boomtownroasters.com/products/double-shift-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341815136412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341815169180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341815201948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341815234716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341815267484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341815300252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341815333020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341815365788"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "a7be4ec0ea1506a3",
+  "first_seen": "2026-10-26",
+  "handle": "big-buck",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/bigbuck.png?v=1785870428",
+  "platform": "shopify",
+  "product_id": "9108110704796",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "dark",
+   "dark roast",
+   "ground",
+   "heavy",
+   "indonesian",
+   "kenya",
+   "kenyan",
+   "roast",
+   "robust",
+   "savory",
+   "shoreline",
+   "smokey",
+   "smoky",
+   "sumatra",
+   "sumatran"
+  ],
+  "title": "Big Buck",
+  "url": "https://www.boomtownroasters.com/products/big-buck",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47316201668764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47316201701532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47316201734300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47316201767068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47316201799836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47316201832604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.2,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47316201865372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47316201898140"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "11b73e3868b6f0a7",
+  "first_seen": "2026-10-26",
+  "handle": "four-seasons",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/fourseasons.png?v=1786118383",
+  "platform": "shopify",
+  "product_id": "9108110737564",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "blend",
+   "breakfast",
+   "coffee",
+   "ground",
+   "guatemala",
+   "light",
+   "mexico",
+   "roast",
+   "starlight",
+   "starlite"
+  ],
+  "title": "Four Seasons",
+  "url": "https://www.boomtownroasters.com/products/four-seasons",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341840924828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341840957596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341840990364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341841023132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341841055900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341841088668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341841121436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341841154204"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "2d18b12d5e1e50f0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/sumatra.png?v=1786120614",
+  "platform": "shopify",
+  "product_id": "9108110835868",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "bean",
+   "besuva",
+   "coffee",
+   "dark",
+   "ground",
+   "indo",
+   "indonesia",
+   "origin",
+   "roast",
+   "single",
+   "sumatra",
+   "whole"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.boomtownroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341943488668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341943521436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341943554204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341943586972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341943619740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341943652508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341943685276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341943718044"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "41a94af94ffef12c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/COLOMBIA.png?v=1785872114",
+  "platform": "shopify",
+  "product_id": "9108110901404",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.boomtownroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47316309901468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47316309934236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47316309967004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47316309999772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47316310032540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47316310065308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47316310098076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47316310130844"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "7333f8ab81f66d53",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-mwp",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/BrazilMWP.png?v=1786117458",
+  "platform": "shopify",
+  "product_id": "9108110934172",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [],
+  "title": "Decaf Brazil MWP",
+  "url": "https://www.boomtownroasters.com/products/decaf-brazil-mwp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.65,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341801996444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341802029212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.65,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341802061980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341802094748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.65,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341802127516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341802160284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.65,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341802193052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341802225820"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "88b73d84236256d5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/guat.png?v=1786118776",
+  "platform": "shopify",
+  "product_id": "9108110966940",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [],
+  "title": "Guatemala*",
+  "url": "https://www.boomtownroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341846364316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341846397084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341846429852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341846462620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341846495388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341846528156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341846560924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341846593692"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "f18fd0e4dc8204f9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/YIRG.png?v=1786118171",
+  "platform": "shopify",
+  "product_id": "9108111032476",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.boomtownroasters.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341839646876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341839679644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341839712412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341839745180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341839777948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341839810716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341839843484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341839876252"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "b9bc0849a985f174",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/KENYA.png?v=1786118911",
+  "platform": "shopify",
+  "product_id": "9108111065244",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "acidic",
+   "bean",
+   "coffee",
+   "fruity",
+   "ground",
+   "kenya",
+   "origin",
+   "regular",
+   "single",
+   "whole",
+   "wine"
+  ],
+  "title": "Kenya",
+  "url": "https://www.boomtownroasters.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47341848264860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47341848297628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47341848330396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47341848363164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47341848395932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47341848428700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47341848461468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47341848494236"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "a958bb5f94a0dc9a",
+  "first_seen": "2026-10-26",
+  "handle": "cherry-wisp-way",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/cherrywithloot.jpg?v=1786115436",
+  "platform": "shopify",
+  "product_id": "9108111163548",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "cherry",
+   "coffee",
+   "crawlers",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "rpg",
+   "ttrpg",
+   "way",
+   "wisp"
+  ],
+  "title": "Cherry Wisp Way",
+  "url": "https://www.boomtownroasters.com/products/cherry-wisp-way",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47341456425116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47341456457884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47341456490652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47341456523420"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "b0cfd29a6b73248f",
+  "first_seen": "2026-10-26",
+  "handle": "tipps-tavern",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/tippswithloot.jpg?v=1786128571",
+  "platform": "shopify",
+  "product_id": "9108111229084",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "Medium",
+   "coffee",
+   "crawlers",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "house",
+   "roast",
+   "rpg",
+   "tavern",
+   "tipps",
+   "ttrpg",
+   "way"
+  ],
+  "title": "Tipps Tavern",
+  "url": "https://www.boomtownroasters.com/products/tipps-tavern",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47342087209116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47342087241884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47342087274652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47342087307420"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "30114f758936933a",
+  "first_seen": "2026-10-26",
+  "handle": "krakens-keep",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/krakenwithloot.jpg?v=1786128774",
+  "platform": "shopify",
+  "product_id": "9108111294620",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "boozy",
+   "caramek",
+   "caramel",
+   "carmel",
+   "coffee",
+   "crawlers",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "flavored",
+   "kahlua",
+   "rpg",
+   "ttrpg",
+   "vanilla",
+   "way"
+  ],
+  "title": "Kraken's Keep",
+  "url": "https://www.boomtownroasters.com/products/krakens-keep",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47687486931100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47687486963868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47687486996636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47687487029404"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "70c1ec41713be4b0",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-hideout",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/hazelnutwithloot.jpg?v=1786128811",
+  "platform": "shopify",
+  "product_id": "9108111327388",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "coffee",
+   "crawlers",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "flavored",
+   "hazel",
+   "hazelnut",
+   "nut",
+   "rpg",
+   "ttrpg",
+   "way"
+  ],
+  "title": "Hazelnut Hideout",
+  "url": "https://www.boomtownroasters.com/products/hazelnut-hideout",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47342087471260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47342087504028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47342087536796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47342087569564"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "406520ffb94464ef",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-stables",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/sunrisewithloot.jpg?v=1786127508",
+  "platform": "shopify",
+  "product_id": "9108111360156",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "LIGHT",
+   "blend",
+   "breakfast",
+   "coffee",
+   "crawlers",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "house",
+   "nutty",
+   "roast",
+   "rpg",
+   "sun",
+   "sunrise",
+   "ttrpg",
+   "way"
+  ],
+  "title": "Sunrise Stables",
+  "url": "https://www.boomtownroasters.com/products/sunrise-stables",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47342077345948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47342077378716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47342077411484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47342077444252"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "72ec547363a21d9a",
+  "first_seen": "2026-10-26",
+  "handle": "shadowfell-shores",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/shadowfellwithloot.jpg?v=1786126858",
+  "platform": "shopify",
+  "product_id": "9108111392924",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "blend",
+   "bold",
+   "coffee",
+   "crawlers",
+   "dark",
+   "dice",
+   "dnd",
+   "dragons",
+   "dungeon",
+   "dungeons",
+   "house",
+   "roast",
+   "rpg",
+   "shadowfell",
+   "shores",
+   "smokey",
+   "ttrpg",
+   "way"
+  ],
+  "title": "Shadowfell Shores",
+  "url": "https://www.boomtownroasters.com/products/shadowfell-shores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47342072692892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Extra Coarse Cold Brew Grind",
+    "variant_id": "47342072725660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Coarse Perc Grind",
+    "variant_id": "47342072758428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Regular Drip",
+    "variant_id": "47342072791196"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "e9fe3b6abb826ae6",
+  "first_seen": "2026-10-26",
+  "handle": "apple-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/applepie.png?v=1781201933",
+  "platform": "shopify",
+  "product_id": "9108112277660",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "apple",
+   "bean",
+   "coffee",
+   "fall",
+   "flavor",
+   "flavored",
+   "ground",
+   "michigan",
+   "pie",
+   "roast",
+   "seasonal",
+   "sweet",
+   "whole"
+  ],
+  "title": "Apple Pie",
+  "url": "https://www.boomtownroasters.com/products/apple-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47316218118300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47316218151068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47316218183836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47316218216604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47316218249372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47316218282140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47316218314908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47316218347676"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "a07c1e308d0b0514",
+  "first_seen": "2026-10-26",
+  "handle": "highlander",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/highlander.png?v=1787084787",
+  "platform": "shopify",
+  "product_id": "9211231404188",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Highlander",
+  "url": "https://www.boomtownroasters.com/products/highlander",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47432337719452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47432337752220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47432337784988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47432337817756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47432337850524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47432337883292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47432337916060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47432337948828"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "72abc46bd8601ddf",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/birthdaycake.png?v=1787340735",
+  "platform": "shopify",
+  "product_id": "9215547998364",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Birthday Cake",
+  "url": "https://www.boomtownroasters.com/products/birthday-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450881622172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450881654940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450881687708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450881720476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450881753244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450881786012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450881818780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450881851548"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "2a6e334d7537c396",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/caramel.png?v=1787340966",
+  "platform": "shopify",
+  "product_id": "9215552290972",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Caramel",
+  "url": "https://www.boomtownroasters.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450888175772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450888208540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450888241308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450888274076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450888306844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450888339612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450888372380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450888405148"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "2abffcab427852a6",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/carap.png?v=1787341100",
+  "platform": "shopify",
+  "product_id": "9215553962140",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Caramel Apple",
+  "url": "https://www.boomtownroasters.com/products/caramel-apple",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450890109084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450890141852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450890174620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450890207388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450890240156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450890272924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450890305692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450890338460"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "ed880b3cc317e85d",
+  "first_seen": "2026-10-26",
+  "handle": "coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/coconut.png?v=1787341254",
+  "platform": "shopify",
+  "product_id": "9215556911260",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Coconut",
+  "url": "https://www.boomtownroasters.com/products/coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450895417500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450895450268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450895483036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450895515804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450895548572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450895581340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450895614108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450895646876"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "c6047ce4a5cd3518",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/frenchvanilla.png?v=1787341359",
+  "platform": "shopify",
+  "product_id": "9215558484124",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "French Vanilla",
+  "url": "https://www.boomtownroasters.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450897219740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450897252508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450897285276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450897318044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450897350812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450897383580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450897416348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450897449116"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "494459ad77e14aeb",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/harvestcream.png?v=1787341428",
+  "platform": "shopify",
+  "product_id": "9215559401628",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Harvest Cream",
+  "url": "https://www.boomtownroasters.com/products/harvest-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450898989212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450899021980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450899054748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450899087516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450899120284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450899153052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450899185820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450899218588"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "603dae59be4aeacf",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/Hazelnut.png?v=1787341495",
+  "platform": "shopify",
+  "product_id": "9215560679580",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Hazelnut",
+  "url": "https://www.boomtownroasters.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450900529308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450900562076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450900594844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450900627612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450900660380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450900693148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450900725916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450900758684"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "4bfcb0bff63ca253",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/irishcream.png?v=1787341577",
+  "platform": "shopify",
+  "product_id": "9215561597084",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Irish Cream",
+  "url": "https://www.boomtownroasters.com/products/irish-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450901938332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450901971100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450902003868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450902036636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450902069404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450902102172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450902134940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450902167708"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "5b5d9a15103a83ab",
+  "first_seen": "2026-10-26",
+  "handle": "island-park-breeze",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/IPB.png?v=1787341653",
+  "platform": "shopify",
+  "product_id": "9215562547356",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Island Park Breeze",
+  "url": "https://www.boomtownroasters.com/products/island-park-breeze",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450903314588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450903347356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450903380124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450903412892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450903445660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450903478428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450903511196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450903543964"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "5c8eed3e126c9a08",
+  "first_seen": "2026-10-26",
+  "handle": "mackinac-island-fudge",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/mackfudge.png?v=1787341731",
+  "platform": "shopify",
+  "product_id": "9215563432092",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Mackinac Island Fudge",
+  "url": "https://www.boomtownroasters.com/products/mackinac-island-fudge",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450904527004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450904559772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450904592540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450904625308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450904658076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450904690844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450904723612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450904756380"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "814d49078fb5ae85",
+  "first_seen": "2026-10-26",
+  "handle": "michigan-cherry",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/michcherry.png?v=1787341789",
+  "platform": "shopify",
+  "product_id": "9215564611740",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Michigan Cherry",
+  "url": "https://www.boomtownroasters.com/products/michigan-cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450906067100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450906099868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450906132636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450906165404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450906198172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450906230940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450906263708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450906296476"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "73274c66074bcabf",
+  "first_seen": "2026-10-26",
+  "handle": "norway-ridge",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/norway_f1cf820b-5de4-4933-8944-13510e395200.png?v=1787341858",
+  "platform": "shopify",
+  "product_id": "9215565791388",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Norway Ridge",
+  "url": "https://www.boomtownroasters.com/products/norway-ridge",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450907541660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450907574428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450907607196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450907639964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450907672732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450907705500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450907738268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450907771036"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "2eb60107bb65debd",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-stick",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/peppermint.png?v=1787342027",
+  "platform": "shopify",
+  "product_id": "9215570083996",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Peppermint Stick",
+  "url": "https://www.boomtownroasters.com/products/peppermint-stick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450913505436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450913538204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450913570972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450913603740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450913636508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450913669276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450913702044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450913734812"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "29decda1d46a655c",
+  "first_seen": "2026-10-26",
+  "handle": "pirates-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/pirate_sgrogg_b42a4c21-b9ea-4e1c-9777-b7bd14325e17.png?v=1790186868",
+  "platform": "shopify",
+  "product_id": "9215571132572",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Pirate's Grogg",
+  "url": "https://www.boomtownroasters.com/products/pirates-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450917503132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450917535900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450917568668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450917601436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450917634204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450917666972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450917699740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450917732508"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "a1a5f66ebf144b3a",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/pumpkinspice.png?v=1787342285",
+  "platform": "shopify",
+  "product_id": "9215575425180",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://www.boomtownroasters.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450923597980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450923630748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450923663516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450923696284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450923729052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450923761820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450923794588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450923827356"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "18eb8203463fd843",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/rasp.png?v=1787342390",
+  "platform": "shopify",
+  "product_id": "9215576473756",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Raspberry",
+  "url": "https://www.boomtownroasters.com/products/raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450925007004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450925039772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450925072540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450925105308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450925138076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450925170844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450925203612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450925236380"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "2045162a1922b428",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-truffle",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/rasptruffle.png?v=1787342486",
+  "platform": "shopify",
+  "product_id": "9215577784476",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Raspberry Truffle",
+  "url": "https://www.boomtownroasters.com/products/raspberry-truffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47450926645404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "47450926678172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz",
+    "variant_id": "47450926710940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs",
+    "variant_id": "47450926743708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Coarse Perc Grind / 12 oz",
+    "variant_id": "47450926776476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse Perc Grind / 5 lbs",
+    "variant_id": "47450926809244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Regular Drip / 12 oz",
+    "variant_id": "47450926842012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Regular Drip / 5 lbs",
+    "variant_id": "47450926874780"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ },
+ {
+  "body_hash": "f02cf4cb498fcc44",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored-1",
+  "image": "https://cdn.shopify.com/s/files/1/0746/4301/3788/files/genericflavored_2440d65f-45a9-486d-a451-ab13abd1b63b.png?v=1787343783",
+  "platform": "shopify",
+  "product_id": "9215583486108",
+  "product_type": "",
+  "roaster_slug": "boomtownroasters",
+  "tags": [
+   "beach",
+   "beachside",
+   "bean",
+   "bonfire",
+   "campfire",
+   "chocolate",
+   "coffee",
+   "cracker",
+   "flavored",
+   "graham",
+   "gram",
+   "ground",
+   "marshmallow",
+   "roast",
+   "seasonal",
+   "smore",
+   "smores",
+   "summer",
+   "sweet",
+   "whole"
+  ],
+  "title": "Decaf Flavored",
+  "url": "https://www.boomtownroasters.com/products/decaf-flavored-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Apple Pie",
+    "variant_id": "47450933821596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Apple Pie",
+    "variant_id": "47450933854364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Apple Pie",
+    "variant_id": "47450933887132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Apple Pie",
+    "variant_id": "47450933919900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Apple Pie",
+    "variant_id": "47450933952668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Apple Pie",
+    "variant_id": "47450933985436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Apple Pie",
+    "variant_id": "47450934018204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Apple Pie",
+    "variant_id": "47450934050972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Birthday Cake",
+    "variant_id": "47450960330908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Beachside Bonfire",
+    "variant_id": "47450960363676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Caramel",
+    "variant_id": "47450960396444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Caramel Apple",
+    "variant_id": "47450960429212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Coconut",
+    "variant_id": "47450960461980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / French Vanilla",
+    "variant_id": "47450960494748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Hazelnut",
+    "variant_id": "47450960527516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Highlander",
+    "variant_id": "47450960560284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Harvest Cream",
+    "variant_id": "47450960593052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Irish Cream",
+    "variant_id": "47450960625820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Island Park Breeze",
+    "variant_id": "47450960658588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Mackinac Island Fudge",
+    "variant_id": "47450960691356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Michigan Cherry",
+    "variant_id": "47450960724124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Norway Ridge",
+    "variant_id": "47450960756892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Peanut Butter Cup",
+    "variant_id": "47450960789660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Peppermint Stick",
+    "variant_id": "47450960822428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Pirate's Grogg",
+    "variant_id": "47450960855196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Pumpkin Spice",
+    "variant_id": "47450960887964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Raspberry",
+    "variant_id": "47450960920732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Raspberry Truffle",
+    "variant_id": "47450960953500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Thunder Bay Trio",
+    "variant_id": "47450960986268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Winter Wonderland",
+    "variant_id": "47450961019036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Birthday Cake",
+    "variant_id": "47450961051804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Beachside Bonfire",
+    "variant_id": "47450961084572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Caramel",
+    "variant_id": "47450961117340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Caramel Apple",
+    "variant_id": "47450961150108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Coconut",
+    "variant_id": "47450961182876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / French Vanilla",
+    "variant_id": "47450961215644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Hazelnut",
+    "variant_id": "47450961248412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Highlander",
+    "variant_id": "47450961281180"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Harvest Cream",
+    "variant_id": "47450961313948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Irish Cream",
+    "variant_id": "47450961346716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Island Park Breeze",
+    "variant_id": "47450961379484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Mackinac Island Fudge",
+    "variant_id": "47450961412252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Michigan Cherry",
+    "variant_id": "47450961445020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Norway Ridge",
+    "variant_id": "47450961477788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Peanut Butter Cup",
+    "variant_id": "47450961510556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Peppermint Stick",
+    "variant_id": "47450961543324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Pirate's Grogg",
+    "variant_id": "47450961576092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Pumpkin Spice",
+    "variant_id": "47450961608860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Raspberry",
+    "variant_id": "47450961641628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Raspberry Truffle",
+    "variant_id": "47450961674396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Thunder Bay Trio",
+    "variant_id": "47450961707164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Whole Bean / 5 lbs / Winter Wonderland",
+    "variant_id": "47450961739932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Birthday Cake",
+    "variant_id": "47450961772700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Beachside Bonfire",
+    "variant_id": "47450961805468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Caramel",
+    "variant_id": "47450961838236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Caramel Apple",
+    "variant_id": "47450961871004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Coconut",
+    "variant_id": "47450961903772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / French Vanilla",
+    "variant_id": "47450961936540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Hazelnut",
+    "variant_id": "47450961969308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Highlander",
+    "variant_id": "47450962002076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Harvest Cream",
+    "variant_id": "47450962034844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Irish Cream",
+    "variant_id": "47450962067612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Island Park Breeze",
+    "variant_id": "47450962100380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Mackinac Island Fudge",
+    "variant_id": "47450962133148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Michigan Cherry",
+    "variant_id": "47450962165916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Norway Ridge",
+    "variant_id": "47450962198684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Peanut Butter Cup",
+    "variant_id": "47450962231452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Peppermint Stick",
+    "variant_id": "47450962264220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Pirate's Grogg",
+    "variant_id": "47450962296988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Pumpkin Spice",
+    "variant_id": "47450962329756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Raspberry",
+    "variant_id": "47450962362524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Raspberry Truffle",
+    "variant_id": "47450962395292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Thunder Bay Trio",
+    "variant_id": "47450962428060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse Cold Brew Grind / 12 oz / Winter Wonderland",
+    "variant_id": "47450962460828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Birthday Cake",
+    "variant_id": "47450962493596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Beachside Bonfire",
+    "variant_id": "47450962526364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Caramel",
+    "variant_id": "47450962559132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Caramel Apple",
+    "variant_id": "47450962591900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Coconut",
+    "variant_id": "47450962624668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / French Vanilla",
+    "variant_id": "47450962657436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Hazelnut",
+    "variant_id": "47450962690204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Highlander",
+    "variant_id": "47450962722972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Harvest Cream",
+    "variant_id": "47450962755740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Irish Cream",
+    "variant_id": "47450962788508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Island Park Breeze",
+    "variant_id": "47450962821276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Mackinac Island Fudge",
+    "variant_id": "47450962854044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Michigan Cherry",
+    "variant_id": "47450962886812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Norway Ridge",
+    "variant_id": "47450962919580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Peanut Butter Cup",
+    "variant_id": "47450962952348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Peppermint Stick",
+    "variant_id": "47450962985116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Pirate's Grogg",
+    "variant_id": "47450963017884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Pumpkin Spice",
+    "variant_id": "47450963050652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Raspberry",
+    "variant_id": "47450963083420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Raspberry Truffle",
+    "variant_id": "47450963116188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Thunder Bay Trio",
+    "variant_id": "47450963148956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Extra Coarse Cold Brew Grind / 5 lbs / Winter Wonderland",
+    "variant_id": "47450963181724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Birthday Cake",
+    "variant_id": "47450963214492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Beachside Bonfire",
+    "variant_id": "47450963247260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Caramel",
+    "variant_id": "47450963280028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Caramel Apple",
+    "variant_id": "47450963312796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Coconut",
+    "variant_id": "47450963345564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / French Vanilla",
+    "variant_id": "47450963378332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Hazelnut",
+    "variant_id": "47450963411100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Highlander",
+    "variant_id": "47450963443868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Harvest Cream",
+    "variant_id": "47450963476636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Irish Cream",
+    "variant_id": "47450963509404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Island Park Breeze",
+    "variant_id": "47450963542172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Mackinac Island Fudge",
+    "variant_id": "47450963574940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Michigan Cherry",
+    "variant_id": "47450963607708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Norway Ridge",
+    "variant_id": "47450963640476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Peanut Butter Cup",
+    "variant_id": "47450963673244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Peppermint Stick",
+    "variant_id": "47450963706012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Pirate's Grogg",
+    "variant_id": "47450963738780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Pumpkin Spice",
+    "variant_id": "47450963771548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Raspberry",
+    "variant_id": "47450963804316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Raspberry Truffle",
+    "variant_id": "47450963837084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Thunder Bay Trio",
+    "variant_id": "47450963869852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse Perc Grind / 12 oz / Winter Wonderland",
+    "variant_id": "47450963902620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Birthday Cake",
+    "variant_id": "47450963935388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Beachside Bonfire",
+    "variant_id": "47450963968156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Caramel",
+    "variant_id": "47450964000924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Caramel Apple",
+    "variant_id": "47450964033692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Coconut",
+    "variant_id": "47450964066460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / French Vanilla",
+    "variant_id": "47450964099228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Hazelnut",
+    "variant_id": "47450964131996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Highlander",
+    "variant_id": "47450964164764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Harvest Cream",
+    "variant_id": "47450964197532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Irish Cream",
+    "variant_id": "47450964230300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Island Park Breeze",
+    "variant_id": "47450964263068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Mackinac Island Fudge",
+    "variant_id": "47450964295836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Michigan Cherry",
+    "variant_id": "47450964328604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Norway Ridge",
+    "variant_id": "47450964361372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Peanut Butter Cup",
+    "variant_id": "47450964394140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Peppermint Stick",
+    "variant_id": "47450964426908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Pirate's Grogg",
+    "variant_id": "47450964459676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Pumpkin Spice",
+    "variant_id": "47450964492444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Raspberry",
+    "variant_id": "47450964525212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Raspberry Truffle",
+    "variant_id": "47450964557980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Thunder Bay Trio",
+    "variant_id": "47450964590748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Coarse Perc Grind / 5 lbs / Winter Wonderland",
+    "variant_id": "47450964623516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Birthday Cake",
+    "variant_id": "47450964656284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Beachside Bonfire",
+    "variant_id": "47450964689052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Caramel",
+    "variant_id": "47450964721820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Caramel Apple",
+    "variant_id": "47450964754588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Coconut",
+    "variant_id": "47450964787356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / French Vanilla",
+    "variant_id": "47450964820124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Hazelnut",
+    "variant_id": "47450964852892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Highlander",
+    "variant_id": "47450964885660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Harvest Cream",
+    "variant_id": "47450964918428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Irish Cream",
+    "variant_id": "47450964951196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Island Park Breeze",
+    "variant_id": "47450964983964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Mackinac Island Fudge",
+    "variant_id": "47450965016732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Michigan Cherry",
+    "variant_id": "47450965049500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Norway Ridge",
+    "variant_id": "47450965082268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Peanut Butter Cup",
+    "variant_id": "47450965115036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Peppermint Stick",
+    "variant_id": "47450965147804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Pirate's Grogg",
+    "variant_id": "47450965180572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Pumpkin Spice",
+    "variant_id": "47450965213340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Raspberry",
+    "variant_id": "47450965377180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Raspberry Truffle",
+    "variant_id": "47450965409948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Thunder Bay Trio",
+    "variant_id": "47450965442716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Regular Drip / 12 oz / Winter Wonderland",
+    "variant_id": "47450965475484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Birthday Cake",
+    "variant_id": "47450965508252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Beachside Bonfire",
+    "variant_id": "47450965541020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Caramel",
+    "variant_id": "47450965573788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Caramel Apple",
+    "variant_id": "47450965606556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Coconut",
+    "variant_id": "47450965639324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / French Vanilla",
+    "variant_id": "47450965672092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Hazelnut",
+    "variant_id": "47450965704860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Highlander",
+    "variant_id": "47450965737628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Harvest Cream",
+    "variant_id": "47450965770396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Irish Cream",
+    "variant_id": "47450965803164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Island Park Breeze",
+    "variant_id": "47450965835932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Mackinac Island Fudge",
+    "variant_id": "47450965868700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Michigan Cherry",
+    "variant_id": "47450965901468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Norway Ridge",
+    "variant_id": "47450965934236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Peanut Butter Cup",
+    "variant_id": "47450965967004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Peppermint Stick",
+    "variant_id": "47450965999772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Pirate's Grogg",
+    "variant_id": "47450966032540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Pumpkin Spice",
+    "variant_id": "47450966065308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Raspberry",
+    "variant_id": "47450966098076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Raspberry Truffle",
+    "variant_id": "47450966130844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Thunder Bay Trio",
+    "variant_id": "47450966163612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "Regular Drip / 5 lbs / Winter Wonderland",
+    "variant_id": "47450966196380"
+   }
+  ],
+  "vendor": "Boom Town Roasters"
+ }
+]

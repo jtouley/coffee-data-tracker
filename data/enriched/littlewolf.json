@@ -1,0 +1,298 @@
+{
+ "7159655104689": {
+  "body_hash": "f7bbb011945e9015",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7159673487537": {
+  "body_hash": "99bc4026f2e6d36f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7161503875249": {
+  "body_hash": "34f80f80d99e795d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "berry",
+   "chocolate",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "7386403799217": {
+  "body_hash": "c49dd158cdf09e3d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7576401936561": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9014924837041": {
+  "body_hash": "2f6a7f89bca4e6a7",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "maple",
+   "panela",
+   "creamy"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "9022499651761": {
+  "body_hash": "9c3e0517deef64e1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "9131310350513": {
+  "body_hash": "982e85c2f6efa3fd",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black currant",
+   "sugarcane",
+   "juicy"
+  ],
+  "varietals": [
+   "Ruiru 11",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "9131320311985": {
+  "body_hash": "164d70fe9ec8c287",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet tea",
+   "jasmine",
+   "candy-like"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "9148735258801": {
+  "body_hash": "03e04551a04529b6",
+  "elevation_masl_max": 1744,
+  "elevation_masl_min": 1744,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruit loops",
+   "bergamot",
+   "vibrant"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Pink Bourbon"
+  ]
+ },
+ "9154402386097": {
+  "body_hash": "dd4868e3fbac6ed7",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "elderflower",
+   "blueberry",
+   "sweet"
+  ],
+  "varietals": []
+ },
+ "9161213083825": {
+  "body_hash": "0d46452348473b0b",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lime",
+   "white team",
+   "vibrant"
+  ],
+  "varietals": [
+   "Batian",
+   "Ruiru 11",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "9161213771953": {
+  "body_hash": "a24e8e71ff5f55bb",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pear",
+   "taffy",
+   "balanced"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Maragogype"
+  ]
+ },
+ "9161215017137": {
+  "body_hash": "aac5e78cf15f64b2",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "lychee",
+   "complex"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Gesha",
+   "Java",
+   "Laurina",
+   "Pacamara"
+  ]
+ },
+ "9398046083": {
+  "body_hash": "fb6cfda4caaa1f82",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "berry",
+   "chocolate",
+   "creamy"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,1080 @@
+[
+ {
+  "body_hash": "70167d0da4ff94bb",
+  "first_seen": "2026-10-26",
+  "handle": "morning-star",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/MSFrontIMG_0367.jpg?v=1782410337",
+  "platform": "shopify",
+  "product_id": "6612381958196",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Morning Star Organic Seasonal Blend",
+  "url": "https://retrograderoasters.com/products/morning-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39543989469236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39543989502004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40170515365940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "40170515398708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "40170515431476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press",
+    "variant_id": "40170515464244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Espresso",
+    "variant_id": "40170515497012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "40170515529780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "40170515562548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / French Press",
+    "variant_id": "40170515595316"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / Whole Bean",
+    "variant_id": "40957549838388"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / Espresso",
+    "variant_id": "40957549871156"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / Pour Over",
+    "variant_id": "40957549903924"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "40957549936692"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / French Press",
+    "variant_id": "40957549969460"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "9566eb118bd932a3",
+  "first_seen": "2026-10-26",
+  "handle": "milky-way",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/MWFrontIMG_0383.jpg?v=1782410266",
+  "platform": "shopify",
+  "product_id": "6612382023732",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Milky Way Signature Blend",
+  "url": "https://retrograderoasters.com/products/milky-way",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39543996612660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39543996645428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40170513268788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "40170513301556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "40170513334324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "40170513367092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Espresso",
+    "variant_id": "40170513399860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "40170513432628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "40170513465396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / French Press",
+    "variant_id": "40170513498164"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean",
+    "variant_id": "40957545447476"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Espresso",
+    "variant_id": "40957545480244"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Pour Over",
+    "variant_id": "40957545513012"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "40957545545780"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / French Press",
+    "variant_id": "40957545578548"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "ef150b8063b07b1c",
+  "first_seen": "2026-10-26",
+  "handle": "dark-nebula",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/DNFrontIMG_0371.jpg?v=1782410144",
+  "platform": "shopify",
+  "product_id": "6612382056500",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Dark Nebula Colombia",
+  "url": "https://retrograderoasters.com/products/dark-nebula",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39544002445364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39544002478132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40170503667764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "40170503700532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "40170503733300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "40170503766068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Espresso",
+    "variant_id": "40170503798836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "40170503831604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "40170503864372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / French Press",
+    "variant_id": "40170503897140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean",
+    "variant_id": "40957495705652"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Espresso",
+    "variant_id": "40957495738420"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Pour Over",
+    "variant_id": "40957495771188"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "40957495803956"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / French Press",
+    "variant_id": "40957495836724"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "eafa5670fab22f43",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-matter",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/DecafFrontIMG_0398.jpg?v=1782410057",
+  "platform": "shopify",
+  "product_id": "6612382154804",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Organic Decaf Dark Matter Mexico- Water Processed",
+  "url": "https://retrograderoasters.com/products/decaf-dark-matter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39544016142388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39544016175156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "40170521296948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "40170521329716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "40170521362484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press",
+    "variant_id": "40170521395252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Espresso",
+    "variant_id": "40170521428020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "40170521460788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "40170521493556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / French Press",
+    "variant_id": "40170521526324"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "40957527031860"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Espresso",
+    "variant_id": "40957527097396"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Pour Over",
+    "variant_id": "40957527130164"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "40957527195700"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / French Press",
+    "variant_id": "40957527228468"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "f8f5efb2707278ee",
+  "first_seen": "2026-10-26",
+  "handle": "hot-cocoa",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/New_2520Cocoa_2520Front-min.jpg?v=1733164751",
+  "platform": "shopify",
+  "product_id": "6612382679092",
+  "product_type": "Treats",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "treats"
+  ],
+  "title": "House Made Hot Cocoa Mix",
+  "url": "https://retrograderoasters.com/products/hot-cocoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "39540360118324"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "1f1d3221abe2d516",
+  "first_seen": "2026-10-26",
+  "handle": "kiss-the-flower",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/products/HoneyandPollenjpg.jpg?v=1676321576",
+  "platform": "shopify",
+  "product_id": "6612382810164",
+  "product_type": "Treats",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "treats"
+  ],
+  "title": "Kiss The Flower Sonoma County Honey",
+  "url": "https://retrograderoasters.com/products/kiss-the-flower",
+  "variants": [
+   {
+    "available": false,
+    "grams": 172,
+    "price_usd": 8.0,
+    "title": "Mini Bee Pollen Jar",
+    "variant_id": "39545502466100"
+   },
+   {
+    "available": true,
+    "grams": 172,
+    "price_usd": 8.0,
+    "title": "Mini Wild Flower Honey Jar",
+    "variant_id": "39545502498868"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "0d5c31fa9667fc9d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-alajuela-west-valley-monte-crisol",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/CostaRicaFront.jpg?v=1789759921",
+  "platform": "shopify",
+  "product_id": "8406188916788",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "b2b",
+   "coffee",
+   "grounds"
+  ],
+  "title": "Costa Rica Alajuela West Valley Monte Crisol",
+  "url": "https://retrograderoasters.com/products/costa-rica-alajuela-west-valley-monte-crisol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "46685668147252"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Espresso",
+    "variant_id": "46685668180020"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Pour Over",
+    "variant_id": "46685668212788"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Auto Drip",
+    "variant_id": "46685668245556"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / French Press",
+    "variant_id": "46685668278324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46685668311092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "46685668343860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "46685668376628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Auto Drip",
+    "variant_id": "46685668409396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "46685668442164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46685668474932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46685668507700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "46685668540468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Auto Drip",
+    "variant_id": "46685668573236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "46685668606004"
+   }
+  ],
+  "vendor": "Retrograde Coffee Roasters"
+ },
+ {
+  "body_hash": "7eb3a39650627e1f",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-kateshi-estate-rfa",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/ZAMFrontIMG_0379.jpg?v=1782409956",
+  "platform": "shopify",
+  "product_id": "8716790923316",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "b2b",
+   "coffee",
+   "grounds"
+  ],
+  "title": "Zambia Kateshi Estate RFA",
+  "url": "https://retrograderoasters.com/products/zambia-kateshi-estate-rfa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "47335750074420"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Espresso",
+    "variant_id": "47335750107188"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Pour Over",
+    "variant_id": "47335750139956"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "47335750172724"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / French Press",
+    "variant_id": "47335750205492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47335750238260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "47335750271028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "47335750303796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "47335750336564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "47335750369332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47335750402100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47335750434868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47335750467636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "47335750500404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "47335750533172"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "4963957840c29bf8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduras-san-marcos-de-colon-cocasam",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/HONDFrontIMG_0394.jpg?v=1782409778",
+  "platform": "shopify",
+  "product_id": "8723285671988",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "b2b",
+   "coffee",
+   "grounds"
+  ],
+  "title": "Organic Honduras San Marcos de Colón COCASAM",
+  "url": "https://retrograderoasters.com/products/organic-honduras-san-marcos-de-colon-cocasam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "47364640473140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Espresso",
+    "variant_id": "47364640505908"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Pour Over",
+    "variant_id": "47364640538676"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Auto Coffee Maker",
+    "variant_id": "47364640571444"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / French Press",
+    "variant_id": "47364640604212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47364640636980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "47364640669748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "47364640702516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Auto Coffee Maker",
+    "variant_id": "47364640735284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "47364640768052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47364640800820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47364640833588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "47364640866356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Auto Coffee Maker",
+    "variant_id": "47364640899124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "47364640931892"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "7c4cf513098e775a",
+  "first_seen": "2026-10-26",
+  "handle": "copan-finca-terrerito-gold-star",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/GoldStarHondurasFront.jpg?v=1782843334",
+  "platform": "shopify",
+  "product_id": "8862335860788",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Gold Star Honduras Copán Finca Terrerito Anaerobic Natural",
+  "url": "https://retrograderoasters.com/products/copan-finca-terrerito-gold-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4oz / Whole Bean / October 26",
+    "variant_id": "67647783436340"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ },
+ {
+  "body_hash": "4451e06198e4f6af",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-muranga-riakiberu-factory",
+  "image": "https://cdn.shopify.com/s/files/1/0555/3107/7684/files/IMG_8204.jpg?v=1784831834",
+  "platform": "shopify",
+  "product_id": "8888340873268",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "retrograderoasters",
+  "tags": [
+   "coffee",
+   "grounds"
+  ],
+  "title": "Kenya Murang'a Riakiberu Factory",
+  "url": "https://retrograderoasters.com/products/kenya-muranga-riakiberu-factory",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "48060964241460"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Espresso",
+    "variant_id": "48060964274228"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Pour Over",
+    "variant_id": "48060964306996"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / Auto Drip",
+    "variant_id": "48060964339764"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz / French Press",
+    "variant_id": "48060964372532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48060964405300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48060964438068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "48060964470836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Auto Drip",
+    "variant_id": "48060964503604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "48060964536372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48060977971252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso",
+    "variant_id": "48060978004020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "48060978036788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Auto Drip",
+    "variant_id": "48060978069556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "48060978102324"
+   }
+  ],
+  "vendor": "Retrograde Coffee"
+ }
+]

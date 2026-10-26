@@ -1,0 +1,841 @@
+[
+ {
+  "body_hash": "b0ce810cbfa9dceb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-classic",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/classic.jpg?v=1625416004",
+  "platform": "shopify",
+  "product_id": "1753679134786",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "cafe de colombia",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "medium roasted",
+   "restaurant supplier",
+   "single origin",
+   "single pack",
+   "small batch",
+   "specialty coffee"
+  ],
+  "title": "Colombian Classic 12 Oz",
+  "url": "https://hortiprocess.com/products/colombian-classic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 16.0,
+    "title": "Ground Coffee",
+    "variant_id": "14442130407490"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 16.0,
+    "title": "Whole Bean Coffee",
+    "variant_id": "14442130440258"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "e38686fe6de61245",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-dark-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/dark.jpg?v=1625416813",
+  "platform": "shopify",
+  "product_id": "1753680347202",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "cafe de colombia",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "colombian dark",
+   "dark",
+   "dark roasted",
+   "espresso",
+   "restaurant supplier",
+   "single origin",
+   "single pack",
+   "small batch",
+   "specialty coffee"
+  ],
+  "title": "Colombian Dark Espresso 12 Oz",
+  "url": "https://hortiprocess.com/products/colombian-dark-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "Whole Bean Coffee",
+    "variant_id": "14442140598338"
+   },
+   {
+    "available": false,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "Ground Coffee",
+    "variant_id": "14442140631106"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "1deb03940bfbcbab",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-special-limited-editions",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/special1.jpg?v=1625416082",
+  "platform": "shopify",
+  "product_id": "1753680445506",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "medium roasted",
+   "restaurant supplier",
+   "single origin",
+   "single pack",
+   "specialty coffee"
+  ],
+  "title": "Natural Colombian Special Limited Editions",
+  "url": "https://hortiprocess.com/products/colombian-special-limited-editions",
+  "variants": [
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 17.0,
+    "title": "Whole Bean Coffee",
+    "variant_id": "14442140991554"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 17.0,
+    "title": "Ground Coffee",
+    "variant_id": "14442141024322"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "099cc8592bd9e361",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/Green_Coffee_Beans_1024x1024_2x_af94d1b4-b20e-4d34-b46f-c58445e342ff.jpg?v=1571320873",
+  "platform": "shopify",
+  "product_id": "1753700892738",
+  "product_type": "Unroasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "coffee",
+   "colombian coffee",
+   "green bean coffee",
+   "specialty coffee"
+  ],
+  "title": "Green Coffee Been",
+  "url": "https://hortiprocess.com/products/green-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "16 Oz.",
+    "variant_id": "14442291593282"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "80 Oz.",
+    "variant_id": "14442291626050"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 270.0,
+    "title": "35 Kilo",
+    "variant_id": "14442291658818"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "fc08a07fecd65624",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/coffee_grounds_as_antioxidants.jpg?v=1571321551",
+  "platform": "shopify",
+  "product_id": "2022242287682",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "2 OZ",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "dark roasted",
+   "single pack"
+  ],
+  "title": "Colombian Dark Roast, Coffee Packets 2.0 Oz",
+  "url": "https://hortiprocess.com/products/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 49.99,
+    "title": "40",
+    "variant_id": "16514580348994"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 27.99,
+    "title": "20",
+    "variant_id": "16514694021186"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "6b8dc5cd3ac5e4cb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-classic-coffee-packets-2-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/coffee-grounds_medium_3f0825de-9d3d-4173-8b6f-41aa132c0f94.jpg?v=1571319324",
+  "platform": "shopify",
+  "product_id": "2022257721410",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "Medium roasted",
+   "coffee",
+   "coffee supplier",
+   "colombian coffee",
+   "single origin",
+   "single pack",
+   "specialty coffee"
+  ],
+  "title": "Colombian Classic, Coffee Packets 2,5 Oz",
+  "url": "https://hortiprocess.com/products/colombian-classic-coffee-packets-2-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 59.99,
+    "title": "40",
+    "variant_id": "16514649161794"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 32.99,
+    "title": "20",
+    "variant_id": "16514685829186"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "a87489c7f26dd626",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-colombian-classic-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/7.-Classic-80-Whole-Bean_1b5f090b-99a4-4d9a-94c5-f4105744fa2d.png?v=1571319135",
+  "platform": "shopify",
+  "product_id": "4270527348802",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "cafe de colombia",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "medium roasted",
+   "restaurant supplier",
+   "single origin",
+   "small batch",
+   "specialty coffee"
+  ],
+  "title": "Colombian Classic 80 Oz",
+  "url": "https://hortiprocess.com/products/copy-of-colombian-classic-16-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "80 Oz. / Ground Coffee",
+    "variant_id": "30862867333186"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "80 Oz. / Whole Bean Coffee",
+    "variant_id": "30862867365954"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "e38686fe6de61245",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-colombian-dark-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/9.-Dark-80-Whole-Bean_08068b98-209c-490b-816b-b96538ac5b7b.png?v=1571320010",
+  "platform": "shopify",
+  "product_id": "4270546518082",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "colombian dark",
+   "dark roasted",
+   "restaurant supplier",
+   "single origin",
+   "specialty coffee"
+  ],
+  "title": "Colombian Dark Espresso 80 Oz",
+  "url": "https://hortiprocess.com/products/copy-of-colombian-dark-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "80 Oz / Whole Bean Coffee",
+    "variant_id": "30863012855874"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "80 Oz / Ground Coffee",
+    "variant_id": "30863012888642"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "9c03b8363298e64b",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-for-private-brands-maquila",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/6.png?v=1594052742",
+  "platform": "shopify",
+  "product_id": "4383458721858",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "coffee services",
+   "private label",
+   "roasted coffee",
+   "roasting services"
+  ],
+  "title": "Roasted For Private Brands (Maquila)",
+  "url": "https://hortiprocess.com/products/roasted-for-private-brands-maquila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 66.0,
+    "title": "1 Hour",
+    "variant_id": "31537402544194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 132.0,
+    "title": "2 Hours",
+    "variant_id": "31537402576962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 198.0,
+    "title": "3 Hours",
+    "variant_id": "31537402609730"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "a515e9216411c674",
+  "first_seen": "2026-10-26",
+  "handle": "passion-fruit-per-pounds",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/HappiestBirthday_b806de09-ff6a-45a1-966c-1d1395d15574.png?v=1600872874",
+  "platform": "shopify",
+  "product_id": "4691990511682",
+  "product_type": "Menu",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "edulis",
+   "fresh fruit",
+   "fruta de la pasion",
+   "fruta fresca",
+   "maracuya",
+   "parchita",
+   "pasiflora",
+   "passiflora edulis sims",
+   "passion fruit",
+   "tropical fruit",
+   "tropical fruits"
+  ],
+  "title": "Passion Fruit per Pounds",
+  "url": "https://hortiprocess.com/products/passion-fruit-per-pounds",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "32469509242946"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "a515e9216411c674",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-passion-fruit-case-per-5-pounds",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/image_3.png?v=1718145020",
+  "platform": "shopify",
+  "product_id": "4756268384322",
+  "product_type": "Menu",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "edulis",
+   "fresh fruit",
+   "fruta de la pasion",
+   "fruta fresca",
+   "maracuya",
+   "parchita",
+   "pasiflora",
+   "passiflora edulis sims",
+   "passion fruit",
+   "tropical fruit",
+   "tropical fruits"
+  ],
+  "title": "Passion Fruit Case Per 5 Pounds",
+  "url": "https://hortiprocess.com/products/copy-of-passion-fruit-case-per-5-pounds",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "32605979672642"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "66637ea74c12693f",
+  "first_seen": "2026-10-26",
+  "handle": "light-roasted-colombian-special-limited-editions",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/light.jpg?v=1625416342",
+  "platform": "shopify",
+  "product_id": "6603009425474",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "medium roasted",
+   "restaurant supplier",
+   "single origin",
+   "single pack",
+   "specialty coffee"
+  ],
+  "title": "Light Roasted Colombian Special Limited Editions",
+  "url": "https://hortiprocess.com/products/light-roasted-colombian-special-limited-editions",
+  "variants": [
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 16.0,
+    "title": "Whole Bean Coffee",
+    "variant_id": "39397534498882"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 16.0,
+    "title": "Ground Coffee",
+    "variant_id": "39397534531650"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "8b020226cc742cf4",
+  "first_seen": "2026-10-26",
+  "handle": "honey-colombian-special-limited-editions",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/products/special1_06c05d1c-b578-4540-aed5-26bc84f9356d.jpg?v=1626986207",
+  "platform": "shopify",
+  "product_id": "6613793570882",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% colombian coffee",
+   "coffee",
+   "coffee services",
+   "coffee supplier",
+   "colombian coffee",
+   "medium roasted",
+   "restaurant supplier",
+   "single origin",
+   "single pack",
+   "specialty coffee"
+  ],
+  "title": "Honey  Colombian Special Limited Editions",
+  "url": "https://hortiprocess.com/products/honey-colombian-special-limited-editions",
+  "variants": [
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 18.0,
+    "title": "Whole Bean Coffee",
+    "variant_id": "39422463148098"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 18.0,
+    "title": "Ground Coffee",
+    "variant_id": "39422463180866"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "edf1718f21d04d3c",
+  "first_seen": "2026-10-26",
+  "handle": "ghee-basil",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/B1.jpg?v=1684279739",
+  "platform": "shopify",
+  "product_id": "6921867624514",
+  "product_type": "Butter Clarified",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "butter basil",
+   "ghee",
+   "ghee basil",
+   "ghee butter"
+  ],
+  "title": "Ghee Basil Clarified Butter",
+  "url": "https://hortiprocess.com/products/ghee-basil",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40311937269826"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "buho-honey",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6926797799490",
+  "product_type": "c",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "farm",
+   "green coffee",
+   "green coffee bean",
+   "honduras",
+   "honduras coffee",
+   "honey",
+   "honney process",
+   "specialties coffee",
+   "specialty coffee"
+  ],
+  "title": "Buho Honey",
+  "url": "https://hortiprocess.com/products/buho-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "40324901273666"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "790245a8dc62f0e3",
+  "first_seen": "2026-10-26",
+  "handle": "ghee-clarified-butter",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/6.jpg?v=1685573204",
+  "platform": "shopify",
+  "product_id": "6926976876610",
+  "product_type": "Butter Clarified",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% Natural- KARAVANSAY Natural Foods",
+   "Delicious",
+   "Glass Jar x 7.05 oz",
+   "Gluten Free",
+   "Keto Friendly Diet",
+   "Kosher",
+   "Natural Flavor",
+   "Tastes Amazing"
+  ],
+  "title": "Ghee Clarified Butter",
+  "url": "https://hortiprocess.com/products/ghee-clarified-butter",
+  "variants": [
+   {
+    "available": false,
+    "grams": 255,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "40325667749954"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "1e91733e8ae54c53",
+  "first_seen": "2026-10-26",
+  "handle": "ghee-garlic-clarified-butter",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/a1.jpg?v=1685720949",
+  "platform": "shopify",
+  "product_id": "6927968600130",
+  "product_type": "Butter Clarified",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "Clarified GHEE Butter",
+   "Delicious",
+   "Kosher",
+   "Naturales",
+   "Unsalted",
+   "foods - gluten free",
+   "free",
+   "glass jar",
+   "healthy",
+   "keto friendly",
+   "natural GARLIC flavor",
+   "rich flavor",
+   "tastes amazing"
+  ],
+  "title": "Ghee Garlic Clarified Butter",
+  "url": "https://hortiprocess.com/products/ghee-garlic-clarified-butter",
+  "variants": [
+   {
+    "available": false,
+    "grams": 255,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40327169146946"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "30aad560a0ebd63d",
+  "first_seen": "2026-10-26",
+  "handle": "ghee-oregano-clarified-butter",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/02.jpg?v=1685722746",
+  "platform": "shopify",
+  "product_id": "6927974268994",
+  "product_type": "Butter Clarified",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "100% natural",
+   "Clarified GHEE Butter",
+   "Friendly",
+   "Keto",
+   "Kosher",
+   "Naturales",
+   "Unsalted",
+   "gluten free",
+   "high smoke point",
+   "natural OREGANO flavor",
+   "rich flavor",
+   "tastes amazing",
+   "three times filtered"
+  ],
+  "title": "Ghee Oregano Clarified Butter",
+  "url": "https://hortiprocess.com/products/ghee-oregano-clarified-butter",
+  "variants": [
+   {
+    "available": false,
+    "grams": 255,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40327174684738"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "56973a0fc287024e",
+  "first_seen": "2026-10-26",
+  "handle": "passion-fruit-pulp",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/WhatsAppImage2024-04-16at10.37.25AM.jpg?v=1718132788",
+  "platform": "shopify",
+  "product_id": "7274175299650",
+  "product_type": "Pulp Fruit",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "fresh fruit",
+   "maracuya",
+   "non frozen",
+   "organic pulp fruit",
+   "parchita",
+   "passion fruit",
+   "pulp fruit"
+  ],
+  "title": "Passion Fruit Pulp",
+  "url": "https://hortiprocess.com/products/passion-fruit-pulp",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "41399627710530"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "17d375e58bd6317a",
+  "first_seen": "2026-10-26",
+  "handle": "soursop-pulp-fruit",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/WhatsAppImage2024-04-16at10.37.25AM_1.jpg?v=1718134749",
+  "platform": "shopify",
+  "product_id": "7274182901826",
+  "product_type": "Pulp Fruit",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "guanabana",
+   "healthy life style",
+   "non frozen fruit",
+   "non frozen soursop",
+   "soursop",
+   "soursop pulp"
+  ],
+  "title": "Soursop Pulp Fruit",
+  "url": "https://hortiprocess.com/products/soursop-pulp-fruit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 8.99,
+    "title": "Default Title",
+    "variant_id": "41399666769986"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "02639c18d2c74da9",
+  "first_seen": "2026-10-26",
+  "handle": "blackberry-whole-pulp-fruit",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/WhatsAppImage2024-04-16at10.38.43AM.jpg?v=1718135079",
+  "platform": "shopify",
+  "product_id": "7274184572994",
+  "product_type": "Pulp Fruit",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "Blackberry",
+   "mora"
+  ],
+  "title": "Blackberry whole pulp fruit",
+  "url": "https://hortiprocess.com/products/blackberry-whole-pulp-fruit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 8.99,
+    "title": "Default Title",
+    "variant_id": "41399679418434"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "87767c92c94adcce",
+  "first_seen": "2026-10-26",
+  "handle": "lulo-whole-pulp-fruit",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/WhatsAppImage2024-04-16at10.37.25AM_2.jpg?v=1718135368",
+  "platform": "shopify",
+  "product_id": "7274185949250",
+  "product_type": "Pulp Fruit",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "colombia",
+   "ecuador",
+   "fresh fruit",
+   "lulo",
+   "naranjilla"
+  ],
+  "title": "Lulo whole pulp Fruit",
+  "url": "https://hortiprocess.com/products/lulo-whole-pulp-fruit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 8.99,
+    "title": "Default Title",
+    "variant_id": "41399692296258"
+   }
+  ],
+  "vendor": "HortiProcess"
+ },
+ {
+  "body_hash": "58a3376c9c3b6dfa",
+  "first_seen": "2026-10-26",
+  "handle": "pineapple-fruit-pulp-non-frozen",
+  "image": "https://cdn.shopify.com/s/files/1/0078/9269/7154/files/WhatsAppImage2024-04-16at10.38.43AM_1.jpg?v=1718135743",
+  "platform": "shopify",
+  "product_id": "7274187030594",
+  "product_type": "Pulp Fruit",
+  "roaster_slug": "hortiprocess",
+  "tags": [
+   "Pineapple",
+   "fruit pulp",
+   "golden pineapple",
+   "md2 pineapple",
+   "organic pulp fruit",
+   "pulp fruit"
+  ],
+  "title": "Pineapple fruit pulp non-frozen",
+  "url": "https://hortiprocess.com/products/pineapple-fruit-pulp-non-frozen",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "41399702519874"
+   }
+  ],
+  "vendor": "HortiProcess"
+ }
+]

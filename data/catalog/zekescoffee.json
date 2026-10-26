@@ -1,0 +1,4249 @@
+[
+ {
+  "body_hash": "31e13d843982d410",
+  "first_seen": "2026-10-26",
+  "handle": "gneiss-stuff-1-lb-16-oz-special-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/gneissstuffmedallion.png?v=1791206768",
+  "platform": "shopify",
+  "product_id": "10310792020137",
+  "product_type": "Coffee",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Medium",
+   "brown sugar",
+   "citrus",
+   "nutty"
+  ],
+  "title": "Gneiss Stuff, 1 lb (16 oz) Special Limited Edition",
+  "url": "https://zekescoffee.com/products/gneiss-stuff-1-lb-16-oz-special-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "50516886913193"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "50516886945961"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "50516886978729"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "50516887011497"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "50516887044265"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "50516887077033"
+   },
+   {
+    "available": true,
+    "grams": 458,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "50516887109801"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "80b90571c5f4adf2",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-moon-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HM_medallion.png?v=1569528338",
+  "platform": "shopify",
+  "product_id": "4124962029610",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Conventional",
+   "Espresso",
+   "Indonesia",
+   "Medium",
+   "Seasonal"
+  ],
+  "title": "Harvest Moon, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/harvest-moon-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "30256207364138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "30256207396906"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "30256207429674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "30256207462442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "30256207495210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "30256207527978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "30256207560746"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "29a235122d457ab9",
+  "first_seen": "2026-10-26",
+  "handle": "bird-city-blend-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/BCBzcuptop.png?v=1585748073",
+  "platform": "shopify",
+  "product_id": "4734472585275",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Dark",
+   "K-Cup",
+   "K-cups",
+   "Z-Cups"
+  ],
+  "title": "Bird City Blend (Z-Cups)",
+  "url": "https://zekescoffee.com/products/bird-city-blend-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896540532903"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "e87929de34f54dd6",
+  "first_seen": "2026-10-26",
+  "handle": "bird-city-blend-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/BCB_BirdCityBlend_medallion.png?v=1585749501",
+  "platform": "shopify",
+  "product_id": "4734564302907",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Dark"
+  ],
+  "title": "Bird City Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/bird-city-blend-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "33100272009275"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "33100272042043"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "33100272074811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "33100272107579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "33100272140347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "33100272173115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "33100272205883"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "b212d723d1905d3b",
+  "first_seen": "2026-10-26",
+  "handle": "beans-of-summer-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/BOS_Zcup_2024.png?v=1718127812",
+  "platform": "shopify",
+  "product_id": "5382466633895",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Indonesia",
+   "K-Cup",
+   "K-cups",
+   "Light",
+   "Seasonal",
+   "South America",
+   "Z-Cup",
+   "Z-Cups"
+  ],
+  "title": "Beans of Summer (Z-Cups)",
+  "url": "https://zekescoffee.com/products/beans-of-summer-z-cups",
+  "variants": [
+   {
+    "available": false,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34915541287079"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "ceca58f307cfe9c3",
+  "first_seen": "2026-10-26",
+  "handle": "charm-city",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Charm_City_medallion_20th.png?v=1763493783",
+  "platform": "shopify",
+  "product_id": "567020617770",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Medium",
+   "North America",
+   "South America"
+  ],
+  "title": "Charm City Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/charm-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744395870250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7744749699114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7744749731882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7744749764650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7744749797418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7744749830186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7744749862954"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "09a2c6b8ce7c6c83",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/French_medallion_a80406db-7ef6-4a76-8702-abea65e70957.png?v=1513694578",
+  "platform": "shopify",
+  "product_id": "567020683306",
+  "product_type": "variation",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Dark",
+   "South America"
+  ],
+  "title": "French Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744395903018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7752124661802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7752124694570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7752124760106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7752124825642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7752124858410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7752124923946"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "68150727d90c8fee",
+  "first_seen": "2026-10-26",
+  "handle": "1812-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/1812_medallion_e565afd4-ad3e-4449-be2c-94ce3270d446.png?v=1513694293",
+  "platform": "shopify",
+  "product_id": "567020781610",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Espresso",
+   "Medium",
+   "South America"
+  ],
+  "title": "1812 Espresso, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1812-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396001322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7752103690282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7752103723050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7752103788586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7752103854122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7752103886890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7752103952426"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "30b1fba7b4c2150d",
+  "first_seen": "2026-10-26",
+  "handle": "herring-run-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HRR_medallion_98d57403-7a1d-4df1-8988-ab9096f0e318.png?v=1513694704",
+  "platform": "shopify",
+  "product_id": "567020814378",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Indonesia",
+   "Light"
+  ],
+  "title": "Herring Run Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/herring-run-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396034090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7753917038634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7753917071402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7753917104170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7753917136938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7753917169706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7753917202474"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "3e7e3ca71859c3f9",
+  "first_seen": "2026-10-26",
+  "handle": "little-italy-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/LIR_-_20th_Medallion_cb0464a9-9770-461b-a4b1-be5625f9bffc.png?v=1748031272",
+  "platform": "shopify",
+  "product_id": "567020912682",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Dark",
+   "South America"
+  ],
+  "title": "Little Italy Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/little-italy-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396066858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7753973170218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7753973202986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7753973235754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7753973268522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7753973301290"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7753973334058"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "80cdd620d7b8fbaa",
+  "first_seen": "2026-10-26",
+  "handle": "market-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/MKT_medallion_20th.png?v=1763493881",
+  "platform": "shopify",
+  "product_id": "567020945450",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Ethiopia",
+   "Guatemala",
+   "Medium"
+  ],
+  "title": "Market Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/market-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396165162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754024058922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754024157226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754024222762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754024288298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754024353834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754024419370"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "54dc489dac077e53",
+  "first_seen": "2026-10-26",
+  "handle": "mobtown-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/mob_medallion_882cf274-eeb5-40f6-b998-2a5cbcb0d37e.png?v=1513695044",
+  "platform": "shopify",
+  "product_id": "567020978218",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Colombia",
+   "Conventional",
+   "Dark",
+   "Espresso",
+   "Guatemala",
+   "India",
+   "South America"
+  ],
+  "title": "Mobtown Espresso, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/mobtown-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396361770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754055974954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754056040490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754056073258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754056138794"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754056171562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754056204330"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "55e0be187a1aa6ec",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Brazil_medallion.png?v=1576096327",
+  "platform": "shopify",
+  "product_id": "567021174826",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Brazil",
+   "Conventional",
+   "Medium",
+   "South America",
+   "Varietal"
+  ],
+  "title": "Brazil Cerrado, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744396918826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7755450384426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7755450515498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7755450548266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7755450581034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7755450613802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7755450646570"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "e0f52eaddcbd14d7",
+  "first_seen": "2026-10-26",
+  "handle": "indian-monsooned-malabar",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/IND_MONMAL_medallion.png?v=1576097218",
+  "platform": "shopify",
+  "product_id": "567021436970",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Conventional",
+   "India",
+   "Medium",
+   "Varietal"
+  ],
+  "title": "India Monsoon Malabar, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/indian-monsooned-malabar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744400621610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7756015599658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7756015632426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7756015697962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7756015730730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7756015763498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7756015796266"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "c346a25a5d6ead34",
+  "first_seen": "2026-10-26",
+  "handle": "armisteads-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Arm_medallion_-_20th.png?v=1763494775",
+  "platform": "shopify",
+  "product_id": "567021764650",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Indonesia",
+   "Medium",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Armistead's Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/armisteads-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744403898410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754549690410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754549723178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754549755946"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754549788714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754549821482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754549854250"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "9588589eb10f58f1",
+  "first_seen": "2026-10-26",
+  "handle": "festivus",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Festivus_medallion_ed5f4fb1-5afb-4567-998a-e0053afa6e62.png?v=1513863950",
+  "platform": "shopify",
+  "product_id": "567021862954",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Sustainable"
+  ],
+  "title": "Festivus Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/festivus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404357162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7755216650282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7755216683050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7755216715818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7755216748586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7755216781354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7755216814122"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "5c0ae59a187d644d",
+  "first_seen": "2026-10-26",
+  "handle": "gunpowder-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Gun_medallion_20th.png?v=1763494894",
+  "platform": "shopify",
+  "product_id": "567021895722",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Dark",
+   "Espresso",
+   "Indonesia",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Gunpowder Espresso, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/gunpowder-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404389930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754754719786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754754752554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754754850858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754754883626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754754949162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754755014698"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "5aedc4782de8a84c",
+  "first_seen": "2026-10-26",
+  "handle": "hippie-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Hippie_medallion_20th.png?v=1763495470",
+  "platform": "shopify",
+  "product_id": "567021994026",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Indonesia",
+   "Light",
+   "Peru",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Hippie Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/hippie-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404455466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754790469674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754790502442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754790535210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754790567978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754790600746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754790633514"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "b34d80f4b486fed3",
+  "first_seen": "2026-10-26",
+  "handle": "montebello-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Montebello_Reserve_medallion_20th.png?v=1763495494",
+  "platform": "shopify",
+  "product_id": "567022026794",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Indonesia",
+   "Medium",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Montebello Reserve, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/montebello-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404717610"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754963025962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754963058730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754963091498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754963124266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754963157034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754963189802"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "f3aca605e369eb62",
+  "first_seen": "2026-10-26",
+  "handle": "royal-blue",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/RB_medallion_20th.png?v=1763495522",
+  "platform": "shopify",
+  "product_id": "567022092330",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Dark",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Royal Blue Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/royal-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404783146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754986356778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754986389546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754986422314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754986455082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754986487850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754986520618"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "d2090770013d600f",
+  "first_seen": "2026-10-26",
+  "handle": "balinese-blue-krishna",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/BALI_medallion.png?v=1575553907",
+  "platform": "shopify",
+  "product_id": "567022157866",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Indonesia",
+   "Medium",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Bali Blue Moon, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/balinese-blue-krishna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404815914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7793362141226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7793362173994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7793362206762"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7793362239530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7793362272298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7793362305066"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "1ebee9bcf16a14cd",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-sierra-nevada",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/COL_TOLIMA_medallion.png?v=1575553959",
+  "platform": "shopify",
+  "product_id": "567022190634",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Colombia",
+   "Light",
+   "South America",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Colombia Huila, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/colombian-sierra-nevada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744404979754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7793350410282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7793350443050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7793350475818"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7793350508586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7793350541354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7793350574122"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "d5d5be1e95d44678",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/GUAT_HUEHUE_medallion.png?v=1575554008",
+  "platform": "shopify",
+  "product_id": "567022420010",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Central America",
+   "Guatemala",
+   "Light",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "FTO Guatemala Huehuetenango, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/guatemalan-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744405307434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7793218945066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7793218977834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7793219010602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7793219043370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7793219076138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7793219108906"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "7dde7b8ff17ee889",
+  "first_seen": "2026-10-26",
+  "handle": "peru-norte",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/PERU_medallion.png?v=1575569857",
+  "platform": "shopify",
+  "product_id": "567022747690",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Light",
+   "Peru",
+   "South America",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Peru San Ignacio, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/peru-norte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744405831722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7756197134378"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7756197167146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7756197199914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7756197232682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7756197265450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7756197298218"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "9d787ccf1e6f343e",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-charm-city",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafCharmCity_medallion_093f693c-02d8-4993-ac4e-7c9ab3240d52.png?v=1513712183",
+  "platform": "shopify",
+  "product_id": "567023337514",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Medium"
+  ],
+  "title": "Decaffeinated Charm City Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-charm-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744407633962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "7995331215402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "7995331248170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "7995331313706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "7995331346474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "7995331379242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "7995331444778"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "290dcfb9508dad76",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-french",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafFrench_medallion.png?v=1513712277",
+  "platform": "shopify",
+  "product_id": "567023370282",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Decaf"
+  ],
+  "title": "Decaffeinated French Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744407797802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "7995439382570"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "7995439415338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "7995439448106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "7995439480874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "7995439513642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "7995439546410"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "47917f1b085eea8f",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-italian",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafItaly_medallion.png?v=1513712547",
+  "platform": "shopify",
+  "product_id": "567023468586",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Decaf"
+  ],
+  "title": "Decaffeinated Italian Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-italian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744407863338"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "7995575304234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "7995575337002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "7995575369770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "7995575402538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "7995575435306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "7995575468074"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "053ad412eaa3be9f",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-market-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafMarket_medallion.png?v=1513712845",
+  "platform": "shopify",
+  "product_id": "567023501354",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Medium"
+  ],
+  "title": "Decaffeinated Market Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-market-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744407994410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "7995715878954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "7995715911722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "7995715944490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "7995715977258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "7995716010026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "7995716042794"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "0f0b4106d3ce33a6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-brazilian",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafBraz_medallion.png?v=1513871884",
+  "platform": "shopify",
+  "product_id": "567023534122",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Brazil",
+   "Decaf",
+   "South America",
+   "Varietal"
+  ],
+  "title": "Decaffeinated Brazil, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-brazilian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744408027178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "8043461312554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "8043461345322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "8043461378090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "8043461410858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "8043461443626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "8043461476394"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "84cfbb90eec64214",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-mayan",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafMayan_medallion.png?v=1513886206",
+  "platform": "shopify",
+  "product_id": "567023730730",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Decaf"
+  ],
+  "title": "Decaffeinated Mayan, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-mayan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "7744408289322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "8043530584106"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "8043530616874"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "8043530649642"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "8043530682410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "8043530715178"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "8043530747946"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "f5cae0d06966e374",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-and-1-2-charm-city",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HaflCCBLEND_medallion_129812a7-c33b-4871-9ef5-08cce943cbd2.png?v=1513713098",
+  "platform": "shopify",
+  "product_id": "567024091178",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Half Caff",
+   "Medium",
+   "North America",
+   "South America"
+  ],
+  "title": "1/2 and 1/2 Charm City Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1-2-and-1-2-charm-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744408977450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7800330911786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7800330977322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7800331042858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7800331108394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7800331173930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7800331272234"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "79dc0aebbe8b8078",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-and-1-2-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HalfFrench_medallion_49b3f83b-5ee6-433f-9509-05374db27885.png?v=1513713262",
+  "platform": "shopify",
+  "product_id": "567024123946",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Half Caff"
+  ],
+  "title": "1/2 and 1/2 French Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1-2-and-1-2-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744409010218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7800364859434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7800364892202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7800364924970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7800364957738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7800364990506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7800365023274"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "76490ee94832206a",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-and-1-2-market-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HalfMKTBLEND_medallion_bef74bae-4e3f-40f3-895e-502b54b0e98a.png?v=1513713604",
+  "platform": "shopify",
+  "product_id": "567024156714",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Half Caff",
+   "Medium"
+  ],
+  "title": "1/2 and 1/2 Market Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1-2-and-1-2-market-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744409042986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7996007055402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7996007088170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7996007120938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7996007153706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7996007219242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7996007284778"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "591e8b74f97eba27",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-and-1-2-italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HalfLIR_medallion_eeffe035-05d8-4406-8c52-d310deea4cf1.png?v=1513713397",
+  "platform": "shopify",
+  "product_id": "567024189482",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Half Caff"
+  ],
+  "title": "1/2 and 1/2 Italian Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1-2-and-1-2-italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744409075754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7995928150058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7995928182826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7995928215594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7995928248362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7995928281130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7995928313898"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "d01e7216cefbfc77",
+  "first_seen": "2026-10-26",
+  "handle": "1-2-and-1-2-brazilian",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/HalfnHalfBraz_medallion_741e422f-eff2-44d4-bf38-aae23f90e330.png?v=1513783546",
+  "platform": "shopify",
+  "product_id": "567024255018",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Brazil",
+   "Half Caff",
+   "Medium",
+   "South America",
+   "Varietal"
+  ],
+  "title": "1/2 and 1/2 Brazil, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/1-2-and-1-2-brazilian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744409108522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7800245944362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7800245977130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7800246009898"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7800246042666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7800246075434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7800246108202"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "c69e5bc07aa15b3d",
+  "first_seen": "2026-10-26",
+  "handle": "red-and-white-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Redandwhite_medallion.png?v=1513779951",
+  "platform": "shopify",
+  "product_id": "567024517162",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "DC",
+   "Medium",
+   "Sustainable"
+  ],
+  "title": "Red and White Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/red-and-white-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744410386474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "8039300890666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "8039300923434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "8039300956202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "8039300988970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "8039301021738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "8039301054506"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "37058f2037eef7c1",
+  "first_seen": "2026-10-26",
+  "handle": "rock-creek-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/rock_creek_medallion.png?v=1513779755",
+  "platform": "shopify",
+  "product_id": "567024615466",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "DC",
+   "Medium",
+   "Sustainable"
+  ],
+  "title": "Rock Creek Reserve, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/rock-creek-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744410484778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "8039159693354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "8039159726122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "8039159758890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "8039159791658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "8039159824426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "8039159857194"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "48e645a2089f94fe",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Screenshot_2026-10-08_104313.png?v=1791470768",
+  "platform": "shopify",
+  "product_id": "567024975914",
+  "product_type": "simple",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Chocolate",
+   "Chocolate Covered Espresso Beans",
+   "Seasonal"
+  ],
+  "title": "Chocolate Covered Espresso Beans (Seasonal)",
+  "url": "https://zekescoffee.com/products/chocolate-covered-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "7744411172906"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "a8c5c53b735e64f5",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala-lenca-farm",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Honduras_Lenca_logo.png?v=1513867010",
+  "platform": "shopify",
+  "product_id": "567028318250",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Central America",
+   "Direct Trade",
+   "Honduras",
+   "Light",
+   "Organic",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Honduras Marcala Lenca, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/honduras-marcala-lenca-farm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7744420544554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7793104781354"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7793104846890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7793104879658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7793104945194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7793104977962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7793105043498"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "e6e31a65ac8cf11e",
+  "first_seen": "2026-10-26",
+  "handle": "round-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/RHB_medallion_20th.png?v=1763493983",
+  "platform": "shopify",
+  "product_id": "568122376234",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Colombia",
+   "Conventional",
+   "Ethiopia",
+   "Indonesia",
+   "Light",
+   "South America"
+  ],
+  "title": "Round House Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/round-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7754399907882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754399940650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754399973418"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754400006186"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754400038954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754400071722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754400104490"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "ab2d8732f2a16840",
+  "first_seen": "2026-10-26",
+  "handle": "shot-tower-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/STE_medallion_20th.png?v=1763493949",
+  "platform": "shopify",
+  "product_id": "568127193130",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Espresso",
+   "India",
+   "Medium",
+   "South America"
+  ],
+  "title": "Shot Tower Espresso, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/shot-tower-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7754433888298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754433921066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754433953834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754433986602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754434019370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754434052138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754434084906"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "3d1f7f4b60b5d6f8",
+  "first_seen": "2026-10-26",
+  "handle": "tell-tale-dark",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/TTD_medallion20th.png?v=1775660294",
+  "platform": "shopify",
+  "product_id": "568131125290",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Dark",
+   "Guatemala",
+   "South America"
+  ],
+  "title": "Tell Tale Dark, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/tell-tale-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7754468950058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7754468982826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7754469048362"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7754469081130"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7754469146666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7754469179434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7754469244970"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "5d6836a255d2a587",
+  "first_seen": "2026-10-26",
+  "handle": "gans-knockout-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/ganz_medallion_55c68590-4ea4-4931-98a4-d26f756d3b17.png?v=1513691327",
+  "platform": "shopify",
+  "product_id": "568225529898",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Colombia",
+   "Dark",
+   "Guatemala",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "Gans' Knockout Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/gans-knockout-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "7755120934954"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "7755120967722"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "7755121000490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "7755121033258"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "7755121066026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "7755121164330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "7755121197098"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "8f6709d0a971ba79",
+  "first_seen": "2026-10-26",
+  "handle": "hippie-blend-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Hippie_Zcup_medallion_fe95453c-d141-403e-8442-4b61f48d0327.png?v=1513889207",
+  "platform": "shopify",
+  "product_id": "610235547690",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Indonesia",
+   "K-cup",
+   "K-cups",
+   "Light",
+   "Peru",
+   "South America",
+   "Sustainable",
+   "Z-Cups"
+  ],
+  "title": "Hippie Blend (Z-Cups)",
+  "url": "https://zekescoffee.com/products/hippie-blend-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896608919719"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "d30b6afd1c8cfb41",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-charm-city-blend-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafCC_Zcup_medallion.png?v=1513889573",
+  "platform": "shopify",
+  "product_id": "610261827626",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Decaf",
+   "K-cup",
+   "K-cups",
+   "Medium",
+   "North America",
+   "South America",
+   "Z-Cups"
+  ],
+  "title": "Decaffeinated Charm City Blend (Z-cups)",
+  "url": "https://zekescoffee.com/products/decaf-charm-city-blend-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 13.0,
+    "title": "Default Title",
+    "variant_id": "34896582017191"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "cace5743cb77d0cf",
+  "first_seen": "2026-10-26",
+  "handle": "tell-tale-dark-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/TTD_Zcup_medallion.png?v=1513890082",
+  "platform": "shopify",
+  "product_id": "610295119914",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Dark",
+   "Guatemala",
+   "K-cup",
+   "K-cups",
+   "South America",
+   "Z-Cups"
+  ],
+  "title": "Tell Tale Dark (Z-Cups)",
+  "url": "https://zekescoffee.com/products/tell-tale-dark-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896658268327"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "4346b4cdbfcdc660",
+  "first_seen": "2026-10-26",
+  "handle": "market-blend-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Market_Zcup_medallion.png?v=1513890445",
+  "platform": "shopify",
+  "product_id": "610316714026",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Ethiopia",
+   "Guatemala",
+   "K-cup",
+   "K-cups",
+   "Medium",
+   "Z-Cups"
+  ],
+  "title": "Market Blend (Z-Cups)",
+  "url": "https://zekescoffee.com/products/market-blend-z-cups",
+  "variants": [
+   {
+    "available": false,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896615604391"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "704fa1c5f93b0e3e",
+  "first_seen": "2026-10-26",
+  "handle": "gunpowder-espresso-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/Gun_Zcup_medallion.png?v=1513890830",
+  "platform": "shopify",
+  "product_id": "610339455018",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Dark",
+   "Indonesia",
+   "K-cup",
+   "K-cups",
+   "South America",
+   "Sustainable",
+   "Z-Cups"
+  ],
+  "title": "Gunpowder Espresso (Z-Cups)",
+  "url": "https://zekescoffee.com/products/gunpowder-espresso-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896586637479"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "44968df9a457d868",
+  "first_seen": "2026-10-26",
+  "handle": "royal-blue-z-cups",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/RB_Zcup_medallion.png?v=1513891069",
+  "platform": "shopify",
+  "product_id": "610352037930",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Dark",
+   "Indonesia",
+   "K-cup",
+   "K-cups",
+   "South America",
+   "Sustainable",
+   "Z-Cups"
+  ],
+  "title": "Royal Blue Blend (Z-Cups)",
+  "url": "https://zekescoffee.com/products/royal-blue-z-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "34896633856167"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "3588790431d6a409",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-colombia-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafColombian_medallion.png?v=1626978561",
+  "platform": "shopify",
+  "product_id": "7100230992041",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Colombia",
+   "Decaf",
+   "South America",
+   "Varietal"
+  ],
+  "title": "Decaffeinated Colombia, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-colombia-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "40904669102249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "40904669135017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "40904669167785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "40904669200553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "40904669233321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "40904669266089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "40904669298857"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "76cb08df4e4f0334",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-tell-tale-dark-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/DecafTellTaleDark.png?v=1645714788",
+  "platform": "shopify",
+  "product_id": "7431527727273",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Dark",
+   "Decaf",
+   "South America"
+  ],
+  "title": "Decaffeinated Tell Tale Dark, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/decaffeinated-tell-tale-dark-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "42005847179433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Coarse",
+    "variant_id": "42005847212201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Percolator",
+    "variant_id": "42005847244969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Auto Drip",
+    "variant_id": "42005847277737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Fine",
+    "variant_id": "42005847310505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "42005847343273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "42005847376041"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "5859648a03050552",
+  "first_seen": "2026-10-26",
+  "handle": "88-9-broadcast-blend-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/WEAAMedallion.png?v=1646421073",
+  "platform": "shopify",
+  "product_id": "7437974241449",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Asia-Pacific",
+   "Blend",
+   "Central America",
+   "Indonesia",
+   "Medium",
+   "South America",
+   "Sustainable"
+  ],
+  "title": "88.9 Broadcast Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/88-9-broadcast-blend-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "42028979290281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "42028979323049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "42028979355817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "42028979388585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "42028979421353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "42028979454121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "42028979486889"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "408b411d7575eec9",
+  "first_seen": "2026-10-26",
+  "handle": "haitian-blue-mountain-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/HAITIAN.png?v=1763493644",
+  "platform": "shopify",
+  "product_id": "7569208017065",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Central America",
+   "Conventional",
+   "Light",
+   "Varietal"
+  ],
+  "title": "Haiti Blue Mountain, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/haitian-blue-mountain-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "42492098314409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "42492098347177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "42492098379945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "42492098412713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "42492098445481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "42492098478249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "42492098511017"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "de347fd27f850250",
+  "first_seen": "2026-10-26",
+  "handle": "hai-hon-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/haihonweb.png?v=1674141887",
+  "platform": "shopify",
+  "product_id": "7690908762281",
+  "product_type": "Coffee",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Haiti",
+   "Honduras",
+   "South America"
+  ],
+  "title": "Hai-Hon, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/hai-hon-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "42867114836137"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "42867114868905"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "42867114901673"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "42867114934441"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "42867114967209"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "42867114999977"
+   },
+   {
+    "available": true,
+    "grams": 455,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "42867117326505"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "dc0ea696418d22d6",
+  "first_seen": "2026-10-26",
+  "handle": "mr-trash-wheel-blend-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/mtwlogowithname.png?v=1713378355",
+  "platform": "shopify",
+  "product_id": "7935593480361",
+  "product_type": "Coffee",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Central America",
+   "Conventional"
+  ],
+  "title": "Mr. Trash Wheel Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/mr-trash-wheel-blend-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "43744237224105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "43744237256873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "43744237289641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "43744237322409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "43744237355177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "43744237387945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "43744237420713"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "6ea385aa37fb24a1",
+  "first_seen": "2026-10-26",
+  "handle": "three-alarm-brew-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Three_Alarm_Brew_6e41aefb-c484-4e09-99c3-c34962586eb8.png?v=1736973334",
+  "platform": "shopify",
+  "product_id": "8368332275881",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Medium",
+   "South America"
+  ],
+  "title": "Three Alarm Brew, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/three-alarm-brew-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "45107324321961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "45107324354729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "45107324387497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "45107324420265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "45107324453033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "45107324485801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "45107324518569"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "e0855a8a0244c6fe",
+  "first_seen": "2026-10-26",
+  "handle": "anniversary-roast-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Anniversary_Roast_d2906bc1-a8d1-4a74-84f4-479e13f03bdb.png?v=1748031344",
+  "platform": "shopify",
+  "product_id": "8549093867689",
+  "product_type": "Coffee",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Honduras",
+   "Peru",
+   "Seasonal",
+   "South America",
+   "almond",
+   "brown sugar",
+   "smoky"
+  ],
+  "title": "Anniversary Roast, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/anniversary-roast-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "45846300033193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "45846300065961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "45846300098729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "45846300131497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "45846300164265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "45846300197033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "45846300229801"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "197b0824c346e10c",
+  "first_seen": "2026-10-26",
+  "handle": "burnies-beans",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Zekes_Labels_Burnies_Beans_revised_20250902.png?v=1760385240",
+  "platform": "shopify",
+  "product_id": "8773898338473",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Central America",
+   "Conventional",
+   "Ethiopia",
+   "Guatemala"
+  ],
+  "title": "Burnie's Beans, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/burnies-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "46478416969897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "46478417002665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "46478417035433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "46478417068201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "46478417100969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "46478417133737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "46478417166505"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "40ce0f53b7c8ee62",
+  "first_seen": "2026-10-26",
+  "handle": "claudes-choice-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/ZekesLabelsClaudesChoicerevised20250902.png?v=1760368243",
+  "platform": "shopify",
+  "product_id": "8773908496553",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional",
+   "Dark"
+  ],
+  "title": "Claude's Choice, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/claudes-choice-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "46478417395881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "46478417428649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "46478417461417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "46478417494185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "46478417526953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "46478417559721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "46478417592489"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "dbaa520e5d0934a7",
+  "first_seen": "2026-10-26",
+  "handle": "claudes-choice-collection",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/Zekes_Labels_Claudes_Choice_revised_20250902.png?v=1760385279",
+  "platform": "shopify",
+  "product_id": "8773908791465",
+  "product_type": "",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Conventional"
+  ],
+  "title": "Claude's Choice Collection",
+  "url": "https://zekescoffee.com/products/claudes-choice-collection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "46478408450217"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "eb518ef14b691ffc",
+  "first_seen": "2026-10-26",
+  "handle": "baltimores-classic-five-birdie-blend-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/BirdieBlend.png?v=1761746044",
+  "platform": "shopify",
+  "product_id": "8784206856361",
+  "product_type": "Coffee",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Chocolate",
+   "Conventional",
+   "Medium",
+   "Seasonal",
+   "South America",
+   "brown sugar",
+   "nutty",
+   "smoky"
+  ],
+  "title": "Baltimore's Classic Five Birdie Blend, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/baltimores-classic-five-birdie-blend-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "46511644639401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "46511644672169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "46511644704937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "46511644737705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "46511644770473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "46511644803241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "46511644836009"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "b697ecbcc63dd01c",
+  "first_seen": "2026-10-26",
+  "handle": "tanz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/TanzaniaAAMondulEstate.png?v=1776870829",
+  "platform": "shopify",
+  "product_id": "8926602494121",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Africa",
+   "Medium",
+   "Tanzania",
+   "Varietal"
+  ],
+  "title": "Tanzania AA, Mondul Estate, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/tanz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "46946047262889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "46946047295657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "46946047328425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "46946047361193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "46946047393961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "46946047426729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "46946047459497"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "c232c855b04b6d48",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-pw-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/files/MexPW_medallion.png?v=1776262944",
+  "platform": "shopify",
+  "product_id": "8937639706793",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Light",
+   "Mexico",
+   "North America",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Mexico PW, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/mexico-pw-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "46989190824105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "46989190856873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "46989190889641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "46989190922409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "46989190955177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "46989190987945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "46989191020713"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "5705d5cc88688683",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-segovia-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/NICA_medallion.png?v=1575569839",
+  "platform": "shopify",
+  "product_id": "8971871879337",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Central America",
+   "Light",
+   "Nicaragua",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Nicaragua Segovia, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/nicaragua-segovia-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "47175453212841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "47175453245609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "47175453278377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "47175453311145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "47175453343913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "47175453376681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "47175453409449"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ },
+ {
+  "body_hash": "409712c707d420dd",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-amistad-1-lb-16-oz",
+  "image": "https://cdn.shopify.com/s/files/1/2642/4088/products/COSTA_RICA_medallion.png?v=1575554111",
+  "platform": "shopify",
+  "product_id": "8979724402857",
+  "product_type": "variable",
+  "roaster_slug": "zekescoffee",
+  "tags": [
+   "Central America",
+   "Costa Rica",
+   "Medium",
+   "Sustainable",
+   "Varietal"
+  ],
+  "title": "Costa Rica La Amistad, 1 lb (16 oz)",
+  "url": "https://zekescoffee.com/products/costa-rica-la-amistad-1-lb-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "47205231853737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Coarse",
+    "variant_id": "47205231886505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "47205231919273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Auto Drip",
+    "variant_id": "47205231952041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Fine",
+    "variant_id": "47205231984809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "47205232017577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "47205232050345"
+   }
+  ],
+  "vendor": "Zeke's Coffee"
+ }
+]

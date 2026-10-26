@@ -1,0 +1,909 @@
+[
+ {
+  "body_hash": "09f8d395ea210493",
+  "first_seen": "2026-10-26",
+  "handle": "bold-smoke",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Blend50.jpeg_resized_1.jpg?v=1634310375",
+  "platform": "shopify",
+  "product_id": "6986775462055",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Almond",
+   "Brown Sugar",
+   "Chocolate",
+   "Cinnamon",
+   "Citrus",
+   "Spice"
+  ],
+  "title": "Blend 50",
+  "url": "https://www.tbcroasters.com/products/bold-smoke",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41216977666215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41216977698983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41216977731751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41216977764519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613908107514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613910761722"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "53b4d8e9aa974126",
+  "first_seen": "2026-10-26",
+  "handle": "limited-offering-bali-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Bali.jpeg_resized.jpg?v=1634499747",
+  "platform": "shopify",
+  "product_id": "7025228742823",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Black Currant",
+   "Dark Chocolate",
+   "Golden Raisin"
+  ],
+  "title": "Limited Offering: Bali",
+  "url": "https://www.tbcroasters.com/products/limited-offering-bali-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41217009156263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41217009189031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41217009221799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41217009254567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613900538106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613904142586"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "355efab5b06efad2",
+  "first_seen": "2026-10-26",
+  "handle": "blend-70-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_70.jpeg_resized_1.jpg?v=1634310463",
+  "platform": "shopify",
+  "product_id": "7027295518887",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Chocolate",
+   "Honey",
+   "Long Clean Finish",
+   "Nutmeg",
+   "Strawberry"
+  ],
+  "title": "Blend 70",
+  "url": "https://www.tbcroasters.com/products/blend-70-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41225121595559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41225121628327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41225121661095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41225121693863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613882810618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613882974458"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "35417468ef0242a3",
+  "first_seen": "2026-10-26",
+  "handle": "blend-90-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Blend90.jpeg_resized_1.jpg?v=1634310516",
+  "platform": "shopify",
+  "product_id": "7027302334631",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Chocolatey",
+   "Complex",
+   "Dark",
+   "Fruit",
+   "Hints of Sweetness",
+   "Rich"
+  ],
+  "title": "Blend 90",
+  "url": "https://www.tbcroasters.com/products/blend-90-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41225149186215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41225149218983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41225149251751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41225149284519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613865836794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613866950906"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "ef4efe70a24d7c77",
+  "first_seen": "2026-10-26",
+  "handle": "blend-30-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Blend30.jpeg_resized.jpg?v=1634499188",
+  "platform": "shopify",
+  "product_id": "7027309740199",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Citrus",
+   "Clean",
+   "Smooth",
+   "Snappy"
+  ],
+  "title": "Blend 30",
+  "url": "https://www.tbcroasters.com/products/blend-30-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41225189032103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41225189064871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41225189097639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41225189130407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613863117050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613863936250"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "9fc0b1a49f021c82",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Colombia.jpeg_resized_1.jpg?v=1634310611",
+  "platform": "shopify",
+  "product_id": "7027341590695",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Bright",
+   "Chocolatey Finish",
+   "Full Bodied",
+   "Hints of Lemon",
+   "Snappy",
+   "Sweet"
+  ],
+  "title": "Colombian",
+  "url": "https://www.tbcroasters.com/products/colombian-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41225345302695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41225345335463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41225345368231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41225345400999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613859184890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613859676410"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "10a5d995cda5b2b9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Decaf.jpeg_resized_1.jpg?v=1634310663",
+  "platform": "shopify",
+  "product_id": "7027347816615",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Clean",
+   "Creamy on the Palette",
+   "Rich and Smooth",
+   "Roasty Finish"
+  ],
+  "title": "Decaf",
+  "url": "https://www.tbcroasters.com/products/decaf-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41225372172455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41225372205223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41225372237991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41225372270759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613851058426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613852467450"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "04d7ce0485a236d5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Espresso_resized_1.jpg?v=1634312425",
+  "platform": "shopify",
+  "product_id": "7027352764583",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Chocolate",
+   "Chocolatey",
+   "Honey",
+   "Rich and Smooth"
+  ],
+  "title": "Espresso",
+  "url": "https://www.tbcroasters.com/products/espresso-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb / Light",
+    "variant_id": "41225399894183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs / Light",
+    "variant_id": "41225399926951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb / Light",
+    "variant_id": "41225399959719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs / Light",
+    "variant_id": "41225399992487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb / Medium",
+    "variant_id": "42031747039482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb / Dark",
+    "variant_id": "42031747072250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs / Medium",
+    "variant_id": "42031747105018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs / Dark",
+    "variant_id": "42031747137786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb / Medium",
+    "variant_id": "42031747170554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb / Dark",
+    "variant_id": "42031747203322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs / Medium",
+    "variant_id": "42031747236090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs / Dark",
+    "variant_id": "42031747268858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Light",
+    "variant_id": "67613747577082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Medium",
+    "variant_id": "67613748101370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz / Dark",
+    "variant_id": "67613748658426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz / Light",
+    "variant_id": "67613749182714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz / Medium",
+    "variant_id": "67613749477626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz / Dark",
+    "variant_id": "67613750657274"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "de170a01f3e0140e",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_FrenchRoast.jpeg_resized_1.jpg?v=1634311004",
+  "platform": "shopify",
+  "product_id": "7035038990503",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Deep and Dark",
+   "Never burned or bitter",
+   "Roasty Finish"
+  ],
+  "title": "French Roast",
+  "url": "https://www.tbcroasters.com/products/french-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41265300078759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41265300111527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41265300144295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41265300177063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613737451770"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613739778298"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "ffb281f513f32bf3",
+  "first_seen": "2026-10-26",
+  "handle": "french-sumatra-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_FrenchSumatra.jpeg_resized_1.jpg?v=1634311571",
+  "platform": "shopify",
+  "product_id": "7035046133927",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Caramelized",
+   "Dark",
+   "Deep Earthiness"
+  ],
+  "title": "French Sumatran",
+  "url": "https://www.tbcroasters.com/products/french-sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41265343398055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41265343463591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41265343529127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41265343627431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613726343418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613727359226"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "078a17d31a958cee",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_Viennese.jpeg_resized_1.jpg?v=1634312918",
+  "platform": "shopify",
+  "product_id": "7052297240743",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Dark Chocolate",
+   "Roasty Up Front",
+   "Smooth Finish"
+  ],
+  "title": "Viennese",
+  "url": "https://www.tbcroasters.com/products/viennese-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41357233356967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41357233389735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41357233422503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41357233455271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613678829818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613679091962"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "1f311f41ba03c319",
+  "first_seen": "2026-10-26",
+  "handle": "limited-offering-blue-ridge-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Bag_BlueRidgeBlend.jpeg_resized.jpg?v=1634499826",
+  "platform": "shopify",
+  "product_id": "7106184970407",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Berries",
+   "Complex",
+   "Dark",
+   "Deep Earthiness",
+   "Full Bodied",
+   "Sweet"
+  ],
+  "title": "Limited Offering: Blue Ridge Blend",
+  "url": "https://www.tbcroasters.com/products/limited-offering-blue-ridge-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "41562777190567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41562777223335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "41562777256103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lbs",
+    "variant_id": "41562777288871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613922492666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613922623738"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ },
+ {
+  "body_hash": "0b88959747efacba",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-cinnamon-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0587/9404/9703/products/Myproject_1.jpg?v=1677678099",
+  "platform": "shopify",
+  "product_id": "7928172609786",
+  "product_type": "Beans",
+  "roaster_slug": "tbcroasters",
+  "tags": [
+   "Berries",
+   "Long Clean Finish",
+   "Wine"
+  ],
+  "title": "Ethiopian - Cinnamon Roast",
+  "url": "https://www.tbcroasters.com/products/ethiopian-cinnamon-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "44035832873210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "44035832905978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "44043034755322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44043034788090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "67613594452218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67613628825850"
+   }
+  ],
+  "vendor": "Trager Brothers Coffee"
+ }
+]

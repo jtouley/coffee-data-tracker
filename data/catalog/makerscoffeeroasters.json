@@ -1,0 +1,71 @@
+[
+ {
+  "body_hash": "e4df30ee24bcf458",
+  "first_seen": "2026-10-26",
+  "handle": "honduran",
+  "image": "https://images.squarespace-cdn.com/content/v1/58c60ecab3db2b34dd0f5f5c/1540592235081-M0DRR4HM9BHYU9E9KJID/honduran.jpeg",
+  "platform": "squarespace",
+  "product_id": "5bd285ac9140b763780e05a4",
+  "product_type": "",
+  "roaster_slug": "makerscoffeeroasters",
+  "tags": [],
+  "title": "Single Origin Honduran",
+  "url": "https://www.makerscoffeeroasters.com/shop/honduran",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "",
+    "variant_id": "13992437-80fd-4f58-aa35-f5363b9ddb84"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "00253c6e61520a55",
+  "first_seen": "2026-10-26",
+  "handle": "oro",
+  "image": "https://images.squarespace-cdn.com/content/v1/58c60ecab3db2b34dd0f5f5c/1540592185863-UIFKYUNHR6T9ENKQVS11/oro.jpeg",
+  "platform": "squarespace",
+  "product_id": "5bd28e2b4785d33e125cfdca",
+  "product_type": "",
+  "roaster_slug": "makerscoffeeroasters",
+  "tags": [],
+  "title": "Crema Oro Espresso",
+  "url": "https://www.makerscoffeeroasters.com/shop/oro",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "",
+    "variant_id": "28f5dd76-9c79-4c92-82bd-b9843d3a3cdc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c28aec755b65d691",
+  "first_seen": "2026-10-26",
+  "handle": "oro-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/58c60ecab3db2b34dd0f5f5c/1540592215647-CIXUUKOXW9HW9P220O9I/oro-decaf.jpeg",
+  "platform": "squarespace",
+  "product_id": "5bd28eb7c83025f0e00dd55b",
+  "product_type": "",
+  "roaster_slug": "makerscoffeeroasters",
+  "tags": [],
+  "title": "Decaf Crema Oro",
+  "url": "https://www.makerscoffeeroasters.com/shop/oro-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "",
+    "variant_id": "6512cbe1-61e3-4e1f-8655-b3512dad6815"
+   }
+  ],
+  "vendor": ""
+ }
+]

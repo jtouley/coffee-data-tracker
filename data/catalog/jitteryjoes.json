@@ -1,0 +1,1548 @@
+[
+ {
+  "body_hash": "ebc9aef42e707384",
+  "first_seen": "2026-10-26",
+  "handle": "fox-theatre-blue-sky-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-foxtheatre-blueskyblend-a-front_compressed.webp?v=1770905753",
+  "platform": "shopify",
+  "product_id": "10252686819609",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Co-Brand",
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "partnerships",
+   "w-441424909",
+   "wholesale-HIDE"
+  ],
+  "title": "Fox Theatre Blue Sky Blend",
+  "url": "https://jitteryjoes.com/products/fox-theatre-blue-sky-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "51912371470617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "52240386654489"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "41ee3583b29c6514",
+  "first_seen": "2026-10-26",
+  "handle": "morning-chorus-bird-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-sov-medium-morningchorus-a-front_compressed.webp?v=1776173638",
+  "platform": "shopify",
+  "product_id": "10325439611161",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Co-Brand",
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Medium",
+   "New",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "can",
+   "medium roast",
+   "partnerships",
+   "w-441424909"
+  ],
+  "title": "Morning Chorus Bird Friendly",
+  "url": "https://jitteryjoes.com/products/morning-chorus-bird-friendly",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "52228301947161"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "52239279653145"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "6afe09216a059a3c",
+  "first_seen": "2026-10-26",
+  "handle": "attack-the-day",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-uga-attacktheday-a-front_compressed.webp?v=1779114645",
+  "platform": "shopify",
+  "product_id": "10569018893",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Athens Coffees",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Ethiopia",
+   "Feature",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "UGA",
+   "att",
+   "attack",
+   "blend",
+   "bulldog",
+   "bulldog nation",
+   "can",
+   "dawg",
+   "dawgs",
+   "dog",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "partnerships",
+   "university of georgia",
+   "wholesale-HIDE"
+  ],
+  "title": "Attack the Day",
+  "url": "https://jitteryjoes.com/products/attack-the-day",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41472385613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41472385677"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "c82321b0bc0c53d0",
+  "first_seen": "2026-10-26",
+  "handle": "twilight-half-caff-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-twilight-halfcaff-a-front_compressed.webp?v=1779137379",
+  "platform": "shopify",
+  "product_id": "10630139969817",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Medium",
+   "OCS-HIDE",
+   "Retail",
+   "can",
+   "low caffeine",
+   "medium roast",
+   "w-441424909"
+  ],
+  "title": "Twilight Half-Caff",
+  "url": "https://jitteryjoes.com/products/twilight-half-caff-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "52409978192153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "52409978224921"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "0c9e897da153c978",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-minas-gerais",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-sov-medium-brazil-minasgerais-a-front_compressed.webp?v=1781120770",
+  "platform": "shopify",
+  "product_id": "15397787107609",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Americas",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Medium",
+   "Minas",
+   "OCS-HIDE",
+   "Retail",
+   "UTZ",
+   "badge",
+   "map",
+   "medium roast",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "mondo nuvo",
+   "patio",
+   "red catuai",
+   "single origin",
+   "typica",
+   "w-441424909",
+   "wholesale-HIDE",
+   "yellow catuai"
+  ],
+  "title": "BRAZIL Minas Gerais",
+  "url": "https://jitteryjoes.com/products/brazil-minas-gerais",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "67591799537945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "67591799570713"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "1ab35fdd57b1b1be",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nuevo-oriente",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-sov-light-guatemala-nuevooriente-a-front_compressed.webp?v=1781120770",
+  "platform": "shopify",
+  "product_id": "15397794316569",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Coffees",
+   "Coop",
+   "Guatemala",
+   "Internal-SHOW",
+   "Light",
+   "OCS-HIDE",
+   "Retail",
+   "huehue",
+   "light roast",
+   "map",
+   "meta-related-collection-light-roasted-coffees-retail",
+   "patio-sun dried",
+   "single origin",
+   "w-441424909",
+   "washed",
+   "wholesale-HIDE"
+  ],
+  "title": "GUATEMALA Nuevo Oriente",
+  "url": "https://jitteryjoes.com/products/guatemala-nuevo-oriente",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "67591831486745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "67591831519513"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "3a9cdfc868b07f20",
+  "first_seen": "2026-10-26",
+  "handle": "goose-what-a-day-to-be-livin",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-goose-whatadaytobelivin-a-front_compressed.webp?v=1791830541",
+  "platform": "shopify",
+  "product_id": "15432510079257",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Medium",
+   "New",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-the-music-coffee-series",
+   "music",
+   "music series",
+   "partnerships",
+   "w-441424909",
+   "wholesale-HIDE"
+  ],
+  "title": "Goose What a Day to Be Livin'",
+  "url": "https://jitteryjoes.com/products/goose-what-a-day-to-be-livin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "67769661915417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "67769661948185"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "3ece7b22e4cc546b",
+  "first_seen": "2026-10-26",
+  "handle": "two-stories-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-dark-twostories-decaf-1200x1200_compressed.png?v=1663094187",
+  "platform": "shopify",
+  "product_id": "2136471896175",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "430",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Dark",
+   "OCS-HIDE",
+   "Retail",
+   "bag",
+   "blend",
+   "decaf",
+   "decaffeinated",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "swiss",
+   "swiss water",
+   "water",
+   "water process decaffeinated",
+   "wholesale-HIDE"
+  ],
+  "title": "Two Stories Decaf",
+  "url": "https://jitteryjoes.com/products/two-stories-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "40936208760943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "40936208957551"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "94f09e7050bd46fd",
+  "first_seen": "2026-10-26",
+  "handle": "kishi-bashi-omoiyari-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-kishibashi-omoiyari-a-front_compressed.webp?v=1785367615",
+  "platform": "shopify",
+  "product_id": "4351554912367",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Bashi",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Ethiopia",
+   "Feature",
+   "Guatemala",
+   "Japan",
+   "Japanese",
+   "Jerrod",
+   "K",
+   "Kishi",
+   "Kishi Bashi",
+   "Landon",
+   "OCS-HIDE",
+   "Om",
+   "Omo",
+   "Omoi",
+   "Omoiy",
+   "Partnership",
+   "Porter",
+   "Proving",
+   "Retail",
+   "Yirgacheffe",
+   "bag",
+   "blend",
+   "dark roast",
+   "meta-related-collection-the-music-coffee-series",
+   "music",
+   "music series",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Kishi Bashi Omoiyari",
+  "url": "https://jitteryjoes.com/products/kishi-bashi-omoiyari-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "31194081394799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "31194081427567"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "0d9339474be5d0f2",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-duo",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/gift-sub-2_505726d8-599a-4715-8ac4-77cdba41d2f7.jpg?v=1619710837",
+  "platform": "shopify",
+  "product_id": "4506643038319",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "OCS-HIDE",
+   "Retail",
+   "coffee of the month",
+   "gifts",
+   "meta-related-collection-gifts",
+   "wholesale-HIDE"
+  ],
+  "title": "Roaster's Choice Duo",
+  "url": "https://jitteryjoes.com/products/roasters-choice-duo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "Whole Bean",
+    "variant_id": "31860309327983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "Medium Grind",
+    "variant_id": "31860309360751"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "804dd5cea19e44b8",
+  "first_seen": "2026-10-26",
+  "handle": "drive-by-truckers-trucker-speed",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-drivebytruckers-truckerspeed-a-front_compressed.webp?v=1779118264",
+  "platform": "shopify",
+  "product_id": "6941706748015",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Americas",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Cup",
+   "Cups of",
+   "Drive",
+   "Drive By Truckers",
+   "Drive-By",
+   "Guatemala",
+   "Medium",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "Samples-SHOW",
+   "Truckers",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-the-music-coffee-series",
+   "music series",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Drive-By Truckers Trucker Speed",
+  "url": "https://jitteryjoes.com/products/drive-by-truckers-trucker-speed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "40724573683823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "40724573716591"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "9dbe9e6619e21d8a",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-matagalpa",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-medium-nicaragua-matagalpa-1200x1200_compressed.jpg?v=1647444182",
+  "platform": "shopify",
+  "product_id": "6962702942319",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Americas",
+   "Coffee",
+   "Coffees",
+   "Directtrade",
+   "Matagalpa",
+   "Medium",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Rainforest",
+   "Retail",
+   "Selva Negra",
+   "badge",
+   "bourbon",
+   "catuai",
+   "caturra",
+   "map",
+   "medium roast",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "raised beds",
+   "relationship",
+   "single origin",
+   "washed",
+   "wholesale-HIDE"
+  ],
+  "title": "NICARAGUA Matagalpa",
+  "url": "https://jitteryjoes.com/products/nicaragua-matagalpa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "40771973415023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "40771973447791"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "34a4201c4d88a22f",
+  "first_seen": "2026-10-26",
+  "handle": "charlie-mustard-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-charliemustard-a-front_compressed.webp?v=1767634991",
+  "platform": "shopify",
+  "product_id": "8028184248601",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Dark",
+   "Ethiopia",
+   "Feature",
+   "Guatemala",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "dark roast",
+   "meta-related-collection-athens-favs",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Charlie Mustard Coffee",
+  "url": "https://jitteryjoes.com/products/charlie-mustard-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "44178307154201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "44178307186969"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "c3a882caef917a4c",
+  "first_seen": "2026-10-26",
+  "handle": "national-champions-2022",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-uga-nationalchampions2022-a-front_compressed.webp?v=1785368033",
+  "platform": "shopify",
+  "product_id": "8080156328217",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "2022",
+   "Athens Coffees",
+   "Back",
+   "Back to back",
+   "Championship",
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Feature",
+   "Guatemala",
+   "Internal-SHOW",
+   "Medium",
+   "National",
+   "Natty",
+   "Naty",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "SEC",
+   "UGA",
+   "att",
+   "attack",
+   "blend",
+   "bulldog",
+   "bulldog nation",
+   "can",
+   "dawg",
+   "dawgs",
+   "dog",
+   "medium roast",
+   "meta-related-collection-UGA",
+   "partnerships",
+   "university of georgia",
+   "wholesale-HIDE"
+  ],
+  "title": "National Champions 2022",
+  "url": "https://jitteryjoes.com/products/national-champions-2022",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.18,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "44402832474393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.18,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "44402845778201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.07,
+    "title": "Two Cans: 12 oz Can / Whole Bean",
+    "variant_id": "44414951522585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 65.07,
+    "title": "Two Cans: 12 oz Can / Medium Grind",
+    "variant_id": "44416264208665"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "0453e6940dfceb5c",
+  "first_seen": "2026-10-26",
+  "handle": "petes-groovy-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-petethecat-petesgroovybrew-a-front_compressed.webp?v=1780329796",
+  "platform": "shopify",
+  "product_id": "8811958501657",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Americas",
+   "Athens",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Feature",
+   "OCS-HIDE",
+   "Partnership",
+   "Pete the Cat",
+   "Retail",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-featured-products",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "meta-related-collection-pete-the-cat",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Pete’s Groovy Brew",
+  "url": "https://jitteryjoes.com/products/petes-groovy-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "47081693315353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "47081693348121"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "fa0872043d5be425",
+  "first_seen": "2026-10-26",
+  "handle": "jason-isbell-southeastern-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-jasonisbell-southeasterncoffee-a-front_compressed.webp?v=1785367533",
+  "platform": "shopify",
+  "product_id": "9741661634841",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Guatemala",
+   "Isbell",
+   "Jason",
+   "Medium",
+   "Nate",
+   "Nate Puza",
+   "OCS-HIDE",
+   "Partnership",
+   "Puza",
+   "Retail",
+   "blend",
+   "medium roast",
+   "meta-related-collection-the-music-coffee-series",
+   "music",
+   "music series",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Jason Isbell Southeastern Coffee",
+  "url": "https://jitteryjoes.com/products/jason-isbell-southeastern-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "49864818000153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "49864818032921"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "f64d185e2d533c61",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-humure-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-sov-dark-rwanda-humure-a-front_compressed.webp?v=1781120770",
+  "platform": "shopify",
+  "product_id": "9836373868825",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Internal-SHOW",
+   "OCS-HIDE",
+   "Retail",
+   "Rwanda",
+   "Samples-SHOW",
+   "dark roast",
+   "map",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "single origin",
+   "w-441424909",
+   "washed",
+   "wholesale-HIDE"
+  ],
+  "title": "RWANDA Humure Dark",
+  "url": "https://jitteryjoes.com/products/rwanda-humure-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "50294680322329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "50294680355097"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "33c47488ac849443",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-humure-light",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-sov-light-rwanda-humure-a-front_compressed.webp?v=1781120770",
+  "platform": "shopify",
+  "product_id": "9836376883481",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Coffees",
+   "Internal-SHOW",
+   "Light",
+   "OCS-HIDE",
+   "Retail",
+   "Rwanda",
+   "Samples-SHOW",
+   "light roast",
+   "map",
+   "meta-related-collection-light-roasted-coffees-retail",
+   "single origin",
+   "w-441424909",
+   "washed",
+   "wholesale-HIDE"
+  ],
+  "title": "RWANDA Humure Light",
+  "url": "https://jitteryjoes.com/products/rwanda-humure-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "50294691594521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "50294691627289"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "31eb7341055c3820",
+  "first_seen": "2026-10-26",
+  "handle": "asw-distillery-fiddler-bourbon-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-asw-fiddler-a-front_compressed.webp?v=1779114711",
+  "platform": "shopify",
+  "product_id": "9874269602073",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Medium",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "medium roast",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "ASW Distillery Fiddler Bourbon Barrel-Aged Coffee",
+  "url": "https://jitteryjoes.com/products/asw-distillery-fiddler-bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "50496875954457"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "8eb7c6a61f1ea36a",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-de-olla-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-cafedeolla-a-front_compressed.webp?v=1761693782",
+  "platform": "shopify",
+  "product_id": "9890216509721",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Feature",
+   "Mexico",
+   "OCS-HIDE",
+   "Retail",
+   "can",
+   "cinnamon",
+   "gifts",
+   "other",
+   "w-441424909",
+   "wholesale-HIDE"
+  ],
+  "title": "Café de Olla",
+  "url": "https://jitteryjoes.com/products/cafe-de-olla-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "52946663801113"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "f74c686a7b2d26b7",
+  "first_seen": "2026-10-26",
+  "handle": "classic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-dark-classicespresso-1200x1200_compressed.png?v=1663095117",
+  "platform": "shopify",
+  "product_id": "9974650509",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Retail",
+   "Sumatra",
+   "blend",
+   "can",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "wholesale-HIDE"
+  ],
+  "title": "Classic Espresso",
+  "url": "https://jitteryjoes.com/products/classic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "40936215052399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "40936215773295"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "170c40f965e0308d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-dark-ethiopia-yirgacheffe-1200x1200_compressed.jpg?v=1647799750",
+  "platform": "shopify",
+  "product_id": "9974652429",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Ethiopia",
+   "OCS-HIDE",
+   "Retail",
+   "Yirgacheffe",
+   "heirloom",
+   "map",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "single origin",
+   "wholesale-HIDE",
+   "yir",
+   "yirg",
+   "yirga",
+   "yirgachef"
+  ],
+  "title": "ETHIOPIA Yirgacheffe Dark",
+  "url": "https://jitteryjoes.com/products/ethiopia-yirgacheffe-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "41287316877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "41287316941"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "13f4970e1da0d99c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-light",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-light-ethiopia-yirgacheffe-1200x1200_compressed.jpg?v=1647800208",
+  "platform": "shopify",
+  "product_id": "9974652557",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Coffees",
+   "Ethiopia",
+   "Light",
+   "OCS-HIDE",
+   "Retail",
+   "Yirgacheffe",
+   "heirloom",
+   "map",
+   "meta-related-collection-light-roasted-coffees-retail",
+   "single origin",
+   "wholesale-HIDE",
+   "yir",
+   "yirg",
+   "yirga",
+   "yirgachef"
+  ],
+  "title": "ETHIOPIA Yirgacheffe Light",
+  "url": "https://jitteryjoes.com/products/ethiopia-yirgacheffe-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "41287316621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "41287316685"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "d524f51520833053",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/products/jjc-product-dark-nicaragua-matagalpa-1200x1200_compressed.jpg?v=1647796593",
+  "platform": "shopify",
+  "product_id": "9974652813",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "440",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Retail",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "single origin",
+   "wholesale-HIDE"
+  ],
+  "title": "French Roast",
+  "url": "https://jitteryjoes.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "889128452109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Bag / Medium Grind",
+    "variant_id": "889187336205"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "36ba20ab78f8cd80",
+  "first_seen": "2026-10-26",
+  "handle": "house",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-house-a-front_compressed.webp?v=1785367485",
+  "platform": "shopify",
+  "product_id": "9974653837",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "410",
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Guatamela",
+   "Medium",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Retail",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "wholesale-HIDE"
+  ],
+  "title": "House",
+  "url": "https://jitteryjoes.com/products/house",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287312973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287313037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "47651946496281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Medium Grind",
+    "variant_id": "47651959865625"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "c43230732faa5983",
+  "first_seen": "2026-10-26",
+  "handle": "whoop-ass",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-whoopass-a-front_compressed.webp?v=1785367802",
+  "platform": "shopify",
+  "product_id": "9974653901",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Guatemala",
+   "Medium",
+   "Nicaragua",
+   "OCS",
+   "Retail",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "wholesale-HIDE"
+  ],
+  "title": "Whoop Ass",
+  "url": "https://jitteryjoes.com/products/whoop-ass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287312525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287312589"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "96adc2ca985e35ed",
+  "first_seen": "2026-10-26",
+  "handle": "mamas-boy",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-mamasboy-a-front_compressed.webp?v=1779118341",
+  "platform": "shopify",
+  "product_id": "9974653965",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Co-Brand",
+   "Coffee",
+   "Coffees",
+   "Colombia",
+   "Guatemala",
+   "Medium",
+   "Nicaragua",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "ma",
+   "mama",
+   "mamas",
+   "medium roast",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "mom",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Mama's Boy",
+  "url": "https://jitteryjoes.com/products/mamas-boy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287312205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287312269"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "1627704eb24b09af",
+  "first_seen": "2026-10-26",
+  "handle": "morning-ride-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-medium-morningride-organic-a-front_compressed.webp?v=1785367696",
+  "platform": "shopify",
+  "product_id": "9974655309",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "425",
+   "Coffee",
+   "Coffees",
+   "Feature",
+   "Medium",
+   "Mexico",
+   "OCS",
+   "OCS-HIDE",
+   "Organic",
+   "Peru",
+   "Retail",
+   "badge",
+   "blend",
+   "can",
+   "medium roast",
+   "meta-related-collection-featured-products",
+   "meta-related-collection-medium-roasted-coffees-retail",
+   "wholesale-HIDE"
+  ],
+  "title": "Morning Ride Organic",
+  "url": "https://jitteryjoes.com/products/morning-ride-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287303053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287303117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "47651971170585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Medium Grind",
+    "variant_id": "47651971498265"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "dd2a27912460a834",
+  "first_seen": "2026-10-26",
+  "handle": "terrapin-wake-n-bake-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-terrapin-wakenbake-a-front_compressed.webp?v=1779114547",
+  "platform": "shopify",
+  "product_id": "9974657869",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "430",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Ethiopia",
+   "Guatemala",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Partnership",
+   "Retail",
+   "blend",
+   "can",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "partnerships",
+   "wholesale-HIDE"
+  ],
+  "title": "Terrapin Wake-n-Bake",
+  "url": "https://jitteryjoes.com/products/terrapin-wake-n-bake-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287296589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287296653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "47651964453145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Bag / Medium Grind",
+    "variant_id": "47651967435033"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "33e47eb5d0857794",
+  "first_seen": "2026-10-26",
+  "handle": "tour-de-force",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-toureforce-a-front_compressed.webp?v=1779111384",
+  "platform": "shopify",
+  "product_id": "9974658957",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "430",
+   "Brazil",
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Ethiopia",
+   "Feature",
+   "Guatemala",
+   "Internal-SHOW",
+   "OCS-HIDE",
+   "Retail",
+   "Samples-SHOW",
+   "blend",
+   "can",
+   "espresso",
+   "meta-related-collection-dark-roasted-coffees-retail",
+   "wholesale-HIDE"
+  ],
+  "title": "Tour de Force",
+  "url": "https://jitteryjoes.com/products/tour-de-force",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287290189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287290253"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ },
+ {
+  "body_hash": "676017ef93115712",
+  "first_seen": "2026-10-26",
+  "handle": "widespread-panic-up-all-night",
+  "image": "https://cdn.shopify.com/s/files/1/1828/8259/files/jjc-can-12oz-blend-dark-widespreadpanic-upallnight-a-front_compressed.webp?v=1782158280",
+  "platform": "shopify",
+  "product_id": "9974661325",
+  "product_type": "Coffee",
+  "roaster_slug": "jitteryjoes",
+  "tags": [
+   "Coffee",
+   "Coffees",
+   "Dark",
+   "Feature",
+   "Nicaragua",
+   "OCS-HIDE",
+   "Partnership",
+   "Proving",
+   "Proving Grounds",
+   "Retail",
+   "Up",
+   "Up All",
+   "Up All Night",
+   "blend",
+   "can",
+   "dark roast",
+   "meta-related-collection-the-music-coffee-series",
+   "music",
+   "music series",
+   "pan",
+   "panic",
+   "partnerships",
+   "wholesale-HIDE",
+   "wide",
+   "widespread",
+   "wp"
+  ],
+  "title": "Widespread Panic Up All Night",
+  "url": "https://jitteryjoes.com/products/widespread-panic-up-all-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Whole Bean",
+    "variant_id": "41287283789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz Can / Medium Grind",
+    "variant_id": "41287283853"
+   }
+  ],
+  "vendor": "Jittery Joe's"
+ }
+]

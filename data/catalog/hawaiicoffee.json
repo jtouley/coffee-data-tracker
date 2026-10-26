@@ -1,0 +1,2178 @@
+[
+ {
+  "body_hash": "71baffdf78b7472d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-Brazil-Med.png?v=1762467168",
+  "platform": "shopify",
+  "product_id": "8673346650340",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Brazil",
+  "url": "https://mauioma.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 Pound",
+    "variant_id": "46439150747876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "46439150780644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "46439150813412"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "7257e79f089d1ead",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-Nicaragua-Med.png?v=1762467222",
+  "platform": "shopify",
+  "product_id": "8673346683108",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Nicaragua",
+  "url": "https://mauioma.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 Pound",
+    "variant_id": "46439151010020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "46439151042788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "46439151075556"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "0797ffc78e382a93",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-CostaRica-Med.png?v=1762467304",
+  "platform": "shopify",
+  "product_id": "8673346715876",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Costa Rica",
+  "url": "https://mauioma.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 Pound",
+    "variant_id": "46439150911716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz",
+    "variant_id": "46439150944484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz",
+    "variant_id": "46439150977252"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "11e32c49e458def1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-Guatemala-Med.png?v=1764038216",
+  "platform": "shopify",
+  "product_id": "8673346781412",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Guatemala",
+  "url": "https://mauioma.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 Pound",
+    "variant_id": "46439151108324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "46439151141092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "46439151173860"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "d9d54c2191730eb3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Decaf-Drk.png?v=1761258969",
+  "platform": "shopify",
+  "product_id": "8673346879716",
+  "product_type": "Decaf & Flavored",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "dark-roast",
+   "decaf-and-flavored",
+   "grind-option"
+  ],
+  "title": "Colombia Decaf - Espresso",
+  "url": "https://mauioma.com/products/colombia-decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439151337700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz",
+    "variant_id": "46439151370468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "46439151403236"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "0f08df261b65b82f",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso-full-city-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-ColomExcel-Med.png?v=1762466838",
+  "platform": "shopify",
+  "product_id": "8673346912484",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Colombian Excelso - Medium",
+  "url": "https://mauioma.com/products/colombian-excelso-full-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 Pound",
+    "variant_id": "46439151436004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "46439151468772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "46439151501540"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "3100257bf51afbbe",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-Sumatra-Med.png?v=1762467006",
+  "platform": "shopify",
+  "product_id": "8673346978020",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "international-coffee",
+   "medium-roast"
+  ],
+  "title": "Sumatra",
+  "url": "https://mauioma.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 Pound",
+    "variant_id": "46439151632612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz",
+    "variant_id": "46439151665380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz",
+    "variant_id": "46439151698148"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "1690d266cea541b7",
+  "first_seen": "2026-10-26",
+  "handle": "kona-prime",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_Kona_Typica.png?v=1761258601",
+  "platform": "shopify",
+  "product_id": "8673347207396",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Kona Prime",
+  "url": "https://mauioma.com/products/kona-prime",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 140.0,
+    "title": "2 Pound",
+    "variant_id": "46439152320740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 72.0,
+    "title": "16 oz",
+    "variant_id": "46439152353508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "12 oz",
+    "variant_id": "46439152386276"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "38f93832033d9671",
+  "first_seen": "2026-10-26",
+  "handle": "longhis",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Longhis.png?v=1761258521",
+  "platform": "shopify",
+  "product_id": "8673347338468",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Longhi’s",
+  "url": "https://mauioma.com/products/longhis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439152713956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439152746724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439152779492"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "9e28070869b0637d",
+  "first_seen": "2026-10-26",
+  "handle": "gazebo",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Gazebo_46be153a-cc1b-41a3-b9c2-f38fe72ea667.png?v=1764096176",
+  "platform": "shopify",
+  "product_id": "8673347404004",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "The Gazebo",
+  "url": "https://mauioma.com/products/gazebo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439152910564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439152943332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439152976100"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "038570a3f8bbb294",
+  "first_seen": "2026-10-26",
+  "handle": "kau-prime",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_Kau_Field_Blend.png?v=1761257657",
+  "platform": "shopify",
+  "product_id": "8673347469540",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Ka’u Prime",
+  "url": "https://mauioma.com/products/kau-prime",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 105.0,
+    "title": "2 Pound",
+    "variant_id": "46439153205476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.0,
+    "title": "12 oz",
+    "variant_id": "46439153238244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 57.0,
+    "title": "16 oz",
+    "variant_id": "46439153271012"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "06b897eb665c313b",
+  "first_seen": "2026-10-26",
+  "handle": "davids-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-David.png?v=1761257378",
+  "platform": "shopify",
+  "product_id": "8673347502308",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option"
+  ],
+  "title": "David’s Blend",
+  "url": "https://mauioma.com/products/davids-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 Pound",
+    "variant_id": "46439153107172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "46439153139940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz",
+    "variant_id": "46439153172708"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "27a527242c197e04",
+  "first_seen": "2026-10-26",
+  "handle": "merrimans",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Merrimans.png?v=1761257517",
+  "platform": "shopify",
+  "product_id": "8673347567844",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Merriman’s",
+  "url": "https://mauioma.com/products/merrimans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 Pound",
+    "variant_id": "46439153402084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439153434852"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "16 oz",
+    "variant_id": "46439153467620"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "52376a2eca7747b7",
+  "first_seen": "2026-10-26",
+  "handle": "maui-omas-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Omas_Choice.png?v=1761257263",
+  "platform": "shopify",
+  "product_id": "8673347633380",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Maui Oma’s Choice",
+  "url": "https://mauioma.com/products/maui-omas-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439153598692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439153631460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439153664228"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "c79755656a4165ad",
+  "first_seen": "2026-10-26",
+  "handle": "jaws-breaking",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Jaws.png?v=1761257255",
+  "platform": "shopify",
+  "product_id": "8673347666148",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option"
+  ],
+  "title": "Jaws Breaking",
+  "url": "https://mauioma.com/products/jaws-breaking",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439153696996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439153729764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439153762532"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "eacaedc2984ecc62",
+  "first_seen": "2026-10-26",
+  "handle": "haleakala-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Haleakala.png?v=1761257245",
+  "platform": "shopify",
+  "product_id": "8673347698916",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Haleakala Sunrise",
+  "url": "https://mauioma.com/products/haleakala-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439153795300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439153828068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439153860836"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "3d0b42194ce7cfc4",
+  "first_seen": "2026-10-26",
+  "handle": "leodas-pie-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Partner-Leodas.png?v=1761257203",
+  "platform": "shopify",
+  "product_id": "8673347731684",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Leoda’s Kitchen & Pie Shop",
+  "url": "https://mauioma.com/products/leodas-pie-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439153893604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439153926372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439153959140"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "6f669d2c5a74f42b",
+  "first_seen": "2026-10-26",
+  "handle": "paniolo",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Paniolo.png?v=1761257195",
+  "platform": "shopify",
+  "product_id": "8673347764452",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Paniolo",
+  "url": "https://mauioma.com/products/paniolo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439153991908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154024676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154057444"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "218ae2081d36a6d3",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-o-lei",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-CafeOLei.png?v=1761257187",
+  "platform": "shopify",
+  "product_id": "8673347797220",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Café O Lei",
+  "url": "https://mauioma.com/products/cafe-o-lei",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439154188516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154221284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154254052"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "af7a48f4b51e4bd3",
+  "first_seen": "2026-10-26",
+  "handle": "italian-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-Italian_Blend.png?v=1761257033",
+  "platform": "shopify",
+  "product_id": "8673347862756",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option"
+  ],
+  "title": "Italian Blend",
+  "url": "https://mauioma.com/products/italian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439154286820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154319588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154352356"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "512dc07b07ba80f4",
+  "first_seen": "2026-10-26",
+  "handle": "upcountry-maui-kula-coffee-spice-rub",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Kula-Coffee-Rub.png?v=1750976394",
+  "platform": "shopify",
+  "product_id": "8673347895524",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee-accessories"
+  ],
+  "title": "Upcountry Maui Kula Coffee Spice Rub",
+  "url": "https://mauioma.com/products/upcountry-maui-kula-coffee-spice-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "46439154385124"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "d91759cd5ba15c8a",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-mac-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Flvr-VanMacnut_03f284cf-0611-458f-950f-8b1791b8c9ba.png?v=1761220717",
+  "platform": "shopify",
+  "product_id": "8673347993828",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "decaf-and-flavored",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Vanilla Mac-Nut",
+  "url": "https://mauioma.com/products/vanilla-mac-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439154516196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154548964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154581732"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "085ed9ed23e50474",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Flvr-CocoCrm.png?v=1761220690",
+  "platform": "shopify",
+  "product_id": "8673348026596",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "decaf-and-flavored",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Coconut Cream",
+  "url": "https://mauioma.com/products/coconut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154712804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154745572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 pound",
+    "variant_id": "47090044043492"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "6e8549ac46b8221d",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Midnight_1682930b-4fae-476a-a47a-167c7f2cb256.png?v=1761220644",
+  "platform": "shopify",
+  "product_id": "8673348059364",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option"
+  ],
+  "title": "Midnight Blend",
+  "url": "https://mauioma.com/products/midnight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439154778340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439154811108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439154843876"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "baba91fe492b14d9",
+  "first_seen": "2026-10-26",
+  "handle": "three-island-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_Hawaii_TOB.png?v=1761220606",
+  "platform": "shopify",
+  "product_id": "8673348092132",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Hawaii 3-Origin Blend",
+  "url": "https://mauioma.com/products/three-island-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 118.0,
+    "title": "2 Pound",
+    "variant_id": "46439154876644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.75,
+    "title": "12 oz",
+    "variant_id": "46439154909412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.6,
+    "title": "16 oz",
+    "variant_id": "46439154942180"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "82f21a72ba8ad45a",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Flvr-HawHazelnut.png?v=1761220575",
+  "platform": "shopify",
+  "product_id": "8673348124900",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "decaf-and-flavored",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Hawaiian Hazelnut",
+  "url": "https://mauioma.com/products/hawaiian-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439154974948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439155007716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439155040484"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "e758ab24e5e5eecc",
+  "first_seen": "2026-10-26",
+  "handle": "kihei-caffe",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Kihei_Caffe.png?v=1761220476",
+  "platform": "shopify",
+  "product_id": "8673348190436",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "blends",
+   "coffee",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Kihei Caffe Blend",
+  "url": "https://mauioma.com/products/kihei-caffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439155106020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439155138788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439155171556"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "321f742a0b441846",
+  "first_seen": "2026-10-26",
+  "handle": "seahouse",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Seahouse.png?v=1761220452",
+  "platform": "shopify",
+  "product_id": "8673348223204",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Seahouse at Napili Bay",
+  "url": "https://mauioma.com/products/seahouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439155204324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439155237092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439155269860"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "4179ac499754559a",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-mac-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Flvr-HawChocMac.png?v=1761220369",
+  "platform": "shopify",
+  "product_id": "8673348387044",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "decaf-and-flavored",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Chocolate Mac-Nut",
+  "url": "https://mauioma.com/products/chocolate-mac-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439155433700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439155466468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439155499236"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "ccad1790140cd6c5",
+  "first_seen": "2026-10-26",
+  "handle": "country-market-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-The_Country_Market.png?v=1761220280",
+  "platform": "shopify",
+  "product_id": "8673348583652",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "blends",
+   "coffee",
+   "grind-option"
+  ],
+  "title": "Country Market Blend",
+  "url": "https://mauioma.com/products/country-market-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439155859684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439155892452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439155925220"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "640d7fc7d77080e8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Decaf-Med.png?v=1761220167",
+  "platform": "shopify",
+  "product_id": "8673348649188",
+  "product_type": "Decaf & Flavored",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "dark-roast",
+   "decaf-and-flavored",
+   "grind-option"
+  ],
+  "title": "Colombia Decaf Medium",
+  "url": "https://mauioma.com/products/colombia-decaf-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439155990756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz",
+    "variant_id": "46439156023524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz",
+    "variant_id": "46439156056292"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "9d9ec58d769c0254",
+  "first_seen": "2026-10-26",
+  "handle": "imua-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Partner-Imua_Blend.png?v=1761220046",
+  "platform": "shopify",
+  "product_id": "8673348878564",
+  "product_type": "Imua",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "grind-option",
+   "imua"
+  ],
+  "title": "Imua Blend Coffee",
+  "url": "https://mauioma.com/products/imua-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 Pound",
+    "variant_id": "46439156351204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439156383972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "16 oz",
+    "variant_id": "47090025791716"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "9ebc0c3a9e85ea59",
+  "first_seen": "2026-10-26",
+  "handle": "plantation-house",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Plantation_House.png?v=1761219954",
+  "platform": "shopify",
+  "product_id": "8673348944100",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "blends",
+   "coffee",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Plantation House, Kapalua",
+  "url": "https://mauioma.com/products/plantation-house",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "16 oz",
+    "variant_id": "46439156515044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2 Pound",
+    "variant_id": "46439156547812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "46439156580580"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "6926d86061b9103f",
+  "first_seen": "2026-10-26",
+  "handle": "sugar-beach-bake-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Sugar_Beach.png?v=1761219873",
+  "platform": "shopify",
+  "product_id": "8673349107940",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option"
+  ],
+  "title": "Sugar Beach Bake Shop",
+  "url": "https://mauioma.com/products/sugar-beach-bake-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439157301476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439157334244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439157367012"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "eaa7f57bdf9d1a04",
+  "first_seen": "2026-10-26",
+  "handle": "slappy-cakes",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Restaurant-Slappy_Cakes.png?v=1761219831",
+  "platform": "shopify",
+  "product_id": "8673349173476",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Slappy Cakes",
+  "url": "https://mauioma.com/products/slappy-cakes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439157661924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439157694692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439157727460"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "efb7e8f7ffc4bb55",
+  "first_seen": "2026-10-26",
+  "handle": "lahaina-sunset",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Lahaina_Sunset.png?v=1761043004",
+  "platform": "shopify",
+  "product_id": "8673349239012",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option"
+  ],
+  "title": "Lahaina Sunset",
+  "url": "https://mauioma.com/products/lahaina-sunset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439157760228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439157792996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439157825764"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "3387255046e4232f",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-whale-foundation",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Partner-Pac_Whale_Foundation.png?v=1761042983",
+  "platform": "shopify",
+  "product_id": "8673349271780",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Pacific Whale Foundation",
+  "url": "https://mauioma.com/products/pacific-whale-foundation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439157956836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439157989604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439158022372"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "6f491b5136fe1c77",
+  "first_seen": "2026-10-26",
+  "handle": "maui-oma-gourmet-coffee-rub",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Gourmet-Coffee-Rub.png?v=1750976400",
+  "platform": "shopify",
+  "product_id": "8673349337316",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee-accessories"
+  ],
+  "title": "Maui Oma Gourmet Coffee Rub",
+  "url": "https://mauioma.com/products/maui-oma-gourmet-coffee-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Default Title",
+    "variant_id": "46439158120676"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "528541720d47260f",
+  "first_seen": "2026-10-26",
+  "handle": "moo-and-kohola",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/mookohola-1.jpg?v=1750976400",
+  "platform": "shopify",
+  "product_id": "8673349370084",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee-accessories"
+  ],
+  "title": "Mo`o and Koholā",
+  "url": "https://mauioma.com/products/moo-and-kohola",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "46439158153444"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "18fd1b5ac501cc0e",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Flvr-HawPie.png?v=1761042910",
+  "platform": "shopify",
+  "product_id": "8673349402852",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "coffee",
+   "decaf-and-flavored",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Hawaiian Pie",
+  "url": "https://mauioma.com/products/hawaiian-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439158186212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439158218980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439158251748"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "eddf92f5b9212e9e",
+  "first_seen": "2026-10-26",
+  "handle": "kumu-farms-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Partner-Kumu_Farms_5415646a-c47d-4de5-bb37-9149785139ee.png?v=1761042874",
+  "platform": "shopify",
+  "product_id": "8673349468388",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "dark-roast",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Kumu Farms Blend",
+  "url": "https://mauioma.com/products/kumu-farms-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439158448356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439158481124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439158513892"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "6a1749c549e5ad0a",
+  "first_seen": "2026-10-26",
+  "handle": "hui-noeau",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Partner-Hui_No_Eau.png?v=1761042861",
+  "platform": "shopify",
+  "product_id": "8673349533924",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option"
+  ],
+  "title": "Hui No’eau",
+  "url": "https://mauioma.com/products/hui-noeau",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439158579428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz",
+    "variant_id": "46439158612196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "46439158644964"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "178b7c964ecea9a0",
+  "first_seen": "2026-10-26",
+  "handle": "maui-c-a-b",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Custom-Maui_CAB.png?v=1761042807",
+  "platform": "shopify",
+  "product_id": "8673349730532",
+  "product_type": "Restaurant, House, & Special Blends",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "blends",
+   "grind-option",
+   "medium-roast"
+  ],
+  "title": "Maui 'Oma Central American Blend",
+  "url": "https://mauioma.com/products/maui-c-a-b",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 Pound",
+    "variant_id": "46439159562468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "46439159595236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz",
+    "variant_id": "46439159628004"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "5f24b6e3dbf6eb3e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Foreign-ColomExcel-Drk.png?v=1762466759",
+  "platform": "shopify",
+  "product_id": "8673349828836",
+  "product_type": "International Coffee",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "dark-roast",
+   "grind-option",
+   "international-coffee"
+  ],
+  "title": "Colombia Excelso – Dark",
+  "url": "https://mauioma.com/products/colombian-excelso-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 Pound",
+    "variant_id": "46439159791844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz",
+    "variant_id": "46439159824612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "46439159857380"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "7868617606be9508",
+  "first_seen": "2026-10-26",
+  "handle": "ifill-cup-haleakala",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFillCup-Smbox-Haleakala.png?v=1761259358",
+  "platform": "shopify",
+  "product_id": "8777746907364",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Haleakala Sunrise",
+  "url": "https://mauioma.com/products/ifill-cup-haleakala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "12 Pack",
+    "variant_id": "46893516783844"
+   },
+   {
+    "available": true,
+    "grams": 544,
+    "price_usd": 30.0,
+    "title": "24 Pack",
+    "variant_id": "46893516816612"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "2efced93614563d3",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-haleakala-sunrise-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFill_Cup-Bigbox-Lahaina.png?v=1761388920",
+  "platform": "shopify",
+  "product_id": "8778339483876",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Lahaina Sunset",
+  "url": "https://mauioma.com/products/oma-cups-haleakala-sunrise-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "12 Pack",
+    "variant_id": "46897299030244"
+   },
+   {
+    "available": true,
+    "grams": 544,
+    "price_usd": 30.0,
+    "title": "24 Pack",
+    "variant_id": "46897299063012"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "cc99e422a5a47d40",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-lahaina-sunset-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFill_Cup-Smbox-Jaws.png?v=1761389160",
+  "platform": "shopify",
+  "product_id": "8778339746020",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Jaws Breaking",
+  "url": "https://mauioma.com/products/oma-cups-lahaina-sunset-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "12 Pack",
+    "variant_id": "46897301094628"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 30.0,
+    "title": "24 Pack",
+    "variant_id": "46897301127396"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "db744be69aef5c0d",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-jaws-breaking-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFill_Cup-Smbox-Paniolo.png?v=1761389246",
+  "platform": "shopify",
+  "product_id": "8778339975396",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Paniolo Blend",
+  "url": "https://mauioma.com/products/oma-cups-jaws-breaking-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "12 Pack",
+    "variant_id": "46897301979364"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 30.0,
+    "title": "24 Pack",
+    "variant_id": "46897302012132"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "94f5c6ac5f97b436",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-paniolo-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFill_Cup-Smbox-Paniolo_db39800a-2baa-4fc6-a9e9-3c8f66e83dbc.png?v=1761389313",
+  "platform": "shopify",
+  "product_id": "8778340073700",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Midnight Blend",
+  "url": "https://mauioma.com/products/oma-cups-paniolo-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "12 Pack",
+    "variant_id": "46897302634724"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 30.0,
+    "title": "24 Pack",
+    "variant_id": "46897302667492"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "fcd4ef501f3a78ad",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-midnight-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFill_Cup-Smbox-TOB.png?v=1761389393",
+  "platform": "shopify",
+  "product_id": "8778340335844",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - Hawai‘i 3 Origin Blend",
+  "url": "https://mauioma.com/products/oma-cups-midnight-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "12 Pack",
+    "variant_id": "46897303814372"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 44.0,
+    "title": "24 Pack",
+    "variant_id": "46897303847140"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "f0f24ad1019fd083",
+  "first_seen": "2026-10-26",
+  "handle": "100-hawaii-test-1",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_RedCat-med-Puk.png?v=1764023946",
+  "platform": "shopify",
+  "product_id": "8832443515108",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Maui, Pukalani, Red Catuai, Medium",
+  "url": "https://mauioma.com/products/100-hawaii-test-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.75,
+    "title": "12 oz",
+    "variant_id": "47084858376420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.6,
+    "title": "16 oz",
+    "variant_id": "47084858409188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 118.0,
+    "title": "2 Pound",
+    "variant_id": "47084858441956"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "1af3303affcb3469",
+  "first_seen": "2026-10-26",
+  "handle": "100-maui-red-catuai-dark-pukalani",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_RedCat-med-Puk.png?v=1764023946",
+  "platform": "shopify",
+  "product_id": "8832447316196",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Maui, Pukalani, Red Catuai, Dark",
+  "url": "https://mauioma.com/products/100-maui-red-catuai-dark-pukalani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.75,
+    "title": "12 oz",
+    "variant_id": "47084882002148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.6,
+    "title": "16 oz",
+    "variant_id": "47084882034916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 118.0,
+    "title": "2 Pound",
+    "variant_id": "47084882067684"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "9f4f4e455d3d0a4a",
+  "first_seen": "2026-10-26",
+  "handle": "100-maui-yellow-cattura-medium-pukalani",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_YellCat-med-Puk.png?v=1764021141",
+  "platform": "shopify",
+  "product_id": "8832450003172",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Maui, Pukalani, Yellow Cattura Medium",
+  "url": "https://mauioma.com/products/100-maui-yellow-cattura-medium-pukalani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.75,
+    "title": "12 oz",
+    "variant_id": "47084898091236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.6,
+    "title": "16 oz",
+    "variant_id": "47084898124004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 118.0,
+    "title": "2 Pound",
+    "variant_id": "47084898156772"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "b1fff697f5c5f66c",
+  "first_seen": "2026-10-26",
+  "handle": "100-maui-red-catuai-med-drk-pukalani-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/Hawaii_RedCat-MedDrk-Puk.png?v=1764124410",
+  "platform": "shopify",
+  "product_id": "8832453935332",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "12oz-bags",
+   "coffee",
+   "grind-option",
+   "hawaiian",
+   "medium-roast"
+  ],
+  "title": "100% Maui, Pukalani, Red Catuai, Med/Dark",
+  "url": "https://mauioma.com/products/100-maui-red-catuai-med-drk-pukalani-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.75,
+    "title": "12 oz",
+    "variant_id": "47084918604004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 59.6,
+    "title": "16 oz",
+    "variant_id": "47084918636772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 118.0,
+    "title": "2 Pound",
+    "variant_id": "47084918669540"
+   }
+  ],
+  "vendor": "mauioma"
+ },
+ {
+  "body_hash": "a7723065c012a565",
+  "first_seen": "2026-10-26",
+  "handle": "oma-cups-100-maui-red-catuai-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0740/6826/3140/files/iFillCup-New-big-Maui-RedCat.png?v=1786402734",
+  "platform": "shopify",
+  "product_id": "9185266008292",
+  "product_type": "",
+  "roaster_slug": "hawaiicoffee",
+  "tags": [
+   "Pods"
+  ],
+  "title": "‘Oma Cups - 100% Maui Red Catuai Medium Roast",
+  "url": "https://mauioma.com/products/oma-cups-100-maui-red-catuai-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "12 Pack",
+    "variant_id": "49622426714340"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 44.0,
+    "title": "24 Pack",
+    "variant_id": "49622426747108"
+   }
+  ],
+  "vendor": "mauioma"
+ }
+]

@@ -1,0 +1,960 @@
+[
+ {
+  "body_hash": "1e69db901c8e4d22",
+  "first_seen": "2026-10-26",
+  "handle": "euro-dark-blend",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "12775",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Flavored Coffee",
+   "Limited Edition",
+   "What's New"
+  ],
+  "title": "Euro Dark Blend ~LTO Spooky Brew Dark Roast",
+  "url": "https://euroroast.com/product/euro-dark-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Euro Dark Blend ~LTO Spooky Brew Dark Roast",
+    "variant_id": "12775:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25a0c28919a0232a",
+  "first_seen": "2026-10-26",
+  "handle": "boo-berry-blend",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "12779",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Flavored Coffee",
+   "Limited Edition",
+   "What's New"
+  ],
+  "title": "Boo Berry Blend ~ LTO Spooky Brew Blueberry Cinnamon Swirl",
+  "url": "https://euroroast.com/product/boo-berry-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Boo Berry Blend ~ LTO Spooky Brew Blueberry Cinnamon Swirl",
+    "variant_id": "12779:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "947c467ecf4e63fa",
+  "first_seen": "2026-10-26",
+  "handle": "african-safari-blend-2-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1656",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "African Safari Blend",
+  "url": "https://euroroast.com/product/african-safari-blend-2-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "African Safari Blend",
+    "variant_id": "1656:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc098a8d168f8ad8",
+  "first_seen": "2026-10-26",
+  "handle": "cappuccine-blend-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1665",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Cappuccine Blend",
+  "url": "https://euroroast.com/product/cappuccine-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Cappuccine Blend",
+    "variant_id": "1665:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "926fe713d86eab85",
+  "first_seen": "2026-10-26",
+  "handle": "casa-cera-espresso",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1671",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Casa Cera Espresso",
+  "url": "https://euroroast.com/product/casa-cera-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Casa Cera Espresso",
+    "variant_id": "1671:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6cc797730b198eb",
+  "first_seen": "2026-10-26",
+  "handle": "euro-dark-blend-2-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1677",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Euro Dark Blend",
+  "url": "https://euroroast.com/product/euro-dark-blend-2-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Euro Dark Blend",
+    "variant_id": "1677:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "feea8198ae515248",
+  "first_seen": "2026-10-26",
+  "handle": "european-blend-2-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1680",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "European Blend",
+  "url": "https://euroroast.com/product/european-blend-2-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "European Blend",
+    "variant_id": "1680:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "754fd8678544e308",
+  "first_seen": "2026-10-26",
+  "handle": "latte-blend-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1683",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Latte Blend",
+  "url": "https://euroroast.com/product/latte-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Latte Blend",
+    "variant_id": "1683:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff245318ce386114",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-2-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1689",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Mocha Java",
+  "url": "https://euroroast.com/product/mocha-java-2-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Mocha Java",
+    "variant_id": "1689:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c00d8b7e1324deb7",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-espresso-blend-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1695",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Pacific Espresso Blend",
+  "url": "https://euroroast.com/product/pacific-espresso-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Pacific Espresso Blend",
+    "variant_id": "1695:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b36c3e440cd1a6e6",
+  "first_seen": "2026-10-26",
+  "handle": "parisian-blend-3-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1701",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Parisian Blend",
+  "url": "https://euroroast.com/product/parisian-blend-3-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Parisian Blend",
+    "variant_id": "1701:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3df5eab60dd6d713",
+  "first_seen": "2026-10-26",
+  "handle": "7-bean-blend-3-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1710",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "7-Bean Blend",
+  "url": "https://euroroast.com/product/7-bean-blend-3-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "7-Bean Blend",
+    "variant_id": "1710:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b4ca969e5e8f92b",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-hammer-blend-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1713",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Velvet Hammer Blend",
+  "url": "https://euroroast.com/product/velvet-hammer-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Velvet Hammer Blend",
+    "variant_id": "1713:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ff765c7389e67e2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf-7-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1923",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Central &amp; South America",
+   "Decaf",
+   "Origin"
+  ],
+  "title": "Colombian Decaf",
+  "url": "https://euroroast.com/product/colombian-decaf-7-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Colombian Decaf",
+    "variant_id": "1923:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "895c9ce7ce042b65",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete-7-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1941",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Central &amp; South America",
+   "Origin"
+  ],
+  "title": "Panama Boquete",
+  "url": "https://euroroast.com/product/panama-boquete-7-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Panama Boquete",
+    "variant_id": "1941:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d03f61e2ee8cb68",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1947",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Vienna Roast",
+  "url": "https://euroroast.com/product/vienna-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Vienna Roast",
+    "variant_id": "1947:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a80e69034f3608e1",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1953",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "Italian Roast",
+  "url": "https://euroroast.com/product/italian-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Italian Roast",
+    "variant_id": "1953:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51fcdb1d991f46e9",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1959",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Decaf"
+  ],
+  "title": "French Roast",
+  "url": "https://euroroast.com/product/french-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "French Roast",
+    "variant_id": "1959:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4611d57df3ae79ab",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-7-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1965",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Origin",
+   "Pacific"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://euroroast.com/product/papua-new-guinea-7-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Papua New Guinea",
+    "variant_id": "1965:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97b582cebf2b9212",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1968",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Origin",
+   "Pacific"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://euroroast.com/product/sumatra-mandheling-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Sumatra Mandheling",
+    "variant_id": "1968:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97b582cebf2b9212",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-dark-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1974",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Origin",
+   "Pacific"
+  ],
+  "title": "Sumatra Mandheling Dark",
+  "url": "https://euroroast.com/product/sumatra-mandheling-dark-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Sumatra Mandheling Dark",
+    "variant_id": "1974:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "688c3773fce5077f",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-ingoboka-7-2",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1992",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Origin",
+   "Premium - Exotic Coffees"
+  ],
+  "title": "Rwanda Ingoboka ~ Single Origin Light Roast",
+  "url": "https://euroroast.com/product/rwanda-ingoboka-7-2/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Rwanda Ingoboka ~ Single Origin Light Roast",
+    "variant_id": "1992:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "2067",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Flavored Coffee"
+  ],
+  "title": "French Vanilla ~ Dark Roast",
+  "url": "https://euroroast.com/product/french-vanilla-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "French Vanilla ~ Dark Roast",
+    "variant_id": "2067:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kona-macadamia-nut-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "2525",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Flavored Coffee"
+  ],
+  "title": "Kona Macadamia Nut",
+  "url": "https://euroroast.com/product/kona-macadamia-nut-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Kona Macadamia Nut",
+    "variant_id": "2525:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a6b6c94f0c18c447",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-vienna-decaf",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "5467",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Vienna Decaf",
+  "url": "https://euroroast.com/product/fair-trade-organic-vienna-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Fair Trade Organic Vienna Decaf",
+    "variant_id": "5467:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51fb886aa2188643",
+  "first_seen": "2026-10-26",
+  "handle": "peoples-organic-coffee-guatemala-huehuetenango",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "5692",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Central &amp; South America",
+   "Fair Trade Organic",
+   "Origin"
+  ],
+  "title": "Peoples Organic Coffee Guatemala Huehuetenango",
+  "url": "https://euroroast.com/product/peoples-organic-coffee-guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Peoples Organic Coffee Guatemala Huehuetenango",
+    "variant_id": "5692:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16e6db08178d6d10",
+  "first_seen": "2026-10-26",
+  "handle": "peoples-organic-coffee-peruvian-sky-decaf",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "5741",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Central &amp; South America",
+   "Decaf",
+   "Fair Trade Organic",
+   "Origin"
+  ],
+  "title": "Peoples Organic Coffee Peruvian Sky Decaf",
+  "url": "https://euroroast.com/product/peoples-organic-coffee-peruvian-sky-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Peoples Organic Coffee Peruvian Sky Decaf",
+    "variant_id": "5741:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a6069ad5e7c1ea6",
+  "first_seen": "2026-10-26",
+  "handle": "peoples-organic-coffee-espresso-noir",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "5746",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends",
+   "Fair Trade Organic"
+  ],
+  "title": "Peoples Organic Coffee Espresso Noir",
+  "url": "https://euroroast.com/product/peoples-organic-coffee-espresso-noir/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Peoples Organic Coffee Espresso Noir",
+    "variant_id": "5746:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd6ddbde43fa8639",
+  "first_seen": "2026-10-26",
+  "handle": "metro-blend",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "7029",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Metro Blend",
+  "url": "https://euroroast.com/product/metro-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Metro Blend",
+    "variant_id": "7029:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "smores-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "7078",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Flavored Coffee"
+  ],
+  "title": "S’mores Coffee",
+  "url": "https://euroroast.com/product/smores-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "S&#8217;mores Coffee",
+    "variant_id": "7078:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51fcdb1d991f46e9",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-french-roast-coffee",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "809",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic French Roast",
+  "url": "https://euroroast.com/product/fair-trade-organic-french-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic French Roast",
+    "variant_id": "809:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "99abbaa1f7d54c94",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-guatemala-antiqua-14",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "815",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Guatemala Antiqua",
+  "url": "https://euroroast.com/product/fair-trade-organic-guatemala-antiqua-14/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic Guatemala Antiqua",
+    "variant_id": "815:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "68271d22eb205e95",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-italian-roast-15",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "818",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Italian Roast",
+  "url": "https://euroroast.com/product/fair-trade-organic-italian-roast-15/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic Italian Roast",
+    "variant_id": "818:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "754fd8678544e308",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-latte-blend-15",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "821",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Latte Blend",
+  "url": "https://euroroast.com/product/fair-trade-organic-latte-blend-15/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic Latte Blend",
+    "variant_id": "821:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8134ccf2bb990387",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-peruvian-decaf-13",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "839",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Decaf",
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Peruvian Decaf",
+  "url": "https://euroroast.com/product/fair-trade-organic-peruvian-decaf-13/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Fair Trade Organic Peruvian Decaf",
+    "variant_id": "839:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97b582cebf2b9212",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-sumatra-mandheling-14",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "848",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Sumatra Mandheling",
+  "url": "https://euroroast.com/product/fair-trade-organic-sumatra-mandheling-14/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic Sumatra Mandheling",
+    "variant_id": "848:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d03f61e2ee8cb68",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-vienna-roast-16",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "854",
+  "product_type": "variable",
+  "roaster_slug": "euroroast",
+  "tags": [
+   "Fair Trade Organic"
+  ],
+  "title": "Fair Trade Organic Vienna Roast",
+  "url": "https://euroroast.com/product/fair-trade-organic-vienna-roast-16/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Fair Trade Organic Vienna Roast",
+    "variant_id": "854:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

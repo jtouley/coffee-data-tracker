@@ -1,0 +1,217 @@
+{
+ "10004466008248": {
+  "body_hash": "cad60394e6f67463",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "marshmallow",
+   "cocoa",
+   "black cherry"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "10024257913016": {
+  "body_hash": "b577ede968045449",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "peanut butter",
+   "cream",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "10079437553848": {
+  "body_hash": "acec9881aafb90cb",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond",
+   "caramel",
+   "citrus",
+   "creamy"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "10079439323320": {
+  "body_hash": "9f217519d77d4a7e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10628570841272": {
+  "body_hash": "d2efd29b7f26656f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "pine nuts",
+   "cocoa",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "10628572184760": {
+  "body_hash": "d15a14ffb60085a9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "orange",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "9944019501240": {
+  "body_hash": "566a07d50bd1a2a9",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "wine",
+   "strawberry"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "9948945612984": {
+  "body_hash": "6f8ac429adc42890",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "spice",
+   "herbs"
+  ],
+  "varietals": [
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "9950330323128": {
+  "body_hash": "57f624d75675267e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9951647531192": {
+  "body_hash": "7bb9e9bdcefc7dd7",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "grape",
+   "caramel",
+   "citrus zest"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "9999212019896": {
+  "body_hash": "b1e64c57601dda06",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "mild kahlua",
+   "graham",
+   "mellow sweetness"
+  ],
+  "varietals": []
+ }
+}

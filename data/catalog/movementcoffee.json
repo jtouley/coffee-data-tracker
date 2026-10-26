@@ -1,0 +1,613 @@
+[
+ {
+  "body_hash": "2df72903f452d78c",
+  "first_seen": "2026-10-26",
+  "handle": "cherry-dream-2",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/CherryDream_4_e01f2bde-4ad5-40b8-8f1b-9b225d5c28f8.png?v=1788446028",
+  "platform": "shopify",
+  "product_id": "10189710328103",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Elegant",
+   "Light Roast",
+   "Natural Process"
+  ],
+  "title": "Cherry Dream",
+  "url": "https://movementcoffee.com/products/cherry-dream-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 27.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "51332565270823"
+   },
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 27.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "51332565303591"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "3ca8c93fd3e37c17",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-sangria-2",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/Sweet_Sangria_-_Option_8_2.png?v=1784121295",
+  "platform": "shopify",
+  "product_id": "10290335678759",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Natural Process",
+   "Wild"
+  ],
+  "title": "Sweet Sangria",
+  "url": "https://movementcoffee.com/products/sweet-sangria-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 240,
+    "price_usd": 30.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "51641728434471"
+   },
+   {
+    "available": false,
+    "grams": 240,
+    "price_usd": 30.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "51641728467239"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "a6edc47ecd7fa53e",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-tart",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/Alma_Negra.png?v=1785087810",
+  "platform": "shopify",
+  "product_id": "10297067307303",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Natural Process",
+   "Wild"
+  ],
+  "title": "Sweet Tart",
+  "url": "https://movementcoffee.com/products/sweet-tart",
+  "variants": [
+   {
+    "available": false,
+    "grams": 240,
+    "price_usd": 25.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "51657749332263"
+   },
+   {
+    "available": false,
+    "grams": 240,
+    "price_usd": 25.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "51657749365031"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "d07746c661fd7ab1",
+  "first_seen": "2026-10-26",
+  "handle": "la-comarca",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/ComarcaMedWB.png?v=1785168974",
+  "platform": "shopify",
+  "product_id": "10314301636903",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Medium Roast",
+   "Traditional",
+   "Washed Process"
+  ],
+  "title": "La Comarca",
+  "url": "https://movementcoffee.com/products/la-comarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "300 Grams / Whole Bean / Medium Roast",
+    "variant_id": "51718954287399"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "300 Grams / Ground / Medium Roast",
+    "variant_id": "51718954320167"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "300 Grams / Whole Bean / Dark Roast",
+    "variant_id": "51769630654759"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "300 Grams / Ground / Dark Roast",
+    "variant_id": "51769630687527"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "0f2e2f393ba1f966",
+  "first_seen": "2026-10-26",
+  "handle": "wildflower",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/FLORALSTEMPLATE.png?v=1786231181",
+  "platform": "shopify",
+  "product_id": "10332876177703",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Elegant",
+   "Light Roast",
+   "Washed Process"
+  ],
+  "title": "Wildflower",
+  "url": "https://movementcoffee.com/products/wildflower",
+  "variants": [
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 26.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "51819163156775"
+   },
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 26.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "51819163189543"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "7da47302f37e0b6d",
+  "first_seen": "2026-10-26",
+  "handle": "trick-or-treat",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/trick-or-treat-label-v2-traditional.png?v=1792702505",
+  "platform": "shopify",
+  "product_id": "10496889651495",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Traditional",
+   "Washed Process"
+  ],
+  "title": "Trick or Treat",
+  "url": "https://movementcoffee.com/products/trick-or-treat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 22.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "52380922904871"
+   },
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 22.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "52380961014055"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "43164d36fa0c142b",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/HB_GR_300g_1_a0adecc8-a235-4d1b-837c-078b00349b39.png?v=1781873077",
+  "platform": "shopify",
+  "product_id": "8023379280167",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Traditional",
+   "Washed Process",
+   "subscriptions"
+  ],
+  "title": "House Blend",
+  "url": "https://movementcoffee.com/products/house-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "44359809958183"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "44359809990951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345663103271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345663136039"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "68775f6d024d7374",
+  "first_seen": "2026-10-26",
+  "handle": "slow-joe-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/TEMPORARY_Slow_Joe_WHOLE_BEAN_12.png?v=1764534458",
+  "platform": "shopify",
+  "product_id": "8182290972967",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "Medium Roast",
+   "Medium-Dark Roast",
+   "Traditional",
+   "subscriptions"
+  ],
+  "title": "Slow Joe Decaf",
+  "url": "https://movementcoffee.com/products/slow-joe-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "44660100006183"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "44660100038951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345665265959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345665298727"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "c15eed1b61d8f8a9",
+  "first_seen": "2026-10-26",
+  "handle": "golden-hour-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/GH_Catimor.png?v=1782652802",
+  "platform": "shopify",
+  "product_id": "8430555922727",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Washed Process",
+   "subscriptions"
+  ],
+  "title": "Golden Hour",
+  "url": "https://movementcoffee.com/products/golden-hour-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "45638651117863"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "45638651150631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345658614055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345658646823"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "af9080c0aeb1e6b5",
+  "first_seen": "2026-10-26",
+  "handle": "honey-harvest-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/HH_WB_300g.png?v=1781872389",
+  "platform": "shopify",
+  "product_id": "8619326505255",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Honey Process",
+   "Medium Roast",
+   "Traditional",
+   "subscriptions"
+  ],
+  "title": "Honey Harvest",
+  "url": "https://movementcoffee.com/products/honey-harvest-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "47118821261607"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "47118821294375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345664053543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345664086311"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "55de2a8972649cbb",
+  "first_seen": "2026-10-26",
+  "handle": "genesis-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/Genesis_-_Arango_Geisha_Washed_2.png?v=1762780853",
+  "platform": "shopify",
+  "product_id": "8986450493735",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Elegant",
+   "Light Roast",
+   "Washed Process"
+  ],
+  "title": "Genesis",
+  "url": "https://movementcoffee.com/products/genesis-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 29.0,
+    "title": "240 Grams / Whole Bean",
+    "variant_id": "47601130570023"
+   },
+   {
+    "available": true,
+    "grams": 240,
+    "price_usd": 29.0,
+    "title": "240 Grams / Ground",
+    "variant_id": "47601130635559"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "dda1e56dad4bde32",
+  "first_seen": "2026-10-26",
+  "handle": "honey-harvest-dark-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/HH_Dark_WB_300g.png?v=1781872742",
+  "platform": "shopify",
+  "product_id": "9518539538727",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Honey Process",
+   "Traditional",
+   "subscriptions"
+  ],
+  "title": "Honey Harvest Dark",
+  "url": "https://movementcoffee.com/products/honey-harvest-dark-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "49019236647207"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "49019236712743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345664512295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345664545063"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "48fbf1b1f9238e64",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-dark-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/HB_Dark_GR_300g_3.png?v=1781873255",
+  "platform": "shopify",
+  "product_id": "9603302293799",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Traditional",
+   "Washed Process",
+   "subscriptions"
+  ],
+  "title": "House Blend Dark",
+  "url": "https://movementcoffee.com/products/house-blend-dark-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "49290947559719"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "49290947592487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345663725863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345663758631"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ },
+ {
+  "body_hash": "bf63074b430e2272",
+  "first_seen": "2026-10-26",
+  "handle": "golden-hour-dark-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0684/4848/5671/files/GH_Dark_Catimor.png?v=1782653024",
+  "platform": "shopify",
+  "product_id": "9682840682791",
+  "product_type": "Bag",
+  "roaster_slug": "movementcoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Traditional",
+   "Washed Process",
+   "subscriptions"
+  ],
+  "title": "Golden Hour Dark",
+  "url": "https://movementcoffee.com/products/golden-hour-dark-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Whole Bean",
+    "variant_id": "49550351761703"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.0,
+    "title": "300 Grams / Ground",
+    "variant_id": "49550351794471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Whole Bean",
+    "variant_id": "50345662775591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 Lbs / Ground",
+    "variant_id": "50345662808359"
+   }
+  ],
+  "vendor": "Movement Coffee"
+ }
+]

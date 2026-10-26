@@ -1,0 +1,25 @@
+[
+ {
+  "body_hash": "01842f0765c4dc37",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9134/8561/products/PXL_20210510_174520343.jpg?v=1620668968",
+  "platform": "shopify",
+  "product_id": "6574633549905",
+  "product_type": "",
+  "roaster_slug": "dragonsbreathcoffeeroaster",
+  "tags": [],
+  "title": "Dragon's breath coffee (peru)",
+  "url": "https://dragonsbreathcoffeeroaster.com/products/peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.5,
+    "title": "Default Title",
+    "variant_id": "39352257019985"
+   }
+  ],
+  "vendor": "dragon's breath coffee roasters"
+ }
+]

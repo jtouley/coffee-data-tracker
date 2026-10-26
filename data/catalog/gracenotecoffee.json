@@ -1,0 +1,335 @@
+[
+ {
+  "body_hash": "60e476683eaaea75",
+  "first_seen": "2026-10-26",
+  "handle": "alpha",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/ALPHA-retailbag_1d017e90-f4d1-40f6-a825-cdc364188b85.jpg?v=1740171185",
+  "platform": "shopify",
+  "product_id": "8663393992961",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Alpha",
+  "url": "https://gracenotecoffee.com/products/alpha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "45851686961409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb",
+    "variant_id": "45851686994177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.75,
+    "title": "5lb",
+    "variant_id": "45851687026945"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "4522d0e407d8e69b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/mistyspro2021.jpg?v=1738698889",
+  "platform": "shopify",
+  "product_id": "8663394189569",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Ethiopia Misty Valley - Espresso",
+  "url": "https://gracenotecoffee.com/products/ethiopia-misty-valley-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "45851687715073"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb",
+    "variant_id": "45851687780609"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb",
+    "variant_id": "45851687813377"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "00b60bfbc338e441",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-misty-valley-kayon",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/Misty2021.jpg?v=1738698985",
+  "platform": "shopify",
+  "product_id": "8663394222337",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Ethiopia Misty Valley - drip",
+  "url": "https://gracenotecoffee.com/products/ethiopia-misty-valley-kayon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz",
+    "variant_id": "45851687911681"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb",
+    "variant_id": "45851687944449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb",
+    "variant_id": "45851687977217"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "39cf44152de8d207",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-los-pinos-drip",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/Guat_Los-Pinos_26.jpg?v=1768844386",
+  "platform": "shopify",
+  "product_id": "9005573996801",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Guatemala - Finca Los Pinos 26' - drip",
+  "url": "https://gracenotecoffee.com/products/guatemala-finca-los-pinos-drip",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.7,
+    "title": "12oz",
+    "variant_id": "47500517507329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.48,
+    "title": "2lb",
+    "variant_id": "47500517540097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.72,
+    "title": "5lb",
+    "variant_id": "47500517572865"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "a21b45a7eccea7ac",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-los-pinos-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/guat_LosPinos_spro26.jpg?v=1776268355",
+  "platform": "shopify",
+  "product_id": "9005591724289",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Guatemala - Finca Los Pinos 26' - espresso",
+  "url": "https://gracenotecoffee.com/products/guatemala-finca-los-pinos-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.7,
+    "title": "12oz",
+    "variant_id": "47501607207169"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 56.48,
+    "title": "2lb",
+    "variant_id": "47501607239937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.72,
+    "title": "5lb",
+    "variant_id": "47501607272705"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "8fb70e0b7f8b5e0c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-arcoiris-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/col_decaf_rainbow_2026.jpg?v=1776268071",
+  "platform": "shopify",
+  "product_id": "9095978549505",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Colombia La Hamaca Decaf - Rainbow Huila",
+  "url": "https://gracenotecoffee.com/products/colombia-decaf-arcoiris-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "48261695111425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.5,
+    "title": "2lb",
+    "variant_id": "48261695144193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5lb",
+    "variant_id": "48261695176961"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "d58508d9c13204b8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-community-lot-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/PinkBourbonHUILA2026.jpg?v=1785788322",
+  "platform": "shopify",
+  "product_id": "9303015031041",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Colombia Huila Community Lot - Pink Bourbon",
+  "url": "https://gracenotecoffee.com/products/colombia-huila-community-lot-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz",
+    "variant_id": "50078277894401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 71.2,
+    "title": "2lb",
+    "variant_id": "50078277927169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.1,
+    "title": "5lb",
+    "variant_id": "50078277959937"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "498b0bb239d5e0ae",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino-nidia-a-morales",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/Col_NidiaAMorales_26.jpg?v=1785878384",
+  "platform": "shopify",
+  "product_id": "9303877484801",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Colombia Nariño - Nidia Adriana Morales",
+  "url": "https://gracenotecoffee.com/products/colombia-narino-nidia-a-morales",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "50119692714241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.2,
+    "title": "2lb",
+    "variant_id": "50119692747009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.4,
+    "title": "5lb",
+    "variant_id": "50119692779777"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ },
+ {
+  "body_hash": "efc0f8c3345a48e2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ab-kamwangi",
+  "image": "https://cdn.shopify.com/s/files/1/0729/4405/8625/files/kenya_kamwangiAB2026_ab4ab13a-4c5e-487e-9507-bb04e9924f90.jpg?v=1786637484",
+  "platform": "shopify",
+  "product_id": "9304050401537",
+  "product_type": "",
+  "roaster_slug": "gracenotecoffee",
+  "tags": [],
+  "title": "Kenya AB - Kamwangi",
+  "url": "https://gracenotecoffee.com/products/kenya-ab-kamwangi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "50132411515137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.2,
+    "title": "2lb",
+    "variant_id": "50132411547905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.4,
+    "title": "5lb",
+    "variant_id": "50132411580673"
+   }
+  ],
+  "vendor": "Gracenote Coffee"
+ }
+]

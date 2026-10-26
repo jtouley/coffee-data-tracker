@@ -1,0 +1,198 @@
+[
+ {
+  "body_hash": "afb0434136e0a8f4",
+  "first_seen": "2026-10-26",
+  "handle": "nonnas-roast-espresso-roast",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Copy-of-NONNA-scaled-e1620251282499.jpg",
+  "platform": "woocommerce",
+  "product_id": "27991",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Nonna’s Roast — Espresso Roast, Washed Process",
+  "url": "https://ladaliacoffee.com/product/nonnas-roast-espresso-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Nonna&#8217;s Roast &#8212; Espresso Roast, Washed Process",
+    "variant_id": "27991:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4632a044407af1ce",
+  "first_seen": "2026-10-26",
+  "handle": "trabajadora-light-medium-roast-washed-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Copy-of-trabajadora-scaled-e1620251115614.jpg",
+  "platform": "woocommerce",
+  "product_id": "27993",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Trabajadora — Light-Medium Roast, Washed Process",
+  "url": "https://ladaliacoffee.com/product/trabajadora-light-medium-roast-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Trabajadora &#8212; Light-Medium Roast, Washed Process",
+    "variant_id": "27993:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9f6d7c17efa3627",
+  "first_seen": "2026-10-26",
+  "handle": "sonrisa-light-roast-natural-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Copy-of-lightsonrisa.png",
+  "platform": "woocommerce",
+  "product_id": "27995",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [],
+  "title": "Sonrisa – Light Roast, Natural Process",
+  "url": "https://ladaliacoffee.com/product/sonrisa-light-roast-natural-process/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Sonrisa &#8211; Light Roast, Natural Process",
+    "variant_id": "27995:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d4ed0da22368024",
+  "first_seen": "2026-10-26",
+  "handle": "para-mama-light-roast-washed-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Light-Paramama-e1620249780490.png",
+  "platform": "woocommerce",
+  "product_id": "27997",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Para Mamá – Light Roast, Washed Process",
+  "url": "https://ladaliacoffee.com/product/para-mama-light-roast-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Para Mamá &#8211; Light Roast, Washed Process",
+    "variant_id": "27997:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0806c3d9a33e200",
+  "first_seen": "2026-10-26",
+  "handle": "esperanza-dark-roast-natural-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/dark-esper-1.png",
+  "platform": "woocommerce",
+  "product_id": "27999",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Esperanza – Dark Roast, Natural Process",
+  "url": "https://ladaliacoffee.com/product/esperanza-dark-roast-natural-process/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Esperanza &#8211; Dark Roast, Natural Process",
+    "variant_id": "27999:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acf33f33dd4625ee",
+  "first_seen": "2026-10-26",
+  "handle": "nica-medium-roast-washed-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Copy-of-medium-nica-e1620250254535.png",
+  "platform": "woocommerce",
+  "product_id": "28001",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Nica – Medium Roast, Washed Process",
+  "url": "https://ladaliacoffee.com/product/nica-medium-roast-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Nica &#8211; Medium Roast, Washed Process",
+    "variant_id": "28001:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84bbb4d9b75fe764",
+  "first_seen": "2026-10-26",
+  "handle": "alegria-medium-roast-natural-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Medium-alergiria.png",
+  "platform": "woocommerce",
+  "product_id": "28003",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [],
+  "title": "Alegría – Medium Roast, Natural Process",
+  "url": "https://ladaliacoffee.com/product/alegria-medium-roast-natural-process/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Alegría &#8211; Medium Roast, Natural Process",
+    "variant_id": "28003:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dba4a81f2e75eb55",
+  "first_seen": "2026-10-26",
+  "handle": "para-papa-dark-roast-washed-process",
+  "image": "https://ladaliacoffee.com/wp-content/uploads/2021/05/Dark-Papa-e1620249878334.png",
+  "platform": "woocommerce",
+  "product_id": "28005",
+  "product_type": "variable",
+  "roaster_slug": "ladaliacoffee",
+  "tags": [
+   "Ground Coffee"
+  ],
+  "title": "Para Papá – Dark Roast, Washed Process",
+  "url": "https://ladaliacoffee.com/product/para-papa-dark-roast-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Para Papá &#8211; Dark Roast, Washed Process",
+    "variant_id": "28005:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "5a6f1b07e34bcd06",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": null,
+  "platform": "generic",
+  "product_id": "365b9b9d9269",
+  "product_type": "",
+  "roaster_slug": "dmcoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://www.dmcoffee.com/product-page/kenya-aa",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ff5731cf637e8f5",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3a40ce7fd9ad",
+  "product_type": "",
+  "roaster_slug": "dmcoffee",
+  "tags": [],
+  "title": "Colombian Decaf",
+  "url": "https://www.dmcoffee.com/product-page/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1e027da2f74f1b0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": null,
+  "platform": "generic",
+  "product_id": "86bb35bb6404",
+  "product_type": "",
+  "roaster_slug": "dmcoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.dmcoffee.com/product-page/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a897857d2333851",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9eb50f506a47",
+  "product_type": "",
+  "roaster_slug": "dmcoffee",
+  "tags": [],
+  "title": "Sumatra Decaf",
+  "url": "https://www.dmcoffee.com/product-page/sumatra-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,3258 @@
+{
+ "10007267115298": {
+  "body_hash": "82336b9ac6baaaf5",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1260,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "passionfruit",
+   "yuzu",
+   "cherry",
+   "floral",
+   "polished"
+  ],
+  "varietals": [
+   "Geisha",
+   "Gesha"
+  ]
+ },
+ "10031270953250": {
+  "body_hash": "fec1942e0ee64a48",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Yemen",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "dried strawberry",
+   "green apple",
+   "rustic",
+   "layered"
+  ],
+  "varietals": [
+   "Geisha",
+   "Heirloom",
+   "Sl34"
+  ]
+ },
+ "10032649011490": {
+  "body_hash": "72f9786ea27a479a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Catuai",
+   "Parainema",
+   "Tabi"
+  ]
+ },
+ "10047780913442": {
+  "body_hash": "5050857b9bcc0af2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Obata",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "10063954805026": {
+  "body_hash": "db2ce28397a759ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "10079706382626": {
+  "body_hash": "e222be9502af7118",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Laurina",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "10082457034": {
+  "body_hash": "1189124e55e24a60",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha"
+  ]
+ },
+ "10091011997986": {
+  "body_hash": "9e640f09a7d434e9",
+  "elevation_masl_max": 2090,
+  "elevation_masl_min": 2090,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Sl28",
+   "Typica"
+  ]
+ },
+ "10094858567970": {
+  "body_hash": "602463a26ea5aa07",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Typica"
+  ]
+ },
+ "10125401063714": {
+  "body_hash": "d8dc413e39206ec4",
+  "elevation_masl_max": 2250,
+  "elevation_masl_min": 2250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Heirloom"
+  ]
+ },
+ "10132460011810": {
+  "body_hash": "5d4136bf9ba52c17",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10140579987746": {
+  "body_hash": "895d3ad7ccf459fe",
+  "elevation_masl_max": 2220,
+  "elevation_masl_min": 2220,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "10145380172066": {
+  "body_hash": "d07042b02533ad5c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "10222231748898": {
+  "body_hash": "cb2d96baedde3e42",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "floral",
+   "fruity"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "10222254719266": {
+  "body_hash": "b12d89086ec63e61",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "floral",
+   "fruity"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "10288067739938": {
+  "body_hash": "2a7a21926f02fa54",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Sl34"
+  ]
+ },
+ "10430597267746": {
+  "body_hash": "15e46459a3d6185e",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "10439041843490": {
+  "body_hash": "f93fcde0dce14474",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "10503638843682": {
+  "body_hash": "48904a9a73798cc7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Typica"
+  ]
+ },
+ "10503667286306": {
+  "body_hash": "1dc952c5deb9661a",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor"
+  ]
+ },
+ "10503708836130": {
+  "body_hash": "a80581d001315fe3",
+  "elevation_masl_max": 1920,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Pacamara",
+   "Sl28"
+  ]
+ },
+ "10530870559010": {
+  "body_hash": "f096c33b803ec870",
+  "elevation_masl_max": 1780,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "floral",
+   "fruity"
+  ],
+  "varietals": [
+   "Catuaí",
+   "Geisha",
+   "Laurina",
+   "Typica"
+  ]
+ },
+ "10540555540": {
+  "body_hash": "165d7bc37e86ebb9",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "11143613076": {
+  "body_hash": "c85d2a58a5939062",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "15347364692258": {
+  "body_hash": "aa8a22ad25ffde1e",
+  "elevation_masl_max": 750,
+  "elevation_masl_min": 750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuaí",
+   "Geisha",
+   "Laurina",
+   "Mokka",
+   "Sidra"
+  ]
+ },
+ "15364261249314": {
+  "body_hash": "76a0c89baa7a9afe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruity"
+  ],
+  "varietals": [
+   "Geisha",
+   "Maragogype",
+   "Pacamara",
+   "Pacas",
+   "Sl28"
+  ]
+ },
+ "169509158944": {
+  "body_hash": "0a752dda686716b5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Heirloom",
+   "Java",
+   "Typica"
+  ]
+ },
+ "2353556455529": {
+  "body_hash": "dce7a0948908efa7",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra",
+   "Geisha",
+   "Pink Bourbon"
+  ]
+ },
+ "3431029801065": {
+  "body_hash": "2aa95ac7b7ffcb09",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3521102512233": {
+  "body_hash": "86dd8ebc6e32ef23",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Malaysia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3541841576041": {
+  "body_hash": "938ae4e3021620b9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3597317079145": {
+  "body_hash": "3986fb955256d572",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": []
+ },
+ "3687737983081": {
+  "body_hash": "aed573377ca1532c",
+  "elevation_masl_max": 1520,
+  "elevation_masl_min": 1360,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Heirloom",
+   "Java",
+   "Yellow Bourbon"
+  ]
+ },
+ "4107167301737": {
+  "body_hash": "0b1280c8cb4faaed",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "4179120947305": {
+  "body_hash": "898604237692d66a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "4361458548841": {
+  "body_hash": "bacfa172dc4eefaf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "4361530835049": {
+  "body_hash": "474c4ae570e87426",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4429903134825": {
+  "body_hash": "daca16c4c87442d0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Eugenioides",
+   "Geisha",
+   "Gesha",
+   "Laurina",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "4433077239913": {
+  "body_hash": "414b9417538bd051",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4444632711273": {
+  "body_hash": "32e89160a936ba2a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4462844051561": {
+  "body_hash": "f2789f7142a6f187",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4462871412841": {
+  "body_hash": "4c4bea94061fa91c",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Typica"
+  ]
+ },
+ "4473987301481": {
+  "body_hash": "6ce874e07f8364bb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": []
+ },
+ "4483660578921": {
+  "body_hash": "a19307cf628e4dc7",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Typica"
+  ]
+ },
+ "4500369932393": {
+  "body_hash": "9159d0349ace12a0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4544339148905": {
+  "body_hash": "09d35256e46ea4dd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "4547099328617": {
+  "body_hash": "b843da533ef579ea",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "4588731695209": {
+  "body_hash": "61f8e4dba872a8b4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": []
+ },
+ "4636074410089": {
+  "body_hash": "875030ccb3865545",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4646004490345": {
+  "body_hash": "8fb5db4b421a2b01",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4661332082793": {
+  "body_hash": "7f92bda9f1827879",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4756190593129": {
+  "body_hash": "256e6516b21fe8f2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4768080953449": {
+  "body_hash": "718c6c8c7321865a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4793728794729": {
+  "body_hash": "134e35c1e8fdc934",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": []
+ },
+ "4834795782249": {
+  "body_hash": "32b56af961a519b8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Red Bourbon",
+   "Sl34"
+  ]
+ },
+ "4835314794601": {
+  "body_hash": "0873a5f46f6c4be5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "4852902330473": {
+  "body_hash": "14014efb6c9d0a60",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "4877062307945": {
+  "body_hash": "c67415a828a25d16",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Typica"
+  ]
+ },
+ "4877141999721": {
+  "body_hash": "53c21017a05aecc7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4882540789865": {
+  "body_hash": "fad735fbd669b04c",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Sidra",
+   "Typica"
+  ]
+ },
+ "4884818853993": {
+  "body_hash": "83765fd393f08b44",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "4888984387689": {
+  "body_hash": "fee6a08cacf3b476",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Maragogype",
+   "Pacamara",
+   "Typica"
+  ]
+ },
+ "6586932953193": {
+  "body_hash": "166482a211ff25c5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Maragogype",
+   "Pacamara",
+   "Typica"
+  ]
+ },
+ "6639015198825": {
+  "body_hash": "889c1c33968af5a6",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1260,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha",
+   "Maragogype",
+   "Pacamara",
+   "Pacas",
+   "Red Bourbon"
+  ]
+ },
+ "6662016499817": {
+  "body_hash": "9a73b7d90135cfbe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6662671269993": {
+  "body_hash": "b1a517d5a25dbd80",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "fruited cup"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Red Bourbon",
+   "Typica",
+   "Yellow Bourbon"
+  ]
+ },
+ "6685898113129": {
+  "body_hash": "a396167c25f301ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": []
+ },
+ "6692971446377": {
+  "body_hash": "66ad74039e5f3205",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha"
+  ]
+ },
+ "6704724082793": {
+  "body_hash": "1e2daa2c511d4dea",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "6721226539113": {
+  "body_hash": "8c1cf5a1318a8e04",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Geisha",
+   "Gesha",
+   "Laurina",
+   "Mokka"
+  ]
+ },
+ "6726439960681": {
+  "body_hash": "344c976c2453c177",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Gesha",
+   "Sarchimor",
+   "Villa Sarchi"
+  ]
+ },
+ "6727887323241": {
+  "body_hash": "cf337d94c681c4a0",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "6729997123689": {
+  "body_hash": "5143d98878bc25cc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "6737262084201": {
+  "body_hash": "2496a49865bb688c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "6749297541225": {
+  "body_hash": "e4e6ee1e63bdf5e8",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Sarchimor",
+   "Villa Sarchi"
+  ]
+ },
+ "6753163313257": {
+  "body_hash": "16ac081e4df231b2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha"
+  ]
+ },
+ "6763132420201": {
+  "body_hash": "a674903e87456466",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6770438701161": {
+  "body_hash": "f57a380a2ebd3fbd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Red Bourbon",
+   "Typica"
+  ]
+ },
+ "6779647426665": {
+  "body_hash": "52270145cbd2ae42",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Geisha",
+   "Gesha",
+   "Java",
+   "Maragogype"
+  ]
+ },
+ "6801108435049": {
+  "body_hash": "6df9da3ca93d6627",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Geisha",
+   "Gesha",
+   "Java",
+   "Laurina"
+  ]
+ },
+ "6812186837097": {
+  "body_hash": "de37a8222b3479de",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Typica"
+  ]
+ },
+ "6817144307817": {
+  "body_hash": "9b4b63c65a76b0a4",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Geisha",
+   "Laurina"
+  ]
+ },
+ "6848118030441": {
+  "body_hash": "55a066dd869ff99d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Catuai",
+   "Red Bourbon"
+  ]
+ },
+ "6848169607273": {
+  "body_hash": "17ac6f5a561a802f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Red Bourbon",
+   "Sl34"
+  ]
+ },
+ "6864548233321": {
+  "body_hash": "d55b8cdc45b12ca0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Malaysia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6864552657001": {
+  "body_hash": "7832342afa8e21f4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Malaysia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6880097665129": {
+  "body_hash": "1fc9c6ee45e60291",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Red Bourbon",
+   "Typica"
+  ]
+ },
+ "6918940164201": {
+  "body_hash": "4eb79a92dbc8e72b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Red Bourbon",
+   "Typica",
+   "Yellow Bourbon"
+  ]
+ },
+ "6924504989801": {
+  "body_hash": "2d2f9f07bf886855",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Gesha",
+   "Java",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "6925079216233": {
+  "body_hash": "536535e470985387",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Catuai",
+   "Red Bourbon",
+   "Typica"
+  ]
+ },
+ "6944472531049": {
+  "body_hash": "b1aad8ac8fb0c35e",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Geisha",
+   "Gesha",
+   "Pacamara"
+  ]
+ },
+ "6949089575017": {
+  "body_hash": "7224daae05baa806",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "6961094295657": {
+  "body_hash": "1b14919e60b5161e",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Red Bourbon",
+   "Typica"
+  ]
+ },
+ "6973716103273": {
+  "body_hash": "0bf54364e90fbf13",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Eugenioides"
+  ]
+ },
+ "744421982313": {
+  "body_hash": "ffd8aa7fe0ab196c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha"
+  ]
+ },
+ "8014862156066": {
+  "body_hash": "75cdd320028e6af9",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8014869954850": {
+  "body_hash": "79402b70683651cb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Geisha",
+   "Java",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "8085346681122": {
+  "body_hash": "7abafe64c22223d7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8105510699298": {
+  "body_hash": "f86fd16156d1944c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "8123770568994": {
+  "body_hash": "bd5c9b0c0a19fae5",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "8145301405986": {
+  "body_hash": "1b046c40d3069221",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Red Bourbon",
+   "Typica"
+  ]
+ },
+ "8237146112290": {
+  "body_hash": "f0f961562e8a1038",
+  "elevation_masl_max": 2440,
+  "elevation_masl_min": 2440,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Yemen",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Sl28",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "8255722094882": {
+  "body_hash": "255ecaa1bd5959a7",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "8255783600418": {
+  "body_hash": "505d553f9632f4c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8266446733602": {
+  "body_hash": "e3cf762c0484e5ed",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Geisha",
+   "Laurina"
+  ]
+ },
+ "8282096140578": {
+  "body_hash": "0689c0c889a3f007",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Maragogype",
+   "Pacamara",
+   "Typica"
+  ]
+ },
+ "8338774851874": {
+  "body_hash": "c418dec554cfde45",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8341475262754": {
+  "body_hash": "7156a9908195019f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "8426207969570": {
+  "body_hash": "8f6da07aae3e32d5",
+  "elevation_masl_max": 1000,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Typica"
+  ]
+ },
+ "8476099117346": {
+  "body_hash": "b98e4a8a6f501169",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "molasses",
+   "roasted hazelnut",
+   "gentle smoke",
+   "black cherry"
+  ],
+  "varietals": []
+ },
+ "8558752563490": {
+  "body_hash": "444506b79f294421",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1685,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "8577652719906": {
+  "body_hash": "2a7b299334b079d0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "ship together"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "8577806532898": {
+  "body_hash": "b15c979b5916194b",
+  "elevation_masl_max": 1520,
+  "elevation_masl_min": 1360,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Geisha",
+   "Gesha",
+   "Heirloom",
+   "Java"
+  ]
+ },
+ "8735880675618": {
+  "body_hash": "bd181b1dbd0ce7dd",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1260,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha",
+   "Java",
+   "Pacamara",
+   "Pacas",
+   "Red Bourbon"
+  ]
+ },
+ "8812820136226": {
+  "body_hash": "43459e71db78958f",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "8863661031714": {
+  "body_hash": "11ed9a7a3ac85ef6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Gesha",
+   "Red Bourbon",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "8871228571938": {
+  "body_hash": "041cf79d571d233c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Java"
+  ]
+ },
+ "8913852104994": {
+  "body_hash": "72d0e95463bc7fbd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Geisha",
+   "Gesha",
+   "Java",
+   "Pacamara"
+  ]
+ },
+ "8954432225570": {
+  "body_hash": "8590795ddc2ac7a3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Geisha",
+   "Java",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "8985606455586": {
+  "body_hash": "f8ff0a2ad3f9f911",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9024990150946": {
+  "body_hash": "5113a64caa6f4f2b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9095029489954": {
+  "body_hash": "207c41fc750c93c3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Laurina",
+   "Mokka",
+   "Typica"
+  ]
+ },
+ "9101430554914": {
+  "body_hash": "03b3bab524576aad",
+  "elevation_masl_max": 1000,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Maragogype",
+   "Pacamara",
+   "Typica"
+  ]
+ },
+ "9104819338": {
+  "body_hash": "e6020feb20f5fd10",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "9104976970": {
+  "body_hash": "89876b7609bdc5c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramelized sugar",
+   "roasted almond",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "9106019722": {
+  "body_hash": "542b53b81a733983",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9106043914": {
+  "body_hash": "22ba77732f19a561",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9106123338": {
+  "body_hash": "60f7885057fc5fe5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9145236810": {
+  "body_hash": "82e801241aa41b62",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "9181045850402": {
+  "body_hash": "f31e8cf41cdd6094",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9186324021538": {
+  "body_hash": "eddaed326b83746f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9224501395746": {
+  "body_hash": "29a384ad889bea8d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Mokka",
+   "Red Bourbon"
+  ]
+ },
+ "9226956996898": {
+  "body_hash": "51a502593de98e47",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Maragogype",
+   "Typica"
+  ]
+ },
+ "9272600756514": {
+  "body_hash": "b2bc972497385a49",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9283126853922": {
+  "body_hash": "1576da1e48bd415b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Typica"
+  ]
+ },
+ "9283150381346": {
+  "body_hash": "3e77121780424d2e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "cashew",
+   "red apple"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "9310816895266": {
+  "body_hash": "395935abf72b9a44",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "9340395913506": {
+  "body_hash": "460f1de6fe332d09",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Maragogype",
+   "Pacamara",
+   "Pacas",
+   "Red Bourbon",
+   "Yellow Bourbon"
+  ]
+ },
+ "9365711520034": {
+  "body_hash": "9e9bd114e1600d2f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "pineapple",
+   "blackberry",
+   "pomelo",
+   "toasted coconut"
+  ],
+  "varietals": [
+   "Geisha",
+   "Sl34",
+   "Typica"
+  ]
+ },
+ "9399453122850": {
+  "body_hash": "885f25b71c0aab7c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9408481100066": {
+  "body_hash": "68c546fdfdbf9c44",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Malaysia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9436920970": {
+  "body_hash": "f8c02f69fbd04c2e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9457067393314": {
+  "body_hash": "0eaf0e70f9e1c5cd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Laurina"
+  ]
+ },
+ "9457073291554": {
+  "body_hash": "a4d379315213add3",
+  "elevation_masl_max": 600,
+  "elevation_masl_min": 600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "mango",
+   "orange"
+  ],
+  "varietals": [
+   "Geisha",
+   "Gesha",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "9484792824098": {
+  "body_hash": "8f893a116526e03c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "hibiscus",
+   "sweet",
+   "cocoa nib",
+   "dried berries"
+  ],
+  "varietals": []
+ },
+ "9490651611426": {
+  "body_hash": "cafa80779f337946",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Java",
+   "Typica"
+  ]
+ },
+ "9496421335330": {
+  "body_hash": "f955cbf85b0d2549",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha",
+   "Pacamara",
+   "Pink Bourbon"
+  ]
+ },
+ "9523169755426": {
+  "body_hash": "ed193e2218e5389d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Heirloom",
+   "Sl34"
+  ]
+ },
+ "9530653442338": {
+  "body_hash": "9e48fab7478003e5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "9532867576098": {
+  "body_hash": "e692f241b7d54463",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "9532888514850": {
+  "body_hash": "d12bacddf9b5882f",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha",
+   "Maragogype",
+   "Pacamara",
+   "Pacas",
+   "Red Bourbon"
+  ]
+ },
+ "9537566900514": {
+  "body_hash": "c7218e073eee0145",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1260,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Gesha",
+   "Java",
+   "Pacamara",
+   "Pacas",
+   "Red Bourbon"
+  ]
+ },
+ "9598778570": {
+  "body_hash": "84f0802433206995",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "9600764084514": {
+  "body_hash": "23871dbbb546b025",
+  "elevation_masl_max": 800,
+  "elevation_masl_min": 800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "berries",
+   "jackfruit",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "9613636272418": {
+  "body_hash": "4b27c41d903f340c",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Java"
+  ]
+ },
+ "9653324153122": {
+  "body_hash": "530caf30ca09241a",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor"
+  ]
+ },
+ "9653370159394": {
+  "body_hash": "beffac00e337ab1b",
+  "elevation_masl_max": 900,
+  "elevation_masl_min": 800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor"
+  ]
+ },
+ "9684005650722": {
+  "body_hash": "14d10afe6233763e",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9725512712482": {
+  "body_hash": "f9bbd9ed67e3a29c",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha",
+   "Sl28",
+   "Typica"
+  ]
+ },
+ "9725566550306": {
+  "body_hash": "79409b134d85130e",
+  "elevation_masl_max": 1770,
+  "elevation_masl_min": 1770,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha",
+   "Sidra",
+   "Sl28",
+   "Wush Wush"
+  ]
+ },
+ "9738601988386": {
+  "body_hash": "2eb1948944914ae1",
+  "elevation_masl_max": 500,
+  "elevation_masl_min": 500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Tabi",
+   "Typica"
+  ]
+ },
+ "9764311859490": {
+  "body_hash": "c0ee6af746100d16",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Gesha",
+   "Java"
+  ]
+ },
+ "9773126975778": {
+  "body_hash": "47e9467c774717fd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9833680175394": {
+  "body_hash": "d76046e50196ac47",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Laos",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Geisha",
+   "Gesha",
+   "Java",
+   "Typica"
+  ]
+ },
+ "9844156989730": {
+  "body_hash": "a683018d9439ef6b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "9874143641890": {
+  "body_hash": "0f318ee16510fc5b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Geisha"
+  ]
+ },
+ "9934395605282": {
+  "body_hash": "1b9477bce52c6b46",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom",
+   "Typica"
+  ]
+ },
+ "9946469105954": {
+  "body_hash": "9f92cd1eb9ca6cb5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Typica"
+  ]
+ },
+ "9947124367650": {
+  "body_hash": "dc46cdaaccfa69c4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "floral",
+   "fruity"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "9951343608098": {
+  "body_hash": "760c877d5d6055b5",
+  "elevation_masl_max": 1000,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Jamaica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "9972098859298": {
+  "body_hash": "8c839a63882e9a46",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "9981109960994": {
+  "body_hash": "dbfd71a5740f831b",
+  "elevation_masl_max": 2090,
+  "elevation_masl_min": 2090,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Geisha",
+   "Sl28",
+   "Typica"
+  ]
+ },
+ "9985550483746": {
+  "body_hash": "4d77dbdedc8d0449",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Eugenioides",
+   "Geisha",
+   "Gesha",
+   "Sl28"
+  ]
+ },
+ "9990106939682": {
+  "body_hash": "2953c61d06ad6f1d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Typica"
+  ]
+ }
+}

@@ -1,0 +1,1112 @@
+[
+ {
+  "body_hash": "e4c2b3b1dcee0a2c",
+  "first_seen": "2026-10-26",
+  "handle": "salted-rosemary-shortbread",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/aa6f2efd-d85b-40c4-a521-34e0d562d96d.jpg?v=1760710781",
+  "platform": "shopify",
+  "product_id": "10097157243202",
+  "product_type": "Gifts",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "Ten Square Miles"
+  ],
+  "title": "Rosemary + Sea Salt Shortbread -- Oven Baked Shortbread Cookies 8oz",
+  "url": "https://www.ithacacoffee.com/products/salted-rosemary-shortbread",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "51363856810306"
+   }
+  ],
+  "vendor": "V124"
+ },
+ {
+  "body_hash": "e914e0e048716e22",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon-organic-rainforest-alliance-cert",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/dd6c1519-86c3-40b8-a15d-155b83bcd52b.png?v=1775064609",
+  "platform": "shopify",
+  "product_id": "10197832761666",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Bali Blue Moon Organic",
+  "url": "https://www.ithacacoffee.com/products/bali-blue-moon-organic-rainforest-alliance-cert",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5LB",
+    "variant_id": "51768421318978"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.98,
+    "title": "2LB",
+    "variant_id": "51768421351746"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 21.99,
+    "title": "BULK",
+    "variant_id": "51793543102786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "52086873391426"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-purple-leaf-3-oz-jar",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/kenya_purple.png?v=1770221822",
+  "platform": "shopify",
+  "product_id": "10225116021058",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BLACK TEA",
+   "TEA"
+  ],
+  "title": "KENYA PURPLE LEAF 3 oz JAR",
+  "url": "https://www.ithacacoffee.com/products/kenya-purple-leaf-3-oz-jar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.99,
+    "title": "Default Title",
+    "variant_id": "51907052536130"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "18691125d609bcf3",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani-natural-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/847427bc-72b6-4977-b97c-66bcf2533e13.png?v=1773767859",
+  "platform": "shopify",
+  "product_id": "10230672523586",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "BALI KINTAMANI NATURAL ORGANIC",
+  "url": "https://www.ithacacoffee.com/products/bali-kintamani-natural-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "BULK",
+    "variant_id": "51932475031874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2lb",
+    "variant_id": "51932475064642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "51932475097410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "52118714417474"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "e1e012ae079817d3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/2d6ccf9a-d8cc-490e-8218-32abced9daf9.png?v=1772555974",
+  "platform": "shopify",
+  "product_id": "10253580009794",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "COLOMBIA HUILA PINK BOURBON",
+  "url": "https://www.ithacacoffee.com/products/colombia-huila-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "BULK",
+    "variant_id": "52118381199682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "52118381232450"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.98,
+    "title": "2lb",
+    "variant_id": "52118381265218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.95,
+    "title": "5lb",
+    "variant_id": "52118381297986"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "b8182384fbbf4d5e",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-kuta-a-x",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/f8f8c2fa-2c54-4f41-bb3a-6d70c2f06854.png?v=1774533139",
+  "platform": "shopify",
+  "product_id": "10253617725762",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "PAPUA NEW GUINEA KUTA A/X",
+  "url": "https://www.ithacacoffee.com/products/papua-new-guinea-kuta-a-x",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "52118700360002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "52118700392770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "52118700425538"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "7aa345cabff8659a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-amarillo",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/8c25c0e3-d62b-42a8-80d1-fc016243a1e6.png?v=1775065969",
+  "platform": "shopify",
+  "product_id": "10253623492930",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "Colombia Huila, Amarillo",
+  "url": "https://www.ithacacoffee.com/products/colombia-huila-amarillo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "BULK",
+    "variant_id": "52118725296450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "52118725329218"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.98,
+    "title": "2LB",
+    "variant_id": "52118725361986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.95,
+    "title": "5LB",
+    "variant_id": "52118725394754"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "68a55837cf27f7b4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-double-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/1076d281-7efa-4a31-beb7-98d5c4c016bd.png?v=1783539345",
+  "platform": "shopify",
+  "product_id": "10336301547842",
+  "product_type": "",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "COLOMBIA HUILA DOUBLE FERMENT",
+  "url": "https://www.ithacacoffee.com/products/colombia-huila-double-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "53468862021954"
+   }
+  ],
+  "vendor": "Ithaca Coffee Company"
+ },
+ {
+  "body_hash": "39ae03c96cd0bb7f",
+  "first_seen": "2026-10-26",
+  "handle": "garden-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/de5c137c-c53a-44f0-a28e-bc62ff7f297d.png?v=1783451759",
+  "platform": "shopify",
+  "product_id": "10404801872194",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "Garden Blend",
+  "url": "https://www.ithacacoffee.com/products/garden-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 19.99,
+    "title": "BULK",
+    "variant_id": "54961914282306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "54961914315074"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "54961914347842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "54961914380610"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "1ed53c468c1b40e4",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-mbizi-kamonyi",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/rwanda_mbizi_kamonyi.png?v=1788457969",
+  "platform": "shopify",
+  "product_id": "10512267444546",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Rwanda Mbizi Kamonyi",
+  "url": "https://www.ithacacoffee.com/products/rwanda-mbizi-kamonyi",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.99,
+    "title": "BULK",
+    "variant_id": "56085144011074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "56085144043842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "56085144076610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "56085144109378"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "629c9b6b7d4e2166",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-thirikwa-gakuyu-ini",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/Kenya_Thirikwa_Gakuyu-ini.jpg?v=1789139617",
+  "platform": "shopify",
+  "product_id": "10522897219906",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Kenya AA Thirikwa Gakuyu-ini",
+  "url": "https://www.ithacacoffee.com/products/kenya-aa-thirikwa-gakuyu-ini",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12oz",
+    "variant_id": "56140636815682"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "56140636848450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "56140636881218"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "11c93987f0199003",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-sample-bag-2-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/a84ddc69-8468-48cf-8a30-7efa45a30dc7.png?v=1783708869",
+  "platform": "shopify",
+  "product_id": "4689113055331",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "COFFEE",
+   "ORGANIC",
+   "Packaged Coffee"
+  ],
+  "title": "Coffee Sample Bag 2 oz.",
+  "url": "https://www.ithacacoffee.com/products/coffee-sample-bag-2-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 4.99,
+    "title": "ITHACA BLEND",
+    "variant_id": "32988983394403"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 4.99,
+    "title": "ITHACA GORGES",
+    "variant_id": "32988983427171"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 4.99,
+    "title": "CUPPA JOE",
+    "variant_id": "32988983492707"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 4.99,
+    "title": "CORNELL",
+    "variant_id": "32988983558243"
+   },
+   {
+    "available": true,
+    "grams": 91,
+    "price_usd": 4.99,
+    "title": "ROAD TRIP BLEND",
+    "variant_id": "50486248800578"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "d13521e0b1f39743",
+  "first_seen": "2026-10-26",
+  "handle": "red-rooster-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/aadc5a70-c8a9-4a44-bb56-454f3e26d7d9.png?v=1775065497",
+  "platform": "shopify",
+  "product_id": "4689117872227",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Red Rooster Espresso Organic",
+  "url": "https://www.ithacacoffee.com/products/red-rooster-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "32988991946851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "32988991979619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz",
+    "variant_id": "51954217943362"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "816682cff7a5a758",
+  "first_seen": "2026-10-26",
+  "handle": "powernap-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/de3af69d-1a72-4dd0-88b9-e63c8ebf3292.png?v=1775065490",
+  "platform": "shopify",
+  "product_id": "4689118101603",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "Power Nap Decaf",
+  "url": "https://www.ithacacoffee.com/products/powernap-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5LB",
+    "variant_id": "32988992340067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.98,
+    "title": "2LB",
+    "variant_id": "32988992372835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "52071352107330"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "d01418e3fe6bf3c5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/c0cc0c6b-011f-4a7e-b300-1ba557456e0d.png?v=1775065042",
+  "platform": "shopify",
+  "product_id": "4689119674467",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "French Roast Organic",
+  "url": "https://www.ithacacoffee.com/products/french-roast-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB",
+    "variant_id": "32988994895971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.98,
+    "title": "2LB",
+    "variant_id": "32988994928739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "52076220809538"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "0c00959fe3626caa",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/b5737b40-61d5-4b7f-a9cf-071d215457db.png?v=1775065312",
+  "platform": "shopify",
+  "product_id": "4689122558051",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Mexico Chiapas Tzeltal Tzotzil Organic",
+  "url": "https://www.ithacacoffee.com/products/mexican-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB",
+    "variant_id": "32988999123043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.98,
+    "title": "2LB",
+    "variant_id": "32988999155811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "52086831841602"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "4132689dfa1c42a3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/products/BulkCoffeeProducts_Guatemala.jpg?v=1773080490",
+  "platform": "shopify",
+  "product_id": "4689122787427",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Guatemala Huehuetenango ASOBAGRI Organic (bulk)",
+  "url": "https://www.ithacacoffee.com/products/guatemala-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.95,
+    "title": "5LB",
+    "variant_id": "32988999417955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.98,
+    "title": "2LB",
+    "variant_id": "51382347039042"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 21.99,
+    "title": "BULK",
+    "variant_id": "51946073653570"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "9a202ca9e03b53b2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/32800f9e-c99d-426e-b295-3947d43587f7.png?v=1775065560",
+  "platform": "shopify",
+  "product_id": "4689122852963",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Sumatra Aceh Ketiara Coop Organic",
+  "url": "https://www.ithacacoffee.com/products/sumatra-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.95,
+    "title": "5LB",
+    "variant_id": "32988999549027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.98,
+    "title": "2LB",
+    "variant_id": "32988999581795"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 22.99,
+    "title": "BULK",
+    "variant_id": "51781536547138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "52086737928514"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "70d126d916647153",
+  "first_seen": "2026-10-26",
+  "handle": "ithaca-house-blend-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/8c469eee-623f-40fa-b05f-73b2749fa561.png?v=1775065102",
+  "platform": "shopify",
+  "product_id": "4689147691107",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Ithaca House Blend Organic",
+  "url": "https://www.ithacacoffee.com/products/ithaca-house-blend-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5LB",
+    "variant_id": "32989057744995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.98,
+    "title": "2LB",
+    "variant_id": "32989057777763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz can GROUND",
+    "variant_id": "52091121303874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz can WHOLE BEAN",
+    "variant_id": "52091121336642"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "cf2d7f983f674c24",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto-tolima",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/a5911f90-28bc-4fd5-ada1-e83409382864.png?v=1775064694",
+  "platform": "shopify",
+  "product_id": "4689147756643",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Colombia Tolima AGPROCEM Co-op Organic",
+  "url": "https://www.ithacacoffee.com/products/colombia-fto-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB",
+    "variant_id": "32989057974371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.98,
+    "title": "2LB",
+    "variant_id": "32989058007139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "52086862807362"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "fdc01c99a73bc977",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/f3a795f4-1cfc-4e35-bd63-6227b1b18a0d.png?v=1775065664",
+  "platform": "shopify",
+  "product_id": "4689147986019",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "Sumatra Decaf (bulk)",
+  "url": "https://www.ithacacoffee.com/products/sumatra-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5LB",
+    "variant_id": "32989059121251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.98,
+    "title": "2LB",
+    "variant_id": "51377179754818"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 22.99,
+    "title": "BULK",
+    "variant_id": "51787239784770"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "1a3c3284569e637f",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/74f73210-4859-4135-80f9-060e78bc26bc.png?v=1775064933",
+  "platform": "shopify",
+  "product_id": "4689148674147",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://www.ithacacoffee.com/products/french-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "32989062103139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "32989062135907"
+   },
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 19.99,
+    "title": "BULK",
+    "variant_id": "51844694081858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12oz",
+    "variant_id": "52075971084610"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "27e4766e6a437327",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/432aab8b-b38f-4b6d-91ce-2874ad9bed58.png?v=1772559692",
+  "platform": "shopify",
+  "product_id": "4689148739683",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://www.ithacacoffee.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB",
+    "variant_id": "32989062266979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.98,
+    "title": "2LB",
+    "variant_id": "51382467264834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "52062916706626"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "674b63215292ccfa",
+  "first_seen": "2026-10-26",
+  "handle": "cuppa-joe-blend-fto-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/cuppa_joe_can.webp?v=1784728007",
+  "platform": "shopify",
+  "product_id": "4689478287459",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Cuppa Joe Blend Organic",
+  "url": "https://www.ithacacoffee.com/products/cuppa-joe-blend-fto-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.95,
+    "title": "5LB",
+    "variant_id": "32991232655459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.98,
+    "title": "2LB",
+    "variant_id": "32991232688227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz can GROUND",
+    "variant_id": "55059098960194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz can WHOLE BEAN",
+    "variant_id": "55059098992962"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "835026a598852204",
+  "first_seen": "2026-10-26",
+  "handle": "cornell-sustainable-blend-fto-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/92b8dfe0-42d0-4042-afc2-5c55b096ccba.webp?v=1775144611",
+  "platform": "shopify",
+  "product_id": "4689573314659",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Cornell Sustainable Blend Organic",
+  "url": "https://www.ithacacoffee.com/products/cornell-sustainable-blend-fto-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.95,
+    "title": "5LB",
+    "variant_id": "32991822905443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.98,
+    "title": "2LB",
+    "variant_id": "32991822938211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz can WHOLE BEAN",
+    "variant_id": "52833404911938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz can GROUND",
+    "variant_id": "52833404944706"
+   }
+  ],
+  "vendor": "456789"
+ },
+ {
+  "body_hash": "f2394cca54ff2d3a",
+  "first_seen": "2026-10-26",
+  "handle": "ithaca-is-gorges-blend-bulk",
+  "image": "https://cdn.shopify.com/s/files/1/0271/9229/5523/files/619b4e88-99d0-4721-bee7-c5dc8fa95651.webp?v=1776260263",
+  "platform": "shopify",
+  "product_id": "4690354765923",
+  "product_type": "Coffee",
+  "roaster_slug": "ithacacoffee",
+  "tags": [
+   "BULK COFFEE",
+   "COFFEE",
+   "ORGANIC"
+  ],
+  "title": "Ithaca Is Gorges Blend Organic",
+  "url": "https://www.ithacacoffee.com/products/ithaca-is-gorges-blend-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5LB",
+    "variant_id": "32997112512611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.98,
+    "title": "2LB",
+    "variant_id": "51382376694082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz can WHOLE BEAN",
+    "variant_id": "52830236574018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz can GROUND",
+    "variant_id": "52830236606786"
+   }
+  ],
+  "vendor": "456789"
+ }
+]

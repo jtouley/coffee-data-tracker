@@ -1,0 +1,2379 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-signature-series-1",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Mexico_Signature_siteBag_11fe7e8b-5b84-4992-807a-c55b473724c5.jpg?v=1790362704",
+  "platform": "shopify",
+  "product_id": "10313629303001",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Central America",
+   "Limited Release Single Origin",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Mexico, Signature Series",
+  "url": "https://methodicalcoffee.com/products/mexico-signature-series-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.77,
+    "title": "12oz",
+    "variant_id": "50523065909465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.44,
+    "title": "2lb",
+    "variant_id": "50523065942233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.68,
+    "title": "5lb",
+    "variant_id": "50523065975001"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-ixhuatlan-del-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/mexicoixhuatlan_siteBag.jpg?v=1791215826",
+  "platform": "shopify",
+  "product_id": "10328645402841",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Central America",
+   "Limited Release Single Origin",
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Mexico, Ixhuatlán del Café",
+  "url": "https://methodicalcoffee.com/products/mexico-ixhuatlan-del-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.17,
+    "title": "12oz",
+    "variant_id": "50610759434457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.15,
+    "title": "2lb",
+    "variant_id": "50610759467225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.84,
+    "title": "5lb",
+    "variant_id": "50610759499993"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "180c31f07cbdc346",
+  "first_seen": "2026-10-26",
+  "handle": "methodical-miir-360-traveler-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/miir1_d9cf758c-26b4-4868-a8a8-fa39a66b2a5f.jpg?v=1791483118",
+  "platform": "shopify",
+  "product_id": "10334098948313",
+  "product_type": "Merchandise",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Drinkware"
+  ],
+  "title": "Methodical MiiR 360 Traveler, Natural",
+  "url": "https://methodicalcoffee.com/products/methodical-miir-360-traveler-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 31.95,
+    "title": "Default Title",
+    "variant_id": "50630810173657"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dayglow-yessica-parra",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/dayglow_5c07a360-7dff-46c9-a3c9-577f520f3595.jpg?v=1791997314",
+  "platform": "shopify",
+  "product_id": "10345003876569",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Dayglow x Methodical",
+  "url": "https://methodicalcoffee.com/products/dayglow-yessica-parra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 30.0,
+    "title": "8.8oz",
+    "variant_id": "50692863819993"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "96c019f643e2f7e9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixlama",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/guatemala-ixlama.jpg?v=1751650974",
+  "platform": "shopify",
+  "product_id": "1503597133920",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Guatemala, Ixlama",
+  "url": "https://methodicalcoffee.com/products/guatemala-ixlama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.9,
+    "title": "12oz",
+    "variant_id": "13586185912416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.33,
+    "title": "5lb",
+    "variant_id": "13586185945184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.96,
+    "title": "2lb",
+    "variant_id": "18408454029408"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "334e7ccba0aee7f9",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-pastora",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/costa-rica-la-pastora.jpg?v=1751650920",
+  "platform": "shopify",
+  "product_id": "1503602671712",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription"
+  ],
+  "title": "Costa Rica, La Pastora",
+  "url": "https://methodicalcoffee.com/products/costa-rica-la-pastora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.32,
+    "title": "12oz",
+    "variant_id": "13586195644512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.17,
+    "title": "5lb",
+    "variant_id": "13586195677280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.56,
+    "title": "2lb",
+    "variant_id": "18408451276896"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "36bbfb82cdd2467e",
+  "first_seen": "2026-10-26",
+  "handle": "belly-warmer",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/belly_ec002734-adae-445f-ad9c-bf376407247f.jpg?v=1750438011",
+  "platform": "shopify",
+  "product_id": "1509180047456",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "__label:Best Seller"
+  ],
+  "title": "Belly Warmer",
+  "url": "https://methodicalcoffee.com/products/belly-warmer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.28,
+    "title": "12oz",
+    "variant_id": "13599835160672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.93,
+    "title": "5lb",
+    "variant_id": "13599835193440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.89,
+    "title": "2lb",
+    "variant_id": "18408438530144"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "d75cf50f5b46bebb",
+  "first_seen": "2026-10-26",
+  "handle": "blue-boy",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/blue-boy.jpg?v=1750437853",
+  "platform": "shopify",
+  "product_id": "275355271197",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Contemporary Coffee Subscription",
+   "__label:Best Seller"
+  ],
+  "title": "Blue Boy",
+  "url": "https://methodicalcoffee.com/products/blue-boy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.83,
+    "title": "2lb",
+    "variant_id": "18408442527840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.02,
+    "title": "12oz",
+    "variant_id": "3945456304157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.57,
+    "title": "5lb",
+    "variant_id": "3945456336925"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "fe8438df55535c5c",
+  "first_seen": "2026-10-26",
+  "handle": "pink-lady-1",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/pink-lady.jpg?v=1750438056",
+  "platform": "shopify",
+  "product_id": "384464584733",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "__label:Best Seller"
+  ],
+  "title": "Pink Lady",
+  "url": "https://methodicalcoffee.com/products/pink-lady-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.92,
+    "title": "2lb",
+    "variant_id": "18408461598816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.28,
+    "title": "12oz",
+    "variant_id": "5522213339165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.76,
+    "title": "5lb",
+    "variant_id": "5522213371933"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "e001d6984ab27e1a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-walter-bautista",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/WalterBautista_sitebag.jpg?v=1790785941",
+  "platform": "shopify",
+  "product_id": "4325442551904",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Honduras, Walter Bautista",
+  "url": "https://methodicalcoffee.com/products/honduras-walter-bautista",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "31047875068000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.87,
+    "title": "2lb",
+    "variant_id": "31047875133536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 148.18,
+    "title": "5lb",
+    "variant_id": "31047875199072"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "fa1eaf66ebb70d86",
+  "first_seen": "2026-10-26",
+  "handle": "collection-sample-box",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/collection_554986e6-7666-4a9c-a5d2-ff88a564bc42.jpg?v=1706816482",
+  "platform": "shopify",
+  "product_id": "5891541663909",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Methodical Collection Sample Box",
+  "url": "https://methodicalcoffee.com/products/collection-sample-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 32.0,
+    "title": "Standard",
+    "variant_id": "45150095835353"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "92ea3c5beec9b73f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dulce-signature",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/brazil-signature-series.jpg?v=1751650945",
+  "platform": "shopify",
+  "product_id": "6081553662117",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Brazil, Signature Series",
+  "url": "https://methodicalcoffee.com/products/brazil-dulce-signature",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.83,
+    "title": "12oz",
+    "variant_id": "37658882113701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.97,
+    "title": "2lb",
+    "variant_id": "37658882146469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.81,
+    "title": "5lb",
+    "variant_id": "37658882179237"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "a35079f02b846aed",
+  "first_seen": "2026-10-26",
+  "handle": "late-night",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/late-night_0172e602-e2d7-4749-885e-f314ab551c93.jpg?v=1750438099",
+  "platform": "shopify",
+  "product_id": "6180845584549",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "__label:Best Seller"
+  ],
+  "title": "Late Night",
+  "url": "https://methodicalcoffee.com/products/late-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.48,
+    "title": "12oz",
+    "variant_id": "37918415093925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.96,
+    "title": "2lb",
+    "variant_id": "37918415126693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.96,
+    "title": "5lb",
+    "variant_id": "37918415159461"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "62690d35fc9ed0e6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-andres-cardona",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/columbia-andres-cardona.jpg?v=1751651079",
+  "platform": "shopify",
+  "product_id": "6696678424741",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Colombia, Andrés Cardona",
+  "url": "https://methodicalcoffee.com/products/colombia-andres-cardona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.0,
+    "title": "12oz",
+    "variant_id": "39725565214885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2lb",
+    "variant_id": "39725565247653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "5lb",
+    "variant_id": "39725565280421"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "1c5835ac5d8f2673",
+  "first_seen": "2026-10-26",
+  "handle": "imaginary-collective",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/products/imaginary.jpg?v=1638383315",
+  "platform": "shopify",
+  "product_id": "7470477443289",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Imaginary Collective",
+  "url": "https://methodicalcoffee.com/products/imaginary-collective",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "42138863534297"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "ae4554669841b623",
+  "first_seen": "2026-10-26",
+  "handle": "dadville-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/products/dadville.jpg?v=1651259767",
+  "platform": "shopify",
+  "product_id": "7652697538777",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Collaborations"
+  ],
+  "title": "Dadville Coffee",
+  "url": "https://methodicalcoffee.com/products/dadville-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "42746788643033"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "39d341f26bae1cc9",
+  "first_seen": "2026-10-26",
+  "handle": "personalized-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/a.jpg?v=1685222725",
+  "platform": "shopify",
+  "product_id": "8152679252185",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "__label:Personalize"
+  ],
+  "title": "Personalized Coffee",
+  "url": "https://methodicalcoffee.com/products/personalized-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.9,
+    "title": "Blue Boy (medium roast) / 12oz",
+    "variant_id": "43866565574873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Pink Lady (light roast) / 12oz",
+    "variant_id": "43866565607641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Belly Warmer (dark roast) / 12oz",
+    "variant_id": "43866565640409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.3,
+    "title": "Late Night (darkest roast) / 12oz",
+    "variant_id": "43866565673177"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.45,
+    "title": "Blue Boy (medium roast) / 6oz",
+    "variant_id": "45132683575513"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 14.5,
+    "title": "Pink Lady (light roast) / 6oz",
+    "variant_id": "45132683608281"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.5,
+    "title": "Belly Warmer (dark roast) / 6oz",
+    "variant_id": "45132683641049"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.15,
+    "title": "Late Night (darkest roast) / 6oz",
+    "variant_id": "45132683673817"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "024da77ba30bc3b1",
+  "first_seen": "2026-10-26",
+  "handle": "unwind-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/unwind.jpg?v=1751651550",
+  "platform": "shopify",
+  "product_id": "8157667950809",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "__label:Decaf"
+  ],
+  "title": "Unwind Decaf",
+  "url": "https://methodicalcoffee.com/products/unwind-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.84,
+    "title": "12oz",
+    "variant_id": "43879063519449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.47,
+    "title": "2lb",
+    "variant_id": "43879063552217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.67,
+    "title": "5lb",
+    "variant_id": "43879063584985"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "924985c603e28959",
+  "first_seen": "2026-10-26",
+  "handle": "design-better-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/db1.jpg?v=1693354699",
+  "platform": "shopify",
+  "product_id": "8262930923737",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Collaborations"
+  ],
+  "title": "Design Better Coffee",
+  "url": "https://methodicalcoffee.com/products/design-better-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "44061498015961"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "f08912906053b0f5",
+  "first_seen": "2026-10-26",
+  "handle": "daydrinkers-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/dd1.jpg?v=1695215126",
+  "platform": "shopify",
+  "product_id": "8284689531097",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Daydrinkers Blend",
+  "url": "https://methodicalcoffee.com/products/daydrinkers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "44094354817241"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "40d3b4a88e65eff6",
+  "first_seen": "2026-10-26",
+  "handle": "bicycle-film-festival-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/bike.jpg?v=1696338001",
+  "platform": "shopify",
+  "product_id": "8298680058073",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Bicycle Film Festival Blend",
+  "url": "https://methodicalcoffee.com/products/bicycle-film-festival-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "44117862908121"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "bcf126951979e22b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-landmark",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Landmark_update2025.jpg?v=1764600191",
+  "platform": "shopify",
+  "product_id": "8371616088281",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Colombia, Landmark",
+  "url": "https://methodicalcoffee.com/products/colombia-landmark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.36,
+    "title": "12oz",
+    "variant_id": "44241834475737"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.12,
+    "title": "2lb",
+    "variant_id": "44241834508505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.3,
+    "title": "5lb",
+    "variant_id": "44241834541273"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "e6bbed9148d19521",
+  "first_seen": "2026-10-26",
+  "handle": "momento-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/momento.jpg?v=1702656402",
+  "platform": "shopify",
+  "product_id": "8431969992921",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Collaborations"
+  ],
+  "title": "Momento Coffee",
+  "url": "https://methodicalcoffee.com/products/momento-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "44384072761561"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "4e44d88df8c7412a",
+  "first_seen": "2026-10-26",
+  "handle": "fellows-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/12ozHouseBlend.jpg?v=1723482403",
+  "platform": "shopify",
+  "product_id": "8443547877593",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Fellows House Blend",
+  "url": "https://methodicalcoffee.com/products/fellows-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "44421028839641"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "db4635b42f47058b",
+  "first_seen": "2026-10-26",
+  "handle": "repose-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/repose_9dd5ed34-dd46-4fa2-be06-8f17b326d8e3.jpg?v=1751651634",
+  "platform": "shopify",
+  "product_id": "8501547040985",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "__label:Decaf"
+  ],
+  "title": "Repose Decaf",
+  "url": "https://methodicalcoffee.com/products/repose-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.8,
+    "title": "12oz",
+    "variant_id": "44581958254809"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.15,
+    "title": "2lb",
+    "variant_id": "44581958287577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.73,
+    "title": "5lb",
+    "variant_id": "44581958320345"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "18875c3ed71c7aef",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-origins-washed",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ethiopia-origins-washed.jpg?v=1751651374",
+  "platform": "shopify",
+  "product_id": "8542047207641",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Ethiopia, Origins - Washed",
+  "url": "https://methodicalcoffee.com/products/ethiopia-origins-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.72,
+    "title": "12oz",
+    "variant_id": "44698832437465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.37,
+    "title": "2lb",
+    "variant_id": "44698832470233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.46,
+    "title": "5lb",
+    "variant_id": "44698832503001"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "594ece7e60df0c93",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-origins-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ethiopia-origins-natural.jpg?v=1751651355",
+  "platform": "shopify",
+  "product_id": "8542103077081",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Ethiopia, Origins - Natural",
+  "url": "https://methodicalcoffee.com/products/ethiopia-origins-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.72,
+    "title": "12oz",
+    "variant_id": "44699060535513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.37,
+    "title": "2lb",
+    "variant_id": "44699060568281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.46,
+    "title": "5lb",
+    "variant_id": "44699060601049"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "455ed12cbceca141",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-willow",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/colombia-willow_d07976e4-53fd-43df-8c83-064fdb663240.jpg?v=1751651317",
+  "platform": "shopify",
+  "product_id": "8575327240409",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Colombia, Willow",
+  "url": "https://methodicalcoffee.com/products/colombia-willow",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.21,
+    "title": "12oz",
+    "variant_id": "44809261285593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.73,
+    "title": "2lb",
+    "variant_id": "44809261318361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.36,
+    "title": "5lb",
+    "variant_id": "44809261351129"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "24da484465d08ea0",
+  "first_seen": "2026-10-26",
+  "handle": "dose-china-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ChinaNatural_png.webp?v=1718738208",
+  "platform": "shopify",
+  "product_id": "8764657238233",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - China Natural",
+  "url": "https://methodicalcoffee.com/products/dose-china-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "45245111894233"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "b00607dc7cdaee63",
+  "first_seen": "2026-10-26",
+  "handle": "dose-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/DoseSignatureBlend_png.webp?v=1718737973",
+  "platform": "shopify",
+  "product_id": "8767310921945",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose Signature Blend",
+  "url": "https://methodicalcoffee.com/products/dose-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "45250802024665"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "de5c2cb647bc4a0a",
+  "first_seen": "2026-10-26",
+  "handle": "dose-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/DoseEspressoBlend_png.webp?v=1718738070",
+  "platform": "shopify",
+  "product_id": "8767314952409",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose Espresso Blend",
+  "url": "https://methodicalcoffee.com/products/dose-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45250807365849"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "6a957b9a329390fb",
+  "first_seen": "2026-10-26",
+  "handle": "dose-costa-rica-la-pastora",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/CostaRicaLP_png.webp?v=1718738143",
+  "platform": "shopify",
+  "product_id": "8767320916185",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Costa Rica La Pastora",
+  "url": "https://methodicalcoffee.com/products/dose-costa-rica-la-pastora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45250815164633"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "84ed413f5ffa9d20",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe-abore",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ethiopia-bombe-abore.jpg?v=1751650225",
+  "platform": "shopify",
+  "product_id": "8940210749657",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Ethiopia, Bombe Abore",
+  "url": "https://methodicalcoffee.com/products/ethiopia-bombe-abore",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.46,
+    "title": "12oz",
+    "variant_id": "45702292963545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.54,
+    "title": "2lb",
+    "variant_id": "45702292996313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.98,
+    "title": "5lb",
+    "variant_id": "45702293029081"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "469fc79227279fd4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-layo-teraga",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Ethiopia_Layo_Teraga.jpg?v=1751993470",
+  "platform": "shopify",
+  "product_id": "8946325094617",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Ethiopia, Layo Teraga",
+  "url": "https://methodicalcoffee.com/products/ethiopia-layo-teraga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.11,
+    "title": "12oz",
+    "variant_id": "45721236373721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.29,
+    "title": "2lb",
+    "variant_id": "45721236406489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.87,
+    "title": "5lb",
+    "variant_id": "45721236439257"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "792f1f6079dd33f8",
+  "first_seen": "2026-10-26",
+  "handle": "fellows-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/12ozEspressoBlend.jpg?v=1725615941",
+  "platform": "shopify",
+  "product_id": "8995141877977",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Fellows Espresso Blend",
+  "url": "https://methodicalcoffee.com/products/fellows-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45897832366297"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "96bc19be8aa1b06a",
+  "first_seen": "2026-10-26",
+  "handle": "all-in",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/AllInBlend_2025.jpg?v=1759181701",
+  "platform": "shopify",
+  "product_id": "9014785212633",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "All In Blend",
+  "url": "https://methodicalcoffee.com/products/all-in",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "45964892897497"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "725a62043af4625c",
+  "first_seen": "2026-10-26",
+  "handle": "oscuro",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Oscuro.jpg?v=1751651168",
+  "platform": "shopify",
+  "product_id": "9081684099289",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Oscuro",
+  "url": "https://methodicalcoffee.com/products/oscuro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.48,
+    "title": "12oz",
+    "variant_id": "46249415180505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.96,
+    "title": "2lb",
+    "variant_id": "46249415213273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.96,
+    "title": "5lb",
+    "variant_id": "46249415246041"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "2c0c6e62bc155dda",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fidel-huancas",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/PeruFidelHuancas_siteBag.jpg?v=1775244035",
+  "platform": "shopify",
+  "product_id": "9148110307545",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Perú, Fidel Huancas",
+  "url": "https://methodicalcoffee.com/products/peru-fidel-huancas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.8,
+    "title": "12oz",
+    "variant_id": "46499162915033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.07,
+    "title": "2lb",
+    "variant_id": "46499162947801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.05,
+    "title": "5lb",
+    "variant_id": "46499162980569"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-burundi-ninga-hill",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/NingaHill.jpg?v=1745412774",
+  "platform": "shopify",
+  "product_id": "9171652935897",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Burundi Ninga Hill",
+  "url": "https://methodicalcoffee.com/products/dose-burundi-ninga-hill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "46579845234905"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ethiopia-heirloom",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/EthiopiaHeirloom_1.jpg?v=1747858793",
+  "platform": "shopify",
+  "product_id": "9187692806361",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ethiopia Heirloom",
+  "url": "https://methodicalcoffee.com/products/dose-ethiopia-heirloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "46644996800729"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "ddb02367bca155fd",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-guaca",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/CostaRicaLaGuaca_siteBag.jpg?v=1782141415",
+  "platform": "shopify",
+  "product_id": "9260475777241",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Central America",
+   "Limited Release Single Origin",
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Subscription"
+  ],
+  "title": "Costa Rica, La Guaca",
+  "url": "https://methodicalcoffee.com/products/costa-rica-la-guaca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "12oz",
+    "variant_id": "46831022833881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "46831022866649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb",
+    "variant_id": "46831022899417"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-san-vicente",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/SanVicentemain.jpg?v=1757442610",
+  "platform": "shopify",
+  "product_id": "9308253552857",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Honduras, San Vicente",
+  "url": "https://methodicalcoffee.com/products/honduras-san-vicente",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.81,
+    "title": "12oz",
+    "variant_id": "47291182547161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.01,
+    "title": "2lb",
+    "variant_id": "47291182579929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.27,
+    "title": "5lb",
+    "variant_id": "47291182612697"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "india-kerehaklu",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Kerehaklu_siteBag.jpg?v=1787586992",
+  "platform": "shopify",
+  "product_id": "9337999524057",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "India, Kerehaklu",
+  "url": "https://methodicalcoffee.com/products/india-kerehaklu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.03,
+    "title": "12oz",
+    "variant_id": "47415309304025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.07,
+    "title": "2lb",
+    "variant_id": "47415309336793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 153.64,
+    "title": "5lb",
+    "variant_id": "47415309369561"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ecuador-gabriel-chambra",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ECUADORjpg.jpg?v=1763473478",
+  "platform": "shopify",
+  "product_id": "9365318893785",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ecuador, Gabriel Chambra",
+  "url": "https://methodicalcoffee.com/products/dose-ecuador-gabriel-chambra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "47510360817881"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-peru-elevacion",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/PeruElevacion.jpg?v=1764682652",
+  "platform": "shopify",
+  "product_id": "9378056372441",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Peru Elevación",
+  "url": "https://methodicalcoffee.com/products/dose-peru-elevacion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "47559219216601"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ethiopia-guji-suke-werekata",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Guji_df023345-ad06-4745-b5d7-a6c633d8920d.jpg?v=1764682968",
+  "platform": "shopify",
+  "product_id": "9378056962265",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ethiopia, Guji Suke Werekata",
+  "url": "https://methodicalcoffee.com/products/dose-ethiopia-guji-suke-werekata",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "47559221051609"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ethiopia-tagel-alemayehu",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/TagelAlemayrehu.jpg?v=1764683216",
+  "platform": "shopify",
+  "product_id": "9378057519321",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ethiopia, Tagel Alemayehu",
+  "url": "https://methodicalcoffee.com/products/dose-ethiopia-tagel-alemayehu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "47559231537369"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ethiopia-bensa-bombe",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Bombe_ae17cf37-79d0-4005-addd-985c8b6f4297.jpg?v=1764683905",
+  "platform": "shopify",
+  "product_id": "9378059550937",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ethiopia, Bensa Bombe",
+  "url": "https://methodicalcoffee.com/products/dose-ethiopia-bensa-bombe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "47559233339609"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-guatemala-ixlama",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/GuatIxlama.jpg?v=1768506305",
+  "platform": "shopify",
+  "product_id": "9417948528857",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Guatemala Ixlama",
+  "url": "https://methodicalcoffee.com/products/dose-guatemala-ixlama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "47703809720537"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-brazil-signature-series",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Brazil.jpg?v=1768506331",
+  "platform": "shopify",
+  "product_id": "9419116413145",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Brazil Signature Series",
+  "url": "https://methodicalcoffee.com/products/dose-brazil-signature-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "47709110567129"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "4670f2eeb011a590",
+  "first_seen": "2026-10-26",
+  "handle": "play-nice-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/play-nice.jpg?v=1750438077",
+  "platform": "shopify",
+  "product_id": "9561309955",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "__label:Best Seller"
+  ],
+  "title": "Play Nice",
+  "url": "https://methodicalcoffee.com/products/play-nice-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.83,
+    "title": "2lb",
+    "variant_id": "18408465334368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.36,
+    "title": "12 oz",
+    "variant_id": "3608098111517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.69,
+    "title": "5lb",
+    "variant_id": "5413333663773"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-signature-series",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Mexico_Signature_siteBag.jpg?v=1772470663",
+  "platform": "shopify",
+  "product_id": "9626884997337",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Mexico, Signature Series",
+  "url": "https://methodicalcoffee.com/products/mexico-signature-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "48018846056665"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "45d837f53fca6146",
+  "first_seen": "2026-10-26",
+  "handle": "in-person-class",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/MethodicalClasses_v1.jpg?v=1772729222",
+  "platform": "shopify",
+  "product_id": "9634866233561",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Home Espresso",
+  "url": "https://methodicalcoffee.com/products/in-person-class",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "November 13 2026",
+    "variant_id": "50532123377881"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "3732b4342d5bacbc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cuaca-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/sunset_c9cb524e-4c08-4afe-a06e-69b7a1b060fc.jpg?v=1751651489",
+  "platform": "shopify",
+  "product_id": "9641003203",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Decaf",
+   "__label:Decaf"
+  ],
+  "title": "Sunset Decaf",
+  "url": "https://methodicalcoffee.com/products/colombia-cuaca-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.5,
+    "title": "2lb",
+    "variant_id": "18408446722144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.66,
+    "title": "12 oz",
+    "variant_id": "3609445302301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.6,
+    "title": "5lb",
+    "variant_id": "5522985287709"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-ecuador-el-sauce",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ECUADOR-ELSauce.jpg?v=1775055570",
+  "platform": "shopify",
+  "product_id": "9687101210841",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Ecuador El Sauce",
+  "url": "https://methodicalcoffee.com/products/dose-ecuador-el-sauce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "48480006144217"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-burundi-lot-11",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Burundi_11.jpg?v=1775055838",
+  "platform": "shopify",
+  "product_id": "9687102324953",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Burundi, Lot 11",
+  "url": "https://methodicalcoffee.com/products/dose-burundi-lot-11",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12oz",
+    "variant_id": "48480007454937"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "aa82b492a919b3f0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-nogales-low-caff",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/UPDATEDnogales_siteBag.jpg?v=1777578418",
+  "platform": "shopify",
+  "product_id": "9719620698329",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Single Origin"
+  ],
+  "title": "Colombia, Nogales Low-Caff",
+  "url": "https://methodicalcoffee.com/products/colombia-nogales-low-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.0,
+    "title": "12oz",
+    "variant_id": "48587515494617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2lb",
+    "variant_id": "48587515527385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "5lb",
+    "variant_id": "48587515560153"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "fellow-costa-rica-la-guaca",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/CRLaGuaca_12oz_cd4eaf10-74dc-42c3-9cad-666f0383781f.png?v=1780015057",
+  "platform": "shopify",
+  "product_id": "9753981190361",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Fellow Costa Rica, La Guaca",
+  "url": "https://methodicalcoffee.com/products/fellow-costa-rica-la-guaca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "48751181791449"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "india-pearl-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/indiapearlmountain_siteBag.jpg?v=1781292868",
+  "platform": "shopify",
+  "product_id": "9766287999193",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "India, Pearl Mountain",
+  "url": "https://methodicalcoffee.com/products/india-pearl-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz",
+    "variant_id": "48790660743385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.52,
+    "title": "2lb",
+    "variant_id": "48790660776153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.35,
+    "title": "5lb",
+    "variant_id": "48790660808921"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "43a7ceddcd9daa40",
+  "first_seen": "2026-10-26",
+  "handle": "methodical-decaf-collection-sample-box",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/collection_5d91b2d9-d469-44f5-8db9-2aa874f33c8f.jpg?v=1781195132",
+  "platform": "shopify",
+  "product_id": "9769587605721",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [],
+  "title": "Methodical Decaf Collection Sample Box",
+  "url": "https://methodicalcoffee.com/products/methodical-decaf-collection-sample-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 32.0,
+    "title": "Decaf",
+    "variant_id": "48802738667737"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sara-maria-tobon",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ColombiaSaraAndMariaTobon_siteBag_24c2af19-12f0-43b7-ac1f-cf5f7c4e8173.jpg?v=1788542595",
+  "platform": "shopify",
+  "product_id": "9786873217241",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Colombia, Sara & María Tobón",
+  "url": "https://methodicalcoffee.com/products/colombia-sara-maria-tobon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.62,
+    "title": "12oz",
+    "variant_id": "48865746157785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 76.5,
+    "title": "2lb",
+    "variant_id": "48865746190553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 177.89,
+    "title": "5lb",
+    "variant_id": "48865746223321"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "ec5db13ef632ee9c",
+  "first_seen": "2026-10-26",
+  "handle": "metodico-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/MetodicoEspresso_siteBag.jpg?v=1783358085",
+  "platform": "shopify",
+  "product_id": "9794504851673",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Subscription"
+  ],
+  "title": "Metodico Espresso",
+  "url": "https://methodicalcoffee.com/products/metodico-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.64,
+    "title": "12oz",
+    "variant_id": "48910481522905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.54,
+    "title": "2lb",
+    "variant_id": "48910481555673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb",
+    "variant_id": "48910481588441"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "029a1fd5fbc36a10",
+  "first_seen": "2026-10-26",
+  "handle": "blue-boy-swift-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/SWIFT_siteBag_v2.jpg?v=1784826758",
+  "platform": "shopify",
+  "product_id": "9816231903449",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Collaborations"
+  ],
+  "title": "Blue Boy Swift Coffee",
+  "url": "https://methodicalcoffee.com/products/blue-boy-swift-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "48982510862553"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-othosololo",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ethiopiaOthosololo_siteBag_13eccd6f-66ad-4407-bf52-7ad0ad649be1.jpg?v=1784903718",
+  "platform": "shopify",
+  "product_id": "9817249284313",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Ethiopia, Othosololo",
+  "url": "https://methodicalcoffee.com/products/ethiopia-othosololo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.91,
+    "title": "12oz",
+    "variant_id": "48985622610137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 79.4,
+    "title": "2lb",
+    "variant_id": "48985622642905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5lb",
+    "variant_id": "48985622675673"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "1262c088ec29c62f",
+  "first_seen": "2026-10-26",
+  "handle": "watercolor",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Watercolor_siteBag_v2.jpg?v=1787591027",
+  "platform": "shopify",
+  "product_id": "9823630754009",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Blend",
+   "Bottomless",
+   "Rotation: Classic Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Watercolor",
+  "url": "https://methodicalcoffee.com/products/watercolor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "49013889532121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.75,
+    "title": "2lb",
+    "variant_id": "49013889564889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.7,
+    "title": "5lb",
+    "variant_id": "49013889597657"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-renacer",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/CRElRenacer_siteBag.jpg?v=1785868755",
+  "platform": "shopify",
+  "product_id": "9829201903833",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Central America",
+   "Limited Release Single Origin",
+   "Pour Over",
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin"
+  ],
+  "title": "Costa Rica, El Renacer",
+  "url": "https://methodicalcoffee.com/products/costa-rica-el-renacer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.0,
+    "title": "12oz",
+    "variant_id": "49039522005209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.9,
+    "title": "2lb",
+    "variant_id": "49039522037977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 190.7,
+    "title": "5lb",
+    "variant_id": "49039522070745"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-kenya-kiambu",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Dose_KenyaKiambu.jpg?v=1786561767",
+  "platform": "shopify",
+  "product_id": "9838643413209",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Kenya, Kiambu",
+  "url": "https://methodicalcoffee.com/products/dose-kenya-kiambu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "49081558204633"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dose-colombia-young-producer",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Dose_ColombiaYP.jpg?v=1786562602",
+  "platform": "shopify",
+  "product_id": "9838649934041",
+  "product_type": "pre-sale",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "hide"
+  ],
+  "title": "Dose - Colombia, Young Producer",
+  "url": "https://methodicalcoffee.com/products/dose-colombia-young-producer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "49081607520473"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-tekangu",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/Tekangu_siteBag_54e516f8-c74b-4ed2-8b20-af15299d919b.jpg?v=1787853511",
+  "platform": "shopify",
+  "product_id": "9857784742105",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Africa",
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Contemporary Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Kenya, Tekangu",
+  "url": "https://methodicalcoffee.com/products/kenya-tekangu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.75,
+    "title": "12oz",
+    "variant_id": "49158305448153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 79.07,
+    "title": "2lb",
+    "variant_id": "49158305480921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 183.95,
+    "title": "5lb",
+    "variant_id": "49158305513689"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-ventola-orange",
+  "image": "https://cdn.shopify.com/s/files/1/1318/1015/files/ColombiaVentolaOrange_siteBag.jpg?v=1789404236",
+  "platform": "shopify",
+  "product_id": "9887631343833",
+  "product_type": "Coffee",
+  "roaster_slug": "methodicalcoffee",
+  "tags": [
+   "Bottomless",
+   "Limited Release Single Origin",
+   "Rotation: Avant-Garde Coffee Subscription",
+   "Rotation: Roaster's Choice Subscription"
+  ],
+  "title": "Colombia, Ventola Orange",
+  "url": "https://methodicalcoffee.com/products/colombia-ventola-orange",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.89,
+    "title": "12oz",
+    "variant_id": "49245170434265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.64,
+    "title": "2lb",
+    "variant_id": "49245170467033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 190.0,
+    "title": "5lb",
+    "variant_id": "49245170499801"
+   }
+  ],
+  "vendor": "Methodical Coffee"
+ }
+]

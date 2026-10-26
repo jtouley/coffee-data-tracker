@@ -1,0 +1,1486 @@
+[
+ {
+  "body_hash": "45ce53a1afb69a40",
+  "first_seen": "2026-10-26",
+  "handle": "peru-clever-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/CleverCatuaiWashedProfilePictureTemplate_67f5cb31-2f55-44bd-b88e-9d97905fbe81.png?v=1790255010",
+  "platform": "shopify",
+  "product_id": "10304591593713",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Light Roast",
+   "Peru",
+   "americas",
+   "beans",
+   "clever",
+   "coffee",
+   "peru clever",
+   "washed"
+  ],
+  "title": "Peru Clever Catuai",
+  "url": "https://www.vigilantecoffee.com/products/peru-clever-catuai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50495072665841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "50495072698609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "50495072731377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "50495072764145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50495072796913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "50495072829681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "50495072862449"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "b54b3826abc712ec",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-orange-maceration",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/OrangeMacerationProfilePictureTemplate.png?v=1792072115",
+  "platform": "shopify",
+  "product_id": "15238584533233",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Fruit maceration",
+   "Light Roast",
+   "Nicaragua",
+   "Orange Maceration",
+   "americas",
+   "beans",
+   "coffee",
+   "creme",
+   "creme de la creme"
+  ],
+  "title": "Nicaragua Orange Maceration",
+  "url": "https://www.vigilantecoffee.com/products/nicaragua-orange-maceration",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 6oz",
+    "variant_id": "67230004379889"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 23.0,
+    "title": "Ground for French Press / 6oz",
+    "variant_id": "67230004412657"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 23.0,
+    "title": "Ground for Drip / 6oz",
+    "variant_id": "67230004445425"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 23.0,
+    "title": "Ground for Espresso / 6oz",
+    "variant_id": "67230004478193"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "7f50a47322cdb02c",
+  "first_seen": "2026-10-26",
+  "handle": "tin-lizzie-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/VIG_CFDE0011_thumb_fc5c21bd-49b1-419b-a34b-fd95e192a64d.jpg?v=1607582842",
+  "platform": "shopify",
+  "product_id": "2696644362304",
+  "product_type": "Espresso",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "dark roast",
+   "espresso"
+  ],
+  "title": "Tin Lizzie Espresso Blend",
+  "url": "https://www.vigilantecoffee.com/products/tin-lizzie-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "24621496074304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "26326640656448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "26326640689216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "26326640754752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "28843766677568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "28843784831040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "28843787616320"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "fdf90cb8be89cbba",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-kerinci",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/VIG_CFAS00078_thumb_187b8049-6c86-4df5-9feb-c52c78767507.jpg?v=1607582702",
+  "platform": "shopify",
+  "product_id": "3164545089600",
+  "product_type": "Asia & Pacific",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Indonesia",
+   "asia-pacific",
+   "beans",
+   "coffee",
+   "dark roast"
+  ],
+  "title": "Indonesia Kerinci",
+  "url": "https://www.vigilantecoffee.com/products/indonesia-kerinci",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "26354531729472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "26354531762240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "26354531795008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "26354531827776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "29389751451723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "29389751550027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "29389751582795"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "5fe60c45310c5bab",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-capim-seco",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/VIG_CFCE0072_thumb_9cd05bfc-b459-43c3-b522-0e1513d56019.jpg?v=1579618944",
+  "platform": "shopify",
+  "product_id": "3727304622144",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Brazil",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "brazil capim seco",
+   "capim seco",
+   "coffee"
+  ],
+  "title": "Brazil Capim Seco",
+  "url": "https://www.vigilantecoffee.com/products/brazil-capim-seco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "28706361868352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "28706361901120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "28706361933888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso #1 / 12oz",
+    "variant_id": "28706361966656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "29288395702336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "29288397701184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "29288399634496"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "0ff4e96383fb6e7e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-falda",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/VIG_CFCE0305_thumb_9c77e52a-7fea-4141-ad14-b76c44cc842b.jpg?v=1607582590",
+  "platform": "shopify",
+  "product_id": "3727320121408",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Colombia",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "coffee"
+  ],
+  "title": "Colombia La Falda",
+  "url": "https://www.vigilantecoffee.com/products/colombia-la-falda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "28706433204288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "28706433237056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "28706433269824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "28706433302592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "29389694140491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "29389694173259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "29389698728011"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "ce408297215aed72",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-fuego-a-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/ElFuego.jpg?v=1657121776",
+  "platform": "shopify",
+  "product_id": "3727384739904",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "americas",
+   "beans",
+   "coffee",
+   "dark roast",
+   "fuego"
+  ],
+  "title": "El Fuego: A Dark Roast",
+  "url": "https://www.vigilantecoffee.com/products/colombia-el-fuego-a-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "28706683355200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "28706683420736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "28706683486272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "28706683551808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "29388798558283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "29388798591051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "29388798623819"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "fa1dcf29189f6ea7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-caturrita",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/592A3338.jpg?v=1761741802",
+  "platform": "shopify",
+  "product_id": "3764459208768",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Colombia",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "central and south america",
+   "coffee",
+   "collaboration",
+   "washed"
+  ],
+  "title": "UMD Alumni Coffee",
+  "url": "https://www.vigilantecoffee.com/products/colombia-la-caturrita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "28865768620096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "28865768652864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "28865768685632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "28865768718400"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "acc171d959ac19cc",
+  "first_seen": "2026-10-26",
+  "handle": "fortunata",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/IMG_2697_414e0bb9-675e-4f95-bff2-32b3e0187b02.jpg?v=1565758172",
+  "platform": "shopify",
+  "product_id": "3975869988939",
+  "product_type": "Exclusive Blend",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "exclusive",
+   "fortunata-only",
+   "wholesale-only"
+  ],
+  "title": "Fortunata Blend",
+  "url": "https://www.vigilantecoffee.com/products/fortunata",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.9,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29799495729227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29799495860299"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "25c1c297c4dc194c",
+  "first_seen": "2026-10-26",
+  "handle": "cold-breezy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/coldbreeze.png?v=1591760618",
+  "platform": "shopify",
+  "product_id": "3975880343627",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Brazil",
+   "Colombia",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "coffee"
+  ],
+  "title": "The South American Cold Breezy Blend",
+  "url": "https://www.vigilantecoffee.com/products/cold-breezy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29799571783755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31842085535862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "31842087764086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "31842088419446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "31842091532406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "31842091663478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "31842096447606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "31950285275254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Cold Brew",
+    "variant_id": "31950285570166"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "community-forklift-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/IMG_2697_93f1359b-7b2b-4953-8249-50099b43e660.jpg?v=1565759098",
+  "platform": "shopify",
+  "product_id": "3975885783115",
+  "product_type": "Exclusive Blend",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "community-forklift-only",
+   "exclusive",
+   "wholesale-only"
+  ],
+  "title": "Community Forklift Coffee",
+  "url": "https://www.vigilantecoffee.com/products/community-forklift-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29799608287307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "29799608352843"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "308c3c4330f88fcf",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-las-veraneras",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/2024LasVeranerasBlackHoneyProductPicture_1.png?v=1785425265",
+  "platform": "shopify",
+  "product_id": "4328344256630",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Light Roast",
+   "americas",
+   "beans",
+   "coffee",
+   "el salvador",
+   "las veraneras"
+  ],
+  "title": "El Salvador Las Veraneras Black Honey",
+  "url": "https://www.vigilantecoffee.com/products/el-salvador-las-veraneras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31046136758390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "31046136823926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "31046136856694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground for Espresso #1 / 12oz",
+    "variant_id": "31046136889462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31046136922230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "31046136954998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "31046136987766"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "e60941a7f1aa2bc4",
+  "first_seen": "2026-10-26",
+  "handle": "natty-cheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/Natty_Cheffe_Web.jpg?v=1607582647",
+  "platform": "shopify",
+  "product_id": "4398041596022",
+  "product_type": "Africa",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Ethiopia",
+   "Light Roast",
+   "africa",
+   "beans",
+   "coffee"
+  ],
+  "title": "Ethiopia Natty Cheffe",
+  "url": "https://www.vigilantecoffee.com/products/natty-cheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31392312852598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "31392312885366"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "31392312918134"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "31392312950902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31392312983670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "31392313016438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "31392313049206"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "e687919da32559a8",
+  "first_seen": "2026-10-26",
+  "handle": "peru-tabaconas",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/Tabaconas_1.png?v=1664982942",
+  "platform": "shopify",
+  "product_id": "4533539930230",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Medium Roast",
+   "Peru",
+   "americas",
+   "beans",
+   "coffee",
+   "tabaconas"
+  ],
+  "title": "Peru Tabaconas",
+  "url": "https://www.vigilantecoffee.com/products/peru-tabaconas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31875282829430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "31875282862198"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "31875282894966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "31875287122038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31875288531062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground for Drip / 5lbs",
+    "variant_id": "31875288891510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground for French Press / 5lbs",
+    "variant_id": "31875289022582"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pitango-matrimonio",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/PitangoMATRI.png?v=1680114107",
+  "platform": "shopify",
+  "product_id": "7916537544945",
+  "product_type": "Exclusive Blend",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee",
+   "exclusive",
+   "fortunata-only",
+   "pitango-only",
+   "wholesale-only"
+  ],
+  "title": "Pitango Matrimonio",
+  "url": "https://www.vigilantecoffee.com/products/pitango-matrimonio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lbs",
+    "variant_id": "43712797540593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz",
+    "variant_id": "43839333105905"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pitango-dolcenera",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/products/PitangoDOLCE.png?v=1680114120",
+  "platform": "shopify",
+  "product_id": "7916542623985",
+  "product_type": "Exclusive Blend",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "exclusive",
+   "fortunata-only",
+   "pitango-only",
+   "wholesale-only"
+  ],
+  "title": "Pitango Dolcenera",
+  "url": "https://www.vigilantecoffee.com/products/pitango-dolcenera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "5lb",
+    "variant_id": "43712797081841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz",
+    "variant_id": "43839333630193"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "29268b784564d9f9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-dumerso",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/DumersoWashedProfilePictureTemplate.png?v=1792073794",
+  "platform": "shopify",
+  "product_id": "7921265279217",
+  "product_type": "Africa",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Ethiopia",
+   "Light Roast",
+   "africa",
+   "beans",
+   "coffee",
+   "dumerso",
+   "washed"
+  ],
+  "title": "Ethiopia Dumerso Washed",
+  "url": "https://www.vigilantecoffee.com/products/ethiopia-dumerso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43714029945073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "43714029977841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "43714030010609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "43714030043377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43714030076145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "43714030108913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "43714030141681"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "61ee3195d6c5b73e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-darkslide",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/PeruDarkslideProductPic.png?v=1690496107",
+  "platform": "shopify",
+  "product_id": "7974181667057",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Peru",
+   "americas",
+   "beans",
+   "central and south america",
+   "coffee",
+   "dark roast",
+   "darkslide",
+   "tabaconas",
+   "washed"
+  ],
+  "title": "Peru Darkslide",
+  "url": "https://www.vigilantecoffee.com/products/peru-darkslide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole bean / 5lbs",
+    "variant_id": "43886051164401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground for French Press / 5lbs",
+    "variant_id": "43886213136625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground for Drip / 5lbs",
+    "variant_id": "43886213202161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole bean / 12oz",
+    "variant_id": "43886213267697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "43886213300465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "43886213333233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "43886213366001"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "f82a221646d47af6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/ColombiaHalfCaffProductPicture.png?v=1708025584",
+  "platform": "shopify",
+  "product_id": "8127753715953",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Colombia",
+   "Medium Roast",
+   "beans",
+   "coffee",
+   "colombian",
+   "colombian coffee",
+   "decaf",
+   "half caff",
+   "half caffeine",
+   "washed"
+  ],
+  "title": "Colombia Half Caff",
+  "url": "https://www.vigilantecoffee.com/products/colombia-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44318954782961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "44318954815729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "44318954848497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "44318954881265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44318954914033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "44318954946801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "44318954979569"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "c3d2c5b05755e744",
+  "first_seen": "2026-10-26",
+  "handle": "peru-clever-sidra",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/CleverSidraProfilePicFinal.png?v=1740669797",
+  "platform": "shopify",
+  "product_id": "8759414751473",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Light Roast",
+   "Peru",
+   "americas",
+   "beans",
+   "clever",
+   "coffee",
+   "peru clever",
+   "sidra"
+  ],
+  "title": "Peru Clever Sidra",
+  "url": "https://www.vigilantecoffee.com/products/peru-clever-sidra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45963847827697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "45963847860465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "45963847893233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "45963847926001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45963847958769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "45963847991537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "45963848024305"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "2ef33360e8fb0f5e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-tbdecaf",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/TBDECAFProfilePictureTemplate.png?v=1761652176",
+  "platform": "shopify",
+  "product_id": "9344490406129",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "EA Decaf",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "coffee",
+   "decaf",
+   "mexican coffee",
+   "mexico",
+   "washed"
+  ],
+  "title": "Mexico TB Decaf",
+  "url": "https://www.vigilantecoffee.com/products/mexico-tbdecaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47062023274737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "47062023307505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "47062023340273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "47062023373041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47062023405809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "47062023438577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "47062023471345"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "69574988347b8558",
+  "first_seen": "2026-10-26",
+  "handle": "las-flores-pink-bourbon-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/LasFloresPinkBourbonDecafProfilePictureTemplate.png?v=1787930091",
+  "platform": "shopify",
+  "product_id": "9785610174705",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "2026creme",
+   "Colombia",
+   "Light Roast",
+   "americas",
+   "beans",
+   "coffee",
+   "creme",
+   "creme de la creme",
+   "decaf"
+  ],
+  "title": "Las Flores Pink Bourbon Decaf",
+  "url": "https://www.vigilantecoffee.com/products/las-flores-pink-bourbon-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 26.0,
+    "title": "Whole Bean / 6oz",
+    "variant_id": "48657479729393"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 26.0,
+    "title": "Ground for Espresso / 6oz",
+    "variant_id": "48676372119793"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 26.0,
+    "title": "Ground for Drip / 6oz",
+    "variant_id": "48676382966001"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 26.0,
+    "title": "Ground for French Press / 6oz",
+    "variant_id": "48676386177265"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ },
+ {
+  "body_hash": "903a4181260101fe",
+  "first_seen": "2026-10-26",
+  "handle": "hydro-natural-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0235/7211/9616/files/PrimosUnidosProfilePictureTemplate.png?v=1789046614",
+  "platform": "shopify",
+  "product_id": "9807401320689",
+  "product_type": "Central & South America",
+  "roaster_slug": "vigilantecoffee",
+  "tags": [
+   "Guatemala",
+   "Medium Roast",
+   "americas",
+   "beans",
+   "coffee",
+   "washed"
+  ],
+  "title": "Guatemala Primos Unidos",
+  "url": "https://www.vigilantecoffee.com/products/hydro-natural-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48721671520497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground for French Press / 12oz",
+    "variant_id": "48721671553265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground for Drip / 12oz",
+    "variant_id": "48721671586033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground for Espresso #1 / 12oz",
+    "variant_id": "48721671618801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48721671651569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "48721671684337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "Ground for French Press / 5lb",
+    "variant_id": "48721671717105"
+   }
+  ],
+  "vendor": "Vigilante Coffee Company"
+ }
+]

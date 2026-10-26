@@ -1,0 +1,157 @@
+[
+ {
+  "body_hash": "736c96ae4226a5e5",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://images.squarespace-cdn.com/content/v1/580b987cf5e2318fb3f4b694/1708953105204-HRC72KEG6VLCQ47ESYMT/Sumatra.jpg",
+  "platform": "squarespace",
+  "product_id": "580bca02e4fcb5d3621e20e1",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Fair Trade",
+   "Medium Roast"
+  ],
+  "title": "Fair Trade/ Sumatra Mandheling",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "86bb1606-ad43-45af-97a9-7864b41f2a84"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ced5d69ab1eb17fc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://static1.squarespace.com/static/580b987cf5e2318fb3f4b694/580bc82d414fb5f6e520c2f6/580c148c37c5818da2b2a1e1/1740418758116/",
+  "platform": "squarespace",
+  "product_id": "580c148c37c5818da2b2a1e1",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "566898f4-46f8-4e8a-8e5c-03bf8405ff04"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0f9cd9ba223ea0a",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-decaf",
+  "image": "https://static1.squarespace.com/static/580b987cf5e2318fb3f4b694/580bc82d414fb5f6e520c2f6/580c151337c5818da2b2a514/1479240327110/",
+  "platform": "squarespace",
+  "product_id": "580c151337c5818da2b2a514",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Brazilian Decaf",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/brazilian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "28341142-c280-4ad5-9a5a-289cc7abba1e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3468f8bcad37abe2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://static1.squarespace.com/static/580b987cf5e2318fb3f4b694/580bc82d414fb5f6e520c2f6/5829bf348419c24bb26e06a5/1479337469196/",
+  "platform": "squarespace",
+  "product_id": "5829bf348419c24bb26e06a5",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Kenya Twiga AA",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "eb8e184c-05ca-4b76-90f0-37d84b32063e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf06682b05b578ee",
+  "first_seen": "2026-10-26",
+  "handle": "fair-tradeorganic-peru-caminos-del-inca",
+  "image": "https://images.squarespace-cdn.com/content/v1/580b987cf5e2318fb3f4b694/1710339826192-01PSAMJPD4N6UZ2JWISD/Peru-Caminos-Del-Inca.jpg",
+  "platform": "squarespace",
+  "product_id": "582a10e9d482e98c4598648f",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Fair Trade",
+   "Medium Roast"
+  ],
+  "title": "Fair trade/Peru Caminos Del Inca",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/fair-tradeorganic-peru-caminos-del-inca",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "4fa95a56-28c0-47e5-b4b7-a76a1fe98494"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1af2a8672802fdd",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombia-sierra-nevada",
+  "image": "https://images.squarespace-cdn.com/content/v1/580b987cf5e2318fb3f4b694/1708953479941-XBDHXDUEJ7ELZVBB0YOV/Colombia.jpg",
+  "platform": "squarespace",
+  "product_id": "582a115046c3c4d32cae6977",
+  "product_type": "",
+  "roaster_slug": "tallcatcoffeeroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Colombia Sierra Nevada",
+  "url": "https://www.tallcatcoffeeroasters.com/shop-online/organic-colombia-sierra-nevada",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "79327aa9-52cb-49d3-ad98-cb114120678e"
+   }
+  ],
+  "vendor": ""
+ }
+]

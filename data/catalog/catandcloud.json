@@ -1,0 +1,1354 @@
+[
+ {
+  "body_hash": "066ac42ddb2a808f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cavaquinho",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/CC-BRA-CA-ProductPhotoWHITE.png?v=1769720866",
+  "platform": "shopify",
+  "product_id": "10000538927394",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "SA-CFE",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Brazil Cavaquinho Natural",
+  "url": "https://catandcloud.com/products/brazil-cavaquinho",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.65,
+    "title": "10oz / Whole Bean",
+    "variant_id": "50822409388322"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.65,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "50822409421090"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.65,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "50822409453858"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.65,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "50822409486626"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.25,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "50822409552162"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.25,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "50822409584930"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.25,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "50822409617698"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.25,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "50822409650466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.48,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50822409683234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.48,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "50822409716002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.48,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "50822409748770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.48,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "50822409781538"
+   }
+  ],
+  "vendor": "Peanut Butter • Jammy • Milk Chocolate"
+ },
+ {
+  "body_hash": "bce746eb1fa2d257",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-truji-y-angelita-1",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/COL_TRU_ANG_2026_WHITE.png?v=1784574560",
+  "platform": "shopify",
+  "product_id": "10421079048482",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Colombia Truji y Angelita",
+  "url": "https://catandcloud.com/products/colombia-truji-y-angelita-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.33,
+    "title": "10oz / Whole Bean",
+    "variant_id": "52166741360930"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.33,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "52166741393698"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.33,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "52166741426466"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.33,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "52166741459234"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 115.09,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "52166741492002"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 115.09,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "52166741524770"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 115.09,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "52166741557538"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 115.09,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "52166741590306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 261.56,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52166741623074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 261.56,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "52166741655842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 261.56,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "52166741688610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 261.56,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "52166741721378"
+   }
+  ],
+  "vendor": "Cat & Cloud"
+ },
+ {
+  "body_hash": "7278c0d527e1b324",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-kintamani",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/IDN_KIN_TAM_2026_PDP_PHOTO_WHITE.png?v=1787861778",
+  "platform": "shopify",
+  "product_id": "10455336321314",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Indonesia Kintamani Natural",
+  "url": "https://catandcloud.com/products/indonesia-kintamani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.41,
+    "title": "10oz / Whole Bean",
+    "variant_id": "52348784738594"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.41,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "52348784771362"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.41,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "52348784804130"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.41,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "52348784836898"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 87.97,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "52348784869666"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 87.97,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "52348784902434"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 87.97,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "52348784935202"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 87.97,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "52348784967970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.94,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52348785000738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.94,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "52348785033506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.94,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "52348785066274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.94,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "52348785099042"
+   }
+  ],
+  "vendor": "Cat & Cloud"
+ },
+ {
+  "body_hash": "b04f298762849808",
+  "first_seen": "2026-10-26",
+  "handle": "template-whole-bean-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/GTM_ROS_MAR_2026_WHITE.png?v=1791936265",
+  "platform": "shopify",
+  "product_id": "15344205398306",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "new"
+  ],
+  "title": "Guatemala Rosalío Martinez",
+  "url": "https://catandcloud.com/products/template-whole-bean-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.58,
+    "title": "10oz / Whole Bean",
+    "variant_id": "67475625443618"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.58,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "67475625476386"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.58,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "67475625509154"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.58,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "67475625541922"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 90.53,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "67475625574690"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 90.53,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "67475625607458"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 90.53,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "67475625640226"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 90.53,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "67475625672994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.76,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67475625705762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.76,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "67475625738530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.76,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "67475625771298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.76,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "67475625804066"
+   }
+  ],
+  "vendor": "Cat & Cloud"
+ },
+ {
+  "body_hash": "b4fc09f239872d77",
+  "first_seen": "2026-10-26",
+  "handle": "ture-waji",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/ETH_TUR_WAJ_2026_WHITE_3317182c-4f1f-421a-84be-ee8465e1e897.png?v=1791936321",
+  "platform": "shopify",
+  "product_id": "15344208478498",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "Single Origin",
+   "coffee",
+   "new"
+  ],
+  "title": "Ethiopia Ture Waji Natural",
+  "url": "https://catandcloud.com/products/ture-waji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.84,
+    "title": "10oz / Whole Bean",
+    "variant_id": "67475640451362"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.84,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "67475640484130"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.84,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "67475640516898"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.84,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "67475640549666"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 104.04,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "67475640582434"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 104.04,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "67475640615202"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 104.04,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "67475640647970"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 104.04,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "67475640680738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 236.46,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67475640713506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 236.46,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "67475640746274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 236.46,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "67475640779042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 236.46,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "67475640811810"
+   }
+  ],
+  "vendor": "Cat & Cloud"
+ },
+ {
+  "body_hash": "99c1d5adcb9a5bff",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-2",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/BLD_HOLIDAY_2026_WHITE_7201a3cd-3d59-4e3e-b600-9ca581edcdf4.png?v=1791936352",
+  "platform": "shopify",
+  "product_id": "15344209297698",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "blends",
+   "coffee",
+   "new"
+  ],
+  "title": "Holiday Blend | Natural & Co-Ferment",
+  "url": "https://catandcloud.com/products/holiday-blend-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.46,
+    "title": "10oz / Whole Bean",
+    "variant_id": "67475647004962"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.46,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "67475647037730"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.46,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "67475647070498"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.46,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "67475647103266"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 71.15,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "67475647136034"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 71.15,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "67475647168802"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 71.15,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "67475647201570"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 71.15,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "67475647234338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.71,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67475647267106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.71,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "67475647299874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.71,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "67475647332642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.71,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "67475647365410"
+   }
+  ],
+  "vendor": "Cat & Cloud"
+ },
+ {
+  "body_hash": "02c60d9172288745",
+  "first_seen": "2026-10-26",
+  "handle": "after-party",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/AfterParty-white.png?v=1726698840",
+  "platform": "shopify",
+  "product_id": "3512473157734",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "blends",
+   "coffee",
+   "specialty"
+  ],
+  "title": "After Party",
+  "url": "https://catandcloud.com/products/after-party",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Whole Bean",
+    "variant_id": "27976543404134"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "27976543469670"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "27976543535206"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "27976543600742"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "27976543666278"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "27976543699046"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "27976543764582"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "27976543797350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "27976543830118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "27976543862886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "27976543895654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "27976543928422"
+   }
+  ],
+  "vendor": "Dark Chocolate • Full Bodied • S'mores"
+ },
+ {
+  "body_hash": "8ea1c2fe79a4d1ba",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kercha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/CC-SO-KER-clean.png?v=1727752899",
+  "platform": "shopify",
+  "product_id": "4295380926566",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "AF-CFE",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Kercha Natural",
+  "url": "https://catandcloud.com/products/ethiopia-kercha-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "30934789095526"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "30934789128294"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "30934789161062"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "30934789193830"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 60.2,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "30934789226598"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 60.2,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "30934789259366"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 60.2,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "30934789292134"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 60.2,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "30934789324902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30934789357670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.8,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "30934789390438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.8,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "30934789423206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.8,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "30934789455974"
+   }
+  ],
+  "vendor": "Blueberry • Chocolate Chips • Strawberry Ice Cream"
+ },
+ {
+  "body_hash": "4e27859c57f5ad91",
+  "first_seen": "2026-10-26",
+  "handle": "answer",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/TheAnswer-white.png?v=1726698448",
+  "platform": "shopify",
+  "product_id": "6754675265",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "blends",
+   "coffee",
+   "specialty"
+  ],
+  "title": "The Answer",
+  "url": "https://catandcloud.com/products/answer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.4,
+    "title": "10oz / Whole Bean",
+    "variant_id": "21326929281"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.4,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "21327362433"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.4,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "21327362497"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.4,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "21327362625"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 51.95,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "21327362689"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 51.95,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "21327362753"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 51.95,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "21327362817"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 51.95,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "21327362881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.08,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21327362945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.08,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "21327363009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.08,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "21327363073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.08,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "21327363137"
+   }
+  ],
+  "vendor": "Caramel • Berries • Chocolate"
+ },
+ {
+  "body_hash": "bee7265c8d89b513",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-tejo",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/CC-COLO-ET-CLEAN.png?v=1755638351",
+  "platform": "shopify",
+  "product_id": "6771861160038",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "SA-CFE",
+   "SEP22 New Coffee",
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Colombia El Tejo",
+  "url": "https://catandcloud.com/products/colombia-el-tejo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.45,
+    "title": "10oz / Whole Bean",
+    "variant_id": "39764610285670"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.45,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "39764610318438"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.45,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "39764610351206"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.45,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "39764610383974"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 61.65,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "39764610416742"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 61.65,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "39764610449510"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 61.65,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "39764610482278"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 61.65,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "39764610515046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39764610547814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "39764610580582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "39764610613350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "39764610646118"
+   }
+  ],
+  "vendor": "Bright • Chocolate • Dynamic"
+ },
+ {
+  "body_hash": "32ea31592a686396",
+  "first_seen": "2026-10-26",
+  "handle": "the-best-friends-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/BFB-WHITER.png?v=1726779641",
+  "platform": "shopify",
+  "product_id": "8749027917",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "BFC",
+   "blends",
+   "coffee",
+   "specialty"
+  ],
+  "title": "The Best Friends Blend",
+  "url": "https://catandcloud.com/products/the-best-friends-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.7,
+    "title": "10oz / Whole Bean",
+    "variant_id": "30005546573"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.7,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "30005546637"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.7,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "30005546701"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.7,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "30005546765"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.41,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "30005546829"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.41,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "30005546893"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.41,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "30005546957"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 62.41,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "30005547021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.84,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30005547085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.84,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "30005547149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.84,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "30005547213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.84,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "30005547277"
+   }
+  ],
+  "vendor": "Sweet • Juicy • Complex"
+ },
+ {
+  "body_hash": "3b6e4a5e7dfe50d4",
+  "first_seen": "2026-10-26",
+  "handle": "night-shift",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/NightShift-white.png?v=1726698486",
+  "platform": "shopify",
+  "product_id": "8749098061",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "blends",
+   "coffee",
+   "specialty"
+  ],
+  "title": "Night Shift",
+  "url": "https://catandcloud.com/products/night-shift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Whole Bean",
+    "variant_id": "30005828429"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "30005828493"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "30005828557"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.7,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "30005828621"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "30005828685"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "30005828749"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "30005828813"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 52.9,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "30005828877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.24,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30005828941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.24,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "30005829005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.24,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "30005829069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.24,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "30005829133"
+   }
+  ],
+  "vendor": "Dark Chocolate • Full Bodied • Sweetness"
+ },
+ {
+  "body_hash": "c348143707d66dbd",
+  "first_seen": "2026-10-26",
+  "handle": "friend-zone-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0851/9402/files/FriendZone-2025-White.png?v=1737674555",
+  "platform": "shopify",
+  "product_id": "8749248653",
+  "product_type": "Coffee",
+  "roaster_slug": "catandcloud",
+  "tags": [
+   "blends",
+   "coffee",
+   "specialty"
+  ],
+  "title": "Friend Zone Decaf",
+  "url": "https://catandcloud.com/products/friend-zone-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.4,
+    "title": "10oz / Whole Bean",
+    "variant_id": "30006553293"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.4,
+    "title": "10oz / Ground for Drip",
+    "variant_id": "30006553357"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.4,
+    "title": "10oz / Ground for French Press",
+    "variant_id": "30006553421"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.4,
+    "title": "10oz / Ground for Espresso",
+    "variant_id": "30006553485"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.15,
+    "title": "Kilo (2.2lb) / Whole Bean",
+    "variant_id": "30006553549"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.15,
+    "title": "Kilo (2.2lb) / Ground for Drip",
+    "variant_id": "30006553613"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.15,
+    "title": "Kilo (2.2lb) / Ground for French Press",
+    "variant_id": "30006553677"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.15,
+    "title": "Kilo (2.2lb) / Ground for Espresso",
+    "variant_id": "30006553741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.28,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30006553805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.28,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "30006553869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.28,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "30006553933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.28,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "30006553997"
+   }
+  ],
+  "vendor": "Strawberry Jam • Cocoa Nib • Molasses"
+ }
+]

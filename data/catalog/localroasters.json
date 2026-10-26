@@ -1,0 +1,1783 @@
+[
+ {
+  "body_hash": "d0de198f34eb4135",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-jaguar-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/Costa_Rica_Jaguar_Honey_Coffee.heic?v=1752103599",
+  "platform": "shopify",
+  "product_id": "1737571991625",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Cane Sugar",
+   "Complex",
+   "Costa Rica",
+   "Honey Processed",
+   "Medium",
+   "Red Apple",
+   "Roasted Almond",
+   "Smooth",
+   "Sweet",
+   "Volcafe",
+   "breakfast"
+  ],
+  "title": "Costa Rica Jaguar Honey 12 Oz.",
+  "url": "https://localroasters.com/products/costa-rica-jaguar-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "19837505437769"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Drip",
+    "variant_id": "19873644707913"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "19873644773449"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "19873644806217"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "19873644838985"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19873644871753"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "b861f7514562bb4f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-reserva-guama-danta",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_579fdafa-3a1b-449f-a630-ef3d98093e8b.heic?v=1656005223",
+  "platform": "shopify",
+  "product_id": "1764063641673",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Dark Chocolate",
+   "Honduran",
+   "Nutty",
+   "Sweet",
+   "balanced"
+  ],
+  "title": "Honduras Reserva Guama Danta 12 Oz",
+  "url": "https://localroasters.com/products/honduras-reserva-guama-danta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19837569138761"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19873557708873"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19873557741641"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19873557774409"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19873557807177"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19873570029641"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "c1dd2313ba562f19",
+  "first_seen": "2026-10-26",
+  "handle": "model-no-ge-225",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_b0558041-b7a7-446f-8387-9c6d42e743ca.heic?v=1656006196",
+  "platform": "shopify",
+  "product_id": "1766551388233",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Caramel",
+   "Creamy",
+   "Dark",
+   "Dark Chocolate",
+   "Toast"
+  ],
+  "title": "Model No. GE-225 12 Oz.",
+  "url": "https://localroasters.com/products/model-no-ge-225",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19837582114889"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19874007253065"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19874007285833"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19874007318601"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19874007351369"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19874007384137"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "a2435659185a5e97",
+  "first_seen": "2026-10-26",
+  "handle": "the-modernist-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_56a518a0-0924-4f20-b391-c1751aa3e9fc.heic?v=1656006319",
+  "platform": "shopify",
+  "product_id": "1766730793033",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Brown Sugar",
+   "Dark",
+   "Espresso",
+   "Hazelnut",
+   "Rich",
+   "Smoke",
+   "Smooth",
+   "Subscription",
+   "Velvety"
+  ],
+  "title": "The Modernist Espresso 12oz",
+  "url": "https://localroasters.com/products/the-modernist-espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19837616062537"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19874155364425"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19874155397193"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19874155495497"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19874155528265"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19874155561033"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "c8515b7906b34376",
+  "first_seen": "2026-10-26",
+  "handle": "module-400-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_9223b391-b74e-4512-a173-eb482d24be4d.heic?v=1656006989",
+  "platform": "shopify",
+  "product_id": "1896692908105",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Dark",
+   "Dark Chocolate",
+   "French Roast",
+   "Smoky Depth",
+   "Subscription"
+  ],
+  "title": "Module 400 12oz",
+  "url": "https://localroasters.com/products/module-400-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19837586866249"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19874040479817"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19874040512585"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19874040545353"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19874040578121"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19874040610889"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "3c02db8f03492ced",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/decafesp.jpg?v=1642183244",
+  "platform": "shopify",
+  "product_id": "1978092453961",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Brown Sugar",
+   "Dark Chocolate",
+   "Hazelnut",
+   "decaf",
+   "fair trade"
+  ],
+  "title": "Decaf Espresso Coffee 12 Oz.",
+  "url": "https://localroasters.com/products/decaf-espresso-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "19837524049993"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Drip",
+    "variant_id": "19873792032841"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Espresso",
+    "variant_id": "19873792065609"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "French Press",
+    "variant_id": "19873792098377"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Cold Brew",
+    "variant_id": "19873792131145"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19873792163913"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "f6da7d2fb8b3b8f7",
+  "first_seen": "2026-10-26",
+  "handle": "fahrenheit-455-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_d1207f5d-5dfe-4f09-aff5-c02f870613bb.heic?v=1673479447",
+  "platform": "shopify",
+  "product_id": "2025953132617",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Copy Cat 12 Oz.",
+  "url": "https://localroasters.com/products/fahrenheit-455-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19837561274441"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19873900691529"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19873900724297"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19873900757065"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19873900789833"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19873900822601"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "f252ff62c226f04f",
+  "first_seen": "2026-10-26",
+  "handle": "light-leaks",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_7c0860df-db62-4880-ae32-a5285e6ebe5d.heic?v=1656005367",
+  "platform": "shopify",
+  "product_id": "2168449761353",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Local",
+   "Medium Acidity",
+   "Smooth"
+  ],
+  "title": "Light Leaks 12oz",
+  "url": "https://localroasters.com/products/light-leaks",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "19837576577097"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "19873946435657"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "19873946468425"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "19873946501193"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "19873946533961"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Perc/ K-Cup",
+    "variant_id": "19873946566729"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "b1b089b1d36a863d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tabi",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/6CE17148-1E62-41A4-84C1-DFB534816D29.jpg?v=1770847320",
+  "platform": "shopify",
+  "product_id": "2186229121097",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Colombia Huila Tabi 12oz",
+  "url": "https://localroasters.com/products/colombia-tabi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "19936333070409"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Drip",
+    "variant_id": "19936344211529"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Espresso",
+    "variant_id": "19936345915465"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "French Press",
+    "variant_id": "19936346374217"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Cold Brew",
+    "variant_id": "19936346865737"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Perc/K-Cup",
+    "variant_id": "19936346931273"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "26b7956d622e3410",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-two-birds",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/PXL_20260416_163223161.jpg?v=1776357238",
+  "platform": "shopify",
+  "product_id": "2198738829385",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Guatemala Two Birds 12 oz.",
+  "url": "https://localroasters.com/products/guatemala-two-birds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "31570232016981"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "31570232049749"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "31570232082517"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "31570232148053"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "31570232180821"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "K-cup/Perc",
+    "variant_id": "31570232213589"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "3cd09430f97b4386",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-mandomashe-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/0B2B19B6-5D0C-47F7-A334-2EB862318F11.jpg?v=1784741073",
+  "platform": "shopify",
+  "product_id": "2233476644937",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Tanzania Mandomashe AA 12 oz",
+  "url": "https://localroasters.com/products/tanzania-mandomashe-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Whole Bean",
+    "variant_id": "20192407978057"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Espresso",
+    "variant_id": "20192408010825"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "French Press",
+    "variant_id": "20192408043593"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Drip",
+    "variant_id": "20192408076361"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Cold Brew",
+    "variant_id": "20192408109129"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "K-Cup/Perc",
+    "variant_id": "20192408141897"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "3c9c365f77479e0a",
+  "first_seen": "2026-10-26",
+  "handle": "caffeine-freak",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/3357.jpg?v=1788641340",
+  "platform": "shopify",
+  "product_id": "4166237061193",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Caffeine Freak 12 Oz.",
+  "url": "https://localroasters.com/products/caffeine-freak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "30299555496009"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Espresso",
+    "variant_id": "30299555528777"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "French Press",
+    "variant_id": "30299555561545"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Drip",
+    "variant_id": "30299555594313"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Cold Brew",
+    "variant_id": "30299555627081"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "30299555659849"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "fbb0a1d3003a8c70",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_0c7b5c45-4a2e-4218-8305-884fbbb9f3e5.jpg?v=1587048127",
+  "platform": "shopify",
+  "product_id": "4422682574933",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Flavored Coffee"
+  ],
+  "title": "Bourbon Pecan Torte 12 oz",
+  "url": "https://localroasters.com/products/bourbon-pecan-torte-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "31443497812053"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Espresso",
+    "variant_id": "31443497877589"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "French Press",
+    "variant_id": "31443497943125"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Drip",
+    "variant_id": "31443497975893"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Cold Brew",
+    "variant_id": "31443498041429"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "31443498074197"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "940e6187b9f769c1",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-hazlenut-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/3BAC0C44-58AD-459A-89DD-AD6F85D7A07F.jpg?v=1576096296",
+  "platform": "shopify",
+  "product_id": "4422717702229",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Toasted Hazelnut 12 oz",
+  "url": "https://localroasters.com/products/toasted-hazlenut-12-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "31443867336789"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Drip",
+    "variant_id": "31443867369557"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Espresso",
+    "variant_id": "31443867402325"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "French Press",
+    "variant_id": "31443867435093"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Cold Brew",
+    "variant_id": "31443867467861"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "31443867500629"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "db8f1f79663f56f1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-timana-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/FullSizeRender_8fe0c48c-4243-45fa-a311-64d2164acc04.heic?v=1770745906",
+  "platform": "shopify",
+  "product_id": "4553536307285",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Colombia Nasa Wesx Yuppie Natural 12 oz",
+  "url": "https://localroasters.com/products/colombia-timana-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "Whole Bean",
+    "variant_id": "31837406691413"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "Drip",
+    "variant_id": "31837406756949"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "Espresso",
+    "variant_id": "31837406789717"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "French Press",
+    "variant_id": "31837406822485"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "Cold Brew",
+    "variant_id": "31837406855253"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 29.99,
+    "title": "Perc/K-Cup",
+    "variant_id": "31837406888021"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "97eb0389901785d7",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-santa-lucia",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6658808381637",
+  "product_type": "",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "decaf",
+   "direct trade",
+   "fair trade"
+  ],
+  "title": "Decaf Honduras Copan",
+  "url": "https://localroasters.com/products/honduras-santa-lucia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "39723217223877"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Espresso",
+    "variant_id": "39723217256645"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "French Press",
+    "variant_id": "39723217289413"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Drip",
+    "variant_id": "39723217322181"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "Cold Brew",
+    "variant_id": "39723217354949"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 19.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "39723217387717"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "90751e8b746aa385",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-kateshi-a-f-n-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/2270.jpg?v=1773423675",
+  "platform": "shopify",
+  "product_id": "6691081552069",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Anaerobic Fermentation",
+   "Complex",
+   "fermented",
+   "natural process",
+   "new arrival"
+  ],
+  "title": "Zambia Kateshi Estate Anaerobic Natural 12 Oz.",
+  "url": "https://localroasters.com/products/zambia-kateshi-a-f-n-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Whole Bean",
+    "variant_id": "39854508114117"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Espresso",
+    "variant_id": "39854508146885"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "French Press",
+    "variant_id": "39854508179653"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Drip",
+    "variant_id": "39854508212421"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "Cold Brew",
+    "variant_id": "39854508245189"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 23.25,
+    "title": "K-Cup/Perc",
+    "variant_id": "39854508277957"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "5c2d9ccb8fa1f1a7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-blue-ayarza-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_8bd069dd-cc1c-4b10-9d19-b0419dd382dd.jpg?v=1623361815",
+  "platform": "shopify",
+  "product_id": "6710278815941",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Guatemala Blue Ayarza 12 Oz.",
+  "url": "https://localroasters.com/products/guatemala-blue-ayarza-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "39934645567685"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "Espresso",
+    "variant_id": "39934645600453"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "French Press",
+    "variant_id": "39934645633221"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "Drip",
+    "variant_id": "39934645665989"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "Cold Brew",
+    "variant_id": "39934645698757"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 21.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "39934645731525"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "5ab47367e265cab3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cattleya",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_8be0b9d3-25d3-42c0-ad48-8366b4e85609.jpg?v=1625163133",
+  "platform": "shopify",
+  "product_id": "6740889698501",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Medium",
+   "Rich",
+   "Smooth",
+   "Sweet",
+   "Toast",
+   "balanced"
+  ],
+  "title": "Colombia Cattleya 12 Oz.",
+  "url": "https://localroasters.com/products/colombia-cattleya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "40065373339845"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "40065373372613"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "40065373438149"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "40065373470917"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "40065373503685"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "K-Cup/Perc",
+    "variant_id": "40065373536453"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "20fa18c5ac3f4ecf",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/506E432D-AC27-43CC-8E5E-29094EE3202B.jpg?v=1788203183",
+  "platform": "shopify",
+  "product_id": "6948179083461",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Panama Boquete 12 Oz.",
+  "url": "https://localroasters.com/products/panama-boquete-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "40766507843781"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Espresso",
+    "variant_id": "40766507876549"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "French Press",
+    "variant_id": "40766507909317"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Drip",
+    "variant_id": "40766507974853"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Cold Brew",
+    "variant_id": "40766508007621"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "40766508040389"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "1b7b9856100cb99c",
+  "first_seen": "2026-10-26",
+  "handle": "all-analog-espresso-blend-8-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/AllAnalogPicture.jpg?v=1642276482",
+  "platform": "shopify",
+  "product_id": "7550509154562",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Espresso Blend"
+  ],
+  "title": "All Analog Espresso Blend 8 Oz.",
+  "url": "https://localroasters.com/products/all-analog-espresso-blend-8-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 329,
+    "price_usd": 12.99,
+    "title": "Whole Bean",
+    "variant_id": "42298127876354"
+   },
+   {
+    "available": true,
+    "grams": 329,
+    "price_usd": 12.99,
+    "title": "Espresso",
+    "variant_id": "42298127909122"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "042f4c94f84e5131",
+  "first_seen": "2026-10-26",
+  "handle": "la-sombra-espresso-blend-8-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/LaSombraPicture.jpg?v=1642276421",
+  "platform": "shopify",
+  "product_id": "7550520492290",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Espresso Blend"
+  ],
+  "title": "La Sombra Espresso Blend 8 Oz.",
+  "url": "https://localroasters.com/products/la-sombra-espresso-blend-8-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 329,
+    "price_usd": 12.99,
+    "title": "Whole Bean",
+    "variant_id": "42298170016002"
+   },
+   {
+    "available": true,
+    "grams": 329,
+    "price_usd": 12.99,
+    "title": "Espresso",
+    "variant_id": "42298170048770"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "9e3bdbb6e03da289",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-ipa-amarelo-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/products/image_68c4622c-61ce-4f27-8fff-e8e39c649f11.heic?v=1653590916",
+  "platform": "shopify",
+  "product_id": "7698504909058",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Brazil Ipe Amarelo 12 Oz.",
+  "url": "https://localroasters.com/products/brazil-ipa-amarelo-12-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "42817719140610"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "Espresso",
+    "variant_id": "42817719173378"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "French Press",
+    "variant_id": "42817719206146"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "Drip",
+    "variant_id": "42817719238914"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "Cold Brew",
+    "variant_id": "42817719271682"
+   },
+   {
+    "available": false,
+    "grams": 357,
+    "price_usd": 16.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "42817719304450"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "43e064998682531f",
+  "first_seen": "2026-10-26",
+  "handle": "awkward-conversation-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/FullSizeRender_741ea2c1-42c4-4922-a8ec-1669d6a55e79.heic?v=1731689880",
+  "platform": "shopify",
+  "product_id": "7704266408194",
+  "product_type": "",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Super Eight 12 Oz.",
+  "url": "https://localroasters.com/products/awkward-conversation-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "42838150054146"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "42838150086914"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "42838150119682"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "42838150152450"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "42838150185218"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "K-Cup/Perc",
+    "variant_id": "42838150217986"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "0e54b48136e27aba",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-amistad12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/FDB3C0A0-9770-4E4B-BFF5-E05B72C87B81.jpg?v=1788203183",
+  "platform": "shopify",
+  "product_id": "7715401171202",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new",
+   "new arrival"
+  ],
+  "title": "Costa Rica Hacienda La Amistad 12 Oz",
+  "url": "https://localroasters.com/products/costa-rica-la-amistad12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "42892334792962"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "Espresso",
+    "variant_id": "42892334825730"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "42892334858498"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "42892334891266"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "Cold Brew",
+    "variant_id": "42892334924034"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 22.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "42892334956802"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "afff4b7d226eb348",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-bastilla-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/99FC8855-4716-4982-9043-1C252D042D56.jpg?v=1786562961",
+  "platform": "shopify",
+  "product_id": "7715403858178",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "Delicate",
+   "Fruity",
+   "Intense Floral",
+   "new arrival"
+  ],
+  "title": "Nicaragua La Bastilla Anaerobic Yeast 12 Oz",
+  "url": "https://localroasters.com/products/nicaragua-la-bastilla-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 244,
+    "price_usd": 26.99,
+    "title": "Whole Bean",
+    "variant_id": "42892340134146"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 26.99,
+    "title": "Espresso",
+    "variant_id": "42892340166914"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 26.99,
+    "title": "French Press",
+    "variant_id": "42892340199682"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 26.99,
+    "title": "Drip",
+    "variant_id": "42892340232450"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 26.99,
+    "title": "Cold Brew",
+    "variant_id": "42892340265218"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 26.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "42892340297986"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "c58fe7ace0c69f2b",
+  "first_seen": "2026-10-26",
+  "handle": "long-division-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/42E37541-5CEE-48C8-968F-E3ACE48A442B.jpg?v=1791483053",
+  "platform": "shopify",
+  "product_id": "8037670781186",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Long Division",
+  "url": "https://localroasters.com/products/long-division-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.49,
+    "title": "Whole Bean",
+    "variant_id": "43724551028994"
+   },
+   {
+    "available": true,
+    "grams": 5715,
+    "price_usd": 17.49,
+    "title": "Espresso",
+    "variant_id": "43724551061762"
+   },
+   {
+    "available": true,
+    "grams": 5715,
+    "price_usd": 17.49,
+    "title": "French Press",
+    "variant_id": "43724551094530"
+   },
+   {
+    "available": true,
+    "grams": 5715,
+    "price_usd": 17.49,
+    "title": "Drip",
+    "variant_id": "43724551127298"
+   },
+   {
+    "available": true,
+    "grams": 5715,
+    "price_usd": 17.49,
+    "title": "Cold Brew",
+    "variant_id": "43724551160066"
+   },
+   {
+    "available": true,
+    "grams": 5715,
+    "price_usd": 17.49,
+    "title": "K-Cup/Perc",
+    "variant_id": "43724551192834"
+   }
+  ],
+  "vendor": "Local Roasters Coffee"
+ },
+ {
+  "body_hash": "63c82eba51f3c358",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/11E5521D-EB5C-49FE-BE2A-9837A04E9C9F.jpg?v=1788203183",
+  "platform": "shopify",
+  "product_id": "8288145309954",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Brazil Cerrado Natural 12 Oz.",
+  "url": "https://localroasters.com/products/brazil-natural-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Whole Bean",
+    "variant_id": "44114153210114"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Espresso",
+    "variant_id": "44114153242882"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "French Press",
+    "variant_id": "44114153275650"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Drip",
+    "variant_id": "44114153308418"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "Cold Brew",
+    "variant_id": "44114153341186"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 17.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "44114153373954"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "9d2bdd01f4fe3df6",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-rosita-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/537A8840-1F22-40A6-A91F-72C2B0C634C7.jpg?v=1785877752",
+  "platform": "shopify",
+  "product_id": "8320692355330",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [
+   "new arrival"
+  ],
+  "title": "Bolivia Finca Rosita 12 Oz.",
+  "url": "https://localroasters.com/products/bolivia-rosita-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "44207250899202"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Espresso",
+    "variant_id": "44207250931970"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "French Press",
+    "variant_id": "44207250964738"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Drip",
+    "variant_id": "44207250997506"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "Cold Brew",
+    "variant_id": "44207251030274"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 24.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "44207251063042"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ },
+ {
+  "body_hash": "afb34dde3bcca4b4",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0034/7114/7081/files/ECE59AFD-E37F-401F-B282-41090C907F4F.jpg?v=1784223063",
+  "platform": "shopify",
+  "product_id": "8617838510338",
+  "product_type": "Coffee",
+  "roaster_slug": "localroasters",
+  "tags": [],
+  "title": "Mexico Chiapas Siltepec 12 Oz.",
+  "url": "https://localroasters.com/products/mexico-chiapas-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "Whole Bean",
+    "variant_id": "45012293845250"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "Espresso",
+    "variant_id": "45012293878018"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "French Press",
+    "variant_id": "45012293910786"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "Drip",
+    "variant_id": "45012293943554"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "Cold Brew",
+    "variant_id": "45012293976322"
+   },
+   {
+    "available": true,
+    "grams": 357,
+    "price_usd": 20.99,
+    "title": "K-Cup/Perc",
+    "variant_id": "45012294009090"
+   }
+  ],
+  "vendor": "Local Roasters Co"
+ }
+]

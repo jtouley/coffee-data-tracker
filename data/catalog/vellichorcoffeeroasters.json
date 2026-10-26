@@ -1,0 +1,478 @@
+[
+ {
+  "body_hash": "0053776ce9d68148",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe-abore",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/8-oz_Ethiopia_Bombe_Abore.jpg?v=1791211967",
+  "platform": "shopify",
+  "product_id": "15409620582434",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Distinctive",
+   "Subscription Available"
+  ],
+  "title": "Ethiopia Bombe Abore",
+  "url": "https://vellichorcoffeeroasters.com/products/ethiopia-bombe-abore",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12 oz Bag",
+    "variant_id": "67800453709858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb Bag",
+    "variant_id": "67800453742626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 187.5,
+    "title": "5 lb Bag",
+    "variant_id": "67800453775394"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 25.0,
+    "title": "8 oz Bag",
+    "variant_id": "67800574787618"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "ec27799b158d913d",
+  "first_seen": "2026-10-26",
+  "handle": "levity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_Levity_Blend.jpg?v=1790110298",
+  "platform": "shopify",
+  "product_id": "7390738219042",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Subscription Available",
+   "Year-Round"
+  ],
+  "title": "Levity Blend",
+  "url": "https://vellichorcoffeeroasters.com/products/levity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag",
+    "variant_id": "41634084814882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb Bag",
+    "variant_id": "41634084847650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5 lb Bag",
+    "variant_id": "41634084880418"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "97fe9c68a35ec9d4",
+  "first_seen": "2026-10-26",
+  "handle": "intensity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_Intensity_Blend_9f39fc73-d943-4eb9-82a7-6f3875e64be5.jpg?v=1790110813",
+  "platform": "shopify",
+  "product_id": "7400001404962",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Subscription Available",
+   "Year-Round"
+  ],
+  "title": "Intensity Blend",
+  "url": "https://vellichorcoffeeroasters.com/products/intensity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag",
+    "variant_id": "41676929990690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb Bag",
+    "variant_id": "41676930023458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5 lb Bag",
+    "variant_id": "41676930056226"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "44b8ac7952b88c06",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_Decaf_Colombia.jpg?v=1766144692",
+  "platform": "shopify",
+  "product_id": "7400001962018",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Subscription Available",
+   "Year-Round"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://vellichorcoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag",
+    "variant_id": "41676933529634"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb Bag",
+    "variant_id": "41676933562402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb Bag",
+    "variant_id": "41676933595170"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "02b5bb7f3e3a33ac",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12oz_Guat_El_Sarral.jpg?v=1766896118",
+  "platform": "shopify",
+  "product_id": "7400002027554",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Balanced",
+   "Subscription Available"
+  ],
+  "title": "Guatemala El Sarral",
+  "url": "https://vellichorcoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag",
+    "variant_id": "41676933660706"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb Bag",
+    "variant_id": "41676933693474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5 lb Bag",
+    "variant_id": "41676933726242"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "c292d673287da4df",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_Ethiopia_Limu_Kossa.jpg?v=1782247491",
+  "platform": "shopify",
+  "product_id": "7400002125858",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Distinctive",
+   "Subscription Available"
+  ],
+  "title": "Ethiopia Limu Kossa",
+  "url": "https://vellichorcoffeeroasters.com/products/ethiopia-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag",
+    "variant_id": "41676933824546"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb Bag",
+    "variant_id": "41676933857314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb Bag",
+    "variant_id": "41676933890082"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "0eec79d2f4209297",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_CR_Jaguar_Honey.jpg?v=1780009090",
+  "platform": "shopify",
+  "product_id": "7434052042786",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Balanced",
+   "Subscription Available"
+  ],
+  "title": "Costa Rica Jaguar Honey",
+  "url": "https://vellichorcoffeeroasters.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz Bag",
+    "variant_id": "41813832925218"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lb Bag",
+    "variant_id": "41813832957986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb Bag",
+    "variant_id": "41813832990754"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "1c5f7816edc74bee",
+  "first_seen": "2026-10-26",
+  "handle": "uganda",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_Uganda_Rwenzori.jpg?v=1787330431",
+  "platform": "shopify",
+  "product_id": "7940104978466",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Distinctive",
+   "Subscription Available"
+  ],
+  "title": "Uganda Rwenzori Natural",
+  "url": "https://vellichorcoffeeroasters.com/products/uganda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz Bag",
+    "variant_id": "43715636887586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb Bag",
+    "variant_id": "43715636920354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 157.5,
+    "title": "5 lb Bag",
+    "variant_id": "43715636953122"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "8ddcf7c9145d50c6",
+  "first_seen": "2026-10-26",
+  "handle": "tropical",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/PXL_20260714_224233488.PORTRAIT.jpg?v=1784069553",
+  "platform": "shopify",
+  "product_id": "7971087777826",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Distinctive"
+  ],
+  "title": "Tropical Fruit Bombe",
+  "url": "https://vellichorcoffeeroasters.com/products/tropical",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "8 oz Bag",
+    "variant_id": "43835025883170"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 85.0,
+    "title": "2 lb Bag",
+    "variant_id": "43835025915938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5 lb Bag",
+    "variant_id": "46010397982754"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "05be1f0f232dba19",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-embrujo",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-ozColombiaElEmbrujo.jpg?v=1773586544",
+  "platform": "shopify",
+  "product_id": "8052172455970",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Distinctive",
+   "Subscription Available"
+  ],
+  "title": "Colombia El Embrujo Natural",
+  "url": "https://vellichorcoffeeroasters.com/products/colombia-el-embrujo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz Bag",
+    "variant_id": "44123651047458"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb Bag",
+    "variant_id": "44123651080226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb Bag",
+    "variant_id": "44717868777506"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "82d5e2d331a7666d",
+  "first_seen": "2026-10-26",
+  "handle": "el-salv",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/12-oz_El_Salv_Picacho.jpg?v=1776709507",
+  "platform": "shopify",
+  "product_id": "8380389294114",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [
+   "Balanced",
+   "Subscription Available"
+  ],
+  "title": "El Salvador Picacho",
+  "url": "https://vellichorcoffeeroasters.com/products/el-salv",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag",
+    "variant_id": "45258802626594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb Bag",
+    "variant_id": "45258802659362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb Bag",
+    "variant_id": "45258802692130"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ },
+ {
+  "body_hash": "ecb0da7ea90a3355",
+  "first_seen": "2026-10-26",
+  "handle": "pour-over-pouch-levity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0719/1078/5058/files/PXL_20260902_184140548.PORTRAIT_1.jpg?v=1788377002",
+  "platform": "shopify",
+  "product_id": "8623007203362",
+  "product_type": "",
+  "roaster_slug": "vellichorcoffeeroasters",
+  "tags": [],
+  "title": "Levity Blend - Pour Over Pouch",
+  "url": "https://vellichorcoffeeroasters.com/products/pour-over-pouch-levity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 3.25,
+    "title": "Single",
+    "variant_id": "46808762253346"
+   },
+   {
+    "available": true,
+    "grams": 386,
+    "price_usd": 15.0,
+    "title": "5-Pack",
+    "variant_id": "46808762286114"
+   }
+  ],
+  "vendor": "Vellichor Coffee Roasters"
+ }
+]

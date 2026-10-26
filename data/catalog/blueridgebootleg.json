@@ -1,0 +1,805 @@
+[
+ {
+  "body_hash": "c935a79047d8e139",
+  "first_seen": "2026-10-26",
+  "handle": "la-esperanza-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/fincaesparanza.png?v=1792426320",
+  "platform": "shopify",
+  "product_id": "15371252859112",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Finca La Esperanza - San Agustin - Huila - Caturra - Anaerobic Washed",
+  "url": "https://blueridgebootleg.com/products/la-esperanza-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "67888764682472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "DRIP",
+    "variant_id": "67888764715240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "ESPRESSO",
+    "variant_id": "67888764748008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "FRENCH PRESS",
+    "variant_id": "67888764780776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "AEROPRESS",
+    "variant_id": "67888764813544"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "POUR-OVER",
+    "variant_id": "67888764846312"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "0f163229820232bc",
+  "first_seen": "2026-10-26",
+  "handle": "popskull-pitch-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/POPSKULLPITCHFRONT.png?v=1763183146",
+  "platform": "shopify",
+  "product_id": "8030677565672",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "The Corner Market"
+  ],
+  "title": "Popskull Pitch",
+  "url": "https://blueridgebootleg.com/products/popskull-pitch-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "WHOLE BEAN",
+    "variant_id": "44022174384360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "DRIP",
+    "variant_id": "44022174417128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "ESPRESSO",
+    "variant_id": "44022174449896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "FRENCH PRESS",
+    "variant_id": "44022174482664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "AEROPRESS",
+    "variant_id": "47235325395176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "POUR-OVER",
+    "variant_id": "47235325427944"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "6502520a2aa3d53f",
+  "first_seen": "2026-10-26",
+  "handle": "appalachian-gold",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/APPALACHIANGOLDFRONT.png?v=1763183154",
+  "platform": "shopify",
+  "product_id": "8030681399528",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Appalachian Gold",
+  "url": "https://blueridgebootleg.com/products/appalachian-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 23.95,
+    "title": "WHOLE BEAN",
+    "variant_id": "44022188867816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "DRIP",
+    "variant_id": "44022188900584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "ESPRESSO",
+    "variant_id": "44022188933352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "FRENCH PRESS",
+    "variant_id": "44022188966120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "AEROPRESS",
+    "variant_id": "47235325001960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "POUR OVER",
+    "variant_id": "47235325198568"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "ab2f19d42041f215",
+  "first_seen": "2026-10-26",
+  "handle": "peru-lima-norte-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/WRIGHT_SRESERVEFRONT.png?v=1771173845",
+  "platform": "shopify",
+  "product_id": "8030685167848",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Wright's Reserve",
+  "url": "https://blueridgebootleg.com/products/peru-lima-norte-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 21.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "44022201778408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "DRIP",
+    "variant_id": "44022201811176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "ESPRESSO",
+    "variant_id": "44022201843944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "FRENCH PRESS",
+    "variant_id": "44022201876712"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "939b12952b5f921a",
+  "first_seen": "2026-10-26",
+  "handle": "special-of-the-month",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/bsm_mk_png.png?v=1763183165",
+  "platform": "shopify",
+  "product_id": "8030694506728",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Barrel-Aged, Blackstrap Molasses",
+  "url": "https://blueridgebootleg.com/products/special-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "WHOLE BEAN / Organic Barrel Aged",
+    "variant_id": "44522099540200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "ESPRESSO / Organic Barrel Aged",
+    "variant_id": "46669797621992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "FRENCH PRESS / Organic Barrel Aged",
+    "variant_id": "46669797687528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "WHOLE BEAN / Black Strap Molasses",
+    "variant_id": "46797109559528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "ESPRESSO / Black Strap Molasses",
+    "variant_id": "46797109592296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "FRENCH PRESS / Black Strap Molasses",
+    "variant_id": "46797109625064"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "c3d2bf5aa911bb1d",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-1lb",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/BRBROASTER_SCHOICE_a61eb868-eba4-4375-b989-77d6085a68a7.png?v=1763183166",
+  "platform": "shopify",
+  "product_id": "8030714396904",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://blueridgebootleg.com/products/roasters-choice-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "44022305980648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DRIP",
+    "variant_id": "44022306013416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "ESPRESSO",
+    "variant_id": "44022306046184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "FRENCH PRESS",
+    "variant_id": "44022306078952"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "802aca8871cc6943",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-custom-roast-free-shipping",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/products/5lbbootlegbagproper.png?v=1763183168",
+  "platform": "shopify",
+  "product_id": "8030718460136",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "5 lb Bag, Your Pick",
+  "url": "https://blueridgebootleg.com/products/5lb-custom-roast-free-shipping",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "APPALACHIAN GOLD-ETHIOPIAN GUJI LIGHT / WHOLE BEAN",
+    "variant_id": "44022322299112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "WRIGHT'S RESERVE-PERU DARK / WHOLE BEAN",
+    "variant_id": "44022322331880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "POPSKULL PITCH-EL SALVADOR MONTE VERDE MEDIUM / WHOLE BEAN",
+    "variant_id": "44022322364648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "APPALACHIAN GOLD-ETHIOPIAN GUJI LIGHT / DRIP",
+    "variant_id": "44022349857000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "APPALACHIAN GOLD-ETHIOPIAN GUJI LIGHT / ESPRESSO",
+    "variant_id": "44022349889768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "APPALACHIAN GOLD-ETHIOPIAN GUJI LIGHT / FRENCH PRESS",
+    "variant_id": "44022349922536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "WRIGHT'S RESERVE-PERU DARK / DRIP",
+    "variant_id": "44022349955304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "WRIGHT'S RESERVE-PERU DARK / ESPRESSO",
+    "variant_id": "44022349988072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "WRIGHT'S RESERVE-PERU DARK / FRENCH PRESS",
+    "variant_id": "44022350020840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "POPSKULL PITCH-EL SALVADOR MONTE VERDE MEDIUM / DRIP",
+    "variant_id": "44022350053608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "POPSKULL PITCH-EL SALVADOR MONTE VERDE MEDIUM / ESPRESSO",
+    "variant_id": "44022350086376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "POPSKULL PITCH-EL SALVADOR MONTE VERDE MEDIUM / FRENCH PRESS",
+    "variant_id": "44022350119144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "DECAF ETHIOPIAN SIDAMO / WHOLE BEAN",
+    "variant_id": "46874630750440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "DECAF ETHIOPIAN SIDAMO / DRIP",
+    "variant_id": "46874630783208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "DECAF ETHIOPIAN SIDAMO / ESPRESSO",
+    "variant_id": "46874630815976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "DECAF ETHIOPIAN SIDAMO / FRENCH PRESS",
+    "variant_id": "46874630848744"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "6f3a1d6c5b048a38",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-columbian-de-cana-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/BLUE_RIDGE_BOOTLEG_DECAF.png?v=1763183193",
+  "platform": "shopify",
+  "product_id": "8030728782056",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [],
+  "title": "Sidamo Decaf",
+  "url": "https://blueridgebootleg.com/products/decaf-columbian-de-cana-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "WHOLE BEAN",
+    "variant_id": "44022357917928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "DRIP",
+    "variant_id": "44022357950696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "ESPRESSO",
+    "variant_id": "44022357983464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "FRENCH PRESS",
+    "variant_id": "44022358016232"
+   }
+  ],
+  "vendor": "blueridgebootleg"
+ },
+ {
+  "body_hash": "3ae95c3dd935e284",
+  "first_seen": "2026-10-26",
+  "handle": "blue-ridge-bootleg-house-espresso-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/BRBEspresso12oz.png?v=1771173781",
+  "platform": "shopify",
+  "product_id": "9123438559464",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "Blue Ridge Coffee",
+   "Coffee Lovers",
+   "Espresso",
+   "Gourmet Coffee",
+   "House Espresso"
+  ],
+  "title": "House Espresso | The Only Blend from Blue Ridge Bootleg Coffee",
+  "url": "https://blueridgebootleg.com/products/blue-ridge-bootleg-house-espresso-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Fine",
+    "variant_id": "47235324149992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Extra fine",
+    "variant_id": "47235324182760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Coarse",
+    "variant_id": "47235324215528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Paper Filter",
+    "variant_id": "47235324248296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Drip",
+    "variant_id": "47235324281064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Pour Over",
+    "variant_id": "47235324313832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Aeropress",
+    "variant_id": "47235324346600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Whole Bean",
+    "variant_id": "47235379527912"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "34acd833ceed1d2a",
+  "first_seen": "2026-10-26",
+  "handle": "appalachian-gold-french-guji-special-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5140_a6216742-bf4c-42a4-a7a9-1db2c8028798.jpg?v=1771173875",
+  "platform": "shopify",
+  "product_id": "9162565845224",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "appalachian",
+   "ethiopian",
+   "french",
+   "gold",
+   "guji"
+  ],
+  "title": "Appalachian Gold French Roasted Ethiopian Guji Ardi - Custom Roast",
+  "url": "https://blueridgebootleg.com/products/appalachian-gold-french-guji-special-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "47421863330024"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "bf00fc67fe36c8d0",
+  "first_seen": "2026-10-26",
+  "handle": "appalachian-gold-5-lb-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5140.jpg?v=1771173881",
+  "platform": "shopify",
+  "product_id": "9162568040680",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "appalachian",
+   "blue",
+   "gold",
+   "light",
+   "ridge"
+  ],
+  "title": "Appalachian Gold 5 LB",
+  "url": "https://blueridgebootleg.com/products/appalachian-gold-5-lb-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.95,
+    "title": "Whole Bean",
+    "variant_id": "47421873324264"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "6546f512e62c734d",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-to-go-coffee-containers-96-oz-appalachian-gold",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5131.jpg?v=1771173933",
+  "platform": "shopify",
+  "product_id": "9162574725352",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "appalachian",
+   "brewed",
+   "coffee",
+   "containers",
+   "with"
+  ],
+  "title": "Brewed To-go Coffee Containers 96 oz Appalachian Gold",
+  "url": "https://blueridgebootleg.com/products/brewed-to-go-coffee-containers-96-oz-appalachian-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 49.5,
+    "title": "Default Title",
+    "variant_id": "47421892853992"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "6546f512e62c734d",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-to-go-coffee-containers-96-oz-popskull-pitch",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5131.jpg?v=1771173933",
+  "platform": "shopify",
+  "product_id": "9162576593128",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "brewed",
+   "coffee",
+   "containers",
+   "popskull",
+   "with"
+  ],
+  "title": "Brewed To-go Coffee Containers 96 oz Popskull Pitch",
+  "url": "https://blueridgebootleg.com/products/brewed-to-go-coffee-containers-96-oz-popskull-pitch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 49.5,
+    "title": "Default Title",
+    "variant_id": "47421894885608"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "a3b9d38cae04f1b1",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-to-go-coffee-containers-96-oz-wrights-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5131.jpg?v=1771173933",
+  "platform": "shopify",
+  "product_id": "9162577215720",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "brewed",
+   "coffee",
+   "containers",
+   "with",
+   "wrights"
+  ],
+  "title": "Brewed To-go Coffee Containers 96 oz Wrights Reserve",
+  "url": "https://blueridgebootleg.com/products/brewed-to-go-coffee-containers-96-oz-wrights-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 49.5,
+    "title": "Default Title",
+    "variant_id": "47421895573736"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "6546f512e62c734d",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-to-go-coffee-containers-96-oz-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/IMG_5131.jpg?v=1771173933",
+  "platform": "shopify",
+  "product_id": "9162577805544",
+  "product_type": "",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "brewed",
+   "built",
+   "coffee",
+   "containers",
+   "with"
+  ],
+  "title": "Brewed To-go Coffee Containers 96 oz Decaf",
+  "url": "https://blueridgebootleg.com/products/brewed-to-go-coffee-containers-96-oz-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 49.5,
+    "title": "Default Title",
+    "variant_id": "47421896229096"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ },
+ {
+  "body_hash": "69e4ae732c696924",
+  "first_seen": "2026-10-26",
+  "handle": "2-lb-bag-your-choice-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0667/8996/6056/files/JBMEDIA-09750.jpg?v=1771173977",
+  "platform": "shopify",
+  "product_id": "9178560430312",
+  "product_type": "Coffee",
+  "roaster_slug": "blueridgebootleg",
+  "tags": [
+   "choice",
+   "fresh",
+   "roast",
+   "roasts",
+   "your"
+  ],
+  "title": "2 lb Bag, Your Pick",
+  "url": "https://blueridgebootleg.com/products/2-lb-bag-your-choice-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "Wright's Reserve",
+    "variant_id": "47479396139240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "Appalachian Gold",
+    "variant_id": "47479396172008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "House Decaf",
+    "variant_id": "47479396204776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "House Espresso",
+    "variant_id": "47479396237544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.5,
+    "title": "Popskull Pitch",
+    "variant_id": "47479424123112"
+   }
+  ],
+  "vendor": "Blue Ridge Bootleg"
+ }
+]

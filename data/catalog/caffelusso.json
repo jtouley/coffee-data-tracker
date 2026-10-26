@@ -1,0 +1,2726 @@
+[
+ {
+  "body_hash": "49c37ed848bf7e07",
+  "first_seen": "2026-10-26",
+  "handle": "gran-miscela-carmo-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/CARMO_af4bef61-99f1-4da6-acfc-dc132c4a2aef.png?v=1781111130",
+  "platform": "shopify",
+  "product_id": "7087530606743",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "GMC"
+  ],
+  "title": "Gran Miscela Carmo Espresso Blend",
+  "url": "https://caffelusso.com/products/gran-miscela-carmo-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40722264293527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40722264326295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40722264359063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40722264391831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40722264424599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40722264457367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40722264490135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40722264522903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40722264555671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "40722264588439"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40722264653975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40722264686743"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40722264719511"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40722264752279"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40722264785047"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40722264817815"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40722264850583"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40722264883351"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40722264916119"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40722264948887"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40722264981655"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / French Press",
+    "variant_id": "40722265014423"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40722265079959"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40722265112727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40722265145495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40722265178263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40722265211031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40722265243799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40722265276567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40722265309335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40722265342103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40722265374871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40722265407639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "40722265440407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40722265505943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40722265538711"
+   }
+  ],
+  "vendor": "Caffè Lusso Coffee Roasters"
+ },
+ {
+  "body_hash": "f6568011cdd382d3",
+  "first_seen": "2026-10-26",
+  "handle": "lionshare-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/LION_d2902e88-615d-4df1-a931-4798a9854576.png?v=1781111072",
+  "platform": "shopify",
+  "product_id": "7099499675799",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend",
+   "Espresso"
+  ],
+  "title": "Lionshare Espresso Blend",
+  "url": "https://caffelusso.com/products/lionshare-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40766687281303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40766687314071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40766687346839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40766687379607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40766687412375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40766687445143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40766687477911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40766687510679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40766687543447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "40766687576215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40766687674519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40766687707287"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40766687740055"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40766687772823"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40766687805591"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40766687838359"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40766687871127"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40766687903895"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40766687936663"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40766687969431"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40766688002199"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / French Press",
+    "variant_id": "40766688034967"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40766688100503"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40766688133271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40766688166039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40766688198807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40766688231575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40766688264343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40766688297111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40766688329879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40766688362647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40766688395415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40766688428183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / French Press",
+    "variant_id": "40766688460951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40766688559255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40766688592023"
+   }
+  ],
+  "vendor": "Cranberry, Salted Chocolate, Sandalwood"
+ },
+ {
+  "body_hash": "613e456cb77a4580",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/ZEMA.png?v=1781111046",
+  "platform": "shopify",
+  "product_id": "7099510325399",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Zema",
+  "url": "https://caffelusso.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40766711005335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40766711038103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40766711070871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40766711103639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40766711136407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40766711169175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40766711201943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40766711234711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40766711267479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / French Press",
+    "variant_id": "40766711300247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40766711365783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40766711398551"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40766711431319"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40766711464087"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40766711496855"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40766711529623"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40766711562391"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40766711595159"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40766711627927"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40766711660695"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40766711693463"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / French Press",
+    "variant_id": "40766711726231"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40766711791767"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 65.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40766711824535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40766711857303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40766711890071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40766711955607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40766711988375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40766712021143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40766712053911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40766712086679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40766712119447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40766712152215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / French Press",
+    "variant_id": "40766712184983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40766712250519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40766712316055"
+   }
+  ],
+  "vendor": "Blueberry, Strawberry, Cherry Cordial"
+ },
+ {
+  "body_hash": "08da7e5d3a008e87",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/19.png?v=1781110814",
+  "platform": "shopify",
+  "product_id": "7101806805143",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://caffelusso.com/products/decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40773587107991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40773587140759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40773587173527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40773587206295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40773587239063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40773587271831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40773587304599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40773587337367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40773587370135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "40773587402903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40773587468439"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40773587501207"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40773587533975"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40773587566743"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40773587599511"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40773587632279"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40773587665047"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40773587697815"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40773587730583"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40773587763351"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40773587796119"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / French Press",
+    "variant_id": "40773587828887"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40773587894423"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 56.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40773587927191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40773587959959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40773587992727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40773588025495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40773588058263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40773588091031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40773588123799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40773588156567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40773588189335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40773588222103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / French Press",
+    "variant_id": "40773588254871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40773588353175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40773588385943"
+   }
+  ],
+  "vendor": "Toasted Walnut, Dark Chocolate, Brown Sugar"
+ },
+ {
+  "body_hash": "b006927144fcae83",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-florencia",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/GUATEMALA_1491730a-2135-433e-a38a-bf530f5fb87d.png?v=1781110427",
+  "platform": "shopify",
+  "product_id": "7101808017559",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemala Finca Florencia",
+  "url": "https://caffelusso.com/products/guatemala-finca-florencia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40773595234455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40773595267223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40773595299991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40773595332759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40773595365527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40773595398295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40773595431063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40773595463831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40773595496599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press",
+    "variant_id": "40773595529367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40773595594903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40773595627671"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40773595660439"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40773595693207"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40773595725975"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40773595758743"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40773595791511"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40773595824279"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40773595857047"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40773595889815"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40773595922583"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / French Press",
+    "variant_id": "40773595955351"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40773596020887"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40773596053655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40773596086423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40773596119191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40773596151959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40773596184727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40773596217495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40773596250263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40773596283031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40773596315799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40773596348567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / French Press",
+    "variant_id": "40773596381335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40773596446871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40773596479639"
+   }
+  ],
+  "vendor": "Baking Chocolate, Orange Peel, Honeysuckle"
+ },
+ {
+  "body_hash": "bcf661a10ff9a73b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/COLD_BREW.png?v=1781110393",
+  "platform": "shopify",
+  "product_id": "7101815128215",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://caffelusso.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40773642420375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40773642453143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40773642485911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40773642518679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40773642551447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40773642584215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40773642616983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40773642649751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40773642682519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40773642715287"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "40773642748055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40773642813591"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40773642846359"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40773642879127"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40773642911895"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40773642944663"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40773642977431"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40773643010199"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40773643042967"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40773643075735"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40773643108503"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40773643141271"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / French Press",
+    "variant_id": "40773643174039"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40773643239575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40773643272343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40773643305111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40773643337879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40773643370647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40773643403415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40773643436183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40773643468951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40773643501719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40773643534487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40773643567255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / French Press",
+    "variant_id": "40773643600023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40773643665559"
+   }
+  ],
+  "vendor": "Mixed Berries, Chocolate Mousse"
+ },
+ {
+  "body_hash": "f65de83e3481ccad",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mutu-batak",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/DARK_SUMATRA_7d049f20-3110-458e-98a4-5ff80849a488.png?v=1781110320",
+  "platform": "shopify",
+  "product_id": "7101818536087",
+  "product_type": "Single Origin",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Dark Sumatra",
+  "url": "https://caffelusso.com/products/sumatra-mutu-batak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40773663621271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40773663654039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40773663686807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40773663719575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40773663752343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40773663785111"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40773663817879"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40773663850647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40773663883415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40773663916183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "40773663948951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40773664014487"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40773664047255"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40773664080023"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40773664112791"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40773664145559"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40773664178327"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40773664211095"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40773664243863"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40773664276631"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40773664309399"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40773664342167"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / French Press",
+    "variant_id": "40773664374935"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 52.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40773664440471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40773664473239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40773664506007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40773664538775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40773664571543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40773664604311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40773664637079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40773664669847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40773664702615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40773664735383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40773664768151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / French Press",
+    "variant_id": "40773664800919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40773664866455"
+   }
+  ],
+  "vendor": "Fresh Earth, Cedar, Cocoa"
+ },
+ {
+  "body_hash": "87fe473ab07424c8",
+  "first_seen": "2026-10-26",
+  "handle": "rescue-freedom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/20.png?v=1781110785",
+  "platform": "shopify",
+  "product_id": "7101820502167",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Atlas Free™ Blend",
+  "url": "https://caffelusso.com/products/rescue-freedom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40773682430103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish",
+    "variant_id": "40773682462871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "40773682495639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "40773682528407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "40773682561175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "40773682593943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "40773682626711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "40773682659479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "40773682692247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Chemex",
+    "variant_id": "40773682725015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "40773682757783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "40773682823319"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "40773682856087"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Turkish",
+    "variant_id": "40773682888855"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "40773682921623"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "40773682954391"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "40773682987159"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "40773683019927"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "40773683052695"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "40773683085463"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "40773683118231"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Chemex",
+    "variant_id": "40773683150999"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / French Press",
+    "variant_id": "40773683183767"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "40773683249303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40773683282071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Turkish",
+    "variant_id": "40773683314839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "40773683347607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "40773683380375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "40773683413143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "40773683445911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "40773683478679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "40773683511447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "40773683544215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Chemex",
+    "variant_id": "40773683576983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / French Press",
+    "variant_id": "40773683609751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "40773683675287"
+   }
+  ],
+  "vendor": "Caffè Lusso Coffee Roasters"
+ },
+ {
+  "body_hash": "cf5f1e5a0a7f2dbb",
+  "first_seen": "2026-10-26",
+  "handle": "classic-drip",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/CLASSIC_DRIP_c8bd8453-e0c7-43da-8a79-1ba7ecb4f711.png?v=1781110253",
+  "platform": "shopify",
+  "product_id": "8881446191363",
+  "product_type": "",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Classic Drip",
+  "url": "https://caffelusso.com/products/classic-drip",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46298417955075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "46298417987843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "46298418020611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "46298418053379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "46298418086147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "46298418118915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "46298418151683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "46298418184451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "46298418217219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Chemex",
+    "variant_id": "46298418249987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "46298418282755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Percolator",
+    "variant_id": "46298418315523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46298418348291"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "46298418381059"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Turkish",
+    "variant_id": "46298418413827"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "46298418446595"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "46298418479363"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "46298418512131"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "46298418544899"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "46298418577667"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "46298418610435"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "46298418643203"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Chemex",
+    "variant_id": "46298418675971"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / French Press",
+    "variant_id": "46298418708739"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Percolator",
+    "variant_id": "46298418741507"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "46298418774275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46298418807043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Turkish",
+    "variant_id": "46298418839811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "46298418872579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "46298418905347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "46298418938115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "46298418970883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46298419003651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "46298419036419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "46298419069187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Chemex",
+    "variant_id": "46298419101955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / French Press",
+    "variant_id": "46298419134723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Percolator",
+    "variant_id": "46298419167491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46298419200259"
+   }
+  ],
+  "vendor": "Caffè Lusso Coffee Roasters"
+ },
+ {
+  "body_hash": "3485249f5769c469",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-minita",
+  "image": "https://cdn.shopify.com/s/files/1/0587/0596/9303/files/COSTA_34f64d4a-4e13-43ae-acd0-845c7a9b4a13.png?v=1781110184",
+  "platform": "shopify",
+  "product_id": "9059088105731",
+  "product_type": "Single Origin",
+  "roaster_slug": "caffelusso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Costa Rica La Minita",
+  "url": "https://caffelusso.com/products/costa-rica-la-minita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47108631298307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Turkish",
+    "variant_id": "47108631331075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso (High Pressure)",
+    "variant_id": "47108631363843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso (Medium Pressure)",
+    "variant_id": "47108631396611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso (Low Pressure)",
+    "variant_id": "47108631429379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Stovetop",
+    "variant_id": "47108631462147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Aeropress",
+    "variant_id": "47108631494915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cone Drip",
+    "variant_id": "47108631527683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Flat Bottom Drip",
+    "variant_id": "47108631560451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Chemex",
+    "variant_id": "47108631593219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / French Press",
+    "variant_id": "47108631625987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "47108631691523"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "47108631724291"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Turkish",
+    "variant_id": "47108631757059"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Espresso (High Pressure)",
+    "variant_id": "47108631789827"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Espresso (Medium Pressure)",
+    "variant_id": "47108631822595"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Espresso (Low Pressure)",
+    "variant_id": "47108631855363"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Stovetop",
+    "variant_id": "47108631888131"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Aeropress",
+    "variant_id": "47108631920899"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Cone Drip",
+    "variant_id": "47108631953667"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Flat Bottom Drip",
+    "variant_id": "47108631986435"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Chemex",
+    "variant_id": "47108632019203"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / French Press",
+    "variant_id": "47108632051971"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 62.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "47108632117507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47108632150275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Turkish",
+    "variant_id": "47108632183043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso (High Pressure)",
+    "variant_id": "47108632215811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso (Medium Pressure)",
+    "variant_id": "47108632248579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso (Low Pressure)",
+    "variant_id": "47108632281347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Stovetop",
+    "variant_id": "47108632314115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "47108632346883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cone Drip",
+    "variant_id": "47108632379651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Flat Bottom Drip",
+    "variant_id": "47108632412419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Chemex",
+    "variant_id": "47108632445187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "47108632477955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "47108632543491"
+   }
+  ],
+  "vendor": "Caffè Lusso Coffee Roasters"
+ }
+]

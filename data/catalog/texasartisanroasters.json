@@ -1,0 +1,286 @@
+[
+ {
+  "body_hash": "9886defd7fcfd95e",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-senhora-de-fatima-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_e2a85c27-0c27-42ba-a810-83cb54822036.jpg?v=1741631979",
+  "platform": "shopify",
+  "product_id": "8246728687793",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Brazil",
+   "Medium Roast"
+  ],
+  "title": "Brazil Senhora de Fatima (Dark Roast)",
+  "url": "https://texasartisanroasters.com/products/brazil-senhora-de-fatima-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Dark",
+    "variant_id": "45194885660849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS / Dark",
+    "variant_id": "45194885759153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "48079831072945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.99,
+    "title": "5 LBS / Medium",
+    "variant_id": "48079831105713"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "dae3475fb6694048",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf-medium-roast-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_b9330a99-d12e-46ba-a09d-126b93c7ce53.jpg?v=1741631899",
+  "platform": "shopify",
+  "product_id": "8246730555569",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Sumatra"
+  ],
+  "title": "Sumatra Decaf (Dark Roast) – Swiss Water Process",
+  "url": "https://texasartisanroasters.com/products/sumatra-decaf-medium-roast-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1 LBS / Dark",
+    "variant_id": "45194888347825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.49,
+    "title": "5 LBS / Dark",
+    "variant_id": "45194888446129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "48079830909105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.49,
+    "title": "5 LBS / Medium",
+    "variant_id": "48079830941873"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "733c78b630d69a0e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_b9330a99-d12e-46ba-a09d-126b93c7ce53.jpg?v=1741631899",
+  "platform": "shopify",
+  "product_id": "8246733635761",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Ethiopia",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe (Medium Roast)",
+  "url": "https://texasartisanroasters.com/products/ethiopia-yirgacheffe-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "45194898112689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS / Medium",
+    "variant_id": "45194898210993"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "4f7e59dfab38c7d4",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-anei-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_8246eed2-f285-4a30-9bb9-d000c86b4217.jpg?v=1741631849",
+  "platform": "shopify",
+  "product_id": "8246735077553",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Columbia",
+   "Medium Roast"
+  ],
+  "title": "Columbia Anei (Medium Roast)",
+  "url": "https://texasartisanroasters.com/products/columbia-anei-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "45194900504753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS / Medium",
+    "variant_id": "45194900603057"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "b2ed1d4a28508934",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-medium-roast-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_7f315dbd-2f9a-4521-a6a3-89552f753084.jpg?v=1741631812",
+  "platform": "shopify",
+  "product_id": "8246736683185",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Honduras",
+   "Medium Roast"
+  ],
+  "title": "Honduras (Medium Roast) – Single Origin",
+  "url": "https://texasartisanroasters.com/products/honduras-medium-roast-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "45194902372529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS / Medium",
+    "variant_id": "45194902470833"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "4fae4aaf3db33ca4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836_b842919b-f72c-4fb2-a33d-78d829307133.jpg?v=1741631664",
+  "platform": "shopify",
+  "product_id": "8246738419889",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Guatemala",
+   "Medium Roast"
+  ],
+  "title": "Guatemala Antigua (Medium Roast)",
+  "url": "https://texasartisanroasters.com/products/guatemala-antigua-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS / Medium",
+    "variant_id": "45194904469681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS / Medium",
+    "variant_id": "45194904567985"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "f5e66627af571e31",
+  "first_seen": "2026-10-26",
+  "handle": "private-reserve-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03836.jpg?v=1741631408",
+  "platform": "shopify",
+  "product_id": "8246739894449",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Espresso"
+  ],
+  "title": "Private Reserve Espresso Blend",
+  "url": "https://texasartisanroasters.com/products/private-reserve-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 LBS",
+    "variant_id": "45194906337457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 LBS",
+    "variant_id": "45194906370225"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ },
+ {
+  "body_hash": "a82c5d493002cedd",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-whole-bean-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7699/2689/files/LEI03866_1.jpg?v=1741632166",
+  "platform": "shopify",
+  "product_id": "8255926337713",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "texasartisanroasters",
+  "tags": [
+   "Bourbon"
+  ],
+  "title": "Bourbon Barrel Whole Bean - 12oz Bag",
+  "url": "https://texasartisanroasters.com/products/bourbon-barrel-whole-bean-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.99,
+    "title": "Default Title",
+    "variant_id": "45228975390897"
+   }
+  ],
+  "vendor": "Texas Artisan Roasters"
+ }
+]

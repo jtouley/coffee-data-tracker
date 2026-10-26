@@ -1,0 +1,335 @@
+[
+ {
+  "body_hash": "41294041611feeef",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mantequieras-de-minas",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/d0d5cb6e-d7c5-4921-8c35-b4c8837e5eba/JC+coffee+farm.jpg",
+  "platform": "squarespace",
+  "product_id": "68cc4abf8328676059d6ed31",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Brazil Mantequieras de Minas",
+  "url": "https://www.intentroasting.com/store/p/brazil-mantequieras-de-minas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2#",
+    "variant_id": "2875a549-095a-4f0c-82af-9732a431bc01"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5#",
+    "variant_id": "53e96878-af84-4924-afce-10a747a5f12d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "e300d1bb-306b-411b-90bc-7d6011757ca8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d4a299c7476f099b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-shakisso-1",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/d29c9ba8-c52f-4499-884a-8e969a6f1922/Screenshot+2026-03-11+at+10.45.24%E2%80%AFAM.png",
+  "platform": "squarespace",
+  "product_id": "68cc4cb19f62a20a3fe37d94",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Ethiopia Guji Oromia",
+  "url": "https://www.intentroasting.com/store/p/ethiopia-guji-shakisso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "79e633d3-35a9-4945-ac5f-fec75f46d035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5#",
+    "variant_id": "7b512a48-a008-42fa-91b6-dd345f2293af"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2#",
+    "variant_id": "f978d249-fc81-4cdd-9bbc-1bd6551170ea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d065894bd052e66",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-duendo-grupo-nayarit",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/b967e3b0-7419-4b0d-97c2-c119e0275e00/Screenshot+2025-09-18+at+11.40.52%E2%80%AFAM.png",
+  "platform": "squarespace",
+  "product_id": "68cc4d3e9f62a20a3fe37e44",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Mexico  Grupo Nayarit La Yerba Seleta",
+  "url": "https://www.intentroasting.com/store/p/mexico-duendo-grupo-nayarit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5#",
+    "variant_id": "0a486b09-6922-4857-b558-47a363602c51"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "4828053d-89b8-46f5-a05e-358b2d6a308c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2#",
+    "variant_id": "c7729d33-e150-458a-a2a6-2ddbed269c9a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca3c04a5746b9bc3",
+  "first_seen": "2026-10-26",
+  "handle": "stark-street-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/1528172630350-1WCGJINANHM2XTL01EJK/IMG_1246.jpg",
+  "platform": "squarespace",
+  "product_id": "68cc5a05466b913bd11e4487",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Stark Street Blend",
+  "url": "https://www.intentroasting.com/store/p/stark-street-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5#",
+    "variant_id": "7cfb661f-f1c3-46f2-8bd7-8cb7bb6e8b0c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2#",
+    "variant_id": "de92ab1a-beb9-432b-9a75-9177cc6923dc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "fed3a0ff-4907-4306-8b92-ae98dd6c006d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ef93cdf0cb6cf30",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/1401853069791-B8EYQCU977W42NFDW033/_MG_4318.jpg",
+  "platform": "squarespace",
+  "product_id": "68cc91da76809b67b84732ed",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://www.intentroasting.com/store/p/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2#",
+    "variant_id": "3a4506ef-27e7-4055-b336-49d1c06f6c4e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "f54edd0f-7269-4269-b64f-09536ad8c564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5#",
+    "variant_id": "fa9139e6-8ecc-4917-a759-efddf4c90673"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2bfdb2910ff964d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-palo-rosa",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/1616548594919-877Q68E5250P3Y6GHSBG/upload",
+  "platform": "squarespace",
+  "product_id": "690cd28e4ecc057b31b6b58e",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Decaf Mexico Chiapas",
+  "url": "https://www.intentroasting.com/store/p/decaf-colombia-palo-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "26b3a407-2a80-4a4b-84e5-60216e273936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2#",
+    "variant_id": "385f5206-643b-47f5-9630-8eb7e115c78c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5#",
+    "variant_id": "6d514974-8c3c-488d-97b0-b4c08640ada9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a8fe0e6fa2e3a4da",
+  "first_seen": "2026-10-26",
+  "handle": "chehalem-valley-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/70f0ce73-a86b-4958-b82e-72fe7738ec3a/JC+coffee+farm.jpg",
+  "platform": "squarespace",
+  "product_id": "6a3edc77ac41db618c454071",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Chehalem Valley Blend",
+  "url": "https://www.intentroasting.com/store/p/chehalem-valley-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2#",
+    "variant_id": "1fa0dc66-ee47-4575-b14e-3d952379ad3e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5#",
+    "variant_id": "9e3028df-69c5-4217-816b-b407c0d8013f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "fceceff3-78c2-41b3-ad8c-5863103f6862"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9e43e7cfb3ddc89",
+  "first_seen": "2026-10-26",
+  "handle": "pre-order-only-pinot-noir-barrel-aged-mexico-nayarit-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/30f2e8b5-aa44-4322-876e-6af4714299b2/Screenshot+2026-03-09+at+4.08.25%E2%80%AFPM.png",
+  "platform": "squarespace",
+  "product_id": "6a7b3156ee0be1675484c6ac",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Pinot Noir Barrel Aged Mexico Nayarit Natural",
+  "url": "https://www.intentroasting.com/store/p/pre-order-only-pinot-noir-barrel-aged-mexico-nayarit-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5#",
+    "variant_id": "27b30b40-1c19-46e1-9acf-ac252206936e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "97e82953-cdea-4bc1-b93b-2d934c025c21"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2#",
+    "variant_id": "cb80ec64-7262-4e5c-b870-b405d0bd37c6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62ac7754099a4b86",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://images.squarespace-cdn.com/content/v1/538e885ce4b0ee34673a5f58/1639e142-517e-4b7d-a610-74ce7b907f08/Screenshot+2026-09-10+at+8.42.30%E2%80%AFAM.png",
+  "platform": "squarespace",
+  "product_id": "6aa2ceb5124c22433749f958",
+  "product_type": "",
+  "roaster_slug": "intentroasting",
+  "tags": [],
+  "title": "Guatemala Huehuetenango Primavera Family-Small producers",
+  "url": "https://www.intentroasting.com/store/p/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "12",
+    "variant_id": "dd04a9b8-8019-41b4-b2b0-0e870d4d1361"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "5",
+    "variant_id": "e1675430-7734-4f95-93ba-edc4e6fea25d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "2",
+    "variant_id": "ed21f360-02e4-4808-8900-29a292748c41"
+   }
+  ],
+  "vendor": ""
+ }
+]

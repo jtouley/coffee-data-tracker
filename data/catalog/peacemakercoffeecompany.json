@@ -1,0 +1,163 @@
+[
+ {
+  "body_hash": "2885b64cb147856b",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bulk-coffee-for-retail",
+  "image": "https://static.wixstatic.com/media/f02a0c_c7e5c63a99a4498fae3292e5a9f8301a~mv2.jpg/v1/fit/w_1672,h_941,q_90/file.jpg",
+  "platform": "generic",
+  "product_id": "0d3a82bdfccc",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "5 lb Bulk Peacemaker Coffee | Roast-to-Order",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/5lb-bulk-coffee-for-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a0054547098af6f",
+  "first_seen": "2026-10-26",
+  "handle": "try-that-in-a-small-town-coffee-collection-3-12-oz-bags",
+  "image": "https://static.wixstatic.com/media/f02a0c_1e82c57a7c5f4cc18f6a2df3c6c2d7f2~mv2.png/v1/fit/w_1536,h_1024,q_90/file.png",
+  "platform": "generic",
+  "product_id": "0d6c21d38d74",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "Try That In A Small Town Coffee Collection | 3 - 12 oz. Bags",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/try-that-in-a-small-town-coffee-collection-3-12-oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c54964e631110686",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://static.wixstatic.com/media/f02a0c_2ab68d621e834222adf2524f87838407~mv2.png/v1/fit/w_609,h_621,q_90/file.png",
+  "platform": "generic",
+  "product_id": "21c11ed8f3a5",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "French Vanilla Coffee",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3be705f44d98462f",
+  "first_seen": "2026-10-26",
+  "handle": "java-tific-allulose-coffee",
+  "image": "https://static.wixstatic.com/media/f02a0c_d806ec5ab4c841609c47e5f392b682da~mv2.jpeg/v1/fit/w_557,h_365,q_90/file.jpg",
+  "platform": "generic",
+  "product_id": "29334efe3f5e",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "Java-Tific - Allulose Coffee",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/java-tific-allulose-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2727d75e8e5d804",
+  "first_seen": "2026-10-26",
+  "handle": "50-count-try-that-in-a-small-town-pods",
+  "image": "https://static.wixstatic.com/media/f02a0c_0736f253fdf34caea623394302ad1123~mv2.jpg/v1/fit/w_1056,h_992,q_90/file.jpg",
+  "platform": "generic",
+  "product_id": "432fcdd7c8e6",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "The \"Small Town Pride\" 50-Count Custom Coffee Box",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/50-count-try-that-in-a-small-town-pods",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ebab4f67de033c7",
+  "first_seen": "2026-10-26",
+  "handle": "the-honest-handshake-100-count-clean-coffee-box",
+  "image": "https://static.wixstatic.com/media/f02a0c_840b9dcd9be846f9a622c8168ea45ae8~mv2.jpg/v1/fit/w_1056,h_992,q_90/file.jpg",
+  "platform": "generic",
+  "product_id": "b885b0a069b3",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "The \"Honest Handshake\" 100-Count Coffee Box | Small Town",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/the-honest-handshake-100-count-clean-coffee-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f82b00ea011e9f6",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-harvest-retail",
+  "image": "https://static.wixstatic.com/media/f02a0c_64dfb29a8ed34eceb42cf3950e5225ce~mv2.png/v1/fit/w_513,h_509,q_90/file.png",
+  "platform": "generic",
+  "product_id": "e06584c89e91",
+  "product_type": "",
+  "roaster_slug": "peacemakercoffeecompany",
+  "tags": [],
+  "title": "Pumpkin Harvest Coffee",
+  "url": "https://www.peacemakercoffeecompany.com/product-page/pumpkin-harvest-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

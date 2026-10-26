@@ -1,0 +1,5194 @@
+[
+ {
+  "body_hash": "84190463855bb308",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian-mountain-water-process-1",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/colombia2.jpg?v=1771432363",
+  "platform": "shopify",
+  "product_id": "10085284086067",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Decaf Colombian - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/decaf-colombian-mountain-water-process-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061716705587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061716738355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061716771123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061716803891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "53061716836659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061716869427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061716902195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061716934963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061716967731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "53061717000499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061717033267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061717066035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061717098803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061717131571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53061717164339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061717197107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061717229875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061717262643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061717295411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53061717328179"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "c14cf434231fc5e5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra-mountain-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2.jpg?v=1771433318",
+  "platform": "shopify",
+  "product_id": "10085332189491",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Decaf Sumatra - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/decaf-sumatra-mountain-water-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061792039219"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061792071987"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061792104755"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061792137523"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "53061792170291"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061792203059"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061792235827"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061792268595"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061792301363"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "53061792334131"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061792366899"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061792399667"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061792432435"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061792465203"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53061792497971"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53061792530739"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53061792563507"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53061792596275"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53061792629043"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53061792661811"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "21eddf49a045c65d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/costa-rica2.jpg?v=1695221541",
+  "platform": "shopify",
+  "product_id": "10170417512755",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Costa Rican Tarrazu",
+  "url": "https://roasttoordercoffee.com/products/costa-rican-tarrazu-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53330232508723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53330232541491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53330232574259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53330232607027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "53330232639795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53330232672563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53330232705331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53330232738099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53330232770867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "53330232803635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53330232836403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53330232869171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53330232901939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53330232934707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53330232967475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53330233000243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53330233033011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "53330233065779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "53330233098547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "53330233131315"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "7285baee385b641d",
+  "first_seen": "2026-10-26",
+  "handle": "random-coffee-sample-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/Sample_packs_basket_250_x_250_px.jpg?v=1763059830",
+  "platform": "shopify",
+  "product_id": "10377920676147",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Random Coffee Sample*",
+  "url": "https://roasttoordercoffee.com/products/random-coffee-sample-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.99,
+    "title": "2 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53838552170803"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.99,
+    "title": "2 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53838552203571"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.49,
+    "title": "2 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "53838552236339"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.49,
+    "title": "2 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "53838552269107"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "21e79ef3650365f8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-mexico-chiapas-mountain-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/mexico2.jpg?v=1701813766",
+  "platform": "shopify",
+  "product_id": "15424463143219",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Decaf Mexico Chiapas - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/organic-decaf-mexico-chiapas-mountain-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "67725774684467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "67725774717235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "67725774750003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "67725774782771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "67725774815539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "67725774848307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "67725774881075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "67725774913843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "67725774946611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "67725774979379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "67725775012147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "67725775044915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "67725775077683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "67725775110451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "67725775143219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "67725775175987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "67725775208755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "67725775241523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "67725775274291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "67725775307059"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "aa4ff0ce0ea38a16",
+  "first_seen": "2026-10-26",
+  "handle": "brasil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/brasil2.jpg?v=1692187206",
+  "platform": "shopify",
+  "product_id": "8527535604019",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Brasil Cerrado",
+  "url": "https://roasttoordercoffee.com/products/brasil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46330545799475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46330545865011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46333713088819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46333713121587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46469428805939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46469428838707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46469428871475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46469428904243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46469428937011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46469428969779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631906091315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631906124083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631906156851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631906189619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.49,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631906222387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631908122931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631908155699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631908188467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631908221235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631908254003"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "a424d234f485dfff",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/colombia2.jpg?v=1771432363",
+  "platform": "shopify",
+  "product_id": "8638087758131",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Colombian Supremo",
+  "url": "https://roasttoordercoffee.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46841768902963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46841768935731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46841768968499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46841769001267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46841769034035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46841769066803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46841769099571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46841769132339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46841769165107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46841769197875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631900782899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631900815667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631900848435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631900881203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631900913971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631901307187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631901339955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631901372723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631901405491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631901438259"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "66f209de809d53a5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/guatemala2.jpg?v=1695221843",
+  "platform": "shopify",
+  "product_id": "8638196351283",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Guatemala Antigua",
+  "url": "https://roasttoordercoffee.com/products/guatemala-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46842118799667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46842118832435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46842118865203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46842118897971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46842118930739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "46842118996275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "46842119029043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "46842119061811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "46842119127347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "46842119192883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631893246259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631893279027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631893311795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631893344563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631893377331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631894425907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631894458675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631894491443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631894524211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631894556979"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "65c600c48da2d2dc",
+  "first_seen": "2026-10-26",
+  "handle": "java-dutch-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2.jpg?v=1771433318",
+  "platform": "shopify",
+  "product_id": "8815180546355",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Java Dutch Estate",
+  "url": "https://roasttoordercoffee.com/products/java-dutch-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47403513676083"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47403513708851"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47403513741619"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47403513774387"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47403513807155"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47403513839923"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47403513872691"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47403513905459"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47403513938227"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47403513970995"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631884005683"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631884038451"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631884071219"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631884103987"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631884136755"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631884431667"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631884464435"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631884497203"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631884529971"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631884562739"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "574123600a48c764",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-tier-2-template",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2_237e5a3e-8025-443c-92fd-7c4683fabe3f.jpg?v=1700494736",
+  "platform": "shopify",
+  "product_id": "8845739721011",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling",
+  "url": "https://roasttoordercoffee.com/products/copy-of-tier-2-template",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47515954905395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47515954938163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47515954970931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47515955003699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47515955036467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47515955069235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47515955102003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47515955134771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47515955167539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47515955200307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631881089331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631881122099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631881154867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631881187635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631881220403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631881318707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631881351475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631881384243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631881417011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631881449779"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "341f111dade53a29",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/papa-new-guinea2.jpg?v=1700494883",
+  "platform": "shopify",
+  "product_id": "8845742407987",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://roasttoordercoffee.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516102459699"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516102492467"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516102525235"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516102558003"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516102590771"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516102623539"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516102656307"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516102689075"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516102754611"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516102787379"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631877321011"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631877353779"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631877386547"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631877419315"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631877452083"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631877583155"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631877615923"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631877648691"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631877681459"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631877714227"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "0366068c3cdc1141",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-tier-2-template-1",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2_d52a3291-78f6-4ce3-9a33-2b6985750461.jpg?v=1700495078",
+  "platform": "shopify",
+  "product_id": "8845742670131",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Sulawesi Kalossi",
+  "url": "https://roasttoordercoffee.com/products/copy-of-tier-2-template-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516111503667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516111536435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516111569203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516111601971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516111634739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516111667507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516111700275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516111733043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516111765811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516111798579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52584313127219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52584313159987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52584313192755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52584313225523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52584313258291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52584313913651"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52584313946419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52584313979187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52584314011955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52584314044723"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "94060cd732cf5499",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/tanzania2.jpg?v=1700500718",
+  "platform": "shopify",
+  "product_id": "8845793329459",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Tanzanian Peaberry",
+  "url": "https://roasttoordercoffee.com/products/tanzanian-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516350841139"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516350873907"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516350906675"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516350939443"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516350972211"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516351004979"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516351037747"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516351070515"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516351103283"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516351136051"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631827251507"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631827284275"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631827317043"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631827349811"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631827382579"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631827546419"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631827579187"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631827611955"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631827644723"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631827677491"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "9f93d8b82eb4d349",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/ethiopia2.jpg?v=1700501154",
+  "platform": "shopify",
+  "product_id": "8845798932787",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://roasttoordercoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516362015027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516362047795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516362080563"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516362113331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516362146099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47516362178867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47516362211635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47516362244403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47516362277171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47516362309939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631825449267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631825482035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631825514803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631825547571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631825580339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631825875251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631825908019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631825940787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631825973555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631826006323"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "e0b85ce626fb1739",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/kenya2.jpg?v=1700599849",
+  "platform": "shopify",
+  "product_id": "8846997815603",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://roasttoordercoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524321755443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524321788211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524321820979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524321853747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524321886515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524321919283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524321952051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524321984819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524322017587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524322050355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631808311603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631808344371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631808377139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631808409907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631808442675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631808573747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631808606515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631808639283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631808672051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631808704819"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "fceb48dcef893acf",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/morningblend2.jpg?v=1700600706",
+  "platform": "shopify",
+  "product_id": "8847013445939",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Morning Blend",
+  "url": "https://roasttoordercoffee.com/products/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524424450355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524424483123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524424515891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524424548659"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524424581427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524424614195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524424646963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524424679731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524424712499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524424745267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631806345523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631806378291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631806411059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631806443827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631806476595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631806837043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631806869811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631806902579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631806935347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631806968115"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "2f6f7bbe6bd20d37",
+  "first_seen": "2026-10-26",
+  "handle": "father-knows-best",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/fatherknowsbest.jpg?v=1700601492",
+  "platform": "shopify",
+  "product_id": "8847020196147",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Father Knows Best - Dads Favorite Blend",
+  "url": "https://roasttoordercoffee.com/products/father-knows-best",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524465279283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524465312051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524465344819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524465377587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524465410355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524465443123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524465475891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524465508659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524465541427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524465574195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631804772659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631804805427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631804838195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631804870963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631804903731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631805067571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631805100339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631805133107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631805165875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631805198643"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "87ebff7a2f4b0799",
+  "first_seen": "2026-10-26",
+  "handle": "old-world-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/owesp.jpg?v=1700601334",
+  "platform": "shopify",
+  "product_id": "8847027077427",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Old World Espresso",
+  "url": "https://roasttoordercoffee.com/products/old-world-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524508238131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524508270899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524508303667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524508336435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524508369203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524508401971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524508434739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524508467507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524508500275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524508533043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631801921843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631801954611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631801987379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631802020147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631802052915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631802249523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631802282291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631802315059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631802347827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631802380595"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "2eef7a1c789ac9ed",
+  "first_seen": "2026-10-26",
+  "handle": "saint-petes-dark-secret",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/spds2.jpg?v=1700601627",
+  "platform": "shopify",
+  "product_id": "8847032418611",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Saint Pete's Dark Secret",
+  "url": "https://roasttoordercoffee.com/products/saint-petes-dark-secret",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524578230579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524578263347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524578296115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524578328883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524578361651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524578394419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524578427187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524578459955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524578492723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524578525491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631800643891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631800676659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631800709427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631800742195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631800774963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631800873267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631800906035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631800938803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631800971571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631801004339"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "af197b77a774027d",
+  "first_seen": "2026-10-26",
+  "handle": "bold-hearty",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/boldandhearty2.jpg?v=1700602118",
+  "platform": "shopify",
+  "product_id": "8847037759795",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Bold & Hearty",
+  "url": "https://roasttoordercoffee.com/products/bold-hearty",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524617683251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524617716019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524617748787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524617781555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524617814323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524617847091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524617879859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524617912627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524617945395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524617978163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631799136563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631799169331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631799202099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631799234867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631799267635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631799398707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631799431475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631799464243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631799497011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631799529779"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "9c2080260d6fe173",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/mj.jpg?v=1700602542",
+  "platform": "shopify",
+  "product_id": "8847050604851",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://roasttoordercoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524682727731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524682760499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524682793267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524682826035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524682858803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524682891571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524682924339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524682957107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524682989875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524683022643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631796187443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631796220211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631796252979"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631796285747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631796318515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.95,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631796875571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.95,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631796908339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.95,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631796941107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.95,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631796973875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.95,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631797006643"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "3f521a3284d32392",
+  "first_seen": "2026-10-26",
+  "handle": "doughnut-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/doughnutblend.jpg?v=1700603044",
+  "platform": "shopify",
+  "product_id": "8847059812659",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Doughnut Blend",
+  "url": "https://roasttoordercoffee.com/products/doughnut-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524709761331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524709794099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524709826867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524709859635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524709892403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524709925171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524709957939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524709990707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524710023475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524710056243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631791730995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631791763763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631791796531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631791829299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631791862067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631792124211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631792156979"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631792189747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631792222515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631792255283"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "fe59555edf2f659e",
+  "first_seen": "2026-10-26",
+  "handle": "dark-french",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/french.jpg?v=1700603274",
+  "platform": "shopify",
+  "product_id": "8847065284915",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Dark French",
+  "url": "https://roasttoordercoffee.com/products/dark-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524726047027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524726079795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524726112563"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524726145331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524726178099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47524726210867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47524726243635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47524726276403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47524726309171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47524726341939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631789371699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631789404467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631789437235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631789470003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631789502771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631789830451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631789863219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631789895987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631789928755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631789961523"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "7ce1e228aab396a6",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexican-chiapas-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/mexico2.jpg?v=1701813766",
+  "platform": "shopify",
+  "product_id": "8866585936179",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Mexican Chiapas - Fair Trade",
+  "url": "https://roasttoordercoffee.com/products/organic-mexican-chiapas-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602383126835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602383159603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602383192371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602383225139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602383257907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602383290675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602383323443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602383356211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602383388979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602383421747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631787634995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631787667763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631787700531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631787733299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631787766067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631788126515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631788159283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631788192051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631788224819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631788257587"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "6785e78d029b3c89",
+  "first_seen": "2026-10-26",
+  "handle": "organic-nicaraguan-segovia-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/nicaragua2_thumbnail.jpg?v=1701815355",
+  "platform": "shopify",
+  "product_id": "8866593046835",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Nicaraguan Segovia - Fair Trade",
+  "url": "https://roasttoordercoffee.com/products/organic-nicaraguan-segovia-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602406031667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602406097203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602406162739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602406195507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602406228275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602406261043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602406293811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602406326579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602406359347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.95,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602406392115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631784620339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631784653107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631784685875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631784718643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631784751411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631785013555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631785046323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631785079091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631785111859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631785144627"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "0f0d44ede9c84bfd",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-la-florida-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/peru2_thumbnail.jpg?v=1701815387",
+  "platform": "shopify",
+  "product_id": "8866598289715",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Peru La Florida - Fair Trade",
+  "url": "https://roasttoordercoffee.com/products/organic-peru-la-florida-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602438865203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602438897971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602438930739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602438963507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602438996275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602439029043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602439061811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602439094579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602439127347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602439160115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631783080243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631783113011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631783145779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631783178547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631783211315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631783342387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631783375155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631783407923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631783440691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631783473459"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "fc29effe45588f84",
+  "first_seen": "2026-10-26",
+  "handle": "organic-bali-blue-moon-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2_a208ac84-8a45-4a8f-aa38-75abf14a16ca.jpg?v=1701815299",
+  "platform": "shopify",
+  "product_id": "8866606547251",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Bali Blue Moon",
+  "url": "https://roasttoordercoffee.com/products/organic-bali-blue-moon-fair-trade",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602479726899"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602479759667"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602479792435"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602479825203"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602479857971"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47602479890739"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47602479923507"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47602479956275"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47602479989043"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47602480021811"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631781048627"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631781081395"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631781114163"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631781146931"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631781179699"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.95,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631781343539"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.95,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631781376307"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.95,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631781409075"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.95,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631781441843"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.95,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631781474611"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "2f6fc081804bc054",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-mountain-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/brasil2_3052a72b-94ca-406d-8344-ffe12afeec86.jpg?v=1701967582",
+  "platform": "shopify",
+  "product_id": "8869647810867",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Decaf Brazil - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/decaf-brazil-mountain-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47613657743667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47613657809203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47613657841971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47613657874739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47613657907507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47613657940275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47613657973043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47613658005811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47613658038579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47613658071347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631779442995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631779475763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631779508531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631779541299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631779574067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631779639603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631779672371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631779705139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631779737907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631779770675"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "9bb5bf4a31d90c6f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-ethiopian-sidamo-fair-trade-mountain-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/ethiopia2_5ac2150d-7023-4481-8014-a08dc898a7d0.jpg?v=1701968096",
+  "platform": "shopify",
+  "product_id": "8869654528307",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Decaf Ethiopian Sidamo - Fair Trade - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/decaf-organic-ethiopian-sidamo-fair-trade-mountain-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47613672128819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47613672161587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47613672194355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47613672227123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47613672259891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "47613672292659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "47613672325427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "47613672358195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "47613672390963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "47613672423731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52584332132659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52584332165427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52584332198195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52584332230963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52584332263731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52584332525875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52584332558643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52584332591411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52584332624179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52584332656947"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "3e3be8819a2f6e8e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-nicaragua-jinotega-fair-trade-mountain-water-process-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/nicaragua2_9c3ced4c-da67-420c-9b64-8159a8c22991.jpg?v=1725027372",
+  "platform": "shopify",
+  "product_id": "9472962494771",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Decaf Nicaragua Jinotega - Fair Trade - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/organic-decaf-nicaragua-jinotega-fair-trade-mountain-water-process-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50178170683699"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50178170716467"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50178170749235"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50178170782003"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50178170814771"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50178170847539"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50178170880307"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50178170913075"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50178170945843"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50178170978611"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631742284083"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631742316851"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631742349619"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631742382387"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631742415155"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631742710067"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631742742835"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631742775603"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631742808371"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631742841139"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "da05bcc9e6b9c110",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-peru-fair-trade-mountain-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/peru2.jpg?v=1725028927",
+  "platform": "shopify",
+  "product_id": "9472978485555",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Decaf Peru - Mountain Water Process",
+  "url": "https://roasttoordercoffee.com/products/organic-decaf-peru-fair-trade-mountain-water-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50178337636659"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50178337669427"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50178337702195"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50178337734963"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50178337767731"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5  LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50178337800499"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5  LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50178337833267"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5  LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50178337866035"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5  LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50178337898803"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5  LB BAG / Espresso (Very Fine)",
+    "variant_id": "50178337931571"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631641489715"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631641522483"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631641555251"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631641588019"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631641620787"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631642046771"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631642079539"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631642112307"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631642145075"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631642177843"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "65febee96a2c4344",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-mandheling-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/indonesia2_a208ac84-8a45-4a8f-aa38-75abf14a16ca.jpg?v=1701815299",
+  "platform": "shopify",
+  "product_id": "9508113023283",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Sumatra Mandheling - Fair Trade",
+  "url": "https://roasttoordercoffee.com/products/organic-sumatra-mandheling-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50340024713523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50340024746291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50340024779059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50340024811827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50340024844595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50340024877363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50340024910131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50340024942899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50340024975667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50340025008435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631635755315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631635788083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631635820851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631635853619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631635886387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631636541747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631636574515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631636607283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631636640051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631636672819"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "1d7c9cb6d573486f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian-supremo-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/colombia2_f399cf98-4e50-400b-a840-6f16df53af3b.jpg?v=1701967372",
+  "platform": "shopify",
+  "product_id": "9508120035635",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Organic Colombian Huila - Fair Trade",
+  "url": "https://roasttoordercoffee.com/products/organic-colombian-supremo-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50340081598771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50340081631539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50340081664307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50340081697075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50340081762611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "50340081795379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "50340081828147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "50340081860915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "50340081893683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "50340081926451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52628508606771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52628508639539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52628508672307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52628508705075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52628508737843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52628513095987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52628513128755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52628513161523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52628513194291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52628513227059"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ },
+ {
+  "body_hash": "2a2cf9dde88cdf38",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-harrar-queen-city",
+  "image": "https://cdn.shopify.com/s/files/1/0815/9700/6131/files/ethiopia2.jpg?v=1700501154",
+  "platform": "shopify",
+  "product_id": "9946023133491",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "roasttoordercoffee",
+  "tags": [],
+  "title": "Ethiopian Harrar QUEEN CITY",
+  "url": "https://roasttoordercoffee.com/products/ethiopian-harrar-queen-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631913005363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631913038131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631913103667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631913136435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631913201971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631913234739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631913300275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631913333043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ BAG / Espresso (Very Fine)",
+    "variant_id": "52631913398579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "12 OZ BAGS X 3 CT / Espresso (Very Fine)",
+    "variant_id": "52631913431347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631913464115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631913496883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631913529651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631913562419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB BAG / Espresso (Very Fine)",
+    "variant_id": "52631913595187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Whole Bean (Recommended for Freshness)",
+    "variant_id": "52631913627955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Medium Grind (Drip/Kurig machines)",
+    "variant_id": "52631913660723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Fine Grind (Cone/Pourover filters)",
+    "variant_id": "52631913693491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Course Gound (French Press & Cold Brew)",
+    "variant_id": "52631913726259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 LB BAG / Espresso (Very Fine)",
+    "variant_id": "52631913759027"
+   }
+  ],
+  "vendor": "Roast To Order Coffee"
+ }
+]

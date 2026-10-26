@@ -1,0 +1,148 @@
+{
+ "5c6f741bec212d5d21075113": {
+  "body_hash": "948d6e5672e6fcfb",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "caramel",
+   "red apple"
+  ],
+  "varietals": []
+ },
+ "5d237aeb1407cc0001af6c95": {
+  "body_hash": "1c3b8e18843e2c8c",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemongrass",
+   "peach",
+   "honeysuckle"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "5dbb2b4b5c10d958cdf99c5e": {
+  "body_hash": "fcb235dcc4f31cbb",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "wine",
+   "honey",
+   "grapefruit"
+  ],
+  "varietals": []
+ },
+ "5dcab2da2391642d185b61c9": {
+  "body_hash": "c28bd1c1cee95bc5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5dd69ace9b8fa0610c0206e9": {
+  "body_hash": "c90e91cb451f612e",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "graham cracker"
+  ],
+  "varietals": []
+ },
+ "62484b5405eedd782a5a8ff2": {
+  "body_hash": "e92e3d0b929ec230",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6911dae6b0c4a7226c547215": {
+  "body_hash": "7209f169355dfb8c",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate and caramel"
+  ],
+  "varietals": []
+ },
+ "6abed2b210f5261edfd93503": {
+  "body_hash": "ccd433e295daacfd",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "creme brulee",
+   "macchiato",
+   "baked apple"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Pacas"
+  ]
+ }
+}

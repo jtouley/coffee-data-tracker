@@ -1,0 +1,198 @@
+{
+ "10144098844967": {
+  "body_hash": "f7e625201bd07071",
+  "elevation_masl_max": 1780,
+  "elevation_masl_min": 1780,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "complex fruits",
+   "florals"
+  ],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "10231669096743": {
+  "body_hash": "a0be3ca8f62681db",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "grape",
+   "wine",
+   "red fruits"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "10454305866023": {
+  "body_hash": "685594a2293ce35e",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemon lime",
+   "peach tea",
+   "milky way bar"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "10496153420071": {
+  "body_hash": "91e0093ed524eb88",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Pink Bourbon"
+  ]
+ },
+ "10508749570343": {
+  "body_hash": "e7eeb00946f0a1d4",
+  "elevation_masl_max": 2180,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemon bar",
+   "jasmine florals",
+   "toffee"
+  ],
+  "varietals": [
+   "74110",
+   "74112"
+  ]
+ },
+ "10508824183079": {
+  "body_hash": "63855fd6c2203960",
+  "elevation_masl_max": 1810,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate mousse",
+   "orange blossom honey",
+   "shortbread"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Gesha",
+   "Maragogype",
+   "Pacamara",
+   "Red Bourbon",
+   "Sl28"
+  ]
+ },
+ "6709558277": {
+  "body_hash": "74c57843d5b5effb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "728864981052": {
+  "body_hash": "cef033f55a8ec98f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9750143402279": {
+  "body_hash": "1424882601655f43",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9907481215271": {
+  "body_hash": "da30402a252d679c",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cacao",
+   "cherry",
+   "toasted almond"
+  ],
+  "varietals": [
+   "Catimor",
+   "Caturra",
+   "Mundo Novo",
+   "Typica"
+  ]
+ }
+}

@@ -1,0 +1,146 @@
+[
+ {
+  "body_hash": "7239d220091e6750",
+  "first_seen": "2026-10-26",
+  "handle": "reaper",
+  "image": "https://cdn.shopify.com/s/files/1/0097/8396/7841/files/Reaper_Label.jpg?v=1759167509",
+  "platform": "shopify",
+  "product_id": "6695631192161",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "autumncoffeeroasting",
+  "tags": [],
+  "title": "Reaper - Autumn Signature Blend",
+  "url": "https://autumncoffeeroasting.com/products/reaper",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4oz / Whole Bean",
+    "variant_id": "39675162656865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40442451755105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "40442451787873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40483741302881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "40526241661025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Ground",
+    "variant_id": "40849195728993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "40849195761761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Ground",
+    "variant_id": "40849195794529"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4oz / Ground",
+    "variant_id": "40849195827297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb / Ground",
+    "variant_id": "40849195860065"
+   }
+  ],
+  "vendor": "Autumn Coffee Roasting"
+ },
+ {
+  "body_hash": "f873e36452b5d267",
+  "first_seen": "2026-10-26",
+  "handle": "reaper-autumn-signature-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0097/8396/7841/files/Aequus_Label.jpg?v=1755214492",
+  "platform": "shopify",
+  "product_id": "7245871972449",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "autumncoffeeroasting",
+  "tags": [],
+  "title": "Aequus - Autumn Signature Blend",
+  "url": "https://autumncoffeeroasting.com/products/reaper-autumn-signature-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41945931612257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "41945931645025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "41945931677793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Ground",
+    "variant_id": "41945931710561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41945931743329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Ground",
+    "variant_id": "41945931776097"
+   }
+  ],
+  "vendor": "Autumn Coffee Roasting"
+ }
+]

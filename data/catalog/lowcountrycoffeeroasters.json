@@ -1,0 +1,2967 @@
+[
+ {
+  "body_hash": "5f0e9de4fe0b14b4",
+  "first_seen": "2026-10-26",
+  "handle": "peru-hb-1",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/PeruHb12oz.webp?v=1788989059",
+  "platform": "shopify",
+  "product_id": "14940585689199",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Peru HB",
+  "url": "https://lowcountrycoffeeroasters.com/products/peru-hb-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "52844669894767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "52844669927535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "52844669960303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "52844669993071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "52844670025839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "52844670058607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "52844670091375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "52844670124143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "52844670156911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "52844670189679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "52844670222447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "52844670255215"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "organic-legato-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Organiclegatoblend12oz.webp?v=1788463171",
+  "platform": "shopify",
+  "product_id": "7899620147311",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Organic Legato Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/organic-legato-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43698688917615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43698688950383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43698688983151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43698689015919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43698689048687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43698689081455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43698689114223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / French Press",
+    "variant_id": "43698689146991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43698689179759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43698689212527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43698689245295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43698689278063"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "organic-southern-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/SouthernBlend12oz_1.webp?v=1788463667",
+  "platform": "shopify",
+  "product_id": "7907178184815",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Southern Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/organic-southern-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736537137263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736537170031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736537202799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736537235567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736537268335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736537301103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736537333871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736537366639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736537399407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736537432175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736537464943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736537497711"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "organic-costa-rica-la-amistad",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Organic_Costa_Rica_La_Amistad_12_oz.png?v=1789575768",
+  "platform": "shopify",
+  "product_id": "7907178381423",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Organic Costa Rica La Amistad",
+  "url": "https://lowcountrycoffeeroasters.com/products/organic-costa-rica-la-amistad",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736539037807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736539070575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736539103343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736539136111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736539168879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736539201647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736539234415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736539267183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736539299951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736539332719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736539365487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736539398255"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "organic-bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/OrganicBaliBlueMoon12oz_1_e9b1da66-c9fd-4ba1-bbbd-b3de1f800bf1.webp?v=1788995780",
+  "platform": "shopify",
+  "product_id": "7907241590895",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Organic Bali Blue Moon",
+  "url": "https://lowcountrycoffeeroasters.com/products/organic-bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736841453679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736841486447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736841519215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736841551983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736841584751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736841617519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736841650287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736841683055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736841715823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736841748591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736841781359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736841814127"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/GuatemalaHuehuetenango12oz.webp?v=1788988569",
+  "platform": "shopify",
+  "product_id": "7907263479919",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://lowcountrycoffeeroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736911282287"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736911315055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736911347823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736911380591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736911413359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736911446127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736911478895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736911511663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736911544431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736911577199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736911609967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736911642735"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-queen-city-harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/EthiopianQueenCityHarrar12oz.webp?v=1788986898",
+  "platform": "shopify",
+  "product_id": "7907266265199",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Ethiopian Queen City Harrar",
+  "url": "https://lowcountrycoffeeroasters.com/products/ethiopian-queen-city-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736920195183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736920227951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736920260719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736920293487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736920326255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736920359023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736920391791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736920424559"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736920457327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736920490095"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736920522863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736920555631"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/ColombiaHuila12oz_c01302b6-d14b-42bf-b8ff-dfdb7e2f07a2.webp?v=1788986491",
+  "platform": "shopify",
+  "product_id": "7907266527343",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Colombia Huila",
+  "url": "https://lowcountrycoffeeroasters.com/products/colombian-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736921276527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736921309295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736921342063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736921374831"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736921407599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736921440367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736921473135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736921505903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736921538671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736921571439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736921604207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736921636975"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-brown-sugar",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/BrazilCerradoBrownSugar12oz_889b480a-2dd4-408e-9809-7b273e71e7ee.webp?v=1788985879",
+  "platform": "shopify",
+  "product_id": "7907271213167",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Brazil Cerrado Brown Sugar",
+  "url": "https://lowcountrycoffeeroasters.com/products/brazil-cerrado-brown-sugar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736940413039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736940445807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736940478575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736940511343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736940544111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736940576879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736940609647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736940642415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736940675183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736940707951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736940740719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736940773487"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "a6380d935d9b4444",
+  "first_seen": "2026-10-26",
+  "handle": "special-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Specialhouseblend12oz_02964883-60aa-4b5d-a667-042c0aa42166.webp?v=1788464319",
+  "platform": "shopify",
+  "product_id": "7907272458351",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Special House Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/special-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736944541807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736944574575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736944607343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736944640111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736944672879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736944705647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736944738415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736944771183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736944803951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736944836719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736944869487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736944902255"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "carolina-sunrise-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/CarolinaSunriseBlend12oz.webp?v=1788453568",
+  "platform": "shopify",
+  "product_id": "7907273310319",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Carolina Sunrise Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/carolina-sunrise-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736947130479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736947163247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736947196015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736947228783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736947261551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736947294319"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736947327087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736947359855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736947392623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736947425391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736947458159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736947490927"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/DarkroastFrenchblendcoffeepouch-2.png?v=1791053336",
+  "platform": "shopify",
+  "product_id": "7907274063983",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "French Roast Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/french-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43736949555311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43736949588079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43736949620847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43736949653615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43736949686383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43736949719151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43736949751919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43736949784687"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43736949817455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43736949850223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43736949882991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43736949915759"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-natura",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Natura12oz_034fd889-2f3d-4286-89d0-3fa6d1789c5f.webp?v=1789002277",
+  "platform": "shopify",
+  "product_id": "7907704766575",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Expresso Natura",
+  "url": "https://lowcountrycoffeeroasters.com/products/espresso-natura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739072331887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739072364655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739072397423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739072430191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739072462959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739072495727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739072528495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739072561263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739072594031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739072626799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739072659567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739072692335"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "0acdd575362bbe4b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-americana",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Americana12oz.webp?v=1788996306",
+  "platform": "shopify",
+  "product_id": "7907705225327",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Expresso Americana",
+  "url": "https://lowcountrycoffeeroasters.com/products/espresso-americana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739074494575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739074527343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739074560111"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739074592879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739074625647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739074658415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739074691183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739074723951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739074756719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739074789487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739074822255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739074855023"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milano",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Milano12oz.webp?v=1789001912",
+  "platform": "shopify",
+  "product_id": "7907707158639",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Expresso Milano",
+  "url": "https://lowcountrycoffeeroasters.com/products/espresso-milano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739084521583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739084554351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739084587119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739084619887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739084652655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739084685423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739084718191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739084750959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739084783727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739084816495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739084849263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739084882031"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-europa",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Europa12oz_1.webp?v=1788999429",
+  "platform": "shopify",
+  "product_id": "7907707322479",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Expresso Europa",
+  "url": "https://lowcountrycoffeeroasters.com/products/espresso-europa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739085111407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739085144175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739085176943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739085209711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739085242479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739085275247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739085308015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739085340783"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739085373551"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739085406319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739085439087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739085471855"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Coldbrewcoffee12oz_1.webp?v=1788562037",
+  "platform": "shopify",
+  "product_id": "7907707682927",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Coffee",
+  "url": "https://lowcountrycoffeeroasters.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739085897839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43741332144239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "53752888492143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "53752888524911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "53752901894255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "53752901927023"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/SumatraDecaf12oz_2.webp?v=1789061287",
+  "platform": "shopify",
+  "product_id": "7907709124719",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Sumatra Decaf",
+  "url": "https://lowcountrycoffeeroasters.com/products/sumatra-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739089928303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739089961071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739089993839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739090026607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739090059375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739090092143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739090124911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739090157679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739090190447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739090223215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739090255983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739090288751"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/EspressoDecaf12oz_1961564a-f29d-405b-a5fb-05c8a3c2e1ac.webp?v=1789061092",
+  "platform": "shopify",
+  "product_id": "7907709288559",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Espresso Decaf",
+  "url": "https://lowcountrycoffeeroasters.com/products/espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739090616431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739090649199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739090681967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739090714735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739090747503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739090780271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739090813039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739090845807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739090878575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739090911343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739090944111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739090976879"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/CopyofProductlabelLowcountrycoffee_100.png?v=1790444285",
+  "platform": "shopify",
+  "product_id": "7907709976687",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Colombia Decaf",
+  "url": "https://lowcountrycoffeeroasters.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739095892079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739095924847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739095957615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739095990383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739096023151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739096055919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739096088687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739096121455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739096154223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739096186991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739096219759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739096252527"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/BrazilDecaf12oz_1.webp?v=1789060968",
+  "platform": "shopify",
+  "product_id": "7907710271599",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Brazil Decaf",
+  "url": "https://lowcountrycoffeeroasters.com/products/brazil-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739096940655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739096973423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739097006191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739097038959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739097071727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739097104495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739097137263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739097170031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739097202799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739097235567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739097268335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739097301103"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "carolina-sunset",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/CarolinaSunsetDecaf12oz.webp?v=1789060517",
+  "platform": "shopify",
+  "product_id": "7907710369903",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Carolina Sunset Decaf",
+  "url": "https://lowcountrycoffeeroasters.com/products/carolina-sunset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43739097432175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43739097464943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43739097497711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43739097530479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43739097563247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43739097596015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43739097628783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43739097661551"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43739097694319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43739097727087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43739097759855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "43739097792623"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "maple-cinnamon-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/MapleCinnamonSpice12oz.webp?v=1789062542",
+  "platform": "shopify",
+  "product_id": "7909637914735",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Maple Cinnamon Spice",
+  "url": "https://lowcountrycoffeeroasters.com/products/maple-cinnamon-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744802865263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744802898031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744802930799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744802963567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744802996335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744803029103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744803061871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744803094639"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "barbados-rum",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/BarbadosRum12oz.webp?v=1789061492",
+  "platform": "shopify",
+  "product_id": "7909639913583",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Barbados Rum",
+  "url": "https://lowcountrycoffeeroasters.com/products/barbados-rum",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744817545327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744817578095"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744817610863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744817643631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744817676399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744817709167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744817741935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744817774703"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/CremeBrulee12oz_e228a636-5bc0-49e5-af52-516034f8c0da.webp?v=1789062213",
+  "platform": "shopify",
+  "product_id": "7909640732783",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Creme Brulee",
+  "url": "https://lowcountrycoffeeroasters.com/products/creme-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744821018735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744821051503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744821084271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744821117039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744821149807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744821182575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744821215343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744821248111"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/CoconutCreme12oz.webp?v=1789061871",
+  "platform": "shopify",
+  "product_id": "7909641879663",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Coconut Cream",
+  "url": "https://lowcountrycoffeeroasters.com/products/coconut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744827146351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744827179119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744827211887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744827244655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744827277423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744827310191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744827342959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744827375727"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Toastedmacaroon12oz_1.webp?v=1789062765",
+  "platform": "shopify",
+  "product_id": "7909643354223",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Toasted Macaroon",
+  "url": "https://lowcountrycoffeeroasters.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744837075055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744837107823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744837140591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744837173359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744837206127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744837238895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744837271663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744837304431"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-me-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/JamaicaMeCrazy12oz_6ecf18c2-551b-4441-8c2c-0a3eaf33d219.webp?v=1789062304",
+  "platform": "shopify",
+  "product_id": "7909644435567",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Jamaica Me Crazy",
+  "url": "https://lowcountrycoffeeroasters.com/products/jamaica-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744844480623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744844513391"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744844546159"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744844578927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744844611695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744844644463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744844677231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744844709999"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "859d9849fda69d43",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/SouthernPecan12oz.png?v=1789062649",
+  "platform": "shopify",
+  "product_id": "7909645090927",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Southern Pecan",
+  "url": "https://lowcountrycoffeeroasters.com/products/southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43744851689583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43744851722351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43744851755119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "43744851787887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43744851820655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43744851853423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43744851886191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43744851918959"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "cafa61b2c382b7d7",
+  "first_seen": "2026-10-26",
+  "handle": "carolina-sunrise-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Darkroastcoffeepouchlabel-2.png?v=1791052319",
+  "platform": "shopify",
+  "product_id": "7925695873135",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [
+   "Africa",
+   "Grown in volcanic Mount Oku"
+  ],
+  "title": "Oku Mountain Ebony",
+  "url": "https://lowcountrycoffeeroasters.com/products/carolina-sunrise-blend-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43799663607919"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "43799663640687"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "43799663673455"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / French Press",
+    "variant_id": "43799663706223"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "43799663738991"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "43799663771759"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "43799663804527"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "43799663837295"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "43799663870063"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "43799663902831"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "43799663935599"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / French Press",
+    "variant_id": "43799663968367"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "a2971dcf74090698",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Breakfast_blend_12_oz.png?v=1788446300",
+  "platform": "shopify",
+  "product_id": "8035514024047",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://lowcountrycoffeeroasters.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "44114168905839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "44114168938607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "44114168971375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "44114169004143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "44114169036911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "44114169069679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "44114169102447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "44114169135215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "44114169167983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "44114169200751"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "44114169233519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "44114169266287"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ },
+ {
+  "body_hash": "6ca7f59aa87ad16c",
+  "first_seen": "2026-10-26",
+  "handle": "daybreak",
+  "image": "https://cdn.shopify.com/s/files/1/0668/1572/1583/files/Daybreak12oz.webp?v=1788454053",
+  "platform": "shopify",
+  "product_id": "8035515400303",
+  "product_type": "",
+  "roaster_slug": "lowcountrycoffeeroasters",
+  "tags": [],
+  "title": "Daybreak",
+  "url": "https://lowcountrycoffeeroasters.com/products/daybreak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "44114176835695"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Auto Drip",
+    "variant_id": "44114176868463"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / Coarse",
+    "variant_id": "44114176901231"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "12 oz. / French Press",
+    "variant_id": "44114176933999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Whole Bean",
+    "variant_id": "44114176966767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Auto Drip",
+    "variant_id": "44114176999535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / Coarse",
+    "variant_id": "44114177032303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.75,
+    "title": "16 oz. / French Press",
+    "variant_id": "44114177065071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "44114177097839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Auto Drip",
+    "variant_id": "44114177130607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / Coarse",
+    "variant_id": "44114177163375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.5,
+    "title": "2 lb. / French Press",
+    "variant_id": "44114177196143"
+   }
+  ],
+  "vendor": "Lowcountry Coffee Roasters"
+ }
+]

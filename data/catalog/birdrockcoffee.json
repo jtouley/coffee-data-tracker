@@ -1,0 +1,5778 @@
+[
+ {
+  "body_hash": "86950226e64c0cc2",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-terra-alta",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/fazenda-terra-alta-brazil-26-bag.webp?v=1792428959",
+  "platform": "shopify",
+  "product_id": "15428858773547",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "Fazenda Terra Alta",
+  "url": "https://www.birdrockcoffee.com/products/fazenda-terra-alta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "67945608020011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Espresso",
+    "variant_id": "67945608052779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / V60",
+    "variant_id": "67945608085547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Cone",
+    "variant_id": "67945608118315"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "67945608151083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Chemex",
+    "variant_id": "67945608183851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / French Press",
+    "variant_id": "67945608216619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "67945608249387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67945608282155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Espresso",
+    "variant_id": "67945608314923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / V60",
+    "variant_id": "67945608347691"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cone",
+    "variant_id": "67945608380459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "67945608413227"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Chemex",
+    "variant_id": "67945608445995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / French Press",
+    "variant_id": "67945608478763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67945608511531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67945608544299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Espresso",
+    "variant_id": "67945608577067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / V60",
+    "variant_id": "67945608609835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cone",
+    "variant_id": "67945608642603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "67945608675371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Chemex",
+    "variant_id": "67945608708139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / French Press",
+    "variant_id": "67945608740907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67945608773675"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "cbd38dbcd863742f",
+  "first_seen": "2026-10-26",
+  "handle": "villa-loyola",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL_-_Villa_Loyola_26_-_Mockup.webp?v=1777990510",
+  "platform": "shopify",
+  "product_id": "7824098099243",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos"
+  ],
+  "title": "Villa Loyola",
+  "url": "https://www.birdrockcoffee.com/products/villa-loyola",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43105424179243"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43105424212011"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Cone",
+    "variant_id": "43105424244779"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / V60",
+    "variant_id": "43105424277547"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43105424310315"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43105424343083"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / French Press",
+    "variant_id": "43105424375851"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43105424408619"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43105424703531"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Espresso",
+    "variant_id": "43105424736299"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Cone",
+    "variant_id": "43105424769067"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / V60",
+    "variant_id": "43105424801835"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43105424834603"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Chemex",
+    "variant_id": "43105424867371"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / French Press",
+    "variant_id": "43105424900139"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 66.56,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43105424932907"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43105424965675"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Espresso",
+    "variant_id": "43105424998443"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Cone",
+    "variant_id": "43105425031211"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / V60",
+    "variant_id": "43105425063979"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43105425096747"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Chemex",
+    "variant_id": "43105425129515"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / French Press",
+    "variant_id": "43105425162283"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.6,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43105425195051"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "9f2992566a594b94",
+  "first_seen": "2026-10-26",
+  "handle": "optimist-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/TheOptimist-Mockup.webp?v=1777991311",
+  "platform": "shopify",
+  "product_id": "7839516164139",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_current",
+   "rc_sbld"
+  ],
+  "title": "The Optimist",
+  "url": "https://www.birdrockcoffee.com/products/optimist-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273335734315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273335767083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273335799851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273335832619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273335865387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273335898155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273335930923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273335963691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273336258603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273336291371"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273336324139"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273336356907"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273336389675"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273336422443"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273336455211"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273336487979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273336520747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273336553515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273336586283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273336619051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273336651819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273336684587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273336717355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273336750123"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "68a7fc00d7a1a8c1",
+  "first_seen": "2026-10-26",
+  "handle": "monkey-bite-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Monkey_Bite__56137.1674661166.1280.1280.png?v=1773156837",
+  "platform": "shopify",
+  "product_id": "7839517671467",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "rc_sbld"
+  ],
+  "title": "Monkey Bite",
+  "url": "https://www.birdrockcoffee.com/products/monkey-bite-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273340747819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273340780587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273340813355"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273340846123"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273340878891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273340911659"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273340944427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273340977195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273341272107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273341304875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273341337643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273341370411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273341403179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273341435947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273341468715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273341501483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273341534251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273341567019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273341599787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273341632555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273341665323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273341698091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273341730859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273341763627"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "95961f7153ce0db7",
+  "first_seen": "2026-10-26",
+  "handle": "products-50-50-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Fifty_Fifty_-_Mockup.webp?v=1777990332",
+  "platform": "shopify",
+  "product_id": "7839517704235",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_current",
+   "rc_sbld"
+  ],
+  "title": "Fifty-Fifty",
+  "url": "https://www.birdrockcoffee.com/products/products-50-50-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273342058539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273342091307"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / V60",
+    "variant_id": "43273342124075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273342156843"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273342189611"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273342222379"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273342255147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273342287915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273342320683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43273342353451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / V60",
+    "variant_id": "43273342386219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cone",
+    "variant_id": "43273342418987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273342451755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43273342484523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / French Press",
+    "variant_id": "43273342517291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273342550059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273343107115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Espresso",
+    "variant_id": "43273343139883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / V60",
+    "variant_id": "43273343172651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cone",
+    "variant_id": "43273343205419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273343238187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Chemex",
+    "variant_id": "43273343270955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / French Press",
+    "variant_id": "43273343303723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273343336491"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "08438db7d4f5789c",
+  "first_seen": "2026-10-26",
+  "handle": "products-little-italy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Little_Italy_Blend_-_Mockup.webp?v=1777990300",
+  "platform": "shopify",
+  "product_id": "7839517769771",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_current",
+   "rc_sbld"
+  ],
+  "title": "Little Italy",
+  "url": "https://www.birdrockcoffee.com/products/products-little-italy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273343598635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273343631403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273343664171"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273343696939"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273343729707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273343762475"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273343795243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273343828011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273343860779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273343893547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273343926315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273343959083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273343991851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273344024619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273344057387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273344090155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273344647211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273344679979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273344712747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273344745515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273344778283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273344811051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273344843819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273344876587"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "2f819744feb21e77",
+  "first_seen": "2026-10-26",
+  "handle": "products-cafe-del-sol",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/CafeDelSol-Mockup.webp?v=1777991227",
+  "platform": "shopify",
+  "product_id": "7839517933611",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_current",
+   "rc_sbld"
+  ],
+  "title": "Cafe Del Sol",
+  "url": "https://www.birdrockcoffee.com/products/products-cafe-del-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273345990699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273346023467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273346056235"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273346089003"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273346121771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273346154539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273346187307"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273346220075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273346252843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273346285611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273346318379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273346351147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273346383915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273346416683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273346449451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273346482219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273347039275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273347072043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273347104811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273347137579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273347170347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273347203115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273347235883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273347268651"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "6298444725e70339",
+  "first_seen": "2026-10-26",
+  "handle": "tres-dragones",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL-TresDragones26-Mockup.webp?v=1788535408",
+  "platform": "shopify",
+  "product_id": "7839518130219",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Tres Dragones",
+  "url": "https://www.birdrockcoffee.com/products/tres-dragones",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273347399723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43273347432491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / V60",
+    "variant_id": "43273347465259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Cone",
+    "variant_id": "43273347498027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273347530795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43273347563563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / French Press",
+    "variant_id": "43273347596331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273347629099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273347924011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273347956779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / V60",
+    "variant_id": "43273347989547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273348022315"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273348055083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273348087851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273348120619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273348153387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273348186155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Espresso",
+    "variant_id": "43273348218923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / V60",
+    "variant_id": "43273348251691"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Cone",
+    "variant_id": "43273348284459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273348317227"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Chemex",
+    "variant_id": "43273348349995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / French Press",
+    "variant_id": "43273348382763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.12,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273348415531"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "fbdea3f69617468c",
+  "first_seen": "2026-10-26",
+  "handle": "products-the-cupping-table",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/CT_1026_SiteMockup2.webp?v=1791399470",
+  "platform": "shopify",
+  "product_id": "7839522947115",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "The Cupping Table",
+  "url": "https://www.birdrockcoffee.com/products/products-the-cupping-table",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Whole Bean",
+    "variant_id": "43273371189291"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Espresso",
+    "variant_id": "43273371222059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / V60",
+    "variant_id": "43273371254827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Cone",
+    "variant_id": "43273371287595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Flat Bottom Filter",
+    "variant_id": "43273371320363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Chemex",
+    "variant_id": "43273371353131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / French Press",
+    "variant_id": "43273371385899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 47.0,
+    "title": "2 x 10oz Bags / Cold Brew",
+    "variant_id": "43273371418667"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "42f30a3129944d69",
+  "first_seen": "2026-10-26",
+  "handle": "products-sunrise-sunset",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/GUADecaf_1026_SiteMockup.webp?v=1791399597",
+  "platform": "shopify",
+  "product_id": "7839522979883",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Sunrise & Sunset",
+  "url": "https://www.birdrockcoffee.com/products/products-sunrise-sunset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Whole Bean",
+    "variant_id": "43273371451435"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Espresso",
+    "variant_id": "43273371484203"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / V60",
+    "variant_id": "43273371516971"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Cone",
+    "variant_id": "43273371549739"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Flat Bottom Filter",
+    "variant_id": "43273371582507"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Chemex",
+    "variant_id": "43273371615275"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / French Press",
+    "variant_id": "43273371648043"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 49.5,
+    "title": "Rotating Single Origin / Decaf / Cold Brew",
+    "variant_id": "43273371680811"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "496fea797faef45d",
+  "first_seen": "2026-10-26",
+  "handle": "products-safe-for-work",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/New_Subscription_-_Safe_for_Work__78261.1692889892.1280.1280.png?v=1773156962",
+  "platform": "shopify",
+  "product_id": "7839523045419",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "Bulk",
+   "Curated Selection",
+   "Single Origin",
+   "Subscription",
+   "Wholesale"
+  ],
+  "title": "Safe For Work",
+  "url": "https://www.birdrockcoffee.com/products/products-safe-for-work",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Whole Bean",
+    "variant_id": "43273371746347"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Espresso",
+    "variant_id": "43273371779115"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / V60",
+    "variant_id": "43273371811883"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Cone",
+    "variant_id": "43273371844651"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Flat Bottom Filter",
+    "variant_id": "43273371877419"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Chemex",
+    "variant_id": "43273371910187"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / French Press",
+    "variant_id": "43273371942955"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Bird Rock Blend / Rotating Monthly Single Origin / Cold Brew",
+    "variant_id": "43273371975723"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Whole Bean",
+    "variant_id": "43273372008491"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Espresso",
+    "variant_id": "43273372041259"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / V60",
+    "variant_id": "43273372074027"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Cone",
+    "variant_id": "43273372106795"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Flat Bottom Filter",
+    "variant_id": "43273372139563"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Chemex",
+    "variant_id": "43273372172331"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / French Press",
+    "variant_id": "43273372205099"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Little Italy Blend / Rotating Monthly Single Origin / Cold Brew",
+    "variant_id": "43273372237867"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Whole Bean",
+    "variant_id": "43273372270635"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Espresso",
+    "variant_id": "43273372303403"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / V60",
+    "variant_id": "43273372336171"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Cone",
+    "variant_id": "43273372368939"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Flat Bottom Filter",
+    "variant_id": "43273372401707"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Chemex",
+    "variant_id": "43273372434475"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / French Press",
+    "variant_id": "43273372467243"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Cafe Del Sol / Rotating Monthly Single Origin / Cold Brew",
+    "variant_id": "43273372500011"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Whole Bean",
+    "variant_id": "43273372532779"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Espresso",
+    "variant_id": "43273372565547"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / V60",
+    "variant_id": "43273372598315"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Cone",
+    "variant_id": "43273372631083"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Flat Bottom Filter",
+    "variant_id": "43273372663851"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Chemex",
+    "variant_id": "43273372696619"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / French Press",
+    "variant_id": "43273372729387"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 222.3,
+    "title": "Midnight Surf / Rotating Monthly Single Origin / Cold Brew",
+    "variant_id": "43273372762155"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "bb9b7c9f05935f54",
+  "first_seen": "2026-10-26",
+  "handle": "products-meet-in-the-middle",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/MeetInTheMiddle_1026_SiteMockup.webp?v=1791399631",
+  "platform": "shopify",
+  "product_id": "7839523078187",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Meet In The Middle",
+  "url": "https://www.birdrockcoffee.com/products/products-meet-in-the-middle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Whole Bean",
+    "variant_id": "43273372794923"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Espresso",
+    "variant_id": "43273372827691"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / V60",
+    "variant_id": "43273372860459"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Cone",
+    "variant_id": "43273372893227"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Flat Bottom Filter",
+    "variant_id": "43273372925995"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Chemex",
+    "variant_id": "43273372958763"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / French Press",
+    "variant_id": "43273372991531"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Bird Rock Blend / Rotating Single Origin / Cold Brew",
+    "variant_id": "43273373024299"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Whole Bean",
+    "variant_id": "43273373057067"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Espresso",
+    "variant_id": "43273373089835"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / V60",
+    "variant_id": "43273373122603"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Cone",
+    "variant_id": "43273373155371"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Flat Bottom Filter",
+    "variant_id": "43273373188139"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Chemex",
+    "variant_id": "43273373220907"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / French Press",
+    "variant_id": "43273373253675"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Little Italy Blend / Rotating Single Origin / Cold Brew",
+    "variant_id": "43273373286443"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Whole Bean",
+    "variant_id": "43273373319211"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Espresso",
+    "variant_id": "43273373351979"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / V60",
+    "variant_id": "43273373384747"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Cone",
+    "variant_id": "43273373417515"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Flat Bottom Filter",
+    "variant_id": "43273373450283"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Chemex",
+    "variant_id": "43273373483051"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / French Press",
+    "variant_id": "43273373515819"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Cafe Del Sol / Rotating Single Origin / Cold Brew",
+    "variant_id": "43273373548587"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Whole Bean",
+    "variant_id": "43273373581355"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Espresso",
+    "variant_id": "43273373614123"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / V60",
+    "variant_id": "43273373646891"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Cone",
+    "variant_id": "43273373679659"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Flat Bottom Filter",
+    "variant_id": "43273373712427"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Chemex",
+    "variant_id": "43273373745195"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / French Press",
+    "variant_id": "43273373777963"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 47.0,
+    "title": "Midnight Surf / Rotating Single Origin / Cold Brew",
+    "variant_id": "43273373810731"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "1a38670dd56f4384",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-surf",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/MidnightSurf-Mockup.webp?v=1782147539",
+  "platform": "shopify",
+  "product_id": "7839523962923",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_current",
+   "rc_sbld"
+  ],
+  "title": "Midnight Surf",
+  "url": "https://www.birdrockcoffee.com/products/midnight-surf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273393209387"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273393242155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273393274923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273393307691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273393340459"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273393373227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273393405995"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273393438763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273393733675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273393766443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273393799211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273393831979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273393864747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273393897515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273393930283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273393963051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273393995819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273394028587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273394061355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273394094123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273394126891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273394159659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273394192427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273394225195"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "efc330f6591fb7f2",
+  "first_seen": "2026-10-26",
+  "handle": "hacienda-la-papaya-typica-rum-barrel",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/HaciendaLaPapaya_RumBarrel24_mockup__15861.1762895747.1280.1280.png?v=1773156883",
+  "platform": "shopify",
+  "product_id": "7839524978731",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Typica Rum Barrel",
+  "url": "https://www.birdrockcoffee.com/products/hacienda-la-papaya-typica-rum-barrel",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "10/13/2026 / 8oz",
+    "variant_id": "50438898122795"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "Roasts and Ships Weekly on Tuesday / 8oz",
+    "variant_id": "67889072078891"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "7d4b30827150ea30",
+  "first_seen": "2026-10-26",
+  "handle": "naughty-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Naughty26-Mockup.webp?v=1793028804",
+  "platform": "shopify",
+  "product_id": "7839527436331",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Naughty Blend",
+  "url": "https://www.birdrockcoffee.com/products/naughty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273509371947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Espresso",
+    "variant_id": "43273509404715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / V60",
+    "variant_id": "43273509437483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cone",
+    "variant_id": "43273509470251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273509503019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Chemex",
+    "variant_id": "43273509535787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / French Press",
+    "variant_id": "43273509568555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273509601323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273509634091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Espresso",
+    "variant_id": "43273509666859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / V60",
+    "variant_id": "43273509699627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cone",
+    "variant_id": "43273509732395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273509765163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Chemex",
+    "variant_id": "43273509797931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / French Press",
+    "variant_id": "43273509830699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273509863467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273510158379"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273510191147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273510223915"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273510256683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273510289451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273510322219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273510354987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273510387755"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "d6017abe70af09e1",
+  "first_seen": "2026-10-26",
+  "handle": "santa-ana-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/20GeshaSantaAna8oz_BagMockup_3.webp?v=1786565855",
+  "platform": "shopify",
+  "product_id": "7839528419371",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos"
+  ],
+  "title": "Gesha Santa Ana",
+  "url": "https://www.birdrockcoffee.com/products/santa-ana-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 50.0,
+    "title": "9/22/2026 / 8oz",
+    "variant_id": "45359012610091"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "e1ed96fb92894786",
+  "first_seen": "2026-10-26",
+  "handle": "tolima-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL_-_Tolima_Light_-_Mockup.webp?v=1777990542",
+  "platform": "shopify",
+  "product_id": "7839530287147",
+  "product_type": "Single Origin Coffee - Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "detail_Organic"
+  ],
+  "title": "Tolima | Organic",
+  "url": "https://www.birdrockcoffee.com/products/tolima-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273546530859"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273546563627"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43273546596395"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273546629163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273546661931"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273546694699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273546727467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273546760235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273547055147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43273547087915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43273547120683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43273547153451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273547186219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43273547218987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43273547251755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273547284523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273547317291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273547350059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43273547382827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273547415595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273547448363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273547481131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273547513899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273547546667"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "b2af82db8d6ccd3f",
+  "first_seen": "2026-10-26",
+  "handle": "the-home-barista-espresso-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/MBEOptimist_1026_SiteMockup.webp?v=1791399559",
+  "platform": "shopify",
+  "product_id": "7839530385451",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "The Home Barista",
+  "url": "https://www.birdrockcoffee.com/products/the-home-barista-espresso-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Whole Bean",
+    "variant_id": "43273554919467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Whole Bean",
+    "variant_id": "43273557016619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Whole Bean",
+    "variant_id": "43273559113771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Whole Bean",
+    "variant_id": "43273561210923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Whole Bean",
+    "variant_id": "43273563308075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Whole Bean",
+    "variant_id": "43273565405227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Whole Bean",
+    "variant_id": "43273567502379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Whole Bean",
+    "variant_id": "43273569599531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Whole Bean",
+    "variant_id": "43273571696683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Espresso",
+    "variant_id": "43845871763499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / V60",
+    "variant_id": "43845871796267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Cone",
+    "variant_id": "43845871829035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Flat Bottom Filter",
+    "variant_id": "43845871861803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Chemex",
+    "variant_id": "43845871894571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / French Press",
+    "variant_id": "43845871927339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "Monkey Bite / 10oz / Cold Brew",
+    "variant_id": "43845871960107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Espresso",
+    "variant_id": "43845871992875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / V60",
+    "variant_id": "43845872025643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Cone",
+    "variant_id": "43845872058411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Flat Bottom Filter",
+    "variant_id": "43845872091179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Chemex",
+    "variant_id": "43845872123947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / French Press",
+    "variant_id": "43845872156715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "Monkey Bite / 2lb / Cold Brew",
+    "variant_id": "43845872189483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Espresso",
+    "variant_id": "43845872222251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / V60",
+    "variant_id": "43845872255019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Cone",
+    "variant_id": "43845872287787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Flat Bottom Filter",
+    "variant_id": "43845872320555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Chemex",
+    "variant_id": "43845872353323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / French Press",
+    "variant_id": "43845872386091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Monkey Bite / 5lb / Cold Brew",
+    "variant_id": "43845872418859"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Espresso",
+    "variant_id": "43845872451627"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / V60",
+    "variant_id": "43845872484395"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Cone",
+    "variant_id": "43845872517163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Flat Bottom Filter",
+    "variant_id": "43845872549931"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Chemex",
+    "variant_id": "43845872582699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / French Press",
+    "variant_id": "43845872615467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "The Optimist / 10oz / Cold Brew",
+    "variant_id": "43845872648235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Espresso",
+    "variant_id": "43845872681003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / V60",
+    "variant_id": "43845872713771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Cone",
+    "variant_id": "43845872746539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Flat Bottom Filter",
+    "variant_id": "43845872779307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Chemex",
+    "variant_id": "43845872812075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / French Press",
+    "variant_id": "43845872844843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "The Optimist / 2lb / Cold Brew",
+    "variant_id": "43845872877611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Espresso",
+    "variant_id": "43845872910379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / V60",
+    "variant_id": "43845872943147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Cone",
+    "variant_id": "43845872975915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Flat Bottom Filter",
+    "variant_id": "43845873008683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Chemex",
+    "variant_id": "43845873041451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / French Press",
+    "variant_id": "43845873074219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "The Optimist / 5lb / Cold Brew",
+    "variant_id": "43845873106987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Espresso",
+    "variant_id": "43845873139755"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / V60",
+    "variant_id": "43845873172523"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Cone",
+    "variant_id": "43845873205291"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Flat Bottom Filter",
+    "variant_id": "43845873238059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Chemex",
+    "variant_id": "43845873270827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / French Press",
+    "variant_id": "43845873303595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "The Bird / 10oz / Cold Brew",
+    "variant_id": "43845873336363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Espresso",
+    "variant_id": "43845873369131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / V60",
+    "variant_id": "43845873401899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Cone",
+    "variant_id": "43845873434667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Flat Bottom Filter",
+    "variant_id": "43845873467435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Chemex",
+    "variant_id": "43845873500203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / French Press",
+    "variant_id": "43845873532971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.4,
+    "title": "The Bird / 2lb / Cold Brew",
+    "variant_id": "43845873565739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Espresso",
+    "variant_id": "43845873598507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / V60",
+    "variant_id": "43845873631275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Cone",
+    "variant_id": "43845873664043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Flat Bottom Filter",
+    "variant_id": "43845873696811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Chemex",
+    "variant_id": "43845873729579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / French Press",
+    "variant_id": "43845873762347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "The Bird / 5lb / Cold Brew",
+    "variant_id": "43845873795115"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "6e4aebc046a082e3",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-vario-1",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Vario__75243.1669216825.1280.1280__95078.1750861275.1280.1280.png?v=1773157000",
+  "platform": "shopify",
+  "product_id": "7839532941355",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Baratza Vario +",
+  "url": "https://www.birdrockcoffee.com/products/baratza-vario-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 599.95,
+    "title": "White",
+    "variant_id": "43273599582251"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 599.95,
+    "title": "Black",
+    "variant_id": "43273599615019"
+   }
+  ],
+  "vendor": "Baratza"
+ },
+ {
+  "body_hash": "2eb2c2c44f8afdb5",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-encore-esp",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Encore-BnW-791x1024__51057.1669216821.1280.1280__76267.1750861291.1280.1280.jpg?v=1773156994",
+  "platform": "shopify",
+  "product_id": "7839532974123",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Baratza Encore ESP",
+  "url": "https://www.birdrockcoffee.com/products/baratza-encore-esp",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 199.95,
+    "title": "Black",
+    "variant_id": "43273599647787"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 199.95,
+    "title": "White",
+    "variant_id": "43273599680555"
+   }
+  ],
+  "vendor": "Baratza"
+ },
+ {
+  "body_hash": "9a10f07dfc3799a7",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-virtuoso-plus",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/2-Virtuoso-Ft__02541.1669216824.1280.1280__65985.1750861123.1280.1280.png?v=1773156994",
+  "platform": "shopify",
+  "product_id": "7839533039659",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Baratza Virtuoso +",
+  "url": "https://www.birdrockcoffee.com/products/baratza-virtuoso-plus",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 249.95,
+    "title": "Default Title",
+    "variant_id": "43273599746091"
+   }
+  ],
+  "vendor": "Baratza"
+ },
+ {
+  "body_hash": "987ac9ae82640a8f",
+  "first_seen": "2026-10-26",
+  "handle": "las-terrazas",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/las-terrazas-guatemala-26-bag.webp?v=1792170910",
+  "platform": "shopify",
+  "product_id": "7839533695019",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "Las Terrazas",
+  "url": "https://www.birdrockcoffee.com/products/las-terrazas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273603776555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Espresso",
+    "variant_id": "43273603809323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / V60",
+    "variant_id": "43273603842091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cone",
+    "variant_id": "43273603874859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273603907627"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Chemex",
+    "variant_id": "43273603940395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / French Press",
+    "variant_id": "43273603973163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.76,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273604005931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273604038699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Espresso",
+    "variant_id": "43273604071467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / V60",
+    "variant_id": "43273604104235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cone",
+    "variant_id": "43273604137003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273604169771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Chemex",
+    "variant_id": "43273604202539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / French Press",
+    "variant_id": "43273604235307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.6,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273604268075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273604562987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273604595755"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / V60",
+    "variant_id": "43273604628523"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273604661291"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273604694059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273604726827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273604759595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273604792363"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "abc437f593047391",
+  "first_seen": "2026-10-26",
+  "handle": "stagg-ekg-pro-smoke-green-with-maple-handle",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/1_ca317856-2a4d-4e8b-849a-b455154a3ad4__23879.1753117892.1280.1280.png?v=1773157048",
+  "platform": "shopify",
+  "product_id": "7839534776363",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Stagg EKG Pro - Smoke Green with Maple Handle",
+  "url": "https://www.birdrockcoffee.com/products/stagg-ekg-pro-smoke-green-with-maple-handle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 199.95,
+    "title": "Smoke Green with Maple Handle",
+    "variant_id": "43273614852139"
+   }
+  ],
+  "vendor": "Fellow Brewing"
+ },
+ {
+  "body_hash": "abc437f593047391",
+  "first_seen": "2026-10-26",
+  "handle": "stagg-ekg-pro-matte-black",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/1753124715.1280.1280.jpg?v=1773157066",
+  "platform": "shopify",
+  "product_id": "7839534841899",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Stagg EKG Pro: Matte Black",
+  "url": "https://www.birdrockcoffee.com/products/stagg-ekg-pro-matte-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 179.95,
+    "title": "Matte Black",
+    "variant_id": "43273614983211"
+   }
+  ],
+  "vendor": "Fellow Brewing"
+ },
+ {
+  "body_hash": "abc437f593047391",
+  "first_seen": "2026-10-26",
+  "handle": "stagg-ekg-pro-hazy-blue-w-maple-handle",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Stagg_Pro_HB_-_1__68163.1753125410.1280.1280.png?v=1773157072",
+  "platform": "shopify",
+  "product_id": "7839534874667",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "discount_exclude"
+  ],
+  "title": "Stagg EKG Pro - Hazy Blue w/ Maple Handle",
+  "url": "https://www.birdrockcoffee.com/products/stagg-ekg-pro-hazy-blue-w-maple-handle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 199.95,
+    "title": "Hazy Blue w/ Maple Handle",
+    "variant_id": "43273615015979"
+   }
+  ],
+  "vendor": "Fellow Brewing"
+ },
+ {
+  "body_hash": "abc437f593047391",
+  "first_seen": "2026-10-26",
+  "handle": "stagg-ekg-pro-matte-white",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/Stagg_EKG_Pro-Matte_White_-1__00720.1755017980.1280.1280.png?v=1773157081",
+  "platform": "shopify",
+  "product_id": "7839535005739",
+  "product_type": "Merchandise",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Stagg EKG Pro: Matte White",
+  "url": "https://www.birdrockcoffee.com/products/stagg-ekg-pro-matte-white",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 179.95,
+    "title": "Matte White",
+    "variant_id": "43273615212587"
+   }
+  ],
+  "vendor": "Fellow Brewing"
+ },
+ {
+  "body_hash": "dd421bdcdde4bc2a",
+  "first_seen": "2026-10-26",
+  "handle": "lima-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/PER-LimaDECAFOrganic26-Mockup.png?v=1782323239",
+  "platform": "shopify",
+  "product_id": "7839535333419",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Lima Decaf",
+  "url": "https://www.birdrockcoffee.com/products/lima-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273620815915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Espresso",
+    "variant_id": "43273620848683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / V60",
+    "variant_id": "43273620881451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cone",
+    "variant_id": "43273620914219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273620946987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Chemex",
+    "variant_id": "43273620979755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / French Press",
+    "variant_id": "43273621012523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273621045291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273621078059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Espresso",
+    "variant_id": "43273621110827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / V60",
+    "variant_id": "43273621143595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cone",
+    "variant_id": "43273621176363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273621209131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Chemex",
+    "variant_id": "43273621241899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / French Press",
+    "variant_id": "43273621274667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273621307435"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273621602347"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273621635115"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / V60",
+    "variant_id": "43273621667883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273621700651"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273621733419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273621766187"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273621798955"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273621831723"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "519f96e404a16400",
+  "first_seen": "2026-10-26",
+  "handle": "santa-ana-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/GUA-SantaAnaPacamara26-Mockup.webp?v=1792172122",
+  "platform": "shopify",
+  "product_id": "7839535431723",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "Santa Ana Pacamara",
+  "url": "https://www.birdrockcoffee.com/products/santa-ana-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273622683691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273622716459"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / V60",
+    "variant_id": "43273622749227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273622781995"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273622814763"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273622847531"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273622880299"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273622913067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67889697062955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Espresso",
+    "variant_id": "67889697095723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / V60",
+    "variant_id": "67889697128491"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cone",
+    "variant_id": "67889697161259"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "67889697194027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Chemex",
+    "variant_id": "67889697226795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / French Press",
+    "variant_id": "67889697259563"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67889697292331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67889697325099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Espresso",
+    "variant_id": "67889697357867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / V60",
+    "variant_id": "67889697390635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cone",
+    "variant_id": "67889697423403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "67889697456171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Chemex",
+    "variant_id": "67889697488939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / French Press",
+    "variant_id": "67889697521707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67889697554475"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "12799cd58a04ac5f",
+  "first_seen": "2026-10-26",
+  "handle": "inga-mystique",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL-IngaMystique-Mockup_eb052e9e-4554-4b9a-a6cf-652a56564366.webp?v=1792689567",
+  "platform": "shopify",
+  "product_id": "7839535497259",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [],
+  "title": "Inga Mystique",
+  "url": "https://www.birdrockcoffee.com/products/inga-mystique",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273623011371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Espresso",
+    "variant_id": "43273623044139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / V60",
+    "variant_id": "43273623076907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cone",
+    "variant_id": "43273623109675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273623142443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Chemex",
+    "variant_id": "43273623175211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / French Press",
+    "variant_id": "43273623207979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273623240747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273623273515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43273623306283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / V60",
+    "variant_id": "43273623339051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cone",
+    "variant_id": "43273623371819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273623404587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43273623437355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / French Press",
+    "variant_id": "43273623470123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273623502891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273623797803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273623830571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / V60",
+    "variant_id": "43273623863339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273623896107"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273623928875"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273623961643"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273623994411"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273624027179"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "ea4a0bce94c98bc6",
+  "first_seen": "2026-10-26",
+  "handle": "oromia-bishan",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/ETH-OromiaBishanWate26-Mockup.webp?v=1790697651",
+  "platform": "shopify",
+  "product_id": "7839536480299",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "Fresh Roasted",
+   "Fruity",
+   "Intense",
+   "Light Roast",
+   "Micro Roasted"
+  ],
+  "title": "Oromia Bishan",
+  "url": "https://www.birdrockcoffee.com/products/oromia-bishan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273635495979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Espresso",
+    "variant_id": "43273635528747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / V60",
+    "variant_id": "43273635561515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Cone",
+    "variant_id": "43273635594283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273635627051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Chemex",
+    "variant_id": "43273635659819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / French Press",
+    "variant_id": "43273635692587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 89.6,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273635725355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273635758123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43273635790891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / V60",
+    "variant_id": "43273635823659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Cone",
+    "variant_id": "43273635856427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273635889195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43273635921963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / French Press",
+    "variant_id": "43273635954731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 224.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273635987499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273636282411"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273636315179"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / V60",
+    "variant_id": "43273636347947"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273636380715"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273636413483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273636446251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273636479019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273636511787"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "3b0dd6b6cb984134",
+  "first_seen": "2026-10-26",
+  "handle": "vermillion-blaze",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL_-_Vermillion_Blaze_26_-_Mockup.webp?v=1777990531",
+  "platform": "shopify",
+  "product_id": "7839536578603",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos",
+   "rc_sior"
+  ],
+  "title": "Vermillion Blaze",
+  "url": "https://www.birdrockcoffee.com/products/vermillion-blaze",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273637625899"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Espresso",
+    "variant_id": "43273637658667"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / V60",
+    "variant_id": "43273637691435"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Cone",
+    "variant_id": "43273637724203"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273637756971"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Chemex",
+    "variant_id": "43273637789739"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / French Press",
+    "variant_id": "43273637822507"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273637855275"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273638150187"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43273638182955"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / V60",
+    "variant_id": "43273638215723"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Cone",
+    "variant_id": "43273638248491"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273638281259"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43273638314027"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / French Press",
+    "variant_id": "43273638346795"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273638379563"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273638412331"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273638445099"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / V60",
+    "variant_id": "43273638477867"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273638510635"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273638543403"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273638576171"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273638608939"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273638641707"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "949ab31e53958f40",
+  "first_seen": "2026-10-26",
+  "handle": "el-porvenir",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/COL_-_El_Porvenir_26_-_Mockup.webp?v=1777990562",
+  "platform": "shopify",
+  "product_id": "7839536676907",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos",
+   "rc_sior"
+  ],
+  "title": "El Porvenir",
+  "url": "https://www.birdrockcoffee.com/products/el-porvenir",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273638740011"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Espresso",
+    "variant_id": "43273638772779"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / V60",
+    "variant_id": "43273638805547"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Cone",
+    "variant_id": "43273638838315"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273638871083"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Chemex",
+    "variant_id": "43273638903851"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / French Press",
+    "variant_id": "43273638936619"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 71.68,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273638969387"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273639264299"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Espresso",
+    "variant_id": "43273639297067"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / V60",
+    "variant_id": "43273639329835"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Cone",
+    "variant_id": "43273639362603"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273639395371"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Chemex",
+    "variant_id": "43273639428139"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / French Press",
+    "variant_id": "43273639460907"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.8,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273639493675"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273639526443"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273639559211"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / V60",
+    "variant_id": "43273639591979"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273639624747"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273639657515"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273639690283"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273639723051"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273639755819"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "d8fe74e614311650",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-swp-natural-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/ETH-DECAFSWPNaturalSidama26-Mockup.webp?v=1790872095",
+  "platform": "shopify",
+  "product_id": "7839536906283",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "rc_sior"
+  ],
+  "title": "Decaf SWP | Natural Sidama",
+  "url": "https://www.birdrockcoffee.com/products/decaf-swp-natural-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43273644113963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Espresso",
+    "variant_id": "43273644146731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / V60",
+    "variant_id": "43273644179499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cone",
+    "variant_id": "43273644212267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43273644245035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Chemex",
+    "variant_id": "43273644277803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / French Press",
+    "variant_id": "43273644310571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.32,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43273644343339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43273644376107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43273644408875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / V60",
+    "variant_id": "43273644441643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cone",
+    "variant_id": "43273644474411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43273644507179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43273644539947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / French Press",
+    "variant_id": "43273644572715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43273644605483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43273644900395"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43273644933163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / V60",
+    "variant_id": "43273644965931"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cone",
+    "variant_id": "43273644998699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43273645031467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43273645064235"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / French Press",
+    "variant_id": "43273645097003"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43273645129771"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "d1809f88c99d5616",
+  "first_seen": "2026-10-26",
+  "handle": "trapiche-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/TrapicheGeisha4oz_CloseCropMockup_7377bcd4-ee3f-424d-a1f9-1abdb6740c67.png?v=1774288919",
+  "platform": "shopify",
+  "product_id": "7856292921387",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos",
+   "discount_exclude",
+   "rc_sior"
+  ],
+  "title": "Trapiche Geisha",
+  "url": "https://www.birdrockcoffee.com/products/trapiche-geisha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 89.0,
+    "title": "4oz / 06/09/2026",
+    "variant_id": "44086491283499"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "89a30f8b21035e84",
+  "first_seen": "2026-10-26",
+  "handle": "finca-la-carolina",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/ECU_-_Finca_La_Carolina_26_-_Mockup_52fa517c-d61a-4cbb-8c5e-59f0bbf16da5.webp?v=1778617881",
+  "platform": "shopify",
+  "product_id": "7894567026731",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_oos",
+   "promo_featured"
+  ],
+  "title": "Finca La Carolina",
+  "url": "https://www.birdrockcoffee.com/products/finca-la-carolina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "43983760457771"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Espresso",
+    "variant_id": "43983760490539"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / V60",
+    "variant_id": "43983760523307"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Cone",
+    "variant_id": "43983760556075"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "43983760588843"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Chemex",
+    "variant_id": "43983760621611"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / French Press",
+    "variant_id": "43983760654379"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "43983760687147"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43983760719915"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Espresso",
+    "variant_id": "43983760752683"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / V60",
+    "variant_id": "43983760785451"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Cone",
+    "variant_id": "43983760818219"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43983760850987"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Chemex",
+    "variant_id": "43983760883755"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / French Press",
+    "variant_id": "43983760916523"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 81.92,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43983760949291"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43983760982059"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Espresso",
+    "variant_id": "43983761014827"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / V60",
+    "variant_id": "43983761047595"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Cone",
+    "variant_id": "43983761080363"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43983761113131"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Chemex",
+    "variant_id": "43983761145899"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / French Press",
+    "variant_id": "43983761178667"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 179.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43983761211435"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "bed83b327b66ffb7",
+  "first_seen": "2026-10-26",
+  "handle": "miraflores-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/MirafloresPB10oz_BagMockup.web.webp?v=1784744020",
+  "platform": "shopify",
+  "product_id": "8015376810027",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "Miraflores | Pink Bourbon",
+  "url": "https://www.birdrockcoffee.com/products/miraflores-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Whole Bean / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310407211"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Espresso / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310439979"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / V60 / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310472747"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Cone / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310505515"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Flat Bottom Filter / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310538283"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Chemex / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310571051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / French Press / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310603819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.0,
+    "title": "10oz / Cold Brew / Roasts and Ships Every Tuesday",
+    "variant_id": "44456310636587"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "36538f0f759325b1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-tiger",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/SUM-HariamuTiger26-Mockup.webp?v=1787159686",
+  "platform": "shopify",
+  "product_id": "8055642095659",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "Tiger",
+  "url": "https://www.birdrockcoffee.com/products/sumatra-tiger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "44849690640427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "44849690673195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / V60",
+    "variant_id": "44849690705963"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cone",
+    "variant_id": "44849690738731"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "44849690771499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex",
+    "variant_id": "44849690804267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "44849690837035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "44849690869803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44849690902571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Espresso",
+    "variant_id": "44849690935339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / V60",
+    "variant_id": "44849690968107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cone",
+    "variant_id": "44849691000875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "44849691033643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Chemex",
+    "variant_id": "44849691066411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / French Press",
+    "variant_id": "44849691099179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cold Brew",
+    "variant_id": "44849691131947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44849691164715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Espresso",
+    "variant_id": "44849691197483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / V60",
+    "variant_id": "44849691230251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cone",
+    "variant_id": "44849691263019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44849691295787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Chemex",
+    "variant_id": "44849691328555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / French Press",
+    "variant_id": "44849691361323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44849691394091"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "e8b2892b8487946d",
+  "first_seen": "2026-10-26",
+  "handle": "la-avila-sl28",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/ELS-LaAvilaSL2826-Mockup.webp?v=1787250270",
+  "platform": "shopify",
+  "product_id": "8055899226155",
+  "product_type": "Single Origin Coffee - Non-Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "promo_featured"
+  ],
+  "title": "La Avila SL28",
+  "url": "https://www.birdrockcoffee.com/products/la-avila-sl28",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "44867752525867"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "44867752558635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / V60",
+    "variant_id": "44867752591403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cone",
+    "variant_id": "44867752624171"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "44867752656939"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex",
+    "variant_id": "44867752689707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "44867752722475"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "44867752755243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44867752788011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Espresso",
+    "variant_id": "44867752820779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / V60",
+    "variant_id": "44867752853547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cone",
+    "variant_id": "44867752886315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "44867752919083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Chemex",
+    "variant_id": "44867752951851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / French Press",
+    "variant_id": "44867752984619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.88,
+    "title": "2lb / Cold Brew",
+    "variant_id": "44867753017387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44867753050155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Espresso",
+    "variant_id": "44867753082923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / V60",
+    "variant_id": "44867753115691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cone",
+    "variant_id": "44867753148459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44867753181227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Chemex",
+    "variant_id": "44867753213995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / French Press",
+    "variant_id": "44867753246763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.8,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44867753279531"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ },
+ {
+  "body_hash": "ad6be9b6b75b1f83",
+  "first_seen": "2026-10-26",
+  "handle": "bird-rock-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2013/2883/files/BirdRockBlend-Mockup_1.webp?v=1779115978",
+  "platform": "shopify",
+  "product_id": "8497372549",
+  "product_type": "Signature Blend Coffee - Non Organic",
+  "roaster_slug": "birdrockcoffee",
+  "tags": [
+   "avail_subsc",
+   "rc_sbld"
+  ],
+  "title": "Bird Rock",
+  "url": "https://www.birdrockcoffee.com/products/bird-rock-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "40353295663147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Espresso",
+    "variant_id": "40353295695915"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cone",
+    "variant_id": "40353295728683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Flat Bottom Filter",
+    "variant_id": "40353295761451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / French Press",
+    "variant_id": "40353295794219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "40353295826987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Chemex",
+    "variant_id": "40574521638955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43070630494251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Espresso",
+    "variant_id": "43070630527019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cone",
+    "variant_id": "43070630559787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "43070630592555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Chemex",
+    "variant_id": "43070630625323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / French Press",
+    "variant_id": "43070630658091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / Cold Brew",
+    "variant_id": "43070630690859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43070640324651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43070640357419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cone",
+    "variant_id": "43070640390187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "43070640422955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Chemex",
+    "variant_id": "43070640455723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / French Press",
+    "variant_id": "43070640488491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "43070640521259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / V60",
+    "variant_id": "43070667391019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2lb / V60",
+    "variant_id": "43070667456555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lb / V60",
+    "variant_id": "43070667489323"
+   }
+  ],
+  "vendor": "Bird Rock Coffee Roasters"
+ }
+]

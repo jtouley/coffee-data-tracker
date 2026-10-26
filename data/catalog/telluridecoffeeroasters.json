@@ -1,0 +1,1417 @@
+[
+ {
+  "body_hash": "05164fef4012f742",
+  "first_seen": "2026-10-26",
+  "handle": "blue-mesa",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/RNDR_BlueMesa-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "1346",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Chocolate",
+   "Full Bodied",
+   "Sweet"
+  ],
+  "title": "Blue Mesa",
+  "url": "https://telluridecoffeeroasters.net/product/blue-mesa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12oz",
+    "variant_id": "1346:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 0.0,
+    "title": "24oz",
+    "variant_id": "1346:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lbs",
+    "variant_id": "1346:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "6oz",
+    "variant_id": "1346:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "940a28ed451bdae9",
+  "first_seen": "2026-10-26",
+  "handle": "bluebird-decaf",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Bluebird-Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "1365",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Decafs",
+   "Fruity",
+   "Light"
+  ],
+  "title": "Bluebird Decaf",
+  "url": "https://telluridecoffeeroasters.net/product/bluebird-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "1365:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "1365:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "1365:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "1365:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3bc014dc39af859",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kolla-bolcha",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/KB2.jpg",
+  "platform": "woocommerce",
+  "product_id": "1391",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Full Bodied",
+   "Select",
+   "Single Origins",
+   "Sweet",
+   "Tangy"
+  ],
+  "title": "Ethiopia Kolla Bolcha",
+  "url": "https://telluridecoffeeroasters.net/product/ethiopia-kolla-bolcha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12oz",
+    "variant_id": "1391:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 10.0,
+    "title": "24oz",
+    "variant_id": "1391:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.0,
+    "title": "5lbs",
+    "variant_id": "1391:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "6oz",
+    "variant_id": "1391:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e5390a2fc565fe70",
+  "first_seen": "2026-10-26",
+  "handle": "macadamia-nut",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/RNDR_MacNut-TCR_24oz.png",
+  "platform": "woocommerce",
+  "product_id": "1398",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Buttery",
+   "Flavors",
+   "Sweet"
+  ],
+  "title": "Macadamia Nut",
+  "url": "https://telluridecoffeeroasters.net/product/macadamia-nut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5lbs",
+    "variant_id": "1398:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 43.0,
+    "title": "5lbs",
+    "variant_id": "1398:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3112c9d66c5dccee",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/French-Roast.png",
+  "platform": "woocommerce",
+  "product_id": "15",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Caramel",
+   "Dark Roasts",
+   "Heavy",
+   "Smoky"
+  ],
+  "title": "French Roast",
+  "url": "https://telluridecoffeeroasters.net/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "15:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "15:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "15:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "15:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09f68e285bae90ed",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2024/03/PapuaNewGuinea_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "16537",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Low Acid",
+   "Single Origins",
+   "Specials"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://telluridecoffeeroasters.net/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "16537:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 17.0,
+    "title": "24oz",
+    "variant_id": "16537:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "16537:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a73343687086767",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-munkaze",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/06/CR_2026-93_HD.png",
+  "platform": "woocommerce",
+  "product_id": "29564",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Fruity",
+   "New!",
+   "Select",
+   "Single Origins",
+   "Sweet"
+  ],
+  "title": "Burundi Munkaze",
+  "url": "https://telluridecoffeeroasters.net/product/burundi-munkaze/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "6oz",
+    "variant_id": "29564:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12oz",
+    "variant_id": "29564:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 10.0,
+    "title": "24oz",
+    "variant_id": "29564:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.0,
+    "title": "5lb",
+    "variant_id": "29564:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "72544cbd9fa382a4",
+  "first_seen": "2026-10-26",
+  "handle": "peru-yuraq-yaku-coming-soon",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/RNDR_PeruCusco-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "29680",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Chocolate",
+   "New!",
+   "Single Origins"
+  ],
+  "title": "Peru Yuraq Yaku",
+  "url": "https://telluridecoffeeroasters.net/product/peru-yuraq-yaku-coming-soon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "6oz",
+    "variant_id": "29680:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12oz",
+    "variant_id": "29680:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 10.0,
+    "title": "24oz",
+    "variant_id": "29680:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.0,
+    "title": "5lb",
+    "variant_id": "29680:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aad1e4393e2d1545",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-colombia",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/07/DecafDarkColo_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "29940",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Dark Roasts",
+   "Decafs",
+   "Full Bodied",
+   "New!"
+  ],
+  "title": "Decaf Dark Colombia",
+  "url": "https://telluridecoffeeroasters.net/product/decaf-dark-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12oz",
+    "variant_id": "29940:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 10.0,
+    "title": "24oz",
+    "variant_id": "29940:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.0,
+    "title": "5lbs",
+    "variant_id": "29940:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "6oz",
+    "variant_id": "29940:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "13c9b579b26e2a1c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-eden",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/09/ColoEden_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "30999",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "New!",
+   "Select",
+   "Single Origins"
+  ],
+  "title": "Colombia El Eden",
+  "url": "https://telluridecoffeeroasters.net/product/colombia-el-eden/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12oz",
+    "variant_id": "30999:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 11.0,
+    "title": "24oz",
+    "variant_id": "30999:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 11.0,
+    "title": "5lbs",
+    "variant_id": "30999:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 11.0,
+    "title": "6oz",
+    "variant_id": "30999:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39ffd04f8d097da7",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-khulani-amer",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/10/sweet-marias-yemen-coffee-al-hagarah-1_fixed.jpg",
+  "platform": "woocommerce",
+  "product_id": "31218",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "New!",
+   "Select",
+   "Single Origins"
+  ],
+  "title": "Yemen Khulani Amer",
+  "url": "https://telluridecoffeeroasters.net/product/yemen-khulani-amer/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz",
+    "variant_id": "31218:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 15.0,
+    "title": "24oz",
+    "variant_id": "31218:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lbs",
+    "variant_id": "31218:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 15.0,
+    "title": "6oz",
+    "variant_id": "31218:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b31c9abfc7bedb28",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/French-Roast.png",
+  "platform": "woocommerce",
+  "product_id": "33",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Caramel",
+   "Dark Roasts",
+   "Heavy",
+   "Organic",
+   "Smoky"
+  ],
+  "title": "Organic French Roast",
+  "url": "https://telluridecoffeeroasters.net/product/organic-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "33:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "33:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "33:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "33:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "876d3f47c533f638",
+  "first_seen": "2026-10-26",
+  "handle": "black-magic",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Black-Magic.png",
+  "platform": "woocommerce",
+  "product_id": "34",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Dark Roasts",
+   "Heavy",
+   "Low Acid",
+   "Rich"
+  ],
+  "title": "Black Magic",
+  "url": "https://telluridecoffeeroasters.net/product/black-magic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "34:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "34:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "34:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "34:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af3aa0055afae06d",
+  "first_seen": "2026-10-26",
+  "handle": "dark-sumatra",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/03/Dark-Sumatra.png",
+  "platform": "woocommerce",
+  "product_id": "35",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Dark Roasts",
+   "Full Bodied",
+   "Low Acid",
+   "Single Origins",
+   "Syrupy"
+  ],
+  "title": "Dark Sumatra",
+  "url": "https://telluridecoffeeroasters.net/product/dark-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12oz",
+    "variant_id": "35:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 0.0,
+    "title": "24oz",
+    "variant_id": "35:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lbs",
+    "variant_id": "35:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "6oz",
+    "variant_id": "35:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad18cecf4e788a23",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-avalanche",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2020/07/RNDR_DecafAvalanche-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "3594",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Dark Roasts",
+   "Decafs",
+   "Full Bodied",
+   "Low Acid"
+  ],
+  "title": "Decaf Avalanche",
+  "url": "https://telluridecoffeeroasters.net/product/decaf-avalanche/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "3594:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "3594:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "3594:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "3594:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bee25c0ab41f5d11",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-harvest",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Mountain-Harvest.png",
+  "platform": "woocommerce",
+  "product_id": "36",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Balanced",
+   "Best Sellers",
+   "Blends",
+   "Smoky",
+   "Sweet"
+  ],
+  "title": "Mountain Harvest",
+  "url": "https://telluridecoffeeroasters.net/product/mountain-harvest/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "36:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "36:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "36:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "36:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f51817451a0b47fa",
+  "first_seen": "2026-10-26",
+  "handle": "black-canyon",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/01/BC-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "37",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Balanced",
+   "Best Sellers",
+   "Blends",
+   "Rich",
+   "Winey"
+  ],
+  "title": "Black Canyon",
+  "url": "https://telluridecoffeeroasters.net/product/black-canyon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "37:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "37:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "37:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "37:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c0abf59a00a2f64",
+  "first_seen": "2026-10-26",
+  "handle": "avalanche",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/01/Av-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "38",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Chocolate",
+   "Low Acid",
+   "Mellow",
+   "Nutty",
+   "Smoky"
+  ],
+  "title": "Avalanche Blend",
+  "url": "https://telluridecoffeeroasters.net/product/avalanche/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "38:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "38:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "38:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "38:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "155ae56111bcc714",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-brew",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Breakfast-Brew.png",
+  "platform": "woocommerce",
+  "product_id": "39",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Blends",
+   "Sweet",
+   "Tangy"
+  ],
+  "title": "Breakfast Brew",
+  "url": "https://telluridecoffeeroasters.net/product/breakfast-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "39:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "39:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "39:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "39:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5868a58e98dac6ae",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/RNDR_CarHaze-TCR_24oz.png",
+  "platform": "woocommerce",
+  "product_id": "415",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Flavors",
+   "Hazelnut",
+   "Sweet"
+  ],
+  "title": "Caribbean Hazelnut",
+  "url": "https://telluridecoffeeroasters.net/product/hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 43.0,
+    "title": "2.5lbs",
+    "variant_id": "415:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 43.0,
+    "title": "5lbs",
+    "variant_id": "415:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f68981f4834e5d0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/French-Roast-Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "500",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Dark Roasts",
+   "Decafs",
+   "Heavy",
+   "Smoky"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://telluridecoffeeroasters.net/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "500:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "500:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "500:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "500:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b967062aaeb1c73",
+  "first_seen": "2026-10-26",
+  "handle": "observatory-blend",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Observatory-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "557",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Full Bodied",
+   "Smoky",
+   "Sweet"
+  ],
+  "title": "Observatory Blend",
+  "url": "https://telluridecoffeeroasters.net/product/observatory-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "557:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "557:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "557:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "557:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c6e7e15e32a553a",
+  "first_seen": "2026-10-26",
+  "handle": "stormcloud",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Stormcloud-Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "58",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Balanced",
+   "Blends",
+   "Decafs",
+   "Tangy"
+  ],
+  "title": "Stormcloud (half-caff) main",
+  "url": "https://telluridecoffeeroasters.net/product/stormcloud/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.0,
+    "title": "12oz",
+    "variant_id": "58:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 9.0,
+    "title": "24oz",
+    "variant_id": "58:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 9.0,
+    "title": "5lbs",
+    "variant_id": "58:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.0,
+    "title": "6oz",
+    "variant_id": "58:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb6026f31dd5ef29",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-royal-badger",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/03/RNDR_SumatRoyBadg-TCR_12oz.png",
+  "platform": "woocommerce",
+  "product_id": "60",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Dark Chocolate",
+   "Full Bodied",
+   "Select",
+   "Single Origins",
+   "Spicy"
+  ],
+  "title": "Sumatra Royal Badger",
+  "url": "https://telluridecoffeeroasters.net/product/sumatra-royal-badger/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12oz",
+    "variant_id": "60:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 0.0,
+    "title": "24oz",
+    "variant_id": "60:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lbs",
+    "variant_id": "60:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "6oz",
+    "variant_id": "60:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56077a8331dd209d",
+  "first_seen": "2026-10-26",
+  "handle": "aged-sumatra",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Aged-Sumatra.png",
+  "platform": "woocommerce",
+  "product_id": "61",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Earthy",
+   "Herbal",
+   "Low Acid",
+   "Select",
+   "Single Origins"
+  ],
+  "title": "Aged Sumatra",
+  "url": "https://telluridecoffeeroasters.net/product/aged-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12oz",
+    "variant_id": "61:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 0.0,
+    "title": "24oz",
+    "variant_id": "61:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lbs",
+    "variant_id": "61:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "6oz",
+    "variant_id": "61:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "789137ba880e03f2",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2026/06/CR_2026-93_HD.jpg",
+  "platform": "woocommerce",
+  "product_id": "6966",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Best Sellers",
+   "Mellow",
+   "Select",
+   "Single Origins",
+   "Smooth"
+  ],
+  "title": "Mexico Oaxaca",
+  "url": "https://telluridecoffeeroasters.net/product/mexico-oaxaca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.0,
+    "title": "12oz",
+    "variant_id": "6966:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 10.0,
+    "title": "24oz",
+    "variant_id": "6966:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 10.0,
+    "title": "5lbs",
+    "variant_id": "6966:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "6oz",
+    "variant_id": "6966:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4540aef2e3528ee7",
+  "first_seen": "2026-10-26",
+  "handle": "airscape-coffee-container",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2021/09/Merch2412-23-scaled-e1734062959332.jpg",
+  "platform": "woocommerce",
+  "product_id": "7172",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "Merchandise",
+   "airscape",
+   "airtight",
+   "beans",
+   "container",
+   "containers",
+   "jar",
+   "storage",
+   "telluride coffee roasters",
+   "travel"
+  ],
+  "title": "Airscape Coffee Container",
+  "url": "https://telluridecoffeeroasters.net/product/airscape-coffee-container/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "Airscape Coffee Container",
+    "variant_id": "7172:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ffd0c309680465a",
+  "first_seen": "2026-10-26",
+  "handle": "cimarron-blend",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Cimarron.png",
+  "platform": "woocommerce",
+  "product_id": "788",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Caramel",
+   "Dark Roasts",
+   "Low Acid",
+   "Smoky"
+  ],
+  "title": "Cimarron Blend",
+  "url": "https://telluridecoffeeroasters.net/product/cimarron-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "788:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "788:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "788:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "788:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "308d88d6991a5dfb",
+  "first_seen": "2026-10-26",
+  "handle": "mesa-verde",
+  "image": "https://telluridecoffeeroasters.net/wp-content/uploads/2019/07/Mesa-Verde.png",
+  "platform": "woocommerce",
+  "product_id": "807",
+  "product_type": "variable",
+  "roaster_slug": "telluridecoffeeroasters",
+  "tags": [
+   "All Coffee",
+   "Blends",
+   "Dark Roasts",
+   "Fruity",
+   "Smoky",
+   "Sweet"
+  ],
+  "title": "Mesa Verde",
+  "url": "https://telluridecoffeeroasters.net/product/mesa-verde/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "807:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 8.0,
+    "title": "24oz",
+    "variant_id": "807:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 8.0,
+    "title": "5lbs",
+    "variant_id": "807:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.0,
+    "title": "6oz",
+    "variant_id": "807:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

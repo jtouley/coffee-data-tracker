@@ -1,0 +1,958 @@
+[
+ {
+  "body_hash": "8a263cef4f26ac96",
+  "first_seen": "2026-10-26",
+  "handle": "thrive-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-9856385.png?v=1754320925",
+  "platform": "shopify",
+  "product_id": "1899516887136",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Blends",
+   "Brazil",
+   "Coffee",
+   "El Salvador",
+   "Espresso",
+   "Ethiopia"
+  ],
+  "title": "Thrive",
+  "url": "https://steeloakcoffee.com/products/thrive-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "18386184077408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "18386184110176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "18386184142944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "18386184175712"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "be44ebd0ddb33640",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-exploration-club",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/explorer-4621800.png?v=1754320812",
+  "platform": "shopify",
+  "product_id": "405251293216",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee of Month"
+  ],
+  "title": "Explorer",
+  "url": "https://steeloakcoffee.com/products/coffee-exploration-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "46880506675355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "46880506773659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "5062325305376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "5062367543328"
+   }
+  ],
+  "vendor": "Curated Selection"
+ },
+ {
+  "body_hash": "fc7e13600d04487d",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-mapache",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-1963027.png?v=1754320852",
+  "platform": "shopify",
+  "product_id": "4297689333856",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "El Salvador"
+  ],
+  "title": "Mapache",
+  "url": "https://steeloakcoffee.com/products/el-salvador-mapache",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "30938068353120"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "30938068385888"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "30938068418656"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "30938068451424"
+   }
+  ],
+  "vendor": "El Salvador"
+ },
+ {
+  "body_hash": "560aa143292780d7",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-pastora",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-3346515.png?v=1754320852",
+  "platform": "shopify",
+  "product_id": "6950536675483",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Costa Rica",
+   "washed"
+  ],
+  "title": "Pastora",
+  "url": "https://steeloakcoffee.com/products/costa-rica-pastora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "40667127677083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "40667127709851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "40667127742619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "40667127775387"
+   }
+  ],
+  "vendor": "Costa Rica"
+ },
+ {
+  "body_hash": "36d49c0c9a0caa36",
+  "first_seen": "2026-10-26",
+  "handle": "summer-swell",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/summer-swell-2026-4405856.png?v=1780587487",
+  "platform": "shopify",
+  "product_id": "7412047413403",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Colombia",
+   "Costa Rica",
+   "Nicaragua",
+   "washed"
+  ],
+  "title": "Summer Swell 2026",
+  "url": "https://steeloakcoffee.com/products/summer-swell",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "42547239321755"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "42547239354523"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "42547239387291"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "42547239420059"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "38b9fdcf7f73e92a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cadefihuila",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-4379375.png?v=1754320924",
+  "platform": "shopify",
+  "product_id": "7685633605787",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Rain Forest Alliance"
+  ],
+  "title": "Cadefihuila",
+  "url": "https://steeloakcoffee.com/products/colombia-cadefihuila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "43464027275419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "43464027308187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "43464027340955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "43464027373723"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "247c8a25edb96e43",
+  "first_seen": "2026-10-26",
+  "handle": "volcan-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-4473920.png?v=1754320853",
+  "platform": "shopify",
+  "product_id": "7720679375003",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Costa Rica",
+   "Decaf",
+   "Guatemala",
+   "Honduras"
+  ],
+  "title": "Volcan Decaf",
+  "url": "https://steeloakcoffee.com/products/volcan-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "43606002303131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "43606002335899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "43606002368667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "43606002401435"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "4dbf40f924f42f81",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-indio",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/el-indio-7587200.png?v=1784150466",
+  "platform": "shopify",
+  "product_id": "8432987308187",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Microlot",
+   "Natural Processed",
+   "Single Origin"
+  ],
+  "title": "El Indio",
+  "url": "https://steeloakcoffee.com/products/colombia-el-indio",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "46170322731163"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "46170322763931"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "46170322796699"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "46170322829467"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "292d52316acd5430",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/roasters-choice-7721921.png?v=1754320811",
+  "platform": "shopify",
+  "product_id": "8592172613787",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://steeloakcoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "46910827397275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "46910827430043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "46910827462811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "46910827495579"
+   }
+  ],
+  "vendor": "Curated Selection"
+ },
+ {
+  "body_hash": "0084f3ccef0b776c",
+  "first_seen": "2026-10-26",
+  "handle": "galeras",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/galeras-4972093.png?v=1757007133",
+  "platform": "shopify",
+  "product_id": "8628267974811",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "Galeras",
+  "url": "https://steeloakcoffee.com/products/galeras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "47058797297819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "47058797330587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "47058797363355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "47058797396123"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "23f7e7da2e8c135e",
+  "first_seen": "2026-10-26",
+  "handle": "drift",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/drift-2056520.png?v=1757007133",
+  "platform": "shopify",
+  "product_id": "8628284883099",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Blends",
+   "Brazil",
+   "Coffee",
+   "Colombia",
+   "Espresso",
+   "Guatemala",
+   "washed"
+  ],
+  "title": "Drift",
+  "url": "https://steeloakcoffee.com/products/drift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "47058865389723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "47058865422491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "47058865455259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "47058865488027"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "931de63d64f882b8",
+  "first_seen": "2026-10-26",
+  "handle": "worka-sakaro",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/worka-sakaro-2741594.png?v=1758692739",
+  "platform": "shopify",
+  "product_id": "8632829149339",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Anaerobic",
+   "Coffee",
+   "Ethiopia",
+   "Fruit Forward",
+   "Natural Processed",
+   "Single Origin"
+  ],
+  "title": "Worka Sakaro",
+  "url": "https://steeloakcoffee.com/products/worka-sakaro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "47077046354075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "47077046386843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "47077046419611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "47077046452379"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "4c1aad58afa47ed2",
+  "first_seen": "2026-10-26",
+  "handle": "vecindad",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/vecindad-1796393.png?v=1782161826",
+  "platform": "shopify",
+  "product_id": "8995026436251",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Natural Processed",
+   "Nicaragua",
+   "Single Origin"
+  ],
+  "title": "Vecindad",
+  "url": "https://steeloakcoffee.com/products/vecindad",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "48348986835099"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "48348986867867"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "48348986900635"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "48348986933403"
+   }
+  ],
+  "vendor": "Nicaragua"
+ },
+ {
+  "body_hash": "5e44e497ce5fb069",
+  "first_seen": "2026-10-26",
+  "handle": "la-leona",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/la-leona-9313409.png?v=1783653308",
+  "platform": "shopify",
+  "product_id": "9150735810715",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Microlot",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "La Leona",
+  "url": "https://steeloakcoffee.com/products/la-leona",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "48947652886683"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "48947652919451"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "48947652952219"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "48947652984987"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "2dce8d3fb09c45d7",
+  "first_seen": "2026-10-26",
+  "handle": "finca-idealista-black-honey-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/finca-idealista-honey-3382144.png?v=1785807669",
+  "platform": "shopify",
+  "product_id": "9226436018331",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Microlot",
+   "Single Origin",
+   "washed"
+  ],
+  "title": "Finca Idealista (Honey)",
+  "url": "https://steeloakcoffee.com/products/finca-idealista-black-honey-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "49168357621915"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "49168357654683"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "49168357687451"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.5,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "49168357720219"
+   }
+  ],
+  "vendor": "Nicaragua"
+ },
+ {
+  "body_hash": "b81a97fc924a5773",
+  "first_seen": "2026-10-26",
+  "handle": "james-hoffmann-fermentation-project",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/james-hoffmann-fermentation-project-tasting-kit-6362036.jpg?v=1786553408",
+  "platform": "shopify",
+  "product_id": "9257574629531",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Guatemala"
+  ],
+  "title": "James Hoffmann Fermentation Project Tasting Kit",
+  "url": "https://steeloakcoffee.com/products/james-hoffmann-fermentation-project",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 36.0,
+    "title": "Default Title",
+    "variant_id": "49252131405979"
+   }
+  ],
+  "vendor": "James Hoffmann"
+ },
+ {
+  "body_hash": "910edb2e03eb3698",
+  "first_seen": "2026-10-26",
+  "handle": "coopetarrazu-f1-natural-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/tirra-f1-natural-3397068.png?v=1787879471",
+  "platform": "shopify",
+  "product_id": "9315185164443",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Costa Rica",
+   "Microlot",
+   "Natural Processed",
+   "Single Origin"
+  ],
+  "title": "Tirra F1 (Natural)",
+  "url": "https://steeloakcoffee.com/products/coopetarrazu-f1-natural-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "49388050317467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "49388050350235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "49388050383003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "49388050415771"
+   }
+  ],
+  "vendor": "Costa Rica"
+ },
+ {
+  "body_hash": "7f0794d29eb0f301",
+  "first_seen": "2026-10-26",
+  "handle": "aricha-adadorsi-washed-yirgacheffe-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/aricha-adorsi-6454400.png?v=1789702087",
+  "platform": "shopify",
+  "product_id": "9356449841307",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Ethiopia",
+   "washed"
+  ],
+  "title": "Aricha Adorsi",
+  "url": "https://steeloakcoffee.com/products/aricha-adadorsi-washed-yirgacheffe-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "49554249384091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "49554249416859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "49554249449627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Course/French Press (12 oz)",
+    "variant_id": "49554249482395"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "da1b08e1963a4a04",
+  "first_seen": "2026-10-26",
+  "handle": "stoke-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/stoke-8553711.png?v=1790282466",
+  "platform": "shopify",
+  "product_id": "9375362646171",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Guatemala",
+   "Honduras",
+   "washed"
+  ],
+  "title": "Stoke",
+  "url": "https://steeloakcoffee.com/products/stoke-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "49630802772123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "49630802804891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "49630802837659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Course/French Press (12 oz)",
+    "variant_id": "49630802870427"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "0181fc853651253d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixlama",
+  "image": "https://cdn.shopify.com/s/files/1/1799/0697/files/adventurer-1361893.png?v=1754320853",
+  "platform": "shopify",
+  "product_id": "9928693699",
+  "product_type": "Coffee",
+  "roaster_slug": "steeloakcoffee",
+  "tags": [
+   "Coffee",
+   "Guatemala"
+  ],
+  "title": "Ixlama",
+  "url": "https://steeloakcoffee.com/products/guatemala-ixlama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (12 oz)",
+    "variant_id": "36825406147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine/Espresso (12 oz)",
+    "variant_id": "36825406211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium/Filter (12 oz)",
+    "variant_id": "36825406275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse/French Press (12 oz)",
+    "variant_id": "36825406339"
+   }
+  ],
+  "vendor": "Guatemala"
+ }
+]

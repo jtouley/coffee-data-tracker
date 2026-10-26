@@ -1,0 +1,163 @@
+[
+ {
+  "body_hash": "4facfb22dc10e12c",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-colombia-cauca",
+  "image": "https://qualiacoffeeroasters.com/products/decaffeinated-colombia-cauca",
+  "platform": "generic",
+  "product_id": "3db126e3b50c",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Decaffeinated Colombia Cauca",
+  "url": "https://qualiacoffeeroasters.com/products/decaffeinated-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2dfbaefd9768f41",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-medina-washed",
+  "image": "https://qualiacoffeeroasters.com/products/guatemala-medina-washed",
+  "platform": "generic",
+  "product_id": "56474549a344",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Guatemala Medina Washed",
+  "url": "https://qualiacoffeeroasters.com/products/guatemala-medina-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a9a419c15acd0c4b",
+  "first_seen": "2026-10-26",
+  "handle": "java-mandiri-kopi",
+  "image": "https://qualiacoffeeroasters.com/products/java-mandiri-kopi",
+  "platform": "generic",
+  "product_id": "5a7f11ae6cb0",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Java Mandiri Kopi",
+  "url": "https://qualiacoffeeroasters.com/products/java-mandiri-kopi",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ffdbd7c66f9f814",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kuru-suke",
+  "image": "https://qualiacoffeeroasters.com/products/ethiopia-kuru-suke",
+  "platform": "generic",
+  "product_id": "60095cbb88e7",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Ethiopia Kuru Suke",
+  "url": "https://qualiacoffeeroasters.com/products/ethiopia-kuru-suke",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "292b931c43a463f4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-do-salto",
+  "image": "https://qualiacoffeeroasters.com/products/brazil-fazenda-do-salto",
+  "platform": "generic",
+  "product_id": "79fac417165e",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Brazil Fazenda do Salto",
+  "url": "https://qualiacoffeeroasters.com/products/brazil-fazenda-do-salto",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44644cff12958b5c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-worka-sakaro-anaerobic-natural",
+  "image": "https://qualiacoffeeroasters.com/products/ethiopia-worka-sakaro-anaerobic-natural",
+  "platform": "generic",
+  "product_id": "84a35c05b481",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Ethiopia Worka Sakaro Anaerobic Natural",
+  "url": "https://qualiacoffeeroasters.com/products/ethiopia-worka-sakaro-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2dfbaefd9768f41",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-medina-black-honey",
+  "image": "https://qualiacoffeeroasters.com/products/guatemala-medina-black-honey",
+  "platform": "generic",
+  "product_id": "f7623c3905e8",
+  "product_type": "",
+  "roaster_slug": "qualiacoffee",
+  "tags": [],
+  "title": "Guatemala Medina Black Honey",
+  "url": "https://qualiacoffeeroasters.com/products/guatemala-medina-black-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

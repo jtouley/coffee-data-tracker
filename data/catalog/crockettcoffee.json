@@ -1,0 +1,348 @@
+[
+ {
+  "body_hash": "69dc091dc6649c5e",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-GROUND-MEDIUM-FRONT.webp?v=1759257385",
+  "platform": "shopify",
+  "product_id": "7006900846661",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Medium Roast Ground Coffee",
+  "url": "https://crockettcoffee.com/products/medium-roast-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Blue Ridge Blend / Medium Roast",
+    "variant_id": "40918808264773"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "d5caf5f95b394189",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-WHOLE-MEDIUM-FRONT.webp?v=1752170532",
+  "platform": "shopify",
+  "product_id": "7006900944965",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Medium Roast Whole Bean Coffee",
+  "url": "https://crockettcoffee.com/products/medium-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Blue Ridge Blend / Medium Roast",
+    "variant_id": "40918808363077"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "c0dd4e05e5098d96",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-GROUND-DECAF-FRONT.webp?v=1731082524",
+  "platform": "shopify",
+  "product_id": "7006901043269",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Decaf Ground Coffee",
+  "url": "https://crockettcoffee.com/products/decaf-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Elk River Blend / Decaf",
+    "variant_id": "40918808461381"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "b45277accc33ee8f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-WHOLE-DECAF-FRONT.webp?v=1731082740",
+  "platform": "shopify",
+  "product_id": "7006901108805",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Decaf Whole Bean Coffee",
+  "url": "https://crockettcoffee.com/products/decaf-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Elk River Blend / Decaf",
+    "variant_id": "40918808494149"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "f31592ef642b0c9a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-GROUND-DARK-FRONT.webp?v=1731081942",
+  "platform": "shopify",
+  "product_id": "7006901174341",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Dark Roast Ground Coffee",
+  "url": "https://crockettcoffee.com/products/dark-roast-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "King Mountain Blend / Dark Roast",
+    "variant_id": "40918808526917"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "c834e95565638044",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/CROCKETT-ECOM-BAG-WHOLE-DARK-FRONT.webp?v=1731082262",
+  "platform": "shopify",
+  "product_id": "7006901239877",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Dark Roast Whole Bean Coffee",
+  "url": "https://crockettcoffee.com/products/dark-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "King Mountain Blend / Dark Roast",
+    "variant_id": "40918808592453"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "b032928ca80e3f0e",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ECOM_light_-ground_FRONT-shop-page.webp?v=1728480484",
+  "platform": "shopify",
+  "product_id": "7402916905029",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Light Roast Ground Coffee",
+  "url": "https://crockettcoffee.com/products/light-roast-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Sun Creek Blend / Light Roast",
+    "variant_id": "41967599747141"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "0b94788ce4ffe59b",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ECOM_light_-whole_FRONT-shop-page.webp?v=1728480818",
+  "platform": "shopify",
+  "product_id": "7402917494853",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Light Roast Whole Bean Coffee",
+  "url": "https://crockettcoffee.com/products/light-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Sun Creek Blend / Light Roast",
+    "variant_id": "41967600795717"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "8cddf6c8ff7dd79a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ECOM_Organic_-Ground_FRONT-pdp-NoSeal.webp?v=1730210032",
+  "platform": "shopify",
+  "product_id": "7402920771653",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Organic Ground Coffee",
+  "url": "https://crockettcoffee.com/products/organic-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Wild Frontier Blend / Organic Roast",
+    "variant_id": "41967618064453"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "8cddf6c8ff7dd79a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-roast-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ECOM_Organic_-Whole_FRONT-pdp-Noseal.webp?v=1759256925",
+  "platform": "shopify",
+  "product_id": "7402923982917",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Organic Whole Bean Coffee",
+  "url": "https://crockettcoffee.com/products/organic-roast-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Wild Frontier Blend / Organic Roast",
+    "variant_id": "41967624421445"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "bcc33348a0eaeb2f",
+  "first_seen": "2026-10-26",
+  "handle": "mushroom-coffee-organic-functional-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/Crockett_Mushroom_Coffee_Front.webp?v=1759257176",
+  "platform": "shopify",
+  "product_id": "7589280120901",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [],
+  "title": "Mushroom Coffee Organic Functional Blend",
+  "url": "https://crockettcoffee.com/products/mushroom-coffee-organic-functional-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 135,
+    "price_usd": 39.99,
+    "title": "Default Title",
+    "variant_id": "42603823235141"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "15d94cb06c0ed1ad",
+  "first_seen": "2026-10-26",
+  "handle": "blue-ridge-medium-king-mountain-dark-sun-creek-light-wild-frontier-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/Whole_Bean_Starter_Pack_93fcae75-f619-44c9-b17d-b5201c80852c.webp?v=1764792941",
+  "platform": "shopify",
+  "product_id": "7792489398341",
+  "product_type": "",
+  "roaster_slug": "crockettcoffee",
+  "tags": [],
+  "title": "Whole Bean Starter Pack",
+  "url": "https://crockettcoffee.com/products/blue-ridge-medium-king-mountain-dark-sun-creek-light-wild-frontier-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 63.99,
+    "title": "Default Title",
+    "variant_id": "43757771325509"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "d5caf5f95b394189",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-whole-bean-coffee-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ppd-5lb-medium-front00.webp?v=1783967991",
+  "platform": "shopify",
+  "product_id": "8135952597061",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Medium Roast Whole Bean Coffee 5LB",
+  "url": "https://crockettcoffee.com/products/medium-roast-whole-bean-coffee-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Blue Ridge Blend / Medium Roast",
+    "variant_id": "45192991309893"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ },
+ {
+  "body_hash": "c834e95565638044",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-whole-bean-coffee-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0575/2913/9269/files/ppd-5lb-dark-front00.webp?v=1783967957",
+  "platform": "shopify",
+  "product_id": "8135953121349",
+  "product_type": "Coffee",
+  "roaster_slug": "crockettcoffee",
+  "tags": [
+   "Whole Bean"
+  ],
+  "title": "Dark Roast Whole Bean Coffee 5LB",
+  "url": "https://crockettcoffee.com/products/dark-roast-whole-bean-coffee-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "King Mountain Blend / Dark Roast",
+    "variant_id": "45192992096325"
+   }
+  ],
+  "vendor": "Crockett Coffee"
+ }
+]

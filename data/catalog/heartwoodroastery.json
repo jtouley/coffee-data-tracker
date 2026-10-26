@@ -1,0 +1,349 @@
+[
+ {
+  "body_hash": "6adc34339fb09420",
+  "first_seen": "2026-10-26",
+  "handle": "birdseye",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/f595e294-0d25-498d-8a35-ea18fc03a66e/Birdseye-blue.jpg",
+  "platform": "squarespace",
+  "product_id": "55425d16e4b0834c9f9c8ad4",
+  "product_type": "Blends",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Birdseye House Blend",
+  "url": "https://www.heartwoodroastery.com/shop/birdseye",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb",
+    "variant_id": "026e4e7e-a9c4-4821-8167-e3d24c156c36"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce",
+    "variant_id": "13240a98-cba6-4dd3-8482-e321963bc078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb",
+    "variant_id": "6be417e3-7ea8-41d6-8206-033e6c821717"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5956923d3e7f20c1",
+  "first_seen": "2026-10-26",
+  "handle": "old-river",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/d0a2de06-7289-462c-a469-207d4f01a005/OldRiver-green.jpg",
+  "platform": "squarespace",
+  "product_id": "55f4720de4b067360e9ca474",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Old River Traditional",
+  "url": "https://www.heartwoodroastery.com/shop/old-river",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce",
+    "variant_id": "09610621-2ae0-4324-b229-97541b7c697b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs",
+    "variant_id": "40779934-6f26-45e8-b6aa-9290c328255f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs",
+    "variant_id": "e084a3d8-0914-46a5-8dba-c85fe5634472"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "620d1a29167dd55e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sugarcane-colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/7a668faf-63e6-4011-b352-1a36aa7fe430/Decaf-green.jpg",
+  "platform": "squarespace",
+  "product_id": "57706297cd0f68ce8dd5697f",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "EA Natural Decaf, Colombia",
+  "url": "https://www.heartwoodroastery.com/shop/decaf-sugarcane-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2LB",
+    "variant_id": "3a78b509-80c9-4711-a082-3757b0c30755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce",
+    "variant_id": "5cc80eb5-97d1-4bb5-88a2-d3a6ec666203"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "872bd7e0d955485e",
+  "first_seen": "2026-10-26",
+  "handle": "arborist-traditional",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/305cd89c-bccf-4e00-ba02-d1c76c7611fc/Arborist-green.jpg",
+  "platform": "squarespace",
+  "product_id": "61899c0fa7ac860d940cb452",
+  "product_type": "Blends",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Arborist Traditional",
+  "url": "https://www.heartwoodroastery.com/shop/arborist-traditional",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6fea6a30-0a08-4283-ab9c-0f321b543305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb",
+    "variant_id": "913ac1eb-5e6b-4ed6-8c2a-b89c25762c55"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a644719f20f09c7d",
+  "first_seen": "2026-10-26",
+  "handle": "malaki-kenya",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/3ece55b8-3042-4658-804c-31bf45580d78/IMG_5892.JPG",
+  "platform": "squarespace",
+  "product_id": "67daf89dab754663f4918e65",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "María Cáceres, Honduras",
+  "url": "https://www.heartwoodroastery.com/shop/malaki-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "",
+    "variant_id": "fb6312c4-97d7-465c-af77-f166e431ab6a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e9ce253a7974e39",
+  "first_seen": "2026-10-26",
+  "handle": "finca-palma-rosa",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/e11090fb-1027-44d5-84c3-49c90e2b740f/IMG_5890.JPG",
+  "platform": "squarespace",
+  "product_id": "684c5e7064f4dd59c05c29cb",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Victor & Alejandro Ortega, Colombia",
+  "url": "https://www.heartwoodroastery.com/shop/finca-palma-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "de5509c2-a96d-4921-8c5d-384b1eb36c8e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "414ffb5194a2cff7",
+  "first_seen": "2026-10-26",
+  "handle": "gotiti-ethiopia",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/5f11d753-409b-42d4-b3a4-88e20339b9e5/IMG_5891.JPG",
+  "platform": "squarespace",
+  "product_id": "684c67510a63794fee8b5dfc",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Zanya Double Washed, Vietnam",
+  "url": "https://www.heartwoodroastery.com/shop/gotiti-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "",
+    "variant_id": "ffed0d61-a9c5-451d-bfe8-87dbf5759ad9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f77ac26661566085",
+  "first_seen": "2026-10-26",
+  "handle": "sochiapam",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/67dc7831-3f28-4dcf-9bc3-0e07e9d77ae2/IMG_5888.JPG",
+  "platform": "squarespace",
+  "product_id": "684c6a272427cd1f49ad2333",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Heri Agena Honey, Ethiopia",
+  "url": "https://www.heartwoodroastery.com/shop/sochiapam",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "dc660d9c-4b92-4561-a63f-422de8f8dc5d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "29504334537b5070",
+  "first_seen": "2026-10-26",
+  "handle": "andres-martinez",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/90a41b0a-60a4-46ba-b36e-5db395dcf465/IMG_5887.JPG",
+  "platform": "squarespace",
+  "product_id": "68af2ba58855bf7fd374d139",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Andres Martinez Blackberry Lemonade, Colombia",
+  "url": "https://www.heartwoodroastery.com/shop/andres-martinez",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 33.0,
+    "title": "",
+    "variant_id": "9b153c7a-6941-4d31-a53f-ef1aa7b43e7d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03d7b321eb1e3dab",
+  "first_seen": "2026-10-26",
+  "handle": "forester-seasonal",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/1903d81e-7b90-4eb2-a855-5278b6a2c1bc/Forester.jpg",
+  "platform": "squarespace",
+  "product_id": "697cf7fc6504d0400fb07779",
+  "product_type": "",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [],
+  "title": "Forester Seasonal Blend",
+  "url": "https://www.heartwoodroastery.com/shop/forester-seasonal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb",
+    "variant_id": "12933556-f3db-4892-a943-814d9dcabe17"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "3bdb6832-3fb5-4783-bf70-52f513036dff"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b3af3ecf8137267f",
+  "first_seen": "2026-10-26",
+  "handle": "kathima-kenya",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/e7da8585-abee-41b2-9390-1c3dc4342f6e/IMG_5889.JPG",
+  "platform": "squarespace",
+  "product_id": "6a6278533c21e430d6911234",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Danche Yellow Honey, Ethiopia",
+  "url": "https://www.heartwoodroastery.com/shop/kathima-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "a5c05c11-0bfe-4130-bc4e-6b929b53d992"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac2df2e75328de0c",
+  "first_seen": "2026-10-26",
+  "handle": "zanya-esoteric",
+  "image": "https://images.squarespace-cdn.com/content/v1/54a85614e4b0b6dc3e166157/b3d2d00c-e7d4-451f-985f-3882c8821d38/SCO_7028.jpg",
+  "platform": "squarespace",
+  "product_id": "6ab68f0144aea31d23e1e5ef",
+  "product_type": "Single-Origin",
+  "roaster_slug": "heartwoodroastery",
+  "tags": [
+   "Single-Origin"
+  ],
+  "title": "Zanya Lavender *Esoteric*",
+  "url": "https://www.heartwoodroastery.com/shop/zanya-esoteric",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 42.0,
+    "title": "",
+    "variant_id": "7cf33d88-4959-4385-9c72-f29f185047f1"
+   }
+  ],
+  "vendor": ""
+ }
+]

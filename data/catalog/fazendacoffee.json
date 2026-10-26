@@ -1,0 +1,2987 @@
+[
+ {
+  "body_hash": "8f56eb24bed49175",
+  "first_seen": "2026-10-26",
+  "handle": "reserve-ethiopia-misty-valley",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Ethiopia_d1c6c947-de61-41cd-aaed-dfa21fe2afd2.webp?v=1789756369",
+  "platform": "shopify",
+  "product_id": "1373188358195",
+  "product_type": "Reserve Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Honey",
+   "Milk Chocolate",
+   "Red Grape"
+  ],
+  "title": "Ethiopia Durame Village",
+  "url": "https://www.fazendacoffee.com/products/reserve-ethiopia-misty-valley",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33175937712205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175937744973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33175937777741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33175937810509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33175937843277"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33175937876045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33175937908813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175937941581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33175938007117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175938039885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33175938072653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33175938105421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33175938138189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33175938170957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33175938203725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175938236493"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "51f22815b57c37d8",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Cold_Brew_Blend.webp?v=1789755037",
+  "platform": "shopify",
+  "product_id": "1373227384883",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Chocolate",
+   "Malt",
+   "Toffee"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.fazendacoffee.com/products/fazenda-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33175997448269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175997481037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33175997513805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33175997546573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33175997579341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33175997612109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33175997644877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175997677645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33175997710413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175997743181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33175997775949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33175997808717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33175997841485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33175997874253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33175997907021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175997939789"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "c07b64f525af8632",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-antioquia",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Colombia.webp?v=1789754923",
+  "platform": "shopify",
+  "product_id": "1375599329331",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Citrus",
+   "Cocoa"
+  ],
+  "title": "Colombia Community Harvest",
+  "url": "https://www.fazendacoffee.com/products/colombia-antioquia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33176021368909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "33176021401677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33176021434445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33176021467213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33176021499981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33176021532749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33176021565517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176021598285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33176021631053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33176021663821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33176021696589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33176021729357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33176021762125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33176021794893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33176021827661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176021860429"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "37419a978def9a7a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-conquistador",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Costa_MD.webp?v=1789754454",
+  "platform": "shopify",
+  "product_id": "1378559819827",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Cocoa",
+   "Fruit",
+   "Nutty"
+  ],
+  "title": "Costa Rica El Conquistador",
+  "url": "https://www.fazendacoffee.com/products/costa-rica-el-conquistador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33176001052749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "33176001085517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33176001118285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33176001151053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33176001183821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33176001216589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33176001249357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176001282125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33176001314893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33176001347661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33176001380429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33176001413197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33176001445965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33176001478733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33176001511501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176001544269"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "d4649a7da8d91164",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-9-bar",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/9Bar.webp?v=1789755123",
+  "platform": "shopify",
+  "product_id": "1378560901171",
+  "product_type": "Espresso",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Chocolate",
+   "Citrus",
+   "Stone Fruit"
+  ],
+  "title": "Espresso 9 Bar",
+  "url": "https://www.fazendacoffee.com/products/espresso-9-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33176036376653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "33176036409421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33176036442189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33176036474957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33176036507725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33176036540493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33176036573261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176036606029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33176036638797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33176036671565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33176036704333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33176036737101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33176036769869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33176036802637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33176036835405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176036868173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Whole Bean (WB)",
+    "variant_id": "33271321559117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33271321591885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Chemex & Clever (#4)",
+    "variant_id": "33271321624653"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Drip (#5)",
+    "variant_id": "33271321722957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Hario Pourover (#6)",
+    "variant_id": "33271321755725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Aeropress (#7)",
+    "variant_id": "33271321788493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Fine (#9)",
+    "variant_id": "33271321821261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33271321854029"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "ae507c1ec1e2fdd2",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/FazendaBlend.webp?v=1789751442",
+  "platform": "shopify",
+  "product_id": "1391464644659",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Chocolate",
+   "Nutty"
+  ],
+  "title": "Fazenda Blend",
+  "url": "https://www.fazendacoffee.com/products/fazenda-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33175921524813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175921557581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33175921590349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33175921623117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33175921655885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33175921688653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33175921721421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175921754189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33175921786957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175921819725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33175921852493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33175921885261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33175921918029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33175921950797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33175921983565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175922016333"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "d7d4d880dae8948d",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/FRENCH.webp?v=1789754870",
+  "platform": "shopify",
+  "product_id": "1391489482803",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Dark Chocolate",
+   "Molasses"
+  ],
+  "title": "French Roast",
+  "url": "https://www.fazendacoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33175936237645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175936270413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33175936303181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33175936335949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33175936368717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33175936401485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33175936434253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175936467021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33175936499789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175936532557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33175936565325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33175936598093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33175936630861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33175936663629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33175936696397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33175936729165"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "cbfb4c566100688f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor-del-cafe",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/GuatMD.webp?v=1789751476",
+  "platform": "shopify",
+  "product_id": "1393813651507",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Chocolate",
+   "Rum"
+  ],
+  "title": "Guatemala Candelaria",
+  "url": "https://www.fazendacoffee.com/products/guatemala-la-flor-del-cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33175927881805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175927914573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33175927947341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33175927980109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33175928012877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33175928045645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33175928078413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "33175928111181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33175928143949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "33175928176717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33175928209485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33175928242253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33175928275021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33175928307789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33175928340557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "33175928373325"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "39c4d4747109b54f",
+  "first_seen": "2026-10-26",
+  "handle": "biocaf-coffee-cleaning-powder",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/products/cleaningpowder.jpg?v=1586535992",
+  "platform": "shopify",
+  "product_id": "4578144747597",
+  "product_type": "",
+  "roaster_slug": "fazendacoffee",
+  "tags": [],
+  "title": "Biocaf Coffee Cleaning Powder",
+  "url": "https://www.fazendacoffee.com/products/biocaf-coffee-cleaning-powder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 560,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "32255244173389"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "16830fba957928de",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-cleaning-tablets",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/products/cleaningtablets.jpg?v=1586536251",
+  "platform": "shopify",
+  "product_id": "4578154676301",
+  "product_type": "",
+  "roaster_slug": "fazendacoffee",
+  "tags": [],
+  "title": "Coffee Cleaning Tablets",
+  "url": "https://www.fazendacoffee.com/products/coffee-cleaning-tablets",
+  "variants": [
+   {
+    "available": false,
+    "grams": 187,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "32255261573197"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "6fc86fb68fec16c1",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-protocol-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Protocol.webp?v=1789755172",
+  "platform": "shopify",
+  "product_id": "4585011773517",
+  "product_type": "Espresso",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Cherry",
+   "Chocolate",
+   "Toffee"
+  ],
+  "title": "Espresso Protocol",
+  "url": "https://www.fazendacoffee.com/products/espresso-protocol-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33176034508877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "33176034541645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33176034574413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33176034607181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33176034639949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33176034672717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33176034705485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176034738253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33176034771021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33176034803789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33176034836557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33176034869325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33176034902093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33176034934861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33176034967629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176035000397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Whole Bean (WB)",
+    "variant_id": "33271328637005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33271328669773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Chemex & Clever (#4)",
+    "variant_id": "33271328702541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Drip (#5)",
+    "variant_id": "33271328735309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Hario Pourover (#6)",
+    "variant_id": "33271328768077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Aeropress (#7)",
+    "variant_id": "33271328800845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Fine (#9)",
+    "variant_id": "33271328833613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33271328866381"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "140bba50fedf3430",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-midnight-blue-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/MidnightBlue.webp?v=1789754952",
+  "platform": "shopify",
+  "product_id": "4794609172557",
+  "product_type": "Espresso",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Chocolate",
+   "Walnut"
+  ],
+  "title": "Espresso Midnight Blue",
+  "url": "https://www.fazendacoffee.com/products/espresso-midnight-blue-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "33176047288397"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "33176047321165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "33176047353933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "33176047386701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "33176047419469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "33176047452237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "33176047485005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176047517773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "33176047550541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33176047583309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "33176047616077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "33176047648845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "33176047681613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "33176047714381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "33176047747149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33176047779917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Whole Bean (WB)",
+    "variant_id": "33271310843981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "33271310876749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Chemex & Clever (#4)",
+    "variant_id": "33271310942285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Drip (#5)",
+    "variant_id": "33271310975053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Hario Pourover (#6)",
+    "variant_id": "33271311007821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Aeropress (#7)",
+    "variant_id": "33271311040589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Fine (#9)",
+    "variant_id": "33271311106125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "33271311171661"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "c5a87f184f479e95",
+  "first_seen": "2026-10-26",
+  "handle": "gift-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/products/GiftSubscription.jpg?v=1637084694",
+  "platform": "shopify",
+  "product_id": "4879952379981",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [],
+  "title": "Gift Subscriptions (3 Months)",
+  "url": "https://www.fazendacoffee.com/products/gift-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255553179725"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255553278029"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / French Roast (Dark Roast)",
+    "variant_id": "39255553441869"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / French Roast (Dark Roast)",
+    "variant_id": "39255553540173"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255553704013"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255553802317"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / French Roast (Dark Roast)",
+    "variant_id": "39255553966157"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / French Roast (Dark Roast)",
+    "variant_id": "39255554064461"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255554228301"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Fazenda Blend (Medium Roast)",
+    "variant_id": "39255554326605"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / French Roast (Dark Roast)",
+    "variant_id": "39255554490445"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / French Roast (Dark Roast)",
+    "variant_id": "39255554588749"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 60.0,
+    "title": "One Bag / Whole Bean (WB) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554403565645"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554403598413"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554403631181"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554403663949"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554403729485"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554403860557"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554403893325"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554403926093"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 60.0,
+    "title": "One Bag / Ground For Drip (#5) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554403958861"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554403991629"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554404024397"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554404057165"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554404122701"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554404253773"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554404286541"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554404319309"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 100.0,
+    "title": "Two Bags / Whole Bean (WB) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554404352077"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554404384845"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554404417613"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554404450381"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554404515917"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554404646989"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554404679757"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554404712525"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 100.0,
+    "title": "Two Bags / Ground For Drip (#5) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554404745293"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554404778061"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554404810829"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554404843597"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554404909133"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554405040205"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554405072973"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554405105741"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 125.0,
+    "title": "Three Bags / Whole Bean (WB) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554405138509"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554405171277"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554405204045"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554405236813"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554405302349"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554405433421"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554405466189"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554405498957"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 125.0,
+    "title": "Three Bags / Ground For Drip (#5) / Ethiopia Durame Village (Light Roast) - RESERVE Series",
+    "variant_id": "39554405531725"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Sumatra Lintong (Medium Roast)",
+    "variant_id": "39554405564493"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Colombia La Estrella del Ostro (Medium Roast)",
+    "variant_id": "39554405597261"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Costa Rica El Conquistador (Medium Roast)",
+    "variant_id": "39554405630029"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Decaf Colombia (Medium Roast)",
+    "variant_id": "39554405695565"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Espresso Midnight Blue (Dark Roast)",
+    "variant_id": "39554405826637"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Espresso Protocol (Medium Roast)",
+    "variant_id": "39554405859405"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Espresso 9 Bar (Medium Roas)",
+    "variant_id": "39554405892173"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727533291"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Whole Bean (WB) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727566059"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727598827"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "One Bag / Ground For Drip (#5) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727631595"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727664363"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Whole Bean (WB) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727697131"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727729899"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 85.0,
+    "title": "Two Bags / Ground For Drip (#5) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727762667"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727795435"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Whole Bean (WB) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727828203"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Honduras Mujeres Unidas (Medium Roast)",
+    "variant_id": "46553727860971"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 105.0,
+    "title": "Three Bags / Ground For Drip (#5) / Honduras Mujeres Unidas (Dark Roast)",
+    "variant_id": "46553727893739"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "434b3aca6aae05c3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lintong-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Sumatra.webp?v=1789755279",
+  "platform": "shopify",
+  "product_id": "6567707803725",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Black Licorice",
+   "Earthy",
+   "Spice"
+  ],
+  "title": "Sumatra Lintong",
+  "url": "https://www.fazendacoffee.com/products/sumatra-lintong-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "39302244466765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "39302244499533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "39302244532301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "39302244565069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "39302244597837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "39302244630605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "39302244663373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "39302244696141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "39302244728909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "39302244761677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "39302244794445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "39302244827213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "39302244859981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "39302244892749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "39302244925517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "39302244958285"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "5c2b9d65f23a5e62",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-sugar-process",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/Decaf.webp?v=1789755206",
+  "platform": "shopify",
+  "product_id": "6666089529421",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Caramel",
+   "Red Apple",
+   "Syrupy"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://www.fazendacoffee.com/products/colombia-decaf-sugar-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "39479182819405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "39479182852173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "39479182884941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "39479182917709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "39479182950477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "39479182983245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "39479183016013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "39479183048781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "39479183081549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "39479183114317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "39479183147085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "39479183179853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "39479183212621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "39479183245389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "39479183278157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "39479183310925"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "a5ef1e7ac454d93c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-sugar-decaffeination-process-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/decafspro_79d3e49e-e3a4-4623-ae92-a6c2e5055cca.png?v=1755285904",
+  "platform": "shopify",
+  "product_id": "6675006881869",
+  "product_type": "Espresso",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Cane Sugar",
+   "Citrus",
+   "Dark Chocolate"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://www.fazendacoffee.com/products/decaf-espresso-sugar-decaffeination-process-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "39492952817741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Whole Bean (WB)",
+    "variant_id": "39492952850509"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala - #2.5)",
+    "variant_id": "39492953276493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Fine (#9)",
+    "variant_id": "47007301730539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Espresso (Mahlkonig Guatemala - #2.5)",
+    "variant_id": "47007322145003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "47855134408939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "47855134736619"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "73444f0d4084c1de",
+  "first_seen": "2026-10-26",
+  "handle": "morning-bru-blend-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/products/morningbru_65eb0781-a3ae-43a0-af02-6d03903a5c78.png?v=1666969906",
+  "platform": "shopify",
+  "product_id": "7908371890411",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Bittersweet Chocolate",
+   "Molasses",
+   "Smoky"
+  ],
+  "title": "Morning Bru Blend",
+  "url": "https://www.fazendacoffee.com/products/morning-bru-blend-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "43510002843883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "43510002909419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "43510002974955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "43510003040491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "43510003106027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "43510003171563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "43510003237099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "43510003302635"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "6ce2a7a0c11f633a",
+  "first_seen": "2026-10-26",
+  "handle": "limited-release-series",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/SonoraHoneyNatural_6506851b-6f93-46a3-a63f-bbe0a863b9cd.webp?v=1789756482",
+  "platform": "shopify",
+  "product_id": "8001154416875",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [],
+  "title": "Limited Release Series: Sonora Honey Natural",
+  "url": "https://www.fazendacoffee.com/products/limited-release-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "43791856369899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "43791874883819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "43791874916587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "43791874949355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "43791874982123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "43791875014891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "43791875047659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "43791875080427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "43791875113195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "43791875145963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "43791875178731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "43791875211499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "43791875244267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "43791875277035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "43791875309803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "43791875342571"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "e170b396dc89a0b7",
+  "first_seen": "2026-10-26",
+  "handle": "flour-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/products/FLOURDARK.png?v=1677083517",
+  "platform": "shopify",
+  "product_id": "8001155399915",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Flour Bakery Exclusive"
+  ],
+  "title": "Flour Bakery Dark Roast",
+  "url": "https://www.fazendacoffee.com/products/flour-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "43791867347179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3)",
+    "variant_id": "43791867379947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "43791867412715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "43791867445483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "43791867478251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "43791867511019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "43791867543787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "43791867576555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "43791867609323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3)",
+    "variant_id": "43791867642091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "43791867674859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "43791867707627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "43791867740395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "43791867773163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "43791867805931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala #2 - 2.5)",
+    "variant_id": "43791867838699"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "7a1088ebdccd3c19",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-mujeres-unidas",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/HondurasMedium.webp?v=1789755331",
+  "platform": "shopify",
+  "product_id": "8934108004587",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Almond",
+   "Caramel",
+   "Toffee"
+  ],
+  "title": "Honduras Mujeres Unidas",
+  "url": "https://www.fazendacoffee.com/products/honduras-mujeres-unidas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "46502673318123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "46502673350891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "46502673383659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "46502673416427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "46502673449195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "46502673481963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "46502673514731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "46502673547499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "46502673580267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "46502673613035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "46502673645803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "46502673678571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "46502673711339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "46502673744107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "46502673776875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "46502673809643"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ },
+ {
+  "body_hash": "8b9ad35725e50fa4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-mujeres-unidas-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0018/3009/2851/files/HondurasDark_65c75d1b-ff87-4385-92a8-6b2fba916df3.webp?v=1789755427",
+  "platform": "shopify",
+  "product_id": "8947375866091",
+  "product_type": "Coffee",
+  "roaster_slug": "fazendacoffee",
+  "tags": [
+   "Almond",
+   "Caramel",
+   "Toffee"
+  ],
+  "title": "Honduras Mujeres Unidas (Dark Roast)",
+  "url": "https://www.fazendacoffee.com/products/honduras-mujeres-unidas-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Whole Bean (WB)",
+    "variant_id": "46553638764779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "46553638797547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Chemex & Clever (#4)",
+    "variant_id": "46553638830315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Drip (#5)",
+    "variant_id": "46553638863083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Hario Pourover (#6)",
+    "variant_id": "46553638895851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Aeropress (#7)",
+    "variant_id": "46553638928619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Fine (#9)",
+    "variant_id": "46553638961387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "46553638994155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Whole Bean (WB)",
+    "variant_id": "46553639026923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Cold Brew & French Press (#3 - Coarser)",
+    "variant_id": "46553639059691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Chemex & Clever (#4)",
+    "variant_id": "46553639092459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Drip (#5)",
+    "variant_id": "46553639125227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Hario Pourover (#6)",
+    "variant_id": "46553639157995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Aeropress (#7)",
+    "variant_id": "46553639190763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Fine (#9)",
+    "variant_id": "46553639223531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb. / Espresso (Mahlkonig Guatemala - #2 - 2.5)",
+    "variant_id": "46553639256299"
+   }
+  ],
+  "vendor": "Fazenda Coffee Roasters"
+ }
+]

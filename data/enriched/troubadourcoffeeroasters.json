@@ -1,0 +1,327 @@
+{
+ "8929503543524": {
+  "body_hash": "83f6b2f5bb0e510f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "74158"
+  ]
+ },
+ "8929504788708": {
+  "body_hash": "666149061736e998",
+  "elevation_masl_max": 1520,
+  "elevation_masl_min": 1520,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Geisha",
+   "Maragogype",
+   "Pink Bourbon",
+   "Red Bourbon"
+  ]
+ },
+ "8929506296036": {
+  "body_hash": "0af5b3f18d8ab3bb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8930777530596": {
+  "body_hash": "6fd6afc3f93d1631",
+  "elevation_masl_max": 1460,
+  "elevation_masl_min": 1460,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Gesha"
+  ]
+ },
+ "8932382802148": {
+  "body_hash": "03d379e2feb89dac",
+  "elevation_masl_max": 1110,
+  "elevation_masl_min": 1110,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Maragogype",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "8932520657124": {
+  "body_hash": "6ef3b673b84073a9",
+  "elevation_masl_max": 1518,
+  "elevation_masl_min": 1518,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Gesha"
+  ]
+ },
+ "8937832153316": {
+  "body_hash": "d411dd6d665396cc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8951649370340": {
+  "body_hash": "0b78c24ea2dc7016",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Gesha"
+  ]
+ },
+ "8951669850340": {
+  "body_hash": "c2acf731441d4450",
+  "elevation_masl_max": 1460,
+  "elevation_masl_min": 1460,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Gesha"
+  ]
+ },
+ "9008990126308": {
+  "body_hash": "00fcf4bcd8fa93a2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9077582299364": {
+  "body_hash": "aecfa7a9bbb4e5a9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Sarchimor"
+  ]
+ },
+ "9077593178340": {
+  "body_hash": "0bea19e3d756599f",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Geisha"
+  ]
+ },
+ "9077595963620": {
+  "body_hash": "afe65f9f59d097af",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "sweet pineapple",
+   "lime"
+  ],
+  "varietals": [
+   "Ruiru 11",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "9078586212580": {
+  "body_hash": "c5c5793809a036b0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "black tea",
+   "honey",
+   "tamarind",
+   "lemon",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "9078589063396": {
+  "body_hash": "35ba5a21cdee2147",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red fruits",
+   "floral",
+   "sugar",
+   "cascara",
+   "strawberry"
+  ],
+  "varietals": []
+ },
+ "9176107417828": {
+  "body_hash": "84b1e4a3b9adc6ee",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Pacamara",
+   "Red Bourbon",
+   "Sl28",
+   "Yellow Bourbon"
+  ]
+ },
+ "9176143855844": {
+  "body_hash": "580d52ca28c728ad",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tba"
+  ],
+  "varietals": [
+   "Pacamara",
+   "Red Bourbon",
+   "Sl28",
+   "Yellow Bourbon"
+  ]
+ }
+}

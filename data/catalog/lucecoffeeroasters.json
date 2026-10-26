@@ -1,0 +1,341 @@
+[
+ {
+  "body_hash": "7304626193b18f97",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-rwenzori",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2020/12/uganda.png",
+  "platform": "woocommerce",
+  "product_id": "1038",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "Uganda – Rwenzori",
+  "url": "https://lucecoffeeroasters.com/shop/uganda-rwenzori/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Uganda &#8211; Rwenzori",
+    "variant_id": "1038:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5470215cbf822f49",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2025/06/IMG_7108-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "1040",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "Ethiopia – Sidamo",
+  "url": "https://lucecoffeeroasters.com/shop/ethiopia-sidamo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Ethiopia &#8211; Sidamo",
+    "variant_id": "1040:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef9ac6caf110fdf0",
+  "first_seen": "2026-10-26",
+  "handle": "red-bourbon",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2020/12/empaque-10.png",
+  "platform": "woocommerce",
+  "product_id": "1042",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "Colombia – Red Bourbon",
+  "url": "https://lucecoffeeroasters.com/shop/red-bourbon/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Colombia &#8211; Red Bourbon",
+    "variant_id": "1042:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de26fbd7d9d2b62d",
+  "first_seen": "2026-10-26",
+  "handle": "dr-congo",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2023/05/DR-CONGO.png",
+  "platform": "woocommerce",
+  "product_id": "2663",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "DR CONGO",
+  "url": "https://lucecoffeeroasters.com/shop/dr-congo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12 Oz",
+    "variant_id": "2663:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa08d3aaa9fced69",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-shg-ep",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2023/05/mexico-.png",
+  "platform": "woocommerce",
+  "product_id": "2665",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "MEXICO – SHG/EP",
+  "url": "https://lucecoffeeroasters.com/shop/mexico-shg-ep/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.6,
+    "title": "12 Oz",
+    "variant_id": "2665:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85cee6e32b973d9c",
+  "first_seen": "2026-10-26",
+  "handle": "sleep-well",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2024/05/c532f17d-73c5-4639-9b45-bf2d48a85b30.jpeg",
+  "platform": "woocommerce",
+  "product_id": "3177",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "“Sleep Well” Decaf",
+  "url": "https://lucecoffeeroasters.com/shop/sleep-well/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.0,
+    "title": "&#8220;Sleep Well&#8221; Decaf",
+    "variant_id": "3177:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8f316dd7b220cb1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2024/05/Columbia-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "3196",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****"
+  ],
+  "title": "Colombia",
+  "url": "https://lucecoffeeroasters.com/shop/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Colombia",
+    "variant_id": "3196:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "990bdd52ff1fa491",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-wush-wush",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2020/10/Ethiopia-Wush-Wush-24.50-Size-12-oz-.png",
+  "platform": "woocommerce",
+  "product_id": "438",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia – Wush Wush",
+  "url": "https://lucecoffeeroasters.com/shop/ethiopia-wush-wush/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.5,
+    "title": "Ethiopia &#8211; Wush Wush",
+    "variant_id": "438:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "387bd58af8ccab87",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-macuba",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2020/10/RwandaFlavorNotes-1.png",
+  "platform": "woocommerce",
+  "product_id": "444",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Rwanda – Macuba",
+  "url": "https://lucecoffeeroasters.com/shop/rwanda-macuba/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.25,
+    "title": "Rwanda &#8211; Macuba",
+    "variant_id": "444:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1e824a3b99f2122",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-wush-wush",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-04-21-at-07.52.38-1.jpeg",
+  "platform": "woocommerce",
+  "product_id": "8310",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Colombia Wush Wush",
+  "url": "https://lucecoffeeroasters.com/shop/colombia-wush-wush/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Colombia Wush Wush",
+    "variant_id": "8310:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "384888455c71adae",
+  "first_seen": "2026-10-26",
+  "handle": "calibration-class",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2020/11/Calibration.jpg",
+  "platform": "woocommerce",
+  "product_id": "888",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [
+   "*** No refunds for our products ****",
+   "Private Classes"
+  ],
+  "title": "CALIBRATION-ESPRESSO",
+  "url": "https://lucecoffeeroasters.com/shop/calibration-class/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 300.0,
+    "title": "CALIBRATION-ESPRESSO",
+    "variant_id": "888:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c1ba856df187fd5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-washed-2",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2026/06/6E98FC1D-DD8D-44BE-B95F-F2A70DA1F813.png",
+  "platform": "woocommerce",
+  "product_id": "9177",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Washed",
+  "url": "https://lucecoffeeroasters.com/shop/ethiopia-washed-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.5,
+    "title": "Ethiopia Washed",
+    "variant_id": "9177:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5d5a5ea83960aab8",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-washed",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2026/06/AAFBD03E-3415-4952-81E0-7097D711F973.png",
+  "platform": "woocommerce",
+  "product_id": "9183",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Kenya Washed",
+  "url": "https://lucecoffeeroasters.com/shop/kenya-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.5,
+    "title": "Kenya Washed",
+    "variant_id": "9183:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0387e230bb5ff9a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-washed-geisha",
+  "image": "https://lucecoffeeroasters.com/wp-content/uploads/2026/07/ChatGPT-Image-8-jul-2026-02_06_29-p.m.png",
+  "platform": "woocommerce",
+  "product_id": "9268",
+  "product_type": "simple",
+  "roaster_slug": "lucecoffeeroasters",
+  "tags": [],
+  "title": "Honduras Washed",
+  "url": "https://lucecoffeeroasters.com/shop/honduras-washed-geisha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.25,
+    "title": "Honduras Washed",
+    "variant_id": "9268:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

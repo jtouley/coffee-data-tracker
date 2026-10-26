@@ -1,0 +1,55 @@
+{
+ "15400153415732": {
+  "body_hash": "66e1d5a940550ef5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "nougat",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "15400153579572": {
+  "body_hash": "fd07f7c554962bb3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "nougat",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "15431785971764": {
+  "body_hash": "2c668bf0d9274ecf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

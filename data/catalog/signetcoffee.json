@@ -1,0 +1,1684 @@
+[
+ {
+  "body_hash": "d923897f706db389",
+  "first_seen": "2026-10-26",
+  "handle": "milk-chocolate-espresso-bar",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/08/SignetCoffee_Product_MilkChocolate.jpg",
+  "platform": "woocommerce",
+  "product_id": "1578",
+  "product_type": "simple",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "products"
+  ],
+  "title": "Milk Chocolate Espresso Bar",
+  "url": "https://www.signetcoffee.com/product/milk-chocolate-espresso-bar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.75,
+    "title": "Milk Chocolate Espresso Bar",
+    "variant_id": "1578:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d923897f706db389",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-espresso-bar",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/08/SignetCoffee_chocolatebar_dark.jpg",
+  "platform": "woocommerce",
+  "product_id": "1580",
+  "product_type": "simple",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "products"
+  ],
+  "title": "Dark Chocolate Espresso Bar",
+  "url": "https://www.signetcoffee.com/product/dark-chocolate-espresso-bar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.75,
+    "title": "Dark Chocolate Espresso Bar",
+    "variant_id": "1580:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f68229dabee4b11",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-blend-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/03/SignetCoffee_Coffee_DowntownBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2165",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Downtown Blend – 1 lb",
+  "url": "https://www.signetcoffee.com/product/downtown-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Downtown Blend – 1 lb",
+    "variant_id": "2165:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d2df8bfc1d51a97",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-6-oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_BreakfastBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2214",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Breakfast Blend – 6 oz",
+  "url": "https://www.signetcoffee.com/product/breakfast-blend-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Breakfast Blend – 6 oz",
+    "variant_id": "2214:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3bc0ec157294ca34",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_BreakfastBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2217",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.signetcoffee.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Breakfast Blend",
+    "variant_id": "2217:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f28b9271f60a4668",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-6-oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Guatemala.jpg",
+  "platform": "woocommerce",
+  "product_id": "2220",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "medium roast",
+   "single origin coffees"
+  ],
+  "title": "Guatemala – 6 oz",
+  "url": "https://www.signetcoffee.com/product/guatemala-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Guatemala – 6 oz",
+    "variant_id": "2220:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c7a5e59465124137",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Guatemala.jpg",
+  "platform": "woocommerce",
+  "product_id": "2222",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "medium roast",
+   "single origin coffees"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.signetcoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Guatemala",
+    "variant_id": "2222:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f6a416c202694fc0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2017/08/SignetCoffee_Coffee_Mexico-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2234",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Mexico – 6 oz",
+  "url": "https://www.signetcoffee.com/product/mexico-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Mexico &#8211; 6 oz",
+    "variant_id": "2234:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe578b5adc225d5c",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2017/08/SignetCoffee_Coffee_Mexico-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2236",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Mexico",
+  "url": "https://www.signetcoffee.com/product/mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Mexico",
+    "variant_id": "2236:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a53bc43d02d31cb5",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MonsoonedMalabar.jpg",
+  "platform": "woocommerce",
+  "product_id": "2238",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "single origin coffees"
+  ],
+  "title": "Monsooned Malabar – 6 oz",
+  "url": "https://www.signetcoffee.com/product/monsooned-malabar-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Monsooned Malabar – 6 oz",
+    "variant_id": "2238:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62173bb34d689c97",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_DecafDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "2242",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "decaf"
+  ],
+  "title": "Decaf Dark – 6 oz",
+  "url": "https://www.signetcoffee.com/product/decaf-dark-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Decaf Dark – 6 oz",
+    "variant_id": "2242:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b34ff44ba97939bb",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_DecafDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "2244",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "decaf"
+  ],
+  "title": "Decaf Dark",
+  "url": "https://www.signetcoffee.com/product/decaf-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.75,
+    "title": "Decaf Dark",
+    "variant_id": "2244:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b755ae1e292bbb7",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "2246",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Espresso Blend – 6 oz",
+  "url": "https://www.signetcoffee.com/product/espresso-blend-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Espresso Blend &#8211; 6 oz",
+    "variant_id": "2246:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "48335a5ea3b0409b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "2248",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.signetcoffee.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Espresso Blend",
+    "variant_id": "2248:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa09abf153ec9609",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_FrenchRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2250",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "French Roast – 6 oz",
+  "url": "https://www.signetcoffee.com/product/french-roast-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "French Roast – 6 oz",
+    "variant_id": "2250:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0624b5707b44f05f",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_FrenchRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2252",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "French Roast",
+  "url": "https://www.signetcoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "French Roast",
+    "variant_id": "2252:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3978767036a8fc6",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-dark-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "2254",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Gorilla Dark – 6 oz",
+  "url": "https://www.signetcoffee.com/product/gorilla-dark-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Gorilla Dark – 6 oz",
+    "variant_id": "2254:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "789047925622f454",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-roast-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2258",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Gorilla Roast – 6 oz",
+  "url": "https://www.signetcoffee.com/product/gorilla-roast-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Gorilla Roast – 6 oz",
+    "variant_id": "2258:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "286d9c68a42225e3",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-roast",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2260",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Gorilla Roast",
+  "url": "https://www.signetcoffee.com/product/gorilla-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Gorilla Roast",
+    "variant_id": "2260:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ef9e4c2ef8b4763",
+  "first_seen": "2026-10-26",
+  "handle": "mission-blend-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MissionBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2262",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Mission Blend – 6 oz",
+  "url": "https://www.signetcoffee.com/product/mission-blend-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Mission Blend – 6 oz",
+    "variant_id": "2262:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6577e1182988eac0",
+  "first_seen": "2026-10-26",
+  "handle": "mission-blend",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MissionBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2264",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Mission Blend",
+  "url": "https://www.signetcoffee.com/product/mission-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Mission Blend",
+    "variant_id": "2264:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5807eeccb095dd92",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2270",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Colombia – 6 oz",
+  "url": "https://www.signetcoffee.com/product/colombia-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Colombia – 6 oz",
+    "variant_id": "2270:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85e5a3fd5cec7aa4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2272",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Colombia",
+  "url": "https://www.signetcoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Colombia",
+    "variant_id": "2272:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c37452b3d9b55ef0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2274",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia – 6 oz",
+  "url": "https://www.signetcoffee.com/product/ethiopia-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Ethiopia – 6 oz",
+    "variant_id": "2274:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "15f0c19cee3f9055",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2276",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.signetcoffee.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Ethiopia",
+    "variant_id": "2276:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4180d504063b923",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-blend-6oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/03/SignetCoffee_Coffee_DowntownBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2287",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Downtown Blend – 6 oz",
+  "url": "https://www.signetcoffee.com/product/downtown-blend-6oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Downtown Blend – 6 oz",
+    "variant_id": "2287:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfba6c2711374424",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-blend",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/03/SignetCoffee_Coffee_DowntownBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2289",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Downtown Blend",
+  "url": "https://www.signetcoffee.com/product/downtown-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Downtown Blend",
+    "variant_id": "2289:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b44a089d0e6edc6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/09/SignetCoffee_Coffee_Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "2797",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Brazil",
+  "url": "https://www.signetcoffee.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.5,
+    "title": "Brazil",
+    "variant_id": "2797:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "105eac852a23e5fe",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-1-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/09/SignetCoffee_Coffee_Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "2799",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Brazil – 1 lb",
+  "url": "https://www.signetcoffee.com/product/brazil-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Brazil – 1 lb",
+    "variant_id": "2799:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f83e4192694e8bcb",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-6-oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/09/SignetCoffee_Coffee_Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "2801",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Brazil – 6 oz",
+  "url": "https://www.signetcoffee.com/product/brazil-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Brazil – 6 oz",
+    "variant_id": "2801:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b99dcf0179860f81",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend-6-oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2024/09/signetcoffee_birthday_blend-scaled.webp",
+  "platform": "woocommerce",
+  "product_id": "2803",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Birthday Blend – 6 oz",
+  "url": "https://www.signetcoffee.com/product/birthday-blend-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Birthday Blend – 6 oz",
+    "variant_id": "2803:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d918bb1057be205",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2024/09/signetcoffee_birthday_blend-scaled.webp",
+  "platform": "woocommerce",
+  "product_id": "2806",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Birthday Blend",
+  "url": "https://www.signetcoffee.com/product/birthday-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.75,
+    "title": "Birthday Blend",
+    "variant_id": "2806:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a011e6c7ba6a147",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2816",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia – 5 lb",
+  "url": "https://www.signetcoffee.com/product/ethiopia-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ethiopia – 5 lb",
+    "variant_id": "2816:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36ae7345dfb615b0",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_BreakfastBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2818",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Breakfast Blend – 5 lb",
+  "url": "https://www.signetcoffee.com/product/breakfast-blend-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Breakfast Blend – 5 lb",
+    "variant_id": "2818:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a6bfd61d712f5984",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Guatemala.jpg",
+  "platform": "woocommerce",
+  "product_id": "2820",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "medium roast",
+   "single origin coffees"
+  ],
+  "title": "Guatemala – 5 lb",
+  "url": "https://www.signetcoffee.com/product/guatemala-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Guatemala – 5 lb",
+    "variant_id": "2820:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "910761028bcd0c2b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2017/08/SignetCoffee_Coffee_Mexico-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2824",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Mexico – 5 lb",
+  "url": "https://www.signetcoffee.com/product/mexico-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Mexico – 5 lb",
+    "variant_id": "2824:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c5e148942a518d3",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MonsoonedMalabar.jpg",
+  "platform": "woocommerce",
+  "product_id": "2826",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "single origin coffees"
+  ],
+  "title": "Monsooned Malabar – 5 lb",
+  "url": "https://www.signetcoffee.com/product/monsooned-malabar-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Monsooned Malabar &#8211; 5 lb",
+    "variant_id": "2826:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3204e4aa2e52a567",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "2828",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Espresso Blend – 5 lb",
+  "url": "https://www.signetcoffee.com/product/espresso-blend-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso Blend – 5 lb",
+    "variant_id": "2828:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c12245ca2573d83b",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_FrenchRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2830",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "French Roast – 5 lb",
+  "url": "https://www.signetcoffee.com/product/french-roast-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Roast – 5 lb",
+    "variant_id": "2830:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a692719eece14f8",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-dark-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "2832",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Gorilla Dark – 5 lb",
+  "url": "https://www.signetcoffee.com/product/gorilla-dark-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gorilla Dark – 5 lb",
+    "variant_id": "2832:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a18f6e743e942659",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-roast-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "2834",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Gorilla Roast – 5 lb",
+  "url": "https://www.signetcoffee.com/product/gorilla-roast-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gorilla Roast – 5 lb",
+    "variant_id": "2834:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b52da31fe005bc74",
+  "first_seen": "2026-10-26",
+  "handle": "mission-blend-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MissionBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2837",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Mission Blend – 5 lb",
+  "url": "https://www.signetcoffee.com/product/mission-blend-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Mission Blend – 5 lb",
+    "variant_id": "2837:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d662dee167e0a42",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "2841",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Colombia – 5 lb",
+  "url": "https://www.signetcoffee.com/product/colombia-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Colombia – 5 lb",
+    "variant_id": "2841:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de760b05a5399de5",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-blend-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/03/SignetCoffee_Coffee_DowntownBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2845",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Downtown Blend – 5 lb",
+  "url": "https://www.signetcoffee.com/product/downtown-blend-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Downtown Blend – 5 lb",
+    "variant_id": "2845:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42b17d8543d6f5cc",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2020/09/SignetCoffee_Coffee_Brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "2847",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Brazil – 5 lb",
+  "url": "https://www.signetcoffee.com/product/brazil-5-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Brazil – 5 lb",
+    "variant_id": "2847:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f71e3085515506c1",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2024/09/signetcoffee_birthday_blend-scaled.webp",
+  "platform": "woocommerce",
+  "product_id": "2849",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Birthday Blend – 5 lb",
+  "url": "https://www.signetcoffee.com/product/birthday-blend-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Birthday Blend – 5 lb",
+    "variant_id": "2849:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0ace8f6a35673d4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_DecafDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "2851",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "decaf"
+  ],
+  "title": "Decaf Dark – 5 lb",
+  "url": "https://www.signetcoffee.com/product/decaf-dark-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Decaf Dark – 5 lb",
+    "variant_id": "2851:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ce649742ceb5591",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "4622",
+  "product_type": "grouped",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://www.signetcoffee.com/product/ethiopia-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Ethiopia Natural",
+    "variant_id": "4622:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0134e94ab9497553",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-6-oz",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "4624",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia Natural – 6 oz",
+  "url": "https://www.signetcoffee.com/product/ethiopia-natural-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 9.5,
+    "title": "Ethiopia Natural – 6 oz",
+    "variant_id": "4624:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfd842ba84b2d180",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-5-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "4626",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia Natural – 5 lb",
+  "url": "https://www.signetcoffee.com/product/ethiopia-natural-5-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ethiopia Natural – 5 lb",
+    "variant_id": "4626:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d731fb28309a7aad",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-1-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "4628",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia Natural – 1 lb",
+  "url": "https://www.signetcoffee.com/product/ethiopia-natural-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopia Natural – 1 lb",
+    "variant_id": "4628:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36cc2a481ec2ed1c",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_BreakfastBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "682",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Breakfast Blend – 1 lb",
+  "url": "https://www.signetcoffee.com/product/breakfast-blend-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Breakfast Blend – 1 lb",
+    "variant_id": "682:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98e358156937d46b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "684",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Espresso Blend – 1 lb",
+  "url": "https://www.signetcoffee.com/product/espresso-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Espresso Blend – 1 lb",
+    "variant_id": "684:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef2dd92c6dc957ab",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_FrenchRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "686",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "French Roast – 1 lb",
+  "url": "https://www.signetcoffee.com/product/french-roast-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "French Roast – 1 lb",
+    "variant_id": "686:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40d3c9c7dfdb7dff",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-dark-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "688",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Gorilla Dark – 1 lb",
+  "url": "https://www.signetcoffee.com/product/gorilla-dark-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Gorilla Dark – 1 lb",
+    "variant_id": "688:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0fba4dc15218d1c",
+  "first_seen": "2026-10-26",
+  "handle": "gorilla-roast-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_GorillaRoast.jpg",
+  "platform": "woocommerce",
+  "product_id": "691",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Gorilla Roast – 1 lb",
+  "url": "https://www.signetcoffee.com/product/gorilla-roast-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Gorilla Roast – 1 lb",
+    "variant_id": "691:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5460fc2346cd1e8d",
+  "first_seen": "2026-10-26",
+  "handle": "mission-blend-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MissionBlend.jpg",
+  "platform": "woocommerce",
+  "product_id": "693",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "coffee blends",
+   "dark roast"
+  ],
+  "title": "Mission Blend – 1 lb",
+  "url": "https://www.signetcoffee.com/product/mission-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Mission Blend – 1 lb",
+    "variant_id": "693:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "293103f61788000c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "697",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Colombia – 1 lb",
+  "url": "https://www.signetcoffee.com/product/colombia-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia – 1 lb",
+    "variant_id": "697:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "89c55fc8d16ed4ee",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "700",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Ethiopia – 1 lb",
+  "url": "https://www.signetcoffee.com/product/ethiopia-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopia – 1 lb",
+    "variant_id": "700:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f413b9a7e5d05a40",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-1b",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_Guatemala.jpg",
+  "platform": "woocommerce",
+  "product_id": "702",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "medium roast",
+   "single origin coffees"
+  ],
+  "title": "Guatemala – 1 lb",
+  "url": "https://www.signetcoffee.com/product/guatemala-1b/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemala – 1 lb",
+    "variant_id": "702:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1299a633c9d6f825",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2017/08/SignetCoffee_Coffee_Mexico-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "708",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "USDA Organic",
+   "light roast",
+   "single origin coffees"
+  ],
+  "title": "Mexico – 1 lb",
+  "url": "https://www.signetcoffee.com/product/mexico-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Mexico – 1 lb",
+    "variant_id": "708:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c04a4270ee0a50c",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_MonsoonedMalabar.jpg",
+  "platform": "woocommerce",
+  "product_id": "710",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "single origin coffees"
+  ],
+  "title": "Monsooned Malabar – 1 lb",
+  "url": "https://www.signetcoffee.com/product/monsooned-malabar-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Monsooned Malabar &#8211; 1 lb",
+    "variant_id": "710:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba7d790159f35ba9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2018/12/SignetCoffee_Coffee_DecafDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "716",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "dark roast",
+   "decaf"
+  ],
+  "title": "Decaf Dark – 1 lb",
+  "url": "https://www.signetcoffee.com/product/decaf-dark-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Decaf Dark – 1 lb",
+    "variant_id": "716:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b9670e21809c772",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-blend-1lb",
+  "image": "https://www.signetcoffee.com/wp-content/uploads/2024/09/signetcoffee_birthday_blend-scaled.webp",
+  "platform": "woocommerce",
+  "product_id": "978",
+  "product_type": "variable",
+  "roaster_slug": "signetcoffee",
+  "tags": [
+   "coffee blends",
+   "medium roast"
+  ],
+  "title": "Birthday Blend – 1lb",
+  "url": "https://www.signetcoffee.com/product/birthday-blend-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Birthday Blend – 1lb",
+    "variant_id": "978:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1403 @@
+[
+ {
+  "body_hash": "ef41293a9f9cddea",
+  "first_seen": "2026-10-26",
+  "handle": "brazilcerrado",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/1677286205724-6WGNWT391GW7B4L9SLM3/Brazil+fall.png",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d463f3",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Brazil Cerrado Ipe Amarelo",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/brazilcerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "1b8dccec-c785-4fbd-9f31-e35e5a85a32b"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "7127f6cd-51a4-4d6a-b48c-d6e7e4e51b59"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "7197e5f2-1677-4076-8226-80fc36472f13"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "7bda5089-4d91-40f1-a6ce-79ce97d40002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "7f639f19-1411-4d6c-a9b6-2c0921b8cba4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "9d4febd8-9ed4-44b2-b8c6-9dc13d4db7db"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "a261d370-8298-45ae-ab8a-5b576839ced0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "d167e847-b054-4835-91f6-d2cf860fd721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "ff04ca84-968a-4565-a362-4f4fe18e487c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe772a575f1c8c0a",
+  "first_seen": "2026-10-26",
+  "handle": "decafcolombiaexcelso",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/63f95b3d1379fa03c9d46410/1787830045094/",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d46410",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Decaf Colombia Excelso",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/decafcolombiaexcelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "1b624e38-6813-401f-ac8b-d4e395017bab"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "291fe324-e567-46d9-b6fc-9f8f395bfb72"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "72813211-ad96-4b1d-ba60-c413cf151fc5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "7fd0c1df-8641-4fe1-a16a-3ef5974a73ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "93772822-754f-4efa-b563-d0d1378f6d7b"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "95c98b6e-826f-4e7c-ad4d-88cb5e8d852f"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "9d67ded2-d879-436c-aeea-26f43cef1527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "9f2e4620-870f-410a-8dca-a9edcd4ff80a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "efc717e3-a81e-4606-9b03-10b148ec7c04"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c3fc665c3fa5b24",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend-bd9es",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/63f95b3d1379fa03c9d46415/1787830045094/",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d46415",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Crazy Mtn Cold Brew Blend",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/cold-brew-blend-bd9es",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "365c6d38-d23c-45e9-ad22-54102dabfad4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Coarse Ground",
+    "variant_id": "80951147-c2cc-4e3e-befd-c0a77030971d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "bb765a3e-173e-4269-adbd-aec66cf51fa0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Coarse Ground",
+    "variant_id": "c13b0a0d-7bef-4121-a767-15250c6ed65d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "d59d36ab-3117-40b7-8e59-1eee8a49fd2a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Coarse Ground",
+    "variant_id": "e70730c8-30f3-4a47-8010-e3149e5a0543"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53dab4deedd32947",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend-g87y7",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/63f95b3d1379fa03c9d4641a/1787830045108/",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d4641a",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/french-roast-blend-g87y7",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "016d1538-0088-46d7-945b-f3bd8fb99daa"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "22914a84-693e-43d7-a17b-390dc15adf46"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "54199ba8-06bb-4238-9b7f-b57891c3cd26"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5lb French Press",
+    "variant_id": "6fc65e14-2b8e-4798-82c1-189a39728828"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5lb Whole Bean",
+    "variant_id": "878776d0-d2e5-4480-8144-fdb2fc3a6f1e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 45.0,
+    "title": "2.5lb Drip",
+    "variant_id": "9dd39e04-28ce-4b53-a94f-9ca6a1c42083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "a48a3363-7dc9-4904-b1d6-07e9b3998d51"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "d8dde5ff-d54f-4952-b17c-9ad63dfb38c7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "fdabf172-1c8f-48ac-aaef-e3d2e9202ca7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c3d850285fe416fd",
+  "first_seen": "2026-10-26",
+  "handle": "alpenglow-blend-29znc",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/1677286205895-D14D0YY2JRRGU9I8A7OH/Alpenglow+fall.png",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d46429",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Alpenglow Blend",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/alpenglow-blend-29znc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "119cfc6f-8feb-44ee-8335-a7ffeafa11e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "382d3261-ca53-47e8-b18c-67c1848e829c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb French Press",
+    "variant_id": "6e278a84-1c1c-4ed4-b1ad-73b215c30173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "799c21db-a31e-46e7-ad3e-f9df9beeb9e6"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Drip",
+    "variant_id": "88fc9b3f-21a9-4192-a670-06a344ec8f9e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Drip",
+    "variant_id": "a70565b2-4059-40ac-a9e8-8d6705f771f0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "b0062f77-427f-4094-b156-5566ae2e9288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "cb630ec6-7366-4e9f-894b-2949e46222dd"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb French Press",
+    "variant_id": "d82ad3f4-9749-4213-977c-ce36754539b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2788ad7fc550d604",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend-absarokasunrise",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/0a368ace-9bf7-42f1-9ae1-9d31241e3a70/IMG_2414.jpeg",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d46434",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Absaroka Sunrise (formerly known as Morning Blend)",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/morning-blend-absarokasunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "30c9659c-dd3b-4102-86f4-2ab42fa51e7b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Drip",
+    "variant_id": "320c094d-155e-4ea0-b86a-dca67730ad77"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "4b6f86f0-543c-4efe-9ba1-bc8937a90d01"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb French Press",
+    "variant_id": "811f7429-cfec-4995-b90a-983a794386ae"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Drip",
+    "variant_id": "9b865858-7e8c-4aaa-be8f-e8c1b885d09f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "a5de414f-4a3c-4618-b71b-4dcc1c4c8d89"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb French Press",
+    "variant_id": "ba7969f9-861c-48be-b701-fead4bcb88c8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "be4e6e52-136e-4830-944c-f20619f24871"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "d45dd94e-406f-43f7-9f10-c45efdd25620"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16c32fb96dce1ea4",
+  "first_seen": "2026-10-26",
+  "handle": "espressoblend-ibex",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/63f95b3d1379fa03c9d46444/1787830045130/",
+  "platform": "squarespace",
+  "product_id": "63f95b3d1379fa03c9d46444",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Ibex Espresso Blend",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/espressoblend-ibex",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "0526f3ee-e8ab-436e-8d36-4b1933ba9b01"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Espresso",
+    "variant_id": "16cb5d57-ed31-4fcd-a33b-74705a04a739"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Espresso",
+    "variant_id": "230b6503-160a-4e09-8bec-ac391103a33a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Espresso",
+    "variant_id": "55bfa2f8-7a5e-4a0f-8c97-b2dc19182604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "9aae43d3-db41-443c-b39d-452e0dc636f4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "c270da14-ed01-4b81-8a79-272a7f55d218"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "d16ea49e-b358-4a6f-9166-5456ce68d34a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "e56f8c6c-8455-4707-8cc2-b6014f7bbbdf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "f7f536ca-8acc-44d6-8a80-abf9c620023d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f86e9f0b9a25833a",
+  "first_seen": "2026-10-26",
+  "handle": "blackdiamond",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/63f95b3e1379fa03c9d46454/1787830045139/",
+  "platform": "squarespace",
+  "product_id": "63f95b3e1379fa03c9d46454",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Black Diamond Blend (previously known as House Dark Blend)",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/blackdiamond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Drip",
+    "variant_id": "0e1b52db-cba6-4acb-9313-6cd9cdda812a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Drip",
+    "variant_id": "10725845-c064-4972-9ea5-140d0a35e8d9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "13e153a7-f285-424b-becf-b43e1e6ca80a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "200e7bd0-c4cf-4157-8563-06db7aac2c40"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "5d8c25f8-6e63-47fb-9afa-f73e5fc1ecf4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "3lb French Press",
+    "variant_id": "98f311b4-9b2b-43ca-bc9d-81b51194e36d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "9bd44fdb-8f41-41cd-a5dc-ef3921b31a80"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "a8514efe-4b15-4bf7-a6a6-5ed7ac3dd498"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb French Press",
+    "variant_id": "d853f06c-8dcc-437c-89be-5dea691d4e62"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4228eec5dbf3f2e",
+  "first_seen": "2026-10-26",
+  "handle": "colombiaexcelso",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/d342c0d4-7482-434b-8feb-51d61a542301/Colombia+Cattleya+Excelso.jpg",
+  "platform": "squarespace",
+  "product_id": "63f95b3e1379fa03c9d4648e",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Colombia Excelso",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/colombiaexcelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "2d3c5237-cf81-4629-ba78-ed758ace8ebc"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "5a53aa29-0285-4e0a-b35a-aadc7836028f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "7fc3d1ef-02fc-435f-9db9-2d05dd42a301"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "93238427-92e8-4d7e-a2ab-797d70bd5c9a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "9a6e41a7-6e25-4e9c-883c-8950535299cf"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "a1cdf4f1-9906-4ec4-9850-fa10cdb507dd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "a7b00946-57e4-4505-a186-2fd97a4f6ce2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "b1377070-9e2e-46f5-81cd-efe794caddbf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "b4c0d684-fc7a-408e-b8d0-71cef799379b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a69b011c7833869e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatralintong",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/2babd568-4b04-4f2d-8273-fc2a2977f93f/sumatra+coffee+farm.jpg",
+  "platform": "squarespace",
+  "product_id": "63f95b3e1379fa03c9d46493",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Sumatra Lintong",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/sumatralintong",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb French Press",
+    "variant_id": "147d7d57-f7ec-4fa3-9865-eea1cfcb007c"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "1922de76-bd21-4179-94d0-19f5f3cd2dea"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "649c2fca-ca7f-46fe-8c82-e42647f91c8f"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz French Press",
+    "variant_id": "66009cbe-6a1b-4c3b-8e2f-3dd425e186a3"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Drip",
+    "variant_id": "6c2b0e90-1e4c-4441-9627-0802f9bbd5a6"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "7f6b7813-7881-47fd-9fea-e700c62fc9f9"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb French Press",
+    "variant_id": "b5a27431-87cc-454d-b548-acec577a277d"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Drip",
+    "variant_id": "bef2b371-d31b-4206-bf95-df43d498d922"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Drip",
+    "variant_id": "c834a4eb-ba35-4f21-a473-b4a49989bc33"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9eacb55b1f6875de",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalaavedeparaiso",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/1695060457485-TCZB9HSU4QJJWO58HEDH/Screenshot+2023-09-18+at+12.07.02+PM.png",
+  "platform": "squarespace",
+  "product_id": "650890f137037a7e96950f7b",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Guatemala Ave De Paraiso (Women-owned Coffee Producer)",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/guatemalaavedeparaiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "1b595d86-d8e7-4d8f-bfc6-f11b27c6fc8f"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "4561a2ce-6c79-4012-beb5-6b688a6fb32d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "5d3b5e18-89ec-4f3d-901f-fe110b06cedc"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "6c9a86f1-b452-4d2a-b96c-1f909e0b4299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "ac8e97c4-25f4-4d69-9ba8-7f05d06a80ab"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "b2f92ecb-58c9-427d-964c-a6d7d7431b08"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "d170da9a-1c07-4d9a-83fb-03c0b2133fce"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz French Press",
+    "variant_id": "d9cd1d9c-2672-4655-a5d4-c161979fc69c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "e02d05c8-86dc-4c40-abca-c360344bf53a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2d36c1e3e663daf",
+  "first_seen": "2026-10-26",
+  "handle": "flannelandfirewood",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/656e2082cefa81447b8e8866/1791554934345/",
+  "platform": "squarespace",
+  "product_id": "656e2082cefa81447b8e8866",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Flannel & Firewood Blend - Special Edition Winter Blend",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/flannelandfirewood",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "2806a0c1-389b-4862-807a-e93d15560b28"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "4830e317-8c77-4b47-87fc-a612f3a2e8ce"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "4e553505-3221-469d-9bfa-f00c1227b42f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "7f550101-b7be-4200-85fd-df0272cf9bda"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "8159ffe2-f8f0-435a-b21e-5d02f33ced1a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "8f600114-4567-4929-b9a1-69b4cc4df064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "a9dff0c4-2c62-4aa5-ac35-a125999fdf11"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "dd800ce7-e34a-44bc-9910-b381cd03a19a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "e155a34d-71d4-4bbc-a4b7-558ebe5d2143"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8cc9f8d765848901",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/1720639282260-HZCLUJWB5T0E7J6RMZIG/IMG_1939.jpeg",
+  "platform": "squarespace",
+  "product_id": "668ed32ac95262045a6b15d0",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Honduras Las Granadillas",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb French Press",
+    "variant_id": "04af7d02-93d2-4f39-aa5f-0f5f8d420214"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb Drip",
+    "variant_id": "0dc49799-c173-438a-a1a9-67ccf4598f5e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz French Press",
+    "variant_id": "2c63b1f8-1436-4bbf-ab79-38f17bd73ff3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Drip",
+    "variant_id": "31f4c146-0d2d-49bb-9fe6-a843938128fd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "4f9f62a3-458e-4940-8c4f-c230eebd36ab"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "61408d63-fc36-4f93-b186-3487746bef8a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb French Press",
+    "variant_id": "758e75ff-06bf-474c-a93b-52f7551bca09"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "ef36da09-8050-464b-8011-4ed00d4997a4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "fa23e630-df6b-4dde-93be-a8dd9cd520ce"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "99fb22ee698c0a5e",
+  "first_seen": "2026-10-26",
+  "handle": "uptheboulder",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/2b1f6aa4-ee07-438c-ad71-128a448ffdcf/Screenshot+2024-12-03+at+9.49.25%E2%80%AFAM.png",
+  "platform": "squarespace",
+  "product_id": "674f371b1f23f8612a345918",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Up the Boulder",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/uptheboulder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Drip",
+    "variant_id": "126e9908-258f-4601-beab-c047e93d48f9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Drip",
+    "variant_id": "49a353f0-7665-430f-a931-3f94664c850c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Drip",
+    "variant_id": "78fb47db-f0e1-4ffd-86f6-52251ba5fea0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "7b787b57-7c57-4e37-bb98-425d3a0b54ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz French Press",
+    "variant_id": "88313a3b-30ff-4dc6-a3b6-ce3b7417d78d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb French Press",
+    "variant_id": "9da38e2b-c990-40ee-9502-2f8d71026f44"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "acb77f2e-8559-4acf-ad98-9993d1e39e92"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb French Press",
+    "variant_id": "c23bae8e-b1fe-43b5-a8fb-9521e74f9df4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 55.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "e6a32b8c-400e-49c9-8dfa-e40eac4df94d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d482664b2c441fd2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiayirgacheffe",
+  "image": "https://static1.squarespace.com/static/63f95b271379fa03c9d462fe/63f95b3d1379fa03c9d463f4/6818e55c2e92833fd7ad0144/1787980731604/",
+  "platform": "squarespace",
+  "product_id": "6818e55c2e92833fd7ad0144",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Aricha Grade 1",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/ethiopiayirgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb French Press",
+    "variant_id": "0029608e-4ada-4715-99e3-63147939c922"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb French Press",
+    "variant_id": "0b2ec2ab-b1d8-4fe3-885c-6bb50ea5bb6c"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Drip",
+    "variant_id": "291005fa-4e34-47e7-a401-a286384ecf84"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Drip",
+    "variant_id": "3744afb7-c58c-47f7-896f-f81bf83f8660"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "48073870-538f-4ac5-b8df-88042c1096d5"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "5eba07e6-dd4f-490d-af1e-b64e7465881e"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz French Press",
+    "variant_id": "6d29bea8-2e1c-4e86-ab2a-3959ec690c6b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Drip",
+    "variant_id": "e47e4a4a-7140-4bc8-8835-cf0a97dd5f60"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "ff253b8f-dbbb-4346-94f7-3863bbceb0c5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42b3c947fd6f5543",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopiasidamo",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/4573c37c-22f8-43ba-ad50-87b9c2bb6867/Ethiopia+Sidamo.png",
+  "platform": "squarespace",
+  "product_id": "681909add6f77877435ac5fa",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/ethiopiasidamo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "18feb8f7-153e-400f-8b30-643285b8cce9"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb French Press",
+    "variant_id": "2a6d339d-5b55-4f99-83a2-db4f322bfc66"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb Drip",
+    "variant_id": "35aab36a-f9e6-45c2-8585-a1b027c24dbf"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz French Press",
+    "variant_id": "9273d3d3-1ed7-4398-b0cf-231a9a047a40"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "ab533687-e60e-4419-af43-3f1b6b4c3083"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb French Press",
+    "variant_id": "acbf12cd-2a9c-4562-af80-a3aee9c48831"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Drip",
+    "variant_id": "adfd3d7b-28c7-463b-9e23-6f9200588c83"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Drip",
+    "variant_id": "ece85c29-d9bb-4502-901d-d7e1acbddbe2"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "f3ca7cb5-d6b7-442c-844d-f89fa857f6e7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a35fa718ed65e9d",
+  "first_seen": "2026-10-26",
+  "handle": "brazilminasyellowbourbon-mke8x",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/43ace094-ff9d-4789-b33a-634d802430e8/Brazil+Honey.webp",
+  "platform": "squarespace",
+  "product_id": "68190fe16f6a9e588fe638dd",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Brazil Minas - Honey Process (Women-owned coffee producer)",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/brazilminasyellowbourbon-mke8x",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "010026ee-e380-4133-9272-b3041a14481d"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "08989f4a-740b-4355-a05c-ac98eb49192b"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb French Press",
+    "variant_id": "099e15f5-1131-4b38-baff-60b02b4d10fc"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb French Press",
+    "variant_id": "15d7f5b0-ab32-4711-b489-e61c8e69d65d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Drip",
+    "variant_id": "40d5f217-81ad-491f-bada-7dcd2697bc7f"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb Drip",
+    "variant_id": "59a9b672-9794-401c-88ba-bda349c12821"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "3lb Drip",
+    "variant_id": "665edf64-6648-467b-a0c6-0cbc2777cd14"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz French Press",
+    "variant_id": "700776c8-55cc-498c-9ea8-268dbcaeef8d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "cc8b2879-d773-47d2-939d-88ec39daca54"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c893210f1135f2c",
+  "first_seen": "2026-10-26",
+  "handle": "crazymountain100blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/63f95b271379fa03c9d462fe/3c14761a-0838-4a0d-b3a0-92293c75c731/Trailhead+Blend.png",
+  "platform": "squarespace",
+  "product_id": "6a5ab8b0cc16e731374689a9",
+  "product_type": "",
+  "roaster_slug": "crazymountaincoffee",
+  "tags": [],
+  "title": "Crazy Mountain 100 - Trailhead Blend",
+  "url": "https://www.crazymountaincoffee.com/buybeans/p/crazymountain100blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz French Press",
+    "variant_id": "058cbc15-b3f4-4f1b-848e-28f0a4022f73"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "165956b9-a647-46e2-b9f1-19afe245eaf1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 56.0,
+    "title": "3lb Drip",
+    "variant_id": "4f628d6f-4d64-4ad6-9ba5-f110c385c40c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb Drip",
+    "variant_id": "5b8bd10a-f971-49a3-abd2-12e7da392913"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 56.0,
+    "title": "3lb French Press",
+    "variant_id": "6594da25-31a2-46e7-98a1-ab806cb1467a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Drip",
+    "variant_id": "65bf61ae-0d78-4084-9329-8849a867ea51"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "742a3631-4a10-4084-a469-bbc150975117"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 56.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "78daab10-8fc4-41e4-af0a-0942fccd325f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb French Press",
+    "variant_id": "efbeadba-07f0-4fa2-bd2d-fef84d58862a"
+   }
+  ],
+  "vendor": ""
+ }
+]

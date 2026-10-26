@@ -1,0 +1,1762 @@
+[
+ {
+  "body_hash": "f0824edf6dfd6675",
+  "first_seen": "2026-10-26",
+  "handle": "lotus-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Lotus-Bag-Front.jpg?v=1741207049",
+  "platform": "shopify",
+  "product_id": "14671265988978",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Lotus Blend",
+  "url": "https://templecoffee.com/products/lotus-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "51771004256626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / French Press",
+    "variant_id": "51771004289394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Drip",
+    "variant_id": "51771004322162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "51771004354930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "51771004387698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "51771004420466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "51771004453234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "51771004486002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "51771004518770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "51771004584306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 144.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "51771004617074"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "2509417b7478f654",
+  "first_seen": "2026-10-26",
+  "handle": "barista-carls-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/BCB_Front.jpg?v=1747858026",
+  "platform": "shopify",
+  "product_id": "14728206483826",
+  "product_type": "Inventory",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "bar tools"
+  ],
+  "title": "Barista Carl's Blend",
+  "url": "https://templecoffee.com/products/barista-carls-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.64,
+    "title": "Default Title",
+    "variant_id": "52010242802034"
+   }
+  ],
+  "vendor": "Barista Carl's Blend"
+ },
+ {
+  "body_hash": "8016cd8547754054",
+  "first_seen": "2026-10-26",
+  "handle": "three-pillars-blend-emiles-cafe-blend-private-label-temple-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Emiles-12-Front.jpg?v=1774557962",
+  "platform": "shopify",
+  "product_id": "15015173194098",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Emile's Private Label",
+   "blend",
+   "coffee"
+  ],
+  "title": "Three Pillars Blend - Emile's Cafe Blend (Private Label, Temple Bag)",
+  "url": "https://templecoffee.com/products/three-pillars-blend-emiles-cafe-blend-private-label-temple-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "61706485891442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.5,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "61706485924210"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "4bc6a1ba420b760b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-sitio-maranhao-1",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/BSM_SEP26-BagFront.jpg?v=1786987411",
+  "platform": "shopify",
+  "product_id": "15153481908594",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Americas",
+   "Brazil",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Brazil Sítio Maranhão",
+  "url": "https://templecoffee.com/products/brazil-sitio-maranhao-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62197042053490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / French Press",
+    "variant_id": "62197042086258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Drip",
+    "variant_id": "62197042119026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "62197042151794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62197042184562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62197042217330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "62197042250098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62197042282866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62197042315634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62197042348402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62197042381170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "62197042413938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "62197042446706"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "91f6541ea46d1663",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-rianjagi",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/KR_SEP26-BagFront.jpg?v=1786988161",
+  "platform": "shopify",
+  "product_id": "15153537220978",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Africa",
+   "Burundi",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Kenya Rianjagi",
+  "url": "https://templecoffee.com/products/kenya-rianjagi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62197272084850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / French Press",
+    "variant_id": "62197272117618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Drip",
+    "variant_id": "62197272150386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "62197272183154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62197272215922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62197272248690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "62197272281458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62197272314226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62197272346994"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62197272379762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62197272412530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "62197888811378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "62197894873458"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "e72a3df91a1f3a49",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-hafi-natural-anaerobic",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/BH_SEP26-BagFront.jpg?v=1786988794",
+  "platform": "shopify",
+  "product_id": "15153579000178",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Americas",
+   "Brazil",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Burundi Hafi",
+  "url": "https://templecoffee.com/products/burundi-hafi-natural-anaerobic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62197455683954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / French Press",
+    "variant_id": "62197455716722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Drip",
+    "variant_id": "62197455749490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "62197455782258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62197455815026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62197455847794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "62197455880562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62197455913330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62197455946098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62197455978866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62197456011634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "62197456044402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "62197456077170"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "980692aca979b1ba",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sonora-estate-single-origin-espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/CRSE_SOE_OCT26-BagFront.jpg?v=1790360635",
+  "platform": "shopify",
+  "product_id": "15186519490930",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Americas",
+   "Costa Rica",
+   "coffee",
+   "espresso",
+   "single origin"
+  ],
+  "title": "Costa Rica Sonora Estate Single Origin Espresso",
+  "url": "https://templecoffee.com/products/costa-rica-sonora-estate-single-origin-espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62298721517938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / French Press",
+    "variant_id": "62298721550706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Drip",
+    "variant_id": "62298721583474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "62298721616242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62298721649010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62298721681778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "62298721714546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62298721747314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62298721780082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62298721812850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62298721845618"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "7bd0af06629fc919",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pulcal-2",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/GP_OCT26-BagFront_1.jpg?v=1790361100",
+  "platform": "shopify",
+  "product_id": "15193728614770",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Americas",
+   "Guatemala",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Guatemala Pulcal",
+  "url": "https://templecoffee.com/products/guatemala-pulcal-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62337056964978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / French Press",
+    "variant_id": "62337056997746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Drip",
+    "variant_id": "62337057030514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "62337057063282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62337057096050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62337057128818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "62337057161586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62337057194354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62337057227122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62337057259890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62337057292658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "62337057325426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "62337057358194"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "6c8365d1cd3fabbb",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-buenavista-loxicha",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/MBL_SEP26-BagFront.jpg?v=1790361363",
+  "platform": "shopify",
+  "product_id": "15193757909362",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "Americas",
+   "Mexico",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Mexico Buenavista Loxicha",
+  "url": "https://templecoffee.com/products/mexico-buenavista-loxicha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "62337086751090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / French Press",
+    "variant_id": "62337086783858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Drip",
+    "variant_id": "62337086816626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Espresso",
+    "variant_id": "62337086849394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Aeropress",
+    "variant_id": "62337086882162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Pour Over",
+    "variant_id": "62337086914930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Chemex",
+    "variant_id": "62337086947698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "62337086980466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "62337087013234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1-lb (Unroasted Only) / Unroasted Whole Bean",
+    "variant_id": "62337087046002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.5,
+    "title": "5-lbs / Unroasted Whole Bean",
+    "variant_id": "62337087078770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "62337087111538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "62337087144306"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "8016cd8547754054",
+  "first_seen": "2026-10-26",
+  "handle": "three-pillars-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/TPB-Biotre-Bag-Template-FINAL.jpg?v=1740594412",
+  "platform": "shopify",
+  "product_id": "4285871030362",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Three Pillars Blend",
+  "url": "https://templecoffee.com/products/three-pillars-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "30875004403802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / French Press",
+    "variant_id": "30875004436570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Drip",
+    "variant_id": "30875004469338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "30875004502106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "30875004534874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "30875004567642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "30875004600410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "30875004633178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "30875004665946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "51706639253874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "51706639286642"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "7990191cede41365",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-cold-brew-system-commercial-model",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Toddy.jpg?v=1723060970",
+  "platform": "shopify",
+  "product_id": "4357146411098",
+  "product_type": "Inventory",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "bar tools",
+   "brewing device",
+   "inventory"
+  ],
+  "title": "Toddy Cold Brew System - Commercial Model",
+  "url": "https://templecoffee.com/products/toddy-cold-brew-system-commercial-model",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 93.24,
+    "title": "Default Title",
+    "variant_id": "31176904933466"
+   }
+  ],
+  "vendor": "Toddy"
+ },
+ {
+  "body_hash": "9659f00b654069b2",
+  "first_seen": "2026-10-26",
+  "handle": "caldera-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Caldera_12oz-FrontBadge_1.jpg?v=1775158298",
+  "platform": "shopify",
+  "product_id": "4638655250522",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Caldera Dark Blend",
+  "url": "https://templecoffee.com/products/caldera-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "32114026971226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / French Press",
+    "variant_id": "32114027003994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Drip",
+    "variant_id": "32114027036762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "32114027069530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "32114027102298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "32114027135066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "32114027167834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "32114027200602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "32114027397210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "51742362665330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "51742362894706"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "d3d33acf7b1ae741",
+  "first_seen": "2026-10-26",
+  "handle": "dharma-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Dharma-Biotre-Bag-Template-FINAL.jpg?v=1740594268",
+  "platform": "shopify",
+  "product_id": "4638774886490",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso"
+  ],
+  "title": "Dharma Espresso Blend",
+  "url": "https://templecoffee.com/products/dharma-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "32114266669146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / French Press",
+    "variant_id": "32114266701914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Drip",
+    "variant_id": "32114266734682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "32114266767450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "32114266800218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "32114266832986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "32114266865754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "32114266898522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "32114267095130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "51741368746354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.25,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "51741391028594"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "913a37cc8a11c193",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-grocery",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Decaf-12oz-NoBadge_1.jpg?v=1754591070",
+  "platform": "shopify",
+  "product_id": "4691301335130",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Decaf Espresso Blend - Grocery",
+  "url": "https://templecoffee.com/products/decaf-espresso-blend-grocery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32445799366746"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "3cc94d1ee985518a",
+  "first_seen": "2026-10-26",
+  "handle": "dharma-espresso-blend-grocery",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Dharma_Biotre-Bag-Front_5ef3d2a9-5a97-4e12-9086-80e41dde30bd.jpg?v=1754587163",
+  "platform": "shopify",
+  "product_id": "4691303399514",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Dharma Espresso Blend - Grocery",
+  "url": "https://templecoffee.com/products/dharma-espresso-blend-grocery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32445799399514"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 17.36,
+    "title": "24-oz",
+    "variant_id": "51634375983474"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "d9457bbf4f8800d5",
+  "first_seen": "2026-10-26",
+  "handle": "three-pillars-blend-grocery",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/ThreePillars-12oz-NoBadge_1.jpg?v=1754668992",
+  "platform": "shopify",
+  "product_id": "4691306119258",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Three Pillars Blend - Grocery",
+  "url": "https://templecoffee.com/products/three-pillars-blend-grocery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32445799989338"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 15.78,
+    "title": "24-oz",
+    "variant_id": "51817637413234"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "23faf62798deed34",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-mulish-grocery-africa",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/EMS-12oz-Biotre_4465b9ed-1006-42a5-9709-b11909be112b.jpg?v=1754590956",
+  "platform": "shopify",
+  "product_id": "4691413729370",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Ethiopia Sidamo Mulish - Grocery Africa",
+  "url": "https://templecoffee.com/products/ethiopia-sidamo-mulish-grocery-africa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32445799694426"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 15.78,
+    "title": "24-oz",
+    "variant_id": "51817642262898"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "e3453228706861e1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Decaf-12oz-NoBadge_1.jpg?v=1754591070",
+  "platform": "shopify",
+  "product_id": "4691479560282",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Decaf Espresso Blend - Private Label",
+  "url": "https://templecoffee.com/products/decaf-espresso-blend-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.4,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345692307546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.96,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345692471386"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "f2d1f35380ef25b3",
+  "first_seen": "2026-10-26",
+  "handle": "dharma-espresso-blend-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Dharma_Biotre-Bag-Front_5ef3d2a9-5a97-4e12-9086-80e41dde30bd.jpg?v=1754587163",
+  "platform": "shopify",
+  "product_id": "4691485655130",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Dharma Espresso Blend - Private Label",
+  "url": "https://templecoffee.com/products/dharma-espresso-blend-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.45,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345727238234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.94,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345727402074"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "8016cd8547754054",
+  "first_seen": "2026-10-26",
+  "handle": "three-pillars-blend-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/ThreePillars-12oz-NoBadge_2_91158ce6-f5f5-467d-97df-1799faafd231.jpg?v=1754668955",
+  "platform": "shopify",
+  "product_id": "4691488112730",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Three Pillars Blend - Private Label",
+  "url": "https://templecoffee.com/products/three-pillars-blend-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.45,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345754239066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.94,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32345754370138"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-mulish-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/EMS-12oz-Biotre.jpg?v=1754590843",
+  "platform": "shopify",
+  "product_id": "4706494906458",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Ethiopia Sidamo Mulish - Private Label",
+  "url": "https://templecoffee.com/products/ethiopia-sidamo-mulish-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.45,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32412582838362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.94,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32412583002202"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "8139aba36eb2a234",
+  "first_seen": "2026-10-26",
+  "handle": "capital-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/CCB-2026_Bag_Front-Badge_1_be6f12b1-bd34-45c6-8af7-7f65d4045ed3.jpg?v=1777664458",
+  "platform": "shopify",
+  "product_id": "4708534386778",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Capital Cold Brew Blend",
+  "url": "https://templecoffee.com/products/capital-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "32422898729050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "40156846063706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "40156849406042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5-lbs / PREGROUND Cold Brew",
+    "variant_id": "51742387405170"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "37ece9a68090abd5",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-subscription-only",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/CPB_RC_SEP26-BagBadge.jpg?v=1791214517",
+  "platform": "shopify",
+  "product_id": "4715321524314",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "club",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Roaster's Choice Single Origin - Coffee Club Exclusive",
+  "url": "https://templecoffee.com/products/roasters-choice-single-origin-subscription-only",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "32453287936090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / French Press",
+    "variant_id": "32453287968858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Drip",
+    "variant_id": "32453288001626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "32453288034394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "32453288067162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "32453288099930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "32453288132698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "32453288165466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "32453288198234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "61376115671410"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "ca8697d3d7ad787f",
+  "first_seen": "2026-10-26",
+  "handle": "riqueza-dark-blend-grocery",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Caldera_12oz-Front_2.jpg?v=1775152095",
+  "platform": "shopify",
+  "product_id": "4762035814490",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Dark Roast Blend - Grocery",
+  "url": "https://templecoffee.com/products/riqueza-dark-blend-grocery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32585825419354"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "3dbdd6da97ca5d76",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-campos-altos-grocery-americas-1",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/BCA-12oz-Biotre.jpg?v=1754590709",
+  "platform": "shopify",
+  "product_id": "4809046982746",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "grocery"
+  ],
+  "title": "Brazil Campos Altos - Grocery Americas 1",
+  "url": "https://templecoffee.com/products/brazil-campos-altos-grocery-americas-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 29.55,
+    "title": "Case",
+    "variant_id": "32907718426714"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 17.36,
+    "title": "24-oz",
+    "variant_id": "51634374771058"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-campos-altos-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/BCA-12oz-Biotre.jpg?v=1754590709",
+  "platform": "shopify",
+  "product_id": "4826745700442",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Brazil Campos Altos - Private Label",
+  "url": "https://templecoffee.com/products/brazil-campos-altos-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.45,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32965713002586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.94,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "32965713100890"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "e3453228706861e1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Decaf-Biotre-Bag-Template-FINAL.jpg?v=1740594253",
+  "platform": "shopify",
+  "product_id": "6619105951834",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "decaf",
+   "espresso"
+  ],
+  "title": "Decaf Espresso Blend",
+  "url": "https://templecoffee.com/products/decaf-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Whole Bean",
+    "variant_id": "39512849580122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / French Press",
+    "variant_id": "39512849612890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Drip",
+    "variant_id": "39512849645658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Espresso",
+    "variant_id": "39512849678426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Aeropress",
+    "variant_id": "39512849711194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Pour Over",
+    "variant_id": "39512849743962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Chemex",
+    "variant_id": "39512849776730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12-oz / Percolator/Cold Brew",
+    "variant_id": "39512849809498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5-lbs / Whole Bean",
+    "variant_id": "39512849842266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5-lbs / PREGROUND Drip",
+    "variant_id": "51742320656754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5-lbs / PREGROUND French Press",
+    "variant_id": "51742321115506"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ },
+ {
+  "body_hash": "3cc388ab6a52931d",
+  "first_seen": "2026-10-26",
+  "handle": "cafiza-powder",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/products/Cafiza-Powder.jpg?v=1630004368",
+  "platform": "shopify",
+  "product_id": "6619579547738",
+  "product_type": "Inventory",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "bar tools"
+  ],
+  "title": "Cafiza Powder",
+  "url": "https://templecoffee.com/products/cafiza-powder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.76,
+    "title": "Default Title",
+    "variant_id": "39514785349722"
+   }
+  ],
+  "vendor": "Urnex"
+ },
+ {
+  "body_hash": "9d3a9221e17b4c96",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pastores-dark-roast-private-label",
+  "image": "https://cdn.shopify.com/s/files/1/0084/0826/8890/files/Caldera_12oz-Front_2_9c9d0a97-222e-4d0a-81b4-9310874fc79f.jpg?v=1775152398",
+  "platform": "shopify",
+  "product_id": "7274533355610",
+  "product_type": "Coffee",
+  "roaster_slug": "templecoffee",
+  "tags": [
+   "private"
+  ],
+  "title": "Caldera Dark Roast - Private Label",
+  "url": "https://templecoffee.com/products/guatemala-pastores-dark-roast-private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.45,
+    "title": "12-oz / Wild Cherries - Whole Bean Dark",
+    "variant_id": "41351220822106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.94,
+    "title": "5-lbs / Wild Cherries - Whole Bean Dark",
+    "variant_id": "41351220854874"
+   }
+  ],
+  "vendor": "Temple Coffee Roasters"
+ }
+]

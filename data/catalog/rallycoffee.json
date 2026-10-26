@@ -1,0 +1,133 @@
+[
+ {
+  "body_hash": "0bc008eff399d613",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-refisa",
+  "image": "https://cdn.shopify.com/s/files/1/0004/8146/0342/files/EthiopiaRefisa.png?v=1782166018",
+  "platform": "shopify",
+  "product_id": "10269522624676",
+  "product_type": "Coffee",
+  "roaster_slug": "rallycoffee",
+  "tags": [
+   "Ethiopia",
+   "Retail"
+  ],
+  "title": "Ethiopia Refisa",
+  "url": "https://www.rallycoffee.co/products/ethiopia-refisa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51080761540772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51080761573540"
+   }
+  ],
+  "vendor": "Rally Coffee Co."
+ },
+ {
+  "body_hash": "e2d4dcf921002177",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-waykan",
+  "image": "https://cdn.shopify.com/s/files/1/0004/8146/0342/files/GuatemalaWaykan.png?v=1782165125",
+  "platform": "shopify",
+  "product_id": "10269523312804",
+  "product_type": "Coffee",
+  "roaster_slug": "rallycoffee",
+  "tags": [
+   "Guatemala",
+   "Retail"
+  ],
+  "title": "Guatemala Waykan",
+  "url": "https://www.rallycoffee.co/products/guatemala-waykan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51080763310244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51080763343012"
+   }
+  ],
+  "vendor": "Rally Coffee Co."
+ },
+ {
+  "body_hash": "39e27a88647bcb4f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas",
+  "image": "https://cdn.shopify.com/s/files/1/0004/8146/0342/files/CostaRicaLasLajas.png?v=1782166347",
+  "platform": "shopify",
+  "product_id": "10315462344868",
+  "product_type": "Coffee",
+  "roaster_slug": "rallycoffee",
+  "tags": [
+   "Ethiopia",
+   "Retail"
+  ],
+  "title": "Costa Rica Las Lajas",
+  "url": "https://www.rallycoffee.co/products/costa-rica-las-lajas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51217058005156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51217058037924"
+   }
+  ],
+  "vendor": "Rally Coffee Co."
+ },
+ {
+  "body_hash": "48c333254028a276",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-seasonal-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0004/8146/0342/files/MexicoChiapas.png?v=1782165703",
+  "platform": "shopify",
+  "product_id": "2341066408054",
+  "product_type": "Coffee",
+  "roaster_slug": "rallycoffee",
+  "tags": [
+   "Retail"
+  ],
+  "title": "Mexico Chiapas Seasonal Espresso",
+  "url": "https://www.rallycoffee.co/products/mexico-chiapas-seasonal-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21112464441462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21112464506998"
+   }
+  ],
+  "vendor": "Rally Coffee Co."
+ }
+]

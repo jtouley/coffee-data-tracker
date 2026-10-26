@@ -1,0 +1,365 @@
+[
+ {
+  "body_hash": "ba9c74a3961bc50e",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/04/Couple-enjoying-a-coffee-date.jpg",
+  "platform": "woocommerce",
+  "product_id": "1013",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "Coffee",
+   "Coffee Blends",
+   "Medium Roast",
+   "Regular Coffee",
+   "Unflavored Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://lajavaroastinghouse.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.25,
+    "title": "1 pound",
+    "variant_id": "1013:0"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.25,
+    "title": "2 oz",
+    "variant_id": "1013:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 2.25,
+    "title": "2 pounds",
+    "variant_id": "1013:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.25,
+    "title": "8 oz",
+    "variant_id": "1013:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cd6ac1f0c81a90e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/06/Columbian-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1039",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "American Coffee",
+   "Coffee",
+   "Medium Roast",
+   "Regular Coffee",
+   "Single-Origin Coffees",
+   "Unflavored Coffee"
+  ],
+  "title": "Colombian Supremo Coffee",
+  "url": "https://lajavaroastinghouse.com/product/colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "16 oz",
+    "variant_id": "1039:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.75,
+    "title": "8 oz",
+    "variant_id": "1039:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c8864f63c0b35750",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-isman-coffee",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/06/Mexican-Isman-Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1049",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "American Coffee",
+   "Coffee",
+   "Fair Trade Certified",
+   "Medium Roast",
+   "Regular Coffee",
+   "USDA Organic Certified",
+   "Unflavored Coffee"
+  ],
+  "title": "Mexican Isman Coffee",
+  "url": "https://lajavaroastinghouse.com/product/mexican-isman-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "16 oz",
+    "variant_id": "1049:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.75,
+    "title": "8 oz",
+    "variant_id": "1049:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4fdaa3a52268e43",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coffee",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/06/Guatemalan-Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1060",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "American Coffee",
+   "Coffee",
+   "Fair Trade Certified",
+   "Medium Roast",
+   "Regular Coffee",
+   "Single-Origin Coffees",
+   "USDA Organic Certified",
+   "Unflavored Coffee"
+  ],
+  "title": "Guatemalan Coffee",
+  "url": "https://lajavaroastinghouse.com/product/guatemalan-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "16 oz",
+    "variant_id": "1060:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.75,
+    "title": "8 oz",
+    "variant_id": "1060:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d76c225a83e0b08",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-italian-roast",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/05/decaf-columbian-3.jpg",
+  "platform": "woocommerce",
+  "product_id": "1070",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Fair Trade Certified",
+   "Regular Coffee",
+   "Single-Origin Coffees",
+   "USDA Organic Certified",
+   "Unflavored Coffee"
+  ],
+  "title": "Ethiopian Sidamo Italian Roast",
+  "url": "https://lajavaroastinghouse.com/product/ethiopian-sidamo-italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "16 oz",
+    "variant_id": "1070:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.75,
+    "title": "8 oz",
+    "variant_id": "1070:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6939413e84ef5ebf",
+  "first_seen": "2026-10-26",
+  "handle": "packer-blend-coffee",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/06/Packer-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "1103",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "Coffee",
+   "Coffee Blends",
+   "Medium Roast",
+   "Regular Coffee",
+   "Unflavored Coffee"
+  ],
+  "title": "Packer Blend Coffee",
+  "url": "https://lajavaroastinghouse.com/product/packer-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.75,
+    "title": "16 oz",
+    "variant_id": "1103:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.75,
+    "title": "8 oz",
+    "variant_id": "1103:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e593d39dfc015296",
+  "first_seen": "2026-10-26",
+  "handle": "perky-porter-coffee-blend",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/06/Perky-Porter.jpg",
+  "platform": "woocommerce",
+  "product_id": "1114",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "Coffee",
+   "Coffee Blends",
+   "Dark Roast",
+   "Indonesian Coffee",
+   "Medium Roast",
+   "Regular Coffee",
+   "Unflavored Coffee"
+  ],
+  "title": "Perky Porter Coffee Blend",
+  "url": "https://lajavaroastinghouse.com/product/perky-porter-coffee-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.25,
+    "title": "16 oz",
+    "variant_id": "1114:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.25,
+    "title": "8 oz",
+    "variant_id": "1114:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fad5632721a6ec5f",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/04/Coffee-experience-Greenbay.jpg",
+  "platform": "woocommerce",
+  "product_id": "684",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "Coffee",
+   "Flavored Coffee",
+   "Medium Roast",
+   "Regular Coffee"
+  ],
+  "title": "Bourbon Pecan Torte Coffee",
+  "url": "https://lajavaroastinghouse.com/product/bourbon-pecan-torte/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.5,
+    "title": "1 pound",
+    "variant_id": "684:0"
+   },
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.5,
+    "title": "2 oz",
+    "variant_id": "684:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 2.5,
+    "title": "2 pounds",
+    "variant_id": "684:2"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.5,
+    "title": "8 oz",
+    "variant_id": "684:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a90278cbf876027",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-columbian-coffee",
+  "image": "https://lajavaroastinghouse.com/wp-content/uploads/2026/05/Decaf-Columbian.jpg",
+  "platform": "woocommerce",
+  "product_id": "913",
+  "product_type": "variable",
+  "roaster_slug": "lajavaroastinghouse",
+  "tags": [
+   "American Coffee",
+   "Coffee",
+   "Decaffeinated Coffee",
+   "Medium Roast",
+   "Regular Coffee",
+   "Single-Origin Coffees",
+   "Unflavored Coffee"
+  ],
+  "title": "Decaf Columbian Coffee",
+  "url": "https://lajavaroastinghouse.com/product/decaf-columbian-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.0,
+    "title": "16 oz",
+    "variant_id": "913:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "8 oz",
+    "variant_id": "913:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

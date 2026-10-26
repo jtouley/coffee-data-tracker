@@ -1,0 +1,2116 @@
+[
+ {
+  "body_hash": "a7102b901b29460a",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/BKM.png?v=1728985516",
+  "platform": "shopify",
+  "product_id": "1505115897892",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Asia-Pacific"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://www.valentinecoffeeco.com/products/bali-kintamani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881133768740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse / Press / 12oz",
+    "variant_id": "11881133834276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium / Basket Filter / 12oz",
+    "variant_id": "11881133899812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine / Cone Filter / 12oz",
+    "variant_id": "11881133965348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881160474660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / Press / 2lbs",
+    "variant_id": "11881160507428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / Basket Filter / 2lbs",
+    "variant_id": "11881160540196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine / Cone Filter / 2lbs",
+    "variant_id": "11881160572964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31135567577124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/ Cold Brew / 12oz",
+    "variant_id": "32215692673060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/ Cold Brew / 2lbs",
+    "variant_id": "32215694180388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Fine / Espresso / 12oz",
+    "variant_id": "32215694573604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / Espresso / 2lbs",
+    "variant_id": "32215695425572"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487403683876"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/ Cold Brew / 4oz",
+    "variant_id": "32487404077092"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse / Press / 4oz",
+    "variant_id": "32487404109860"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium / Basket Filter / 4oz",
+    "variant_id": "32487404142628"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine / Cone Filter / 4oz",
+    "variant_id": "32487404175396"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine / Espresso / 4oz",
+    "variant_id": "32487404208164"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "eae4826923d29fb4",
+  "first_seen": "2026-10-26",
+  "handle": "bering-sea-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/aaX.png?v=1728985736",
+  "platform": "shopify",
+  "product_id": "1505127563300",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Bering Sea Blend",
+  "url": "https://www.valentinecoffeeco.com/products/bering-sea-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881233612836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881233645604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881233678372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881233711140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881233743908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881233776676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881233809444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881233842212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144043970596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215736025124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215736680484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215737532452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215739367460"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487406796836"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487406829604"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487406862372"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487406895140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487406927908"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487406993444"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "d0deeba249132bda",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/bmg.png?v=1741023776",
+  "platform": "shopify",
+  "product_id": "1505131659300",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Brazil Minas Gerais",
+  "url": "https://www.valentinecoffeeco.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881262383140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881262415908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881262448676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881262481444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881262514212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881262546980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881262579748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881262612516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144045379620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215742873636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215743987748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215752081444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215752605732"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487409057828"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487409090596"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487409123364"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487409156132"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487409188900"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487409221668"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "96afffb8d64bf6d0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/B6.png?v=1728985516",
+  "platform": "shopify",
+  "product_id": "1505132314660",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Colombia Huila",
+  "url": "https://www.valentinecoffeeco.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881265889316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881265922084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881265954852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881265987620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881266020388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881266053156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881266085924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881266118692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144046526500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215771676708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215773577252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215774036004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215775051812"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487411843108"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487411875876"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487411908644"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487411941412"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487411974180"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487412006948"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "1c4e3e2bce498cb6",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-dolce",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/B8.png?v=1728985516",
+  "platform": "shopify",
+  "product_id": "1505133756452",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Espresso Dolce",
+  "url": "https://www.valentinecoffeeco.com/products/espresso-dolce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881274081316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881274114084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881274146852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881274179620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881274212388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881274245156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881274277924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881274310692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144050688036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215794974756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215795630116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215796023332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215796744228"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487415840804"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487415906340"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487415939108"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487415971876"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487416004644"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487416037412"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "f8a642fcd1eaf57d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/B11.png?v=1728985516",
+  "platform": "shopify",
+  "product_id": "1505134870564",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Africa"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.valentinecoffeeco.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881278242852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881278275620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881278308388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881278341156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881278373924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881278406692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881278439460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881278472228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144052424740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215798939684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215799529508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215800184868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215800807460"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487416594468"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487416627236"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487416660004"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487416692772"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487416725540"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487416758308"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "ea0b3119b479ea3e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/Guatemala.png?v=1729092324",
+  "platform": "shopify",
+  "product_id": "1505135099940",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.valentinecoffeeco.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881281028132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881281060900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881281093668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881281126436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881281159204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881281191972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881281224740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881281257508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144053473316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215803920420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215804608548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215807590436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215808409636"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487417413668"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487417446436"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487417479204"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487417511972"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487417544740"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487417577508"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "f0b24019b59c79bc",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/Mayan_decaf.png?v=1741023021",
+  "platform": "shopify",
+  "product_id": "1505135624228",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Mayan Decaf",
+  "url": "https://www.valentinecoffeeco.com/products/mexico-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881283813412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881283846180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881283878948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881283911716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881283944484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881283977252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881284010020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881284042788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144057143332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215813062692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215814963236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215815520292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215819255844"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487418265636"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487418298404"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487418331172"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487418363940"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487418396708"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487418429476"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "9d9a37f7c58759c9",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/B5.png?v=1728985516",
+  "platform": "shopify",
+  "product_id": "1505135820836",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Asia-Pacific"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.valentinecoffeeco.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881286860836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881286893604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881286926372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881286959140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881286991908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881287024676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881287057444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881287090212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144060420132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215832821796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215833215012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215833444388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215834984484"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487419412516"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487419445284"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487419478052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487419510820"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487419543588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487419576356"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "2f97b257eef61a53",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/Peru.png?v=1729092603",
+  "platform": "shopify",
+  "product_id": "1505136279588",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Peru Cajamarca",
+  "url": "https://www.valentinecoffeeco.com/products/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881289187364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881289220132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881289252900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881289285668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881289318436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881289351204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881289383972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881289416740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144062681124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215840063524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215841996836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215842947108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215845634084"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487420362788"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487420395556"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487420428324"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487420461092"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487420493860"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487420526628"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "b6cd16304c3ba099",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/VCC_CoffeeIconsRollover_2-01.png?v=1728986006",
+  "platform": "shopify",
+  "product_id": "1505137066020",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Asia-Pacific"
+  ],
+  "title": "Sumatra Aceh",
+  "url": "https://www.valentinecoffeeco.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11881292005412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "11881292038180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "11881292070948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "11881292103716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "11881292136484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "11881292169252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "11881292202020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "11881292234788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144066383908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215876730916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215877156900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215877550116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215880368164"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487421149220"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487421181988"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487421214756"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487421247524"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487421280292"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487421313060"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "2741a0a17c7e53e0",
+  "first_seen": "2026-10-26",
+  "handle": "valentine-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/ColdBrew_4fb95fbc-06f6-410f-b5bd-19c9960ede1e.png?v=1729092264",
+  "platform": "shopify",
+  "product_id": "4342129360932",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.valentinecoffeeco.com/products/valentine-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31131777663012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "31131777728548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "31131777761316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "31131777826852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "31131777892388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "31131777925156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "31131777990692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "31131778056228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "31144071823396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "32215757619236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "32215758340132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "32215764402212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "32215765418020"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "32487410040868"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "32487410073636"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "32487410106404"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "32487410139172"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "32487410171940"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "32487410204708"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "8c365670d11aa509",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/VCC_Nicaragua-01.png?v=1732645752",
+  "platform": "shopify",
+  "product_id": "7748706304036",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "Nicaragua Buena Vista",
+  "url": "https://www.valentinecoffeeco.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "41959668908068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "41959668940836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "41959668973604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "41959669006372"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "41959669039140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "41959669071908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "41959669104676"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "41959669137444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "41959669170212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "41959669202980"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "41959669235748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "41959669268516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "41959669301284"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "41959669334052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "41959669366820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "41959669399588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "41959669432356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "41959669465124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "41959669497892"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ },
+ {
+  "body_hash": "9f584813d0f8a283",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0098/9075/8692/files/HalfCaff_Icon_7589ec7e-bbd0-4370-844b-0ca9a31919f2.png?v=1745417797",
+  "platform": "shopify",
+  "product_id": "7848595980324",
+  "product_type": "Coffee",
+  "roaster_slug": "valentinecoffeeco",
+  "tags": [
+   "Central & South America"
+  ],
+  "title": "HALF CAFF",
+  "url": "https://www.valentinecoffeeco.com/products/half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "42259542343716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42259542376484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lbs",
+    "variant_id": "42259542409252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 5lbs",
+    "variant_id": "42259542442020"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Coarse/Cold Brew / 4oz",
+    "variant_id": "42259542474788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Coarse/Cold Brew / 12oz",
+    "variant_id": "42259542507556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse/Cold Brew / 2lbs",
+    "variant_id": "42259542540324"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Coarse/Press / 4oz",
+    "variant_id": "42259542573092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse/Press / 12oz",
+    "variant_id": "42259542605860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse/Press / 2lbs",
+    "variant_id": "42259542638628"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Medium/Basket Filter / 4oz",
+    "variant_id": "42259542671396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium/Basket Filter / 12oz",
+    "variant_id": "42259542704164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium/Basket Filter / 2lbs",
+    "variant_id": "42259542736932"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Fine/Cone Filter / 4oz",
+    "variant_id": "42259542769700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine/Cone Filter / 12oz",
+    "variant_id": "42259542802468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine/Cone Filter / 2lbs",
+    "variant_id": "42259542835236"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Extra Fine/Espresso / 4oz",
+    "variant_id": "42259542868004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Extra Fine/Espresso / 12oz",
+    "variant_id": "42259542900772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine/Espresso / 2lbs",
+    "variant_id": "42259542933540"
+   }
+  ],
+  "vendor": "Valentine Coffee Co."
+ }
+]

@@ -1,0 +1,843 @@
+[
+ {
+  "body_hash": "af33c2460b2d77bb",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-profile",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/dark-roast-profile-low-acid-997471_308a2a5b-a121-46e8-8719-f00a1d4dfb41.jpg?v=1750186654",
+  "platform": "shopify",
+  "product_id": "10154499703078",
+  "product_type": "",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Shopify Collective",
+   "Third Wave Water"
+  ],
+  "title": "Dark Roast Profile",
+  "url": "https://www.roastedbymom.com/products/dark-roast-profile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 18.0,
+    "title": "1 Gallon (12ct)",
+    "variant_id": "50677479178534"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 29.0,
+    "title": "5 Gallon (12ct)",
+    "variant_id": "50677479211302"
+   },
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 21.0,
+    "title": "2 Liter (20ct)",
+    "variant_id": "50677479244070"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "2c7b6f5839c9ead7",
+  "first_seen": "2026-10-26",
+  "handle": "classic-light-roast-profile",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/classic-profile-167991_c1b2a77b-1834-419e-8d76-e0832a2645a5.jpg?v=1750186655",
+  "platform": "shopify",
+  "product_id": "10154499735846",
+  "product_type": "",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Shopify Collective",
+   "Third Wave Water"
+  ],
+  "title": "Classic Light Roast Profile",
+  "url": "https://www.roastedbymom.com/products/classic-light-roast-profile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 18.0,
+    "title": "1 Gallon (12ct)",
+    "variant_id": "50677479473446"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 29.0,
+    "title": "5 Gallon (12ct)",
+    "variant_id": "50677479506214"
+   },
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 21.0,
+    "title": "2 Liter (20ct)",
+    "variant_id": "50677479538982"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "be645e7fd075f529",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-profile",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/medium-roast-profile-884265_3f453703-42f2-4ee2-b390-2b11337b1488.jpg?v=1750186658",
+  "platform": "shopify",
+  "product_id": "10154499768614",
+  "product_type": "",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Shopify Collective",
+   "Third Wave Water"
+  ],
+  "title": "Medium Roast Profile",
+  "url": "https://www.roastedbymom.com/products/medium-roast-profile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 18.0,
+    "title": "1 Gallon (12ct)",
+    "variant_id": "50677479571750"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 29.0,
+    "title": "5 Gallon (12ct)",
+    "variant_id": "50677479604518"
+   },
+   {
+    "available": true,
+    "grams": 41,
+    "price_usd": 21.0,
+    "title": "2 Liter (20ct)",
+    "variant_id": "50677479637286"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "0a8e97ffe69514c3",
+  "first_seen": "2026-10-26",
+  "handle": "barista-basics-knockbox-6-round",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/rnd_knockbox_942b9ff6-2173-4f91-a311-5a5cba0679d6.jpg?v=1783652453",
+  "platform": "shopify",
+  "product_id": "10156513329446",
+  "product_type": "WARES",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Barista Basics Knockbox (6\" Round)",
+  "url": "https://www.roastedbymom.com/products/barista-basics-knockbox-6-round",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.0,
+    "title": "Default Title",
+    "variant_id": "50685834133798"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "bd33a224bf253e82",
+  "first_seen": "2026-10-26",
+  "handle": "barista-basics-steam-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/brewkit16_2_384d8f08-b879-4286-9ad4-98d0490ffae2.jpg?v=1785170457",
+  "platform": "shopify",
+  "product_id": "10156513394982",
+  "product_type": "WARES",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Barista Basics Steam Kit",
+  "url": "https://www.roastedbymom.com/products/barista-basics-steam-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 29.16,
+    "title": "Default Title",
+    "variant_id": "50685834232102"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "8c34440c600dee8c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-distribution-tool-leveler-black-58mm",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/ep-leveler_hero_02241f1b-3c29-48f0-a707-667ebef85f2f.jpg?v=1750443020",
+  "platform": "shopify",
+  "product_id": "10156527911206",
+  "product_type": "WARES",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Espresso Distribution Tool & Leveler - Black, 58mm",
+  "url": "https://www.roastedbymom.com/products/espresso-distribution-tool-leveler-black-58mm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "50685871161638"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "af59abd000d7bacf",
+  "first_seen": "2026-10-26",
+  "handle": "mizudashi-cold-brew-coffee-maker-black-1000ml",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/mcpn-14bex_web2_5e73d21f-bfb8-4b77-872a-4e0b3650972d.jpg?v=1783620245",
+  "platform": "shopify",
+  "product_id": "10156527943974",
+  "product_type": "WARES",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Mizudashi Cold Brew Coffee Maker - Black, 1000ml",
+  "url": "https://www.roastedbymom.com/products/mizudashi-cold-brew-coffee-maker-black-1000ml",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "Default Title",
+    "variant_id": "50685871096102"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "84c9b1555b771806",
+  "first_seen": "2026-10-26",
+  "handle": "microlot-of-the-month",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/bigBLACKBOXcoffee.png?v=1789508209",
+  "platform": "shopify",
+  "product_id": "10757533466918",
+  "product_type": "coffee beans",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "microlot"
+  ],
+  "title": "Microlot of the Month",
+  "url": "https://www.roastedbymom.com/products/microlot-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "53870154318118"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "8c178b81d730ce3c",
+  "first_seen": "2026-10-26",
+  "handle": "whoa-dude-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Edit-5233.webp?v=1737221645",
+  "platform": "shopify",
+  "product_id": "8135273742630",
+  "product_type": "variable",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Wholesale Coffee",
+   "coffee",
+   "dark roast",
+   "espresso"
+  ],
+  "title": "Whoa, Dude! Espresso",
+  "url": "https://www.roastedbymom.com/products/whoa-dude-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44420757717286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "44435669614886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse | French Press",
+    "variant_id": "45639162396966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639162429734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639162462502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Coarse | French Press",
+    "variant_id": "45639162495270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Medium | Drip",
+    "variant_id": "45639162528038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Fine | Espresso",
+    "variant_id": "45639162560806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "48657972101414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Coarse | French Press",
+    "variant_id": "48657972166950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Medium | Drip",
+    "variant_id": "48657972199718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Fine | Espresso",
+    "variant_id": "48657972232486"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "bd648cb8b5290d9e",
+  "first_seen": "2026-10-26",
+  "handle": "emu-is-emo-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Edit-5237.webp?v=1740677775",
+  "platform": "shopify",
+  "product_id": "8135273906470",
+  "product_type": "variable",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Wholesale Coffee",
+   "coffee"
+  ],
+  "title": "Emu is Emo",
+  "url": "https://www.roastedbymom.com/products/emu-is-emo-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse | French Press",
+    "variant_id": "44420717445414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Coarse | French Press",
+    "variant_id": "44435659358502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45639095583014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639095648550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639095714086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "45639095746854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Medium | Drip",
+    "variant_id": "45639095812390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Fine | Espresso",
+    "variant_id": "45639095877926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "48657939956006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Coarse | French Press",
+    "variant_id": "48657939988774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Medium | Drip",
+    "variant_id": "48657940021542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Fine | Espresso",
+    "variant_id": "48657940054310"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "fc0a83f8da5fb13b",
+  "first_seen": "2026-10-26",
+  "handle": "mama-rebelde-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Mama.webp?v=1737221536",
+  "platform": "shopify",
+  "product_id": "8135273939238",
+  "product_type": "variable",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Wholesale Coffee",
+   "medium roast"
+  ],
+  "title": "Mamá Rebelde",
+  "url": "https://www.roastedbymom.com/products/mama-rebelde-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44420751851814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse | French Press",
+    "variant_id": "45639148273958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639148306726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639148339494"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "5911ddd08ddc33b2",
+  "first_seen": "2026-10-26",
+  "handle": "cool-mom-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Edit-5234.webp?v=1737221444",
+  "platform": "shopify",
+  "product_id": "8135274004774",
+  "product_type": "coffee beans",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Wholesale Coffee",
+   "decaf"
+  ],
+  "title": "Cool Mom Decaf",
+  "url": "https://www.roastedbymom.com/products/cool-mom-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44420705943846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse | French Press",
+    "variant_id": "45639107215654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639107248422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639107281190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "49318068093222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 LB / Coarse | French Press",
+    "variant_id": "49318068125990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 LB / Medium | Drip",
+    "variant_id": "49318068158758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 LB / Fine | Espresso",
+    "variant_id": "49318068191526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "53237298299174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Coarse | French Press",
+    "variant_id": "53237298331942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Medium | Drip",
+    "variant_id": "53237298364710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Fine | Espresso",
+    "variant_id": "53237298397478"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "04fc0a4c03a4d8ca",
+  "first_seen": "2026-10-26",
+  "handle": "mom-goes-nutty",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Edit-5236.webp?v=1737221563",
+  "platform": "shopify",
+  "product_id": "8135274070310",
+  "product_type": "variable",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Wholesale Coffee",
+   "coffee",
+   "medium roast",
+   "nutty"
+  ],
+  "title": "Mom Goes Nutty",
+  "url": "https://www.roastedbymom.com/products/mom-goes-nutty",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44420740383014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "44435665256742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse | French Press",
+    "variant_id": "45639136149798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639136182566"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639136215334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Coarse | French Press",
+    "variant_id": "45639136248102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Medium | Drip",
+    "variant_id": "45639136280870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5LB / Fine | Espresso",
+    "variant_id": "45639136313638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "48657945854246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Coarse | French Press",
+    "variant_id": "48657945887014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Medium | Drip",
+    "variant_id": "48657945919782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Fine | Espresso",
+    "variant_id": "48657945952550"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "1a0811d99ce6b061",
+  "first_seen": "2026-10-26",
+  "handle": "bad-ass-mama",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/Edit-5239.webp?v=1737221403",
+  "platform": "shopify",
+  "product_id": "8135274299686",
+  "product_type": "coffee beans",
+  "roaster_slug": "roastedbymom",
+  "tags": [
+   "Bad Ass",
+   "Dark Roast Coffee",
+   "Wholesale Coffee",
+   "coffee",
+   "dark roast"
+  ],
+  "title": "Bad A. Mama",
+  "url": "https://www.roastedbymom.com/products/bad-ass-mama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44420542660902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44435649134886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse | French Roast",
+    "variant_id": "45639081623846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium | Drip",
+    "variant_id": "45639081656614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine | Espresso",
+    "variant_id": "45639081689382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB / Coarse | French Roast",
+    "variant_id": "45639081722150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB / Medium | Drip",
+    "variant_id": "45639081754918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 LB / Fine | Espresso",
+    "variant_id": "45639081787686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "48657915904294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Coarse | French Roast",
+    "variant_id": "48657915937062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Medium | Drip",
+    "variant_id": "48657915969830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / Fine | Espresso",
+    "variant_id": "48657916002598"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ },
+ {
+  "body_hash": "d00d2bce08dcd695",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-by-mom-reusable-boba-jar",
+  "image": "https://cdn.shopify.com/s/files/1/0717/6382/0838/files/top.webp?v=1769797889",
+  "platform": "shopify",
+  "product_id": "9476353458470",
+  "product_type": "",
+  "roaster_slug": "roastedbymom",
+  "tags": [],
+  "title": "Roasted By Mom Reusable Boba Jar",
+  "url": "https://www.roastedbymom.com/products/roasted-by-mom-reusable-boba-jar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "Default Title",
+    "variant_id": "49231912993062"
+   }
+  ],
+  "vendor": "Roasted by Mom Coffee"
+ }
+]

@@ -1,0 +1,143 @@
+{
+ "5a00ddc8085229b51ded6792": {
+  "body_hash": "831344f63a283ee3",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6216db09daa8757a8df05e35": {
+  "body_hash": "f7226d4ad8dfdbee",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo",
+   "Sl28"
+  ]
+ },
+ "63d0a9cc80532a55e7f5cd0d": {
+  "body_hash": "97f08bdef9bcd7b2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Sl28"
+  ]
+ },
+ "6464363215b4c5782aefda80": {
+  "body_hash": "3c900380c7ede3ed",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java",
+   "Typica"
+  ]
+ },
+ "64807fbc5e58de24f18079c6": {
+  "body_hash": "7e33ba18279d12b8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6480890db93ece7a18db6106": {
+  "body_hash": "e5a8e849daf72f21",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo",
+   "Yellow Bourbon"
+  ]
+ },
+ "648092032205ec43957a4d9c": {
+  "body_hash": "4a837de67c953baf",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Red Bourbon"
+  ]
+ },
+ "65b9ad9dcd5ab27b194a18f6": {
+  "body_hash": "84635e7c9124c16a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ }
+}

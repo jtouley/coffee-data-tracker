@@ -1,0 +1,166 @@
+[
+ {
+  "body_hash": "78190003ca17e823",
+  "first_seen": "2026-10-26",
+  "handle": "into-the-woods",
+  "image": "https://cdn.shopify.com/s/files/1/0564/1430/6482/files/MCRC_mockup_ITW_Ground.jpg?v=1736822574",
+  "platform": "shopify",
+  "product_id": "6818430124210",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "mammothcoffeeroastingco",
+  "tags": [
+   "Sierra Nevada",
+   "bags"
+  ],
+  "title": "Into the Woods",
+  "url": "https://mammothcoffeeroastingco.com/products/into-the-woods",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "40297572892850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "40297572925618"
+   }
+  ],
+  "vendor": "Mammoth Coffee Roasting"
+ },
+ {
+  "body_hash": "33a556b632ea0d88",
+  "first_seen": "2026-10-26",
+  "handle": "starry-night",
+  "image": "https://cdn.shopify.com/s/files/1/0564/1430/6482/files/MCRC_mockup_SN_Ground.jpg?v=1736822730",
+  "platform": "shopify",
+  "product_id": "6831887974578",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "mammothcoffeeroastingco",
+  "tags": [
+   "Sierra Nevada",
+   "bags"
+  ],
+  "title": "Starry Night",
+  "url": "https://mammothcoffeeroastingco.com/products/starry-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "40341901574322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "40341901607090"
+   }
+  ],
+  "vendor": "Mammoth Coffee Roasting"
+ },
+ {
+  "body_hash": "34eeebc69e9c8c2a",
+  "first_seen": "2026-10-26",
+  "handle": "out-of-the-woods",
+  "image": "https://cdn.shopify.com/s/files/1/0564/1430/6482/files/MCRC_mockup_OOTW_Ground.jpg?v=1736822653",
+  "platform": "shopify",
+  "product_id": "6832040345778",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "mammothcoffeeroastingco",
+  "tags": [
+   "bags"
+  ],
+  "title": "Out of the Woods - Decaf",
+  "url": "https://mammothcoffeeroastingco.com/products/out-of-the-woods",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "40342573973682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "40342574006450"
+   }
+  ],
+  "vendor": "Mammoth Coffee Roasting"
+ },
+ {
+  "body_hash": "884893653154fef0",
+  "first_seen": "2026-10-26",
+  "handle": "into-the-woods-disabled-sports-eastern-sierra",
+  "image": "https://cdn.shopify.com/s/files/1/0564/1430/6482/files/MCRC_mockup_ITW_Ground.jpg?v=1736822574",
+  "platform": "shopify",
+  "product_id": "8920714412245",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "mammothcoffeeroastingco",
+  "tags": [
+   "Sierra Nevada",
+   "bags"
+  ],
+  "title": "Into the Woods (Access Mammoth Adaptive Sports)",
+  "url": "https://mammothcoffeeroastingco.com/products/into-the-woods-disabled-sports-eastern-sierra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "51246100873429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "51246100906197"
+   }
+  ],
+  "vendor": "Mammoth Coffee Roasting"
+ },
+ {
+  "body_hash": "ed250d674fa739f3",
+  "first_seen": "2026-10-26",
+  "handle": "starry-night-disabled-sports-eastern-sierra",
+  "image": "https://cdn.shopify.com/s/files/1/0564/1430/6482/files/MCRC_mockup_SN_Ground.jpg?v=1736822730",
+  "platform": "shopify",
+  "product_id": "8920721588437",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "mammothcoffeeroastingco",
+  "tags": [
+   "Sierra Nevada",
+   "bags"
+  ],
+  "title": "Starry Night (Access Mammoth Adaptive Sports)",
+  "url": "https://mammothcoffeeroastingco.com/products/starry-night-disabled-sports-eastern-sierra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "51246114341077"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "51246114373845"
+   }
+  ],
+  "vendor": "Mammoth Coffee Roasting"
+ }
+]

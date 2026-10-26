@@ -1,0 +1,1005 @@
+[
+ {
+  "body_hash": "763f72883af7b159",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "11602",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Espresso",
+  "url": "https://www.mlcrc.com/product/organic-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb",
+    "variant_id": "11602:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.5,
+    "title": "2 lbs.",
+    "variant_id": "11602:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acad5e91505b001c",
+  "first_seen": "2026-10-26",
+  "handle": "49er_blend_2lb",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1749",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. 49er Blend",
+  "url": "https://www.mlcrc.com/product/49er_blend_2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. 49er Blend",
+    "variant_id": "1749:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef6c97549c79e735",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-capt_geo",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1751",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Capt. George’s Blend",
+  "url": "https://www.mlcrc.com/product/2lb-capt_geo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Capt. George&#8217;s Blend",
+    "variant_id": "1751:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6223b6b4e7c939c",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-goldrun_blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1755",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Gold Run Blend",
+  "url": "https://www.mlcrc.com/product/2lb-goldrun_blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Gold Run Blend",
+    "variant_id": "1755:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c37a070c3d9aa35",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-italian_roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1757",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Italian Roast",
+  "url": "https://www.mlcrc.com/product/2lb-italian_roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Italian Roast",
+    "variant_id": "1757:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "143a699b04c18eac",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-mocha_java",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "1759",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Mocha Java",
+  "url": "https://www.mlcrc.com/product/2lb-mocha_java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Mocha Java",
+    "variant_id": "1759:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "545c02fd3ea55473",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "2258",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf",
+   "Organic",
+   "Subscriptions"
+  ],
+  "title": "Organic Decaf",
+  "url": "https://www.mlcrc.com/product/organic-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb",
+    "variant_id": "2258:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lbs.",
+    "variant_id": "2258:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83f4876cc8d23ec4",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "227",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "French Roast",
+  "url": "https://www.mlcrc.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "227:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "227:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d7cec2ee6310a906",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "2504",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Decaf Flavored",
+  "url": "https://www.mlcrc.com/product/decaf-flavored/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf Flavored",
+    "variant_id": "2504:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a9a3139d253b992",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored-two_only",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "2585",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs.",
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Decaf Flavored 2#",
+  "url": "https://www.mlcrc.com/product/decaf-flavored-two_only/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.99,
+    "title": "Decaf Flavored 2#",
+    "variant_id": "2585:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acad5e91505b001c",
+  "first_seen": "2026-10-26",
+  "handle": "49er-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "273",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "49er Blend",
+  "url": "https://www.mlcrc.com/product/49er-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "273:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "273:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0bcdafaca4ea1deb",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "290",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.mlcrc.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "290:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "290:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8bb4a450f6a06b10",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "296",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.mlcrc.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "296:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "296:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "568cbd05c46a15af",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "302",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.mlcrc.com/product/mocha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "302:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "302:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "be684511e7f4c320",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "308",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.mlcrc.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "308:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "308:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef6c97549c79e735",
+  "first_seen": "2026-10-26",
+  "handle": "capt-georges-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "314",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Capt. George’s Blend",
+  "url": "https://www.mlcrc.com/product/capt-georges-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "314:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "314:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fabeac93c01f2a1c",
+  "first_seen": "2026-10-26",
+  "handle": "gold-run-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "320",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Gold Run Blend",
+  "url": "https://www.mlcrc.com/product/gold-run-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "320:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "320:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "99d14e6e71499068",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bells-java",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/jingle.png",
+  "platform": "woocommerce",
+  "product_id": "356",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "1lb.",
+   "Flavored",
+   "Holiday",
+   "flavored",
+   "holiday"
+  ],
+  "title": "Jingle Bells Java",
+  "url": "https://www.mlcrc.com/product/jingle-bells-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Jingle Bells Java",
+    "variant_id": "356:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44e99f5816e0a152",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "540",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.mlcrc.com/product/italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb",
+    "variant_id": "540:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "2 lbs.",
+    "variant_id": "540:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c8ae8be1a0915d23",
+  "first_seen": "2026-10-26",
+  "handle": "organic-central-lights",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "546",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Central Lights",
+  "url": "https://www.mlcrc.com/product/organic-central-lights/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "546:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "546:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a8af129a03b7ea4",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "556",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic French Roast",
+  "url": "https://www.mlcrc.com/product/organic-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "556:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "556:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d738a29589a1962",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "564",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Sumatra",
+  "url": "https://www.mlcrc.com/product/organic-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "564:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "564:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f3e4cb8866906d6",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sunrise-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "568",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Sunrise Blend",
+  "url": "https://www.mlcrc.com/product/organic-sunrise-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "568:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "568:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "763f72883af7b159",
+  "first_seen": "2026-10-26",
+  "handle": "organic-yirgacheffe",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "572",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Yirgacheffe",
+  "url": "https://www.mlcrc.com/product/organic-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb",
+    "variant_id": "572:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.5,
+    "title": "2 lbs.",
+    "variant_id": "572:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbd08297e1d4bca7",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-french-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "579",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. French Roast",
+  "url": "https://www.mlcrc.com/product/2lb-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. French Roast",
+    "variant_id": "579:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2608a647a0217977",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-breakfast-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "581",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Breakfast Blend",
+  "url": "https://www.mlcrc.com/product/2lb-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Breakfast Blend",
+    "variant_id": "581:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5262c37252a3fbb5",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-cowboy-coffee",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "585",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Cowboy Coffee",
+  "url": "https://www.mlcrc.com/product/2lb-cowboy-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Cowboy Coffee",
+    "variant_id": "585:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91bcefd468f69dc2",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-espresso-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "587",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Espresso Blend",
+  "url": "https://www.mlcrc.com/product/2lb-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Espresso Blend",
+    "variant_id": "587:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8bb4a450f6a06b10",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-sumatra",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "589",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "2 lbs."
+  ],
+  "title": "2lb. Sumatra",
+  "url": "https://www.mlcrc.com/product/2lb-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2lb. Sumatra",
+    "variant_id": "589:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "181144524f3eac84",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peruvian-2",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2018/09/single-org.jpg",
+  "platform": "woocommerce",
+  "product_id": "695",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Organic Peruvian",
+  "url": "https://www.mlcrc.com/product/organic-peruvian-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "695:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "2 lbs.",
+    "variant_id": "695:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd2f3578f356bb2b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-breakfast-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "714",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Breakfast Blend",
+  "url": "https://www.mlcrc.com/product/decaf-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf Breakfast Blend",
+    "variant_id": "714:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b61a2df4d210c05",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-italian-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "719",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Italian Roast",
+  "url": "https://www.mlcrc.com/product/decaf-italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf Italian Roast",
+    "variant_id": "719:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f31757458077dd4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "724",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://www.mlcrc.com/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf French Roast",
+    "variant_id": "724:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69d4d8993812be80",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-gold-run-blend",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "739",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Gold Run Blend",
+  "url": "https://www.mlcrc.com/product/decaf-gold-run-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf Gold Run Blend",
+    "variant_id": "739:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kona-creme",
+  "image": "https://www.mlcrc.com/wp-content/uploads/2019/01/single-bag-best.png",
+  "platform": "woocommerce",
+  "product_id": "7668",
+  "product_type": "variable",
+  "roaster_slug": "mlcrc",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Kona Creme",
+  "url": "https://www.mlcrc.com/product/kona-creme/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kona Creme",
+    "variant_id": "7668:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

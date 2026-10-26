@@ -1,0 +1,278 @@
+[
+ {
+  "body_hash": "1e87457338ac3e35",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-orange-washed",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0b4bfaa844a8",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Colombia - Orange Washed",
+  "url": "https://www.gostcoffee.com/product-page/colombia-orange-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e90ac6d0b20d0bf",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "145b262a779a",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "COLD-BREW COFFEE 32oz and 64oz",
+  "url": "https://www.gostcoffee.com/product-page/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2cc6a5e171953c01",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-8oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "16213f2b8694",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Jamaica Blue Mountain 8oz",
+  "url": "https://www.gostcoffee.com/product-page/jamaica-blue-mountain-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "10e15b8ea8c6f48c",
+  "first_seen": "2026-10-26",
+  "handle": "barrel-aged-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2459d3a874ab",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Barrel-Aged Coffee",
+  "url": "https://www.gostcoffee.com/product-page/barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ed112ad81df3353",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-orlando-arita",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2a7c1512cbe7",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Honduras- Orlando Arita",
+  "url": "https://www.gostcoffee.com/product-page/honduras-orlando-arita",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "61f68e61e74ffc92",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6150f51d8c17",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Costa Rica - San Luis",
+  "url": "https://www.gostcoffee.com/product-page/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6eb99ccdb284e19a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-felipe",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6255f092b964",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Colombia - Felipe",
+  "url": "https://www.gostcoffee.com/product-page/colombia-felipe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75148fdff5aae797",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-profile-12-sticks",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9445b0ffc7cc",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "DARK ROAST PROFILE",
+  "url": "https://www.gostcoffee.com/product-page/espresso-profile-12-sticks",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0814f589df53ff1d",
+  "first_seen": "2026-10-26",
+  "handle": "exotic-coffee-project-edinson-argote",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9ade597e4c7c",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Exotic Coffee Project - Edinson Argote",
+  "url": "https://www.gostcoffee.com/product-page/exotic-coffee-project-edinson-argote",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "454dc1bc3f65a54c",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a7120f34fb10",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Brazil - DECAF ( Mountain Water Process , USDA Organic )",
+  "url": "https://www.gostcoffee.com/product-page/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95d9daf9c3ed67c3",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-el-soconusco",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c2e982217605",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "Mexico - El Soconusco",
+  "url": "https://www.gostcoffee.com/product-page/mexico-el-soconusco",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "137778161acb4d72",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-kenta",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e4f04ebadd6b",
+  "product_type": "",
+  "roaster_slug": "gostcoffee",
+  "tags": [],
+  "title": "PAPUA NEW GUINEA",
+  "url": "https://www.gostcoffee.com/product-page/papua-new-guinea-kenta",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,924 @@
+[
+ {
+  "body_hash": "30fbed4407bac4ad",
+  "first_seen": "2026-10-26",
+  "handle": "super-ego",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC02636_cdaf1e37-192b-433b-9bdf-721a75b91f13.png?v=1773865969",
+  "platform": "shopify",
+  "product_id": "1852629090393",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Super Ego",
+  "url": "https://thoumayest.com/products/super-ego",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz whole",
+    "variant_id": "31364532338777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb whole",
+    "variant_id": "31364532371545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb ground",
+    "variant_id": "31364532404313"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2oz whole (sampler)",
+    "variant_id": "42835205226585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158285123673"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "d832c6f43916f841",
+  "first_seen": "2026-10-26",
+  "handle": "wild-child-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC02794_9d1edb2b-c16f-4b7b-a01d-cd04d1f92455.png?v=1773866060",
+  "platform": "shopify",
+  "product_id": "3643361156",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Wild Child",
+  "url": "https://thoumayest.com/products/wild-child-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz whole",
+    "variant_id": "31364533813337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb whole",
+    "variant_id": "31364533846105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb ground",
+    "variant_id": "31364533878873"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "42835214041177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158312321113"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "12dcbc85e1a1f74d",
+  "first_seen": "2026-10-26",
+  "handle": "smooth-operator-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/Smooth_Operator_36012ad6-b0c1-4d0a-a0de-88378c5c5109.png?v=1773866045",
+  "platform": "shopify",
+  "product_id": "3645797764",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Smooth Operator",
+  "url": "https://thoumayest.com/products/smooth-operator-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz whole",
+    "variant_id": "31364530831449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb whole",
+    "variant_id": "31364530864217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb ground",
+    "variant_id": "31364530896985"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "42835213647961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158281060441"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "301da97130b87b45",
+  "first_seen": "2026-10-26",
+  "handle": "boldly-go-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC02616_078c40b0-2fa4-482f-baaa-f4d009f6fe0a.png?v=1773866029",
+  "platform": "shopify",
+  "product_id": "3645804356",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Boldly Go",
+  "url": "https://thoumayest.com/products/boldly-go-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz whole",
+    "variant_id": "31364526604377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb whole",
+    "variant_id": "31364526637145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb ground",
+    "variant_id": "32346375946329"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2.0 oz whole (sampler)",
+    "variant_id": "42835213221977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158260383833"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "3d6f08b35376fec1",
+  "first_seen": "2026-10-26",
+  "handle": "laid-back-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC02622_43a824e3-a85a-414f-b55a-0a0835694e4f.png?v=1773866013",
+  "platform": "shopify",
+  "product_id": "3645808132",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Laid Back Decaf",
+  "url": "https://thoumayest.com/products/laid-back-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz whole",
+    "variant_id": "31364528078937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb whole",
+    "variant_id": "31364528111705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb ground",
+    "variant_id": "31364528144473"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "42835209158745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158262906969"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "bd549f0782506524",
+  "first_seen": "2026-10-26",
+  "handle": "alter-ego",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC05424.jpg?v=1789153891",
+  "platform": "shopify",
+  "product_id": "3645811332",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Alter Ego",
+  "url": "https://thoumayest.com/products/alter-ego",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz whole",
+    "variant_id": "31364525457497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb whole",
+    "variant_id": "31364525490265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb ground",
+    "variant_id": "31364525523033"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.0,
+    "title": "2oz whole (sampler)",
+    "variant_id": "42835207487577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz ground",
+    "variant_id": "43158243147865"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "a695c2b42254467e",
+  "first_seen": "2026-10-26",
+  "handle": "microlot-series-no-2",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/green_microlot_front_lifestyle.jpg?v=1732563281",
+  "platform": "shopify",
+  "product_id": "4705816543321",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee",
+   "vault"
+  ],
+  "title": "Microlot Series No 2: Natural Honduras - Juan Vicente",
+  "url": "https://thoumayest.com/products/microlot-series-no-2",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "32124418555993"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "991c43ffabf95f6c",
+  "first_seen": "2026-10-26",
+  "handle": "barrel-conditioned-coffee-whiskey",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF1007.jpg?v=1773836586",
+  "platform": "shopify",
+  "product_id": "4763143503961",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription",
+   "tier 3"
+  ],
+  "title": "Barrel Conditioned Coffee - Whiskey",
+  "url": "https://thoumayest.com/products/barrel-conditioned-coffee-whiskey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz whole",
+    "variant_id": "32388637687897"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "42835215351897"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "a21d9e0c00377753",
+  "first_seen": "2026-10-26",
+  "handle": "limited2022-natural-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/products/DSN_6452.jpg?v=1669052172",
+  "platform": "shopify",
+  "product_id": "7186147901529",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee",
+   "vault"
+  ],
+  "title": "Natural Sumatra - Limited Release",
+  "url": "https://thoumayest.com/products/limited2022-natural-sumatra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "40326912933977"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "40326912966745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "40326912999513"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "8dcee5ed8c5d3565",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/products/Tanzania.jpg?v=1690232300",
+  "platform": "shopify",
+  "product_id": "7237146542169",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee",
+   "vault"
+  ],
+  "title": "Tanzania Peaberry - Seasonal Release",
+  "url": "https://thoumayest.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "40408018419801"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "40408018452569"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "40408018485337"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "edf37b388f694c3b",
+  "first_seen": "2026-10-26",
+  "handle": "microlot-series-no-1",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/IMG_4676.jpg?v=1732572014",
+  "platform": "shopify",
+  "product_id": "7310598176857",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee",
+   "vault"
+  ],
+  "title": "Microlot Series No 1: Natural Colombia - Controlled Fermentation",
+  "url": "https://thoumayest.com/products/microlot-series-no-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 oz whole",
+    "variant_id": "40520072134745"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "549f6db16e116fbb",
+  "first_seen": "2026-10-26",
+  "handle": "barrel-conditioned-coffee-caffe-amaro",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF8019-2.jpg?v=1773836466",
+  "platform": "shopify",
+  "product_id": "7395203711065",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "subscription",
+   "tier 3"
+  ],
+  "title": "Barrel Conditioned Coffee - Caffe Amaro",
+  "url": "https://thoumayest.com/products/barrel-conditioned-coffee-caffe-amaro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz whole",
+    "variant_id": "40586682302553"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "42835216662617"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "b96cfdf40fff7235",
+  "first_seen": "2026-10-26",
+  "handle": "beanblunders",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF5831.jpg?v=1757438247",
+  "platform": "shopify",
+  "product_id": "7395370139737",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Bean Blunders for Brew Lovers",
+  "url": "https://thoumayest.com/products/beanblunders",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz whole",
+    "variant_id": "40588718080089"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "c47260d9560e2152",
+  "first_seen": "2026-10-26",
+  "handle": "natural-burundi",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/IMG_0130.jpg?v=1732656451",
+  "platform": "shopify",
+  "product_id": "7470520238169",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "vault"
+  ],
+  "title": "Natural Burundi - Seasonal Release",
+  "url": "https://thoumayest.com/products/natural-burundi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "40786821218393"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "0aa0b1289a2ff87c",
+  "first_seen": "2026-10-26",
+  "handle": "unwired-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSC05481.jpg?v=1789153929",
+  "platform": "shopify",
+  "product_id": "7672461295705",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "_info_unwired-coffee",
+   "coffee",
+   "tier 3"
+  ],
+  "title": "Unwired Coffee",
+  "url": "https://thoumayest.com/products/unwired-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "41481282191449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz ground",
+    "variant_id": "41481293070425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb whole",
+    "variant_id": "43158292693081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lb ground",
+    "variant_id": "43158292725849"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "e14bd431b2769063",
+  "first_seen": "2026-10-26",
+  "handle": "2oz-coffee-samplers",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF8435.png?v=1768313115",
+  "platform": "shopify",
+  "product_id": "7814962806873",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee"
+  ],
+  "title": "2oz Coffee Samplers",
+  "url": "https://thoumayest.com/products/2oz-coffee-samplers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 241,
+    "price_usd": 18.0,
+    "title": "4-Pack Sampler",
+    "variant_id": "41935328182361"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 25.0,
+    "title": "6-Pack Sampler",
+    "variant_id": "42248904736857"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "3b018293be4e8503",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/nndcoCO87jz3nqAJd_Luk0Zj0mPtWs82t7lqU8ue5I0.jpg?v=1742426700",
+  "platform": "shopify",
+  "product_id": "7928978374745",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "_info_rwanda-seasonal-roast",
+   "coffee",
+   "peaberry",
+   "tier 2"
+  ],
+  "title": "Rwanda Peaberry - Seasonal Release",
+  "url": "https://thoumayest.com/products/rwanda-peaberry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "42239305154649"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "42239305187417"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "42239305220185"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz ground",
+    "variant_id": "43158237184089"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "9b82b321c464789c",
+  "first_seen": "2026-10-26",
+  "handle": "natural-colombia-seasonal-release",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF5927.png?v=1757088941",
+  "platform": "shopify",
+  "product_id": "8000792690777",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "_info_natural-colombia-seasonal",
+   "coffee",
+   "vault"
+  ],
+  "title": "Natural Colombia - Seasonal Release",
+  "url": "https://thoumayest.com/products/natural-colombia-seasonal-release",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "42541751205977"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "42541751238745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "42541751271513"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "5a13ea9a266a52df",
+  "first_seen": "2026-10-26",
+  "handle": "microlot-series-no-3-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF0962_aebaee95-ba04-4c1d-83f6-3d0b38d6b894.jpg?v=1758571446",
+  "platform": "shopify",
+  "product_id": "8008455225433",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "_info_microlot-series-no-3",
+   "coffee",
+   "vault"
+  ],
+  "title": "Microlot Series No 3: Kenya Engo AA",
+  "url": "https://thoumayest.com/products/microlot-series-no-3-kenya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz whole",
+    "variant_id": "42587819835481"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "9d4cd314aebc94b2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-seasonal-release",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/IMG_3031.png?v=1771346600",
+  "platform": "shopify",
+  "product_id": "8146252169305",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "seasonal",
+   "tier 2"
+  ],
+  "title": "Peru - Seasonal Release",
+  "url": "https://thoumayest.com/products/peru-seasonal-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "43074324922457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "43074324955225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "43074324987993"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz whole (sampler)",
+    "variant_id": "43099559559257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz ground",
+    "variant_id": "43158233546841"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "9af0c3fdf6f5636a",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-peaberry-seasonal-release",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF8450.png?v=1778586209",
+  "platform": "shopify",
+  "product_id": "8214342664281",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "APPSTLE_ONE_TIME164700740",
+   "coffee",
+   "peaberry",
+   "tier 2"
+  ],
+  "title": "Zambia Peaberry - Seasonal Release",
+  "url": "https://thoumayest.com/products/zambia-peaberry-seasonal-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz whole",
+    "variant_id": "43298587705433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz ground",
+    "variant_id": "43298587738201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb whole",
+    "variant_id": "43298587770969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb ground",
+    "variant_id": "43298587803737"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ },
+ {
+  "body_hash": "aa04d57aee1cbf94",
+  "first_seen": "2026-10-26",
+  "handle": "microlot-series-no-4-zambia-anaerobic-fermentation",
+  "image": "https://cdn.shopify.com/s/files/1/1055/0836/files/DSCF0970.png?v=1778586969",
+  "platform": "shopify",
+  "product_id": "8217459949657",
+  "product_type": "Coffee",
+  "roaster_slug": "thoumayest",
+  "tags": [
+   "coffee",
+   "tier 3"
+  ],
+  "title": "Microlot Series No 4: Zambia - Anaerobic Fermentation",
+  "url": "https://thoumayest.com/products/microlot-series-no-4-zambia-anaerobic-fermentation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz whole",
+    "variant_id": "43311324430425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12 oz ground",
+    "variant_id": "43311326494809"
+   }
+  ],
+  "vendor": "Thou Mayest"
+ }
+]

@@ -1,0 +1,846 @@
+[
+ {
+  "body_hash": "2912afb28f7bb80c",
+  "first_seen": "2026-10-26",
+  "handle": "la-montana",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/la-montana-1lb-medium-roast-coffee.jpg?v=1748893161",
+  "platform": "shopify",
+  "product_id": "15339350917193",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "La Montaña",
+  "url": "https://www.looneybeanmammoth.com/products/la-montana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54507092836425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54507092869193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54507092901961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54507092934729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54507092967497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54507093000265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54523384496201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54523384528969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54523384561737"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54523384594505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54523384627273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54523384660041"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "fcc2dd9e64b7ab5e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/colombia-1lb-medium-roast-coffee.jpg?v=1749598224",
+  "platform": "shopify",
+  "product_id": "15344293412937",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.looneybeanmammoth.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54527121096777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54527121129545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54527121162313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54527121195081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54527121227849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54527121260617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54527121293385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54527121326153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54527121358921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54527121391689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54527121424457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54527121457225"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "4db15d13cf94009a",
+  "first_seen": "2026-10-26",
+  "handle": "daydream",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/daydream-1lb-light-roast-coffee.jpg?v=1751928712",
+  "platform": "shopify",
+  "product_id": "15360366510153",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Daydream",
+  "url": "https://www.looneybeanmammoth.com/products/daydream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54589745954889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54589745987657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54589746020425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54589746053193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54589746085961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54589746118729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54589746151497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54589746184265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54589746217033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54589746249801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54589746282569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54589746315337"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "485c30c0e820a1ba",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/decaf-1lb-medium-roast-coffee-swiss-water-process.jpg?v=1751998223",
+  "platform": "shopify",
+  "product_id": "15361000276041",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Decaf",
+  "url": "https://www.looneybeanmammoth.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54591598231625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54591598264393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54591598297161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54591598329929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54591598362697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591598395465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591598428233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591598461001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54591598493769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591598526537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591598559305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591598592073"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "0c422778a7eace5b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/espresso-1lb-medium-roast-coffee.jpg?v=1752004043",
+  "platform": "shopify",
+  "product_id": "15361002307657",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.looneybeanmammoth.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54591608684617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54591608717385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54591608750153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54591608782921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54591608815689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591608848457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591608881225"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591608913993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54591608946761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591608979529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591609012297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591609045065"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "eeea94afb89b4a53",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/french-roast-1lb-dark-roast-coffee.jpg?v=1752005029",
+  "platform": "shopify",
+  "product_id": "15361028227145",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.looneybeanmammoth.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54591794249801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54591794282569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54591794315337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54591794348105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54591794380873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591794413641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591794446409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.25,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591794479177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54591794511945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591794544713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591794577481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591794610249"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "75b00466d6b728c7",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/sumatra-1lb-dark-roast-coffee.jpg?v=1752007013",
+  "platform": "shopify",
+  "product_id": "15361031733321",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.looneybeanmammoth.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54591821381705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54591821414473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54591821447241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54591821480009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54591821512777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591821545545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591821578313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591821611081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54591821643849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591821676617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591821709385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591821742153"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "7dd875e0d99163fc",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/organic-peru-1lb-light-roast-coffee.jpg?v=1752089589",
+  "platform": "shopify",
+  "product_id": "15361037303881",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Organic Peru",
+  "url": "https://www.looneybeanmammoth.com/products/organic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "54591853166665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Medium (Drip)",
+    "variant_id": "54591853199433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Fine (Espresso)",
+    "variant_id": "54591853232201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb. / Ground Coarse (French Press)",
+    "variant_id": "54591853264969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "54591853297737"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591853330505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591853363273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591853396041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "54591853428809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Medium (Drip)",
+    "variant_id": "54591853461577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Fine (Espresso)",
+    "variant_id": "54591853494345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5 lbs. / Ground Coarse (French Press)",
+    "variant_id": "54591853527113"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ },
+ {
+  "body_hash": "2e504b375a19f513",
+  "first_seen": "2026-10-26",
+  "handle": "lighter-roasts-3-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0932/1034/5545/files/lighter-roast-3lbs-light-and-medium-roast-coffee-looney-bean.jpg?v=1763144926",
+  "platform": "shopify",
+  "product_id": "15420466102345",
+  "product_type": "",
+  "roaster_slug": "looneybeanmammoth",
+  "tags": [],
+  "title": "Lighter Roasts 3 pack",
+  "url": "https://www.looneybeanmammoth.com/products/lighter-roasts-3-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.85,
+    "title": "3 Bags (3 lbs. total) / Whole Bean",
+    "variant_id": "54834901909577"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.85,
+    "title": "3 Bags (3 lbs. total) / Ground Medium (Drip)",
+    "variant_id": "54834901942345"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.85,
+    "title": "3 Bags (3 lbs. total) / Ground Fine (Espresso)",
+    "variant_id": "54834901975113"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 51.85,
+    "title": "3 Bags (3 lbs. total) / Ground Coarse (French Press)",
+    "variant_id": "54834902007881"
+   }
+  ],
+  "vendor": "Looney Bean Mammoth"
+ }
+]

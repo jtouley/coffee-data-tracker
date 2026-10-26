@@ -1,0 +1,2193 @@
+[
+ {
+  "body_hash": "d6f13b3c947343e0",
+  "first_seen": "2026-10-26",
+  "handle": "92-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/ffdc2d73-6395-426d-9edd-35b5dbde1fe0/92_espresso_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6db22f83637c43ad13e4",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "Medium"
+  ],
+  "title": "'92",
+  "url": "https://www.citybeanroasters.com/shop/p/92-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Cold Brew",
+    "variant_id": "134b8a77-8a47-40fb-b612-7c72934f14bb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Espresso",
+    "variant_id": "3a4494a6-8033-4bdc-8c55-82bcba4717ab"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "48580a4f-8172-4184-98ad-a69ab1cf3733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "53594982-8c41-473b-9fe9-f8687bb282db"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Pour Over/Cone/French Press",
+    "variant_id": "807ef809-7ded-4fcc-a625-a41666c3e663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "8a15b28a-1c81-4e67-8a1d-4b04d7bf8a30"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Chemex",
+    "variant_id": "a0901a0e-16fb-4c27-9ea8-2537846f33e7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Drip/Paper Flat/Siphon",
+    "variant_id": "b568f702-c9ae-4b3f-bfff-ef5828f280c9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Espresso",
+    "variant_id": "c99cccbe-bfae-445a-80ac-ef5c3e61a8cb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Whole Bean",
+    "variant_id": "d7a8c13d-dee5-4605-9653-303dea079856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Chemex",
+    "variant_id": "e11d73e9-7f91-42e0-b203-ad5e66008fcd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "fae7535b-7be5-4c74-90f0-fb40bf30ad2a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "50122560d2489452",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/db323301-f4f3-4c86-baf6-a022c676f2a2/espresso_decaf_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e2cf691fe20c13f9da6",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Decaf",
+   "Medium",
+   "Organic"
+  ],
+  "title": "espresso decaf - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/espresso-decaf-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "0ac65333-08e9-4608-9b10-7db429024478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "54fe848b-ad72-470c-98ad-4a1db1d6f1aa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Chemex",
+    "variant_id": "58c412f8-315a-4cf9-bc96-365510ddb6d5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "6879d510-bd82-4ff2-a2f7-25cb64048d1f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Espresso",
+    "variant_id": "82ca16eb-5c61-4028-9f7c-0c0565592d46"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "99209089-8c8d-4ec0-8844-5b9d04f2d140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "a574692a-cab9-4ca9-97ab-6f8dda4d3c89"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Espresso",
+    "variant_id": "ba476f00-2131-44fb-928e-b90c4669ab6b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "e478f44f-73a2-47ef-b8d5-2cb4d66e9ecf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "e59a5b36-40fd-4c81-9b60-4ee37b5b4003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Chemex",
+    "variant_id": "ec2af348-0b83-4996-ac42-2f1f1c4dc29f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "f47382b7-1697-4e33-b5d3-770d1873e30b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "996806e33bf73f85",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/7305417a-0120-4e3c-84ec-a14da247b6cb/Ethiopia+Guji+OCFCU.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e37f691fe20c13f9db5",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Africa",
+   "Light",
+   "New"
+  ],
+  "title": "ethiopia guji OCFCU natural - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "052c0c3a-b4c3-4678-a8e6-68e5fc94d199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Espresso",
+    "variant_id": "1127d48b-01ee-4675-9be8-130aa6d50dc1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Espresso",
+    "variant_id": "431901b4-9cad-4f8f-b04b-892e593c91de"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "7f39c617-55af-4c15-8a02-a57f9f34dafc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Chemex",
+    "variant_id": "81174bdc-c895-4405-9c99-b85a78f72cc2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "8324f906-3fcc-4f27-8741-022c48519be0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "9250f63b-66e1-48d8-bbe1-3d22a91c7708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "b0a69bde-87bf-43a0-8844-bd339bf9ec88"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Chemex",
+    "variant_id": "cf00e381-22f2-4e24-b8c1-68c59ebf22f6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "d90121b9-9985-48e7-b132-8399d34fd326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "dc461ef6-3316-46a0-8884-6a26d80a1cb4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "fe0731af-d8cd-406d-a67f-f6d19a9f154f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "341a1d07a1bd713d",
+  "first_seen": "2026-10-26",
+  "handle": "gaia",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/de31ccf5-162a-4593-b4af-4ec9d5979200/gaia_organic_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e532f83637c43ad149a",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Light",
+   "Organic"
+  ],
+  "title": "gaia - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/gaia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "02ccff68-7323-40a8-8f44-43939a381e18"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Chemex",
+    "variant_id": "1389cf9c-cb77-4334-9e8a-2c66e8d6a197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "2b1d0143-c066-414a-a128-4ca3c14fe53a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "3079de06-547a-4e4e-a810-10f9d4038848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "41198b2f-e4b3-4ea9-95a2-a448309a3f9c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Chemex",
+    "variant_id": "5e813ce5-9e0f-4dd6-8db7-483fba922fde"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "70bdd4ec-4b60-427d-97a7-de71f5900886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "7bf6e9e8-b208-4a50-8e94-da094ea9a32a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Espresso",
+    "variant_id": "7f36b34e-c5a5-4ae4-9041-1cce0a220639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "aefe062b-e254-4e8d-bd70-cd4619bd84b8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "b985da57-1e29-4ac3-b868-e93aab601a04"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Espresso",
+    "variant_id": "f44d68e5-065a-433e-b4eb-8a542f91f460"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "77a156873213b07d",
+  "first_seen": "2026-10-26",
+  "handle": "gaia-decaf-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/1d1ec55b-eb7a-4a00-a763-65d0e1cf870a/gaia_decaf_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e5958d17f0cea659df9",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Decaf",
+   "Light",
+   "Organic"
+  ],
+  "title": "gaia decaf - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/gaia-decaf-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Espresso",
+    "variant_id": "0b3a35f3-5d9c-48f4-9f97-5dfe8bddb03e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "1ebce139-6273-41be-ba9d-c9d11f6ad13e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "21b05ed8-0347-476e-bf70-62d9484e63df"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "268898f3-2714-49c7-a9ee-550ca83c183c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "5955f4cf-e61c-4c61-a0ba-fd7cec701907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Chemex",
+    "variant_id": "613b41da-c55c-46b6-8925-cfeb2906913b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "66638cee-4640-4743-9546-f1df0ff303a1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "9e75575e-b03d-4b3e-aaab-3ff7dc1cab83"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "a05f4dac-85f1-434b-b13c-eb0139606e95"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Espresso",
+    "variant_id": "a1cff279-3d91-4604-a4c1-16445472f39e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Chemex",
+    "variant_id": "cec9844c-c429-416d-b9b3-8d92bb7c4a66"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "ede8c0ce-c01d-4bfc-9eba-e5466a8d4ac6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "341364dedb857931",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/e6cdace5-1138-4ea6-a3ab-ed76efe24be1/Guatemala+Huehue+ASDECAFE.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e6358d17f0cea659e02",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Central America",
+   "Light",
+   "New",
+   "Organic"
+  ],
+  "title": "guatemala huehue ASDECAFE - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/guatemala-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Espresso",
+    "variant_id": "0cbaaa4e-304d-4b04-8350-7af2dedb297d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Espresso",
+    "variant_id": "1ee15f86-6f60-4192-bbb7-acfac5cd3fd1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "4801fbde-b15e-4c09-97dd-b223f6b012ab"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "48842c6a-5f84-4f91-a92d-dc760785aca3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "526c0539-6f29-49f9-8da7-87d9d30f410c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "547e9d7f-4144-4096-8017-a8691d467d0b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Chemex",
+    "variant_id": "5c9dba1e-c2cd-416d-afbf-654f47c44ecb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "853611c0-557e-4273-9352-8a4c8935ad2d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "94cc856a-3f99-447e-a54c-9429b0c9ed2b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "989533a1-0de2-424c-a8b3-010f2f4c6b50"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Chemex",
+    "variant_id": "a5ca8dfd-7652-4823-827c-cfa52ac365e7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "ad9857eb-30c9-4af5-a7c0-ce2c4a40af9c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c035030e7dcebca",
+  "first_seen": "2026-10-26",
+  "handle": "hi-rise",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/bb43b29e-2102-4fc2-b81f-dd85fc959b09/hi_rise_espresso_isolated_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e79cfa3e81e12db97fa",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "Light",
+   "Organic"
+  ],
+  "title": "hi-RISE! - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/hi-rise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "05878b8c-075a-4349-acc2-34520f8a1599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Chemex",
+    "variant_id": "25a50e01-226b-4fc7-8ca7-58015f5aed56"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Espresso",
+    "variant_id": "45cdd68f-ea89-464b-a25b-2256443be9f3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Chemex",
+    "variant_id": "4eca23d3-d1bf-4e96-b2c8-a39b005a1064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "634956db-46ac-4072-8d95-a399878ddf29"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "668d0c1d-9a73-4b09-a7af-c941d7d3bd11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Espresso",
+    "variant_id": "738ef0ab-9be8-463c-9a4b-2f83cddae272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "75566208-da64-41ce-93ea-21f3241f56b6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "c4ec5b4b-4a15-424d-ae7b-2f2299f731f9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "e4e8c917-f0a9-4c4f-94d7-c44c03c32380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "eec4f099-82bb-4471-b6b9-356572a7da11"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "f3f3a0c6-f162-4f0b-95bd-433ad24c6434"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4fbd169bababb3c",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/44681375-7b1b-4e1f-97db-61504fa5b88b/honduras_gea_organic_so_central_america_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e7dcfa3e81e12db97fd",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Central America",
+   "Light",
+   "Organic"
+  ],
+  "title": "honduras gea - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/honduras-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "2126c598-5a40-4e3a-9b5a-f6cca639adc0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Chemex",
+    "variant_id": "33801aed-a3e8-49a3-895d-c2bca6814b10"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "596916d0-448c-4b3b-b718-939d615e6077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Espresso",
+    "variant_id": "59c453a4-557b-4aab-a7e7-4cb9aa172a15"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "5c5bd368-c883-43e6-be08-c0597fcce2d7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "6593d977-99c0-45dc-a692-235957bd4b9d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "99adb5bc-10a0-4658-86ed-be1d3575c5ea"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "b5800eed-28ce-44f9-8eb7-f2f8252d9108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "cb5ec791-afc2-4d16-80b6-5eef66da9c74"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Chemex",
+    "variant_id": "dde9f799-53a4-4acc-be97-2d0bf541bf2d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "e7ac0af3-8b50-43a8-a012-994dba9f7ed2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Espresso",
+    "variant_id": "fbecfe3d-1814-444d-a0f2-06573af2f7ec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a339608a6459e6eb",
+  "first_seen": "2026-10-26",
+  "handle": "indigo-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/5c74c978-22fa-42a2-b9bd-1b36a26f8dbc/indigo_espresso_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e82f691fe20c13f9dfc",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "Medium",
+   "Organic"
+  ],
+  "title": "indigo - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/indigo-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Espresso",
+    "variant_id": "13eed3f3-1af2-4b88-8a8e-ab4b81705dd4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "3b343c35-756a-42e2-8499-d2d010536f58"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "48b02c79-8793-4c20-8d6d-9fbec3342454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "496a5b07-d3e1-4c51-9c33-243e49e67615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "4e6d9234-0925-4783-a934-98c76a249d3f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Chemex",
+    "variant_id": "4ed5e49c-279a-4f76-9c93-5f1362132b85"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Espresso",
+    "variant_id": "6bc77f72-5d61-43b1-841d-d4a24a8381fb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "6c9de5a7-cdba-44d6-a9ad-82c2fadac846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "7493bc46-c937-4454-a401-4a10c2a1b11b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "78fbe762-18dd-421f-b1ab-27ee054470db"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "906f8d8f-daf4-45c4-a912-c2d4476806d5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Chemex",
+    "variant_id": "e4d0b4b2-62bf-4572-aaa8-ade09fc3b6a4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "72e28aa01be0252a",
+  "first_seen": "2026-10-26",
+  "handle": "moonlight-blend-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/5f8f50db-5dfc-430c-8fa2-325b45bef664/moonlight_organic_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6e9bf691fe20c13f9e0e",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Dark",
+   "Organic"
+  ],
+  "title": "moonlight - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/moonlight-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "33856f8a-33f5-4e61-b27d-2470fdeb841a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Chemex",
+    "variant_id": "38c6d24e-3d0c-42b8-84b5-ce86f107ea15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Espresso",
+    "variant_id": "66ae3a5c-de1f-423a-b19b-bb8b0f7efea5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Chemex",
+    "variant_id": "7026e461-9655-4b05-baf9-d2d08d6d96b8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "a98dea31-7bd0-411f-956f-36a90b0bdc4d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "c3db673c-f9e0-4772-8786-401eb99b1d43"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Espresso",
+    "variant_id": "d109f96c-b33d-46db-a3cf-f87bdbb1f13e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "da3fa141-af89-4656-8c5f-f254e2246358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "e4a0af38-5a90-4742-a68e-aec583696419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "fcc40c18-1010-4a93-8b19-cc3cc16327bc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "fefac9fa-0668-4a3f-96aa-95ec39f17982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "ff27f65b-1db7-4ad7-adc2-6cd334aff6fd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a6469af01d32799",
+  "first_seen": "2026-10-26",
+  "handle": "myoldfriend-blend-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/f1f275e6-38ee-4d08-9963-bb310b07cd84/my_old_friend_espresso_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ea058d17f0cea659e32",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Espresso",
+   "Organic"
+  ],
+  "title": "my old friend - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/myoldfriend-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Espresso",
+    "variant_id": "0b602710-fb16-46b3-b1ff-e483988507b7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "2dfca3c7-d1c3-43c7-a540-dbbac7888b23"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "32163021-048f-49b4-aa81-86beea918986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "576dcb82-e23d-44b7-9d31-c77f626c3b0f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "576e4953-ea11-4651-a4bf-b6c649738d8d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Espresso",
+    "variant_id": "7cf89b26-29fc-4f5c-921c-b0716662346f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Chemex",
+    "variant_id": "83ae61e4-bfeb-4bfd-84eb-e591bc9f1827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Chemex",
+    "variant_id": "9b477bc6-4864-47f0-9a34-6352716484b7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "b49dd851-2087-497e-b430-f33840f3bba0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "beaa2a1c-3d1e-4df1-89db-b3ce6abcecf7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "cb44157c-cccf-4b55-9452-bf41b1380850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "d3999756-9e31-4ec2-be45-370985168ea9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df19bddef9342979",
+  "first_seen": "2026-10-26",
+  "handle": "nighthawk-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/a4194c08-662d-464d-812b-c2be9c64df94/nighthawk_blend_conv_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ea8f691fe20c13f9e1c",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Dark",
+   "French"
+  ],
+  "title": "nighthawk",
+  "url": "https://www.citybeanroasters.com/shop/p/nighthawk-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Drip/Paper Flat/Siphon",
+    "variant_id": "20776cff-ac85-4eab-9807-72935cb5edb4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Chemex",
+    "variant_id": "33cd962b-e429-43f6-9616-5800a9f11f18"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Espresso",
+    "variant_id": "72229f38-6abd-4ca7-9c9e-5fbb90cafd15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Pour Over/Cone/French Press",
+    "variant_id": "72270a1b-a5bb-4a8a-9031-07d10467ecb5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Chemex",
+    "variant_id": "a94b2243-1ea0-460f-93d9-d7c4e1cfa1c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "b4f9f7df-1d1c-42e2-96bc-b35823f19ee5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "c68e688c-84be-4702-aa05-2c62a115a24c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Cold Brew",
+    "variant_id": "c88d1d77-f671-4a6c-a45c-84e89ee9bb1e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "dff7a048-65fe-46a8-b7fe-4649a30769d2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "ec1fb853-8424-4551-9cfa-9245ec18e6ce"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Whole Bean",
+    "variant_id": "f56b9d64-b387-4ab7-ae0e-92b1c4791f89"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Espresso",
+    "variant_id": "feb91cbb-5809-432c-8df0-bf8189894669"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35094bf103c3393b",
+  "first_seen": "2026-10-26",
+  "handle": "og-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/b589e482-3a63-4770-b9b9-4c8fa34e541c/og_blend_conv_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6eaff691fe20c13f9e21",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Medium"
+  ],
+  "title": "OG",
+  "url": "https://www.citybeanroasters.com/shop/p/og-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Espresso",
+    "variant_id": "281f5a39-793e-4d59-b2e7-6ac66a909afd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Chemex",
+    "variant_id": "47a8333f-b157-43e8-bf77-bd0c781cf2da"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Pour Over/Cone/French Press",
+    "variant_id": "6591460c-0361-4b3d-9909-4ccb8026b7c7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Espresso",
+    "variant_id": "6cc1e4ab-3a13-4c10-b25c-9de4b59653d9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "786ee57a-12bd-4d15-bf26-548aeb69a91b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Whole Bean",
+    "variant_id": "79d9fab3-3ba1-4226-85ce-82dc1b933bf4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "97d28e5a-5370-4180-8caa-9b36ad6a9acc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "9d995948-852c-4764-8b7d-c1ece91bfb70"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Chemex",
+    "variant_id": "9dd3df71-138b-4f7e-98d6-40dd46f1c610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Cold Brew",
+    "variant_id": "a206b938-745b-4910-947a-03f009bb496e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz. Drip/Paper Flat/Siphon",
+    "variant_id": "afc84647-ca2a-4493-a7aa-abafea7f8fea"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "cd23160c-dc40-437f-9796-7b7cb22fb158"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ae41f32266c9895",
+  "first_seen": "2026-10-26",
+  "handle": "og-blend-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/423b0bf4-54f6-42c1-91da-ffba49a06389/og_organic_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6eb458d17f0cea659e42",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Medium",
+   "Organic"
+  ],
+  "title": "OG - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/og-blend-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "1e75fb7d-4b28-4a41-ab5f-21efb246942b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "305a5932-2f43-43ea-bff3-7dd24a07aeb6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Chemex",
+    "variant_id": "479a4d39-3cfe-46a9-b972-595071b49137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Chemex",
+    "variant_id": "5d4cd2c8-5172-4b82-952a-057c95a80d6a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "6a30a8c6-2db0-412a-83ef-cf1947e7dec4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "b311145a-f60d-4b28-83e3-cb92ac3357fd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Espresso",
+    "variant_id": "b71ff6d2-b717-4270-a3d3-6d1f3fd06b76"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "caf18d03-09d3-4bce-9c25-4ac27c150bbf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "d30ae63c-7daf-4eec-8cce-6ad80fa5384e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Espresso",
+    "variant_id": "d93ee496-dad0-4a5b-ad4a-f435c8b7d027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "ed831529-9495-4556-b966-f8b9df54a818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "f2780b0f-c141-4d88-8107-6f4f12858b8a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3ac0a595249b4f9",
+  "first_seen": "2026-10-26",
+  "handle": "og-decaf-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/853279bd-4b38-4001-bf3e-2cbf818307a0/og_decaf_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6eba2f83637c43ad14ed",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Dark",
+   "Decaf",
+   "Organic"
+  ],
+  "title": "OG decaf - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/og-decaf-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "3238128b-bd21-4cbc-b7ef-fecb242f7498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "5f44b632-a654-481c-abd1-521c2c0024cf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "7c6c793d-dacd-44eb-9ea3-393f20f85852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Espresso",
+    "variant_id": "93070a6f-5cda-4272-8991-92c54a9f9e5a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Chemex",
+    "variant_id": "96c15c93-df54-4300-a9bb-09c77ed18ea2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "a43cb6b7-3cb6-42b6-a968-baa06a989bad"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Espresso",
+    "variant_id": "acdb9eb0-63d4-4a99-8a11-bc705dc75b14"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Chemex",
+    "variant_id": "c03101a4-b7aa-41b3-9164-41610d59be2e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "d4d11c59-6736-4ea6-abcc-5cfff3ae4ef6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "ea53938b-a463-4863-a61a-828d8df6d7ff"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "f0bba744-203f-4ac9-a227-0f282ae8d4ae"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "f11f55ef-8ee4-4ff3-bd9c-c8ce9104af02"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "369a87b36283beb6",
+  "first_seen": "2026-10-26",
+  "handle": "wild-one",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/362c43de-660a-4cd5-b10f-032cff5e54e8/el_salvador_puerto_arturo_NEW.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ebfcfa3e81e12db9858",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Light",
+   "New",
+   "Wild One"
+  ],
+  "title": "el salvador puerto arturo pacamara anaerobic natural",
+  "url": "https://www.citybeanroasters.com/shop/p/wild-one",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Espresso",
+    "variant_id": "147c61d2-af49-4d2c-b2a5-072cdaf7d542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "2440579d-5685-46a7-8ab1-a4c8e5b8f334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "2af00545-a140-42b7-9524-db54932da828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "3c233083-9ee0-4681-bc66-cfc57c5c957d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "5559c992-0b21-489e-854f-c709cbfa0151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Chemex",
+    "variant_id": "6083a082-f607-4fc9-ad6a-fb9825c3a972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Espresso",
+    "variant_id": "609edc9d-21bc-4507-986d-1eb42f17daae"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "6e9c59b2-4a78-4597-a425-5f1bbc4d49e8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "81bd844c-ca46-496a-9646-25b863c2de0b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "9c0e8b98-77f5-42bc-8022-4d6e6d231a49"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Chemex",
+    "variant_id": "a9fe64de-323e-42a1-93f8-90c6fa4b8a46"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "bee395f0-2fb7-4e04-9974-8f0a12c071dd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ab3711f2bb3f076",
+  "first_seen": "2026-10-26",
+  "handle": "sankofa",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/bb14c631-cc6d-4207-b74c-deb5b4386c4a/sankofa_blend_conv_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ed1cfa3e81e12db986c",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Africa",
+   "Blend",
+   "Light"
+  ],
+  "title": "sankofa",
+  "url": "https://www.citybeanroasters.com/shop/p/sankofa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Espresso",
+    "variant_id": "15b25bb1-c23e-4881-bcc0-ca2169066faf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "1e114c6d-fce7-4f25-9d5c-5839a0219b50"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Chemex",
+    "variant_id": "268633cf-4489-463a-8f86-74b22d3544bf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "2f5bce83-33a3-41d4-ab5c-d0a7bd67c663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "4eb30f7f-2316-498e-b517-00435ff0d1c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "54bc187b-0b5a-4d55-b6bf-ade788f00b28"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Espresso",
+    "variant_id": "7620bfb7-1140-44d5-b169-7f3d7c7b714f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Chemex",
+    "variant_id": "79a0dadc-b546-4414-8853-7adb54307f04"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "926da6ed-b75d-4e27-8204-210c15e96a4c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "c874da38-c27a-42fd-ad0e-129419065270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "db4eeb82-395d-4992-af6e-baa823663c53"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "f55f4e3a-10b8-4b28-a4bc-e020b1dbad27"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "388dfa9c77b892d9",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/f737bde1-2bae-417e-aad5-844e10484ad6/sumatra_aceh_burni_telong_organic_so_indo-asia_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ed8cfa3e81e12db9871",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Indonesia",
+   "Medium",
+   "New",
+   "Organic"
+  ],
+  "title": "sumatra aceh burni telong – organic",
+  "url": "https://www.citybeanroasters.com/shop/p/sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "30f9ed51-c552-43ab-92d1-d63707202a87"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "3d2518c9-ac54-4b44-8947-f87941263ae4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Chemex",
+    "variant_id": "83805c1c-71de-4a12-9fe0-7b2587557e29"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "94cd7e66-c7b2-4585-92cb-7801275ad2c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "9896da4c-9c3d-409d-9216-2c9acdd2fb5e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Espresso",
+    "variant_id": "9fb9d0a9-4370-4a4e-a335-f366d8859e5a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "ca8243ce-aca3-48a0-b9f1-cc900ae38b10"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "cc076312-1faf-4715-a161-681d5b9dbbea"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "d6de55f1-9be8-49c5-a4ff-b5fda60c9bd2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz Chemex",
+    "variant_id": "dadcba2d-52bc-41e1-aed4-a1298fe02359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "de014102-d7ef-4137-9fb8-ef4c46110255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb Espresso",
+    "variant_id": "eed1ac6d-e23d-42f6-84c0-2c0098da4d15"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5635bc628c1d7c99",
+  "first_seen": "2026-10-26",
+  "handle": "westwood-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/4c4b5dde-d50f-42ed-9bcb-27ca1e9ad6ca/westwood_blend_conv_mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ee4f691fe20c13f9e52",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Medium"
+  ],
+  "title": "westwood",
+  "url": "https://www.citybeanroasters.com/shop/p/westwood-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "0a185aec-2f60-4f72-963f-b56af1a69551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Espresso",
+    "variant_id": "1277ee5e-fb37-4505-b07f-d50d5673f29d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "2ebd8b40-6d8a-4f71-906a-f58f4ff2cc29"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Drip/Paper Flat/Siphon",
+    "variant_id": "365c2db3-d9f5-4218-b8e1-f0a9f0bd3192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Cold Brew",
+    "variant_id": "4899be4e-11e4-4f31-be6d-da470dcdf73c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "5d3a8bdb-eb1d-4ab9-a829-cdd61fa63f3b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Chemex",
+    "variant_id": "611e32df-c565-40e0-b2b0-a6fc2e842299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Whole Bean",
+    "variant_id": "677ed20f-17c2-4bbe-81c5-51be96d3c37e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Chemex",
+    "variant_id": "7f1b38e5-f430-41a5-9b20-093067f1ab78"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Espresso",
+    "variant_id": "a205d2ff-8733-4cdd-aac9-c4b4dd30978d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb. Pour Over/Cone/French Press",
+    "variant_id": "b65ec5da-1389-49f6-960f-009f7130448a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "eb7b9146-da49-4edb-9a89-e7937bb7b5d4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3826ce77bb12defb",
+  "first_seen": "2026-10-26",
+  "handle": "winter-soulstice",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/4cc5829d-11cf-4486-b06f-e4245de2b07b/winter_soulstice_cold_brew_organic__mockup.png",
+  "platform": "squarespace",
+  "product_id": "69ff6ee9f691fe20c13f9e55",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Blend",
+   "Medium",
+   "Organic"
+  ],
+  "title": "winter soulstice - cold brew - organic",
+  "url": "https://www.citybeanroasters.com/shop/p/winter-soulstice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "2a52286c-0814-4898-88d6-9a80f8b0532e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "2b80f421-c7d2-4315-b283-5b02827767b3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Espresso",
+    "variant_id": "2e220692-dce7-49fd-a59c-e61b3c00f22d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Chemex",
+    "variant_id": "3b271541-cdaa-4bef-bfc0-35f8aaa03a62"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "42fa6275-36c8-4c76-b48c-537765d10c99"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "47709953-5b97-4107-a187-54f1fcb98c43"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "70f36eab-f009-48fb-9bd0-daca8e2a6318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "89776887-80a3-487e-bb36-8efae6ab40e9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Chemex",
+    "variant_id": "932c929c-d9a5-4cf3-bd7d-12207e510a95"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "a866c016-92dc-4178-a0d3-221902104a23"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "b0d087c2-19a4-4c06-a8ae-82475ec1f291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Espresso",
+    "variant_id": "c967d0fb-58f3-4690-b13b-550d6bd2498d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49e9f45fd259c4e5",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-honey",
+  "image": "https://images.squarespace-cdn.com/content/v1/696955632163b22943b7fbb6/7dd6b053-7036-4007-919b-2127004e4f1d/El+Salvador+Cerros+Las+Ranas.png",
+  "platform": "squarespace",
+  "product_id": "6a85e291b0f33421a2935801",
+  "product_type": "",
+  "roaster_slug": "citybean",
+  "tags": [
+   "Central America",
+   "Light",
+   "New"
+  ],
+  "title": "el salvador cerro las ranas honey",
+  "url": "https://www.citybeanroasters.com/shop/p/el-salvador-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Pour Over/Cone/French Press",
+    "variant_id": "0a54612d-abd2-49fc-9b13-71dd08e2b9a4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Chemex",
+    "variant_id": "184c652a-6a1e-4ff7-90d3-e2778808e00e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Chemex",
+    "variant_id": "236dadca-6a30-444c-8a6f-19f3d8276092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Espresso",
+    "variant_id": "5f28807c-2ba8-45c4-9611-4817d09af45f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Drip/Paper Flat/Siphon",
+    "variant_id": "6070fbba-f064-49be-af65-9fe644cbed6a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Drip/Paper Flat/Siphon",
+    "variant_id": "8d5b0bbc-9470-4dfa-901f-0180bfb4d02d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Pour Over/Cone/French Press",
+    "variant_id": "a70ebf81-ce05-4b2f-80f6-a905e2c51279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Cold Brew",
+    "variant_id": "b36b320b-6d05-4d49-ac65-82308a3cb61c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "de25aa79-eea6-4374-9a0c-692b9b858b52"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Whole Bean",
+    "variant_id": "eaefb041-0738-4e88-97d7-b5b718d10b95"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12 oz Cold Brew",
+    "variant_id": "ebde5ab2-0c8a-40d1-8ce7-1647da763353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb Espresso",
+    "variant_id": "ed0a7de0-ef89-4e92-8112-824937b8b8a0"
+   }
+  ],
+  "vendor": ""
+ }
+]

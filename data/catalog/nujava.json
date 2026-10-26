@@ -1,0 +1,1100 @@
+[
+ {
+  "body_hash": "10a0c9edf2f61f67",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-awakening",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Brewed-Awakening-woman.jpg?v=1615819130",
+  "platform": "shopify",
+  "product_id": "122722320412",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Brewed Awakening",
+  "url": "https://nujava.com/products/brewed-awakening",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4484595548188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484626546716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb - Bag / Whole Bean",
+    "variant_id": "4484626612252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4536221728796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4536245583900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4536256135196"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "6c6738e9dc13396b",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-French-Roast_3932e227-445e-40f5-9704-0750f0d058b5.jpg?v=1615819705",
+  "platform": "shopify",
+  "product_id": "122726875164",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "French Roast Blend",
+  "url": "https://nujava.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4484285988892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484360044572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4484360110108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4535974920220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4535992975388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4536006541340"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "02caa07906f3e467",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/650x650-Espresso.jpg?v=1615819652",
+  "platform": "shopify",
+  "product_id": "126195073052",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Espresso Italia",
+  "url": "https://nujava.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4484417486876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484446814236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4484446945308"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "7f2cba83a31dc4a8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/Sumatra-Picker-685x650.jpg?v=1615820252",
+  "platform": "shopify",
+  "product_id": "126214078492",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Sumatra Gayo",
+  "url": "https://nujava.com/products/sumatra-gayo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4484014440476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484039082012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4484039213084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4535384637468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4535409934364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4535421796380"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "da45d1d175071303",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Guatemala.jpg?v=1615819856",
+  "platform": "shopify",
+  "product_id": "126250942492",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Guatemala Bella Carmona Antigua",
+  "url": "https://nujava.com/products/guatemala-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484251975708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4484252041244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4535848402972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4535889231900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4535898734620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4670742396956"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "3f77216d6fdc9a65",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-don-roberto",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/439814357020685x650-Costa-Rica.png?v=1615819468",
+  "platform": "shopify",
+  "product_id": "126251925532",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Costa Rica Don Roberto Tarrazú",
+  "url": "https://nujava.com/products/costa-rica-tarrazu-don-roberto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4484373413916"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4484413587484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4484413653020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4536056872988"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4536074633244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4536085774364"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "82d4b476c6f63bf7",
+  "first_seen": "2026-10-26",
+  "handle": "bistro-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Caffe-Francais.jpg?v=1615818638",
+  "platform": "shopify",
+  "product_id": "379832205340",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Bistro Blend",
+  "url": "https://nujava.com/products/bistro-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4968408383516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4968408416284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4968408481820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4968408547356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4968408612892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4968408645660"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "dbf64b489861bfd0",
+  "first_seen": "2026-10-26",
+  "handle": "custom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/CustomCoffee.png?v=1654284899",
+  "platform": "shopify",
+  "product_id": "4696396234849",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Custom Blend",
+  "url": "https://nujava.com/products/custom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "32523402575969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "32523402608737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Auto-Drip Brewer",
+    "variant_id": "32523402641505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "32523402674273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "32523402707041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073755885665"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "a90d56a0059a519f",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/436056260636685x650-Mexican-Chiapis.png?v=1615820020",
+  "platform": "shopify",
+  "product_id": "65642758172",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Mexican Topacio Chiapas",
+  "url": "https://nujava.com/products/mexican-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "4483942350876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "4483956015132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "4483956080668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "4535289774108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "4535305175068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "4535309565980"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "ab99f55eccf94f26",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-bistro-blend-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Caffe-Francais_3559d754-7282-43d8-861b-330360edcd07.jpg?v=1654104552",
+  "platform": "shopify",
+  "product_id": "6802764890209",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Bistro Blend - (Premier)",
+  "url": "https://nujava.com/products/copy-of-bistro-blend-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070571753569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070571786337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Auto-Drip Brewer",
+    "variant_id": "40070571819105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40070571851873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070571884641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073713451105"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "10a0c9edf2f61f67",
+  "first_seen": "2026-10-26",
+  "handle": "brewed-awakening-16oz-top-tier",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Brewed-Awakening-woman_d976445c-e63c-4f3d-8273-69242a00faa4.jpg?v=1654105232",
+  "platform": "shopify",
+  "product_id": "6802766626913",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Brewed Awakening - (Premier)",
+  "url": "https://nujava.com/products/brewed-awakening-16oz-top-tier",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070577291361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070577324129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Auto-Drip Brewer",
+    "variant_id": "40070577356897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40070577389665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070577422433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073719021665"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "653bf22a99ed08a6",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-calm-down-decaf-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-decaf_ad10052e-d3fb-45cc-a836-4d9c8237e86c.jpg?v=1654105841",
+  "platform": "shopify",
+  "product_id": "6802768199777",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Calm Down Decaf - (Premier)",
+  "url": "https://nujava.com/products/copy-of-calm-down-decaf-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070582403169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070582435937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "40070582468705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40070582501473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070582534241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073724526689"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "3f77216d6fdc9a65",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-16oz-top-tier",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/439814357020685x650-Costa-Rica_9243fb33-8774-4693-88a0-2befbf981cb9.jpg?v=1654106294",
+  "platform": "shopify",
+  "product_id": "6802770428001",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Costa Rica - (Premier)",
+  "url": "https://nujava.com/products/costa-rica-16oz-top-tier",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070588891233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070588924001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "40070588956769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40070588989537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070589022305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073734652001"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "02caa07906f3e467",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-italia-16oz-top-tier",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/650x650-Espresso_48d8dcdb-7da3-4092-aa32-993041c9a3fb.jpg?v=1654106532",
+  "platform": "shopify",
+  "product_id": "6802771542113",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Espresso Italia - (Premier)",
+  "url": "https://nujava.com/products/espresso-italia-16oz-top-tier",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070591348833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070591381601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40070591414369"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "6c6738e9dc13396b",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-french-roast-blend-16oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-French-Roast_ff88187f-24a6-47ef-bcef-1f5b62228a68.jpg?v=1654106594",
+  "platform": "shopify",
+  "product_id": "6802771705953",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "French Roast Blend - (Premier)",
+  "url": "https://nujava.com/products/copy-of-french-roast-blend-16oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "40070591938657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine - Espresso / 16 oz",
+    "variant_id": "40070591971425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium - Drip Brewer / 16 oz",
+    "variant_id": "40070592004193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse - French Press / 16 oz",
+    "variant_id": "40070592036961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Very Coarse - Cold Brew / 16 oz",
+    "variant_id": "40070592069729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "40073808248929"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "da45d1d175071303",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-guatemala-antigua-16oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-Guatemala_987d4068-bac1-4502-b871-839dd0de30cc.jpg?v=1654106682",
+  "platform": "shopify",
+  "product_id": "6802772066401",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Guatemala Antigua - (Premier)",
+  "url": "https://nujava.com/products/copy-of-guatemala-antigua-16oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "40070592823393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Fine - Espresso / 16 oz",
+    "variant_id": "40070592856161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Medium - Drip Brewer / 16 oz",
+    "variant_id": "40070592888929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Coarse - French Press / 16 oz",
+    "variant_id": "40070592921697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Very Coarse - Cold Brew / 16 oz",
+    "variant_id": "40070592954465"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "a90d56a0059a519f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mexican-chiapas-16oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/436056260636685x650-Mexican-Chiapis_5e6f9968-53dd-4371-b759-6457f77b95ac.jpg?v=1654106765",
+  "platform": "shopify",
+  "product_id": "6802772426849",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Mexican Chiapas - (Premier)",
+  "url": "https://nujava.com/products/copy-of-mexican-chiapas-16oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070593347681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070593380449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "40070593413217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40070593445985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070593478753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073811591265"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "7f2cba83a31dc4a8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo-16oz-top-tier",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/Sumatra-Picker-685x650_19dafe4c-8fac-4129-ae19-231526434a0a.jpg?v=1654106892",
+  "platform": "shopify",
+  "product_id": "6802773016673",
+  "product_type": "Premier Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "GEB"
+  ],
+  "title": "Sumatra Gayo - (Premier)",
+  "url": "https://nujava.com/products/sumatra-gayo-16oz-top-tier",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40070594134113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "40070594166881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "40070594199649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "40070594265185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "40073814114401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "40073815851105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb / Coarse - French Press",
+    "variant_id": "40073815883873"
+   }
+  ],
+  "vendor": "nuJava"
+ },
+ {
+  "body_hash": "653bf22a99ed08a6",
+  "first_seen": "2026-10-26",
+  "handle": "calm-down-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/2329/7163/products/685x650-decaf_5e6f0b2b-5d28-48d2-9c5f-dbf6d78e952f.jpg?v=1653151289",
+  "platform": "shopify",
+  "product_id": "9836021023042",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "nujava",
+  "tags": [
+   "retail"
+  ],
+  "title": "Calm Down Decaf",
+  "url": "https://nujava.com/products/calm-down-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "50141005676866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Fine - Espresso",
+    "variant_id": "50141005709634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb - Bag / Whole Bean",
+    "variant_id": "50141005742402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Medium - Drip Brewer",
+    "variant_id": "50141005775170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Coarse - French Press",
+    "variant_id": "50141005807938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Very Coarse - Cold Brew",
+    "variant_id": "50141005840706"
+   }
+  ],
+  "vendor": "nuJava"
+ }
+]

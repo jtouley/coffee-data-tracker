@@ -1,0 +1,3240 @@
+[
+ {
+  "body_hash": "cec7318912dbd5fd",
+  "first_seen": "2026-10-26",
+  "handle": "supernatural",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Supernaturalbag12oz.png?v=1791201887",
+  "platform": "shopify",
+  "product_id": "10329541804251",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "halloween",
+   "organic",
+   "seasonal"
+  ],
+  "title": "Supernatural",
+  "url": "https://gimmecoffee.com/products/supernatural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean / Light-Medium",
+    "variant_id": "50579189104859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Cold Brew / Light-Medium",
+    "variant_id": "50579189137627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press / Light-Medium",
+    "variant_id": "50579189170395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50579189203163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50579189235931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50579189268699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Turkish / Light-Medium",
+    "variant_id": "50579189301467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Whole Bean / Light-Medium",
+    "variant_id": "50579189334235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Cold Brew / Light-Medium",
+    "variant_id": "50579189367003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / French Press / Light-Medium",
+    "variant_id": "50579189399771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50579189432539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50579189465307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50579189498075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb / Turkish / Light-Medium",
+    "variant_id": "50579189530843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Whole Bean / Light-Medium",
+    "variant_id": "50579189563611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Cold Brew / Light-Medium",
+    "variant_id": "50579189596379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / French Press / Light-Medium",
+    "variant_id": "50579189629147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50579189661915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50579189694683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50579189727451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.25,
+    "title": "5lb / Turkish / Light-Medium",
+    "variant_id": "50579189760219"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "ef1da752cbbe6772",
+  "first_seen": "2026-10-26",
+  "handle": "so-it-snows",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/SoItSnowsbag12oz.png?v=1792883446",
+  "platform": "shopify",
+  "product_id": "10372505141467",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "holiday",
+   "organic",
+   "seasonal"
+  ],
+  "title": "So It Snows",
+  "url": "https://gimmecoffee.com/products/so-it-snows",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean / Light-Medium",
+    "variant_id": "50925049118939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew / Light-Medium",
+    "variant_id": "50925049151707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press / Light-Medium",
+    "variant_id": "50925049184475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925049217243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925049250011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925049282779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish / Light-Medium",
+    "variant_id": "50925049315547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Whole Bean / Light-Medium",
+    "variant_id": "50925049348315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Cold Brew / Light-Medium",
+    "variant_id": "50925049381083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / French Press / Light-Medium",
+    "variant_id": "50925049413851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925049446619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925049479387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925049512155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Turkish / Light-Medium",
+    "variant_id": "50925049544923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean / Light-Medium",
+    "variant_id": "50925049577691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Cold Brew / Light-Medium",
+    "variant_id": "50925049610459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press / Light-Medium",
+    "variant_id": "50925049643227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925049675995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925049708763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925049741531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Turkish / Light-Medium",
+    "variant_id": "50925049774299"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "f5b68ac5403286ae",
+  "first_seen": "2026-10-26",
+  "handle": "thinking-of-yew",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/ThinkingofYewbag12oz_918a483c-47d7-4ddd-8e31-3fa279c51bef.png?v=1792883779",
+  "platform": "shopify",
+  "product_id": "10372515168475",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "holiday",
+   "organic",
+   "seasonal"
+  ],
+  "title": "Thinking of Yew",
+  "url": "https://gimmecoffee.com/products/thinking-of-yew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean / Light-Medium",
+    "variant_id": "50925060063451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew / Light-Medium",
+    "variant_id": "50925060096219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press / Light-Medium",
+    "variant_id": "50925060128987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925060161755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925060194523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925060227291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Turkish / Light-Medium",
+    "variant_id": "50925060260059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Whole Bean / Light-Medium",
+    "variant_id": "50925060292827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Cold Brew / Light-Medium",
+    "variant_id": "50925060325595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / French Press / Light-Medium",
+    "variant_id": "50925060358363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925060391131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925060423899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925060456667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb / Turkish / Light-Medium",
+    "variant_id": "50925060489435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Whole Bean / Light-Medium",
+    "variant_id": "50925060522203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Cold Brew / Light-Medium",
+    "variant_id": "50925060554971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / French Press / Light-Medium",
+    "variant_id": "50925060587739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "50925060620507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "50925060653275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "50925060686043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5lb / Turkish / Light-Medium",
+    "variant_id": "50925060718811"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "ec35f41a35d4576c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-rutengo-kii",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/KenyaRungetoKiibag12oz.png?v=1792884020",
+  "platform": "shopify",
+  "product_id": "10372524277979",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [],
+  "title": "Kenya Rutengo Kii",
+  "url": "https://gimmecoffee.com/products/kenya-rutengo-kii",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "50925071335643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Cold Brew / Medium",
+    "variant_id": "50925071368411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / French Press / Medium",
+    "variant_id": "50925071401179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Flat Bottom Filter / Medium",
+    "variant_id": "50925071433947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "50925071466715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Home Espresso/Aeropress / Medium",
+    "variant_id": "50925071499483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12oz / Turkish / Medium",
+    "variant_id": "50925071532251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Whole Bean / Medium",
+    "variant_id": "50925071565019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Cold Brew / Medium",
+    "variant_id": "50925071597787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / French Press / Medium",
+    "variant_id": "50925071630555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Flat Bottom Filter / Medium",
+    "variant_id": "50925071663323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "50925071696091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Home Espresso/Aeropress / Medium",
+    "variant_id": "50925071728859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.75,
+    "title": "2lb / Turkish / Medium",
+    "variant_id": "50925071761627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Whole Bean / Medium",
+    "variant_id": "50925071794395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Cold Brew / Medium",
+    "variant_id": "50925071827163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / French Press / Medium",
+    "variant_id": "50925071859931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Flat Bottom Filter / Medium",
+    "variant_id": "50925071892699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "50925071925467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Home Espresso/Aeropress / Medium",
+    "variant_id": "50925071958235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.25,
+    "title": "5lb / Turkish / Medium",
+    "variant_id": "50925071991003"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "4c7d0a6f530853e6",
+  "first_seen": "2026-10-26",
+  "handle": "full-circle-coffee-equipment-cleaning-powder",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/products/full-circle-commercial-coffee-equipment-cleaning-powder.jpg?v=1754411048",
+  "platform": "shopify",
+  "product_id": "8267583389915",
+  "product_type": "Cleaning Supplies",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "Cleaning",
+   "wholesale-only"
+  ],
+  "title": "Full Circle (Biocaf) Coffee Equipment Cleaning Powder",
+  "url": "https://gimmecoffee.com/products/full-circle-coffee-equipment-cleaning-powder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.13,
+    "title": "Default Title",
+    "variant_id": "44879123153115"
+   }
+  ],
+  "vendor": "Full Circle"
+ },
+ {
+  "body_hash": "cb299b05540132de",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-guayab-fairtrade-organic-bird-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Guatemala_Guaya_b.png?v=1761934219",
+  "platform": "shopify",
+  "product_id": "8267644928219",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "bird friendly",
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Guatemala Guaya'b",
+  "url": "https://gimmecoffee.com/products/guatemala-guayab-fairtrade-organic-bird-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Whole Bean / Light-Medium",
+    "variant_id": "44879372157147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Cold Brew / Light-Medium",
+    "variant_id": "44879372189915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / French Press / Light-Medium",
+    "variant_id": "44879372222683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Flat Bottom Filter / Light-Medium",
+    "variant_id": "44879372255451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "44879372288219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "44879372320987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / Turkish / Light-Medium",
+    "variant_id": "44879372353755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Whole Bean / Light-Medium",
+    "variant_id": "44879372386523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Cold Brew / Light-Medium",
+    "variant_id": "44879372419291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / French Press / Light-Medium",
+    "variant_id": "44879372452059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "44879372484827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "44879372517595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "44879372550363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5lb / Turkish / Light-Medium",
+    "variant_id": "44879372583131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Whole Bean / Light-Medium",
+    "variant_id": "46305991655643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Cold Brew / Light-Medium",
+    "variant_id": "46305991688411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / French Press / Light-Medium",
+    "variant_id": "46305991721179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "46305991753947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "46305991786715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "46305991819483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.75,
+    "title": "2lb / Turkish / Light-Medium",
+    "variant_id": "46305991852251"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "7d490825127008cb",
+  "first_seen": "2026-10-26",
+  "handle": "leftist-espresso-fairtrade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/gimme-left.png?v=1761761066",
+  "platform": "shopify",
+  "product_id": "8267645157595",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Leftist Espresso",
+  "url": "https://gimmecoffee.com/products/leftist-espresso-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879373566171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879373598939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879373631707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879373664475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879373697243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879373730011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879373762779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879373795547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879373828315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879373861083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879373893851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879373926619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879373959387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879373992155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306082455771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306082488539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306082521307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306082554075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306082586843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306082619611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306082652379"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "8437aff2f989d363",
+  "first_seen": "2026-10-26",
+  "handle": "eternal-flame-fairtrade",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/gimme-ef.png?v=1761761749",
+  "platform": "shopify",
+  "product_id": "8267645550811",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "Rally",
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Eternal Flame",
+  "url": "https://gimmecoffee.com/products/eternal-flame-fairtrade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879376154843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879376187611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879376220379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879376253147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879376285915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879376318683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879376351451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879376384219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879376416987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879376449755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879376482523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879376515291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879376548059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879376580827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306074722523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306074755291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306074788059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306074820827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306074853595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306074886363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306074919131"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "be075aca9885a83f",
+  "first_seen": "2026-10-26",
+  "handle": "righteous-espresso-fairtrade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Frighteous_bag_12oz.png?v=1790961520",
+  "platform": "shopify",
+  "product_id": "8267645780187",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "halloween",
+   "organic",
+   "seasonal"
+  ],
+  "title": "Frighteous",
+  "url": "https://gimmecoffee.com/products/righteous-espresso-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879378055387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879378088155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879378120923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879378153691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879378186459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879378219227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879378251995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879378284763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879378317531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879378350299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879378383067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879378415835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879378448603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879378481371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306083569883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306083602651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306083635419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306083668187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306083700955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306083733723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306083766491"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "31d02c153a9980ed",
+  "first_seen": "2026-10-26",
+  "handle": "stargazer-fairtrade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Stargazer.png?v=1761761128",
+  "platform": "shopify",
+  "product_id": "8267648368859",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "Rally",
+   "cold brew",
+   "fairtrade",
+   "organic",
+   "seasonal"
+  ],
+  "title": "Stargazer",
+  "url": "https://gimmecoffee.com/products/stargazer-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879402664155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879402696923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879402729691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879402762459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879402795227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879402827995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879402860763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879402893531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879402926299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879402959067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879402991835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879403024603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879403057371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879403090139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306078195931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306078228699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306078261467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306078294235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306078327003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306078359771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306078392539"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "924908b7543c0383",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-ketiara-fairtrade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/SumatraKetiarabag12oz.png?v=1761761790",
+  "platform": "shopify",
+  "product_id": "8267650826459",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Sumatra Ketiara",
+  "url": "https://gimmecoffee.com/products/sumatra-ketiara-fairtrade-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879427567835"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879427600603"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / French Press",
+    "variant_id": "44879427633371"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879427666139"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879427698907"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879427731675"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12oz / Turkish",
+    "variant_id": "44879427764443"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879427797211"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879427829979"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / French Press",
+    "variant_id": "44879427862747"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879427895515"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879427928283"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879427961051"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 149.5,
+    "title": "5lb / Turkish",
+    "variant_id": "44879427993819"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46396837953755"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46396837986523"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / French Press",
+    "variant_id": "46396838019291"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46396838052059"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46396838084827"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46396838117595"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46396838150363"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "1475568b3522ad93",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-rally-organic-d-c",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/gimme-dd.png?v=1761761107",
+  "platform": "shopify",
+  "product_id": "8267651023067",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "Rally",
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Deep Disco",
+  "url": "https://gimmecoffee.com/products/copy-of-rally-organic-d-c",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879429206235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879429239003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879429271771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879429304539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879429337307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879429370075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879429402843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879429435611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879429468379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879429501147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879429533915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879429566683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879429599451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879429632219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306070036699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306070069467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306070102235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306070135003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306070167771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306070200539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306070233307"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "40e49408fb8494de",
+  "first_seen": "2026-10-26",
+  "handle": "mt-pleasant-fairtrade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Mt._Pleasant.png?v=1761762037",
+  "platform": "shopify",
+  "product_id": "8267651121371",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "Rally",
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Mt. Pleasant",
+  "url": "https://gimmecoffee.com/products/mt-pleasant-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44879429992667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / French Press",
+    "variant_id": "44879430025435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "44879430058203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "44879430090971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "44879430123739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Turkish",
+    "variant_id": "44879430156507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44879430189275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44879430222043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "44879430254811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "44879430287579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "44879430320347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Turkish",
+    "variant_id": "44879430353115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "44879430385883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "44879430418651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306077081819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306077114587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306077147355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306077180123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306077212891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306077245659"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306077278427"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "8f49835493e046fb",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-de-agua",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/DecafdeAguabag12oz.png?v=1761761665",
+  "platform": "shopify",
+  "product_id": "8659165151451",
+  "product_type": "Decaf",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Decaf de Agua",
+  "url": "https://gimmecoffee.com/products/mexico-decaf-de-agua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45947203649755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45947203682523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "45947203715291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "45947203748059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "45947203780827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "45947203813595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Turkish",
+    "variant_id": "45947203846363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45947203879131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "45947203911899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / French Press",
+    "variant_id": "45947203944667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "45947203977435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "45947204010203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "45947204042971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Turkish",
+    "variant_id": "45947204075739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46306089337051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46306089369819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / French Press",
+    "variant_id": "46306089402587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "46306089435355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "46306089468123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "46306089500891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb / Turkish",
+    "variant_id": "46306089533659"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "b7ca469a6fbfb817",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-scfcu",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Ethiopia_SCFCU_bag_12oz.png?v=1786562426",
+  "platform": "shopify",
+  "product_id": "8666675413211",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Ethiopia SCFCU Natural",
+  "url": "https://gimmecoffee.com/products/ethiopia-scfcu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "45977699156187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / French Press / Medium",
+    "variant_id": "45977699188955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Flat Bottom Filter / Medium",
+    "variant_id": "45977699221723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "45977699254491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Home Espresso/Aeropress / Medium",
+    "variant_id": "45977699287259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Turkish / Medium",
+    "variant_id": "45977699320027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Cold Brew / Medium",
+    "variant_id": "45977699352795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Whole Bean / Medium",
+    "variant_id": "45977699385563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / French Press / Medium",
+    "variant_id": "45977699418331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Flat Bottom Filter / Medium",
+    "variant_id": "45977699451099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "45977699483867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Home Espresso/Aeropress / Medium",
+    "variant_id": "45977699516635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Turkish / Medium",
+    "variant_id": "45977699549403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 143.75,
+    "title": "5lb / Cold Brew / Medium",
+    "variant_id": "45977699582171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Whole Bean / Medium",
+    "variant_id": "46305986871515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Cold Brew / Medium",
+    "variant_id": "46305986904283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / French Press / Medium",
+    "variant_id": "46305986937051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Flat Bottom Filter / Medium",
+    "variant_id": "46305986969819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Cone Filter/Clever/Chemex / Medium",
+    "variant_id": "46305987002587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Home Espresso/Aeropress / Medium",
+    "variant_id": "46305987035355"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.5,
+    "title": "2lb / Turkish / Medium",
+    "variant_id": "46305987068123"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "4e1c45a71a540ccf",
+  "first_seen": "2026-10-26",
+  "handle": "about-coffee-about-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/AboutCoffee-AboutBlendbagfront.jpg?v=1781544887",
+  "platform": "shopify",
+  "product_id": "8761297338587",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "About Coffee - About Blend",
+  "url": "https://gimmecoffee.com/products/about-coffee-about-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46356070400219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz / Drip Brew",
+    "variant_id": "46356070498523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46356070858971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb / Drip Brew",
+    "variant_id": "46356070957275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46397278191835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.75,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46397278224603"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "4e1c45a71a540ccf",
+  "first_seen": "2026-10-26",
+  "handle": "five-points-bakery",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/FivePointsBakerybagtrans.png?v=1754410959",
+  "platform": "shopify",
+  "product_id": "8773743968475",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "Five Points Bakery",
+  "url": "https://gimmecoffee.com/products/five-points-bakery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46397445636315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "46397445669083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46397445701851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46397445734619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "46397445767387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46397445800155"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "395c07bbeede1a8a",
+  "first_seen": "2026-10-26",
+  "handle": "photons",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/LexingtonCo-opBlendbagtrans.png?v=1754410958",
+  "platform": "shopify",
+  "product_id": "8773745049819",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "Lexington Co-Op Blend",
+  "url": "https://gimmecoffee.com/products/photons",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46397451698395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "46397451731163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46397451763931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46397451796699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.5,
+    "title": "5lb / Drip Brew",
+    "variant_id": "46397451829467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46397451862235"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "39bd7f48a418bd59",
+  "first_seen": "2026-10-26",
+  "handle": "photons-1",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Photonsbag12oz.png?v=1754410957",
+  "platform": "shopify",
+  "product_id": "8780457574619",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "Photons",
+  "url": "https://gimmecoffee.com/products/photons-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46416811655387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "46416811688155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46416811720923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46416811753691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "46416811786459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46416811819227"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "4e1c45a71a540ccf",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-77",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Espresso_77_bag_12oz.png?v=1757019671",
+  "platform": "shopify",
+  "product_id": "8798580080859",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "Espresso 77",
+  "url": "https://gimmecoffee.com/products/espresso-77",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46474301276379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "46474301309147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "46474301341915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46474301374683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "46474301407451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46474301440219"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "56e93006092f18dc",
+  "first_seen": "2026-10-26",
+  "handle": "colliers-village-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Colliers_Village_Blend_bag_12oz.png?v=1757018179",
+  "platform": "shopify",
+  "product_id": "8945107960027",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "Collier's Village Blend",
+  "url": "https://gimmecoffee.com/products/colliers-village-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47281093116123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "47281093148891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "47281093181659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "47281093214427"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "9a3f0339c27ea90e",
+  "first_seen": "2026-10-26",
+  "handle": "peru-rutas-del-inca",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/Peru_Rutas_Del_Inca_Bag_12oz_Square.png?v=1761938149",
+  "platform": "shopify",
+  "product_id": "9023888359643",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Peru Rutas del Inca",
+  "url": "https://gimmecoffee.com/products/peru-rutas-del-inca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47883785502939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "47883785535707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "47883785568475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Flat Bottom Filter",
+    "variant_id": "47883785601243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cone Filter/Clever/Chemex",
+    "variant_id": "47883785634011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Home Espresso/Aeropress",
+    "variant_id": "47883785666779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Turkish",
+    "variant_id": "47883785699547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47883785732315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Cold Brew",
+    "variant_id": "47883785765083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / French Press",
+    "variant_id": "47883785797851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Flat Bottom Filter",
+    "variant_id": "47883785830619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Cone Filter/Clever/Chemex",
+    "variant_id": "47883785863387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Home Espresso/Aeropress",
+    "variant_id": "47883785896155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.25,
+    "title": "2lb / Turkish",
+    "variant_id": "47883785928923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47883785961691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Cold Brew",
+    "variant_id": "47883785994459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / French Press",
+    "variant_id": "47883786027227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Flat Bottom Filter",
+    "variant_id": "47883786059995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Cone Filter/Clever/Chemex",
+    "variant_id": "47883786092763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Home Espresso/Aeropress",
+    "variant_id": "47883786125531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.2,
+    "title": "5lb / Turkish",
+    "variant_id": "47883786158299"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "8c6fb8bdfa0b914e",
+  "first_seen": "2026-10-26",
+  "handle": "about-coffee-leftist",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/About_Coffee_-_Leftist_bag_front.jpg?v=1781544144",
+  "platform": "shopify",
+  "product_id": "9371523678427",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "About Coffee - Leftist",
+  "url": "https://gimmecoffee.com/products/about-coffee-leftist",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48866647179483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "48866647212251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "48866647245019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48866647277787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "48866647310555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "48866647343323"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "c078a716ae4ab390",
+  "first_seen": "2026-10-26",
+  "handle": "about-coffee-deep-disco",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/AboutCoffee-DeepDiscobagfront.jpg?v=1781544334",
+  "platform": "shopify",
+  "product_id": "9374306369755",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "About Coffee - Deep Disco",
+  "url": "https://gimmecoffee.com/products/about-coffee-deep-disco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48878495760603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "48878495793371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "48878495826139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48878495858907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "48878495891675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "48878495924443"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "8f49835493e046fb",
+  "first_seen": "2026-10-26",
+  "handle": "about-coffee-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/AboutCoffee-Decafbagfront.jpg?v=1781544532",
+  "platform": "shopify",
+  "product_id": "9374306795739",
+  "product_type": "Blend",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic",
+   "wholesale-only"
+  ],
+  "title": "About Coffee - Decaf",
+  "url": "https://gimmecoffee.com/products/about-coffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48878496940251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip Brew",
+    "variant_id": "48878496973019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "48878497005787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48878497038555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Drip Brew",
+    "variant_id": "48878497071323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.25,
+    "title": "5lb / Cold Brew",
+    "variant_id": "48878497104091"
+   }
+  ],
+  "vendor": "Gimme!"
+ },
+ {
+  "body_hash": "16793cf51800ad6b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fecceg-joyabaj-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0684/6955/5419/files/GuatemalaFECCEGJoyabajNaturalbag12oz.jpg?v=1785976785",
+  "platform": "shopify",
+  "product_id": "9427600048347",
+  "product_type": "Single Origin",
+  "roaster_slug": "gimmecoffee",
+  "tags": [
+   "fairtrade",
+   "organic"
+  ],
+  "title": "Guatemala FECCEG Joyabaj Natural",
+  "url": "https://gimmecoffee.com/products/guatemala-fecceg-joyabaj-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Whole Bean / Light-Medium",
+    "variant_id": "49067398758619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Cold Brew / Light-Medium",
+    "variant_id": "49067398791387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / French Press / Light-Medium",
+    "variant_id": "49067398824155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Flat Bottom Filter / Light-Medium",
+    "variant_id": "49067398856923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "49067398889691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "49067398922459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12oz / Turkish / Light-Medium",
+    "variant_id": "49067398955227"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Whole Bean / Light-Medium",
+    "variant_id": "49067398987995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Cold Brew / Light-Medium",
+    "variant_id": "49067399020763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / French Press / Light-Medium",
+    "variant_id": "49067399053531"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "49067399086299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "49067399119067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "49067399151835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.75,
+    "title": "2lb / Turkish / Light-Medium",
+    "variant_id": "49067399184603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Whole Bean / Light-Medium",
+    "variant_id": "49067399217371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Cold Brew / Light-Medium",
+    "variant_id": "49067399250139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / French Press / Light-Medium",
+    "variant_id": "49067399282907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Flat Bottom Filter / Light-Medium",
+    "variant_id": "49067399315675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Cone Filter/Clever/Chemex / Light-Medium",
+    "variant_id": "49067399348443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Home Espresso/Aeropress / Light-Medium",
+    "variant_id": "49067399381211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.75,
+    "title": "5lb / Turkish / Light-Medium",
+    "variant_id": "49067399413979"
+   }
+  ],
+  "vendor": "Gimme!"
+ }
+]

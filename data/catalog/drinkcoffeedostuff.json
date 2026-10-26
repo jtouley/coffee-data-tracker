@@ -1,0 +1,1008 @@
+[
+ {
+  "body_hash": "3a5dc5dd5da3bb6a",
+  "first_seen": "2026-10-26",
+  "handle": "hot-shot-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/HSE_11oz.jpg?v=1668384315",
+  "platform": "shopify",
+  "product_id": "2000248864817",
+  "product_type": "Coffee Shop Espresso",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Blends",
+   "Coffee Shop",
+   "DRINK COFFEE DO STUFF",
+   "Espresso",
+   "Lake Tahoe Coffee"
+  ],
+  "title": "Hot Shot Espresso",
+  "url": "https://drinkcoffeedostuff.com/products/hot-shot-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "15520419119153"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "15520419151921"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "15520419184689"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "15520419217457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525356531761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.5,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854155497703"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "bf063484d9078318",
+  "first_seen": "2026-10-26",
+  "handle": "apres-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/Decaf_11oz.jpg?v=1668384348",
+  "platform": "shopify",
+  "product_id": "382636851238",
+  "product_type": "Decaf",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Best Decaf Coffee",
+   "Coffee",
+   "Decaf",
+   "Decaf Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe Coffee",
+   "Truckee Coffee"
+  ],
+  "title": "Après Decaf",
+  "url": "https://drinkcoffeedostuff.com/products/apres-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525354795057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854157562087"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Whole Bean",
+    "variant_id": "5047719657510"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "5274384138278"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "5274384171046"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "5274384203814"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "290c5d25949e77d2",
+  "first_seen": "2026-10-26",
+  "handle": "hell-yeah",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/HY_11oz.jpg?v=1668384169",
+  "platform": "shopify",
+  "product_id": "382638555174",
+  "product_type": "Hell Yeah",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Blend",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Hell Yeah!",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Truckee Coffee"
+  ],
+  "title": "Hell Yeah! Blend",
+  "url": "https://drinkcoffeedostuff.com/products/hell-yeah",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525357023281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.5,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854140096743"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "5047775133734"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "5274712014886"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "5274712047654"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "5274712080422"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "903d8366be3b75ff",
+  "first_seen": "2026-10-26",
+  "handle": "bark-at-the-moon-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/BAM_11oz.jpg?v=1668384278",
+  "platform": "shopify",
+  "product_id": "382641340454",
+  "product_type": "Bark at the Moon",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Bark at the Moon",
+   "Best Coffee",
+   "Blend",
+   "Coffee",
+   "Dark Roast Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Truckee Coffee"
+  ],
+  "title": "Bark At The Moon Blend",
+  "url": "https://drinkcoffeedostuff.com/products/bark-at-the-moon-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525356433457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.5,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854146912487"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "5047918985254"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "5274666106918"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "5274666205222"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "5274666303526"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "37e6402a25b225a2",
+  "first_seen": "2026-10-26",
+  "handle": "10-for-110",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/winterblendspecial.gif?v=1700462574",
+  "platform": "shopify",
+  "product_id": "4373163769905",
+  "product_type": "Special",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [],
+  "title": "Fall Blend Special: 10 for $160",
+  "url": "https://drinkcoffeedostuff.com/products/10-for-110",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3121,
+    "price_usd": 160.0,
+    "title": "Default Title",
+    "variant_id": "31268430381105"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "557d3a38e95748c4",
+  "first_seen": "2026-10-26",
+  "handle": "party-wave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/PartyWaveNewLabel.png?v=1718229907",
+  "platform": "shopify",
+  "product_id": "4623631253553",
+  "product_type": "Party Wave",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Blend",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Party Wave",
+   "Party Wave Blend",
+   "Seasonal Espresso",
+   "Seasonal Espresso Blend",
+   "Truckee Coffee"
+  ],
+  "title": "Party Wave Blend",
+  "url": "https://drinkcoffeedostuff.com/products/party-wave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.25,
+    "title": "11oz - Whole Bean",
+    "variant_id": "31972069343281"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.75,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "31972069376049"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.75,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "31972069408817"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.75,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "31972069441585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525357121585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854153793767"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "603a9ca6fa1f9c60",
+  "first_seen": "2026-10-26",
+  "handle": "tahoe-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/TUT_11oz.jpg?v=1668384242",
+  "platform": "shopify",
+  "product_id": "567043063857",
+  "product_type": "Tips up Tahoe",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Blend",
+   "Coffee",
+   "Dark Roast Coffee",
+   "Drink Coffee Do Stuff",
+   "French Roast",
+   "French Roast Coffee",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Tips Up Tahoe Coffee",
+   "Truckee Coffee"
+  ],
+  "title": "Tips Up Tahoe French Roast",
+  "url": "https://drinkcoffeedostuff.com/products/tahoe-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb - Whole Bean - 15% Off",
+    "variant_id": "32525357187121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb - Whole Bean - 25% Off",
+    "variant_id": "47854151925991"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.75,
+    "title": "11oz - Whole Bean",
+    "variant_id": "7422194057265"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.25,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "7422371921969"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.25,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "7422371954737"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.25,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "7422371987505"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "f8549e1f2f6ce73b",
+  "first_seen": "2026-10-26",
+  "handle": "winter-special-single-origins",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/singleoriginspecial_f924f29c-667b-4674-8514-61ff5175c644.gif?v=1740447114",
+  "platform": "shopify",
+  "product_id": "6662745063473",
+  "product_type": "Special",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [],
+  "title": "Fall Single Origin Special: 4 for $85",
+  "url": "https://drinkcoffeedostuff.com/products/winter-special-single-origins",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1247,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "39544263344177"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "4657e03b6945c722",
+  "first_seen": "2026-10-26",
+  "handle": "black-hell-yeah-long-sleeve",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/hell-yeah-long-sleeve-product-photo-back.png?v=1732866525",
+  "platform": "shopify",
+  "product_id": "9063089766631",
+  "product_type": "All Gear",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Shirts",
+   "T-Shirts"
+  ],
+  "title": "Black Hell Yeah Long Sleeve",
+  "url": "https://drinkcoffeedostuff.com/products/black-hell-yeah-long-sleeve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "Small",
+    "variant_id": "50551031726311"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "Medium",
+    "variant_id": "50551031759079"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "Large",
+    "variant_id": "50551031791847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "X-Large",
+    "variant_id": "50551031824615"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 32.0,
+    "title": "XX-Large",
+    "variant_id": "51591488078055"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF ROASTERY"
+ },
+ {
+  "body_hash": "6a11ca740541e7f1",
+  "first_seen": "2026-10-26",
+  "handle": "canned-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/cannedcoldbrew-2025.jpg?v=1737010107",
+  "platform": "shopify",
+  "product_id": "9092971462887",
+  "product_type": "Cold Brew",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [],
+  "title": "Canned Hell Yeah! Cold Brew",
+  "url": "https://drinkcoffeedostuff.com/products/canned-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.0,
+    "title": "4 Pack",
+    "variant_id": "50642108055783"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 26.0,
+    "title": "6 Pack",
+    "variant_id": "50642108088551"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 4.75,
+    "title": "Single",
+    "variant_id": "52689174954215"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF ROASTERY"
+ },
+ {
+  "body_hash": "c865d1e544bd5e26",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-reserve-ethiopia-yirgacheffe-yirgacheffe-banko-chelchele-supernatural",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/EthiopiaYirgSupernatural-productphoto-gfa_11200100-ce56-4caa-90a9-626534a2b94c.png?v=1784615391",
+  "platform": "shopify",
+  "product_id": "9572587208935",
+  "product_type": "Ethiopia Yirgacheffe",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Ethiopia",
+   "Ethiopia Yirgacheffe",
+   "Good Food Award",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder",
+   "supernatural"
+  ],
+  "title": "Roaster's Reserve: Ethiopia Yirgacheffe Banko Chelchele Supernatural",
+  "url": "https://drinkcoffeedostuff.com/products/roasters-reserve-ethiopia-yirgacheffe-yirgacheffe-banko-chelchele-supernatural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 32.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52158771265767"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 32.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52158771298535"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 32.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52158771331303"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 32.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52158771364071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52158771396839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52158771429607"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "3a5dc5dd5da3bb6a",
+  "first_seen": "2026-10-26",
+  "handle": "hot-shot-espresso-ground",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/products/HSE_11oz.jpg?v=1668384315",
+  "platform": "shopify",
+  "product_id": "9693482778855",
+  "product_type": "Coffee Shop Espresso",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [],
+  "title": "Hot Shot Espresso Ground",
+  "url": "https://drinkcoffeedostuff.com/products/hot-shot-espresso-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb - Drip Grind - 25% Off",
+    "variant_id": "52563017433319"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb - Coarse Grind - 25% Off",
+    "variant_id": "52563017466087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb - Fine Grind - 25% Off",
+    "variant_id": "52563030114535"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "dd5f92fc9c0032c7",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-reserve-ethiopia-yirgacheffe-banko-chelchele-supernatural-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/tanz-roasters-reserve.png?v=1788902952",
+  "platform": "shopify",
+  "product_id": "9701103567079",
+  "product_type": "Tanzania",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder",
+   "supernatural"
+  ],
+  "title": "Roaster's Reserve: Tanzania Ngorongoro Finagro Estate",
+  "url": "https://drinkcoffeedostuff.com/products/roasters-reserve-ethiopia-yirgacheffe-banko-chelchele-supernatural-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52598372204775"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52598372237543"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52598372270311"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52598372303079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52598372335847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52598372368615"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "506ef15592ecf050",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-dipilto",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/nica-dipilto-product-image.png?v=1789514210",
+  "platform": "shopify",
+  "product_id": "9716327743719",
+  "product_type": "Nicaragua",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder"
+  ],
+  "title": "Nicaragua Dipilto",
+  "url": "https://drinkcoffeedostuff.com/products/nicaragua-dipilto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52635527938279"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52635527971047"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52635528003815"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52635528036583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52635528069351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52635528102119"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "87a42c2c147d5eb8",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-monte-crisol",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/Costa-Rica-Monte-Crisol-productphoto.png?v=1789676510",
+  "platform": "shopify",
+  "product_id": "9721064521959",
+  "product_type": "Costa Rica",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder"
+  ],
+  "title": "Costa Rica Monte Crisol",
+  "url": "https://drinkcoffeedostuff.com/products/costa-rica-monte-crisol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.5,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52650488168679"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 24.0,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52650488201447"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 24.0,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52650488234215"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 24.0,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52650488266983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52650488299751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52650488332519"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "f9772148459055cf",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/tanz-peaberry-product-image.png?v=1789678424",
+  "platform": "shopify",
+  "product_id": "9721068093671",
+  "product_type": "Tanzania",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://drinkcoffeedostuff.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52650504061159"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52650504093927"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52650504126695"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52650504159463"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52650504192231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 134.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52650504224999"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ },
+ {
+  "body_hash": "c7e2534f61d4e3c2",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-natural-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/2504/7468/files/el-sal-natural-bourbon-product-image.png?v=1789678698",
+  "platform": "shopify",
+  "product_id": "9721076187367",
+  "product_type": "El Salvador",
+  "roaster_slug": "drinkcoffeedostuff",
+  "tags": [
+   "Best Coffee",
+   "Coffee",
+   "Drink Coffee Do Stuff",
+   "Great Coffee",
+   "Lake Tahoe",
+   "Lake Tahoe Coffee",
+   "Medium Roast Coffee",
+   "Single Origin",
+   "Subscription",
+   "preorder"
+  ],
+  "title": "El Salvador Santa Leticia Natural Bourbon",
+  "url": "https://drinkcoffeedostuff.com/products/el-salvador-natural-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.0,
+    "title": "11oz - Whole Bean",
+    "variant_id": "52650573496551"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Coarse (French Press) +50¢",
+    "variant_id": "52650573529319"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Medium (Drip) +50¢",
+    "variant_id": "52650573562087"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 26.5,
+    "title": "11oz - Fine (Espresso) +50¢",
+    "variant_id": "52650573594855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb - Whole Bean - 18% Off",
+    "variant_id": "52650573627623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb - Whole Bean - 28% Off",
+    "variant_id": "52650573660391"
+   }
+  ],
+  "vendor": "DRINK COFFEE DO STUFF"
+ }
+]

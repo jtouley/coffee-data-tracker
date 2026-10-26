@@ -1,0 +1,1234 @@
+[
+ {
+  "body_hash": "e5f867c3a82077e3",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-femenino-organic-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2018/08/Cafe-Fem-Blend-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "26242",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Café Femenino",
+   "Coffee",
+   "Coffee Blends",
+   "Retail Coffee",
+   "Subscriptions",
+   "Wholesale",
+   "Women Coffee Producers"
+  ],
+  "title": "Café Fem Blend (Café Femenino Organic Blend)",
+  "url": "https://joevangogh.com/product/cafe-femenino-organic-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "26242:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.0,
+    "title": "2.5LB",
+    "variant_id": "26242:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5LB",
+    "variant_id": "26242:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2db2e09692f14e8",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-femenino-organic-peru-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2018/08/Cafe-Fem-Peru-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "26252",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Café Femenino",
+   "Coffee",
+   "Retail Coffee",
+   "Single-Origin",
+   "Subscriptions",
+   "Wholesale",
+   "Women Coffee Producers"
+  ],
+  "title": "Peru (Café Femenino Organic Single-Origin)",
+  "url": "https://joevangogh.com/product/cafe-femenino-organic-peru-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "26252:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.0,
+    "title": "2.5LB",
+    "variant_id": "26252:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5LB",
+    "variant_id": "26252:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "01bc8077f5c4bbb1",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-femenino-organic-espresso-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2018/08/Cafe-Fem-Espresso-Blend-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "26262",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Café Femenino",
+   "Coffee",
+   "Coffee Blends",
+   "Retail Coffee",
+   "Subscriptions",
+   "Wholesale",
+   "Women Coffee Producers"
+  ],
+  "title": "Café Fem Espresso (Café Femenino Organic Blend)",
+  "url": "https://joevangogh.com/product/cafe-femenino-organic-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "26262:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.0,
+    "title": "2.5LB",
+    "variant_id": "26262:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5LB",
+    "variant_id": "26262:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4b5b7e73d79335f",
+  "first_seen": "2026-10-26",
+  "handle": "sweetbird-caffe-frappe-mix-70-oz-tin",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/Sweetbird-Frappe-Mix-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "27816",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Sweetbird Syrups &amp; Sauces",
+   "Wholesale"
+  ],
+  "title": "Sweetbird Caffé Frappé Mix, 2 LB Bag",
+  "url": "https://joevangogh.com/product/sweetbird-caffe-frappe-mix-70-oz-tin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1984,
+    "price_usd": 25.0,
+    "title": "1 Tin (70oz)",
+    "variant_id": "27816:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59d40dbc19f1ade1",
+  "first_seen": "2026-10-26",
+  "handle": "city-lights-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/City-Lights-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "27886",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Wholesale"
+  ],
+  "title": "City Lights Blend",
+  "url": "https://joevangogh.com/product/city-lights-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.63,
+    "title": "2.5LB",
+    "variant_id": "27886:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.63,
+    "title": "5LB",
+    "variant_id": "27886:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e51a0a927245086",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/Bulk-Conventional-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "27893",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Wholesale"
+  ],
+  "title": "Sunrise Blend",
+  "url": "https://joevangogh.com/product/sunrise-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.75,
+    "title": "2.5LB",
+    "variant_id": "27893:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.75,
+    "title": "5LB",
+    "variant_id": "27893:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e69bfa7ce10e4329",
+  "first_seen": "2026-10-26",
+  "handle": "organic-decaf-espresso",
+  "image": "https://joevangogh.com/wp-content/uploads/2024/11/Organic-Espresso-Bulk-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "27954",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Wholesale"
+  ],
+  "title": "Organic Decaf Espresso",
+  "url": "https://joevangogh.com/product/organic-decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 60.94,
+    "title": "2.5LB",
+    "variant_id": "27954:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.94,
+    "title": "5LB",
+    "variant_id": "27954:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87f1024f2b34c67d",
+  "first_seen": "2026-10-26",
+  "handle": "zuma-fair-trade-dark-chocolate-tin",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/Zuma-Dark-Hot-Chocolate-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "27984",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Sweetbird Syrups &amp; Sauces",
+   "Wholesale"
+  ],
+  "title": "Zuma Fairtrade Dark Hot Chocolate, 70oz Tin",
+  "url": "https://joevangogh.com/product/zuma-fair-trade-dark-chocolate-tin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1984,
+    "price_usd": 52.83,
+    "title": "1 Tin (70oz)",
+    "variant_id": "27984:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88260fdc2b1ccbd0",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-femenino-organic-mexico-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/Cafe-Fem-Mexico-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "28002",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Café Femenino",
+   "Coffee",
+   "Retail Coffee",
+   "Single-Origin",
+   "Wholesale",
+   "Women Coffee Producers"
+  ],
+  "title": "Mexico (Café Femenino Organic Single-Origin)",
+  "url": "https://joevangogh.com/product/cafe-femenino-organic-mexico-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "28002:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 22.0,
+    "title": "2.5LB",
+    "variant_id": "28002:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5LB",
+    "variant_id": "28002:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7da1bc99d841801a",
+  "first_seen": "2026-10-26",
+  "handle": "two-leaves-two-roots-turmeric-ginger-latte-mix-500g-bag",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/07/Two-Leaves-Two-Roots-Turmeric-Ginger-Latte-Mix-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "28074",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Wholesale"
+  ],
+  "title": "Two Leaves Two Roots Turmeric Ginger Latte Mix, 500g Bag",
+  "url": "https://joevangogh.com/product/two-leaves-two-roots-turmeric-ginger-latte-mix-500g-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 65.0,
+    "title": "1 Bag (500g)",
+    "variant_id": "28074:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5d6395d145560ae3",
+  "first_seen": "2026-10-26",
+  "handle": "sweetbird-vanilla-bean-frappe-mix-70-oz-tin",
+  "image": "https://joevangogh.com/wp-content/uploads/2020/08/Sweetbird-Non-Dairy-Vanilla-Bean-Frappe-Mix-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "28134",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Sweetbird Syrups &amp; Sauces",
+   "Wholesale"
+  ],
+  "title": "Sweetbird Vanilla Bean Frappé Mix, 1 Kg Bag",
+  "url": "https://joevangogh.com/product/sweetbird-vanilla-bean-frappe-mix-70-oz-tin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1984,
+    "price_usd": 25.0,
+    "title": "1 Tin (70oz)",
+    "variant_id": "28134:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba736258c2403a97",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-grindz",
+  "image": "https://joevangogh.com/wp-content/uploads/2026/05/Urnex-Grindz-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "28361",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Cafe Supplies",
+   "Wholesale"
+  ],
+  "title": "Urnex Grindz",
+  "url": "https://joevangogh.com/product/urnex-grindz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 430,
+    "price_usd": 46.67,
+    "title": "1 Bottle (430g)",
+    "variant_id": "28361:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "afdcf0467b5d8197",
+  "first_seen": "2026-10-26",
+  "handle": "cafexpress-premium-dark-cocoa-powder",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/08/CafeXpress-Premium-Dark-Cocoa-Powder-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "28948",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Wholesale"
+  ],
+  "title": "CafeXpress Premium Dark Cocoa Powder",
+  "url": "https://joevangogh.com/product/cafexpress-premium-dark-cocoa-powder/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2LB Bag",
+    "variant_id": "28948:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c3ba03ecca0c1d9",
+  "first_seen": "2026-10-26",
+  "handle": "natural-brown-beverage-napkins",
+  "image": "https://joevangogh.com/wp-content/uploads/2026/05/Natural-Brown-Beverage-Napkins-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "29340",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Cafe Supplies",
+   "Wholesale"
+  ],
+  "title": "Natural Brown Beverage Napkins",
+  "url": "https://joevangogh.com/product/natural-brown-beverage-napkins/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 115.97,
+    "title": "Natural Brown Beverage Napkins",
+    "variant_id": "29340:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a62724b8b1730c5",
+  "first_seen": "2026-10-26",
+  "handle": "franke-espresso-cleaning-tabs",
+  "image": "https://joevangogh.com/wp-content/uploads/2022/02/Franke-Espresso-Cleaning-Tabs-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "29364",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Cafe Supplies",
+   "Wholesale"
+  ],
+  "title": "Franke Espresso Cleaning Tabs",
+  "url": "https://joevangogh.com/product/franke-espresso-cleaning-tabs/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 33.17,
+    "title": "1 Bottle (100 Tablets)",
+    "variant_id": "29364:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1f3b49ca71a6718",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafiza",
+  "image": "https://joevangogh.com/wp-content/uploads/2022/09/products-cafiza-wbg__47712.jpg",
+  "platform": "woocommerce",
+  "product_id": "29642",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Cafe Supplies",
+   "Wholesale"
+  ],
+  "title": "Urnex Cafiza",
+  "url": "https://joevangogh.com/product/urnex-cafiza/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 566,
+    "price_usd": 18.33,
+    "title": "1 Bottle (566g)",
+    "variant_id": "29642:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9f662544d627330",
+  "first_seen": "2026-10-26",
+  "handle": "pallo-coffeetool-replacement-bristles",
+  "image": "https://joevangogh.com/wp-content/uploads/2022/12/Pallo-Coffeetool-Replacement-Bristles-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "29732",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Cafe Supplies",
+   "Wholesale"
+  ],
+  "title": "Pallo Coffeetool Replacement Bristles",
+  "url": "https://joevangogh.com/product/pallo-coffeetool-replacement-bristles/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 28.33,
+    "title": "Pallo Coffeetool Replacement Bristles",
+    "variant_id": "29732:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27037326b1aa7721",
+  "first_seen": "2026-10-26",
+  "handle": "hollander-cafe-creme-frappe-base-1-2-5-lb-bag",
+  "image": "https://joevangogh.com/wp-content/uploads/2023/06/Hollander-Cafe-Creme-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "29810",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Wholesale"
+  ],
+  "title": "Hollander Café Creme Frappe Base, 1 2.5lb Bag",
+  "url": "https://joevangogh.com/product/hollander-cafe-creme-frappe-base-1-2-5-lb-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.33,
+    "title": "1 Bag (2.5lb)",
+    "variant_id": "29810:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7048ab1e3d79f997",
+  "first_seen": "2026-10-26",
+  "handle": "cafexpress-premium-non-fat-milk-powder",
+  "image": "https://joevangogh.com/wp-content/uploads/2024/01/Cafexpress-Non-Fat-Milk-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "44495",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Powders",
+   "Wholesale"
+  ],
+  "title": "CafeXpress Premium Non-Fat Milk Powder",
+  "url": "https://joevangogh.com/product/cafexpress-premium-non-fat-milk-powder/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2LB Bag",
+    "variant_id": "44495:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e57afca3661f848f",
+  "first_seen": "2026-10-26",
+  "handle": "to-have-and-have-not-half-caff-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2025/02/To-Have-and-Have-Not-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "57276",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Coffee Blends",
+   "Decaf",
+   "Half-Caffeinated",
+   "Retail Coffee",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "To Have and Have Not (Half-Caff Blend)",
+  "url": "https://joevangogh.com/product/to-have-and-have-not-half-caff-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "57276:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.5,
+    "title": "2.5LB",
+    "variant_id": "57276:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5LB",
+    "variant_id": "57276:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fdd3cb534e012dd8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-big-sleep-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2023/09/Big-Sleep-1000x1000px-1.webp",
+  "platform": "woocommerce",
+  "product_id": "7062",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Retail Coffee",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "Big Sleep (Decaf Blend)",
+  "url": "https://joevangogh.com/product/decaf-big-sleep-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "7062:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.0,
+    "title": "2.5LB",
+    "variant_id": "7062:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5LB",
+    "variant_id": "7062:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0b42669b7ac5c08",
+  "first_seen": "2026-10-26",
+  "handle": "organic-red-river-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/09/Red-River-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7080",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "Red River (Organic Blend)",
+  "url": "https://joevangogh.com/product/organic-red-river-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "7080:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.0,
+    "title": "2.5LB",
+    "variant_id": "7080:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5LB",
+    "variant_id": "7080:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "61faeca568fc294d",
+  "first_seen": "2026-10-26",
+  "handle": "maestro-espresso-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Maestro-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7170",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "Maestro (Espresso Blend)",
+  "url": "https://joevangogh.com/product/maestro-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "7170:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.5,
+    "title": "2.5LB",
+    "variant_id": "7170:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5LB",
+    "variant_id": "7170:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8b18a1ea670e672",
+  "first_seen": "2026-10-26",
+  "handle": "auteur-house-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2023/09/Auteur-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7189",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "New Releases",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "Auteur (House Blend)",
+  "url": "https://joevangogh.com/product/auteur-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "7189:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.5,
+    "title": "2.5LB",
+    "variant_id": "7189:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5LB",
+    "variant_id": "7189:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80dda8984ee59771",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-french-roast-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Kenya-French-Roast-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7207",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Retail Coffee",
+   "Single-Origin",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "Kenya French Roast (Single-Origin)",
+  "url": "https://joevangogh.com/product/kenya-french-roast-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "7207:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 21.0,
+    "title": "2.5LB",
+    "variant_id": "7207:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5LB",
+    "variant_id": "7207:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a1474ba7171fa5d",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-selva-negra-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Nicaragua-Selva-Negra-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7225",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Retail Coffee",
+   "Single-Origin",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "Nicaragua Selva Negra (Single-Origin)",
+  "url": "https://joevangogh.com/product/nicaragua-selva-negra-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz",
+    "variant_id": "7225:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 18.5,
+    "title": "2.5LB",
+    "variant_id": "7225:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "5LB",
+    "variant_id": "7225:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "741ace0082040c46",
+  "first_seen": "2026-10-26",
+  "handle": "long-goodbye-organic-decaf-mocha-java-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Long-Goodbye-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7261",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Retail Coffee",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "Long Goodbye (Decaf Organic Mocha Java)",
+  "url": "https://joevangogh.com/product/long-goodbye-organic-decaf-mocha-java-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz",
+    "variant_id": "7261:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 21.5,
+    "title": "2.5LB",
+    "variant_id": "7261:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.5,
+    "title": "5LB",
+    "variant_id": "7261:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40a6876aaf6d574e",
+  "first_seen": "2026-10-26",
+  "handle": "moonlight-organic-mocha-java-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Moonlight-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7279",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "Moonlight (Organic Mocha Java Blend)",
+  "url": "https://joevangogh.com/product/moonlight-organic-mocha-java-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12oz",
+    "variant_id": "7279:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.5,
+    "title": "2.5LB",
+    "variant_id": "7279:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.5,
+    "title": "5LB",
+    "variant_id": "7279:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fbf5537490dfc29",
+  "first_seen": "2026-10-26",
+  "handle": "new-wave-organic-french-roast-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/New-Wave-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7321",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Coffee Blends",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "New Wave (Organic French Roast Blend)",
+  "url": "https://joevangogh.com/product/new-wave-organic-french-roast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "7321:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 17.0,
+    "title": "2.5LB",
+    "variant_id": "7321:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5LB",
+    "variant_id": "7321:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "10bf121b8f0bcb2b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Organic-Espresso-1000x1000px.png",
+  "platform": "woocommerce",
+  "product_id": "7387",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Wholesale"
+  ],
+  "title": "Organic Espresso Blend",
+  "url": "https://joevangogh.com/product/organic-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12oz",
+    "variant_id": "7387:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.5,
+    "title": "2.5LB",
+    "variant_id": "7387:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.5,
+    "title": "5LB",
+    "variant_id": "7387:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd8f5be21caf32bd",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-kayanza-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2026/05/Product-Image-Burundi-Kayanza-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "73967",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Limited Time Offerings",
+   "New Releases",
+   "Retail Coffee",
+   "Single-Origin",
+   "Wholesale"
+  ],
+  "title": "Burundi Kayanza (Single-Origin)",
+  "url": "https://joevangogh.com/product/burundi-kayanza-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "73967:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 19.5,
+    "title": "2.5LB",
+    "variant_id": "73967:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5LB",
+    "variant_id": "73967:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7f011f5d1ff329f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-organic-single-origin",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Ethiopia-Sidama-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7405",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Coffee",
+   "Retail Coffee",
+   "Single-Origin",
+   "Subscriptions",
+   "Wholesale"
+  ],
+  "title": "Ethiopia Sidama (Organic Single-Origin)",
+  "url": "https://joevangogh.com/product/ethiopia-sidama-organic-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz",
+    "variant_id": "7405:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 21.5,
+    "title": "2.5LB",
+    "variant_id": "7405:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.5,
+    "title": "5LB",
+    "variant_id": "7405:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e6a9429003c1ff2b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sea-turtle-blend",
+  "image": "https://joevangogh.com/wp-content/uploads/2021/10/Sea-Turtle-1000x1000px.webp",
+  "platform": "woocommerce",
+  "product_id": "7423",
+  "product_type": "variable",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Coffee Blends",
+   "Retail Coffee",
+   "Subscriptions",
+   "The Classics",
+   "Wholesale"
+  ],
+  "title": "Sea Turtle (Organic Blend)",
+  "url": "https://joevangogh.com/product/organic-sea-turtle-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "7423:0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 20.0,
+    "title": "2.5LB",
+    "variant_id": "7423:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5LB",
+    "variant_id": "7423:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb7a6691961a8b02",
+  "first_seen": "2026-10-26",
+  "handle": "hugo-grey-black-blend-box-14ct-sachets",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "77853",
+  "product_type": "simple",
+  "roaster_slug": "joevangogh",
+  "tags": [
+   "Teas",
+   "Wholesale"
+  ],
+  "title": "Hugo Grey | Black Blend (BOX 14ct Sachets)",
+  "url": "https://joevangogh.com/product/hugo-grey-black-blend-box-14ct-sachets/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.33,
+    "title": "Hugo Grey | Black Blend (BOX 14ct Sachets)",
+    "variant_id": "77853:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

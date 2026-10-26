@@ -1,0 +1,814 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "maple-bourbon-barrel-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Maple_Bourbon_Barrel_Vanilla_6817a8a6-3810-4c22-819f-4e3e2003507f.png?v=1782482060",
+  "platform": "shopify",
+  "product_id": "11049908830375",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "flavored coffee"
+  ],
+  "title": "Maple Bourbon Barrel Vanilla",
+  "url": "https://prairiefirecoffee.com/products/maple-bourbon-barrel-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "50939888173223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "50939888205991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50939888238759"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Ground / 8 oz",
+    "variant_id": "50939888271527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "50939888304295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "50939888337063"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "continental-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Continental_Roast.png?v=1715711329",
+  "platform": "shopify",
+  "product_id": "8154394689703",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "Continental Roast",
+  "url": "https://prairiefirecoffee.com/products/continental-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421191889063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421191921831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421191954599"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421191987367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421192020135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421192052903"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Espresso.png?v=1715712042",
+  "platform": "shopify",
+  "product_id": "8154402521255",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "Espresso",
+  "url": "https://prairiefirecoffee.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421308936359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421308969127"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Whole Bean / 4 lb",
+    "variant_id": "45421309001895"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421309034663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421309067431"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Ground / 4 lb",
+    "variant_id": "45421309100199"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/French_Roast.png?v=1715712228",
+  "platform": "shopify",
+  "product_id": "8154404061351",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "French Roast",
+  "url": "https://prairiefirecoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421320372391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421320405159"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421320470695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421320503463"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Whole Bean / 4 lb",
+    "variant_id": "46185858793639"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Ground / 4 lb",
+    "variant_id": "46185858826407"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Signature_Blend.png?v=1715712466",
+  "platform": "shopify",
+  "product_id": "8154405798055",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "Signature Blend",
+  "url": "https://prairiefirecoffee.com/products/signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421337608359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421337641127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421337673895"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421337706663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421337739431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421337772199"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/DECAF_Espresso.png?v=1715712612",
+  "platform": "shopify",
+  "product_id": "8154407076007",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "DECAF Espresso",
+  "url": "https://prairiefirecoffee.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Whole Bean / 4 lb",
+    "variant_id": "45421372178599"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.99,
+    "title": "Ground / 4 lb",
+    "variant_id": "45421372276903"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/DECAF_Signature_Blend.png?v=1715712640",
+  "platform": "shopify",
+  "product_id": "8154407403687",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "our blends"
+  ],
+  "title": "DECAF Signature Blend",
+  "url": "https://prairiefirecoffee.com/products/decaf-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421377388711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421377421479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421377454247"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.99,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421377487015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421377519783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421377552551"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Colombian.png?v=1715712837",
+  "platform": "shopify",
+  "product_id": "8154409009319",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombian",
+  "url": "https://prairiefirecoffee.com/products/colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421386694823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421386727591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421386760359"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421386793127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421386825895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421386858663"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-harrar",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Ethiopian_Harrar.png?v=1715712951",
+  "platform": "shopify",
+  "product_id": "8154409894055",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopian Harrar",
+  "url": "https://prairiefirecoffee.com/products/ethiopian-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421392199847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421392232615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421392265383"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421392298151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421392330919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421392363687"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Guatamalan.png?v=1715713076",
+  "platform": "shopify",
+  "product_id": "8154411040935",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Guatemalan",
+  "url": "https://prairiefirecoffee.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421399179431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421399212199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421399244967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421399277735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421399310503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421399343271"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Kenyan.png?v=1715713119",
+  "platform": "shopify",
+  "product_id": "8154411434151",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Kenyan",
+  "url": "https://prairiefirecoffee.com/products/kenyan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421401735335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421401768103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421401800871"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421401833639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421401866407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421401899175"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "mexican",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Mexican.png?v=1715713156",
+  "platform": "shopify",
+  "product_id": "8154411761831",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Mexican",
+  "url": "https://prairiefirecoffee.com/products/mexican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421403963559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421403996327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421404029095"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421404061863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421404094631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421404127399"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "panama",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Panama.png?v=1715713182",
+  "platform": "shopify",
+  "product_id": "8154411925671",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Panama",
+  "url": "https://prairiefirecoffee.com/products/panama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421405438119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421405470887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421405503655"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.49,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421405536423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421405569191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421405634727"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0614/4321/1431/files/Sumatra.png?v=1715713212",
+  "platform": "shopify",
+  "product_id": "8154412253351",
+  "product_type": "",
+  "roaster_slug": "prairiefirecoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://prairiefirecoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45421407240359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "45421407273127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45421407338663"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.99,
+    "title": "Ground / 8 oz",
+    "variant_id": "45421407371431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "Ground / 1 lb",
+    "variant_id": "45421407404199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5 lb",
+    "variant_id": "45421407436967"
+   }
+  ],
+  "vendor": "PrairieFire Coffee"
+ }
+]

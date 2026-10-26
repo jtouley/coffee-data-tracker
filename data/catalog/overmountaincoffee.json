@@ -1,0 +1,416 @@
+[
+ {
+  "body_hash": "8a92a0d15d819073",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-organic-frac-pack",
+  "image": null,
+  "platform": "generic",
+  "product_id": "030b4b726309",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Ethiopia Organic Frac Pack",
+  "url": "https://www.overmountaincoffee.com/product-page/ethiopia-organic-frac-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "681564557180fa14",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural-frac-pac",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1550c6ada077",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Brazil Natural Frac Pac",
+  "url": "https://www.overmountaincoffee.com/product-page/brazil-natural-frac-pac",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "018b9bdf9a35de1b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-organicworku-buche-natural-12-box-or-60-box",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2e87daa74379",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Ethiopia Sidama OrganicWorku Buche Natural(12/Box)or(60/Box)",
+  "url": "https://www.overmountaincoffee.com/product-page/ethiopia-sidama-organicworku-buche-natural-12-box-or-60-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e5ecaa5f651034ea",
+  "first_seen": "2026-10-26",
+  "handle": "shot-in-the-dark-espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4aa92a0a55cd",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Shot In The Dark Espresso",
+  "url": "https://www.overmountaincoffee.com/product-page/shot-in-the-dark-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc6ea18bab724897",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4ebb22f52530",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Brazil Natural",
+  "url": "https://www.overmountaincoffee.com/product-page/brazil-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "018b9bdf9a35de1b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-organicworku-buche-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6b89f85c33ba",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Ethiopia Sidama Organic Worku Buche Natural",
+  "url": "https://www.overmountaincoffee.com/product-page/ethiopia-sidama-organicworku-buche-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4127e85d154c15f6",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8a53950171e6",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Costa Rica Organic",
+  "url": "https://www.overmountaincoffee.com/product-page/costa-rica-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f74c5f92d671540a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-el-tiple-supremo",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8b27a3b99c7c",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Colombia Huila Supremo",
+  "url": "https://www.overmountaincoffee.com/product-page/colombia-huila-el-tiple-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a9700ba76f4bad0",
+  "first_seen": "2026-10-26",
+  "handle": "over-mountain-blend-frac-pac",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8d4c8bb52642",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Over-Mountain Blend Frac Pac",
+  "url": "https://www.overmountaincoffee.com/product-page/over-mountain-blend-frac-pac",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a9700ba76f4bad0",
+  "first_seen": "2026-10-26",
+  "handle": "over-mountain-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "97715919a85d",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Over-Mountain Blend",
+  "url": "https://www.overmountaincoffee.com/product-page/over-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3c4315cf5a7c6a0",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a0060abda167",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Uganda Natural",
+  "url": "https://www.overmountaincoffee.com/product-page/uganda-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1b5a3c58233f909",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ac172a64c8f5",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://www.overmountaincoffee.com/product-page/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed72f2d4216804fe",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-peñas-blancas-java-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b0b7dcff3e94",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Colombia Peñas Blancas Java Natural",
+  "url": "https://www.overmountaincoffee.com/product-page/colombia-peñas-blancas-java-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "226f482ee8bcf5c1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bb0afd65ae95",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango Organic",
+  "url": "https://www.overmountaincoffee.com/product-page/guatemala-huehuetenango-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "624c1f5a212b12f1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-el-diviso-sidra-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c26fc86b7373",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Colombia Finca El Diviso Sidra Natural",
+  "url": "https://www.overmountaincoffee.com/product-page/colombia-finca-el-diviso-sidra-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca5d499c33e91ec0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-supremo-frac-pac",
+  "image": null,
+  "platform": "generic",
+  "product_id": "dd5cfb8d0035",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Colombia Huila Supremo Frac Pac",
+  "url": "https://www.overmountaincoffee.com/product-page/colombia-huila-supremo-frac-pac",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a249f0423b5713b2",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-swiss-water-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e6c7eb6c0f8f",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Peru Organic Swiss Water Decaf",
+  "url": "https://www.overmountaincoffee.com/product-page/peru-organic-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23d3677a373ab816",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic-swiss-water-decaf-frac-pac",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ea5b5a776369",
+  "product_type": "",
+  "roaster_slug": "overmountaincoffee",
+  "tags": [],
+  "title": "Peru Organic Swiss Water Decaf Frac Pac.",
+  "url": "https://www.overmountaincoffee.com/product-page/peru-organic-swiss-water-decaf-frac-pac",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

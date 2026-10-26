@@ -1,0 +1,840 @@
+[
+ {
+  "body_hash": "b37dc6d98cfbbb81",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-bag-of-special-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3181.jpg?v=1745009190",
+  "platform": "shopify",
+  "product_id": "7717445009662",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "5 lb Special Blend",
+  "url": "https://texasgroundscoffee.com/products/5-lb-bag-of-special-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Republic",
+    "variant_id": "43195548074238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Republic",
+    "variant_id": "43195548401918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 2-A",
+    "variant_id": "43272725004542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Come and Take It",
+    "variant_id": "43272725037310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Defend Blend",
+    "variant_id": "43272725070078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / DD214",
+    "variant_id": "43272725102846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Helotes Blend",
+    "variant_id": "43272725135614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Outlaw",
+    "variant_id": "43272725201150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Ranger",
+    "variant_id": "43272725233918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Remember the Alamo",
+    "variant_id": "43272725266686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Roll Call",
+    "variant_id": "43272725299454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Secede",
+    "variant_id": "43272725332222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / 2-A",
+    "variant_id": "43272725364990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Come and Take It",
+    "variant_id": "43272725397758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Defend Blend",
+    "variant_id": "43272725430526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / DD214",
+    "variant_id": "43272725463294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Helotes Blend",
+    "variant_id": "43272725496062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Outlaw",
+    "variant_id": "43272725561598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Ranger",
+    "variant_id": "43272725594366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Remember the Alamo",
+    "variant_id": "43272725627134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Roll Call",
+    "variant_id": "43272725659902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Secede",
+    "variant_id": "43272725692670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Blend of the Month",
+    "variant_id": "46078997954814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / Trump",
+    "variant_id": "46078997987582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Blend of the Month",
+    "variant_id": "46078998020350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Trump",
+    "variant_id": "46078998053118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean / Texas Blonde",
+    "variant_id": "46625032438014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / Texas Blonde",
+    "variant_id": "46625032470782"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "c215bd5672b764fd",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-bag-of-come-and-take-it",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3144.jpg?v=1744908275",
+  "platform": "shopify",
+  "product_id": "7717446877438",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Dark Roast",
+   "Subscribe"
+  ],
+  "title": "5 lb Bag of Come and Take It",
+  "url": "https://texasgroundscoffee.com/products/5-lb-bag-of-come-and-take-it",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean",
+    "variant_id": "42923373265150"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Ground",
+    "variant_id": "42923373297918"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "78c363c71c0b1bf2",
+  "first_seen": "2026-10-26",
+  "handle": "5-lb-bag-of-republic",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3185.jpg?v=1745010939",
+  "platform": "shopify",
+  "product_id": "7717448286462",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "5 lb Bag of Republic",
+  "url": "https://texasgroundscoffee.com/products/5-lb-bag-of-republic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 70.0,
+    "title": "Whole Bean",
+    "variant_id": "42923377656062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Ground",
+    "variant_id": "42923377688830"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "e93d59d7fbd89d8f",
+  "first_seen": "2026-10-26",
+  "handle": "bond-arms-double-barrel-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3151.jpg?v=1744908994",
+  "platform": "shopify",
+  "product_id": "7717460967678",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Bond Arms Double Barrel Brew",
+  "url": "https://texasgroundscoffee.com/products/bond-arms-double-barrel-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923419959550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923419992318"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "3f12cd2e8350bf04",
+  "first_seen": "2026-10-26",
+  "handle": "defend-blend-law-enforcement",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-9.jpg?v=1744638265",
+  "platform": "shopify",
+  "product_id": "7717461655806",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "First Responders",
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Defend Blend (Law Enforcement)",
+  "url": "https://texasgroundscoffee.com/products/defend-blend-law-enforcement",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923423695102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923423727870"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "514996685f9f5b3a",
+  "first_seen": "2026-10-26",
+  "handle": "roll-call-firefighters",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-12_56de129d-3b5a-4d36-afa5-2be59aa51e65.jpg?v=1744639868",
+  "platform": "shopify",
+  "product_id": "7717461852414",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "First Responders",
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Roll Call (Firefighters)",
+  "url": "https://texasgroundscoffee.com/products/roll-call-firefighters",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923424153854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923424186622"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "6e6f5b132570554d",
+  "first_seen": "2026-10-26",
+  "handle": "2a-second-amendment-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-3.jpg?v=1744736503",
+  "platform": "shopify",
+  "product_id": "7717462278398",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "2A Second Amendment Blend",
+  "url": "https://texasgroundscoffee.com/products/2a-second-amendment-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923427823870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923427856638"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "560a90ec1a720788",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/Assorted_Bags_5.jpg?v=1744732336",
+  "platform": "shopify",
+  "product_id": "7717462507774",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Subscribe"
+  ],
+  "title": "Coffee of the Month",
+  "url": "https://texasgroundscoffee.com/products/coffee-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923428511998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923428544766"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "a94fd58e0d16a6b2",
+  "first_seen": "2026-10-26",
+  "handle": "grey-forest",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-11.jpg?v=1744636700",
+  "platform": "shopify",
+  "product_id": "7717462704382",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Texas Forever",
+  "url": "https://texasgroundscoffee.com/products/grey-forest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923429200126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923429232894"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "02a20a2ea7282d47",
+  "first_seen": "2026-10-26",
+  "handle": "helotes-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail.jpg?v=1744636936",
+  "platform": "shopify",
+  "product_id": "7717463130366",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Helotes",
+  "url": "https://texasgroundscoffee.com/products/helotes-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923431657726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923431690494"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "8b6f8d6ebfcb54a6",
+  "first_seen": "2026-10-26",
+  "handle": "ranger",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3110.jpg?v=1744904284",
+  "platform": "shopify",
+  "product_id": "7717463949566",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Ranger",
+  "url": "https://texasgroundscoffee.com/products/ranger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923433918718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923433951486"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "35b9fc5b743f5496",
+  "first_seen": "2026-10-26",
+  "handle": "remember-the-alamo",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-2.jpg?v=1744636787",
+  "platform": "shopify",
+  "product_id": "7717464080638",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Light Roast",
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Remember the Alamo",
+  "url": "https://texasgroundscoffee.com/products/remember-the-alamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923434049790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923434082558"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "a29cee591440148b",
+  "first_seen": "2026-10-26",
+  "handle": "secede-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-8.jpg?v=1744736270",
+  "platform": "shopify",
+  "product_id": "7717464211710",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Secede Blend",
+  "url": "https://texasgroundscoffee.com/products/secede-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923436867838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923436900606"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "608c36ec65a272d8",
+  "first_seen": "2026-10-26",
+  "handle": "come-and-take-it",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-7.jpg?v=1744732215",
+  "platform": "shopify",
+  "product_id": "7717464637694",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Dark Roast",
+   "Subscribe"
+  ],
+  "title": "Come and Take It",
+  "url": "https://texasgroundscoffee.com/products/come-and-take-it",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923438506238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923438539006"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "d05d57794ff0b046",
+  "first_seen": "2026-10-26",
+  "handle": "republic",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-5.jpg?v=1744736445",
+  "platform": "shopify",
+  "product_id": "7717464768766",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Republic",
+  "url": "https://texasgroundscoffee.com/products/republic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923438801150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923438932222"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "cf66afacc477b536",
+  "first_seen": "2026-10-26",
+  "handle": "the-outlaw-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-10.jpg?v=1744736598",
+  "platform": "shopify",
+  "product_id": "7717465030910",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast",
+   "Subscribe"
+  ],
+  "title": "Outlaw (Decaf)",
+  "url": "https://texasgroundscoffee.com/products/the-outlaw-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "42923441815806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "42923441848574"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "7e5ec2d75d49943f",
+  "first_seen": "2026-10-26",
+  "handle": "burlap-coffee-sack",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/Burlap_Sacks_1.jpg?v=1744732849",
+  "platform": "shopify",
+  "product_id": "7717465424126",
+  "product_type": "Merchandise",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Burlap Sack",
+   "Novelty"
+  ],
+  "title": "Burlap Coffee Sack",
+  "url": "https://texasgroundscoffee.com/products/burlap-coffee-sack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "42923442733310"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "ab4fb53461d0df53",
+  "first_seen": "2026-10-26",
+  "handle": "dd-214",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-6.jpg?v=1744736372",
+  "platform": "shopify",
+  "product_id": "7919192834302",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "DD-214",
+  "url": "https://texasgroundscoffee.com/products/dd-214",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "43664616947966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "43664616980734"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "b22e64ce374234ba",
+  "first_seen": "2026-10-26",
+  "handle": "trump",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/thumbnail-4.jpg?v=1744736310",
+  "platform": "shopify",
+  "product_id": "8249781551358",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Trump",
+  "url": "https://texasgroundscoffee.com/products/trump",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "44639877366014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "44639877398782"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee"
+ },
+ {
+  "body_hash": "a11df3912da9eaa4",
+  "first_seen": "2026-10-26",
+  "handle": "texas-blonde",
+  "image": "https://cdn.shopify.com/s/files/1/0640/9532/2366/files/DSCF3092.jpg?v=1744904201",
+  "platform": "shopify",
+  "product_id": "8862856478974",
+  "product_type": "Coffee",
+  "roaster_slug": "texasgroundscoffee",
+  "tags": [
+   "Light Roast",
+   "Subscribe"
+  ],
+  "title": "Texas Blonde",
+  "url": "https://texasgroundscoffee.com/products/texas-blonde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "46622638670078"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "46622638702846"
+   }
+  ],
+  "vendor": "Texas Grounds Coffee "
+ }
+]

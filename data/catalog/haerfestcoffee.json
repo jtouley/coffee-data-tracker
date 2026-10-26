@@ -1,0 +1,354 @@
+[
+ {
+  "body_hash": "679ec4466bab46f5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-the-boz",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/The-Bo_z-DECAF.jpg",
+  "platform": "woocommerce",
+  "product_id": "33",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf The Bo’z",
+  "url": "https://haerfestcoffee.com/product/decaf-the-boz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz. bag",
+    "variant_id": "33:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5 lb. bag",
+    "variant_id": "33:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e22af397b9c44595",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "39",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://haerfestcoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.5,
+    "title": "12 oz. bag",
+    "variant_id": "39:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.5,
+    "title": "5 lb. bag",
+    "variant_id": "39:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d42fe57e9a339591",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Guatemala.jpg",
+  "platform": "woocommerce",
+  "product_id": "44",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://haerfestcoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.5,
+    "title": "12 oz. bag",
+    "variant_id": "44:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.5,
+    "title": "5 lb. bag",
+    "variant_id": "44:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4dfc61b208d1dd47",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Kenya.jpg",
+  "platform": "woocommerce",
+  "product_id": "48",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kenya",
+  "url": "https://haerfestcoffee.com/product/kenya/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz. bag",
+    "variant_id": "48:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.25,
+    "title": "5 lb. bag",
+    "variant_id": "48:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6cf954aaa0ba2c6a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Sumatra.jpg",
+  "platform": "woocommerce",
+  "product_id": "52",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://haerfestcoffee.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz. bag",
+    "variant_id": "52:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.25,
+    "title": "5 lb. bag",
+    "variant_id": "52:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d69e1af2d6bcafd6",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Ethiopia.jpg",
+  "platform": "woocommerce",
+  "product_id": "56",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopia",
+  "url": "https://haerfestcoffee.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz. bag",
+    "variant_id": "56:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.25,
+    "title": "5 lb. bag",
+    "variant_id": "56:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec01193c01fc6780",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/French-Roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "61",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "French Roast",
+  "url": "https://haerfestcoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.5,
+    "title": "12 oz. bag",
+    "variant_id": "61:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.5,
+    "title": "5 lb. bag",
+    "variant_id": "61:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1f03ed211c4acd2",
+  "first_seen": "2026-10-26",
+  "handle": "the-boz",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/The-Bo_z.jpg",
+  "platform": "woocommerce",
+  "product_id": "65",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "The Bo’z",
+  "url": "https://haerfestcoffee.com/product/the-boz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz. bag",
+    "variant_id": "65:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.25,
+    "title": "5 lb. bag",
+    "variant_id": "65:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4a896ad97223f20",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Breakfast-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "69",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://haerfestcoffee.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.5,
+    "title": "12 oz. bag",
+    "variant_id": "69:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.5,
+    "title": "5 lb. bag",
+    "variant_id": "69:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e22af397b9c44595",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/Colombia-DECAF.jpg",
+  "platform": "woocommerce",
+  "product_id": "73",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://haerfestcoffee.com/product/decaf-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz. bag",
+    "variant_id": "73:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5 lb. bag",
+    "variant_id": "73:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec01193c01fc6780",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://haerfestcoffee.com/wp-content/uploads/2018/10/French-Roast-DECAF.jpg",
+  "platform": "woocommerce",
+  "product_id": "83",
+  "product_type": "variable",
+  "roaster_slug": "haerfestcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://haerfestcoffee.com/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz. bag",
+    "variant_id": "83:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5 lb. bag",
+    "variant_id": "83:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

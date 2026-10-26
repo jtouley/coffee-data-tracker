@@ -1,0 +1,280 @@
+[
+ {
+  "body_hash": "0582e862b1a68d14",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-selva-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/NicaraguaLabel.jpg?v=1792800410",
+  "platform": "shopify",
+  "product_id": "15440399302807",
+  "product_type": "",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [],
+  "title": "Nicaragua Selva Negra",
+  "url": "https://www.profilecoffeeandroasters.com/products/nicaragua-selva-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "68125180690583"
+   }
+  ],
+  "vendor": "profilecoffeecompany"
+ },
+ {
+  "body_hash": "acdf00b9bf758f0a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-1",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/Untitled_design.png_1_a0dad1c2-736d-4239-872e-2cc51b92c91f.png?v=1760039415",
+  "platform": "shopify",
+  "product_id": "7474035097751",
+  "product_type": "Coffee",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [],
+  "title": "Brazil Cerrado",
+  "url": "https://www.profilecoffeeandroasters.com/products/brazil-cerrado-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "41855534235799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Coarse Ground",
+    "variant_id": "46172815589527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Medium Groud",
+    "variant_id": "46172815622295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Fine Ground",
+    "variant_id": "46172815655063"
+   }
+  ],
+  "vendor": "profilecoffeeandroasters"
+ },
+ {
+  "body_hash": "34344fdeb208ae73",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/Colombia_Label.png?v=1752962076",
+  "platform": "shopify",
+  "product_id": "7474252906647",
+  "product_type": "Coffee",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [
+   "coffee",
+   "colombia",
+   "small batch roaster",
+   "small farmers",
+   "specialty coffee"
+  ],
+  "title": "Colombia Supremo",
+  "url": "https://www.profilecoffeeandroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz / Whole Bean",
+    "variant_id": "41856726630551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz / Coarse Ground",
+    "variant_id": "46172820799639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz / Medium Ground",
+    "variant_id": "46172820832407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "16oz / Fine Ground",
+    "variant_id": "46172820865175"
+   }
+  ],
+  "vendor": "profilecoffeeandroasters"
+ },
+ {
+  "body_hash": "917891985c6b1b3b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/ESPRESSOLABEL.jpg?v=1739310741",
+  "platform": "shopify",
+  "product_id": "7480039145623",
+  "product_type": "Coffee",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.profilecoffeeandroasters.com/products/espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "41869818986647"
+   }
+  ],
+  "vendor": "profilecoffeeandroasters"
+ },
+ {
+  "body_hash": "f27af72dc075d020",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/16oz.png-3.png?v=1758285468",
+  "platform": "shopify",
+  "product_id": "7954060247191",
+  "product_type": "",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [
+   "Smokey",
+   "citric",
+   "dark roasted",
+   "fresh roasted",
+   "rwanda"
+  ],
+  "title": "Rwanda A Mugina Washing Station",
+  "url": "https://www.profilecoffeeandroasters.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "42994131566743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz / Coarse Ground",
+    "variant_id": "42994131599511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz / Medium Ground",
+    "variant_id": "42994131632279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz / Fine Ground",
+    "variant_id": "46172830171287"
+   }
+  ],
+  "vendor": "profilecoffeeandroasters"
+ },
+ {
+  "body_hash": "11246ffac6e57e9e",
+  "first_seen": "2026-10-26",
+  "handle": "do-good-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/D1EC7D01-0A11-4794-8986-B635046ECF43.jpg?v=1733094787",
+  "platform": "shopify",
+  "product_id": "8656616751255",
+  "product_type": "Coffee",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [],
+  "title": "Do Good Blend by Profile",
+  "url": "https://www.profilecoffeeandroasters.com/products/do-good-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Whole Bean",
+    "variant_id": "44891182727319"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Coarse Ground",
+    "variant_id": "44891182760087"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Medium Ground",
+    "variant_id": "44891182792855"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.75,
+    "title": "Fine Ground",
+    "variant_id": "46172822569111"
+   }
+  ],
+  "vendor": "profilecoffeecompany"
+ },
+ {
+  "body_hash": "6c41cd92c0b84286",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-pw",
+  "image": "https://cdn.shopify.com/s/files/1/0606/7912/7191/files/image0.png?v=1760037867",
+  "platform": "shopify",
+  "product_id": "9185564262551",
+  "product_type": "Coffee",
+  "roaster_slug": "profilecoffeeandroasters",
+  "tags": [],
+  "title": "Mexico PW",
+  "url": "https://www.profilecoffeeandroasters.com/products/mexico-pw",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "46172812738711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Coarse Ground",
+    "variant_id": "46172812771479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Medium Ground",
+    "variant_id": "46172812804247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz / Fine Ground",
+    "variant_id": "46172812837015"
+   }
+  ],
+  "vendor": "profilecoffeecompany"
+ }
+]

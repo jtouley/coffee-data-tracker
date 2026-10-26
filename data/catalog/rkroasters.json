@@ -1,0 +1,1164 @@
+[
+ {
+  "body_hash": "f1aa53ed212969a7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/5f316a978657604f0f0f3a9e/1791521205132/",
+  "platform": "squarespace",
+  "product_id": "5f316a978657604f0f0f3a9e",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast"
+  ],
+  "title": "Organic Colombia",
+  "url": "https://www.rkroasters.com/shop-1/p/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "07a76134-7968-4051-b87a-b092db45643e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "15ba885a-c157-4f82-b16f-efd01388d26a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "26752056-2239-4870-9e0b-f5ae8cd9f51b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "59260387-6c32-4482-bffa-1a5a384cdbc9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "b108a44f-e152-4b97-b99b-bde03d25b70c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "b481b90e-f107-452c-ae36-fdb5b3903e50"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "d27d02bb-b83c-4340-85e8-7d91cd483960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "d5244c2b-743e-485c-9ad1-75119dceba9c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c536a91fb8463b89",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swp-decaf",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/5f316ae2f548795f6227cf3c/1791521205194/",
+  "platform": "squarespace",
+  "product_id": "5f316ae2f548795f6227cf3c",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "freshly roasted",
+   "medium roast"
+  ],
+  "title": "Colombia SWP Decaffeinated",
+  "url": "https://www.rkroasters.com/shop-1/p/colombia-swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "04f481f8-7d46-418b-995a-e0fec9bce24e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "16a037d8-26e7-4722-9cbf-e29bbeb41f0c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "22c83413-57bc-42a8-b4f0-0d1e09310476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "52a34c7c-010f-4320-8660-547108fe3c59"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "6aa7aa77-9787-4faf-83cc-9f244b886bae"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "c215f14a-d0b0-4850-aa83-971b23cb09cc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "ca251ac9-b8da-4b3c-86fa-9c55d1f318ad"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "df8ccc09-dec4-40f2-aa2e-33dfefdc3d2a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e0d5a52c041b593",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/5f316b63289a6b075f2c05f0/1791521205294/",
+  "platform": "squarespace",
+  "product_id": "5f316b63289a6b075f2c05f0",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Organic Honduras",
+  "url": "https://www.rkroasters.com/shop-1/p/honduras-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "3420b461-30ff-4c19-baca-a734deaab09b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "37261ed9-6ed3-4ca4-acf2-2b2a2d830ad9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "39982373-7677-44f0-9e37-0f315c7383a5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "431c8271-8d74-4248-b6a3-a1f8a2a15ef8"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "92a9db0f-722f-417e-8403-991d95c5b2fd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "b0dbde52-a8de-4ed4-ac43-c049b0062df1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "b2e08826-ee32-4c4e-b822-b12bfde9bcee"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "dcb835a3-fb3a-4fd5-baaf-952b4eee3654"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53c3e4cd0a9f143b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-1",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/5f316bfc8657604f0f0f7583/1791521205427/",
+  "platform": "squarespace",
+  "product_id": "5f316bfc8657604f0f0f7583",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "light roast"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.rkroasters.com/shop-1/p/ethiopia-yirgacheffe-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "0df67cc5-f3e5-48c9-8ad3-19e7fab7b942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "1a055afc-b282-4c2a-bcd0-4dc6a582b45e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "1bec3564-6386-44eb-9ef3-dfdd201edb1a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "2f0f741b-f652-408d-aed4-41b08034c360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "6779726e-3506-4e8a-8ebb-67a32b9eeec8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "8cf4862d-f490-48be-8ca9-90fd321d1903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "f1f925ef-95c0-4438-a4f6-05cf9f8a6e23"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "f345488a-89dd-452a-b1d1-b889e6e4bee9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "296ba11896cc9b10",
+  "first_seen": "2026-10-26",
+  "handle": "rk-espresso",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/5f316d0d09562167e40779a4/1791521205616/",
+  "platform": "squarespace",
+  "product_id": "5f316d0d09562167e40779a4",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast"
+  ],
+  "title": "RK Espresso",
+  "url": "https://www.rkroasters.com/shop-1/p/rk-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "191f69a0-0799-4ac3-97ee-a5ed6306553e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "34b9b935-15e1-4d73-8775-8693ace0b0e0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "4b20c264-355c-4788-a3f5-8cb55c73fb95"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "66c0c4d4-523f-4628-a613-db952af88962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "792c403d-d24f-4ba0-8a90-5b6993a91d9a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "83092010-de15-4922-8dcc-d48d2444df30"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "c9500283-f307-4298-bf4d-38b027812295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "f7a88e72-891e-4a7a-a5ad-bbe1361a7c30"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "409de1c1614a14ba",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-swp-decaffeinated",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/607d8a27c2d85562926d54d7/1791531757468/",
+  "platform": "squarespace",
+  "product_id": "607d8a27c2d85562926d54d7",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "decaffeinated",
+   "freshly roasted",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Organic Honduras SWP Decaffeinated",
+  "url": "https://www.rkroasters.com/shop-1/p/honduras-organic-swp-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "18fa60eb-1781-4ce6-879e-ef760b22ef4f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "2e761694-711b-41c8-9042-d359a936f5ab"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "3e279ab8-4fad-411a-9fab-13b03512f625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "5a3c6be6-3ad9-41ba-a96d-d07cffb9d24e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "8cc7bed4-438f-47b2-9707-7b1158ae85b5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "ab5caf8b-6265-4033-b83d-54d36bb86b04"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "d5891adb-5cda-4e2b-986b-0466493f64dd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "e90a313a-9b65-417a-a139-6a9820405cd4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7b7976ec49d4549",
+  "first_seen": "2026-10-26",
+  "handle": "rk-espresso-8jggj",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/610d7d589abe0418370cb50d/1791534847521/",
+  "platform": "squarespace",
+  "product_id": "610d7d589abe0418370cb50d",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast"
+  ],
+  "title": "RK Smooth Espresso",
+  "url": "https://www.rkroasters.com/shop-1/p/rk-espresso-8jggj",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "05150c1b-78c6-43ea-b5ae-e24513539fc1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "1cb793e9-083d-422f-ba02-51008a5dce52"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "25bfdfb3-499e-47e6-ba60-ecc5259eeb30"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "32d559f7-3850-4233-bac7-371345628ed6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "461cb795-5229-4c9d-8cbb-27696dc5ec6e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.25,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "4ee97f8e-121f-4693-b10f-941e52dc7fd4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "9c12bf72-bf99-4193-8c87-caf8fb0e6b23"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.99,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "c35f6860-ceec-41ac-8cc6-1da5ec698024"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfdc5a308c89b288",
+  "first_seen": "2026-10-26",
+  "handle": "peruorganic",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f29cb900512b20bd57ceea6/47e7e647-f040-4cd3-a5ad-ece503a7cb74/peru.png",
+  "platform": "squarespace",
+  "product_id": "610d80355700e9167e8f6b24",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Organic Peru",
+  "url": "https://www.rkroasters.com/shop-1/p/peruorganic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "04b3dc76-bc69-4566-bbbd-b4191c9a4d40"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "269f22d2-59f7-4c0b-b927-f6158d24e226"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "3be0cc82-6c3d-431c-aec4-caa6bed897d1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "4a349cc7-e945-4908-a6fb-5f566f0befd8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "7a70ad6b-f82c-4110-b2b3-ac30039b3daa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "80be472d-35dc-48b8-81f8-449bcae66bc2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "e1bcdb32-e3d7-40d6-b68d-01fef6e9a7bc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "fa38785d-bdce-4889-8143-19b3ba659cef"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28075bf0977aabd0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-p57lf",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/610d809eafd99a38d75e102d/1791534847755/",
+  "platform": "squarespace",
+  "product_id": "610d809eafd99a38d75e102d",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Organic Guatemala",
+  "url": "https://www.rkroasters.com/shop-1/p/colombia-p57lf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "16d39f0d-4189-47b2-90c5-41eefaf4a30c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "16f1880f-1894-49b3-a4c9-dea021d698ae"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "7119ca44-4c92-4a50-8d41-f451c08db805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "72400053-921f-463e-b96e-b2981f4e7b79"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "a365297c-f63f-4041-b1a2-e90952d0bec7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "ab48de63-2b6f-490c-89a4-9026d9cd2446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "c26edbd0-7db5-4105-8520-4b9db13bf860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "ebdb5f6f-6855-40f1-8ed5-94a98598fea9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54b70f64bf25a130",
+  "first_seen": "2026-10-26",
+  "handle": "rkorganicespresso-swpdecaf",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/613d0dbdee03f10bf33b5986/1791535786895/",
+  "platform": "squarespace",
+  "product_id": "613d0dbdee03f10bf33b5986",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "freshly roasted"
+  ],
+  "title": "RK Organic Espresso SWP Decaf",
+  "url": "https://www.rkroasters.com/shop-1/p/rkorganicespresso-swpdecaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "2606279f-070c-4ba7-8d39-9e4bb92311ac"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "294f40a8-9475-424a-bb54-9a25a7dc9c64"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "4877d6b9-8b54-496d-8c9f-a98be3c7d55c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "57b0b17e-2aa9-4673-9f60-68718369b066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "58440a30-ae38-44d1-bb07-633dd8138ecf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "a600ae57-f60c-486b-ae67-6ff94ea44bb1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "a9995d70-4973-44dc-b381-f8b8e93983b4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "f6431c05-dda2-4713-b253-a553d52b1b77"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54120a87bd592f74",
+  "first_seen": "2026-10-26",
+  "handle": "organicespresso",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/61c9c23c49d0ff565c788921/1791538958915/",
+  "platform": "squarespace",
+  "product_id": "61c9c23c49d0ff565c788921",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "espresso",
+   "freshly roasted",
+   "organic"
+  ],
+  "title": "RK Organic Espresso",
+  "url": "https://www.rkroasters.com/shop-1/p/organicespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "1834da4f-1c68-4d91-86e8-ba6bb80fb7cc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "3af5d460-e7e8-488c-84e2-d453b33f738f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "5ac6508d-ef1c-4509-83da-47960c0c3420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "8bc8d6c0-9374-4a8e-b8d5-2c78649e91fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "cce3215e-2a0f-40e6-9144-e73e9007d790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "d71bb8f5-8004-43b8-bfd0-9f4bbb856aa1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "f8a109cc-847f-46ef-8e5a-fb225e02caaa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "f9cbe22a-4eb9-45b4-941a-660a04869bd8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef0797451f4dec18",
+  "first_seen": "2026-10-26",
+  "handle": "rk-organic-half-caff",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/6332e55c4114da6d023c715a/1791545136498/",
+  "platform": "squarespace",
+  "product_id": "6332e55c4114da6d023c715a",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "decaf",
+   "decaffeinated",
+   "freshly roasted",
+   "medium roast",
+   "organic"
+  ],
+  "title": "RK Organic Half-Caff",
+  "url": "https://www.rkroasters.com/shop-1/p/rk-organic-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "035977ab-d281-43dc-915b-8880745ad7c9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "2e55c759-8192-48d7-8efd-df94251118aa"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "5605af4f-3be4-49bf-bffa-a081a3f37e12"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "6d2d5257-dc90-43c3-acf7-54dc497445b0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "b8fa7343-d2d0-4255-8a17-2775b3efaa50"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "bf56f7b8-993e-4a12-b283-d696a1b5a9bf"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "c0ba4ff6-0c07-4485-9a40-f3fa25fc1a56"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "e4fbc5c2-7b3a-48a7-9e73-0bc76c6665ca"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "31db6e428fc8a173",
+  "first_seen": "2026-10-26",
+  "handle": "rkorganicbold",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/660ff58e76b63911e88a509c/1791570286933/",
+  "platform": "squarespace",
+  "product_id": "660ff58e76b63911e88a509c",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "freshly roasted",
+   "organic"
+  ],
+  "title": "RK Organic Bold",
+  "url": "https://www.rkroasters.com/shop-1/p/rkorganicbold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "1c4ab0fe-eaa4-4671-9041-bd21a75ee994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "29937d53-f321-4646-aa0b-4707d2ab6f38"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "4dbcafea-4f1b-4da3-9a07-b5ed908a8ea5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "878d788e-6b1b-4a14-9423-04188e4eb677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "9ca5b6c4-c918-4878-a088-cdfe66bb028d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "9fd669c2-5a21-46ec-a239-af217a02ba12"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "cf34d44b-c84f-42df-a36f-777b0f7c6ebc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "d518187d-4faa-44fd-856d-f52cd1c8938c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1511403b5c141013",
+  "first_seen": "2026-10-26",
+  "handle": "organichouseblend",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/66e2f2ab2f0e9a4dc12d04bd/1791570745776/",
+  "platform": "squarespace",
+  "product_id": "66e2f2ab2f0e9a4dc12d04bd",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [],
+  "title": "RK Organic House Blend",
+  "url": "https://www.rkroasters.com/shop-1/p/organichouseblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "1b974991-4f92-4773-b40b-05943606a06c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Coarse",
+    "variant_id": "35496ddb-4feb-488c-b69d-6bded12d5a5e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "624eb197-fd4b-4ed2-a5bf-767f87c84037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "6cd71252-5533-459a-bbc1-1a2db7bf1e8a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Coarse",
+    "variant_id": "7718d1f5-f40d-4974-bf0c-9b3d01dcb490"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "bc0a4311-4332-4ec8-95be-f60f24815bad"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "cfb1bbc8-98f3-4c6f-b19d-4bbaeecb886d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.5,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "e044140c-23d0-4db9-9a88-f7fb8f8c4c7d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e1bcd205e34fa53",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://static1.squarespace.com/static/5f29cb900512b20bd57ceea6/5f3161ec581b625c905f210a/69b05d35bff5380000ae5349/1791575753014/",
+  "platform": "squarespace",
+  "product_id": "69b05d35bff5380000ae5349",
+  "product_type": "",
+  "roaster_slug": "rkroasters",
+  "tags": [
+   "coffee",
+   "coffee bean",
+   "freshly roasted",
+   "medium-light roast",
+   "organic"
+  ],
+  "title": "Organic Kenya AA",
+  "url": "https://www.rkroasters.com/shop-1/p/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "1 lb. Bag Fine",
+    "variant_id": "247aaaec-1390-41b1-a3e4-3f7552b9d844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "1 lb. Bag Whole Bean",
+    "variant_id": "4c72fbef-3b93-4797-8a21-5e076f484221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.75,
+    "title": "5 lb. Bag Course",
+    "variant_id": "6b719008-8c13-408d-ab69-c5261cc40234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "1 lb. Bag Course",
+    "variant_id": "a49d05db-bae7-4d83-9cbf-cdf9b916de93"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.75,
+    "title": "1 lb. Bag Auto Drip",
+    "variant_id": "a6f7c837-3086-4602-a604-3666803d2b40"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.25,
+    "title": "5 lb. Bag Whole Bean",
+    "variant_id": "b2c02266-c9fb-4e6a-a40f-ca27b156e765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.75,
+    "title": "5 lb. Bag Fine",
+    "variant_id": "eccb73cb-db72-4205-9887-e74712754fd9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.25,
+    "title": "5 lb. Bag Auto Drip",
+    "variant_id": "f6cc1fbd-ef76-4e65-ab75-379fa0f65b87"
+   }
+  ],
+  "vendor": ""
+ }
+]

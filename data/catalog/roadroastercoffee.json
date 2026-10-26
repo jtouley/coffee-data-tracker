@@ -1,0 +1,1228 @@
+[
+ {
+  "body_hash": "c4e856a9757e55e4",
+  "first_seen": "2026-10-26",
+  "handle": "six-speed",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-13.png?v=1753714745",
+  "platform": "shopify",
+  "product_id": "8955506000102",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Six Speed",
+  "url": "https://roadroastercoffee.com/products/six-speed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67640245289190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Fine",
+    "variant_id": "67640245321958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "67640245354726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Medium",
+    "variant_id": "67640245387494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "67640245420262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Fine",
+    "variant_id": "67640245453030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "67640245485798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Medium",
+    "variant_id": "67640245518566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "67690815291622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Fine",
+    "variant_id": "67690815324390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Coarse",
+    "variant_id": "67690815357158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Medium",
+    "variant_id": "67690815389926"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "07b3b0273e6d5da2",
+  "first_seen": "2026-10-26",
+  "handle": "hella-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-11.png?v=1753714697",
+  "platform": "shopify",
+  "product_id": "8955513372902",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "French Roast",
+   "Hella Dark"
+  ],
+  "title": "Hella Dark",
+  "url": "https://roadroastercoffee.com/products/hella-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45748288487654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45748288520422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45748288553190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45753532580070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45753532612838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45753532645606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45753532678374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45753532743910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "67690812473574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Coarse",
+    "variant_id": "67690812506342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Medium",
+    "variant_id": "67690812539110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Fine",
+    "variant_id": "67690812571878"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e57b3dc91ce80571",
+  "first_seen": "2026-10-26",
+  "handle": "road-zombie",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-2.png?v=1753649026",
+  "platform": "shopify",
+  "product_id": "8956809904358",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "The Great Scot",
+  "url": "https://roadroastercoffee.com/products/road-zombie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46735811608806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "46735813935334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Medium",
+    "variant_id": "46735813968102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Fine",
+    "variant_id": "46735814000870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48366559690982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "48366559723750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb / Medium",
+    "variant_id": "48366559756518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5 lb / Fine",
+    "variant_id": "48366559789286"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "67690810867942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Coarse",
+    "variant_id": "67690810900710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Medium",
+    "variant_id": "67690810933478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Fine",
+    "variant_id": "67690810966246"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8eebe43d51cc4e8b",
+  "first_seen": "2026-10-26",
+  "handle": "espress-lane",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-23.png?v=1753719069",
+  "platform": "shopify",
+  "product_id": "8956811706598",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Espress Lane",
+  "url": "https://roadroastercoffee.com/products/espress-lane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45753861112038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45753861144806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45753861177574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45753861210342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45753861374182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45753861406950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45753861439718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45753861472486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "67690810474726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "67690810507494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Medium",
+    "variant_id": "67690810540262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb. / Fine",
+    "variant_id": "67690810573030"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a24548505c0165ca",
+  "first_seen": "2026-10-26",
+  "handle": "kick-ash",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-29.png?v=1753735003",
+  "platform": "shopify",
+  "product_id": "8956812361958",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kick Ash",
+  "url": "https://roadroastercoffee.com/products/kick-ash",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45753958039782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45753958072550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45753958105318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45753958138086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45753958301926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45753958334694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45753958367462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45753958400230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "67690745233638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Medium",
+    "variant_id": "67690745266406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Fine",
+    "variant_id": "67690745299174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 lb / Coarse",
+    "variant_id": "67690745331942"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3288c28cf3df0c7e",
+  "first_seen": "2026-10-26",
+  "handle": "unleaded-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-43.png?v=1753740397",
+  "platform": "shopify",
+  "product_id": "8956812820710",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Unleaded Dark",
+  "url": "https://roadroastercoffee.com/products/unleaded-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45754039501030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45754039533798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45754039566566"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45754039599334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45754039763174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45754039795942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45754039828710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45754039861478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "67690781901030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Fine",
+    "variant_id": "67690781933798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "67690781966566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Medium",
+    "variant_id": "67690781999334"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "970094731705e754",
+  "first_seen": "2026-10-26",
+  "handle": "accelerator",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-20.png?v=1753718349",
+  "platform": "shopify",
+  "product_id": "8956817244390",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Accelerator",
+  "url": "https://roadroastercoffee.com/products/accelerator",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45753922158822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45753922191590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45753922224358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45753922257126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45753922420966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45753922453734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45753922486502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45753922519270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "67690748608742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Fine",
+    "variant_id": "67690748641510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "67690748674278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Medium",
+    "variant_id": "67690748707046"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "cdf5f27237035eac",
+  "first_seen": "2026-10-26",
+  "handle": "low-octane",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-46.png?v=1753741226",
+  "platform": "shopify",
+  "product_id": "8976919101670",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Low Octane",
+  "url": "https://roadroastercoffee.com/products/low-octane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "45824308412646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "45824308445414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "45824308478182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "45824308510950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "45824308674790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "45824308707558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "45824308740326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "45824308773094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "67690746314982"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Fine",
+    "variant_id": "67690746347750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "67690746380518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb. / Medium",
+    "variant_id": "67690746413286"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9e7ec41e40604e9c",
+  "first_seen": "2026-10-26",
+  "handle": "rip-roast-packs-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/TheGreatScot-2_046c23e1-6af3-4b58-bb9e-86a004114101.png?v=1765830705",
+  "platform": "shopify",
+  "product_id": "8979785285862",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [],
+  "title": "Rip & Roast Packs (10 Pack)",
+  "url": "https://roadroastercoffee.com/products/rip-roast-packs-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 30.0,
+    "title": "Espress Lane",
+    "variant_id": "45834099065062"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 30.0,
+    "title": "Hella Dark",
+    "variant_id": "45834099097830"
+   },
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 30.0,
+    "title": "Unleaded (Decaf)",
+    "variant_id": "45930389111014"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 30.0,
+    "title": "Medium",
+    "variant_id": "67659696505062"
+   }
+  ],
+  "vendor": "Road Roaster Coffee"
+ },
+ {
+  "body_hash": "da1aaa315e655e1b",
+  "first_seen": "2026-10-26",
+  "handle": "bravo-zulu",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/46.png?v=1765833298",
+  "platform": "shopify",
+  "product_id": "9436921397478",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Bravo Zulu",
+  "url": "https://roadroastercoffee.com/products/bravo-zulu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "46724368498918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Fine",
+    "variant_id": "46724368531686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Coarse",
+    "variant_id": "46724368564454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Medium",
+    "variant_id": "46724368597222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "46724368629990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Fine",
+    "variant_id": "46724368662758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Coarse",
+    "variant_id": "46724368695526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb. / Medium",
+    "variant_id": "46724368728294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb. / Whole Bean",
+    "variant_id": "67690404118758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb. / Fine",
+    "variant_id": "67690404151526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb. / Coarse",
+    "variant_id": "67690404184294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb. / Medium",
+    "variant_id": "67690404217062"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b8b5eccf9d515881",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/DSC01013e.jpg?v=1766032146",
+  "platform": "shopify",
+  "product_id": "9584943235302",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Roasters Choice",
+  "url": "https://roadroastercoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean / Light/Medium",
+    "variant_id": "47032205770982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean / Medium/Dark",
+    "variant_id": "47032240767206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine / Light/Medium",
+    "variant_id": "47032240799974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine / Medium/Dark",
+    "variant_id": "47032240832742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse / Light/Medium",
+    "variant_id": "47032240865510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse / Medium/Dark",
+    "variant_id": "47032240898278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Medium / Light/Medium",
+    "variant_id": "47032240931046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Medium / Medium/Dark",
+    "variant_id": "47032240963814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Whole Bean / Light/Medium",
+    "variant_id": "47032240996582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Whole Bean / Medium/Dark",
+    "variant_id": "47032241029350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Fine / Light/Medium",
+    "variant_id": "47032241062118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Fine / Medium/Dark",
+    "variant_id": "47032241094886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Coarse / Light/Medium",
+    "variant_id": "47032241127654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Coarse / Medium/Dark",
+    "variant_id": "47032241160422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Medium / Light/Medium",
+    "variant_id": "47032241193190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5 Lb / Medium / Medium/Dark",
+    "variant_id": "47032241225958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Whole Bean / Light/Medium",
+    "variant_id": "67690745725158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Whole Bean / Medium/Dark",
+    "variant_id": "67690745757926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Fine / Light/Medium",
+    "variant_id": "67690745790694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Fine / Medium/Dark",
+    "variant_id": "67690745823462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Coarse / Light/Medium",
+    "variant_id": "67690745856230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Coarse / Medium/Dark",
+    "variant_id": "67690745888998"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Medium / Light/Medium",
+    "variant_id": "67690745921766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 Lb / Medium / Medium/Dark",
+    "variant_id": "67690745954534"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "369ceb0c5c354a2e",
+  "first_seen": "2026-10-26",
+  "handle": "kick-start",
+  "image": "https://cdn.shopify.com/s/files/1/0736/2710/7558/files/Untitleddesign-2.png?v=1785905939",
+  "platform": "shopify",
+  "product_id": "9806942798054",
+  "product_type": "",
+  "roaster_slug": "roadroastercoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kick Start",
+  "url": "https://roadroastercoffee.com/products/kick-start",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Medium",
+    "variant_id": "48120626086118"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "48120626118886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Fine",
+    "variant_id": "48120626151654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48120626184422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Medium",
+    "variant_id": "48120626217190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "48120626249958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Fine",
+    "variant_id": "48120626282726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48120626315494"
+   }
+  ],
+  "vendor": "Road Roaster Coffee"
+ }
+]

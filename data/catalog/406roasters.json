@@ -1,0 +1,462 @@
+[
+ {
+  "body_hash": "d2b4ec8f58f86f2d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-dark",
+  "image": null,
+  "platform": "generic",
+  "product_id": "001",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Costa Rica 12 oz",
+  "url": "https://www.406roasters.com/product-page/costa-rica-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e85c718ac0571467",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": null,
+  "platform": "generic",
+  "product_id": "002",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Papua New Guinea 12 oz",
+  "url": "https://www.406roasters.com/product-page/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c5297df08c06ac1",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": null,
+  "platform": "generic",
+  "product_id": "005",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Peru 12 oz",
+  "url": "https://www.406roasters.com/product-page/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37dff23f1681fd08",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": null,
+  "platform": "generic",
+  "product_id": "009fb6813e11",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Nicaragua 12 oz",
+  "url": "https://www.406roasters.com/product-page/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53ea53165010b705",
+  "first_seen": "2026-10-26",
+  "handle": "west-java",
+  "image": null,
+  "platform": "generic",
+  "product_id": "04d7316d3a23",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "West Java 12 oz",
+  "url": "https://www.406roasters.com/product-page/west-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f084ca07946931cb",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1ab67b1e79a0",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Honduras 5 lb",
+  "url": "https://www.406roasters.com/product-page/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc8e7ab755566eb2",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-french-roast-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "204abc7f8a47",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Costa Rica, French Roast 5 lb",
+  "url": "https://www.406roasters.com/product-page/costa-rica-french-roast-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53ea53165010b705",
+  "first_seen": "2026-10-26",
+  "handle": "west-java-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2c830090a46e",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "West Java 5 lb",
+  "url": "https://www.406roasters.com/product-page/west-java-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2aa264134a5d6be5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": null,
+  "platform": "generic",
+  "product_id": "307ebcc98221",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Brazil 12 oz",
+  "url": "https://www.406roasters.com/product-page/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "584c026bd6f989c2",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "48425fabf079",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "rwanda 5lb",
+  "url": "https://www.406roasters.com/product-page/rwanda-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2b4ec8f58f86f2d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4cbe3496057f",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Costa Rica 5 lb",
+  "url": "https://www.406roasters.com/product-page/costa-rica-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f084ca07946931cb",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5986a21a460b",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Honduras 12 oz",
+  "url": "https://www.406roasters.com/product-page/honduras-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "34f2376a234ed8b8",
+  "first_seen": "2026-10-26",
+  "handle": "congo",
+  "image": null,
+  "platform": "generic",
+  "product_id": "728b6daad37a",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Congo 12 oz",
+  "url": "https://www.406roasters.com/product-page/congo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc8e7ab755566eb2",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7880bf894b3e",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Costa Rica, French Roast 12 oz",
+  "url": "https://www.406roasters.com/product-page/costa-rica-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e85c718ac0571467",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "88a91f8b472f",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Papua New Guinea 5 lb",
+  "url": "https://www.406roasters.com/product-page/papua-new-guinea-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37dff23f1681fd08",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "af67cab108e5",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Nicaragua 5 lb",
+  "url": "https://www.406roasters.com/product-page/nicaragua-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c5297df08c06ac1",
+  "first_seen": "2026-10-26",
+  "handle": "peru-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bec1b992d018",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Peru 5 lb",
+  "url": "https://www.406roasters.com/product-page/peru-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2aa264134a5d6be5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c3e8f800e05b",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Brazil 5 lb",
+  "url": "https://www.406roasters.com/product-page/brazil-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "584c026bd6f989c2",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e5db54956e3e",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "rwanda 12 oz",
+  "url": "https://www.406roasters.com/product-page/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "34f2376a234ed8b8",
+  "first_seen": "2026-10-26",
+  "handle": "congo-5-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fac8fca17900",
+  "product_type": "",
+  "roaster_slug": "406roasters",
+  "tags": [],
+  "title": "Congo 5 lb",
+  "url": "https://www.406roasters.com/product-page/congo-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

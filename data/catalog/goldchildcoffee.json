@@ -1,0 +1,416 @@
+[
+ {
+  "body_hash": "c67fcfa741fcd91f",
+  "first_seen": "2026-10-26",
+  "handle": "guji-hambela-dabaye",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/ethiopia-sweet-marias-sibu-hambela-dabaye-7.webp?v=1790204757",
+  "platform": "shopify",
+  "product_id": "15392949108781",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Guji Hambela Dabaye",
+  "url": "https://www.goldchildcoffee.com/products/guji-hambela-dabaye",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "67575218274349"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "2cd52313c23c74c4",
+  "first_seen": "2026-10-26",
+  "handle": "reina-elizabeth",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/sweet-marias-ccosta-rica-offee-monte-brisas-11.webp?v=1790963191",
+  "platform": "shopify",
+  "product_id": "15406314258477",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Reina Elizabeth",
+  "url": "https://www.goldchildcoffee.com/products/reina-elizabeth",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "67603116687405"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "d580fbdf10f35edf",
+  "first_seen": "2026-10-26",
+  "handle": "buno-dambi-uddo",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/sweet-marias-ethiopia-coffee-buliye-buno-2_1_1.webp?v=1790965330",
+  "platform": "shopify",
+  "product_id": "15406350925869",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Buno Dambi Uddo",
+  "url": "https://www.goldchildcoffee.com/products/buno-dambi-uddo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "67603248021549"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "455432162519fa58",
+  "first_seen": "2026-10-26",
+  "handle": "kona-xf-darnall-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/sweet-marias-hawaii-coffee-kona-darnall-estate-1.webp?v=1790967162",
+  "platform": "shopify",
+  "product_id": "15406383824941",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Kona XF Darnall Estate",
+  "url": "https://www.goldchildcoffee.com/products/kona-xf-darnall-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 100,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "67604455817261"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "df75e5129a67f3d6",
+  "first_seen": "2026-10-26",
+  "handle": "aquacode-coffee-brewing-water-12-count",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_6e8c208e-eb26-47a1-9f71-84f0b4e83973.jpg?v=1792030288",
+  "platform": "shopify",
+  "product_id": "8135059865645",
+  "product_type": "Water Products",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Aquacode Coffee Brewing Water (12 Count)",
+  "url": "https://www.goldchildcoffee.com/products/aquacode-coffee-brewing-water-12-count",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "43389599350829"
+   }
+  ],
+  "vendor": "Aquacode"
+ },
+ {
+  "body_hash": "a174eca37397c6f9",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-roasting-best-practices-by-scott-rao",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_5c288f11-e5c7-4a6b-a67b-d5c08235015d.jpg?v=1767735135",
+  "platform": "shopify",
+  "product_id": "8135060521005",
+  "product_type": "Books",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Coffee Roasting: Best Practices by Scott Rao",
+  "url": "https://www.goldchildcoffee.com/products/coffee-roasting-best-practices-by-scott-rao",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "43389599973421"
+   }
+  ],
+  "vendor": "Scott Rao Coffee Books"
+ },
+ {
+  "body_hash": "3192d6b2c47c74e4",
+  "first_seen": "2026-10-26",
+  "handle": "everything-but-espresso-by-scott-rao",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_a3c90961-66cf-4131-a0e2-f3a2aa2dc47d.jpg?v=1767734400",
+  "platform": "shopify",
+  "product_id": "8135060684845",
+  "product_type": "Books",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Everything But Espresso by Scott Rao",
+  "url": "https://www.goldchildcoffee.com/products/everything-but-espresso-by-scott-rao",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "43389600202797"
+   }
+  ],
+  "vendor": "Scott Rao Coffee Books"
+ },
+ {
+  "body_hash": "c18e1ca9ac6af9a0",
+  "first_seen": "2026-10-26",
+  "handle": "perfect-coffee-water-15-count",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_0611a9f2-436e-400a-9a13-f31a125ebe0a.jpg?v=1767646286",
+  "platform": "shopify",
+  "product_id": "8135063928877",
+  "product_type": "Water Products",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Perfect Coffee Water (15 Count)",
+  "url": "https://www.goldchildcoffee.com/products/perfect-coffee-water-15-count",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "43389604790317"
+   }
+  ],
+  "vendor": "goldchildcoffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-classic-light-roast-profile-1-gallon-12-count",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_9de26a41-edf4-4c23-83be-379807dba58c.jpg?v=1766427584",
+  "platform": "shopify",
+  "product_id": "8135064617005",
+  "product_type": "Water Products",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Third Wave Water: Classic Light Roast Profile - 1 Gallon (12 count)",
+  "url": "https://www.goldchildcoffee.com/products/third-wave-water-classic-light-roast-profile-1-gallon-12-count",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "43389605838893"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-classic-light-roast-profile-2-liter-20-count",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_4b2115c5-5cba-4003-bd8b-0e350c1ad553.jpg?v=1766427586",
+  "platform": "shopify",
+  "product_id": "8135064649773",
+  "product_type": "Water Products",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Third Wave Water: Classic Light Roast Profile - 2 Liter (20 count)",
+  "url": "https://www.goldchildcoffee.com/products/third-wave-water-classic-light-roast-profile-2-liter-20-count",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "43389605904429"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "89ce249462332651",
+  "first_seen": "2026-10-26",
+  "handle": "class-reservation",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/04.15.25_Goldchild_JeffRoasting_SanDiego_CA-15.jpg?v=1769468468",
+  "platform": "shopify",
+  "product_id": "8162546810925",
+  "product_type": "Classes",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Inside the Roast: Foundations of Coffee Roasting",
+  "url": "https://www.goldchildcoffee.com/products/class-reservation",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 165.0,
+    "title": "Default Title",
+    "variant_id": "43453605642285"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "a1c5fd9acaafc91a",
+  "first_seen": "2026-10-26",
+  "handle": "luis-ernesto-guzman-anaerobic-natural-sudan-rume-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_04465afd-ce0e-4c36-a337-5591dcc70068.png?v=1781308363",
+  "platform": "shopify",
+  "product_id": "8290960179245",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Luis Ernesto Guzmán – Anaerobic Natural Sudan Rume - Colombia",
+  "url": "https://www.goldchildcoffee.com/products/luis-ernesto-guzman-anaerobic-natural-sudan-rume-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 100,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "44237543702573"
+   }
+  ],
+  "vendor": "Goldchild Coffee Roasters"
+ },
+ {
+  "body_hash": "a2b5d62e45036026",
+  "first_seen": "2026-10-26",
+  "handle": "neel-kavita-vohora-fermented-washed-gesha-tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_846856c7-89d9-4d57-a235-49a1cb02a695.png?v=1781308364",
+  "platform": "shopify",
+  "product_id": "8290966110253",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Neel & Kavita Vohora – Fermented & Washed Gesha - Tanzania",
+  "url": "https://www.goldchildcoffee.com/products/neel-kavita-vohora-fermented-washed-gesha-tanzania",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "44237552320557"
+   }
+  ],
+  "vendor": "Goldchild Coffee Roasters"
+ },
+ {
+  "body_hash": "ca93b37f17bdf30e",
+  "first_seen": "2026-10-26",
+  "handle": "marco-echeverry-anaerobic-natural-wush-wush-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_4ec6919f-127c-47b3-894c-c5b00621c5ff.png?v=1781308364",
+  "platform": "shopify",
+  "product_id": "8290975219757",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Marco Echeverry – Anaerobic Natural Wush Wush - Colombia",
+  "url": "https://www.goldchildcoffee.com/products/marco-echeverry-anaerobic-natural-wush-wush-colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "44237565394989"
+   }
+  ],
+  "vendor": "Goldchild Coffee Roasters"
+ },
+ {
+  "body_hash": "a369d35549847db1",
+  "first_seen": "2026-10-26",
+  "handle": "galo-morales-maria-alexandra-rivera-fermented-honey-sidra-ecuador",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_98d1e722-254c-467a-8dfc-acf0dcb392db.png?v=1781308365",
+  "platform": "shopify",
+  "product_id": "8290975350829",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Galo Morales & María Alexandra Rivera – Fermented Honey Sidra - Ecuador",
+  "url": "https://www.goldchildcoffee.com/products/galo-morales-maria-alexandra-rivera-fermented-honey-sidra-ecuador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "44237566869549"
+   }
+  ],
+  "vendor": "Goldchild Coffee Roasters"
+ },
+ {
+  "body_hash": "a8eb5c0aa9c2a022",
+  "first_seen": "2026-10-26",
+  "handle": "hario-ceramic-coffee-mill-skerton-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_b36426e0-4ef9-4e81-90c7-42907e09b733.jpg?v=1767134917",
+  "platform": "shopify",
+  "product_id": "8353736982573",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "Hario Ceramic Coffee Mill Skerton Plus",
+  "url": "https://www.goldchildcoffee.com/products/hario-ceramic-coffee-mill-skerton-plus",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "Default Title",
+    "variant_id": "44425452322861"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "c0bddf9e616926f9",
+  "first_seen": "2026-10-26",
+  "handle": "the-physics-of-espresso-by-jonathan-gagne",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_0faaef49-b793-4f89-925e-86791fd4af56.jpg?v=1792030299",
+  "platform": "shopify",
+  "product_id": "8355507535917",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "The Physics of Espresso by Jonathan Gagné",
+  "url": "https://www.goldchildcoffee.com/products/the-physics-of-espresso-by-jonathan-gagne",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "44429220249645"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ },
+ {
+  "body_hash": "8e91a9bc1262bbbb",
+  "first_seen": "2026-10-26",
+  "handle": "the-coffee-roaster-s-companion-by-scott-rao",
+  "image": "https://cdn.shopify.com/s/files/1/0675/4461/2909/files/original_fa397cee-59be-4908-9d2f-fe86e180fc15.jpg?v=1792030301",
+  "platform": "shopify",
+  "product_id": "8355508518957",
+  "product_type": "",
+  "roaster_slug": "goldchildcoffee",
+  "tags": [],
+  "title": "The Coffee Roaster’s Companion by Scott Rao",
+  "url": "https://www.goldchildcoffee.com/products/the-coffee-roaster-s-companion-by-scott-rao",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "44429221527597"
+   }
+  ],
+  "vendor": "Goldchild Coffee"
+ }
+]

@@ -1,0 +1,164 @@
+[
+ {
+  "body_hash": "f4587d3719ad48c8",
+  "first_seen": "2026-10-26",
+  "handle": "the-hillsdale-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0664/7588/4696/files/IMG_2472.jpg?v=1736223252",
+  "platform": "shopify",
+  "product_id": "8446592975000",
+  "product_type": "",
+  "roaster_slug": "adastraroasters",
+  "tags": [],
+  "title": "The Hillsdale Blend",
+  "url": "https://adastraroasters.com/products/the-hillsdale-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz",
+    "variant_id": "45290248765592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 LB",
+    "variant_id": "45290248798360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 LB",
+    "variant_id": "45290248831128"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "12 K-Cups",
+    "variant_id": "49633894432920"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.0,
+    "title": "1 K-Cup",
+    "variant_id": "49633894465688"
+   }
+  ],
+  "vendor": "Ad Astra Roasters"
+ },
+ {
+  "body_hash": "ec19eb28c35806f4",
+  "first_seen": "2026-10-26",
+  "handle": "the-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0664/7588/4696/files/IMG_2467.jpg?v=1736223296",
+  "platform": "shopify",
+  "product_id": "8446598709400",
+  "product_type": "",
+  "roaster_slug": "adastraroasters",
+  "tags": [],
+  "title": "The Decaf",
+  "url": "https://adastraroasters.com/products/the-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz",
+    "variant_id": "45290271932568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 LB",
+    "variant_id": "45290271965336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 LB",
+    "variant_id": "45290271998104"
+   }
+  ],
+  "vendor": "Ad Astra Roasters"
+ },
+ {
+  "body_hash": "4ebc9e91d084488e",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0664/7588/4696/files/AD_ASTRA_SELECT_S.png?v=1729822370",
+  "platform": "shopify",
+  "product_id": "8454710755480",
+  "product_type": "",
+  "roaster_slug": "adastraroasters",
+  "tags": [],
+  "title": "Roasters Choice",
+  "url": "https://adastraroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8 oz",
+    "variant_id": "45323933712536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 LB",
+    "variant_id": "45323933745304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5 LB",
+    "variant_id": "45323933778072"
+   }
+  ],
+  "vendor": "Ad Astra Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "the-teddy-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0664/7588/4696/files/Add_a_subheading_4.png?v=1741116052",
+  "platform": "shopify",
+  "product_id": "8650476552344",
+  "product_type": "",
+  "roaster_slug": "adastraroasters",
+  "tags": [],
+  "title": "The Teddy Roast - Organic",
+  "url": "https://adastraroasters.com/products/the-teddy-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz",
+    "variant_id": "46264673239192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 LB",
+    "variant_id": "46264673271960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lB",
+    "variant_id": "46264673304728"
+   }
+  ],
+  "vendor": "Ad Astra Roasters"
+ }
+]

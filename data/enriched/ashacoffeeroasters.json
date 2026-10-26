@@ -1,0 +1,60 @@
+{
+ "69c945e11f9b82115ded2d52": {
+  "body_hash": "88869807f8757da2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bittersweet chocolate",
+   "brown butter",
+   "dark fruit"
+  ],
+  "varietals": []
+ },
+ "6a5ffd51b545114fe3879372": {
+  "body_hash": "572e8460cf293064",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "baked cookies",
+   "apple pastry",
+   "soft caramel"
+  ],
+  "varietals": []
+ },
+ "6ac6b61dae48757ac41b2ec9": {
+  "body_hash": "78fbd68cd99208eb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "warm honey",
+   "macadamia",
+   "cocoa",
+   "sunshine"
+  ],
+  "varietals": []
+ }
+}

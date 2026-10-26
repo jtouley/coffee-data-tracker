@@ -1,0 +1,119 @@
+{
+ "387496015": {
+  "body_hash": "50e7fcbc63b58e18",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "white peach",
+   "meringue",
+   "lemon blossom"
+  ],
+  "varietals": []
+ },
+ "4734685053037": {
+  "body_hash": "9898368af174342a",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "papaya",
+   "candied lemon",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "6793824633028": {
+  "body_hash": "e1fa701f9514a1ea",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "butterscotch",
+   "cedar",
+   "dark chocolate"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Typica"
+  ]
+ },
+ "7296518291652": {
+  "body_hash": "2bf4d5aa136c92ae",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fig",
+   "baker's chocolate",
+   "butter cookie"
+  ],
+  "varietals": []
+ },
+ "7296521797828": {
+  "body_hash": "7769b809ada920f8",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "key lime pie",
+   "macadamia",
+   "dark chocolate"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai"
+  ]
+ },
+ "8449083605188": {
+  "body_hash": "f824953344e03ba9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

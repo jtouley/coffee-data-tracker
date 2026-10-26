@@ -1,0 +1,112 @@
+[
+ {
+  "body_hash": "66e1d5a940550ef5",
+  "first_seen": "2026-10-26",
+  "handle": "variety-bundle-4-x-12oz-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0783/9249/2084/files/3.png?v=1791044960",
+  "platform": "shopify",
+  "product_id": "15400153415732",
+  "product_type": "Coffee",
+  "roaster_slug": "shotgunhouseroasters",
+  "tags": [
+   "bundle",
+   "coffee"
+  ],
+  "title": "De Tres - 3 x 12oz bags",
+  "url": "https://muralroasters.com/products/variety-bundle-4-x-12oz-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "67611016233012"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "Drip",
+    "variant_id": "67611016265780"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "French Press",
+    "variant_id": "67611016298548"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "Espresso",
+    "variant_id": "67611016331316"
+   }
+  ],
+  "vendor": "Mural Roasters"
+ },
+ {
+  "body_hash": "fd07f7c554962bb3",
+  "first_seen": "2026-10-26",
+  "handle": "mural-coffee-club",
+  "image": "https://cdn.shopify.com/s/files/1/0783/9249/2084/files/1000018389.jpg?v=1791044964",
+  "platform": "shopify",
+  "product_id": "15400153579572",
+  "product_type": "Coffee",
+  "roaster_slug": "shotgunhouseroasters",
+  "tags": [
+   "coffee",
+   "subscription"
+  ],
+  "title": "Mural Coffee Club",
+  "url": "https://muralroasters.com/products/mural-coffee-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "1",
+    "variant_id": "67611017019444"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.0,
+    "title": "2",
+    "variant_id": "67611017052212"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 46.0,
+    "title": "3",
+    "variant_id": "67611017084980"
+   }
+  ],
+  "vendor": "Mural Roasters"
+ },
+ {
+  "body_hash": "2c668bf0d9274ecf",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-washed",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15431785971764",
+  "product_type": "",
+  "roaster_slug": "shotgunhouseroasters",
+  "tags": [],
+  "title": "Mexico Chiapas Washed",
+  "url": "https://muralroasters.com/products/mexico-chiapas-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "67795553878068"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

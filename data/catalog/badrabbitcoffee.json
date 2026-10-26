@@ -1,0 +1,158 @@
+[
+ {
+  "body_hash": "bbc3618c708a75ff",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo",
+  "image": "https://badrabbitcoffee.com/wp-content/uploads/2025/11/brazil.png",
+  "platform": "woocommerce",
+  "product_id": "1229",
+  "product_type": "variable",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Bulk Coffee &amp; Tea",
+   "Medium Roast"
+  ],
+  "title": "Brazil Salmo",
+  "url": "https://badrabbitcoffee.com/product/brazil-salmo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Brazil Salmo",
+    "variant_id": "1229:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a4aa769b6561386",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenago",
+  "image": "https://badrabbitcoffee.com/wp-content/uploads/2025/11/guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "1234",
+  "product_type": "variable",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Bulk Coffee &amp; Tea",
+   "Medium Roast"
+  ],
+  "title": "Guatemala Huehuetenago",
+  "url": "https://badrabbitcoffee.com/product/guatemala-huehuetenago/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Guatemala Huehuetenago",
+    "variant_id": "1234:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11bb2e50710f2c0f",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://badrabbitcoffee.com/wp-content/uploads/2025/11/indonesia.png",
+  "platform": "woocommerce",
+  "product_id": "1241",
+  "product_type": "variable",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Bulk Coffee &amp; Tea",
+   "Dark &amp; Espresso Roast"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://badrabbitcoffee.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Sumatra Mandheling",
+    "variant_id": "1241:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bad-rabbit-espresso-roast",
+  "image": "https://badrabbitcoffee.com/wp-content/uploads/2025/11/espresso.png",
+  "platform": "woocommerce",
+  "product_id": "1253",
+  "product_type": "variable",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Bulk Coffee &amp; Tea",
+   "Dark &amp; Espresso Roast"
+  ],
+  "title": "Bad Rabbit Espresso Roast",
+  "url": "https://badrabbitcoffee.com/product/bad-rabbit-espresso-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Bad Rabbit Espresso Roast",
+    "variant_id": "1253:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dde82986cd13f0f8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru-amazonas",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1291",
+  "product_type": "variable",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Bulk Coffee &amp; Tea",
+   "Dark &amp; Espresso Roast"
+  ],
+  "title": "Decaf Peru Amazonas",
+  "url": "https://badrabbitcoffee.com/product/decaf-peru-amazonas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Decaf Peru Amazonas",
+    "variant_id": "1291:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "2025-crooked",
+  "image": "https://badrabbitcoffee.com/wp-content/uploads/2025/12/IMG_20251219_125042.jpg",
+  "platform": "woocommerce",
+  "product_id": "1484",
+  "product_type": "simple",
+  "roaster_slug": "badrabbitcoffee",
+  "tags": [
+   "Barrel Aged &amp; Specialty Roasts",
+   "Bulk Coffee &amp; Tea"
+  ],
+  "title": "2025 Crooked Creek Straight Bourbon",
+  "url": "https://badrabbitcoffee.com/product/2025-crooked/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "2025 Crooked Creek Straight Bourbon",
+    "variant_id": "1484:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

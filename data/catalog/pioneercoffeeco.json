@@ -1,0 +1,500 @@
+[
+ {
+  "body_hash": "daef1a0b55692445",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans-2",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2023/10/choc-beans-1024x1024_New.jpg",
+  "platform": "woocommerce",
+  "product_id": "6131",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "PRODUCTS"
+  ],
+  "title": "Chocolate Covered Espresso Beans",
+  "url": "https://pioneercoffeeco.com/product/chocolate-covered-espresso-beans-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.5,
+    "title": "6 oz",
+    "variant_id": "6131:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.5,
+    "title": "16 oz",
+    "variant_id": "6131:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b4f6f9792447474",
+  "first_seen": "2026-10-26",
+  "handle": "1900-medium-bravo-dog-patriot-coffee",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6790",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "1900 Medium | BRAVO DOG 1900",
+  "url": "https://pioneercoffeeco.com/product/1900-medium-bravo-dog-patriot-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz.",
+    "variant_id": "6790:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 pound",
+    "variant_id": "6790:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac67f17c17694292",
+  "first_seen": "2026-10-26",
+  "handle": "caffe-vivante-dark-k9-bravo-dog-dark",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6795",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "Caffe Vivante Dark | BRAVO DOG DARK ROAST",
+  "url": "https://pioneercoffeeco.com/product/caffe-vivante-dark-k9-bravo-dog-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz.",
+    "variant_id": "6795:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 lbs.",
+    "variant_id": "6795:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28e7f6d30c04a421",
+  "first_seen": "2026-10-26",
+  "handle": "la-mattina-sumatra-medium-k9-bravo-dog-rescue-roast",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6807",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "La Mattina Sumatra Medium | BRAVO DOG SUMMIT RECON ROAST",
+  "url": "https://pioneercoffeeco.com/product/la-mattina-sumatra-medium-k9-bravo-dog-rescue-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz.",
+    "variant_id": "6807:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 lbs.",
+    "variant_id": "6807:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42cc6a0c60cd893c",
+  "first_seen": "2026-10-26",
+  "handle": "snoqualmie-breakfast-medium-and-dark-dog-bravo-coffee",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6839",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "Snoqualmie Breakfast Medium and Dark | BRAVO DOG COFFEE | SCOUT BLEND FIRST TO RISE / FIRST TO SERVE",
+  "url": "https://pioneercoffeeco.com/product/snoqualmie-breakfast-medium-and-dark-dog-bravo-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 oz.",
+    "variant_id": "6839:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5 lbs.",
+    "variant_id": "6839:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "05f88d7541e2a254",
+  "first_seen": "2026-10-26",
+  "handle": "white-lightning-ground-white-coffee-16-oz-bravo-dog-coffee",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6852",
+  "product_type": "simple",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "White Lightning (Ground White Coffee) 16 oz | BRAVO DOG COFFEE",
+  "url": "https://pioneercoffeeco.com/product/white-lightning-ground-white-coffee-16-oz-bravo-dog-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "White Lightning (Ground White Coffee) 16 oz | BRAVO DOG COFFEE",
+    "variant_id": "6852:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "01056c644e2a7912",
+  "first_seen": "2026-10-26",
+  "handle": "bravissimo-decaf-swiss-water-bravo-dog-zero-bark-decaf",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2025/11/BRAVO-DOG-COFFEE-BAG-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "6856",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "Bravo Dog Coffee"
+  ],
+  "title": "Bravissimo Decaf Swiss Water | BRAVO DOG ZERO BARK DECAF",
+  "url": "https://pioneercoffeeco.com/product/bravissimo-decaf-swiss-water-bravo-dog-zero-bark-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz.",
+    "variant_id": "6856:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5 lbs.",
+    "variant_id": "6856:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e2abe84fed70150",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2026/05/11872.jpg",
+  "platform": "woocommerce",
+  "product_id": "7260",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Espresso – AKB One-Time",
+  "url": "https://pioneercoffeeco.com/product/espresso-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "1 lb.",
+    "variant_id": "7260:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7260:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32c930981b3c5938",
+  "first_seen": "2026-10-26",
+  "handle": "bravissimo-decaf-swiss-water-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2026/05/11879.jpg",
+  "platform": "woocommerce",
+  "product_id": "7270",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Bravissimo Decaf Swiss Water – AKB One Time",
+  "url": "https://pioneercoffeeco.com/product/bravissimo-decaf-swiss-water-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1 lb.",
+    "variant_id": "7270:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lbs.",
+    "variant_id": "7270:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fab36c2b2881ae4a",
+  "first_seen": "2026-10-26",
+  "handle": "caffe-vivante-dark-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2026/05/11878.jpg",
+  "platform": "woocommerce",
+  "product_id": "7638",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Caffe Vivante Dark-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/caffe-vivante-dark-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7638:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7638:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4bed6e334e664602",
+  "first_seen": "2026-10-26",
+  "handle": "1900-medium-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2026/05/11871.jpg",
+  "platform": "woocommerce",
+  "product_id": "7682",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "1900 Medium-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/1900-medium-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7682:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 pound",
+    "variant_id": "7682:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42cc6a0c60cd893c",
+  "first_seen": "2026-10-26",
+  "handle": "snoqualmie-breakfast-medium-and-dark-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2026/05/11877.jpg",
+  "platform": "woocommerce",
+  "product_id": "7693",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Snoqualmie Breakfast Medium and Dark-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/snoqualmie-breakfast-medium-and-dark-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7693:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7693:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4bed6e334e664602",
+  "first_seen": "2026-10-26",
+  "handle": "summit-medium-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2022/07/PC-Summit-Coffee-Photo.jpg",
+  "platform": "woocommerce",
+  "product_id": "7717",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Summit Medium-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/summit-medium-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7717:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7717:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5684efd073fd456f",
+  "first_seen": "2026-10-26",
+  "handle": "town-central-light-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2022/07/PC-Town-Central-Coffee-Photo.jpg",
+  "platform": "woocommerce",
+  "product_id": "7725",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "Town Central Light-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/town-central-light-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7725:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7725:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4238b817d54bbf33",
+  "first_seen": "2026-10-26",
+  "handle": "la-mattina-sumatra-medium-akb-one-time",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2022/07/PC-La-Mattina-Coffee-Photo.jpg",
+  "platform": "woocommerce",
+  "product_id": "7765",
+  "product_type": "variable",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "La Mattina Sumatra Medium-AKB-One Time",
+  "url": "https://pioneercoffeeco.com/product/la-mattina-sumatra-medium-akb-one-time/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "7765:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lbs.",
+    "variant_id": "7765:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8b6226247345786",
+  "first_seen": "2026-10-26",
+  "handle": "white-lightning-ground-white-coffee-16-oz-akb-monthly-subscription",
+  "image": "https://pioneercoffeeco.com/wp-content/uploads/2022/07/image00001.jpeg",
+  "platform": "woocommerce",
+  "product_id": "7790",
+  "product_type": "simple",
+  "roaster_slug": "pioneercoffeeco",
+  "tags": [
+   "AKB"
+  ],
+  "title": "White Lightning (Ground White Coffee) 16 oz – AKB – One Time",
+  "url": "https://pioneercoffeeco.com/product/white-lightning-ground-white-coffee-16-oz-akb-monthly-subscription/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "White Lightning (Ground White Coffee) 16 oz &#8211;  AKB &#8211; One Time",
+    "variant_id": "7790:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

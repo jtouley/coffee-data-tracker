@@ -1,0 +1,955 @@
+[
+ {
+  "body_hash": "b5bea0e968d35fc7",
+  "first_seen": "2026-10-26",
+  "handle": "black-wolf-blend",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "11339",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black Wolf Blend",
+  "url": "https://heritagecoffee.com/product/black-wolf-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "11339:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "11339:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e323b13489d7206",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1327",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://heritagecoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "1327:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "1327:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "677c1777ace47e69",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1334",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica",
+  "url": "https://heritagecoffee.com/product/costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "1334:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "1334:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8dd2cdea2666c543",
+  "first_seen": "2026-10-26",
+  "handle": "dark-colombia-2",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1337",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dark Colombia",
+  "url": "https://heritagecoffee.com/product/dark-colombia-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "1337:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "1337:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f19e4b4aa091ddf",
+  "first_seen": "2026-10-26",
+  "handle": "dark-sumatra-2",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1340",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dark Sumatra",
+  "url": "https://heritagecoffee.com/product/dark-sumatra-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12oz",
+    "variant_id": "1340:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.75,
+    "title": "5lb",
+    "variant_id": "1340:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27e09977c6e208d9",
+  "first_seen": "2026-10-26",
+  "handle": "organic-nicaragua",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1344",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Nicaragua",
+  "url": "https://heritagecoffee.com/product/organic-nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12oz",
+    "variant_id": "1344:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.75,
+    "title": "5lb",
+    "variant_id": "1344:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4607fea9f40c9a18",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1363",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "French Vanilla",
+  "url": "https://heritagecoffee.com/product/french-vanilla/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1363:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "1363:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ee8ba1edbccd9d72",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-creme",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1366",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Hazelnut Creme",
+  "url": "https://heritagecoffee.com/product/hazelnut-creme/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1366:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "1366:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2bfc06667e2729ae",
+  "first_seen": "2026-10-26",
+  "handle": "heavenly-delight",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1369",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Heavenly Delight",
+  "url": "https://heritagecoffee.com/product/heavenly-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1369:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "1369:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e988f25d9bc3b211",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-coconut",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1372",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Toasted Coconut",
+  "url": "https://heritagecoffee.com/product/toasted-coconut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1372:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "1372:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27b7de26650a974a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-heavenly-delight",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1375",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Heavenly Delight",
+  "url": "https://heritagecoffee.com/product/decaf-heavenly-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "12oz",
+    "variant_id": "1375:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.25,
+    "title": "5lb",
+    "variant_id": "1375:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbce64e9297f7451",
+  "first_seen": "2026-10-26",
+  "handle": "klondike-blend-2",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "1378",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Klondike Blend",
+  "url": "https://heritagecoffee.com/product/klondike-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "1378:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "1378:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c4477dccaad5a6a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-minita",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "5578",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica La Minita",
+  "url": "https://heritagecoffee.com/product/costa-rica-la-minita/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz",
+    "variant_id": "5578:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "5lb",
+    "variant_id": "5578:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "579312b3ac0a820e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-dark-sumatra",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "699",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Dark Sumatra",
+  "url": "https://heritagecoffee.com/product/organic-dark-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "699:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "699:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9a95ff0a50021b1c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "700",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic French Roast",
+  "url": "https://heritagecoffee.com/product/organic-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12oz",
+    "variant_id": "700:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.75,
+    "title": "5lb",
+    "variant_id": "700:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4ccc14c87ee0d50",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "701",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Organic Guatemala",
+  "url": "https://heritagecoffee.com/product/organic-guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12oz",
+    "variant_id": "701:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.75,
+    "title": "5lb",
+    "variant_id": "701:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "439cd23c6fb14bed",
+  "first_seen": "2026-10-26",
+  "handle": "black-gold",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "703",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black Gold",
+  "url": "https://heritagecoffee.com/product/black-gold/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz",
+    "variant_id": "703:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5 lb",
+    "variant_id": "703:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6caf4ae62ea51d36",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "704",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://heritagecoffee.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "704:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "704:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "116bfd08024d426c",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-espresso-2",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "705",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Cafe Espresso",
+  "url": "https://heritagecoffee.com/product/cafe-espresso-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.25,
+    "title": "12oz",
+    "variant_id": "705:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.25,
+    "title": "5lb",
+    "variant_id": "705:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e3dfa01384205e9",
+  "first_seen": "2026-10-26",
+  "handle": "dark-sumatra",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "708",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://heritagecoffee.com/product/dark-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "12oz",
+    "variant_id": "708:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.75,
+    "title": "5lb",
+    "variant_id": "708:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "086f5424b2052fd7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "709",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://heritagecoffee.com/product/decaf-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "709:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "709:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "566f47df604aaf9e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "710",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://heritagecoffee.com/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "710:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "710:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6501161d89e62116",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "711",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf House Blend",
+  "url": "https://heritagecoffee.com/product/decaf-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "711:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "711:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd4acdedea91c14e",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "716",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "French Roast",
+  "url": "https://heritagecoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "716:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "716:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7993098338ac4be",
+  "first_seen": "2026-10-26",
+  "handle": "heritage-house",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "717",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Heritage House",
+  "url": "https://heritagecoffee.com/product/heritage-house/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "717:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "717:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dac6bad51873e28d",
+  "first_seen": "2026-10-26",
+  "handle": "klondike-blend",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "718",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Lodge Blend",
+  "url": "https://heritagecoffee.com/product/klondike-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "718:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "718:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca0d15d8c15943ea",
+  "first_seen": "2026-10-26",
+  "handle": "aurora-borealis-blend-3",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "719",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Aurora Borealis Blend",
+  "url": "https://heritagecoffee.com/product/aurora-borealis-blend-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "719:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "719:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5621e4ff85c29603",
+  "first_seen": "2026-10-26",
+  "handle": "northwest-espresso",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "720",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Northwest Espresso",
+  "url": "https://heritagecoffee.com/product/northwest-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "720:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "720:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "caa875e5799c2c81",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://heritagecoffee.com/wp-content/uploads/New-Bag1-1350-test.jpg",
+  "platform": "woocommerce",
+  "product_id": "806",
+  "product_type": "variable",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://heritagecoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "806:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lb",
+    "variant_id": "806:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d1c3f151dcc3e85",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-canister",
+  "image": "https://heritagecoffee.com/wp-content/uploads/Canister.png",
+  "platform": "woocommerce",
+  "product_id": "809",
+  "product_type": "simple",
+  "roaster_slug": "heritagecoffee",
+  "tags": [
+   "Coffee Accessories"
+  ],
+  "title": "Coffee Canister",
+  "url": "https://heritagecoffee.com/product/coffee-canister/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Coffee Canister",
+    "variant_id": "809:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

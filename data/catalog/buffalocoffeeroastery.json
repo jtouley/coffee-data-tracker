@@ -1,0 +1,1060 @@
+[
+ {
+  "body_hash": "6b00fcb08a4172ae",
+  "first_seen": "2026-10-26",
+  "handle": "mushroom-infused-coffee",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2021/02/IMG_1446.jpg",
+  "platform": "woocommerce",
+  "product_id": "10122",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Mushroom Infused Coffee"
+  ],
+  "title": "Mushroom Infused Coffee",
+  "url": "https://www.buffalocoffeeroastery.com/shop/mushroom-infused-coffee/mushroom-infused-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.5,
+    "title": ".5 lb",
+    "variant_id": "10122:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb",
+    "variant_id": "10122:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9620f05de791309",
+  "first_seen": "2026-10-26",
+  "handle": "roma-splendide-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Roma_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1050",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Roma Splendide Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/roma-splendide-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "1 lb",
+    "variant_id": "1050:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.5,
+    "title": "2 lbs",
+    "variant_id": "1050:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bece5f858669be39",
+  "first_seen": "2026-10-26",
+  "handle": "classico-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Classico_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1053",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Classico Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/classico-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1053:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1053:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "673176dc291327dd",
+  "first_seen": "2026-10-26",
+  "handle": "vittoria-primo-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Vittoria_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1056",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Vittoria Primo Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/vittoria-primo-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "1 lb",
+    "variant_id": "1056:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.5,
+    "title": "2 lbs",
+    "variant_id": "1056:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "684b64f4d93fbfa2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Sumatra_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1059",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Sumatra Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/sumatra-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lb",
+    "variant_id": "1059:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lbs",
+    "variant_id": "1059:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f33adb3c775f8116",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Colombian_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1062",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombian Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/colombian-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1062:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1062:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a82ff23beff53a1",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/MochaJava_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1065",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Mocha Java Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/mocha-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "1065:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.5,
+    "title": "2 lbs",
+    "variant_id": "1065:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b8df3161dd62de9c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/French_D.gif",
+  "platform": "woocommerce",
+  "product_id": "1068",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "French Roast Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/french-roast-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1068:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1068:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "71044deda87890f0",
+  "first_seen": "2026-10-26",
+  "handle": "honduran",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Honduran.gif",
+  "platform": "woocommerce",
+  "product_id": "1071",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Honduran",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/honduran/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1071:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1071:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44e81e7cde5df951",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Nicaraguan.gif",
+  "platform": "woocommerce",
+  "product_id": "1077",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Nicaraguan",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/nicaraguan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1077:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1077:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4343097f3a42d198",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Tanzanian.gif",
+  "platform": "woocommerce",
+  "product_id": "1080",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Tanzanian Peaberry",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/ethiopian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1080:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1080:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9f1c85b0245b9d47",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/09/Sumatra.gif",
+  "platform": "woocommerce",
+  "product_id": "1083",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1083:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1083:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "77cf52be7f1ee08b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/BrazilSantos.gif",
+  "platform": "woocommerce",
+  "product_id": "1086",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Brazil Santos",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/brazil-santos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1086:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1086:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1bb2d39f6be8047",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/CostaRican.gif",
+  "platform": "woocommerce",
+  "product_id": "1089",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Costa Rican",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/costa-rican/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1089:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1089:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9342093e0fe903ec",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/ColSupremo.gif",
+  "platform": "woocommerce",
+  "product_id": "1092",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1092:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1092:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c03a03f9343746af",
+  "first_seen": "2026-10-26",
+  "handle": "roma-splendide",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/Roma.gif",
+  "platform": "woocommerce",
+  "product_id": "1098",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Roma Splendide",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/roma-splendide/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1 lb",
+    "variant_id": "1098:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2 lbs",
+    "variant_id": "1098:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f24f5b6c5d8e66b7",
+  "first_seen": "2026-10-26",
+  "handle": "plantation-blend",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/Plantation.gif",
+  "platform": "woocommerce",
+  "product_id": "1101",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Plantation Blend",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/plantation-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1101:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1101:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a70c89d8a3f6e5ec",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/MochaJava.gif",
+  "platform": "woocommerce",
+  "product_id": "1104",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Mocha Java",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/mocha-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1104:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1104:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "22e03804b451b132",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/FrenchRoast.gif",
+  "platform": "woocommerce",
+  "product_id": "1107",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "French Roast",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1107:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1107:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e66a5b252776a63",
+  "first_seen": "2026-10-26",
+  "handle": "classico",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/Classico.gif",
+  "platform": "woocommerce",
+  "product_id": "1110",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Classico",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/classico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1110:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1110:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebf315ad8b723f52",
+  "first_seen": "2026-10-26",
+  "handle": "vittoria-primo",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/Vittoria.gif",
+  "platform": "woocommerce",
+  "product_id": "1116",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Vittoria Primo",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/vittoria-primo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.5,
+    "title": "1 lb",
+    "variant_id": "1116:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "2 lbs",
+    "variant_id": "1116:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a145a41be16a1c37",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/04/Espresso.gif",
+  "platform": "woocommerce",
+  "product_id": "1119",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Dark Roasts and Blends"
+  ],
+  "title": "Espresso",
+  "url": "https://www.buffalocoffeeroastery.com/shop/dark-roasts-and-blends/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1119:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1119:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a94e7606b56a18a4",
+  "first_seen": "2026-10-26",
+  "handle": "winter-wonderland",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Winter.gif",
+  "platform": "woocommerce",
+  "product_id": "1122",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Winter Wonderland",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/winter-wonderland/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1122:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1122:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f8ca29f19138682",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-pecan-torte",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Bourbon.gif",
+  "platform": "woocommerce",
+  "product_id": "1125",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Bourbon Pecan Torte",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/bourbon-pecan-torte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1125:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1125:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0458bb99d573c23c",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/HazelCinn.gif",
+  "platform": "woocommerce",
+  "product_id": "1128",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/cinnamon-hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1128:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1128:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37ba4e3e73abb85e",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-smooth",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/HazelSmooth.gif",
+  "platform": "woocommerce",
+  "product_id": "1131",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Hazelnut Smooth",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/hazelnut-smooth/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1131:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1131:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "711df79ad12014c2",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-almond",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/VanNutCream.gif",
+  "platform": "woocommerce",
+  "product_id": "1134",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Vanilla Nut Cream",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/vanilla-almond/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1134:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1134:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b6bae0039fa28c7",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/EngToffee.gif",
+  "platform": "woocommerce",
+  "product_id": "1140",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "English Toffee",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/english-toffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1140:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1140:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a4f87d58c24f599",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-2",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2012/05/Ethiopian.gif",
+  "platform": "woocommerce",
+  "product_id": "1143",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World"
+  ],
+  "title": "Ethiopian",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/ethiopian-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1 lb",
+    "variant_id": "1143:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "2 lbs",
+    "variant_id": "1143:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54d643c9d8ff144f",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pie",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2019/02/PumkinPie.png",
+  "platform": "woocommerce",
+  "product_id": "1972",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Pumpkin Pie",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/pumpkin-pie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1972:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1972:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ad27a5e239344a0",
+  "first_seen": "2026-10-26",
+  "handle": "sea-salt-caramel-mocha",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2019/02/SS_Mocha.png",
+  "platform": "woocommerce",
+  "product_id": "1975",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Sea Salt Caramel Mocha",
+  "url": "https://www.buffalocoffeeroastery.com/shop/flavored/sea-salt-caramel-mocha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1975:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1975:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1cafde18b23c67b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexican-decaf",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2019/02/MexicanDecaf.png",
+  "platform": "woocommerce",
+  "product_id": "1979",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Decaf",
+   "Organic"
+  ],
+  "title": "Organic Mexican Decaf",
+  "url": "https://www.buffalocoffeeroastery.com/shop/decaf/organic-mexican-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lb",
+    "variant_id": "1979:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "2 lbs",
+    "variant_id": "1979:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac0ef3b734e0bbd3",
+  "first_seen": "2026-10-26",
+  "handle": "organic",
+  "image": "https://www.buffalocoffeeroastery.com/wp-content/uploads/2019/02/Organic.png",
+  "platform": "woocommerce",
+  "product_id": "1983",
+  "product_type": "variable",
+  "roaster_slug": "buffalocoffeeroastery",
+  "tags": [
+   "Coffees of the World",
+   "Organic"
+  ],
+  "title": "Organic",
+  "url": "https://www.buffalocoffeeroastery.com/shop/coffees-of-the-world/organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb",
+    "variant_id": "1983:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "2 lbs",
+    "variant_id": "1983:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

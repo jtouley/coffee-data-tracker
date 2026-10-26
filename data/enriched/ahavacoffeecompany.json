@@ -1,0 +1,160 @@
+{
+ "10312829567195": {
+  "body_hash": "02b91673aed23528",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry",
+   "grapefruit",
+   "hibiscus"
+  ],
+  "varietals": []
+ },
+ "8505516097755": {
+  "body_hash": "b5b7bdc744a7306c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "toffee",
+   "baked apple"
+  ],
+  "varietals": []
+ },
+ "8753853432027": {
+  "body_hash": "8bbc7fed620be170",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "nougat",
+   "apricot"
+  ],
+  "varietals": []
+ },
+ "8753854349531": {
+  "body_hash": "35a6145fb43a9a4f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cedar",
+   "allspice",
+   "nutmeg"
+  ],
+  "varietals": []
+ },
+ "8753866932443": {
+  "body_hash": "d95920cd4576cb23",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "baking spice",
+   "rich",
+   "earthy",
+   "smoky"
+  ],
+  "varietals": []
+ },
+ "8757729755355": {
+  "body_hash": "1637778e8d049e6f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry",
+   "peach",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "8758127395035": {
+  "body_hash": "7fb6fd43dea9c87a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "soft white peach",
+   "baker's chocolate"
+  ],
+  "varietals": []
+ },
+ "9427581370587": {
+  "body_hash": "8b0260cb649f96d9",
+  "elevation_masl_max": 1758,
+  "elevation_masl_min": 1758,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "cacao",
+   "apple"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Gesha"
+  ]
+ }
+}

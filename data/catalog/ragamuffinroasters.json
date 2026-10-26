@@ -1,0 +1,572 @@
+[
+ {
+  "body_hash": "c3a9a3da62876f99",
+  "first_seen": "2026-10-26",
+  "handle": "better-day-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/BETTERDAYESPRESSO.png?v=1778867162",
+  "platform": "shopify",
+  "product_id": "10025172336914",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "espresso",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Better Day - Espresso",
+  "url": "https://ragamuffinroasters.com/products/better-day-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz Bag",
+    "variant_id": "50892484215058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.2,
+    "title": "5 lb Bag",
+    "variant_id": "50892484247826"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "fd5b8c5f944b4595",
+  "first_seen": "2026-10-26",
+  "handle": "lunar-carrying-case",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/LunarCarryingCase_01.jpg?v=1764736474",
+  "platform": "shopify",
+  "product_id": "10262984556818",
+  "product_type": "",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Shopify Collective",
+   "acaia"
+  ],
+  "title": "Lunar Carrying Case",
+  "url": "https://ragamuffinroasters.com/products/lunar-carrying-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "51763896680722"
+   }
+  ],
+  "vendor": "acaia"
+ },
+ {
+  "body_hash": "95bffd60b931d09c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-de-dios-anaerobic",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/GUATEMALAFINCADEDIOSANAEROBIC_TEXT.png?v=1786663504",
+  "platform": "shopify",
+  "product_id": "10407061750034",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Whole Bean",
+   "coffee",
+   "guatemala",
+   "whole bean coffee"
+  ],
+  "title": "Guatemala Finca de Dios Anaerobic",
+  "url": "https://ragamuffinroasters.com/products/guatemala-finca-de-dios-anaerobic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "52603020280082"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "648b3d4c6e7abb5e",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-hafi",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/BURUNDIHAFI_Word.png?v=1791499647",
+  "platform": "shopify",
+  "product_id": "15399499170066",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Single Origin",
+   "Ventura coffee",
+   "Whole Bean"
+  ],
+  "title": "Burundi - Hafi",
+  "url": "https://ragamuffinroasters.com/products/burundi-hafi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "67601627021586"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "dc4919437599240d",
+  "first_seen": "2026-10-26",
+  "handle": "camfirestoriesdecaf",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/CAMPFIRESTORIESDECAF_73af55a2-bf6f-4964-9136-f450d0f1a8db.png?v=1778868176",
+  "platform": "shopify",
+  "product_id": "3972698308683",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "coffee",
+   "coffee bean",
+   "decaf",
+   "decaf coffee",
+   "subscription",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Campfire Stories - Decaf",
+  "url": "https://ragamuffinroasters.com/products/camfirestoriesdecaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz Bag",
+    "variant_id": "29782493790283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.8,
+    "title": "5 lb Bag",
+    "variant_id": "48148609630482"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "8c23e98dd0855c41",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-sunshine-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/VELVETSUNSHINEESPRESSO.png?v=1778867235",
+  "platform": "shopify",
+  "product_id": "3972702896203",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "espresso beans",
+   "subscription",
+   "whole bean coffee"
+  ],
+  "title": "Velvet Sunshine - Espresso",
+  "url": "https://ragamuffinroasters.com/products/velvet-sunshine-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz Bag",
+    "variant_id": "29782519709771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.8,
+    "title": "5 lb Bag",
+    "variant_id": "48020944716050"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "7cd8ff888a4e0333",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kayon-mountain-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/ETHIOPIAKAYONMOUNTAIN.png?v=1778867750",
+  "platform": "shopify",
+  "product_id": "3972707876939",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "Whole Bean",
+   "pour over",
+   "wholesale coffee"
+  ],
+  "title": "Ethiopia Kayon Mountain",
+  "url": "https://ragamuffinroasters.com/products/ethiopia-kayon-mountain-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "29782548873291"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "ff699b632d8987e1",
+  "first_seen": "2026-10-26",
+  "handle": "dawnpatrol",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/DAWNPATROL.png?v=1778867291",
+  "platform": "shopify",
+  "product_id": "4185648791627",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Batch Blend",
+   "Coffee shop",
+   "coffee",
+   "subscription",
+   "whole bean coffee",
+   "wholesale coffee"
+  ],
+  "title": "Dawn Patrol - Medium Roast",
+  "url": "https://ragamuffinroasters.com/products/dawnpatrol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "10 oz Bag",
+    "variant_id": "30461423681611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.2,
+    "title": "5 lb Bag",
+    "variant_id": "48020929347858"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "1f98bc199955be64",
+  "first_seen": "2026-10-26",
+  "handle": "night-hike-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/NIGHTHIKE.png?v=1778867373",
+  "platform": "shopify",
+  "product_id": "4518381289547",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Whole Bean",
+   "coffee",
+   "dark roast",
+   "subscription",
+   "whole bean coffee"
+  ],
+  "title": "Night Hike - Dark Roast",
+  "url": "https://ragamuffinroasters.com/products/night-hike-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "10oz Bag",
+    "variant_id": "50447982199058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.2,
+    "title": "5lbs Bag",
+    "variant_id": "50447982231826"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "b084bf2e7bdf4ccd",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-anny-ruths-loma-la-gloria-unicorn",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/ELSALVADORUNICORN.png?v=1778867456",
+  "platform": "shopify",
+  "product_id": "4556161417291",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Single Origin",
+   "Whole Bean",
+   "coffee bean"
+  ],
+  "title": "El Salvador - Unicorn",
+  "url": "https://ragamuffinroasters.com/products/el-salvador-anny-ruths-loma-la-gloria-unicorn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "32240077996107"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "e337a74a5b76d9c2",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/ROASTERSCHOICE.png?v=1778867917",
+  "platform": "shopify",
+  "product_id": "6658905440331",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Coffee shop",
+   "Single Origin",
+   "Ventura coffee",
+   "Whole Bean",
+   "coffee",
+   "coffee bean"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://ragamuffinroasters.com/products/roasters-choice-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz Bag Single Origin",
+    "variant_id": "39623203160139"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "7774ce9bb44c2dc9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-de-dios-pacas",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/GUATEMALAFINCADEDIOS.png?v=1778867833",
+  "platform": "shopify",
+  "product_id": "8967183466770",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Whole Bean",
+   "coffee",
+   "guatemala",
+   "whole bean coffee"
+  ],
+  "title": "Guatemala Finca de Dios",
+  "url": "https://ragamuffinroasters.com/products/guatemala-finca-de-dios-pacas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "47663043969298"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ },
+ {
+  "body_hash": "5ad5e2e50b64b027",
+  "first_seen": "2026-10-26",
+  "handle": "the-bloc-espresso-knock-box-tamp-station",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/the-bloc-espresso-knock-box-tamp-station-237353.jpg?v=1720564216",
+  "platform": "shopify",
+  "product_id": "9681232429330",
+  "product_type": "bloc",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The Bloc Espresso Knock Box + Tamp Station",
+  "url": "https://ragamuffinroasters.com/products/the-bloc-espresso-knock-box-tamp-station",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Walnut",
+    "variant_id": "49862115426578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Maple",
+    "variant_id": "49862115459346"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Walnut-Maple-Walnut-Stack",
+    "variant_id": "49862115492114"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 149.0,
+    "title": "True Black Walnut",
+    "variant_id": "49862115524882"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "da2753aa03032a47",
+  "first_seen": "2026-10-26",
+  "handle": "model-b-espresso-tamp-for-breville",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/model-b-espresso-tamp-for-breville-741373.jpg?v=1720564239",
+  "platform": "shopify",
+  "product_id": "9681233182994",
+  "product_type": "tamps",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "Model B Espresso Tamp for Breville",
+  "url": "https://ragamuffinroasters.com/products/model-b-espresso-tamp-for-breville",
+  "variants": [
+   {
+    "available": true,
+    "grams": 142,
+    "price_usd": 87.0,
+    "title": "Walnut",
+    "variant_id": "49862117327122"
+   },
+   {
+    "available": true,
+    "grams": 142,
+    "price_usd": 87.0,
+    "title": "Maple",
+    "variant_id": "49862117359890"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "fd5513c214ff2713",
+  "first_seen": "2026-10-26",
+  "handle": "bt-wedge-espresso-preparation-distribution-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/bt-wedge-espresso-preparation-distribution-tool-250189.jpg?v=1720564252",
+  "platform": "shopify",
+  "product_id": "9681233543442",
+  "product_type": "tools",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "BT Wedge Espresso Preparation Distribution Tool",
+  "url": "https://ragamuffinroasters.com/products/bt-wedge-espresso-preparation-distribution-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Walnut / 58.3mm",
+    "variant_id": "49862117949714"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Cherry / 58.3mm",
+    "variant_id": "49862117982482"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 58.3mm",
+    "variant_id": "49862118015250"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 58.3mm",
+    "variant_id": "49862118080786"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 58.3mm",
+    "variant_id": "49862118113554"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Walnut / 53.3mm",
+    "variant_id": "49862118146322"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Cherry / 53.3mm",
+    "variant_id": "49862118179090"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 53.3mm",
+    "variant_id": "49862118211858"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 53.3mm",
+    "variant_id": "49862118342930"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 53.3mm",
+    "variant_id": "51691896963346"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "75afd40c0dc3497e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-telarana-120hr-anaerobic-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0262/7128/5323/files/COLUMBIALATELARANA_ed88a48e-8d6e-4019-97dd-9307be5023c7.png?v=1778868105",
+  "platform": "shopify",
+  "product_id": "9760751124754",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "ragamuffinroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "Whole Bean"
+  ],
+  "title": "Colombia La Telaraña - 120hr Anaerobic Natural Process",
+  "url": "https://ragamuffinroasters.com/products/colombia-la-telarana-120hr-anaerobic-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "50150604243218"
+   }
+  ],
+  "vendor": "Ragamuffin Coffee Roasters"
+ }
+]

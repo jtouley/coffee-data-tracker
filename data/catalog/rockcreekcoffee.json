@@ -1,0 +1,2597 @@
+[
+ {
+  "body_hash": "8e3e4c9fa1eb6094",
+  "first_seen": "2026-10-26",
+  "handle": "ardi-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Ethiopia_Ardi_Mockup_Front.png?v=1735926241",
+  "platform": "shopify",
+  "product_id": "4007661994072",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopian Ardi: Ethiopian Single-Origin Light Roast",
+  "url": "https://rockcreekcoffee.com/products/ardi-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934218477656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934218510424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934218543192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934218575960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083487850584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083488047192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508912726293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508912759061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508912791829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508912824597"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508912857365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508912890133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508912922901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508912955669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508912988437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508913021205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508913053973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508913086741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508913119509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508913152277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508913185045"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "1125d15c9bb2b405",
+  "first_seen": "2026-10-26",
+  "handle": "harrar-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Ethiopia_Harrar_Mockup_Front.png?v=1733335302",
+  "platform": "shopify",
+  "product_id": "4007672447064",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopian Harrar Light Roast: Blueberry, Cocoa & Strawberry",
+  "url": "https://rockcreekcoffee.com/products/harrar-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934327627864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934327660632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934327693400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934327726168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083490340952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083490603096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508913479957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508913512725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508913545493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508913578261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508913611029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508913643797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508913676565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508913709333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508913742101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508913774869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508913807637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508913840405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508913938709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508913971477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508914004245"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "53c4a4d8ab55a8d9",
+  "first_seen": "2026-10-26",
+  "handle": "dana-montana-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Mexico_Mockup_Front.png?v=1733336278",
+  "platform": "shopify",
+  "product_id": "4007674314840",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico Dana Montana: Medium Roast Organic Coffee (Chiapas)",
+  "url": "https://rockcreekcoffee.com/products/dana-montana-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934344896600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934344929368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934344962136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934344994904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083503218776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083503317080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49509014438165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49509014470933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49509014503701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49509014536469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49509014569237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49509014602005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49509014634773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49509014667541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49509014700309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49509014733077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49509014765845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49509014798613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49509014831381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49509014864149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49509014896917"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "5f317a38aac57f24",
+  "first_seen": "2026-10-26",
+  "handle": "el-corazon-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Colombian_Mockup_Front.png?v=1733334995",
+  "platform": "shopify",
+  "product_id": "4007676346456",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombian Santa Maria: Medium Roast Colombian Coffee",
+  "url": "https://rockcreekcoffee.com/products/el-corazon-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934364000344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934364033112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934364065880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934364098648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083452985432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083453214808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508911087893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508911120661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508911153429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508911186197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508911218965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508911251733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508911284501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508911317269"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508911350037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508911382805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508911415573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508911448341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508911481109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508911513877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508911546645"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "b6283775ee03b22b",
+  "first_seen": "2026-10-26",
+  "handle": "santa-elena-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Costa_Rica_Mockup_Front.png?v=1733335065",
+  "platform": "shopify",
+  "product_id": "4007681687640",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica Santa Elena: Medium Roast Single-Estate Coffee",
+  "url": "https://rockcreekcoffee.com/products/santa-elena-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934401257560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934401290328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934401323096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934401355864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083475497048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083475890264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508911776021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508911808789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508911841557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508911874325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508911907093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508911939861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508911972629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508912005397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508912038165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508912070933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508912103701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508912136469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508912169237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508912202005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508912234773"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "ad7831ec3b35e3c2",
+  "first_seen": "2026-10-26",
+  "handle": "mandheling-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Sumatra_Mockup_Front.png?v=1733336428",
+  "platform": "shopify",
+  "product_id": "4007686144088",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra Mandheling Dark Roast: Sumatra Grade 1, Full Body, Low Acidity",
+  "url": "https://rockcreekcoffee.com/products/mandheling-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934422884440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934422917208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934422949976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934422982744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083520356440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083520487512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49509013061909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49509013094677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49509013127445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49509013160213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49509013192981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49509013225749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49509013258517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49509013291285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49509013324053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49509013356821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49509013389589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49509013422357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49509013455125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49509013487893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49509013520661"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "f26372dd7b24bf72",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_House_Blend_Mockup_Front.png?v=1733336066",
+  "platform": "shopify",
+  "product_id": "4007706099800",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "House Blend: Medium Roast Coffee",
+  "url": "https://rockcreekcoffee.com/products/house-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934531117144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934531149912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934531182680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934531215448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083493093464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083494305880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508915478805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508915511573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508915544341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508915577109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508915609877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508915642645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508915675413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508915708181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508915740949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508915773717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508915806485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508915839253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508915872021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508915904789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508915937557"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "67f34eef05325c4e",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_French_Roast_Mockup_Front.png?v=1733335970",
+  "platform": "shopify",
+  "product_id": "4007712522328",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mike’s French Roast: Dark Roast Coffee",
+  "url": "https://rockcreekcoffee.com/products/french-roast-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934562082904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934562115672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934562181208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934562213976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40083645235288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40083645300824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49509013750037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49509013782805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49509013815573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49509013848341"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49509013881109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49509013913877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49509013946645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49509013979413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49509014012181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49509014044949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49509014077717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49509014110485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49509014143253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49509014176021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49509014208789"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "51d0e06d196cb274",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Brazil_Decaf_Mockup_Front.png?v=1733329889",
+  "platform": "shopify",
+  "product_id": "4007722254424",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Swiss Water® Process Decaf: Brazil-Medium Roast",
+  "url": "https://rockcreekcoffee.com/products/swiss-water-decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "29934622376024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "29934622408792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "29934622474328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Drip",
+    "variant_id": "29934622507096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40085133590616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40085133688920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508906860821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508906893589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508906926357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508906959125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508906991893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508907024661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508907057429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508907090197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508907122965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508907155733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508907188501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508907221269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508907254037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508907286805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508907319573"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "415aa70edb13c16b",
+  "first_seen": "2026-10-26",
+  "handle": "2-12oz-coffee-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_2Favorite_Mockup_Front.png?v=1735926921",
+  "platform": "shopify",
+  "product_id": "4387327901784",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Two 12 oz Coffee Bags: Pick Your Pair",
+  "url": "https://rockcreekcoffee.com/products/2-12oz-coffee-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / Whole Beans",
+    "variant_id": "31698770591832"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / Drip",
+    "variant_id": "31698770624600"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / Whole Beans",
+    "variant_id": "31698770657368"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / Drip",
+    "variant_id": "31698770690136"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / Whole Beans",
+    "variant_id": "31698770722904"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / Drip",
+    "variant_id": "31698770755672"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / Whole Beans",
+    "variant_id": "31698770788440"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / Drip",
+    "variant_id": "31698770821208"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / Whole Beans",
+    "variant_id": "31698770853976"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / Drip",
+    "variant_id": "31698770886744"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / Whole Beans",
+    "variant_id": "31698770919512"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / Drip",
+    "variant_id": "31698770952280"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / Whole Beans",
+    "variant_id": "31698770985048"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / Drip",
+    "variant_id": "31698771017816"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / Whole Beans",
+    "variant_id": "31698771050584"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / Drip",
+    "variant_id": "31698771083352"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / Espresso",
+    "variant_id": "49508903551253"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / Chemex",
+    "variant_id": "49508903584021"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / French Press",
+    "variant_id": "49508903616789"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / Cold Brew",
+    "variant_id": "49508903649557"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Costa Rica / AeroPress",
+    "variant_id": "49508903682325"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / Espresso",
+    "variant_id": "49508903715093"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / Chemex",
+    "variant_id": "49508903747861"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / French Press",
+    "variant_id": "49508903780629"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / Cold Brew",
+    "variant_id": "49508903813397"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Costa Rica & 1 Sumatra / AeroPress",
+    "variant_id": "49508903846165"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / Espresso",
+    "variant_id": "49508903878933"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / Chemex",
+    "variant_id": "49508903911701"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / French Press",
+    "variant_id": "49508903944469"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / Cold Brew",
+    "variant_id": "49508903977237"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Sumatra / AeroPress",
+    "variant_id": "49508904010005"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / Espresso",
+    "variant_id": "49508904042773"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / Chemex",
+    "variant_id": "49508904075541"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / French Press",
+    "variant_id": "49508904108309"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / Cold Brew",
+    "variant_id": "49508904141077"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 Colombian / AeroPress",
+    "variant_id": "49508904173845"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / Espresso",
+    "variant_id": "49508904206613"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / Chemex",
+    "variant_id": "49508904239381"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / French Press",
+    "variant_id": "49508904272149"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / Cold Brew",
+    "variant_id": "49508904304917"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 Colombian & 1 Sumatra / AeroPress",
+    "variant_id": "49508904337685"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / Espresso",
+    "variant_id": "49508904370453"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / Chemex",
+    "variant_id": "49508904403221"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / French Press",
+    "variant_id": "49508904435989"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / Cold Brew",
+    "variant_id": "49508904468757"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "1 House Blend & 1 French Roast / AeroPress",
+    "variant_id": "49508904501525"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / Espresso",
+    "variant_id": "49508904534293"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / Chemex",
+    "variant_id": "49508904567061"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / French Press",
+    "variant_id": "49508904599829"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / Cold Brew",
+    "variant_id": "49508904632597"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 House Blend / AeroPress",
+    "variant_id": "49508904665365"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / Espresso",
+    "variant_id": "49508904698133"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / Chemex",
+    "variant_id": "49508904730901"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / French Press",
+    "variant_id": "49508904763669"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / Cold Brew",
+    "variant_id": "49508904796437"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "2 French Roast / AeroPress",
+    "variant_id": "49508904829205"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "132900fb52d3970e",
+  "first_seen": "2026-10-26",
+  "handle": "4-8oz-samples",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Samples_Mockup_Front.png?v=1735926609",
+  "platform": "shopify",
+  "product_id": "4392636940376",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "4 x 8oz Coffee Sample Pack: Try Four Roasts",
+  "url": "https://rockcreekcoffee.com/products/4-8oz-samples",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / Whole Beans",
+    "variant_id": "31729723113560"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / Drip",
+    "variant_id": "31729723146328"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / Whole Beans",
+    "variant_id": "31729723179096"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / Drip",
+    "variant_id": "31729723211864"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / Whole Beans",
+    "variant_id": "31729723244632"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / Drip",
+    "variant_id": "31729723277400"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / Whole Beans",
+    "variant_id": "31729723310168"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / Drip",
+    "variant_id": "31729723342936"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / Espresso",
+    "variant_id": "49508905550101"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / Chemex",
+    "variant_id": "49508905582869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / French Press",
+    "variant_id": "49508905615637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / Cold Brew",
+    "variant_id": "49508905648405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Decaf / AeroPress",
+    "variant_id": "49508905681173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / Espresso",
+    "variant_id": "49508905713941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / Chemex",
+    "variant_id": "49508905746709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / French Press",
+    "variant_id": "49508905779477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / Cold Brew",
+    "variant_id": "49508905812245"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - Colombian - Sumatra - Roasters Choice / AeroPress",
+    "variant_id": "49508905845013"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / Espresso",
+    "variant_id": "49508905877781"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / Chemex",
+    "variant_id": "49508905910549"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / French Press",
+    "variant_id": "49508905943317"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / Cold Brew",
+    "variant_id": "49508905976085"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - Decaf / AeroPress",
+    "variant_id": "49508906008853"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / Espresso",
+    "variant_id": "49508906041621"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / Chemex",
+    "variant_id": "49508906074389"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / French Press",
+    "variant_id": "49508906107157"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / Cold Brew",
+    "variant_id": "49508906139925"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.95,
+    "title": "Costa Rica - House Blend - Sumatra - French Roast / AeroPress",
+    "variant_id": "49508906172693"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "e076aeb2c91707dc",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Espresso_Mockup_Front.png?v=1735925961",
+  "platform": "shopify",
+  "product_id": "6608683925592",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Espresso Coffee Blend: Chocolate, Nuts, Honey",
+  "url": "https://rockcreekcoffee.com/products/espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "39396284727384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "39396284760152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "39396284792920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Drip",
+    "variant_id": "39396284825688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "40085130215512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "40085131264088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49508901880085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49508901912853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49508901945621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49508901978389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49508902011157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49508902043925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49508902076693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49508902109461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49508902142229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49508902174997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49508902207765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49508902240533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49508902273301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49508902306069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49508902338837"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "e3a677f4a4f2a76c",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/Roasters_Choice.png?v=1768505583",
+  "platform": "shopify",
+  "product_id": "8019941130517",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Roaster’s Choice: Handpicked Monthly Coffee",
+  "url": "https://rockcreekcoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Default Title",
+    "variant_id": "43944784494869"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "3fbbc23cb65861dd",
+  "first_seen": "2026-10-26",
+  "handle": "rock-creek-coffee-pourta-packs-costa-rica-santa-elena-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/1.jpg?v=1694024969",
+  "platform": "shopify",
+  "product_id": "8521591423253",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica Santa Elena: Pour-ta Packs (8-Pack)",
+  "url": "https://rockcreekcoffee.com/products/rock-creek-coffee-pourta-packs-costa-rica-santa-elena-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Pack of 8",
+    "variant_id": "46165694021909"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "3913fe0dda1a2bca",
+  "first_seen": "2026-10-26",
+  "handle": "rcc-meeting-over-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/IMG_0120001.jpg?v=1706213469",
+  "platform": "shopify",
+  "product_id": "9006394409237",
+  "product_type": "",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [],
+  "title": "RCC Meeting over Coffee",
+  "url": "https://rockcreekcoffee.com/products/rcc-meeting-over-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.95,
+    "title": "Default Title",
+    "variant_id": "47933551477013"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "9dcab59fdaa30993",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-cookie-waffles-pack-of-3",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/caramel-cookie-waffle-three-pack.jpg?v=1718032781",
+  "platform": "shopify",
+  "product_id": "9148640559381",
+  "product_type": "",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [],
+  "title": "Caramel Cookie Waffles Pack of 3",
+  "url": "https://rockcreekcoffee.com/products/caramel-cookie-waffles-pack-of-3",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "48347127546133"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "2d7ce43c4fd28b1d",
+  "first_seen": "2026-10-26",
+  "handle": "consuelo-ramirez-gesha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/CONSUELORAMIREZGESHANATURAL_A.webp?v=1748894483",
+  "platform": "shopify",
+  "product_id": "9346199978261",
+  "product_type": "",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [],
+  "title": "Consuelo Ramirez Gesha Natural",
+  "url": "https://rockcreekcoffee.com/products/consuelo-ramirez-gesha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.95,
+    "title": "Default Title",
+    "variant_id": "48972971442453"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "d30d9dd9913b75e6",
+  "first_seen": "2026-10-26",
+  "handle": "custom-logo-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/RCC_Blue_Bag_Mockup_Logo_Here_Blank.png?v=1763141046",
+  "platform": "shopify",
+  "product_id": "9436754215189",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [],
+  "title": "Custom Company Coffee Gifts",
+  "url": "https://rockcreekcoffee.com/products/custom-logo-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "5 Pack",
+    "variant_id": "49536453181717"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 155.0,
+    "title": "10 Pack",
+    "variant_id": "49536453214485"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 300.0,
+    "title": "20 Pack",
+    "variant_id": "49536453247253"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ },
+ {
+  "body_hash": "43d239c3a313078f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-wush-wush-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0065/7296/5976/files/wush_wush_bag_on_clean_background.webp?v=1783292303",
+  "platform": "shopify",
+  "product_id": "9440081805589",
+  "product_type": "Coffee",
+  "roaster_slug": "rockcreekcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Wush Wush: Ethiopian Natural Process Coffee, 12 oz",
+  "url": "https://rockcreekcoffee.com/products/ethiopian-wush-wush-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / Whole Beans",
+    "variant_id": "49562032668949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / Drip",
+    "variant_id": "49562032701717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / Espresso",
+    "variant_id": "49562032734485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / Chemex",
+    "variant_id": "49562032767253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / French Press",
+    "variant_id": "49562032800021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / Cold Brew",
+    "variant_id": "49562032832789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Single 12 oz / AeroPress",
+    "variant_id": "49562032865557"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Beans",
+    "variant_id": "49562032898325"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Drip",
+    "variant_id": "49562032931093"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49562032963861"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49562032996629"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49562033029397"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49562033062165"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / AeroPress",
+    "variant_id": "49562033094933"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Beans",
+    "variant_id": "49562033127701"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49562033160469"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49562033193237"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49562033226005"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49562033258773"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49562033291541"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / AeroPress",
+    "variant_id": "49562033324309"
+   }
+  ],
+  "vendor": "Rock Creek Coffee Roasters"
+ }
+]

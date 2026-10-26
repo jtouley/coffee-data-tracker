@@ -1,0 +1,553 @@
+[
+ {
+  "body_hash": "bcde1f335bea94a6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b99973489c1721f4382dc24/e4902093-cc51-4d53-a238-ee91ad6ba718/4.png",
+  "platform": "squarespace",
+  "product_id": "5eab0ee30702a62b1760e66a",
+  "product_type": "",
+  "roaster_slug": "breckenridgecoffeeroasters",
+  "tags": [
+   "coffee",
+   "colombia",
+   "decaf",
+   "south america"
+  ],
+  "title": "Prepackaged | 12oz Retail Bags (Decaffeinated)",
+  "url": "https://www.breckenridgecoffeeroasters.com/shop-coffee/p/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "DRIP / MEDIUM 12 OZ",
+    "variant_id": "57ac8ba8-3983-4487-8fcf-4e8336ce4b8a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "WHOLE BEAN 12 OZ",
+    "variant_id": "a2adc43f-e1fb-405c-9987-a60e1e449891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "FRENCH PRESS / COARSE 12 OZ",
+    "variant_id": "a80af499-ae5c-44d0-9914-4016c6ef340a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "ESPRESSO / FINE 12 OZ",
+    "variant_id": "fabeaf7d-7e0a-461c-911d-5c28ea505b58"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "633cea4288952628",
+  "first_seen": "2026-10-26",
+  "handle": "breckenridge-distillery-bourbon-barrel-aged-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b99973489c1721f4382dc24/f0e706fe-45dc-4489-976a-e33620005f9b/Screenshot+2024-11-25+at+10.07.21+AM.png",
+  "platform": "squarespace",
+  "product_id": "5f1b1818a1ce0f640d607368",
+  "product_type": "",
+  "roaster_slug": "breckenridgecoffeeroasters",
+  "tags": [
+   "barrel-aged",
+   "bourbon",
+   "coffee",
+   "whiskey"
+  ],
+  "title": "Breckenridge Distillery Bourbon & Rum Barrel-Aged Coffee",
+  "url": "https://www.breckenridgecoffeeroasters.com/shop-coffee/p/breckenridge-distillery-bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Bourbon Barrel Aged",
+    "variant_id": "25b64e1d-272a-41fa-a197-8033fd0631de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Rum Barrel Aged",
+    "variant_id": "640af735-e4cc-48e1-88fa-bb563f34b8a5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7306213d83144826",
+  "first_seen": "2026-10-26",
+  "handle": "premium",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b99973489c1721f4382dc24/33d74af7-83b6-4685-813b-25257357e74f/2.png",
+  "platform": "squarespace",
+  "product_id": "62603060a864132b8f2cd930",
+  "product_type": "",
+  "roaster_slug": "breckenridgecoffeeroasters",
+  "tags": [],
+  "title": "Prepackaged | Premium | 12oz Retail Bags (Caffeinated)",
+  "url": "https://www.breckenridgecoffeeroasters.com/shop-coffee/p/premium",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Guatemala | Roast: Medium - Dark French Press / Coarse",
+    "variant_id": "0b0c8bbd-4143-437a-b7b4-c0e3f1c52a7d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Zambia | Roast: Medium French Press / Coarse",
+    "variant_id": "1420687d-e827-4794-b962-323a09d4ab1f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Guatemala | Roast: Medium - Dark Whole Bean",
+    "variant_id": "29b69fff-69b0-4730-87d3-b018f0d02730"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Italian Roast Espresso Blend | Roast: Dark Whole Bean",
+    "variant_id": "2c93e20b-eebc-4af1-997e-8dd9665333de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Italian Roast Espresso Blend | Roast: Dark French Press / Coarse",
+    "variant_id": "41395716-c7c8-4b6a-982d-7578140e58ea"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Avalanche Blend | Winter Special | Roast: Medium Whole Bean",
+    "variant_id": "4242ce67-e656-4dd7-8371-447841740ace"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "9600' Blend Espresso Blend  Roast: Medium - Dark Whole Bean",
+    "variant_id": "4c78f509-8836-445c-9e16-35757f93dbc4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Avalanche Blend | Winter Special | Roast: Medium Drip / Medium",
+    "variant_id": "5a1883c4-b8fa-4587-b2c5-30a43ff90cab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Nicaragua | Roast: Medium French Press / Coarse",
+    "variant_id": "5a52fa59-4db3-43a2-8e0f-bd46df80f5e8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Costa Rica | Tres Nubes | Roast: Medium Espresso / Fine",
+    "variant_id": "654a6a4d-cc00-45e5-a72e-7ab28f46d0a2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Avalanche Blend | Winter Special | Roast: Medium French Press / Coarse",
+    "variant_id": "656efab3-87c0-4aca-a783-d142e4ef440f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Costa Rica | Tres Nubes | Roast: Medium Drip / Medium",
+    "variant_id": "7964f20a-f402-44ca-aae3-20f4f1ed75b4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Costa Rica | Tres Nubes | Roast: Medium French Press / Coarse",
+    "variant_id": "7b196017-059f-425b-ba77-ffa371438633"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Zambia | Roast: Medium Whole Bean",
+    "variant_id": "7e7fb496-daa3-4642-bbb2-67a96a656608"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "9600' Blend Espresso Blend  Roast: Medium - Dark Espresso / Fine",
+    "variant_id": "7efe85d1-aa21-4cf4-8b14-783ea62e97fd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Nicaragua | Roast: Medium Drip / Medium",
+    "variant_id": "89168ae2-1ea2-4786-a174-06b361ecbdcd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Avalanche Blend | Winter Special | Roast: Medium Espresso / Fine",
+    "variant_id": "8c348a27-d5a6-4477-992a-05a08e2ecc4f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Italian Roast Espresso Blend | Roast: Dark Espresso / Fine",
+    "variant_id": "999d580d-43ca-4c17-9c02-db9f7fd9ce43"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Guatemala | Roast: Medium - Dark Espresso / Fine",
+    "variant_id": "9c38a9ea-4a07-4f72-bb34-2d1f73a59378"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Nicaragua | Roast: Medium Espresso / Fine",
+    "variant_id": "a2ce69b3-432a-45e5-b257-78977ddd8ca7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Costa Rica | Tres Nubes | Roast: Medium Whole Bean",
+    "variant_id": "a5096225-8aa9-42d7-83bc-979263bd4dc1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Guatemala | Roast: Medium - Dark Drip / Medium",
+    "variant_id": "b400ff25-0bfe-4869-bd9b-c52b76903439"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Nicaragua | Roast: Medium Whole Bean",
+    "variant_id": "bda8ab48-7692-4732-b6e0-a424735e84f5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Italian Roast Espresso Blend | Roast: Dark Drip / Medium",
+    "variant_id": "bf5e45a8-0212-42e1-8a02-75e577740aea"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "9600' Blend Espresso Blend  Roast: Medium - Dark Drip / Medium",
+    "variant_id": "c5495372-079b-49b2-b2bc-489ecb21d8d8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Zambia | Roast: Medium Drip / Medium",
+    "variant_id": "e7f39c7e-2711-4c88-be6d-e114feb29bf2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "9600' Blend Espresso Blend  Roast: Medium - Dark French Press / Coarse",
+    "variant_id": "ecb12044-b4dc-4afb-8d4f-790c8cf67ae3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Zambia | Roast: Medium Espresso / Fine",
+    "variant_id": "ecc3b959-bf47-48dc-936a-6472a152f70f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "104e2312ad64a81f",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-whole-bean-coffee-can",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b99973489c1721f4382dc24/1715885777106-5AC790LEB45RSQLI3JPF/IMG_9254.JPG",
+  "platform": "squarespace",
+  "product_id": "64af029039e38f0c9cbcd41e",
+  "product_type": "",
+  "roaster_slug": "breckenridgecoffeeroasters",
+  "tags": [],
+  "title": "12oz Whole Bean Coffee Crowler",
+  "url": "https://www.breckenridgecoffeeroasters.com/shop-coffee/p/12oz-whole-bean-coffee-can",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "9600' Espresso | Espresso Blend | Roast: Medium",
+    "variant_id": "15dd4dc6-a79f-42cb-935b-9519746c882c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Kenya | Roast: Medium",
+    "variant_id": "227be011-65fc-47b2-80bf-8895298919b7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Tanzania Zanzibar Peaberry | Roast Light",
+    "variant_id": "2d30fa11-41d7-49be-a608-eb64f0244626"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Columbia | Roast: Medium",
+    "variant_id": "311e3729-ef9c-4b07-8b9e-733513b8c4b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Crowler Refill",
+    "variant_id": "3a7fbefc-aefc-456d-9942-6c66f0e0b925"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Honduras | Roast: Medium",
+    "variant_id": "3ab93716-a31d-47f4-8f89-bff8e806fa66"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Papa New Guinea | Korofeigu Organic | Roast: Medium",
+    "variant_id": "43fea836-add5-47ca-88c7-64d978055c55"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Mexican Chiapas | Roast: Medium",
+    "variant_id": "518e1857-43ab-4755-aba2-6b0a3802f659"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Guatemala | Organic | Roast: Medium",
+    "variant_id": "5d8edeb6-237c-4ae1-a480-8b2f11198cb6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Decaf | Swiss Water Wash | Medium-Dark",
+    "variant_id": "6b2591fd-cfe5-49f3-9268-23aa90baf4c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Ullr Blend | Roast: Medium",
+    "variant_id": "6cdb8e67-7ab7-41f5-911e-b2eb716c8827"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Ethiopia | Yirgacheffe | Roast: Medium",
+    "variant_id": "7d7221bf-81ef-4517-be8f-b939400255a7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Indonesia | Sumatra | Roast: Dark",
+    "variant_id": "987cfb64-3ca9-4111-8ee4-3420a517caa5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Costa Rica | Romelia | Roast: Medium",
+    "variant_id": "a9ce8171-22ba-4002-ac51-2177ccdf0a4f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "Brazil | Roast: Medium",
+    "variant_id": "d6baa366-e8be-4e50-aa38-4747e15c046a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Nicaragua | Sagrada Familia| Roast: Medium",
+    "variant_id": "e56c234b-3b91-47ef-83d5-30d796882f82"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d3c5075cac8ac8b",
+  "first_seen": "2026-10-26",
+  "handle": "on-the-go-premeasured-coffee-packets",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b99973489c1721f4382dc24/30c6d9ab-5f70-41e3-84e3-4ee8db7254f3/IMG_6629.JPG",
+  "platform": "squarespace",
+  "product_id": "6758aa4ab190895d699ca0da",
+  "product_type": "",
+  "roaster_slug": "breckenridgecoffeeroasters",
+  "tags": [
+   "campcoffee",
+   "high-quality coffee",
+   "instantcoffeealternative",
+   "outdoor coffee",
+   "premeasuredcoffeepackets"
+  ],
+  "title": "Pre-measured & Pre-ground Coffee Packets",
+  "url": "https://www.breckenridgecoffeeroasters.com/shop-coffee/p/on-the-go-premeasured-coffee-packets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 3.75,
+    "title": "9600 Blend 48 oz French Press Packet",
+    "variant_id": "22ac6075-615c-45ab-9921-d2651ae276b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.75,
+    "title": "House Blend 12 Cup Coffee Pot",
+    "variant_id": "25057ca4-1ca1-4eeb-ace3-af4a4575ffd5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.0,
+    "title": "House Blend 64 oz French Press Packet",
+    "variant_id": "2a678c13-6940-4209-9b2e-bab8c65f2913"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 3.75,
+    "title": "House Blend 48 oz French Press Packet",
+    "variant_id": "2e4038d3-7b8c-4cdf-8c44-703391ab68e7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 2.5,
+    "title": "House Blend 32 oz French Press Packet",
+    "variant_id": "3658d905-1718-400d-9084-1147f698b6f1"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.0,
+    "title": "9600 Blend 64 oz French Press Packet",
+    "variant_id": "4233a5dc-b1dd-47dd-aec4-d3e6de73e4a4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 3.75,
+    "title": "Ullr Blend 48 oz French Press Packet",
+    "variant_id": "44e54fbd-697f-420a-a4df-e557d30c9a39"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.75,
+    "title": "9600 Blend 12 Cup Coffee Pot",
+    "variant_id": "4f8fbd91-9dae-4e9e-82f8-cd5733d9b8fa"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 2.5,
+    "title": "Ullr Blend 32 oz French Press Packet",
+    "variant_id": "72842d6b-883a-4a06-87b8-327dac211e0c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.75,
+    "title": "Ullr Blend 12 Cup Coffee Pot",
+    "variant_id": "7d58f9aa-c92d-4466-97d5-c98077cb11a0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 1.4,
+    "title": "Ullr Blend 12 oz Pour Over",
+    "variant_id": "9230dadb-2ba7-4be6-b29d-8a5167ae7c2b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 2.5,
+    "title": "9600 Blend 32 oz French Press Packet",
+    "variant_id": "957379e9-f680-4e9e-aa68-2a87b63f7dc7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 1.4,
+    "title": "House Blend 12 oz Pour Over",
+    "variant_id": "98ef0794-f8f3-442a-b122-5e021c4b8be3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.0,
+    "title": "Ullr Blend 64 oz French Press Packet",
+    "variant_id": "d955a4fb-f2b0-4bdc-8e53-1b4f85bf3084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 1.4,
+    "title": "9600 Blend 12 oz Pour Over",
+    "variant_id": "ff3b0a5e-2cd9-49dc-8307-51865eab8fb8"
+   }
+  ],
+  "vendor": ""
+ }
+]

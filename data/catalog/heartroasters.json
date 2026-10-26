@@ -1,0 +1,364 @@
+[
+ {
+  "body_hash": "90cf5425cf4e96b1",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-jacob-kibiri-ab-limited-release",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Kenya_JacobKibiriAB_2026_OnlineImage.png?v=1792442690",
+  "platform": "shopify",
+  "product_id": "15246096072945",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Single Origin",
+   "__with:kalita-wave-185-stainless-steel-dripper",
+   "active",
+   "cafe",
+   "excusives",
+   "wholesale"
+  ],
+  "title": "Kenya Jacob Kibiri AB - Limited Release",
+  "url": "https://www.heartroasters.com/products/kenya-jacob-kibiri-ab-limited-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "8oz",
+    "variant_id": "67261874700529"
+   }
+  ],
+  "vendor": "Heart Roasters"
+ },
+ {
+  "body_hash": "08c13462eec4b20b",
+  "first_seen": "2026-10-26",
+  "handle": "phono",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Phono_ElSilencio_2026_OnlineImage.png?v=1791843445",
+  "platform": "shopify",
+  "product_id": "2129736761406",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Single Origin",
+   "Subscription",
+   "__with:technivorm-kbt-moccamaster-polished-silver",
+   "active",
+   "cafe",
+   "espresso"
+  ],
+  "title": "Phono",
+  "url": "https://www.heartroasters.com/products/phono",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz",
+    "variant_id": "19533833076798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5lb",
+    "variant_id": "19533833109566"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5oz",
+    "variant_id": "43824349184241"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "8oz",
+    "variant_id": "43844680646897"
+   }
+  ],
+  "vendor": "Heart Coffee Roasters"
+ },
+ {
+  "body_hash": "d637751c1be110ea",
+  "first_seen": "2026-10-26",
+  "handle": "stereo-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Stereo_Africa_LatinAmerica_2026_OnlineImage.png?v=1778270127",
+  "platform": "shopify",
+  "product_id": "518300865",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Blend",
+   "Subscription",
+   "__with:kalita-wave-185-stainless-steel-dripper",
+   "active",
+   "cafe",
+   "espresso"
+  ],
+  "title": "Stereo Seasonal Blend",
+  "url": "https://www.heartroasters.com/products/stereo-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz",
+    "variant_id": "1392046017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5lb",
+    "variant_id": "25058566017"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5oz",
+    "variant_id": "43824340992241"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.5,
+    "title": "8oz",
+    "variant_id": "43844679336177"
+   }
+  ],
+  "vendor": "Heart Roasters"
+ },
+ {
+  "body_hash": "98f94c06dfc14602",
+  "first_seen": "2026-10-26",
+  "handle": "heart-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/sample_box_open_hands_a45723ab-a83a-4161-9fbf-6db6619d943f.jpg?v=1762457062",
+  "platform": "shopify",
+  "product_id": "8368105857",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Assortment",
+   "Blend",
+   "Single Origin",
+   "__with:aeropress-coffeemaker"
+  ],
+  "title": "heart sample pack",
+  "url": "https://www.heartroasters.com/products/heart-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1270,
+    "price_usd": 72.0,
+    "title": "Sample Pack",
+    "variant_id": "28154989889"
+   }
+  ],
+  "vendor": "Heart Coffee Roasters"
+ },
+ {
+  "body_hash": "37a057854b93d4fc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Decaf_Colombia_SanAgustin_2025_OnlineImage.png?v=1767724563",
+  "platform": "shopify",
+  "product_id": "9309233578225",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Decaf",
+   "Single Origin",
+   "__with:technivorm-kbt-moccamaster-polished-silver",
+   "espresso"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://www.heartroasters.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz",
+    "variant_id": "46954920083697"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 25.0,
+    "title": "10.5oz",
+    "variant_id": "46954920116465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "16oz",
+    "variant_id": "46954920149233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb",
+    "variant_id": "46954920182001"
+   }
+  ],
+  "vendor": "Heart Coffee Roasters"
+ },
+ {
+  "body_hash": "d56f7cc40ec115c7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-nyawira-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Kenya_NyawiraAA_LATE2026_OnlineImage.png?v=1790348576",
+  "platform": "shopify",
+  "product_id": "9467984543985",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Single Origin",
+   "__with:kalita-wave-185-stainless-steel-dripper",
+   "active",
+   "cafe",
+   "excusives",
+   "wholesale"
+  ],
+  "title": "Kenya Nyawira AA",
+  "url": "https://www.heartroasters.com/products/kenya-nyawira-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 28.0,
+    "title": "10.5oz",
+    "variant_id": "47774729601265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "16oz",
+    "variant_id": "47774729634033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.0,
+    "title": "5lb",
+    "variant_id": "47774729666801"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "8oz",
+    "variant_id": "50500216324337"
+   }
+  ],
+  "vendor": "Heart Roasters"
+ },
+ {
+  "body_hash": "8f637700d98e66e4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habtamu-fikadu-1",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Ethiopia_HabtamuFikaduDanche_2026_OnlineImage.png?v=1784905208",
+  "platform": "shopify",
+  "product_id": "9679463022833",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Single Origin",
+   "culture",
+   "fresh crop",
+   "good coffee",
+   "heart",
+   "wholesale"
+  ],
+  "title": "Ethiopia Habtamu Fikadu",
+  "url": "https://www.heartroasters.com/products/ethiopia-habtamu-fikadu-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 28.0,
+    "title": "10.5oz",
+    "variant_id": "48440582308081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "16oz",
+    "variant_id": "48440582340849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 182.0,
+    "title": "5lb",
+    "variant_id": "48440582373617"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "8oz",
+    "variant_id": "48440583225585"
+   }
+  ],
+  "vendor": "Heart Coffee Roasters"
+ },
+ {
+  "body_hash": "a68f0350ec22045a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo",
+  "image": "https://cdn.shopify.com/s/files/1/0261/3485/files/Ethiopia_Halo_2026_OnlineImage.png?v=1789140973",
+  "platform": "shopify",
+  "product_id": "9809011409137",
+  "product_type": "Beans",
+  "roaster_slug": "heartroasters",
+  "tags": [
+   "Single Origin",
+   "culture",
+   "fresh crop",
+   "good coffee",
+   "heart",
+   "wholesale"
+  ],
+  "title": "Ethiopia Halo",
+  "url": "https://www.heartroasters.com/products/ethiopia-halo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 28.0,
+    "title": "10.5oz",
+    "variant_id": "48730433290481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "16oz",
+    "variant_id": "48730433323249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 181.0,
+    "title": "5lb",
+    "variant_id": "48730433356017"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "8oz",
+    "variant_id": "48730433683697"
+   }
+  ],
+  "vendor": "Heart Coffee Roasters"
+ }
+]

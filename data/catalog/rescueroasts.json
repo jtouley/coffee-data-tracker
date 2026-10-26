@@ -1,0 +1,3771 @@
+[
+ {
+  "body_hash": "70fc29de23424880",
+  "first_seen": "2026-10-26",
+  "handle": "camel-rock",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/CamelRock-NewCoffeePackaging-6.jpg?v=1662648663",
+  "platform": "shopify",
+  "product_id": "2007912480868",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Camel Rock",
+  "url": "https://www.ilovemud.com/products/camel-rock",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "18742700867684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18742700900452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "18742700933220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18742700965988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42483983941881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "42483983974649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "42483984007417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "42483984040185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Whole Bean",
+    "variant_id": "42483984105721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Drip",
+    "variant_id": "42483984138489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Espresso",
+    "variant_id": "42483984171257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / French Press",
+    "variant_id": "42483984236793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Whole Bean",
+    "variant_id": "42558864851193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Drip",
+    "variant_id": "42558864883961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Espresso",
+    "variant_id": "42558864916729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / French Press",
+    "variant_id": "42558864949497"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "7580fca4efc82bc1",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/BaliBlueMoon-NewCoffeePackaging-1.jpg?v=1662648532",
+  "platform": "shopify",
+  "product_id": "2009423577188",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://www.ilovemud.com/products/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18750042341476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "18750042374244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18750042407012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "18750042472548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12 oz - 3 Pack / Whole Bean",
+    "variant_id": "38002676760748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12 oz - 3 Pack / Drip",
+    "variant_id": "38002679611564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12 oz - 3 Pack / Espresso",
+    "variant_id": "38002687148204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12 oz - 3 Pack / French Press",
+    "variant_id": "38002687246508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Bali Blue Moon - 12oz Peru - 12oz Sumatra / Whole Bean",
+    "variant_id": "42558798201081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Bali Blue Moon - 12oz Peru - 12oz Sumatra / Espresso",
+    "variant_id": "42558798233849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Bali Blue Moon - 12oz Peru - 12oz Sumatra / Drip",
+    "variant_id": "42558798266617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Bali Blue Moon - 12oz Peru - 12oz Sumatra / French Press",
+    "variant_id": "42558798299385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43437913145593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "43437913178361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "43437913211129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "43437913243897"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "e14cfb8ff00f3729",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Decaf-NewCoffeePackaging-15.jpg?v=1648233764",
+  "platform": "shopify",
+  "product_id": "2009494880356",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Decaf",
+   "Fairtrade",
+   "Medium Roast",
+   "Organic",
+   "Swiss Water Process"
+  ],
+  "title": "Decaf",
+  "url": "https://www.ilovemud.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18750519771236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "18750519836772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18750519935076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "18750519967844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18750520393828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "18750520426596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18750520459364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "18750520492132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013024370860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013025419436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013030334636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013031841964"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "ea2b7ed0007bffe0",
+  "first_seen": "2026-10-26",
+  "handle": "deep-blues-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/DeepBlues-NewCoffeePackaging-37.jpg?v=1648233844",
+  "platform": "shopify",
+  "product_id": "2009581256804",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "Deep Blues Blend",
+  "url": "https://www.ilovemud.com/products/deep-blues-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18750911348836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "18750911479908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18750911545444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "18750911610980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18750913020004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "18750913118308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18750913183844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "18750913249380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013041213612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013042426028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013043212460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013057204396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44809300541689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "44809300574457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "44809300607225"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "44809300639993"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "b96dd0c99fa132f3",
+  "first_seen": "2026-10-26",
+  "handle": "humboldt-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Humboldt12oz-NewCoffeePackaging-29.jpg?v=1648243179",
+  "platform": "shopify",
+  "product_id": "2009884524644",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Humboldt Blend",
+  "url": "https://www.ilovemud.com/products/humboldt-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18752030408804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "18752030441572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18752030474340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "18752030507108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "18752030900324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "18752030933092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "18752030965860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "18752030998628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18752031064164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "18752031096932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18752031129700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "18752031162468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013596827820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013596958892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013597057196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013597286572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Humboldt - 12oz Camel Rock - 12oz Fern Canyon / Whole Bean",
+    "variant_id": "42567073366265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Humboldt - 12oz Camel Rock - 12oz Fern Canyon / Espresso",
+    "variant_id": "42567073399033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Humboldt - 12oz Camel Rock - 12oz Fern Canyon / Drip",
+    "variant_id": "42567073431801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Humboldt - 12oz Camel Rock - 12oz Fern Canyon / French Press",
+    "variant_id": "42567073464569"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "d237ccd2a1cb5805",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Ethiopia-NewCoffeePackaging-7.jpg?v=1648235643",
+  "platform": "shopify",
+  "product_id": "2010254213220",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Medium Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.ilovemud.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18753428324452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "18753428357220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18753428422756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "18753428455524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18753428947044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "18753428979812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18753429012580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "18753429045348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013211476140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013212065964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013212950700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013214326956"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "0869e4afc5e3c9ed",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Breakfast-NewCoffeePackaging-33.jpg?v=1662648592",
+  "platform": "shopify",
+  "product_id": "2010420904036",
+  "product_type": "Multi - Roast Blend",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Medium Roast",
+   "Multi - Roast Blend",
+   "Organic"
+  ],
+  "title": "Breakfast",
+  "url": "https://www.ilovemud.com/products/breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "18754227372132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "18754227470436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "18754227568740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "18754227667044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "18754228387940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "18754228453476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "18754228486244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "18754228584548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Whole Bean",
+    "variant_id": "38009840566444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Espresso",
+    "variant_id": "38009842794668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Drip",
+    "variant_id": "38009843679404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / French Press",
+    "variant_id": "39308675547308"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "ed401e8668ebb58e",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Espresso-NewCoffeePackaging-20.jpg?v=1648235438",
+  "platform": "shopify",
+  "product_id": "2097289166948",
+  "product_type": "Multi - Roast Blend",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Espresso",
+   "Medium Roast",
+   "Multi - Roast Blend",
+   "Organic"
+  ],
+  "title": "Espresso",
+  "url": "https://www.ilovemud.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19171147481188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "19171147513956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19171147546724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "19171147579492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19171148202084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "19171148267620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19171148300388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "19171148333156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013173465260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013175038124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013178544300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013180674220"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "e52ff4096ed0a73f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/CostaRica-NewCoffeePackaging-21.jpg?v=1648096036",
+  "platform": "shopify",
+  "product_id": "2097333174372",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Light Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://www.ilovemud.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19171331080292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "19171331113060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19171331145828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "19171331211364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19171331670116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "19171331702884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19171331735652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "19171331768420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38012945563820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38012946743468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38012947628204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38012952805548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Costa Rica - 12oz Honduras - 12oz Guatemala / Whole Bean",
+    "variant_id": "42558897717497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Costa Rica - 12oz Honduras - 12oz Guatemala / Drip",
+    "variant_id": "42558897750265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Costa Rica - 12oz Honduras - 12oz Guatemala / Espresso",
+    "variant_id": "42558897783033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Costa Rica - 12oz Honduras - 12oz Guatemala / French Press",
+    "variant_id": "42558897815801"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "c25a22b91e45b3d8",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Honduras-NewCoffeePackaging-12.jpg?v=1648242616",
+  "platform": "shopify",
+  "product_id": "2097366401124",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Light Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Honduras Honey Process",
+  "url": "https://www.ilovemud.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19171490791524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "19171490824292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19171490857060"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "19171490889828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42484052328697"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "42484052361465"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42484052394233"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "42484052427001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "42484052492537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "42484052525305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "42484052558073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "42484052590841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Honduras - 12oz Bali Blue Moon - 12oz Sumatra / Whole Bean",
+    "variant_id": "42567043350777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Honduras - 12oz Bali Blue Moon - 12oz Sumatra / Drip",
+    "variant_id": "42567043383545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Honduras - 12oz Bali Blue Moon - 12oz Sumatra / Espresso",
+    "variant_id": "42567043416313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Honduras - 12oz Bali Blue Moon - 12oz Sumatra / French Press",
+    "variant_id": "42567043449081"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "6f1d867e46856752",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Peru-NewCoffeePackaging-17.jpg?v=1648244690",
+  "platform": "shopify",
+  "product_id": "2097406607460",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Light Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Peru",
+  "url": "https://www.ilovemud.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "19171680551012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "19171680583780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19171680616548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "19171680649316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19171681173604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "19171681239140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19171681271908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "19171681337444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013697818796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013697917100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013698605228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "38013700669612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "Variety 3 Pack - 12oz Peru - 12oz Bali Blue Moon - 12oz Sumatra / Whole Bean",
+    "variant_id": "42567190282489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "Variety 3 Pack - 12oz Peru - 12oz Bali Blue Moon - 12oz Sumatra / Espresso",
+    "variant_id": "42567190315257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "Variety 3 Pack - 12oz Peru - 12oz Bali Blue Moon - 12oz Sumatra / Drip",
+    "variant_id": "42567190348025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.5,
+    "title": "Variety 3 Pack - 12oz Peru - 12oz Bali Blue Moon - 12oz Sumatra / French Press",
+    "variant_id": "42567190380793"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "89c71e80dcd33829",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Guatemala-NewCoffeePackaging-11.jpg?v=1648242224",
+  "platform": "shopify",
+  "product_id": "2097551245412",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Light Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.ilovemud.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19172222566500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "19172222599268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19172222664804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "19172222697572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19172223221860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "19172223287396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19172223320164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "19172223352932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013558620332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013559373996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013561274540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013561733292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Guatemala - 12oz Costa Rica - 12oz Honduras / Whole Bean",
+    "variant_id": "42567012253945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Guatemala - 12oz Costa Rica - 12oz Honduras / Drip",
+    "variant_id": "42567012286713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Guatemala - 12oz Costa Rica - 12oz Honduras / Espresso",
+    "variant_id": "42567012319481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "Variety 3 Pack - 12oz Guatemala - 12oz Costa Rica - 12oz Honduras / French Press",
+    "variant_id": "42567012352249"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "3c7c3d4f6de81505",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Sumatra-NewCoffeePackaging-13.jpg?v=1648245820",
+  "platform": "shopify",
+  "product_id": "2099015221348",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.ilovemud.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19179232231524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Drip",
+    "variant_id": "19179232264292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19179232297060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz / French Press",
+    "variant_id": "19179232329828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19179232723044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Drip",
+    "variant_id": "19179232755812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19179232788580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5lb / French Press",
+    "variant_id": "19179232821348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013731078316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013731569836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013731963052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013732487340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "Variety 3 Pack - 12oz Sumatra - 12oz Deep Blues - 12oz Big Foot / Whole Bean",
+    "variant_id": "42567275217145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "Variety 3 Pack - 12oz Sumatra - 12oz Deep Blues - 12oz Big Foot / Espresso",
+    "variant_id": "42567275249913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "Variety 3 Pack - 12oz Sumatra - 12oz Deep Blues - 12oz Big Foot / Drip",
+    "variant_id": "42567275282681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "Variety 3 Pack - 12oz Sumatra - 12oz Deep Blues - 12oz Big Foot / French Press",
+    "variant_id": "42567275315449"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "971bad04dbfe2abd",
+  "first_seen": "2026-10-26",
+  "handle": "bigfoot",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Bigfoot-NewCoffeePackaging-5.jpg?v=1662648563",
+  "platform": "shopify",
+  "product_id": "2099250233444",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "Bigfoot",
+  "url": "https://www.ilovemud.com/products/bigfoot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19180123979876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "19180124012644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19180124110948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "19180124176484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19180125028452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "19180125061220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19180125126756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "19180125159524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz -  3 Pack / Whole Bean",
+    "variant_id": "38009774276780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz -  3 Pack / Drip",
+    "variant_id": "38009776963756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz -  3 Pack / Espresso",
+    "variant_id": "38009777750188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz -  3 Pack / French Press",
+    "variant_id": "39308673876140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Big Foot - 12oz Deep Blues - 12oz Sumatra / Whole Bean",
+    "variant_id": "42558793482489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Big Foot - 12oz Deep Blues - 12oz Sumatra / Espresso",
+    "variant_id": "42558793515257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Big Foot - 12oz Deep Blues - 12oz Sumatra / Drip",
+    "variant_id": "42558793548025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Big Foot - 12oz Deep Blues - 12oz Sumatra / French Press",
+    "variant_id": "42558793580793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43765341323513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "43765341356281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "43765341389049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "43765341421817"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "9ee11072fc3efd7b",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/FrenchRoast-NewCoffeePackaging-19.jpg?v=1648237025",
+  "platform": "shopify",
+  "product_id": "2099284246628",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "French Roast",
+  "url": "https://www.ilovemud.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19180256755812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "19180256821348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "19180256886884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "19180256952420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19180257509476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "19180257542244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19180257575012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "19180257607780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013522280620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013525885100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013527457964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013535191212"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "426f5ff4a19c7260",
+  "first_seen": "2026-10-26",
+  "handle": "bully-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/BullyBlend-NewCoffeePackaging-23.jpg?v=1662648623",
+  "platform": "shopify",
+  "product_id": "3666758172772",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "animal rescue",
+   "dogs",
+   "fair trade",
+   "medium roast"
+  ],
+  "title": "Bully Blend",
+  "url": "https://www.ilovemud.com/products/bully-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177850531940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177850564708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177850663012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "28177850695780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Whole Bean",
+    "variant_id": "38009949651116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Espresso",
+    "variant_id": "38009950765228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Drip",
+    "variant_id": "38009952010412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38009960693932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38009965904044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "38009977831596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "38009978421420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / French Press",
+    "variant_id": "39308681937068"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "84d92150378f9ceb",
+  "first_seen": "2026-10-26",
+  "handle": "giddy-up",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/GiddyUp-NewCoffeePackaging-26.jpg?v=1648237249",
+  "platform": "shopify",
+  "product_id": "3666758238308",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "animal rescue",
+   "fair trade",
+   "horses",
+   "light roast"
+  ],
+  "title": "Giddy Up",
+  "url": "https://www.ilovemud.com/products/giddy-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Drip",
+    "variant_id": "28177850826852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "28177850925156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Espresso",
+    "variant_id": "38013542039724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / French Press",
+    "variant_id": "38013542400172"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "137884c2d8d20893",
+  "first_seen": "2026-10-26",
+  "handle": "feline-friends",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/FelineFrens-NewCoffeePackaging-18.jpg?v=1648235995",
+  "platform": "shopify",
+  "product_id": "3666758303844",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "animal rescue",
+   "cats",
+   "dark roast",
+   "fair trade",
+   "french roast",
+   "other"
+  ],
+  "title": "Feline Frens",
+  "url": "https://www.ilovemud.com/products/feline-friends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177851088996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177851187300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "28177851220068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177851252836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38013490102444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "38013492068524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "38013492789420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013495738540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013500784812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013502161068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013503602860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38013508944044"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "520091ba65202289",
+  "first_seen": "2026-10-26",
+  "handle": "cat-nap-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/CatNap-NewCoffeePackaging-8.jpg?v=1662648689",
+  "platform": "shopify",
+  "product_id": "3666758434916",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Decaf",
+   "animal rescue",
+   "cats",
+   "dark roast",
+   "fair trade",
+   "french roast",
+   "other"
+  ],
+  "title": "Cat Nap Decaf",
+  "url": "https://www.ilovemud.com/products/cat-nap-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177851678820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5 LB / Drip",
+    "variant_id": "28177851744356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "28177851777124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177851809892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38012853420204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38012855550124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38012868591788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38012872589484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38012875079852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38012877537452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5 LB / Espresso",
+    "variant_id": "42484082606329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "5 LB / French Press",
+    "variant_id": "42484082770169"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "4768337cbcb98e4b",
+  "first_seen": "2026-10-26",
+  "handle": "rise-shine",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/RiseandShine-NewCoffeePackaging-27.jpg?v=1648245225",
+  "platform": "shopify",
+  "product_id": "3666758500452",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "animal rescue",
+   "blend",
+   "fair trade",
+   "farm",
+   "medium roast",
+   "multi-roast",
+   "other"
+  ],
+  "title": "Rise & Shine",
+  "url": "https://www.ilovemud.com/products/rise-shine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177852006500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177852072036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "28177852104804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177852137572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38013705060524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38013705322668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "38013706567852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "38013706633388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013710631084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013710958764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013711319212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013711646892"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "dba538f2f1b24131",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/EarlyBird-NewCoffeePackaging-25.jpg?v=1648234899",
+  "platform": "shopify",
+  "product_id": "3666758795364",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "animal rescue",
+   "birds",
+   "fair trade",
+   "light roast"
+  ],
+  "title": "Early Bird",
+  "url": "https://www.ilovemud.com/products/early-bird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177853251684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177853349988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "28177853382756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177853415524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38013109993644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38013110681772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "38013112484012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "38013112844460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013116743852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013118054572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013121069228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "39308705398956"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "e61111283b428c6b",
+  "first_seen": "2026-10-26",
+  "handle": "dog-days",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/DogDays-NewCoffeePackaging-14.jpg?v=1648234033",
+  "platform": "shopify",
+  "product_id": "3666758828132",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Indonesian coffee",
+   "Puppies",
+   "animal rescue",
+   "dark roast",
+   "dogs",
+   "fair trade"
+  ],
+  "title": "Dog Days",
+  "url": "https://www.ilovemud.com/products/dog-days",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177853448292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "28177853546596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "28177853579364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177853612132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "38013080502444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "38013087154348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "38013088923820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "38013089448108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "38013093970092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "38013095215276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "38013097345196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "38013097902252"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "8eb29a875d36bd98",
+  "first_seen": "2026-10-26",
+  "handle": "partner-rescue",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/PawsCause-NewCoffeePackaging-16.jpg?v=1648243880",
+  "platform": "shopify",
+  "product_id": "3666759712868",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Medium Roast",
+   "animal rescue",
+   "birds",
+   "blend",
+   "cats",
+   "dogs",
+   "fair trade",
+   "horses",
+   "reptiles"
+  ],
+  "title": "Paws Cause",
+  "url": "https://www.ilovemud.com/products/partner-rescue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "28177857675364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Drip",
+    "variant_id": "28177858461796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39492085645484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "39492092887212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "42567138509049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "42567138541817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "42567138574585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "42567138607353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "42567138640121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "42567138672889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / Espresso",
+    "variant_id": "42567138869497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 Lb / French Press",
+    "variant_id": "42567138902265"
+   }
+  ],
+  "vendor": "Rescue roasts"
+ },
+ {
+  "body_hash": "23793e175c88592e",
+  "first_seen": "2026-10-26",
+  "handle": "trinity",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Trinity32oz-NewCoffeePackaging-46.jpg?v=1662648498",
+  "platform": "shopify",
+  "product_id": "6083042115756",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "Trinity",
+  "url": "https://www.ilovemud.com/products/trinity",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37542443843756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "37542443876524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "37542443909292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "37542443942060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43471025406201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "43471025438969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "43471025471737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "43471025504505"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "c43d163adcec1fa5",
+  "first_seen": "2026-10-26",
+  "handle": "mendocino",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Mendocino32oz-NewCoffeePackaging-45.jpg?v=1662648462",
+  "platform": "shopify",
+  "product_id": "6083093069996",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "High Caffeine",
+   "Light Roast",
+   "Organic"
+  ],
+  "title": "2 lb Mendocino",
+  "url": "https://www.ilovemud.com/products/mendocino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37542762774700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "37542762807468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "37542762840236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "37542762873004"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "26b23a8eb0e612d3",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-humboldt-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/Humboldt32oz-NewCoffeePackaging-47.jpg?v=1662648407",
+  "platform": "shopify",
+  "product_id": "6083097395372",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Fairtrade",
+   "Medium Roast",
+   "Organic",
+   "fair trade"
+  ],
+  "title": "2 lb Humboldt Blend",
+  "url": "https://www.ilovemud.com/products/copy-of-humboldt-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37542788038828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "37542788071596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "37542788104364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "37542788137132"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "62ffe526fa92bd5b",
+  "first_seen": "2026-10-26",
+  "handle": "greeny-blues-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/GreenyBluesBlendFRONT.jpg?v=1648233673",
+  "platform": "shopify",
+  "product_id": "6259045040300",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Kirk",
+   "Kirk Hammett",
+   "Metallica",
+   "greeny",
+   "greeny blues",
+   "greeny blues blend"
+  ],
+  "title": "Greeny Blues Blend",
+  "url": "https://www.ilovemud.com/products/greeny-blues-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz Whole bean - Coffee Only ( Not Autographed )",
+    "variant_id": "38051031613612"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "968cd4486af12f3b",
+  "first_seen": "2026-10-26",
+  "handle": "fern-canyon",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/FernCanyon-NewCoffeePackaging-9.jpg?v=1648236476",
+  "platform": "shopify",
+  "product_id": "7554512978169",
+  "product_type": "Medium Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Fairtrade",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Fern Canyon",
+  "url": "https://www.ilovemud.com/products/fern-canyon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42483999736057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "42483999768825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "42483999801593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "42483999834361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42483999867129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Drip",
+    "variant_id": "42483999899897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42483999932665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / French Press",
+    "variant_id": "42483999965433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Whole Bean",
+    "variant_id": "42483999998201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Drip",
+    "variant_id": "42484000030969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / Espresso",
+    "variant_id": "42484000063737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz - 3 Pack / French Press",
+    "variant_id": "42484000096505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Fern Canyon - 12oz Humboldt - 12oz Camel Rock / Whole Bean",
+    "variant_id": "42566781599993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Fern Canyon - 12oz Humboldt - 12oz Camel Rock / Drip",
+    "variant_id": "42566781632761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Fern Canyon - 12oz Humboldt - 12oz Camel Rock / Espresso",
+    "variant_id": "42566781665529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "Variety 3 Pack - 12oz Fern Canyon - 12oz Humboldt - 12oz Camel Rock / French Press",
+    "variant_id": "42566781698297"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "bc87d19e3d5e5ee8",
+  "first_seen": "2026-10-26",
+  "handle": "night-owl",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/products/NightOwl-NewCoffeePackaging-28.jpg?v=1648096810",
+  "platform": "shopify",
+  "product_id": "7554513174777",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Espresso",
+   "Fairtrade",
+   "High Caffeine",
+   "Organic",
+   "animal rescue"
+  ],
+  "title": "Night Owl",
+  "url": "https://www.ilovemud.com/products/night-owl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42484001702137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Drip",
+    "variant_id": "42484001734905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / Espresso",
+    "variant_id": "42484001767673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5 lb / French Press",
+    "variant_id": "42484001800441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42484001833209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Drip",
+    "variant_id": "42484001865977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "42484001898745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz / French Press",
+    "variant_id": "42484001931513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Whole Bean",
+    "variant_id": "42484001964281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Drip",
+    "variant_id": "42484001997049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / Espresso",
+    "variant_id": "42484002029817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12 oz - 3 Pack / French Press",
+    "variant_id": "42484002062585"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "62a7564070eed766",
+  "first_seen": "2026-10-26",
+  "handle": "vanta",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/files/DSCF7282_164ab8ad-912a-4711-9b72-14c1cac3ac58.jpg?v=1709245976",
+  "platform": "shopify",
+  "product_id": "8093473341689",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Dark Roast",
+   "Fairtrade",
+   "Organic"
+  ],
+  "title": "Vanta",
+  "url": "https://www.ilovemud.com/products/vanta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44442942800121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "44442942832889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "44442942865657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "44442942898425"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "82727098b5151339",
+  "first_seen": "2026-10-26",
+  "handle": "variety-3-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/files/DSCF7335.jpg?v=1710432628",
+  "platform": "shopify",
+  "product_id": "8123513635065",
+  "product_type": "Coffee",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Dark Roast",
+   "Fairtrade",
+   "Light Roast",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "12oz Variety 3 Packs",
+  "url": "https://www.ilovemud.com/products/variety-3-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Big Foot - 12oz Deep Blues - 12oz Stormy Monday / Whole Bean",
+    "variant_id": "44532112621817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Big Foot - 12oz Deep Blues - 12oz Stormy Monday / Drip",
+    "variant_id": "44532112654585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Big Foot - 12oz Deep Blues - 12oz Stormy Monday / Espresso",
+    "variant_id": "44532112687353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Big Foot - 12oz Deep Blues - 12oz Stormy Monday / French Press",
+    "variant_id": "44532112720121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Sumatra - 12oz Bali Blue Moon - 12oz Honduras / Whole Bean",
+    "variant_id": "44532308476153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Sumatra - 12oz Bali Blue Moon - 12oz Honduras / Drip",
+    "variant_id": "44532308508921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Sumatra - 12oz Bali Blue Moon - 12oz Honduras / Espresso",
+    "variant_id": "44532308541689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Sumatra - 12oz Bali Blue Moon - 12oz Honduras / French Press",
+    "variant_id": "44532308574457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Sumatra / Whole Bean",
+    "variant_id": "44532308607225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Sumatra / Drip",
+    "variant_id": "44532308639993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Sumatra / Espresso",
+    "variant_id": "44532308672761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Sumatra / French Press",
+    "variant_id": "44532308705529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Camel Rock - 12oz Stormy Monday - 12oz Sumatra / Whole Bean",
+    "variant_id": "44532466090233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Camel Rock - 12oz Stormy Monday - 12oz Sumatra / Drip",
+    "variant_id": "44532466123001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Camel Rock - 12oz Stormy Monday - 12oz Sumatra / Espresso",
+    "variant_id": "44532466155769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Camel Rock - 12oz Stormy Monday - 12oz Sumatra / French Press",
+    "variant_id": "44532466188537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Ethiopia - 12oz Camel Rock - 12oz Stormy Monday / Whole Bean",
+    "variant_id": "44532466221305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Ethiopia - 12oz Camel Rock - 12oz Stormy Monday / Drip",
+    "variant_id": "44532466254073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Ethiopia - 12oz Camel Rock - 12oz Stormy Monday / Espresso",
+    "variant_id": "44532466286841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Ethiopia - 12oz Camel Rock - 12oz Stormy Monday / French Press",
+    "variant_id": "44532466319609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Sumatra - 12oz Ethiopia / Whole Bean",
+    "variant_id": "44532466483449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Sumatra - 12oz Ethiopia / Drip",
+    "variant_id": "44532466516217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Sumatra - 12oz Ethiopia / Espresso",
+    "variant_id": "44532466548985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.55,
+    "title": "12oz Honduras - 12oz Sumatra - 12oz Ethiopia / French Press",
+    "variant_id": "44532466581753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Big Foot - 12oz Deep Blues -  12oz Sumatra / Whole Bean",
+    "variant_id": "44532466614521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Big Foot - 12oz Deep Blues -  12oz Sumatra / Drip",
+    "variant_id": "44532466647289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Big Foot - 12oz Deep Blues -  12oz Sumatra / Espresso",
+    "variant_id": "44532466680057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.75,
+    "title": "12oz Big Foot - 12oz Deep Blues -  12oz Sumatra / French Press",
+    "variant_id": "44532466712825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Whole Bean",
+    "variant_id": "44532466745593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Drip",
+    "variant_id": "44532466778361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / Espresso",
+    "variant_id": "44532466811129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Camel Rock - 12oz Fern Canyon - 12oz Humboldt / French Press",
+    "variant_id": "44532466843897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Fern Canyon / Whole Bean",
+    "variant_id": "44532466876665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Fern Canyon / Drip",
+    "variant_id": "44532466909433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Fern Canyon / Espresso",
+    "variant_id": "44532466942201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Honduras - 12oz Ethiopia - 12oz Fern Canyon / French Press",
+    "variant_id": "44532466974969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Big Foot - 12oz Humboldt - 12oz Ethiopia / Whole Bean",
+    "variant_id": "45578700620025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Big Foot - 12oz Humboldt - 12oz Ethiopia / Drip",
+    "variant_id": "45578700685561"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Big Foot - 12oz Humboldt - 12oz Ethiopia / Espresso",
+    "variant_id": "45578700718329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 43.65,
+    "title": "12oz Big Foot - 12oz Humboldt - 12oz Ethiopia / French Press",
+    "variant_id": "45578700751097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Bully Blend - 12oz Feline Frens - 12oz Early Bird / Whole Bean",
+    "variant_id": "48623902064889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Bully Blend - 12oz Feline Frens - 12oz Early Bird / Drip",
+    "variant_id": "48623902097657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Bully Blend - 12oz Feline Frens - 12oz Early Bird / Espresso",
+    "variant_id": "48623902130425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Bully Blend - 12oz Feline Frens - 12oz Early Bird / French Press",
+    "variant_id": "48623902163193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Dog Days - 12oz Bully Blend - 12oz Feline Frens / Whole Bean",
+    "variant_id": "48623902195961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Dog Days - 12oz Bully Blend - 12oz Feline Frens / Drip",
+    "variant_id": "48623902228729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Dog Days - 12oz Bully Blend - 12oz Feline Frens / Espresso",
+    "variant_id": "48623902261497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Dog Days - 12oz Bully Blend - 12oz Feline Frens / French Press",
+    "variant_id": "48623902294265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Giddy up - 12oz Early Bird - 12oz Rise & Shine / Whole Bean",
+    "variant_id": "48623902327033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Giddy up - 12oz Early Bird - 12oz Rise & Shine / Drip",
+    "variant_id": "48623902359801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Giddy up - 12oz Early Bird - 12oz Rise & Shine / Espresso",
+    "variant_id": "48623902392569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Giddy up - 12oz Early Bird - 12oz Rise & Shine / French Press",
+    "variant_id": "48623902425337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Rise & Shine - 12oz Bully Blend - 12oz Night owl / Whole Bean",
+    "variant_id": "48623902458105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Rise & Shine - 12oz Bully Blend - 12oz Night owl / Drip",
+    "variant_id": "48623902490873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Rise & Shine - 12oz Bully Blend - 12oz Night owl / Espresso",
+    "variant_id": "48623902523641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Rise & Shine - 12oz Bully Blend - 12oz Night owl / French Press",
+    "variant_id": "48623902556409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Night Owl - 12oz Dog Days - 12oz Feline Frens / Whole Bean",
+    "variant_id": "48623902589177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Night Owl - 12oz Dog Days - 12oz Feline Frens / Drip",
+    "variant_id": "48623902621945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Night Owl - 12oz Dog Days - 12oz Feline Frens / Espresso",
+    "variant_id": "48623902654713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 41.85,
+    "title": "12oz Night Owl - 12oz Dog Days - 12oz Feline Frens / French Press",
+    "variant_id": "48623902687481"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "482107bbb437ed58",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-stormy-monday",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/files/DSCF8330.jpg?v=1713221732",
+  "platform": "shopify",
+  "product_id": "8240099066105",
+  "product_type": "Dark Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Dark Roast",
+   "Organic"
+  ],
+  "title": "2lb Stormy Monday",
+  "url": "https://www.ilovemud.com/products/2lb-stormy-monday",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44809268560121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "44809268592889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "44809268625657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "44809268658425"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ },
+ {
+  "body_hash": "4953e5a945114c75",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-2lb-stormy-monday",
+  "image": "https://cdn.shopify.com/s/files/1/0135/1145/8916/files/DSCF8325.jpg?v=1713222218",
+  "platform": "shopify",
+  "product_id": "8240101687545",
+  "product_type": "Light Roast",
+  "roaster_slug": "rescueroasts",
+  "tags": [
+   "Certified Organic",
+   "Light Roast",
+   "Organic"
+  ],
+  "title": "Golden State Sunrise",
+  "url": "https://www.ilovemud.com/products/copy-of-2lb-stormy-monday",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44809283141881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Espresso",
+    "variant_id": "44809283174649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / Drip",
+    "variant_id": "44809283207417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.5,
+    "title": "2lb / French Press",
+    "variant_id": "44809283240185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45905856102649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Drip",
+    "variant_id": "45905928126713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / Espresso",
+    "variant_id": "45905928847609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.5,
+    "title": "5lb / French Press",
+    "variant_id": "45905929830649"
+   }
+  ],
+  "vendor": "ilovemud.com"
+ }
+]

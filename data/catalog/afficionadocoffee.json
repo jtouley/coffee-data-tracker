@@ -1,0 +1,849 @@
+[
+ {
+  "body_hash": "a7a1c730e557ed92",
+  "first_seen": "2026-10-26",
+  "handle": "benchmark-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Benchmark-WBG.jpg?v=1771360099",
+  "platform": "shopify",
+  "product_id": "6261271232661",
+  "product_type": "espresso blend coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Espresso",
+   "Brew Method_French Press",
+   "Caffeine_Caffeinated",
+   "Espresso",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Blend",
+   "Origin_Brazil",
+   "Origin_Honduras",
+   "Origin_Peru",
+   "Profile_Creamy",
+   "Profile_Dark Chocolate",
+   "Profile_Stewed Red Fruit",
+   "Type_Blend",
+   "Type_Espresso"
+  ],
+  "title": "Afficionado Benchmark Espresso - Dark Chocolate, Creamy, Stewed Red Fruit - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/benchmark-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "39992217665685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "39992217698453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "39992217731221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "39992217763989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "39992217796757"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "7dd5cccbb414c86c",
+  "first_seen": "2026-10-26",
+  "handle": "punku-rumi",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Punku-Rumi-WBG.jpg?v=1771360045",
+  "platform": "shopify",
+  "product_id": "6353019469973",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Cold Brew",
+   "Brew Method_French Press",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Peru",
+   "Origin_Single Origin",
+   "Profile_Chocolate",
+   "Profile_Maple",
+   "Profile_Whiskey",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Peru Punku Rumi - Chocolate, Whiskey, Maple - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/punku-rumi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "39992246141077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "39992246173845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "39992246206613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "39992246239381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "39992246272149"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "918ce5cc693b196b",
+  "first_seen": "2026-10-26",
+  "handle": "hamma-collective",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Hamma-WBG.jpg?v=1771360017",
+  "platform": "shopify",
+  "product_id": "6355121733781",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Aeropress",
+   "Brew Method_Chemex",
+   "Brew Method_Cold Brew",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Floral/ Fragrant",
+   "Origin_Ethiopia",
+   "Origin_Single Origin",
+   "Profile_Florality",
+   "Profile_Graham Cracker",
+   "Profile_Honey",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Ethiopia Hamma Collective - Graham Cracker, Honey, Florality - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/hamma-collective",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "39992229494933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "39992229527701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "39992229560469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over",
+    "variant_id": "39992229593237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "39992229626005"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "87ecd299609559c8",
+  "first_seen": "2026-10-26",
+  "handle": "dangora-cooperative",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Dangora-WBG.jpg?v=1771359924",
+  "platform": "shopify",
+  "product_id": "6355138281621",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Cold Brew",
+   "Brew Method_V60",
+   "Caffeine_Decaffeinated",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Ethiopia",
+   "Origin_Single Origin",
+   "Profile_Citrus",
+   "Profile_Malty",
+   "Profile_Milk Chocolate",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Ethiopia Dangora Cooperative Decaf - Malty, Citrus, Milk Chocolate - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/dangora-cooperative",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "39992225235093"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "39992225267861"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "39992225300629"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "39992225333397"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "39992225366165"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "05320aa8cd56a985",
+  "first_seen": "2026-10-26",
+  "handle": "liberator",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Liberator-2-WBG.jpg?v=1775146566",
+  "platform": "shopify",
+  "product_id": "6754925346965",
+  "product_type": "espresso blend coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Drip",
+   "Brew Method_Espresso",
+   "Caffeine_Caffeinated",
+   "Flavor_Earthy/ Spicy",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Blend",
+   "Origin_El Salvador",
+   "Origin_Ethiopia",
+   "Profile_ Sweet Lemon Finish",
+   "Profile_Chocolate",
+   "Profile_Rum Raisin",
+   "Type_Blend",
+   "Type_Espresso"
+  ],
+  "title": "Afficionado Liberator - Baker's Chocolate, Rum Raisin , Sweet Lemon Finish - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/liberator",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / 12oz",
+    "variant_id": "39992235425941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "39992235458709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / 12oz",
+    "variant_id": "39992235491477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "39992235524245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39992235557013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45108584415381"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "f87897eb1eef19fd",
+  "first_seen": "2026-10-26",
+  "handle": "aileron",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Aileron-WBG.jpg?v=1771359839",
+  "platform": "shopify",
+  "product_id": "6811802075285",
+  "product_type": "blend coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Drip",
+   "Brew Method_French Press",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Blend",
+   "Origin_Brazil",
+   "Origin_Colombia",
+   "Origin_Ethiopia",
+   "Profile_ Peanut",
+   "Profile_Caramel",
+   "Profile_Citrus Jam",
+   "Type_Blend"
+  ],
+  "title": "Afficionado Aileron - Peanut, Caramel, Citrus Jam - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/aileron",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "40019296256149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "40019296288917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "40019296321685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over",
+    "variant_id": "40019296354453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "40019296387221"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "525740a86eb54229",
+  "first_seen": "2026-10-26",
+  "handle": "calico-decaffeinated",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Calico-WBG_Update.jpg?v=1788877746",
+  "platform": "shopify",
+  "product_id": "6902566748309",
+  "product_type": "blend coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Espresso",
+   "Caffeine_Decaffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Blend",
+   "Origin_El Salvador",
+   "Origin_Indonesia",
+   "Origin_Peru",
+   "Profile_Caramel",
+   "Profile_Citrus Jam",
+   "Profile_Peanut",
+   "Type_Blend",
+   "Type_Espresso"
+  ],
+  "title": "Afficionado Calico Decaf - Milk Chocolate, Orange Marmalade, Malt - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/calico-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "40288813973653"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "40288814006421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "40288814039189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "40288814071957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "40288814104725"
+   }
+  ],
+  "vendor": "afficionado coffee"
+ },
+ {
+  "body_hash": "bab768eff9154ec3",
+  "first_seen": "2026-10-26",
+  "handle": "la-huicoya-1",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/La-Huicoya-WBG.jpg?v=1771352655",
+  "platform": "shopify",
+  "product_id": "7125175828629",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Aeropress",
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Earthy/ Spicy",
+   "Origin_Nicaragua",
+   "Origin_Single Origin",
+   "Profile_Earthy",
+   "Profile_Peanut",
+   "Profile_Toffee",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Nicaragua La Huicoya - Toffee, Peanut, Earthy - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/la-huicoya-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "41155446046869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "41155446079637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "41155446112405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "41155446145173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "41155446177941"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "ab890986de3afcfd",
+  "first_seen": "2026-10-26",
+  "handle": "nyamasasa",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Nyamasasa-WBG.jpg?v=1771352627",
+  "platform": "shopify",
+  "product_id": "7798735437973",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Fruity/ Juicy",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_DR Congo",
+   "Origin_Single Origin",
+   "Profile_Bright Citrus",
+   "Profile_Honey",
+   "Profile_Malty Fudge",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Congo Nyamasasa - Bright Citrus, Malty Fudge, Honey - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/nyamasasa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "43158447489173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "French Press",
+    "variant_id": "43158447521941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Drip",
+    "variant_id": "43158447554709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Pour Over",
+    "variant_id": "43158447587477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Espresso",
+    "variant_id": "43158447620245"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "760ae408bb4842e6",
+  "first_seen": "2026-10-26",
+  "handle": "finca-cerro-bueno",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Honduras_WBKG.jpg?v=1777299828",
+  "platform": "shopify",
+  "product_id": "8599741956245",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Nutty/ Chocolatey",
+   "Origin_Honduras",
+   "Origin_Single Origin",
+   "Profile_Brown Butter",
+   "Profile_Light Citrus",
+   "Profile_Nutty Praline",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Honduras Finca Cerro Bueno - Brown Butter, Nutty Praline, Light Citrus - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/finca-cerro-bueno",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "45361460347029"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "45361460379797"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "45361460412565"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Pour Over",
+    "variant_id": "45361460445333"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "45361460478101"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "fa736451a238fb59",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-asiodett",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/Asodiett-WBG.jpg?v=1786028078",
+  "platform": "shopify",
+  "product_id": "9302707208341",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Aeropress",
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Earthy/ Spicy",
+   "Flavor_Fruity/ Juicy",
+   "Origin_Guatemala",
+   "Origin_Single Origin",
+   "Profile_ Marzipan",
+   "Profile_Maple",
+   "Profile_Red Date",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Guatemala Asiodett - Maple, Date, Marzipan - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/guatemala-asiodett",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "47613308928149"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "French Press",
+    "variant_id": "47613308960917"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Drip",
+    "variant_id": "47613308993685"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Pour Over",
+    "variant_id": "47613309026453"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Espresso",
+    "variant_id": "47613309059221"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "a9a6b226d3322396",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-dipilto-co-op",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/DipiltoCo-Op-WBG.jpg?v=1786029738",
+  "platform": "shopify",
+  "product_id": "9302862495893",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Aeropress",
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Decaffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Earthy/ Spicy",
+   "Flavor_Fruity/ Juicy",
+   "Origin_Nicaragua",
+   "Origin_Single Origin",
+   "Profile_Honey",
+   "Profile_Honey Comb",
+   "Profile_Pecan",
+   "Profile_Pomelo",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Nicaragua Dipilto Co-op - Decaffeinated - Honey Comb, Pecan, Pomelo - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/nicaragua-dipilto-co-op",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "47613771284629"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "French Press",
+    "variant_id": "47613771317397"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Drip",
+    "variant_id": "47613771350165"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Pour Over",
+    "variant_id": "47613771382933"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Espresso",
+    "variant_id": "47613771415701"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ },
+ {
+  "body_hash": "97f24105e978934d",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-la-perla",
+  "image": "https://cdn.shopify.com/s/files/1/0505/5915/6373/files/La-Perla-WBG.jpg?v=1786027768",
+  "platform": "shopify",
+  "product_id": "9302871703701",
+  "product_type": "single origin coffee",
+  "roaster_slug": "afficionadocoffee",
+  "tags": [
+   "Brew Method_Aeropress",
+   "Brew Method_Chemex",
+   "Brew Method_V60",
+   "Caffeine_Caffeinated",
+   "Flavor_Caramel/ Honey",
+   "Flavor_Earthy/ Spicy",
+   "Flavor_Fruity/ Juicy",
+   "Origin_Mexico",
+   "Origin_Single Origin",
+   "Profile_Ameretto",
+   "Profile_Honey",
+   "Profile_Honey Comb",
+   "Profile_Pecan",
+   "Profile_Praline",
+   "Type_Single Origin"
+  ],
+  "title": "Afficionado Mexican La Perla - Pecan Praline, Amaretto, Orange Blossom - 12oz",
+  "url": "https://www.afficionadocoffee.com/products/mexican-la-perla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "47613814177941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "French Press",
+    "variant_id": "47613814210709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Drip",
+    "variant_id": "47613814243477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Pour Over",
+    "variant_id": "47613814276245"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Espresso",
+    "variant_id": "47613814309013"
+   }
+  ],
+  "vendor": "Afficionado Coffee Roasters"
+ }
+]

@@ -1,0 +1,517 @@
+[
+ {
+  "body_hash": "d2d956ff8a078a1f",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-classic-2",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/CBB.png?v=1708253790",
+  "platform": "shopify",
+  "product_id": "4503862181984",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [
+   "Otus Cold Brew Classic",
+   "brew at home",
+   "cold brew",
+   "cold brew coffee",
+   "refreshingly bold"
+  ],
+  "title": "Cold Brew Classic - Beans",
+  "url": "https://otus.coffee/products/cold-brew-classic-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31820234227808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium(Ground) / 12oz",
+    "variant_id": "31820234293344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "36408473878687"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Medium(Ground) / 2lb",
+    "variant_id": "36408473976991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "36408555602079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium(Ground) / 5lb",
+    "variant_id": "36408563564703"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "279dc9d246ce80a1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/SLEEPYOWL.png?v=1691664437",
+  "platform": "shopify",
+  "product_id": "6075249066176",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [
+   "Huila",
+   "Sleepy Owl",
+   "colombia",
+   "decaf",
+   "decaf coffee"
+  ],
+  "title": "Sleepy Owl - DECAF Colombia",
+  "url": "https://otus.coffee/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37547486216384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "37547486249152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "37547486281920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "37547486412992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "37547486445760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "37547486478528"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "d5827e1c953bf5e3",
+  "first_seen": "2026-10-26",
+  "handle": "jeffs-coffee-run",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/products/12oz_Template_EDIT_2_Jeffs.png?v=1668140263",
+  "platform": "shopify",
+  "product_id": "6839079239872",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [
+   "Bagel",
+   "Balanced",
+   "Jeff's Bagel Run",
+   "Medium Roast"
+  ],
+  "title": "Jeff's Coffee Run",
+  "url": "https://otus.coffee/products/jeffs-coffee-run",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40500147486912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "40500147519680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40500147552448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "40500147716288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "40500147781824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "40500147814592"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "730eb5d2ff9aaa77",
+  "first_seen": "2026-10-26",
+  "handle": "darkside-a-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/DARKSIDE.png?v=1708341234",
+  "platform": "shopify",
+  "product_id": "7729689034944",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [
+   "Dark roast",
+   "Darkside",
+   "Robust"
+  ],
+  "title": "Darkside - A Dark Roast",
+  "url": "https://otus.coffee/products/darkside-a-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44562345885888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44562345918656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44562345951424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "44562346082496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "44562346115264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "44562346148032"
+   }
+  ],
+  "vendor": "Otus Coffee Co."
+ },
+ {
+  "body_hash": "8c01d07046058dcc",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/EARLYBIRD.png?v=1730920732",
+  "platform": "shopify",
+  "product_id": "8113420107968",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [],
+  "title": "Early Bird Espresso",
+  "url": "https://otus.coffee/products/early-bird-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45764549509312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "45764549542080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45764549574848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "45764549607616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "45764549640384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "45764549673152"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "16e27a9b658fa6aa",
+  "first_seen": "2026-10-26",
+  "handle": "ixlama-huehuetenango-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/IXLAMA.png?v=1756723968",
+  "platform": "shopify",
+  "product_id": "8311499129024",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [],
+  "title": "Ixlama - Huehuetenango, Guatemala",
+  "url": "https://otus.coffee/products/ixlama-huehuetenango-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46715538669760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46715538702528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46715538735296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "46715538768064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "46715538800832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "46715538833600"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "968226e0f52b17af",
+  "first_seen": "2026-10-26",
+  "handle": "chimba-1",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/CHIMBA_e96cc1e7-4a57-4c47-8a34-4173599cff8e.png?v=1775839713",
+  "platform": "shopify",
+  "product_id": "8546426781888",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [],
+  "title": "Chimba!!",
+  "url": "https://otus.coffee/products/chimba-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48139961663680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48139961696448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48139961729216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "48139961761984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "48139961794752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "48139961827520"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "c1eb90dc5940d8b0",
+  "first_seen": "2026-10-26",
+  "handle": "just-peachy",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/PEACHY.png?v=1782324042",
+  "platform": "shopify",
+  "product_id": "8618321772736",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [],
+  "title": "Just Peachy - Juan Puerta",
+  "url": "https://otus.coffee/products/just-peachy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48494614610112"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "48494614675648"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ },
+ {
+  "body_hash": "3187c081aa416bd2",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry-smash-worka-sakaro-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0085/3989/7952/files/StrawberrySmash.png?v=1789146702",
+  "platform": "shopify",
+  "product_id": "8736012763328",
+  "product_type": "",
+  "roaster_slug": "otus",
+  "tags": [],
+  "title": "Strawberry Smash - Worka Sakaro, Ethiopia",
+  "url": "https://otus.coffee/products/strawberry-smash-worka-sakaro-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48997611503808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Ground(Medium) / 12oz",
+    "variant_id": "48997611536576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48997633556672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48997633589440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "Ground(Medium) / 2lb",
+    "variant_id": "48997633622208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Ground(Medium) / 5lb",
+    "variant_id": "48997633654976"
+   }
+  ],
+  "vendor": "Otus Coffee"
+ }
+]

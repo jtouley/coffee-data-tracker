@@ -1,0 +1,564 @@
+[
+ {
+  "body_hash": "f77195c65a8f2923",
+  "first_seen": "2026-10-26",
+  "handle": "peru-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_862b1310-3ea0-416c-84ea-52454f96476c.jpg?v=1677721746",
+  "platform": "shopify",
+  "product_id": "8172256461080",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Aroma of the Amazon",
+  "url": "https://avspresso.com/products/peru-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44655258665240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44656376971544"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "2b82d76d0be47ce1",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_a5630f58-62ef-47d8-bc95-99c6d879cf0a.jpg?v=1677721751",
+  "platform": "shopify",
+  "product_id": "8172256559384",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Honduran Heaven",
+  "url": "https://avspresso.com/products/honduras-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44655258861848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44656367042840"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "f26a664ecc4647ae",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_099e4eb7-d61e-44b7-917c-194750cde5a4.jpg?v=1677721752",
+  "platform": "shopify",
+  "product_id": "8172256657688",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Savory Sidama",
+  "url": "https://avspresso.com/products/ethiopia-natural-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44655259058456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44656324444440"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "52646ba2d452d0b0",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_2c6e0cdf-f87b-433e-93ee-64a06595e8fa.jpg?v=1677721758",
+  "platform": "shopify",
+  "product_id": "8172256755992",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://avspresso.com/products/breakfast-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44655259156760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44656372646168"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "53eea5cc16c326c1",
+  "first_seen": "2026-10-26",
+  "handle": "african-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_08564377-c96f-4b95-b8f5-8d473afb07dc.jpg?v=1677721758",
+  "platform": "shopify",
+  "product_id": "8172256788760",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://avspresso.com/products/african-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44655259189528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44656369336600"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "7bbac93804893688",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_6424713e-ada1-454d-a879-c042da25c85b.jpg?v=1677731914",
+  "platform": "shopify",
+  "product_id": "8172544983320",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Taxi Way Charlie",
+  "url": "https://avspresso.com/products/bali-blue-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44656288629016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44656316219672"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "576f2197d6068ec3",
+  "first_seen": "2026-10-26",
+  "handle": "6-bean-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_7426f4a7-28fe-4722-84ac-cf9bd9c38ed6.jpg?v=1678044662",
+  "platform": "shopify",
+  "product_id": "8176473932056",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Red Eye Blend",
+  "url": "https://avspresso.com/products/6-bean-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44682727129368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44682727981336"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "48893c63a6bed3a7",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_b4b44d01-d841-497c-a5a9-c9c6e83738ec.jpg?v=1678252241",
+  "platform": "shopify",
+  "product_id": "8180793049368",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Unleaded (Decaf)",
+  "url": "https://avspresso.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44709282021656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44709302698264"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "d0f497ca1f0ad8a2",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_c24fa784-a2a3-4cf7-840a-69e675b06b28.jpg?v=1679968837",
+  "platform": "shopify",
+  "product_id": "8223387713816",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Whiskey Tango Foxtrot",
+  "url": "https://avspresso.com/products/whiskey-barrel-aged",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44891195212056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44891197538584"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "ff94782d7f0f3bb3",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-2",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_ce6eaef8-0ca0-406d-bf89-30a4324af1fa.jpg?v=1679974601",
+  "platform": "shopify",
+  "product_id": "8223482839320",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "French Vanilla Cold Brew",
+  "url": "https://avspresso.com/products/french-vanilla-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44891544584472"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "f19859cb1aa762cf",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-2",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_9d212bf7-3f6e-4305-bbf3-6730d78095ad.jpg?v=1679979207",
+  "platform": "shopify",
+  "product_id": "8223578849560",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Hazelnut",
+  "url": "https://avspresso.com/products/hazelnut-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44891783201048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44891785888024"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "0c60cd864b2e7aa8",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-2",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_9ea3fb09-45f6-4f19-8389-b91f9f9836be.jpg?v=1679979286",
+  "platform": "shopify",
+  "product_id": "8223580913944",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Caramel",
+  "url": "https://avspresso.com/products/caramel-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44891787723032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44891790213400"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "f6a26482ce5b70b5",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-2",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_eb23e195-bbe7-4f83-83cb-ddddea5b35f8.jpg?v=1679979389",
+  "platform": "shopify",
+  "product_id": "8223584289048",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://avspresso.com/products/pumpkin-spice-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44891794604312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44891802992920"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "a2582111d709affd",
+  "first_seen": "2026-10-26",
+  "handle": "mint",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_ba139e7e-94d6-449d-9fae-6d348db62e64.jpg?v=1679979513",
+  "platform": "shopify",
+  "product_id": "8223586779416",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Fresh Mint",
+  "url": "https://avspresso.com/products/mint",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44891804664088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44891822850328"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "99c6281e33e9de04",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-3",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_3c69897b-aa47-4e5a-85fb-bbe5eff2e245.jpg?v=1680044978",
+  "platform": "shopify",
+  "product_id": "8225083916568",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "French Vanilla",
+  "url": "https://avspresso.com/products/french-vanilla-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44898551759128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44898563260696"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "b36a704258feb22b",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chocolate-2",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_b6f9ad7f-1b5a-419e-b76d-360c2ad8e8c1.jpg?v=1680045098",
+  "platform": "shopify",
+  "product_id": "8225085194520",
+  "product_type": "",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Cinnamon Chocolate",
+  "url": "https://avspresso.com/products/mexican-chocolate-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44898578497816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44898606743832"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "68da113761e39d36",
+  "first_seen": "2026-10-26",
+  "handle": "max-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_534ec1ab-3ef7-4af5-95ce-7f73a7b97db9.jpg?v=1685469595",
+  "platform": "shopify",
+  "product_id": "8347247575320",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Tailwind Roast (Max Caffeine)",
+  "url": "https://avspresso.com/products/max-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45364753334552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "45364764213528"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ },
+ {
+  "body_hash": "2a44f52e7b9fd29d",
+  "first_seen": "2026-10-26",
+  "handle": "mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0701/4547/4840/products/coffee_bag_blank_final_latest_0238751d-8231-4bd2-a44b-3d44e82d0ba3.jpg?v=1685923274",
+  "platform": "shopify",
+  "product_id": "8361751773464",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "avspresso",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "\"Cold and Dark\" Mocha Cold Brew",
+  "url": "https://avspresso.com/products/mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Coarse",
+    "variant_id": "45409465499928"
+   }
+  ],
+  "vendor": "Avspresso Roasters"
+ }
+]

@@ -1,0 +1,609 @@
+[
+ {
+  "body_hash": "f5fa17d223c0b5a6",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/Mexico-Natural-bag.jpg?v=1792075824",
+  "platform": "shopify",
+  "product_id": "15404534923377",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "new",
+   "roast-light",
+   "single-origin"
+  ],
+  "title": "Mexico Natural",
+  "url": "https://convivecoffee.com/products/mexico-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "67636376076401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "67636376109169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "67636376141937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "67636376174705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "67636376207473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "67636376240241"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "cfbe13578e305eae",
+  "first_seen": "2026-10-26",
+  "handle": "folksy-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/Folksy_House_Blend_Best_Coffee_Pittsburgh.png?v=1784063786",
+  "platform": "shopify",
+  "product_id": "7756300419185",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "blend",
+   "coffee",
+   "roast-dark"
+  ],
+  "title": "Folksy House Blend",
+  "url": "https://convivecoffee.com/products/folksy-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43627609915505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43627609948273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "43627609981041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "43627610013809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "43627610046577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "43627610079345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43627610112113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Espresso Grind",
+    "variant_id": "43627610144881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Pour Over Grind",
+    "variant_id": "43627610177649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Automatic Drip Grind",
+    "variant_id": "43627610210417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / Chemex Grind",
+    "variant_id": "43627610243185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs / French Press Grind",
+    "variant_id": "43627610275953"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "bf6615055b1f785e",
+  "first_seen": "2026-10-26",
+  "handle": "revive-house-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/1_Mockup_1x1_7da724fc-beaf-478f-b5d5-9f98013e8b2e.png?v=1784146279",
+  "platform": "shopify",
+  "product_id": "7756300451953",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "blend",
+   "coffee",
+   "cold-brew",
+   "espresso",
+   "iced",
+   "roast-balanced"
+  ],
+  "title": "Revive House Espresso",
+  "url": "https://convivecoffee.com/products/revive-house-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43627610308721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43627610341489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "43627610374257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "43627610407025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "43627610439793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "43627610472561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43627610505329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs / Espresso Grind",
+    "variant_id": "43627610538097"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "ae0d7da215a8b45c",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/1_Mockup_1x1_870ded73-1bc1-40b0-9f24-d2d8477fa78a.png?v=1784161528",
+  "platform": "shopify",
+  "product_id": "7756300615793",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "decaf",
+   "roast-balanced"
+  ],
+  "title": "Decaffeinated Colombia",
+  "url": "https://convivecoffee.com/products/decaffeinated-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "43627611783281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "43627611816049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "43627611881585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "43627611914353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "43627611947121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "43627611979889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / French Press Grind",
+    "variant_id": "43627612012657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Automatic Drip Grind",
+    "variant_id": "43627612078193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Pour Over Grind",
+    "variant_id": "43627612110961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Espresso Grind",
+    "variant_id": "43627612143729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "44469643346033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Chemex Grind",
+    "variant_id": "44469643378801"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "5fe60d15ecf9d313",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/1_Mockup_1x1_d0a4fbbb-310d-467d-8133-bb71d5d8409c.png?v=1784161380",
+  "platform": "shopify",
+  "product_id": "7756300812401",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "roast-light",
+   "single-origin"
+  ],
+  "title": "Kenya Washed",
+  "url": "https://convivecoffee.com/products/kenya-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44469650391153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "44469650423921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "44469650456689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "44469650489457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "44469653667953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "44469653700721"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "a8a8d606b0c942d7",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/1_Mockup_1x1_a3d0dc4d-0f18-4aad-b843-fedc30282509.jpg?v=1787965205",
+  "platform": "shopify",
+  "product_id": "7815639367793",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "roasters-choice"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://convivecoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44469658157169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "44469658189937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "44469658222705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "44469658255473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "44469658288241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "44469658321009"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "887033ed62d36244",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/Colombia_Pink_Bourbon.jpg?v=1789133823",
+  "platform": "shopify",
+  "product_id": "7829043576945",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "new",
+   "roast-light",
+   "single-origin"
+  ],
+  "title": "Colombia Pink Bourbon",
+  "url": "https://convivecoffee.com/products/colombia-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44534879125617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "44534879158385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "44534879191153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "44534879223921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "44534879256689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "44534879289457"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ },
+ {
+  "body_hash": "6993227d4e96c76f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-honey-h1",
+  "image": "https://cdn.shopify.com/s/files/1/0240/7213/files/Cost_Rica_H1_Honey.jpg?v=1789565419",
+  "platform": "shopify",
+  "product_id": "7836827975793",
+  "product_type": "Coffee",
+  "roaster_slug": "convivecoffee",
+  "tags": [
+   "bag",
+   "coffee",
+   "new",
+   "roast-light",
+   "single-origin"
+  ],
+  "title": "Costa Rica Honey H1",
+  "url": "https://convivecoffee.com/products/costa-rica-honey-h1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44568375853169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "44568375885937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Pour Over Grind",
+    "variant_id": "44568375918705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Automatic Drip Grind",
+    "variant_id": "44568375951473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Chemex Grind",
+    "variant_id": "44568375984241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / French Press Grind",
+    "variant_id": "44568376017009"
+   }
+  ],
+  "vendor": "Convive Coffee"
+ }
+]

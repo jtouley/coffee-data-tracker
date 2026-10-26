@@ -1,0 +1,152 @@
+[
+ {
+  "body_hash": "ebd99883f632ef23",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-tigre",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5741.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "166",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica El Tigre",
+  "url": "https://brewedawakenings.us/product/costa-rica-el-tigre/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Costa Rica El Tigre",
+    "variant_id": "166:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "842810927007178a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehue",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5739.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "278",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala Huehue Dulce Leonarda Estate",
+  "url": "https://brewedawakenings.us/product/guatemala-huehue/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Guatemala Huehue Dulce Leonarda Estate",
+    "variant_id": "278:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6d28e83f7b853357",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-blend",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5744.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "284",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaffeinated Blend",
+  "url": "https://brewedawakenings.us/product/decaffeinated-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Decaffeinated Blend",
+    "variant_id": "284:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "57ed941449c58049",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5742.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "334",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://brewedawakenings.us/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Papua New Guinea",
+    "variant_id": "334:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4a73c2760ad15b1",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5746.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "527",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://brewedawakenings.us/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Espresso Blend",
+    "variant_id": "527:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27be6723d10e2600",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-lintong-triple-pick-tiger",
+  "image": "https://brewedawakenings.us/wp-content/uploads/2025/10/brewed-awakenings-pastries-and-coffee5745.jpg.80.webp",
+  "platform": "woocommerce",
+  "product_id": "533",
+  "product_type": "variable",
+  "roaster_slug": "brewedawakenings",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra Lintong Triple Pick Tiger",
+  "url": "https://brewedawakenings.us/product/sumatra-lintong-triple-pick-tiger/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Sumatra Lintong Triple Pick Tiger",
+    "variant_id": "533:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

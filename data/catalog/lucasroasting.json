@@ -1,0 +1,1766 @@
+[
+ {
+  "body_hash": "bde9588b26ea768e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-esmeralda-decaffeinated-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "11786",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Latin American",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Mexico Esmeralda Decaffeinated Coffee",
+  "url": "https://www.lucasroasting.com/product/mexico-esmeralda-decaffeinated-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "11786:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "11786:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "11786:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "11786:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53878ce457ee6fb1",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-coconut-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "13095",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Caramel Coconut Coffee",
+  "url": "https://www.lucasroasting.com/product/caramel-coconut-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "13095:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "13095:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "13095:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "13095:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7842a3567f2582a0",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-sigri-estate-peaberry-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2023/09/20230918_1615278222171873169104868-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "13629",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Indonesian",
+   "Light Roast",
+   "New Items",
+   "Regular"
+  ],
+  "title": "Papua New Guinea Sigri Estate Peaberry Coffee",
+  "url": "https://www.lucasroasting.com/product/papua-new-guinea-sigri-estate-peaberry-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "13629:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "13629:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "13629:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "13629:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47433a78cd4cae2e",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "15046",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Blueberry Coffee",
+  "url": "https://www.lucasroasting.com/product/blueberry-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "15046:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "15046:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "15046:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "15046:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "741c8e296dfd5303",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-vanilla-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "15053",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Blueberry Vanilla Coffee",
+  "url": "https://www.lucasroasting.com/product/blueberry-vanilla-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "15053:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "15053:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "15053:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "15053:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb7cab1663dcebfb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-aricha-washed-process-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2019/03/Ethiopia-Dumerso.jpg",
+  "platform": "woocommerce",
+  "product_id": "17441",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "African",
+   "Coffee",
+   "Light Roast",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Yirgacheffe “Aricha” (Washed Process) Coffee",
+  "url": "https://www.lucasroasting.com/product/ethiopia-yirgacheffe-aricha-washed-process-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "17441:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "17441:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "17441:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "17441:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "455f923f107742c7",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "2751",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Southern Pecan Coffee",
+  "url": "https://www.lucasroasting.com/product/southern-pecan-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "2751:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "2751:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "2751:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "2751:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64f650f1c65412ed",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "2855",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Irish Cream Coffee",
+  "url": "https://www.lucasroasting.com/product/irish-cream-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "2855:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "2855:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "2855:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "2855:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "037021cb23613860",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "2898",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "House Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/house-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb",
+    "variant_id": "2898:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 14.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "2898:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "2898:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz",
+    "variant_id": "2898:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a08c30e210e5a66",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-shb-huehuetenango-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "3408",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Latin American",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "Guatemala SHB Huehuetenango Coffee",
+  "url": "https://www.lucasroasting.com/product/guatemala-shb-huehuetenango-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "3408:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "3408:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "3408:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "3408:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b0b2b82f5eb036b",
+  "first_seen": "2026-10-26",
+  "handle": "winnipesaukee-sunrise-blend-coffe",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "4629",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Winnipesaukee Sunrise Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/winnipesaukee-sunrise-blend-coffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "4629:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "4629:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "4629:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "4629:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d88b6b1cf5c1bf1",
+  "first_seen": "2026-10-26",
+  "handle": "wicked-dark-sumatra-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "4897",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Indonesian",
+   "New Items",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "Wicked Dark Sumatra Coffee",
+  "url": "https://www.lucasroasting.com/product/wicked-dark-sumatra-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "4897:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "4897:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "4897:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "4897:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a86f9f2470130f7",
+  "first_seen": "2026-10-26",
+  "handle": "lrc-coffee-soap",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2017/05/LRCSOAP.jpg",
+  "platform": "woocommerce",
+  "product_id": "5184",
+  "product_type": "simple",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee Accessories"
+  ],
+  "title": "LRC Coffee Soap",
+  "url": "https://www.lucasroasting.com/product/lrc-coffee-soap/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.5,
+    "title": "LRC Coffee Soap",
+    "variant_id": "5184:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf9e84f8fea42e54",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "6008",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "French Vanilla Coffee",
+  "url": "https://www.lucasroasting.com/product/french-vanilla-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "6008:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "6008:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "6008:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "6008:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f211241a24dbb87",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "629",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Our Blends"
+  ],
+  "title": "Mocha Java Coffee",
+  "url": "https://www.lucasroasting.com/product/mocha-java-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "629:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "629:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "629:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "629:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a50200c061cd1be",
+  "first_seen": "2026-10-26",
+  "handle": "french-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "639",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "French Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/french-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "639:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "639:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "639:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "639:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80be3d8851729a09",
+  "first_seen": "2026-10-26",
+  "handle": "canvas-de-barista-espresso-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "643",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "BARISTA BLEND CANVAS ESPRESSO",
+   "Coffee",
+   "Espresso",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Canvas de Barista – Espresso Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/canvas-de-barista-espresso-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "643:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "643:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "643:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "643:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e059f7d679f0d82c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-shb-tarrazu-la-pastora-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "6628",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Latin American",
+   "Light Roast",
+   "New Items",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "Costa Rica SHB Tarrazu La Pastora Coffee",
+  "url": "https://www.lucasroasting.com/product/costa-rica-shb-tarrazu-la-pastora-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "6628:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "6628:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "6628:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "6628:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c6b5ce48b75f8dec",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-grogg-1-lb",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "665",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Regular"
+  ],
+  "title": "Holiday Grogg Coffee",
+  "url": "https://www.lucasroasting.com/product/holiday-grogg-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "665:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "665:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "665:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "665:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1204bb94fb5aed9f",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-stick-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "669",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends"
+  ],
+  "title": "Peppermint Stick Coffee",
+  "url": "https://www.lucasroasting.com/product/peppermint-stick-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "669:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "669:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "669:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "669:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cb63a40befafdb17",
+  "first_seen": "2026-10-26",
+  "handle": "the-steel-wheels-halfway-to-heaven-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2018/09/20180703_1402352051604612.jpg",
+  "platform": "woocommerce",
+  "product_id": "6712",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Latin American",
+   "New Items",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "The Steel Wheels “Halfway to Heaven” Coffee",
+  "url": "https://www.lucasroasting.com/product/the-steel-wheels-halfway-to-heaven-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb",
+    "variant_id": "6712:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 26.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "6712:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "6712:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 26.0,
+    "title": "8oz",
+    "variant_id": "6712:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ba646be20cbb15c",
+  "first_seen": "2026-10-26",
+  "handle": "tropical-coconut-1-lb",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "673",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Tropical Coconut Coffee",
+  "url": "https://www.lucasroasting.com/product/tropical-coconut-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "673:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "673:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "673:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "673:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b9acc18eb222f48",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "678",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Flavored",
+   "Medium Roast",
+   "Regular"
+  ],
+  "title": "Jamaican Me Crazy Coffee",
+  "url": "https://www.lucasroasting.com/product/jamaican-me-crazy-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "678:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "678:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "678:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "678:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "142cbb5de253c484",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "683",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Italian Roast Coffee",
+  "url": "https://www.lucasroasting.com/product/italian-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "683:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "683:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "683:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "683:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "17dc31a7d3652f60",
+  "first_seen": "2026-10-26",
+  "handle": "wind-water-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "692",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Wind & Water Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/wind-water-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "692:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "692:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "692:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "692:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c02b4e7d1cdf997a",
+  "first_seen": "2026-10-26",
+  "handle": "pond-hockey-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2019/01/Stick-and-Puck.jpg",
+  "platform": "woocommerce",
+  "product_id": "7227",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Pond Hockey Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/pond-hockey-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb",
+    "variant_id": "7227:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 14.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "7227:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "7227:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz",
+    "variant_id": "7227:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d41027aa6ccf785",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "7758",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Pumpkin Spice Coffee",
+  "url": "https://www.lucasroasting.com/product/pumpkin-spice-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "7758:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "7758:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "7758:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "7758:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7faf6b66109fcf22",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "783",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Latin American",
+   "Regular",
+   "Single Origin"
+  ],
+  "title": "Colombia Supremo Coffee",
+  "url": "https://www.lucasroasting.com/product/colombia-supremo-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb",
+    "variant_id": "783:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 14.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "783:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "783:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz",
+    "variant_id": "783:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42c85463e42576bb",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "791",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Chocolate Raspberry Coffee",
+  "url": "https://www.lucasroasting.com/product/chocolate-raspberry-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "791:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "791:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "791:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "791:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c37eb02e4276d960",
+  "first_seen": "2026-10-26",
+  "handle": "blue-ridge-breakfast-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "794",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Blue Ridge Breakfast Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/blue-ridge-breakfast-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "794:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "794:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "794:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "794:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f92eeaaece6f25b",
+  "first_seen": "2026-10-26",
+  "handle": "best-buddies-blend-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2019/11/20191024_101919.jpg",
+  "platform": "woocommerce",
+  "product_id": "7959",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Fundraising",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Best Buddies Blend Coffee",
+  "url": "https://www.lucasroasting.com/product/best-buddies-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb",
+    "variant_id": "7959:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz",
+    "variant_id": "7959:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a5745775fe1d4d6",
+  "first_seen": "2026-10-26",
+  "handle": "cinsual-chocolate-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "801",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Cinsual Chocolate Coffee",
+  "url": "https://www.lucasroasting.com/product/cinsual-chocolate-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "801:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "801:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "801:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "801:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f0b8c65a59acd09",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-putra-gayo-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "8093",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Indonesian",
+   "Medium Roast",
+   "Regular"
+  ],
+  "title": "Sumatra Takengon “Putra Gayo” Coffee",
+  "url": "https://www.lucasroasting.com/product/sumatra-takengon-putra-gayo-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "8093:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "8093:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "8093:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "8093:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4fd686b7cdbe653",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-water-processed-decaffeinated-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "845",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Latin American",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Brazil (Water-processed) Decaffeinated Coffee",
+  "url": "https://www.lucasroasting.com/product/brazil-water-processed-decaffeinated-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "845:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "845:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "845:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "845:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb32dfb336ce7a56",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "8881",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Hazelnut Coffee",
+  "url": "https://www.lucasroasting.com/product/hazelnut-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "8881:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "8881:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "8881:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "8881:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0160a21aa89d438c",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-mint-coffee",
+  "image": "https://www.lucasroasting.com/wp-content/uploads/2014/12/lucas-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "902",
+  "product_type": "variable",
+  "roaster_slug": "lucasroasting",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Flavored",
+   "Medium Roast",
+   "Our Blends",
+   "Regular"
+  ],
+  "title": "Mocha Mint Coffee",
+  "url": "https://www.lucasroasting.com/product/mocha-mint-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb",
+    "variant_id": "902:0"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 15.0,
+    "title": "3lb (save 9% per pound)",
+    "variant_id": "902:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb (save 15% per pound)",
+    "variant_id": "902:2"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "902:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,7914 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "drip-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/30_Website_Product_Images_Kool_Beans_Front_Packaging.jpg?v=1718296299",
+  "platform": "shopify",
+  "product_id": "10448624353589",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "large roaster",
+   "wholesale"
+  ],
+  "title": "Drip Blend",
+  "url": "https://koolbeanscoffee.net/products/drip-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb Retail Bag / Lake Norden",
+    "variant_id": "52487413858613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb Bag / Lake Norden",
+    "variant_id": "52487413891381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb Retail Bag / Watertown",
+    "variant_id": "52487435977013"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "1lb Retail Bag / Brookings",
+    "variant_id": "52487436009781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb Bag / Watertown",
+    "variant_id": "52487436042549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb Bag / Brookings",
+    "variant_id": "52487436075317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb Decaf / Lake Norden",
+    "variant_id": "52840911536437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb Decaf / Watertown",
+    "variant_id": "52840911569205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb Decaf / Brookings",
+    "variant_id": "52840911601973"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "9117a0f49af0f2dc",
+  "first_seen": "2026-10-26",
+  "handle": "salty-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/20_WebsiteProductImages_KoolBeansFrontPackagingcopy.jpg?v=1718297649",
+  "platform": "shopify",
+  "product_id": "9343211176245",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Salty Caramel",
+  "url": "https://koolbeanscoffee.net/products/salty-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583664267573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583664300341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583664333109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583664365877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583664398645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583664431413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583664464181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583664496949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583664529717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583664562485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583664595253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583664628021"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "ba18723564d08668",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/12_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297197",
+  "platform": "shopify",
+  "product_id": "9343213273397",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://koolbeanscoffee.net/products/highlander-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583564325173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583564357941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583564390709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583564423477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583564456245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583564489013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583564521781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583564554549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583564587317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583564620085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583564652853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583564685621"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "2bf5d1a20eeaa1ab",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/11_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297162",
+  "platform": "shopify",
+  "product_id": "9343213961525",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Hazelnut",
+  "url": "https://koolbeanscoffee.net/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583553347893"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583553380661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583553413429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583553446197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583553872181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583553904949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583553937717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583553970485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583554429237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583554462005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583554494773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583554527541"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "d9b93d11a2ac973f",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/8_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297040",
+  "platform": "shopify",
+  "product_id": "9343215567157",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "French Vanilla",
+  "url": "https://koolbeanscoffee.net/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583401238837"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583401271605"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583401304373"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583401337141"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583401369909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583401402677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583401435445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583401468213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583401500981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583401533749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583401566517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583401599285"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "bda1b7b12f235305",
+  "first_seen": "2026-10-26",
+  "handle": "butterscotch-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/2_Website_Product_Images_Kool_Beans_Front_Packaging.jpg?v=1718296114",
+  "platform": "shopify",
+  "product_id": "9343217762613",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Butterscotch Toffee",
+  "url": "https://koolbeanscoffee.net/products/butterscotch-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49577938387253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49577938420021"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49577938452789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49577938518325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49577938551093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49577938583861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49577938616629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49577938649397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49577938682165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49577938714933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49577938747701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49577938780469"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "42a6fa39348d0654",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/15_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297303",
+  "platform": "shopify",
+  "product_id": "9343219532085",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Jazzy Java",
+  "url": "https://koolbeanscoffee.net/products/jazzy-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583586607413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583586640181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583586672949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583586705717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583586738485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583586771253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583586804021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583586836789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583586869557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583586902325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583586935093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583586967861"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "682ca23bb236444c",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-macadamia-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/10_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297125",
+  "platform": "shopify",
+  "product_id": "9343220318517",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Hawaiian Macadamia Nut",
+  "url": "https://koolbeanscoffee.net/products/hawaiian-macadamia-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583543451957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583543484725"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583543517493"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583543550261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583544009013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583544041781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583544074549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583544107317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583544533301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583544566069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583544598837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583544631605"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "ab783359519e927a",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-roll",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/5_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296188",
+  "platform": "shopify",
+  "product_id": "9343220777269",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Cinnamon Roll",
+  "url": "https://koolbeanscoffee.net/products/cinnamon-roll",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49577988030773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49577988194613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49577988358453"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583262433589"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583262466357"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583262499125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583262564661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583262597429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583262630197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583262662965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583262695733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583262728501"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "f016d322166b89ea",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/14_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297273",
+  "platform": "shopify",
+  "product_id": "9343221367093",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Jamaican Me Crazy©",
+  "url": "https://koolbeanscoffee.net/products/jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583580709173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583580741941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583580774709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583580807477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583580840245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583580873013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583580905781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583580938549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583580971317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583581004085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583581036853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583581069621"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "88bda1f0af565f10",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/13_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297234",
+  "platform": "shopify",
+  "product_id": "9343223890229",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Irish Cream",
+  "url": "https://koolbeanscoffee.net/products/irish-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583577432373"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583577465141"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583577497909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583577530677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583577563445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583577596213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583577628981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583577661749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583577694517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583577727285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583577760053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583577792821"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "eb204b81f1ca34de",
+  "first_seen": "2026-10-26",
+  "handle": "coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/6_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296207",
+  "platform": "shopify",
+  "product_id": "9343224676661",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Coconut",
+  "url": "https://koolbeanscoffee.net/products/coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583058813237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583058846005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583058878773"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583283372341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583283470645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583283503413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583283568949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583283601717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583283667253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583283732789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583283765557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583283831093"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "d7e42ec016388ad2",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-smores",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/22_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297839",
+  "platform": "shopify",
+  "product_id": "9343225364789",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Toasted S'mores",
+  "url": "https://koolbeanscoffee.net/products/toasted-smores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583687139637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583687172405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583687205173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583687237941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583687270709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583687303477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583687336245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583687369013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583687401781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583687434549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583687467317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583687500085"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "297f5bca234c26aa",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-muffin",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/18_WebsiteProductImages_KoolBeansFrontPackagingcopy.jpg?v=1718297618",
+  "platform": "shopify",
+  "product_id": "9343225987381",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Pumpkin Muffin",
+  "url": "https://koolbeanscoffee.net/products/pumpkin-muffin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583660138805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583660204341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583660237109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49583660269877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583660302645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583660335413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583660368181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49583660400949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583660433717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583660466485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583660499253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49583660532021"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "2b0d7a49b574e949",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/29_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296057",
+  "platform": "shopify",
+  "product_id": "9343265997109",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://koolbeanscoffee.net/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49549860208949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49549860241717"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49549860274485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49549860340021"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49549860372789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49549860405557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49549860602165"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49549860634933"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49549860667701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49549860733237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49549860766005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49549860798773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49549860864309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49549860897077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49549860929845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49549860995381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49549861028149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49549861060917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49549861126453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49549861159221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49549861191989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49549861257525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49549861290293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49549861323061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49549861388597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49549861421365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49549861454133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49549861650741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49549861683509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49549861716277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49991853080885"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49991853113653"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49991853179189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49991853211957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49991853244725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49991853277493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49991853310261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49991853343029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49991853375797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49991853441333"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "009d235c0911b464",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/28_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296084",
+  "platform": "shopify",
+  "product_id": "9343266488629",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Burundi",
+  "url": "https://koolbeanscoffee.net/products/burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Light",
+    "variant_id": "49577858433333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Light",
+    "variant_id": "49577858498869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Light",
+    "variant_id": "49577858531637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Light",
+    "variant_id": "49577913221429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49577913254197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Light",
+    "variant_id": "49577913286965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Light",
+    "variant_id": "49577913844021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49577913876789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Light",
+    "variant_id": "49577913909557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Light",
+    "variant_id": "49577914466613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49577914499381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Light",
+    "variant_id": "49577914532149"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Medium",
+    "variant_id": "49583203680565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Dark",
+    "variant_id": "49583203746101"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Medium",
+    "variant_id": "49583203778869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Dark",
+    "variant_id": "49583203844405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "49583203877173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "49583203942709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Medium",
+    "variant_id": "49583203975477"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Dark",
+    "variant_id": "49583204041013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Medium",
+    "variant_id": "49583204073781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Full City",
+    "variant_id": "49583204106549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Dark",
+    "variant_id": "49583204139317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Medium",
+    "variant_id": "49583204172085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Full City",
+    "variant_id": "49583204237621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Dark",
+    "variant_id": "49583204270389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "49583204303157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Full City",
+    "variant_id": "49583204335925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "49583204368693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Medium",
+    "variant_id": "49583204401461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Full City",
+    "variant_id": "49583204434229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Dark",
+    "variant_id": "49583204466997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Medium",
+    "variant_id": "49583204499765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Dark",
+    "variant_id": "49583204565301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Medium",
+    "variant_id": "49583204598069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Dark",
+    "variant_id": "49583204663605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "49583204696373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "49583204761909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Medium",
+    "variant_id": "49583204794677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Dark",
+    "variant_id": "49583204860213"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "928d9e28ee363878",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/30_Website_Product_Images_Kool_Beans_Front_Packaging.jpg?v=1718296299",
+  "platform": "shopify",
+  "product_id": "9343267176757",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://koolbeanscoffee.net/products/colombia-fto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583292449077"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583292481845"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583292514613"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583292547381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583292580149"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583292612917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583292645685"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583292678453"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583292875061"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583292907829"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583292940597"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583292973365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583293006133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583293038901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583293071669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583293104437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583293137205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583293169973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583293202741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583293235509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583293301045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583293366581"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583293432117"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583293464885"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583293497653"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583293563189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583293595957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583293628725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583293661493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583293694261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583293727029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583293759797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583293792565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583293825333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583293858101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583293890869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583294054709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583294087477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583294120245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583294153013"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "aa7480a127200bff",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/31_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296356",
+  "platform": "shopify",
+  "product_id": "9343267668277",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://koolbeanscoffee.net/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583320039733"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583320072501"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583320105269"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583320138037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583320170805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583320203573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583320236341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583320269109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583320432949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583320465717"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583320498485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583320531253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583320564021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583320596789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583320629557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583320662325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583320695093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583320727861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583320760629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583320793397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583320826165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583320858933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583320891701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583320924469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583320957237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583320990005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583321022773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583321055541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583321088309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583321121077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583321153845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583321186613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583321219381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583321252149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583321284917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583321317685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583321481525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583321514293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583321547061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583321579829"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Extra Dark / Whole Bean",
+    "variant_id": "50175333466421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Extra Dark / Ground for espresso",
+    "variant_id": "50175333499189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Extra Dark / Ground for regular coffee pot",
+    "variant_id": "50175333531957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Extra Dark / Ground for pour over",
+    "variant_id": "50175333564725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Extra Dark / Whole Bean",
+    "variant_id": "50175333597493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Extra Dark / Ground for espresso",
+    "variant_id": "50175333630261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Extra Dark / Ground for regular coffee pot",
+    "variant_id": "50175333663029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Extra Dark / Ground for pour over",
+    "variant_id": "50175333695797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Extra Dark / Whole Bean",
+    "variant_id": "50175333728565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Extra Dark / Ground for espresso",
+    "variant_id": "50175333761333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Extra Dark / Ground for regular coffee pot",
+    "variant_id": "50175333794101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Extra Dark / Ground for pour over",
+    "variant_id": "50175333826869"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "2daa618bc6a7978a",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/32_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296883",
+  "platform": "shopify",
+  "product_id": "9343268290869",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "El Salvador",
+  "url": "https://koolbeanscoffee.net/products/el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583373451573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583373484341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583373517109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583373549877"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583373582645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583373615413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583373648181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583373680949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583373844789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583373877557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583373910325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583373943093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583373975861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583374008629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583374041397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583374074165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583374106933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583374139701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583374172469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583374205237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583374238005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583374270773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583374303541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583374336309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583374369077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583374401845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583374434613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583374467381"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583374500149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583374532917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583374565685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583374598453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583374631221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583374663989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583374696757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583374729525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583374893365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583374926133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583374958901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583374991669"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "2daa618bc6a7978a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/33_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718296935",
+  "platform": "shopify",
+  "product_id": "9343269568821",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://koolbeanscoffee.net/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583382036789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Fine (espresso)",
+    "variant_id": "49583382069557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Medium (drip)",
+    "variant_id": "49583382102325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Course (pour over)",
+    "variant_id": "49583382135093"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583382167861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Fine (espresso)",
+    "variant_id": "49583382200629"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Medium (drip)",
+    "variant_id": "49583382233397"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Course (pour over)",
+    "variant_id": "49583382266165"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583382462773"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Fine (espresso)",
+    "variant_id": "49583382495541"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Medium (drip)",
+    "variant_id": "49583382528309"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Course (pour over)",
+    "variant_id": "49583382561077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583382593845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Fine (espresso)",
+    "variant_id": "49583382626613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Medium (drip)",
+    "variant_id": "49583382659381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Course (pour over)",
+    "variant_id": "49583382692149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583382724917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Fine (espresso)",
+    "variant_id": "49583382757685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Medium (drip)",
+    "variant_id": "49583382790453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Course (pour over)",
+    "variant_id": "49583382823221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583382855989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Fine (espresso)",
+    "variant_id": "49583382888757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Medium (drip)",
+    "variant_id": "49583382921525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Course (pour over)",
+    "variant_id": "49583382954293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583382987061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Fine (espresso)",
+    "variant_id": "49583383019829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Medium (drip)",
+    "variant_id": "49583383052597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Course (pour over)",
+    "variant_id": "49583383085365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583383118133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Fine (espresso)",
+    "variant_id": "49583383150901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Medium (drip)",
+    "variant_id": "49583383183669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Course (pour over)",
+    "variant_id": "49583383216437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583383249205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Fine (espresso)",
+    "variant_id": "49583383281973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Medium (drip)",
+    "variant_id": "49583383314741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Course (pour over)",
+    "variant_id": "49583383347509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583383511349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Fine (espresso)",
+    "variant_id": "49583383544117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Medium (drip)",
+    "variant_id": "49583383576885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Course (pour over)",
+    "variant_id": "49583383609653"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "a7f02019f438e90c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/34_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297088",
+  "platform": "shopify",
+  "product_id": "9343270355253",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://koolbeanscoffee.net/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583529099573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583529132341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583529165109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583529230645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583529263413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583529296181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583529328949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583529361717"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583529394485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583529427253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583529460021"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583529492789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583529525557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583529558325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583529591093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583529623861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583529656629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583529689397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583529722165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583529754933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583529787701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583529820469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583529853237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583529886005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583529918773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583529951541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583529984309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583530017077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583530180917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583530213685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583530279221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583530311989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583530344757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583530377525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583530410293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583530443061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583530475829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583530508597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583530541365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583530574133"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "6647496c7e0cb620",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/36_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297414",
+  "platform": "shopify",
+  "product_id": "9343271436597",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Mexico",
+  "url": "https://koolbeanscoffee.net/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583612821813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583612854581"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583612887349"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583612920117"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583612952885"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583612985653"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583613018421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583613051189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583613215029"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583613247797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583613280565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583613313333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583613346101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583613378869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583613411637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583613444405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583613477173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583613509941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583613542709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583613575477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583613608245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583613641013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583613673781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583613706549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583613739317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583613772085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583613804853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583613837621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583613870389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583613903157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583613935925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583613968693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583614001461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583614034229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583614066997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583614099765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583614263605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583614296373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583614329141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583614361909"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "8f7d61e52aeda882",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/37_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297534",
+  "platform": "shopify",
+  "product_id": "9343271829813",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Nicaragua",
+  "url": "https://koolbeanscoffee.net/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583622586677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583622619445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583622652213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583622684981"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583622717749"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583622750517"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583622783285"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583622816053"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583622979893"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583623012661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583623045429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583623078197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583623110965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583623143733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583623176501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583623209269"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583623274805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583623307573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583623340341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583623373109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583623405877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583623438645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583623471413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583623504181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583623536949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583623569717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583623602485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583623635253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583623668021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583623700789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583623733557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583623766325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583623799093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583623831861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583623864629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583623897397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583624061237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583624094005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583624126773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583624159541"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "a6cd6334b84cfc60",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/38_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297576",
+  "platform": "shopify",
+  "product_id": "9343272878389",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Peru",
+  "url": "https://koolbeanscoffee.net/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583652766005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583652798773"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583652831541"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583652864309"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583652897077"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583652929845"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583652962613"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583652995381"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583653159221"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583653191989"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583653224757"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583653257525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583653290293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583653323061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583653355829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583653388597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583653421365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583653454133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583653486901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583653519669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583653552437"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583653585205"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583653617973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583653650741"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583653716277"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583653749045"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583653781813"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583653814581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583653847349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583653880117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583653912885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583653945653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583653978421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583654011189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583654043957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583654076725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583654240565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583654273333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583654306101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583654338869"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "509218d20e47e7fb",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/39_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718297751",
+  "platform": "shopify",
+  "product_id": "9343273173301",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://koolbeanscoffee.net/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583676653877"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583676686645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583676719413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583676752181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583676784949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583676817717"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583676850485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583676883253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583677047093"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583677079861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583677112629"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583677145397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583677178165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583677210933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583677243701"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583677276469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583677309237"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583677342005"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583677374773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583677407541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583677440309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583677473077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583677505845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583677538613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583677571381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583677604149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583677636917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583677669685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583677702453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583677735221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583677767989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583677800757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583677833525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583677866293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583677899061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583677931829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583678095669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583678128437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583678161205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583678193973"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "631b3f1ce1efaf1e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/DecafBrazil.jpg?v=1718296700",
+  "platform": "shopify",
+  "product_id": "9343274254645",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Decaf",
+   "small roaster"
+  ],
+  "title": "Decaf Brazil",
+  "url": "https://koolbeanscoffee.net/products/decaf-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583339536693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583339569461"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583339602229"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583339634997"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583339700533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583339733301"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583339766069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583339798837"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583339962677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583339995445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583340028213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583340060981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583340093749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583340126517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583340159285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583340192053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583340224821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583340257589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583340290357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583340323125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583340355893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583340486965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583340519733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583340552501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583340585269"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583340618037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583340650805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583340683573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583340716341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583340749109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583340781877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583340814645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583340847413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583340880181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583340912949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583340945717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583341109557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583341175093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583341207861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583341240629"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "af1a1ba7ea0a4c32",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/DecafColombia.jpg?v=1718296741",
+  "platform": "shopify",
+  "product_id": "9343274975541",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Decaf",
+   "large roaster"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://koolbeanscoffee.net/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583346843957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583346876725"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583346909493"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583346942261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583346975029"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583347007797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583347040565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583347073333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583347237173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583347269941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583347302709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583347335477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583347368245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583347401013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583347433781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583347466549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583347499317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583347532085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583347564853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583347597621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583347630389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583347663157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583347695925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583347728693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583347761461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583347794229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583347826997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583347859765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583347892533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583347925301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583347958069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583347990837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583348023605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583348056373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583348089141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583348121909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583348285749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583348318517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583348351285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583348384053"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "387714afbf5505d0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/DecafMexico.jpg?v=1718296781",
+  "platform": "shopify",
+  "product_id": "9343275630901",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Decaf",
+   "small roaster"
+  ],
+  "title": "Decaf Mexico",
+  "url": "https://koolbeanscoffee.net/products/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583356576053"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583356608821"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583356641589"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for pour over",
+    "variant_id": "49583356674357"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583356707125"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583356772661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583356805429"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for pour over",
+    "variant_id": "49583356838197"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583357002037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583357034805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583357067573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for pour over",
+    "variant_id": "49583357100341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583357133109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583357165877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583357198645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for pour over",
+    "variant_id": "49583357231413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583357264181"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583357296949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583357329717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for pour over",
+    "variant_id": "49583357362485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583357395253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583357428021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583357460789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for pour over",
+    "variant_id": "49583357493557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583357591861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583357624629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583357657397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for pour over",
+    "variant_id": "49583357722933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583357788469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583357821237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583357854005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for pour over",
+    "variant_id": "49583357919541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583357952309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583358017845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583358050613"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for pour over",
+    "variant_id": "49583358116149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583358279989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583358312757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583358345525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for pour over",
+    "variant_id": "49583358378293"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "c752bf65b0f20fd4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/DecafPeru.jpg?v=1718296822",
+  "platform": "shopify",
+  "product_id": "9343276384565",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Decaf",
+   "small roaster"
+  ],
+  "title": "Decaf Peru",
+  "url": "https://koolbeanscoffee.net/products/decaf-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Whole Bean",
+    "variant_id": "49583364112693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for espresso",
+    "variant_id": "49583364145461"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583364178229"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Light / Ground pour over",
+    "variant_id": "49583364210997"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Whole Bean",
+    "variant_id": "49583364243765"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for espresso",
+    "variant_id": "49583364276533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583364309301"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium / Ground pour over",
+    "variant_id": "49583364342069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Whole Bean",
+    "variant_id": "49583364505909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for espresso",
+    "variant_id": "49583364538677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583364571445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Dark / Ground pour over",
+    "variant_id": "49583364604213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Whole Bean",
+    "variant_id": "49583364636981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for espresso",
+    "variant_id": "49583364669749"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583364702517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Light / Ground pour over",
+    "variant_id": "49583364735285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Whole Bean",
+    "variant_id": "49583364768053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for espresso",
+    "variant_id": "49583364800821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583364833589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium / Ground pour over",
+    "variant_id": "49583364866357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Whole Bean",
+    "variant_id": "49583364899125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for espresso",
+    "variant_id": "49583364931893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground for regular coffee pot",
+    "variant_id": "49583364964661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Full City / Ground pour over",
+    "variant_id": "49583364997429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Whole Bean",
+    "variant_id": "49583365030197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for espresso",
+    "variant_id": "49583365062965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583365095733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Dark / Ground pour over",
+    "variant_id": "49583365128501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Whole Bean",
+    "variant_id": "49583365161269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for espresso",
+    "variant_id": "49583365194037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground for regular coffee pot",
+    "variant_id": "49583365226805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Light / Ground pour over",
+    "variant_id": "49583365259573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Whole Bean",
+    "variant_id": "49583365292341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for espresso",
+    "variant_id": "49583365325109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground for regular coffee pot",
+    "variant_id": "49583365357877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium / Ground pour over",
+    "variant_id": "49583365390645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Whole Bean",
+    "variant_id": "49583365554485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for espresso",
+    "variant_id": "49583365587253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground for regular coffee pot",
+    "variant_id": "49583365620021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Dark / Ground pour over",
+    "variant_id": "49583365652789"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "2744b4b011e91fb9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/DecafBlend.jpg?v=1718296651",
+  "platform": "shopify",
+  "product_id": "9343277105461",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://koolbeanscoffee.net/products/decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583332491573"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583332524341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583332622645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583332655413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583332753717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583332786485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "50002209571125"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "50002209603893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "50002209833269"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "50002209866037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "50002210095413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "50002210128181"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "d8da3530f5b13836",
+  "first_seen": "2026-10-26",
+  "handle": "black-tan",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/56_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718295950",
+  "platform": "shopify",
+  "product_id": "9343278350645",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "Black & Tan Blend",
+  "url": "https://koolbeanscoffee.net/products/black-tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49540660527413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49540660560181"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49540660592949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49540660625717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49540660658485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49540660691253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49540660724021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49540660756789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49540660789557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49552397566261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49552397599029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49552397631797"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "43c44273efcaa530",
+  "first_seen": "2026-10-26",
+  "handle": "black-jack-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/62_Website_Product_Images_Kool_Beans_Front_Packaging.jpg?v=1718295215",
+  "platform": "shopify",
+  "product_id": "9343279792437",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "Black Jack Espresso Blend",
+  "url": "https://koolbeanscoffee.net/products/black-jack-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49583127593269"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49583127626037"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49583127658805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground of pour over",
+    "variant_id": "49583127691573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49583127724341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49583127757109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49583127789877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground of pour over",
+    "variant_id": "49583127822645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49583127855413"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49583127888181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49583127920949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground of pour over",
+    "variant_id": "49583127953717"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "999126c03ba61a8d",
+  "first_seen": "2026-10-26",
+  "handle": "bobcat-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/57_WebsiteProductImages_KoolBeansFrontPackagingcopy.jpg?v=1718295978",
+  "platform": "shopify",
+  "product_id": "9343280578869",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "Bobcat Breakfast Blend",
+  "url": "https://koolbeanscoffee.net/products/bobcat-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49549827604789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49549827637557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49549827670325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground of pour over",
+    "variant_id": "49549827703093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49549827735861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49549827768629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49549827801397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground of pour over",
+    "variant_id": "49549827834165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49549827866933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49549827899701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49549827932469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground of pour over",
+    "variant_id": "49549827965237"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "1fadd1c2c40252fe",
+  "first_seen": "2026-10-26",
+  "handle": "bum-alum-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/1F4CAE52-9E36-4198-8B42-1AE251BBA382.jpg?v=1717384903",
+  "platform": "shopify",
+  "product_id": "9343281496373",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "Bum Alum Blend",
+  "url": "https://koolbeanscoffee.net/products/bum-alum-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49577771958581"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49577771991349"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49577772024117"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49577807511861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49577807544629"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49577807577397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49577807610165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49577807642933"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49577807675701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49577807708469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49577807741237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49577807774005"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "0002b9c4ba686756",
+  "first_seen": "2026-10-26",
+  "handle": "5-ball-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/58_WebsiteProductImages_KoolBeansFrontPackaging.jpg?v=1718295392",
+  "platform": "shopify",
+  "product_id": "9343284642101",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "large roaster"
+  ],
+  "title": "5 Ball Blend",
+  "url": "https://koolbeanscoffee.net/products/5-ball-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso",
+    "variant_id": "49540832854325"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot",
+    "variant_id": "49540832887093"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over",
+    "variant_id": "49540832919861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso",
+    "variant_id": "49540832952629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot",
+    "variant_id": "49540832985397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over",
+    "variant_id": "49540833018165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso",
+    "variant_id": "49540833050933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot",
+    "variant_id": "49540833083701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over",
+    "variant_id": "49540833116469"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49540869488949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49540869521717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49540869554485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for cold brew",
+    "variant_id": "49992691384629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for cold brew",
+    "variant_id": "49992691417397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for cold brew",
+    "variant_id": "49992691450165"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "52131fdcf621e549",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/60_WebsiteProductImages_KoolBeansFrontPackagingcopy.jpg?v=1718297495",
+  "platform": "shopify",
+  "product_id": "9343286739253",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "Blend",
+   "small roaster"
+  ],
+  "title": "Moka Java Blend",
+  "url": "https://koolbeanscoffee.net/products/moka-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Light",
+    "variant_id": "49583617179957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Light",
+    "variant_id": "49583617212725"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49583617245493"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Light",
+    "variant_id": "49583617278261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Light",
+    "variant_id": "49583617311029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Light",
+    "variant_id": "49583617343797"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49583617376565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Light",
+    "variant_id": "49583617409333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Light",
+    "variant_id": "49583617442101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Light",
+    "variant_id": "49583617474869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Light",
+    "variant_id": "49583617507637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Light",
+    "variant_id": "49583617540405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Medium",
+    "variant_id": "50079274238261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Dark",
+    "variant_id": "50079274303797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Medium",
+    "variant_id": "50079274336565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Dark",
+    "variant_id": "50079274402101"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50079274434869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50079274500405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Medium",
+    "variant_id": "50079274533173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Dark",
+    "variant_id": "50079274598709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Medium",
+    "variant_id": "50079274631477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Full City",
+    "variant_id": "50079274664245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Dark",
+    "variant_id": "50079274697013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Medium",
+    "variant_id": "50079274729781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Full City",
+    "variant_id": "50079274762549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Dark",
+    "variant_id": "50079274795317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50079274828085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Full City",
+    "variant_id": "50079274860853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50079274893621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Medium",
+    "variant_id": "50079274926389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Full City",
+    "variant_id": "50079274959157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Dark",
+    "variant_id": "50079274991925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Medium",
+    "variant_id": "50079275024693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Dark",
+    "variant_id": "50079275090229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Medium",
+    "variant_id": "50079275122997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Dark",
+    "variant_id": "50079275188533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50079275221301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50079275286837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Medium",
+    "variant_id": "50079275319605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Dark",
+    "variant_id": "50079275385141"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "46707a8f0ca86f64",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-mt-meru-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/Mtmerupeaberry.png?v=1732290527",
+  "platform": "shopify",
+  "product_id": "9839864414517",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "small roaster"
+  ],
+  "title": "Tanzania Mt. Meru Peaberry",
+  "url": "https://koolbeanscoffee.net/products/tanzania-mt-meru-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Light",
+    "variant_id": "50084823728437"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Medium",
+    "variant_id": "50084823761205"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Whole Bean / Dark",
+    "variant_id": "50084823826741"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Light",
+    "variant_id": "50084823859509"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Medium",
+    "variant_id": "50084823892277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for espresso / Dark",
+    "variant_id": "50084823957813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Light",
+    "variant_id": "50084823990581"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50084824023349"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50084824088885"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Light",
+    "variant_id": "50084824121653"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Medium",
+    "variant_id": "50084824187189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb / Ground for pour over / Dark",
+    "variant_id": "50084824449333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Light",
+    "variant_id": "50084824482101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Medium",
+    "variant_id": "50084824514869"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Full City",
+    "variant_id": "50084824547637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean / Dark",
+    "variant_id": "50084824580405"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Light",
+    "variant_id": "50084824613173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Medium",
+    "variant_id": "50084824645941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Full City",
+    "variant_id": "50084824678709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for espresso / Dark",
+    "variant_id": "50084824711477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Light",
+    "variant_id": "50084824744245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50084824777013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Full City",
+    "variant_id": "50084824809781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50084824842549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Light",
+    "variant_id": "50084824875317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Medium",
+    "variant_id": "50084824908085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Full City",
+    "variant_id": "50084824940853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground for pour over / Dark",
+    "variant_id": "50084824973621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Light",
+    "variant_id": "50084825006389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Medium",
+    "variant_id": "50084825039157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean / Dark",
+    "variant_id": "50084825104693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Light",
+    "variant_id": "50084825137461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Medium",
+    "variant_id": "50084825170229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for espresso / Dark",
+    "variant_id": "50084825235765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Light",
+    "variant_id": "50084825268533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Medium",
+    "variant_id": "50084825301301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for regular coffee pot / Dark",
+    "variant_id": "50084825366837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Light",
+    "variant_id": "50084825399605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Medium",
+    "variant_id": "50084825432373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Ground for pour over / Dark",
+    "variant_id": "50084825497909"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "bde2b7c7d9e8ac98",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/0_DecafColombiaFLAVORED_d6dfed7c-c181-4412-b786-5a3ba3195d20.jpg?v=1721398187",
+  "platform": "shopify",
+  "product_id": "9860765876533",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [],
+  "title": "Decaf Flavored",
+  "url": "https://koolbeanscoffee.net/products/decaf-flavored",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Butterscotch Toffee",
+    "variant_id": "50161353457973"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Cinnamon Roll",
+    "variant_id": "50161353490741"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / French Vanilla",
+    "variant_id": "50161353523509"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Hawaiian Macadamia Nut",
+    "variant_id": "50161353556277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Hazelnut",
+    "variant_id": "50161353589045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Highlander Grogg",
+    "variant_id": "50161353621813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Jamaican Me Crazy",
+    "variant_id": "50161353654581"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Jazzy Java",
+    "variant_id": "50161353687349"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean / Salty Caramel",
+    "variant_id": "50161353720117"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Butterscotch Toffee",
+    "variant_id": "50161353818421"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Cinnamon Roll",
+    "variant_id": "50161353851189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / French Vanilla",
+    "variant_id": "50161353883957"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Hawaiian Macadamia Nut",
+    "variant_id": "50161353916725"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Hazelnut",
+    "variant_id": "50161353949493"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Highlander Grogg",
+    "variant_id": "50161353982261"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Jamaican Me Crazy",
+    "variant_id": "50161354015029"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Jazzy Java",
+    "variant_id": "50161354047797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for espresso / Salty Caramel",
+    "variant_id": "50161354080565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Butterscotch Toffee",
+    "variant_id": "50161354178869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Cinnamon Roll",
+    "variant_id": "50161354211637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / French Vanilla",
+    "variant_id": "50161354244405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Hawaiian Macadamia Nut",
+    "variant_id": "50161354277173"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Hazelnut",
+    "variant_id": "50161354309941"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Highlander Grogg",
+    "variant_id": "50161354342709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Jamaican Me Crazy",
+    "variant_id": "50161354375477"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Jazzy Java",
+    "variant_id": "50161354408245"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for regular coffee pot / Salty Caramel",
+    "variant_id": "50161354441013"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Butterscotch Toffee",
+    "variant_id": "50161354539317"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Cinnamon Roll",
+    "variant_id": "50161354572085"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / French Vanilla",
+    "variant_id": "50161354604853"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Hawaiian Macadamia Nut",
+    "variant_id": "50161354637621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Hazelnut",
+    "variant_id": "50161354670389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Highlander Grogg",
+    "variant_id": "50161354703157"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Jamaican Me Crazy",
+    "variant_id": "50161354735925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Jazzy Java",
+    "variant_id": "50161354768693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Ground for pour over / Salty Caramel",
+    "variant_id": "50161354801461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Butterscotch Toffee",
+    "variant_id": "50162161221941"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Cinnamon Roll",
+    "variant_id": "50162161254709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / French Vanilla",
+    "variant_id": "50162161287477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Hawaiian Macadamia Nut",
+    "variant_id": "50162161320245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Hazelnut",
+    "variant_id": "50162161353013"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Highlander Grogg",
+    "variant_id": "50162161385781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Jamaican Me Crazy",
+    "variant_id": "50162161418549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Jazzy Java",
+    "variant_id": "50162161451317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Whole Bean / Salty Caramel",
+    "variant_id": "50162161484085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Butterscotch Toffee",
+    "variant_id": "50162161582389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Cinnamon Roll",
+    "variant_id": "50162161615157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / French Vanilla",
+    "variant_id": "50162161647925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Hawaiian Macadamia Nut",
+    "variant_id": "50162161680693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Hazelnut",
+    "variant_id": "50162161713461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Highlander Grogg",
+    "variant_id": "50162161746229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Jamaican Me Crazy",
+    "variant_id": "50162161778997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Jazzy Java",
+    "variant_id": "50162161811765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for espresso / Salty Caramel",
+    "variant_id": "50162161844533"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Butterscotch Toffee",
+    "variant_id": "50162161942837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Cinnamon Roll",
+    "variant_id": "50162161975605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / French Vanilla",
+    "variant_id": "50162162008373"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Hawaiian Macadamia Nut",
+    "variant_id": "50162162041141"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Hazelnut",
+    "variant_id": "50162162073909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Highlander Grogg",
+    "variant_id": "50162162106677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Jamaican Me Crazy",
+    "variant_id": "50162162139445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Jazzy Java",
+    "variant_id": "50162162172213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for regular coffee pot / Salty Caramel",
+    "variant_id": "50162162204981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Butterscotch Toffee",
+    "variant_id": "50162162303285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Cinnamon Roll",
+    "variant_id": "50162162336053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / French Vanilla",
+    "variant_id": "50162162368821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Hawaiian Macadamia Nut",
+    "variant_id": "50162162401589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Hazelnut",
+    "variant_id": "50162162434357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Highlander Grogg",
+    "variant_id": "50162162467125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Jamaican Me Crazy",
+    "variant_id": "50162162499893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Jazzy Java",
+    "variant_id": "50162162532661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "2 lb / Ground for pour over / Salty Caramel",
+    "variant_id": "50162162565429"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "prairie-doc-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/WebsiteProductImages_KoolBeansPackaging_c88259f4-d1b5-4f03-b18f-4f6013b84b80.png?v=1737318032",
+  "platform": "shopify",
+  "product_id": "9954920595765",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Prairie Doc Blend",
+  "url": "https://koolbeanscoffee.net/products/prairie-doc-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "50495448809781"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground / 1 lb",
+    "variant_id": "50495448842549"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dakotah-bank-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/Website_Product_Images_Kool_Beans_Packaging.png?v=1737585700",
+  "platform": "shopify",
+  "product_id": "9959604060469",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [],
+  "title": "Dacotah Bank Blend",
+  "url": "https://koolbeanscoffee.net/products/dakotah-bank-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Whole bean / 1 lb",
+    "variant_id": "50508401180981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Whole bean / 2 lb",
+    "variant_id": "50508401213749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole bean / 5 lb",
+    "variant_id": "50508401246517"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground for regular coffee pot / 1 lb",
+    "variant_id": "50508401279285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Ground for regular coffee pot / 2 lb",
+    "variant_id": "50508401312053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground for regular coffee pot / 5 lb",
+    "variant_id": "50508401344821"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ },
+ {
+  "body_hash": "91a768c509c272cf",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0733/4982/4821/files/WebsiteProductImages_KoolBeansFrontPackaging.png?v=1739479736",
+  "platform": "shopify",
+  "product_id": "9982263198005",
+  "product_type": "",
+  "roaster_slug": "koolbeanscoffee",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://koolbeanscoffee.net/products/decaf-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Fine (espresso)",
+    "variant_id": "50580962312501"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Medium (regular coffee pot)",
+    "variant_id": "50580962345269"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Course (French press)",
+    "variant_id": "50580962378037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Fine (espresso)",
+    "variant_id": "50580962410805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Medium (regular coffee pot)",
+    "variant_id": "50580962443573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Course (French press)",
+    "variant_id": "50580962476341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Fine (espresso)",
+    "variant_id": "50580962509109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Medium (regular coffee pot)",
+    "variant_id": "50580962541877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Course (French press)",
+    "variant_id": "50580962574645"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "1 lb / Whole bean",
+    "variant_id": "51030994387253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lb / Whole bean",
+    "variant_id": "51030994420021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Whole bean",
+    "variant_id": "51030994452789"
+   }
+  ],
+  "vendor": "Kool Beans Coffee and Roasterie"
+ }
+]

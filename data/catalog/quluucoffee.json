@@ -1,0 +1,106 @@
+[
+ {
+  "body_hash": "7b4167ea59d6990c",
+  "first_seen": "2026-10-26",
+  "handle": "natural-ethiopian-guji-roasted-whole-bean-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0367/3551/6809/products/mockup-of-a-coffee-bag-placed-over-a-customizable-background-5658-el1-4.png?v=1672270411",
+  "platform": "shopify",
+  "product_id": "7619019440289",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "quluucoffee",
+  "tags": [
+   "Guji Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Ethiopian Guji Natural Whole Bean Coffee 12 oz. (340 g)",
+  "url": "https://quluucoffee.com/products/natural-ethiopian-guji-roasted-whole-bean-12-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "42782586405025"
+   }
+  ],
+  "vendor": "Quluu Coffee"
+ },
+ {
+  "body_hash": "e66b06031e95e2ba",
+  "first_seen": "2026-10-26",
+  "handle": "premium-single-origin-ethiopian-natural-guji-ground-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0367/3551/6809/products/mockup-of-a-coffee-bag-placed-over-a-customizable-background-5658-el1.png?v=1672270480",
+  "platform": "shopify",
+  "product_id": "7619592585377",
+  "product_type": "Ground Coffee",
+  "roaster_slug": "quluucoffee",
+  "tags": [
+   "Ground Coffee",
+   "Quluu Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Ethiopian Guji Natural Ground Coffee 12 oz. (340 g)",
+  "url": "https://quluucoffee.com/products/premium-single-origin-ethiopian-natural-guji-ground-coffee-12-oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "42784253903009"
+   }
+  ],
+  "vendor": "Quluu Coffee"
+ },
+ {
+  "body_hash": "26a793dd02986a97",
+  "first_seen": "2026-10-26",
+  "handle": "natural-ethiopian-jimma",
+  "image": "https://cdn.shopify.com/s/files/1/0367/3551/6809/files/mockup-of-a-coffee-bag-placed-over-a-customizable-background-5658-el1-112.png?v=1687898665",
+  "platform": "shopify",
+  "product_id": "7719438090401",
+  "product_type": "Ground Coffee",
+  "roaster_slug": "quluucoffee",
+  "tags": [
+   "Natural Jimma"
+  ],
+  "title": "Natural Ethiopian Jimma Ground",
+  "url": "https://quluucoffee.com/products/natural-ethiopian-jimma",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "43086862385313"
+   }
+  ],
+  "vendor": "QULUU COFFEE"
+ },
+ {
+  "body_hash": "1619a82114d67bb8",
+  "first_seen": "2026-10-26",
+  "handle": "natural-ethiopian-jimma-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0367/3551/6809/files/mockup-of-a-coffee-bag-placed-over-a-customizable-background-5658-el1-92.png?v=1687904229",
+  "platform": "shopify",
+  "product_id": "7719466664097",
+  "product_type": "Whole Bean",
+  "roaster_slug": "quluucoffee",
+  "tags": [
+   "Natural Jimma",
+   "Whole Bean"
+  ],
+  "title": "Natural Ethiopian Jimma Whole Bean",
+  "url": "https://quluucoffee.com/products/natural-ethiopian-jimma-whole-bean",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Default Title",
+    "variant_id": "43087160115361"
+   }
+  ],
+  "vendor": "QULUU COFFEE"
+ }
+]

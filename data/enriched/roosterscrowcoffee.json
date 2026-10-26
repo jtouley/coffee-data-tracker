@@ -1,0 +1,100 @@
+{
+ "5e24c666c1003e671f07092b": {
+  "body_hash": "6a5e6bcb00548d7d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet fruit",
+   "medium body mouthfeel"
+  ],
+  "varietals": []
+ },
+ "5e24d48d6810047965e67e9b": {
+  "body_hash": "b8bd0f3c13c592de",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet",
+   "tart",
+   "deep",
+   "rich herbal"
+  ],
+  "varietals": []
+ },
+ "5e9ee913f1cdfa38f248aa23": {
+  "body_hash": "02af60802d3f0306",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "61cdb006d050676f8a800d00": {
+  "body_hash": "6fab7e0450cab125",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "fruited acidity",
+   "savory spiced malt",
+   "rich mouthfeel",
+   "black cherry"
+  ],
+  "varietals": []
+ },
+ "62320dc10339676f9bbc0771": {
+  "body_hash": "9112fcfa6e857a53",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "subtle nutty",
+   "tart berry",
+   "fruity mouthfeel",
+   "bourbon"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ }
+}

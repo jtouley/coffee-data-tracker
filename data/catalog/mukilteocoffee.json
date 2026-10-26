@@ -1,0 +1,3435 @@
+[
+ {
+  "body_hash": "94d5ab6deedac974",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/PERU.png?v=1711129245",
+  "platform": "shopify",
+  "product_id": "1225821618218",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Peru",
+   "Single Origin"
+  ],
+  "title": "Peru - San Martin",
+  "url": "https://www.mukilteocoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso",
+    "variant_id": "11687042908202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press",
+    "variant_id": "11687042940970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687042973738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground",
+    "variant_id": "11687043006506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta",
+    "variant_id": "11687043072042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator",
+    "variant_id": "11687043104810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy",
+    "variant_id": "11687043137578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean",
+    "variant_id": "11687043203114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish",
+    "variant_id": "31539544096825"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "79241824b1e2d5b7",
+  "first_seen": "2026-10-26",
+  "handle": "mukilteo-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/MUK.png?v=1711129076",
+  "platform": "shopify",
+  "product_id": "1225822076970",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Founder",
+   "Mukilteo Coffee",
+   "Mulkiteo",
+   "Signature Blend"
+  ],
+  "title": "Mukilteo",
+  "url": "https://www.mukilteocoffee.com/products/mukilteo-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687044907050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687044939818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687044972586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687045005354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687045038122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687045070890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687045169194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "11687045201962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539533512761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "34612871299225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34612880801945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34612883062937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34612891058329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34612900200601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34612909080729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612910391449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34612918812825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34612934377625"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "85e7d9f852338011",
+  "first_seen": "2026-10-26",
+  "handle": "kayak",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/KAYAK.png?v=1711129002",
+  "platform": "shopify",
+  "product_id": "1225822339114",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Kayak",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Signature Blend"
+  ],
+  "title": "Kayak",
+  "url": "https://www.mukilteocoffee.com/products/kayak",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687046938666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687046971434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687047004202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687047036970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687047069738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687047102506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687047135274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Beans / 12 oz Bag",
+    "variant_id": "11687047168042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539526139961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Beans / 5 lb Bag",
+    "variant_id": "34612588806297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34612611580057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34612616757401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34612627407001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34612632256665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34612645298329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612648149145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34612656898201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34612666925209"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "7b7ef1d9d5f7ae76",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/JBM.png?v=1711128937",
+  "platform": "shopify",
+  "product_id": "1225822601258",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blue Mountain",
+   "Coffee",
+   "Jamaica",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "Jamaica Blue Mountain",
+  "url": "https://www.mukilteocoffee.com/products/jamaica-blue-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Espresso",
+    "variant_id": "11687047626794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "French Press",
+    "variant_id": "11687047659562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687047692330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Drip/Ground",
+    "variant_id": "11687047725098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Melitta",
+    "variant_id": "11687047757866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Percolator",
+    "variant_id": "11687047790634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Toddy",
+    "variant_id": "11687047823402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Whole Bean",
+    "variant_id": "11687047856170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 47.0,
+    "title": "Turkish",
+    "variant_id": "31539523518521"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "f99ab350f483b152",
+  "first_seen": "2026-10-26",
+  "handle": "italian-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/IGW.png?v=1711128910",
+  "platform": "shopify",
+  "product_id": "1225822863402",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Italian",
+   "Italian Guatemalan",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "Italian Guatemala",
+  "url": "https://www.mukilteocoffee.com/products/italian-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso / 12oz",
+    "variant_id": "11687048970282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press / 12oz",
+    "variant_id": "11687049035818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter / 12oz",
+    "variant_id": "11687049101354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground / 12oz",
+    "variant_id": "11687049166890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta / 12oz",
+    "variant_id": "11687049199658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator / 12oz",
+    "variant_id": "11687049265194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy / 12oz",
+    "variant_id": "11687049330730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11687049396266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish / 12oz",
+    "variant_id": "31539522764857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50102626124007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5lb",
+    "variant_id": "50102626156775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "50102626189543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5lb",
+    "variant_id": "50102626222311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5lb",
+    "variant_id": "50102626255079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5lb",
+    "variant_id": "50102626287847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb",
+    "variant_id": "50102626320615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5lb",
+    "variant_id": "50102626353383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5lb",
+    "variant_id": "50102626386151"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "143e77fa2024590c",
+  "first_seen": "2026-10-26",
+  "handle": "gitano",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/GITANO.png?v=1711128420",
+  "platform": "shopify",
+  "product_id": "1225823060010",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Gitano",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Gitano",
+  "url": "https://www.mukilteocoffee.com/products/gitano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "11687049822250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687049855018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687049887786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687049953322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687049986090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687050018858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687050051626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Beans / 12 oz Bag",
+    "variant_id": "11687050117162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539500187705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Beans / 5 lb Bag",
+    "variant_id": "34613090648217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34613099430041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "34613109817497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34613113553049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34613115879577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34613119844505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34613123285145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34613125644441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34613128986777"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "c7b5a01b34d54864",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/FRENCH.png?v=1711128383",
+  "platform": "shopify",
+  "product_id": "1225823322154",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "French",
+   "French Roast",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "French Roast - Finca Rio Colorado [Guatemala]",
+  "url": "https://www.mukilteocoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso / 12oz",
+    "variant_id": "11687050936362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press / 12oz",
+    "variant_id": "11687050969130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter / 12oz",
+    "variant_id": "11687051001898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground / 12oz",
+    "variant_id": "11687051034666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta / 12oz",
+    "variant_id": "11687051067434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator / 12oz",
+    "variant_id": "11687051100202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy / 12oz",
+    "variant_id": "11687051132970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Beans / 12oz",
+    "variant_id": "11687051165738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish / 12oz",
+    "variant_id": "31539499532345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Beans / 5lb",
+    "variant_id": "50102615605479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5lb",
+    "variant_id": "50102615638247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "50102615671015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5lb",
+    "variant_id": "50102615703783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5lb",
+    "variant_id": "50102615736551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5lb",
+    "variant_id": "50102615769319"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb",
+    "variant_id": "50102615802087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5lb",
+    "variant_id": "50102615834855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5lb",
+    "variant_id": "50102615867623"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "594b5bf091b980e6",
+  "first_seen": "2026-10-26",
+  "handle": "italian-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/ITALIAN.png?v=1724787975",
+  "platform": "shopify",
+  "product_id": "1225823584298",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Italian",
+   "Italian Colombian",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "Italian",
+  "url": "https://www.mukilteocoffee.com/products/italian-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso / 12oz",
+    "variant_id": "11687052050474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press / 12oz",
+    "variant_id": "11687052083242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter / 12oz",
+    "variant_id": "11687052116010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground / 12oz",
+    "variant_id": "11687052148778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta / 12oz",
+    "variant_id": "11687052181546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator / 12oz",
+    "variant_id": "11687052214314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy / 12oz",
+    "variant_id": "11687052247082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11687052279850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish / 12oz",
+    "variant_id": "31539520077881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50102633562343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5lb",
+    "variant_id": "50102633595111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "50102633627879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5lb",
+    "variant_id": "50102633660647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5lb",
+    "variant_id": "50102633693415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5lb",
+    "variant_id": "50102633726183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb",
+    "variant_id": "50102633758951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5lb",
+    "variant_id": "50102633791719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5lb",
+    "variant_id": "50102633857255"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "d9516c6078ccca8d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/COLOMBIA.png?v=1711128285",
+  "platform": "shopify",
+  "product_id": "1225823911978",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Colombia Supremo",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Single Origin",
+   "Supremo"
+  ],
+  "title": "Colombia Apia",
+  "url": "https://www.mukilteocoffee.com/products/colombia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso",
+    "variant_id": "11687052836906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press",
+    "variant_id": "11687052869674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687052902442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground",
+    "variant_id": "11687052935210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta",
+    "variant_id": "11687052967978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator",
+    "variant_id": "11687053000746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy",
+    "variant_id": "11687053033514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean",
+    "variant_id": "11687053066282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish",
+    "variant_id": "31539452444729"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "785e58a411f76bfe",
+  "first_seen": "2026-10-26",
+  "handle": "bainbridge",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/BAIN.png?v=1711128146",
+  "platform": "shopify",
+  "product_id": "1225824174122",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Bainbridge",
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Mukilteo Coffee",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Bainbridge",
+  "url": "https://www.mukilteocoffee.com/products/bainbridge",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687053688874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "11687053721642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687053787178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687053852714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687053885482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687053918250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Beans / 12 oz Bag",
+    "variant_id": "11687053951018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539406438457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Beans / 5 lb",
+    "variant_id": "34611851821209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb",
+    "variant_id": "34611860013209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "34611869221017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb",
+    "variant_id": "34611872792729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb",
+    "variant_id": "34611876069529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "34611883278489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb",
+    "variant_id": "34611899662489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb",
+    "variant_id": "34611903299737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "50709851308263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb",
+    "variant_id": "50709851341031"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "dab27da61d1a5c83",
+  "first_seen": "2026-10-26",
+  "handle": "anthonys",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/ANTHONYS.png?v=1711128087",
+  "platform": "shopify",
+  "product_id": "1225824436266",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Anthony's",
+   "Anthony's Home Port",
+   "Anthonys Homeport",
+   "Blend",
+   "Coffee",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Anthony's",
+  "url": "https://www.mukilteocoffee.com/products/anthonys",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687056146474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687056179242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687056212010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "11687056277546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687056310314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687056343082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "11687056375850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539392249913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34611734839449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34611743785113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34611749126297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "34611760136345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34611771048089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34611788513433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34611796574361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "34611922403481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "34636619481241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "34636620333209"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "9023c661f2d16ae4",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/BKFT.png?v=1711128194",
+  "platform": "shopify",
+  "product_id": "1225827876906",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Breakfast",
+   "Coffee",
+   "Dark Roast",
+   "Mukilteo Coffee",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Breakfast",
+  "url": "https://www.mukilteocoffee.com/products/breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687069024298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687069057066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687069089834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "11687069122602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687069155370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687069188138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687069220906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Beans / 12 oz Bag",
+    "variant_id": "11687069253674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539412435001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Beans / 5 lb Bag",
+    "variant_id": "34611957825689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34611975225497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34611983024281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34611986333849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34611996328089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34612008583321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612018610329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34612027359385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "34612159447193"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "dfd5eaac5b6f4776",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-santa-elena-estate",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/COSTA.png?v=1711128302",
+  "platform": "shopify",
+  "product_id": "1225828270122",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Costa",
+   "Costa Rica",
+   "Estate",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Santa Elena",
+   "Single Origin"
+  ],
+  "title": "Costa Rica - Santa Elena Estate",
+  "url": "https://www.mukilteocoffee.com/products/costa-rica-tarrazu-santa-elena-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Espresso",
+    "variant_id": "11687071219754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "French Press",
+    "variant_id": "11687071285290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687071350826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Drip/Ground",
+    "variant_id": "11687071449130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Melitta",
+    "variant_id": "11687071547434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Percolator",
+    "variant_id": "11687071580202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Toddy",
+    "variant_id": "11687071678506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Whole Bean",
+    "variant_id": "11687071744042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Turkish",
+    "variant_id": "31539463716921"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "9e08ec38c2e18066",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-rio-colorado",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/GUATEMALA.png?v=1711128465",
+  "platform": "shopify",
+  "product_id": "1225828696106",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Finca Rio Colorado",
+   "Guatemala",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "Guatemala - Finca Rio Colorado",
+  "url": "https://www.mukilteocoffee.com/products/guatemala-finca-rio-colorado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso",
+    "variant_id": "11687073480746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press",
+    "variant_id": "11687073513514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687073546282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground",
+    "variant_id": "11687073579050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta",
+    "variant_id": "11687073611818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator",
+    "variant_id": "11687073644586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy",
+    "variant_id": "11687073677354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean",
+    "variant_id": "11687073710122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish",
+    "variant_id": "31539505561657"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "f24365ca8fe929ff",
+  "first_seen": "2026-10-26",
+  "handle": "happy-hippie-1",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/HH.png?v=1711128757",
+  "platform": "shopify",
+  "product_id": "1225828991018",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Happy Hippie",
+   "Hippie",
+   "Mukilteo Coffee",
+   "Signature Blend"
+  ],
+  "title": "Happy Hippie",
+  "url": "https://www.mukilteocoffee.com/products/happy-hippie-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687074791466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687074857002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687074922538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687074955306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687074988074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687075020842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687075053610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "11687075086378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539514769465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "34612073201817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34612081066137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34612084277401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34612092960921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34612102267033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34612115177625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612145979545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34612146995353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34612153647257"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "c59cd98865eb115d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/Kenya_Mukarimu_40bfc511-b9f8-448f-a69c-93ac666cc303.png?v=1736354963",
+  "platform": "shopify",
+  "product_id": "1225829253162",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "AA",
+   "Coffee",
+   "Kenya",
+   "Kenya AA",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Single Origin"
+  ],
+  "title": "Kenya AA Mukarimu",
+  "url": "https://www.mukilteocoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "11687075676202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "11687075708970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687075741738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip/Ground",
+    "variant_id": "11687075774506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Melitta",
+    "variant_id": "11687075807274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Percolator",
+    "variant_id": "11687075840042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Toddy",
+    "variant_id": "11687075872810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "11687075905578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Turkish",
+    "variant_id": "31539526762553"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "49fac9f744427145",
+  "first_seen": "2026-10-26",
+  "handle": "pnw",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/746405000008.jpg?v=1779808873",
+  "platform": "shopify",
+  "product_id": "1225829646378",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Espresso",
+   "Monorail",
+   "Mukilteo Coffee",
+   "Signature Blend"
+  ],
+  "title": "PNW (Formerly Chetzemoka)",
+  "url": "https://www.mukilteocoffee.com/products/pnw",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687077249066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687077281834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687077314602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687077347370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687077380138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687077412906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687077445674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "11687077478442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539532693561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "34612734525593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34612748648601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34612759068825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34612764278937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34612770537625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34612786987161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612802584729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34612804616345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34612856094873"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "f54cabcd944d5f8e",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaffeinated-mukilteo-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/MukDW.png?v=1711129111",
+  "platform": "shopify",
+  "product_id": "1225830105130",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Mukilteo Coffee",
+   "Swiss Water Decaffeinated",
+   "decaf"
+  ],
+  "title": "Mukilteo Decaf - Swiss Water® Decaffeinated",
+  "url": "https://www.mukilteocoffee.com/products/swiss-water-decaffeinated-mukilteo-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso / 12oz",
+    "variant_id": "11687080034346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press / 12oz",
+    "variant_id": "11687080067114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter / 12oz",
+    "variant_id": "11687080099882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground / 12oz",
+    "variant_id": "11687080132650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta / 12oz",
+    "variant_id": "11687080165418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator / 12oz",
+    "variant_id": "11687080198186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy / 12oz",
+    "variant_id": "11687080230954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11687080263722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish / 12oz",
+    "variant_id": "31539537346617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "50027968856295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Turkish / 5LB",
+    "variant_id": "50027968889063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso / 5LB",
+    "variant_id": "50027968921831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Melitta / 5LB",
+    "variant_id": "50027968954599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Drip/Ground / 5LB",
+    "variant_id": "50027968987367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Gold Cone Filter / 5LB",
+    "variant_id": "50027969020135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5LB",
+    "variant_id": "50027969052903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Percolator / 5LB",
+    "variant_id": "50027969085671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Toddy / 5LB",
+    "variant_id": "50027969118439"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "a7f3135745f40018",
+  "first_seen": "2026-10-26",
+  "handle": "northwest",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/NW.png?v=1711129126",
+  "platform": "shopify",
+  "product_id": "1225830432810",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Northwest",
+   "Signature Blend"
+  ],
+  "title": "Northwest",
+  "url": "https://www.mukilteocoffee.com/products/northwest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687081410602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687081443370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687081476138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687081541674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687081639978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "11687081672746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539537707065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "34612947615897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34612949778585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34612971602073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34612983660697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34612986740889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34612992704665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34613014134937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "50709761032423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "50709761065191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "50709761097959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "50709761130727"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "b7e4949ce07f0a60",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-dp",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/SUMSUM.png?v=1711129307",
+  "platform": "shopify",
+  "product_id": "1225830924330",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "DP",
+   "Mandheling",
+   "Mukilteo Coffee",
+   "Single Origin",
+   "Sumatra",
+   "Sumatra Mandheling DP"
+  ],
+  "title": "Sumatra Mandheling DP",
+  "url": "https://www.mukilteocoffee.com/products/sumatra-mandheling-dp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Espresso",
+    "variant_id": "11687083049002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "French Press",
+    "variant_id": "11687083081770"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "11687083114538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Drip/Ground",
+    "variant_id": "11687083147306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Melitta",
+    "variant_id": "11687083180074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Percolator",
+    "variant_id": "11687083212842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Toddy",
+    "variant_id": "11687083245610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Whole Bean",
+    "variant_id": "11687083278378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "Turkish",
+    "variant_id": "31539548553273"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "de9f719b1dcbf25c",
+  "first_seen": "2026-10-26",
+  "handle": "rosalies",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/RosaliesW.png?v=1711129275",
+  "platform": "shopify",
+  "product_id": "1225831677994",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Rosalie",
+   "Rosalie's",
+   "Signature Blend"
+  ],
+  "title": "Rosalie's",
+  "url": "https://www.mukilteocoffee.com/products/rosalies",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "11687084359722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "11687084392490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "11687084425258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "11687084458026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "11687084490794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "11687084523562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "11687084589098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "11687084621866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "31539547963449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "34613031927961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "34613041037465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "34613054242969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "34613058207897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "34613063418009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "34613068136601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "34613073150105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "34613079244953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "34613082554521"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "b1c8b1fd6604e8ce",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaffeinated-italian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/ITALDECAF.png?v=1711128893",
+  "platform": "shopify",
+  "product_id": "1225832300586",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Italian",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Swiss Water Decaffeinated",
+   "decaf"
+  ],
+  "title": "Italian Decaf - Swiss Water® Decaffeinated",
+  "url": "https://www.mukilteocoffee.com/products/swiss-water-decaffeinated-italian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Espresso / 12oz",
+    "variant_id": "11687086555178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "French Press / 12oz",
+    "variant_id": "11687086620714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Gold Cone Filter / 12oz",
+    "variant_id": "11687086653482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Drip/Ground / 12oz",
+    "variant_id": "11687086686250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Melitta / 12oz",
+    "variant_id": "11687086719018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Percolator / 12oz",
+    "variant_id": "11687086751786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Toddy / 12oz",
+    "variant_id": "11687086784554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "11687086817322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.75,
+    "title": "Turkish / 12oz",
+    "variant_id": "31539521716281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5LB",
+    "variant_id": "50027972165863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Turkish / 5LB",
+    "variant_id": "50027972198631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso / 5LB",
+    "variant_id": "50027972231399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Melitta / 5LB",
+    "variant_id": "50027972264167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Drip/Ground / 5LB",
+    "variant_id": "50027972296935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Gold Cone Filter / 5LB",
+    "variant_id": "50027972329703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5LB",
+    "variant_id": "50027972362471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Percolator / 5LB",
+    "variant_id": "50027972395239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Toddy / 5LB",
+    "variant_id": "50027972428007"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "560ac1b0f5bc91df",
+  "first_seen": "2026-10-26",
+  "handle": "roy-rogers-rock-slide-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/products/Roy_Rogers_zoom.png?v=1577490207",
+  "platform": "shopify",
+  "product_id": "1849550635050",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Medium Roast",
+   "Rock Slide",
+   "Roy Rogers",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Roy Rogers - Rock Slide Roast Coffee",
+  "url": "https://www.mukilteocoffee.com/products/roy-rogers-rock-slide-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean",
+    "variant_id": "14439682605098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso",
+    "variant_id": "14439682637866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press",
+    "variant_id": "14439682670634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter",
+    "variant_id": "14439682703402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground",
+    "variant_id": "14439682736170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta",
+    "variant_id": "14439682768938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator",
+    "variant_id": "14439682801706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy",
+    "variant_id": "14439682834474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish",
+    "variant_id": "31539548422201"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "e9034e252062f02c",
+  "first_seen": "2026-10-26",
+  "handle": "mukilteo-coffee-portion-packs",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/products/portion_packs.png?v=1577481503",
+  "platform": "shopify",
+  "product_id": "1936636346410",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee",
+   "Coffee Gift",
+   "Gift",
+   "Happy Hippie",
+   "Merchandise",
+   "Portion Pack",
+   "Signature Blend"
+  ],
+  "title": "Mukilteo Coffee Portion Packs",
+  "url": "https://www.mukilteocoffee.com/products/mukilteo-coffee-portion-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 10.0,
+    "title": "5 Portion Packs - 1.75 oz",
+    "variant_id": "14785238007850"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 63.0,
+    "title": "Case of 40 Portion Packs - 1.75 oz",
+    "variant_id": "14785238040618"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "666a6d3b31bc397d",
+  "first_seen": "2026-10-26",
+  "handle": "jr-cadillac",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/products/IMG_5380.jpg?v=1591222181",
+  "platform": "shopify",
+  "product_id": "5259012735129",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Espresso",
+   "Mukilteo Coffee",
+   "Signature Blend"
+  ],
+  "title": "Jr. Cadillac Coffee",
+  "url": "https://www.mukilteocoffee.com/products/jr-cadillac",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "34526376034457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "34526376067225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "34526376099993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "34526376165529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "34526376198297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "34526376231065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "34526376263833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "34526376296601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "34526376329369"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "93fa1a2323690d1e",
+  "first_seen": "2026-10-26",
+  "handle": "salish",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/SALISH.png?v=1724694702",
+  "platform": "shopify",
+  "product_id": "8340709966055",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Gitano",
+   "Medium Roast",
+   "Mukilteo Coffee",
+   "Signature",
+   "Signature Blend"
+  ],
+  "title": "Salish",
+  "url": "https://www.mukilteocoffee.com/products/salish",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Whole Bean / 12 oz Bag",
+    "variant_id": "46377110339815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Turkish / 12 oz Bag",
+    "variant_id": "46377110372583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Melitta / 12 oz Bag",
+    "variant_id": "46377110438119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Drip/Ground / 12 oz Bag",
+    "variant_id": "46377110470887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Gold Cone Filter / 12 oz Bag",
+    "variant_id": "46377110503655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "French Press / 12 oz Bag",
+    "variant_id": "46377110536423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Percolator / 12 oz Bag",
+    "variant_id": "46377110569191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Toddy / 12 oz Bag",
+    "variant_id": "46377110601959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "Espresso / 12 oz Bag",
+    "variant_id": "46377110700263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5 lb Bag",
+    "variant_id": "47006985486567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Turkish / 5 lb Bag",
+    "variant_id": "47006985519335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Melitta / 5 lb Bag",
+    "variant_id": "47006985552103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Drip/Ground / 5 lb Bag",
+    "variant_id": "47006985584871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Gold Cone Filter / 5 lb Bag",
+    "variant_id": "47006985617639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5 lb Bag",
+    "variant_id": "47006985650407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Percolator / 5 lb Bag",
+    "variant_id": "47006985683175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Toddy / 5 lb Bag",
+    "variant_id": "47006985715943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso / 5 lb Bag",
+    "variant_id": "47006985748711"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "e9c07b8c7abde5ac",
+  "first_seen": "2026-10-26",
+  "handle": "counterbalance",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/Counterbalance.png?v=1715888494",
+  "platform": "shopify",
+  "product_id": "8857206915303",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Counterbalance",
+  "url": "https://www.mukilteocoffee.com/products/counterbalance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb Bag",
+    "variant_id": "49493590114535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Whole Bean / 12oz Bag",
+    "variant_id": "49493590147303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Turkish / 5lb Bag",
+    "variant_id": "49493590180071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Turkish / 12oz Bag",
+    "variant_id": "49493590212839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso / 5lb Bag",
+    "variant_id": "49493590245607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Espresso / 12oz Bag",
+    "variant_id": "49493590278375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip/Ground / 5lb Bag",
+    "variant_id": "49493590311143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Drip/Ground / 12oz Bag",
+    "variant_id": "49493590343911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Melitta / 5lb Bag",
+    "variant_id": "49493590376679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Melitta / 12oz Bag",
+    "variant_id": "49493590409447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Gold Cone Filter / 5lb Bag",
+    "variant_id": "49493590442215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Gold Cone Filter / 12oz Bag",
+    "variant_id": "49493590474983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb Bag",
+    "variant_id": "49493590507751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "French Press / 12oz Bag",
+    "variant_id": "49493590540519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator / 5lb Bag",
+    "variant_id": "49493590573287"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Percolator / 12oz Bag",
+    "variant_id": "49493590606055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Toddy / 5lb Bag",
+    "variant_id": "49493590638823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.75,
+    "title": "Toddy / 12oz Bag",
+    "variant_id": "49493590671591"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ },
+ {
+  "body_hash": "0224fa8bc7f73e57",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-at-dawn",
+  "image": "https://cdn.shopify.com/s/files/1/2646/9076/files/coffeeatdawnbag.png?v=1757094535",
+  "platform": "shopify",
+  "product_id": "9298212585703",
+  "product_type": "coffee",
+  "roaster_slug": "mukilteocoffee",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee at Dawn",
+   "Medium Roast",
+   "Mukilteo Coffee"
+  ],
+  "title": "Coffee at Dawn",
+  "url": "https://www.mukilteocoffee.com/products/coffee-at-dawn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Whole Bean",
+    "variant_id": "51352745640167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Drip/Ground",
+    "variant_id": "51352745672935"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Espresso",
+    "variant_id": "51352745705703"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "French Press",
+    "variant_id": "51352745738471"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Melitta",
+    "variant_id": "51352745771239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Gold Cone",
+    "variant_id": "51352745804007"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Turkish",
+    "variant_id": "51352745836775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "Toddy",
+    "variant_id": "51352745869543"
+   }
+  ],
+  "vendor": "Mukilteo Coffee Roasters"
+ }
+]

@@ -1,0 +1,2475 @@
+[
+ {
+  "body_hash": "cea3d80600d3a0df",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-coldbrewblend300g.png?v=1771617070",
+  "platform": "shopify",
+  "product_id": "1325054296147",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://irvingfarmcoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12222535336019"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12222535368787"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12222535401555"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12222535434323"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12222535467091"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12222535499859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850260193363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850260226131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850260258899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850260291667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850260324435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850260357203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085144756307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085144789075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085144821843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085144854611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085144887379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085144920147"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "9b1c31e0b5079562",
+  "first_seen": "2026-10-26",
+  "handle": "highline-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-Highline300g.png?v=1771657490",
+  "platform": "shopify",
+  "product_id": "1378687385683",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Organic"
+  ],
+  "title": "Highline Light Roast | Organic",
+  "url": "https://irvingfarmcoffee.com/products/highline-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12730206748755"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12730206781523"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12730206814291"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12730206847059"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12730206879827"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12730206912595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850985152595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850985185363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850985218131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850985250899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850985283667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850985316435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085135614035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085135646803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085135679571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085135712339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085135745107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085135777875"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "cf4a0e5f5c7e53e0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mulish",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/300g-EthiopiaMulish_d25bc453-0efe-426e-a66b-54ea5fb37d0a.png?v=1782725441",
+  "platform": "shopify",
+  "product_id": "14787435200878",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Mulish",
+  "url": "https://irvingfarmcoffee.com/products/ethiopia-mulish",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "whole Bean / 300g",
+    "variant_id": "52372885307758"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "52372885340526"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "52372885373294"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "52372885406062"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "52372885438830"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "52372885471598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "whole Bean / 2lb",
+    "variant_id": "52375789470062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "whole Bean / 5lb",
+    "variant_id": "52375789502830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "52375789535598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "52375789568366"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "52375789601134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "52375789633902"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "52375789666670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "52375789699438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "52375789732206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "52375789764974"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "52375789797742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 151.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "52375789830510"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "3e3bf402e6c27d55",
+  "first_seen": "2026-10-26",
+  "handle": "30th-anniversary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/anniv30-product-1-three-quarter.jpg?v=1792921308",
+  "platform": "shopify",
+  "product_id": "15455652413806",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [],
+  "title": "30th Anniversary Blend",
+  "url": "https://irvingfarmcoffee.com/products/30th-anniversary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "whole bean / 300g",
+    "variant_id": "67871713722734"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "67871713755502"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "67871713788270"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "67871713821038"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "67871713853806"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "67871713886574"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "66cb44804abba2c7",
+  "first_seen": "2026-10-26",
+  "handle": "71-irving-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-71House300g.png?v=1771657490",
+  "platform": "shopify",
+  "product_id": "2115973765",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend"
+  ],
+  "title": "71 House Medium Roast",
+  "url": "https://irvingfarmcoffee.com/products/71-irving-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12228907106387"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228907139155"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228907171923"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228907204691"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228907237459"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228907270227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850339164243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850339197011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850339229779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850339262547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850339295315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850339328083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085116510291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085116543059"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085116575827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085116608595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085116641363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085116674131"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "4f3d6274ad7ca74f",
+  "first_seen": "2026-10-26",
+  "handle": "blackstrap-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-Blackstrap300g.png?v=1771615918",
+  "platform": "shopify",
+  "product_id": "2116005445",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Espresso"
+  ],
+  "title": "Blackstrap Espresso",
+  "url": "https://irvingfarmcoffee.com/products/blackstrap-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12228906877011"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228906909779"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228906942547"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228906975315"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228907008083"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228907040851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850738409555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850738442323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850738475091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850738507859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850738540627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850738573395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085121556563"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085121589331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085121622099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085121654867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085121687635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085121720403"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "3cf531e6b42cef6c",
+  "first_seen": "2026-10-26",
+  "handle": "gotham-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-Gotham300g.png?v=1771657490",
+  "platform": "shopify",
+  "product_id": "2116081861",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Espresso"
+  ],
+  "title": "Gotham Dark Roast",
+  "url": "https://irvingfarmcoffee.com/products/gotham-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12228910776403"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228910809171"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228910841939"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228910874707"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228910907475"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228910940243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850973585491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850973618259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850973651027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850973683795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850973716563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850973749331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085133221971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085133254739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085133287507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085133320275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085133353043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085133385811"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "469defb04d9e68d5",
+  "first_seen": "2026-10-26",
+  "handle": "hudson-organic-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-Hudson300g.png?v=1771616348",
+  "platform": "shopify",
+  "product_id": "2116125829",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Espresso",
+   "Organic"
+  ],
+  "title": "Hudson Dark Roast | Organic",
+  "url": "https://irvingfarmcoffee.com/products/hudson-organic-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12228902256723"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228902289491"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228902322259"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228902355027"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228902387795"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228902420563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5lb",
+    "variant_id": "41850996195411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41850996228179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41850996260947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41850996293715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41850996326483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41850996359251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085138890835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085138923603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085138956371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085138989139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085139021907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085139054675"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "47be3a4efe20005d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blackstrap",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-DecafBS300g.png?v=1771616384",
+  "platform": "shopify",
+  "product_id": "2116143045",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Espresso"
+  ],
+  "title": "Decaf Blackstrap",
+  "url": "https://irvingfarmcoffee.com/products/decaf-blackstrap",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "whole bean / 300g",
+    "variant_id": "12228902027347"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228902060115"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228902092883"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228902125651"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228902158419"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228902191187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5lb",
+    "variant_id": "41851019001939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41851019034707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41851019067475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41851019100243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41851019133011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41851019165779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085147770963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085147803731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085147836499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085147869267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085147902035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085147934803"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "6cb728b3531f4d2a",
+  "first_seen": "2026-10-26",
+  "handle": "santa-isabel-guatemala-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/santa-isabel-guatemala-organic-bag.png?v=1789329960",
+  "platform": "shopify",
+  "product_id": "2351566469",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Espresso",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Santa Isabel, Guatemala | Organic",
+  "url": "https://irvingfarmcoffee.com/products/santa-isabel-guatemala-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "whole bean / 300g",
+    "variant_id": "12228901535827"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228901568595"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228901601363"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228901634131"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228901666899"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 23.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228901699667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41887499223123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41887499255891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41887499288659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41887499321427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41887499354195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41887499386963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085184733267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085184766035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085184798803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085184831571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085184864339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085184897107"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "bade65648cc39136",
+  "first_seen": "2026-10-26",
+  "handle": "monserrate-br-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/Monserrate2024-300g_1.png?v=1788103060",
+  "platform": "shopify",
+  "product_id": "3394728453",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Monserrate, Colombia",
+  "url": "https://irvingfarmcoffee.com/products/monserrate-br-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "whole bean / 300g",
+    "variant_id": "12228894785619"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "12228894818387"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "12228894851155"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "12228894883923"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "12228894916691"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "12228894949459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41854188683347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41854188716115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41854188748883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41854188781651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41854188814419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41854188847187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085163794515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085163827283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085163860051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085163892819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085163925587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.75,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085163958355"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "86da273b04c1d982",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-blend-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/2_fdce03cc-a68a-41a3-85fb-5360f1638625.png?v=1776905265",
+  "platform": "shopify",
+  "product_id": "3934604230739",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Roaster's Selection | Blend",
+  "url": "https://irvingfarmcoffee.com/products/roasters-choice-blend-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "whole bean / 300g",
+    "variant_id": "29442817785939"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "29442817818707"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "29442817851475"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "29442817884243"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "29442817917011"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "29442817949779"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "018833cfb7792226",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/1_cd7f858b-3c9d-4ccb-8ea3-9571dce57e0f.png?v=1776905190",
+  "platform": "shopify",
+  "product_id": "3934810505299",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Roaster's Selection | Single Origin",
+  "url": "https://irvingfarmcoffee.com/products/roasters-choice-single-origin-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "whole bean / 300g",
+    "variant_id": "29444019781715"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "29444019814483"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "29444019847251"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "29444019880019"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "29444019945555"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 21.0,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "29444019978323"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "66cb44804abba2c7",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-71-house-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/71House2024-5lb_1.png?v=1708630117",
+  "platform": "shopify",
+  "product_id": "4390103384147",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK"
+  ],
+  "title": "Bulk | 71 House Medium Roast",
+  "url": "https://irvingfarmcoffee.com/products/bulk-71-house-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "31427364618323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "31427364651091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "31427364683859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "31427364716627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "31427364749395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "31427364782163"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "69b76478c5e8fc4e",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-blackstrap-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/BlackstrapEspresso2024-5lb.png?v=1708630212",
+  "platform": "shopify",
+  "product_id": "4390104989779",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "ESPRESSO"
+  ],
+  "title": "Bulk | Blackstrap Espresso",
+  "url": "https://irvingfarmcoffee.com/products/bulk-blackstrap-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "31427370254419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "31427370287187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "31427370319955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "31427370352723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "31427370385491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "31427370418259"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "02ec50e09fb110c6",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/ColdBrew2024-5lb.png?v=1708630567",
+  "platform": "shopify",
+  "product_id": "4390106923091",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK"
+  ],
+  "title": "Bulk | Cold Brew Blend",
+  "url": "https://irvingfarmcoffee.com/products/bulk-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5LB",
+    "variant_id": "31427381198931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5LB",
+    "variant_id": "31427381231699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5LB",
+    "variant_id": "31427381264467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5LB",
+    "variant_id": "31427381297235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5LB",
+    "variant_id": "31427381330003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5LB",
+    "variant_id": "31427381362771"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "9b1c31e0b5079562",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-highline-light-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/Highline2024-5lb.png?v=1708630362",
+  "platform": "shopify",
+  "product_id": "4390367985747",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "ORGANIC COFFEES"
+  ],
+  "title": "Bulk | Highline Light Roast | Organic",
+  "url": "https://irvingfarmcoffee.com/products/bulk-highline-light-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5LB",
+    "variant_id": "31429388075091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5LB",
+    "variant_id": "31429388107859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5LB",
+    "variant_id": "31429388140627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5LB",
+    "variant_id": "31429388173395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5LB",
+    "variant_id": "31429388206163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5LB",
+    "variant_id": "31429388238931"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "d17e9b7fa5486085",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-decaf-blackstrap",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/DecafBlackstrap2024-5lb.png?v=1708630476",
+  "platform": "shopify",
+  "product_id": "4390371819603",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "DECAF"
+  ],
+  "title": "Bulk | Decaf Blackstrap",
+  "url": "https://irvingfarmcoffee.com/products/bulk-decaf-blackstrap",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5lb",
+    "variant_id": "31429417336915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "31429417369683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "31429417402451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "31429417435219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "31429417467987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "31429417500755"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "3cf531e6b42cef6c",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-gotham-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/Gotham2024-5lb.png?v=1708630288",
+  "platform": "shopify",
+  "product_id": "4390379716691",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "ESPRESSO"
+  ],
+  "title": "Bulk | Gotham Dark Roast",
+  "url": "https://irvingfarmcoffee.com/products/bulk-gotham-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "31429485690963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "31429485723731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "31429485756499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "31429485789267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "31429485822035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "31429485854803"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "469defb04d9e68d5",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-hudson-french-roast-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/Hudson2024-5lb.png?v=1708630806",
+  "platform": "shopify",
+  "product_id": "4390384009299",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "ORGANIC COFFEES"
+  ],
+  "title": "Bulk | Hudson Dark Roast | Organic",
+  "url": "https://irvingfarmcoffee.com/products/bulk-hudson-french-roast-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "whole bean / 5lb",
+    "variant_id": "31429515837523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "31429515870291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "31429515903059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "31429515935827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "31429515968595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.5,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "31429516001363"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "961d0bd670fd7d25",
+  "first_seen": "2026-10-26",
+  "handle": "minas-gerais-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/MinasGerais2024-300g_639dbc33-d676-4dd5-9af4-f5ea0016829a.png?v=1782727104",
+  "platform": "shopify",
+  "product_id": "7139967107155",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Minas Gerais, Brazil",
+  "url": "https://irvingfarmcoffee.com/products/minas-gerais-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "whole bean / 300g",
+    "variant_id": "41326323597395"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "41326323630163"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "41326323662931"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "41326323695699"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "41326323728467"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "41326323761235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41808473587795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41808473620563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41808473653331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41808473686099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41808473718867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41808473751635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085169266771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085169299539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085169332307"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085169365075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085169397843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.63,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085169430611"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "7ecf364450f867ca",
+  "first_seen": "2026-10-26",
+  "handle": "lamari-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/Lamari2024-300g.png?v=1782727422",
+  "platform": "shopify",
+  "product_id": "7156374863955",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Lamari, Papua New Guinea",
+  "url": "https://irvingfarmcoffee.com/products/lamari-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "whole bean / 300g",
+    "variant_id": "41382437486675"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "41382437519443"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "41382437552211"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "41382437584979"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "41382437617747"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "41382437650515"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "9badfb18a5c3438d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-super-dark-1",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/PLP-SouthStreet300g.png?v=1771614733",
+  "platform": "shopify",
+  "product_id": "7354846347347",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "Blend",
+   "Espresso"
+  ],
+  "title": "South Street Super Dark",
+  "url": "https://irvingfarmcoffee.com/products/sumatra-super-dark-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "whole bean / 300g",
+    "variant_id": "41887579504723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41887579537491"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarsest (french press) / 300g",
+    "variant_id": "41887579570259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41887579603027"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "coarser (percolator) / 300g",
+    "variant_id": "41887579635795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41887579668563"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "medium (auto-drip) / 300g",
+    "variant_id": "41887579701331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41887579734099"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finer (cone filter) / 300g",
+    "variant_id": "41887579799635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41887579832403"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 18.5,
+    "title": "finest (espresso) / 300g",
+    "variant_id": "41887579865171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41887579897939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "whole bean / 2lb",
+    "variant_id": "42085155602515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarsest (french press) / 2lb",
+    "variant_id": "42085155635283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "coarser (percolator) / 2lb",
+    "variant_id": "42085155668051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "medium (auto-drip) / 2lb",
+    "variant_id": "42085155700819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finer (cone filter) / 2lb",
+    "variant_id": "42085155733587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.5,
+    "title": "finest (espresso) / 2lb",
+    "variant_id": "42085155766355"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ },
+ {
+  "body_hash": "e789a9dd964f8bb6",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-gotham-dark-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0923/5128/files/2024-SouthStreet-5lb.png?v=1718212233",
+  "platform": "shopify",
+  "product_id": "7354849525843",
+  "product_type": "Coffee",
+  "roaster_slug": "irvingfarm",
+  "tags": [
+   "BLENDS",
+   "BULK",
+   "ESPRESSO"
+  ],
+  "title": "Bulk | South Street Super Dark",
+  "url": "https://irvingfarmcoffee.com/products/bulk-gotham-dark-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "whole bean / 5lb",
+    "variant_id": "41887601066067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarsest (french press) / 5lb",
+    "variant_id": "41887601098835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "coarser (percolator) / 5lb",
+    "variant_id": "41887601131603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "medium (auto-drip) / 5lb",
+    "variant_id": "41887601164371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finer (cone filter) / 5lb",
+    "variant_id": "41887601197139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "finest (espresso) / 5lb",
+    "variant_id": "41887601229907"
+   }
+  ],
+  "vendor": "Irving Farm New York"
+ }
+]

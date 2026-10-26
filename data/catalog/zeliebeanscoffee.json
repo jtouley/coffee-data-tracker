@@ -1,0 +1,802 @@
+[
+ {
+  "body_hash": "e1990f33f933c9c8",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-monte-vista-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/Honduras_Monte_Vista_Washed.png?v=1781641786",
+  "platform": "shopify",
+  "product_id": "10094982627577",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Honduran Monte Vista, Washed",
+  "url": "https://zeliebeanscoffee.com/products/honduran-monte-vista-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "48538111279353"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 23.0,
+    "title": "Coarse - French Press",
+    "variant_id": "48538111312121"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 23.0,
+    "title": "Medium - Drip",
+    "variant_id": "48538111344889"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 23.0,
+    "title": "Fine - Espresso",
+    "variant_id": "48538111377657"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "2cdbd705fa3e5449",
+  "first_seen": "2026-10-26",
+  "handle": "pulycaff®-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/PULYCAFF_foto1.1_sito_pulycaff-scaled.jpg?v=1784920387",
+  "platform": "shopify",
+  "product_id": "10145633665273",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "pulyCAFF® Plus",
+  "url": "https://zeliebeanscoffee.com/products/pulycaff®-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 936,
+    "price_usd": 21.99,
+    "title": "Default Title",
+    "variant_id": "48709163548921"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "ebfb10f797f605da",
+  "first_seen": "2026-10-26",
+  "handle": "cafetto-n10-tablets",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/n10tabs120.webp?v=1784920857",
+  "platform": "shopify",
+  "product_id": "10145647427833",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Cafetto N10 Tablets",
+  "url": "https://zeliebeanscoffee.com/products/cafetto-n10-tablets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 936,
+    "price_usd": 21.99,
+    "title": "Default Title",
+    "variant_id": "48709183570169"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "8847597f3eaa27fa",
+  "first_seen": "2026-10-26",
+  "handle": "gato-site-in-limu-gera",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/EthiopianHabtamuGatoSite.png?v=1792086617",
+  "platform": "shopify",
+  "product_id": "15302349226233",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Habtamu Gato Site",
+  "url": "https://zeliebeanscoffee.com/products/gato-site-in-limu-gera",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "67365719081209"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Ground - Drip",
+    "variant_id": "67365719113977"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Ground - Espresso",
+    "variant_id": "67365719146745"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "Ground - French Press",
+    "variant_id": "67365719179513"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "851d37b965ebe01d",
+  "first_seen": "2026-10-26",
+  "handle": "yepocapapachup-r8r63",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/ElSalvadorMapacheEstate.jpg?v=1633387594",
+  "platform": "shopify",
+  "product_id": "4749212876939",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop"
+  ],
+  "title": "El Salvador Mapache Estate",
+  "url": "https://zeliebeanscoffee.com/products/yepocapapachup-r8r63",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Whole Bean / Medium-Dark Roast / 12 oz",
+    "variant_id": "43887199912185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Ground - Drip / Medium-Dark Roast / 12 oz",
+    "variant_id": "43887199944953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Ground - French Press / Medium-Dark Roast / 12 oz",
+    "variant_id": "43887199977721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "Ground - Espresso / Medium-Dark Roast / 12 oz",
+    "variant_id": "43887200010489"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 61.0,
+    "title": "Whole Bean / Medium-Dark Roast / 1 kg",
+    "variant_id": "48652664176889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / Medium-Dark Roast / 5 lb",
+    "variant_id": "48652664209657"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 61.0,
+    "title": "Ground - Drip / Medium-Dark Roast / 1 kg",
+    "variant_id": "48652664242425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground - Drip / Medium-Dark Roast / 5 lb",
+    "variant_id": "48652664275193"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 61.0,
+    "title": "Ground - French Press / Medium-Dark Roast / 1 kg",
+    "variant_id": "48652664307961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground - French Press / Medium-Dark Roast / 5 lb",
+    "variant_id": "48652664340729"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 61.0,
+    "title": "Ground - Espresso / Medium-Dark Roast / 1 kg",
+    "variant_id": "48652664373497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground - Espresso / Medium-Dark Roast / 5 lb",
+    "variant_id": "48652664406265"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "c92efa4f1919416d",
+  "first_seen": "2026-10-26",
+  "handle": "evelynsespresso",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/C310F6EF-BE5D-4FCB-ADC7-1A68A13F79AF.jpg?v=1586018562",
+  "platform": "shopify",
+  "product_id": "4749212942475",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743",
+   "next steps"
+  ],
+  "title": "Evelyn's Espresso (AKA The Older Sister Blend)",
+  "url": "https://zeliebeanscoffee.com/products/evelynsespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33212074918027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "33212074950795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "33212074983563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "33212075016331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41190753566888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "41190756745384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "41190759661736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "41190763004072"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 61.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48448591888633"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "487df328dacbfa97",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/frenchroastbag.jpg?v=1657136247",
+  "platform": "shopify",
+  "product_id": "6213526323368",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743"
+  ],
+  "title": "French Roast",
+  "url": "https://zeliebeanscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37700119298216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "37700119330984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "37700119363752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "37700119396520"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "565a2d4681b3dc13",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-monte-vista-yellow-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/HondurasYellowHoney.jpg?v=1633386873",
+  "platform": "shopify",
+  "product_id": "7055475212456",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Honduran Monte Vista, Yellow Honey",
+  "url": "https://zeliebeanscoffee.com/products/honduran-monte-vista-yellow-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Whole Bean",
+    "variant_id": "41007931752616"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Coarse - French Press",
+    "variant_id": "41007931785384"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Medium - Drip",
+    "variant_id": "41007931850920"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Fine - Espresso",
+    "variant_id": "41007931883688"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "2197b4626761216c",
+  "first_seen": "2026-10-26",
+  "handle": "miriams-morning-blend-aka-the-younger-sister-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/Miriam_sblend2.jpg?v=1642182011",
+  "platform": "shopify",
+  "product_id": "7506955829497",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743",
+   "next steps"
+  ],
+  "title": "Miriam's Morning Blend (AKA the younger sister blend)",
+  "url": "https://zeliebeanscoffee.com/products/miriams-morning-blend-aka-the-younger-sister-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean / Medium Dark",
+    "variant_id": "42293254652153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Drip / Medium Dark",
+    "variant_id": "42293254684921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - French Press / Medium Dark",
+    "variant_id": "42293254717689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Espresso / Medium Dark",
+    "variant_id": "42293254750457"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "6722c702142d8a3b",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-water-decaf-ny-mtgb-1",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/BrazilDecafFlower.jpg?v=1650386703",
+  "platform": "shopify",
+  "product_id": "7608070668537",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743"
+  ],
+  "title": "MEXICO Chiapas MOUNTAIN WATER DECAF",
+  "url": "https://zeliebeanscoffee.com/products/mountain-water-decaf-ny-mtgb-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "42694098387193"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Ground - Drip",
+    "variant_id": "42694098419961"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Ground - French Press",
+    "variant_id": "42694098452729"
+   },
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Ground - Espresso",
+    "variant_id": "42694098485497"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "bc540fdd1ec16867",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-cafeza",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/cafiza-566g-front.webp?v=1695420457",
+  "platform": "shopify",
+  "product_id": "7967788105977",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Urnex Cafeza",
+  "url": "https://zeliebeanscoffee.com/products/urnex-cafeza",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "43999651070201"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "8781c13594c4062f",
+  "first_seen": "2026-10-26",
+  "handle": "urnex-grindz",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/17-g01-ux430_hires.webp?v=1695420555",
+  "platform": "shopify",
+  "product_id": "7967788204281",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Urnex GRINDZ",
+  "url": "https://zeliebeanscoffee.com/products/urnex-grindz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "43999651102969"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "278227f103ae14e3",
+  "first_seen": "2026-10-26",
+  "handle": "edith-evening-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/threebags.jpg?v=1712180078",
+  "platform": "shopify",
+  "product_id": "8192538345721",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743"
+  ],
+  "title": "Edith Evening Blend",
+  "url": "https://zeliebeanscoffee.com/products/edith-evening-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "44683665408249"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - Drip",
+    "variant_id": "44683665441017"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - French Press",
+    "variant_id": "44683665473785"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - Espresso",
+    "variant_id": "44683665506553"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "e3139fd5df7f9848",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-la-colina",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/GuatemalaFincaLaColina.png?v=1734705884",
+  "platform": "shopify",
+  "product_id": "8655093956857",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "next steps"
+  ],
+  "title": "Guatemala Finca La Colina",
+  "url": "https://zeliebeanscoffee.com/products/guatemala-finca-la-colina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Light / Whole Bean",
+    "variant_id": "45842595152121"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Light / Ground - Fine - Espresso",
+    "variant_id": "45842595184889"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Light / Ground - Medium - Drip",
+    "variant_id": "45842595217657"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Light / Ground - Coarse - French Press",
+    "variant_id": "45842595250425"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "45842595283193"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Dark / Ground - Fine - Espresso",
+    "variant_id": "45842595315961"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Dark / Ground - Medium - Drip",
+    "variant_id": "45842595348729"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 24.0,
+    "title": "Dark / Ground - Coarse - French Press",
+    "variant_id": "45842595381497"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "59029628fe624948",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ab-tob-gichathaini",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/web_map_-_kenya_-_nyeri_3_5.webp?v=1741545953",
+  "platform": "shopify",
+  "product_id": "8741219631353",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Kenya AB Tob Gichathaini",
+  "url": "https://zeliebeanscoffee.com/products/kenya-ab-tob-gichathaini",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "46312625209593"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Ground - Drip",
+    "variant_id": "46312625242361"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Ground - Espresso",
+    "variant_id": "46312625275129"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Ground - French Press",
+    "variant_id": "46312625307897"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ },
+ {
+  "body_hash": "1a52dbbd2f4caa37",
+  "first_seen": "2026-10-26",
+  "handle": "carter-3-in-1-sip-system-matte-black-16-oz-move-cold-slide",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/files/aeb4c148e0d8f4510c9b3318b08fde531add02ca36b41082166ce3dce7fc4320_8b6d5874-aa0f-4689-8548-8db90c19b7f0.png?v=1741814701",
+  "platform": "shopify",
+  "product_id": "8743672021241",
+  "product_type": "",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [],
+  "title": "Carter 3-in-1 Sip System: 16 oz / Move Cold & Slide",
+  "url": "https://zeliebeanscoffee.com/products/carter-3-in-1-sip-system-matte-black-16-oz-move-cold-slide",
+  "variants": [
+   {
+    "available": false,
+    "grams": 771,
+    "price_usd": 49.0,
+    "title": "Black",
+    "variant_id": "46402579595513"
+   },
+   {
+    "available": true,
+    "grams": 771,
+    "price_usd": 49.0,
+    "title": "Blue",
+    "variant_id": "46402579628281"
+   }
+  ],
+  "vendor": "FELLOW"
+ },
+ {
+  "body_hash": "6722c702142d8a3b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-mountain-water-decaf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0358/4616/0523/products/BrazilDecafFlower.jpg?v=1650386703",
+  "platform": "shopify",
+  "product_id": "9000151711993",
+  "product_type": "Coffee",
+  "roaster_slug": "zeliebeanscoffee",
+  "tags": [
+   "Retail Coffee",
+   "Shop",
+   "import_2020_04_04_163743"
+  ],
+  "title": "MEXICO Chiapas SWISS WATER DECAF",
+  "url": "https://zeliebeanscoffee.com/products/mexico-chiapas-mountain-water-decaf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "46977874297081"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - Drip",
+    "variant_id": "46977874329849"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - French Press",
+    "variant_id": "46977874362617"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 26.0,
+    "title": "Ground - Espresso",
+    "variant_id": "46977874395385"
+   }
+  ],
+  "vendor": "Zelie Beans Coffee"
+ }
+]

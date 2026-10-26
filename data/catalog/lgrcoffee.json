@@ -1,0 +1,183 @@
+[
+ {
+  "body_hash": "1ef2cd7750353272",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-colombia",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/colombia-decaf-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "3301",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Best Seller",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Decaffeinated Colombia",
+  "url": "https://lgrcoffee.com/product/decaffeinated-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Decaffeinated Colombia",
+    "variant_id": "3301:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef59b24c28882ca7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemaula-cubulco",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/guatemala-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "3305",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Best Seller",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://lgrcoffee.com/product/guatemaula-cubulco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Guatemala",
+    "variant_id": "3305:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f143ea0494927e4d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-san-diego-honey-process",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/costa-rica-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "3307",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Best Seller",
+   "Single Origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://lgrcoffee.com/product/costa-rica-tarrazu-san-diego-honey-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Costa Rica",
+    "variant_id": "3307:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2dbd91e0f1e7bc00",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/brazil-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "3309",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://lgrcoffee.com/product/brazil-salmo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Brazil",
+    "variant_id": "3309:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b422373cb6cd63f0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/ethiopia-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "3312",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "New &amp; Noteworthy",
+   "Single Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://lgrcoffee.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ethiopia",
+    "variant_id": "3312:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75679af140306ca2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-tiple",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2021/02/lgr-colombia-el-tiple.jpg",
+  "platform": "woocommerce",
+  "product_id": "4269",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://lgrcoffee.com/product/colombia-el-tiple/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Colombia",
+    "variant_id": "4269:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f143ea0494927e4d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://lgrcoffee.com/wp-content/uploads/2020/08/costa-rica-product-pic.jpg",
+  "platform": "woocommerce",
+  "product_id": "7569",
+  "product_type": "variable",
+  "roaster_slug": "lgrcoffee",
+  "tags": [
+   "Best Seller",
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://lgrcoffee.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Sumatra",
+    "variant_id": "7569:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

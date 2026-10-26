@@ -1,0 +1,3792 @@
+[
+ {
+  "body_hash": "5499d46dea354b01",
+  "first_seen": "2026-10-26",
+  "handle": "50th-anniversary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/IMG_2858.jpg?v=1791923610",
+  "platform": "shopify",
+  "product_id": "11219576717479",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "50th Anniversary Blend",
+  "url": "https://4seasonscoffee.com/products/50th-anniversary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51510048096423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51510048129191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto Drip",
+    "variant_id": "51510055600295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "51510055633063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "51510055665831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto Drip",
+    "variant_id": "51510055698599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "51510055731367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "51510055764135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "51563790074023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / Toddy",
+    "variant_id": "51563790106791"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "289718c1dfe70767",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewColo.png?v=1650488590",
+  "platform": "shopify",
+  "product_id": "4677579243659",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Colombian",
+  "url": "https://4seasonscoffee.com/products/colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "38067185385639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Auto-drip",
+    "variant_id": "38067185418407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Whole Bean",
+    "variant_id": "38067185451175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Auto-drip",
+    "variant_id": "38067185483943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "40537004605607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / French Press",
+    "variant_id": "41428448903335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / French Press",
+    "variant_id": "41428449263783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / French Press",
+    "variant_id": "41428450836647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / French Press",
+    "variant_id": "41428451885223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Espresso",
+    "variant_id": "41428452933799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Espresso",
+    "variant_id": "41428453327015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Espresso",
+    "variant_id": "41428453523623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Espresso",
+    "variant_id": "41428453621927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Auto-drip",
+    "variant_id": "41821282369703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Toddy",
+    "variant_id": "42389197881511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Toddy",
+    "variant_id": "42389197914279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Toddy",
+    "variant_id": "42389197947047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Toddy",
+    "variant_id": "42389197979815"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "4e11016fc71f40e9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/Eth.Sidamo.jpg?v=1665073337",
+  "platform": "shopify",
+  "product_id": "4677597397131",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Ethiopia",
+  "url": "https://4seasonscoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / Yirgacheffe",
+    "variant_id": "38067231064231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip / Yirgacheffe",
+    "variant_id": "38067231096999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean / Yirgacheffe",
+    "variant_id": "38067231129767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip / Yirgacheffe",
+    "variant_id": "38067231162535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / Yirgacheffe",
+    "variant_id": "41599839961255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / Yirgacheffe",
+    "variant_id": "41599840387239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso / Yirgacheffe",
+    "variant_id": "41599845040295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press / Yirgacheffe",
+    "variant_id": "41599845531815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / Yirgacheffe",
+    "variant_id": "42389192671399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy / Yirgacheffe",
+    "variant_id": "42389192704167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / Sidamo",
+    "variant_id": "42804297859239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip / Sidamo",
+    "variant_id": "42804297892007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / Sidamo",
+    "variant_id": "42804297924775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / Sidamo",
+    "variant_id": "42804297957543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / Sidamo",
+    "variant_id": "42804297990311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean / Sidamo",
+    "variant_id": "42804298023079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip / Sidamo",
+    "variant_id": "42804298055847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press / Sidamo",
+    "variant_id": "42804298088615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso / Sidamo",
+    "variant_id": "42804298154151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy / Sidamo",
+    "variant_id": "42804298186919"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "837a27f465fb752d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewGuat.png?v=1650488544",
+  "platform": "shopify",
+  "product_id": "4677600870539",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Guatemalan",
+  "url": "https://4seasonscoffee.com/products/guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067238142119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067238174887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067238207655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067238240423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599831605415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599832424615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599836586151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599837798567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389200240807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389200273575"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "a8a7bf3a43aeb409",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewCostaRican.png?v=1650488569",
+  "platform": "shopify",
+  "product_id": "4677609095307",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "New Packaging",
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Costa Rican",
+  "url": "https://4seasonscoffee.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "38067195871399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Auto-drip",
+    "variant_id": "38067195904167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "38067195936935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Auto-drip",
+    "variant_id": "38067195969703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Whole Bean",
+    "variant_id": "38067196002471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Auto-drip",
+    "variant_id": "38067196035239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Whole Bean",
+    "variant_id": "38067196068007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Auto-drip",
+    "variant_id": "38067196100775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / French Press",
+    "variant_id": "41428457685159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / French Press",
+    "variant_id": "41428457783463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / French Press",
+    "variant_id": "41428458373287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / French Press",
+    "variant_id": "41428458537127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Espresso",
+    "variant_id": "41428458864807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Espresso",
+    "variant_id": "41428459389095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Espresso",
+    "variant_id": "41428459716775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Toddy",
+    "variant_id": "42389197324455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Toddy",
+    "variant_id": "42389197357223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Toddy",
+    "variant_id": "42389197389991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Toddy",
+    "variant_id": "42389197422759"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "8a042fa15b5441e9",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewPeru.png?v=1650488464",
+  "platform": "shopify",
+  "product_id": "4677614960779",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Peruvian",
+  "url": "https://4seasonscoffee.com/products/peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "38067295223975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Auto-drip",
+    "variant_id": "38067295256743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Whole Bean",
+    "variant_id": "38067295289511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Auto-drip",
+    "variant_id": "38067295322279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / French Press",
+    "variant_id": "41428485472423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / French Press",
+    "variant_id": "41428492157095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Espresso",
+    "variant_id": "41428497531047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Espresso",
+    "variant_id": "41428500676775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Toddy",
+    "variant_id": "42389197521063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Toddy",
+    "variant_id": "42389197586599"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "dc68aff367b60eb0",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewSum.png?v=1650488620",
+  "platform": "shopify",
+  "product_id": "4677615976587",
+  "product_type": "Single Origin",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "New Packaging",
+   "Single Origin",
+   "Tax Exempt"
+  ],
+  "title": "Sumatran",
+  "url": "https://4seasonscoffee.com/products/sumatran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "38067303645351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "38067303678119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Auto-drip",
+    "variant_id": "38067303743655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Auto-drip",
+    "variant_id": "38067303776423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Whole Bean",
+    "variant_id": "38067303841959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Whole Bean",
+    "variant_id": "38067303874727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Auto-drip",
+    "variant_id": "38067303907495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Auto-drip",
+    "variant_id": "38067303940263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / French Press",
+    "variant_id": "41428463222951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / French Press",
+    "variant_id": "41428463485095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / French Press",
+    "variant_id": "41428464042151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / French Press",
+    "variant_id": "41428464763047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Espresso",
+    "variant_id": "41428465057959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Espresso",
+    "variant_id": "41428466172071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Espresso",
+    "variant_id": "41428466696359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Espresso",
+    "variant_id": "41428467253415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Toddy",
+    "variant_id": "42389195391143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Toddy",
+    "variant_id": "42389195423911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Toddy",
+    "variant_id": "42389195456679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Toddy",
+    "variant_id": "42389195489447"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "e54b512dbef67f7d",
+  "first_seen": "2026-10-26",
+  "handle": "mt-spokane-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/4SeasonsMt.SpokaneCoffeeBag.png?v=1792521256",
+  "platform": "shopify",
+  "product_id": "4677617713291",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "Mt. Spokane Blend",
+  "url": "https://4seasonscoffee.com/products/mt-spokane-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067243221159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067243253927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067243286695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067243319463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428474331303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428474462375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428476297383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428477542567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389114060967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389114093735"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "4e94dd3bf2a153ec",
+  "first_seen": "2026-10-26",
+  "handle": "4-seasons-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/4SeasonsHouseBlendCoffeeBag.png?v=1792521313",
+  "platform": "shopify",
+  "product_id": "4677620924555",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Tax Exempt"
+  ],
+  "title": "4 Seasons House Blend",
+  "url": "https://4seasonscoffee.com/products/4-seasons-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Auto-drip",
+    "variant_id": "37580190777511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Auto-drip",
+    "variant_id": "37580190810279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Whole Bean",
+    "variant_id": "37580190843047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Whole Bean",
+    "variant_id": "37580190875815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Auto-drip",
+    "variant_id": "37580190908583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Auto-drip",
+    "variant_id": "37580190941351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Whole Bean",
+    "variant_id": "37580190974119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Whole Bean",
+    "variant_id": "37580191039655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / French Press",
+    "variant_id": "41427865534631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / French Press",
+    "variant_id": "41427886342311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / French Press",
+    "variant_id": "41427888603303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / French Press",
+    "variant_id": "41427889455271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Espresso",
+    "variant_id": "41427890372775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Espresso",
+    "variant_id": "41427893420199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Espresso",
+    "variant_id": "41427894763687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Espresso",
+    "variant_id": "41427896238247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Dark / Toddy",
+    "variant_id": "42389104754855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Medium / Toddy",
+    "variant_id": "42389104787623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Dark / Toddy",
+    "variant_id": "42389104820391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Medium / Toddy",
+    "variant_id": "42389104853159"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "1d33de8436de506c",
+  "first_seen": "2026-10-26",
+  "handle": "mirabeau-blend-harmony",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Mirabeau.png?v=1792520904",
+  "platform": "shopify",
+  "product_id": "4677627150475",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Tax Exempt"
+  ],
+  "title": "Mirabeau Blend",
+  "url": "https://4seasonscoffee.com/products/mirabeau-blend-harmony",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067239780519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067239813287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067239846055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067239878823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428443922599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428444381351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428446314663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428447068327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389141422247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389141455015"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "8e6de03f6907a5ed",
+  "first_seen": "2026-10-26",
+  "handle": "selkirk-range-st-regis",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/SelkirkRangeCoffeeBagProductShot.png?v=1792521231",
+  "platform": "shopify",
+  "product_id": "4677630951563",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "Selkirk Range Blend",
+  "url": "https://4seasonscoffee.com/products/selkirk-range-st-regis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067301417127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067301449895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067301482663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067301515431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599871910055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599873384615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599874597031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599877185703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389118714023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389118746791"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "a8076823b69b095b",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-s-river-blend-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/4SeasonsColumbiaRiverBlend.png?v=1793036183",
+  "platform": "shopify",
+  "product_id": "4677662212235",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Tax Exempt"
+  ],
+  "title": "Columbia River Blend",
+  "url": "https://4seasonscoffee.com/products/columbia-s-river-blend-harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067190071463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067190136999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067190202535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067190235303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428454146215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428454736039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428455030951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428455325863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389118484647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389118517415"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "83abc68fb0cff64f",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/BreakfastBlend.png?v=1792520869",
+  "platform": "shopify",
+  "product_id": "4677662703755",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://4seasonscoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067159629991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067159662759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067159695527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067159728295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428440645799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428440973479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428441694375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428442185895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389141356711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389141389479"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "ee21c87b62761cb2",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-simone",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/EspressoSimoneCoffeeBag.png?v=1793036157",
+  "platform": "shopify",
+  "product_id": "4677663654027",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "Espresso Blends",
+   "Tax Exempt"
+  ],
+  "title": "Espresso Simone",
+  "url": "https://4seasonscoffee.com/products/espresso-simone",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067227951271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067227984039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067228016807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067228049575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599790219431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599793103015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599794217127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599795134631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389099446439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389099479207"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "4d5af2d993943a85",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-abella",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Abella.png?v=1792520818",
+  "platform": "shopify",
+  "product_id": "4677666046091",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "Tax Exempt"
+  ],
+  "title": "Espresso Abella",
+  "url": "https://4seasonscoffee.com/products/espresso-abella",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067221758119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067221790887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067221823655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067221856423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599817089191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599817711783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599818662055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599819219111"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "7759897b4a6954d8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-lizzette",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/4SeasonsEspressoLizzetteCoffeeBag.png?v=1793036138",
+  "platform": "shopify",
+  "product_id": "4677666570379",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "Tax Exempt"
+  ],
+  "title": "Espresso Lizzette",
+  "url": "https://4seasonscoffee.com/products/espresso-lizzette",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067225133223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067225165991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067225198759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067225231527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599799525543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599800180903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599803457703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599804047527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389100167335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389100200103"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "e8c06165e44b8cb0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-diaggio",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Diaggio.png?v=1792521199",
+  "platform": "shopify",
+  "product_id": "4677667258507",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "Tax Exempt"
+  ],
+  "title": "Espresso Diaggio",
+  "url": "https://4seasonscoffee.com/products/espresso-diaggio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067223003303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067223036071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067223068839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067223101607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599812239527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599812731047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599813484711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599814303911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389099774119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389099806887"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "d3da2473c2dd9d2d",
+  "first_seen": "2026-10-26",
+  "handle": "wp-sumatran",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewWPSumDecaf.png?v=1650474665",
+  "platform": "shopify",
+  "product_id": "4677668012171",
+  "product_type": "Decaf",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Decaf",
+   "Tax Exempt",
+   "Water-processed"
+  ],
+  "title": "WP Sumatran -Decaf",
+  "url": "https://4seasonscoffee.com/products/wp-sumatran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067317670055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067317702823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067317735591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067317768359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428434288807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428435566759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428436156583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428437008551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389048197287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389048230055"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "31a6a4964eb789b8",
+  "first_seen": "2026-10-26",
+  "handle": "wp-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewWPColo.png?v=1650474642",
+  "platform": "shopify",
+  "product_id": "4677677482123",
+  "product_type": "Decaf",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Decaf",
+   "Tax Exempt",
+   "Water-processed"
+  ],
+  "title": "WP Colombian -Decaf",
+  "url": "https://4seasonscoffee.com/products/wp-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067313082535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067313115303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067313148071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067313180839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428430389415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428430618791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428431569063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428431700135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42388958544039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42388958576807"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "316e14b36251818b",
+  "first_seen": "2026-10-26",
+  "handle": "wp-4-seasons-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewWPDecafHouse.png?v=1650474686",
+  "platform": "shopify",
+  "product_id": "4677700911243",
+  "product_type": "Decaf",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Decaf",
+   "New Packaging",
+   "Tax Exempt",
+   "Water-processed"
+  ],
+  "title": "WP House Blend -Decaf",
+  "url": "https://4seasonscoffee.com/products/wp-4-seasons-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067308626087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067308658855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067308691623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067308724391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428428587175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428428685479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428429013159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428429602983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389048328359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389048361127"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "56a81310d0a59654",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/Org.Ethiopia.jpg?v=1665073149",
+  "platform": "shopify",
+  "product_id": "4677709430923",
+  "product_type": "Organic",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic",
+   "Tax Exempt"
+  ],
+  "title": "Organic Ethiopia",
+  "url": "https://4seasonscoffee.com/products/organic-ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067257966759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067257999527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067258032295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067258065063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428394377383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428395131047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428397818023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428398014631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389082833063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389082865831"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "7161810f865752df",
+  "first_seen": "2026-10-26",
+  "handle": "blend-12-dark-organic-4-seasons-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewBlend12.png?v=1650485489",
+  "platform": "shopify",
+  "product_id": "4677712642187",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic",
+   "Tax Exempt"
+  ],
+  "title": "Blend #12 - Organic Dark House Blend",
+  "url": "https://4seasonscoffee.com/products/blend-12-dark-organic-4-seasons-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole-Bean",
+    "variant_id": "41599956123815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "41599956254887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599956353191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599956484263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole-Bean",
+    "variant_id": "41599956615335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "41599956713639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599956779175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599956844711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389075296423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389075361959"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "30ae69d16c935a4f",
+  "first_seen": "2026-10-26",
+  "handle": "blend-13-organic-cuttroat-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewBlend13.png?v=1650486097",
+  "platform": "shopify",
+  "product_id": "4677717000331",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic",
+   "Tax Exempt"
+  ],
+  "title": "Blend #13 - Organic Cutthroat Blend",
+  "url": "https://4seasonscoffee.com/products/blend-13-organic-cuttroat-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067131744423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067131777191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067131809959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067131842727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428277723303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428278411431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428279034023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428279951527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389079916711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389079949479"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "808e748f89f984bc",
+  "first_seen": "2026-10-26",
+  "handle": "blend-14-organic-spokane-falls-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewBlend14.png?v=1650486482",
+  "platform": "shopify",
+  "product_id": "4677723914379",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Blend #14 - Organic Spokane Falls Blend",
+  "url": "https://4seasonscoffee.com/products/blend-14-organic-spokane-falls-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067135545511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067135578279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067135611047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067135643815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428282638503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428285259943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428286013607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428286570663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389053735079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389053767847"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "228f16dc2ae89465",
+  "first_seen": "2026-10-26",
+  "handle": "blend-4-organic-clearwater-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewBlend4.png?v=1650486525",
+  "platform": "shopify",
+  "product_id": "4677726961803",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Blend #4 - Organic Clearwater Blend",
+  "url": "https://4seasonscoffee.com/products/blend-4-organic-clearwater-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067143147687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067143180455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067143213223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067143245991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428289487015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428290437287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428291485863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428292075687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389081161895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389081194663"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "34c472b444aa86f1",
+  "first_seen": "2026-10-26",
+  "handle": "blend-5-organic-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/NewBlend5.png?v=1650486674",
+  "platform": "shopify",
+  "product_id": "4677727518859",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Blend #5 - Organic Breakfast Blend",
+  "url": "https://4seasonscoffee.com/products/blend-5-organic-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067148325031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067148357799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067148390567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067148423335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428306722983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428307083431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428389658791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428389888167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389080899751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389080932519"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "2e3f6e61c241cbbb",
+  "first_seen": "2026-10-26",
+  "handle": "french",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/French.png?v=1792520786",
+  "platform": "shopify",
+  "product_id": "4695044489355",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "French Roast",
+  "url": "https://4seasonscoffee.com/products/french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067234668711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067234701479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067234734247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067234767015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41599865684135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41599865946279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41599867191463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41599867781287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389118386343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389118419111"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "0d1f35b8e2467201",
+  "first_seen": "2026-10-26",
+  "handle": "crate-blanc-white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/Newcarte.jpg?v=1651525857",
+  "platform": "shopify",
+  "product_id": "4819634323595",
+  "product_type": "White Coffee",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Tax Exempt",
+   "White Coffee"
+  ],
+  "title": "Carte Blanc White Coffee",
+  "url": "https://4seasonscoffee.com/products/crate-blanc-white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Default Title",
+    "variant_id": "33460313456779"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "be969ca39f61eeda",
+  "first_seen": "2026-10-26",
+  "handle": "white-blizzard-white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/Newwhiteblizz.jpg?v=1651525884",
+  "platform": "shopify",
+  "product_id": "4819659686027",
+  "product_type": "White Coffee",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Tax Exempt",
+   "White Coffee"
+  ],
+  "title": "White Blizzard White Coffee",
+  "url": "https://4seasonscoffee.com/products/white-blizzard-white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "Default Title",
+    "variant_id": "33460365557899"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "be04db977451b8aa",
+  "first_seen": "2026-10-26",
+  "handle": "tr-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Half-Caff.jpg?v=1738017776",
+  "platform": "shopify",
+  "product_id": "6008779079847",
+  "product_type": "Decaf",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Half-Caff Blend",
+  "url": "https://4seasonscoffee.com/products/tr-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38067306823847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-drip",
+    "variant_id": "38067306856615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38067306922151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-drip",
+    "variant_id": "38067306954919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428427178151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428427341991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428427604135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428427702439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42388911161511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42388911194279"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "e8c06165e44b8cb0",
+  "first_seen": "2026-10-26",
+  "handle": "blend-11-organic-espresso-diaggio",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/products/Blend11EspDiag.png?v=1651168717",
+  "platform": "shopify",
+  "product_id": "6219322523815",
+  "product_type": "Organic Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Organic"
+  ],
+  "title": "Blend #11 - Organic Espresso Diaggio",
+  "url": "https://4seasonscoffee.com/products/blend-11-organic-espresso-diaggio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole bean",
+    "variant_id": "37941312356519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole bean",
+    "variant_id": "37941312422055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "41427912753319"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "41427914195111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41427916816551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41427917766823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389092630695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389092761767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "43525318541479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "43525318574247"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "e1f2c946c0a482fe",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Italian.png?v=1792520755",
+  "platform": "shopify",
+  "product_id": "6937186599079",
+  "product_type": "Blends",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Tax Exempt"
+  ],
+  "title": "Italian Roast",
+  "url": "https://4seasonscoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "40803377971367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40803378004135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto Drip",
+    "variant_id": "40803440165031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "41428438548647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "41428438810791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "41428439728295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "41428439990439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42389154201767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42389154234535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto Drip",
+    "variant_id": "51574125527207"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "ed9f74ffe962ef4f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexican-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Mexican_decaf.jpg?v=1751910808",
+  "platform": "shopify",
+  "product_id": "7324052062375",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Decaf",
+   "New Packaging",
+   "Tax Exempt",
+   "Water-processed"
+  ],
+  "title": "WP Organic Mexican Decaf",
+  "url": "https://4seasonscoffee.com/products/organic-mexican-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42388891140263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "42388891173031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / French Press",
+    "variant_id": "42388891205799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Espresso",
+    "variant_id": "42388891238567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42388891271335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "42388891304103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / French Press",
+    "variant_id": "42388891336871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Espresso",
+    "variant_id": "42388891369639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42388909981863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42388910014631"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "a0eb609e4f3d340e",
+  "first_seen": "2026-10-26",
+  "handle": "4sc-cafe-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/BagImage.jpg?v=1792439577",
+  "platform": "shopify",
+  "product_id": "7326067949735",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "4SC Cafe Espresso Blend",
+  "url": "https://4seasonscoffee.com/products/4sc-cafe-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42394223607975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "42394223640743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "42394223673511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "42394223706279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42394223739047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42394223771815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "42394223804583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "42394223837351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "42394223870119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42394223902887"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "aa38da4d7eb17ff6",
+  "first_seen": "2026-10-26",
+  "handle": "twigs-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/TwigsBlendMediumDarkRoastPackage.png?v=1793036109",
+  "platform": "shopify",
+  "product_id": "7486349082791",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Coffee Blends"
+  ],
+  "title": "Twigs Blend",
+  "url": "https://4seasonscoffee.com/products/twigs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "42798432387239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42798432420007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "42798432452775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "42798432485543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42798432518311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "42798432551079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42798432583847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "42798432616615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "42798432649383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42798432682151"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "b2bf123a6c089cb0",
+  "first_seen": "2026-10-26",
+  "handle": "franks-diner-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/FranksDiner.png?v=1793036092",
+  "platform": "shopify",
+  "product_id": "7488191103143",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Coffee Blends"
+  ],
+  "title": "Frank's Diner Blend",
+  "url": "https://4seasonscoffee.com/products/franks-diner-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "42804317946023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "42804317978791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "42804318011559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "42804318044327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "42804318077095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "42804318109863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42804318142631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "42804318175399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "42804318208167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "42804318240935"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "4df6aed1a6aa2000",
+  "first_seen": "2026-10-26",
+  "handle": "4sc-cafe-espresso-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Monique.png?v=1792520734",
+  "platform": "shopify",
+  "product_id": "8546539012263",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Espresso",
+   "New Packaging",
+   "Tax Exempt"
+  ],
+  "title": "Espresso Monique",
+  "url": "https://4seasonscoffee.com/products/4sc-cafe-espresso-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean",
+    "variant_id": "46868059422887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip",
+    "variant_id": "46868059455655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press",
+    "variant_id": "46868059488423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso",
+    "variant_id": "46868059521191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy",
+    "variant_id": "46868059553959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46868059586727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip",
+    "variant_id": "46868059619495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press",
+    "variant_id": "46868059652263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso",
+    "variant_id": "46868059685031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy",
+    "variant_id": "46868059717799"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ },
+ {
+  "body_hash": "1d5abdb9ce7e5f96",
+  "first_seen": "2026-10-26",
+  "handle": "franks-diner-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0339/9041/0379/files/Minimal4SeasonsCoffeeBagProductShot.png?v=1793036265",
+  "platform": "shopify",
+  "product_id": "8684203212967",
+  "product_type": "",
+  "roaster_slug": "4seasonscoffee",
+  "tags": [
+   "Blends",
+   "Coffee Blends"
+  ],
+  "title": "Roasters Pick",
+  "url": "https://4seasonscoffee.com/products/franks-diner-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623118913703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623118946471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623118979239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119012007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119044775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119077543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119110311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119143079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119175847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy / Rites of Spring- Medium Dark Roast",
+    "variant_id": "47623119208615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip / New Years Blend-Medium Roast",
+    "variant_id": "51317933113511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933146279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / New Years Blend-Medium Roast",
+    "variant_id": "51317933179047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933211815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / New Years Blend-Medium Roast",
+    "variant_id": "51317933244583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933277351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / New Years Blend-Medium Roast",
+    "variant_id": "51317933310119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933342887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / New Years Blend-Medium Roast",
+    "variant_id": "51317933375655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933408423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip / New Years Blend-Medium Roast",
+    "variant_id": "51317933441191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Auto-Drip / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933473959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean / New Years Blend-Medium Roast",
+    "variant_id": "51317933506727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Whole Bean / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933539495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press / New Years Blend-Medium Roast",
+    "variant_id": "51317933572263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / French Press / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933605031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso / New Years Blend-Medium Roast",
+    "variant_id": "51317933637799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Espresso / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933670567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy / New Years Blend-Medium Roast",
+    "variant_id": "51317933703335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.75,
+    "title": "5lb / Toddy / Summer Stunner- Medium Dark Roast",
+    "variant_id": "51317933736103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Auto-Drip / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059040935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Whole Bean / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059073703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / French Press / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059106471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Espresso / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059139239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.95,
+    "title": "1lb / Toddy / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059172007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / Auto-Drip / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059204775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / Whole Bean / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059237543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / French Press / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059270311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / Espresso / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059303079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.95,
+    "title": "5lb / Toddy / 50th Anniversary Blend- Medium Dark Roast",
+    "variant_id": "51510059335847"
+   }
+  ],
+  "vendor": "4 Seasons Coffee"
+ }
+]

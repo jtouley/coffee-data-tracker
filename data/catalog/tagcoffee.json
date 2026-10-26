@@ -1,0 +1,849 @@
+[
+ {
+  "body_hash": "e9b73b76e2919d13",
+  "first_seen": "2026-10-26",
+  "handle": "clubhouse",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Clubhouse1month.png?v=1754682257",
+  "platform": "shopify",
+  "product_id": "6991131607084",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Playground"
+  ],
+  "title": "Gift 1 Month of Clubhouse",
+  "url": "https://tagcoffee.com/products/clubhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 1",
+    "variant_id": "40791500881964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 2",
+    "variant_id": "40791500947500"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 3",
+    "variant_id": "40791501013036"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Medium Ground / 1",
+    "variant_id": "40791501078572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Medium Ground / 2",
+    "variant_id": "40791501144108"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Medium Ground / 3",
+    "variant_id": "40791501209644"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "e9b73b76e2919d13",
+  "first_seen": "2026-10-26",
+  "handle": "give-clubhouse",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Clubhouse13month.png?v=1754682346",
+  "platform": "shopify",
+  "product_id": "7234423980076",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Playground"
+  ],
+  "title": "Gift 3 Months of Clubhouse",
+  "url": "https://tagcoffee.com/products/give-clubhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 1",
+    "variant_id": "42100159676460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 2",
+    "variant_id": "42100159709228"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 3",
+    "variant_id": "42100159741996"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Medium Ground / 1",
+    "variant_id": "42100159774764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Medium Ground / 2",
+    "variant_id": "42100159807532"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Medium Ground / 3",
+    "variant_id": "42100159840300"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "e9b73b76e2919d13",
+  "first_seen": "2026-10-26",
+  "handle": "gift-6-months-of-clubhouse",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Clubhouse6month.png?v=1754682404",
+  "platform": "shopify",
+  "product_id": "7235797286956",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Playground"
+  ],
+  "title": "Gift 6 Months of Clubhouse",
+  "url": "https://tagcoffee.com/products/gift-6-months-of-clubhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 1",
+    "variant_id": "42109526278188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 2",
+    "variant_id": "42109526310956"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 3",
+    "variant_id": "42109526343724"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Medium Ground / 1",
+    "variant_id": "42109526376492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Medium Ground / 2",
+    "variant_id": "42109526409260"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Medium Ground / 3",
+    "variant_id": "42109526442028"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "e9b73b76e2919d13",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-gift-3-months-of-clubhouse",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Clubhouse12month.png?v=1754682458",
+  "platform": "shopify",
+  "product_id": "7235797876780",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Playground"
+  ],
+  "title": "Gift 12 Months of Clubhouse",
+  "url": "https://tagcoffee.com/products/copy-of-gift-3-months-of-clubhouse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 1",
+    "variant_id": "42109552918572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Whole Bean / 2",
+    "variant_id": "42109552951340"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 3",
+    "variant_id": "42109552984108"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 25.0,
+    "title": "Medium Ground / 1",
+    "variant_id": "42109553016876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "Medium Ground / 2",
+    "variant_id": "42109553049644"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Medium Ground / 3",
+    "variant_id": "42109553082412"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "6bffca8e54f76c40",
+  "first_seen": "2026-10-26",
+  "handle": "tireswing-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/TagCoffeeJQ-202505_0480.png?v=1764123213",
+  "platform": "shopify",
+  "product_id": "7904732053548",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Wild & Adventurous"
+  ],
+  "title": "Tireswing Blend",
+  "url": "https://tagcoffee.com/products/tireswing-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44519941505068"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44519941537836"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44519941570604"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44519941603372"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "cfe0e80a7ca10696",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/TagCoffeeJQ-202505_0453_871c9b1c-e933-4ead-a8d6-0dc9626db645.png?v=1752791446",
+  "platform": "shopify",
+  "product_id": "7904732086316",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced"
+  ],
+  "title": "Daydream Decaf",
+  "url": "https://tagcoffee.com/products/decaf-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "44431160999980"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161032748"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161065516"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161098284"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "0408de323692e910",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-Product-SO-BI-CostaRica.png?v=1752791493",
+  "platform": "shopify",
+  "product_id": "7904732119084",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Bold & Intense",
+   "Single Origins"
+  ],
+  "title": "Costa Rica",
+  "url": "https://tagcoffee.com/products/single-origin-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161163820"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161196588"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161229356"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161262124"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "26be27b9e7af654f",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-WA-SO-Brazil.png?v=1752864723",
+  "platform": "shopify",
+  "product_id": "7904732151852",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Bold & Intense",
+   "Single Origins"
+  ],
+  "title": "Brazil",
+  "url": "https://tagcoffee.com/products/single-origin-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161327660"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161360428"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161393196"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161425964"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "d8467c2a87512fb2",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-WA-SO-Ethiopia.png?v=1752864226",
+  "platform": "shopify",
+  "product_id": "7904732184620",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Single Origins",
+   "Wild & Adventurous"
+  ],
+  "title": "Ethiopia",
+  "url": "https://tagcoffee.com/products/single-origin-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161491500"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161524268"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161557036"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161589804"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "a87cd90fbc136e8b",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-MB-SO-Mexico.png?v=1752865537",
+  "platform": "shopify",
+  "product_id": "7904732217388",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced",
+   "Single Origins"
+  ],
+  "title": "Mexico",
+  "url": "https://tagcoffee.com/products/single-origin-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161655340"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161688108"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161720876"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161753644"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "b5d6588e130a3145",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-WA-SO-Colombia.png?v=1752864498",
+  "platform": "shopify",
+  "product_id": "7904732250156",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced",
+   "Single Origins"
+  ],
+  "title": "Colombia",
+  "url": "https://tagcoffee.com/products/single-origin-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161819180"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431161851948"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431161884716"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431161917484"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "1b17d7d74bda2156",
+  "first_seen": "2026-10-26",
+  "handle": "singleorigin-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-MB-SO-Guatemala.png?v=1752865268",
+  "platform": "shopify",
+  "product_id": "7904732282924",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced",
+   "Single Origins"
+  ],
+  "title": "Guatemala",
+  "url": "https://tagcoffee.com/products/singleorigin-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44431161983020"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431162015788"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431162048556"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431162081324"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "d8467c2a87512fb2",
+  "first_seen": "2026-10-26",
+  "handle": "singleorigin-rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-WA-SO-Rwanda.png?v=1752864262",
+  "platform": "shopify",
+  "product_id": "7904732315692",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Single Origins",
+   "Wild & Adventurous"
+  ],
+  "title": "Rwanda",
+  "url": "https://tagcoffee.com/products/singleorigin-rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44520090828844"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44520090861612"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44520090894380"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44520090927148"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "813b10101f209082",
+  "first_seen": "2026-10-26",
+  "handle": "singleorigin-el-salvador-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-MB-SO-ElSalvador.png?v=1752974020",
+  "platform": "shopify",
+  "product_id": "7904732348460",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced",
+   "Single Origins"
+  ],
+  "title": "El Salvador, Washed",
+  "url": "https://tagcoffee.com/products/singleorigin-el-salvador-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "44431162179628"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44431162212396"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44431162245164"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 21.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44431162277932"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "d3773ad689cacafc",
+  "first_seen": "2026-10-26",
+  "handle": "hopscotch-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/TagCoffeeJQ-202505_0427.png?v=1763989866",
+  "platform": "shopify",
+  "product_id": "7908124327980",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Mellow & Balanced"
+  ],
+  "title": "Hopscotch - Blend",
+  "url": "https://tagcoffee.com/products/hopscotch-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44450916237356"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44450916270124"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44450916302892"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44450916335660"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "2a53faea6e7d9bb7",
+  "first_seen": "2026-10-26",
+  "handle": "campfire-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/TagCoffeeJQ-202505_0464.png?v=1764123186",
+  "platform": "shopify",
+  "product_id": "7908128784428",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Bold & Intense"
+  ],
+  "title": "Campfire - Blend",
+  "url": "https://tagcoffee.com/products/campfire-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44450922987564"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44450923020332"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44450923053100"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 20.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44450923085868"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ },
+ {
+  "body_hash": "d8467c2a87512fb2",
+  "first_seen": "2026-10-26",
+  "handle": "singleorigin-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0365/7236/4844/files/Tag-Product-SO-WA-Kenya.png?v=1752791805",
+  "platform": "shopify",
+  "product_id": "7929668501548",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "tagcoffee",
+  "tags": [
+   "Single Origins",
+   "Wild & Adventurous"
+  ],
+  "title": "Kenya",
+  "url": "https://tagcoffee.com/products/singleorigin-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "44520080441388"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Coarse (French Press / Chemex)",
+    "variant_id": "44520080474156"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Medium (Drip Brew / Percolator)",
+    "variant_id": "44520080506924"
+   },
+   {
+    "available": true,
+    "grams": 439,
+    "price_usd": 22.0,
+    "title": "Ground Fine (Aeropress / Moka Pot)",
+    "variant_id": "44520080539692"
+   }
+  ],
+  "vendor": "Tag Coffee Co"
+ }
+]

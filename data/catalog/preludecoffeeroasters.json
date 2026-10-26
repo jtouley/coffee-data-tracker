@@ -1,0 +1,591 @@
+[
+ {
+  "body_hash": "de75c2d1cd9a9c05",
+  "first_seen": "2026-10-26",
+  "handle": "brasil",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-06.png?v=1605555100",
+  "platform": "shopify",
+  "product_id": "2422505209935",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "South America"
+  ],
+  "title": "Brasil Carmo de Minas",
+  "url": "https://preludecoffeeroasters.com/products/brasil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.2,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21477498191951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21707208818767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.2,
+    "title": "12oz / Press Grind",
+    "variant_id": "21768717598799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Press Grind",
+    "variant_id": "21768717664335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.2,
+    "title": "12oz / Filter Grind",
+    "variant_id": "21768719401039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Filter Grind",
+    "variant_id": "21768719466575"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "7a478410d933fb1e",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabels_Recovered_-11.png?v=1605555237",
+  "platform": "shopify",
+  "product_id": "2422506192975",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Fireside Blend",
+  "url": "https://preludecoffeeroasters.com/products/fireside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21477502681167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.7,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30369503019087"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.45,
+    "title": "12oz / Filter Grind",
+    "variant_id": "30369521762383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.45,
+    "title": "12oz / Press Grind",
+    "variant_id": "30369522548815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.7,
+    "title": "5lb / Filter Grind",
+    "variant_id": "30369525104719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.7,
+    "title": "5lb / Press Grind",
+    "variant_id": "30369525432399"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "16847dfc089738ed",
+  "first_seen": "2026-10-26",
+  "handle": "golden-year-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-08.png?v=1605555258",
+  "platform": "shopify",
+  "product_id": "2422506553423",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Golden Year Blend",
+  "url": "https://preludecoffeeroasters.com/products/golden-year-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21477504122959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21710810251343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Press Grind",
+    "variant_id": "21768731918415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Press Grind",
+    "variant_id": "21768731951183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Filter Grind",
+    "variant_id": "21768733163599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Filter Grind",
+    "variant_id": "21768733196367"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "0d82f3a329357dbe",
+  "first_seen": "2026-10-26",
+  "handle": "the-familiar-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-10.png?v=1605555395",
+  "platform": "shopify",
+  "product_id": "2423262609487",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "The Familiar Blend",
+  "url": "https://preludecoffeeroasters.com/products/the-familiar-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21483447156815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21710893383759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Press Grind",
+    "variant_id": "21768754266191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Press Grind",
+    "variant_id": "21768754298959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Filter Grind",
+    "variant_id": "21768755773519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Filter Grind",
+    "variant_id": "21768755806287"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "ba4e08076c565411",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kercha",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-03.png?v=1605555162",
+  "platform": "shopify",
+  "product_id": "2454229581903",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Africa",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Guji Kercha",
+  "url": "https://preludecoffeeroasters.com/products/ethiopia-guji-kercha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21682692554831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21710559969359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press Grind",
+    "variant_id": "21768724217935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.5,
+    "title": "5lb / Press Grind",
+    "variant_id": "21768724283471"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Filter Grind",
+    "variant_id": "21768725758031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.5,
+    "title": "5lb / Filter Grind",
+    "variant_id": "21768725823567"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "a8981f9731f0aae1",
+  "first_seen": "2026-10-26",
+  "handle": "inkwell",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-07.png?v=1605555362",
+  "platform": "shopify",
+  "product_id": "2456035852367",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Inkwell",
+  "url": "https://preludecoffeeroasters.com/products/inkwell",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21710037221455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "21710844526671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Press Grind",
+    "variant_id": "21768738340943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Press Grind",
+    "variant_id": "21768738373711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.45,
+    "title": "12oz / Filter Grind",
+    "variant_id": "21768739815503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.5,
+    "title": "5lb / Filter Grind",
+    "variant_id": "21768739848271"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "40bf6755c8b58211",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-05.png?v=1585321847",
+  "platform": "shopify",
+  "product_id": "4506926678095",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://preludecoffeeroasters.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31901955719247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.7,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31901955752015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.45,
+    "title": "12oz / Coarse",
+    "variant_id": "31919997288527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.7,
+    "title": "5lb / Coarse",
+    "variant_id": "31919997485135"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "6d63812795767df8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/WebsiteCoffeeLabelSQUARES-02.png?v=1607540802",
+  "platform": "shopify",
+  "product_id": "4844616548431",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "South America"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://preludecoffeeroasters.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32775255818319"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Filter Grind",
+    "variant_id": "32775255851087"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Press Grind",
+    "variant_id": "32775255883855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32775256014927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Filter Grind",
+    "variant_id": "32775256047695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Press Grind",
+    "variant_id": "32775256080463"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "66e631c0909d32d8",
+  "first_seen": "2026-10-26",
+  "handle": "inner-dialogue-1",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/products/inner_dialogue_Square-17_1.png?v=1655157823",
+  "platform": "shopify",
+  "product_id": "6768966500431",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Inner Dialogue #1",
+  "url": "https://preludecoffeeroasters.com/products/inner-dialogue-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40054243622991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12oz / Filter Grind",
+    "variant_id": "40054243655759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.75,
+    "title": "12oz / Press Grind",
+    "variant_id": "40054243688527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.2,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40054243721295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.2,
+    "title": "5lb / Filter Grind",
+    "variant_id": "40054243754063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.2,
+    "title": "5lb / Press Grind",
+    "variant_id": "40054243786831"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ },
+ {
+  "body_hash": "88b59057f7f17d2d",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-mbeya",
+  "image": "https://cdn.shopify.com/s/files/1/0083/5456/2127/files/prelude_label_tanz-1.png?v=1789976045",
+  "platform": "shopify",
+  "product_id": "9091465085007",
+  "product_type": "Coffee",
+  "roaster_slug": "preludecoffeeroasters",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Tanzania Mbeya",
+  "url": "https://preludecoffeeroasters.com/products/tanzania-mbeya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.6,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46854320095311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.6,
+    "title": "12oz / Filter Grind",
+    "variant_id": "46854320128079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.6,
+    "title": "12oz / Press Grind",
+    "variant_id": "46854320160847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46854320193615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Filter Grind",
+    "variant_id": "46854320226383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Press Grind",
+    "variant_id": "46854320259151"
+   }
+  ],
+  "vendor": "Prelude Coffee Roasters"
+ }
+]

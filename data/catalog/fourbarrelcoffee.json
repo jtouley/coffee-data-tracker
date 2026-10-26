@@ -1,0 +1,2059 @@
+[
+ {
+  "body_hash": "563d5557270b6f82",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habatmu-fekadu-goro",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/label___nat_russel.jpg?v=1786469125",
+  "platform": "shopify",
+  "product_id": "10254367752440",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_Heirloom",
+   "elevation_1900-2100",
+   "flavor_Jasmine",
+   "flavor_Lavender",
+   "flavor_anise",
+   "flavor_ripeplum",
+   "location_yirgacheffe"
+  ],
+  "title": "ETHIOPIA HABATMU FEKADU GORO",
+  "url": "https://www.fourbarrelcoffee.com/products/ethiopia-habatmu-fekadu-goro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "50114942861560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "50114942894328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "50114942927096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143813402872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "50143813435640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "50143813468408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143813501176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143813533944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "50143813566712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "50143813599480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143813632248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143813665016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "50143813697784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "50143813730552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143813763320"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "ab4471f340671dfd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-henry-oliver-ceron",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/setgrass_ghost_206af699-37d8-4915-a660-db6a7a92bae0.jpg?v=1763067753",
+  "platform": "shopify",
+  "product_id": "10254396293368",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_castillo",
+   "elevation_1800 meters",
+   "flavor_cedar",
+   "flavor_donut peach",
+   "flavor_fresh cream",
+   "flavor_fresh fig",
+   "location_san lorenzo"
+  ],
+  "title": "COLOMBIA HENRY OLIVER CERON",
+  "url": "https://www.fourbarrelcoffee.com/products/colombia-henry-oliver-ceron",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / WHOLE BEAN",
+    "variant_id": "50115010199800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - FINE/ESPRESSO",
+    "variant_id": "50115010232568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50115010265336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50115010330872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB. BULK / WHOLE BEAN",
+    "variant_id": "50115010461944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50115010494712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50115010527480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50115010593016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "50115010724088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50115010756856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50115010789624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50115010855160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143803638008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143803670776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143803703544"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "7adc1fd3b7bd453c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ngunguru",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/set_starr_walk.jpg?v=1763067831",
+  "platform": "shopify",
+  "product_id": "10254468874488",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "elevation_1600-1950",
+   "flavor_blackberry juice",
+   "flavor_cassis",
+   "location_Nyeri",
+   "variety_SL 28 & SL 34"
+  ],
+  "title": "KENYA NGUNGURU",
+  "url": "https://www.fourbarrelcoffee.com/products/kenya-ngunguru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "50115128656120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "50115128688888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "50115128721656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143793217784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50143793250552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50143793283320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143793316088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143793348856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50143793381624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50143793414392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143793447160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "50143793479928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "50143793512696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "50143793545464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50143793578232"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "838a04dcd48b67ce",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milk-preparation-friday-10-30",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/esperessoandmilk4up_8876ba31-301a-499a-98c0-c2e0cc8d82af.png?v=1717174738",
+  "platform": "shopify",
+  "product_id": "15372792430840",
+  "product_type": "Classes",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "classes",
+   "day_16",
+   "events",
+   "month_oct"
+  ],
+  "title": "Espresso & Milk Preparation Friday 10/30",
+  "url": "https://www.fourbarrelcoffee.com/products/espresso-milk-preparation-friday-10-30",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 225.0,
+    "title": "Default Title",
+    "variant_id": "67518076322040"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "7e301a9b627cfe4b",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gura",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/patricias_garden_1_label_7.jpg?v=1730145163",
+  "platform": "shopify",
+  "product_id": "15439656354040",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "elevation_1700-1750 meters",
+   "flavor_Brown Sugar",
+   "flavor_Pineapple",
+   "flavor_cedar",
+   "flavor_vetiver",
+   "location_Nyeri",
+   "variety_SL 28 & SL 34"
+  ],
+  "title": "KENYA GURA",
+  "url": "https://www.fourbarrelcoffee.com/products/kenya-gura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "67773631103224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "67773631135992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67773631168760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67773631201528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67773631234296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "67773631267064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67773631299832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67773631332600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67773631365368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67773631398136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "67773631430904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67773631463672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67773631496440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67773631529208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.0,
+    "title": "5LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67773631561976"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "b98efdfbc92aa5e5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-alveiro-antonio-munoz",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/nat_big_hand.jpg?v=1755025609",
+  "platform": "shopify",
+  "product_id": "15439697608952",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_catimor",
+   "cultivar_colombia",
+   "elevation_1700 meters",
+   "flavor_Cane Sugar",
+   "flavor_Elderflower",
+   "flavor_Kiwi",
+   "flavor_green grape",
+   "flavor_pluot",
+   "location_Nariño",
+   "location_san lorenzo",
+   "location_san vicente"
+  ],
+  "title": "COLOMBIA ALVEIRO ANTONIO MUÑOZ",
+  "url": "https://www.fourbarrelcoffee.com/products/colombia-alveiro-antonio-munoz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / WHOLE BEAN",
+    "variant_id": "67774054990072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774055022840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67774055055608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67774055088376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774055121144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2LB. BULK / WHOLE BEAN",
+    "variant_id": "67774055153912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774055186680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67774055219448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67774055252216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB. BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774055284984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "67774055317752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774055350520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUR OVER",
+    "variant_id": "67774055383288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67774055416056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 169.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774055448824"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "336fb0533dc5bf5d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-adolfo-reyes",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/patricias_garden_3_label_11.jpg?v=1737920076",
+  "platform": "shopify",
+  "product_id": "15439773794552",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_Catuai",
+   "cultivar_Pacas",
+   "elevation_1450-1700 meters",
+   "flavor_Blackberry",
+   "flavor_Molasses",
+   "flavor_Syrupy",
+   "flavor_fig compote",
+   "location_Santa Barbara"
+  ],
+  "title": "HONDURAS ADOLFO REYES",
+  "url": "https://www.fourbarrelcoffee.com/products/honduras-adolfo-reyes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz. / WHOLE BEAN",
+    "variant_id": "67774756061432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774756094200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774756126968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774756159736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774756192504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2 lb. / WHOLE BEAN",
+    "variant_id": "67774756225272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lb. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774756258040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lb. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774756290808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lb. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774756323576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lb. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774756356344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5 lb. / WHOLE BEAN",
+    "variant_id": "67774756389112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lb. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774756421880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lb. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774756454648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lb. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774756487416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5 lb. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774756520184"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "8c4f47dd501caef3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gura-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/pattern_1.jpg?v=1755025692",
+  "platform": "shopify",
+  "product_id": "15439813509368",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_SL28 & SL34",
+   "elevation_1700-1750 meters",
+   "flavor_Brown Sugar",
+   "flavor_Pineapple",
+   "flavor_cedar",
+   "flavor_vetiver",
+   "location_Nyeri"
+  ],
+  "title": "KENYA GURA **ESPRESSO**",
+  "url": "https://www.fourbarrelcoffee.com/products/kenya-gura-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12 oz. / WHOLE BEAN",
+    "variant_id": "67774937989368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774938022136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774938054904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774938087672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774938120440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lb. / WHOLE BEAN",
+    "variant_id": "67774938153208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774938185976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774938218744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774938251512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2 lb. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774938284280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.5,
+    "title": "5 lb. / WHOLE BEAN",
+    "variant_id": "67774938317048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.5,
+    "title": "5 lb. / GROUND - FINE/ESPRESSO",
+    "variant_id": "67774938349816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.5,
+    "title": "5 lb. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67774938382584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.5,
+    "title": "5 lb. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67774938415352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 163.5,
+    "title": "5 lb. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67774938448120"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "a27ae57fb4ed90f2",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-anarquia-ml",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/setstarr_box.jpg?v=1763067531",
+  "platform": "shopify",
+  "product_id": "15439857615096",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_Pacamara",
+   "elevation_1600-1700 meters",
+   "flavor_Papaya",
+   "flavor_Raspberry",
+   "flavor_Tangerine",
+   "flavor_Tropical",
+   "flavor_berries",
+   "location_Metapán"
+  ],
+  "title": "EL SALVADOR ANARQUIA ML",
+  "url": "https://www.fourbarrelcoffee.com/products/el-salvador-anarquia-ml",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "67775062737144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "67775062769912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67775062802680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67775062835448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67775062868216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "67775062900984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67775062933752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67775062966520"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67775062999288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67775063032056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "67775063064824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67775063097592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "67775063130360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "67775063163128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67775063195896"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "6d8a459b0fcbbb4f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milk-preparation-friday-11-14",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/esperessoandmilk4up_8876ba31-301a-499a-98c0-c2e0cc8d82af.png?v=1717174738",
+  "platform": "shopify",
+  "product_id": "15442365448440",
+  "product_type": "Classes",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "classes",
+   "day_14",
+   "events",
+   "month_Nov"
+  ],
+  "title": "Espresso & Milk Preparation 11/14",
+  "url": "https://www.fourbarrelcoffee.com/products/espresso-milk-preparation-friday-11-14",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 225.0,
+    "title": "Default Title",
+    "variant_id": "67783442563320"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "e2427498a8eb8b09",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milk-preparation-11-14-1-4pm",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/esperessoandmilk4up_8876ba31-301a-499a-98c0-c2e0cc8d82af.png?v=1717174738",
+  "platform": "shopify",
+  "product_id": "15442367742200",
+  "product_type": "Classes",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "classes",
+   "day_14",
+   "events",
+   "month_Nov"
+  ],
+  "title": "Espresso & Milk Preparation 11/14 1-4pm",
+  "url": "https://www.fourbarrelcoffee.com/products/espresso-milk-preparation-11-14-1-4pm",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 225.0,
+    "title": "Default Title",
+    "variant_id": "67783457014008"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "6d8a459b0fcbbb4f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-milk-preparation-11-21",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/esperessoandmilk4up_8876ba31-301a-499a-98c0-c2e0cc8d82af.png?v=1717174738",
+  "platform": "shopify",
+  "product_id": "15442371674360",
+  "product_type": "Classes",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "classes",
+   "day_21",
+   "events",
+   "month_Nov"
+  ],
+  "title": "Espresso & Milk Preparation 11/21",
+  "url": "https://www.fourbarrelcoffee.com/products/espresso-milk-preparation-11-21",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 225.0,
+    "title": "Default Title",
+    "variant_id": "67783463305464"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "db15b6845f6777c2",
+  "first_seen": "2026-10-26",
+  "handle": "bt-wedge-espresso-distributor",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/products/4b_bt_wedge_tops_nov_2017.jpg?v=1681849378",
+  "platform": "shopify",
+  "product_id": "377336987685",
+  "product_type": "Brewing",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [],
+  "title": "BT Wedge Espresso Distribution Tool",
+  "url": "https://www.fourbarrelcoffee.com/products/bt-wedge-espresso-distributor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 590,
+    "price_usd": 160.0,
+    "title": "Default Title",
+    "variant_id": "4793200377893"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "11f891d7b43e1718",
+  "first_seen": "2026-10-26",
+  "handle": "friendo-blendo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/NEW_LABELS_31_oct_13.jpg?v=1730585381",
+  "platform": "shopify",
+  "product_id": "6324223363",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_100% washed coffees",
+   "elevation_Various",
+   "flavor_Berry",
+   "flavor_Blend",
+   "flavor_Citrus",
+   "flavor_Espresso",
+   "flavor_Toffee",
+   "location_Various"
+  ],
+  "title": "FRIENDO BLENDO ESPRESSO",
+  "url": "https://www.fourbarrelcoffee.com/products/friendo-blendo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "31769203867699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "31769215926323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "31769215959091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "44796455813368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / GROUND - MEDIUM/POUROVER",
+    "variant_id": "44796455846136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "44796455878904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "44796455911672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "44796456009976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2LB BULK / GROUND - MEDIUM/POUROVER",
+    "variant_id": "44796456042744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "44796456075512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "44796456108280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "44796456206584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5LB BULK / GROUND - MEDIUM/POUROVER",
+    "variant_id": "44796456239352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "44796456272120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "44796456304888"
+   }
+  ],
+  "vendor": "- Four Barrel Coffee -"
+ },
+ {
+  "body_hash": "9c068da52745d72b",
+  "first_seen": "2026-10-26",
+  "handle": "big-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/DLPB9.jpg?v=1731868636",
+  "platform": "shopify",
+  "product_id": "6324242051",
+  "product_type": "de la paz",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "flavor_Dark Chocolate",
+   "flavor_Molasses",
+   "flavor_Pecan Pie",
+   "location_Various"
+  ],
+  "title": "BIG CITY BLEND",
+  "url": "https://www.fourbarrelcoffee.com/products/big-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "31769203933235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "31769216122931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "31769216155699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "44736605847800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "44736605880568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "44736605913336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "44736606077176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "44736606109944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "44736606142712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "44736606273784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "44736606306552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "44736606339320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45088681853176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45088681885944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45088681918712"
+   }
+  ],
+  "vendor": "de la paz"
+ },
+ {
+  "body_hash": "96a829dd2665d456",
+  "first_seen": "2026-10-26",
+  "handle": "graceland-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/DLP_R_3.jpg?v=1731868564",
+  "platform": "shopify",
+  "product_id": "6324242179",
+  "product_type": "de la paz",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "de la paz coffee",
+   "flavor_Caramel",
+   "flavor_Tangerine",
+   "flavor_currant",
+   "location_Various"
+  ],
+  "title": "GRACELAND BLEND",
+  "url": "https://www.fourbarrelcoffee.com/products/graceland-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "31769203998771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "31769216286771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "31769216319539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "45088691749112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45088691781880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45088691814648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45088691978488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45088692011256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45088692044024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45088692240632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45088692273400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45088692306168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50149786878200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50149786910968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "50149786943736"
+   }
+  ],
+  "vendor": "de la paz"
+ },
+ {
+  "body_hash": "ff44308cecd1637f",
+  "first_seen": "2026-10-26",
+  "handle": "peel-sessions-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/DLPY6.jpg?v=1731868657",
+  "platform": "shopify",
+  "product_id": "6324242243",
+  "product_type": "de la paz",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "cultivar_Heirloom",
+   "elevation_1700 to 2100 meters",
+   "flavor_Honey",
+   "flavor_Rose",
+   "flavor_Strawberry"
+  ],
+  "title": "PEEL SESSIONS BLEND",
+  "url": "https://www.fourbarrelcoffee.com/products/peel-sessions-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "31769204031539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "31769216385075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "31769216417843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "45196291866872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45196291899640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45196291932408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45196291965176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45196292096248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45196292129016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45196292161784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45196292194552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45196292325624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45196292358392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45196292391160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45196292423928"
+   }
+  ],
+  "vendor": "de la paz"
+ },
+ {
+  "body_hash": "a815476dee0731a4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-el-meson",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/set_ghost_flower.jpg?v=1755025403",
+  "platform": "shopify",
+  "product_id": "7940052517112",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "flavor_Mango",
+   "flavor_Plum",
+   "flavor_brown butter",
+   "flavor_chrysanthemum tea",
+   "flavor_dried apricot"
+  ],
+  "title": "COLOMBIA EL MESON",
+  "url": "https://www.fourbarrelcoffee.com/products/colombia-finca-el-meson",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz. / WHOLE BEAN",
+    "variant_id": "43675043430648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 85.0,
+    "title": "2LB. BULK / WHOLE BEAN",
+    "variant_id": "45414919471352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 212.5,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "45414919504120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.5,
+    "title": "12 oz. / GROUND - FINE/ESPRESSO",
+    "variant_id": "45414934708472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.5,
+    "title": "12 oz. / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45414934741240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.5,
+    "title": "12 oz. / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45414934774008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.5,
+    "title": "12 oz. / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45414934806776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2LB. BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45414934937848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2LB. BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45414934970616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2LB. BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45414935003384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2LB. BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45414935036152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 213.5,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "45414935167224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 213.5,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "45414935199992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 213.5,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "45414935232760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 213.5,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "45414935265528"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "82c1fa60ec430a68",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-benti-nenka-1",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/big_sun.jpg?v=1757108124",
+  "platform": "shopify",
+  "product_id": "9193362260216",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [
+   "elevation_1900-2300 meters",
+   "flavor_Silky",
+   "flavor_champagne grape",
+   "flavor_roasted plum cake",
+   "location_yirgacheffe",
+   "variety_heirloom"
+  ],
+  "title": "ETHIOPIA BANKO TARATU",
+  "url": "https://www.fourbarrelcoffee.com/products/ethiopia-benti-nenka-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12oz / WHOLE BEAN",
+    "variant_id": "46770473369848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "46770473402616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "46770473435384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - FINE/ESPRESSO",
+    "variant_id": "67627902763256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - MEDIUM/POUR OVER",
+    "variant_id": "67627902796024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67627902828792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12oz / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67627902861560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67627902894328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - MEDIUM/POUR OVER",
+    "variant_id": "67627902927096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67627902959864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67627902992632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - FINE/ESPRESSO",
+    "variant_id": "67627903025400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - MEDIUM/POUR OVER",
+    "variant_id": "67627903058168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCH PRESS",
+    "variant_id": "67627903090936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5LB BULK / GROUND - OTHER **PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "67627903123704"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ },
+ {
+  "body_hash": "20dcfa312cd8efc5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/1225/9780/files/big_tussle_label_13.jpg?v=1730222804",
+  "platform": "shopify",
+  "product_id": "9665973354744",
+  "product_type": "4B",
+  "roaster_slug": "fourbarrelcoffee",
+  "tags": [],
+  "title": "DECAF SINGLE ORIGIN",
+  "url": "https://www.fourbarrelcoffee.com/products/decaf-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / WHOLE BEAN",
+    "variant_id": "48586658742520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12 oz / GROUND -  FINE/ESPRESSO",
+    "variant_id": "48586658775288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12 oz / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "48586658808056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12 oz / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "48586658840824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12 oz / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "48586658873592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2LB BULK / WHOLE BEAN",
+    "variant_id": "48586659004664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / GROUND -  FINE/ESPRESSO",
+    "variant_id": "48586659037432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "48586659070200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "48586659102968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "48586659135736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5LB BULK / WHOLE BEAN",
+    "variant_id": "48586659266808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5LB BULK / GROUND -  FINE/ESPRESSO",
+    "variant_id": "48586659299576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5LB BULK / GROUND - MEDIUM/DRIP/POUROVER",
+    "variant_id": "48586659332344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5LB BULK / GROUND - COARSE/FRENCHPRESS",
+    "variant_id": "48586659365112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5LB BULK / GROUND - OTHER**PLEASE SPECIFY IN ORDER NOTES**",
+    "variant_id": "48586659397880"
+   }
+  ],
+  "vendor": "Four Barrel Coffee"
+ }
+]

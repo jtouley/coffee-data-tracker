@@ -1,0 +1,102 @@
+[
+ {
+  "body_hash": "79311ebc114582bd",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://static1.squarespace.com/static/5d071db96460ff0001432f18/5d9cd75c83135545ded9cb4e/5dab888c8bb2a1554a9c8647/1774373998036/",
+  "platform": "squarespace",
+  "product_id": "5dab888c8bb2a1554a9c8647",
+  "product_type": "Medium Roasted",
+  "roaster_slug": "mycoffeeroastery",
+  "tags": [
+   "Medium Roasted"
+  ],
+  "title": "House blend Daytime Saving",
+  "url": "https://www.mycoffeeroastery.com/shop/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "",
+    "variant_id": "3c509853-6f82-4263-92c8-8eddf2c5a6a7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2658f10efdbe6202",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d071db96460ff0001432f18/cc875958-bfb8-4668-8302-1aedd5c5d876/aleza-van-der-werff-wSMHoEt_wy4-unsplash.jpg",
+  "platform": "squarespace",
+  "product_id": "621f180b996ecc0e84f2a053",
+  "product_type": "Light Roasted",
+  "roaster_slug": "mycoffeeroastery",
+  "tags": [
+   "Light Roasted"
+  ],
+  "title": "Ethiopia Guji 1 Anaerobic Hambela",
+  "url": "https://www.mycoffeeroastery.com/shop/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "12f45cc0-bed7-4038-a1e4-8cd306b62113"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbb04474c24ee40f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bahia-viviana-aparecida",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d071db96460ff0001432f18/0bb0740f-4d0e-451f-9f04-f27bfde19609/fulvio-ciccolo-VgU0WiUHZWU-unsplash.jpg",
+  "platform": "squarespace",
+  "product_id": "6410ccc7adafd47eddc5b507",
+  "product_type": "Medium Roasted",
+  "roaster_slug": "mycoffeeroastery",
+  "tags": [
+   "Medium Roasted"
+  ],
+  "title": "Hawaii Kona XF",
+  "url": "https://www.mycoffeeroastery.com/shop/brazil-bahia-viviana-aparecida",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 66.0,
+    "title": "",
+    "variant_id": "54b55cd0-d142-470b-9b0b-3aecdce37774"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62af883f3cd3137b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gerbicho-rogicha",
+  "image": "https://images.squarespace-cdn.com/content/v1/5d071db96460ff0001432f18/1deb8cfb-450c-40a1-a429-0b8324422de7/shree-iyer-ufmEG5h07DA-unsplash.jpg",
+  "platform": "squarespace",
+  "product_id": "681128b24bbb2150bba179ce",
+  "product_type": "Light Roasted",
+  "roaster_slug": "mycoffeeroastery",
+  "tags": [
+   "Light Roasted"
+  ],
+  "title": "Colombia Natural Geisha",
+  "url": "https://www.mycoffeeroastery.com/shop/ethiopia-gerbicho-rogicha",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 66.0,
+    "title": "",
+    "variant_id": "ad1996ff-6eb1-4912-aa86-34146e308973"
+   }
+  ],
+  "vendor": ""
+ }
+]

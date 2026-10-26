@@ -1,0 +1,540 @@
+[
+ {
+  "body_hash": "83f6b2f5bb0e510f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bekele-yutute-kokose",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1ethiopia-bekele-yutute-kokose-origin-header.webp?v=1772006127",
+  "platform": "shopify",
+  "product_id": "8929503543524",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Ethiopia Bekele Yutute Kokose",
+  "url": "https://troubadourcoffeeroasters.com/products/ethiopia-bekele-yutute-kokose",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz",
+    "variant_id": "47952921100516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "1 lb",
+    "variant_id": "47952921133284"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "666149061736e998",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-san-jorge-black-honey-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1colombia-finca-san-jorge-sasaima-origin-header.webp?v=1772081479",
+  "platform": "shopify",
+  "product_id": "8929504788708",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Colombia Finca San Jorge Black Honey Pink Bourbon",
+  "url": "https://troubadourcoffeeroasters.com/products/colombia-finca-san-jorge-black-honey-pink-bourbon",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12 oz",
+    "variant_id": "47952948953316"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "1/2 lb",
+    "variant_id": "47952948986084"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 58.0,
+    "title": "1 lb",
+    "variant_id": "47952949018852"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "0af5b3f18d8ab3bb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-habtamu-fekadu-aga-wet-process",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8929506296036",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Ethiopia Guji Habtamu Fekadu Aga Wet Process",
+  "url": "https://troubadourcoffeeroasters.com/products/ethiopia-guji-habtamu-fekadu-aga-wet-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz",
+    "variant_id": "47952957276388"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "1 lb",
+    "variant_id": "47952957309156"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "6fd6afc3f93d1631",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-santa-clara-acatenango",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1guatemala-finca-santa-clara-acatenango-origin-header.webp?v=1772009766",
+  "platform": "shopify",
+  "product_id": "8930777530596",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Guatemala Finca Santa Clara",
+  "url": "https://troubadourcoffeeroasters.com/products/guatemala-finca-santa-clara-acatenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12 oz",
+    "variant_id": "47957735702756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.5,
+    "title": "1 lb",
+    "variant_id": "47957735735524"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "03d379e2feb89dac",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-alicia-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1el-salvador-finca-alicia-santa-ana-origin-header.webp?v=1772085735",
+  "platform": "shopify",
+  "product_id": "8932382802148",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "El Salvador Finca Alicia",
+  "url": "https://troubadourcoffeeroasters.com/products/el-salvador-finca-alicia-pacamara",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12 oz",
+    "variant_id": "47961710330084"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 32.5,
+    "title": "1 lb",
+    "variant_id": "47961710362852"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "6ef3b673b84073a9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-finca-santa-ines-marsellesa",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1guatemala-antigua-finca-santa-ines-origin-header.webp?v=1772092318",
+  "platform": "shopify",
+  "product_id": "8932520657124",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Guatemala Antigua Finca Santa Ines",
+  "url": "https://troubadourcoffeeroasters.com/products/guatemala-antigua-finca-santa-ines-marsellesa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12 oz",
+    "variant_id": "47962432078052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.5,
+    "title": "1 lb",
+    "variant_id": "47962432110820"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "d411dd6d665396cc",
+  "first_seen": "2026-10-26",
+  "handle": "specialty-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1light-roast-espresso-blend-header.png?v=1772458377",
+  "platform": "shopify",
+  "product_id": "8937832153316",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://troubadourcoffeeroasters.com/products/specialty-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.75,
+    "title": "12 oz",
+    "variant_id": "47981409796324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.5,
+    "title": "1 lb",
+    "variant_id": "47981409829092"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "0b78c24ea2dc7016",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-finca-santa-ines-marsellesa-green-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1guatemala-antigua-finca-santa-ines-marsellesa-green-coffee-beans-header.webp?v=1772876080",
+  "platform": "shopify",
+  "product_id": "8951649370340",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Guatemala Antigua Finca Santa Ines Marsellesa Green Coffee Beans",
+  "url": "https://troubadourcoffeeroasters.com/products/guatemala-antigua-finca-santa-ines-marsellesa-green-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.87,
+    "title": "1 lb",
+    "variant_id": "48016733470948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.74,
+    "title": "2 lb",
+    "variant_id": "48016733503716"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 31.61,
+    "title": "3 lb",
+    "variant_id": "48016733536484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.35,
+    "title": "5 lb",
+    "variant_id": "48016733569252"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "c2acf731441d4450",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-santa-clara-caturra-green-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1guatemala-finca-santa-clara-caturra-green-coffee-beans-header.webp?v=1772876649",
+  "platform": "shopify",
+  "product_id": "8951669850340",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Guatemala Finca Santa Clara Caturra Green Coffee Beans",
+  "url": "https://troubadourcoffeeroasters.com/products/guatemala-finca-santa-clara-caturra-green-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.87,
+    "title": "1 lb",
+    "variant_id": "48016773710052"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.38,
+    "title": "2 lb",
+    "variant_id": "48016773742820"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 31.25,
+    "title": "3 lb",
+    "variant_id": "48016773775588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.38,
+    "title": "5 lb",
+    "variant_id": "48016773808356"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "00fcf4bcd8fa93a2",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-brewing-water-minerals-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1coffee-water-minerals-light-roast-box.webp?v=1776704834",
+  "platform": "shopify",
+  "product_id": "9008990126308",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Coffee Brewing Water Minerals – Light Roast Profile",
+  "url": "https://troubadourcoffeeroasters.com/products/coffee-brewing-water-minerals-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 45,
+    "price_usd": 17.5,
+    "title": "Default Title",
+    "variant_id": "48784845963492"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "aecfa7a9bbb4e5a9",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-aquiares-centroamericano-anaerobic-natural-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1costa-rica-aquiares-waterfall.jpg?v=1781568539",
+  "platform": "shopify",
+  "product_id": "9077582299364",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Costa Rica Aquiares Centroamericano Anaerobic Honey Coffee",
+  "url": "https://troubadourcoffeeroasters.com/products/costa-rica-aquiares-centroamericano-anaerobic-natural-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 44.0,
+    "title": "12 oz",
+    "variant_id": "49114421952740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "1 lb",
+    "variant_id": "49114421985508"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "0bea19e3d756599f",
+  "first_seen": "2026-10-26",
+  "handle": "peru-jaen-marin-family-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1peru-jaen-coffee-cherries-harvest.webp?v=1781568204",
+  "platform": "shopify",
+  "product_id": "9077593178340",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Peru Jaen Marin Family Coffee",
+  "url": "https://troubadourcoffeeroasters.com/products/peru-jaen-marin-family-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.5,
+    "title": "12 oz",
+    "variant_id": "49114521436388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.5,
+    "title": "1 lb",
+    "variant_id": "49114521469156"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "afe65f9f59d097af",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-nyeri-gachatha-washed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1kenya-nyeri-coffee-cherries-ripening.webp?v=1781567148",
+  "platform": "shopify",
+  "product_id": "9077595963620",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Kenya Nyeri Gachatha Washed Coffee",
+  "url": "https://troubadourcoffeeroasters.com/products/kenya-nyeri-gachatha-washed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 35.0,
+    "title": "12 oz",
+    "variant_id": "49114543358180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.5,
+    "title": "1 lb",
+    "variant_id": "49114543390948"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "c5c5793809a036b0",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-kinini-village",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1rwanda-kinini-village-coffee-origin.webp?v=1781566880",
+  "platform": "shopify",
+  "product_id": "9078586212580",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Rwanda Kinini Village",
+  "url": "https://troubadourcoffeeroasters.com/products/rwanda-kinini-village",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.5,
+    "title": "12 oz",
+    "variant_id": "49118684840164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.5,
+    "title": "1 lb",
+    "variant_id": "49118684872932"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "35ba5a21cdee2147",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-terrerito",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/1honduras-finca-terrerito-coffee-harvest.webp?v=1781620351",
+  "platform": "shopify",
+  "product_id": "9078589063396",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "Honduras Finca Terrerito – Organic",
+  "url": "https://troubadourcoffeeroasters.com/products/honduras-finca-terrerito",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz",
+    "variant_id": "49118690148580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "1 lb",
+    "variant_id": "49118690181348"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "84b1e4a3b9adc6ee",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-el-guayabo-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/PHOTO-2025-05-01-14-08-30_1.jpg?v=1785847757",
+  "platform": "shopify",
+  "product_id": "9176107417828",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "El Salvador Finca El Guayabo Natural",
+  "url": "https://troubadourcoffeeroasters.com/products/el-salvador-finca-el-guayabo-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.75,
+    "title": "12 oz",
+    "variant_id": "49573772853476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.5,
+    "title": "1 lb",
+    "variant_id": "49573772886244"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ },
+ {
+  "body_hash": "580d52ca28c728ad",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-el-guayabo-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0798/8035/6068/files/PHOTO-2025-05-01-14-08-30_1.jpg?v=1785847757",
+  "platform": "shopify",
+  "product_id": "9176143855844",
+  "product_type": "",
+  "roaster_slug": "troubadourcoffee",
+  "tags": [],
+  "title": "El Salvador Finca El Guayabo Honey",
+  "url": "https://troubadourcoffeeroasters.com/products/el-salvador-finca-el-guayabo-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12 oz",
+    "variant_id": "49574019891428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.5,
+    "title": "1 lb",
+    "variant_id": "49574019924196"
+   }
+  ],
+  "vendor": "Troubadour Coffee Roasters"
+ }
+]

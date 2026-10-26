@@ -1,0 +1,352 @@
+[
+ {
+  "body_hash": "5563af63b1d78c9b",
+  "first_seen": "2026-10-26",
+  "handle": "enigma-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/4_enigma_blend.jpg?v=1774319618",
+  "platform": "shopify",
+  "product_id": "7253502951598",
+  "product_type": "Coffee",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Enigma Blend — Medium Roast Specialty Coffee Beans | Brazil, Peru & Ethiopia",
+  "url": "https://www.enigmacoffee.com/products/enigma-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.25,
+    "title": "12 oz. / Ground (Instructions below)",
+    "variant_id": "40803779969198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lbs / Ground (Instructions below)",
+    "variant_id": "40803780001966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.75,
+    "title": "12 oz. / Whole bean",
+    "variant_id": "40804098146478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "40804098572462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lbs / Whole bean",
+    "variant_id": "41246158356654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs / Ground (Instructions below)",
+    "variant_id": "41246160191662"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ },
+ {
+  "body_hash": "09c1b826a04f9a9c",
+  "first_seen": "2026-10-26",
+  "handle": "the-secret-temple-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/3_the_secret_temple.jpg?v=1758591925",
+  "platform": "shopify",
+  "product_id": "7253516288174",
+  "product_type": "Coffee",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "coffee",
+   "singleorigin",
+   "subscription"
+  ],
+  "title": "The Secret Temple — Single Origin Ethiopia Specialty Coffee Beans | Medium Roast | Whole Bean",
+  "url": "https://www.enigmacoffee.com/products/the-secret-temple-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.1,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "40804100866222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "5 lbs / Ground (Instructions below)",
+    "variant_id": "40804100898990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12 oz. / Whole bean",
+    "variant_id": "40804579180718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.75,
+    "title": "12 oz. / Ground (Instructions below)",
+    "variant_id": "40804579541166"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2 lbs / Whole bean",
+    "variant_id": "41246152720558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs / Ground (Instructions below)",
+    "variant_id": "41246154162350"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ },
+ {
+  "body_hash": "f1fbf1e69b3ea059",
+  "first_seen": "2026-10-26",
+  "handle": "the-seance-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/2_the_seance.jpg?v=1774319593",
+  "platform": "shopify",
+  "product_id": "7253542600878",
+  "product_type": "Coffee",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "coffee",
+   "singleorigin",
+   "subscription"
+  ],
+  "title": "The Seance — Single Origin Colombia Specialty Coffee Beans | Medium Roast | Whole Bean",
+  "url": "https://www.enigmacoffee.com/products/the-seance-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "40804102897838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lbs / Ground (instructions below)",
+    "variant_id": "40804102930606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.75,
+    "title": "12 oz. / Whole bean",
+    "variant_id": "40804569579694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz. / Ground (instructions below)",
+    "variant_id": "40804570300590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.75,
+    "title": "2 lbs / Whole bean",
+    "variant_id": "41246139187374"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs / Ground (instructions below)",
+    "variant_id": "41246140989614"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ },
+ {
+  "body_hash": "6eeda9f48311b008",
+  "first_seen": "2026-10-26",
+  "handle": "escape-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/1_escape_blend.jpg?v=1758592457",
+  "platform": "shopify",
+  "product_id": "7253555970222",
+  "product_type": "Coffee",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Escape Blend — Medium Roast South American Coffee Beans | Brazil, Peru & Colombia | Specialty Whole Bean",
+  "url": "https://www.enigmacoffee.com/products/escape-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / Whole bean",
+    "variant_id": "40804071276718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.25,
+    "title": "12 oz. / Ground (Instructions below)",
+    "variant_id": "40804071309486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.0,
+    "title": "5 lbs / Whole bean",
+    "variant_id": "40804559618222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.0,
+    "title": "5 lbs / Ground (Instructions below)",
+    "variant_id": "40804562010286"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs / Whole bean",
+    "variant_id": "41246162813102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lbs / Ground (Instructions below)",
+    "variant_id": "41246163304622"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ },
+ {
+  "body_hash": "000e2859ffc15805",
+  "first_seen": "2026-10-26",
+  "handle": "double-agent-blend-brazil-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/9_double_agent.jpg?v=1763219748",
+  "platform": "shopify",
+  "product_id": "8911950774446",
+  "product_type": "",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "subscription"
+  ],
+  "title": "Double Agent Blend — Medium Roast Coffee Beans | Brazil & Colombia | Specialty Whole Bean",
+  "url": "https://www.enigmacoffee.com/products/double-agent-blend-brazil-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47158752379054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.25,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "47158752411822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.75,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47158752444590"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 202.25,
+    "title": "10lbs / Whole Bean",
+    "variant_id": "47158752477358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground (Instructions Below)",
+    "variant_id": "47182304215214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lbs / Ground (Instructions Below)",
+    "variant_id": "47182304247982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lbs / Ground (Instructions Below)",
+    "variant_id": "47182304280750"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lbs / Ground (Instructions Below)",
+    "variant_id": "47182304313518"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ },
+ {
+  "body_hash": "78427880f288f347",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-apartment-205-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0570/5895/1342/files/ColombiacoffeebeansDecaf.png?v=1765322307",
+  "platform": "shopify",
+  "product_id": "8937674637486",
+  "product_type": "",
+  "roaster_slug": "enigmacoffee",
+  "tags": [
+   "coffee",
+   "singleorigin"
+  ],
+  "title": "Decaf Colombia Coffee Beans — Swiss Water Process | Single Origin Specialty Decaf | Whole Bean",
+  "url": "https://www.enigmacoffee.com/products/decaf-apartment-205-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.25,
+    "title": "Default Title",
+    "variant_id": "47240160673966"
+   }
+  ],
+  "vendor": "EnigmaCoffee"
+ }
+]

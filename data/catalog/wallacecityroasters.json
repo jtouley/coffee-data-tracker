@@ -1,0 +1,700 @@
+[
+ {
+  "body_hash": "751e570b72af8e07",
+  "first_seen": "2026-10-26",
+  "handle": "white-out-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/WhiteOut1G_446c1d0d-baff-4b9b-9611-c2be0c34456b.jpg?v=1773847673",
+  "platform": "shopify",
+  "product_id": "9317674287362",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Whiteout",
+  "url": "https://wallacecityroasters.com/products/white-out-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47468432425218"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47468432457986"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "BEAN / 6 bags",
+    "variant_id": "47468432490754"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47468432523522"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47468432556290"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "GROUND / 6 bags",
+    "variant_id": "47468432589058"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "0653916c181f89cc",
+  "first_seen": "2026-10-26",
+  "handle": "the-roar",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/Roar1G_bad26b06-70ac-471b-a647-0a4cd4d17106.jpg?v=1773847775",
+  "platform": "shopify",
+  "product_id": "9320001274114",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "The Roar",
+  "url": "https://wallacecityroasters.com/products/the-roar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 13.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47478241853698"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47478241886466"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "BEAN / 6 Bags",
+    "variant_id": "47478241919234"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 13.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47478241952002"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47478241984770"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "GROUND / 6 Bags",
+    "variant_id": "47478242017538"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "0e7657701ed5f038",
+  "first_seen": "2026-10-26",
+  "handle": "linebacker-u",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/LinebackerUG.jpg?v=1773856050",
+  "platform": "shopify",
+  "product_id": "9320126054658",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Linebacker U",
+  "url": "https://wallacecityroasters.com/products/linebacker-u",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47478955213058"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47478955245826"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "BEAN / 6 Bags",
+    "variant_id": "47478955278594"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47478955311362"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47478955344130"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 77.0,
+    "title": "GROUND / 6 Bags",
+    "variant_id": "47478955376898"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "b5faf10304f04520",
+  "first_seen": "2026-10-26",
+  "handle": "86",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/861G.jpg?v=1773859449",
+  "platform": "shopify",
+  "product_id": "9320144273666",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "86",
+  "url": "https://wallacecityroasters.com/products/86",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 15.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47486627512578"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 60.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47486627545346"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 90.0,
+    "title": "BEAN / 6 Bags",
+    "variant_id": "47486627578114"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 15.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47486627610882"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 60.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47486627643650"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 90.0,
+    "title": "GROUND / 6 Bags",
+    "variant_id": "47486627676418"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "62f62900fed674c8",
+  "first_seen": "2026-10-26",
+  "handle": "bowl-week",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/BowlWeek1G.jpg?v=1773930605",
+  "platform": "shopify",
+  "product_id": "9322077946114",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Bowl Week",
+  "url": "https://wallacecityroasters.com/products/bowl-week",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Bean / 1 Bag",
+    "variant_id": "47489462305026"
+   },
+   {
+    "available": true,
+    "grams": 1588,
+    "price_usd": 52.0,
+    "title": "Bean / 4 Bags",
+    "variant_id": "47489462337794"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Bean / 6 Bags",
+    "variant_id": "47489462370562"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "47489462403330"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Ground / 4 Bags",
+    "variant_id": "47489462436098"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground / 6 Bags",
+    "variant_id": "47489462468866"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "e44bf2c7bcd110ff",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/HVUDecaf1B.jpg?v=1773944342",
+  "platform": "shopify",
+  "product_id": "9322226483458",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Decaffeinated coffee",
+  "url": "https://wallacecityroasters.com/products/decaffeinated-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Bean / 1 Bag",
+    "variant_id": "47489777402114"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Bean / 4 Bags",
+    "variant_id": "47489777434882"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Bean / 6 Bags",
+    "variant_id": "47489777467650"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "47489777500418"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Ground / 4 Bags",
+    "variant_id": "47489777533186"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground / 6 Bags",
+    "variant_id": "47489777565954"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "53b947664f5a6af0",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-care-package",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/CarePackage6B.jpg?v=1774287519",
+  "platform": "shopify",
+  "product_id": "9327326560514",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Coffee Care Package",
+  "url": "https://wallacecityroasters.com/products/coffee-care-package",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 80.0,
+    "title": "Bean",
+    "variant_id": "47541784609026"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 80.0,
+    "title": "Ground",
+    "variant_id": "47541784641794"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "47cd98ab3b1b3359",
+  "first_seen": "2026-10-26",
+  "handle": "oatmeal-chocolate-chip",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/HVUOCC1G.jpg?v=1774301207",
+  "platform": "shopify",
+  "product_id": "9327375909122",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Oatmeal Chocolate Chip",
+  "url": "https://wallacecityroasters.com/products/oatmeal-chocolate-chip",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Bean / 1 Bag",
+    "variant_id": "47541889237250"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Bean / 4 Bags",
+    "variant_id": "47541889270018"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Bean / 6 Bags",
+    "variant_id": "47541889302786"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "47541889335554"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Ground / 4 Bags",
+    "variant_id": "47541889368322"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground / 6 Bags",
+    "variant_id": "47541889401090"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "e59904d876225789",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/HVUesp1G.jpg?v=1774535041",
+  "platform": "shopify",
+  "product_id": "9339113931010",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://wallacecityroasters.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47589657248002"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47589657280770"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "BEAN / 6 Bags",
+    "variant_id": "47589657313538"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47589657346306"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47589657379074"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "GROUND / 6 Bags",
+    "variant_id": "47589657411842"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "040681ed2ef80acd",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-almond-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/hvutoastedalmond1g.jpg?v=1774537265",
+  "platform": "shopify",
+  "product_id": "9339132903682",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Toasted Almond Cream",
+  "url": "https://wallacecityroasters.com/products/toasted-almond-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "BEAN / 1 Bag",
+    "variant_id": "47589734875394"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "BEAN / 4 Bags",
+    "variant_id": "47589734908162"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "BEAN / 6 Bags",
+    "variant_id": "47589734940930"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "GROUND / 1 Bag",
+    "variant_id": "47589734973698"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "GROUND / 4 Bags",
+    "variant_id": "47589735006466"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "GROUND / 6 Bags",
+    "variant_id": "47589735039234"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "217e8fff8aa0d674",
+  "first_seen": "2026-10-26",
+  "handle": "double-dutch-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/hvuddc1g_cdb40ea1-aacd-473a-8ec7-c91da889a805.jpg?v=1774549240",
+  "platform": "shopify",
+  "product_id": "9339161444610",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Double Dutch Chocolate",
+  "url": "https://wallacecityroasters.com/products/double-dutch-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Beans / 1 Bag",
+    "variant_id": "47590325977346"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "47590326010114"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Beans / 4 Bags",
+    "variant_id": "47590336626946"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Beans / 6 Bags",
+    "variant_id": "47590336659714"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Ground / 4 Bags",
+    "variant_id": "47590336692482"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground / 6 Bags",
+    "variant_id": "47590336725250"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "d525a1c8d7dd482c",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/hvupecan1g.jpg?v=1774554701",
+  "platform": "shopify",
+  "product_id": "9339469005058",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Caramel Pecan",
+  "url": "https://wallacecityroasters.com/products/caramel-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Bean / 1 Bag",
+    "variant_id": "47590622888194"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 13.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "47590622920962"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Bean / 4 Bags",
+    "variant_id": "47590624493826"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Bean / 6 Bags",
+    "variant_id": "47590624526594"
+   },
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 52.0,
+    "title": "Ground / 4 Bags",
+    "variant_id": "47590624559362"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground / 6 Bags",
+    "variant_id": "47590624592130"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ },
+ {
+  "body_hash": "7cd4256085f97755",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-care-package-flavors",
+  "image": "https://cdn.shopify.com/s/files/1/0684/9449/1906/files/HVUCareFlaovorB.jpg?v=1774555806",
+  "platform": "shopify",
+  "product_id": "9339472150786",
+  "product_type": "",
+  "roaster_slug": "wallacecityroasters",
+  "tags": [],
+  "title": "Flavored Care Package",
+  "url": "https://wallacecityroasters.com/products/coffee-care-package-flavors",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Bean",
+    "variant_id": "47590632620290"
+   },
+   {
+    "available": true,
+    "grams": 2211,
+    "price_usd": 78.0,
+    "title": "Ground",
+    "variant_id": "47590632653058"
+   }
+  ],
+  "vendor": "Wallace City Roasters"
+ }
+]

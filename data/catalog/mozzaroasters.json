@@ -1,0 +1,448 @@
+[
+ {
+  "body_hash": "61f3d1b5ba34af1c",
+  "first_seen": "2026-10-26",
+  "handle": "aurora-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Aurora-Front-1-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "216",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Best Selling Coffee",
+   "Medium Roast"
+  ],
+  "title": "Aurora Blend",
+  "url": "https://mozzaroasters.com/product/aurora-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz",
+    "variant_id": "216:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.85,
+    "title": "5lb",
+    "variant_id": "216:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9764123709696f33",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Decaf-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "220",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Blended Coffee",
+   "Dark Roast"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://mozzaroasters.com/product/decaf-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "220:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lb",
+    "variant_id": "220:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a53ec1a6ecc3917",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Espresso-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "228",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Blended Coffee",
+   "Medium-Dark Roast"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://mozzaroasters.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "228:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "228:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a33859d457061543",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Ethiopia-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "229",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Light-Medium Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://mozzaroasters.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz",
+    "variant_id": "229:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "5lb",
+    "variant_id": "229:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "17e9547eeb150dea",
+  "first_seen": "2026-10-26",
+  "handle": "nightfall-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Nightfall-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "230",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Best Selling Coffee",
+   "Blended Coffee",
+   "Medium Roast"
+  ],
+  "title": "Nightfall Blend",
+  "url": "https://mozzaroasters.com/product/nightfall-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz",
+    "variant_id": "230:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.85,
+    "title": "5lb",
+    "variant_id": "230:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "abd43656fe8c4611",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/12/ColdBrew-Front.jpg",
+  "platform": "woocommerce",
+  "product_id": "2591",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Blended Coffee",
+   "Light-Medium Roast"
+  ],
+  "title": "Cold Brew",
+  "url": "https://mozzaroasters.com/product/cold-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz",
+    "variant_id": "2591:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lb",
+    "variant_id": "2591:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5420a965327655db",
+  "first_seen": "2026-10-26",
+  "handle": "noble-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/12/NobleBlend-Front.webp",
+  "platform": "woocommerce",
+  "product_id": "2594",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Best Selling Coffee",
+   "Blended Coffee",
+   "Light-Medium Roast"
+  ],
+  "title": "Noble Blend",
+  "url": "https://mozzaroasters.com/product/noble-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz",
+    "variant_id": "2594:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "5lb",
+    "variant_id": "2594:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7656fe50459976c5",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-at-five",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Sunrise-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "349",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Blended Coffee"
+  ],
+  "title": "Sunrise at Five",
+  "url": "https://mozzaroasters.com/product/sunrise-at-five/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz",
+    "variant_id": "349:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.85,
+    "title": "5lb",
+    "variant_id": "349:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "684a8c25dadc94aa",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Brazil-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "352",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Light-Medium Roast",
+   "Single Origin Coffee"
+  ],
+  "title": "Brazil",
+  "url": "https://mozzaroasters.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12oz",
+    "variant_id": "352:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.85,
+    "title": "5lb",
+    "variant_id": "352:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e7f1cabdbc26a26",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Burundi-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "355",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Light-Medium Roast",
+   "Single Origin Coffee"
+  ],
+  "title": "Burundi",
+  "url": "https://mozzaroasters.com/product/burundi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "355:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb",
+    "variant_id": "355:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a605354b40ad2ef",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2023/05/Rwanda-Front-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "358",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Light-Medium Roast",
+   "Single Origin Coffee"
+  ],
+  "title": "Rwanda",
+  "url": "https://mozzaroasters.com/product/rwanda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "358:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb",
+    "variant_id": "358:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b380100ffefdd744",
+  "first_seen": "2026-10-26",
+  "handle": "single-serve-coffee-bags",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2025/05/Mozza-Roasters-Single-Serve-Coffee-Bags-Box-of-5.jpg",
+  "platform": "woocommerce",
+  "product_id": "4666",
+  "product_type": "simple",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Coffee bags",
+   "Single-Serve Coffee Bags"
+  ],
+  "title": "Single-Serve Coffee Bags",
+  "url": "https://mozzaroasters.com/product/single-serve-coffee-bags/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.5,
+    "title": "Single-Serve Coffee Bags",
+    "variant_id": "4666:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7397a9a24c4fd506",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2025/07/Download-EthiopiaGuji-SandCleaned.png",
+  "platform": "woocommerce",
+  "product_id": "4890",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://mozzaroasters.com/product/ethiopia-guji/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz",
+    "variant_id": "4890:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.5,
+    "title": "5lb",
+    "variant_id": "4890:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0894ae47f90042b",
+  "first_seen": "2026-10-26",
+  "handle": "bens-blend",
+  "image": "https://mozzaroasters.com/wp-content/uploads/2025/09/Bens-Blend-Angle.jpg",
+  "platform": "woocommerce",
+  "product_id": "5145",
+  "product_type": "variable",
+  "roaster_slug": "mozzaroasters",
+  "tags": [
+   "Blended Coffee"
+  ],
+  "title": "Ben’s Blend",
+  "url": "https://mozzaroasters.com/product/bens-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "5145:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

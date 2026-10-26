@@ -1,0 +1,2686 @@
+[
+ {
+  "body_hash": "2abd450ba908c118",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0032-1.jpg?v=1718756917",
+  "platform": "shopify",
+  "product_id": "9263987392834",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee",
+   "costa rica",
+   "smooth"
+  ],
+  "title": "Costa Rica",
+  "url": "https://www.jbrookscoffeeroasters.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48251503771970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48251503804738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48251524350274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48251524383042"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48251524415810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48251524448578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48251524481346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48251524514114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48251524546882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056018563394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056018596162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056018628930"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "809d7fdf96d34885",
+  "first_seen": "2026-10-26",
+  "handle": "gallant",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0038-1.jpg?v=1718757002",
+  "platform": "shopify",
+  "product_id": "9273022087490",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Gallant",
+  "url": "https://www.jbrookscoffeeroasters.com/products/gallant",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48263958987074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48263959019842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48263959052610"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48263959085378"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48263959118146"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48263959150914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48263959183682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48263959216450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48263959249218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056055787842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056055820610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056055853378"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1ca6ab3c6f7e9faf",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0046-1.jpg?v=1718756966",
+  "platform": "shopify",
+  "product_id": "9273025462594",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "Stone fruit",
+   "coffee",
+   "creamy"
+  ],
+  "title": "Ethiopia",
+  "url": "https://www.jbrookscoffeeroasters.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48263969276226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Ground",
+    "variant_id": "48263969308994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48263969341762"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48263969374530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48263969407298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48263969440066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48263969472834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Ground",
+    "variant_id": "48263969505602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48263969538370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056038912322"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056038945090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056038977858"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4da8b6a8ec0905af",
+  "first_seen": "2026-10-26",
+  "handle": "columbia",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0041-1.jpg?v=1718756890",
+  "platform": "shopify",
+  "product_id": "9273032966466",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://www.jbrookscoffeeroasters.com/products/columbia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48263988019522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48263988052290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48263988085058"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48263988117826"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48263988150594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48263988183362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48263988216130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Ground",
+    "variant_id": "48263988248898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48263988281666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056000606530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056000672066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056000704834"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "25276f0bdb26c377",
+  "first_seen": "2026-10-26",
+  "handle": "true-north",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0040-1.jpg?v=1718759228",
+  "platform": "shopify",
+  "product_id": "9273035751746",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "True North",
+  "url": "https://www.jbrookscoffeeroasters.com/products/true-north",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48263995392322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48263995425090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48263995457858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48263995490626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48263995523394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48263995556162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48263995588930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Ground",
+    "variant_id": "48263995621698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48263995654466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056288571714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056288604482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056288637250"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5572818e80fae7ee",
+  "first_seen": "2026-10-26",
+  "handle": "onyx-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_3962.jpg?v=1718757281",
+  "platform": "shopify",
+  "product_id": "9273057509698",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Onyx Decaf",
+  "url": "https://www.jbrookscoffeeroasters.com/products/onyx-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264062501186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264062533954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264062566722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264062599490"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48264062632258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264062665026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264062697794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Ground",
+    "variant_id": "48264062730562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264062763330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056148685122"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056148717890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056148750658"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a5018dbf00e5dadf",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0061.jpg?v=1718756383",
+  "platform": "shopify",
+  "product_id": "9273060557122",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "Brasil",
+  "url": "https://www.jbrookscoffeeroasters.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264073478466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264073511234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264073544002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264073576770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48264073642306"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264073675074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264073707842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48264073740610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264073773378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49048350064962"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49048350097730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49048350130498"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0a6c840639c7e80e",
+  "first_seen": "2026-10-26",
+  "handle": "urban-joe",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0035-1.jpg?v=1718759276",
+  "platform": "shopify",
+  "product_id": "9273067077954",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Urban Joe",
+  "url": "https://www.jbrookscoffeeroasters.com/products/urban-joe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264088879426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264088912194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264088944962"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264089010498"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48264089043266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264089076034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264089108802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48264089141570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264089174338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056304169282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056304202050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056304234818"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "43c532431bba7091",
+  "first_seen": "2026-10-26",
+  "handle": "clarion",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0050-1_ca02e19c-f42f-4778-8597-8861738077c7.jpg?v=1718756791",
+  "platform": "shopify",
+  "product_id": "9273075335490",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "Clarion Decaf",
+  "url": "https://www.jbrookscoffeeroasters.com/products/clarion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264119255362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264119288130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264119320898"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264119353666"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48264119386434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264119419202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264119451970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48264119484738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264119517506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49055986385218"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49055986417986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49055986450754"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "efb3712b45db9a64",
+  "first_seen": "2026-10-26",
+  "handle": "spirit-of-memphis",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0030-1.jpg?v=1718759111",
+  "platform": "shopify",
+  "product_id": "9273083167042",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "Spirit of Memphis",
+  "url": "https://www.jbrookscoffeeroasters.com/products/spirit-of-memphis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264140980546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264141013314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264141046082"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264141078850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48264141111618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264141144386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264141177154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48264141209922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264141242690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056242499906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056242532674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056242565442"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "d7951293b85eac96",
+  "first_seen": "2026-10-26",
+  "handle": "morning-mercy",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0026-1.jpg?v=1718757112",
+  "platform": "shopify",
+  "product_id": "9273089327426",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Morning Mercy",
+  "url": "https://www.jbrookscoffeeroasters.com/products/morning-mercy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48264162705730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48264162738498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48264162771266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48264162804034"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48264162836802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48264162869570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48264162902338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Ground",
+    "variant_id": "48264162935106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48264162967874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056112673090"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056112705858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.52,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056112738626"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "fe65057aa97bb8f6",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-noel",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0047-1.jpg?v=1765294840",
+  "platform": "shopify",
+  "product_id": "9510038602050",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Cafe Noel",
+  "url": "https://www.jbrookscoffeeroasters.com/products/cafe-noel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48849686954306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48849686987074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48849687019842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48849687052610"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48849687085378"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48849687118146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48849687150914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48849687183682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48849687216450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49055962169666"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49055962202434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49055962235202"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7f51c01442cce7a2",
+  "first_seen": "2026-10-26",
+  "handle": "snowy-beale",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0042-1.jpg?v=1765294796",
+  "platform": "shopify",
+  "product_id": "9510292685122",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "coffee"
+  ],
+  "title": "Snowy Beale",
+  "url": "https://www.jbrookscoffeeroasters.com/products/snowy-beale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850071814466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850071847234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850071880002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850071912770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48850071945538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850071978306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850072011074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850072043842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850072076610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056226410818"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056226443586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056226476354"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "797e9605f85bb0b4",
+  "first_seen": "2026-10-26",
+  "handle": "pink-palace",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0034-1.jpg?v=1718757519",
+  "platform": "shopify",
+  "product_id": "9510308741442",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Pink Palace",
+  "url": "https://www.jbrookscoffeeroasters.com/products/pink-palace",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850099339586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850099372354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850099405122"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850099437890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48850099470658"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850099503426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850099536194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850099568962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850099601730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056180437314"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056180470082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056180502850"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "91dd58b2f613be0e",
+  "first_seen": "2026-10-26",
+  "handle": "rubicon",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0028-1.jpg?v=1718757571",
+  "platform": "shopify",
+  "product_id": "9510427197762",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Rubicon Espresso",
+  "url": "https://www.jbrookscoffeeroasters.com/products/rubicon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850275008834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Ground",
+    "variant_id": "48850275041602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850275074370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850275107138"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48850275139906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850275172674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850275205442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Ground",
+    "variant_id": "48850275238210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850275270978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056194888002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056194920770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056194953538"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "37f9f8a9d5a3eb36",
+  "first_seen": "2026-10-26",
+  "handle": "rubicon-expresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0031-1.jpg?v=1718758858",
+  "platform": "shopify",
+  "product_id": "9510482248002",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Rubicon Espresso Decaf",
+  "url": "https://www.jbrookscoffeeroasters.com/products/rubicon-expresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850355159362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Ground",
+    "variant_id": "48850355192130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850355224898"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850355257666"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48850355290434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850355323202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850355355970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Ground",
+    "variant_id": "48850355388738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850355454274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056208322882"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056208355650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056208388418"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0e83cbeb1a916ba0",
+  "first_seen": "2026-10-26",
+  "handle": "hub",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0049-1.jpg?v=1718757078",
+  "platform": "shopify",
+  "product_id": "9510553747778",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Hospitality HUB",
+  "url": "https://www.jbrookscoffeeroasters.com/products/hub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850467553602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850467586370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850467619138"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850467651906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48850467684674"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850467717442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850467750210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850467782978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850467815746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056094060866"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056094093634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056094126402"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "f21d99fdd0c86e1a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0036-1.jpg?v=1718757323",
+  "platform": "shopify",
+  "product_id": "9510558204226",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Peru Organic",
+  "url": "https://www.jbrookscoffeeroasters.com/products/peru-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850474467650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850474500418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850474533186"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850474565954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48850474598722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850474631490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850474664258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850474697026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850474729794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056164905282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056164938050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056164970818"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0dd8886884935cfd",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_3123.png?v=1761663838",
+  "platform": "shopify",
+  "product_id": "9510561841474",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Rwanda Natural",
+  "url": "https://www.jbrookscoffeeroasters.com/products/rwanda-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850479808834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Ground",
+    "variant_id": "48850479841602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850479874370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850479907138"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Ground",
+    "variant_id": "48850479939906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850479972674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850480005442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Ground",
+    "variant_id": "48850480038210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850480070978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.67,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056272843074"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.62,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056272875842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.96,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056272908610"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "c3a11e886f01f9f0",
+  "first_seen": "2026-10-26",
+  "handle": "onyx",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0039-1.jpg?v=1718757150",
+  "platform": "shopify",
+  "product_id": "9510570623298",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Onyx",
+  "url": "https://www.jbrookscoffeeroasters.com/products/onyx",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850494292290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850494325058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850494357826"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850494390594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48850494423362"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850494456130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850494488898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850494554434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850494587202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056134791490"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056134824258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056134857026"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "c984ae75f7a187af",
+  "first_seen": "2026-10-26",
+  "handle": "bootleg",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0048-1.jpg?v=1718756137",
+  "platform": "shopify",
+  "product_id": "9510577799490",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Bootleg",
+  "url": "https://www.jbrookscoffeeroasters.com/products/bootleg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48850506187074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48850506219842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48850506252610"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48850506285378"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48850506318146"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48850506350914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48850506383682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48850506416450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48850506449218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49048334664002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49048334696770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49048334729538"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4e128dfaa9003b50",
+  "first_seen": "2026-10-26",
+  "handle": "starlight",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0037-1.jpg?v=1765294753",
+  "platform": "shopify",
+  "product_id": "9511476527426",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Starlight",
+  "url": "https://www.jbrookscoffeeroasters.com/products/starlight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48852016628034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48852016660802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48852016693570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48852016726338"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48852016759106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48852016791874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48852016824642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48852016857410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48852016890178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056257769794"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056257802562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056257835330"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0027-1.jpg?v=1718757042",
+  "platform": "shopify",
+  "product_id": "9544913191234",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Light roast",
+   "coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.jbrookscoffeeroasters.com/products/guatamala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48950935585090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "48950935617858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48950935683394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48950935716162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "48950935748930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48950935781698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48950935814466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "48950935847234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48950935912770"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49056076398914"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49056076431682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49056076464450"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "83dcc295162753d4",
+  "first_seen": "2026-10-26",
+  "handle": "bonnie-clyde-collectors-edition-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0045-1.jpg?v=1718756041",
+  "platform": "shopify",
+  "product_id": "9544923087170",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Bonnie & Clyde Collector's Edition Dark Roast",
+  "url": "https://www.jbrookscoffeeroasters.com/products/bonnie-clyde-collectors-edition-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48951007445314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48951007478082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "48951007510850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.97,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48951007543618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.97,
+    "title": "2 lb / Ground",
+    "variant_id": "48951007576386"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.97,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "48951007609154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.97,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48951007641922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.97,
+    "title": "5 lb / Ground",
+    "variant_id": "48951007674690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.97,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "48951007707458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49048328208706"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.97,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49048328241474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.97,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49048328274242"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e79ce2a75beec8a8",
+  "first_seen": "2026-10-26",
+  "handle": "old-country",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0029-1.jpg?v=1718764907",
+  "platform": "shopify",
+  "product_id": "9578756997442",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Dark Roast",
+   "coffee"
+  ],
+  "title": "Old Country Espresso",
+  "url": "https://www.jbrookscoffeeroasters.com/products/old-country",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49091898310978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "49091898343746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "49091898376514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "49091898409282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49091898442050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Ground",
+    "variant_id": "49091898507586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Coarse Ground",
+    "variant_id": "49091898540354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2 lb / Fine Espresso Grind",
+    "variant_id": "49091898573122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49091898605890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Ground",
+    "variant_id": "49091898638658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Coarse Ground",
+    "variant_id": "49091898671426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5 lb / Fine Espresso Grind",
+    "variant_id": "49091898704194"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "d4a60b023256aed0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0855/8270/9058/files/IMG_0916.png?v=1733332485",
+  "platform": "shopify",
+  "product_id": "9824139018562",
+  "product_type": "Coffee",
+  "roaster_slug": "jbrookscoffeeroasters",
+  "tags": [
+   "Medium roast",
+   "Stone fruit",
+   "coffee",
+   "creamy"
+  ],
+  "title": "Spreading Sunshine",
+  "url": "https://www.jbrookscoffeeroasters.com/products/ethiopia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50117575704898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Ground",
+    "variant_id": "50117575737666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Coarse Ground",
+    "variant_id": "50117575770434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.15,
+    "title": "12 oz / Fine Espresso Grind",
+    "variant_id": "50117575803202"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50171710865730"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2lb / Ground",
+    "variant_id": "50171710898498"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2lb / Coarse Ground",
+    "variant_id": "50171710931266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.55,
+    "title": "2lb / Fine Espresso Grind",
+    "variant_id": "50171710964034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50171710996802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5lb / Ground",
+    "variant_id": "50171711029570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5lb / Coarse Ground",
+    "variant_id": "50171711062338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.76,
+    "title": "5lb / Fine Espresso Grind",
+    "variant_id": "50171711095106"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

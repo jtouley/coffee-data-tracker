@@ -1,0 +1,1239 @@
+[
+ {
+  "body_hash": "4023772d040ee69f",
+  "first_seen": "2026-10-26",
+  "handle": "shantawene-natural-ethiopian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/shantawene-12oz-bag-navy.png?v=1792608537",
+  "platform": "shopify",
+  "product_id": "15447693459641",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Ethiopia",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Shantawene Natural | Single-Origin Ethiopian Coffee from Sidama",
+  "url": "https://www.roastedrecord.com/products/shantawene-natural-ethiopian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "67840579469497"
+   }
+  ],
+  "vendor": "The Roasted Record"
+ },
+ {
+  "body_hash": "5996991050ec96b9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/colombia-supremo-12oz.png?v=1785337551",
+  "platform": "shopify",
+  "product_id": "6694026870969",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Dark",
+   "Roast: Medium",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "Colombia Supremo Coffee | Single-Origin Colombian Coffee Beans | Medium-Dark Roast",
+  "url": "https://www.roastedrecord.com/products/colombia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39942852968633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "39942853001401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "39942853034169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "39942853066937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44938281877689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44938281910457"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "340be96526bb85b2",
+  "first_seen": "2026-10-26",
+  "handle": "the-78-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/blend-78-12oz.png?v=1785337549",
+  "platform": "shopify",
+  "product_id": "7121254940857",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "Origin: Brazil",
+   "Origin: Colombia",
+   "Roast: Dark",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "The 78 Blend Coffee | Dark Roast Gourmet Blended Coffee From Brazil & Colombia",
+  "url": "https://www.roastedrecord.com/products/the-78-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41635306602681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "41635306635449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937841770681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44937841803449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44937841836217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "44937841868985"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "8d9d49393e5536aa",
+  "first_seen": "2026-10-26",
+  "handle": "the-45-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/blend-45-12oz.png?v=1785337549",
+  "platform": "shopify",
+  "product_id": "7121259856057",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Roast: Medium",
+   "Type: Blend"
+  ],
+  "title": "The 45 Blend Coffee | Medium Roast Blended Coffee from Brazil & Ethiopia",
+  "url": "https://www.roastedrecord.com/products/the-45-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41635335831737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "41635335864505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937839116473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44937839149241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44937839182009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "44937839214777"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "f8b21e7931d1e24b",
+  "first_seen": "2026-10-26",
+  "handle": "the-33-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/blend-33-12oz.png?v=1785337550",
+  "platform": "shopify",
+  "product_id": "7121263657145",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Roast: Light",
+   "Type: Blend"
+  ],
+  "title": "The 33 Blend Coffee | Light Roast Blended Coffee From East Africa",
+  "url": "https://www.roastedrecord.com/products/the-33-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41635350970553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "41635351003321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937838166201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44937838198969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44937838231737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "44937838264505"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "967d81e97add2f03",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/cerrado-12oz.png?v=1785337550",
+  "platform": "shopify",
+  "product_id": "7318908403897",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Chocolate",
+   "Coffee",
+   "Origin: Brazil",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "Cerrado, Brazil Coffee | Our Top Single-Origin, Coffee & Espresso Bean",
+  "url": "https://www.roastedrecord.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "42287477915833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42287477948601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "42287477981369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "42287478014137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937829777593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44937829810361"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "aae4508822e6c0cf",
+  "first_seen": "2026-10-26",
+  "handle": "hi-fi-espresso-specialty-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/hi-fi-12oz.png?v=1785337548",
+  "platform": "shopify",
+  "product_id": "7708596207801",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "Roast: Medium",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "Hi-Fi Espresso | Medium - Dark Roast Specialty Coffee Espresso Blend",
+  "url": "https://www.roastedrecord.com/products/hi-fi-espresso-specialty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43696468689081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43696468721849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "43696468754617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "43696468787385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44647020069049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44647020101817"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "428ca521bc0e291c",
+  "first_seen": "2026-10-26",
+  "handle": "lo-fi-decaf-water-process-decaf-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/lo-fi-12oz.png?v=1785337551",
+  "platform": "shopify",
+  "product_id": "7708642050233",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Roast: Medium",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "Lo-Fi Decaf | Medium Roast Specialty Decaf Coffee Blend",
+  "url": "https://www.roastedrecord.com/products/lo-fi-decaf-water-process-decaf-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43696520331449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43696520364217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "43696520396985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "43696520429753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937821651129"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44937821683897"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "a980f79c67b89904",
+  "first_seen": "2026-10-26",
+  "handle": "the-lp-cold-brew-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/lp-12oz.png?v=1785337551",
+  "platform": "shopify",
+  "product_id": "7960617550009",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Brazil",
+   "Origin: Colombia",
+   "Roast: Dark",
+   "Roast: Medium",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "The LP Cold Brew Blend | Medium-Dark Roast Gourmet Blended Coffee",
+  "url": "https://www.roastedrecord.com/products/the-lp-cold-brew-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44406128640185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Coarsely Ground for Cold Brew / 12 oz",
+    "variant_id": "44406128672953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44937819717817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Coarsely Ground for Cold Brew / 2 lb",
+    "variant_id": "44937819750585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45234914590905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Coarsely Ground for Cold Brew / 5 lb",
+    "variant_id": "45234915967161"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "5c3c73c35caeb50b",
+  "first_seen": "2026-10-26",
+  "handle": "hi-lo-half-the-caffeine-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/hi-lo-12oz.png?v=1785337552",
+  "platform": "shopify",
+  "product_id": "8043007639737",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Chocolate",
+   "Coffee",
+   "Origin: Brazil",
+   "Origin: Colombia",
+   "Roast: Medium/Dark",
+   "Type: Blend"
+  ],
+  "title": "Hi-Lo | Half the Caffeine Specialty Decaf Coffee Blend",
+  "url": "https://www.roastedrecord.com/products/hi-lo-half-the-caffeine-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44723692798137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "44723692863673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "44723697320121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.95,
+    "title": "Ground / 2 lb",
+    "variant_id": "44723697352889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45240841568441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "45240845435065"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "fd61b203ef258e8e",
+  "first_seen": "2026-10-26",
+  "handle": "papayo-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/Marceli-Calderon-Papayo-Double.png?v=1741642549",
+  "platform": "shopify",
+  "product_id": "8056036786361",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Light",
+   "Roast: Medium"
+  ],
+  "title": "Papayo Washed Colombian Coffee: Roasted Record x Unblended Direct-Trade Collaboration",
+  "url": "https://www.roastedrecord.com/products/papayo-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44785903239353"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "71becfc169ae8e05",
+  "first_seen": "2026-10-26",
+  "handle": "chiroso-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/Daniel-Hernandez-Chiroso.png?v=1741379247",
+  "platform": "shopify",
+  "product_id": "8056040751289",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Light",
+   "Roast: Medium"
+  ],
+  "title": "Chiroso Washed Colombian Coffee: Roasted Record x Unblended Direct-Trade Collaboration",
+  "url": "https://www.roastedrecord.com/products/chiroso-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44785940889785"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "00fb4605e3ac23c0",
+  "first_seen": "2026-10-26",
+  "handle": "chiroso-honey-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/Fernando-Oka-William-Ortiz-Chiroso.png?v=1741379474",
+  "platform": "shopify",
+  "product_id": "8056041832633",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Light",
+   "Roast: Medium"
+  ],
+  "title": "Chiroso Honey Colombian Coffee: Roasted Record x Unblended Direct-Trade Collaboration",
+  "url": "https://www.roastedrecord.com/products/chiroso-honey-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44785947214009"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "bf47ce281c096577",
+  "first_seen": "2026-10-26",
+  "handle": "caturra-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/Duverney-Washed.png?v=1749600208",
+  "platform": "shopify",
+  "product_id": "8107516362937",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Medium",
+   "Type: Single Origin"
+  ],
+  "title": "Caturra Washed Colombian Coffee: Roasted Record x Unblended Direct-Trade Collaboration",
+  "url": "https://www.roastedrecord.com/products/caturra-washed-colombian-coffee-roasted-record-x-unblended-direct-trade-collaboration",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45038530625721"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "531d10e3fe0fc57e",
+  "first_seen": "2026-10-26",
+  "handle": "siren-song-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/siren-song-12oz.png?v=1785337552",
+  "platform": "shopify",
+  "product_id": "8114106433721",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Dark",
+   "Roast: Medium/Dark",
+   "Type: Single Origin"
+  ],
+  "title": "Siren Song | Dark Roast Coffee",
+  "url": "https://www.roastedrecord.com/products/siren-song-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45064029438137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "Ground / 12 oz",
+    "variant_id": "45064029470905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Ground / 5 lb",
+    "variant_id": "45251720708281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45251727851705"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "0015d0e89310076b",
+  "first_seen": "2026-10-26",
+  "handle": "sebastian-ramirez-watermelon-anaerobic-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/watermelon-12oz.png?v=1785337553",
+  "platform": "shopify",
+  "product_id": "8213006713017",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Colombia",
+   "Origin: Ethiopia",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Sebastian Ramirez - Watermelon Anaerobic Co-Ferment",
+  "url": "https://www.roastedrecord.com/products/sebastian-ramirez-watermelon-anaerobic-co-ferment",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 31.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45337728942265"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 84.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46358647275705"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "3a49754b0192ac7e",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-gedeb-worka-sakaro-washing-station-grade-1-natural-process-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/ethiopia-natural-12oz.png?v=1785337553",
+  "platform": "shopify",
+  "product_id": "8219695317177",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Ethiopia",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Yirgacheffe Gedeb Worka Sakaro Washing Station Grade 1 Natural Process Coffee",
+  "url": "https://www.roastedrecord.com/products/yirgacheffe-gedeb-worka-sakaro-washing-station-grade-1-natural-process-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45354001957049"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45354001989817"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45354002022585"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Ground - Drip / Coffee Machine / 12 oz",
+    "variant_id": "45354002055353"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Ground - Drip / Coffee Machine / 2 lb",
+    "variant_id": "45354002088121"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Ground - Drip / Coffee Machine / 5 lb",
+    "variant_id": "45354002120889"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Ground - Espresso / 12 oz",
+    "variant_id": "45354002153657"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 57.95,
+    "title": "Ground - Espresso / 2 lb",
+    "variant_id": "45354002186425"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 144.95,
+    "title": "Ground - Espresso / 5 lb",
+    "variant_id": "45354002219193"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "dfb6c595121a67fc",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/bali-kintamani-12oz.png?v=1785337553",
+  "platform": "shopify",
+  "product_id": "8366360658105",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Bali Kintamani Natural Process Coffee",
+  "url": "https://www.roastedrecord.com/products/bali-kintamani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45936154345657"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "a5f3b9c21f44a7a2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-young-producers-recruitment-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/colombia-yprl-12oz.png?v=1785337554",
+  "platform": "shopify",
+  "product_id": "8366364524729",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Roast: Medium",
+   "Type: Blend"
+  ],
+  "title": "Colombian Young Producers Recruitment Lot",
+  "url": "https://www.roastedrecord.com/products/colombian-young-producers-recruitment-lot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45936172400825"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "de76a36e63e78357",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopian-washed-process-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/ethiopia-gotiti-12oz.png?v=1785337554",
+  "platform": "shopify",
+  "product_id": "8366369145017",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Ethiopia",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Organic Ethiopian Washed Process Coffee",
+  "url": "https://www.roastedrecord.com/products/organic-ethiopian-washed-process-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45936190292153"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "256d10d44c5a871c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/sumatra-12oz.png?v=1785337554",
+  "platform": "shopify",
+  "product_id": "8366468169913",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Origin: Indonesia",
+   "Roast: Medium/Dark",
+   "Type: Single Origin"
+  ],
+  "title": "Organic Sumatra Mandheling Coffee",
+  "url": "https://www.roastedrecord.com/products/sumatra-mandheling-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45936959422649"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "bbf9e767170560d7",
+  "first_seen": "2026-10-26",
+  "handle": "primer-paso",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/primer-paso_w3.png?v=1780951343",
+  "platform": "shopify",
+  "product_id": "8524045844665",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Origin: Colombia",
+   "Preorder",
+   "Roast: Light",
+   "Roast: Medium",
+   "Type: Single Origin"
+  ],
+  "title": "Primer Paso | Colombian Natural Anaerobic Grown Exclusively by The Roasted Record",
+  "url": "https://www.roastedrecord.com/products/primer-paso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "47274959175865"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "bc31f585d2f404e8",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-brewing-water-minerals",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/1-gallon-two-pack-124064.jpg?v=1784819275",
+  "platform": "shopify",
+  "product_id": "8623778562233",
+  "product_type": "Brewing Supplies",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Accessories",
+   "Brewing",
+   "Water"
+  ],
+  "title": "Third Wave Water — Light Roast Profile (1 Gallon 2-Pack)",
+  "url": "https://www.roastedrecord.com/products/third-wave-water-brewing-water-minerals",
+  "variants": [
+   {
+    "available": true,
+    "grams": 68,
+    "price_usd": 4.95,
+    "title": "Default Title",
+    "variant_id": "48310581035193"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "234a00a45b07e764",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-medium-roast-profile-1-gallon-2-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/1-gallon-two-pack-522115.jpg?v=1784819277",
+  "platform": "shopify",
+  "product_id": "8624035168441",
+  "product_type": "Brewing Supplies",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Accessories",
+   "Brewing",
+   "Water"
+  ],
+  "title": "Third Wave Water — Medium Roast Profile (1 Gallon 2-Pack)",
+  "url": "https://www.roastedrecord.com/products/third-wave-water-medium-roast-profile-1-gallon-2-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 68,
+    "price_usd": 4.95,
+    "title": "Default Title",
+    "variant_id": "48311421993145"
+   }
+  ],
+  "vendor": "Third Wave Water"
+ },
+ {
+  "body_hash": "5963f81e1e66c2fb",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-pb-muhari-single-origin-washed-process-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/rwanda-pb-muhari-340g.png?v=1785532098",
+  "platform": "shopify",
+  "product_id": "8629724512441",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Rwanda",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Rwanda PB Muhari Single Origin Washed Process Coffee",
+  "url": "https://www.roastedrecord.com/products/rwanda-pb-muhari-single-origin-washed-process-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "48386124644537"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "8882eae89d009438",
+  "first_seen": "2026-10-26",
+  "handle": "luna-azul-black-honey-colombian-coffee-grown-by-andres-cardona",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/luna-azul-preorder-v2.png?v=1789071999",
+  "platform": "shopify",
+  "product_id": "8692512587961",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Andres Cardona",
+   "Coffee",
+   "Origin: Colombia",
+   "Preorder",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "PRE-ORDER · Luna Azul | Black Honey Colombian Coffee Grown by Andrés Cardona",
+  "url": "https://www.roastedrecord.com/products/luna-azul-black-honey-colombian-coffee-grown-by-andres-cardona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "49111794581689"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "6758c754d1d3c333",
+  "first_seen": "2026-10-26",
+  "handle": "red-sunset-semi-washed-colombian-coffee-grown-by-andres-cardona",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/red-sunset-preorder-v2.png?v=1789072000",
+  "platform": "shopify",
+  "product_id": "8692512686265",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Andres Cardona",
+   "Coffee",
+   "Origin: Colombia",
+   "Preorder",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "PRE-ORDER · Red Sunset | Semi-Washed Colombian Coffee Grown by Andrés Cardona",
+  "url": "https://www.roastedrecord.com/products/red-sunset-semi-washed-colombian-coffee-grown-by-andres-cardona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "49111794679993"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "fba54ee0b2a73cb5",
+  "first_seen": "2026-10-26",
+  "handle": "purple-honey-sugar-cane-ferment-colombian-coffee-grown-by-andres-cardona",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/purple-honey-preorder-v2.png?v=1789071999",
+  "platform": "shopify",
+  "product_id": "8692513145017",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Andres Cardona",
+   "Coffee",
+   "Origin: Colombia",
+   "Preorder",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "PRE-ORDER · Purple Honey | Sugar Cane Ferment Colombian Coffee Grown by Andrés Cardona",
+  "url": "https://www.roastedrecord.com/products/purple-honey-sugar-cane-ferment-colombian-coffee-grown-by-andres-cardona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "49111795138745"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ },
+ {
+  "body_hash": "1ca45aefc3beebf5",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus-fully-washed-single-origin-coffee-from-the-slopes-of-mount-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0947/8802/files/kenya-aa-12oz.png?v=1789678557",
+  "platform": "shopify",
+  "product_id": "8719059386553",
+  "product_type": "Coffee",
+  "roaster_slug": "roastedrecord",
+  "tags": [
+   "Coffee",
+   "Fruity",
+   "Origin: Kenya",
+   "Roast: Light",
+   "Type: Single Origin"
+  ],
+  "title": "Kenya AA Plus | Fully Washed Single-Origin Coffee from the Slopes of Mount Kenya",
+  "url": "https://www.roastedrecord.com/products/kenya-aa-plus-fully-washed-single-origin-coffee-from-the-slopes-of-mount-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "49163318624441"
+   }
+  ],
+  "vendor": "The Roasted Record Coffee Shop & Roaster - Stuart Florida"
+ }
+]

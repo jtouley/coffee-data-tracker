@@ -1,0 +1,1040 @@
+[
+ {
+  "body_hash": "2b9d262bab77b82f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-antioquia",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_decaf-colombia.jpg?v=1782225702",
+  "platform": "shopify",
+  "product_id": "10034361467163",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [
+   "decaf"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://coffeebreakhsv.com/products/decaf-colombia-antioquia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51261024731419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "51261024764187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "51261024796955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.99,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "54354051957019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.99,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "54354051989787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.99,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "54354052022555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.99,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "54354052055323"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "7525807711cf4e4a",
+  "first_seen": "2026-10-26",
+  "handle": "peru-aprocassi",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_peru.jpg?v=1782225701",
+  "platform": "shopify",
+  "product_id": "10243022225691",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Peru, Aprocassi",
+  "url": "https://coffeebreakhsv.com/products/peru-aprocassi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52237481476379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "52237481509147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "52237481541915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "52237481574683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "52237481607451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "52237481640219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "52237481672987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "52237481705755"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "3d563affced07e1d",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-ibisi-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/rwanda-ibisi-mountain.jpg?v=1781528669",
+  "platform": "shopify",
+  "product_id": "10271936577819",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Rwanda, Ibisi Mountain",
+  "url": "https://coffeebreakhsv.com/products/rwanda-ibisi-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52356001562907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "52356001595675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "52356001628443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Chemex",
+    "variant_id": "52356001661211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "52356001693979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.35,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "52356001726747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.35,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "52356001759515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.35,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "52356001792283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.35,
+    "title": "2lbs / Ground - Chemex",
+    "variant_id": "52356001825051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.35,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "52356001857819"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ixlama",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/guatemala-ixlama.jpg?v=1781529673",
+  "platform": "shopify",
+  "product_id": "10271943655707",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Guatemala, Ixlama",
+  "url": "https://coffeebreakhsv.com/products/guatemala-ixlama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52356071096603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "52356071129371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "52356071162139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground - Chemex",
+    "variant_id": "52356071194907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "52356071227675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "52356071260443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "52356071293211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "52356071325979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Chemex",
+    "variant_id": "52356071358747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "52356071391515"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "ddb269dd8aa62a8f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-piragua",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/colombia-la-piragua.jpg?v=1785349138",
+  "platform": "shopify",
+  "product_id": "10349884408091",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Colombia, La Piragua (Microlot)",
+  "url": "https://coffeebreakhsv.com/products/colombia-la-piragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52693792817435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "52693792850203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "52693792882971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "52693792915739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "52693792948507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "52693792981275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "52693793014043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "52693793046811"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/costa-rica-jaguar.jpg?v=1789146663",
+  "platform": "shopify",
+  "product_id": "10432054984987",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Costa Rica, Tarrazu (honey)",
+  "url": "https://coffeebreakhsv.com/products/costa-rica-tarrazu-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53876241891611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "53876241924379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "53876241957147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - Chemex",
+    "variant_id": "53876241989915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "53876242022683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "53876242055451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "53876242088219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "53876242120987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - Chemex",
+    "variant_id": "53876242153755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "53876242186523"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "74cb689903416828",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_colombia.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "8732504654107",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Colombia, Huila",
+  "url": "https://coffeebreakhsv.com/products/colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47790696726811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.63,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47790696759579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "49709487554843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "49709487587611"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "49709487685915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50030346961179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "50030346993947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "50030347026715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.25,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "50030347125019"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "country-road",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_country-road.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "8787196969243",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Country Road",
+  "url": "https://coffeebreakhsv.com/products/country-road",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47790431338779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47790431371547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "49709489029403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "49709489062171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "49709489160475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50030348009755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "50030348042523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "50030348075291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "50030348173595"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "292de0e22fc974d1",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-tirra",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_tarrazu-tirra.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "8794161348891",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Costa Rica, Tarrazu Tirra",
+  "url": "https://coffeebreakhsv.com/products/costa-rica-tarrazu-tirra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.17,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47790726906139"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.17,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "49709488111899"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.17,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "49709488144667"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.17,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "49709488242971"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.39,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50030346174747"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.39,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "50030346207515"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.39,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "50030346240283"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.39,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "50030346338587"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "74fbea00a6c37e56",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fabio-reis",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_brazil-honey.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "9811742392603",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Brazil, Fabio Reis",
+  "url": "https://coffeebreakhsv.com/products/brazil-fabio-reis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49931205542171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "49931205574939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "49931205607707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "49931205706011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49931205771547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Ground - Drip",
+    "variant_id": "49931205804315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Ground - Pourover",
+    "variant_id": "49931205837083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Ground - French Press",
+    "variant_id": "49931205935387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50030341062939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "50030341095707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "50030341128475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "50030341226779"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "d9ddcc867297779d",
+  "first_seen": "2026-10-26",
+  "handle": "finca-terrerito",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_finca-terrerito.jpg?v=1782225701",
+  "platform": "shopify",
+  "product_id": "9921312424219",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Finca Terrerito",
+  "url": "https://coffeebreakhsv.com/products/finca-terrerito",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50456087396635"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "50456087429403"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "50456087462171"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "50456087560475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.12,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50456087626011"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 37.12,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "50456087658779"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 37.12,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "50456087691547"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 37.12,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "50456087789851"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 83.15,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "50456087855387"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "eaee35daaed11ca7",
+  "first_seen": "2026-10-26",
+  "handle": "ground-control",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_ground-control.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "9980616048923",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [],
+  "title": "Ground Control",
+  "url": "https://coffeebreakhsv.com/products/ground-control",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51135968018715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "51135968051483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "51135968084251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "51231590908187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "51231590940955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "51231590973723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "51231591006491"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "51231591039259"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "51231591072027"
+   }
+  ],
+  "vendor": "Coffee Break"
+ },
+ {
+  "body_hash": "f23fd11608125de2",
+  "first_seen": "2026-10-26",
+  "handle": "singing-river",
+  "image": "https://cdn.shopify.com/s/files/1/0808/1191/7595/files/coffeebreak_product_singing-river.jpg?v=1782225700",
+  "platform": "shopify",
+  "product_id": "9980639150363",
+  "product_type": "coffee",
+  "roaster_slug": "coffeebreakhsv",
+  "tags": [
+   "blend"
+  ],
+  "title": "Singing River",
+  "url": "https://coffeebreakhsv.com/products/singing-river",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51082272014619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "51082272047387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - Pourover",
+    "variant_id": "51082272080155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "51082272178459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "51082272243995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Drip",
+    "variant_id": "51082272276763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - Pourover",
+    "variant_id": "51082272309531"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lbs / Ground - French Press",
+    "variant_id": "51082272407835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "51082272473371"
+   }
+  ],
+  "vendor": "Coffee Break"
+ }
+]

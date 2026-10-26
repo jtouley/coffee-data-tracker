@@ -1,0 +1,527 @@
+[
+ {
+  "body_hash": "841d5752f2478cab",
+  "first_seen": "2026-10-26",
+  "handle": "abuela-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/Abuela_Blend.webp?v=1753809007",
+  "platform": "shopify",
+  "product_id": "10850284568735",
+  "product_type": "Coffee",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Abuela Blend",
+  "url": "https://www.choco-coffee.com/products/abuela-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62441450176671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62441450209439"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62441450242207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62441450274975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62441450307743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62441450340511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62441450471583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62441450504351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62441450537119"
+   }
+  ],
+  "vendor": "Chococ Coffee Roasters"
+ },
+ {
+  "body_hash": "610174cc98c7a4e8",
+  "first_seen": "2026-10-26",
+  "handle": "comunidad-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/Communidad_Blend.webp?v=1753809051",
+  "platform": "shopify",
+  "product_id": "10850284667039",
+  "product_type": "Coffee",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Comunidad Blend",
+  "url": "https://www.choco-coffee.com/products/comunidad-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62441450995871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62441451028639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62441451061407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62441451094175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62441451126943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62441451159711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62441451290783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62441451323551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62441451356319"
+   }
+  ],
+  "vendor": "Choco Coffee Roasters"
+ },
+ {
+  "body_hash": "b2a0e1c187d53ac0",
+  "first_seen": "2026-10-26",
+  "handle": "hacienda-la-papaya-typica-anaerobic-1",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/Hacienda-La-Papaya.webp?v=1784292015",
+  "platform": "shopify",
+  "product_id": "10850284699807",
+  "product_type": "",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Hacienda La Papaya Typica Anaerobic",
+  "url": "https://www.choco-coffee.com/products/hacienda-la-papaya-typica-anaerobic-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10oz (283g) / Whole Bean",
+    "variant_id": "62441451946143"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10oz (283g) / Batch Brew",
+    "variant_id": "62441451978911"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10oz (283g) / Espresso",
+    "variant_id": "62441452011679"
+   }
+  ],
+  "vendor": "Choco Coffee Roasters"
+ },
+ {
+  "body_hash": "66358d1665b5ce77",
+  "first_seen": "2026-10-26",
+  "handle": "juan-pueblo-1",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/Juan_Pueblo_Bag.webp?v=1753809147",
+  "platform": "shopify",
+  "product_id": "10850284732575",
+  "product_type": "Coffee",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Juan Pueblo",
+  "url": "https://www.choco-coffee.com/products/juan-pueblo-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62441452372127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62441452404895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62441452437663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62441452470431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62441452503199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62441452535967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62441452667039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62441452699807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62441452732575"
+   }
+  ],
+  "vendor": "Choco Coffee Roasters"
+ },
+ {
+  "body_hash": "a964198153beea50",
+  "first_seen": "2026-10-26",
+  "handle": "la-serrania-1",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/La_Serrania_Bag.webp?v=1753809117",
+  "platform": "shopify",
+  "product_id": "10850284798111",
+  "product_type": "Coffee",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "La Serrania - Decaf",
+  "url": "https://www.choco-coffee.com/products/la-serrania-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62441453093023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62441453125791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62441453158559"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62441453191327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62441453224095"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62441453256863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62441453387935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62441453420703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62441453453471"
+   }
+  ],
+  "vendor": "Chococ Coffee Roasters"
+ },
+ {
+  "body_hash": "ebbe20f30f1cd582",
+  "first_seen": "2026-10-26",
+  "handle": "yacuri-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/YacuriTypica.jpg?v=1778166396",
+  "platform": "shopify",
+  "product_id": "10911191629983",
+  "product_type": "",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Yacuri Typica",
+  "url": "https://www.choco-coffee.com/products/yacuri-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62788881023135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62788881055903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62788881088671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62788881121439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62788881154207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62788881186975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62788881318047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62788881350815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62788881383583"
+   }
+  ],
+  "vendor": "Choco Coffee Roasters"
+ },
+ {
+  "body_hash": "309b7c78a3d0700c",
+  "first_seen": "2026-10-26",
+  "handle": "chito-community",
+  "image": "https://cdn.shopify.com/s/files/1/0578/0045/8399/files/Chito_Commnity_12oz_Bag_web.jpgYacuri_Sidra_12oz_Bag_web.jpgYacuri_Typica_12oz_Bag_web.jpg?v=1778247939",
+  "platform": "shopify",
+  "product_id": "10911386599583",
+  "product_type": "",
+  "roaster_slug": "choco-pronto",
+  "tags": [
+   "retail"
+  ],
+  "title": "Chito Community",
+  "url": "https://www.choco-coffee.com/products/chito-community",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "62789338136735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Batch Brew",
+    "variant_id": "62789338169503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Espresso",
+    "variant_id": "62789338202271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (908g) / Whole Bean",
+    "variant_id": "62789338235039"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (908g) / Batch Brew",
+    "variant_id": "62789338267807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (908g) / Espresso",
+    "variant_id": "62789338300575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2270g) / Whole Bean",
+    "variant_id": "62789338333343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2270g) / Batch Brew",
+    "variant_id": "62789338366111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2270g) / Espresso",
+    "variant_id": "62789338398879"
+   }
+  ],
+  "vendor": "Choco Coffee Roasters"
+ }
+]

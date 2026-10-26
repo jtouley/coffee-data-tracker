@@ -1,0 +1,208 @@
+[
+ {
+  "body_hash": "6cac4cb43c7fd761",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-product-3",
+  "image": "https://static1.squarespace.com/static/57a8fc2e2e69cf821eb544ac/57a909bdb3db2b0e6c4302d2/57bb618f20099e4093db821f/1754163134052/",
+  "platform": "squarespace",
+  "product_id": "57bb618f20099e4093db821f",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Stick House Blend",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/coffee-product-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.65,
+    "title": "12.oz Bag",
+    "variant_id": "737c0251-3cbf-4938-8347-d335cc356caf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb Bag",
+    "variant_id": "94620e1a-1850-4049-9397-2a4186fa0a95"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "704248251295d905",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-product-4",
+  "image": "https://images.squarespace-cdn.com/content/v1/57a8fc2e2e69cf821eb544ac/1612897403922-W8KJZU7RHWLAKAWZ0VIX/SWP+Decaf.jpg",
+  "platform": "squarespace",
+  "product_id": "57bb61d9f7e0ab864cf8765d",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "SWP Decaf Colombia",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/coffee-product-4",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb bag",
+    "variant_id": "8e65f37f-6d87-462b-94ab-8fa1154472fd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.45,
+    "title": "12.oz Bag",
+    "variant_id": "c09427de-b069-413c-b492-1dd59d5dc01e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb bag",
+    "variant_id": "f6fdd6b1-c82d-41f4-949b-f35baced05c5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b8cdf5980de8e6b",
+  "first_seen": "2026-10-26",
+  "handle": "the-adventurer",
+  "image": "https://images.squarespace-cdn.com/content/v1/57a8fc2e2e69cf821eb544ac/1612897290347-77FEJRGNYLE2R505X28N/The+Adventurer.jpg",
+  "platform": "squarespace",
+  "product_id": "5890e923f7e0ab3023e91d11",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "The Adventurer",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/the-adventurer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2lb",
+    "variant_id": "c87a4e55-a3dc-4f25-a688-90a141e40adf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "c88069f2-a157-4ad3-ac54-a534303f8062"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.65,
+    "title": "12z",
+    "variant_id": "d3a9d177-9e64-4aac-95f8-774c4335b0d8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20d17b294fc039a4",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-mexico",
+  "image": "https://images.squarespace-cdn.com/content/v1/57a8fc2e2e69cf821eb544ac/f340ae2e-808c-4e6f-9439-e94b969534d5/Mexico.jpg",
+  "platform": "squarespace",
+  "product_id": "5bcf735ce4966ba16a2b31a5",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico San Cristobal Nayarit",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/chiapas-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.25,
+    "title": "12z",
+    "variant_id": "75a3e349-b89f-49d8-87c1-245f7575ef57"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.5,
+    "title": "2lb",
+    "variant_id": "d9326489-886e-416d-854d-738b110a2e52"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0be9b01e19ea771",
+  "first_seen": "2026-10-26",
+  "handle": "burts-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/57a8fc2e2e69cf821eb544ac/1612896015434-W6WOVC4H4L2PPN6Q8YKG/Burts_Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5ea9f64259b16370f47ec91e",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Burt's Blend",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/burts-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 lb bag",
+    "variant_id": "c0b32d6e-1669-4d7f-98a1-65b882279f3a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.65,
+    "title": "12oz",
+    "variant_id": "e050de2d-5137-4a4f-8010-a879011a7105"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "961fe03ae214d925",
+  "first_seen": "2026-10-26",
+  "handle": "y2mldg30z2o3elovdasafg5wvzx4h8",
+  "image": "https://images.squarespace-cdn.com/content/v1/57a8fc2e2e69cf821eb544ac/1612896454330-NXM03MAMCNXDBT4LVMDA/Guatemala.jpg",
+  "platform": "squarespace",
+  "product_id": "6011d27e090564601e093b51",
+  "product_type": "Coffee",
+  "roaster_slug": "holdernesscoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala Santa Rosa",
+  "url": "https://www.holdernesscoffeeroasters.com/shop/y2mldg30z2o3elovdasafg5wvzx4h8",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.4,
+    "title": "2 lb",
+    "variant_id": "32b96ef3-436f-432c-a312-8df8e0f1910c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.35,
+    "title": "12z",
+    "variant_id": "69b8951c-511b-4b09-9a67-1f913f2e07bb"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,560 @@
+[
+ {
+  "body_hash": "8cc45b30c925de07",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-dark-roast-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Shopify_Dark_Side_Graphic_March16.png?v=1787677169",
+  "platform": "shopify",
+  "product_id": "10945495066",
+  "product_type": "Drip Coffee",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Samples"
+  ],
+  "title": "Low-Acid Dark Roast Sample Pack, Bold & French Drip Grind | trücup coffee",
+  "url": "https://trucup.com/products/low-acid-dark-roast-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 5.97,
+    "title": "Default Title",
+    "variant_id": "42357882906"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "50bab3e0d876ad2c",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Light_Roast_square.webp?v=1786572456",
+  "platform": "shopify",
+  "product_id": "4082249793",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee"
+  ],
+  "title": "Light Roast Low-Acid Coffee",
+  "url": "https://trucup.com/products/light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "12130712065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French press) / 2 lb.",
+    "variant_id": "12130780737"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "12130782785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "40453685837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French press) / 12 oz.",
+    "variant_id": "40453695501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "40453700557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "47104795377944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French press) / 5 lb.",
+    "variant_id": "47104795410712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "47104795443480"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "3ae33776b68b0172",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Medium_Roast_square.webp?v=1786572457",
+  "platform": "shopify",
+  "product_id": "4234503169",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee"
+  ],
+  "title": "Medium Roast Low-Acid Coffee",
+  "url": "https://trucup.com/products/medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "12131076801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French press) / 2 lb.",
+    "variant_id": "12131077313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "12131077633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "40453906189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French press) / 12 oz.",
+    "variant_id": "40453917069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "40453930637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "47110503268632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "47120064807192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French press) / 5 lb.",
+    "variant_id": "47120069951768"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "6472c979f0b94cc6",
+  "first_seen": "2026-10-26",
+  "handle": "bold-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Bold_Roast_square.webp?v=1786572457",
+  "platform": "shopify",
+  "product_id": "4234545537",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee"
+  ],
+  "title": "Bold Roast Low-Acid Coffee",
+  "url": "https://trucup.com/products/bold-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "12131184449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French press) / 2 lb.",
+    "variant_id": "12131184961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "12131185217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "40453823053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French press) / 12 oz.",
+    "variant_id": "40453832589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "40453849741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "47104837845272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French press) / 5 lb.",
+    "variant_id": "47104837878040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "47104837910808"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "0c61310f433463d5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/French_Roast_square.webp?v=1786572457",
+  "platform": "shopify",
+  "product_id": "4235941313",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee"
+  ],
+  "title": "French Roast Low-Acid Coffee",
+  "url": "https://trucup.com/products/french-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "12135522177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French Press) / 2 lb.",
+    "variant_id": "12135522689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "12135522945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "40453739789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French Press) / 12 oz.",
+    "variant_id": "40453775821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "40453782669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "47104808288536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French Press) / 5 lb.",
+    "variant_id": "47104808321304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "47104808354072"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "7d7b2a7c9feb7f99",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Espresso_Blend_square.webp?v=1786572457",
+  "platform": "shopify",
+  "product_id": "4236000449",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee"
+  ],
+  "title": "Espresso Blend Low-Acid Coffee",
+  "url": "https://trucup.com/products/espresso-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French Press) / 2 lb.",
+    "variant_id": "12135623297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "12135623617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Espresso Grind / 2 lb.",
+    "variant_id": "12135623873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "12135624193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French Press) / 12 oz.",
+    "variant_id": "40453965581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "40453970573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Espresso Grind / 12 oz.",
+    "variant_id": "40453974541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "40453985421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French Press) / 5 lb.",
+    "variant_id": "47104849936664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "47104849969432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Espresso Grind / 5 lb.",
+    "variant_id": "47104850002200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "47104850034968"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "ee678b0626bab1e4",
+  "first_seen": "2026-10-26",
+  "handle": "low-acid-coffee-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/RESIZE-Shopify-Light-Side-Graphic-_1.png?v=1787676877",
+  "platform": "shopify",
+  "product_id": "9387506827544",
+  "product_type": "Drip Coffee",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Samples"
+  ],
+  "title": "Low-Acid Light Side Light & Medium Drip Samples",
+  "url": "https://trucup.com/products/low-acid-coffee-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 5.97,
+    "title": "Default Title",
+    "variant_id": "48831654527256"
+   }
+  ],
+  "vendor": "trucup coffee"
+ },
+ {
+  "body_hash": "fb9a91b1d0b8c500",
+  "first_seen": "2026-10-26",
+  "handle": "trucup-low-acid-half-caff-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1153/4954/files/Half_Caff_square.webp?v=1786572456",
+  "platform": "shopify",
+  "product_id": "9874831081752",
+  "product_type": "Roasts",
+  "roaster_slug": "trucup",
+  "tags": [
+   "Bagged Coffee",
+   "Low-acid coffee"
+  ],
+  "title": "Half-Caff Low-Acid Coffee",
+  "url": "https://trucup.com/products/trucup-low-acid-half-caff-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "50660848861464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 2 lb.",
+    "variant_id": "50660848894232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "50660848927000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Drip Grind / 12 oz.",
+    "variant_id": "50660848959768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 2 lb.",
+    "variant_id": "50660848992536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Drip Grind / 5 lb.",
+    "variant_id": "50660849025304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Coarse Grind (French Press) / 12 oz.",
+    "variant_id": "50660849058072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "Coarse Grind (French Press) / 2 lb.",
+    "variant_id": "50660849090840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.95,
+    "title": "Coarse Grind (French Press) / 5 lb.",
+    "variant_id": "50660849123608"
+   }
+  ],
+  "vendor": "trucup coffee"
+ }
+]

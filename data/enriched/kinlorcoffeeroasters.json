@@ -1,0 +1,62 @@
+{
+ "8350683988141": {
+  "body_hash": "ba88162983921135",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "toffee",
+   "peanut butter",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "8355464577197": {
+  "body_hash": "1c9d817d7fbbffad",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "walnut",
+   "dried dates",
+   "hot chocolate"
+  ],
+  "varietals": []
+ },
+ "8355464675501": {
+  "body_hash": "93b586141473083a",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "blackberry",
+   "fudge",
+   "vanilla bean"
+  ],
+  "varietals": []
+ }
+}

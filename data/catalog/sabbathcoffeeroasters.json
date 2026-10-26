@@ -1,0 +1,1574 @@
+[
+ {
+  "body_hash": "8396e157ae50aca7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/ColombiaDecafMock-Up_f7480a21-f424-4136-b42f-57829056fd05.png?v=1773671529",
+  "platform": "shopify",
+  "product_id": "5716191281305",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "Decaf",
+   "Perpetual",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://sabbathcoffeeroasters.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "36414053220505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "36414053286041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Chemex / 2 lb",
+    "variant_id": "36457141305497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "V60 / 2 lb",
+    "variant_id": "36457145696409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Chemex / 5 lb",
+    "variant_id": "36457150546073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "V60 / 5 lb",
+    "variant_id": "36457153396889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "36458551869593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "36458555146393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "36458556260505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "36458557276313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "36458560159897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "36458561831065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36958125654169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36958127521945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36958127882393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "37332236959897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Espresso / 2 lb",
+    "variant_id": "37332244725913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "37332249116825"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "e368ebafc88e2019",
+  "first_seen": "2026-10-26",
+  "handle": "ritual-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/RitualMock-Up_83a63a67-5417-4a15-a60c-3baac25947f9.png?v=1773672933",
+  "platform": "shopify",
+  "product_id": "5716198293657",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Best Seller",
+   "Blends",
+   "Coffee",
+   "Perpetual",
+   "Subscription"
+  ],
+  "title": "Ritual House Blend",
+  "url": "https://sabbathcoffeeroasters.com/products/ritual-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "36458769318041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "Chemex / 2 lb",
+    "variant_id": "36458769350809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "Chemex / 5 lb",
+    "variant_id": "36458769383577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "36458769416345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "V60 / 2 lb",
+    "variant_id": "36458769449113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "V60 / 5 lb",
+    "variant_id": "36458769481881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "36458769514649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "French Press / 2 lb",
+    "variant_id": "36458769547417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "French Press / 5 lb",
+    "variant_id": "36458769580185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "36458769612953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "Drip / 2 lb",
+    "variant_id": "36458769645721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "Drip / 5 lb",
+    "variant_id": "36458769678489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36958161010841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36958162321561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36958163566745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "37332289192089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "Espresso / 2 lb",
+    "variant_id": "37332289224857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "Espresso / 5 lb",
+    "variant_id": "37332289290393"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "9f62e3331b98602b",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/Roaster_sChoice-12oz.png?v=1773674277",
+  "platform": "shopify",
+  "product_id": "5865986031769",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "Our Drink of Choice",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://sabbathcoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45166102348006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.33,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45546888659174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.67,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45546888691942"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "8a44c4e8888fbf80",
+  "first_seen": "2026-10-26",
+  "handle": "lunar-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/LunarDarkRoastMock-Up.png?v=1773672840",
+  "platform": "shopify",
+  "product_id": "7781664653542",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "Perpetual",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Lunar Dark Roast",
+  "url": "https://sabbathcoffeeroasters.com/products/lunar-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42906280165606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "42906280198374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "42906280231142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "42906280263910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Chemex / 2 lb",
+    "variant_id": "42906280296678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Chemex / 5 lb",
+    "variant_id": "42906280329446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "42906280362214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "V60 / 2 lb",
+    "variant_id": "42906280394982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "V60 / 5 lb",
+    "variant_id": "42906280427750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "42906280460518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "42906280493286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "42906280526054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "42906280558822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "42906280591590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "42906280624358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "42906280657126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Espresso / 2 lb",
+    "variant_id": "42906280689894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "42906280722662"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "936cb2d7bba03a44",
+  "first_seen": "2026-10-26",
+  "handle": "liturgy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/LiturgyBlendMock-Up.png?v=1773672724",
+  "platform": "shopify",
+  "product_id": "8242898665702",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Blends",
+   "Coffee",
+   "Perpetual"
+  ],
+  "title": "Liturgy Blend",
+  "url": "https://sabbathcoffeeroasters.com/products/liturgy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43828323352806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "43828323385574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43828323418342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "43828323451110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "Chemex / 2 lb",
+    "variant_id": "43828323483878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "Chemex / 5 lb",
+    "variant_id": "43828323516646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "43828323549414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "V60 / 2 lb",
+    "variant_id": "43828323582182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "V60 / 5 lb",
+    "variant_id": "43828323614950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "43828323647718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "French Press / 2 lb",
+    "variant_id": "43828323680486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "French Press / 5 lb",
+    "variant_id": "43828323713254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "43828323746022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "Drip / 2 lb",
+    "variant_id": "43828323778790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "Drip / 5 lb",
+    "variant_id": "43828323811558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "43828323844326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.67,
+    "title": "Espresso / 2 lb",
+    "variant_id": "43828323877094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.33,
+    "title": "Espresso / 5 lb",
+    "variant_id": "43828323909862"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "73c84ab33dfeef28",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/Brazil-12ozMockUp_ff3cfac3-ca6a-4ac6-bee5-95ef7a66e50a.png?v=1787056390",
+  "platform": "shopify",
+  "product_id": "8914140070118",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Best Seller",
+   "Coffee",
+   "Perpetual",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Brazil Serra Negra",
+  "url": "https://sabbathcoffeeroasters.com/products/brazil-serra-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45605810307302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "45605810340070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "45605810372838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "45605810405606"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Chemex / 2 lb",
+    "variant_id": "45605810438374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Chemex / 5 lb",
+    "variant_id": "45605810471142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "45605810503910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "V60 / 2 lb",
+    "variant_id": "45605810536678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "V60 / 5 lb",
+    "variant_id": "45605810569446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "45605810602214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "45605810634982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "45605810667750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "45605810700518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "45605810733286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "45605810766054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "45605810798822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Espresso / 2 lb",
+    "variant_id": "45605810831590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "45605810864358"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "607f9c4d5668942e",
+  "first_seen": "2026-10-26",
+  "handle": "black-condor",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/12OZ_214d0232-31c3-487b-b5ac-2a0886780aec.png?v=1773670962",
+  "platform": "shopify",
+  "product_id": "9422019199206",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "New",
+   "Our Drink of Choice",
+   "Single Origin",
+   "Transient"
+  ],
+  "title": "Black Condor",
+  "url": "https://sabbathcoffeeroasters.com/products/black-condor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46681132499174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46681132531942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "46681132564710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "46681132597478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Chemex / 2 lb",
+    "variant_id": "46681132630246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Chemex / 5 lb",
+    "variant_id": "46681132663014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "46681132695782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "V60 / 2 lb",
+    "variant_id": "46681132728550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "V60 / 5 lb",
+    "variant_id": "46681132761318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "46681132794086"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "46681132826854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "46681132859622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "46681132892390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "46681132925158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "46681132957926"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "46681132990694"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Espresso / 2 lb",
+    "variant_id": "46681133023462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "46681133056230"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "34ead3b3c5b56f4e",
+  "first_seen": "2026-10-26",
+  "handle": "el-vergel-estate-26",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/12ozelvergel_b33cc9fa-4dda-4d4b-9e09-ef0308a09b1d.png?v=1789649072",
+  "platform": "shopify",
+  "product_id": "9632650428646",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "Limited Edition",
+   "New",
+   "Our Drink of Choice",
+   "Single Origin",
+   "Transient"
+  ],
+  "title": "El Vergel Estate",
+  "url": "https://sabbathcoffeeroasters.com/products/el-vergel-estate-26",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47367923630310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "47367923663078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "47367923695846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "47367923728614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Chemex / 2 lb",
+    "variant_id": "47367923761382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Chemex / 5 lb",
+    "variant_id": "47367923794150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "47367923826918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "V60 / 2 lb",
+    "variant_id": "47367923859686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "V60 / 5 lb",
+    "variant_id": "47367923892454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "47367923925222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "French Press / 2 lb",
+    "variant_id": "47367923957990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "French Press / 5 lb",
+    "variant_id": "47367923990758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "47367924023526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Drip / 2 lb",
+    "variant_id": "47367924056294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Drip / 5 lb",
+    "variant_id": "47367924089062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "47367924121830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Espresso / 2 lb",
+    "variant_id": "47367924154598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Espresso / 5 lb",
+    "variant_id": "47367924187366"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "1cfc0c9639a6ab12",
+  "first_seen": "2026-10-26",
+  "handle": "gakui",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/12oz_2e844518-a27b-498d-94c6-5d2ef42bac01.png?v=1783608495",
+  "platform": "shopify",
+  "product_id": "9770158784742",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "New",
+   "Our Drink of Choice",
+   "Single Origin",
+   "Transient"
+  ],
+  "title": "Gakui",
+  "url": "https://sabbathcoffeeroasters.com/products/gakui",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "47965514596582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "47965514629350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "47965514662118"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "47965514694886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Chemex / 2 lb",
+    "variant_id": "47965514727654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Chemex / 5 lb",
+    "variant_id": "47965514760422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "47965514793190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "V60 / 2 lb",
+    "variant_id": "47965514825958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "V60 / 5 lb",
+    "variant_id": "47965514858726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "47965514891494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "French Press / 2 lb",
+    "variant_id": "47965514924262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "French Press / 5 lb",
+    "variant_id": "47965514957030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "47965514989798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Drip / 2 lb",
+    "variant_id": "47965515022566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Drip / 5 lb",
+    "variant_id": "47965515055334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "47965515088102"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "Espresso / 2 lb",
+    "variant_id": "47965515120870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.33,
+    "title": "Espresso / 5 lb",
+    "variant_id": "47965515153638"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "62d531a986d5e429",
+  "first_seen": "2026-10-26",
+  "handle": "las-lajas-gusher",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/8oz_2a82ddf0-dbc4-486b-8f73-361b35107cdc.png?v=1784737621",
+  "platform": "shopify",
+  "product_id": "9783791681766",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Anomalous",
+   "Coffee",
+   "Our Drink of Choice",
+   "Single Origin"
+  ],
+  "title": "Las Lajas Gusher",
+  "url": "https://sabbathcoffeeroasters.com/products/las-lajas-gusher",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "48031884640486"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "48031884673254"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "48031884706022"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "48031884738790"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Chemex / 8 oz",
+    "variant_id": "48031884771558"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "48031884804326"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "Chemex / 2 lb",
+    "variant_id": "48031884837094"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "Chemex / 5 lb",
+    "variant_id": "48031884869862"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "V60 / 8 oz",
+    "variant_id": "48031884902630"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "48031884935398"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "V60 / 2 lb",
+    "variant_id": "48031884968166"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "V60 / 5 lb",
+    "variant_id": "48031885000934"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "French Press / 8 oz",
+    "variant_id": "48031885033702"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "48031885066470"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "French Press / 2 lb",
+    "variant_id": "48031885099238"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "French Press / 5 lb",
+    "variant_id": "48031885132006"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Drip / 8 oz",
+    "variant_id": "48031885164774"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "48031885197542"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "Drip / 2 lb",
+    "variant_id": "48031885230310"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "Drip / 5 lb",
+    "variant_id": "48031885263078"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Espresso / 8 oz",
+    "variant_id": "48031885295846"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "48031885328614"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 88.0,
+    "title": "Espresso / 2 lb",
+    "variant_id": "48031885361382"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "Espresso / 5 lb",
+    "variant_id": "48031885394150"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ },
+ {
+  "body_hash": "bdc3d929013e6c31",
+  "first_seen": "2026-10-26",
+  "handle": "big-grit-energy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0473/7522/0889/files/12oz_33cd5ffd-22ce-483a-9d77-431a4a603ed7.png?v=1789143239",
+  "platform": "shopify",
+  "product_id": "9849734791398",
+  "product_type": "Coffee",
+  "roaster_slug": "sabbathcoffeeroasters",
+  "tags": [
+   "All Products",
+   "Coffee",
+   "New",
+   "Our Drink of Choice",
+   "Single Origin",
+   "Transient"
+  ],
+  "title": "Big Grit Energy",
+  "url": "https://sabbathcoffeeroasters.com/products/big-grit-energy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "48330696065254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "48330696098022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "48330696130790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Chemex / 12 oz",
+    "variant_id": "48330696163558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "Chemex / 2 lb",
+    "variant_id": "48330696196326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "Chemex / 5 lb",
+    "variant_id": "48330696229094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "V60 / 12 oz",
+    "variant_id": "48330696261862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "V60 / 2 lb",
+    "variant_id": "48330696294630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "V60 / 5 lb",
+    "variant_id": "48330696327398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press / 12 oz",
+    "variant_id": "48330696360166"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "French Press / 2 lb",
+    "variant_id": "48330696392934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "French Press / 5 lb",
+    "variant_id": "48330696425702"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12 oz",
+    "variant_id": "48330696458470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "Drip / 2 lb",
+    "variant_id": "48330696491238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "Drip / 5 lb",
+    "variant_id": "48330696524006"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso / 12 oz",
+    "variant_id": "48330696556774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "Espresso / 2 lb",
+    "variant_id": "48330696589542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.33,
+    "title": "Espresso / 5 lb",
+    "variant_id": "48330696622310"
+   }
+  ],
+  "vendor": "Sabbath Coffee Roasters"
+ }
+]

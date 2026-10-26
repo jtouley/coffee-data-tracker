@@ -1,0 +1,286 @@
+[
+ {
+  "body_hash": "9dbf681398c17d24",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-burundi-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/guatemala-regional-select-single-origin-coffee-545338.png?v=1724952717",
+  "platform": "shopify",
+  "product_id": "12503420403872",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Guatemala Medium Roast",
+  "url": "https://rivetcoffee.com/products/copy-of-burundi-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "48768082837664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs Bag",
+    "variant_id": "48768082935968"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "451f814e4cd6855f",
+  "first_seen": "2026-10-26",
+  "handle": "atlas-premium-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/atlas-premium-dark-roast-blend-194370.png?v=1724952716",
+  "platform": "shopify",
+  "product_id": "14404525555872",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Atlas Dark Roast Blend",
+  "url": "https://rivetcoffee.com/products/atlas-premium-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs",
+    "variant_id": "51268215832736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "51268227334304"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "22f34bc0ccc5d553",
+  "first_seen": "2026-10-26",
+  "handle": "rahal-house-blend-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/rahal-house-blend-medium-500478.jpg?v=1727687042",
+  "platform": "shopify",
+  "product_id": "14633207529632",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [],
+  "title": "Rahal House Blend",
+  "url": "https://rivetcoffee.com/products/rahal-house-blend-medium",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "52342311059616"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb",
+    "variant_id": "52342311092384"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "5e49f6958d03c58e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-white-honey-single-farmer-project",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/costa-rica-white-honey-single-farmer-project-4829814.jpg?v=1788525609",
+  "platform": "shopify",
+  "product_id": "15832713068704",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [],
+  "title": "Costa Rica White Honey - Single Farmer Project",
+  "url": "https://rivetcoffee.com/products/costa-rica-white-honey-single-farmer-project",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "58726969082016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs",
+    "variant_id": "58726969114784"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "0de3c13af3a72a6a",
+  "first_seen": "2026-10-26",
+  "handle": "caravel-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/caravel-espresso-blend-384976.png?v=1724952716",
+  "platform": "shopify",
+  "product_id": "4397458423944",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Caravel House Blend",
+  "url": "https://rivetcoffee.com/products/caravel-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "31429187403912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs Bag",
+    "variant_id": "31429187469448"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "230b7b8c25ec4c83",
+  "first_seen": "2026-10-26",
+  "handle": "globe-trotter-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/globe-trotter-coffee-blend-538051.png?v=1724952717",
+  "platform": "shopify",
+  "product_id": "4413225402504",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Globe Trotter Coffee Blend",
+  "url": "https://rivetcoffee.com/products/globe-trotter-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz Bag",
+    "variant_id": "31504708042888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs Bag",
+    "variant_id": "31504708075656"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "a948c622b825c21f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-sugar-cane-process-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/decaf-colombia-sugar-cane-process-coffee-319170.png?v=1724952717",
+  "platform": "shopify",
+  "product_id": "7045935628448",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://rivetcoffee.com/products/decaf-colombia-sugar-cane-process-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Bag",
+    "variant_id": "41106274779296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs Bag",
+    "variant_id": "41106274844832"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "ef2408857ca3dcb9",
+  "first_seen": "2026-10-26",
+  "handle": "basecamp-dark-roast-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/sumatra-dark-roast-single-origin-coffee-172155.png?v=1724952718",
+  "platform": "shopify",
+  "product_id": "7214249214112",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Sumatra Dark Roast",
+  "url": "https://rivetcoffee.com/products/basecamp-dark-roast-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "41603139960992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs Bag",
+    "variant_id": "41603140059296"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ },
+ {
+  "body_hash": "2bafd4ab0c4d94ef",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0274/6915/2392/files/ethiopia-washed-yirgacheffe-single-origin-coffee-474645.png?v=1724952716",
+  "platform": "shopify",
+  "product_id": "7242563125408",
+  "product_type": "Coffee",
+  "roaster_slug": "rivetcoffee",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Ethiopia Natural Yirgacheffe - Single Farmer Project",
+  "url": "https://rivetcoffee.com/products/ethiopia-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz Bag",
+    "variant_id": "41703836713120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs Bag",
+    "variant_id": "41703836778656"
+   }
+  ],
+  "vendor": "RIVET Coffee"
+ }
+]

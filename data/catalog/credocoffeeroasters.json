@@ -1,0 +1,1328 @@
+[
+ {
+  "body_hash": "720ab718ae99f2ac",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Mexico_12_oz_2.jpg?v=1770513831",
+  "platform": "shopify",
+  "product_id": "8286472175868",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Mexico",
+  "url": "https://credocoffeeroasters.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45086969004284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45086969037052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45086969069820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45086969102588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "46739528155388"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "47963491107068"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "47963491139836"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "47963491172604"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "47963491205372"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "47963491238140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48017137500412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48017137533180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48017137565948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "48017137598716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48017137631484"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "3a1e5d95a677b53e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Guatemala_12_oz_2.jpg?v=1770514232",
+  "platform": "shopify",
+  "product_id": "8286784618748",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://credocoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45087942836476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45087942869244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45087942902012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45087942934780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "46739521241340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48016421617916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48016421650684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48016421683452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "48016421716220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48016421748988"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48016421781756"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48016421814524"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48016421847292"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "48016421880060"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48016421912828"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "127baa08d833e4ca",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-c",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Kenya_12_oz_2.jpg?v=1770512789",
+  "platform": "shopify",
+  "product_id": "8286785241340",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Kenya C",
+  "url": "https://credocoffeeroasters.com/products/kenya-c",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45087944376572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45087944409340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45087944442108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45087944474876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "46739527434492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48017427628284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48017427661052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48017427693820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "48017427726588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48017427759356"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48017427792124"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48017427824892"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48017427857660"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "48017427890428"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48017427923196"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "9826c9332537aa14",
+  "first_seen": "2026-10-26",
+  "handle": "juntos",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Juntos_12_oz_2.jpg?v=1770513899",
+  "platform": "shopify",
+  "product_id": "8286785470716",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Juntos",
+  "url": "https://credocoffeeroasters.com/products/juntos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45087947227388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45087947260156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Drip",
+    "variant_id": "45087947292924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45087947325692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45087947358460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45087947391228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45087947423996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45087947456764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "46739525370108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "46739525402876"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48018701943036"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48018701975804"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48018702008572"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "48018702041340"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48018702074108"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "2e09309844baf7d9",
+  "first_seen": "2026-10-26",
+  "handle": "407",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_407_12_oz_2.jpg?v=1770513659",
+  "platform": "shopify",
+  "product_id": "8286786814204",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "407",
+  "url": "https://credocoffeeroasters.com/products/407",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45087949095164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45087949127932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Drip",
+    "variant_id": "45087949160700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45087949193468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45087949226236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45087949259004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45087949291772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45087949324540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Refillable K-Cup",
+    "variant_id": "46739508035836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Refillable K-Cup",
+    "variant_id": "46739508068604"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48019308151036"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48019308183804"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48019308216572"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Refillable K-Cup",
+    "variant_id": "48019308249340"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48019308282108"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "92f9cdc876a336e4",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-pb",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Kenya_Peaberry_12_oz_2.jpg?v=1770512270",
+  "platform": "shopify",
+  "product_id": "8286788387068",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Kenya Peaberry",
+  "url": "https://credocoffeeroasters.com/products/kenya-pb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45087951454460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45087951487228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45087951519996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45087951552764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "46739527663868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48019513770236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48019513803004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48019513835772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "48019513868540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48019513901308"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48019513934076"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48019513966844"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48019513999612"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "48019514032380"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48019514065148"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "7b86146e7d5631aa",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-growlers",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/Cold_Brew_Jungle.heic?v=1749932546",
+  "platform": "shopify",
+  "product_id": "8996517347580",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "407 Cold Brew Growlers (pickup + delivery only: no shipping)",
+  "url": "https://credocoffeeroasters.com/products/cold-brew-growlers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 28.0,
+    "title": "Ready-to-Drink",
+    "variant_id": "47255626940668"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 36.0,
+    "title": "Concentrated",
+    "variant_id": "47255626973436"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "2e7623813b7c641e",
+  "first_seen": "2026-10-26",
+  "handle": "first-light",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/Bloom-2.jpg?v=1755204689",
+  "platform": "shopify",
+  "product_id": "9039848440060",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "First Light",
+  "url": "https://credocoffeeroasters.com/products/first-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47394267169020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "47394267201788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "47394267234556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "47394267267324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "47394267300092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47394267332860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "47394267365628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "47394267398396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "47394267431164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "47394267463932"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "f4b133ecf968913f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-ea-process",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Decaf_Mexico_12_oz_2.jpg?v=1770513419",
+  "platform": "shopify",
+  "product_id": "9089995014396",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Decaf Mexico EA Process",
+  "url": "https://credocoffeeroasters.com/products/decaf-colombia-ea-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48027020165372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48027020198140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48027020230908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Refillable K-Cup",
+    "variant_id": "48027020263676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48027020296444"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48027020329212"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48027020361980"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48027020394748"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1 Kilo (2.205 lb) / Refillable K-Cup",
+    "variant_id": "48027020427516"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48027020460284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48027020493052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48027020525820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48027020558588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Refillable K-Cup",
+    "variant_id": "48027020591356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48027020624124"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "06102652759fa34e",
+  "first_seen": "2026-10-26",
+  "handle": "ambition-925",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_Ambition_12_oz_1.jpg?v=1770513230",
+  "platform": "shopify",
+  "product_id": "9097286091004",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Ambition 925",
+  "url": "https://credocoffeeroasters.com/products/ambition-925",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48114145853692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48114145886460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48114145919228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Refillable K-Cup",
+    "variant_id": "48114145951996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48114145984764"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48114146017532"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48114146050300"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48114146083068"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Refillable K-Cup",
+    "variant_id": "48114146115836"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48114146148604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48114146181372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48114146214140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48114146246908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Refillable K-Cup",
+    "variant_id": "48114146279676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48114146312444"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "43da4ea3cdfd33c4",
+  "first_seen": "2026-10-26",
+  "handle": "xo-hot-shot",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026_XO_Hot_Shot_12_oz_2.jpg?v=1770512945",
+  "platform": "shopify",
+  "product_id": "9098459513084",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "XO Hot Shot",
+  "url": "https://credocoffeeroasters.com/products/xo-hot-shot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48118829744380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48118829777148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48118829809916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Refillable K-Cup",
+    "variant_id": "48118829842684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48118829875452"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48118829908220"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48118829940988"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48118829973756"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Refillable K-Cup",
+    "variant_id": "48118830006524"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48118830039292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48118830072060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48118830104828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48118830137596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Refillable K-Cup",
+    "variant_id": "48118830170364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48118830203132"
+   }
+  ],
+  "vendor": "CREDO"
+ },
+ {
+  "body_hash": "f980a80142f1eb67",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-geisha-palestina-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0681/5170/5852/files/2026Colombia12oz2.jpg?v=1773848222",
+  "platform": "shopify",
+  "product_id": "9266188747004",
+  "product_type": "",
+  "roaster_slug": "credocoffeeroasters",
+  "tags": [],
+  "title": "Colombia- Geisha Lavado",
+  "url": "https://credocoffeeroasters.com/products/colombia-geisha-palestina-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48864252297468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48864252330236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48864252363004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12 oz / Reusable K-Cup",
+    "variant_id": "48864252395772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48864252428540"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 135.0,
+    "title": "1 Kilo (2.205 lb) / Whole Bean",
+    "variant_id": "48864252461308"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 135.0,
+    "title": "1 Kilo (2.205 lb) / French Press",
+    "variant_id": "48864252494076"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 135.0,
+    "title": "1 Kilo (2.205 lb) / Drip",
+    "variant_id": "48864252526844"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 135.0,
+    "title": "1 Kilo (2.205 lb) / Reusable K-Cup",
+    "variant_id": "48864252559612"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 135.0,
+    "title": "1 Kilo (2.205 lb) / Espresso",
+    "variant_id": "48864252592380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 275.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48864252625148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 275.0,
+    "title": "5 lb / French Press",
+    "variant_id": "48864252657916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 275.0,
+    "title": "5 lb / Drip",
+    "variant_id": "48864252690684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 275.0,
+    "title": "5 lb / Reusable K-Cup",
+    "variant_id": "48864252723452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 275.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "48864252756220"
+   }
+  ],
+  "vendor": "CREDO"
+ }
+]

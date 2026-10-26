@@ -1,0 +1,3368 @@
+[
+ {
+  "body_hash": "490d6db4a68edb52",
+  "first_seen": "2026-10-26",
+  "handle": "java-bark",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05150.jpg?v=1498510558",
+  "platform": "shopify",
+  "product_id": "10345659661",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Java Bark",
+  "url": "https://java-gourmet.com/products/java-bark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "39886073869"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "c9dd2332008dfd75",
+  "first_seen": "2026-10-26",
+  "handle": "java-bark-latte",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05148.jpg?v=1498510639",
+  "platform": "shopify",
+  "product_id": "10345662413",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Java Bark Latte",
+  "url": "https://java-gourmet.com/products/java-bark-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "39886081549"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "22d233d3b0236ac8",
+  "first_seen": "2026-10-26",
+  "handle": "java-bark-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05149.jpg?v=1498510815",
+  "platform": "shopify",
+  "product_id": "10345683213",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Java Bark Decaf",
+  "url": "https://java-gourmet.com/products/java-bark-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "39886141517"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "390fb736cff5bdea",
+  "first_seen": "2026-10-26",
+  "handle": "seneca-salt-roasted-garlic-culinary-flake-salt",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05222.jpg?v=1498666725",
+  "platform": "shopify",
+  "product_id": "10358325837",
+  "product_type": "Salt",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Salt"
+  ],
+  "title": "Seneca Salt Roasted Garlic Culinary Flake Salt",
+  "url": "https://java-gourmet.com/products/seneca-salt-roasted-garlic-culinary-flake-salt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Default Title",
+    "variant_id": "39970974221"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "a2a79528d31b2025",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month-club",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/1.jpg?v=1499891589",
+  "platform": "shopify",
+  "product_id": "10430111949",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "club",
+   "coffee",
+   "month"
+  ],
+  "title": "Coffee Of The Month Club",
+  "url": "https://java-gourmet.com/products/coffee-of-the-month-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 129.0,
+    "title": "3 Month",
+    "variant_id": "40415696717"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Month-to-Month",
+    "variant_id": "40415696909"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f22e7dec3011d1f4",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-aged-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2018_bourbon_Barrel_Rub_packaging.jpg?v=1544237252",
+  "platform": "shopify",
+  "product_id": "1436917235767",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [],
+  "title": "Bourbon Barrel Aged JAVA RUB",
+  "url": "https://java-gourmet.com/products/bourbon-barrel-aged-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 11.5,
+    "title": "Default Title",
+    "variant_id": "12891147698231"
+   }
+  ],
+  "vendor": "JAVA-GOURMET"
+ },
+ {
+  "body_hash": "68afbd1b505c99a4",
+  "first_seen": "2026-10-26",
+  "handle": "caribbean-coconut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2019_Caribbean_Coconut_Decaf.jpg?v=1560168957",
+  "platform": "shopify",
+  "product_id": "1564002517047",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Caribbean Coconut Decaf",
+  "url": "https://java-gourmet.com/products/caribbean-coconut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "13776880894007"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "13776880926775"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "13776880959543"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "13776880992311"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "31ce9621ea9204d3",
+  "first_seen": "2026-10-26",
+  "handle": "caribbean-coconut",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2019_Caribbean_Coconut.jpg?v=1560168908",
+  "platform": "shopify",
+  "product_id": "1606540394551",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Caribbean Coconut",
+  "url": "https://java-gourmet.com/products/caribbean-coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "14065721376823"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "14065721409591"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "14065721442359"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "14065721475127"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "14065721507895"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "14065721540663"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "2daca645c929826e",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-spice-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05107_43eab7fe-f26e-4053-aed3-4a33a10002db.jpg?v=1567256904",
+  "platform": "shopify",
+  "product_id": "1714947588151",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Harvest Spice Decaf",
+  "url": "https://java-gourmet.com/products/harvest-spice-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "14717590667319"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "14717590700087"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "14717590732855"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "14717590765623"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "02123b70083dc367",
+  "first_seen": "2026-10-26",
+  "handle": "wild-blueberry-cobbler-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05135_51cf5285-72eb-40d1-b95f-6e88da24c9b4.jpg?v=1511381837",
+  "platform": "shopify",
+  "product_id": "204118884378",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Wild Blueberry Cobbler Decaf",
+  "url": "https://java-gourmet.com/products/wild-blueberry-cobbler-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014596886554"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014596919322"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014596952090"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014596984858"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "ba65a08931d37b18",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-filbert-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05139_2f9f32ed-f3eb-4e40-984b-4cfd21b0c2b0.jpg?v=1511381853",
+  "platform": "shopify",
+  "product_id": "204118982682",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Chocolate Filbert Decaf",
+  "url": "https://java-gourmet.com/products/chocolate-filbert-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014598000666"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014598033434"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014598066202"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014598098970"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "9b1db2720f92929a",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-filbert-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05140_2c43b0d6-de2b-42ca-af67-637014247118.jpg?v=1511381862",
+  "platform": "shopify",
+  "product_id": "204119015450",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Toasted Filbert Decaf",
+  "url": "https://java-gourmet.com/products/toasted-filbert-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014598197274"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014598230042"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014598262810"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014598295578"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "b7794f0452da4869",
+  "first_seen": "2026-10-26",
+  "handle": "sicilian-sunset-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05138_ac3a4335-432b-4e1b-8005-a153c59d3b76.jpg?v=1511381872",
+  "platform": "shopify",
+  "product_id": "204119113754",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Sicilian Sunset Decaf",
+  "url": "https://java-gourmet.com/products/sicilian-sunset-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014599016474"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014599049242"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014599082010"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014599114778"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "e13c795e7e8448fc",
+  "first_seen": "2026-10-26",
+  "handle": "tuscan-sunshine-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05137_8f4a2ffe-c59e-4dd5-ab26-f036b677d46f.jpg?v=1511381883",
+  "platform": "shopify",
+  "product_id": "204119179290",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Tuscan Sunshine Decaf",
+  "url": "https://java-gourmet.com/products/tuscan-sunshine-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014601015322"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014601048090"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014601080858"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014601113626"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "453aec20520f7a5b",
+  "first_seen": "2026-10-26",
+  "handle": "italian-chocolate-raspberry-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05136_638a03f0-ac62-471a-ab58-57148698d971.jpg?v=1511381898",
+  "platform": "shopify",
+  "product_id": "204119244826",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Italian Chocolate Raspberry Decaf",
+  "url": "https://java-gourmet.com/products/italian-chocolate-raspberry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014601211930"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014601244698"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014601277466"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014601310234"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "ee294a58ce773ce6",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-kisses-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05141_3f2afd25-4a88-4fc5-986a-378e26bf850f.jpg?v=1511381907",
+  "platform": "shopify",
+  "product_id": "204119343130",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Coconut Kisses Decaf",
+  "url": "https://java-gourmet.com/products/coconut-kisses-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "3014603538458"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "3014603571226"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3014603603994"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3014603636762"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "32ff3c2d887b6ddd",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05283.jpg?v=1511969437",
+  "platform": "shopify",
+  "product_id": "209710546970",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Jingle Bell Java Blend",
+  "url": "https://java-gourmet.com/products/jingle-bell-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Ground",
+    "variant_id": "3119547482138"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Whole Bean",
+    "variant_id": "3119547514906"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Ground",
+    "variant_id": "3119547547674"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Whole Bean",
+    "variant_id": "3119547580442"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "3119547613210"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "3119547645978"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "K Cups (9) / ground",
+    "variant_id": "42006343418042"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "c50b847eca0659ff",
+  "first_seen": "2026-10-26",
+  "handle": "merry-mocha-mint",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05273.jpg?v=1511969682",
+  "platform": "shopify",
+  "product_id": "209718837274",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Merry Mocha Mint",
+  "url": "https://java-gourmet.com/products/merry-mocha-mint",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Ground",
+    "variant_id": "3119577563162"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Whole Bean",
+    "variant_id": "3119577595930"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Ground",
+    "variant_id": "3119577628698"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Whole Bean",
+    "variant_id": "3119577661466"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "3119577694234"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "3119577727002"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.0,
+    "title": "k Cups (9) / Ground",
+    "variant_id": "42006348169402"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "0dd4abb89c3ff986",
+  "first_seen": "2026-10-26",
+  "handle": "holly-jolly-java-bark",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05275.jpg?v=1511969998",
+  "platform": "shopify",
+  "product_id": "209727946778",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Holly Jolly Java Bark",
+  "url": "https://java-gourmet.com/products/holly-jolly-java-bark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "3119607611418"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "3bf6bfea99ece382",
+  "first_seen": "2026-10-26",
+  "handle": "holly-jolly-java-bark-latte",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05276.jpg?v=1511970096",
+  "platform": "shopify",
+  "product_id": "209730437146",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Holly Jolly Java Bark Latte",
+  "url": "https://java-gourmet.com/products/holly-jolly-java-bark-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "3119617933338"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "d54b23ed9e02b754",
+  "first_seen": "2026-10-26",
+  "handle": "merry-mocha-mint-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05273_d1964abf-3795-4d7f-8889-75a5daafaf56.jpg?v=1511970728",
+  "platform": "shopify",
+  "product_id": "209750229018",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "decaf"
+  ],
+  "title": "Merry Mocha Mint Decaf",
+  "url": "https://java-gourmet.com/products/merry-mocha-mint-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Ground",
+    "variant_id": "3119698968602"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "11 oz / Whole Bean",
+    "variant_id": "3119699001370"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Ground",
+    "variant_id": "3119699034138"
+   },
+   {
+    "available": true,
+    "grams": 156,
+    "price_usd": 12.5,
+    "title": "5.5 oz / Whole Bean",
+    "variant_id": "3119699066906"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "e1281c6880bc171b",
+  "first_seen": "2026-10-26",
+  "handle": "jack-daniels-bourbon-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/20171212_152025.jpg?v=1513113046",
+  "platform": "shopify",
+  "product_id": "219507654682",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee",
+   "coffee"
+  ],
+  "title": "Krooked Tusker Bourbon Barrel Aged Coffee",
+  "url": "https://java-gourmet.com/products/jack-daniels-bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 25.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "3237948424218"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 25.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "3237948456986"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 9.5,
+    "title": "2 oz / Whole Bean",
+    "variant_id": "8441831817271"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 9.5,
+    "title": "2 oz / Ground",
+    "variant_id": "8441833226295"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "b2bb32cf7108e557",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-java-bark",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020BourbonBarrelBarksingle.jpg?v=1588006496",
+  "platform": "shopify",
+  "product_id": "4361380200503",
+  "product_type": "Bark",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Bark",
+   "Chocolate"
+  ],
+  "title": "Bourbon Barrel Java Bark",
+  "url": "https://java-gourmet.com/products/bourbon-barrel-java-bark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "31239017857079"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "307163ffa93e92c1",
+  "first_seen": "2026-10-26",
+  "handle": "bears-bicentennial-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020BCCCBicentennialBlendBeans.jpg?v=1592245843",
+  "platform": "shopify",
+  "product_id": "4475182612535",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Black Cat",
+   "Cause",
+   "Signature Blends"
+  ],
+  "title": "SLAPPY'S BEST BREW",
+  "url": "https://java-gourmet.com/products/bears-bicentennial-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Ground / $12.50",
+    "variant_id": "31708434595895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Whole Bean / $12.50",
+    "variant_id": "31708434628663"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "40b5ff7428df8664",
+  "first_seen": "2026-10-26",
+  "handle": "black-cat-bistro-finishing-salt-1",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020BCBFinishingSalt.jpg?v=1586019109",
+  "platform": "shopify",
+  "product_id": "4480549584951",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [],
+  "title": "Black Cat Bistro Finishing Salt",
+  "url": "https://java-gourmet.com/products/black-cat-bistro-finishing-salt-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 181,
+    "price_usd": 6.95,
+    "title": "Default Title",
+    "variant_id": "31735495360567"
+   }
+  ],
+  "vendor": "JAVA-GOURMET"
+ },
+ {
+  "body_hash": "e2cbda1abf2df849",
+  "first_seen": "2026-10-26",
+  "handle": "keuka-lake-dark-chocolate-cocoa",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020Cocoa.jpg?v=1586021383",
+  "platform": "shopify",
+  "product_id": "4480555548727",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [],
+  "title": "Keuka Lake Dark Chocolate Cocoa",
+  "url": "https://java-gourmet.com/products/keuka-lake-dark-chocolate-cocoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "31735552016439"
+   }
+  ],
+  "vendor": "JAVA-GOURMET"
+ },
+ {
+  "body_hash": "d59dc3b014d6e5ff",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-coconut-kisses",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020Yamakin_MeCrazy.jpg?v=1594994063",
+  "platform": "shopify",
+  "product_id": "4583339098167",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Yamakin' Me Crazy!",
+  "url": "https://java-gourmet.com/products/copy-of-coconut-kisses",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "32172350767159"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "32172350799927"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "32172350832695"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "32172350865463"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "32172350898231"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "32172350930999"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "c22b0944e0cbb300",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-coconut-kisses-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020Yamakin_MeCrazyDecaf.jpg?v=1594994050",
+  "platform": "shopify",
+  "product_id": "4583340474423",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "decaf"
+  ],
+  "title": "Yamakin' Me Crazy! Decaf",
+  "url": "https://java-gourmet.com/products/copy-of-coconut-kisses-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "32172354568247"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "32172354601015"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "32172354633783"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "32172354666551"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "6b02b61f3ab5517c",
+  "first_seen": "2026-10-26",
+  "handle": "california-dreamin-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2020CaliforniaDreamingfront.jpg?v=1605884317",
+  "platform": "shopify",
+  "product_id": "6085328273594",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "California Dreamin' Java Rub",
+  "url": "https://java-gourmet.com/products/california-dreamin-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "37589877850298"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "10d384defcc1d28b",
+  "first_seen": "2026-10-26",
+  "handle": "black-bear-sled-dog-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/2019BlackBearSledDogfinal.png?v=1606703304",
+  "platform": "shopify",
+  "product_id": "6103353426106",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Cause",
+   "Signature Blends",
+   "coffee"
+  ],
+  "title": "Black Bear Sled Dog Coffee",
+  "url": "https://java-gourmet.com/products/black-bear-sled-dog-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Ground",
+    "variant_id": "37667543187642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "37667543220410"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "2c1d219b5857c452",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-chocolate-filbert",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05107_eea4285b-a85f-4540-8b8a-db7aded6ac50.jpg?v=1544585573",
+  "platform": "shopify",
+  "product_id": "82948816922",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "Signature Blends"
+  ],
+  "title": "Harvest Spice",
+  "url": "https://java-gourmet.com/products/copy-of-chocolate-filbert",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "1003469078554"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "1003469144090"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "1003469209626"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "1003469275162"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "1003469307930"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "1003469373466"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "ed7511fef9c89991",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-equinox-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/blank_c9c96391-beec-49eb-a201-dc602467241e.jpg?v=1505250088",
+  "platform": "shopify",
+  "product_id": "82950553626",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Autumn Equinox Blend",
+  "url": "https://java-gourmet.com/products/autumn-equinox-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "1003496964122"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "1003496996890"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "1003497029658"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "1003497062426"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "1003497095194"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "1003497127962"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "4566b7534eb0027f",
+  "first_seen": "2026-10-26",
+  "handle": "special-offering-peruvian-las-damas",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/files/peru-coffee-beans-no-text.png?v=1778171881",
+  "platform": "shopify",
+  "product_id": "8389426938042",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends",
+   "Single Origin Coffee"
+  ],
+  "title": "SPECIAL OFFERING: Peruvian Las Damas",
+  "url": "https://java-gourmet.com/products/special-offering-peruvian-las-damas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13oz / Whole bean",
+    "variant_id": "45832835301562"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13oz / Ground",
+    "variant_id": "45832835334330"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5oz / Whole bean",
+    "variant_id": "45832835367098"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5oz / Ground",
+    "variant_id": "45832835399866"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.95,
+    "title": "2oz / Whole bean",
+    "variant_id": "45832835432634"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 5.95,
+    "title": "2oz / Ground",
+    "variant_id": "45832835465402"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 12.0,
+    "title": "K cups (9) / Ground",
+    "variant_id": "45833021522106"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "a5ff94007a33dbb4",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-blend-love-story-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/LOVE_STORY_BLEND.jpg?v=1578593374",
+  "platform": "shopify",
+  "product_id": "9417216589",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Italian Espresso Blend (Love Story Blend)",
+  "url": "https://java-gourmet.com/products/italian-espresso-blend-love-story-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "34602213837"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "34602213901"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "34602214029"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "34602214093"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595567245"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595567309"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "067b30f520ba4853",
+  "first_seen": "2026-10-26",
+  "handle": "keuka-sunset-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05113.jpg?v=1493824377",
+  "platform": "shopify",
+  "product_id": "9710198733",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Keuka Sunset Blend",
+  "url": "https://java-gourmet.com/products/keuka-sunset-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36345516621"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36345516685"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36345516813"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36345516877"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36345516941"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595566989"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f171046ab2f514b2",
+  "first_seen": "2026-10-26",
+  "handle": "qka-lake",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05131.jpg?v=1493825066",
+  "platform": "shopify",
+  "product_id": "9779382989",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends",
+   "decaf"
+  ],
+  "title": "QKA Lite",
+  "url": "https://java-gourmet.com/products/qka-lake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "36595131725"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595131789"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595131853"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595131917"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595132045"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595132173"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "5cea828e6dfc122e",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05114.jpg?v=1493825682",
+  "platform": "shopify",
+  "product_id": "9779383373",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Sunrise Blend",
+  "url": "https://java-gourmet.com/products/sunrise-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595133133"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595133325"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595133389"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 550.0,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595133709"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 550.0,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595133837"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "41568275103930"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f26248a5ad3924a0",
+  "first_seen": "2026-10-26",
+  "handle": "meritage-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05115.jpg?v=1493824478",
+  "platform": "shopify",
+  "product_id": "9779383501",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Meritage Blend",
+  "url": "https://java-gourmet.com/products/meritage-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595134861"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595134989"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595135181"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595135309"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595135437"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595135501"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "27c2b7b3a646d01a",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-swp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05133.jpg?v=1493824679",
+  "platform": "shopify",
+  "product_id": "9779384141",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee",
+   "decaf"
+  ],
+  "title": "Mexican MWP Decaf",
+  "url": "https://java-gourmet.com/products/mexican-swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "36595136909"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595136973"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595137037"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595137101"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595137165"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595137229"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "fca9f882b65ee140",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-rainforest",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05120.jpg?v=1493824820",
+  "platform": "shopify",
+  "product_id": "9779384269",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Nicaraguan Rainforest",
+  "url": "https://java-gourmet.com/products/nicaraguan-rainforest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595137357"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595137421"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595137485"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595137549"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595137613"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595137677"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "289c7f8f102e9537",
+  "first_seen": "2026-10-26",
+  "handle": "natural-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05125.jpg?v=1493824749",
+  "platform": "shopify",
+  "product_id": "9779384397",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Natural Brazil",
+  "url": "https://java-gourmet.com/products/natural-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595137805"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595137869"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595137933"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595137997"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595138061"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595138125"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "a415513ea6999538",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-onyx",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05118.jpg?v=1493824557",
+  "platform": "shopify",
+  "product_id": "9779384589",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Mexican Chiapas Onyx",
+  "url": "https://java-gourmet.com/products/mexican-chiapas-onyx",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595138317"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595138381"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595138445"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595138509"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595138573"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595138637"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "dca149857673dd94",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-aa",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05122.jpg?v=1493824237",
+  "platform": "shopify",
+  "product_id": "9779384781",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Kenyan AA",
+  "url": "https://java-gourmet.com/products/kenyan-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Ground",
+    "variant_id": "36595138765"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 19.5,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595138829"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595138893"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 12.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595138957"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595139021"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.95,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595139085"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "6a959bf7f28216b1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05123.jpg?v=1493823786",
+  "platform": "shopify",
+  "product_id": "9779384909",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Guatemalan Antigua",
+  "url": "https://java-gourmet.com/products/guatemalan-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595139277"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595139341"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595139405"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595139469"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595139533"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595139597"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "a914f90da088daa7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05119.jpg?v=1493823712",
+  "platform": "shopify",
+  "product_id": "9779385037",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://java-gourmet.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595139725"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595139789"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595139853"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595139917"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595139981"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595140045"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f388214d5cc0c197",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05117.jpg?v=1493823620",
+  "platform": "shopify",
+  "product_id": "9779385165",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Costa Rican Tarrazu",
+  "url": "https://java-gourmet.com/products/costa-rican-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595140173"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595140237"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595140301"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595140365"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595140429"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595140493"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "98e0e1e53a3cea9e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05124.jpg?v=1493823362",
+  "platform": "shopify",
+  "product_id": "9779385357",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://java-gourmet.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595140685"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595140749"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595140813"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595140877"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595140941"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595141005"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "1ec58adc5c6ee914",
+  "first_seen": "2026-10-26",
+  "handle": "island-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05126.jpg?v=1493823907",
+  "platform": "shopify",
+  "product_id": "9779385549",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Single Origin Coffee"
+  ],
+  "title": "Island Sumatra",
+  "url": "https://java-gourmet.com/products/island-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595141197"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595141261"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595141325"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595141389"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595141453"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595141517"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f1dc4969aabd9d02",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-filbert",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05139.jpg?v=1493822669",
+  "platform": "shopify",
+  "product_id": "9779385677",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Chocolate Filbert",
+  "url": "https://java-gourmet.com/products/chocolate-filbert",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595141645"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595141773"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595141901"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36852872077"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36852880077"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36852891085"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "fe19dd0fe6a52500",
+  "first_seen": "2026-10-26",
+  "handle": "sicilian-sunset",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05138.jpg?v=1493825292",
+  "platform": "shopify",
+  "product_id": "9779385805",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Sicilian Sunset",
+  "url": "https://java-gourmet.com/products/sicilian-sunset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595142093"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595142157"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595142221"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595142285"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595142349"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595142413"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "a27c2b91cbc526b3",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-kisses",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05141.jpg?v=1493823085",
+  "platform": "shopify",
+  "product_id": "9779385933",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Coconut Kisses",
+  "url": "https://java-gourmet.com/products/coconut-kisses",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595142541"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595142605"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595142669"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595142733"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595142797"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595142861"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "d7a8593b5e841271",
+  "first_seen": "2026-10-26",
+  "handle": "wild-blueberry-cobbler",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05135.jpg?v=1493825887",
+  "platform": "shopify",
+  "product_id": "9779386061",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Wild Blueberry Cobbler",
+  "url": "https://java-gourmet.com/products/wild-blueberry-cobbler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595142989"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595143053"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595143117"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595143181"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595143245"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595143309"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "cfd84170027f27d9",
+  "first_seen": "2026-10-26",
+  "handle": "tuscan-sunshine",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05137.jpg?v=1493825825",
+  "platform": "shopify",
+  "product_id": "9779386189",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Tuscan Sunshine",
+  "url": "https://java-gourmet.com/products/tuscan-sunshine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595143437"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595143501"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595143629"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595143693"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595143757"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595143821"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "b855f7903535fde5",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-filbert",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05140.jpg?v=1493825764",
+  "platform": "shopify",
+  "product_id": "9779386381",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Toasted Filbert",
+  "url": "https://java-gourmet.com/products/toasted-filbert",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595143885"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595143949"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595144013"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595144077"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595144141"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595144205"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "ea4baea91dc4ffde",
+  "first_seen": "2026-10-26",
+  "handle": "italian-chocolate-raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05136.jpg?v=1493824001",
+  "platform": "shopify",
+  "product_id": "9779386509",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Proprietary Flavor Blends"
+  ],
+  "title": "Italian Chocolate Raspberry",
+  "url": "https://java-gourmet.com/products/italian-chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Ground",
+    "variant_id": "36595144397"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 18.0,
+    "title": "13 oz / Whole Bean",
+    "variant_id": "36595144461"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Ground",
+    "variant_id": "36595144525"
+   },
+   {
+    "available": true,
+    "grams": 184,
+    "price_usd": 11.0,
+    "title": "6.5 oz / Whole Bean",
+    "variant_id": "36595144589"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Ground",
+    "variant_id": "36595144653"
+   },
+   {
+    "available": true,
+    "grams": 51,
+    "price_usd": 5.5,
+    "title": "1.8 oz / Whole Bean",
+    "variant_id": "36595144717"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "0c5de5072209f8d1",
+  "first_seen": "2026-10-26",
+  "handle": "bears-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05128.jpg?v=1493821437",
+  "platform": "shopify",
+  "product_id": "9779574861",
+  "product_type": "Coffee",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Cause",
+   "Signature Blends",
+   "coffee"
+  ],
+  "title": "Bear's Blend",
+  "url": "https://java-gourmet.com/products/bears-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Ground",
+    "variant_id": "36595567757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "36595567821"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "076da695e7640236",
+  "first_seen": "2026-10-26",
+  "handle": "turkey-more-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05061.jpg?v=1493840277",
+  "platform": "shopify",
+  "product_id": "9860394829",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Turkey & More Java Rub",
+  "url": "https://java-gourmet.com/products/turkey-more-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860492877"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "2ab230d1d3420538",
+  "first_seen": "2026-10-26",
+  "handle": "mojito-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05054.jpg?v=1493840376",
+  "platform": "shopify",
+  "product_id": "9860396109",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Mojito Java Rub",
+  "url": "https://java-gourmet.com/products/mojito-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860506573"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "c8a1843627a2fc6a",
+  "first_seen": "2026-10-26",
+  "handle": "margarita-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05055.jpg?v=1493840461",
+  "platform": "shopify",
+  "product_id": "9860399757",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Margarita Java Rub",
+  "url": "https://java-gourmet.com/products/margarita-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860539789"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "40d4df1def669422",
+  "first_seen": "2026-10-26",
+  "handle": "salt-free-decaf-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05062.jpg?v=1493840560",
+  "platform": "shopify",
+  "product_id": "9860403853",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Salt-Free/Decaf Java Rub",
+  "url": "https://java-gourmet.com/products/salt-free-decaf-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860559757"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "4604d6f4e4a8cbf8",
+  "first_seen": "2026-10-26",
+  "handle": "bloody-mary-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05056.jpg?v=1493840637",
+  "platform": "shopify",
+  "product_id": "9860408973",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Bloody Mary Java Rub",
+  "url": "https://java-gourmet.com/products/bloody-mary-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860608589"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "bb5e11b6dfc2fdb1",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-mole-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05051.jpg?v=1493840732",
+  "platform": "shopify",
+  "product_id": "9860412685",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [],
+  "title": "Mocha Java Mole Java Rub",
+  "url": "https://java-gourmet.com/products/mocha-java-mole-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860626509"
+   }
+  ],
+  "vendor": "JAVA-GOURMET"
+ },
+ {
+  "body_hash": "59cb0d5459e82bb7",
+  "first_seen": "2026-10-26",
+  "handle": "sicilian-citrus-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05049.jpg?v=1493840833",
+  "platform": "shopify",
+  "product_id": "9860415501",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Sicilian Citrus Java Rub",
+  "url": "https://java-gourmet.com/products/sicilian-citrus-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860643853"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "5ca33c5a1d4c72e9",
+  "first_seen": "2026-10-26",
+  "handle": "pork-poultry-more-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05045.jpg?v=1493840980",
+  "platform": "shopify",
+  "product_id": "9860418189",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Pork, Poultry & More Java Rub",
+  "url": "https://java-gourmet.com/products/pork-poultry-more-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860655949"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "66660f01f6b350c7",
+  "first_seen": "2026-10-26",
+  "handle": "beef-lamb-wild-game-more-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05044.jpg?v=1493841053",
+  "platform": "shopify",
+  "product_id": "9860421133",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Beef, Lamb, Wild Game & More Java Rub",
+  "url": "https://java-gourmet.com/products/beef-lamb-wild-game-more-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860670157"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "6cc162f77f896243",
+  "first_seen": "2026-10-26",
+  "handle": "shanghai-six-spice-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05052.jpg?v=1493841154",
+  "platform": "shopify",
+  "product_id": "9860425997",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Shanghai Six Spice Java Rub",
+  "url": "https://java-gourmet.com/products/shanghai-six-spice-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860690061"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "eeed61b28e9811a8",
+  "first_seen": "2026-10-26",
+  "handle": "fish-seafood-veggies-more-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05047.jpg?v=1493841225",
+  "platform": "shopify",
+  "product_id": "9860432525",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Fish, Seafood, Veggies & More Java Rub",
+  "url": "https://java-gourmet.com/products/fish-seafood-veggies-more-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860719565"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "cf909eb4cdc6e14c",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-fish-seafood-veggies-more-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05048.jpg?v=1493841437",
+  "platform": "shopify",
+  "product_id": "9860443469",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Fruit, Dessert, & More Java Rub",
+  "url": "https://java-gourmet.com/products/copy-of-fish-seafood-veggies-more-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860800653"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "88d0d2ffb60a5196",
+  "first_seen": "2026-10-26",
+  "handle": "french-countryside-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05057.jpg?v=1493841546",
+  "platform": "shopify",
+  "product_id": "9860453197",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "French Countryside Java Rub",
+  "url": "https://java-gourmet.com/products/french-countryside-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860902477"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "f1aa5b604fb2ca8b",
+  "first_seen": "2026-10-26",
+  "handle": "cajun-bayou-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05058.jpg?v=1493841626",
+  "platform": "shopify",
+  "product_id": "9860461005",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Cajun Bayou Java Rub",
+  "url": "https://java-gourmet.com/products/cajun-bayou-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36860957837"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "782c5f9b117be895",
+  "first_seen": "2026-10-26",
+  "handle": "tuscan-seaside-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05059.jpg?v=1493842012",
+  "platform": "shopify",
+  "product_id": "9860488973",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Tuscan Seaside Java Rub",
+  "url": "https://java-gourmet.com/products/tuscan-seaside-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36861164109"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "5d02d0b57ba79cfd",
+  "first_seen": "2026-10-26",
+  "handle": "greek-isle-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05060.jpg?v=1493842067",
+  "platform": "shopify",
+  "product_id": "9860500941",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Greek Isle Java Rub",
+  "url": "https://java-gourmet.com/products/greek-isle-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36861215693"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "826e9a7366573856",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-java-jerk-java-rub",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05053.jpg?v=1493842152",
+  "platform": "shopify",
+  "product_id": "9860507021",
+  "product_type": "Rub",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Rubs"
+  ],
+  "title": "Jamaican Java Jerk Java Rub",
+  "url": "https://java-gourmet.com/products/jamaican-java-jerk-java-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.5,
+    "title": "Default Title",
+    "variant_id": "36861253325"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "46ce4dbe1f8d148b",
+  "first_seen": "2026-10-26",
+  "handle": "java-brine",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05063.jpg?v=1494424425",
+  "platform": "shopify",
+  "product_id": "9924493965",
+  "product_type": "Brine",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Brine",
+   "other seasonings"
+  ],
+  "title": "Java Brine",
+  "url": "https://java-gourmet.com/products/java-brine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.5,
+    "title": "Default Title",
+    "variant_id": "37210755725"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "935f8c5807703d7c",
+  "first_seen": "2026-10-26",
+  "handle": "java-sprinkles",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05041.jpg?v=1494424526",
+  "platform": "shopify",
+  "product_id": "9924507725",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Sprinkles",
+   "other seasonings"
+  ],
+  "title": "Java Sprinkles",
+  "url": "https://java-gourmet.com/products/java-sprinkles",
+  "variants": [
+   {
+    "available": true,
+    "grams": 145,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "37210836813"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "3935e067ed10d91a",
+  "first_seen": "2026-10-26",
+  "handle": "java-shake",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05042.jpg?v=1494424620",
+  "platform": "shopify",
+  "product_id": "9924518669",
+  "product_type": "Other Seasonings",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Salt",
+   "Shake",
+   "other seasonings"
+  ],
+  "title": "Java Shake",
+  "url": "https://java-gourmet.com/products/java-shake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "37210896525"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "516842fad67ad2e0",
+  "first_seen": "2026-10-26",
+  "handle": "java-grind-caliente",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05040.jpg?v=1494424700",
+  "platform": "shopify",
+  "product_id": "9924528205",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "other seasonings"
+  ],
+  "title": "Java Grind Caliente",
+  "url": "https://java-gourmet.com/products/java-grind-caliente",
+  "variants": [
+   {
+    "available": true,
+    "grams": 145,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "37210949453"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "c30fa9fb40bd3d01",
+  "first_seen": "2026-10-26",
+  "handle": "java-grind",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05039.jpg?v=1494424741",
+  "platform": "shopify",
+  "product_id": "9924533517",
+  "product_type": "",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "other seasonings"
+  ],
+  "title": "Java Grind",
+  "url": "https://java-gourmet.com/products/java-grind",
+  "variants": [
+   {
+    "available": true,
+    "grams": 145,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "37210980621"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "3c65aaa4b99c761a",
+  "first_seen": "2026-10-26",
+  "handle": "seneca-salt-natural-culinary-flake-salt",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC04996.jpg?v=1494426879",
+  "platform": "shopify",
+  "product_id": "9924620877",
+  "product_type": "Salt",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Salt"
+  ],
+  "title": "Seneca Salt Natural Culinary Flake Salt",
+  "url": "https://java-gourmet.com/products/seneca-salt-natural-culinary-flake-salt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "37211444877"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "6fcbeadebc4ee234",
+  "first_seen": "2026-10-26",
+  "handle": "seneca-salt-grapevine-smoked-culinary-flake-salt",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05002.jpg?v=1494425482",
+  "platform": "shopify",
+  "product_id": "9924636557",
+  "product_type": "Salt",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Salt"
+  ],
+  "title": "Seneca Salt Grapevine Smoked Culinary Flake Salt",
+  "url": "https://java-gourmet.com/products/seneca-salt-grapevine-smoked-culinary-flake-salt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Default Title",
+    "variant_id": "37211520589"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ },
+ {
+  "body_hash": "3b9f85c3b2c1b9c3",
+  "first_seen": "2026-10-26",
+  "handle": "seneca-salt-rosemary-culinary-flake-salt",
+  "image": "https://cdn.shopify.com/s/files/1/1849/4929/products/DSC05009.jpg?v=1494425611",
+  "platform": "shopify",
+  "product_id": "9924657549",
+  "product_type": "Salt",
+  "roaster_slug": "java-gourmet",
+  "tags": [
+   "Salt"
+  ],
+  "title": "Seneca Salt Rosemary Culinary Flake Salt",
+  "url": "https://java-gourmet.com/products/seneca-salt-rosemary-culinary-flake-salt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Default Title",
+    "variant_id": "37211630477"
+   }
+  ],
+  "vendor": "Java Gourmet"
+ }
+]

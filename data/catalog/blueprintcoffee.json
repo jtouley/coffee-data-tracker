@@ -1,0 +1,379 @@
+[
+ {
+  "body_hash": "f1367f1be3a9d72c",
+  "first_seen": "2026-10-26",
+  "handle": "limao-rosa-brazil-single-origin-coffee",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2025/05/limao-mu.jpg",
+  "platform": "woocommerce",
+  "product_id": "157400",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Limão Rosa, Brazil",
+  "url": "https://blueprintcoffee.com/product/limao-rosa-brazil-single-origin-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10 oz.",
+    "variant_id": "157400:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.25,
+    "title": "2 lb.",
+    "variant_id": "157400:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.25,
+    "title": "5 lb.",
+    "variant_id": "157400:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b5c512e4e9c89dc0",
+  "first_seen": "2026-10-26",
+  "handle": "penrose-espresso-blend",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2025/07/penrose-new-blue.jpg",
+  "platform": "woocommerce",
+  "product_id": "157829",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Penrose (Espresso Blend)",
+  "url": "https://blueprintcoffee.com/product/penrose-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.25,
+    "title": "10 oz.",
+    "variant_id": "157829:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.25,
+    "title": "12 oz.",
+    "variant_id": "157829:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.25,
+    "title": "2 lb.",
+    "variant_id": "157829:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.25,
+    "title": "5 lb.",
+    "variant_id": "157829:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4223371479cc5ba1",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-huila-ea-colombia",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2025/06/decaf-10oz-coffeereview-92pt.jpg",
+  "platform": "woocommerce",
+  "product_id": "157833",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Huila E.A., Colombia",
+  "url": "https://blueprintcoffee.com/product/decaf-huila-ea-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10 oz.",
+    "variant_id": "157833:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.25,
+    "title": "12 oz.",
+    "variant_id": "157833:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.25,
+    "title": "2 lb.",
+    "variant_id": "157833:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.25,
+    "title": "5 lb.",
+    "variant_id": "157833:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98b3278113aeef89",
+  "first_seen": "2026-10-26",
+  "handle": "panetton-holiday-blend",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2025/10/panetton-wb-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "162093",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee",
+   "Gift Ideas"
+  ],
+  "title": "Panettōn (Holiday Blend)",
+  "url": "https://blueprintcoffee.com/product/panetton-holiday-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.5,
+    "title": "10 oz.",
+    "variant_id": "162093:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12 oz.",
+    "variant_id": "162093:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.5,
+    "title": "2 lb.",
+    "variant_id": "162093:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.5,
+    "title": "5 lb.",
+    "variant_id": "162093:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3879e5de5f597b96",
+  "first_seen": "2026-10-26",
+  "handle": "timespan-dark-roast",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2026/06/timespan-wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "170090",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee",
+   "blend",
+   "dark roast",
+   "dark roast coffee",
+   "timespan"
+  ],
+  "title": "Timespan (Dark Roast)",
+  "url": "https://blueprintcoffee.com/product/timespan-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.25,
+    "title": "10 oz.",
+    "variant_id": "170090:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.25,
+    "title": "2 lb.",
+    "variant_id": "170090:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.25,
+    "title": "5 lb.",
+    "variant_id": "170090:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "765c5b6e478b3259",
+  "first_seen": "2026-10-26",
+  "handle": "tima-ethiopia",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2026/06/tima-mu.jpg",
+  "platform": "woocommerce",
+  "product_id": "170169",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Tima, Ethiopia",
+  "url": "https://blueprintcoffee.com/product/tima-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz.",
+    "variant_id": "170169:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.0,
+    "title": "2 lb.",
+    "variant_id": "170169:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5 lb.",
+    "variant_id": "170169:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4d2e8eaaaf6ffbe",
+  "first_seen": "2026-10-26",
+  "handle": "nairobi-aa-kenya",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2026/06/nairobi-kenya-davids-cup-finalist.jpg",
+  "platform": "woocommerce",
+  "product_id": "171615",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Nairobi AA, Kenya",
+  "url": "https://blueprintcoffee.com/product/nairobi-aa-kenya/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz.",
+    "variant_id": "171615:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2 lb.",
+    "variant_id": "171615:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.0,
+    "title": "5 lb.",
+    "variant_id": "171615:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03cb2b08731d6ac5",
+  "first_seen": "2026-10-26",
+  "handle": "adamo-ethiopia",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2026/08/adamo-wb.jpg",
+  "platform": "woocommerce",
+  "product_id": "172993",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Adamo, Ethiopia",
+  "url": "https://blueprintcoffee.com/product/adamo-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz.",
+    "variant_id": "172993:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.0,
+    "title": "2 lb.",
+    "variant_id": "172993:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5 lb.",
+    "variant_id": "172993:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95246807a3596e65",
+  "first_seen": "2026-10-26",
+  "handle": "san-antonio-guatemala",
+  "image": "https://blueprintcoffee.com/wp-content/uploads/2026/08/san-antonio-2026-mu.jpg",
+  "platform": "woocommerce",
+  "product_id": "173263",
+  "product_type": "variable",
+  "roaster_slug": "blueprintcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "San Antonio, Guatemala",
+  "url": "https://blueprintcoffee.com/product/san-antonio-guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz.",
+    "variant_id": "173263:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 24.0,
+    "title": "2 lb.",
+    "variant_id": "173263:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.0,
+    "title": "5 lb.",
+    "variant_id": "173263:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

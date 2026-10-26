@@ -1,0 +1,104 @@
+[
+ {
+  "body_hash": "f75551ed301e4ab4",
+  "first_seen": "2026-10-26",
+  "handle": "riseandshineblend",
+  "image": "https://roastedroostercoffeecompany.com/wp-content/uploads/2020/05/RISE-SMALLER.jpg",
+  "platform": "woocommerce",
+  "product_id": "3647",
+  "product_type": "variable",
+  "roaster_slug": "roastedroostercoffeecompany",
+  "tags": [
+   "Cold Brew",
+   "Roasted coffee"
+  ],
+  "title": "Rise and Shine Blend",
+  "url": "https://roastedroostercoffeecompany.com/product/riseandshineblend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Rise and Shine Blend",
+    "variant_id": "3647:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d7b1f16f567caab0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://roastedroostercoffeecompany.com/wp-content/uploads/2019/11/IMG_0234-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3752",
+  "product_type": "variable",
+  "roaster_slug": "roastedroostercoffeecompany",
+  "tags": [
+   "Espresso Roasts",
+   "Roasted coffee"
+  ],
+  "title": "Espresso Blend (House Blend)",
+  "url": "https://roastedroostercoffeecompany.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso Blend (House Blend)",
+    "variant_id": "3752:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2dfde6d901771474",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend-organic",
+  "image": "https://roastedroostercoffeecompany.com/wp-content/uploads/2020/03/937002D9-5B0C-43EA-8B16-E52BA3D4B2A7-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3763",
+  "product_type": "variable",
+  "roaster_slug": "roastedroostercoffeecompany",
+  "tags": [
+   "Roasted coffee"
+  ],
+  "title": "Decaf Blend- 1lb",
+  "url": "https://roastedroostercoffeecompany.com/product/decaf-blend-organic/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pound",
+    "variant_id": "3763:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f7279ecf4321e0e",
+  "first_seen": "2026-10-26",
+  "handle": "gift-package-10-4oz-bags",
+  "image": "https://roastedroostercoffeecompany.com/wp-content/uploads/2020/12/46A03DEA-5F05-4FE6-9A41-818630F39170.jpeg",
+  "platform": "woocommerce",
+  "product_id": "4795",
+  "product_type": "variable",
+  "roaster_slug": "roastedroostercoffeecompany",
+  "tags": [
+   "Roasted coffee"
+  ],
+  "title": "Gift package 10 (4oz) bags",
+  "url": "https://roastedroostercoffeecompany.com/product/gift-package-10-4oz-bags/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 53.0,
+    "title": "Gift package 10 (4oz) bags",
+    "variant_id": "4795:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

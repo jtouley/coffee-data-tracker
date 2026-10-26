@@ -1,0 +1,662 @@
+[
+ {
+  "body_hash": "807257663be195f1",
+  "first_seen": "2026-10-26",
+  "handle": "teachers-pet",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/TP_front.webp?v=1734090895",
+  "platform": "shopify",
+  "product_id": "6831111995439",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "blends"
+  ],
+  "title": "Teacher's Pet Blend",
+  "url": "https://www.tubbscoffeeroasters.com/products/teachers-pet",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "40343351492655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "40343351525423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / french press",
+    "variant_id": "40412633399343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / drip",
+    "variant_id": "40412633432111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "40412633497647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / french press",
+    "variant_id": "40412633563183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / drip",
+    "variant_id": "40412633595951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "40412633661487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / whole bean",
+    "variant_id": "40412633727023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / french press",
+    "variant_id": "40412633759791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / drip",
+    "variant_id": "40412633792559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / espresso",
+    "variant_id": "40412633858095"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "6be68b4be0de0a62",
+  "first_seen": "2026-10-26",
+  "handle": "double-eagle",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/DE_front.webp?v=1716369204",
+  "platform": "shopify",
+  "product_id": "6831138275375",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "blend",
+   "blends"
+  ],
+  "title": "Double Eagle Blend",
+  "url": "https://www.tubbscoffeeroasters.com/products/double-eagle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "40343347724335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "40343347757103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / french press",
+    "variant_id": "40412377415727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / drip",
+    "variant_id": "40412377448495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "40412377514031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / french press",
+    "variant_id": "40412377579567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / drip",
+    "variant_id": "40412377612335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "40412377677871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / whole bean",
+    "variant_id": "40412605775919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / french press",
+    "variant_id": "40412605808687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / drip",
+    "variant_id": "40412605841455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / espresso",
+    "variant_id": "40412605906991"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "aaab712d026bfa97",
+  "first_seen": "2026-10-26",
+  "handle": "beast",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/CB_front.webp?v=1716375500",
+  "platform": "shopify",
+  "product_id": "6831141126191",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "blend",
+   "blends"
+  ],
+  "title": "Cannonball Blend",
+  "url": "https://www.tubbscoffeeroasters.com/products/beast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "40380503228463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / french press",
+    "variant_id": "40380503261231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / drip",
+    "variant_id": "40380503293999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "40380503359535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "40380503425071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / french press",
+    "variant_id": "40380503457839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / drip",
+    "variant_id": "40380503490607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "40380503556143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / whole bean",
+    "variant_id": "40412571762735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / french press",
+    "variant_id": "40412571795503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / drip",
+    "variant_id": "40412571828271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / espresso",
+    "variant_id": "40412571893807"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "aa3a8180590a2875",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-fto-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/mexico_altura_12oz.jpg?v=1785878906",
+  "platform": "shopify",
+  "product_id": "6857234710575",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "origin"
+  ],
+  "title": "Mexico Organic Chiapas",
+  "url": "https://www.tubbscoffeeroasters.com/products/mexico-fto-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / whole bean",
+    "variant_id": "40490746085423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / french press",
+    "variant_id": "40490746118191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / drip",
+    "variant_id": "40490746150959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounces / espresso",
+    "variant_id": "40490746216495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "45744916430895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / french press",
+    "variant_id": "45744916463663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / drip",
+    "variant_id": "45744916496431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "45744916529199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "45744916561967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / french press",
+    "variant_id": "45744916594735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / drip",
+    "variant_id": "45744916627503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "45744916660271"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "d2fc03ca5af2871f",
+  "first_seen": "2026-10-26",
+  "handle": "the-nihilist-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/nihilist_front.webp?v=1716371961",
+  "platform": "shopify",
+  "product_id": "7295002935343",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "origin",
+   "origins"
+  ],
+  "title": "The Nihilist EA Decaf",
+  "url": "https://www.tubbscoffeeroasters.com/products/the-nihilist-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / whole bean",
+    "variant_id": "41716948336687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / french press",
+    "variant_id": "41961548218415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / drip",
+    "variant_id": "41961548251183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / espresso",
+    "variant_id": "41961548283951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "41961548316719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / french press",
+    "variant_id": "41961548349487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / drip",
+    "variant_id": "41961548382255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "41961548415023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "41961548447791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / french press",
+    "variant_id": "41961548480559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / drip",
+    "variant_id": "41961548513327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "41961548546095"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "07242ff38154dd12",
+  "first_seen": "2026-10-26",
+  "handle": "mega-fifty-fifty-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/mega_front.webp?v=1716370502",
+  "platform": "shopify",
+  "product_id": "7429041127471",
+  "product_type": "Coffee",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [
+   "blend",
+   "blends"
+  ],
+  "title": "MEGA Blend",
+  "url": "https://www.tubbscoffeeroasters.com/products/mega-fifty-fifty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 ounces / whole bean",
+    "variant_id": "42130916900911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 ounces / french press",
+    "variant_id": "42130916933679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 ounces / drip",
+    "variant_id": "42130916966447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 ounces / espresso",
+    "variant_id": "42130916999215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 pounds / whole bean",
+    "variant_id": "42130917031983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 pounds / french press",
+    "variant_id": "42130917064751"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 pounds / drip",
+    "variant_id": "42130917097519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 pounds / espresso",
+    "variant_id": "42130917130287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 pounds / whole bean",
+    "variant_id": "42130917163055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 pounds / french press",
+    "variant_id": "42130917195823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 pounds / drip",
+    "variant_id": "42130917228591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 pounds / espresso",
+    "variant_id": "42130917261359"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ },
+ {
+  "body_hash": "1613d95576a21f08",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-handmade-mugs",
+  "image": "https://cdn.shopify.com/s/files/1/0554/1966/6479/files/tangerine.webp?v=1715202827",
+  "platform": "shopify",
+  "product_id": "7643343880239",
+  "product_type": "gear",
+  "roaster_slug": "tubbscoffeeroasters",
+  "tags": [],
+  "title": "12oz handmade mugs",
+  "url": "https://www.tubbscoffeeroasters.com/products/12oz-handmade-mugs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "forest green",
+    "variant_id": "42759128350767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "tangerine",
+    "variant_id": "42759128383535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "red apple",
+    "variant_id": "42759128416303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "stone blue",
+    "variant_id": "42759128449071"
+   }
+  ],
+  "vendor": "TubbsCoffee"
+ }
+]

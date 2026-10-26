@@ -1,0 +1,205 @@
+{
+ "10934601548094": {
+  "body_hash": "9a7ccc78cbce59db",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dark chocolate",
+   "almond",
+   "tart cherry"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "11096537399614": {
+  "body_hash": "fcb1dc5e0ad487cd",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "milk chocolate",
+   "caramel",
+   "almond"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "11096542544190": {
+  "body_hash": "33382e647733cb42",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "nougat",
+   "toasted marshmallow"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "12021819146558": {
+  "body_hash": "9cbc238e6d26509e",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry",
+   "shortbread cookie",
+   "fruit punch"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "12037413830974": {
+  "body_hash": "a32c0369204c5bc4",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "molasses",
+   "ginger",
+   "star anise"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "12631587455294": {
+  "body_hash": "5838bb5483babf7f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "almond",
+   "berry"
+  ],
+  "varietals": []
+ },
+ "3454053251": {
+  "body_hash": "34c038774dcd0887",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "mild acidity"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "5338462022": {
+  "body_hash": "ea23e73c4c98e7b8",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "almond",
+   "clove"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "5338531270": {
+  "body_hash": "02cc36142ff02dc2",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1300,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "baker's chocolate",
+   "rich caramel"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ }
+}

@@ -1,0 +1,471 @@
+{
+ "131": {
+  "body_hash": "18dd307b4e5018a5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "concord grape",
+   "blackberry",
+   "black tea"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "132": {
+  "body_hash": "d9bd3447d8e8f8b0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "spice",
+   "strawberry"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "136": {
+  "body_hash": "b5274dac7508b9e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cocoa nibs",
+   "sour cherry",
+   "cake"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "168": {
+  "body_hash": "33233eff58d0b42a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "brown sugar",
+   "rosemary",
+   "stone fruit",
+   "plum"
+  ],
+  "varietals": []
+ },
+ "2312": {
+  "body_hash": "3f9ac836eb82b5d2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee",
+   "cloves",
+   "molasses",
+   "granola"
+  ],
+  "varietals": []
+ },
+ "2315": {
+  "body_hash": "90ce7c5eb58f3b97",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "key lime pie",
+   "marzipan",
+   "jasmine"
+  ],
+  "varietals": []
+ },
+ "2400": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "2405": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "2406": {
+  "body_hash": "",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Pacamara"
+  ]
+ },
+ "2535": {
+  "body_hash": "8509f3987af679cb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Venezuela",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cherry cola",
+   "tamarind",
+   "mandarin",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "257": {
+  "body_hash": "26dbeb36197d7239",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "orange peel",
+   "angostura bitters",
+   "sweet"
+  ],
+  "varietals": []
+ },
+ "2656": {
+  "body_hash": "c50bb9f20a4754a9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "2659": {
+  "body_hash": "7d9111ee0e872b34",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "2727": {
+  "body_hash": "20d152e6f62f7a8a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "raspberries",
+   "sweet cream",
+   "bubblegum",
+   "red delicious apple"
+  ],
+  "varietals": [
+   "Tabi"
+  ]
+ },
+ "2736": {
+  "body_hash": "4ad6ebe4280092c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cinnamon",
+   "bakers chocolate",
+   "chipotle peppers",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "292": {
+  "body_hash": "67e045400561d649",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "marshmallow",
+   "graham cracker",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "31": {
+  "body_hash": "f3c2508d1eca828d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "green apple",
+   "cookie dough",
+   "vanilla ice cream",
+   "crme brle",
+   "maraschino cherries"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "32": {
+  "body_hash": "0eb2aed1c24616db",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "poached pears",
+   "plum",
+   "honey",
+   "chamomile"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "351": {
+  "body_hash": "517e178be1ec7f9d",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "macadamia nut",
+   "toffee",
+   "butterscotch"
+  ],
+  "varietals": []
+ },
+ "367": {
+  "body_hash": "025c30fa94946229",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1950,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "kiwi",
+   "bubblegum",
+   "watermelon",
+   "fruit snacks"
+  ],
+  "varietals": []
+ },
+ "477": {
+  "body_hash": "e9275421e0324d27",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fiji apple",
+   "caramel",
+   "nougat"
+  ],
+  "varietals": []
+ },
+ "484": {
+  "body_hash": "856e791ae2165b65",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cherry",
+   "persimmon",
+   "toasted almond",
+   "rose water"
+  ],
+  "varietals": []
+ },
+ "807": {
+  "body_hash": "c2bcea0a00083d6f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "spice",
+   "strawberry",
+   "peanut brittle"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "861": {
+  "body_hash": "531942d582bc4f74",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "banana split",
+   "cherry demerara syrup",
+   "toffee"
+  ],
+  "varietals": []
+ }
+}

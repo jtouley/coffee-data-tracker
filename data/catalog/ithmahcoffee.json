@@ -1,0 +1,400 @@
+[
+ {
+  "body_hash": "60b70e7a9c0de0e8",
+  "first_seen": "2026-10-26",
+  "handle": "huehuetenango-guatemala",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2023/01/2-3.png",
+  "platform": "woocommerce",
+  "product_id": "13541",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Crowd Pleasers"
+  ],
+  "title": "Huehuetenango Guatemala",
+  "url": "https://ithmahcoffee.com/product/huehuetenango-guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 Ounce",
+    "variant_id": "13541:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 Pounds",
+    "variant_id": "13541:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "13541:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a52cc27a8c264b7",
+  "first_seen": "2026-10-26",
+  "handle": "guji-ethiopia",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2023/03/Guji.png",
+  "platform": "woocommerce",
+  "product_id": "13546",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Adventurous Coffees",
+   "Crowd Pleasers"
+  ],
+  "title": "Guji Ethiopia",
+  "url": "https://ithmahcoffee.com/product/guji-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Ounce",
+    "variant_id": "13546:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5 Pounds",
+    "variant_id": "13546:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 14.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "13546:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6edeebbde11b712d",
+  "first_seen": "2026-10-26",
+  "handle": "cerrado-brazil",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2023/01/Untitled-2048-×-2048-px-2.png",
+  "platform": "woocommerce",
+  "product_id": "13560",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Crowd Pleasers"
+  ],
+  "title": "Cerrado Brazil",
+  "url": "https://ithmahcoffee.com/product/cerrado-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 Ounce",
+    "variant_id": "13560:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 Pounds",
+    "variant_id": "13560:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "13560:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e1371274ce6508b",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-mexico",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2024/06/Chiapas-1.png",
+  "platform": "woocommerce",
+  "product_id": "14300",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Chiapas",
+   "Crowd Pleasers",
+   "Mexico",
+   "dark chocolate",
+   "nutty",
+   "sweet"
+  ],
+  "title": "Chiapas Mexico",
+  "url": "https://ithmahcoffee.com/product/chiapas-mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 Ounce",
+    "variant_id": "14300:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 Pounds",
+    "variant_id": "14300:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "14300:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6145cff9379ae312",
+  "first_seen": "2026-10-26",
+  "handle": "huila-colombia",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2024/11/Huila.png",
+  "platform": "woocommerce",
+  "product_id": "14443",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Adventurous Coffees",
+   "citrus",
+   "nutty",
+   "sweet"
+  ],
+  "title": "Huila Colombia",
+  "url": "https://ithmahcoffee.com/product/huila-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 Ounce",
+    "variant_id": "14443:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 Pounds",
+    "variant_id": "14443:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "14443:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ef8d10077bcad87",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2024/11/Tanzania-2.png",
+  "platform": "woocommerce",
+  "product_id": "14448",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Crowd Pleasers",
+   "dark chocolate",
+   "nutty",
+   "sweet"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://ithmahcoffee.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 Ounce",
+    "variant_id": "14448:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5 Pounds",
+    "variant_id": "14448:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 14.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "14448:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-12oz",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2025/09/Decaf_Colombia.png",
+  "platform": "woocommerce",
+  "product_id": "14717",
+  "product_type": "simple",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Decaf 12oz",
+  "url": "https://ithmahcoffee.com/product/colombia-decaf-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Colombia Decaf 12oz",
+    "variant_id": "14717:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4fdff5ee449f00c7",
+  "first_seen": "2026-10-26",
+  "handle": "three-story-blend",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2025/12/YFC.png",
+  "platform": "woocommerce",
+  "product_id": "14808",
+  "product_type": "simple",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [],
+  "title": "Three Story Blend",
+  "url": "https://ithmahcoffee.com/product/three-story-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 Ounce",
+    "variant_id": "14808:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 Pounds",
+    "variant_id": "14808:1"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 25.0,
+    "title": "6 Ounce Sample",
+    "variant_id": "14808:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "31bfb31cb376e595",
+  "first_seen": "2026-10-26",
+  "handle": "oak-life-blend",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2026/01/Oak-Life.png",
+  "platform": "woocommerce",
+  "product_id": "14838",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [],
+  "title": "Oak Life Blend",
+  "url": "https://ithmahcoffee.com/product/oak-life-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 Ounce",
+    "variant_id": "14838:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 Pounds",
+    "variant_id": "14838:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c3c37fa8854004b",
+  "first_seen": "2026-10-26",
+  "handle": "hand-in-hand-blend",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2026/02/YFC-6.png",
+  "platform": "woocommerce",
+  "product_id": "14920",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [],
+  "title": "Hand In Hand Blend",
+  "url": "https://ithmahcoffee.com/product/hand-in-hand-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 Ounce",
+    "variant_id": "14920:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 Pounds",
+    "variant_id": "14920:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2af9315ae4c906e7",
+  "first_seen": "2026-10-26",
+  "handle": "orphan-care-blend",
+  "image": "https://ithmahcoffee.com/wp-content/uploads/2026/03/OCA-3.png",
+  "platform": "woocommerce",
+  "product_id": "14932",
+  "product_type": "variable",
+  "roaster_slug": "ithmahcoffee",
+  "tags": [],
+  "title": "Orphan Care Blend",
+  "url": "https://ithmahcoffee.com/product/orphan-care-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 Ounce",
+    "variant_id": "14932:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 Pounds",
+    "variant_id": "14932:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

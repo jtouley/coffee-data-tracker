@@ -1,0 +1,186 @@
+[
+ {
+  "body_hash": "3ada5275303cd57e",
+  "first_seen": "2026-10-26",
+  "handle": "coffeebeans-maui",
+  "image": "https://static1.squarespace.com/static/5e5197a612c0b73372f97b10/5e55a728ade94e59f766f5c3/5e98b5dd7fb7eb45fa9ba740/1787689656171/",
+  "platform": "squarespace",
+  "product_id": "5e98b5dd7fb7eb45fa9ba740",
+  "product_type": "",
+  "roaster_slug": "knotscoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Coffee Beans Maui Mokka 100% [Big Island Roasters]",
+  "url": "https://www.knotscoffee.com/shop/p/coffeebeans-maui",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Ground For Hand Poured Chemex",
+    "variant_id": "47a83621-826a-474f-89da-0afa240dc588"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Whole Bean",
+    "variant_id": "4e342218-fff9-4c68-81ab-b4ed9c09d147"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Ground For Drip Coffee",
+    "variant_id": "7562461e-1af6-449a-9026-586074e208f2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Ground for Espresso Machine",
+    "variant_id": "f62455e3-fb73-4205-ad06-56d454cf9542"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e3c66edcaf16a2b",
+  "first_seen": "2026-10-26",
+  "handle": "coffeebeans-konablend",
+  "image": "https://static1.squarespace.com/static/5e5197a612c0b73372f97b10/5e55a728ade94e59f766f5c3/5e98b60fd7db23090292046c/1787689656243/",
+  "platform": "squarespace",
+  "product_id": "5e98b60fd7db23090292046c",
+  "product_type": "",
+  "roaster_slug": "knotscoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Coffee Beans Signature Knots Blend Medium Roast (10% Kona) [Maui Coffee Roasters]",
+  "url": "https://www.knotscoffee.com/shop/p/coffeebeans-konablend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Ground For Drip Coffee",
+    "variant_id": "4bd32123-2ff7-44d4-a464-ef782289a11c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Ground For Hand Poured Chemex",
+    "variant_id": "81147502-ce65-4d61-aa34-239a46413489"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Ground for Espresso Machine",
+    "variant_id": "b11639cb-a3da-4507-88a2-7f23524e361b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Whole Beans",
+    "variant_id": "e24587ce-1008-4c76-82b7-966d9d514146"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33ff275bc9b2df77",
+  "first_seen": "2026-10-26",
+  "handle": "coffeebeans-konaextra",
+  "image": "https://static1.squarespace.com/static/5e5197a612c0b73372f97b10/5e55a728ade94e59f766f5c3/5ea333e679804175720dbe23/1787689824521/",
+  "platform": "squarespace",
+  "product_id": "5ea333e679804175720dbe23",
+  "product_type": "",
+  "roaster_slug": "knotscoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Coffee Beans - 100% Kona Extra Fancy [Big Island Coffee Roasters]",
+  "url": "https://www.knotscoffee.com/shop/p/coffeebeans-konaextra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "Ground For Hand Poured Chemex",
+    "variant_id": "02ae80a6-27e0-4fb1-93ed-3305044beaf8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "Ground for Espresso Machine",
+    "variant_id": "12276669-865e-43d2-b00c-efda47a668eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "Whole Beans",
+    "variant_id": "2307ab15-2bf0-43f4-861d-f183f7715f45"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "Ground For Drip Coffee",
+    "variant_id": "7a2026ae-c38a-4685-b901-ee8465b6b35f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e6043e8df6bdd9b7",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee-5lbs-from-big-island-roasters",
+  "image": "https://static1.squarespace.com/static/5e5197a612c0b73372f97b10/5e55a728ade94e59f766f5c3/5f5c0073d871bb4ffc115b72/1787753909916/",
+  "platform": "squarespace",
+  "product_id": "5f5c0073d871bb4ffc115b72",
+  "product_type": "",
+  "roaster_slug": "knotscoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Coffee Beans - 100% Kona Extra Fancy 5LBS [Big Island Coffee Roasters]",
+  "url": "https://www.knotscoffee.com/shop/p/kona-coffee-5lbs-from-big-island-roasters",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Ground for Drip Coffee",
+    "variant_id": "03edbf34-aed4-4f6f-876a-abd1c653cfdd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Whole Bean",
+    "variant_id": "0f0eee79-dea0-406d-947c-be5b90441091"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Ground for Espresso Machine",
+    "variant_id": "6f466753-1f10-4c58-a344-e116c4655ec5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Ground for Hand Poured Chemex",
+    "variant_id": "cb0e6a37-4805-4d55-b3c5-a0b504643c69"
+   }
+  ],
+  "vendor": ""
+ }
+]

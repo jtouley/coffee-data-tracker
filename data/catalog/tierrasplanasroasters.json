@@ -1,0 +1,2011 @@
+[
+ {
+  "body_hash": "541772b34c97819c",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/GuatemalaAlma.webp?v=1739465548",
+  "platform": "shopify",
+  "product_id": "1820250210339",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Chocolate",
+   "Coffee",
+   "Darker",
+   "Guatemala",
+   "Medium Roasts",
+   "medium bodied"
+  ],
+  "title": "Guatemala – ALMA",
+  "url": "https://tierrasplanasroasters.com/products/guatamala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40732138438691"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40732138471459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40732138504227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Ground",
+    "variant_id": "40732138536995"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "40732138569763"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "40732138602531"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "40732138635299"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Ground",
+    "variant_id": "40732138668067"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "eb89174ea8868d3e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/ethiopia-yirgache.png?v=1601684613",
+  "platform": "shopify",
+  "product_id": "4187329822755",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Ethiopia",
+   "Floral",
+   "Lighter",
+   "fruit"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://tierrasplanasroasters.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42223081029667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lb / Ground",
+    "variant_id": "42223081062435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42223081095203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Ground",
+    "variant_id": "42223081127971"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "42223081160739"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8 oz / Ground",
+    "variant_id": "42223081193507"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.5,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "42223081226275"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.5,
+    "title": "4 oz / Ground",
+    "variant_id": "42223081259043"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "786701427c021d09",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/House-blend-3.1.png?v=1615477791",
+  "platform": "shopify",
+  "product_id": "4613341773859",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Arabica",
+   "Awesomeness",
+   "Bourbon",
+   "Brazil-Fazenda",
+   "Chocolate",
+   "Coffee",
+   "Medium Roasts",
+   "Mexico"
+  ],
+  "title": "House Blend",
+  "url": "https://tierrasplanasroasters.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "32311664050211"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz / Drip",
+    "variant_id": "32311664082979"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "32311664115747"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Drip",
+    "variant_id": "32311664148515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39520222183459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.0,
+    "title": "2 lb / Drip",
+    "variant_id": "39520222380067"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "c51860ba6512b288",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "4800382238755",
+  "product_type": "Private Label",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee",
+   "Cowboy Coffee"
+  ],
+  "title": "TPR - PL Cowboy Coffee",
+  "url": "https://tierrasplanasroasters.com/products/cowboy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "32878465351715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "32878465417251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 lb / Ground",
+    "variant_id": "32878465450019"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.6,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "32878465482787"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.6,
+    "title": "16 oz / Ground",
+    "variant_id": "32878465515555"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "e58a03f6c4d5c623",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-1",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/Brazil_Fazenda_f87840ab-0c42-4c9b-a75f-00fd2b579dfc.jpg?v=1638505326",
+  "platform": "shopify",
+  "product_id": "4849278550051",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Almond",
+   "Arabica",
+   "Bourbon",
+   "Brazil-Fazenda",
+   "CMID",
+   "Coffee",
+   "Coffee Roasts",
+   "Darker",
+   "Feb Special",
+   "Ground/Whole Bean",
+   "Natural"
+  ],
+  "title": "Brazil-Fazenda",
+  "url": "https://tierrasplanasroasters.com/products/brazil-fazenda-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "32998803111971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "32998803144739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16oz / Ground",
+    "variant_id": "32998803177507"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "32998803210275"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Ground",
+    "variant_id": "32998803243043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Ground",
+    "variant_id": "32998803341347"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "739c08191ae1aeca",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-comsa",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/Honduras-COMSA.png?v=1615475850",
+  "platform": "shopify",
+  "product_id": "4857471598627",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Brand New Roasts",
+   "Lighter"
+  ],
+  "title": "Honduras COMSA",
+  "url": "https://tierrasplanasroasters.com/products/honduras-comsa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40751056289827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40751056322595"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40751056355363"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Ground",
+    "variant_id": "40751056388131"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "40751056420899"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "40751056453667"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "40751056486435"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "40751056519203"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "4a2efb523ab142a5",
+  "first_seen": "2026-10-26",
+  "handle": "paupau-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/PNGWahgiValley.png?v=1784050420",
+  "platform": "shopify",
+  "product_id": "4861338484771",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Arabica",
+   "Awesomeness",
+   "Chocolate",
+   "Medium Roasts",
+   "PNG"
+  ],
+  "title": "Papua New Guinea Wahgi Valley",
+  "url": "https://tierrasplanasroasters.com/products/paupau-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Ground",
+    "variant_id": "33017293144099"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "33017293176867"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "33017293307939"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "33017293340707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39248938500131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39248938532899"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43351775772707"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4 oz / Ground",
+    "variant_id": "43351775805475"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "b4642372d7337daf",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/TPR_Kerry_Logo_PNG.png?v=1627763434",
+  "platform": "shopify",
+  "product_id": "6579197149219",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "CMID",
+   "Choice",
+   "Coffee Roasts",
+   "Darker",
+   "Lighter",
+   "Medium Roasts"
+  ],
+  "title": "TPR Select",
+  "url": "https://tierrasplanasroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39369293463587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39369293496355"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39369293529123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Ground",
+    "variant_id": "39369293561891"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "39369293594659"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "39369293627427"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "a7103a513afabee5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/MexcioDecaf-2.png?v=1711423756",
+  "platform": "shopify",
+  "product_id": "6612051820579",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Arabica",
+   "Chocolate",
+   "Medium Roasts",
+   "Mexico"
+  ],
+  "title": "Mexico Decaf",
+  "url": "https://tierrasplanasroasters.com/products/mexico-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39472374480931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Drip Grind",
+    "variant_id": "39472374513699"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39472374546467"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "39472374579235"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "39472374710307"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz / Drip Grind",
+    "variant_id": "39472374743075"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "39472374874147"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz / Drip Grind",
+    "variant_id": "39472374906915"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "368f6b27d34f1e78",
+  "first_seen": "2026-10-26",
+  "handle": "tpr-stout",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/TPRStout-2.png?v=1756477747",
+  "platform": "shopify",
+  "product_id": "6620765290531",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee Roasts",
+   "Darker",
+   "Natural"
+  ],
+  "title": "TPR Stout",
+  "url": "https://tierrasplanasroasters.com/products/tpr-stout",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39505975476259"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "39505975509027"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "39505975541795"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "39505975574563"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Ground",
+    "variant_id": "39505975607331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39505975705635"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "catered-espresso-bar",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6631107985443",
+  "product_type": "Drinks",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Catering",
+   "Espresso"
+  ],
+  "title": "Catered Espresso Bar",
+  "url": "https://tierrasplanasroasters.com/products/catered-espresso-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 525.0,
+    "title": "Less than 100",
+    "variant_id": "39538404786211"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 600.0,
+    "title": "More than 100",
+    "variant_id": "39538404818979"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 300.0,
+    "title": "Deposit Espresso Bar",
+    "variant_id": "39606415917091"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 300.0,
+    "title": "Balance Espresso Bar",
+    "variant_id": "40120167956515"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 800.0,
+    "title": "More than 300",
+    "variant_id": "40180290551843"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "7228af28a45b10fb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-magda",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/ColombiaMedellin.png?v=1736308846",
+  "platform": "shopify",
+  "product_id": "6684204138531",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Medium Roasts"
+  ],
+  "title": "Colombia Medellin",
+  "url": "https://tierrasplanasroasters.com/products/colombia-magda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39671121346595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39671121379363"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39671121412131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "16 oz / Ground",
+    "variant_id": "39671121444899"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "39717102649379"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz / Ground",
+    "variant_id": "39717102682147"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "39717102714915"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Ground",
+    "variant_id": "39717102747683"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "a02bf870063663c1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-pb",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/TanzaniaSBPB_dc95c8d0-d81c-4192-99f3-27b85b077f4a.png?v=1781190915",
+  "platform": "shopify",
+  "product_id": "6687888801827",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Brand New Roasts",
+   "Lighter"
+  ],
+  "title": "Tanzania SB PB",
+  "url": "https://tierrasplanasroasters.com/products/tanzania-pb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39684626219043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39684626251811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39684626317347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Ground",
+    "variant_id": "39684626350115"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "39684626382883"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8 oz / Ground",
+    "variant_id": "39684626415651"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "39684626448419"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "39684626481187"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "226766f6f1b1c10a",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/VanillaCreme.png?v=1668402717",
+  "platform": "shopify",
+  "product_id": "6739652640803",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Vanilla Creme",
+  "url": "https://tierrasplanasroasters.com/products/vanilla-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39867348582435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "39867348615203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "39867348647971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39867348811811"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "b222a9593fdef5e4",
+  "first_seen": "2026-10-26",
+  "handle": "grog",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/RaiderGrog.png?v=1668483495",
+  "platform": "shopify",
+  "product_id": "6740311736355",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Raider Grog",
+  "url": "https://tierrasplanasroasters.com/products/grog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39868507717667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39868507750435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "39868507783203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "39868507815971"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "1094a014365514e9",
+  "first_seen": "2026-10-26",
+  "handle": "texas-pecan-royale",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/TXPecan.png?v=1668512160",
+  "platform": "shopify",
+  "product_id": "6740624441379",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Texas Pecan Royale",
+  "url": "https://tierrasplanasroasters.com/products/texas-pecan-royale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "39868908175395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "39868908208163"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "39868908240931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "39868908273699"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "867fd578aa925ee9",
+  "first_seen": "2026-10-26",
+  "handle": "caprock-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/CaprockBlend-NIC.png?v=1711020844",
+  "platform": "shopify",
+  "product_id": "6866723602467",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee",
+   "Coffee Roasts",
+   "Espresso",
+   "Lighter",
+   "Medium Roasts",
+   "Natural",
+   "SACF",
+   "SACF25"
+  ],
+  "title": "Caprock Blend",
+  "url": "https://tierrasplanasroasters.com/products/caprock-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "32 oz / Whole Bean",
+    "variant_id": "40109137068067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40109137100835"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "40109137133603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "32 oz / Ground",
+    "variant_id": "40109137166371"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Ground",
+    "variant_id": "40109137199139"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8 oz / Ground",
+    "variant_id": "40109137231907"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "063e55a1b210de0b",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/PumpkinPecan_e78111dd-886b-4972-a4ae-2e44877f699c.png?v=1788323593",
+  "platform": "shopify",
+  "product_id": "6867440009251",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Pumpkin Pecan",
+  "url": "https://tierrasplanasroasters.com/products/pumpkin-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40110944059427"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40110944092195"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40110944124963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16oz / Ground",
+    "variant_id": "40110944157731"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "43858560745507"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "43858560778275"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43858560811043"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Ground",
+    "variant_id": "43858560843811"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "f31da035ac03b50d",
+  "first_seen": "2026-10-26",
+  "handle": "trea-amigos",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/TresAmigos.png?v=1714423924",
+  "platform": "shopify",
+  "product_id": "6953141469219",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Arabica",
+   "Brazil-Fazenda",
+   "Coffee Roasts",
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Tres Amigos",
+  "url": "https://tierrasplanasroasters.com/products/trea-amigos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40332202901539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40332202934307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40332202967075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "40332202999843"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "695573d535254463",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-gift-basket",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/20240324_210550-1.jpg?v=1711335561",
+  "platform": "shopify",
+  "product_id": "6953573482531",
+  "product_type": "Coffee Swag",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Gift Set",
+   "SWAG"
+  ],
+  "title": "Coffee Gift Basket",
+  "url": "https://tierrasplanasroasters.com/products/coffee-gift-basket",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Whole Bean / Darker",
+    "variant_id": "40332915441699"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Whole Bean / Lighter",
+    "variant_id": "40332915474467"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Ground / Darker",
+    "variant_id": "40332915507235"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Ground / Lighter",
+    "variant_id": "40332915540003"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "d69571194e939940",
+  "first_seen": "2026-10-26",
+  "handle": "fathers-day-coffee-gift-basket",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/Father_s_Day_basket.jpg?v=1717703268",
+  "platform": "shopify",
+  "product_id": "7007081922595",
+  "product_type": "Coffee Swag",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Gift Set",
+   "SWAG"
+  ],
+  "title": "Father's Day Coffee Gift Basket",
+  "url": "https://tierrasplanasroasters.com/products/fathers-day-coffee-gift-basket",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Whole Bean / Darker",
+    "variant_id": "40477224435747"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Whole Bean / Lighter",
+    "variant_id": "40477224468515"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Ground / Darker",
+    "variant_id": "40477224501283"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 89.99,
+    "title": "Ground / Lighter",
+    "variant_id": "40477224534051"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "3ee1acbc84250ee4",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/CoconutCreme.png?v=1718038238",
+  "platform": "shopify",
+  "product_id": "7007627673635",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Coconut Creme",
+  "url": "https://tierrasplanasroasters.com/products/coconut-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40478553997347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40478554030115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40478554062883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "40478554095651"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "7e63af2dbef604ad",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-pancake",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/BlueberryPancake.png?v=1731070062",
+  "platform": "shopify",
+  "product_id": "7037847076899",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Flavored",
+   "Flavored Coffee"
+  ],
+  "title": "Blueberry Pancake",
+  "url": "https://tierrasplanasroasters.com/products/blueberry-pancake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40550572851235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40550572884003"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40550572916771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "40550572949539"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "3ab1adcced86b847",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-rojas",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/ColombiaRojas.png?v=1727343386",
+  "platform": "shopify",
+  "product_id": "7052163383331",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee",
+   "Coffee Roasts",
+   "Colombia",
+   "Lighter"
+  ],
+  "title": "Colombia Rojas",
+  "url": "https://tierrasplanasroasters.com/products/colombia-rojas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40591194226723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40591194259491"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "40591194292259"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz / Ground",
+    "variant_id": "40591194325027"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "40591194357795"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Ground",
+    "variant_id": "40591194390563"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "40591194423331"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Ground",
+    "variant_id": "40591194456099"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "f5d53822258cabc9",
+  "first_seen": "2026-10-26",
+  "handle": "big-country-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/Bigcountry.png?v=1782674244",
+  "platform": "shopify",
+  "product_id": "7081238954019",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee Roasts",
+   "Darker",
+   "Natural"
+  ],
+  "title": "Big Country Blend",
+  "url": "https://tierrasplanasroasters.com/products/big-country-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40702925340707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.0,
+    "title": "2 lb / Ground",
+    "variant_id": "40702925373475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40702925406243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16oz / Ground",
+    "variant_id": "40702925439011"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "40702925471779"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz / Ground",
+    "variant_id": "40702925504547"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "dbc8a80d4f061b94",
+  "first_seen": "2026-10-26",
+  "handle": "tpr-pl-cowboy-coffee-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7218072584227",
+  "product_type": "Private Label",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "TPR - PL Journey",
+  "url": "https://tierrasplanasroasters.com/products/tpr-pl-cowboy-coffee-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.0,
+    "title": "5 lb / Whole Bean / Lighthouse",
+    "variant_id": "42284255838243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Whole Bean / Lighthouse",
+    "variant_id": "42284255871011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Ground / Lighthouse",
+    "variant_id": "42284255903779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.7,
+    "title": "16 oz / Whole Bean / Lighthouse",
+    "variant_id": "42284255936547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.7,
+    "title": "16 oz / Ground / Lighthouse",
+    "variant_id": "42284255969315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "5 lb / Whole Bean / Palo Duro",
+    "variant_id": "42284259180579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.0,
+    "title": "5 lb / Whole Bean / Mexico Decaf",
+    "variant_id": "42284259213347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.0,
+    "title": "5 lb / Whole Bean / Interstate",
+    "variant_id": "42284259246115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 lb / Whole Bean / Palo Duro",
+    "variant_id": "42284259278883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "2 lb / Whole Bean / Mexico Decaf",
+    "variant_id": "42284259311651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Whole Bean / Interstate",
+    "variant_id": "42284259344419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 lb / Ground / Palo Duro",
+    "variant_id": "42284259377187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "2 lb / Ground / Mexico Decaf",
+    "variant_id": "42284259409955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Ground / Interstate",
+    "variant_id": "42284259442723"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Whole Bean / Palo Duro",
+    "variant_id": "42284259475491"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.1,
+    "title": "16 oz / Ground / Mexico",
+    "variant_id": "42284259508259"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Whole Bean / Interstate",
+    "variant_id": "42284259541027"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Ground / Palo Duro",
+    "variant_id": "42284259573795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "16 oz / Ground / Mexico Decaf",
+    "variant_id": "42284259606563"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Ground / Interstate",
+    "variant_id": "42284259639331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.0,
+    "title": "5 lb / Whole Bean / Texas Pecan",
+    "variant_id": "42290287640611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Whole Bean / Texas Pecan",
+    "variant_id": "42290287673379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Ground / Texas Pecan",
+    "variant_id": "42290287706147"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Whole Bean / Texas Pecan",
+    "variant_id": "42290287738915"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Ground / Texas Pecan",
+    "variant_id": "42290287771683"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Whole Bean / Blueberry Pancake",
+    "variant_id": "42383686828067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Ground / Blueberry Pancake",
+    "variant_id": "42383686893603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.7,
+    "title": "16 oz / Whole Bean / Colombia",
+    "variant_id": "42389890629667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Ground / Snickerdoodle",
+    "variant_id": "42446126415907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.0,
+    "title": "5 lb / Whole Bean / Pumpkin Pecan",
+    "variant_id": "43870554488867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Whole Bean / Pumpkin Pecan",
+    "variant_id": "43870554521635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb / Ground / Pumpkin Pecan",
+    "variant_id": "43870554554403"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Whole Bean / Pumpkin Pecan",
+    "variant_id": "43870554587171"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.75,
+    "title": "16 oz / Ground / Pumpkin Pecan",
+    "variant_id": "43870554619939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.0,
+    "title": "5 lb / Whole Bean / Nicaragua",
+    "variant_id": "43962806501411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Whole Bean / Nicaragua",
+    "variant_id": "43962806534179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lb / Ground / Nicaragua",
+    "variant_id": "43962806566947"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Whole Bean / Nicaragua",
+    "variant_id": "43962806599715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.5,
+    "title": "16 oz / Ground / Nicaragua",
+    "variant_id": "43962806632483"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.1,
+    "title": "16 oz / Ground / Compass",
+    "variant_id": "44067133980707"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "667ecf934f1de56a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-finca-el-cerro",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/files/CostaRicaFincaelCerro_93582821-30ae-42d2-889e-9ea5a357d964.png?v=1781190587",
+  "platform": "shopify",
+  "product_id": "7230437425187",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Brand New Roasts",
+   "Coffee",
+   "Coffee Roasts",
+   "Costa Rica",
+   "Ground/Whole Bean",
+   "Lighter"
+  ],
+  "title": "Costa Rica Finca El Cerro",
+  "url": "https://tierrasplanasroasters.com/products/costa-rica-finca-el-cerro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "42450351423523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground / 16 oz",
+    "variant_id": "42450351456291"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ },
+ {
+  "body_hash": "607268b1733f2f2b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-laja",
+  "image": "https://cdn.shopify.com/s/files/1/0031/9340/5475/products/MexcioChiapas_7395c40e-8069-49d0-9363-507d5564b567.png?v=1667944923",
+  "platform": "shopify",
+  "product_id": "7284982710307",
+  "product_type": "Coffee",
+  "roaster_slug": "tierrasplanasroasters",
+  "tags": [
+   "Darker",
+   "Espresso",
+   "French Press",
+   "Medium Roasts",
+   "Mexico",
+   "SACF"
+  ],
+  "title": "Mexico Huatasco La Laja",
+  "url": "https://tierrasplanasroasters.com/products/mexico-la-laja",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "43965278847011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lb / Drip Grind",
+    "variant_id": "43965278879779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "43965278912547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "43965278945315"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Percolator",
+    "variant_id": "43965278978083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / Pour Over",
+    "variant_id": "43965279010851"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz / French Press",
+    "variant_id": "43965279043619"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "43965279076387"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Drip Grind",
+    "variant_id": "43965279109155"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Percolator",
+    "variant_id": "43965279141923"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / Pour Over",
+    "variant_id": "43965279174691"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz / French Press",
+    "variant_id": "43965279207459"
+   }
+  ],
+  "vendor": "Tierras Planas Roasters"
+ }
+]

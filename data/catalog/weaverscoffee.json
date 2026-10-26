@@ -1,0 +1,3015 @@
+[
+ {
+  "body_hash": "ebfe6293af2ae6c8",
+  "first_seen": "2026-10-26",
+  "handle": "aged-tanzania-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/aged-tanzania-tarime.jpg?v=1627950145",
+  "platform": "shopify",
+  "product_id": "11102223124",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "African Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee",
+   "Tanzania Coffee"
+  ],
+  "title": "Aged Tanzania Coffee",
+  "url": "https://weaverscoffee.com/products/aged-tanzania-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39263491391588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "39263491653732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "39263491686500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "39263491752036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "39263491817572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158952341545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45193242836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45193242900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45193242964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45193243028"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "18e85606e579acda",
+  "first_seen": "2026-10-26",
+  "handle": "african-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/africa-blend_a270efa9-17e7-478d-8b86-e5b778fe8d7d.jpg?v=1627349056",
+  "platform": "shopify",
+  "product_id": "11161672404",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Africa",
+   "Africa Blend Coffee",
+   "African Coffee",
+   "Medium Roast Coffee"
+  ],
+  "title": "African Coffee Blend",
+  "url": "https://weaverscoffee.com/products/african-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938425876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938425940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938426004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938426068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938426132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938426196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938426260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938426324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142309652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142326612"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "7436f64b1d737186",
+  "first_seen": "2026-10-26",
+  "handle": "aged-mocha-java-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/aged-moch-java-blend_66fdf01e-c5c1-4298-bbe5-b71c36c4c970.jpg?v=1627609455",
+  "platform": "shopify",
+  "product_id": "11161672468",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Aged Mocha Java Coffee",
+   "Java Coffee",
+   "Medium-Dark Roasted Coffee",
+   "Mocha Java Coffee"
+  ],
+  "title": "Aged Mocha Java Coffee",
+  "url": "https://weaverscoffee.com/products/aged-mocha-java-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158930616361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158932189225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938427924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938427988"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938428116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938428244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938428372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938428436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938428564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938428628"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "fbc584142ce319a4",
+  "first_seen": "2026-10-26",
+  "handle": "astral-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/astral-blend_06a50437-25fe-4723-979c-301617121703.jpg?v=1630461144",
+  "platform": "shopify",
+  "product_id": "11161672660",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Artisan Coffee for a Cause",
+   "Astra Blend Coffee",
+   "Astral Blend Coffee",
+   "Breast Cancer",
+   "Dr. Susan Love Research Foundation",
+   "Medium-Dark Roasted Coffee"
+  ],
+  "title": "Astral Blend Coffee: Artisan Coffee",
+  "url": "https://weaverscoffee.com/products/astral-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938430036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938430100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938430164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938430228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938430292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938430356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938430420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938430484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142340052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142340628"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "ad8b013697777ef2",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/costa-rica-blend_47fa40ca-0272-443d-b813-7f13e91cd9db.jpg?v=1627867678",
+  "platform": "shopify",
+  "product_id": "11161672724",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Costa Rica Tarrazu Coffee",
+   "Costa Rican Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Costa Rica Coffee",
+  "url": "https://weaverscoffee.com/products/costa-rica-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938430548"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938430612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938430676"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938430740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938430804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938430868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938430932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938430996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142356116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142370132"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "d7bb5c8981d69fb8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-astral-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/decaf-astral-blend_53b0c8b1-8f10-418a-bb62-7ae8b3414258.jpg?v=1627610487",
+  "platform": "shopify",
+  "product_id": "11161672980",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Artisan Coffee For A Cause",
+   "Decaf Coffee",
+   "Medium-Dark Roasted Coffee",
+   "Water Processed Decaf Coffee"
+  ],
+  "title": "Decaf Astral Blend Coffee",
+  "url": "https://weaverscoffee.com/products/decaf-astral-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938438356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938438484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938438612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938438676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938438804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938438868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938438996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938439060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142370708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142371668"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "1dac1845f9d027da",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/weavers-decaf-espresso-coffee.jpg?v=1627822672",
+  "platform": "shopify",
+  "product_id": "11161673236",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Decaf Espresso",
+   "Medium-Dark Roasted Coffee"
+  ],
+  "title": "Decaf Espresso Coffee Blend",
+  "url": "https://weaverscoffee.com/products/decaf-espresso-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938439764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938439828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938439892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938439956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938440020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938440084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938440148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938440212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142385044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142385300"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "941f5bb39bf5f1e6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/decaf-house-blend_ce00f3a0-3b8b-475c-8614-9aee920468f6.jpg?v=1627411834",
+  "platform": "shopify",
+  "product_id": "11161673364",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium Roast Coffee"
+  ],
+  "title": "Decaf Coffee House Blend",
+  "url": "https://weaverscoffee.com/products/decaf-coffee-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938442964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938443028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938443092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938443156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938443220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938443284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938443348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938443412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142417748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142436052"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "0cdf02667188bec2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee-original-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/decaf-organic_09013c86-28b6-47cb-8b3a-a73dd6ead204.jpg?v=1627844094",
+  "platform": "shopify",
+  "product_id": "11161673428",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Medium-Dark Roasted Coffee"
+  ],
+  "title": "Decaf Coffee Original  Blend",
+  "url": "https://weaverscoffee.com/products/decaf-coffee-original-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158961025065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158961451049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938445524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938445652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938445716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938445844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938445972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938446036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938446164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938446228"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "506b96a70423a8d3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/espresso-blend_dce4a749-3ce9-4756-8013-610eedee874a.jpg?v=1627960409",
+  "platform": "shopify",
+  "product_id": "11161673620",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee",
+   "espresso"
+  ],
+  "title": "Espresso Coffee",
+  "url": "https://weaverscoffee.com/products/espresso-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158964531241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158968954921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938446804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938446868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938446932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938446996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938447060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938447124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938447188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938447252"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "1fb6d13a7882e9d6",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/ethiopian-natural-organic-blend-coffee_321b4037-f32a-4e45-b2ec-ccfae6b1952b.jpg?v=1627949947",
+  "platform": "shopify",
+  "product_id": "11161673748",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Africa",
+   "African Coffee",
+   "Ethiopia",
+   "Ethiopian",
+   "Medium Roast Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Ethiopian Coffee",
+  "url": "https://weaverscoffee.com/products/ethiopian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938449684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938449812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938449940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938450068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938450196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938450324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938450388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938450452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142443412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142454484"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "6ee110688948d168",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/french-roast-organic-coffee_56a152cc-6093-4cf9-9d81-ea2b3e6af280.jpg?v=1627959706",
+  "platform": "shopify",
+  "product_id": "11161673876",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Dark Roasted Coffee",
+   "French Roast"
+  ],
+  "title": "French Roast Coffee",
+  "url": "https://weaverscoffee.com/products/french-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158973116457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158974263337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938450516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938450580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938450644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938450708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938450772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938450836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938450900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938450964"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "33f651a18e4caaa4",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/guatemala-antigua-coffee_881dccf6-18e2-4034-949f-ad35cbe943f6.jpg?v=1627918628",
+  "platform": "shopify",
+  "product_id": "11161674196",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Guatemala Antigua Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Guatemala Antigua Coffee",
+  "url": "https://weaverscoffee.com/products/guatemala-antigua-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938455252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938455444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938455636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938455764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938455892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938455956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938456020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938456084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142489620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142490388"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "16b05b1973651c46",
+  "first_seen": "2026-10-26",
+  "handle": "hakrz-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/Screenshot2026-04-20at5.31.43PM.png?v=1776734292",
+  "platform": "shopify",
+  "product_id": "11161674452",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Hakerz Delight Coffee",
+   "Medium-Dark Roasted Coffee"
+  ],
+  "title": "Hakrz Coffee",
+  "url": "https://weaverscoffee.com/products/hakrz-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938462740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938462868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938462996"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938463060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938463188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938463316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938463380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938463444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142517460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142547412"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "95c0778ae4128b8d",
+  "first_seen": "2026-10-26",
+  "handle": "house-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/house-blend-coffee_4509c9bc-e616-4ecd-a0af-889c1efb3588.jpg?v=1627659395",
+  "platform": "shopify",
+  "product_id": "11161674516",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "House Blend Coffee",
+   "House Coffee",
+   "Medium Roast Coffee",
+   "Medium-Bodied"
+  ],
+  "title": "House Coffee Blend",
+  "url": "https://weaverscoffee.com/products/house-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158985109545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158985601065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938463828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938463892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938463956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938464020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938464084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938464148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938464212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938464276"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "6d48d312b5796ea6",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/jamaica-blue-blend-coffee_46aadbce-9b19-46a4-a327-280a2c9e496c.jpg?v=1627563623",
+  "platform": "shopify",
+  "product_id": "11161674644",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Jamaica Blue Mountain Coffee",
+   "Jamaica Blue Mountain Reserve Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee",
+   "all/reserve-coffee"
+  ],
+  "title": "Jamaica Blue Mountain Coffee Reserve Coffee",
+  "url": "https://weaverscoffee.com/products/jamaica-blue-mountain-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 69.95,
+    "title": "8oz / Ground for Cold Brew",
+    "variant_id": "4158990385193"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 69.95,
+    "title": "8oz / Whole Bean",
+    "variant_id": "45938467028"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 69.95,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "45938467092"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 69.95,
+    "title": "8oz / Ground for French Press",
+    "variant_id": "45938467156"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 69.95,
+    "title": "8oz / Ground for Espresso",
+    "variant_id": "45938467220"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "67397c352af0668c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/KenyaCoffee4.png?v=1759454201",
+  "platform": "shopify",
+  "product_id": "11161674772",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Kenya AA Coffee",
+   "Medium-Dark Roasted Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Kenya AA Coffee",
+  "url": "https://weaverscoffee.com/products/kenya-aa-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "4158991728681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "4158991990825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938467348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938467412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938467476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938467540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938467604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938467668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938467732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938467796"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "3e8a6878ab7a065d",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/kona-reserve-coffee-blend_1b01ed9c-109c-4585-a7b5-435d7cc4734f.jpg?v=1627914483",
+  "platform": "shopify",
+  "product_id": "11161674900",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "100% Kona Coffee",
+   "Hawaiian Coffe",
+   "Kona Coffee",
+   "Single Origin Coffee",
+   "all/reserve-coffee"
+  ],
+  "title": "Kona Coffee -  Reserve Coffee",
+  "url": "https://weaverscoffee.com/products/kona-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.95,
+    "title": "8oz / Ground for Cold Brew",
+    "variant_id": "4158992908329"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.95,
+    "title": "8oz / Whole Bean",
+    "variant_id": "45938470548"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.95,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "45938470612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.95,
+    "title": "8oz / Ground for French Press",
+    "variant_id": "45938470676"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 59.95,
+    "title": "8oz / Ground for Espresso",
+    "variant_id": "45938470740"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "8fb49d833af1c518",
+  "first_seen": "2026-10-26",
+  "handle": "legacy-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/legacy-blend-coffee_030c016f-21d3-4225-ad4a-447fdcfdc898.jpg?v=1627914125",
+  "platform": "shopify",
+  "product_id": "11161674964",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee"
+  ],
+  "title": "Legacy Blend Coffee",
+  "url": "https://weaverscoffee.com/products/legacy-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938470804"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938470868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938470932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938470996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938471060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938471124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938471188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938471252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938471316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938471380"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "743bc9779859af74",
+  "first_seen": "2026-10-26",
+  "handle": "original-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/organic-blend_6cec2403-b604-4824-bc28-9fda6595298e.jpg?v=1627950713",
+  "platform": "shopify",
+  "product_id": "11161675092",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Coffee Blend",
+   "Medium Roast Coffee",
+   "Voted Best Coffee NBC Today Show"
+  ],
+  "title": "Original Blend Coffee",
+  "url": "https://weaverscoffee.com/products/original-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938474132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938474196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938474260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938474324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938474388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938474452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938474516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938474580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938474644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938474708"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "023b2770ba4db8fc",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/papa-new-guinea-coffee_71f10b58-6e51-4ac8-928f-cc93518b0566.jpg?v=1626980273",
+  "platform": "shopify",
+  "product_id": "11161675156",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Indonesian Coffee",
+   "Medium Roast Coffee",
+   "Papua New Guinea Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Papua New Guinea Coffee",
+  "url": "https://weaverscoffee.com/products/papua-new-guinea-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938474772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938474836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938474900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938474964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938475028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938475092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938475156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938475220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938475284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938475348"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "4f0659d62668a3ef",
+  "first_seen": "2026-10-26",
+  "handle": "peaberry-reserve-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/peaberry-reserve-coffee_c154cec2-1272-49fa-bf04-122d1cb30123.jpg?v=1627400384",
+  "platform": "shopify",
+  "product_id": "11161675284",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee",
+   "Peaberry Reserve Coffee",
+   "Reserve Coffee",
+   "all/reserve-coffee"
+  ],
+  "title": "Peaberry Reserve Coffee",
+  "url": "https://weaverscoffee.com/products/peaberry-reserve-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42546362646628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "42546529599588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "42546531336292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "42546541559908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "42546546507876"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Whole Bean",
+    "variant_id": "45938478228"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "45938478356"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for French Press",
+    "variant_id": "45938478484"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Espresso",
+    "variant_id": "45938478612"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Cold Brew",
+    "variant_id": "45938478740"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "e9e310218256fc32",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/peru-organic_6a922f55-7013-4a30-95a1-bb4a96f808af.jpg?v=1628977352",
+  "platform": "shopify",
+  "product_id": "11161675476",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium Roast Coffee",
+   "Peru Coffee",
+   "Peruvian Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Peruvian Coffee",
+  "url": "https://weaverscoffee.com/products/peruvian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938485716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938485780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938485844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938485908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938485972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938486036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938486100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938486164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938486228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938486292"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "cba1d3e2e5f23d1f",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/SumatranCoffeeWomanFarmer.png?v=1759446992",
+  "platform": "shopify",
+  "product_id": "11161675668",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee",
+   "Single Origin Coffee",
+   "Sumatran Coffee"
+  ],
+  "title": "Sumatra Coffee",
+  "url": "https://weaverscoffee.com/products/sumatra-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938488020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938488148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938488276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938488404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938488468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938488596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938488724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938488788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938488916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938489044"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "6c8ba8549e848cdb",
+  "first_seen": "2026-10-26",
+  "handle": "the-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/the-blend-coffee2_f7d6d429-f915-4526-8e18-73e54eacb5e3.jpg?v=1627924201",
+  "platform": "shopify",
+  "product_id": "11161675796",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee",
+   "The Blend Coffee"
+  ],
+  "title": "The Blend Coffee",
+  "url": "https://weaverscoffee.com/products/the-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938489876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938489940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938490004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938490068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938490132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938490196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938490260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938490324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938490388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "45938490452"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "dbe62468b4e67e71",
+  "first_seen": "2026-10-26",
+  "handle": "pride-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/PrideCoffeeBlend_32bb02cd-1e06-4c3c-aab1-d86d385714a6.png?v=1759461395",
+  "platform": "shopify",
+  "product_id": "11161677396",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium-Dark Roasted Coffee",
+   "Pride",
+   "Pride Blend Coffee",
+   "Pride Coffee",
+   "SFAIDS FOUNDATION"
+  ],
+  "title": "Pride Coffee Blend",
+  "url": "https://weaverscoffee.com/products/pride-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938527892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938527956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938528020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938528084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "45938528148"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "d7b6b0e2c1f07e24",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/decaf-french-roast_d50ec9c6-544b-43d9-8786-e92581fd676c.jpg?v=1609302108",
+  "platform": "shopify",
+  "product_id": "11161677588",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Dark Roasted Coffee",
+   "Decaf Coffee"
+  ],
+  "title": "Decaf French Roast Coffee",
+  "url": "https://weaverscoffee.com/products/decaf-french-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45938529236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "45938529364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "45938529492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "45938529556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45938529684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.95,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "45938529812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "45938529940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "45938530068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "46142386772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "46142395156"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "586ceb81c888b082",
+  "first_seen": "2026-10-26",
+  "handle": "gift-of-reserve-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/gift-white-label-reserve-coffee.jpg?v=1694820817",
+  "platform": "shopify",
+  "product_id": "11161681620",
+  "product_type": "Coffee Gift",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "100% Kona Coffee",
+   "Gift",
+   "Gifts",
+   "Jamaica Blue Mountain Coffee",
+   "Jamaica Blue Mountain Reserve Coffee",
+   "Kona Coffee"
+  ],
+  "title": "Gift of Reserve Coffee - Coffee Lover Gift",
+  "url": "https://weaverscoffee.com/products/gift-of-reserve-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Whole Bean / Green Bag with a Bow",
+    "variant_id": "13694977605677"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Drip / Green Bag with a Bow",
+    "variant_id": "13694977703981"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for French Press / Green Bag with a Bow",
+    "variant_id": "13694977769517"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Cold Brew / Green Bag with a Bow",
+    "variant_id": "13694977802285"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Whole Bean / Red Snowman Bag with a Bow",
+    "variant_id": "13694982291501"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Drip / Red Snowman Bag with a Bow",
+    "variant_id": "13694982324269"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for French Press / Red Snowman Bag with a Bow",
+    "variant_id": "13694982357037"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Cold Brew / Red Snowman Bag with a Bow",
+    "variant_id": "13694982422573"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Espresso / Pink Bag with Bow",
+    "variant_id": "39760096329828"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Espresso / Green Bag with a Bow",
+    "variant_id": "39760096395364"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Espresso / Red Snowman Bag with a Bow",
+    "variant_id": "39760096460900"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Whole Bean / Pink Bag with Bow",
+    "variant_id": "45938599508"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Drip / Pink Bag with Bow",
+    "variant_id": "45938599636"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for French Press / Pink Bag with Bow",
+    "variant_id": "45938599764"
+   },
+   {
+    "available": true,
+    "grams": 1601,
+    "price_usd": 149.95,
+    "title": "Ground for Cold Brew / Pink Bag with Bow",
+    "variant_id": "45938599892"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "8bfc65b66df82f2f",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-peaberry-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/png-coffee_f774a8ca-ea77-4c90-ac21-53e792d7df6b.jpg?v=1627401542",
+  "platform": "shopify",
+  "product_id": "11161682964",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Indonesian Coffee",
+   "Medium Roast Coffee",
+   "Papua New Guinea Coffee",
+   "Peaberry Reserve Coffee",
+   "all/reserve-coffee"
+  ],
+  "title": "Papua New Guinea Peaberry Coffee",
+  "url": "https://weaverscoffee.com/products/papua-new-guinea-peaberry-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42545901928548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "42545909891172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "42545921949796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "42545974804580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 199.5,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "42546120491108"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Whole Bean",
+    "variant_id": "45938631124"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Drip",
+    "variant_id": "45938631188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for French Press",
+    "variant_id": "45938631252"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Espresso",
+    "variant_id": "45938631316"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "8oz / Ground for Cold Brew",
+    "variant_id": "45938631380"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "4537e1c12c5de068",
+  "first_seen": "2026-10-26",
+  "handle": "java-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/java-blue-batavia-coffee.jpg?v=1609297937",
+  "platform": "shopify",
+  "product_id": "1717620801581",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Java Blue Batavia Coffee",
+   "Medium-Dark Roasted Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Java Coffee",
+  "url": "https://weaverscoffee.com/products/java-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "14838004482093"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "14838004514861"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "14838004547629"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "14838004580397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "14838004613165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "14838004645933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "14838004678701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "14838004711469"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "14838004744237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "14838004777005"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "657402e74cf58c0c",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/UgandaCoffeeNatural.png?v=1759461396",
+  "platform": "shopify",
+  "product_id": "6590771495012",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Africa",
+   "Africa Blend Coffee",
+   "African Coffee",
+   "Medium Roast Coffee",
+   "Medium-Bodied",
+   "Single Origin Coffee",
+   "Uganda Coffee"
+  ],
+  "title": "Uganda Coffee",
+  "url": "https://weaverscoffee.com/products/uganda-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "39394807218276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "39394807251044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "39394807283812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "39394807316580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39394807349348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "39394807382116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "39394807414884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "39394807447652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "39394807480420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "39394807513188"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "e10bff9b092651b2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/products/columbian-coffee-beans.jpg?v=1627495994",
+  "platform": "shopify",
+  "product_id": "669957292077",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Colombia Coffee",
+   "Colombian Coffee",
+   "Medium Roast Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Colombian Coffee",
+  "url": "https://weaverscoffee.com/products/colombian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "8217594724397"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "8217594757165"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "8217594789933"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "8217594822701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "8217594855469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "8217594888237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "8217594921005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "8217594953773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "8217594986541"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "8217595019309"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "a3d0db72dfa23e6f",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/RwandaCoffee.png?v=1759454199",
+  "platform": "shopify",
+  "product_id": "670039670829",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "Medium Roast Coffee",
+   "Rwanda",
+   "Rwanda Muhororo Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Rwanda Coffee",
+  "url": "https://weaverscoffee.com/products/rwanda-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "8218027327533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "8218027360301"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "8218027393069"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "8218027425837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "8218027458605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "8218027491373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "8218027524141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "8218027556909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "8218027589677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "8218027622445"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ },
+ {
+  "body_hash": "ed4b024bbd88f1a7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-coffee-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/1186/7382/files/KenyaCoffeePeaberry3.png?v=1759454199",
+  "platform": "shopify",
+  "product_id": "6834227576932",
+  "product_type": "Packaged Coffee",
+  "roaster_slug": "weaverscoffee",
+  "tags": [
+   "African Coffee",
+   "Kenya AA Coffee",
+   "Medium-Dark Roasted Coffee",
+   "Single Origin Coffee"
+  ],
+  "title": "Kenya Coffee Peaberry",
+  "url": "https://weaverscoffee.com/products/kenya-coffee-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Whole Bean",
+    "variant_id": "40150364258404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Drip",
+    "variant_id": "40150364291172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for French Press",
+    "variant_id": "40150364323940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Espresso",
+    "variant_id": "40150364356708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40150364389476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Drip",
+    "variant_id": "40150364422244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for French Press",
+    "variant_id": "40150364455012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Espresso",
+    "variant_id": "40150364487780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.95,
+    "title": "16oz / Ground for Cold Brew",
+    "variant_id": "40150364520548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 184.75,
+    "title": "5lb / Ground for Cold Brew",
+    "variant_id": "40150364553316"
+   }
+  ],
+  "vendor": "Weaver's Coffee & Tea"
+ }
+]

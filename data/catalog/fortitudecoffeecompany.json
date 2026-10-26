@@ -1,0 +1,4419 @@
+[
+ {
+  "body_hash": "e7baceb51245f4d3",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-coconut",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/toasted_coconut_coffee.heic?v=1751413416",
+  "platform": "shopify",
+  "product_id": "10084406493500",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "TOASTED COCONUT",
+  "url": "https://fortitudecoffeecompany.com/products/toasted-coconut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51863948296508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "51863948329276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "51863948362044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "51863948394812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "51863948427580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "51863948460348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "51863948493116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "51863948525884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "51863948558652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "51863948591420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "51863948624188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "51863948656956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "51863948689724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "51863948722492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "51863948755260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "51863948788028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "51863948820796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "51863948853564"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "3c8911f25d841467",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-pistachio",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/chocolate_pistachio_coffee.heic?v=1751413353",
+  "platform": "shopify",
+  "product_id": "10084406853948",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "CHOCOLATE PISTACHIO",
+  "url": "https://fortitudecoffeecompany.com/products/chocolate-pistachio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51863952785724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "51863952818492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "51863952851260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "51863952884028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "51863952916796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "51863952949564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "51863952982332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "51863953015100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "51863953047868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "51863953080636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "51863953113404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "51863953146172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "51863953178940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "51863953211708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "51863953244476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "51863953277244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "51863953310012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "51863953342780"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "0108990d02151b56",
+  "first_seen": "2026-10-26",
+  "handle": "cry-havoc-jackcarrblend",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/fortitude_jack_carr_blend.jpg?v=1759278348",
+  "platform": "shopify",
+  "product_id": "10142933090620",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium-Light",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned",
+   "jack carr"
+  ],
+  "title": "CRY HAVOC- Jack Carr *Limited Release*",
+  "url": "https://fortitudecoffeecompany.com/products/cry-havoc-jackcarrblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52095067554108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "52095067586876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "52095067619644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "52095067652412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "52095067685180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.68,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "52095067717948"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "c078d11076d5d8e6",
+  "first_seen": "2026-10-26",
+  "handle": "trek-5-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/TREK_on_the_go_pour_over_5_pack.heic?v=1758504873",
+  "platform": "shopify",
+  "product_id": "10153883959612",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "TREK 5 PACK- On The Go Pour Over",
+  "url": "https://fortitudecoffeecompany.com/products/trek-5-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "O-Dark Thirty",
+    "variant_id": "52138193748284"
+   },
+   {
+    "available": true,
+    "grams": 953,
+    "price_usd": 15.0,
+    "title": "Fireside Chat",
+    "variant_id": "52138193944892"
+   },
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 15.0,
+    "title": "Silent Wings",
+    "variant_id": "52138194141500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Operation Fortitude",
+    "variant_id": "52197974114620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Force of Nature",
+    "variant_id": "52197974147388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Sunrise on the Ocean",
+    "variant_id": "53971757105468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Sunset on the River",
+    "variant_id": "53971757138236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Stars & Stripes",
+    "variant_id": "53971757171004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Origin Story",
+    "variant_id": "53971757203772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Stronghold",
+    "variant_id": "53975493771580"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "609e279e0f78751e",
+  "first_seen": "2026-10-26",
+  "handle": "trek-10-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/10pack_trek_on_the_go.heic?v=1758505155",
+  "platform": "shopify",
+  "product_id": "10153886449980",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "TREK 10 PACK- On The Go Pour Overs",
+  "url": "https://fortitudecoffeecompany.com/products/trek-10-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "O-Dark Thirty",
+    "variant_id": "52138217013564"
+   },
+   {
+    "available": true,
+    "grams": 953,
+    "price_usd": 30.0,
+    "title": "Fireside Chat",
+    "variant_id": "52138217046332"
+   },
+   {
+    "available": true,
+    "grams": 2359,
+    "price_usd": 30.0,
+    "title": "Silent Wings",
+    "variant_id": "52138217079100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Operation Fortitude",
+    "variant_id": "52197970673980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Force of Nature",
+    "variant_id": "52197970706748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Stars & Stripes",
+    "variant_id": "53975493869884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Origin Story",
+    "variant_id": "53975493902652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Sunset on the River",
+    "variant_id": "53975493935420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Sunrise on the Ocean",
+    "variant_id": "53975493968188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Stronghold",
+    "variant_id": "53975494000956"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "4254205432e90559",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/fortitude_coffee_canister.heic?v=1763919460",
+  "platform": "shopify",
+  "product_id": "10238476681532",
+  "product_type": "",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Veteran Owned"
+  ],
+  "title": "Fortitude Coffee Co. Airscape® Coffee Canister- 2qt",
+  "url": "https://fortitudecoffeecompany.com/products/coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Empty",
+    "variant_id": "52494017102140"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Whole Beans",
+    "variant_id": "52773936103740"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Ground for DRIP",
+    "variant_id": "52773936136508"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Ground for FRENCH",
+    "variant_id": "52773936169276"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Ground for AEROPRESS",
+    "variant_id": "52773936202044"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Ground for POUR OVER",
+    "variant_id": "52773936234812"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Black / Filled- Ground for ESPRESSO",
+    "variant_id": "52773936267580"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Empty",
+    "variant_id": "52773936300348"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Whole Beans",
+    "variant_id": "52773936333116"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Ground for DRIP",
+    "variant_id": "52773936365884"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Ground for FRENCH",
+    "variant_id": "52773936398652"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Ground for AEROPRESS",
+    "variant_id": "52773936431420"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Ground for POUR OVER",
+    "variant_id": "52773936464188"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 44.0,
+    "title": "Currant / Filled- Ground for ESPRESSO",
+    "variant_id": "52773936496956"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "e2b60031775a58ef",
+  "first_seen": "2026-10-26",
+  "handle": "freedom-roast-america-250",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/freesom_roast.heic?v=1783042247",
+  "platform": "shopify",
+  "product_id": "10420433649980",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "FREEDOM ROAST- America 250 *LIMITED RELEASE*",
+  "url": "https://fortitudecoffeecompany.com/products/freedom-roast-america-250",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53176915558716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "53176915591484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "53176915624252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "53176915657020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "53176915689788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.76,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "53176915722556"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "64772af2c162deff",
+  "first_seen": "2026-10-26",
+  "handle": "smores",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/campfire_s_mores_flavored_coffee.heic?v=1788817630",
+  "platform": "shopify",
+  "product_id": "10482850201916",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "S'MORES",
+  "url": "https://fortitudecoffeecompany.com/products/smores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "54356683260220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "54356683292988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "54356683325756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "54356683358524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "54356683391292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "54356683424060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "54356683456828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "54356683489596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "54356683522364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "54356683555132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "54356683587900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "54356683620668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "54356683653436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "54356683686204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "54356683718972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "54356683751740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "54356683784508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "54356683817276"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "f7ae4be3e07a3427",
+  "first_seen": "2026-10-26",
+  "handle": "origin-story",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/OriginFront.heic?v=1674090033",
+  "platform": "shopify",
+  "product_id": "8075149639996",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "ORIGIN STORY",
+  "url": "https://fortitudecoffeecompany.com/products/origin-story",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44247787274556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44247787307324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44247787340092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44247787372860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44247787405628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44247787438396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44282184892732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "44282184925500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "44282184958268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "44282184991036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "44282185023804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "44282185056572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915371569468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915371602236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915371635004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915371667772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915371700540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915371733308"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "8a22e01c17701e3a",
+  "first_seen": "2026-10-26",
+  "handle": "stars-stripes",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/stars-stripes-192425.jpg?v=1678669907",
+  "platform": "shopify",
+  "product_id": "8075149902140",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium-Light",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "STARS & STRIPES",
+  "url": "https://fortitudecoffeecompany.com/products/stars-stripes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44247789437244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44247789470012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44247789502780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44247789535548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44247789568316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44247789601084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44282185449788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "44282185482556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "44282185515324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "44282185548092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "44282185580860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "44282185613628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915397554492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915397587260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915397620028"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915397652796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915397685564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915397718332"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "3672c5dd946d7e65",
+  "first_seen": "2026-10-26",
+  "handle": "o-dark-thirty",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/ODarkFront.heic?v=1674090235",
+  "platform": "shopify",
+  "product_id": "8075150590268",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "O-DARK THIRTY",
+  "url": "https://fortitudecoffeecompany.com/products/o-dark-thirty",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44247792714044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44247792746812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44247792779580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44247792812348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44247792845116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44247792877884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44282181189948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "44282181222716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "44282181255484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "44282181288252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "44282181321020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "44282181353788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915354530108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915354562876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915354595644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915354628412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915354661180"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915354693948"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "905d4d93df47dde4",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-1",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/roasters-choice-608159.jpg?v=1678669907",
+  "platform": "shopify",
+  "product_id": "8083221020988",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://fortitudecoffeecompany.com/products/roasters-choice-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44277844640060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44277844672828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44277844705596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44277844738364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44277844771132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44277844803900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44311755948348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "44311755981116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "44311756013884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "44311756046652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "44311756079420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "44311756112188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915384283452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915384316220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915384348988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915384381756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915384414524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915384447292"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "a84edb31694f5cd2",
+  "first_seen": "2026-10-26",
+  "handle": "no-boundaries",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/IMG_0058_c60b3f74-e95a-4413-bbf6-474f4df1d2e7.heic?v=1674091136",
+  "platform": "shopify",
+  "product_id": "8083989954876",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee Beans",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "NO BOUNDARIES | espresso",
+  "url": "https://fortitudecoffeecompany.com/products/no-boundaries",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44281783681340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44281783746876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44281783779644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44281783845180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44281783943484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44281784009020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45096947777852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "45096947810620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "45096947843388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "45096947876156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "45096947908924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "45096947941692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915336900924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915336933692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915336966460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915336999228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915337031996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915337064764"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "df62a2966024d790",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/IMG_35452.heic?v=1675517232",
+  "platform": "shopify",
+  "product_id": "8109628555580",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "Toasted Southern Pecan",
+  "url": "https://fortitudecoffeecompany.com/products/southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44386479276348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44386479309116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44386479341884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44386479374652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44386479407420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44386479440188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44748280430908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "44748280463676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "44748280496444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "44748280529212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "44748280561980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "44748280594748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915424784700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915424817468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915424850236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915424883004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915424915772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915424948540"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "deaa6bd54a52b259",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/french-vanilla-950308.jpg?v=1678669907",
+  "platform": "shopify",
+  "product_id": "8109628621116",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "French Vanilla",
+  "url": "https://fortitudecoffeecompany.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44386479604028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44386479636796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44386479669564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44386479702332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44386479735100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44386479767868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44748282331452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "44748282364220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "44748282396988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "44748282429756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "44748282462524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "44748282495292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915327234364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.99,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915327267132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915327299900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915327332668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915327365436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915327398204"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "fc7d3599180e432d",
+  "first_seen": "2026-10-26",
+  "handle": "force-of-nature",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/IMG_4446.heic?v=1678841614",
+  "platform": "shopify",
+  "product_id": "8188202549564",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium-Light",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "FORCE OF NATURE",
+  "url": "https://fortitudecoffeecompany.com/products/force-of-nature",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44666800111932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "44666800144700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "44666800177468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44666800210236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44666800243004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "44666800275772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "45915317305660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Aeropress",
+    "variant_id": "45915317338428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Drip",
+    "variant_id": "45915317371196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for French Press",
+    "variant_id": "45915317403964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Espresso",
+    "variant_id": "45915317436732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Pour Over",
+    "variant_id": "45915317469500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46675036504380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "46675036537148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "46675036569916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "46675036602684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "46675036635452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "46675036668220"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "9c1a34e79b13f69b",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-toasted-southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/caramel-toasted-southern-pecan-901594.jpg?v=1682288180",
+  "platform": "shopify",
+  "product_id": "8280994611516",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "CARAMEL Toasted Southern Pecan",
+  "url": "https://fortitudecoffeecompany.com/products/caramel-toasted-southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45011332399420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "45011332432188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "45011332464956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "45011332497724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "45011332530492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "45011332563260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45011332596028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "45011332628796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "45011332661564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "45011332694332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "45011332727100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "45011332759868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915290173756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915290206524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915290239292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915290272060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915290304828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915290337596"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "6c43e4ea4043013c",
+  "first_seen": "2026-10-26",
+  "handle": "salty-bae",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/Salty_Bae.heic?v=1719194501",
+  "platform": "shopify",
+  "product_id": "8309347123516",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "SALTY BAE",
+  "url": "https://fortitudecoffeecompany.com/products/salty-bae",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45100867682620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "45100867715388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "45100867748156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "45100867780924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "45100867813692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "45100867846460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45100867879228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "45100867911996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "45100867944764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "45100867977532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "45100868010300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "45100868043068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915389755708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915389788476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915389821244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915389854012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915389886780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915389919548"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "25417d148785dfe5",
+  "first_seen": "2026-10-26",
+  "handle": "sunset-on-the-river",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/sunset-on-the-river-470473.jpg?v=1689725640",
+  "platform": "shopify",
+  "product_id": "8492717310268",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "SUNSET ON THE RIVER",
+  "url": "https://fortitudecoffeecompany.com/products/sunset-on-the-river",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45785096454460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "45785096519996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "45785096585532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "45785096618300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "45785096683836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "45785096749372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "45785096814908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "45785096880444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "45785096945980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "45785097011516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "45785097077052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "45785097142588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915415249212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915415281980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915415314748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915415347516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915415380284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915415413052"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "3e0b881a980945bd",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-on-the-ocean",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/sunrise-on-the-ocean-342255.jpg?v=1689725641",
+  "platform": "shopify",
+  "product_id": "8492734513468",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium-Light",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "SUNRISE ON THE OCEAN",
+  "url": "https://fortitudecoffeecompany.com/products/sunrise-on-the-ocean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45785272549692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "45785272582460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "45785272615228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "45785272647996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "45785272680764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "45785272713532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "45785272746300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "45785272779068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "45785272811836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "45785272844604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "45785272877372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "45785272910140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "45915406827836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "45915406860604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "45915406893372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "45915406926140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "45915406958908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "45915406991676"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "c8b2a0b947262449",
+  "first_seen": "2026-10-26",
+  "handle": "silent-wings",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/silent-wings-445644.jpg?v=1691134310",
+  "platform": "shopify",
+  "product_id": "8543891554620",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "SILENT WINGS",
+  "url": "https://fortitudecoffeecompany.com/products/silent-wings",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46036868432188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "46036868464956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "46036868497724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "46036868530492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "46036868563260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "46036868596028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46036868628796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "46036868661564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "46036868694332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "46036868727100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "46036868759868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "46036868792636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "46036890878268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Aeropress",
+    "variant_id": "46036890911036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Drip",
+    "variant_id": "46036890943804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for French Press",
+    "variant_id": "46036890976572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Espresso",
+    "variant_id": "46036891009340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Pour Over",
+    "variant_id": "46036891042108"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "f39405a7b2831978",
+  "first_seen": "2026-10-26",
+  "handle": "light-duty-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/light-duty-decaf-789282.jpg?v=1693371935",
+  "platform": "shopify",
+  "product_id": "8659696615740",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned",
+   "decaf"
+  ],
+  "title": "LIGHT DUTY- Decaf",
+  "url": "https://fortitudecoffeecompany.com/products/light-duty-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46674969952572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "46674970050876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "46674970083644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "46674970149180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "46674970247484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "46674970313020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "46674970378556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "46674970444092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "46674970509628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "46674970575164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "46674970640700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "46674970706236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46674970771772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "46674970837308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "46674970870076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "46674970935612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "46674970968380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "46674971001148"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "5851ca8c8ce695d6",
+  "first_seen": "2026-10-26",
+  "handle": "zero-day-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/zero-day-decaf-179933.jpg?v=1693371982",
+  "platform": "shopify",
+  "product_id": "8659697762620",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned",
+   "decaf"
+  ],
+  "title": "ZERO DAY- Decaf",
+  "url": "https://fortitudecoffeecompany.com/products/zero-day-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46674973196604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "46674973229372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "46674973262140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "46674973294908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "46674973327676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "46674973360444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "46674973393212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "46674973425980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "46674973458748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "46674973491516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "46674973524284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "46674973557052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46674973589820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "46674973622588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "46674973655356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "46674973688124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "46674973720892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "46674973753660"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "8d3258998264839f",
+  "first_seen": "2026-10-26",
+  "handle": "dark-timber-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/products/dark-timber-330550.jpg?v=1698095125",
+  "platform": "shopify",
+  "product_id": "8877712867644",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "DARK TIMBER",
+  "url": "https://fortitudecoffeecompany.com/products/dark-timber-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47846940442940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "47846940475708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "47846940508476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "47846940541244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "47846940574012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "47846940606780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "47846940639548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "47846940672316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "47846940705084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "47846940737852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "47846940770620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "47846940803388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "47846940836156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "47846940868924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "47846940901692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "47846940934460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "47846940967228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "47846940999996"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "847e07767537035b",
+  "first_seen": "2026-10-26",
+  "handle": "apple-cider-donut",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/IMG_5367.heic?v=1725327052",
+  "platform": "shopify",
+  "product_id": "8932333912380",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "Apple Cider Donut",
+  "url": "https://fortitudecoffeecompany.com/products/apple-cider-donut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47975231160636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "47975231193404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "47975231226172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "47975231258940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "47975231291708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "47975231324476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "47975231357244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "47975231390012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "47975231422780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "47975231455548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "47975231488316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "47975231521084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "47975231553852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "47975231586620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "47975231619388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "47975231652156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "47975231684924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "47975231717692"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "f98958a25e130ae6",
+  "first_seen": "2026-10-26",
+  "handle": "operation-fortitude",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/Operation_Fortitude_1.heic?v=1719194435",
+  "platform": "shopify",
+  "product_id": "9143588389180",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "OPERATION FORTITUDE",
+  "url": "https://fortitudecoffeecompany.com/products/operation-fortitude",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48581546410300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "48581546443068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "48581546475836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "48581546508604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "48581546541372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "48581546574140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "48581546606908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "48581546639676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "48581546672444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "48581546705212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "48581546737980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "48581546770748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48581546803516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "48581546836284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "48581546869052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "48581546901820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "48581546934588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "48581546967356"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "8c8a655b713fdf98",
+  "first_seen": "2026-10-26",
+  "handle": "the-usual-grind-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/the-usual-grind-blend-962804.jpg?v=1718982849",
+  "platform": "shopify",
+  "product_id": "9545139454268",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "The Usual Grind Blend",
+  "url": "https://fortitudecoffeecompany.com/products/the-usual-grind-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49671793770812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "49671793803580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "49671793836348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "49671793869116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "49671793901884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "49671793934652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "49671793967420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "49671794000188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "49671794032956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "49671794065724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "49671794098492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.99,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "49671794131260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49671794164028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "49671794196796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "49671794229564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "49671794262332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "49671794295100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "49671794327868"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "00c794ce2cf43dd9",
+  "first_seen": "2026-10-26",
+  "handle": "stronghold-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/IMG_0263.heic?v=1721524153",
+  "platform": "shopify",
+  "product_id": "9615011643708",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Medium",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned",
+   "nonprofit"
+  ],
+  "title": "STRONGHOLD",
+  "url": "https://fortitudecoffeecompany.com/products/stronghold-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49842852659516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "49842852692284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "49842852725052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "49842852757820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "49842852790588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "49842852823356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "49842852856124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "49842852888892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "49842852921660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "49842852954428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "49842852987196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "49842853019964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "49842853052732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "49842853085500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "49842853118268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "49842853151036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "49842853183804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "49842853216572"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "0dbffae416a35bfb",
+  "first_seen": "2026-10-26",
+  "handle": "charlie-bravo-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/IMG_0578.heic?v=1727140842",
+  "platform": "shopify",
+  "product_id": "9681730142524",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Dark Roast",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "CHARLIE BRAVO- Cold Brew",
+  "url": "https://fortitudecoffeecompany.com/products/charlie-bravo-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50075394834748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "50075394867516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "50075394900284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "50075394933052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "50075394965820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "50075394998588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "50075395031356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "50075395064124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "50075395096892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "50075395129660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "50075395162428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "50075395195196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "50075395227964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "50075395260732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "50075395326268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "50075395359036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "50075395391804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "50075395424572"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "cfcadcf60327d0b8",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pecan-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/IMG_6716.heic?v=1730163375",
+  "platform": "shopify",
+  "product_id": "9743801647420",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Coffee Company",
+   "Coffee Roasters",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "Pumpkin Pecan Pie",
+  "url": "https://fortitudecoffeecompany.com/products/pumpkin-pecan-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50272904806716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "50272904839484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "50272904872252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "50272904905020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "50272904937788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "50272904970556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "50272905003324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Aeropress",
+    "variant_id": "50272905036092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "50272905068860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "50272905101628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "50272905134396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "2 lbs / Ground for Pour Over",
+    "variant_id": "50272905167164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "50272905199932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Aeropress",
+    "variant_id": "50272905232700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "50272905265468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "50272905298236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "50272905331004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lbs / Ground for Pour Over",
+    "variant_id": "50272905363772"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ },
+ {
+  "body_hash": "17613451d50e9ec6",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-chat",
+  "image": "https://cdn.shopify.com/s/files/1/0703/3543/0972/files/IMG_87142.heic?v=1738893064",
+  "platform": "shopify",
+  "product_id": "9906022089020",
+  "product_type": "Coffee",
+  "roaster_slug": "fortitudecoffeecompany",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Fortitude Coffee",
+   "Fresh Coffee",
+   "Light",
+   "Single Origin",
+   "Small Batch",
+   "Small Batch Coffee",
+   "Veteran Owned"
+  ],
+  "title": "FIRESIDE CHAT",
+  "url": "https://fortitudecoffeecompany.com/products/fireside-chat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50976335790396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Aeropress",
+    "variant_id": "50976335823164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Drip",
+    "variant_id": "50976335855932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "50976335888700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "50976335921468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Ground for Pour Over",
+    "variant_id": "50976335954236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "50976335987004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Aeropress",
+    "variant_id": "50976336019772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Drip",
+    "variant_id": "50976336052540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for French Press",
+    "variant_id": "50976336085308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Espresso",
+    "variant_id": "50976336118076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.98,
+    "title": "2lbs / Ground for Pour Over",
+    "variant_id": "50976336150844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "50976336183612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Aeropress",
+    "variant_id": "50976336216380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Drip",
+    "variant_id": "50976336249148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for French Press",
+    "variant_id": "50976336281916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Espresso",
+    "variant_id": "50976336314684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Ground for Pour Over",
+    "variant_id": "50976336347452"
+   }
+  ],
+  "vendor": "Fortitude Coffee Company"
+ }
+]

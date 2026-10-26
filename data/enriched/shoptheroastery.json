@@ -1,0 +1,268 @@
+{
+ "1818412": {
+  "body_hash": "9e3835b8225ddbd4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity low",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "2233742": {
+  "body_hash": "7bf061f56b10dcd3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "acidity low",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "2401922": {
+  "body_hash": "d53dac0416d40274",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "lively"
+  ],
+  "varietals": []
+ },
+ "29096422": {
+  "body_hash": "e1d214e3e8446e90",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "lively"
+  ],
+  "varietals": []
+ },
+ "3533032063081": {
+  "body_hash": "1ef1f7352491748d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "crisp"
+  ],
+  "varietals": []
+ },
+ "369093849": {
+  "body_hash": "5d26f7adf46bbbaf",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "balanced"
+  ],
+  "varietals": []
+ },
+ "410402816029": {
+  "body_hash": "28f2fcd0daa66c73",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "lively"
+  ],
+  "varietals": []
+ },
+ "411177156637": {
+  "body_hash": "b96333f31971864c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity low",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "411178926109": {
+  "body_hash": "e2bfbce7d5ef6697",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "citrusy"
+  ],
+  "varietals": []
+ },
+ "433152622621": {
+  "body_hash": "338ddc88e297677c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7396209285": {
+  "body_hash": "f5676edb4d971652",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "India",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity low",
+   "mellow"
+  ],
+  "varietals": []
+ },
+ "745367502960": {
+  "body_hash": "62d8c8887742d359",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity low",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "8192505872566": {
+  "body_hash": "78e1a285813ab6db",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8735749636278": {
+  "body_hash": "31ee841f330343bd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity balanced",
+   "lively"
+  ],
+  "varietals": []
+ },
+ "8839554793654": {
+  "body_hash": "72fe56898d56ea34",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "acidity bright",
+   "citrusy"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ }
+}

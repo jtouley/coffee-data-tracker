@@ -1,0 +1,332 @@
+[
+ {
+  "body_hash": "a0dc7717c2193090",
+  "first_seen": "2026-10-26",
+  "handle": "bills-auto",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552484093826-FQ3FLPEC1D4OB1BEII78/billsauto.jpg",
+  "platform": "squarespace",
+  "product_id": "59b18c1bc027d838a607444d",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Bill's Auto",
+  "url": "https://www.coffeeoregon.com/coffee/bills-auto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "12 oz",
+    "variant_id": "2568d3f5-c13c-4792-8b09-ab0b930c515a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs",
+    "variant_id": "c6fcf4dd-4ff4-4bdc-bae3-3b54bb9a8a08"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37836689bb1f2d3e",
+  "first_seen": "2026-10-26",
+  "handle": "bay-street-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552484015523-N2D85LAZEFHNUEHXPN6P/baystreet.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1edc4c534a55b61a8a35b",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Bay Street Blend - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/bay-street-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "faf397ce-6e18-44a7-b549-930e43ebe05a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e863acfa2364a27",
+  "first_seen": "2026-10-26",
+  "handle": "bridge-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483935865-UP0LVFJ3J3BL3LXTM5FY/bridge3.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1efcc29f1870809c0878f",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Bridge Espresso - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/bridge-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "",
+    "variant_id": "4341ba93-c728-4e7f-ae5d-0a1777001d01"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5965bcb96cfcffee",
+  "first_seen": "2026-10-26",
+  "handle": "old-town-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483892027-ZJDAWIIVD70424A5838S/old%2Btown.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f06e8fd4d2258fbda66d",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Old Town Blend - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/old-town-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "36282d12-6cdb-4973-9533-1378b71287b3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91e50aefbb4e1526",
+  "first_seen": "2026-10-26",
+  "handle": "north-fork-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483842442-9GE8YOW59CWWFCC65ZGM/fork.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f0a78419c24b7468e266",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "North Fork Blend - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/north-fork-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "c7afc21e-227f-4714-b5df-d2c9292a23ed"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "58c33e038b9eebb4",
+  "first_seen": "2026-10-26",
+  "handle": "siuslaw-river-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483819670-81YSVOYW7XZIOSOVKGEW/river.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f14cf5e2313c0cae8b83",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Siuslaw River Blend - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/siuslaw-river-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "0bb752b2-05a2-4a2a-bc63-90a8f65ee864"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd2e4c43a02f93f1",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483770832-EDRZ1J6K9BFN1LPIZVSY/columbian2.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f20cbce176b2014485da",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Colombian French Dark Roast - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/columbian-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "48b481e7-19c9-484c-934b-482cd24dfeb2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e230f486b2edf9d",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-medium-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483676342-BOREUUE501NAJ4DYPJ10/farm.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f36564b05fd7e37a302c",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Nicaraguan Medium Roast - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/nicaraguan-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "c6d15480-b423-473a-9179-8946de01ee84"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12219d037b766ef2",
+  "first_seen": "2026-10-26",
+  "handle": "timor",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552484053410-MJBDT537J4ENBQ8HJV0S/sulawesi.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f593d55b4163894724e0",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Timor (Sulawesi substitue) - 12 oz",
+  "url": "https://www.coffeeoregon.com/coffee/timor",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "ff87bfed-da8a-4f5c-ae32-1b0886ed2b5c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b3f204c2b328685",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483509881-JF1FEHF26237RW155UN4/sumatra.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f669197aea69dad6fac4",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Sumatra Dark Roast - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/sumatra-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "cc61ecd5-d0a9-4254-b3cf-e4e129bc6755"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c5f1529eec0e70c2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552483433745-KE5OXLYP7APX4GK03RVI/sumatradecaf.jpg",
+  "platform": "squarespace",
+  "product_id": "59c1f7204c0dbf3555c4c37c",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Decaf Mexico 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/sumatra-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "973b7c76-3dab-4e9a-85ef-c8635330890c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "67631cb9bffdad25",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-columbia-french",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/1552450269368-S73LRS8G9XH9ZUA9Z8TA/decaf%2Bcolumbia.jpg",
+  "platform": "squarespace",
+  "product_id": "5c8881df4785d36da4e26f61",
+  "product_type": "Coffee by the bag",
+  "roaster_slug": "coffeeoregon",
+  "tags": [
+   "Coffee by the bag"
+  ],
+  "title": "Decaf Espresso Roast",
+  "url": "https://www.coffeeoregon.com/coffee/decaf-columbia-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "59d50858-6e85-4c73-86c9-a469e60dc4d1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82744700e1c2aff8",
+  "first_seen": "2026-10-26",
+  "handle": "ti63domtk4cr0vlmzhzrau9a3ldyfw",
+  "image": "https://images.squarespace-cdn.com/content/v1/598f10b0b8a79be1b6daaf77/7d461170-b66d-4e52-81ae-aea59706f175/Screenshot+2026-09-20+175134.png",
+  "platform": "squarespace",
+  "product_id": "6696a33eb9850e0c577e34e9",
+  "product_type": "",
+  "roaster_slug": "coffeeoregon",
+  "tags": [],
+  "title": "South Jetty Blend - 12 oz.",
+  "url": "https://www.coffeeoregon.com/coffee/ti63domtk4cr0vlmzhzrau9a3ldyfw",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "b411d3b8-6477-4ce1-b1a5-4c2285959c7c"
+   }
+  ],
+  "vendor": ""
+ }
+]

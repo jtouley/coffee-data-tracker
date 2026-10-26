@@ -1,0 +1,176 @@
+[
+ {
+  "body_hash": "abe94bcd3a46b7f8",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-supremo",
+  "image": "https://images.squarespace-cdn.com/content/v1/60aad2f1d2db50051381d9b3/1632183714995-0PKD4TWF8Q7FLF9F1FTY/tempImage0ZyQ7n.gif",
+  "platform": "squarespace",
+  "product_id": "60aae2df25c8aa6d5ba5b457",
+  "product_type": "",
+  "roaster_slug": "southerncupcoffeeroasters",
+  "tags": [],
+  "title": "Colombia Supremo",
+  "url": "https://www.southerncupcoffeeroasters.com/shop2/p/columbia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "22c7fae9-7e70-4ccc-b763-d972fda0b196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb Ground",
+    "variant_id": "2c773e76-78e7-415f-88fe-195358929b65"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz Whole Bean",
+    "variant_id": "b2f0aadd-f987-401e-bc4f-f686c17cfe8e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "d00c5c57-013a-46f2-9581-e8696780bca5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz Ground",
+    "variant_id": "d79191e5-92a3-4f79-8ff7-16c7f7524714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Ground",
+    "variant_id": "f54fffb6-579c-4ed2-9a85-21abebcb8028"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "721530d51c2a7709",
+  "first_seen": "2026-10-26",
+  "handle": "milk-dip-cup-wdwyj",
+  "image": "https://images.squarespace-cdn.com/content/v1/60aad2f1d2db50051381d9b3/1624813977256-OS95SDX7DEDUKNCODWDR/IMG_1328-2.jpeg",
+  "platform": "squarespace",
+  "product_id": "60aae2df25c8aa6d5ba5b45f",
+  "product_type": "",
+  "roaster_slug": "southerncupcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.southerncupcoffeeroasters.com/shop2/p/milk-dip-cup-wdwyj",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz Ground",
+    "variant_id": "1771b146-d386-4162-935a-1bbefd891923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb Ground",
+    "variant_id": "1a65c13c-4ebe-422c-901f-b0228c734244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "416c8956-5af5-4979-bc00-1d0102119ee5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Ground",
+    "variant_id": "538b1bc1-ebff-4054-a9d2-ef948e122c58"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "16 oz Whole Bean",
+    "variant_id": "64fdf85f-dc50-4917-90ce-1cf51ae3af91"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lb Whole Bean",
+    "variant_id": "d263719a-37a1-4594-96d0-0290bbae7fbf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc6ac3d8d38342c1",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala",
+  "image": "https://images.squarespace-cdn.com/content/v1/60aad2f1d2db50051381d9b3/1633673528456-0SAXPHO610KFPB2LVE0U/Copy+of+IMG_1508.jpeg",
+  "platform": "squarespace",
+  "product_id": "60aaed40d9ffae375914403a",
+  "product_type": "",
+  "roaster_slug": "southerncupcoffeeroasters",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://www.southerncupcoffeeroasters.com/shop2/p/honduras-marcala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Ground",
+    "variant_id": "0631bcef-5508-4420-bd3a-caba33a690d1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb Ground",
+    "variant_id": "136da31b-43ed-49d9-88ac-3278eab38142"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz Ground",
+    "variant_id": "303c03d1-e5d0-4a5a-9da2-c99b7d673d85"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "4c4bfbcd-3708-4cbf-9da0-25f8c523ed16"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz Whole Bean",
+    "variant_id": "776980f3-356f-4b74-b1da-514387c89d2c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "f957546b-89d5-47bb-82b5-b7a0772088d4"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,158 @@
+{
+ "2130": {
+  "body_hash": "06886063d34b1bde",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "brown sugar",
+   "cacao"
+  ],
+  "varietals": []
+ },
+ "2132": {
+  "body_hash": "b46f20b793102ad9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "molasses",
+   "toasted grain"
+  ],
+  "varietals": []
+ },
+ "2134": {
+  "body_hash": "4a8b6f51e29d0227",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jackfruit",
+   "floral spice",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "2136": {
+  "body_hash": "d2dae25caf290b8c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tamarind",
+   "plum",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "2162": {
+  "body_hash": "0c4efe90db8f8c75",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mandarin",
+   "caramel",
+   "cacao",
+   "pomelo"
+  ],
+  "varietals": []
+ },
+ "2164": {
+  "body_hash": "e1bdaf2a719650d2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark cacao",
+   "jackfruit",
+   "palm sugar",
+   "cedar"
+  ],
+  "varietals": []
+ },
+ "2166": {
+  "body_hash": "8af0b95676a76f50",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark cacao",
+   "palm sugar",
+   "roasted peanut",
+   "ripe banana"
+  ],
+  "varietals": []
+ },
+ "2168": {
+  "body_hash": "c7071c39b07a3800",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Philippines",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark cacao",
+   "molasses",
+   "roasted peanut",
+   "clove"
+  ],
+  "varietals": []
+ }
+}

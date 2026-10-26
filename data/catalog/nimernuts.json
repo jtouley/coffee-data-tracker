@@ -1,0 +1,437 @@
+[
+ {
+  "body_hash": "084269f01e2741c7",
+  "first_seen": "2026-10-26",
+  "handle": "chili-lemon-almonds",
+  "image": "https://cdn.shopify.com/s/files/1/0330/5344/2186/files/CHILILEMONALMONDS.jpg?v=1708032841",
+  "platform": "shopify",
+  "product_id": "5131739889802",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [],
+  "title": "Chili Lemon Almonds",
+  "url": "https://nimernuts.com/products/chili-lemon-almonds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.98,
+    "title": "2 pounds",
+    "variant_id": "34009790185610"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 29.97,
+    "title": "3 pounds",
+    "variant_id": "34009790218378"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 39.96,
+    "title": "4 pounds",
+    "variant_id": "34009790251146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.95,
+    "title": "5 pounds",
+    "variant_id": "34009790283914"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 59.94,
+    "title": "6 pounds",
+    "variant_id": "34009790316682"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 69.93,
+    "title": "7 pounds",
+    "variant_id": "34009790349450"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 79.92,
+    "title": "8 pounds",
+    "variant_id": "34009790382218"
+   },
+   {
+    "available": true,
+    "grams": 4082,
+    "price_usd": 89.91,
+    "title": "9 pounds",
+    "variant_id": "34009790447754"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 99.9,
+    "title": "10 pounds",
+    "variant_id": "34009790480522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "1 pound",
+    "variant_id": "34011410792586"
+   }
+  ],
+  "vendor": "Al Nimer Roastery and More"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "afghani-natural-apricot",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8100765532298",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [
+   "Dry Fruits"
+  ],
+  "title": "Afghani Natural Apricot",
+  "url": "https://nimernuts.com/products/afghani-natural-apricot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.99,
+    "title": "1 Pound",
+    "variant_id": "44901297029258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.98,
+    "title": "2 Pounds",
+    "variant_id": "44901297094794"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 23.97,
+    "title": "3 Pounds",
+    "variant_id": "44901297127562"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 31.96,
+    "title": "4 Pounds",
+    "variant_id": "44901297160330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 39.95,
+    "title": "5 Pounds",
+    "variant_id": "44901297193098"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 47.94,
+    "title": "6 Pounds",
+    "variant_id": "44901297225866"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 55.93,
+    "title": "7 Pounds",
+    "variant_id": "44901297258634"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 63.92,
+    "title": "8 Pounds",
+    "variant_id": "44901297291402"
+   },
+   {
+    "available": true,
+    "grams": 4082,
+    "price_usd": 71.91,
+    "title": "9 Pounds",
+    "variant_id": "44901297324170"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 79.9,
+    "title": "10 Pounds",
+    "variant_id": "44901297356938"
+   }
+  ],
+  "vendor": "Nimer Nuts"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "natural-dried-fruit-mix",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8100776935562",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [
+   "Dry Fruits"
+  ],
+  "title": "Natural Dried Fruit Mix",
+  "url": "https://nimernuts.com/products/natural-dried-fruit-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "1 Pound",
+    "variant_id": "44901388877962"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "2 Pounds",
+    "variant_id": "44901388910730"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 41.97,
+    "title": "3 Pounds",
+    "variant_id": "44901388943498"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 55.96,
+    "title": "4 Pounds",
+    "variant_id": "44901388976266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.94,
+    "title": "5 Pounds",
+    "variant_id": "44901389009034"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 83.94,
+    "title": "6 Pounds",
+    "variant_id": "44901389041802"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 97.93,
+    "title": "7 Pounds",
+    "variant_id": "44901389074570"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 111.92,
+    "title": "8 Pounds",
+    "variant_id": "44901389107338"
+   },
+   {
+    "available": true,
+    "grams": 4082,
+    "price_usd": 125.91,
+    "title": "9 Pounds",
+    "variant_id": "44901389140106"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 139.9,
+    "title": "10 Pounds",
+    "variant_id": "44901389172874"
+   }
+  ],
+  "vendor": "Nimer Nuts"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-sesame",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8100936482954",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Roasted Sesame",
+  "url": "https://nimernuts.com/products/roasted-sesame",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 3.49,
+    "title": "1 Pound",
+    "variant_id": "44902380011658"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 6.98,
+    "title": "2 Pounds",
+    "variant_id": "44902380044426"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 10.47,
+    "title": "3 Pounds",
+    "variant_id": "44902380077194"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 13.96,
+    "title": "4 Pounds",
+    "variant_id": "44902380109962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.45,
+    "title": "5 Pounds",
+    "variant_id": "44902380142730"
+   }
+  ],
+  "vendor": "Al Nimer Roastery and More"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-light-roasted-columbian-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8105163063434",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Turkish Light Roasted Columbian Coffee",
+  "url": "https://nimernuts.com/products/turkish-light-roasted-columbian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 5.5,
+    "title": "1/2 Pound",
+    "variant_id": "44915162218634"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "1 Pound",
+    "variant_id": "44915162251402"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "2 Pounds",
+    "variant_id": "44915162284170"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 32.97,
+    "title": "3 Pounds",
+    "variant_id": "44915162316938"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 43.96,
+    "title": "4 Pounds",
+    "variant_id": "44915162349706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.95,
+    "title": "5 Pounds",
+    "variant_id": "44915162382474"
+   }
+  ],
+  "vendor": "Nimer Nuts"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "turkish-dark-roasted-columbian-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8105163358346",
+  "product_type": "",
+  "roaster_slug": "nimernuts",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Turkish Dark Roasted Columbian Coffee",
+  "url": "https://nimernuts.com/products/turkish-dark-roasted-columbian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 5.5,
+    "title": "1/2 Pound",
+    "variant_id": "44915162939530"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "1 Pound",
+    "variant_id": "44915162972298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "2 Pounds",
+    "variant_id": "44915163005066"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 32.97,
+    "title": "3 Pounds",
+    "variant_id": "44915163037834"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 43.96,
+    "title": "4 Pounds",
+    "variant_id": "44915163070602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.95,
+    "title": "5 Pounds",
+    "variant_id": "44915163103370"
+   }
+  ],
+  "vendor": "Nimer Nuts"
+ }
+]

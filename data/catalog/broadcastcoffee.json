@@ -1,0 +1,1222 @@
+[
+ {
+  "body_hash": "ba1e04239a6ba5b5",
+  "first_seen": "2026-10-26",
+  "handle": "crossfade-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Crossfade-11oz.jpg?v=1699548019",
+  "platform": "shopify",
+  "product_id": "7222742155436",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Blend",
+   "Colombia",
+   "Kenya"
+  ],
+  "title": "Crossfade",
+  "url": "https://broadcastcoffeeroasters.com/products/crossfade-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "42755889070252"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "42755889103020"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "42755889135788"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "42755889168556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42755889201324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "42755889234092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "42755889266860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42755889299628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42755889332396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "42755889365164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42755889397932"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "a6844dff83cb98b4",
+  "first_seen": "2026-10-26",
+  "handle": "breaker-one-9",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Breaker-11oz.jpg?v=1699548051",
+  "platform": "shopify",
+  "product_id": "7245524009132",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Blend",
+   "Colombia",
+   "Ethiopia"
+  ],
+  "title": "Breaker One 9",
+  "url": "https://broadcastcoffeeroasters.com/products/breaker-one-9",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "42755889692844"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "42755889725612"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "42755889758380"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "42755889791148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42755889823916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "42755889856684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "42755889889452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42755889922220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42755889954988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "42755889987756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42755890020524"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "9abaf2b0f2e3a85f",
+  "first_seen": "2026-10-26",
+  "handle": "request-line-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/RequestLine-11oz.jpg?v=1699548103",
+  "platform": "shopify",
+  "product_id": "7247030157484",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Blend",
+   "Brazil",
+   "Colombia"
+  ],
+  "title": "Request Line",
+  "url": "https://broadcastcoffeeroasters.com/products/request-line-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "42755892641964"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "42755892674732"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "42755892707500"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "42755892740268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42755892773036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "42755892805804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "42755892838572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42755892871340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42755892904108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "42755892936876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42755892969644"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "781120ec33196a4a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-planadas",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/DelCampo-11oz.jpg?v=1701729945",
+  "platform": "shopify",
+  "product_id": "7247516467372",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Colombia Del Campo",
+  "url": "https://broadcastcoffeeroasters.com/products/colombia-planadas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "42755893133484"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.0,
+    "title": "11oz / Espresso",
+    "variant_id": "42755893166252"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.0,
+    "title": "11oz / Drip",
+    "variant_id": "42755893199020"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.0,
+    "title": "11oz / French Press",
+    "variant_id": "42755893231788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42755893264556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "42755893297324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / Drip",
+    "variant_id": "42755893330092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42755893362860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42755893395628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "42755893428396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42755893461164"
+   }
+  ],
+  "vendor": "Single-Origin"
+ },
+ {
+  "body_hash": "332c4ce8beefec97",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-palo-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Decaf-11oz.jpg?v=1701729924",
+  "platform": "shopify",
+  "product_id": "7247520137388",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Decaf Colombia Palo Rosa",
+  "url": "https://broadcastcoffeeroasters.com/products/decaf-colombia-palo-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "42755893723308"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "42755893756076"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "42755893788844"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "42755893821612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42755893854380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "42755893887148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "42755893919916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42755893985452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42755894018220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "42755894050988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42755894083756"
+   }
+  ],
+  "vendor": "Decaf"
+ },
+ {
+  "body_hash": "781120ec33196a4a",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-swara-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/KenyaSwaraAB-11oz.jpg?v=1712940159",
+  "platform": "shopify",
+  "product_id": "7858755535020",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Kenya",
+   "Single Origin"
+  ],
+  "title": "Kenya Swara AB",
+  "url": "https://broadcastcoffeeroasters.com/products/kenya-swara-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "43282055987372"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "43282056020140"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "43282056052908"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "43282056085676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "43282056118444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "43282056151212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "43282056183980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "43282056216748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "43282056249516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "43282056282284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "43282056315052"
+   }
+  ],
+  "vendor": "Single-Origin"
+ },
+ {
+  "body_hash": "0727dea3e0b2b4d9",
+  "first_seen": "2026-10-26",
+  "handle": "100-farm-direct-kona",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Kona_1080x_b5d1b489-853e-4d8a-b94a-ade532e60b1f.webp?v=1731439003",
+  "platform": "shopify",
+  "product_id": "8101653250220",
+  "product_type": "",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "waikiki"
+  ],
+  "title": "100% Farm Direct Kona",
+  "url": "https://broadcastcoffeeroasters.com/products/100-farm-direct-kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 56.0,
+    "title": "11oz",
+    "variant_id": "43947556012204"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ },
+ {
+  "body_hash": "3a3fb7202552b842",
+  "first_seen": "2026-10-26",
+  "handle": "kakahiaka-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Kakahiaka_1080x_d05a3bd7-f87f-4ccf-84cf-e5856f34ec01.webp?v=1731438998",
+  "platform": "shopify",
+  "product_id": "8101654003884",
+  "product_type": "",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "waikiki"
+  ],
+  "title": "Kaka'hi'aka Blend",
+  "url": "https://broadcastcoffeeroasters.com/products/kakahiaka-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Whole Beans",
+    "variant_id": "43947538809004"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ },
+ {
+  "body_hash": "366bf16d00665646",
+  "first_seen": "2026-10-26",
+  "handle": "palekana-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Palekana_1080x_da7618c4-31d9-4b55-8c69-4758c56ec140.webp?v=1731438988",
+  "platform": "shopify",
+  "product_id": "8101655773356",
+  "product_type": "",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "waikiki"
+  ],
+  "title": "Palekana Blend",
+  "url": "https://broadcastcoffeeroasters.com/products/palekana-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz",
+    "variant_id": "44338166202540"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ },
+ {
+  "body_hash": "2f0297c391f03346",
+  "first_seen": "2026-10-26",
+  "handle": "chillwave-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Chill-Wave-11oz_2x_2x_2e10f3bd-58dc-4efe-9260-328fa92b82cd.jpg?v=1748530390",
+  "platform": "shopify",
+  "product_id": "8248851529900",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Chill Wave Cold Brew",
+  "url": "https://broadcastcoffeeroasters.com/products/chillwave-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "44439449403564"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Cold Brew",
+    "variant_id": "44439449501868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44439449534636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "44439449632940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44439449665708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "44439449731244"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "781120ec33196a4a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/MexicoChiapas-11oz.png?v=1774898176",
+  "platform": "shopify",
+  "product_id": "8518423707820",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://broadcastcoffeeroasters.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "46092984516780"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "46092984549548"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "46092984582316"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "46092984615084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46092984647852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46092984680620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "46092984713388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46092984746156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46092984778924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "46092984811692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46092984844460"
+   }
+  ],
+  "vendor": "Single-Origin"
+ },
+ {
+  "body_hash": "41a34bd5b9bc7f83",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-nano-challa-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/EthiopiaNanoGenji.png?v=1788465715",
+  "platform": "shopify",
+  "product_id": "8738813640876",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Nano Genji",
+  "url": "https://broadcastcoffeeroasters.com/products/ethiopia-nano-challa-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Whole Beans",
+    "variant_id": "47127965860012"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Espresso",
+    "variant_id": "47127965892780"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Drip",
+    "variant_id": "47127965925548"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / French Press",
+    "variant_id": "47127965958316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Whole Beans",
+    "variant_id": "47127965991084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Espresso",
+    "variant_id": "47127966023852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Drip",
+    "variant_id": "47127966056620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / French Press",
+    "variant_id": "47127966089388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Whole Beans",
+    "variant_id": "47127966122156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47127966154924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Drip",
+    "variant_id": "47127966187692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / French Press",
+    "variant_id": "47127966220460"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ },
+ {
+  "body_hash": "41a34bd5b9bc7f83",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-diego-horta",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/ColombiaDiegoHorta.png?v=1790631764",
+  "platform": "shopify",
+  "product_id": "9598439719084",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombia Diego Horta",
+  "url": "https://broadcastcoffeeroasters.com/products/colombia-diego-horta",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Whole Beans",
+    "variant_id": "47541330018476"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Espresso",
+    "variant_id": "47541330051244"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / Drip",
+    "variant_id": "47541330084012"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.0,
+    "title": "11oz / French Press",
+    "variant_id": "47541330116780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Whole Beans",
+    "variant_id": "47541330149548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Espresso",
+    "variant_id": "47541330182316"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / Drip",
+    "variant_id": "47541330215084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb / French Press",
+    "variant_id": "47541330247852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Whole Beans",
+    "variant_id": "47541330280620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47541330313388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / Drip",
+    "variant_id": "47541330346156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 142.0,
+    "title": "5lb / French Press",
+    "variant_id": "47541330378924"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ },
+ {
+  "body_hash": "41a34bd5b9bc7f83",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-spice-1",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/Autumn-Spice-2025-11oz_6ed27b33-df7d-48d9-814a-37ea82d56852.png?v=1757789294",
+  "platform": "shopify",
+  "product_id": "9617728831660",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Autumn Spice",
+  "url": "https://broadcastcoffeeroasters.com/products/autumn-spice-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47622211403948"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Espresso",
+    "variant_id": "47622211436716"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / Drip",
+    "variant_id": "47622211469484"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "11oz / French Press",
+    "variant_id": "47622211502252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47622288244908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "47622288277676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Drip",
+    "variant_id": "47622288310444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "47622288343212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47622288375980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "47622288408748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / Drip",
+    "variant_id": "47622288441516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb / French Press",
+    "variant_id": "47622288474284"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "41a34bd5b9bc7f83",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-santa-lucia",
+  "image": "https://cdn.shopify.com/s/files/1/0614/9472/2732/files/CostaRicaSantaLucia11oz.png?v=1792508769",
+  "platform": "shopify",
+  "product_id": "9626268991660",
+  "product_type": "Coffee",
+  "roaster_slug": "broadcastcoffee",
+  "tags": [
+   "Bolivia",
+   "Single Origin"
+  ],
+  "title": "Costa Rica Santa Lucia",
+  "url": "https://broadcastcoffeeroasters.com/products/costa-rica-santa-lucia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Whole Beans",
+    "variant_id": "47663355887788"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Espresso",
+    "variant_id": "47663355920556"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / Drip",
+    "variant_id": "47663355953324"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz / French Press",
+    "variant_id": "47663355986092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Whole Beans",
+    "variant_id": "47663356018860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Espresso",
+    "variant_id": "47663356051628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / Drip",
+    "variant_id": "47663356084396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lb / French Press",
+    "variant_id": "47663356117164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Beans",
+    "variant_id": "47663356149932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47663356182700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip",
+    "variant_id": "47663356215468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press",
+    "variant_id": "47663356248236"
+   }
+  ],
+  "vendor": "Broadcast Coffee"
+ }
+]

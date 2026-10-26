@@ -1,0 +1,819 @@
+[
+ {
+  "body_hash": "a4a9d01355c84efd",
+  "first_seen": "2026-10-26",
+  "handle": "ridley-roasthouse-founders-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/files/BoldBetty12ozwholefront.jpg?v=1758562799",
+  "platform": "shopify",
+  "product_id": "10775881740",
+  "product_type": "Coffee",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Bold Betty",
+  "url": "https://ridleyroasthouse.com/products/ridley-roasthouse-founders-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole",
+    "variant_id": "32076242223189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Drip or Pour Over",
+    "variant_id": "32076242255957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "32076242288725"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / French Press",
+    "variant_id": "32076242321493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "32076242354261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole",
+    "variant_id": "32076242616405"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Drip or Pour Over",
+    "variant_id": "32076242649173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "32076242681941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "32076242747477"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "32076242780245"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Whole",
+    "variant_id": "32076247466069"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Drip or Pour Over",
+    "variant_id": "32076247498837"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Espresso",
+    "variant_id": "32076247531605"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / French Press",
+    "variant_id": "32076247564373"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Chemex",
+    "variant_id": "32076247597141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole",
+    "variant_id": "40041464268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip or Pour Over",
+    "variant_id": "40041464332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "40041464396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / French Press",
+    "variant_id": "40041464460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "40041464524"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ },
+ {
+  "body_hash": "6a59699c6ee781fc",
+  "first_seen": "2026-10-26",
+  "handle": "ridley-roasthouse-founders-roast-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/products/frground.jpg?v=1630254869",
+  "platform": "shopify",
+  "product_id": "10775960716",
+  "product_type": "Coffee",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Founders Roast",
+  "url": "https://ridleyroasthouse.com/products/ridley-roasthouse-founders-roast-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole",
+    "variant_id": "32076323389525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Drip or Pour Over",
+    "variant_id": "32076323422293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "32076323455061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / French Press",
+    "variant_id": "32076323487829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "32076323520597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole",
+    "variant_id": "32076323717205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Drip or Pour Over",
+    "variant_id": "32076323749973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "32076323782741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "32076323848277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "32076323881045"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Whole",
+    "variant_id": "32076324175957"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Drip or Pour Over",
+    "variant_id": "32076324208725"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Espresso",
+    "variant_id": "32076324241493"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / French Press",
+    "variant_id": "32076324307029"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Chemex",
+    "variant_id": "32076324372565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole",
+    "variant_id": "40041836108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip or Pour Over",
+    "variant_id": "40041836172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "40041836236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / French Press",
+    "variant_id": "40041836364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "40041836428"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ },
+ {
+  "body_hash": "8bd6a263a4609057",
+  "first_seen": "2026-10-26",
+  "handle": "ridley-roasthouse-easy-rider-organic-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/products/er12wb.jpg?v=1630255201",
+  "platform": "shopify",
+  "product_id": "1333752594517",
+  "product_type": "Coffee",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Easy Rider SWP Decaf",
+  "url": "https://ridleyroasthouse.com/products/ridley-roasthouse-easy-rider-organic-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole",
+    "variant_id": "12349786980437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip or Pour Over",
+    "variant_id": "12349787013205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "12349787045973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / French Press",
+    "variant_id": "12349787078741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "12349787111509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Whole",
+    "variant_id": "32076308774997"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Drip or Pour Over",
+    "variant_id": "32076308807765"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "32076308840533"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / French Press",
+    "variant_id": "32076308873301"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "32076308906069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole",
+    "variant_id": "32076310216789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Drip or Pour Over",
+    "variant_id": "32076310249557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "32076310282325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "32076310315093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "32076310347861"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Whole",
+    "variant_id": "32076310413397"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Drip or Pour Over",
+    "variant_id": "32076310446165"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Espresso",
+    "variant_id": "32076310478933"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / French Press",
+    "variant_id": "32076310511701"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lb / Chemex",
+    "variant_id": "32076310544469"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ },
+ {
+  "body_hash": "376436898b2eb065",
+  "first_seen": "2026-10-26",
+  "handle": "roast-your-own-batch-sessions",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/products/thumbnail_IMG_0865_1.jpg?v=1637859648",
+  "platform": "shopify",
+  "product_id": "6658866184277",
+  "product_type": "",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Roast Your Own Batch Sessions",
+  "url": "https://ridleyroasthouse.com/products/roast-your-own-batch-sessions",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Single / Call me to schedule my session",
+    "variant_id": "39643710423125"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "Couples Rate / Call me to schedule my session",
+    "variant_id": "39643710455893"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 160.0,
+    "title": "Group of Three / Call me to schedule my session",
+    "variant_id": "39643710488661"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Group of Four / Call me to schedule my session",
+    "variant_id": "39643710521429"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 220.0,
+    "title": "Group of Five / Call me to schedule my session",
+    "variant_id": "39643710554197"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Group of Six / Call me to schedule my session",
+    "variant_id": "39643710619733"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Single / Mail me a gift certificate",
+    "variant_id": "39643739029589"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Single / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739062357"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "Couples Rate / Mail me a gift certificate",
+    "variant_id": "39643739095125"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 130.0,
+    "title": "Couples Rate / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739127893"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 160.0,
+    "title": "Group of Three / Mail me a gift certificate",
+    "variant_id": "39643739160661"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 160.0,
+    "title": "Group of Three / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739193429"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Group of Four / Mail me a gift certificate",
+    "variant_id": "39643739226197"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 190.0,
+    "title": "Group of Four / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739258965"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 220.0,
+    "title": "Group of Five / Mail me a gift certificate",
+    "variant_id": "39643739291733"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 220.0,
+    "title": "Group of Five / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739324501"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Group of Six / Mail me a gift certificate",
+    "variant_id": "39643739357269"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "Group of Six / I'll pick my gift certificate up at the roastery M-F 10-2",
+    "variant_id": "39643739390037"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ },
+ {
+  "body_hash": "cacd3b4d23cbc911",
+  "first_seen": "2026-10-26",
+  "handle": "green-river-bourbon-barrel-aged-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/files/image.heic?v=1686092315",
+  "platform": "shopify",
+  "product_id": "6933399666773",
+  "product_type": "Coffee",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Green River Bourbon Barrel Aged Coffee",
+  "url": "https://ridleyroasthouse.com/products/green-river-bourbon-barrel-aged-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "40633187041365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip or Pour Over",
+    "variant_id": "40633187074133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "40633187106901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "40633187139669"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Chemex",
+    "variant_id": "40633187172437"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ },
+ {
+  "body_hash": "32a5a557c4a56992",
+  "first_seen": "2026-10-26",
+  "handle": "pura-vida",
+  "image": "https://cdn.shopify.com/s/files/1/1849/9327/files/IMG_6618.jpg?v=1732896175",
+  "platform": "shopify",
+  "product_id": "7053134102613",
+  "product_type": "Coffee",
+  "roaster_slug": "ridleyroasthouse",
+  "tags": [],
+  "title": "Pura Vida",
+  "url": "https://ridleyroasthouse.com/products/pura-vida",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "40938181066837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Drip or Pour Over",
+    "variant_id": "40938181099605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "40938181132373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / French Press",
+    "variant_id": "40938181165141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "40938181197909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "40938181230677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Drip or Pour Over",
+    "variant_id": "40938181263445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Espresso",
+    "variant_id": "40938181296213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "40938181328981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs / Chemex",
+    "variant_id": "40938181361749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "40938181394517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs / Drip or Pour Over",
+    "variant_id": "40938181427285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs / Espresso",
+    "variant_id": "40938181460053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs / French Press",
+    "variant_id": "40938181492821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs / Chemex",
+    "variant_id": "40938181525589"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lbs / Whole Bean",
+    "variant_id": "40938181558357"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lbs / Drip or Pour Over",
+    "variant_id": "40938181591125"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lbs / Espresso",
+    "variant_id": "40938181623893"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lbs / French Press",
+    "variant_id": "40938181656661"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 140.0,
+    "title": "10 lbs / Chemex",
+    "variant_id": "40938181689429"
+   }
+  ],
+  "vendor": "Ridley Roasthouse"
+ }
+]

@@ -1,0 +1,930 @@
+[
+ {
+  "body_hash": "7b4167ea59d6990c",
+  "first_seen": "2026-10-26",
+  "handle": "holly-blend",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "12670",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Flavored Coffee"
+  ],
+  "title": "Holly Blend",
+  "url": "https://www.stthomasroasters.com/shop/flavored-coffee/holly-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "12670:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "12670:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0946b965c6fbdfa7",
+  "first_seen": "2026-10-26",
+  "handle": "flores-bajawa-ngura-fto",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/logo-master.png",
+  "platform": "woocommerce",
+  "product_id": "4647",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Flores Bajawa Ngura FTO",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/flores-bajawa-ngura-fto/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "4647:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "4647:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c39155c56c78d8e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roaster-costa-rica-tarrazu.jpg",
+  "platform": "woocommerce",
+  "product_id": "49",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/costa-rica-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "49:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "49:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7788cc3c5fea5681",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roasters-hawaiian-kona.jpg",
+  "platform": "woocommerce",
+  "product_id": "52",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Hawaiian Kona",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/hawaiian-kona/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Half Pound",
+    "variant_id": "52:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Pound",
+    "variant_id": "52:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb245575f3ee357a",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/logo-master.png",
+  "platform": "woocommerce",
+  "product_id": "5812",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/papua-new-guinea-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "5812:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "5812:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d467ca9cdda656b0",
+  "first_seen": "2026-10-26",
+  "handle": "snowflake",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/logo-master.png",
+  "platform": "woocommerce",
+  "product_id": "6928",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Flavored Coffee"
+  ],
+  "title": "Snowflake Blend",
+  "url": "https://www.stthomasroasters.com/shop/flavored-coffee/snowflake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "6928:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "6928:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0dcd8efb954cbfad",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-gasharu-naturally-processed",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2021/03/template-RWANDA-TEST-FINAL.jpg",
+  "platform": "woocommerce",
+  "product_id": "7139",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Limited Batch Preorder Coffee"
+  ],
+  "title": "Rwanda Gasharu, Naturally Processed",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/fresh-roasted/limited-batch/rwanda-gasharu-naturally-processed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Half Pound",
+    "variant_id": "7139:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Whole Pound",
+    "variant_id": "7139:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4cd3072ec3ac0b2f",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-peru",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2021/03/FB_IMG_1615410598768.jpg",
+  "platform": "woocommerce",
+  "product_id": "7175",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Peru Fair Trade Organic: French Roast",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/french-roast-peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "7175:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "7175:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "db8ba3c0ced8a20e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/logo-master.png",
+  "platform": "woocommerce",
+  "product_id": "7624",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Guatemala San Marcos Strictly Hard Bean Organic",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/guatemala-huehuetenango-fair-trade-organic/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "7624:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "7624:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1538107a474f169b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roasters-honduras-fair-trade-organic.jpg",
+  "platform": "woocommerce",
+  "product_id": "88",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Honduras Fair Trade Organic: Mild Roast",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/honduras-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "88:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "88:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb245575f3ee357a",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-krishna-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-bali-blue-krishna-fair-trade-organic.jpg",
+  "platform": "woocommerce",
+  "product_id": "885",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Bali Blue Krishna Fair Trade Organic",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/bali-blue-krishna-fair-trade-organic/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "885:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "885:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "01426bdc3aed98c7",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-colombian-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "886",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Colombian Decaf",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/colombian-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "886:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "886:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42a4840bc6c71a73",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-sumatra-fair-trade-organic.jpg",
+  "platform": "woocommerce",
+  "product_id": "887",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Sumatra Fair Trade Organic",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/sumatra-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "887:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "887:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ac3a2c23543b1d0",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "888",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "888:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "888:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f20ff505d385964d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-decaf",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-espresso-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "889",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Espresso Decaf",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/espresso-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "889:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "889:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b8ee45865e91574d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roasters-kenya-aa.jpg",
+  "platform": "woocommerce",
+  "product_id": "89",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Kenya AB",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/kenya-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "89:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "89:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae2102d4eb36f446",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-decaf",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-fair-trade-organic-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "891",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Fair Trade Organic Decaf",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/fair-trade-organic-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "891:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "891:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12ebfdc6c0c3b326",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsooned-malabar",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-india-monsooned-malabar.jpg",
+  "platform": "woocommerce",
+  "product_id": "892",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "India Monsoon Malabar",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/india-monsooned-malabar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "892:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "892:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "761db1b41e21cb5e",
+  "first_seen": "2026-10-26",
+  "handle": "linglestown-blend",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-linglestown-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "893",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Linglestown Blend",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/linglestown-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "893:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "893:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2d249f477f04c33",
+  "first_seen": "2026-10-26",
+  "handle": "malawi-peaberry",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-malawi-peaberry.jpg",
+  "platform": "woocommerce",
+  "product_id": "894",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Burundi Peaberry",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/malawi-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "894:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "894:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d095b16d88de1bf6",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-mexico-oaxaca-fair-trade-organic.jpg",
+  "platform": "woocommerce",
+  "product_id": "895",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/mexico-chiapas-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "895:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "895:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "17cb7eb55674472d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-java-rain-forest-alliance",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-organic-java-rain-forest-alliance.jpg",
+  "platform": "woocommerce",
+  "product_id": "896",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Organic Java Rain Forest Alliance",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/organic-java-rain-forest-alliance/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "896:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "896:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20a4eaf8f90ace1d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-guatemala-antigua.jpg",
+  "platform": "woocommerce",
+  "product_id": "897",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Guatemala Huehuetenango Fair Trade Organic",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "897:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "897:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ffe34f34c099efa",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-san-gabriel",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "898",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Colombia San Gabriel",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/colombia-san-gabriel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "898:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "898:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "71c0cf91dbadd3c3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-decaf",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-guatemala-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "899",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Guatemala Decaf",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/guatemala-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "899:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "899:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e13872176f2ff4ef",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-strictly-high-grown",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-nicaragua-strictly-high-grown.jpg",
+  "platform": "woocommerce",
+  "product_id": "900",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Nicaragua Strictly High Grown",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/nicaragua-strictly-high-grown/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "900:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "900:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "malawi-aa",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roasters-malawi-aa.jpg",
+  "platform": "woocommerce",
+  "product_id": "91",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Malawi AB",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/malawi-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "91:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "91:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c6201a59c711860",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fair-trade-organic",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2017/03/st-thomas-roasters-peru-fair-trade-organic-.jpg",
+  "platform": "woocommerce",
+  "product_id": "93",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Peru Fair Trade Organic: Mild Roast",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/peru-fair-trade-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "93:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "93:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "331be3a4ad24489b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://www.stthomasroasters.com/wp-content/uploads/2016/03/st-thomas-roasters-sumatra-mandheling.jpg",
+  "platform": "woocommerce",
+  "product_id": "94",
+  "product_type": "variable",
+  "roaster_slug": "stthomasroasters",
+  "tags": [
+   "Specialty Coffee"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.stthomasroasters.com/shop/specialty-coffee/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Half Pound",
+    "variant_id": "94:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Whole Pound",
+    "variant_id": "94:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

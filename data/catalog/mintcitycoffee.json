@@ -1,0 +1,808 @@
+[
+ {
+  "body_hash": "191200bc4412f1ed",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/products/Mint-City-label-3.5x5-Colombian_2.png?v=1681881323",
+  "platform": "shopify",
+  "product_id": "7530704797874",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Colombia Huila El Tiple Supremo",
+  "url": "https://mintcitycoffee.com/products/colombia-huila-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium / Whole Bean / 12 oz",
+    "variant_id": "42608060039346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Dark / Whole Bean / 12 oz",
+    "variant_id": "42608060072114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium / Ground - Drip / 12 oz",
+    "variant_id": "42671100952754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Dark / Ground - Drip / 12 oz",
+    "variant_id": "42671100985522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium / Whole Bean / 1 lb",
+    "variant_id": "43024518578354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium / Whole Bean / 5 lb",
+    "variant_id": "43024518611122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium / Ground - Drip / 1 lb",
+    "variant_id": "43024518643890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium / Ground - Drip / 5 lb",
+    "variant_id": "43024518676658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Dark / Whole Bean / 1 lb",
+    "variant_id": "43024518709426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Dark / Whole Bean / 5 lb",
+    "variant_id": "43024518742194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Dark / Ground - Drip / 1 lb",
+    "variant_id": "43024518774962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Dark / Ground - Drip / 5 lb",
+    "variant_id": "43024518807730"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "8d1dfd7adc145f22",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/products/Mint-City-label-3.5x5-Ethiopian_2.png?v=1681881364",
+  "platform": "shopify",
+  "product_id": "7530715709618",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Ethiopia Sidamo",
+  "url": "https://mintcitycoffee.com/products/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Light / Whole Bean / 12 oz",
+    "variant_id": "42608052240562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Light / Ground - Drip Coffee / 12 oz",
+    "variant_id": "42671102066866"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / Whole Bean / 1 lb",
+    "variant_id": "43024501113010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Light / Whole Bean / 5 lb",
+    "variant_id": "43024501145778"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / Ground - Drip Coffee / 1 lb",
+    "variant_id": "43024501178546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Light / Ground - Drip Coffee / 5 lb",
+    "variant_id": "43024501211314"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "e12101a5f597023c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/products/Mint-City-label-3.5x5-Brazilian.png?v=1681880811",
+  "platform": "shopify",
+  "product_id": "7665679597746",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Brazil Salmo",
+  "url": "https://mintcitycoffee.com/products/brazil-salmo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43024368107698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "43024368140466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "43024470868146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "43024470900914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "43024470933682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground - Drip / 5 lbs",
+    "variant_id": "43024470966450"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "4692e0d8f618eb96",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/products/Mint-City-label-3.5x5-Guatemalan_2.png?v=1681881650",
+  "platform": "shopify",
+  "product_id": "7665681334450",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Guatemala La Morena",
+  "url": "https://mintcitycoffee.com/products/guatemala-la-morena",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43024367878322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "43024367911090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "43024525230258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43024525263026"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "43024525295794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground - Drip / 5 lb",
+    "variant_id": "43024525328562"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "7a9eff91588a2085",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-valle-del-cauca-sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/products/Mint-City-label-3.5x5-Colombian-Decaf.png?v=1681883498",
+  "platform": "shopify",
+  "product_id": "7665686479026",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Colombia Valle Del Cauca Sugarcane Decaf",
+  "url": "https://mintcitycoffee.com/products/colombia-valle-del-cauca-sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43024372891826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "43024372924594"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "43024522805426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43024522838194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "43024522870962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground - Drip / 5 lb",
+    "variant_id": "43024522903730"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "7c330dbda861ffd1",
+  "first_seen": "2026-10-26",
+  "handle": "compass",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/Mint-City-label-3x5-Compass-Blend-FINAL.png?v=1694837806",
+  "platform": "shopify",
+  "product_id": "7792729850034",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Compass",
+  "url": "https://mintcitycoffee.com/products/compass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43287852089522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "43287852122290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "43287852155058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "43287852187826"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "43287852220594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - Drip / 5 lbs",
+    "variant_id": "43287852253362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - Espresso / 12 oz",
+    "variant_id": "44823253352626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Ground - Espresso / 1 lb",
+    "variant_id": "44823253385394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - Espresso / 5 lbs",
+    "variant_id": "44823253418162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground - French Press / Pour Over / 12 oz",
+    "variant_id": "44823253450930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / Pour Over / 1 lb",
+    "variant_id": "44823253483698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - French Press / Pour Over / 5 lbs",
+    "variant_id": "44823253516466"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "f912ad211ef9cccb",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/Mint-City-label-3.5x5-Tanzanian.png?v=1728920786",
+  "platform": "shopify",
+  "product_id": "8330519314610",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://mintcitycoffee.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Whole Bean / 12oz",
+    "variant_id": "44805454201010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean / 1 lb",
+    "variant_id": "44805454233778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Whole Bean / 5 lb",
+    "variant_id": "44805454266546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Ground - Drip Coffee / 12oz",
+    "variant_id": "44805454299314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Ground - Drip Coffee / 1 lb",
+    "variant_id": "44805454332082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Ground - Drip Coffee / 5 lb",
+    "variant_id": "44805454364850"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "fac3d797c902fbc5",
+  "first_seen": "2026-10-26",
+  "handle": "landmark",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/Mint-City-label-3.5x5-Landmark-Blend.png?v=1761406391",
+  "platform": "shopify",
+  "product_id": "8635649163442",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Landmark",
+  "url": "https://mintcitycoffee.com/products/landmark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46650481082546"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46650481115314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "46650481148082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "46650481180850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "46650481213618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground - Drip / 5 lbs",
+    "variant_id": "46650481246386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - Espresso / 12 oz",
+    "variant_id": "46650481279154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ground - Espresso / 1 lb",
+    "variant_id": "46650481311922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground - Espresso / 5 lbs",
+    "variant_id": "46650481344690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground - French Press / Pour Over / 12 oz",
+    "variant_id": "46650481377458"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ground - French Press / Pour Over / 1 lb",
+    "variant_id": "46650481410226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground - French Press / Pour Over / 5 lbs",
+    "variant_id": "46650481442994"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "681c05705c06370e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-bastilla-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/Mint-City-label-3.5x5-Nicaraguan.png?v=1761408281",
+  "platform": "shopify",
+  "product_id": "8635659190450",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Nicaragua La Bastilla Natural",
+  "url": "https://mintcitycoffee.com/products/nicaragua-la-bastilla-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Whole Bean / 12 oz",
+    "variant_id": "46650522075314"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean / 1 lb",
+    "variant_id": "46650522108082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Whole Bean / 5 lb",
+    "variant_id": "46650522140850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Ground - Drip Coffee / 12 oz",
+    "variant_id": "46650522173618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Ground - Drip Coffee / 1 lb",
+    "variant_id": "46650522206386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Ground - Drip Coffee / 5 lb",
+    "variant_id": "46650522239154"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "536cb4d2e7608dcf",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh-tengah-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/Mint-City-label-3.5x5-Sumatran.png?v=1761410769",
+  "platform": "shopify",
+  "product_id": "8635670069426",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Sumatra Koperasi Organic",
+  "url": "https://mintcitycoffee.com/products/sumatra-aceh-tengah-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Whole Bean / 12oz",
+    "variant_id": "46650592198834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean / 1 lb",
+    "variant_id": "46650592231602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Whole Bean / 5 lb",
+    "variant_id": "46650592264370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium / Ground - Drip Coffee / 12oz",
+    "variant_id": "46650592297138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium / Ground - Drip Coffee / 1 lb",
+    "variant_id": "46650592329906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium / Ground - Drip Coffee / 5 lb",
+    "variant_id": "46650592362674"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ },
+ {
+  "body_hash": "be2f93fd2ddcb297",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0618/3521/5026/files/roasters-choice-mystery.png?v=1762970328",
+  "platform": "shopify",
+  "product_id": "8654137721010",
+  "product_type": "Coffee",
+  "roaster_slug": "mintcitycoffee",
+  "tags": [],
+  "title": "Roasters Choice",
+  "url": "https://mintcitycoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "46718989140146"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 1 lb",
+    "variant_id": "46718989172914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "46718989205682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground - Drip / 12 oz",
+    "variant_id": "46718989238450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Ground - Drip / 1 lb",
+    "variant_id": "46718989271218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - Drip / 5 lbs",
+    "variant_id": "46718989303986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground - Espresso / 12 oz",
+    "variant_id": "46718989336754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Ground - Espresso / 1 lb",
+    "variant_id": "46718989369522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - Espresso / 5 lbs",
+    "variant_id": "46718989402290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground - French/ Press / Pour Over / 12 oz",
+    "variant_id": "46718989435058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Ground - French/ Press / Pour Over / 1 lb",
+    "variant_id": "46718989467826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground - French/ Press / Pour Over / 5 lbs",
+    "variant_id": "46718989500594"
+   }
+  ],
+  "vendor": "Mint City Coffee Roasting"
+ }
+]

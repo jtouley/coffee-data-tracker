@@ -1,0 +1,3739 @@
+[
+ {
+  "body_hash": "d5bf706acb4288b0",
+  "first_seen": "2026-10-26",
+  "handle": "product-5-f98ry-4ll53-cageg-dmkel",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/3a1ac88c-81b2-44df-abe3-98ffa7573420/4.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6c90",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Guatemala Varietal",
+  "url": "https://www.northwestcoffee.com/shop/p/product-5-f98ry-4ll53-cageg-dmkel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "06dce93d-b179-4833-b8b5-aa917ab0600b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "0d8a11b7-3a65-4c1a-9e11-7647ecb1deba"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "14158246-de16-45dd-9640-c8219dff1d6d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "1e145930-06b4-4480-9d4e-c97e6699f4db"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "1ffc7cc2-5a8f-4e9f-9e46-c53d30aaf5ac"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "252b7253-f04c-4fdc-a6da-8a58c14b92df"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "2febe492-13db-43c6-bda4-dd93fe705160"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "37ddfd1b-b33e-4773-8b70-136ee6258f05"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "3f293cec-eb7e-45d1-b699-d7f71ac17655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "4527b87b-98a8-4e65-a2c1-d6d1653a5b43"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "45d767c4-c265-41ac-b13e-163a38189bbc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "502e6b94-2d8b-48b1-9206-2b1573d35147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "52e493c8-7465-4b55-8d19-e5bcd7a27503"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "567e615e-9f28-4ef0-bd12-4a04df61a96f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "5ac259de-3a69-493d-ba1c-7ce98331af79"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "5e7881fc-11dd-41d6-8493-9e8337438cb6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "6088495c-3237-49a9-8111-247d44fd48ed"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "623c2570-4ba1-41ab-989d-46e83a0e658e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "69548a7d-ba34-4c2b-bc45-0c266f2c232b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "77f219e9-16c8-4c34-9a86-0cf8ba1e2d57"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "7fca594d-98fe-44c7-a0ec-7e969cc1e005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "942e3250-f70b-41d1-8cb7-61fabd07a763"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "9760f76f-a357-4d65-8fae-3b0ab599bddf"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "9b5361c2-3fbe-46fd-8b1c-3126bc591651"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "a3840249-64fd-4af3-b587-130f6332ffa1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "a570cefc-0d58-46c5-b660-5f7ab8f2c587"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "afe2c503-5def-4d0d-81cc-3a18249ff89e"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "b421f99e-2afb-482b-b937-d291d3da482c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "c62f2baf-a629-46ca-9cdf-bdaad548b18c"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "d02a6d5a-4daa-4591-a710-ed1521df7333"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "e07ed595-45ca-4097-8188-5050984dba77"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "ea25a7a7-1875-492c-9661-796a75de59ec"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "ee746e90-ed65-429b-b180-d26b899f9b77"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "f72a0e38-a35c-4a90-b101-339cfafdfd78"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "fadadab0-0d73-4463-8fd5-5154c2f7d93c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c74977f2d3914265",
+  "first_seen": "2026-10-26",
+  "handle": "product-1-ydar7-e8mlb-2h3mp-9f4ke",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/9d2f101e-6d14-4bc9-a888-3eab7f17fad6/6.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6c94",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Ethiopia Varietal",
+  "url": "https://www.northwestcoffee.com/shop/p/product-1-ydar7-e8mlb-2h3mp-9f4ke",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "01724d26-41a6-4c38-9227-11f296d7aa9e"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "05b6c50c-85a8-467f-9281-22d662c662bb"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "11cebf25-6890-4488-b6e7-a9ce1a45c4a6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "1377d321-ef86-4d1f-9d89-567c845ef50d"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "1c916a43-80c7-48f7-9233-8b0697cc37f3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "250adf08-c8a2-4e01-8119-b60ba273baf1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "2833b8ce-eb1f-4130-9273-b3cb47d2676e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "2d4b0381-81e9-40f7-967f-640c904aeb0f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "31c801f4-62be-43a1-a8c3-1f4581bd8397"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "388aa0a4-3b9d-48d9-b3dc-b27a5b0a7c7c"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "5d51df6f-2d30-4f73-af53-763132adcf18"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "6c7d5786-da76-4a99-882c-b35735e19499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "6f8cafd4-6461-4ef9-af40-bd335a65ad6b"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "7326bcd4-42a5-4372-ab27-f3f6e30808db"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "74cfbdea-c63b-4578-825c-94ead922c4a7"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "79371088-95b4-4423-abed-f7e6e8c7f860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "7d8f8064-421a-414a-a564-43e52960cce0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "88225e1b-828e-42f0-9d92-2f4a062413af"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "8d8c2663-a4a8-4dcb-b4a0-702343b8bba7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "95dc7ac0-b981-4a18-aa87-fd7b7795927f"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "9882f686-fe35-4b39-89c7-db88c2b9d5e6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "a52e1ee3-3a44-4495-a76a-3d0fbd89433c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "a60fa7e1-4a4d-4721-983d-517585a264bf"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "aec4cbac-d07b-4770-955d-c127dbcdc4cd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "b40e8e58-a0bc-48d3-8cd4-c9082f3a70f3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "bd7525cc-2666-4d4b-84af-5befe77aed2f"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "be6017de-07fb-4016-9246-c523b165fb36"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 84.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "c93f57dc-152e-4d84-964c-b567844eb0ee"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "cb7814e1-f16c-4870-bace-58b6e788a6e8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "d7213603-f047-4b6e-9106-6fe853b74e3e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "dcdd3bac-e92a-439c-8ec7-3ae5fdd05ed9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "dcee4d08-a6fc-4e0f-a30a-a0259d3d6a8a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "f985b458-0b21-4697-ab03-38370eaed11f"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 112.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "fc86d706-8c28-49ea-9e72-1c00a055872e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "fd17d46c-778b-49dc-aa14-4c3f51789690"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3eb3cdb8845e87bd",
+  "first_seen": "2026-10-26",
+  "handle": "product-4-9e76d-pr6ls-ddx8r-tymaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/e1b9267a-1f34-4585-b723-029557ca295d/10.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6c98",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Colombia Varietal",
+  "url": "https://www.northwestcoffee.com/shop/p/product-4-9e76d-pr6ls-ddx8r-tymaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "0694f85a-6294-4df2-a03c-54f915fe167d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "0a306faf-42cd-4566-bfa3-474dd63b7d5b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Whole Bean",
+    "variant_id": "0f745501-67a5-4efe-8d75-f84f4204cb3a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "132458a9-7af5-46ad-9735-031c8c034502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "156ead2c-4077-4298-9eb0-693fe316e36d"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "1e7adb75-0dda-4fc4-98c5-aa9f8ff6774c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Drip",
+    "variant_id": "25b4b144-a86a-4926-b314-dd767992ab85"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "281e44da-7e0e-4b3d-a478-1ebf7c204fa2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Whole Bean",
+    "variant_id": "2f5b2057-792b-4aaa-b5db-26230d58cf08"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "30b25fac-a9d4-4296-81de-73057a0ce514"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Fine",
+    "variant_id": "3762ce5d-9567-4de6-b4ef-2e08e0075292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Course",
+    "variant_id": "38e5b2bc-06ca-4242-a561-fd8c9fd3b862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Fine",
+    "variant_id": "3c4eac90-a84b-4445-ba29-f9206eb6f3e7"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "427397af-ed84-46db-ae2c-9b906b7b4fdc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Whole Bean",
+    "variant_id": "44e4dded-eba3-4dc3-ba4e-85a90dc76b4d"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Whole Bean",
+    "variant_id": "477ba292-392b-4dc9-a744-033fb4f5520a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "48b04893-595f-4735-af09-a58b04313080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Whole Bean",
+    "variant_id": "5e653a0a-57d1-4d04-ac1e-ac7811189d02"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Drip",
+    "variant_id": "6127d322-4a90-42fc-819c-68e00dbe7b41"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Drip",
+    "variant_id": "63ba778f-7bd6-4503-871a-4650cd726f3f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Course",
+    "variant_id": "6417e4ad-a216-404b-9594-0bb3f31da3e7"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "67bf28b3-76e0-42e2-8767-3beebfb51cd4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "6bc8d1cd-c4dd-477b-92ad-ee349858b9a7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Fine",
+    "variant_id": "7063f672-3118-4636-ac3d-043213956169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "8ce558ab-1f7c-4b67-b430-4f00f9338177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.7,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "8df7f090-1bd9-4fbf-acc6-2b37f9d4b9d5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Course",
+    "variant_id": "96dbaf3c-cc96-403d-ad56-cbb68a408dba"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Course",
+    "variant_id": "a022cde2-bd0d-419a-ab1d-adeec3fd6e4c"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "beab1e3e-1b1a-4e1b-804f-d678253ca4da"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Drip",
+    "variant_id": "de6ef32e-5181-4077-80d8-ffd57018bfac"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb Ground - Fine",
+    "variant_id": "e1132b7b-4ee6-4e21-8f43-f905ecb7797e"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Course",
+    "variant_id": "e12c212b-60e3-4195-a2d7-e247211b5abb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 139.25,
+    "title": "5lb Ground - Drip",
+    "variant_id": "e47abfdb-6383-4b1c-8e31-5b1ec9d87e97"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 83.55,
+    "title": "3lb Ground - Fine",
+    "variant_id": "f0f8b064-938b-4621-b4fe-17e2c7d9627c"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 111.4,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "f8a036ab-e43c-40cc-9c9c-02da44473558"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "426b6e44cfe2d96f",
+  "first_seen": "2026-10-26",
+  "handle": "product-6-yrdld-pcpw6-we3sw-fd4yk",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/4ca8729a-a42e-4d2d-a7cd-b61ab41e437a/7.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6c9c",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Sumatra Varietal",
+  "url": "https://www.northwestcoffee.com/shop/p/product-6-yrdld-pcpw6-we3sw-fd4yk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "08beca49-9a95-46fe-9e9a-044092411e11"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "19647c3b-2f52-4ee5-b7ea-f8cf8d9d4581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "256ad5c9-5f0c-47ab-b3c7-c4361b57fca0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Fine",
+    "variant_id": "2e00762a-d9fe-48fd-a505-15600128f86e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "302860f6-8755-4e27-ad49-074c84e85c4f"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "30d1092c-d07d-412e-8250-bc8af653d39c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Course",
+    "variant_id": "3a413ea0-5483-46ec-93f0-c11dbcb180af"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Drip",
+    "variant_id": "3b085b4c-acad-4b4b-83ad-c89a9a07e6cd"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "3c9051b8-661e-4289-9fd8-769ac76a7e9d"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Fine",
+    "variant_id": "3e8d0d57-8753-4c87-bdd2-37651e5f0304"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "427eafef-70be-4d8c-a520-ce44dc8b4ba8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Drip",
+    "variant_id": "4967e235-2a19-4b22-9c0f-b73950a720d7"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Whole Bean",
+    "variant_id": "49e181f9-7428-4c64-a761-1086698b9b06"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Course",
+    "variant_id": "4c5d4340-ec5c-460f-8c05-be5a7e261348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "4dcc0f91-458d-47fa-b579-7e30db170ca3"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "6359b107-9979-4dde-b7dc-4aa7b363197d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "67366b61-af88-44d5-88b2-b5b36b8560b9"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "68ef8a64-716a-4f38-bfa9-fb6e9ffdeab2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "763b624b-ca63-4fb2-8cf7-07b3400ee605"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "7ead7ee2-8986-4881-abd5-bf48849145d7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "86e27ad8-02cd-4fc7-84e0-808a033166b6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "8c3209db-8a5f-439a-ae27-9c379488ebc2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Whole Bean",
+    "variant_id": "8e8f342d-d6d7-44a6-bf30-60858c9c1352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Drip",
+    "variant_id": "94aecb9f-c937-4522-a2a7-d6c0f5c02326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "b6c8bf1c-8461-4760-bd35-19addd516a5d"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "c176c338-0fdb-45f7-8cdb-762edfc0af3b"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "c4e554ab-0337-450e-a729-24c186a41fb1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "cc10caac-8ae6-424e-b886-1baf48037779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Course",
+    "variant_id": "d084b2a8-0467-4813-b176-8b99eb5f63a5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "d1e05e29-9476-4e77-b29a-ab0c0c2686f2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "d66f5193-8f5e-4e9e-8411-cbb454acc616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "eaa55e9b-0cff-47ea-90b5-00dfb1ae51af"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "ef8a6e1d-0b4a-4182-a48b-18806095a62b"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "f12b8f51-700a-477c-a74a-592e43fe0def"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Fine",
+    "variant_id": "f8877a0c-5492-47f2-b490-07e14c7380d4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "adbb3459ae4f7d39",
+  "first_seen": "2026-10-26",
+  "handle": "product-2-5c6mb-j8mng-zsl73-teg4f",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/740e0358-1fa3-490e-8891-48b26cda977e/description-2.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6ca0",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Northwest House Blend",
+  "url": "https://www.northwestcoffee.com/shop/p/product-2-5c6mb-j8mng-zsl73-teg4f",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Whole Bean",
+    "variant_id": "0c7e2672-1244-47d4-a689-8d98e2df15fe"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Perculator",
+    "variant_id": "152edd68-571d-46cb-a37b-d11a2253c327"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Whole Bean",
+    "variant_id": "15518a54-14a1-4adc-8314-c02cde6aa07c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "21bddf82-34ea-4a0f-85aa-ab782214bf54"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Drip",
+    "variant_id": "227514df-5617-4e41-8699-dd948b25c50f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "3a48b3b1-60c6-49be-9316-81f5670ff00e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Perculator",
+    "variant_id": "3f74bad2-020f-4bcd-a953-69cc4f699130"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Turkish",
+    "variant_id": "47067195-200d-44cf-aa8e-c6b24b10eb44"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Perculator",
+    "variant_id": "537d7fd0-79b6-493b-8dfd-ff8176d3d8c4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Course",
+    "variant_id": "5c9c02f0-3c7a-4891-9fd8-33eabb8126dd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Turkish",
+    "variant_id": "63c4d871-8f3b-4783-80a7-2bb1221c8073"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Whole Bean",
+    "variant_id": "67d07e73-2840-4ee9-b04e-b466761e86b7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Fine",
+    "variant_id": "6b651810-3a3a-4dcf-b196-918ab0949135"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Drip",
+    "variant_id": "728430fa-2cc2-44f6-8530-735ee4a619fc"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Espresso",
+    "variant_id": "78dcb7ed-46c9-4b80-ae60-4b4ef321533e"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Espresso",
+    "variant_id": "7d852677-d69d-49de-8ecb-84160122a5a1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Espresso",
+    "variant_id": "87f2ff0f-811a-4286-afd9-f1212442eaa5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Drip",
+    "variant_id": "960ea624-adb9-4d47-a188-181fc0decff8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Turkish",
+    "variant_id": "a55c7724-ab26-4bba-93df-d8acc076864f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Fine",
+    "variant_id": "b03c0f60-b4d4-431f-a506-f397ea75cee8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Perculator",
+    "variant_id": "b3358761-285f-4be9-bb6a-fa18adb094c9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Drip",
+    "variant_id": "b4ec8ffa-2bac-4695-8fe6-b597d5f23f32"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Espresso",
+    "variant_id": "b60a6d73-b44f-4ccc-a1b9-27754d9ece46"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Fine",
+    "variant_id": "b93d1453-b77f-48b7-a55b-04baaf0ce3c6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "bcde8f85-fa81-4cef-bce8-df15447d2ed6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "c2da2cb2-d6ea-4de5-bec0-b9cdff823ce9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Whole Bean",
+    "variant_id": "c851380a-7f40-4231-8e27-ea9e2b13bc58"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs Ground - Course",
+    "variant_id": "c8fc2a8f-e1e1-43da-a192-1e9203397ad5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Fine",
+    "variant_id": "caf305ad-cacc-4535-9cb0-482ab01a111d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "d0896ff8-ce6b-45f2-9265-509cd7d1c9f4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "d3542fe3-2c6c-4160-bf41-4f32b2393dd0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs Ground - Course",
+    "variant_id": "dbea1257-34e7-4475-9514-1a92291da39d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "e3a043fc-8ac2-4ee0-ae4f-990d654e1a9e"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lbs Ground - Course",
+    "variant_id": "e4c3ff3f-79f3-4e37-bdb3-cd016cfdde11"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lbs Ground - Turkish",
+    "variant_id": "f58222c2-8730-4dd6-be13-eb7ff1f4c375"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7ea2bde5bc30614",
+  "first_seen": "2026-10-26",
+  "handle": "product-3-szb2y-gzh2r-tzhkx-mn7wz",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/d8b0203d-47fa-4ef0-b8b3-7f1068fd5587/3.png",
+  "platform": "squarespace",
+  "product_id": "6a0c8799756be34efded6ca4",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Northwest Espresso",
+  "url": "https://www.northwestcoffee.com/shop/p/product-3-szb2y-gzh2r-tzhkx-mn7wz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "0e083410-45d8-4f70-8f5c-c70876d75b99"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "16c42afd-f38b-4ef8-9294-c607e6171394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "1a6d4171-5ac8-4fd9-84ff-52f98e4735c7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "1a7b24d9-f240-4bdc-8ff9-21b410e4ddbd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "1d144f5d-46e7-464c-aa55-67b6ed5ac03f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "27fa7662-a6e3-4dd9-9829-47f00a9aa4bc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "29bc40f2-3562-4423-a277-548f6dff16c5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "2bcaf347-d39d-4e44-a3f0-596aca00b113"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "2f1b27d1-6c12-4008-b698-0bf5c4f967eb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "2fc7b865-c171-44d4-8c32-0ba25c5d60ee"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "47598404-d15a-4e9a-a937-77d23cc47a0a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "490b21e1-8b42-44ad-9ad8-e96d4c5fe41c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "4a787cfc-8d87-48c5-9cef-cabda66eefa2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "5016787d-475b-4285-95b5-1ed5de6a8dc9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "6c8c9b90-c4a7-4cc9-a8ce-5a4a76bc6229"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "6d923237-8b56-41c0-bb84-069262df29e9"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "74b50345-44ab-460a-8f9e-bcd902b84ba9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "76bfa544-8174-469c-9ec1-250a84582bce"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "797fb59c-a127-4a78-8549-2dcd55627ad3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "844b9842-f3b2-46f5-9822-ac3b5a6577ac"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "860ece95-5cba-4722-a493-5453320b72a9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "87d2416f-9243-46ca-9148-501918dc9b14"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "8a6d2d57-d70f-49e4-934b-d547828ac436"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "8cd66cd9-a4ba-460f-a01f-caf910b725d7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "910a7970-a133-429c-8c09-9d7588a3bd9f"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "93f85d24-5786-4309-b832-bf14210ebe42"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "95924a26-acc1-4cb4-939d-e2bd2d2c7672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "ab050c3e-d6b1-44ab-8564-ce5e199bfa98"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "aff08624-07d1-49b4-9b95-1f9e55ee7adf"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "b8bfac6e-b59f-46da-81f6-a28b6148de2d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "d88d395c-fd79-4fee-8ec5-d1efd50c7bb7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "e948fbca-f662-4b14-805d-49de8a54e917"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "f419eebe-87c6-4947-aa81-cee88456e048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "f6b6a0b7-9dab-4edd-828a-0c99c41d42a0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "f804cc33-48fa-428d-8603-67106bb4d006"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0622d7b0684a81dd",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/f1393fc2-82ed-4839-938d-49296e892940/8.png",
+  "platform": "squarespace",
+  "product_id": "6a0dc4c23fda827df9c8d9e9",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.northwestcoffee.com/shop/p/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "0899b8ff-072b-447a-9f9c-57d6039c1d69"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "1ad6f6df-20b4-4bef-aa63-ec6bc5bb12c7"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "2418e175-99cd-419d-aaaa-05d5afee88d1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "2845b981-bffa-4ad6-9bdd-8ecbfd7b3b35"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "316601a2-bfc6-4054-88f6-93b471f608e2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "33d78afc-0617-4011-ac9e-6f23f188ce5c"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "453a16c5-4078-4d7e-95e7-54a5914e6be7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "4fcb64e2-1f5f-4dca-b356-7ec6c3ec3bc9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "51f23485-330b-4851-995d-5a08d39f3fd7"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "53874e68-84af-40a1-8c31-d7081a1eedf7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "54babc82-3258-4e41-89b1-5937f6929b6b"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "58218a88-962b-45a6-9bb5-a4679f316d48"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "6f82350c-4867-47f5-aa56-5661ab2b35d4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "70e6c9b0-10bf-4ef9-a37d-ad797378bfe1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "7a591a68-f4de-4abf-aeb1-6ea3e6a986ee"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "7fd8f24d-9844-4c8d-b438-f621e0c7296f"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "832bdea2-2065-4493-964b-19d793a3c5a9"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "8690a993-d0a6-4607-9534-abbbd2be4e72"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "8c590b32-1e72-4b72-9d13-eabb1d088210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "919c218b-56d6-47e4-a9c3-b7178d47fa46"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "948210e1-e392-4368-9497-e0b226a2474f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "a11f200c-c79d-49e1-8cd9-0360f39bae4a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "a6232ae6-9ee9-443f-a302-5cb57b0559f6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "a91c96ab-e49d-4931-acb2-fac4eab396de"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "af7d34bb-0fa1-499e-b63d-17e9930d3552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "b75fdbb1-c257-4e91-aa32-7515a9fd987a"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "b8b73a62-27d8-40a2-a865-2d9428d690bc"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "bfea566f-a088-414e-baae-8990871148e8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "c677db6f-4f18-4eb7-be94-ed450766fdec"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "c746f00b-12e3-412f-98c8-e2714a420d01"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "d0c844fa-d258-4ab9-8f9d-07eb033718a5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "d49c734a-d18d-4520-bdd4-337e5e0ec77a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "f3dcfbe4-adbf-4e2b-ba9c-d874d5198b23"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "f6c8d921-4943-4f46-bf84-daf3108c02c9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "fef9b4d0-38d3-41bd-8ff8-5a5d573e1073"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae3d35e713ede3b8",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-fto-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/2263d908-a715-4ed6-ae01-56f4ffa1d651/5.png",
+  "platform": "squarespace",
+  "product_id": "6a0dc5aa68dc3c55cb48779e",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Mocha Java FTO Blend",
+  "url": "https://www.northwestcoffee.com/shop/p/mocha-java-fto-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "056336ac-e902-4da6-9438-3277fbbe2bdb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "063fd5fc-337b-4d58-9bfd-d7c703940050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "11ed1026-3e78-415c-b8a1-d53be45e22f1"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "1307cc9e-e86e-481f-8be7-46a220c23b05"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "197324b6-40ae-461f-b746-9b68dc78480d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "20e3df75-3e2e-4fae-8821-0818907ef45a"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "321c7c8d-1e9b-496c-940e-637ddf730949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Drip",
+    "variant_id": "34f46475-cdfb-4e1f-a272-80b076602ba2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "35114af6-513a-4d67-8bdd-e52a0ebcb435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Drip",
+    "variant_id": "4a07b010-196f-40c5-bfb3-29268a3eab36"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 27.5,
+    "title": "5lb Ground - Course",
+    "variant_id": "4df56002-41bf-4d4f-9d7e-4d7e649c4f9b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Fine",
+    "variant_id": "54dd5200-ba2a-4d46-988a-c8d6fa75eb71"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "54fc6e23-f3a5-477d-afba-d5a52c41eed5"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Course",
+    "variant_id": "55cead4e-9358-418a-b4a4-b95ee7e92462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "5dacd6a7-bf5a-4ba0-83d4-2823678c8ae5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Course",
+    "variant_id": "600840c5-2eb5-40a3-ad26-bb89a53c7230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "68a08f1f-00d2-42bc-811e-81497240ac88"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "6b4ac334-040b-46db-a2ed-5c6120653b8d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "6ed9801b-2803-46d6-a041-cfe439eb10c6"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Fine",
+    "variant_id": "906839c8-52ca-4b2c-a6f0-57df29b08119"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Drip",
+    "variant_id": "936fc11a-fb69-4d81-a12a-be8698527f28"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Whole Bean",
+    "variant_id": "97975ded-4336-47c2-8686-af7899e510a4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "a4f4bcf2-763a-4bff-8903-4e44e1604d05"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "aa2790d6-fdb3-4cb1-b93a-7bffb04c1954"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "bd070b53-79e0-46b0-b777-a4155d42d7ed"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "bfa437ed-9dbf-4026-88a8-7c47573dcd31"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "cb3716a7-2d41-4b0b-8625-dfea4e5450d5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "d1491450-68ed-408a-a37e-1c6c518c9d05"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "d2772053-bfa6-43cd-bc2b-47dbdcb6fc73"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "d989795c-3b9f-4a64-9c15-97110c856a78"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 110.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "db52068a-8f71-4325-ae08-f252e4707053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "e60e622c-df06-49a1-b73c-e6b0ab4b4552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.5,
+    "title": "1lb Whole Bean",
+    "variant_id": "ef08e97a-a9e4-464a-9c7f-65f9a7ae8553"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 82.5,
+    "title": "3lb Ground - Fine",
+    "variant_id": "efd1eaea-b067-4f4c-82d7-cd5bdb05aa92"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "fed1b1c9-cb9b-45fb-8856-12a57b1112ec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ebe05af0679527e",
+  "first_seen": "2026-10-26",
+  "handle": "soho-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/37e6a53a-a466-4099-ab83-c36f3856bbc5/9.png",
+  "platform": "squarespace",
+  "product_id": "6a0dc6a09bbeeb1bb614b917",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "SoHo Roast",
+  "url": "https://www.northwestcoffee.com/shop/p/soho-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "0733d6d0-240a-4965-89a6-c424c4eb5382"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "1316bcfd-8c24-4de1-97ed-92730bcc55c0"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "27486570-bb2f-4f7d-bc5c-2611d9722f52"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "2782d5c4-9ee9-4801-b984-3ac8da27ac8e"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "2ba2207f-04ca-467d-8b7c-f6a8c75ae914"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "4190fee7-b761-4ecb-9dde-bbefdbaac588"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "4752e50b-3c9e-48d8-8c58-9acffc6e5141"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "524ad72c-9f8c-4817-9b9f-e25539fea90d"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "584f6850-7049-4ffe-9b6a-0ad22a858ca9"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "5c0a9012-5d5e-4f71-ac3e-68aafb594132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "60f075dc-c290-4398-a408-0cf62d6ea134"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "6a2edbbf-9755-4d38-b546-f5e000b105a4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "6bc4a2b2-c49f-4a72-aac5-ef0e84c65ed7"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "6d54a139-f9e7-4303-be72-1e42ac4ec08d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "71197bdc-f9a4-4160-872e-d1bd1c22d412"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "78325534-a432-495c-ac0f-dea23ed12d85"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "82d90ddf-26fb-40f0-b321-ec06bfe7717d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "8d35034a-4a8f-44d0-bcf9-4504df122358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "a043621f-5e48-4bb2-a2de-742d039f806b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "adc9ca48-ed72-4b7b-a3c2-80528bce246c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "b1a46198-c09a-4bb2-8e5b-45f23f319226"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "b37eae25-302e-4ee4-86f4-b51ab3186555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "b6b12f38-a894-4cc3-b316-ce7ed52a15d5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "bca1e9e5-9eab-45e2-9fb8-f1560ff18ac5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "c13a8c17-fb33-4942-92f0-3bb709143028"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "c34a5360-7666-4013-8505-cffbb8ef7d0b"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "c588dc8e-e371-45d2-bc1c-f4d8bd5a42e0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "cbd2a8ae-4ded-4d19-907e-f89224d9bdeb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "cc5d093b-0ff1-4707-903a-0f865025b677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "d4d26f86-2d13-49d9-9e55-06e6b5d160fb"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "e64fceec-e220-4fa7-989c-c762a2ce8c0a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "e92a1357-7d08-4faf-9102-b05a3eefd593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "f2d5a6f9-83f7-40de-af77-d7308ee685c6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "f3bc3f32-3b99-4ad1-a5d0-843d4a20af50"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "f712ebea-351a-4779-aff0-744303a5b579"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04bd10a3279fa2f3",
+  "first_seen": "2026-10-26",
+  "handle": "rocky-bay-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/99a51b81-0484-45ce-8f02-6ff54e7db174/11.png",
+  "platform": "squarespace",
+  "product_id": "6a0dc78f9bbeeb1bb614b9fc",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Rocky Bay Blend",
+  "url": "https://www.northwestcoffee.com/shop/p/rocky-bay-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "0528b319-ee9c-4b14-8636-18b85719ee58"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "06d1076e-8f7a-48b2-ab85-43567888ea01"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "09e533fa-82fe-4c91-be50-4fcb3a35ddb6"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "137b3b0f-0d29-4d94-9b49-9133c2ec30e8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "17bcc0d6-8e4e-4015-8b2a-b84e7d324620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "2b18ff41-ea29-442a-afc3-d4b928a6d36a"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "34347cab-2631-4647-8154-fecba829e5eb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "35a3f8f2-0444-4c87-b6dd-653e6a60e550"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 27.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "38c50484-4388-4ee2-afff-597667316fdc"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "38d61349-05a1-4f2b-ae4a-1f1b0fe0a8f1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "4304bb0f-6409-4a8a-ab6b-d4e4c2b2ec40"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "4a30b4fd-e915-4b14-b604-f02e6a9759c8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "4c8c47d6-5738-4ca3-a6c3-7b51cf97a01e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "59e80086-acac-415e-b2aa-4ab6a81031c9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "5e3b4db4-956e-4a8c-b6d2-6803a01362d4"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "61cec796-4f59-49e7-acf7-693577ff31bf"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "66cfdff0-1e3a-433d-9fcb-0022b45b8042"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "6869533d-8e9c-4111-841a-0cdb1f333922"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "6cd3dc89-119a-41ca-8112-f7c4af94ace4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "6f67956c-2a6f-4d5d-b23a-c463c73379e5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "7245a045-1228-4393-b659-4aa916d93f15"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "7468f8ff-6cf6-42cb-9025-b9ff80bcf1ec"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "7d713f9b-7943-4e98-b9fe-693e89191bb6"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "9338b8af-ed90-4c7e-974a-23e4dab24bfe"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "94da293c-a7a1-47a0-9a33-e934c3885991"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "97be65db-0d93-40ce-8dd5-3065042858d2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "9b8962d6-1656-4971-8967-a86cd55e2d4d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "b919efff-5100-409f-8c1d-56d2acee952e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "c01dc13a-a83f-4779-928f-eaae0376ec22"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "c48e9e90-e0c5-4f3c-9112-b053b4e894f0"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 108.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "c55dd303-b140-4530-8a54-8298ff7d237d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "cfe36130-ae8d-4a16-bebf-3847058ccdad"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 81.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "e3ed7f5c-5a24-4bf9-bebd-eb69e852193c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "e98a50a0-87ca-482e-ba40-a2d2d01e5d77"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "f3d8c52c-a2f8-4820-bd2a-6f4ba74d587c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/b00e0f13-bf29-43fc-99d8-9ec886ab112d/13.png",
+  "platform": "squarespace",
+  "product_id": "6a0dcaa43fda827df9c8e033",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "DECAF Ethiopia",
+  "url": "https://www.northwestcoffee.com/shop/p/decaf-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "0d982f11-d115-46cc-aaea-b5d545932010"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "1025938a-11e0-46f4-ade4-6c2128595a33"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "13f735c9-fd3b-4748-bc78-753ad4b38f54"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "1b72a7d9-70ab-4abe-adb0-8980edd91427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "2ac8bd03-d175-487a-82ee-219bd0b5ae6c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "2bcc60a1-c557-4b05-8107-a70e51c22947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "2c9c45f2-be30-4c7c-b7fc-9adb432f1935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "3199138b-c83a-426b-92a3-68d9b597f031"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "32b1186b-bbb4-4c98-a21c-b14aae6c2513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "34eee3fa-bcfb-4301-ad93-681f4d260f9d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "35e91326-ba45-4f49-896a-d20d12443dc4"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "3b0c9dc6-3dd8-4fef-a175-2dee99df511f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "3b3e23bb-be1d-4120-b064-7eaa28ee72b4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "41a5bf40-d331-4b40-b09d-64f2c599c188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "447e26be-bc33-4b4e-9851-4f68c64add7d"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "465ceae7-7483-44c1-9274-2d9406815e31"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "56724141-4e76-438f-b907-327733e69897"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "579f6d3c-8c88-469f-92f0-3f93afd82f1a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "5918c4c4-9e51-4604-9b5e-e2449930caca"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "6533aa84-021a-4262-9e4d-29f531c5c7c8"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "72d6766b-df9a-4060-9a07-34604b7a31ac"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "9cc1c703-c396-4c01-b98f-0d90cb69e203"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "9e0a5e7b-8a25-4e64-8d59-74740d071076"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "a7f2dbb0-4c47-4168-8fd6-b8e6bd94057a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "c389edf7-3e9b-4955-a830-7b750d8a0f0d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "d02d07c3-0e37-4055-b50a-6e3f044a2a06"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "d47e9540-40c2-4765-b9f8-5a8a35177e6b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "d79067cb-4ae4-45d5-bbb4-5c3574016651"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "e4b98a00-ff31-4df2-bcee-4c9c48b2838d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "e576ab9e-c952-4f7e-9bcf-859596d04f12"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "e764854a-7582-48fb-a2bf-4ba7f0d8c1e9"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "e955fcb0-6e02-4918-a331-50175cda503a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "f4662b4c-108f-4756-97ea-7f4f6224acbf"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "f56d84c0-e565-479c-a3e5-fadd08b4f93d"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "f6a69002-6b30-4fd5-91ba-91240aab01eb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/403c02ac-8b68-4626-b49a-303a146ffe98/15.png",
+  "platform": "squarespace",
+  "product_id": "6a0dcb393fda827df9c8e0c0",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "DECAF House Blend",
+  "url": "https://www.northwestcoffee.com/shop/p/decaf-house-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground - Espresso",
+    "variant_id": "0905d5f1-2205-43ff-b7d4-ea07bc16f2fc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground - Turkish",
+    "variant_id": "09f0f8b1-b1eb-4b1a-871a-7a8c9e6e2d20"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Whole Bean",
+    "variant_id": "116b4ff8-68b4-48e4-8d03-51fa10a8af61"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "1304298e-5a11-4c5b-a7aa-81a7087a7247"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Whole Bean",
+    "variant_id": "19c2f0cf-ad0d-4dbd-bb9f-381aa50f1361"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground- Drip",
+    "variant_id": "251cb361-6b6f-4a4d-8ad8-bcab0a1edf32"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "2b10af1c-1dad-438e-a831-86f063decb35"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "3aa28d65-af18-4d4b-98ca-a0c65dd000e8"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground- Course",
+    "variant_id": "3f4895e3-c619-4bdb-95d4-a332098a9aa3"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "46d23d35-fd3e-419d-8eb0-c4d1a15b66b5"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground - Fine",
+    "variant_id": "4e878e6c-cc85-43cd-9134-8436d746ee1b"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "4eea7ab0-2fd2-4c2c-aa44-b52c8b0f20d9"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground- Drip",
+    "variant_id": "51d09cd8-a381-4896-ad08-32728d0d7bc4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "5344d682-fe48-4750-94ad-61fb297dc466"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground - Espresso",
+    "variant_id": "55c0e711-eaad-4c2d-a7fa-a781c03a62e2"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground- Course",
+    "variant_id": "5c512e8d-f373-4695-8c7f-1f2f4ef38b48"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground- Course",
+    "variant_id": "5e6bd884-716e-4ef8-b1fd-9e344aeccb77"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground - Turkish",
+    "variant_id": "63432d83-22e4-4ed2-ab32-8ed7097b76a5"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground - Perculator",
+    "variant_id": "75ab974e-2f75-4604-8c7f-07b0d7ca1b8a"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz Ground- Drip",
+    "variant_id": "86000f27-5f45-4438-935b-85c0d17ea88b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground- Drip",
+    "variant_id": "a1de83e9-d36e-4643-b209-022dc3adc1a4"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground - Espresso",
+    "variant_id": "b3742ead-c474-411c-920c-1dc74c9fde6a"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground - Turkish",
+    "variant_id": "ba3bf4bc-9d23-4b36-9bb1-045f8b646772"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground- Course",
+    "variant_id": "c0724f15-e41e-452d-ab07-d7ec51a47ff8"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground - Perculator",
+    "variant_id": "c30d3e1d-2442-42a2-a015-72c5dca6c93b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground - Perculator",
+    "variant_id": "c60ea966-3a51-4b26-8d34-eb8c9ae65bdf"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz Ground - Fine",
+    "variant_id": "ddd68000-5145-4e0b-8b71-57e17a4a2091"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz Ground - Fine",
+    "variant_id": "f5516bbc-4dc1-458b-a7e7-80175d1fcb80"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/fa1e0fa4-7c9b-4d88-b9c2-17077902bdf2/14.png",
+  "platform": "squarespace",
+  "product_id": "6a0dcc279bbeeb1bb614be82",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "DECAF Espresso",
+  "url": "https://www.northwestcoffee.com/shop/p/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "0f20781a-ad90-4024-a606-a7ebc9ac1850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "1046ff8d-a973-46bd-a4e4-a37acb45edc0"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "160782bc-aee3-4b90-a9c2-fe8a1af9ef9c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "1f919544-7fae-40a8-a900-632d044c2206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "20cf9a72-fcb5-4458-a1f3-eea626acf442"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "26573f05-1390-48b0-b9ac-19bbc84efdb5"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 26.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "2c97a0f5-b213-438c-88dd-35a142d09fce"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "38ce0e1b-2054-400e-8bf2-acb5435fd7ba"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "38f91fcb-4f4f-42eb-aa28-61e0d6cdff05"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "40b0a800-90e2-47c4-8da0-f1f8fdb3c619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "45e84ed2-73b1-4328-9348-0969cafc4ebd"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "4706c1e2-8d37-49ca-8e91-4472cfdbd202"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "4cebb4e7-0ce7-4001-b85b-2aaa8c705478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "50f0d462-5e62-43f8-be88-a1239f96f7c2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 26.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "54f0ff88-a680-4460-873d-61e4c85b05cc"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "5b17a188-ce91-419a-aaaa-df9fd4994b77"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "70dd82be-9a33-4028-9924-759f5e65fff1"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "7c36012c-7ccb-4f07-92d5-7d18e5febcf2"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "85ece027-bea7-4f8c-9309-75f2c1190428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "87c6db96-b7f6-4a44-9cfe-ae58dfb0365a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "9d007348-3517-48c8-95d7-076d64aff6ab"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 26.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "b1f688cf-6ffe-4b61-aa28-b8b8ffbdbdcd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "b7f472e5-32da-4250-bc5b-7dd6807ad46e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "b8cfdb63-fcec-4bb6-92d5-df1c373e74de"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "bdce6d19-3e73-40e7-98e2-d0235fabeba3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 26.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "ceab5f93-6510-4914-ba87-7391f089023e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "d36b0428-fb11-4833-ab4c-50617700e80b"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "da90d6fb-ac4d-49c0-ae34-b7d958f4cb07"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "e0741707-2010-4b89-8b74-0dc37715fb59"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "e242ec16-42f3-4d6e-bac1-5244f8374b6d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "eb25086b-b552-4424-b027-e4afefd584de"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "ecb2d54f-c043-4962-ad2f-9aab04dae757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "f21285c1-282c-4b4c-acaf-e10750820d9f"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "f3253499-9b6f-406f-a3b4-f6dee43d68c3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "f3aa231a-c0d9-4b2b-8d84-bdd734f858b0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/ac25b4a6-52e9-4739-84a3-3cb9d0ef5650/12.png",
+  "platform": "squarespace",
+  "product_id": "6a0dccd970b343450388c20a",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "DECAF French Roast",
+  "url": "https://www.northwestcoffee.com/shop/p/decaf-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Espresso",
+    "variant_id": "00faea95-6304-48d0-8501-77a22730cc4d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Whole Bean",
+    "variant_id": "06077781-1356-462b-91f4-074f68080f67"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Espresso",
+    "variant_id": "0738dece-50ec-4444-ac23-17e482209fce"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Drip",
+    "variant_id": "0cf0c919-1842-4e9b-b879-b720757d6bff"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Fine",
+    "variant_id": "112ba929-87f4-4cea-bcdc-3914af19a91c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Course",
+    "variant_id": "12cf0296-69ba-41db-9fff-b761651b6b91"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Course",
+    "variant_id": "23328c15-ee61-4335-b5d4-75eb80a11a53"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Fine",
+    "variant_id": "269b1e06-7587-42d8-9456-97e5fdab6016"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Perculator",
+    "variant_id": "30e439ac-8735-41ca-b472-79c9c1a72eb4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Fine",
+    "variant_id": "377e929b-fc56-4356-825c-8944a88b8bf4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Turkish",
+    "variant_id": "3e4a116e-a7f9-4442-89ac-4b9b7eb85819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Fine",
+    "variant_id": "467ee581-5ac5-42a8-a793-dd51ce0d358d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Perculator",
+    "variant_id": "46e86b15-a565-4466-91cb-193e568a7f34"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Whole Bean",
+    "variant_id": "49c17d65-55eb-4d5e-a50f-adc0b3bf6188"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Course",
+    "variant_id": "4e714d21-9162-4132-be57-bce66d545310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Perculator",
+    "variant_id": "4f9b5362-511c-444b-a644-dcb1c3724c13"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Turkish",
+    "variant_id": "4fba72f9-c8cb-4a6f-8c4b-bd66944ca29d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "55a48957-9b95-4b7a-8e44-fc554a83c6ed"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Espresso",
+    "variant_id": "57680870-9af6-4c33-a569-9b9767e1e4e8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Turkish",
+    "variant_id": "5a8d8c9a-c855-4ffd-b707-1706d5965252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Course",
+    "variant_id": "73274ee2-4d6a-4674-b7a3-d24cafd01e44"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Whole Bean",
+    "variant_id": "82cd0473-550e-4786-bd59-826497d914e2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Espresso",
+    "variant_id": "8c692182-bf09-4caa-aed2-3cf47b78a4d0"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Fine",
+    "variant_id": "9034c331-f445-4206-97a8-9b4d07b44db3"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Drip",
+    "variant_id": "aa5e1cf6-b3b2-428b-bad9-9614357eae0e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Whole Bean",
+    "variant_id": "bb050ad9-11c6-4ca4-8f7d-200bee088a3d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Course",
+    "variant_id": "c30322ba-1f75-4b53-830f-ac1060a60c59"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Drip",
+    "variant_id": "cba23a9b-a71c-4257-ba51-bce89c1a805d"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.0,
+    "title": "3lb Ground - Turkish",
+    "variant_id": "d0cf15f7-97f8-4e9b-9701-a3074235a2fd"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Espresso",
+    "variant_id": "d5e47890-de2b-422a-9f5b-c0aff6d4a7f7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Ground - Turkish",
+    "variant_id": "d9cb8424-f6db-4e91-a4e6-0b81ba4bc1bb"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Drip",
+    "variant_id": "dd1bbf84-7f8d-49cb-8f73-418d7f462319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Ground - Drip",
+    "variant_id": "f45236f1-226a-4cc4-b1a0-90b76e3448f7"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1lb Ground - Perculator",
+    "variant_id": "f7eaaa40-dd45-444a-aca8-605670375cf5"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 104.0,
+    "title": "4lb Ground - Perculator",
+    "variant_id": "f86f0fee-9aea-46de-b499-9d74e7b0c874"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40b37c6792002a45",
+  "first_seen": "2026-10-26",
+  "handle": "natural-uganda-kisoro",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/2b8a89bd-9583-4d8a-a7ba-35df6129d927/302AD0CF-F60D-406C-A625-B3DAA5AAEF00.jpeg",
+  "platform": "squarespace",
+  "product_id": "6a13a0b33fda827df9cc9f7b",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Natural Uganda Kisoro",
+  "url": "https://www.northwestcoffee.com/shop/p/natural-uganda-kisoro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "2b2aec87-338d-44f2-af77-32688f54f013"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz",
+    "variant_id": "6f1c5687-32b5-4ced-9250-8b5c7f4fe856"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 11.25,
+    "title": "4oz",
+    "variant_id": "b44aa82f-e402-46b9-a973-eb88a7b2dcea"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "1lb",
+    "variant_id": "b9a55648-5b41-4ded-9214-83182ff4a36e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-wahgi",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/6f756afa-438c-4dae-a34a-391cc373f466/IMG_2329.jpeg",
+  "platform": "squarespace",
+  "product_id": "6a13a18a70b34345038c8130",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Papua New Guinea Wahgi",
+  "url": "https://www.northwestcoffee.com/shop/p/papua-new-guinea-wahgi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "989f560f-e7a0-44fd-b831-de93ec3b571a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "9bcbbbd6-b7c2-4169-85a2-f47f5d8f90e0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1lb",
+    "variant_id": "d27b1e62-938e-4f9e-be68-59d2eb1a80d4"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4oz",
+    "variant_id": "f742528e-b1c9-4e54-87ce-029e4babed26"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc7fd1ceecf088fa",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-fto",
+  "image": "https://images.squarespace-cdn.com/content/v1/6a0c8701bf430815bcc4142b/f618613e-963b-44a3-ab7c-9bb6208ea53f/Subheading.png",
+  "platform": "squarespace",
+  "product_id": "6a8f5a7fa06e1c1c9fd2e87e",
+  "product_type": "",
+  "roaster_slug": "northwestcoffee",
+  "tags": [],
+  "title": "Mexico Chiapas FTO",
+  "url": "https://www.northwestcoffee.com/shop/p/mexico-chiapas-fto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 27.85,
+    "title": "1lb",
+    "variant_id": "207801e3-9dd4-4ad1-9eb0-3b5d08ca5292"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz",
+    "variant_id": "2ddd64b1-9100-4067-b2eb-4ad3aa01f25c"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.5,
+    "title": "4oz",
+    "variant_id": "73d11d23-6d13-4114-8a19-7536045a56f9"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "efd59a32-7c3c-4b7b-9554-868d49e7df4a"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,988 @@
+[
+ {
+  "body_hash": "a047b36b69210884",
+  "first_seen": "2026-10-26",
+  "handle": "beartrapespresso",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Beartrap.png?v=1779295695",
+  "platform": "shopify",
+  "product_id": "1776582276",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Beartrap Espresso",
+  "url": "https://blanchardscoffee.com/products/beartrapespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.55,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114358460519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Ground",
+    "variant_id": "44021908832454"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.55,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021908865222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.15,
+    "title": "5 lb / Ground",
+    "variant_id": "44021908897990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.15,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832620802077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "6316266564"
+   }
+  ],
+  "vendor": "Signature Espresso Blend"
+ },
+ {
+  "body_hash": "17607073cad94f22",
+  "first_seen": "2026-10-26",
+  "handle": "midnightoil",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_MidnightOil.png?v=1779295841",
+  "platform": "shopify",
+  "product_id": "2216829714535",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Subscription",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Midnight Oil",
+  "url": "https://blanchardscoffee.com/products/midnightoil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12oz / Whole Bean",
+    "variant_id": "20649536094311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.6,
+    "title": "5lb / Whole Bean",
+    "variant_id": "20653207126119"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114400108647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12oz / Ground",
+    "variant_id": "44021942616262"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021942649030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.6,
+    "title": "5lb / Ground",
+    "variant_id": "44021942681798"
+   }
+  ],
+  "vendor": "Blanchard's Coffee"
+ },
+ {
+  "body_hash": "e5e1993a967e22a4",
+  "first_seen": "2026-10-26",
+  "handle": "blackdog",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_BlackDog.png?v=1779295637",
+  "platform": "shopify",
+  "product_id": "409803080",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Black Dog",
+  "url": "https://blanchardscoffee.com/products/blackdog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "1119804568"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.9,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114369011815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Ground",
+    "variant_id": "44021911650502"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 48.9,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021911683270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Ground",
+    "variant_id": "44021911716038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832608448541"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "332c68c53176151a",
+  "first_seen": "2026-10-26",
+  "handle": "blanchardsblend",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Blanchards.png?v=1779295649",
+  "platform": "shopify",
+  "product_id": "409805640",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Blanchard’s Blend",
+  "url": "https://blanchardscoffee.com/products/blanchardsblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "2212213620765"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114371076199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Ground",
+    "variant_id": "44021913813190"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021913845958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5 lb / Ground",
+    "variant_id": "44021913878726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832604647453"
+   }
+  ],
+  "vendor": "Blanchard's Coffee"
+ },
+ {
+  "body_hash": "b9faecec308eb58b",
+  "first_seen": "2026-10-26",
+  "handle": "darkasdark",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_DAD-whole.png?v=1779295665",
+  "platform": "shopify",
+  "product_id": "409805680",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Dark As Dark",
+  "url": "https://blanchardscoffee.com/products/darkasdark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "1119819872"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114372255847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Ground",
+    "variant_id": "44021927936198"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021927968966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Ground",
+    "variant_id": "44021928001734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832598880285"
+   }
+  ],
+  "vendor": "Top Selling Blend"
+ },
+ {
+  "body_hash": "a781cd0a6a179a61",
+  "first_seen": "2026-10-26",
+  "handle": "richmond",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Richmond.png?v=1779295885",
+  "platform": "shopify",
+  "product_id": "6047132025030",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Richmond",
+  "url": "https://blanchardscoffee.com/products/richmond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "37416865988806"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.1,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "37416866054342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "37416866152646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Ground",
+    "variant_id": "44021944811718"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.1,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021944844486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Ground",
+    "variant_id": "44021944877254"
+   }
+  ],
+  "vendor": "Our Latest Blend"
+ },
+ {
+  "body_hash": "3769d6adeacc43fe",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Decaf.png?v=1779295711",
+  "platform": "shopify",
+  "product_id": "6366480452",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Decaf",
+  "url": "https://blanchardscoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "22078779588"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114393456743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Ground",
+    "variant_id": "44021936554182"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 47.25,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021936586950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.4,
+    "title": "5 lb / Ground",
+    "variant_id": "44021936619718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.4,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832613888029"
+   }
+  ],
+  "vendor": "Our Latest Blend"
+ },
+ {
+  "body_hash": "1be4715ccfe20933",
+  "first_seen": "2026-10-26",
+  "handle": "rosedale",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_RosedaleEspresso.png?v=1784568544",
+  "platform": "shopify",
+  "product_id": "6369569860",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Rosedale Espresso",
+  "url": "https://blanchardscoffee.com/products/rosedale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "22115147012"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.05,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114414166119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Ground",
+    "variant_id": "44021949300934"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.05,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021949333702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb / Ground",
+    "variant_id": "44021949366470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832635252765"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "079f80ec6bfc15aa",
+  "first_seen": "2026-10-26",
+  "handle": "chelbesa-danche",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_ChelbesaDanche.png?v=1785419218",
+  "platform": "shopify",
+  "product_id": "7910342230214",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "faire",
+   "new",
+   "visible"
+  ],
+  "title": "Chelbesa Danche",
+  "url": "https://blanchardscoffee.com/products/chelbesa-danche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.33,
+    "title": "12 oz",
+    "variant_id": "43023153889478"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 62.75,
+    "title": "2.5 lb",
+    "variant_id": "43023153922246"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.5,
+    "title": "5 lb",
+    "variant_id": "43023153955014"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "295ea62799e50766",
+  "first_seen": "2026-10-26",
+  "handle": "hario-skerton-pro-ceramic-coffee-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/hario-skerton-pro-grinder.jpg?v=1779296062",
+  "platform": "shopify",
+  "product_id": "8303666987206",
+  "product_type": "Wares",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Hario Skerton Pro Ceramic Coffee Mill",
+  "url": "https://blanchardscoffee.com/products/hario-skerton-pro-ceramic-coffee-mill",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Default Title",
+    "variant_id": "44045738672326"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "3d15cad637309be9",
+  "first_seen": "2026-10-26",
+  "handle": "handshake",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Handshake.png?v=1779295691",
+  "platform": "shopify",
+  "product_id": "850379012",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Handshake",
+  "url": "https://blanchardscoffee.com/products/handshake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.1,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114388836455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "3238824580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.33,
+    "title": "12 oz / Ground",
+    "variant_id": "44021940650182"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 51.1,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021940682950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Ground",
+    "variant_id": "44021940715718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.7,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832619982877"
+   }
+  ],
+  "vendor": "Staff Favorite Blend"
+ },
+ {
+  "body_hash": "7caf4147e7c0c5d9",
+  "first_seen": "2026-10-26",
+  "handle": "duromina-3",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Duromina3.png?v=1783902490",
+  "platform": "shopify",
+  "product_id": "8958971281606",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "new",
+   "single-origin",
+   "visible"
+  ],
+  "title": "Duromina #3",
+  "url": "https://blanchardscoffee.com/products/duromina-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.58,
+    "title": "12 oz",
+    "variant_id": "46058728521926"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 60.25,
+    "title": "2.5 lb",
+    "variant_id": "46058728554694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.5,
+    "title": "5 lb",
+    "variant_id": "46058728587462"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "580a437a8d4d90d1",
+  "first_seen": "2026-10-26",
+  "handle": "kaiunumui-pb",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_KainamuiPB.png?v=1786036586",
+  "platform": "shopify",
+  "product_id": "8999224737990",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "faire",
+   "new",
+   "visible"
+  ],
+  "title": "Kainamui PB",
+  "url": "https://blanchardscoffee.com/products/kaiunumui-pb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz",
+    "variant_id": "46860245893318"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "2.5 lb",
+    "variant_id": "46860245926086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "5 lb",
+    "variant_id": "46860245958854"
+   }
+  ],
+  "vendor": "Kenya"
+ },
+ {
+  "body_hash": "0ab1377d7ed080b7",
+  "first_seen": "2026-10-26",
+  "handle": "hamasho",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_Hamasho2026.png?v=1787231642",
+  "platform": "shopify",
+  "product_id": "9031115473094",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Taste Supply",
+   "new",
+   "visible"
+  ],
+  "title": "Hamasho",
+  "url": "https://blanchardscoffee.com/products/hamasho",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.63,
+    "title": "12 oz",
+    "variant_id": "46957539360966"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 63.75,
+    "title": "2.5 lb",
+    "variant_id": "46957539393734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5 lb",
+    "variant_id": "46957539426502"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "28450c9f5dbe5c0c",
+  "first_seen": "2026-10-26",
+  "handle": "mullugeta-muntasha",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_MullugetaMuntasha.png?v=1788370466",
+  "platform": "shopify",
+  "product_id": "9044565295302",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Taste Supply",
+   "new",
+   "visible"
+  ],
+  "title": "Mullugeta Muntasha",
+  "url": "https://blanchardscoffee.com/products/mullugeta-muntasha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.08,
+    "title": "12 oz",
+    "variant_id": "47134454284486"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.25,
+    "title": "2.5 lb",
+    "variant_id": "47134454317254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.5,
+    "title": "5 lb",
+    "variant_id": "47134454350022"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "82973b224d116c08",
+  "first_seen": "2026-10-26",
+  "handle": "hambatu-fikadu",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_HabtamuFekaduAga.png?v=1790013066",
+  "platform": "shopify",
+  "product_id": "9078081716422",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Taste Supply",
+   "new",
+   "visible"
+  ],
+  "title": "Habtamu Fekadu Aga",
+  "url": "https://blanchardscoffee.com/products/hambatu-fikadu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.78,
+    "title": "12 oz",
+    "variant_id": "47571484147910"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 64.25,
+    "title": "2.5 lb",
+    "variant_id": "47571484180678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.5,
+    "title": "5 lb",
+    "variant_id": "47571484213446"
+   }
+  ],
+  "vendor": "Ethiopia"
+ },
+ {
+  "body_hash": "a6446957db078fa0",
+  "first_seen": "2026-10-26",
+  "handle": "catalan-de-las-mercedes-red-bourbon-1",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_CatalanDeLasMercedes_RedBourbon.png?v=1790013649",
+  "platform": "shopify",
+  "product_id": "9078088007878",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "new",
+   "visible"
+  ],
+  "title": "Catalan De Las Mercedes Red Bourbon",
+  "url": "https://blanchardscoffee.com/products/catalan-de-las-mercedes-red-bourbon-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.86,
+    "title": "12 oz",
+    "variant_id": "47571514949830"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 57.85,
+    "title": "2.5 lb",
+    "variant_id": "47571514982598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.7,
+    "title": "5 lb",
+    "variant_id": "47571515015366"
+   }
+  ],
+  "vendor": "Guatemala"
+ },
+ {
+  "body_hash": "6f1739de75139585",
+  "first_seen": "2026-10-26",
+  "handle": "angel-rosas-hernandez",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_Product_AngelRosasHernandez.png?v=1791816693",
+  "platform": "shopify",
+  "product_id": "9102340325574",
+  "product_type": "Single Origin",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Taste Supply",
+   "new",
+   "visible"
+  ],
+  "title": "Angel Rosas Hernandez",
+  "url": "https://blanchardscoffee.com/products/angel-rosas-hernandez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.88,
+    "title": "12 oz",
+    "variant_id": "48256718012614"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.25,
+    "title": "2.5 lb",
+    "variant_id": "48256718045382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.5,
+    "title": "5 lb",
+    "variant_id": "48256718078150"
+   }
+  ],
+  "vendor": "Mexico"
+ },
+ {
+  "body_hash": "aa082e9a68b057ba",
+  "first_seen": "2026-10-26",
+  "handle": "basecamp",
+  "image": "https://cdn.shopify.com/s/files/1/0750/8531/files/Blanchards_12oz_2025_Basecamp.png?v=1779295742",
+  "platform": "shopify",
+  "product_id": "9216876040",
+  "product_type": "Blend",
+  "roaster_slug": "blanchardscoffee",
+  "tags": [
+   "Shipping Only",
+   "Taste Supply",
+   "faire",
+   "visible"
+  ],
+  "title": "Basecamp",
+  "url": "https://blanchardscoffee.com/products/basecamp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 46.75,
+    "title": "2.5 lb / Whole Bean",
+    "variant_id": "30114346303591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "33994169928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.23,
+    "title": "12 oz / Ground",
+    "variant_id": "44021906243782"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 46.75,
+    "title": "2.5 lb / Ground",
+    "variant_id": "44021906276550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.55,
+    "title": "5 lb / Ground",
+    "variant_id": "44021906309318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.55,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "5832630173725"
+   }
+  ],
+  "vendor": "Certified Organic Blend"
+ }
+]

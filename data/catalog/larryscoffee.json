@@ -1,0 +1,4283 @@
+[
+ {
+  "body_hash": "95087850b1ec63fd",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_dr_mojo_blend_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170070212844",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "Dr Mojo",
+  "url": "https://larryscoffee.com/products/coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424504869100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424504967404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424505032940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424505098476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424505196780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424505295084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424505327852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424505426156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424505491692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424505557228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424505655532"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424505753836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424506245356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424506343660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424506409196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424506474732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424506573036"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424506671340"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925427310828"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925427343596"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925427376364"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925427409132"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925427441900"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925427474668"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "2e9d654244ba6239",
+  "first_seen": "2026-10-26",
+  "handle": "dark-matter-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_dark_matter_sumatra_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170070245612",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "blend",
+   "dark roast",
+   "espresso",
+   "limited batch"
+  ],
+  "title": "Dark Matter Sumatra Blend",
+  "url": "https://larryscoffee.com/products/dark-matter-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424506704108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424506802412"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424506867948"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424506933484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424507031788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424507130092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424507162860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424507261164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424507326700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424507392236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424507490540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424507588844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424508080364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424508178668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424508244204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424508309740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424508408044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424508506348"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "42ffe952d2ec9bcf",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-single-origin-light-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_sumatra_permata_gayo_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170070343916",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Sumatra",
+  "url": "https://larryscoffee.com/products/sumatra-single-origin-light-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424508670188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424508768492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424508834028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424508899564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424508997868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424509096172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424509128940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424509227244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424509292780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424509358316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424509456620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424509554924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424510046444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424510144748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424510210284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424510275820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424510374124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424510472428"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925507330284"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925507363052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925507395820"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925507428588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925507461356"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925507494124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 70.26,
+    "title": "Case of Six 12oz / Whole Bean",
+    "variant_id": "67636439449836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.76,
+    "title": "Case of Six 12oz / Espresso (#3)",
+    "variant_id": "67636499251436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.76,
+    "title": "Case of Six 12oz / Drip - Cone Filter (#5)",
+    "variant_id": "67636499284204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.76,
+    "title": "Case of Six 12oz / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "67636499316972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.76,
+    "title": "Case of Six 12oz / French Press (#10)",
+    "variant_id": "67636499349740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.76,
+    "title": "Case of Six 12oz / Percolator (#13)",
+    "variant_id": "67636499382508"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "ca82c53ccb6360a4",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-single-origin-light-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_bolivia_pro_agro_12oz_2026.jpg?v=1792502002",
+  "platform": "shopify",
+  "product_id": "8170070376684",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "gift collection",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Bolivia",
+  "url": "https://larryscoffee.com/products/bolivia-single-origin-light-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424510505196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424510603500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424510669036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424510734572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424510832876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424510931180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424510963948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424511062252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424511127788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424511193324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424511291628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424511389932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424512340204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424512438508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424512504044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424512569580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424512667884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424512766188"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925505298668"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925505331436"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925505364204"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925505396972"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925505429740"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925505462508"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "60808fd1f10d0700",
+  "first_seen": "2026-10-26",
+  "handle": "larrys-house-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_larrys_house_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170070409452",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "Larry's House Blend",
+  "url": "https://larryscoffee.com/products/larrys-house-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424512798956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424512897260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424512962796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424513028332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424513126636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424513224940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424513257708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424513356012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424513421548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424513487084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424513585388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424513683692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424514633964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424514732268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424514797804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424514863340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424514961644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424515059948"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923448221932"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923448254700"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923448287468"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923448320236"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923448353004"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46923448385772"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "1a0bdf692f45a11d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_decaf_espresso_9_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170070540524",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "blend",
+   "dark roast",
+   "decaf",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Decaf Espresso #9",
+  "url": "https://larryscoffee.com/products/decaf-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424516534508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso Ground (#3)",
+    "variant_id": "44424516632812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424516698348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424516763884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424516862188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424516960492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424516993260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso Ground (#3)",
+    "variant_id": "44424517091564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424517157100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424517222636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424517320940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424517419244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424517910764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso Ground (#3)",
+    "variant_id": "44424518009068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424518074604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424518140140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424518238444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424518336748"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "45858815017196"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "45858815213804"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "45858815246572"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "45858815279340"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "45858815312108"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso Ground (#3)",
+    "variant_id": "45858815508716"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925515522284"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "f6ce59824ebeaa78",
+  "first_seen": "2026-10-26",
+  "handle": "frenchy-french-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_frenchy_french_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170070606060",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "bestseller",
+   "dark roast",
+   "subscription"
+  ],
+  "title": "Frenchy French Roast",
+  "url": "https://larryscoffee.com/products/frenchy-french-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424518467820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424518566124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424518631660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424518697196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424518795500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424518893804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424518926572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424519024876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424519090412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424519155948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424519254252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424519352556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424520302828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424520401132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424520466668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424520532204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424520630508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424520728812"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923447271660"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923447304428"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923447337196"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923447369964"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923447402732"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46923447435500"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "8be3afd5c027876a",
+  "first_seen": "2026-10-26",
+  "handle": "mightier-mocha-java-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_mightier_mocha_java_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170070769900",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Mightier Mocha Java",
+  "url": "https://larryscoffee.com/products/mightier-mocha-java-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424522727660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424522825964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424522891500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424522957036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424523055340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.1,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424523153644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424523186412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424523284716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424523350252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424523415788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424523514092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424523612396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424524562668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424524660972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424524726508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424524792044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424524890348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.4,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424524988652"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923446780140"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923446812908"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923446845676"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923446878444"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923446911212"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46923446943980"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "f9afe43d07164930",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-twilight-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_decaf_twilight_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170070835436",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "decaf",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "Decaf Twilight Blend",
+  "url": "https://larryscoffee.com/products/decaf-twilight-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424526397676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424526495980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424526561516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424526627052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424526725356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424526823660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424526856428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424526954732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424527020268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424527085804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424527184108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424527282412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424528232684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424528330988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424528396524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424528462060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424528560364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424528658668"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925511295212"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925511327980"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925511360748"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925511393516"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925511426284"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925511459052"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "f0a2e3b125b06924",
+  "first_seen": "2026-10-26",
+  "handle": "sammy-decaf-jr-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_sammy_decaf_jr_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170071097580",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "dark roast",
+   "decaf",
+   "subscription"
+  ],
+  "title": "Sammy Decaf Jr Blend",
+  "url": "https://larryscoffee.com/products/sammy-decaf-jr-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424528920812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424529019116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424529084652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424529150188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424529248492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424529346796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424529379564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424529477868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424529543404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424529608940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424529707244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424529805548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424530297068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424530395372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424530460908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424530526444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424530624748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424530723052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925514113260"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925514146028"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925514178796"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925514211564"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925514244332"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925514277100"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "34d56e6eadc6d6f2",
+  "first_seen": "2026-10-26",
+  "handle": "secret-espresso-17-organic-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_17_secret_espresso_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170071163116",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "dark roast",
+   "espresso"
+  ],
+  "title": "#17 Secret Espresso",
+  "url": "https://larryscoffee.com/products/secret-espresso-17-organic-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424530821356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso Ground (#3)",
+    "variant_id": "44424530919660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424530985196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424531050732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424531149036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424531247340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424531280108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso Ground (#3)",
+    "variant_id": "44424531378412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424531443948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424531509484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424531607788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424531706092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424532656364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso Ground (#3)",
+    "variant_id": "44424532754668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424532820204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424532885740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424532984044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424533082348"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923405132012"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923405164780"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923405197548"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923405230316"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923405263084"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "0401bb53f3c8be26",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-single-origin-organic-light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_ethiopia_sidama_fero_12oz_2026.jpg?v=1792502002",
+  "platform": "shopify",
+  "product_id": "8170071195884",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "light roast",
+   "single origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://larryscoffee.com/products/ethiopia-single-origin-organic-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424533115116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424533213420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424533278956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424533344492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424533442796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424533541100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424533573868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424533672172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424533737708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424533803244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424533901548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424533999852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424534950124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424535048428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424535113964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424535179500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424535277804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424535376108"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925502120172"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925502185708"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925502251244"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925502284012"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925502316780"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925502382316"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "e2e738075ba863f4",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_cowboy_blend_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170071490796",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "espresso",
+   "gift collection",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "Cowboy Blend",
+  "url": "https://larryscoffee.com/products/cowboy-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424548745452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424548843756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424548909292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424548974828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424549073132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424549171436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424549204204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424549302508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424549368044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424549433580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424549531884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424549630188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424550580460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424550678764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424550744300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424550809836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424550908140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424551006444"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923204002028"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923204034796"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923204100332"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923204493548"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923204559084"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46923204919532"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "9f291c3f98ce7432",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-dali-blend-organic-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_el_salvador_dali_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170071589100",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "El Salvador Dali Blend",
+  "url": "https://larryscoffee.com/products/el-salvador-dali-blend-organic-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424551039212"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424551137516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424551203052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424551268588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424551366892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424551465196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424551497964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424551596268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424551661804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424551727340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424551825644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424551923948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424552874220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424552972524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424553038060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424553103596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424553201900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424553300204"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925419839724"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925419872492"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925419905260"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925419938028"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925419970796"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925420003564"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "e9abbdc44e878aec",
+  "first_seen": "2026-10-26",
+  "handle": "costa-little-ricky-light-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_costa_lil_ricky_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170072670444",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "light roast",
+   "subscription"
+  ],
+  "title": "Costa Little Ricky Blend",
+  "url": "https://larryscoffee.com/products/costa-little-ricky-light-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424557461740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424557560044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424557625580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424557691116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424557789420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.6,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424557887724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424557920492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424558018796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424558084332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424558149868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424558248172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424558346476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424558837996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424558936300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424559001836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424559067372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424559165676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.8,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424559263980"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925449232620"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925449265388"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925449298156"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925449330924"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925449363692"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925449396460"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "715350636d191098",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_half_caf_blend_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170072735980",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "blend",
+   "decaf",
+   "light roast",
+   "subscription"
+  ],
+  "title": "Half Caf Blend",
+  "url": "https://larryscoffee.com/products/half-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424559329516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424559427820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424559493356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424559558892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424559657196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424559755500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424559788268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424559886572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424559952108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424560017644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424560115948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424560214252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424560705772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424560804076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424560869612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424560935148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424561033452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424561131756"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "c5de2277a2caaa07",
+  "first_seen": "2026-10-26",
+  "handle": "bean-martin-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_bean_martin_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170072834284",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "blend",
+   "dark roast",
+   "espresso",
+   "gift collection",
+   "subscription"
+  ],
+  "title": "Bean Martin",
+  "url": "https://larryscoffee.com/products/bean-martin-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424561230060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424561328364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424561393900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424561459436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424561557740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424561656044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424561688812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424561787116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424561852652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424561918188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424562016492"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424562114796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424563065068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424563163372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424563228908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424563294444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424563392748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424563491052"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46923447730412"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46923447763180"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46923447795948"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46923447828716"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46923447861484"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46923447894252"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "eea3b763a8f55a3f",
+  "first_seen": "2026-10-26",
+  "handle": "bad-kitty-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_bad_kitty_blend_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170074407148",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "bestseller",
+   "dark roast",
+   "for a cause",
+   "subscription"
+  ],
+  "title": "Bad Kitty",
+  "url": "https://larryscoffee.com/products/bad-kitty-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424576860396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424576958700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424577024236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424577089772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424577188076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424577286380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424577777900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424577876204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424577941740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424578007276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424578105580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424578203884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424578236652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424578334956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424578400492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424578466028"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424578564332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424578662636"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "47057628004588"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "47057628037356"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "47057628070124"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "47057628102892"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "47057628135660"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "47057628168428"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "196ca59a4e1c755b",
+  "first_seen": "2026-10-26",
+  "handle": "smoky-mountain-blend-organic-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_smoky_mountain_blend_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170075160812",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "blend",
+   "dark roast",
+   "for a cause",
+   "medium roast"
+  ],
+  "title": "Smoky Mountain Blend",
+  "url": "https://larryscoffee.com/products/smoky-mountain-blend-organic-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424580366572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424580464876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424580530412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424580595948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424580694252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424580792556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424581284076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424581382380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424581447916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424581513452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424581611756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424581710060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424581742828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424581841132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424581906668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424581972204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424582070508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424582168812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.23,
+    "title": "Case of Six 12oz / Whole Bean",
+    "variant_id": "67636439417068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.73,
+    "title": "Case of Six 12oz / Espresso (#3)",
+    "variant_id": "67636499087596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.73,
+    "title": "Case of Six 12oz / Drip - Cone Filter (#5)",
+    "variant_id": "67636499120364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.73,
+    "title": "Case of Six 12oz / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "67636499153132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.73,
+    "title": "Case of Six 12oz / French Press (#10)",
+    "variant_id": "67636499185900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.73,
+    "title": "Case of Six 12oz / Percolator (#13)",
+    "variant_id": "67636499218668"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "2202ac99193095b2",
+  "first_seen": "2026-10-26",
+  "handle": "magic-city-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_magic_city_decaf_12oz_2026.jpg?v=1792502001",
+  "platform": "shopify",
+  "product_id": "8170076963052",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "decaf",
+   "gift collection",
+   "light roast",
+   "subscription"
+  ],
+  "title": "Magic City Decaf",
+  "url": "https://larryscoffee.com/products/magic-city-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424590491884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424590590188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424590655724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424590721260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424590819564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424590917868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "44424591409388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "44424591507692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424591573228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424591638764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "44424591737068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "44424591835372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "44424591868140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "44424591966444"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424592031980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424592097516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "44424592195820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "44424592294124"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Whole Bean",
+    "variant_id": "46925844873452"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46925844906220"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Drip - Cone Filter (#5)",
+    "variant_id": "46925844938988"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / French Press (#10)",
+    "variant_id": "46925844971756"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Percolator (#13)",
+    "variant_id": "46925845004524"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.95,
+    "title": "4 oz Sample / Espresso (#3)",
+    "variant_id": "46925845037292"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "8440168ae47edcc6",
+  "first_seen": "2026-10-26",
+  "handle": "blue-ridge-mountain-organic-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_blue_ridge_mountain_blend_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8170077913324",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "KEEPIT",
+   "blend",
+   "for a cause",
+   "medium roast",
+   "subscription"
+  ],
+  "title": "The Blue Ridge Mountain Blend",
+  "url": "https://larryscoffee.com/products/blue-ridge-mountain-organic-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424600387820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424600486124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424600551660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424600617196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424600715500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424600813804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "47471404417260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "47471404450028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "47471404482796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "47471404515564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "47471404548332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "47471404581100"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "cb4310d40c15376c",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-111",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/Dehabs-Diamond.jpg?v=1734034363",
+  "platform": "shopify",
+  "product_id": "8170082402540",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "limited batch"
+  ],
+  "title": "42 Series- Ethiopia Dehab’s Diamond",
+  "url": "https://larryscoffee.com/products/coffee-111",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424628928748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424629027052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424629092588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424629158124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424629256428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424629354732"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "403bf47a5d55aa5e",
+  "first_seen": "2026-10-26",
+  "handle": "appalachian-journey-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/2026_PDP_Imagery_1.jpg?v=1790178233",
+  "platform": "shopify",
+  "product_id": "8170083811564",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "blend",
+   "dark roast",
+   "for a cause",
+   "subscription"
+  ],
+  "title": "Appalachian Journey",
+  "url": "https://larryscoffee.com/products/appalachian-journey-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "44424637972716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "44424638071020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "44424638136556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "44424638202092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "44424638300396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "44424638398700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "45308118204652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "45308118302956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "45308118368492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "45308118434028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "45308118532332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "45308118630636"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "13c4a0ca8f30527f",
+  "first_seen": "2026-10-26",
+  "handle": "swimming-w-sharks-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_swimming_with_sharks_blend_12oz_2026.jpg?v=1792502002",
+  "platform": "shopify",
+  "product_id": "8456341946604",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "blend",
+   "espresso",
+   "for a cause",
+   "medium roast"
+  ],
+  "title": "Swimming w/ Sharks Blend",
+  "url": "https://larryscoffee.com/products/swimming-w-sharks-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "45124621598956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "45124621697260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "45124621762796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "45124621828332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "45124621926636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "45124622024940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "45124622057708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "45124622156012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "45124622221548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "45124622287084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "45124622385388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "45124622483692"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ },
+ {
+  "body_hash": "a7023e1a55780297",
+  "first_seen": "2026-10-26",
+  "handle": "woodstock-blend-organic-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0684/1407/9212/files/pdp_main_image_woodstock_blend_12oz_2026.jpg?v=1792502000",
+  "platform": "shopify",
+  "product_id": "8989952901356",
+  "product_type": "Coffee",
+  "roaster_slug": "larryscoffee",
+  "tags": [
+   "blend",
+   "limited batch",
+   "medium roast",
+   "reviews:woodstock"
+  ],
+  "title": "Woodstock Blend",
+  "url": "https://larryscoffee.com/products/woodstock-blend-organic-medium-roast-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "46746076774636"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Espresso (#3)",
+    "variant_id": "46746076872940"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "46746076938476"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46746077004012"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / French Press (#10)",
+    "variant_id": "46746077102316"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 55.2,
+    "title": "2lb Bag / Percolator (#13)",
+    "variant_id": "46746077200620"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Whole Bean",
+    "variant_id": "46746078150892"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Espresso (#3)",
+    "variant_id": "46746078249196"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Cone Filter (#5)",
+    "variant_id": "46746078314732"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46746078380268"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / French Press (#10)",
+    "variant_id": "46746078478572"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz Bag / Percolator (#13)",
+    "variant_id": "46746078576876"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Whole Bean",
+    "variant_id": "46746078609644"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Espresso (#3)",
+    "variant_id": "46746078707948"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Cone Filter (#5)",
+    "variant_id": "46746078773484"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Drip - Flat Bottom Filter (#7)",
+    "variant_id": "46746078839020"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / French Press (#10)",
+    "variant_id": "46746078937324"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 130.3,
+    "title": "5 lb Bag / Percolator (#13)",
+    "variant_id": "46746079035628"
+   }
+  ],
+  "vendor": "Larry's Coffee"
+ }
+]

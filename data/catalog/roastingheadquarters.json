@@ -1,0 +1,123 @@
+[
+ {
+  "body_hash": "4db073d86919a8d3",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-coffee-evaluation-and-scoring",
+  "image": "https://roastingheadquarters.com/wp-content/uploads/2025/04/IMG_6744-e1744923988720.jpg",
+  "platform": "woocommerce",
+  "product_id": "2013",
+  "product_type": "simple",
+  "roaster_slug": "roastingheadquarters",
+  "tags": [
+   "Evaluation"
+  ],
+  "title": "Roasted Coffee Evaluation and Scoring",
+  "url": "https://roastingheadquarters.com/product/roasted-coffee-evaluation-and-scoring/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "Roasted Coffee Evaluation and Scoring",
+    "variant_id": "2013:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "824b635911e7ba6e",
+  "first_seen": "2026-10-26",
+  "handle": "wieser-pleaser-12oz-340g",
+  "image": "https://roastingheadquarters.com/wp-content/uploads/2025/11/RHQ_WieserPleaser_ISO.png",
+  "platform": "woocommerce",
+  "product_id": "2506",
+  "product_type": "simple",
+  "roaster_slug": "roastingheadquarters",
+  "tags": [
+   "Retail"
+  ],
+  "title": "Wieser Pleaser | Signature Espresso",
+  "url": "https://roastingheadquarters.com/product/wieser-pleaser-12oz-340g/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.78,
+    "title": "Wieser Pleaser | Signature Espresso",
+    "variant_id": "2506:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04574f861ed0658b",
+  "first_seen": "2026-10-26",
+  "handle": "rhq-colombia-geisha",
+  "image": "https://roastingheadquarters.com/wp-content/uploads/2026/08/Screenshot-2026-08-15-at-10.37.35-PM.png",
+  "platform": "woocommerce",
+  "product_id": "2832",
+  "product_type": "simple",
+  "roaster_slug": "roastingheadquarters",
+  "tags": [
+   "Retail"
+  ],
+  "title": "RHQ Limited Release | Colombia Geisha",
+  "url": "https://roastingheadquarters.com/product/rhq-colombia-geisha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.28,
+    "title": "RHQ Limited Release | Colombia Geisha",
+    "variant_id": "2832:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f6822e0c1d71587",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-development",
+  "image": "https://roastingheadquarters.com/wp-content/uploads/2025/01/espresso.png",
+  "platform": "woocommerce",
+  "product_id": "635",
+  "product_type": "simple",
+  "roaster_slug": "roastingheadquarters",
+  "tags": [],
+  "title": "Espresso Blend Development",
+  "url": "https://roastingheadquarters.com/product/espresso-blend-development/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2000.0,
+    "title": "Espresso Blend Development",
+    "variant_id": "635:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c086a370504d86d",
+  "first_seen": "2026-10-26",
+  "handle": "drip-blend-development",
+  "image": "https://roastingheadquarters.com/wp-content/uploads/2025/01/drip.png",
+  "platform": "woocommerce",
+  "product_id": "638",
+  "product_type": "simple",
+  "roaster_slug": "roastingheadquarters",
+  "tags": [],
+  "title": "Drip Blend Development",
+  "url": "https://roastingheadquarters.com/product/drip-blend-development/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 500.0,
+    "title": "Drip Blend Development",
+    "variant_id": "638:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

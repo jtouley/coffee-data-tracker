@@ -1,0 +1,439 @@
+[
+ {
+  "body_hash": "0c9d58a251a8cfc0",
+  "first_seen": "2026-10-26",
+  "handle": "harp-and-bowl-blend-6-lb-bulk",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2442881f4359",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Harp and Bowl Blend 6 lb Bulk",
+  "url": "https://www.deebescoffee.com/product-page/harp-and-bowl-blend-6-lb-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 78.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d614b41bc0b14ca",
+  "first_seen": "2026-10-26",
+  "handle": "deebe-s-house-blend-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "44e46fb12af1",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Deebe's House Blend",
+  "url": "https://www.deebescoffee.com/product-page/deebe-s-house-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bdd1bbe9eecb85a7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "48270abb1951",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Colombia Viejo Caldas Sugarcane Decaf",
+  "url": "https://www.deebescoffee.com/product-page/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f12dd7f9cf11ff1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medellin-excelso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "52c8f03a6902",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Colombia Huila Excelso",
+  "url": "https://www.deebescoffee.com/product-page/colombia-medellin-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d63d83d33eadad59",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "52d570a566bd",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.deebescoffee.com/product-page/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "81d26c51e2704ade",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-jazblu-peaberry",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5340d04aff2d",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://www.deebescoffee.com/product-page/brazil-jazblu-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c4d7092c60b1ea3",
+  "first_seen": "2026-10-26",
+  "handle": "harp-and-bowl-blend-3-lb-retail",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5939ec56dc0a",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Harp and Bowl Blend 3 lb Retail",
+  "url": "https://www.deebescoffee.com/product-page/harp-and-bowl-blend-3-lb-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "47d2795211d10ed0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5c52f9fe2ba2",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.deebescoffee.com/product-page/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7cd28f3ed37d23d8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8cc9a8be1415",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Brazil Salmo",
+  "url": "https://www.deebescoffee.com/product-page/brazil-salmo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b71b717f8b7744b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-3-lb-retail",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9f292a6a4460",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Decaf 3 lb Retail",
+  "url": "https://www.deebescoffee.com/product-page/decaf-3-lb-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 41.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7402f48c88605b0a",
+  "first_seen": "2026-10-26",
+  "handle": "deebe-s-blond-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a58b62c8c4aa",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Deebe's Blond Blend",
+  "url": "https://www.deebescoffee.com/product-page/deebe-s-blond-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d96ab31be9d592b0",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bd5132f69055",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Sumatra Gayo Organic",
+  "url": "https://www.deebescoffee.com/product-page/indonesia-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8671108dafe9d454",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-6-lb-bulk",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d46d007b7375",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Espresso 6 lb Bulk",
+  "url": "https://www.deebescoffee.com/product-page/espresso-6-lb-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 78.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab40f3ba1a33f213",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-3-lb-retail",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e5f7d8100b1f",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Espresso 3 lb Retail",
+  "url": "https://www.deebescoffee.com/product-page/espresso-3-lb-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 41.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1af711fe3229be77",
+  "first_seen": "2026-10-26",
+  "handle": "deebe-s-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "eda8e74f7496",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Deebe's Espresso",
+  "url": "https://www.deebescoffee.com/product-page/deebe-s-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a944f738ee02e81a",
+  "first_seen": "2026-10-26",
+  "handle": "deebe-s-breakfast-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ef882aed1616",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Deebe's Breakfast Blend",
+  "url": "https://www.deebescoffee.com/product-page/deebe-s-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "250a37399bd1cd98",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f0a8a1b2dc7d",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Mexico Chiapas Organic",
+  "url": "https://www.deebescoffee.com/product-page/mexico-chiapas-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82c1bb0540981f42",
+  "first_seen": "2026-10-26",
+  "handle": "roast-of-the-month",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f9c0946978fd",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Roast of the Month",
+  "url": "https://www.deebescoffee.com/product-page/roast-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e322a516b7b35f7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-6-lb-bulk",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fb3c7a08bba8",
+  "product_type": "",
+  "roaster_slug": "deebescoffee",
+  "tags": [],
+  "title": "Decaf 6 lb Bulk",
+  "url": "https://www.deebescoffee.com/product-page/decaf-6-lb-bulk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 78.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

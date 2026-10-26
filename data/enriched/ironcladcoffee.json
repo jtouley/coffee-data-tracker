@@ -1,0 +1,228 @@
+{
+ "4717293895820": {
+  "body_hash": "56394bc47e269420",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet pipe tobacco",
+   "vanilla",
+   "aromatic"
+  ],
+  "varietals": []
+ },
+ "4717298909324": {
+  "body_hash": "a3a7248ceff38971",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate ganache",
+   "strawberry",
+   "mysterious"
+  ],
+  "varietals": []
+ },
+ "4717304610956": {
+  "body_hash": "6124ff3f343f0c6d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "baking spices",
+   "versatile"
+  ],
+  "varietals": []
+ },
+ "4717324927116": {
+  "body_hash": "2f54d084a4ac9062",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blueberry cobbler",
+   "full spectrum"
+  ],
+  "varietals": []
+ },
+ "5097948709004": {
+  "body_hash": "17fe0829d538b7b0",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "toasted almond",
+   "easy-drinking"
+  ],
+  "varietals": []
+ },
+ "5250780233868": {
+  "body_hash": "d289a4a68476579d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6557975806092": {
+  "body_hash": "31c442cf0eb2297b",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemon",
+   "cherry",
+   "balanced"
+  ],
+  "varietals": [
+   "Castillo",
+   "Typica"
+  ]
+ },
+ "7278942716044": {
+  "body_hash": "c70c28fde4e6c40f",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "jasmine",
+   "exquisite"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "7421690839180": {
+  "body_hash": "38cbcd3585f0cc52",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peach",
+   "vanilla",
+   "chocolate",
+   "balanced"
+  ],
+  "varietals": []
+ },
+ "7862534340748": {
+  "body_hash": "8671a807a074a5de",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "concord grape",
+   "peach brandy",
+   "boisterously sweet"
+  ],
+  "varietals": []
+ },
+ "8988844818572": {
+  "body_hash": "99af23ba0832339c",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "berry cobbler",
+   "baking spices",
+   "jammy",
+   "sweet"
+  ],
+  "varietals": []
+ },
+ "9069811925132": {
+  "body_hash": "5b9e9b099b640d91",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

@@ -1,0 +1,1601 @@
+[
+ {
+  "body_hash": "940050dec677dbb9",
+  "first_seen": "2026-10-26",
+  "handle": "dark-rocko-ethiopian-natural-process-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/dark-rocko-ethiopian-natural-process-darker-roast-iron-bean-coffee-company-78096.jpg?v=1764131295",
+  "platform": "shopify",
+  "product_id": "4192452313124",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Dark"
+  ],
+  "title": "DARK ROCKO - Ethiopian Natural Process - Darker Roast",
+  "url": "https://ironbeancoffee.com/products/dark-rocko-ethiopian-natural-process-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "30372289740836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "30372289773604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30372289806372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "30372289839140"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Co"
+ },
+ {
+  "body_hash": "909b0fe252e96f5d",
+  "first_seen": "2026-10-26",
+  "handle": "ragingtiger",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/files/raging-tiger-bourbon-barrell-aged-iron-bean-coffee-company-92291.png?v=1764131299",
+  "platform": "shopify",
+  "product_id": "4355300589686",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "Barrel Aged",
+   "Raging Tiger"
+  ],
+  "title": "Raging Tiger - Bourbon Barrell Aged",
+  "url": "https://ironbeancoffee.com/products/ragingtiger",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.99,
+    "title": "12oz",
+    "variant_id": "39457554104438"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "ab6390235ee9379f",
+  "first_seen": "2026-10-26",
+  "handle": "ride-or-die-k-kups",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/ride-or-die-kups-12pk-iron-bean-coffee-company-47559.jpg?v=1764131321",
+  "platform": "shopify",
+  "product_id": "4355903324278",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Kups"
+  ],
+  "title": "RIDE OR DIE KUPS 12pk",
+  "url": "https://ironbeancoffee.com/products/ride-or-die-k-kups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 15.0,
+    "title": "Single Box - 12ct",
+    "variant_id": "39827194839158"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 65.0,
+    "title": "6 Pack - 72ct",
+    "variant_id": "39827194871926"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "3b0f8feb8f789d90",
+  "first_seen": "2026-10-26",
+  "handle": "rage-kups",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/rage-kups-12pk-iron-bean-coffee-company-88198.jpg?v=1764131324",
+  "platform": "shopify",
+  "product_id": "4355950575734",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "RAGE KUPS 12pk",
+  "url": "https://ironbeancoffee.com/products/rage-kups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 15.0,
+    "title": "Single Box -12ct",
+    "variant_id": "39827190415478"
+   },
+   {
+    "available": true,
+    "grams": 272,
+    "price_usd": 65.0,
+    "title": "6 Pack - 72 Count",
+    "variant_id": "39827190448246"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "07e0f54679249db5",
+  "first_seen": "2026-10-26",
+  "handle": "unicorncoffee",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/files/unicorn-coffee-r-s-mores-af-iron-bean-coffee-company-62098_b69fd0e3-770a-4c32-b507-8532e993643e.png?v=1764131329",
+  "platform": "shopify",
+  "product_id": "4447979765878",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Unicorn Coffee ®",
+  "url": "https://ironbeancoffee.com/products/unicorncoffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "39740215197814"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 16.99,
+    "title": "Ground",
+    "variant_id": "39740215230582"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "9d11f492f554efe7",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/tanzanian-peaberry-limited-edition-iron-bean-coffee-company-12322.png?v=1764131328",
+  "platform": "shopify",
+  "product_id": "4550455754870",
+  "product_type": "coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "signature"
+  ],
+  "title": "Tanzanian Peaberry - Signature Medium",
+  "url": "https://ironbeancoffee.com/products/tanzanian-peaberry-limited-edition",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "31947842420854"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41820190572662"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "ea319e41f7648a32",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/monsooned-malabar-limited-edition-iron-bean-coffee-company-87628.png?v=1764131336",
+  "platform": "shopify",
+  "product_id": "4550459654262",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "signature"
+  ],
+  "title": "Monsoon Malabar - Signature Medium",
+  "url": "https://ironbeancoffee.com/products/monsooned-malabar-limited-edition",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "31947857723510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "31947857756278"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "10e174aefbf21a69",
+  "first_seen": "2026-10-26",
+  "handle": "moms-carrot-cake-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/mom-s-carrot-cake-limited-edition-iron-bean-coffee-company-27839.png?v=1764131340",
+  "platform": "shopify",
+  "product_id": "4585486975094",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Mom's Carrot Cake Limited Edition",
+  "url": "https://ironbeancoffee.com/products/moms-carrot-cake-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "32070700335222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Drip Grind",
+    "variant_id": "32070700367990"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "2d86ba7b12e41421",
+  "first_seen": "2026-10-26",
+  "handle": "intense-blueberry-12oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/intense-blueberry-12oz-20-00percent-off-auto-renew-iron-bean-coffee-company-44564.png?v=1764131727",
+  "platform": "shopify",
+  "product_id": "4585487073398",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored"
+  ],
+  "title": "Intense Blueberry - 12oz",
+  "url": "https://ironbeancoffee.com/products/intense-blueberry-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "32070700433526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "32070700466294"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "791ae1e79a7defb6",
+  "first_seen": "2026-10-26",
+  "handle": "mint-chocolate-chip-12oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/mint-chocolate-chip-12oz-iron-bean-coffee-company-91802.png?v=1764131356",
+  "platform": "shopify",
+  "product_id": "4585487237238",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored"
+  ],
+  "title": "Mint Chocolate Chip - 12oz",
+  "url": "https://ironbeancoffee.com/products/mint-chocolate-chip-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "32070700630134"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "32070700662902"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "ef346a6d55d07a88",
+  "first_seen": "2026-10-26",
+  "handle": "bloodbath-red-velvet-cake",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/bloodbath-red-velvet-cake-iron-bean-coffee-company-51222.jpg?v=1764131363",
+  "platform": "shopify",
+  "product_id": "4633783730294",
+  "product_type": "",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "Bloodbath - Red Velvet Cake",
+  "url": "https://ironbeancoffee.com/products/bloodbath-red-velvet-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "32206352351350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "32206352384118"
+   }
+  ],
+  "vendor": "IBCC"
+ },
+ {
+  "body_hash": "37797b99f3b0dae5",
+  "first_seen": "2026-10-26",
+  "handle": "serial-killer-vanilla-butter-cream",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/serial-killer-vanilla-butter-cream-iron-bean-coffee-company-63550.jpg?v=1764131365",
+  "platform": "shopify",
+  "product_id": "4633784516726",
+  "product_type": "",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "Serial Killer - Vanilla Butter Cream",
+  "url": "https://ironbeancoffee.com/products/serial-killer-vanilla-butter-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Drip Grind",
+    "variant_id": "32206354153590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "32206354186358"
+   }
+  ],
+  "vendor": "MURDER COFFEE CO"
+ },
+ {
+  "body_hash": "2b2340658855309b",
+  "first_seen": "2026-10-26",
+  "handle": "turning-blue-blueberry-cinnamon-crumble",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/turning-blue-blueberry-cinnamon-crumble-iron-bean-coffee-company-38762.jpg?v=1764131368",
+  "platform": "shopify",
+  "product_id": "4633802014838",
+  "product_type": "",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "Turning Blue - Blueberry Cinnamon Crumble",
+  "url": "https://ironbeancoffee.com/products/turning-blue-blueberry-cinnamon-crumble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 366,
+    "price_usd": 16.99,
+    "title": "Drip Grind",
+    "variant_id": "32206391148662"
+   },
+   {
+    "available": true,
+    "grams": 366,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "32206391181430"
+   }
+  ],
+  "vendor": "MURDER COFFEE CO"
+ },
+ {
+  "body_hash": "2fa41235e8e94f6e",
+  "first_seen": "2026-10-26",
+  "handle": "stay-awake-murderously-caffeinated",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/stay-awake-murderously-caffeinated-iron-bean-coffee-company-76799.jpg?v=1764131371",
+  "platform": "shopify",
+  "product_id": "4633809322102",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "STAY AWAKE - Murderously Caffeinated",
+  "url": "https://ironbeancoffee.com/products/stay-awake-murderously-caffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Drip Grind / 1 Bag",
+    "variant_id": "32206517305462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "32206517338230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 60.0,
+    "title": "Drip Grind / 5 bags",
+    "variant_id": "42146908799094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 5 bags",
+    "variant_id": "42146908831862"
+   }
+  ],
+  "vendor": "MURDER COFFEE CO"
+ },
+ {
+  "body_hash": "23722c386b5ae353",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-antigua-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/guatemalan-antigua-limited-edition-iron-bean-coffee-company-37374.png?v=1764131376",
+  "platform": "shopify",
+  "product_id": "6544632807542",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "signature"
+  ],
+  "title": "Guatemalan Antigua  - Signature Medium",
+  "url": "https://ironbeancoffee.com/products/guatemalan-antigua-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "39270434603126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "39844449747062"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "41fda0938e7011cf",
+  "first_seen": "2026-10-26",
+  "handle": "dylans-grogg-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/dylan-s-grogg-flavored-coffee-iron-bean-coffee-company-17011.png?v=1764131380",
+  "platform": "shopify",
+  "product_id": "6544849404022",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored",
+   "Grogg"
+  ],
+  "title": "Dylan's Grogg - Flavored Coffee",
+  "url": "https://ironbeancoffee.com/products/dylans-grogg-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39271111098486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39271111131254"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "91270e4ebbda803d",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-aa-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/kenyan-aa-micro-lot-dark-limited-edition-iron-bean-coffee-company-56439.png?v=1764131387",
+  "platform": "shopify",
+  "product_id": "6560632930422",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "signature"
+  ],
+  "title": "Kenyan AA - Signature Dark",
+  "url": "https://ironbeancoffee.com/products/kenyan-aa-limited-edition",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "39312200630390"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip Grind",
+    "variant_id": "42625882488950"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "ae46c2e84a9726b3",
+  "first_seen": "2026-10-26",
+  "handle": "vanillahazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/vanilla-hazelnut-12oz-iron-bean-coffee-company-15933.png?v=1764131333",
+  "platform": "shopify",
+  "product_id": "6609625186422",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Vanilla Hazelnut 12oz",
+  "url": "https://ironbeancoffee.com/products/vanillahazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39442604327030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39442604359798"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "9b5669a9530a6f42",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/salted-caramel-mocha-12oz-iron-bean-coffee-company-75881.png?v=1764131342",
+  "platform": "shopify",
+  "product_id": "6609633443958",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Salted Caramel Mocha - 12oz",
+  "url": "https://ironbeancoffee.com/products/salted-caramel-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39442614976630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind / 12 oz",
+    "variant_id": "39442615009398"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "1fd9b5a29b88193c",
+  "first_seen": "2026-10-26",
+  "handle": "butter-pecan-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/butter-pecan-12oz-iron-bean-coffee-company-78961.png?v=1764131349",
+  "platform": "shopify",
+  "product_id": "6609655922806",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored"
+  ],
+  "title": "Butter Pecan - 12oz",
+  "url": "https://ironbeancoffee.com/products/butter-pecan-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39442644598902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39442644631670"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "52e1c0bd5dfe25ea",
+  "first_seen": "2026-10-26",
+  "handle": "peanut-butter-chocolate-buckeye-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/peanut-butter-chocolate-buckeye-12oz-iron-bean-coffee-company-92789.png?v=1764131353",
+  "platform": "shopify",
+  "product_id": "6609663492214",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Peanut Butter Chocolate Buckeye - 12oz",
+  "url": "https://ironbeancoffee.com/products/peanut-butter-chocolate-buckeye-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 341,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39442650857590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39442650890358"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "38eacbce92030862",
+  "first_seen": "2026-10-26",
+  "handle": "bananas-foster-12oz-1",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/banana-s-foster-12oz-iron-bean-coffee-company-29001.png?v=1764131361",
+  "platform": "shopify",
+  "product_id": "6609666670710",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Banana's Foster - 12oz",
+  "url": "https://ironbeancoffee.com/products/bananas-foster-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39442663506038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39442663538806"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "42b720452b02127b",
+  "first_seen": "2026-10-26",
+  "handle": "my-little-friend-dark-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/my-little-friend-dark-colombian-iron-bean-coffee-company-71637.png?v=1764131396",
+  "platform": "shopify",
+  "product_id": "6716741124214",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Coffee",
+   "my little friend"
+  ],
+  "title": "My Little Friend - Dark Colombian",
+  "url": "https://ironbeancoffee.com/products/my-little-friend-dark-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39683239379062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "39683239411830"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "617b8ebd38686aa5",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/dr-knojoy-s-swiss-water-decaf-iron-bean-coffee-company-79861.jpg?v=1764131412",
+  "platform": "shopify",
+  "product_id": "6730972856438",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Coffee",
+   "my little friend"
+  ],
+  "title": "Dr. Knojoy's - Swiss Water Decaf",
+  "url": "https://ironbeancoffee.com/products/swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39709961715830"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "39709961748598"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 70.0,
+    "title": "Whole Bean / 60oz \"5 Bagger\"",
+    "variant_id": "42923816845430"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 70.0,
+    "title": "Ground / 60oz \"5 Bagger\"",
+    "variant_id": "42923816878198"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "cf62e7b68762baa9",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-roll-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/cinnamon-roll-coffee-iron-bean-coffee-company-70747.png?v=1764131529",
+  "platform": "shopify",
+  "product_id": "6759357874294",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Flavored"
+  ],
+  "title": "Cinnamon Roll Coffee",
+  "url": "https://ironbeancoffee.com/products/cinnamon-roll-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39778510307446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39778510340214"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "abf80f723382b82c",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-af-limited-edition",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/pumpkin-af-limited-edition-iron-bean-coffee-company-98141.jpg?v=1764131540",
+  "platform": "shopify",
+  "product_id": "6794546610294",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored"
+  ],
+  "title": "Pumpkin AF - Limited Edition",
+  "url": "https://ironbeancoffee.com/products/pumpkin-af-limited-edition",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "39875888414838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Drip Grind",
+    "variant_id": "39875888447606"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "bb711a97e96b9560",
+  "first_seen": "2026-10-26",
+  "handle": "fudge-brownie",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/fudge-brownie-20-00percent-off-auto-renew-iron-bean-coffee-company-32542.png?v=1764131682",
+  "platform": "shopify",
+  "product_id": "6830737719414",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Flavored",
+   "Grogg"
+  ],
+  "title": "Fudge Brownie",
+  "url": "https://ironbeancoffee.com/products/fudge-brownie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "39949511098486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Drip Grind",
+    "variant_id": "39949511131254"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "fcaddf98434b79a3",
+  "first_seen": "2026-10-26",
+  "handle": "mama-mia-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/files/fuggedaboutit-espresso-blend-iron-bean-coffee-company-56781.jpg?v=1764131547",
+  "platform": "shopify",
+  "product_id": "6863102967926",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "12oz",
+   "All",
+   "Amazon Product",
+   "Dark Roast"
+  ],
+  "title": "Fuggedaboutit - Espresso Blend",
+  "url": "https://ironbeancoffee.com/products/mama-mia-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "40061702733942"
+   },
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 16.99,
+    "title": "Ground",
+    "variant_id": "40061702766710"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "7e854c29b1863d2c",
+  "first_seen": "2026-10-26",
+  "handle": "cherry",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/files/so-cherry-iron-bean-coffee-company-90578.png?v=1764131710",
+  "platform": "shopify",
+  "product_id": "6883247423606",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "Flavored",
+   "Medium Roast"
+  ],
+  "title": "So Cherry",
+  "url": "https://ironbeancoffee.com/products/cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean",
+    "variant_id": "40107936350326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "40107936383094"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "4b811dd761e01fb7",
+  "first_seen": "2026-10-26",
+  "handle": "soulless-ginger-snap",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/files/soulless-ginger-snap-iron-bean-coffee-company-49939.jpg?v=1764131780",
+  "platform": "shopify",
+  "product_id": "7822964916342",
+  "product_type": "",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [],
+  "title": "Soulless - Ginger Snap",
+  "url": "https://ironbeancoffee.com/products/soulless-ginger-snap",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Drip Grind",
+    "variant_id": "42574618296438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean",
+    "variant_id": "42574618329206"
+   }
+  ],
+  "vendor": "MURDER COFFEE CO"
+ },
+ {
+  "body_hash": "70e5888a7253f6b6",
+  "first_seen": "2026-10-26",
+  "handle": "fierce-kups-2-0-ready-12ct",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/fierce-kups-12pk-iron-bean-coffee-company-63174.jpg?v=1764131277",
+  "platform": "shopify",
+  "product_id": "896325582884",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "All",
+   "Kups"
+  ],
+  "title": "Fierce Kups 12pk",
+  "url": "https://ironbeancoffee.com/products/fierce-kups-2-0-ready-12ct",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "SIngle Box - 12 ct",
+    "variant_id": "39827178946678"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 65.0,
+    "title": "6 Pack - 72 ct",
+    "variant_id": "39827178979446"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Co"
+ },
+ {
+  "body_hash": "67723f41d61ce19a",
+  "first_seen": "2026-10-26",
+  "handle": "specialty-ethiopian-yirgacheffe-rocko-mountain-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/rocko-ethiopian-natural-process-medium-roast-iron-bean-coffee-company-93770.jpg?v=1764131279",
+  "platform": "shopify",
+  "product_id": "896327483428",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Roast"
+  ],
+  "title": "ROCKO - Ethiopian Natural Process - Medium Roast",
+  "url": "https://ironbeancoffee.com/products/specialty-ethiopian-yirgacheffe-rocko-mountain-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9147753103396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9548572131364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9548594774052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9548600606756"
+   }
+  ],
+  "vendor": "IRON BEAN COFFEE"
+ },
+ {
+  "body_hash": "2d85f9e6a06767c0",
+  "first_seen": "2026-10-26",
+  "handle": "loki-ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/loki-ethiopian-yirgacheffe-light-roast-iron-bean-coffee-company-13658.jpg?v=1764131283",
+  "platform": "shopify",
+  "product_id": "898342977572",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Light Roast"
+  ],
+  "title": "LOKI - Ethiopian Yirgacheffe - Light Roast",
+  "url": "https://ironbeancoffee.com/products/loki-ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9154439512100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9154439544868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9154439577636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9154439610404"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "2a7215681dc0a782",
+  "first_seen": "2026-10-26",
+  "handle": "rage-against-the-dying-of-the-light",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/rage-against-the-dying-of-the-lighttm-med-roast-iron-bean-coffee-company-85129.jpg?v=1764131287",
+  "platform": "shopify",
+  "product_id": "898352185380",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Roast"
+  ],
+  "title": "Rage Against the Dying of the Light™ - Med Roast",
+  "url": "https://ironbeancoffee.com/products/rage-against-the-dying-of-the-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9154513829924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9154528477220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9154528509988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9154528542756"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "b42b6d4db57598a5",
+  "first_seen": "2026-10-26",
+  "handle": "cast-iron",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/cast-irontm-med-roast-iron-bean-coffee-company-82109.jpg?v=1764131294",
+  "platform": "shopify",
+  "product_id": "899854204964",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Roast"
+  ],
+  "title": "Cast Iron™ - Med Roast",
+  "url": "https://ironbeancoffee.com/products/cast-iron",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160517058596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160527085604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160527118372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160527151140"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Co"
+ },
+ {
+  "body_hash": "f0a059946d0fc128",
+  "first_seen": "2026-10-26",
+  "handle": "ride-die",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/ride-or-die-med-roast-iron-bean-coffee-company-66349.jpg?v=1764131298",
+  "platform": "shopify",
+  "product_id": "899873275940",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Roast"
+  ],
+  "title": "Ride or Die™ - Med Roast",
+  "url": "https://ironbeancoffee.com/products/ride-die",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160619327524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160625258532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160625291300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160625324068"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Co"
+ },
+ {
+  "body_hash": "418809a44c38c68c",
+  "first_seen": "2026-10-26",
+  "handle": "integrity™",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/integritytm-dark-roast-20-00percent-off-auto-renew-iron-bean-coffee-company-31275.jpg?v=1764131687",
+  "platform": "shopify",
+  "product_id": "899882844196",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Dark Roast"
+  ],
+  "title": "Integrity™ - Dark Roast",
+  "url": "https://ironbeancoffee.com/products/integrity™",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160662548516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160672542756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160672575524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160672608292"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "f7c64669588d41a0",
+  "first_seen": "2026-10-26",
+  "handle": "odin",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/odintm-dark-roast-iron-bean-coffee-company-93250.jpg?v=1779887441",
+  "platform": "shopify",
+  "product_id": "899894312996",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Dark Roast"
+  ],
+  "title": "ODIN™ - Dark Roast",
+  "url": "https://ironbeancoffee.com/products/odin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160704622628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160740044836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160740077604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160740110372"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "de1c0c70aaeb2087",
+  "first_seen": "2026-10-26",
+  "handle": "thor™",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/thortm-meddark-roast-iron-bean-coffee-company-41722.jpg?v=1764131311",
+  "platform": "shopify",
+  "product_id": "899914235940",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Medium Dark"
+  ],
+  "title": "THOR™ - Med/Dark Roast",
+  "url": "https://ironbeancoffee.com/products/thor™",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160828420132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160828452900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160828485668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160828518436"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Co"
+ },
+ {
+  "body_hash": "9e1da3c39ccab3f7",
+  "first_seen": "2026-10-26",
+  "handle": "drink-from-the-skull-of-your-enemy™",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/drink-from-the-skull-of-your-enemytm-dark-roast-iron-bean-coffee-company-27199.png?v=1764131316",
+  "platform": "shopify",
+  "product_id": "899917479972",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Dark Roast"
+  ],
+  "title": "Drink From the Skull of Your Enemy™ - Dark Roast",
+  "url": "https://ironbeancoffee.com/products/drink-from-the-skull-of-your-enemy™",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160857518116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160866594852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160866627620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160866660388"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "fcee0c9089ff3539",
+  "first_seen": "2026-10-26",
+  "handle": "fear-no-evil™",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/fear-no-eviltm-black-roast-iron-bean-coffee-company-94504.jpg?v=1764131322",
+  "platform": "shopify",
+  "product_id": "899920101412",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Extra Dark Roast"
+  ],
+  "title": "Fear No Evil™ - Black Roast",
+  "url": "https://ironbeancoffee.com/products/fear-no-evil™",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160874852388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160874885156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "9160874917924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "9160874950692"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ },
+ {
+  "body_hash": "48bd68051cd01148",
+  "first_seen": "2026-10-26",
+  "handle": "fierce™",
+  "image": "https://cdn.shopify.com/s/files/1/2507/7472/products/fiercetm-highly-caffeinated-dark-roast-iron-bean-coffee-company-97745.jpg?v=1764131280",
+  "platform": "shopify",
+  "product_id": "899930652708",
+  "product_type": "Coffee",
+  "roaster_slug": "ironbeancoffee",
+  "tags": [
+   "16oz",
+   "All",
+   "Amazon Product",
+   "Dark Roast"
+  ],
+  "title": "Fierce™ - Highly Caffeinated Dark Roast",
+  "url": "https://ironbeancoffee.com/products/fierce™",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32169543925878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "32169544581238"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "9160953004068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1lb / Ground",
+    "variant_id": "9160953036836"
+   }
+  ],
+  "vendor": "Iron Bean Coffee Company"
+ }
+]

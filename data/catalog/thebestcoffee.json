@@ -1,0 +1,3560 @@
+[
+ {
+  "body_hash": "f105600db373758b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-chuck-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Chuck-Roast_Decaf.jpg?v=1742444310",
+  "platform": "shopify",
+  "product_id": "10038089744699",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Decaf Chuck Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-chuck-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "50092907528507"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "50092907626811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "50092907725115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "50092907823419"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "50092907921723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579117883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579150651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579183419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579216187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579248955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579281723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579314491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579347259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579380027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579412795"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "38e4eec847a3fed6",
+  "first_seen": "2026-10-26",
+  "handle": "casablanca-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Casablanca-Blend.jpg?v=1742444317",
+  "platform": "shopify",
+  "product_id": "4410617266264",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Casablanca Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/casablanca-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.7,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "31885443858520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.7,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "31885443956824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.7,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "31885444055128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.7,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "31885444153432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.7,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "31885444251736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.15,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579478331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.33,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579511099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.15,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579543867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.33,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579576635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.15,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579609403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.33,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579642171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.15,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579674939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.33,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579707707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.15,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579740475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.33,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579773243"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "6532bbeec2733c63",
+  "first_seen": "2026-10-26",
+  "handle": "chuck-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Chuck-Roast.jpg?v=1742444431",
+  "platform": "shopify",
+  "product_id": "8367039939",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Chuck Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/chuck-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "27706919299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "27706919427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "27706919491"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "27706919555"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "27706919683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115590062395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115590095163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115590127931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115590160699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115590193467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115590226235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115590259003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115590291771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115590324539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115590357307"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "a3c837d12d8bc1b7",
+  "first_seen": "2026-10-26",
+  "handle": "asturias-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Asturias-Blend.jpg?v=1742444427",
+  "platform": "shopify",
+  "product_id": "8367145859",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Asturias Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/asturias-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "27707241091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "27707241219"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "27707241283"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "27707241347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.75,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "27707241411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.88,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589275963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589308731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.88,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589341499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589374267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.88,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589407035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589439803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.88,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589472571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589505339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.88,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589538107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.31,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589570875"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "97c497f3f61813c7",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-finca-dos-marias",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/FincaDosMarias.jpg?v=1687913977",
+  "platform": "shopify",
+  "product_id": "8470058565947",
+  "product_type": "",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Green Coffee - Finca Dos Marias, Guatemala SHB",
+  "url": "https://www.jonescoffeeroasters.com/products/green-coffee-finca-dos-marias",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "45536464077115"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "7bdffb0444950f4c",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Vienna-Roast.jpg?v=1742444422",
+  "platform": "shopify",
+  "product_id": "8726415875",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Vienna Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.15,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "40114794004568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.15,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "40114794102872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.15,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "40114794201176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.15,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "40114794299480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.15,
+    "title": "Very Fine/Expresso / 1 lb bag",
+    "variant_id": "40114794397784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.12,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588784443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.46,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588817211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.12,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588849979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.46,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588882747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.12,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588915515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.46,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588948283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.12,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588981051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.46,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589013819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.12,
+    "title": "Very Fine/Expresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115589046587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.46,
+    "title": "Very Fine/Expresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115589079355"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "4a486b289c6c3dec",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_French-Roast.jpg?v=1742444416",
+  "platform": "shopify",
+  "product_id": "8737114627",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29526295427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29527529475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29527529603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29527529667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29527529795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588456763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.6,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588489531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588522299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.6,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588555067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588587835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.6,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588620603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588653371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.6,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588686139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588718907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.6,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588751675"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "683a413fd58e84dd",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Italian-Roast.jpg?v=1742444410",
+  "platform": "shopify",
+  "product_id": "8737357699",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.1,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29527387139"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.1,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29527387203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.1,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29527387267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.1,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29527387331"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.1,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29527387459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.45,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587899707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587932475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.45,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587965243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587998011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.45,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588030779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588063547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.45,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588096315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588129083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.45,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115588161851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.98,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115588194619"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "a68d22c405cb2f07",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-French.jpg?v=1742444406",
+  "platform": "shopify",
+  "product_id": "8738121539",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Decaf French Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29531363971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29531364035"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29531364099"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29531364163"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29531364227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587539259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587572027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587604795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587637563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587670331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587703099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587735867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587768635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587801403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587834171"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "bfd76a33e806f6dd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-Italian.jpg?v=1742444402",
+  "platform": "shopify",
+  "product_id": "8738130947",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Decaf Italian Roast",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29531404867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29531404931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29531404995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29531405059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29531405123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587211579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587244347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587277115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587309883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587342651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587375419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587408187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587440955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587473723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587506491"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "3af5810ea8c43963",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-madison-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-Madison.jpg?v=1742444398",
+  "platform": "shopify",
+  "product_id": "8738141891",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Decaf Madison Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-madison-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29531443267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29531443395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29531443459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29531443523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29531443587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586851131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586883899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586916667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586949435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586982203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587014971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587047739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587080507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115587113275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115587146043"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "137af65b271cb841",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mocha-java-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-Mocha.jpg?v=1742444390",
+  "platform": "shopify",
+  "product_id": "8755949827",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Decaf Mocha Java Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-mocha-java-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29644328515"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29644328579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29644328643"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29644328707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29644328771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586097467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586130235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586163003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586195771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586228539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586261307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586294075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586326843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586359611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586392379"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "d9fffbf9141efa68",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-Ethiopia.jpg?v=1742444386",
+  "platform": "shopify",
+  "product_id": "8756037699",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Decaf Ethiopia",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29644590019"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29644590083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29644590147"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29644590211"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29644590275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585769787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585802555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585835323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585868091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585900859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585933627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585966395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585999163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115586031931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115586064699"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "182c3edbd036356d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-cara-mia",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Espresso-Cara.jpg?v=1742444382",
+  "platform": "shopify",
+  "product_id": "8756097027",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Espresso Cara Mia",
+  "url": "https://www.jonescoffeeroasters.com/products/espresso-cara-mia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.8,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29644692867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.8,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29644692931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.8,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29644692995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.8,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29644693059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.8,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29644693123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.1,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585442107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.55,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585474875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.1,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585507643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.55,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585540411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.1,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585573179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.55,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585605947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.1,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585638715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.55,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585671483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.1,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585704251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.55,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585737019"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "6494b557642731e4",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-prc",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/image_2024_10_15T10_06_18_043Z.png?v=1742444379",
+  "platform": "shopify",
+  "product_id": "8756128643",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Espresso PRC",
+  "url": "https://www.jonescoffeeroasters.com/products/espresso-prc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29644740803"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29644740867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29644740931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29644741059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29644741123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585081659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585114427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585147195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585179963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585212731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585245499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585278267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585311035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115585343803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115585376571"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "25ea3c9881f960e5",
+  "first_seen": "2026-10-26",
+  "handle": "gamble-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Gamble-House.jpg?v=1742444375",
+  "platform": "shopify",
+  "product_id": "8756166211",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Gamble House Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/gamble-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.15,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29644802051"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.15,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29644802115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.15,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29644802179"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.15,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29644802243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.15,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29644802307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.68,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584688443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.21,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584721211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.68,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584753979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.21,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584786747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.68,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584819515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.21,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584852283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.68,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584885051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.21,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584917819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.68,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584950587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.21,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584983355"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "acdcbebc65bcac4c",
+  "first_seen": "2026-10-26",
+  "handle": "madison-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Madison-Blend.jpg?v=1742444370",
+  "platform": "shopify",
+  "product_id": "8826414595",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Madison Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/madison-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29973897603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29973897667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29973897731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29973897795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29973897859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584262459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584295227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584327995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584360763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584393531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584426299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584459067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584491835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584524603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584557371"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "e5645bc1ffbf1952",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Mocha-Java.jpg?v=1742444366",
+  "platform": "shopify",
+  "product_id": "8826419331",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://www.jonescoffeeroasters.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.15,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29973916995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.15,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29973917059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.15,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29973917123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.15,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29973917187"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.15,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29973917251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.68,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583902011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.71,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583934779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.68,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583967547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.71,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584000315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.68,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584033083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.71,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584065851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.68,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584098619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.71,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584131387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.68,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115584164155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.71,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115584196923"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "d134c07507273927",
+  "first_seen": "2026-10-26",
+  "handle": "marrakech-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Marrakech-Blend.jpg?v=1742444363",
+  "platform": "shopify",
+  "product_id": "8826441603",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Marrakech Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/marrakech-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29973995267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29973995331"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29973995395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29973995459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29973995523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583574331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.5,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583607099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583639867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.5,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583672635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583705403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.5,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583738171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583770939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.5,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583803707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583836475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.5,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583869243"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "77f95454d25d8179",
+  "first_seen": "2026-10-26",
+  "handle": "pasadena-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Pasadena-Blend.jpg?v=1742444359",
+  "platform": "shopify",
+  "product_id": "8826464771",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Pasadena Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/pasadena-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29974096771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29974096835"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29974096899"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29974096963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.2,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29974097027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583181115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583213883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583246651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583279419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583312187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583344955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583377723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583410491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.9,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583443259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.45,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583476027"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "ebcb6216b5a6ed92",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Decaf-Esprsso.jpg?v=1742444355",
+  "platform": "shopify",
+  "product_id": "8826470531",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Decaf JC Espresso",
+  "url": "https://www.jonescoffeeroasters.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29974110531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29974110595"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29974110659"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29974110723"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.6,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29974110787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582787899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582820667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582853435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582886203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582918971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582951739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582984507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583017275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.2,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115583050043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.1,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115583082811"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "ce412fbc0e0257b5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Ethiopia-Natural.jpg?v=1742444350",
+  "platform": "shopify",
+  "product_id": "8826489347",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Ethiopia Natural",
+  "url": "https://www.jonescoffeeroasters.com/products/ethiopian-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29974169603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29974169667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29974169731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29974169795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29974169859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582460219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582492987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582525755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582558523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582591291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582624059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582656827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582689595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582722363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582755131"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "343ee4fc2214458a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Sumatra.jpg?v=1742576840",
+  "platform": "shopify",
+  "product_id": "8826499011",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.jonescoffeeroasters.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29974199939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29974200003"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29974200067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29974200131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29974200195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582132539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582165307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582198075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582230843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582263611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582296379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582329147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582361915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582394683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582427451"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "2d4e884e35d700ff",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Colombia-Inga.jpg?v=1742444343",
+  "platform": "shopify",
+  "product_id": "8826511171",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Colombia Inga Aponte",
+  "url": "https://www.jonescoffeeroasters.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.35,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "29974233091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.35,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "29974233155"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.35,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "29974233219"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.35,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "29974233283"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.35,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "29974233347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.08,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581772091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.41,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581804859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.08,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581837627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.41,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581870395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.08,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581903163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.41,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581935931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.08,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581968699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.41,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582001467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.08,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115582034235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.41,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115582067003"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "194fa03c501d1d9b",
+  "first_seen": "2026-10-26",
+  "handle": "jc-espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_JC-Espresso.jpg?v=1742444335",
+  "platform": "shopify",
+  "product_id": "9514016462",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Espresso JC",
+  "url": "https://www.jonescoffeeroasters.com/products/jc-espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.45,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "34413552398"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.45,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "34413552590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.45,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "34413552782"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.45,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "34413552974"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.45,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "34413553166"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.53,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580952891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.89,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580985659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.53,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581018427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.89,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581051195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.53,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581083963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.89,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581116731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.53,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581149499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.89,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581182267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.53,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115581215035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.89,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115581247803"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "f89cd6fb4413dda2",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-altura",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/products/Mexico_altura_coffee.jpg?v=1742444330",
+  "platform": "shopify",
+  "product_id": "9545456526",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Mexico",
+  "url": "https://www.jonescoffeeroasters.com/products/mexico-altura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "34574618638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "34574618830"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "34574619022"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "34574619214"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "34574619406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580625211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580657979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580690747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580723515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580756283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580789051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580821819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580854587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580887355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580920123"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "a6e278e67161ec87",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Kenya-AA.jpg?v=1742444326",
+  "platform": "shopify",
+  "product_id": "9545528718",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://www.jonescoffeeroasters.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "34574741966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "34574742222"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "34574742414"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "34574742670"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.25,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "34574742926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580264763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580297531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580330299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580363067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580395835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580428603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580461371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580494139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 131.63,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580526907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.94,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580559675"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "66672615da58d893",
+  "first_seen": "2026-10-26",
+  "handle": "finca-dos-marias-bourbon-rojo-san-marcos-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Finca-Dos.jpg?v=1742444321",
+  "platform": "shopify",
+  "product_id": "9567315214",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Finca Dos Marias - Bourbon Rojo - San Marcos, Guatemala",
+  "url": "https://www.jonescoffeeroasters.com/products/finca-dos-marias-bourbon-rojo-san-marcos-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "40114778439768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "40114778538072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "40114778636376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "40114778734680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.05,
+    "title": "Very Fine/Expresso / 1 lb bag",
+    "variant_id": "40114778832984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579806011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579838779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579871547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579904315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115579937083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115579969851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580002619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580035387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.73,
+    "title": "Very Fine/Expresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50115580068155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.49,
+    "title": "Very Fine/Expresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50115580100923"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "12e42f805e1c51fc",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Roasters-Choice.jpg?v=1740513422",
+  "platform": "shopify",
+  "product_id": "9836426461499",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [
+   "Gift Sub"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://www.jonescoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "50876021375291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.25,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50876021408059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 125.88,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50876021440827"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "50876021473595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.25,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50876021506363"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 125.88,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50876021539131"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "50876021571899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.25,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50876021604667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 125.88,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50876021637435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "50876021670203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.25,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50876021702971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 125.88,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50876021735739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.5,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "50876021768507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.25,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10%)",
+    "variant_id": "50876021801275"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 125.88,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5%)",
+    "variant_id": "50876021834043"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ },
+ {
+  "body_hash": "7c8e1616dbfa50a7",
+  "first_seen": "2026-10-26",
+  "handle": "bomberos-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1453/3350/files/Jones-Coffee_Bomberos-Blend_v2.jpg?v=1731730199",
+  "platform": "shopify",
+  "product_id": "9868928942395",
+  "product_type": "Coffee",
+  "roaster_slug": "thebestcoffee",
+  "tags": [],
+  "title": "Bombero's Blend",
+  "url": "https://www.jonescoffeeroasters.com/products/bomberos-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Whole Bean / 1 lb bag",
+    "variant_id": "49672414888251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Whole Bean / Bulk 5 lb bag (save 10% plus Free Shipping)",
+    "variant_id": "49672414921019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Whole Bean / 5 individually packaged 1-lb bags (save 5% plus Free Shipping)",
+    "variant_id": "49672414953787"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Coarse/French Press / 1 lb bag",
+    "variant_id": "49672414986555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Coarse/French Press / Bulk 5 lb bag (save 10% plus Free Shipping)",
+    "variant_id": "49672415019323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Coarse/French Press / 5 individually packaged 1-lb bags (save 5% plus Free Shipping)",
+    "variant_id": "49672415052091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Medium/Drip / 1 lb bag",
+    "variant_id": "49672415084859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Medium/Drip / Bulk 5 lb bag (save 10% plus Free Shipping)",
+    "variant_id": "49672415117627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Medium/Drip / 5 individually packaged 1-lb bags (save 5% plus Free Shipping)",
+    "variant_id": "49672415150395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Fine/Melitta / 1 lb bag",
+    "variant_id": "49672415183163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Fine/Melitta / Bulk 5 lb bag (save 10% plus Free Shipping)",
+    "variant_id": "49672415215931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Fine/Melitta / 5 individually packaged 1-lb bags (save 5% plus Free Shipping)",
+    "variant_id": "49672415248699"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.3,
+    "title": "Very Fine/Espresso / 1 lb bag",
+    "variant_id": "49672415281467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.85,
+    "title": "Very Fine/Espresso / Bulk 5 lb bag (save 10% plus Free Shipping)",
+    "variant_id": "49672415314235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.18,
+    "title": "Very Fine/Espresso / 5 individually packaged 1-lb bags (save 5% plus Free Shipping)",
+    "variant_id": "49672415347003"
+   }
+  ],
+  "vendor": "Jones Coffee Roasters"
+ }
+]

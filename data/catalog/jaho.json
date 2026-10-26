@@ -1,0 +1,2207 @@
+[
+ {
+  "body_hash": "2daaddc65c6e01b9",
+  "first_seen": "2026-10-26",
+  "handle": "black-derby",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/BLACK_DERBY_206a0af7-d13d-474d-875e-fcb83fb4285d.png?v=1762525405",
+  "platform": "shopify",
+  "product_id": "12259672",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "ethiopia",
+   "sumatra"
+  ],
+  "title": "Black Derby",
+  "url": "https://www.jaho.com/products/black-derby",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "31081352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "31081362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "31652157325401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "31652169744473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "31652169777241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "31652169842777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "31652211130457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "31652211425369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "31652211949657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "31652213882969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "31652213915737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "31652213981273"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "430725691366d0d9",
+  "first_seen": "2026-10-26",
+  "handle": "salam",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/SALAM.png?v=1762525405",
+  "platform": "shopify",
+  "product_id": "12259862",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "brazil",
+   "coffee",
+   "ethiopia",
+   "sumatra"
+  ],
+  "title": "Salam",
+  "url": "https://www.jaho.com/products/salam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "31081822"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "31081832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "31652341645401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "31652355637337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "31652355670105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "31652355735641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "31652377395289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "31652377821273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "31652378574937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "31652386340953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "31652386406489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "31652386603097"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "cadc4ab3532fec9e",
+  "first_seen": "2026-10-26",
+  "handle": "mr-pablo",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/MR._PABLO_6e6bd7bf-58ea-4722-b266-05dccbda71a4.png?v=1762525402",
+  "platform": "shopify",
+  "product_id": "5230982",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "brazil",
+   "coffee",
+   "colombia"
+  ],
+  "title": "Mr. Pablo",
+  "url": "https://www.jaho.com/products/mr-pablo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "14998392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "31653323472985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "31653325701209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "31653327568985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "31653327601753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "31653327667289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "31653327863897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "31653327896665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "31653327962201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "31653327994969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "31653328027737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "31653328126041"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "1a5664de777c76f2",
+  "first_seen": "2026-10-26",
+  "handle": "scarlet-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/SCARLET_ESPRESSO_594f08ca-3e98-42dd-b0dc-bfc6b5d84553.png?v=1762525403",
+  "platform": "shopify",
+  "product_id": "6117532",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "brazil",
+   "coffee",
+   "espresso",
+   "kenya"
+  ],
+  "title": "Scarlet Espresso",
+  "url": "https://www.jaho.com/products/scarlet-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "30669012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "30669032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "31651883352153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "31652225056857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "31652225089625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "31652225286233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "31652226203737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "31652226236505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "31652226302041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "31652227252313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "31652227285081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "31652227350617"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "692ae9a72178327b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kanyon-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/ETHIOPIA_ce24286e-7967-43d9-8ccb-65cb3e3ededa.png?v=1753216133",
+  "platform": "shopify",
+  "product_id": "7973200068697",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "ethiopia",
+   "single origin"
+  ],
+  "title": "Ethiopia Guji - Kanyon Mountain",
+  "url": "https://www.jaho.com/products/ethiopia-guji-kanyon-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420584120409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420584153177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420584185945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420584218713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420584251481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420584284249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420584317017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420584349785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420584382553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420584415321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420584448089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420584480857"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "253f6ca7bf184652",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-muranga-githiga-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/KENYA.png?v=1753216154",
+  "platform": "shopify",
+  "product_id": "7973225267289",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "kenya",
+   "peaberry",
+   "single origin"
+  ],
+  "title": "Kenya Murang'a - Githiga Peaberry",
+  "url": "https://www.jaho.com/products/kenya-muranga-githiga-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420618526809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420618559577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420618592345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420618625113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420618657881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420618690649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420618723417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420618756185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420618788953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420618821721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420618854489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420618887257"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "b4f004d7840e957f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-pink-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/COLOMBIA.png?v=1753216170",
+  "platform": "shopify",
+  "product_id": "7973270650969",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "colombia",
+   "single origin"
+  ],
+  "title": "Colombia Huila - Pink Bourbon",
+  "url": "https://www.jaho.com/products/colombia-huila-pink-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420680753241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420680786009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420680818777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420680851545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420680884313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420680917081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420680949849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420680982617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420681015385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420681048153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420681080921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420681113689"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "ab91c29486b3b981",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-rosa-blue-ayarza",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/GUATEMALA_b379488b-7498-4055-bb8d-b8b818d5db11.png?v=1753216189",
+  "platform": "shopify",
+  "product_id": "7973271896153",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "guatemala",
+   "single origin"
+  ],
+  "title": "Guatemala Santa Rosa - Blue Ayarza",
+  "url": "https://www.jaho.com/products/guatemala-santa-rosa-blue-ayarza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420689797209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420689829977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420689862745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420689895513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420689928281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420689961049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420689993817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420690026585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420690059353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420690092121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420690124889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420690157657"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "965deb7d4c7a8c2c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-minas-summer-solstice",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/BRAZIL_665a712a-9b79-4c56-9b36-50c2b9e4c26f.png?v=1753216205",
+  "platform": "shopify",
+  "product_id": "7973273174105",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "brazil",
+   "coffee",
+   "single origin"
+  ],
+  "title": "Brazil Minas - Summer Solstice",
+  "url": "https://www.jaho.com/products/brazil-minas-summer-solstice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420695695449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420695728217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420695760985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420695793753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420695826521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420695859289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420695892057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420695924825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420695957593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420695990361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420696023129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420696055897"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "033579753f65fbfa",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-aceh-sumatra-gayo",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/INDONESIA.png?v=1753216221",
+  "platform": "shopify",
+  "product_id": "7973276647513",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "indonesia",
+   "single origin",
+   "sumatra"
+  ],
+  "title": "Indonesia Aceh - Sumatra Gayo",
+  "url": "https://www.jaho.com/products/indonesia-aceh-sumatra-gayo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420717715545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420717748313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420717781081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420717813849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420717846617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420717879385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420717912153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420717944921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420717977689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420718010457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420718043225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420718075993"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "58d52a19c708b7fa",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lam-dong-phin-noir",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/VIETNAM.png?v=1753216237",
+  "platform": "shopify",
+  "product_id": "7973278351449",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "single origin",
+   "vietnam"
+  ],
+  "title": "Vietnam Lam Dong - Phin Noir",
+  "url": "https://www.jaho.com/products/vietnam-lam-dong-phin-noir",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420729774169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420729806937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420729839705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420729872473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420729905241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420729938009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420729970777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420730003545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420730036313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420730069081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420730101849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420730134617"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "7d8f1fc35e005a94",
+  "first_seen": "2026-10-26",
+  "handle": "north-shore-fog",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/NORTH_SHORE_FOG.png?v=1753216252",
+  "platform": "shopify",
+  "product_id": "7973280972889",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "colombia",
+   "ethiopia"
+  ],
+  "title": "North Shore Fog",
+  "url": "https://www.jaho.com/products/north-shore-fog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420744912985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420744945753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420744978521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420745011289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420745044057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420745076825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420745109593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420745142361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420745175129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420745207897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420745240665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420745273433"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "a9dd7e25291fd096",
+  "first_seen": "2026-10-26",
+  "handle": "spirit-bomb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/SPIRIT_BOMB_b404eb38-b08b-4aca-82eb-463352935cf9.png?v=1753216273",
+  "platform": "shopify",
+  "product_id": "7973286543449",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "ethiopia",
+   "kenya"
+  ],
+  "title": "Spirit Bomb",
+  "url": "https://www.jaho.com/products/spirit-bomb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420761395289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420761428057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420761460825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420761493593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420761526361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420761559129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420761591897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420761624665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420761657433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420761690201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420761722969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420761755737"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "f49c20ed511c9952",
+  "first_seen": "2026-10-26",
+  "handle": "shibuya-drift",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/SHIBUYA_DRIFT_11621cea-8062-4031-a05f-c0cdc1f277c4.png?v=1753216289",
+  "platform": "shopify",
+  "product_id": "7973287297113",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "colombia",
+   "kenya"
+  ],
+  "title": "Shibuya Drift",
+  "url": "https://www.jaho.com/products/shibuya-drift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420771422297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420771455065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420771487833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420771520601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420771553369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420771586137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420771618905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420771651673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420771684441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420771717209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420771749977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420771782745"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "53081e5cd7ad983c",
+  "first_seen": "2026-10-26",
+  "handle": "hawthorne-no-7",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/HAWTHORNE_NO._7_fba43d2a-8542-494a-b521-423618ba96f3.png?v=1753216338",
+  "platform": "shopify",
+  "product_id": "7973287690329",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "guatemala",
+   "sumatra"
+  ],
+  "title": "Hawthorne No. 7",
+  "url": "https://www.jaho.com/products/hawthorne-no-7",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420783906905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420783939673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420783972441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420784005209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420784037977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420784070745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420784103513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420784136281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420784169049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420784201817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420784234585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420784267353"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "5b62fe3fbdb83382",
+  "first_seen": "2026-10-26",
+  "handle": "koyo",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/KOYO.png?v=1753216353",
+  "platform": "shopify",
+  "product_id": "7973288116313",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "brazil",
+   "coffee",
+   "vietnam"
+  ],
+  "title": "Kōyō",
+  "url": "https://www.jaho.com/products/koyo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420798980185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420799012953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420799045721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420799078489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420799111257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420799144025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420799176793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420799209561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420799242329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420799275097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420799307865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420799340633"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "c3cd95af2b90eed8",
+  "first_seen": "2026-10-26",
+  "handle": "kissaten-no-3",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/KISSATEN_NO._3_78d003a3-fd49-4880-b727-96b0148f5d18.png?v=1753216376",
+  "platform": "shopify",
+  "product_id": "7973318099033",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "blends",
+   "coffee",
+   "ethiopia",
+   "sumatra",
+   "vietnam"
+  ],
+  "title": "Kissaten No. 3",
+  "url": "https://www.jaho.com/products/kissaten-no-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420860289113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420860321881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420860354649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420860387417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420860420185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420860452953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420860485721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420860518489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420860551257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420860584025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420860616793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420860649561"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "4c4af53ad11d0fc2",
+  "first_seen": "2026-10-26",
+  "handle": "unwritten-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/UNWRITTEN.png?v=1753216447",
+  "platform": "shopify",
+  "product_id": "7973323079769",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "brazil",
+   "coffee",
+   "decaf",
+   "ethiopia"
+  ],
+  "title": "Unwritten Decaf Blend",
+  "url": "https://www.jaho.com/products/unwritten-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420885684313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420885717081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420885749849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420885782617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420885815385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420885848153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420885880921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420885913689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420885946457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420885979225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420886011993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420886044761"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "65f1c28244bbb7f8",
+  "first_seen": "2026-10-26",
+  "handle": "in-between-the-lines-half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/IN-BETWEEN_THE_LINES_f1f4ac46-e9d0-4497-8949-7d7476aa4cf0.png?v=1753216486",
+  "platform": "shopify",
+  "product_id": "7973324456025",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "brazil",
+   "coffee",
+   "ethiopia",
+   "half-caff"
+  ],
+  "title": "In-Between the Lines Half-Caff Blend",
+  "url": "https://www.jaho.com/products/in-between-the-lines-half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420895645785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420895678553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420895711321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420895744089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420895776857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420895809625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420895842393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420895875161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420895907929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420895940697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420895973465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420896006233"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "ed52eefc0aa3d439",
+  "first_seen": "2026-10-26",
+  "handle": "soft-launch-espresso-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/SOFT_LAUNCH_ESPRESSO_92053948-f83d-4f49-9f56-af2f55613d98.png?v=1753216535",
+  "platform": "shopify",
+  "product_id": "7973325701209",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "costa rica",
+   "decaf",
+   "espresso",
+   "ethiopia",
+   "guatemala"
+  ],
+  "title": "Soft Launch Espresso Decaf Blend",
+  "url": "https://www.jaho.com/products/soft-launch-espresso-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420901118041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420901150809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420901183577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420901216345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420901249113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420901281881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420901314649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420901347417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420901380185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420901412953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420901445721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420901478489"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ },
+ {
+  "body_hash": "0de229c73dc82f9f",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-hour-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/9882/files/VELVET_HOUR_2cb01703-1317-4e6f-ad3f-ce4efa6598fe.png?v=1753216566",
+  "platform": "shopify",
+  "product_id": "7973326585945",
+  "product_type": "Coffee",
+  "roaster_slug": "jaho",
+  "tags": [
+   "coffee",
+   "decaf",
+   "ethiopia",
+   "papua new guinea"
+  ],
+  "title": "Velvet Hour Decaf Blend",
+  "url": "https://www.jaho.com/products/velvet-hour-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Whole Bean",
+    "variant_id": "42420908228697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Fine (Espresso)",
+    "variant_id": "42420908261465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Medium (Drip)",
+    "variant_id": "42420908294233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 OZ. / Coarse (French Press)",
+    "variant_id": "42420908327001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Whole Bean",
+    "variant_id": "42420908359769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Fine (Espresso)",
+    "variant_id": "42420908392537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Medium (Drip)",
+    "variant_id": "42420908425305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "1 LB. / Coarse (French Press)",
+    "variant_id": "42420908458073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Whole Bean",
+    "variant_id": "42420908490841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Fine (Espresso)",
+    "variant_id": "42420908523609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Medium (Drip)",
+    "variant_id": "42420908556377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.95,
+    "title": "5 LB. / Coarse (French Press)",
+    "variant_id": "42420908589145"
+   }
+  ],
+  "vendor": "Jaho Coffee Roaster"
+ }
+]

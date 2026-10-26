@@ -1,0 +1,663 @@
+[
+ {
+  "body_hash": "eb5cb8ee8ef74009",
+  "first_seen": "2026-10-26",
+  "handle": "cubano-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/WhatsApp_Image_2026-03-04_at_3.53.02_PM.jpg?v=1772658102",
+  "platform": "shopify",
+  "product_id": "10050281668912",
+  "product_type": "Coffee",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Dark"
+  ],
+  "title": "Cubano Roast Coffee",
+  "url": "https://www.escondidospecialtycoffee.com/products/cubano-roast-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "50496764150064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb",
+    "variant_id": "50496764182832"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "f835c6822435fbb1",
+  "first_seen": "2026-10-26",
+  "handle": "spring-caramel-bloom",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/Spring_Caramel_Bloom.jpg?v=1772645325",
+  "platform": "shopify",
+  "product_id": "10093381058864",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [],
+  "title": "Spring Caramel Bloom",
+  "url": "https://www.escondidospecialtycoffee.com/products/spring-caramel-bloom",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "50802003345712"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "37b5c520aebaa6ac",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-3-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/c1dfe78b-d8e1-432e-855f-392f2043f4e3.png?v=1787257377",
+  "platform": "shopify",
+  "product_id": "15230462427440",
+  "product_type": "Bags",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [],
+  "title": "Single Origin 3-Pack",
+  "url": "https://www.escondidospecialtycoffee.com/products/single-origin-3-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "67556740333872"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "688c8288dd50df94",
+  "first_seen": "2026-10-26",
+  "handle": "la-brisa",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/LaBrisa-Front-NoOrganic.png?v=1729177704",
+  "platform": "shopify",
+  "product_id": "8329144697136",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Colombia La Brisa",
+  "url": "https://www.escondidospecialtycoffee.com/products/la-brisa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45639955448112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45639955480880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48023261577520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "48023261610288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48023261643056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48023261675824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48760701518128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48760701550896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "48760701583664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48760701616432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48760701649200"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "3893190265b43926",
+  "first_seen": "2026-10-26",
+  "handle": "oculto",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/file_1.png?v=1729186160",
+  "platform": "shopify",
+  "product_id": "8329146532144",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Medium-dark"
+  ],
+  "title": "El Salvador Oculto",
+  "url": "https://www.escondidospecialtycoffee.com/products/oculto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45639955874096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45639955906864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48023209476400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "48023209509168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48023209541936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48023209574704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48760702599472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48760702632240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "48760702665008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48760702697776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48760702730544"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "9835d86d422fc650",
+  "first_seen": "2026-10-26",
+  "handle": "paraiso",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/Paraiso-Front.png?v=1729109304",
+  "platform": "shopify",
+  "product_id": "8329147646256",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Light"
+  ],
+  "title": "Costa Rica Paraiso",
+  "url": "https://www.escondidospecialtycoffee.com/products/paraiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45639956660528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45639956693296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48023268557104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "48023268589872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48023268622640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48023268655408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48760704598320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "48760704631088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48760704663856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48760704696624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49855752110384"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "b383a885125855af",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-reserve-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/file_2.png?v=1729199417",
+  "platform": "shopify",
+  "product_id": "8985993969968",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Dark"
+  ],
+  "title": "Espresso Reserve Blend",
+  "url": "https://www.escondidospecialtycoffee.com/products/espresso-reserve-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47665940300080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48760706662704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48924459008304"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "c52a49cc696cbfec",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-finca-san-jose",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/SJGreenCoffee.jpg?v=1729534348",
+  "platform": "shopify",
+  "product_id": "9167755903280",
+  "product_type": "green coffee",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [],
+  "title": "Green Coffee - Finca San Jose, Ataco, El Salvador",
+  "url": "https://www.escondidospecialtycoffee.com/products/green-coffee-finca-san-jose",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 77.5,
+    "title": "10 lb",
+    "variant_id": "48924502458672"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "0c25283eea5c6418",
+  "first_seen": "2026-10-26",
+  "handle": "the-escondido-blend-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/file_3_d054e82e-78d1-4e2b-8f9a-e8ce3b1a0995.png?v=1729190744",
+  "platform": "shopify",
+  "product_id": "9552719905072",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Medium"
+  ],
+  "title": "The Escondido Blend",
+  "url": "https://www.escondidospecialtycoffee.com/products/the-escondido-blend-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48924447506736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "48924447539504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48924447572272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / French Press",
+    "variant_id": "48924455862576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "48924455895344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Drip",
+    "variant_id": "48924455928112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "48924455960880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / French Press",
+    "variant_id": "48924455993648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "48924456026416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Drip",
+    "variant_id": "48924456059184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "48924456091952"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "92dcc99819f083e4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/WHOLE_BEAN_COFFEE_-_NET_WEIGHT_8_OZ_227_G_1_1d1de182-e7f3-49d2-8230-1927d4550481.png?v=1766077368",
+  "platform": "shopify",
+  "product_id": "9669692457264",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Decaf",
+  "url": "https://www.escondidospecialtycoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49313808548144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "49313808580912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "49313808613680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Drip",
+    "variant_id": "49313808646448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "49313808679216"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ },
+ {
+  "body_hash": "6d5fbab98dbb5002",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-tierra-maya",
+  "image": "https://cdn.shopify.com/s/files/1/0745/1872/4912/files/Guatemala_Huehuetenango_12_oz_bag.png?v=1772555041",
+  "platform": "shopify",
+  "product_id": "9920717685040",
+  "product_type": "",
+  "roaster_slug": "escondidospecialtycoffee",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Guatemala Huehuetenango Tierra Maya",
+  "url": "https://www.escondidospecialtycoffee.com/products/guatemala-huehuetenango-tierra-maya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50032399974704"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / French Press",
+    "variant_id": "50032400007472"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "50032400040240"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Drip",
+    "variant_id": "50032400073008"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "50032400105776"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "50032400138544"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / French Press",
+    "variant_id": "50032400171312"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Chemex",
+    "variant_id": "50032400204080"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Drip",
+    "variant_id": "50032400236848"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8 oz / Espresso",
+    "variant_id": "50032400269616"
+   }
+  ],
+  "vendor": "Escondido Specialty Coffee"
+ }
+]

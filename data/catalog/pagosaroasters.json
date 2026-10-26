@@ -1,0 +1,246 @@
+[
+ {
+  "body_hash": "7e587093687c4854",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-papua-new-guinea-medium-roast-12-oz-bag",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2025/02/Pagosa-Roasters-Papua-New-Guinea-Medium-Roast-–-Smooth-chocolate-subtle-spice-tropical-fruit-hints.webp",
+  "platform": "woocommerce",
+  "product_id": "195",
+  "product_type": "simple",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "12 oz Roasted Coffee Beans",
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Papua New Guinea Medium Roast – 12 oz bag",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-papua-new-guinea-medium-roast-12-oz-bag/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pagosa Roasters Papua New Guinea Medium Roast &#8211; 12 oz bag",
+    "variant_id": "195:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3394435ec0a4257",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-kenya-medium-roast-12-oz-bag",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2025/02/Kenya-Medium-Roast-–-Bright-berry-notes-citrus-zest-wine-like-acidity.webp",
+  "platform": "woocommerce",
+  "product_id": "198",
+  "product_type": "simple",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "12 oz Roasted Coffee Beans",
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Kenya Medium Roast – 12 oz bag",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-kenya-medium-roast-12-oz-bag/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pagosa Roasters Kenya Medium Roast &#8211; 12 oz bag",
+    "variant_id": "198:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "017a2bfdd67168d8",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-guatemala-medium-roast-5lb-bag",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2025/11/pagosa-roasters-guatemala-medium-roast-coffee-logo.webp",
+  "platform": "woocommerce",
+  "product_id": "486",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Guatemala Medium Roast",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-guatemala-medium-roast-5lb-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "486:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "486:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64e4d911272d05b5",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-papua-new-guinea-medium-roast-5lb-bag-2",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2025/02/Pagosa-Roasters-Papua-New-Guinea-Medium-Roast-–-Smooth-chocolate-subtle-spice-tropical-fruit-hints.webp",
+  "platform": "woocommerce",
+  "product_id": "487",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Papua New Guinea Medium Roast",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-papua-new-guinea-medium-roast-5lb-bag-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "487:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "487:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8eb93d7e8fa44d8d",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-kenya-medium-roast-5lb-bag",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2025/02/Kenya-Medium-Roast-–-Bright-berry-notes-citrus-zest-wine-like-acidity.webp",
+  "platform": "woocommerce",
+  "product_id": "488",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Kenya Medium Roast",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-kenya-medium-roast-5lb-bag/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "488:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "488:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0cf08b2372e80fc4",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-ethopia-roast",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2026/04/1.png",
+  "platform": "woocommerce",
+  "product_id": "559",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Ethopia Roast",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-ethopia-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "559:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "559:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a56ff6840b5e8704",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-colombina-roast",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2026/04/2.png",
+  "platform": "woocommerce",
+  "product_id": "565",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Colombian Roast",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-colombina-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "565:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "565:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9eaaf0c061d6f80d",
+  "first_seen": "2026-10-26",
+  "handle": "pagosa-roasters-mexican-decaf",
+  "image": "https://pagosaroasters.com/wp-content/uploads/2026/04/WhatsApp-Image-2026-03-16-at-16.29.26.jpeg",
+  "platform": "woocommerce",
+  "product_id": "602",
+  "product_type": "variable",
+  "roaster_slug": "pagosaroasters",
+  "tags": [
+   "Medium Roast Coffee Beans"
+  ],
+  "title": "Pagosa Roasters Mexican Decaf",
+  "url": "https://pagosaroasters.com/product/pagosa-roasters-mexican-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz bag",
+    "variant_id": "602:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb bag",
+    "variant_id": "602:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

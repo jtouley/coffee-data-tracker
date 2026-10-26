@@ -1,0 +1,838 @@
+[
+ {
+  "body_hash": "50b4c790e294da9b",
+  "first_seen": "2026-10-26",
+  "handle": "milan-san-remo",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/4518d7dc-96ba-4528-bebf-7323ca8b9d90/960x0.webp",
+  "platform": "squarespace",
+  "product_id": "52c86af2e4b02010862a4f21",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Milan San Remo Espresso Blend",
+  "url": "https://www.alaskacoffeeroasting.com/shop/milan-san-remo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "0522a124-15e7-41cb-9548-8dfeff93de56"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "4bec0251-0328-4e13-9613-876f5cd7e58e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "b17b1e18-b82e-44dd-8b86-a73f4db60acc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "bb5ba6fd-70d2-4a4b-8421-5b6b30608324"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b26db2e4514193a0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sidamo",
+  "image": "https://static1.squarespace.com/static/52b91397e4b099c1d3d7625d/52c765b0e4b0cd50652cbb40/52c8df81e4b05c5f2d79983e/1788567430882/",
+  "platform": "squarespace",
+  "product_id": "52c8df81e4b05c5f2d79983e",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Decaf Komodo Organic Swiss Water Process",
+  "url": "https://www.alaskacoffeeroasting.com/shop/decaf-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Espresso",
+    "variant_id": "483b219e-bbe9-4c94-9f38-0a506159db44"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "French Press",
+    "variant_id": "69bbe6af-0828-4929-a21c-00ca52629059"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Drip",
+    "variant_id": "c22d6937-d839-44d7-acb2-939f282fb42c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.0,
+    "title": "Whole Bean",
+    "variant_id": "c4b629fe-e471-443b-8705-c7f401625729"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c48796edae8221e",
+  "first_seen": "2026-10-26",
+  "handle": "timor-l-este",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1e057e09-a1ac-4846-a89a-167d85deb452/PXL_20260726_031029588%7E2.jpg",
+  "platform": "squarespace",
+  "product_id": "52ccc1e2e4b0e2808c7b855b",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Yukon Quest Blend",
+  "url": "https://www.alaskacoffeeroasting.com/shop/timor-l-este",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "3cde9ee6-5113-4654-96d4-eea1ed808c30"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "69281579-1615-466e-a21a-ea07ed66a37b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "948121cc-71ae-43d9-aa2f-d0f40a44c90c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "b7bc938a-fd8f-44e6-9cf8-8c32c2c174e2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1baddd5ea516b3d9",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/9c4910b9-a997-40f4-a37c-085a6645b4f8/Papua-New-Guinea-Organic-Siane-Chimbu1-1024x722.jpg",
+  "platform": "squarespace",
+  "product_id": "5660da9ee4b0e48493d9bae3",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://www.alaskacoffeeroasting.com/shop/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "3a8dc9b9-c117-485f-ad2a-664f797561ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "62badbcc-1e8b-479a-b7c8-d4ce699ba8cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "9ae48b6e-b7f1-4212-b093-38bdbce62558"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "bb86dbe9-6392-4fe0-975b-35d51cc1dc1c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "502eb5034bd56e90",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1711745497797-8UN8DCHH01C6QB9KTJEO/french_roast.jpg",
+  "platform": "squarespace",
+  "product_id": "5722d5595559869e244b22e5",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.alaskacoffeeroasting.com/shop/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "7d1d6e77-da90-4bc5-bcd5-e50cb10c0930"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "8ef6269b-8824-4e64-af39-ff893937dffc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "cfc283f6-6230-4631-a157-ff78125a98da"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "d072c3f1-a1fe-42f4-9d8b-06e015dff4f9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c3fff6cb2c794a28",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-fairtrade-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1582239302435-K8GL48F8QA9AKI6GDFWT/Nicaragua4.jpg",
+  "platform": "squarespace",
+  "product_id": "57c77b83e6f2e1eaa6e5ef89",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Nicaragua",
+  "url": "https://www.alaskacoffeeroasting.com/shop/nicaragua-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "22a56959-bfc1-4db1-9a4b-aec22067388b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "2438b709-0d36-4e89-8ae6-4e05422de2f0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "6c92ab49-f406-4e36-9cca-a68347406441"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "b10f2495-dd2f-4622-b981-cd2645bbb734"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a3d2020d0ed48a8d",
+  "first_seen": "2026-10-26",
+  "handle": "yemen",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/ff6ea263-6740-40ee-ae73-36f7ecaf93c2/papau-new-guinea-coffee.jpg",
+  "platform": "squarespace",
+  "product_id": "57c781dfbe6594a0d1125986",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Papua New Guinea Natural",
+  "url": "https://www.alaskacoffeeroasting.com/shop/yemen",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Drip",
+    "variant_id": "32bff874-682f-4c4d-8dd6-b88c7ec9a7d0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "588dbf49-fa9a-4dc2-90d6-589085c00832"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Espresso",
+    "variant_id": "7b98d7a5-2de6-4886-a69b-8b76aac90d6f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "French Press",
+    "variant_id": "dadb5e7a-4ee3-433f-ac35-c0cd9d2b3603"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df4042f12a7d2b61",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-1",
+  "image": "https://static1.squarespace.com/static/52b91397e4b099c1d3d7625d/52c765b0e4b0cd50652cbb40/5915140320099e38a3fcac3c/1788660880375/",
+  "platform": "squarespace",
+  "product_id": "5915140320099e38a3fcac3c",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.alaskacoffeeroasting.com/shop/costa-rica-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "63e7df39-3ae7-407f-a698-2a15c08ba12d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "665a7c2f-3150-4a50-b2bb-06defda87fde"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "c2142e55-cb41-4bef-ad21-fd7d28acb842"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "e10647d4-ab30-4fd8-ac9b-ec32d676c109"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0722c1741319cb80",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-2",
+  "image": "https://static1.squarespace.com/static/52b91397e4b099c1d3d7625d/52c765b0e4b0cd50652cbb40/5938b6b8d482e9a4eff2b942/1791335985204/",
+  "platform": "squarespace",
+  "product_id": "5938b6b8d482e9a4eff2b942",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Kenya Nyeri",
+  "url": "https://www.alaskacoffeeroasting.com/shop/kenya-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Espresso",
+    "variant_id": "1f2cb375-8005-41b0-b481-3ce9777318a2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "French Press",
+    "variant_id": "32a87238-8f3c-48d7-99fb-30ad2e3a9e7f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Drip",
+    "variant_id": "633bc68a-82fc-4fb3-b25c-6bb8238ed4b4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "aea43709-abaa-436b-86ad-c12c2cbdcd10"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3bcced57dae9c258",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-natural-process",
+  "image": "https://static1.squarespace.com/static/52b91397e4b099c1d3d7625d/52c765b0e4b0cd50652cbb40/5a347de09140b76437bca2ee/1791337359100/",
+  "platform": "squarespace",
+  "product_id": "5a347de09140b76437bca2ee",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Ethiopia Guji Supernatural",
+  "url": "https://www.alaskacoffeeroasting.com/shop/ethiopia-yirgacheffe-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Espresso",
+    "variant_id": "24d8084d-2333-4f1d-a87b-7cb9bca97932"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Drip",
+    "variant_id": "6c5217aa-0cc7-4a88-a19f-354c5eb50bba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "French Press",
+    "variant_id": "842d43ca-5abd-493b-b36c-be101f928a0b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Whole Bean",
+    "variant_id": "eca30200-2f51-456b-a533-6bbbf5470312"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f70f7cbd17084501",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-1",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1684295875366-CZAXXQ2UN10AKIJBZXX7/NorthTanaTorajaSouthernSulawesiIndonesia.jpg",
+  "platform": "squarespace",
+  "product_id": "5a56c3bc9140b755af46ff59",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Sulawesi Toraja",
+  "url": "https://www.alaskacoffeeroasting.com/shop/sulawesi-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "04c8ca76-d4bd-4a82-8b23-b07c86e3f6af"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "737e1b64-701b-472f-9c10-2d4c5b209775"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "adf9fc91-88c1-49f2-b9e0-9f6c8bb81e80"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "f3ed1d55-7c16-4555-8f57-a1d4ff586815"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3eda90f2cb7c958d",
+  "first_seen": "2026-10-26",
+  "handle": "scandinavian",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1711746304092-TW9ON7YEUTREJJFDSWV7/Grades_of_Coffee_Roasting.jpg",
+  "platform": "squarespace",
+  "product_id": "5a79117f71c10b8ee6601c26",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Scandinavian Blend",
+  "url": "https://www.alaskacoffeeroasting.com/shop/scandinavian",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "0365c347-8c7f-4516-8cef-44b386ee4368"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "1448ee33-b0c3-4093-bfd9-3304da3cd596"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "26549136-a4a8-457c-8f54-821324035ecb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "3792f333-0ce8-4be6-985f-939a762a71e2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03c0e723c41f5cdd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/3ba90e5e-f587-4a1e-b73c-28cf74214c4f/Screenshot+2026-02-18+181423.png",
+  "platform": "squarespace",
+  "product_id": "5b19dd188a922d26122b29d3",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Ethiopian Bench Maji Washed 2",
+  "url": "https://www.alaskacoffeeroasting.com/shop/ethiopia-harrar",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "35ac7972-11a5-4a2c-b6fc-b6f9aef891a8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Drip",
+    "variant_id": "414407a0-9792-4a62-876f-2e949995218e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "French Press",
+    "variant_id": "c1ce5f18-e46e-4856-a9e3-0d5d29445b89"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Espresso",
+    "variant_id": "cce9932c-3a56-4ccc-9608-10bee63d3007"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ddbd8f5e4e73afc7",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-organic-1",
+  "image": "https://static1.squarespace.com/static/52b91397e4b099c1d3d7625d/52c765b0e4b0cd50652cbb40/5b4eba71aa4a99eb87a3062a/1788567751406/",
+  "platform": "squarespace",
+  "product_id": "5b4eba71aa4a99eb87a3062a",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Uganda Organic Bugisu",
+  "url": "https://www.alaskacoffeeroasting.com/shop/uganda-organic-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "096542a1-cc14-4220-b28c-f7f8be3723cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "7032ffff-a4de-4bf8-8a93-0822383ad0cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "88a2644e-ea13-400f-a008-326036a36bd2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "f0d1be4b-0911-4f8c-94cd-af0fbf1795af"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64b59ced297b3171",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-2",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1592961845924-L1BZ5JB3HHGCDQK666OU/Yirgacheffe10.jpg",
+  "platform": "squarespace",
+  "product_id": "5b7e08fb898583e2d405b857",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.alaskacoffeeroasting.com/shop/ethiopia-yirgacheffe-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "5a334894-7f78-42cd-96e6-14719d11c759"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "7538cfe8-7e2a-4b0f-ad97-814430621722"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "846eb4a1-8d61-4fb1-a368-1d2c84dfc760"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "cc488139-0c0b-4eec-95cc-107235dd9fa2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23cbee2345f1db8a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-2",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/8461fff6-cacb-48fe-ae0d-0d4c550380d6/Screenshot+2026-02-15+185815.png",
+  "platform": "squarespace",
+  "product_id": "5bc7e1b3b208fc095f111560",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Flores “Komodo Dragon” Organic Bajawa Ngura Wet Hulled",
+  "url": "https://www.alaskacoffeeroasting.com/shop/colombia-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "French Press",
+    "variant_id": "43473f63-f225-4d03-9ef5-e776ca527b79"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Drip",
+    "variant_id": "5f63f4df-5074-48ea-84b7-cf042c04c749"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Espresso",
+    "variant_id": "94a745f0-0ed2-4a5e-a08a-4dd52cdb1a39"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Whole Bean",
+    "variant_id": "aa698267-0d74-4761-82f6-922ee188ce40"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2983f7312dc59b74",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-2",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1705368239105-3FGH2TXG16ID00FCRIYX/palhu2.jpg",
+  "platform": "squarespace",
+  "product_id": "5bc7e9c053450a52e8f2b3c9",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Guatemala Antigua Los Volcanes",
+  "url": "https://www.alaskacoffeeroasting.com/shop/guatemala-antigua-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Whole Bean",
+    "variant_id": "0eaa2848-cd73-4f78-93e4-c825ea2e8a15"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "French Press",
+    "variant_id": "8f6a571b-22d9-4a57-b72e-7a9928e7de48"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Espresso",
+    "variant_id": "cbbd8522-cba7-474f-9db3-294a22bf098c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Drip",
+    "variant_id": "d79381c4-298f-415f-aa42-d2bc5b9cc976"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "568160b5ef7b754e",
+  "first_seen": "2026-10-26",
+  "handle": "timor-fair-trade-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1700023580985-GGLEZ5JO77I1S4DR5O58/sansebastian1.jpg",
+  "platform": "squarespace",
+  "product_id": "5bd29374085229c3ddef7897",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Mexico Altura Veracruz",
+  "url": "https://www.alaskacoffeeroasting.com/shop/timor-fair-trade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "9671d550-8043-4681-bcb9-75ee5ec22bec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "9abc2f39-c255-4526-be14-9d74974ea9bd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "c015e129-35c0-456a-8fe8-f3cb18c8ced7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "c698babb-81fb-41d8-9f50-ad863950d03f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "db09dde56fd7d212",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-guji-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/52b91397e4b099c1d3d7625d/1664332423013-RB4NN824HIKJN05UQKYQ/Ethiopia-Guji-3-Natural-Uraga1.jpg",
+  "platform": "squarespace",
+  "product_id": "6333b2548cb34878dda012ab",
+  "product_type": "",
+  "roaster_slug": "alaskacoffeeroasting",
+  "tags": [],
+  "title": "Ethiopian Guji Natural",
+  "url": "https://www.alaskacoffeeroasting.com/shop/ethiopian-guji-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "French Roast",
+    "variant_id": "330001dd-e2f7-4f9d-aeb7-5e62c3911e47"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Drip",
+    "variant_id": "6b5da7cd-76f8-4faf-b9ce-0f2d5eb3840d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Whole Bean",
+    "variant_id": "77821792-2b72-4010-84c6-d9944c2f88ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Espresso",
+    "variant_id": "d5a24d70-9130-47c9-b96b-7fc1364cf7d5"
+   }
+  ],
+  "vendor": ""
+ }
+]

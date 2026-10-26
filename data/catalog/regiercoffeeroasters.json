@@ -1,0 +1,301 @@
+[
+ {
+  "body_hash": "d9a9bfaf5aae69f4",
+  "first_seen": "2026-10-26",
+  "handle": "adventure-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1038551a4d4a",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Adventure Blend",
+  "url": "https://www.regiercoffeeroasters.com/product-page/adventure-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11e6ebc160e9b5a2",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-la-bastilla-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3a91b810c78d",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Nicaragua La Bastilla Natural",
+  "url": "https://www.regiercoffeeroasters.com/product-page/nicaragua-la-bastilla-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c6395183a4f25a8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-columbia",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5202c2231d8c",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Columbia Decaf",
+  "url": "https://www.regiercoffeeroasters.com/product-page/decaf-columbia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3e98dd7f0a2a41b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "698a13d0c472",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.regiercoffeeroasters.com/product-page/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7dd8b7343387179d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8015982dc939",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.regiercoffeeroasters.com/product-page/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04190a5b1d8838f0",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "887def947363",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://www.regiercoffeeroasters.com/product-page/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f46bdbadf609033",
+  "first_seen": "2026-10-26",
+  "handle": "roastmaster-s-single-origin-choice",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b5014a3718e7",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Roastmaster's Single Origin Choice",
+  "url": "https://www.regiercoffeeroasters.com/product-page/roastmaster-s-single-origin-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d3608eb9ba326e11",
+  "first_seen": "2026-10-26",
+  "handle": "roast-of-the-month",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bb4540d91335",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Roastmaster's Blend Choice",
+  "url": "https://www.regiercoffeeroasters.com/product-page/roast-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4800c39dd47ec27",
+  "first_seen": "2026-10-26",
+  "handle": "farmer-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "be49a59ad37d",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Farmer Blend",
+  "url": "https://www.regiercoffeeroasters.com/product-page/farmer-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8affd87d06d2972",
+  "first_seen": "2026-10-26",
+  "handle": "taster-s-pack-single-origin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d2fe8e87d962",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Taster's Pack (Single Origin)",
+  "url": "https://www.regiercoffeeroasters.com/product-page/taster-s-pack-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "470b9410d7dcdbc8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "eabbd80a65c1",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Brazil Salmo Plus",
+  "url": "https://www.regiercoffeeroasters.com/product-page/brazil-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4547071bb2c2d943",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ee6e3cd4661b",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Sidama Natural",
+  "url": "https://www.regiercoffeeroasters.com/product-page/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f57f0a72b30592de",
+  "first_seen": "2026-10-26",
+  "handle": "rhythm-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f39f5aa9412a",
+  "product_type": "",
+  "roaster_slug": "regiercoffeeroasters",
+  "tags": [],
+  "title": "Rhythm Blend",
+  "url": "https://www.regiercoffeeroasters.com/product-page/rhythm-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,209 @@
+{
+ "4516241178659": {
+  "body_hash": "c06ba964f70dded7",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "bourbon",
+   "forest floor"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "4517565333539": {
+  "body_hash": "de05bb5e794a0954",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cacao nibs",
+   "raspberry torte"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "4517583847459": {
+  "body_hash": "cfb520ad0c97c61f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "complex berry",
+   "bittersweet chocolate",
+   "honey"
+  ],
+  "varietals": [
+   "Castillo",
+   "Catuai",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "4517627854883": {
+  "body_hash": "9d947446a62f3ec4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "graham cracker",
+   "golden raisin",
+   "orange citrus"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "4517634670627": {
+  "body_hash": "649686025b53eb73",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "ripe berry"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Heirloom"
+  ]
+ },
+ "4617257451555": {
+  "body_hash": "60e5c30a60e8c93b",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blackberry",
+   "red grape",
+   "dried fig"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6889058992163": {
+  "body_hash": "be6c35b1f3c925a2",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "orange citrus",
+   "brown sugar",
+   "milk chocolate"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "7141192466467": {
+  "body_hash": "2f8337f2b82a82e0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7175090995235": {
+  "body_hash": "1943979ad360fda4",
+  "elevation_masl_max": 1300,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honey dew melon",
+   "cashew",
+   "sweet bread"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "7177930637347": {
+  "body_hash": "126b9b3fc631777c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "for winter only"
+  ],
+  "varietals": []
+ }
+}

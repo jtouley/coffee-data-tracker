@@ -1,0 +1,1673 @@
+[
+ {
+  "body_hash": "250ced6cf231829f",
+  "first_seen": "2026-10-26",
+  "handle": "little-wing-blend",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1190978.jpg",
+  "platform": "woocommerce",
+  "product_id": "14586",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee"
+  ],
+  "title": "Little Wing Blend",
+  "url": "https://lineacaffe.com/product/little-wing-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 26.4,
+    "title": "250 g",
+    "variant_id": "14586:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.4,
+    "title": "5 lb",
+    "variant_id": "14586:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 26.4,
+    "title": "500 g",
+    "variant_id": "14586:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32c100af82610651",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-camocim-biodynamic",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1174399-2-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "20318",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "biodynamic",
+   "brazil",
+   "camocim",
+   "henrique sloper"
+  ],
+  "title": "Brazil Camocim Biodynamic",
+  "url": "https://lineacaffe.com/product/brazil-camocim-biodynamic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "20318:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "20318:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8cc7d018e880b924",
+  "first_seen": "2026-10-26",
+  "handle": "linea-organic-reserve-espresso",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_RESERVE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "26519",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee"
+  ],
+  "title": "Linea Reserve Espresso",
+  "url": "https://lineacaffe.com/product/linea-organic-reserve-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "26519:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "26519:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "26519:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "467e7315e0321d39",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-reserve",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1200022-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "2883",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Ethiopia Suke Quto Reserve",
+  "url": "https://lineacaffe.com/product/ethiopia-suke-quto-reserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 33.0,
+    "title": "250 g",
+    "variant_id": "2883:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 33.0,
+    "title": "5 lb",
+    "variant_id": "2883:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87b75d9c61b875d0",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-faf-bob-o-link-drip",
+  "image": "https://lineacaffe.com/wp-content/uploads/2023/10/Linea_Brazil_Drip_1024px.jpg",
+  "platform": "woocommerce",
+  "product_id": "31486",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Brazil FAF Drip",
+  "url": "https://lineacaffe.com/product/brazil-faf-bob-o-link-drip/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 177.5,
+    "title": "5 lb",
+    "variant_id": "31486:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "57fdc614ae2b3680",
+  "first_seen": "2026-10-26",
+  "handle": "stripes-on-stripes-blend",
+  "image": "https://lineacaffe.com/wp-content/uploads/2023/10/Linea_Stripes_on_Stripes_1024px.jpg",
+  "platform": "woocommerce",
+  "product_id": "31512",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Stripes on Stripes Blend",
+  "url": "https://lineacaffe.com/product/stripes-on-stripes-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb",
+    "variant_id": "31512:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ee509d3c35d30316",
+  "first_seen": "2026-10-26",
+  "handle": "bob-o-link-espresso",
+  "image": "https://lineacaffe.com/wp-content/uploads/2023/10/Linea_Brazil_Espresso_1024px.jpg",
+  "platform": "woocommerce",
+  "product_id": "31765",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Brazil FAF Espresso",
+  "url": "https://lineacaffe.com/product/bob-o-link-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5 lb",
+    "variant_id": "31765:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "rainbow-blend",
+  "image": "https://lineacaffe.com/wp-content/uploads/2023/10/Linea_Rainbow_Grocery_1024px.jpg",
+  "platform": "woocommerce",
+  "product_id": "31777",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Rainbow Blend",
+  "url": "https://lineacaffe.com/product/rainbow-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb",
+    "variant_id": "31777:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "faf5002e78c8c8ce",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-camocim-biodynamic-espresso",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/05/L1172916-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "31855",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "biodynamic",
+   "brazil",
+   "camocim",
+   "henrique sloper"
+  ],
+  "title": "Brazil Camocim Biodynamic Espresso",
+  "url": "https://lineacaffe.com/product/brazil-camocim-biodynamic-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "31855:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "31855:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "31855:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f52367553ab01b7",
+  "first_seen": "2026-10-26",
+  "handle": "little-wing-blend-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1190978.jpg",
+  "platform": "woocommerce",
+  "product_id": "32504",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Little Wing",
+  "url": "https://lineacaffe.com/product/little-wing-blend-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 33.0,
+    "title": "250 g",
+    "variant_id": "32504:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 33.0,
+    "title": "5 lb",
+    "variant_id": "32504:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 33.0,
+    "title": "500 g",
+    "variant_id": "32504:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb280cd73008519c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-big-calm-decaf-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_BIGCALM-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "32607",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Big Calm Decaf",
+  "url": "https://lineacaffe.com/product/organic-big-calm-decaf-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250 g",
+    "variant_id": "32607:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 32.0,
+    "title": "5 lb",
+    "variant_id": "32607:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 32.0,
+    "title": "500 g",
+    "variant_id": "32607:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "55bed50c628fc5ea",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-camocim-biodynamic-espresso-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1172916-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "32622",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "biodynamic",
+   "brazil",
+   "camocim",
+   "henrique sloper",
+   "wholesale"
+  ],
+  "title": "Brazil Camocim Biodynamic Espresso",
+  "url": "https://lineacaffe.com/product/brazil-camocim-biodynamic-espresso-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "32622:0"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "32622:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d687375666df502",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-reserve-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/L1200022-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "32631",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Ethiopia Suke Quto Reserve",
+  "url": "https://lineacaffe.com/product/ethiopia-suke-quto-reserve-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 33.0,
+    "title": "250 g",
+    "variant_id": "32631:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 33.0,
+    "title": "5 lb",
+    "variant_id": "32631:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e121da87c132fe55",
+  "first_seen": "2026-10-26",
+  "handle": "linea-reserve-espresso-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_RESERVE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "32641",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Linea Reserve Espresso",
+  "url": "https://lineacaffe.com/product/linea-reserve-espresso-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "32641:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "32641:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "32641:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "900f8bdb300822f9",
+  "first_seen": "2026-10-26",
+  "handle": "mighty-sparrow-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/10/L1200005.jpg",
+  "platform": "woocommerce",
+  "product_id": "36253",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Mighty Sparrow",
+  "url": "https://lineacaffe.com/product/mighty-sparrow-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250 g",
+    "variant_id": "36253:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "5 lb",
+    "variant_id": "36253:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a8184826db5294b",
+  "first_seen": "2026-10-26",
+  "handle": "mighty-sparrow",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/10/L1200005.jpg",
+  "platform": "woocommerce",
+  "product_id": "36263",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Mighty Sparrow",
+  "url": "https://lineacaffe.com/product/mighty-sparrow/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250 g",
+    "variant_id": "36263:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "5 lb",
+    "variant_id": "36263:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "55bed50c628fc5ea",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-camocim-biodynamic-espresso-linea-only",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/05/L1172916-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "43166",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "biodynamic",
+   "brazil",
+   "camocim",
+   "henrique sloper",
+   "wholesale"
+  ],
+  "title": "Brazil Camocim Biodynamic Espresso—Linea Only",
+  "url": "https://lineacaffe.com/product/brazil-camocim-biodynamic-espresso-linea-only/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "43166:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "43166:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "43166:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ce6e31071c8ab5f",
+  "first_seen": "2026-10-26",
+  "handle": "silvia-herrera-gesha",
+  "image": "https://lineacaffe.com/wp-content/uploads/2024/11/L1172897-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55093",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Silvia Herrera’s Gesha",
+  "url": "https://lineacaffe.com/product/silvia-herrera-gesha/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "55093:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "55093:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ce6e31071c8ab5f",
+  "first_seen": "2026-10-26",
+  "handle": "silvia-herrera-gesha-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2024/11/L1172897-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55233",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Ethiopia",
+   "Featured",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Silvia Herrera’s Gesha",
+  "url": "https://lineacaffe.com/product/silvia-herrera-gesha-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "55233:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "55233:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "164e566b82774d8b",
+  "first_seen": "2026-10-26",
+  "handle": "india-araku-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2024/12/L1174381-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55718",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "drip",
+   "india",
+   "organic",
+   "wholesale"
+  ],
+  "title": "India Araku Valley Biodynamic",
+  "url": "https://lineacaffe.com/product/india-araku-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 41.0,
+    "title": "250 g",
+    "variant_id": "55718:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 41.0,
+    "title": "5 lb",
+    "variant_id": "55718:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "164e566b82774d8b",
+  "first_seen": "2026-10-26",
+  "handle": "india-araku-valley",
+  "image": "https://lineacaffe.com/wp-content/uploads/2024/12/L1174381-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "55978",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "drip",
+   "india",
+   "organic"
+  ],
+  "title": "India Araku Valley Biodynamic",
+  "url": "https://lineacaffe.com/product/india-araku-valley/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 41.0,
+    "title": "250 g",
+    "variant_id": "55978:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 41.0,
+    "title": "5 lb",
+    "variant_id": "55978:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9907133ede6a69c5",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-patzibir-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/02/L12209002-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "57746",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "drip",
+   "india",
+   "organic",
+   "wholesale"
+  ],
+  "title": "Guatemala Finca Patzibir",
+  "url": "https://lineacaffe.com/product/guatemala-finca-patzibir-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "57746:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "57746:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ee64c37e116a9dd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-patzibir",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/02/L12209002-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "57778",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "drip",
+   "organic"
+  ],
+  "title": "Guatemala Finca Patzibir",
+  "url": "https://lineacaffe.com/product/guatemala-finca-patzibir/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "57778:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "57778:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30efaa4bcf91635b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-decaf-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/04/L1200018.jpg",
+  "platform": "woocommerce",
+  "product_id": "58335",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Ethiopia Suke Decaf",
+  "url": "https://lineacaffe.com/product/ethiopia-suke-decaf-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 34.0,
+    "title": "250 g",
+    "variant_id": "58335:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 34.0,
+    "title": "5 lb",
+    "variant_id": "58335:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 34.0,
+    "title": "500 g",
+    "variant_id": "58335:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a86cbee41cd09bc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-decaf",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/04/L1200018.jpg",
+  "platform": "woocommerce",
+  "product_id": "58341",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Ethiopia Suke Decaf",
+  "url": "https://lineacaffe.com/product/ethiopia-suke-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 34.0,
+    "title": "250 g",
+    "variant_id": "58341:0"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 34.0,
+    "title": "500 g",
+    "variant_id": "58341:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 34.0,
+    "title": "5lb",
+    "variant_id": "58341:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6df6cce8683a3a55",
+  "first_seen": "2026-10-26",
+  "handle": "a4-espresso-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/03/LINEA_A4-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "58554",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "A4 Espresso",
+  "url": "https://lineacaffe.com/product/a4-espresso-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "58554:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "58554:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "58554:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5bead94708cf85bc",
+  "first_seen": "2026-10-26",
+  "handle": "a4-espresso-blend",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/03/LINEA_A4-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "58566",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee"
+  ],
+  "title": "A4 Espresso",
+  "url": "https://lineacaffe.com/product/a4-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "58566:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "58566:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "58566:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d3dc7d3e738cd40",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-espresso-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/06/LINEA_SUKE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60930",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Ethiopia Suke Espresso",
+  "url": "https://lineacaffe.com/product/ethiopia-espresso-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 35.0,
+    "title": "250 g",
+    "variant_id": "60930:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 35.0,
+    "title": "5 lb",
+    "variant_id": "60930:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 35.0,
+    "title": "500 g",
+    "variant_id": "60930:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "547a6e8ce08868f3",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-espresso",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/06/LINEA_SUKE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "60934",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee"
+  ],
+  "title": "Ethiopia Suke Espresso",
+  "url": "https://lineacaffe.com/product/ethiopia-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250 g",
+    "variant_id": "60934:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 28.0,
+    "title": "5 lb",
+    "variant_id": "60934:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 28.0,
+    "title": "500 g",
+    "variant_id": "60934:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "70104d8579fb6c94",
+  "first_seen": "2026-10-26",
+  "handle": "uplift-roast",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/08/Parachute-Logo.png",
+  "platform": "woocommerce",
+  "product_id": "62324",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Uplift Roast",
+  "url": "https://lineacaffe.com/product/uplift-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.2,
+    "title": "10 oz",
+    "variant_id": "62324:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ee42db4ad0e6142",
+  "first_seen": "2026-10-26",
+  "handle": "soft-landing-decaf",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/08/Parachute-Logo.png",
+  "platform": "woocommerce",
+  "product_id": "62715",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Soft Landing Decaf",
+  "url": "https://lineacaffe.com/product/soft-landing-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.2,
+    "title": "10 oz",
+    "variant_id": "62715:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b4e6456fbdfbbd5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nuevo-paraiso",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/09/LINEACHIAPAS-2-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "63186",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Mexico Nuevo Paraiso",
+  "url": "https://lineacaffe.com/product/mexico-nuevo-paraiso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "63186:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "63186:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7b4e6456fbdfbbd5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nuevo-paraiso-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2025/09/LINEACHIAPAS-2-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "63190",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Ethiopia",
+   "Featured",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Mexico Nuevo Paraiso",
+  "url": "https://lineacaffe.com/product/mexico-nuevo-paraiso-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "63190:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "63190:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "731cbe61f476b0b7",
+  "first_seen": "2026-10-26",
+  "handle": "dark-star-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_DARKSTAR-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "72431",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale"
+  ],
+  "title": "Dark Star",
+  "url": "https://lineacaffe.com/product/dark-star-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250 g",
+    "variant_id": "72431:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 32.0,
+    "title": "5 lb",
+    "variant_id": "72431:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "731cbe61f476b0b7",
+  "first_seen": "2026-10-26",
+  "handle": "dark-star",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_DARKSTAR-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "72495",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Dark Star",
+  "url": "https://lineacaffe.com/product/dark-star/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250 g",
+    "variant_id": "72495:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 32.0,
+    "title": "5 lb",
+    "variant_id": "72495:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6358131305b3c77",
+  "first_seen": "2026-10-26",
+  "handle": "peru-el-roble-reserve-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_PERU-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "75541",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Ethiopia",
+   "Featured",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Peru El Roble Reserve",
+  "url": "https://lineacaffe.com/product/peru-el-roble-reserve-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "75541:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "75541:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc5165bb76e6c31b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-el-roble-reserve",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_PERU-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "75639",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Peru El Roble Reserve",
+  "url": "https://lineacaffe.com/product/peru-el-roble-reserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 33.6,
+    "title": "250 g",
+    "variant_id": "75639:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 33.6,
+    "title": "5 lb",
+    "variant_id": "75639:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ae204defe17ba7d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-faf-felipes-reserve",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_FELIPES_RESERVE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "76420",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Brazil FAF Felipe’s Reserve",
+  "url": "https://lineacaffe.com/product/brazil-faf-felipes-reserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 46.0,
+    "title": "250 g",
+    "variant_id": "76420:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.0,
+    "title": "5 lb",
+    "variant_id": "76420:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ae204defe17ba7d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-faf-felipes-reserve-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_FELIPES_RESERVE-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "76424",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Brazil FAF Felipe’s Reserve",
+  "url": "https://lineacaffe.com/product/brazil-faf-felipes-reserve-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 46.0,
+    "title": "250 g",
+    "variant_id": "76424:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 46.0,
+    "title": "5 lb",
+    "variant_id": "76424:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2615319a61cdd00",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/08/COLOMBIA-PINK-BOURBON-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "77479",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured",
+   "Wholesale"
+  ],
+  "title": "Colombia Pink Bourbon",
+  "url": "https://lineacaffe.com/product/colombia-pink-bourbon-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 48.0,
+    "title": "250 g",
+    "variant_id": "77479:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.0,
+    "title": "5 lb",
+    "variant_id": "77479:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2615319a61cdd00",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pink-bourbon",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/08/COLOMBIA-PINK-BOURBON-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "77595",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Colombia Pink Bourbon",
+  "url": "https://lineacaffe.com/product/colombia-pink-bourbon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 48.0,
+    "title": "250 g",
+    "variant_id": "77595:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.0,
+    "title": "5 lb",
+    "variant_id": "77595:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae3b5c3b909ca3d7",
+  "first_seen": "2026-10-26",
+  "handle": "tolima-colombia-reserve",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/09/L1190998.jpg",
+  "platform": "woocommerce",
+  "product_id": "78362",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Tolima Colombia Reserve",
+  "url": "https://lineacaffe.com/product/tolima-colombia-reserve/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "78362:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "78362:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae3b5c3b909ca3d7",
+  "first_seen": "2026-10-26",
+  "handle": "tolima-colombia-reserve-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/09/L1190998.jpg",
+  "platform": "woocommerce",
+  "product_id": "78365",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Tolima Colombia Reserve",
+  "url": "https://lineacaffe.com/product/tolima-colombia-reserve-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 42.0,
+    "title": "250 g",
+    "variant_id": "78365:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.0,
+    "title": "5 lb",
+    "variant_id": "78365:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59efc8dcc42d149e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-hirut-shallo-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/10/L122191000-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "78926",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Ethiopia Natural Hirut Shallo",
+  "url": "https://lineacaffe.com/product/ethiopia-natural-hirut-shallo-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "78926:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "78926:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59efc8dcc42d149e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-hirut-shallo",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/10/L122191000-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "79109",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Featured"
+  ],
+  "title": "Ethiopia Natural Hirut Shallo",
+  "url": "https://lineacaffe.com/product/ethiopia-natural-hirut-shallo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "79109:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.0,
+    "title": "5 lb",
+    "variant_id": "79109:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "080ab594ac3dabe9",
+  "first_seen": "2026-10-26",
+  "handle": "dopa-blend-ws",
+  "image": "https://lineacaffe.com/wp-content/uploads/2026/10/L1240435-2-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "79620",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "DOPA Blend",
+  "url": "https://lineacaffe.com/product/dopa-blend-ws/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 37.0,
+    "title": "250 g",
+    "variant_id": "79620:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.0,
+    "title": "5 lb",
+    "variant_id": "79620:1"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 37.0,
+    "title": "500 g",
+    "variant_id": "79620:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "18a5e0877387c23c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic",
+  "image": "https://lineacaffe.com/wp-content/uploads/2022/06/LINEA_BIGCALM-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "98",
+  "product_type": "variable",
+  "roaster_slug": "lineacaffe",
+  "tags": [
+   "100% Certified Organic Coffee"
+  ],
+  "title": "Big Calm Decaf",
+  "url": "https://lineacaffe.com/product/decaf-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250 g",
+    "variant_id": "98:0"
+   },
+   {
+    "available": true,
+    "grams": 500,
+    "price_usd": 32.0,
+    "title": "500 g",
+    "variant_id": "98:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 32.0,
+    "title": "5lb",
+    "variant_id": "98:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

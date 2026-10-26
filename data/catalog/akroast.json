@@ -1,0 +1,70 @@
+[
+ {
+  "body_hash": "b0b0d448ca325931",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-blend",
+  "image": "https://akroast.com/wp-content/uploads/2020/06/Mountain-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "20",
+  "product_type": "variable",
+  "roaster_slug": "akroast",
+  "tags": [
+   "Coffee",
+   "alaska",
+   "coffee"
+  ],
+  "title": "Mountain Blend",
+  "url": "https://akroast.com/shop/mountain-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "1lb bag",
+    "variant_id": "20:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.0,
+    "title": "2lb bag",
+    "variant_id": "20:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7fdc1d8a09755888",
+  "first_seen": "2026-10-26",
+  "handle": "summit-blend",
+  "image": "https://akroast.com/wp-content/uploads/2023/07/Summit-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "553",
+  "product_type": "variable",
+  "roaster_slug": "akroast",
+  "tags": [
+   "Coffee",
+   "alaska",
+   "coffee"
+  ],
+  "title": "Summit Blend",
+  "url": "https://akroast.com/shop/summit-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "1 lb bag",
+    "variant_id": "553:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.0,
+    "title": "2 lb bag",
+    "variant_id": "553:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

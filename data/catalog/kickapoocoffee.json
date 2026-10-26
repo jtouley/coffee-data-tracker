@@ -1,0 +1,1827 @@
+[
+ {
+  "body_hash": "08bb6506e9db4312",
+  "first_seen": "2026-10-26",
+  "handle": "2025-transparency-report",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/Main-Prod-Image-Trans-Report.png?v=1779995461",
+  "platform": "shopify",
+  "product_id": "10152041578794",
+  "product_type": "Merchandise",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [],
+  "title": "Transparency Report",
+  "url": "https://wonderstate.com/products/2025-transparency-report",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "51602159698218"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "3f1884198c10bb30",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia-abdo-aba-mecha",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250gWebProduct-DecafEthiopiaAbdoAbaMecha2026.png?v=1781029936",
+  "platform": "shopify",
+  "product_id": "10156448121130",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Decaf Ethiopia Abdo Aba Mecha",
+  "url": "https://wonderstate.com/products/decaf-ethiopia-abdo-aba-mecha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 25.0,
+    "title": "250 g",
+    "variant_id": "51619355296042"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 13.75,
+    "title": "100 g",
+    "variant_id": "51619355328810"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 58.0,
+    "title": "1.5 lb",
+    "variant_id": "51619355361578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5 lb",
+    "variant_id": "51619355394346"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "ff04933db392b054",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-ninga-lot-11",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250g-Web_Product-Image-Burundi-Ninga-Lot-11.png?v=1785178365",
+  "platform": "shopify",
+  "product_id": "10175600460074",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Burundi Ninga Lot 11",
+  "url": "https://wonderstate.com/products/burundi-ninga-lot-11",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 27.0,
+    "title": "250 g",
+    "variant_id": "51805356491050"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 14.75,
+    "title": "100 g",
+    "variant_id": "51805356523818"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 63.0,
+    "title": "1.5 lb",
+    "variant_id": "51805356556586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5 lb",
+    "variant_id": "51805356589354"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "8e4d878a41d22393",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gatura-aa",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250gWeb_ProductImageKenyaGaturaAA.png?v=1784547838",
+  "platform": "shopify",
+  "product_id": "10199640244522",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Kenya Gatura AA",
+  "url": "https://wonderstate.com/products/kenya-gatura-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250 g",
+    "variant_id": "52025643139370"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 16.0,
+    "title": "100 g",
+    "variant_id": "52025643172138"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 65.0,
+    "title": "1.5 lb",
+    "variant_id": "52025643204906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 190.0,
+    "title": "5 lb",
+    "variant_id": "52025643237674"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "44f51345864a52e0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-okoluu",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250gWeb_ProductImageEthiopiaOkoluu.png?v=1784547470",
+  "platform": "shopify",
+  "product_id": "10210402664746",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Okoluu",
+  "url": "https://wonderstate.com/products/ethiopia-okoluu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 32.0,
+    "title": "250 g",
+    "variant_id": "52055528374570"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 17.5,
+    "title": "100 g",
+    "variant_id": "52055528407338"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 76.0,
+    "title": "1.5 lb",
+    "variant_id": "52055528440106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 219.0,
+    "title": "5 lb",
+    "variant_id": "52055528472874"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "3d3596bedce5da55",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-llaqta-pata",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250gWeb_ProductImagePeruLlaqtaPata.jpg?v=1787584432",
+  "platform": "shopify",
+  "product_id": "10243529441578",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Peru Llaqta Pata",
+  "url": "https://wonderstate.com/products/organic-peru-llaqta-pata",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 30.0,
+    "title": "250 g",
+    "variant_id": "52186486079786"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 16.5,
+    "title": "100 g",
+    "variant_id": "52186486112554"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 70.0,
+    "title": "1.5 lb",
+    "variant_id": "52186486145322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 205.0,
+    "title": "5 lb",
+    "variant_id": "52186486178090"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "9e7871b2dc10f6d5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-alo-bombe",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250g-Web_ProductEthiopiaAloBombe_1.jpg?v=1789418338",
+  "platform": "shopify",
+  "product_id": "10287513338154",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Alo Bombe",
+  "url": "https://wonderstate.com/products/ethiopia-alo-bombe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 27.0,
+    "title": "250 g",
+    "variant_id": "52442588021034"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 14.75,
+    "title": "100 g",
+    "variant_id": "52442588053802"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 63.0,
+    "title": "1.5 lb",
+    "variant_id": "52442588086570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5 lb",
+    "variant_id": "52442588119338"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "41df2a4bbf35f48d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-los-pinos-1",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/A7_5464_1.jpg?v=1788294375",
+  "platform": "shopify",
+  "product_id": "10288314057002",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "Reserve Lot",
+   "single origin"
+  ],
+  "title": "Colombia Los Pinos",
+  "url": "https://wonderstate.com/products/colombia-los-pinos-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 22.0,
+    "title": "100 g",
+    "variant_id": "52452121641258"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 40.0,
+    "title": "250 g",
+    "variant_id": "52452121674026"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "28e92a89a9906257",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-guazcoloma",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250gWeb_ProductImageColombiaGuazcoloma.jpg?v=1789565747",
+  "platform": "shopify",
+  "product_id": "10310155436330",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Colombia Guazcoloma",
+  "url": "https://wonderstate.com/products/colombia-guazcoloma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 27.0,
+    "title": "250 g",
+    "variant_id": "52604689383722"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 14.75,
+    "title": "100 g",
+    "variant_id": "52604689416490"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 63.0,
+    "title": "1.5 lb",
+    "variant_id": "52604689449258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5 lb",
+    "variant_id": "52604689482026"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "2b4dc28470bab98d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-danche",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250g-Web_ProductEthiopiaDanche2026.jpg?v=1789566087",
+  "platform": "shopify",
+  "product_id": "10310174409002",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Danche",
+  "url": "https://wonderstate.com/products/ethiopia-danche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 25.0,
+    "title": "250 g",
+    "variant_id": "52604821897514"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 13.75,
+    "title": "100 g",
+    "variant_id": "52604821930282"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 58.0,
+    "title": "1.5 lb",
+    "variant_id": "52604821963050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5 lb",
+    "variant_id": "52604821995818"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "767c61629a9be8f2",
+  "first_seen": "2026-10-26",
+  "handle": "barista-express-impress",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/pdp_notag_1_9577b2f4-d98a-4cf4-8852-033d2f77e0db.png?v=1789488733",
+  "platform": "shopify",
+  "product_id": "10311510950186",
+  "product_type": "Brewing Gear",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [],
+  "title": "Breville Barista Express Impress",
+  "url": "https://wonderstate.com/products/barista-express-impress",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 799.95,
+    "title": "Stainless Steel",
+    "variant_id": "52613554831658"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "47dbe9054881abcd",
+  "first_seen": "2026-10-26",
+  "handle": "peru-nueva-alianza-red-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/alianza-red-gesha.png?v=1790870122",
+  "platform": "shopify",
+  "product_id": "10334189584682",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "Reserve Lot",
+   "single origin"
+  ],
+  "title": "Peru Nueva Alianza Red Gesha",
+  "url": "https://wonderstate.com/products/peru-nueva-alianza-red-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 28.0,
+    "title": "100 g",
+    "variant_id": "52809588736298"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 51.0,
+    "title": "250 g",
+    "variant_id": "52809588769066"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "0ef7df7cb68989ab",
+  "first_seen": "2026-10-26",
+  "handle": "organic-driftless-3",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/driftless-_1_ddfd300e-5b28-49b5-b675-42b57f5c29c1.png?v=1783357663",
+  "platform": "shopify",
+  "product_id": "4619849826355",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-6",
+   "brightness-5",
+   "roast-6"
+  ],
+  "title": "Organic Driftless",
+  "url": "https://wonderstate.com/products/organic-driftless-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352654524467"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352654557235"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352654590003"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352654622771"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352654688307"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352654721075"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352654753843"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352654786611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352654852147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352654884915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352654917683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352654950451"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "0797419d28dcb911",
+  "first_seen": "2026-10-26",
+  "handle": "big-dipper",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/big-dipper_2343a643-33a4-41f6-b254-250409c9be18.png?v=1763496356",
+  "platform": "shopify",
+  "product_id": "4619863326771",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-7",
+   "brightness-3",
+   "roast-7"
+  ],
+  "title": "Organic Big Dipper",
+  "url": "https://wonderstate.com/products/big-dipper",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352670449715"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352670482483"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352670515251"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352670548019"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352670613555"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352670646323"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352670679091"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352670711859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352670777395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352670810163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352670842931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352670875699"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "f84fd40641476810",
+  "first_seen": "2026-10-26",
+  "handle": "organic-off-grid-super-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/off-grid_94eb83a9-6b32-4370-8585-a290bcd0f641.png?v=1763496481",
+  "platform": "shopify",
+  "product_id": "4619870765107",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-8",
+   "brightness-1",
+   "organic-big-dipper",
+   "organic-driftless",
+   "organic-harvest-blend",
+   "roast-9"
+  ],
+  "title": "Organic Off Grid",
+  "url": "https://wonderstate.com/products/organic-off-grid-super-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352681033779"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352681066547"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352681099315"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352681132083"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352681197619"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352681230387"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352681263155"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352681295923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352681361459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352681394227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352681426995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352681459763"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "5d8c51a8b84cdd07",
+  "first_seen": "2026-10-26",
+  "handle": "organic-star-valley-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/star-valley.png?v=1763496544",
+  "platform": "shopify",
+  "product_id": "4619880824883",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-6",
+   "brightness-5",
+   "organic-decaf-honduras-water-processed",
+   "organic-decaf-peru-water-processed",
+   "roast-5"
+  ],
+  "title": "Organic Star Valley Decaf",
+  "url": "https://wonderstate.com/products/organic-star-valley-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352695615539"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352695648307"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352695681075"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352695713843"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352695779379"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352695812147"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352695844915"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352695877683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352695943219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352695975987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352696008755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352696041523"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "c7f29cf825f7b869",
+  "first_seen": "2026-10-26",
+  "handle": "organic-flyway",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/flyway.png?v=1763496429",
+  "platform": "shopify",
+  "product_id": "4619884298291",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-7",
+   "brightness-4",
+   "brightness-6",
+   "roast-5"
+  ],
+  "title": "Organic Flyway",
+  "url": "https://wonderstate.com/products/organic-flyway",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352702136371"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352702169139"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352702201907"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352702234675"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352702300211"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352702332979"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352702365747"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352702398515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352702464051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352702496819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352702529587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352702562355"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "13a0729af5726f9c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-heartstrings",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/hearstrings.png?v=1763496457",
+  "platform": "shopify",
+  "product_id": "4619887640627",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "blend",
+   "body-6",
+   "brightness-6",
+   "organic-driftless",
+   "organic-flyway",
+   "organic-winter-solstice",
+   "roast-6"
+  ],
+  "title": "Organic Heartstrings",
+  "url": "https://wonderstate.com/products/organic-heartstrings",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "32352706887731"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "32352706920499"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "32352706953267"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "32352706986035"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "32352707051571"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "32352707084339"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "32352707117107"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "32352707149875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "32352707215411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "32352707248179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Drip",
+    "variant_id": "32352707280947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine",
+    "variant_id": "32352707313715"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "e86ea07008b65cae",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-san-fernando",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/Peru-Front-Web.png?v=1774546706",
+  "platform": "shopify",
+  "product_id": "4746883301427",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "body-7",
+   "brightness-6",
+   "diner-mug",
+   "light roast",
+   "organic-bloom-blend",
+   "organic-colombia-fondo-paez",
+   "perennial",
+   "roast-3"
+  ],
+  "title": "Organic Peru San Fernando",
+  "url": "https://wonderstate.com/products/organic-peru-san-fernando",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Whole Bean",
+    "variant_id": "51189076754730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51189076787498"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Coarse",
+    "variant_id": "51189098610986"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Drip",
+    "variant_id": "51189098643754"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Fine",
+    "variant_id": "51189098676522"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "51189098709290"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "51189098742058"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "51189098774826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "51189098807594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Drip",
+    "variant_id": "51189098840362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine",
+    "variant_id": "51189098873130"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Whole Bean",
+    "variant_id": "51253520924970"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "7c39308f640bc3a6",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-tojquia",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/250g-Web_ProductGuatemalaTojquia2026_1.jpg?v=1789565361",
+  "platform": "shopify",
+  "product_id": "6837052178483",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Guatemala Tojquia",
+  "url": "https://wonderstate.com/products/organic-guatemala-tojquia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.0,
+    "title": "250 g",
+    "variant_id": "41000422604851"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 56.0,
+    "title": "1.5 lb",
+    "variant_id": "41000422768691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb",
+    "variant_id": "41000422932531"
+   },
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 13.25,
+    "title": "100 g",
+    "variant_id": "50967657480490"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "fd833b0e70fe5049",
+  "first_seen": "2026-10-26",
+  "handle": "organic-harvest-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/harvest.png?v=1763496904",
+  "platform": "shopify",
+  "product_id": "8042166465",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [],
+  "title": "Organic Harvest",
+  "url": "https://wonderstate.com/products/organic-harvest-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Whole Bean",
+    "variant_id": "26458045953"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "26458046081"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "26458046145"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "26458046209"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Whole Bean",
+    "variant_id": "26458046401"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "26458046529"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "26458046593"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "26458046657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "26458046849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "26458046977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Drip",
+    "variant_id": "26458047041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine",
+    "variant_id": "26458047105"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "9e93052f9803d1b3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-agua-blanca",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/Colombia--Front-Web.png?v=1774546631",
+  "platform": "shopify",
+  "product_id": "8262524764458",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "body-6",
+   "brightness-6",
+   "colombia-la-independencia",
+   "light roast",
+   "organic-colombia-fondo-paez",
+   "organic-ethiopia-chelbessa",
+   "perennial",
+   "roast-3"
+  ],
+  "title": "Organic Colombia Agua Blanca",
+  "url": "https://wonderstate.com/products/colombia-agua-blanca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Whole bean",
+    "variant_id": "44949464121642"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Coarse",
+    "variant_id": "44949464154410"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Drip",
+    "variant_id": "44949464187178"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Fine",
+    "variant_id": "44949464219946"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "44949464285482"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "44949464318250"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "44949464351018"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "44949464383786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "44949464449322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "44949464482090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Drip",
+    "variant_id": "44949464514858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine",
+    "variant_id": "44949464580394"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "7ee759c430cb9fb9",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexico-santuario",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/Mexico-Santuario-Web.png?v=1774546597",
+  "platform": "shopify",
+  "product_id": "9443826041130",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "bayfield-hometown-mug",
+   "blend",
+   "body-7",
+   "brightness-5",
+   "light roast",
+   "organic-colombia-la-regina",
+   "organic-guatemala-adenisa",
+   "organic-summer-solstice",
+   "perennial",
+   "roast-4"
+  ],
+  "title": "Organic Mexico Santuario",
+  "url": "https://wonderstate.com/products/organic-mexico-santuario",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Whole Bean",
+    "variant_id": "49135547973930"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Whole Bean",
+    "variant_id": "49135548170538"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Fine",
+    "variant_id": "50004637548842"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Drip",
+    "variant_id": "50004637581610"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Coarse",
+    "variant_id": "50004637614378"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "50004637647146"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "50004637679914"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "50004637712682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "51238155387178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Drip",
+    "variant_id": "51238156632362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine",
+    "variant_id": "51238157484330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "51238158074154"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "1dd7675e30282d0e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/Ethiopia-Front-Web.png?v=1774546661",
+  "platform": "shopify",
+  "product_id": "9716151353642",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [
+   "body-6",
+   "brightness-6",
+   "light roast",
+   "organic-ethiopia-chelbessa",
+   "organic-heartstrings",
+   "perennial",
+   "roast-2"
+  ],
+  "title": "Organic Ethiopia Natural Process",
+  "url": "https://wonderstate.com/products/ethiopia-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Whole bean",
+    "variant_id": "49978296893738"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Coarse",
+    "variant_id": "49978296926506"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Drip",
+    "variant_id": "49978296959274"
+   },
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 20.0,
+    "title": "8.8 oz / Fine",
+    "variant_id": "49978296992042"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "49978297057578"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "49978297090346"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "49978297123114"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 45.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "49978297155882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "49978297221418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "49978297254186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49978297286954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine",
+    "variant_id": "49978297319722"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "ad8eeb1860cf14b7",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-encore-esp",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/ZCG495_Carousel3.png?v=1758827140",
+  "platform": "shopify",
+  "product_id": "9897137996074",
+  "product_type": "Brewing Gear",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [],
+  "title": "Baratza Encore ESP",
+  "url": "https://wonderstate.com/products/baratza-encore-esp",
+  "variants": [
+   {
+    "available": false,
+    "grams": 363,
+    "price_usd": 199.0,
+    "title": "Black",
+    "variant_id": "50634278207786"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ },
+ {
+  "body_hash": "d62a581abe3feaba",
+  "first_seen": "2026-10-26",
+  "handle": "last-light-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/1348/5769/files/lastlight.png?v=1766520241",
+  "platform": "shopify",
+  "product_id": "9992938389802",
+  "product_type": "Coffee",
+  "roaster_slug": "kickapoocoffee",
+  "tags": [],
+  "title": "Last Light Half Caff",
+  "url": "https://wonderstate.com/products/last-light-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Whole bean",
+    "variant_id": "50983780712746"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Coarse",
+    "variant_id": "50983780745514"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Drip",
+    "variant_id": "50983780778282"
+   },
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz / Fine",
+    "variant_id": "50983780811050"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Whole bean",
+    "variant_id": "50983780843818"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Coarse",
+    "variant_id": "50983780876586"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Drip",
+    "variant_id": "50983780909354"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 lb / Fine",
+    "variant_id": "50983780942122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole bean",
+    "variant_id": "50983780974890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "50983781007658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Drip",
+    "variant_id": "50983781040426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine",
+    "variant_id": "50983781073194"
+   }
+  ],
+  "vendor": "Wonderstate Coffee"
+ }
+]

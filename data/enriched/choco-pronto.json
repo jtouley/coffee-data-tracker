@@ -1,0 +1,149 @@
+{
+ "10850284568735": {
+  "body_hash": "841d5752f2478cab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "10850284667039": {
+  "body_hash": "610174cc98c7a4e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "pecans",
+   "pink grapefruit",
+   "guava"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "10850284699807": {
+  "body_hash": "b2a0e1c187d53ac0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry",
+   "cocoa",
+   "stone fruit"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "10850284732575": {
+  "body_hash": "66358d1665b5ce77",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "pecan",
+   "caramel"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "10850284798111": {
+  "body_hash": "a964198153beea50",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red berries",
+   "chestnut",
+   "spice"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "10911191629983": {
+  "body_hash": "ebbe20f30f1cd582",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry",
+   "almond",
+   "caramel"
+  ],
+  "varietals": [
+   "Typica"
+  ]
+ },
+ "10911386599583": {
+  "body_hash": "309b7c78a3d0700c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "vanilla",
+   "pear",
+   "cardamom"
+  ],
+  "varietals": [
+   "Caturra",
+   "Sarchimor"
+  ]
+ }
+}

@@ -1,0 +1,37 @@
+[
+ {
+  "body_hash": "68412711a6c0ecc6",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-spot-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0259/0831/4184/products/SweetSpot-Updated-12oz.png?v=1630523737",
+  "platform": "shopify",
+  "product_id": "4388884086921",
+  "product_type": "Coffee",
+  "roaster_slug": "prospectcoffee",
+  "tags": [
+   "Balanced",
+   "Chocolate",
+   "Espresso",
+   "Sweet"
+  ],
+  "title": "Sweet Spot Blend",
+  "url": "https://www.prospectcoffee.com/products/sweet-spot-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g)",
+    "variant_id": "31416874762377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2260g)",
+    "variant_id": "31416874795145"
+   }
+  ],
+  "vendor": "PROSPECT COFFEE ROASTERS"
+ }
+]

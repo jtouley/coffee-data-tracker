@@ -1,0 +1,873 @@
+[
+ {
+  "body_hash": "fafc96c52e4b9e07",
+  "first_seen": "2026-10-26",
+  "handle": "cardio-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0536/0087/8774/products/Cardio-Blend-Vera-Roasting-Co.-1675108832.png?v=1675108834",
+  "platform": "shopify",
+  "product_id": "6951590854838",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "veraroasting",
+  "tags": [
+   "5 lb. Ground Bean",
+   "5 lb. Whole Bean",
+   "K-Cup® Pods",
+   "PayWhirl Subscription Plan",
+   "_wf_cus",
+   "blend",
+   "cardio",
+   "cardio blend",
+   "coffee",
+   "recurring",
+   "resveratrol",
+   "roasting",
+   "subscribe",
+   "vera"
+  ],
+  "title": "Cardio Blend",
+  "url": "https://veraroasting.com/products/cardio-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Ground",
+    "variant_id": "40594526798006"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Whole Bean",
+    "variant_id": "40820206993590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "40820207026358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "40823527014582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Ground",
+    "variant_id": "40823540646070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Ground",
+    "variant_id": "40845168378038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "40845183058102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Ground",
+    "variant_id": "40845186859190"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / K-Cup® Pods",
+    "variant_id": "41732663410870"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / K-Cup® Pods",
+    "variant_id": "41732663443638"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / K-Cup® Pods",
+    "variant_id": "41732663476406"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / K-Cup® Pods",
+    "variant_id": "41732663509174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb\tWhole Bean",
+    "variant_id": "41823423791286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb\tGround",
+    "variant_id": "41823423824054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb\tWhole Bean",
+    "variant_id": "41823423922358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb\tGround",
+    "variant_id": "41823423955126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb\tWhole Bean",
+    "variant_id": "41823423987894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb\tGround",
+    "variant_id": "41823424020662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Ground",
+    "variant_id": "41842211848374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842211881142"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / K-Cup® Pods",
+    "variant_id": "41842211913910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb\tWhole Bean",
+    "variant_id": "41842211946678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb\tGround",
+    "variant_id": "41842211979446"
+   }
+  ],
+  "vendor": "Vera Roasting Co."
+ },
+ {
+  "body_hash": "6805a6da0e825b87",
+  "first_seen": "2026-10-26",
+  "handle": "immunity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0536/0087/8774/products/Immunity-Blend-Vera-Roasting-Co.-1665367643.jpg?v=1665367721",
+  "platform": "shopify",
+  "product_id": "7459524935862",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "veraroasting",
+  "tags": [
+   "5 lb. Ground Bean",
+   "5 lb. Whole Bean",
+   "K-Cup® Pods",
+   "PayWhirl Subscription Plan",
+   "beans",
+   "blend",
+   "coffee",
+   "from",
+   "ground",
+   "immunity",
+   "immunity blend",
+   "resveratrol",
+   "roast",
+   "roasting",
+   "that",
+   "whole bean",
+   "with"
+  ],
+  "title": "Immunity Blend",
+  "url": "https://veraroasting.com/products/immunity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Ground",
+    "variant_id": "41768614789302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768614822070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41823720603830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb.\tGround",
+    "variant_id": "41823720636598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Ground",
+    "variant_id": "41842220761270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Ground",
+    "variant_id": "41842220794038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Ground",
+    "variant_id": "41842220826806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842220859574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842220892342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842220925110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Biweekly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842220957878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842220990646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842221023414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Biweekly Subscription / 5 lb.\tGround",
+    "variant_id": "41842221056182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb.\tGround",
+    "variant_id": "41842221088950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb.\tGround",
+    "variant_id": "41842221187254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Ground",
+    "variant_id": "41842422972598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Whole Bean",
+    "variant_id": "41842423005366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb.\tWhole Bean",
+    "variant_id": "41842423038134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb.\tGround",
+    "variant_id": "41842423070902"
+   }
+  ],
+  "vendor": "Vera Roasting Co."
+ },
+ {
+  "body_hash": "5762537d2f16fb7a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-immunity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0536/0087/8774/products/Decaf-Immunity-Blend-Vera-Roasting-Co.-1675103528.png?v=1675112791",
+  "platform": "shopify",
+  "product_id": "7459525951670",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "veraroasting",
+  "tags": [
+   "5 lb. Whole Beans",
+   "5 lbs. Ground Beans",
+   "PayWhirl Subscription Plan",
+   "blend",
+   "coffee",
+   "decaf",
+   "ground",
+   "immunity",
+   "immunity blend",
+   "resveratrol",
+   "roasting",
+   "whole bean"
+  ],
+  "title": "Decaf Immunity Blend",
+  "url": "https://veraroasting.com/products/decaf-immunity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Weekly Subscription / 12 oz. Ground",
+    "variant_id": "41768616689846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Weekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768616722614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Weekly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41823715885238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Weekly Subscription / 5 lb.\tGround",
+    "variant_id": "41823715918006"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Monthly Subscription / 12 oz. Ground",
+    "variant_id": "41842219516086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Bimonthly Subscription / 12 oz. Ground",
+    "variant_id": "41842219548854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Biweekly Subscription / 12 oz. Ground",
+    "variant_id": "41842219581622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Monthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842219614390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Bimonthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842219647158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Biweekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842219679926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Monthly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842219712694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Bimonthly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842219745462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Biweekly Subscription / 5 lb.\tWhole Bean",
+    "variant_id": "41842219778230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Monthly Subscription / 5 lb.\tGround",
+    "variant_id": "41842219810998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Bimonthly Subscription / 5 lb.\tGround",
+    "variant_id": "41842219843766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Biweekly Subscription / 5 lb.\tGround",
+    "variant_id": "41842219876534"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "One Time Purchase / 12 oz. Ground",
+    "variant_id": "41842574885046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "One Time Purchase / 12 oz. Whole Bean",
+    "variant_id": "41842574917814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "One Time Purchase / 5 lb.\tWhole Bean",
+    "variant_id": "41842574950582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "One Time Purchase / 5 lb.\tGround",
+    "variant_id": "41842574983350"
+   }
+  ],
+  "vendor": "Vera Roasting Co."
+ },
+ {
+  "body_hash": "e3cb37844fa27c0f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cardio-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0536/0087/8774/products/Decaf-Cardio-Blend-Vera-Roasting-Co.-1675104276.png?v=1675111975",
+  "platform": "shopify",
+  "product_id": "7459541188790",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "veraroasting",
+  "tags": [
+   "K-Cup® Pods",
+   "PayWhirl Subscription Plan",
+   "blend",
+   "cardio",
+   "cardio blend",
+   "coffee",
+   "decaf",
+   "ground",
+   "resveratrol",
+   "roasting",
+   "whole bean"
+  ],
+  "title": "Decaf Cardio Blend",
+  "url": "https://veraroasting.com/products/decaf-cardio-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Weekly Subscription / 12 oz. Ground",
+    "variant_id": "41768666726582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Weekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768666759350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Biweekly Subscription / 12 oz. Ground",
+    "variant_id": "41768693334198"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Monthly Subscription / 12 oz. Ground",
+    "variant_id": "41768693399734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Bimonthly Subscription / 12 oz. Ground",
+    "variant_id": "41768693432502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Biweekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768693465270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Monthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768693498038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "Bimonthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41768693530806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Weekly Subscription / 5 lb. Ground",
+    "variant_id": "41823704809654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Biweekly Subscription / 5 lb. Ground",
+    "variant_id": "41823704842422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Monthly Subscription / 5 lb. Ground",
+    "variant_id": "41823704875190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Bimonthly Subscription / 5 lb. Ground",
+    "variant_id": "41823704907958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Weekly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41823704940726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Biweekly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41823704973494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Monthly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41823705006262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Bimonthly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41823705039030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "One Time Purchase / 12 oz. Ground",
+    "variant_id": "41842568429750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "One Time Purchase / 12 oz. Whole Bean",
+    "variant_id": "41842568462518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "One Time Purchase / 5 lb. Ground",
+    "variant_id": "41842568495286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "One Time Purchase / 5 lb. Whole Bean",
+    "variant_id": "41842568528054"
+   }
+  ],
+  "vendor": "Vera Roasting Co."
+ },
+ {
+  "body_hash": "c28e1ff7dd90788b",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0536/0087/8774/products/Dark-Roast-Cardio-Blend-Vera-Roasting-Co.-1664474674.jpg?v=1666773023",
+  "platform": "shopify",
+  "product_id": "7460449976502",
+  "product_type": "Bagged Coffee",
+  "roaster_slug": "veraroasting",
+  "tags": [
+   "K-Cup® Pods",
+   "PayWhirl Subscription Plan",
+   "_wf_cus",
+   "blend",
+   "cardio",
+   "coffee",
+   "dark roast cardio blend",
+   "recurring",
+   "resveratrol",
+   "roasting",
+   "vera"
+  ],
+  "title": "Dark Roast Cardio Blend",
+  "url": "https://veraroasting.com/products/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Ground",
+    "variant_id": "41771031036086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "One Time Purchase / 12 oz. Whole Bean",
+    "variant_id": "41771031068854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Ground",
+    "variant_id": "41771031134390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Biweekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41771031167158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Ground",
+    "variant_id": "41771031232694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Monthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41771031265462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Ground",
+    "variant_id": "41771031330998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Bimonthly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41771031363766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Ground",
+    "variant_id": "41842216009910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.97,
+    "title": "Weekly Subscription / 12 oz. Whole Bean",
+    "variant_id": "41842216042678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb. Ground",
+    "variant_id": "41842362187958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "One Time Purchase / 5 lb. Whole Bean",
+    "variant_id": "41842362220726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Biweekly Subscription / 5 lb. Ground",
+    "variant_id": "41842362253494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Biweekly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41842362286262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb. Ground",
+    "variant_id": "41842362319030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Monthly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41842362351798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb. Ground",
+    "variant_id": "41842362384566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Bimonthly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41842362417334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb. Ground",
+    "variant_id": "41842362450102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.0,
+    "title": "Weekly Subscription / 5 lb. Whole Bean",
+    "variant_id": "41842362482870"
+   }
+  ],
+  "vendor": "Vera Roasting Co."
+ }
+]

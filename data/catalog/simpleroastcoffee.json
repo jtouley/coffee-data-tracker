@@ -1,0 +1,432 @@
+[
+ {
+  "body_hash": "0b9851adfc5164f3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0719/9087/0257/files/E0A40E3F-8AA5-4972-9AD7-7089EB198976.jpg?v=1772817216",
+  "platform": "shopify",
+  "product_id": "8689230512369",
+  "product_type": "",
+  "roaster_slug": "simpleroastcoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling GR1",
+  "url": "https://simpleroastcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45735563526385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "45735563559153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45735563591921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45735563624689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Filter Drip",
+    "variant_id": "45735563657457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45735563690225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Home Espresso",
+    "variant_id": "45735563722993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Pour Over",
+    "variant_id": "45735563755761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45735563788529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Filter Drip",
+    "variant_id": "45735563821297"
+   }
+  ],
+  "vendor": "Simple Roast Coffee"
+ },
+ {
+  "body_hash": "e2ea3c0a0345768b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-comsa",
+  "image": "https://cdn.shopify.com/s/files/1/0719/9087/0257/files/FullSizeRender_VSCO_81.jpg?v=1777393913",
+  "platform": "shopify",
+  "product_id": "8689230545137",
+  "product_type": "",
+  "roaster_slug": "simpleroastcoffee",
+  "tags": [],
+  "title": "Organic Honduras COMSA Marcala SHG",
+  "url": "https://simpleroastcoffee.com/products/honduras-comsa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45732209557745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Filter Drip",
+    "variant_id": "45732230037745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45732230070513"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "45732230103281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45732230136049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45732230168817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Filter Drip",
+    "variant_id": "45732230201585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45732230234353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Home Espresso",
+    "variant_id": "45732230267121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Pour Over",
+    "variant_id": "45732230299889"
+   }
+  ],
+  "vendor": "Simple Roast Coffee"
+ },
+ {
+  "body_hash": "1acc2f20eca81d4f",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0719/9087/0257/files/8D65BBBC-2932-4C34-939F-7591C37475FB.jpg?v=1772817125",
+  "platform": "shopify",
+  "product_id": "8689230577905",
+  "product_type": "",
+  "roaster_slug": "simpleroastcoffee",
+  "tags": [],
+  "title": "Mocha-Java Espresso Blend",
+  "url": "https://simpleroastcoffee.com/products/mocha-java-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45735462994161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Filter Drip",
+    "variant_id": "45735463026929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45735463059697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "45735463092465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45735463125233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45735463158001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Filter Drip",
+    "variant_id": "45735463190769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45735463223537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Home Espresso",
+    "variant_id": "45735463256305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Pour Over",
+    "variant_id": "45735463289073"
+   }
+  ],
+  "vendor": "Simple Roast Coffee"
+ },
+ {
+  "body_hash": "6786250f2485ee60",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0719/9087/0257/files/67113CB4-3FB0-4C5A-A640-0B011B22313A.jpg?v=1772817073",
+  "platform": "shopify",
+  "product_id": "8689230643441",
+  "product_type": "",
+  "roaster_slug": "simpleroastcoffee",
+  "tags": [],
+  "title": "Ethiopia Natural Kembata",
+  "url": "https://simpleroastcoffee.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45732215292145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "45732215324913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45732215357681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45732215390449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Filter Drip",
+    "variant_id": "45732215423217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45732215455985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Home Espresso",
+    "variant_id": "45732215488753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Pour Over",
+    "variant_id": "45732215521521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45732215554289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Filter Drip",
+    "variant_id": "45732215587057"
+   }
+  ],
+  "vendor": "Simple Roast Coffee"
+ },
+ {
+  "body_hash": "e3bd4221ad167697",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0719/9087/0257/files/BA111653-CC6C-4F6E-A275-6A14198187B2.jpg?v=1772816922",
+  "platform": "shopify",
+  "product_id": "8699979399409",
+  "product_type": "",
+  "roaster_slug": "simpleroastcoffee",
+  "tags": [],
+  "title": "Colombia Royal Select MWP Decaf",
+  "url": "https://simpleroastcoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45773585219825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Home Espresso",
+    "variant_id": "45773585252593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Pour Over",
+    "variant_id": "45773585285361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45773585318129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz / Filter Drip",
+    "variant_id": "45773585350897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45773585383665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Home Espresso",
+    "variant_id": "45773585416433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Pour Over",
+    "variant_id": "45773585449201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45773585481969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb / Filter Drip",
+    "variant_id": "45773585514737"
+   }
+  ],
+  "vendor": "Simple Roast Coffee"
+ }
+]

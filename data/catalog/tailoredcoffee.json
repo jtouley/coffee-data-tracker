@@ -1,0 +1,186 @@
+[
+ {
+  "body_hash": "6aeab4df3169fd58",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bumba-16",
+  "image": "https://cdn.shopify.com/s/files/1/0442/0046/0453/files/burundiwebsite1.jpg?v=1789834386",
+  "platform": "shopify",
+  "product_id": "8668228485312",
+  "product_type": "Coffee",
+  "roaster_slug": "tailoredcoffee",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Burundi Bumba #16",
+  "url": "https://tailoredcoffee.com/products/burundi-bumba-16",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz",
+    "variant_id": "48727974936768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "1lb (wholesale)",
+    "variant_id": "49074118328512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "49074118361280"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz (wholesale)",
+    "variant_id": "49074145460416"
+   }
+  ],
+  "vendor": "Tailored CR"
+ },
+ {
+  "body_hash": "cb43d862043be422",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gondo-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0442/0046/0453/files/kenyawebsite1.jpg?v=1789834359",
+  "platform": "shopify",
+  "product_id": "8668231139520",
+  "product_type": "Coffee",
+  "roaster_slug": "tailoredcoffee",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Kenya Gondo AB",
+  "url": "https://tailoredcoffee.com/products/kenya-gondo-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz",
+    "variant_id": "48728025399488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "1lb (wholesale)",
+    "variant_id": "49074118262976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "49074118295744"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz (wholesale)",
+    "variant_id": "49074145493184"
+   }
+  ],
+  "vendor": "Tailored CR"
+ },
+ {
+  "body_hash": "0954fce141ba3741",
+  "first_seen": "2026-10-26",
+  "handle": "yukro",
+  "image": "https://cdn.shopify.com/s/files/1/0442/0046/0453/files/ethiwebsite1.jpg?v=1789835039",
+  "platform": "shopify",
+  "product_id": "8754890801344",
+  "product_type": "Coffee",
+  "roaster_slug": "tailoredcoffee",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Yukro",
+  "url": "https://tailoredcoffee.com/products/yukro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz",
+    "variant_id": "49049924239552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "1lb (wholesale)",
+    "variant_id": "49074118197440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "49074118230208"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz (wholesale)",
+    "variant_id": "49074145525952"
+   }
+  ],
+  "vendor": "Tailored CR"
+ },
+ {
+  "body_hash": "4e600d62a71f51be",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9607151452352",
+  "product_type": "Coffee",
+  "roaster_slug": "tailoredcoffee",
+  "tags": [
+   "wholesale"
+  ],
+  "title": "Decaf",
+  "url": "https://tailoredcoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz",
+    "variant_id": "49074118492352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "1lb (wholesale)",
+    "variant_id": "49074118525120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb (wholesale)",
+    "variant_id": "49074118557888"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz (wholesale)",
+    "variant_id": "49074145558720"
+   }
+  ],
+  "vendor": "Tailored Coffee Roasters"
+ }
+]

@@ -1,0 +1,99 @@
+{
+ "635806d812bd91691dd3b744": {
+  "body_hash": "16717f0213e28502",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "maple syrup",
+   "nutmeg"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "63580dd10e079e070a586264": {
+  "body_hash": "07479782d97cd949",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "almond",
+   "cinnamon"
+  ],
+  "varietals": []
+ },
+ "6443c6d2066bc57db5836916": {
+  "body_hash": "8640e4ec565a6595",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "almond",
+   "orange zest"
+  ],
+  "varietals": []
+ },
+ "657a39ded7721f10d70a571f": {
+  "body_hash": "66187d6ff6cf7d3a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "hazelnut",
+   "raspberry"
+  ],
+  "varietals": []
+ },
+ "66daf11896240f14b29b956a": {
+  "body_hash": "5710e7b6c83f88d7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dark chocolate",
+   "maple syrup",
+   "nutmeg"
+  ],
+  "varietals": []
+ }
+}

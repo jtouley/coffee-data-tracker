@@ -1,0 +1,319 @@
+[
+ {
+  "body_hash": "b0a20d1881cca642",
+  "first_seen": "2026-10-26",
+  "handle": "mw-dcaff-mexico-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/MW_D_CAFF.webp?v=1775312194",
+  "platform": "shopify",
+  "product_id": "10020864721080",
+  "product_type": "Medium Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Mexico",
+   "caramel",
+   "coffee",
+   "decaf",
+   "medium roast",
+   "milk chocolate",
+   "organic",
+   "single origin",
+   "specialty coffee",
+   "toffee",
+   "whole bean"
+  ],
+  "title": "MW D'Caff Mexico",
+  "url": "https://www.sanctuaryroasting.com/products/mw-dcaff-mexico-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 oz",
+    "variant_id": "51514897858744"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "8a9c6b937a47c50f",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-in-peru-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Breakfast_in_Peru.webp?v=1775311012",
+  "platform": "shopify",
+  "product_id": "10242802024632",
+  "product_type": "Medium Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Peru",
+   "almond",
+   "blend",
+   "breakfast",
+   "coffee",
+   "medium roast",
+   "milk chocolate",
+   "specialty coffee",
+   "vanilla",
+   "whole bean"
+  ],
+  "title": "Breakfast in Peru",
+  "url": "https://www.sanctuaryroasting.com/products/breakfast-in-peru-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "52904331837624"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "cd8f5e44db323f57",
+  "first_seen": "2026-10-26",
+  "handle": "indonesian-java-single-origin-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Product_Java.webp?v=1775301713",
+  "platform": "shopify",
+  "product_id": "10242838233272",
+  "product_type": "Light Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Indonesia",
+   "Java",
+   "cinnamon",
+   "coffee",
+   "dark honey",
+   "herbal",
+   "light roast",
+   "single origin",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Java Single Origin",
+  "url": "https://www.sanctuaryroasting.com/products/indonesian-java-single-origin-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "52904376631480"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "94933a2e462bbdcf",
+  "first_seen": "2026-10-26",
+  "handle": "surj-armenian-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/0003-2415569892834096044_1ddf69c7-a396-4979-83ae-06d93c7aa277.png?v=1788322850",
+  "platform": "shopify",
+  "product_id": "10556658057400",
+  "product_type": "Dark Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Armenian coffee",
+   "Surj",
+   "Turkish coffee grind",
+   "blend",
+   "coffee",
+   "dark roast",
+   "jazzve",
+   "soorj",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Surj — Armenian Coffee",
+  "url": "https://www.sanctuaryroasting.com/products/surj-armenian-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "54018001404088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Pulverized for Jazzve",
+    "variant_id": "54026531242168"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "40329f7c509dfb88",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-guatemala-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Guatemala_Single_Origin_Coffee.webp?v=1775318579",
+  "platform": "shopify",
+  "product_id": "9132268912824",
+  "product_type": "Light Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Guatemala",
+   "brown sugar",
+   "cocoa",
+   "coffee",
+   "fig",
+   "light roast",
+   "single origin",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Guatemala Single Origin",
+  "url": "https://www.sanctuaryroasting.com/products/coffee-guatemala-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "48285464658104"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "602a88a6f928099d",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-brazil-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Brazil.webp?v=1775317177",
+  "platform": "shopify",
+  "product_id": "9132833145016",
+  "product_type": "Light Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "Brazil",
+   "coffee",
+   "light roast",
+   "peanut butter",
+   "single origin",
+   "specialty coffee",
+   "sweet cream",
+   "vanilla",
+   "whole bean"
+  ],
+  "title": "Brazil Single Origin",
+  "url": "https://www.sanctuaryroasting.com/products/coffee-brazil-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "50685055762616"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "1ac017956e231347",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-trinity-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Trinity_Blend_Coffee_Rich_Smooth_Full-Bodied_Flavor.webp?v=1775316490",
+  "platform": "shopify",
+  "product_id": "9132838027448",
+  "product_type": "Medium Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "bestseller",
+   "blend",
+   "chocolate",
+   "coffee",
+   "medium roast",
+   "specialty coffee",
+   "spice",
+   "toffee",
+   "whole bean"
+  ],
+  "title": "Trinity Blend",
+  "url": "https://www.sanctuaryroasting.com/products/coffee-trinity-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz",
+    "variant_id": "48617373434040"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "d957d7e1f38004a1",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-house-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Espresso.webp?v=1782937074",
+  "platform": "shopify",
+  "product_id": "9132843204792",
+  "product_type": "Dark Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "blend",
+   "caramel",
+   "coffee",
+   "dark chocolate",
+   "dark roast",
+   "espresso",
+   "specialty coffee",
+   "walnut",
+   "whole bean"
+  ],
+  "title": "House Espresso Blend",
+  "url": "https://www.sanctuaryroasting.com/products/coffee-house-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "48285744627896"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ },
+ {
+  "body_hash": "9451a299297332a4",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-midnight-oil-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0765/9307/0264/files/Midnight_Oil.webp?v=1775314973",
+  "platform": "shopify",
+  "product_id": "9202171707576",
+  "product_type": "Dark Roast",
+  "roaster_slug": "sanctuaryroasting",
+  "tags": [
+   "12oz",
+   "bittersweet chocolate",
+   "blend",
+   "bold",
+   "brown sugar",
+   "coffee",
+   "dark roast",
+   "specialty coffee",
+   "whole bean"
+  ],
+  "title": "Midnight Oil",
+  "url": "https://www.sanctuaryroasting.com/products/coffee-midnight-oil-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "48511038324920"
+   }
+  ],
+  "vendor": "Sanctuary Roasting"
+ }
+]

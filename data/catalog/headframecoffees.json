@@ -1,0 +1,709 @@
+[
+ {
+  "body_hash": "5f468bab271430c0",
+  "first_seen": "2026-10-26",
+  "handle": "au-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_17.jpg?v=1732328859",
+  "platform": "shopify",
+  "product_id": "8119134617792",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Au Blend",
+  "url": "https://headframecoffees.com/products/au-blend",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole Bean / 1lb (16oz)",
+    "variant_id": "45822268866752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole Bean / 1/2lb (8oz)",
+    "variant_id": "45822269096128"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole Bean / 1/4lb (4oz)",
+    "variant_id": "45822269325504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole Bean / 2lbs (32oz)",
+    "variant_id": "45822269554880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole Bean / 5lbs (80oz)",
+    "variant_id": "45822269784256"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "13b8b5fd08d7c3c2",
+  "first_seen": "2026-10-26",
+  "handle": "ag-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/Facebook_Post_940x788_px_9.jpg?v=1732287130",
+  "platform": "shopify",
+  "product_id": "8127871549632",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Ag Blend",
+  "url": "https://headframecoffees.com/products/ag-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "45822287446208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "45822287478976"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "45822287511744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "45822287544512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb (80oz)",
+    "variant_id": "45822287577280"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "43db68ff15d59e5c",
+  "first_seen": "2026-10-26",
+  "handle": "cu-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_15.jpg?v=1732324094",
+  "platform": "shopify",
+  "product_id": "8127907922112",
+  "product_type": "",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Cu Blend",
+  "url": "https://headframecoffees.com/products/cu-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "45822347215040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "45822347444416"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "45822347673792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "45822347903168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb (80oz)",
+    "variant_id": "45822348132544"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8032cc4b196b0e52",
+  "first_seen": "2026-10-26",
+  "handle": "bobcat-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_13.jpg?v=1732312721",
+  "platform": "shopify",
+  "product_id": "8127908184256",
+  "product_type": "",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Bobcat Blend",
+  "url": "https://headframecoffees.com/products/bobcat-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "45822366384320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "45822366417088"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "45822366449856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "45822366482624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb (80oz)",
+    "variant_id": "45822366515392"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "78510348c1dc0d27",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_16.jpg?v=1732325141",
+  "platform": "shopify",
+  "product_id": "8127908380864",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Colombian",
+  "url": "https://headframecoffees.com/products/colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "45822460133568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "45822460166336"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "45822460199104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "45822460231872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb (80oz)",
+    "variant_id": "45822460264640"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "164cb0fbc03dc750",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_32.jpg?v=1733093404",
+  "platform": "shopify",
+  "product_id": "8131555295424",
+  "product_type": "",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://headframecoffees.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "45839079768256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "45839079801024"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "45839079833792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lbs (32oz)",
+    "variant_id": "45839079866560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lbs (80oz)",
+    "variant_id": "45839079899328"
+   }
+  ],
+  "vendor": "Headframe Coffee "
+ },
+ {
+  "body_hash": "ca6388d38d6144ba",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/Facebook_Post_940x788_px_40.jpg?v=1736715493",
+  "platform": "shopify",
+  "product_id": "8143298003136",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Cold Brew",
+  "url": "https://headframecoffees.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "1/2 lb (8oz)",
+    "variant_id": "45876269088960"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "1/4 lb (4oz)",
+    "variant_id": "45876269121728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "1 lb (16oz)",
+    "variant_id": "46008730943680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lbs (32oz)",
+    "variant_id": "46183148519616"
+   }
+  ],
+  "vendor": "Headframe Coffee "
+ },
+ {
+  "body_hash": "e61c96522fc8b49c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-pre-sale",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/Facebook_Post_940x788_px_46.jpg?v=1736715409",
+  "platform": "shopify",
+  "product_id": "8155922333888",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Sumatran",
+  "url": "https://headframecoffees.com/products/sumatran-pre-sale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "1lb (16oz)",
+    "variant_id": "46008751882432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "1/2lb (8oz)",
+    "variant_id": "46008751915200"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "1/4lb (4oz)",
+    "variant_id": "46008751947968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lbs (36oz)",
+    "variant_id": "46008751980736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lbs (80oz)",
+    "variant_id": "46008752013504"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8fe297a400e9ed1b",
+  "first_seen": "2026-10-26",
+  "handle": "cu-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px_87.jpg?v=1773005626",
+  "platform": "shopify",
+  "product_id": "8196999217344",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Mexican",
+  "url": "https://headframecoffees.com/products/cu-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "46167534698688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "46167534731456"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "46167534764224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "46167534796992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb (80oz)",
+    "variant_id": "46167534829760"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "90f9254a573493da",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-swp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/Facebook_Post_940x788_px_89.jpg?v=1773004681",
+  "platform": "shopify",
+  "product_id": "8264002928832",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Mexican SWP Decaf",
+  "url": "https://headframecoffees.com/products/mexican-swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "1 lb (16oz)",
+    "variant_id": "46485621571776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "1/2 lb (8oz)",
+    "variant_id": "46485621604544"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 13.0,
+    "title": "1/4 lb (4oz)",
+    "variant_id": "46485621637312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2 lb (32oz)",
+    "variant_id": "46485621670080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lbs (80 oz)",
+    "variant_id": "46485621702848"
+   }
+  ],
+  "vendor": "Headframe Coffee"
+ },
+ {
+  "body_hash": "4fad21634603ea67",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1885",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px-2025-07-27T085658.084.jpg?v=1753631855",
+  "platform": "shopify",
+  "product_id": "8281219236032",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Espresso Blend 1885",
+  "url": "https://headframecoffees.com/products/espresso-blend-1885",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "46569200189632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "46569200222400"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "46569200255168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "46569200287936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb",
+    "variant_id": "46569439494336"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "19a9746bb37e8077",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-swp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/FacebookPost940x788px-2025-11-08T140328.931.jpg?v=1766155938",
+  "platform": "shopify",
+  "product_id": "8368685285568",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Sumatran SWP Decaf",
+  "url": "https://headframecoffees.com/products/sumatran-swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "1 lb (16oz)",
+    "variant_id": "47013969625280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "1/2 lb (8oz)",
+    "variant_id": "47013969658048"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 13.0,
+    "title": "1/4 lb (4oz)",
+    "variant_id": "47013969690816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2 lb (32oz)",
+    "variant_id": "47013969723584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lbs (80 oz)",
+    "variant_id": "47013969756352"
+   }
+  ],
+  "vendor": "Headframe Coffee"
+ },
+ {
+  "body_hash": "d2a4044a595f1522",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/1000013858.jpg?v=1766155938",
+  "platform": "shopify",
+  "product_id": "8409418662080",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Peruvian",
+  "url": "https://headframecoffees.com/products/peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "Whole bean / 1lb (16oz)",
+    "variant_id": "47163340030144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "Whole bean / 1/2lb (8oz)",
+    "variant_id": "47163340062912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "Whole bean / 2lb (32oz)",
+    "variant_id": "47163340095680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "Whole bean / 5lb",
+    "variant_id": "47163340128448"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "Whole bean / 1/4lb (4oz)",
+    "variant_id": "47168570556608"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "f2d0cd106093cd2c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0672/4370/4512/files/1000015426.jpg?v=1779722709",
+  "platform": "shopify",
+  "product_id": "8587007787200",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "headframecoffees",
+  "tags": [],
+  "title": "Costa Rican",
+  "url": "https://headframecoffees.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.5,
+    "title": "1 lb (16oz)",
+    "variant_id": "48322859172032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.75,
+    "title": "1/2 lb (8oz)",
+    "variant_id": "48322859204800"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 12.5,
+    "title": "1/4 lb (4oz)",
+    "variant_id": "48322859237568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 lb (32oz)",
+    "variant_id": "48322859270336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5 lbs (80 oz)",
+    "variant_id": "48322859303104"
+   }
+  ],
+  "vendor": "Headframe Coffee"
+ }
+]

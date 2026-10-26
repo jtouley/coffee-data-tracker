@@ -1,0 +1,351 @@
+{
+ "1478322520176": {
+  "body_hash": "8419469476ec25a6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "toasted nuts",
+   "marshmallow"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Maragogype"
+  ]
+ },
+ "1478344638576": {
+  "body_hash": "045bc8304ef42de0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "d ark chocolate",
+   "red fruit",
+   "smooth body"
+  ],
+  "varietals": []
+ },
+ "1478349291632": {
+  "body_hash": "181f3c4e6b3a9ec9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark berry acidity"
+  ],
+  "varietals": []
+ },
+ "1478353092720": {
+  "body_hash": "ecbadfa6f4f414b2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "r aisin",
+   "creamy",
+   "toasted nuts",
+   "medium acidity"
+  ],
+  "varietals": []
+ },
+ "1569034338416": {
+  "body_hash": "650f2aa542e22726",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "nutty",
+   "medium body",
+   "low acidity"
+  ],
+  "varietals": []
+ },
+ "2014948917335": {
+  "body_hash": "2103aa1c6a135484",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toasted pecan",
+   "fresh pastries",
+   "buttery mouthfeel"
+  ],
+  "varietals": []
+ },
+ "3933866066007": {
+  "body_hash": "03c4df165d00fe96",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6599023722583": {
+  "body_hash": "80e02532bc14c4a5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mellow sweetness",
+   "graham cracker",
+   "mild fruit"
+  ],
+  "varietals": []
+ },
+ "7269776064599": {
+  "body_hash": "b8e79490e4c18640",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "easy-going",
+   "honey",
+   "milk chocolate"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Villa Sarchi"
+  ]
+ },
+ "7341561905239": {
+  "body_hash": "bfaab8b3f7f3bb9b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "champagne",
+   "grapes",
+   "juicy bright acidity"
+  ],
+  "varietals": [
+   "Catuai"
+  ]
+ },
+ "7511744774231": {
+  "body_hash": "5797443d71ca4005",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "cherry",
+   "apple cider"
+  ],
+  "varietals": []
+ },
+ "7615130697815": {
+  "body_hash": "ba41b0cff78dcc80",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "orange",
+   "brown sugar",
+   "syrupy"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "7675894693975": {
+  "body_hash": "9e8e9e82c52d0b81",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Bolivia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate soft serve",
+   "hazelnut",
+   "cherry syrup"
+  ],
+  "varietals": [
+   "Catuai",
+   "Typica"
+  ]
+ },
+ "7740456468567": {
+  "body_hash": "8e5a53f626fb82ba",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dried fruit",
+   "cocoa",
+   "mascarpone"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "7783557529687": {
+  "body_hash": "80b42f79acf871c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "black tea",
+   "dry florals"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "7783562313815": {
+  "body_hash": "1593ffa04fb97c86",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tropical fruit",
+   "lactic fermentation",
+   "intense floral"
+  ],
+  "varietals": [
+   "Caturra",
+   "Gesha",
+   "Java"
+  ]
+ },
+ "7819078303831": {
+  "body_hash": "5a07f69a0cc0e7b1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "juicy sweet",
+   "floral"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

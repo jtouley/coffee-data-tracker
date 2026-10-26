@@ -1,0 +1,5624 @@
+[
+ {
+  "body_hash": "c950ed2b0450f2fa",
+  "first_seen": "2026-10-26",
+  "handle": "boneshaker-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Boneshaker_Colombia__12oz_2025_1.jpg?v=1742665366",
+  "platform": "shopify",
+  "product_id": "8334951284892",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "BONESHAKER COLOMBIA",
+  "url": "https://www.stonecreekcoffee.com/products/boneshaker-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44711629357212"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44711629389980"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44711629422748"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44711629455516"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44711629488284"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44711629521052"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44711629553820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44711629586588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44711629619356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44711629652124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44711629684892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44711629717660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44711629750428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44711629783196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44711629815964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44711629848732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44711629881500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44711629914268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44711629947036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44711629979804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44711630012572"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44729751765148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44729751797916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44729751830684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44729751863452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729751896220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44729751928988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44729751961756"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "f3aa02be28e1ba15",
+  "first_seen": "2026-10-26",
+  "handle": "green-dragon-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Green_Dragon_Costa_Rica__12oz_2025_1.jpg?v=1742671433",
+  "platform": "shopify",
+  "product_id": "8340221722780",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "GREEN DRAGON COSTA RICA",
+  "url": "https://www.stonecreekcoffee.com/products/green-dragon-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729742753948"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729742786716"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729742819484"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729742852252"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729742885020"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729742917788"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729742950556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729742983324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729743016092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729743048860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729743081628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729743114396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729743147164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729743179932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729743212700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729743245468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729743278236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729743311004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729743343772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729743376540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729743409308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770302427292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770302460060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770302492828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770302525596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770302558364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770302591132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770302623900"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "e45fc8a2324d4eb0",
+  "first_seen": "2026-10-26",
+  "handle": "green-bike",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Green_Bike_Colombia_12oz_2025_1.jpg?v=1742757923",
+  "platform": "shopify",
+  "product_id": "8340221755548",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "GREEN BIKE",
+  "url": "https://www.stonecreekcoffee.com/products/green-bike",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729743507612"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729743540380"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729743573148"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729743605916"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729743638684"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729743671452"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729743704220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729743736988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729743769756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729743802524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729743835292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729743868060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729743900828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729743933596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729743966364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729743999132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729744031900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729744064668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729744097436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729744130204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729744162972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770298364060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770298396828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770298429596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770298462364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770298495132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770298527900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770298560668"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "7d360767f4a5209a",
+  "first_seen": "2026-10-26",
+  "handle": "3-volcanoes-dark-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_3_Volcanoes_Dark_Guatemala__12oz_2025_1.jpg?v=1742760159",
+  "platform": "shopify",
+  "product_id": "8340221984924",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "3 VOLCANOES DARK GUATEMALA",
+  "url": "https://www.stonecreekcoffee.com/products/3-volcanoes-dark-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729745146012"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729745178780"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729745211548"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729745244316"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729745277084"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729745309852"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729745342620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729745375388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729745408156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729745440924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729745473692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729745506460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729745539228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729745571996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729745604764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729745637532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729745670300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729745703068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729745735836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729745768604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729745801372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770296627356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770296660124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770296692892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770296725660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770296758428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770296791196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770296823964"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "9066b55491d21e29",
+  "first_seen": "2026-10-26",
+  "handle": "cream-city",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Cream_City_Colombia_12oz_2025_0ae90fdd-fcec-4ef9-be70-522464d782c3.jpg?v=1772555940",
+  "platform": "shopify",
+  "product_id": "8340222115996",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "CREAM CITY",
+  "url": "https://www.stonecreekcoffee.com/products/cream-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729745866908"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729745899676"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729745932444"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729745965212"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729745997980"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729746030748"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729746063516"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729746096284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729746129052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729746161820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729746194588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729746227356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729746260124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729746292892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729746325660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729746358428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729746391196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729746423964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729746456732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729746489500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729746522268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770294759580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770294792348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770294825116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770294857884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770294890652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770294923420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770294956188"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "2dec2938e39a050f",
+  "first_seen": "2026-10-26",
+  "handle": "black-sheep",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Black_Sheep_12oz_2025_1.jpg?v=1742759173",
+  "platform": "shopify",
+  "product_id": "8340222607516",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "BLACK SHEEP",
+  "url": "https://www.stonecreekcoffee.com/products/black-sheep",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729747538076"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729747570844"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729747603612"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729747636380"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729747669148"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729747701916"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729747734684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729747767452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729747800220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729747832988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729747865756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729747898524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729747931292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729747964060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729747996828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729748029596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729748062364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729748095132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729748127900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729748160668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729748193436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770293809308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770293842076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770293874844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770293907612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770293940380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770293973148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770294005916"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "24bcd4edd037eab7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cream-city",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Decaf_Cream_City_Mogiana_region_Brazil_12oz_2025_1.jpg?v=1742673891",
+  "platform": "shopify",
+  "product_id": "8340222640284",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "DECAF CREAM CITY",
+  "url": "https://www.stonecreekcoffee.com/products/decaf-cream-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729748291740"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729748324508"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729748357276"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729748390044"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729748422812"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729748455580"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729748488348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729748521116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729748553884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729748586652"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729748619420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729748652188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729748684956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729748717724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729748750492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729748783260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729748816028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729748848796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729748881564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729748914332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729748947100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770291253404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770291286172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770291318940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770291351708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770291384476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770291417244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770291450012"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "d89b2a203a486d96",
+  "first_seen": "2026-10-26",
+  "handle": "voyager",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Voyager_Colombia_12oz_2025_1.jpg?v=1742672494",
+  "platform": "shopify",
+  "product_id": "8340222673052",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "VOYAGER",
+  "url": "https://www.stonecreekcoffee.com/products/voyager",
+  "variants": [
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "44729748979868"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "44729749012636"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "44729749045404"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "44729749078172"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "44729749110940"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "44729749143708"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "44729749176476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729749209244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729749242012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729749274780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729749307548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729749340316"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729749373084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729749405852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729749438620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729749471388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729749504156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729749536924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729749569692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729749602460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729749635228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770290663580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770290696348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770290729116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770290761884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770290794652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770290827420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770290860188"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "46939065e0646b32",
+  "first_seen": "2026-10-26",
+  "handle": "small-tasting-sample-box",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/1_9.jpg?v=1752081087",
+  "platform": "shopify",
+  "product_id": "8340229062812",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "SMALL TASTING SAMPLE BOX",
+  "url": "https://www.stonecreekcoffee.com/products/small-tasting-sample-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Whole Bean",
+    "variant_id": "44729784664220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Espresso",
+    "variant_id": "44729784696988"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Aeropress or Keurig",
+    "variant_id": "44729784729756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Cone Filter or v60",
+    "variant_id": "44729784762524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Flat Filter or Cold Brew",
+    "variant_id": "44729784795292"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / Chemex or Kalita",
+    "variant_id": "44729784828060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Light Roast / French Press or Clever",
+    "variant_id": "44729784860828"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Whole Bean",
+    "variant_id": "44729784893596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Espresso",
+    "variant_id": "44729784926364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Aeropress or Keurig",
+    "variant_id": "44729784959132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Cone Filter or v60",
+    "variant_id": "44729784991900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Flat Filter or Cold Brew",
+    "variant_id": "44729785024668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / Chemex or Kalita",
+    "variant_id": "44729785057436"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Medium Roast / French Press or Clever",
+    "variant_id": "44729785090204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Whole Bean",
+    "variant_id": "44729785122972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Espresso",
+    "variant_id": "44729785155740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Aeropress or Keurig",
+    "variant_id": "44729785188508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Cone Filter or v60",
+    "variant_id": "44729785221276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Flat Filter or Cold Brew",
+    "variant_id": "44729785254044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / Chemex or Kalita",
+    "variant_id": "44729785286812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Dark Roast / French Press or Clever",
+    "variant_id": "44729785319580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Whole Bean",
+    "variant_id": "44729785352348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Espresso",
+    "variant_id": "44729785385116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Aeropress or Keurig",
+    "variant_id": "44729785417884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Cone Filter or v60",
+    "variant_id": "44729785450652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Flat Filter or Cold Brew",
+    "variant_id": "44729785483420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / Chemex or Kalita",
+    "variant_id": "44729785516188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "Assorted Roasts / French Press or Clever",
+    "variant_id": "44729785548956"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "40f3c3fd31403431",
+  "first_seen": "2026-10-26",
+  "handle": "nlu-the-eye-test",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A0455.jpg?v=1743516986",
+  "platform": "shopify",
+  "product_id": "8340234961052",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-01-2026",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "NLU THE EYE TEST",
+  "url": "https://www.stonecreekcoffee.com/products/nlu-the-eye-test",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729825394844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729825427612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729825460380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729825493148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729825525916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729825558684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729825591452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729825624220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729825656988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729825689756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729825722524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729825755292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729825788060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729825820828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770289090716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770289123484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770289156252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770289189020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770289221788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770289254556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770289287324"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "d0002e7fbff2a61b",
+  "first_seen": "2026-10-26",
+  "handle": "nlu-strokes-gained",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A0457.jpg?v=1743517147",
+  "platform": "shopify",
+  "product_id": "8340235124892",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-01-2026",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "NLU STROKES GAINED",
+  "url": "https://www.stonecreekcoffee.com/products/nlu-strokes-gained",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729825984668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729826017436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729826050204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729826082972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729826115740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729826148508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729826181276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729826214044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729826246812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729826279580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729826312348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729826345116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729826377884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729826410652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770287026332"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770287059100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770287091868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770287124636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770287157404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770287190172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770287222940"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "ab455dc83a975158",
+  "first_seen": "2026-10-26",
+  "handle": "nlu-the-vision-fund",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A0453.jpg?v=1743516515",
+  "platform": "shopify",
+  "product_id": "8340235452572",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-01-2026",
+   "NLU",
+   "collaborations_roast_type_exclude",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "NLU THE VISION FUND",
+  "url": "https://www.stonecreekcoffee.com/products/nlu-the-vision-fund",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44729829032092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44729829064860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44729829097628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44729829130396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44729829163164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44729829195932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44729829228700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44729829261468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44729829294236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44729829327004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44729829359772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44729829392540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44729829425308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44729829458076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44770283585692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44770283618460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44770283651228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44770283683996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44770283716764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44770283749532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44770283782300"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "99531e0d505c5b39",
+  "first_seen": "2026-10-26",
+  "handle": "golden-frequency-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_GoldenFrequencyEthiopia_Studio.jpg?v=1791317203",
+  "platform": "shopify",
+  "product_id": "8365023133852",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:12-17-2026"
+  ],
+  "title": "GOLDEN FREQUENCY ETHIOPIA",
+  "url": "https://www.stonecreekcoffee.com/products/golden-frequency-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44810791026844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "44810791059612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "44810791092380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "44810791125148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "44810791157916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "44810791190684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "44810791223452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44810791256220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44810791288988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "44810791321756"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "44810791354524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "44810791387292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "44810791420060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "44810791452828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44810791485596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44810791518364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "44810791551132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "44810791583900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "44810791616668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "44810791649436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "44810791682204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "47592662728860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Espresso",
+    "variant_id": "47592662761628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "47592662794396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "47592662827164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "47592662859932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "47592662892700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "47592662925468"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "9b1fcd7907d3168b",
+  "first_seen": "2026-10-26",
+  "handle": "rise-and-thrive",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A1786.jpg?v=1744745477",
+  "platform": "shopify",
+  "product_id": "8407175397532",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "collaborations_roast_type_exclude",
+   "new-option-2-lb",
+   "no-rec",
+   "p3-import-batch1"
+  ],
+  "title": "RISE AND THRIVE",
+  "url": "https://www.stonecreekcoffee.com/products/rise-and-thrive",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44916606468252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "44916606501020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "44916606533788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "44916606566556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "44916606599324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "44916606632092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press or Clever",
+    "variant_id": "44916606664860"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "3cacb52b5d1e0d29",
+  "first_seen": "2026-10-26",
+  "handle": "empower-up",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A1782.jpg?v=1744745551",
+  "platform": "shopify",
+  "product_id": "8407180181660",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "EMPOWER UP",
+  "url": "https://www.stonecreekcoffee.com/products/empower-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44916615643292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "44916615676060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "44916615708828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "44916615741596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "44916615774364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "44916615807132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press or Clever",
+    "variant_id": "44916615839900"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "835fbfa462cb333c",
+  "first_seen": "2026-10-26",
+  "handle": "ripple-effect",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/572A1784.jpg?v=1744745570",
+  "platform": "shopify",
+  "product_id": "8407182180508",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "RIPPLE EFFECT",
+  "url": "https://www.stonecreekcoffee.com/products/ripple-effect",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44916619313308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "44916619346076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "44916619378844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "44916619411612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "44916619444380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "44916619477148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press or Clever",
+    "variant_id": "44916619509916"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "45369b01d21886de",
+  "first_seen": "2026-10-26",
+  "handle": "ring-of-fire-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Ring_of_Fire_Guatemala_12oz_2025_Studio_2_31d4b95c-233e-4291-9979-f7dad7d35c50.jpg?v=1770313520",
+  "platform": "shopify",
+  "product_id": "8442485178524",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "most-popular"
+  ],
+  "title": "RING OF FIRE GUATEMALA",
+  "url": "https://www.stonecreekcoffee.com/products/ring-of-fire-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45028316807324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45028316840092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45028316872860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45028316905628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45028316938396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45028316971164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45028317003932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45028317036700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45028317069468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45028317102236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45028317135004"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45028317167772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45028317200540"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45028317233308"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45028317266076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45028317298844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45028317331612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45028317364380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45028317397148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45028317429916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45028317462684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "45028317495452"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "45028317528220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "45028317560988"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "45028317593756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "45028317626524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "45028317659292"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "45028317692060"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "cc9a0b1ba56b5d3e",
+  "first_seen": "2026-10-26",
+  "handle": "natty-cat-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_NattyCatCostaRican_Studio_1.jpg?v=1790717382",
+  "platform": "shopify",
+  "product_id": "8454814728348",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:10-22-2026",
+   "most-popular"
+  ],
+  "title": "NATTY CAT COSTA RICA",
+  "url": "https://www.stonecreekcoffee.com/products/natty-cat-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Whole Bean",
+    "variant_id": "45071919317148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Espresso",
+    "variant_id": "45071919349916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45071919382684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45071919415452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45071919448220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45071919480988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "French Press or Clever",
+    "variant_id": "45071919513756"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "60b62ba1c9847ef0",
+  "first_seen": "2026-10-26",
+  "handle": "harvest",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Harvest2026_Studio_1.jpg?v=1786139163",
+  "platform": "shopify",
+  "product_id": "8478612750492",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-12-2026",
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "HARVEST",
+  "url": "https://www.stonecreekcoffee.com/products/harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45157700731036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45157700763804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45157700796572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45157700829340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45157700862108"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45157700894876"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45157700927644"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45157700960412"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45157700993180"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45157701025948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45157701058716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45157701091484"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45157701124252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45157701157020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45157701189788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45157701222556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45157701255324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45157701288092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45157701320860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45157701353628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45157701386396"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "45157701419164"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "45157701451932"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "45157701484700"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "45157701517468"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "45157701550236"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "45157701583004"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "45157701615772"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "ea320621f375ee9c",
+  "first_seen": "2026-10-26",
+  "handle": "ghost-ship",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_GhostShip2026_Studio_1.jpg?v=1788210687",
+  "platform": "shopify",
+  "product_id": "8492309708956",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-19-2026",
+   "most-popular",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "GHOST SHIP",
+  "url": "https://www.stonecreekcoffee.com/products/ghost-ship",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45212559343772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45212559376540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45212559409308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45212559442076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45212559474844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45212559507612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45212559540380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45212559573148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45212559605916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45212559638684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45212559671452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45212559704220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45212559736988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45212559769756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45212559802524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45212559835292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45212559868060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45212559900828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45212559933596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45212559966364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45212559999132"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "45212560031900"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Espresso",
+    "variant_id": "45212560064668"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "45212560097436"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "45212560130204"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "45212560162972"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "45212560195740"
+   },
+   {
+    "available": true,
+    "grams": 30,
+    "price_usd": 4.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "45212560228508"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "90369900deb84db0",
+  "first_seen": "2026-10-26",
+  "handle": "haunted-hodag",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_HauntedHodagTin_Studio_2.jpg?v=1791318549",
+  "platform": "shopify",
+  "product_id": "8541709828252",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-05-2026",
+   "p3-import-batch1"
+  ],
+  "title": "HAUNTED HODAG",
+  "url": "https://www.stonecreekcoffee.com/products/haunted-hodag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Whole Bean",
+    "variant_id": "45326764245148"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Espresso",
+    "variant_id": "45326764277916"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45326764310684"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45326764343452"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45326764376220"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45326764408988"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "French Press or Clever",
+    "variant_id": "45326764441756"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "74ac712d3ee73bb4",
+  "first_seen": "2026-10-26",
+  "handle": "just-vibes-0-caffeine-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_0_Percent_Just_Vibes_Warm_Tone_Studio.jpg?v=1761078239",
+  "platform": "shopify",
+  "product_id": "8564892074140",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "JUST VIBES – 0% CAFFEINE (DECAF)",
+  "url": "https://www.stonecreekcoffee.com/products/just-vibes-0-caffeine-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45387099472028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45387099504796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45387099537564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45387099570332"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45387099603100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45387099635868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45387099668636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45387099701404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45387099734172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45387099766940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45387099799708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387099832476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45387099865244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45387099898012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45387099930780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45387099963548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45387099996316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45387100029084"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387100061852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45387100094620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45387100127388"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "852c7b44a1ff559f",
+  "first_seen": "2026-10-26",
+  "handle": "lightly-buzzed-25-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_25_Percent_Lightly_Buzzed_Warm_Tone_Studio_1.jpg?v=1761078323",
+  "platform": "shopify",
+  "product_id": "8564895482012",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "LIGHTLY BUZZED – 25% CAFFEINE",
+  "url": "https://www.stonecreekcoffee.com/products/lightly-buzzed-25-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45387109695644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45387109728412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45387109761180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45387109793948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45387109826716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45387109859484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45387109892252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45387109925020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45387109957788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45387109990556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45387110023324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387110056092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45387110088860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45387110121628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45387110154396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45387110187164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45387110219932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45387110252700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387110285468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45387110318236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45387110351004"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "878c445853770ea7",
+  "first_seen": "2026-10-26",
+  "handle": "balanced-50-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_50_Percent_Balanced_Warm_Tone_Studio_1.jpg?v=1761078482",
+  "platform": "shopify",
+  "product_id": "8564896432284",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "BALANCED – 50% CAFFEINE",
+  "url": "https://www.stonecreekcoffee.com/products/balanced-50-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45387122049180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45387122081948"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45387122114716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45387122147484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45387122180252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45387122213020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45387122245788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45387122278556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45387122311324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45387122344092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45387122376860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387122409628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45387122442396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45387122475164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45387122507932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45387122540700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45387122573468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45387122606236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387122639004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45387122671772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45387122704540"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "36ac362b6757ce9a",
+  "first_seen": "2026-10-26",
+  "handle": "controlled-chaos-75-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_75_Controlled_Chaos_Warm_Tone_Studio.jpg?v=1761078555",
+  "platform": "shopify",
+  "product_id": "8564898562204",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "CONTROLLED CHAOS – 75% CAFFEINE",
+  "url": "https://www.stonecreekcoffee.com/products/controlled-chaos-75-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45387127390364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45387127423132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45387127455900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45387127488668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45387127521436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45387127554204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45387127586972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45387127619740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45387127652508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45387127685276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45387127718044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387127750812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45387127783580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45387127816348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45387127849116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45387127881884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45387127914652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45387127947420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387127980188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45387128012956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45387128045724"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "ed546911a6d046b1",
+  "first_seen": "2026-10-26",
+  "handle": "full-throttle-100-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_100_Percent_Full_Throttle_Warm_Tone_Studio_1.jpg?v=1761078643",
+  "platform": "shopify",
+  "product_id": "8564901347484",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "FULL THROTTLE – 100% CAFFEINE",
+  "url": "https://www.stonecreekcoffee.com/products/full-throttle-100-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45387131682972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "45387131715740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "45387131748508"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "45387131781276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "45387131814044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "45387131846812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "45387131879580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45387131912348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45387131945116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "45387131977884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "45387132010652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387132043420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "45387132076188"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "45387132108956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45387132141724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45387132174492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "45387132207260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "45387132240028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "45387132272796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "45387132305564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "45387132338332"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "459f7525fe7be1b7",
+  "first_seen": "2026-10-26",
+  "handle": "freak-finder-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Freak_Finder_Kit_SCC_Warm_Tone_Studio.jpg?v=1761057055",
+  "platform": "shopify",
+  "product_id": "8564903182492",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "FREAK FINDER KIT",
+  "url": "https://www.stonecreekcoffee.com/products/freak-finder-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Whole Bean",
+    "variant_id": "45387140726940"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Espresso",
+    "variant_id": "45387140759708"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45387140792476"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45387140825244"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45387140858012"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45387140890780"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 75.0,
+    "title": "French Press or Clever",
+    "variant_id": "45387140923548"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "1fa8ae9ca30b5eb3",
+  "first_seen": "2026-10-26",
+  "handle": "throttle-up-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Throttle_Up_Kit_Warm_Tone_Studio_2.jpg?v=1761061801",
+  "platform": "shopify",
+  "product_id": "8564906950812",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "THROTTLE UP KIT",
+  "url": "https://www.stonecreekcoffee.com/products/throttle-up-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean",
+    "variant_id": "45387195318428"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Espresso",
+    "variant_id": "45387195351196"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45387195383964"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45387195416732"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45387195449500"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45387195482268"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "French Press or Clever",
+    "variant_id": "45387195515036"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "b70d4ec7dd44b272",
+  "first_seen": "2026-10-26",
+  "handle": "decelerator-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_Decelerator_Kit_Warm_Tone_Studio.jpg?v=1761057204",
+  "platform": "shopify",
+  "product_id": "8564909932700",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "DECELERATOR KIT",
+  "url": "https://www.stonecreekcoffee.com/products/decelerator-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Whole Bean",
+    "variant_id": "45387214192796"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Espresso",
+    "variant_id": "45387214225564"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45387214258332"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45387214291100"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45387214323868"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45387214356636"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 60.0,
+    "title": "French Press or Clever",
+    "variant_id": "45387214389404"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "6fe669f2f7e8d980",
+  "first_seen": "2026-10-26",
+  "handle": "childrens-surgery-international-coffee-to-change-lives",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/Children_s_Surgery_International_Coffee_to_Change_Lives_1.jpg?v=1764101288",
+  "platform": "shopify",
+  "product_id": "8630637396124",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:01-01-2027",
+   "new-option-2-lb",
+   "no-rec",
+   "p3-import-batch1"
+  ],
+  "title": "CHILDREN'S SURGERY INTERNATIONAL: COFFEE TO CHANGE LIVES",
+  "url": "https://www.stonecreekcoffee.com/products/childrens-surgery-international-coffee-to-change-lives",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "45558538272924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "45558538305692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "45558538338460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "45558538371228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "45558538403996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "45558538436764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press or Clever",
+    "variant_id": "45558538469532"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "6774d5315842d1dd",
+  "first_seen": "2026-10-26",
+  "handle": "ritual-reflection-collection-box",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_TheRitual_ReflectionCollectionBox_Studio_2026_2.jpg?v=1784063204",
+  "platform": "shopify",
+  "product_id": "9092271800476",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "RITUAL & REFLECTION COLLECTION BOX",
+  "url": "https://www.stonecreekcoffee.com/products/ritual-reflection-collection-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Whole Bean",
+    "variant_id": "46979264217244"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Espresso",
+    "variant_id": "46979264250012"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "46979264282780"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "46979264315548"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "46979264348316"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "46979264381084"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 110.0,
+    "title": "French Press or Clever",
+    "variant_id": "46979264413852"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "aee758a3b9aa8c39",
+  "first_seen": "2026-10-26",
+  "handle": "cream-city-collection-box",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/5_559a9b7d-1fe3-4c6f-a46a-7d555ce63208.jpg?v=1783996307",
+  "platform": "shopify",
+  "product_id": "9092297851036",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "CREAM CITY COLLECTION BOX",
+  "url": "https://www.stonecreekcoffee.com/products/cream-city-collection-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Whole Bean",
+    "variant_id": "46979315040412"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Espresso",
+    "variant_id": "46979315073180"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "46979315105948"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "46979315138716"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "46979315171484"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "46979315204252"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "French Press or Clever",
+    "variant_id": "46979315237020"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "31e69260d612d85f",
+  "first_seen": "2026-10-26",
+  "handle": "trail-runner-nation",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_OneMoreMileFront_Studio.jpg?v=1783091115",
+  "platform": "shopify",
+  "product_id": "9107608404124",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:10-22-2026",
+   "new-option-2-lb",
+   "p3-import-batch1"
+  ],
+  "title": "ONE MORE MILE",
+  "url": "https://www.stonecreekcoffee.com/products/trail-runner-nation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47046267732124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "47046267764892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "47046267797660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "47046267830428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "47046267863196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "47046267895964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "47046267928732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47114801086620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "47114801119388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "47114801152156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "47114801184924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "47114801217692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "47114801250460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "47114801283228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47114801315996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Espresso",
+    "variant_id": "47114801348764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Aeropress or Keurig",
+    "variant_id": "47114801381532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Cone Filter or v60",
+    "variant_id": "47114801414300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Flat Filter or Cold Brew",
+    "variant_id": "47114801447068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Chemex or Kalita",
+    "variant_id": "47114801479836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / French Press or Clever",
+    "variant_id": "47114801512604"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "b926467c2f290898",
+  "first_seen": "2026-10-26",
+  "handle": "tart-pom-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_TartPomEthiopia_Studio_2.jpg?v=1788909407",
+  "platform": "shopify",
+  "product_id": "9201981653148",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:10-29-2026"
+  ],
+  "title": "TART POM ETHIOPIA",
+  "url": "https://www.stonecreekcoffee.com/products/tart-pom-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47399414136988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "47399414169756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "47399414202524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "47399414235292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "47399414268060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "47399414300828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "47399414333596"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47399414366364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "47399414399132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "47399414431900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "47399414464668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "47399414497436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "47399414530204"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "47399414562972"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47399414595740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "47399414628508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "47399414661276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "47399414694044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "47399414726812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "47399414759580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "47399414792348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "47399414825116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Espresso",
+    "variant_id": "47399414857884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "47399414890652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "47399414923420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "47399414956188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "47399414988956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "47399415021724"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "a68d353fdc0fcdf5",
+  "first_seen": "2026-10-26",
+  "handle": "stone-creek-coffee-factory-public-tour",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/FACTORYTOURSUMMER26_1.jpg?v=1787958545",
+  "platform": "shopify",
+  "product_id": "9225021816988",
+  "product_type": "Event",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [],
+  "title": "STONE CREEK COFFEE FACTORY PUBLIC TOUR",
+  "url": "https://www.stonecreekcoffee.com/products/stone-creek-coffee-factory-public-tour",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Standard",
+    "variant_id": "47488802390172"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "4d08b34c2a7e39a1",
+  "first_seen": "2026-10-26",
+  "handle": "pistachio-cream-decaf-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_PistachioCreamDecafMexico_Studio.jpg?v=1790716043",
+  "platform": "shopify",
+  "product_id": "9238555852956",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:01-14-2027",
+   "most-popular"
+  ],
+  "title": "PISTACHIO CREAM DECAF MEXICO",
+  "url": "https://www.stonecreekcoffee.com/products/pistachio-cream-decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47527746175132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Espresso",
+    "variant_id": "47527746207900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Aeropress or Keurig",
+    "variant_id": "47527746240668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Cone Filter or v60",
+    "variant_id": "47527746273436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Flat Filter or Cold Brew",
+    "variant_id": "47527746306204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Chemex or Kalita",
+    "variant_id": "47527746338972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / French Press or Clever",
+    "variant_id": "47527746371740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47527746404508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "47527746437276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Aeropress or Keurig",
+    "variant_id": "47527746470044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Cone Filter or v60",
+    "variant_id": "47527746502812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Flat Filter or Cold Brew",
+    "variant_id": "47527746535580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / Chemex or Kalita",
+    "variant_id": "47527746568348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 lb / French Press or Clever",
+    "variant_id": "47527746601116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47527746633884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "47527746666652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Aeropress or Keurig",
+    "variant_id": "47527746699420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Cone Filter or v60",
+    "variant_id": "47527746732188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Flat Filter or Cold Brew",
+    "variant_id": "47527746764956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Chemex or Kalita",
+    "variant_id": "47527746797724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / French Press or Clever",
+    "variant_id": "47527746830492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Whole Bean",
+    "variant_id": "47527746863260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Espresso",
+    "variant_id": "47527746896028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Aeropress or Keurig",
+    "variant_id": "47527746928796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Cone Filter or v60",
+    "variant_id": "47527746961564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Flat Filter or Cold Brew",
+    "variant_id": "47527746994332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / Chemex or Kalita",
+    "variant_id": "47527747027100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 5.0,
+    "title": "Sample / French Press or Clever",
+    "variant_id": "47527747059868"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "c46aafc379a04591",
+  "first_seen": "2026-10-26",
+  "handle": "haunted-hodag-coffee-tin",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_HauntedHodagTin_Studio.jpg?v=1791318138",
+  "platform": "shopify",
+  "product_id": "9255093928092",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "p3-import-batch1"
+  ],
+  "title": "HAUNTED HODAG COFFEE TIN",
+  "url": "https://www.stonecreekcoffee.com/products/haunted-hodag-coffee-tin",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Whole Bean",
+    "variant_id": "47592711192732"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Espresso",
+    "variant_id": "47592711225500"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "47592711258268"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "47592711291036"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "47592711323804"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "47592711356572"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 27.0,
+    "title": "French Press or Clever",
+    "variant_id": "47592711389340"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ },
+ {
+  "body_hash": "72a90b723361abf1",
+  "first_seen": "2026-10-26",
+  "handle": "giant-peach-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0663/3298/3452/files/ECOM_GiantPeachEthiopiaReserve_Studio.jpg?v=1792526653",
+  "platform": "shopify",
+  "product_id": "9284910448796",
+  "product_type": "Coffee",
+  "roaster_slug": "stonecreekcoffee",
+  "tags": [
+   "LTO:11-19-2026"
+  ],
+  "title": "GIANT PEACH ETHIOPIA",
+  "url": "https://www.stonecreekcoffee.com/products/giant-peach-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Whole Bean",
+    "variant_id": "47678385619100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Espresso",
+    "variant_id": "47678385651868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Aeropress or Keurig",
+    "variant_id": "47678385684636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Cone Filter or v60",
+    "variant_id": "47678385717404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Flat Filter or Cold Brew",
+    "variant_id": "47678385750172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "Chemex or Kalita",
+    "variant_id": "47678385782940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "French Press or Clever",
+    "variant_id": "47678385815708"
+   }
+  ],
+  "vendor": "Stone Creek Coffee"
+ }
+]

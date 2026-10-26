@@ -1,0 +1,260 @@
+[
+ {
+  "body_hash": "a98c4ca6f107f36c",
+  "first_seen": "2026-10-26",
+  "handle": "house-of-fire-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/6201695749c17a2fcb8d97d8/4c066bf3-0ccc-4573-805c-402183bfbe66/house+red+sky+hondo.jpg",
+  "platform": "squarespace",
+  "product_id": "6213fcc8d92c0522e0d3e73a",
+  "product_type": "",
+  "roaster_slug": "righteousvices",
+  "tags": [],
+  "title": "House of Fire Dark Roast",
+  "url": "https://www.righteousvices.com/shop-cWLGV/p/house-of-fire-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Autodrip",
+    "variant_id": "206898ef-5c27-4272-bc18-58cfa8172a3b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "4a5fb429-18ae-4619-a03a-58ce0bc74844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Course",
+    "variant_id": "54dafe07-f2b2-4f1e-9c97-164935f2c478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Autodrip",
+    "variant_id": "6cf0bbfd-9d9f-413d-b6c9-e5b52a639a1b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Fine",
+    "variant_id": "7002542c-9f79-4ce1-bf5c-851711ced8ff"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "9d844bb6-5dcd-48f7-9352-38efa30cb3a6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Espresso",
+    "variant_id": "a5dcd594-edac-449c-971d-196228244204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Course",
+    "variant_id": "a6df3b7e-7a59-4b00-8905-230e4c971686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Fine",
+    "variant_id": "de086b4b-fcf0-46a6-b799-f9717e1ca427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Espresso",
+    "variant_id": "ec83b9ca-85eb-4921-9141-a258be86bbcb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b15a362b9b3c5ad",
+  "first_seen": "2026-10-26",
+  "handle": "fire-vice-blend-5-lb-ground",
+  "image": "https://images.squarespace-cdn.com/content/v1/6201695749c17a2fcb8d97d8/28899365-cae4-40c3-8442-6263d16bd9fd/FIRE%2526VICE%2BLABEL.jpg",
+  "platform": "squarespace",
+  "product_id": "62334f8e3d6f1964a914cb64",
+  "product_type": "",
+  "roaster_slug": "righteousvices",
+  "tags": [],
+  "title": "Fire & Vice Blend",
+  "url": "https://www.righteousvices.com/shop-cWLGV/p/fire-vice-blend-5-lb-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "0bbab440-03ff-4f20-8936-f2bd08d2b7b6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Course",
+    "variant_id": "228bd69e-1502-466b-9970-873e1f2000a8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Auto Drip",
+    "variant_id": "29cbdf29-0f04-4473-9fa0-5b3acd29d356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "2a004f35-8014-4159-acf3-725eb7c7f3df"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Espresso",
+    "variant_id": "423e4655-d7bc-4aaa-b165-d5ca3e21703a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Course",
+    "variant_id": "4e366803-177e-4ded-9d44-c4588b30e738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Fine",
+    "variant_id": "7545072a-5c1e-488d-a1b2-1e7c68ef67e6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Espresso",
+    "variant_id": "8220cc35-8c2e-4e96-9777-c034c162b695"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Fine",
+    "variant_id": "c1172c32-5244-4e96-8cc5-5ecf61aa8f78"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Auto Drip",
+    "variant_id": "d35f8cdb-1476-452e-bb73-baa54a16c5ca"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f4900fe800f7765a",
+  "first_seen": "2026-10-26",
+  "handle": "mind-reader-medium-roast-12-oz-whole-bean",
+  "image": "https://images.squarespace-cdn.com/content/v1/6201695749c17a2fcb8d97d8/2f33d63b-5322-4ac2-8884-ba39f409c7dc/mind+blue+sky+hondo.jpg",
+  "platform": "squarespace",
+  "product_id": "67d449c2b8f32226f0bc20ac",
+  "product_type": "",
+  "roaster_slug": "righteousvices",
+  "tags": [],
+  "title": "Mind Reader Medium Roast",
+  "url": "https://www.righteousvices.com/shop-cWLGV/p/mind-reader-medium-roast-12-oz-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Espresso",
+    "variant_id": "17670317-ad0f-422c-9193-a4cbd22a436c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Course",
+    "variant_id": "2029f65d-1d63-4876-b1dc-7f6a763e8470"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "48e92e90-a91e-46ce-9c53-77fc9c65e535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Auto Drip",
+    "variant_id": "49e0a24c-4126-4e64-b8f6-e0b14ed0971d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Fine",
+    "variant_id": "69d78e95-af80-400f-b3b4-c2087bb3ef20"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Auto Drip",
+    "variant_id": "6dc99f98-35b7-438a-8e8b-9f7cffe46152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Fine",
+    "variant_id": "6ff8ae6b-44d8-4ca4-88f6-6449817c7ec5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Espresso",
+    "variant_id": "82871eaf-a08f-499d-a563-a536da47ace0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Course",
+    "variant_id": "d9f07ab4-9b9d-444f-9b42-f5a46db5f6e6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "eaf55e6a-c5e2-4fd5-8ec3-3df254d8587a"
+   }
+  ],
+  "vendor": ""
+ }
+]

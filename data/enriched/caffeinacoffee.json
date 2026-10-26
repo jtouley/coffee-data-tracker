@@ -1,0 +1,292 @@
+{
+ "7634226348259": {
+  "body_hash": "7e4375a1d4d1183b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "tobacco",
+   "woody",
+   "mellow"
+  ],
+  "varietals": []
+ },
+ "7656171438307": {
+  "body_hash": "e976c532f50fc932",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "smoke",
+   "molasses",
+   "hazelnut"
+  ],
+  "varietals": []
+ },
+ "7656172028131": {
+  "body_hash": "d00ed70d382aaf8a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "smooth",
+   "slight citrus",
+   "chocolatey"
+  ],
+  "varietals": []
+ },
+ "7656177467619": {
+  "body_hash": "9ac83d142a972c02",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "pipe tobacco",
+   "dark chocolate",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "7656179925219": {
+  "body_hash": "c3de57e7b0ad944b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dried fruit",
+   "raisin",
+   "butter",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "7656181203171": {
+  "body_hash": "b3559477df214af3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "roasted",
+   "caramel",
+   "tobacco"
+  ],
+  "varietals": []
+ },
+ "7656182481123": {
+  "body_hash": "57060cb94f55b674",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee nut",
+   "molasses",
+   "chocolate",
+   "malty"
+  ],
+  "varietals": []
+ },
+ "7656184086755": {
+  "body_hash": "f9b1b1343dfe7529",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "clean",
+   "smokey",
+   "dark chocolate",
+   "buttery"
+  ],
+  "varietals": []
+ },
+ "7656184905955": {
+  "body_hash": "d67c1cd44396acc9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "bright",
+   "earthy",
+   "stone fruits"
+  ],
+  "varietals": []
+ },
+ "7724860113123": {
+  "body_hash": "5260b167db48846a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "smooth",
+   "clean",
+   "dried fruit",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "7759687876835": {
+  "body_hash": "7441dcf18a3df7d5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smokey",
+   "velvet",
+   "tobacco",
+   "pungent",
+   "unsweetened cocoa"
+  ],
+  "varietals": []
+ },
+ "7759697477859": {
+  "body_hash": "a9e7b90ecd092871",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "light",
+   "fruity",
+   "bright",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "7759725723875": {
+  "body_hash": "7e88dff27c8630c3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8610128134371": {
+  "body_hash": "44d08167d2520023",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hazelnut",
+   "blueberry",
+   "chocolate",
+   "almond"
+  ],
+  "varietals": []
+ },
+ "8610130788579": {
+  "body_hash": "bce9e1fe61096d78",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "blueberry",
+   "toffee",
+   "vanilla"
+  ],
+  "varietals": []
+ }
+}

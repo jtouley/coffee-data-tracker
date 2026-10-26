@@ -1,0 +1,1820 @@
+[
+ {
+  "body_hash": "83bacdbab7107ccd",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Dicaf.gif?v=1504144898",
+  "platform": "shopify",
+  "product_id": "10096053633",
+  "product_type": "Colombia",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Light"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://shop.harrarcoffeeroastery.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37563073089"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "37563073217"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "37563073281"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "37563073409"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "37563073473"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "37563073601"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "37563073665"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "37563073793"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "37563073857"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "37563073921"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "37563074049"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "37563074113"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "87436999515489dd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-medium-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Sidama-Medium_06310d86-3beb-4f5a-8dad-c22afbb93e1e.png?v=1544759390",
+  "platform": "shopify",
+  "product_id": "2028217335919",
+  "product_type": "Ethiopia Sidama Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Sidama Medium Decaf",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-sidama-medium-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "19323239497839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "19323239563375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "19323239628911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "French Press / 16oz",
+    "variant_id": "19323239694447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "19323239759983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "19323239825519"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "e9b47f4437f0032d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Harrar-Dark.png?v=1450972024",
+  "platform": "shopify",
+  "product_id": "3750493441",
+  "product_type": "Ethiopia Harrar Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Dark Roast"
+  ],
+  "title": "Ethiopia Harrar Dark",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-harrar-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "10904865345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "10904865409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "10904865473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "French Press / 16oz",
+    "variant_id": "10904865537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "10904865601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "10904865665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16530218433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16530227521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16530231809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16530250625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16530253953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16530259777"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "3c623104575dc3d5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar-medium",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Harrar-Medium.png?v=1450974974",
+  "platform": "shopify",
+  "product_id": "3750544577",
+  "product_type": "Ethiopia Harrar Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Harrar Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-harrar-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553861761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553861825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553861889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553861953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553862017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553862081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554160385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554160641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554160833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554160897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554160961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554161025"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "4430cc5e66ec35a3",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar-haruva",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Haruva-Region.png?v=1450975191",
+  "platform": "shopify",
+  "product_id": "3750546369",
+  "product_type": "Ethiopia Harrar Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Light"
+  ],
+  "title": "Ethiopia Harrar Haruva",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-harrar-haruva",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553861313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553861377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553861441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553861569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553861633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553861697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554153217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554153281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554153345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554153473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554153537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554153665"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "3549ac68dbd33b7f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-medium",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Sidama-Medium.png?v=1451015571",
+  "platform": "shopify",
+  "product_id": "3752995457",
+  "product_type": "Ethiopia Sidama Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Sidama Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-sidama-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553862721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553862849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553862913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553862977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553863041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553863105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554171009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554171073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554171137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554171201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554171265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554171329"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "ea18ee5d7d92e760",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Sidama_Dark.png?v=1451015745",
+  "platform": "shopify",
+  "product_id": "3753002049",
+  "product_type": "Ethiopia Sidama Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Dark Roast"
+  ],
+  "title": "Ethiopia Sidama Dark",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-sidama-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553862209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553862273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553862337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553862401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553862465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553862529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554121857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554127937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554128769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554130561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554133953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554135745"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "669aa3978cf307cc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-sibune",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Sibune.png?v=1451016006",
+  "platform": "shopify",
+  "product_id": "3753006337",
+  "product_type": "Ethiopia Sidama Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Light"
+  ],
+  "title": "Ethiopia Sidama Sibune",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-sidama-sibune",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553863233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553863297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553863361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553863425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553863489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553863553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554178049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554178113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554178177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554178241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554178305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554178369"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "a62cb71fd87d55dd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-medium",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Yirgacheffe_medium_e949b10b-0cbd-4957-86df-3ee9fe3fe910.png?v=1451017692",
+  "platform": "shopify",
+  "product_id": "3753089729",
+  "product_type": "Ethiopia Yirgacheffe Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-yirgacheffe-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553864001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553864065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553864129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553864193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553864257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553864321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554200449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554200513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554200577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554200641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554200705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554200769"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "daa80f32b5d08bf0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Yirgacheffe_Dark.png?v=1451017806",
+  "platform": "shopify",
+  "product_id": "3753097665",
+  "product_type": "Ethiopia Yirgacheffe Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Dark Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe Dark",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-yirgacheffe-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553863617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553863681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553863745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553863809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553863873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553863937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554194497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554194561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554194625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "16554194689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554194753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554194881"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "82a273a0c8051985",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sikoyra-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Sikoyra-region.png?v=1451018734",
+  "platform": "shopify",
+  "product_id": "3753112705",
+  "product_type": "Ethiopia Sidama Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe"
+  ],
+  "title": "Ethiopian Sikoyra Organic - Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopian-sikoyra-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553865217"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553865281"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553865345"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "French Press / 12oz",
+    "variant_id": "16553865409"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553865473"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553865537"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "16554214145"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Espresso / 16oz",
+    "variant_id": "16554214209"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Turkish / 16oz",
+    "variant_id": "16554214273"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "French Press / 16oz",
+    "variant_id": "16554214337"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "16554214401"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.5,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "16554214465"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "605dea2a8e841abc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-yirhama-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/Yirhama_7a8078a1-0538-4ea4-a63f-69a56dcd0811.png?v=1454457636",
+  "platform": "shopify",
+  "product_id": "4050789377",
+  "product_type": "Ethiopia Yirgacheffe Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Light",
+   "Special"
+  ],
+  "title": "Ethiopia Yirgacheffe Yirhama",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-yirgacheffe-yirhama-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "16553864769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "16553864833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "16553864897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "16553864961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "16553865025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "16553865089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "18272080769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "18272080833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "18272080897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "18272080961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "18272081025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "18272081089"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "16-oz-colombia-decaf",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "408940576797",
+  "product_type": "",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe"
+  ],
+  "title": "16 OZ Colombia Decaf",
+  "url": "https://shop.harrarcoffeeroastery.com/products/16-oz-colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "Default Title",
+    "variant_id": "5741835059229"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "348c033e7327503d",
+  "first_seen": "2026-10-26",
+  "handle": "3oz",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/3oz.png?v=1461553853",
+  "platform": "shopify",
+  "product_id": "4206356673",
+  "product_type": "",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Dark Roast",
+   "Light",
+   "Medium Roast",
+   "Special"
+  ],
+  "title": "Ethiopian Collection 3oz",
+  "url": "https://shop.harrarcoffeeroastery.com/products/3oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Harrar Dark",
+    "variant_id": "12066740993"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Harrar Medium",
+    "variant_id": "12066741057"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Sidama Dark",
+    "variant_id": "12066741121"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Sidama Medium",
+    "variant_id": "12066741185"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Sidama Sibune - Light",
+    "variant_id": "12066741249"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Yirgacheffe Dark",
+    "variant_id": "12066741313"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Yirgacheffe Medium",
+    "variant_id": "12066741377"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Yirgacheffe Yirhama - Light",
+    "variant_id": "12066741441"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Limu Dark",
+    "variant_id": "12066741505"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Limu Medium",
+    "variant_id": "12066741569"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Sikoyra Organic",
+    "variant_id": "12066741633"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Harrar Haruva - Light",
+    "variant_id": "28742727809"
+   },
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 4.99,
+    "title": "Ethiopia Sikoyra Organic - Dark",
+    "variant_id": "28742742913"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "a275bb922cdb84f5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limu-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/dark_coffeebag_limu.jpg?v=1462461485",
+  "platform": "shopify",
+  "product_id": "5982114241",
+  "product_type": "Ethiopia Limu Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Dark Roast"
+  ],
+  "title": "Ethiopia Limu Dark",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-limu-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "18376900481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "18376900545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "18376900609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "18376900673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "18376900737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "18376900801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "18376900929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "18376901121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "18376901249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "18376901377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "18376901441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "18376901505"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "4be71e872c9734ca",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limu-medium",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/medium_coffeebag_limu.jpg?v=1462469679",
+  "platform": "shopify",
+  "product_id": "5983093889",
+  "product_type": "Ethiopia Limu Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Limu Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-limu-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "18381652033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "18381652097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "18381652161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "18381652225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "18381652289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "18381652353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "French Press / 12oz",
+    "variant_id": "18381652417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "French Press / 16oz",
+    "variant_id": "18381652481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "18381652545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "18381652609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "18381652673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "18381652737"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "e4808b2edae57b5d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-light",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/light_colo-sup-500x500.png?v=1470142919",
+  "platform": "shopify",
+  "product_id": "7228264833",
+  "product_type": "Colombia",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Light"
+  ],
+  "title": "Colombia Supremo Light",
+  "url": "https://shop.harrarcoffeeroastery.com/products/colombia-supremo-light",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "22798575041"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "22798575105"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "22798575169"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "22798575233"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Turkish / 12oz",
+    "variant_id": "22798575297"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "22798575361"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "French Press / 12oz",
+    "variant_id": "22798575425"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "French Press / 16oz",
+    "variant_id": "22798575489"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Metal  filter / 12oz",
+    "variant_id": "22798575553"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "22798575617"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Paper Filter / 12oz",
+    "variant_id": "22798575681"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "22798575745"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "ed7e0f60b70975b5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-limu-medium-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/medium_coffeebag_limu_c4d818d2-4bec-4baa-a6fb-985bb12246ff.jpg?v=1527279093",
+  "platform": "shopify",
+  "product_id": "758630613103",
+  "product_type": "Ethiopia Limu Coffee",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [
+   "Cafe",
+   "Medium Roast"
+  ],
+  "title": "Ethiopia Limu Medium Decaf",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-limu-medium-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 16oz",
+    "variant_id": "8661761884271"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / 16oz",
+    "variant_id": "8661761949807"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Turkish / 16oz",
+    "variant_id": "8661762015343"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "French Press / 16oz",
+    "variant_id": "8661762080879"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Metal  filter / 16oz",
+    "variant_id": "8661762146415"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Paper Filter / 16oz",
+    "variant_id": "8661762211951"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "a62cb71fd87d55dd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-medium-1",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/products/IMG-6578.jpg?v=1680093657",
+  "platform": "shopify",
+  "product_id": "8203037016372",
+  "product_type": "",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Medium",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-yirgacheffe-medium-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44778077651252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "French Press / 5 Lb",
+    "variant_id": "44778077684020"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "Metal  filter / 5 Lb",
+    "variant_id": "44778077716788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "Paper Filter / 5 Lb",
+    "variant_id": "44778077749556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "Espresso / 5 Lb",
+    "variant_id": "44778077782324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.99,
+    "title": "Turkish / 5 Lb",
+    "variant_id": "44778077815092"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ },
+ {
+  "body_hash": "e9b47f4437f0032d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-harrar-dark-1",
+  "image": "https://cdn.shopify.com/s/files/1/1105/1166/files/IMG-6578_1.jpg?v=1769826815",
+  "platform": "shopify",
+  "product_id": "9314237546804",
+  "product_type": "",
+  "roaster_slug": "harrarcoffeeroastery",
+  "tags": [],
+  "title": "Ethiopia Harrar Dark",
+  "url": "https://shop.harrarcoffeeroastery.com/products/ethiopia-harrar-dark-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "49025103954228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "French Press / 5 Lb",
+    "variant_id": "49025103986996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Metal  filter / 5 Lb",
+    "variant_id": "49025104019764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Paper Filter / 5 Lb",
+    "variant_id": "49025104052532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Espresso / 5 Lb",
+    "variant_id": "49025104085300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.5,
+    "title": "Turkish / 5 Lb",
+    "variant_id": "49025104118068"
+   }
+  ],
+  "vendor": "Harrar Coffee & Roastery"
+ }
+]

@@ -1,0 +1,708 @@
+[
+ {
+  "body_hash": "e263b8b0f4060f83",
+  "first_seen": "2026-10-26",
+  "handle": "merci",
+  "image": "https://revecoffee.com/wp-content/uploads/2026/06/Merci_Blend-1.png",
+  "platform": "woocommerce",
+  "product_id": "10733",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "baker's chocolate",
+   "cinnamon"
+  ],
+  "title": "Merci",
+  "url": "https://revecoffee.com/product/merci/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "10733:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "10733:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2fb13426a6d51dc5",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-el-porvenir",
+  "image": "https://revecoffee.com/wp-content/uploads/2026/06/El-Porvenir-1.png",
+  "platform": "woocommerce",
+  "product_id": "10742",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "black pepper",
+   "dark chocolate",
+   "mild cherry"
+  ],
+  "title": "Nicaragua El Porvenir",
+  "url": "https://revecoffee.com/product/nicaragua-el-porvenir/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "10742:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "10742:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f12f4a99144a250",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Decaf-Brazil-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1463",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "dark chocolate"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://revecoffee.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1463:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1463:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d989ec6c57cd2dd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-santa-barbara",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Colombia-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1511",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "caramel",
+   "cherry",
+   "plum"
+  ],
+  "title": "Colombia Santa Barbara",
+  "url": "https://revecoffee.com/product/colombia-santa-barbara/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1511:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1511:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0552a0799df72766",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Costa-Rica-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1513",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "citrus",
+   "honey"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://revecoffee.com/product/costa-rica-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz",
+    "variant_id": "1513:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5lbs",
+    "variant_id": "1513:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5318ed8133b51f4b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Sumatra-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1521",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "black pepper",
+   "dark chocolate",
+   "mild cherry"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://revecoffee.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1521:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1521:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d397f015fa0598bd",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-decaf",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Decaf-Brazil-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1523",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "dark chocolate",
+   "walnut"
+  ],
+  "title": "Brazil Mogiana (Decaf)",
+  "url": "https://revecoffee.com/product/brazil-mogiana-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz",
+    "variant_id": "1523:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.5,
+    "title": "5lbs",
+    "variant_id": "1523:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b164d1be2d931eca",
+  "first_seen": "2026-10-26",
+  "handle": "avery-island",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Avery-Island-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1580",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "dark chocolate",
+   "raspberry",
+   "stone fruit"
+  ],
+  "title": "Avery Island",
+  "url": "https://revecoffee.com/product/avery-island/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1580:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1580:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c21e6742ffc35336",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Breakfast-Blend-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1584",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "chocolate",
+   "walnut"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://revecoffee.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1584:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1584:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "298def47c77eb9be",
+  "first_seen": "2026-10-26",
+  "handle": "c-p-special",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/CP-Special-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1585",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "caramel",
+   "chocolate",
+   "honey"
+  ],
+  "title": "C.P. Special",
+  "url": "https://revecoffee.com/product/c-p-special/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1585:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1585:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42927706d67120d6",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-noel",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Cafe-Noel-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1586",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "clove",
+   "dark chocolate",
+   "spiced pears"
+  ],
+  "title": "Cafe Noel",
+  "url": "https://revecoffee.com/product/cafe-noel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1586:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1586:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f25c0905499f3165",
+  "first_seen": "2026-10-26",
+  "handle": "cajun-java",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Cajun-Java-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1588",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "baker's chocolate",
+   "cinnamon"
+  ],
+  "title": "Cajun Java",
+  "url": "https://revecoffee.com/product/cajun-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1588:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1588:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e935774c485c862",
+  "first_seen": "2026-10-26",
+  "handle": "cajun-prairie",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Cajun-Prairie-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1590",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "baker's chocolate"
+  ],
+  "title": "Cajun Prairie",
+  "url": "https://revecoffee.com/product/cajun-prairie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1590:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1590:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab9fcd976aeafa87",
+  "first_seen": "2026-10-26",
+  "handle": "espress-geaux",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Espress-Geaux-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1591",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "baker's chocolate",
+   "caramel"
+  ],
+  "title": "Espress-Geaux",
+  "url": "https://revecoffee.com/product/espress-geaux/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1591:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1591:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e26e4323f4a3135e",
+  "first_seen": "2026-10-26",
+  "handle": "fire-brimstone",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Fire-Brimstone-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1592",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "baker's chocolate",
+   "brandied cherries",
+   "cedar"
+  ],
+  "title": "Fire & Brimstone",
+  "url": "https://revecoffee.com/product/fire-brimstone/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1592:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1592:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b3b4e8145b3da021",
+  "first_seen": "2026-10-26",
+  "handle": "lacadie-blend",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/L_Acadie-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1593",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "tart citrus"
+  ],
+  "title": "L’Acadie Blend",
+  "url": "https://revecoffee.com/product/lacadie-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1593:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1593:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "29ab3ec8aa4b6f6a",
+  "first_seen": "2026-10-26",
+  "handle": "melange-de-lafitte",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Melange-De-Lafitte-copy.png",
+  "platform": "woocommerce",
+  "product_id": "1596",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "cedar chocolate"
+  ],
+  "title": "Melange De Lafitte",
+  "url": "https://revecoffee.com/product/melange-de-lafitte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "1596:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lbs",
+    "variant_id": "1596:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a0adbd354ad1b41",
+  "first_seen": "2026-10-26",
+  "handle": "nola-style-coffee-and-chicory",
+  "image": "https://revecoffee.com/wp-content/uploads/2022/11/NOLA-Coffee-Chicory-main2.png",
+  "platform": "woocommerce",
+  "product_id": "1599",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "chicory"
+  ],
+  "title": "NOLA Style",
+  "url": "https://revecoffee.com/product/nola-style-coffee-and-chicory/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "1599:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.0,
+    "title": "5lbs",
+    "variant_id": "1599:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ab0af7ae7bdc126",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gera-estate",
+  "image": "https://revecoffee.com/wp-content/uploads/2025/04/Ethiopia-Gera-Estate-copy.png",
+  "platform": "woocommerce",
+  "product_id": "6269",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "blackberry",
+   "blueberry",
+   "cane sugar",
+   "free-shipping",
+   "papaya"
+  ],
+  "title": "Ethiopia Gera Estate",
+  "url": "https://revecoffee.com/product/ethiopia-gera-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6269:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "6269:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e90b8831b9602fb7",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-cosm680a",
+  "image": "https://revecoffee.com/wp-content/uploads/2023/11/Hondouras-Comsa-PS.png",
+  "platform": "woocommerce",
+  "product_id": "6282",
+  "product_type": "variable",
+  "roaster_slug": "revecoffee",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "milk chocolate",
+   "orange",
+   "strawberry"
+  ],
+  "title": "Honduras Cosma",
+  "url": "https://revecoffee.com/product/honduras-cosm680a/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6282:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lbs",
+    "variant_id": "6282:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

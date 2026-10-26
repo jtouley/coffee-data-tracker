@@ -1,0 +1,4189 @@
+[
+ {
+  "body_hash": "7ec4f2e938aa70b3",
+  "first_seen": "2026-10-26",
+  "handle": "gsi-ultralight-java-drip",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/gsi-ultralight-java-drip.jpg?v=1622823704",
+  "platform": "shopify",
+  "product_id": "6760140374201",
+  "product_type": "Brewing",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "GSI Ultralight Java Drip",
+  "url": "https://www.sloroasted.com/products/gsi-ultralight-java-drip",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "40181519351993"
+   }
+  ],
+  "vendor": "GSI"
+ },
+ {
+  "body_hash": "19d4a218f3dff1ee",
+  "first_seen": "2026-10-26",
+  "handle": "gsi-personal-java-press",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/gsi-personal-java-press.jpg?v=1622823716",
+  "platform": "shopify",
+  "product_id": "6760141521081",
+  "product_type": "Brewing",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "GSI Personal Java Press",
+  "url": "https://www.sloroasted.com/products/gsi-personal-java-press",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Default Title",
+    "variant_id": "40181522399417"
+   }
+  ],
+  "vendor": "GSI"
+ },
+ {
+  "body_hash": "2ac3ca09ddc01d5b",
+  "first_seen": "2026-10-26",
+  "handle": "gsi-collapsible-java-drip",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/gsi-collapsible-java-drip-blue.webp?v=1781824724",
+  "platform": "shopify",
+  "product_id": "6760142504121",
+  "product_type": "Brewing",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "GSI Collapsible Java Drip",
+  "url": "https://www.sloroasted.com/products/gsi-collapsible-java-drip",
+  "variants": [
+   {
+    "available": false,
+    "grams": 163,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "40181525020857"
+   }
+  ],
+  "vendor": "GSI"
+ },
+ {
+  "body_hash": "beba9b5f9f0cd13d",
+  "first_seen": "2026-10-26",
+  "handle": "regular-decaf-coffee-portion-pack-1-84-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/portion-packs-regular.jpg?v=1622857312",
+  "platform": "shopify",
+  "product_id": "6760995029177",
+  "product_type": "Coffee - Portion Pack",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Regular & Decaf Coffee Portion Pack - 1.84 oz.",
+  "url": "https://www.sloroasted.com/products/regular-decaf-coffee-portion-pack-1-84-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Central Coast Blend",
+    "variant_id": "40183694524601"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Colombian",
+    "variant_id": "40183694557369"
+   },
+   {
+    "available": false,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Colombian Medium Decaf",
+    "variant_id": "40183694590137"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Darn Good Coffee",
+    "variant_id": "40183694622905"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "French Roast",
+    "variant_id": "40183694655673"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "French Roast Decaf",
+    "variant_id": "40183694688441"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Holiday Roast",
+    "variant_id": "40183694721209"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Morning Fog Lifter",
+    "variant_id": "40183694753977"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Morning Fog Lifter Decaf",
+    "variant_id": "40183694786745"
+   },
+   {
+    "available": true,
+    "grams": 62,
+    "price_usd": 4.0,
+    "title": "Royalty Blend Decaf",
+    "variant_id": "40183694819513"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "0a50a9b503b244cb",
+  "first_seen": "2026-10-26",
+  "handle": "gift-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/gift-packs.jpg?v=1622859434",
+  "platform": "shopify",
+  "product_id": "6761030090937",
+  "product_type": "Gifts",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Gift Packs",
+  "url": "https://www.sloroasted.com/products/gift-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Mixed regular and Flavored Coffees",
+    "variant_id": "41893584699577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Mixed regular Coffees",
+    "variant_id": "41893584732345"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "a5bedeb60b16058d",
+  "first_seen": "2026-10-26",
+  "handle": "big-sky-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-big-sky-blend-16oz.jpg?v=1644535985",
+  "platform": "shopify",
+  "product_id": "6769650335929",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Big Sky Blend",
+  "url": "https://www.sloroasted.com/products/big-sky-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216482742457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40216637571257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40216637604025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40216637636793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40216637669561"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "bd096a101ff965e3",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-italian-espresso-16oz.jpg?v=1644535998",
+  "platform": "shopify",
+  "product_id": "6769650434233",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Italian Espresso",
+  "url": "https://www.sloroasted.com/products/italian-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216482906297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40218540015801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40218540048569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40218540081337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40218540114105"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "23309969edd20ec5",
+  "first_seen": "2026-10-26",
+  "handle": "european-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-european-roast-16oz_6e2aaabf-e00c-470d-a404-df603c26dc5c.jpg?v=1644536003",
+  "platform": "shopify",
+  "product_id": "6769650565305",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "European Roast",
+  "url": "https://www.sloroasted.com/products/european-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216483037369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224948879545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224948912313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224948945081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224948977849"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "0cb474a5ade264c7",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-rocket-brew-16oz.jpg?v=1644536008",
+  "platform": "shopify",
+  "product_id": "6769650729145",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Rocket Brew",
+  "url": "https://www.sloroasted.com/products/rocket-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216483528889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224950812857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224950845625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224950878393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224950911161"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "e2902005d839537a",
+  "first_seen": "2026-10-26",
+  "handle": "locals-only",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-locals-only-16oz_2724e006-0897-4202-b4de-dd0eb4757177.jpg?v=1644536013",
+  "platform": "shopify",
+  "product_id": "6769650860217",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Locals Only",
+  "url": "https://www.sloroasted.com/products/locals-only",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216483692729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224951042233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224951075001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224951107769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224951140537"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "6612695528300b48",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-breakfast-blend-16oz.jpg?v=1644536019",
+  "platform": "shopify",
+  "product_id": "6769650892985",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.sloroasted.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216483823801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224951206073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224951238841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224951271609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224951304377"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "c77c5094e20f865d",
+  "first_seen": "2026-10-26",
+  "handle": "morning-fog-lifter",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-morning-fog-lifter-16oz_60c998cf-9533-41d3-b6b2-ad3eb3380631.jpg?v=1644536028",
+  "platform": "shopify",
+  "product_id": "6769650958521",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Morning Fog Lifter",
+  "url": "https://www.sloroasted.com/products/morning-fog-lifter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216483922105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224951632057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224951664825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224951697593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224951730361"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "2104f1e98e49549d",
+  "first_seen": "2026-10-26",
+  "handle": "central-coast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-central-coast-blend-16oz_18e18b8f-75e1-4bcb-9a92-bed4bfb61725.jpg?v=1644536033",
+  "platform": "shopify",
+  "product_id": "6769650991289",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Central Coast Blend",
+  "url": "https://www.sloroasted.com/products/central-coast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216484020409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224951992505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224952025273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224952058041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224952090809"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "34e4a2fc362d7fc2",
+  "first_seen": "2026-10-26",
+  "handle": "vienna",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-vienna-16oz.jpg?v=1644536039",
+  "platform": "shopify",
+  "product_id": "6769651122361",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vienna",
+  "url": "https://www.sloroasted.com/products/vienna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216484217017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224952156345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224952189113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224952221881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224952254649"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "fe087e699db7b4cd",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-costa-rican-16oz.jpg?v=1644536044",
+  "platform": "shopify",
+  "product_id": "6769651351737",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Costa Rican",
+  "url": "https://www.sloroasted.com/products/costa-rican",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216484511929"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224952385721"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224952418489"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224952451257"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224952484025"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "9dac80b2bb7b19d5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-french-roast-16oz.jpg?v=1644536060",
+  "platform": "shopify",
+  "product_id": "6769651646649",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.sloroasted.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216484905145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224952910009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224952942777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224952975545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224953008313"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "cdb683a3d65ad8c3",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-moka-java-dark-roast-16oz.jpg?v=1644536076",
+  "platform": "shopify",
+  "product_id": "6769651941561",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Moka Java - Dark Roast",
+  "url": "https://www.sloroasted.com/products/moka-java-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216485232825"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224953598137"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224953630905"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224953663673"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224953696441"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "bd6bfa416c12d56c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-brazil-16oz.jpg?v=1644536080",
+  "platform": "shopify",
+  "product_id": "6769652039865",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.sloroasted.com/products/brazil",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216485331129"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224954089657"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224954122425"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224954155193"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224954187961"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "0b596cea4ce81264",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-vienna-dark-roast-16oz.jpg?v=1644536084",
+  "platform": "shopify",
+  "product_id": "6769652400313",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vienna  - Dark Roast",
+  "url": "https://www.sloroasted.com/products/vienna-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216485953721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224957595833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224957628601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224957661369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224957694137"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "c55d9d61c4468cac",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-holiday-roast-16oz.jpg?v=1644536095",
+  "platform": "shopify",
+  "product_id": "6769652629689",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Holiday Roast",
+  "url": "https://www.sloroasted.com/products/holiday-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216486445241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224958087353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224958120121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224958152889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224958185657"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "cdbe7a217e25c220",
+  "first_seen": "2026-10-26",
+  "handle": "stormin-normans-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-stormin-normans-blend-16oz.jpg?v=1644536100",
+  "platform": "shopify",
+  "product_id": "6769652727993",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Stormin Norman's Blend",
+  "url": "https://www.sloroasted.com/products/stormin-normans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216486609081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224958283961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224958316729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224958349497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224958382265"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "3ab827f52edc53e7",
+  "first_seen": "2026-10-26",
+  "handle": "buccaneers-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-buccaneers-blend-16oz_7109d6ee-343f-4417-aadb-59fea24156f7.jpg?v=1644536104",
+  "platform": "shopify",
+  "product_id": "6769652924601",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Buccaneer's Blend",
+  "url": "https://www.sloroasted.com/products/buccaneers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216487297209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224958546105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224958578873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224958611641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224958644409"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "560abb716077a65b",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-slo-roasted-house-blend-16oz_ba0a9f36-952a-4439-a7a9-eb706d83b605.jpg?v=1644536111",
+  "platform": "shopify",
+  "product_id": "6769653153977",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted House Blend",
+  "url": "https://www.sloroasted.com/products/slo-roasted-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216487887033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224961134777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224961200313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224961233081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224961265849"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "7aa529fb6b899cdb",
+  "first_seen": "2026-10-26",
+  "handle": "godfathers-salute-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-godfathers-salute-blend-16oz_2b0cac73-b123-419a-aedc-6e761b566338.jpg?v=1644536116",
+  "platform": "shopify",
+  "product_id": "6769653186745",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Godfather's Salute Blend",
+  "url": "https://www.sloroasted.com/products/godfathers-salute-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488018105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224961429689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224961462457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224961495225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224961527993"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "87ed457b947a2449",
+  "first_seen": "2026-10-26",
+  "handle": "kings-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-kings-blend-16oz.jpg?v=1649445480",
+  "platform": "shopify",
+  "product_id": "6769653219513",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [
+   "Specials"
+  ],
+  "title": "King's Blend",
+  "url": "https://www.sloroasted.com/products/kings-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488083641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224961626297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224961659065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224961691833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224961724601"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8fdda6fe57dfa7f3",
+  "first_seen": "2026-10-26",
+  "handle": "colonel-austins-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-colonel-austins-blend-16oz.jpg?v=1644536130",
+  "platform": "shopify",
+  "product_id": "6769653317817",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Colonel Austin's Blend",
+  "url": "https://www.sloroasted.com/products/colonel-austins-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488313017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224970604729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224970670265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224970703033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224970735801"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "702d408d0c59680c",
+  "first_seen": "2026-10-26",
+  "handle": "darn-good-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-darn-good-coffee-16oz.jpg?v=1644536136",
+  "platform": "shopify",
+  "product_id": "6769653350585",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Darn Good Coffee",
+  "url": "https://www.sloroasted.com/products/darn-good-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488378553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224972570809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224972603577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224972636345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224972669113"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8472235278333605",
+  "first_seen": "2026-10-26",
+  "handle": "whiplash-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-whiplash-blend-16oz.jpg?v=1644536143",
+  "platform": "shopify",
+  "product_id": "6769653383353",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Whiplash Blend",
+  "url": "https://www.sloroasted.com/products/whiplash-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488411321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224973127865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224973160633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224973193401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224973226169"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "b21818f3c661d824",
+  "first_seen": "2026-10-26",
+  "handle": "anniversary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-anniversary-blend-16oz.jpg?v=1644536148",
+  "platform": "shopify",
+  "product_id": "6769653448889",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Anniversary Blend",
+  "url": "https://www.sloroasted.com/products/anniversary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488902841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224973357241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224973390009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224973422777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224973455545"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "73b8a1e4338705d2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-antigua",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-regular-guatemalan-antigua-16oz.jpg?v=1644536154",
+  "platform": "shopify",
+  "product_id": "6769653481657",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Guatemalan Antigua",
+  "url": "https://www.sloroasted.com/products/guatemalan-antigua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40216488935609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40224973521081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40224973553849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40224973586617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40224973619385"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "93d16baf34b3eb73",
+  "first_seen": "2026-10-26",
+  "handle": "european-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-european-roast-16oz.jpg?v=1644533279",
+  "platform": "shopify",
+  "product_id": "6771925254329",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "European Roast - Decaf",
+  "url": "https://www.sloroasted.com/products/european-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227142303929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227142336697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227142369465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227142402233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227142435001"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "4c9a4250545b1f07",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-french-roast-16oz_986c9e00-9865-4f5c-9ffc-ea6a7d593c6b.jpg?v=1644533285",
+  "platform": "shopify",
+  "product_id": "6771925418169",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "French Roast - Decaf",
+  "url": "https://www.sloroasted.com/products/french-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227142598841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227142631609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227142664377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227142697145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227142729913"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "cd2ce8a2cb89c9a1",
+  "first_seen": "2026-10-26",
+  "handle": "stormin-normans-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-stormin-normans-blend-16oz.jpg?v=1644533290",
+  "platform": "shopify",
+  "product_id": "6771925549241",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Stormin Norman's Blend - Decaf",
+  "url": "https://www.sloroasted.com/products/stormin-normans-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227142828217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227142860985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227142893753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227142959289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227142992057"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "c515c08052e7e61a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-italian-espresso-16oz.jpg?v=1644533295",
+  "platform": "shopify",
+  "product_id": "6771925713081",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Italian Espresso - Decaf",
+  "url": "https://www.sloroasted.com/products/italian-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227143712953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227143745721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227143778489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227143811257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227143844025"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "f04d92af9fe4287c",
+  "first_seen": "2026-10-26",
+  "handle": "big-sky-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-big-sky-blend-16oz.jpg?v=1644533299",
+  "platform": "shopify",
+  "product_id": "6771925844153",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Big Sky Blend - Decaf",
+  "url": "https://www.sloroasted.com/products/big-sky-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227144204473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227144237241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227144270009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227144302777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227144335545"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "fc3efbfe7713302e",
+  "first_seen": "2026-10-26",
+  "handle": "morning-fog-lifter-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-morning-fog-lifter-16oz.jpg?v=1644533305",
+  "platform": "shopify",
+  "product_id": "6771926007993",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Morning Fog Lifter - Decaf",
+  "url": "https://www.sloroasted.com/products/morning-fog-lifter-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227145121977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227145154745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227145187513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227145220281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227145253049"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "9420c0a37ea87527",
+  "first_seen": "2026-10-26",
+  "handle": "kings-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-kings-blend-16oz.jpg?v=1649445558",
+  "platform": "shopify",
+  "product_id": "6771926302905",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [
+   "Specials"
+  ],
+  "title": "King's Blend - Decaf",
+  "url": "https://www.sloroasted.com/products/kings-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227146039481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227146072249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227146105017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227146137785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227146170553"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "6c484798e038afe3",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-medium-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-colombian-medium-roast-16oz.jpg?v=1647628521",
+  "platform": "shopify",
+  "product_id": "6771926499513",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Colombian Medium Roast - Decaf",
+  "url": "https://www.sloroasted.com/products/colombian-medium-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227147382969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227147415737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227147448505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227147481273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227147514041"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "215b34fe72468e95",
+  "first_seen": "2026-10-26",
+  "handle": "belgian-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-belgian-chocolate-16oz_daa5e950-8f10-4893-ba03-ad2f162e55d6.jpg?v=1746370419",
+  "platform": "shopify",
+  "product_id": "6771978797241",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Belgian Chocolate",
+  "url": "https://www.sloroasted.com/products/belgian-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227487056057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227487088825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227487121593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227487154361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227487187129"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "989030b5f5ee2ac1",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-hazelnut-16oz.jpg?v=1644535201",
+  "platform": "shopify",
+  "product_id": "6771979190457",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Hazelnut",
+  "url": "https://www.sloroasted.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227489415353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227489448121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227489513657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227489546425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227489579193"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "106f6120c3f9f9e0",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-hawaiian-hazelnut-16oz_11a7ccfc-6519-4be3-a6a2-9231113dfc47.jpg?v=1644535208",
+  "platform": "shopify",
+  "product_id": "6771979255993",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Hawaiian Hazelnut",
+  "url": "https://www.sloroasted.com/products/hawaiian-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227489743033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227489775801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227489808569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227489841337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227489874105"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8d8f00d747e232e8",
+  "first_seen": "2026-10-26",
+  "handle": "german-chocolate-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-german-chocolate-cake-16oz.jpg?v=1644535213",
+  "platform": "shopify",
+  "product_id": "6771979321529",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "German Chocolate Cake",
+  "url": "https://www.sloroasted.com/products/german-chocolate-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227490070713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227490103481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227490136249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227490169017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227490201785"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "edfa9857c8af3b9b",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-sugar-cookie",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-vanilla-sugar-cookie-16oz_d12b7fa8-bc2b-4d36-b000-6e0d736b510a.jpg?v=1644535235",
+  "platform": "shopify",
+  "product_id": "6771979813049",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vanilla Sugar Cookie",
+  "url": "https://www.sloroasted.com/products/vanilla-sugar-cookie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40227493642425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40227493675193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40227493707961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40227493740729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40227493773497"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "1dbbff1aac0f4680",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-au-chocolate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-chocolate-au-chocolate-16oz_6db9dd35-a8fa-46b2-a98a-256709dd50f8.jpg?v=1644534688",
+  "platform": "shopify",
+  "product_id": "6773076983993",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Chocolate au Chocolate Decaf",
+  "url": "https://www.sloroasted.com/products/chocolate-au-chocolate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231046938809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231046971577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231047004345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231047037113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231047069881"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8829f7ca7d9109e4",
+  "first_seen": "2026-10-26",
+  "handle": "carmel-caramel-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-carmel-caramel-16oz.jpg?v=1644534695",
+  "platform": "shopify",
+  "product_id": "6773077147833",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Carmel Caramel Decaf",
+  "url": "https://www.sloroasted.com/products/carmel-caramel-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231047332025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231047364793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231047397561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231047430329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231047463097"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "665b7ab24bb7235c",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-sugar-cookie-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-vanilla-sugar-cookie-16oz.jpg?v=1644534700",
+  "platform": "shopify",
+  "product_id": "6773077475513",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vanilla Sugar Cookie Decaf",
+  "url": "https://www.sloroasted.com/products/vanilla-sugar-cookie-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231047790777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231047823545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231047856313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231047889081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231047921849"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "83878d59bdc15337",
+  "first_seen": "2026-10-26",
+  "handle": "belgian-chocolate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-belgian-chocolate-16oz.jpg?v=1746370969",
+  "platform": "shopify",
+  "product_id": "6773078098105",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Belgian Chocolate Decaf",
+  "url": "https://www.sloroasted.com/products/belgian-chocolate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231048642745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231048675513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231048708281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231048741049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231048773817"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "16098ab65cdf7333",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-chocolate-turtle-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-swiss-chocolate-turtle-16oz_549bc12e-752a-435b-8da6-02b6733662e8.jpg?v=1644534709",
+  "platform": "shopify",
+  "product_id": "6773079212217",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Swiss Chocolate Turtle Decaf",
+  "url": "https://www.sloroasted.com/products/swiss-chocolate-turtle-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231050477753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231050510521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231050543289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231050608825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231050641593"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "0e51284787968e7d",
+  "first_seen": "2026-10-26",
+  "handle": "bavarian-creme-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-bavarian-creme-16oz_8dec4bb9-8226-4109-a117-13fb37d14ec4.jpg?v=1644534714",
+  "platform": "shopify",
+  "product_id": "6773080162489",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Bavarian Creme Decaf",
+  "url": "https://www.sloroasted.com/products/bavarian-creme-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231051591865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231051624633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231051657401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231051690169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231051722937"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "7ac2aeea42b618a7",
+  "first_seen": "2026-10-26",
+  "handle": "maui-vanilla-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-maui-vanilla-16oz_a20f9022-e146-4e55-8864-7f8cdeb5a4c7.jpg?v=1644534718",
+  "platform": "shopify",
+  "product_id": "6773080785081",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Maui Vanilla Decaf",
+  "url": "https://www.sloroasted.com/products/maui-vanilla-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231052378297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231052411065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231052443833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231052476601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231052509369"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "30bd20993a28e8d5",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-vanilla-hazelnut-16oz.jpg?v=1644534723",
+  "platform": "shopify",
+  "product_id": "6773081571513",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vanilla Hazelnut Decaf",
+  "url": "https://www.sloroasted.com/products/vanilla-hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231053590713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231053656249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231053721785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231053787321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231053852857"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "dc8de08ed67d4c6d",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-bean-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-vanilla-bean-16oz.jpg?v=1644534728",
+  "platform": "shopify",
+  "product_id": "6773082456249",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vanilla Bean Decaf",
+  "url": "https://www.sloroasted.com/products/vanilla-bean-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231057948857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231057981625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231058014393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231058047161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231058079929"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "65844b5629e56851",
+  "first_seen": "2026-10-26",
+  "handle": "german-chocolate-cake-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-german-chocolate-cake-16oz.jpg?v=1644534733",
+  "platform": "shopify",
+  "product_id": "6773082915001",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "German Chocolate Cake Decaf",
+  "url": "https://www.sloroasted.com/products/german-chocolate-cake-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231058833593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231058866361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231058899129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231058931897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231058964665"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "d1fd0c2d8367c041",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-hawaiian-hazelnut-16oz.jpg?v=1644534737",
+  "platform": "shopify",
+  "product_id": "6773084291257",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Hawaiian Hazelnut Decaf",
+  "url": "https://www.sloroasted.com/products/hawaiian-hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231060340921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231060373689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231060406457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231060439225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231060471993"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "e5f629ff66ce4692",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-hazelnut-16oz.jpg?v=1644534743",
+  "platform": "shopify",
+  "product_id": "6773084913849",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Hazelnut Decaf",
+  "url": "https://www.sloroasted.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231061651641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231061684409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231061717177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231061749945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231061815481"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "e3ac7d573afe5154",
+  "first_seen": "2026-10-26",
+  "handle": "pirates-grogg-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-pirates-grogg-16oz.jpg?v=1644534747",
+  "platform": "shopify",
+  "product_id": "6773085601977",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Pirates Grogg Decaf",
+  "url": "https://www.sloroasted.com/products/pirates-grogg-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231062438073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231062470841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231062503609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231062536377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231062569145"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "5d373f062fe6d2a7",
+  "first_seen": "2026-10-26",
+  "handle": "scottish-toffee-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-flavored-decaf-scottish-toffee-16oz.jpg?v=1644534752",
+  "platform": "shopify",
+  "product_id": "6773086355641",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Scottish Toffee Decaf",
+  "url": "https://www.sloroasted.com/products/scottish-toffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231063322809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231063355577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231063388345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231063421113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231063453881"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "2c1b471eec40d950",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-pecan-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-seasonal-decaf-toasted-pecan-16oz.jpg?v=1644532398",
+  "platform": "shopify",
+  "product_id": "6773263728825",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Toasted Pecan Decaf",
+  "url": "https://www.sloroasted.com/products/toasted-pecan-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231316521145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231316553913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231316619449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231316652217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231316684985"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8bc55cc04ff8a4ed",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-seasonal-decaf-pumpkin-spice-16oz.jpg?v=1644532403",
+  "platform": "shopify",
+  "product_id": "6773264187577",
+  "product_type": "Coffee - Seasonal",
+  "roaster_slug": "sloroasted",
+  "tags": [
+   "Specials"
+  ],
+  "title": "Pumpkin Spice Decaf",
+  "url": "https://www.sloroasted.com/products/pumpkin-spice-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231317143737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231317176505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231317209273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231317242041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231317274809"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "d9632a799a0bece8",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-gingerbread-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-seasonal-decaf-cinnamon-gingerbread-16oz.jpg?v=1644532423",
+  "platform": "shopify",
+  "product_id": "6773266710713",
+  "product_type": "Coffee - Seasonal",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Cinnamon Gingerbread Decaf",
+  "url": "https://www.sloroasted.com/products/cinnamon-gingerbread-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231320256697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231320289465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231320322233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231320355001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231320387769"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "3c2b719156e30b68",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organically-grown-ring-of-fire",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-fair-trade-organic-ring-of-fire-16oz_786f541d-1e3a-4b76-a144-a143e2d8a461.jpg?v=1644536160",
+  "platform": "shopify",
+  "product_id": "6773424718009",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Fair Trade Organically Grown Ring of Fire",
+  "url": "https://www.sloroasted.com/products/fair-trade-organically-grown-ring-of-fire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231546945721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231546978489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231547011257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231547044025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231547076793"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8f4c999a9b50a72e",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organically-grown-quetzal",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-fair-trade-organic-quetzal-16oz.jpg?v=1644536167",
+  "platform": "shopify",
+  "product_id": "6773425340601",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Fair Trade Organically Grown Quetzal",
+  "url": "https://www.sloroasted.com/products/fair-trade-organically-grown-quetzal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231547895993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231547928761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231547961529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231547994297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231548027065"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "7941437ab5ce6825",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organically-grown-pacific-rim",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-fair-trade-organic-pacific-rim-16oz_618d1d13-1163-4382-9ee5-a21a9ec912a7.jpg?v=1644536173",
+  "platform": "shopify",
+  "product_id": "6773425766585",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Fair Trade Organically Grown Pacific Rim",
+  "url": "https://www.sloroasted.com/products/fair-trade-organically-grown-pacific-rim",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231548420281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231548453049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231548485817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231548518585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231548551353"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "a4f75e6f67be47c4",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organically-grown-lava-java",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-fair-trade-organic-lava-java-16oz.jpg?v=1644536180",
+  "platform": "shopify",
+  "product_id": "6773426716857",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Fair Trade Organically Grown Lava Java",
+  "url": "https://www.sloroasted.com/products/fair-trade-organically-grown-lava-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40231549501625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40231549567161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40231549599929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40231549632697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40231549665465"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8dcab8ee0b484cf2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-limited-kenya-aa-16oz.jpg?v=1653236472",
+  "platform": "shopify",
+  "product_id": "6774867361977",
+  "product_type": "Coffee - Limited Roast",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://www.sloroasted.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "40234167795897"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "40234167828665"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "40234167861433"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "40234167894201"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "40234167926969"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "b9c4aa50203e636a",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-bandana-black",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/slo-roasted-bandana-black.jpg?v=1623685759",
+  "platform": "shopify",
+  "product_id": "6779217084601",
+  "product_type": "Merchandise - Branded",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted Bandana - Black",
+  "url": "https://www.sloroasted.com/products/slo-roasted-bandana-black",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 5.99,
+    "title": "Default Title",
+    "variant_id": "40249526223033"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "b9c4aa50203e636a",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-bandana-navy",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/slo-roasted-bandana-navy.jpg?v=1623685764",
+  "platform": "shopify",
+  "product_id": "6779217182905",
+  "product_type": "Merchandise - Branded",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted Bandana - Navy",
+  "url": "https://www.sloroasted.com/products/slo-roasted-bandana-navy",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 5.99,
+    "title": "Default Title",
+    "variant_id": "40249526419641"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "0453f4ec495052f5",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-airscape-coffee-canister-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/airscape-coffee-canister.jpg?v=1623691673",
+  "platform": "shopify",
+  "product_id": "6779354218681",
+  "product_type": "Merchandise - Branded",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted Airscape Coffee Canister - 64oz",
+  "url": "https://www.sloroasted.com/products/slo-roasted-airscape-coffee-canister-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 34.0,
+    "title": "Default Title",
+    "variant_id": "40250474004665"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "08944cb8f820af35",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-polo-shirts",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/polo-shirts.jpg?v=1623703726",
+  "platform": "shopify",
+  "product_id": "6779645460665",
+  "product_type": "Merchandise - Branded",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted Polo Shirts",
+  "url": "https://www.sloroasted.com/products/slo-roasted-polo-shirts",
+  "variants": [
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Small / Red",
+    "variant_id": "40251342028985"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Small / Black",
+    "variant_id": "40251342061753"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Small / Navy Blue",
+    "variant_id": "40251342094521"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Medium / Red",
+    "variant_id": "40251342127289"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Medium / Black",
+    "variant_id": "40251342160057"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Medium / Navy Blue",
+    "variant_id": "40251342192825"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Large / Red",
+    "variant_id": "40251342225593"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Large / Black",
+    "variant_id": "40251342258361"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Large / Navy Blue",
+    "variant_id": "40251342291129"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Extra Large / Red",
+    "variant_id": "40251342323897"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Extra Large / Black",
+    "variant_id": "40251342356665"
+   },
+   {
+    "available": false,
+    "grams": 453,
+    "price_usd": 25.0,
+    "title": "Extra Large / Navy Blue",
+    "variant_id": "40251342389433"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "74b7722068cddcef",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-gift-cards",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/slo-roasted-gift-card-front_c69d2929-9ddc-4c21-b1ef-fc51f4f7debd.jpg?v=1643241288",
+  "platform": "shopify",
+  "product_id": "7173322571961",
+  "product_type": "Gift Cards",
+  "roaster_slug": "sloroasted",
+  "tags": [
+   "Exclude"
+  ],
+  "title": "SLO Roasted Gift Cards",
+  "url": "https://www.sloroasted.com/products/slo-roasted-gift-cards",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "15$",
+    "variant_id": "41842295406777"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "25$",
+    "variant_id": "41842295439545"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "35$",
+    "variant_id": "41842295472313"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "50$",
+    "variant_id": "41842295505081"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "100$",
+    "variant_id": "41842295537849"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "f5980013314d8118",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-brew-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/coffee-decaf-rocket-brew-16oz.jpg?v=1649444885",
+  "platform": "shopify",
+  "product_id": "7284743274681",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Rocket Brew - Decaf",
+  "url": "https://www.sloroasted.com/products/rocket-brew-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "42156500517049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "42156500549817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "42156500582585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "42156500615353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "42156500648121"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "bd096a101ff965e3",
+  "first_seen": "2026-10-26",
+  "handle": "italian-espresso-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/italian-espresso-12oz-bag.jpg?v=1671844834",
+  "platform": "shopify",
+  "product_id": "7992501272853",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Italian Espresso - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/italian-espresso-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Whole Bean",
+    "variant_id": "43737483280661"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "6612695528300b48",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/breakfast-blend-12oz-bag.jpg?v=1671844594",
+  "platform": "shopify",
+  "product_id": "7992501436693",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Breakfast Blend - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/breakfast-blend-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737483477269"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "c77c5094e20f865d",
+  "first_seen": "2026-10-26",
+  "handle": "morning-fog-lifter-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/morning-fog-lifter-12oz-bag_04aa87cc-df2f-47d9-b365-ddcd6e416cfb.jpg?v=1671844942",
+  "platform": "shopify",
+  "product_id": "7992501600533",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Morning Fog Lifter - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/morning-fog-lifter-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Whole Bean",
+    "variant_id": "43737483641109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737483673877"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "34e4a2fc362d7fc2",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/vienna-blend-12oz-bag.jpg?v=1671845083",
+  "platform": "shopify",
+  "product_id": "7992501731605",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Vienna - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/vienna-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737483804949"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "9dac80b2bb7b19d5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/french-roast-12oz-bag.jpg?v=1671844768",
+  "platform": "shopify",
+  "product_id": "7992502059285",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "French Roast - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/french-roast-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Whole Bean",
+    "variant_id": "43737484263701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737484296469"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "c55d9d61c4468cac",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-roast-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/seasonal-holiday-roast-12oz-bag.jpg?v=1671844881",
+  "platform": "shopify",
+  "product_id": "7992502321429",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Holiday Roast - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/holiday-roast-12oz-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737484493077"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "560abb716077a65b",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-house-blend-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/slo-roasted-house-blend-12oz-bag.jpg?v=1671845036",
+  "platform": "shopify",
+  "product_id": "7992502518037",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted House Blend - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/slo-roasted-house-blend-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737484755221"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "702d408d0c59680c",
+  "first_seen": "2026-10-26",
+  "handle": "darn-good-coffee-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/darn-good-coffee-12oz-bag.jpg?v=1671844661",
+  "platform": "shopify",
+  "product_id": "7992502681877",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Darn Good Coffee - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/darn-good-coffee-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737484984597"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "8472235278333605",
+  "first_seen": "2026-10-26",
+  "handle": "whiplash-blend-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/whiplash-blend-12oz-bag.jpg?v=1671845104",
+  "platform": "shopify",
+  "product_id": "7992502845717",
+  "product_type": "Coffee - Regular",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Whiplash Blend - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/whiplash-blend-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737485279509"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "4c9a4250545b1f07",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-decaf-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/french-roast-decaf-12oz-bag.jpg?v=1671844792",
+  "platform": "shopify",
+  "product_id": "7992503042325",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "French Roast - Decaf - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/french-roast-decaf-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737485541653"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "fc3efbfe7713302e",
+  "first_seen": "2026-10-26",
+  "handle": "morning-fog-lifter-decaf-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/morning-fog-lifter-decaf-12oz-bag.jpg?v=1671844961",
+  "platform": "shopify",
+  "product_id": "7992503173397",
+  "product_type": "Coffee - Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Morning Fog Lifter - Decaf - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/morning-fog-lifter-decaf-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737485672725"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "106f6120c3f9f9e0",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/products/hawaiian-hazelnut-flavored-12oz-bag.jpg?v=1671844810",
+  "platform": "shopify",
+  "product_id": "7992503632149",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Hawaiian Hazelnut - 12 oz. Bag",
+  "url": "https://www.sloroasted.com/products/hawaiian-hazelnut-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "43737486393621"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "d16d88cff51400aa",
+  "first_seen": "2026-10-26",
+  "handle": "rumble-jar-cold-brew-kit-32oz",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/rumble-jar-black.jpg?v=1705510012",
+  "platform": "shopify",
+  "product_id": "8997317968149",
+  "product_type": "Brewing",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Rumble Jar Cold Brew Kit - 32oz.",
+  "url": "https://www.sloroasted.com/products/rumble-jar-cold-brew-kit-32oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 510,
+    "price_usd": 34.0,
+    "title": "Default Title",
+    "variant_id": "47905158725909"
+   }
+  ],
+  "vendor": "RUMBLE JAR"
+ },
+ {
+  "body_hash": "a329fe62d8fb9d0c",
+  "first_seen": "2026-10-26",
+  "handle": "slo-roasted-stickers-points-of-interest",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/sticker-slo-roasted-all.jpg?v=1708013455",
+  "platform": "shopify",
+  "product_id": "9022219485461",
+  "product_type": "Merchandise - Branded",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "SLO Roasted Stickers - Points of Interest",
+  "url": "https://www.sloroasted.com/products/slo-roasted-stickers-points-of-interest",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "San Luis Obispo",
+    "variant_id": "47992929681685"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Cayucos Beach",
+    "variant_id": "47992929714453"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Los Osos",
+    "variant_id": "47992929747221"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Montaña De Oro",
+    "variant_id": "47992929779989"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Morro Bay",
+    "variant_id": "47992929812757"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Broken Board Surfer",
+    "variant_id": "47992929845525"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Camping",
+    "variant_id": "47992929878293"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Monarch Butterflies",
+    "variant_id": "47992929911061"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "SLO Roasted Morning Fog Lifter",
+    "variant_id": "47992929943829"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "California Poppies",
+    "variant_id": "47992929976597"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "Coffee Loving Bear",
+    "variant_id": "47992930009365"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "e281b506107396e5",
+  "first_seen": "2026-10-26",
+  "handle": "java-blawan-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/coffee-limited-java-blawan-estate-16oz.jpg?v=1730908971",
+  "platform": "shopify",
+  "product_id": "9245627678997",
+  "product_type": "Coffee - Limited Roast",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Java Blawan Estate",
+  "url": "https://www.sloroasted.com/products/java-blawan-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "48632514773269"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "48632514806037"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "48632514838805"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "48632514871573"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "48632514904341"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "adc1b58d68ac2871",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/coffee-flavored-chocolate-raspberry-16oz_2650bf0a-fe54-4295-9881-5b2be92d5a62.jpg?v=1746370419",
+  "platform": "shopify",
+  "product_id": "9334302310677",
+  "product_type": "Coffee - Flavored",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Chocolate Raspberry",
+  "url": "https://www.sloroasted.com/products/chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "48927155192085"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "48927155224853"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "48927155257621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "48927155290389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "48927155323157"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "3b3ae66daf309970",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/coffee-flavored-decaf-chocolate-raspberry-16oz.jpg?v=1746370969",
+  "platform": "shopify",
+  "product_id": "9334304014613",
+  "product_type": "Coffee - Flavored Decaf",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Chocolate Raspberry Decaf",
+  "url": "https://www.sloroasted.com/products/chocolate-raspberry-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "48927157584149"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "48927157616917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "48927157649685"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "48927157682453"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "48927157715221"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "b581ca09ffa0fc75",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-organically-grown-crown-jewel-10oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/sumatra-takengon-organic-10oz-crown-jewel.jpg?v=1763137596",
+  "platform": "shopify",
+  "product_id": "9437005283605",
+  "product_type": "Coffee - Limited Roast",
+  "roaster_slug": "sloroasted",
+  "tags": [
+   "Exclude"
+  ],
+  "title": "Sumatra Takengon Organically Grown Crown Jewel - 10oz. Bag",
+  "url": "https://www.sloroasted.com/products/sumatra-takengon-organically-grown-crown-jewel-10oz-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. Bag / Whole Bean",
+    "variant_id": "49535617138965"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "49535617171733"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "49535617204501"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "49535617237269"
+   },
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "49535617270037"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ },
+ {
+  "body_hash": "222ccb14ea21ac1e",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-bugisu",
+  "image": "https://cdn.shopify.com/s/files/1/0570/1464/9017/files/coffee-limited-uganda-bugisu-16oz.jpg?v=1782608152",
+  "platform": "shopify",
+  "product_id": "9556408828181",
+  "product_type": "Coffee - Limited Roast",
+  "roaster_slug": "sloroasted",
+  "tags": [],
+  "title": "Uganda Bugisu",
+  "url": "https://www.sloroasted.com/products/uganda-bugisu",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Whole Bean",
+    "variant_id": "49993097773333"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Coarse Grind-French Press",
+    "variant_id": "49993097806101"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Medium Grind-Drip Machine",
+    "variant_id": "49993097838869"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Fine Grind-Espresso Machine",
+    "variant_id": "49993097871637"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. Bag / Ground / Reusable K-Cup Filter",
+    "variant_id": "49993097904405"
+   }
+  ],
+  "vendor": "SLO Roasted Coffee"
+ }
+]

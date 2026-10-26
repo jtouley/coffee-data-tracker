@@ -1,0 +1,514 @@
+[
+ {
+  "body_hash": "b0ea898831689624",
+  "first_seen": "2026-10-26",
+  "handle": "vintage-94-blend",
+  "image": "https://thejavahouse.com/wp-content/uploads/2021/11/IMG_7940-jpg.webp",
+  "platform": "woocommerce",
+  "product_id": "12396",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Iowa",
+   "Java",
+   "Java House Coffee",
+   "at home brewing",
+   "at home coffee",
+   "brail",
+   "breakfast blend",
+   "breakfast coffee",
+   "buttery finish",
+   "caramel",
+   "cinnamon",
+   "city",
+   "coffee",
+   "colombian coffee",
+   "house blend",
+   "iowa city",
+   "iowa coffee",
+   "iowa coffee roasters",
+   "java house",
+   "java house coffee roasters",
+   "mexico",
+   "vintage",
+   "vintage 1994 blend",
+   "vintage 94 blend",
+   "vintage iowa",
+   "vintage java house"
+  ],
+  "title": "Vintage ’94 Blend",
+  "url": "https://thejavahouse.com/product/vintage-94-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Vintage &#8217;94 Blend",
+    "variant_id": "12396:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "143b1a7c1b49a10b",
+  "first_seen": "2026-10-26",
+  "handle": "iowa-city-skyline-drink-local-coffee",
+  "image": "https://thejavahouse.com/wp-content/uploads/2018/06/iowa-city-skyline-scaled.webp",
+  "platform": "woocommerce",
+  "product_id": "24106",
+  "product_type": "simple",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Hawkeye Collection",
+   "cafe",
+   "coffee",
+   "drink local",
+   "drink local coffee",
+   "hawkeye",
+   "iowa city",
+   "sticker",
+   "support",
+   "university of iowa"
+  ],
+  "title": "Iowa City Skyline- Drink Local Coffee",
+  "url": "https://thejavahouse.com/product/iowa-city-skyline-drink-local-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.89,
+    "title": "Iowa City Skyline- Drink Local Coffee",
+    "variant_id": "24106:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "332315a83cb44f20",
+  "first_seen": "2026-10-26",
+  "handle": "iowa-wave-all-day-coffee-blend",
+  "image": "https://thejavahouse.com/wp-content/uploads/Solo-Wave-Bigger.jpg",
+  "platform": "woocommerce",
+  "product_id": "28808",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Iowa",
+   "Java",
+   "Java House Coffee",
+   "blend",
+   "coarse grind",
+   "coffee",
+   "drip coffee",
+   "ground",
+   "iowa city",
+   "organic",
+   "pour over",
+   "roastery",
+   "whole bean",
+   "wholebean"
+  ],
+  "title": "Iowa Wave all Day Coffee Blend",
+  "url": "https://thejavahouse.com/product/iowa-wave-all-day-coffee-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz",
+    "variant_id": "28808:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24fc443ecd001c7e",
+  "first_seen": "2026-10-26",
+  "handle": "american-gothic",
+  "image": "https://thejavahouse.com/wp-content/uploads/american-gothic-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "357",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Java House Coffee",
+   "american gothic",
+   "brazil",
+   "chocolate",
+   "coffee",
+   "dark coffee",
+   "dark roast",
+   "french roast",
+   "gothic",
+   "gothic coffee",
+   "house blend",
+   "molasses",
+   "smoky",
+   "sumatra"
+  ],
+  "title": "American Gothic",
+  "url": "https://thejavahouse.com/product/american-gothic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz",
+    "variant_id": "357:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16oz",
+    "variant_id": "357:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "357:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "357:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84e473c9773e356a",
+  "first_seen": "2026-10-26",
+  "handle": "giant-of-the-earth",
+  "image": "https://thejavahouse.com/wp-content/uploads/giant-of-the-earth-beans-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "365",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Colombia",
+   "El Salvador",
+   "Guatemala",
+   "Java House Coffee",
+   "cocoa",
+   "coffee",
+   "full city",
+   "full city roast",
+   "full roast",
+   "giant",
+   "giant blend",
+   "giant of the earth",
+   "house blend",
+   "nutty",
+   "raw sugar"
+  ],
+  "title": "Giant of the Earth",
+  "url": "https://thejavahouse.com/product/giant-of-the-earth/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz",
+    "variant_id": "365:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16oz",
+    "variant_id": "365:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "365:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "365:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a56f67b8af05c90c",
+  "first_seen": "2026-10-26",
+  "handle": "st-louis-blues",
+  "image": "https://thejavahouse.com/wp-content/uploads/st-louis-blues-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "370",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Java House Coffee",
+   "black tea",
+   "blackberries",
+   "blues",
+   "caramel",
+   "citrus",
+   "coffee",
+   "house blend",
+   "light",
+   "light roast",
+   "st louis blues",
+   "st. louis"
+  ],
+  "title": "St. Louis Blues",
+  "url": "https://thejavahouse.com/product/st-louis-blues/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz",
+    "variant_id": "370:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16oz",
+    "variant_id": "370:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.95,
+    "title": "2lb",
+    "variant_id": "370:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.95,
+    "title": "5lb",
+    "variant_id": "370:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "262056685b7df5d3",
+  "first_seen": "2026-10-26",
+  "handle": "artisan-cold-blend",
+  "image": "https://thejavahouse.com/wp-content/uploads/2018/07/Artisan-Web-1.png",
+  "platform": "woocommerce",
+  "product_id": "381",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Java House Coffee",
+   "artisan blend",
+   "artisan coffee",
+   "artisan cold blend",
+   "blend",
+   "city",
+   "city roast",
+   "coffee",
+   "cold blend",
+   "cold brew",
+   "dark chocolate",
+   "fruit",
+   "iced blend",
+   "iced coffee",
+   "medium roast",
+   "mexico",
+   "organic",
+   "peru",
+   "tea body"
+  ],
+  "title": "Artisan Cold Blend",
+  "url": "https://thejavahouse.com/product/artisan-cold-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz",
+    "variant_id": "381:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16oz",
+    "variant_id": "381:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "381:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "381:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b3a5087dd5d3d765",
+  "first_seen": "2026-10-26",
+  "handle": "davids-red-door-espresso",
+  "image": "https://thejavahouse.com/wp-content/uploads/red-door-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "3906",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "David's Red Door",
+   "Espresso blend",
+   "Java House Coffee",
+   "chocolate",
+   "cocoa nibs",
+   "coffee",
+   "dark coffee",
+   "espresso",
+   "french roast",
+   "gothic coffee",
+   "house blend",
+   "mystery espresso",
+   "raisins",
+   "red door",
+   "syrupy body"
+  ],
+  "title": "David’s Red Door Espresso Blend",
+  "url": "https://thejavahouse.com/product/davids-red-door-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz",
+    "variant_id": "3906:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16oz",
+    "variant_id": "3906:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "3906:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "3906:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "940b12da779de597",
+  "first_seen": "2026-10-26",
+  "handle": "old-capitol-blend",
+  "image": "https://thejavahouse.com/wp-content/uploads/2020/11/IMG_7941-jpg.webp",
+  "platform": "woocommerce",
+  "product_id": "5921",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Colombia",
+   "Ethiopia",
+   "Iowa",
+   "Java",
+   "Java House Coffee",
+   "at home brewing",
+   "at home coffee",
+   "bench",
+   "black tea",
+   "cinnamon",
+   "city",
+   "city roast",
+   "coffee",
+   "colombian coffee",
+   "house blend",
+   "iowa city",
+   "java house",
+   "java house coffee roasters",
+   "lemon",
+   "old capitol",
+   "old capitol iowa",
+   "ped mall",
+   "ped mall iowa city"
+  ],
+  "title": "Old Capitol Blend",
+  "url": "https://thejavahouse.com/product/old-capitol-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Old Capitol Blend",
+    "variant_id": "5921:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f1d93979f9b5d124",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-conversation-brew",
+  "image": "https://thejavahouse.com/wp-content/uploads/2018/11/Coffe-Bag-decaf-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "923",
+  "product_type": "variable",
+  "roaster_slug": "thejavahouse",
+  "tags": [
+   "Java",
+   "Java House Coffee",
+   "central america",
+   "coffee",
+   "decaf",
+   "decaffinated",
+   "french",
+   "french roast",
+   "full body",
+   "house blend",
+   "java house",
+   "single origin"
+  ],
+  "title": "Decaf Conversation Brew",
+  "url": "https://thejavahouse.com/product/decaf-conversation-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz",
+    "variant_id": "923:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "16oz",
+    "variant_id": "923:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

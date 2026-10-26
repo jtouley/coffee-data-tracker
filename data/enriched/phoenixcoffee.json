@@ -1,0 +1,61 @@
+{
+ "56e5b356c6fc082c757bb3e8": {
+  "body_hash": "97843f6a746ec157",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "velvety",
+   "cocoa",
+   "tobacco"
+  ],
+  "varietals": []
+ },
+ "56e5b5a54d088e29142380aa": {
+  "body_hash": "c247a860d3358db5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "red apple",
+   "molasses"
+  ],
+  "varietals": []
+ },
+ "6a3018f340ed1a248e4ec225": {
+  "body_hash": "cd98741fdf10ce5e",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 2100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pineapple",
+   "nectarine",
+   "peach blossom"
+  ],
+  "varietals": [
+   "74110"
+  ]
+ }
+}

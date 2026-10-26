@@ -1,0 +1,351 @@
+[
+ {
+  "body_hash": "1636f061c1d04bc6",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-whole-bean-coffee-2lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/WB-MarquisCoffee-ColSup-Front.jpg?v=1687549199",
+  "platform": "shopify",
+  "product_id": "6365993539",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Colombian Supremo Whole Bean Coffee 2lb bag",
+  "url": "https://marquisbeverage.com/products/colombian-supremo-whole-bean-coffee-2lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "19586101699"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "e1d5886e2abae99b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-ground-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/GC-MarquisCoffee-ColSup-Front.jpg?v=1687550289",
+  "platform": "shopify",
+  "product_id": "6365994179",
+  "product_type": "Ground Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Colombian Supremo Ground Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/colombian-supremo-ground-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "19586103875"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "9602b66270f64fcc",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-whole-bean-coffee-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/products/21RC4zJgipL_a2531f90-fb0e-4529-95fe-7a5259f3da0b.jpeg?v=1462030177",
+  "platform": "shopify",
+  "product_id": "6365994371",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Colombian Supremo Whole Bean Coffee 5lb bag",
+  "url": "https://marquisbeverage.com/products/colombian-supremo-whole-bean-coffee-5lb-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2309,
+    "price_usd": 65.0,
+    "title": "Default Title",
+    "variant_id": "19586104067"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "3c9ddd4d1dc65d63",
+  "first_seen": "2026-10-26",
+  "handle": "euro-processed-decaf-whole-bean-coffee-2lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/WB-MarquisCoffee-Europrocess-Front.jpg?v=1687549889",
+  "platform": "shopify",
+  "product_id": "6365996291",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Euro-Processed Decaf Whole Bean Coffee 2lb bag",
+  "url": "https://marquisbeverage.com/products/euro-processed-decaf-whole-bean-coffee-2lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586107459"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "d36cffff99b77b25",
+  "first_seen": "2026-10-26",
+  "handle": "euro-processed-decaf-ground-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/GC-MarquisCoffee-Europrocess-Front.jpg?v=1687550551",
+  "platform": "shopify",
+  "product_id": "6365997251",
+  "product_type": "Ground Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Euro-Processed Decaf Ground Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/euro-processed-decaf-ground-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586109123"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "da53080859719d22",
+  "first_seen": "2026-10-26",
+  "handle": "euro-processed-decaf-whole-bean-coffee-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/products/211jr6qgnFL_ff4da41e-8ad5-4b2b-b345-363486b357bb.jpeg?v=1462030192",
+  "platform": "shopify",
+  "product_id": "6365997571",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Euro-Processed Decaf Whole Bean Coffee 5lb bag",
+  "url": "https://marquisbeverage.com/products/euro-processed-decaf-whole-bean-coffee-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2309,
+    "price_usd": 65.0,
+    "title": "Default Title",
+    "variant_id": "19586110211"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "9b8275adb85e3c04",
+  "first_seen": "2026-10-26",
+  "handle": "commodores-dark-whole-bean-coffee-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/products/21RC4zJgipL_35e1f6d3-2f2b-426c-8eb5-413caf150613.jpeg?v=1462030244",
+  "platform": "shopify",
+  "product_id": "6366009091",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Commodore's Dark Whole Bean Coffee 5lb bag",
+  "url": "https://marquisbeverage.com/products/commodores-dark-whole-bean-coffee-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2309,
+    "price_usd": 67.5,
+    "title": "Default Title",
+    "variant_id": "19586128387"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "0ea6d8c1eac8dde5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-whole-bean-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/WB-MarquisCoffee-EthioYir-Front.jpg?v=1687549955",
+  "platform": "shopify",
+  "product_id": "6366011651",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe Whole Bean Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/ethiopian-yirgacheffe-whole-bean-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586130371"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "d3e2c75dfae7b918",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-ground-coffee-2-lb-bag-1",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/GC-MarquisCoffee-EthioYir-Front_3b9a20af-76a1-4afc-8980-f2909735e488.jpg?v=1687550500",
+  "platform": "shopify",
+  "product_id": "6366012547",
+  "product_type": "Ground Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe Ground Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/ethiopian-yirgacheffe-ground-coffee-2-lb-bag-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586132547"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "8785c42baca3b62c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-whole-bean-coffee-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/products/21RC4zJgipL_f62b18e3-b1d1-408d-92bd-f316cf8402ec.jpeg?v=1687549065",
+  "platform": "shopify",
+  "product_id": "6366012867",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe Whole Bean Coffee 5lb bag",
+  "url": "https://marquisbeverage.com/products/ethiopian-yirgacheffe-whole-bean-coffee-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2309,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "19586133059"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "4e96e13496c9790c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-whole-bean-coffee-2lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/WB-MarquisCoffee-French-Front.jpg?v=1687549919",
+  "platform": "shopify",
+  "product_id": "6366024707",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "French Roast Whole Bean Coffee 2lb bag",
+  "url": "https://marquisbeverage.com/products/french-roast-whole-bean-coffee-2lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "19586152835"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "8605a5255d58f39c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-ground-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/GC-MarquisCoffee-French-Front.jpg?v=1687550523",
+  "platform": "shopify",
+  "product_id": "6366025603",
+  "product_type": "Ground Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "French Roast Ground Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/french-roast-ground-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "19586153795"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "0d40df197fafa6fe",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-whole-bean-coffee-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/products/21RC4zJgipL_596bba63-f0b9-4b3e-8925-d42e6836ab52.jpeg?v=1462030323",
+  "platform": "shopify",
+  "product_id": "6366025923",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [],
+  "title": "French Roast Whole Bean Coffee 5lb bag",
+  "url": "https://marquisbeverage.com/products/french-roast-whole-bean-coffee-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2309,
+    "price_usd": 65.0,
+    "title": "Default Title",
+    "variant_id": "19586154115"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "8f555d6cfdd0b228",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-half-caf-ground-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/GC-MarquisCoffee-HalfCaff-Front.jpg?v=1687550470",
+  "platform": "shopify",
+  "product_id": "6366035523",
+  "product_type": "Ground Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [
+   "FBA"
+  ],
+  "title": "Ethiopian Half-Caf Ground Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/ethiopian-half-caf-ground-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586171203"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ },
+ {
+  "body_hash": "8f555d6cfdd0b228",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-half-caf-whole-bean-coffee-2-lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0494/7125/files/WB-MarquisCoffee-HalfCaff-Front.jpg?v=1687549787",
+  "platform": "shopify",
+  "product_id": "6366037763",
+  "product_type": "Whole Bean Coffees",
+  "roaster_slug": "marquisbeverage",
+  "tags": [
+   "FBA"
+  ],
+  "title": "Ethiopian Half-Caf Whole Bean Coffee 2 lb bag",
+  "url": "https://marquisbeverage.com/products/ethiopian-half-caf-whole-bean-coffee-2-lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 934,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "19586175747"
+   }
+  ],
+  "vendor": "Marquis Beverage"
+ }
+]

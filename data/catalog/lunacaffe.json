@@ -1,0 +1,315 @@
+[
+ {
+  "body_hash": "53ae858ba52fe604",
+  "first_seen": "2026-10-26",
+  "handle": "double-espresso-shot",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/07/original-61.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12557",
+  "product_type": "simple",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Hot Coffees"
+  ],
+  "title": "Double Espresso Shot",
+  "url": "https://www.lunacaffe.com/product/double-espresso-shot/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.5,
+    "title": "Double Espresso Shot",
+    "variant_id": "12557:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc7ddca5fddf3608",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-over-ice",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/07/original-62.jpeg",
+  "platform": "woocommerce",
+  "product_id": "12684",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Cold Coffees"
+  ],
+  "title": "Espresso Over Ice",
+  "url": "https://www.lunacaffe.com/product/espresso-over-ice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.8,
+    "title": "Espresso Over Ice",
+    "variant_id": "12684:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbfbf6e45891b563",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-medium-roast",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/07/original-49.jpeg",
+  "platform": "woocommerce",
+  "product_id": "13053",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Hot Coffees"
+  ],
+  "title": "Coffee Medium Roast",
+  "url": "https://www.lunacaffe.com/product/coffee-medium-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "New-Moon",
+    "variant_id": "13053:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "Half-Moon",
+    "variant_id": "13053:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "Full-Moon",
+    "variant_id": "13053:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3b4fcb522aeda52",
+  "first_seen": "2026-10-26",
+  "handle": "extra-espresso",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/07/original-120.jpeg",
+  "platform": "woocommerce",
+  "product_id": "13561",
+  "product_type": "simple",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Extras"
+  ],
+  "title": "Extra Espresso",
+  "url": "https://www.lunacaffe.com/product/extra-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.25,
+    "title": "Extra Espresso",
+    "variant_id": "13561:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2611305acddd7230",
+  "first_seen": "2026-10-26",
+  "handle": "luna-coffee-12-oz-retail-bags",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-56.jpg",
+  "platform": "woocommerce",
+  "product_id": "14302",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Whole Bean Coffee"
+  ],
+  "title": "Luna Coffee 12 Oz Retail Bags",
+  "url": "https://www.lunacaffe.com/product/luna-coffee-12-oz-retail-bags/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Luna Coffee 12 Oz Retail Bags",
+    "variant_id": "14302:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "edac8fd6c9955d0b",
+  "first_seen": "2026-10-26",
+  "handle": "luna-one-pound-coffee",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-62.jpg",
+  "platform": "woocommerce",
+  "product_id": "14438",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Whole Bean Coffee"
+  ],
+  "title": "Luna One Pound Coffee",
+  "url": "https://www.lunacaffe.com/product/luna-one-pound-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Luna One Pound Coffee",
+    "variant_id": "14438:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f128fbae7d4974f",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-light-roast",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-7.jpeg",
+  "platform": "woocommerce",
+  "product_id": "14491",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Hot Coffees"
+  ],
+  "title": "Coffee Light Roast",
+  "url": "https://www.lunacaffe.com/product/coffee-light-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.9,
+    "title": "Half-Moon",
+    "variant_id": "14491:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.9,
+    "title": "Full-Moon",
+    "variant_id": "14491:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1.9,
+    "title": "New-Moon",
+    "variant_id": "14491:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ea3c843b4bdc9d9",
+  "first_seen": "2026-10-26",
+  "handle": "honey-spice-latte-hot",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-10.jpeg",
+  "platform": "woocommerce",
+  "product_id": "14816",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Specialty Hot Lattes"
+  ],
+  "title": "Honey Spice Latte Hot",
+  "url": "https://www.lunacaffe.com/product/honey-spice-latte-hot/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.55,
+    "title": "New-Moon",
+    "variant_id": "14816:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.55,
+    "title": "Half-Moon",
+    "variant_id": "14816:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.55,
+    "title": "Full-Moon",
+    "variant_id": "14816:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d37242b8ca604c05",
+  "first_seen": "2026-10-26",
+  "handle": "honey-spice-latte-iced",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-13.jpeg",
+  "platform": "woocommerce",
+  "product_id": "14838",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Specialty Cold Lattes"
+  ],
+  "title": "Honey Spice Latte Iced",
+  "url": "https://www.lunacaffe.com/product/honey-spice-latte-iced/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Half-Moon",
+    "variant_id": "14838:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Full-Moon",
+    "variant_id": "14838:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9930a839837e73cf",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-dark-roast",
+  "image": "https://www.lunacaffe.com/wp-content/uploads/2020/08/original-22.jpeg",
+  "platform": "woocommerce",
+  "product_id": "14986",
+  "product_type": "variable",
+  "roaster_slug": "lunacaffe",
+  "tags": [
+   "Hot Coffees"
+  ],
+  "title": "Coffee Dark Roast",
+  "url": "https://www.lunacaffe.com/product/coffee-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "New Moon",
+    "variant_id": "14986:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "Half Moon",
+    "variant_id": "14986:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.35,
+    "title": "Full Moon",
+    "variant_id": "14986:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

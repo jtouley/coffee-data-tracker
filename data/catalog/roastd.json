@@ -1,0 +1,859 @@
+[
+ {
+  "body_hash": "1d5173f245bb3c30",
+  "first_seen": "2026-10-26",
+  "handle": "png-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/products/PNG-Bag-Front.jpg?v=1614536722",
+  "platform": "shopify",
+  "product_id": "4506458488917",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "P'NG - Papua New Guinea - Medium Roast",
+  "url": "https://roastd.coffee/products/png-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "31705860014165"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "31880386510933"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "31880386838613"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "31880387330133"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over / Drip",
+    "variant_id": "31880387395669"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "31880387526741"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "31880388182101"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "31880388968533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "31880389230677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "31880389820501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "31880390213717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "31880391426133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "31880391721045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over / Drip",
+    "variant_id": "31880392048725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "31880392441941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "31880393031765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "31880393228373"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ },
+ {
+  "body_hash": "27b3999cddea68c1",
+  "first_seen": "2026-10-26",
+  "handle": "kivu-rwanda-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/products/Kivu-Bag-Front.jpg?v=1615075132",
+  "platform": "shopify",
+  "product_id": "4566698328149",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "Kivu - Rwanda - Dark Roast",
+  "url": "https://roastd.coffee/products/kivu-rwanda-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "31880038449237"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "31880099004501"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "31880101560405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "31880102510677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over / Drip",
+    "variant_id": "31880102772821"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "31880103329877"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "31880103723093"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "31880105427029"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "31880106573909"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "31880108146773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "31880108638293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "31880113487957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "31880113684565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over / Drip",
+    "variant_id": "31880114307157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "31880114405461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "31880114831445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "31880114995285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "31880115093589"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ },
+ {
+  "body_hash": "304809203647bd31",
+  "first_seen": "2026-10-26",
+  "handle": "legender-brazil-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/products/Legender-Bag-Front.jpg?v=1615074642",
+  "platform": "shopify",
+  "product_id": "4566805938261",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "Legender - Brazil - Medium Dark Roast",
+  "url": "https://roastd.coffee/products/legender-brazil-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Beans",
+    "variant_id": "31880334147669"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "31880341127253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "31880342831189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "31880343060565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over / Drip",
+    "variant_id": "31880343158869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "31880343224405"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "31880344174677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "31880344207445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "31880344272981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Beans",
+    "variant_id": "31880345518165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "31880346075221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "31880351940693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "31880352170069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over / Drip",
+    "variant_id": "31880352366677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "31880352530517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "31880352727125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "31880352792661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "31880352858197"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ },
+ {
+  "body_hash": "462ef80192ffd9db",
+  "first_seen": "2026-10-26",
+  "handle": "sidamo-ethiopia-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/products/Sidamo-Bag-Front.jpg?v=1614531168",
+  "platform": "shopify",
+  "product_id": "4566835069013",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "Sidamo - Ethiopia - Medium Roast",
+  "url": "https://roastd.coffee/products/sidamo-ethiopia-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "31880394834005"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "31880400109653"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "31880400437333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "31880401256533"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over / Drip",
+    "variant_id": "31880401518677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "31880401715285"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "31880401879125"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "31880402272341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "31880402468949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "31880402927701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "31880403714133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "31880403976277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over / Drip",
+    "variant_id": "31880404533333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "31880404598869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "31880404893781"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "31880405549141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "31880407515221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "31880411643989"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ },
+ {
+  "body_hash": "f89a3bb414b2a253",
+  "first_seen": "2026-10-26",
+  "handle": "aponte-colombia-medium-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/products/Aponte-Bag-Front.jpg?v=1614535297",
+  "platform": "shopify",
+  "product_id": "4749196460117",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "Aponte - Colombia - Medium Light Roast",
+  "url": "https://roastd.coffee/products/aponte-colombia-medium-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "32653857980501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "32653858013269"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "32653858046037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "32653858078805"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "32653858111573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "32653858144341"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "32653858177109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "32653858209877"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over / Drip",
+    "variant_id": "32653858242645"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over / Drip",
+    "variant_id": "32653858275413"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "32653858308181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "32653858340949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "32653858373717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "32653858406485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "32653858439253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "32653858472021"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "32653858504789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "32653858537557"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ },
+ {
+  "body_hash": "94e6ce5e71af2e47",
+  "first_seen": "2026-10-26",
+  "handle": "buesaco-colombia-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/3050/6069/files/Beusaco-Bag-Front.jpg?v=1682701018",
+  "platform": "shopify",
+  "product_id": "7483718697151",
+  "product_type": "Coffee",
+  "roaster_slug": "roastd",
+  "tags": [
+   "roasted beans"
+  ],
+  "title": "Buesaco - Colombia - Medium Dark Roast",
+  "url": "https://roastd.coffee/products/buesaco-colombia-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "42335114395839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Cold Brew",
+    "variant_id": "42335114428607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / French Press",
+    "variant_id": "42335114461375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Percolator",
+    "variant_id": "42335114494143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Pour Over/Drip",
+    "variant_id": "42335114526911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Auto Drip",
+    "variant_id": "42335114559679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Moka Pot",
+    "variant_id": "42335114592447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Espresso",
+    "variant_id": "42335114625215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb. / Turkish",
+    "variant_id": "42335114657983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "42335114690751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Cold Brew",
+    "variant_id": "42335114723519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / French Press",
+    "variant_id": "42335114756287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Percolator",
+    "variant_id": "42335114789055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Pour Over/Drip",
+    "variant_id": "42335114821823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Auto Drip",
+    "variant_id": "42335114854591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Moka Pot",
+    "variant_id": "42335114887359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Espresso",
+    "variant_id": "42335114920127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. / Turkish",
+    "variant_id": "42335114952895"
+   }
+  ],
+  "vendor": "Roast'd Coffee"
+ }
+]

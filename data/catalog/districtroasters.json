@@ -1,0 +1,7760 @@
+[
+ {
+  "body_hash": "17148bb3d21b7e19",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-regalo-de-dios-yellow-catuai-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-nicaragua-regalo-de-dios-yellow-catuai-2025.jpg?v=1744317563",
+  "platform": "shopify",
+  "product_id": "10074526220593",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Nicaragua | Regalo de Dios Yellow Catuai Natural",
+  "url": "https://districtroasters.com/products/nicaragua-regalo-de-dios-yellow-catuai-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "50284516901169"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "50284516933937"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "50284516966705"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284516999473"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284517032241"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "50284517065009"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "50284517097777"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "50284517130545"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "50284517163313"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284517196081"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284517228849"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "50284517261617"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "50284517294385"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "50284517327153"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "50284517359921"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284517392689"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284517425457"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "50284517458225"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "50284517490993"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "50284517523761"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "50284517556529"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284517589297"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284517622065"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "50284517654833"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "50284517687601"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "50284517720369"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "50284517753137"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284517785905"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284517818673"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "50284517851441"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "50284517884209"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "50284517916977"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "50284517949745"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284517982513"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284518015281"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "50284518048049"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "41483030c02392df",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-los-alamos",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-guatemala-los-alamos-2025.jpg?v=1744317403",
+  "platform": "shopify",
+  "product_id": "10074584318257",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Guatemala | Los Alamos",
+  "url": "https://districtroasters.com/products/guatemala-los-alamos",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "50284869845297"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "50284869878065"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "50284869910833"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284869943601"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284869976369"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "50284870009137"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "50284870041905"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "50284870074673"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "50284870107441"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284870140209"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284870172977"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "50284870205745"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "50284870238513"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "50284870271281"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "50284870304049"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284870336817"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284870369585"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "50284870402353"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "50284870435121"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "50284870467889"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "50284870500657"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284870533425"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284870566193"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "50284870598961"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "50284870631729"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "50284870664497"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "50284870697265"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284870730033"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284870762801"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "50284870795569"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "50284870828337"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "50284870861105"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "50284870893873"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "50284870926641"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50284870959409"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "50284870992177"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "da3ee1e0fe678689",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-gishubi-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-burundi-gishubi-natural-2025.jpg?v=1744317255",
+  "platform": "shopify",
+  "product_id": "10075618804017",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Burundi | Gishubi Natural",
+  "url": "https://districtroasters.com/products/burundi-gishubi-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "50291846775089"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "50291846807857"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "50291846840625"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291846873393"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291846906161"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "50291846938929"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "50291846971697"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "50291847004465"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "50291847037233"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291847070001"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291847102769"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "50291847135537"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "50291847168305"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "50291847201073"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "50291847233841"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291847266609"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291847299377"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "50291847332145"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "50291847364913"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "50291847397681"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "50291847430449"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291847463217"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291847495985"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "50291847528753"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "50291847561521"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "50291847594289"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "50291847627057"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291847659825"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291847692593"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "50291847725361"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "50291847758129"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "50291847790897"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "50291847823665"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291847856433"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291847889201"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "50291847921969"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "9a82eaf4005f66dd",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-exibia-sabillon-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-honduras-sabillon-2025.jpg?v=1744317427",
+  "platform": "shopify",
+  "product_id": "10075620409649",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Honduras | Exibia Sabillon Honey",
+  "url": "https://districtroasters.com/products/honduras-exibia-sabillon-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "50291861160241"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "50291861193009"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "50291861225777"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291861258545"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291861291313"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "50291861324081"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "50291861356849"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "50291861389617"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "50291861422385"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291861455153"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291861487921"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "50291861520689"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "50291861553457"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "50291861586225"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "50291861618993"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291861651761"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291861684529"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "50291861717297"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "50291861750065"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "50291861782833"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "50291861815601"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291861848369"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291861881137"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "50291861913905"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "50291861946673"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "50291861979441"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "50291862012209"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291862044977"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291862077745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "50291862110513"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "50291862143281"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "50291862176049"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "50291862208817"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "50291862241585"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50291862274353"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "50291862307121"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "14c3b3f533db92f6",
+  "first_seen": "2026-10-26",
+  "handle": "gingerbread-bourbon-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/IMG_0439.jpg?v=1734218694",
+  "platform": "shopify",
+  "product_id": "10115244720433",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Gingerbread Bourbon | Aged Coffee",
+  "url": "https://districtroasters.com/products/gingerbread-bourbon-aged-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz.",
+    "variant_id": "50453332263217"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "4410787a3abdbd70",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-nevado-del-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-colombia-nevado-del-huila.jpg?v=1792098728",
+  "platform": "shopify",
+  "product_id": "10201282871601",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Colombia | El Nevado del Huila",
+  "url": "https://districtroasters.com/products/colombia-el-nevado-del-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "50782145478961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "50782145511729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "50782145544497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782145577265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782145610033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "50782145642801"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "50782145675569"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "50782145708337"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "50782145741105"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782145773873"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782145806641"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "50782145839409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "50782145872177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "50782145904945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "50782145937713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782145970481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782146003249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "50782146036017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "50782146068785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "50782146101553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "50782146134321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782146167089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782146199857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "50782146232625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "50782146265393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "50782146298161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "50782146330929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782146363697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782146396465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "50782146429233"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "50782146462001"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "50782146494769"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "50782146527537"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "50782146560305"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "50782146593073"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "50782146625841"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "0b1601679081818a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santa-maria-fermented-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-brazil-santa-maria-2025.jpg?v=1744317225",
+  "platform": "shopify",
+  "product_id": "10243665854769",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Brazil | Santa Maria Fermented Natural",
+  "url": "https://districtroasters.com/products/brazil-santa-maria-fermented-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "51218270978353"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "51218271011121"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "51218271043889"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218271076657"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218271109425"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "51218271142193"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "51218271174961"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "51218271207729"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "51218271240497"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218271273265"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218271306033"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "51218271338801"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "51218271371569"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "51218271404337"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "51218271437105"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218271469873"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218271502641"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "51218271535409"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "51218271568177"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "51218271600945"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "51218271633713"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218271666481"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218271699249"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "51218271732017"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "51218271764785"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "51218271797553"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "51218271830321"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218271863089"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218271895857"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "51218271928625"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "51218271961393"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "51218271994161"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "51218272026929"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "51218272059697"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51218272092465"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "51218272125233"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "ec45b539d75682c3",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-tembo-tembo",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-02-tanzania.jpg?v=1770328683",
+  "platform": "shopify",
+  "product_id": "10322329239857",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Tanzania | Tembo Tembo",
+  "url": "https://districtroasters.com/products/tanzania-tembo-tembo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "51473172529457"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "51473172562225"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "51473172594993"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473172627761"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473172660529"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "51473172693297"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "51473172726065"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "51473172758833"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "51473172791601"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473172824369"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473172857137"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "51473172889905"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "51473172922673"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "51473172955441"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "51473172988209"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473173020977"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473173053745"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "51473173086513"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "51473173119281"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "51473173152049"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "51473173184817"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473173217585"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473173250353"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "51473173283121"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "51473173315889"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "51473173348657"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "51473173381425"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473173414193"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473173446961"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "51473173479729"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "51473173512497"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "51473173545265"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "51473173578033"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "51473173610801"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51473173643569"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "51473173676337"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "6feae906069e34f0",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santa-maria-sao-pablo-topazio",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/district-brazil-2025.jpg?v=1762451843",
+  "platform": "shopify",
+  "product_id": "10352102605105",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Brazil | Santa Maria São Pablo Topázio",
+  "url": "https://districtroasters.com/products/brazil-santa-maria-sao-pablo-topazio",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "51644462235953"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "51644462268721"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "51644462301489"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644462334257"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644462367025"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "51644462399793"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "51644462432561"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "51644462465329"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "51644462498097"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644462530865"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644462563633"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "51644462596401"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "51644462629169"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "51644462661937"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "51644462694705"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644462727473"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644462760241"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "51644462793009"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "51644462825777"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "51644462858545"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "51644462891313"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644462924081"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644462956849"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "51644462989617"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "51644463022385"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "51644463055153"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "51644463087921"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644463120689"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644463153457"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "51644463186225"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "51644463218993"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "51644463251761"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "51644463284529"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "51644463317297"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "51644463350065"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "51644463382833"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "e966f3a2a3181dbf",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-peaberry-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-02-el-salvador-peaberry-natural.jpg?v=1770328172",
+  "platform": "shopify",
+  "product_id": "10447193243953",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "El Salvador | Peaberry Natural",
+  "url": "https://districtroasters.com/products/el-salvador-peaberry-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "52018533957937"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "52018533990705"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "52018534023473"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018534056241"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018534089009"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "52018534121777"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "52018534154545"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "52018534187313"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "52018534220081"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018534252849"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018534285617"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "52018534318385"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "52018534351153"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "52018534383921"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "52018534416689"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018534449457"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018534482225"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "52018534514993"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "52018534547761"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "52018534580529"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "52018534613297"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018534646065"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018534678833"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "52018534711601"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "52018534744369"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "52018534777137"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "52018534809905"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018534842673"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018534875441"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "52018534908209"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "52018534940977"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "52018534973745"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "52018535006513"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018535039281"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018535072049"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "52018535104817"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "f5a89607704ef1c0",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bukeye-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-02-burundi-bukeye.jpg?v=1770328207",
+  "platform": "shopify",
+  "product_id": "10447222898993",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Burundi | Bukeye Washed",
+  "url": "https://districtroasters.com/products/burundi-bukeye-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "52018582880561"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "52018582913329"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "52018582946097"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018582978865"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583011633"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "52018583044401"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "52018583077169"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "52018583109937"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "52018583142705"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018583175473"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583208241"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "52018583241009"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "52018583273777"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "52018583306545"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "52018583339313"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018583372081"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583404849"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "52018583437617"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "52018583470385"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "52018583503153"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "52018583535921"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018583568689"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583601457"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "52018583634225"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "52018583666993"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "52018583699761"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "52018583732529"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018583765297"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583798065"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "52018583830833"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "52018583863601"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "52018583896369"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "52018583929137"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "52018583961905"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52018583994673"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 199.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "52018584027441"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "f938111fb0ae1ec8",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-san-antonio-honey-process",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-02-el-salvador-honey.jpg?v=1770327854",
+  "platform": "shopify",
+  "product_id": "10548067270961",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "El Salvador | San Antonio Honey Process",
+  "url": "https://districtroasters.com/products/el-salvador-san-antonio-honey-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "52434319212849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "52434319245617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "52434319278385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434319311153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434319343921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "52434319376689"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "52434319409457"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "52434319442225"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "52434319474993"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434319507761"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434319540529"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "52434319573297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "52434319606065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "52434319638833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "52434319671601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434319704369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434319737137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "52434319769905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "52434319802673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "52434319835441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "52434319868209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434319900977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434319933745"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "52434319966513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "52434319999281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "52434320032049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "52434320064817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434320097585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434320130353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "52434320163121"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "52434320195889"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "52434320228657"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "52434320261425"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "52434320294193"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52434320326961"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "52434320359729"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "eb5a2b51616804bc",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-mountain-water-process-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-mexico-mountain-water-process-decaf.jpg?v=1792098662",
+  "platform": "shopify",
+  "product_id": "10559277826353",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Mexico | Decaf Mountain Water Process",
+  "url": "https://districtroasters.com/products/mexico-mountain-water-process-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "52530064589105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "52530064621873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "52530064654641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530064687409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530064720177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "52530064752945"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "52530064785713"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "52530064818481"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "52530064851249"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530064884017"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530064916785"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "52530064949553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "52530064982321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "52530065015089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "52530065047857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530065080625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530065113393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "52530065146161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "52530065178929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "52530065211697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "52530065244465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530065277233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530065310001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "52530065342769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "52530065375537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "52530065408305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "52530065441073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530065473841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530065506609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "52530065539377"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "52530065572145"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "52530065604913"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "52530065637681"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "52530065670449"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "52530065703217"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "52530065735985"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "123c5d84a80f04a7",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-isabel-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-el-salvador-isabel-natural.jpg?v=1792097961",
+  "platform": "shopify",
+  "product_id": "10761781739825",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "El Salvador | Isabel Natural",
+  "url": "https://districtroasters.com/products/el-salvador-isabel-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "55718906593585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "55718906626353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "55718906659121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718906691889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718906724657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "55718906757425"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "55718906790193"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "55718906822961"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "55718906855729"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718906888497"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718906921265"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "55718906954033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "55718906986801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "55718907019569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "55718907052337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718907085105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718907117873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "55718907150641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "55718907183409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "55718907216177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "55718907248945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718907281713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718907314481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "55718907347249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "55718907380017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "55718907412785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "55718907445553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718907478321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718907511089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "55718907543857"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "55718907576625"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "55718907609393"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "55718907642161"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "55718907674929"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "55718907707697"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 185.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "55718907740465"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "89644754e94803b2",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kamathura-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-kenya-kamathura-ab.jpg?v=1792100770",
+  "platform": "shopify",
+  "product_id": "10816696025393",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Kenya | Kamathura AB",
+  "url": "https://districtroasters.com/products/kenya-kamathura-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "56182562750769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "56182562783537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "56182562816305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182562849073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182562881841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "56182562914609"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "56182562947377"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "56182562980145"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "56182563012913"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182563045681"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182563078449"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "56182563111217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "56182563143985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "56182563176753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "56182563209521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182563242289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182563275057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "56182563307825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "56182563340593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "56182563373361"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "56182563406129"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182563438897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182563471665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "56182563504433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "56182563537201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "56182563569969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "56182563602737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182563635505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182563668273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "56182563701041"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "56182563733809"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "56182563766577"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "56182563799345"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "56182563832113"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "56182563864881"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 245.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "56182563897649"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "e4885400b77cb831",
+  "first_seen": "2026-10-26",
+  "handle": "district-honduras-santa-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-honduras-santa-rosa.jpg?v=1792098682",
+  "platform": "shopify",
+  "product_id": "182614360076",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Honduras | Santa Rosa Dark",
+  "url": "https://districtroasters.com/products/district-honduras-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "1893877219340"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "1893877252108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "1893877284876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "1893877317644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "1893877350412"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "1893877383180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "39633553981500"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554014268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554047036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554079804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "39633554112572"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "39633554145340"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554178108"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554210876"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554243644"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "39633554276412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "39633554309180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554341948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554374716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554407484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "39633554440252"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "39633554473020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554505788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554538556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554571324"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "39633554604092"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "39633554636860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554669628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554702396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554735164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "39633554767932"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "39633554800700"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "39633554833468"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633554866236"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633554899004"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 160.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "39633554931772"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "0c500dcee058701b",
+  "first_seen": "2026-10-26",
+  "handle": "knockbox-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-knockbox-espresso-blend.jpg?v=1792098624",
+  "platform": "shopify",
+  "product_id": "368395379",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Blend | Knockbox Espresso",
+  "url": "https://districtroasters.com/products/knockbox-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "1055994847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "1055995799"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "1055996843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "39624763408444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "39624763441212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624763473980"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624763506748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "39624763539516"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "39624763572284"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "39624763605052"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624763637820"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624763670588"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "39624763703356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "39624763736124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "39624763768892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624763801660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624763834428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "39624763867196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "39624763899964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "39624763932732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624763965500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624763998268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "39624764031036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "39624764063804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "39624764096572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624764129340"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624764162108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "39624764194876"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "39624764227644"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "39624764260412"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624764293180"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624764325948"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "39624764358716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "863802031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "865706839"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "943551343"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "f3865b52a53d291b",
+  "first_seen": "2026-10-26",
+  "handle": "totally-righteous-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-totally-righteous-house-blend.jpg?v=1792098604",
+  "platform": "shopify",
+  "product_id": "368406047",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Blend | Totally Righteous House",
+  "url": "https://districtroasters.com/products/totally-righteous-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "1055999291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "1056001383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "1056002603"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "1056003855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "39624677294140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "39624677326908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624677359676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624677392444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "39624677425212"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "39624677457980"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "39624677490748"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624677523516"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624677556284"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "39624677589052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "39624677621820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "39624677654588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624677687356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624677720124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "39624677752892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "39624677785660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "39624677818428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624677851196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624677883964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "39624677916732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "39624677949500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "39624677982268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624678015036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624678047804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "39624678080572"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "39624678113340"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "39624678146108"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "39624678178876"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39624678211644"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "39624678244412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "863828115"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "943552995"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "f1d1acef92fe52b3",
+  "first_seen": "2026-10-26",
+  "handle": "district-nitro-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/products/NITRO_IG_June_2015.jpg?v=1550896383",
+  "platform": "shopify",
+  "product_id": "368411803",
+  "product_type": "NITRO Cold Brew",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "DISTRICT Roasters NITRO® Cold Brew",
+  "url": "https://districtroasters.com/products/district-nitro-cold-brew",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "QUAD4Pack 12oz. NITRO",
+    "variant_id": "3501221507"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 4.0,
+    "title": "NITRO 12oz - Ready to Drink",
+    "variant_id": "863840735"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "1ff83331860efd12",
+  "first_seen": "2026-10-26",
+  "handle": "district-whiskey-whisper",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/products/IMG_0971.jpg?v=1638546336",
+  "platform": "shopify",
+  "product_id": "405748227",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Whiskey Whisper® | Whiskey Aged Coffee",
+  "url": "https://districtroasters.com/products/district-whiskey-whisper",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz.",
+    "variant_id": "963486339"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "db34ede7c5926ecd",
+  "first_seen": "2026-10-26",
+  "handle": "rum-reserve-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/products/IMG_0970.jpg?v=1638546277",
+  "platform": "shopify",
+  "product_id": "4688263938108",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "DISTRICT Reserve | Rum Aged Coffee",
+  "url": "https://districtroasters.com/products/rum-reserve-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz.",
+    "variant_id": "32628182220860"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "06b959144893849f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-02-colombia-swp.jpg?v=1770328843",
+  "platform": "shopify",
+  "product_id": "4688361160764",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Colombia | Decaf Swiss Water",
+  "url": "https://districtroasters.com/products/colombia-swiss-water-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "32628397768764"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "32628397801532"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "32628397834300"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "32628397867068"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "32628397899836"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "32628397932604"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "39633614438460"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "39633614471228"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633614503996"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633614536764"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "39633614569532"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "39633614602300"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "39633614635068"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633614667836"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633614700604"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "39633614733372"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "39633614766140"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "39633614798908"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633614831676"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633614864444"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "39633614897212"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "39633614929980"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "39633614962748"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633614995516"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633615028284"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "39633615061052"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "39633615093820"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "39633615126588"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633615159356"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633615192124"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "39633615224892"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "39633615257660"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "39633615290428"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633615323196"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633615355964"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "39633615388732"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "e9cfabd1af04df89",
+  "first_seen": "2026-10-26",
+  "handle": "the-classic-combo",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/products/Bundle_5.jpg?v=1607636612",
+  "platform": "shopify",
+  "product_id": "4695346577468",
+  "product_type": "",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "The Classic",
+  "url": "https://districtroasters.com/products/the-classic-combo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 27.0,
+    "title": "Red",
+    "variant_id": "32647544864828"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 27.0,
+    "title": "Dark Blue",
+    "variant_id": "32647544897596"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 27.0,
+    "title": "Black",
+    "variant_id": "32647544930364"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 27.0,
+    "title": "White",
+    "variant_id": "32647544963132"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 27.0,
+    "title": "Gray",
+    "variant_id": "32647544995900"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "cb6630bb012ce794",
+  "first_seen": "2026-10-26",
+  "handle": "sharing-is-caring",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/products/Bundle_8.jpg?v=1607636638",
+  "platform": "shopify",
+  "product_id": "4695347724348",
+  "product_type": "",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Sharing is Caring",
+  "url": "https://districtroasters.com/products/sharing-is-caring",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Red / Red / Yes",
+    "variant_id": "32647547289660"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Red / Red / No",
+    "variant_id": "32647547322428"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Red / Dark Blue / Yes",
+    "variant_id": "32647547355196"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Red / Dark Blue / No",
+    "variant_id": "32647547387964"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Red / Black / Yes",
+    "variant_id": "32647547420732"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Red / Black / No",
+    "variant_id": "32647547453500"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Red / White / Yes",
+    "variant_id": "32647547486268"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Red / White / No",
+    "variant_id": "32647547519036"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Red / Gray / Yes",
+    "variant_id": "32647547551804"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Red / Gray / No",
+    "variant_id": "32647547584572"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Dark Blue / Red / Yes",
+    "variant_id": "32647547617340"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Dark Blue / Red / No",
+    "variant_id": "32647547650108"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Dark Blue / Dark Blue / Yes",
+    "variant_id": "32647547682876"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Dark Blue / Dark Blue / No",
+    "variant_id": "32647547715644"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Dark Blue / Black / Yes",
+    "variant_id": "32647547748412"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Dark Blue / Black / No",
+    "variant_id": "32647547781180"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Dark Blue / White / Yes",
+    "variant_id": "32647547813948"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Dark Blue / White / No",
+    "variant_id": "32647547846716"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Dark Blue / Gray / Yes",
+    "variant_id": "32647547879484"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Dark Blue / Gray / No",
+    "variant_id": "32647547912252"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Black / Red / Yes",
+    "variant_id": "32647547945020"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Black / Red / No",
+    "variant_id": "32647547977788"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Black / Dark Blue / Yes",
+    "variant_id": "32647548010556"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Black / Dark Blue / No",
+    "variant_id": "32647548043324"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Black / Black / Yes",
+    "variant_id": "32647548076092"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Black / Black / No",
+    "variant_id": "32647548108860"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Black / White / Yes",
+    "variant_id": "32647548141628"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Black / White / No",
+    "variant_id": "32647548174396"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Black / Gray / Yes",
+    "variant_id": "32647548207164"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Black / Gray / No",
+    "variant_id": "32647548239932"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "White / Red / Yes",
+    "variant_id": "32647548272700"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "White / Red / No",
+    "variant_id": "32647548305468"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "White / Dark Blue / Yes",
+    "variant_id": "32647548338236"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "White / Dark Blue / No",
+    "variant_id": "32647548371004"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "White / Black / Yes",
+    "variant_id": "32647548403772"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "White / Black / No",
+    "variant_id": "32647548436540"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "White / White / Yes",
+    "variant_id": "32647548469308"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "White / White / No",
+    "variant_id": "32647548502076"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "White / Gray / Yes",
+    "variant_id": "32647548534844"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "White / Gray / No",
+    "variant_id": "32647548567612"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Gray / Red / Yes",
+    "variant_id": "32647548600380"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Gray / Red / No",
+    "variant_id": "32647548633148"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Gray / Dark Blue / Yes",
+    "variant_id": "32647548665916"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Gray / Dark Blue / No",
+    "variant_id": "32647548698684"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Gray / Black / Yes",
+    "variant_id": "32647548731452"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Gray / Black / No",
+    "variant_id": "32647548764220"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Gray / White / Yes",
+    "variant_id": "32647548796988"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Gray / White / No",
+    "variant_id": "32647548829756"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Gray / Gray / Yes",
+    "variant_id": "32647548862524"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Gray / Gray / No",
+    "variant_id": "32647548895292"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "7e9291eb276edfd6",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-costa-rica-tarrazu.jpg?v=1792098643",
+  "platform": "shopify",
+  "product_id": "469582067",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [
+   "Cacao",
+   "Costa Rica",
+   "Tarrazu",
+   "fruity",
+   "whole bean coffee"
+  ],
+  "title": "Costa Rica | Tarrazu",
+  "url": "https://districtroasters.com/products/costa-rica-tarrazu-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "1249644291"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "1249644295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "1249644299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "1249644303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "1249644307"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "1249644311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "39633792204860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "39633792237628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633792270396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633792303164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "39633792335932"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "39633792368700"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "39633792401468"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633792434236"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633792467004"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "39633792499772"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "39633792532540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "39633792565308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633792598076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633792630844"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "39633792663612"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "39633792696380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "39633792729148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633792761916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633792794684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "39633792827452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "39633792860220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "39633792892988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633792925756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633792958524"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "39633792991292"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "39633793024060"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "39633793056828"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "39633793089596"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "39633793122364"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "39633793155132"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "b5bcb3d54e7e9add",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-woman-power-zongolica",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-mexico-woman-power-zongolica.jpg?v=1792097984",
+  "platform": "shopify",
+  "product_id": "6991206481980",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Mexico | Woman Power Zongolica",
+  "url": "https://districtroasters.com/products/mexico-woman-power-zongolica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "40321349386300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "40321349419068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "40321349451836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321349484604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321349517372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "40321349550140"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "40321349582908"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "40321349615676"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "40321349648444"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321349681212"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321349713980"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "40321349746748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "40321349779516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "40321349812284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "40321349845052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321349877820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321349910588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "40321349943356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "40321349976124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "40321350008892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "40321350041660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321350074428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321350107196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "40321350139964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "40321350172732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "40321350205500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "40321350238268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321350271036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321350303804"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "40321350336572"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "40321350369340"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "40321350402108"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "40321350434876"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "40321350467644"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "40321350500412"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 220.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "40321350533180"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "fedc69dee9c7c2f7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sierra-nevada-fto",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/ColombiaSierraNevada.jpg?v=1731617287",
+  "platform": "shopify",
+  "product_id": "8655174205745",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Colombia | Sierra Nevada FTO",
+  "url": "https://districtroasters.com/products/colombia-sierra-nevada-fto",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "46062909096241"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "46062909129009"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "46062909161777"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062909194545"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062909227313"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "46062909260081"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "46062909292849"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "46062909325617"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "46062909358385"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062909391153"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062909423921"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "46062909456689"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "46062909522225"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "46062909554993"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "46062909587761"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062909620529"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062909653297"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "46062909686065"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "46062909718833"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "46062909751601"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "46062909784369"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062909817137"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062909849905"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "46062909882673"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "46062909915441"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "46062909948209"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "46062909980977"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062910013745"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062910046513"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "46062910079281"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "46062910112049"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "46062910144817"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "46062910177585"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "46062910210353"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46062910243121"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "46062910308657"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "13e5bc11c804fa97",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-santa-isabel",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-el-salvador-isabel-washed.jpg?v=1792098036",
+  "platform": "shopify",
+  "product_id": "8699796783409",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "El Salvador | Finca Santa Isabel",
+  "url": "https://districtroasters.com/products/el-salvador-finca-santa-isabel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "46203875885361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "46203875918129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "46203875950897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203875983665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203876016433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "46203876049201"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "46203876114737"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "46203876147505"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "46203876180273"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203876213041"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203876245809"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "46203876278577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "46203876311345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "46203876344113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "46203876376881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203876409649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203876442417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "46203876540721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "46203876606257"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "46203876671793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "46203876737329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203876770097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203876802865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "46203876835633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "46203876868401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "46203876933937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "46203877032241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203877130545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203877228849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "46203877294385"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "46203877359921"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "46203877458225"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "46203877523761"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "46203877589297"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46203877654833"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 170.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "46203877720369"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "2dd3f833e2268008",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bombe-abore-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/EthiopiaBombe.jpg?v=1731616911",
+  "platform": "shopify",
+  "product_id": "8808623833393",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Ethiopia | Bombe Abore Washed",
+  "url": "https://districtroasters.com/products/ethiopia-bombe-abore-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "46568006025521"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "46568006058289"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "46568006091057"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568006123825"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568006156593"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "46568006189361"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "46568006222129"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "46568006254897"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "46568006287665"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568006320433"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568006353201"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "46568006385969"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "46568006418737"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "46568006451505"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "46568006484273"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568006517041"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568006549809"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "46568006582577"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "46568006615345"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "46568006648113"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "46568006680881"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568006713649"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568006746417"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "46568006779185"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "46568006811953"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "46568006844721"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "46568006877489"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568006910257"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568006943025"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "46568006975793"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "46568007008561"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "46568007041329"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "46568007074097"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "46568007106865"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "46568007139633"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "46568007172401"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "385fe7d6fafebf91",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-gersay-beyou-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/Winter2023Photos-7.jpg?v=1700686013",
+  "platform": "shopify",
+  "product_id": "9203751420209",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Ethiopia | Yirgacheffe Gersay Beyou Natural",
+  "url": "https://districtroasters.com/products/ethiopia-yirgacheffe-gersay-beyou-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "47810016149809"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "47810016182577"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "47810016215345"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810016248113"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810016280881"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "47810016313649"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "47810016346417"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "47810016379185"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "47810016411953"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810016444721"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810016477489"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "47810016510257"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "47810016543025"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "47810016575793"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "47810016608561"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810016641329"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810016674097"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "47810016706865"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "47810016739633"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "47810016772401"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "47810016805169"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810016837937"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810016870705"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "47810016903473"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "47810016936241"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "47810016969009"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "47810017001777"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810017034545"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810017067313"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "47810017100081"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "47810017132849"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "47810017165617"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "47810017198385"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "47810017231153"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47810017263921"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "47810017296689"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "4a121cb013a044af",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-regalo-de-dios-red-catuai-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-nicaragua-regalo-de-dios-red-catuai.jpg?v=1792097649",
+  "platform": "shopify",
+  "product_id": "9206626058545",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Nicaragua | Regalo de Dios Red Catuai Natural",
+  "url": "https://districtroasters.com/products/nicaragua-regalo-de-dios-red-catuai-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "47818554278193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "47818554310961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "47818554343729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818554376497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818554409265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "47818554442033"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "47818554474801"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "47818554507569"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "47818554540337"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818554573105"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818554605873"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "47818554638641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "47818554671409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "47818554704177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "47818554736945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818554769713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818554802481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "47818554835249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "47818554868017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "47818554900785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "47818554933553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818554966321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818554999089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "47818555031857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "47818555064625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "47818555097393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "47818555130161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818555162929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818555195697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "47818555228465"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "47818555261233"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "47818555294001"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "47818555326769"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "47818555359537"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "47818555392305"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 240.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "47818555425073"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "32b59b03b286dc24",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-paradiso-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-brazil-fazenda-paradiso.jpg?v=1792098054",
+  "platform": "shopify",
+  "product_id": "9952024854833",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Brazil | Fazenda Paradiso Natural",
+  "url": "https://districtroasters.com/products/brazil-fazenda-paradiso-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "49829936857393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "49829936890161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "49829936922929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829936955697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829936988465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "49829937021233"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "49829937054001"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "49829937086769"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "49829937119537"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829937152305"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829937185073"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "49829937217841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "49829937250609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "49829937283377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "49829937316145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829937348913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829937381681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "49829937414449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "49829937447217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "49829937479985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "49829937512753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829937545521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829937578289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "49829937611057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "49829937643825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "49829937676593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "49829937709361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829937742129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829937774897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "49829937807665"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "49829937840433"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "49829937873201"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "49829937905969"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "49829937938737"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49829937971505"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 180.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "49829938004273"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ },
+ {
+  "body_hash": "e4fa02c65b38b51f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-gargari-gutity-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0659/9241/files/2026-10-ethiopia-yirgacheffe-gargari-gutity.jpg?v=1792098008",
+  "platform": "shopify",
+  "product_id": "9986762637617",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "districtroasters",
+  "tags": [],
+  "title": "Ethiopia | Yirgacheffe Gargari Gutity Natural",
+  "url": "https://districtroasters.com/products/ethiopia-yirgacheffe-gargari-gutity-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Whole Bean",
+    "variant_id": "49917570842929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Coarse (Cold Brew)",
+    "variant_id": "49917570875697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Medium-Coarse (French Press)",
+    "variant_id": "49917570908465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917570974001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917571006769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz (340g) / Fine (Espresso)",
+    "variant_id": "49917571072305"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Whole Bean",
+    "variant_id": "49917571105073"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Coarse (Cold Brew)",
+    "variant_id": "49917571137841"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Medium-Coarse (French Press)",
+    "variant_id": "49917571170609"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917571203377"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917571236145"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8oz (227g) / Fine (Espresso)",
+    "variant_id": "49917571268913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Whole Bean",
+    "variant_id": "49917571301681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Coarse (Cold Brew)",
+    "variant_id": "49917571334449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Medium-Coarse (French Press)",
+    "variant_id": "49917571367217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917571399985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917571432753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "16oz (454g) / Fine (Espresso)",
+    "variant_id": "49917571465521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Whole Bean",
+    "variant_id": "49917571498289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Coarse (Cold Brew)",
+    "variant_id": "49917571531057"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Medium-Coarse (French Press)",
+    "variant_id": "49917571563825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917571596593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917571629361"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb (907g) / Fine (Espresso)",
+    "variant_id": "49917571662129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Whole Bean",
+    "variant_id": "49917571694897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Coarse (Cold Brew)",
+    "variant_id": "49917571727665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Medium-Coarse (French Press)",
+    "variant_id": "49917571760433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917571793201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917571825969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5lb (2268g) / Fine (Espresso)",
+    "variant_id": "49917571858737"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Whole Bean",
+    "variant_id": "49917571891505"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Coarse (Cold Brew)",
+    "variant_id": "49917571924273"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Medium-Coarse (French Press)",
+    "variant_id": "49917571957041"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Medium (Drip / Pour Over)",
+    "variant_id": "49917571989809"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Medium-Fine (Aeropress / Keurig)",
+    "variant_id": "49917572022577"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 250.0,
+    "title": "10lb (4536g) / Fine (Espresso)",
+    "variant_id": "49917572055345"
+   }
+  ],
+  "vendor": "DISTRICT Roasters"
+ }
+]

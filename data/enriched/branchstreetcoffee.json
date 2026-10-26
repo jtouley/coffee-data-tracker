@@ -1,0 +1,98 @@
+{
+ "656a86e1bd20522e5fc43617": {
+  "body_hash": "34d89011ffbba34d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "creamy",
+   "chocolate",
+   "cherry"
+  ],
+  "varietals": []
+ },
+ "658e46941405cf4088985a32": {
+  "body_hash": "0c422d39337b77ef",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "67e5fb3cb9673100d70a7189": {
+  "body_hash": "0c2b1c4674764352",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "almond nougat",
+   "brown sugar",
+   "lemon acidity"
+  ],
+  "varietals": []
+ },
+ "6963e6da6716e902a59ddec4": {
+  "body_hash": "c7e50356eae3e32d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chamomile",
+   "lime",
+   "red wine"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "6ab532d8d5e67563c3b663bf": {
+  "body_hash": "006810b57d105ee6",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry cola",
+   "juicy peach",
+   "raspberry"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ }
+}

@@ -1,0 +1,127 @@
+{
+ "10126009106708": {
+  "body_hash": "3d52d7773906476d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cooked berry",
+   "winey acidity",
+   "jasmine"
+  ],
+  "varietals": []
+ },
+ "10221693960468": {
+  "body_hash": "cecb89ce58299d62",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "clove",
+   "dried fruit",
+   "mellow acidity",
+   "sweetness"
+  ],
+  "varietals": []
+ },
+ "10221696876820": {
+  "body_hash": "d2e514c2f9ab960b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "jammy currant",
+   "caramel",
+   "blackberry"
+  ],
+  "varietals": []
+ },
+ "10287195259156": {
+  "body_hash": "ffd36ca58ee0e198",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8244731937044": {
+  "body_hash": "8ad7084239da7a91",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "graham",
+   "mellow savory"
+  ],
+  "varietals": []
+ },
+ "8244828602644": {
+  "body_hash": "77084e00ad978c9b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9713941053716": {
+  "body_hash": "d756984344b5a3d8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mellow cocoa",
+   "clove",
+   "cooked grapefruit"
+  ],
+  "varietals": []
+ }
+}

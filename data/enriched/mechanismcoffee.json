@@ -1,0 +1,233 @@
+{
+ "10139941306690": {
+  "body_hash": "929e68a000236a8e",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Thailand",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark fudge",
+   "butterscotch",
+   "red apple"
+  ],
+  "varietals": [
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "10201281528130": {
+  "body_hash": "812f626fea6f7d83",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricot",
+   "cane sugar",
+   "orange"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "10389189427522": {
+  "body_hash": "782f12240489505f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "15410862424386": {
+  "body_hash": "996507e770f5b9f8",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "plum",
+   "blood orange",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "8725051212098": {
+  "body_hash": "b431f3e7db9fb059",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1000,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "citrus"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Castillo",
+   "Pacamara"
+  ]
+ },
+ "8865223377218": {
+  "body_hash": "9a61eef3f16198fd",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "walnut",
+   "fig"
+  ],
+  "varietals": []
+ },
+ "8865677410626": {
+  "body_hash": "801dca5b5e2c50f1",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "floral",
+   "peach",
+   "black tea"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8865840464194": {
+  "body_hash": "a1f5a3bc963ff329",
+  "elevation_masl_max": 1220,
+  "elevation_masl_min": 915,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "toffee",
+   "walnut"
+  ],
+  "varietals": [
+   "Catuai",
+   "Mundo Novo"
+  ]
+ },
+ "9084997075266": {
+  "body_hash": "dd4cae5c07dedf5b",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "caramel",
+   "tangerine"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "9085007003970": {
+  "body_hash": "30e362995d394fed",
+  "elevation_masl_max": 1220,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "molasses",
+   "dark c hocolate",
+   "pipe tobacco"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "9963143889218": {
+  "body_hash": "00de618f2f477b5e",
+  "elevation_masl_max": 1250,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "honey"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Mundo Novo"
+  ]
+ }
+}

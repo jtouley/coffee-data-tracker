@@ -1,0 +1,716 @@
+[
+ {
+  "body_hash": "b7c678de8e19ca95",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Guji_1e4bc1f4-aae7-4887-a678-c90e371665c3.png?v=1588026936",
+  "platform": "shopify",
+  "product_id": "4188243587",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Ethiopia Guji Kercha",
+  "url": "https://melacoffee.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016713987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31291962032197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125528813637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125528846405"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "f06d9a59d9326c23",
+  "first_seen": "2026-10-26",
+  "handle": "squilchuck-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Squilchuck.png?v=1588027652",
+  "platform": "shopify",
+  "product_id": "4188417027",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Squilchuck Blend",
+  "url": "https://melacoffee.com/products/squilchuck-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016795523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183189540933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125528387653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125528420421"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "78e3df2db9001b73",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Honduras.png?v=1588027115",
+  "platform": "shopify",
+  "product_id": "4188484867",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Honduras COCAFCAL Las Capucas",
+  "url": "https://melacoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016757699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31228751118405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125526650949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125526683717"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "5be5a1440cc47225",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Costa_Rica.png?v=1588024842",
+  "platform": "shopify",
+  "product_id": "4188689667",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Costa Rica Tarrazú",
+  "url": "https://melacoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016335427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31291961507909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125526323269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125526356037"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "7b399a264ccb6181",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-emilia",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Emilia.png?v=1588026216",
+  "platform": "shopify",
+  "product_id": "4200880771",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Espresso Emilia",
+  "url": "https://melacoffee.com/products/espresso-emilia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016622147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183178203205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125524815941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125524848709"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "86292cbf483c5617",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Decaf.png?v=1588026107",
+  "platform": "shopify",
+  "product_id": "4201058179",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Decaf Signature Blend",
+  "url": "https://melacoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "24016588163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183235579973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125524619333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125524652101"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "06d9cbcc1930249f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-squilchuck-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Saddlerock.png?v=1588027414",
+  "platform": "shopify",
+  "product_id": "4350436180037",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Saddlerock Blend",
+  "url": "https://melacoffee.com/products/copy-of-squilchuck-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31183202746437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183218409541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125491359813"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125491392581"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "95e93dfa8c28136a",
+  "first_seen": "2026-10-26",
+  "handle": "sage-hills-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/SageHills.png?v=1588027468",
+  "platform": "shopify",
+  "product_id": "4350441160773",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Sage Hills Blend",
+  "url": "https://melacoffee.com/products/sage-hills-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31183220736069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183220768837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125296128069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125296160837"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "dc8b26094dcad7ee",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/MelaColdBrew.png?v=1592838209",
+  "platform": "shopify",
+  "product_id": "4481624473669",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://melacoffee.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31665361780805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31665361813573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125472190533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Toddy Grind for Cold Brew",
+    "variant_id": "45125472223301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125472256069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Toddy Grind for Cold Brew",
+    "variant_id": "45125472288837"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "02f792344dfce34e",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-river-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/files/20250321_125751.jpg?v=1742587457",
+  "platform": "shopify",
+  "product_id": "7585447444549",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Columbia River Roast",
+  "url": "https://melacoffee.com/products/columbia-river-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42582342893637"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42582342926405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125403836485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125403869253"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "3882bf2535190239",
+  "first_seen": "2026-10-26",
+  "handle": "campbells-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Campbells_copy.png?v=1588024529",
+  "platform": "shopify",
+  "product_id": "9028745987",
+  "product_type": "Co-Brands",
+  "roaster_slug": "melacoffee",
+  "tags": [],
+  "title": "Campbell's Blend",
+  "url": "https://melacoffee.com/products/campbells-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz",
+    "variant_id": "31317577283"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "5ba87fd83dc56db7",
+  "first_seen": "2026-10-26",
+  "handle": "mission-ridge-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Mission_Ridge.png?v=1588027227",
+  "platform": "shopify",
+  "product_id": "9029303555",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Limited Release",
+   "Signature Blends"
+  ],
+  "title": "Mission Ridge Blend",
+  "url": "https://melacoffee.com/products/mission-ridge-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31291962949701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31320272067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125524455493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125524488261"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "9cdab2cc32212131",
+  "first_seen": "2026-10-26",
+  "handle": "vero-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Vero.png?v=1588027823",
+  "platform": "shopify",
+  "product_id": "9029329603",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "Vero Espresso",
+  "url": "https://melacoffee.com/products/vero-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183182725189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31320439555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125522292805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125522325573"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "08d4ff07646b7a03",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Sumatra.png?v=1588027727",
+  "platform": "shopify",
+  "product_id": "9029331075",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://melacoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31291964194885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31320454595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125520359493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125520392261"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "ec25817d1035c652",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/French.png?v=1588027008",
+  "platform": "shopify",
+  "product_id": "9029333315",
+  "product_type": "Signature Blends",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Signature Blends"
+  ],
+  "title": "French Roast",
+  "url": "https://melacoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "31183190196293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31320464195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125510889541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.95,
+    "title": "5 lb / Drip Grind",
+    "variant_id": "45125510922309"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ },
+ {
+  "body_hash": "3f2b1ea64d5efe70",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1063/1814/products/Featured.png?v=1588027291",
+  "platform": "shopify",
+  "product_id": "9197283843",
+  "product_type": "Single Origins",
+  "roaster_slug": "melacoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://melacoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32362053059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.55,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45125503156293"
+   }
+  ],
+  "vendor": "Mela Coffee Roasting Co."
+ }
+]

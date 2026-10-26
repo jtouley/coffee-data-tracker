@@ -1,0 +1,157 @@
+[
+ {
+  "body_hash": "09b68e3eac87d147",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2022/12/BusyBee-Coffee-5lbBag-Green.jpg",
+  "platform": "woocommerce",
+  "product_id": "1120",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Green Coffee, 5lb Bag",
+  "url": "https://busybeecoffeeroasters.com/product/green-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 32.5,
+    "title": "5lb Bag",
+    "variant_id": "1120:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c8331f72acd13c7",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-single-origin",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2023/12/BusyBee-Coffee-Bag-Brazilian.jpg",
+  "platform": "woocommerce",
+  "product_id": "314",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Brazilian",
+   "Caffeinated"
+  ],
+  "title": "Brazilian Single Origin, 1lb Bag (2lb Minimum Order)",
+  "url": "https://busybeecoffeeroasters.com/product/brazilian-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Brazilian Single Origin, 1lb Bag <span class=\"subtitle\">(2lb Minimum Order)</span>",
+    "variant_id": "314:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "faf28905d3831a1f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-single-origin",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2023/12/BusyBee-Coffee-Bag-Costa-Rican.jpg",
+  "platform": "woocommerce",
+  "product_id": "645",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Caffeinated",
+   "Costa Rican"
+  ],
+  "title": "Costa Rican Single Origin, 1lb Bag (2lb Minimum Order)",
+  "url": "https://busybeecoffeeroasters.com/product/costa-rican-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Costa Rican Single Origin, 1lb Bag <span class=\"subtitle\">(2lb Minimum Order)</span>",
+    "variant_id": "645:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "607ce20fc1aeafc5",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-single-origin",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2023/12/BusyBee-Coffee-Bag-Colombian.jpg",
+  "platform": "woocommerce",
+  "product_id": "656",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Caffeinated",
+   "Colombian"
+  ],
+  "title": "Colombian Single Origin, 1lb Bag (2lb Minimum Order)",
+  "url": "https://busybeecoffeeroasters.com/product/colombian-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Colombian Single Origin, 1lb Bag <span class=\"subtitle\">(2lb Minimum Order)</span>",
+    "variant_id": "656:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "360bfad4c67def82",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-single-origin",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2023/12/BusyBee-Coffee-Bag-Guatemalan.jpg",
+  "platform": "woocommerce",
+  "product_id": "667",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Caffeinated",
+   "Guatemalan"
+  ],
+  "title": "Guatemalan Single Origin, 1lb Bag (2lb Minimum Order)",
+  "url": "https://busybeecoffeeroasters.com/product/guatemalan-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Guatemalan Single Origin, 1lb Bag <span class=\"subtitle\">(2lb Minimum Order)</span>",
+    "variant_id": "667:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2588a4b654ff2075",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-single-origin",
+  "image": "https://busybeecoffeeroasters.com/wp-content/uploads/2023/12/BusyBee-Coffee-Bag-Mexican.jpg",
+  "platform": "woocommerce",
+  "product_id": "678",
+  "product_type": "variable",
+  "roaster_slug": "busybeecoffeeroasters",
+  "tags": [
+   "Caffeinated",
+   "Mexican"
+  ],
+  "title": "Mexican Single Origin, 1lb Bag (2lb Minimum Order)",
+  "url": "https://busybeecoffeeroasters.com/product/mexican-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Mexican Single Origin, 1lb Bag <span class=\"subtitle\">(2lb Minimum Order)</span>",
+    "variant_id": "678:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,2299 @@
+[
+ {
+  "body_hash": "eb40a9fef6cfee62",
+  "first_seen": "2026-10-26",
+  "handle": "stella-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/4b45ff83-17e1-4065-bd2a-e53c1734ffaf/Blend_Stella_26_rev.jpg",
+  "platform": "squarespace",
+  "product_id": "62acdf434c86f055161c6b72",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "blend",
+   "caramel",
+   "cherry",
+   "chocolate",
+   "washed"
+  ],
+  "title": "Stella",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/stella-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Espresso 5 lb. (save 10%)",
+    "variant_id": "089e491d-dc2c-41e5-b365-a24664011f97"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Chemex 5 lb. (save 10%)",
+    "variant_id": "092b829c-e0ec-41fd-941b-0fa7e8034c74"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Kalita Wave 2.5 lb.",
+    "variant_id": "0b119fc6-fb17-4b83-98c6-4ceb2e7dd731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Flat Bottom Drip 5 lb. (save 10%)",
+    "variant_id": "269310d9-7250-4d06-9386-9b376b845990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5 lb. (save 10%)",
+    "variant_id": "278a0654-e5ba-43e3-8f43-ffc56165f8a1"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Pour Over 2.5 lb.",
+    "variant_id": "2fb43883-cf5a-439a-b34c-385f6412c99d"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Turkish 11 oz",
+    "variant_id": "3120b8d9-9219-43df-a029-e5d3866cb182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5 lb. (save 10%)",
+    "variant_id": "401afe0d-1d7b-4930-a7d3-142ef54db4b4"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "405ac69e-d198-4e5d-89f5-603889422f08"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Auto Drip 5 lb. (save 10%)",
+    "variant_id": "477788cb-7c95-456f-afe2-a39ed50a2e7b"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Auto Drip 2.5 lb.",
+    "variant_id": "4d91f95a-c80b-4892-9548-889f037c6006"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Turkish 2.5 lb.",
+    "variant_id": "7513bd93-da12-4fbd-b78f-bdfa545f3454"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Whole Bean 2.5 lb.",
+    "variant_id": "892c40b8-0dd6-4c96-9000-59f7e4c9c0e2"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cold Brew 2.5 lb.",
+    "variant_id": "9219cde0-3813-4fce-ace1-5f4af5794b64"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Aeropress 5 lb. (save 10%)",
+    "variant_id": "92ca8169-ba19-4162-9a11-44b27782daaf"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Chemex 2.5 lb.",
+    "variant_id": "9307a0cf-e927-48b3-87e6-c12769d9a9b2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Flat Bottom Drip 11 oz",
+    "variant_id": "9683849c-88de-4827-9d51-d92dc101732a"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Pour Over 11 oz",
+    "variant_id": "9db8e3cb-dff0-4adb-b54a-953349737d5e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Flat Bottom Drip 2.5 lb.",
+    "variant_id": "9dc97851-10a6-4d4a-b5d3-5dcec4144712"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Aeropress 2.5 lb.",
+    "variant_id": "a291b7a7-ca8b-429f-8314-155257d4ab3b"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Auto Drip 11 oz",
+    "variant_id": "a5ef1d8a-bb1c-4bdf-9722-b4197125b267"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "a700f367-aac3-44d1-a11e-6f2c4705b8af"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Turkish 5 lb. (save 10%)",
+    "variant_id": "b4cbc367-b068-48e0-a528-2efb999e5d04"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Chemex 11 oz",
+    "variant_id": "b5698c1c-2c70-4dcc-befa-c6de92d1dc16"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cold Brew 11 oz",
+    "variant_id": "bd50c551-09bf-40e2-bb01-d9808d58c03a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Kalita Wave 5 lb. (save 10%)",
+    "variant_id": "c50538dd-3519-4d94-92e0-5c3107e0b616"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Espresso 2.5 lb.",
+    "variant_id": "cdd8994e-0866-46dc-ad1e-4b67b75b0354"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Kalita Wave 11 oz",
+    "variant_id": "d408730d-1b02-4603-a228-e64f7725660d"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "French Press 11 oz",
+    "variant_id": "d8751ab3-f18b-4e3a-846a-e3107e5da7fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cold Brew 5 lb. (save 10%)",
+    "variant_id": "dbeac96e-474b-4ab0-8276-26487a9c461a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "French Press 2.5 lb.",
+    "variant_id": "e2c4f00a-c275-4a9b-beaf-e4dc97693881"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Aeropress 11 oz",
+    "variant_id": "ea83e71f-000e-44c4-8de5-50a457ad09bd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Pour Over 5 lb. (save 10%)",
+    "variant_id": "efc1e239-8313-4c4c-ad6d-4e5eba2c659d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "102dab58d9736aa8",
+  "first_seen": "2026-10-26",
+  "handle": "no7-blend-ardyt",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/22d8ce1f-788a-4533-961d-8f40f342c0df/Blend_No.7_26+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "62ace0dc6b9fbe3525653eab",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "blend",
+   "caramel",
+   "chocolate",
+   "juicy",
+   "nutty",
+   "orange",
+   "washed"
+  ],
+  "title": "No.7",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/no7-blend-ardyt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Chemex 2.5 lb.",
+    "variant_id": "015757ee-1f8c-435e-bada-6a0f136d5891"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Flat Bottom Drip 11 oz",
+    "variant_id": "153a7e9a-18eb-4143-8e38-20884b5830b8"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "French Press 11 oz",
+    "variant_id": "1e18f6b1-f92a-4203-82ab-8b67b1f5abe3"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Espresso 2.5 lb.",
+    "variant_id": "3a208f38-d2ef-4447-938f-bbd8abaa7696"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Whole Bean 2.5 lb.",
+    "variant_id": "3ebe4f34-002f-44cd-9b08-b5db603ced63"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Espresso 5 lb. (save 10%)",
+    "variant_id": "4b82e222-e24a-4047-a209-3317e884729c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Flat Bottom Drip 5 lb. (save 10%)",
+    "variant_id": "5305d49e-2cfd-48c5-9432-e0818c883fab"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Kalita Wave 11 oz",
+    "variant_id": "5bd83ed4-7d80-4801-9a00-320842254784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Turkish 5 lb. (save 10%)",
+    "variant_id": "73437c41-64f1-4a04-a31e-2bcb12b42d95"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Auto Drip 5 lb. (save 10%)",
+    "variant_id": "76874b61-c7c8-4403-9224-bad29fde87d9"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "7db2512d-9ca1-4ade-af46-971b3984c850"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "7f84fdfb-c2aa-4a3e-bc4e-0302f57533d2"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Pour Over 2.5 lb.",
+    "variant_id": "8281da63-7367-47c8-87fe-a8622e70f8f9"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cold Brew 11 oz",
+    "variant_id": "8360c4e2-e1cb-4506-a4b5-54b8d1bdc462"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Aeropress 2.5 lb.",
+    "variant_id": "83e13cd4-af97-4a4c-a05c-06cfa01d5892"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Auto Drip 2.5 lb.",
+    "variant_id": "8b82e4f9-ad79-4c77-a0c1-cf07d61ffe97"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Pour Over 11 oz",
+    "variant_id": "8bd46a3e-105d-40ae-a12b-66023a20ee16"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5 lb. (save 10%)",
+    "variant_id": "8ef7c2f3-d63a-4071-a55e-ac20a92a633e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cold Brew 5 lb. (save 10%)",
+    "variant_id": "a0a657a5-8f75-477d-ade3-8b990dd90010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Aeropress 5 lb. (save 10%)",
+    "variant_id": "a2845f49-126d-4921-b54d-c25610bbf9e5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Kalita Wave 5 lb. (save 10%)",
+    "variant_id": "a75699b4-fa00-4df4-a366-ffabeb96ba84"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Kalita Wave 2.5 lb.",
+    "variant_id": "afe16977-e119-4da8-a0b0-7fe3ffb8adae"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Flat Bottom Drip 2.5 lb.",
+    "variant_id": "b0f92674-fcd0-4128-adc5-26f4f8d4500a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Turkish 2.5 lb.",
+    "variant_id": "b9763454-06d0-4d18-bccd-f6da796e87b0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "French Press 2.5 lb.",
+    "variant_id": "b97a2ef1-0eb3-4505-b8b9-48a7feec7b57"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Aeropress 11 oz",
+    "variant_id": "bb48dc89-b268-4275-9713-2cf4c0535ec7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Chemex 11 oz",
+    "variant_id": "c28ad532-fc17-418a-b9d5-ac02a6e98ac7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Chemex 5 lb. (save 10%)",
+    "variant_id": "d86e2625-9656-407f-9405-7fcc8c7940ca"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Auto Drip 11 oz",
+    "variant_id": "da4feaea-e9d3-47c7-8c8d-484d7bc7bd22"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Pour Over 5 lb. (save 10%)",
+    "variant_id": "deb50467-168a-4d9c-9698-55e6bc086ce2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Turkish 11 oz",
+    "variant_id": "e782a06b-7d92-4496-9fb8-d9874d121712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5 lb. (save 10%)",
+    "variant_id": "f1839f0d-3efa-4548-bd5c-9ade3419c288"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cold Brew 2.5 lb.",
+    "variant_id": "f36cf533-02f1-4876-8fc4-e7f52f3db286"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e2815df767167c7",
+  "first_seen": "2026-10-26",
+  "handle": "bareknuckle-blend-ed5yh",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/dd658a06-da43-4e50-b226-1d99b04f78e3/Blend_Bareknuckle_26+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "62ace14250ee0e57b20c1b64",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "blend",
+   "caramel",
+   "chocolate",
+   "dark",
+   "dried fruit",
+   "washed"
+  ],
+  "title": "Bareknuckle",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/bareknuckle-blend-ed5yh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Flat Bottom Drip 11 oz.",
+    "variant_id": "0558c11f-2c76-4209-9632-21529ab17204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Chemex 5 lb. (save 10%)",
+    "variant_id": "08bc891a-7994-4211-b735-1e52d8448a4a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Auto Drip 5 lb. (save 10%)",
+    "variant_id": "091b3a13-8aa8-4b92-8577-c6b415a332d7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "French Press 11 oz.",
+    "variant_id": "0b6f8803-0d3a-477f-9198-7eb7822cf05c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5 lb. (save 10%)",
+    "variant_id": "1529312f-f2aa-4cfa-926b-881c15e5a87d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Kalita Wave 5 lb. (save 10%)",
+    "variant_id": "1bda67cd-be38-47b9-8a6c-db15840c87d8"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Aeropress 11 oz.",
+    "variant_id": "215ba7aa-96d8-49a7-8044-d4aab4a2ec01"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Auto Drip 2.5 lb.",
+    "variant_id": "27e9596d-486b-41bd-a839-f75cf4ef0ab7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Kalita Wave 11 oz.",
+    "variant_id": "31f2212f-19a9-4e50-ac49-6901c9d58a22"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cone Pour Over 5 lb. (save 10%)",
+    "variant_id": "39b2bc0e-c416-4fd9-92b4-7c9bf5afab4e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cone Pour Over 2.5 lb.",
+    "variant_id": "4181d0d5-39d6-4e3b-9922-0919f3a17c69"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Flat Bottom Drip 5 lb. (save 10%)",
+    "variant_id": "488043b5-4091-4629-b0f8-a788b1dea946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Turkish 5 lb. (save 10%)",
+    "variant_id": "4b733a3d-7848-4a83-8b32-be6f54fb82e3"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Aeropress 2.5 lb.",
+    "variant_id": "4cbfa4a3-e2e8-4f9f-93f5-55c69430b06c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Aeropress 5 lb. (save 10%)",
+    "variant_id": "5f770728-f1ed-4c09-9f8d-0cfe6ee7dfa6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5 lb. (save 10%)",
+    "variant_id": "62d9c2e9-705b-438a-a0b8-f2c7f11e0d7d"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cold Brew 11 oz.",
+    "variant_id": "712b9bd2-34db-433d-a94e-bf9f985806fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cold Brew 5 lb. (save 10%)",
+    "variant_id": "76f98dd3-8832-459d-a067-43485e9945ac"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Turkish 11 oz.",
+    "variant_id": "80155364-da88-450c-96e3-294fd61d2bee"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Chemex 2.5 lb.",
+    "variant_id": "85a9bda6-d576-44c3-9e3f-4e61a31c37d4"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Whole Bean 11 oz.",
+    "variant_id": "92a38f3a-2bf4-458d-8590-0274f9f18aff"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Pour Over 11 oz.",
+    "variant_id": "b0acb3bb-5094-4d48-b7e1-2122269faa80"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Espresso 5 lb. (save 10%)",
+    "variant_id": "b0d264ee-14c3-4810-8d6f-0618e4eaf157"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Espresso 2.5 lb.",
+    "variant_id": "b7650da5-ec7f-44ce-bc18-482ef15e48a5"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cold Brew 2.5 lb.",
+    "variant_id": "b9cbe3d4-51d8-4e58-b19e-5c2a9ccacee0"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Chemex 11 oz.",
+    "variant_id": "bdd53fb1-6578-498c-a422-44155084bb69"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Flat Bottom Drip 2.5 lb.",
+    "variant_id": "be7e35c8-6344-4a81-a9c6-11b13331465f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Whole Bean 2.5 lb.",
+    "variant_id": "c72ed3fd-d3bd-405b-bf5f-ede2ea173f83"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Espresso 11 oz.",
+    "variant_id": "ce87b32f-c469-4e15-9976-406f87bd593a"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cone Auto Drip 11 oz.",
+    "variant_id": "d8fd3abb-ae0d-468a-9caa-af9e5735a7fe"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Turkish 2.5 lb.",
+    "variant_id": "dd401519-aba8-4611-9585-86dc470daa0f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "French Press 2.5 lb.",
+    "variant_id": "ef89300c-b0c9-4096-9b1d-fccf2dc3e4a8"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Kalita Wave 2.5 lb.",
+    "variant_id": "f72cfdc8-7e61-4ba2-8e52-6285052d7dd3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "370dc476d145e54e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/62d1b44e-e3f4-4f4c-8475-1a2fe9da963e/Blend_Tatacoa_Decaf_26+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "62acfd446b9fbe352568aadd",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [],
+  "title": "Tatacoa - Decaf",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Chemex 11 oz",
+    "variant_id": "02a0a6b5-78ca-490f-b73f-b70fbf553ca7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "03a936c6-361e-4191-922d-1fe2dd904c53"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Turkish 11 oz",
+    "variant_id": "04da4e3b-be52-496d-a07e-c2208663227c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5 lb. (Save 10%)",
+    "variant_id": "10b35663-7000-48ab-bbc5-dc0217748519"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Espresso 2.5 lb.",
+    "variant_id": "1361e80a-4128-4688-bb50-2697b6e29e57"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Brewer Cone 2.5 lb.",
+    "variant_id": "142dcdc0-8d08-4fc6-8825-577b1d0142b3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Turkish 5 lb. (Save 10%)",
+    "variant_id": "18529f0a-556a-45a0-bc95-659a48932f96"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "French Press 11 oz",
+    "variant_id": "1be8f3aa-074f-4a71-badd-5862b65f40c3"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Pour Over 2.5 lb.",
+    "variant_id": "1e3d845a-211b-48e7-bd4a-a4d1a11bed73"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Cold Brew 5 lb. (Save 10%)",
+    "variant_id": "208e0eb4-6b75-4346-8c5e-294487040b1e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Brewer Cone 5 lb. (Save 10%)",
+    "variant_id": "273e0723-c794-416a-a0cb-8636ce35ecfe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Aeropress 5 lb. (Save 10%)",
+    "variant_id": "2ad9234a-5fb5-42c4-8fb0-210165742f3c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Espresso 5 lb. (Save 10%)",
+    "variant_id": "2cfe0ab7-258b-4f0b-9384-d67ff961a9a8"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Brewer Flat Bottom 11 oz",
+    "variant_id": "3ca6ccbc-a66c-43e8-a8aa-9d48983ae85c"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Aeropress 11 oz",
+    "variant_id": "5a2a26bd-6373-43ac-891a-10213a614f6c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Turkish 2.5 lb.",
+    "variant_id": "62ccfd41-6056-4460-a1bd-264ca19cdd18"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Brewer Cone 11 oz",
+    "variant_id": "6e42027c-9f47-4e58-a10e-aeeb7f47c144"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Cold Brew 2.5 lb.",
+    "variant_id": "7d7d7057-5423-4231-8ed5-ddcad45bbf7f"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Pour Over 11 oz",
+    "variant_id": "841e338e-da76-470a-88ed-ea94baabdb96"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "French Press 2.5 lb.",
+    "variant_id": "95e0312c-85d8-45a2-a607-d2d07d175370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5 lb. (Save 10%)",
+    "variant_id": "9cc0d879-465b-4bcf-8f6b-2841c2460a90"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Whole Bean 2.5 lb.",
+    "variant_id": "a8e6fb87-0445-4b44-aa63-120b1eee1fd8"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Aeropress 2.5 lb.",
+    "variant_id": "af8232b9-aa96-4d79-8202-8d86bbeed691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Chemex 5 lb. (Save 10%)",
+    "variant_id": "b9e61b00-8250-45d9-a2e4-3feab7f99e6d"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Cold Brew 11 oz",
+    "variant_id": "ce3d6c82-5a11-495f-b78c-5fab2ad8deeb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Pour Over 5 lb. (Save 10%)",
+    "variant_id": "dc91c1f1-71af-4c6b-9795-3270bba3556e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Brewer Flat Bottom 5 lb. (Save 10%)",
+    "variant_id": "de177e80-9e53-4a51-90c2-3cd16b344546"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Brewer Flat Bottom 2.5 lb.",
+    "variant_id": "e0fb7461-391a-459e-b4b9-9d39865bc82c"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "e53fbb47-b332-41c6-8042-442f8e7ab9d6"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 61.5,
+    "title": "Chemex 2.5 lb.",
+    "variant_id": "ea1e3ee0-991c-4c57-991b-33502d11b981"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5dd78da9d31561ac",
+  "first_seen": "2026-10-26",
+  "handle": "cherrypicker-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/c91f9e2a-e91a-4cff-a49e-5d12386d9b64/Blend_Cherrypicker_26+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "66a479a02e8b036ebe32fd26",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "Fruity",
+   "blend",
+   "chocolate",
+   "dried fruit",
+   "natural",
+   "wine"
+  ],
+  "title": "Cherrypicker",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/cherrypicker-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Whole Bean 2.5 lb.",
+    "variant_id": "0177710d-8ec1-433d-8c5f-88f861f49543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Cold Brew 5 lb. (save 10%)",
+    "variant_id": "04ffd949-74ac-4870-a208-922ce190ebd4"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Chemex 2.5 lb.",
+    "variant_id": "08bb3867-c084-4f08-991a-44f878b2f50c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "French Press 5 lb. (save 10%)",
+    "variant_id": "0c4c3216-7414-4729-9182-935216742532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Cone Pour Over 5 lb. (save 10%)",
+    "variant_id": "0c8399b5-831f-47d4-9477-167ac12d8d21"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Aeropress 2.5 lb.",
+    "variant_id": "15240177-1e5a-453e-9da2-f6c47a2fa3bc"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Aeropress 11 oz.",
+    "variant_id": "4374adc0-8efa-49bc-8b1b-d415a9acd770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Kalita 5 lb. (save 10%)",
+    "variant_id": "459de110-0f13-4da4-8742-8746972d2310"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Espresso 2.5 lb.",
+    "variant_id": "4c53131c-a3b4-484e-82b3-34802b06e273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Aeropress 5 lb. (save 10%)",
+    "variant_id": "5b4cc6d5-f042-465f-b706-ec16dc663e61"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Cold Brew 11 oz.",
+    "variant_id": "5c38bc39-ed18-4c00-ba07-4669e694929d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Turkish 5 lb. (save 10%)",
+    "variant_id": "635a2c92-4c16-4428-aa21-89fa3142976a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Kalita 2.5 lb.",
+    "variant_id": "6a6c8005-670b-48ca-89b9-b99212be1ecc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Espresso 5 lb. (save 10%)",
+    "variant_id": "6ab1f090-a139-48f7-942a-a031ea381c01"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Cone Auto Drip 5 lb. (save 10%)",
+    "variant_id": "7bd576d5-f4e5-411a-a36e-6602ae893863"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Turkish 2.5 lb.",
+    "variant_id": "87f991f4-c369-45fb-9622-8ffe99d67367"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Chemex 11 oz.",
+    "variant_id": "89c5afd4-ace3-427e-b7a0-0291c555488b"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Flat Bottom Drip 11 oz.",
+    "variant_id": "8ec5251a-8f11-437f-bb80-dc7c8e0d0a7c"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Kalita 11 oz.",
+    "variant_id": "94afcaaa-4de6-43c0-a90b-a32f662e704e"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "French Press 11 oz.",
+    "variant_id": "b6fa7b00-ebb2-4037-b6aa-8488d840880d"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Flat Bottom Drip 2.5 lb.",
+    "variant_id": "bf716238-db3b-48a9-923e-a9a0641aeea9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Flat Bottom Drip 5 lb. (save 10%)",
+    "variant_id": "d20ab7a9-ad56-4849-abf6-a0727f868644"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Espresso 11 oz.",
+    "variant_id": "d8a978bf-7ff3-4dc7-add5-6bcb81ac6088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean 5 lb. (save 10%)",
+    "variant_id": "dadb251c-6866-4669-b10a-7f5d4de05aca"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "French Press 2.5 lb.",
+    "variant_id": "dc75d447-281b-48cf-ac79-8d1eb4e16b3f"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Turkish 11 oz.",
+    "variant_id": "dcc12a5a-3f38-4787-8d0c-e4ca698f4112"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Cone Pour Over 11 oz.",
+    "variant_id": "ea8d9555-e533-4358-ae1b-f4d55536766b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Chemex 5 lb. (save 10%)",
+    "variant_id": "ec2b3e6c-1c93-4d1f-ab5d-7f940577b2b7"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Cone Auto Drip 2.5 lb.",
+    "variant_id": "ec750590-a4ff-47d0-9b11-381cc6b9148a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Cone Pour Over 2.5 lb.",
+    "variant_id": "f0b96f15-1e8e-4d32-86a0-029f261b648d"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Cone Auto Drip 11 oz.",
+    "variant_id": "f1d6046b-bcfb-49d4-9bd8-712493c80555"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 19.5,
+    "title": "Whole Bean 11 oz.",
+    "variant_id": "fc0f6391-ef9c-4003-8875-776754b0f5bb"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 65.0,
+    "title": "Cold Brew 2.5 lb.",
+    "variant_id": "fd0a8ce8-e0a9-4d85-b682-38e6f9f3019e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca9447d840ed4a5f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habtamu-fikadu",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/d825a548-4cc0-46d3-b643-f94782fcaddd/SO_Eth_Habtamu_Fikadu+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "6a7ca548e67d1e4919c66206",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "crisp",
+   "ethiopia",
+   "mandarin",
+   "mango",
+   "orange",
+   "sugar",
+   "sweet",
+   "washed"
+  ],
+  "title": "Ethiopia - Habtamu Fikadu",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/ethiopia-habtamu-fikadu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Cold Brew",
+    "variant_id": "12e20c27-679b-43d9-a288-cf65902d5d93"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Turkish",
+    "variant_id": "1fd912a3-1700-46ba-a63a-81de9ac1bcd6"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Pour Over Cone",
+    "variant_id": "24d9045a-1b6e-40e0-94e1-c0f5142e0058"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Whole Bean",
+    "variant_id": "291f989c-f8a1-47b5-bbac-518192bdfc17"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Espresso",
+    "variant_id": "2aca4916-b975-4780-ba94-7aedc3eb5c31"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb French Press",
+    "variant_id": "2b314093-f389-452b-b84e-4be0d82fca2c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Cold Brew",
+    "variant_id": "2c939962-9bae-4035-9094-233d043c0a0d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Flat Bottom Drip",
+    "variant_id": "346a44ba-3ca1-4fea-9295-b7c6d1935280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Whole Bean",
+    "variant_id": "3d7a455a-42de-4778-aa2d-d373b654f9e5"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Flat Bottom Drip",
+    "variant_id": "57f896a9-6b6c-4742-a1b3-3cc08544e8de"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) French Press",
+    "variant_id": "59c48408-e57c-4ff8-8400-45b7155c0faa"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Whole Bean",
+    "variant_id": "5e86e3c9-27f1-4ec7-9a54-a43a096f52d4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Espresso",
+    "variant_id": "681cf6a0-8f4a-4837-a4a7-73317a74840d"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Kalita Wave",
+    "variant_id": "696d399f-720f-414d-bd00-4333bd195fd0"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Kalita Wave",
+    "variant_id": "6ec17d69-70c7-46c6-8b8f-e573d36ee05f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Cold Brew",
+    "variant_id": "7d8c4932-30d8-43d5-b0ad-eba5e61c95bd"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz French Press",
+    "variant_id": "892fa8cd-d9cf-42b8-806a-d2777431683b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Chemex",
+    "variant_id": "8b1fa7de-f77e-4132-854b-ebdadeb4363c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Espresso",
+    "variant_id": "8d880b0d-eaac-47c5-95b8-05ec45aa128f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Chemex",
+    "variant_id": "9cb7c36e-b482-415a-9551-11fd0c34ed63"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Kalita Wave",
+    "variant_id": "aba795c1-02d0-40ba-a83e-1188cb3c5986"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Turkish",
+    "variant_id": "b00ba0c0-d9c0-446a-befc-4ee869cedbbb"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Aeropress",
+    "variant_id": "be4722a2-51dc-4024-a2c2-e8e8b709437e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Aeropress",
+    "variant_id": "c2111a78-a957-4504-bb51-375196477153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Pour Over Cone",
+    "variant_id": "c3265bda-3472-4035-92d8-6ec299ff42c7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Pour Over Cone",
+    "variant_id": "dd3ca0f7-961c-4e5d-8722-24c895daaacc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Cone Auto Drip",
+    "variant_id": "dd683470-cf7a-4066-8c31-b439dec62a54"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Chemex",
+    "variant_id": "df85035a-1e0f-4784-b373-774c9ea4a187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 lb (save 10%) Aeropress",
+    "variant_id": "e2665d54-7bb8-4ee3-94db-cce2da5dbe6f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Cone Auto Drip",
+    "variant_id": "e6e2b349-42f3-4620-af45-00ee7cfdacf5"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Flat Bottom Drip",
+    "variant_id": "edd991c8-e1ec-40c4-83e4-a5443b43da43"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "11oz Cone Auto Drip",
+    "variant_id": "f03dae02-0284-4c79-8bbd-e55f335b1e26"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 80.0,
+    "title": "2.5 lb Turkish",
+    "variant_id": "f36cdf21-5796-429f-82fb-d870d583e87f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fa01249d56dba06",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-layo-teraga",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/60a538aa-5c70-44e9-8f66-ea457d588b85/SO_Eth_Layo_Teraga+%281%29.jpg",
+  "platform": "squarespace",
+  "product_id": "6a999e7f913f3628d6747ed3",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "crisp",
+   "ethiopia",
+   "mandarin",
+   "mango",
+   "orange",
+   "sugar",
+   "sweet",
+   "tropical",
+   "washed"
+  ],
+  "title": "Ethiopia - Layo Teraga",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/ethiopia-layo-teraga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Chemex",
+    "variant_id": "01496af1-647a-4274-83d5-0b4b4ca0122a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Pour Over Cone",
+    "variant_id": "0d170677-6cb0-46ae-aaf5-b40fba56a5e9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Whole Bean",
+    "variant_id": "1870e20b-fc2b-4441-83ad-4b9a2fec66a0"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Pour Over Cone",
+    "variant_id": "24256a88-e6b6-4d7d-b572-b4366d29fba6"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Aeropress",
+    "variant_id": "4160daf6-db98-440c-a360-78876acaa614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) French Press",
+    "variant_id": "4d6da408-9469-4672-859f-6a0a4e1c0949"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Kalita Wave",
+    "variant_id": "4e55ce57-d5c2-44c3-8062-fef70b8754a7"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb French Press",
+    "variant_id": "758ef552-5169-49de-bb21-f2d1571c1d81"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Flat Bottom Drip",
+    "variant_id": "768021f1-eaad-44bf-bf29-2aee5f89c934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Flat Bottom Drip",
+    "variant_id": "7b8bc20d-7489-4364-bbae-f0f05187bad2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Cold Brew",
+    "variant_id": "83ae4963-b108-4941-85ad-b7482817a9b4"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz French Press",
+    "variant_id": "88b43d33-bd1a-45ec-adb7-970f9297198a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Cold Brew",
+    "variant_id": "89b4dac1-0b1c-489a-bd88-f567178f3180"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Chemex",
+    "variant_id": "8cc85f61-cb58-4432-a8a4-7f81f3d1c1fb"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Aeropress",
+    "variant_id": "931fafb4-c655-4627-a6de-9327b7f11b57"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Cold Brew",
+    "variant_id": "9a3d3d2b-3542-4c1f-8e55-84ba80befe3a"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Kalita Wave",
+    "variant_id": "a66c21a9-5465-491a-a860-362a9f0641e8"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Cone Auto Drip",
+    "variant_id": "ada1251e-7d30-465f-8e32-23c8073c62c1"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Turkish",
+    "variant_id": "adc98e3b-bbf4-4672-8e22-9b6772a069bd"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Whole Bean",
+    "variant_id": "ae2bce50-032f-4b0e-a77e-78e61539a187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Cone Auto Drip",
+    "variant_id": "af74d90f-b11c-4f4d-add8-54281400d998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Chemex",
+    "variant_id": "b08cd126-07a9-4794-98bd-cbea2fa061bb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Aeropress",
+    "variant_id": "b271967a-c895-4202-9165-ff202aaafecd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Kalita Wave",
+    "variant_id": "b2cc8109-0414-48de-aa14-9e0b7661c88c"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Pour Over Cone",
+    "variant_id": "bf157ed1-1768-4db6-9426-c243bd210e77"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Turkish",
+    "variant_id": "d6ccde06-ad60-4cd4-8595-180bff5b5297"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Flat Bottom Drip",
+    "variant_id": "d7070235-601c-49a1-b551-2a72f47928a9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.75,
+    "title": "5 lb (save 10%) Espresso",
+    "variant_id": "e45c86a4-c1a8-4389-b17f-ad92b47a223e"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Turkish",
+    "variant_id": "e5f9e518-944f-4707-9819-b667937a0ed7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Whole Bean",
+    "variant_id": "f0468134-13b8-4d4e-800e-86bd1eeae112"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Cone Auto Drip",
+    "variant_id": "f335c9c5-dba3-4649-a4d9-81f935eb935c"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Espresso",
+    "variant_id": "f444a2ce-2a9c-47c6-93b9-b0fd7db2f9c0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Espresso",
+    "variant_id": "f80e6ad2-50fa-4e7e-8945-815be33fc680"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e30422910e12807",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-himalaya-pacamara",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/c8d27451-6242-4358-824b-616ecae77e19/SO_ElSal_F_Himalaya_26.2.jpg",
+  "platform": "squarespace",
+  "product_id": "6a999e8102a9471bd9db18af",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "crisp",
+   "ethiopia",
+   "mandarin",
+   "mango",
+   "orange",
+   "sugar",
+   "sweet",
+   "tropical",
+   "washed"
+  ],
+  "title": "El Salvador - Finca Himalaya",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/el-salvador-finca-himalaya-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Cold Brew",
+    "variant_id": "01601c00-f453-40b5-b688-4a1b656fad1a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Aeropress",
+    "variant_id": "0c607c3b-ee73-432a-96cc-48bc28287594"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Whole Bean",
+    "variant_id": "15688468-72bc-4974-8464-c7b9b00d7b42"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb French Press",
+    "variant_id": "15abd3bb-697a-4fa0-ac81-e53a102073b3"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Cold Brew",
+    "variant_id": "1b3b6ee7-99c1-4508-8a9d-d41e9972cc67"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Cone Auto Drip",
+    "variant_id": "25d9bbae-f066-49f1-9a7f-21d8f2fac3f3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Cone Auto Drip",
+    "variant_id": "3b66f803-c38a-463d-a399-72c5756f1149"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Kalita Wave",
+    "variant_id": "42a06f13-b08c-4bae-903f-7f30604a2029"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Aeropress",
+    "variant_id": "491187e4-06fb-4a10-aee2-d8dbb832af0e"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Kalita Wave",
+    "variant_id": "52f312ba-2d98-44a3-9a47-280c0ec2537f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Espresso",
+    "variant_id": "5443d07b-ef88-4a2b-82cf-683880fa3cf4"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Pour Over Cone",
+    "variant_id": "55187fed-3149-4f94-8733-c87009e1ad72"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Cone Auto Drip",
+    "variant_id": "5baac931-c04c-477f-b364-dba8695cbfd7"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Chemex",
+    "variant_id": "6292d884-cd02-441f-9d77-3de0ac349545"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Espresso",
+    "variant_id": "6688363d-e5f7-4fb2-a610-b6d798abcc06"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz French Press",
+    "variant_id": "69a88725-12f9-49b6-9eb3-8a27dedddd6d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Turkish",
+    "variant_id": "7e3cb620-c162-4a32-a5e1-efcbf09c09e5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Pour Over Cone",
+    "variant_id": "81453aef-4c50-43fb-9e85-135c28689498"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Pour Over Cone",
+    "variant_id": "8a02b1ef-db41-4292-8f84-53fa55c342b4"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Whole Bean",
+    "variant_id": "8c05f227-b13d-4454-8f48-cb1bc958cafe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Kalita Wave",
+    "variant_id": "938505cf-cced-4234-8c2a-e3cbbfdef14d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) French Press",
+    "variant_id": "a20aaa80-466c-4108-ac84-fd1b3ecc448f"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Aeropress",
+    "variant_id": "a4eb9a90-e3cb-4911-9fc9-245aa174a1c9"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Chemex",
+    "variant_id": "a6a47dc6-08cc-48d5-bd5d-1f888992e235"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Cold Brew",
+    "variant_id": "a6ee4801-a5d6-4cbe-827e-e7ce71262508"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Turkish",
+    "variant_id": "a907b4fc-0efe-498d-968e-851594cca6a9"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 86.35,
+    "title": "2.5 lb Flat Bottom Drip",
+    "variant_id": "bc93a57c-6ecf-4722-89a6-ab67bbaf5731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Chemex",
+    "variant_id": "c893e4b4-e333-40b1-acda-b26a47c1adeb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Espresso",
+    "variant_id": "d78f69db-4543-413c-8b9a-0dc78a49d544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Flat Bottom Drip",
+    "variant_id": "dc4e86cc-932d-43bd-8e8d-94cb5e4b779f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.45,
+    "title": "5 lb (save 10%) Whole Bean",
+    "variant_id": "e8885b31-14c3-43c1-bc9e-9d2fd7418198"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Turkish",
+    "variant_id": "f5e0b6e2-f497-470d-a391-006858144c72"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 23.75,
+    "title": "11oz Flat Bottom Drip",
+    "variant_id": "fe912d39-6b77-42f9-91c4-ba18396c23e5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7be3128b2ee97abe",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habtamu-fikadu-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/dbd65fa7-97a7-4a59-a0ef-2a47393765e6/SO_Eth_Habtamu_Fikadu_Nat.jpg",
+  "platform": "squarespace",
+  "product_id": "6ac08a476ec41931edd51411",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "crisp",
+   "ethiopia",
+   "mandarin",
+   "mango",
+   "orange",
+   "sugar",
+   "sweet",
+   "washed"
+  ],
+  "title": "Ethiopia - Habtamu Fikadu Natural",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/ethiopia-habtamu-fikadu-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz French Press",
+    "variant_id": "00e0ab28-306d-4bab-9dde-bfff23b6e766"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Turkish",
+    "variant_id": "06a4aa57-5811-407d-b7b6-ba7a01d558bc"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Espresso",
+    "variant_id": "0b679fa4-ec39-4f71-a42a-dcbff7493192"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Pour Over Cone",
+    "variant_id": "20314c6d-d2b1-469e-9260-5d42c96230b4"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Chemex",
+    "variant_id": "22dbed76-20dd-4865-a85e-a167c7be3e53"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Chemex",
+    "variant_id": "2675f261-d41c-4e8e-a957-ee0e97b9b4e0"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Espresso",
+    "variant_id": "29a001f8-45bb-420a-a780-5ccb76d01dba"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Flat Bottom Drip",
+    "variant_id": "35e12c38-f51b-46b8-8e08-0528bc6d8dab"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Chemex",
+    "variant_id": "37714280-b742-43ab-933c-da6cd62dbfa8"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Whole Bean",
+    "variant_id": "3b356e84-db36-44fb-9471-b3ec75908594"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Cone Auto Drip",
+    "variant_id": "3ee94291-397c-4a25-a7e1-2f244ae0be39"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Aeropress",
+    "variant_id": "3f0a15f7-0f11-48d8-9b53-17c7a761200f"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Flat Bottom Drip",
+    "variant_id": "4bb483ca-e199-44f5-9a71-8c4696128b7c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Aeropress",
+    "variant_id": "5a6c5f88-dc3f-472f-8305-df0dfe0d757f"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Turkish",
+    "variant_id": "602aeea8-4ff4-4be9-8781-7251f2e29c0a"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Cone Auto Drip",
+    "variant_id": "6298dc35-01ce-48ac-95a1-99a7f0dc6932"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Kalita Wave",
+    "variant_id": "66052cfd-2922-419a-90e0-b8623923cc0a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Cold Brew",
+    "variant_id": "6dce2a10-e365-4d6f-871c-3e65a204175d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Kalita Wave",
+    "variant_id": "815a8e2c-c060-429c-9372-adc6cd80c6d4"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Aeropress",
+    "variant_id": "8857993d-c5e0-4cde-92a2-b9f010edca48"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Turkish",
+    "variant_id": "89bdc2b1-d718-4b35-a018-b5d618ed5c68"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb French Press",
+    "variant_id": "8f9e2940-578e-4f65-afb8-f0bad7359e97"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Pour Over Cone",
+    "variant_id": "90268e44-bd46-408e-bbd5-12c77b1ad489"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Kalita Wave",
+    "variant_id": "95b0fb9a-e338-4c30-af31-7b412157fd19"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Cone Auto Drip",
+    "variant_id": "9b63af29-a0dd-4bb4-b363-69e991cc5b80"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Flat Bottom Drip",
+    "variant_id": "a1502516-8daa-40b6-8230-f21982f7b6c4"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Cold Brew",
+    "variant_id": "b6812529-9e71-40e0-a74f-7867d2acec49"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Whole Bean",
+    "variant_id": "bc7953b1-5a04-4df8-867c-c72a24fc120e"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Cold Brew",
+    "variant_id": "c25bf8b3-074f-40ac-863a-f2d1977e8047"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 25.25,
+    "title": "11oz Whole Bean",
+    "variant_id": "d7761fff-6c85-4d84-a174-e0c6390bb1bd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) Espresso",
+    "variant_id": "dd71db9c-c2ee-4f6f-a9e9-b0bddca0712c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5 lb (save 10%) French Press",
+    "variant_id": "e1a74dbe-1a8e-4152-aaa1-43d3db8f3fbc"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 91.75,
+    "title": "2.5 lb Pour Over Cone",
+    "variant_id": "faa3b7ac-2de9-4677-9cf8-ea3e9cb9e7c7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5446303e59a5c90a",
+  "first_seen": "2026-10-26",
+  "handle": "finca-costa-rica-2023-vintage-lot-mawrm",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f283d04b2a72e02e74ad9e8/81065ca6-578d-46b7-bd0f-dbe1e103b049/Res_04_Alto_Bonita_WEB.jpg",
+  "platform": "squarespace",
+  "product_id": "6ac1db1253761778b51fa5be",
+  "product_type": "",
+  "roaster_slug": "boxcarcoffeeroasters",
+  "tags": [
+   "candy",
+   "fuity",
+   "light",
+   "natural",
+   "sweet"
+  ],
+  "title": "Colombia - Finca Alto Bonito",
+  "url": "https://www.boxcarcoffee.com/shop-all/p/finca-costa-rica-2023-vintage-lot-mawrm",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "",
+    "variant_id": "74a18e04-0c7b-4d8b-b731-2b28410e4a45"
+   }
+  ],
+  "vendor": ""
+ }
+]

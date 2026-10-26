@@ -1,0 +1,332 @@
+[
+ {
+  "body_hash": "71a38911b3fb0105",
+  "first_seen": "2026-10-26",
+  "handle": "mighty-mississippi",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/MightyMississippi.png?v=1550719310",
+  "platform": "shopify",
+  "product_id": "1523965722676",
+  "product_type": "Meraki Roasted Coffee",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee",
+   "deliveryMinDate-1"
+  ],
+  "title": "Mighty Mississippi",
+  "url": "https://merakiroasting.com/products/mighty-mississippi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31955563184206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31955563216974"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "31955563249742"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Ground / 4oz",
+    "variant_id": "31955563282510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Ground / 5lb",
+    "variant_id": "31960079466574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31960079499342"
+   }
+  ],
+  "vendor": "Meraki"
+ },
+ {
+  "body_hash": "83dab8293b5e862f",
+  "first_seen": "2026-10-26",
+  "handle": "meraki-signature",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/MerakiSignature.png?v=1550796669",
+  "platform": "shopify",
+  "product_id": "1523976175668",
+  "product_type": "Meraki Roasted Coffee",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee",
+   "deliveryMinDate-1"
+  ],
+  "title": "Meraki Signature",
+  "url": "https://merakiroasting.com/products/meraki-signature",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "13907173113908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground / 12oz",
+    "variant_id": "13907173146676"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Ground / 4oz",
+    "variant_id": "31588966105166"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "31588966269006"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Ground / 5lb",
+    "variant_id": "31960079597646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31960079663182"
+   }
+  ],
+  "vendor": "Meraki"
+ },
+ {
+  "body_hash": "f5f27088e79bae65",
+  "first_seen": "2026-10-26",
+  "handle": "streetcar-mwp-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/streetcar.png?v=1554314123",
+  "platform": "shopify",
+  "product_id": "1523978895412",
+  "product_type": "Meraki Roasted Coffee",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee",
+   "deliveryMinDate-1"
+  ],
+  "title": "Streetcar (MWP Decaf)",
+  "url": "https://merakiroasting.com/products/streetcar-mwp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31955563053134"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31955563085902"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "31955563118670"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Ground / 4oz",
+    "variant_id": "31955563151438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Ground / 5lb",
+    "variant_id": "31960079794254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31960079827022"
+   }
+  ],
+  "vendor": "Meraki"
+ },
+ {
+  "body_hash": "6204b1df5755e986",
+  "first_seen": "2026-10-26",
+  "handle": "unlimited-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/DSC08150_1.jpg?v=1594391631",
+  "platform": "shopify",
+  "product_id": "4368759554126",
+  "product_type": "Meraki Made",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee"
+  ],
+  "title": "Unlimited* Espresso",
+  "url": "https://merakiroasting.com/products/unlimited-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "31231228510286"
+   }
+  ],
+  "vendor": "Meraki Roasting Co."
+ },
+ {
+  "body_hash": "2c9bc321efa38273",
+  "first_seen": "2026-10-26",
+  "handle": "muddy-water",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/MuddyWater.png?v=1581109633",
+  "platform": "shopify",
+  "product_id": "4474112409678",
+  "product_type": "Meraki Roasted Coffee",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee",
+   "deliveryMinDate-1"
+  ],
+  "title": "Muddy Water",
+  "url": "https://merakiroasting.com/products/muddy-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31588958371918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31588958404686"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "31588969513038"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Ground / 4oz",
+    "variant_id": "31588970954830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Ground / 5lb",
+    "variant_id": "31960080253006"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31960080285774"
+   }
+  ],
+  "vendor": "Meraki Roasting Co."
+ },
+ {
+  "body_hash": "17dc38c7004cebaf",
+  "first_seen": "2026-10-26",
+  "handle": "sunflower-soul",
+  "image": "https://cdn.shopify.com/s/files/1/0022/9398/9428/products/SunflowerSoul.png?v=1550796705",
+  "platform": "shopify",
+  "product_id": "821353087028",
+  "product_type": "Meraki Roasted Coffee",
+  "roaster_slug": "merakiroasting",
+  "tags": [
+   "RoastedCoffee",
+   "deliveryMinDate-1"
+  ],
+  "title": "Sunflower Soul",
+  "url": "https://merakiroasting.com/products/sunflower-soul",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground / 12oz",
+    "variant_id": "31955563511886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "31955563544654"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Whole Bean / 4oz",
+    "variant_id": "31955563577422"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Ground / 4oz",
+    "variant_id": "31955563610190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Ground / 5lb",
+    "variant_id": "31960079401038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "31960079433806"
+   }
+  ],
+  "vendor": "Meraki"
+ }
+]

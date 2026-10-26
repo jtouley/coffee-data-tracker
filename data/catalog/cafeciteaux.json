@@ -1,0 +1,250 @@
+[
+ {
+  "body_hash": "0b20df469ba34052",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/EthiopiaBag.jpg?v=1785415926",
+  "platform": "shopify",
+  "product_id": "8517490868403",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [],
+  "title": "Ethiopia - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/ethiopia-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45940421460147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45940421492915"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "d353171b6d63d73a",
+  "first_seen": "2026-10-26",
+  "handle": "papau-new-guinea-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/PNGBag2.jpg?v=1785415760",
+  "platform": "shopify",
+  "product_id": "8572539306163",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [],
+  "title": "Papau New Guinea - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/papau-new-guinea-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45940417953971"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45940417986739"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "5fd6a0cb02d6edb8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/Colombia.jpg?v=1786370070",
+  "platform": "shopify",
+  "product_id": "8599128113331",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Colombia - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/colombia-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45940416184499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45940416217267"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "9f751b5b6e9dbae7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/Guat.jpg?v=1786371843",
+  "platform": "shopify",
+  "product_id": "8599142367411",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [],
+  "title": "Guatemala - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45940348813491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45940348846259"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "fd543347d3faa4eb",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/House.jpg?v=1786372149",
+  "platform": "shopify",
+  "product_id": "8599147118771",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [
+   "Blend"
+  ],
+  "title": "House Blend - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/house-blend-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45940337934515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45940337967283"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "ffd9b8e0a054258e",
+  "first_seen": "2026-10-26",
+  "handle": "tail-gunner-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/TG.jpg?v=1786373367",
+  "platform": "shopify",
+  "product_id": "8599153574067",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Tail Gunner - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/tail-gunner-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "45938816385203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "45938816417971"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "747360a73f3cc759",
+  "first_seen": "2026-10-26",
+  "handle": "unleaded-decaf-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0756/9129/4899/files/Unleaded.jpg?v=1786373617",
+  "platform": "shopify",
+  "product_id": "8599155835059",
+  "product_type": "coffee",
+  "roaster_slug": "cafeciteaux",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Unleaded - Decaf Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/unleaded-decaf-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "45938738692275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.95,
+    "title": "5lb",
+    "variant_id": "45938738725043"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-whole-bean-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8734979621043",
+  "product_type": "",
+  "roaster_slug": "cafeciteaux",
+  "tags": [],
+  "title": "Brazil - Whole Bean Coffee",
+  "url": "https://cafeciteaux.com/products/brazil-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz",
+    "variant_id": "46177487093939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lb",
+    "variant_id": "46177487126707"
+   }
+  ],
+  "vendor": "Cafeciteaux"
+ }
+]

@@ -1,0 +1,1052 @@
+[
+ {
+  "body_hash": "41b676bde5533352",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-single-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/Brazil_sidways.png?v=1777322137",
+  "platform": "shopify",
+  "product_id": "10084561191198",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Medium"
+  ],
+  "title": "Brazil - Fazenda Samambaia",
+  "url": "https://www.kamiakcoffeeco.com/products/brazil-single-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "51786857644318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "51786857677086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium (Drip - Pour Over) / Medium",
+    "variant_id": "51786857709854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "51786857742622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "51786857775390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium",
+    "variant_id": "51786857808158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Coarse (French Press) / Medium",
+    "variant_id": "51786857840926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Fine (Espresso) / Medium",
+    "variant_id": "51786857873694"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "43f249a5f04d568e",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-aa-amcos",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/NewOnlinephotoTemplate.png?v=1777326667",
+  "platform": "shopify",
+  "product_id": "10084619976990",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Light"
+  ],
+  "title": "Tanzania AA - AMCOS",
+  "url": "https://www.kamiakcoffeeco.com/products/tanzania-aa-amcos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean / Light",
+    "variant_id": "51787161207070"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lbs / Whole Bean / Light",
+    "variant_id": "51787161239838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse (French Press) / Light",
+    "variant_id": "51787161272606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lbs / Coarse (French Press) / Light",
+    "variant_id": "51787161305374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium (Drip - Pour Over) / Light",
+    "variant_id": "51787161338142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Light",
+    "variant_id": "51787161370910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine (Espresso) / Light",
+    "variant_id": "51787161403678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5lbs / Fine (Espresso) / Light",
+    "variant_id": "51787161436446"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "3387a69813c19f1a",
+  "first_seen": "2026-10-26",
+  "handle": "the-lassen",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/Lassen_Side.png?v=1758579673",
+  "platform": "shopify",
+  "product_id": "1618092916793",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Cold Brew",
+   "French Press",
+   "Medium"
+  ],
+  "title": "The Lassen",
+  "url": "https://www.kamiakcoffeeco.com/products/the-lassen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "15856468394041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "15856468426809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Medium",
+    "variant_id": "15856468459577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "15856468492345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "15856468525113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press) / Medium",
+    "variant_id": "15856468557881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium",
+    "variant_id": "15856468590649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso) / Medium",
+    "variant_id": "15856468623417"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "200a425d744ded88",
+  "first_seen": "2026-10-26",
+  "handle": "the-cascade",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/Cascade_Side.png?v=1758580009",
+  "platform": "shopify",
+  "product_id": "1968682270777",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Cold Brew",
+   "Espresso",
+   "Medium Dark"
+  ],
+  "title": "The Cascade",
+  "url": "https://www.kamiakcoffeeco.com/products/the-cascade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean / Medium - Dark",
+    "variant_id": "18525730177081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse (French Press) / Medium - Dark",
+    "variant_id": "18525730209849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "18525730242617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine (Espresso) / Medium - Dark",
+    "variant_id": "18525730275385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean / Medium - Dark",
+    "variant_id": "18525730308153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Coarse (French Press) / Medium - Dark",
+    "variant_id": "18525730340921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "18525730373689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Fine (Espresso) / Medium - Dark",
+    "variant_id": "18525730406457"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "23ce3c726732e79b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/Eth_side.png?v=1765391397",
+  "platform": "shopify",
+  "product_id": "1968740761657",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "French Press",
+   "Medium Light"
+  ],
+  "title": "Ethiopia - Natural Guji",
+  "url": "https://www.kamiakcoffeeco.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Whole Bean / Medium - Light",
+    "variant_id": "18525796139065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Whole Bean / Medium - Light",
+    "variant_id": "18525796171833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Coarse (French Press) / Medium - Light",
+    "variant_id": "18525796204601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Coarse (French Press) / Medium - Light",
+    "variant_id": "18525796237369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Medium - Light",
+    "variant_id": "18525796270137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium - Light",
+    "variant_id": "18525796302905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12oz / Fine (Espresso) / Medium - Light",
+    "variant_id": "18525796335673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Fine (Espresso) / Medium - Light",
+    "variant_id": "18525796368441"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "9edf66af5b6ff9bd",
+  "first_seen": "2026-10-26",
+  "handle": "crater-lake-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/CL_SIDE.png?v=1765820226",
+  "platform": "shopify",
+  "product_id": "2291901169721",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Medium Dark"
+  ],
+  "title": "Crater Lake Decaf",
+  "url": "https://www.kamiakcoffeeco.com/products/crater-lake-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Bean / Medium - Dark",
+    "variant_id": "31310907703365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Coarse (French Press) / Medium - Dark",
+    "variant_id": "31310907736133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "31310907768901"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Fine (Espresso) / Medium - Dark",
+    "variant_id": "31310907801669"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5LBS / Whole Bean / Medium - Dark",
+    "variant_id": "31310907834437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5LBS / Coarse (French Press) / Medium - Dark",
+    "variant_id": "31310907867205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5LBS / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "31310907899973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5LBS / Fine (Espresso) / Medium - Dark",
+    "variant_id": "31310907932741"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "649d38480ba5fc4f",
+  "first_seen": "2026-10-26",
+  "handle": "the-grand-teton",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/GT_Side.png?v=1758578882",
+  "platform": "shopify",
+  "product_id": "4345408127045",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Dark"
+  ],
+  "title": "The Grand Teton",
+  "url": "https://www.kamiakcoffeeco.com/products/the-grand-teton",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "31155007914053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Coarse (French Press) / Dark",
+    "variant_id": "31155007946821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "31155007979589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz / Fine (Espresso) / Dark",
+    "variant_id": "31155008012357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "31155008045125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Coarse (French Press) / Dark",
+    "variant_id": "31155008077893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "31155008110661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Fine (Espresso) / Dark",
+    "variant_id": "31155008143429"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "2c4cfdbca9bc1a4f",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/ezgif_0b42c7f4-6c6a-4fc2-aee6-5e6478f018fd.gif?v=1606339035",
+  "platform": "shopify",
+  "product_id": "4347106656325",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://www.kamiakcoffeeco.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31164118335557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Coarse (French Press)",
+    "variant_id": "31164118368325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Medium (Drip - Pour Over)",
+    "variant_id": "31164118401093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "31164118433861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "31164118466629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press)",
+    "variant_id": "31164118499397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over)",
+    "variant_id": "31164118532165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso)",
+    "variant_id": "31164118564933"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "6fad0583797d105b",
+  "first_seen": "2026-10-26",
+  "handle": "discover-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/DISCOVER-01_14e0d250-06bf-4f2a-ba16-babe81142885.png?v=1614108728",
+  "platform": "shopify",
+  "product_id": "4348876521541",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [],
+  "title": "Discover Sample Pack - Ships Free",
+  "url": "https://www.kamiakcoffeeco.com/products/discover-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "31172691525701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Coarse (French Press)",
+    "variant_id": "31172691558469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Medium (Drip - Pour Over)",
+    "variant_id": "31172691591237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Fine (Espresso)",
+    "variant_id": "31172691624005"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "200a425d744ded88",
+  "first_seen": "2026-10-26",
+  "handle": "the-cascade-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/Cas5Side-01_0d57ff41-6e28-4ab2-acf7-9d647e998e51.png?v=1614360536",
+  "platform": "shopify",
+  "product_id": "4367028879429",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Cold Brew",
+   "Espresso",
+   "Medium Dark"
+  ],
+  "title": "The Cascade 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/the-cascade-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean / Medium - Dark",
+    "variant_id": "31276202852421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Coarse (French Press) / Medium - Dark",
+    "variant_id": "31276202885189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "31276202917957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Fine (Espresso) / Medium - Dark",
+    "variant_id": "31276202950725"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "649d38480ba5fc4f",
+  "first_seen": "2026-10-26",
+  "handle": "the-grand-teton-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/GT5Side-01_89132074-6046-4549-9bf2-3742f3668ae3.png?v=1614360861",
+  "platform": "shopify",
+  "product_id": "4367029174341",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Dark"
+  ],
+  "title": "The Grand Teton 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/the-grand-teton-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "31276213076037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Coarse (French Press) / Dark",
+    "variant_id": "31276213108805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "31276213141573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.95,
+    "title": "5lbs / Fine (Espresso) / Dark",
+    "variant_id": "31276213174341"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "ac2575c53147944f",
+  "first_seen": "2026-10-26",
+  "handle": "the-lassen-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/Las5Side-01_f88c13ea-9669-4831-bd4f-4b89b638e5e4.png?v=1614360959",
+  "platform": "shopify",
+  "product_id": "4367029305413",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Cold Brew",
+   "French Press",
+   "Medium"
+  ],
+  "title": "The Lassen 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/the-lassen-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "31276216614981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press) / Medium",
+    "variant_id": "31276216647749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium",
+    "variant_id": "31276216680517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso) / Medium",
+    "variant_id": "31276216713285"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "bfd544ec43d38def",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/Webp_d445b8e2-0152-44d7-8a29-fcd58b8a74b9.gif?v=1606339041",
+  "platform": "shopify",
+  "product_id": "4367031730245",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [],
+  "title": "Roaster's Choice 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/roasters-choice-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "31276275630149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press)",
+    "variant_id": "31276275662917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over)",
+    "variant_id": "31276275695685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso)",
+    "variant_id": "31276275728453"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "d493c1a9af02a137",
+  "first_seen": "2026-10-26",
+  "handle": "crater-lake-decaf-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/CL5Side-01_3606e03c-0c63-41f2-af3b-0549ac10d366.png?v=1614108650",
+  "platform": "shopify",
+  "product_id": "4374800597061",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Cold Brew",
+   "Espresso",
+   "Medium Dark"
+  ],
+  "title": "Crater Lake Decaf 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/crater-lake-decaf-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean / Medium - Dark",
+    "variant_id": "31309410533445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press) / Medium - Dark",
+    "variant_id": "31309410566213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium - Dark",
+    "variant_id": "31309410598981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso) / Medium - Dark",
+    "variant_id": "31309410631749"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "6d81470d675d625d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-5lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/Eth5Side-01_60e2a3c3-8e41-44c7-9799-87cef3285d84.png?v=1614108918",
+  "platform": "shopify",
+  "product_id": "4607415648325",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Aeropress",
+   "Medium Dark",
+   "Pour Over"
+  ],
+  "title": "Ethiopia - Natural Guji",
+  "url": "https://www.kamiakcoffeeco.com/products/ethiopia-guji-5lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Whole Bean / Medium - Light",
+    "variant_id": "31941419466821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Coarse (French Press) / Medium - Light",
+    "variant_id": "31941419499589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Medium - Light",
+    "variant_id": "31941419532357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lbs / Fine (Espresso) / Medium - Light",
+    "variant_id": "31941419565125"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "d2cd90b996a79f6b",
+  "first_seen": "2026-10-26",
+  "handle": "the-sawtooth-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/files/Sawtooth_Side.png?v=1758578152",
+  "platform": "shopify",
+  "product_id": "4659341885509",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Dark"
+  ],
+  "title": "The Sawtooth",
+  "url": "https://www.kamiakcoffeeco.com/products/the-sawtooth-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "32041794502725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Coarse (French Press) / Dark",
+    "variant_id": "32041794535493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "32041794568261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz / Fine (Espresso) / Dark",
+    "variant_id": "32041794601029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "32041794633797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press) / Dark",
+    "variant_id": "32041794666565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "32041794699333"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso) / Dark",
+    "variant_id": "32041794732101"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ },
+ {
+  "body_hash": "a0c7c610064bb163",
+  "first_seen": "2026-10-26",
+  "handle": "the-sawtooth-blend-5lbs-actual",
+  "image": "https://cdn.shopify.com/s/files/1/0082/6707/1545/products/BagSide5-01_bbe443cc-a7d4-4a0a-b022-6ec2161ba01d.png?v=1614361094",
+  "platform": "shopify",
+  "product_id": "4659342606405",
+  "product_type": "Coffee",
+  "roaster_slug": "kamiakcoffeeco",
+  "tags": [
+   "Batch Brew",
+   "Dark"
+  ],
+  "title": "The Sawtooth - 5LBS",
+  "url": "https://www.kamiakcoffeeco.com/products/the-sawtooth-blend-5lbs-actual",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "32041797222469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Coarse (French Press) / Dark",
+    "variant_id": "32041797255237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Medium (Drip - Pour Over) / Dark",
+    "variant_id": "32041797288005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lbs / Fine (Espresso) / Dark",
+    "variant_id": "32041797320773"
+   }
+  ],
+  "vendor": "Kamiak Coffee Company"
+ }
+]

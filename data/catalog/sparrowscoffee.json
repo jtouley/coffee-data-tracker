@@ -1,0 +1,599 @@
+[
+ {
+  "body_hash": "02409a932556c65c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/CoffeeForPeace.png?v=1742236069",
+  "platform": "shopify",
+  "product_id": "4494383218747",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [],
+  "title": "Coffee for Peace",
+  "url": "https://brewsparrows.com/products/colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "31898027360315"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "31898027393083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179488510152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179489001672"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "2a98e03197929b2e",
+  "first_seen": "2026-10-26",
+  "handle": "newsstand-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/NewsstandBlend.png?v=1740705943",
+  "platform": "shopify",
+  "product_id": "4494411431995",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [],
+  "title": "Newsstand Blend",
+  "url": "https://brewsparrows.com/products/newsstand-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "31898222035003"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "31898222100539"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179508990152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179509711048"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "c3ad9fb785b30089",
+  "first_seen": "2026-10-26",
+  "handle": "h-o-m-e-s-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/HomesBlend.png?v=1740705816",
+  "platform": "shopify",
+  "product_id": "4674638348347",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "HOMES",
+   "Nostalgia",
+   "coffee"
+  ],
+  "title": "H.O.M.E.S. Blend",
+  "url": "https://brewsparrows.com/products/h-o-m-e-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "32849829265467"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "32849829298235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179501748424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179502829768"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "5612ec6caa3218d0",
+  "first_seen": "2026-10-26",
+  "handle": "all-seasons-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/AllSeasonsBlend.png?v=1740705570",
+  "platform": "shopify",
+  "product_id": "4674656403515",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "All Seasons Blend",
+   "Harmony",
+   "coffee"
+  ],
+  "title": "All Seasons Blend",
+  "url": "https://brewsparrows.com/products/all-seasons-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "32849955848251"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "32849955881019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179477926088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179479007432"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "3d0a098031d2ad61",
+  "first_seen": "2026-10-26",
+  "handle": "dirty-bird",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/DirtyBird.png?v=1740705671",
+  "platform": "shopify",
+  "product_id": "4674668724283",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "Dirty Bird",
+   "Nostalgia",
+   "coffee"
+  ],
+  "title": "Dirty Bird",
+  "url": "https://brewsparrows.com/products/dirty-bird",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "32850023841851"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "32850023874619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179494932680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179495555272"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "9aa40ca282c0adb5",
+  "first_seen": "2026-10-26",
+  "handle": "joven-colombian-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/Colombia.png?v=1740706161",
+  "platform": "shopify",
+  "product_id": "5561441419431",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [],
+  "title": "Joven Colombia Cauca",
+  "url": "https://brewsparrows.com/products/joven-colombian-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "35467476304039"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "35467476336807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179506991304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179507351752"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "94387ab3b37956d5",
+  "first_seen": "2026-10-26",
+  "handle": "joven-burundi-turihamwe",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/Burundi.png?v=1740706251",
+  "platform": "shopify",
+  "product_id": "5561618497703",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [],
+  "title": "Joven Burundi Turihamwe",
+  "url": "https://brewsparrows.com/products/joven-burundi-turihamwe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 19.5,
+    "title": "Whole Bean",
+    "variant_id": "35467915919527"
+   },
+   {
+    "available": true,
+    "grams": 349,
+    "price_usd": 19.5,
+    "title": "Ground",
+    "variant_id": "35467915952295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179505352904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179505746120"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "652fb473e6f70cd4",
+  "first_seen": "2026-10-26",
+  "handle": "high-five-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/HighFiveBlend.png?v=1740705841",
+  "platform": "shopify",
+  "product_id": "6598848544968",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "High Five Blend",
+   "Nostalgia",
+   "Subscription",
+   "coffee"
+  ],
+  "title": "High Five Blend",
+  "url": "https://brewsparrows.com/products/high-five-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "39470137802952"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "39470137835720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43179504206024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43179504533704"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "a1db70367049eb88",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-kerinci-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/SumatraHoney.png?v=1740706426",
+  "platform": "shopify",
+  "product_id": "7519656083656",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "Adventure"
+  ],
+  "title": "Sumatra Kerinci Honey",
+  "url": "https://brewsparrows.com/products/sumatra-kerinci-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Whole Bean",
+    "variant_id": "42581724004552"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "Ground",
+    "variant_id": "42581724037320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "45018579337416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "45018579370184"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "5d92bb602f0ca1ba",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/DecafColombia_f123b501-3393-4cf4-b640-eec161e1a1d7.png?v=1740705269",
+  "platform": "shopify",
+  "product_id": "7790385430728",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [],
+  "title": "Decaf Colombia",
+  "url": "https://brewsparrows.com/products/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "43440665657544"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "43440665690312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "43440665723080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "43440665788616"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "70cb2b93e9a8a9e7",
+  "first_seen": "2026-10-26",
+  "handle": "early-bird-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/EarlyBirdEspressoBlend.png?v=1758136962",
+  "platform": "shopify",
+  "product_id": "8240340074696",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "Adventure"
+  ],
+  "title": "Early Bird Espresso Blend",
+  "url": "https://brewsparrows.com/products/early-bird-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "44765404299464"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "44765404332232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "44765404365000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "44765404397768"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "fa9b8390408c2c4f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/EthiopiaSukeQuto.png?v=1758138801",
+  "platform": "shopify",
+  "product_id": "8240340435144",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "Adventure"
+  ],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://brewsparrows.com/products/ethiopia-suke-quto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "Whole Bean",
+    "variant_id": "44765405151432"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "Ground",
+    "variant_id": "44765405184200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "44765405216968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "44765405249736"
+   }
+  ],
+  "vendor": "The Sparrows"
+ },
+ {
+  "body_hash": "5454fa5e216de5b2",
+  "first_seen": "2026-10-26",
+  "handle": "big-lake-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0288/8446/7771/files/BigLakeColdBrewBlend.png?v=1762447038",
+  "platform": "shopify",
+  "product_id": "8251796226248",
+  "product_type": "Coffee",
+  "roaster_slug": "sparrowscoffee",
+  "tags": [
+   "Harmony"
+  ],
+  "title": "Big Lake Cold Brew Blend",
+  "url": "https://brewsparrows.com/products/big-lake-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "44836958994632"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "44836959027400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.5,
+    "title": "2 lb. Whole Bean",
+    "variant_id": "44836959060168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.0,
+    "title": "5 lb. Whole Bean",
+    "variant_id": "44836959092936"
+   }
+  ],
+  "vendor": "The Sparrows"
+ }
+]

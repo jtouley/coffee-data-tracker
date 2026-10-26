@@ -1,0 +1,1090 @@
+[
+ {
+  "body_hash": "d7fbb97c415d4cb8",
+  "first_seen": "2026-10-26",
+  "handle": "happy-face-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/kribi-happy-face-5-lb-bag.png?v=1792642297",
+  "platform": "shopify",
+  "product_id": "15989251604766",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "5 lb",
+   "Single Origin"
+  ],
+  "title": "Happy Face | 5 lb Bag",
+  "url": "https://www.kribicoffee.com/products/happy-face-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Whole Bean",
+    "variant_id": "60331333026078"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "French Press (Coarsest)",
+    "variant_id": "60331333058846"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Home Brewer",
+    "variant_id": "60331333124382"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Flat Bottom",
+    "variant_id": "60331333157150"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Cone Filter",
+    "variant_id": "60331333189918"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "be2ad9d6c5ad7912",
+  "first_seen": "2026-10-26",
+  "handle": "calypso-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/kribi-calypso-5-lb-bag.png?v=1792642297",
+  "platform": "shopify",
+  "product_id": "15989498741022",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "5 lb",
+   "Single Origin"
+  ],
+  "title": "Calypso | 5 lb Bag",
+  "url": "https://www.kribicoffee.com/products/calypso-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Whole Bean",
+    "variant_id": "60331333386526"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "French Press (Coarsest)",
+    "variant_id": "60331333419294"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Home Brewer",
+    "variant_id": "60331333484830"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Flat Bottom",
+    "variant_id": "60331333517598"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Cone Filter",
+    "variant_id": "60331333550366"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "06fe2e62765ba13f",
+  "first_seen": "2026-10-26",
+  "handle": "new-relic-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/kribi-new-relic-5-lb-bag.png?v=1792642297",
+  "platform": "shopify",
+  "product_id": "15989498937630",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "5 lb",
+   "Single Origin"
+  ],
+  "title": "New Relic | 5 lb Bag",
+  "url": "https://www.kribicoffee.com/products/new-relic-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Whole Bean",
+    "variant_id": "60331333779742"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "French Press (Coarsest)",
+    "variant_id": "60331333812510"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Home Brewer",
+    "variant_id": "60331333878046"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Flat Bottom",
+    "variant_id": "60331333910814"
+   },
+   {
+    "available": true,
+    "grams": 2404,
+    "price_usd": 115.0,
+    "title": "Cone Filter",
+    "variant_id": "60331333943582"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "0fed5feceda8de08",
+  "first_seen": "2026-10-26",
+  "handle": "new-relic",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-new-relic-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006178763038",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "New Relic",
+  "url": "https://www.kribicoffee.com/products/new-relic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Whole Bean",
+    "variant_id": "47734712008990"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / French Press (Coarsest)",
+    "variant_id": "47734712041758"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Home Brewer",
+    "variant_id": "47734712107294"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Flat Bottom",
+    "variant_id": "47734712140062"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Cone Filter",
+    "variant_id": "47734712172830"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "47734712697118"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / French Press (Coarsest)",
+    "variant_id": "47734712762654"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Home Brewer",
+    "variant_id": "47734712893726"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Flat Bottom",
+    "variant_id": "47734712926494"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Cone Filter",
+    "variant_id": "47734712959262"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47734713385246"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47734713450782"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47734713549086"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47734713614622"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47734713680158"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "f4a1f7831cb54e97",
+  "first_seen": "2026-10-26",
+  "handle": "happy-face",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-happy-face-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006184366366",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Happy Face",
+  "url": "https://www.kribicoffee.com/products/happy-face",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Whole Bean",
+    "variant_id": "47734747037982"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / French Press (Coarsest)",
+    "variant_id": "47734747070750"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Home Brewer",
+    "variant_id": "47734747136286"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Flat Bottom",
+    "variant_id": "47734747169054"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Cone Filter",
+    "variant_id": "47734747201822"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Whole Bean",
+    "variant_id": "47734747529502"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / French Press (Coarsest)",
+    "variant_id": "47734747562270"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Home Brewer",
+    "variant_id": "47734747627806"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Flat Bottom",
+    "variant_id": "47734747660574"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Cone Filter",
+    "variant_id": "47734747693342"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47734747988254"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47734748021022"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47734748086558"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47734748119326"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47734748152094"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "5357021b6186ff18",
+  "first_seen": "2026-10-26",
+  "handle": "40-winks-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-40-winks-decaf-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006189150494",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "40 Winks Decaf",
+  "url": "https://www.kribicoffee.com/products/40-winks-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Whole Bean",
+    "variant_id": "47734780461342"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / French Press (Coarsest)",
+    "variant_id": "47734780494110"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Home Brewer",
+    "variant_id": "47734780559646"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Flat Bottom",
+    "variant_id": "47734780592414"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Cone Filter",
+    "variant_id": "47734780625182"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Whole Bean",
+    "variant_id": "47734780920094"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / French Press (Coarsest)",
+    "variant_id": "47734780952862"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Home Brewer",
+    "variant_id": "47734781018398"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Flat Bottom",
+    "variant_id": "47734781051166"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Cone Filter",
+    "variant_id": "47734781083934"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47734781378846"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47734781411614"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47734781477150"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47734781509918"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47734781542686"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "f10b8b526945bd94",
+  "first_seen": "2026-10-26",
+  "handle": "funky-fauna",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-funky-fauna-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006200062238",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Funky Fauna",
+  "url": "https://www.kribicoffee.com/products/funky-fauna",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Whole Bean",
+    "variant_id": "47734873456926"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / French Press (Coarsest)",
+    "variant_id": "47734873489694"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Home Brewer",
+    "variant_id": "47734873555230"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Flat Bottom",
+    "variant_id": "47734873587998"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Cone Filter",
+    "variant_id": "47734873620766"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "47734873981214"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / French Press (Coarsest)",
+    "variant_id": "47734874013982"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Home Brewer",
+    "variant_id": "47734874079518"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Flat Bottom",
+    "variant_id": "47734874112286"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Cone Filter",
+    "variant_id": "47734874145054"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark (recommended) / Whole Bean",
+    "variant_id": "47734874505502"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark (recommended) / French Press (Coarsest)",
+    "variant_id": "47734874538270"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark (recommended) / Home Brewer",
+    "variant_id": "47734874603806"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark (recommended) / Flat Bottom",
+    "variant_id": "47734874636574"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark (recommended) / Cone Filter",
+    "variant_id": "47734874669342"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "aeb967179c2ecf66",
+  "first_seen": "2026-10-26",
+  "handle": "calypso",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-calypso-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006201798942",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Best seller",
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Calypso",
+  "url": "https://www.kribicoffee.com/products/calypso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Whole Bean",
+    "variant_id": "47734892921118"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / French Press (Coarsest)",
+    "variant_id": "47734892953886"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Home Brewer",
+    "variant_id": "47734893019422"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Flat Bottom",
+    "variant_id": "47734893052190"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light / Cone Filter",
+    "variant_id": "47734893084958"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Whole Bean",
+    "variant_id": "47734893379870"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / French Press (Coarsest)",
+    "variant_id": "47734893412638"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Home Brewer",
+    "variant_id": "47734893478174"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Flat Bottom",
+    "variant_id": "47734893510942"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium (recommended) / Cone Filter",
+    "variant_id": "47734893543710"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47734894035230"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47734894067998"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47734894133534"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47734894166302"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47734894199070"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "c88c6f3722fdd7ae",
+  "first_seen": "2026-10-26",
+  "handle": "lilac-roller",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-lilac-roller-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006209696030",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Single Origin",
+   "Staff pick",
+   "Subscriptions"
+  ],
+  "title": "Lilac Roller",
+  "url": "https://www.kribicoffee.com/products/lilac-roller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Whole Bean",
+    "variant_id": "47734948888862"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / French Press (Coarsest)",
+    "variant_id": "47734948921630"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Home Brewer",
+    "variant_id": "47734948987166"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Flat Bottom",
+    "variant_id": "47734949019934"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Cone Filter",
+    "variant_id": "47734949052702"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "47734949347614"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / French Press (Coarsest)",
+    "variant_id": "47734949380382"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Home Brewer",
+    "variant_id": "47734949445918"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Flat Bottom",
+    "variant_id": "47734949478686"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Cone Filter",
+    "variant_id": "47734949511454"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47734949806366"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47734949839134"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47734949904670"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47734949937438"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47734949970206"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "72462695f7a57320",
+  "first_seen": "2026-10-26",
+  "handle": "hyperslap-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-hyperslap-dark-roast-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9006211596574",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Best seller",
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Hyperslap",
+  "url": "https://www.kribicoffee.com/products/hyperslap-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47734969401630"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "French Press (Coarsest)",
+    "variant_id": "47734969434398"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Home Brewer",
+    "variant_id": "47734969499934"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Flat Bottom",
+    "variant_id": "47734969532702"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Cone Filter",
+    "variant_id": "47734969565470"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ },
+ {
+  "body_hash": "ad032f8b3f26b16b",
+  "first_seen": "2026-10-26",
+  "handle": "mount-oku",
+  "image": "https://cdn.shopify.com/s/files/1/0841/3973/7374/files/coffee-bag-mount-oku-light-roast-orange-backdrop.jpg?v=1792606138",
+  "platform": "shopify",
+  "product_id": "9034154475806",
+  "product_type": "",
+  "roaster_slug": "kribicoffee",
+  "tags": [
+   "Most popular",
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Mount Oku",
+  "url": "https://www.kribicoffee.com/products/mount-oku",
+  "variants": [
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Whole Bean",
+    "variant_id": "47816989376798"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / French Press (Coarsest)",
+    "variant_id": "47816989409566"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Home Brewer",
+    "variant_id": "47816989475102"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Flat Bottom",
+    "variant_id": "47816989507870"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Light (recommended) / Cone Filter",
+    "variant_id": "47816989540638"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "47816989835550"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / French Press (Coarsest)",
+    "variant_id": "47816989868318"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Home Brewer",
+    "variant_id": "47816989933854"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Flat Bottom",
+    "variant_id": "47816989966622"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Medium / Cone Filter",
+    "variant_id": "47816989999390"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "47816990294302"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / French Press (Coarsest)",
+    "variant_id": "47816990327070"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Home Brewer",
+    "variant_id": "47816990392606"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Flat Bottom",
+    "variant_id": "47816990425374"
+   },
+   {
+    "available": true,
+    "grams": 346,
+    "price_usd": 20.0,
+    "title": "Dark / Cone Filter",
+    "variant_id": "47816990458142"
+   }
+  ],
+  "vendor": "Kribi Coffee Co."
+ }
+]

@@ -1,0 +1,4272 @@
+[
+ {
+  "body_hash": "852f7d71f51f8320",
+  "first_seen": "2026-10-26",
+  "handle": "low-strung",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Decaf_10OZ_Standard.jpg?v=1765766640",
+  "platform": "shopify",
+  "product_id": "10506053446",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Nutty And Chocolate",
+   "Various",
+   "background:triangles",
+   "bean:Decaf Colombia",
+   "color:blue",
+   "elevation: 1900 masl",
+   "origin: Kilenso Moconiss - Sidama",
+   "process:Natural / Hand-Sorted / Dried on raised beds",
+   "related:connection",
+   "related:pick-me-up",
+   "related:take-me-home",
+   "roast-profile:Light",
+   "variety: Heirloom"
+  ],
+  "title": "Low Strung - Medium Decaf",
+  "url": "https://greatergoodsroasting.com/products/low-strung",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699312899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117155774723"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / French press",
+    "variant_id": "44117155807491"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117155840259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117155873027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117155905795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117155938563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117155971331"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117156004099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117156036867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / French press",
+    "variant_id": "44117156069635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117156102403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117156135171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117156167939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117156200707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117156233475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117156266243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117156299011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / French press",
+    "variant_id": "44117156331779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117156364547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117156397315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117156462851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117156495619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117156528387"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460523020547"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "32dc53d1cd6dddef",
+  "first_seen": "2026-10-26",
+  "handle": "intro-to-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Your_paragraph_text-3.png?v=1793033482",
+  "platform": "shopify",
+  "product_id": "216484872198",
+  "product_type": "Classes",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Classes",
+   "class",
+   "espresso",
+   "home barista",
+   "home espresso",
+   "in-person",
+   "on campus"
+  ],
+  "title": "Intro to Espresso",
+  "url": "https://greatergoodsroasting.com/products/intro-to-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 237.5,
+    "title": "Couple (Max 2)",
+    "variant_id": "12340738064461"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "Individual",
+    "variant_id": "1252711432198"
+   }
+  ],
+  "vendor": "Greater Goods Roasting"
+ },
+ {
+  "body_hash": "92ef7cf2cb31660b",
+  "first_seen": "2026-10-26",
+  "handle": "a-m-rescue",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/AMR_10OZ_Standard.jpg?v=1765766168",
+  "platform": "shopify",
+  "product_id": "2254492035",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Brazil",
+   "Costa Rica",
+   "Nutty And Chocolate",
+   "background:stripes",
+   "bean:Breakfast Blend",
+   "color:orange",
+   "elevation:1600 - 1800 masl",
+   "origin:Costa Rica / Guatemala",
+   "process:Honeyed/Washed",
+   "related:life-saver",
+   "related:spark",
+   "related:take-me-home",
+   "roast-profile:Light-Medium",
+   "variety:Catuai/Caturra/Bourbon"
+  ],
+  "title": "A.M. Rescue - Medium light Breakfast Blend",
+  "url": "https://greatergoodsroasting.com/products/a-m-rescue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700656387"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117023949059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117023981827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117024014595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117024047363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117024080131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117024112899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117024145667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117024178435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117024211203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117024243971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117024276739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117024309507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117024342275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117024375043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117024407811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117024440579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117024473347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117024506115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117024538883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117024571651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117024604419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117024637187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117024669955"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460467511555"
+   }
+  ],
+  "vendor": "Austin Pets Alive"
+ },
+ {
+  "body_hash": "d23f52eea5eae6cc",
+  "first_seen": "2026-10-26",
+  "handle": "pick-me-up",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Pick-Me-Up_10OZ_Standard.png?v=1765766726",
+  "platform": "shopify",
+  "product_id": "2254591107",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Colombia",
+   "Fruity And Floral",
+   "Nutty And Chocolate",
+   "background:zigzag",
+   "bean:House Blend",
+   "color:orange",
+   "elevation:1690 - 2000 masl",
+   "origin:Africa and Central America",
+   "process:Washed",
+   "related:a-m-rescue",
+   "related:kickstart",
+   "related:rise-shine",
+   "roast-profile:Medium",
+   "variety:Various"
+  ],
+  "title": "Pick-Me-Up -  Medium Roast House Blend",
+  "url": "https://greatergoodsroasting.com/products/pick-me-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700558083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117047574787"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117047607555"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117047640323"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117047673091"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117047705859"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117047738627"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117047771395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117047804163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117047836931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117047869699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117047902467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117047935235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117047968003"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117048000771"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117048033539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117048066307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117048099075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117048131843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117048164611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117048197379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117048230147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117048262915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117048295683"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460536258819"
+   }
+  ],
+  "vendor": "Central Texas Food Bank"
+ },
+ {
+  "body_hash": "c1a4dc6243c0c255",
+  "first_seen": "2026-10-26",
+  "handle": "stimulate",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Stimulate_10OZ_Standard.jpg?v=1765766941",
+  "platform": "shopify",
+  "product_id": "2254603523",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Classic Dark",
+   "Colombia",
+   "Ethiopia",
+   "Nutty And Chocolate",
+   "Peru",
+   "background:stripes",
+   "bean:Espresso Blend",
+   "color:purple",
+   "elevation:1690 - 2000 masl",
+   "origin:Guatemala and Ethiopia",
+   "process:Washed",
+   "related:kickstart",
+   "related:life-saver",
+   "related:spark",
+   "roast-profile:Medium",
+   "variety:Various"
+  ],
+  "title": "Stimulate - Modern Dark Blend",
+  "url": "https://greatergoodsroasting.com/products/stimulate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700394243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117113012483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117113045251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117113078019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117113110787"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117113143555"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117113176323"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117113209091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117113241859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117113274627"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117113307395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117113340163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117113372931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117113405699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117113438467"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117113471235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117113504003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117113536771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117113569539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117113602307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117113635075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117113667843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117113700611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117113733379"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46722187034883"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "5a74cdd71c65942e",
+  "first_seen": "2026-10-26",
+  "handle": "connection",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Connection_10OZ_Standard.jpg?v=1765766309",
+  "platform": "shopify",
+  "product_id": "2254611075",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Brazil",
+   "Colombia",
+   "Nutty And Chocolate",
+   "background:waves",
+   "bean:Cold Brew Blend",
+   "color:light-green",
+   "elevation:1150 - 1800 masl",
+   "origin:Brazil / Colombia",
+   "process:Various",
+   "related:fresh-perspective",
+   "related:kickstart",
+   "related:life-saver",
+   "roast-profile:Medium",
+   "variety:Various"
+  ],
+  "title": "Connection - Medium Dark Cold Brew Blend",
+  "url": "https://greatergoodsroasting.com/products/connection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700328707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117139030275"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117139063043"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117139095811"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117139128579"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117139161347"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44117139194115"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117139226883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117139259651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117139292419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117139325187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117139357955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117139390723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117139423491"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "44117139456259"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117139489027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117139521795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117139554563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117139587331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117139620099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117139652867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117139685635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "44117139718403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117139751171"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460491661571"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "b2b66cf6f45b872c",
+  "first_seen": "2026-10-26",
+  "handle": "bright-minds",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Bright-Minds_10OZ_Standard.png?v=1765766210",
+  "platform": "shopify",
+  "product_id": "2255071107",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Fruity And Floral",
+   "Huila",
+   "color:light-blue",
+   "elevation:1300-2100m",
+   "origin:Colombia",
+   "process:Fully washed / Sun Dried",
+   "related:fresh-perspective",
+   "related:pick-me-up",
+   "related:take-me-home",
+   "roast-profile:Medium",
+   "variety:Castillo / Caturra / Colombia"
+  ],
+  "title": "Bright Minds - Medium Colombia",
+  "url": "https://greatergoodsroasting.com/products/bright-minds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700066563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44116932100355"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44116932133123"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44116932165891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44116932198659"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44116932231427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44116932264195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44116932296963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44116932329731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44116932362499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44116932395267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44116932428035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "44116932460803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44116932493571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44116932526339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44116932559107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44116932591875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44116932624643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44116932657411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44116932690179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "44116932722947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44116932755715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44116932788483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44116932821251"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460543926531"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "2efe874163598c05",
+  "first_seen": "2026-10-26",
+  "handle": "take-me-home",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/TMH_10OZ_Standard.jpg?v=1765766998",
+  "platform": "shopify",
+  "product_id": "2255152899",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Nutty And Chocolate",
+   "Tarrazú",
+   "background:zigzag",
+   "bean:Costa Rica",
+   "color:blue",
+   "elevation:1900 - 2000 meters",
+   "origin:Costa Rica",
+   "process:White Honeyed and Sun Dried",
+   "related:a-m-rescue",
+   "related:costa-rica-herbazu",
+   "related:life-saver",
+   "roast-profile:Light - Medium",
+   "variety:Red Cataui"
+  ],
+  "title": "Take Me Home - Light Roast Costa Rica",
+  "url": "https://greatergoodsroasting.com/products/take-me-home",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111700001027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44116864205059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44116864237827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44116864270595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44116864303363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44116864336131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44116864368899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44116864401667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44116864434435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44116864467203"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44116864499971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44116864532739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44116864565507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44116864598275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44116864631043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44116864663811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44116864696579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44116864729347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44116864762115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44116864794883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44116864827651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44116864860419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44116864893187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44116864925955"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460487401731"
+   }
+  ],
+  "vendor": "Austin Pets Alive"
+ },
+ {
+  "body_hash": "20f49fd96a7db8b9",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-perspective",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Fresh-P_10OZ_Standard_e99da6e7-c4ca-45de-be1b-9b8c06357d1d.png?v=1765766356",
+  "platform": "shopify",
+  "product_id": "2255169219",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Fruity And Floral",
+   "Guji",
+   "background:triangles",
+   "bean:Ethiopia",
+   "color:blue",
+   "elevation: 1900 masl",
+   "process:Natural / Hand-Sorted / Dried on raised beds",
+   "related:ethiopia-roba",
+   "related:kenya-nyeri-hill",
+   "related:yemen-haraaz",
+   "roast-profile:Light",
+   "variety: Heirloom"
+  ],
+  "title": "Fresh Perspective - Light Ethiopia",
+  "url": "https://greatergoodsroasting.com/products/fresh-perspective",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699935491"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44116961231107"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44116961263875"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44116961296643"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44116961329411"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44116961362179"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44116961394947"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44116961427715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44116961460483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44116961493251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44116961526019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44116961558787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44116961591555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44116961624323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44116961657091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44116961689859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44116961722627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44116961755395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44116961788163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44116961820931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44116961853699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44116961886467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44116961919235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44116961952003"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460514107651"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "49d2a37e4b834fbe",
+  "first_seen": "2026-10-26",
+  "handle": "rise-shine",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Rise-_-Shine_10OZ_Standard.png?v=1765766803",
+  "platform": "shopify",
+  "product_id": "2255210691",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Classic Dark",
+   "Colombia",
+   "Peru",
+   "background:zigzag",
+   "bean:Colombia",
+   "color:red",
+   "elevation:1200 - 1600 Meters",
+   "origin:Colombia",
+   "process:Washed",
+   "related:a-m-rescue",
+   "related:pick-me-up",
+   "related:stimulate",
+   "roast-profile:Dark",
+   "variety:Bourbon / Typica / Catimor in Volcanic Loam"
+  ],
+  "title": "Rise & Shine - Dark and Bold Blend",
+  "url": "https://greatergoodsroasting.com/products/rise-shine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699804419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117127168259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117127201027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117127233795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117127266563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117127299331"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117127332099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117127364867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117127397635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117127430403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117127463171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117127495939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117127528707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117127561475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117127594243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117127627011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117127659779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117127692547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117127725315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117127758083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117127790851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117127823619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117127856387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117127889155"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460540387587"
+   }
+  ],
+  "vendor": "Central Texas Food Bank"
+ },
+ {
+  "body_hash": "494cc65400a19aa3",
+  "first_seen": "2026-10-26",
+  "handle": "spark",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Spark2026-10OZ_Standard_1.jpg?v=1782328868",
+  "platform": "shopify",
+  "product_id": "4098034438",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Chiapas",
+   "Nutty And Chocolate",
+   "background:waves",
+   "bean:Mexico",
+   "color:green",
+   "elevation:900 - 1800 masl",
+   "origin:Mexico",
+   "process:Fully washed / Sun Dried",
+   "related:brazil-fadenza-rainha",
+   "related:kickstart",
+   "related:stimulate",
+   "roast-profile:Medium",
+   "variety:Caturra / Bourbon / Typica"
+  ],
+  "title": "Spark - Mexico",
+  "url": "https://greatergoodsroasting.com/products/spark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699738883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44116911882499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44116911915267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44116911948035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44116911980803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44116912013571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44116912046339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44116912079107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44116912111875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44116912144643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44116912177411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44116912210179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44116912242947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44116912275715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "44116912308483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44116912341251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44116912374019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44116912406787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44116912439555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44116912472323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44116912505091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44116912537859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "44116912570627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44116912603395"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460553691395"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "41c0a4bb5b44a6b7",
+  "first_seen": "2026-10-26",
+  "handle": "kickstart",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Kickstart_10OZ_Standard.jpg?v=1765766585",
+  "platform": "shopify",
+  "product_id": "4098036102",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Brazil",
+   "Nutty And Chocolate",
+   "background:waves",
+   "bean:Espresso Blend",
+   "color:orange",
+   "elevation:900 - 1800 masl",
+   "origin:Mexico / Guatemala / Sumatra",
+   "process:Various",
+   "related:rise-shine",
+   "related:spark",
+   "related:stimulate",
+   "roast-profile:Medium - Dark",
+   "variety:Various"
+  ],
+  "title": "Kickstart - Medium Dark Espresso Blend",
+  "url": "https://greatergoodsroasting.com/products/kickstart",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699673347"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44117096202499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44117096235267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44117096268035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44117096300803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44117096333571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso Grind",
+    "variant_id": "44117096366339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44117096399107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44117096431875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44117096464643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44117096497411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44117096530179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44117096562947"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44117096595715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso Grind",
+    "variant_id": "44117096628483"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44117096661251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44117096694019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44117096726787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44117096759555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44117096792323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44117096825091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44117096857859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Espresso Grind",
+    "variant_id": "44117096890627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44117096923395"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46460531933443"
+   }
+  ],
+  "vendor": "Central Texas Food Bank"
+ },
+ {
+  "body_hash": "9aef7bff8710bd4d",
+  "first_seen": "2026-10-26",
+  "handle": "good-vibes",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Good-Vibes_10OZ_Standard.png?v=1765766437",
+  "platform": "shopify",
+  "product_id": "6030551110",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Bottomless",
+   "Classic Dark",
+   "Minas Gerais",
+   "Nutty And Chocolate",
+   "bean:Brazil",
+   "color:orange",
+   "elevation:1350 Meters",
+   "origin:Brazil",
+   "process:Natural",
+   "related:kickstart",
+   "related:rise-shine",
+   "related:spark",
+   "roast-profile:Dark",
+   "variety:Yellow Bourbon"
+  ],
+  "title": "Good Vibes - Medium Dark Brazil",
+  "url": "https://greatergoodsroasting.com/products/good-vibes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111699411203"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44116983873795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44116983906563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44116983939331"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44116983972099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44116984004867"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44116984037635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44116984070403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44116984103171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Drip",
+    "variant_id": "44116984135939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / French Press",
+    "variant_id": "44116984168707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cone",
+    "variant_id": "44116984201475"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Chemex",
+    "variant_id": "44116984234243"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "44116984267011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Aeropress",
+    "variant_id": "44116984299779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 LB / Cold Brew",
+    "variant_id": "44116984332547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44116984365315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Drip",
+    "variant_id": "44116984398083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / French Press",
+    "variant_id": "44116984430851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cone",
+    "variant_id": "44116984463619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Chemex",
+    "variant_id": "44116984496387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "44116984529155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Aeropress",
+    "variant_id": "44116984561923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / Cold Brew",
+    "variant_id": "44116984594691"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46502662340867"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "fec8b3bbdb75d59f",
+  "first_seen": "2026-10-26",
+  "handle": "kolla-bolcha-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Kolla-BolchaLTO_Standard_1_5e93b47f-18e3-41d3-ad24-a3f343f9c904.jpg?v=1769470046",
+  "platform": "shopify",
+  "product_id": "6588694364237",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Fruity And Floral",
+   "bean:LTO Ethiopia",
+   "color:light-purple",
+   "elevation:2000+ meters",
+   "process:Washed / Dried on raised beds",
+   "related:fresh-perspective",
+   "related:stimulate",
+   "roast-profile:Light",
+   "variety:Heirloom"
+  ],
+  "title": "Kolla Bolcha - Light Ethiopia",
+  "url": "https://greatergoodsroasting.com/products/kolla-bolcha-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44111696331011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44207772107011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44207772139779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44207772172547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44207772205315"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44207772238083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44207772270851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44207772303619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44207772336387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / French Press",
+    "variant_id": "44207772369155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "44207772401923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "44207772434691"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "44207772467459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Cone",
+    "variant_id": "44207772500227"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Drip",
+    "variant_id": "44207772532995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "44207772565763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44207772598531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / French Press",
+    "variant_id": "44207772631299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "44207772664067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "44207772696835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "44207772729603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Cone",
+    "variant_id": "44207772762371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Drip",
+    "variant_id": "44207772795139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "44207772827907"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "47344797188355"
+   }
+  ],
+  "vendor": "Austin Pets Alive"
+ },
+ {
+  "body_hash": "89b67041088d3fd3",
+  "first_seen": "2026-10-26",
+  "handle": "santa-rosa-1900-ethiopia-47",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/SR-1900_LTO_Standard.jpg?v=1766022464",
+  "platform": "shopify",
+  "product_id": "8148046414083",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Fruity And Floral",
+   "Tarrazú",
+   "bean:LTO Ethiopia",
+   "color:light-purple",
+   "elevation:2000+ meters",
+   "process:Washed / Dried on raised beds",
+   "related:fresh-perspective",
+   "related:stimulate",
+   "roast-profile:Light",
+   "variety:Heirloom"
+  ],
+  "title": "Santa Rosa 1900 - Light Costa Rica",
+  "url": "https://greatergoodsroasting.com/products/santa-rosa-1900-ethiopia-47",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "44232750399747"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / French Press",
+    "variant_id": "44232750432515"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "44232750465283"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "44232750498051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "44232750530819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Cone",
+    "variant_id": "44232750563587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Drip",
+    "variant_id": "44232750596355"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "44232750629123"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46268674212099"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46268674244867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "46268674277635"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "46268674310403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46268674343171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Cone",
+    "variant_id": "46268674375939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Drip",
+    "variant_id": "46268674408707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46268674441475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46268674474243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46268674507011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "46268674539779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "46268674572547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46268674605315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Cone",
+    "variant_id": "46268674638083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Drip",
+    "variant_id": "46268674670851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46268674703619"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46502794625283"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "bfed49fb0593c24b",
+  "first_seen": "2026-10-26",
+  "handle": "intermediate-espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Your_paragraph_text-3.png?v=1793033482",
+  "platform": "shopify",
+  "product_id": "8243827212547",
+  "product_type": "Classes",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Classes",
+   "class",
+   "espresso",
+   "home barista",
+   "home espresso",
+   "in-person",
+   "on campus"
+  ],
+  "title": "Intermediate Espresso",
+  "url": "https://greatergoodsroasting.com/products/intermediate-espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 175.0,
+    "title": "Single",
+    "variant_id": "44490382967043"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 330.0,
+    "title": "Couple (2)",
+    "variant_id": "48033221574915"
+   }
+  ],
+  "vendor": "Greater Goods Roasting"
+ },
+ {
+  "body_hash": "b519aa8b414af119",
+  "first_seen": "2026-10-26",
+  "handle": "virtual-cupping-1",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/GG-VirtualCupping-1.jpg?v=1711473159",
+  "platform": "shopify",
+  "product_id": "8358734790915",
+  "product_type": "Classes",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Classes",
+   "Cupping",
+   "Events",
+   "Tasting",
+   "Virtual",
+   "Virtual events",
+   "Zoom",
+   "virtual coffee class"
+  ],
+  "title": "Virtual Cupping",
+  "url": "https://greatergoodsroasting.com/products/virtual-cupping-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 60.0,
+    "title": "Individual - Whole Bean",
+    "variant_id": "44921217483011"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 60.0,
+    "title": "Individual - Ground",
+    "variant_id": "44921217515779"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 100.0,
+    "title": "Couple - Whole Bean",
+    "variant_id": "44921217548547"
+   },
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 100.0,
+    "title": "Couple - Ground",
+    "variant_id": "44921217581315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Coffee Only (No Kit)",
+    "variant_id": "44921217614083"
+   }
+  ],
+  "vendor": "Greater Goods Roasting"
+ },
+ {
+  "body_hash": "d350a662990340cb",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lam-dong",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/LamDong_bag10OZ_Standard_1.jpg?v=1769892518",
+  "platform": "shopify",
+  "product_id": "8703841108227",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Austin pets alive!",
+   "Fruity And Floral",
+   "Lam Dong Province",
+   "roast-profile:Light"
+  ],
+  "title": "Lâm Dông - Dark and Bold Vietnam",
+  "url": "https://greatergoodsroasting.com/products/vietnam-lam-dong",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "45793990213891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / French Press",
+    "variant_id": "45793990246659"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "45793990279427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "45793990312195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "45793990344963"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Cone",
+    "variant_id": "45793990377731"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Drip",
+    "variant_id": "45793990410499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "45793990443267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45793990476035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / French Press",
+    "variant_id": "45793990508803"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "45793990574339"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "45793990607107"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "45793990639875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Cone",
+    "variant_id": "45793990672643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Drip",
+    "variant_id": "45793990705411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "45793990738179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45793990770947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45793990803715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "45793990836483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "45793990869251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "45793990902019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Cone",
+    "variant_id": "45793990934787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Drip",
+    "variant_id": "45793990967555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "45793991000323"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "46790354862339"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "9b680022d95d038f",
+  "first_seen": "2026-10-26",
+  "handle": "pour-over-pouches",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Take_Me_Home_2_c5df3304-d254-422b-91a8-3a09b0e758e4.png?v=1772125699",
+  "platform": "shopify",
+  "product_id": "8962848325891",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Brazil",
+   "Costa Rica",
+   "Ethiopia",
+   "Instant",
+   "bean:Colombia",
+   "elevation:1235 - 1800 masl",
+   "origin:Colombia",
+   "process:Fully washed / Sun Dried",
+   "related:fresh-perspective",
+   "related:pick-me-up",
+   "related:take-me-home",
+   "roast-profile:Medium",
+   "variety:Castillo / Caturra / Colombia"
+  ],
+  "title": "Pour Over Pouches",
+  "url": "https://greatergoodsroasting.com/products/pour-over-pouches",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "1 Pouch / Good Vibes",
+    "variant_id": "46764654821635"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 27.0,
+    "title": "10 Pouches / Good Vibes",
+    "variant_id": "46764654854403"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "1 Pouch / Fresh Perspective",
+    "variant_id": "47529983770883"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "1 Pouch / Take Me Home",
+    "variant_id": "47529983803651"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 27.0,
+    "title": "10 Pouches / Fresh Perspective",
+    "variant_id": "47529983836419"
+   },
+   {
+    "available": true,
+    "grams": 179,
+    "price_usd": 27.0,
+    "title": "10 Pouches / Take Me Home",
+    "variant_id": "47529983869187"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "1 Pouch / Kolla Bolcha",
+    "variant_id": "49126602211587"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.0,
+    "title": "10 Pouches / Kolla Bolcha",
+    "variant_id": "49126602244355"
+   }
+  ],
+  "vendor": "Greater Goods Roasting"
+ },
+ {
+  "body_hash": "c963230fd68c8117",
+  "first_seen": "2026-10-26",
+  "handle": "peru-finca-churupampa",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/NEW-Peru-Finca-Churupampa_LTO_Standard_1.jpg?v=1773163575",
+  "platform": "shopify",
+  "product_id": "9331377930499",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Autism Society of Central Texas",
+   "roast-profile:Light"
+  ],
+  "title": "Mario Jesús - Finca Churupampa - Peru",
+  "url": "https://greatergoodsroasting.com/products/peru-finca-churupampa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "47830224273667"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "47830224306435"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / French Press",
+    "variant_id": "47830224339203"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "47830224371971"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "47830224404739"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "47830224437507"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Cone",
+    "variant_id": "47830224470275"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Drip",
+    "variant_id": "47830224503043"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "47830224535811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47830224568579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / French Press",
+    "variant_id": "47830224601347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "47830224634115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "47830224666883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "47830224699651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Cone",
+    "variant_id": "47830224732419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Drip",
+    "variant_id": "47830224765187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 110.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "47830224797955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47830224830723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / French Press",
+    "variant_id": "47830224863491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "47830224896259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "47830224929027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "47830224961795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Cone",
+    "variant_id": "47830224994563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Drip",
+    "variant_id": "47830225027331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 220.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "47830225060099"
+   }
+  ],
+  "vendor": "Autism Society of Central Texas"
+ },
+ {
+  "body_hash": "f7fb2f2ad7aa0d4e",
+  "first_seen": "2026-10-26",
+  "handle": "korgua-estate-papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/KorguaEstate-PNG.jpg?v=1784822888",
+  "platform": "shopify",
+  "product_id": "9559428825347",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "Central Texas Food Bank",
+   "roast-profile:Light"
+  ],
+  "title": "Korgua Estate - Papua New Guinea",
+  "url": "https://greatergoodsroasting.com/products/korgua-estate-papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "49311242813699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "49311242846467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / French Press",
+    "variant_id": "49311242879235"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "49311242912003"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "49311242944771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "49311242977539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Cone",
+    "variant_id": "49311243010307"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Drip",
+    "variant_id": "49311243043075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "49311243075843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49311243108611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49311243141379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "49311243174147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49311243206915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49311243239683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cone",
+    "variant_id": "49311243272451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Drip",
+    "variant_id": "49311243305219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49311243337987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49311243370755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49311243403523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "49311243436291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49311243469059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49311243501827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Cone",
+    "variant_id": "49311243534595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49311243567363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49311243600131"
+   }
+  ],
+  "vendor": "Central Texas Food Bank"
+ },
+ {
+  "body_hash": "642c8617aac6efce",
+  "first_seen": "2026-10-26",
+  "handle": "finca-rosita-bolivia",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Finca-Rosita-2026LTO_Standard_1.jpg?v=1787078453",
+  "platform": "shopify",
+  "product_id": "9599687033091",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "international women's coffee association",
+   "roast-profile:Light"
+  ],
+  "title": "Finca Rosita - Bolivia",
+  "url": "https://greatergoodsroasting.com/products/finca-rosita-bolivia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "49481446162691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "49481446195459"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / French Press",
+    "variant_id": "49481446228227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "49481446260995"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "49481446293763"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "49481446326531"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Cone",
+    "variant_id": "49481446359299"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Drip",
+    "variant_id": "49481446392067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "49481446424835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49481446457603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49481446490371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "49481446523139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49481446555907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49481446588675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Cone",
+    "variant_id": "49481446621443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Drip",
+    "variant_id": "49481446654211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49481446686979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49481446719747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49481446752515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "49481446785283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49481446818051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49481446850819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Cone",
+    "variant_id": "49481446883587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49481446916355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49481446949123"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "7dcd7992b2914a00",
+  "first_seen": "2026-10-26",
+  "handle": "rungeto-kii-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Rungeto_LTO_Standard_1_3225b97a-493e-4c0e-b8ad-d18c5433bc5d.jpg?v=1790712175",
+  "platform": "shopify",
+  "product_id": "9704571732227",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "bean:LTO Kenya",
+   "international women's coffee association",
+   "origin:Kenya",
+   "roast-profile:Light"
+  ],
+  "title": "Rung'eto Kii - Kenya",
+  "url": "https://greatergoodsroasting.com/products/rungeto-kii-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "49733119377667"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "49733119410435"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / French Press",
+    "variant_id": "49733119443203"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "49733119475971"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "49733119508739"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "49733119541507"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Cone",
+    "variant_id": "49733119574275"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Drip",
+    "variant_id": "49733119607043"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "49733119639811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49733119672579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49733119705347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "49733119738115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49733119770883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49733119803651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Cone",
+    "variant_id": "49733119836419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Drip",
+    "variant_id": "49733119869187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49733119901955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49733119934723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49733119967491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "49733120000259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49733120033027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49733120065795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Cone",
+    "variant_id": "49733120098563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49733120131331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49733120164099"
+   }
+  ],
+  "vendor": "International Women's Coffee Alliance"
+ },
+ {
+  "body_hash": "ce81f6a1c22f9b59",
+  "first_seen": "2026-10-26",
+  "handle": "mugaya-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0939/8326/files/Mugaya_LTO_Standard_1.jpg?v=1790885384",
+  "platform": "shopify",
+  "product_id": "9710728970499",
+  "product_type": "coffee",
+  "roaster_slug": "greatergoodsroasting",
+  "tags": [
+   "bean:LTO Kenya",
+   "international women's coffee association",
+   "origin:Kenya",
+   "roast-profile:Light"
+  ],
+  "title": "Mugaya - Kenya",
+  "url": "https://greatergoodsroasting.com/products/mugaya-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 15.0,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "49743632400643"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "49743632433411"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / French Press",
+    "variant_id": "49743632466179"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Aeropress",
+    "variant_id": "49743632498947"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Espresso",
+    "variant_id": "49743632531715"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Chemex",
+    "variant_id": "49743632564483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Cone",
+    "variant_id": "49743632597251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Drip",
+    "variant_id": "49743632630019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "10 oz / Cold Brew",
+    "variant_id": "49743632662787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49743632695555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / French Press",
+    "variant_id": "49743632728323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Aeropress",
+    "variant_id": "49743632761091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Espresso",
+    "variant_id": "49743632793859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "49743632826627"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Cone",
+    "variant_id": "49743632859395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Drip",
+    "variant_id": "49743632892163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "49743632924931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49743632957699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / French Press",
+    "variant_id": "49743632990467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Aeropress",
+    "variant_id": "49743633023235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Espresso",
+    "variant_id": "49743633056003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "49743633088771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Cone",
+    "variant_id": "49743633121539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Drip",
+    "variant_id": "49743633154307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 176.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "49743633187075"
+   }
+  ],
+  "vendor": "Austin Pets Alive"
+ }
+]

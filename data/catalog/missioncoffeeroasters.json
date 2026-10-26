@@ -1,0 +1,838 @@
+[
+ {
+  "body_hash": "b0e2d105e821220f",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-roasted-coffee-whole-bean-or-ground-5-lb-bulk-bulk-pkg",
+  "image": "https://static1.squarespace.com/static/55b94b32e4b0202eae97f38c/55b953afe4b0ae0f6a89517c/55b953e1e4b022c1b2e67a82/1784232359823/",
+  "platform": "squarespace",
+  "product_id": "55b953e1e4b022c1b2e67a82",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeroasters",
+  "tags": [],
+  "title": "5lb Bulk Fresh Roasted Coffee",
+  "url": "https://www.missioncoffeeroasters.com/online-store/fresh-roasted-coffee-whole-bean-or-ground-5-lb-bulk-bulk-pkg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Nicaragua (Light to Medium Roast) Whole Bean",
+    "variant_id": "04bc57fe-d1f6-4113-b09a-eab488224bf3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Brazilian Whole Bean",
+    "variant_id": "0d9dc920-e22a-416e-91ce-bcfbc5be79cf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Roaster's Reserve (Light/Medium) Whole Bean",
+    "variant_id": "0dca2156-3510-4955-ab05-4968beb6341c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Espresso Especiale (Light/Medium) Whole Bean",
+    "variant_id": "1f6c3d8d-9823-49a5-9776-d1bcad748040"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 74.89,
+    "title": "Sumatra Ground",
+    "variant_id": "330d1131-6656-4617-811a-d2725830f526"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Roaster's Reserve (Light/Medium) Ground",
+    "variant_id": "3ebaf5d5-5b38-443b-88bc-c18688d80b00"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.34,
+    "title": "Costa Rica Tarrazu Ground",
+    "variant_id": "472c605b-dbdb-4303-b72e-fef310a1e7f6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.95,
+    "title": "Ethiopian Ardi Ground",
+    "variant_id": "48ac3adf-9072-4752-9a26-c1c9709a5d8e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Guatemlan Ground",
+    "variant_id": "4a93bd99-0cae-4e32-98dd-cf6f84acc7bf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 122.95,
+    "title": "Guji Whole Bean",
+    "variant_id": "5f9997bd-9e9e-4c4e-8358-7e44377c848e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 122.95,
+    "title": "Guji Ground",
+    "variant_id": "6431fc83-2949-448f-93e6-bab753d8a501"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Colombian Ground",
+    "variant_id": "6d6108b4-853e-4bc2-a9cb-1ac466b148ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.16,
+    "title": "Bus Blend Ground",
+    "variant_id": "858576b1-836d-483d-8c05-acac1e2bd297"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 122.95,
+    "title": "Ethiopian Ardi Whole Bean",
+    "variant_id": "88c83591-1f73-4d8b-9301-0c9a2b71de1b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 61.6,
+    "title": "Nicaragua (Light to Medium Roast) Ground",
+    "variant_id": "8a4b8ef7-46cf-41ce-8060-053631a95cf3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 73.89,
+    "title": "French Roast (Dark) Ground",
+    "variant_id": "8c181bbc-31d1-44f9-a6c0-65927ba1f41d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.85,
+    "title": "Colombian Whole Bean",
+    "variant_id": "908c5ff6-7a6d-4be5-9c11-f90ddebd3623"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.16,
+    "title": "Cold Brew Blend Whole Bean",
+    "variant_id": "9b1b2022-6a9f-469e-a90c-3300672eb3fa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 66.28,
+    "title": "Guatemlan Whole Bean",
+    "variant_id": "9dc042ab-fb93-4a05-8f2f-0137445e43a0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Sumatra Whole Bean",
+    "variant_id": "b30cfebc-b6d3-41b2-8b5e-3c5ef9dc0719"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Espresso Especiale (Light/Medium) Ground",
+    "variant_id": "bfa4fc24-4a6b-461f-b0a3-8918efbc863e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Brazilian Ground",
+    "variant_id": "c0c7e00f-aadf-4a1e-bf4e-5c197ea522bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Dark Nicaragua (Dark) Whole Bean",
+    "variant_id": "c8a4e0f4-1ff5-48d9-8458-7fb426b58561"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.79,
+    "title": "Decaf Espresso (Medium) Whole Bean",
+    "variant_id": "d6f139a3-b138-4682-9312-c8aadb238ad4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 63.16,
+    "title": "Mexican Chiapas (Medium) Whole Bean",
+    "variant_id": "d714a452-0809-47eb-915c-f4ad00657b0a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.8,
+    "title": "Bus Blend Whole Bean",
+    "variant_id": "daeff357-9986-41b1-918a-3c9c773c6172"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 64.41,
+    "title": "Decaf Espresso (Medium) Ground",
+    "variant_id": "ddeb63e2-19d0-4c81-9967-585da0bf9db4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.89,
+    "title": "Dark Nicaragua (Dark) Ground",
+    "variant_id": "de9f446a-cc74-4530-bf7a-787b6e9645b1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 65.34,
+    "title": "Costa Rica Tarrazu Whole Bean",
+    "variant_id": "dec9d112-a169-42b3-8d11-f2a6ef3638eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 74.89,
+    "title": "Decaf Mission Blend (Medium) Ground",
+    "variant_id": "e07a7756-cd03-4a87-a0b4-797fe5ed0eb2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 72.89,
+    "title": "French Roast (Dark) Whole Bean",
+    "variant_id": "e21b9348-deaf-4890-920a-86a2ed60ee66"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.16,
+    "title": "Cold Brew Blend Ground",
+    "variant_id": "e47a3e69-5836-4edb-9757-05c15c86c7d0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 74.77,
+    "title": "Mexican Chiapas (Medium) Ground",
+    "variant_id": "ee4d0616-8291-4365-98bd-72e2f08a2384"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 72.89,
+    "title": "Decaf Mission Blend (Medium) Whole Bean",
+    "variant_id": "f4fdc553-80ab-49f4-bf63-239f28157c00"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "13625df807b251b6",
+  "first_seen": "2026-10-26",
+  "handle": "brew-coffee",
+  "image": "https://static1.squarespace.com/static/55b94b32e4b0202eae97f38c/55b953afe4b0ae0f6a89517c/562e4c23e4b02dda3d4da71b/1778109264720/",
+  "platform": "squarespace",
+  "product_id": "562e4c23e4b02dda3d4da71b",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeroasters",
+  "tags": [],
+  "title": "Fresh Roasted Coffee",
+  "url": "https://www.missioncoffeeroasters.com/online-store/brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Brazilian",
+    "variant_id": "09c322ab-f74e-4245-bab5-4cdfdbe46c1b"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Whole Bean Kenya AA",
+    "variant_id": "0dc63cbb-20d2-46ab-b266-785074c26966"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Hazelnut Creme Flavored Coffee",
+    "variant_id": "0fc2d8bb-febc-49c8-991b-9798bd8d6fa7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Hazelnut Creme Flavored Coffee",
+    "variant_id": "109f0e22-be4c-406f-a779-b2c43e89fcb4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Papua New Guinea",
+    "variant_id": "1229701c-30ab-4236-a4ae-59b80c3516e0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Dark Nicaragua (Dark)",
+    "variant_id": "12ecaaef-7f46-4360-9ed7-0b1aad5b8e46"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground Espresso Especiale (Light/Medium)",
+    "variant_id": "15000315-7efe-44be-879d-708d4b00d70e"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean Bethesda Living Room Blend (Medium)",
+    "variant_id": "1b4a22f0-0cd2-4bb6-8f4a-c3667dbe7f8e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Southern Pecan Flavored Coffee",
+    "variant_id": "1e193bd2-9d36-494c-8078-2d00b463dda6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Nicaragua (Light to Medium Roast)",
+    "variant_id": "248181f0-4aa6-4e13-a011-efac960d5fb3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Roaster's Reserve (Light/Medium)",
+    "variant_id": "32d46c41-c795-4b4c-8a78-66205b56e445"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Whole Bean Ethiopian Guji (Light)",
+    "variant_id": "32dd8def-2cdd-476e-987d-6b7b837aa4f5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Mexican Chiapas (Medium)",
+    "variant_id": "402d1ae1-05d6-4a4b-93ea-d0bc7536a3b1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Roaster's Reserve (Light/Medium)",
+    "variant_id": "4058ab22-6786-447b-8daa-e4eacf4591fc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Decaf Mission Blend (Medium)",
+    "variant_id": "466ee984-1ed0-47d3-baec-4b1b89bad684"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Brazilian",
+    "variant_id": "46d30258-b35c-4765-b1da-f0d937c20e64"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground VW Bug Blend (Medium/Dark)",
+    "variant_id": "501da055-1c96-40fc-8dd4-9ae06b025fa1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Mexican Chiapas (Medium)",
+    "variant_id": "505adfac-12b6-4918-b19e-0f55966e5ad8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground French Roast (Dark)",
+    "variant_id": "553a3fb5-d9d6-48ec-9e53-771669c0eebf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Whole Bean Peru",
+    "variant_id": "628da8b5-cae6-4906-8d1b-dba49d9d3e27"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Whole Bean Ethiopian Ardi (Light/Medium)",
+    "variant_id": "6cd04bca-3a2c-4cf5-86f3-f544fda3f7b1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground VW Bus Blend (Medium/Dark)",
+    "variant_id": "72db4630-78e2-4df6-9b08-6142ebb09802"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Decaf Espresso (Medium)",
+    "variant_id": "7362682e-3018-45d1-88a2-ecf716c27508"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Ground Tanzania (Lighter Side of Medium)",
+    "variant_id": "7592d14a-b3f7-4228-8f0d-af5a5d94c6b9"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Ground Red Honey Dominican",
+    "variant_id": "766c0438-0ac9-4eaa-b082-d609f0fc23b8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Cold Brew Blend",
+    "variant_id": "76a2eecb-53aa-44e0-a429-7f956f0184b8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Espresso Especiale (Light/Medium)",
+    "variant_id": "7e16cbb7-3816-4580-8646-6fa5b287e68f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Guatemala (Light Side of Medium)",
+    "variant_id": "7e6df86f-a50e-4548-913a-98752de17bb1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Whole Bean Sumatra",
+    "variant_id": "7f577728-8805-4963-839c-a56e9274af94"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean VW Bug Blend (Medium/Dark)",
+    "variant_id": "7faee6b8-941d-49ca-aaaa-3969b8b4dadd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Southern Pecan Flavored Coffee",
+    "variant_id": "8015d36d-6ac4-48d5-93be-23c8e983360b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Pumpkin Spice Flavored Coffee",
+    "variant_id": "854da338-ef5c-495e-bdfd-8f5e7357a13a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Ground Ethiopian Guji (Light)",
+    "variant_id": "870c329d-0678-47f9-88ce-f1fb9a3f5da3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean French Vanilla Creme Flavored Coffee",
+    "variant_id": "8720573a-bd44-415f-8ce9-b2969ab819c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Artist Blend - Medium to Dark Blend",
+    "variant_id": "8b8c51a4-50d1-416d-b10b-f5947dc6be9d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Artist Blend - Medium to Dark Blend",
+    "variant_id": "8e3921c0-9eb6-4a5e-a2eb-6e51205d60ec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Nicaragua (Light to Medium Roast)",
+    "variant_id": "93114f6d-e438-4ff1-9d28-678ea0e230c1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Decaf Espresso (Medium)",
+    "variant_id": "95d3b32f-74b0-4e60-93ff-68b867f48dd8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Guatemala  (Light Side of Medium)",
+    "variant_id": "97260d9e-5496-411b-84f7-7663fd09efd0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Whole Bean Tanzania (Lighter Side of Medium)",
+    "variant_id": "990a3ed9-dd77-48f1-a99c-763bd9f46e39"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Community Blend (Medium)",
+    "variant_id": "9c76bc9e-0a65-449f-827b-f80417282c54"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Community Blend (Medium)",
+    "variant_id": "a093ee92-3fee-4a0c-a66e-5d7bcdde7635"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground Kenya AA",
+    "variant_id": "a1591230-51e1-41e6-88db-d2e09ed0d318"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Ground Ethiopian Ardi (Light/Medium)",
+    "variant_id": "a21d17d9-70c0-4aef-adbb-bf66770a68ad"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground VW Westie Blend",
+    "variant_id": "a6717a49-f1d7-4a85-894a-9b5db5b05535"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Costa Rica",
+    "variant_id": "a9167ce9-b632-4fae-8177-472ec2f750d4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Whole Bean Chinese Hunan",
+    "variant_id": "aa568061-cbe7-4504-b16f-c9e03782aa63"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Bolivian",
+    "variant_id": "b2adfdfc-143b-4c4a-baf3-aec16262303e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean VW Bus Blend (Medium/Dark)",
+    "variant_id": "b4f530be-c8e2-42d8-af32-f37986f9daed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Decaf Mission Blend (Medium)",
+    "variant_id": "b745087a-3751-40fc-9fc4-79ea2153b81e"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground Bethesda Living Room Blend (Medium)",
+    "variant_id": "b914528f-c07e-4cf9-8788-0d6c657c8b03"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Peru",
+    "variant_id": "bd5f8bc7-838f-4eed-9014-0199004584d5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean French Roast (Dark)",
+    "variant_id": "c0251f4b-c35d-4baf-83f8-b8929b75f31a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Colombian",
+    "variant_id": "c232ad6c-60ed-4532-84b2-e7c6ee731097"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Pumpkin Spice Flavored Coffee",
+    "variant_id": "cc4211fa-0f37-4ff2-94a8-47c09839b8c5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean VW Westie Blend",
+    "variant_id": "d214a731-881a-4220-b930-55cff8348775"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "Ground Sumatra",
+    "variant_id": "db0974d6-3f1e-4354-95f1-9cac2bf30037"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Papua New Guinea",
+    "variant_id": "db15306c-a27f-429c-959e-23a7a67f0631"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Whole Bean Red Honey Dominican",
+    "variant_id": "dbea2746-77db-4339-ad93-a9c8bf3762e1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground French Vanilla Creme Flavored Coffee Flavored Coffee",
+    "variant_id": "de04dde7-f304-44ad-af5c-35533d4131ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Ground Dark Nicaragua (Dark)",
+    "variant_id": "e164f454-75cc-476e-9d84-77f268bb2e78"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Swiss Chocolate Almond Flavored Coffee",
+    "variant_id": "e2cf97c1-0ba3-4e0a-8550-52223557de75"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Bolivian",
+    "variant_id": "e5c1f8ac-5890-413b-bcb5-fa009e98b113"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Whole Bean Cold Brew Blend",
+    "variant_id": "e8b55160-af4c-456a-a687-217472ef4c7b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean Costa Rica",
+    "variant_id": "ec5691fd-15c2-4c0c-8ed5-edabb3db0302"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "Ground Chinese Hunan",
+    "variant_id": "ec7fe5c3-ee7d-481c-b4df-5fa74e5aa6d8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.95,
+    "title": "Whole Bean Colombian",
+    "variant_id": "fa35f554-2499-4e11-b2e0-7ff4127c97de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Ground Swiss Chocolate Almond Flavored Coffee",
+    "variant_id": "fead80b4-e511-41f2-b3a9-a5dfd2e8ede4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c299e613af196df",
+  "first_seen": "2026-10-26",
+  "handle": "brew-coffee-asljw-897h6",
+  "image": "https://static1.squarespace.com/static/55b94b32e4b0202eae97f38c/55b953afe4b0ae0f6a89517c/619ed9ae09976c77841abe3b/1671214320635/",
+  "platform": "squarespace",
+  "product_id": "619ed9ae09976c77841abe3b",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeroasters",
+  "tags": [],
+  "title": "The Bus Blend",
+  "url": "https://www.missioncoffeeroasters.com/online-store/brew-coffee-asljw-897h6",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean VW Bus Blend (Medium/Dark)",
+    "variant_id": "46166fcb-6c47-492c-b34d-e53dd5edded1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground VW Bus Blend (Medium/Dark)",
+    "variant_id": "51bb98f1-5c89-48d9-a5c1-729a7d60ffea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c299e613af196df",
+  "first_seen": "2026-10-26",
+  "handle": "brew-coffee-asljw-5s8gs",
+  "image": "https://static1.squarespace.com/static/55b94b32e4b0202eae97f38c/55b953afe4b0ae0f6a89517c/619eda76badcac6c94f65c51/1777935204717/",
+  "platform": "squarespace",
+  "product_id": "619eda76badcac6c94f65c51",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeroasters",
+  "tags": [],
+  "title": "The Bug Blend",
+  "url": "https://www.missioncoffeeroasters.com/online-store/brew-coffee-asljw-5s8gs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground VW Bug Blend (Medium/Dark)",
+    "variant_id": "d154c40e-a875-48fd-a53a-0015252ee4a9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean VW Bug Blend (Medium/Dark)",
+    "variant_id": "eef18757-d90b-4f75-a303-84fda03214fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c299e613af196df",
+  "first_seen": "2026-10-26",
+  "handle": "brew-coffee-asljw-d6c8m",
+  "image": "https://static1.squarespace.com/static/55b94b32e4b0202eae97f38c/55b953afe4b0ae0f6a89517c/619edab9ba0cad1f5c505f3a/1671214405600/",
+  "platform": "squarespace",
+  "product_id": "619edab9ba0cad1f5c505f3a",
+  "product_type": "",
+  "roaster_slug": "missioncoffeeroasters",
+  "tags": [],
+  "title": "The Westy Blend",
+  "url": "https://www.missioncoffeeroasters.com/online-store/brew-coffee-asljw-d6c8m",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Ground VW Westie Blend",
+    "variant_id": "177bc343-226d-401b-b966-9e314a29fa05"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean VW Westie Blend",
+    "variant_id": "2df6acac-9f7b-4b30-840b-129d35d3becf"
+   }
+  ],
+  "vendor": ""
+ }
+]

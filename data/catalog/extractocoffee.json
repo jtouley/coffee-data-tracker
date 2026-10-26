@@ -1,0 +1,1232 @@
+[
+ {
+  "body_hash": "e917d7203dc41b0b",
+  "first_seen": "2026-10-26",
+  "handle": "eleven-of-spades",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/products/ElevenofSpades-final.jpg?v=1628285739",
+  "platform": "shopify",
+  "product_id": "6964291633305",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Eleven of Spades",
+  "url": "https://extractocoffee.com/products/eleven-of-spades",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40752217096345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "40752217129113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "40752217161881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "45645798441113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645798473881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "45645798506649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "45645798539417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "45645798572185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "45645798604953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "45645798637721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "45645798670489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645798703257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "45645798736025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "45645798768793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "45645798801561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "45645798834329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "45645798867097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "45645798899865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645798932633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "45645798965401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "45645798998169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "45645799030937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "45645799063705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "45645799096473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "45652666253465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "45652666286233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "45652666319001"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ },
+ {
+  "body_hash": "11e21bd29f1b93ff",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca-santa-cruz",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/products/Mexico-final.jpg?v=1654286172",
+  "platform": "shopify",
+  "product_id": "8443010482329",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Mexico Oaxaca",
+  "url": "https://extractocoffee.com/products/mexico-oaxaca-santa-cruz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "45445477662873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "45445477695641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "45445477728409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "45645760626841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645760659609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "45645760692377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "45645760725145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "45645760757913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "45645760790681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "45645760823449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "45645760856217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645760888985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "45645760921753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "45645760954521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "45645760987289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "45645761020057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "45645761052825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "45645761085593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45645761118361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "45645761151129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "45645761183897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "45645761216665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "45645761249433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "45645761282201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "45645808238745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "45645808271513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "45645808304281"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ },
+ {
+  "body_hash": "02c95223cfa3d921",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-los-volcanes",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/products/Guatemala-final.jpg?v=1628286951",
+  "platform": "shopify",
+  "product_id": "8576431685785",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Guatemala Los Volcanes",
+  "url": "https://extractocoffee.com/products/guatemala-los-volcanes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "45895932969113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "45895933001881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "45895933034649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895933067417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "45895933100185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "45895933132953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "45895933165721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "45895933198489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "45895933231257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "45895933264025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "45895933296793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "45895933329561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895933362329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "45895933395097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "45895933427865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "45895933460633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "45895933493401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "45895933526169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "45895933558937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "45895933591705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "45895933624473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895933657241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "45895933690009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "45895933722777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "45895933755545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "45895933788313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "45895933821081"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ },
+ {
+  "body_hash": "a2ec75616201a431",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/files/Honduras.jpg?v=1769193274",
+  "platform": "shopify",
+  "product_id": "8576432210073",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Honduras COMSA",
+  "url": "https://extractocoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "45895934804121"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "45895934836889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "45895934869657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895934902425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "45895934935193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "45895934967961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "45895935000729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "45895935033497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "45895935066265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "45895935099033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "45895935131801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "45895935164569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895935197337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "45895935230105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "45895935262873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "45895935295641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "45895935328409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "45895935361177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "45895935393945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "45895935426713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "45895935459481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "45895935492249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "45895935525017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "45895935557785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "45895935590553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "45895935623321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "45895935656089"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ },
+ {
+  "body_hash": "45167659d3b35465",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/files/DecafMexico.jpg?v=1771441735",
+  "platform": "shopify",
+  "product_id": "8651319181465",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Decaf Mexico",
+  "url": "https://extractocoffee.com/products/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "46176167133337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "46176167166105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "46176167198873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46176167231641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "46176167264409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "46176167297177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "46176167329945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "46176167362713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "46176167395481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "46176167428249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "46176167461017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "46176167493785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46176167526553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "46176167559321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "46176167592089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "46176167624857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "46176167657625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "46176167690393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "46176167723161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "46176167755929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "46176167788697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46176167821465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "46176167854233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "46176167887001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "46176167919769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "46176167952537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "46176167985305"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ },
+ {
+  "body_hash": "ec097f4e4cd910b7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0586/9849/8201/products/Ethiopia-final.jpg?v=1628287345",
+  "platform": "shopify",
+  "product_id": "8717433503897",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "extractocoffee",
+  "tags": [],
+  "title": "Ethiopia Hambela",
+  "url": "https://extractocoffee.com/products/ethiopia-yirgacheffe-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "46981326340249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Cold Brew (Coarse)",
+    "variant_id": "46981326373017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / French Press / K-Cup",
+    "variant_id": "46981326405785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46981326438553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "46981326471321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Auto Cone Drip",
+    "variant_id": "46981326504089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Pour Over / Aeropress",
+    "variant_id": "46981326536857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "46981326569625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Turkish (Very Fine!)",
+    "variant_id": "46981326602393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "46981326635161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Cold Brew (Coarse)",
+    "variant_id": "46981326667929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / French Press / K-Cup",
+    "variant_id": "46981326700697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46981326733465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Chemex",
+    "variant_id": "46981326766233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Auto Cone Drip",
+    "variant_id": "46981326799001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Pour Over / Aeropress",
+    "variant_id": "46981326831769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Espresso",
+    "variant_id": "46981326864537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.34,
+    "title": "1 lb. / Turkish (Very Fine!)",
+    "variant_id": "46981326897305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "46981326930073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Cold Brew (Coarse)",
+    "variant_id": "46981326962841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / French Press / K-Cup",
+    "variant_id": "46981326995609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Flat Bottom Drip / Moka Pot",
+    "variant_id": "46981327028377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Chemex",
+    "variant_id": "46981327061145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Auto Cone Drip",
+    "variant_id": "46981327093913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Pour Over / Aeropress",
+    "variant_id": "46981327126681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Espresso",
+    "variant_id": "46981327159449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.7,
+    "title": "5 lbs. / Turkish (Very Fine!)",
+    "variant_id": "46981327192217"
+   }
+  ],
+  "vendor": "Extracto Coffee Roasters"
+ }
+]

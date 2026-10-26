@@ -1,0 +1,374 @@
+[
+ {
+  "body_hash": "f52ba0577c331f5a",
+  "first_seen": "2026-10-26",
+  "handle": "black-gold-blend",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Black-Gold.webp",
+  "platform": "woocommerce",
+  "product_id": "112",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black & Gold Blend",
+  "url": "https://steelcupcoffee.com/product/black-gold-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Black &#038; Gold Blend",
+    "variant_id": "112:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92114c5682b8091c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Colombia.webp",
+  "platform": "woocommerce",
+  "product_id": "118",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://steelcupcoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Colombia",
+    "variant_id": "118:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78316781fc0f5917",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Ethiopia.webp",
+  "platform": "woocommerce",
+  "product_id": "121",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ethiopia",
+  "url": "https://steelcupcoffee.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.5,
+    "title": "Ethiopia",
+    "variant_id": "121:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03a669886dc5ceb8",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/French-Roast-Blend.webp",
+  "platform": "woocommerce",
+  "product_id": "126",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "French Roast Blend",
+  "url": "https://steelcupcoffee.com/product/french-roast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Roast Blend",
+    "variant_id": "126:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9c1dc21518b0ae2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Guatemala.webp",
+  "platform": "woocommerce",
+  "product_id": "130",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://steelcupcoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Guatemala",
+    "variant_id": "130:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1508196e74988b03",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Nicaragua.webp",
+  "platform": "woocommerce",
+  "product_id": "134",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Nicaragua",
+  "url": "https://steelcupcoffee.com/product/nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Nicaragua",
+    "variant_id": "134:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d2f63c59a5ce73a",
+  "first_seen": "2026-10-26",
+  "handle": "sunset-decaf",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Sunset-Decaf.webp",
+  "platform": "woocommerce",
+  "product_id": "144",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sunset Decaf",
+  "url": "https://steelcupcoffee.com/product/sunset-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sunset Decaf",
+    "variant_id": "144:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6e96548953a5e6c",
+  "first_seen": "2026-10-26",
+  "handle": "union-blend",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Union-Blend.webp",
+  "platform": "woocommerce",
+  "product_id": "148",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Union Blend",
+  "url": "https://steelcupcoffee.com/product/union-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Union Blend",
+    "variant_id": "148:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b67fbe42526ef265",
+  "first_seen": "2026-10-26",
+  "handle": "hot-metal-half-caff-blend",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Hot-Metal.webp",
+  "platform": "woocommerce",
+  "product_id": "152",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Hot Metal Half Caff Blend",
+  "url": "https://steelcupcoffee.com/product/hot-metal-half-caff-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.25,
+    "title": "Hot Metal Half Caff Blend",
+    "variant_id": "152:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "974faa477113bde8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Sumatra.webp",
+  "platform": "woocommerce",
+  "product_id": "157",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://steelcupcoffee.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sumatra",
+    "variant_id": "157:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f8bd43783d8dfa4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Honduras.webp",
+  "platform": "woocommerce",
+  "product_id": "161",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee",
+   "Light Roast",
+   "Organic",
+   "PCO",
+   "Steel Cup Coffee",
+   "USDA",
+   "catuai",
+   "fair trade",
+   "honduran",
+   "honduras",
+   "natural"
+  ],
+  "title": "Honduras",
+  "url": "https://steelcupcoffee.com/product/honduras/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.5,
+    "title": "Honduras",
+    "variant_id": "161:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78962f761be5309c",
+  "first_seen": "2026-10-26",
+  "handle": "rough-diamond-espresso-blend",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Rough-Diamond.webp",
+  "platform": "woocommerce",
+  "product_id": "165",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee",
+   "Featured"
+  ],
+  "title": "Rough Diamond Espresso Blend",
+  "url": "https://steelcupcoffee.com/product/rough-diamond-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.25,
+    "title": "Rough Diamond Espresso Blend",
+    "variant_id": "165:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f799db00d0d0b8d3",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged-coffee",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Whiskey-Coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "169",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Coffee",
+   "Featured"
+  ],
+  "title": "Whiskey Barrel-Aged Coffee",
+  "url": "https://steelcupcoffee.com/product/whiskey-barrel-aged-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whiskey Barrel-Aged Coffee",
+    "variant_id": "169:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b833f298594a07f",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://steelcupcoffee.com/wp-content/uploads/2025/04/Peru.webp",
+  "platform": "woocommerce",
+  "product_id": "2606",
+  "product_type": "variable",
+  "roaster_slug": "steelcupcoffee",
+  "tags": [
+   "Cajamarca",
+   "Coffee",
+   "FTO",
+   "Featured",
+   "Light Roast",
+   "Organic",
+   "Peru",
+   "Peruvian",
+   "Quellouno",
+   "Steel Cup",
+   "Washed"
+  ],
+  "title": "Peru",
+  "url": "https://steelcupcoffee.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Peru",
+    "variant_id": "2606:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

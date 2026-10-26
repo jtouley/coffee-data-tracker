@@ -1,0 +1,1769 @@
+[
+ {
+  "body_hash": "974a6730f55bba5d",
+  "first_seen": "2026-10-26",
+  "handle": "nevada-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/files/BF7A1EDB-38D2-4F99-9D8C-F0093B66216A_1_201_a.jpg?v=1768948999",
+  "platform": "shopify",
+  "product_id": "12238339342654",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Brazil",
+   "Chocolate",
+   "Colombia",
+   "coffee",
+   "fair trade"
+  ],
+  "title": "Nevada Blend [Brazil / Colombia]",
+  "url": "https://glorycloudcoffee.com/products/nevada-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52905494774078"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "52905494806846"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "52905494839614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "52905494872382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "52905494905150"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "52905494937918"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "52905494970686"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "52905495003454"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "52905495036222"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "52905495068990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "52905495101758"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "52905495134526"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "46f1fd1b4172b5b9",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-reserva-guama-danta-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Hondras.jpg?v=1628121851",
+  "platform": "shopify",
+  "product_id": "128710115357",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Honduras",
+   "coffee"
+  ],
+  "title": "Honduras Marcala - Medium Roast",
+  "url": "https://glorycloudcoffee.com/products/honduras-reserva-guama-danta-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15261400137837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15261425795181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15261425827949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15261425860717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15261425893485"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15261425926253"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15261425959021"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15261425991789"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15261426024557"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15261426057325"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "33556e55d685c6e0",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-sao-manuel",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Brazil.jpg?v=1768948999",
+  "platform": "shopify",
+  "product_id": "138627088413",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [],
+  "title": "Brazil - Light Roast [Rosa Morena - Mogiano]",
+  "url": "https://glorycloudcoffee.com/products/brazil-fazenda-sao-manuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15222181920877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15222184575085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15222184607853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15222184640621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15222184673389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15222184706157"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15222184738925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15222184804461"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15222184837229"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15222184869997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29402353827949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416492499053"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "7069a46e177a78af",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nuevo-oriente",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Guate_a21b4c53-1bc5-462d-a973-e9a968d6375f.jpg?v=1570028673",
+  "platform": "shopify",
+  "product_id": "138631381021",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango - Light Roast",
+  "url": "https://glorycloudcoffee.com/products/guatemala-nuevo-oriente",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15635604013165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15635618824301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15635618889837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15635618922605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15635618988141"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15635619020909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15635619053677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15635619086445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15635619119213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15635619151981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416672919661"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416674558061"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "6ae286e6fc41d1e2",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/IMG_3551.jpg?v=1628120397",
+  "platform": "shopify",
+  "product_id": "1492522926189",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Sampler",
+   "coffee"
+  ],
+  "title": "Creator's Choice - Coffee",
+  "url": "https://glorycloudcoffee.com/products/roasters-choice-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 30.0,
+    "title": "Whole Bean",
+    "variant_id": "13872635936877"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 30.0,
+    "title": "Drip Grind",
+    "variant_id": "13872646848621"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 30.0,
+    "title": "Coarse Grind [French Press]",
+    "variant_id": "32970416685165"
+   },
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 30.0,
+    "title": "Fine Grind [Pour Over - K Cup]",
+    "variant_id": "32970440278125"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "3abf0f25aa9b0c69",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-decaf-reserva-pacavita-organic",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/decafinnabush.jpg?v=1658265433",
+  "platform": "shopify",
+  "product_id": "171091165213",
+  "product_type": "coffee decaf",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Decaf",
+   "Honduras",
+   "coffee"
+  ],
+  "title": "Decaf - Swiss Water Process -  Medium Roast",
+  "url": "https://glorycloudcoffee.com/products/honduras-decaf-reserva-pacavita-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15222099148909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15222102327405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15222102360173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15222102392941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15222102425709"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15222102458477"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15222102491245"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15222102524013"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15222102556781"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15222102589549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416703918189"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416706900077"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "68d20ae07b48deac",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Ethiopia.jpg?v=1628121688",
+  "platform": "shopify",
+  "product_id": "350715543581",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Africa",
+   "Ras Enjori",
+   "coffee",
+   "espresso"
+  ],
+  "title": "Ethiopia - [Sidamo Washed G2] Light [almost Medium] Roast",
+  "url": "https://glorycloudcoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15222112583789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15222121955437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15222121988205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15222122020973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15222122053741"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15222122086509"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15222122119277"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15222122152045"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15222122184813"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15222122217581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416526413933"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416680161389"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "8d635859973c9fda",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Colombia.jpg?v=1628186089",
+  "platform": "shopify",
+  "product_id": "350720426013",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Colombia",
+   "coffee",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Colombia - Light Roast",
+  "url": "https://glorycloudcoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "29416478703725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "29416478736493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "29416478769261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "29416478802029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416478834797"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "29416478867565"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "29416478900333"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "29416478933101"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "29416478965869"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "29416478998637"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416479031405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "5148713582621"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "f86e228a8181ab77",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-double-dark",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Double_Dark.jpg?v=1628121930",
+  "platform": "shopify",
+  "product_id": "4442054066285",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Chocolate",
+   "Italian",
+   "coffee",
+   "fair trade"
+  ],
+  "title": "Italian Roast - [nearly Double] Dark Roast",
+  "url": "https://glorycloudcoffee.com/products/italian-roast-double-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31612762587245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "31612762652781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "31612762685549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "31612762718317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "31612762751085"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "31612762783853"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "31612762816621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "31612762849389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "31612762882157"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "31612762914925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "31612762947693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "31612762980461"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "ccea04143c22cd49",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-washed-java-blawan",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Ethiopia_9c848656-96a5-4c1c-b444-0f4dd85c8315.jpg?v=1628121878",
+  "platform": "shopify",
+  "product_id": "4459276107885",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Africa",
+   "Ras Enjori",
+   "coffee",
+   "espresso"
+  ],
+  "title": "Indonesia Java Blawan - Medium Roast",
+  "url": "https://glorycloudcoffee.com/products/indonesia-washed-java-blawan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "31699571802221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "31699571834989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "31699571867757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "31699571900525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "31699571933293"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "31699571966061"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "31699571998829"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "31699572031597"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "31699572064365"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "31699572097133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "31699572129901"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "31699572162669"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "be7267ab695dae7e",
+  "first_seen": "2026-10-26",
+  "handle": "morning-wine",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/MorningWine.jpg?v=1628120877",
+  "platform": "shopify",
+  "product_id": "4554166272109",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Gift Set",
+   "coffee"
+  ],
+  "title": "Morning Wine for Mom or Dad",
+  "url": "https://glorycloudcoffee.com/products/morning-wine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Sweet - African / Mom",
+    "variant_id": "32166541754477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Sweet - African / Dad",
+    "variant_id": "32166541787245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Sweet - African / Kids",
+    "variant_id": "32166541820013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Dry - South/Central American / Mom",
+    "variant_id": "32166541852781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Dry - South/Central American / Dad",
+    "variant_id": "32166541885549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Dry - South/Central American / Kids",
+    "variant_id": "32166541918317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Faux - Decaf / Mom",
+    "variant_id": "32166541951085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Faux - Decaf / Dad",
+    "variant_id": "32166541983853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Faux - Decaf / Kids",
+    "variant_id": "32166542016621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Sweet - African / Mom",
+    "variant_id": "32166542049389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Sweet - African / Dad",
+    "variant_id": "32166542082157"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Sweet - African / Kids",
+    "variant_id": "32166542114925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Dry - South/Central American / Mom",
+    "variant_id": "32166542147693"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Dry - South/Central American / Dad",
+    "variant_id": "32166542180461"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Dry - South/Central American / Kids",
+    "variant_id": "32166542213229"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Faux - Decaf / Mom",
+    "variant_id": "32166542245997"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Faux - Decaf / Dad",
+    "variant_id": "32166542278765"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Faux - Decaf / Kids",
+    "variant_id": "32166542311533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz - Drip Grind / Sweet - African / Mom",
+    "variant_id": "32166542344301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Sweet - African / Dad",
+    "variant_id": "32166542377069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Sweet - African / Kids",
+    "variant_id": "32166542409837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Dry - South/Central American / Mom",
+    "variant_id": "32166542442605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Dry - South/Central American / Dad",
+    "variant_id": "32166542475373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Dry - South/Central American / Kids",
+    "variant_id": "32166542508141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Faux - Decaf / Mom",
+    "variant_id": "32166542540909"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Faux - Decaf / Dad",
+    "variant_id": "32166542573677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz - Drip Grind / Faux - Decaf / Kids",
+    "variant_id": "32166542606445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Sweet - African / Mom",
+    "variant_id": "32166542639213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Sweet - African / Dad",
+    "variant_id": "32166542671981"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Sweet - African / Kids",
+    "variant_id": "32166542704749"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Dry - South/Central American / Mom",
+    "variant_id": "32166542737517"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Dry - South/Central American / Dad",
+    "variant_id": "32166542770285"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Dry - South/Central American / Kids",
+    "variant_id": "32166542868589"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Faux - Decaf / Mom",
+    "variant_id": "32166542901357"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Faux - Decaf / Dad",
+    "variant_id": "32166542934125"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Drip Grind / Faux - Decaf / Kids",
+    "variant_id": "32166542966893"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "86aa0db82c9562d1",
+  "first_seen": "2026-10-26",
+  "handle": "craft-coffee-of-the-month",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/coffee-171653_1920.jpg?v=1628121196",
+  "platform": "shopify",
+  "product_id": "4784919019629",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Birthday",
+   "Gift Set",
+   "Gifts",
+   "Subscription",
+   "coffee",
+   "espresso",
+   "fair trade"
+  ],
+  "title": "Sarah's Craft Coffee Club",
+  "url": "https://glorycloudcoffee.com/products/craft-coffee-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32970447323245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "32970447356013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "32970447388781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "32970447421549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "32970447454317"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "32970447487085"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "32970447519853"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "32970447552621"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "32970447585389"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "32970447618157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "32970447650925"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "32970447683693"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "a3304d83146ca7d7",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-ethiopia-light-almost-medium-roast-sidamo-g2-natural",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/Ethiopia_5d5374eb-a98b-41d5-adfe-bf699baf732b.jpg?v=1628121691",
+  "platform": "shopify",
+  "product_id": "6581075083373",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Africa",
+   "Ras Enjori",
+   "coffee",
+   "espresso"
+  ],
+  "title": "Ethiopia - [Sidamo G2 Natural] Medium Roast",
+  "url": "https://glorycloudcoffee.com/products/copy-of-ethiopia-light-almost-medium-roast-sidamo-g2-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39383501865069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "39383501897837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "39383501930605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "39383501963373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "39383501996141"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39383502028909"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "39383502061677"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "39383502094445"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "39383502127213"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "39383502159981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "39383502192749"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "39383502225517"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "f0e87ed01f99e418",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/H.Espresso.jpg?v=1628121676",
+  "platform": "shopify",
+  "product_id": "779991515256",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Africa",
+   "Ras Enjori",
+   "coffee",
+   "espresso"
+  ],
+  "title": "House Blend [more than just Espresso - Medium Roast]",
+  "url": "https://glorycloudcoffee.com/products/espresso-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15222085812333"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15222091022445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15222091055213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15222091087981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15222091120749"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15222091153517"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15222091186285"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15222091219053"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15222091251821"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15222091284589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416768503917"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416775155821"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "a4f57fc90d70f8d5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/products/French_Roast.jpg?v=1628121733",
+  "platform": "shopify",
+  "product_id": "779994660984",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Dark Roast",
+   "French",
+   "coffee"
+  ],
+  "title": "French Roast - Medium [almost Dark] Roast",
+  "url": "https://glorycloudcoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "15222018965613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "15222021488749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "15222021521517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "15222021554285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "15222021587053"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "15222021619821"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "15222021652589"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "15222021685357"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "15222021718125"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "15222021750893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "29416719417453"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "29416721940589"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ },
+ {
+  "body_hash": "798ea9364e0a04fc",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-nicaragua-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2407/1821/files/image6_159f05f9-f4ac-4a09-b5c4-b22c27371b5f.jpg?v=1687017821",
+  "platform": "shopify",
+  "product_id": "8378647675198",
+  "product_type": "Coffee",
+  "roaster_slug": "glorycloudcoffee",
+  "tags": [
+   "Chocolate",
+   "Natural",
+   "blueberry",
+   "coffee",
+   "cold brew",
+   "fair trade",
+   "organic"
+  ],
+  "title": "COLD Brew Blend - Medium Roast",
+  "url": "https://glorycloudcoffee.com/products/copy-of-nicaragua-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45557507031358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Drip Grind",
+    "variant_id": "45557507064126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Fine Grind",
+    "variant_id": "45557507096894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Espresso Grind",
+    "variant_id": "45557507129662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Turkish Grind",
+    "variant_id": "45557507162430"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "45557507195198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Drip Grind",
+    "variant_id": "45557507227966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Fine Grind",
+    "variant_id": "45557507260734"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Espresso Grind",
+    "variant_id": "45557507293502"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Turkish Grind",
+    "variant_id": "45557507326270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz / Coarse Grind",
+    "variant_id": "45557507359038"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16 oz / Coarse Grind",
+    "variant_id": "45557507391806"
+   }
+  ],
+  "vendor": "Glory Cloud Coffee Roasters"
+ }
+]

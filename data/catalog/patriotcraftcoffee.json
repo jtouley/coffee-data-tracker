@@ -1,0 +1,449 @@
+[
+ {
+  "body_hash": "957cc1e91b050411",
+  "first_seen": "2026-10-26",
+  "handle": "peru-la-florida-2",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2015/06/peru.jpg",
+  "platform": "woocommerce",
+  "product_id": "117",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Classic",
+   "Fresh Roasted",
+   "Peru La Florida",
+   "coffee",
+   "florida",
+   "lakeland",
+   "patriot coffee",
+   "roaster"
+  ],
+  "title": "Peru La Florida",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/classic/peru-la-florida-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10 oz",
+    "variant_id": "117:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2 lb",
+    "variant_id": "117:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfbe4dca86bea05b",
+  "first_seen": "2026-10-26",
+  "handle": "market-blend",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2015/06/DSC_2016-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "1246",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "5 lb",
+   "Wholesale Coffee",
+   "central florida",
+   "coffee",
+   "espresso",
+   "florida",
+   "lakeland",
+   "patriot coffee",
+   "roaster",
+   "wholesale"
+  ],
+  "title": "Market Blend",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/wholesale-coffee/market-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.25,
+    "title": "2 lb.",
+    "variant_id": "1246:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.25,
+    "title": "5 lb.",
+    "variant_id": "1246:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b598e2ae12ad8b25",
+  "first_seen": "2026-10-26",
+  "handle": "market-blend-2",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2023/06/marketblend.jpg",
+  "platform": "woocommerce",
+  "product_id": "17980",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Classic",
+   "Fresh Roasted",
+   "coffee",
+   "colombia",
+   "florida",
+   "lakeland",
+   "narino",
+   "patriot coffee",
+   "regional select",
+   "roaster"
+  ],
+  "title": "Market Blend",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/classic/market-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.49,
+    "title": "10 oz",
+    "variant_id": "17980:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.49,
+    "title": "2 lb",
+    "variant_id": "17980:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3db5de82cd14dcd9",
+  "first_seen": "2026-10-26",
+  "handle": "equinox-blend",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2023/06/equinox.jpg",
+  "platform": "woocommerce",
+  "product_id": "22963",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Balanced",
+   "Fresh Roasted",
+   "coffee",
+   "colombia",
+   "florida",
+   "lakeland",
+   "narino",
+   "patriot coffee",
+   "regional select",
+   "roaster"
+  ],
+  "title": "Equinox",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/balanced/equinox-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10 oz",
+    "variant_id": "22963:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2 lb",
+    "variant_id": "22963:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec6aff33f2cf33aa",
+  "first_seen": "2026-10-26",
+  "handle": "dota-tarrazu",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2021/07/Costa-Rica-Dota-2026-Cropped.png",
+  "platform": "woocommerce",
+  "product_id": "24787",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Balanced",
+   "Fresh Roasted",
+   "biodynamic",
+   "coffee",
+   "ethiopia",
+   "florida",
+   "honduras",
+   "lakeland",
+   "organic coffee",
+   "patriot coffee",
+   "roaster",
+   "women owned coffee"
+  ],
+  "title": "Costa Rica Dota Tarrazu",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/balanced/dota-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.49,
+    "title": "10 oz",
+    "variant_id": "24787:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.49,
+    "title": "2 lb",
+    "variant_id": "24787:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0fbcc6d0b71568e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-2",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2022/09/Colombia-Huila-2024-web.png",
+  "platform": "woocommerce",
+  "product_id": "27154",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Balanced",
+   "Fresh Roasted",
+   "coffee",
+   "colombia",
+   "florida",
+   "lakeland",
+   "narino",
+   "patriot coffee",
+   "regional select",
+   "roaster"
+  ],
+  "title": "Colombia Huila",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/balanced/colombia-huila-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10 oz",
+    "variant_id": "27154:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2 lb",
+    "variant_id": "27154:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "580dd122074622a4",
+  "first_seen": "2026-10-26",
+  "handle": "blend-k9-copy",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2023/06/k9.jpg",
+  "platform": "woocommerce",
+  "product_id": "27495",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Classic",
+   "Fresh Roasted",
+   "coffee",
+   "colombia",
+   "florida",
+   "lakeland",
+   "narino",
+   "patriot coffee",
+   "regional select",
+   "roaster"
+  ],
+  "title": "Blend No.K9",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/classic/blend-k9-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.59,
+    "title": "10 oz",
+    "variant_id": "27495:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.59,
+    "title": "2 lb",
+    "variant_id": "27495:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88b4472fd4659283",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-kochere-2",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2023/10/Kochere-2026-Crop.png",
+  "platform": "woocommerce",
+  "product_id": "31219",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Fresh Roasted",
+   "Modern",
+   "coffee",
+   "ethiopia",
+   "florida",
+   "lakeland",
+   "patriot coffee",
+   "roaster",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopia Kochere",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/modern/ethiopia-kochere-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.29,
+    "title": "10 oz",
+    "variant_id": "31219:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.29,
+    "title": "2 lb",
+    "variant_id": "31219:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24056e1c07732cd2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-natural",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2026/09/Guji-2026.png",
+  "platform": "woocommerce",
+  "product_id": "36748",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Fresh Roasted",
+   "Modern",
+   "coffee",
+   "ethiopia",
+   "florida",
+   "lakeland",
+   "patriot coffee",
+   "roaster",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopia Guji Natural",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/modern/ethiopia-guji-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.29,
+    "title": "10 oz",
+    "variant_id": "36748:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.29,
+    "title": "2 lb",
+    "variant_id": "36748:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8073c4996ed896c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2018/05/Guatemala-Huehuetenango-2024.png",
+  "platform": "woocommerce",
+  "product_id": "3789",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Balanced",
+   "Fresh Roasted",
+   "coffee",
+   "colombia",
+   "florida",
+   "lakeland",
+   "narino",
+   "patriot coffee",
+   "regional select",
+   "roaster"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/balanced/guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "10 oz",
+    "variant_id": "3789:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.99,
+    "title": "2 lb",
+    "variant_id": "3789:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6fdb182fa6b6be87",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://patriotcraftcoffee.com/wp-content/uploads/2023/06/decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "576",
+  "product_type": "variable",
+  "roaster_slug": "patriotcraftcoffee",
+  "tags": [
+   "Classic",
+   "Fresh Roasted",
+   "coffee",
+   "ethiopa sidamo",
+   "florida",
+   "lakeland",
+   "patriot coffee",
+   "roaster"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://patriotcraftcoffee.com/patriot-retail-coffee/fresh-roasted/classic/decaf-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.29,
+    "title": "10 oz",
+    "variant_id": "576:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.29,
+    "title": "2 lb",
+    "variant_id": "576:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

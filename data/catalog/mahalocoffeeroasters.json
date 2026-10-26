@@ -1,0 +1,1487 @@
+[
+ {
+  "body_hash": "bc46e8aa4443d4ae",
+  "first_seen": "2026-10-26",
+  "handle": "dawn-patrol",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Dawn_Patrol_Mockup.png?v=1767361824",
+  "platform": "shopify",
+  "product_id": "2586929233984",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Blends and Espresso"
+  ],
+  "title": "Dawn Patrol // Our Flagship Blend",
+  "url": "https://www.mahalocoffeeroasters.com/products/dawn-patrol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587879186629"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587879219397"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587879252165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587879284933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923970883838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923970916606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923970949374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923970982142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089857761534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089857794302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089857827070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089857859838"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "f4b91776cea87dc4",
+  "first_seen": "2026-10-26",
+  "handle": "beanie-moose",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Decaf_Mockup.png?v=1767361925",
+  "platform": "shopify",
+  "product_id": "3902805147712",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia // Decaf",
+  "url": "https://www.mahalocoffeeroasters.com/products/beanie-moose",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587865424069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587865456837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587865489605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587865522373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923952402686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923952435454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923952468222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923952500990"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089861824766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089861857534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089861890302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089861923070"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "6ca74bd76dff2062",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Brazil_Mockup.png?v=1767362026",
+  "platform": "shopify",
+  "product_id": "3902811832384",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Natural Process"
+  ],
+  "title": "Brazil Natural // Cerrado Mineiro DO",
+  "url": "https://www.mahalocoffeeroasters.com/products/brazil-serra-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587939938501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587939971269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587940004037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587940036805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923969999102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923970031870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923970064638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923970097406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089862512894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089862545662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089862578430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089862611198"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "f164e5f37fe1d86d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-shakiso",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Bag_Mockup_2_09ff8b73-4318-43d0-86df-fcec08ba7b7a.png?v=1785168046",
+  "platform": "shopify",
+  "product_id": "4091015626816",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Natural Process"
+  ],
+  "title": "Ethiopia Natural // Guji",
+  "url": "https://www.mahalocoffeeroasters.com/products/ethiopia-shakiso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587956027589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587956060357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587956093125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587956125893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923972194558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923972227326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923972260094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923972292862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089857237246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089857270014"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089857302782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089857335550"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "b808e694298dedae",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/IMG_0548_7d4c6d3a-276e-4b1b-85a4-d65f981f10d7.jpg?v=1743786162",
+  "platform": "shopify",
+  "product_id": "4260935827520",
+  "product_type": "",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Roaster's Choice Single Origin",
+  "url": "https://www.mahalocoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40625564549317"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40625564582085"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40625564614853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40625564647621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47769496191230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "47769496223998"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "47769496256766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "47769496289534"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "fe8759b2ab362acf",
+  "first_seen": "2026-10-26",
+  "handle": "boosted-blend-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Sunsetter_Mockup.png?v=1767361899",
+  "platform": "shopify",
+  "product_id": "4462814003274",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Sunsetter Blend // South American Blend",
+  "url": "https://www.mahalocoffeeroasters.com/products/boosted-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587933089989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587933122757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587933155525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587933188293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923961577726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923961610494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923961643262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923961676030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089671442686"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089671475454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089671508222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089671540990"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "719cc2f6a50f4736",
+  "first_seen": "2026-10-26",
+  "handle": "night-surf",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Bag_Mockup_3_2a9cd2d7-c712-43cf-b3c6-2117b287dc69.png?v=1785764910",
+  "platform": "shopify",
+  "product_id": "4642829303882",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Night Surf // Darker Roast",
+  "url": "https://www.mahalocoffeeroasters.com/products/night-surf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587968839877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587968872645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587968905413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587968938181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923983302910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923983335678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923983368446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923983401214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47750425706750"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "47750425739518"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "47750425772286"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "47750425805054"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "f0e78039f15daff9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Guatemala_Mockup.png?v=1767362056",
+  "platform": "shopify",
+  "product_id": "4642833694794",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Guatemala Washed // Huehuetenango",
+  "url": "https://www.mahalocoffeeroasters.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40587964088517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "40587964121285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "40587964154053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse (French Press) / 12oz",
+    "variant_id": "40587964186821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43923972849918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "43923972882686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "43923972915454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Coarse (French Press) / 5lb",
+    "variant_id": "43923972948222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089856286974"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089856319742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089856352510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Coarse (French Press) / 2lb",
+    "variant_id": "46089856385278"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "e8508960e0a8584b",
+  "first_seen": "2026-10-26",
+  "handle": "party-wave-fruity-blend-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/BagMockup_1.png?v=1780692945",
+  "platform": "shopify",
+  "product_id": "8055432052990",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Party Wave // Fruity Blend",
+  "url": "https://www.mahalocoffeeroasters.com/products/party-wave-fruity-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46089770303742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089770336510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46089770369278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "46089770402046"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089770434814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "46089770467582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "46089770500350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089770533118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "46089770565886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Coarse (Cold Brew) / 12oz",
+    "variant_id": "46089770598654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Coarse (Cold Brew) / 2lb",
+    "variant_id": "46089770631422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse (Cold Brew) / 5lb",
+    "variant_id": "46089770664190"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "108c811b33d7829a",
+  "first_seen": "2026-10-26",
+  "handle": "bonfire-blend-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/bonfirebag.png?v=1729616964",
+  "platform": "shopify",
+  "product_id": "8141179977982",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Blends and Espresso",
+   "coffee"
+  ],
+  "title": "Bonfire Blend // Seasonal Blend",
+  "url": "https://www.mahalocoffeeroasters.com/products/bonfire-blend-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "44280697716990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "44280697913598"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "44280697946366"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44489720856830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "46089864085758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46089864118526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "46089864151294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "46089864184062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "46089864216830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "46089864249598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "46089864282366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "46089864315134"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "2264f53e2fc35940",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural-cerrado-mineiro-do-darker-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Darker_Brazil_Mockup.png?v=1767362225",
+  "platform": "shopify",
+  "product_id": "9104047014142",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [
+   "Natural Process"
+  ],
+  "title": "Brazil Natural // Cerrado Mineiro DO // Darker Roast",
+  "url": "https://www.mahalocoffeeroasters.com/products/brazil-natural-cerrado-mineiro-do-darker-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47664820027646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47664820060414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47664820093182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "47664820125950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "47664820158718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "47664820191486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "47664820224254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "47664820257022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "47664820289790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "47664820322558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "47664820355326"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "47664820388094"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "1d6347ebf7c9519d",
+  "first_seen": "2026-10-26",
+  "handle": "hang-ten-darker-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/HangTen.png?v=1770393612",
+  "platform": "shopify",
+  "product_id": "9126663520510",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Hang Ten // Darker Espresso Blend",
+  "url": "https://www.mahalocoffeeroasters.com/products/hang-ten-darker-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47775144476926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47775144509694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47775144542462"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "47775144575230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "47775144607998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "47775144640766"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "47775144673534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "47775144706302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "47775144739070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "47775144771838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "47775144804606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "47775144837374"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "1f6c1b8cb9d1b0fa",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-honey-caturra",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/BagMockup.png?v=1780683898",
+  "platform": "shopify",
+  "product_id": "9266866749694",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Honey // Caturra",
+  "url": "https://www.mahalocoffeeroasters.com/products/costa-rica-honey-caturra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48318545068286"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48318545101054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "48318545133822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "48318545166590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "48318545199358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "48318545232126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "48318545264894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "48318545297662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48849533763838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "48849533796606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "48849533829374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "48849533862142"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "63162023e4907b27",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-natural-catai",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Bag_Mockup_2.png?v=1780686147",
+  "platform": "shopify",
+  "product_id": "9266881986814",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Natural // Catuai // La Pascuala",
+  "url": "https://www.mahalocoffeeroasters.com/products/costa-rica-natural-catai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48318582030590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48318582063358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "48318582096126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "48318582128894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "48318582161662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "48318582194430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "48318582227198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "48318582259966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48849519411454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "48849519444222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "48849519476990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "48849519509758"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ },
+ {
+  "body_hash": "d31a5c851f9712d5",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-washed-caturra-san-gabriel",
+  "image": "https://cdn.shopify.com/s/files/1/0196/4045/1136/files/Bag_Mockup_3.png?v=1780687539",
+  "platform": "shopify",
+  "product_id": "9266896077054",
+  "product_type": "Coffee",
+  "roaster_slug": "mahalocoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Washed // Caturra // San Gabriel",
+  "url": "https://www.mahalocoffeeroasters.com/products/costa-rica-washed-caturra-san-gabriel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48318626955518"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48318626988286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium (Drip/Pourover) / 12oz",
+    "variant_id": "48318627021054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Medium (Drip/Pourover) / 2lb",
+    "variant_id": "48318627053822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine (Espresso) / 12oz",
+    "variant_id": "48318627086590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Fine (Espresso) / 2lb",
+    "variant_id": "48318627119358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse (Cold Brew/French Press) / 12oz",
+    "variant_id": "48318627152126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Coarse (Cold Brew/French Press) / 2lb",
+    "variant_id": "48318627184894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48849506697470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium (Drip/Pourover) / 5lb",
+    "variant_id": "48849506730238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Fine (Espresso) / 5lb",
+    "variant_id": "48849506763006"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Coarse (Cold Brew/French Press) / 5lb",
+    "variant_id": "48849506795774"
+   }
+  ],
+  "vendor": "Mahalo Coffee Roasters"
+ }
+]

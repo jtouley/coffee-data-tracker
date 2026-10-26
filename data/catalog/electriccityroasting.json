@@ -1,0 +1,714 @@
+[
+ {
+  "body_hash": "8a26753ae55e3ce3",
+  "first_seen": "2026-10-26",
+  "handle": "blue-moose",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Blue-Moose-1.png",
+  "platform": "woocommerce",
+  "product_id": "21161",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Medium Roast",
+   "Subscriptions"
+  ],
+  "title": "Blue Moose™ Coffee",
+  "url": "https://electriccityroasting.com/product/blue-moose/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21161:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21161:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21161:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21161:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e31ec86c5727621",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Col-Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "21171",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "Subscriptions"
+  ],
+  "title": "Colombian Decaf Coffee",
+  "url": "https://electriccityroasting.com/product/colombian-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21171:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21171:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21171:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21171:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c22a4ed10465381",
+  "first_seen": "2026-10-26",
+  "handle": "ladha-sana",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Ladha-Sana.png",
+  "platform": "woocommerce",
+  "product_id": "21181",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Light Roast",
+   "Subscriptions"
+  ],
+  "title": "Ladha Sana Coffee",
+  "url": "https://electriccityroasting.com/product/ladha-sana/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21181:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21181:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21181:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21181:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ce0946b8d8bdd37",
+  "first_seen": "2026-10-26",
+  "handle": "velvet",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Velvet-Medium-Roast.png",
+  "platform": "woocommerce",
+  "product_id": "21201",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast",
+   "Subscriptions"
+  ],
+  "title": "Velvet Coffee",
+  "url": "https://electriccityroasting.com/product/velvet/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21201:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21201:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21201:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21201:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e56c7ce379e85804",
+  "first_seen": "2026-10-26",
+  "handle": "awakening",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Awakening.png",
+  "platform": "woocommerce",
+  "product_id": "21206",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Medium Roast",
+   "Subscriptions"
+  ],
+  "title": "Awakening Coffee",
+  "url": "https://electriccityroasting.com/product/awakening/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21206:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21206:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21206:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21206:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12090ac2a8403cdc",
+  "first_seen": "2026-10-26",
+  "handle": "autobahn-espresso",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2019/10/Autobahn.png",
+  "platform": "woocommerce",
+  "product_id": "21216",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Espresso",
+   "Medium Roast",
+   "Subscriptions"
+  ],
+  "title": "Autobahn Espresso Coffee",
+  "url": "https://electriccityroasting.com/product/autobahn-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "21216:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "21216:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "21216:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "21216:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d00dac1233f31e01",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2020/04/Moka-Java-Medium-Roast.png",
+  "platform": "woocommerce",
+  "product_id": "27712",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast",
+   "Subscriptions"
+  ],
+  "title": "Moka Java Coffee",
+  "url": "https://electriccityroasting.com/product/moka-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "27712:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "27712:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "27712:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "27712:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b5090ca6bda1f04",
+  "first_seen": "2026-10-26",
+  "handle": "boom-roasted",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2020/05/Boom-Roasted.png",
+  "platform": "woocommerce",
+  "product_id": "27881",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast",
+   "Subscriptions"
+  ],
+  "title": "Boom Roasted Coffee",
+  "url": "https://electriccityroasting.com/product/boom-roasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "27881:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "27881:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "27881:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "27881:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0d87d3a99d39619",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-don-mayo",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2021/10/Don-Mayo-Los-Nacientes.png",
+  "platform": "woocommerce",
+  "product_id": "33827",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Medium Roast",
+   "Single Origin",
+   "Subscriptions"
+  ],
+  "title": "Don Mayo Los Nacientes Coffee",
+  "url": "https://electriccityroasting.com/product/costa-rica-don-mayo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "33827:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "33827:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "33827:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "33827:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb8dd2c3543f6ee1",
+  "first_seen": "2026-10-26",
+  "handle": "harvest",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2022/09/Harvest-2.png",
+  "platform": "woocommerce",
+  "product_id": "37559",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Medium Roast",
+   "Seasonal"
+  ],
+  "title": "Harvest Coffee",
+  "url": "https://electriccityroasting.com/product/harvest/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "37559:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "37559:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "37559:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "37559:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "boom-roasted-sample",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2022/10/SamplePack-OnWhite_6.jpg",
+  "platform": "woocommerce",
+  "product_id": "38051",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [],
+  "title": "Boom Roasted Sample",
+  "url": "https://electriccityroasting.com/product/boom-roasted-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.99,
+    "title": "Boom Roasted Sample",
+    "variant_id": "38051:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-sample",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2022/10/varietypackfile-cd.png",
+  "platform": "woocommerce",
+  "product_id": "38052",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [],
+  "title": "Colombia Decaf Sample",
+  "url": "https://electriccityroasting.com/product/colombia-decaf-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.99,
+    "title": "Colombia Decaf Sample",
+    "variant_id": "38052:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "autobahn-espresso-sample",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2022/11/varietypackfile-922.png",
+  "platform": "woocommerce",
+  "product_id": "38466",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [],
+  "title": "Autobahn Espresso Sample",
+  "url": "https://electriccityroasting.com/product/autobahn-espresso-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.99,
+    "title": "Autobahn Espresso Sample",
+    "variant_id": "38466:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c7087da348e582a",
+  "first_seen": "2026-10-26",
+  "handle": "mystery-coffee",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2022/11/Mystery-Coffee-1.png",
+  "platform": "woocommerce",
+  "product_id": "38668",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Subscriptions"
+  ],
+  "title": "Mystery Coffee",
+  "url": "https://electriccityroasting.com/product/mystery-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 5.99,
+    "title": "12oz",
+    "variant_id": "38668:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 5.99,
+    "title": "24oz",
+    "variant_id": "38668:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.99,
+    "title": "4oz",
+    "variant_id": "38668:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 5.99,
+    "title": "5lb",
+    "variant_id": "38668:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd2932998b2c95fa",
+  "first_seen": "2026-10-26",
+  "handle": "roast-level-midnight",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2023/04/Roast-Level-Midnight-e1684251811190.png",
+  "platform": "woocommerce",
+  "product_id": "40399",
+  "product_type": "variable",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast",
+   "Subscriptions"
+  ],
+  "title": "Roast Level Midnight Coffee",
+  "url": "https://electriccityroasting.com/product/roast-level-midnight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz",
+    "variant_id": "40399:0"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 7.99,
+    "title": "24oz",
+    "variant_id": "40399:1"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "4oz",
+    "variant_id": "40399:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.99,
+    "title": "5lb",
+    "variant_id": "40399:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roast-level-midnight-sample",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2024/03/rlm-sample.png",
+  "platform": "woocommerce",
+  "product_id": "43585",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Roast Level Midnight Sample",
+  "url": "https://electriccityroasting.com/product/roast-level-midnight-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.99,
+    "title": "Roast Level Midnight Sample",
+    "variant_id": "43585:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "133065904592fc2e",
+  "first_seen": "2026-10-26",
+  "handle": "cold-espresso",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2025/09/DSC08004.jpg",
+  "platform": "woocommerce",
+  "product_id": "46702",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Cold Espresso",
+   "Subscriptions"
+  ],
+  "title": "Ready To Use Cold Espresso",
+  "url": "https://electriccityroasting.com/product/cold-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 28.0,
+    "title": "24oz",
+    "variant_id": "46702:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74dd3af0a1badc0c",
+  "first_seen": "2026-10-26",
+  "handle": "don-mayo-los-nacientes-4oz-sample",
+  "image": "https://electriccityroasting.com/wp-content/uploads/2021/11/Don-Mayo-Las-Nubes.png",
+  "platform": "woocommerce",
+  "product_id": "48602",
+  "product_type": "simple",
+  "roaster_slug": "electriccityroasting",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Don Mayo Los Nacientes 4oz Sample",
+  "url": "https://electriccityroasting.com/product/don-mayo-los-nacientes-4oz-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.99,
+    "title": "Don Mayo Los Nacientes 4oz Sample",
+    "variant_id": "48602:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

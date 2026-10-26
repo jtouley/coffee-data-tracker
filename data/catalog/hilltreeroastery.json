@@ -1,0 +1,163 @@
+[
+ {
+  "body_hash": "8146766421bc6792",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-simbai-balus-kopi-washed",
+  "image": "https://cdn.shopify.com/s/files/1/2572/0262/products/Papua-New-Guinea-Simbai-Balus-Kopi-12oz-coffee.png?v=1768270309",
+  "platform": "shopify",
+  "product_id": "4450099167365",
+  "product_type": "Coffee",
+  "roaster_slug": "hilltreeroastery",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "PAPUA NEW GUINEA SIMBAI BALUS KOPI WASHED COFFEE",
+  "url": "https://hilltreeroastery.com/products/papua-new-guinea-simbai-balus-kopi-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "31754451091589"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "31754451157125"
+   }
+  ],
+  "vendor": "Hill Tree Roastery LLC"
+ },
+ {
+  "body_hash": "68612e9b8720c4ad",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-valle-del-cauca-sugarcane-ea-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2572/0262/files/COLOMBIA-VALLE-DEL-CAUCA-SUGARCANE-EA-DECAF-12oz-Coffee.png?v=1768270416",
+  "platform": "shopify",
+  "product_id": "9076180582622",
+  "product_type": "Coffee",
+  "roaster_slug": "hilltreeroastery",
+  "tags": [
+   "Dark Roast",
+   "Decaf"
+  ],
+  "title": "COLOMBIA VALLE DEL CAUCA SUGARCANE EA DECAF",
+  "url": "https://hilltreeroastery.com/products/colombia-valle-del-cauca-sugarcane-ea-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "47748395008222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "47748395040990"
+   }
+  ],
+  "vendor": "Hill Tree Roastery LLC"
+ },
+ {
+  "body_hash": "d39aafe32184cf0a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-boa-vista",
+  "image": "https://cdn.shopify.com/s/files/1/2572/0262/files/BRAZILFazendaBoaVista.png?v=1782418962",
+  "platform": "shopify",
+  "product_id": "9249728594142",
+  "product_type": "Coffee",
+  "roaster_slug": "hilltreeroastery",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "BRAZIL FAZENDA BOA VISTA",
+  "url": "https://hilltreeroastery.com/products/brazil-fazenda-boa-vista",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "48369684938974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "48369684971742"
+   }
+  ],
+  "vendor": "Hill Tree Roastery LLC"
+ },
+ {
+  "body_hash": "946a31eab7eb020f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-banko-chelchele-supernatural-anaerobic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2572/0262/files/ETHIOPIAYIRGACHEFFEBANKOCHELCHELESUPERNATURALANAEROBICCOFFEE.png?v=1788725009",
+  "platform": "shopify",
+  "product_id": "9330224988382",
+  "product_type": "Coffee",
+  "roaster_slug": "hilltreeroastery",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "ETHIOPIA YIRGACHEFFE BANKO CHELCHELE SUPERNATURAL ANAEROBIC COFFEE",
+  "url": "https://hilltreeroastery.com/products/ethiopia-yirgacheffe-banko-chelchele-supernatural-anaerobic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "49000136114398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "49000136147166"
+   }
+  ],
+  "vendor": "Hill Tree Roastery LLC"
+ },
+ {
+  "body_hash": "8bfd6391b926561f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nayarit-natural-anaerobic-dragon",
+  "image": "https://cdn.shopify.com/s/files/1/2572/0262/files/MEXICONAYARITNATURALANAEROBICDRAGON.png?v=1792510839",
+  "platform": "shopify",
+  "product_id": "9359224504542",
+  "product_type": "Coffee",
+  "roaster_slug": "hilltreeroastery",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "MEXICO NAYARIT NATURAL ANAEROBIC DRAGON",
+  "url": "https://hilltreeroastery.com/products/mexico-nayarit-natural-anaerobic-dragon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "49136711565534"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "49136711598302"
+   }
+  ],
+  "vendor": "Hill Tree Roastery LLC"
+ }
+]

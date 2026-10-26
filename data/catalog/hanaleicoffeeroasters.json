@@ -1,0 +1,300 @@
+[
+ {
+  "body_hash": "3d0d44ed1e4c62b3",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-kona-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Kona-Mist_Front.png?v=1683738058",
+  "platform": "shopify",
+  "product_id": "6764237619303",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Kona Mist",
+  "url": "https://www.hanaleicoffeeroasters.com/products/copy-of-100-kona-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 42.0,
+    "title": "8 oz",
+    "variant_id": "40102028574823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 80.0,
+    "title": "1 lb",
+    "variant_id": "40102325157991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 300.0,
+    "title": "5 lb",
+    "variant_id": "40102326501479"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "372414c94ea5fa12",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-100-kauai-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Kauai-Lush_Front.png?v=1683738268",
+  "platform": "shopify",
+  "product_id": "6764238897255",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Kauai Lush",
+  "url": "https://www.hanaleicoffeeroasters.com/products/copy-of-100-kauai-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 50.0,
+    "title": "8 oz",
+    "variant_id": "40102034702439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 90.0,
+    "title": "1 lb",
+    "variant_id": "40102328664167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 325.0,
+    "title": "5 lb",
+    "variant_id": "40102328828007"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "50dc655b9d603ba4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-hanalei-sunrise-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Hanalei-Sunrise_Front.png?v=1683738815",
+  "platform": "shopify",
+  "product_id": "6764239650919",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Hanalei Sunrise Blend",
+  "url": "https://www.hanaleicoffeeroasters.com/products/copy-of-hanalei-sunrise-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz",
+    "variant_id": "40102330007655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "40102330040423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb",
+    "variant_id": "40102330073191"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "d236f5d9bf7c453f",
+  "first_seen": "2026-10-26",
+  "handle": "kekaha-sunset",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Kekaha-Sunset_Front.png?v=1683739015",
+  "platform": "shopify",
+  "product_id": "6764239847527",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Kekaha Sunset",
+  "url": "https://www.hanaleicoffeeroasters.com/products/kekaha-sunset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz",
+    "variant_id": "40103078428775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "40103078461543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "40103078494311"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "d303c6547c6808e3",
+  "first_seen": "2026-10-26",
+  "handle": "hawaii-hale",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Hawaii-Hale_Front.png?v=1683853887",
+  "platform": "shopify",
+  "product_id": "6764240142439",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Hawaii Hale",
+  "url": "https://www.hanaleicoffeeroasters.com/products/hawaii-hale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "8 oz",
+    "variant_id": "40102038700135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 55.0,
+    "title": "1 lb",
+    "variant_id": "40102038732903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb",
+    "variant_id": "40103170506855"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "d3d6adc7aca04420",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-hanalei-decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Half-Baked-Decaf_Front.png?v=1683740355",
+  "platform": "shopify",
+  "product_id": "6764240765031",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Half-Baked Decaf",
+  "url": "https://www.hanaleicoffeeroasters.com/products/copy-of-hanalei-decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz",
+    "variant_id": "40103180763239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 lb",
+    "variant_id": "40103180796007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb",
+    "variant_id": "40103180828775"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "94a218b7b8434457",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-hanalei-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_OG_House_Espresso_Front.png?v=1683739882",
+  "platform": "shopify",
+  "product_id": "6764240961639",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "OG House Espresso",
+  "url": "https://www.hanaleicoffeeroasters.com/products/copy-of-hanalei-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz",
+    "variant_id": "40103181189223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "40103181221991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "40103181254759"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ },
+ {
+  "body_hash": "81aec690ffe414c7",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0055/6738/1607/files/HCR_Espresso-Blend-1_Front.png?v=1683740099",
+  "platform": "shopify",
+  "product_id": "6764241354855",
+  "product_type": "",
+  "roaster_slug": "hanaleicoffeeroasters",
+  "tags": [],
+  "title": "Espresso Blend 1",
+  "url": "https://www.hanaleicoffeeroasters.com/products/espresso-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "8 oz",
+    "variant_id": "40103181811815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 lb",
+    "variant_id": "40103181844583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb",
+    "variant_id": "40103181877351"
+   }
+  ],
+  "vendor": "Hanalei Coffee and Tea"
+ }
+]

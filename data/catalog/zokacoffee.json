@@ -1,0 +1,2518 @@
+[
+ {
+  "body_hash": "3dffb98ad23e7d14",
+  "first_seen": "2026-10-26",
+  "handle": "santa-felisa",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/Anabella_and_Jeff.jpg?v=1793033717",
+  "platform": "shopify",
+  "product_id": "10264946278470",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Home Page Featured",
+   "Single Origin"
+  ],
+  "title": "Santa Felisa Gesha",
+  "url": "https://www.zokacoffee.com/products/santa-felisa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "50697011462214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "50697011494982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "50697011527750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Medium",
+    "variant_id": "50697011560518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Fine",
+    "variant_id": "50697011593286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 46.0,
+    "title": "12 oz / Finest",
+    "variant_id": "50697011626054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "50697011658822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.0,
+    "title": "2 lb / Medium",
+    "variant_id": "50697011691590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 270.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "50697011724358"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "9251ac4eebeb943b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-hidden-city",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Decaf_HIddenCity.jpg?v=1734389007",
+  "platform": "shopify",
+  "product_id": "1700714689",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Decaf",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Decaf Hidden City",
+  "url": "https://www.zokacoffee.com/products/decaf-hidden-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375560691782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375560724550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375560757318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375560790086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375560822854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375560855622"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375560888390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375560921158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375560953926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375560986694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375561019462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375561052230"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375561084998"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375561117766"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "a79c0616d7c8ab94",
+  "first_seen": "2026-10-26",
+  "handle": "desp",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Decaf_Paladino.jpg?v=1734388974",
+  "platform": "shopify",
+  "product_id": "461043229",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Decaf",
+   "Espresso",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Decaf Espresso Paladino",
+  "url": "https://www.zokacoffee.com/products/desp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375553646662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375553679430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375553712198"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375553744966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375553777734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375553810502"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375553843270"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375553876038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375553941574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375553974342"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375554007110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375554039878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375554072646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375554105414"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "d18f396eaa9830f2",
+  "first_seen": "2026-10-26",
+  "handle": "dtang",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Decaf_Tangletown.jpg?v=1734388977",
+  "platform": "shopify",
+  "product_id": "461043237",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Decaf",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Decaf Tangletown",
+  "url": "https://www.zokacoffee.com/products/dtang",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375555448902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375555481670"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375555514438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375555547206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375555579974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375555612742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375555645510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375555678278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375555711046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375555743814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375555776582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375555809350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375555842118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375555874886"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "26b1388183e89c37",
+  "first_seen": "2026-10-26",
+  "handle": "esp",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Paladino.jpg?v=1734388980",
+  "platform": "shopify",
+  "product_id": "461043241",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Blends",
+   "Espresso",
+   "Frontpage",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Espresso Paladino",
+  "url": "https://www.zokacoffee.com/products/esp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375555973190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375556005958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375556038726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Medium",
+    "variant_id": "42375556071494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Fine",
+    "variant_id": "42375556104262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Finest",
+    "variant_id": "42375556137030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375556169798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Medium",
+    "variant_id": "42375556202566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375556235334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375556268102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375556300870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375556333638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375556366406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375556399174"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "e7f882a5c73cc65c",
+  "first_seen": "2026-10-26",
+  "handle": "fitz",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Fitzroy.jpg?v=1734388983",
+  "platform": "shopify",
+  "product_id": "461043245",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Blends",
+   "Subscribable",
+   "dark roast",
+   "has5lb"
+  ],
+  "title": "Fitzroy",
+  "url": "https://www.zokacoffee.com/products/fitz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375556464710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375556497478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375556530246"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Medium",
+    "variant_id": "42375556563014"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Fine",
+    "variant_id": "42375556595782"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Finest",
+    "variant_id": "42375556628550"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375556661318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Medium",
+    "variant_id": "42375556694086"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375556726854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375556759622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375556792390"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375556825158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375556857926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375556890694"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "73f8bba6e86e4445",
+  "first_seen": "2026-10-26",
+  "handle": "hiddencity",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_HiddenCity.jpg?v=1734388986",
+  "platform": "shopify",
+  "product_id": "461043249",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Blends",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Hidden City",
+  "url": "https://www.zokacoffee.com/products/hiddencity",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375557152838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375557185606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375557218374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Medium",
+    "variant_id": "42375557251142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Fine",
+    "variant_id": "42375557283910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Finest",
+    "variant_id": "42375557316678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375557349446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Medium",
+    "variant_id": "42375557382214"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375557414982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375557447750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375557480518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375557513286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375557546054"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375557578822"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "4966f0df9325789e",
+  "first_seen": "2026-10-26",
+  "handle": "orgdquat",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Decaf_Cuatro.jpg?v=1734388991",
+  "platform": "shopify",
+  "product_id": "461043253",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Decaf",
+   "Espresso",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Decaf Espresso Cuatro",
+  "url": "https://www.zokacoffee.com/products/orgdquat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375557972038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375558004806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375558037574"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375558070342"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375558103110"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375558135878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375558168646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375558201414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375558234182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375558266950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375558299718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375558332486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375558365254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375558398022"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "11983b43e98c161e",
+  "first_seen": "2026-10-26",
+  "handle": "orgquat",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Cuatro.jpg?v=1734388994",
+  "platform": "shopify",
+  "product_id": "461043261",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Blends",
+   "Espresso",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Espresso Cuatro",
+  "url": "https://www.zokacoffee.com/products/orgquat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375558529094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375558561862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375558594630"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375558627398"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375558660166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375558692934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375558725702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375558758470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375558791238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375558824006"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375558856774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375558889542"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375558922310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375558955078"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "fbe4e798971d331f",
+  "first_seen": "2026-10-26",
+  "handle": "orgtat",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Tatoosh.jpg?v=1734388997",
+  "platform": "shopify",
+  "product_id": "461043265",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Blends",
+   "Subscribable",
+   "dark roast",
+   "has5lb"
+  ],
+  "title": "Tatoosh",
+  "url": "https://www.zokacoffee.com/products/orgtat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375559053382"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375559086150"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375559118918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "42375559151686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "42375559184454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "42375559217222"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375559249990"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Medium",
+    "variant_id": "42375559282758"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375559315526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375559348294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375559381062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375559413830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375559446598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375559479366"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "84dddf9bdc3a082f",
+  "first_seen": "2026-10-26",
+  "handle": "tang",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Tangletown.jpg?v=1734389000",
+  "platform": "shopify",
+  "product_id": "461043289",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Blends",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Tangletown",
+  "url": "https://www.zokacoffee.com/products/tang",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375559577670"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375559610438"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375559643206"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Medium",
+    "variant_id": "42375559675974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Fine",
+    "variant_id": "42375559708742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Finest",
+    "variant_id": "42375559741510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375559774278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Medium",
+    "variant_id": "42375559807046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375559839814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375559872582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375559905350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375559938118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375559970886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375560003654"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "4dc62f8b9e0de06d",
+  "first_seen": "2026-10-26",
+  "handle": "tuscan",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021_Tuscan.jpg?v=1734389004",
+  "platform": "shopify",
+  "product_id": "461043301",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Blends",
+   "Subscribable",
+   "has5lb"
+  ],
+  "title": "Tuscan",
+  "url": "https://www.zokacoffee.com/products/tuscan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Wholebean",
+    "variant_id": "42375560134726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarsest",
+    "variant_id": "42375560167494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Coarse",
+    "variant_id": "42375560200262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Medium",
+    "variant_id": "42375560233030"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Fine",
+    "variant_id": "42375560265798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.25,
+    "title": "12 oz / Finest",
+    "variant_id": "42375560298566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Wholebean",
+    "variant_id": "42375560331334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.5,
+    "title": "2 lb / Medium",
+    "variant_id": "42375560364102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "42375560396870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarsest",
+    "variant_id": "42375560429638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Coarse",
+    "variant_id": "42375560462406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Medium",
+    "variant_id": "42375560495174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Fine",
+    "variant_id": "42375560527942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.0,
+    "title": "5 lb / Finest",
+    "variant_id": "42375560560710"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "3507727d1b7f27f0",
+  "first_seen": "2026-10-26",
+  "handle": "sammamish-high-school-redhawk-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/products/Zoka-wide-bag-mockup_2021-SHS.jpg?v=1734389008",
+  "platform": "shopify",
+  "product_id": "6659651436614",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Benefit"
+  ],
+  "title": "Sammamish High School Redhawk Blend",
+  "url": "https://www.zokacoffee.com/products/sammamish-high-school-redhawk-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "39433379053638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "39433379086406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "39433379119174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Medium",
+    "variant_id": "39433379151942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Fine",
+    "variant_id": "39433379184710"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz / Finest",
+    "variant_id": "39433379217478"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "2d6ee7642104eee4",
+  "first_seen": "2026-10-26",
+  "handle": "desp-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_PALADINO_DECAF.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689532998",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Decaf Espresso Paladino 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/desp-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Wholebean",
+    "variant_id": "39529001156678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarsest (Percolator, Toddy)",
+    "variant_id": "39529001189446"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarse (French Press)",
+    "variant_id": "39529001222214"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Medium (Drip, Chemex, Flat Bottom)",
+    "variant_id": "39529001254982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Fine (Gold Cone, Paper Cone)",
+    "variant_id": "39529001287750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Finest (Espresso, Turkish)",
+    "variant_id": "39529001320518"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "bb90e34f186baa88",
+  "first_seen": "2026-10-26",
+  "handle": "dtang-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_TANGLETOWN_DECAF.png?v=1722371825",
+  "platform": "shopify",
+  "product_id": "6696689565766",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Decaf Tangletown 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/dtang-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Wholebean",
+    "variant_id": "39529001353286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarse - French Press, Hario Drip, Cold Brew, Percolater",
+    "variant_id": "39529001418822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Medium - Universal, Chemex, AutoDrip, Cone Filter",
+    "variant_id": "39529001451590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Fine - Espresso, AeroPress, MokaPot",
+    "variant_id": "39529001484358"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "d86fbcae3d0c4f23",
+  "first_seen": "2026-10-26",
+  "handle": "esp-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_PALADINO.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689598534",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Espresso Paladino 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/esp-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Wholebean",
+    "variant_id": "39529001549894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Coarsest",
+    "variant_id": "39529001582662"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Coarse",
+    "variant_id": "39529001615430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Medium",
+    "variant_id": "39529001648198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Fine",
+    "variant_id": "39529001680966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Finest",
+    "variant_id": "39529001713734"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "bd46373d2d6ab0a5",
+  "first_seen": "2026-10-26",
+  "handle": "fitz-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_FITZROY.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689631302",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Fitzroy 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/fitz-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Wholebean",
+    "variant_id": "39529001746502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarsest",
+    "variant_id": "39529001779270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse",
+    "variant_id": "39529001812038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium",
+    "variant_id": "39529001844806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Fine",
+    "variant_id": "39529001877574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Finest",
+    "variant_id": "39529001910342"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "bc7e38268f1dd069",
+  "first_seen": "2026-10-26",
+  "handle": "hiddencity-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_HIDDEN_CITY.png?v=1722371825",
+  "platform": "shopify",
+  "product_id": "6696689664070",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Hidden City 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/hiddencity-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Wholebean",
+    "variant_id": "39529001943110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarsest",
+    "variant_id": "39529001975878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarse",
+    "variant_id": "39529002008646"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Medium",
+    "variant_id": "39529002041414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Fine",
+    "variant_id": "39529002074182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Finest",
+    "variant_id": "39529002106950"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "e1d004d2a8a0f518",
+  "first_seen": "2026-10-26",
+  "handle": "orgdquat-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_CUATRO_DECAF_9909a389-438d-4b14-a52c-2b55846e482a.png?v=1722371896",
+  "platform": "shopify",
+  "product_id": "6696689696838",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Decaf Espresso Cuatro 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/orgdquat-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Wholebean",
+    "variant_id": "39529002139718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarsest (Percolator, Toddy)",
+    "variant_id": "39529002172486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse (French Press)",
+    "variant_id": "39529002205254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Medium (Drip, Chemex, Flat Bottom)",
+    "variant_id": "39529002238022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine (Gold Cone, Paper Cone)",
+    "variant_id": "39529002270790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Finest (Espresso, Turkish)",
+    "variant_id": "39529002303558"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "11983b43e98c161e",
+  "first_seen": "2026-10-26",
+  "handle": "orgquat-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_CUATRO.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689762374",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Espresso Cuatro 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/orgquat-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Wholebean",
+    "variant_id": "39529002532934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarsest",
+    "variant_id": "39529002565702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse",
+    "variant_id": "39529002598470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Medium",
+    "variant_id": "39529002631238"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine",
+    "variant_id": "39529002664006"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Finest",
+    "variant_id": "39529002696774"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "4f7a0b8e0d7fdf3d",
+  "first_seen": "2026-10-26",
+  "handle": "orgtat-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_TATOOSH.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689827910",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Tatoosh 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/orgtat-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Wholebean",
+    "variant_id": "39529002762310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarsest",
+    "variant_id": "39529002795078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Coarse",
+    "variant_id": "39529002827846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Medium",
+    "variant_id": "39529002860614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Fine",
+    "variant_id": "39529002893382"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Finest",
+    "variant_id": "39529002926150"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "14f681ce8016e343",
+  "first_seen": "2026-10-26",
+  "handle": "tang-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_TANGLETOWN.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689926214",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Tangletown 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/tang-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Wholebean",
+    "variant_id": "39529002958918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarsest",
+    "variant_id": "39529002991686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse",
+    "variant_id": "39529003024454"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium",
+    "variant_id": "39529003057222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Fine",
+    "variant_id": "39529003089990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Finest",
+    "variant_id": "39529003122758"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "564cc832fd11a2db",
+  "first_seen": "2026-10-26",
+  "handle": "tuscan-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_Mockup_TUSCAN.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696689958982",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Tuscan 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/tuscan-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Wholebean",
+    "variant_id": "39529003155526"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Coarsest",
+    "variant_id": "39529003188294"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Coarse",
+    "variant_id": "39529003221062"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Medium",
+    "variant_id": "39529003253830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Fine",
+    "variant_id": "39529003286598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.75,
+    "title": "Finest",
+    "variant_id": "39529003319366"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "1d48968f6ff61d13",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-hidden-city-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/ZOKA_5lb_BAG_HIDDEN_CITY_DECAF.png?v=1722371824",
+  "platform": "shopify",
+  "product_id": "6696690024518",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "5lb"
+  ],
+  "title": "Decaf Hidden City 5LB Bag",
+  "url": "https://www.zokacoffee.com/products/decaf-hidden-city-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Wholebean",
+    "variant_id": "39529003548742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarsest",
+    "variant_id": "39529003581510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Coarse",
+    "variant_id": "39529003614278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Medium",
+    "variant_id": "39529003647046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Fine",
+    "variant_id": "39529003679814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "Finest",
+    "variant_id": "39529003712582"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "9671f06aeac6afa7",
+  "first_seen": "2026-10-26",
+  "handle": "starter-kit",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/pouroverkit.png?v=1777314501",
+  "platform": "shopify",
+  "product_id": "7240158445638",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Blends",
+   "Gifts",
+   "Home Page Featured",
+   "Merchandise"
+  ],
+  "title": "Pour Over Brewing Kit",
+  "url": "https://www.zokacoffee.com/products/starter-kit",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1769,
+    "price_usd": 60.0,
+    "title": "Fitzroy Blend, Medium Dark Roast - Wholebean",
+    "variant_id": "40881747558470"
+   },
+   {
+    "available": true,
+    "grams": 1769,
+    "price_usd": 60.0,
+    "title": "Fitzroy Blend, Medium Dark Roast - Ground for Hario",
+    "variant_id": "40882055577670"
+   },
+   {
+    "available": true,
+    "grams": 1769,
+    "price_usd": 65.0,
+    "title": "Costa Rica Don Joel - Wholebean",
+    "variant_id": "44510178246726"
+   },
+   {
+    "available": true,
+    "grams": 1769,
+    "price_usd": 65.0,
+    "title": "Costa Rica Don Joel - Ground for Hario",
+    "variant_id": "44510178279494"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "a1c8dbee438f4382",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-don-joel-1",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/Screen_Shot_2026-07-28_at_4.36.53_PM.png?v=1785281870",
+  "platform": "shopify",
+  "product_id": "8486661849158",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Home Page Featured",
+   "Single Origin"
+  ],
+  "title": "Costa Rica Don Joel",
+  "url": "https://www.zokacoffee.com/products/costa-rica-don-joel-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Wholebean",
+    "variant_id": "45929755017286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Coarsest",
+    "variant_id": "45929755050054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Coarse",
+    "variant_id": "45929755082822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Medium",
+    "variant_id": "45929755115590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Fine",
+    "variant_id": "45929755148358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Finest",
+    "variant_id": "45929755181126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2lb / Wholebean",
+    "variant_id": "45929755213894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.0,
+    "title": "2lb / Medium",
+    "variant_id": "45929755312198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Wholebean",
+    "variant_id": "45929755410502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Coarsest",
+    "variant_id": "45929755443270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Coarse",
+    "variant_id": "45929755476038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Medium",
+    "variant_id": "45929755508806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Fine",
+    "variant_id": "45929755541574"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb / Finest",
+    "variant_id": "45929755574342"
+   }
+  ],
+  "vendor": "Zoka"
+ },
+ {
+  "body_hash": "067e348f8f191985",
+  "first_seen": "2026-10-26",
+  "handle": "peru-felipe-estela-el-roble",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/Zoka-coffee-bag-Felipe-Estela-final.png?v=1787850317",
+  "platform": "shopify",
+  "product_id": "8519946731590",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Home Page Featured",
+   "Single Origin"
+  ],
+  "title": "Peru Felipe Estela El Roble Washed",
+  "url": "https://www.zokacoffee.com/products/peru-felipe-estela-el-roble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "46456185356358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "46456185389126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "46456185421894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Medium",
+    "variant_id": "46456185454662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Fine",
+    "variant_id": "46456185487430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Finest",
+    "variant_id": "46456185520198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "46456185552966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb / Medium",
+    "variant_id": "46456185585734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "46456185618502"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "6d8700cdb97ce7fa",
+  "first_seen": "2026-10-26",
+  "handle": "peru-felipe-estela-el-roble-washed-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/PXL_20221208_092012241.PORTRAIT.jpg?v=1789496285",
+  "platform": "shopify",
+  "product_id": "8557749567558",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "2itemgiftbox",
+   "Home Page Featured",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Nguisse Nare Natural",
+  "url": "https://www.zokacoffee.com/products/peru-felipe-estela-el-roble-washed-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "46577937285190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "46577937317958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "46577937350726"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Medium",
+    "variant_id": "46577937383494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Fine",
+    "variant_id": "46577937416262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Finest",
+    "variant_id": "46577937449030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "46577937481798"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb / Medium",
+    "variant_id": "46577937514566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "46577937547334"
+   }
+  ],
+  "vendor": "Zoka Coffee Company"
+ },
+ {
+  "body_hash": "fa76fbe23a3f83b2",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-blend-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0836/5029/files/Autumn_Blend.png?v=1789671273",
+  "platform": "shopify",
+  "product_id": "8562668208198",
+  "product_type": "Coffee",
+  "roaster_slug": "zokacoffee",
+  "tags": [
+   "Blends",
+   "Home Page Featured"
+  ],
+  "title": "Autumn Blend 2026",
+  "url": "https://www.zokacoffee.com/products/autumn-blend-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Wholebean",
+    "variant_id": "46590512660550"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarsest",
+    "variant_id": "46590512693318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Coarse",
+    "variant_id": "46590512726086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Medium",
+    "variant_id": "46590512758854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Fine",
+    "variant_id": "46590512791622"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Finest",
+    "variant_id": "46590512824390"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Wholebean",
+    "variant_id": "46590512857158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb / Medium",
+    "variant_id": "46590512889926"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Wholebean",
+    "variant_id": "46590512922694"
+   }
+  ],
+  "vendor": "Zoka"
+ }
+]

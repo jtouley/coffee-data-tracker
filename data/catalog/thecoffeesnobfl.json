@@ -1,0 +1,1135 @@
+[
+ {
+  "body_hash": "ddb0fd0dc4bf2700",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Peruvian_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062919966768",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "14oz Bag"
+  ],
+  "title": "Peruvian",
+  "url": "https://thecoffeesnobfl.com/products/peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Espresso",
+    "variant_id": "43541389934640"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / French Press",
+    "variant_id": "43541389967408"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Whole Bean",
+    "variant_id": "43541390000176"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541390032944"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Espresso",
+    "variant_id": "43541390065712"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / French Press",
+    "variant_id": "43541390098480"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Whole Bean",
+    "variant_id": "43541390131248"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541390164016"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "e49f99bb0a7d3324",
+  "first_seen": "2026-10-26",
+  "handle": "5lbs-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/5lb_Sunshine_Front.png?v=1789346558",
+  "platform": "shopify",
+  "product_id": "8062920032304",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "In-House Blends!"
+  ],
+  "title": "5lb Blends",
+  "url": "https://thecoffeesnobfl.com/products/5lbs-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Sunshine Blend / Cold Brew",
+    "variant_id": "43541389475888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Sunshine Blend / French Press",
+    "variant_id": "43541389508656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Sunshine Blend / Drip Brew/Paper Filter",
+    "variant_id": "43541389541424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Sunshine Blend / Whole Bean",
+    "variant_id": "43541389574192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Connoisseur Blend / French Press",
+    "variant_id": "43541389606960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Connoisseur Blend / Whole Bean",
+    "variant_id": "43541389639728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Connoisseur Blend / Drip Brew/Paper Filter",
+    "variant_id": "43541389672496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Connoisseur Blend / Espresso",
+    "variant_id": "43541389705264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Connoisseur Blend / Cold Brew",
+    "variant_id": "43541389738032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Sunshine Blend / Espresso",
+    "variant_id": "43541389770800"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "e3c3f67823b47492",
+  "first_seen": "2026-10-26",
+  "handle": "sunshine-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Sunshine_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062920065072",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "14oz Bag"
+  ],
+  "title": "Sunshine Blend",
+  "url": "https://thecoffeesnobfl.com/products/sunshine-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Espresso",
+    "variant_id": "43541390196784"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "French Press",
+    "variant_id": "43541390229552"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Whole Bean",
+    "variant_id": "43541390262320"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Drip Brew/Paper Filter",
+    "variant_id": "43541390295088"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "c58603c3030ff838",
+  "first_seen": "2026-10-26",
+  "handle": "connoisseur-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Connoisseur_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062920097840",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "14oz Bag"
+  ],
+  "title": "Connoisseur Blend",
+  "url": "https://thecoffeesnobfl.com/products/connoisseur-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Espresso",
+    "variant_id": "43541389803568"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "French Press",
+    "variant_id": "43541389836336"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Whole Bean",
+    "variant_id": "43541389869104"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Drip Brew/Paper Filter",
+    "variant_id": "43541389901872"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "338d27d7adfcd773",
+  "first_seen": "2026-10-26",
+  "handle": "the-toxhards-official-custom-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/242d801c-6722e2_4a9a1d92347a467d91067bc927174a06_mv2.jpg?v=1787934871",
+  "platform": "shopify",
+  "product_id": "8062920228912",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "Limited Run!"
+  ],
+  "title": "The Toxhards Official Custom Coffee Bag",
+  "url": "https://thecoffeesnobfl.com/products/the-toxhards-official-custom-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.0,
+    "title": "Drip Brew/Paper Filter",
+    "variant_id": "43541390884912"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "43541390950448"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "43541390983216"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "43541391015984"
+   }
+  ],
+  "vendor": "The Toxhards"
+ },
+ {
+  "body_hash": "3e7bb3362e27e4c9",
+  "first_seen": "2026-10-26",
+  "handle": "5lbs-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/5lb_Decaf_Front.png?v=1789346558",
+  "platform": "shopify",
+  "product_id": "8062920392752",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "Swiss Water Process"
+  ],
+  "title": "5lbs Decaf - Swiss Water Process",
+  "url": "https://thecoffeesnobfl.com/products/5lbs-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "City / French Press",
+    "variant_id": "43541392850992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541392883760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541392916528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Dark / Espresso",
+    "variant_id": "43541392949296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Viennese / Espresso",
+    "variant_id": "43541392982064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Viennese / French Press",
+    "variant_id": "43541393014832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "City / Cold Brew",
+    "variant_id": "43541393047600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium / Espresso",
+    "variant_id": "43541393080368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium / French Press",
+    "variant_id": "43541393113136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Dark / Cold Brew",
+    "variant_id": "43541393145904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Dark / French Press",
+    "variant_id": "43541393178672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "City / Whole Bean",
+    "variant_id": "43541393211440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium / Cold Brew",
+    "variant_id": "43541393244208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "43541393276976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Dark / Whole Bean",
+    "variant_id": "43541393309744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Viennese / Cold Brew",
+    "variant_id": "43541393342512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "City / Drip Brew/Paper Filter",
+    "variant_id": "43541393375280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Viennese / Whole Bean",
+    "variant_id": "43541393408048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "City / Espresso",
+    "variant_id": "43541393440816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Dark / Drip Brew/Paper Filter",
+    "variant_id": "43541393473584"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "b317d25bfdc1e798",
+  "first_seen": "2026-10-26",
+  "handle": "5lbs-single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/5lb_Nicaraguan_Front.png?v=1789346558",
+  "platform": "shopify",
+  "product_id": "8062920425520",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "Organically Grown"
+  ],
+  "title": "5lb Single Origin",
+  "url": "https://thecoffeesnobfl.com/products/5lbs-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / City / Drip Brew/Paper Filter",
+    "variant_id": "43541393834032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Dark / Espresso",
+    "variant_id": "43541393866800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Medium / Whole Bean",
+    "variant_id": "43541393899568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Dark / Whole Bean",
+    "variant_id": "43541393932336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Dark / Cold Brew",
+    "variant_id": "43541393965104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Medium / Cold Brew",
+    "variant_id": "43541393997872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Medium / Whole Bean",
+    "variant_id": "43541394063408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Viennese / Whole Bean",
+    "variant_id": "43541394096176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Viennese / French Press",
+    "variant_id": "43541394128944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / City / Whole Bean",
+    "variant_id": "43541394161712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Viennese / Espresso",
+    "variant_id": "43541394194480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Dark / Cold Brew",
+    "variant_id": "43541394227248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Dark / French Press",
+    "variant_id": "43541394260016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Viennese / Cold Brew",
+    "variant_id": "43541394292784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Viennese / Espresso",
+    "variant_id": "43541394325552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / City / French Press",
+    "variant_id": "43541394358320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Dark / Whole Bean",
+    "variant_id": "43541394391088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Viennese / Espresso",
+    "variant_id": "43541394423856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Viennese / French Press",
+    "variant_id": "43541394456624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Medium / French Press",
+    "variant_id": "43541394489392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Dark / French Press",
+    "variant_id": "43541394522160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Medium / Cold Brew",
+    "variant_id": "43541394554928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Medium / Cold Brew",
+    "variant_id": "43541394587696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / City / Cold Brew",
+    "variant_id": "43541394620464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Viennese / Whole Bean",
+    "variant_id": "43541394653232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Medium / Whole Bean",
+    "variant_id": "43541394718768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541394817072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / City / Espresso",
+    "variant_id": "43541394849840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Viennese / Cold Brew",
+    "variant_id": "43541394882608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Medium / French Press",
+    "variant_id": "43541394915376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / City / French Press",
+    "variant_id": "43541394948144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / City / Cold Brew",
+    "variant_id": "43541394980912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Dark / Drip Brew/Paper Filter",
+    "variant_id": "43541395013680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Dark / Espresso",
+    "variant_id": "43541395046448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Viennese / Cold Brew",
+    "variant_id": "43541395079216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Dark / Drip Brew/Paper Filter",
+    "variant_id": "43541395111984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Medium / Espresso",
+    "variant_id": "43541395144752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Viennese / French Press",
+    "variant_id": "43541395177520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / City / Espresso",
+    "variant_id": "43541395210288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541395243056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541395275824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / City / Whole Bean",
+    "variant_id": "43541395308592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / City / Espresso",
+    "variant_id": "43541395341360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / City / Cold Brew",
+    "variant_id": "43541395374128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / City / French Press",
+    "variant_id": "43541395406896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / City / Drip Brew/Paper Filter",
+    "variant_id": "43541395439664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / City / Whole Bean",
+    "variant_id": "43541395472432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541395505200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Honduran / Viennese / Whole Bean",
+    "variant_id": "43541395537968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / City / Drip Brew/Paper Filter",
+    "variant_id": "43541395603504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541395636272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Medium / French Press",
+    "variant_id": "43541395669040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541395701808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "Peru / Medium / Espresso",
+    "variant_id": "43541395734576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Nicaraguan / Medium / Espresso",
+    "variant_id": "43541395767344"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "52dff292ff8f14bf",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Decaf_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062920622128",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "14oz Bag",
+   "Swiss Water Process"
+  ],
+  "title": "Peruvian Decaf",
+  "url": "https://thecoffeesnobfl.com/products/peruvian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Medium / Espresso",
+    "variant_id": "43541398913072"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Medium / French Press",
+    "variant_id": "43541398945840"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Medium / Whole Bean",
+    "variant_id": "43541398978608"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541399011376"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Viennese / Espresso",
+    "variant_id": "43541399044144"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Viennese / French Press",
+    "variant_id": "43541399076912"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Viennese / Whole Bean",
+    "variant_id": "43541399109680"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 17.0,
+    "title": "Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541399142448"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "5ac4bb2b9131240b",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Nicaraguan_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062920654896",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [
+   "14oz Bag"
+  ],
+  "title": "Nicaraguan",
+  "url": "https://thecoffeesnobfl.com/products/nicaraguan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Espresso",
+    "variant_id": "43541398257712"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / French Press",
+    "variant_id": "43541398290480"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Whole Bean",
+    "variant_id": "43541398323248"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541398356016"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Espresso",
+    "variant_id": "43541398388784"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / French Press",
+    "variant_id": "43541398421552"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Whole Bean",
+    "variant_id": "43541398454320"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541398487088"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "28d239dd957c7fe4",
+  "first_seen": "2026-10-26",
+  "handle": "honduran",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/14_Honduran_Front.png?v=1789346576",
+  "platform": "shopify",
+  "product_id": "8062920753200",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [],
+  "title": "Honduran",
+  "url": "https://thecoffeesnobfl.com/products/honduran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Espresso",
+    "variant_id": "43541399437360"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / French Press",
+    "variant_id": "43541399470128"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Whole Bean",
+    "variant_id": "43541399502896"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Medium / Drip Brew/Paper Filter",
+    "variant_id": "43541399535664"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Espresso",
+    "variant_id": "43541399568432"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / French Press",
+    "variant_id": "43541399601200"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Whole Bean",
+    "variant_id": "43541399633968"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Viennese / Drip Brew/Paper Filter",
+    "variant_id": "43541399666736"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Dark / Espresso",
+    "variant_id": "43541399699504"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Dark / French Press",
+    "variant_id": "43541399732272"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Dark / Whole Bean",
+    "variant_id": "43541399765040"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.5,
+    "title": "Dark / Drip Brew/Paper Filter",
+    "variant_id": "43541399797808"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ },
+ {
+  "body_hash": "25515faaa1578a20",
+  "first_seen": "2026-10-26",
+  "handle": "shelf-ready-retail-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0702/3876/5104/files/Retail_1_Each.png?v=1789359960",
+  "platform": "shopify",
+  "product_id": "8063523127344",
+  "product_type": "Coffee",
+  "roaster_slug": "thecoffeesnobfl",
+  "tags": [],
+  "title": "Shelf-Ready Retail Selection",
+  "url": "https://thecoffeesnobfl.com/products/shelf-ready-retail-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Default Title",
+    "variant_id": "43543182475312"
+   }
+  ],
+  "vendor": "The Coffee Snob"
+ }
+]

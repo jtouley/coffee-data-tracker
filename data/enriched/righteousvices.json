@@ -1,0 +1,59 @@
+{
+ "6213fcc8d92c0522e0d3e73a": {
+  "body_hash": "a98c4ca6f107f36c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bakers chocolate",
+   "molasses",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "62334f8e3d6f1964a914cb64": {
+  "body_hash": "2b15a362b9b3c5ad",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "citrus",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "67d449c2b8f32226f0bc20ac": {
+  "body_hash": "f4900fe800f7765a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate",
+   "citrus",
+   "caramel"
+  ],
+  "varietals": []
+ }
+}

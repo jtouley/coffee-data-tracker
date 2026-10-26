@@ -1,0 +1,232 @@
+[
+ {
+  "body_hash": "c39f084f26d8e8fc",
+  "first_seen": "2026-10-26",
+  "handle": "subscription-product",
+  "image": "https://cdn.shopify.com/s/files/1/0554/6429/6618/files/Artboard1.png?v=1697556522",
+  "platform": "shopify",
+  "product_id": "6979256877226",
+  "product_type": "",
+  "roaster_slug": "tweedcoffee",
+  "tags": [],
+  "title": "Recurring Subscriptions",
+  "url": "https://tweedcoffee.com/products/subscription-product",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "FOXTROT / Drip / 12 Ounce",
+    "variant_id": "42725953601706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "FOXTROT / French Press / 12 Ounce",
+    "variant_id": "42725969658026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "TIMEPIECE / Drip / 12 Ounce",
+    "variant_id": "42725969723562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "TIMEPIECE / French Press / 12 Ounce",
+    "variant_id": "42725969756330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "VIXEN / Drip / 12 Ounce",
+    "variant_id": "42725969821866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "VIXEN / French Press / 12 Ounce",
+    "variant_id": "42725969854634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "SINGLE ORIGIN / Drip / 12 Ounce",
+    "variant_id": "42725969920170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "SINGLE ORIGIN / French Press / 12 Ounce",
+    "variant_id": "42725969952938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "FOXTROT / Whole Bean / 12 Ounce",
+    "variant_id": "42783859867818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "TIMEPIECE / Whole Bean / 12 Ounce",
+    "variant_id": "42783859900586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "VIXEN / Whole Bean / 12 Ounce",
+    "variant_id": "42783859933354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "SINGLE ORIGIN / Whole Bean / 12 Ounce",
+    "variant_id": "42783859966122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "FOXTROT / Whole Bean / 5 Pound",
+    "variant_id": "44611826647210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "TIMEPIECE / Whole Bean / 5 Pound",
+    "variant_id": "44611826745514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "VIXEN / Whole Bean / 5 Pound",
+    "variant_id": "44611826876586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "SINGLE ORIGIN / Whole Bean / 5 Pound",
+    "variant_id": "44611827007658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "TIMEPIECE / Espresso / 12 Ounce",
+    "variant_id": "47356620112042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "VIXEN / Espresso / 12 Ounce",
+    "variant_id": "47356620144810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "SINGLE ORIGIN / Espresso / 12 Ounce",
+    "variant_id": "47356620177578"
+   }
+  ],
+  "vendor": "Tweed Coffee"
+ },
+ {
+  "body_hash": "bb2d38364f677598",
+  "first_seen": "2026-10-26",
+  "handle": "estudio-obata-limited-edition-handthrown-tweed-ceramics",
+  "image": "https://cdn.shopify.com/s/files/1/0554/6429/6618/files/IMG_6319.jpg?v=1701300012",
+  "platform": "shopify",
+  "product_id": "7900335210666",
+  "product_type": "",
+  "roaster_slug": "tweedcoffee",
+  "tags": [],
+  "title": "Estudio Obata Handthrown Mugs",
+  "url": "https://tweedcoffee.com/products/estudio-obata-limited-edition-handthrown-tweed-ceramics",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Black",
+    "variant_id": "45243450720426"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Red",
+    "variant_id": "45243450785962"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Light Green",
+    "variant_id": "45243450818730"
+   }
+  ],
+  "vendor": "Tweed Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ruvumu-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0554/6429/6618/files/Ruvumu-Natural-cover.jpg?v=1778860584",
+  "platform": "shopify",
+  "product_id": "8438697590954",
+  "product_type": "",
+  "roaster_slug": "tweedcoffee",
+  "tags": [],
+  "title": "Ruvumu Natural",
+  "url": "https://tweedcoffee.com/products/ruvumu-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Ounce / Whole Bean",
+    "variant_id": "48319570509994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Ounce / French Press",
+    "variant_id": "48319570542762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12 Ounce / Drip",
+    "variant_id": "48319570575530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "48319570608298"
+   }
+  ],
+  "vendor": "Tweed Coffee"
+ }
+]

@@ -1,0 +1,293 @@
+{
+ "10002726453538": {
+  "body_hash": "cd2ddce4eaf7981e",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1250,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10002763972898": {
+  "body_hash": "cd2ddce4eaf7981e",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1250,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10003204473122": {
+  "body_hash": "ed08382dcae9f583",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1670,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10098308841762": {
+  "body_hash": "1b86038fe325d16a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "10109575594274": {
+  "body_hash": "dafb57e1f6f00465",
+  "elevation_masl_max": 2400,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9633426407714": {
+  "body_hash": "c05c17a5d9553fc9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "balanced",
+   "smooth",
+   "chocolate",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "9634997141794": {
+  "body_hash": "0456b6731a4f3c00",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "rich",
+   "earthy",
+   "spice"
+  ],
+  "varietals": []
+ },
+ "9635282649378": {
+  "body_hash": "6d918e3d5348150a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fruity",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "9639045333282": {
+  "body_hash": "a4926433b26f5d49",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "sweet",
+   "nutty",
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639071711522": {
+  "body_hash": "b10cdcc8ddc7fb13",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "nutty",
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639089045794": {
+  "body_hash": "5c3ed154a95fec0f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet citrus",
+   "caramel",
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639137771810": {
+  "body_hash": "54b56fcff3625189",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639139180834": {
+  "body_hash": "c62e5870e2ddbe6a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639141441826": {
+  "body_hash": "208abd4103ef93ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639142326562": {
+  "body_hash": "dffc19d62db49734",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9639142883618": {
+  "body_hash": "f7f20ed310bb2ea5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold",
+   "smooth",
+   "ground"
+  ],
+  "varietals": []
+ },
+ "9990120702242": {
+  "body_hash": "ed08382dcae9f583",
+  "elevation_masl_max": 1950,
+  "elevation_masl_min": 1670,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

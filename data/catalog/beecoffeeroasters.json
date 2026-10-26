@@ -1,0 +1,191 @@
+[
+ {
+  "body_hash": "385c62e86af8106d",
+  "first_seen": "2026-10-26",
+  "handle": "artemis",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/68874acb-bc85-49b5-9967-eea47eeb8ed9/Coffee-Label-11-3-x-3-75+%284%29.jpg",
+  "platform": "squarespace",
+  "product_id": "5e2f403686b0645647e9bf46",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Artemis Blend",
+  "url": "https://www.beecoffeeroasters.com/shop/p/artemis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lbs",
+    "variant_id": "2ae3c411-1af6-40b8-a58f-b8fa93f1e867"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2 lbs.",
+    "variant_id": "68039860-4ab6-47ab-aff4-2425d15b97fc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "d37f372e-5362-49da-b204-93bdc5d4011b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "81a5e288e48342e0",
+  "first_seen": "2026-10-26",
+  "handle": "blue-hour-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/93c23e03-802d-4597-b0fd-7c0a08f4f28f/Coffee-Label-11-3-x-3-75+%282%29.jpg",
+  "platform": "squarespace",
+  "product_id": "601974c75358bc62dab71569",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Blue Hour Blend",
+  "url": "https://www.beecoffeeroasters.com/shop/p/blue-hour-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb",
+    "variant_id": "3a042dea-49cd-4af8-8219-a53a0c43960d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "53865eb7-d93d-4462-b164-8d68c0246e81"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30a225ab80f78630",
+  "first_seen": "2026-10-26",
+  "handle": "sidama-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/77cddc1f-6a31-43d5-a302-6a38aacff7a6/Coffee-Label-9-3-x-3-75-5.jpeg",
+  "platform": "squarespace",
+  "product_id": "683876585582757bbe4b8f8a",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Mexico-Chiapas Decaf",
+  "url": "https://www.beecoffeeroasters.com/shop/p/sidama-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "aa62009c-d406-456b-8944-3315d993efd9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2#",
+    "variant_id": "b2077baf-e920-46a6-bd01-a2d9489a9533"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0c3abf5517a12d8",
+  "first_seen": "2026-10-26",
+  "handle": "peru-warmikuna",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/bb6f50f7-1999-417e-9711-066a49033cb5/Coffee-Label-9-3-x-3-75-34.jpeg",
+  "platform": "squarespace",
+  "product_id": "699f27c244195311c2c339c3",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Peru Warmikuna",
+  "url": "https://www.beecoffeeroasters.com/shop/p/peru-warmikuna",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "bbe181ad-b4e4-40b2-8086-8a9689c74f59"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ef877f368474283",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-honey",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/d4c45382-3272-41d6-a282-4c03e6f314c7/Coffee-Label-9-3-x-3-75.png",
+  "platform": "squarespace",
+  "product_id": "6a1f0c08f2f64d69b392bfb9",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Tarrazu Honey",
+  "url": "https://www.beecoffeeroasters.com/shop/p/costa-rica-tarrazu-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "26e94966-221e-4e7e-952e-bbfc1de06169"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9279cdec2d9de9cb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-centro",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/fb90278d-4fd8-436c-96ee-feba2689bc36/Coffee-Label-9-3-x-3-75+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "6a1f1196dbedb812c31e8a55",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica El Centro",
+  "url": "https://www.beecoffeeroasters.com/shop/p/costa-rica-el-centro",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "83871900-470a-490e-a455-e53ecd6bafc5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1e3871c222c44ec",
+  "first_seen": "2026-10-26",
+  "handle": "ber-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5e149ad937d3a42e0c6f2bf5/c6edb803-3b1b-443c-8f97-59c2fc1476fa/Coffee-Label-11-3-x-3-75.png",
+  "platform": "squarespace",
+  "product_id": "6ad0e013ec1dfb0e49fb262d",
+  "product_type": "",
+  "roaster_slug": "beecoffeeroasters",
+  "tags": [],
+  "title": "'ber blend",
+  "url": "https://www.beecoffeeroasters.com/shop/p/ber-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "7c75e86d-8836-40bf-b514-343f2a8ad03e"
+   }
+  ],
+  "vendor": ""
+ }
+]

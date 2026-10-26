@@ -1,0 +1,315 @@
+[
+ {
+  "body_hash": "eff3cdb5f063f3c7",
+  "first_seen": "2026-10-26",
+  "handle": "jack-frost-blend",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2021/01/Jack-frost.jpg",
+  "platform": "woocommerce",
+  "product_id": "1363",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Spring Flood Blend Fair Trade Organic",
+  "url": "https://mugbycoffee.com/product/jack-frost-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "1363:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "1363:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4545af04151dfe3d",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2021/02/tanzania_lion.jpg",
+  "platform": "woocommerce",
+  "product_id": "1372",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://mugbycoffee.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "1372:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b29879d44cb61fa8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-pickwick-blend",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Organic-Pickwick-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "143",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Pickwick Blend Fair Trade Organic",
+  "url": "https://mugbycoffee.com/product/organic-pickwick-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "143:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "143:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b45d6b816cd2f672",
+  "first_seen": "2026-10-26",
+  "handle": "colombia%e2%80%a8",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Colombia-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "149",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://mugbycoffee.com/product/colombia%e2%80%a8/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "1 lb",
+    "variant_id": "149:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "12 oz",
+    "variant_id": "149:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6165262bd2e605ce",
+  "first_seen": "2026-10-26",
+  "handle": "organic-blackpool-espresso-blend",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Blackpool-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "178",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Bluff Espresso Blend Fair Trade Organic",
+  "url": "https://mugbycoffee.com/product/organic-blackpool-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "178:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "178:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1f8013d1467a5ad",
+  "first_seen": "2026-10-26",
+  "handle": "organic-fagin-dark",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Fagin-Dark.jpg",
+  "platform": "woocommerce",
+  "product_id": "182",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Barge Dark Fair Trade Organic",
+  "url": "https://mugbycoffee.com/product/organic-fagin-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "182:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "182:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b4d2407ba1341f63",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-natural-process",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Ethiopia-Single-Origin.jpg",
+  "platform": "woocommerce",
+  "product_id": "186",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Ethiopia Guji Natural Process",
+  "url": "https://mugbycoffee.com/product/ethiopia-guji-natural-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 lb",
+    "variant_id": "186:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "186:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7edf823a9965b610",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2018/10/Cafe_Imports_Mexico_COMON_YAJ_NOPTIC6-2021-12-08-191852.jpg",
+  "platform": "woocommerce",
+  "product_id": "197",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Mexico FTO Chiapas",
+  "url": "https://mugbycoffee.com/product/mexico-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "197:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "197:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37aaa57e3bb3af0a",
+  "first_seen": "2026-10-26",
+  "handle": "boatsandbluegrasslightroastcoffee",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2026/09/20260904_160448-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3009",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Boats Blend Light Roast",
+  "url": "https://mugbycoffee.com/product/boatsandbluegrasslightroastcoffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "3009:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "3009:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93e4ff1af5daf515",
+  "first_seen": "2026-10-26",
+  "handle": "perunortelimcoffto",
+  "image": "https://mugbycoffee.com/wp-content/uploads/2020/04/limacoffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "914",
+  "product_type": "variable",
+  "roaster_slug": "mugbyjunction",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Peru Lima Fair Trade Organic",
+  "url": "https://mugbycoffee.com/product/perunortelimcoffto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1 lb",
+    "variant_id": "914:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz",
+    "variant_id": "914:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,222 @@
+[
+ {
+  "body_hash": "3e03e9ef0c17fb64",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pitalito-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0737/2819/6824/files/3_6551b8a7-2ca6-41ab-9e92-0eb0167cbbb1.png?v=1740945775",
+  "platform": "shopify",
+  "product_id": "8817243128024",
+  "product_type": "",
+  "roaster_slug": "gypsysouls",
+  "tags": [],
+  "title": "Colombia Supremo",
+  "url": "https://gypsysoulscoffee.com/products/colombia-pitalito-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "50178612035800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "Fine Grind / 16 oz",
+    "variant_id": "50178612068568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "Drip Grind / 16 oz",
+    "variant_id": "50317315801304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.95,
+    "title": "Coarse Grind / 16 oz",
+    "variant_id": "50317315834072"
+   }
+  ],
+  "vendor": "Gypsy Souls Coffee"
+ },
+ {
+  "body_hash": "3b1cc372ab4efac7",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-oberon-ayabas",
+  "image": "https://cdn.shopify.com/s/files/1/0737/2819/6824/files/11.png?v=1740945775",
+  "platform": "shopify",
+  "product_id": "8817244078296",
+  "product_type": "",
+  "roaster_slug": "gypsysouls",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://gypsysoulscoffee.com/products/brazil-oberon-ayabas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "50178623209688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "Fine Grind / 16 oz",
+    "variant_id": "50178623242456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "Drip Grind / 16 oz",
+    "variant_id": "50315236638936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.95,
+    "title": "Coarse Grind / 16 oz",
+    "variant_id": "50315236671704"
+   }
+  ],
+  "vendor": "Gypsy Souls Coffee"
+ },
+ {
+  "body_hash": "f27214a255fc1945",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-turquesa",
+  "image": "https://cdn.shopify.com/s/files/1/0737/2819/6824/files/4.png?v=1740945775",
+  "platform": "shopify",
+  "product_id": "8817244242136",
+  "product_type": "",
+  "roaster_slug": "gypsysouls",
+  "tags": [],
+  "title": "Organic Mexico Chiapas Turquesa",
+  "url": "https://gypsysoulscoffee.com/products/mexico-chiapas-turquesa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "50178624913624"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Fine Grind / 16 oz",
+    "variant_id": "50178624946392"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 16 oz",
+    "variant_id": "50315356930264"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Coarse Grind / 16 oz",
+    "variant_id": "50315356963032"
+   }
+  ],
+  "vendor": "Gypsy Souls Coffee"
+ },
+ {
+  "body_hash": "96e9e4e5aa95a179",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mandheling-g1-tp",
+  "image": "https://cdn.shopify.com/s/files/1/0737/2819/6824/files/10.png?v=1740945775",
+  "platform": "shopify",
+  "product_id": "8817260888280",
+  "product_type": "",
+  "roaster_slug": "gypsysouls",
+  "tags": [],
+  "title": "Indonesian Sumatra Mandheling G1 TP",
+  "url": "https://gypsysoulscoffee.com/products/indonesia-sumatra-mandheling-g1-tp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "50178728755416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Coarse Grind / 16 oz",
+    "variant_id": "50315304435928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Fine Grind / 16 oz",
+    "variant_id": "50325455339736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 16 oz",
+    "variant_id": "50325455372504"
+   }
+  ],
+  "vendor": "Gypsy Souls Coffee"
+ },
+ {
+  "body_hash": "35b3a07b89a2934a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0737/2819/6824/files/1_ee9c6d30-7c9e-4982-8629-23fb370c5a18.png?v=1740945775",
+  "platform": "shopify",
+  "product_id": "8825319981272",
+  "product_type": "",
+  "roaster_slug": "gypsysouls",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://gypsysoulscoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Whole Bean / 16 oz",
+    "variant_id": "50319633973464"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Fine Ground / 16 oz",
+    "variant_id": "50319634006232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Drip Grind / 16 oz",
+    "variant_id": "50319634039000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.95,
+    "title": "Coarse Grind / 16 oz",
+    "variant_id": "50319634071768"
+   }
+  ],
+  "vendor": "Gypsy Souls Coffee"
+ }
+]

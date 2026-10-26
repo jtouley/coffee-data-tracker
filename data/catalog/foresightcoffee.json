@@ -1,0 +1,524 @@
+[
+ {
+  "body_hash": "db9c27fb9d4edaf3",
+  "first_seen": "2026-10-26",
+  "handle": "panama-la-santa",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Panama-La-Santa.webp?v=1792440022",
+  "platform": "shopify",
+  "product_id": "10045182509331",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Panama - La Santa",
+  "url": "https://foresightcoffee.com/products/panama-la-santa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole",
+    "variant_id": "51969812234515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "51969812267283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole",
+    "variant_id": "51969812300051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Ground",
+    "variant_id": "51969812332819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole",
+    "variant_id": "51969812365587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Ground",
+    "variant_id": "51969812398355"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "0c0f5cae9f5be85d",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Flagship-Blend.webp?v=1792438272",
+  "platform": "shopify",
+  "product_id": "9080871354643",
+  "product_type": "Blend",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Flagship Blend",
+  "url": "https://foresightcoffee.com/products/flagship-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48281937674515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48281937707283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48281937740051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "48281937772819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48281937805587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "48281937838355"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "91e4e0fc75ea95e9",
+  "first_seen": "2026-10-26",
+  "handle": "proximity-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Proximity-Blend_4f916421-1326-443d-b0b2-49435a03c3ac.webp?v=1792439068",
+  "platform": "shopify",
+  "product_id": "9084158279955",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Proximity Blend",
+  "url": "https://foresightcoffee.com/products/proximity-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole",
+    "variant_id": "48281944260883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48281944293651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole",
+    "variant_id": "48281944326419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "48281944359187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole",
+    "variant_id": "48281944391955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "48281944424723"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "b215b716e9e35f6b",
+  "first_seen": "2026-10-26",
+  "handle": "paradigm-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Paradigm-Blend.webp?v=1792439489",
+  "platform": "shopify",
+  "product_id": "9267660161299",
+  "product_type": "Blend",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Paradigm Blend",
+  "url": "https://foresightcoffee.com/products/paradigm-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48657458430227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48657458462995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "48657458495763"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "48657458528531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48657458561299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "48657458594067"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "a932f65455e1981c",
+  "first_seen": "2026-10-26",
+  "handle": "slow-ride-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Half-Caff-Slow-Ride.webp?v=1792439627",
+  "platform": "shopify",
+  "product_id": "9583123169555",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Half Caff Slow Ride",
+  "url": "https://foresightcoffee.com/products/slow-ride-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49500949119251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "49500949152019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49500949184787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "49500949217555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49500949250323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "49500949283091"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "546952db5e560bc5",
+  "first_seen": "2026-10-26",
+  "handle": "nightcap-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Nightcap-Decaf.webp?v=1792439689",
+  "platform": "shopify",
+  "product_id": "9724834775315",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Nightcap Decaf",
+  "url": "https://foresightcoffee.com/products/nightcap-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49985920532755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "49985920565523"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49985920598291"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "49985920631059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49985920663827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "49985920696595"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "0e097172710e92f3",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-kochere",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Ethiopia-Yirgacheffe-Kochere_48adb2c8-361f-47b2-92ec-0f03cd8d36f6.webp?v=1792440498",
+  "platform": "shopify",
+  "product_id": "9729448902931",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe Kochere",
+  "url": "https://foresightcoffee.com/products/ethiopia-yirgacheffe-kochere",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50001947328787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Ground",
+    "variant_id": "50001947361555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50001947459859"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lb / Ground",
+    "variant_id": "50001947492627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50001947525395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Ground",
+    "variant_id": "50001947558163"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "2f6c038b34556621",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aguila-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Colombia-Aguila-Organic.webp?v=1792438975",
+  "platform": "shopify",
+  "product_id": "9917806543123",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Colombia Águila - Organic",
+  "url": "https://foresightcoffee.com/products/colombia-aguila-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50905489834259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "50905489867027"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50905489899795"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "50905489932563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50905489965331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "50905489998099"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ },
+ {
+  "body_hash": "f7c325ce29cba960",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-esperanza-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0816/6598/2739/files/Esperanza-Organic-Blend.webp?v=1792439824",
+  "platform": "shopify",
+  "product_id": "9919668781331",
+  "product_type": "Coffee",
+  "roaster_slug": "foresightcoffee",
+  "tags": [],
+  "title": "Esperanza - Organic Blend",
+  "url": "https://foresightcoffee.com/products/colombia-esperanza-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50913387938067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "50913387970835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50913388003603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2lb / Ground",
+    "variant_id": "50913388036371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50913388069139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Ground",
+    "variant_id": "50913388101907"
+   }
+  ],
+  "vendor": "Foresight Coffee"
+ }
+]

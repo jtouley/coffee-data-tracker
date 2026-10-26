@@ -1,0 +1,145 @@
+[
+ {
+  "body_hash": "dd656b9637c31de6",
+  "first_seen": "2026-10-26",
+  "handle": "step-one-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0564/8538/0140/products/StepOne8-bit50_scale.png?v=1664996514",
+  "platform": "shopify",
+  "product_id": "6821259804716",
+  "product_type": "",
+  "roaster_slug": "restorationroasters",
+  "tags": [],
+  "title": "Step One Blend",
+  "url": "https://www.restorationroasters.com/products/step-one-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "40198625493036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lbs",
+    "variant_id": "40198625525804"
+   }
+  ],
+  "vendor": "OCRM Restoration Roasters"
+ },
+ {
+  "body_hash": "6105aef4330c29ab",
+  "first_seen": "2026-10-26",
+  "handle": "hand-up-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0564/8538/0140/products/Hand-Up8-bit50_scale.png?v=1664994657",
+  "platform": "shopify",
+  "product_id": "6821275271212",
+  "product_type": "",
+  "roaster_slug": "restorationroasters",
+  "tags": [],
+  "title": "Hand-Up Blend",
+  "url": "https://www.restorationroasters.com/products/hand-up-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz",
+    "variant_id": "40198675300396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lbs",
+    "variant_id": "40198675333164"
+   }
+  ],
+  "vendor": "OCRM Restoration Roasters"
+ },
+ {
+  "body_hash": "959231c7792398bd",
+  "first_seen": "2026-10-26",
+  "handle": "prismatic-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0564/8538/0140/products/Prismatic8-bit50_scale.png?v=1664996299",
+  "platform": "shopify",
+  "product_id": "6821279825964",
+  "product_type": "",
+  "roaster_slug": "restorationroasters",
+  "tags": [],
+  "title": "Prismatic Espresso",
+  "url": "https://www.restorationroasters.com/products/prismatic-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "40198680248364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lbs",
+    "variant_id": "40198680281132"
+   }
+  ],
+  "vendor": "OCRM Restoration Roasters"
+ },
+ {
+  "body_hash": "c4c3583edc7d0c10",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0564/8538/0140/products/ScreenShot2022-06-09at9.51.25AM.png?v=1654793504",
+  "platform": "shopify",
+  "product_id": "6868970307628",
+  "product_type": "",
+  "roaster_slug": "restorationroasters",
+  "tags": [],
+  "title": "Ethiopia Acacia - Washed",
+  "url": "https://www.restorationroasters.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lbs",
+    "variant_id": "40387767959596"
+   }
+  ],
+  "vendor": "OCRM Restoration Roasters"
+ },
+ {
+  "body_hash": "944726569519bca5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-swiss-water-processed",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6977347944492",
+  "product_type": "12oz coffee beans",
+  "roaster_slug": "restorationroasters",
+  "tags": [],
+  "title": "Decaf - Columbian (Swiss Water Processed)",
+  "url": "https://www.restorationroasters.com/products/decaf-brazil-swiss-water-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz",
+    "variant_id": "40859378581548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lbs",
+    "variant_id": "40859378614316"
+   }
+  ],
+  "vendor": "OCRM Restoration Roasters"
+ }
+]

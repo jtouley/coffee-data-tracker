@@ -1,0 +1,277 @@
+{
+ "1038": {
+  "body_hash": "7304626193b18f97",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Uganda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "grape",
+   "green tea",
+   "berry",
+   "tannins"
+  ],
+  "varietals": []
+ },
+ "1040": {
+  "body_hash": "5470215cbf822f49",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "orange zest",
+   "black tea",
+   "semi sweet chocolate"
+  ],
+  "varietals": []
+ },
+ "1042": {
+  "body_hash": "ef9ac6caf110fdf0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "orange peel",
+   "cocoa powder",
+   "single malt"
+  ],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "2663": {
+  "body_hash": "de26fbd7d9d2b62d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Democratic Republic of the Congo",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lemon zest",
+   "malt",
+   "dates",
+   "brown spice"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "2665": {
+  "body_hash": "fa08d3aaa9fced69",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tangerine",
+   "cacao nib",
+   "rose water"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Geisha"
+  ]
+ },
+ "3177": {
+  "body_hash": "85cee6e32b973d9c",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "3196": {
+  "body_hash": "f8f316dd7b220cb1",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "stone fruit",
+   "mint candy",
+   "cola",
+   "jasmine tea"
+  ],
+  "varietals": [
+   "Pink Bourbon"
+  ]
+ },
+ "438": {
+  "body_hash": "990bdd52ff1fa491",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa nibs",
+   "black current"
+  ],
+  "varietals": [
+   "Wush Wush"
+  ]
+ },
+ "444": {
+  "body_hash": "387bd58af8ccab87",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red wine",
+   "malt",
+   "purple grape"
+  ],
+  "varietals": []
+ },
+ "8310": {
+  "body_hash": "c1e824a3b99f2122",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Wush Wush"
+  ]
+ },
+ "888": {
+  "body_hash": "384888455c71adae",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9177": {
+  "body_hash": "6c1ba856df187fd5",
+  "elevation_masl_max": 2250,
+  "elevation_masl_min": 2010,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry crme",
+   "honeysuckle",
+   "tropical tea  oz"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "9183": {
+  "body_hash": "5d5a5ea83960aab8",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Ruiru 11",
+   "Sl28",
+   "Sl34"
+  ]
+ },
+ "9268": {
+  "body_hash": "c0387e230bb5ff9a",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dried fruit",
+   "tree nuts",
+   "juicy mandarine"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ }
+}

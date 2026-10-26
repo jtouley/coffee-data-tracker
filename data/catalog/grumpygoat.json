@@ -1,0 +1,1718 @@
+[
+ {
+  "body_hash": "a09358510ea8af8c",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-peaberry-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/09/Web_Kenyan_Peaberry_Medium_16-oz.png",
+  "platform": "woocommerce",
+  "product_id": "11433",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Kenyan Peaberry – 1 lb",
+  "url": "https://grumpygoat.com/product/kenyan-peaberry-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Kenyan Peaberry &#8211; 1 lb",
+    "variant_id": "11433:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "556305aba4b15323",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-peaberry-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/09/Web_Kenyan_Peaberry_Medium_6-oz-1.png",
+  "platform": "woocommerce",
+  "product_id": "11463",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Kenyan Peaberry 6 oz",
+  "url": "https://grumpygoat.com/product/kenyan-peaberry-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Kenyan Peaberry 6 oz",
+    "variant_id": "11463:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec8a31f5ab83bfaa",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-haraaz-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/10/product-yemen-haraaz-16oz.png",
+  "platform": "woocommerce",
+  "product_id": "11543",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Yemen Haraaz – 1 lb",
+  "url": "https://grumpygoat.com/product/yemen-haraaz-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "Yemen Haraaz &#8211; 1 lb",
+    "variant_id": "11543:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec8a31f5ab83bfaa",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-haraaz-6oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/10/product-yemen-haraaz-6oz.png",
+  "platform": "woocommerce",
+  "product_id": "11572",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Yemen Haraaz – 6 oz",
+  "url": "https://grumpygoat.com/product/yemen-haraaz-6oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "Yemen Haraaz &#8211; 6 oz",
+    "variant_id": "11572:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "417b9589e118f277",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/11/Vietnam-6-oz-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "11793",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "Vietnam – 6 oz",
+  "url": "https://grumpygoat.com/product/vietnam-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Vietnam – 6 oz",
+    "variant_id": "11793:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b06e0c7cc68fe8f4",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/11/VIETNAM-–-1-LB-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "11823",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "Vietnam – 1 lb",
+  "url": "https://grumpygoat.com/product/vietnam-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Vietnam – 1 lb",
+    "variant_id": "11823:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e614f0c95936d38a",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/11/Jamaica-Blue-Mountain-6-oz-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "11851",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Jamaica Blue Mountain – 6 oz",
+  "url": "https://grumpygoat.com/product/jamaica-blue-mountain-coffee-6-oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "Jamaica Blue Mountain &#8211; 6 oz",
+    "variant_id": "11851:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d55753111f7d0fd",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2022/11/Jamaica-Blue-Mountain-1-lb-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "11880",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Jamaica Blue Mountain – 1 lb",
+  "url": "https://grumpygoat.com/product/jamaica-blue-mountain-coffee-1-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "Jamaica Blue Mountain &#8211; 1 lb",
+    "variant_id": "11880:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "14f64e00e2cfceab",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2023/11/uganda-6oz.png",
+  "platform": "woocommerce",
+  "product_id": "13323",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Uganda – 6 oz",
+  "url": "https://grumpygoat.com/product/uganda-coffee-6-oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "Uganda &#8211; 6 oz",
+    "variant_id": "13323:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "14f64e00e2cfceab",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2023/11/ugada-1lb.png",
+  "platform": "woocommerce",
+  "product_id": "13333",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Uganda – 1 lb",
+  "url": "https://grumpygoat.com/product/uganda-coffee-1-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "Uganda &#8211; 1 lb",
+    "variant_id": "13333:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c4418597341cde9",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-decaf-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/02/mexican-dark-roast-img.png",
+  "platform": "woocommerce",
+  "product_id": "13595",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Mexican Decaf -1 lb",
+  "url": "https://grumpygoat.com/product/mexican-decaf-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Mexican Decaf -1 lb",
+    "variant_id": "13595:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c4418597341cde9",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-decaf-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/02/mexican-dark-roast-img.png",
+  "platform": "woocommerce",
+  "product_id": "13606",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Mexican Decaf – 6 oz",
+  "url": "https://grumpygoat.com/product/mexican-decaf-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Mexican Decaf &#8211; 6 oz",
+    "variant_id": "13606:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ac7717b13270865",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/03/bolivian-16oz.png",
+  "platform": "woocommerce",
+  "product_id": "13752",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Bolivian – 1 lb",
+  "url": "https://grumpygoat.com/product/bolivian-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Bolivian &#8211; 1 lb",
+    "variant_id": "13752:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54572638d63b0e4f",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/03/bolivian-6oz-img.png",
+  "platform": "woocommerce",
+  "product_id": "13762",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Bolivian – 6 oz",
+  "url": "https://grumpygoat.com/product/bolivian-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Bolivian &#8211; 6 oz",
+    "variant_id": "13762:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83ee8e0b27545fc7",
+  "first_seen": "2026-10-26",
+  "handle": "flores-coffee-beans-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/04/floes-16oz-img.png",
+  "platform": "woocommerce",
+  "product_id": "13843",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "Flores – 1 lb",
+  "url": "https://grumpygoat.com/product/flores-coffee-beans-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Flores &#8211; 1 lb",
+    "variant_id": "13843:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "26e44be5f6f6ffe2",
+  "first_seen": "2026-10-26",
+  "handle": "flores-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2024/04/flores-6oz-img.png",
+  "platform": "woocommerce",
+  "product_id": "13853",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "Flores – 6 oz",
+  "url": "https://grumpygoat.com/product/flores-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Flores &#8211; 6 oz",
+    "variant_id": "13853:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "486a6ee301dde138",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/ethiopian-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "143",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Ethiopian – 1 lb",
+  "url": "https://grumpygoat.com/product/ethiopian-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Ethiopian &#8211; 1 lb",
+    "variant_id": "143:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c97ce65c966324f8",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian-gesha-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2025/04/bolivian-16oz.png",
+  "platform": "woocommerce",
+  "product_id": "14943",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Bolivian Gesha -1 lb",
+  "url": "https://grumpygoat.com/product/bolivian-gesha-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Bolivian Gesha -1 lb",
+    "variant_id": "14943:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90000766cc22751b",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian-gesha-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2025/04/bolivian-6oz.png",
+  "platform": "woocommerce",
+  "product_id": "14954",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Bolivian Gesha – 6 oz",
+  "url": "https://grumpygoat.com/product/bolivian-gesha-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "Bolivian Gesha &#8211; 6 oz",
+    "variant_id": "14954:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "281da785b2972af2",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2025/11/nicaraguan-img.jpg",
+  "platform": "woocommerce",
+  "product_id": "15687",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Nicaraguan – 1 lb",
+  "url": "https://grumpygoat.com/product/nicaraguan-coffee-1-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "Nicaraguan &#8211; 1 lb",
+    "variant_id": "15687:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "281da785b2972af2",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2025/11/nicaraguan-img.jpg",
+  "platform": "woocommerce",
+  "product_id": "15697",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Nicaraguan – 6 oz",
+  "url": "https://grumpygoat.com/product/nicaraguan-coffee-6-oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "Nicaraguan &#8211; 6 oz",
+    "variant_id": "15697:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1812add753a1bad2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-pink-bourbon-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/02/colombian-pro-img.png",
+  "platform": "woocommerce",
+  "product_id": "16015",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Colombian Pink Bourbon – 1 lb",
+  "url": "https://grumpygoat.com/product/colombian-pink-bourbon-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Colombian Pink Bourbon &#8211; 1 lb",
+    "variant_id": "16015:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1812add753a1bad2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-pink-bourbon-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/02/colombian-pro-img.png",
+  "platform": "woocommerce",
+  "product_id": "16025",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Colombian Pink Bourbon – 6 oz",
+  "url": "https://grumpygoat.com/product/colombian-pink-bourbon-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Colombian Pink Bourbon &#8211; 6 oz",
+    "variant_id": "16025:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8089ee08418e5069",
+  "first_seen": "2026-10-26",
+  "handle": "east-timor-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/02/east-timor-product-img.png",
+  "platform": "woocommerce",
+  "product_id": "16174",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "East Timor – 1 lb",
+  "url": "https://grumpygoat.com/product/east-timor-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "East Timor &#8211; 1 lb",
+    "variant_id": "16174:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8089ee08418e5069",
+  "first_seen": "2026-10-26",
+  "handle": "east-timor-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/02/east-timor-product-img.png",
+  "platform": "woocommerce",
+  "product_id": "16184",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "East Timor – 6 oz",
+  "url": "https://grumpygoat.com/product/east-timor-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "East Timor &#8211; 6 oz",
+    "variant_id": "16184:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b7cd967e8a99872f",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/colombian-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "162",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Colombian – 1 lb",
+  "url": "https://grumpygoat.com/product/colombian-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Colombian &#8211; 1 lb",
+    "variant_id": "162:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9fb71f99941fa92e",
+  "first_seen": "2026-10-26",
+  "handle": "bert-blend-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/04/bert-blend-pro-img.png",
+  "platform": "woocommerce",
+  "product_id": "16287",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central &amp; South American",
+   "Coffee"
+  ],
+  "title": "BERT Blend – 1 lb",
+  "url": "https://grumpygoat.com/product/bert-blend-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "BERT Blend &#8211; 1 lb",
+    "variant_id": "16287:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "affaba61a2512da6",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-anaerobic-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/08/brazilian-anaerobic-img.png",
+  "platform": "woocommerce",
+  "product_id": "16907",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Brazilian Anaerobic – 6 oz",
+  "url": "https://grumpygoat.com/product/brazilian-anaerobic-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Brazilian Anaerobic &#8211; 6 oz",
+    "variant_id": "16907:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "61d201f058cb2882",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-anaerobic-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2026/08/brazilian-anaerobic-img.png",
+  "platform": "woocommerce",
+  "product_id": "16917",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Brazilian Anaerobic- 1 lb",
+  "url": "https://grumpygoat.com/product/brazilian-anaerobic-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Brazilian Anaerobic- 1 lb",
+    "variant_id": "16917:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5145d8e1ba91e8b0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/guatemalen-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "179",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Guatemalan – 1 lb",
+  "url": "https://grumpygoat.com/product/guatemalan-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Guatemalan &#8211; 1 lb",
+    "variant_id": "179:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3cc59d4d75f4ccd0",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/peruviani-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "196",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Peruvian – 1 lb",
+  "url": "https://grumpygoat.com/product/peruvian-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Peruvian &#8211; 1 lb",
+    "variant_id": "196:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad2828826a707770",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/sumatra-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "213",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "Sumatra – 1 lb",
+  "url": "https://grumpygoat.com/product/sumatra-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Sumatra &#8211; 1 lb",
+    "variant_id": "213:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "81fae26a2a36e701",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2017/12/costa-rican-dark-coffee.png",
+  "platform": "woocommerce",
+  "product_id": "2418",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Costa Rican – 1 lb",
+  "url": "https://grumpygoat.com/product/costa-rican-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Costa Rican &#8211; 1 lb",
+    "variant_id": "2418:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04955d59f07d0801",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaffeinated-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2017/12/colombian-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "2436",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Colombian Decaf – 1 lb",
+  "url": "https://grumpygoat.com/product/colombian-decaffeinated-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Colombian Decaf &#8211; 1 lb",
+    "variant_id": "2436:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd1f8eba0978816d",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/07/brazil-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "3249",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Brazilian – 1 lb",
+  "url": "https://grumpygoat.com/product/brazilian-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Brazilian &#8211; 1 lb",
+    "variant_id": "3249:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "726e2a8758a5d0c3",
+  "first_seen": "2026-10-26",
+  "handle": "java-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/07/java-dark-roast-image.png",
+  "platform": "woocommerce",
+  "product_id": "3267",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "Java – 1 lb",
+  "url": "https://grumpygoat.com/product/java-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Java &#8211; 1 lb",
+    "variant_id": "3267:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ae5d2ed4c3322c0",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/10/honduran-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "3365",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Honduran – 1 lb",
+  "url": "https://grumpygoat.com/product/honduran-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Honduran &#8211; 1 lb",
+    "variant_id": "3365:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3624aa64e51e45dd",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/10/tanz-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "3376",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Tanzanian – 1 lb",
+  "url": "https://grumpygoat.com/product/tanzanian-peaberry-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Tanzanian &#8211; 1 lb",
+    "variant_id": "3376:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33f54591952dbf57",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-coffee-beans-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/01/coffee-packaging-website-ready-kenyan.png",
+  "platform": "woocommerce",
+  "product_id": "3510",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Kenyan – 1 lb",
+  "url": "https://grumpygoat.com/product/kenyan-coffee-beans-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Kenyan  &#8211; 1 lb",
+    "variant_id": "3510:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e73666185de9102",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee-1lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/01/coffee-packaging-website-ready-papau.png",
+  "platform": "woocommerce",
+  "product_id": "3519",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Coffee"
+  ],
+  "title": "Papua New Guinea – 1 lb",
+  "url": "https://grumpygoat.com/product/papua-new-guinea-coffee-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Papua New Guinea &#8211; 1 lb",
+    "variant_id": "3519:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "133701983b9a043c",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/08/burundi-coffee-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "3846",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Burundi – 1 lb",
+  "url": "https://grumpygoat.com/product/burundi-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Burundi &#8211; 1 lb",
+    "variant_id": "3846:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92fd3cff725e2807",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-decaffeinated-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2020/03/peruviani-dark-roast-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "4271",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Peruvian Decaf – 1 lb",
+  "url": "https://grumpygoat.com/product/peruvian-decaffeinated-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Peruvian Decaf &#8211; 1 lb",
+    "variant_id": "4271:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3132dc791100f267",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-coffee-beans",
+  "image": "https://grumpygoat.com/wp-content/uploads/2020/06/Rwanda-Coffee-grumpygoat-website-image-1.png",
+  "platform": "woocommerce",
+  "product_id": "4491",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Coffee"
+  ],
+  "title": "Rwanda – 1 lb",
+  "url": "https://grumpygoat.com/product/rwanda-coffee-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Rwanda &#8211; 1 lb",
+    "variant_id": "4491:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "69968b95f1d209a8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/ethiopian-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4618",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Ethiopian – 6 oz",
+  "url": "https://grumpygoat.com/product/ethiopian-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Ethiopian &#8211; 6 oz",
+    "variant_id": "4618:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f3102ceb7c3256b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/colombian-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4619",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Colombian – 6 oz",
+  "url": "https://grumpygoat.com/product/colombian-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Colombian &#8211; 6 oz",
+    "variant_id": "4619:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "078dadffb3a43e6e",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/peruviani-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4620",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Peruvian – 6 oz",
+  "url": "https://grumpygoat.com/product/peruvian-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Peruvian &#8211; 6 oz",
+    "variant_id": "4620:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c5541117e139728",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/sumatra-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4621",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "Sumatra – 6 oz",
+  "url": "https://grumpygoat.com/product/sumatra-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Sumatra &#8211; 6 oz",
+    "variant_id": "4621:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33dec20ad07f5efb",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2017/12/colombian-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "4622",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Colombian Decaf – 6 oz",
+  "url": "https://grumpygoat.com/product/colombian-decaf-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Colombian Decaf &#8211; 6 oz",
+    "variant_id": "4622:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b5b4f586cc5f621",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/07/brazil-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4623",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Brazilian – 6 oz",
+  "url": "https://grumpygoat.com/product/brazilian-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Brazilian &#8211; 6 oz",
+    "variant_id": "4623:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f9a189f44d36f0f",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/01/coffee-packaging-website-ready-kenyan.png",
+  "platform": "woocommerce",
+  "product_id": "4624",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Kenyan – 6 oz",
+  "url": "https://grumpygoat.com/product/kenyan-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Kenyan &#8211; 6 oz",
+    "variant_id": "4624:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa36376bbc56658c",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/01/coffee-packaging-website-ready-papau.png",
+  "platform": "woocommerce",
+  "product_id": "4625",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "Papua New Guinea – 6 oz",
+  "url": "https://grumpygoat.com/product/papua-new-guinea-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Papua New Guinea &#8211; 6 oz",
+    "variant_id": "4625:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97919726ba0e0031",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-decaf-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2020/03/peruviani-dark-roast-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "4626",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Peruvian Decaf – 6 oz",
+  "url": "https://grumpygoat.com/product/peruvian-decaf-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Peruvian Decaf &#8211; 6 oz",
+    "variant_id": "4626:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "133701983b9a043c",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2019/08/burundi-coffee-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4701",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Burundi – 6 oz",
+  "url": "https://grumpygoat.com/product/burundi-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Burundi &#8211; 6 oz",
+    "variant_id": "4701:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6e759324514e5b1",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/10/tanz-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4702",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Tanzanian – 6 oz",
+  "url": "https://grumpygoat.com/product/tanzanian-peaberry-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Tanzanian &#8211; 6 oz",
+    "variant_id": "4702:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "726e2a8758a5d0c3",
+  "first_seen": "2026-10-26",
+  "handle": "java-coffee-beans-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/07/java-dark-roast-image.png",
+  "platform": "woocommerce",
+  "product_id": "4703",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Asia &amp; Indonesia",
+   "Café"
+  ],
+  "title": "Java – 6 oz",
+  "url": "https://grumpygoat.com/product/java-coffee-beans-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Java &#8211; 6 oz",
+    "variant_id": "4703:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "81fae26a2a36e701",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2017/12/costa-rican-dark-coffee.png",
+  "platform": "woocommerce",
+  "product_id": "4704",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Costa Rican – 6 oz",
+  "url": "https://grumpygoat.com/product/costa-rican-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Costa Rican &#8211; 6 oz",
+    "variant_id": "4704:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b68e2f0a9f24d249",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2016/10/guatemalen-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4705",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Guatemalan – 6 oz",
+  "url": "https://grumpygoat.com/product/guatemalan-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Guatemalan &#8211; 6 oz",
+    "variant_id": "4705:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e3c76f20fa6f3b3b",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2018/10/honduran-dark-roast.png",
+  "platform": "woocommerce",
+  "product_id": "4706",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Honduran – 6 oz",
+  "url": "https://grumpygoat.com/product/honduran-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Honduran &#8211; 6 oz",
+    "variant_id": "4706:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "255269cdc4728413",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2020/06/Rwanda-Coffee-grumpygoat-website-image-1.png",
+  "platform": "woocommerce",
+  "product_id": "4708",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "Rwanda – 6 oz",
+  "url": "https://grumpygoat.com/product/rwanda-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Rwanda &#8211; 6 oz",
+    "variant_id": "4708:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8eb4e3c70114c55b",
+  "first_seen": "2026-10-26",
+  "handle": "dr-congo-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2020/11/DrCongo-Coffee-grumpygoat-website-image-1.png",
+  "platform": "woocommerce",
+  "product_id": "5506",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Africa &amp; Middle East",
+   "Café"
+  ],
+  "title": "DR Congo – 6 oz",
+  "url": "https://grumpygoat.com/product/dr-congo-6-oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "DR Congo &#8211; 6 oz",
+    "variant_id": "5506:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0e865c2df7be936f",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-decaf-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/06/BrazilianDecafDark-Coffee-grumpygoat-website-image-1.png",
+  "platform": "woocommerce",
+  "product_id": "6086",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "South America"
+  ],
+  "title": "Brazilian Decaf – 6 oz",
+  "url": "https://grumpygoat.com/product/brazilian-decaf-6-oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 0.0,
+    "title": "Brazilian Decaf &#8211; 6 oz",
+    "variant_id": "6086:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bed9c67bf99aeeb",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-decaf-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/06/BrazilianDecafDark-Coffee-grumpygoat-website-image-1.png",
+  "platform": "woocommerce",
+  "product_id": "8218",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Coffee",
+   "South America"
+  ],
+  "title": "Brazilian Decaf – 1 lb",
+  "url": "https://grumpygoat.com/product/brazilian-decaf-coffee-1-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "Brazilian Decaf &#8211; 1 lb",
+    "variant_id": "8218:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2081c669c9f3a495",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/08/grumpygoat-website-MexicanMediumRoast-v1.png",
+  "platform": "woocommerce",
+  "product_id": "8524",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "Mexican – 1 lb",
+  "url": "https://grumpygoat.com/product/mexican-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Mexican &#8211; 1 lb",
+    "variant_id": "8524:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2081c669c9f3a495",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/08/grumpygoat-website-MexicanMediumRoast-v1.png",
+  "platform": "woocommerce",
+  "product_id": "8533",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "Mexican – 6 oz",
+  "url": "https://grumpygoat.com/product/mexican-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "Mexican &#8211; 6 oz",
+    "variant_id": "8533:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d3c491c7a6f8e21",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-coffee-1-lb",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/08/grumpygoat-website-ElSalvadorDarkRoast-v1.png",
+  "platform": "woocommerce",
+  "product_id": "8536",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Central America",
+   "Coffee"
+  ],
+  "title": "El Salvador – 1 lb",
+  "url": "https://grumpygoat.com/product/el-salvador-coffee-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "El Salvador &#8211; 1 lb",
+    "variant_id": "8536:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d3c491c7a6f8e21",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-coffee-6-oz",
+  "image": "https://grumpygoat.com/wp-content/uploads/2021/08/grumpygoat-website-ElSalvadorDarkRoast-v1.png",
+  "platform": "woocommerce",
+  "product_id": "8539",
+  "product_type": "variable",
+  "roaster_slug": "grumpygoat",
+  "tags": [
+   "Café",
+   "Central America"
+  ],
+  "title": "El Salvador – 6 oz",
+  "url": "https://grumpygoat.com/product/el-salvador-coffee-6-oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 10.0,
+    "title": "El Salvador &#8211; 6 oz",
+    "variant_id": "8539:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

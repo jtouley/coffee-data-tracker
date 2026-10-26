@@ -1,0 +1,567 @@
+[
+ {
+  "body_hash": "575fc27f0830c158",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-shb",
+  "image": "https://pcroaster.com/wp-content/uploads/2019/06/cosat-rica-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "15756",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "5 lb",
+   "All Products",
+   "Coffee",
+   "Costa Rica",
+   "Medium Roast",
+   "Single Origin",
+   "Single Origin Estate Coffees",
+   "Spice",
+   "Sweet",
+   "Whole Bean"
+  ],
+  "title": "Costa Rica SHB",
+  "url": "https://pcroaster.com/product/costa-rica-shb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "15756:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "15756:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f527ae3f165d92c",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-single-origin",
+  "image": "https://pcroaster.com/wp-content/uploads/2019/06/el-salvador-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "15777",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "5 lb",
+   "All Products",
+   "Coffee",
+   "El Salvador",
+   "Fruity",
+   "Medium Roast",
+   "Nutty",
+   "Single Origin",
+   "Single Origin Estate Coffees",
+   "Whole Bean"
+  ],
+  "title": "El Salvador Single Origin",
+  "url": "https://pcroaster.com/product/el-salvador-single-origin/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "15777:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "15777:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9511c11de73fea8e",
+  "first_seen": "2026-10-26",
+  "handle": "park-city-blend",
+  "image": "https://pcroaster.com/wp-content/uploads/2019/06/park-city-blend-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "15793",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "12 oz (can)",
+   "2 lb",
+   "5 lb",
+   "Cocoa",
+   "Coffee",
+   "Ground",
+   "Medium Roast",
+   "Signature Blends",
+   "Spice",
+   "Whole Bean"
+  ],
+  "title": "Park City Blend",
+  "url": "https://pcroaster.com/product/park-city-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "15793:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz (can)",
+    "variant_id": "15793:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "15793:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "15793:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ddb6f89afa3d9b6",
+  "first_seen": "2026-10-26",
+  "handle": "black-diamond-blend",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/04/black-diamond-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17382",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "12 oz (can)",
+   "2 lb",
+   "5 lb",
+   "All Products",
+   "Buttery",
+   "Coffee",
+   "Dark Roast",
+   "Ground",
+   "Nutty",
+   "Signature Blends",
+   "Whole Bean"
+  ],
+  "title": "Black Diamond French Roast Blend",
+  "url": "https://pcroaster.com/product/black-diamond-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17382:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz (can)",
+    "variant_id": "17382:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "17382:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17382:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e088aa625a31b2a",
+  "first_seen": "2026-10-26",
+  "handle": "locals-secret-blend",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/04/locals-secret-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17396",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "12 oz (can)",
+   "2 lb",
+   "5 lb",
+   "All Products",
+   "Bright",
+   "Coffee",
+   "Floral",
+   "Ground",
+   "Light Roast",
+   "Signature Blends",
+   "Whole Bean"
+  ],
+  "title": "Locals Secret Blend",
+  "url": "https://pcroaster.com/product/locals-secret-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17396:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz (can)",
+    "variant_id": "17396:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "17396:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17396:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c81f80c5a27821c9",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-espresso",
+  "image": "https://pcroaster.com/wp-content/uploads/2019/06/roasters-espresso-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17435",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "2 lb",
+   "5 lb",
+   "All Products",
+   "Buttery",
+   "Coffee",
+   "Dark Roast",
+   "Signature Blends",
+   "Syrup",
+   "Whole Bean"
+  ],
+  "title": "Roaster’s Espresso",
+  "url": "https://pcroaster.com/product/roasters-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17435:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "17435:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17435:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51b9cf1faa031e35",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-colombia-mc",
+  "image": "https://pcroaster.com/wp-content/uploads/2019/06/decaf-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17449",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "2 lb",
+   "5 lb",
+   "All Products",
+   "Chocolate",
+   "Cinnamon",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "Decaf",
+   "Single Origin",
+   "Single Origin Estate Coffees",
+   "Whole Bean"
+  ],
+  "title": "Decaffeinated Colombia MC",
+  "url": "https://pcroaster.com/product/decaffeinated-colombia-mc/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17449:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.95,
+    "title": "2 lb",
+    "variant_id": "17449:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17449:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1facc2631e2da44d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-single-origin",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/04/mexico-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17480",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "5 lb",
+   "All Products",
+   "Chocolate",
+   "Coffee",
+   "Honey",
+   "Medium Roast",
+   "Mexico",
+   "Single Origin",
+   "Single Origin Estate Coffees",
+   "Whole Bean"
+  ],
+  "title": "Mexico Single Origin",
+  "url": "https://pcroaster.com/product/mexico-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17480:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17480:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "af1633d8a2c4fbf7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-single-origin",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/04/ethiopia-12oz-whole-bean-coffee.webp",
+  "platform": "woocommerce",
+  "product_id": "17506",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "5 lb",
+   "All Products",
+   "Cocoa",
+   "Coffee",
+   "Ethiopia",
+   "Medium Roast",
+   "Rose",
+   "Single Origin",
+   "Single Origin Estate Coffees",
+   "Whole Bean"
+  ],
+  "title": "Ethiopia Single Origin",
+  "url": "https://pcroaster.com/product/ethiopia-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz",
+    "variant_id": "17506:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb",
+    "variant_id": "17506:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2816a1f08a759d09",
+  "first_seen": "2026-10-26",
+  "handle": "christmas-blend",
+  "image": "https://pcroaster.com/wp-content/uploads/2022/09/xmas-can-blend-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "17867",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "12 oz (can)",
+   "All Products",
+   "Coffee",
+   "Ground",
+   "Signature Blends",
+   "Whole Bean"
+  ],
+  "title": "Christmas Blend",
+  "url": "https://pcroaster.com/product/christmas-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz (can)",
+    "variant_id": "17867:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d793d862b750bca",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/12/matte-coffee-Highlander.jpg",
+  "platform": "woocommerce",
+  "product_id": "22740",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "All Products",
+   "Coffee",
+   "Flavored",
+   "Medium Roast",
+   "Whole Bean"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://pcroaster.com/product/highlander-grogg/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz",
+    "variant_id": "22740:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb",
+    "variant_id": "22740:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74af592624b86e27",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/12/matte-coffee-Hazelnut.jpg",
+  "platform": "woocommerce",
+  "product_id": "22745",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "All Products",
+   "Coffee",
+   "Flavored",
+   "Medium Roast",
+   "Whole Bean"
+  ],
+  "title": "Hazelnut",
+  "url": "https://pcroaster.com/product/hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz",
+    "variant_id": "22745:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c6e292fed34f604c",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://pcroaster.com/wp-content/uploads/2025/12/matte-coffee-FrenchVanilla.jpg",
+  "platform": "woocommerce",
+  "product_id": "22748",
+  "product_type": "variable",
+  "roaster_slug": "pcroaster",
+  "tags": [
+   "12 oz",
+   "All Products",
+   "Coffee",
+   "Flavored",
+   "Medium Roast",
+   "Whole Bean"
+  ],
+  "title": "French Vanilla",
+  "url": "https://pcroaster.com/product/french-vanilla/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12 oz",
+    "variant_id": "22748:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,560 @@
+[
+ {
+  "body_hash": "b9b1485148a0a720",
+  "first_seen": "2026-10-26",
+  "handle": "friends-of-norfolk-animal-care-center-best-friend-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/foster_fuel_final.png?v=1790279712",
+  "platform": "shopify",
+  "product_id": "10232385536034",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Friends of Foster Care / Foster Fuel blend",
+  "url": "https://www.neptunesfury.com/products/friends-of-norfolk-animal-care-center-best-friend-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "50459118665762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "50459118698530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Ground | Medium Coarse (K-Cup, Percolator)",
+    "variant_id": "50459118731298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz. / Ground | Coarse (French Press)",
+    "variant_id": "50459118764066"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "094b66d121cf6dba",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/newcoloraddwordsSlackTideProductPic_2.png?v=1738350509",
+  "platform": "shopify",
+  "product_id": "4827130855458",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Slack Tide | Colombia Decaf",
+  "url": "https://www.neptunesfury.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "32964765810722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "32964765941794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "32964766433314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup)",
+    "variant_id": "32964766564386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator)",
+    "variant_id": "32964766597154"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "657379afc326c2ee",
+  "first_seen": "2026-10-26",
+  "handle": "dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/newcolorADDWORDS-DARKSEASProductPic.png?v=1738244487",
+  "platform": "shopify",
+  "product_id": "4839964114978",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Dark Seas Blend",
+  "url": "https://www.neptunesfury.com/products/dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "32997383929890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "32997383962658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "32997383995426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup)",
+    "variant_id": "32997384028194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator)",
+    "variant_id": "32997384060962"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "8c456719db5ab21e",
+  "first_seen": "2026-10-26",
+  "handle": "depth-charge-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/newcolorAddWords-DepthChargeProductPic.png?v=1738244364",
+  "platform": "shopify",
+  "product_id": "4861192929314",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Depth Charge Espresso",
+  "url": "https://www.neptunesfury.com/products/depth-charge-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "33101873152034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "33101873184802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "33101873217570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup)",
+    "variant_id": "33101873250338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator)",
+    "variant_id": "33101873283106"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "967bb035e10f88cf",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-packs-5pk",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/v2COLDBREWPACKSProductPic.png?v=1761306153",
+  "platform": "shopify",
+  "product_id": "6573470875682",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Cold Brew Packs | 5pk",
+  "url": "https://www.neptunesfury.com/products/cold-brew-packs-5pk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 23.0,
+    "title": "Decaf",
+    "variant_id": "43047504674850"
+   },
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 23.0,
+    "title": "Yirgacheffe - Light Roast",
+    "variant_id": "44083312918562"
+   },
+   {
+    "available": true,
+    "grams": 301,
+    "price_usd": 23.0,
+    "title": "Dark Seas - Med Dark Roast",
+    "variant_id": "44083312951330"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "35147a8e4e80f3d4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/YIRGACHEFFEProductPic_1.png?v=1738944363",
+  "platform": "shopify",
+  "product_id": "6942638440482",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Ethiopia | Yirgacheffe",
+  "url": "https://www.neptunesfury.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "40159569674274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "40159569707042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "40159569739810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup)",
+    "variant_id": "40159569772578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator)",
+    "variant_id": "40159569805346"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "1516580fbb12c4a4",
+  "first_seen": "2026-10-26",
+  "handle": "second-kraken-1",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/newcolorADDWORDSSecondKrakenProductPic2.png?v=1738244583",
+  "platform": "shopify",
+  "product_id": "7201969995810",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [],
+  "title": "Second Kraken",
+  "url": "https://www.neptunesfury.com/products/second-kraken-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "41083077722146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "41083077754914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "41083077787682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup)",
+    "variant_id": "41083077820450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator)",
+    "variant_id": "41083077853218"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "aab29c1644744970",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-romelia",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/CRRomeliaProductPic.png?v=1746811745",
+  "platform": "shopify",
+  "product_id": "7958655008802",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Costa Rica | Romelia",
+  "url": "https://www.neptunesfury.com/products/costa-rica-romelia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "43782667894818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "43782667927586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Medium Coarse (K-Cup, Percolator)",
+    "variant_id": "43782667960354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Coarse (French Press)",
+    "variant_id": "43782667993122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Whole Bean",
+    "variant_id": "43793697767458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Medium (Drip - Paper Filter)",
+    "variant_id": "43793697800226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Medium Coarse (K-Cup, Percolator)",
+    "variant_id": "43793697832994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Coarse (French Press)",
+    "variant_id": "43793697865762"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "c291388c48f91e9a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/HUILAproductpic.png?v=1761222465",
+  "platform": "shopify",
+  "product_id": "8095953944610",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Colombia | Huila",
+  "url": "https://www.neptunesfury.com/products/colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Whole Bean / Arabica",
+    "variant_id": "44402592481314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter) / Arabica",
+    "variant_id": "44402592514082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Medium-Coarse (K-Cup) / Arabica",
+    "variant_id": "44402592546850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz. / Ground | Coarse (French Press, Percolator) / Arabica",
+    "variant_id": "44402592579618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs. / Whole Bean / Arabica",
+    "variant_id": "44402592612386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs. / Ground | Medium (Drip - Paper Filter) / Arabica",
+    "variant_id": "44402592645154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs. / Ground | Medium-Coarse (K-Cup) / Arabica",
+    "variant_id": "44402592677922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs. / Ground | Coarse (French Press, Percolator) / Arabica",
+    "variant_id": "44402592710690"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ },
+ {
+  "body_hash": "8b7092dbe88be391",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-romelia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0284/7358/9794/files/TresNubes2026.png?v=1781792177",
+  "platform": "shopify",
+  "product_id": "8473342935074",
+  "product_type": "Coffee",
+  "roaster_slug": "neptunesfury",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Costa Rica Tres Nubes",
+  "url": "https://www.neptunesfury.com/products/costa-rica-romelia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Whole Bean / Arabica",
+    "variant_id": "45793711063074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Medium (Drip - Paper Filter) / Arabica",
+    "variant_id": "45793711095842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Medium Coarse (K-Cup, Percolator) / Arabica",
+    "variant_id": "45793711128610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz. / Ground | Coarse (French Press) / Arabica",
+    "variant_id": "45793711161378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Whole Bean / Arabica",
+    "variant_id": "45793711194146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Medium (Drip - Paper Filter) / Arabica",
+    "variant_id": "45793711226914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Medium Coarse (K-Cup, Percolator) / Arabica",
+    "variant_id": "45793711259682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb. (80 oz.) / Ground | Coarse (French Press) / Arabica",
+    "variant_id": "45793711292450"
+   }
+  ],
+  "vendor": "Neptune's Fury Coffee Co."
+ }
+]

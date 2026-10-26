@@ -1,0 +1,3943 @@
+[
+ {
+  "body_hash": "c1f50846f6b691fe",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pitalito",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Colombia_2602.png?v=1770062385",
+  "platform": "shopify",
+  "product_id": "10036081230144",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Colombia Pitalito – Huila",
+  "url": "https://www.encorecoffeeco.com/products/colombia-pitalito",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "51504664379712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "51504664412480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "51504664445248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "51504664478016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "51504664510784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "51504664543552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "51504664576320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "51504664609088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "51504664641856"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "b00a582a2e249064",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Rwanda26.png?v=1780340955",
+  "platform": "shopify",
+  "product_id": "10145338097984",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Rwanda",
+  "url": "https://www.encorecoffeeco.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "52078743650624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2 lbs.",
+    "variant_id": "52078743683392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs.",
+    "variant_id": "52078743716160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / Medium / 12 oz.",
+    "variant_id": "52078743748928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / Medium / 2 lbs.",
+    "variant_id": "52078743781696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / Medium / 5 lbs.",
+    "variant_id": "52078743814464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / Coarse / 12 oz.",
+    "variant_id": "52078743847232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "French Press / Coarse / 2 lbs.",
+    "variant_id": "52078743880000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / Coarse / 5 lbs.",
+    "variant_id": "52078743912768"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "11b2987f67d0a4a3",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/PNG_2609.png?v=1787852285",
+  "platform": "shopify",
+  "product_id": "10247975665984",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://www.encorecoffeeco.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "53078107914560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2 lbs.",
+    "variant_id": "53078107947328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs.",
+    "variant_id": "53078107980096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / Medium / 12 oz.",
+    "variant_id": "53078108012864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / Medium / 2 lbs.",
+    "variant_id": "53078108045632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / Medium / 5 lbs.",
+    "variant_id": "53078108078400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / Coarse / 12 oz.",
+    "variant_id": "53078108111168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "French Press / Coarse / 2 lbs.",
+    "variant_id": "53078108143936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / Coarse / 5 lbs.",
+    "variant_id": "53078108176704"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "d13b8a0e852a69b0",
+  "first_seen": "2026-10-26",
+  "handle": "sally-sues-sassy-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/dog_blend.png?v=1792079256",
+  "platform": "shopify",
+  "product_id": "15412350386496",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "AFMAS"
+  ],
+  "title": "Sally Sue’s Sassy Brew",
+  "url": "https://www.encorecoffeeco.com/products/sally-sues-sassy-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Whole bean",
+    "variant_id": "67710486151488"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "67710486184256"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "db3e3e62012a2a73",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/EncoreLabelGuat26.png?v=1783101155",
+  "platform": "shopify",
+  "product_id": "4139348459591",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Guatemala",
+   "Single Origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.encorecoffeeco.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "30304421838919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "30304421871687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "30304421904455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "30304421937223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "30304421969991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "30304422002759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "31999630245959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "31999636111431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "31999641157703"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "8b55467f9940015e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/EncoreLabelDecafColo25.png?v=1767463131",
+  "platform": "shopify",
+  "product_id": "4690461098055",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Colombia - Decaf",
+  "url": "https://www.encorecoffeeco.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "32351176458311"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2 lbs.",
+    "variant_id": "32351176491079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs.",
+    "variant_id": "32351176523847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / Medium / 12 oz.",
+    "variant_id": "32351176556615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / Medium / 2 lbs.",
+    "variant_id": "32351176589383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / Medium / 5 lbs.",
+    "variant_id": "32351176622151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / Coarse / 12 oz.",
+    "variant_id": "32351176654919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "French Press / Coarse / 2 lbs.",
+    "variant_id": "32351176687687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / Coarse / 5 lbs.",
+    "variant_id": "32351176720455"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "ba30df28a15e54b8",
+  "first_seen": "2026-10-26",
+  "handle": "sunrise-valley-coffee-breakfast-blend-2-pack-x-2-lbs-each-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KSeal_9.64Wx12Hx4.5B_SunriseValley_BreakfastBlend.png?v=1683233957",
+  "platform": "shopify",
+  "product_id": "4720097820743",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Sunrise Valley Coffee - Breakfast Blend - 2 Pack x 2 lbs Each - Whole Bean",
+  "url": "https://www.encorecoffeeco.com/products/sunrise-valley-coffee-breakfast-blend-2-pack-x-2-lbs-each-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1996,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "32406251765831"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "f682e2ffe160feb0",
+  "first_seen": "2026-10-26",
+  "handle": "crescendo",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Encore_Crescendo_Wide_a0ae3da7-21a5-4a38-9f2a-a1609636d569.png?v=1746822646",
+  "platform": "shopify",
+  "product_id": "5884435719",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Crescendo Blend",
+  "url": "https://www.encorecoffeeco.com/products/crescendo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "18580218503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "18580218567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "18580218631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "18580218695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "18580218759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "18580218823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "31999540985927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "31999543115847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "31999544164423"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "292003885c4a4014",
+  "first_seen": "2026-10-26",
+  "handle": "melody-dark-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Encore_Melody_Wide.png?v=1746822724",
+  "platform": "shopify",
+  "product_id": "5884442759",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Melody Blend",
+  "url": "https://www.encorecoffeeco.com/products/melody-dark-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "18580237767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "18580237831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "18580237895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "18580237959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "18580238023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "18580238151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "32007343210567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "32007344062535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "32007345143879"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "28a2f89031d5da46",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-box",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/BirthdayBoxes1.png?v=1683233968",
+  "platform": "shopify",
+  "product_id": "6655694700615",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday To You - Gift Boxes",
+  "url": "https://www.encorecoffeeco.com/products/birthday-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664074752071"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664074784839"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39669697249351"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39669697282119"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39669697314887"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39669697347655"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39669697380423"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39669697413191"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39669697445959"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39669697478727"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39669697511495"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39669697544263"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669697577031"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Medium",
+    "variant_id": "39669697609799"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669697642567"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "98903c7e64553532",
+  "first_seen": "2026-10-26",
+  "handle": "congrats-on-planting-new-roots",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/NewRoots1.png?v=1683233986",
+  "platform": "shopify",
+  "product_id": "6655694798919",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Congrats on Planting New Roots",
+  "url": "https://www.encorecoffeeco.com/products/congrats-on-planting-new-roots",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664074981447"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664075014215"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39664211853383"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39664211886151"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39664211918919"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39664211951687"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39664211984455"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39664212017223"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39664212049991"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39664212082759"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39664212115527"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39664212148295"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "39664212181063"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Drip / Medium",
+    "variant_id": "39664212213831"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / French Press / Coarse",
+    "variant_id": "39664212246599"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "2b95ead527081d21",
+  "first_seen": "2026-10-26",
+  "handle": "fathers-day-best-dad-ever",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/FathersBestDad1.png?v=1683234005",
+  "platform": "shopify",
+  "product_id": "6655694864455",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Best Dad Ever",
+  "url": "https://www.encorecoffeeco.com/products/fathers-day-best-dad-ever",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39664075046983"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39664075079751"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39664075112519"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39664075145287"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664204382279"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664204415047"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39664204447815"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39664204480583"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "39664204513351"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Drip / Medium",
+    "variant_id": "39664204546119"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39664208314439"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39664208347207"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39664208379975"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39664208412743"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / French Press / Coarse",
+    "variant_id": "39664208445511"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "9a330c83b57c02e8",
+  "first_seen": "2026-10-26",
+  "handle": "happy-4th-of-july",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/4thofJuly1.png?v=1683234021",
+  "platform": "shopify",
+  "product_id": "6655694995527",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy 4th of July",
+  "url": "https://www.encorecoffeeco.com/products/happy-4th-of-july",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664075276359"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664075309127"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39664214573127"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39664214605895"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39664214638663"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39664214671431"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39664214704199"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39664214736967"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39664214769735"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39664214802503"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39664214835271"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39664214868039"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Whole Bean",
+    "variant_id": "39664214900807"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / Drip / Medium",
+    "variant_id": "39664214933575"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaf / French Press / Coarse",
+    "variant_id": "39664214966343"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "d959a060c557f444",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-dots",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Birthday-Circles1.png?v=1683234060",
+  "platform": "shopify",
+  "product_id": "6655695224903",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday - Dots",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-dots",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664075735111"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664075767879"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39664270737479"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39664270770247"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39664270803015"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39664270835783"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39664270868551"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39664270901319"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39664270934087"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39664270966855"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39664270999623"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39664271032391"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Whole Bean",
+    "variant_id": "39664271065159"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Drip / Medium",
+    "variant_id": "39664271097927"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / French Press / Coarse",
+    "variant_id": "39664271130695"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "05c2cc58a10a170d",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-party",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Birthday_Party1.png?v=1652372957",
+  "platform": "shopify",
+  "product_id": "6655695454279",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday - Party",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-party",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Whole Bean",
+    "variant_id": "39664076161095"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / Drip / Medium",
+    "variant_id": "39664076193863"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Crescendo Blend / French Press / Coarse",
+    "variant_id": "39669629812807"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Whole Bean",
+    "variant_id": "39669629845575"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / Drip / Medium",
+    "variant_id": "39669629878343"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Harmony Blend / French Press / Coarse",
+    "variant_id": "39669629911111"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Whole Bean",
+    "variant_id": "39669629943879"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / Drip / Medium",
+    "variant_id": "39669629976647"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Melody Blend / French Press / Coarse",
+    "variant_id": "39669630206023"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Whole Bean",
+    "variant_id": "39669630271559"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / Drip / Medium",
+    "variant_id": "39669630304327"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Symphony Blend / French Press / Coarse",
+    "variant_id": "39669630337095"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669630369863"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Medium",
+    "variant_id": "39669630402631"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669630435399"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "dbebaef36d9e091c",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-to-you",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/BirthdayHBTYBlue1.png?v=1652372969",
+  "platform": "shopify",
+  "product_id": "6655695618119",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday To You",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-to-you",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669685059655"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39669685092423"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669685125191"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669685157959"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Medium",
+    "variant_id": "39669685190727"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669685223495"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "2cd6466af016ffb5",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-to-you-multicolor",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/BirthdayCircles1.png?v=1652372980",
+  "platform": "shopify",
+  "product_id": "6655695781959",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday To You - Multicolor",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-to-you-multicolor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669800206407"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39669800239175"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669800271943"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Whole Bean",
+    "variant_id": "39669800304711"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Drip / Medium",
+    "variant_id": "39669800337479"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / French Press / Coarse",
+    "variant_id": "39669800370247"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "9db582e513f939fc",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-to-you-pow",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Birthday-Cartoon01.png?v=1652372990",
+  "platform": "shopify",
+  "product_id": "6655695880263",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday To You - Pow!",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-to-you-pow",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669813084231"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Ground",
+    "variant_id": "39669813116999"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669813149767"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669813182535"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Ground",
+    "variant_id": "39669813215303"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669813248071"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "fd9b16b32e5d8908",
+  "first_seen": "2026-10-26",
+  "handle": "happy-birthday-vintage",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Birthday-Oldman1.png?v=1652373002",
+  "platform": "shopify",
+  "product_id": "6655696011335",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Happy Birthday - Vintage",
+  "url": "https://www.encorecoffeeco.com/products/happy-birthday-vintage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669652422727"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39669652488263"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669652521031"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669652553799"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Medium",
+    "variant_id": "39669652586567"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669652619335"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "0aa05fc960ad28c6",
+  "first_seen": "2026-10-26",
+  "handle": "happy-fathers-day-mask",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/FathersDayPuppet1.png?v=1652373017",
+  "platform": "shopify",
+  "product_id": "6655696076871",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy Father's Day",
+  "url": "https://www.encorecoffeeco.com/products/happy-fathers-day-mask",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39666015600711"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39666015633479"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39666015666247"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39666015699015"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Medium",
+    "variant_id": "39666015731783"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39666015764551"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "a17ffe9d81ef4d4b",
+  "first_seen": "2026-10-26",
+  "handle": "happy-fathers-day-mountain",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Fathers_Mountains1.png?v=1652373031",
+  "platform": "shopify",
+  "product_id": "6655696175175",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy Father's Day - Mountains",
+  "url": "https://www.encorecoffeeco.com/products/happy-fathers-day-mountain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39666033459271"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39666033492039"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39666033524807"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Whole Bean",
+    "variant_id": "39666033557575"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Drip / Medium",
+    "variant_id": "39666033590343"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / French Press / Coarse",
+    "variant_id": "39666033623111"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "1ce8b71c818bfd93",
+  "first_seen": "2026-10-26",
+  "handle": "happy-halloween",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/03.jpg?v=1652373033",
+  "platform": "shopify",
+  "product_id": "6655696240711",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy Halloween",
+  "url": "https://www.encorecoffeeco.com/products/happy-halloween",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39665974181959"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39665974214727"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39665974247495"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Whole Bean",
+    "variant_id": "39669855453255"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / Drip / Medium",
+    "variant_id": "39669855486023"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffeinated / French Press / Coarse",
+    "variant_id": "39669855518791"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "cc502e83d88ad40f",
+  "first_seen": "2026-10-26",
+  "handle": "happy-hanukkah",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Hanukkah1.png?v=1652373039",
+  "platform": "shopify",
+  "product_id": "6655696306247",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy Hanukkah",
+  "url": "https://www.encorecoffeeco.com/products/happy-hanukkah",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669905326151"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Ground",
+    "variant_id": "39669905358919"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669905391687"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Whole Bean",
+    "variant_id": "39669905424455"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / Drip / Ground",
+    "variant_id": "39669905457223"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Decaffinated / French Press / Coarse",
+    "variant_id": "39669905489991"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "78f9fb7cc689a6d6",
+  "first_seen": "2026-10-26",
+  "handle": "happy-thanksgiving",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Thanksgiving3.png?v=1652373044",
+  "platform": "shopify",
+  "product_id": "6655696437319",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Happy Thanksgiving",
+  "url": "https://www.encorecoffeeco.com/products/happy-thanksgiving",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39669911322695"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Ground",
+    "variant_id": "39669911355463"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39669911388231"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffeinated / Whole Bean",
+    "variant_id": "39669911420999"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffeinated / Drip / Ground",
+    "variant_id": "39669911453767"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffeinated / French Press / Coarse",
+    "variant_id": "39669911486535"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "b1cec4d2f2d37228",
+  "first_seen": "2026-10-26",
+  "handle": "here-comes-santa-claus",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Santa01.png?v=1652373049",
+  "platform": "shopify",
+  "product_id": "6655696502855",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Here Comes Santa Claus",
+  "url": "https://www.encorecoffeeco.com/products/here-comes-santa-claus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664078258247"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664078291015"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664078323783"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664078356551"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "4c3812ae8ceae437",
+  "first_seen": "2026-10-26",
+  "handle": "home-sweet-home",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/HomeSweetHome1.png?v=1652373058",
+  "platform": "shopify",
+  "product_id": "6655696666695",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Home Sweet Home",
+  "url": "https://www.encorecoffeeco.com/products/home-sweet-home",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664078520391"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664078553159"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664078585927"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664078618695"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "59a510c537cfc2fd",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KC_Civic01.png?v=1652373067",
+  "platform": "shopify",
+  "product_id": "6655696732231",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love KC",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664078716999"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664078749767"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664078782535"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664078815303"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "96cb014fdb5f6f9e",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc-baseball",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KCBaseball01.png?v=1652373078",
+  "platform": "shopify",
+  "product_id": "6655696896071",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love KC Baseball",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc-baseball",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664078946375"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664078979143"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664079011911"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664079044679"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "8973edaaff391dfd",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc-christmas",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KCChristmas01.png?v=1652373083",
+  "platform": "shopify",
+  "product_id": "6655696961607",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "I Love KC Christmas",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc-christmas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664079142983"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664079175751"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664079208519"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664079241287"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "81209521fa3133a7",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc-patriotic",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KC4th_1.png?v=1652373108",
+  "platform": "shopify",
+  "product_id": "6655697223751",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love KC Patriotic",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc-patriotic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664079601735"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664079634503"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664079667271"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664079700039"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "026b90bda07fa116",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc-pride",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KC_Pride_01.png?v=1652373119",
+  "platform": "shopify",
+  "product_id": "6655697354823",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love KC Pride",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc-pride",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664079831111"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664079863879"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664079896647"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664079929415"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "7acd062e8c617396",
+  "first_seen": "2026-10-26",
+  "handle": "i-love-kc-soccer",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/KC_Soccer_1.png?v=1652373131",
+  "platform": "shopify",
+  "product_id": "6655697453127",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love KC Soccer",
+  "url": "https://www.encorecoffeeco.com/products/i-love-kc-soccer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664080027719"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664080060487"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664080093255"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664080126023"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "9b0e910220b2f67f",
+  "first_seen": "2026-10-26",
+  "handle": "its-a-boy",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Itsaboy1.png?v=1652373143",
+  "platform": "shopify",
+  "product_id": "6655697649735",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "It's a Boy!",
+  "url": "https://www.encorecoffeeco.com/products/its-a-boy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664080355399"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664080388167"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664080420935"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664080453703"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "f0d35e520b906ef8",
+  "first_seen": "2026-10-26",
+  "handle": "its-a-girl",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/ItsaGirl1.png?v=1652373155",
+  "platform": "shopify",
+  "product_id": "6655697780807",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "It's a Girl!",
+  "url": "https://www.encorecoffeeco.com/products/its-a-girl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664080584775"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664080617543"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664080650311"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664080683079"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "9e331e7ad951b3aa",
+  "first_seen": "2026-10-26",
+  "handle": "love-is-brewing",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/CupLoveBrewing1.png?v=1652373167",
+  "platform": "shopify",
+  "product_id": "6655697879111",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Love is Brewing",
+  "url": "https://www.encorecoffeeco.com/products/love-is-brewing",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664080781383"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664080814151"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664080846919"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664080879687"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "7ae658a50f456c60",
+  "first_seen": "2026-10-26",
+  "handle": "love-tattoo",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/TatooLove1.png?v=1652373178",
+  "platform": "shopify",
+  "product_id": "6655698010183",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Love Tattoo",
+  "url": "https://www.encorecoffeeco.com/products/love-tattoo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664081010759"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664081043527"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664081076295"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664081109063"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "13604d53239eebc1",
+  "first_seen": "2026-10-26",
+  "handle": "love-you-more-than-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/LoveYouMore1.png?v=1652373190",
+  "platform": "shopify",
+  "product_id": "6655698141255",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "I Love You More Than Coffee",
+  "url": "https://www.encorecoffeeco.com/products/love-you-more-than-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664081240135"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664081272903"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664081305671"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664081338439"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "6e08824695bf4482",
+  "first_seen": "2026-10-26",
+  "handle": "merry-christmas",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/WordartChristmas01.png?v=1652373195",
+  "platform": "shopify",
+  "product_id": "6655698206791",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Merry Christmas",
+  "url": "https://www.encorecoffeeco.com/products/merry-christmas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664081403975"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664081436743"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664081469511"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664081502279"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "e63719e7fee27161",
+  "first_seen": "2026-10-26",
+  "handle": "merry-christmas-happy-new-years",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/HipSanta1.png?v=1652373200",
+  "platform": "shopify",
+  "product_id": "6655698272327",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Merry Christmas & Happy New Years",
+  "url": "https://www.encorecoffeeco.com/products/merry-christmas-happy-new-years",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664081567815"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664081600583"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664081633351"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664081666119"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "29245c34130bed81",
+  "first_seen": "2026-10-26",
+  "handle": "more-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/Celebrations1.png?v=1652373212",
+  "platform": "shopify",
+  "product_id": "6655698370631",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "More Coffee!",
+  "url": "https://www.encorecoffeeco.com/products/more-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664081797191"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664081829959"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664081862727"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664081895495"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "f0785a822fd72ca0",
+  "first_seen": "2026-10-26",
+  "handle": "peace-love-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/peacelove1.png?v=1652373222",
+  "platform": "shopify",
+  "product_id": "6655698501703",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Peace Love & Coffee",
+  "url": "https://www.encorecoffeeco.com/products/peace-love-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082026567"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082059335"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664082092103"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664082124871"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "1e020fc224cf2f2d",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-barnwood",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/ThankYouBarn1.png?v=1652373233",
+  "platform": "shopify",
+  "product_id": "6655698534471",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You - Barnwood",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-barnwood",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39666012946503"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Drip / Medium",
+    "variant_id": "39666012979271"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffinated / Whole Bean",
+    "variant_id": "39666013012039"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffinated / Drip / Medium",
+    "variant_id": "39666013044807"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / French Press / Coarse",
+    "variant_id": "39666013667399"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaffinated / French Press / Coarse",
+    "variant_id": "39666013700167"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "5c37f341b7b78e8f",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-boxes",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/TYBlocks1.png?v=1652373243",
+  "platform": "shopify",
+  "product_id": "6655698567239",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-boxes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082288711"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082321479"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664082354247"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664082387015"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "2d0a70dda9e24a28",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-nurses",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/TYNurses1.png?v=1652373256",
+  "platform": "shopify",
+  "product_id": "6655698632775",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You Nurses",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-nurses",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082485319"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082518087"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664082550855"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664082583623"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "6f7a1ce2d08c6cbb",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-script",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/TYScript1.png?v=1652373268",
+  "platform": "shopify",
+  "product_id": "6655698665543",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You - Script",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-script",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082616391"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082649159"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664082681927"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664082714695"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "987c6efff4666b6e",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-teachers",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/thankteacher1.png?v=1652373281",
+  "platform": "shopify",
+  "product_id": "6655698698311",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You Teachers",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-teachers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082747463"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082780231"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664082812999"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664082845767"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "91e98e90bfbe2052",
+  "first_seen": "2026-10-26",
+  "handle": "thank-you-thought-bubble",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/TY_Bubbles1.png?v=1652373296",
+  "platform": "shopify",
+  "product_id": "6655698763847",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Thank You - Thought Bubbles",
+  "url": "https://www.encorecoffeeco.com/products/thank-you-thought-bubble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664082944071"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664082976839"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664083009607"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664083042375"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "e70141fdf6abb0ba",
+  "first_seen": "2026-10-26",
+  "handle": "ugly-christmas-sweater",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/UglySweater1.png?v=1652373301",
+  "platform": "shopify",
+  "product_id": "6655698796615",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Ugly Christmas Sweater",
+  "url": "https://www.encorecoffeeco.com/products/ugly-christmas-sweater",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664083107911"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664083140679"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664083173447"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664083206215"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "f95c80ef32f7d4cd",
+  "first_seen": "2026-10-26",
+  "handle": "veterans-day",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/VD_1.png?v=1652373307",
+  "platform": "shopify",
+  "product_id": "6655698829383",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Holiday"
+  ],
+  "title": "Veteran's Day",
+  "url": "https://www.encorecoffeeco.com/products/veterans-day",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664083238983"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664083271751"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664083304519"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664083337287"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "d8757732c302d80a",
+  "first_seen": "2026-10-26",
+  "handle": "welcome-home",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/products/WelcomeHome1.png?v=1652373317",
+  "platform": "shopify",
+  "product_id": "6655698862151",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Gift",
+   "Occasion"
+  ],
+  "title": "Welcome Home",
+  "url": "https://www.encorecoffeeco.com/products/welcome-home",
+  "variants": [
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Whole Bean",
+    "variant_id": "39664083435591"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Celebrations Blend / Ground / Drip",
+    "variant_id": "39664083468359"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Whole Bean",
+    "variant_id": "39664083501127"
+   },
+   {
+    "available": true,
+    "grams": 360,
+    "price_usd": 21.0,
+    "title": "Jubilee Decaf / Ground / Drip",
+    "variant_id": "39664083533895"
+   }
+  ],
+  "vendor": "Celebrations Coffee"
+ },
+ {
+  "body_hash": "66d4f29064ebb503",
+  "first_seen": "2026-10-26",
+  "handle": "70-dark-madagascar",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Encore_Choco_Madagascar_Front.png?v=1760134363",
+  "platform": "shopify",
+  "product_id": "8018016076096",
+  "product_type": "Chocolate",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Chocolate",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "70% Dark - Madagascar",
+  "url": "https://www.encorecoffeeco.com/products/70-dark-madagascar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "43969998979392"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "806f7921026706f8",
+  "first_seen": "2026-10-26",
+  "handle": "70-dark-ecuador",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Ecaudor.png?v=1770328657",
+  "platform": "shopify",
+  "product_id": "8214413672768",
+  "product_type": "Chocolate",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Chocolate",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "70% Dark - Ecuador",
+  "url": "https://www.encorecoffeeco.com/products/70-dark-ecuador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "44711808958784"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "260d66a9f7d07ca3",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Nicaragua_2601.png?v=1767463882",
+  "platform": "shopify",
+  "product_id": "8465864982848",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Nicaragua - Natural",
+  "url": "https://www.encorecoffeeco.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "45594290094400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole Bean / 2 lbs.",
+    "variant_id": "45594290127168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / Medium / 12 oz.",
+    "variant_id": "45594290192704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Drip / Medium / 2 lbs.",
+    "variant_id": "45594290225472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / Coarse / 12 oz.",
+    "variant_id": "45594290291008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "French Press / Coarse / 2 lbs.",
+    "variant_id": "45594290323776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5 lbs.",
+    "variant_id": "51402249404736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / Medium / 5 lbs.",
+    "variant_id": "51402249437504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / Coarse / 5 lbs.",
+    "variant_id": "51402249470272"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "5b0ba0c3e6968182",
+  "first_seen": "2026-10-26",
+  "handle": "cacao-and-vanilla-spirit-infusion-kit",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/CacaoVanillaElixer_ca6cedee-0f5c-45c0-8fcb-fd2e39254c0a.png?v=1726243266",
+  "platform": "shopify",
+  "product_id": "8925151068480",
+  "product_type": "Chocolate",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Chocolate",
+   "Gift",
+   "Infusion"
+  ],
+  "title": "Cacao and Vanilla Spirit Infusion Kit",
+  "url": "https://www.encorecoffeeco.com/products/cacao-and-vanilla-spirit-infusion-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 953,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "47380864532800"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "c5ef74f22cb88fdf",
+  "first_seen": "2026-10-26",
+  "handle": "harmony",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Encore_Harmony_Wide_447e4b7e-7bd7-45c2-aec8-a254a7e197e3.png?v=1746822585",
+  "platform": "shopify",
+  "product_id": "9343251530",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Harmony Breakfast Blend",
+  "url": "https://www.encorecoffeeco.com/products/harmony",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "31999830327367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "31999833309255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "31999863095367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "32485274890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "32485274954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "32485275018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "32485275082"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "32485275146"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "32485275210"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "9410de39bcee8b4a",
+  "first_seen": "2026-10-26",
+  "handle": "symphony-medium-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/Encore_Symphony_Wide_e4b7701d-0eba-4a83-b76b-219a2ed00913.png?v=1746822501",
+  "platform": "shopify",
+  "product_id": "9343268106",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Symphony Blend",
+  "url": "https://www.encorecoffeeco.com/products/symphony-medium-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "32007476871239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "32007490437191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "32007492599879"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "32485361546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "32485361610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "32485361674"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "32485361738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "32485361802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "32485361866"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "d7f1c01b9700050e",
+  "first_seen": "2026-10-26",
+  "handle": "70-dark-dominican-republic",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/DR_Front.png?v=1770329624",
+  "platform": "shopify",
+  "product_id": "9371173257536",
+  "product_type": "Chocolate",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Chocolate",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "70% Dark - Dominican Republic",
+  "url": "https://www.encorecoffeeco.com/products/70-dark-dominican-republic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "48882486772032"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "f40aa7dddc82c53d",
+  "first_seen": "2026-10-26",
+  "handle": "70-dark-india",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/India_Front.png?v=1770329539",
+  "platform": "shopify",
+  "product_id": "9371438252352",
+  "product_type": "Chocolate",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Chocolate",
+   "Dark",
+   "Single Origin"
+  ],
+  "title": "70% Dark - India",
+  "url": "https://www.encorecoffeeco.com/products/70-dark-india",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "48883222446400"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ },
+ {
+  "body_hash": "81da3b40a8d74f67",
+  "first_seen": "2026-10-26",
+  "handle": "house-of-worship-fundraiser",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/HOW_Label.jpg?v=1752948930",
+  "platform": "shopify",
+  "product_id": "9864843428160",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "House of Worship Fundraiser",
+  "url": "https://www.encorecoffeeco.com/products/house-of-worship-fundraiser",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Symphony / 12 oz / Whole Bean",
+    "variant_id": "50891236245824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Symphony / 12 oz / Medium / Drip",
+    "variant_id": "50891236278592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Symphony / 12 oz / Coarse / French Press",
+    "variant_id": "50891236311360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Symphony / 2 lb. / Whole Bean",
+    "variant_id": "50891236344128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Symphony / 2 lb. / Medium / Drip",
+    "variant_id": "50891236376896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Symphony / 2 lb. / Coarse / French Press",
+    "variant_id": "50891236409664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Symphony / 5 lb / Whole Bean",
+    "variant_id": "50891236442432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Symphony / 5 lb / Medium / Drip",
+    "variant_id": "50891236475200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Symphony / 5 lb / Coarse / French Press",
+    "variant_id": "50891236507968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Harmony / 12 oz / Whole Bean",
+    "variant_id": "50894414741824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Harmony / 12 oz / Medium / Drip",
+    "variant_id": "50894414774592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Harmony / 12 oz / Coarse / French Press",
+    "variant_id": "50894414807360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Harmony / 2 lb. / Whole Bean",
+    "variant_id": "50894414840128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Harmony / 2 lb. / Medium / Drip",
+    "variant_id": "50894414872896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Harmony / 2 lb. / Coarse / French Press",
+    "variant_id": "50894414905664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Harmony / 5 lb / Whole Bean",
+    "variant_id": "50894414938432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Harmony / 5 lb / Medium / Drip",
+    "variant_id": "50894414971200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Harmony / 5 lb / Coarse / French Press",
+    "variant_id": "50894415003968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Melody / 12 oz / Whole Bean",
+    "variant_id": "50894415036736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Melody / 12 oz / Medium / Drip",
+    "variant_id": "50894415069504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Melody / 12 oz / Coarse / French Press",
+    "variant_id": "50894415102272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Melody / 2 lb. / Whole Bean",
+    "variant_id": "50894415135040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Melody / 2 lb. / Medium / Drip",
+    "variant_id": "50894415167808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Melody / 2 lb. / Coarse / French Press",
+    "variant_id": "50894415200576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Melody / 5 lb / Whole Bean",
+    "variant_id": "50894415233344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Melody / 5 lb / Medium / Drip",
+    "variant_id": "50894415266112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Melody / 5 lb / Coarse / French Press",
+    "variant_id": "50894415298880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Decaf / 12 oz / Whole Bean",
+    "variant_id": "50894415331648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Decaf / 12 oz / Medium / Drip",
+    "variant_id": "50894415364416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Decaf / 12 oz / Coarse / French Press",
+    "variant_id": "50894415397184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Decaf / 2 lb. / Whole Bean",
+    "variant_id": "50894415429952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Decaf / 2 lb. / Medium / Drip",
+    "variant_id": "50894415462720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Decaf / 2 lb. / Coarse / French Press",
+    "variant_id": "50894415495488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Decaf / 5 lb / Whole Bean",
+    "variant_id": "50894415528256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Decaf / 5 lb / Medium / Drip",
+    "variant_id": "50894415561024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Decaf / 5 lb / Coarse / French Press",
+    "variant_id": "50894415593792"
+   }
+  ],
+  "vendor": "Encore Coffee & Chocolate"
+ },
+ {
+  "body_hash": "7e36279384c6c417",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/1231/2548/files/EncoreLabelMexico26_2f923bba-a90e-4853-bdee-37aa451791a0.png?v=1791233980",
+  "platform": "shopify",
+  "product_id": "9899929174336",
+  "product_type": "Coffee",
+  "roaster_slug": "encorecoffeeco",
+  "tags": [
+   "Coffee",
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "Mexico",
+  "url": "https://www.encorecoffeeco.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "51020872122688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / Drip / Medium",
+    "variant_id": "51020872155456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz. / French Press / Coarse",
+    "variant_id": "51020872188224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Whole Bean",
+    "variant_id": "51020872220992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / Drip / Medium",
+    "variant_id": "51020872253760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs. / French Press / Coarse",
+    "variant_id": "51020872286528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Whole Bean",
+    "variant_id": "67709512778048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / Drip / Medium",
+    "variant_id": "67709512810816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lbs. / French Press / Coarse",
+    "variant_id": "67709512843584"
+   }
+  ],
+  "vendor": "Encore Coffee Company"
+ }
+]

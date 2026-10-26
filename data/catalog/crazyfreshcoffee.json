@@ -1,0 +1,1215 @@
+[
+ {
+  "body_hash": "daf9611d17b8b839",
+  "first_seen": "2026-10-26",
+  "handle": "pazzo-fresco-super-thick-crema-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-pazzo-fresco-super-thick-crema-espresso.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8731055554739",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend",
+   "Espresso"
+  ],
+  "title": "Pazzo Fresco® Super Thick Crema Espresso – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/pazzo-fresco-super-thick-crema-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789260979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.5,
+    "title": "2 lb",
+    "variant_id": "46159789293747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5 lb",
+    "variant_id": "46159789326515"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "8edf0d5699f42916",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-mexican-chiapas-coffee.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8731055587507",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Mexican Chiapas Light Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/mexican-chiapas-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789359283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.5,
+    "title": "2 lb",
+    "variant_id": "46159789392051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5 lb",
+    "variant_id": "46159789424819"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "51d3e6da04f971bc",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-santa-rosa-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-honduran-santa-rosa-coffee-v2.jpg?v=1792702127",
+  "platform": "shopify",
+  "product_id": "8731055620275",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Full City Roast",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Honduran Santa Rosa Light Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/honduran-santa-rosa-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789457587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.5,
+    "title": "2 lb",
+    "variant_id": "46159789490355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5 lb",
+    "variant_id": "46159789523123"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "6f4216549b4f8cc3",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coban-estate-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-guatemalan-coban-estate-coffee.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8731055653043",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Medium Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Guatemalan Coban Estate Medium-Dark Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/guatemalan-coban-estate-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789555891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "2 lb",
+    "variant_id": "46159789588659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159789621427"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "cbc622345c8b89cc",
+  "first_seen": "2026-10-26",
+  "handle": "desert-island-decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-desert-island-decaf-coffee.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8731055685811",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Desert Island Decaf, Swiss Water® – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/desert-island-decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789654195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.5,
+    "title": "2 lb",
+    "variant_id": "46159789686963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lb",
+    "variant_id": "46159789719731"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "eaf3c5f5077a2e53",
+  "first_seen": "2026-10-26",
+  "handle": "triple-threat-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-triple-threat-coffee.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8731055751347",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast"
+  ],
+  "title": "Triple Threat Dark Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/triple-threat-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.5,
+    "title": "1 lb",
+    "variant_id": "46159789883571"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "2 lb",
+    "variant_id": "46159789916339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159789949107"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "a80184f416348d5f",
+  "first_seen": "2026-10-26",
+  "handle": "crazy-fresh-organic-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-crazy-fresh-organic-house-blend.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8731055784115",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Organic"
+  ],
+  "title": "Crazy Fresh Organic House Blend Dark Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/crazy-fresh-organic-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb",
+    "variant_id": "46159789981875"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "2 lb",
+    "variant_id": "46159790014643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46220594380979"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "f5842ee1e502cbce",
+  "first_seen": "2026-10-26",
+  "handle": "signature-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-signature-house-blend.jpg?v=1792385361",
+  "platform": "shopify",
+  "product_id": "8731055816883",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Signature House Blend Medium Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/signature-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.5,
+    "title": "2 lb",
+    "variant_id": "46159790047411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb",
+    "variant_id": "46220594413747"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220596936883"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "656aa6793c0401ab",
+  "first_seen": "2026-10-26",
+  "handle": "chef-lucianos-favorite-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-chef-lucianos-favorite-blend.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8731055849651",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew"
+  ],
+  "title": "Chef Luciano's Favorite Blend – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/chef-lucianos-favorite-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.95,
+    "title": "2 lb",
+    "variant_id": "46159790080179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159790112947"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220596969651"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "ffc9e0ea26ecc343",
+  "first_seen": "2026-10-26",
+  "handle": "stir-crazy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-stir-crazy-blend.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8731055882419",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Blend",
+   "Medium Dark Roast"
+  ],
+  "title": "Stir Crazy Blend Vienna Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/stir-crazy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 28.95,
+    "title": "2 lb",
+    "variant_id": "46159790145715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.75,
+    "title": "5 lb",
+    "variant_id": "46159790178483"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220597002419"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "8fa67f61d3712d2a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-sumatra-mandheling-coffee.jpg?v=1792385363",
+  "platform": "shopify",
+  "product_id": "8731055915187",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Sumatra Mandheling Dark Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/sumatra-mandheling-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.5,
+    "title": "2 lb",
+    "variant_id": "46159790211251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5 lb",
+    "variant_id": "46159790244019"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220597067955"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "f03145e3f90df56e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-shg-ep-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-guatemalan-shg-ep-coffee.jpg?v=1792385363",
+  "platform": "shopify",
+  "product_id": "8731055947955",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Guatemalan SHG EP Light Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/guatemalan-shg-ep-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.5,
+    "title": "2 lb",
+    "variant_id": "46159790276787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159790309555"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220597100723"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "8f8efb395f3e73ce",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee-honduran-santa-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-cold-brew-coffee-honduran-santa-rosa.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8731056013491",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Cold Brew",
+   "Light Roast"
+  ],
+  "title": "Cold Brew Coffee Beans: Honduran Santa Rosa – Fresh Roasted Whole Bean",
+  "url": "https://crazyfreshcoffee.com/products/cold-brew-coffee-honduran-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 lb",
+    "variant_id": "46159790440627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159790473395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220597166259"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "66e024f58fc5293b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee-triple-threat",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-cold-brew-coffee-triple-threat.jpg?v=1792385363",
+  "platform": "shopify",
+  "product_id": "8731056046259",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Cold Brew",
+   "Dark Roast"
+  ],
+  "title": "Cold Brew Coffee Beans: Crazy Fresh Triple Threat – Fresh Roasted Whole Bean",
+  "url": "https://crazyfreshcoffee.com/products/cold-brew-coffee-triple-threat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.95,
+    "title": "2 lb",
+    "variant_id": "46159790506163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5 lb",
+    "variant_id": "46159790538931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "1 lb",
+    "variant_id": "46220597199027"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "6cd1d2d23e5d0b95",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-yirgacheffe-pourover.jpg?v=1792385431",
+  "platform": "shopify",
+  "product_id": "8747453776051",
+  "product_type": "Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "Full City Roast",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Yirgacheffe Light Roast – Fresh Roasted Whole Bean Coffee",
+  "url": "https://crazyfreshcoffee.com/products/ethiopian-yirgacheffe-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.0,
+    "title": "2 lb",
+    "variant_id": "46233285066931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.0,
+    "title": "5 lb",
+    "variant_id": "46233287033011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.95,
+    "title": "1 lb",
+    "variant_id": "46233287065779"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "28013b222403202f",
+  "first_seen": "2026-10-26",
+  "handle": "king-motown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200.png?v=1792277328",
+  "platform": "shopify",
+  "product_id": "8748264784051",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Motown Blend",
+  "url": "https://crazyfreshcoffee.com/products/king-motown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 260.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646206643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 270.0,
+    "title": "32 × 12 oz",
+    "variant_id": "46238646239411"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 170.0,
+    "title": "120 × 2 oz packs",
+    "variant_id": "46238646272179"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "a3a14e66f44180a9",
+  "first_seen": "2026-10-26",
+  "handle": "king-motown-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_0de78410-4d52-40e2-97e3-f9eb5957f9c3.png?v=1792277342",
+  "platform": "shopify",
+  "product_id": "8748264816819",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Motown Decaf",
+  "url": "https://crazyfreshcoffee.com/products/king-motown-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 180.0,
+    "title": "120 × 2 oz packs",
+    "variant_id": "46238646304947"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "f00cd2245b337c1d",
+  "first_seen": "2026-10-26",
+  "handle": "king-supreme-city-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_14915ca3-0a48-4295-ad89-f6afd8d4c442.png?v=1792277342",
+  "platform": "shopify",
+  "product_id": "8748264849587",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Supreme City Roast",
+  "url": "https://crazyfreshcoffee.com/products/king-supreme-city-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 280.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646337715"
+   },
+   {
+    "available": true,
+    "grams": 71,
+    "price_usd": 225.0,
+    "title": "120 × 2.5 oz packs",
+    "variant_id": "46238646370483"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 180.0,
+    "title": "120 × 2 oz packs",
+    "variant_id": "46238646403251"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "a1295119d4450e75",
+  "first_seen": "2026-10-26",
+  "handle": "king-100-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_dce2f3a7-1ee4-4d4e-80d8-3121aa8c03d6.png?v=1792277342",
+  "platform": "shopify",
+  "product_id": "8748264882355",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King 100% Colombian",
+  "url": "https://crazyfreshcoffee.com/products/king-100-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 300.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646436019"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 195.0,
+    "title": "120 × 2 oz packs",
+    "variant_id": "46238646468787"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "8147b57b430d3e4f",
+  "first_seen": "2026-10-26",
+  "handle": "king-royal-kona-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_5717ec2d-324e-4e4a-93ac-89e4b86cca59.png?v=1792277342",
+  "platform": "shopify",
+  "product_id": "8748264915123",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Royal Kona Blend",
+  "url": "https://crazyfreshcoffee.com/products/king-royal-kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 335.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646501555"
+   },
+   {
+    "available": true,
+    "grams": 71,
+    "price_usd": 215.0,
+    "title": "96 × 2.5 oz packs",
+    "variant_id": "46238646534323"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "878523ac3c35d405",
+  "first_seen": "2026-10-26",
+  "handle": "king-vienna-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_261b2aa0-b5ed-4d82-a296-a899c36a8ee1.png?v=1792277342",
+  "platform": "shopify",
+  "product_id": "8748264947891",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Vienna Roast",
+  "url": "https://crazyfreshcoffee.com/products/king-vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 290.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646567091"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 185.0,
+    "title": "80 × 3 oz packs",
+    "variant_id": "46238646599859"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "18787db9aad8fc53",
+  "first_seen": "2026-10-26",
+  "handle": "king-vienna-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_9f1a11ee-dce3-4a40-af4d-2b1703962db7.png?v=1792277343",
+  "platform": "shopify",
+  "product_id": "8748264980659",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Vienna Roast Decaf",
+  "url": "https://crazyfreshcoffee.com/products/king-vienna-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 300.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646632627"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 190.0,
+    "title": "80 × 3 oz packs",
+    "variant_id": "46238646665395"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "94338dc245283b96",
+  "first_seen": "2026-10-26",
+  "handle": "king-french-normandy-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_6409b5a4-48ab-4afe-9bf4-31664cf95022.png?v=1792277343",
+  "platform": "shopify",
+  "product_id": "8748265013427",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King French Normandy Roast",
+  "url": "https://crazyfreshcoffee.com/products/king-french-normandy-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 300.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646698163"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "446e46bdcace5b17",
+  "first_seen": "2026-10-26",
+  "handle": "king-colombian-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/king-logo-1200_8da29b77-9a39-4521-a0b9-a6a2f6eff343.png?v=1792277343",
+  "platform": "shopify",
+  "product_id": "8748265046195",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "King wholesale"
+  ],
+  "title": "King Colombian Blend Decaf",
+  "url": "https://crazyfreshcoffee.com/products/king-colombian-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 300.0,
+    "title": "6 × 4 lb whole bean",
+    "variant_id": "46238646730931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 305.0,
+    "title": "32 × 12 oz",
+    "variant_id": "46238646763699"
+   },
+   {
+    "available": true,
+    "grams": 71,
+    "price_usd": 235.0,
+    "title": "120 × 2.5 oz packs",
+    "variant_id": "46238646796467"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 195.0,
+    "title": "120 × 2 oz packs",
+    "variant_id": "46238646829235"
+   }
+  ],
+  "vendor": "King Coffee"
+ },
+ {
+  "body_hash": "cd53961f7893d657",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-triple-threat",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-triple-threat-coffee.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8752462823603",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Triple Threat Dark Roast, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-triple-threat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 295.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253405733043"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "a9b4b27a173f808d",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-pazzo-fresco-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-pazzo-fresco-super-thick-crema-espresso.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8752462856371",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Pazzo Fresco Espresso, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-pazzo-fresco-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 280.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253405765811"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 100.0,
+    "title": "150 espresso pods",
+    "variant_id": "46253405798579"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "c80caec54b74b140",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-pazzo-fresco-espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-pazzo-fresco-super-thick-crema-espresso.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8752462889139",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Pazzo Fresco Espresso Decaf, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-pazzo-fresco-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 320.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253405831347"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 105.0,
+    "title": "150 espresso pods",
+    "variant_id": "46253405864115"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "1b3b870e18570bb9",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-continental-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/85957crazy_fresh_augustimg_4749.jpg?v=1792555481",
+  "platform": "shopify",
+  "product_id": "8752462921907",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Continental Blend, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-continental-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 280.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253405896883"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 295.0,
+    "title": "40 × 8 oz ground packs",
+    "variant_id": "46253405929651"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 280.0,
+    "title": "72 × 4 oz ground packs",
+    "variant_id": "46253405962419"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "7302a276a456c862",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-continental-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/85957crazy_fresh_augustimg_4749_32e45436-17d3-4f11-8b00-a6084b98055a.jpg?v=1792555481",
+  "platform": "shopify",
+  "product_id": "8752462954675",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Continental Blend Decaf, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-continental-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 310.0,
+    "title": "40 × 8 oz ground packs",
+    "variant_id": "46253405995187"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 260.0,
+    "title": "72 × 4 oz ground packs",
+    "variant_id": "46253406027955"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "254fc1c27fd75c81",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-french-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/85957crazy_fresh_augustimg_4749_c8097684-5f91-496d-ae4d-9d433d6fabb5.jpg?v=1792555482",
+  "platform": "shopify",
+  "product_id": "8752462987443",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "French Dark Roast Blend, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-french-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 280.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406060723"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "267c88055304764b",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-desert-island-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-desert-island-decaf-coffee.jpg?v=1792385362",
+  "platform": "shopify",
+  "product_id": "8752463020211",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Desert Island Decaf, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-desert-island-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 320.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406093491"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "b044256029735144",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-honduran-santa-rosa",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-honduran-santa-rosa-coffee-v2.jpg?v=1792702127",
+  "platform": "shopify",
+  "product_id": "8752463052979",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Honduran Santa Rosa, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-honduran-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 280.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406126259"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "bf4ba928be845871",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-mexico-altura-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-mexican-chiapas-coffee.jpg?v=1792385364",
+  "platform": "shopify",
+  "product_id": "8752463085747",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Mexico Altura Chiapas, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-mexico-altura-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 280.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406159027"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "82e326828581a456",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-sumatra-mandheling-coffee.jpg?v=1792385363",
+  "platform": "shopify",
+  "product_id": "8752463151283",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Sumatra Mandheling, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 330.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406224563"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ },
+ {
+  "body_hash": "f0105ea19737ab64",
+  "first_seen": "2026-10-26",
+  "handle": "cf-ws-ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0768/5347/7555/files/brew-yirgacheffe-pourover.jpg?v=1792385431",
+  "platform": "shopify",
+  "product_id": "8752463184051",
+  "product_type": "Foodservice Coffee",
+  "roaster_slug": "crazyfreshcoffee",
+  "tags": [
+   "CF wholesale"
+  ],
+  "title": "Ethiopian Yirgacheffe, Foodservice",
+  "url": "https://crazyfreshcoffee.com/products/cf-ws-ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 310.0,
+    "title": "20 lb case · 4 × 5 lb whole bean",
+    "variant_id": "46253406585011"
+   }
+  ],
+  "vendor": "Crazy Fresh Coffee"
+ }
+]

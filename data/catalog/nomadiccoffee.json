@@ -1,0 +1,924 @@
+[
+ {
+  "body_hash": "c77c2b02a9914802",
+  "first_seen": "2026-10-26",
+  "handle": "san-pablo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-san-pablo-stacked.jpg?v=1770961041",
+  "platform": "shopify",
+  "product_id": "1661177462851",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "San Pablo Blend",
+  "url": "https://nomadiccoffee.com/products/san-pablo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "15067508441155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "15067508473923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "15067508506691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "15067508539459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "15067508572227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "15067508604995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "15067508637763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "15067508670531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39422000005187"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "fc5345ad74b1ff1c",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-san-pablo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-amargosa-stacked.jpg?v=1770960793",
+  "platform": "shopify",
+  "product_id": "1661183000643",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "Amargosa Blend",
+  "url": "https://nomadiccoffee.com/products/copy-of-san-pablo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "15067575124035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "15067575156803"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "15067575222339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "15067575255107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "15067575287875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "15067575320643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "15067575353411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "15067575386179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39421990502467"
+   }
+  ],
+  "vendor": "Medium-Dark Roast"
+ },
+ {
+  "body_hash": "bb164ab232775a04",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-sumatra-stacked.jpg?v=1770961220",
+  "platform": "shopify",
+  "product_id": "292202577960",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_BROWN SUGAR - CARAMEL - CHOCOLATE"
+  ],
+  "title": "Organic Sumatra Takengon Jagong Jeget IKA",
+  "url": "https://nomadiccoffee.com/products/organic-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "43459687612483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "43459687645251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "43459687678019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Extra Fine - Turkish / 5 lb",
+    "variant_id": "43459687710787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "43459687743555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine - Espresso / 5 lb",
+    "variant_id": "43459687776323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "43459687809091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 5 lb",
+    "variant_id": "43459687841859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "43459687874627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 5 lb",
+    "variant_id": "43459687907395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "43459687940163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 5 lb",
+    "variant_id": "43459687972931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "43459688005699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Coarse - French Press / 5 lb",
+    "variant_id": "43459688038467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "43459688071235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Extra Coarse - Cold Brew / 5 lb",
+    "variant_id": "43459688104003"
+   }
+  ],
+  "vendor": "Medium-Dark Roast"
+ },
+ {
+  "body_hash": "7b9a75decd673373",
+  "first_seen": "2026-10-26",
+  "handle": "journey-pack-collection",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/blend-box_8ee615e5-03e4-4c94-a8b3-c9d6c69f34b2.jpg?v=1771007534",
+  "platform": "shopify",
+  "product_id": "303922610216",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "Journey Pack - Four 3oz bags",
+  "url": "https://nomadiccoffee.com/products/journey-pack-collection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 25.0,
+    "title": "Pack of 4 3oz-Bags",
+    "variant_id": "3031063789608"
+   }
+  ],
+  "vendor": "Organic Blend Collection"
+ },
+ {
+  "body_hash": "a253f31f5a75a929",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-organic-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-decaf-stacked_no-origin.png?v=1783367253",
+  "platform": "shopify",
+  "product_id": "4514544418883",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "Decaf - Swiss Water Processed Organic & Fair Trade Honduras",
+  "url": "https://nomadiccoffee.com/products/decaf-organic-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "31918934687811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "31918934720579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "31918934753347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "31918934786115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "31918934818883"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "31918934851651"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "31918934884419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "31918934917187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39421993779267"
+   }
+  ],
+  "vendor": "Medium-Dark"
+ },
+ {
+  "body_hash": "1efe9d9bb3a9c08a",
+  "first_seen": "2026-10-26",
+  "handle": "nomadic-blend-box",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/blend-box_497e87f7-193c-41ff-98cc-94cbdc44e679.jpg?v=1771007392",
+  "platform": "shopify",
+  "product_id": "6576302620739",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "Blend Box - Four 12oz bags",
+  "url": "https://nomadiccoffee.com/products/nomadic-blend-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 78.0,
+    "title": "Blend Box of 4: 12 oz - Bags",
+    "variant_id": "39445960097859"
+   }
+  ],
+  "vendor": "Organic Blend Collection"
+ },
+ {
+  "body_hash": "2a46cdebe2f97217",
+  "first_seen": "2026-10-26",
+  "handle": "roaster-s-choice-box",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/roasters-choice.jpg?v=1770967737",
+  "platform": "shopify",
+  "product_id": "6576306585667",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [],
+  "title": "Single-Origin Box - Three 12oz bags",
+  "url": "https://nomadiccoffee.com/products/roaster-s-choice-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 59.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "39446016819267"
+   }
+  ],
+  "vendor": "A collection of single-origins selected by our roasters"
+ },
+ {
+  "body_hash": "b00fbf6150e37e08",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/peru-stacked-final.jpg?v=1771557000",
+  "platform": "shopify",
+  "product_id": "9840398155",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_PEAR - DARK CHOCOLATE - ORANGE"
+  ],
+  "title": "Organic & Fair Trade Peru Cafe de Mujer APROCCURMA",
+  "url": "https://nomadiccoffee.com/products/organic-peru-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37241588299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37241588363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37241588427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37241588491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37241588555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37241588619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37241588683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37241588747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39422001217603"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "46719c9c19cffb99",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopia-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-ethiopia-stacked.jpg?v=1770963242",
+  "platform": "shopify",
+  "product_id": "9863035659",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_BLUEBERRY - STRAWBERRY - WATERMELON"
+  ],
+  "title": "Organic Ethiopia Sidama Shefina",
+  "url": "https://nomadiccoffee.com/products/organic-ethiopia-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37476180107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37476180171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37476180235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37476180363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37476180427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37476180491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37476180619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37476180683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39422004559939"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "6791ded26ff78864",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemala-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-guatemala-stacked.jpg?v=1770961290",
+  "platform": "shopify",
+  "product_id": "9863041419",
+  "product_type": "Single-Origin Coffee",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_BROWN SUGAR - CARAMEL - CHOCOLATE"
+  ],
+  "title": "Organic & Fair Trade Guatemala Huehuetenango CODECH",
+  "url": "https://nomadiccoffee.com/products/organic-guatemala-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37476402187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37476402251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37476402315"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37476402379"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37476402443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37476402507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37476402635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37476402699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39422004232259"
+   }
+  ],
+  "vendor": "Dark Roast"
+ },
+ {
+  "body_hash": "329b28890ffe0c7c",
+  "first_seen": "2026-10-26",
+  "handle": "la-brea-tar-pits-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-la-brea-stacked.jpg?v=1770961390",
+  "platform": "shopify",
+  "product_id": "9863045771",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_BOLD & SMOOTH"
+  ],
+  "title": "La Brea Blend",
+  "url": "https://nomadiccoffee.com/products/la-brea-tar-pits-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37476588555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37476588619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37476588683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37476588747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37476588811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37476588875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37476588939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37476589003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39421994565699"
+   }
+  ],
+  "vendor": "Dark Roast"
+ },
+ {
+  "body_hash": "f79cbb3548f5de1e",
+  "first_seen": "2026-10-26",
+  "handle": "lone-pine-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/nmdc-lone-pine-stacked.jpg?v=1770961157",
+  "platform": "shopify",
+  "product_id": "9863051787",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_BALANCED & SMOOTH"
+  ],
+  "title": "Lone Pine Blend",
+  "url": "https://nomadiccoffee.com/products/lone-pine-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37476824075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37476824139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37476824203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37476824267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37476824331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37476824395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37476824459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37476824523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39421994598467"
+   }
+  ],
+  "vendor": "Medium Roast"
+ },
+ {
+  "body_hash": "896376ce122998f8",
+  "first_seen": "2026-10-26",
+  "handle": "interstate-5-tab",
+  "image": "https://cdn.shopify.com/s/files/1/2085/2409/files/updated-roast-levels.jpg?v=1771556888",
+  "platform": "shopify",
+  "product_id": "9863060043",
+  "product_type": "Coffee Blend",
+  "roaster_slug": "nomadiccoffee",
+  "tags": [
+   "tagline_ROBUST & NUTTY"
+  ],
+  "title": "Interstate 5 Blend",
+  "url": "https://nomadiccoffee.com/products/interstate-5-tab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Wholebean / 12oz",
+    "variant_id": "37476985035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine - Turkish / 12oz",
+    "variant_id": "37476985099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine - Espresso / 12oz",
+    "variant_id": "37476985163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Fine - Moka Pot / Aero Press / 12oz",
+    "variant_id": "37476985227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium - Pour Over or Drip - Cone Filter / 12oz",
+    "variant_id": "37476985291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium Coarse - Drip - Flat Bottom Filter / 12oz",
+    "variant_id": "37476985355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse - French Press / 12oz",
+    "variant_id": "37476985419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Coarse - Cold Brew / 12oz",
+    "variant_id": "37476985483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Wholebean / 5 lb",
+    "variant_id": "39421994139715"
+   }
+  ],
+  "vendor": "Medium Roast"
+ }
+]

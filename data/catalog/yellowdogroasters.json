@@ -1,0 +1,722 @@
+[
+ {
+  "body_hash": "60960585e525b5f7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-honey-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_3259.heic?v=1791227691",
+  "platform": "shopify",
+  "product_id": "10803095371941",
+  "product_type": "",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Honduras Honey",
+  "url": "https://yellowdogroasters.com/products/colombia-honey-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "50582769369253"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Whole bean / 2.5 pound",
+    "variant_id": "50582769402021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "50582769434789"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Coarse ground (French Press) / 2.5 pound",
+    "variant_id": "50582769467557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "50582769500325"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Medium ground (drip) / 2.5 pound",
+    "variant_id": "50582769533093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "50582769565861"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Fine ground (espresso) / 2.5 pound",
+    "variant_id": "50582769598629"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "a642694928d843fb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-honey-draft",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_3260.heic?v=1791227652",
+  "platform": "shopify",
+  "product_id": "10803095797925",
+  "product_type": "",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Colombia Honey",
+  "url": "https://yellowdogroasters.com/products/colombia-honey-draft",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "50582776938661"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Whole bean / 2.5 pound",
+    "variant_id": "50582776971429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "50582777004197"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Coarse ground (French Press) / 2.5 pound",
+    "variant_id": "50582777036965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "50582777069733"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Medium ground (drip) / 2.5 pound",
+    "variant_id": "50582777102501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "50582777135269"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 39.0,
+    "title": "Fine ground (espresso) / 2.5 pound",
+    "variant_id": "50582777168037"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "b4a2a5f460f042b3",
+  "first_seen": "2026-10-26",
+  "handle": "1749-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5495.jpg?v=1730399457",
+  "platform": "shopify",
+  "product_id": "7659319885989",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Colombia Nariño",
+  "url": "https://yellowdogroasters.com/products/1749-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41722430619813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "41722430652581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "41722430685349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "41722430718117"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2.5 lb",
+    "variant_id": "44915127058597"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915127091365"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915127124133"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915127156901"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "9af73e491ba3a6c8",
+  "first_seen": "2026-10-26",
+  "handle": "crooked-creek-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5496.jpg?v=1730399645",
+  "platform": "shopify",
+  "product_id": "7686386188453",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Crooked Creek Blend",
+  "url": "https://yellowdogroasters.com/products/crooked-creek-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41722434322597"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "41722434355365"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "41722434388133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "41722434420901"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2.5 lb",
+    "variant_id": "44915114213541"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915114246309"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915114279077"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915114311845"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "174e0c8a90b83775",
+  "first_seen": "2026-10-26",
+  "handle": "wooden-jetty-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5494.jpg?v=1730399681",
+  "platform": "shopify",
+  "product_id": "7812170973349",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://yellowdogroasters.com/products/wooden-jetty-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41722436485285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "41722436518053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "41722436550821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "41722436583589"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2.5 lb",
+    "variant_id": "44915088654501"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915088687269"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915088720037"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915088752805"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "79a33266c5edbb49",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-harimau-tiger",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5498.jpg?v=1730399817",
+  "platform": "shopify",
+  "product_id": "8129436188837",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Sumatra Aceh Mandheling",
+  "url": "https://yellowdogroasters.com/products/sumatra-harimau-tiger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "42157756645541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "42157756678309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "42157756711077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "42157756743845"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole bean / 2.5 lb",
+    "variant_id": "44915187548325"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915187581093"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915187613861"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915187646629"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "7e36f620376e4300",
+  "first_seen": "2026-10-26",
+  "handle": "bayman-blend-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5501.jpg?v=1730399909",
+  "platform": "shopify",
+  "product_id": "8140818284709",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Bayman Blend",
+  "url": "https://yellowdogroasters.com/products/bayman-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "42197483978917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "42197484044453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "42197484109989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "42197484175525"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole bean / 2.5 lb",
+    "variant_id": "44915133415589"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915133448357"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915133481125"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915133513893"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "5e434699cb4cfc61",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-valle-del-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5500.jpg?v=1730399941",
+  "platform": "shopify",
+  "product_id": "8153785630885",
+  "product_type": "",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "DECAF - Mexico",
+  "url": "https://yellowdogroasters.com/products/decaf-colombia-valle-del-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "42239052939429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "42239052972197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "42239053004965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "42239053037733"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole bean / 2.5 lb",
+    "variant_id": "44915077054629"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915077087397"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915077120165"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915077152933"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "7b8b085cb7a4e8f4",
+  "first_seen": "2026-10-26",
+  "handle": "manahawkin-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_5497.jpg?v=1730399568",
+  "platform": "shopify",
+  "product_id": "8222884724901",
+  "product_type": "Coffee",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Manahawkin Blend",
+  "url": "https://yellowdogroasters.com/products/manahawkin-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "42453174911141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "42453186314405"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "42453186347173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "42453186379941"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole bean / 2.5 lb",
+    "variant_id": "44915055394981"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 lb",
+    "variant_id": "44915055427749"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 lb",
+    "variant_id": "44915055460517"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 lb",
+    "variant_id": "44915055493285"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ },
+ {
+  "body_hash": "35f07792922afb03",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0608/3444/7525/files/IMG_6987.heic?v=1740319745",
+  "platform": "shopify",
+  "product_id": "8965994840229",
+  "product_type": "",
+  "roaster_slug": "yellowdogroasters",
+  "tags": [],
+  "title": "Mexico Chiapas",
+  "url": "https://yellowdogroasters.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole bean / 12 oz",
+    "variant_id": "44915026755749"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Whole bean / 2.5 pound",
+    "variant_id": "44915026788517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Coarse ground (French Press) / 12 oz",
+    "variant_id": "44915026821285"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Coarse ground (French Press) / 2.5 pound",
+    "variant_id": "44915026854053"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Medium ground (drip) / 12 oz",
+    "variant_id": "44915026886821"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Medium ground (drip) / 2.5 pound",
+    "variant_id": "44915026919589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Fine ground (espresso) / 12 oz",
+    "variant_id": "44915026952357"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.0,
+    "title": "Fine ground (espresso) / 2.5 pound",
+    "variant_id": "44915026985125"
+   }
+  ],
+  "vendor": "Yellow Dog Coffee Roasters"
+ }
+]

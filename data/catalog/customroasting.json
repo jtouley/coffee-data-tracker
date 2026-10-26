@@ -1,0 +1,531 @@
+[
+ {
+  "body_hash": "2fa935b3669441d7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-dark",
+  "image": null,
+  "platform": "generic",
+  "product_id": "11e335d99ccc",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Guatemala Dark",
+  "url": "https://www.customroasting.net/product-page/guatemala-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83974e0d67b8efb8",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "277cabe0c9c6",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Fair Trade Organic French Roast",
+  "url": "https://www.customroasting.net/product-page/fair-trade-organic-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "15e36115eb2e30be",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-shg",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3ee72e66a424",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Honduras SHG",
+  "url": "https://www.customroasting.net/product-page/honduras-shg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "170f7c6b5c220b4a",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "463c92a71ec7",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://www.customroasting.net/product-page/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "607c773e1a8b57a4",
+  "first_seen": "2026-10-26",
+  "handle": "la-strada-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "48888a8a9ca8",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "La Strada Espresso",
+  "url": "https://www.customroasting.net/product-page/la-strada-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6be1025c83a3e963",
+  "first_seen": "2026-10-26",
+  "handle": "boundary-waters-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "66813369f797",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Boundary Waters Blend",
+  "url": "https://www.customroasting.net/product-page/boundary-waters-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4cde51461e8715a",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6901c9b17c6a",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Decaffeinated Espresso",
+  "url": "https://www.customroasting.net/product-page/decaffeinated-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51c7124c4407a8a6",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-peru",
+  "image": null,
+  "platform": "generic",
+  "product_id": "785a889f1288",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Fair Trade Organic Peru",
+  "url": "https://www.customroasting.net/product-page/fair-trade-organic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e962e24cc42b860",
+  "first_seen": "2026-10-26",
+  "handle": "garage-logic-175lb-twin-pack",
+  "image": null,
+  "platform": "generic",
+  "product_id": "83c1a9adee50",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Garage Logic 1.75lb. Dark Roast Twin Pack",
+  "url": "https://www.customroasting.net/product-page/garage-logic-175lb-twin-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 64.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "be64660c8429cd72",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8b486256cf07",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.customroasting.net/product-page/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "928828a3e511d84a",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-cherry-smoked-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8b4b7a5a0826",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Rocket Cherry Smoked Coffee",
+  "url": "https://www.customroasting.net/product-page/rocket-cherry-smoked-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ae1e1bde0f5af3e",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-plum-smoked-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8b81c56053f4",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Rocket Plum Smoked Coffee",
+  "url": "https://www.customroasting.net/product-page/rocket-plum-smoked-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5de109dfaa4769f",
+  "first_seen": "2026-10-26",
+  "handle": "minnesota-morning",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a626dc2b7c44",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Minnesota Morning Blend",
+  "url": "https://www.customroasting.net/product-page/minnesota-morning",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1d5a64c7f3fef344",
+  "first_seen": "2026-10-26",
+  "handle": "scandinavian-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "aa838e15a2d1",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Scandinavian Blend",
+  "url": "https://www.customroasting.net/product-page/scandinavian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b26b5722f390a130",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-scoop",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bd14f7114676",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Coffee Scoop",
+  "url": "https://www.customroasting.net/product-page/coffee-scoop",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dcace354ce87db10",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans-2-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "cefc0c61ea0b",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Chocolate Covered Espresso Beans 2 oz.",
+  "url": "https://www.customroasting.net/product-page/chocolate-covered-espresso-beans-2-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbd3083d84217742",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-excelso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d146f2dfe36a",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Colombia Excelso",
+  "url": "https://www.customroasting.net/product-page/colombia-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1fa2a42f49a3a0e",
+  "first_seen": "2026-10-26",
+  "handle": "xperitas-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "db5c2ec31899",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Xperitas Blend",
+  "url": "https://www.customroasting.net/product-page/xperitas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "304be83132d4677b",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-shg",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e2bb3b60f1ed",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Nicaragua SHG",
+  "url": "https://www.customroasting.net/product-page/nicaragua-shg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fc82cdd9fe902fc",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e49ec3703acb",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Decaffeinated French Roast",
+  "url": "https://www.customroasting.net/product-page/decaffeinated-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa03354b1a6c32af",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos-dark-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e7550c869142",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Brazil Santos Dark Roast",
+  "url": "https://www.customroasting.net/product-page/brazil-santos-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1431650c075470c3",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f245fa75927d",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.customroasting.net/product-page/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bad487de28ebe6d9",
+  "first_seen": "2026-10-26",
+  "handle": "garage-logic-175lb-light-roast-twin-pack",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f33232aaafb5",
+  "product_type": "",
+  "roaster_slug": "customroasting",
+  "tags": [],
+  "title": "Garage Logic 1.75lb. Light Roast Twin Pack",
+  "url": "https://www.customroasting.net/product-page/garage-logic-175lb-light-roast-twin-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 794,
+    "price_usd": 64.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

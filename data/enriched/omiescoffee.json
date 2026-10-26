@@ -1,0 +1,84 @@
+{
+ "6508554037745c76accca9d6": {
+  "body_hash": "0978ac91965737af",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 820,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "blueberry",
+   "chocolate",
+   "orange - bold",
+   "full bodied"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "6508559137745c76acccaa12": {
+  "body_hash": "4c207a99ebf8c70e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peaches",
+   "honey",
+   "creamy"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Catuai",
+   "Caturra",
+   "Pacamara",
+   "Sarchimor"
+  ]
+ },
+ "650857349b7df46691c36b15": {
+  "body_hash": "ef92464da13eea4d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "68caaa0b9f62a20a3fe204da": {
+  "body_hash": "dc305ac0089026a2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dried fig",
+   "dark chocolate",
+   "honey"
+  ],
+  "varietals": []
+ }
+}

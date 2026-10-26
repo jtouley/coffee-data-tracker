@@ -1,0 +1,2097 @@
+[
+ {
+  "body_hash": "1eaf131b26b48731",
+  "first_seen": "2026-10-26",
+  "handle": "papuamatra-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/Sumatra-PapuaNewGuinea.jpg?v=1696362082",
+  "platform": "shopify",
+  "product_id": "11589840262",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Cause",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Fresh Roasted",
+   "Iowa",
+   "beans",
+   "medium roast",
+   "non-flavored",
+   "specialty"
+  ],
+  "title": "Sumatra & Papua New Guinea",
+  "url": "https://jumpymonkey.com/products/papuamatra-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366473318481"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 75.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49068163974"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "bf40edda2aa5f216",
+  "first_seen": "2026-10-26",
+  "handle": "lewis-clark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/LewisandClarkBlend.jpg?v=1601648311",
+  "platform": "shopify",
+  "product_id": "11589954246",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Blends",
+   "Coffee",
+   "Fresh Roasted",
+   "Iowa",
+   "Light Roast",
+   "beans",
+   "coffee beans",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Lewis & Clark Blend",
+  "url": "https://jumpymonkey.com/products/lewis-clark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "23088958406737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366442975313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366447235153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49068480390"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49068783558"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49068813126"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "c39b9dcff013991b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/ColombianDecaf.jpg?v=1601648312",
+  "platform": "shopify",
+  "product_id": "11590330118",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Decaf",
+   "Fresh Roasted",
+   "Iowa",
+   "Mountain water process",
+   "School fundraiser",
+   "beans",
+   "colombian",
+   "ground",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Colombian Decaf - Mountain Water Process",
+  "url": "https://jumpymonkey.com/products/colombian-supremo-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "23081896280145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31365994119249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31365995724881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49073666054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49073756102"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49073778182"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "e4b099358f510231",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-sergeant-floyds-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/FrenchRoast.jpg?v=1601648314",
+  "platform": "shopify",
+  "product_id": "11590364742",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "10KSB",
+   "Cause",
+   "Coffee",
+   "Dark Roast",
+   "Lewis & Clark Trail",
+   "Robust",
+   "School fundraiser",
+   "USA",
+   "Woman Owned Small Business",
+   "beans",
+   "disabilities",
+   "disability",
+   "ground",
+   "local roaster",
+   "locally roasted",
+   "non-flavored",
+   "specialty"
+  ],
+  "title": "French Roast - Sergeant Floyd's Blend (Dark Roast)",
+  "url": "https://jumpymonkey.com/products/french-roast-sergeant-floyds-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366241845329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "38322868191431"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "43033855918279"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49074183494"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "cfb64e1ef913ba96",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-sticky-bun",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/csbwithcinnamonstickstransparent.png?v=1601648315",
+  "platform": "shopify",
+  "product_id": "11590403974",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Amazing",
+   "Best Seller",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Flavor",
+   "Fresh Roasted",
+   "Micro-Roasting",
+   "NON PROFITS",
+   "beans",
+   "cinnamon",
+   "ground",
+   "medium roast",
+   "school fundraiser",
+   "specialty"
+  ],
+  "title": "Cinnamon Sticky Bun",
+  "url": "https://jumpymonkey.com/products/cinnamon-sticky-bun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "12558374502481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31365951455313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31365953060945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49074301318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49074316038"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49074347846"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "31d1c5db2b7af5ed",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-sticky-bun-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/CinnamonStickyBunDecaf.jpg?v=1655993728",
+  "platform": "shopify",
+  "product_id": "11590439366",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Decaf",
+   "Flavor",
+   "Iowa",
+   "MEANINGFUL EMPLOYMENT",
+   "Mountain water process",
+   "NPI",
+   "OU",
+   "School fundraiser",
+   "beans",
+   "bun",
+   "ground"
+  ],
+  "title": "Cinnamon Sticky Bun Decaf",
+  "url": "https://jumpymonkey.com/products/cinnamon-sticky-bun-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "22146776006737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31365963448401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31365972656209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49074513542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49074551686"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49074570822"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "52122e6cd6d36cb2",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-gran-galupe",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/ColombianGranGalupe.jpg?v=1604701345",
+  "platform": "shopify",
+  "product_id": "11590592454",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "10KSB",
+   "Best Seller",
+   "Coffee",
+   "Coffee With A Cause",
+   "Espresso",
+   "Fresh Roasted",
+   "Micro-Roasting",
+   "School fundraiser",
+   "Woman Owned Small Business",
+   "beans",
+   "coffee beans",
+   "colombian",
+   "fundraising",
+   "ground",
+   "specialty"
+  ],
+  "title": "Colombia Gran Galupe",
+  "url": "https://jumpymonkey.com/products/colombian-gran-galupe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "12547678109777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366237487185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366239322193"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49075841926"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "f592a1b3dc8c597f",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/HCtransparent.png?v=1601648318",
+  "platform": "shopify",
+  "product_id": "11590619846",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "10KSB",
+   "Amherst NE Bronco",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Espresso",
+   "Favorite",
+   "Flavor",
+   "Fresh Roasted",
+   "Hazelnut Cream",
+   "Local",
+   "School fundraiser",
+   "beans",
+   "coffee beans",
+   "coffee roasters near me",
+   "disabilities",
+   "fundraiser",
+   "fundraising",
+   "ground",
+   "local roaster",
+   "locally roasted",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Hazelnut Cream",
+  "url": "https://jumpymonkey.com/products/hazelnut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "22146759753809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366362038353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366362824785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49076042758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49076042822"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49076042886"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "c269dd243c136d97",
+  "first_seen": "2026-10-26",
+  "handle": "good-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/GoodMorningBlend.jpg?v=1601648319",
+  "platform": "shopify",
+  "product_id": "11590638918",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Best Seller",
+   "Blends",
+   "Coffee",
+   "FOOD FOR THOUGHT",
+   "Iowa",
+   "Micro-Roasting",
+   "NON PROFITS",
+   "Robust",
+   "SINGLE ORIGIN",
+   "Small batch roasted",
+   "beans",
+   "coffee beans",
+   "fresh roasted",
+   "ground",
+   "local roaster",
+   "medium dark roast",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Good Morning Blend",
+  "url": "https://jumpymonkey.com/products/good-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "22146753953873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366326812753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366337069137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49076331334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49076331398"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49076331526"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "3bb24a185750e2d3",
+  "first_seen": "2026-10-26",
+  "handle": "highlander",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/HGtransparent_193ccbc4-54c7-429d-a284-83d2058ab7eb.png?v=1632435041",
+  "platform": "shopify",
+  "product_id": "11590673542",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "10KSB",
+   "Christmas gift",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Favorite",
+   "Flavor",
+   "Fresh Roasted",
+   "Iowa",
+   "Micro Roaster",
+   "School fundraiser",
+   "beans",
+   "coffee beans",
+   "disabilities",
+   "fundraiser",
+   "fundraising",
+   "ground",
+   "local roaster",
+   "locally roasted",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Highlander Grog",
+  "url": "https://jumpymonkey.com/products/highlander",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 75.25,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "22146766045265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.69,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366373900369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.69,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366384517201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.69,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49077145158"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.69,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49077189830"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 75.25,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49077217798"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "61241e044d82cdf7",
+  "first_seen": "2026-10-26",
+  "handle": "npi-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/NPIblend.png?v=1728668373",
+  "platform": "shopify",
+  "product_id": "11590762886",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Blends",
+   "Coffee",
+   "Fresh Roasted",
+   "Iowa",
+   "beans",
+   "exclude",
+   "ground",
+   "medium dark roast",
+   "non-flavored",
+   "specialty"
+  ],
+  "title": "2026 NPI Blend Fundraiser",
+  "url": "https://jumpymonkey.com/products/npi-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.0,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "23457156857937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366464929873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366465618001"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.0,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49078858694"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "ec350db2e419a16e",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-buttercream",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/Vanilla_Buttercream.png?v=1727211620",
+  "platform": "shopify",
+  "product_id": "11590792134",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Best Seller",
+   "Coffee",
+   "Flavor",
+   "Iowa",
+   "beans",
+   "ground",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Vanilla Buttercream",
+  "url": "https://jumpymonkey.com/products/vanilla-buttercream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "22146774564945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366684606545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "31366707609681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "49079089990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.49,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "49079125894"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49079148166"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "bcf84121af83efc3",
+  "first_seen": "2026-10-26",
+  "handle": "jungle-java",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/JungleJava.jpg?v=1601648326",
+  "platform": "shopify",
+  "product_id": "11590814406",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Blends",
+   "Coffee",
+   "Fresh Roasted",
+   "Iowa",
+   "Robust",
+   "beans",
+   "coffee beans",
+   "medium dark roast",
+   "non-flavored",
+   "specialty"
+  ],
+  "title": "Jungle Java - full bodied, fruity, earthy (new recipe)",
+  "url": "https://jumpymonkey.com/products/jungle-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31366424428625"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 75.49,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "49079500806"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "067e568b00faa388",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/PapuaNewGuinea.jpg?v=1696362032",
+  "platform": "shopify",
+  "product_id": "3295196217425",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "Fresh Roasted",
+   "Papua New Guinea",
+   "Small batch roasted",
+   "Woman Owned Small Business",
+   "fresh",
+   "small batch coffee roasters near me",
+   "small business",
+   "specialty"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://jumpymonkey.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "24211324469329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31367252410449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "44530899812551"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "44530899845319"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "9eddec9decf54663",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-harimau-tiger",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/Sumatra16oz.jpg?v=1696362348",
+  "platform": "shopify",
+  "product_id": "3295237308497",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Micro Roaster",
+   "Small batch roasted",
+   "Sumatra",
+   "beans",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Sumatra Harimau Tiger",
+  "url": "https://jumpymonkey.com/products/sumatra-harimau-tiger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 76.49,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "24211407896657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "31367706378321"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "02d9e20424e00a22",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/PumpkinHarvest.jpg?v=1601648329",
+  "platform": "shopify",
+  "product_id": "40358608902",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Fall",
+   "Flavor",
+   "Fresh Roasted",
+   "Pumpkin",
+   "beans",
+   "fresh",
+   "ground",
+   "medium roast",
+   "specialty"
+  ],
+  "title": "Pumpkin Harvest",
+  "url": "https://jumpymonkey.com/products/pumpkin-harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "23081781854289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "24149195259985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "24149202141265"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "267042095110"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "73c55227a3cba103",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-sampler",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/Samplerbox.png?v=1601648331",
+  "platform": "shopify",
+  "product_id": "40372764678",
+  "product_type": "Red",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "Coffee",
+   "Flavor",
+   "Fresh Roasted",
+   "Iowa",
+   "Sampler",
+   "School fundraiser",
+   "ground",
+   "specialty"
+  ],
+  "title": "Flavored Coffee Sample Pack- 4 samples",
+  "url": "https://jumpymonkey.com/products/flavored-sampler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.49,
+    "title": "Default Title",
+    "variant_id": "267070406662"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "d6da117fde7f39d6",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-dark",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/MexicoDark.jpg?v=1601648344",
+  "platform": "shopify",
+  "product_id": "4552219525201",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Dark Roast",
+   "Fresh Roasted",
+   "Iowa",
+   "NPI",
+   "beans",
+   "coffee beans",
+   "colombian",
+   "specialty"
+  ],
+  "title": "Mexico - Dark",
+  "url": "https://jumpymonkey.com/products/mexico-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "32045976911953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "32178214273105"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "32178337415249"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "8b6a8d1673b72081",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-dark",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/JM_Espresso_Roast.jpg?v=1726604948",
+  "platform": "shopify",
+  "product_id": "4552225194065",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Espresso",
+   "Fresh Roasted",
+   "Micro-Roasting",
+   "School fundraiser",
+   "beans",
+   "coffee roasters near me",
+   "colombian",
+   "fundraising",
+   "ground",
+   "small batch coffee roasters near me",
+   "specialty"
+  ],
+  "title": "JM Espresso Coffee",
+  "url": "https://jumpymonkey.com/products/colombia-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "32046004994129"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "32046005059665"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "222d4d83aa2eb02e",
+  "first_seen": "2026-10-26",
+  "handle": "omanhene-hot-cocoa",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/OmanheneHotCocoa.jpg?v=1591218525",
+  "platform": "shopify",
+  "product_id": "4600231886929",
+  "product_type": "White",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "10KSB",
+   "Christmas",
+   "Christmas gift",
+   "Coffee With A Cause",
+   "Hot chocolate",
+   "Omanhene",
+   "School fundraiser",
+   "Woman Owned Small Business",
+   "disabilities",
+   "fundraising",
+   "gluten free",
+   "specialty"
+  ],
+  "title": "Hot Cocoa - Omanhene (DISCOUNTED when checking out)",
+  "url": "https://jumpymonkey.com/products/omanhene-hot-cocoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 13.0,
+    "title": "Default Title",
+    "variant_id": "32244782727249"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "15fe7ff2c07c1fbb",
+  "first_seen": "2026-10-26",
+  "handle": "all-that-dance",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/All_That_Dance_-_Blank.png?v=1728668237",
+  "platform": "shopify",
+  "product_id": "4688097280081",
+  "product_type": "",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Fresh Roasted",
+   "NON PROFITS",
+   "School fundraiser",
+   "beans",
+   "exclude",
+   "fundraiser",
+   "fundraising",
+   "ground",
+   "specialty"
+  ],
+  "title": "2026 All That Dance",
+  "url": "https://jumpymonkey.com/products/all-that-dance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Tutu Brew / ***Ground",
+    "variant_id": "32604203941969"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Tutu Brew / Whole Bean",
+    "variant_id": "32604203974737"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / ***Ground",
+    "variant_id": "32604204007505"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / Whole Bean",
+    "variant_id": "32604204040273"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend / ***Ground",
+    "variant_id": "32604204138577"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend / Whole Bean",
+    "variant_id": "32604204171345"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend Single Serve 12 K-cups / ***Ground",
+    "variant_id": "32604204204113"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Jumpy Monkey Hot Cocoa / ***Ground",
+    "variant_id": "32604204236881"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sumatra / ***Ground",
+    "variant_id": "32604221440081"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sumatra / Whole Bean",
+    "variant_id": "32604221734993"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Hazelnut Cream / ***Ground",
+    "variant_id": "32604226715729"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Hazelnut Cream / Whole Bean",
+    "variant_id": "32604228321361"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Pumpkin Harvest / ***Ground",
+    "variant_id": "32604230910033"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Pumpkin Harvest / Whole Bean",
+    "variant_id": "32604231336017"
+   },
+   {
+    "available": true,
+    "grams": 1026,
+    "price_usd": 40.0,
+    "title": "3 Bag Bonus Pack / ***Ground",
+    "variant_id": "32608789626961"
+   },
+   {
+    "available": true,
+    "grams": 1026,
+    "price_usd": 40.0,
+    "title": "3 Bag Bonus Pack / Whole Bean",
+    "variant_id": "32608789758033"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "5f902dbdde52c057",
+  "first_seen": "2026-10-26",
+  "handle": "2026-millard-south-orchestra",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/OrchestraBlendBag.png?v=1728668320",
+  "platform": "shopify",
+  "product_id": "6043146387655",
+  "product_type": "Coffee",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Fresh Roasted",
+   "Lincoln Southeast Choral Boosters",
+   "Millard South",
+   "NON PROFITS",
+   "Orchestra",
+   "School fundraiser",
+   "beans",
+   "exclude",
+   "fundraiser",
+   "fundraising",
+   "ground",
+   "specialty"
+  ],
+  "title": "2026 Millard South Orchestra",
+  "url": "https://jumpymonkey.com/products/2026-millard-south-orchestra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Orchestra Blend / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "37406021681351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Orchestra Blend / Whole Bean / 12 oz (340.19 g)",
+    "variant_id": "37406021714119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "37406021812423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / Whole Bean / 12 oz (340.19 g)",
+    "variant_id": "37406021845191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Vanilla Buttercream / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "37406021877959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Vanilla Buttercream / Whole Bean / 12 oz (340.19 g)",
+    "variant_id": "37406021910727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Colombian Decaf / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "37406021943495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Colombian Decaf / Whole Bean / 12 oz (340.19 g)",
+    "variant_id": "37406021976263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend Single Serve 12 K-cups / K-cups / 12 oz (340.19 g)",
+    "variant_id": "37406022009031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Jumpy Monkey Hot Cocoa - 12 oz / 14 Servings / 12 oz (340.19 g)",
+    "variant_id": "37406022041799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Colombian Gran Galupe / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "37406022140103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Colombian Gran Galupe / Whole Bean / 12 oz (340.19 g)",
+    "variant_id": "37406022172871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Snickerdoodle / ***Ground / 12 oz (340.19 g)",
+    "variant_id": "41168061595847"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Snickerdoodle / WHOLE BEAN / 12 oz (340.19 g)",
+    "variant_id": "41168068444359"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "56213cf932360997",
+  "first_seen": "2026-10-26",
+  "handle": "remsen-st-marys",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/Remsen_St_Marys_sample_bag.png?v=1622587688",
+  "platform": "shopify",
+  "product_id": "6084472897735",
+  "product_type": "",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "Remsen St. Mary's",
+   "exclude"
+  ],
+  "title": "2026 Remsen St. Marys",
+  "url": "https://jumpymonkey.com/products/remsen-st-marys",
+  "variants": [
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Remsen Roast / ***Ground",
+    "variant_id": "37585213456583"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Remsen Roast / Whole Bean",
+    "variant_id": "37585213489351"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Remsen Roast DECAF** / ***Ground",
+    "variant_id": "37585213522119"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Remsen Roast DECAF** / Whole Bean",
+    "variant_id": "37585213554887"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / ***Ground",
+    "variant_id": "37585213587655"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Cinnamon Sticky Bun / Whole Bean",
+    "variant_id": "37585213620423"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend / ***Ground",
+    "variant_id": "37585213653191"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend / Whole Bean",
+    "variant_id": "37585213685959"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Jamaican Me Crazy / ***Ground",
+    "variant_id": "37585213718727"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Jamaican Me Crazy / Whole Bean",
+    "variant_id": "37585213751495"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Hazelnut Cream / ***Ground",
+    "variant_id": "37585213915335"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Hazelnut Cream / Whole Bean",
+    "variant_id": "37585213948103"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Highlander Grog / ***Ground",
+    "variant_id": "41327586869447"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Highlander Grog / Whole Bean",
+    "variant_id": "41327586902215"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Lewis & Clark / ***Ground",
+    "variant_id": "41327587066055"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Lewis & Clark / Whole Bean",
+    "variant_id": "41327587098823"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Colombian Gran Galupe / ***Ground",
+    "variant_id": "41327587262663"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Colombian Gran Galupe / Whole Bean",
+    "variant_id": "41327587295431"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sgt Floyd French Roast / ***Ground",
+    "variant_id": "41327587459271"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sgt Floyd French Roast / Whole Bean",
+    "variant_id": "41327587492039"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Vanilla Buttercream / ***Ground",
+    "variant_id": "41327588049095"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Vanilla Buttercream / Whole Bean",
+    "variant_id": "41327588081863"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Good Morning Blend - K-cup Single Serve / ***Ground",
+    "variant_id": "41327762735303"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sampler Pack - Flavored - Drip Grind / ***Ground",
+    "variant_id": "41327762800839"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Sampler Pack - Non-Flavored - Drip Grind / ***Ground",
+    "variant_id": "41327762866375"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Omanhene Hot Cocoa / ***Ground",
+    "variant_id": "41327793897671"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Snickerdoodle / ***Ground",
+    "variant_id": "41732569563335"
+   },
+   {
+    "available": true,
+    "grams": 342,
+    "price_usd": 15.0,
+    "title": "Snickerdoodle / Whole Bean",
+    "variant_id": "41732569596103"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "80b337a1b1a23aae",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/Snickerdoodle.png?v=1727210677",
+  "platform": "shopify",
+  "product_id": "6548642332871",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Flavor",
+   "Fresh Roasted",
+   "Micro-Roasting",
+   "NON PROFITS",
+   "beans",
+   "cinnamon",
+   "ground",
+   "medium roast",
+   "school fundraiser",
+   "specialty",
+   "sticky"
+  ],
+  "title": "Snickerdoodle",
+  "url": "https://jumpymonkey.com/products/snickerdoodle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "39297686601927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "39297686634695"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "39298065039559"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "39298065301703"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "1a9d94d15348d012",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/Jam_Crazy_12_oz_cd362c01-c7f1-462d-a030-290d28c9a8b9.png?v=1727212839",
+  "platform": "shopify",
+  "product_id": "6548731134151",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Flavor",
+   "Fresh Roasted",
+   "Micro-Roasting",
+   "NON PROFITS",
+   "beans",
+   "cinnamon",
+   "ground",
+   "medium roast",
+   "school fundraiser",
+   "specialty",
+   "sticky"
+  ],
+  "title": "Jamaican Me Crazy - New Flavor",
+  "url": "https://jumpymonkey.com/products/jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "39297933181127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "39297933213895"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "39298067890375"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "39298069889223"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "f41bb7453eb5a18c",
+  "first_seen": "2026-10-26",
+  "handle": "customer-favorite-starter-pack",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/Starter-IntroductoryPacktoJumpyMonkey.jpg?v=1642001375",
+  "platform": "shopify",
+  "product_id": "7130840203463",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Cause",
+   "Christmas gift",
+   "Coffee",
+   "Coffee With A Cause",
+   "Coffee_with_A_Cause",
+   "Favorite",
+   "Fresh Roasted",
+   "Introduction",
+   "Iowa",
+   "Local",
+   "Micro-Roasting",
+   "NON PROFITS",
+   "USA",
+   "Woman Owned Small Business",
+   "beans",
+   "fundraising",
+   "ground",
+   "local roaster",
+   "locally roasted",
+   "specialty"
+  ],
+  "title": "Introduction Pack - Cinnamon Sticky Bun, Good Morning Blend, Vanilla Buttercream",
+  "url": "https://jumpymonkey.com/products/customer-favorite-starter-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.0,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "41391337111751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "41391337144519"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 39.0,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "44578183512263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "44578183545031"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee"
+ },
+ {
+  "body_hash": "ea47ca8517f293a9",
+  "first_seen": "2026-10-26",
+  "handle": "best-of-2021-22-cinnamon-sticky-bun-highlander-grog-vanilla-buttercream",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/Best_of_2021___2022.png?v=1656102560",
+  "platform": "shopify",
+  "product_id": "7378561990855",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Christmas",
+   "Coffee",
+   "Coffee With A Cause",
+   "Favorite",
+   "Fresh Roasted",
+   "Small batch roasted",
+   "Woman Owned Small Business",
+   "beans",
+   "locally roasted",
+   "medium roast"
+  ],
+  "title": "Best of 2021-22: Cinnamon Sticky Bun, Highlander Grog & Vanilla Buttercream",
+  "url": "https://jumpymonkey.com/products/best-of-2021-22-cinnamon-sticky-bun-highlander-grog-vanilla-buttercream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) (3 flavors) / ***Ground",
+    "variant_id": "42679970955463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) (3 flavors) / Whole Bean",
+    "variant_id": "44578203205831"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee"
+ },
+ {
+  "body_hash": "89bbfa93ab42dbd3",
+  "first_seen": "2026-10-26",
+  "handle": "2023-sioux-city-knights-fundraiser",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/SiouxCityKnights.png?v=1681318441",
+  "platform": "shopify",
+  "product_id": "7657343615175",
+  "product_type": "Platinum",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Blends",
+   "Coffee",
+   "Fresh Roasted",
+   "Iowa",
+   "Sioux City Knights",
+   "beans",
+   "exclude",
+   "ground",
+   "medium dark roast",
+   "non-flavored",
+   "specialty"
+  ],
+  "title": "2026 Sioux City Knights Fundraiser",
+  "url": "https://jumpymonkey.com/products/2023-sioux-city-knights-fundraiser",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz (340.19 g) / Whole Bean",
+    "variant_id": "43160397578439"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz (340.19 g) / ***Ground",
+    "variant_id": "43160397611207"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "2f298630a15a6879",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/GuatemalaDark.jpg?v=1696372373",
+  "platform": "shopify",
+  "product_id": "7765316108487",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Coffee",
+   "Coffee With A Cause",
+   "Dark Roast",
+   "Fresh Roasted",
+   "Iowa",
+   "NPI",
+   "beans",
+   "coffee beans",
+   "colombian",
+   "specialty"
+  ],
+  "title": "Guatemala DARK - Huehuetenango",
+  "url": "https://jumpymonkey.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "43402614538439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "43402614571207"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "44578209824967"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "44578209857735"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ },
+ {
+  "body_hash": "0c8f35a30d508723",
+  "first_seen": "2026-10-26",
+  "handle": "best-of-2023-cinnamon-sticky-bun-highlander-grog-good-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/files/Best_of_2023-3pack.png?v=1707410775",
+  "platform": "shopify",
+  "product_id": "7886844690631",
+  "product_type": "Silver",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "Christmas",
+   "Coffee",
+   "Coffee With A Cause",
+   "Favorite",
+   "Fresh Roasted",
+   "Small batch roasted",
+   "Woman Owned Small Business",
+   "beans",
+   "locally roasted",
+   "medium roast"
+  ],
+  "title": "Best of 2023: Cinnamon Sticky Bun, Highlander Grog & Good Morning Blend",
+  "url": "https://jumpymonkey.com/products/best-of-2023-cinnamon-sticky-bun-highlander-grog-good-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) (3 flavors) / ***Ground",
+    "variant_id": "43733289402567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 46.97,
+    "title": "1 lb (453.6 g) (3 flavors) / Whole Bean",
+    "variant_id": "44578193277127"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee"
+ },
+ {
+  "body_hash": "167aac33e11ef49d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-gran-galupe-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/2278/9161/products/ColombianDark.jpg?v=1735661642",
+  "platform": "shopify",
+  "product_id": "8281082200263",
+  "product_type": "Gold",
+  "roaster_slug": "jumpymonkey",
+  "tags": [
+   "100% Arabica",
+   "10KSB",
+   "Best Seller",
+   "Coffee",
+   "Coffee With A Cause",
+   "Cold Brew",
+   "Colombian Coffee",
+   "Colombian Gran Galupe",
+   "Espresso",
+   "Fresh Roasted",
+   "Gourmet Coffee Gift",
+   "Jumpy Monkey Coffee",
+   "Micro-Roasting",
+   "School fundraiser",
+   "Small batch roasted",
+   "Woman Owned Small Business",
+   "beans",
+   "coffee beans",
+   "fundraising",
+   "ground",
+   "medium dark roast",
+   "small batch coffee roasters near me",
+   "specialty"
+  ],
+  "title": "Colombian Gran Galupe – Dark Roast Coffee",
+  "url": "https://jumpymonkey.com/products/colombia-gran-galupe-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / Whole Bean",
+    "variant_id": "44780686639303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.49,
+    "title": "1 lb (453.6 g) / ***Ground",
+    "variant_id": "44780686672071"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / Whole Bean",
+    "variant_id": "44780686704839"
+   },
+   {
+    "available": true,
+    "grams": 2270,
+    "price_usd": 74.99,
+    "title": "5 lbs (2.27 kg) / ***Ground",
+    "variant_id": "44780686737607"
+   }
+  ],
+  "vendor": "Jumpy Monkey® Coffee Roasting Co."
+ }
+]

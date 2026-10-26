@@ -1,0 +1,141 @@
+{
+ "533acd2ee4b020a169fd228f": {
+  "body_hash": "eee05ded3d0ef031",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1270,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "533acd2fe4b020a169fd229c": {
+  "body_hash": "dc1750473705d671",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "5f8f4dbf6027e15508f0968f": {
+  "body_hash": "c80e0a97f60a1f15",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Bolivia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "656a0b26e1b4721e3d728d4f": {
+  "body_hash": "601a9b37c8453d01",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "65a032ac3f9cce64e7e7ec47": {
+  "body_hash": "3a8e172f2e562eba",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "677bec3c3253033db9cd75df": {
+  "body_hash": "ce857bbe3d75c245",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "medium body",
+   "crisp",
+   "toffee",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "6a720b0941bb94338065ddb9": {
+  "body_hash": "8dc9c0085622ce60",
+  "elevation_masl_max": 1765,
+  "elevation_masl_min": 1765,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "6ace3b38ae48757ac420c264": {
+  "body_hash": "d9678d4e59aee8b5",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Laos",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Catimor",
+   "Catuai",
+   "Java",
+   "Typica"
+  ]
+ }
+}

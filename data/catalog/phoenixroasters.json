@@ -1,0 +1,763 @@
+[
+ {
+  "body_hash": "ad70198c18309923",
+  "first_seen": "2026-10-26",
+  "handle": "panamanian",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/Panama.png?v=1750093709",
+  "platform": "shopify",
+  "product_id": "8032921747773",
+  "product_type": "Beans",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Panamanian",
+  "url": "https://phoenixroasters.coffee/products/panamanian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean / Blonde",
+    "variant_id": "44167169474877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "44167169507645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "44167169540413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Ground / Blonde",
+    "variant_id": "44167169573181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Ground / Medium",
+    "variant_id": "44167169605949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Ground / Dark",
+    "variant_id": "44167169638717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean / Blonde",
+    "variant_id": "44167169671485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean / Medium",
+    "variant_id": "44167169704253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean / Dark",
+    "variant_id": "44167169737021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Ground / Blonde",
+    "variant_id": "44167169769789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Ground / Medium",
+    "variant_id": "44167169802557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Ground / Dark",
+    "variant_id": "44167169835325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean / Blonde",
+    "variant_id": "44167169868093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean / Medium",
+    "variant_id": "44167169900861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean / Dark",
+    "variant_id": "44167169933629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Ground / Blonde",
+    "variant_id": "44167169966397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Ground / Medium",
+    "variant_id": "44167169999165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Ground / Dark",
+    "variant_id": "44167170031933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole Bean / Espresso",
+    "variant_id": "44221845602621"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Ground / Espresso",
+    "variant_id": "44221845635389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean / Espresso",
+    "variant_id": "44221845668157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Ground / Espresso",
+    "variant_id": "44221845700925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean / Espresso",
+    "variant_id": "44221845733693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Ground / Espresso",
+    "variant_id": "44221845766461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12oz / Whole Bean / Natural",
+    "variant_id": "48658218385725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.85,
+    "title": "12oz / Ground / Natural",
+    "variant_id": "48658218418493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.7,
+    "title": "2lb / Whole Bean / Natural",
+    "variant_id": "48658218451261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.7,
+    "title": "2lb / Ground / Natural",
+    "variant_id": "48658218484029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.25,
+    "title": "5lb / Whole Bean / Natural",
+    "variant_id": "48658218516797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.25,
+    "title": "5lb / Ground / Natural",
+    "variant_id": "48658218549565"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/Decaf.png?v=1737390486",
+  "platform": "shopify",
+  "product_id": "8043724931389",
+  "product_type": "Beans",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Decaf",
+  "url": "https://phoenixroasters.coffee/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole",
+    "variant_id": "44212996538685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground",
+    "variant_id": "44212996571453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole",
+    "variant_id": "44212996604221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground",
+    "variant_id": "44212996636989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole",
+    "variant_id": "44212996669757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground",
+    "variant_id": "44212996702525"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "021b108a175fa94f",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/Phoenix_FINAL_Flavored_010625.png?v=1767630720",
+  "platform": "shopify",
+  "product_id": "8043734663485",
+  "product_type": "Beans",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Flavored Coffee",
+  "url": "https://phoenixroasters.coffee/products/flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole Bean / Caramel",
+    "variant_id": "44213039366461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole Bean / Chocolate",
+    "variant_id": "44213039399229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole Bean / French Vanilla",
+    "variant_id": "44213039431997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole Bean / Hazelnut",
+    "variant_id": "44213039464765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground / Caramel",
+    "variant_id": "44213039563069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground / Chocolate",
+    "variant_id": "44213039595837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground / French Vanilla",
+    "variant_id": "44213039628605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground / Hazelnut",
+    "variant_id": "44213039661373"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole Bean / Caramel",
+    "variant_id": "44213039759677"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole Bean / Chocolate",
+    "variant_id": "44213039792445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole Bean / French Vanilla",
+    "variant_id": "44213039825213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole Bean / Hazelnut",
+    "variant_id": "44213039857981"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground / Caramel",
+    "variant_id": "44213039956285"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground / Chocolate",
+    "variant_id": "44213039989053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground / French Vanilla",
+    "variant_id": "44213040021821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground / Hazelnut",
+    "variant_id": "44213040054589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole Bean / Caramel",
+    "variant_id": "44213040152893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole Bean / Chocolate",
+    "variant_id": "44213040185661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole Bean / French Vanilla",
+    "variant_id": "44213040218429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole Bean / Hazelnut",
+    "variant_id": "44213040251197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground / Caramel",
+    "variant_id": "44213040349501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground / Chocolate",
+    "variant_id": "44213040382269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground / French Vanilla",
+    "variant_id": "44213040415037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground / Hazelnut",
+    "variant_id": "44213040447805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Whole Bean / Highlander Grog",
+    "variant_id": "47462828638525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.75,
+    "title": "12oz / Ground / Highlander Grog",
+    "variant_id": "47462828671293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Whole Bean / Highlander Grog",
+    "variant_id": "47462828704061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.5,
+    "title": "2lb / Ground / Highlander Grog",
+    "variant_id": "47462828736829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Whole Bean / Highlander Grog",
+    "variant_id": "47462828769597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lb / Ground / Highlander Grog",
+    "variant_id": "47462828802365"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "55cc91aec981e3d2",
+  "first_seen": "2026-10-26",
+  "handle": "panama-black-nitro-keg",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/TapHandles_PB.jpg?v=1685024360",
+  "platform": "shopify",
+  "product_id": "8150368682301",
+  "product_type": "Nitro",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Nitro",
+   "Wholesale"
+  ],
+  "title": "Panama Black Nitro",
+  "url": "https://phoenixroasters.coffee/products/panama-black-nitro-keg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 135.0,
+    "title": "Full Keg",
+    "variant_id": "44679581040957"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "6927084fa99db95d",
+  "first_seen": "2026-10-26",
+  "handle": "b-t-bulk-25lb-panamanian-medium-wb",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/Roasted_coffee_beans_119fcd67-c3f6-4440-a983-bfabb9357d14.jpg?v=1738594158",
+  "platform": "shopify",
+  "product_id": "8904381366589",
+  "product_type": "",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Wholesale"
+  ],
+  "title": "Bulk 25lb Whole Bean Box",
+  "url": "https://phoenixroasters.coffee/products/b-t-bulk-25lb-panamanian-medium-wb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Panamanian / Blonde",
+    "variant_id": "49670090654013"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Panamanian / Medium",
+    "variant_id": "49670090686781"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Panamanian / Dark",
+    "variant_id": "49670090719549"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Panamanian / Expresso",
+    "variant_id": "49670090752317"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Nicaraguan / Blonde",
+    "variant_id": "49670090916157"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Nicaraguan / Medium",
+    "variant_id": "49670090948925"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 312.5,
+    "title": "Nicaraguan / Dark",
+    "variant_id": "49670090981693"
+   },
+   {
+    "available": true,
+    "grams": 11340,
+    "price_usd": 356.5,
+    "title": "Decaf / Medium",
+    "variant_id": "49670133154109"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "56bad134f55f4c42",
+  "first_seen": "2026-10-26",
+  "handle": "morning-fog-custom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/coffee-grind-types-explained-204975_1600x_2d0a9ba3-6611-4937-8ee8-0121e24b83de.png?v=1729082385",
+  "platform": "shopify",
+  "product_id": "9696251380029",
+  "product_type": "",
+  "roaster_slug": "phoenixroasters",
+  "tags": [],
+  "title": "Morning Fog Blend",
+  "url": "https://phoenixroasters.coffee/products/morning-fog-custom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.8,
+    "title": "12oz",
+    "variant_id": "49487341912381"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 64.75,
+    "title": "5lb",
+    "variant_id": "49487341945149"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "toll-roast",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9806279999805",
+  "product_type": "",
+  "roaster_slug": "phoenixroasters",
+  "tags": [],
+  "title": "Toll Roast",
+  "url": "https://phoenixroasters.coffee/products/toll-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 1.35,
+    "title": "Default Title",
+    "variant_id": "49842970263869"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "e91ddeac8119b1b5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-guji-wholesale-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/Ethiopia.png?v=1749836643",
+  "platform": "shopify",
+  "product_id": "9974790783293",
+  "product_type": "",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Ethiopian Guji",
+  "url": "https://phoenixroasters.coffee/products/ethiopian-guji-wholesale-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50455819583805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50455819714877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Ground",
+    "variant_id": "50916264214845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb / Ground",
+    "variant_id": "50916264247613"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ },
+ {
+  "body_hash": "669d662e3df22b00",
+  "first_seen": "2026-10-26",
+  "handle": "small-batch-el-salvador-1",
+  "image": "https://cdn.shopify.com/s/files/1/0663/6788/1533/files/SmallBatch_613685eb-ca62-4708-999f-b8df503241f8.png?v=1749754885",
+  "platform": "shopify",
+  "product_id": "9974791373117",
+  "product_type": "",
+  "roaster_slug": "phoenixroasters",
+  "tags": [
+   "Beans"
+  ],
+  "title": "Small Batch El Salvador",
+  "url": "https://phoenixroasters.coffee/products/small-batch-el-salvador-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50455821254973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50455821287741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground",
+    "variant_id": "50912456507709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb / Ground",
+    "variant_id": "50912456540477"
+   }
+  ],
+  "vendor": "Phoenix Roasters"
+ }
+]

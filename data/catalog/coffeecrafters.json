@@ -1,0 +1,118 @@
+[
+ {
+  "body_hash": "42710667ce6ad638",
+  "first_seen": "2026-10-26",
+  "handle": "roast-air-temp-thermocouple-probe",
+  "image": "https://coffeecrafters.com/wp-content/uploads/2022/10/Roast-Air-Probe.png",
+  "platform": "woocommerce",
+  "product_id": "23753",
+  "product_type": "simple",
+  "roaster_slug": "coffeecrafters",
+  "tags": [
+   "Artisan 2.5 Parts",
+   "Artisan 3-e Parts",
+   "Artisan 6 Parts",
+   "Artisan 6M Parts",
+   "Artisan 9 Parts",
+   "Artisan X-e Parts",
+   "Parts &amp; Accessories",
+   "Valenta 12 Parts",
+   "Valenta 18 Parts",
+   "Valenta 8 Parts"
+  ],
+  "title": "Roast Air Temp. Thermocouple Probe",
+  "url": "https://coffeecrafters.com/product/roast-air-temp-thermocouple-probe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.25,
+    "title": "Roast Air Temp. Thermocouple Probe",
+    "variant_id": "23753:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9cb6db6c0d2f3681",
+  "first_seen": "2026-10-26",
+  "handle": "roast-chamber-mount-gasket",
+  "image": "https://coffeecrafters.com/wp-content/uploads/2023/08/Roast-Chamber-Mount-Gasket.png",
+  "platform": "woocommerce",
+  "product_id": "24919",
+  "product_type": "simple",
+  "roaster_slug": "coffeecrafters",
+  "tags": [
+   "Parts &amp; Accessories",
+   "Valenta 12 Parts",
+   "Valenta 18 Parts",
+   "Valenta 8 Parts"
+  ],
+  "title": "Roast Chamber Mount Gasket",
+  "url": "https://coffeecrafters.com/product/roast-chamber-mount-gasket/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.6,
+    "title": "Roast Chamber Mount Gasket",
+    "variant_id": "24919:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aeb45e6fe194b4e7",
+  "first_seen": "2026-10-26",
+  "handle": "a5-roast-air-temp-thermocouple-probe",
+  "image": "https://coffeecrafters.com/wp-content/uploads/2024/07/A5-Roast-Air-Probe.png",
+  "platform": "woocommerce",
+  "product_id": "26105",
+  "product_type": "simple",
+  "roaster_slug": "coffeecrafters",
+  "tags": [
+   "Artisan 5 Parts"
+  ],
+  "title": "A5 Roast Air Temp. Thermocouple Probe",
+  "url": "https://coffeecrafters.com/product/a5-roast-air-temp-thermocouple-probe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.25,
+    "title": "A5 Roast Air Temp. Thermocouple Probe",
+    "variant_id": "26105:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11abcac137132944",
+  "first_seen": "2026-10-26",
+  "handle": "roast-chamber-door-gaskets",
+  "image": "https://coffeecrafters.com/wp-content/uploads/2026/07/IMG_2733-Edit-with-AI.jpg",
+  "platform": "woocommerce",
+  "product_id": "31700",
+  "product_type": "simple",
+  "roaster_slug": "coffeecrafters",
+  "tags": [
+   "Parts &amp; Accessories",
+   "Valenta 12 Parts",
+   "Valenta 18 Parts",
+   "Valenta 3 Parts",
+   "Valenta 8 Parts"
+  ],
+  "title": "Roast Chamber Door Gaskets",
+  "url": "https://coffeecrafters.com/product/roast-chamber-door-gaskets/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "Roast Chamber Door Gaskets",
+    "variant_id": "31700:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,2960 @@
+[
+ {
+  "body_hash": "6c796d6ce29e941c",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Flavored_Caramel_Apple_12-27-23.png?v=1791489762",
+  "platform": "shopify",
+  "product_id": "15421067100402",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Caramel Apple",
+   "Caramel Apple Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Caramel Apple - Fall Seasonal Flavored Coffee",
+  "url": "https://buckscountycoffee.com/products/caramel-apple-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "67659041865970"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "67659041898738"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "67659041931506"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "67659041964274"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "67659041997042"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "67659042029810"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "67659042062578"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 35.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "67659042095346"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "64208bf77cde73c9",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-cobbler",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredBlueberryCobbler12-27-23.png?v=1705604934",
+  "platform": "shopify",
+  "product_id": "8065266548978",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Blueberry Cobbler Coffee",
+   "Blueberry Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Blueberry Cobbler",
+  "url": "https://buckscountycoffee.com/products/blueberry-cobbler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109231419634"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109231452402"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109231485170"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109231517938"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109231550706"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109231583474"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109231616242"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109231649010"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5e16baf6c049a916",
+  "first_seen": "2026-10-26",
+  "handle": "butter-rum",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredButterRum12-27-23.png?v=1705607328",
+  "platform": "shopify",
+  "product_id": "8065266712818",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Butter Coffee",
+   "Butter Rum Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Butter Rum",
+  "url": "https://buckscountycoffee.com/products/butter-rum",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109339586802"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109339619570"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109339652338"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109339685106"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109339717874"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109339750642"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109339783410"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109339816178"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "11b6a44f15a807a5",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-almond",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredChocolateAlmond12-27-23.png?v=1705607436",
+  "platform": "shopify",
+  "product_id": "8065266745586",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Almond Coffee",
+   "Chocolate Almond Coffee",
+   "Chocolate Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Chocolate Almond",
+  "url": "https://buckscountycoffee.com/products/chocolate-almond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109354037490"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109354070258"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109354103026"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109354135794"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109354168562"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109354201330"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109354234098"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109354266866"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "59a4badaa0ce57ab",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredCoconutCream12-27-23.png?v=1705608409",
+  "platform": "shopify",
+  "product_id": "8065266942194",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coconut Coffee",
+   "Coconut Cream Coffee",
+   "Cream Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Coconut Cream",
+  "url": "https://buckscountycoffee.com/products/coconut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109421211890"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109421244658"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109421277426"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109421310194"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109421342962"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109421375730"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109421408498"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109421441266"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "f5d4b27169235feb",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredCremeBrulee12-27-23.png?v=1705608884",
+  "platform": "shopify",
+  "product_id": "8065267269874",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Creme Brulee Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Creme Brulee",
+  "url": "https://buckscountycoffee.com/products/creme-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109439070450"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109439103218"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109439135986"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109439168754"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109439201522"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109439234290"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109439267058"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109439299826"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3c4f9bddbb7a86b1",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredDarkChocolate12-27-23.png?v=1705609296",
+  "platform": "shopify",
+  "product_id": "8065267302642",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Chocolate Coffee",
+   "Dark Chocolate Coffee",
+   "Flavored Coffee"
+  ],
+  "title": "Dark Chocolate",
+  "url": "https://buckscountycoffee.com/products/dark-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109466464498"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109466497266"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109466530034"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109466562802"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109466595570"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109466628338"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109466661106"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109466693874"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "78679b2bdee4b6ca",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredDecafHazelnut12-27-23.png?v=1705611673",
+  "platform": "shopify",
+  "product_id": "8065267368178",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Decaf Flavored Coffee",
+   "Decaf Hazelnut Coffee",
+   "Delicious Decaf Hazelnut Coffee Sugar Cane Processed",
+   "Sugar Cane Decaf Coffee"
+  ],
+  "title": "Decaf Hazelnut",
+  "url": "https://buckscountycoffee.com/products/decaf-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109592719602"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109592752370"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109592785138"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109592817906"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109592850674"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109592883442"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109592916210"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109592948978"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3cc1e73a240c0efe",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredFrenchVanilla12-27-23.png?v=1705609714",
+  "platform": "shopify",
+  "product_id": "8065267564786",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Flavored Coffee",
+   "French Vanilla Coffee",
+   "Vanilla Coffee"
+  ],
+  "title": "French Vanilla",
+  "url": "https://buckscountycoffee.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109487862002"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109487894770"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109487927538"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109487960306"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109487993074"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109488025842"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109488058610"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109488091378"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "68f1f426bd983ca0",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredHazelnut12-27-23.png?v=1705610214",
+  "platform": "shopify",
+  "product_id": "8065267695858",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Hazelnut",
+   "Hazelnut Coffee"
+  ],
+  "title": "Hazelnut",
+  "url": "https://buckscountycoffee.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45109505425650"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45109505458418"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45109505491186"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45109505523954"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45109505556722"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45109505589490"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45109505622258"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45109505655026"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "febce94efd7e1fb4",
+  "first_seen": "2026-10-26",
+  "handle": "macadamia-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredMacadamiaCream12-27-23.png?v=1705958734",
+  "platform": "shopify",
+  "product_id": "8065268383986",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Cream Coffee",
+   "Flavored Coffee",
+   "Macadamia Coffee",
+   "Macadamia Cream Coffee"
+  ],
+  "title": "Macadamia Cream",
+  "url": "https://buckscountycoffee.com/products/macadamia-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "45124196532466"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "45124196565234"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "45124196598002"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "45124196630770"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "45124196663538"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "45124196696306"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "45124196729074"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "45124196761842"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7085416f9754bea9",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozLightBreakfastBlend12-27-23_842e11e3-2809-4789-a2b0-3cd80f6ccb5e.png?v=1739223954",
+  "platform": "shopify",
+  "product_id": "8604451864818",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Breakfast Coffee",
+   "Coffee Blend",
+   "Light Roast",
+   "South America Coffee"
+  ],
+  "title": "Breakfast Blend - Light Roast",
+  "url": "https://buckscountycoffee.com/products/breakfast-blend-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "46940387901682"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "46940387934450"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "46940387967218"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "46940387999986"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "46940388032754"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "46940388065522"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "46940388098290"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "46940388131058"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "fcc353228725c5c2",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-breakfast-blend-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Light_FTO_Breakfast_Blend_12-27-23.png?v=1733158734",
+  "platform": "shopify",
+  "product_id": "8641772683506",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Breakfast Coffee",
+   "Coffee Blend",
+   "Fair Trade",
+   "Light Roast",
+   "South America Coffee"
+  ],
+  "title": "Fair Trade Breakfast Blend - Light Roast",
+  "url": "https://buckscountycoffee.com/products/fair-trade-breakfast-blend-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47106891579634"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47106891612402"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47106891645170"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47106891677938"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47106891710706"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47106891743474"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47106891776242"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47106891809010"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "b0b1e2ded003138b",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-blend-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozLightJamaicanBlend12-27-23.png?v=1733159510",
+  "platform": "shopify",
+  "product_id": "8641781203186",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Carribean Blend",
+   "Coffee Blend",
+   "Jamaican Coffee",
+   "Light Roast",
+   "South America Coffee"
+  ],
+  "title": "Jamaican Blend - Light Roast",
+  "url": "https://buckscountycoffee.com/products/jamaican-blend-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47106916745458"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47106916778226"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47106916810994"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47106916843762"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.8,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47106916876530"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.8,
+    "title": "2.5lb / Drip",
+    "variant_id": "47106916909298"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.8,
+    "title": "2.5lb / French Press",
+    "variant_id": "47106916942066"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.8,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47106916974834"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "14555e5c646bb732",
+  "first_seen": "2026-10-26",
+  "handle": "peru-del-sol-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozLightPeruDelSolBlend12-27-23.png?v=1733159649",
+  "platform": "shopify",
+  "product_id": "8641782087922",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Light Roast",
+   "Micro-lot Coffee",
+   "Peru Coffee",
+   "Single Origin Coffee",
+   "Small Farm",
+   "South America Coffee"
+  ],
+  "title": "Peru Del Sol - Light Roast",
+  "url": "https://buckscountycoffee.com/products/peru-del-sol-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47106919596274"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Drip",
+    "variant_id": "47106919629042"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / French Press",
+    "variant_id": "47106919661810"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47106919694578"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.95,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47106919727346"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.95,
+    "title": "2.5lb / Drip",
+    "variant_id": "47106919760114"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.95,
+    "title": "2.5lb / French Press",
+    "variant_id": "47106919792882"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.95,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47106919825650"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "612224b19432a6da",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Medium_House_Blend_12-27-23.png?v=1733165511",
+  "platform": "shopify",
+  "product_id": "8641817149682",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Central American Coffee",
+   "Coffee Blend",
+   "Medium Roast",
+   "South America Coffee"
+  ],
+  "title": "House Blend - Medium Roast",
+  "url": "https://buckscountycoffee.com/products/house-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47107021668594"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47107021701362"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47107021734130"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47107021766898"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47107021799666"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47107021832434"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47107021865202"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47107021897970"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e44c43104d6ecc01",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-medium-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Medium_Donut_Shop_12-27-23.png?v=1739224182",
+  "platform": "shopify",
+  "product_id": "8686962671858",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Central American Coffee",
+   "Coffee Blend",
+   "Medium Roast",
+   "South America Coffee"
+  ],
+  "title": "Donut Shop Blend - Medium Roast",
+  "url": "https://buckscountycoffee.com/products/house-blend-medium-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 11.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47283615924466"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 11.99,
+    "title": "11oz / Drip",
+    "variant_id": "47283615957234"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 11.99,
+    "title": "11oz / French Press",
+    "variant_id": "47283615990002"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 11.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47283616022770"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47283616055538"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47283616088306"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47283616121074"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47283616153842"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1519e521d55b8a80",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Medium_Colombian_12-27-23.png?v=1739224477",
+  "platform": "shopify",
+  "product_id": "8686964474098",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Colombian Coffee",
+   "Medium Roast",
+   "Single Origin Coffee",
+   "South America Coffee"
+  ],
+  "title": "Colombian Supremo - Medium Roast",
+  "url": "https://buckscountycoffee.com/products/colombian-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47283635421426"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47283635454194"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47283635486962"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47283635519730"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47283635552498"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47283635585266"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47283635618034"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47283635650802"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "fb3869ee0b2f32d9",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Medium_Honduras_12-27-23.png?v=1739224870",
+  "platform": "shopify",
+  "product_id": "8686966997234",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Honduran Coffee",
+   "Medium Roast",
+   "Single Origin Coffee",
+   "South America Coffee"
+  ],
+  "title": "Honduras - Medium Roast",
+  "url": "https://buckscountycoffee.com/products/honduras-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47283649806578"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Drip",
+    "variant_id": "47283649839346"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / French Press",
+    "variant_id": "47283649872114"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Espresso",
+    "variant_id": "47283649904882"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47283649937650"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47283649970418"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47283650003186"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47283650035954"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4216296ce52e9cff",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Medium_Costa_Rican_12-27-23.png?v=1739224963",
+  "platform": "shopify",
+  "product_id": "8686967226610",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Costa Rican Coffee",
+   "Medium Roast",
+   "Single Origin Coffee",
+   "South America Coffee"
+  ],
+  "title": "Costa Rican - Medium Roast",
+  "url": "https://buckscountycoffee.com/products/costa-rican-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47283650625778"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Drip",
+    "variant_id": "47283650658546"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / French Press",
+    "variant_id": "47283650691314"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Espresso",
+    "variant_id": "47283650724082"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47283650756850"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47283650789618"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47283650822386"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47283650855154"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "5828a09643bcc5b1",
+  "first_seen": "2026-10-26",
+  "handle": "voodoo-blend-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_Voodoo_Blend_09-12-24.png?v=1739382183",
+  "platform": "shopify",
+  "product_id": "8687867756786",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Chicory Coffee",
+   "Coffee Blend",
+   "Dark Roast",
+   "New Orleans Style Coffee"
+  ],
+  "title": "VooDoo Blend - Extra Dark Roast",
+  "url": "https://buckscountycoffee.com/products/voodoo-blend-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288673632498"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.99,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288673763570"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4ab2c8453361a394",
+  "first_seen": "2026-10-26",
+  "handle": "farmhouse-espresso-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_Farmhouse_Espresso_12-27-23.png?v=1739382509",
+  "platform": "shopify",
+  "product_id": "8687869526258",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Dark Roast",
+   "Espresso Blend"
+  ],
+  "title": "Farmhouse Espresso - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/farmhouse-espresso-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288685330674"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288685363442"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47288685396210"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47288685428978"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288685461746"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288685494514"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288685527282"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288685560050"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8a76ab0ed1633e09",
+  "first_seen": "2026-10-26",
+  "handle": "farmhouse-espresso-dark-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_French_Roast_12-27-23.png?v=1739382811",
+  "platform": "shopify",
+  "product_id": "8687871426802",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Dark Roast",
+   "French Roast"
+  ],
+  "title": "French Roast - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/farmhouse-espresso-dark-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288696209650"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288696242418"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47288696275186"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47288696307954"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288696340722"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288696373490"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288696406258"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288696439026"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8f459c6e3506ed9d",
+  "first_seen": "2026-10-26",
+  "handle": "owners-reserve-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_Owners_Reserve_12-27-23.png?v=1739382918",
+  "platform": "shopify",
+  "product_id": "8687872606450",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Dark Roast",
+   "Owners Reserve"
+  ],
+  "title": "Owners Reserve - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/owners-reserve-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288708432114"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288708464882"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47288708497650"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47288708530418"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288708563186"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288708595954"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288708628722"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288708661490"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a7635ae52945b44b",
+  "first_seen": "2026-10-26",
+  "handle": "owners-reserve-dark-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_Kona_Blend_12-27-23.png?v=1739383237",
+  "platform": "shopify",
+  "product_id": "8687873720562",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Dark Roast",
+   "Kona Blend"
+  ],
+  "title": "Kona Blend - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/owners-reserve-dark-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288714723570"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Drip",
+    "variant_id": "47288714756338"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / French Press",
+    "variant_id": "47288714789106"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.5,
+    "title": "11oz / Espresso",
+    "variant_id": "47288714821874"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.99,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288714854642"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.99,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288714887410"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.99,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288714920178"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.99,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288714952946"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1d870b9b5faf5ddd",
+  "first_seen": "2026-10-26",
+  "handle": "starry-nights-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozDarkStarryNights12-27-23.png?v=1756150844",
+  "platform": "shopify",
+  "product_id": "8687875227890",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coffee Blend",
+   "Dark Roast",
+   "Starry Nights"
+  ],
+  "title": "Starry Nights - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/starry-nights-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288724062450"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288724095218"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47288724127986"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47288724160754"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288724193522"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288724226290"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288724259058"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288724291826"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4752dcc72a81a9b8",
+  "first_seen": "2026-10-26",
+  "handle": "starry-nights-dark-roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Dark_Sumatra_12-27-23.png?v=1739383504",
+  "platform": "shopify",
+  "product_id": "8687876047090",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Dark Roast",
+   "Single Origin Coffee",
+   "Sumatran Coffee"
+  ],
+  "title": "Sumatra - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/starry-nights-dark-roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47288729600242"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Drip",
+    "variant_id": "47288729633010"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / French Press",
+    "variant_id": "47288729665778"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47288729698546"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47288729731314"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47288729764082"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47288729796850"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 34.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47288729829618"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "03f220d8316a61eb",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-almond-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Flavored_Mint_Chip_12-27-23.png?v=1739456938",
+  "platform": "shopify",
+  "product_id": "8688413343986",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Chocolate Coffee",
+   "Flavored Coffee",
+   "Mint Chocolate Chip Coffee",
+   "Mint Coffee",
+   "Shamrock Coffee"
+  ],
+  "title": "Mint Chip",
+  "url": "https://buckscountycoffee.com/products/chocolate-almond-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47291582152946"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47291582185714"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47291582218482"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47291582251250"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47291582284018"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47291582316786"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47291582349554"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47291582382322"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "fef737dfe0649d16",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredRaspberryMocha12-27-23.png?v=1739457445",
+  "platform": "shopify",
+  "product_id": "8688416653554",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Mocha Coffee",
+   "Raspberry Coffee",
+   "Raspberry Mocha Coffee",
+   "Valentines Day Coffee"
+  ],
+  "title": "Raspberry Mocha",
+  "url": "https://buckscountycoffee.com/products/raspberry-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47291632681202"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47291632713970"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47291632746738"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47291632779506"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47291632812274"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47291632845042"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47291632877810"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47291632910578"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "13b8e6d141e3ebcf",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Flavored_Toasted_Pecan12-27-23.png?v=1739457884",
+  "platform": "shopify",
+  "product_id": "8688417276146",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Pecan Coffee",
+   "Toasted Coffee",
+   "Toasted Pecan Coffee",
+   "Toasted Southern Pecan Coffee"
+  ],
+  "title": "Toasted Pecan",
+  "url": "https://buckscountycoffee.com/products/toasted-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47291634581746"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47291634614514"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47291634647282"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47291634680050"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47291634712818"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47291634745586"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47291634778354"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47291634811122"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "409ea326e6cb125d",
+  "first_seen": "2026-10-26",
+  "handle": "maple-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredMapleCream12-27-23.png?v=1739458114",
+  "platform": "shopify",
+  "product_id": "8688418488562",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Cream Coffee",
+   "Flavored Coffee",
+   "Maple Coffee"
+  ],
+  "title": "Maple Cream",
+  "url": "https://buckscountycoffee.com/products/maple-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47291638218994"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47291638251762"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47291638284530"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47291638317298"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47291638350066"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47291638382834"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47291638415602"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47291638448370"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "2ca08ec2e21b7f2e",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredSaltedCaramel12-27-23.png?v=1739458442",
+  "platform": "shopify",
+  "product_id": "8688419504370",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Caramel Coffee",
+   "Flavored Coffee",
+   "Salted Caramel Coffee",
+   "Salted Coffee"
+  ],
+  "title": "Salted Caramel",
+  "url": "https://buckscountycoffee.com/products/salted-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47291641659634"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47291641692402"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47291641725170"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47291641757938"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47291641790706"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47291641823474"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47291641856242"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 28.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47291641889010"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "93e2e26d8d11181e",
+  "first_seen": "2026-10-26",
+  "handle": "owners-reserve-dark-roast-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozDarkBuckNGoodColdBrew12-27-23.png?v=1739808187",
+  "platform": "shopify",
+  "product_id": "8690832539890",
+  "product_type": "Cold Brew Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Buck'N Good Cold Brew",
+   "Coffee Blend",
+   "Cold Brew",
+   "Cold Brew Coffee",
+   "Dark Roast"
+  ],
+  "title": "Buck'N Good Cold Brew - Dark Roast",
+  "url": "https://buckscountycoffee.com/products/owners-reserve-dark-roast-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47304272773362"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Drip",
+    "variant_id": "47304272806130"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / French Press",
+    "variant_id": "47304272838898"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 12.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47304272871666"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 26.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47304272904434"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 26.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "47304272937202"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 26.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "47304272969970"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 26.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47304273002738"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "bb02530498759b26",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Decaf_Colombian_12-27-23.png?v=1758570964",
+  "platform": "shopify",
+  "product_id": "8813746585842",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Colombian",
+   "Decaf",
+   "Sugar Cane Decaf Coffee"
+  ],
+  "title": "Decaf Colombian",
+  "url": "https://buckscountycoffee.com/products/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47874216493298"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47874216526066"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47874216558834"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47874216591602"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47874216624370"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47874216657138"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47874216689906"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47874216722674"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "eb655174a04cbcf7",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredPumpkinSpice09-03-26.png?v=1788465266",
+  "platform": "shopify",
+  "product_id": "8817956028658",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Flavored Coffee",
+   "Pumpkin Coffee",
+   "Pumpkin Spice Coffee"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://buckscountycoffee.com/products/creme-brulee-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "47893039350002"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "47893039382770"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "47893039415538"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "47893039448306"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "47893039481074"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "47893039513842"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "47893039546610"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "47893039579378"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "af071e2358f0704f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-reserve-series-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/11ozEthiopianReserveBag3_6af8ed9d-1923-4635-b866-0a6d430fcdb4.png?v=1768498660",
+  "platform": "shopify",
+  "product_id": "8935407911154",
+  "product_type": "Light Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Single Origin Coffee",
+   "Small Farm"
+  ],
+  "title": "Ethiopian Yirgacheffe - Reserve Series 11oz (Whole Bean)",
+  "url": "https://buckscountycoffee.com/products/ethiopian-yirgacheffe-reserve-series-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5216,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "48665846218994"
+   }
+  ],
+  "vendor": "Bucks County Coffee Co."
+ },
+ {
+  "body_hash": "54dc96d4ee11a438",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe-reserve-series-11oz-whole-bean-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/11oz_Sumatra_Reserve_Bag_4.png?v=1768502299",
+  "platform": "shopify",
+  "product_id": "8935412465906",
+  "product_type": "Dark Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Single Origin Coffee",
+   "Small Farm",
+   "Sumatran Coffee"
+  ],
+  "title": "Sumatra Mandheling Aceh Highland - Reserve Series 11oz (Whole Bean)",
+  "url": "https://buckscountycoffee.com/products/ethiopian-yirgacheffe-reserve-series-11oz-whole-bean-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5216,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "48665875120370"
+   }
+  ],
+  "vendor": "Bucks County Coffee Co."
+ },
+ {
+  "body_hash": "e887aceced666e25",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-reserve-series-11oz-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/11oz_Tanzania_Reserve_Bag_R1-1.png?v=1768505335",
+  "platform": "shopify",
+  "product_id": "8935440515314",
+  "product_type": "Medium Roast Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Single Origin Coffee",
+   "Small Farm",
+   "Tanzania Peaberry"
+  ],
+  "title": "Tanzania Peaberry Southern Highlands - Reserve Series 11oz (Whole Bean)",
+  "url": "https://buckscountycoffee.com/products/tanzania-peaberry-reserve-series-11oz-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5216,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "48665952092402"
+   }
+  ],
+  "vendor": "Bucks County Coffee Co."
+ },
+ {
+  "body_hash": "7dc9ce04ebe245cd",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream-1",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/BucksCounty11ozFlavoredIrishCream12-27-23.png?v=1705610660",
+  "platform": "shopify",
+  "product_id": "8970345152754",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coconut Coffee",
+   "Cream Coffee",
+   "Flavored Coffee",
+   "Irish Cream"
+  ],
+  "title": "Irish Cream",
+  "url": "https://buckscountycoffee.com/products/irish-cream-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "48766751342834"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "48766751375602"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "48766751408370"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "48766751441138"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "48766751473906"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "48766751506674"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "48766751539442"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 29.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "48766751572210"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "9d6c758fdfb49f8a",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_Flavored_Irish_Cream_DECAF_12-27-23.png?v=1771518148",
+  "platform": "shopify",
+  "product_id": "8970347741426",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Coconut Coffee",
+   "Cream Coffee",
+   "Flavored Coffee",
+   "Irish Cream",
+   "Sugar Cane Decaf Coffee"
+  ],
+  "title": "Irish Cream - DECAF",
+  "url": "https://buckscountycoffee.com/products/irish-cream-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "48766760714482"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Drip",
+    "variant_id": "48766760747250"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / French Press",
+    "variant_id": "48766760780018"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 14.99,
+    "title": "11oz / Espresso",
+    "variant_id": "48766760812786"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 30.5,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "48766760845554"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 30.5,
+    "title": "2.5lb / Drip",
+    "variant_id": "48766760878322"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 30.5,
+    "title": "2.5lb / French Press",
+    "variant_id": "48766760911090"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 30.5,
+    "title": "2.5lb / Espresso",
+    "variant_id": "48766760943858"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "a45839f7135002f4",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-groovy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0676/6873/8290/files/Bucks_County_11oz_HALF_Decaf_Colombian_12-27-23.png?v=1785420736",
+  "platform": "shopify",
+  "product_id": "9184127058162",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "buckscountycoffee",
+  "tags": [
+   "Colombian",
+   "Decaf",
+   "Sugar Cane Decaf Coffee"
+  ],
+  "title": "Half Caf - Groovy Half Decaf Colombian Blend",
+  "url": "https://buckscountycoffee.com/products/half-caf-groovy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Whole Bean",
+    "variant_id": "49865156952306"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Drip",
+    "variant_id": "49865156985074"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / French Press",
+    "variant_id": "49865157017842"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "11oz / Espresso",
+    "variant_id": "49865157050610"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Whole Bean",
+    "variant_id": "49865157083378"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Drip",
+    "variant_id": "49865157116146"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / French Press",
+    "variant_id": "49865157148914"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 32.0,
+    "title": "2.5lb / Espresso",
+    "variant_id": "49865157181682"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

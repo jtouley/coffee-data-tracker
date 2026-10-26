@@ -1,0 +1,1264 @@
+[
+ {
+  "body_hash": "f15bcb98becddb23",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/RoastersSubscription.png?v=1780515957",
+  "platform": "shopify",
+  "product_id": "10073885147385",
+  "product_type": "Single Origin",
+  "roaster_slug": "laprima",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://laprima.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "48459251056889"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "48459251089657"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Drip",
+    "variant_id": "48459251122425"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Pour Over",
+    "variant_id": "48459251155193"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Aeropress",
+    "variant_id": "48459251187961"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Moka Pot",
+    "variant_id": "48459251220729"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Espresso",
+    "variant_id": "48459251253497"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Turkish",
+    "variant_id": "48459251286265"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "3fa2c7315285a2e9",
+  "first_seen": "2026-10-26",
+  "handle": "comsa-honduras-royal-reserva",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/5kx5k_Nat_Hond.png?v=1787860285",
+  "platform": "shopify",
+  "product_id": "10227636437241",
+  "product_type": "Single Origin",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Honduras, COMSA Royal Reserva",
+  "url": "https://laprima.com/products/comsa-honduras-royal-reserva",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "48908401737977"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "48908401770745"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Drip",
+    "variant_id": "48908401803513"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Pour Over",
+    "variant_id": "48908401836281"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Aeropress",
+    "variant_id": "48908401869049"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Moka Pot",
+    "variant_id": "48908401901817"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "48908401934585"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 22.0,
+    "title": "Turkish",
+    "variant_id": "48908401967353"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "f98298ac0e0ab53d",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-kayanza",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/Burundi.png?v=1789156382",
+  "platform": "shopify",
+  "product_id": "10261653487865",
+  "product_type": "Single Origin",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Burundi Kayanza",
+  "url": "https://laprima.com/products/burundi-kayanza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Whole Bean",
+    "variant_id": "49044957855993"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "French Press / Cold Brew",
+    "variant_id": "49044957888761"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Drip",
+    "variant_id": "49044957921529"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Pour Over",
+    "variant_id": "49044957954297"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Aeropress",
+    "variant_id": "49044957987065"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Moka Pot",
+    "variant_id": "49044958019833"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Espresso",
+    "variant_id": "49044958052601"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.5,
+    "title": "Turkish",
+    "variant_id": "49044958085369"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "6aca2ad4098d80d2",
+  "first_seen": "2026-10-26",
+  "handle": "1988-reserve-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/1988ReservePNG.png?v=1789757886",
+  "platform": "shopify",
+  "product_id": "10288184393977",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "1988 Reserve Blend",
+  "url": "https://laprima.com/products/1988-reserve-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "49102023491833"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "49102023524601"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "49102023557369"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Pour Over",
+    "variant_id": "49102023590137"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Aeropress",
+    "variant_id": "49102023622905"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Moka Pot",
+    "variant_id": "49102023655673"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "49102023688441"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Turkish",
+    "variant_id": "49102023721209"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "f9e9e5f519751ff8",
+  "first_seen": "2026-10-26",
+  "handle": "rachel-carson",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_rachel-carson-blend.png?v=1780512498",
+  "platform": "shopify",
+  "product_id": "11127467079",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Rachel Carson",
+  "url": "https://laprima.com/products/rachel-carson",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Whole Bean",
+    "variant_id": "32816944644199"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816944676967"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Drip",
+    "variant_id": "32816944742503"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Pour Over",
+    "variant_id": "32816944775271"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "AeroPress",
+    "variant_id": "32816944808039"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Moka Pot",
+    "variant_id": "44838039617785"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Turkish",
+    "variant_id": "44838039683321"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.75,
+    "title": "Espresso",
+    "variant_id": "44847811428601"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "69d7c6d534df2e61",
+  "first_seen": "2026-10-26",
+  "handle": "la-casa",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_la-casa-blend.png?v=1780512496",
+  "platform": "shopify",
+  "product_id": "11150445127",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "La Casa",
+  "url": "https://laprima.com/products/la-casa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Whole Bean",
+    "variant_id": "32816919642215"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816919674983"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Drip",
+    "variant_id": "32816919740519"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Pour Over",
+    "variant_id": "32816919773287"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "AeroPress",
+    "variant_id": "32816919806055"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Moka Pot",
+    "variant_id": "44837970116857"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Turkish",
+    "variant_id": "44837970182393"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Espresso",
+    "variant_id": "44847791145209"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "6e5718f13e38068b",
+  "first_seen": "2026-10-26",
+  "handle": "paulies",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_paulies-blend.png?v=1780512498",
+  "platform": "shopify",
+  "product_id": "11150601799",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Dark Roast",
+   "Organic"
+  ],
+  "title": "Paulie's Blend",
+  "url": "https://laprima.com/products/paulies",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Whole Bean",
+    "variant_id": "32816861872231"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816861904999"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Drip",
+    "variant_id": "32816861970535"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Pour Over",
+    "variant_id": "32816862003303"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "AeroPress",
+    "variant_id": "32816862036071"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Moka Pot",
+    "variant_id": "44838013436153"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Turkish",
+    "variant_id": "44838013501689"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.5,
+    "title": "Espresso",
+    "variant_id": "44847807332601"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "2278d25b89cb8f89",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_colombia-decaf.png?v=1780512496",
+  "platform": "shopify",
+  "product_id": "11151460615",
+  "product_type": "Decaf Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://laprima.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "32816753508455"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816753541223"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "32816753606759"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Pour Over",
+    "variant_id": "32816753672295"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "AeroPress",
+    "variant_id": "32816753737831"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Moka Pot",
+    "variant_id": "44837592465657"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Turkish",
+    "variant_id": "44837592531193"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "44847775121657"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "30c1ad1096160461",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-paulies-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_paulies-blend-decaf.png?v=1780512496",
+  "platform": "shopify",
+  "product_id": "11151502599",
+  "product_type": "Decaf Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Decaf Paulie's Blend",
+  "url": "https://laprima.com/products/decaf-paulies-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "32816867442791"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816867475559"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Drip",
+    "variant_id": "32816867541095"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Pour Over",
+    "variant_id": "32816867573863"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "AeroPress",
+    "variant_id": "32816867606631"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Moka Pot",
+    "variant_id": "44861007528185"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "44861007593721"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 25.0,
+    "title": "Turkish",
+    "variant_id": "44861007659257"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "f38d615e89cd4b6a",
+  "first_seen": "2026-10-26",
+  "handle": "bar-italia",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_bar-italia-espresso-blend_3ab32549-6908-45f9-b91c-1499d64bf898.png?v=1780512376",
+  "platform": "shopify",
+  "product_id": "11151569735",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "Bar Italia",
+  "url": "https://laprima.com/products/bar-italia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Whole Bean",
+    "variant_id": "32816726474855"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816726507623"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Drip",
+    "variant_id": "32816726573159"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Pour Over",
+    "variant_id": "32816726605927"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "AeroPress",
+    "variant_id": "32816726638695"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Moka Pot",
+    "variant_id": "44836301930745"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Turkish",
+    "variant_id": "44836301996281"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Espresso",
+    "variant_id": "44847739928825"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "22fbc519ec546d30",
+  "first_seen": "2026-10-26",
+  "handle": "la-prima-bar",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_la-prima-bar-espresso-blend.png?v=1780512407",
+  "platform": "shopify",
+  "product_id": "11151582535",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "La Prima Bar",
+  "url": "https://laprima.com/products/la-prima-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "32816842440807"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816842473575"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Drip",
+    "variant_id": "32816842539111"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Pour Over",
+    "variant_id": "32816842571879"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "AeroPress",
+    "variant_id": "32816842604647"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Moka Pot",
+    "variant_id": "44837973885177"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Turkish",
+    "variant_id": "44837973950713"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.0,
+    "title": "Espresso",
+    "variant_id": "44847793602809"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "a8c34b7b483fd73e",
+  "first_seen": "2026-10-26",
+  "handle": "miscela-bar",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_miscela-bar-espresso-blend.png?v=1780512441",
+  "platform": "shopify",
+  "product_id": "11151596999",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Miscela Bar",
+  "url": "https://laprima.com/products/miscela-bar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Whole Bean",
+    "variant_id": "32816848207975"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "French Press / Cold Brew",
+    "variant_id": "32816848240743"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Drip",
+    "variant_id": "32816848306279"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Pour Over",
+    "variant_id": "32816848339047"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "AeroPress",
+    "variant_id": "32816848371815"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Moka Pot",
+    "variant_id": "44837989023993"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Turkish",
+    "variant_id": "44837989089529"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.25,
+    "title": "Espresso",
+    "variant_id": "44847802417401"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "7008571ca38389a1",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kirinyaga",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/Kenyawebpng_5745eb6a-649f-4797-838b-af71e833e822.png?v=1790699245",
+  "platform": "shopify",
+  "product_id": "15264466698489",
+  "product_type": "Single Origin",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Kenya Kirinyaga",
+  "url": "https://laprima.com/products/kenya-kirinyaga",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Whole Bean",
+    "variant_id": "67250846269689"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "French Press / Cold Brew",
+    "variant_id": "67250846302457"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Drip",
+    "variant_id": "67250846335225"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Pour Over",
+    "variant_id": "67250846367993"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Aeropress",
+    "variant_id": "67250846400761"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Moka Pot",
+    "variant_id": "67250846433529"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Espresso",
+    "variant_id": "67250846466297"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 26.25,
+    "title": "Turkish",
+    "variant_id": "67250846499065"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "770998479471cbd3",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/ClosedSampleBox.png?v=1780513846",
+  "platform": "shopify",
+  "product_id": "6081629323433",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Sample Pack"
+  ],
+  "title": "Sample Pack - Coffee Blends",
+  "url": "https://laprima.com/products/coffee-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Whole Bean",
+    "variant_id": "37544760017065"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "44194518270201"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Drip",
+    "variant_id": "44194518302969"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Pour Over",
+    "variant_id": "44194518335737"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "AeroPress",
+    "variant_id": "44194518368505"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Moka Pot",
+    "variant_id": "44194518401273"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Espresso",
+    "variant_id": "44194518434041"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Turkish",
+    "variant_id": "44194518466809"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "7fc70c9e5e83462a",
+  "first_seen": "2026-10-26",
+  "handle": "sample-pack-espresso-blends",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/ClosedSampleBox.png?v=1780513846",
+  "platform": "shopify",
+  "product_id": "6081684111529",
+  "product_type": "Espresso Blends",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Light Roast",
+   "Medium Roast",
+   "Sample Pack"
+  ],
+  "title": "Sample Pack - Espresso Blends",
+  "url": "https://laprima.com/products/sample-pack-espresso-blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Whole Bean",
+    "variant_id": "37544766767273"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "French Press / Cold Brew",
+    "variant_id": "44194490548473"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Drip",
+    "variant_id": "44194490581241"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Pour Over",
+    "variant_id": "44194490614009"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "AeroPress",
+    "variant_id": "44194490646777"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Moka Pot",
+    "variant_id": "44194490679545"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Espresso",
+    "variant_id": "44194490712313"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 35.0,
+    "title": "Turkish",
+    "variant_id": "44194490745081"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "048f8e8a49e80338",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_half-caff-blend.png?v=1780512526",
+  "platform": "shopify",
+  "product_id": "6667676713129",
+  "product_type": "Decaf Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Half-Caff",
+  "url": "https://laprima.com/products/half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Whole Bean",
+    "variant_id": "39647853510825"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "French Press / Cold Brew",
+    "variant_id": "39647853543593"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Pour Over",
+    "variant_id": "39647853609129"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "AeroPress",
+    "variant_id": "39647853641897"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Drip",
+    "variant_id": "39648517292201"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Moka Pot",
+    "variant_id": "44837959008505"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Turkish",
+    "variant_id": "44837959074041"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 23.75,
+    "title": "Espresso",
+    "variant_id": "44847788163321"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ },
+ {
+  "body_hash": "7aaa315f3fb9021a",
+  "first_seen": "2026-10-26",
+  "handle": "vita-nuova-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2100/1699/files/laprima_vita-nuova-blend.png?v=1780512496",
+  "platform": "shopify",
+  "product_id": "8680478441721",
+  "product_type": "Blend Coffee",
+  "roaster_slug": "laprima",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Vita Nuova",
+  "url": "https://laprima.com/products/vita-nuova-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Whole Bean",
+    "variant_id": "45955478520057"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "French Press / Cold Brew",
+    "variant_id": "45955478585593"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Drip",
+    "variant_id": "45955478651129"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Pour Over",
+    "variant_id": "45955478716665"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "AeroPress",
+    "variant_id": "45955478782201"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Moka Pot",
+    "variant_id": "45955478847737"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Espresso",
+    "variant_id": "45955478913273"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 24.25,
+    "title": "Turkish",
+    "variant_id": "45955478978809"
+   }
+  ],
+  "vendor": "La Prima Espresso Company"
+ }
+]

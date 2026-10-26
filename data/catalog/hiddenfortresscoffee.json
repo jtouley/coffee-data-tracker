@@ -1,0 +1,1279 @@
+[
+ {
+  "body_hash": "07356837be63cdc9",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2015/12/STK.jpg?fit=900%2C1129&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "133",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "dark roast",
+   "sumatra"
+  ],
+  "title": "Sumatra Ketiera Women’s Co-op",
+  "url": "https://www.hiddenfortresscoffee.com/product/sumatra-takengon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "133:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "133:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "133:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "133:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9fba8f1344022c0e",
+  "first_seen": "2026-10-26",
+  "handle": "green-coffee-beans",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/greenbeans.jpg?fit=500%2C471&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "149",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "green coffee"
+  ],
+  "title": "Green Coffee Beans",
+  "url": "https://www.hiddenfortresscoffee.com/product/green-coffee-beans/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Green Coffee Beans",
+    "variant_id": "149:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "31480fd7be008e2c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-decaf",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/01/DCFESP.jpg?fit=900%2C952&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "201",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "dark roast",
+   "decaf",
+   "espresso"
+  ],
+  "title": "Decaf Espresso Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/espresso-blend-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "201:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "201:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "201:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "201:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4d1bbffc468980dc",
+  "first_seen": "2026-10-26",
+  "handle": "microfarm-blend-2",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/01/MFB.jpg?fit=900%2C1133&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "207",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "house blend",
+   "medium roast"
+  ],
+  "title": "Microfarm Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/microfarm-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "207:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "207:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "207:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "207:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "785802c8f91bc877",
+  "first_seen": "2026-10-26",
+  "handle": "american-blonde",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/A_Blonde.jpg?fit=800%2C880&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "235",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "blonde",
+   "light roast"
+  ],
+  "title": "American Blonde",
+  "url": "https://www.hiddenfortresscoffee.com/product/american-blonde/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "235:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "235:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "235:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "235:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c69614d094b1991",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-microfarm-blend",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/DCF.jpg?fit=800%2C1066&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "245",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "decaf",
+   "house blend",
+   "medium roast"
+  ],
+  "title": "Decaf Microfarm Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/decaf-microfarm-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "245:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "245:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "245:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "245:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93cec78a5df6c01a",
+  "first_seen": "2026-10-26",
+  "handle": "espressoblend",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/ESP.jpg?fit=800%2C941&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "257",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "espresso",
+   "medium dark roast"
+  ],
+  "title": "Hidden Fortress Espresso Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/espressoblend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "257:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "257:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "257:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "257:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba018d5f77827b52",
+  "first_seen": "2026-10-26",
+  "handle": "balikintamani",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/BK.jpg?fit=800%2C890&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "264",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Bali",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Bali Kintamani",
+  "url": "https://www.hiddenfortresscoffee.com/product/balikintamani/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "264:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "264:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "264:2"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "264:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebd579e539defeaa",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-amistad-2",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/CLA.jpg?fit=800%2C941&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "270",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Costa Rica",
+   "Single Origin Coffees",
+   "medium light roast"
+  ],
+  "title": "Costa Rica La Amistad",
+  "url": "https://www.hiddenfortresscoffee.com/product/costa-rica-la-amistad-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "270:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "270:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "270:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "270:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "916bb81c18d716fb",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-huehuetenango",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/GHH.jpg?fit=1000%2C906&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "288",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Guatemala",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Guatamala Huehuetenango Women’s",
+  "url": "https://www.hiddenfortresscoffee.com/product/guatamala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "288:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "288:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "288:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "288:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c3c53a80931dd2b",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-chimbu",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/PNG.jpg?fit=800%2C897&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "4581",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Papua New Guinea",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Papua New Guinea Chimbu",
+  "url": "https://www.hiddenfortresscoffee.com/product/papua-new-guinea-chimbu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "4581:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "4581:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "4581:2"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 22.0,
+    "title": "Two 6 ounce bags (12oz in 2 gift size bags)",
+    "variant_id": "4581:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b74cce40884e9953",
+  "first_seen": "2026-10-26",
+  "handle": "womens-world-co-op-blend",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/11/Women-world-coop.jpg?fit=700%2C846&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "4733",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "dark roast",
+   "house blend"
+  ],
+  "title": "Women’s World Co-op Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/womens-world-co-op-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "4733:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "4733:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "4733:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "4733:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5285aafa3e812a82",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2021/02/MMJ.jpg?fit=800%2C784&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "4805",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "Moka Java",
+   "house blend",
+   "medium light roast"
+  ],
+  "title": "Moka Java Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/moka-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "4805:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "4805:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "4805:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "4805:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f04f6065960c8107",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cafe-de-mujer-womens-co-op",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2021/02/peru-womens.jpg?fit=800%2C884&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "4814",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Peru",
+   "Single Origin Coffees",
+   "dark roast"
+  ],
+  "title": "Peru Cafe De Mujer Women’s Co-op",
+  "url": "https://www.hiddenfortresscoffee.com/product/peru-cafe-de-mujer-womens-co-op/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "4814:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "4814:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "4814:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "4814:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0b83dd9e0489efbb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bokasso",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/EB.jpg?fit=800%2C830&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "495",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin Coffees",
+   "light roast"
+  ],
+  "title": "Ethiopia Guji Natural",
+  "url": "https://www.hiddenfortresscoffee.com/product/ethiopia-bokasso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "495:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "495:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "495:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "495:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25499438f52a63c3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala-antonio-calix",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2015/12/honduras_new.jpg?fit=700%2C933&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "500",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Honduras",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Honduras Manos de Mujer",
+  "url": "https://www.hiddenfortresscoffee.com/product/honduras-marcala-antonio-calix/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "500:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "500:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "500:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "500:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d333d3baca08d48",
+  "first_seen": "2026-10-26",
+  "handle": "java-kayumas-taman-dadar",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2015/12/STK.jpg?fit=900%2C1129&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "5437",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "dark roast",
+   "sumatra"
+  ],
+  "title": "Java Kayumas Taman Dadar",
+  "url": "https://www.hiddenfortresscoffee.com/product/java-kayumas-taman-dadar/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "5437:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "5437:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "5437:2"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "5437:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "21d6e3900ff7bd64",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2016/02/BK.jpg?fit=800%2C890&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "5468",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Bali",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://www.hiddenfortresscoffee.com/product/bali-blue-moon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "5468:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "5468:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "5468:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "5468:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d46539fd98142c6",
+  "first_seen": "2026-10-26",
+  "handle": "peru-regenerative-organic-cecanor",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2021/02/peru-womens.jpg?fit=800%2C884&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "5529",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Peru",
+   "Single Origin Coffees",
+   "dark roast"
+  ],
+  "title": "Peru Regenerative Organic Cecanor",
+  "url": "https://www.hiddenfortresscoffee.com/product/peru-regenerative-organic-cecanor/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "5529:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "5529:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "5529:2"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "5529:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "38b256c2ee10144e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-mokonissa",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/EB.jpg?fit=800%2C830&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "5537",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin Coffees",
+   "light roast"
+  ],
+  "title": "Ethiopia Sidama Mokonissa",
+  "url": "https://www.hiddenfortresscoffee.com/product/ethiopia-sidama-mokonissa/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "5537:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "5537:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "5537:2"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "5537:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ced41bdf47d7c187",
+  "first_seen": "2026-10-26",
+  "handle": "brazilnsdf",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2017/04/BNSF.jpg?fit=800%2C937&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "565",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "brazil",
+   "medium roast"
+  ],
+  "title": "Brazil Poco Fundo",
+  "url": "https://www.hiddenfortresscoffee.com/product/brazilnsdf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "565:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "565:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "565:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "565:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e765e3a630f06d4c",
+  "first_seen": "2026-10-26",
+  "handle": "loma-prieta",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2017/04/LPA.jpg?fit=1000%2C1150&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "579",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Hidden Fortress Coffee Blends",
+   "dark roast",
+   "house blend"
+  ],
+  "title": "Loma Prieta Blend",
+  "url": "https://www.hiddenfortresscoffee.com/product/loma-prieta/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 pound",
+    "variant_id": "579:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 ounces",
+    "variant_id": "579:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "2 pounds",
+    "variant_id": "579:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 20.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "579:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32e9ee458a0cc01e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-hafursa",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/EYG.jpg?fit=800%2C908&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "660",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin Coffees",
+   "light roast"
+  ],
+  "title": "Ethiopia Natural Yirgacheffe Konga",
+  "url": "https://www.hiddenfortresscoffee.com/product/ethiopia-yirgacheffe-hafursa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "660:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "660:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "660:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "660:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c5ba62746895d4d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-serrania-del-perija",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/CSP.jpg?fit=700%2C713&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "856",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Colombia Women’s Cooperative",
+  "url": "https://www.hiddenfortresscoffee.com/product/colombia-serrania-del-perija/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "1 pound",
+    "variant_id": "856:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 ounces",
+    "variant_id": "856:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.0,
+    "title": "2 pounds",
+    "variant_id": "856:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 22.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "856:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dae7e43d5e25503c",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-alta-de-jinotega",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/NAJ.jpg?fit=700%2C826&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "861",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Nicaragua",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Nicaragua San Juan Rio Coco",
+  "url": "https://www.hiddenfortresscoffee.com/product/nicaragua-alta-de-jinotega/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "861:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "861:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "861:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "861:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36a32ea4a474f3cc",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-loxicha-pluma",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/MLP.jpg?fit=900%2C1060&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "886",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Mexico",
+   "Single Origin Coffees",
+   "dark roast"
+  ],
+  "title": "Mexico Oaxaca Pluma",
+  "url": "https://www.hiddenfortresscoffee.com/product/mexico-loxicha-pluma/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "886:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "886:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "886:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "886:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d654855553cd8c54",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-bugisu-sipi-falls",
+  "image": "https://i0.wp.com/www.hiddenfortresscoffee.com/wp-content/uploads/2020/06/Uganda-1.jpg?fit=800%2C900&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "907",
+  "product_type": "variable",
+  "roaster_slug": "hiddenfortresscoffee",
+  "tags": [
+   "Single Origin Coffees",
+   "Uganda",
+   "medium roast"
+  ],
+  "title": "Uganda Sipi Falls",
+  "url": "https://www.hiddenfortresscoffee.com/product/uganda-bugisu-sipi-falls/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 pound",
+    "variant_id": "907:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 ounces",
+    "variant_id": "907:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 pounds",
+    "variant_id": "907:2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 21.0,
+    "title": "2 sample size bags (11 oz)",
+    "variant_id": "907:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

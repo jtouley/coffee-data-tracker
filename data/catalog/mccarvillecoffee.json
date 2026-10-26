@@ -1,0 +1,232 @@
+[
+ {
+  "body_hash": "7b5d1fad24150141",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0f3f6c738f6e",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.mccarvillecoffee.com/product-page/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b98adf818250683",
+  "first_seen": "2026-10-26",
+  "handle": "bonesteel-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2a4448180b47",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Bonesteel Blend",
+  "url": "https://www.mccarvillecoffee.com/product-page/bonesteel-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6b977a63decd4387",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3139c4b44ef3",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Espresso",
+  "url": "https://www.mccarvillecoffee.com/product-page/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85138f3e38c84fa6",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8aed54047bb9",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.mccarvillecoffee.com/product-page/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a40bf33517b1c67d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8bbe411d9c17",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.mccarvillecoffee.com/product-page/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95e4c5220abdcc00",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador",
+  "image": null,
+  "platform": "generic",
+  "product_id": "93e6754e651c",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Ecuador",
+  "url": "https://www.mccarvillecoffee.com/product-page/ecuador",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8df70e45997befd3",
+  "first_seen": "2026-10-26",
+  "handle": "bonesteel-blend-k-cups",
+  "image": null,
+  "platform": "generic",
+  "product_id": "98faedce2ffc",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Bonesteel Blend K Cups",
+  "url": "https://www.mccarvillecoffee.com/product-page/bonesteel-blend-k-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "95ebcc09fc0ed789",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a20c7e77932f",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Columbia Decaf",
+  "url": "https://www.mccarvillecoffee.com/product-page/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba6f47185d977752",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": null,
+  "platform": "generic",
+  "product_id": "aa8fb8d3d1d2",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Honduras - USDA Certified Organic",
+  "url": "https://www.mccarvillecoffee.com/product-page/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1ca4b54946eaaa2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ab406a4bfc40",
+  "product_type": "",
+  "roaster_slug": "mccarvillecoffee",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://www.mccarvillecoffee.com/product-page/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

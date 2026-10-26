@@ -1,0 +1,426 @@
+[
+ {
+  "body_hash": "91d09fc520751564",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-fto-chiapas",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/161e851e-f9b7-491b-8c80-cd89578c7363/Untitled+design+-+3.png",
+  "platform": "squarespace",
+  "product_id": "5d9e37e91c6bee36f723a0a5",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf - Swiss Water Process",
+  "url": "https://www.thegovcup.com/shop/mexico-decaf-fto-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "3732f09f-65f7-4239-8804-248486423873"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "472cf198-3196-4711-a780-014f45a511a7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "48220835-6edd-4369-a17c-9d8990f08a7d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "4cd7e945-1e44-4a10-918d-f167a509d1f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "b3a1a20d-e51e-4bc3-9db0-8b23be75e981"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9eca942b996ed7e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-organic-rfa-tolima-hbhyl",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/17639ff1-7d20-461f-b03d-5070a3240848/Untitled+design+-+4.png",
+  "platform": "squarespace",
+  "product_id": "5e8155fdb042e9754b9a3f8b",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Electric Eye Blend",
+  "url": "https://www.thegovcup.com/shop/colombia-organic-rfa-tolima-hbhyl",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-Over",
+    "variant_id": "1c7cf454-179b-4599-a092-f78fcb950546"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "8f2acd99-6a75-4ff2-8a26-c644c1e2ede2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "a16b5edb-6602-44ec-b7e9-c85116e6f0bc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "d4421553-34e5-4dea-b9e9-26f59aa5240f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "e9856c42-6faa-41ce-8413-a7a80aa4c453"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a5ac97858d3d3b6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-organic-rfa-tolima-hbhyl-zs6f8",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/916fa5a9-92fb-478e-9f6b-bfbc9e8030a5/Untitled+design+-+1.png",
+  "platform": "squarespace",
+  "product_id": "5e976b30854c781376ab58f7",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Bootleg Blend",
+  "url": "https://www.thegovcup.com/shop/colombia-organic-rfa-tolima-hbhyl-zs6f8",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "259a914b-c3b4-4768-85b8-daf6b90730f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "4a168307-686a-4a56-8772-4a5b08c82d0b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "87469bb1-d9a4-4dc5-aa47-03db9e55f50f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "be132657-a792-4a57-85a4-55e87df79032"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-Over",
+    "variant_id": "bf7f8d3c-cc9b-456c-96d7-8d3a9e46a4a0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "517261bb49195c9f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fto-huehuetenango-asobagri-fgxz5",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/f396e6c8-dd8d-467d-8f10-5174e0a013a1/Untitled+design+-+5.png",
+  "platform": "squarespace",
+  "product_id": "5fd05b25ef76c20f2d46dc79",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Guatemala - Huehuetenango",
+  "url": "https://www.thegovcup.com/shop/guatemala-fto-huehuetenango-asobagri-fgxz5",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "57c5e00b-7b0a-472a-9d89-04f714f9cdde"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "6a6d64d0-2ed9-4765-a234-c98dce7464a6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "7af9debb-2ded-4e43-bd14-a26734af0ce6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "db16ed69-a396-46c6-ad81-0e327c17f7c5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "e58d81c5-df30-4290-a0d0-298346aafcac"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da9f822696b4d857",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto-tolima",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/f0403b8a-9b01-4a80-8d0c-721e623f1802/Untitled+design+-+2.png",
+  "platform": "squarespace",
+  "product_id": "62094aeb8382e4343837e23b",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia - Huila",
+  "url": "https://www.thegovcup.com/shop/colombia-fto-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "24e5869b-46b8-42aa-ae35-de7c76d4a88a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "4e1a9a73-1d1b-47d2-8eb4-27d932304f1e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "97696c84-350e-403a-aeee-feab62ab475e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "eae82c2d-5a5e-4bac-a07b-423035908821"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "ec5a6e11-e5ae-448b-a736-dd93666527d4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b9d2a0835d5b7fb",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto-tolima-x76rf",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/f32102c1-ea66-4737-b5a9-6e064a0d66df/Untitled+design+-+8.png",
+  "platform": "squarespace",
+  "product_id": "653350f38f393f7e42eb88f4",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra - Jambi Province",
+  "url": "https://www.thegovcup.com/shop/colombia-fto-tolima-x76rf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "bfb728ec-69bb-4e2e-8827-1433f1984341"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "ce48cce2-9d2c-4663-bfca-80632514f6e9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "d9649274-f93f-4fad-84b0-cf6b18fcd448"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "dee3019f-dd49-4e1e-9db0-d853f93abce6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "e2cc73ba-2432-4094-a690-bfb826c4f840"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a3b8495b38eec98",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fto-huehuetenango-asobagri-fgxz5-9sze3",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/3fe0dfca-0628-4613-bd08-05adc1fae704/Untitled+design+-+7.png",
+  "platform": "squarespace",
+  "product_id": "6aae13cc40aba04152db86e7",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico Washed - Oaxaca",
+  "url": "https://www.thegovcup.com/shop/guatemala-fto-huehuetenango-asobagri-fgxz5-9sze3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "18f7380c-a21b-4563-b3f6-a0ff39db36f5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "300b04f6-948e-4f13-b392-b3aea4da0900"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "621134ef-a3fa-4497-a698-dd164099d791"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "824ec7c5-6b15-4fcc-9606-6b2d73757634"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "dc6d8f73-a68c-4681-9dae-854cb8d416b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "abd1a0f7aad6c9ae",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fto-tolima-b9b6e",
+  "image": "https://images.squarespace-cdn.com/content/v1/57324cf5a3360c5f776986e2/0338ada6-01b7-4f9a-baed-5b6b3f105e27/Untitled+design+-+6.png",
+  "platform": "squarespace",
+  "product_id": "6aae14ee131c93435825ef7b",
+  "product_type": "Coffee",
+  "roaster_slug": "thegovcup",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Honduras Honey - Finca Liquidambar",
+  "url": "https://www.thegovcup.com/shop/colombia-fto-tolima-b9b6e",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "06ecbba1-7b62-4159-aa42-1c31d3d091b2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "08c795a1-a249-4ece-ac5e-7309ebceb5b1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "253c0848-fae8-4381-98ab-08c639b60e40"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Automatic Drip",
+    "variant_id": "56ca3f36-4c27-4522-87cf-c8d5dd636664"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pour-over",
+    "variant_id": "ea1ba372-733e-4b7b-9158-136a60ae9918"
+   }
+  ],
+  "vendor": ""
+ }
+]

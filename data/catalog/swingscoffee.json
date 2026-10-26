@@ -1,0 +1,1514 @@
+[
+ {
+  "body_hash": "570fff4a8ce7d41b",
+  "first_seen": "2026-10-26",
+  "handle": "four-mile-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/4MileWeb.png?v=1754421114",
+  "platform": "shopify",
+  "product_id": "7344973840481",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Four Mile Espresso",
+  "url": "https://www.swingscoffee.com/products/four-mile-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42355148849249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42355148882017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42355148914785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42355152912481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706010636385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706010669153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706010701921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706010734689"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "1d55d61c43967d1f",
+  "first_seen": "2026-10-26",
+  "handle": "four-mile-espresso-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/1013_Reserve.png?v=1758496546",
+  "platform": "shopify",
+  "product_id": "7374302347361",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "1013 Reserve",
+  "url": "https://www.swingscoffee.com/products/four-mile-espresso-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42460257255521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42460257288289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42460257321057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42460257353825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705927700577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705927733345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705927766113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705927798881"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "86cb191746f556d2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Colombia_5050.png?v=1758496490",
+  "platform": "shopify",
+  "product_id": "7376741105761",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "50/50 Half-Caf Colombia",
+  "url": "https://www.swingscoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42464111886433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42464111919201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42464111951969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42464111984737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705982390369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705982423137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705982455905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705982488673"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-50-50-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Brazil_Legender.png?v=1758496490",
+  "platform": "shopify",
+  "product_id": "7376741138529",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Brazil Legender",
+  "url": "https://www.swingscoffee.com/products/colombia-50-50-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42464112017505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42464112050273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42464112083041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42464112115809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706092425313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706092458081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706092490849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706092523617"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "ef4b28a2d2e49346",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-legender-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Centennial_Blend.png?v=1758496490",
+  "platform": "shopify",
+  "product_id": "7376741171297",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Centennial Blend",
+  "url": "https://www.swingscoffee.com/products/brazil-legender-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42464112148577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "42464112181345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42464112214113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42464112246881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705985110113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705985142881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705985175649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705985208417"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "039d120813375fe8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Decaf_Espresso.png?v=1758496490",
+  "platform": "shopify",
+  "product_id": "7376741204065",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://www.swingscoffee.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42464112312417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42464112345185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42464112377953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42464112410721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706005262433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706005295201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706005327969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706005360737"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "f73af4483bf1b95f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-90",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Espresso_90.png?v=1758496491",
+  "platform": "shopify",
+  "product_id": "7376741269601",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Espresso 90",
+  "url": "https://www.swingscoffee.com/products/espresso-90",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42464112476257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42464112509025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42464112541793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42464112574561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706009981025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706010013793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706010046561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706010079329"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "5935546bb32608c3",
+  "first_seen": "2026-10-26",
+  "handle": "g-street",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/G_Street_Web.png?v=1758730144",
+  "platform": "shopify",
+  "product_id": "7378271928417",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "G Street",
+  "url": "https://www.swingscoffee.com/products/g-street",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42469650464865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "42469650497633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42469650530401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42469650563169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706022629473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706022662241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706022695009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706022727777"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "ab15390dc818e254",
+  "first_seen": "2026-10-26",
+  "handle": "mesco",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Mesco_Web.png?v=1758730097",
+  "platform": "shopify",
+  "product_id": "7378273501281",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Mesco",
+  "url": "https://www.swingscoffee.com/products/mesco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42469654560865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "42469654593633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42469654626401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42469654659169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706035441761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706035474529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706035507297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706035540065"
+   }
+  ],
+  "vendor": "Swings Coffee Roasters"
+ },
+ {
+  "body_hash": "3668517104204675",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Coldbrew.png?v=1762981832",
+  "platform": "shopify",
+  "product_id": "7409376723041",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Cold Brew",
+  "url": "https://www.swingscoffee.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42705932320865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42705932386401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42705932419169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42705932451937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705932648545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705932714081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705932746849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705932779617"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "31958e860e349a6f",
+  "first_seen": "2026-10-26",
+  "handle": "diplomat-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/Diplomat.png?v=1762981906",
+  "platform": "shopify",
+  "product_id": "7409380229217",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Diplomat Blend",
+  "url": "https://www.swingscoffee.com/products/diplomat-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42705991368801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42705991401569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "42705991434337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42705991467105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705991532641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705991565409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705991598177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705991630945"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "f37cd804e69e129d",
+  "first_seen": "2026-10-26",
+  "handle": "e",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/EmbassyRow.png?v=1762981980",
+  "platform": "shopify",
+  "product_id": "7409382064225",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Embassy Row",
+  "url": "https://www.swingscoffee.com/products/e",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42705998512225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42705998544993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42705998577761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42705998610529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42705998676065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42705998708833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42705998741601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42705998774369"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "0440de80b598826c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/FrenchRoast.png?v=1762982434",
+  "platform": "shopify",
+  "product_id": "7409385865313",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "French Roast",
+  "url": "https://www.swingscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706018336865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706018369633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706018402401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706018435169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706018500705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706018533473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706018566241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706018599009"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "3a51531861381339",
+  "first_seen": "2026-10-26",
+  "handle": "high-mountain-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/HighMountain.png?v=1762983387",
+  "platform": "shopify",
+  "product_id": "7409393762401",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "High Mountain",
+  "url": "https://www.swingscoffee.com/products/high-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706027479137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706027511905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706027544673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706027577441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706027642977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706027675745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706027708513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706027741281"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "ab571878551000ae",
+  "first_seen": "2026-10-26",
+  "handle": "java-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/JavaMocha.png?v=1762983558",
+  "platform": "shopify",
+  "product_id": "7409394909281",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Java Mocha",
+  "url": "https://www.swingscoffee.com/products/java-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42626165407841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "42626165440609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42705925800033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lbs / Coarse",
+    "variant_id": "42705925832801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42705925931105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42705925963873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lbs / Fine",
+    "variant_id": "42705926029409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lbs / Drip",
+    "variant_id": "42705926062177"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "fe0957378c119868",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/DecafColombia.png?v=1762984029",
+  "platform": "shopify",
+  "product_id": "7409396154465",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Decaf Colombia | Sugar Cane Process",
+  "url": "https://www.swingscoffee.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706002083937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706002116705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706002149473"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706002182241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706002247777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706002280545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706002313313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706002346081"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "9b1c7fd825ae7385",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-voz",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/GuatemalalaVoz_d4dc822a-233b-4f48-a32f-cc3c5ba055c1.png?v=1762984821",
+  "platform": "shopify",
+  "product_id": "7409400021089",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Guatemala la Voz",
+  "url": "https://www.swingscoffee.com/products/guatemala-la-voz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706078597217"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706078629985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706078662753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706078695521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706078728289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706078761057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706078793825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706078826593"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-blue-tiger",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/SumatraBlueTiger_4f6bda34-e0bd-4d7d-a1b7-b184be73c50d.png?v=1762985191",
+  "platform": "shopify",
+  "product_id": "7409400545377",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Sumatra Blue Tiger",
+  "url": "https://www.swingscoffee.com/products/sumatra-blue-tiger",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706043404385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706043437153"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706043469921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706043502689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706043568225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706043600993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706043633761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706043666529"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/NicJinotegaWEB.png?v=1766503394",
+  "platform": "shopify",
+  "product_id": "7439730606177",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Nicaragua Jinotega",
+  "url": "https://www.swingscoffee.com/products/nicaragua-jinotega",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42706046091361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42706046124129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42706046156897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42706046189665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "42706046222433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Fine",
+    "variant_id": "42706046255201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42706046287969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Drip",
+    "variant_id": "42706046320737"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "8ec31df7d69f46e1",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/SingleOriginBagNOLABEL.png?v=1768577678",
+  "platform": "shopify",
+  "product_id": "7455543918689",
+  "product_type": "",
+  "roaster_slug": "swingscoffee",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://www.swingscoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42768944136289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42768944169057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "42768944201825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine",
+    "variant_id": "42768944234593"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-okapa",
+  "image": "https://cdn.shopify.com/s/files/1/0586/8011/5297/files/PNGOkapa_3.png?v=1790084732",
+  "platform": "shopify",
+  "product_id": "7689614295137",
+  "product_type": "Coffee",
+  "roaster_slug": "swingscoffee",
+  "tags": [],
+  "title": "Papua New Guinea Okapa",
+  "url": "https://www.swingscoffee.com/products/papua-new-guinea-okapa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46613148074081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Fine",
+    "variant_id": "46613148106849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip",
+    "variant_id": "46613148139617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Coarse",
+    "variant_id": "46613148172385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46613148205153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Fine",
+    "variant_id": "46613148237921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip",
+    "variant_id": "46613148270689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Coarse",
+    "variant_id": "46613148303457"
+   }
+  ],
+  "vendor": "Swing's Coffee Roasters"
+ }
+]

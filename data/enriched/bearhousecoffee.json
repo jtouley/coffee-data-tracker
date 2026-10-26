@@ -1,0 +1,145 @@
+{
+ "6526ab45d3e03c221db13524": {
+  "body_hash": "ddf4593b40978957",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "661d47a563587e5432c3e0c4": {
+  "body_hash": "388a11d940b52d0c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "661d495885c79e1bb88a8c8b": {
+  "body_hash": "17b3cb3180b570b0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "673cb818d8e8ae022f9c0fe6": {
+  "body_hash": "af34bb33b3f735dd",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "brown spice",
+   "cane sugar",
+   "green tea"
+  ],
+  "varietals": []
+ },
+ "67ed6320277bde5accd45426": {
+  "body_hash": "74b1d7867265476a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red cherry",
+   "cinnamon brown sugar",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "68a399ba2b9dd42bfc74e421": {
+  "body_hash": "5dc33202823f1971",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "brown sugar",
+   "apple",
+   "hazelnut"
+  ],
+  "varietals": []
+ },
+ "68a39afd1aab23208e274bdc": {
+  "body_hash": "68cbef7edec39e76",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "peanut butter",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "6990af5d31c38118a2dc7548": {
+  "body_hash": "9d82af7857641fd4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red apple",
+   "honey",
+   "lemon",
+   "black tea"
+  ],
+  "varietals": []
+ }
+}

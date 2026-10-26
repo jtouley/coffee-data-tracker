@@ -1,0 +1,232 @@
+[
+ {
+  "body_hash": "2a71403c764142b0",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-just-right",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1a410ebf3a99",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Breakfast Blend - Just Right",
+  "url": "https://www.fikabeans.com/product-page/breakfast-blend-just-right",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc0f2f021616e387",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-jazblue",
+  "image": null,
+  "platform": "generic",
+  "product_id": "22237091",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Brazil Jazblu",
+  "url": "https://www.fikabeans.com/product-page/brazil-jazblue",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c56f2e24d46a55bf",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": null,
+  "platform": "generic",
+  "product_id": "47193881",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Mexico Chiapas",
+  "url": "https://www.fikabeans.com/product-page/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7768f46227f89862",
+  "first_seen": "2026-10-26",
+  "handle": "day-night-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4f806616ec67",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Half Caffeine Blend - Day + Night",
+  "url": "https://www.fikabeans.com/product-page/day-night-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f015b03900e4025b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-having-energy",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5c604065b04e",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Espresso Blend - Having Energy",
+  "url": "https://www.fikabeans.com/product-page/espresso-blend-having-energy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62a944f559793dfe",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-columbia-valle-del-cauca",
+  "image": null,
+  "platform": "generic",
+  "product_id": "860013025144",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Decaf - Columbia Valle del Cauca",
+  "url": "https://www.fikabeans.com/product-page/decaf-columbia-valle-del-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78e96069c7b50823",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "860013025168",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Costa Rica Tres Nubes",
+  "url": "https://www.fikabeans.com/product-page/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53a076775678dc17",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-las-amapolas",
+  "image": null,
+  "platform": "generic",
+  "product_id": "860013025175",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.fikabeans.com/product-page/guatemala-las-amapolas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "950024bd6929931a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-blend-second-filling",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bcf580b6cf45",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "Dark Roast Blend - Second Filling",
+  "url": "https://www.fikabeans.com/product-page/dark-roast-blend-second-filling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "069516e693664c5d",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-coffee-with-friends",
+  "image": null,
+  "platform": "generic",
+  "product_id": "cc0125f6eda3",
+  "product_type": "",
+  "roaster_slug": "fikabeans",
+  "tags": [],
+  "title": "House Blend - Coffee with Friends",
+  "url": "https://www.fikabeans.com/product-page/house-blend-coffee-with-friends",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

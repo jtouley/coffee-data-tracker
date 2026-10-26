@@ -1,0 +1,703 @@
+[
+ {
+  "body_hash": "feac54f7ce99d4fd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/Decaf_Inner_Glow_WB.jpg?v=1575255439",
+  "platform": "shopify",
+  "product_id": "2196122271806",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Coffee",
+   "Colombia",
+   "Colombian",
+   "Dallas",
+   "Decaf",
+   "Decaf Coffee",
+   "Fayetteville",
+   "Gourmet",
+   "Northwest Arkansas",
+   "Swiss Water Process",
+   "Texas",
+   "woman-owned"
+  ],
+  "title": "Decaf Colombia - Swiss Water Process",
+  "url": "https://www.confidentcoffeeroasters.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19965724229694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "19965724295230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / French Press",
+    "variant_id": "31461674057790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39653602918462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "39653602951230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39653602983998"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "f59a519f348d0ce0",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/files/Confident_CeciGenis_YellowHoney_Bag.png?v=1753650987",
+  "platform": "shopify",
+  "product_id": "4374253240382",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [],
+  "title": "Ceci Genus - Women Care Certified",
+  "url": "https://www.confidentcoffeeroasters.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31319864082494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "31319864115262"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "31461673631806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39653594628158"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "39653594660926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39653594693694"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "7db4cad9de81098a",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-guatemala-gaspar-perez-domingo",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/Guatemala_FTO_WB.jpg?v=1575256955",
+  "platform": "shopify",
+  "product_id": "4375729766462",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Caramel",
+   "Dallas",
+   "Fair Trade",
+   "Fairtrade",
+   "Fayetteville",
+   "Gourmet",
+   "Guatemala",
+   "Guatemalan",
+   "Northwest Arkansas",
+   "Organic",
+   "Texas",
+   "Toffee",
+   "woman-owned"
+  ],
+  "title": "Guatemala - Fair Trade & Organic",
+  "url": "https://www.confidentcoffeeroasters.com/products/copy-of-guatemala-gaspar-perez-domingo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31327320604734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "31327320670270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / French Press",
+    "variant_id": "31461682380862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39653604491326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "39653604524094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39653604556862"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "226c7405d36712df",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santo-antonio-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/Mexico2.jpg?v=1586823458",
+  "platform": "shopify",
+  "product_id": "4377987776574",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Chiapas",
+   "Coffee",
+   "Dallas",
+   "Fayetteville",
+   "Gourmet",
+   "Medium Roast",
+   "Mexico",
+   "Northwest Arkansas",
+   "Specialty",
+   "Texas",
+   "Washed",
+   "Woman-owned",
+   "fresh roasted"
+  ],
+  "title": "Mexico - Fair Trade & Organic",
+  "url": "https://www.confidentcoffeeroasters.com/products/brazil-santo-antonio-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31341043515454"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (medium)",
+    "variant_id": "31341043548222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "31461672747070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39376169730110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (medium)",
+    "variant_id": "39376298049598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39376298803262"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "f811a2c946a27e3a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/Colombia_copy.jpg?v=1575658883",
+  "platform": "shopify",
+  "product_id": "4389311545406",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Chocolate",
+   "Coffee",
+   "Colombia",
+   "Colombian",
+   "Dallas",
+   "Fayetteville",
+   "Gourmet",
+   "Medium Roast",
+   "Northwest Arkansas",
+   "Smooth",
+   "Texas",
+   "Woman-owned"
+  ],
+  "title": "Colombia - Nariño",
+  "url": "https://www.confidentcoffeeroasters.com/products/colombia-narino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31387722022974"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "31387722055742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "31461673500734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39584935575614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "40104229273662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "40104229306430"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "b01a66c2f03a25e8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/Espresso.jpg?v=1604959816",
+  "platform": "shopify",
+  "product_id": "4759878533182",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Blend",
+   "Coffee",
+   "Dallas",
+   "Espresso",
+   "Fayetteville",
+   "Northwest Arkansas",
+   "Texas",
+   "specialty coffee",
+   "woman-owned"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.confidentcoffeeroasters.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32580287987774"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (medium)",
+    "variant_id": "32580288020542"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "32580288053310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39653603737662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (medium)",
+    "variant_id": "39653603770430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39653603803198"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "497985645830eab0",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-organic-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/DarkRoast.jpg?v=1607276007",
+  "platform": "shopify",
+  "product_id": "4773841076286",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [
+   "Arkansas",
+   "Chiapas",
+   "Coffee",
+   "Dallas",
+   "Fayetteville",
+   "Gourmet",
+   "Medium Roast",
+   "Mexico",
+   "Northwest Arkansas",
+   "Specialty",
+   "Texas",
+   "Washed",
+   "Woman-owned",
+   "fresh roasted"
+  ],
+  "title": "Dark Roast - Organic Coffee",
+  "url": "https://www.confidentcoffeeroasters.com/products/dark-roast-organic-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32635271741502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "32635271774270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "32635271839806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "39653599117374"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "39653599150142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "39653599182910"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "23a6755467c8e007",
+  "first_seen": "2026-10-26",
+  "handle": "even-steven",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/products/594192F4-B961-480E-AA4C-22B6B800EC73.png?v=1672938858",
+  "platform": "shopify",
+  "product_id": "7126007939134",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [],
+  "title": "Even Steven -1/2 Decaf & 1/2 Colombia",
+  "url": "https://www.confidentcoffeeroasters.com/products/even-steven",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39973602263102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (medium)",
+    "variant_id": "39973602295870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "39973602328638"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "a6211309e61266ab",
+  "first_seen": "2026-10-26",
+  "handle": "maritza-castro-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/files/Confident_MaritzaCastro_Bag.png?v=1742489607",
+  "platform": "shopify",
+  "product_id": "7761753145406",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [],
+  "title": "Maritza Castro - Microlot",
+  "url": "https://www.confidentcoffeeroasters.com/products/maritza-castro-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41641675391038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "41641675423806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / French Press",
+    "variant_id": "41641675456574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "41641675489342"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "41641675522110"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lbs / French Press",
+    "variant_id": "41641675554878"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "d91d54c3dd51047f",
+  "first_seen": "2026-10-26",
+  "handle": "pablo-eva-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/files/Confident_PabloEvaDelCid_Bag_76459628-5df2-484d-bc1f-d932b1ea3284.png?v=1753647948",
+  "platform": "shopify",
+  "product_id": "7828746371134",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [],
+  "title": "Pablo & Eva Del Cid - Microlot",
+  "url": "https://www.confidentcoffeeroasters.com/products/pablo-eva-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41880249991230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "41880250023998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "41880250056766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "41880250089534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "41880250122302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "41880250155070"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ },
+ {
+  "body_hash": "7a679d30a898148f",
+  "first_seen": "2026-10-26",
+  "handle": "pablo-eva-del-cid-microlot-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0090/1772/0894/files/Confident_FamilyLot_PabloEvaDelCid-Guat_Bag.png?v=1788567285",
+  "platform": "shopify",
+  "product_id": "8248754012222",
+  "product_type": "",
+  "roaster_slug": "confidentcoffeeroasters",
+  "tags": [],
+  "title": "Family Lot - Pablo & Eva Del Cid",
+  "url": "https://www.confidentcoffeeroasters.com/products/pablo-eva-del-cid-microlot-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43287772037182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip (Medium)",
+    "variant_id": "43287772069950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / French Press",
+    "variant_id": "43287772102718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "43287772135486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / Drip (Medium)",
+    "variant_id": "43287772168254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs / French Press",
+    "variant_id": "43287772201022"
+   }
+  ],
+  "vendor": "Confident Coffee"
+ }
+]

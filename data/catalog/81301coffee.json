@@ -1,0 +1,1879 @@
+[
+ {
+  "body_hash": "635d08c39a59c0a7",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/Brazil-1437002.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8011783274696",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Brazil",
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "Brazil",
+  "url": "https://easycoffeeroasters.co/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43952647438536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43952647471304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43952647504072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44029164159176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "44029164191944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "44029164224712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "44029164257480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "44029164290248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "44029164323016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "44029164355784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "44029164388552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "44029164421320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "44029164454088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "44029164486856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "44029164519624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "44029164552392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "44029164585160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "44029164617928"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "45cdeee0e2ee82dc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-210.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8011783733448",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Colombia",
+   "Medium Roast"
+  ],
+  "title": "Colombia",
+  "url": "https://easycoffeeroasters.co/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43952650354888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43952650387656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43952650420424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990897098952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990897131720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990897164488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990897197256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990897230024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990897262792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990897295560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990897328328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990897361096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990897393864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990897426632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990897459400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990897492168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990897524936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990897557704"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "7087bf6eb4363d11",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-59.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021416706248",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [],
+  "title": "Colorado Blend",
+  "url": "https://easycoffeeroasters.co/products/roast-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990898770120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990898802888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990898835656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990898868424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990898901192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990898933960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990898966728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990898999496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990899032264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990899065032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990899097800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990899130568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990899163336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990899196104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990899228872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990899261640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990899294408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990899327176"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "d73105e344dae986",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-214.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021418148040",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Costa Rica",
+   "Light Roast"
+  ],
+  "title": "Costa Rica",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990901260488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990901293256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990901326024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990901358792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990901391560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990901424328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990901457096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990901489864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990901522632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990901555400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990901588168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990901620936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990901653704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990901686472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990901719240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990901784776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990901817544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990901850312"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "9b038da977da4f50",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-200.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021418279112",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Dark Side",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990901948616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990901981384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990902014152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990902046920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990902079688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990902112456"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990902145224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990902177992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990902210760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990902243528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990902276296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990902309064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990902341832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990902374600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990902407368"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990902440136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990902472904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990902505672"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "b1c3f3c2c76ec4d5",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-216.jpg?v=1722468595",
+  "platform": "shopify",
+  "product_id": "8021418410184",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Decaf",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990903029960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990903062728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990903095496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990903128264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990903161032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990903193800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990903226568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990903259336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990903292104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990903324872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990903357640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990903390408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990903423176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990903455944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990903488712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990903521480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990903554248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990903587016"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "29912d3b61bef554",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-1375511.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021418541256",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "Easy Rider Espresso Blend",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990903718088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990903750856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990903783624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990903816392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990903849160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990903881928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990903914696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990903947464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990903980232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990904013000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990904045768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990904078536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990904111304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990904144072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990904176840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990904209608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990904242376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990904275144"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "961114cfd9371d94",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-86.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021418770632",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Ethiopia",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990904930504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990904963272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990904996040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990905028808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990905061576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990905094344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990905127112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990905159880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990905192648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990905225416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990905258184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990905290952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990905323720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990905356488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990905389256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990905422024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990905454792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990905487560"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "dfb311442aee72a1",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy-copy-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-212.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021418934472",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Guatemala",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy-copy-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990905684168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990905716936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990905749704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990905782472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990905815240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990905848008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990905880776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990905913544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990905946312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990905979080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990906011848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990906044616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990906077384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990906110152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990906142920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990906175688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990906208456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990906273992"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "1e7e406cd8446fe2",
+  "first_seen": "2026-10-26",
+  "handle": "roast-copy-copy-copy-copy-copy-copy-copy-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-191.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021419131080",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Mexico",
+  "url": "https://easycoffeeroasters.co/products/roast-copy-copy-copy-copy-copy-copy-copy-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990906503368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990906536136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990906568904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990906601672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990906634440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990906667208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990906699976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990906732744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990906765512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990906798280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990906831048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990906863816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990906896584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990906929352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990906962120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990906994888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990907027656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990907060424"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "fe9da42257ed2038",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-203.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021422375112",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "Morning Stoke",
+  "url": "https://easycoffeeroasters.co/products/mexico-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990911647944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990911680712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990911713480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990911746248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990911779016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990911811784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990911844552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990911877320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990911910088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990911942856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990911975624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990912008392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990912041160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990912073928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990912106696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990912139464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990912172232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990912205000"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "64d85c3d85597517",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/EasyCoffeeRoasting81301-96.jpg?v=1738341188",
+  "platform": "shopify",
+  "product_id": "8021423030472",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Sumatra",
+  "url": "https://easycoffeeroasters.co/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Espresso",
+    "variant_id": "43990913122504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Moka Pot",
+    "variant_id": "43990913155272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Pour Over",
+    "variant_id": "43990913188040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Drip",
+    "variant_id": "43990913220808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "43990913253576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43990913286344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "43990913319112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "43990913351880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "43990913384648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "43990913417416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "43990913450184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43990913482952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "43990913515720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "43990913548488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "43990913581256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "43990913614024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "43990913646792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43990913679560"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ },
+ {
+  "body_hash": "bbc9e22e982c65d0",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-limited-release",
+  "image": "https://cdn.shopify.com/s/files/1/0658/2190/1000/files/HolidayBlendSLEIGH-1012439_4667497c-bbbc-4f0c-95f6-67f426b1abaa.jpg?v=1732571479",
+  "platform": "shopify",
+  "product_id": "8106001924296",
+  "product_type": "",
+  "roaster_slug": "81301coffee",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast"
+  ],
+  "title": "Holiday Blend **Limited Release**",
+  "url": "https://easycoffeeroasters.co/products/holiday-blend-limited-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44253392142536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "44253392175304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Moka Pot",
+    "variant_id": "44253392208072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Pourover",
+    "variant_id": "44253392240840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "44253392273608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "44253392306376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44253392339144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Espresso",
+    "variant_id": "44253392371912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "44253392404680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Pourover",
+    "variant_id": "44253392437448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Drip",
+    "variant_id": "44253392470216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / French Press",
+    "variant_id": "44253392502984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44253392535752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Espresso",
+    "variant_id": "44253392568520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "44253392601288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Pourover",
+    "variant_id": "44253392634056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "44253392666824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / French Press",
+    "variant_id": "44253392699592"
+   }
+  ],
+  "vendor": "Easy Coffee Roasters"
+ }
+]

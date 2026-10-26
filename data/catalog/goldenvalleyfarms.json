@@ -1,0 +1,2011 @@
+[
+ {
+  "body_hash": "3667375a44e9e15a",
+  "first_seen": "2026-10-26",
+  "handle": "100-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/2copy.png?v=1778681368",
+  "platform": "shopify",
+  "product_id": "10670991212849",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "100% Costa Rican",
+  "url": "https://www.goldenvalleyfarms.com/products/100-costa-rican",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12oz",
+    "variant_id": "54189218824497"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Ground / 2lb",
+    "variant_id": "54189218857265"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Ground / 5lb",
+    "variant_id": "54189218890033"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "54189218922801"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "54189218955569"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "54189218988337"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "French Press / 12oz",
+    "variant_id": "54189219021105"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "French Press / 2lb",
+    "variant_id": "54189219053873"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "French Press / 5lb",
+    "variant_id": "54189219086641"
+   }
+  ],
+  "vendor": "Golden Valley Coffee Roasters"
+ },
+ {
+  "body_hash": "2875662bf24dfbe9",
+  "first_seen": "2026-10-26",
+  "handle": "mushroom-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/ProductPhotosWebsite_1.png?v=1783467665",
+  "platform": "shopify",
+  "product_id": "10718044422449",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Mushroom Coffee Blend",
+  "url": "https://www.goldenvalleyfarms.com/products/mushroom-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Ground / 8oz",
+    "variant_id": "55125163409713"
+   }
+  ],
+  "vendor": "Golden Valley Coffee Roasters"
+ },
+ {
+  "body_hash": "3cdc562368d99a30",
+  "first_seen": "2026-10-26",
+  "handle": "golden-reserve-100-ugandan-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/ProductPhotosWebsite-GoldenReserve.png?v=1788546020",
+  "platform": "shopify",
+  "product_id": "10803098288433",
+  "product_type": "",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Golden Reserve - 100% Ugandan Coffee",
+  "url": "https://www.goldenvalleyfarms.com/products/golden-reserve-100-ugandan-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "56114223808817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "56114223841585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "56114223874353"
+   }
+  ],
+  "vendor": "Golden Valley Coffee Roasters"
+ },
+ {
+  "body_hash": "ba296221bc2a2893",
+  "first_seen": "2026-10-26",
+  "handle": "the-original",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Product_Photos_Website_-_The_Original.png?v=1789581068",
+  "platform": "shopify",
+  "product_id": "10834077581617",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "The Original",
+  "url": "https://www.goldenvalleyfarms.com/products/the-original",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "56306063474993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "56306063507761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "56306063540529"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "56306063573297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "56306063606065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "56306063638833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "56306063671601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "56306063704369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "56306063737137"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "1393de1177a22eeb",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/BreakfastBlend.jpg?v=1763585626",
+  "platform": "shopify",
+  "product_id": "4714047144026",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.goldenvalleyfarms.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32447530106970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32447530139738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478927781978"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478928601178"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478928633946"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478928797786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478928896090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478928928858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478929092698"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "21d9b0bb716ae83f",
+  "first_seen": "2026-10-26",
+  "handle": "aztec-gold",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/AztecGold12oz.jpg?v=1740078107",
+  "platform": "shopify",
+  "product_id": "4714093772890",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Aztec Gold",
+  "url": "https://www.goldenvalleyfarms.com/products/aztec-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32447919489114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32447919521882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478926110810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478926307418"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478926438490"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478926471258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478926504026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478926569562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478926766170"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "1de07aa3d9efa2b6",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/RainforestReserve12oz.png?v=1763585626",
+  "platform": "shopify",
+  "product_id": "4714095673434",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Rainforest Reserve",
+  "url": "https://www.goldenvalleyfarms.com/products/rainforest-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32447928991834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32447929024602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32479001051226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32479001116762"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32479001149530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32479001182298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32479001968730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32479002034266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32479002067034"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "f6c3b724721fe625",
+  "first_seen": "2026-10-26",
+  "handle": "100-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/ColombianSantaMarta12oz.jpg?v=1740078002",
+  "platform": "shopify",
+  "product_id": "4720792797274",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "100% Colombian",
+  "url": "https://www.goldenvalleyfarms.com/products/100-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471582113882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471582146650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478895833178"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478895898714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478896226394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478896259162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478896291930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478896488538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478896521306"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "3e3f09c5d96704bd",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/FrenchRoastNoBF12oz_c0657516-f0b1-4e2e-8162-bdcc73d4682e.png?v=1740077971",
+  "platform": "shopify",
+  "product_id": "4720793976922",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "French Roast"
+  ],
+  "title": "French Roast",
+  "url": "https://www.goldenvalleyfarms.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471586930778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471586963546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478981423194"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478985093210"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478985322586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478985650266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478987386970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478987878490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478988468314"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "02b91c5fce9b6f93",
+  "first_seen": "2026-10-26",
+  "handle": "artisan-select",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/ArtisanSelect12oz.jpg?v=1740077897",
+  "platform": "shopify",
+  "product_id": "4720795222106",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Artisan Select",
+  "url": "https://www.goldenvalleyfarms.com/products/artisan-select",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471596138586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471596171354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478918475866"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478921785434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478921850970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478921883738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478922047578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478922080346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478922145882"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "506c3ec0680458b9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/DecafDarkRoast12oz.jpg?v=1740077868",
+  "platform": "shopify",
+  "product_id": "4720795418714",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Decaf Dark Roast",
+  "url": "https://www.goldenvalleyfarms.com/products/decaf-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471597482074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471597514842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478932828250"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478942527578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478942560346"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478942625882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground / 5lb",
+    "variant_id": "32478942658650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478942724186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32478942789722"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "a44a3ce8e1f42efa",
+  "first_seen": "2026-10-26",
+  "handle": "doughnut-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/DoughtnutBlend12oz.jpg?v=1740077839",
+  "platform": "shopify",
+  "product_id": "4720795713626",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Doughnut Blend",
+  "url": "https://www.goldenvalleyfarms.com/products/doughnut-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471600791642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471600824410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478943871066"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478943903834"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478943936602"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478950654042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478953341018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478954455130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478955044954"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "f4600aa8e27fd2c3",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/DecafHouseRoast12oz.jpg?v=1740077811",
+  "platform": "shopify",
+  "product_id": "4720796106842",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Decaf House Blend",
+  "url": "https://www.goldenvalleyfarms.com/products/decaf-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471602004058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471602036826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478943182938"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478943215706"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478943248474"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478943314010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground / 5lb",
+    "variant_id": "32478943346778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478943576154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32478943608922"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "98fab97b346c5357",
+  "first_seen": "2026-10-26",
+  "handle": "100-ethiopian-1",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Product_Photos_Website.png?v=1780590008",
+  "platform": "shopify",
+  "product_id": "4720796401754",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "100% Ethiopian",
+  "url": "https://www.goldenvalleyfarms.com/products/100-ethiopian-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12oz",
+    "variant_id": "32471603576922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471603609690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz",
+    "variant_id": "32478897209434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Ground / 2lb",
+    "variant_id": "32478897242202"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478897274970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "French Press / 2lb",
+    "variant_id": "32478897504346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / 5lb",
+    "variant_id": "32478897569882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478897602650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32478897799258"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "58e7f218018b4348",
+  "first_seen": "2026-10-26",
+  "handle": "100-nicaraguan",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Nic_Product_Photo.png?v=1786118493",
+  "platform": "shopify",
+  "product_id": "4720797646938",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "100% Nicaraguan",
+  "url": "https://www.goldenvalleyfarms.com/products/100-nicaraguan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12oz",
+    "variant_id": "32471607607386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471607640154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz",
+    "variant_id": "32478862999642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Ground / 2lb",
+    "variant_id": "32478898520154"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478898552922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "French Press / 2lb",
+    "variant_id": "32478898585690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / 5lb",
+    "variant_id": "32478898782298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478898815066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32478898978906"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "2ecdac7ad8dd787d",
+  "first_seen": "2026-10-26",
+  "handle": "wild-tiger®",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/WildTiger12oz.jpg?v=1763585626",
+  "platform": "shopify",
+  "product_id": "4720798040154",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Wild Tiger®",
+  "url": "https://www.goldenvalleyfarms.com/products/wild-tiger®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471608885338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471608918106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32479003803738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32479004622938"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32479004655706"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32479004688474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32479004885082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32479004917850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32479004950618"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "b4194deeda2ed928",
+  "first_seen": "2026-10-26",
+  "handle": "wild-tiger®-cold-brew-pouches",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/ColdBrewPouch.png?v=1758745481",
+  "platform": "shopify",
+  "product_id": "4720798629978",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Wild Tiger® Cold Brew Pouches",
+  "url": "https://www.goldenvalleyfarms.com/products/wild-tiger®-cold-brew-pouches",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Pouches / 6",
+    "variant_id": "32471611572314"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "ec27cc95d5d12d59",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Espresso12oz.jpg?v=1740077657",
+  "platform": "shopify",
+  "product_id": "4720798728282",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Espresso",
+  "url": "https://www.goldenvalleyfarms.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32471611736154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32471611768922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32478964514906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32478965432410"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32478965825626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32478966546522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32478966874202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32478967234650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32478968053850"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "66d034a4e4b3025c",
+  "first_seen": "2026-10-26",
+  "handle": "100-peruvian",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Peruvian12oz.jpg?v=1740077571",
+  "platform": "shopify",
+  "product_id": "4730524303450",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "100% Peruvian",
+  "url": "https://www.goldenvalleyfarms.com/products/100-peruvian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32496526524506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32496526557274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32496526590042"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32496526622810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32496526655578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32496526688346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32496526721114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32496526753882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32496526786650"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "a86ed0a9d81d527e",
+  "first_seen": "2026-10-26",
+  "handle": "wild-tiger®-food-service-case",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/WildTiger_61e1f8d1-5819-4aec-b9cc-4f1c73d50204.jpg?v=1758205677",
+  "platform": "shopify",
+  "product_id": "4742841040986",
+  "product_type": "Food Service",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Wild Tiger® Food Service Case",
+  "url": "https://www.goldenvalleyfarms.com/products/wild-tiger®-food-service-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2381,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "32531905839194"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "cb54cb38f1e1ea58",
+  "first_seen": "2026-10-26",
+  "handle": "wild-tiger®-cold-brew-pouch-food-service-case",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/ColdBrew.jpg?v=1740077532",
+  "platform": "shopify",
+  "product_id": "4742842056794",
+  "product_type": "Food Service",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Wild Tiger® Cold Brew Pouch Food Service Case",
+  "url": "https://www.goldenvalleyfarms.com/products/wild-tiger®-cold-brew-pouch-food-service-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1474,
+    "price_usd": 59.99,
+    "title": "Default Title",
+    "variant_id": "32531918880858"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "6df2993dd7da53c6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-food-service-case",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/Decaf.jpg?v=1740077482",
+  "platform": "shopify",
+  "product_id": "4742842646618",
+  "product_type": "Food Service",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Decaf House Blend Food Service Case",
+  "url": "https://www.goldenvalleyfarms.com/products/decaffeinated-food-service-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2381,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "32531929727066"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "f2aba2a04c20484a",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-food-service-case",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/Breakfast.jpg?v=1740077406",
+  "platform": "shopify",
+  "product_id": "4742843695194",
+  "product_type": "Food Service",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [],
+  "title": "Breakfast Blend Food Service Case",
+  "url": "https://www.goldenvalleyfarms.com/products/breakfast-blend-food-service-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2381,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "32531956269146"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "1a0a4533d6951363",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/products/AutumnHarvest12oz.jpg?v=1740077244",
+  "platform": "shopify",
+  "product_id": "4803304783962",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Autumn Harvest",
+  "url": "https://www.goldenvalleyfarms.com/products/autumn-harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32886920347738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32886920380506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32886920413274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Ground / 2lb",
+    "variant_id": "47749376901425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Ground / 5lb",
+    "variant_id": "47749376934193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47749376966961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47749376999729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "French Press / 2lb",
+    "variant_id": "47749377032497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "French Press / 5lb",
+    "variant_id": "47749377065265"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "6a514c386bc196b8",
+  "first_seen": "2026-10-26",
+  "handle": "red-eye",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/RedEye12oz.jpg?v=1740073801",
+  "platform": "shopify",
+  "product_id": "4824045060186",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Red Eye",
+  "url": "https://www.goldenvalleyfarms.com/products/red-eye",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "32953109512282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32953109545050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32953109577818"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "32953109610586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "32953109643354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "32953109676122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "32953109708890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32953109741658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "32953109774426"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "19fea83aaad7d438",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-wild-tiger®",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/1_a6a41fc6-83b9-43d7-8092-d1209925dd43.png?v=1741201205",
+  "platform": "shopify",
+  "product_id": "4830344446042",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Wild Tiger® Single-Serve Cups",
+  "url": "https://www.goldenvalleyfarms.com/products/copy-of-wild-tiger®",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "12 count",
+    "variant_id": "32978126733402"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "f0fecffb6196f6b7",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-reserve-single-serve-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Untitled_design_34_35b78817-681b-4917-a0fa-10c9a0544317.png?v=1759772904",
+  "platform": "shopify",
+  "product_id": "4830344609882",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Rainforest Reserve Single-Serve Cups",
+  "url": "https://www.goldenvalleyfarms.com/products/rainforest-reserve-single-serve-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 13.99,
+    "title": "12 Count",
+    "variant_id": "32978127290458"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "335a5b83142802db",
+  "first_seen": "2026-10-26",
+  "handle": "jaguar",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/Jaguar12oz-1.png?v=1758745278",
+  "platform": "shopify",
+  "product_id": "6538306322522",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Jaguar",
+  "url": "https://www.goldenvalleyfarms.com/products/jaguar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "39256452431962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39256452464730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "39256452497498"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "39256452530266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39256452563034"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "39256452595802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "39256452628570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39256452661338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "39256452694106"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "9721d118438ffce7",
+  "first_seen": "2026-10-26",
+  "handle": "philly-special-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/PhillySpecial.png?v=1758744874",
+  "platform": "shopify",
+  "product_id": "8215201153329",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Philly Special Roast",
+  "url": "https://www.goldenvalleyfarms.com/products/philly-special-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Ground / 12oz",
+    "variant_id": "44513814184241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44513814217009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "44513814249777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Ground / 2lb",
+    "variant_id": "44513814282545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44513814315313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.99,
+    "title": "French Press / 2lb",
+    "variant_id": "44513814348081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Ground / 5lb",
+    "variant_id": "44513814380849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44513814413617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.99,
+    "title": "French Press / 5lb",
+    "variant_id": "44513814446385"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "3edbc92b237308ec",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-doughnut-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/FightinFanatic12oz.jpg?v=1740073690",
+  "platform": "shopify",
+  "product_id": "8580407656753",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Fightin' Fanatic Roast",
+  "url": "https://www.goldenvalleyfarms.com/products/copy-of-doughnut-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "45753655230769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45753655263537"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "45753655296305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "45753655361841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "45753655394609"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "45753655427377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "45753655460145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45753655492913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "45753655558449"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ },
+ {
+  "body_hash": "1ca046c6c72bf56f",
+  "first_seen": "2026-10-26",
+  "handle": "morning-star",
+  "image": "https://cdn.shopify.com/s/files/1/0260/5717/9226/files/MorningStar12oz.jpg?v=1740073560",
+  "platform": "shopify",
+  "product_id": "9155326640433",
+  "product_type": "Organic Coffee",
+  "roaster_slug": "goldenvalleyfarms",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Morning Star",
+  "url": "https://www.goldenvalleyfarms.com/products/morning-star",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Ground / 12oz",
+    "variant_id": "47695581086001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47695581118769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "47695581151537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Ground / 2lb",
+    "variant_id": "47695581217073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47695581249841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.99,
+    "title": "French Press / 2lb",
+    "variant_id": "47695581282609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Ground / 5lb",
+    "variant_id": "47695581315377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47695581348145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "French Press / 5lb",
+    "variant_id": "47695581380913"
+   }
+  ],
+  "vendor": "Golden Valley Farms"
+ }
+]

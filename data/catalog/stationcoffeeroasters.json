@@ -1,0 +1,505 @@
+[
+ {
+  "body_hash": "03f319384ede1a80",
+  "first_seen": "2026-10-26",
+  "handle": "project-1",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/motr_pic.jpg?v=1747249864",
+  "platform": "shopify",
+  "product_id": "6720128549035",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Middle Of The Road",
+  "url": "https://stationcoffeeroasters.com/products/project-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40224263471275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40224263504043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "40270555644075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip/Ground",
+    "variant_id": "40270555676843"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "2.2 LBS / 1 KG / Whole Bean",
+    "variant_id": "41715869614251"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "2.2 LBS / 1 KG / Drip/Ground",
+    "variant_id": "41715874889899"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "886c99327da7da91",
+  "first_seen": "2026-10-26",
+  "handle": "alternative-fuel-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/Alt_fuel_pic.jpg?v=1747249281",
+  "platform": "shopify",
+  "product_id": "6785393524907",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Alternative Fuel Decaf",
+  "url": "https://stationcoffeeroasters.com/products/alternative-fuel-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40224247316651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40224247349419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "40270649000107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Drip/Ground",
+    "variant_id": "40270649032875"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2lb / Whole Bean",
+    "variant_id": "45546126770347"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 47.0,
+    "title": "2.2lb / Drip/Ground",
+    "variant_id": "45546126803115"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "cc9a8c402cfe7075",
+  "first_seen": "2026-10-26",
+  "handle": "traffic-jam",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/traffic_jam_pic.jpg?v=1747249990",
+  "platform": "shopify",
+  "product_id": "6785395392683",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Traffic Jam",
+  "url": "https://stationcoffeeroasters.com/products/traffic-jam",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40224290078891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "40270670528683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40998577176747"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "0fd3226cf86bbf5d",
+  "first_seen": "2026-10-26",
+  "handle": "hot-wire",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/hot_wire_pic.jpg?v=1747249443",
+  "platform": "shopify",
+  "product_id": "6785397260459",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Hot wire",
+  "url": "https://stationcoffeeroasters.com/products/hot-wire",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40224258785451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40224258818219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "40270653292715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb / Drip/Ground",
+    "variant_id": "40270653391019"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "e319963115a19c94",
+  "first_seen": "2026-10-26",
+  "handle": "the-exotics",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/Exotics_pic..jpg?v=1747249347",
+  "platform": "shopify",
+  "product_id": "7101010706603",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "The Exotics",
+  "url": "https://stationcoffeeroasters.com/products/the-exotics",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41182479122603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "41192653291691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "41192655519915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Drip/Ground",
+    "variant_id": "41195008721067"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "2.2 LBS / 1 KG / Whole Bean",
+    "variant_id": "41936550953131"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "2.2 LBS / 1 KG / Drip/Ground",
+    "variant_id": "41936551379115"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "1b4d813d91279b32",
+  "first_seen": "2026-10-26",
+  "handle": "slug-bug",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/slug_bug_pic.jpg?v=1747249708",
+  "platform": "shopify",
+  "product_id": "7494915522731",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Slug Bug",
+  "url": "https://stationcoffeeroasters.com/products/slug-bug",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42283575607467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "42283575640235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42283575673003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Drip/Ground",
+    "variant_id": "42283575705771"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "b7eb5928474781da",
+  "first_seen": "2026-10-26",
+  "handle": "1950s-hybrid",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/Hybrid_label_pic.jpg?v=1747248806",
+  "platform": "shopify",
+  "product_id": "8199566065835",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "1950s Hybrid",
+  "url": "https://stationcoffeeroasters.com/products/1950s-hybrid",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44385537032363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44385537065131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "44385540440235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Drip/Ground",
+    "variant_id": "44385540473003"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "c701bbcfe00acccd",
+  "first_seen": "2026-10-26",
+  "handle": "italian-job",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/itlaian_job_pic.jpg?v=1747249630",
+  "platform": "shopify",
+  "product_id": "8334026211499",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Italian Job",
+  "url": "https://stationcoffeeroasters.com/products/italian-job",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44866179956907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "44866179989675"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 46.0,
+    "title": "2.2 Lbs/1Kilo / Whole Bean",
+    "variant_id": "44866180022443"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 46.0,
+    "title": "2.2 Lbs/1Kilo / Drip/Ground",
+    "variant_id": "44866180055211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "44866180087979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lbs / Drip/Ground",
+    "variant_id": "44866180120747"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "1c9f95dfab1fae3f",
+  "first_seen": "2026-10-26",
+  "handle": "high-mileage",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/high_mileage_pic.jpg?v=1747250205",
+  "platform": "shopify",
+  "product_id": "8429660471467",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "High Mileage",
+  "url": "https://stationcoffeeroasters.com/products/high-mileage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45211670610091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "45211670642859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "45211670675627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lbs / Drip/Ground",
+    "variant_id": "45211670708395"
+   }
+  ],
+  "vendor": "StationCoffee"
+ },
+ {
+  "body_hash": "3374879d2ed91a9b",
+  "first_seen": "2026-10-26",
+  "handle": "tropic-drift",
+  "image": "https://cdn.shopify.com/s/files/1/0574/9800/9771/files/TropicDrift_f831cac7-6568-4a54-b4bf-fd141f6afa2b.jpg?v=1763699314",
+  "platform": "shopify",
+  "product_id": "8587209048235",
+  "product_type": "",
+  "roaster_slug": "stationcoffeeroasters",
+  "tags": [],
+  "title": "Tropic Drift",
+  "url": "https://stationcoffeeroasters.com/products/tropic-drift",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45866189324459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip/Ground",
+    "variant_id": "45866189357227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "45866189389995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs / Drip/Ground",
+    "variant_id": "45866189422763"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "2.2lbs/1 Kilo / Whole Bean",
+    "variant_id": "45866460414123"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "2.2lbs/1 Kilo / Drip/Ground",
+    "variant_id": "45866460446891"
+   }
+  ],
+  "vendor": "StationCoffee"
+ }
+]

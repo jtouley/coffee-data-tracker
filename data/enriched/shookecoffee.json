@@ -1,0 +1,116 @@
+{
+ "6881211613350": {
+  "body_hash": "6e9a7381239b6008",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "molasses",
+   "syrupy"
+  ],
+  "varietals": []
+ },
+ "7116549816486": {
+  "body_hash": "eab36523b1330d2e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "vanilla cream",
+   "honey",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "7340051529894": {
+  "body_hash": "2163df9fd442db37",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "caramel",
+   "milk chocolate",
+   "earthy"
+  ],
+  "varietals": []
+ },
+ "8285872029862": {
+  "body_hash": "d8608bb5b84ecc2b",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "lemon",
+   "dry roasted almonds",
+   "blackberry"
+  ],
+  "varietals": []
+ },
+ "8376532271270": {
+  "body_hash": "cff870bc1f380de2",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hazelnut",
+   "toffee",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "8535975166118": {
+  "body_hash": "f9d32e537c1626e0",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "semi-sweet chocolate",
+   "malt",
+   "toffee"
+  ],
+  "varietals": []
+ }
+}

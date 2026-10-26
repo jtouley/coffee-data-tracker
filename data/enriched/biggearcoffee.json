@@ -1,0 +1,111 @@
+{
+ "5c1bcabb4fa51a33699a18ad": {
+  "body_hash": "7437a444b845697a",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1750,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "citrus",
+   "caramel",
+   "cane sugar"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "5d03ac537aaa4800010a5aa8": {
+  "body_hash": "6b83c69146d9e093",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1250,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "almond",
+   "vanilla",
+   "red apple"
+  ],
+  "varietals": []
+ },
+ "5dc5c84ccdf26c522dac12d7": {
+  "body_hash": "3c7da5a2a205d54e",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "nectarines",
+   "raspberries",
+   "oranges"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "5dc5c95bf595060cc26edd4a": {
+  "body_hash": "4c95bb81ea93b24d",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "graham cracker"
+  ],
+  "varietals": []
+ },
+ "60147aacc8edf53709ec1a14": {
+  "body_hash": "d85164187802cc3a",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1900,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "floral",
+   "green tea",
+   "honeydew",
+   "lemon",
+   "lime"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Heirloom",
+   "Typica"
+  ]
+ }
+}

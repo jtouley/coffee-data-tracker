@@ -1,0 +1,7267 @@
+[
+ {
+  "body_hash": "671cf18ae3fabf4f",
+  "first_seen": "2026-10-26",
+  "handle": "candy-cane",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag.jpg?v=1769892328",
+  "platform": "shopify",
+  "product_id": "8466228052140",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Candy Cane",
+  "url": "https://piatanoirroast.com/products/candy-cane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297013817516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297013850284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297013883052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297013915820"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297013948588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297013981356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297014014124"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297014046892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297014079660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297014112428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297014145196"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297014177964"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297014210732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297014243500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297014276268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297014309036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297014341804"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "671cf18ae3fabf4f",
+  "first_seen": "2026-10-26",
+  "handle": "mint",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_6a93c6da-bdad-4e59-b908-3d6d64f70302.jpg?v=1769892375",
+  "platform": "shopify",
+  "product_id": "8466228215980",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Mint",
+  "url": "https://piatanoirroast.com/products/mint",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297014603948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297014636716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297014669484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297014702252"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297014735020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297014767788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297014800556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297014833324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297014866092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297014898860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297014931628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297014964396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297014997164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297015029932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297015062700"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297015095468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297015128236"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "010a5420a2d699a6",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_99a5b743-a4e0-4111-a41e-64af9975ed1f.jpg?v=1769892406",
+  "platform": "shopify",
+  "product_id": "8466228248748",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "French Vanilla",
+  "url": "https://piatanoirroast.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297015226540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297015259308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297015292076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297015324844"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297015357612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297015390380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297015423148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297015455916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297015488684"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297015521452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297015554220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297015586988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297015619756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297015652524"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297015685292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297015718060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297015750828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297015783596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297015816364"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297015849132"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "6c132e579f4cf280",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_88cbb468-2462-443b-868f-41565bba6eb6.jpg?v=1769892409",
+  "platform": "shopify",
+  "product_id": "8466228314284",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Hazelnut",
+  "url": "https://piatanoirroast.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297015914668"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297015947436"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297015980204"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297016012972"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297016045740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297016078508"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297016111276"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297016144044"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297016176812"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297016209580"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297016242348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297016275116"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297016307884"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297016340652"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297016373420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297016406188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297016438956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297016471724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297016504492"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297016537260"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "14916b1288044515",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_0ef2ed17-1385-4579-856d-3a5e28e29117.jpg?v=1769892412",
+  "platform": "shopify",
+  "product_id": "8466228347052",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Mexican Chocolate",
+  "url": "https://piatanoirroast.com/products/mexican-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297016602796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297016635564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297016668332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297016701100"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297016733868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297016766636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297016799404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297016832172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297016864940"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297016897708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297016930476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297016963244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297016996012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297017028780"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297017061548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297017094316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297017127084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297017159852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297017192620"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297017225388"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "6a32c970b605e41c",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_8c533746-ea82-44c8-aa6a-07d40bfc9310.jpg?v=1769892414",
+  "platform": "shopify",
+  "product_id": "8466228379820",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Chocolate Hazelnut",
+  "url": "https://piatanoirroast.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297017487532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297017520300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297017553068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297017585836"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297017618604"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297017651372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297017684140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297017716908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297017749676"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297017782444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297017815212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297017847980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297017880748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297017913516"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297017946284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297017979052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297018011820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297018044588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297018077356"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297018110124"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "609c4ab727da3cc0",
+  "first_seen": "2026-10-26",
+  "handle": "cinnabun",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_20eb16b0-6382-4e85-b770-b247c7758d44.jpg?v=1769892417",
+  "platform": "shopify",
+  "product_id": "8466228445356",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Cinnabun",
+  "url": "https://piatanoirroast.com/products/cinnabun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297018175660"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297018208428"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297018241196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297018273964"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297018306732"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297018339500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297018372268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297018405036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297018437804"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297018470572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297018503340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297018536108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297018568876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297018601644"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297018634412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297018667180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297018699948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297018732716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297018765484"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297018798252"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "ed4270ed43c32de2",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_9d68b8ce-2fa4-4246-94f4-94ce1f2cd13b.jpg?v=1769892425",
+  "platform": "shopify",
+  "product_id": "8466228478124",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://piatanoirroast.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297018863788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297018896556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297018929324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297018962092"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297018994860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297019027628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297019060396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297019093164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297019125932"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297019158700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297019191468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297019224236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297019257004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297019289772"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297019322540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297019355308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297019388076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297019420844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297019453612"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297019486380"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "93fdd47b1f7953c4",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_a01d7bfc-e0cd-452d-87d4-71335de765fb.jpg?v=1769892492",
+  "platform": "shopify",
+  "product_id": "8466228543660",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Caramel",
+  "url": "https://piatanoirroast.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297019584684"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297019617452"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297019650220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297019682988"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297019715756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297019748524"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297019781292"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297019814060"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297019846828"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297019879596"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297019912364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297019945132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297019977900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297020010668"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297020043436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297020076204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297020108972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297020141740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297020174508"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297020207276"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "00cfe7d8a97ffba2",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_8beaf75a-23c0-48b5-916b-bc616bde2252.jpg?v=1769892495",
+  "platform": "shopify",
+  "product_id": "8466228576428",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://piatanoirroast.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297020272812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297020305580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297020338348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297020371116"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297020403884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297020436652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297020469420"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297020502188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297020534956"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297020567724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297020600492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297020633260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297020666028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297020698796"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297020731564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297020764332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297020797100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297020829868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297020862636"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297020895404"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "87e54d1f6e32c549",
+  "first_seen": "2026-10-26",
+  "handle": "mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_07171fad-aae7-443a-bd19-3f7c5f4cbcb1.jpg?v=1769892498",
+  "platform": "shopify",
+  "product_id": "8466228609196",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Mocha",
+  "url": "https://piatanoirroast.com/products/mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297020960940"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297020993708"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297021026476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297021059244"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297021092012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297021124780"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297021157548"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297021190316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297021223084"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297021255852"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297021288620"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297021321388"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297021354156"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297021386924"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297021419692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297021452460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297021485228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297021517996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297021550764"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297021583532"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "00ea89bbc2a5ae4b",
+  "first_seen": "2026-10-26",
+  "handle": "turtle",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_79d6a9dc-1eb9-4df3-aca6-29e576ead4a3.jpg?v=1769892502",
+  "platform": "shopify",
+  "product_id": "8466228641964",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Turtle",
+  "url": "https://piatanoirroast.com/products/turtle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297021649068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297021681836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297021714604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297021747372"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297021780140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297021812908"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297021845676"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297021878444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297021911212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297021943980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297021976748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297022009516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297022042284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297022075052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297022107820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297022140588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297022173356"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "6784d10926936b34",
+  "first_seen": "2026-10-26",
+  "handle": "pecan-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_3172f677-ee98-4772-8bc9-9976c7c58c58.jpg?v=1769892505",
+  "platform": "shopify",
+  "product_id": "8466228674732",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Pecan Pie",
+  "url": "https://piatanoirroast.com/products/pecan-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297022238892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297022271660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297022304428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297022337196"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297022369964"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297022402732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297022435500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297022468268"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297022501036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297022533804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297022566572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297022599340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297022632108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297022664876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297022697644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297022730412"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "ee176161f29c06a0",
+  "first_seen": "2026-10-26",
+  "handle": "dubai-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_a6931832-3bf8-4fa6-8d7f-c50c865f979e.jpg?v=1769892508",
+  "platform": "shopify",
+  "product_id": "8466228707500",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Dubai Chocolate",
+  "url": "https://piatanoirroast.com/products/dubai-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297022795948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297022828716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297022861484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297022894252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297022927020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297022959788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297022992556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297023025324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297023058092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297023090860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297023123628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297023156396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297023189164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297023221932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297023254700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297023287468"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "ee176161f29c06a0",
+  "first_seen": "2026-10-26",
+  "handle": "smores",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_8220d046-f42c-4d82-a89b-8d47114ce0f1.jpg?v=1769892510",
+  "platform": "shopify",
+  "product_id": "8466228740268",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "flavored"
+  ],
+  "title": "Smores",
+  "url": "https://piatanoirroast.com/products/smores",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297023353004"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297023385772"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297023418540"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297023451308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297023484076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297023516844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297023549612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297023582380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297023615148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297023647916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297023680684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297023713452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297023746220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297023778988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297023811756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297023844524"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "f1ab191a6f3de79e",
+  "first_seen": "2026-10-26",
+  "handle": "blonde",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_21b67dec-2728-4b27-905a-f9fd794fe2a5.jpg?v=1769892513",
+  "platform": "shopify",
+  "product_id": "8466228773036",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Blonde",
+  "url": "https://piatanoirroast.com/products/blonde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297023910060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297023942828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297023975596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297024008364"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297024041132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297024073900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297024106668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297024139436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297024172204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297024204972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297024237740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297024270508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297024303276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297024336044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297024368812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297024401580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297024434348"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "42e5e928485836dc",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_3a757524-604f-4b7b-9fb2-46bf19e7105a.jpg?v=1769892517",
+  "platform": "shopify",
+  "product_id": "8466228805804",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Italian Roast",
+  "url": "https://piatanoirroast.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297024499884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297024532652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297024565420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297024598188"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297024630956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297024663724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297024696492"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297024729260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297024762028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297024794796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297024827564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297024860332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297024893100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297024925868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297024958636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297024991404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297025024172"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "9de8c8f6d1a02e6d",
+  "first_seen": "2026-10-26",
+  "handle": "6-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_38f5031f-cf66-48eb-afc4-6c0466626894.jpg?v=1769892531",
+  "platform": "shopify",
+  "product_id": "8466228936876",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "6 Bean Blend",
+  "url": "https://piatanoirroast.com/products/6-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297025450156"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297025482924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297025515692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297025548460"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297025581228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297025613996"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297025646764"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297025679532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297025712300"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297025745068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297025777836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297025810604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297025843372"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297025876140"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.99,
+    "title": "Standard / 12 Pack",
+    "variant_id": "45297025908908"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297025941676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297025974444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297026007212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297026039980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297026072748"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297026105516"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "a2f64f6a72cf4004",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_bcf0572d-1073-45d3-ba4a-70adeaa3132a.jpg?v=1769892535",
+  "platform": "shopify",
+  "product_id": "8466228969644",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://piatanoirroast.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297026171052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297026203820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297026236588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297026269356"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297026302124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297026334892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297026367660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297026400428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297026433196"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297026465964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297026498732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297026531500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297026564268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297026597036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.99,
+    "title": "Standard / 12 Pack",
+    "variant_id": "45297026629804"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297026662572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297026695340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297026728108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297026760876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297026793644"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297026826412"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "1530d6d4a0257dd8",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_be391ec4-ee22-40b8-943a-9d0ba4fcd2a6.jpg?v=1769892538",
+  "platform": "shopify",
+  "product_id": "8466229002412",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Breakfast Blend +",
+  "url": "https://piatanoirroast.com/products/breakfast-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297026891948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297026924716"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297026957484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297026990252"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297027023020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297027055788"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297027088556"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297027121324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297027154092"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297027186860"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297027219628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297027252396"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297027285164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297027317932"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297027350700"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297027383468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297027416236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297027449004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297027481772"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297027514540"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "3a800cb9adf260a2",
+  "first_seen": "2026-10-26",
+  "handle": "african-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_342b7ee7-541c-4b96-9b31-3ebcad66bba5.jpg?v=1769892541",
+  "platform": "shopify",
+  "product_id": "8466229035180",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "African Espresso",
+  "url": "https://piatanoirroast.com/products/african-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297027580076"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297027612844"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297027645612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297027678380"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297027711148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297027743916"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297027776684"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297027809452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297027842220"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297027874988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297027907756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297027940524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297027973292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297028006060"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297028038828"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297028071596"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297028104364"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297028137132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297028169900"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297028202668"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "735d9bd35a3ffec2",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_a83d39d4-2fb8-4b17-ac5d-0edb8c5edf95.jpg?v=1769892544",
+  "platform": "shopify",
+  "product_id": "8466229067948",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Cowboy Blend",
+  "url": "https://piatanoirroast.com/products/cowboy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297028268204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297028300972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297028333740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297028366508"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297028399276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297028432044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297028464812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297028497580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297028530348"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297028563116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297028595884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297028628652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297028661420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297028694188"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.99,
+    "title": "Standard / 12 Pack",
+    "variant_id": "45297028726956"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297028759724"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297028792492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297028825260"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297028858028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297028890796"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297028923564"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "c1f21d203933e64c",
+  "first_seen": "2026-10-26",
+  "handle": "latin-american-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/LABEL5_12oz_on_bag_935ba1a2-1f1e-4698-ae45-40ff196d8a28.jpg?v=1769892547",
+  "platform": "shopify",
+  "product_id": "8466229100716",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Latin American Blend",
+  "url": "https://piatanoirroast.com/products/latin-american-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297028989100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297029021868"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297029054636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297029087404"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297029120172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297029152940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297029185708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297029218476"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297029251244"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297029284012"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297029316780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297029349548"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "155fe32f081e8990",
+  "first_seen": "2026-10-26",
+  "handle": "asian-plateau-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/LABEL5_12oz_on_bag_60b457d8-022f-48bd-9495-464894663ddb.jpg?v=1769892551",
+  "platform": "shopify",
+  "product_id": "8466229133484",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Asian Plateau Blend",
+  "url": "https://piatanoirroast.com/products/asian-plateau-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297029415084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297029447852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297029480620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297029513388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297029546156"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297029578924"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297029611692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297029644460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297029677228"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297029709996"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297029742764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297029775532"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "11311edd9d18351e",
+  "first_seen": "2026-10-26",
+  "handle": "african-kahawa-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/LABEL5_12oz_on_bag_000f5eb2-1ed7-4613-ab5e-e209cbdabe54.jpg?v=1769892554",
+  "platform": "shopify",
+  "product_id": "8466229166252",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "African Kahawa Blend",
+  "url": "https://piatanoirroast.com/products/african-kahawa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297029841068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297029873836"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297029906604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297029939372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297029972140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297030004908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297030037676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297030070444"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297030103212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297030135980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297030168748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297030201516"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "ccf68bf5356ca785",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/LABEL5_12oz_on_bag_67b14473-d97f-4572-8504-3c03d0b495af.jpg?v=1769892557",
+  "platform": "shopify",
+  "product_id": "8466229199020",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "House Blend",
+  "url": "https://piatanoirroast.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297030267052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297030299820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297030332588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297030365356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297030398124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297030430892"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297030463660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297030496428"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297030529196"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297030561964"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297030594732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297030627500"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "52e4b58c39dc7632",
+  "first_seen": "2026-10-26",
+  "handle": "gourmet-donut-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/LABEL5_12oz_on_bag_c6a4bd96-52b5-41a2-bf7a-6455875a1b0f.jpg?v=1769892561",
+  "platform": "shopify",
+  "product_id": "8466229264556",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Gourmet Donut Shop",
+  "url": "https://piatanoirroast.com/products/gourmet-donut-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297031119020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297031151788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297031184556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297031217324"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297031250092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297031282860"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297031315628"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297031348396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297031381164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297031413932"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297031446700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297031479468"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "fd5cdf312d571368",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_e6bde2c8-6660-4a09-ab47-6458102ca9f0.jpg?v=1769892570",
+  "platform": "shopify",
+  "product_id": "8466229362860",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Holiday Blend",
+  "url": "https://piatanoirroast.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297032396972"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297032429740"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297032462508"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297032495276"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297032528044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297032560812"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297032593580"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297032626348"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297032659116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297032691884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297032724652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297032757420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297032790188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297032822956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297032855724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297032888492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297032921260"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "c0f6227dd813f62b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_90e76038-b180-4e9c-916b-39a3fc4b4671.jpg?v=1769892573",
+  "platform": "shopify",
+  "product_id": "8466229395628",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Cold Brew Coffee",
+  "url": "https://piatanoirroast.com/products/cold-brew-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297032986796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297033019564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297033052332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297033085100"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297033117868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297033150636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297033183404"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297033216172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297033248940"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297033281708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297033314476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297033347244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297033380012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297033412780"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297033445548"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297033478316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297033511084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297033543852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297033576620"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297033609388"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "561c5725e088a1c3",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_341235d9-0191-4fc5-9c97-daf5a473f981.jpg?v=1769892577",
+  "platform": "shopify",
+  "product_id": "8466229428396",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Whiskey Barrel Aged",
+  "url": "https://piatanoirroast.com/products/whiskey-barrel-aged",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297033674924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297033707692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297033740460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297033773228"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297033805996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297033838764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297033871532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297033904300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297033937068"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297033969836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297034002604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297034035372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297034068140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297034100908"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297034133676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297034166444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297034199212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297034231980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297034264748"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297034297516"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "1535d188bda9e4f1",
+  "first_seen": "2026-10-26",
+  "handle": "max-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_8c0f9e9c-9c04-441c-8992-536461d645ae.jpg?v=1769892579",
+  "platform": "shopify",
+  "product_id": "8466229461164",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Max Caf Blend",
+  "url": "https://piatanoirroast.com/products/max-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297034363052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297034395820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297034428588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297034461356"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297034494124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297034526892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297034559660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297034592428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297034625196"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297034657964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297034690732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297034723500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297034756268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297034789036"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297034821804"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297034854572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297034887340"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297034920108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297034952876"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297034985644"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "d5d84aa3c27ce4b1",
+  "first_seen": "2026-10-26",
+  "handle": "kopi-safari",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_d9fb7738-b990-41fd-96cb-4565b75176d2.jpg?v=1769892582",
+  "platform": "shopify",
+  "product_id": "8466229493932",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Kopi Safari",
+  "url": "https://piatanoirroast.com/products/kopi-safari",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297035051180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297035083948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297035116716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297035149484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297035182252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297035215020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297035247788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297035280556"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297035313324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297035346092"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297035378860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297035411628"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297035444396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297035477164"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297035509932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297035542700"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "d2d17dba3cbef49f",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-with-mushrooms-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_dd034e76-1f4a-448c-9935-435dd0b3368c.jpg?v=1769892590",
+  "platform": "shopify",
+  "product_id": "8466229559468",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Coffee with Mushrooms Dark Roast",
+  "url": "https://piatanoirroast.com/products/coffee-with-mushrooms-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.99,
+    "title": "Standard / 8oz",
+    "variant_id": "45297035673772"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "d2d17dba3cbef49f",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-with-mushrooms-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_9fd542ba-6796-4d2b-b485-e3f9755e4be4.jpg?v=1769892595",
+  "platform": "shopify",
+  "product_id": "8466229592236",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "blend"
+  ],
+  "title": "Coffee with Mushrooms Medium Roast",
+  "url": "https://piatanoirroast.com/products/coffee-with-mushrooms-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.99,
+    "title": "Standard / 8oz",
+    "variant_id": "45297035739308"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "e4a072f2abbcf0a6",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_addca79a-0430-482d-8019-d4e1c38d62ee.jpg?v=1769892598",
+  "platform": "shopify",
+  "product_id": "8466229657772",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Bali Blue",
+  "url": "https://piatanoirroast.com/products/bali-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297035837612"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297035870380"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297035903148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297035935916"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297035968684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297036001452"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297036034220"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297036066988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297036099756"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297036132524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297036165292"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297036198060"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297036230828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297036263596"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297036296364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297036329132"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297036361900"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297036394668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297036427436"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297036460204"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "fcfe34b1246969c2",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_fea857ce-4f40-432b-86f6-acaa89992714.jpg?v=1769892601",
+  "platform": "shopify",
+  "product_id": "8466229723308",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Brazil Santos",
+  "url": "https://piatanoirroast.com/products/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297036591276"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297036624044"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297036656812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297036689580"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297036722348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297036755116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297036787884"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297036820652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297036853420"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297036886188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297036918956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297036951724"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297036984492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297037017260"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297037050028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297037082796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297037115564"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297037148332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297037181100"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297037213868"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "14ccf5d974ec9dbd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_0c3c876d-5c8d-4030-8655-526af78b4e2c.jpg?v=1769892604",
+  "platform": "shopify",
+  "product_id": "8466229821612",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Colombia",
+  "url": "https://piatanoirroast.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297037312172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297037344940"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297037377708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297037410476"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297037443244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297037476012"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297037508780"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297037541548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297037574316"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297037607084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297037639852"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297037672620"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297037705388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297037738156"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297037770924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297037803692"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297037836460"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297037869228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297037901996"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297037934764"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "adae2963d01eba4b",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_4e7606df-9d24-42ca-8710-85ba96f137b5.jpg?v=1769892607",
+  "platform": "shopify",
+  "product_id": "8466229854380",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://piatanoirroast.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297038000300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297038033068"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297038065836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297038098604"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297038131372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297038164140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297038196908"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297038229676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297038262444"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297038295212"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297038327980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297038360748"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297038393516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297038426284"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297038459052"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297038491820"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297038524588"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297038557356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297038590124"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297038622892"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "6b8e159a66368cff",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_87f7882a-e503-4061-8024-ba470468249a.jpg?v=1769892611",
+  "platform": "shopify",
+  "product_id": "8466229887148",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://piatanoirroast.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297038819500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297038852268"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297038885036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297038917804"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297038950572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297038983340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297039016108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297039048876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297039081644"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297039114412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297039147180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297039179948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297039212716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297039245484"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297039278252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297039311020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297039343788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297039376556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297039409324"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297039442092"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "3f42290398f880d0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_1ef0ba41-dbd3-4ae3-985f-7138bf2b56c5.jpg?v=1769892614",
+  "platform": "shopify",
+  "product_id": "8466229919916",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://piatanoirroast.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297039638700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297039671468"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297039704236"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297039737004"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297039769772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297039802540"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297039835308"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297039868076"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297039900844"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297039933612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297039966380"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297039999148"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297040031916"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297040064684"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297040097452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297040130220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297040162988"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297040195756"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297040228524"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297040261292"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "2ee5df92b4aef03f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_f8788288-4dae-4201-beb5-e5321ea4e6ff.jpg?v=1769892615",
+  "platform": "shopify",
+  "product_id": "8466229985452",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Honduras",
+  "url": "https://piatanoirroast.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297040294060"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297040326828"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297040359596"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297040392364"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297040425132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297040457900"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297040490668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297040523436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297040556204"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297040588972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297040621740"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297040654508"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297040687276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297040720044"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297040752812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297040785580"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297040818348"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297040851116"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297040883884"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297040916652"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "f84ed9b7269a006a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_97e15245-423b-496a-926b-08d3c76adb89.jpg?v=1769892618",
+  "platform": "shopify",
+  "product_id": "8466230083756",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Mexico",
+  "url": "https://piatanoirroast.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297040982188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297041014956"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297041047724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297041080492"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297041113260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297041146028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297041178796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297041211564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297041244332"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297041277100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297041309868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297041342636"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297041375404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297041408172"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297041440940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297041473708"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297041506476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297041539244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297041572012"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297041604780"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "ba4ce99d2e65f9bf",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_2452a1b0-4d98-4f3f-93e6-22d025f2084f.jpg?v=1769892620",
+  "platform": "shopify",
+  "product_id": "8466230116524",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Nicaragua",
+  "url": "https://piatanoirroast.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297041703084"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297041735852"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297041768620"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297041801388"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297041834156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297041866924"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297041899692"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297041932460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297041965228"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297041997996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297042030764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297042063532"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297042096300"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297042129068"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297042161836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297042194604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297042227372"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297042260140"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297042292908"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297042325676"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "721ce262c0e2dc76",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_5d82603d-eef6-45d8-bdaf-52b3b5cd2adc.jpg?v=1769892623",
+  "platform": "shopify",
+  "product_id": "8466230182060",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://piatanoirroast.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297042391212"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297042423980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297042456748"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297042489516"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297042522284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297042555052"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297042587820"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297042620588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297042653356"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297042686124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297042718892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297042751660"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297042784428"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297042817196"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297042849964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297042882732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297042915500"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297042948268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297042981036"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297043013804"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "94155604d7cfaad0",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_dada9afd-3f21-4f1e-8f67-8f460a3c9916.jpg?v=1769892626",
+  "platform": "shopify",
+  "product_id": "8466230214828",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Peru",
+  "url": "https://piatanoirroast.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297043079340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297043112108"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297043144876"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297043177644"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297043210412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297043243180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297043275948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297043308716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297043341484"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297043374252"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297043407020"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297043439788"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297043472556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297043505324"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297043538092"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297043570860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297043603628"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297043636396"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297043669164"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297043701932"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "6b6ad466d2a6996c",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_1a112a98-36b1-4030-ad4f-cd53b40caf88.jpg?v=1769892630",
+  "platform": "shopify",
+  "product_id": "8466230247596",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Peru Decaf",
+  "url": "https://piatanoirroast.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297043767468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297043800236"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297043833004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297043865772"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297043898540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297043931308"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297043964076"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297043996844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297044029612"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297044062380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297044095148"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297044127916"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297044160684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297044193452"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.99,
+    "title": "Standard / 12 Pack",
+    "variant_id": "45297044226220"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297044258988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297044291756"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297044324524"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297044357292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297044390060"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297044422828"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "fc82e5ce4cb8e80b",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_96a0f4b4-6bfe-4e72-aa60-21a25abf97a1.jpg?v=1769892632",
+  "platform": "shopify",
+  "product_id": "8466230280364",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Tanzania",
+  "url": "https://piatanoirroast.com/products/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297044488364"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297044521132"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297044553900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297044586668"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Coarse / 12 LB",
+    "variant_id": "45297044619436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297044652204"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297044684972"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297044717740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297044750508"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Espresso / 12 LB",
+    "variant_id": "45297044783276"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297044816044"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297044848812"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297044881580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297044914348"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Standard / 12 LB",
+    "variant_id": "45297044947116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297044979884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297045012652"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297045045420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297045078188"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 169.99,
+    "title": "Whole Bean / 12 LB",
+    "variant_id": "45297045110956"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "47f43ed2e08c863f",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-1",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_52b850e5-9460-4647-a95b-4b7f4cf077b9.jpg?v=1769892637",
+  "platform": "shopify",
+  "product_id": "8466230345900",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "French Roast",
+  "url": "https://piatanoirroast.com/products/french-roast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297045209260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297045242028"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297045274796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297045307564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297045340332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297045373100"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297045405868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297045438636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297045471404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297045504172"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297045536940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297045569708"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297045602476"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297045635244"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297045668012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297045700780"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "b0241997a4f86165",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_14cffa2a-a4cb-437d-aba0-8a2132794118.jpg?v=1769892639",
+  "platform": "shopify",
+  "product_id": "8466230378668",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://piatanoirroast.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297045766316"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297045799084"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297045831852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297045864620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297045897388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297045930156"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297045962924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297045995692"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297046028460"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297046061228"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297046093996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297046126764"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297046159532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297046192300"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297046225068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297046257836"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "71a3a839577e2279",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_55ff9469-eb9f-4bd2-acf6-5d3f7c733343.jpg?v=1769892642",
+  "platform": "shopify",
+  "product_id": "8466230411436",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Kenya",
+  "url": "https://piatanoirroast.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297046323372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297046356140"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297046388908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297046421676"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297046454444"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297046487212"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297046519980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297046552748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297046585516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297046618284"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297046651052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297046683820"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297046716588"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297046749356"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297046782124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297046814892"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "b9148707bdd969f0",
+  "first_seen": "2026-10-26",
+  "handle": "uganda",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_c6b5c3c2-5542-440d-8316-704b53e98278.jpg?v=1769892652",
+  "platform": "shopify",
+  "product_id": "8466230542508",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Uganda",
+  "url": "https://piatanoirroast.com/products/uganda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Coarse / 12oz",
+    "variant_id": "45297047077036"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Coarse / 1 LB",
+    "variant_id": "45297047109804"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Coarse / 2 LB",
+    "variant_id": "45297047142572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Coarse / 5 LB",
+    "variant_id": "45297047175340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Espresso / 12oz",
+    "variant_id": "45297047208108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Espresso / 1 LB",
+    "variant_id": "45297047240876"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Espresso / 2 LB",
+    "variant_id": "45297047273644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Espresso / 5 LB",
+    "variant_id": "45297047306412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Standard / 12oz",
+    "variant_id": "45297047339180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Standard / 1 LB",
+    "variant_id": "45297047371948"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Standard / 2 LB",
+    "variant_id": "45297047404716"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Standard / 5 LB",
+    "variant_id": "45297047437484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45297047470252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "Whole Bean / 1 LB",
+    "variant_id": "45297047503020"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.99,
+    "title": "Whole Bean / 2 LB",
+    "variant_id": "45297047535788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.99,
+    "title": "Whole Bean / 5 LB",
+    "variant_id": "45297047568556"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "8faf82fa7ca206c5",
+  "first_seen": "2026-10-26",
+  "handle": "best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_c72457de-75f1-4ff8-a07e-250d7a4bc6b4.jpg?v=1769892654",
+  "platform": "shopify",
+  "product_id": "8466230575276",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "sample pack"
+  ],
+  "title": "Best Sellers Sample Pack: 6Bean, Cowboy, Breakfast, Peru, Mexico, Bali",
+  "url": "https://piatanoirroast.com/products/best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 24.99,
+    "title": "Standard / 6-count 2oz sample packs",
+    "variant_id": "45297047634092"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "c3580c1c4d8adb90",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_75be145f-accd-4d80-a453-7ee4bc41b316.jpg?v=1769892658",
+  "platform": "shopify",
+  "product_id": "8466230608044",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "sample pack"
+  ],
+  "title": "Flavored Coffees Sample Pack",
+  "url": "https://piatanoirroast.com/products/flavored-coffees-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 24.99,
+    "title": "Standard / 6-count 2oz sample packs",
+    "variant_id": "45297047699628"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ },
+ {
+  "body_hash": "45af8052c1226aa1",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-favorites-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0738/0336/6572/files/label5_on_bag_e30b221e-abd0-49e7-bc74-403d90276db8.jpg?v=1769892663",
+  "platform": "shopify",
+  "product_id": "8466230640812",
+  "product_type": "",
+  "roaster_slug": "piatanoirroast",
+  "tags": [
+   "sample pack"
+  ],
+  "title": "Single Origin Favorites Sample Pack",
+  "url": "https://piatanoirroast.com/products/single-origin-favorites-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 24.99,
+    "title": "Standard / 6-count 2oz sample packs",
+    "variant_id": "45297047765164"
+   }
+  ],
+  "vendor": "Piata Noir Roast"
+ }
+]

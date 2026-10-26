@@ -1,0 +1,154 @@
+{
+ "6840196923568": {
+  "body_hash": "8a7cf6fd146423e0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "caramel",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "7202790637744": {
+  "body_hash": "815315d85ad73d24",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "blueberry cobbler",
+   "maple syrup"
+  ],
+  "varietals": []
+ },
+ "7312366633136": {
+  "body_hash": "39947e48a7d3fe33",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mild kahlua",
+   "malt"
+  ],
+  "varietals": []
+ },
+ "7456965591216": {
+  "body_hash": "7a4366e00285d417",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "caramelized apple"
+  ],
+  "varietals": []
+ },
+ "7778134950064": {
+  "body_hash": "0470f054a7a84472",
+  "elevation_masl_max": 1640,
+  "elevation_masl_min": 1640,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tangerine",
+   "honey",
+   "cacao nibs"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "7970580332720": {
+  "body_hash": "5663b5037f20d391",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bittersweet chocolate",
+   "sea salt caramel"
+  ],
+  "varietals": []
+ },
+ "8087766696112": {
+  "body_hash": "bcfcc28b4262c369",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tootsie roll",
+   "nutmeg",
+   "candied almond"
+  ],
+  "varietals": []
+ },
+ "8103351255216": {
+  "body_hash": "bdae36b6867467a9",
+  "elevation_masl_max": 1640,
+  "elevation_masl_min": 1640,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "white chocolate"
+  ],
+  "varietals": [
+   "Castillo",
+   "Pink Bourbon"
+  ]
+ }
+}

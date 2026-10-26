@@ -1,0 +1,315 @@
+[
+ {
+  "body_hash": "18bb03f7d88a980d",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend-12oz-bag-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_14d59b9c-8fc9-4ce1-8b82-a721bd3fb3ea-removebg-preview.png?v=1595740679",
+  "platform": "shopify",
+  "product_id": "1494328573987",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [
+   "Kona Coffee"
+  ],
+  "title": "Kona Blend 12oz Bag Whole Bean",
+  "url": "https://atowncoffee.com/products/kona-blend-12oz-bag-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Default Title",
+    "variant_id": "13653107802147"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "d5d0f90541ae35bf",
+  "first_seen": "2026-10-26",
+  "handle": "robusta-coffee-bean-performance-blend-ground",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_46a07993-8a18-49a9-8758-b46fcf5c8540-removebg-preview.png?v=1595740731",
+  "platform": "shopify",
+  "product_id": "4393499951189",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Robusta Coffee Performance Blend",
+  "url": "https://atowncoffee.com/products/robusta-coffee-bean-performance-blend-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground",
+    "variant_id": "31315834404949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "2lb Ground",
+    "variant_id": "31437618085973"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Whole Bean",
+    "variant_id": "31595921899605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "2lb Whole Bean",
+    "variant_id": "32198215893077"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "d72d3ac7d8789512",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ground",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image.png?v=1589350593",
+  "platform": "shopify",
+  "product_id": "4583814463573",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Ground",
+  "url": "https://atowncoffee.com/products/decaf-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "31966899175509"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "d72d3ac7d8789512",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-whole-bean",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_80435f8a-de96-4510-836a-c0692ea7a5c2.png?v=1589350595",
+  "platform": "shopify",
+  "product_id": "4584797503573",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Whole Bean",
+  "url": "https://atowncoffee.com/products/decaf-whole-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "31970311503957"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "6d8c4218a0bc941b",
+  "first_seen": "2026-10-26",
+  "handle": "limited-bean-of-the-month",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_c9f666bf-347a-4e2e-9aec-b203925b8b08.jpg?v=1618874260",
+  "platform": "shopify",
+  "product_id": "4804939874389",
+  "product_type": "",
+  "roaster_slug": "atowncoffee",
+  "tags": [],
+  "title": "Limited Bean Of The Month",
+  "url": "https://atowncoffee.com/products/limited-bean-of-the-month",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "Whole Bean 12oz",
+    "variant_id": "32878723760213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "Ground 12oz",
+    "variant_id": "32912118218837"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "64d63236ea1e67d8",
+  "first_seen": "2026-10-26",
+  "handle": "a-town-heat",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_c3aabc3b-4739-4544-8329-028cbe1f204e.jpg?v=1606593731",
+  "platform": "shopify",
+  "product_id": "4814989623381",
+  "product_type": "",
+  "roaster_slug": "atowncoffee",
+  "tags": [],
+  "title": "A-Town Heat",
+  "url": "https://atowncoffee.com/products/a-town-heat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Ground 12oz",
+    "variant_id": "32911527084117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "Wholebean 12oz",
+    "variant_id": "32911527641173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Ground 2lb",
+    "variant_id": "39525005819989"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Wholebean 2lb",
+    "variant_id": "39525005918293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground 5lb",
+    "variant_id": "39525009391701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Wholebean 5lb",
+    "variant_id": "39525009424469"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "69d3d48e546d6307",
+  "first_seen": "2026-10-26",
+  "handle": "signature-roast-organic-whole-beans-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image-removebg-preview.png?v=1595740517",
+  "platform": "shopify",
+  "product_id": "8047497168",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [],
+  "title": "Whole Bean Coffee With Ghee Butter From Grass-Fed Cows",
+  "url": "https://atowncoffee.com/products/signature-roast-organic-whole-beans-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz",
+    "variant_id": "13662503731235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "5lb",
+    "variant_id": "13710779351075"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 15.99,
+    "title": "3.5oz",
+    "variant_id": "13710779383843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.99,
+    "title": "2lbs",
+    "variant_id": "26995699600"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 130.99,
+    "title": "10lb Whole Bean",
+    "variant_id": "32331048058965"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ },
+ {
+  "body_hash": "c44bd465341565a4",
+  "first_seen": "2026-10-26",
+  "handle": "organic-signature-roast-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1552/6269/products/image_2ec2f86c-a760-4121-a51e-b4f31ce03998-removebg-preview.png?v=1595740568",
+  "platform": "shopify",
+  "product_id": "9801461712",
+  "product_type": "Coffee",
+  "roaster_slug": "atowncoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ground Coffee with Ghee Butter from Grass-Fed Cows",
+  "url": "https://atowncoffee.com/products/organic-signature-roast-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "Ground 12oz",
+    "variant_id": "13911098392611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Ground 5lb",
+    "variant_id": "31218992185429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.99,
+    "title": "Ground 2lb",
+    "variant_id": "31218998739029"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 15.99,
+    "title": "Ground 3.5oz",
+    "variant_id": "31834770047061"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 130.99,
+    "title": "Ground 10lbs",
+    "variant_id": "41235618256"
+   }
+  ],
+  "vendor": "A-Town Coffee"
+ }
+]

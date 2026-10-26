@@ -1,0 +1,32 @@
+[
+ {
+  "body_hash": "89b7fc006c214496",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-light-roast",
+  "image": "https://static1.squarespace.com/static/62ed72cf2b8f2f77b0451341/6414b13d232256772920061c/6414b13f5cf2ca0125747cca/1787832150849/",
+  "platform": "squarespace",
+  "product_id": "6414b13f5cf2ca0125747cca",
+  "product_type": "",
+  "roaster_slug": "elmroastery-nyc",
+  "tags": [],
+  "title": "Ethiopia Guji (Light Roast)",
+  "url": "https://www.elmroastery.nyc/store/p/ethiopia-guji-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "207cb077-90ae-4c29-a59b-a10a4e75c447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lb",
+    "variant_id": "cd2ba504-7489-47d5-bd5f-6403989e72d9"
+   }
+  ],
+  "vendor": ""
+ }
+]

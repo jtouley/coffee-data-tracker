@@ -1,0 +1,227 @@
+{
+ "5ddae616460bea394448f07a": {
+  "body_hash": "634b3529878a101b",
+  "elevation_masl_max": 1150,
+  "elevation_masl_min": 1150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "hazelnut",
+   "citrus",
+   "fruit",
+   "spice",
+   "caramel sweetness",
+   "velvety"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "5ddae85ba46d122f38322c84": {
+  "body_hash": "8c610117ea342f7e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "chocolate",
+   "hazelnut",
+   "caramel",
+   "creamy body"
+  ],
+  "varietals": []
+ },
+ "5ddae9dda46d122f38325b9d": {
+  "body_hash": "20d1c0627a28c481",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "almond",
+   "medium body"
+  ],
+  "varietals": []
+ },
+ "5ddaea3b85e3643e177f68f8": {
+  "body_hash": "3e06d6295b511093",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "medium body",
+   "green apple",
+   "nectarine",
+   "milk chocolate",
+   "citrus",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "5ddaea8a8f514102b45c764a": {
+  "body_hash": "1e73534a087afbbe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "milk chocolate",
+   "stone fruit",
+   "brown sugar",
+   "dried cherry",
+   "marzipan",
+   "light body"
+  ],
+  "varietals": []
+ },
+ "5ddaebca460bea394449c10e": {
+  "body_hash": "70b827b5d85d683f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "heavy body",
+   "low acidity",
+   "dark chocolate",
+   "spicy"
+  ],
+  "varietals": []
+ },
+ "637288a3a079c66537d9276c": {
+  "body_hash": "5e655ce452b6b950",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "orange",
+   "hazelnut",
+   "big body"
+  ],
+  "varietals": []
+ },
+ "65258234815a2d6d7e4ae364": {
+  "body_hash": "538510ca61e2ef70",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate",
+   "hazelnut",
+   "fruit"
+  ],
+  "varietals": []
+ },
+ "663bc71fb98caf562830b15e": {
+  "body_hash": "cc8cefb7b0a0a04c",
+  "elevation_masl_max": 1150,
+  "elevation_masl_min": 1150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "67622295df78116ab9ff75f4": {
+  "body_hash": "596bad007ad929b5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "almond",
+   "berry",
+   "brown sugar",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "6764761a43f5eb6b1937b6ff": {
+  "body_hash": "47ba5f4c7d21d394",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "lemon",
+   "chocolate",
+   "floral",
+   "light body"
+  ],
+  "varietals": []
+ }
+}

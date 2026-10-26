@@ -1,0 +1,314 @@
+[
+ {
+  "body_hash": "9ae2646e86984f72",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-natural-processed",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018171020-MXT9GFYDOO1XKX8YGUNX/WebsiteEthiopian.png",
+  "platform": "squarespace",
+  "product_id": "5db20001a82288078bf26f96",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Ethiopian Sidamo: Natural processed",
+  "url": "https://www.alchemyroaster.com/coffee/ethiopian-sidamo-natural-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "2f7f0bec-3c74-41ce-a6a5-14cdf08ecd18"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "c0735f5d-65b9-4b84-87f3-f18a8455b3ce"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "41a4f48b542109ee",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-single-origin",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018907294-DOODPTRVRQGFZ7CWM3OA/WebsiteGuatHueHue.png",
+  "platform": "squarespace",
+  "product_id": "5e7943e19f3ae64b95174c22",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Guatemalan Single origin",
+  "url": "https://www.alchemyroaster.com/coffee/guatemalan-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "6449cc28-3a73-49a9-be74-7cb97ef253c3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "90582cec-c38b-44d8-b1d2-0563a9aac474"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f4609c4e0673ec2",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018379638-0ROVGA0G4X1IHMNKPJPN/WebsiteTanz.jpg",
+  "platform": "squarespace",
+  "product_id": "5ebc514be3749d4f99998fcb",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Tanzanian Peaberry Organically Grown",
+  "url": "https://www.alchemyroaster.com/coffee/tanzanian-peaberry-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "88ba5eb9-7ed9-4edf-a8d7-a377c4abb8b9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "a5a6ee0a-d7ae-4a11-a436-d6e3b4fbea74"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2a041f66f4c37a63",
+  "first_seen": "2026-10-26",
+  "handle": "camelback-mountain-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018508702-RSS54UJWUB1K7OB8HU6L/WebsiteCamelback.png",
+  "platform": "squarespace",
+  "product_id": "5f48246da8b601467616a4c5",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Camelback Blend",
+  "url": "https://www.alchemyroaster.com/coffee/camelback-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "3c1f904c-bb33-4b3d-9f5f-48145c96daa7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "b5c41b30-be1c-4269-9bb1-46707da0c4ca"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "14273d2222bb44e6",
+  "first_seen": "2026-10-26",
+  "handle": "organic-honduran-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018696102-RUIVGA0T05LICYQU0IXJ/WebsiteHondo.jpg",
+  "platform": "squarespace",
+  "product_id": "5f6278d4232f8c1a04455d9c",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Honduran- Dark Roast - Organically Grown",
+  "url": "https://www.alchemyroaster.com/coffee/organic-honduran-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "176ffa6c-4bf1-42fb-a304-afb83ecf27e7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb",
+    "variant_id": "e281b1d3-a8dc-4edb-9883-205048a32e1c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d930e300ff47baa2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703018433762-Z2EBI3FO3DKEV4OKQ6HL/websiteDecaf.png",
+  "platform": "squarespace",
+  "product_id": "5f627ab68db1010924bdfc8a",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Decaf Brazilian - Organically Grown + Swiss Water Process",
+  "url": "https://www.alchemyroaster.com/coffee/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "91336062-784c-4b61-a5d4-53b61a26ec61"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "92969a31-7d08-44f0-adef-d8386521cb08"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "455395f682d87558",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-medium-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703019203236-AJ9RMQK9M10PIN8IBVBD/WebsiteMexico.jpg",
+  "platform": "squarespace",
+  "product_id": "622a5f6f4feabc47f224e1ad",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Mexican- Chiapas: medium roast",
+  "url": "https://www.alchemyroaster.com/coffee/mexican-chiapas-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz",
+    "variant_id": "4690bbc8-bf36-4872-9273-119bea949c70"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lb",
+    "variant_id": "6716e9d2-4931-469f-bb82-2d572e66b96d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9ecb51c1c1c4d1f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-single-origin-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b28529ef2e6b15350baf818/1703017715990-275FFJ9DPEBECBQUHF38/WEbsiteCostaRica.png",
+  "platform": "squarespace",
+  "product_id": "6579e3a77c5a2776ea51df7c",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [
+   "coffee",
+   "singleorigin"
+  ],
+  "title": "Costa Rica Tarrazu - Single Origin Coffee",
+  "url": "https://www.alchemyroaster.com/coffee/costa-rica-tarrazu-single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "0d5cab3e-f34b-4393-8b41-b092dd0797f4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 Lb",
+    "variant_id": "13deb33b-3391-4e51-8b68-139c27663dda"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebfaa380febfb350",
+  "first_seen": "2026-10-26",
+  "handle": "iw274k7uhzewuj70pg84ltzgj1l820",
+  "image": "https://static1.squarespace.com/static/5b28529ef2e6b15350baf818/5b3ccd676d2a7346fac7a3ab/68faba1b6672886f789ec9bc/1788360611473/",
+  "platform": "squarespace",
+  "product_id": "68faba1b6672886f789ec9bc",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Nicaraguan Honey Processed",
+  "url": "https://www.alchemyroaster.com/coffee/iw274k7uhzewuj70pg84ltzgj1l820",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "c5b83ab4-42c2-4284-916a-92b50f43ef6a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52eefceb1d60f649",
+  "first_seen": "2026-10-26",
+  "handle": "fl21978elo13d4lqpa4sv849rtl5ya",
+  "image": "https://static1.squarespace.com/static/5b28529ef2e6b15350baf818/5b3ccd676d2a7346fac7a3ab/69c460b3ba79f443cdee901e/1786393191855/",
+  "platform": "squarespace",
+  "product_id": "69c460b3ba79f443cdee901e",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Indonesia - Sumatra",
+  "url": "https://www.alchemyroaster.com/coffee/fl21978elo13d4lqpa4sv849rtl5ya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "1542b7fc-587d-4b19-b9d5-b65feb3330de"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da7b28acc929d782",
+  "first_seen": "2026-10-26",
+  "handle": "5gdcfrph1arokft3twefma3f0wke3p",
+  "image": "https://static1.squarespace.com/static/5b28529ef2e6b15350baf818/5b3ccd676d2a7346fac7a3ab/69f3c9222f83637c43a47a77/1792610306090/",
+  "platform": "squarespace",
+  "product_id": "69f3c9222f83637c43a47a77",
+  "product_type": "",
+  "roaster_slug": "alchemyroaster",
+  "tags": [],
+  "title": "Papua New Guinea Peaberry",
+  "url": "https://www.alchemyroaster.com/coffee/5gdcfrph1arokft3twefma3f0wke3p",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "e5276790-0fa7-457b-8006-82b059e341ad"
+   }
+  ],
+  "vendor": ""
+ }
+]

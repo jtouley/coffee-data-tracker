@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "79d2c6cfd7b1585e",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/63758b79fe581663b5093500/3b21b062-f46f-4f29-be6f-ee803a6a01e0/MACONDO_21.jpg",
+  "platform": "squarespace",
+  "product_id": "647a5c15a0706e1893ba7d4f",
+  "product_type": "",
+  "roaster_slug": "macondocoffee",
+  "tags": [],
+  "title": "Light Roast",
+  "url": "https://www.macondocoffee.com/store/p/light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0d24b96e-2394-497c-9f92-d4a3d10d03cb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d64d0964faa65a1",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/63758b79fe581663b5093500/345d4d87-369d-4f72-954a-ef09dd8b504c/MACONDO_24.jpg",
+  "platform": "squarespace",
+  "product_id": "647a5c15a0706e1893ba7d62",
+  "product_type": "",
+  "roaster_slug": "macondocoffee",
+  "tags": [],
+  "title": "Dark Roast",
+  "url": "https://www.macondocoffee.com/store/p/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "fd6b2401-cdd4-45c5-93a6-eb6b3b4001d2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ea1f337b759b6b2",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/63758b79fe581663b5093500/f9c4eaf7-8529-49e7-9ed7-6589738866cc/MACONDO_32.jpg",
+  "platform": "squarespace",
+  "product_id": "647a5c15a0706e1893ba7d73",
+  "product_type": "",
+  "roaster_slug": "macondocoffee",
+  "tags": [],
+  "title": "Medium Roast",
+  "url": "https://www.macondocoffee.com/store/p/medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "486a7c0b-934f-4c1f-84c0-a230bdb55bb5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78f39b55e0cc823d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/63758b79fe581663b5093500/a4855628-6609-4396-a6ae-235f9bcd962a/COFFE-ESPRESSO-ROAST.jpg",
+  "platform": "squarespace",
+  "product_id": "6480e1cafc8ced3227ccabd4",
+  "product_type": "",
+  "roaster_slug": "macondocoffee",
+  "tags": [],
+  "title": "Espresso Roast",
+  "url": "https://www.macondocoffee.com/store/p/espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "43236db4-5bf0-49d5-a7fb-30d0b6d4fcce"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfafc1ff5096525b",
+  "first_seen": "2026-10-26",
+  "handle": "macondo-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/63758b79fe581663b5093500/55545780-464b-4f6a-a348-9225f22b6149/MACONDO_26.jpg",
+  "platform": "squarespace",
+  "product_id": "6480e283388c793aabc11259",
+  "product_type": "",
+  "roaster_slug": "macondocoffee",
+  "tags": [],
+  "title": "Macondo Decaf",
+  "url": "https://www.macondocoffee.com/store/p/macondo-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "a154902f-0778-4aa2-9720-e8331fe55306"
+   }
+  ],
+  "vendor": ""
+ }
+]

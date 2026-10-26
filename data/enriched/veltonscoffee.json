@@ -1,0 +1,242 @@
+{
+ "8485800575114": {
+  "body_hash": "b3c1e5a51487cd87",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8486066487434": {
+  "body_hash": "ff6d858110cea049",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8486231670922": {
+  "body_hash": "d137b27d713a0735",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8494844739722": {
+  "body_hash": "bf03ab8272fa57a2",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Sarchimor",
+   "Typica"
+  ]
+ },
+ "8494850474122": {
+  "body_hash": "e97f3b61513a703f",
+  "elevation_masl_max": 1050,
+  "elevation_masl_min": 1050,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai"
+  ]
+ },
+ "8512775094410": {
+  "body_hash": "15359dbca3500ef0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8682961830026": {
+  "body_hash": "0cd5d2aed623eb9f",
+  "elevation_masl_max": 2400,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "juicy",
+   "bright",
+   "clean",
+   "fruity",
+   "strawberry",
+   "fresh apple blossom"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "9027505389706": {
+  "body_hash": "0cb75746c08b3be1",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bright",
+   "sweet with bergamot",
+   "limoncello",
+   "dark caramel",
+   "grape hard candy"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "9202471075978": {
+  "body_hash": "ef3813eb98ae0c8d",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "balanced",
+   "caramel",
+   "macadamia",
+   "red apple",
+   "black grape"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra"
+  ]
+ },
+ "9240732237962": {
+  "body_hash": "70e0a8ecb25b7b4a",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "sweet",
+   "nectarine",
+   "mango",
+   "cherry pie"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "9240754913418": {
+  "body_hash": "3bc15ce1d53504e3",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "vibrant",
+   "nuanced with lemonade",
+   "green apple",
+   "pomelo",
+   "wild blueberries"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Tabi"
+  ]
+ },
+ "9240915280010": {
+  "body_hash": "c1f8467b97d56b77",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Vietnam",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mango",
+   "strawberry",
+   "watermelon",
+   "milk chocolate"
+  ],
+  "varietals": [
+   "Catimor"
+  ]
+ }
+}

@@ -1,0 +1,715 @@
+[
+ {
+  "body_hash": "e3f41cd1f2e99175",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-laesperanza-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/UntitledDesign.png?v=1790887710",
+  "platform": "shopify",
+  "product_id": "6144539000986",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Guatemala La Esperanza Antigua Washed",
+  "url": "https://newwave-chatt.com/products/guatemala-laesperanza-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37851738800282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz",
+    "variant_id": "37851738833050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz",
+    "variant_id": "37851738865818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "37851738964122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "37851738996890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553302044826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553302077594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553302110362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553302143130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553302175898"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "10fdc44d4105ed07",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-fugi-ikizere-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/Untitled_design_7.png?v=1787855760",
+  "platform": "shopify",
+  "product_id": "6144933396634",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Rwanda Fugi Ikizere Washed",
+  "url": "https://newwave-chatt.com/products/rwanda-fugi-ikizere-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37852901834906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press / 12oz",
+    "variant_id": "37852901867674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "37852901900442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "37852901965978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "37852901998746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553302634650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553302667418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553302700186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553302732954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553302765722"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "89f8cb769107b3af",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-72hour-natural-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/Untitled_2738x3651px_12.png?v=1787855930",
+  "platform": "shopify",
+  "product_id": "6145018364058",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Honduras El Mirador 72 Hour Fermentation Natural Microlot",
+  "url": "https://newwave-chatt.com/products/honduras-72hour-natural-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37853144416410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press / 12oz",
+    "variant_id": "37853144449178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip / 12oz",
+    "variant_id": "37853144481946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "37853144547482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "37853144580250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553302962330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553302995098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553303027866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553303060634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553303093402"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "38dacdbabc14ba5e",
+  "first_seen": "2026-10-26",
+  "handle": "lowpass",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/88f476ad-605a-423e-bd76-e2116d0ea920.png?v=1758657629",
+  "platform": "shopify",
+  "product_id": "6145101824154",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Colombia Sugarcane Decaf",
+  "url": "https://newwave-chatt.com/products/lowpass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37853285318810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press / 12oz",
+    "variant_id": "37853285351578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip / 12oz",
+    "variant_id": "37853285384346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "37853285449882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "37853285482650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553303257242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553303290010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553303322778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553303355546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553303388314"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "a75ebaca437f5254",
+  "first_seen": "2026-10-26",
+  "handle": "chorus",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/70b4026d-bbbe-467a-9eca-18d2384cac9d.png?v=1758657879",
+  "platform": "shopify",
+  "product_id": "6145156710554",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Forward (House Blend)",
+  "url": "https://newwave-chatt.com/products/chorus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "37853354623130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press / 12oz",
+    "variant_id": "37853354655898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12oz",
+    "variant_id": "37853354688666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "37853354754202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "37853354786970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553303978138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553304010906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553304043674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553304076442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553304109210"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "b769fdfb1d5cc417",
+  "first_seen": "2026-10-26",
+  "handle": "polyphonic-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/bb82b4e5-ef25-4bb5-bb99-05a2cc2ace57.png?v=1758657737",
+  "platform": "shopify",
+  "product_id": "7550009540762",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Polyphonic Espresso Blend",
+  "url": "https://newwave-chatt.com/products/polyphonic-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42720715800730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "French Press / 12oz",
+    "variant_id": "42720715833498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Drip / 12oz",
+    "variant_id": "42720715899034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Pour Over / 12oz",
+    "variant_id": "42720715931802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Espresso / 12oz",
+    "variant_id": "42720715964570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45553304305818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45553304338586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Drip / 5lb",
+    "variant_id": "45553304371354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Pour Over / 5lb",
+    "variant_id": "45553304404122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.0,
+    "title": "Espresso / 5lb",
+    "variant_id": "45553304436890"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "a8e4746f1590c843",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-elmirador-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/Untitleddesign_6.png?v=1784660646",
+  "platform": "shopify",
+  "product_id": "8687095513242",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Coffee",
+   "Single Origin"
+  ],
+  "title": "Honduras El Mirador Washed Microlot",
+  "url": "https://newwave-chatt.com/products/honduras-elmirador-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "46795023024282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "46795023057050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "46795023089818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "46795023122586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46795023155354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Drip",
+    "variant_id": "46795023188122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "46795023220890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46795023253658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "46795023286426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46795023319194"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ },
+ {
+  "body_hash": "f568e9a76eb20f08",
+  "first_seen": "2026-10-26",
+  "handle": "roast-in-peace",
+  "image": "https://cdn.shopify.com/s/files/1/0533/1035/7658/files/Untitled_2738x3651px.png?v=1790888329",
+  "platform": "shopify",
+  "product_id": "8687099150490",
+  "product_type": "Coffee",
+  "roaster_slug": "newwave-chatt",
+  "tags": [
+   "Blend",
+   "Coffee"
+  ],
+  "title": "Roast in Peace Fall Blend",
+  "url": "https://newwave-chatt.com/products/roast-in-peace",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "46795037638810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "46795037671578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "46795037704346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press/Cold Brew",
+    "variant_id": "46795037737114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46795037769882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Drip",
+    "variant_id": "46795037802650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "46795037835418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46795037868186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / French Press/Cold Brew",
+    "variant_id": "46795037900954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46795037933722"
+   }
+  ],
+  "vendor": "New Wave Coffee"
+ }
+]

@@ -1,0 +1,317 @@
+[
+ {
+  "body_hash": "865b78124a28f482",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2017/08/IMG_0916.png",
+  "platform": "woocommerce",
+  "product_id": "2418",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Decaf Swiss Water: Yellow Catuai – Ricardo Tavares",
+  "url": "https://anthologycoffee.com/product/decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 17.95,
+    "title": "300g",
+    "variant_id": "2418:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 17.95,
+    "title": "1kg",
+    "variant_id": "2418:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 17.95,
+    "title": "2kg",
+    "variant_id": "2418:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b189a2623e14b97",
+  "first_seen": "2026-10-26",
+  "handle": "heirloom-natural-shakisso-station",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2025/10/IMG_1320.png",
+  "platform": "woocommerce",
+  "product_id": "51133",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Heirloom-Natural: Shakisso Station",
+  "url": "https://anthologycoffee.com/product/heirloom-natural-shakisso-station/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.95,
+    "title": "300g",
+    "variant_id": "51133:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 20.95,
+    "title": "1kg",
+    "variant_id": "51133:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 20.95,
+    "title": "2kg",
+    "variant_id": "51133:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "51133:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cfdf8b5164b9fbaa",
+  "first_seen": "2026-10-26",
+  "handle": "sl28-sl-34-washed-kabare-coop",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2026/01/IMG_1374.png",
+  "platform": "woocommerce",
+  "product_id": "51399",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "SL28 / SL 34 – Washed: Kabare Coop",
+  "url": "https://anthologycoffee.com/product/sl28-sl-34-washed-kabare-coop/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.95,
+    "title": "300g",
+    "variant_id": "51399:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 20.95,
+    "title": "1kg",
+    "variant_id": "51399:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 20.95,
+    "title": "2kg",
+    "variant_id": "51399:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "51399:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e5ea9f612f7162ee",
+  "first_seen": "2026-10-26",
+  "handle": "caturra-washed-aquiares-estate",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2026/06/IMG_2973.png",
+  "platform": "woocommerce",
+  "product_id": "52109",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Caturra – Washed: Aquiares Estate",
+  "url": "https://anthologycoffee.com/product/caturra-washed-aquiares-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.95,
+    "title": "300g",
+    "variant_id": "52109:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 19.95,
+    "title": "1kg",
+    "variant_id": "52109:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 19.95,
+    "title": "2kg",
+    "variant_id": "52109:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "52109:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a395cccbe89afc71",
+  "first_seen": "2026-10-26",
+  "handle": "anacafe-14-natural-jesus-mariano-nolasco-argueta",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2026/08/IMG_3017.png",
+  "platform": "woocommerce",
+  "product_id": "52248",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Anacafe 14 – Natural: Jesús Mariano Nolasco Argueta",
+  "url": "https://anthologycoffee.com/product/anacafe-14-natural-jesus-mariano-nolasco-argueta/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.95,
+    "title": "300g",
+    "variant_id": "52248:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 20.95,
+    "title": "1kg",
+    "variant_id": "52248:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 20.95,
+    "title": "2kg",
+    "variant_id": "52248:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "52248:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "468cfb9f5f491fa0",
+  "first_seen": "2026-10-26",
+  "handle": "catuai-honey-bryan-adolfo-bautista-zelaya0",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2026/09/IMG_3057.png",
+  "platform": "woocommerce",
+  "product_id": "52367",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Catuai – Honey: Bryan Adolfo Bautista Zelaya",
+  "url": "https://anthologycoffee.com/product/catuai-honey-bryan-adolfo-bautista-zelaya0/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 20.95,
+    "title": "300g",
+    "variant_id": "52367:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 20.95,
+    "title": "1kg",
+    "variant_id": "52367:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 20.95,
+    "title": "2kg",
+    "variant_id": "52367:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "52367:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ffe5ff7885b2b04b",
+  "first_seen": "2026-10-26",
+  "handle": "parainema-washed-olvin-ariel-aguilar",
+  "image": "https://anthologycoffee.com/wp-content/uploads/2026/09/IMG_3058.png",
+  "platform": "woocommerce",
+  "product_id": "52374",
+  "product_type": "variable",
+  "roaster_slug": "anthologycoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Parainema – Washed: Olvin Ariel Aguilar",
+  "url": "https://anthologycoffee.com/product/parainema-washed-olvin-ariel-aguilar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 19.95,
+    "title": "300g",
+    "variant_id": "52374:0"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 19.95,
+    "title": "1kg",
+    "variant_id": "52374:1"
+   },
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 19.95,
+    "title": "2kg",
+    "variant_id": "52374:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Bulk/Kilo",
+    "variant_id": "52374:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

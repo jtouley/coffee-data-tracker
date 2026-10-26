@@ -1,0 +1,62 @@
+{
+ "2035753648201": {
+  "body_hash": "a7f43e7001811d8a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "toasted walnut"
+  ],
+  "varietals": []
+ },
+ "8316724412616": {
+  "body_hash": "522d2f9bdc8d3cd7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "8334948303048": {
+  "body_hash": "b5960d4a38ed7f2e",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry",
+   "lime",
+   "sweet tea",
+   "brown sugar"
+  ],
+  "varietals": [
+   "Batian",
+   "Ruiru 11",
+   "Sl28"
+  ]
+ }
+}

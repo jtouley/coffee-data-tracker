@@ -1,0 +1,303 @@
+[
+ {
+  "body_hash": "0b1ced86437749f7",
+  "first_seen": "2026-10-26",
+  "handle": "french-bear-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9101-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8221",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "French Bear (1 LB)",
+  "url": "https://gbcoffees.com/product/french-bear-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "French Bear (1 LB)",
+    "variant_id": "8221:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24914724b5ecf299",
+  "first_seen": "2026-10-26",
+  "handle": "eyes-of-the-world-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9098-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8230",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Eyes of the World (1 LB)",
+  "url": "https://gbcoffees.com/product/eyes-of-the-world-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Eyes of the World (1 LB)",
+    "variant_id": "8230:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fff62781f576d959",
+  "first_seen": "2026-10-26",
+  "handle": "the-grizz-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9097-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8231",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Grizz (1 LB)",
+  "url": "https://gbcoffees.com/product/the-grizz-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Grizz (1 LB)",
+    "variant_id": "8231:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06ab2339d2ce0e22",
+  "first_seen": "2026-10-26",
+  "handle": "osos-blend",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9095-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8232",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Osos Blend (1 LB)",
+  "url": "https://gbcoffees.com/product/osos-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.55,
+    "title": "Osos Blend (1 LB)",
+    "variant_id": "8232:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1402b5048701cdb5",
+  "first_seen": "2026-10-26",
+  "handle": "blue-note-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9099-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8246",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Blue Note (1 LB)",
+  "url": "https://gbcoffees.com/product/blue-note-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Blue Note (1 LB)",
+    "variant_id": "8246:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b4d802ff100489a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mocha-java-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9104-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8254",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Decaf Mocha Java (1 LB)",
+  "url": "https://gbcoffees.com/product/decaf-mocha-java-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.55,
+    "title": "Decaf Mocha Java (1 LB)",
+    "variant_id": "8254:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "be11d18b822ec099",
+  "first_seen": "2026-10-26",
+  "handle": "african-gold-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2020/10/IMG_9103-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8259",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "African Gold (1 LB)",
+  "url": "https://gbcoffees.com/product/african-gold-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "African Gold (1 LB)",
+    "variant_id": "8259:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b80f8195f0a7014",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mocha-java-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2021/01/IMG_0489-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "8534",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Organic Mocha Java (1 LB)",
+  "url": "https://gbcoffees.com/product/organic-mocha-java-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Organic Mocha Java (1 LB)",
+    "variant_id": "8534:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c3469555ddbe37b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-italian-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2021/09/IMG_4842-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "9138",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Decaf Italian (1 LB)",
+  "url": "https://gbcoffees.com/product/decaf-italian-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Decaf Italian (1 LB)",
+    "variant_id": "9138:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a8bfed97f1642157",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-1lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2021/09/IMG_4845-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "9143",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Sumatra Mandheling (1LB)",
+  "url": "https://gbcoffees.com/product/sumatra-mandheling-1lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatra Mandheling (1LB)",
+    "variant_id": "9143:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c0db7e98c26b80f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-dancing-bear-1-lb",
+  "image": "https://gbcoffees.com/wp-content/uploads/2021/09/IMG_4844-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "9146",
+  "product_type": "variable",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee Beans"
+  ],
+  "title": "Dancing Bear (1 LB)",
+  "url": "https://gbcoffees.com/product/organic-dancing-bear-1-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Dancing Bear (1 LB)",
+    "variant_id": "9146:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2bdeb6d1be1db8f",
+  "first_seen": "2026-10-26",
+  "handle": "grosche-stovetop-espresso-maker",
+  "image": "https://gbcoffees.com/wp-content/uploads/2023/01/Grosche-Milano-Espresso-Maker.jpg",
+  "platform": "woocommerce",
+  "product_id": "9653",
+  "product_type": "simple",
+  "roaster_slug": "greatbearcoffee",
+  "tags": [
+   "Coffee",
+   "Coffee Makers"
+  ],
+  "title": "Grosche Stovetop Espresso Maker",
+  "url": "https://gbcoffees.com/product/grosche-stovetop-espresso-maker/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.25,
+    "title": "Grosche Stovetop Espresso Maker",
+    "variant_id": "9653:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

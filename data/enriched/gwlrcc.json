@@ -1,0 +1,281 @@
+{
+ "68826e860af6f664881d6530": {
+  "body_hash": "1bfcafe6aee5c8ea",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "plum",
+   "black current"
+  ],
+  "varietals": []
+ },
+ "689a2c02a91cc65d1e5f9d10": {
+  "body_hash": "137b700a7f303146",
+  "elevation_masl_max": 1070,
+  "elevation_masl_min": 1070,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "medium  dark chocolate",
+   "caramel",
+   "brown baking spices",
+   "sweet tobacco"
+  ],
+  "varietals": []
+ },
+ "689a3230c58acb63c3633012": {
+  "body_hash": "c22b48d1eb998d48",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "butterscotch",
+   "pecan"
+  ],
+  "varietals": []
+ },
+ "689a3a056ded9a2758b9f662": {
+  "body_hash": "8c23cee7e41cb2fd",
+  "elevation_masl_max": 1524,
+  "elevation_masl_min": 1220,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "medium  smooth",
+   "vanilla",
+   "cedar",
+   "honeysuckle"
+  ],
+  "varietals": []
+ },
+ "689a3fa0cb7ab337e07cbd2e": {
+  "body_hash": "854403fbeb7449b3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "nut"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "689a423fb4c65d11628219d3": {
+  "body_hash": "34478ef51aa327a9",
+  "elevation_masl_max": 1100,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "molasses"
+  ],
+  "varietals": []
+ },
+ "689a452eaa71792fc41fb8af": {
+  "body_hash": "fceb9e5d04a4b745",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "molasses",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "689a474e0519d434924e6b87": {
+  "body_hash": "1c81813773949b0d",
+  "elevation_masl_max": 1460,
+  "elevation_masl_min": 1460,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "medium  rich",
+   "nuts",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "689a5d00640bbd26c922167b": {
+  "body_hash": "df904ec707abcb73",
+  "elevation_masl_max": 915,
+  "elevation_masl_min": 915,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honey",
+   "cherry",
+   "tangerine"
+  ],
+  "varietals": []
+ },
+ "689a5fed4bafb76d81ad7d32": {
+  "body_hash": "1e2383eb88aad92a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cinnamon",
+   "cherry",
+   "mild earth"
+  ],
+  "varietals": []
+ },
+ "689a6bbb98920c1c3670c932": {
+  "body_hash": "4b21de9b3ae66b07",
+  "elevation_masl_max": 1524,
+  "elevation_masl_min": 1220,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond"
+  ],
+  "varietals": []
+ },
+ "6932091a51d77c4c8828a726": {
+  "body_hash": "5c1670f9c0d64f1c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "medium  rich",
+   "pecan"
+  ],
+  "varietals": []
+ },
+ "6939da98c3c20a78115d49ed": {
+  "body_hash": "b2bc3604b83f3d21",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "light  rich",
+   "juicy",
+   "flavorful",
+   "papaya",
+   "vanilla"
+  ],
+  "varietals": []
+ },
+ "69bab7cbf8ff5972ad90a217": {
+  "body_hash": "637b99b052373c6c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "medium  chocolate",
+   "syrupy smooth"
+  ],
+  "varietals": []
+ },
+ "69e1433cc805115c01481dbd": {
+  "body_hash": "c91476579c92b4e8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "graham cracker",
+   "caramel"
+  ],
+  "varietals": []
+ }
+}

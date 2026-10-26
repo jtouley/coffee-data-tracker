@@ -1,0 +1,1423 @@
+[
+ {
+  "body_hash": "1eced809bbdc8c9e",
+  "first_seen": "2026-10-26",
+  "handle": "everyday-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/7730f30d-5e6c-489a-933d-5ace9b4987a7/everydayespresso.jpg",
+  "platform": "squarespace",
+  "product_id": "5a82f4a70d9297a54edc4777",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Chocolate",
+   "Espresso",
+   "Level 4",
+   "Peanut",
+   "Spiced Rum"
+  ],
+  "title": "Everyday Espresso",
+  "url": "https://www.newordercoffee.com/coffee/p/everyday-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Cold Brew 5lb bag",
+    "variant_id": "0708fad7-9f83-4016-99d0-006e2af20e35"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz bag Turkish",
+    "variant_id": "0943d60c-34a8-429c-b47f-36748aa2bdbb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Percolater 5lb bag",
+    "variant_id": "1289c509-b97c-4aa6-a2f9-84aad807ada8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Cold Brew 12oz bag",
+    "variant_id": "2c92ebc2-b60a-4a40-b34f-bff41218488e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz bag Cone Filter",
+    "variant_id": "330774a0-e7bb-49b3-8823-2759b0cfbf80"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press 5lb bag",
+    "variant_id": "491f68c0-22cb-4a2a-8475-83133e0b0054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Aeropress 12oz bag",
+    "variant_id": "62d4a5c9-3710-4b4b-a390-76fe067f9a1c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Aeropress 5lb bag",
+    "variant_id": "675ee2d2-27fc-4e57-b8c8-8ba0d27667f4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "French Press 12oz bag",
+    "variant_id": "6c4711b5-0722-4f56-9419-053769023209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean 5lb bag",
+    "variant_id": "877e2fe2-ce55-49af-9bf6-e7ce65cb2d04"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Turkish 5lb bag",
+    "variant_id": "9214af7d-efc6-4272-9f0a-931e94f67a93"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Flat Bottom Filter 5lb bag",
+    "variant_id": "be762301-f0a7-4a63-836f-910f34c11d68"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Cone Filter 5lb bag",
+    "variant_id": "c012a57b-e161-43e8-a6ae-d1fa404e2781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz bag Espresso",
+    "variant_id": "c231c63f-676c-4e70-a5d0-ef7a36a21970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Flat Bottom Filter 12oz bag",
+    "variant_id": "f3e4f2ce-8031-4883-a88c-b19e60232e2b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz bag Whole Bean",
+    "variant_id": "f6b9e09d-c62e-4bac-b36a-57f30d60cfc1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso 5lb bag",
+    "variant_id": "f919e958-15ef-4fe6-acd7-2fb11da52088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "12oz bag Percolater",
+    "variant_id": "facaa57c-74ef-4d0a-90c7-b4b38fd2b859"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d4e67d7748542229",
+  "first_seen": "2026-10-26",
+  "handle": "blue-velvet",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/13c86494-f1f5-4238-beef-c844ecc647b8/bluevelvet.jpg",
+  "platform": "squarespace",
+  "product_id": "5b771896758d46c092296e1a",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "custard",
+   "level 4",
+   "spicy",
+   "vanilla",
+   "vanilla bean"
+  ],
+  "title": "Blue Velvet",
+  "url": "https://www.newordercoffee.com/coffee/p/blue-velvet",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb French Press",
+    "variant_id": "112ce398-3e7c-4028-91be-89a284c77a7c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz Flat Bottom Filter",
+    "variant_id": "29b14ed1-8c00-4d77-a239-3ee7a2b8fed7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Espresso",
+    "variant_id": "3f1756d9-9794-49e7-8e4a-10269fb48bd1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Flat Bottom Filter",
+    "variant_id": "4e42f9f6-c186-4b8e-aa55-6b8c856b6fc2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz Cone Filter",
+    "variant_id": "57baa15c-b53d-45fe-8387-6fb6f547c27f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz Espresso",
+    "variant_id": "5de2b418-e0a0-40d3-bc9c-17c11d97c54f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "b907bbca-74b8-4df5-9528-0e821c28edd4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Cone Filter",
+    "variant_id": "c2c24af7-c145-4dd4-b91e-d57c20c9c6ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz French Press",
+    "variant_id": "ccf5b5c1-61cd-4313-b932-8dfb0318f631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb Cold Brew",
+    "variant_id": "e023ac59-8776-458b-b293-512d3cb93a27"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz Whole Bean",
+    "variant_id": "ea40ca93-8d6a-47cd-992a-9e8113f716ec"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12oz Cold Brew",
+    "variant_id": "f02af028-08e8-463d-986a-55bfa742b744"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e562ec80f70bca6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/619c3aa4-8cf9-4373-bdc0-a5b82801ac86/likeavirgindecaf.jpg",
+  "platform": "squarespace",
+  "product_id": "5d0107757458550001cc7e41",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Decaf",
+   "colombian",
+   "crisp",
+   "nougat",
+   "raspberry",
+   "sugarcane"
+  ],
+  "title": "Like a Virgin Decaf",
+  "url": "https://www.newordercoffee.com/coffee/p/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Aeropress",
+    "variant_id": "0d0279cd-1c90-4818-9f6b-f84ce27bc9b6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Percolater",
+    "variant_id": "0f0b7185-aa6a-465c-837f-61ffa45e9c59"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Cone Filter",
+    "variant_id": "12a7ce5d-6360-47e7-8d1f-f7d96112deaf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Whole Bean",
+    "variant_id": "22feca4e-7b1e-4765-89f7-13749fc1b690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Turkish",
+    "variant_id": "2ac74766-7d37-4db7-b198-a3a8c2160ec2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Flat Bottom Filter",
+    "variant_id": "2beb8eb0-9c65-46e2-879f-ec2fdfaaef91"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Aeropress",
+    "variant_id": "48b6b13e-6def-432b-8a43-616e65471a4e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Espresso",
+    "variant_id": "60551f9d-89e1-4efa-81c3-f032a46b0c71"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Percolater",
+    "variant_id": "606d20d4-a796-4d14-8dc7-bd49da5c9f35"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bag Whole Bean",
+    "variant_id": "640fae94-d971-45c7-8dc3-04469735cefe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Espresso",
+    "variant_id": "67559062-806c-48cd-b28a-1c8d7c73270f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag French Press",
+    "variant_id": "8fd089ed-5e24-4b6b-b885-dccccf2d2bc9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Flat Bottom Filter",
+    "variant_id": "a860975d-d458-43e2-997e-0f9f772d0cc2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Cold Brew",
+    "variant_id": "afb090ea-3170-4413-b1f2-4349d07380ec"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb bag Cone Filter",
+    "variant_id": "b99ee69e-7faf-4086-a88d-41eba316628c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Cold Brew",
+    "variant_id": "b9fc719e-eef9-4450-a65b-6cae4222ff46"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag French Press",
+    "variant_id": "fc0d8dd6-60e0-4793-a129-659b7e4348d2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12oz bag Turkish",
+    "variant_id": "fd0d6e7a-83e7-4b72-ba3b-b3d6f8c8e658"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e419c1f806f9417",
+  "first_seen": "2026-10-26",
+  "handle": "wushwush1",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/ec9fd58c-fd86-4a05-88af-e92cf59ee37c/ethiopiawushwush.jpg",
+  "platform": "squarespace",
+  "product_id": "5e2f364da8a1855a711982d4",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [],
+  "title": "Ethiopia Wush Wush",
+  "url": "https://www.newordercoffee.com/coffee/p/wushwush1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag French Press",
+    "variant_id": "06e86e8d-63fd-4ad0-ac4d-573e3bf5cfc7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Whole Bean",
+    "variant_id": "2757fab9-0772-4374-8ac0-0957f6006ac2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Aeropress",
+    "variant_id": "4f08ea80-a12d-4ecc-9457-637f7fd61770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag French Press",
+    "variant_id": "5e9de66d-d597-4676-9328-025a9bc4238e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Cold Brew",
+    "variant_id": "6aa38b5b-80c1-4387-a27d-6cd3f2b47e97"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Flat Bottom",
+    "variant_id": "6b0229f9-2e3a-48f8-8857-c50fb720d006"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Espresso",
+    "variant_id": "b1a5d5ff-c4bd-4f80-bd61-3d32f171edaa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Cold Brew",
+    "variant_id": "b69aabef-6412-4d57-be49-54b0a5afb4ea"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Espresso",
+    "variant_id": "d0297120-7ec6-48ce-9a1d-b3bd0cd9388f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Aeropress",
+    "variant_id": "d0a3d328-67a0-4f8a-a4d3-34dc018bb21a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Cone",
+    "variant_id": "d7956601-9a09-43b1-9b2a-ea99fde64b8e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Flat Bottom",
+    "variant_id": "e1c4d607-e997-4be5-9b7f-b6ac3e1a3ba4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "12oz bag Cone",
+    "variant_id": "e95a8978-c4dd-49a3-9606-7586ced349b4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb bag Whole Bean",
+    "variant_id": "ebe1da6b-0e81-4017-954f-45cd3abb0219"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d6d6c71080d5875",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-matagalpa",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/bdd36477-cc18-4684-91e9-ede3d1acbe41/nicaraguamatagalpa.jpg",
+  "platform": "squarespace",
+  "product_id": "5e2f4dd10b0a552baa4f740d",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Caramel",
+   "Custard",
+   "Gold Mountain Coffee",
+   "Level 4",
+   "Matagalpa",
+   "Nicaragua",
+   "Praline",
+   "Smooth"
+  ],
+  "title": "Nicaragua Matagalpa",
+  "url": "https://www.newordercoffee.com/coffee/p/nicaragua-matagalpa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Whole Bean",
+    "variant_id": "01d1a710-aee9-4f28-aa85-f4b61222bf92"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Percolater",
+    "variant_id": "05aa461a-c12c-42b3-850a-8ca8b09a9ca6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Percolater",
+    "variant_id": "09bde238-75ae-4264-a6f6-7655bd3e2a97"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Cold Brew",
+    "variant_id": "12b247bb-7d68-419c-9d65-b2b3015fb241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Cold Brew",
+    "variant_id": "19372550-5b3d-4854-b208-b841aa860b95"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Espresso",
+    "variant_id": "6989e339-c5b0-4afa-b3e7-99ab1e657531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Cone Filter",
+    "variant_id": "78ca00f8-c353-40b9-8c10-002f30e12518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Espresso",
+    "variant_id": "7c88a2b0-50c7-4001-8dfc-c25a34f7fcb9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Turkish",
+    "variant_id": "86a825bd-b05a-447b-992b-143fad805f37"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Flat Bottom Filter",
+    "variant_id": "a6762d28-ab68-4a13-aa0f-b602d32858d0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Cone Filter",
+    "variant_id": "aad400ac-9646-44b2-ae82-639a373343e8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Aeropress",
+    "variant_id": "bd4d93c8-fa28-4d02-8b0b-db00ed9ca38f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag French Press",
+    "variant_id": "c847ab3d-7284-4458-b498-121e54219efc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Whole Bean",
+    "variant_id": "cbc44f2c-a289-4dcb-82fc-fd7fb07a37fa"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag French Press",
+    "variant_id": "daec8e72-1989-4981-850e-fe6d8f58e386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Aeropress",
+    "variant_id": "e28b785b-23e2-4c8e-8ca8-df759fb9b372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12oz bag Turkish",
+    "variant_id": "e60165c0-a444-4147-8827-24462519f3d1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb bag Flat Bottom Filter",
+    "variant_id": "ffa0f44c-09ee-41cd-a7a1-3f0447061f41"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2382f2ebf665a5ca",
+  "first_seen": "2026-10-26",
+  "handle": "case-study",
+  "image": "https://static1.squarespace.com/static/58751eb1d2b857aa63e35877/5a708233419202410e907586/5edf85820706ce30d2acb052/1787690522036/",
+  "platform": "squarespace",
+  "product_id": "5edf85820706ce30d2acb052",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [],
+  "title": "Case Study House",
+  "url": "https://www.newordercoffee.com/coffee/p/case-study",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Cone Filter 5lb bag",
+    "variant_id": "11ea3c09-9016-45ec-82e1-79053fcf3b15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Flat Bottom Filter 12oz bag",
+    "variant_id": "19ad034a-342a-45df-b783-c6f4ff3db22a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Aeropress 5lb bag",
+    "variant_id": "3f20d45f-b0d4-4056-884e-bc8e1b0a0b0d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "French Press 12oz bag",
+    "variant_id": "475203a8-a64a-4c60-89ed-fce28d0e2e11"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Cone Filter 12oz bag",
+    "variant_id": "4f924119-a6e8-4525-baa2-34852c34e601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Percolator 12oz bag",
+    "variant_id": "55fa769e-ef4d-4c9b-b622-71b1a6a38dbd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Aeropress 12oz bag",
+    "variant_id": "5ba8dc4d-3249-425a-ba09-02c0704275d7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Cold Brew 5lb bag",
+    "variant_id": "74ad37d7-7b8b-4329-be81-29a035d6b3a3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean 5lb bag",
+    "variant_id": "7c341efd-a560-453f-8930-1e2557086c29"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Turkish 12oz bag",
+    "variant_id": "a81cb035-dcd0-4958-86aa-c14f69a2a60b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Turkish 5lb bag",
+    "variant_id": "b859718a-e6d2-413c-8b5e-d9cec593070f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Flat Bottom Filter 5lb bag",
+    "variant_id": "c63588ba-de36-4b77-b523-99b9a4d5cf25"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "French Press 5lb bag",
+    "variant_id": "c7a874d4-9f4a-4239-833f-24f45bce2a84"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Cold Brew 12oz bag",
+    "variant_id": "c9ff6c35-c08b-4d5c-91b3-701350b38e6f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Percolator 5lb bag",
+    "variant_id": "ca8b82d7-d495-4018-92b2-8035b7bf1ae0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Espresso 12oz bag",
+    "variant_id": "d77562db-ce50-408f-8a96-7708a705b9ae"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Espresso 5lb bag",
+    "variant_id": "d7cf9dff-4bf1-4e02-813b-24ee56604298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.95,
+    "title": "Whole Bean 12oz bag",
+    "variant_id": "f30d71fa-7028-4b8b-b6b7-e3814fa8eeb0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "45c18afd5096a322",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/04bf8963-de08-4c4f-99c2-0a321319f134/brazilcerrado.jpg",
+  "platform": "squarespace",
+  "product_id": "60ec684e3a61b846ccefc58b",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Brazil",
+   "Cerrado",
+   "La Minita",
+   "Latin America",
+   "Level 3 roast",
+   "Natural",
+   "Washed"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://www.newordercoffee.com/coffee/p/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz bag Cone Filter",
+    "variant_id": "1065a407-49fc-4ca6-a69a-0ec3e2ed3318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Espresso 12oz bag",
+    "variant_id": "31f7d98b-d17f-451f-9892-8eb5d7612b0d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean 5lb bag",
+    "variant_id": "350a4fba-765c-443a-b246-f7f02338be1f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Cold Brew 5lb bag",
+    "variant_id": "3b43f723-ef78-4803-a626-4797288cc900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Turkish 12oz bag",
+    "variant_id": "50bb2ee4-4591-4ef8-a2f5-49a1806c3fdb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Turkish 5lb bag",
+    "variant_id": "6ef2fcf3-daa7-4db4-8e31-e0ca70ce6a22"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Percolator 12oz bag",
+    "variant_id": "81ecfaff-596b-4979-ba80-e530d3af28b9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz bag Cold Brew",
+    "variant_id": "88c236a7-8a2d-4191-92f7-80b3c77d16fe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Percolator 5lb bag",
+    "variant_id": "99bc447a-e85f-487a-927d-1a186f937df7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Flat Bottom Filter 12oz bag",
+    "variant_id": "9b9de6c0-caaf-4102-98a9-9aab2bfdd617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Cone Filter 5lb bag",
+    "variant_id": "a24979c6-4b64-4da8-bba2-03602707fc57"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bag Aeropress",
+    "variant_id": "a45089e2-6a10-453b-98d5-b103ec7f2c8a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bag Espresso",
+    "variant_id": "a52fc83d-0a4a-423e-a7ab-5197b342baab"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "Aeropress 12oz bag",
+    "variant_id": "a863465a-647f-461d-924e-c3c235fe6c92"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "French Press 5lb bag",
+    "variant_id": "ae959977-7c93-461f-a1de-0fbf05fc1ee6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz bag Whole Bean",
+    "variant_id": "baf78d16-2da1-4bb2-aa11-fffe0b180e82"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz bag French Press",
+    "variant_id": "c96e1618-3f8a-4bdf-a674-316db282a867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bag Flat Bottom Filter",
+    "variant_id": "ce298ccb-f32f-4a66-ac69-eda866aad630"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "def055c97e314e3d",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-lahamenegu",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/b799a5ea-0a0d-4349-91ca-2b43367c64fe/pnglahamenegu.jpg",
+  "platform": "squarespace",
+  "product_id": "64cbe3ef5a0bde6b44840f00",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Lahamenegu",
+   "Level 3",
+   "Natural Processing",
+   "Papua New Guinea",
+   "berry",
+   "cola",
+   "melon"
+  ],
+  "title": "Papua New Guinea Lahamenegu",
+  "url": "https://www.newordercoffee.com/coffee/p/papua-new-guinea-lahamenegu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Cold Brew 12oz",
+    "variant_id": "005010fa-97f6-4850-ad43-55c374d6d7a3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Cold Brew 5lb",
+    "variant_id": "0ab45084-294e-4e6f-b1c2-6dd015536fd7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "French Press 12oz",
+    "variant_id": "28631e6d-1c61-4736-897d-71e824f6ba4c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Flat Bottom 5lb",
+    "variant_id": "41b5c9ca-82ef-4743-8ee4-a0a44a968902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Espresso 12oz",
+    "variant_id": "463b39fb-b8b9-48f5-b53f-d4d24ce4a231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "4e6e2cc3-08ff-479e-b128-fc97e85a6663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Espresso 5lb",
+    "variant_id": "608e759a-a03f-4b91-91d9-a91978701b76"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Whole Bean 12oz",
+    "variant_id": "6178c3ec-919d-4c0e-b42b-9dd95fe7b3d3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Cone 5lb",
+    "variant_id": "67dea9a1-c7aa-45a5-a510-0d61a9ccdb7d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Cone 12oz",
+    "variant_id": "88e4cce8-51d7-499d-94b3-fe8db769ecd3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "French Press 5lb",
+    "variant_id": "c5e4182a-bf39-4ab6-b40c-6517dd47fbb1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "Flat Bottom 12oz",
+    "variant_id": "f84dcce7-a720-49d4-b5dc-cbe86fbd9039"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "38f3f0f261bf6525",
+  "first_seen": "2026-10-26",
+  "handle": "rwandakungahara",
+  "image": "https://static1.squarespace.com/static/58751eb1d2b857aa63e35877/5a708233419202410e907586/67a20d0692266c68f8deb865/1787949050471/",
+  "platform": "squarespace",
+  "product_id": "67a20d0692266c68f8deb865",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "Artisan Coffee Imports",
+   "Blackberry",
+   "Cherry",
+   "Kungahara",
+   "Level 2",
+   "Limeade",
+   "Rwanda",
+   "Women Grown"
+  ],
+  "title": "Rwanda Kungahara",
+  "url": "https://www.newordercoffee.com/coffee/p/rwandakungahara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Espresso 5lb",
+    "variant_id": "0783b1ee-8f91-4cbb-8e76-a1b3d8cfa194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Aeropress 5lb",
+    "variant_id": "4e1466f3-c9ed-4f02-a4e3-4f44669fbae7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "French Press 12oz",
+    "variant_id": "603d09a7-5d1f-40df-970d-a2347032fd18"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "French Press 5lb",
+    "variant_id": "8689c966-9532-4d0a-8eef-133ed5d4cc13"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Whole Bean 12oz",
+    "variant_id": "86e0d607-0641-441a-adb9-bb2d8f12c31b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Cone Filter 5lb",
+    "variant_id": "bc17b533-80e3-4707-8e58-6b35e161a506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Espresso 12oz",
+    "variant_id": "bf977759-78cb-4473-8fc9-2e6394e2c723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Flat Bottom Filter 5lb",
+    "variant_id": "cd83ed86-b11e-407d-8a39-16a1e5be3216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Flat Bottom Filter 12oz",
+    "variant_id": "ce85fa64-6742-4314-9da5-581d261a26ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Cone Filter 12oz",
+    "variant_id": "de63ed33-416e-48cb-ae99-1ec6d61f27f0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Cold Brew 12oz",
+    "variant_id": "e47a9aa0-b6a5-4a9b-b618-3e84fa601080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "f4fcc5a6-a7d5-4913-993b-f29104da7c77"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Cold Brew 5lb",
+    "variant_id": "f59d8bdf-1477-4dfb-b25c-d1f7178e3802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Aeropress 12oz",
+    "variant_id": "fb20a2ee-9f7e-4dac-9567-2c7d87b7b4ac"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b23a7480df4c8214",
+  "first_seen": "2026-10-26",
+  "handle": "customroast",
+  "image": "https://images.squarespace-cdn.com/content/v1/58751eb1d2b857aa63e35877/83d895bf-0986-4d4c-b47a-4278eeeec250/customroast.jpg",
+  "platform": "squarespace",
+  "product_id": "694194f3144d875d2d96c153",
+  "product_type": "",
+  "roaster_slug": "newordercoffee",
+  "tags": [
+   "custom roast",
+   "roast level",
+   "whole bean"
+  ],
+  "title": "Custom Roasted Coffee",
+  "url": "https://www.newordercoffee.com/coffee/p/customroast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Roast Level 2 Ethiopia Wush Wush",
+    "variant_id": "00ad9d11-862e-4edf-88f4-2074d53be59d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 3 Brazil Cerrado",
+    "variant_id": "0dd82ade-4cd1-4147-ac52-7205302cdcf0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Roast Level 5 Nicaragua Matagalpa",
+    "variant_id": "14c0d21d-cf11-49d2-99f3-96c5be37bfde"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 5 Case Study House",
+    "variant_id": "21b3fd8c-0b6b-44f2-a405-d34155d0178a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Roast Level 2 Nicaragua Matagalpa",
+    "variant_id": "2e470881-fa93-491c-9f89-00ec92f44023"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Roast Level 2 Like a Virgin Decaf",
+    "variant_id": "30f7ef4c-57ba-44a3-846a-1f7ccad51e16"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Roast Level 4 Like a Virgin Decaf",
+    "variant_id": "3163326d-94ef-458a-acc9-94d15e392c48"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 4 Case Study House",
+    "variant_id": "359832ea-49e0-4dd1-a3af-353777e774a4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 2 Case Study House",
+    "variant_id": "3f546c4e-32eb-401d-aac5-0ded178f8580"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 2 Everyday Espresso",
+    "variant_id": "404e3865-b2b6-411b-95db-3df64ed8d711"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Roast Level 3 Like a Virgin Decaf",
+    "variant_id": "509228bf-14ed-44b1-bdc5-9ed1dc9b6617"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 5 Everyday Espresso",
+    "variant_id": "7d881e58-68ec-4d23-969c-62c6f5dd00ec"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Roast Level 1 Like a Virgin Decaf",
+    "variant_id": "81dec4d8-26ca-40ab-9906-e71ea9704dbf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Roast Level 1 Nicaragua Matagalpa",
+    "variant_id": "8a33e4f0-ee17-41cd-8dd4-0c3a1d43e81d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 1 Brazil Cerrado",
+    "variant_id": "8b87cc70-2e8b-4481-97fb-cf7e84ad5455"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Roast Level 3 Ethiopia Wush Wush",
+    "variant_id": "af9625e0-cb9d-4ad3-8b4d-9140c4536439"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 1 Case Study House",
+    "variant_id": "b09a7799-200c-4c22-977a-3e4fdfd156a3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Roast Level 3 Nicaragua Matagalpa",
+    "variant_id": "b24f039c-2bc9-4654-9829-019025909c71"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Roast Level 5 Ethiopia Wush Wush",
+    "variant_id": "bbeace63-9399-4043-aa8a-bd48f04bf7ca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 4 Brazil Cerrado",
+    "variant_id": "becb1264-cabd-431c-8ba6-bf2b68ce6c1d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 4 Everyday Espresso",
+    "variant_id": "c84f01b4-08de-435a-a42f-62464b720fcb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Roast Level 4 Ethiopia Wush Wush",
+    "variant_id": "cd745956-3a0f-4fd5-ba9b-b9c83a6be803"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 5 Brazil Cerrado",
+    "variant_id": "d1c1ad52-e89d-464e-a55b-1654136f3f1b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 3 Everyday Espresso",
+    "variant_id": "d775d8ee-0dcd-4a51-bd73-21fb3756032a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 3 Case Study House",
+    "variant_id": "e2ad5738-b02b-49df-90d4-ff879d6b9637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.95,
+    "title": "Roast Level 5 Like a Virgin Decaf",
+    "variant_id": "e66f05cd-17be-44da-81f7-4b06766bacf2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.95,
+    "title": "Roast Level 1 Ethiopia Wush Wush",
+    "variant_id": "e86530d2-a50c-4ed8-ae9a-d26992b46732"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 1 Everyday Espresso",
+    "variant_id": "f05f3049-cfa7-4af0-8d4d-1fb9a38fb096"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "Roast Level 4 Nicaragua Matagalpa",
+    "variant_id": "f5d235a1-d2cc-404c-a315-342654e20261"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Roast Level 2 Brazil Cerrado",
+    "variant_id": "f63bc025-4d8d-415b-a683-3d6fde6ec165"
+   }
+  ],
+  "vendor": ""
+ }
+]

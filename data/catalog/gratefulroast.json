@@ -1,0 +1,286 @@
+[
+ {
+  "body_hash": "f88ac68ccd82d3d9",
+  "first_seen": "2026-10-26",
+  "handle": "house-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/peru-decaf-farm-1.png?v=1789084715",
+  "platform": "shopify",
+  "product_id": "15724696862793",
+  "product_type": "Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "coffee",
+   "decaf",
+   "house-decaf",
+   "whole-bean"
+  ],
+  "title": "House Decaf",
+  "url": "https://gratefulroast.com/products/house-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "56001328906313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5 lb",
+    "variant_id": "56001328939081"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 69.0,
+    "title": "1 Kilo / 2.2 lbs",
+    "variant_id": "56077867417673"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "e849aa6bb3c41d8d",
+  "first_seen": "2026-10-26",
+  "handle": "house-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/house-roast-angle.jpg?v=1789084408",
+  "platform": "shopify",
+  "product_id": "15779073359945",
+  "product_type": "Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "coffee",
+   "house-roast",
+   "whole-bean"
+  ],
+  "title": "House Roast",
+  "url": "https://gratefulroast.com/products/house-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "56077861650505"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1 Kilo / 2.2 lbs",
+    "variant_id": "56077861683273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lbs",
+    "variant_id": "56077861716041"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "d4f90e8db13ceeba",
+  "first_seen": "2026-10-26",
+  "handle": "abolitionist",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/abolitionist-lifestyle.jpg?v=1789084374",
+  "platform": "shopify",
+  "product_id": "15779073491017",
+  "product_type": "Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "abolitionist",
+   "coffee",
+   "espresso-blend",
+   "whole-bean"
+  ],
+  "title": "Abolitionist",
+  "url": "https://gratefulroast.com/products/abolitionist",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "56077861814345"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 69.0,
+    "title": "1 Kilo / 2.2 lbs",
+    "variant_id": "56077861847113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5 lbs",
+    "variant_id": "56077861879881"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "102f17b6d1bf48c6",
+  "first_seen": "2026-10-26",
+  "handle": "mamas-half-caf",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/mamas-half-caf-label-2.jpg?v=1789084238",
+  "platform": "shopify",
+  "product_id": "15779073589321",
+  "product_type": "Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "coffee",
+   "half-caf",
+   "mamas-half-caf",
+   "whole-bean"
+  ],
+  "title": "Mama's Half-Caf",
+  "url": "https://gratefulroast.com/products/mamas-half-caf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "56077861945417"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1 Kg / 2.2 lbs",
+    "variant_id": "56077861978185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lbs",
+    "variant_id": "56077862010953"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "c2191cfd0f2a3c68",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-sholi-cooperative",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/IMG-5522.heic?v=1790696785",
+  "platform": "shopify",
+  "product_id": "15779073949769",
+  "product_type": "Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "coffee",
+   "rwanda",
+   "sholi",
+   "whole-bean",
+   "womens-cooperative"
+  ],
+  "title": "Rwanda – Sholi Cooperative",
+  "url": "https://gratefulroast.com/products/rwanda-sholi-cooperative",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 20.0,
+    "title": "250 grams",
+    "variant_id": "56077862240329"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1 Kg",
+    "variant_id": "56077862273097"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "e8bc7fcaad9e1746",
+  "first_seen": "2026-10-26",
+  "handle": "hario-skerton-pro-ceramic-coffee-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/IMG_8766-DNG.jpg?v=1789400047",
+  "platform": "shopify",
+  "product_id": "15788597903433",
+  "product_type": "Grinders",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "grinders",
+   "hario",
+   "home barista"
+  ],
+  "title": "Hario \"Skerton Pro\" Ceramic Coffee Mill",
+  "url": "https://gratefulroast.com/products/hario-skerton-pro-ceramic-coffee-mill",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 58.5,
+    "title": "Default Title",
+    "variant_id": "56096949796937"
+   }
+  ],
+  "vendor": "Hario"
+ },
+ {
+  "body_hash": "ff34da2209c6350e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-jabiru-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/B59F3573-4190-45DA-8A60-B1998A8111EB.jpg?v=1789647763",
+  "platform": "shopify",
+  "product_id": "15795074334793",
+  "product_type": "",
+  "roaster_slug": "gratefulroast",
+  "tags": [],
+  "title": "Guatemala Jabiru — Huehuetenango",
+  "url": "https://gratefulroast.com/products/guatemala-jabiru-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "56115945078857"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ },
+ {
+  "body_hash": "6a77efb2b8000cf5",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo-koperasi-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0273/1026/0297/files/sumatra-gayo-shelf.jpg?v=1790390463",
+  "platform": "shopify",
+  "product_id": "15812638703689",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "gratefulroast",
+  "tags": [
+   "Fairtrade",
+   "Gayo",
+   "Indonesia",
+   "Sumatra",
+   "organic",
+   "single origin",
+   "wet hulled"
+  ],
+  "title": "Sumatra Gayo — Koperasi Organic",
+  "url": "https://gratefulroast.com/products/sumatra-gayo-koperasi-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "56145437556809"
+   }
+  ],
+  "vendor": "Grateful Roast"
+ }
+]

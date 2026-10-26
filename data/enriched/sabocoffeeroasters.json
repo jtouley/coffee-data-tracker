@@ -1,0 +1,121 @@
+{
+ "1632": {
+  "body_hash": "12662906d210956e",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "panela",
+   "dried plum",
+   "full body",
+   "low",
+   "mellow acidity"
+  ],
+  "varietals": []
+ },
+ "1818": {
+  "body_hash": "8a1696e66772f867",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "sweet",
+   "balanced",
+   "full-bodied"
+  ],
+  "varietals": []
+ },
+ "2631": {
+  "body_hash": "60e6ba36a9278d1a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "jasmine flowers",
+   "plum",
+   "toasted nuts"
+  ],
+  "varietals": []
+ },
+ "6342": {
+  "body_hash": "3fb943fc7c18b4b3",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "refined",
+   "vibrant",
+   "aromatic"
+  ],
+  "varietals": []
+ },
+ "6371": {
+  "body_hash": "94552eb031d8365e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "red apple",
+   "nuts",
+   "silky body",
+   "balanced acidity"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "6640": {
+  "body_hash": "a7470b57f685619f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "juicy pineapple"
+  ],
+  "varietals": []
+ }
+}

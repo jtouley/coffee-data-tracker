@@ -1,0 +1,301 @@
+{
+ "5ba073bd40ec9a1fa83417df": {
+  "body_hash": "22f6bd98425bf6e7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "juicy",
+   "bright",
+   "blackberry",
+   "brown sugar",
+   "heavy body"
+  ],
+  "varietals": []
+ },
+ "5bcfafdef4e1fc2e823f29b1": {
+  "body_hash": "08bcdd78db96f01c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "citrus",
+   "creamy body"
+  ],
+  "varietals": []
+ },
+ "5bcfb6d6f4e1fc2e823f8176": {
+  "body_hash": "d5827b8e4526c31a",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet almond",
+   "floral",
+   "savory",
+   "lemon",
+   "full buttery body"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "5c178c47b8a0454b6ae5c38d": {
+  "body_hash": "7276fe0fca67e5d2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "floral",
+   "lemongrass",
+   "bergamot",
+   "sweet",
+   "light roast"
+  ],
+  "varietals": []
+ },
+ "5c61e316e4966b849c91cdbf": {
+  "body_hash": "10050a8040e6d3bf",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "orange",
+   "plum",
+   "milk cho",
+   "light medium roast"
+  ],
+  "varietals": [
+   "Batian",
+   "Ruiru 11"
+  ]
+ },
+ "5c8c7300fa0d604ae3df91f5": {
+  "body_hash": "6e1a40cb841c04ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "blueberry",
+   "dark chocolate light",
+   "medium roast"
+  ],
+  "varietals": []
+ },
+ "60b81ffb464c750e1b56259f": {
+  "body_hash": "6e306b8485581050",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "brown sugar",
+   "dried cherry",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "60b823ad464c750e1b562b78": {
+  "body_hash": "a2e9c4c6c54f94f5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "chocolate",
+   "mild orange",
+   "sugar cane",
+   "creamy"
+  ],
+  "varietals": []
+ },
+ "61ce38c206601d099d706da2": {
+  "body_hash": "9f52144d20281327",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "blueberry",
+   "honey",
+   "creamy mouthfeel"
+  ],
+  "varietals": [
+   "Wush Wush"
+  ]
+ },
+ "61df6ef306cd892b8addd4ac": {
+  "body_hash": "007bfddd39876fca",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "blackcurrant",
+   "cherry",
+   "jammy",
+   "brown sugar",
+   "full body light",
+   "medium roast"
+  ],
+  "varietals": []
+ },
+ "641255c1b2406a6d4d14c137": {
+  "body_hash": "8bce457db202d817",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "effervescent fruit",
+   "nougat",
+   "good body",
+   "balanced light",
+   "medium roast"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "66b11207178cdd163a8afb68": {
+  "body_hash": "8b5ffed7c7ccf9e6",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toasted almond",
+   "citrus",
+   "golden raisin light",
+   "medium roast"
+  ],
+  "varietals": []
+ },
+ "66c3b6a05af343144c9d1b3a": {
+  "body_hash": "df6471c30b9c30d9",
+  "elevation_masl_max": 1600,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "complex",
+   "soft citrus",
+   "mild cocoa",
+   "balanced light",
+   "medium roast"
+  ],
+  "varietals": []
+ },
+ "689dcb9b45b634365f6026af": {
+  "body_hash": "15a8172fbf51cd23",
+  "elevation_masl_max": 772,
+  "elevation_masl_min": 772,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "floral",
+   "blueberry jam",
+   "fig",
+   "clean"
+  ],
+  "varietals": []
+ }
+}

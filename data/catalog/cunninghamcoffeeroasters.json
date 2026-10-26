@@ -1,0 +1,272 @@
+[
+ {
+  "body_hash": "518a772f40373144",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-dark",
+  "image": "https://static1.squarespace.com/static/5cd485ba1851af0001a8b3b1/5e72fc4733d5965c41b85892/5e72ff8c1fbfdf37a722b344/1793047824969/",
+  "platform": "squarespace",
+  "product_id": "5e72ff8c1fbfdf37a722b344",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Brazil - DARK",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/brazilian-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb kraft",
+    "variant_id": "703f2db0-a2db-4174-b0a9-e97aec25b60f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bulk",
+    "variant_id": "f46c780b-500e-4d56-b898-07cb4eba6150"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a289980dfbc71b88",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://static1.squarespace.com/static/5cd485ba1851af0001a8b3b1/5e72fc4733d5965c41b85892/5e730072e857576813b87384/1793047660546/",
+  "platform": "squarespace",
+  "product_id": "5e730072e857576813b87384",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Signature Espresso Blend",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bulk",
+    "variant_id": "5153c0e9-ae1e-4559-871c-07cf0db54c0a"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb kraft",
+    "variant_id": "79c17862-4fbb-40b2-b8b3-ee7fa5d1cc6c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ae45076f268b867d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://static1.squarespace.com/static/5cd485ba1851af0001a8b3b1/5e72fc4733d5965c41b85892/5e9287b75e4b116e0989f23d/1793047967324/",
+  "platform": "squarespace",
+  "product_id": "5e9287b75e4b116e0989f23d",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Colombia Decaf  - ESPRESSO",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 pounds",
+    "variant_id": "2d786af9-51ea-443c-9248-91ebc8b717ed"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 pounds",
+    "variant_id": "9265f392-b95c-4710-9e80-a7f99f79fd3a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e2a21688acc91f1a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-medium-roast",
+  "image": "https://static1.squarespace.com/static/5cd485ba1851af0001a8b3b1/5e72fc4733d5965c41b85892/5e92991210408e119cc046a4/1793048026498/",
+  "platform": "squarespace",
+  "product_id": "5e92991210408e119cc046a4",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Colombia Decaf - MEDIUM",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "6eae52c9-02ff-4ce7-a33b-1bea2ac843ba"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb kraft",
+    "variant_id": "f68c51e3-a6d9-478f-889f-294eeb2a8e3d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5fa6696c4df4e036",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-light-4jxmc",
+  "image": "https://static1.squarespace.com/static/5cd485ba1851af0001a8b3b1/5e72fc4733d5965c41b85892/5ecd93f68e07a301b0856702/1793047703686/",
+  "platform": "squarespace",
+  "product_id": "5ecd93f68e07a301b0856702",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Colombia - MEDIUM",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/colombian-light-4jxmc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bulk",
+    "variant_id": "ea0463c5-e5b2-402f-a7dd-6b3587e875a8"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb kraft",
+    "variant_id": "ee58f159-b804-44e6-8304-c8ca8dd811ff"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82673a5c6fc6144e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-mother-station-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/5cd485ba1851af0001a8b3b1/1702505572066-7OFEFORWWFJUA5U0M3A3/IMG_8575.JPG",
+  "platform": "squarespace",
+  "product_id": "62a610e2187fc259cb25ca7d",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia - LIGHT",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/ethiopia-mother-station-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb bulk",
+    "variant_id": "96e365de-e55a-4360-aeb7-a87a2b9a48fe"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb kraft",
+    "variant_id": "c079ff56-bdc7-468b-92f2-0dec120494c8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39921ad09db99ba2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/5cd485ba1851af0001a8b3b1/1713138213827-O0E0SPB3JNM1QJTLUM22/EnglishLavender-669.jpg",
+  "platform": "squarespace",
+  "product_id": "661c64106ece244ca84ff761",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Sumatra - DARK",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/sumatra-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 pounds",
+    "variant_id": "66f68dc2-6fee-4f53-bfef-8cc1001d4edf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 pounds",
+    "variant_id": "99c9b57d-6f76-4484-8734-263ebb1c5920"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "96873e4017dd3aca",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-medium-roast-7mjm8",
+  "image": "https://images.squarespace-cdn.com/content/v1/5cd485ba1851af0001a8b3b1/28c890d9-21c7-405b-a197-d4ec67e7ac90/untitled%281of1%29-19.jpg",
+  "platform": "squarespace",
+  "product_id": "68bb54082a7aa214d49ad974",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "COLD BREW beans",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/guatemalan-medium-roast-7mjm8",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 pounds",
+    "variant_id": "c004ea6a-d62e-473d-a55a-952b011d1a7e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 pounds",
+    "variant_id": "ea867c89-a481-4b7d-9888-4436b361006b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "030b9f3556a67e0e",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://images.squarespace-cdn.com/content/v1/5cd485ba1851af0001a8b3b1/317c0cf8-a0f1-4aed-909d-3e8b1c0beaac/IMG_9740.jpeg",
+  "platform": "squarespace",
+  "product_id": "6aa072584b08934e6b0da95b",
+  "product_type": "",
+  "roaster_slug": "cunninghamcoffeeroasters",
+  "tags": [],
+  "title": "Mexico - MED/DARK",
+  "url": "https://www.cunninghamcoffeeroasters.com/order/p/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 pounds",
+    "variant_id": "e5c6d6bb-a535-487c-bc2b-99ba779794a6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2 pounds",
+    "variant_id": "fa7b7887-3633-43a7-bb94-04a05229a182"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,574 @@
+[
+ {
+  "body_hash": "84cdb4e76393c8af",
+  "first_seen": "2026-10-26",
+  "handle": "quasar-single-origin-brazilian-espresso-blend",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/01/1x1Master_Quasar2001.webp",
+  "platform": "woocommerce",
+  "product_id": "1159",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Bird Friendly",
+   "Fair Trade",
+   "Fresh Roasted Coffee Beans",
+   "Multi-Origin Blend",
+   "Natural Process",
+   "Organic",
+   "Shade Grown",
+   "Washed Process",
+   "Whole Beans"
+  ],
+  "title": "Quasar Single Origin Brazilian Espresso",
+  "url": "https://cosmiccoffeecompany.com/product/quasar-single-origin-brazilian-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Coarse Grind",
+    "variant_id": "1159:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Fine Grind",
+    "variant_id": "1159:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "1159:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "1159:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Grind",
+    "variant_id": "1159:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Beans",
+    "variant_id": "1159:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "30d94a029d589153",
+  "first_seen": "2026-10-26",
+  "handle": "eclipse-decaf-seasonal-blend",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/07/EclipseGrape33.webp",
+  "platform": "woocommerce",
+  "product_id": "177",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Decaffeinated",
+   "Fair Trade",
+   "Fresh Roasted Coffee Beans",
+   "Medium Dark Roast",
+   "Multi-Origin Blend",
+   "Organic",
+   "Swiss Water Process",
+   "Whole Beans",
+   "arabica coffee"
+  ],
+  "title": "Eclipse Decaf Seasonal Blend",
+  "url": "https://cosmiccoffeecompany.com/product/eclipse-decaf-seasonal-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Coarse Grind",
+    "variant_id": "177:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "177:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "177:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "177:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Grind",
+    "variant_id": "177:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "177:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f69936be7bd09cd",
+  "first_seen": "2026-10-26",
+  "handle": "supernova-espresso-blend",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/01/1x1Master_Supernova2001.webp",
+  "platform": "woocommerce",
+  "product_id": "179",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Brazil",
+   "Fresh Roasted Coffee Beans",
+   "Medium Dark Roast",
+   "Natural Process",
+   "Organic",
+   "Rainforest Alliance",
+   "Single Origin",
+   "South America",
+   "Whole Beans",
+   "arabica coffee"
+  ],
+  "title": "Supernova Espresso Blend",
+  "url": "https://cosmiccoffeecompany.com/product/supernova-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "179:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5lbs",
+    "variant_id": "179:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Coarse Grind",
+    "variant_id": "179:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Fine Grind",
+    "variant_id": "179:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "179:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "179:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Grind",
+    "variant_id": "179:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Beans",
+    "variant_id": "179:7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d5f779fca658f904",
+  "first_seen": "2026-10-26",
+  "handle": "single-estate-organic-red-catuai",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/08/Red-Catuai-PhotoShop.webp",
+  "platform": "woocommerce",
+  "product_id": "1845",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Bird Friendly",
+   "Brazil",
+   "Direct Trade",
+   "Fresh Roasted Coffee Beans",
+   "Medium Roast",
+   "Natural Process",
+   "Organic",
+   "Rainforest Alliance",
+   "Single Origin",
+   "Whole Beans",
+   "arabica coffee",
+   "single variety"
+  ],
+  "title": "Single Estate Organic Red Catuai",
+  "url": "https://cosmiccoffeecompany.com/product/single-estate-organic-red-catuai/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Coarse Grind",
+    "variant_id": "1845:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Fine Grind",
+    "variant_id": "1845:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "1845:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "1845:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Medium Grind",
+    "variant_id": "1845:4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Beans",
+    "variant_id": "1845:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d66999e3d037c42",
+  "first_seen": "2026-10-26",
+  "handle": "nayarit-shade-grown-coffee",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/01/1x1Master_Nayarit2001.webp",
+  "platform": "woocommerce",
+  "product_id": "252",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Fresh Roasted Coffee Beans",
+   "Medium Roast",
+   "Mexican Coffee",
+   "Natural Process",
+   "Shade Grown",
+   "Single Origin",
+   "Whole Beans",
+   "arabica coffee"
+  ],
+  "title": "Nayarit Shade Grown Coffee",
+  "url": "https://cosmiccoffeecompany.com/product/nayarit-shade-grown-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "252:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lbs",
+    "variant_id": "252:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Coarse Grind",
+    "variant_id": "252:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine Grind",
+    "variant_id": "252:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "252:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "252:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Medium Grind",
+    "variant_id": "252:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Beans",
+    "variant_id": "252:7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c62a56a73628ec99",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-shade-grown-coffee",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/01/1x1Master_Ethiopia2001.webp",
+  "platform": "woocommerce",
+  "product_id": "4489",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Africa",
+   "Fresh Roasted Coffee Beans",
+   "Light Roast",
+   "Natural Process",
+   "Organic",
+   "Shade Grown",
+   "Single Origin",
+   "Whole Beans",
+   "arabica coffee"
+  ],
+  "title": "Ethiopian Shade Grown Coffee",
+  "url": "https://cosmiccoffeecompany.com/product/ethiopian-shade-grown-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Coarse Grind",
+    "variant_id": "4489:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Fine Grind",
+    "variant_id": "4489:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "4489:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "4489:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Medium Grind",
+    "variant_id": "4489:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Beans",
+    "variant_id": "4489:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "422469a59bca1c17",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic-honey-process",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2026/09/HondurasShop12ozBag.webp",
+  "platform": "woocommerce",
+  "product_id": "6741",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Fresh Roasted Coffee Beans",
+   "Natural Process",
+   "Organic",
+   "Single Origin",
+   "arabica coffee"
+  ],
+  "title": "Honduras Organic Honey Process",
+  "url": "https://cosmiccoffeecompany.com/product/honduras-organic-honey-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Coarse Grind",
+    "variant_id": "6741:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Fine Grind",
+    "variant_id": "6741:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "6741:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "6741:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Grind",
+    "variant_id": "6741:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Whole Beans",
+    "variant_id": "6741:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba7217504c6fa395",
+  "first_seen": "2026-10-26",
+  "handle": "java-organic-single-origin",
+  "image": "https://cosmiccoffeecompany.com/wp-content/uploads/2024/01/1x1Master_Java2001.webp",
+  "platform": "woocommerce",
+  "product_id": "812",
+  "product_type": "variable",
+  "roaster_slug": "cosmiccoffeecompany",
+  "tags": [
+   "Fresh Roasted Coffee Beans",
+   "Indonesia",
+   "Medium Roast",
+   "Organic",
+   "Rainforest Alliance",
+   "Single Origin",
+   "Wet Hulled",
+   "Whole Beans",
+   "arabica coffee",
+   "single variety"
+  ],
+  "title": "Java Organic Single Origin",
+  "url": "https://cosmiccoffeecompany.com/product/java-organic-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Coarse Grind",
+    "variant_id": "812:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Fine Grind",
+    "variant_id": "812:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Coarse Grind",
+    "variant_id": "812:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Fine Grind",
+    "variant_id": "812:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Medium Grind",
+    "variant_id": "812:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Whole Beans",
+    "variant_id": "812:5"
+   }
+  ],
+  "vendor": ""
+ }
+]

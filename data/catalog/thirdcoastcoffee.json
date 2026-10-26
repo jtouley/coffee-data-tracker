@@ -1,0 +1,2355 @@
+[
+ {
+  "body_hash": "bbbe043ccbe1106b",
+  "first_seen": "2026-10-26",
+  "handle": "vino-negro",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/vin.png?v=1672773969",
+  "platform": "shopify",
+  "product_id": "1130805198892",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Vino Negro",
+  "url": "https://www.thirdcoastcoffee.com/products/vino-negro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "10904360878124"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP",
+    "variant_id": "10904997003308"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO",
+    "variant_id": "10904997036076"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE",
+    "variant_id": "10904997068844"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "10904997101612"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "10904997134380"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "10904997167148"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "9bda84353260d8d7",
+  "first_seen": "2026-10-26",
+  "handle": "cinque-terre-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/cnq.png?v=1759853555",
+  "platform": "shopify",
+  "product_id": "4357257166894",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Cinque Terre Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/cinque-terre-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "31284173242414"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "31284173275182"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "31284173307950"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "31284173340718"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "31284173373486"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "31284173406254"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "31284173439022"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "78f1f77fba3afa3d",
+  "first_seen": "2026-10-26",
+  "handle": "frios-mio",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/frm.png?v=1759854318",
+  "platform": "shopify",
+  "product_id": "4540542025774",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Frios Mio",
+  "url": "https://www.thirdcoastcoffee.com/products/frios-mio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "32129186988078"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "32129187020846"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "32129187053614"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "32129187086382"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "32129187119150"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "32129187151918"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "32129187184686"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "15aa0242f7df0849",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/brk_dc26544a-4969-41fd-b16f-fbf4c6ffae41.png?v=1672260359",
+  "platform": "shopify",
+  "product_id": "4667905605678",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.thirdcoastcoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "32715511595054"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "32715511627822"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "32715511660590"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "32715511693358"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "32715511726126"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "32715511758894"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "32715511791662"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "4c7a7122d633edd1",
+  "first_seen": "2026-10-26",
+  "handle": "hijinks-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/hje.png?v=1672773853",
+  "platform": "shopify",
+  "product_id": "6552462426158",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Hijinks Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/hijinks-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "39307236868142"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "39307236900910"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "39307236933678"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "39307236966446"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "39307236999214"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "39307237031982"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "39307237064750"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "7516e74ab847b075",
+  "first_seen": "2026-10-26",
+  "handle": "tres-costas",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/tce.png?v=1759854936",
+  "platform": "shopify",
+  "product_id": "683414257708",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Tres Costas Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/tres-costas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7761865310252"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7761865343020"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7761865375788"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GRIND",
+    "variant_id": "7761865408556"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7761865441324"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7761865474092"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7761865506860"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "7ad3c5f8313844bc",
+  "first_seen": "2026-10-26",
+  "handle": "double-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/dfr.png?v=1759854203",
+  "platform": "shopify",
+  "product_id": "683516002348",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Double French Roast",
+  "url": "https://www.thirdcoastcoffee.com/products/double-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7762429280300"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7842481569836"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7842481602604"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7842481635372"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7842481668140"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7842481700908"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7842481733676"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "5f20ee651663262d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/etu.png?v=1760721920",
+  "platform": "shopify",
+  "product_id": "683676860460",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa",
+   "Africa/Asia/Indonesia"
+  ],
+  "title": "Ethiopia Sidama Natural",
+  "url": "https://www.thirdcoastcoffee.com/products/ethiopia-sidama-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7763197034540"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7842872623148"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7842872655916"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7842872688684"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7842872721452"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7842872754220"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7842872786988"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "747aab04d095b506",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/ita.png?v=1759854406",
+  "platform": "shopify",
+  "product_id": "683723292716",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Italian Roast",
+  "url": "https://www.thirdcoastcoffee.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7763509674028"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7842907029548"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7842907062316"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7842907095084"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7842907127852"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7842907160620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7842907193388"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "652514be0520dba9",
+  "first_seen": "2026-10-26",
+  "handle": "star-of-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/soe.png?v=1759854873",
+  "platform": "shopify",
+  "product_id": "685254180908",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa/Asia/Indonesia",
+   "Blends&Decaf"
+  ],
+  "title": "Star of Ethiopia",
+  "url": "https://www.thirdcoastcoffee.com/products/star-of-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7784363360300"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7784437678124"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7784437743660"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7784437809196"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7784437874732"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7784437973036"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7784438038572"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "defab0ce8d4dec7b",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/mok.png?v=1759854709",
+  "platform": "shopify",
+  "product_id": "685280722988",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Moka Java",
+  "url": "https://www.thirdcoastcoffee.com/products/moka-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7784591720492"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7784591753260"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7784591786028"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7784591818796"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7784591851564"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7784591884332"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7784591949868"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "45a8b1819dac22fc",
+  "first_seen": "2026-10-26",
+  "handle": "special-snowflake",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/ssb.png?v=1759854828",
+  "platform": "shopify",
+  "product_id": "685292060716",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Special Snowflake Blend",
+  "url": "https://www.thirdcoastcoffee.com/products/special-snowflake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7784731115564"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7784731148332"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7784731181100"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7784731213868"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7784731246636"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7784731279404"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7784731312172"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "bfa809643d90c71d",
+  "first_seen": "2026-10-26",
+  "handle": "el-guapo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/ege.png?v=1759854243",
+  "platform": "shopify",
+  "product_id": "685304348716",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "El Guapo Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/el-guapo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7784860778540"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7784860811308"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7784860844076"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7784860876844"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7784860942380"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7784860975148"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7784861007916"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "598e923a5c870df0",
+  "first_seen": "2026-10-26",
+  "handle": "gamelan",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/gam.png?v=1759854347",
+  "platform": "shopify",
+  "product_id": "685314474028",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Gamelan Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/gamelan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7784959213612"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7784959246380"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7784959279148"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7784959311916"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7784959344684"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7784959377452"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7784959410220"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "57c5eebd8c1fe7e1",
+  "first_seen": "2026-10-26",
+  "handle": "special-purpose-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/spb.png?v=1759854812",
+  "platform": "shopify",
+  "product_id": "685326073900",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Special Purpose Blend",
+  "url": "https://www.thirdcoastcoffee.com/products/special-purpose-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7785074622508"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7785074655276"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7785074688044"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7785074720812"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7785074753580"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7785074786348"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7785074819116"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6bc62940b57917ef",
+  "first_seen": "2026-10-26",
+  "handle": "third-coast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/thb.png?v=1759854920",
+  "platform": "shopify",
+  "product_id": "685339410476",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Third Coast Blend",
+  "url": "https://www.thirdcoastcoffee.com/products/third-coast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7785214935084"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7785214967852"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7785215000620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7785215033388"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7785215066156"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7785215098924"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7785215131692"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "d7f52001a5cf6d5e",
+  "first_seen": "2026-10-26",
+  "handle": "pacifico-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/pac.png?v=1759854762",
+  "platform": "shopify",
+  "product_id": "685355597868",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Pacifico Espresso",
+  "url": "https://www.thirdcoastcoffee.com/products/pacifico-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7785348759596"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7785348792364"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7785348825132"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7785348890668"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7785348923436"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7785348956204"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7785348988972"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "0b78a9d9b61f149f",
+  "first_seen": "2026-10-26",
+  "handle": "mixtlan-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/mxn.png?v=1759854686",
+  "platform": "shopify",
+  "product_id": "685372276780",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Mixtlan French Roast",
+  "url": "https://www.thirdcoastcoffee.com/products/mixtlan-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7785480618028"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7785480650796"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7785480683564"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7785480749100"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7785480781868"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7785480814636"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7785480880172"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "06c52a681ef3f715",
+  "first_seen": "2026-10-26",
+  "handle": "kerbey-lane-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/klh.png?v=1759854542",
+  "platform": "shopify",
+  "product_id": "685380632620",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Kerbey Lane House Blend",
+  "url": "https://www.thirdcoastcoffee.com/products/kerbey-lane-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7785563095084"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7785563160620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7785563291692"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7785563389996"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7785563455532"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7785563488300"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7785563553836"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "efc35cc31415dc42",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/mex.png?v=1759854639",
+  "platform": "shopify",
+  "product_id": "690742362156",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Mexico",
+  "url": "https://www.thirdcoastcoffee.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7840351060012"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7840351092780"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7840351125548"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7840351191084"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7840351289388"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7840351354924"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7840351420460"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "c459a6822ba8a42b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/gul.png?v=1759854365",
+  "platform": "shopify",
+  "product_id": "690755010604",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.thirdcoastcoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7840489832492"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7840489865260"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7840489930796"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7840489996332"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7840490061868"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7840490094636"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7840490192940"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "2cf61d0a8e9f018f",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/pea.png?v=1759854791",
+  "platform": "shopify",
+  "product_id": "690809700396",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "South America"
+  ],
+  "title": "Peru",
+  "url": "https://www.thirdcoastcoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7840922927148"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7841033125932"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7841033191468"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7841033257004"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7841033322540"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7841033420844"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7841033486380"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "9815abd4241c9dff",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/bolivia.png?v=1759854994",
+  "platform": "shopify",
+  "product_id": "691185483820",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "South America"
+  ],
+  "title": "Bolivia",
+  "url": "https://www.thirdcoastcoffee.com/products/bolivia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7843598368812"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7843598401580"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7843598434348"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7843598467116"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7843598499884"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7843598532652"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7843598565420"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "abc3a8f688b9628c",
+  "first_seen": "2026-10-26",
+  "handle": "coyona-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/coyona.png?v=1759853584",
+  "platform": "shopify",
+  "product_id": "691201048620",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "South America"
+  ],
+  "title": "Coyona Natural",
+  "url": "https://www.thirdcoastcoffee.com/products/coyona-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7843733831724"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7843733864492"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7843733897260"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7843733930028"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7843733962796"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7843733995564"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7843734028332"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8a2f01a4fc420406",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/colombia.png?v=1759853570",
+  "platform": "shopify",
+  "product_id": "691213959212",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "South America"
+  ],
+  "title": "Colombia",
+  "url": "https://www.thirdcoastcoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7843834462252"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7843834495020"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7843834527788"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7843834560556"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7843834593324"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7843834626092"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7843834658860"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "c6a14cc571b63a2b",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/nic.png?v=1759854745",
+  "platform": "shopify",
+  "product_id": "691228475436",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Nicaragua",
+  "url": "https://www.thirdcoastcoffee.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7843950886956"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7843950919724"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7843950952492"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7843950985260"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7843951018028"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7843951050796"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7843951083564"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "e679741bdd1651d6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/hom.png?v=1672773858",
+  "platform": "shopify",
+  "product_id": "691250724908",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Honduras",
+  "url": "https://www.thirdcoastcoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844111351852"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844111384620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844111417388"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844111450156"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844111482924"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844111515692"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844111548460"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "b04a04e732cff379",
+  "first_seen": "2026-10-26",
+  "handle": "honey-processed-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/hoh.png?v=1759854386",
+  "platform": "shopify",
+  "product_id": "691264094252",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Central America"
+  ],
+  "title": "Honey Processed Honduras",
+  "url": "https://www.thirdcoastcoffee.com/products/honey-processed-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844218306604"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844218339372"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844218437676"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844218503212"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844218568748"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844218634284"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844218699820"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "3a9c6d23a6d24d16",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/ety.png?v=1759854300",
+  "platform": "shopify",
+  "product_id": "691280150572",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa",
+   "Africa/Asia/Indonesia"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.thirdcoastcoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844389093420"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844389126188"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844389158956"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844389191724"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844389224492"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844389257260"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844389290028"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6758fc218def65c5",
+  "first_seen": "2026-10-26",
+  "handle": "congo",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/cgs.png?v=1672773807",
+  "platform": "shopify",
+  "product_id": "691291422764",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa",
+   "Africa/Asia/Indonesia"
+  ],
+  "title": "Democratic Republic of the Congo",
+  "url": "https://www.thirdcoastcoffee.com/products/congo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844475797548"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844475830316"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844475863084"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844475895852"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844475928620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844475961388"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844475994156"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "1519379da7b201ff",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/rwc.png?v=1672773935",
+  "platform": "shopify",
+  "product_id": "691304333356",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa",
+   "Africa/Asia/Indonesia"
+  ],
+  "title": "Rwanda",
+  "url": "https://www.thirdcoastcoffee.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844573708332"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844573741100"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844573773868"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844573806636"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844573839404"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844573872172"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844573904940"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8faa4556661124db",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/sug.png?v=1759854894",
+  "platform": "shopify",
+  "product_id": "691335921708",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa/Asia/Indonesia",
+   "Indonesia"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.thirdcoastcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7844812718124"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7844812750892"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7844812783660"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7844812816428"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7844812849196"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7844812914732"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7844812947500"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "6e80caabe0690c82",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/ets.png?v=1759854274",
+  "platform": "shopify",
+  "product_id": "691569197100",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa",
+   "Africa/Asia/Indonesia"
+  ],
+  "title": "Ethiopia Sidama",
+  "url": "https://www.thirdcoastcoffee.com/products/ethiopia-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7846846300204"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7846846332972"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7846846365740"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7846846398508"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7846846496812"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7846846529580"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7846846562348"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "22ef13a1f99622cd",
+  "first_seen": "2026-10-26",
+  "handle": "laos",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/files/laos.png?v=1759854589",
+  "platform": "shopify",
+  "product_id": "703354667052",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Africa/Asia/Indonesia",
+   "East Asia"
+  ],
+  "title": "Laos",
+  "url": "https://www.thirdcoastcoffee.com/products/laos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "7961529090092"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "7961529122860"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "7961529188396"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "7961529221164"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "7961529286700"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "7961529352236"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "7961529483308"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f8194900468595f5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0012/2336/0556/products/mwd_a9a6ae01-be75-45de-a198-4d91563cbed6.png?v=1672773799",
+  "platform": "shopify",
+  "product_id": "714637508652",
+  "product_type": "Coffee",
+  "roaster_slug": "thirdcoastcoffee",
+  "tags": [
+   "Blends&Decaf"
+  ],
+  "title": "Decaf Honduras",
+  "url": "https://www.thirdcoastcoffee.com/products/decaf-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "WHOLE BEAN",
+    "variant_id": "8069682200620"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "DRIP GRIND",
+    "variant_id": "8069682233388"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "ESPRESSO GRIND",
+    "variant_id": "8069682266156"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TODDY/FRENCH PRESS/COARSE GROUND",
+    "variant_id": "8069682298924"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "CHEMEX",
+    "variant_id": "8069682331692"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "TURKISH",
+    "variant_id": "8069682364460"
+   },
+   {
+    "available": true,
+    "grams": 467,
+    "price_usd": 15.0,
+    "title": "PERCOLATOR",
+    "variant_id": "8069682397228"
+   }
+  ],
+  "vendor": "Third Coast Coffee Roasting Company"
+ }
+]

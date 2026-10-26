@@ -1,0 +1,302 @@
+[
+ {
+  "body_hash": "b0a662d49be1cbd3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/d0fd00a2-6c3c-48ea-bd3a-b9104f797fe9/111423+Red+Roaster+-+Product+-+Kenya.jpg",
+  "platform": "squarespace",
+  "product_id": "656f7111263fd234be06705a",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Kenya",
+  "url": "https://www.redroastercoffee.com/store/p/kenya",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "1a6cc01c-ffa5-4fc4-a1f3-cd6bd47c716e"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "f96b08e4-eaf7-449c-b095-1f7de1ff6618"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c16ea546f0bb2946",
+  "first_seen": "2026-10-26",
+  "handle": "red-rooster",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/93022be0-d2f2-4695-8d1b-08dedfa20a58/111423+Red+Roaster+-+Product+-+RR+Roast.jpg",
+  "platform": "squarespace",
+  "product_id": "656f74ed24da95679f7518ee",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Red Rooster Roast",
+  "url": "https://www.redroastercoffee.com/store/p/red-rooster",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "06e23692-8e69-444b-a9c8-10b862b85644"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "779236a0-376b-4a62-b699-8247d14f644d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "504f194851be3805",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/b411c080-3481-41da-8930-4e3a386853b6/111423+Red+Roaster+-+Product+-+Mocha+Java.jpg",
+  "platform": "squarespace",
+  "product_id": "656f75e9baae4a6fad586c73",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://www.redroastercoffee.com/store/p/mocha-java",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "1bae509e-6a8a-4704-8bb1-8c0b7952d7d0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "9b6cc555-7048-4b0f-ad89-43721487ff80"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e26e1dceae71ec1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/dcb270a2-ac0e-45fa-b281-993cf0fd7884/111423+Red+Roaster+-+Product+-+Guatemala.jpg",
+  "platform": "squarespace",
+  "product_id": "656f7636f1065d7c6a1e635a",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Guatemala Antigua",
+  "url": "https://www.redroastercoffee.com/store/p/guatemala",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "0a5f97cd-b149-4264-9790-7e1028f01b0e"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "9e288d93-f25a-48cb-ad3c-26e2973370a7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b7d2c61789bdb59",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/0c919fb6-eaae-4844-af91-b3b038973461/111423+Red+Roaster+-+Product+-+Ethiopia.jpg",
+  "platform": "squarespace",
+  "product_id": "656f76794f6e9a05c46fe848",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Ethiopia Harrar",
+  "url": "https://www.redroastercoffee.com/store/p/ethiopia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "04b0df3e-6964-4f16-a7f2-1639b96ec944"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "7bab1a79-f8e0-4eff-97d5-8ae22d02c733"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ee40cb9f465a1816",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/ddaec637-a3bd-4744-9e92-086c89bb3b79/111423+Red+Roaster+-+Product+-+Sumatra.jpg",
+  "platform": "squarespace",
+  "product_id": "656f76b64b5c4f3a71e6b444",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://www.redroastercoffee.com/store/p/sumatra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "04ad5a38-28c0-4ee4-a817-4176284b308d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "66d8b3e8-0337-4754-9763-eb69d6be696e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe9f831841ae1fe8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/62b79986-e4f1-440f-afcf-8ace897cc5e0/111423+Red+Roaster+-+Product+-+Espresso.jpg",
+  "platform": "squarespace",
+  "product_id": "656f76f4f61b947da22106de",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Espresso Roast",
+  "url": "https://www.redroastercoffee.com/store/p/espresso",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "2a8a53bd-2bc9-4fd2-8c56-80e2883ed19a"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "bb0b6fdf-8f2a-4d83-91e6-2cc93298d8a2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6fbb77099ed0f407",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/43acf2fb-a2a9-4721-acb8-1587f4f55824/111423+Red+Roaster+-+Product+-+Honduras.jpg",
+  "platform": "squarespace",
+  "product_id": "656f77684a8f4568bc6d7084",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Organic Honduras",
+  "url": "https://www.redroastercoffee.com/store/p/honduras",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "1ac3235f-9b28-4919-87bc-8e7bb0588ff8"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "8dde4dd1-8134-4d98-b0f2-9c5d58a87681"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d25f2edd28dc4f1d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/dadb40f3-1988-468a-97f3-1284dab041e6/111423+Red+Roaster+-+Product+-+Decaf.jpg",
+  "platform": "squarespace",
+  "product_id": "656f77cd4f6e9a05c4704384",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Decaf Guatemala",
+  "url": "https://www.redroastercoffee.com/store/p/decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "28f026d1-a0ea-46c4-ae94-dd6d797d06ef"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "3822cf20-4e95-4678-b5f7-19f8d18149d0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b43608a33d65071",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/655bccdb716f264c914e1598/37485851-3415-4af1-a540-f8859ac2f8a7/111423+Red+Roaster+-+Product+-+Colombia.jpg",
+  "platform": "squarespace",
+  "product_id": "656f781ff1065d7c6a1eeaf2",
+  "product_type": "",
+  "roaster_slug": "redroastercoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.redroastercoffee.com/store/p/colombia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.95,
+    "title": "12 oz bag",
+    "variant_id": "29589f50-e744-4f8b-bbcd-d73859986db4"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5 lb bag*",
+    "variant_id": "40181079-b55a-4e5f-a9c0-22277425b65f"
+   }
+  ],
+  "vendor": ""
+ }
+]

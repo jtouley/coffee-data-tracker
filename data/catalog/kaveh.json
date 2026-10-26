@@ -1,0 +1,486 @@
+[
+ {
+  "body_hash": "2413272ee6bc93cb",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-ethiopia-guji-badeyi-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0904/6363/3721/files/Coffee_Bag_Label.png?v=1773436728",
+  "platform": "shopify",
+  "product_id": "10141857743161",
+  "product_type": "Coffee Roast",
+  "roaster_slug": "kaveh",
+  "tags": [],
+  "title": "Single Origin -- Ethiopia - Badeyi, Guji - Grade 2",
+  "url": "https://www.kaveh.coffee/products/single-origin-ethiopia-guji-badeyi-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "52009436447033"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz / French Press",
+    "variant_id": "52009436479801"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz / V60/Pourover",
+    "variant_id": "52009436512569"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz / Drip",
+    "variant_id": "52009436545337"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz / Espresso",
+    "variant_id": "52009436578105"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "52009436610873"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg / French Press",
+    "variant_id": "52009436643641"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg / V60/Pourover",
+    "variant_id": "52009436676409"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg / Drip",
+    "variant_id": "52009436709177"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg / Espresso",
+    "variant_id": "52009436741945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "52009436774713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / French Press",
+    "variant_id": "52009436807481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / V60/Pourover",
+    "variant_id": "52009436840249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Drip",
+    "variant_id": "52009436873017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "52009436905785"
+   }
+  ],
+  "vendor": "Kaveh Coffee Co"
+ },
+ {
+  "body_hash": "d21433ea528200e2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blend-of-latin-american-coffees",
+  "image": "https://cdn.shopify.com/s/files/1/0904/6363/3721/files/arisarina_coop_coffee_cherries_1.jpg?v=1773793551",
+  "platform": "shopify",
+  "product_id": "10145432731961",
+  "product_type": "Coffee Roast",
+  "roaster_slug": "kaveh",
+  "tags": [],
+  "title": "Decaf Espresso — A High Grown Latin American Blend",
+  "url": "https://www.kaveh.coffee/products/decaf-blend-of-latin-american-coffees",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52020808679737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / French Press",
+    "variant_id": "52020808712505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / V60/Pourover",
+    "variant_id": "52020808745273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "52020808778041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Espresso",
+    "variant_id": "52020808810809"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "52020808843577"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / French Press",
+    "variant_id": "52020808876345"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / V60/Pourover",
+    "variant_id": "52020808909113"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Drip",
+    "variant_id": "52020808941881"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Espresso",
+    "variant_id": "52020808974649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "52020809007417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / French Press",
+    "variant_id": "52020809040185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / V60/Pourover",
+    "variant_id": "52020809072953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Drip",
+    "variant_id": "52020809105721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "52020809138489"
+   }
+  ],
+  "vendor": "Kaveh Coffee Co"
+ },
+ {
+  "body_hash": "537e969cb0b8d9a5",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-india-ratnagiri-state",
+  "image": "https://cdn.shopify.com/s/files/1/0904/6363/3721/files/3.png?v=1755805371",
+  "platform": "shopify",
+  "product_id": "9962014245177",
+  "product_type": "Coffee Roast",
+  "roaster_slug": "kaveh",
+  "tags": [],
+  "title": "Single Origin -- India - Ratnagiri State",
+  "url": "https://www.kaveh.coffee/products/single-origin-india-ratnagiri-state",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "51319233511737"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz / French Press",
+    "variant_id": "51319233544505"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz / V60/Pourover",
+    "variant_id": "51319233577273"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz / Drip",
+    "variant_id": "51319233610041"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz / Espresso",
+    "variant_id": "51319233642809"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "51319233675577"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / French Press",
+    "variant_id": "51319233708345"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / V60/Pourover",
+    "variant_id": "51319233741113"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Drip",
+    "variant_id": "51319233773881"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Espresso",
+    "variant_id": "51319233806649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "51319233839417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / French Press",
+    "variant_id": "51319233872185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / V60/Pourover",
+    "variant_id": "51319233904953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Drip",
+    "variant_id": "51319233937721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "51319233970489"
+   }
+  ],
+  "vendor": "Kaveh Coffee Co"
+ },
+ {
+  "body_hash": "8207511867ad15b5",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-colombia-narino-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0904/6363/3721/files/2.png?v=1758287073",
+  "platform": "shopify",
+  "product_id": "9987978625337",
+  "product_type": "Coffee Roast",
+  "roaster_slug": "kaveh",
+  "tags": [],
+  "title": "Single Origin -- Colombia - Narino Washed",
+  "url": "https://www.kaveh.coffee/products/single-origin-colombia-narino-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz / Whole Bean",
+    "variant_id": "51319187145017"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz / French Press",
+    "variant_id": "51319187177785"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz / V60/Pourover",
+    "variant_id": "51319187210553"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz / Drip",
+    "variant_id": "51319187243321"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz / Espresso",
+    "variant_id": "51319187276089"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "51319187308857"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / French Press",
+    "variant_id": "51319187341625"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / V60/Pourover",
+    "variant_id": "51319187374393"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Drip",
+    "variant_id": "51319187407161"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Espresso",
+    "variant_id": "51319187439929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51319187472697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb / French Press",
+    "variant_id": "51319187505465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb / V60/Pourover",
+    "variant_id": "51319187538233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb / Drip",
+    "variant_id": "51319187571001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5lb / Espresso",
+    "variant_id": "51319187603769"
+   }
+  ],
+  "vendor": "Kaveh Coffee Co"
+ }
+]

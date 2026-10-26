@@ -1,0 +1,1066 @@
+[
+ {
+  "body_hash": "4e2bde1be9f2e8f8",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/DynamicEsp.png?v=1774399282",
+  "platform": "shopify",
+  "product_id": "10119241597242",
+  "product_type": "",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "buckets",
+   "wholesale",
+   "wshbucket"
+  ],
+  "title": "6.8 Kg Bucket - Black Series = Dynamic Espresso",
+  "url": "https://theboyandthebear.com/products/bucket-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 414.0,
+    "title": "Default Title",
+    "variant_id": "52552108704058"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "1aa5889951c299e8",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/decaf.png?v=1774399369",
+  "platform": "shopify",
+  "product_id": "10122007413050",
+  "product_type": "",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "buckets",
+   "wholesale",
+   "wshbucket"
+  ],
+  "title": "3.4Kg Bucket - Black Series - Decaf",
+  "url": "https://theboyandthebear.com/products/bucket-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 243.0,
+    "title": "Default Title",
+    "variant_id": "52559264907578"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "6a1ec73d2aa76108",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/001_c63740cc-63b3-40e6-85fc-946b323525eb.png?v=1777684452",
+  "platform": "shopify",
+  "product_id": "10198507782458",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "white"
+  ],
+  "title": "Primavera Decaf",
+  "url": "https://theboyandthebear.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "53024731824442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / French Press",
+    "variant_id": "53024731857210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Pour Over V60",
+    "variant_id": "53024731889978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "53024731955514"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 71.46,
+    "title": "1kg Bag (save 10%) / Whole Bean",
+    "variant_id": "53024731988282"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 5.5,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53024732021050"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "360b47135777548f",
+  "first_seen": "2026-10-26",
+  "handle": "bucket-decaf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/halfbucketdecaf.png?v=1774400008",
+  "platform": "shopify",
+  "product_id": "10235872641338",
+  "product_type": "",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "buckets",
+   "wholesale",
+   "wshbucket"
+  ],
+  "title": "1.5Kg Bucket - Black Series = Decaf",
+  "url": "https://theboyandthebear.com/products/bucket-decaf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 123.0,
+    "title": "Default Title",
+    "variant_id": "53208336597306"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "55eb45f733008a6c",
+  "first_seen": "2026-10-26",
+  "handle": "portable-pourover-la-reserva",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Portable---La-Reserva-02.png?v=1779996219",
+  "platform": "shopify",
+  "product_id": "10265887473978",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "portable pourover"
+  ],
+  "title": "Portable PourOver -  La Reserva",
+  "url": "https://theboyandthebear.com/products/portable-pourover-la-reserva",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 25.0,
+    "title": "5 Packs",
+    "variant_id": "53296903323962"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 45.0,
+    "title": "10 Packs",
+    "variant_id": "53296903356730"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 6.0,
+    "title": "1 Pack",
+    "variant_id": "53296903389498"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "754887323b7fcb27",
+  "first_seen": "2026-10-26",
+  "handle": "la-cueva-3kg",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Office-DynamicEspresso02_4197fbd3-d5c4-499a-bd0c-89d54e059ce2.png?v=1777355490",
+  "platform": "shopify",
+  "product_id": "10277796118842",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "office"
+  ],
+  "title": "Office: Dynamic Espresso",
+  "url": "https://theboyandthebear.com/products/la-cueva-3kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 105.0,
+    "title": "2kg - Save 12% / Whole Bean",
+    "variant_id": "53375002870074"
+   },
+   {
+    "available": true,
+    "grams": 4000,
+    "price_usd": 192.0,
+    "title": "4kg - Save 20% / Whole Bean",
+    "variant_id": "53375002902842"
+   },
+   {
+    "available": true,
+    "grams": 6000,
+    "price_usd": 270.0,
+    "title": "6kg - Save 25% / Whole Bean",
+    "variant_id": "53375002935610"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "7790c6d1e122b79c",
+  "first_seen": "2026-10-26",
+  "handle": "light-dark-17",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---black-Box---LIGHT-DARK-2025_png_44754462-04b2-4ceb-9b8c-f3c61e0e2db7.webp?v=1777355522",
+  "platform": "shopify",
+  "product_id": "10277796380986",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "black",
+   "coffee"
+  ],
+  "title": "Light & Dark",
+  "url": "https://theboyandthebear.com/products/light-dark-17",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "53375003623738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / French Press",
+    "variant_id": "53375003656506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Pour Over",
+    "variant_id": "53375003689274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "53375003722042"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg Bag / Whole Bean",
+    "variant_id": "53375003754810"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "0f2c342f72bea86c",
+  "first_seen": "2026-10-26",
+  "handle": "office-coro-cora",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Office-DynamicEspresso02_e7ffed9d-cdb6-4335-9441-45a14f94de88.png?v=1777355558",
+  "platform": "shopify",
+  "product_id": "10277796512058",
+  "product_type": "",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "office"
+  ],
+  "title": "Office: Coro Cora",
+  "url": "https://theboyandthebear.com/products/office-coro-cora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2000,
+    "price_usd": 97.5,
+    "title": "2kg - Save 12% / Whole Bean",
+    "variant_id": "53375004213562"
+   },
+   {
+    "available": true,
+    "grams": 4000,
+    "price_usd": 177.6,
+    "title": "4kg - Save 20% / Whole Bean",
+    "variant_id": "53375004246330"
+   },
+   {
+    "available": true,
+    "grams": 6000,
+    "price_usd": 249.75,
+    "title": "6kg - Save 25% / Whole Bean",
+    "variant_id": "53375004279098"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "e365e8e3145ff8c2",
+  "first_seen": "2026-10-26",
+  "handle": "dynamic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---black-Box---DYNAMIC-2025_9a6638af-f307-4e89-bccd-6a9b6122b062.png?v=1755229429",
+  "platform": "shopify",
+  "product_id": "10280595030330",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "all coffee",
+   "black",
+   "coffee"
+  ],
+  "title": "Dynamic Espresso",
+  "url": "https://theboyandthebear.com/products/dynamic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "53388334301498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / French Press",
+    "variant_id": "53388334334266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Pour Over",
+    "variant_id": "53388334367034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "53388334399802"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1kg Bag / Whole Bean",
+    "variant_id": "53388334432570"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "7d43c737e2a4ac5c",
+  "first_seen": "2026-10-26",
+  "handle": "ecuador-intag-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Ecuador--Intag.png?v=1784066286",
+  "platform": "shopify",
+  "product_id": "10331821375802",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ecuador: Intag Blend",
+  "url": "https://theboyandthebear.com/products/ecuador-intag-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 28.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "53619346080058"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 28.0,
+    "title": "300g Box / French Press",
+    "variant_id": "53619346112826"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 28.0,
+    "title": "300g Box / Pour Over V60",
+    "variant_id": "53619346145594"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 28.0,
+    "title": "300g Box / Home Coffee Maker",
+    "variant_id": "53619346178362"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 84.0,
+    "title": "1000g Bag / Whole Bean",
+    "variant_id": "53619346211130"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 84.0,
+    "title": "1000g Bag / Home Coffee Maker",
+    "variant_id": "53619346243898"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 6.5,
+    "title": "60g  Bag / Whole Bean",
+    "variant_id": "53619346276666"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "fda0d9eab9b05fa4",
+  "first_seen": "2026-10-26",
+  "handle": "portable-pourover-fabian-acevedo",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Fabian---02.png?v=1782942940",
+  "platform": "shopify",
+  "product_id": "10341115199802",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "portable pourover"
+  ],
+  "title": "Portable PourOver - Fabian Acevedo",
+  "url": "https://theboyandthebear.com/products/portable-pourover-fabian-acevedo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "5 Packs",
+    "variant_id": "53670921273658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 40.0,
+    "title": "10 Packs",
+    "variant_id": "53670921306426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 5.0,
+    "title": "1 Pack",
+    "variant_id": "53670921339194"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "233d420fa2156b5c",
+  "first_seen": "2026-10-26",
+  "handle": "emerald-series-la-esperanza",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Web---La-Esperanza.png?v=1786130845",
+  "platform": "shopify",
+  "product_id": "10370461368634",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "emerald"
+  ],
+  "title": "Emerald Series: La Esperanza",
+  "url": "https://theboyandthebear.com/products/emerald-series-la-esperanza",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 50.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "53778778161466"
+   },
+   {
+    "available": true,
+    "grams": 1028,
+    "price_usd": 150.0,
+    "title": "1K Bag / Whole Bean",
+    "variant_id": "53778778194234"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 10.0,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53778778227002"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "331fc6ed48931d80",
+  "first_seen": "2026-10-26",
+  "handle": "dos-quebradas-white",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---2026---white-dos-quebradas.png?v=1790302565",
+  "platform": "shopify",
+  "product_id": "10372351426874",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "white"
+  ],
+  "title": "Dos Quebradas",
+  "url": "https://theboyandthebear.com/products/dos-quebradas-white",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "53787692925242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / French Press",
+    "variant_id": "53787692958010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / PourOver V60",
+    "variant_id": "53787692990778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / PourOver Chemex",
+    "variant_id": "53787693023546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "53787693056314"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 71.0,
+    "title": "1kg Bag (save 10%) / Whole Bean",
+    "variant_id": "53787693089082"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 5.0,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53787693121850"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "a04db392feea6e2d",
+  "first_seen": "2026-10-26",
+  "handle": "jose-galindes-white",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---2026---white-jose-g.png?v=1790361529",
+  "platform": "shopify",
+  "product_id": "10372412834106",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "white"
+  ],
+  "title": "Jose Galindez",
+  "url": "https://theboyandthebear.com/products/jose-galindes-white",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "53788064416058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / French Press",
+    "variant_id": "53788064448826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / PourOver V60",
+    "variant_id": "53788064481594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / PourOver Chemex",
+    "variant_id": "53788064514362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "53788064547130"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 71.0,
+    "title": "1kg Bag (save 10%) / Whole Bean",
+    "variant_id": "53788064579898"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 5.0,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53788064612666"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "3bf24b6315c98ed9",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gondo",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---2025--Terracotta-Box---GONDO.png?v=1789765324",
+  "platform": "shopify",
+  "product_id": "10414364328250",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya: Gondo",
+  "url": "https://theboyandthebear.com/products/kenya-gondo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "53970569363770"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / French Press",
+    "variant_id": "53970569396538"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / PourOver V60",
+    "variant_id": "53970569429306"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / PourOver Chemex",
+    "variant_id": "53970569462074"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / Home Coffee Maker",
+    "variant_id": "53970569494842"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / Whole Bean",
+    "variant_id": "53970569527610"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / French Press",
+    "variant_id": "53970569560378"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / PourOver V60",
+    "variant_id": "53970569593146"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / PourOver Chemex",
+    "variant_id": "53970569625914"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / Home Coffee Maker",
+    "variant_id": "53970569658682"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 6.5,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53970569691450"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "203af4204492eb6e",
+  "first_seen": "2026-10-26",
+  "handle": "emerald-series-ombligon",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/2026-Web-Emerald-Ombligon.png?v=1788888709",
+  "platform": "shopify",
+  "product_id": "10414384513338",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "emerald"
+  ],
+  "title": "Emerald Series: Ombligon",
+  "url": "https://theboyandthebear.com/products/emerald-series-ombligon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 63.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "53970718097722"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 189.0,
+    "title": "1K Bag / Whole Bean",
+    "variant_id": "53970718130490"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 12.0,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53970718163258"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "030d7208b53029f7",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-riakiberu",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Kenya----R.png?v=1790364601",
+  "platform": "shopify",
+  "product_id": "10420752351546",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya: Riakiberu",
+  "url": "https://theboyandthebear.com/products/kenya-riakiberu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "53999792914746"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / French Press",
+    "variant_id": "53999792947514"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / PourOver V60",
+    "variant_id": "53999792980282"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / PourOver Chemex",
+    "variant_id": "53999793013050"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 26.0,
+    "title": "300g Box / Home Coffee Maker",
+    "variant_id": "53999793045818"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / Whole Bean",
+    "variant_id": "53999793078586"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / French Press",
+    "variant_id": "53999793111354"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / PourOver V60",
+    "variant_id": "53999793144122"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / PourOver Chemex",
+    "variant_id": "53999793176890"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1000g Bag / Home Coffee Maker",
+    "variant_id": "53999793209658"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 5.5,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "53999793242426"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ },
+ {
+  "body_hash": "6125d5a1d55ffa97",
+  "first_seen": "2026-10-26",
+  "handle": "emerald-series-sareni",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Sareni-Natural.png?v=1790365608",
+  "platform": "shopify",
+  "product_id": "10434526642490",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee",
+   "emerald"
+  ],
+  "title": "Emerald Series: Sareni",
+  "url": "https://theboyandthebear.com/products/emerald-series-sareni",
+  "variants": [
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 37.0,
+    "title": "300g Box / Whole Bean",
+    "variant_id": "54045512630586"
+   },
+   {
+    "available": true,
+    "grams": 300,
+    "price_usd": 111.0,
+    "title": "1K Bag / Whole Bean",
+    "variant_id": "54045512663354"
+   },
+   {
+    "available": true,
+    "grams": 60,
+    "price_usd": 8.0,
+    "title": "60g Bag / Whole Bean",
+    "variant_id": "54045512696122"
+   }
+  ],
+  "vendor": "The Boy & The Bear"
+ },
+ {
+  "body_hash": "972b08db83dd57e4",
+  "first_seen": "2026-10-26",
+  "handle": "misfits-of-eerie-light-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/Misfits-of-Eerie-book-and-coffee-beans.jpg?v=1790965377",
+  "platform": "shopify",
+  "product_id": "15406261797178",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "black",
+   "coffee"
+  ],
+  "title": "Light & Dark × The Misfits of Eerie",
+  "url": "https://theboyandthebear.com/products/misfits-of-eerie-light-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "67617403601210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "340g Box / French Press",
+    "variant_id": "67617403633978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "340g Box / Pour Over",
+    "variant_id": "67617403666746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "67617403699514"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "075fe9ea22ab2dba",
+  "first_seen": "2026-10-26",
+  "handle": "coro-cora",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/WEB---black-Box-coro-cora-2025_png_9b697e58-bf1c-4244-9692-0d8f5bc9c7a8.webp?v=1777356420",
+  "platform": "shopify",
+  "product_id": "8651153637690",
+  "product_type": "",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "black",
+   "coffee"
+  ],
+  "title": "Coro-Cora",
+  "url": "https://theboyandthebear.com/products/coro-cora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "340g Box / Whole Bean",
+    "variant_id": "46767966388538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "340g Box / French Press",
+    "variant_id": "46767966421306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "340g Box / Home Coffee Maker",
+    "variant_id": "46767966486842"
+   },
+   {
+    "available": true,
+    "grams": 1028,
+    "price_usd": 58.0,
+    "title": "1K Bag / Whole Bean",
+    "variant_id": "51592770584890"
+   },
+   {
+    "available": true,
+    "grams": 368,
+    "price_usd": 22.0,
+    "title": "340 Box / Whole Bean",
+    "variant_id": "53375001461050"
+   },
+   {
+    "available": true,
+    "grams": 368,
+    "price_usd": 22.0,
+    "title": "340 Box / Pour Over",
+    "variant_id": "53375001493818"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "340 Box / French Press",
+    "variant_id": "53375001526586"
+   }
+  ],
+  "vendor": "Boy Bear Rebuild"
+ },
+ {
+  "body_hash": "5074a7b7d4f59e80",
+  "first_seen": "2026-10-26",
+  "handle": "dynamic-espresso-1-kilo",
+  "image": "https://cdn.shopify.com/s/files/1/1811/2485/files/DynamicEsp-1K.png?v=1777572914",
+  "platform": "shopify",
+  "product_id": "8931490332986",
+  "product_type": "Coffee",
+  "roaster_slug": "theboyandthebear",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Dynamic Espresso 1 kg",
+  "url": "https://theboyandthebear.com/products/dynamic-espresso-1-kilo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1028,
+    "price_usd": 60.0,
+    "title": "Whole Bean",
+    "variant_id": "47513610256698"
+   }
+  ],
+  "vendor": "The Boy & The Bear - Coffee Roastery"
+ }
+]

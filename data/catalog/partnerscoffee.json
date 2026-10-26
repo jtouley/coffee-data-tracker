@@ -1,0 +1,2887 @@
+[
+ {
+  "body_hash": "e6327f4adbb9e19d",
+  "first_seen": "2026-10-26",
+  "handle": "santa-elisa-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/SantaElisaGeshaImage1.jpg?v=1790860952",
+  "platform": "shopify",
+  "product_id": "10314583015503",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Exceptional Coffee",
+   "Fellow Aiden",
+   "Kalita Wave",
+   "Limited Release",
+   "V60 Pour Over"
+  ],
+  "title": "Santa Elisa Gesha",
+  "url": "https://www.partnerscoffee.com/products/santa-elisa-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 36.0,
+    "title": "6oz. / Whole Bean",
+    "variant_id": "50516627292239"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "25103c1a7cb83c1b",
+  "first_seen": "2026-10-26",
+  "handle": "ghost-town-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_GhostTown_shot1_3000x3000_d3e4d17c-1aaf-45d2-a80c-66507e52216d.jpg?v=1762440669",
+  "platform": "shopify",
+  "product_id": "2441624649807",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "2lb",
+   "Active SO",
+   "Available in 2lbs",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Balanced",
+   "Chemex",
+   "Chocolate",
+   "Comforting",
+   "Core",
+   "French Press",
+   "Freshly Roasted Coffee",
+   "Individual Note (#1)|Malt",
+   "Individual Note (#2)|Golden Raisin",
+   "Individual Note (#3)|White Chocolate",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium",
+   "Now Available",
+   "Partner Story",
+   "Roast Level|78",
+   "SB24",
+   "Single Origin",
+   "Smooth",
+   "Summer Sale 2022",
+   "V60 Pour Over",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Ghost Town - Decaf",
+  "url": "https://www.partnerscoffee.com/products/ghost-town-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21609906634831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21609909092431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21609909125199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21609909157967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21609909190735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21609909223503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21609909256271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21609909289039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21911951999055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21911956586575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Drip  (Ground Coffee)",
+    "variant_id": "29166151303247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166151729231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Drip  (Ground Coffee)",
+    "variant_id": "29166152908879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 166.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166153138255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32641901690959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Drip  (Ground Coffee)",
+    "variant_id": "32641901723727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "32641901756495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "32641901789263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "32641901822031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "32641901854799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 66.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "32641901887567"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "43730b82b47b8776",
+  "first_seen": "2026-10-26",
+  "handle": "flatiron",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_Flatiron_shot01_3000x3000_cb2aaf86-1ba2-4b7d-a9ed-0c1f195e6ec3.jpg?v=1762440669",
+  "platform": "shopify",
+  "product_id": "2441727508559",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "2lb",
+   "Available in 2lbs",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Blend",
+   "Chocolate",
+   "Cold Brew",
+   "Comforting",
+   "Core",
+   "Dark",
+   "Dark Chocolate",
+   "Dates",
+   "Espresso",
+   "Freshly Roasted Coffee",
+   "Individual Note (#1)|Dark Chocolate",
+   "Individual Note (#2)|Praline",
+   "Individual Note (#3)|Dates",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium-Dark",
+   "Moka Pot",
+   "Now Available",
+   "Praline",
+   "Rebuy",
+   "Roast Level|82",
+   "SB24",
+   "Summer Sale 2022",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Flatiron",
+  "url": "https://www.partnerscoffee.com/products/flatiron",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21610188341327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21610190700623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21610190733391"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21610190766159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21610190798927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21610190831695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21610190864463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21610190897231"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21910801186895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21910809215055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166140325967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166140588111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166142685263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166143144015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "31957342126159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "31957342158927"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "31957342191695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "31957342224463"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "31957342257231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "31957342322767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "31957342355535"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "9ec577d8f6776df6",
+  "first_seen": "2026-10-26",
+  "handle": "brooklyn",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_Brooklyn_shot01_3000x3000_93c02064-deeb-4d57-9ae9-944c887357bf.jpg?v=1762440680",
+  "platform": "shopify",
+  "product_id": "2481061658703",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "2lb",
+   "AeroPress",
+   "Automatic Drip",
+   "Available in 2lbs",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Balanced",
+   "Blend",
+   "Chocolate",
+   "Cold Brew",
+   "Comforting",
+   "Core",
+   "Dried Fruit",
+   "Freshly Roasted Coffee",
+   "Fruit",
+   "Individual Note (#1)|Milk Chocolate",
+   "Individual Note (#2)|Toffee",
+   "Individual Note (#3)|Dried Fruit",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium",
+   "Milk Chocolate",
+   "Now Available",
+   "Rebuy",
+   "Roast Level|81",
+   "SB24",
+   "Smooth",
+   "Summer Sale 2022",
+   "Toffee",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits",
+   "badge_Bestseller",
+   "badge_Staff Fav",
+   "d"
+  ],
+  "title": "Brooklyn",
+  "url": "https://www.partnerscoffee.com/products/brooklyn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21911788355663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21911788388431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21911788421199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21911788453967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21911788486735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21911788519503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21911788552271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21911788585039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21911788617807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21911788650575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166083637327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166087077967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166087372879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166087635023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "31917541523535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "31917541556303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "31917541621839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "31917541654607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "31917541720143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "31917541752911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "31917541785679"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "66c159ff50169197",
+  "first_seen": "2026-10-26",
+  "handle": "manhattan",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_Manhattan_shot1_3000x3000_40d15569-349f-4f59-afbb-12962aff8868.jpg?v=1762440680",
+  "platform": "shopify",
+  "product_id": "2481145348175",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "Automatic Drip",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Blend",
+   "Chocolate",
+   "Cold Brew",
+   "Comforting",
+   "Core",
+   "Dark",
+   "French Press",
+   "Freshly Roasted Coffee",
+   "Individual Note (#1)|Baker's Chocolate",
+   "Individual Note (#2)|Caramel",
+   "Individual Note (#3)|Maple Syrup",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium-Dark",
+   "Now Available",
+   "Roast Level|79",
+   "SB24",
+   "Summer Sale 2022",
+   "Sustainable",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Manhattan",
+  "url": "https://www.partnerscoffee.com/products/manhattan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21912348885071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21912348917839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21912348950607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21912348983375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21912349016143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21912349048911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21912349081679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21912349114447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21912349147215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21912349179983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166169161807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166169391183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166169456719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166169653327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "41123156787279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "41123156820047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "41123156852815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "41123156885583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "41123156918351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "41123156951119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "41123156983887"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "c54ed1c8554b0400",
+  "first_seen": "2026-10-26",
+  "handle": "jumpstart",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_Jumpstart_shot1_3000x3000_b1a89185-7132-4bff-b7d0-f600a57fc133.jpg?v=1762440682",
+  "platform": "shopify",
+  "product_id": "2481213571151",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "2lb",
+   "Automatic Drip",
+   "Available in 2lbs",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_25",
+   "Blend",
+   "Comforting",
+   "Core",
+   "Freshly Roasted Coffee",
+   "Individual Note (#1)|Caramel",
+   "Individual Note (#2)|Jordan Almond",
+   "Individual Note (#3)|Poached Pear",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium",
+   "Moka Pot",
+   "Now Available",
+   "Roast Level|77",
+   "SB24",
+   "Summer Sale 2022",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Jumpstart",
+  "url": "https://www.partnerscoffee.com/products/jumpstart",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21912695570511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21912695603279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21912695636047"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21912695668815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21912695701583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21912695767119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21912695832655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21912695898191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21912695930959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21912695996495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166164770895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166165098575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166165524559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166165753935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32641904541775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "32641904574543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "32641904640079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "32641904672847"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "32641904705615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "32641904738383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "32641904771151"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "4d1bf426f842707a",
+  "first_seen": "2026-10-26",
+  "handle": "bedford",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Bedford_Front_Pack_Shot_.png_2.png?v=1787582315",
+  "platform": "shopify",
+  "product_id": "2481286217807",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "AeroPress",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Blend",
+   "Brown Sugar",
+   "Citrus",
+   "Core",
+   "Dark",
+   "Espresso",
+   "French Press",
+   "Freshly Roasted Coffee",
+   "Fruit",
+   "Individual Note (#1)|Marmalade",
+   "Individual Note (#2)|Pomegranate",
+   "Individual Note (#3)|Brown Sugar",
+   "Kosher/KSA Pareve",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Marmalade",
+   "Medium",
+   "Moka Pot",
+   "Now Available",
+   "Organic",
+   "Partner Story",
+   "Pomegranate",
+   "Roast Level|81",
+   "SB24",
+   "Stonefruit",
+   "Summer Sale 2022",
+   "Vibrant",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Bedford - Organic",
+  "url": "https://www.partnerscoffee.com/products/bedford",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21913123061839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21913123225679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "41176701829199"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "988325001d4ea914",
+  "first_seen": "2026-10-26",
+  "handle": "elevate",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_Elevate_shot1_3000x3000_c54398c7-287b-480c-9fb0-7e3e4880ae55.jpg?v=1762440682",
+  "platform": "shopify",
+  "product_id": "2483008831567",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "Active SO",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Caramel",
+   "Chemex",
+   "Comforting",
+   "Core",
+   "Espresso",
+   "Flash Brew",
+   "Freshly Roasted Coffee",
+   "Fruit",
+   "Individual Note (#1)|Red Apple",
+   "Individual Note (#2)|Caramel",
+   "Individual Note (#3)|Pecan Pie",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Mainstay",
+   "Medium-Dark",
+   "Now Available",
+   "Pecan Pie",
+   "Red Apple",
+   "Roast Level|72",
+   "SB24",
+   "Single Origin",
+   "Summer Sale 2022",
+   "V60 Pour Over",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits",
+   "zest-gift"
+  ],
+  "title": "Elevate",
+  "url": "https://www.partnerscoffee.com/products/elevate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21921944895567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21921944928335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21921944961103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21921944993871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21921945026639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21921945059407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21921945092175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21921945124943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21921945157711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21921945190479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166118076495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166118273103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166118764623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 126.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166118961231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "41176695570511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "41176695603279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "41176695636047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "41176695668815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "41176695701583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "41176695734351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "41176695767119"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "df5b45739af7495d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-ramo",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/products/2020_10_28_Partners_ElRamo_shot01_3000x3000_a259825a-32ab-43af-a026-e54a2e88cc05.jpg?v=1762440683",
+  "platform": "shopify",
+  "product_id": "2483017777231",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "2023Gifts",
+   "Active SO",
+   "AeroPress",
+   "BF2020",
+   "BFCM2021",
+   "BFCM2022",
+   "BFCM2023",
+   "BFCM_20",
+   "Balanced",
+   "Chemex",
+   "Chocolate",
+   "Comforting",
+   "Core",
+   "Flash Brew",
+   "Fresh Cream",
+   "Freshly Roasted Coffee",
+   "Fruit",
+   "Individual Note (#1)|Peach",
+   "Individual Note (#2)|Fresh Cream",
+   "Individual Note (#3)|Vanilla",
+   "LWS0224",
+   "LWS0725",
+   "LWS2025",
+   "Light",
+   "Mainstay",
+   "Medium",
+   "Now Available",
+   "Peach",
+   "PerfectPair",
+   "PerfectPairMorning",
+   "Roast Level|85",
+   "SB24",
+   "Single Origin",
+   "Smooth",
+   "Staff Favorites Sale",
+   "Stonefruit",
+   "Summer Sale 2022",
+   "V60 Pour Over",
+   "Vanilla",
+   "Vibrant",
+   "Video",
+   "_tab_corporate-gifting-product-page",
+   "_tab_grind-settings",
+   "_tab_roasting-information",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Colombia - El Ramo",
+  "url": "https://www.partnerscoffee.com/products/colombia-el-ramo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "21921996111951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Pour Over (Ground Coffee)",
+    "variant_id": "21921996144719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Chemex (Ground Coffee)",
+    "variant_id": "21921996177487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / French Press (Ground Coffee)",
+    "variant_id": "21921996210255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Espresso (Ground Coffee)",
+    "variant_id": "21921996243023"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "21921996275791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Pour Over (Ground Coffee)",
+    "variant_id": "21921996308559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Chemex (Ground Coffee)",
+    "variant_id": "21921996341327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / French Press (Ground Coffee)",
+    "variant_id": "21921996374095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Espresso (Ground Coffee)",
+    "variant_id": "21921996406863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Drip (Ground Coffee)",
+    "variant_id": "29166107033679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Drip (Ground Coffee)",
+    "variant_id": "29166108049487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166114406479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 146.67,
+    "title": "5lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "29166114963535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "41123178840143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Drip (Ground Coffee)",
+    "variant_id": "41123178872911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Pour Over (Ground Coffee)",
+    "variant_id": "41123178905679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Chemex (Ground Coffee)",
+    "variant_id": "41123178938447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / French Press (Ground Coffee)",
+    "variant_id": "41123178971215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Espresso (Ground Coffee)",
+    "variant_id": "41123179003983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.67,
+    "title": "2lb. / Cold Brew (Ground Coffee)",
+    "variant_id": "41123179036751"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d03addf2934d57ef",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-sertao",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-Sertao.jpg?v=1762440741",
+  "platform": "shopify",
+  "product_id": "3963621802063",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Sertão",
+  "url": "https://www.partnerscoffee.com/products/brazil-sertao",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "29594016940111"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.5,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "29594017169487"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "a357e3aead48d03e",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-gahahe",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-gahahe.jpg?v=1762440877",
+  "platform": "shopify",
+  "product_id": "4451885908047",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Burundi - Gahahe",
+  "url": "https://www.partnerscoffee.com/products/burundi-gahahe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "31694959738959"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 164.5,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "31694960001103"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "ef17cf323ca85949",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-isidro-pereira",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Isidro-Pereira-Front-So-Mock.jpg?v=1762440880",
+  "platform": "shopify",
+  "product_id": "4453247615055",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Isidro Pereira",
+  "url": "https://www.partnerscoffee.com/products/brazil-isidro-pereira",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "31702244950095"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 104.5,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "31702245179471"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "de0b557d162c58b4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-san-francisco",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Color_Fix_12oz_Honduras_San_Francisco_Front_Bag_Mock.jpg?v=1790268997",
+  "platform": "shopify",
+  "product_id": "4463090401359",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "AeroPress",
+   "Chemex",
+   "Freshly Roasted Coffee",
+   "Limited Release",
+   "V60 Pour Over"
+  ],
+  "title": "Honduras - San Francisco",
+  "url": "https://www.partnerscoffee.com/products/honduras-san-francisco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "31740312944719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "31740313174095"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "8ba80e9240776894",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-faldon",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Colombia-ElFaldon-Front-Mock.jpg?v=1788536336",
+  "platform": "shopify",
+  "product_id": "4480378339407",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Automatic Drip",
+   "Espresso",
+   "Freshly Roasted Coffee",
+   "Limited Release",
+   "V60 Pour Over"
+  ],
+  "title": "Colombia - El Faldón",
+  "url": "https://www.partnerscoffee.com/products/colombia-el-faldon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "31804057944143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 177.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "31804058173519"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "abb4748a800ed7a6",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-karambi-1",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-Karambi.jpg?v=1762441006",
+  "platform": "shopify",
+  "product_id": "4603086405711",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Rwanda - Karambi",
+  "url": "https://www.partnerscoffee.com/products/rwanda-karambi-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32145966628943"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32145966858319"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "7761059ada8e4b22",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gora-kone",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/ETH-Gora-Kone-Front-SO-Mock.jpg?v=1762441402",
+  "platform": "shopify",
+  "product_id": "4779176165455",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Gora Kone",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-gora-kone",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32562774540367"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32562774769743"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "f53a70632c413668",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-naga-singage",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/ETH-NS-Front-SO-Mock.jpg?v=1762441972",
+  "platform": "shopify",
+  "product_id": "4847031320655",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Naga Singage",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-naga-singage",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32787023921231"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32787024150607"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d43e5582769ae070",
+  "first_seen": "2026-10-26",
+  "handle": "rockaway-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Image_1_Rockaway.jpg?v=1764881889",
+  "platform": "shopify",
+  "product_id": "6598209863759",
+  "product_type": "Cold Brew Pouches",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Cold Brew",
+   "Core",
+   "LWS0725",
+   "PerfectPair",
+   "PerfectPairCold",
+   "_tab_corporate-gifting-product-page",
+   "_tab_subscription-benefits"
+  ],
+  "title": "Rockaway Cold Brew Pouches",
+  "url": "https://www.partnerscoffee.com/products/rockaway-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "1-Pack (4 Pouches)",
+    "variant_id": "41888317669455"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 60.0,
+    "title": "3-Pack (12 Pouches)",
+    "variant_id": "41888317702223"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "43301e1f14560802",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santa-lucia",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-santa-lucia.jpg?v=1762444663",
+  "platform": "shopify",
+  "product_id": "6685520068687",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Santa Lúcia",
+  "url": "https://www.partnerscoffee.com/products/brazil-santa-lucia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39834252247119"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 123.25,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39834252476495"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "ac607cfa304892e5",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-irmas-pereira",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Brazil-irmas-pereira-Front-Mock.jpg?v=1762445650",
+  "platform": "shopify",
+  "product_id": "6793641590863",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Irmãs Pereira",
+  "url": "https://www.partnerscoffee.com/products/brazil-irmas-pereira",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40121008750671"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40121008980047"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "10bcf8b1238a1e56",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-samuel-degelo",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-samuel_1.jpg?v=1762447102",
+  "platform": "shopify",
+  "product_id": "6935891902543",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Samuel Degelo",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-samuel-degelo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40515627745359"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40515627778127"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "2d975a54d9b08cf4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-chiroso-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-chiroso-honey.jpg?v=1762448209",
+  "platform": "shopify",
+  "product_id": "6997638971471",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Chiroso Honey",
+  "url": "https://www.partnerscoffee.com/products/colombia-chiroso-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40631471243343"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40631471472719"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "2db7bc56489c4d09",
+  "first_seen": "2026-10-26",
+  "handle": "block-party",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Block_Party_mock_up_front.png?v=1762448867",
+  "platform": "shopify",
+  "product_id": "7041079672911",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Seasonal",
+   "TheArchive"
+  ],
+  "title": "Block Party",
+  "url": "https://www.partnerscoffee.com/products/block-party",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40679903985743"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40679904215119"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d6db963685266b6d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-las-flores",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/New-SO-Bag-Mock-Front-las-flores.jpg?v=1762449732",
+  "platform": "shopify",
+  "product_id": "7103136432207",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Honduras - Las Flores",
+  "url": "https://www.partnerscoffee.com/products/honduras-las-flores",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40785305567311"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40785305796687"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "780255a8ea1245a9",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-santa-elisa",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/SO-Bag-Mock-Front-Santa-elisa.jpg?v=1762450205",
+  "platform": "shopify",
+  "product_id": "7125806776399",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Guatemala - Santa Elisa",
+  "url": "https://www.partnerscoffee.com/products/guatamala-santa-elisa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40832825393231"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 140.25,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40832825622607"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "aa6cd3f63e9055f3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-papayo",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Papayo-Front-SO-Mock.jpg?v=1762450787",
+  "platform": "shopify",
+  "product_id": "7186706628687",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Papayo",
+  "url": "https://www.partnerscoffee.com/products/colombia-papayo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "40972903383119"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "40972903612495"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "a2b525e45a293377",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-meselech-tube",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Meselech-Tube-Front-SO-Mock.jpg?v=1762451057",
+  "platform": "shopify",
+  "product_id": "7209566830671",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Meselech Tube",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-meselech-tube",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "41048968888399"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "41048969117775"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "bb213c14feb7c598",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-zulieth-sancho-masabuel",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/COL-ZSM-Front-SO-Mock_1.jpg?v=1762451517",
+  "platform": "shopify",
+  "product_id": "7244114067535",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Zulieth Sancho Masabuel",
+  "url": "https://www.partnerscoffee.com/products/colombia-zulieth-sancho-masabuel",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "41181805445199"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 153.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "41181805674575"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d126886323df3293",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-las-naranjas",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/COL-LN-Front-SO-Mock.jpg?v=1762452069",
+  "platform": "shopify",
+  "product_id": "7393797374031",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Las Naranjas",
+  "url": "https://www.partnerscoffee.com/products/colombia-las-naranjas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "41544831860815"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "41544832155727"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "a000d4c1d7c44ff6",
+  "first_seen": "2026-10-26",
+  "handle": "peru-lucia-munoz",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Peru-Lucia-Munoz-Front-Mock.jpg?v=1776955640",
+  "platform": "shopify",
+  "product_id": "7438479065167",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Peru - Lucía Muñoz",
+  "url": "https://www.partnerscoffee.com/products/peru-lucia-munoz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "41686274670671"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "41686274900047"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "42d04df72f63c642",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aide-garro",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/COL-AG-Front-SO-Mock.jpg?v=1762452456",
+  "platform": "shopify",
+  "product_id": "7544302895183",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Aidé Garro",
+  "url": "https://www.partnerscoffee.com/products/colombia-aide-garro",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42034450399311"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42034450661455"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "1384fa9149d2d729",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-hermanos-luna",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Untitleddesign_5.jpg?v=1762452622",
+  "platform": "shopify",
+  "product_id": "7565610844239",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Mexico - Hermanos Luna",
+  "url": "https://www.partnerscoffee.com/products/mexico-hermanos-luna",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42083197485135"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42083197747279"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "dc6df1360376c0a6",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-frutado",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/BRA-Frutado-Front-SO-Mock.jpg?v=1762452964",
+  "platform": "shopify",
+  "product_id": "7584532365391",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Frutado",
+  "url": "https://www.partnerscoffee.com/products/brazil-frutado",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42140009889871"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42140010119247"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d244ea12d5f8658e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-las-moritas",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Guatemala-Las-Moritas-Front-Mock.jpg?v=1755544331",
+  "platform": "shopify",
+  "product_id": "7622642401359",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Guatemala - Las Moritas",
+  "url": "https://www.partnerscoffee.com/products/guatemala-las-moritas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42248978071631"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42248978301007"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d8456873e59c14da",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-el-mirador",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Colombia-El-Mirador-Front-Mock_2.jpg?v=1762453560",
+  "platform": "shopify",
+  "product_id": "7652637900879",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - El Mirador",
+  "url": "https://www.partnerscoffee.com/products/colombia-el-mirador",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42333175021647"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 161.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42333175251023"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "dea1c16c0bc79edf",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-carlos-damian",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Honduras-Carlos-Damian-Front-Mock.jpg?v=1762453609",
+  "platform": "shopify",
+  "product_id": "7671215751247",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Honduras - Carlos Damian",
+  "url": "https://www.partnerscoffee.com/products/honduras-carlos-damian",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42379780522063"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42379780751439"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "43da8a909aa3b128",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-secret-process",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Ethiopia-Suke-Quto-SP-Front.jpg?v=1765316607",
+  "platform": "shopify",
+  "product_id": "7682836136015",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Secret Process",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-secret-process",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42418872451151"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42418872680527"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "bd0a43b21b12ac64",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-vladimir-calambas",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Colombia-Vladimir-Calambas-Front-Mock.jpg?v=1762454008",
+  "platform": "shopify",
+  "product_id": "7705886982223",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Vladimir Calambás",
+  "url": "https://www.partnerscoffee.com/products/colombia-vladimir-calambas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42633663905871"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42633664135247"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "d7a7aec105150480",
+  "first_seen": "2026-10-26",
+  "handle": "peru-los-tulipanes",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Peru-Los-Tulipanes-Front-Mock.jpg?v=1762454271",
+  "platform": "shopify",
+  "product_id": "7736649416783",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Peru - Los Tulipanes",
+  "url": "https://www.partnerscoffee.com/products/peru-los-tulipanes",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "42764792987727"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 168.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "42764793217103"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "2692a45b6389c2b4",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bavyeyi",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Burundi-Bavyeyi-Front-Mock.jpg?v=1762454706",
+  "platform": "shopify",
+  "product_id": "7778713927759",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Burundi  - Bavyeyi",
+  "url": "https://www.partnerscoffee.com/products/burundi-bavyeyi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "43207578976335"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 177.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "43207579205711"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "85355f870db18ccc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-david-moreno",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Colombia-David-Moreno-Chiroso-Front.jpg?v=1762454815",
+  "platform": "shopify",
+  "product_id": "7803001503823",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - David Moreno",
+  "url": "https://www.partnerscoffee.com/products/colombia-david-moreno",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "43419477737551"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 167.5,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "43419477966927"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "a2e7d83b61c474e5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-sierra-magica",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Mexico-Sierra_Magica-Front-Mock.jpg?v=1756829207",
+  "platform": "shopify",
+  "product_id": "7832441552975",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Mexico - Sierra Mágica",
+  "url": "https://www.partnerscoffee.com/products/mexico-sierra-magica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 24.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "43550489903183"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "43550490132559"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "0f874700d6c73124",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-uraga",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Ethiopia-Uraga-Front.jpg?v=1758047193",
+  "platform": "shopify",
+  "product_id": "7842265595983",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Ethiopia - Uraga",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-uraga",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "43586907308111"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "43586907537487"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "a5731e9c9874391d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-relampago",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Guatemala-Relampago-Front-Mock.jpg?v=1762267950",
+  "platform": "shopify",
+  "product_id": "7883716886607",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Guatemala - Relámpago",
+  "url": "https://www.partnerscoffee.com/products/guatemala-relampago",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "43736123998287"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 164.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "43736124227663"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "53dcf981f7f0572b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-nuevo-horizonte",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Colombia-Nuevo-Horizonte-Front-Mock.jpg?v=1766587882",
+  "platform": "shopify",
+  "product_id": "7966703091791",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Colombia - Nuevo Horizonte",
+  "url": "https://www.partnerscoffee.com/products/colombia-nuevo-horizonte",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "44100235690063"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 173.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "44100235919439"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "8690dd02ce8413df",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Ethiopia-Washed-Suke-Quto-Front_1.jpg?v=1771425302",
+  "platform": "shopify",
+  "product_id": "8114752520271",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Automatic Drip",
+   "Espresso",
+   "Freshly Roasted Coffee",
+   "Limited Release",
+   "V60 Pour Over"
+  ],
+  "title": "Ethiopia - Suke Quto",
+  "url": "https://www.partnerscoffee.com/products/ethiopia-suke-quto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "44476903030863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 164.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "44476903260239"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "49c3dac039e5c60e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-edin-lopez",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Honduras-Edin-Lopez-Front-Mock.jpg?v=1772458958",
+  "platform": "shopify",
+  "product_id": "8137047277647",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Honduras - Edin Lopez",
+  "url": "https://www.partnerscoffee.com/products/honduras-edin-lopez",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "44533049360463"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 164.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "44533049589839"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "06f82090aaf9f9c4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-coracao-de-melao",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Brazil-curacao-de-malao-Front-Mock.jpg?v=1777653495",
+  "platform": "shopify",
+  "product_id": "8617014657103",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "TheArchive"
+  ],
+  "title": "Brazil - Coração de Melão",
+  "url": "https://www.partnerscoffee.com/products/brazil-coracao-de-melao",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "45158223413327"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "45158223642703"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "9a05a2b0d8817c66",
+  "first_seen": "2026-10-26",
+  "handle": "edin-lopez-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/Edin_Lopez_Gesha_Image_1.jpg?v=1779885381",
+  "platform": "shopify",
+  "product_id": "8651453890639",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Exceptional Coffee",
+   "TheArchive"
+  ],
+  "title": "Edin Lopez Gesha",
+  "url": "https://www.partnerscoffee.com/products/edin-lopez-gesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 36.0,
+    "title": "6oz. / Whole Bean",
+    "variant_id": "45259338317903"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "eab182adea055c51",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-rianjagi",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Kenya-Rianjagi-Front-Mock.jpg?v=1786653002",
+  "platform": "shopify",
+  "product_id": "9008814194767",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Automatic Drip",
+   "Flash Brew",
+   "Freshly Roasted Coffee",
+   "Limited Release",
+   "V60 Pour Over"
+  ],
+  "title": "Kenya - Rianjagi",
+  "url": "https://www.partnerscoffee.com/products/kenya-rianjagi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "46407201357903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "46407201390671"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ },
+ {
+  "body_hash": "91cbbd0660d9bfe4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mundo-novo",
+  "image": "https://cdn.shopify.com/s/files/1/0087/2074/4527/files/12oz-Brazil-Mundo-Novo-Front-Mock.jpg?v=1787169091",
+  "platform": "shopify",
+  "product_id": "9016093311055",
+  "product_type": "Coffee",
+  "roaster_slug": "partnerscoffee",
+  "tags": [
+   "Automatic Drip",
+   "Chemex",
+   "Espresso",
+   "Freshly Roasted Coffee",
+   "Limited Release"
+  ],
+  "title": "Brazil - Mundo Novo",
+  "url": "https://www.partnerscoffee.com/products/brazil-mundo-novo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "46448007282767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 156.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "46448007315535"
+   }
+  ],
+  "vendor": "Partners Coffee"
+ }
+]

@@ -1,0 +1,1103 @@
+[
+ {
+  "body_hash": "f756f022f441eb86",
+  "first_seen": "2026-10-26",
+  "handle": "choconela",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Choconela-GB-Left_ab5feb6a-2f29-4617-9f1b-fd4e106e88bb.png?v=1790703189",
+  "platform": "shopify",
+  "product_id": "10199092461862",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "coffee-bags"
+  ],
+  "title": "Choconela",
+  "url": "https://freereincoffee.com/products/choconela",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "51596864192806"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "4a2875951269b709",
+  "first_seen": "2026-10-26",
+  "handle": "250th-anniversary-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/250-GB-Left.png?v=1772303564",
+  "platform": "shopify",
+  "product_id": "10265364267302",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "coffee-bags"
+  ],
+  "title": "Indivisible",
+  "url": "https://freereincoffee.com/products/250th-anniversary-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground",
+    "variant_id": "51806729961766"
+   }
+  ],
+  "vendor": "Free Rein LLC"
+ },
+ {
+  "body_hash": "d363ba1850eec0b0",
+  "first_seen": "2026-10-26",
+  "handle": "prospect",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Prospect-Dirt-Bag-GB-Left-1.png?v=1737943278",
+  "platform": "shopify",
+  "product_id": "8593112924454",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "Prospect",
+  "url": "https://freereincoffee.com/products/prospect",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428629270822"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "46428629434662"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048204173606"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048204206374"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048204239142"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048204271910"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048204304678"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048204337446"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048204370214"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048204402982"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "a6e71ed02347b6e6",
+  "first_seen": "2026-10-26",
+  "handle": "homestead",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Homestead-Dirt-Bag-GB-Left.png?v=1737942063",
+  "platform": "shopify",
+  "product_id": "8593113022758",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "RWB Sale",
+   "coffee-bags"
+  ],
+  "title": "Homestead",
+  "url": "https://freereincoffee.com/products/homestead",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428629795110"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "51044586357030"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048203911462"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048203944230"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203976998"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048204009766"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048204042534"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048204075302"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048204108070"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048204140838"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "0b98268c5f718340",
+  "first_seen": "2026-10-26",
+  "handle": "american-dirt",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/American-Dirt-Bag-Left.png?v=1737941750",
+  "platform": "shopify",
+  "product_id": "8593113219366",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "American Dirt™",
+  "url": "https://freereincoffee.com/products/american-dirt",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428630516006"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "46428630679846"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048203616550"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048203649318"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048203682086"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048203714854"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203747622"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048203780390"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048203813158"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048203845926"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "cd58cb0621575fba",
+  "first_seen": "2026-10-26",
+  "handle": "mesteno",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Mesteno-Bag-GB-Left.png?v=1737999732",
+  "platform": "shopify",
+  "product_id": "8593113350438",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "Mesteño®",
+  "url": "https://freereincoffee.com/products/mesteno",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428631073062"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "46428631236902"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048203354406"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048203387174"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203419942"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048203452710"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048203485478"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048203518246"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048203551014"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048203583782"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "2124a5773ea2e6a3",
+  "first_seen": "2026-10-26",
+  "handle": "heavy-spur",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Heavy-Spur-Bag-Left.png?v=1737942912",
+  "platform": "shopify",
+  "product_id": "8593113514278",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "Heavy Spur",
+  "url": "https://freereincoffee.com/products/heavy-spur",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428634579238"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048203223334"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048203256102"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203288870"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048203321638"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "2cc6537c5aed29b5",
+  "first_seen": "2026-10-26",
+  "handle": "texas-heat-spiced",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Branded-Bag-Left.png?v=1737942294",
+  "platform": "shopify",
+  "product_id": "8593113579814",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "Branded",
+  "url": "https://freereincoffee.com/products/texas-heat-spiced",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428636807462"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048203092262"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048203125030"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203157798"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048203190566"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "45c24eb74c597f61",
+  "first_seen": "2026-10-26",
+  "handle": "texas-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Texas-Pecan-Bag-Left.png?v=1737943869",
+  "platform": "shopify",
+  "product_id": "8593113710886",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "COFEE-BEANS",
+   "coffee-bags"
+  ],
+  "title": "Texas Pecan",
+  "url": "https://freereincoffee.com/products/texas-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "46428641788198"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.58,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048202961190"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048202993958"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048203026726"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.96,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048203059494"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "41a2d1b11662966d",
+  "first_seen": "2026-10-26",
+  "handle": "fr-stainless-coffee-canister-black",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FR-Canister-Black.png?v=1737729034",
+  "platform": "shopify",
+  "product_id": "8756442431782",
+  "product_type": "Drinkware & Equipment",
+  "roaster_slug": "longhorncoffee",
+  "tags": [],
+  "title": "The Brand Stainless Coffee Canister",
+  "url": "https://freereincoffee.com/products/fr-stainless-coffee-canister-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "46896635969830"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "41a2d1b11662966d",
+  "first_seen": "2026-10-26",
+  "handle": "fr-stainless-coffee-canister-copper",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/The-Brand-Stainless-Steel-Canister-Lid-On_b34f5a87-7542-465a-a0fb-1ce881293e35.png?v=1751473842",
+  "platform": "shopify",
+  "product_id": "8756442562854",
+  "product_type": "Drinkware & Equipment",
+  "roaster_slug": "longhorncoffee",
+  "tags": [],
+  "title": "The Brand Stainless Coffee Canister",
+  "url": "https://freereincoffee.com/products/fr-stainless-coffee-canister-copper",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "46896636363046"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "91074d0567c891c6",
+  "first_seen": "2026-10-26",
+  "handle": "homestead-pods-18ct",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/0010_f48e70d4-7dc3-4bff-a882-5a6254c03570.png?v=1723683916",
+  "platform": "shopify",
+  "product_id": "8977408885030",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [],
+  "title": "Homestead-18ct Box",
+  "url": "https://freereincoffee.com/products/homestead-pods-18ct",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "Pods",
+    "variant_id": "49544471970086"
+   }
+  ],
+  "vendor": "Free Rein LLC"
+ },
+ {
+  "body_hash": "5d7d1f5793762c84",
+  "first_seen": "2026-10-26",
+  "handle": "american-dirt-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/American-Dirt-Bag-Left_58c48ab5-6f46-4ead-abf3-8af09da9671e.png?v=1752763297",
+  "platform": "shopify",
+  "product_id": "9056501498150",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "hide-on-show-all",
+   "wholesale"
+  ],
+  "title": "American Dirt 5lb Bag",
+  "url": "https://freereincoffee.com/products/american-dirt-5lb-bag",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 76.99,
+    "title": "Whole Bean",
+    "variant_id": "47921926242598"
+   }
+  ],
+  "vendor": "Free Rein LLC"
+ },
+ {
+  "body_hash": "fac7c4fd8f930cad",
+  "first_seen": "2026-10-26",
+  "handle": "homestead-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Homestead-Dirt-Bag-GB-Left_f10b71b1-fa17-4724-acd0-4bc5e114de46.png?v=1752763374",
+  "platform": "shopify",
+  "product_id": "9056507363622",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "hide-on-show-all",
+   "wholesale"
+  ],
+  "title": "Homestead 5lb bag",
+  "url": "https://freereincoffee.com/products/homestead-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 76.99,
+    "title": "Whole Bean",
+    "variant_id": "47921925390630"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "e4662d33acc7cfd7",
+  "first_seen": "2026-10-26",
+  "handle": "buckskin",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Buckskin-Dirt-Bag-GB-Left.png?v=1740663993",
+  "platform": "shopify",
+  "product_id": "9291318231334",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "coffee-bags"
+  ],
+  "title": "Buckskin®",
+  "url": "https://freereincoffee.com/products/buckskin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "48508592881958"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "48508592914726"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.28,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048201027878"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.28,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048201060646"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048201093414"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048201126182"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048201158950"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048201191718"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.95,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048201224486"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.95,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048201257254"
+   }
+  ],
+  "vendor": "Free Rein LLC"
+ },
+ {
+  "body_hash": "6652b9a13da7544b",
+  "first_seen": "2026-10-26",
+  "handle": "get-up",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Get-Up-Bag-GB-Left_86438a72-11e9-4549-894c-cd44f0236897.png?v=1738326392",
+  "platform": "shopify",
+  "product_id": "9291318657318",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "coffee-bags"
+  ],
+  "title": "Get Up® Espresso Roast",
+  "url": "https://freereincoffee.com/products/get-up",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Ground / 1 Bag",
+    "variant_id": "48508594028838"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 1 Bag",
+    "variant_id": "48508594061606"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.28,
+    "title": "Ground / 2 Bags | 5% off",
+    "variant_id": "51048200765734"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 27.28,
+    "title": "Whole Bean / 2 Bags | 5% off",
+    "variant_id": "51048200798502"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Ground / 3 Bags | 5% off",
+    "variant_id": "51048200831270"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.87,
+    "title": "Whole Bean / 3 Bags | 5% off",
+    "variant_id": "51048200864038"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Ground / 4 Bags | 10% off",
+    "variant_id": "51048200896806"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.36,
+    "title": "Whole Bean / 4 Bags | 10% off",
+    "variant_id": "51048200929574"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.95,
+    "title": "Ground / 5 Bags | 10% off",
+    "variant_id": "51048200962342"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.95,
+    "title": "Whole Bean / 5 Bags | 10% off",
+    "variant_id": "51048200995110"
+   }
+  ],
+  "vendor": "Free Rein LLC"
+ },
+ {
+  "body_hash": "36c944dc3af6ea05",
+  "first_seen": "2026-10-26",
+  "handle": "cinna-blend-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Cinnablend-Side.png?v=1744999046",
+  "platform": "shopify",
+  "product_id": "9485425639718",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "Cinna-Blend",
+  "url": "https://freereincoffee.com/products/cinna-blend-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49401328501030"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "438af4240e6dfa82",
+  "first_seen": "2026-10-26",
+  "handle": "concho-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Concho-Side.png?v=1744999122",
+  "platform": "shopify",
+  "product_id": "9485425705254",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "Concho™",
+  "url": "https://freereincoffee.com/products/concho-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49350906052902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean",
+    "variant_id": "49350906085670"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "38b8a0041332467b",
+  "first_seen": "2026-10-26",
+  "handle": "pecos-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Pecos-Side.png?v=1744999551",
+  "platform": "shopify",
+  "product_id": "9485425803558",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "Pecos™",
+  "url": "https://freereincoffee.com/products/pecos-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49374691885350"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean",
+    "variant_id": "49374691918118"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "1b1e1aeb5355f7b7",
+  "first_seen": "2026-10-26",
+  "handle": "snakebite-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Snake-Bite-Blend-Side.png?v=1744999795",
+  "platform": "shopify",
+  "product_id": "9485425901862",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "Snake Bite Blend®",
+  "url": "https://freereincoffee.com/products/snakebite-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49374741004582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean",
+    "variant_id": "49374741037350"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "37ab8a37f79025b0",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-reserve-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Whiskey-Reserve-Side.png?v=1745000160",
+  "platform": "shopify",
+  "product_id": "9501819076902",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "coffee-bags"
+  ],
+  "title": "Whiskey Reserve®",
+  "url": "https://freereincoffee.com/products/whiskey-reserve-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground",
+    "variant_id": "49374755717414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "49374755750182"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "24ef3b80354ef6fe",
+  "first_seen": "2026-10-26",
+  "handle": "texas-heat-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-Texas-Heat-Side_c8248697-6b9f-4320-8f3a-2c352b77d46c.png?v=1773082497",
+  "platform": "shopify",
+  "product_id": "9501820354854",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "Texas Heat®",
+  "url": "https://freereincoffee.com/products/texas-heat-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49374753915174"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "35e6566424002fa9",
+  "first_seen": "2026-10-26",
+  "handle": "san-angelo-sunrise-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/FRR-GB-San-Angelo-Sunrise-Side.png?v=1744999717",
+  "platform": "shopify",
+  "product_id": "9501820485926",
+  "product_type": "Coffee-Reserve",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "Reserve",
+   "coffee-bags"
+  ],
+  "title": "San Angelo Sunrise®",
+  "url": "https://freereincoffee.com/products/san-angelo-sunrise-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Ground",
+    "variant_id": "49374728814886"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ },
+ {
+  "body_hash": "93137257df676877",
+  "first_seen": "2026-10-26",
+  "handle": "texas-pecan-2lb-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0753/0125/7510/files/Texas-Pecan-Bag-Left_34066406-d2c8-442f-9dbb-7129de9bc654.png?v=1752763503",
+  "platform": "shopify",
+  "product_id": "9543302840614",
+  "product_type": "Coffee",
+  "roaster_slug": "longhorncoffee",
+  "tags": [
+   "hide-on-show-all",
+   "wholesale"
+  ],
+  "title": "Texas Pecan-2lb Ground",
+  "url": "https://freereincoffee.com/products/texas-pecan-2lb-ground",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 39.99,
+    "title": "Default Title",
+    "variant_id": "49471923585318"
+   }
+  ],
+  "vendor": "Free Rein Coffee"
+ }
+]

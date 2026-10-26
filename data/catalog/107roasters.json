@@ -1,0 +1,416 @@
+[
+ {
+  "body_hash": "63df8b0e280d3314",
+  "first_seen": "2026-10-26",
+  "handle": "mellow-mornin-single-origin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0ae2bab1cce6",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Amarillo Mornin' (Single Origin - Light Roast Honduras)",
+  "url": "https://www.107roasters.com/product-page/mellow-mornin-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e7389fa58889a66b",
+  "first_seen": "2026-10-26",
+  "handle": "sippin-usa-single-origin-honduras",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0c827a350347",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Sippin' USA (Single Origin Honduras)",
+  "url": "https://www.107roasters.com/product-page/sippin-usa-single-origin-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebb9a2730e404285",
+  "first_seen": "2026-10-26",
+  "handle": "dark-side-of-the-brew-dark-roast-costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1732c8e484ff",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Dark Side of the Brew (Dark Roast - Costa Rica)",
+  "url": "https://www.107roasters.com/product-page/dark-side-of-the-brew-dark-roast-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b80722fbf5aed800",
+  "first_seen": "2026-10-26",
+  "handle": "smells-like-fresh-coffee-pour-over-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1826e0181fe0",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Smells Like Fresh Coffee (Pour Over Blend)",
+  "url": "https://www.107roasters.com/product-page/smells-like-fresh-coffee-pour-over-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a305ad433a5adeb9",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-cowboy-single-origin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1e61af4b1a41",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Hotel Colombia (Single Origin Colombia)",
+  "url": "https://www.107roasters.com/product-page/colombian-cowboy-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ee697d1c300b0691",
+  "first_seen": "2026-10-26",
+  "handle": "mckinney-blend-papua-new-guinea-monsooned-malabar-india",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4841b211d67f",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "McKinney Blend (Original House Blend)",
+  "url": "https://www.107roasters.com/product-page/mckinney-blend-papua-new-guinea-monsooned-malabar-india",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8f323164174ea79",
+  "first_seen": "2026-10-26",
+  "handle": "bombay-bluebonnet",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4a53368e5ea3",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Bombay Bluebonnet (India/Kona Blend)",
+  "url": "https://www.107roasters.com/product-page/bombay-bluebonnet",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b59245777f51d9b",
+  "first_seen": "2026-10-26",
+  "handle": "brew-magic-woman-latin-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "564354feb6a9",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Brew Magic Woman (Latin Blend)",
+  "url": "https://www.107roasters.com/product-page/brew-magic-woman-latin-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2181d049619fc684",
+  "first_seen": "2026-10-26",
+  "handle": "swahili-six-gun-kenya-kona-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "790fe680434f",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Swahili Six Gun (Kenya/Kona Blend)",
+  "url": "https://www.107roasters.com/product-page/swahili-six-gun-kenya-kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7cc5ae3968dae6c9",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-honky-tonk-honduras-kona-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7e052a54f951",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Honduran Honky Tonk (Honduras/Kona Blend)",
+  "url": "https://www.107roasters.com/product-page/honduran-honky-tonk-honduras-kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ff96ac5561063b7",
+  "first_seen": "2026-10-26",
+  "handle": "arctic-renegade-png-colombia-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8bbfb0415ba9",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Arctic Renegade (Cold Brew Blend)",
+  "url": "https://www.107roasters.com/product-page/arctic-renegade-png-colombia-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f601cccfccb6270",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-revival-single-origin-costa-rica",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9942bef63d2c",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Costa Rican Revival (Single Origin Costa Rica)",
+  "url": "https://www.107roasters.com/product-page/costa-rican-revival-single-origin-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f7dd58582c12065a",
+  "first_seen": "2026-10-26",
+  "handle": "journalist-blend-barista-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9e8c1fa9c0dd",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Espresso Journey (Espresso Blend)",
+  "url": "https://www.107roasters.com/product-page/journalist-blend-barista-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "535758a10fa2ab95",
+  "first_seen": "2026-10-26",
+  "handle": "tkfm-presents-p-n-g-single-origin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "aebf91d1d18c",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "P.N.G. (Single Origin Papua New Guinea)",
+  "url": "https://www.107roasters.com/product-page/tkfm-presents-p-n-g-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c449812fd4a7849",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-moonlight-decaf-single-origin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ce7f255e1f1c",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Moonlight Sonata (DECAF) - (Single Origin Mexican Decaf)",
+  "url": "https://www.107roasters.com/product-page/mexican-moonlight-decaf-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f163d00c28501e4",
+  "first_seen": "2026-10-26",
+  "handle": "roaster-dave-s-pick-random-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d8c6cabe1413",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Roaster Dave's Pick (Random Coffee)",
+  "url": "https://www.107roasters.com/product-page/roaster-dave-s-pick-random-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59e095c53771432a",
+  "first_seen": "2026-10-26",
+  "handle": "under-presso-single-origin-espresso-monsoon-malabar-india",
+  "image": null,
+  "platform": "generic",
+  "product_id": "eca8455ed0d3",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "Under 'Presso (Single Origin Espresso - Monsoon Malabar India)",
+  "url": "https://www.107roasters.com/product-page/under-presso-single-origin-espresso-monsoon-malabar-india",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cbb1abe0a505f834",
+  "first_seen": "2026-10-26",
+  "handle": "classic-kona",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fee75e87dea9",
+  "product_type": "",
+  "roaster_slug": "107roasters",
+  "tags": [],
+  "title": "TexaKona Pure - Grown in Kona, Hawaii",
+  "url": "https://www.107roasters.com/product-page/classic-kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

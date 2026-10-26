@@ -1,0 +1,842 @@
+[
+ {
+  "body_hash": "cec2250968f9aa49",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-nativo-nogales-caturra-natural-mosto",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/kafiex-nativo-nogales-reserve-250g-product-mockup.png?v=1790540622",
+  "platform": "shopify",
+  "product_id": "15351442211048",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "Caturra",
+   "Colombia",
+   "Huila",
+   "Light Roast",
+   "Limited Release",
+   "Natural + Mosto",
+   "Reserve",
+   "Whole Bean"
+  ],
+  "title": "Colombia Nativo Nogales – Caturra Natural + Mosto",
+  "url": "https://www.kafiex.com/products/colombia-nativo-nogales-caturra-natural-mosto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 266,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "67708540518632"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "0c422b030136f56e",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-lord-bergamot-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/smith-teamaker-no-55-lord-bergamot-wholesale_b9597430-572e-4437-8c8b-bd6bb8fe3d7a.png?v=1790808814",
+  "platform": "shopify",
+  "product_id": "15355644477672",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 55 Lord Bergamot | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-lord-bergamot-100-sachets",
+  "variants": [
+   {
+    "available": false,
+    "grams": 617,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "67808429867240"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "acd17972810159d8",
+  "first_seen": "2026-10-26",
+  "handle": "kundalini-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/KUNDA_dcdb35d2-dfd5-45bf-940d-adb54c43a883.jpg?v=1783371360",
+  "platform": "shopify",
+  "product_id": "9354902896872",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Kundalini Espresso Blend",
+  "url": "https://www.kafiex.com/products/kundalini-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "48159365595368"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "6c507c6f2143090f",
+  "first_seen": "2026-10-26",
+  "handle": "three-amigos-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/THREE_AMIGOS_da6d07e6-71af-45ef-8b2d-8a59ea95e702.jpg?v=1783371334",
+  "platform": "shopify",
+  "product_id": "9354906239208",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Three Amigos Espresso Blend",
+  "url": "https://www.kafiex.com/products/three-amigos-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "48159369036008"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "7770d4ddf14cca82",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/decaf.jpg?v=1783361459",
+  "platform": "shopify",
+  "product_id": "9354907025640",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Colombia – Swiss Water Decaf",
+  "url": "https://www.kafiex.com/products/colombia-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "48159369658600"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "9e7e767784809a46",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-nayarit-washed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/MEXICO_6fcdc17c-498f-4fd1-8a80-7daf5179bd4b.jpg?v=1783371273",
+  "platform": "shopify",
+  "product_id": "9354908565736",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Mexico Nayarit: El Cuarenteño Washed",
+  "url": "https://www.kafiex.com/products/mexico-nayarit-washed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48159369920744"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "a9dc965f0c5a799e",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-red-catuai-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/BRAZIL_Kafiex_Roasters.jpg?v=1785361227",
+  "platform": "shopify",
+  "product_id": "9354910400744",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Brazil Red Catuaí Natural",
+  "url": "https://www.kafiex.com/products/brazil-red-catuai-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "48159373263080"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "32db97c3efcc2a28",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/Colombia_Swiss_Water_Decaf_5lb.jpg?v=1784178403",
+  "platform": "shopify",
+  "product_id": "9354910859496",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Colombia – Swiss Water Decaf - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/colombia-swiss-water-decaf-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 140.0,
+    "title": "Default Title",
+    "variant_id": "48159321096424"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "807fdd53a82906ee",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-club",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/Club-Card-MockUp.webp?v=1776363126",
+  "platform": "shopify",
+  "product_id": "9380557586664",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Kafiex Coffee Club Membership",
+  "url": "https://www.kafiex.com/products/coffee-club",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 90.0,
+    "title": "Default Title",
+    "variant_id": "48238444675304"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "6874b15b4ddea72a",
+  "first_seen": "2026-10-26",
+  "handle": "tapasya-washed-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/Tapasya_Kafiex_Roasters.jpg?v=1785361169",
+  "platform": "shopify",
+  "product_id": "9537551663336",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Tapasya – Colombia Dark Roast",
+  "url": "https://www.kafiex.com/products/tapasya-washed-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "48698430193896"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "340bf43c231ea2c1",
+  "first_seen": "2026-10-26",
+  "handle": "el-gaucho-house-blend-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBELGAUCHO.jpg?v=1783969144",
+  "platform": "shopify",
+  "product_id": "9548829425896",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "El Gaucho House Blend, 5 lb Bag",
+  "url": "https://www.kafiex.com/products/el-gaucho-house-blend-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 108.5,
+    "title": "Default Title",
+    "variant_id": "48736777437416"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "f7c45b97f0ec0859",
+  "first_seen": "2026-10-26",
+  "handle": "cupidone-house-blend-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBCUPIDONE.jpg?v=1784050865",
+  "platform": "shopify",
+  "product_id": "9549670842600",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Cupidone House Blend, 5 lb Bag",
+  "url": "https://www.kafiex.com/products/cupidone-house-blend-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "48740812980456"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "b203372ac020a6b3",
+  "first_seen": "2026-10-26",
+  "handle": "kundalini-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBKUNDA.jpg?v=1784050975",
+  "platform": "shopify",
+  "product_id": "9549671989480",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Kundalini Espresso Blend - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/kundalini-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "48740820058344"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "f1478d463128d30a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-el-cuarenteno-coffee-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBMEXICO.jpg?v=1784051083",
+  "platform": "shopify",
+  "product_id": "9549672218856",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Mexico El Cuarenteño Washed Coffee - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/mexico-el-cuarenteno-coffee-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "48740821074152"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "038e9bb5dc840e5c",
+  "first_seen": "2026-10-26",
+  "handle": "three-amigos-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBTHREEAMIGO.jpg?v=1784051197",
+  "platform": "shopify",
+  "product_id": "9549672317160",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Three Amigos Espresso Blend - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/three-amigos-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "48740821205224"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "0dc28ea275838fc2",
+  "first_seen": "2026-10-26",
+  "handle": "tapasya-colombia-dark-roast-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBTAPASYA_c3065ab4-759d-43b0-b59d-2436e34c99ce.jpg?v=1784232587",
+  "platform": "shopify",
+  "product_id": "9555604078824",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Tapasya Colombian Dark Roast - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/tapasya-colombia-dark-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 125.0,
+    "title": "Default Title",
+    "variant_id": "48759787061480"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "3aec541bc0ff42ea",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-red-catuai-natural-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5LBbrazil_b8348cfa-a031-4877-b56f-e51cccf61208.jpg?v=1784234892",
+  "platform": "shopify",
+  "product_id": "9555607322856",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Brazil Red Catuaí Natural - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/brazil-red-catuai-natural-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 125.0,
+    "title": "Default Title",
+    "variant_id": "48759795024104"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "441a28f5380dadb9",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-red-nectar-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/n013smith.jpg?v=1784660257",
+  "platform": "shopify",
+  "product_id": "9564258500840",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 13 Red Nectar | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-red-nectar-100-sachets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 617,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "48788019871976"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "1c581e700ef842b0",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-british-brunch-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/no18smith.jpg?v=1784660482",
+  "platform": "shopify",
+  "product_id": "9564259025128",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 18 British Brunch | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-british-brunch-100-sachets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 617,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "48788022853864"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "5bc69d729710d23d",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-meadow-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/no67smith.jpg?v=1784660657",
+  "platform": "shopify",
+  "product_id": "9564261155048",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 67 Meadow | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-meadow-100-sachets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "48788027801832"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "f1e8901c6f65c36a",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-peppermint-leaves-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/no45smith.jpg?v=1784660685",
+  "platform": "shopify",
+  "product_id": "9564261646568",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 45 Peppermint Leaves | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-peppermint-leaves-100-sachets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 476,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "48788028391656"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "3b590c78b3fdf788",
+  "first_seen": "2026-10-26",
+  "handle": "smith-teamaker-big-hibiscus-100-sachets",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/no24smith.jpg?v=1784660814",
+  "platform": "shopify",
+  "product_id": "9564261974248",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Smith Teamaker No. 24 Big Hibiscus | Pantry Filler, 100 Sachets",
+  "url": "https://www.kafiex.com/products/smith-teamaker-big-hibiscus-100-sachets",
+  "variants": [
+   {
+    "available": true,
+    "grams": 599,
+    "price_usd": 75.99,
+    "title": "Default Title",
+    "variant_id": "48788031766760"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "a10d4c7d35913c26",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-foods-barista-oat-milk-case",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/oatmilk.jpg?v=1784661021",
+  "platform": "shopify",
+  "product_id": "9564262367464",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Pacific Foods Barista Series Oat Original | 12 × 32 oz Case",
+  "url": "https://www.kafiex.com/products/pacific-foods-barista-oat-milk-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 12555,
+    "price_usd": 37.5,
+    "title": "Default Title",
+    "variant_id": "48788032717032"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "8e97c80b48aab33a",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-foods-barista-almond-milk-case",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/almondmilk.jpg?v=1785266030",
+  "platform": "shopify",
+  "product_id": "9564336488680",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Pacific Foods Barista Series Almond Original | 12 × 32 oz Case",
+  "url": "https://www.kafiex.com/products/pacific-foods-barista-almond-milk-case",
+  "variants": [
+   {
+    "available": true,
+    "grams": 12193,
+    "price_usd": 40.5,
+    "title": "Default Title",
+    "variant_id": "48788303053032"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "492cbaaf59536e28",
+  "first_seen": "2026-10-26",
+  "handle": "sebastian-ramirez-el-placer-purple-fruits",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/Sebasti_n_Ram_rez_El_Placer_Purple_Fruits.jpg?v=1785361557",
+  "platform": "shopify",
+  "product_id": "9572209459432",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Sebastián Ramírez – El Placer – Purple Fruits",
+  "url": "https://www.kafiex.com/products/sebastian-ramirez-el-placer-purple-fruits",
+  "variants": [
+   {
+    "available": false,
+    "grams": 266,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "48811016028392"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "af3348e50c337718",
+  "first_seen": "2026-10-26",
+  "handle": "jhoan-vergara-red-bourbon-creamy-cultured-brilliance",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/COLOMBIA_Las_Flores_Red_Bourbon.jpg?v=1785361311",
+  "platform": "shopify",
+  "product_id": "9572250714344",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Jhoan Vergara – Las Flores – Red Bourbon Creamy Cultured Brilliance",
+  "url": "https://www.kafiex.com/products/jhoan-vergara-red-bourbon-creamy-cultured-brilliance",
+  "variants": [
+   {
+    "available": false,
+    "grams": 266,
+    "price_usd": 32.0,
+    "title": "Default Title",
+    "variant_id": "48811312021736"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "696b089e12cfb818",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swiss-water-decaf-5lb-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/Colombia_Swiss_Water_Decaf_5lb.jpg?v=1784178403",
+  "platform": "shopify",
+  "product_id": "9573003165928",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Colombia – Swiss Water Decaf - 5 lb Bag",
+  "url": "https://www.kafiex.com/products/colombia-swiss-water-decaf-5lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "Default Title",
+    "variant_id": "48814454505704"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "77360da03fb5524f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-gotiti-supernatural",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/ethiopiabankgotiti.jpg?v=1785791930",
+  "platform": "shopify",
+  "product_id": "9576363032808",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "Blueberry",
+   "Ethiopia",
+   "Grade 1",
+   "Natural Coffee",
+   "Strawberry",
+   "Supernatural Process",
+   "Yirgacheffe"
+  ],
+  "title": "Ethiopia Yirgacheffe – Banko Gotiti Supernatural",
+  "url": "https://www.kafiex.com/products/ethiopia-banko-gotiti-supernatural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "48828191539432"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "eb5deac2fd8dc196",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-banko-gotiti-5lb-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/5lbredb.jpg?v=1785189498",
+  "platform": "shopify",
+  "product_id": "9586915836136",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [
+   "wholesale-5lb-shipping"
+  ],
+  "title": "Ethiopia Yirgacheffe – Banko Gotiti Supernatural – 5 lb",
+  "url": "https://www.kafiex.com/products/ethiopia-yirgacheffe-banko-gotiti-5lb-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2299,
+    "price_usd": 160.0,
+    "title": "Default Title",
+    "variant_id": "48862480629992"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "bbbea4915f080e2d",
+  "first_seen": "2026-10-26",
+  "handle": "jhoan-vergara-las-flores-pink-bourbon-washed-thermal-shock",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/kafiex-jhoan-vergara-pink-bourbon-reserve-250g.png?v=1792097959",
+  "platform": "shopify",
+  "product_id": "9602920448232",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Jhoan Vergara – Las Flores – Pink Bourbon – Washed Thermal Shock",
+  "url": "https://www.kafiex.com/products/jhoan-vergara-las-flores-pink-bourbon-washed-thermal-shock",
+  "variants": [
+   {
+    "available": true,
+    "grams": 266,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "48914917785832"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "6c507c6f2143090f",
+  "first_seen": "2026-10-26",
+  "handle": "kafiex-x-meraki-three-amigos",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/THREE_AMIGOS_da6d07e6-71af-45ef-8b2d-8a59ea95e702.jpg?v=1783371334",
+  "platform": "shopify",
+  "product_id": "9604634869992",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "KAFIEX x Meraki - Three Amigos",
+  "url": "https://www.kafiex.com/products/kafiex-x-meraki-three-amigos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "48921645809896"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "acd17972810159d8",
+  "first_seen": "2026-10-26",
+  "handle": "kafiex-x-meraki-kundalini",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/KUNDA_dcdb35d2-dfd5-45bf-940d-adb54c43a883.jpg?v=1783371360",
+  "platform": "shopify",
+  "product_id": "9604636573928",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "KAFIEX x Meraki - Kundalini",
+  "url": "https://www.kafiex.com/products/kafiex-x-meraki-kundalini",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "48921649807592"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "77360da03fb5524f",
+  "first_seen": "2026-10-26",
+  "handle": "kafiex-x-meraki-ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/ethiopiabankgotiti.jpg?v=1785791930",
+  "platform": "shopify",
+  "product_id": "9604638900456",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "KAFIEX x Meraki - Ethiopia Yirgacheffe",
+  "url": "https://www.kafiex.com/products/kafiex-x-meraki-ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "48921654034664"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "b08d44592042d6ce",
+  "first_seen": "2026-10-26",
+  "handle": "sebastian-ramirez-el-placer-red-fruits",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/colombiaelplacer.jpg?v=1788200642",
+  "platform": "shopify",
+  "product_id": "9615688728808",
+  "product_type": "Whole Bean Coffee",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Sebastián Ramírez – El Placer – Red Fruits",
+  "url": "https://www.kafiex.com/products/sebastian-ramirez-el-placer-red-fruits",
+  "variants": [
+   {
+    "available": true,
+    "grams": 266,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "48960569213160"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ },
+ {
+  "body_hash": "ada9076bc72c2366",
+  "first_seen": "2026-10-26",
+  "handle": "julio-cesar-madrid-finca-milan-logan-cultured-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0775/3721/4696/files/kafiex-logan-cultured-washed-reserve-250g.png?v=1789422319",
+  "platform": "shopify",
+  "product_id": "9639295484136",
+  "product_type": "",
+  "roaster_slug": "kafiex",
+  "tags": [],
+  "title": "Julio Cesar Madrid – Finca Milán – Logan Cultured Washed",
+  "url": "https://www.kafiex.com/products/julio-cesar-madrid-finca-milan-logan-cultured-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 266,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "49063509065960"
+   }
+  ],
+  "vendor": "Kafiex Roasters"
+ }
+]

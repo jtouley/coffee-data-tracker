@@ -1,0 +1,308 @@
+[
+ {
+  "body_hash": "91af157af3d584df",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-apolo-washed-light-medium-roast-castillo-typica-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_bolivia-apolo-medium-light-roast-castillo-typica-whole-beans.png?v=1752288571",
+  "platform": "shopify",
+  "product_id": "10348844155185",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Bolivia Apolo Washed - Light Medium Roast Castillo Typica, Whole Beans",
+  "url": "https://hyper-goat.com/products/bolivia-apolo-washed-light-medium-roast-castillo-typica-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "51626118676785"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "51626118709553"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "45918fe7638c273b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-maria-castillo-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_ColombiaLaMaria.png?v=1775503457",
+  "platform": "shopify",
+  "product_id": "10643349995825",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Colombia La Maria - Castillo, Whole Beans",
+  "url": "https://hyper-goat.com/products/colombia-la-maria-castillo-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "53652825538865"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "53652825571633"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "985fc68d6dd20c03",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-sambewe-medium-light-roast-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_Tanzania.png?v=1776440576",
+  "platform": "shopify",
+  "product_id": "10653303996721",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Tanzania Sambewe - Medium Light Roast, Whole Beans",
+  "url": "https://hyper-goat.com/products/tanzania-sambewe-medium-light-roast-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "53842304500017"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 19.5,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "53842304532785"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "94874ff29e734909",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-rafael-limonge-red-catuai-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_BrazilRafaelLimonge.png?v=1781029386",
+  "platform": "shopify",
+  "product_id": "10689624998193",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Brazil Rafael Limonge - Red Catuai, Whole Beans",
+  "url": "https://hyper-goat.com/products/brazil-rafael-limonge-red-catuai-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "54481555685681"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "54481555718449"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "00b94c31741f3f6f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-decaf-medium-roast-bourbon-pink-bourbon-whole-beans-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_PeruDecaf.png?v=1787016699",
+  "platform": "shopify",
+  "product_id": "10772098187569",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Decaf",
+   "Medium roast",
+   "Single Origin"
+  ],
+  "title": "Peru SWP Decaf - Medium Roast Red Caturra, Whole Beans",
+  "url": "https://hyper-goat.com/products/colombia-huila-decaf-medium-roast-bourbon-pink-bourbon-whole-beans-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "55785413869873"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "55785413902641"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "19d1eba1312d6f0c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-faber-pacheco-mosto-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_Colombia_Faber_Pacheco.png?v=1790721459",
+  "platform": "shopify",
+  "product_id": "10855156547889",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Colombia Cauca Faber Pacheco- Anniversary Limited Edition- Whole Beans",
+  "url": "https://hyper-goat.com/products/colombia-faber-pacheco-mosto-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 30.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "56541509386545"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "fe070a92228c11f5",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kigezi-valley-sl14-whole-beans-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_Uganda_Kigezi_Valley.png?v=1790722677",
+  "platform": "shopify",
+  "product_id": "10855176896817",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Uganda Kigezi Valley - SL14+, Whole Beans",
+  "url": "https://hyper-goat.com/products/uganda-kigezi-valley-sl14-whole-beans-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "56541538156849"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "56541538189617"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "304d67eb7ed12bb7",
+  "first_seen": "2026-10-26",
+  "handle": "epic-goat-espresso-medium-roast-blend-12oz-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/IMG-0959.png?v=1789695415",
+  "platform": "shopify",
+  "product_id": "8976248045873",
+  "product_type": "Espresso blend",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Medium roast",
+   "espresso"
+  ],
+  "title": "Epic Goat Espresso - Medium Roast Blend, Whole Beans",
+  "url": "https://hyper-goat.com/products/epic-goat-espresso-medium-roast-blend-12oz-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "47247158280497"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 21.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "47714179744049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb -  Whole Bean",
+    "variant_id": "51585335066929"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ },
+ {
+  "body_hash": "ea001ab128ec9eec",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-curupira-medium-roast-multi-variety-whole-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0679/6836/8945/files/Tile_brazil-curupira-medium-roast-catuai.jpg?v=1716430119",
+  "platform": "shopify",
+  "product_id": "9716799602993",
+  "product_type": "Single Origin",
+  "roaster_slug": "hyper-goat",
+  "tags": [
+   "Coffee bag",
+   "Medium roast",
+   "Single Origin"
+  ],
+  "title": "Brazil Curupira - Medium Roast Catuai, Whole Beans",
+  "url": "https://hyper-goat.com/products/brazil-curupira-medium-roast-multi-variety-whole-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12Oz (340g) - Whole Bean",
+    "variant_id": "49266071044401"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8Oz (226g) - Whole Bean",
+    "variant_id": "49266071077169"
+   }
+  ],
+  "vendor": "Hypergoat Coffee Roasters"
+ }
+]

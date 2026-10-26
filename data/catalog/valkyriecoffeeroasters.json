@@ -1,0 +1,1151 @@
+[
+ {
+  "body_hash": "18dd307b4e5018a5",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-iyenga-microlot-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/Tanzanian.png",
+  "platform": "woocommerce",
+  "product_id": "131",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Tanzanian Iyenga Microlot 12oz",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/tanzanian-iyenga-microlot-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "131:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "131:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Pourover",
+    "variant_id": "131:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "131:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Espresso",
+    "variant_id": "131:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9bd3447d8e8f8b0",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-salmo-plus-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/BrazSalmo_upside-dwn-e1700017399767.png",
+  "platform": "woocommerce",
+  "product_id": "132",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Brazilian Salmo 12oz",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/brazilian-salmo-plus-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "132:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "132:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "132:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "132:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "132:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b5274dac7508b9e8",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-black-forest-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/FB1D29FB-B9B5-44EA-824D-ACD80C8CC94F.jpg",
+  "platform": "woocommerce",
+  "product_id": "136",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Kenyan Black Forest 12oz",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/kenyan-black-forest-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "136:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "136:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "136:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "136:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "136:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33233eff58d0b42a",
+  "first_seen": "2026-10-26",
+  "handle": "sumatran-gayo-highlands-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/Sumatran.png",
+  "platform": "woocommerce",
+  "product_id": "168",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Sumatran Lintong (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/sumatran-gayo-highlands-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "168:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Drip Coffee",
+    "variant_id": "168:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Pourover",
+    "variant_id": "168:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "French Press",
+    "variant_id": "168:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Espresso",
+    "variant_id": "168:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f9ac836eb82b5d2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-santa-elena-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2024/01/My-project.png",
+  "platform": "woocommerce",
+  "product_id": "2312",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Guatemalan Del Cid (12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/guatemalan-santa-elena-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "2312:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip",
+    "variant_id": "2312:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Pourover",
+    "variant_id": "2312:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Press",
+    "variant_id": "2312:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso",
+    "variant_id": "2312:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90ce7c5eb58f3b97",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-finca-el-jardin-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2024/01/80320CE8-9EF5-4CBA-AC69-0931B4D5169D.png",
+  "platform": "woocommerce",
+  "product_id": "2315",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Guatemalan Finca el Jardin (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/guatemalan-finca-el-jardin-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "2315:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Drip",
+    "variant_id": "2315:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Pourover",
+    "variant_id": "2315:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "2315:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "2315:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-bourbon-barrel-aged",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2024/05/original.jpeg",
+  "platform": "woocommerce",
+  "product_id": "2400",
+  "product_type": "simple",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Brazil Bourbon Barrel Aged",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/kenyan-bourbon-barrel-aged/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Brazil Bourbon Barrel Aged",
+    "variant_id": "2400:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "valle-del-cauca-sugarcane-decaf",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "2405",
+  "product_type": "simple",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Valle del Cauca Sugarcane Decaf",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/valle-del-cauca-sugarcane-decaf/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Valle del Cauca Sugarcane Decaf",
+    "variant_id": "2405:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-finca-el-jardin",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "2406",
+  "product_type": "simple",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Guatemalan Pacamara Finca El Jardin",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/guatemalan-finca-el-jardin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Guatemalan Pacamara Finca El Jardin",
+    "variant_id": "2406:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8509f3987af679cb",
+  "first_seen": "2026-10-26",
+  "handle": "venezuelan-caracas-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2024/10/My-project-2.png",
+  "platform": "woocommerce",
+  "product_id": "2535",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Venezuelan Caracas (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/venezuelan-caracas-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "2535:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "2535:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "2535:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "2535:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "2535:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "26dbeb36197d7239",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-finca-las-cascadas-anaerobic-process",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/01/jga7291-1-scaled.jpeg",
+  "platform": "woocommerce",
+  "product_id": "257",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Honduran Finca Las Cascadas Anaerobic Process",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/honduran-finca-las-cascadas-anaerobic-process/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "257:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "257:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "257:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Pourover",
+    "variant_id": "257:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "257:4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Turkish",
+    "variant_id": "257:5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c50bb9f20a4754a9",
+  "first_seen": "2026-10-26",
+  "handle": "valkyrie-coffee-club-six-months-supply",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2025/02/IMG_9308.jpeg",
+  "platform": "woocommerce",
+  "product_id": "2656",
+  "product_type": "simple",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [],
+  "title": "Valkyrie Coffee Club (Six Months Supply – Two Bags Per Month)",
+  "url": "https://valkyriecoffeeroasters.com/shop/uncategorized/valkyrie-coffee-club-six-months-supply/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 265.0,
+    "title": "Valkyrie Coffee Club (Six Months Supply &#8211; Two Bags Per Month)",
+    "variant_id": "2656:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d9111ee0e872b34",
+  "first_seen": "2026-10-26",
+  "handle": "valkyrie-coffee-club-six-months-supply-four-bags-per-month",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2025/02/IMG_9308.jpeg",
+  "platform": "woocommerce",
+  "product_id": "2659",
+  "product_type": "simple",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [],
+  "title": "Valkyrie Coffee Club (Six Months Supply – Four Bags Per Month)",
+  "url": "https://valkyriecoffeeroasters.com/shop/uncategorized/valkyrie-coffee-club-six-months-supply-four-bags-per-month/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 500.0,
+    "title": "Valkyrie Coffee Club (Six Months Supply &#8211; Four Bags Per Month)",
+    "variant_id": "2659:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20d152e6f62f7a8a",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-yinyini-8oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2025/06/My-project-1.png",
+  "platform": "woocommerce",
+  "product_id": "2727",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Colombian Yinyini (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/colombian-yinyini-8oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "2727:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Drip",
+    "variant_id": "2727:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Pourover",
+    "variant_id": "2727:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "2727:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "2727:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ad6ebe4280092c7",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-vasquez-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2025/06/My-project-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "2736",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Mexican Chiapas Vasquez (12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/mexican-chiapas-vasquez-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "2736:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "2736:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Pourover",
+    "variant_id": "2736:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "2736:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "2736:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "67e045400561d649",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-paraiso-swp-decaf",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/01/IMG_3069-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "292",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Honduran Paraiso SWP Decaf",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/honduran-paraiso-swp-decaf/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "292:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "292:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "292:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "292:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "292:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3c2508d1eca828d",
+  "first_seen": "2026-10-26",
+  "handle": "kenyan-bourbon-8oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/My-project-1.png",
+  "platform": "woocommerce",
+  "product_id": "31",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Brazilian Bourbon Barrel Aged 8oz",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/kenyan-bourbon-8oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "31:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "31:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Pourover",
+    "variant_id": "31:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "French Press",
+    "variant_id": "31:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Espresso",
+    "variant_id": "31:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0eb2aed1c24616db",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-finca-la-concepcion-honey-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2020/11/honduran-honey.jpg",
+  "platform": "woocommerce",
+  "product_id": "32",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Honduran Finca La Concepcion Honey 12oz",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/honduran-finca-la-concepcion-honey-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "32:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "32:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "32:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "32:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "32:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "517e178be1ec7f9d",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-aprysa",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/04/3691AB20-B94B-495C-9ABE-1FCD495D7E75.png",
+  "platform": "woocommerce",
+  "product_id": "351",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Peruvian Cusco (12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/peruvian-aprysa/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "351:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "351:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Pourover",
+    "variant_id": "351:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "351:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "351:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "025c30fa94946229",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-finca-ines-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/05/Colombian.png",
+  "platform": "woocommerce",
+  "product_id": "367",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Colombian Finca Ines (12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/colombian-finca-ines-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "367:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Drip",
+    "variant_id": "367:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Pourover",
+    "variant_id": "367:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "French Press",
+    "variant_id": "367:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Espresso",
+    "variant_id": "367:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9275421e0324d27",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-valle-de-cauca-sugarcane-decaf",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/11/Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "477",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Colombian Valle de Cauca Sugarcane Decaf (12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/colombian-valle-de-cauca-sugarcane-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole bean",
+    "variant_id": "477:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip",
+    "variant_id": "477:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Pourover",
+    "variant_id": "477:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press",
+    "variant_id": "477:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Espresso",
+    "variant_id": "477:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "856e791ae2165b65",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu-la-minita-black-honey",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2021/11/CostaRican.png",
+  "platform": "woocommerce",
+  "product_id": "484",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Costa Rican La Minita Red Honey Anaerobic (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/costa-rican-tarrazu-la-minita-black-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole bean",
+    "variant_id": "484:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "484:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Pourover",
+    "variant_id": "484:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "French Press",
+    "variant_id": "484:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Espresso",
+    "variant_id": "484:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c2bcea0a00083d6f",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-salmo-espresso-8-12oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2022/11/A2426719-ED60-48BA-9386-C206E696FF07.jpeg",
+  "platform": "woocommerce",
+  "product_id": "807",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Brazilian Salmo Espresso (8-12oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/brazilian-salmo-espresso-8-12oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Whole Bean",
+    "variant_id": "807:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Drip Coffeemaker",
+    "variant_id": "807:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Pourover",
+    "variant_id": "807:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "French Press",
+    "variant_id": "807:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Espresso",
+    "variant_id": "807:4"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8oz",
+    "variant_id": "807:5"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz",
+    "variant_id": "807:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "531942d582bc4f74",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-la-esmeralda-72-hour-anaerobic-8oz",
+  "image": "https://valkyriecoffeeroasters.com/wp-content/uploads/2023/01/My-project.png",
+  "platform": "woocommerce",
+  "product_id": "861",
+  "product_type": "variable",
+  "roaster_slug": "valkyriecoffeeroasters",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "Honduran La Esmeralda Anaerobic Honey (8oz)",
+  "url": "https://valkyriecoffeeroasters.com/shop/coffee-bags/honduran-la-esmeralda-72-hour-anaerobic-8oz/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "861:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Drip",
+    "variant_id": "861:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Pourover",
+    "variant_id": "861:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Press",
+    "variant_id": "861:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Espresso",
+    "variant_id": "861:4"
+   }
+  ],
+  "vendor": ""
+ }
+]

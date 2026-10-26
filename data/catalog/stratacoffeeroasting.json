@@ -1,0 +1,123 @@
+[
+ {
+  "body_hash": "8288d2cc943fe004",
+  "first_seen": "2026-10-26",
+  "handle": "womens-produced-colombian-sugarcane-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/60c64e8834fc042ae956ebaf/1721680553988-TGCZK2NR07A3T3VVPL1O/STRATA-Sweet-Dreams-Decaf-square.png",
+  "platform": "squarespace",
+  "product_id": "615e0a617336d817368e509d",
+  "product_type": "",
+  "roaster_slug": "stratacoffeeroasting",
+  "tags": [],
+  "title": "SWEET DREAMS (DECAF)",
+  "url": "https://stratacoffeeroasting.com/shop/p/womens-produced-colombian-sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Ground Modern",
+    "variant_id": "1fc23055-1795-4537-9b53-e027211b7261"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Ground Balanced",
+    "variant_id": "21e7c3d4-066f-4ea2-92be-a1d147f25be1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Whole Bean Modern",
+    "variant_id": "573e20c9-8392-4bdc-b116-50c4e46fefda"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Whole Bean Traditional",
+    "variant_id": "bf1fa7c9-c0bd-44eb-a159-49c6de56c110"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Whole Bean Balanced",
+    "variant_id": "e046c879-261e-478d-81d0-d85843603299"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Ground Traditional",
+    "variant_id": "f3a6c127-571e-4472-9316-c5c69dc7a9a6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8f8a09e93dbf905",
+  "first_seen": "2026-10-26",
+  "handle": "strata-espresso-12oz",
+  "image": "https://static1.squarespace.com/static/60c64e8834fc042ae956ebaf/60e9fc9af229ba2ea83f9ba3/685044660a63794fee8da724/1787998202456/",
+  "platform": "squarespace",
+  "product_id": "685044660a63794fee8da724",
+  "product_type": "",
+  "roaster_slug": "stratacoffeeroasting",
+  "tags": [
+   "Americano",
+   "Blend",
+   "Brazilian Coffee",
+   "Cappucino",
+   "Craft Coffee",
+   "Espresso",
+   "Guatemalan Coffee",
+   "Latte",
+   "Nicaraguan Coffee"
+  ],
+  "title": "Strata Espresso - 12oz",
+  "url": "https://stratacoffeeroasting.com/shop/p/strata-espresso-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "098dea86-6116-4e37-81c8-524f9fb23108"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09e39c363ead4f69",
+  "first_seen": "2026-10-26",
+  "handle": "low-country-12oz",
+  "image": "https://static1.squarespace.com/static/60c64e8834fc042ae956ebaf/60e9fc9af229ba2ea83f9ba3/685045f11ef4b52dec0a92df/1787998204375/",
+  "platform": "squarespace",
+  "product_id": "685045f11ef4b52dec0a92df",
+  "product_type": "",
+  "roaster_slug": "stratacoffeeroasting",
+  "tags": [
+   "Blend",
+   "Brazilian Coffee",
+   "Comfort Coffee",
+   "Craft Coffee",
+   "Dark Roast",
+   "Guatemalan Coffee"
+  ],
+  "title": "Low Country - Dark Roast- 12oz",
+  "url": "https://stratacoffeeroasting.com/shop/p/low-country-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "d1b2a411-8d55-4633-83c1-d7be3153d924"
+   }
+  ],
+  "vendor": ""
+ }
+]

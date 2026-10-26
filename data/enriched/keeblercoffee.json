@@ -1,0 +1,217 @@
+{
+ "0762e7759331": {
+  "body_hash": "7837e01ace4f83aa",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "balanced",
+   "deep body",
+   "milk chocolate",
+   "caramel",
+   "sweet fruit"
+  ],
+  "varietals": []
+ },
+ "19c69ec00497": {
+  "body_hash": "e50ba249bd8920d9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry",
+   "strawberry",
+   "lemon pie",
+   "brown sugar"
+  ],
+  "varietals": [
+   "Mundo Novo"
+  ]
+ },
+ "3523894b2dcb": {
+  "body_hash": "ff605afaae4d8314",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "papaya",
+   "lemon",
+   "hibiscus",
+   "blackberry",
+   "boozy",
+   "raspberry"
+  ],
+  "varietals": []
+ },
+ "3b458ebdb696": {
+  "body_hash": "17a3324536570e02",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "candied walnut",
+   "deep body",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "3d7a00935403": {
+  "body_hash": "de3ba69409be5de5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "hazelnut",
+   "brown sugar",
+   "vanilla",
+   "baking spice"
+  ],
+  "varietals": [
+   "Catuai",
+   "Yellow Bourbon"
+  ]
+ },
+ "5a672b17e059": {
+  "body_hash": "abe2b7bb5767f7cc",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "juniper",
+   "kiwi",
+   "pine",
+   "sage"
+  ],
+  "varietals": []
+ },
+ "7852d56655b6": {
+  "body_hash": "4189668478570cfb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry cola",
+   "graham cracker",
+   "cocoa",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "a6206b9e0fe4": {
+  "body_hash": "24f9b8eaac26e5ac",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry",
+   "praline",
+   "creamy",
+   "sweet"
+  ],
+  "varietals": []
+ },
+ "bd25f40536f4": {
+  "body_hash": "0a290f3df6db1e50",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "grapefruit",
+   "toastedmarshmallow",
+   "malt",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "e56e964b3a69": {
+  "body_hash": "7defd1c5f86bd38d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "cacao nibs",
+   "caramel",
+   "cherry",
+   "dark chocolate",
+   "lemon",
+   "mandarin",
+   "orange"
+  ],
+  "varietals": []
+ }
+}

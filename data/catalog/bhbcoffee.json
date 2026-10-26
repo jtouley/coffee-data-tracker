@@ -1,0 +1,831 @@
+[
+ {
+  "body_hash": "50fcf8765d3325ee",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-monteblanco-blueberry-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/BHB-Coffee-Columbia-Blueberry-label.png?v=1782686046",
+  "platform": "shopify",
+  "product_id": "10245104566557",
+  "product_type": "Limited",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Acidity: Medium",
+   "Flavor: Floral",
+   "Flavor: Fruity",
+   "Good for: French Press",
+   "Good for: Pour Over",
+   "Limited Release",
+   "Origin: Colombia",
+   "Process: Washed Anaerobic Co-Ferment",
+   "Region: Huila",
+   "Roast: Light"
+  ],
+  "title": "Colombia Monteblanco Blueberry Co-Ferment",
+  "url": "https://bhbcoffee.com/products/colombia-monteblanco-blueberry-co-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51926647308573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51926647341341"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "1d494a5842991681",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/EthiopiaDecaf.png?v=1782940773",
+  "platform": "shopify",
+  "product_id": "10248811643165",
+  "product_type": "Limited",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Acidity: Medium",
+   "Decaf",
+   "Flavor: Fruity",
+   "Good for: Drip",
+   "Good for: Espresso",
+   "Good for: French Press",
+   "Good for: Pour Over",
+   "Origin: Ethiopia",
+   "Process: Swiss Water Decaf",
+   "Region: Guji",
+   "Roast: Medium"
+  ],
+  "title": "Ethiopia SWP Decaf",
+  "url": "https://bhbcoffee.com/products/ethiopia-guji-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "51943617200413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "51943617233181"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "51943617265949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "51943617298717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "51943617331485"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "5d5afdd363bac77f",
+  "first_seen": "2026-10-26",
+  "handle": "peru-wilder-garcia-geisha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/Wilder_Garcia_Gesha.png?v=1787853033",
+  "platform": "shopify",
+  "product_id": "10357179744541",
+  "product_type": "Limited",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Flavor: Floral",
+   "Flavor: Fruity",
+   "Good for: Pour Over",
+   "Limited Release",
+   "Roast: Light",
+   "show-price"
+  ],
+  "title": "Peru Wilder Garcia Gesha Washed",
+  "url": "https://bhbcoffee.com/products/peru-wilder-garcia-geisha-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "52781865140509"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.5,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "52781865173277"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "c303d43054275aa7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-acatenango-la-torre",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/Acatenango.png?v=1765862035",
+  "platform": "shopify",
+  "product_id": "1924124049505",
+  "product_type": "Reserve",
+  "roaster_slug": "bhbcoffee",
+  "tags": [],
+  "title": "Guatemala Acatenango La Torre Natural",
+  "url": "https://bhbcoffee.com/products/guatemala-acatenango-la-torre",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "18324936228961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "32532863844449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "39743906807905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "39743906840673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "39743906873441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.25,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48000661913885"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ab-ngomano",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/Kenya_Setek_Highlands_Natural.png?v=1790623554",
+  "platform": "shopify",
+  "product_id": "2048217677921",
+  "product_type": "Reserve",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Ruiru",
+   "SL28",
+   "SL34",
+   "dark",
+   "earthy",
+   "kenya",
+   "reserve",
+   "washed"
+  ],
+  "title": "Kenya Setek Highlands Natural",
+  "url": "https://bhbcoffee.com/products/kenya-ab-ngomano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "19471334047841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "32532846379105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "39743827247201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "39743827312737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "39743827378273"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "b7e60144ea591cd6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/GuatemalaEspresso.png?v=1765861993",
+  "platform": "shopify",
+  "product_id": "3986662916193",
+  "product_type": "Classic",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "chocolatey",
+   "dark",
+   "guatemala",
+   "specialty",
+   "typica",
+   "washed"
+  ],
+  "title": "Guatemala San Bernardo Espresso",
+  "url": "https://bhbcoffee.com/products/guatemala-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "29714649088097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "32532788707425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / French Press",
+    "variant_id": "39743777734753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Drip",
+    "variant_id": "39743777767521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "39743777800289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48000664043805"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "e19e17bf8b5c6d1c",
+  "first_seen": "2026-10-26",
+  "handle": "latin-america-low-caffeine-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/18.jpg?v=1765861976",
+  "platform": "shopify",
+  "product_id": "4679158595681",
+  "product_type": "Classic",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "chocolatey",
+   "costa rica",
+   "dark",
+   "laurina low caffeine",
+   "reserve",
+   "washed"
+  ],
+  "title": "Latin America Low Caffeine Blend",
+  "url": "https://bhbcoffee.com/products/latin-america-low-caffeine-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "32468517748833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44929451360541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "44992550863133"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "44992553976093"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "44992554008861"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "2272ae4f9de8023b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-fraijanes-laurina-low-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/Laurina_790fbbb4-f5f0-4545-9d6c-5ba96d5a4b0f.png?v=1771389167",
+  "platform": "shopify",
+  "product_id": "6632684322913",
+  "product_type": "Limited",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "guatemala",
+   "laurina low caffeine",
+   "limited",
+   "nodiscount",
+   "washed"
+  ],
+  "title": "Guatemala Fraijanes Laurina Low Caffeine",
+  "url": "https://bhbcoffee.com/products/guatemala-fraijanes-laurina-low-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39511480205409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50176282657053"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 170.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50176282689821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.5,
+    "title": "12 oz / Drip",
+    "variant_id": "50203797520669"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "f2660b29727b8a92",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/21_5c74b70a-dfd1-475a-8474-3c4ff2324f8a.jpg?v=1765861945",
+  "platform": "shopify",
+  "product_id": "8141442646301",
+  "product_type": "Classic",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Castillo",
+   "caturra",
+   "chocolatey",
+   "colombia",
+   "colombia bhb",
+   "dark",
+   "specialty",
+   "washed"
+  ],
+  "title": "Colombia Valle del Cauca Decaf",
+  "url": "https://bhbcoffee.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44409184256285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / French Press",
+    "variant_id": "44409184387357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Drip",
+    "variant_id": "44409184420125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "44409184452893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "44409184551197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48000651559197"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "446a506439ae03bc",
+  "first_seen": "2026-10-26",
+  "handle": "blue-nectar-limited-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/8.jpg?v=1765861922",
+  "platform": "shopify",
+  "product_id": "9075164381469",
+  "product_type": "Limited",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "blend",
+   "chocolatey",
+   "colombia",
+   "costa rica",
+   "fruity",
+   "guatemala",
+   "light roast",
+   "medium roast"
+  ],
+  "title": "Blue Nectar Blend",
+  "url": "https://bhbcoffee.com/products/blue-nectar-limited-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47838765875485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "47838765941021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Drip",
+    "variant_id": "47838765973789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Pourover",
+    "variant_id": "47838766006557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "47838766104861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 162.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48000636879133"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "5d3c4e143d707f30",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/ColdBrew.png?v=1765861909",
+  "platform": "shopify",
+  "product_id": "9532805841181",
+  "product_type": "Reserve",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "Ruiru",
+   "SL28",
+   "SL34",
+   "chocolatey",
+   "dark",
+   "guatemala",
+   "kenya",
+   "reserve",
+   "washed"
+  ],
+  "title": "Cold Brew (Online Exclusive)",
+  "url": "https://bhbcoffee.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49074007802141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "49074007867677"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "49074007900445"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "49074007933213"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "49074007965981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Aeropress",
+    "variant_id": "49074007998749"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Espresso",
+    "variant_id": "49074008031517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49074008064285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.25,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49074008097053"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "1ea8de41b5d17b27",
+  "first_seen": "2026-10-26",
+  "handle": "rustic-bakery-cookies",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/Rustic-Bakery-Product-MeyerLemonShortbread33358_jpg.webp?v=1726695383",
+  "platform": "shopify",
+  "product_id": "9575623819549",
+  "product_type": "Coffee Making",
+  "roaster_slug": "bhbcoffee",
+  "tags": [],
+  "title": "Rustic Bakery Cookies",
+  "url": "https://bhbcoffee.com/products/rustic-bakery-cookies",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.5,
+    "title": "Meyer Lemon",
+    "variant_id": "49175303389469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.5,
+    "title": "Chocolate Cacao Nib",
+    "variant_id": "49175303422237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.5,
+    "title": "Vanilla Bean",
+    "variant_id": "49175303455005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.5,
+    "title": "Salted Caramel",
+    "variant_id": "49175303487773"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.5,
+    "title": "Pecan",
+    "variant_id": "49175303520541"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/3_9bcfdb34-732c-420d-829f-f59d39f2e08c.png?v=1792697477",
+  "platform": "shopify",
+  "product_id": "9817235685661",
+  "product_type": "Reserve",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "anaerobic",
+   "ethiopia",
+   "fruity",
+   "grand reserve",
+   "light",
+   "light roast",
+   "natural"
+  ],
+  "title": "Ethiopia Yirgacheffe Natural",
+  "url": "https://bhbcoffee.com/products/ethiopia-natural-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49884229533981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / French Press",
+    "variant_id": "49884229599517"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Drip",
+    "variant_id": "49884229632285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "49884229665053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "49884229763357"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ },
+ {
+  "body_hash": "1e1064baf43ab038",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-jaguar-honey",
+  "image": "https://cdn.shopify.com/s/files/1/2472/2462/files/BHB-Coffee-Costa-Rica-Label.jpg?v=1765861835",
+  "platform": "shopify",
+  "product_id": "9858874179869",
+  "product_type": "Classic",
+  "roaster_slug": "bhbcoffee",
+  "tags": [
+   "colombia",
+   "fruity",
+   "light",
+   "natural",
+   "reserve"
+  ],
+  "title": "Costa Rica Tarrazú Jaguar Honey",
+  "url": "https://bhbcoffee.com/products/costa-rica-tarrazu-jaguar-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50020425957661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / French Press",
+    "variant_id": "50020425990429"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Pourover",
+    "variant_id": "50020426023197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 oz / Drip",
+    "variant_id": "50020426055965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "50020426088733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.75,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "67787392712989"
+   }
+  ],
+  "vendor": "Blue Hummingbird Coffee"
+ }
+]

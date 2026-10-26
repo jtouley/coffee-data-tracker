@@ -1,0 +1,1334 @@
+[
+ {
+  "body_hash": "f6a34c2044dbf9d8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12817",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular",
+   "Subscription"
+  ],
+  "title": "Sumatra",
+  "url": "https://maplecityroasters.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Sumatra",
+    "variant_id": "12817:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1f89e7cb0130074",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple-pie-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12854",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Caramel Apple Pie Decaf",
+  "url": "https://maplecityroasters.com/product/caramel-apple-pie-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Caramel Apple Pie Decaf",
+    "variant_id": "12854:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7266a508bd4a26c5",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-eggnog-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12859",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Caramel Eggnog Decaf",
+  "url": "https://maplecityroasters.com/product/caramel-eggnog-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Caramel Eggnog Decaf",
+    "variant_id": "12859:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "028b2833b96e8734",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-caramel-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12864",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Chocolate Caramel Decaf",
+  "url": "https://maplecityroasters.com/product/chocolate-caramel-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Chocolate Caramel Decaf",
+    "variant_id": "12864:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3063daa887acce7a",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-coconut-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12867",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Caramel Coconut Decaf",
+  "url": "https://maplecityroasters.com/product/caramel-coconut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Caramel Coconut Decaf",
+    "variant_id": "12867:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "04cd55d2c1ed394a",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12872",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombian Decaf",
+  "url": "https://maplecityroasters.com/product/colombian-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Colombian Decaf",
+    "variant_id": "12872:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ba6a4c3e1a8adfc",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12877",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Creme Brulee Decaf",
+  "url": "https://maplecityroasters.com/product/creme-brulee-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Creme Brulee Decaf",
+    "variant_id": "12877:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9dd61343156502e8",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12882",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Dark Chocolate Decaf",
+  "url": "https://maplecityroasters.com/product/dark-chocolate-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Dark Chocolate Decaf",
+    "variant_id": "12882:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b01ef978da2644c7",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-cherry-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12887",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Dark Chocolate Cherry Decaf",
+  "url": "https://maplecityroasters.com/product/dark-chocolate-cherry-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Dark Chocolate Cherry Decaf",
+    "variant_id": "12887:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a686452b9f8db58c",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12892",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "English Toffee Decaf",
+  "url": "https://maplecityroasters.com/product/english-toffee-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "English Toffee Decaf",
+    "variant_id": "12892:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1d78b2cf33fa3ab2",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-peach-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12900",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Fresh Peach Decaf",
+  "url": "https://maplecityroasters.com/product/fresh-peach-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Fresh Peach Decaf",
+    "variant_id": "12900:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f2897a24d396c31",
+  "first_seen": "2026-10-26",
+  "handle": "french-apple-crumb-cake-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12905",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "French Apple Crumb Cake Decaf",
+  "url": "https://maplecityroasters.com/product/french-apple-crumb-cake-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Apple Crumb Cake Decaf",
+    "variant_id": "12905:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "729a90ca01e63bd3",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-mocha-dark-chocolate-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12910",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Peppermint Mocha/ Dark Chocolate Decaf",
+  "url": "https://maplecityroasters.com/product/peppermint-mocha-dark-chocolate-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Peppermint Mocha/ Dark Chocolate Decaf",
+    "variant_id": "12910:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2957fd5bd9ebf73",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-muffin-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12915",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Pumpkin Muffin Decaf",
+  "url": "https://maplecityroasters.com/product/pumpkin-muffin-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Pumpkin Muffin Decaf",
+    "variant_id": "12915:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "08ffcf5482536e35",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-almond-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "12923",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Toasted Almond Decaf",
+  "url": "https://maplecityroasters.com/product/toasted-almond-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Toasted Almond Decaf",
+    "variant_id": "12923:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33d76bd5b14b813c",
+  "first_seen": "2026-10-26",
+  "handle": "mango-decaf-copy-copy",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2020/05/Maple_City_Coffee_Tea_Bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "12931",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Mango Decaf",
+  "url": "https://maplecityroasters.com/product/mango-decaf-copy-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Mango Decaf",
+    "variant_id": "12931:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad62bc772d7db93e",
+  "first_seen": "2026-10-26",
+  "handle": "curb-the-craving-original",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2021/04/maple_ctc3.jpg",
+  "platform": "woocommerce",
+  "product_id": "13045",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Flavored",
+   "Regular",
+   "Subscription",
+   "Weight Loss Coffee"
+  ],
+  "title": "Curb The Craving – Appetite Suppressant Coffee",
+  "url": "https://maplecityroasters.com/product/curb-the-craving-original/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Curb The Craving &#8211; Appetite Suppressant Coffee",
+    "variant_id": "13045:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64f3182031f4c8e4",
+  "first_seen": "2026-10-26",
+  "handle": "curb-the-craving-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2021/04/Curb_Craving_decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "13053",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored",
+   "Regular",
+   "Subscription",
+   "Weight Loss Coffee"
+  ],
+  "title": "Curb The Craving – Appetite Suppressant Coffee – DECAF",
+  "url": "https://maplecityroasters.com/product/curb-the-craving-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Curb The Craving &#8211; Appetite Suppressant Coffee &#8211; DECAF",
+    "variant_id": "13053:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1ab42ff65cc2a56",
+  "first_seen": "2026-10-26",
+  "handle": "nutcracker-sweet-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13281",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored",
+   "Seasonal Holiday"
+  ],
+  "title": "Nutcracker Sweet/Triple Nut Crunch – Decaf",
+  "url": "https://maplecityroasters.com/product/nutcracker-sweet-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Nutcracker Sweet/Triple Nut Crunch &#8211; Decaf",
+    "variant_id": "13281:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "232372531e371009",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13282",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Flavored",
+   "Seasonal Holiday"
+  ],
+  "title": "Jingle Bell Java",
+  "url": "https://maplecityroasters.com/product/jingle-bell-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Jingle Bell Java",
+    "variant_id": "13282:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "232372531e371009",
+  "first_seen": "2026-10-26",
+  "handle": "jingle-bell-java-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13283",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored",
+   "Seasonal Holiday"
+  ],
+  "title": "Jingle Bell Java / Caribbean Java Decaf",
+  "url": "https://maplecityroasters.com/product/jingle-bell-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Jingle Bell Java / Caribbean Java Decaf",
+    "variant_id": "13283:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c63c7fda35ae252a",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13284",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored",
+   "Seasonal Holiday"
+  ],
+  "title": "Snickerdoodle Decaf",
+  "url": "https://maplecityroasters.com/product/snickerdoodle-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Snickerdoodle Decaf",
+    "variant_id": "13284:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b10e8b4232555958",
+  "first_seen": "2026-10-26",
+  "handle": "smores-decaf-copy",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13383",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "S’mores Decaf",
+  "url": "https://maplecityroasters.com/product/smores-decaf-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "S&#8217;mores Decaf",
+    "variant_id": "13383:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "638befe69292a130",
+  "first_seen": "2026-10-26",
+  "handle": "veterans-blend",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2023/01/vet-mock-prod.jpg",
+  "platform": "woocommerce",
+  "product_id": "13731",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Featured"
+  ],
+  "title": "Veteran’s Blend",
+  "url": "https://maplecityroasters.com/product/veterans-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Veteran&#8217;s Blend",
+    "variant_id": "13731:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8c0fcf8352093b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-high-grown",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "13922",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular"
+  ],
+  "title": "Honduras ( High Grown )",
+  "url": "https://maplecityroasters.com/product/honduras-high-grown/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Honduras ( High Grown )",
+    "variant_id": "13922:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f662dfcc5612a6f",
+  "first_seen": "2026-10-26",
+  "handle": "banana-foster-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "14165",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf",
+   "Flavored"
+  ],
+  "title": "Banana Foster – DECAF",
+  "url": "https://maplecityroasters.com/product/banana-foster-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Banana Foster &#8211; DECAF",
+    "variant_id": "14165:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c031e3980be1b74",
+  "first_seen": "2026-10-26",
+  "handle": "u93-morning-show-blend",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2024/04/Morning-Show-Blend-RMHCM-1.png",
+  "platform": "woocommerce",
+  "product_id": "14369",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Featured",
+   "Regular"
+  ],
+  "title": "U93 Morning Show Blend!",
+  "url": "https://maplecityroasters.com/product/u93-morning-show-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "U93 Morning Show Blend!",
+    "variant_id": "14369:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "638befe69292a130",
+  "first_seen": "2026-10-26",
+  "handle": "veterans-blend-dark",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2023/01/vet-mock-prod.jpg",
+  "platform": "woocommerce",
+  "product_id": "14743",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Featured"
+  ],
+  "title": "Veteran’s Blend – Dark Roast",
+  "url": "https://maplecityroasters.com/product/veterans-blend-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Veteran&#8217;s Blend &#8211; Dark Roast",
+    "variant_id": "14743:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09c4ccc03fb07c6c",
+  "first_seen": "2026-10-26",
+  "handle": "maple-city-cinnamon-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "2741",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Maple City Cinnamon Decaf",
+  "url": "https://maplecityroasters.com/product/maple-city-cinnamon-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Maple City Cinnamon Decaf",
+    "variant_id": "2741:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3112d9ff808686da",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-cherry-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "2753",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Jazzy Cherry Decaf",
+  "url": "https://maplecityroasters.com/product/jazzy-cherry-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Jazzy Cherry Decaf",
+    "variant_id": "2753:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4cb257c0b9bd4f24",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-daterra-espresso",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "411",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular",
+   "Subscription"
+  ],
+  "title": "Brazil Espresso",
+  "url": "https://maplecityroasters.com/product/brazil-daterra-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Brazil Espresso",
+    "variant_id": "411:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e955b7f0e8db7d3f",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-peru",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "429",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular"
+  ],
+  "title": "Fair Trade Organic Peru",
+  "url": "https://maplecityroasters.com/product/fair-trade-organic-peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Fair Trade Organic Peru",
+    "variant_id": "429:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a29e29d1af7428e2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "435",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular"
+  ],
+  "title": "Sumatra Mandheling Dark Roast",
+  "url": "https://maplecityroasters.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Sumatra Mandheling Dark Roast",
+    "variant_id": "435:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "478892ea28fad80a",
+  "first_seen": "2026-10-26",
+  "handle": "amaretto-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "482",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Amaretto Decaf",
+  "url": "https://maplecityroasters.com/product/amaretto-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Amaretto Decaf",
+    "variant_id": "482:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e58e98a7cbb621c",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-cinnamon-crumble-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "485",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Blueberry Cinnamon Crumble Decaf",
+  "url": "https://maplecityroasters.com/product/blueberry-cinnamon-crumble-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Blueberry Cinnamon Crumble Decaf",
+    "variant_id": "485:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5fd8603877a41e7",
+  "first_seen": "2026-10-26",
+  "handle": "butter-rum-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "488",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Butter Rum Decaf",
+  "url": "https://maplecityroasters.com/product/butter-rum-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Butter Rum Decaf",
+    "variant_id": "488:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c60b847422378f05",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "491",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Chocolate Raspberry Decaf",
+  "url": "https://maplecityroasters.com/product/chocolate-raspberry-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Chocolate Raspberry Decaf",
+    "variant_id": "491:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35b656db9cff1b5a",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-dream-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "494",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Caramel Dream Decaf",
+  "url": "https://maplecityroasters.com/product/caramel-dream-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Caramel Dream Decaf",
+    "variant_id": "494:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "afa7b859d72d634b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "500",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombian Supremo Decaf",
+  "url": "https://maplecityroasters.com/product/colombian-supremo-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Colombian Supremo Decaf",
+    "variant_id": "500:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4dfb3ab767942c2e",
+  "first_seen": "2026-10-26",
+  "handle": "crumb-cake-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "504",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Crumb Cake Decaf",
+  "url": "https://maplecityroasters.com/product/crumb-cake-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Crumb Cake Decaf",
+    "variant_id": "504:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a039509d1b3be2d1",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "507",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "French Vanilla Decaf",
+  "url": "https://maplecityroasters.com/product/french-vanilla-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "French Vanilla Decaf",
+    "variant_id": "507:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2aff809df51a576",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "512",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Hazelnut Decaf",
+  "url": "https://maplecityroasters.com/product/hazelnut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Hazelnut Decaf",
+    "variant_id": "512:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43550e458d07235f",
+  "first_seen": "2026-10-26",
+  "handle": "highland-grogg-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "515",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Highland Grogg Decaf",
+  "url": "https://maplecityroasters.com/product/highland-grogg-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Highland Grogg Decaf",
+    "variant_id": "515:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "08e4b6b3c2da1094",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "518",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Jamaican Me Crazy Decaf",
+  "url": "https://maplecityroasters.com/product/jamaican-me-crazy-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Jamaican Me Crazy Decaf",
+    "variant_id": "518:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e1d5246e8221324",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "521",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Jazzy Java Decaf",
+  "url": "https://maplecityroasters.com/product/jazzy-java-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Jazzy Java Decaf",
+    "variant_id": "521:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a124e7d090cb1cf4",
+  "first_seen": "2026-10-26",
+  "handle": "mexicali-creme-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "524",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Mexicali Creme Decaf",
+  "url": "https://maplecityroasters.com/product/mexicali-creme-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Mexicali Creme Decaf",
+    "variant_id": "524:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0535dcb741a40085",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pecan-spice-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "530",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Pumpkin Pecan Spice Decaf",
+  "url": "https://maplecityroasters.com/product/pumpkin-pecan-spice-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Pumpkin Pecan Spice Decaf",
+    "variant_id": "530:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d504cdac856c8e04",
+  "first_seen": "2026-10-26",
+  "handle": "walnut-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "533",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Walnut Decaf",
+  "url": "https://maplecityroasters.com/product/walnut-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Walnut Decaf",
+    "variant_id": "533:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2326351c61328fbd",
+  "first_seen": "2026-10-26",
+  "handle": "traverse-city-cherry-decaf",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "539",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Traverse City Cherry Decaf",
+  "url": "https://maplecityroasters.com/product/traverse-city-cherry-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Traverse City Cherry Decaf",
+    "variant_id": "539:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ac6a90ece4756fbd",
+  "first_seen": "2026-10-26",
+  "handle": "jazzy-java",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "6357",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Jazzy Java",
+  "url": "https://maplecityroasters.com/product/jazzy-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Jazzy Java",
+    "variant_id": "6357:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5be569ad90af52ff",
+  "first_seen": "2026-10-26",
+  "handle": "bonzo-maple-city-blend",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "6477",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular"
+  ],
+  "title": "Bonzo / Maple City Blend",
+  "url": "https://maplecityroasters.com/product/bonzo-maple-city-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Bonzo / Maple City Blend",
+    "variant_id": "6477:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da777fd0ddfeea47",
+  "first_seen": "2026-10-26",
+  "handle": "morning-after-blend-2",
+  "image": "https://maplecityroasters.com/wp-content/uploads/2019/10/Maple_City_Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "6503",
+  "product_type": "variable",
+  "roaster_slug": "maplecityroasters",
+  "tags": [
+   "Regular"
+  ],
+  "title": "Morning After Blend",
+  "url": "https://maplecityroasters.com/product/morning-after-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Morning After Blend",
+    "variant_id": "6503:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

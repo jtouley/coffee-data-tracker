@@ -1,0 +1,1290 @@
+[
+ {
+  "body_hash": "0fc1a8cfe286cfb6",
+  "first_seen": "2026-10-26",
+  "handle": "bledsoe-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "020234556d8b",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Bledsoe Blend",
+  "url": "https://www.javacoffee.com/product-page/bledsoe-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f6014f481cd309f1",
+  "first_seen": "2026-10-26",
+  "handle": "fritz-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "02d99c181620",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Fritz Blend",
+  "url": "https://www.javacoffee.com/product-page/fritz-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.6,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1b166c118520f8d",
+  "first_seen": "2026-10-26",
+  "handle": "wayne-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "09b838698aec",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Wayne Blend",
+  "url": "https://www.javacoffee.com/product-page/wayne-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7f66ff2a6bfe7395",
+  "first_seen": "2026-10-26",
+  "handle": "oscar-s-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0ada508c7e94",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Oscar's Blend",
+  "url": "https://www.javacoffee.com/product-page/oscar-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "021dccf1e0b661e5",
+  "first_seen": "2026-10-26",
+  "handle": "harriman-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0dbb5317684a",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Harriman Blend",
+  "url": "https://www.javacoffee.com/product-page/harriman-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.2,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a774855e14967183",
+  "first_seen": "2026-10-26",
+  "handle": "taylor-blend-ii",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1018a2628826",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Taylor Blend II",
+  "url": "https://www.javacoffee.com/product-page/taylor-blend-ii",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.1,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "228954085ccc9605",
+  "first_seen": "2026-10-26",
+  "handle": "50-50-espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1190779546d5",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "50/50 Espresso Blend",
+  "url": "https://www.javacoffee.com/product-page/50-50-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f59972367ebf9b0",
+  "first_seen": "2026-10-26",
+  "handle": "lofland-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "125fc3225a00",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Lofland Blend",
+  "url": "https://www.javacoffee.com/product-page/lofland-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.35,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88137bac92f6b5c6",
+  "first_seen": "2026-10-26",
+  "handle": "moriarty-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1bd9270588fa",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Moriarty Blend",
+  "url": "https://www.javacoffee.com/product-page/moriarty-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.75,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1c73e37c9426f0e",
+  "first_seen": "2026-10-26",
+  "handle": "sussman-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "28ebeac3a8c2",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Sussman Blend",
+  "url": "https://www.javacoffee.com/product-page/sussman-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5277baa1b7db6e9a",
+  "first_seen": "2026-10-26",
+  "handle": "mathews-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "295674fccf86",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Mathews Blend",
+  "url": "https://www.javacoffee.com/product-page/mathews-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.05,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c328bc14842538f8",
+  "first_seen": "2026-10-26",
+  "handle": "milena-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2a932ac15376",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Milena Blend",
+  "url": "https://www.javacoffee.com/product-page/milena-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.9,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a0347495644b5a18",
+  "first_seen": "2026-10-26",
+  "handle": "lowry-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2b2949f3686f",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Lowry Blend",
+  "url": "https://www.javacoffee.com/product-page/lowry-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.05,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2aa32e09ffbf580a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-16-oz-1-lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2b486bc68375",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Ethiopian Sidamo 16 oz / 1 lb",
+  "url": "https://www.javacoffee.com/product-page/ethiopian-sidamo-16-oz-1-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb4ddd8037ddaeb6",
+  "first_seen": "2026-10-26",
+  "handle": "falco-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2f0c737f6e44",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Falco Blend",
+  "url": "https://www.javacoffee.com/product-page/falco-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.15,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fed806f6d2cd08c",
+  "first_seen": "2026-10-26",
+  "handle": "fitzgerald-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3405c02e1ad4",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Fitzgerald Blend",
+  "url": "https://www.javacoffee.com/product-page/fitzgerald-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.9,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f185155e8ee287ef",
+  "first_seen": "2026-10-26",
+  "handle": "lisa-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3c56161ddd3c",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Lisa Blend",
+  "url": "https://www.javacoffee.com/product-page/lisa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "624e9f8129b98da2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "40f1634415ee",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling 16 oz / 1 lbs",
+  "url": "https://www.javacoffee.com/product-page/sumatra-mandheling-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.45,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0cf87deedf358c31",
+  "first_seen": "2026-10-26",
+  "handle": "briggs-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4176a11e0319",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Briggs Blend",
+  "url": "https://www.javacoffee.com/product-page/briggs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.1,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f5ca0bc96ca2c2c",
+  "first_seen": "2026-10-26",
+  "handle": "new-orleans-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4e2937bb551f",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "New Orleans Blend",
+  "url": "https://www.javacoffee.com/product-page/new-orleans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e5cd9f4c3d1f9ec",
+  "first_seen": "2026-10-26",
+  "handle": "taylor-blend-i",
+  "image": null,
+  "platform": "generic",
+  "product_id": "59f854f83ea8",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Taylor Blend I",
+  "url": "https://www.javacoffee.com/product-page/taylor-blend-i",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a93acb406f50e9b",
+  "first_seen": "2026-10-26",
+  "handle": "kats-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5d461aea900a",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Kats Blend",
+  "url": "https://www.javacoffee.com/product-page/kats-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.55,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "004fb864a913f0f3",
+  "first_seen": "2026-10-26",
+  "handle": "generous-java-blend-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5e0f0c962c9c",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Generous Java Blend 5 lbs",
+  "url": "https://www.javacoffee.com/product-page/generous-java-blend-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e81fcc93c665e97e",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "668700ffabc1",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Java Estate",
+  "url": "https://www.javacoffee.com/product-page/java-estate-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "28d7c465be5b0a71",
+  "first_seen": "2026-10-26",
+  "handle": "rankin-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6c14769d5469",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Rankin Blend",
+  "url": "https://www.javacoffee.com/product-page/rankin-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84841acb94f6138f",
+  "first_seen": "2026-10-26",
+  "handle": "stevens-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7de0a8f14480",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Stevens Blend",
+  "url": "https://www.javacoffee.com/product-page/stevens-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88dcacab01b5c466",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "7ee2d23d4bb8",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Viennese Blend",
+  "url": "https://www.javacoffee.com/product-page/viennese-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e4db5d61c3be4a8",
+  "first_seen": "2026-10-26",
+  "handle": "gemelli-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "80f3acc86453",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Gemelli Blend",
+  "url": "https://www.javacoffee.com/product-page/gemelli-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.45,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff018e1573338aa4",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9905e4feec1f",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Kona Blend",
+  "url": "https://www.javacoffee.com/product-page/kona-blend-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.6,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c61b8d860ec39c0b",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-viennese-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a4bb4b83d3da",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "European Blend",
+  "url": "https://www.javacoffee.com/product-page/copy-of-viennese-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.7,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b314bcb78ebfffd",
+  "first_seen": "2026-10-26",
+  "handle": "marco-polo-espresso-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a526b13cdb2f",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Marco Polo Espresso",
+  "url": "https://www.javacoffee.com/product-page/marco-polo-espresso-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.1,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b847c2eca2760047",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-sanani-yemen-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "afecb6e86e8c",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Mocca Sanani Yemen 16 oz / 1 lbs",
+  "url": "https://www.javacoffee.com/product-page/mocha-sanani-yemen-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.6,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c211bd5a6758f23",
+  "first_seen": "2026-10-26",
+  "handle": "jones-25-75-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b1096ad5bc66",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Jones Decaf Blend",
+  "url": "https://www.javacoffee.com/product-page/jones-25-75-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b74153f8fb574c2e",
+  "first_seen": "2026-10-26",
+  "handle": "reagans-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b401a900bc9d",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Reagan's Blend",
+  "url": "https://www.javacoffee.com/product-page/reagans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27389b5e69b94e1e",
+  "first_seen": "2026-10-26",
+  "handle": "la-minita-tarrazú-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b9ae8afe4c8c",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "La Minita Tarrazú 16 oz / 1 lbs",
+  "url": "https://www.javacoffee.com/product-page/la-minita-tarrazú-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.2,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "634a3224e640ef8b",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bc44e232e161",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.javacoffee.com/product-page/french-roast-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7dd0643baf1d5f61",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-50-50-espresso-blend-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bd677c9f99b1",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Rich's Blend",
+  "url": "https://www.javacoffee.com/product-page/copy-of-50-50-espresso-blend-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.3,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce393161c64f9bec",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c0ac18b91929",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://www.javacoffee.com/product-page/italian-roast-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "595d7cbce8f2bd2f",
+  "first_seen": "2026-10-26",
+  "handle": "maron-s-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ca068566c3b9",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Maron's Blend",
+  "url": "https://www.javacoffee.com/product-page/maron-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.6,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab3ee63718e1e60d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "cb7ef9a6169b",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Kenya AA 16 oz",
+  "url": "https://www.javacoffee.com/product-page/kenya-aa-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.2,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d704d1ae79d7aa29",
+  "first_seen": "2026-10-26",
+  "handle": "lory-blend-ii",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d0326dda00c1",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Lory Blend II",
+  "url": "https://www.javacoffee.com/product-page/lory-blend-ii",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0aae2b5da57f45f",
+  "first_seen": "2026-10-26",
+  "handle": "c-c-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d2c3b549ed62",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "C & C Blend",
+  "url": "https://www.javacoffee.com/product-page/c-c-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.7,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c4629691cd7df599",
+  "first_seen": "2026-10-26",
+  "handle": "bartoskewitz-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d2ddf275dbcf",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "White Blend",
+  "url": "https://www.javacoffee.com/product-page/bartoskewitz-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.9,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9d0eed35625f532",
+  "first_seen": "2026-10-26",
+  "handle": "light-french-roast-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d3b68d91b2ff",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Light French Roast",
+  "url": "https://www.javacoffee.com/product-page/light-french-roast-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.7,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2df872a0ff19c4a",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d5afe56205af",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Holiday Blend",
+  "url": "https://www.javacoffee.com/product-page/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ac5bf1357975cf4",
+  "first_seen": "2026-10-26",
+  "handle": "mcgee-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d63c6b896e2a",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "McGee Blend",
+  "url": "https://www.javacoffee.com/product-page/mcgee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88dcacab01b5c466",
+  "first_seen": "2026-10-26",
+  "handle": "gondolier-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "dbe145213a13",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Gondolier Blend",
+  "url": "https://www.javacoffee.com/product-page/gondolier-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb3dbd8b695903ef",
+  "first_seen": "2026-10-26",
+  "handle": "cohenblend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "dfd7b91013cd",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Cohan Blend",
+  "url": "https://www.javacoffee.com/product-page/cohenblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.25,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "93d7fe9671456baa",
+  "first_seen": "2026-10-26",
+  "handle": "bixler-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e09e6e6e52e5",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Bixler Blend",
+  "url": "https://www.javacoffee.com/product-page/bixler-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.7,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aca0e68ba5cc9d9d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bourbon-santos-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e123058f23c8",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Brazil Bourbon",
+  "url": "https://www.javacoffee.com/product-page/brazil-bourbon-santos-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.7,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f6b30adfa606d9f",
+  "first_seen": "2026-10-26",
+  "handle": "abbott-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e12c7dfc060a",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Abbott Blend",
+  "url": "https://www.javacoffee.com/product-page/abbott-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.45,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "201736695850dfd7",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e2c556310058",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://www.javacoffee.com/product-page/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.8,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "912bd3ffcf49f349",
+  "first_seen": "2026-10-26",
+  "handle": "roasted-chesnut",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e7c4fe215990",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Roasted Chesnut",
+  "url": "https://www.javacoffee.com/product-page/roasted-chesnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.5,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "004fb864a913f0f3",
+  "first_seen": "2026-10-26",
+  "handle": "generous-java-blend-1-lbs-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ed430bec849e",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Generous Java Blend 1 lbs",
+  "url": "https://www.javacoffee.com/product-page/generous-java-blend-1-lbs-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.4,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8ada250c6655876",
+  "first_seen": "2026-10-26",
+  "handle": "byrdies-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f2eb35f3babf",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "Byrdies Blend",
+  "url": "https://www.javacoffee.com/product-page/byrdies-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.85,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cfff81fe60badcd",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea-koban-16-oz-1-lbs",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f76f45de1f77",
+  "product_type": "",
+  "roaster_slug": "javacoffee",
+  "tags": [],
+  "title": "New Guinea Koban 16 oz / 1 lbs",
+  "url": "https://www.javacoffee.com/product-page/new-guinea-koban-16-oz-1-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1102 @@
+[
+ {
+  "body_hash": "56c45c82c151d51f",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/df898c64-61de-4a0d-b596-8b9d68915283/subscriptions+-18.jpg",
+  "platform": "squarespace",
+  "product_id": "625977e0064892129ff01ef3",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Justice Blend - Twice a Month Frequency",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "268c5b66-a410-4cab-b08f-c41cea26422e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "c6bf4d45-cf6d-47f8-a17e-a90e1a448bdb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "d4910cca-8588-45b6-8ec1-a4b5f0e0584b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "03bad3ee77886ef1",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zsbrn",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/372258de-8ed8-4949-ae7b-01a0918c516f/subscriptions+-21.jpg",
+  "platform": "squarespace",
+  "product_id": "62597a6c729c4b02a821145c",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "decaf",
+   "medium roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Single Origin Decaf - Every 2 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zsbrn",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "7e6bc86f-d95b-4676-a44f-1f22bf4aec91"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for pourover",
+    "variant_id": "a19db546-66ef-4a48-ab32-a5b1abd6fe26"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "df539ed1-e259-4889-a8c3-3495cc524741"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49271fbb689431b3",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/3b8c85d6-ed58-49db-812d-7c9551b68718/5+lb+justice-216.jpg",
+  "platform": "squarespace",
+  "product_id": "62597ac617b9bf2eef391d48",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Justice - Espresso Blend",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pourover",
+    "variant_id": "64612c54-c25e-4ff4-82ed-551c233ea173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "a52fee25-9180-41eb-999c-6a097372e225"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "b41f8c38-3695-4d04-83e8-de7ac88cb386"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "082f2e4aaa85050d",
+  "first_seen": "2026-10-26",
+  "handle": "justice-blend-monthly",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/1221b6f2-9ef7-4b4c-b2cc-41d580f57921/subscriptions+-18.jpg",
+  "platform": "squarespace",
+  "product_id": "627132543b58c1176bd84444",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "espresso"
+  ],
+  "title": "Justice Blend",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/justice-blend-monthly",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "3861589d-67f1-4854-b39d-bf6252c4d404"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "79a3a973-28a0-4df5-9456-9d00cf2d3508"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "d3f3309b-b3fd-4898-a1fd-2983b973d112"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9af824f199c9bfd",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/b9a77f09-99e0-4f8f-9e18-c3ee56d56801/subscriptions+-02.jpg",
+  "platform": "squarespace",
+  "product_id": "627446674af59470c7298a54",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Light & Bright Single Origin - Twice Per Month Frequency",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "23c928d0-4f8d-4f6b-b19c-1240bd89d1f6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "7b787dcc-16cc-42e0-ada3-79e71a27b89a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "d4c2db6e-44f7-49e0-b12a-0aea275506bc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cd0fea83e131a5bf",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-monthly",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/c4328a5a-c334-426b-93d6-5ae928cb13a4/subscriptions+-01.jpg",
+  "platform": "squarespace",
+  "product_id": "6274473dba9083059d56c4b0",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Light & Bright Single Origin",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-monthly",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "6b571ea9-7c6e-4539-bf9c-5549dc4b168c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "751be357-adf7-4690-bb4d-39a617f4a06a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "c70e7ca1-0f4a-4e63-8931-374f902bbd01"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "63a4f611b97dc7a1",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-monthly-9f9r5",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/5d065b56-42ba-4f9e-8a5c-27b3128d4e10/subscriptions+-06.jpg",
+  "platform": "squarespace",
+  "product_id": "67a3b6256a33822a08fc0630",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Warm & Cozy Single Origin",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-monthly-9f9r5",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "1c721164-eeb6-4ef5-aad3-63cfe560dbac"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "941d8370-246c-4e0c-9da5-47f6a9a399eb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "faeff464-07fb-455e-8818-3a454181c887"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "804069b4d3e860b6",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly-wda6d",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/ea834902-c69c-4c9b-ac4f-0ac5b4203e36/subscriptions+-07.jpg",
+  "platform": "squarespace",
+  "product_id": "67a3b6b69053a34b1a6cb272",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Warm & Cozy Single Origin - Every 2 Weeks Frequency",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly-wda6d",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "12ccd826-7aa0-4a8d-a535-847e9b5307fa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "432e71f3-a1d6-4cc9-b799-c0b0c6ef57b3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "c9d12ba0-e855-448a-9087-82fe5b634ba9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6b1598161fbc5533",
+  "first_seen": "2026-10-26",
+  "handle": "justice-blend-monthly-6jyfz",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/c5a8c646-1fc6-4713-9af1-55a4810dc8a9/night+and+day-5.jpg",
+  "platform": "squarespace",
+  "product_id": "695d450165f7a9147e053255",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "espresso"
+  ],
+  "title": "Night & Day - Espresso Blend & Decaf",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/justice-blend-monthly-6jyfz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "1db16f78-11be-4aea-8da8-2f0ae59b1943"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "3d60cffd-265e-4c8e-80c5-5dc6e5d7c730"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "55dd1dee-c8f1-41b7-96c0-ee7b3d18bec9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23ba36ca19a0bb6a",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts-fd8td",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/c5a8c646-1fc6-4713-9af1-55a4810dc8a9/night+and+day-5.jpg",
+  "platform": "squarespace",
+  "product_id": "695d464b1fc70e6680471705",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Night & Day - Espresso Blend & Decaf - Twice a Month Frequency",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts-fd8td",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "27cea137-0bb1-4aa3-8dd4-3d2cf72bdfbf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "695dc692-aaa2-4021-8c2b-03ff74e04f93"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "f52cd391-804c-4cce-9613-39987ef4c0e4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c3c25888112f629",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb-kwzm4",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/8a3f6755-51c4-45d1-b2b4-72d227b3cb4a/5+lb+decaf-50.jpg",
+  "platform": "squarespace",
+  "product_id": "6ad90ee9dc4100713b1c2a66",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Decaf - Ethiopia Sidama",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb-kwzm4",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "8d023835-aa21-468c-ba26-42af7cb2e913"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pour Over",
+    "variant_id": "cb6e3e18-2bd4-4e28-bd39-6266ce673e47"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "dff05613-5c2a-419a-b416-fa109a4ee92d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52429395ffbd1fbe",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb-kwzm4-xjzec",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/8a3f6755-51c4-45d1-b2b4-72d227b3cb4a/5+lb+decaf-50.jpg",
+  "platform": "squarespace",
+  "product_id": "6ad912790b1e710b1727d95b",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Decaf - Ethiopia Sidama - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb-kwzm4-xjzec",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "3a2038d2-d965-48b2-8494-d2e752f8d42c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "e66e5fdd-e339-4d2b-b562-4b1e1bd6232d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pour Over",
+    "variant_id": "eb0ad01a-20f8-4429-a30a-f73921f28455"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "433ec180706cfb53",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb-kwzm4-xjzec-92dwn",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/8a3f6755-51c4-45d1-b2b4-72d227b3cb4a/5+lb+decaf-50.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb91675687a9264c5d8740",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Decaf - Ethiopia Sidama - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb-kwzm4-xjzec-92dwn",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "05cf603d-2ff2-4c41-9da2-4dcccc39bcb3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "3662a821-14b5-41e3-bf14-0709e6ae4777"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pour Over",
+    "variant_id": "8598b855-82ab-4c4d-8fc2-2d455ed0da0d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f1397806416353f",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts-fd8td-2pskm",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/c5a8c646-1fc6-4713-9af1-55a4810dc8a9/night+and+day-5.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb939d143ab9518c558ec5",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Night & Day - Espresso Blend & Decaf - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts-fd8td-2pskm",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "381a8731-1f8e-47b6-9ae8-b358ea135bee"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "9871e944-24d8-4710-b0a5-050343ec01a5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "f855f403-cacb-4b2f-ad7f-015515ad859e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f647f37ca30b8ef",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts-fd8td-2pskm-37f9r",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/c5a8c646-1fc6-4713-9af1-55a4810dc8a9/night+and+day-5.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb940feea21a7791ee8789",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Night & Day - Espresso Blend & Decaf - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts-fd8td-2pskm-37f9r",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "13d1392e-1c5a-4515-89df-81c0bb27dfad"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "577a5fec-cee3-4323-a455-ec22904d6950"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "ace34d40-d124-404c-bac5-2c4f17da459c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5370cd6c88e472db",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly-wda6d-tpfp3",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/ea834902-c69c-4c9b-ac4f-0ac5b4203e36/subscriptions+-07.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb94e7d87c7414ed4caed0",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Warm & Cozy Single Origin - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly-wda6d-tpfp3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "07699d8e-fbd6-43e1-ba15-820f8e056f84"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "1f29b515-03cc-4709-ba27-da05c1511ca0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "e77abb2c-031b-4750-8f2f-d271aa2854cc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88e3367b8a2a2e22",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly-wda6d-tpfp3-2n6bk",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/ea834902-c69c-4c9b-ac4f-0ac5b4203e36/subscriptions+-07.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9519382dab3a0aaf6fcc",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Warm & Cozy Single Origin - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly-wda6d-tpfp3-2n6bk",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "4de51da7-7175-4262-bb56-6f7aa00e4941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "6e3ca839-87c1-4cf9-86e1-5d66ee03ddce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "8e131c28-d22a-47c4-b68c-e5a644b8876f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a3690a7fd4fe0b1",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly-sk6j3",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/b9a77f09-99e0-4f8f-9e18-c3ee56d56801/subscriptions+-02.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb97dd24c7472ebb261e52",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Light & Bright Single Origin - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly-sk6j3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "85340c8f-0d2f-4cc1-8f11-87c6b8efc93a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "a3c54458-b6f3-45f0-a761-787dbf1c4ad9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "d41bcff3-d51f-490e-be1b-eb38b7d10f18"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e092e2634523cdae",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb-cwfnp",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/3b8c85d6-ed58-49db-812d-7c9551b68718/5+lb+justice-216.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9a0ee709a00ca0527266",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Justice - Espresso Blend - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb-cwfnp",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pourover",
+    "variant_id": "3f605d55-1cc0-44e0-8e0f-c03596c9f58e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "ab464900-e29c-4cea-8610-bd38cb66bec4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "e083bc49-c89d-4cb1-a7f0-b21093937815"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d26eaefafad74b6",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zbrtb-cwfnp-td2fa",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/3b8c85d6-ed58-49db-812d-7c9551b68718/5+lb+justice-216.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9a3c4e8aa35f295f8933",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "justice",
+   "subscription",
+   "subscription boxes"
+  ],
+  "title": "5lb Bag of Justice - Espresso Blend - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zbrtb-cwfnp-td2fa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Whole Bean",
+    "variant_id": "bc19b394-933b-4094-8f73-b3a5801ca861"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Pourover",
+    "variant_id": "c11adc3d-8577-41f2-b489-195ad4dc870a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 77.5,
+    "title": "Ground for Drip",
+    "variant_id": "d6678fcd-5064-42c1-8ca8-cd86e856c5b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e49fa9f394aca571",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zsbrn-hxyr9",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/372258de-8ed8-4949-ae7b-01a0918c516f/subscriptions+-21.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9bb9589b0a1207f4324f",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "decaf",
+   "medium roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Single Origin Decaf - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zsbrn-hxyr9",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "400fcd8f-290e-45d5-8559-f3437199edbc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "4a449ddb-dca8-4d23-9c57-7f90856eaf37"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for pourover",
+    "variant_id": "88f1b3a6-f99f-4e1b-8cc1-16b25a6025e7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e49fa9f394aca571",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-zsbrn-hxyr9-xlx3m",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/372258de-8ed8-4949-ae7b-01a0918c516f/subscriptions+-21.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9bf3987fa52047a3140b",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "coffee beans",
+   "dark roast",
+   "decaf",
+   "medium roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Single Origin Decaf - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-zsbrn-hxyr9-xlx3m",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "1cc78f9b-f5b3-4eab-8640-e85e8e509b74"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for pourover",
+    "variant_id": "3c0386ac-1cd4-4f23-bb37-595dea70c461"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "51c6cdd8-cd96-40f6-b67f-c17b492a4c97"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62f179aa26f99898",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts-elcam",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/df898c64-61de-4a0d-b596-8b9d68915283/subscriptions+-18.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9cd91adce360c46d995d",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Justice Blend - Every 6 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts-elcam",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "4fbad36a-f25a-4334-8e7f-ce33aea1cb1c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "784280e0-f48c-41a9-9803-8f312df352f3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "f31035df-a4a6-4a21-90fb-eb03a7653a55"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7401ab60866c8218",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-x2-1-esjts-elcam-9zrxa",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/df898c64-61de-4a0d-b596-8b9d68915283/subscriptions+-18.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9d011adce360c46da1b0",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "beans",
+   "blend",
+   "coffee beans",
+   "dark roast",
+   "espresso",
+   "subscription"
+  ],
+  "title": "Justice Blend - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-x2-1-esjts-elcam-9zrxa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Whole Bean",
+    "variant_id": "1d50c1db-ef8a-4e9a-b161-3aa6c4cb7266"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Pourover",
+    "variant_id": "cfbb70c5-ce4c-4d15-bff2-8c8bb0af0434"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.5,
+    "title": "Ground for Drip",
+    "variant_id": "f33fa0fd-a1b1-4a22-b1da-325a45ebfc55"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c99c9e474f7b840",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-single-origin-bi-weekly-sk6j3-5lzn3",
+  "image": "https://images.squarespace-cdn.com/content/v1/6238cf546d79310f93a36032/b9a77f09-99e0-4f8f-9e18-c3ee56d56801/subscriptions+-02.jpg",
+  "platform": "squarespace",
+  "product_id": "6adb9d960a5e197ee4e3cddf",
+  "product_type": "",
+  "roaster_slug": "bonlifecoffee",
+  "tags": [
+   "coffee",
+   "coffee beans",
+   "light roast",
+   "single origin",
+   "subscription"
+  ],
+  "title": "Light & Bright Single Origin - Every 8 Weeks",
+  "url": "https://www.bonlifecoffee.com/subscriptions/p/roasters-choice-single-origin-bi-weekly-sk6j3-5lzn3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Pourover",
+    "variant_id": "2b195b77-e30f-4fdf-9cc3-6be16ea01181"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Whole Bean",
+    "variant_id": "c8e509d5-c4ec-4f53-b6a5-73ff89efa615"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Ground for Drip",
+    "variant_id": "ca17a8d9-4e51-44cc-9629-aae80aa60f3b"
+   }
+  ],
+  "vendor": ""
+ }
+]

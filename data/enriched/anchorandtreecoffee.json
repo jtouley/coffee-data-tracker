@@ -1,0 +1,108 @@
+{
+ "67f4402adfd8146435ae640c": {
+  "body_hash": "ee4093a549fca6f9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "strawberry jam",
+   "vanilla",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "67f44389dfd8146435ae6a0e": {
+  "body_hash": "220324668a1928f7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "molasses",
+   "dried cherry",
+   "almond"
+  ],
+  "varietals": []
+ },
+ "67f56bfa6d050d1c3930a9eb": {
+  "body_hash": "e133319d60acfcab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "plum",
+   "cacao nibs",
+   "hazelnut"
+  ],
+  "varietals": []
+ },
+ "6802890ef3195006a2638aff": {
+  "body_hash": "6af8af365797d078",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "toasted caramel",
+   "nectarine",
+   "graham cracker"
+  ],
+  "varietals": []
+ },
+ "68a351e5d38c9303e917afa1": {
+  "body_hash": "ae482f5cc567d6c5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6a974d3cc90e0742ca2cc7ab": {
+  "body_hash": "395d03bb0fde653c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

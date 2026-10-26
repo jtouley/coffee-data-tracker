@@ -1,0 +1,481 @@
+[
+ {
+  "body_hash": "d9d7a7201c896d1e",
+  "first_seen": "2026-10-26",
+  "handle": "spyhouse-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_Web_Accessories_CoffeeCanister_2511_7b1ad375-3e3e-4073-b918-381e770ae673.jpg?v=1763490463",
+  "platform": "shopify",
+  "product_id": "14778794180973",
+  "product_type": "Accessories",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "Accessories"
+  ],
+  "title": "Spyhouse Coffee Canister",
+  "url": "https://spyhousecoffee.com/products/spyhouse-coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "52650762436973"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "7c0c2da5887d15e3",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-finca-la-esperanza-reserve-series",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_Shopify_10ozBag_CostaRica_LasLajas_FincaLaEsperanza.png?v=1782244450",
+  "platform": "shopify",
+  "product_id": "15039831703917",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "2.5lb Available",
+   "5lb Available",
+   "Coffee",
+   "Costa Rica"
+  ],
+  "title": "Costa Rica / Las Lajas – Finca La Esperanza – Reserve Series",
+  "url": "https://spyhousecoffee.com/products/costa-rica-las-lajas-finca-la-esperanza-reserve-series",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.5,
+    "title": "10oz Bag",
+    "variant_id": "53434696204653"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 111.5,
+    "title": "2.5 Pound Bag",
+    "variant_id": "53434696237421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 217.5,
+    "title": "5 Pound Bag",
+    "variant_id": "53434696270189"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "85ed6c7d66d6907a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-pedro-sagastume",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_Shopify_10ozBag_Honduras_PedroSagastume.png?v=1787630587",
+  "platform": "shopify",
+  "product_id": "15118128546157",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "2.5lb Available",
+   "5lb Available",
+   "Coffee"
+  ],
+  "title": "Honduras / Pedro Sagastume",
+  "url": "https://spyhousecoffee.com/products/honduras-pedro-sagastume",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz Bag",
+    "variant_id": "53714802671981"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 76.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "53714802704749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5 Pound Bag",
+    "variant_id": "53714802737517"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "77f56b19b912d9ad",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-finca-la-julia",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_Shopify_10ozBag_CostaRica_LasLajas_FincaLaJulia.png?v=1789453447",
+  "platform": "shopify",
+  "product_id": "15154395054445",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "2.5lb Available",
+   "5lb Available",
+   "Coffee",
+   "Costa Rica"
+  ],
+  "title": "Costa Rica / Las Lajas – Finca La Julia",
+  "url": "https://spyhousecoffee.com/products/costa-rica-las-lajas-finca-la-julia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "53826803368301"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 81.5,
+    "title": "2.5 Pound Bag",
+    "variant_id": "53826803401069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "5 Pound Bag",
+    "variant_id": "53826803433837"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "06977f5a46d4a8bb",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-rianjagi",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_Shopify_10ozBag_Kenya_Rianjagi.png?v=1790696111",
+  "platform": "shopify",
+  "product_id": "15220564394349",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "2.5lb Available",
+   "5lb Available",
+   "Coffee"
+  ],
+  "title": "Kenya / Rianjagi",
+  "url": "https://spyhousecoffee.com/products/kenya-rianjagi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz Bag",
+    "variant_id": "53981432283501"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 74.5,
+    "title": "2.5 Pound Bag",
+    "variant_id": "53981432316269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 141.0,
+    "title": "5 Pound Bag",
+    "variant_id": "53981432349037"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "9976edeea76b1f02",
+  "first_seen": "2026-10-26",
+  "handle": "star-of-the-north-test",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/products/SCR_10ozBag_StaroftheNorth.png?v=1742223909",
+  "platform": "shopify",
+  "product_id": "15411740508525",
+  "product_type": "",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee"
+  ],
+  "title": "Star of the North - TEST",
+  "url": "https://spyhousecoffee.com/products/star-of-the-north-test",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "67692985844077"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 72.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "67692985876845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "67692985909613"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "11afc7739c591997",
+  "first_seen": "2026-10-26",
+  "handle": "bold-and-the-beautiful",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_10ozBag_BoldandtheBeautiful.png?v=1742223918",
+  "platform": "shopify",
+  "product_id": "1838660845651",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee",
+   "fair trade",
+   "organic"
+  ],
+  "title": "Bold and the Beautiful – Organic",
+  "url": "https://spyhousecoffee.com/products/bold-and-the-beautiful",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "18060551979091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "40359856308307"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 72.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916037816685"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "28cb632a2b02ee22",
+  "first_seen": "2026-10-26",
+  "handle": "orion",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/products/SCR_10ozBag_Orion.png?v=1742223919",
+  "platform": "shopify",
+  "product_id": "206682317",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee",
+   "Orion"
+  ],
+  "title": "Orion – Signature Tri-Blend",
+  "url": "https://spyhousecoffee.com/products/orion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.5,
+    "title": "5 Pound Bag",
+    "variant_id": "40357011718227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz Bag",
+    "variant_id": "470402889"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 69.5,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916037751149"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "255b7c0a1886ec86",
+  "first_seen": "2026-10-26",
+  "handle": "women-producers",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_10ozBag_Moonstruck.png?v=1742223918",
+  "platform": "shopify",
+  "product_id": "2355473743955",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee",
+   "organic",
+   "women producers"
+  ],
+  "title": "Moonstruck – Organic",
+  "url": "https://spyhousecoffee.com/products/women-producers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "21228539314259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "40359852867667"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 72.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916037783917"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "3cc488597b6bd553",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_10ozBag_Decaf.png?v=1742223916",
+  "platform": "shopify",
+  "product_id": "4479492980819",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee",
+   "South America",
+   "decaf"
+  ],
+  "title": "Decaf",
+  "url": "https://spyhousecoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "31899656814675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "40359859191891"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 73.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916045353325"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "9433d3fdc6002cd9",
+  "first_seen": "2026-10-26",
+  "handle": "gemini",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/files/SCR_10ozBag_Gemini_2c41c3b7-bbb0-4fee-8a22-1054230a22f4.png?v=1742223913",
+  "platform": "shopify",
+  "product_id": "6723782377555",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee",
+   "Colombia"
+  ],
+  "title": "Gemini",
+  "url": "https://spyhousecoffee.com/products/gemini",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "40359811547219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "40359811579987"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 73.5,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916051153261"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ },
+ {
+  "body_hash": "9976edeea76b1f02",
+  "first_seen": "2026-10-26",
+  "handle": "star-of-the-north",
+  "image": "https://cdn.shopify.com/s/files/1/0266/4909/products/SCR_10ozBag_StaroftheNorth.png?v=1742223909",
+  "platform": "shopify",
+  "product_id": "6956119523411",
+  "product_type": "Coffee",
+  "roaster_slug": "spyhousecoffee",
+  "tags": [
+   "5lb Available",
+   "Coffee"
+  ],
+  "title": "Star of the North",
+  "url": "https://spyhousecoffee.com/products/star-of-the-north",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.5,
+    "title": "10oz Bag",
+    "variant_id": "40566086402131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 Pound Bag",
+    "variant_id": "40566086434899"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 72.0,
+    "title": "2.5 Pound Bag",
+    "variant_id": "51916055380333"
+   }
+  ],
+  "vendor": "Spyhouse Coffee Roasters"
+ }
+]

@@ -1,0 +1,476 @@
+[
+ {
+  "body_hash": "1f31697bd9bd5d86",
+  "first_seen": "2026-10-26",
+  "handle": "oldtown",
+  "image": "https://static1.squarespace.com/static/5c6c4fabe5f7d11536ab83fc/5e470ffe58273242cf23c03b/5e724ed5917eaf13a1c5570f/1792347757738/",
+  "platform": "squarespace",
+  "product_id": "5e724ed5917eaf13a1c5570f",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [],
+  "title": "Old Town | Blend",
+  "url": "https://www.relicroasters.com/retail/oldtown",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "0840000a-8e16-4a13-8a95-f97bacff0541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Drip 5 lb",
+    "variant_id": "0da715c1-665d-4616-b14b-7b5dc31e8b10"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Chemex 12 oz",
+    "variant_id": "3c64f182-11b7-4cec-b9f6-964168ae892c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Chemex 5 lb",
+    "variant_id": "3fb0cc7a-91db-443b-ab2c-ed0833514560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "V60 5 lb",
+    "variant_id": "77e61d18-6298-4604-8c02-da290e08de4b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip 12 oz",
+    "variant_id": "9e26d9b4-df8c-445b-8449-d16069d8d23a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "French Press 5 lb",
+    "variant_id": "aee6958e-5c08-428a-92e4-b74697402d89"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "bad3fbb4-893a-480e-a192-3573d0441761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press 12 oz",
+    "variant_id": "bd317c51-ba5f-4843-b5e6-befd3b5783dd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "V60 12 oz",
+    "variant_id": "efca6abb-ab09-4f2a-8d56-349adb97a82b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb7ae48217bc689d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-m6b7p-bt8lx-2h2lk-92rrc-rd647",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c6c4fabe5f7d11536ab83fc/7c749c9c-8de3-4040-88cf-8ce1c9ea068c/Plane_R_MexicoCristal.jpg",
+  "platform": "squarespace",
+  "product_id": "68ade97846c6975f3cedf678",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [
+   "PNG",
+   "africa",
+   "dark chocolate",
+   "hoppy",
+   "malt",
+   "robust"
+  ],
+  "title": "Mexico | Cristal",
+  "url": "https://www.relicroasters.com/retail/kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-m6b7p-bt8lx-2h2lk-92rrc-rd647",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "2316c289-a161-4326-99da-677561255d5b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "V60 12 oz",
+    "variant_id": "383041a9-0b4e-4283-92eb-8666a8a504e0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Chemex 5 lb",
+    "variant_id": "42a3911f-643b-403e-ac0f-686b50c34c10"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Chemex 12 oz",
+    "variant_id": "5cc6bdf0-3127-443c-ab6c-28a8ffdbcfc4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Drip 5 lb",
+    "variant_id": "90bc55f1-b9cc-4c30-ac36-fd9c8cd68b0e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "V60 5 lb",
+    "variant_id": "96fd492d-8a33-4623-8216-1d341480a5ec"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip 12 oz",
+    "variant_id": "aab0d1e3-fe81-4cf5-b1c4-0c4a3f7aa138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "French Press 12 oz",
+    "variant_id": "b6963504-6b0a-4ca5-971f-85528c92a33c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "b9e0fad2-b98b-4373-b79a-302ce20af09b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "French Press 5 lb",
+    "variant_id": "bcade7bf-2954-4848-a904-5f0a472bf348"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf4810a458e425ab",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-wilton-benitez",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c6c4fabe5f7d11536ab83fc/5d2b46af-6c8b-4d23-ad43-95fc0c296c1c/PinkBourbonRetailPhoto.JPG",
+  "platform": "squarespace",
+  "product_id": "68fa83846672886f789e8b34",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [],
+  "title": "Pink Bourbon | Wilton Benitez",
+  "url": "https://www.relicroasters.com/retail/pink-bourbon-wilton-benitez",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "",
+    "variant_id": "36b54606-353b-485d-9aab-2dd5529d9e07"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff8b6a98b7963233",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-m6b7p-bt8lx-2h2lk-92rrc-rd647-58d4d",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c6c4fabe5f7d11536ab83fc/efc0a1c4-7cff-4066-b741-1ae0c71e6a72/Camera_R_GuatWaykan.jpg",
+  "platform": "squarespace",
+  "product_id": "6946bb6f40a3a708c06ef536",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [
+   "PNG",
+   "africa",
+   "dark chocolate",
+   "hoppy",
+   "malt",
+   "robust"
+  ],
+  "title": "Guatemala | Waykan",
+  "url": "https://www.relicroasters.com/retail/kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-m6b7p-bt8lx-2h2lk-92rrc-rd647-58d4d",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Drip 5 lb",
+    "variant_id": "386abcea-6024-4c15-b9ac-a0533640e94e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Chemex 5 lb",
+    "variant_id": "51c569a5-5af8-4159-9213-44f8e978f09f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "French Press 5 lb",
+    "variant_id": "543ea990-83c7-4ed0-a24a-1bcfd2d4771a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Chemex 12 oz",
+    "variant_id": "64068236-4b87-4685-8f5d-5b434286627e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Drip 12 oz",
+    "variant_id": "7148e936-7a0c-400e-a195-fa04cd7ba913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "V60 5 lb",
+    "variant_id": "b59134e7-1e0b-4cf7-93d3-a5fe74c6ad91"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "French Press 12 oz",
+    "variant_id": "cf5af56f-620c-4874-b679-0bd6c17cba17"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f7633a02-8008-4c51-bb22-85d6e4082511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "V60 12 oz",
+    "variant_id": "f8ef2e79-9e7b-40c7-97d7-fbc1b7e1f56c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "fffd40b0-a48c-45b8-852b-cdb6c62a13b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f83caf2efd1ee449",
+  "first_seen": "2026-10-26",
+  "handle": "oldtown-3pkle-6w2c5-tm5pj",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c6c4fabe5f7d11536ab83fc/0ef479ff-8287-45ca-b2bc-a3b6a3064cd0/Plane_R_DecafMexico.jpg",
+  "platform": "squarespace",
+  "product_id": "69c5f13934a5fa1d04f5edf8",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [],
+  "title": "Decaf Mexico",
+  "url": "https://www.relicroasters.com/retail/oldtown-3pkle-6w2c5-tm5pj",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "V60 12 oz",
+    "variant_id": "0e95f50f-de53-4d66-9c84-602d825b854d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "2c7d08ae-9d77-405a-a8bc-f3b4cc5c136e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "French Press 12 oz",
+    "variant_id": "529aec87-3ac0-43d6-95b4-590bf037e962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Drip 12 oz",
+    "variant_id": "6f4b8655-5892-473f-be68-6884be4d5c90"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "899cbb97-8b96-4098-92f2-1a80b6325949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "French Press 5 lb",
+    "variant_id": "980823d0-0fcd-4af3-9016-efa1706b8d85"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "V60 5 lb",
+    "variant_id": "a0e45a73-5b59-435d-bf4f-72bd6d8fa89d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Drip 5 lb",
+    "variant_id": "bbc3c0db-0e94-429c-9afb-893f41d0012b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "Chemex 5 lb",
+    "variant_id": "d2296456-87c5-41f6-9239-0dfd32163130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "Chemex 12 oz",
+    "variant_id": "d466f331-9e6a-4126-9925-e34f4367dcdb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c7976db5dce0a02",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-zja7r-2hnj9-ejwfw-3tych-m77yd",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c6c4fabe5f7d11536ab83fc/68bff956-d3a6-4b82-955c-64f7e82ae39e/Pump_R_kenyaKT.jpg",
+  "platform": "squarespace",
+  "product_id": "6a80adedd0606b1d04a4aa6b",
+  "product_type": "",
+  "roaster_slug": "relicroasters",
+  "tags": [
+   "PNG",
+   "africa",
+   "dark chocolate",
+   "hoppy",
+   "malt",
+   "robust"
+  ],
+  "title": "Kenya | Kichwa Tembo | Washed",
+  "url": "https://www.relicroasters.com/retail/kenya-kiambu-natural-ee5pl-cwg9l-dycxr-bf46p-zja7r-2hnj9-ejwfw-3tych-m77yd",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Drip 12 oz",
+    "variant_id": "38dc81fc-3202-4d39-818f-eb3a5c09ce9f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "4b4478e6-3065-49a9-b3f5-2de78df41aab"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "French Press 5 lb",
+    "variant_id": "5ca588c9-dd17-4fb7-867b-66e16a56e969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "V60 12 oz",
+    "variant_id": "5d10247d-1a97-4b9c-9625-4242f55252df"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "French Press 12 oz",
+    "variant_id": "5e6d92fb-28bf-4465-a67f-cf7d439c8454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Chemex 12 oz",
+    "variant_id": "866ebc29-e20a-48ef-b620-d0df6f65c13c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "8ea338cc-468c-453a-98ab-4f499573235f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Chemex 5 lb",
+    "variant_id": "8f220617-74c0-4564-9229-9bdab12a1089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "V60 5 lb",
+    "variant_id": "9cbd9826-fdb0-4f5b-be1d-ad04833ccaae"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "Drip 5 lb",
+    "variant_id": "ce23b458-ed75-4ded-a5d9-b835d524f51b"
+   }
+  ],
+  "vendor": ""
+ }
+]

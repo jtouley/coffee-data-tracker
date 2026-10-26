@@ -1,0 +1,426 @@
+[
+ {
+  "body_hash": "7c98ad0fd343072c",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-coffee-blend-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/cowboy_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "605",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Cowboy Coffee Blend – 12oz",
+  "url": "https://clydescoffee.com/product/cowboy-coffee-blend-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Cowboy Coffee Blend &#8211; 12oz",
+    "variant_id": "605:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56ee1a0c4fd8b524",
+  "first_seen": "2026-10-26",
+  "handle": "tahoe-morning-blend-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/tahoe_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "693",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Tahoe Morning Blend – 12oz",
+  "url": "https://clydescoffee.com/product/tahoe-morning-blend-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Tahoe Morning Blend &#8211; 12oz",
+    "variant_id": "693:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16c340eb76d66b11",
+  "first_seen": "2026-10-26",
+  "handle": "gunbarrel-espresso-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/gunbarrel_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "704",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Gunbarrel Espresso – 12oz",
+  "url": "https://clydescoffee.com/product/gunbarrel-espresso-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Gunbarrel Espresso &#8211; 12oz",
+    "variant_id": "704:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b80bc9c34f9c8ae",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/guatemala_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "727",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Guatemala – 12oz",
+  "url": "https://clydescoffee.com/product/guatemala-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Guatemala &#8211; 12oz",
+    "variant_id": "727:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "897cb38bb7c871a5",
+  "first_seen": "2026-10-26",
+  "handle": "tahoe-fireside-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/sumatra_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "736",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Sumatra – 12oz",
+  "url": "https://clydescoffee.com/product/tahoe-fireside-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Sumatra &#8211; 12oz",
+    "variant_id": "736:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6379f884945041b1",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/11/brazil_products_12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "745",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "Coffee"
+  ],
+  "title": "Brazil – 12oz",
+  "url": "https://clydescoffee.com/product/brazil-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Brazil &#8211; 12oz",
+    "variant_id": "745:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6379f884945041b1",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/brazil_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "872",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Brazil – 2lb",
+  "url": "https://clydescoffee.com/product/brazil-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Brazil &#8211; 2lb",
+    "variant_id": "872:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "897cb38bb7c871a5",
+  "first_seen": "2026-10-26",
+  "handle": "tahoe-fireside-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/sumatra_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "886",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Sumatra – 2lb",
+  "url": "https://clydescoffee.com/product/tahoe-fireside-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Sumatra &#8211; 2lb",
+    "variant_id": "886:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b80bc9c34f9c8ae",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/guatemala_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "892",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Guatemala – 2lb",
+  "url": "https://clydescoffee.com/product/guatemala-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Guatemala &#8211; 2lb",
+    "variant_id": "892:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8683c70e4072de1a",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/mexican_chipas_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "9017",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "2lb Single Origin",
+   "Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Mexican Chiapas – 2lb",
+  "url": "https://clydescoffee.com/product/mexican-chiapas-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Mexican Chiapas &#8211; 2lb",
+    "variant_id": "9017:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8c92d8786dbfd755",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2020/04/mexican-chiapas.jpg",
+  "platform": "woocommerce",
+  "product_id": "9018",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "12oz Single Origin",
+   "Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Mexican Chiapas – 12oz",
+  "url": "https://clydescoffee.com/product/mexican-chiapas-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Mexican Chiapas &#8211; 12oz",
+    "variant_id": "9018:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7c98ad0fd343072c",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-coffee-blend-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/cowboy_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "908",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Cowboy Coffee Blend – 2lb",
+  "url": "https://clydescoffee.com/product/cowboy-coffee-blend-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Cowboy Coffee Blend &#8211; 2lb",
+    "variant_id": "908:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16c340eb76d66b11",
+  "first_seen": "2026-10-26",
+  "handle": "gunbarrel-espresso-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/gunbarrell_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "914",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Gunbarrel Espresso – 2lb",
+  "url": "https://clydescoffee.com/product/gunbarrel-espresso-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Gunbarrel Espresso &#8211; 2lb",
+    "variant_id": "914:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56ee1a0c4fd8b524",
+  "first_seen": "2026-10-26",
+  "handle": "tahoe-morning-blend-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2017/12/tahoe_morn_products_2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "919",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "Coffee"
+  ],
+  "title": "Tahoe Morning Blend – 2lb",
+  "url": "https://clydescoffee.com/product/tahoe-morning-blend-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Tahoe Morning Blend &#8211; 2lb",
+    "variant_id": "919:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0df7ebc9e60c98ff",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-decaf-12oz",
+  "image": "https://clydescoffee.com/wp-content/uploads/2021/12/columbian-decaf-12oz.jpg",
+  "platform": "woocommerce",
+  "product_id": "9358",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "12oz Bag",
+   "12oz Single Origin",
+   "Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Columbian Decaf – 12oz",
+  "url": "https://clydescoffee.com/product/columbian-decaf-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.95,
+    "title": "Columbian Decaf &#8211; 12oz",
+    "variant_id": "9358:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0df7ebc9e60c98ff",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-decaf-2lb",
+  "image": "https://clydescoffee.com/wp-content/uploads/2021/12/columbian-decaf-2lb.jpg",
+  "platform": "woocommerce",
+  "product_id": "9364",
+  "product_type": "variable",
+  "roaster_slug": "clydescoffee",
+  "tags": [
+   "2lb Bag",
+   "2lb Single Origin",
+   "Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Columbian Decaf -2lb",
+  "url": "https://clydescoffee.com/product/columbian-decaf-2lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.95,
+    "title": "Columbian Decaf -2lb",
+    "variant_id": "9364:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

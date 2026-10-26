@@ -1,0 +1,59 @@
+[
+ {
+  "body_hash": "08a78118e373b822",
+  "first_seen": "2026-10-26",
+  "handle": "big-bend-blend",
+  "image": "https://roastex.com/wp-content/uploads/2020/12/RoasTex-Coffee-Big-Bend-Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "268",
+  "product_type": "variable",
+  "roaster_slug": "roastex",
+  "tags": [
+   "Balanced Body",
+   "Chocolate",
+   "Medium-Dark Roast",
+   "Ripe Berry",
+   "Roasted Nuts"
+  ],
+  "title": "Big Bend Blend",
+  "url": "https://roastex.com/product/big-bend-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.36,
+    "title": "Big Bend Blend",
+    "variant_id": "268:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "stars-at-night-decaf",
+  "image": "https://roastex.com/wp-content/uploads/2020/11/RoasTex-Coffee-Stars-At-Night-Decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "317",
+  "product_type": "variable",
+  "roaster_slug": "roastex",
+  "tags": [
+   "Bold",
+   "Dark Chocolate",
+   "Medium-Dark Roast",
+   "Smoky"
+  ],
+  "title": "Stars at Night Decaf",
+  "url": "https://roastex.com/product/stars-at-night-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.36,
+    "title": "Stars at Night Decaf",
+    "variant_id": "317:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

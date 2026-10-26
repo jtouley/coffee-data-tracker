@@ -1,0 +1,259 @@
+{
+ "4494383218747": {
+  "body_hash": "02409a932556c65c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "apple"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "4494411431995": {
+  "body_hash": "2a98e03197929b2e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "milk chocolate",
+   "apple"
+  ],
+  "varietals": []
+ },
+ "4674638348347": {
+  "body_hash": "c3ad9fb785b30089",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "4674656403515": {
+  "body_hash": "5612ec6caa3218d0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "crisp",
+   "apple",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "4674668724283": {
+  "body_hash": "3d0a098031d2ad61",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "dark chocolate",
+   "current",
+   "roasty",
+   "smokey",
+   "or chipotles bu"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "5561441419431": {
+  "body_hash": "9aa40ca282c0adb5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "citrus",
+   "chocolate",
+   "floral"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "5561618497703": {
+  "body_hash": "94387ab3b37956d5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black tea",
+   "apricot",
+   "vanilla"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "6598848544968": {
+  "body_hash": "652fb473e6f70cd4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "caramel",
+   "fruit"
+  ],
+  "varietals": []
+ },
+ "7519656083656": {
+  "body_hash": "a1db70367049eb88",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "grapefruit",
+   "jasmine",
+   "savory"
+  ],
+  "varietals": []
+ },
+ "7790385430728": {
+  "body_hash": "5d92bb602f0ca1ba",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "almond",
+   "dried fruit"
+  ],
+  "varietals": []
+ },
+ "8240340074696": {
+  "body_hash": "70cb2b93e9a8a9e7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "citrus",
+   "apple",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "8240340435144": {
+  "body_hash": "fa9b8390408c2c4f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "lime",
+   "vanilla",
+   "jasmine"
+  ],
+  "varietals": []
+ },
+ "8251796226248": {
+  "body_hash": "5454fa5e216de5b2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "almond",
+   "lime zest"
+  ],
+  "varietals": []
+ }
+}

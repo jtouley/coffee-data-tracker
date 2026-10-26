@@ -1,0 +1,924 @@
+[
+ {
+  "body_hash": "1d8001ec618ce626",
+  "first_seen": "2026-10-26",
+  "handle": "shortcut-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_4.png?v=1784781452",
+  "platform": "shopify",
+  "product_id": "7885631586382",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Shortcut",
+  "url": "https://www.brothersroasting.com/products/shortcut-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43659670290510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "43659670323278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "43659670356046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "43659670388814"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "43659670421582"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "43659670454350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "43659670487118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "43659670519886"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "0612dbfd9b3dcfa8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-lote-magnolia",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_1.png?v=1784780862",
+  "platform": "shopify",
+  "product_id": "7885635190862",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Guatemala Lote Magnolia",
+  "url": "https://www.brothersroasting.com/products/guatemala-lote-magnolia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43659684544590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "43659684577358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "43659684610126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "43659684642894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "43659684675662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "43659684708430"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "43659684741198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "43659684773966"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "9543fa62204b3049",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hoja-blanca",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px.png?v=1784780797",
+  "platform": "shopify",
+  "product_id": "7885698433102",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Guatemala Hoja Blanca",
+  "url": "https://www.brothersroasting.com/products/guatemala-hoja-blanca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43659772756046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "43659772788814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "43659772821582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "43659772854350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "43659772887118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "43659772919886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "43659772952654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "43659772985422"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "6fd0f10dd46d1eeb",
+  "first_seen": "2026-10-26",
+  "handle": "first-pick-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_5.png?v=1784781529",
+  "platform": "shopify",
+  "product_id": "7981386072142",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "First Pick",
+  "url": "https://www.brothersroasting.com/products/first-pick-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44016716021838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44016716054606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44016716087374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44016716120142"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44016716152910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44016716185678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44016716218446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44016716251214"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "597d33b6a42f3234",
+  "first_seen": "2026-10-26",
+  "handle": "time-out",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_2.png?v=1784781037",
+  "platform": "shopify",
+  "product_id": "7981386367054",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Time Out Decaf",
+  "url": "https://www.brothersroasting.com/products/time-out",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44016717201486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44016717234254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44016717267022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44016717299790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44016717332558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44016717365326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44016717398094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44016717430862"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "905ba4001735aea7",
+  "first_seen": "2026-10-26",
+  "handle": "backyard",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_8.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8001603108942",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Backyard",
+  "url": "https://www.brothersroasting.com/products/backyard",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44103425261646"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44103425294414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44103425327182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44103425359950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44103425392718"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44103425425486"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44103425458254"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44103425491022"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "a47652e481917077",
+  "first_seen": "2026-10-26",
+  "handle": "recess",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_9.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8001644855374",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Recess",
+  "url": "https://www.brothersroasting.com/products/recess",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44103515570254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44103515603022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44103515635790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44103515668558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44103515701326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44103515734094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44103515766862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44103515799630"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "952dab9c43fde919",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-keffa",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_10.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8001665990734",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Ethiopia Keffa",
+  "url": "https://www.brothersroasting.com/products/ethiopia-keffa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44103562231886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44103562264654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44103562297422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44103562330190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44103562362958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44103562395726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44103562428494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44103562461262"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "c655fa097f68209d",
+  "first_seen": "2026-10-26",
+  "handle": "brothers-sample-box",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Process_Washed_14.png?v=1785944540",
+  "platform": "shopify",
+  "product_id": "8007570948174",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Brothers Sample Box",
+  "url": "https://www.brothersroasting.com/products/brothers-sample-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "44125036740686"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground for French Press",
+    "variant_id": "44125036773454"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground for Filter",
+    "variant_id": "44125036806222"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground for Espresso",
+    "variant_id": "44125036838990"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "905ba4001735aea7",
+  "first_seen": "2026-10-26",
+  "handle": "backyard-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_8.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8007588380750",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Backyard 4oz",
+  "url": "https://www.brothersroasting.com/products/backyard-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44124972515406"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "952dab9c43fde919",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-keffa-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_10.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8007588413518",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Ethiopia Keffa 4oz",
+  "url": "https://www.brothersroasting.com/products/ethiopia-keffa-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "44124972777550"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "a47652e481917077",
+  "first_seen": "2026-10-26",
+  "handle": "recess-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_9.png?v=1785637480",
+  "platform": "shopify",
+  "product_id": "8007588446286",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Recess 4oz",
+  "url": "https://www.brothersroasting.com/products/recess-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44124973301838"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "597d33b6a42f3234",
+  "first_seen": "2026-10-26",
+  "handle": "time-out-decaf-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_2.png?v=1784781037",
+  "platform": "shopify",
+  "product_id": "8007588479054",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Time Out Decaf 4oz",
+  "url": "https://www.brothersroasting.com/products/time-out-decaf-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44124973563982"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "6fd0f10dd46d1eeb",
+  "first_seen": "2026-10-26",
+  "handle": "first-pick-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_5.png?v=1784781529",
+  "platform": "shopify",
+  "product_id": "8007588577358",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "First Pick 4oz",
+  "url": "https://www.brothersroasting.com/products/first-pick-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44124975726670"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "9543fa62204b3049",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hoja-blanca-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px.png?v=1784780797",
+  "platform": "shopify",
+  "product_id": "8007588642894",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Guatemala Hoja Blanca 4oz",
+  "url": "https://www.brothersroasting.com/products/guatemala-hoja-blanca-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "44124976545870"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "0612dbfd9b3dcfa8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-lote-magnolia-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_1.png?v=1784780862",
+  "platform": "shopify",
+  "product_id": "8007588905038",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Guatemala Lote Magnolia 4oz",
+  "url": "https://www.brothersroasting.com/products/guatemala-lote-magnolia-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44124981166158"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "1d8001ec618ce626",
+  "first_seen": "2026-10-26",
+  "handle": "shortcut-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_4.png?v=1784781452",
+  "platform": "shopify",
+  "product_id": "8007589167182",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Shortcut 4oz",
+  "url": "https://www.brothersroasting.com/products/shortcut-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44124984410190"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "0612dbfd9b3dcfa8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-lote-magnolia-4oz-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_1.png?v=1784780862",
+  "platform": "shopify",
+  "product_id": "8016516186190",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "(4oz) Guatemala Lote Magnolia",
+  "url": "https://www.brothersroasting.com/products/guatemala-lote-magnolia-4oz-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "44147777339470"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "3a1496ec9daaf9e8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jose-vasquez",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_12.png?v=1789008444",
+  "platform": "shopify",
+  "product_id": "8059351302222",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Colombia Jose Vasquez",
+  "url": "https://www.brothersroasting.com/products/colombia-jose-vasquez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44300784631886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for French Press",
+    "variant_id": "44300784664654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Filter",
+    "variant_id": "44300784697422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Ground for Espresso",
+    "variant_id": "44300784730190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "44300784762958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for French Press",
+    "variant_id": "44300784795726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Filter",
+    "variant_id": "44300784828494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2LB / Ground for Espresso",
+    "variant_id": "44300784861262"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ },
+ {
+  "body_hash": "3a1496ec9daaf9e8",
+  "first_seen": "2026-10-26",
+  "handle": "4oz-colombia-jose-vasquez",
+  "image": "https://cdn.shopify.com/s/files/1/0726/5484/8078/files/Recess_2048_x_2048_px_12.png?v=1789008444",
+  "platform": "shopify",
+  "product_id": "8059405008974",
+  "product_type": "Coffee",
+  "roaster_slug": "brothersroasting",
+  "tags": [],
+  "title": "Colombia Jose Vasquez 4oz",
+  "url": "https://www.brothersroasting.com/products/4oz-colombia-jose-vasquez",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "44300938444878"
+   }
+  ],
+  "vendor": "Brothers Roasting Co."
+ }
+]

@@ -1,0 +1,416 @@
+[
+ {
+  "body_hash": "4fdc20106ecea6bf",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-bernard-ornilla",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/FincaGaia_1.jpg?v=1758551334",
+  "platform": "shopify",
+  "product_id": "4324749475893",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "Virginia",
+   "black",
+   "bulk coffee",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "direct trade",
+   "honduras",
+   "process",
+   "recluse",
+   "relationship",
+   "retail",
+   "retail coffee",
+   "single producer",
+   "specialty coffee",
+   "stump",
+   "washed"
+  ],
+  "title": "Finca Gaia",
+  "url": "https://www.recluseroasting.com/products/honduras-bernard-ornilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz",
+    "variant_id": "31080988409909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "31080988442677"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs",
+    "variant_id": "31080988475445"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "61c6ba81d1fc68b0",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-lennon-diaz",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/FincaLiquidambar2.jpg?v=1791840918",
+  "platform": "shopify",
+  "product_id": "6886816907317",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "Guatemala",
+   "PNW",
+   "Richmond",
+   "Virginia",
+   "black",
+   "bulk coffee",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "nurse log",
+   "process",
+   "processing",
+   "recluse",
+   "retail",
+   "retail coffee",
+   "specialty coffee",
+   "stump",
+   "washed"
+  ],
+  "title": "Finca Liquidambar",
+  "url": "https://www.recluseroasting.com/products/honduras-lennon-diaz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.75,
+    "title": "10.5 oz",
+    "variant_id": "40927710216245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "40927710249013"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 lbs",
+    "variant_id": "40927710281781"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "e185c18d695f8d56",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cafe-rivense-del-chirripo-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/LaFilaHoney-2026.jpg?v=1781540269",
+  "platform": "shopify",
+  "product_id": "7216295477301",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "black",
+   "brewing",
+   "bulk coffee",
+   "burundi",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "direct trade",
+   "french press",
+   "long miles",
+   "natural",
+   "nurse log",
+   "pour over",
+   "process",
+   "processing",
+   "recluse",
+   "relationship",
+   "retail",
+   "retail coffee",
+   "single producer",
+   "specialty coffee",
+   "stump"
+  ],
+  "title": "La Fila Honey",
+  "url": "https://www.recluseroasting.com/products/costa-rica-cafe-rivense-del-chirripo-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.5,
+    "title": "10.5 oz",
+    "variant_id": "42449506697269"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2 lbs",
+    "variant_id": "42449506730037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs",
+    "variant_id": "42449506762805"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "86ef0098ed64e08c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-buesaco",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/CaldasDecaf_1.jpg?v=1789749605",
+  "platform": "shopify",
+  "product_id": "7724828819509",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "Virginia",
+   "black",
+   "bulk coffee",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "decaf",
+   "nurse log",
+   "process",
+   "processing",
+   "recluse",
+   "retail",
+   "retail coffee",
+   "single producer",
+   "specialty coffee",
+   "stump",
+   "washed"
+  ],
+  "title": "Caldas Decaf",
+  "url": "https://www.recluseroasting.com/products/decaf-colombia-buesaco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 17.0,
+    "title": "10.5oz",
+    "variant_id": "43986468143157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "2 lbs",
+    "variant_id": "43986468175925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "5 lbs",
+    "variant_id": "43986468208693"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "1921772d7b2cdb5f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-mango-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/ElMangoNatural-2026.jpg?v=1781540269",
+  "platform": "shopify",
+  "product_id": "7932557164597",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "black",
+   "brewing",
+   "bulk coffee",
+   "burundi",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "direct trade",
+   "french press",
+   "long miles",
+   "natural",
+   "nurse log",
+   "pour over",
+   "process",
+   "processing",
+   "recluse",
+   "relationship",
+   "retail",
+   "retail coffee",
+   "single producer",
+   "specialty coffee",
+   "stump"
+  ],
+  "title": "El Mango Natural",
+  "url": "https://www.recluseroasting.com/products/costa-rica-el-mango-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 20.0,
+    "title": "10.5 oz",
+    "variant_id": "44589337215029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "44589337247797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs",
+    "variant_id": "44589337280565"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "df8568d073aa97ec",
+  "first_seen": "2026-10-26",
+  "handle": "habtamu",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/Gato.jpg?v=1787417696",
+  "platform": "shopify",
+  "product_id": "7963900411957",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "Virginia",
+   "black",
+   "bulk coffee",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "ethiopia",
+   "nurse log",
+   "process",
+   "processing",
+   "recluse",
+   "retail",
+   "retail coffee",
+   "specialty coffee",
+   "stump",
+   "washed"
+  ],
+  "title": "Gato",
+  "url": "https://www.recluseroasting.com/products/habtamu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 21.0,
+    "title": "10.5 oz",
+    "variant_id": "44702059397173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs",
+    "variant_id": "44702059429941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.0,
+    "title": "5 lbs",
+    "variant_id": "44702059462709"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ },
+ {
+  "body_hash": "4bdf17550f11ce48",
+  "first_seen": "2026-10-26",
+  "handle": "manos-de-mujer",
+  "image": "https://cdn.shopify.com/s/files/1/0279/6988/0117/files/CafeDeMujeres.jpg?v=1785174416",
+  "platform": "shopify",
+  "product_id": "8162531672117",
+  "product_type": "Coffee",
+  "roaster_slug": "recluseroasting",
+  "tags": [
+   "PNW",
+   "Richmond",
+   "Virginia",
+   "black",
+   "bulk coffee",
+   "coffee",
+   "coffee bag",
+   "coffee project",
+   "coffee roaster",
+   "honduras",
+   "nurse log",
+   "process",
+   "processing",
+   "recluse",
+   "relationship",
+   "retail",
+   "retail coffee",
+   "specialty coffee",
+   "stump",
+   "washed"
+  ],
+  "title": "Cafe de Mujeres",
+  "url": "https://www.recluseroasting.com/products/manos-de-mujer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 298,
+    "price_usd": 19.5,
+    "title": "10.5 oz",
+    "variant_id": "45637821628469"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2 lbs",
+    "variant_id": "45637821661237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lbs",
+    "variant_id": "45637821694005"
+   }
+  ],
+  "vendor": "Recluse Roasting Project"
+ }
+]

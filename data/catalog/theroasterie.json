@@ -1,0 +1,8492 @@
+[
+ {
+  "body_hash": "bb486f09b7fdc003",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-home-roasting-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/greenethiopiabeans_1_d6f1fa21-2f67-476c-9549-ad493f79ad6c.png?v=1741126754",
+  "platform": "shopify",
+  "product_id": "6659401973950",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "balanced",
+   "coffee",
+   "fruity",
+   "subscription"
+  ],
+  "title": "Roast at Home Unroasted Ethiopia Natural",
+  "url": "https://theroasterie.com/products/ethiopia-natural-home-roasting-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.5,
+    "title": "Default Title",
+    "variant_id": "39638525870270"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "0dac12faaf9fc252",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-lagoa-home-roasters-green-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/greenethiopiabeans_1.png?v=1741126753",
+  "platform": "shopify",
+  "product_id": "6659402006718",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "buttery",
+   "coffee",
+   "creamy",
+   "mild",
+   "nutty",
+   "smooth",
+   "subscription"
+  ],
+  "title": "Roast at Home Unroasted Brazil Fazenda Lagoa",
+  "url": "https://theroasterie.com/products/brazil-fazenda-lagoa-home-roasters-green-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "39638526066878"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "2b67eaec2bc7dbd1",
+  "first_seen": "2026-10-26",
+  "handle": "le-fou-frog-chicory-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/theroasterie_le_fou_frog_chicory_ground.png?v=1746463697",
+  "platform": "shopify",
+  "product_id": "6659402039486",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-earthy",
+   "tn-rich",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Le Fou Frog Chicory Coffee Blend",
+  "url": "https://theroasterie.com/products/le-fou-frog-chicory-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297646969072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297647001840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297647034608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297647067376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297647100144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297647132912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297647165680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297647198448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297647231216"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "f360a522fe554d85",
+  "first_seen": "2026-10-26",
+  "handle": "christopher-elbow-cafe-au-chocolat",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_chris_elbow.png?v=1659995112",
+  "platform": "shopify",
+  "product_id": "6659402105022",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-chocolate",
+   "tn-creamy",
+   "tn-smooth",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Christopher Elbow Cafe au Chocolat",
+  "url": "https://theroasterie.com/products/christopher-elbow-cafe-au-chocolat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297646739696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297646772464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297646805232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297646838000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium / 2lb",
+    "variant_id": "44354545582320"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "8f075ca6bdf50e87",
+  "first_seen": "2026-10-26",
+  "handle": "summer-in-the-city",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_summerinthecity.png?v=1741126750",
+  "platform": "shopify",
+  "product_id": "6659402498238",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-chocolate",
+   "tn-smooth",
+   "type-blend"
+  ],
+  "title": "Summer In The City",
+  "url": "https://theroasterie.com/products/summer-in-the-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638529114302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638529245374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638529441982"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297645560048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297645592816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297645625584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297645658352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297645691120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297645723888"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "ba783b592c005667",
+  "first_seen": "2026-10-26",
+  "handle": "french-caramel-cream-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_french_caramel_cream.png?v=1741126750",
+  "platform": "shopify",
+  "product_id": "6659403120830",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-rich",
+   "tn-sweet",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "French Caramel Cream Decaf",
+  "url": "https://theroasterie.com/products/french-caramel-cream-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638536519870"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638536716478"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297644806384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297644839152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297644871920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297644904688"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "aa8cc7807c9d91d1",
+  "first_seen": "2026-10-26",
+  "handle": "andres-signature-blend-duplicate",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_andres.png?v=1741126749",
+  "platform": "shopify",
+  "product_id": "6659404628158",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "andres",
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-caramel",
+   "tn-nutty",
+   "tn-smoky",
+   "tn-smooth",
+   "type-blend"
+  ],
+  "title": "Andre's Signature Blend",
+  "url": "https://theroasterie.com/products/andres-signature-blend-duplicate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638548906174"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638548971710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638549037246"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297642676464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297642709232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297642742000"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "76be3b6968ec9c58",
+  "first_seen": "2026-10-26",
+  "handle": "bavarian-chocolate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_bavarian.png?v=1741126748",
+  "platform": "shopify",
+  "product_id": "6659405807806",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-rich",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "Bavarian Chocolate Decaf",
+  "url": "https://theroasterie.com/products/bavarian-chocolate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638555787454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638555852990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638555951294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297641136368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297641169136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297641201904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Fine / 5lb",
+    "variant_id": "43297641234672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297641267440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297641300208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297641332976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine / 12oz",
+    "variant_id": "46955659722992"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "f216a4688dba1d19",
+  "first_seen": "2026-10-26",
+  "handle": "bristol-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_bristol_wb.png?v=1659995072",
+  "platform": "shopify",
+  "product_id": "6659406299326",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscripiton",
+   "tn-complex",
+   "tn-nutty",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Bristol Blend",
+  "url": "https://theroasterie.com/products/bristol-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638560211134"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638560276670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638560407742"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297640055024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297640087792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297640120560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297640153328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "47579258618096"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4d0b589dcfde5f49",
+  "first_seen": "2026-10-26",
+  "handle": "brookside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_brookside_wb.png?v=1765475653",
+  "platform": "shopify",
+  "product_id": "6659406463166",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Brookside Blend",
+  "url": "https://theroasterie.com/products/brookside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638561390782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638561554622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638561685694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297639858416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297639891184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297639923952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297639956720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297639989488"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "08429b0649928059",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_coldbrew.png?v=1741126747",
+  "platform": "shopify",
+  "product_id": "6659407347902",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-full body",
+   "tn-smooth",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://theroasterie.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638567026878"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638567092414"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638567157950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297638416624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297638449392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297638482160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297638514928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297638547696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297638580464"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4d29a6c283656be0",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_halfcaff.png?v=1741126746",
+  "platform": "shopify",
+  "product_id": "6659408265406",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-creamy",
+   "tn-full body",
+   "tn-smooth",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Half Caff Blend",
+  "url": "https://theroasterie.com/products/half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638573252798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638573285566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638573318334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297637400816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Medium / 2lb",
+    "variant_id": "43297637433584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297637466352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "49873456660720"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "d69844366c0d271c",
+  "first_seen": "2026-10-26",
+  "handle": "michael-smith-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_michael_smith_wb.png?v=1659995137",
+  "platform": "shopify",
+  "product_id": "6659409117374",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-heavy",
+   "tn-spicy",
+   "tn-syrupy",
+   "type-blend"
+  ],
+  "title": "Michael Smith Blend",
+  "url": "https://theroasterie.com/products/michael-smith-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638578790590"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638578856126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638578888894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297636483312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297636516080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297636548848"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "93a148481bad8661",
+  "first_seen": "2026-10-26",
+  "handle": "scottish-highlands-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_scottish_highlands.png?v=1741126745",
+  "platform": "shopify",
+  "product_id": "6659410198718",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-buttery",
+   "tn-creamy",
+   "tn-rich",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Scottish Highlands Blend",
+  "url": "https://theroasterie.com/products/scottish-highlands-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638584918206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638585049278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638585213118"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297634975984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297635008752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297635041520"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "374beca8260883a3",
+  "first_seen": "2026-10-26",
+  "handle": "spring-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_esp_crossroads_blend.png?v=1741126744",
+  "platform": "shopify",
+  "product_id": "6659410297022",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-ESP",
+   "roast-light",
+   "subscription",
+   "tn-crisp",
+   "tn-fruity",
+   "tn-spring",
+   "type-blend",
+   "type-espresso"
+  ],
+  "title": "Crossroads Espresso",
+  "url": "https://theroasterie.com/products/spring-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638585835710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638585966782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638586032318"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297634648304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297634681072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297634713840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297634746608"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "eb5163c7f20dba71",
+  "first_seen": "2026-10-26",
+  "handle": "vermont-maple-nut-crunch",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_vermont_maple.png?v=1741126744",
+  "platform": "shopify",
+  "product_id": "6659411050686",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-sweet",
+   "tn-syrupy",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Vermont Maple Nut Crunch",
+  "url": "https://theroasterie.com/products/vermont-maple-nut-crunch",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638590324926"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638590390462"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638590455998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297633960176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297633992944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297634025712"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9886d586131040bc",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-central-highlands-lt",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/kenya_single.png?v=1741126744",
+  "platform": "shopify",
+  "product_id": "6659411116222",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "full body",
+   "roast-light",
+   "subscription",
+   "tn-cherry",
+   "tn-citrus",
+   "tn-exotic",
+   "tn-juicy",
+   "tn-winey",
+   "type-single-origin"
+  ],
+  "title": "Kenya Central Highlands LT",
+  "url": "https://theroasterie.com/products/kenya-central-highlands-lt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638590816446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638590914750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638591013054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297633730800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297633763568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297633796336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297633829104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297633861872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297633894640"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "49671cd086e1eea7",
+  "first_seen": "2026-10-26",
+  "handle": "bluestem-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_blue_stem_wb.png?v=1659995023",
+  "platform": "shopify",
+  "product_id": "6659411247294",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-berry",
+   "tn-chocolate",
+   "tn-floral",
+   "tn-tangerine",
+   "type-blend"
+  ],
+  "title": "Bluestem Blend",
+  "url": "https://theroasterie.com/products/bluestem-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638592127166"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638592192702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638592258238"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297633632496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297633665264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297633698032"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9476ad7153a9e477",
+  "first_seen": "2026-10-26",
+  "handle": "christopher-elbow-cafe-au-chocolat-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_elbowdecaf.png?v=1741126743",
+  "platform": "shopify",
+  "product_id": "6659411345598",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-chocolate",
+   "tn-creamy",
+   "tn-smooth",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "Christopher Elbow Cafe au Chocolat Decaf",
+  "url": "https://theroasterie.com/products/christopher-elbow-cafe-au-chocolat-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297633304816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297633337584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "46890576543984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "46890576576752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "46890576609520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "46890576642288"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "6c60fa96cd205711",
+  "first_seen": "2026-10-26",
+  "handle": "fairtrade-organic-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/FTO_organic_colombia_lt.png?v=1760436307",
+  "platform": "shopify",
+  "product_id": "6659417374910",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-bright",
+   "tn-cocoa",
+   "tn-complex",
+   "tn-tropical fruits",
+   "tn-winey",
+   "type-single-origin"
+  ],
+  "title": "FairTrade Organic Colombia",
+  "url": "https://theroasterie.com/products/fairtrade-organic-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638613721278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638613786814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638613950654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297631404272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297631437040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297631469808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297631502576"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "1977b6b2446e283c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_sng_ethiopia_natural_lt.png?v=1741126687",
+  "platform": "shopify",
+  "product_id": "6659417866430",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-brown sugar",
+   "tn-lemon",
+   "tn-smooth",
+   "tn-velvety",
+   "type-single-origin"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://theroasterie.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638616080574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638616277182"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638616473790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297630093552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297630126320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Medium / 2lb",
+    "variant_id": "43297630159088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.5,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297630191856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297630224624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297630257392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297630290160"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "cea9d63d3a5eef91",
+  "first_seen": "2026-10-26",
+  "handle": "foos-fabulous-custard-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_foos.png?v=1741126686",
+  "platform": "shopify",
+  "product_id": "6659419603134",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-full",
+   "tn-hazelnut",
+   "tn-jasmine",
+   "tn-molasses",
+   "type-blend"
+  ],
+  "title": "Foo's Fabulous Custard Blend",
+  "url": "https://theroasterie.com/products/foos-fabulous-custard-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.73,
+    "title": "Whole Bean / 12oz / Medium",
+    "variant_id": "40217739165886"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Medium",
+    "variant_id": "40217739264190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb / Medium",
+    "variant_id": "40217739362494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Medium",
+    "variant_id": "43297628553456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Medium",
+    "variant_id": "43297628586224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb / Medium",
+    "variant_id": "43297628618992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb / Medium",
+    "variant_id": "43297628651760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb / Medium",
+    "variant_id": "43297628684528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb / Medium",
+    "variant_id": "43297628717296"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "252a9111ab5efa74",
+  "first_seen": "2026-10-26",
+  "handle": "kc-kingdom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/theroasterie_bnd_special_kingdom_wb_1.png?v=1741126684",
+  "platform": "shopify",
+  "product_id": "6659419898046",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "blend",
+   "coffee",
+   "color-BND",
+   "kc",
+   "roast-medium",
+   "sports",
+   "subscription",
+   "tn-balanced",
+   "tn-brown spice",
+   "tn-caramel",
+   "tn-clean",
+   "tn-cocoa",
+   "tn-smooth finish",
+   "type-blend"
+  ],
+  "title": "KC Kingdom Blend",
+  "url": "https://theroasterie.com/products/kc-kingdom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638628303038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297627701488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44036474798320"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "44036474831088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44210286919920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "44210286952688"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "ea31a28a192f10e6",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/mandelhling.png?v=1741126680",
+  "platform": "shopify",
+  "product_id": "6659422224574",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-dark",
+   "subscription",
+   "tn-smoky",
+   "tn-spice",
+   "type-single-origin"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://theroasterie.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean / 12oz / Light",
+    "variant_id": "39638642393278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Whole Bean / 2lb / Light",
+    "variant_id": "39638642557118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5lb / Light",
+    "variant_id": "39638642688190"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638642917566"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638642950334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "39638643015870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Medium / 12oz / Light",
+    "variant_id": "43297625637104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Coarse / 12oz / Light",
+    "variant_id": "43297625669872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Extra Fine / 12oz / Light",
+    "variant_id": "43297625702640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Medium / 2lb / Light",
+    "variant_id": "43297625735408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Coarse / 2lb / Light",
+    "variant_id": "43297625768176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "Extra Fine / 2lb / Light",
+    "variant_id": "43297625800944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium / 5lb / Light",
+    "variant_id": "43297625833712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse / 5lb / Light",
+    "variant_id": "43297625866480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Fine / 5lb / Light",
+    "variant_id": "43297625899248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "47625044787440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "48602198671600"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "d3873100502f9fe4",
+  "first_seen": "2026-10-26",
+  "handle": "american-restaurant",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_american_reserteraunt_wb.png?v=1659994997",
+  "platform": "shopify",
+  "product_id": "6659422486718",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-medium body",
+   "tn-rich",
+   "type-blend"
+  ],
+  "title": "American Restaurant",
+  "url": "https://theroasterie.com/products/american-restaurant",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638643736766"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638643998910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638644195518"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "43297625178352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297625211120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297625243888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297625276656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297625309424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297625342192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297625374960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297625407728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297625440496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297625473264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine / 12oz",
+    "variant_id": "46990190379248"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "310c0304c7e7f176",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_southern_pecan.png?v=1741126680",
+  "platform": "shopify",
+  "product_id": "6659422683326",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-full body",
+   "tn-nutty",
+   "tn-sweet",
+   "type-flavored"
+  ],
+  "title": "Southern Pecan Cream",
+  "url": "https://theroasterie.com/products/southern-pecan-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638645702846"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638645833918"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638645964990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297624817904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297624850672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297624883440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297624916208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297624948976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297624981744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297625014512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297625047280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297625080048"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "d697e38ef65fa02d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh-fair-trade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/FTO_organic_sumatra_aceh_med.png?v=1760187694",
+  "platform": "shopify",
+  "product_id": "6659422912702",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "fair trade",
+   "roast-medium",
+   "subscription",
+   "tn-smoky",
+   "tn-spice",
+   "type-single-origin"
+  ],
+  "title": "Sumatra Aceh Fair Trade Organic",
+  "url": "https://theroasterie.com/products/sumatra-aceh-fair-trade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638647308478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638647570622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638647701694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297624326384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297624359152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297624424688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297624457456"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297624490224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297624522992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297624555760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297624588528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297624621296"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "8810204dacb1d6f4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pitalito-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/sng_colombia_pitalito_lt.png?v=1760187693",
+  "platform": "shopify",
+  "product_id": "6659423076542",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-dark",
+   "roast-light",
+   "roast-medium",
+   "subscription",
+   "tn-fruity",
+   "tn-heavy-body",
+   "tn-sweet",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Colombia Pitalito Estate",
+  "url": "https://theroasterie.com/products/colombia-pitalito-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Light",
+    "variant_id": "39638649077950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb / Light",
+    "variant_id": "39638649241790"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5lb / Light",
+    "variant_id": "39638649340094"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Medium",
+    "variant_id": "39638649438398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb / Medium",
+    "variant_id": "39638649536702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5lb / Medium",
+    "variant_id": "39638649635006"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638649831614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638650060990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Light",
+    "variant_id": "43297623605488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Light",
+    "variant_id": "43297623638256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium / 2lb / Light",
+    "variant_id": "43297623671024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse / 2lb / Light",
+    "variant_id": "43297623703792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Medium / 5lb / Light",
+    "variant_id": "43297623736560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Coarse / 5lb / Light",
+    "variant_id": "43297623769328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Medium",
+    "variant_id": "43297623802096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Medium",
+    "variant_id": "43297623834864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium / 2lb / Medium",
+    "variant_id": "43297623867632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse / 2lb / Medium",
+    "variant_id": "43297623900400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Medium / 5lb / Medium",
+    "variant_id": "43297623933168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Coarse / 5lb / Medium",
+    "variant_id": "43297623965936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "43297624031472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb / Dark",
+    "variant_id": "43297624097008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Dark",
+    "variant_id": "43297624129776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "44054024421616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Coarse / 5lb / Dark",
+    "variant_id": "44054024782064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "44054024945904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium / 2lb / Dark",
+    "variant_id": "49511617822960"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "b20bcc6caa27b83a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-west-arsi",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_sng_ethiopia_washed_dk.png?v=1741126679",
+  "platform": "shopify",
+  "product_id": "6659423305918",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-bright",
+   "tn-light body",
+   "tn-rich",
+   "tn-sweet",
+   "type-single-origin"
+  ],
+  "title": "Ethiopia Washed",
+  "url": "https://theroasterie.com/products/ethiopia-west-arsi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Light",
+    "variant_id": "39638650880190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb / Light",
+    "variant_id": "39638651109566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb / Light",
+    "variant_id": "39638651273406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638651502782"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638651797694"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "39638652027070"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Light",
+    "variant_id": "43297622884592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Light",
+    "variant_id": "43297622917360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz / Light",
+    "variant_id": "43297622950128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb / Light",
+    "variant_id": "43297622982896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb / Light",
+    "variant_id": "43297623015664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb / Light",
+    "variant_id": "43297623048432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb / Light",
+    "variant_id": "43297623081200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb / Light",
+    "variant_id": "43297623113968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "43297623146736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Dark",
+    "variant_id": "43297623179504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz / Dark",
+    "variant_id": "43297623212272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb / Dark",
+    "variant_id": "43297623245040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb / Dark",
+    "variant_id": "43297623277808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "43297623310576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb / Dark",
+    "variant_id": "43297623343344"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb / Dark",
+    "variant_id": "43297623376112"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "55a19949c724b40f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-don-quijote",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_sng_costa_rica_wb_lt.png?v=1659994911",
+  "platform": "shopify",
+  "product_id": "6659423568062",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-bright",
+   "tn-citrus",
+   "tn-rich",
+   "tn-sweet",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Costa Rica Don Quijote",
+  "url": "https://theroasterie.com/products/costa-rica-don-quijote",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Light",
+    "variant_id": "39638653632702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Light",
+    "variant_id": "39638653763774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb / Light",
+    "variant_id": "39638654222526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Medium",
+    "variant_id": "39638654615742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Medium",
+    "variant_id": "39638655402174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb / Medium",
+    "variant_id": "39638656090302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638656549054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638656680126"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "39638656811198"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz / Light",
+    "variant_id": "43297619968240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Light",
+    "variant_id": "43297620001008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Light",
+    "variant_id": "43297620033776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz / Light",
+    "variant_id": "43297620066544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb / Light",
+    "variant_id": "43297620099312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb / Light",
+    "variant_id": "43297620132080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb / Light",
+    "variant_id": "43297620164848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb / Light",
+    "variant_id": "43297620197616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb / Light",
+    "variant_id": "43297620230384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Fine / 5lb / Light",
+    "variant_id": "43297620263152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Medium",
+    "variant_id": "43297620295920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Medium",
+    "variant_id": "43297620328688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz / Medium",
+    "variant_id": "43297620361456"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb / Medium",
+    "variant_id": "43297620394224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb / Medium",
+    "variant_id": "43297620426992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb / Medium",
+    "variant_id": "43297620459760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb / Medium",
+    "variant_id": "43297620492528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb / Medium",
+    "variant_id": "43297620525296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Fine / 5lb / Medium",
+    "variant_id": "43297620558064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "43297620590832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Dark",
+    "variant_id": "43297620623600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz / Dark",
+    "variant_id": "43297620656368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb / Dark",
+    "variant_id": "43297620689136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb / Dark",
+    "variant_id": "43297620721904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb / Dark",
+    "variant_id": "43297620754672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "43297620787440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb / Dark",
+    "variant_id": "43297620820208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Fine / 5lb / Dark",
+    "variant_id": "43297620852976"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "924e80421b46bd5e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-frontera",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/guat_front.png?v=1741126679",
+  "platform": "shopify",
+  "product_id": "6659424092350",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-floral",
+   "tn-fruity",
+   "tn-light body",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Guatemala La Frontera",
+  "url": "https://theroasterie.com/products/guatemala-la-frontera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638658777278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638659006654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638659268798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297619542256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297619575024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297619607792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297619640560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297619673328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297619706096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297619738864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297619771632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297619804400"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "8380519015d9f3e4",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_hazelnut.png?v=1659995086",
+  "platform": "shopify",
+  "product_id": "6659424354494",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-buttery",
+   "tn-creamy",
+   "tn-nutty",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Hazelnut",
+  "url": "https://theroasterie.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638661497022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638661628094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638661759166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297618723056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297618755824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297618788592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297618821360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297618854128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297618886896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297618919664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297618952432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297618985200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Coarse / 12oz",
+    "variant_id": "44008570880240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Extra Coarse / 5lb",
+    "variant_id": "44008570913008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Coarse / 2lb",
+    "variant_id": "44008570945776"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "a60fcfc3d69ef5d1",
+  "first_seen": "2026-10-26",
+  "handle": "40-sardines",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_40sardines_wb.png?v=1659994969",
+  "platform": "shopify",
+  "product_id": "6659425042622",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-full body",
+   "tn-nutty",
+   "tn-rich",
+   "type-blend"
+  ],
+  "title": "40 Sardines",
+  "url": "https://theroasterie.com/products/40-sardines",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638667198654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638667428030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638667591870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297617248496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297617281264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297617314032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297617346800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297617379568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297617412336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297617445104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297617477872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297617510640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Fine / 2lb",
+    "variant_id": "43297617543408"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "46918788448496"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "ec5de2de408c1ba1",
+  "first_seen": "2026-10-26",
+  "handle": "bean-baron-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_beanbaron.png?v=1741126677",
+  "platform": "shopify",
+  "product_id": "6659425239230",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-earthy",
+   "tn-rich",
+   "tn-smooth",
+   "type-blend"
+  ],
+  "title": "Bean Baron Blend",
+  "url": "https://theroasterie.com/products/bean-baron-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638668411070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638668542142"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638668673214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297616888048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297616920816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297616953584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297616986352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297617019120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297617051888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297617084656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297617117424"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "68cfcfe09f5484b9",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_breakfast_blend_wb.png?v=1659995045",
+  "platform": "shopify",
+  "product_id": "6659425632446",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-balanced",
+   "tn-bright",
+   "tn-crisp",
+   "tn-fruity",
+   "type-blend"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://theroasterie.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638671098046"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638671360190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638671589566"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "43297615413488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297615446256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297615479024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297615511792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297615544560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297615577328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297615610096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297615642864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297615675632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297615708400"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "a0d522e735d1be5f",
+  "first_seen": "2026-10-26",
+  "handle": "euro-bistro-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_euro_bistro_blend.png?v=1741126676",
+  "platform": "shopify",
+  "product_id": "6659426091198",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-nutty",
+   "tn-sweet",
+   "type-blend"
+  ],
+  "title": "Euro Bistro Blend",
+  "url": "https://theroasterie.com/products/euro-bistro-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638673981630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638674112702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638674309310"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297614528752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297614561520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297614594288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297614627056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297614659824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297614692592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297614725360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297614758128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297614790896"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "a0b2c4273835124b",
+  "first_seen": "2026-10-26",
+  "handle": "four-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_fourbean.png?v=1741126676",
+  "platform": "shopify",
+  "product_id": "6659426156734",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-citrus",
+   "tn-fruity",
+   "tn-medium body",
+   "type-blend"
+  ],
+  "title": "Four Bean Blend",
+  "url": "https://theroasterie.com/products/four-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638674866366"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638674997438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638675128510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297614168304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297614201072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297614233840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297614266608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297614299376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297614332144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297614364912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297614397680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297614430448"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4f5e5c7428bc7b87",
+  "first_seen": "2026-10-26",
+  "handle": "kansas-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_big6_kcblend_wb.png?v=1659994892",
+  "platform": "shopify",
+  "product_id": "6659426418878",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-balanced",
+   "tn-bright",
+   "tn-fruity",
+   "tn-smooth",
+   "type-blend"
+  ],
+  "title": "Kansas City Blend",
+  "url": "https://theroasterie.com/products/kansas-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638677127358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638677356734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638677520574"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "43297613742320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297613775088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297613807856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297613840624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297613873392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297613906160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297613938928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297613971696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297614004464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297614037232"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "5756153f7fa057db",
+  "first_seen": "2026-10-26",
+  "handle": "kona-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_kona_wb.png?v=1741126676",
+  "platform": "shopify",
+  "product_id": "6659426615486",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "buttery",
+   "coffee",
+   "crisp",
+   "roast-light",
+   "subscription",
+   "sweet"
+  ],
+  "title": "Kona Blend",
+  "url": "https://theroasterie.com/products/kona-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638678339774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638678470846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638678601918"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297613316336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297613349104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297613381872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "Medium / 2lb",
+    "variant_id": "43297613414640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297613447408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297613480176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297613512944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297613545712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297613578480"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "25b53bb5a4cbb9cd",
+  "first_seen": "2026-10-26",
+  "handle": "roasterie-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_roasterie_house.png?v=1741126674",
+  "platform": "shopify",
+  "product_id": "6659426746558",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-bright",
+   "tn-citrus",
+   "tn-crisp",
+   "tn-fruity",
+   "type-blend",
+   "type-direct-trade"
+  ],
+  "title": "Roasterie House Blend",
+  "url": "https://theroasterie.com/products/roasterie-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638679716030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638679847102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638679978174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297612988656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297613021424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297613054192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297613086960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297613119728"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297613152496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297613185264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297613218032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297613250800"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "90b7ad14b32e72ee",
+  "first_seen": "2026-10-26",
+  "handle": "steves-allegro-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_steves_alegro_wb.png?v=1659995199",
+  "platform": "shopify",
+  "product_id": "6659426943166",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-balanced",
+   "type-blend"
+  ],
+  "title": "Steve's Allegro Blend",
+  "url": "https://theroasterie.com/products/steves-allegro-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638681387198"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638681551038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638681682110"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297612333296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297612366064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297612398832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297612431600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297612464368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297612497136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297612529904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297612562672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297612595440"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "caeff0deaca1630e",
+  "first_seen": "2026-10-26",
+  "handle": "dark-mojo",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_mojo_wb.png?v=1659995244",
+  "platform": "shopify",
+  "product_id": "6659427074238",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-bold",
+   "tn-floral",
+   "type-blend",
+   "type-dark-line"
+  ],
+  "title": "Dark Mojo",
+  "url": "https://theroasterie.com/products/dark-mojo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638682468542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638682599614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638682730686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297611907312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297611940080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297611972848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297612005616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297612038384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297612071152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297612103920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297612136688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297612169456"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "7e4e2f2ebb1b9aab",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_viennessee_blend.png?v=1741126672",
+  "platform": "shopify",
+  "product_id": "6659427434686",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-bright",
+   "tn-fruity",
+   "tn-sweet",
+   "type-blend",
+   "type-direct-trade"
+  ],
+  "title": "Viennese Blend",
+  "url": "https://theroasterie.com/products/viennese-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638685122750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638685253822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638685384894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297610203376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297610236144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297610268912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297610301680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297610334448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297610367216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297610399984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297610432752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297610498288"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "46935b1b2c7adece",
+  "first_seen": "2026-10-26",
+  "handle": "full-vengeance",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_full_veng_wb.png?v=1659995279",
+  "platform": "shopify",
+  "product_id": "6659427664062",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-clean",
+   "tn-easy",
+   "tn-sweet",
+   "type-blend",
+   "type-dark-line"
+  ],
+  "title": "Full Vengeance",
+  "url": "https://theroasterie.com/products/full-vengeance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638686564542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638686695614"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638686826686"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297609810160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297609842928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297609875696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297609908464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297609941232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297609974000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297610006768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297610039536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297610072304"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "7bf37be4a7c0a1d1",
+  "first_seen": "2026-10-26",
+  "handle": "kansas-city-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_kansas_city_wb.png?v=1659995267",
+  "platform": "shopify",
+  "product_id": "6659427860670",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-full body",
+   "tn-smooth",
+   "tn-velvety",
+   "type-blend",
+   "type-dark-line"
+  ],
+  "title": "Kansas City Dark",
+  "url": "https://theroasterie.com/products/kansas-city-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638687908030"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638688170174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638688497854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297609515248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297609548016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297609580784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297609613552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297609646320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297609679088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297609711856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297609744624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297609777392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine / 2lb",
+    "variant_id": "47982307574000"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "f50c4695bef3ed94",
+  "first_seen": "2026-10-26",
+  "handle": "nitro-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_nitro_wb.png?v=1659995228",
+  "platform": "shopify",
+  "product_id": "6659428090046",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-bold",
+   "tn-nutty",
+   "tn-rich",
+   "type-blend",
+   "type-dark-line",
+   "type-espresso"
+  ],
+  "title": "Nitro Espresso",
+  "url": "https://theroasterie.com/products/nitro-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638691283134"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638691479742"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638691643582"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297609220336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297609253104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297609285872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297609318640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297609351408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297609384176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297609416944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297609449712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297609482480"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "f9577a3ec3434577",
+  "first_seen": "2026-10-26",
+  "handle": "voodoo",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_voodoo_wb.png?v=1659995206",
+  "platform": "shopify",
+  "product_id": "6659428253886",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-bold",
+   "tn-rich",
+   "tn-smoky",
+   "type-blend",
+   "type-dark-line"
+  ],
+  "title": "Voodoo",
+  "url": "https://theroasterie.com/products/voodoo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638692528318"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638692692158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638692823230"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297607221488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297607287024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297607352560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297607418096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297607516400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297607581936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297607647472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297607713008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297607778544"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "a2d564bb9c160291",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_french_vanilla.png?v=1741126672",
+  "platform": "shopify",
+  "product_id": "6659428417726",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-sweet",
+   "tn-vanilla",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "French Vanilla",
+  "url": "https://theroasterie.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638694035646"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638694199486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638694527166"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297604960496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297604993264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297605026032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297605058800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297605091568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297605124336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297605157104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297605189872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297605222640"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "ef65c3fddd2bcd73",
+  "first_seen": "2026-10-26",
+  "handle": "bavarian-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_bavarian.png?v=1741126672",
+  "platform": "shopify",
+  "product_id": "6659428647102",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-rich",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Bavarian Chocolate",
+  "url": "https://theroasterie.com/products/bavarian-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638695510206"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638695739582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638695903422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297601388784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297601421552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Fine / 12oz",
+    "variant_id": "43297601454320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297601487088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297601519856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Fine / 2lb",
+    "variant_id": "43297601552624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297601585392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297601618160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Fine / 5lb",
+    "variant_id": "43297601650928"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "dea0d876eff945c8",
+  "first_seen": "2026-10-26",
+  "handle": "bettys-recipe",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_big6_bettys_wb.png?v=1659994698",
+  "platform": "shopify",
+  "product_id": "6659428876478",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "tn-spice",
+   "tn-sweet",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Betty's Recipe",
+  "url": "https://theroasterie.com/products/bettys-recipe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638697509054"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638697935038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638698197182"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297600930032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297600962800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297600995568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297601028336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297601061104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297601093872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297601126640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297601159408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297601192176"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9d3febf37167cebc",
+  "first_seen": "2026-10-26",
+  "handle": "french-caramel-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/flv_french_caramel_cream.png?v=1741126672",
+  "platform": "shopify",
+  "product_id": "6659429171390",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-caramel",
+   "tn-creamy",
+   "tn-sweet",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "French Caramel Cream",
+  "url": "https://theroasterie.com/products/french-caramel-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638699704510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638699835582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638699966654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297600569584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297600602352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297600635120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297600667888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297600700656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297600733424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297600766192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297600798960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297600831728"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "1c13d1f052ad391e",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_flv_vanilla_hazelnut.png?v=1741126669",
+  "platform": "shopify",
+  "product_id": "6659429400766",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-nutty",
+   "tn-smooth",
+   "tn-vanilla",
+   "type-blend",
+   "type-flavored"
+  ],
+  "title": "Vanilla Hazelnut",
+  "url": "https://theroasterie.com/products/vanilla-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638701113534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638701342910"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638701637822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297600274672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297600307440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297600340208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297600372976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297600405744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297600438512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297600471280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297600504048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297600536816"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "044f5de2f3ce6395",
+  "first_seen": "2026-10-26",
+  "handle": "american-restaurant-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_american_wb.png?v=1659995219",
+  "platform": "shopify",
+  "product_id": "6659429531838",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-balanced",
+   "type-blend",
+   "type-decaf"
+  ],
+  "title": "American Restaurant Decaf",
+  "url": "https://theroasterie.com/products/american-restaurant-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638702522558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638702653630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638702784702"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297599946992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297599979760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297600012528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297600045296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297600078064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297600110832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297600143600"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "8cc3804bf7855a68",
+  "first_seen": "2026-10-26",
+  "handle": "euro-style-espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_euro_style.png?v=1741126669",
+  "platform": "shopify",
+  "product_id": "6659429761214",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-bold",
+   "tn-smooth",
+   "type-blend",
+   "type-decaf",
+   "type-espresso"
+  ],
+  "title": "Euro Style Espresso Decaf",
+  "url": "https://theroasterie.com/products/euro-style-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638704095422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638704423102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638704586942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297599619312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297599652080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297599684848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297599717616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297599750384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297599783152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297599815920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297599848688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297599881456"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "a2d564bb9c160291",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_frenchvanilla.png?v=1741126669",
+  "platform": "shopify",
+  "product_id": "6659429925054",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-sweet",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "French Vanilla Decaf",
+  "url": "https://theroasterie.com/products/french-vanilla-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638705242302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638705471678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638705668286"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297599258864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297599291632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297599324400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297599357168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297599389936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297599422704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297599455472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297599488240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297599521008"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "dbb5c4af9954b261",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_hazelnut.png?v=1741126668",
+  "platform": "shopify",
+  "product_id": "6659430088894",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-rich",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "Hazelnut Decaf",
+  "url": "https://theroasterie.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638706356414"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638706487486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638706618558"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297598865648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297598898416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297598931184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297598963952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297598996720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297599029488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297599062256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297599095024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297599127792"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4e224527f4306fc4",
+  "first_seen": "2026-10-26",
+  "handle": "kansas-city-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_kcblend_wb.png?v=1741126668",
+  "platform": "shopify",
+  "product_id": "6659430187198",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-light",
+   "subscription",
+   "tn-fruity",
+   "tn-sweet",
+   "type-blend",
+   "type-decaf"
+  ],
+  "title": "Kansas City Blend Decaf",
+  "url": "https://theroasterie.com/products/kansas-city-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638707273918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638707404990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638707536062"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "43297597522160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297597554928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297597587696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297597620464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297597653232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297597686000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297597718768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297597751536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297597784304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297597817072"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9c8f15baf5d486f7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-pitalito-estate-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_columbia_md.png?v=1741126666",
+  "platform": "shopify",
+  "product_id": "6659430449342",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-crisp",
+   "tn-full body",
+   "tn-smooth",
+   "type-decaf",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Colombia Pitalito Estate Decaf",
+  "url": "https://theroasterie.com/products/colombia-pitalito-estate-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Light",
+    "variant_id": "39638709305534"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb / Light",
+    "variant_id": "39638709436606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Whole Bean / 5lb / Light",
+    "variant_id": "39638709567678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Medium",
+    "variant_id": "39638709698750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb / Medium",
+    "variant_id": "39638709829822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Whole Bean / 5lb / Medium",
+    "variant_id": "39638709960894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638710091966"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638710223038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "39638710452414"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Light",
+    "variant_id": "43297596473584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Light",
+    "variant_id": "43297596506352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz / Light",
+    "variant_id": "43297596539120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb / Light",
+    "variant_id": "43297596571888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb / Light",
+    "variant_id": "43297596604656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb / Light",
+    "variant_id": "43297596637424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Medium / 5lb / Light",
+    "variant_id": "43297596670192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Coarse / 5lb / Light",
+    "variant_id": "43297596702960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Extra Fine / 5lb / Light",
+    "variant_id": "43297596735728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Medium",
+    "variant_id": "43297596768496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Medium",
+    "variant_id": "43297596801264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz / Medium",
+    "variant_id": "43297596834032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb / Medium",
+    "variant_id": "43297596866800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb / Medium",
+    "variant_id": "43297596932336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb / Medium",
+    "variant_id": "43297596965104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Medium / 5lb / Medium",
+    "variant_id": "43297596997872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Coarse / 5lb / Medium",
+    "variant_id": "43297597030640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Extra Fine / 5lb / Medium",
+    "variant_id": "43297597063408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "43297597096176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz / Dark",
+    "variant_id": "43297597128944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz / Dark",
+    "variant_id": "43297597161712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb / Dark",
+    "variant_id": "43297597194480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb / Dark",
+    "variant_id": "43297597227248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb / Dark",
+    "variant_id": "43297597260016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "43297597292784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Coarse / 5lb / Dark",
+    "variant_id": "43297597325552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.5,
+    "title": "Extra Fine / 5lb / Dark",
+    "variant_id": "43297597358320"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "ba9862f4b6def2b7",
+  "first_seen": "2026-10-26",
+  "handle": "super-tuscan-espresso-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_super_tuscan_wb.png?v=1659995257",
+  "platform": "shopify",
+  "product_id": "6659430777022",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-caramel",
+   "tn-creamy",
+   "tn-smooth",
+   "type-blend",
+   "type-decaf",
+   "type-espresso"
+  ],
+  "title": "Super Tuscan Espresso Decaf",
+  "url": "https://theroasterie.com/products/super-tuscan-espresso-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638712877246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638712942782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638713041086"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297595949296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297595982064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297596014832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297596047600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297596080368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297596113136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297596145904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297596178672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297596211440"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "215532bfb4c731ab",
+  "first_seen": "2026-10-26",
+  "handle": "roasterie-house-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_house_blend.png?v=1741126666",
+  "platform": "shopify",
+  "product_id": "6659430973630",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-light",
+   "subscription",
+   "tn-balanced",
+   "tn-bright",
+   "tn-citrus",
+   "tn-smooth",
+   "type-blend",
+   "type-decaf"
+  ],
+  "title": "Roasterie House Blend Decaf",
+  "url": "https://theroasterie.com/products/roasterie-house-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638714384574"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638714646718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638714908862"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297595556080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297595588848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297595621616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297595654384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297595687152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297595719920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297595752688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297595785456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297595818224"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9c7aca4f5be6d21a",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-rendezvous",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_midnight_wb.png?v=1659995237",
+  "platform": "shopify",
+  "product_id": "6659431170238",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "full body",
+   "roast-dark",
+   "subscription",
+   "tn-bold",
+   "tn-dark",
+   "tn-spice",
+   "type-blend",
+   "type-dark-line",
+   "type-decaf"
+  ],
+  "title": "Midnight Rendezvous Decaf Coffee",
+  "url": "https://theroasterie.com/products/midnight-rendezvous",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638716252350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638716383422"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638716514494"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297593852144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297593884912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297593917680"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297593950448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297593983216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297594015984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297594048752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297594081520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297594114288"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "5adf5587ab9d12fa",
+  "first_seen": "2026-10-26",
+  "handle": "super-tuscan-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_big6_supertuscan_wb.png?v=1659994940",
+  "platform": "shopify",
+  "product_id": "6659431334078",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-ESP",
+   "roast-medium",
+   "subscription",
+   "tn-buttery",
+   "tn-caramel",
+   "tn-creamy",
+   "tn-smooth",
+   "type-blend",
+   "type-espresso"
+  ],
+  "title": "Super Tuscan Espresso",
+  "url": "https://theroasterie.com/products/super-tuscan-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638717366462"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638717661374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638717890750"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297593360624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297593393392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297593426160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297593458928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297593491696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297593524464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297593557232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297593590000"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297593622768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Fine / 2lb",
+    "variant_id": "43297593655536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Fine / 12oz",
+    "variant_id": "47775779225840"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "03d27c681bb89d7b",
+  "first_seen": "2026-10-26",
+  "handle": "euro-style-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_esp_euro_espresso_wb.png?v=1659995186",
+  "platform": "shopify",
+  "product_id": "6659431530686",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-ESP",
+   "roast-medium",
+   "subscription",
+   "tn-bold",
+   "tn-nutty",
+   "tn-rich",
+   "tn-smooth",
+   "type-blend",
+   "type-espresso"
+  ],
+  "title": "Euro Style Espresso",
+  "url": "https://theroasterie.com/products/euro-style-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638718873790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638719168702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638719463614"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297593000176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297593032944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297593065712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297593098480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297593131248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297593164016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297593196784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297593229552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297593262320"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "48cda61b3f5fb395",
+  "first_seen": "2026-10-26",
+  "handle": "gotham-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/gotham_edit.png?v=1753165861",
+  "platform": "shopify",
+  "product_id": "6659431694526",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-complex",
+   "tn-heavy body",
+   "type-blend",
+   "type-dark-line",
+   "type-espresso"
+  ],
+  "title": "Gotham Espresso",
+  "url": "https://theroasterie.com/products/gotham-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638720446654"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638720577726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638720708798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297591886064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297591918832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297591951600"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297592017136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297592049904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297592082672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297592115440"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297592148208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297592180976"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "f022939b87f1876c",
+  "first_seen": "2026-10-26",
+  "handle": "seattle-style-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_esp_seattle_style_wb.png?v=1659995132",
+  "platform": "shopify",
+  "product_id": "6659431825598",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-ESP",
+   "roast-dark",
+   "subscription",
+   "tn-bold",
+   "tn-nutty",
+   "type-blend",
+   "type-espresso"
+  ],
+  "title": "Seattle Style Espresso",
+  "url": "https://theroasterie.com/products/seattle-style-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638721495230"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638721626302"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638721855678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297591492848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297591525616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297591558384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297591591152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297591623920"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297591656688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297591689456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297591722224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297591754992"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "c3725595d088dae3",
+  "first_seen": "2026-10-26",
+  "handle": "organic-fair-trade-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/FTO_organic_espresso_update.png?v=1760187694",
+  "platform": "shopify",
+  "product_id": "6659431923902",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-ESP",
+   "fair trade",
+   "roast-medium",
+   "subscription",
+   "tn-chocolate",
+   "tn-full body",
+   "tn-smooth",
+   "tn-spice",
+   "type-blend",
+   "type-espresso"
+  ],
+  "title": "Fair Trade Organic Espresso",
+  "url": "https://theroasterie.com/products/organic-fair-trade-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638722543806"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638722674878"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638722871486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297591132400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297591165168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297591197936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297591230704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297591263472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297591296240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297591329008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297591361776"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297591394544"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "fed5e5c617629113",
+  "first_seen": "2026-10-26",
+  "handle": "total-eclipse",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_drk_total_eclipse.png?v=1741126666",
+  "platform": "shopify",
+  "product_id": "6659432513726",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DRK",
+   "roast-dark",
+   "subscription",
+   "tn-berry",
+   "tn-bold",
+   "tn-chocolate",
+   "tn-full body",
+   "tn-syrupy",
+   "type-blend",
+   "type-dark-line"
+  ],
+  "title": "Total Eclipse",
+  "url": "https://theroasterie.com/products/total-eclipse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638730309822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.5,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638730539198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638730735806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297590149360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297590182128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297590214896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.5,
+    "title": "Medium / 2lb",
+    "variant_id": "43297590247664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.5,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297590280432"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.5,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297590313200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297590345968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297590378736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297590411504"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "e113b0e396b7f1a0",
+  "first_seen": "2026-10-26",
+  "handle": "bettys-recipe-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_bettyrecipe.png?v=1741126665",
+  "platform": "shopify",
+  "product_id": "6659432710334",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-chocolate",
+   "tn-nutty",
+   "tn-spice",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "Betty's Recipe Decaf",
+  "url": "https://theroasterie.com/products/bettys-recipe-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638732013758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638732144830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638732275902"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297589788912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297589821680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297589854448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297589887216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297589919984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297589952752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297589985520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297590018288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297590051056"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "aaf8d27837d40f45",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_dcf_vanilla_hazelnut.png?v=1741126663",
+  "platform": "shopify",
+  "product_id": "6659432841406",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "subscription",
+   "tn-creamy",
+   "tn-nutty",
+   "tn-sweet",
+   "tn-vanilla",
+   "type-blend",
+   "type-decaf",
+   "type-flavored"
+  ],
+  "title": "Vanilla Hazelnut Decaf",
+  "url": "https://theroasterie.com/products/vanilla-hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638732898494"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638733029566"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638733160638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297589461232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297589494000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297589526768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297589559536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297589592304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297589625072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297589657840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297589690608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297589723376"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "9da99e9603e48de4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-lagoa",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_sng_brazil_fazenda_md.png?v=1741126662",
+  "platform": "shopify",
+  "product_id": "6659433758910",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-medium",
+   "subscription",
+   "tn-buttery",
+   "tn-creamy",
+   "tn-mild",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Brazil Fazenda Lagoa",
+  "url": "https://theroasterie.com/products/brazil-fazenda-lagoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Dark",
+    "variant_id": "39638740533438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "Whole Bean / 2lb / Dark",
+    "variant_id": "39638740598974"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Whole Bean / 5lb / Dark",
+    "variant_id": "39638740664510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5lb / Medium",
+    "variant_id": "39638741123262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "Whole Bean / 2lb / Medium",
+    "variant_id": "39638741287102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz / Medium",
+    "variant_id": "39638741352638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Dark",
+    "variant_id": "43297586872560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "Medium / 2lb / Dark",
+    "variant_id": "43297586905328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Medium / 5lb / Dark",
+    "variant_id": "43297586938096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine / 12oz / Dark",
+    "variant_id": "43297586970864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "Fine / 2lb / Dark",
+    "variant_id": "43297587003632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Fine / 5lb / Dark",
+    "variant_id": "43297587036400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine / 12oz / Medium",
+    "variant_id": "43297587069168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "Fine / 2lb / Medium",
+    "variant_id": "43297587101936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Fine / 5lb / Medium",
+    "variant_id": "43297587134704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz / Medium",
+    "variant_id": "43297587167472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "Medium / 2lb / Medium",
+    "variant_id": "43297587200240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "Coarse / 2lb / Medium",
+    "variant_id": "43297587233008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Dark",
+    "variant_id": "43297587265776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz / Medium",
+    "variant_id": "43297587298544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.0,
+    "title": "Medium / 5lb / Medium",
+    "variant_id": "50512678650096"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4d578085de8a8925",
+  "first_seen": "2026-10-26",
+  "handle": "sporting-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/theroasterie_soccer_for_the_city_blend.png?v=1746623220",
+  "platform": "shopify",
+  "product_id": "6659433988286",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "rich",
+   "roast-medium",
+   "subscription",
+   "tn-full body",
+   "tn-lemon",
+   "tn-toasted nuts",
+   "type-blend"
+  ],
+  "title": "Soccer for the City Blend",
+  "url": "https://theroasterie.com/products/sporting-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39638742368446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39638742630590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39638742892734"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297586512112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297586544880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297586577648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297586610416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297586643184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297586675952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297586708720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Medium / 5lb",
+    "variant_id": "43297586741488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297586774256"
+   },
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "Medium / 1.75oz",
+    "variant_id": "47957007761648"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "12b0ad76710298ba",
+  "first_seen": "2026-10-26",
+  "handle": "stormin-norman",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_stormin_normin.png?v=1741126661",
+  "platform": "shopify",
+  "product_id": "6659434152126",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-heavy body",
+   "tn-spice",
+   "tn-sweet earth",
+   "type-blend"
+  ],
+  "title": "Stormin' Norman",
+  "url": "https://theroasterie.com/products/stormin-norman",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40217727434942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "40217727566014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40217727729854"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Medium / 12oz",
+    "variant_id": "43297586217200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Coarse / 12oz",
+    "variant_id": "43297586249968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "Extra Fine / 12oz",
+    "variant_id": "43297586282736"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Medium / 2lb",
+    "variant_id": "43297586315504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "43297586348272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "Extra Fine / 2lb",
+    "variant_id": "43297586381040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297586413808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "43297586446576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Extra Fine / 5lb",
+    "variant_id": "43297586479344"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "fb6c1ffa9c443f75",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_big6_autumn_harvest_wb.png?v=1741126625",
+  "platform": "shopify",
+  "product_id": "6940900753598",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-FLV",
+   "roast-medium",
+   "tn-spicy",
+   "tn-sweet",
+   "type-blend",
+   "type-flavored",
+   "type-seasonal"
+  ],
+  "title": "Autumn Harvest",
+  "url": "https://theroasterie.com/products/autumn-harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40568058151102"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "40568058183870"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "40568058216638"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Medium",
+    "variant_id": "40568058249406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40568058282174"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Medium",
+    "variant_id": "40568058314942"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "40639631425726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Coarse",
+    "variant_id": "40639637127358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Coarse",
+    "variant_id": "40639642337470"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "fb6c1ffa9c443f75",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-harvest-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_big6_autumn_harvest_wb_04a5028c-f499-493b-85b4-486e2006ff52.png?v=1741126661",
+  "platform": "shopify",
+  "product_id": "6950963478718",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-DCF",
+   "roast-medium",
+   "tn-spicy",
+   "tn-sweet",
+   "type-blend",
+   "type-decaf",
+   "type-flavored",
+   "type-seasonal"
+  ],
+  "title": "Autumn Harvest Decaf",
+  "url": "https://theroasterie.com/products/autumn-harvest-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40605458399422"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "40605458432190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "40605458464958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Medium",
+    "variant_id": "40605458497726"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40605458530494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Medium",
+    "variant_id": "40605458563262"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "3eee296289ec8501",
+  "first_seen": "2026-10-26",
+  "handle": "the-lily-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_nelson_lilly_blend.png?v=1741126624",
+  "platform": "shopify",
+  "product_id": "6976926908606",
+  "product_type": "Coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "tn-blackberry",
+   "tn-lavender",
+   "tn-lemon",
+   "type-blend"
+  ],
+  "title": "The Lily Blend",
+  "url": "https://theroasterie.com/products/the-lily-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40694867394750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40694867427518"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297585725680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297585758448"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "0810491aa9fd2923",
+  "first_seen": "2026-10-26",
+  "handle": "the-nelson-atkins-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_wht_bag_nelson_blend.png?v=1741126624",
+  "platform": "shopify",
+  "product_id": "6976996999358",
+  "product_type": "Coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-dark",
+   "tn-dark chocolate",
+   "tn-dark-cherry",
+   "tn-floral",
+   "type-blend"
+  ],
+  "title": "The Nelson-Atkins Blend",
+  "url": "https://theroasterie.com/products/the-nelson-atkins-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40694931325118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40694931357886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297585594608"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297585627376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44013953581296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Medium / 2lb",
+    "variant_id": "44013953843440"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "de1f0dc2825d8cc4",
+  "first_seen": "2026-10-26",
+  "handle": "the-wilderness-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_wht_bag_nelson_wilderness.png?v=1741126624",
+  "platform": "shopify",
+  "product_id": "6977008599230",
+  "product_type": "",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "tn-brown spice",
+   "tn-dark chocolate",
+   "tn-orange blossom",
+   "tn-peanut butter",
+   "type-blend"
+  ],
+  "title": "The Wilderness Blend",
+  "url": "https://theroasterie.com/products/the-wilderness-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40694959964350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40694959997118"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44112422207728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "44112423321840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "44112423354608"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "4c7e88bb8a622190",
+  "first_seen": "2026-10-26",
+  "handle": "the-rispal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_bnd_nelson_rispal_blend.png?v=1741126623",
+  "platform": "shopify",
+  "product_id": "7027147309246",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "tn-apple cider",
+   "tn-dried maple leaves",
+   "tn-fresh pipe tobacco",
+   "tn-vanilla",
+   "type-blend"
+  ],
+  "title": "The Rispal Blend",
+  "url": "https://theroasterie.com/products/the-rispal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "40845495500990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "40845495533758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Medium / 12oz",
+    "variant_id": "43297585463536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "Medium / 5lb",
+    "variant_id": "43297585496304"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "5e9de964d39438c9",
+  "first_seen": "2026-10-26",
+  "handle": "trailblazer-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/theroasterie_inline_trailblazer_blend.png?v=1741126619",
+  "platform": "shopify",
+  "product_id": "8008936292592",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-apple",
+   "tn-cherry",
+   "tn-fruity",
+   "tn-rich",
+   "tn-smoky",
+   "type-blend"
+  ],
+  "title": "Trailblazer Blend",
+  "url": "https://theroasterie.com/products/trailblazer-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43082330439920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "43082330472688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "43082330505456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Ground / 5 lb",
+    "variant_id": "43082330538224"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "e80e8a7e552e58e7",
+  "first_seen": "2026-10-26",
+  "handle": "isu",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/thumbnail_IowaSt_RiseCoffee-Bag_front.png?v=1741126619",
+  "platform": "shopify",
+  "product_id": "8068180508912",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-light",
+   "subscription",
+   "tn-apple",
+   "tn-fruity",
+   "tn-medium body",
+   "tn-rich",
+   "tn-smoky",
+   "tn-stone fruit",
+   "type-blend"
+  ],
+  "title": "Iowa State Rise Blend",
+  "url": "https://theroasterie.com/products/isu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43306471784688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12 oz",
+    "variant_id": "43306471850224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "46281020604656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.0,
+    "title": "Ground / 2 lb",
+    "variant_id": "46281020637424"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "496879d7ccc68fac",
+  "first_seen": "2026-10-26",
+  "handle": "kansas-state-1863-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/products/kstate_12oz_packaging_mockup_transparent.png?v=1741126619",
+  "platform": "shopify",
+  "product_id": "8098862498032",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "roast-medium",
+   "subscription",
+   "tn-cocoa",
+   "tn-dark-cherry",
+   "type-blend"
+  ],
+  "title": "Kansas State 1863 Blend",
+  "url": "https://theroasterie.com/products/kansas-state-1863-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43431566377200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Ground / 12 oz",
+    "variant_id": "43431566409968"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "6d7f26288fea3382",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/theroasterie_honduras_marcala_transparentbg.png?v=1741126614",
+  "platform": "shopify",
+  "product_id": "8441469796592",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-SNG",
+   "roast-light",
+   "subscription",
+   "tn-floral",
+   "tn-fruity",
+   "tn-hazelnut",
+   "tn-milk chocolate",
+   "type-direct-trade",
+   "type-single-origin"
+  ],
+  "title": "Honduras Marcala Natural",
+  "url": "https://theroasterie.com/products/honduras-marcala-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "44809678061808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44809678094576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine / 12oz",
+    "variant_id": "44809678192880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "44809678258416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44809678323952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Medium / 5lb",
+    "variant_id": "44809678389488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.0,
+    "title": "Fine / 5lb",
+    "variant_id": "44809678422256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "44809678487792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium / 2lb",
+    "variant_id": "44809678553328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Fine / 2lb",
+    "variant_id": "44809678618864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Coarse / 2lb",
+    "variant_id": "44809678684400"
+   }
+  ],
+  "vendor": "The Roasterie"
+ },
+ {
+  "body_hash": "be54660059193392",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-azteca",
+  "image": "https://cdn.shopify.com/s/files/1/0563/3294/3550/files/theroasterie_cafe_azteca_final_a4fc4ffc-709c-45a8-9c6a-0ff5fb3b18d2.png?v=1755105291",
+  "platform": "shopify",
+  "product_id": "9583535096048",
+  "product_type": "coffee",
+  "roaster_slug": "theroasterie",
+  "tags": [
+   "coffee",
+   "color-BND",
+   "rich",
+   "roast-medium",
+   "subscription",
+   "tn-caramel",
+   "tn-cocoa",
+   "tn-full body",
+   "tn-spice",
+   "tn-toasted nuts",
+   "type-blend"
+  ],
+  "title": "Café Azteca",
+  "url": "https://theroasterie.com/products/cafe-azteca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47869087318256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12oz",
+    "variant_id": "47869087416560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47869087449328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground / 5lb",
+    "variant_id": "47869087547632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "47869087580400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "Ground / 2lb",
+    "variant_id": "47869087678704"
+   }
+  ],
+  "vendor": "The Roasterie"
+ }
+]

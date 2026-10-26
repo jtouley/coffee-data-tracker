@@ -1,0 +1,531 @@
+[
+ {
+  "body_hash": "76037928db5f61a8",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-purple-caturra-blueberry",
+  "image": null,
+  "platform": "generic",
+  "product_id": "08144e569055",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Colombian Purple Caturra Blueberry",
+  "url": "https://www.darkritualcoffeetx.com/product-page/colombian-purple-caturra-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "dogs-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "11c07032d92a",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Dogs & Coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/dogs-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-fuel",
+  "image": null,
+  "platform": "generic",
+  "product_id": "18c663ad2548",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee Fuel",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-fuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "what-moms-need-is-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "193c85cb0eda",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "What moms need is coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/what-moms-need-is-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "dark-side-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1de7189969da",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Dark Side Coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/dark-side-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bbd89f6337eda9f6",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu-san-diego-jaguar-honey",
+  "image": null,
+  "platform": "generic",
+  "product_id": "41d57108c0e8",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Costa Rican Tarrazu San Diego Jaguar Honey",
+  "url": "https://www.darkritualcoffeetx.com/product-page/costa-rican-tarrazu-san-diego-jaguar-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-makes-me-nicer-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4c9d6519b473",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee makes me nicer",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-makes-me-nicer-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-peace",
+  "image": null,
+  "platform": "generic",
+  "product_id": "512096ecd00a",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee Peace",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-peace",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "mom-s-need-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "51da34fed1f4",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Mom's need coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/mom-s-need-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-culture",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5e1c2aab9487",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee Culture",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-culture",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce78c4c821eddfcc",
+  "first_seen": "2026-10-26",
+  "handle": "brainstorm-espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6b38e30a711d",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Brainstorm Espresso Blend",
+  "url": "https://www.darkritualcoffeetx.com/product-page/brainstorm-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "spicy-books-icy-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "86da6b41df3e",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Spicy Books Icy Coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/spicy-books-icy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "all-i-care-about-is-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "886411bfdbf4",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "All I care about is coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/all-i-care-about-is-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "080608d7ca406afd",
+  "first_seen": "2026-10-26",
+  "handle": "nicaraguan-la-bastilla-natural",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8fc878538b43",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Nicaraguan La Bastilla Natural",
+  "url": "https://www.darkritualcoffeetx.com/product-page/nicaraguan-la-bastilla-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-makes-me-nicer",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a1345d3dd624",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee makes me nicer",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-makes-me-nicer",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "ice-coffee-princess",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ab16134c0a96",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Ice Coffee Princess",
+  "url": "https://www.darkritualcoffeetx.com/product-page/ice-coffee-princess",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "hipster-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "d43701e59900",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Hipster Coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/hipster-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "562a14e67c1c35cd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidama-worku-buche",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e8da830d3b12",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Ethiopia Sidama Ayla Bombe",
+  "url": "https://www.darkritualcoffeetx.com/product-page/ethiopian-sidama-worku-buche",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.95,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-is-fuel",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ea7020c7db05",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee is Fuel",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-is-fuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-and-sarcasm-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ec276fe4ac74",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee and Sarcasm",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-and-sarcasm-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-is-fuel-red",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ed9d26b58e77",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee is Fuel Red",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-is-fuel-red",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80192048e52798ba",
+  "first_seen": "2026-10-26",
+  "handle": "because-coffee",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f2bf5049e8c4",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Because Coffee",
+  "url": "https://www.darkritualcoffeetx.com/product-page/because-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.93,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25c091fee4e69359",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-because",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fc3f7728efc7",
+  "product_type": "",
+  "roaster_slug": "darkritualcoffeetx",
+  "tags": [],
+  "title": "Coffee because...",
+  "url": "https://www.darkritualcoffeetx.com/product-page/coffee-because",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.82,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

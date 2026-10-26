@@ -1,0 +1,3936 @@
+[
+ {
+  "body_hash": "67e14e263dcba251",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-cold-brew-system",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/toddy-cold-brew-system.png?v=1697228151",
+  "platform": "shopify",
+  "product_id": "1777943216185",
+  "product_type": "Merchandise",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [],
+  "title": "Toddy Cold Brew System",
+  "url": "https://tectoniccoffee.com/products/toddy-cold-brew-system",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 49.0,
+    "title": "Default Title",
+    "variant_id": "17519153152057"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "ee53419385a6bb26",
+  "first_seen": "2026-10-26",
+  "handle": "pioneer-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SD_CxCBlend_Web.png?v=1649437004",
+  "platform": "shopify",
+  "product_id": "1839101771833",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Super Domestic - CxC Blend (formally Pioneer Blend) aka Drift",
+  "url": "https://tectoniccoffee.com/products/pioneer-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.57,
+    "title": "5lb",
+    "variant_id": "18060813271097"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "victory-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SD_Victory.png?v=1616018695",
+  "platform": "shopify",
+  "product_id": "2079298945081",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Super Domestic - Victory Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/victory-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.35,
+    "title": "5lb",
+    "variant_id": "18828002983993"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "005b22de1d781bbd",
+  "first_seen": "2026-10-26",
+  "handle": "kom-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SD_Kom_Web.png?v=1622575317",
+  "platform": "shopify",
+  "product_id": "2079305826361",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Super Domestic - kom blend aka shift",
+  "url": "https://tectoniccoffee.com/products/kom-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb",
+    "variant_id": "18828015337529"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "4a7afb2d06e5c9a3",
+  "first_seen": "2026-10-26",
+  "handle": "breakaway",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SD_QOM_Web.png?v=1622571324",
+  "platform": "shopify",
+  "product_id": "2079308742713",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Super Domestic - Q.O.M - Queen of the Mountain aka Shockwave",
+  "url": "https://tectoniccoffee.com/products/breakaway",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb",
+    "variant_id": "18828019728441"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "uptown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/uptown_blend_final_-_logo.png?v=1553301083",
+  "platform": "shopify",
+  "product_id": "2079313133625",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Uptown Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/uptown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.31,
+    "title": "5lb",
+    "variant_id": "18828028739641"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "960d7a10e0f9a527",
+  "first_seen": "2026-10-26",
+  "handle": "downtown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/CMD_Downtown_Web_5lb.png?v=1622568510",
+  "platform": "shopify",
+  "product_id": "2079313854521",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Downtown Blend aka Drift Blend",
+  "url": "https://tectoniccoffee.com/products/downtown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.47,
+    "title": "5lb",
+    "variant_id": "18828032770105"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "8afc314729b01952",
+  "first_seen": "2026-10-26",
+  "handle": "laneway-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/CMD_Laneway_Web_5lb.png?v=1622569095",
+  "platform": "shopify",
+  "product_id": "2079315951673",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Laneway Blend aka Shift Blend",
+  "url": "https://tectoniccoffee.com/products/laneway-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.29,
+    "title": "5lb",
+    "variant_id": "18828036538425"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "bb1204fda0b095f7",
+  "first_seen": "2026-10-26",
+  "handle": "milano-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/CMD_Milano_Web_5lb.png?v=1622569663",
+  "platform": "shopify",
+  "product_id": "2079316738105",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Milano Blend aka Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/milano-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.29,
+    "title": "5lb",
+    "variant_id": "18828041846841"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "malibu-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/malibu_with_logo_-_final.png?v=1553301043",
+  "platform": "shopify",
+  "product_id": "2079317590073",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Malibu Dark Roast Decaf",
+  "url": "https://tectoniccoffee.com/products/malibu-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.6,
+    "title": "5lb",
+    "variant_id": "18828050956345"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "sd-colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Decaf-Colombia-5lb-Web_854d458c-d0fa-4cbb-9590-00c1382042a0.png?v=1552675040",
+  "platform": "shopify",
+  "product_id": "2106936098873",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Super Domestic - DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/sd-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.6,
+    "title": "5lb",
+    "variant_id": "18911097356345"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "19a461d456339755",
+  "first_seen": "2026-10-26",
+  "handle": "acaia-lunar",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/acaia-lunar-scale-2.jpg?v=1751326228",
+  "platform": "shopify",
+  "product_id": "2404098539577",
+  "product_type": "Merchandise",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [],
+  "title": "Acaia Lunar - Black",
+  "url": "https://tectoniccoffee.com/products/acaia-lunar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 771,
+    "price_usd": 250.0,
+    "title": "Default Title",
+    "variant_id": "19670702850105"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "960d7a10e0f9a527",
+  "first_seen": "2026-10-26",
+  "handle": "htop-drift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/HILLTOP_DRIFT_5lb.png?v=1568354171",
+  "platform": "shopify",
+  "product_id": "3703538057273",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Hilltop - Drift Blend",
+  "url": "https://tectoniccoffee.com/products/htop-drift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.67,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29208357339193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.17,
+    "title": "5lb / Ground",
+    "variant_id": "29208357371961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.17,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29208357404729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.67,
+    "title": "12oz / Ground",
+    "variant_id": "29208357437497"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 27.13,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923393163572"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 28.63,
+    "title": "1kg / Ground",
+    "variant_id": "48923393196340"
+   }
+  ],
+  "vendor": "Hilltop Coffee + Kitchen"
+ },
+ {
+  "body_hash": "005b22de1d781bbd",
+  "first_seen": "2026-10-26",
+  "handle": "htop-shift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Hilltop_Shift_Web_5lb.png?v=1622577035",
+  "platform": "shopify",
+  "product_id": "3703538122809",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Hilltop - Shift Blend",
+  "url": "https://tectoniccoffee.com/products/htop-shift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29208357503033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.8,
+    "title": "5lb / Ground",
+    "variant_id": "29208357535801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29208357568569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.95,
+    "title": "12oz / Ground",
+    "variant_id": "29208357601337"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 32.1,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923392672052"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.6,
+    "title": "1kg / Ground",
+    "variant_id": "48923392704820"
+   }
+  ],
+  "vendor": "Hilltop Coffee + Kitchen"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "htop-colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Hilltop_Decaf_Front_deead8af-2ee0-4f00-92d8-6b55cded5b02.png?v=1625786968",
+  "platform": "shopify",
+  "product_id": "3703538286649",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "Wholesale",
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Hilltop - DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/htop-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "29208357699641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lb / Ground",
+    "variant_id": "29208357732409"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29208357765177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.25,
+    "title": "12oz / Ground",
+    "variant_id": "29208357797945"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 35.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923393360180"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 36.1,
+    "title": "1kg / Ground",
+    "variant_id": "48923393392948"
+   }
+  ],
+  "vendor": "Hilltop Coffee + Kitchen"
+ },
+ {
+  "body_hash": "32f0c6fc086b69b8",
+  "first_seen": "2026-10-26",
+  "handle": "htop-d2c-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Hilltop_Decaf_Front.png?v=1625787215",
+  "platform": "shopify",
+  "product_id": "4291655204898",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://tectoniccoffee.com/products/htop-d2c-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30914160230434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.5,
+    "title": "12oz / Ground",
+    "variant_id": "30914160263202"
+   }
+  ],
+  "vendor": "Powered by Tectonic"
+ },
+ {
+  "body_hash": "8239caee04297d63",
+  "first_seen": "2026-10-26",
+  "handle": "shift-blend-cold-brew-5-gallons",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/coldbrewkeg.png?v=1760487165",
+  "platform": "shopify",
+  "product_id": "4377390153762",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Hilltop - Shift Blend Cold Brew - 5 Gallons",
+  "url": "https://tectoniccoffee.com/products/shift-blend-cold-brew-5-gallons",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.77,
+    "title": "Default Title",
+    "variant_id": "31331952132130"
+   }
+  ],
+  "vendor": "Hilltop Coffee + Kitchen"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-tectonic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Blend-Tectonic-5lb-Web-GB_f99a6bb6-2ee1-41c4-a2ef-36a6bfc03d27.png?v=1577945943",
+  "platform": "shopify",
+  "product_id": "4389940723746",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Tradecraft"
+  ],
+  "title": "Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/tcraft-tectonic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.35,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31386064158754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.55,
+    "title": "5lb / Ground",
+    "variant_id": "31386064191522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.07,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31386064224290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.57,
+    "title": "12oz / Ground",
+    "variant_id": "31386064257058"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 29.25,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923380416820"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 30.35,
+    "title": "1kg / Ground",
+    "variant_id": "48923380449588"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "960d7a10e0f9a527",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-drift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Blend-Drift-5lb-Web_b687375f-f1b7-41f4-8430-79bc0f755e1b.png?v=1577945951",
+  "platform": "shopify",
+  "product_id": "4389940887586",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Drift Blend",
+  "url": "https://tectoniccoffee.com/products/tcraft-drift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.59,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31386065502242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.09,
+    "title": "5lb / Ground",
+    "variant_id": "31386065535010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.16,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31386065567778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.66,
+    "title": "12oz / Ground",
+    "variant_id": "31386065600546"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 38.43,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923380646196"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 39.93,
+    "title": "1kg / Ground",
+    "variant_id": "48923380678964"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "31889b2617441e9c",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-shift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Blend-Shift-5lb-Web_b5c7de6d-5a6e-44c6-bfd5-9ded0333b0ab.png?v=1577945959",
+  "platform": "shopify",
+  "product_id": "4389941084194",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Shift Blend",
+  "url": "https://tectoniccoffee.com/products/tcraft-shift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31386065895458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.8,
+    "title": "5lb / Ground",
+    "variant_id": "31386065928226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31386065960994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Ground",
+    "variant_id": "31386065993762"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 32.1,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923380711732"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.6,
+    "title": "1kg / Ground",
+    "variant_id": "48923380744500"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "953abb9e8487e15c",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-shockwave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Blend-Shockwave-5lb-Web_6fd294fa-3650-4fd3-afd1-d18711369400.png?v=1577945969",
+  "platform": "shopify",
+  "product_id": "4389941280802",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/tcraft-shockwave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31386066518050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.8,
+    "title": "5lb / Ground",
+    "variant_id": "31386066550818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31386066583586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.95,
+    "title": "12oz / Ground",
+    "variant_id": "31386066616354"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 32.1,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923380777268"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.6,
+    "title": "1kg / Ground",
+    "variant_id": "48923380810036"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Decaf-Colombia-5lb-Web_e3e1aa52-55ad-493e-8e06-da3c244d08f0.png?v=1577945978",
+  "platform": "shopify",
+  "product_id": "4389941444642",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/tcraft-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31386066944034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.75,
+    "title": "5lb / Ground",
+    "variant_id": "31386066976802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.85,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31386067009570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.35,
+    "title": "12oz / Ground",
+    "variant_id": "31386067042338"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 27.45,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923380842804"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 28.55,
+    "title": "1kg / Ground",
+    "variant_id": "48923380875572"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "f3ecc4a1605fc750",
+  "first_seen": "2026-10-26",
+  "handle": "tcraft-shift-blend-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/coldbrewkeg.png?v=1760487165",
+  "platform": "shopify",
+  "product_id": "4389941936162",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Tradecraft - Shift Blend Cold Brew - 5 Gallons",
+  "url": "https://tectoniccoffee.com/products/tcraft-shift-blend-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.33,
+    "title": "Default Title",
+    "variant_id": "31386068385826"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "64f2a4a60368b238",
+  "first_seen": "2026-10-26",
+  "handle": "cnature-tectonic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/COFFEE_NATURE_ver.1.png?v=1578078392",
+  "platform": "shopify",
+  "product_id": "4390651166754",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CoffeeNature",
+   "wholesale-only"
+  ],
+  "title": "Coffee Nature - Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/cnature-tectonic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.92,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31389417275426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.42,
+    "title": "12oz / Ground",
+    "variant_id": "31389417308194"
+   }
+  ],
+  "vendor": "Coffee Nature"
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "manhattan-dark-night",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/CMD_Manhattan_5lb.jpg?v=1618427628",
+  "platform": "shopify",
+  "product_id": "4517777244194",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "Wholesale"
+  ],
+  "title": "CMD - Manhattan Dark Night",
+  "url": "https://tectoniccoffee.com/products/manhattan-dark-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31997825450018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "31997825515554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31997825548322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "31997825581090"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "1097e578952b9682",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-shift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SCJ_Shift_Web_5lb.png?v=1626383062",
+  "platform": "shopify",
+  "product_id": "4598519169058",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "SoCalJazz",
+   "wholesale-only"
+  ],
+  "title": "SoCal Jazz Blend aka Shift Blend",
+  "url": "https://tectoniccoffee.com/products/copy-of-shift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.3,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32227494494242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.8,
+    "title": "5lb / Ground",
+    "variant_id": "32227494527010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32227494559778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.95,
+    "title": "12oz / Ground",
+    "variant_id": "32227494592546"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 6.83,
+    "title": "6oz / Whole Bean",
+    "variant_id": "39406423212066"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.33,
+    "title": "6oz / Ground",
+    "variant_id": "39406430912546"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 32.1,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923403256116"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.6,
+    "title": "1kg / Ground",
+    "variant_id": "48923403288884"
+   }
+  ],
+  "vendor": "SoCal Jazz"
+ },
+ {
+  "body_hash": "0dbbf0c9b5dc16ac",
+  "first_seen": "2026-10-26",
+  "handle": "pre-workout-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Paradiso_Shockway_Web_12oz.png?v=1622577862",
+  "platform": "shopify",
+  "product_id": "4598548430882",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Paradiso - Pre-Workout Blend aka Shockwave",
+  "url": "https://tectoniccoffee.com/products/pre-workout-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.69,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32227561373730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.19,
+    "title": "5lb / Ground",
+    "variant_id": "32227561406498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.16,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32227561439266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Ground",
+    "variant_id": "32227561472034"
+   }
+  ],
+  "vendor": "Paradiso Crossfit"
+ },
+ {
+  "body_hash": "36fbf896dd78e491",
+  "first_seen": "2026-10-26",
+  "handle": "barbell-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Barbell_5lb.jpg?v=1595628997",
+  "platform": "shopify",
+  "product_id": "4599228727330",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Wholesale"
+  ],
+  "title": "Paradiso - Barbell Blend aka Tectonic",
+  "url": "https://tectoniccoffee.com/products/barbell-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.92,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32229510512674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.42,
+    "title": "12oz / Ground",
+    "variant_id": "32229510545442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.45,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32229510578210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.95,
+    "title": "5lb / Ground",
+    "variant_id": "32229510610978"
+   }
+  ],
+  "vendor": "Paradiso Crossfit"
+ },
+ {
+  "body_hash": "58466c70db515ed5",
+  "first_seen": "2026-10-26",
+  "handle": "seismic-dark-roast-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/SHOCKWAVE_RIP_KOOKS.png?v=1717212059",
+  "platform": "shopify",
+  "product_id": "4607474270242",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Wholesale",
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Mañana - Rip Kooks aka Shockwave",
+  "url": "https://tectoniccoffee.com/products/seismic-dark-roast-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.7,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32255760334882"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "ca9c13a4d0301d17",
+  "first_seen": "2026-10-26",
+  "handle": "gratitude-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/GreenOak_GratituteGuatemala_5lb_Web.png?v=1622567905",
+  "platform": "shopify",
+  "product_id": "4828866543650",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "GreenOak",
+   "wholesale-only"
+  ],
+  "title": "Green Oak Ranch - Gratitude Blend aka Drift",
+  "url": "https://tectoniccoffee.com/products/gratitude-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.85,
+    "title": "5lb / Whole Bean",
+    "variant_id": "32970963386402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.35,
+    "title": "5lb / Ground",
+    "variant_id": "32970963419170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.74,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32970963451938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.24,
+    "title": "12oz / Ground",
+    "variant_id": "32970963484706"
+   }
+  ],
+  "vendor": "The Green Oak Ranch"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-cauca-3",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/OriginalBarista-DECAF_COLOMBIA.jpg?v=1610130326",
+  "platform": "shopify",
+  "product_id": "4849356210210",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "OB",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Original Barista - DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/decaf-colombia-cauca-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.2,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33047775019042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.7,
+    "title": "12oz / Ground",
+    "variant_id": "33047775051810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33047775084578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "33047775117346"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923390279988"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.1,
+    "title": "1kg / Ground",
+    "variant_id": "48923390312756"
+   }
+  ],
+  "vendor": "Original Barista"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/OriginalBarista-12ozCoffeeBag-LIGHTROASTBABY.png?v=1664315923",
+  "platform": "shopify",
+  "product_id": "4849356767266",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "OB",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Original Barista - Light Roast Baby - Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33047778852898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12oz / Ground",
+    "variant_id": "33047778885666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33047778918434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.45,
+    "title": "5lb / Ground",
+    "variant_id": "33047778951202"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 40.45,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923390214452"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 41.55,
+    "title": "1kg / Ground",
+    "variant_id": "48923390247220"
+   }
+  ],
+  "vendor": "Original Barista"
+ },
+ {
+  "body_hash": "c04a8eb8f16c3fe1",
+  "first_seen": "2026-10-26",
+  "handle": "medium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/OriginalBarista-12ozCoffeeBag-BIGBOLD_MODERN.png?v=1664323254",
+  "platform": "shopify",
+  "product_id": "4849357553698",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "OB",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Original Barista - Big Bold Modern - Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/medium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33047790420002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.15,
+    "title": "12oz / Ground",
+    "variant_id": "33047790452770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33047790485538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb / Ground",
+    "variant_id": "33047790518306"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.15,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923389886772"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.6,
+    "title": "1kg / Ground",
+    "variant_id": "48923389919540"
+   }
+  ],
+  "vendor": "Original Barista"
+ },
+ {
+  "body_hash": "ca9c13a4d0301d17",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/OB_RDN_12OZ.png?v=1665856503",
+  "platform": "shopify",
+  "product_id": "4849360207906",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "OB",
+   "wholesale-only"
+  ],
+  "title": "Original Barista - Define Refine Nuanced - Drift Blend",
+  "url": "https://tectoniccoffee.com/products/light-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.06,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33047808475170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.56,
+    "title": "12oz / Ground",
+    "variant_id": "33047808507938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.61,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33047808540706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.11,
+    "title": "5lb / Ground",
+    "variant_id": "33047808573474"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 36.35,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923389821236"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 37.85,
+    "title": "1kg / Ground",
+    "variant_id": "48923389854004"
+   }
+  ],
+  "vendor": "Original Barista"
+ },
+ {
+  "body_hash": "8afc314729b01952",
+  "first_seen": "2026-10-26",
+  "handle": "morning-moment",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/MK_Shift_Web_12oz.png?v=1622578517",
+  "platform": "shopify",
+  "product_id": "4850507874338",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Mavro",
+   "wholesale-only"
+  ],
+  "title": "Mavro - Morning Moment aka Shift",
+  "url": "https://tectoniccoffee.com/products/morning-moment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33055762743330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.06,
+    "title": "12oz / Ground",
+    "variant_id": "33055762776098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33055762808866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb / Ground",
+    "variant_id": "33055762841634"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.15,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923401748788"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.65,
+    "title": "1kg / Ground",
+    "variant_id": "48923401781556"
+   }
+  ],
+  "vendor": "Mavro Coffee"
+ },
+ {
+  "body_hash": "8239caee04297d63",
+  "first_seen": "2026-10-26",
+  "handle": "morning-moment-shift-blend-cold-brew-5-gallons",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/coldbrewkeg.png?v=1760487165",
+  "platform": "shopify",
+  "product_id": "4850510135330",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Mavro",
+   "wholesale-only"
+  ],
+  "title": "Mavro - Morning Moment (Shift Blend) - Cold Brew - 5 Gallons",
+  "url": "https://tectoniccoffee.com/products/morning-moment-shift-blend-cold-brew-5-gallons",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.38,
+    "title": "Default Title",
+    "variant_id": "33055798231074"
+   }
+  ],
+  "vendor": "Mavro Coffee"
+ },
+ {
+  "body_hash": "044111a16c9a6a48",
+  "first_seen": "2026-10-26",
+  "handle": "manana-manana-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/SHIFT_MANANA.png?v=1717211974",
+  "platform": "shopify",
+  "product_id": "6543005188130",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Mañana - Mañana aka Shift",
+  "url": "https://tectoniccoffee.com/products/manana-manana-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.7,
+    "title": "5lb",
+    "variant_id": "39281800708130"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "64f2a4a60368b238",
+  "first_seen": "2026-10-26",
+  "handle": "manana-dawn-patrol",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/TECTONIC_HORIZON.png?v=1717211922",
+  "platform": "shopify",
+  "product_id": "6543009906722",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Mañana - Horizon aka Tectonic",
+  "url": "https://tectoniccoffee.com/products/manana-dawn-patrol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.05,
+    "title": "5lb",
+    "variant_id": "39281814634530"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "ca9c13a4d0301d17",
+  "first_seen": "2026-10-26",
+  "handle": "manana-sunset-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/DRIFT_90291.png?v=1717211807",
+  "platform": "shopify",
+  "product_id": "6543011741730",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Mañana - 90291 aka Drift",
+  "url": "https://tectoniccoffee.com/products/manana-sunset-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.67,
+    "title": "5lb",
+    "variant_id": "39281827545122"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "superdomestic-dark-roast-single-origin-siesmic",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/SD_SeismicBrazilDark_5lb.png?v=1617910763",
+  "platform": "shopify",
+  "product_id": "6546949439522",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin",
+   "superdomestic",
+   "wholesale-only"
+  ],
+  "title": "Superdomestic - Dark Roast Single Origin - Seismic",
+  "url": "https://tectoniccoffee.com/products/superdomestic-dark-roast-single-origin-siesmic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39295816368162"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "5f0bd15831998bf2",
+  "first_seen": "2026-10-26",
+  "handle": "shockwave-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Shockwave-10oz-IMG_6339.jpg?v=1791725681",
+  "platform": "shopify",
+  "product_id": "6581502574626",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Subscription",
+   "Subscription-styling"
+  ],
+  "title": "Shockwave Blend - Medium Roast",
+  "url": "https://tectoniccoffee.com/products/shockwave-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46442839310644"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.25,
+    "title": "5lb / Ground",
+    "variant_id": "46442839376180"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 46.5,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923388510516"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.0,
+    "title": "1kg / Ground",
+    "variant_id": "48923388543284"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322798317876"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground",
+    "variant_id": "49322798416180"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "d4140d0ac30f0cbc",
+  "first_seen": "2026-10-26",
+  "handle": "shift-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Shift-10oz-IMG_6320.jpg?v=1791725665",
+  "platform": "shopify",
+  "product_id": "6581530853410",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Browned Almond",
+   "Hazelnut",
+   "Milk Chocolate",
+   "Subscription",
+   "Subscription-styling"
+  ],
+  "title": "Shift Blend - Medium/ Light Roast",
+  "url": "https://tectoniccoffee.com/products/shift-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46442811982132"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Ground",
+    "variant_id": "46442812014900"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 46.5,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923387429172"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 48.0,
+    "title": "1kg / Ground",
+    "variant_id": "48923387461940"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322798154036"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Ground",
+    "variant_id": "49322798219572"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "044215753224e976",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Decaf-10oz-hero.jpg?v=1792071811",
+  "platform": "shopify",
+  "product_id": "6581535342626",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Caramel",
+   "Decaf",
+   "Milk Chocolate",
+   "Raisin",
+   "Subscription-options",
+   "Subscription-styling"
+  ],
+  "title": "DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48371286868276"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.5,
+    "title": "5lb / Ground",
+    "variant_id": "48371286901044"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923383202100"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.1,
+    "title": "1kg / Ground",
+    "variant_id": "48923383234868"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49332565016884"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10oz / Ground",
+    "variant_id": "49332565147956"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "5c1813a089be499e",
+  "first_seen": "2026-10-26",
+  "handle": "drift-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Drift-10oz-IMG_6315.jpg?v=1791725640",
+  "platform": "shopify",
+  "product_id": "6581537832994",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Caramel",
+   "Chocolate",
+   "Stone Fruit",
+   "Subscription",
+   "Subscription-styling"
+  ],
+  "title": "Drift Blend - Medium/ Light Roast",
+  "url": "https://tectoniccoffee.com/products/drift-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.65,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46442768171316"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.15,
+    "title": "5lb / Ground",
+    "variant_id": "46442768204084"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 49.52,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923387363636"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.62,
+    "title": "1kg / Ground",
+    "variant_id": "48923387396404"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.25,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322799661364"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.75,
+    "title": "10oz / Ground",
+    "variant_id": "49322799792436"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "098cdbd6f70b7161",
+  "first_seen": "2026-10-26",
+  "handle": "tectonic-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Tectonic-10oz-IMG_6338.jpg?v=1791725673",
+  "platform": "shopify",
+  "product_id": "6581549531170",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Caramel",
+   "Cherry",
+   "Chocolate",
+   "Subscription",
+   "Subscription-styling"
+  ],
+  "title": "Tectonic Blend - Medium/ Light Roast",
+  "url": "https://tectoniccoffee.com/products/tectonic-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46442938990900"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.75,
+    "title": "5lb / Ground",
+    "variant_id": "46442939023668"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.75,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923388641588"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.85,
+    "title": "1kg / Ground",
+    "variant_id": "48923388674356"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322799890740"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "10oz / Ground",
+    "variant_id": "49322799923508"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "original-barista-dark-roast-seismic",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/OriginalBarista-12ozCoffeeBag-BIGGERBOLDERCLASSIC.png?v=1664323575",
+  "platform": "shopify",
+  "product_id": "6865570594850",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "OB",
+   "Single Origin",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Original Barista - Bigger Bolder Classic - Seismic",
+  "url": "https://tectoniccoffee.com/products/original-barista-dark-roast-seismic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.48,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39928518475810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.98,
+    "title": "5lb / Ground",
+    "variant_id": "39928518508578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.17,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39928518541346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.67,
+    "title": "12oz / Ground",
+    "variant_id": "39928518574114"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.14,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923389690164"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 35.64,
+    "title": "1kg / Ground",
+    "variant_id": "48923389722932"
+   }
+  ],
+  "vendor": "Original Barista"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-bike-shed-los-angeles-blend-aka-tectonic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Bike_LA_12oz.png?v=1655834454",
+  "platform": "shopify",
+  "product_id": "7033167544354",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Bike Shed - Los Angeles Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-bike-shed-los-angeles-blend-aka-tectonic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.31,
+    "title": "5lb",
+    "variant_id": "40515784376354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.09,
+    "title": "12oz",
+    "variant_id": "40515786407970"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-bike-shed-malibu-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Bike_Malibu_5lb.png?v=1655834512",
+  "platform": "shopify",
+  "product_id": "7033169444898",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Bike Shed - Malibu Decaf - Dark Roast",
+  "url": "https://tectoniccoffee.com/products/cmd-bike-shed-malibu-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.6,
+    "title": "5lb",
+    "variant_id": "40515791159330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "12oz",
+    "variant_id": "40515797024802"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "70df2286b21e82b1",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-bike-shed-london-so-aka-seismic",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Bike_London_12oz.png?v=1655834408",
+  "platform": "shopify",
+  "product_id": "7033172885538",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Bike Shed - London SO - aka Seismic",
+  "url": "https://tectoniccoffee.com/products/cmd-bike-shed-london-so-aka-seismic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40515814850594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "40515814883362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40515814916130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "40515814948898"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "seismic-dark-roast-single-origin-brazil-2",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/products/Seismic_5lbbag_384503fa-735a-44e3-985d-011b8aa72104.png?v=1656651463",
+  "platform": "shopify",
+  "product_id": "7045831688226",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin",
+   "Tradecraft",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Seismic - Dark Roast Single Origin - Brazil",
+  "url": "https://tectoniccoffee.com/products/seismic-dark-roast-single-origin-brazil-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.76,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40556963004450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.26,
+    "title": "12oz / Ground",
+    "variant_id": "40556963037218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.93,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40556963069986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.43,
+    "title": "5lb / Ground",
+    "variant_id": "40556963102754"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 8.05,
+    "title": "6oz / Ground",
+    "variant_id": "40556963135522"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 7.55,
+    "title": "6oz / Whole Bean",
+    "variant_id": "40556963168290"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.14,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923381072180"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 35.64,
+    "title": "1kg / Ground",
+    "variant_id": "48923381104948"
+   }
+  ],
+  "vendor": "Tradecraft"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-haute-cafe-malibu-dark-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/HC_Decaf_5lb.png?v=1691102320",
+  "platform": "shopify",
+  "product_id": "8455951810868",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Haute Cafe - Malibu Dark Roast Decaf",
+  "url": "https://tectoniccoffee.com/products/cmd-haute-cafe-malibu-dark-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.6,
+    "title": "5lb",
+    "variant_id": "45906731204916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "12oz",
+    "variant_id": "45906961072436"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-haute-cafe-manhattan-dark-night",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/HC_ManhattanDarkNight_5lb.png?v=1691104323",
+  "platform": "shopify",
+  "product_id": "8456131838260",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Haute Cafe - Manhattan Dark Night",
+  "url": "https://tectoniccoffee.com/products/cmd-haute-cafe-manhattan-dark-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45907130351924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "45907130417460"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45907130450228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "45907130482996"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "a4e8026620e8ea92",
+  "first_seen": "2026-10-26",
+  "handle": "seismic-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Seismic-10oz-hero.jpg?v=1792071811",
+  "platform": "shopify",
+  "product_id": "8515588129076",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Dark Chocolate",
+   "Subscription",
+   "Subscription-styling"
+  ],
+  "title": "Seismic - Brazil Dark Roast",
+  "url": "https://tectoniccoffee.com/products/seismic-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48371286704436"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Ground",
+    "variant_id": "48371286737204"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.75,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923382776116"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 47.25,
+    "title": "1kg / Ground",
+    "variant_id": "48923382808884"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.75,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49332564885812"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.25,
+    "title": "10oz / Ground",
+    "variant_id": "49332564951348"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-haute-coffee-uptown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/HC_UptownBlend_5lb.png?v=1751319802",
+  "platform": "shopify",
+  "product_id": "8538217480500",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Haute Coffee - Uptown Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-haute-coffee-uptown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.31,
+    "title": "5lb",
+    "variant_id": "46418522439988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.09,
+    "title": "12oz",
+    "variant_id": "46418623922484"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "70df2286b21e82b1",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-causeway-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Espresso_Blends_CausewayCoffee_Labels_NEW_5lb-11.28.23.png?v=1701375832",
+  "platform": "shopify",
+  "product_id": "8726222045492",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Causeway Coffee - Espresso Blend aka Seismic",
+  "url": "https://tectoniccoffee.com/products/cmd-causeway-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46977362166068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "47030654861620"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47030654894388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "47030654927156"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "32a651a610f4b0ee",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-causeway-coffee-ground-control-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/GroundControl5lb-NEW-11.28.23-108PDF.png?v=1701375987",
+  "platform": "shopify",
+  "product_id": "8726290858292",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Causeway Coffee - Ground Control aka Shockwave",
+  "url": "https://tectoniccoffee.com/products/cmd-causeway-coffee-ground-control-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.29,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46977562870068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.79,
+    "title": "5lb / Ground",
+    "variant_id": "47030697099572"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.38,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47030697132340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.88,
+    "title": "12oz / Ground",
+    "variant_id": "47030697165108"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "ee53419385a6bb26",
+  "first_seen": "2026-10-26",
+  "handle": "cool-cat-the-original-badass",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/ORIGINAL_BADDASS_DRIFT.png?v=1700095728",
+  "platform": "shopify",
+  "product_id": "8799360254260",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CoolCat",
+   "wholesale-only"
+  ],
+  "title": "Cool Cat - The Original Badass - Aka Drift Blend",
+  "url": "https://tectoniccoffee.com/products/cool-cat-the-original-badass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb",
+    "variant_id": "47155425706292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.57,
+    "title": "12oz",
+    "variant_id": "48091662876980"
+   }
+  ],
+  "vendor": "Cool Cat Coffee"
+ },
+ {
+  "body_hash": "bdfb13efdba9002e",
+  "first_seen": "2026-10-26",
+  "handle": "cool-cat-fortune-teller",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Fortune_Teller_SHOCKWAVE.png?v=1700096160",
+  "platform": "shopify",
+  "product_id": "8799366512948",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CoolCat",
+   "wholesale-only"
+  ],
+  "title": "Cool Cat - Fortune Teller - Aka Shockwave",
+  "url": "https://tectoniccoffee.com/products/cool-cat-fortune-teller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.69,
+    "title": "5lb",
+    "variant_id": "47155444580660"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.16,
+    "title": "12oz",
+    "variant_id": "48091622801716"
+   }
+  ],
+  "vendor": "Cool Cat Coffee"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-meera-coffee-plants-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/MEERA_5lbs_2.png?v=1702685044",
+  "platform": "shopify",
+  "product_id": "8859195474228",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Meera Coffee & Plants - House Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-meera-coffee-plants-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.31,
+    "title": "5lb",
+    "variant_id": "47310598471988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.09,
+    "title": "12oz",
+    "variant_id": "47310598504756"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "fea4fafce0df3eb6",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-bladder",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Screenshot2024-11-11at6.31.30PM.png?v=1731969885",
+  "platform": "shopify",
+  "product_id": "8885347221812",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "WeHo",
+   "wholesale-only"
+  ],
+  "title": "Cold Brew Bladder - 2.5 Gallons",
+  "url": "https://tectoniccoffee.com/products/cold-brew-bladder",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 68.57,
+    "title": "Default Title",
+    "variant_id": "47385975750964"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "e51275f08cb7cb5a",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-meera-coffee-plants-house-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/MEERADecafLABELS5lb.png?v=1712247983",
+  "platform": "shopify",
+  "product_id": "9064411463988",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "Decaf",
+   "wholesale-only"
+  ],
+  "title": "CMD - Meera Coffee & Plants - House Blend Decaf",
+  "url": "https://tectoniccoffee.com/products/cmd-meera-coffee-plants-house-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 52.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47886060978484"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47886061011252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.0,
+    "title": "5lb / Ground",
+    "variant_id": "47886064812340"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.85,
+    "title": "12oz / Ground",
+    "variant_id": "47886064845108"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "1a32f7c942afacfe",
+  "first_seen": "2026-10-26",
+  "handle": "bagcraft®-java-pac®-coffee-dispenser-96-oz-1-unit",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/BAGP300924.jpg?v=1720553070",
+  "platform": "shopify",
+  "product_id": "9110393717044",
+  "product_type": "Equipment",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "WeHo",
+   "wholesale-only"
+  ],
+  "title": "Bagcraft® Java Pac® Coffee Dispenser - 96 oz. (1 Unit)",
+  "url": "https://tectoniccoffee.com/products/bagcraft®-java-pac®-coffee-dispenser-96-oz-1-unit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.0,
+    "title": "Default Title",
+    "variant_id": "48057373819188"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "31889b2617441e9c",
+  "first_seen": "2026-10-26",
+  "handle": "fast-times-ballroom-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/fasttimes-goldcountrylabel-2x4_SAMPLE.png?v=1727457219",
+  "platform": "shopify",
+  "product_id": "9141133312308",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "BuckMason",
+   "wholesale-only"
+  ],
+  "title": "Fast Times - Gold Country aka Shift Blend",
+  "url": "https://tectoniccoffee.com/products/fast-times-ballroom-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48203285856564"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.16,
+    "title": "12oz / Ground",
+    "variant_id": "48203285889332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48203285922100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb / Ground",
+    "variant_id": "48203285954868"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.15,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923394081076"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.65,
+    "title": "1kg / Ground",
+    "variant_id": "48923394113844"
+   }
+  ],
+  "vendor": "Buck Mason"
+ },
+ {
+  "body_hash": "19a461d456339755",
+  "first_seen": "2026-10-26",
+  "handle": "weho-acaia-lunar-black",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/acaia-lunar-scale-2_196410f6-719b-46b0-9457-9b52bfc811ec.jpg?v=1752263170",
+  "platform": "shopify",
+  "product_id": "9220782096692",
+  "product_type": "Equipment",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "WeHo",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Acaia Lunar - Black - WeHo",
+  "url": "https://tectoniccoffee.com/products/weho-acaia-lunar-black",
+  "variants": [
+   {
+    "available": false,
+    "grams": 771,
+    "price_usd": 187.5,
+    "title": "Default Title",
+    "variant_id": "48541356687668"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "11edfd3d74a4962f",
+  "first_seen": "2026-10-26",
+  "handle": "hilltop-ethiopia-brew-banko-chelchele",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Hilltop_Ethiopia_BankoChelchele_12oz_Labels.png?v=1749063965",
+  "platform": "shopify",
+  "product_id": "9239512187188",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin",
+   "hilltop",
+   "wholesale-only"
+  ],
+  "title": "Hilltop - Ethiopia Brew - Banko Chelchele",
+  "url": "https://tectoniccoffee.com/products/hilltop-ethiopia-brew-banko-chelchele",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.43,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48613750178100"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 61.93,
+    "title": "5lb / Ground",
+    "variant_id": "48613750210868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.89,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48613750243636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.39,
+    "title": "12oz / Ground",
+    "variant_id": "48613750276404"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 6.44,
+    "title": "6oz / Whole Bean",
+    "variant_id": "48613750309172"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 6.94,
+    "title": "6oz / Ground",
+    "variant_id": "48613750341940"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 28.35,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923390869812"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 29.85,
+    "title": "1kg / Ground",
+    "variant_id": "48923390902580"
+   }
+  ],
+  "vendor": "Hilltop Coffee + Kitchen"
+ },
+ {
+  "body_hash": "ee53419385a6bb26",
+  "first_seen": "2026-10-26",
+  "handle": "pams-coffy-drift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Pam_s_Coffy_Labels_Drift_12oz.png?v=1753814590",
+  "platform": "shopify",
+  "product_id": "9249826406708",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "PamsCoffy",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Pam's Coffy - Drift Blend",
+  "url": "https://tectoniccoffee.com/products/pams-coffy-drift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48685102170420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.2,
+    "title": "12oz / Ground",
+    "variant_id": "48685102203188"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48685102235956"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 77.5,
+    "title": "5lb / Ground",
+    "variant_id": "48685102268724"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 88.19,
+    "title": "Frack Pack / Whole Bean",
+    "variant_id": "48889699008820"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 35.25,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923401650484"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 36.35,
+    "title": "1kg / Ground",
+    "variant_id": "48923401683252"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "52b3c01a52831f8f",
+  "first_seen": "2026-10-26",
+  "handle": "pams-coffy-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Pam_s_Coffy_Labels_Decaf_12oz.png?v=1753814585",
+  "platform": "shopify",
+  "product_id": "9249828012340",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "PamsCoffy",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Pam's Coffy - DECAF",
+  "url": "https://tectoniccoffee.com/products/pams-coffy-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.3,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48685119439156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Ground",
+    "variant_id": "48685119471924"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48685119504692"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "5lb / Ground",
+    "variant_id": "48685119537460"
+   },
+   {
+    "available": true,
+    "grams": 1701,
+    "price_usd": 89.75,
+    "title": "Frack Pack / Whole Bean",
+    "variant_id": "48685121601844"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 37.75,
+    "title": "1kg / Whole Bean",
+    "variant_id": "48923401355572"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 38.85,
+    "title": "1kg / Ground",
+    "variant_id": "48923401388340"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "920d93236ee6d8c2",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-haute-coffee-laneway-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/HC_Laneway_Blend_Labels_5lb.png?v=1753289553",
+  "platform": "shopify",
+  "product_id": "9251649257780",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Haute Coffee - Laneway Blend aka Shift Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-haute-coffee-laneway-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.28,
+    "title": "5lb",
+    "variant_id": "48726638100788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.38,
+    "title": "12oz",
+    "variant_id": "48726638133556"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "3e66c6189ff8e1e2",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-drip-dolce-milano-blend-aka-shockwave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/DripDolce-CoffeeLabel.png?v=1760481531",
+  "platform": "shopify",
+  "product_id": "9273487753524",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "CMD - Drip & Dolce - Milano Blend aka Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-drip-dolce-milano-blend-aka-shockwave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.29,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48895507661108"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.79,
+    "title": "5lb / Ground",
+    "variant_id": "48895519457588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.38,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48895519490356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.88,
+    "title": "12oz / Ground",
+    "variant_id": "48895519523124"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "5ecfc38e41ec078d",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-chaiwale-co-milano-blend-aka-shockwave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/ChaiwaleandCo_5lb.png?v=1762999434",
+  "platform": "shopify",
+  "product_id": "9286609862964",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Chaiwale & Co. - Milano Blend aka Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-chaiwale-co-milano-blend-aka-shockwave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.29,
+    "title": "5lb",
+    "variant_id": "48944968073524"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.38,
+    "title": "12oz",
+    "variant_id": "48944969777460"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-labora-0-aka-seismic",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/LABORA_CAFE_5lb.png?v=1771445473",
+  "platform": "shopify",
+  "product_id": "9316278141236",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "Wholesale"
+  ],
+  "title": "CMD - LABORA - LABORA 0 aka Seismic",
+  "url": "https://tectoniccoffee.com/products/cmd-labora-0-aka-seismic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49040844292404"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "49040844325172"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49050893648180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "49050893680948"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "5ecfc38e41ec078d",
+  "first_seen": "2026-10-26",
+  "handle": "little-king-coffee-little-king-espresso-blend-shockwave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Screenshot_2026-03-06_at_11.46.14_AM.png?v=1772826415",
+  "platform": "shopify",
+  "product_id": "9320083718452",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Little King Coffee",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Little King Coffee - Little King Espresso Blend - Shockwave Blend",
+  "url": "https://tectoniccoffee.com/products/little-king-coffee-little-king-espresso-blend-shockwave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49055346721076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.16,
+    "title": "12oz / Ground",
+    "variant_id": "49055346753844"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49055346852148"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb / Ground",
+    "variant_id": "49055346884916"
+   }
+  ],
+  "vendor": "Little King Coffee"
+ },
+ {
+  "body_hash": "64f2a4a60368b238",
+  "first_seen": "2026-10-26",
+  "handle": "little-king-coffee-little-king-home-drip-tectonic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/LITTLE_KING_X_TECTONIC_HOME_DRIP_5lb.jpg?v=1772658094",
+  "platform": "shopify",
+  "product_id": "9320392458548",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Little King Coffee",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Little King Coffee - Little King Home Drip - Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/little-king-coffee-little-king-home-drip-tectonic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.41,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49056418070836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.91,
+    "title": "12oz / Ground",
+    "variant_id": "49056418103604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.63,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49056418201908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.13,
+    "title": "5lb / Ground",
+    "variant_id": "49056418234676"
+   }
+  ],
+  "vendor": "Little King Coffee"
+ },
+ {
+  "body_hash": "920d93236ee6d8c2",
+  "first_seen": "2026-10-26",
+  "handle": "drift-hotel-shift-blend-aka-shift-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/IMG_8860_9ab159ed-9d16-451a-b6a5-fc437d89aa8f.jpg?v=1776518719",
+  "platform": "shopify",
+  "product_id": "9321310388532",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends",
+   "Drift Hotel",
+   "wholesale-only"
+  ],
+  "title": "Drift Hotel - Dawn Blend aka Shift Blend",
+  "url": "https://tectoniccoffee.com/products/drift-hotel-shift-blend-aka-shift-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49060705567028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "5lb / Ground",
+    "variant_id": "49060705599796"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.66,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49060705698100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.16,
+    "title": "12oz / Ground",
+    "variant_id": "49060705730868"
+   }
+  ],
+  "vendor": "Drift Hotel"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "drift-hotel-decaf-colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Kraft_12oz_bag_-_Image_-_310-bio400_60fd3676-1758-4b0e-9e99-cc6d0985d83f.jpg?v=1774048141",
+  "platform": "shopify",
+  "product_id": "9322881777972",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Decaf",
+   "Drift Hotel",
+   "Wholesale",
+   "wholesale-only"
+  ],
+  "title": "Drift Hotel - DECAF Colombia Cauca",
+  "url": "https://tectoniccoffee.com/products/drift-hotel-decaf-colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.3,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49067081924916"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Ground",
+    "variant_id": "49067081957684"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 38.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49067081990452"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 39.1,
+    "title": "1kg / Ground",
+    "variant_id": "49067082023220"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49067082055988"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.5,
+    "title": "5lb / Ground",
+    "variant_id": "49067082088756"
+   }
+  ],
+  "vendor": "Drift Hotel"
+ },
+ {
+  "body_hash": "1d00cedc0d7807f4",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-chaiwale-co-malibu-dark-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/ChaiwaleandCo_12ozDecaf.png?v=1777667756",
+  "platform": "shopify",
+  "product_id": "9331492454708",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Chaiwale Co - Malibu Dark Roast Decaf",
+  "url": "https://tectoniccoffee.com/products/cmd-chaiwale-co-malibu-dark-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.6,
+    "title": "5lb",
+    "variant_id": "49120159170868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.35,
+    "title": "12oz",
+    "variant_id": "49120197214516"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "juce-juce-espresso-shockwave-blend-distributor",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/jucestandardespresso_shockwave7oz_1.jpg?v=1780700599",
+  "platform": "shopify",
+  "product_id": "9337611616564",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "JUCE - JÜCE espresso - Shockwave Blend - Distributor",
+  "url": "https://tectoniccoffee.com/products/juce-juce-espresso-shockwave-blend-distributor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 5.58,
+    "title": "7oz / Whole Bean",
+    "variant_id": "49152159416628"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 6.08,
+    "title": "7oz / Ground",
+    "variant_id": "49152159449396"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 23.18,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49152159482164"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 24.28,
+    "title": "1kg / Ground",
+    "variant_id": "49152159514932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 49.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49152159547700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.5,
+    "title": "5lb / Ground",
+    "variant_id": "49152159580468"
+   }
+  ],
+  "vendor": "JUCE"
+ },
+ {
+  "body_hash": "92f0b2e691d21be8",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-chaiwale-co-uptown-blend-aka-tectonic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Uptown-5lb-ChaiwaleandCo.png?v=1781125195",
+  "platform": "shopify",
+  "product_id": "9338790445364",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "wholesale-only"
+  ],
+  "title": "CMD - Chaiwale & Co. - Uptown Blend aka Tectonic Blend",
+  "url": "https://tectoniccoffee.com/products/cmd-chaiwale-co-uptown-blend-aka-tectonic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 58.31,
+    "title": "5lb",
+    "variant_id": "49155694723380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.07,
+    "title": "12oz",
+    "variant_id": "49155700916532"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ },
+ {
+  "body_hash": "16fb4dbb89241ead",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-planada-washed-juce-distributor",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/IMG_3162-rotated.jpg?v=1781286099",
+  "platform": "shopify",
+  "product_id": "9339220525364",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Colombia - La Planada - Washed - JUCE - Distributor",
+  "url": "https://tectoniccoffee.com/products/colombia-la-planada-washed-juce-distributor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 7.69,
+    "title": "7oz / Whole Bean",
+    "variant_id": "49157190811956"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 9.94,
+    "title": "7oz / Ground",
+    "variant_id": "49157190844724"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 33.83,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49157190877492"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.93,
+    "title": "1kg / Ground",
+    "variant_id": "49157190910260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.89,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49157190943028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.39,
+    "title": "5lb / Ground",
+    "variant_id": "49157190975796"
+   }
+  ],
+  "vendor": "JUCE"
+ },
+ {
+  "body_hash": "b5ecac2699aaf479",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-tanairi-mora-co-ferment-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/ChatGPT_Image_Jun_29_2026_10_33_09_AM.png?v=1782754436",
+  "platform": "shopify",
+  "product_id": "9340968796468",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Geisha",
+   "Honduras",
+   "Single Origin",
+   "co-ferment"
+  ],
+  "title": "Honduras - Finca La Tanairi - Mora Co-Ferment - Geisha",
+  "url": "https://tectoniccoffee.com/products/honduras-finca-la-tanairi-mora-co-ferment-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 55.0,
+    "title": "6oz / Whole Bean",
+    "variant_id": "49173183627572"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "0d4c577421d2d9f9",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-tanairi-washed-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/ChatGPT_Image_Jun_29_2026_01_39_10_PM.png?v=1782765571",
+  "platform": "shopify",
+  "product_id": "9340968894772",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Honduras - Finca La Tanairi - Washed - Geisha",
+  "url": "https://tectoniccoffee.com/products/honduras-finca-la-tanairi-washed-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 45.0,
+    "title": "6oz / Whole Bean",
+    "variant_id": "49173183758644"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "juce-shockwave-blend-1kg",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9349122523444",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "JUCE"
+  ],
+  "title": "JUCE - Shockwave Blend 1kg",
+  "url": "https://tectoniccoffee.com/products/juce-shockwave-blend-1kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1002,
+    "price_usd": 30.22,
+    "title": "Default Title",
+    "variant_id": "49211752546612"
+   }
+  ],
+  "vendor": "Powered by Tectonic"
+ },
+ {
+  "body_hash": "a645e8d6b087ee42",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mawiko-farm-2026-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Kenya-10oz-hero.jpg?v=1792071811",
+  "platform": "shopify",
+  "product_id": "9358806778164",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin",
+   "wg_wholesale"
+  ],
+  "title": "Kenya - Mawiko Farm - 2026 - Light Roast",
+  "url": "https://tectoniccoffee.com/products/kenya-mawiko-farm-2026-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 97.95,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49244974580020"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 99.05,
+    "title": "1kg / Ground",
+    "variant_id": "49244974612788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 136.35,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49244974645556"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.85,
+    "title": "5lb / Ground",
+    "variant_id": "49244974678324"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 31.25,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322830070068"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 31.75,
+    "title": "10oz / Ground",
+    "variant_id": "49322830102836"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "a645e8d6b087ee42",
+  "first_seen": "2026-10-26",
+  "handle": "super-domestic-kenya-mawiko-farm-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/SD_Kenya_Labels__1.png?v=1787685231",
+  "platform": "shopify",
+  "product_id": "9358862811444",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin",
+   "Wholesale"
+  ],
+  "title": "Super Domestic - Kenya - Mawiko Farm - 2026",
+  "url": "https://tectoniccoffee.com/products/super-domestic-kenya-mawiko-farm-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 13.33,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49245324640564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 13.53,
+    "title": "5lb / Ground",
+    "variant_id": "49245324673332"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 39.18,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49245324706100"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 39.62,
+    "title": "1kg / Ground",
+    "variant_id": "49245324738868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.54,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49245324771636"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.54,
+    "title": "12oz / Ground",
+    "variant_id": "49245324804404"
+   }
+  ],
+  "vendor": "Superdomestic"
+ },
+ {
+  "body_hash": "a645e8d6b087ee42",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mawiko-farm-washed-juce-distributor",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/juce-kenya-mawiko-1_69d73acd-5e7d-4cd6-bb68-8315222c40c6.jpg?v=1787766467",
+  "platform": "shopify",
+  "product_id": "9363747864884",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Kenya - Mawiko Farm - Washed - JUCE - Distributor",
+  "url": "https://tectoniccoffee.com/products/kenya-mawiko-farm-washed-juce-distributor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 7.24,
+    "title": "7oz / Whole Bean",
+    "variant_id": "49268722237748"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 7.34,
+    "title": "7oz / Ground",
+    "variant_id": "49268722270516"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.28,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49268722303284"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 34.67,
+    "title": "1kg / Ground",
+    "variant_id": "49268722336052"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.72,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49268722368820"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.6,
+    "title": "5lb / Ground",
+    "variant_id": "49268722401588"
+   }
+  ],
+  "vendor": "JUCE"
+ },
+ {
+  "body_hash": "f916949c08ec49cc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-las-mercedes-edgar-heladio-ossa-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/Colombia-10oz-hero.jpg?v=1792071811",
+  "platform": "shopify",
+  "product_id": "9367716462900",
+  "product_type": "Coffee",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "Single Origin",
+   "wg_wholesale"
+  ],
+  "title": "Colombia - Finca Las Mercedes - Edgar Heladio Ossa - Washed",
+  "url": "https://tectoniccoffee.com/products/colombia-finca-las-mercedes-edgar-heladio-ossa-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 105.82,
+    "title": "1kg / Whole Bean",
+    "variant_id": "49292727845172"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 106.92,
+    "title": "1kg / Ground",
+    "variant_id": "49292727877940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.3,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49292727910708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.8,
+    "title": "5lb / Ground",
+    "variant_id": "49292727943476"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 33.75,
+    "title": "10oz / Whole Bean",
+    "variant_id": "49322831872308"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 34.25,
+    "title": "10oz / Ground",
+    "variant_id": "49322832167220"
+   }
+  ],
+  "vendor": "Tectonic Coffee Co."
+ },
+ {
+  "body_hash": "97b3939d66c8e8da",
+  "first_seen": "2026-10-26",
+  "handle": "cmd-tillies-coffee-manhattan-dark-knight",
+  "image": "https://cdn.shopify.com/s/files/1/0138/7528/1977/files/tillies-manhattan-dark-knight-5lb.png?v=1790470313",
+  "platform": "shopify",
+  "product_id": "9369163956532",
+  "product_type": "Private Label",
+  "roaster_slug": "tectoniccoffee",
+  "tags": [
+   "CMD",
+   "Wholesale"
+  ],
+  "title": "CMD - Tillie's Coffee - Manhattan Dark Knight",
+  "url": "https://tectoniccoffee.com/products/cmd-tillies-coffee-manhattan-dark-knight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 42.07,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49303351099700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.57,
+    "title": "5lb / Ground",
+    "variant_id": "49303351132468"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.56,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49303351165236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.06,
+    "title": "12oz / Ground",
+    "variant_id": "49303351198004"
+   }
+  ],
+  "vendor": "Coffee Machine Depot"
+ }
+]

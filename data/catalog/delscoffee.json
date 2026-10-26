@@ -1,0 +1,579 @@
+[
+ {
+  "body_hash": "6f27e3ad289096db",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_Ethiopia_smallO_ce62704e-c505-4540-a931-d55debb17f8f.jpg?v=1774039888",
+  "platform": "shopify",
+  "product_id": "6816077086925",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Light Roast",
+   "Single Origin Coffees"
+  ],
+  "title": "Organic Ethiopia Sidama Ayla Bombe Natural",
+  "url": "https://www.delscoffee.com/products/ethiopia-sidama-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "40362652172493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground",
+    "variant_id": "40362652238029"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "a10a30355e499c11",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_Guatemala_smallFTO.jpg?v=1661778906",
+  "platform": "shopify",
+  "product_id": "6816105169101",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Central America",
+   "Coffee",
+   "Medium Roast",
+   "Single Origin Coffees"
+  ],
+  "title": "Organic Guatemala Huehuetenango",
+  "url": "https://www.delscoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "40362705748173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "40362705846477"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "fe7e942021eeac4b",
+  "first_seen": "2026-10-26",
+  "handle": "disco-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_DiscoHouse_smallFTO.jpg?v=1661634301",
+  "platform": "shopify",
+  "product_id": "6840949866701",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Fair Trade Organic",
+   "Light Roast",
+   "Medium Roast",
+   "organic"
+  ],
+  "title": "Disco House Blend - Fair Trade Organic",
+  "url": "https://www.delscoffee.com/products/disco-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "40441741705421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "40441741738189"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "b5a4ce065657e38d",
+  "first_seen": "2026-10-26",
+  "handle": "rockin-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_RockinMorning_smallFTO.jpg?v=1661634469",
+  "platform": "shopify",
+  "product_id": "6841021464781",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Fair Trade Organic",
+   "Medium Roast",
+   "organic"
+  ],
+  "title": "Rockin' Morning Blend  - Fair Trade Organic",
+  "url": "https://www.delscoffee.com/products/rockin-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean",
+    "variant_id": "40441824608461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Ground",
+    "variant_id": "40441824641229"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "b08ade747e669bd5",
+  "first_seen": "2026-10-26",
+  "handle": "soul-funk-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_SoulFunkEspresso_smallFTO.jpg?v=1661634714",
+  "platform": "shopify",
+  "product_id": "6841070321869",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Fair Trade Organic"
+  ],
+  "title": "Soul Funk Espresso Blend- Fair Trade Organic",
+  "url": "https://www.delscoffee.com/products/soul-funk-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "40441882280141"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "40441882312909"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "7c73656a1e54fc11",
+  "first_seen": "2026-10-26",
+  "handle": "dels-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Shopify_home_tile_1_55a8652b-4e2b-4bdc-a5cf-27ad0d7dc8f8.jpg?v=1644511208",
+  "platform": "shopify",
+  "product_id": "6864012345549",
+  "product_type": "",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Africa",
+   "Central America",
+   "Coffee",
+   "Dark Roast",
+   "Indonesia",
+   "Light Roast",
+   "Medium Roast",
+   "Single Origin Coffees",
+   "South America"
+  ],
+  "title": "Del's Choice",
+  "url": "https://www.delscoffee.com/products/dels-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Dark",
+    "variant_id": "40508780019917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Dark",
+    "variant_id": "40508780052685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Medium",
+    "variant_id": "40660644364493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Light",
+    "variant_id": "40660644397261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Medium",
+    "variant_id": "40660644430029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Light",
+    "variant_id": "40660644462797"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Any Roast Level",
+    "variant_id": "47418004111565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Any Roast Level",
+    "variant_id": "47418004144333"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "8f4841b716771348",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-valle-del-cauca-sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_ColombiaDecaf_small_5de07e21-0061-416a-a4a6-8dd9dd7f2c27.jpg?v=1644507319",
+  "platform": "shopify",
+  "product_id": "6917179375821",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Single Origin Coffees",
+   "South America"
+  ],
+  "title": "Colombia Valle del Cauca Sugarcane DECAF",
+  "url": "https://www.delscoffee.com/products/colombia-valle-del-cauca-sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "40660631814349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "40660631847117"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "e82ef2f414b2de20",
+  "first_seen": "2026-10-26",
+  "handle": "porchfest-blend-to-benefit-shc",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_Porchfest_small_6fe4d83a-63fe-4148-b716-8594803cefd5.jpg?v=1706224296",
+  "platform": "shopify",
+  "product_id": "6978560590029",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Dark Roast",
+   "Fair Trade Organic",
+   "Medium Roast"
+  ],
+  "title": "Porchfest Blend to benefit SHC",
+  "url": "https://www.delscoffee.com/products/porchfest-blend-to-benefit-shc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "40851454263501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground",
+    "variant_id": "40851454296269"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "75d898dd32b8930b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-comsa-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_Honduras_smallFTO.jpg?v=1661631066",
+  "platform": "shopify",
+  "product_id": "7042731147469",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Central America",
+   "Coffee",
+   "Light Roast",
+   "Medium Roast",
+   "Single Origin Coffees"
+  ],
+  "title": "Organic Honduras COMSA Natural",
+  "url": "https://www.delscoffee.com/products/honduras-comsa-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41058975809741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41058975842509"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "dde3070c8450dbaa",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-del-rio-fair-trade-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/products/Product_Colombia_smallFTO.jpg?v=1661634086",
+  "platform": "shopify",
+  "product_id": "7042744844493",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin Coffees",
+   "South America"
+  ],
+  "title": "Organic Colombia Tolima Del Rio",
+  "url": "https://www.delscoffee.com/products/colombia-tolima-del-rio-fair-trade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41058980626637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41058980659405"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "15f480d1dc9425ec",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-takengon-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_Sumatra_small_1.jpg?v=1755883925",
+  "platform": "shopify",
+  "product_id": "7042749530317",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Indonesia",
+   "Single Origin Coffees"
+  ],
+  "title": "Organic Sumatra Takengon",
+  "url": "https://www.delscoffee.com/products/sumatra-takengon-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41058990948557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41058990981325"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "1b77b002533386cd",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-falcon-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_FalconBlend_small_78bd4078-95b1-4fb1-b01d-2d4d079ff087.jpg?v=1706224935",
+  "platform": "shopify",
+  "product_id": "7122569724109",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Fair Trade Falcon Blend",
+  "url": "https://www.delscoffee.com/products/fair-trade-falcon-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean",
+    "variant_id": "41353415819469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Ground",
+    "variant_id": "41353415852237"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "018e5fe9385e3d1d",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-sipi-falls-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_Uganda_smallFTO_5a444e53-c2db-4d65-8d00-bcea9ca5629d.jpg?v=1694878902",
+  "platform": "shopify",
+  "product_id": "7278972010701",
+  "product_type": "",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Africa",
+   "Coffee",
+   "Dark Roast",
+   "Single Origin Coffees",
+   "medium roast"
+  ],
+  "title": "Organic Uganda Sipi Falls",
+  "url": "https://www.delscoffee.com/products/uganda-sipi-falls-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41881028722893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41881028755661"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "3999a524d4586d9e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-swiss-water-decaf-fair-trade",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_PeruDecaf_small_4f9fd577-4fe5-4412-a42a-6ae7fc8fd504.jpg?v=1770501866",
+  "platform": "shopify",
+  "product_id": "7286306242765",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "organic"
+  ],
+  "title": "Organic Peru Swiss Water DECAF",
+  "url": "https://www.delscoffee.com/products/organic-peru-swiss-water-decaf-fair-trade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "41905131094221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "41905131126989"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ },
+ {
+  "body_hash": "18d8c72a09e1dc44",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0604/1619/6813/files/Product_Mexico_small_ccf84507-1719-4fab-b853-894aca65c3eb.jpg?v=1757348862",
+  "platform": "shopify",
+  "product_id": "9053176627405",
+  "product_type": "Coffee",
+  "roaster_slug": "delscoffee",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "Single Origin Coffees",
+   "organic"
+  ],
+  "title": "Organic Mexico Chiapas",
+  "url": "https://www.delscoffee.com/products/organic-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "48412077850829"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "48412077883597"
+   }
+  ],
+  "vendor": "Del's Coffee Roasters"
+ }
+]

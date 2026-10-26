@@ -1,0 +1,117 @@
+[
+ {
+  "body_hash": "34d89011ffbba34d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://images.squarespace-cdn.com/content/v1/654ac9219c678914494e58fb/1701718325179-NSZBAIWWO75H8CQ6EGKB/Decaf.jpg",
+  "platform": "squarespace",
+  "product_id": "656a86e1bd20522e5fc43617",
+  "product_type": "",
+  "roaster_slug": "branchstreetcoffee",
+  "tags": [],
+  "title": "Decaf — Colombian",
+  "url": "https://www.branchstreetcoffee.com/shop/p/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "",
+    "variant_id": "a5c09594-b55d-4a40-bda8-d1739178e1d8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c422d39337b77ef",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-las-marias",
+  "image": "https://images.squarespace-cdn.com/content/v1/654ac9219c678914494e58fb/1701717807435-8IH0I57V899QLH3WD2BJ/Guatemala+Las+Marias.jpg",
+  "platform": "squarespace",
+  "product_id": "658e46941405cf4088985a32",
+  "product_type": "",
+  "roaster_slug": "branchstreetcoffee",
+  "tags": [],
+  "title": "Guatemala Las Marias",
+  "url": "https://www.branchstreetcoffee.com/shop/p/guatemala-las-marias",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.25,
+    "title": "",
+    "variant_id": "ec974dff-8e1d-483c-bd85-3df24b3c4c9b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c2b1c4674764352",
+  "first_seen": "2026-10-26",
+  "handle": "6olvanhrf6y345e0xx8w1boogllx15",
+  "image": "https://images.squarespace-cdn.com/content/v1/654ac9219c678914494e58fb/b6f65ad9-ca74-459f-b3d5-f25cff93d087/PNG.png",
+  "platform": "squarespace",
+  "product_id": "67e5fb3cb9673100d70a7189",
+  "product_type": "",
+  "roaster_slug": "branchstreetcoffee",
+  "tags": [],
+  "title": "Papua New Guinea Sigri Peaberry",
+  "url": "https://www.branchstreetcoffee.com/shop/p/6olvanhrf6y345e0xx8w1boogllx15",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.75,
+    "title": "",
+    "variant_id": "d5b5d4a1-f5af-4162-89a6-2c678a742251"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c7e50356eae3e32d",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintanami",
+  "image": "https://images.squarespace-cdn.com/content/v1/654ac9219c678914494e58fb/c31c5198-a584-4b9b-9987-2ccd080000d9/Bali+2026+Farmer+Photo.jpeg",
+  "platform": "squarespace",
+  "product_id": "6963e6da6716e902a59ddec4",
+  "product_type": "",
+  "roaster_slug": "branchstreetcoffee",
+  "tags": [],
+  "title": "Bali Kintamani",
+  "url": "https://www.branchstreetcoffee.com/shop/p/bali-kintanami",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "",
+    "variant_id": "e8ab3a55-f6dd-408e-83b0-6bfe7a12237d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "006810b57d105ee6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-andres-cardona",
+  "image": "https://images.squarespace-cdn.com/content/v1/654ac9219c678914494e58fb/5e388209-c41f-482f-af35-df4c4dc3c12a/Andres-Cardona_2250.JPG",
+  "platform": "squarespace",
+  "product_id": "6ab532d8d5e67563c3b663bf",
+  "product_type": "",
+  "roaster_slug": "branchstreetcoffee",
+  "tags": [],
+  "title": "Colombia Andres Cardona",
+  "url": "https://www.branchstreetcoffee.com/shop/p/colombia-andres-cardona",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "",
+    "variant_id": "0f43d2f5-de78-4dc5-adba-36eb0ba32651"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1857 @@
+[
+ {
+  "body_hash": "71d0301a4142cfe5",
+  "first_seen": "2026-10-26",
+  "handle": "foul-weather-bluff",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/FWB-16W.png?v=1672642769",
+  "platform": "shopify",
+  "product_id": "6259938459833",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Foulweather Bluff",
+  "url": "https://www.pugetsoundcoffee.com/products/foul-weather-bluff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "38813952147641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "38813952180409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "38813952213177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "38813952245945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "38813952278713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "38813952311481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "38813952344249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "38813952377017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "38813952409785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "38813952442553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "38813952475321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38813952508089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44850013110457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "44850013143225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "44850013175993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Course",
+    "variant_id": "44850013208761"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "b38cf278b4005073",
+  "first_seen": "2026-10-26",
+  "handle": "treasure-island",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/ti-16w.png?v=1672643056",
+  "platform": "shopify",
+  "product_id": "6562511421625",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Treasure Island",
+  "url": "https://www.pugetsoundcoffee.com/products/treasure-island",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "39371978670265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "39371978703033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "39371978735801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39371978768569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "39371978801337"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "39371978866873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "39371978899641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39371978932409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "39371978965177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "39371978997945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "39371979030713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39371979063481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852094763193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852094795961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852094828729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Course",
+    "variant_id": "44852094861497"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "d660d5eb38a2f15f",
+  "first_seen": "2026-10-26",
+  "handle": "hood-canal",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/HC-16W.png?v=1672642842",
+  "platform": "shopify",
+  "product_id": "6562512076985",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Hood Canal",
+  "url": "https://www.pugetsoundcoffee.com/products/hood-canal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "39371988140217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "39371988238521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "39371988402361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39371988533433"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "39371988697273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "39371988795577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "39371988926649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39371989057721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "39371989221561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "39371989385401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "39371989516473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39371989647545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852095189177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852095221945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852095254713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Course",
+    "variant_id": "44852095287481"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "d4ad03895c3bde13",
+  "first_seen": "2026-10-26",
+  "handle": "cape-flattery",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/CF-16W.png?v=1672641917",
+  "platform": "shopify",
+  "product_id": "6562512732345",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Cape Flattery - French Roast",
+  "url": "https://www.pugetsoundcoffee.com/products/cape-flattery",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372001444025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372001542329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Course",
+    "variant_id": "39372001640633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372001738937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372001804473"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372001870009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Course",
+    "variant_id": "39372001968313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372002066617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372002132153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372002197689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Course",
+    "variant_id": "39372002295993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372002361529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852096860345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852096893113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852096925881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Course",
+    "variant_id": "44852096958649"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "1a4c8cadc632076a",
+  "first_seen": "2026-10-26",
+  "handle": "point-defiance",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/PD-16W.png?v=1672642950",
+  "platform": "shopify",
+  "product_id": "6562513060025",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Point Defiance",
+  "url": "https://www.pugetsoundcoffee.com/products/point-defiance",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372008390841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372008423609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Course",
+    "variant_id": "39372008456377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372008489145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372008521913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372008554681"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Course",
+    "variant_id": "39372008587449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372008620217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372008652985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372008685753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Course",
+    "variant_id": "39372008718521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372008751289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44850024022201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "44850024054969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "44850024087737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Course",
+    "variant_id": "44850024120505"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "d085e2fdd9914578",
+  "first_seen": "2026-10-26",
+  "handle": "deception-pass",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/DP-16W.png?v=1672642689",
+  "platform": "shopify",
+  "product_id": "6562513453241",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Deception Pass",
+  "url": "https://www.pugetsoundcoffee.com/products/deception-pass",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372009308345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372009373881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "39372009406649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372009439417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372009472185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372009504953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "39372009537721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372009570489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372009603257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372009636025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "39372009668793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372009701561"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852091912377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852091945145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852091977913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Course",
+    "variant_id": "44852092010681"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "15a0f4eda662d2c3",
+  "first_seen": "2026-10-26",
+  "handle": "point-no-point-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/PNP-16W.png?v=1672642984",
+  "platform": "shopify",
+  "product_id": "6562514206905",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Point No Point Decaf",
+  "url": "https://www.pugetsoundcoffee.com/products/point-no-point-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372020121785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372020220089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Course",
+    "variant_id": "39372020285625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372020383929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372020449465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372020547769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Course",
+    "variant_id": "39372020613305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372020711609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372020809913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372020908217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Course",
+    "variant_id": "39372021006521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372021104825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852098891961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852098924729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852098957497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Course",
+    "variant_id": "44852098990265"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "5014c1f853a780d4",
+  "first_seen": "2026-10-26",
+  "handle": "point-no-point-decaf-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/PNPD-16W.png?v=1672643021",
+  "platform": "shopify",
+  "product_id": "6562514895033",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Point No Point Decaf - Dark",
+  "url": "https://www.pugetsoundcoffee.com/products/point-no-point-decaf-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372032573625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372032606393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Course",
+    "variant_id": "39372032639161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372032671929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372032704697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372032737465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "39372032770233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372032803001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372032835769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372032868537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Course",
+    "variant_id": "39372032901305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372032934073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44852098203833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "44852098236601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "44852098269369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Course",
+    "variant_id": "44852098302137"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "3f41ddeb51f92cff",
+  "first_seen": "2026-10-26",
+  "handle": "white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/W-16G.png?v=1615145591",
+  "platform": "shopify",
+  "product_id": "6562515124409",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "White Coffee",
+  "url": "https://www.pugetsoundcoffee.com/products/white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz / Drip",
+    "variant_id": "39372032999609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372033032377"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372033163449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372033294521"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz / Fine",
+    "variant_id": "42910014111929"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz / Coarse",
+    "variant_id": "42910014144697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "42910014177465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Coarse",
+    "variant_id": "42910014210233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Fine",
+    "variant_id": "42910014243001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Coarse",
+    "variant_id": "42910014275769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb / Fine",
+    "variant_id": "42910014308537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42910014341305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "42985089630393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Drip",
+    "variant_id": "42985089663161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "42985089695929"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "3a5d0731b4904730",
+  "first_seen": "2026-10-26",
+  "handle": "orca-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/orca.png?v=1615145439",
+  "platform": "shopify",
+  "product_id": "6562515615929",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Orca Blend",
+  "url": "https://www.pugetsoundcoffee.com/products/orca-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372043255993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372043387065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372043518137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "42910016340153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Coarse",
+    "variant_id": "42910016372921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Fine",
+    "variant_id": "42910016405689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb / Coarse",
+    "variant_id": "42910016438457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Fine",
+    "variant_id": "42910016471225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Coarse",
+    "variant_id": "42910016503993"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "ad0179f268a10783",
+  "first_seen": "2026-10-26",
+  "handle": "liberty-bay",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/LB-16W.png?v=1672642879",
+  "platform": "shopify",
+  "product_id": "6562515910841",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Liberty Bay",
+  "url": "https://www.pugetsoundcoffee.com/products/liberty-bay",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "39372048400569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "39372048466105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "39372048531641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "39372048629945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "39372048695481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "39372048728249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "39372048761017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39372048793785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "39372048826553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "39372048859321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "39372048892089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39372048924857"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "24a9fea5a2b24646",
+  "first_seen": "2026-10-26",
+  "handle": "port-orchard-bay",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/POB-16W.png?v=1672643809",
+  "platform": "shopify",
+  "product_id": "7558154223801",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Port Orchard Bay",
+  "url": "https://www.pugetsoundcoffee.com/products/port-orchard-bay",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "43091017793721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "43091017826489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Course",
+    "variant_id": "43091017859257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "43091017892025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "43091017924793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "43091017957561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "43091017990329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43091018023097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "43091018055865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "43091018088633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Course",
+    "variant_id": "43091018121401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43091018154169"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "267e19807296c9ce",
+  "first_seen": "2026-10-26",
+  "handle": "friday-harbor",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/FH-16W.png?v=1672644183",
+  "platform": "shopify",
+  "product_id": "7558154387641",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Friday Harbor",
+  "url": "https://www.pugetsoundcoffee.com/products/friday-harbor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Fine",
+    "variant_id": "43091019366585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Drip",
+    "variant_id": "43091019399353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "43091019464889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "43091019497657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "43091019530425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43091019595961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Fine",
+    "variant_id": "43091019628729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Drip",
+    "variant_id": "43091019661497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43091019727033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Fine",
+    "variant_id": "44849221763257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Drip",
+    "variant_id": "44849222189241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Coarse",
+    "variant_id": "44849222353081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44849222779065"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "c6c7aacf97cc8302",
+  "first_seen": "2026-10-26",
+  "handle": "mermaid-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/files/IMG_2671.jpg?v=1699411073",
+  "platform": "shopify",
+  "product_id": "7589150818489",
+  "product_type": "",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [],
+  "title": "Mermaid Blend",
+  "url": "https://www.pugetsoundcoffee.com/products/mermaid-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "43249346543801"
+   }
+  ],
+  "vendor": "Puget Sound Coffee"
+ },
+ {
+  "body_hash": "15a0f4eda662d2c3",
+  "first_seen": "2026-10-26",
+  "handle": "point-no-point-half-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/PNP-16W.png?v=1672642984",
+  "platform": "shopify",
+  "product_id": "8168968716473",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Point No Point HALF Decaf",
+  "url": "https://www.pugetsoundcoffee.com/products/point-no-point-half-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45172451901625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Fine",
+    "variant_id": "45172451934393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Drip",
+    "variant_id": "45172451967161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz / Course",
+    "variant_id": "45172451999929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "45172452032697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Fine",
+    "variant_id": "45172452065465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Drip",
+    "variant_id": "45172452098233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1lb / Course",
+    "variant_id": "45172452131001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45172452163769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Fine",
+    "variant_id": "45172452196537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Drip",
+    "variant_id": "45172452229305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Course",
+    "variant_id": "45172452262073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45172452294841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Fine",
+    "variant_id": "45172452327609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Drip",
+    "variant_id": "45172452360377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Course",
+    "variant_id": "45172452393145"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ },
+ {
+  "body_hash": "5014c1f853a780d4",
+  "first_seen": "2026-10-26",
+  "handle": "point-no-point-half-decaf-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0534/7409/9385/products/PNPD-16W.png?v=1672643021",
+  "platform": "shopify",
+  "product_id": "8168971665593",
+  "product_type": "Coffee",
+  "roaster_slug": "pugetsoundcoffee",
+  "tags": [
+   "Subscriber",
+   "coffee"
+  ],
+  "title": "Point No Point HALF Decaf - Dark",
+  "url": "https://www.pugetsoundcoffee.com/products/point-no-point-half-decaf-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45172467269817"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Fine",
+    "variant_id": "45172467302585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Drip",
+    "variant_id": "45172467335353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Course",
+    "variant_id": "45172467368121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "45172467400889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Fine",
+    "variant_id": "45172467433657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Drip",
+    "variant_id": "45172467466425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1lb / Course",
+    "variant_id": "45172467499193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45172467531961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Fine",
+    "variant_id": "45172467564729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Drip",
+    "variant_id": "45172467597497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.0,
+    "title": "2lb / Course",
+    "variant_id": "45172467630265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45172467663033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Fine",
+    "variant_id": "45172467695801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Drip",
+    "variant_id": "45172467728569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Course",
+    "variant_id": "45172467761337"
+   }
+  ],
+  "vendor": "PugetSoundCoffee"
+ }
+]

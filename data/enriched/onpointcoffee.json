@@ -1,0 +1,202 @@
+{
+ "4489155412106": {
+  "body_hash": "3a8756167958938f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "5431758258328": {
+  "body_hash": "00b8a2be0348d00e",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "medium roast-caramel",
+   "chocolate",
+   "smooth mouth feel"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catuai",
+   "Caturra",
+   "Gesha",
+   "Villa Sarchi"
+  ]
+ },
+ "7989947498648": {
+  "body_hash": "eafc5c7c1fd51477",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweetness",
+   "toasted nuts",
+   "balanced"
+  ],
+  "varietals": []
+ },
+ "7989986099352": {
+  "body_hash": "666358c67c87e196",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "mild berry",
+   "spice",
+   "tangy acidity"
+  ],
+  "varietals": []
+ },
+ "7990012641432": {
+  "body_hash": "79273677f237b592",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "delicate",
+   "sweet with wine",
+   "citric acidity",
+   "cocoa",
+   "pecan",
+   "malt"
+  ],
+  "varietals": []
+ },
+ "7990036791448": {
+  "body_hash": "c1ce241efb22fe04",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "fresh stone fruit",
+   "almond",
+   "toffee",
+   "praline",
+   "juicy orange"
+  ],
+  "varietals": []
+ },
+ "7990083322008": {
+  "body_hash": "e8e18465e8684730",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "praline",
+   "fresh fruit"
+  ],
+  "varietals": []
+ },
+ "7990094332056": {
+  "body_hash": "a084898a54a33c72",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "mild cooked grape",
+   "tangy acidity",
+   "mellow sugary sweetness"
+  ],
+  "varietals": []
+ },
+ "8436788265112": {
+  "body_hash": "af1e25f5dfd17168",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "malt",
+   "graham",
+   "pecan",
+   "mild acidity",
+   "sweetness"
+  ],
+  "varietals": []
+ },
+ "8890391330968": {
+  "body_hash": "cf9c222890237db1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "balanced full body",
+   "bold"
+  ],
+  "varietals": []
+ }
+}

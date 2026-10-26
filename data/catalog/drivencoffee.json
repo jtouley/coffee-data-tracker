@@ -1,0 +1,197 @@
+[
+ {
+  "body_hash": "1c889a0b18001e48",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0874/2640/0540/files/ethiopia-yirgacheffe.png?v=1782826445",
+  "platform": "shopify",
+  "product_id": "10874116964636",
+  "product_type": "",
+  "roaster_slug": "drivencoffee",
+  "tags": [
+   "Single Origin",
+   "coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.drivencoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / Whole Bean",
+    "variant_id": "54218087039260"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / French Press Grind (Coarse)",
+    "variant_id": "54218087072028"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / Cold Press Grind (Coarse)",
+    "variant_id": "54218087104796"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / Drip Coffee Grind (Regular)",
+    "variant_id": "54218087137564"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / Pour Over Grind (Fine)",
+    "variant_id": "54218087170332"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.25,
+    "title": "10 oz / Espresso Grind (Very Fine)",
+    "variant_id": "54218087203100"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / Whole Bean",
+    "variant_id": "54218087235868"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / French Press Grind (Coarse)",
+    "variant_id": "54218087268636"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / Cold Press Grind (Coarse)",
+    "variant_id": "54218087301404"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / Drip Coffee Grind (Regular)",
+    "variant_id": "54218087334172"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / Pour Over Grind (Fine)",
+    "variant_id": "54218087366940"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 78.5,
+    "title": "3lb / Espresso Grind (Very Fine)",
+    "variant_id": "54218087399708"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "54218087432476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / French Press Grind (Coarse)",
+    "variant_id": "54218087465244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / Cold Press Grind (Coarse)",
+    "variant_id": "54218087498012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / Drip Coffee Grind (Regular)",
+    "variant_id": "54218087530780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / Pour Over Grind (Fine)",
+    "variant_id": "54218087563548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.25,
+    "title": "5lb / Espresso Grind (Very Fine)",
+    "variant_id": "54218087596316"
+   }
+  ],
+  "vendor": "Driven Coffee"
+ },
+ {
+  "body_hash": "bf7ae379a198b3e2",
+  "first_seen": "2026-10-26",
+  "handle": "wildflower-honey-sticks",
+  "image": "https://cdn.shopify.com/s/files/1/0874/2640/0540/files/Wildflower-Honey-Sticks.jpg?v=1721240603",
+  "platform": "shopify",
+  "product_id": "9434816020764",
+  "product_type": "",
+  "roaster_slug": "drivencoffee",
+  "tags": [
+   "Snacks"
+  ],
+  "title": "Wildflower Honey Sticks",
+  "url": "https://www.drivencoffee.com/products/wildflower-honey-sticks",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Default Title",
+    "variant_id": "48952237621532"
+   }
+  ],
+  "vendor": "Driven Coffee"
+ },
+ {
+  "body_hash": "4ac27cf0c53ed3d1",
+  "first_seen": "2026-10-26",
+  "handle": "assorted-flavor-honey-sticks",
+  "image": "https://cdn.shopify.com/s/files/1/0874/2640/0540/files/Assorted-Flavored-Honey-Sticks-510x649.jpg?v=1720726069",
+  "platform": "shopify",
+  "product_id": "9434816184604",
+  "product_type": "",
+  "roaster_slug": "drivencoffee",
+  "tags": [
+   "Snacks"
+  ],
+  "title": "Assorted Flavored Honey Sticks",
+  "url": "https://www.drivencoffee.com/products/assorted-flavor-honey-sticks",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Default Title",
+    "variant_id": "48952239292700"
+   }
+  ],
+  "vendor": "Driven Coffee"
+ }
+]

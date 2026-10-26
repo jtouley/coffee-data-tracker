@@ -1,0 +1,292 @@
+[
+ {
+  "body_hash": "645acc13c968c33d",
+  "first_seen": "2026-10-26",
+  "handle": "el-tambo-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2303/2402/files/ECR_-_Empowerment_Reserve_Colombia.png?v=1759089996",
+  "platform": "shopify",
+  "product_id": "4418348482694",
+  "product_type": "Coffee",
+  "roaster_slug": "empowercoffeeroasters",
+  "tags": [],
+  "title": "Empowerment Reserve (Colombia)",
+  "url": "https://empowercoffeeroasters.com/products/el-tambo-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (recommended for freshness) / 12 ounce bag",
+    "variant_id": "31572696760454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind (for French Press) / 12 ounce bag",
+    "variant_id": "31572696793222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind (for Drip) / 12 ounce bag",
+    "variant_id": "31572696825990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean (recommended for freshness) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791357362310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind (for French Press) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791357395078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind (for Drip) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791357427846"
+   }
+  ],
+  "vendor": "Empower Coffee Roasters"
+ },
+ {
+  "body_hash": "b18d723b99b6b295",
+  "first_seen": "2026-10-26",
+  "handle": "superior-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2303/2402/files/ECR-TrailblazerBlend_FKASuperior.png?v=1759088699",
+  "platform": "shopify",
+  "product_id": "5219188605062",
+  "product_type": "Coffee",
+  "roaster_slug": "empowercoffeeroasters",
+  "tags": [],
+  "title": "Trailblazer Blend",
+  "url": "https://empowercoffeeroasters.com/products/superior-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (recommended for freshness) / 12 ounce bag",
+    "variant_id": "35024963371142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind (for French Press) / 12 ounce bag",
+    "variant_id": "35024963403910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind (for Pour Over) / 12 ounce bag",
+    "variant_id": "35024963436678"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean (recommended for freshness) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791369257094"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind (for French Press) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791369289862"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind (for Pour Over) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791369322630"
+   }
+  ],
+  "vendor": "Empower Coffee Roasters"
+ },
+ {
+  "body_hash": "85fc1c929822099c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-de-cana",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2303/2402/files/ECR_-_Soft_Reset_Decaf.png?v=1759088837",
+  "platform": "shopify",
+  "product_id": "6622531190918",
+  "product_type": "Coffee",
+  "roaster_slug": "empowercoffeeroasters",
+  "tags": [],
+  "title": "Soft Reset Decaf",
+  "url": "https://empowercoffeeroasters.com/products/decaf-de-cana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounce bag / Whole Bean (recommended for freshness)",
+    "variant_id": "39531591794822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. (Save 20%) / Whole Bean (recommended for freshness)",
+    "variant_id": "39531591893126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounce bag / Medium Grind (for Drip)",
+    "variant_id": "39999333236870"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 ounce bag / Coarse Grind (for French Press)",
+    "variant_id": "39999333269638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. (Save 20%) / Medium Grind (for Drip)",
+    "variant_id": "39999333302406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb. (Save 20%) / Coarse Grind (for French Press)",
+    "variant_id": "39999333335174"
+   }
+  ],
+  "vendor": "Empower Coffee Roasters"
+ },
+ {
+  "body_hash": "01aad1b90f8c1a7c",
+  "first_seen": "2026-10-26",
+  "handle": "el-sur-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2303/2402/files/ECR-InspirationBlend_FKAElSur_2fb3b0b2-354f-4275-8b40-75484c489a55.png?v=1759089157",
+  "platform": "shopify",
+  "product_id": "6699927732358",
+  "product_type": "",
+  "roaster_slug": "empowercoffeeroasters",
+  "tags": [],
+  "title": "Inspiration Blend",
+  "url": "https://empowercoffeeroasters.com/products/el-sur-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (Recommended for Freshness) / 12 ounce bag",
+    "variant_id": "39679568806022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind (for French Press) / 12 ounce bag",
+    "variant_id": "39679568838790"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind (for Drip) / 12 ounce bag",
+    "variant_id": "39679568871558"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean (Recommended for Freshness) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791367061638"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind (for French Press) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791367094406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind (for Drip) / 5 lb. bag (Save 20%)",
+    "variant_id": "39791367127174"
+   }
+  ],
+  "vendor": "Empower Coffee Roasters"
+ },
+ {
+  "body_hash": "319a292b09dfb4cf",
+  "first_seen": "2026-10-26",
+  "handle": "corcasan",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2303/2402/files/ECR_-_Resilience_Reserve_Nicaragua_FKA_Corcasan.png?v=1759089806",
+  "platform": "shopify",
+  "product_id": "6785563984006",
+  "product_type": "",
+  "roaster_slug": "empowercoffeeroasters",
+  "tags": [],
+  "title": "Resilience Reserve (Nicaragua)",
+  "url": "https://empowercoffeeroasters.com/products/corcasan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean (recommended for freshness) / 12 ounce bag",
+    "variant_id": "39935649906822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean (recommended for freshness) / 5 lb. bag (Save 20%)",
+    "variant_id": "39935649939590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Medium Grind (for Drip) / 12 ounce bag",
+    "variant_id": "39935649972358"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Medium Grind (for Drip) / 5 lb. bag (Save 20%)",
+    "variant_id": "39935650005126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Coarse Grind (for French Press) / 12 ounce bag",
+    "variant_id": "39935650037894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Coarse Grind (for French Press) / 5 lb. bag (Save 20%)",
+    "variant_id": "39935650070662"
+   }
+  ],
+  "vendor": "Empower Coffee Roasters"
+ }
+]

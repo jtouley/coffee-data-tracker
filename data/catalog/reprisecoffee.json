@@ -1,0 +1,659 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "space-flower-award-winning-espresso",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/60f8024d95055530dd1ba810/1791534419397/",
+  "platform": "squarespace",
+  "product_id": "60f8024d95055530dd1ba810",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "House Coffees"
+  ],
+  "title": "Space Flower | 🏆  Winning | [Espresso]",
+  "url": "https://www.repriseroasters.com/shop-online/p/space-flower-award-winning-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.99,
+    "title": "5 lb.",
+    "variant_id": "05748912-19cf-4f90-b116-4655d3499106"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.99,
+    "title": "3 lb.",
+    "variant_id": "3d339c59-0e46-4a50-a2f6-ab4b55f93ce3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "0.75 lb.",
+    "variant_id": "d49b4a69-6f5c-4319-8a41-7a9d76723e01"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "the-bolder-the-wiser-premium-dark-roast",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/60f80322df42ba2c7ad8e077/1791534419454/",
+  "platform": "squarespace",
+  "product_id": "60f80322df42ba2c7ad8e077",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "House Coffees"
+  ],
+  "title": "Posie | [Darker Roast]",
+  "url": "https://www.repriseroasters.com/shop-online/p/the-bolder-the-wiser-premium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 59.99,
+    "title": "3 lb.",
+    "variant_id": "3a7a84e7-b66d-49e7-8cb0-7b3844b8cb03"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "0.75 lb.",
+    "variant_id": "4f6a1cbe-7e75-44eb-8265-6bf6122f6feb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "964f0ae69a074937",
+  "first_seen": "2026-10-26",
+  "handle": "uncafthezero",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/1628732122549-KR4H9Q0B6S179CMXSF6Y/The+zero.png",
+  "platform": "squarespace",
+  "product_id": "60f803e83bf5736ec38c7d6b",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Uncaf"
+  ],
+  "title": "Uncaf / The Zero | [99.99% Caffeine-Free]",
+  "url": "https://www.repriseroasters.com/shop-online/p/uncafthezero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.99,
+    "title": "5 lb.",
+    "variant_id": "12a524bd-d597-483a-a97b-1a66d18d4b08"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 64.99,
+    "title": "3 lb.",
+    "variant_id": "bb576c95-d6ca-4c9c-91f1-9526b8a66da0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12 oz.",
+    "variant_id": "e0d7ef0c-cd35-42a3-b091-0ef244f5614d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efbe99bf0f22f5eb",
+  "first_seen": "2026-10-26",
+  "handle": "lesscaffeinated",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/1628731779656-VC8M05BB2MHYI5LTGDMX/Microdose.png",
+  "platform": "squarespace",
+  "product_id": "60f804cc53df297156b80b89",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Uncaf"
+  ],
+  "title": "Uncaf / Micro-Dose | [10% Caffeinated]",
+  "url": "https://www.repriseroasters.com/shop-online/p/lesscaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "0.75 lb.",
+    "variant_id": "af57026f-0afc-49cc-9341-53a686ce3c96"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "518a513ed6a5a628",
+  "first_seen": "2026-10-26",
+  "handle": "lightbuzz",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/1628732087516-CGBYGJTH6EJJ1X8VEAZ7/light+buzz.png",
+  "platform": "squarespace",
+  "product_id": "60f8061f28ef38068407b32a",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Uncaf"
+  ],
+  "title": "Uncaf / Light Buzz | [25% Caffeinated]",
+  "url": "https://www.repriseroasters.com/shop-online/p/lightbuzz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "0.75 lb.",
+    "variant_id": "d78f87bb-3fdf-48ca-b9ee-c177945be6c0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "70ea2f003e35baa3",
+  "first_seen": "2026-10-26",
+  "handle": "edinsonargotesl28",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/611495966008f61bc47fce22/1792770388871/",
+  "platform": "squarespace",
+  "product_id": "611495966008f61bc47fce22",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Modern"
+  ],
+  "title": "Edinson Argote [SL28] [Anaerobic + Natural]",
+  "url": "https://www.repriseroasters.com/shop-online/p/edinsonargotesl28",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 34.99,
+    "title": "6 OZ",
+    "variant_id": "dbe9a9dc-2071-4c76-ae08-b70d7c072b02"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ad3a69574128cbc",
+  "first_seen": "2026-10-26",
+  "handle": "supernaturallot2",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/43b5c27d-50e4-42bd-9638-880d57111b34/BANKO+CHELCHELE+-+LOT2.png",
+  "platform": "squarespace",
+  "product_id": "611497661efd053278072391",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Banko Chelchele [Ethiopia, Gedeb] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/supernaturallot2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.99,
+    "title": "0.75 lb. Bag",
+    "variant_id": "743b17c4-0851-4d4d-af03-a3d9de7c826d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "57b2a2b32ac64377",
+  "first_seen": "2026-10-26",
+  "handle": "greenapplecoferment",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/ccc56ee9-2f87-4fb5-912b-e5aa1511884e/20260129_Reprise_8643_WEB+1.JPEG",
+  "platform": "squarespace",
+  "product_id": "61149f047a9cac0163c269a5",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Modern"
+  ],
+  "title": "Edwin Noreña [Coferment] [Carbonic Maceration + Honey Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/greenapplecoferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 29.99,
+    "title": "6 oz",
+    "variant_id": "9be9662a-eb2d-47e1-8587-979ac4dc9dec"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "278181bb7fb7e6e6",
+  "first_seen": "2026-10-26",
+  "handle": "raulsoispaizgesha",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/5e5e6738-184b-4f41-813c-8a297d79ba40/RAUL+SOLIS+PAIZ.png",
+  "platform": "squarespace",
+  "product_id": "6114a01c2e958c789ad16a58",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Raúl Solis Paiz - [Gesha] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/raulsoispaizgesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 34.99,
+    "title": "",
+    "variant_id": "35f177c8-47a2-4a66-8f8a-e5fb8767c6ac"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1ab5cbe742b2d5e",
+  "first_seen": "2026-10-26",
+  "handle": "pearloftehama",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/0abecc36-c728-41b0-bdb0-8692b72b0004/20260129_Reprise_10382_WEB.JPG",
+  "platform": "squarespace",
+  "product_id": "616c69c6f167241fec5a329d",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Exotic"
+  ],
+  "title": "Pearl of Tehama - [Yemen, Haraz, Sana'a]  [Anaerobic + Natural]",
+  "url": "https://www.repriseroasters.com/shop-online/p/pearloftehama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 34.99,
+    "title": "6 oz",
+    "variant_id": "cde83249-bf74-4b1a-ac09-8768c35a9ab2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "06126deb29f60521",
+  "first_seen": "2026-10-26",
+  "handle": "spectrumgesha",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/b5344d33-bdac-4beb-95ac-e3af6b8818e3/20250920_Reprise_JamisonSavage_Spectrum+Gesha0778.JPG",
+  "platform": "squarespace",
+  "product_id": "61b807ff2203a40a409355a8",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Modern"
+  ],
+  "title": "Jamison Savage [Spectrum Gesha] [Carbonic Maceration]",
+  "url": "https://www.repriseroasters.com/shop-online/p/spectrumgesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 49.99,
+    "title": "6oz",
+    "variant_id": "1ef5f1ac-c433-4416-b822-5d59100d0b35"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "86d8b9901eb84f39",
+  "first_seen": "2026-10-26",
+  "handle": "orangebourbon",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/e1ae0598-13d4-4ea9-a916-b87316dd19a4/20250804_Reprise_Canister0151.JPEG",
+  "platform": "squarespace",
+  "product_id": "622125832b16990a966e73b9",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Modern"
+  ],
+  "title": "Edinson Argote [Orange Bourbon] [Anaerobic + Washed]",
+  "url": "https://www.repriseroasters.com/shop-online/p/orangebourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "f6c34aa9-0f0a-47b7-92f8-9c3d90fe9bed"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4bff8d71c81a1c89",
+  "first_seen": "2026-10-26",
+  "handle": "laterrazapinkbourbon",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/96913c89-dcd2-42cf-b9f4-06f35c8d1e26/GUEVARA+PINK+BOURBON.PNG",
+  "platform": "squarespace",
+  "product_id": "633df8324123dc39bc3c9191",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Microlot"
+  ],
+  "title": "Juliana Guevara & Wbeimar Lasso [Pink Bourbon] [Macerated Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/laterrazapinkbourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "12oz",
+    "variant_id": "68fee95e-b71b-44d5-ae1f-050751deede3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce32f35dc15f6480",
+  "first_seen": "2026-10-26",
+  "handle": "juancarloslosada",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/82ab788d-0e8f-4173-bf9a-518762646240/JUAN+CARLOS+LOSADA.PNG",
+  "platform": "squarespace",
+  "product_id": "633dfd0a5d64c81b705adcd5",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [
+   "Microlot"
+  ],
+  "title": "Juan Carlos Losada [Colombia, Huila] [Macerated Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/juancarloslosada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.99,
+    "title": "0.75 lb. Bag",
+    "variant_id": "1a38e5ee-860e-4bb2-9091-eb17d0bc5c82"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e25d6a2edc99d64",
+  "first_seen": "2026-10-26",
+  "handle": "strawberrycoferment",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/89eaa562-73cc-4fbc-9551-4a419e2a90b2/20260317_Reprise_Edinson+Argote_Strawberry_10853+1.JPEG",
+  "platform": "squarespace",
+  "product_id": "69bbf3fe2c8e2663b4e0e4bc",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Edinson Argote [Strawberry Co-ferment] [Carbonic Maceration]",
+  "url": "https://www.repriseroasters.com/shop-online/p/strawberrycoferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 29.99,
+    "title": "6 oz",
+    "variant_id": "9bc30dfb-4e1f-4e5a-ac1d-5c5f49b0246b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ee22e52afaa426c2",
+  "first_seen": "2026-10-26",
+  "handle": "julianahoneygesha",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/69cda2ce62e8ac760d37cfa2/1792770425372/",
+  "platform": "squarespace",
+  "product_id": "69cda2ce62e8ac760d37cfa2",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Juliana Guevara & Wbeimar Lasso [Gesha] [Fermented Honey Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/julianahoneygesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 24.99,
+    "title": "6oz",
+    "variant_id": "dc0f39aa-7dfc-42ec-9e50-ce68b022b3e4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2312d809374b7c96",
+  "first_seen": "2026-10-26",
+  "handle": "pedronelsalazarcoconut",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/c687125e-fcb4-4151-9067-d9997b049673/20260512_Reprise_11368_Stack_WEB.JPG",
+  "platform": "squarespace",
+  "product_id": "6a0757549120657df208ec65",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Pedro Nel Salazar [Coferment] [Carbonic Maceration + Honey Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/pedronelsalazarcoconut",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 29.99,
+    "title": "6oz",
+    "variant_id": "1cab70cf-b4a3-432d-bda9-c7dd61f53da6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "203b3e91388ccd5c",
+  "first_seen": "2026-10-26",
+  "handle": "inoculatedgesha",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/1ea71853-50a5-48d8-8ca0-9340a0e99029/20260512_Reprise_11695_WEB.JPG",
+  "platform": "squarespace",
+  "product_id": "6a0759f49bbeeb1bb6106b6d",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Edwin Noreña [Inoculated Gesha] [Carbonic Maceration + Honey Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/inoculatedgesha",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "fc8e618e-0c21-4b2f-a9e1-fb7af31bbd89"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1facb33c79e418fc",
+  "first_seen": "2026-10-26",
+  "handle": "edinsonargotesidra",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/58687f5e-7133-418d-be43-68dc158b8769/20260512_Reprise_11601_WEB.JPG",
+  "platform": "squarespace",
+  "product_id": "6a0b439b3508e0735ce63f9c",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Edinson Argote [Sidra] [Anaerobic + Natural]",
+  "url": "https://www.repriseroasters.com/shop-online/p/edinsonargotesidra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 34.99,
+    "title": "6 oz",
+    "variant_id": "6335eefe-8fc2-41e6-b7b2-35617bcd2b1f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "23f07037a3196a51",
+  "first_seen": "2026-10-26",
+  "handle": "marta-ribeiro-arara-natural-process",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/cc33b001-a53a-4fa1-9146-3f702dd9467f/ARARA.PNG",
+  "platform": "squarespace",
+  "product_id": "6a5f9faf22d8fb7a65be1825",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Marta Ribeiro [Arara] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/marta-ribeiro-arara-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.99,
+    "title": "",
+    "variant_id": "7c6afc44-08f8-4ebf-9f17-c8af52e9aad1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ba04d60542e790e",
+  "first_seen": "2026-10-26",
+  "handle": "ho4mfzyo0sot4xogaaweslikrw68ej",
+  "image": "https://images.squarespace-cdn.com/content/v1/60f78c3dd364b340e4eeb15b/07b4adcd-389b-4548-aff6-f7bbbdbe668b/TANZANIA.PNG",
+  "platform": "squarespace",
+  "product_id": "6a5fa36eb545114fe3872c2b",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Neel + Kavita Vohora [Gesha] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/ho4mfzyo0sot4xogaaweslikrw68ej",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "e70f8bc8-c736-437d-869f-ec13cdff8a05"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4832f63acc0ce9f9",
+  "first_seen": "2026-10-26",
+  "handle": "mwelqtf5nmhqa37l0s0sca7hgbtodp",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/6a7387fd2863cf53bc53a924/1791577705117/",
+  "platform": "squarespace",
+  "product_id": "6a7387fd2863cf53bc53a924",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Neel + Kavita Vohora [SL28] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/mwelqtf5nmhqa37l0s0sca7hgbtodp",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 34.99,
+    "title": "",
+    "variant_id": "30ced2ac-aef0-4df8-b4e9-9a8439b0d4ed"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7245ba5ecd60299",
+  "first_seen": "2026-10-26",
+  "handle": "bentinenka",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/6a935b26d54348140a77c3db/1791581852694/",
+  "platform": "squarespace",
+  "product_id": "6a935b26d54348140a77c3db",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Benti Nenka - [Ethiopia, Guji] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/bentinenka",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "56d87a85-18ab-4264-b983-a9b540be6743"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f24b0b77e514520",
+  "first_seen": "2026-10-26",
+  "handle": "bankogotiti",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/6a935e4a68943c0c0c888a3e/1791581853555/",
+  "platform": "squarespace",
+  "product_id": "6a935e4a68943c0c0c888a3e",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Banko Gotiti [Ethiopia, Gedeb] [Natural Process]",
+  "url": "https://www.repriseroasters.com/shop-online/p/bankogotiti",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "9d08e337-4a27-4d83-8aaa-b22de9bf84c3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6bbe05e8c2cfcc6f",
+  "first_seen": "2026-10-26",
+  "handle": "rodrigo-sanchez-blueberry-co-ferment-anaerobic-lactobacillus",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/6aaf2abf51e8655725fab0e2/1791600753054/",
+  "platform": "squarespace",
+  "product_id": "6aaf2abf51e8655725fab0e2",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Rodrigo Sanchez [Blueberry Co-ferment] [Anaerobic + Lactobacillus]",
+  "url": "https://www.repriseroasters.com/shop-online/p/rodrigo-sanchez-blueberry-co-ferment-anaerobic-lactobacillus",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "",
+    "variant_id": "6e215c6f-7a50-4e16-a50f-2685230c065b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c6f6ad859b604f5e",
+  "first_seen": "2026-10-26",
+  "handle": "jamesonsavage-deep-purple",
+  "image": "https://static1.squarespace.com/static/60f78c3dd364b340e4eeb15b/60f79bff3fe7684a17b908bb/6aaf2d128f7bb96f8f6ae3eb/1791600756694/",
+  "platform": "squarespace",
+  "product_id": "6aaf2d128f7bb96f8f6ae3eb",
+  "product_type": "",
+  "roaster_slug": "reprisecoffee",
+  "tags": [],
+  "title": "Jamison Savage [Deep Purple Bourbon] [Anaerobic + Natural]",
+  "url": "https://www.repriseroasters.com/shop-online/p/jamesonsavage-deep-purple",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.99,
+    "title": "",
+    "variant_id": "b381db64-f170-46fa-afd8-1db121a129d1"
+   }
+  ],
+  "vendor": ""
+ }
+]

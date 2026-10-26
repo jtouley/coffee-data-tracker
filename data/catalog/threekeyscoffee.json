@@ -1,0 +1,569 @@
+[
+ {
+  "body_hash": "5624c6893b011218",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-bossa-nova",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/BlueNova12ozBag_e3b5f443-f81c-4c46-8d69-0593a857a96f.png?v=1740942919",
+  "platform": "shopify",
+  "product_id": "4548390682764",
+  "product_type": "Dark Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Brazil",
+   "Single Origin"
+  ],
+  "title": "Brazil Blue Nova - Single Origin",
+  "url": "https://threekeyscoffee.com/products/brazil-bossa-nova",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "33617734828172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb",
+    "variant_id": "47542592602290"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "4fc623864c4e2c1f",
+  "first_seen": "2026-10-26",
+  "handle": "the-33-1-3-lp-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/33.33_12ozbag.png?v=1740942917",
+  "platform": "shopify",
+  "product_id": "4548393336972",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "The 33-1/3 LP - Signature Blend",
+  "url": "https://threekeyscoffee.com/products/the-33-1-3-lp-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "33617759928460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "42651537440946"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb",
+    "variant_id": "42681560793266"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "5ac1a570185018f1",
+  "first_seen": "2026-10-26",
+  "handle": "ghost-note",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/GuatemalaGhostNote.png?v=1740942913",
+  "platform": "shopify",
+  "product_id": "4825718030476",
+  "product_type": "Light Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Guatemala",
+   "Single Origin"
+  ],
+  "title": "Guatemala Ghost Note - Single Origin",
+  "url": "https://threekeyscoffee.com/products/ghost-note",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "33617756258444"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "d571d9750f407fc2",
+  "first_seen": "2026-10-26",
+  "handle": "congosquare",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/CongoSquareFairTrade.png?v=1740942894",
+  "platform": "shopify",
+  "product_id": "5613544702119",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Congo (DRC)",
+   "Single Origin"
+  ],
+  "title": "DRC Congo Square - Single Origin",
+  "url": "https://threekeyscoffee.com/products/congosquare",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "35687098876071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb",
+    "variant_id": "42651489730738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb",
+    "variant_id": "42681561645234"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "368fc57a1c0fd5fc",
+  "first_seen": "2026-10-26",
+  "handle": "montreux-single-origin-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/MontreuxSWPDecafBlend.png?v=1740942886",
+  "platform": "shopify",
+  "product_id": "6276435771570",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Peru"
+  ],
+  "title": "Montreux - Swiss Water Process Decaf",
+  "url": "https://threekeyscoffee.com/products/montreux-single-origin-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "38305693663410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb",
+    "variant_id": "42651528691890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb",
+    "variant_id": "42681562366130"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "c4869ae49e9f5a56",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-reverb",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/RwandaReverb12ozbag.png?v=1740942885",
+  "platform": "shopify",
+  "product_id": "6537626648754",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Rwanda",
+   "Single Origin"
+  ],
+  "title": "Rwanda Reverb - Single Origin",
+  "url": "https://threekeyscoffee.com/products/rwanda-reverb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "39254614245554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb",
+    "variant_id": "42651534360754"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb",
+    "variant_id": "42681562464434"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "940a30f87abfff83",
+  "first_seen": "2026-10-26",
+  "handle": "the-quartet-cafe-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/products/PhotoJul25_83608AM.jpg?v=1740942876",
+  "platform": "shopify",
+  "product_id": "7220855701682",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "The Quartet - Cafe Blend",
+  "url": "https://threekeyscoffee.com/products/the-quartet-cafe-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41627504836786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "41627504869554"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb",
+    "variant_id": "42681563185330"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "fa252bdd9c4d3f17",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cumbia",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/Cumbia12oz_7c57d247-46ba-4409-a893-6af516e606a1.png?v=1740942874",
+  "platform": "shopify",
+  "product_id": "7302576930994",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Colombia",
+   "Single Origin"
+  ],
+  "title": "Colombia Cumbia - Single Origin",
+  "url": "https://threekeyscoffee.com/products/colombia-cumbia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "41904711205042"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "efd880c11d1dcbb9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-ethereal",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/EthiopiaEtherial12ozbag.png?v=1740942872",
+  "platform": "shopify",
+  "product_id": "7324456583346",
+  "product_type": "Light Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Ethiopia",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Ethereal - Single Origin",
+  "url": "https://threekeyscoffee.com/products/ethiopia-ethereal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "41977669484722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb",
+    "variant_id": "42651496939698"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2lb",
+    "variant_id": "42681563611314"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "21f0db62954bb5ac",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-marimba-single-origin",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/MexicoMarimbaNS12oz.png?v=1740942851",
+  "platform": "shopify",
+  "product_id": "7674846576818",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "Mexico Marimba - Single Origin",
+  "url": "https://threekeyscoffee.com/products/mexico-marimba-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb",
+    "variant_id": "43041204043954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb",
+    "variant_id": "43041204109490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "47880628732082"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "e616f6f7078ed416",
+  "first_seen": "2026-10-26",
+  "handle": "round-midnight-cafe-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/ROUNDmindight12ozbag_f8be4ce8-f79e-41f1-bf36-51bfb3b6f3ec.png?v=1740942843",
+  "platform": "shopify",
+  "product_id": "7795999834290",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Round Midnight - Espresso Blend",
+  "url": "https://threekeyscoffee.com/products/round-midnight-cafe-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "43291989082290"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb",
+    "variant_id": "43291989147826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb",
+    "variant_id": "43291989213362"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "7266a185227cea94",
+  "first_seen": "2026-10-26",
+  "handle": "lofi-half-caff-blend-swp",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/Lofi12ozBag.png?v=1740942836",
+  "platform": "shopify",
+  "product_id": "8049422467250",
+  "product_type": "Medium Roast",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "Blend",
+   "Rwanda"
+  ],
+  "title": "Lo Fi - 1/2 Caff Blend",
+  "url": "https://threekeyscoffee.com/products/lofi-half-caff-blend-swp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "44045871186098"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb",
+    "variant_id": "44045871251634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb",
+    "variant_id": "44045871317170"
+   }
+  ],
+  "vendor": "Retail"
+ },
+ {
+  "body_hash": "a38eadb7d8276b2a",
+  "first_seen": "2026-10-26",
+  "handle": "ear-candy-shandy-canned-cold-brew-and-lemonade",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/130.jpg?v=1750353303",
+  "platform": "shopify",
+  "product_id": "8516234510514",
+  "product_type": "Cold Brew",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [],
+  "title": "Ethiopia Ear Candy Shandy - Canned Cold Brew and Lemonade - 6pk",
+  "url": "https://threekeyscoffee.com/products/ear-candy-shandy-canned-cold-brew-and-lemonade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2291,
+    "price_usd": 32.0,
+    "title": "Default Title",
+    "variant_id": "45535123374258"
+   }
+  ],
+  "vendor": "Three Keys Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tipping-point-blend-wholesale-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/TheTippingPointMex-GuatBlend.png?v=1791401094",
+  "platform": "shopify",
+  "product_id": "8633398755506",
+  "product_type": "",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "tippingpoint"
+  ],
+  "title": "The Tipping Point Mex/Guat Blend",
+  "url": "https://threekeyscoffee.com/products/tipping-point-blend-wholesale-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Ground / 5lb",
+    "variant_id": "48029271130290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.0,
+    "title": "Whole bean / 5lb",
+    "variant_id": "67651492184242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.75,
+    "title": "Whole bean / 12oz",
+    "variant_id": "67788301402290"
+   }
+  ],
+  "vendor": "Three Keys Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tipping-point-single-o-wholesale-5lb",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/TheTippingPointMexicoNatural.png?v=1791401209",
+  "platform": "shopify",
+  "product_id": "8633401114802",
+  "product_type": "",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [
+   "tippingpoint"
+  ],
+  "title": "The Tipping Point Mexico Single Origin",
+  "url": "https://threekeyscoffee.com/products/tipping-point-single-o-wholesale-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "67651502047410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Ground / 5lb",
+    "variant_id": "67651502080178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.75,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "67788300419250"
+   }
+  ],
+  "vendor": "Three Keys Coffee"
+ },
+ {
+  "body_hash": "fe58c670c2aead92",
+  "first_seen": "2026-10-26",
+  "handle": "cool-struttin-canned-cold-brew-6pk-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0311/1305/2300/files/IMG-3201.jpg?v=1775857322",
+  "platform": "shopify",
+  "product_id": "8796051865778",
+  "product_type": "Cold Brew",
+  "roaster_slug": "threekeyscoffee",
+  "tags": [],
+  "title": "Cool Struttin’ - Canned Cold Brew - 6pk",
+  "url": "https://threekeyscoffee.com/products/cool-struttin-canned-cold-brew-6pk-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2291,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "47285216870578"
+   }
+  ],
+  "vendor": "Three Keys Coffee"
+ }
+]

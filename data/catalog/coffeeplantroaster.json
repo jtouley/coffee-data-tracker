@@ -1,0 +1,272 @@
+[
+ {
+  "body_hash": "f897bc1e74591277",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/1554924438690-1YAXUM6KT3HW8QSCJ1CK/CPR_Sumatra-no-label.jpg",
+  "platform": "squarespace",
+  "product_id": "59b81b5a914e6bd226762acb",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Sumatra Ketiara",
+  "url": "https://www.coffeeplantroaster.com/shop/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "40d4d853-3ff8-4e42-9f43-306404da23ea"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "59b20bbf-dca9-4521-abce-2039f9ee2f25"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6513dd8817eda113",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/1617221997420-L1VZJNMIM7J89TX5J10M/CPR_SO_Columbia.jpg",
+  "platform": "squarespace",
+  "product_id": "59b81b81e45a7c35d99fedfa",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Colombia Ixtapa Excelso EP",
+  "url": "https://www.coffeeplantroaster.com/shop/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "92757b22-e608-4a82-b6db-76473b2c46b5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "fc206b5b-1a64-4a38-9d0d-25353810073f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "079defdfc75a2344",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/1707873191477-NREST1YZK5XPOYY54NLK/CPR_DecafSumatra.jpg",
+  "platform": "squarespace",
+  "product_id": "59b81bb818a0a239a3eafc80",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Decaf Sumatra",
+  "url": "https://www.coffeeplantroaster.com/shop/decaf-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "91be3b22-357e-45ea-8d6c-850d4204d990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "cf8a5f7c-2a71-4f14-a3e6-fca3d6d89b0d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d137e6e1df6802e4",
+  "first_seen": "2026-10-26",
+  "handle": "highvibesblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/4992a165-d335-44d5-8bc0-4deedfa5b3cc/HighVibes.gif",
+  "platform": "squarespace",
+  "product_id": "59b81c774c326d013e20391e",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "High Vibes Blend",
+  "url": "https://www.coffeeplantroaster.com/shop/highvibesblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb.",
+    "variant_id": "1f87b126-80cc-4d15-8b11-02c8ea30667e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "82d99ab1-9085-475a-b6e6-90008d21fdd8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3fa45fd3f95a02e2",
+  "first_seen": "2026-10-26",
+  "handle": "cpr-french-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/2179f7dd-0adf-40e7-b87d-9ffe5120a7fa/FrenchRoast.gif",
+  "platform": "squarespace",
+  "product_id": "59b81cfd9f74569a3ab23fbd",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "CPR French Roast",
+  "url": "https://www.coffeeplantroaster.com/shop/cpr-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "996c4198-8ddc-44bf-bdcf-e404b49fb36a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "b9cd44ac-8fb4-4a39-9a88-19720ad3efe8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ab4d4f5291b4103",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/1548439977016-0E6BKZDFGNAVM33RCWLO/CPR_SO_NicaraguaLimoncillo.jpg",
+  "platform": "squarespace",
+  "product_id": "5ae893ff70a6addfe83cab53",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Nicaragua Mama Mina",
+  "url": "https://www.coffeeplantroaster.com/shop/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "19132e6e-9aef-45db-9382-43fcec03d483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "7ee2cb73-21e8-4bbe-b65c-f22dbea4ecb8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6713208c3fe44b18",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-33yz8",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/1548439977016-0E6BKZDFGNAVM33RCWLO/CPR_SO_NicaraguaLimoncillo.jpg",
+  "platform": "squarespace",
+  "product_id": "5e791cce0e6b0d3146595ed5",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Nicaragua Limoncillo",
+  "url": "https://www.coffeeplantroaster.com/shop/nicaragua-33yz8",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "4570c929-1111-49e9-a9c5-477a725a1fba"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "5787239b-6871-4677-80be-050454ad047c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd5d250919fa9175",
+  "first_seen": "2026-10-26",
+  "handle": "willamettevalleyblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/31bbb136-ba91-4105-8a46-b95a6c3ae135/WillametteValley.gif",
+  "platform": "squarespace",
+  "product_id": "6977d37342a63e44bd94e1c2",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Willamette Valley Blend",
+  "url": "https://www.coffeeplantroaster.com/shop/willamettevalleyblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "13c90ac4-f00b-45ec-9913-6812579dc465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "b794f032-b7a9-485a-8cb7-4342a9c14fe2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9184fecb78d77cc",
+  "first_seen": "2026-10-26",
+  "handle": "butteblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/59b1a8d0f9a61e8350aa9bdd/874d6ad3-bdc1-4c38-aaa8-156e6e17940d/ButteBlend.gif",
+  "platform": "squarespace",
+  "product_id": "6977d68e4671005209796938",
+  "product_type": "",
+  "roaster_slug": "coffeeplantroaster",
+  "tags": [],
+  "title": "Butte Blend",
+  "url": "https://www.coffeeplantroaster.com/shop/butteblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz.",
+    "variant_id": "4dabca1a-db78-4bc3-95f7-5ebbfb7aac4b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb.",
+    "variant_id": "4de39ea3-3a03-4dbf-b34e-c0457759a451"
+   }
+  ],
+  "vendor": ""
+ }
+]

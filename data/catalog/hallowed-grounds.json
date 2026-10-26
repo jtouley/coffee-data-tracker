@@ -1,0 +1,4503 @@
+[
+ {
+  "body_hash": "f2201a406d1ab037",
+  "first_seen": "2026-10-26",
+  "handle": "birthday-cake",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/birthday_cake.png",
+  "platform": "woocommerce",
+  "product_id": "1000",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Birthday Cake",
+  "url": "https://hallowed-grounds.com/shop/birthday-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1000:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1000:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1000:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eec6d5439c4c25ef",
+  "first_seen": "2026-10-26",
+  "handle": "choco-nilla",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/choco_nilla.png",
+  "platform": "woocommerce",
+  "product_id": "1005",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Cookies n’ Cream",
+  "url": "https://hallowed-grounds.com/shop/choco-nilla/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1005:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1005:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1005:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d26305136bcb2a0e",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-caramel-kiss",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/chocolate_caramel_kiss.png",
+  "platform": "woocommerce",
+  "product_id": "1010",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Chocolate Caramel Kiss",
+  "url": "https://hallowed-grounds.com/shop/chocolate-caramel-kiss/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1010:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1010:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1010:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "df97a71480ce32a3",
+  "first_seen": "2026-10-26",
+  "handle": "slim-mint",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/slim-mint-min.png",
+  "platform": "woocommerce",
+  "product_id": "1015",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Slim Mint",
+  "url": "https://hallowed-grounds.com/shop/slim-mint/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1015:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1015:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1015:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "54da5a225ab94293",
+  "first_seen": "2026-10-26",
+  "handle": "french-toast",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/french_toast.png",
+  "platform": "woocommerce",
+  "product_id": "1020",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "French Toast",
+  "url": "https://hallowed-grounds.com/shop/french-toast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1020:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1020:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1020:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6469e6fdeaa1f722",
+  "first_seen": "2026-10-26",
+  "handle": "creme-brulee",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/creme-brulee-min.png",
+  "platform": "woocommerce",
+  "product_id": "1025",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Crème Brûlée",
+  "url": "https://hallowed-grounds.com/shop/creme-brulee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1025:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1025:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1025:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "075768bb0d5c8433",
+  "first_seen": "2026-10-26",
+  "handle": "rich-chocolate-fudge",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/rich_chocolate_fudge.png",
+  "platform": "woocommerce",
+  "product_id": "1031",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Rich Chocolate Fudge",
+  "url": "https://hallowed-grounds.com/shop/rich-chocolate-fudge/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1031:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1031:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1031:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c2bb9fa5e129833",
+  "first_seen": "2026-10-26",
+  "handle": "snickerdoodle",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/snickerdoodle-min.png",
+  "platform": "woocommerce",
+  "product_id": "1036",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Christmas coffee",
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Snickerdoodle",
+  "url": "https://hallowed-grounds.com/shop/snickerdoodle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1036:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1036:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1036:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "569d1df9e9bae850",
+  "first_seen": "2026-10-26",
+  "handle": "tiramisu",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/tiramisu.png",
+  "platform": "woocommerce",
+  "product_id": "1041",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Tiramisu",
+  "url": "https://hallowed-grounds.com/shop/tiramisu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1041:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1041:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1041:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c706877e03d6211c",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/french_vanilla.png",
+  "platform": "woocommerce",
+  "product_id": "1046",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "French Vanilla",
+  "url": "https://hallowed-grounds.com/shop/french-vanilla/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1046:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1046:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1046:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b1a15c4b5cf51be1",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/hazelnut.png",
+  "platform": "woocommerce",
+  "product_id": "1051",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Hazelnut",
+  "url": "https://hallowed-grounds.com/shop/hazelnut/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1051:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1051:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1051:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "939f7a4bce598fec",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/highlander_grogg.png",
+  "platform": "woocommerce",
+  "product_id": "1056",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Highlander Grogg",
+  "url": "https://hallowed-grounds.com/shop/highlander-grogg/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1056:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1056:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1056:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9240eca33bf28270",
+  "first_seen": "2026-10-26",
+  "handle": "baileys-fudge-brownie",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/baileys_fudge_brownie.png",
+  "platform": "woocommerce",
+  "product_id": "1061",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Sale Products",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Bailey’s Fudge Brownie",
+  "url": "https://hallowed-grounds.com/shop/baileys-fudge-brownie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1061:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1061:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1061:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "012bb49554cf17a1",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/jamaican_me_crazy.png",
+  "platform": "woocommerce",
+  "product_id": "1066",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Jamaican Me Crazy",
+  "url": "https://hallowed-grounds.com/shop/jamaican-me-crazy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1066:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1066:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1066:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "34a00003726bcfed",
+  "first_seen": "2026-10-26",
+  "handle": "maple-morning-delight",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/maple-morning-delight-min.png",
+  "platform": "woocommerce",
+  "product_id": "1072",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Maple Morning Delight",
+  "url": "https://hallowed-grounds.com/shop/maple-morning-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1072:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1072:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1072:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e37009f309d38d96",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-creme-pie",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/coconut_creme_pie.png",
+  "platform": "woocommerce",
+  "product_id": "1077",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Sale Products",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Coconut Creme Pie",
+  "url": "https://hallowed-grounds.com/shop/coconut-creme-pie/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1077:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1077:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1077:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d216d3b9b5a91bdf",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-torte",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/pumpkin_torte.png",
+  "platform": "woocommerce",
+  "product_id": "1082",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Pumpkin Torte",
+  "url": "https://hallowed-grounds.com/shop/pumpkin-torte/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1082:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1082:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1082:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6027ccfd795af9f1",
+  "first_seen": "2026-10-26",
+  "handle": "smores-delight",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/smores-delight-min.png",
+  "platform": "woocommerce",
+  "product_id": "1087",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "S’mores Delight",
+  "url": "https://hallowed-grounds.com/shop/smores-delight/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1087:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1087:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1087:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c36636f3859b3ac",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/southern_pecan.png",
+  "platform": "woocommerce",
+  "product_id": "1098",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Southern Pecan",
+  "url": "https://hallowed-grounds.com/shop/southern-pecan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1098:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1098:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1098:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a7626d1b50f22b6",
+  "first_seen": "2026-10-26",
+  "handle": "turtle",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/turtle.png",
+  "platform": "woocommerce",
+  "product_id": "1108",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Turtle",
+  "url": "https://hallowed-grounds.com/shop/turtle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1108:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1108:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1108:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e7cf3c918976de5",
+  "first_seen": "2026-10-26",
+  "handle": "creamy-vanilla-nut-crunch",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/creamy_vanilla_nut_crunch.png",
+  "platform": "woocommerce",
+  "product_id": "1113",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Creamy Vanilla Nut Crunch",
+  "url": "https://hallowed-grounds.com/shop/creamy-vanilla-nut-crunch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1113:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1113:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz",
+    "variant_id": "1113:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a44fd1cc1d26cf6",
+  "first_seen": "2026-10-26",
+  "handle": "vermont-maplenut-crunch",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/vermont_maplenut_crunch.png",
+  "platform": "woocommerce",
+  "product_id": "1118",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Vermont Maplenut Crunch",
+  "url": "https://hallowed-grounds.com/shop/vermont-maplenut-crunch/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1118:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1118:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1118:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "662be5b28b3ecf70",
+  "first_seen": "2026-10-26",
+  "handle": "cherry-cordial",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/cherry_cordial.png",
+  "platform": "woocommerce",
+  "product_id": "1123",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Cherry Cordial",
+  "url": "https://hallowed-grounds.com/shop/cherry-cordial/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1123:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1123:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1123:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d822462f1fb6c510",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-angel-cake",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/raspberry-angel-cake.png",
+  "platform": "woocommerce",
+  "product_id": "1128",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Raspberry Angel Cake",
+  "url": "https://hallowed-grounds.com/shop/raspberry-angel-cake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1128:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1128:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1128:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3e0cdb95a81defe1",
+  "first_seen": "2026-10-26",
+  "handle": "english-breakfast",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/english_breakfast.png",
+  "platform": "woocommerce",
+  "product_id": "1151",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Black Teas",
+   "Decaffeinated Black Tea",
+   "Decaffeinated Teas",
+   "English Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "English Breakfast",
+  "url": "https://hallowed-grounds.com/shop/english-breakfast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "1151:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "1151:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "1151:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d07a8ed2ed88279",
+  "first_seen": "2026-10-26",
+  "handle": "drews-brew",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/dru-brew.png",
+  "platform": "woocommerce",
+  "product_id": "1167",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Chemical Free",
+   "Christmas coffee",
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Medium Roast"
+  ],
+  "title": "Drusilla’s Bru",
+  "url": "https://hallowed-grounds.com/shop/drews-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1167:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1167:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1167:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "683ead572be63317",
+  "first_seen": "2026-10-26",
+  "handle": "erics-gourmet-blend",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/erics_gourmet_blend.png",
+  "platform": "woocommerce",
+  "product_id": "1170",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Chemical Free",
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Dark Roast",
+   "Indonesian Coffees"
+  ],
+  "title": "Eric’s Gourmet Blend",
+  "url": "https://hallowed-grounds.com/shop/erics-gourmet-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1170:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1170:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1170:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "548e659a29444dfb",
+  "first_seen": "2026-10-26",
+  "handle": "etheru",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/etheragua-min.png",
+  "platform": "woocommerce",
+  "product_id": "1173",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Fresh Roasted Coffee",
+   "Medium Roast"
+  ],
+  "title": "Etheragua",
+  "url": "https://hallowed-grounds.com/shop/etheru/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1173:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1173:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1173:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a12471600818760f",
+  "first_seen": "2026-10-26",
+  "handle": "island-gold",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/island_gold.png",
+  "platform": "woocommerce",
+  "product_id": "1176",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Chemical Free",
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Indonesian Coffees",
+   "Medium Roast"
+  ],
+  "title": "Island Gold",
+  "url": "https://hallowed-grounds.com/shop/island-gold/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1176:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1176:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1176:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2185ade6c43262c6",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-madness",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/midnight_madness.png",
+  "platform": "woocommerce",
+  "product_id": "1182",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Dark Roast",
+   "Full City Roast",
+   "Organic",
+   "Single Origin"
+  ],
+  "title": "Midnight Madness",
+  "url": "https://hallowed-grounds.com/shop/midnight-madness/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1182:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1182:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1182:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dce8cd24dc86b5ed",
+  "first_seen": "2026-10-26",
+  "handle": "mystic-malabar",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/mystic_malabar.png",
+  "platform": "woocommerce",
+  "product_id": "1185",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Medium Roast"
+  ],
+  "title": "Mystic Malabar",
+  "url": "https://hallowed-grounds.com/shop/mystic-malabar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1185:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1185:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1185:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b2e69a3b74169973",
+  "first_seen": "2026-10-26",
+  "handle": "private-stock",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/private_stock.png",
+  "platform": "woocommerce",
+  "product_id": "1188",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Dark Roast",
+   "Full City Roast",
+   "Single Origin"
+  ],
+  "title": "Private Stock",
+  "url": "https://hallowed-grounds.com/shop/private-stock/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1188:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1188:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1188:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5bea957931b0f7fb",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/roasters_choice.png",
+  "platform": "woocommerce",
+  "product_id": "1191",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Medium Roast"
+  ],
+  "title": "Roaster’s Choice",
+  "url": "https://hallowed-grounds.com/shop/roasters-choice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1191:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1191:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1191:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f09d0861f2a78558",
+  "first_seen": "2026-10-26",
+  "handle": "zoom",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/zoom.png",
+  "platform": "woocommerce",
+  "product_id": "1194",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Caffeine Boost",
+   "Chemical Free",
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Medium Roast"
+  ],
+  "title": "Zoom!",
+  "url": "https://hallowed-grounds.com/shop/zoom/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1194:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1194:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1194:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b7a2b81d0bb2d8fb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican-tarrazu",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/costa_rican_tarrazu_estate.png",
+  "platform": "woocommerce",
+  "product_id": "1209",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Dark Roast",
+   "Latin American Coffees",
+   "Single Origin"
+  ],
+  "title": "Costa Rican Tarrazu Estate",
+  "url": "https://hallowed-grounds.com/shop/costa-rican-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1209:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1209:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1209:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0213ab8fc8a8382",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antiqua",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/guatemala_antigua.png",
+  "platform": "woocommerce",
+  "product_id": "1215",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Estate Coffee",
+   "Fair Trade",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Organic",
+   "Shade Grown Coffee",
+   "Single Origin",
+   "Sustainable"
+  ],
+  "title": "Guatemala Antigua Organic FTO",
+  "url": "https://hallowed-grounds.com/shop/guatemala-antiqua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1215:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1215:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1215:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e30c142e2ea205a",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsooned-malabar",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/india_monsoon_malabar.png",
+  "platform": "woocommerce",
+  "product_id": "1221",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Indonesian Coffees",
+   "Low Acid Coffee",
+   "Medium Roast",
+   "Monsooned coffee",
+   "Shade Grown Coffee",
+   "Single Origin",
+   "Sustainable"
+  ],
+  "title": "India Monsoon Malabar",
+  "url": "https://hallowed-grounds.com/shop/india-monsooned-malabar/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1221:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1221:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1221:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91d8ca38dd769f6a",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/kenya_aa-1.png",
+  "platform": "woocommerce",
+  "product_id": "1227",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Dark Roast",
+   "Estate Coffee",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Kenya AA Premium",
+  "url": "https://hallowed-grounds.com/shop/kenya-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1227:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1227:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1227:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f9c29be37056fb88",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/shining-star.png",
+  "platform": "woocommerce",
+  "product_id": "1234",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Dark Roast",
+   "Decaffeinated Coffees",
+   "Estate Coffee",
+   "Indonesian Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin",
+   "holiday blend"
+  ],
+  "title": "Shining Star",
+  "url": "https://hallowed-grounds.com/shop/holiday-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1234:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1234:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1234:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0d67479ac5063013",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/papua_new_guinea.png",
+  "platform": "woocommerce",
+  "product_id": "1237",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Fair Trade",
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Organic",
+   "Single Origin",
+   "Sustainable Coffee"
+  ],
+  "title": "Organic Papua New Guinea",
+  "url": "https://hallowed-grounds.com/shop/papua-new-guinea/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1237:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1237:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1237:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb69301a91c7003b",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-nkg-bloom-silverback",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/NKG-Bloom-Uganda_Coffee-in-garden-1-273x450.jpeg.webp",
+  "platform": "woocommerce",
+  "product_id": "1240",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Uganda NKG Bloom Silverback",
+  "url": "https://hallowed-grounds.com/shop/uganda-nkg-bloom-silverback/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1240:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1240:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1240:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0264dffcecedd1c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-natural-ayehu",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/tanzanian_peaberry_zanzibar.png",
+  "platform": "woocommerce",
+  "product_id": "1243",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Tanzanian Peaberry",
+  "url": "https://hallowed-grounds.com/shop/ethiopian-natural-ayehu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1243:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1243:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1243:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c06902b2dc96dfbe",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-mokamba",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/ethiopian_mokamba.png",
+  "platform": "woocommerce",
+  "product_id": "1246",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Mokamba Heirloom Sidamo",
+  "url": "https://hallowed-grounds.com/shop/ethiopian-mokamba/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1246:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1246:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1246:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f5812a9196e6eeb0",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-kibenga",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/burundi_kibenga.png",
+  "platform": "woocommerce",
+  "product_id": "1249",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Burundi",
+  "url": "https://hallowed-grounds.com/shop/burundi-kibenga/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz",
+    "variant_id": "1249:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz",
+    "variant_id": "1249:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2.95,
+    "title": "16",
+    "variant_id": "1249:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3f3df5fde46a056a",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-capucas",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/honduras.png",
+  "platform": "woocommerce",
+  "product_id": "1252",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Estate Coffee",
+   "Full City Roast",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Organic",
+   "Shade grown",
+   "Single Origin",
+   "Sustainable Coffee",
+   "Woman Owned"
+  ],
+  "title": "Honduras Capucas Organic FTO",
+  "url": "https://hallowed-grounds.com/shop/honduras-capucas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1252:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1252:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1252:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3a3830744345fcf8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/nicaragua.png",
+  "platform": "woocommerce",
+  "product_id": "1258",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Nicaragua Fair Trade Organic (FTO) Reyna del Cafe",
+  "url": "https://hallowed-grounds.com/shop/nicaragua/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1258:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1258:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1258:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "580d81966dabcbea",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/peru.png",
+  "platform": "woocommerce",
+  "product_id": "1261",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin",
+   "Sustainable Coffee"
+  ],
+  "title": "Peru Organic",
+  "url": "https://hallowed-grounds.com/shop/peru/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1261:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1261:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1261:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e02dc1f8adcc081",
+  "first_seen": "2026-10-26",
+  "handle": "java-jampit",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/java_jampit_estate.png",
+  "platform": "woocommerce",
+  "product_id": "1264",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Estate Coffee",
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Java Jampit Estate",
+  "url": "https://hallowed-grounds.com/shop/java-jampit/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1264:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1264:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1264:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d10b1f3f3eb2947c",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/the-masters-blend-dark.png",
+  "platform": "woocommerce",
+  "product_id": "1268",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Custom Blends",
+   "Dark Roast",
+   "Estate Coffee",
+   "Indonesian Coffees",
+   "Medium Roast"
+  ],
+  "title": "The Master’s Blend",
+  "url": "https://hallowed-grounds.com/shop/sulawesi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1268:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1268:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1268:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9814b219f62dec47",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/moka_java-1.png",
+  "platform": "woocommerce",
+  "product_id": "1605",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Arabica beans",
+   "Coffee Aficionado",
+   "Custom Blends",
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Moka Java"
+  ],
+  "title": "Moka Java",
+  "url": "https://hallowed-grounds.com/shop/moka-java/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "1605:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "1605:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "1605:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b47a67cc53a1f6a6",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2017/03/salted_caramel.png",
+  "platform": "woocommerce",
+  "product_id": "2113",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Salted Caramel",
+  "url": "https://hallowed-grounds.com/shop/salted-caramel/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "2113:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "2113:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "2113:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff799fab54f174b0",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-colombian-supremo",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2017/03/french_roast_colombian_supremo.png",
+  "platform": "woocommerce",
+  "product_id": "2134",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Dark Roast",
+   "Decaffeinated Coffees",
+   "Latin American Coffees",
+   "Single Origin",
+   "Sustainable Coffee"
+  ],
+  "title": "French Roast Colombian Supremo",
+  "url": "https://hallowed-grounds.com/shop/french-roast-colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "2134:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "2134:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "2134:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8af0b4e22f5dcde8",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2019/04/espresso_beans.png",
+  "platform": "woocommerce",
+  "product_id": "3224",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Event Favors",
+   "Gourmet Gifts &amp; Gift Baskets",
+   "chocolate covered espresso beans",
+   "espresso beans",
+   "event favors",
+   "favors",
+   "wedding favors"
+  ],
+  "title": "NEW! Chocolate Covered Espresso Beans",
+  "url": "https://hallowed-grounds.com/shop/chocolate-covered-espresso-beans/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.0,
+    "title": "NEW! Chocolate Covered Espresso Beans",
+    "variant_id": "3224:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d645283b94a4e23",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2021/01/sulawesi-toraja.png",
+  "platform": "woocommerce",
+  "product_id": "4415",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Chemical Free",
+   "Indonesian Coffees",
+   "Single Origin"
+  ],
+  "title": "Sulawesi Toraja",
+  "url": "https://hallowed-grounds.com/shop/sulawesi-toraja/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "4415:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "4415:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz",
+    "variant_id": "4415:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "550feb717c8cdce1",
+  "first_seen": "2026-10-26",
+  "handle": "congo",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2021/08/congo-min.png",
+  "platform": "woocommerce",
+  "product_id": "5512",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Dry Processed",
+   "Fair Trade",
+   "Light Roast",
+   "Organic",
+   "Rain Forest Alliance",
+   "Single Origin"
+  ],
+  "title": "Organic Congo",
+  "url": "https://hallowed-grounds.com/shop/congo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "5512:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "5512:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "5512:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f060d161b36fd549",
+  "first_seen": "2026-10-26",
+  "handle": "african-safari",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2021/08/african_safari.png",
+  "platform": "woocommerce",
+  "product_id": "5520",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Coffee Aficionado",
+   "Custom Blend",
+   "Custom Blends",
+   "Fresh Roasted Coffee",
+   "Medium Roast",
+   "Specialty coffee"
+  ],
+  "title": "African Safari",
+  "url": "https://hallowed-grounds.com/shop/african-safari/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "5520:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "5520:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "5520:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a01c09ad09da2873",
+  "first_seen": "2026-10-26",
+  "handle": "georgia-peach",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2022/05/georgia-peach.png",
+  "platform": "woocommerce",
+  "product_id": "6040",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit Teas",
+   "Fruit/Herbal Teas",
+   "Healthy Teas",
+   "Herbal Teas",
+   "Hibiscus",
+   "Loose Leaf Teas",
+   "Naturally Decaffeinated Tea",
+   "Specialty Loose Leaf Teas",
+   "Specialty Teas"
+  ],
+  "title": "Georgia Peach",
+  "url": "https://hallowed-grounds.com/shop/georgia-peach/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "6040:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "6040:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "6040:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53339d934fe50a21",
+  "first_seen": "2026-10-26",
+  "handle": "irish-cream",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2022/08/irish_cream-min.png",
+  "platform": "woocommerce",
+  "product_id": "6194",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Sale Products",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Irish Cream",
+  "url": "https://hallowed-grounds.com/shop/irish-cream/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "6194:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "6194:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "6194:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c9e4200f1ec28812",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-street-vanilla-rooibos",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/bourbon_street_vanilla_rooibos.png",
+  "platform": "woocommerce",
+  "product_id": "682",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fruit/Herbal Teas",
+   "Natrually Decaffeinated Tea",
+   "Red Tea",
+   "Relaxing Tea",
+   "Rooibos Red Tea",
+   "Rooibos Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Bourbon Street Vanilla Rooibos",
+  "url": "https://hallowed-grounds.com/shop/bourbon-street-vanilla-rooibos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "682:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "682:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "682:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12a539d5fabcf744",
+  "first_seen": "2026-10-26",
+  "handle": "malawi",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/06/ethiopian_mokamba.png",
+  "platform": "woocommerce",
+  "product_id": "6871",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Malawi",
+  "url": "https://hallowed-grounds.com/shop/malawi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "6871:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "6871:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "6871:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0053f69cc580910a",
+  "first_seen": "2026-10-26",
+  "handle": "almond-amaretto",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/almond_amaretto.png",
+  "platform": "woocommerce",
+  "product_id": "713",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffees",
+   "Decaffeinated Flavors",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Almond Amaretto",
+  "url": "https://hallowed-grounds.com/shop/almond-amaretto/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "713:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "713:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "713:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b30804874cbb267c",
+  "first_seen": "2026-10-26",
+  "handle": "americana",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/americana.png",
+  "platform": "woocommerce",
+  "product_id": "715",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Custom Blends",
+   "Decaffeinated Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Specialty Coffees",
+   "Sustainable Coffee"
+  ],
+  "title": "Americana",
+  "url": "https://hallowed-grounds.com/shop/americana/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "715:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "715:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "715:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0126e00f4010d9de",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-apple",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/caramel-apple-min.png",
+  "platform": "woocommerce",
+  "product_id": "717",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Flavored Coffees",
+   "Flavored Decaffeinated coffee",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Caramel Apple",
+  "url": "https://hallowed-grounds.com/shop/caramel-apple/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "717:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "717:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "717:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b5b57e33e0b19f85",
+  "first_seen": "2026-10-26",
+  "handle": "black-gold-champion-blend",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/black_gold_champion_blend.png",
+  "platform": "woocommerce",
+  "product_id": "719",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Black and Gold Champion",
+   "Custom Blends",
+   "Dark Roast",
+   "Decaffeinated Coffees",
+   "Light Roast",
+   "Regional Coffees",
+   "Single Origin Coffees",
+   "Sustainable Coffee",
+   "Varietals"
+  ],
+  "title": "Black & Gold Champion Blend",
+  "url": "https://hallowed-grounds.com/shop/black-gold-champion-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "719:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "719:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "719:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2cea9ef3de1bab5c",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-cheesecake",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/blueberry_cheesecake.png",
+  "platform": "woocommerce",
+  "product_id": "721",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Flavored Coffees",
+   "Flavored Decaffeinated coffee",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Blueberry Cheesecake",
+  "url": "https://hallowed-grounds.com/shop/blueberry-cheesecake/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "721:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "721:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "721:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39f6da917bbd48e0",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-da-lagoa",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/04/brazil_fazenda_da_lagoa.png",
+  "platform": "woocommerce",
+  "product_id": "723",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Dry Processed",
+   "Estate Coffee",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin",
+   "Sustainable"
+  ],
+  "title": "Brazil Fazenda Da Lagoa",
+  "url": "https://hallowed-grounds.com/shop/brazil-fazenda-da-lagoa/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "723:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "723:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "723:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e31ff52c32585246",
+  "first_seen": "2026-10-26",
+  "handle": "almond-glee",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2024/08/almond-glee-min.png",
+  "platform": "woocommerce",
+  "product_id": "7613",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffees",
+   "Decaffeinated Flavors",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Almond Glee",
+  "url": "https://hallowed-grounds.com/shop/almond-glee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "7613:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "7613:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "7613:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f2e9bd8d9d593d3d",
+  "first_seen": "2026-10-26",
+  "handle": "banana-foster",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/banana-foster-min.png",
+  "platform": "woocommerce",
+  "product_id": "793",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Flavored Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Banana Foster",
+  "url": "https://hallowed-grounds.com/shop/banana-foster/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "793:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "793:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "793:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f1d3fbdb5f344dc9",
+  "first_seen": "2026-10-26",
+  "handle": "se-chung-oolong",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/organic_slimming_oolong.png",
+  "platform": "woocommerce",
+  "product_id": "8048",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Oolong Teas",
+   "Organic Teas",
+   "Organic/Estate Teas",
+   "Specialty Loose Leaf Teas",
+   "Weight loss teas",
+   "oolong teas"
+  ],
+  "title": "Se Chung Oolong",
+  "url": "https://hallowed-grounds.com/shop/se-chung-oolong/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz.",
+    "variant_id": "8048:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz.",
+    "variant_id": "8048:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz.",
+    "variant_id": "8048:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b52ef970212c6a3",
+  "first_seen": "2026-10-26",
+  "handle": "bella-coola",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/bella_coola.png",
+  "platform": "woocommerce",
+  "product_id": "805",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Healthy Fruit Tea",
+   "Naturally Decaffeinated Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Bella Coola",
+  "url": "https://hallowed-grounds.com/shop/bella-coola/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "805:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "805:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "805:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "554807ff22504ad8",
+  "first_seen": "2026-10-26",
+  "handle": "berry-berry",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/berry_berry.png",
+  "platform": "woocommerce",
+  "product_id": "807",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Healthy Fruit Tea",
+   "Ice Tea",
+   "Naturally Decaffeinated Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Berry Berry",
+  "url": "https://hallowed-grounds.com/shop/berry-berry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "807:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "807:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "807:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4fa93029c21be4bd",
+  "first_seen": "2026-10-26",
+  "handle": "belgian-chocolate-rooibos",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/belgian_chocolate_rooibos.png",
+  "platform": "woocommerce",
+  "product_id": "809",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fruit/Herbal Teas",
+   "Naturally Decaffeinated Tea",
+   "Red Tea",
+   "Relaxing Tea",
+   "Rooibos Red Tea",
+   "Rooibos Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Belgian Chocolate Rooibos",
+  "url": "https://hallowed-grounds.com/shop/belgian-chocolate-rooibos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "809:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "809:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "809:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0a7ac3c3ab0d0e2",
+  "first_seen": "2026-10-26",
+  "handle": "cape-cod-cranberry-rooibos",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/cape_cod_cranberry_rooibos.png",
+  "platform": "woocommerce",
+  "product_id": "812",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Healthy Tea",
+   "Naturally Decaffeinated Tea",
+   "Red Tea",
+   "Rooibos Red Tea",
+   "Rooibos Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Cape Cod Cranberry Rooibos",
+  "url": "https://hallowed-grounds.com/shop/cape-cod-cranberry-rooibos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "812:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "812:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "812:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "80fe7b71890ea22d",
+  "first_seen": "2026-10-26",
+  "handle": "creme-caramel-rooibos",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/creme_au_caramel_rooibos.png",
+  "platform": "woocommerce",
+  "product_id": "813",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Naturally Decaffeinated Tea",
+   "Red Tea",
+   "Rooibos Red Tea",
+   "Rooibos Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Crème Caramel Rooibos",
+  "url": "https://hallowed-grounds.com/shop/creme-caramel-rooibos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "813:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "813:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "813:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "beec619f26b80261",
+  "first_seen": "2026-10-26",
+  "handle": "provence-rooibos",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/provence_rooibos.png",
+  "platform": "woocommerce",
+  "product_id": "816",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Naturally Decaffeinated Tea",
+   "Red Tea",
+   "Rooibos Red Tea",
+   "Rooibos Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Provence Rooibos",
+  "url": "https://hallowed-grounds.com/shop/provence-rooibos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "816:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "816:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "816:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b4e6127682b04ae",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry-kiwi",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/strawberry_kiwi.png",
+  "platform": "woocommerce",
+  "product_id": "817",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Naturally Decaffeinated Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Strawberry Kiwi",
+  "url": "https://hallowed-grounds.com/shop/strawberry-kiwi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "817:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "817:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "817:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da49b72325e51863",
+  "first_seen": "2026-10-26",
+  "handle": "casablanca",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/Casablanca.png",
+  "platform": "woocommerce",
+  "product_id": "818",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Naturally Decaffeinated Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Casablanca",
+  "url": "https://hallowed-grounds.com/shop/casablanca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "2 oz.",
+    "variant_id": "818:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz.",
+    "variant_id": "818:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "8 oz.",
+    "variant_id": "818:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d216d3b9b5a91bdf",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-torte-copy",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/pumpkin_torte.png",
+  "platform": "woocommerce",
+  "product_id": "8488",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Decaffeinated Flavored Coffee",
+   "Flavored Coffees",
+   "Holiday flavor",
+   "Latin American Coffees",
+   "Single Origin",
+   "Water processed decaffeinated coffee"
+  ],
+  "title": "Pumpkin Torte",
+  "url": "https://hallowed-grounds.com/shop/pumpkin-torte-copy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "8488:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "8488:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "8488:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ed178d93a4c4641",
+  "first_seen": "2026-10-26",
+  "handle": "formosa-oolong",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2025/08/formosa-tea-min.png",
+  "platform": "woocommerce",
+  "product_id": "8853",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Oolong Teas",
+   "Organic Teas",
+   "Organic/Estate Teas",
+   "Specialty Loose Leaf Teas",
+   "Weight loss teas",
+   "oolong teas"
+  ],
+  "title": "Formosa Oolong",
+  "url": "https://hallowed-grounds.com/shop/formosa-oolong/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz.",
+    "variant_id": "8853:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz.",
+    "variant_id": "8853:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz.",
+    "variant_id": "8853:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff24691952d989e8",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona-extra-fancy",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/hawaiian_kona_extra_fancy.png",
+  "platform": "woocommerce",
+  "product_id": "888",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Gourmet Gifts &amp; Gift Baskets",
+   "Hawaiian Kona",
+   "Island Coffees",
+   "Kona coffee",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Genuine Hawaiian Kona",
+  "url": "https://hallowed-grounds.com/shop/hawaiian-kona-extra-fancy/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 8.75,
+    "title": "2 oz.",
+    "variant_id": "888:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 8.75,
+    "title": "8 oz.",
+    "variant_id": "888:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 8.75,
+    "title": "16 oz.",
+    "variant_id": "888:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f86f2b20b5cee69f",
+  "first_seen": "2026-10-26",
+  "handle": "beaver-valley-espresso-blend",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/beaver_valley_espresso_blend.png",
+  "platform": "woocommerce",
+  "product_id": "898",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Dark Roast",
+   "Espresso",
+   "Italian Roast",
+   "Single Origin",
+   "Sustainable Coffee"
+  ],
+  "title": "Beaver Valley Espresso",
+  "url": "https://hallowed-grounds.com/shop/beaver-valley-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "898:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "898:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "898:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "773b4ea5407eae06",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/colombian_supremo.png",
+  "platform": "woocommerce",
+  "product_id": "901",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Colombian Supremo",
+  "url": "https://hallowed-grounds.com/shop/colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "901:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "901:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "901:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e80ec159dc2ffda6",
+  "first_seen": "2026-10-26",
+  "handle": "java-joe",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/java_joe.png",
+  "platform": "woocommerce",
+  "product_id": "914",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Custom Blends",
+   "Dark Roast",
+   "Latin American Coffees",
+   "Sustainable Coffee"
+  ],
+  "title": "Java Joe",
+  "url": "https://hallowed-grounds.com/shop/java-joe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "914:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "914:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "914:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ebe1d9735de796c8",
+  "first_seen": "2026-10-26",
+  "handle": "sonrise-blend",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/sonrise_blend-2.png",
+  "platform": "woocommerce",
+  "product_id": "919",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Breakfast Blend",
+   "Custom Blends",
+   "Medium Roast"
+  ],
+  "title": "Sonrise Blend",
+  "url": "https://hallowed-grounds.com/shop/sonrise-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "919:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "919:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "919:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "40c16cffd46525d4",
+  "first_seen": "2026-10-26",
+  "handle": "morning-joy",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/morning_joy.png",
+  "platform": "woocommerce",
+  "product_id": "923",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Breakfast Blend",
+   "Custom Blends",
+   "Direct Trade Estate",
+   "Latin American Coffees",
+   "Medium Roast"
+  ],
+  "title": "Morning Joy",
+  "url": "https://hallowed-grounds.com/shop/morning-joy/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "923:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "923:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "923:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09586bfde92fe1fc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/ethiopian_yirgacheffe.png",
+  "platform": "woocommerce",
+  "product_id": "927",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Light Roast",
+   "Shade grown",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://hallowed-grounds.com/shop/ethiopian-yirgacheffe/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "927:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "927:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "927:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d94570b64ab754c",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2026/01/rwanda.png",
+  "platform": "woocommerce",
+  "product_id": "9314",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Rwanda",
+  "url": "https://hallowed-grounds.com/shop/rwanda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "9314:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "9314:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "9314:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "62a39e2134177ef1",
+  "first_seen": "2026-10-26",
+  "handle": "organic-timor",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2026/01/organic-timor.png",
+  "platform": "woocommerce",
+  "product_id": "9318",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Indonesian Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Timor",
+  "url": "https://hallowed-grounds.com/shop/organic-timor/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "9318:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "9318:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz",
+    "variant_id": "9318:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8da229316690dc07",
+  "first_seen": "2026-10-26",
+  "handle": "organic-bali-blue-moon",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2026/01/organic-bali-blue-moon.png",
+  "platform": "woocommerce",
+  "product_id": "9322",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Dark Roast",
+   "Indonesian Coffees",
+   "Low Acid Coffee",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Bali Blue Moon",
+  "url": "https://hallowed-grounds.com/shop/organic-bali-blue-moon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "9322:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "9322:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "9322:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "77adee12268ccd1e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/sumatra_mandheling.png",
+  "platform": "woocommerce",
+  "product_id": "933",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Chemical Free",
+   "Dark Roast",
+   "Indonesian Coffees",
+   "Island Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://hallowed-grounds.com/shop/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "933:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "933:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "933:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5566dc4108c940da",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/mexican_chiapas.png",
+  "platform": "woocommerce",
+  "product_id": "940",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fresh Roasted Coffee",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Mexican Chiapas",
+  "url": "https://hallowed-grounds.com/shop/mexican-chiapas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "940:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "940:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "940:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c915ff77b7d34c8",
+  "first_seen": "2026-10-26",
+  "handle": "cream-earl-grey",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/cream_earl_grey.png",
+  "platform": "woocommerce",
+  "product_id": "947",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Flavored Green Tea",
+   "Green Teas",
+   "Ice Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Cream Earl Grey",
+  "url": "https://hallowed-grounds.com/shop/cream-earl-grey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "947:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "947:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "947:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf9f2c846a9e60d0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-decaf",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2026/05/ethiopian-sidamo-decaf.png",
+  "platform": "woocommerce",
+  "product_id": "9582",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "African Coffees",
+   "Arabica beans",
+   "Coffee Connoisseur",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Sidamo Decaf",
+  "url": "https://hallowed-grounds.com/shop/ethiopian-sidamo-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "9582:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "9582:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "9582:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "75c416f927122789",
+  "first_seen": "2026-10-26",
+  "handle": "honey-roasted-peanut-butter",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/honey_roasted_peanut_butter.png",
+  "platform": "woocommerce",
+  "product_id": "961",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fresh Ground Nut Butters",
+   "Honey Roasted Peanut Butter",
+   "Nut Products"
+  ],
+  "title": "Honey Roasted Peanut Butter",
+  "url": "https://hallowed-grounds.com/shop/honey-roasted-peanut-butter/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.5,
+    "title": "Honey Roasted Peanut Butter",
+    "variant_id": "961:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "847d726278b2e2fb",
+  "first_seen": "2026-10-26",
+  "handle": "utopia-decaf",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2026/05/utopia-decaf-1.png",
+  "platform": "woocommerce",
+  "product_id": "9620",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Custom Blends",
+   "Decaffeinated Coffees",
+   "Latin American Coffees",
+   "Medium Roast",
+   "Specialty Coffees",
+   "Sustainable Coffee"
+  ],
+  "title": "Utopia Decaf",
+  "url": "https://hallowed-grounds.com/shop/utopia-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 2.95,
+    "title": "2 oz.",
+    "variant_id": "9620:0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 2.95,
+    "title": "8 oz.",
+    "variant_id": "9620:1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 2.95,
+    "title": "16 oz.",
+    "variant_id": "9620:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a736de4944866c2c",
+  "first_seen": "2026-10-26",
+  "handle": "natural-unsalted-peanut-butter",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/natural_unsalted_peanut_butter.png",
+  "platform": "woocommerce",
+  "product_id": "964",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fresh Ground Nut Butters",
+   "Fresh Roasted Peanut Butter",
+   "Natural Peanut Butter",
+   "Nut Products"
+  ],
+  "title": "Natural Unsalted Peanut Butter",
+  "url": "https://hallowed-grounds.com/shop/natural-unsalted-peanut-butter/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 3.75,
+    "title": "Natural Unsalted Peanut Butter",
+    "variant_id": "964:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b87c0a4b00b4613b",
+  "first_seen": "2026-10-26",
+  "handle": "enertea",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2017/07/enertea.png",
+  "platform": "woocommerce",
+  "product_id": "968",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fruit/Herbal Teas",
+   "Mate",
+   "Mate'",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Enertea",
+  "url": "https://hallowed-grounds.com/shop/enertea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "2 oz.",
+    "variant_id": "968:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz.",
+    "variant_id": "968:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "8 oz.",
+    "variant_id": "968:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ffe0d3e6c4f5ab4",
+  "first_seen": "2026-10-26",
+  "handle": "lemon-flavored-mate",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/lemon_flavored_mate.png",
+  "platform": "woocommerce",
+  "product_id": "969",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Fruit/Herbal Teas",
+   "Mate",
+   "Mate'",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Lemon Flavored Mate",
+  "url": "https://hallowed-grounds.com/shop/lemon-flavored-mate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "969:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "969:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "969:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "14880cb7aa04d709",
+  "first_seen": "2026-10-26",
+  "handle": "lapsang-souchong",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/lapsang_souchong.png",
+  "platform": "woocommerce",
+  "product_id": "970",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Black Teas",
+   "China Black Tea",
+   "Russsian tea",
+   "Smoked Tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Lapsang Souchong",
+  "url": "https://hallowed-grounds.com/shop/lapsang-souchong/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "2 oz.",
+    "variant_id": "970:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz.",
+    "variant_id": "970:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "8 oz.",
+    "variant_id": "970:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "76904d17e64581eb",
+  "first_seen": "2026-10-26",
+  "handle": "cucumber-lemon-refresher",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/cucumber-lemon-refresher.png",
+  "platform": "woocommerce",
+  "product_id": "971",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Green Teas",
+   "Matcha",
+   "Organic Green Matcha",
+   "Organic/Estate Teas",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Cucumber Lemon Refresher",
+  "url": "https://hallowed-grounds.com/shop/cucumber-lemon-refresher/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.0,
+    "title": "2 oz.",
+    "variant_id": "971:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "971:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 6.0,
+    "title": "8 oz.",
+    "variant_id": "971:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1600335df2390c55",
+  "first_seen": "2026-10-26",
+  "handle": "margarets-hope-darjeeling",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/margarets_hope.png",
+  "platform": "woocommerce",
+  "product_id": "972",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Black Teas",
+   "Darjeeling",
+   "Estate Teas",
+   "Organic/Estate Teas",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Margaret’s Hope Darjeeling",
+  "url": "https://hallowed-grounds.com/shop/margarets-hope-darjeeling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.0,
+    "title": "2 oz.",
+    "variant_id": "972:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz.",
+    "variant_id": "972:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz.",
+    "variant_id": "972:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0abc6b134cf3796a",
+  "first_seen": "2026-10-26",
+  "handle": "wellness-serenity",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/wellness_serenity.png",
+  "platform": "woocommerce",
+  "product_id": "975",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Decaffeinated Teas",
+   "Fruit/Herbal Teas",
+   "Health &amp; Wellness Tea",
+   "Naturally Decaffeinated Tea",
+   "Sleepy Time tea",
+   "Specialty Loose Leaf Teas"
+  ],
+  "title": "Wellness Serenity",
+  "url": "https://hallowed-grounds.com/shop/wellness-serenity/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 8.0,
+    "title": "2 oz.",
+    "variant_id": "975:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz.",
+    "variant_id": "975:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 8.0,
+    "title": "8 oz.",
+    "variant_id": "975:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56d1d072fb473e51",
+  "first_seen": "2026-10-26",
+  "handle": "organic-slimming-oolong",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/organic_slimming_oolong.png",
+  "platform": "woocommerce",
+  "product_id": "977",
+  "product_type": "variable",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Oolong Teas",
+   "Organic Teas",
+   "Organic/Estate Teas",
+   "Specialty Loose Leaf Teas",
+   "Weight loss teas",
+   "oolong teas"
+  ],
+  "title": "Organic Slimming Oolong",
+  "url": "https://hallowed-grounds.com/shop/organic-slimming-oolong/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz.",
+    "variant_id": "977:0"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4 oz.",
+    "variant_id": "977:1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8 oz.",
+    "variant_id": "977:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8bef664cd052979",
+  "first_seen": "2026-10-26",
+  "handle": "java-junkie-gift-basket",
+  "image": "https://hallowed-grounds.com/wp-content/uploads/2015/05/java_junkie_gift_basket.png",
+  "platform": "woocommerce",
+  "product_id": "982",
+  "product_type": "simple",
+  "roaster_slug": "hallowed-grounds",
+  "tags": [
+   "Gourmet Gifts &amp; Gift Baskets"
+  ],
+  "title": "Java Junkie Basket",
+  "url": "https://hallowed-grounds.com/shop/java-junkie-gift-basket/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "Java Junkie Basket",
+    "variant_id": "982:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

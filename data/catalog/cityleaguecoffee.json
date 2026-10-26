@@ -1,0 +1,127 @@
+[
+ {
+  "body_hash": "97a55a0690668d2b",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-ipa",
+  "image": "https://cityleaguecoffee.com/wp-content/uploads/2024/03/City_League_Bag_PinkBourbonIPA-1.webp",
+  "platform": "woocommerce",
+  "product_id": "4900",
+  "product_type": "variable",
+  "roaster_slug": "cityleaguecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Pink Bourbon IPA",
+  "url": "https://cityleaguecoffee.com/product/pink-bourbon-ipa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "Pink Bourbon IPA",
+    "variant_id": "4900:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98ada6d967b0df4c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cityleaguecoffee.com/wp-content/uploads/2020/01/26-08-10-CoffeeBagMockup-DecafColombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "7582",
+  "product_type": "variable",
+  "roaster_slug": "cityleaguecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "DECAF Colombia",
+  "url": "https://cityleaguecoffee.com/product/decaf-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "DECAF Colombia",
+    "variant_id": "7582:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "58aa5a5112effc4e",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-carnaval",
+  "image": "https://cityleaguecoffee.com/wp-content/uploads/2026/02/26-02-15-CoffeeBagMockup-BrazilCarnaval.jpg",
+  "platform": "woocommerce",
+  "product_id": "7720",
+  "product_type": "variable",
+  "roaster_slug": "cityleaguecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Brazil Carnaval",
+  "url": "https://cityleaguecoffee.com/product/brazil-carnaval/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Brazil Carnaval",
+    "variant_id": "7720:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1de745f3ea8bef1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-dark",
+  "image": "https://cityleaguecoffee.com/wp-content/uploads/2026/02/26-02-15-CoffeeBagMockup-SumatraDark.jpg",
+  "platform": "woocommerce",
+  "product_id": "7728",
+  "product_type": "variable",
+  "roaster_slug": "cityleaguecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sumatra Dark!",
+  "url": "https://cityleaguecoffee.com/product/sumatra-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Sumatra Dark!",
+    "variant_id": "7728:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a302abe7a09cc80a",
+  "first_seen": "2026-10-26",
+  "handle": "black-honey-sidra",
+  "image": "https://cityleaguecoffee.com/wp-content/uploads/2026/09/26-10-03-CoffeeBagMockup-BlackHoneySidra.jpg",
+  "platform": "woocommerce",
+  "product_id": "8434",
+  "product_type": "variable",
+  "roaster_slug": "cityleaguecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black Honey Sidra",
+  "url": "https://cityleaguecoffee.com/product/black-honey-sidra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.0,
+    "title": "Black Honey Sidra",
+    "variant_id": "8434:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

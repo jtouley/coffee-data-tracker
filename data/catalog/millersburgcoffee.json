@@ -1,0 +1,238 @@
+[
+ {
+  "body_hash": "0053093bf0d706e8",
+  "first_seen": "2026-10-26",
+  "handle": "limited-edition-alejandro-franco",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2024/01/millersburg-coffee-company-pink-bourbon-sold-out.png",
+  "platform": "woocommerce",
+  "product_id": "1332",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Limited Edition"
+  ],
+  "title": "Limited Edition: Pink Bourbon",
+  "url": "https://millersburgcoffee.com/product/limited-edition-alejandro-franco",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Limited Edition: Pink Bourbon",
+    "variant_id": "1332:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f10ac418ca2207a",
+  "first_seen": "2026-10-26",
+  "handle": "veterans-roast",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2024/05/holmes-county-veterans-roast-_-millersburg-coffee-company.png",
+  "platform": "woocommerce",
+  "product_id": "1669",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [],
+  "title": "Holmes County Veterans Roast",
+  "url": "https://millersburgcoffee.com/product/veterans-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.5,
+    "title": "Holmes County Veterans Roast",
+    "variant_id": "1669:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9dd042595a6dcbc5",
+  "first_seen": "2026-10-26",
+  "handle": "specialty-colombian",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2023/09/millersburg-coffee-company_specialty-colombian_01-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "18",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Coffee",
+   "colombian",
+   "specialty"
+  ],
+  "title": "Specialty Colombian",
+  "url": "https://millersburgcoffee.com/product/specialty-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "4 oz.",
+    "variant_id": "18:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 6.0,
+    "title": "12 oz.",
+    "variant_id": "18:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 6.0,
+    "title": "5 lb.",
+    "variant_id": "18:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c94a92e408554459",
+  "first_seen": "2026-10-26",
+  "handle": "limited-edition-gesha-jn",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2024/09/millersburg-coffee-company-gesha-sold-out.png",
+  "platform": "woocommerce",
+  "product_id": "1977",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Limited Edition"
+  ],
+  "title": "Limited Edition: Gesha",
+  "url": "https://millersburgcoffee.com/product/limited-edition-gesha-jn",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Limited Edition: Gesha",
+    "variant_id": "1977:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4395edc2157fa241",
+  "first_seen": "2026-10-26",
+  "handle": "limited-edition-honey-castillo-jsp",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2024/09/millersburg-coffee-company-honey-castillo-sold-out.png",
+  "platform": "woocommerce",
+  "product_id": "2031",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Limited Edition"
+  ],
+  "title": "Limited Edition: Honey Castillo",
+  "url": "https://millersburgcoffee.com/product/limited-edition-honey-castillo-jsp",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Limited Edition: Honey Castillo",
+    "variant_id": "2031:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8be559d61a866470",
+  "first_seen": "2026-10-26",
+  "handle": "limited-edition-candy",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2024/10/SOLD-OUT_20250227_124805_0000.png",
+  "platform": "woocommerce",
+  "product_id": "2176",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Limited Edition"
+  ],
+  "title": "Limited Edition: Caturra “Candy”",
+  "url": "https://millersburgcoffee.com/product/limited-edition-candy",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Limited Edition: Caturra &#8220;Candy&#8221;",
+    "variant_id": "2176:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e31f205019851ec",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2023/09/MillersburgCoffee-Labels-12oz_decaf-e1697060480727.png",
+  "platform": "woocommerce",
+  "product_id": "71",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "colombian",
+   "decaf",
+   "specialty"
+  ],
+  "title": "Decaf Specialty Colombian",
+  "url": "https://millersburgcoffee.com/product/decaf-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz.",
+    "variant_id": "71:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "71:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "71:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e97d7e5df9bbc9b",
+  "first_seen": "2026-10-26",
+  "handle": "greenpods",
+  "image": "https://millersburgcoffee.com/wp-content/uploads/2023/10/green-pods.jpg",
+  "platform": "woocommerce",
+  "product_id": "84",
+  "product_type": "variable",
+  "roaster_slug": "millersburgcoffee",
+  "tags": [
+   "Coffee",
+   "GreenPods",
+   "compostable",
+   "greenpods",
+   "single serve pods"
+  ],
+  "title": "Single-serve Compostable GreenPods® (Regular or Decaf)",
+  "url": "https://millersburgcoffee.com/product/greenpods",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "Single-serve Compostable GreenPods® (Regular or Decaf)",
+    "variant_id": "84:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

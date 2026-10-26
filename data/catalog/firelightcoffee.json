@@ -1,0 +1,2248 @@
+[
+ {
+  "body_hash": "1adb61f781bc7823",
+  "first_seen": "2026-10-26",
+  "handle": "canopy",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/ec1d01c7-Canopy-2023.jpg?v=1755269818",
+  "platform": "shopify",
+  "product_id": "10072340594962",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coffee",
+   "Coffee > Blend",
+   "Subscriptions"
+  ],
+  "title": "Canopy",
+  "url": "https://firelightcoffee.com/products/canopy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "51054496514322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz. / Fine (Drip)",
+    "variant_id": "51054496547090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz. / Medium (Chemex)",
+    "variant_id": "51054496579858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz. / Coarse (French Press)",
+    "variant_id": "51054496612626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "51054496645394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Fine (Drip)",
+    "variant_id": "51054496678162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Medium (Chemex)",
+    "variant_id": "51054496710930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Coarse (French Press)",
+    "variant_id": "51054496743698"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "90245ca7ae769470",
+  "first_seen": "2026-10-26",
+  "handle": "versatile",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/7623373c-Versatile-2.jpg?v=1755883882",
+  "platform": "shopify",
+  "product_id": "10072341283090",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > Blend",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "Versatile",
+  "url": "https://firelightcoffee.com/products/versatile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51256807883026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Fine",
+    "variant_id": "51256807915794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Coarse",
+    "variant_id": "51256807948562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Medium",
+    "variant_id": "51256807981330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51708982788370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Fine",
+    "variant_id": "51708982821138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Medium",
+    "variant_id": "51708982853906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51708982886674"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "9fcc486fb122077e",
+  "first_seen": "2026-10-26",
+  "handle": "system",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/27cf2ec0-System-2.jpg?v=1755878154",
+  "platform": "shopify",
+  "product_id": "10072341446930",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > Blend",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "System",
+  "url": "https://firelightcoffee.com/products/system",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51256796446994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "51256796479762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51256796512530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Medium",
+    "variant_id": "51256796545298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51708978659602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Fine",
+    "variant_id": "51708978692370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Medium",
+    "variant_id": "51708978725138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 101.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51708978757906"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "ca8e0e2e9f450aab",
+  "first_seen": "2026-10-26",
+  "handle": "hallow",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Hallow1.png?v=1790788658",
+  "platform": "shopify",
+  "product_id": "10072342593810",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > Blend",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Whole Bean"
+  ],
+  "title": "Hallow",
+  "url": "https://firelightcoffee.com/products/hallow",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51054498906386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Fine",
+    "variant_id": "67579573469458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Medium",
+    "variant_id": "67579573502226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Coarse",
+    "variant_id": "67579573534994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67579573567762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Fine",
+    "variant_id": "67579573600530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Medium",
+    "variant_id": "67579573633298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Coarse",
+    "variant_id": "67579573666066"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "b7584732e5d5122c",
+  "first_seen": "2026-10-26",
+  "handle": "sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Sidama.jpg?v=1762549592",
+  "platform": "shopify",
+  "product_id": "10072343019794",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > Africa",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "Sidama",
+  "url": "https://firelightcoffee.com/products/sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "51256519229714"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Fine / 12oz",
+    "variant_id": "51256519262482"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "51256519295250"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Medium / 12oz",
+    "variant_id": "51256519328018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51708976660754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "Fine / 5lb",
+    "variant_id": "51708976693522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "Medium / 5lb",
+    "variant_id": "51708976726290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 123.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "51708976759058"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "e4d00312b924b8b4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-el-vergel-tolima",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/16591fb4-Decaf-El-Vergel.jpg?v=1755278094",
+  "platform": "shopify",
+  "product_id": "10072344199442",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > South America",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "Decaf El Vergel Tolima",
+  "url": "https://firelightcoffee.com/products/decaf-el-vergel-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51256125587730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine",
+    "variant_id": "51256125620498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51256125653266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Medium",
+    "variant_id": "51256125686034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51711269306642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Fine",
+    "variant_id": "51711269339410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51711269372178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5lb / Medium",
+    "variant_id": "51711269404946"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cultivate-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/215b6aee-Cultivate-product.webp?v=1742577495",
+  "platform": "shopify",
+  "product_id": "10072345149714",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "cultivate",
+   "judgeme_excluded"
+  ],
+  "title": "Cultivate Blend",
+  "url": "https://firelightcoffee.com/products/cultivate-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51637578400018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Fine",
+    "variant_id": "51637578432786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Medium",
+    "variant_id": "51637578465554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.45,
+    "title": "12oz / Coarse",
+    "variant_id": "51637578498322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51637578531090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "1lb / Fine",
+    "variant_id": "51637578563858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "1lb / Medium",
+    "variant_id": "51637578596626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.65,
+    "title": "1lb / Coarse",
+    "variant_id": "51637578629394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51637578662162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.25,
+    "title": "5lb / Fine",
+    "variant_id": "51637578694930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.25,
+    "title": "5lb / Medium",
+    "variant_id": "51637578727698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 53.25,
+    "title": "5lb / Coarse",
+    "variant_id": "51637578760466"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "ac7b1bdcf4e3dc8f",
+  "first_seen": "2026-10-26",
+  "handle": "primavera-sisterhood",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/9d05ba90-Primavera-Sisterhood.jpg?v=1755283882",
+  "platform": "shopify",
+  "product_id": "10072345542930",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > Central America",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "Primavera Sisterhood",
+  "url": "https://firelightcoffee.com/products/primavera-sisterhood",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Medium",
+    "variant_id": "51256082956562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51256082989330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Fine",
+    "variant_id": "51256083022098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51256083054866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51573119615250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Fine",
+    "variant_id": "51573119648018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Medium",
+    "variant_id": "51573119680786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51573119713554"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "c0c2a5957587c1d6",
+  "first_seen": "2026-10-26",
+  "handle": "essentials-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Essentials-2023.jpg?v=1755098705",
+  "platform": "shopify",
+  "product_id": "10084363927826",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Sample Product"
+  ],
+  "title": "Essentials - Espresso Blend",
+  "url": "https://firelightcoffee.com/products/essentials-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51413424275730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Fine",
+    "variant_id": "51413424308498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Medium",
+    "variant_id": "51413424341266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51413424374034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51413424406802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Fine",
+    "variant_id": "51413424439570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Medium",
+    "variant_id": "51413424472338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51413424505106"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "0a92c9ede11540aa",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-essentials-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/93e6535d-Essentials-Bulk.jpg?v=1755098705",
+  "platform": "shopify",
+  "product_id": "10202650149138",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Essentials - Espresso Blend",
+  "url": "https://firelightcoffee.com/products/bulk-rate-essentials-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51556679057682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz / Fine",
+    "variant_id": "51556679090450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz / Medium",
+    "variant_id": "51556679123218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.5,
+    "title": "12oz / Coarse",
+    "variant_id": "51556679155986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.25,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51556679188754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.25,
+    "title": "5lb / Fine",
+    "variant_id": "51556679221522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.25,
+    "title": "5lb / Medium",
+    "variant_id": "51556679254290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.25,
+    "title": "5lb / Coarse",
+    "variant_id": "51556679287058"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.25,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51556681318674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.25,
+    "title": "1lb / Fine",
+    "variant_id": "51556681351442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.25,
+    "title": "1lb / Medium",
+    "variant_id": "51556681384210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.25,
+    "title": "1lb / Coarse",
+    "variant_id": "51556681416978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 57.0,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51556681449746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 57.0,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51556681482514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 57.0,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51556681515282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 57.0,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51556681548050"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "9fdb2c03f0e1e59c",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-canopy",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/4499c306-Canopy-Bulk2-scaled.jpg?v=1755269818",
+  "platform": "shopify",
+  "product_id": "10203521319186",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Canopy",
+  "url": "https://firelightcoffee.com/products/bulk-rate-canopy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "51559485997330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz. / Fine (Drip)",
+    "variant_id": "51559486030098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz. / Medium (Chemex)",
+    "variant_id": "51559486062866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz. / Coarse (French Press)",
+    "variant_id": "51559486095634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.25,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "51559486128402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.25,
+    "title": "5lb. / Fine (Drip)",
+    "variant_id": "51559486161170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.25,
+    "title": "5lb. / Medium (Chemex)",
+    "variant_id": "51559486193938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.25,
+    "title": "5lb. / Coarse (French Press)",
+    "variant_id": "51559486226706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.25,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51559491338514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.25,
+    "title": "1lb / Fine (Drip)",
+    "variant_id": "51559491371282"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.25,
+    "title": "1lb / Medium (Chemex)",
+    "variant_id": "51559491404050"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.25,
+    "title": "1lb / Coarse (French Press)",
+    "variant_id": "51559491436818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51559491469586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Fine (Drip)",
+    "variant_id": "51559491502354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Medium (Chemex)",
+    "variant_id": "51559491535122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Coarse (French Press)",
+    "variant_id": "51559491567890"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "452602632017c24c",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-decaf-el-vergel-tolima",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/6cb842fb-Decaf-El-Vergel-1-scaled.jpg?v=1755278094",
+  "platform": "shopify",
+  "product_id": "10203555365138",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Decaf El Vergel Tolima",
+  "url": "https://firelightcoffee.com/products/bulk-rate-decaf-el-vergel-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.25,
+    "title": "Whole Bean / 1lb",
+    "variant_id": "51559636074770"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.25,
+    "title": "Fine / 1lb",
+    "variant_id": "51559636107538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.25,
+    "title": "Coarse / 1lb",
+    "variant_id": "51559636140306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.25,
+    "title": "Medium / 1lb",
+    "variant_id": "51559636173074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.25,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51573087764754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.6,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "51573087797522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.6,
+    "title": "Whole Bean / Case (6) 12oz bags",
+    "variant_id": "51573087830290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.25,
+    "title": "Fine / 5lb",
+    "variant_id": "51573087863058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.6,
+    "title": "Fine / 12oz",
+    "variant_id": "51573087895826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.6,
+    "title": "Fine / Case (6) 12oz bags",
+    "variant_id": "51573087928594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.25,
+    "title": "Coarse / 5lb",
+    "variant_id": "51573087961362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.6,
+    "title": "Coarse / 12oz",
+    "variant_id": "51573087994130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.6,
+    "title": "Coarse / Case (6) 12oz bags",
+    "variant_id": "51573088026898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 66.25,
+    "title": "Medium / 5lb",
+    "variant_id": "51573088059666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.6,
+    "title": "Medium / 12oz",
+    "variant_id": "51573088092434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.6,
+    "title": "Medium / Case (6) 12oz bags",
+    "variant_id": "51573088125202"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "0983a0b9f3504ec1",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Sidama-Bulk.jpg?v=1762547462",
+  "platform": "shopify",
+  "product_id": "10203572207890",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Sidama",
+  "url": "https://firelightcoffee.com/products/bulk-rate-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51559688175890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Fine",
+    "variant_id": "51559688208658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Medium",
+    "variant_id": "51559688241426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Coarse",
+    "variant_id": "51559688274194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51559698759954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Fine",
+    "variant_id": "51559698792722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Medium",
+    "variant_id": "51559698825490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51559698858258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51559698891026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12oz / Fine",
+    "variant_id": "51559698923794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12oz / Medium",
+    "variant_id": "51559698956562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51559698989330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 78.0,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51559699022098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 78.0,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51559699054866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 78.0,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51559699087634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 78.0,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51559699120402"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "7f961d357e189585",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-primavera-sisterhood",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Primavera_Sisterhood.jpg?v=1755283882",
+  "platform": "shopify",
+  "product_id": "10203580891410",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Primavera Sisterhood",
+  "url": "https://firelightcoffee.com/products/bulk-rate-primavera-sisterhood",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51559705739538"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Fine",
+    "variant_id": "51559705772306"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Medium",
+    "variant_id": "51559705805074"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Coarse",
+    "variant_id": "51559705837842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51559706788114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Fine",
+    "variant_id": "51559706820882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Medium",
+    "variant_id": "51559706853650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Coarse",
+    "variant_id": "51559706886418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.65,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51559706919186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.65,
+    "title": "12oz / Fine",
+    "variant_id": "51559706951954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.65,
+    "title": "12oz / Medium",
+    "variant_id": "51559706984722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.65,
+    "title": "12oz / Coarse",
+    "variant_id": "51559707017490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.9,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51559707050258"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.9,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51559707083026"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.9,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51559707115794"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.9,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51559707148562"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "57ac9b7797d13bcf",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-system",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/9011fe66-System-Bulk-scaled.jpg?v=1755878154",
+  "platform": "shopify",
+  "product_id": "10205787128082",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - System",
+  "url": "https://firelightcoffee.com/products/bulk-rate-system",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.3,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51569345036562"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.3,
+    "title": "1lb / Fine",
+    "variant_id": "51569345069330"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.3,
+    "title": "1lb / Medium",
+    "variant_id": "51569345102098"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.3,
+    "title": "1lb / Coarse",
+    "variant_id": "51569345134866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51569345822994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51569345855762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51569345888530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.5,
+    "title": "5lb / Fine",
+    "variant_id": "51569345921298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz / Fine",
+    "variant_id": "51569345954066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51569345986834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.5,
+    "title": "5lb / Medium",
+    "variant_id": "51569346019602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz / Medium",
+    "variant_id": "51569346052370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51569346085138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 56.5,
+    "title": "5lb / Coarse",
+    "variant_id": "51569346117906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.75,
+    "title": "12oz / Coarse",
+    "variant_id": "51569346150674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 58.5,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51569346183442"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "6f68f57c2b0d9003",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-versatile",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/9aedd13f-Versatile-Bulk-scaled.jpg?v=1755883882",
+  "platform": "shopify",
+  "product_id": "10206823350546",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Versatile",
+  "url": "https://firelightcoffee.com/products/bulk-rate-versatile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.8,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51572971110674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.8,
+    "title": "1lb / Fine",
+    "variant_id": "51572971143442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.8,
+    "title": "1lb / Medium",
+    "variant_id": "51572971176210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.8,
+    "title": "1lb / Coarse",
+    "variant_id": "51572971208978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51573029601554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.0,
+    "title": "5lb / Fine",
+    "variant_id": "51573029634322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.0,
+    "title": "5lb / Medium",
+    "variant_id": "51573029667090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 54.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51573029699858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.35,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51573029732626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.35,
+    "title": "12oz / Fine",
+    "variant_id": "51573029765394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.35,
+    "title": "12oz / Medium",
+    "variant_id": "51573029798162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 9.35,
+    "title": "12oz / Coarse",
+    "variant_id": "51573029830930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 56.1,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51573029863698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 56.1,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51573029896466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 56.1,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51573029929234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 56.1,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51573029962002"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "e45c89cc1a35234c",
+  "first_seen": "2026-10-26",
+  "handle": "inman-perk-mixed-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/FT-26.jpg?v=1759343885",
+  "platform": "shopify",
+  "product_id": "10227185090834",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "inman-perk",
+   "judgeme_excluded"
+  ],
+  "title": "Retail Bags - Inman Perk Mixed Pack",
+  "url": "https://firelightcoffee.com/products/inman-perk-mixed-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 52.0,
+    "title": "1 Case (6 bags) / Whole Bean",
+    "variant_id": "51637588492562"
+   },
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 52.0,
+    "title": "1 Case (6 bags) / Fine",
+    "variant_id": "51637588525330"
+   },
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 52.0,
+    "title": "1 Case (6 bags) / Medium",
+    "variant_id": "51637588558098"
+   },
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 52.0,
+    "title": "1 Case (6 bags) / Coarse",
+    "variant_id": "51637588590866"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "91b547551a9de1a0",
+  "first_seen": "2026-10-26",
+  "handle": "hallow-bulk-rate",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Hallow2023-Bulk.jpg?v=1761827571",
+  "platform": "shopify",
+  "product_id": "10242979430674",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Hallow - Bulk Rate",
+  "url": "https://firelightcoffee.com/products/hallow-bulk-rate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51693120225554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Fine",
+    "variant_id": "51693120258322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Medium",
+    "variant_id": "51693120291090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51693120323858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51693120356626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Fine",
+    "variant_id": "51693120389394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Medium",
+    "variant_id": "51693120422162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 67.5,
+    "title": "5lb / Coarse",
+    "variant_id": "51693120454930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51693123043602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Fine",
+    "variant_id": "51693123076370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Medium",
+    "variant_id": "51693123109138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1lb / Coarse",
+    "variant_id": "51693123141906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.0,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51693123174674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.0,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51693123207442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.0,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51693123240210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.0,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51693123272978"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "38a6a81c82db6931",
+  "first_seen": "2026-10-26",
+  "handle": "risaralda",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Risaralda.jpg?v=1767647362",
+  "platform": "shopify",
+  "product_id": "10282863034642",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coarse (French Press)",
+   "Coffee",
+   "Coffee > South America",
+   "Fine (Drip)",
+   "Medium (Chemex)",
+   "Subscriptions",
+   "Whole Bean"
+  ],
+  "title": "Risaralda",
+  "url": "https://firelightcoffee.com/products/risaralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "51853978763538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "51853978796306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Fine / 12oz",
+    "variant_id": "51853978829074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine / 5lb",
+    "variant_id": "51853978861842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Medium / 12oz",
+    "variant_id": "51853978894610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Medium / 5lb",
+    "variant_id": "51853978927378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Coarse / 12oz",
+    "variant_id": "51853978960146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Coarse / 5lb",
+    "variant_id": "51853978992914"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "7c26fd0b2c11a2c6",
+  "first_seen": "2026-10-26",
+  "handle": "tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Tarrazu25.jpg?v=1767719843",
+  "platform": "shopify",
+  "product_id": "10283612602642",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Coffee",
+   "Coffee > Central America"
+  ],
+  "title": "Tarrazu",
+  "url": "https://firelightcoffee.com/products/tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51858746900754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine",
+    "variant_id": "51858746933522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Medium",
+    "variant_id": "51858746966290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse",
+    "variant_id": "51858746999058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51858747031826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Fine",
+    "variant_id": "51858747064594"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Medium",
+    "variant_id": "51858747097362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51858747130130"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "7c26fd0b2c11a2c6",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Tarrazu-Bulk.jpg?v=1767720322",
+  "platform": "shopify",
+  "product_id": "10283632492818",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Tarrazu",
+  "url": "https://firelightcoffee.com/products/bulk-rate-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51858792382738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1lb / Fine",
+    "variant_id": "51858792415506"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1lb / Medium",
+    "variant_id": "51858792448274"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.0,
+    "title": "1lb / Coarse",
+    "variant_id": "51858792481042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51858792513810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Fine",
+    "variant_id": "51858792546578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Medium",
+    "variant_id": "51858792579346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51858792612114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51858792644882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.5,
+    "title": "12oz / Fine",
+    "variant_id": "51858792677650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.5,
+    "title": "12oz / Medium",
+    "variant_id": "51858792710418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 10.5,
+    "title": "12oz / Coarse",
+    "variant_id": "51858792743186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.0,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51858792775954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.0,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51858792808722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.0,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51858792841490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 63.0,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51858792874258"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ },
+ {
+  "body_hash": "e23f78ce17510849",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-rate-risaralda",
+  "image": "https://cdn.shopify.com/s/files/1/0930/1970/1522/files/Risaralda-Bulk_87bf5ecb-6557-469f-b59d-3319bf96adf6.jpg?v=1767890157",
+  "platform": "shopify",
+  "product_id": "10285729120530",
+  "product_type": "",
+  "roaster_slug": "firelightcoffee",
+  "tags": [
+   "Wholesale",
+   "judgeme_excluded"
+  ],
+  "title": "Bulk Rate - Risaralda",
+  "url": "https://firelightcoffee.com/products/bulk-rate-risaralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "51870879580434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb / Fine",
+    "variant_id": "51870879613202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb / Medium",
+    "variant_id": "51870879645970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 14.0,
+    "title": "1lb / Coarse",
+    "variant_id": "51870879678738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51870879711506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Fine",
+    "variant_id": "51870879744274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Medium",
+    "variant_id": "51870879777042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Coarse",
+    "variant_id": "51870879809810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51870879842578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "12oz / Fine",
+    "variant_id": "51870879875346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "12oz / Medium",
+    "variant_id": "51870879908114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.5,
+    "title": "12oz / Coarse",
+    "variant_id": "51870879940882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 69.0,
+    "title": "Case (6) 12oz bags / Whole Bean",
+    "variant_id": "51870879973650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 69.0,
+    "title": "Case (6) 12oz bags / Fine",
+    "variant_id": "51870880006418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 69.0,
+    "title": "Case (6) 12oz bags / Medium",
+    "variant_id": "51870880039186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 69.0,
+    "title": "Case (6) 12oz bags / Coarse",
+    "variant_id": "51870880071954"
+   }
+  ],
+  "vendor": "Firelight Coffee"
+ }
+]

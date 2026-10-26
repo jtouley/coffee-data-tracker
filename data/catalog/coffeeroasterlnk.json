@@ -1,0 +1,7021 @@
+[
+ {
+  "body_hash": "cc41f6c888bde99a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-komodo",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhoto-DecafKomodoBlend.png?v=1789510352",
+  "platform": "shopify",
+  "product_id": "10143913050403",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "organic"
+  ],
+  "title": "Decaf | Komodo - Organic",
+  "url": "https://coffeeroasterlnk.com/products/decaf-komodo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "54793196470563"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793196503331"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793196536099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793196568867"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "54793196601635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "54793196634403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793196667171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793196699939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793196732707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "54793196765475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "54793196798243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793196831011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793196863779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793196896547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "54793196929315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "54793196962083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793196994851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793197027619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793197060387"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "54793197093155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "54793197125923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793197158691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793197191459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793197224227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "54793197256995"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "4b92cb6b7121bbec",
+  "first_seen": "2026-10-26",
+  "handle": "night-voyage",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/2BakedFruit-Version2.jpg?v=1772649308",
+  "platform": "shopify",
+  "product_id": "10143943295267",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "Night Voyage | Signature Blend",
+  "url": "https://coffeeroasterlnk.com/products/night-voyage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "54793375744291"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793375777059"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793375809827"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793375842595"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "54793375875363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "54793375908131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793375940899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793375973667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793376006435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "54793376039203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "54793376071971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793376104739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793376137507"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793376170275"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "54793376203043"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "54793376235811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793376268579"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793376301347"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793376334115"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "54793376366883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "54793376399651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793376432419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793376465187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793376497955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "54793376530723"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "3e414eaf1f2335e4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-night-voyage",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/2BakedFruit-Version2.jpg?v=1772649308",
+  "platform": "shopify",
+  "product_id": "10143946866979",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Decaf | Night Voyage Signature Blend",
+  "url": "https://coffeeroasterlnk.com/products/decaf-night-voyage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "54793389146403"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793389179171"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793389211939"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793389244707"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "54793389277475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "54793389310243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793389343011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793389375779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793389408547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "54793389441315"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "54793389474083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793389506851"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793389539619"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793389572387"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "54793389605155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "54793389637923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793389670691"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793389703459"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793389736227"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "54793389768995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "54793389801763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54793389834531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54793389867299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54793389900067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "54793389932835"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "686a6f622a16e0a1",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-night-voyage",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/2BakedFruit-Version2.jpg?v=1772649308",
+  "platform": "shopify",
+  "product_id": "10176508199203",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend",
+   "decaf"
+  ],
+  "title": "Half Caff | Night Voyage",
+  "url": "https://coffeeroasterlnk.com/products/half-caff-night-voyage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "54902687465763"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54902687498531"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54902687531299"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54902687564067"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "54902687596835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "54902687629603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54902687662371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54902687695139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54902687727907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "54902687760675"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "54902687793443"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54902687826211"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54902687858979"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54902687891747"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "54902687924515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "54902687957283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54902687990051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54902688022819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54902688055587"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "54902688088355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "54902688121123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "54902688153891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "54902688186659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "54902688219427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "54902688252195"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "ff58cf126ac53e14",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-rub-seasoning",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/P1025911.png?v=1781741957",
+  "platform": "shopify",
+  "product_id": "10259097092387",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee Rub",
+   "Seasoning"
+  ],
+  "title": "Coffee Rub & Seasoning",
+  "url": "https://coffeeroasterlnk.com/products/coffee-rub-seasoning",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "55204271096099"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "af57b82b38fc824d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-cadefihuila-sugar-cane-process",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/5Bread_Spices-Version1_2b59c6f5-245d-4935-8734-fc38224ca7d3.jpg?v=1789418128",
+  "platform": "shopify",
+  "product_id": "10300846899491",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Cloudhopper",
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Decaf Colombia - Cadefihuila Sugar Cane Process",
+  "url": "https://coffeeroasterlnk.com/products/decaf-colombia-cadefihuila-sugar-cane-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "55344757440803"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Cold Brew",
+    "variant_id": "55344757473571"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / French Press",
+    "variant_id": "55344757506339"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Chemex",
+    "variant_id": "55344757539107"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Pour-Over",
+    "variant_id": "55344757571875"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Drip",
+    "variant_id": "55344757604643"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Aeropress",
+    "variant_id": "55344757637411"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Espresso",
+    "variant_id": "55344757670179"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Turkish",
+    "variant_id": "55344757702947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "55344757735715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Cold Brew",
+    "variant_id": "55344757768483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / French Press",
+    "variant_id": "55344757801251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Chemex",
+    "variant_id": "55344757834019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Pour-Over",
+    "variant_id": "55344757866787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Drip",
+    "variant_id": "55344757899555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Aeropress",
+    "variant_id": "55344757932323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Espresso",
+    "variant_id": "55344757965091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Turkish",
+    "variant_id": "55344757997859"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "55344758030627"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Cold Brew",
+    "variant_id": "55344758063395"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / French Press",
+    "variant_id": "55344758096163"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Chemex",
+    "variant_id": "55344758128931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Pour-Over",
+    "variant_id": "55344758161699"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Drip",
+    "variant_id": "55344758194467"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Aeropress",
+    "variant_id": "55344758227235"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Espresso",
+    "variant_id": "55344758260003"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Turkish",
+    "variant_id": "55344758292771"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "ae770f588481a3c4",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-wdt-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/WDTTool.webp?v=1787152634",
+  "platform": "shopify",
+  "product_id": "10334605574435",
+  "product_type": "Accessories",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [],
+  "title": "Espresso WDT Tool",
+  "url": "https://coffeeroasterlnk.com/products/espresso-wdt-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.99,
+    "title": "Default Title",
+    "variant_id": "55486281646371"
+   }
+  ],
+  "vendor": "Fellow"
+ },
+ {
+  "body_hash": "f7b279bfb686b311",
+  "first_seen": "2026-10-26",
+  "handle": "bali",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/Bali-ProductPhotoOverlay-Bali.png?v=1789497805",
+  "platform": "shopify",
+  "product_id": "10357487173923",
+  "product_type": "Dark Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "organic"
+  ],
+  "title": "Bali Blue Moon - Organic",
+  "url": "https://coffeeroasterlnk.com/products/bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "55554231992611"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "55554232025379"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "55554232058147"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "55554232090915"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "55554232123683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "55554232156451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "55554232189219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "55554232221987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "55554232254755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "55554232287523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "55554232320291"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "55554232353059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "55554232385827"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "55554232418595"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "55554232451363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "55554232484131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "55554232516899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "55554232549667"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "55554232582435"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "55554232615203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "55554232647971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "55554232680739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "55554232713507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "55554232746275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "55554232779043"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "0e79a774c2b023b3",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-brix-breaker-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/7ChocolateandCaramel-Version1_86bb981e-5914-40ef-9838-622064839756.jpg?v=1789416982",
+  "platform": "shopify",
+  "product_id": "10369725825315",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Cloudhopper",
+   "Coffee"
+  ],
+  "title": "Nicaragua - Brix Breaker - Pacamara",
+  "url": "https://coffeeroasterlnk.com/products/nicaragua-brix-breaker-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "55594653548835"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Cold Brew",
+    "variant_id": "55594653581603"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / French Press",
+    "variant_id": "55594653614371"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Chemex",
+    "variant_id": "55594653647139"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Pour-Over",
+    "variant_id": "55594653679907"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Drip",
+    "variant_id": "55594653712675"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Aeropress",
+    "variant_id": "55594653745443"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Espresso",
+    "variant_id": "55594653778211"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Turkish",
+    "variant_id": "55594653810979"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "55594653843747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Cold Brew",
+    "variant_id": "55594653876515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / French Press",
+    "variant_id": "55594653909283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "55594653942051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Pour-Over",
+    "variant_id": "55594653974819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Drip",
+    "variant_id": "55594654007587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Aeropress",
+    "variant_id": "55594654040355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "55594654073123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Turkish",
+    "variant_id": "55594654105891"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "55594654138659"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Cold Brew",
+    "variant_id": "55594654171427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / French Press",
+    "variant_id": "55594654204195"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Chemex",
+    "variant_id": "55594654236963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Pour-Over",
+    "variant_id": "55594654269731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Drip",
+    "variant_id": "55594654302499"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Aeropress",
+    "variant_id": "55594654335267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Espresso",
+    "variant_id": "55594654368035"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Turkish",
+    "variant_id": "55594654400803"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "9239ef82fee1128d",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-pumpkin-spice-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/Bags_0004_The-Coffee-Roaster-11_b53bb76a-d24a-4f94-b94a-f0421ff6794b.jpg?v=1789417991",
+  "platform": "shopify",
+  "product_id": "10369735754019",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Cloudhopper",
+   "Coffee"
+  ],
+  "title": "Nicaragua - Pumpkin Spice- Pacamara",
+  "url": "https://coffeeroasterlnk.com/products/nicaragua-pumpkin-spice-pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "55594679992611"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Cold Brew",
+    "variant_id": "55594680025379"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / French Press",
+    "variant_id": "55594680058147"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Chemex",
+    "variant_id": "55594680090915"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Pour-Over",
+    "variant_id": "55594680123683"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Drip",
+    "variant_id": "55594680156451"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Aeropress",
+    "variant_id": "55594680189219"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Espresso",
+    "variant_id": "55594680221987"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.5,
+    "title": "8oz. / Turkish",
+    "variant_id": "55594680254755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "55594680287523"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Cold Brew",
+    "variant_id": "55594680320291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / French Press",
+    "variant_id": "55594680353059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Chemex",
+    "variant_id": "55594680385827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Pour-Over",
+    "variant_id": "55594680418595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Drip",
+    "variant_id": "55594680451363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Aeropress",
+    "variant_id": "55594680484131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Espresso",
+    "variant_id": "55594680516899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 33.0,
+    "title": "12oz. / Turkish",
+    "variant_id": "55594680549667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "55594680582435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Cold Brew",
+    "variant_id": "55594680615203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / French Press",
+    "variant_id": "55594680647971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Chemex",
+    "variant_id": "55594680680739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Pour-Over",
+    "variant_id": "55594680713507"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Drip",
+    "variant_id": "55594680746275"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Aeropress",
+    "variant_id": "55594680779043"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Espresso",
+    "variant_id": "55594680811811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16oz. / Turkish",
+    "variant_id": "55594680844579"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "dc728d6e72d9e57d",
+  "first_seen": "2026-10-26",
+  "handle": "3-bean-indio-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/image_889b6aaf-c280-4cf6-b6df-be5a0bfa7fcd.webp?v=1681418548",
+  "platform": "shopify",
+  "product_id": "4556320211019",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "3 Bean Indio Blend",
+  "url": "https://coffeeroasterlnk.com/products/3-bean-indio-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32240604184651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32240604217419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32240604250187"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32684548718667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32684554584139"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059347185955"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059347218723"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059347251491"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53059347284259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059347317027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059347349795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059347382563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53059347415331"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059347448099"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059347480867"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059347513635"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53059347546403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059347579171"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059347611939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059347644707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53059347677475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059347710243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059347743011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059347775779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53059347808547"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "9e83fa64ee38aad2",
+  "first_seen": "2026-10-26",
+  "handle": "pecan-english-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/Pecan_English_Toffee.jpg?v=1607197342",
+  "platform": "shopify",
+  "product_id": "4557793656907",
+  "product_type": "Chocolates",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Local",
+   "lulubee",
+   "toffee"
+  ],
+  "title": "Pecan English Toffee",
+  "url": "https://coffeeroasterlnk.com/products/pecan-english-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 239,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "32246866608203"
+   }
+  ],
+  "vendor": "Lulubee"
+ },
+ {
+  "body_hash": "6d755295d72d293c",
+  "first_seen": "2026-10-26",
+  "handle": "toddy-cold-brew-system",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/image_8a39500d-df53-4a38-a5ea-8b58bca0f869.png?v=1675900488",
+  "platform": "shopify",
+  "product_id": "4557858734155",
+  "product_type": "Brewing Systems",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Brewing Systems"
+  ],
+  "title": "Toddy Cold Brew System",
+  "url": "https://coffeeroasterlnk.com/products/toddy-cold-brew-system",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1106,
+    "price_usd": 49.0,
+    "title": "Default Title",
+    "variant_id": "32246990929995"
+   }
+  ],
+  "vendor": "Toddy"
+ },
+ {
+  "body_hash": "690d2c566671f953",
+  "first_seen": "2026-10-26",
+  "handle": "dcovi-soap-light-roast-exfoliator",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/image_929796d1-36d1-4faa-91a5-15d694eb0e89.jpg?v=1676481015",
+  "platform": "shopify",
+  "product_id": "4597310160971",
+  "product_type": "Soap",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "D'Covi",
+   "Local",
+   "soap"
+  ],
+  "title": "Light Roast Exfoliator Soap",
+  "url": "https://coffeeroasterlnk.com/products/dcovi-soap-light-roast-exfoliator",
+  "variants": [
+   {
+    "available": true,
+    "grams": 152,
+    "price_usd": 8.0,
+    "title": "Default Title",
+    "variant_id": "32419848093771"
+   }
+  ],
+  "vendor": "D'Covi"
+ },
+ {
+  "body_hash": "45af936e4b20eba4",
+  "first_seen": "2026-10-26",
+  "handle": "blastoff",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/9ChocolateandCaramel-Version3_bf80439d-3fd1-42b3-b097-8e74efa4f225.jpg?v=1669419553",
+  "platform": "shopify",
+  "product_id": "4643961733195",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "Blast Off! Blend",
+  "url": "https://coffeeroasterlnk.com/products/blastoff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32727406379083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32727406706763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32727407034443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32727407329355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32727407624267"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059433890083"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059433922851"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059433955619"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53059433988387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059434021155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059434053923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059434086691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53059434119459"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059434152227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059434184995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059434217763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53059434250531"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059434283299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059434316067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059434348835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53059434381603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53059434414371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53059434447139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53059434479907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53059434512675"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "9a910ecbcede83fe",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/14DarkChocolateandEarthy-Version1_b1fcd8a4-aede-4948-98e3-28b956d1295f.jpg?v=1669419743",
+  "platform": "shopify",
+  "product_id": "4644027564107",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://coffeeroasterlnk.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32727575199819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32727575527499"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32727575822411"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32727576117323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32727576412235"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060150984995"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060151017763"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060151050531"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060151083299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060151116067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060151148835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060151181603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060151214371"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060151247139"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060151279907"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060151312675"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060151345443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060151378211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060151410979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060151443747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060151476515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060151509283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060151542051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060151574819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060151607587"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "a9c438e8c8d1a45b",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/5Bread_Spices-Version1.jpg?v=1737500670",
+  "platform": "shopify",
+  "product_id": "4644028776523",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "Morning Blend",
+  "url": "https://coffeeroasterlnk.com/products/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32727578902603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32727579197515"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32727579525195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32727579852875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32727580278859"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060190175523"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060190208291"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060190241059"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060190273827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060190306595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060190339363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060190372131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060190404899"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060190437667"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060190470435"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060190503203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060190535971"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060190568739"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060190601507"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060190634275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060190667043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060190699811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060190732579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060190765347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060190798115"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "ee778c7c3e76d16d",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/11ChocolateandNuts-Version1_c8f2e121-e9c6-42af-927b-10a52b4a8f6e.jpg?v=1669419938",
+  "platform": "shopify",
+  "product_id": "4644029792331",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "House Blend",
+  "url": "https://coffeeroasterlnk.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32727584473163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32727584768075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32727585062987"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32727585357899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32727585652811"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060210983203"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060211015971"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060211048739"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060211081507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060211114275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060211147043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060211179811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060211212579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060211245347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060211278115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060211310883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060211343651"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060211376419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060211409187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060211441955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060211474723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060211507491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060211540259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060211573027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060211605795"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "28257a92a33cc33e",
+  "first_seen": "2026-10-26",
+  "handle": "panama",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/Chocolate-Caramel-Toast.png?v=1768938048",
+  "platform": "shopify",
+  "product_id": "4651088248907",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Panama",
+  "url": "https://coffeeroasterlnk.com/products/panama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32752896344139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32752896671819"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32752896966731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32752897261643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32752897556555"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060242374947"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060242407715"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060242440483"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060242473251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060242506019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060242538787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060242571555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060242604323"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060242637091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060242669859"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060242702627"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060242735395"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060242768163"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060242800931"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060242833699"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060242866467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060242899235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060242932003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060242964771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060242997539"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "0bd975a42fb35960",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/Honey-Chocolate-SugarSweet.png?v=1768940657",
+  "platform": "shopify",
+  "product_id": "4651092312139",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Costa Rica",
+  "url": "https://coffeeroasterlnk.com/products/costa-rica-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32752936157259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32752936452171"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32752936779851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32752937074763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32752937369675"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060260790563"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060260823331"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060260856099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060260888867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060260921635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060260954403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060260987171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060261019939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060261052707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060261085475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060261118243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060261151011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060261183779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060261216547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060261249315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060261282083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060261314851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060261347619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060261380387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060261413155"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "6e30a2a1b578e2ab",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ColombiaExcelso-Orange_BrownSugar_BerryCompote.png?v=1768881026",
+  "platform": "shopify",
+  "product_id": "4651097423947",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Colombia",
+  "url": "https://coffeeroasterlnk.com/products/colombia-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32752973054027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32752973348939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32752973676619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32752973971531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32752974299211"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060277993763"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060278026531"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060278059299"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060278092067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060278124835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060278157603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060278190371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060278223139"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060278255907"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060278288675"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060278321443"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060278354211"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060278386979"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060278419747"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060278452515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060278485283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060278518051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060278550819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060278583587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060278616355"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "16a2c45943aea0af",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsoon-malabar",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhotoOverlay-IndiaMonsoonMalabar.png?v=1789506107",
+  "platform": "shopify",
+  "product_id": "4651568595019",
+  "product_type": "Dark Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "India | Monsoon Malabar",
+  "url": "https://coffeeroasterlnk.com/products/india-monsoon-malabar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32754933006411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32754933301323"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32754933596235"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32754933891147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32754934186059"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060302307619"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060302340387"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060302373155"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060302405923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060302438691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060302471459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060302504227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060302536995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060302569763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060302602531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060302635299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060302668067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060302700835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060302733603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060302766371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060302799139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060302831907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060302864675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060302897443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060302930211"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "c77d061de8244ec2",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhotoOverlay-SumatraDoubleVaughnDutch.png?v=1789506545",
+  "platform": "shopify",
+  "product_id": "4651571216459",
+  "product_type": "Dark Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Sumatra",
+  "url": "https://coffeeroasterlnk.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32754954666059"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32754954960971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32754955255883"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32754955550795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32754955845707"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060333895971"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060333928739"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060333961507"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060333994275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060334027043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060334059811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060334092579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060334125347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060334158115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060334190883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060334223651"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060334256419"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060334289187"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060334321955"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060334354723"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060334387491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060334420259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060334453027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060334485795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060334518563"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "5e5c134eb746ca35",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/11ChocolateandNuts-Version1_c45a6507-652a-413e-81ab-009aaf9a3aa0.jpg?v=1669420050",
+  "platform": "shopify",
+  "product_id": "4651572199499",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Decaf | Brazil",
+  "url": "https://coffeeroasterlnk.com/products/decaf-brazil-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32754968068171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32754968363083"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32754968657995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32754968952907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32754969247819"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060387832099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060387864867"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060387897635"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060387930403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060387963171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060387995939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060388028707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060388061475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060388094243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060388127011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060388159779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060388192547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060388225315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060388258083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060388290851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060388323619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060388356387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060388389155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060388421923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060388454691"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "d3cc4e48564d647b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/14DarkChocolateandEarthy-Version1_675eb1c5-6da1-45ff-93b4-ed4cd554f0aa.jpg?v=1669420072",
+  "platform": "shopify",
+  "product_id": "4651580588107",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Signature Blend"
+  ],
+  "title": "Decaf | Espresso Blend",
+  "url": "https://coffeeroasterlnk.com/products/decaf-espresso-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32755088097355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32755088392267"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32755088687179"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32755088982091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32755089277003"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060398383395"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060398416163"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060398448931"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060398481699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060398514467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060398547235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060398580003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060398612771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060398645539"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060398678307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060398711075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060398743843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060398776611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060398809379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060398842147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060398874915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060398907683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060398940451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060398973219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060399005987"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "ff44f7c6be09ffc5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhotoOverlay-MexicoChiapasAltura.png?v=1789510553",
+  "platform": "shopify",
+  "product_id": "4677174001739",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Medium Roast",
+   "organic"
+  ],
+  "title": "Mexico - Organic",
+  "url": "https://coffeeroasterlnk.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "32878474592331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "32878474887243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "32878475182155"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "32878475477067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "32878475771979"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060402938147"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060402970915"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060403003683"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060403036451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060403069219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060403101987"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060403134755"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060403167523"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060403200291"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060403233059"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060403265827"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060403298595"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060403331363"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060403364131"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060403396899"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060403429667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060403462435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060403495203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060403527971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060403560739"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "ea38cadb39be5712",
+  "first_seen": "2026-10-26",
+  "handle": "brownbag",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/image.jpg?v=1609369813",
+  "platform": "shopify",
+  "product_id": "4696874713163",
+  "product_type": "Brown Bag Special",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend"
+  ],
+  "title": "Brown Bag Special",
+  "url": "https://coffeeroasterlnk.com/products/brownbag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "32943522512971"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "15c981d063060c86",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-black-bag-special",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/image_6de1f8c4-88d1-4d70-8f8e-b737e35dc169.jpg?v=1643490349",
+  "platform": "shopify",
+  "product_id": "4709702697035",
+  "product_type": "Brown Bag Special",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Signature Blend"
+  ],
+  "title": "Decaf Brown Bag Special",
+  "url": "https://coffeeroasterlnk.com/products/decaf-black-bag-special",
+  "variants": [
+   {
+    "available": false,
+    "grams": 499,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "32981416968267"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "4e0ce899514075de",
+  "first_seen": "2026-10-26",
+  "handle": "dark-chocolate-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/chocespbeans.jpg?v=1748379180",
+  "platform": "shopify",
+  "product_id": "4721947050059",
+  "product_type": "Chocolates",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "lulubee"
+  ],
+  "title": "Dark Chocolate Espresso Beans",
+  "url": "https://coffeeroasterlnk.com/products/dark-chocolate-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 123,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "33020364259403"
+   }
+  ],
+  "vendor": "Lulubee"
+ },
+ {
+  "body_hash": "7c66c525a6fff2c5",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/25SmokeyandEarthy-Version5_0dcd2e5a-a41a-405f-9b83-047e438c1a86.jpg?v=1669420247",
+  "platform": "shopify",
+  "product_id": "4731402485835",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Signature Blend"
+  ],
+  "title": "Half Caff | Sumatra",
+  "url": "https://coffeeroasterlnk.com/products/half-caff-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "33050124517451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "33050124812363"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "33050125107275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "33050125402187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "33050125697099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060404248867"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060404281635"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060404314403"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060404347171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060404379939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060404412707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060404445475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060404478243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060404511011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060404543779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060404576547"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060404609315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060404642083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060404674851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060404707619"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060404740387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060404773155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060404805923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060404838691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060404871459"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "bc2297c0327a3655",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-el-scorpion-red-label",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhotoOverlay-GuatGranQuetzal.png?v=1789501318",
+  "platform": "shopify",
+  "product_id": "4734727061579",
+  "product_type": "Dark Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Guatemala",
+  "url": "https://coffeeroasterlnk.com/products/guatemala-el-scorpion-red-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "33059226583115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "33059226878027"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "33059227172939"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "33059227467851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "33059227762763"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060405395747"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060405428515"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060405461283"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060405494051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060405526819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060405559587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060405592355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060405625123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060405657891"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060405690659"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060405723427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060405756195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060405788963"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060405821731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060405854499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060405887267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060405920035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060405952803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060405985571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060406018339"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "bf8c801e9494a68d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-cafe-el-zapote",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/ProductPhotoOverlay-HondurasCafeElZapote.png?v=1789505955",
+  "platform": "shopify",
+  "product_id": "6555895005259",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Dark Roast"
+  ],
+  "title": "Honduras",
+  "url": "https://coffeeroasterlnk.com/products/honduras-cafe-el-zapote",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39326090887243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39326091182155"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39326091477067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39326091771979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39326092066891"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060442849571"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060442882339"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060442915107"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060442947875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060442980643"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060443013411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060443046179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060443078947"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060443111715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060443144483"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060443177251"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060443210019"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060443242787"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060443275555"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060443308323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060443341091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060443373859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060443406627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060443439395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060443472163"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "fe1c09b76320607a",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/7ChocolateandCaramel-Version1_741c3375-8aff-4faf-bc5a-5d3f3c53fcb9.jpg?v=1669419607",
+  "platform": "shopify",
+  "product_id": "6564713988171",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend",
+   "signature blends"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://coffeeroasterlnk.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39359866110027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39359866404939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39359866699851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39359866994763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39359867289675"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060457922851"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060457955619"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060457988387"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060458021155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060458053923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060458086691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060458119459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060458152227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060458184995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060458217763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060458250531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060458283299"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060458316067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060458348835"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060458381603"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060458414371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060458447139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060458479907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060458512675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060458545443"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "1ebdfaa740ab00d0",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/10ChocolateandCaramel-Version5_04b98880-b1fe-4acf-ab1a-d70de33d9c74.jpg?v=1669420163",
+  "platform": "shopify",
+  "product_id": "6708559118411",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Signature Blend",
+   "decaf"
+  ],
+  "title": "Half Caff | Espresso Blend",
+  "url": "https://coffeeroasterlnk.com/products/half-caff-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39736487805003"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39736488099915"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39736488394827"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39736488689739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39736489050187"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060494262563"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060494295331"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060494328099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060494360867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060494393635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060494426403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060494459171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060494491939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060494524707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060494557475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060494590243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060494623011"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060494655779"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060494688547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060494721315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060494754083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060494786851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060494819619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060494852387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060494885155"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "fc4b99c41f49d1ad",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/11ChocolateandNuts-Version1_ba71322b-3860-4e22-a0f0-ab76884976d2.jpg?v=1669420107",
+  "platform": "shopify",
+  "product_id": "6715435319371",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Signature Blend"
+  ],
+  "title": "Half Caff | Brazil",
+  "url": "https://coffeeroasterlnk.com/products/half-caff-brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39751884537931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39751884832843"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39751885127755"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39751885422667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39751885717579"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060511564067"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060511596835"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060511629603"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060511662371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060511695139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060511727907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060511760675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060511793443"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060511826211"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060511858979"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060511891747"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060511924515"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060511957283"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060511990051"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060512022819"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060512055587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060512088355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060512121123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060512153891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060512186659"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "4897d330a4685071",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/4Berry-Version1.jpg?v=1669418792",
+  "platform": "shopify",
+  "product_id": "6719415058507",
+  "product_type": "Light Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Light Roast"
+  ],
+  "title": "Ethiopia",
+  "url": "https://coffeeroasterlnk.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39761527701579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39761527996491"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39761528291403"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39761528586315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39761528881227"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060528341283"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060528374051"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060528406819"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060528439587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060528472355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060528505123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060528537891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060528570659"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060528603427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060528636195"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060528668963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060528701731"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060528734499"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060528767267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060528800035"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060528832803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060528865571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060528898339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060528931107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060528963875"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "4b3bd6e9aea18db4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/GrahamCracker-Chocolate-OrangePeel.png?v=1778341362",
+  "platform": "shopify",
+  "product_id": "6719419646027",
+  "product_type": "Medium Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Medium Roast"
+  ],
+  "title": "Brazil",
+  "url": "https://coffeeroasterlnk.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "39761537892427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "39761538187339"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "39761538482251"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "39761538777163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "39761539072075"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060544561443"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060544594211"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060544626979"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060544659747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060544692515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060544725283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060544758051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060544790819"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060544823587"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060544856355"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060544889123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060544921891"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060544954659"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060544987427"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060545020195"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060545052963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060545085731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060545118499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060545151267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060545184035"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "670313e902cb8ca8",
+  "first_seen": "2026-10-26",
+  "handle": "diner-mugs",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/EBA99B89-E315-4ACF-AA1E-C867B8C7C1F0.jpg?v=1731013506",
+  "platform": "shopify",
+  "product_id": "8611092529443",
+  "product_type": "Drinkware",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Drinkware"
+  ],
+  "title": "Diner Mugs",
+  "url": "https://coffeeroasterlnk.com/products/diner-mugs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 16.0,
+    "title": "Yellow",
+    "variant_id": "50328613486883"
+   },
+   {
+    "available": true,
+    "grams": 475,
+    "price_usd": 16.0,
+    "title": "Blue",
+    "variant_id": "50328613650723"
+   }
+  ],
+  "vendor": "Revive Drinkware"
+ },
+ {
+  "body_hash": "888b08629d0c102c",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-muffin-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/blueberry-30g.jpg?v=1711640903",
+  "platform": "shopify",
+  "product_id": "9106982404387",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Blueberry Muffin Inbru",
+  "url": "https://coffeeroasterlnk.com/products/blueberry-muffin-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887540879651"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "5263402e6ff5c7dc",
+  "first_seen": "2026-10-26",
+  "handle": "butterscotch-drop",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/butterscotch-drop-30g-yellow_1bd80ebd-1705-4cdd-bbfc-c31ccfe8d480.jpg?v=1711641064",
+  "platform": "shopify",
+  "product_id": "9106995380515",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Butterscotch Drop Inbru",
+  "url": "https://coffeeroasterlnk.com/products/butterscotch-drop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887599042851"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "90071aab61a85a0a",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/french-vanilla-30g.jpg?v=1711641145",
+  "platform": "shopify",
+  "product_id": "9106997412131",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "French Vanilla Inbru",
+  "url": "https://coffeeroasterlnk.com/products/french-vanilla-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887607595299"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "ad19b1eb35a02651",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut-snickerdoodle-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/snickerdoodle-30g-falling.jpg?v=1734712479",
+  "platform": "shopify",
+  "product_id": "9107006390563",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Snickerdoodle Inbru",
+  "url": "https://coffeeroasterlnk.com/products/cinnamon-hazelnut-snickerdoodle-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887644655907"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "2f55f6764d629bd7",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/caramel-30g.jpg?v=1711641606",
+  "platform": "shopify",
+  "product_id": "9107012452643",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Caramel Inbru",
+  "url": "https://coffeeroasterlnk.com/products/caramel-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887672705315"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "88828430d0b62d01",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-creme-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/coconut-30g.jpg?v=1711641775",
+  "platform": "shopify",
+  "product_id": "9107016089891",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Coconut Creme Inbru",
+  "url": "https://coffeeroasterlnk.com/products/coconut-creme-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887689810211"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "b26a55e6faf3feb2",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-hazelnut-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/hazelnut-30g.jpg?v=1711641870",
+  "platform": "shopify",
+  "product_id": "9107019694371",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Mountain Hazelnut Inbru",
+  "url": "https://coffeeroasterlnk.com/products/mountain-hazelnut-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887707832611"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "a67f6c74bb02e078",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grog-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/highlander-grogg-30g.jpg?v=1711642112",
+  "platform": "shopify",
+  "product_id": "9107026444579",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Highlander Grog Inbru",
+  "url": "https://coffeeroasterlnk.com/products/highlander-grog-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887740698915"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "1c744b7b79a71576",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-truffle-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/chocolate-raspberry-30g.jpg?v=1711642209",
+  "platform": "shopify",
+  "product_id": "9107028246819",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Chocolate Raspberry Inbru",
+  "url": "https://coffeeroasterlnk.com/products/raspberry-truffle-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887755215139"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "fa2e7bc60014e973",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/southern-pecan-30g.jpg?v=1711642298",
+  "platform": "shopify",
+  "product_id": "9107030049059",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Southern Pecan Inbru",
+  "url": "https://coffeeroasterlnk.com/products/southern-pecan-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887770026275"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "4d5f72320a94b228",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-fudge-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/chocolate-fudge-30g.jpg?v=1711642385",
+  "platform": "shopify",
+  "product_id": "9107032539427",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Chocolate Fudge Inbru",
+  "url": "https://coffeeroasterlnk.com/products/chocolate-fudge-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887784706339"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "38b635b96bbd6e3c",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-bark-inbru",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/s141256836104395161_p283_i1_w500.webp?v=1711642731",
+  "platform": "shopify",
+  "product_id": "9107034407203",
+  "product_type": "Coffee",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Inbru"
+  ],
+  "title": "Peppermint Bark Inbru",
+  "url": "https://coffeeroasterlnk.com/products/peppermint-bark-inbru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 10.95,
+    "title": "Default Title",
+    "variant_id": "47887794110755"
+   }
+  ],
+  "vendor": "Inbru"
+ },
+ {
+  "body_hash": "5dafae40f929dc99",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/Apple-Cinnamon-Juicy.png?v=1768937742",
+  "platform": "shopify",
+  "product_id": "9637296537891",
+  "product_type": "Light Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Light Roast"
+  ],
+  "title": "Nicaragua",
+  "url": "https://coffeeroasterlnk.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "50175416598819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "50175416893731"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "50175417188643"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "50175417483555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "50175417778467"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060611506467"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060611539235"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060611572003"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060611604771"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060611637539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060611670307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060611703075"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060611735843"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060611768611"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060611801379"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060611834147"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060611866915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060611899683"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060611932451"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060611965219"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060611997987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060612030755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060612063523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060612096291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060612129059"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "f909d3d8b2d492b4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia-guji-natural-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/4Berry-Version1.jpg?v=1669418792",
+  "platform": "shopify",
+  "product_id": "9775401042211",
+  "product_type": "Decaf & Half Caff",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf"
+  ],
+  "title": "Decaf | Ethiopia Guji Natural",
+  "url": "https://coffeeroasterlnk.com/products/decaf-ethiopia-guji-natural-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "52231529726243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "52231530021155"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "52231530316067"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "52231530610979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "52231530905891"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060625400099"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060625432867"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060625465635"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53060625498403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060625531171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060625563939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060625596707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53060625629475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060625662243"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060625695011"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060625727779"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53060625760547"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060625793315"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060625826083"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060625858851"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53060625891619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53060625924387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53060625957155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53060625989923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53060626022691"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "33a69ba8de1898e9",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/13CitrusandChocolate-Version2_d03de2a8-9a39-41b7-8377-7247de42718b.jpg?v=1742841333",
+  "platform": "shopify",
+  "product_id": "9842067636515",
+  "product_type": "Light Roast",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Light Roast"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://coffeeroasterlnk.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "53483044045091"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53483044077859"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53483044110627"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53483044143395"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53483044176163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "53483044208931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53483044241699"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53483044274467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53483044307235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53483044340003"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "53483044372771"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53483044405539"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53483044438307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53483044471075"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53483044503843"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "53483044536611"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53483044569379"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53483044602147"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53483044634915"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53483044667683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "53483044700451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53483044733219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53483044765987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53483044798755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53483044831523"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "5daf10c667a0eb5d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/products/7ChocolateandCaramel-Version1_741c3375-8aff-4faf-bc5a-5d3f3c53fcb9.jpg?v=1669419607",
+  "platform": "shopify",
+  "product_id": "9857553629475",
+  "product_type": "Signature Blend",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Signature Blend",
+   "signature blends"
+  ],
+  "title": "Decaf | Cold Brew Blend",
+  "url": "https://coffeeroasterlnk.com/products/decaf-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Whole Bean",
+    "variant_id": "53526136291619"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53526136324387"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53526136357155"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53526136389923"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.5,
+    "title": "8oz. / Fine (Espresso)",
+    "variant_id": "53526136422691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "53526136455459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53526136488227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53526136520995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53526136553763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12oz. / Fine (Espresso)",
+    "variant_id": "53526136586531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Whole Bean",
+    "variant_id": "53526136619299"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53526136652067"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53526136684835"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53526136717603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz. / Fine (Espresso)",
+    "variant_id": "53526136750371"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Whole Bean",
+    "variant_id": "53526136783139"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53526136815907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53526136848675"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53526136881443"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb. / Fine (Espresso)",
+    "variant_id": "53526136914211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "53526136946979"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Coarse (Cold Brew/French Press/Perc)",
+    "variant_id": "53526136979747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium (Drip/Pour-Over/Chemex)",
+    "variant_id": "53526137012515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Medium-Fine (K-Cup/AeroPress/Moka Pot)",
+    "variant_id": "53526137045283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb. / Fine (Espresso)",
+    "variant_id": "53526137078051"
+   }
+  ],
+  "vendor": "Coffee Roaster"
+ },
+ {
+  "body_hash": "f4307710a898f3d4",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-chocolate-caramels-1",
+  "image": "https://cdn.shopify.com/s/files/1/0289/8811/2971/files/espchoccaramels_6963b62c-0b9e-4c25-b460-53b48a9bc58f.jpg?v=1748379294",
+  "platform": "shopify",
+  "product_id": "9910539256099",
+  "product_type": "Chocolates",
+  "roaster_slug": "coffeeroasterlnk",
+  "tags": [
+   "lulubee"
+  ],
+  "title": "Espresso Dark Chocolate Caramels",
+  "url": "https://coffeeroasterlnk.com/products/espresso-chocolate-caramels-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 123,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "53913073844515"
+   }
+  ],
+  "vendor": "Lulubee"
+ }
+]

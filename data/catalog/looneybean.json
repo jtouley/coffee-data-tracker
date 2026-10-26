@@ -1,0 +1,303 @@
+[
+ {
+  "body_hash": "cd1e51f129fdec21",
+  "first_seen": "2026-10-26",
+  "handle": "house-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7289/6830/files/IMG_8903.jpg?v=1758141290",
+  "platform": "shopify",
+  "product_id": "8120215830846",
+  "product_type": "decaf",
+  "roaster_slug": "looneybean",
+  "tags": [
+   "coffee",
+   "decaf",
+   "decaffeinated",
+   "house decaf"
+  ],
+  "title": "Organic House Decaf - 12 oz",
+  "url": "https://www.looneybean.com/products/house-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean / Organic",
+    "variant_id": "44499696156990"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Fine Ground / Organic",
+    "variant_id": "44499696189758"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Home Drip / Organic",
+    "variant_id": "44499696222526"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press / Organic",
+    "variant_id": "44499696255294"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso / Organic",
+    "variant_id": "44499696288062"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean / Decaffeinated",
+    "variant_id": "54384117449022"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Fine Ground / Decaffeinated",
+    "variant_id": "54384117481790"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Home Drip / Decaffeinated",
+    "variant_id": "54384117514558"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press / Decaffeinated",
+    "variant_id": "54384117547326"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso / Decaffeinated",
+    "variant_id": "54384117580094"
+   }
+  ],
+  "vendor": "Looney Bean Coffee"
+ },
+ {
+  "body_hash": "7ddca18ef2f0dc46",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-coffee-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7289/6830/files/IMG_8902.jpg?v=1758141252",
+  "platform": "shopify",
+  "product_id": "8120315969854",
+  "product_type": "",
+  "roaster_slug": "looneybean",
+  "tags": [
+   "coffee",
+   "costa rica",
+   "costa rican"
+  ],
+  "title": "Organic Costa Rica - 12 oz",
+  "url": "https://www.looneybean.com/products/costa-rica-coffee-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean / Organic",
+    "variant_id": "44500176666942"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Finely Ground / Organic",
+    "variant_id": "44500176699710"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Home Drip / Organic",
+    "variant_id": "44500176732478"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press / Organic",
+    "variant_id": "44500176765246"
+   }
+  ],
+  "vendor": "Looney Bean Coffee"
+ },
+ {
+  "body_hash": "c4a9f57c2eda102e",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7289/6830/files/IMG_8901.jpg?v=1758141072",
+  "platform": "shopify",
+  "product_id": "8120322261310",
+  "product_type": "",
+  "roaster_slug": "looneybean",
+  "tags": [
+   "blend",
+   "coffee",
+   "espresso",
+   "espresso blend"
+  ],
+  "title": "Organic Espresso Blend - 12 oz",
+  "url": "https://www.looneybean.com/products/espresso-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean",
+    "variant_id": "44500208615742"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Finely Ground",
+    "variant_id": "44500208648510"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Home Drip",
+    "variant_id": "44500208681278"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press",
+    "variant_id": "44500208714046"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso",
+    "variant_id": "44500208779582"
+   }
+  ],
+  "vendor": "Looney Bean Coffee"
+ },
+ {
+  "body_hash": "cd1e51f129fdec21",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-mexico-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7289/6830/files/IMG_8900.jpg?v=1758141019",
+  "platform": "shopify",
+  "product_id": "8120351490366",
+  "product_type": "",
+  "roaster_slug": "looneybean",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "mexican",
+   "midnight mexico"
+  ],
+  "title": "Organic Mexico - 12 oz",
+  "url": "https://www.looneybean.com/products/midnight-mexico-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean / Organic",
+    "variant_id": "44500360986942"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Finely Ground / Organic",
+    "variant_id": "44500361019710"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Home Drip / Organic",
+    "variant_id": "44500361052478"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press / Organic",
+    "variant_id": "44500361085246"
+   }
+  ],
+  "vendor": "Looney Bean Coffee"
+ },
+ {
+  "body_hash": "cd1e51f129fdec21",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-blend-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0688/7289/6830/files/IMG_8899.jpg?v=1758140917",
+  "platform": "shopify",
+  "product_id": "8120354308414",
+  "product_type": "",
+  "roaster_slug": "looneybean",
+  "tags": [
+   "blend",
+   "coffee",
+   "coffee blend",
+   "guatemala",
+   "guatemalan"
+  ],
+  "title": "Organic Guatemala Blend - 12 oz",
+  "url": "https://www.looneybean.com/products/guatemalan-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Whole Bean / Organic",
+    "variant_id": "44500372914494"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Finely Ground / Organic",
+    "variant_id": "44500372947262"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Auto Drip / Organic",
+    "variant_id": "44500372980030"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "French Press / Organic",
+    "variant_id": "44500373012798"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.95,
+    "title": "Espresso / Organic",
+    "variant_id": "44500373045566"
+   }
+  ],
+  "vendor": "Looney Bean Coffee"
+ }
+]

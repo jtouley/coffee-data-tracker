@@ -1,0 +1,2114 @@
+[
+ {
+  "body_hash": "adce610b3c0baf96",
+  "first_seen": "2026-10-26",
+  "handle": "guata-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1RRoast.png?v=1771273537",
+  "platform": "shopify",
+  "product_id": "10368581173551",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Rivendale Roast",
+  "url": "https://toastyroasters.com/products/guata-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50609375052079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50609375084847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50609375150383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50609375183151"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50609375248687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50609375281455"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50678660399407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50678660432175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50678727541039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50678727573807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50678727606575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50678727639343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869844570415"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "129c9057f9009b22",
+  "first_seen": "2026-10-26",
+  "handle": "2nd-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1LMRoast.png?v=1771273169",
+  "platform": "shopify",
+  "product_id": "10390725329199",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Lonely Mountain Roast",
+  "url": "https://toastyroasters.com/products/2nd-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50678705652015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50678705684783"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50678705783087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50678705815855"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50678705914159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50678705946927"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50678706045231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50678706077999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50678724034863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50678724067631"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50678724100399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50678724133167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869842145583"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "e5af937ad51572b5",
+  "first_seen": "2026-10-26",
+  "handle": "black-lake-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/BLRoast_28053549-81cf-48f7-8e2d-491ed652a367.png?v=1771273537",
+  "platform": "shopify",
+  "product_id": "10396806807855",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Black Lake Roast",
+  "url": "https://toastyroasters.com/products/black-lake-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50697280586031"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50697280651567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50697280684335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50697280749871"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50697280815407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50697280848175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50697280913711"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50697280979247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50697281012015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50697281077551"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50697281143087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50697281175855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869834379567"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "4073d7a820c08c1f",
+  "first_seen": "2026-10-26",
+  "handle": "booty-bay-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1BBBRoast.png?v=1771273169",
+  "platform": "shopify",
+  "product_id": "10398001529135",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Booty Bay Blueberry Roast",
+  "url": "https://toastyroasters.com/products/booty-bay-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50700812714287"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50700812779823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50700812812591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50700812878127"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50700812943663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50700812976431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50700813041967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50700813107503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50700813140271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50700813205807"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50700813271343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50700813304111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5lb.",
+    "variant_id": "51869832282415"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "e1fed5082bb7d9b6",
+  "first_seen": "2026-10-26",
+  "handle": "sleepy-hollow-pumpkin-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1SHRoast.png?v=1771272956",
+  "platform": "shopify",
+  "product_id": "10408502034735",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Sleepy Hollow Pumpkin Roast",
+  "url": "https://toastyroasters.com/products/sleepy-hollow-pumpkin-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50743954440495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50743954473263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50743954506031"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50743954604335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50743954637103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50743954669871"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50743954768175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50743954800943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50743954833711"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50743954932015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50743954964783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50743954997551"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 79.99,
+    "title": "whole bean / 5b.",
+    "variant_id": "51869829202223"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "c032a8489ee81489",
+  "first_seen": "2026-10-26",
+  "handle": "dun-morogh-decaf-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/DunMoroghRoast.png?v=1771273537",
+  "platform": "shopify",
+  "product_id": "10408891318575",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Dun Morogh Decaf Roast",
+  "url": "https://toastyroasters.com/products/dun-morogh-decaf-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50745402130735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50745402163503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50745402196271"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50745402294575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50745402327343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50745402360111"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50745402458415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50745402491183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50745402523951"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50745402622255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50745402655023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50745402687791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5lb.",
+    "variant_id": "51869827924271"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "490782c2091654cf",
+  "first_seen": "2026-10-26",
+  "handle": "second-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/12ndbkfstblend.png?v=1771274941",
+  "platform": "shopify",
+  "product_id": "10408891580719",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Second Breakfast Blend",
+  "url": "https://toastyroasters.com/products/second-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50745405243695"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50745405276463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50745405309231"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50745405407535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50745405440303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50745405473071"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50745405571375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50745405604143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50745405636911"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50745405735215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50745405767983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50745405800751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869827170607"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "7b82889b6af7fbf4",
+  "first_seen": "2026-10-26",
+  "handle": "forbidden-forest-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1FFRoast.png?v=1771272054",
+  "platform": "shopify",
+  "product_id": "10428460794159",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Forbidden Forest Roast",
+  "url": "https://toastyroasters.com/products/forbidden-forest-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50807513874735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50807513907503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50807513940271"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50807514038575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50807514071343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50807514104111"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50807514202415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50807514235183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50807514267951"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50807514366255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50807514399023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50807514431791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869824713007"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "2e8c98c4efc56606",
+  "first_seen": "2026-10-26",
+  "handle": "valinor-vanilla-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/VVRoast.png?v=1771273537",
+  "platform": "shopify",
+  "product_id": "10454597206319",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Valinor Vanilla Roast",
+  "url": "https://toastyroasters.com/products/valinor-vanilla-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50888537899311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50888537932079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50888537964847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50888538030383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50888538063151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50888538095919"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50888538161455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50888538194223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50888538226991"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50888538292527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50888538325295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50888538358063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869823369519"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "d875fc963a32b701",
+  "first_seen": "2026-10-26",
+  "handle": "mirkwood-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1MW.png?v=1771274941",
+  "platform": "shopify",
+  "product_id": "10484440564015",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Mirkwood Roast",
+  "url": "https://toastyroasters.com/products/mirkwood-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "50985855353135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "50985855385903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "50985855418671"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "50985855484207"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "50985855516975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "50985855549743"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "50985855615279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "50985855648047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "50985855680815"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "50985855746351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "50985855779119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "50985855811887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869821862191"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "0602a8fa89f6488d",
+  "first_seen": "2026-10-26",
+  "handle": "blonde-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/BLACKarkenstoneroast.png?v=1776443538",
+  "platform": "shopify",
+  "product_id": "10497505165615",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Arkenstone Blonde Roast",
+  "url": "https://toastyroasters.com/products/blonde-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "51021981679919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "51021981712687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "51021981745455"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "51021981810991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "51021981843759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "51021981876527"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "51624548761903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "51624548794671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "51624548827439"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "51624548892975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "51624548925743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "51624548958511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869814620463"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "fd847c1c0d92e457",
+  "first_seen": "2026-10-26",
+  "handle": "2-oz-portion-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1portionpacks.png?v=1771266224",
+  "platform": "shopify",
+  "product_id": "10518262776111",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "2 oz. Portion Packs",
+  "url": "https://toastyroasters.com/products/2-oz-portion-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Rivendale (medium)",
+    "variant_id": "51089274765615"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Lonely Mountain (medium)",
+    "variant_id": "51089274798383"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Black Lake (dark)",
+    "variant_id": "51089274831151"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Forbidden Forest (medium)",
+    "variant_id": "51089274863919"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Second Breakfast Blend (light)",
+    "variant_id": "51089274896687"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Dun Morogh Decaf (medium)",
+    "variant_id": "51089274929455"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Booty Bay Blueberry (medium)",
+    "variant_id": "51089274962223"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Valinor Vanilla (medium)",
+    "variant_id": "51089274994991"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Sleepy Hollow Pumpkin (medium)",
+    "variant_id": "51089275027759"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Mirkwood (dark)",
+    "variant_id": "51092502708527"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Honeydukes Chocolate Banana (light)",
+    "variant_id": "51837243425071"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Arkenstone Blonde Roast (light)",
+    "variant_id": "51837247062319"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Moria Roast Organic (dark)",
+    "variant_id": "51925421130031"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Honningbrew Medium Organic (medium)",
+    "variant_id": "51925421162799"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Hunter Half Caff Blend (medium)",
+    "variant_id": "53107342508335"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Hearthfire Hazelnut (medium)",
+    "variant_id": "57192914157871"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.78,
+    "title": "Denerim's Darkest (dark)",
+    "variant_id": "58089730933039"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "37658520e8ec2435",
+  "first_seen": "2026-10-26",
+  "handle": "honeydukes-chocolate-banana-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1HD.png?v=1771262294",
+  "platform": "shopify",
+  "product_id": "10533216846127",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Honeydukes Chocolate Banana Roast",
+  "url": "https://toastyroasters.com/products/honeydukes-chocolate-banana-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "51123992592687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "51123992625455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "51123992658223"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "51123992723759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "51123992756527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "51123992789295"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "51123992854831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "51123992887599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "51123992920367"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "51123992985903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "51123993018671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "51123993051439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51869813735727"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "0be568a33cc1b309",
+  "first_seen": "2026-10-26",
+  "handle": "moria-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1MORoast.png?v=1771272547",
+  "platform": "shopify",
+  "product_id": "10759269548335",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Moria Organic Roast",
+  "url": "https://toastyroasters.com/products/moria-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "51900782051631"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "51900782084399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "51900782117167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51900782149935"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "51900782215471"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "51900782248239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "51900782281007"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "51900782346543"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "51900782379311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "51900782412079"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "51900782477615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "51900782510383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "51900782543151"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "c0eb7095a2f38721",
+  "first_seen": "2026-10-26",
+  "handle": "honningbrew-medium-organic-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1HORoast.png?v=1771272166",
+  "platform": "shopify",
+  "product_id": "10765126730031",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Honningbrew Medium Organic Roast",
+  "url": "https://toastyroasters.com/products/honningbrew-medium-organic-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "51925217640751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "51925217673519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "51925217706287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51925217739055"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "51925217804591"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "51925217837359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "51925217870127"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "51925217935663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "51925217968431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "51925218001199"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "51925218066735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "51925218099503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "51925218132271"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "d8840065b36cf297",
+  "first_seen": "2026-10-26",
+  "handle": "dungeon-master-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/BLACKdungeonmaster1.png?v=1772369927",
+  "platform": "shopify",
+  "product_id": "10774944842031",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Dungeon Master Dark Roast",
+  "url": "https://toastyroasters.com/products/dungeon-master-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "51953248076079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "51953248108847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "51953248239919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "51953248370991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "51953248502063"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "2f9e2df48fe7df3a",
+  "first_seen": "2026-10-26",
+  "handle": "hunter-half-caff-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/BLACKHunterHalfCaff_3c86ce9c-09f7-4643-9a8f-1eae646e5d72.png?v=1771273537",
+  "platform": "shopify",
+  "product_id": "11487090180399",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Hunter Half Caff Blend",
+  "url": "https://toastyroasters.com/products/hunter-half-caff-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "52845511278895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "52845511311663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "52845511344431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "52845511377199"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "52845511442735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "52845511475503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "52845511508271"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "52845511573807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "52845511606575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "52845511639343"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "52845511704879"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "52845511737647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "52845511770415"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "252f92902ce6f464",
+  "first_seen": "2026-10-26",
+  "handle": "hearthfire-hazelnut-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/1HearthfireHazelnut_77c94395-ab8c-4cad-a9f0-6ba133a4eeb9.png?v=1774714912",
+  "platform": "shopify",
+  "product_id": "14127982641455",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Hearthfire Hazelnut Roast",
+  "url": "https://toastyroasters.com/products/hearthfire-hazelnut-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "55927432184111"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "55927432216879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "55927432249647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "55927432282415"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "55927432347951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "55927432380719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "55927432413487"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "55927432479023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "55927432511791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "55927432544559"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "55927432610095"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "55927432642863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "55927432675631"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "5b3077293e0ba7fb",
+  "first_seen": "2026-10-26",
+  "handle": "denerims-darkest-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/DenerimsDarkest_b090c62f-1bfe-44ed-9090-878ec4c03538.png?v=1780652994",
+  "platform": "shopify",
+  "product_id": "16013036355887",
+  "product_type": "coffee",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Denerim's Darkest Roast",
+  "url": "https://toastyroasters.com/products/denerims-darkest-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "58006156181807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "58006156214575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "58006156247343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "58006156280111"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "58006156345647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "58006156378415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "58006156411183"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "58006156476719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "58006156509487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "58006156542255"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "58006156607791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "58006156640559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "58006156673327"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ },
+ {
+  "body_hash": "3b9f90d05b1f310f",
+  "first_seen": "2026-10-26",
+  "handle": "brumas-maple-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0907/1830/6607/files/BrumasMaple.png?v=1790685948",
+  "platform": "shopify",
+  "product_id": "16191494127919",
+  "product_type": "",
+  "roaster_slug": "toastyroasters",
+  "tags": [],
+  "title": "Bruma's Maple Roast",
+  "url": "https://toastyroasters.com/products/brumas-maple-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "whole bean / 8 oz.",
+    "variant_id": "58564193190191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "whole bean / 12 oz.",
+    "variant_id": "58564193222959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "whole bean / 1 lb.",
+    "variant_id": "58564193255727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "whole bean / 5 lb.",
+    "variant_id": "58564193288495"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "coarse ground / 8 oz.",
+    "variant_id": "58564193321263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "coarse ground / 12 oz.",
+    "variant_id": "58564193354031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "coarse ground / 1 lb.",
+    "variant_id": "58564193386799"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "espresso / 8 oz.",
+    "variant_id": "58564193419567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "espresso / 12 oz.",
+    "variant_id": "58564193452335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "espresso / 1 lb.",
+    "variant_id": "58564193485103"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.99,
+    "title": "fine / 8 oz.",
+    "variant_id": "58564193517871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "fine / 12 oz.",
+    "variant_id": "58564193550639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.99,
+    "title": "fine / 1 lb.",
+    "variant_id": "58564193583407"
+   }
+  ],
+  "vendor": "Toasty Roasters"
+ }
+]

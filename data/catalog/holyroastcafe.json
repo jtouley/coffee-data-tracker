@@ -1,0 +1,53 @@
+[
+ {
+  "body_hash": "674f55105101bec3",
+  "first_seen": "2026-10-26",
+  "handle": "holy-roast-latte",
+  "image": "https://images.squarespace-cdn.com/content/v1/69a758015c9f45515309c133/fc2ccba1-b5ca-452d-93b3-afb2a4a85006/HR+Drink+icon+tempArtboard+1.png",
+  "platform": "squarespace",
+  "product_id": "69d41b2f5b6cca5ecf8966da",
+  "product_type": "",
+  "roaster_slug": "holyroastcafe",
+  "tags": [],
+  "title": "Holy Roast Latte",
+  "url": "https://www.holyroastcafe.com/shop/p/holy-roast-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Oat",
+    "variant_id": "04c91f72-8c3e-4990-8674-f6ca559de8d1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Coconut",
+    "variant_id": "23a247e4-d9d1-463e-b5d6-ded6dc8fe6e1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Regular",
+    "variant_id": "33135007-87b1-48ff-96e8-652966c537c6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Almond",
+    "variant_id": "b88a704d-e433-43b6-826c-badd7c176918"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Soy",
+    "variant_id": "c8c3b06e-fc46-4e71-99ca-40a5807c9aa4"
+   }
+  ],
+  "vendor": ""
+ }
+]

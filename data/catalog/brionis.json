@@ -1,0 +1,162 @@
+[
+ {
+  "body_hash": "b49d9646b592b85c",
+  "first_seen": "2026-10-26",
+  "handle": "maranello",
+  "image": "https://images.squarespace-cdn.com/content/v1/52863fe6e4b045ae0cc9bee4/1397676932925-74FIME0U4GLIMY0PIZO4/Maranello+Label.png",
+  "platform": "squarespace",
+  "product_id": "5318b559e4b03ba2018b8b40",
+  "product_type": "Blend,Dark Roast,Decaf,Ground,Whole Bean,Espresso",
+  "roaster_slug": "brionis",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Decaf",
+   "Espresso",
+   "Ground",
+   "Whole Bean"
+  ],
+  "title": "Maranello",
+  "url": "https://www.brionis.com/products/maranello",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.99,
+    "title": "Whole Bean - 2lb. Bag",
+    "variant_id": "547b7c72-2af9-4437-a50a-376305819deb"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "Ground - 12oz. Bag",
+    "variant_id": "9fb2a7ab-f55c-40d6-acc0-6c32ca47b3f6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e030c174c465ea00",
+  "first_seen": "2026-10-26",
+  "handle": "grande-cafe",
+  "image": "https://images.squarespace-cdn.com/content/v1/52863fe6e4b045ae0cc9bee4/1397676060611-FOPYW7GZG1IY27WBV426/Grande+Cafe.png",
+  "platform": "squarespace",
+  "product_id": "5318bb20e4b0c5d02616c8e8",
+  "product_type": "Dark Roast,Blend,Whole Bean,Ground",
+  "roaster_slug": "brionis",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "Ground",
+   "Whole Bean"
+  ],
+  "title": "Grande Cafe",
+  "url": "https://www.brionis.com/products/grande-cafe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.99,
+    "title": "Whole Bean - 12oz. Bag",
+    "variant_id": "4fdd5df0-e21e-4e43-8f79-2328263e39bd"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.99,
+    "title": "Ground - 12oz. Bag",
+    "variant_id": "c9cd5f06-a273-425a-91a6-4ed8d6d937a0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f15f38dc654ad1e7",
+  "first_seen": "2026-10-26",
+  "handle": "montagne",
+  "image": "https://images.squarespace-cdn.com/content/v1/52863fe6e4b045ae0cc9bee4/1397677039559-HCJ40H2NL5PDW6RMAFBX/Montagne.png",
+  "platform": "squarespace",
+  "product_id": "5318bf6de4b0ebfb9ed3963f",
+  "product_type": "Single Origin,Ground,Medium Roast,Fair Trade/Organic",
+  "roaster_slug": "brionis",
+  "tags": [
+   "Fair Trade/Organic",
+   "Ground",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Montagne",
+  "url": "https://www.brionis.com/products/montagne",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "French Press - 12, 1oz Bags",
+    "variant_id": "b95c26fa-ea42-4862-b66d-44945de48c88"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground - 12oz. Bag",
+    "variant_id": "e8629f6f-07d2-41fe-b26b-daa0c5dd68e6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "maranello-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/52863fe6e4b045ae0cc9bee4/1397676962835-KAUJFCGXQ8XG88DA3K0V/Maranello+Decaf.png",
+  "platform": "squarespace",
+  "product_id": "533b10b9e4b00245d9cf233b",
+  "product_type": "",
+  "roaster_slug": "brionis",
+  "tags": [],
+  "title": "Maranello - Decaf",
+  "url": "https://www.brionis.com/products/maranello-decaf",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Ground - 12oz. Bag",
+    "variant_id": "0b17b274-5c53-4ec8-a3c8-84db84cf0e0a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0289302b9b645514",
+  "first_seen": "2026-10-26",
+  "handle": "brionis-blend-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/52863fe6e4b045ae0cc9bee4/1398444004642-TUBZQ0I6SUKMKPVSWF79/Brioni%27s+Blend+Decaf.png",
+  "platform": "squarespace",
+  "product_id": "535a8f46e4b0958b469380ec",
+  "product_type": "",
+  "roaster_slug": "brionis",
+  "tags": [],
+  "title": "Brioni's Blend Decaf",
+  "url": "https://www.brionis.com/products/brionis-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 11.99,
+    "title": "Whole Bean - 12oz. Bag",
+    "variant_id": "0c0ee34d-9f40-4211-aa27-dfc208fda3d4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.99,
+    "title": "Green Cup Pods - 18ct. Box",
+    "variant_id": "7a55113e-96df-4a82-af73-930647f6efc7"
+   }
+  ],
+  "vendor": ""
+ }
+]

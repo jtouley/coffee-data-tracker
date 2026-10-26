@@ -1,0 +1,316 @@
+[
+ {
+  "body_hash": "6d64179f32148e4e",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala-huehuetenango",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715360646340-WS2H9KNOOS1M7DBXA9X4/Reboot-Packaging_Guatemala-Crowd-Pleaser.jpg",
+  "platform": "squarespace",
+  "product_id": "568b50ed2399a30df613982c",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM/DARK ROAST"
+  ],
+  "title": "12 oz. Guatemala Huehuetenango",
+  "url": "https://www.rebootroasting.com/products/p/guatamala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "287df4a9-1dcb-4696-b8d3-c9668c17b4fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25761c335a8f879e",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-colombia-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715445215156-5HGSEYAI0MO17BAAVSWC/Reboot-Packaging_Half-Caff.jpg",
+  "platform": "squarespace",
+  "product_id": "58a67db51b10e332484c9d87",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM ROAST"
+  ],
+  "title": "12 oz. Half Caff",
+  "url": "https://www.rebootroasting.com/products/p/half-caff-colombia-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "8387a2e1-91df-4a3a-9302-e9275b5bd0fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c15706ff3a4b1350",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715356380317-P8YLSH2WR4N5WLKOWKSV/Reboot-Packaging_Decaf-Colombia-Quindio.jpg",
+  "platform": "squarespace",
+  "product_id": "58b0ba28d482e9ff0525c5ac",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM ROAST"
+  ],
+  "title": "12 oz. Decaf",
+  "url": "https://www.rebootroasting.com/products/p/decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "937a721a-776f-4e76-8043-1fb72416ab44"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88ecb34bf44f9a49",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-dumerso",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715360533696-J01H7YGJUEZ0WC8RF7K0/Reboot-Packaging_Ethiopia-Most-Unique.jpg",
+  "platform": "squarespace",
+  "product_id": "5a922404c830257a3459d8e4",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "LIGHT/MEDIUM ROAST"
+  ],
+  "title": "12 oz. Ethiopia Yirgacheffe Dumerso",
+  "url": "https://www.rebootroasting.com/products/p/ethiopia-yirgacheffe-dumerso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "530460f8-aef3-4cce-8eef-6f7cf4ca298a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0cb82088490219e3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715357083752-734Y5X2EQVGBN2LJZRG8/Reboot-Packaging_Espresso-Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5bb7c720eef1a1c646491cb7",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM/DARK ROAST"
+  ],
+  "title": "12 oz. Espresso Blend",
+  "url": "https://www.rebootroasting.com/products/p/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "2f5d41d0-2c40-46e0-9394-078b059f19d9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c95bbe68106efc3e",
+  "first_seen": "2026-10-26",
+  "handle": "rebootblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715357211846-V1R0MSER7S22RCBVRLQ5/Reboot-Packaging_Reboot-Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5deebbf1cf3fcd044c77d27b",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM/DARK ROAST"
+  ],
+  "title": "12 oz. Reboot Blend",
+  "url": "https://www.rebootroasting.com/products/p/rebootblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "63eebe7d-a00d-44dd-8de3-1fa876790c3a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87e91a61b0be06f5",
+  "first_seen": "2026-10-26",
+  "handle": "4oz-custom-coffee-bags",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1709057473052-NFLA188ZA6BFMNKBBWGF/Custom-Label-Coffee_4oz.png",
+  "platform": "squarespace",
+  "product_id": "6399fb14cdfed76b2685efda",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [],
+  "title": "4 oz. Custom Coffee Bags",
+  "url": "https://www.rebootroasting.com/products/p/4oz-custom-coffee-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz.",
+    "variant_id": "5c1e8d75-58b8-47a6-b597-4ecba2e7d256"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2a01c53cee3ba45",
+  "first_seen": "2026-10-26",
+  "handle": "private-label",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1709059967372-TRIQ5K9Q02Q0F3LYX90O/Reboot-Private-White-Label-Coffee.png",
+  "platform": "squarespace",
+  "product_id": "6513052ad0adc6730c0e28f2",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [],
+  "title": "Private (White) Label",
+  "url": "https://www.rebootroasting.com/products/p/private-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz.",
+    "variant_id": "2b029dfa-5bc7-426c-b682-c8d3dace5a2b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz.",
+    "variant_id": "7d7b32f6-edc1-461f-835b-286e917b963a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d5095ec642eb54b",
+  "first_seen": "2026-10-26",
+  "handle": "8-12-oz-custom-coffee-bags",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1709056339234-3TV7SELODQA0W2JWNL8O/02_BLANK_Custom-Label_8-12oz.png",
+  "platform": "squarespace",
+  "product_id": "651315410b33016c48b47e1d",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [],
+  "title": "8 or 12 oz. Custom Coffee Bags",
+  "url": "https://www.rebootroasting.com/products/p/8-12-oz-custom-coffee-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz.",
+    "variant_id": "aa3ca32f-6f04-4250-b770-23676d898ea7"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz.",
+    "variant_id": "e0a7e1ea-98bf-47bb-a99e-323a29d24d1a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90ff3ffb57666d50",
+  "first_seen": "2026-10-26",
+  "handle": "custom-reboot-coffee-bags",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/eabf7b25-7c40-43e2-9af2-81ac742ee2b2/Front-Facing_Bag.png",
+  "platform": "squarespace",
+  "product_id": "65132000b6f9c3403314293c",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [],
+  "title": "8 or 12 oz. Custom Reboot Branded Coffee Bags",
+  "url": "https://www.rebootroasting.com/products/p/custom-reboot-coffee-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.95,
+    "title": "8 oz.",
+    "variant_id": "03256a1f-87c5-44ff-baeb-9e036fb38d23"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz.",
+    "variant_id": "ecc0e1e2-d672-49c7-b5f9-5f231ed9e779"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "222dd6978f4e4136",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-caminoreal",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/1715360602272-2DOI230EX7AR6S145F3B/Reboot-Packaging_Colombia-Daily-Drinkerjpg.jpg",
+  "platform": "squarespace",
+  "product_id": "656f6fbb738c434a5f808041",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "MEDIUM ROAST"
+  ],
+  "title": "12 oz. Colombia Huila Camino Real",
+  "url": "https://www.rebootroasting.com/products/p/colombia-huila-caminoreal",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "",
+    "variant_id": "c910b041-b138-4147-8d15-cbc245b8df17"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ecab8eea947a728",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fincacristalina-jre6f",
+  "image": "https://images.squarespace-cdn.com/content/v1/55ecfe19e4b01667f1806baa/f6c6c272-c10a-463b-a5c7-f71ac401b907/Reboot-Packaging_Limited_Honduras-Finca-La-Joya.jpg",
+  "platform": "squarespace",
+  "product_id": "674a4a1c9a090574e28386e5",
+  "product_type": "",
+  "roaster_slug": "rebootroasting",
+  "tags": [
+   "Coffee",
+   "MEDIUM ROAST"
+  ],
+  "title": "12 oz. Honduras Finca La Joya",
+  "url": "https://www.rebootroasting.com/products/p/colombia-fincacristalina-jre6f",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.95,
+    "title": "",
+    "variant_id": "b0ee15bc-4971-42cb-ba14-c49ea6a57afb"
+   }
+  ],
+  "vendor": ""
+ }
+]

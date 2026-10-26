@@ -1,0 +1,785 @@
+[
+ {
+  "body_hash": "ce62185e411647eb",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-natural-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Costa_Rica_Light-3.jpg?v=1791907022",
+  "platform": "shopify",
+  "product_id": "15420211921049",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Costa Rica Natural: Light Roast",
+  "url": "https://mozartscoffee.com/products/costa-rica-natural-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67682508832921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "67682508865689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "67682508898457"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "6c8923842e874e6b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheff-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Ethiopia_Light-3.png?v=1791911521",
+  "platform": "shopify",
+  "product_id": "15420215001241",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Best of the Best"
+  ],
+  "title": "Ethiopian Yirgacheff: Light Roast",
+  "url": "https://mozartscoffee.com/products/ethiopian-yirgacheff-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 lb. / Whole Bean",
+    "variant_id": "67682524594329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 lb. / Ground (Auto Drip)",
+    "variant_id": "67682524627097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "1 lb. / Ground (French Press)",
+    "variant_id": "67682524659865"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "5acd014a9e85f350",
+  "first_seen": "2026-10-26",
+  "handle": "panama",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Panama_Light_Medium-3.jpg?v=1791907038",
+  "platform": "shopify",
+  "product_id": "15420217360537",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Panama Finca la Cotera",
+  "url": "https://mozartscoffee.com/products/panama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 19.99,
+    "title": "19.99",
+    "variant_id": "67682543730841"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters"
+ },
+ {
+  "body_hash": "b144c3f09525801d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Sumatra_Medium-3.jpg?v=1791907146",
+  "platform": "shopify",
+  "product_id": "15420218572953",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [],
+  "title": "Sumatra: Medium",
+  "url": "https://mozartscoffee.com/products/sumatra-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67682546155673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "67682546188441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "67682546221209"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "c450066c830bd2a1",
+  "first_seen": "2026-10-26",
+  "handle": "mozarts-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-072_edits.png?v=1763746877",
+  "platform": "shopify",
+  "product_id": "5350133104793",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "Mozart's Blend: Medium Roast",
+  "url": "https://mozartscoffee.com/products/mozarts-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34985660809369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35900802269337"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35900809773209"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "702cfffff638c082",
+  "first_seen": "2026-10-26",
+  "handle": "lake-austin-blend-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-078_Edits.png?v=1763746868",
+  "platform": "shopify",
+  "product_id": "5350133170329",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "Lake Austin Blend: Light Medium Roast",
+  "url": "https://mozartscoffee.com/products/lake-austin-blend-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34985395716249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35889996038297"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35889998823577"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "64a1b601751dfd76",
+  "first_seen": "2026-10-26",
+  "handle": "el-gato-negro-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-048_edits.png?v=1763746886",
+  "platform": "shopify",
+  "product_id": "5350133235865",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "El Gato Negro: Dark Roast Blend",
+  "url": "https://mozartscoffee.com/products/el-gato-negro-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "34984249983129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground (Auto Drip)",
+    "variant_id": "35883746230425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground (French Press)",
+    "variant_id": "35883747541145"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "5b2c47793ccd1094",
+  "first_seen": "2026-10-26",
+  "handle": "vecchi-amici-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-097_edits.png?v=1763746788",
+  "platform": "shopify",
+  "product_id": "5350133268633",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "Vecchi Amici: Dark Roast",
+  "url": "https://mozartscoffee.com/products/vecchi-amici-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34986614128793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35905996882073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35906003599513"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "c0cffcd71b58ac15",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-doro-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-061_edits.png?v=1763746799",
+  "platform": "shopify",
+  "product_id": "5350133399705",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "Espresso D'Oro:  Espresso Roast",
+  "url": "https://mozartscoffee.com/products/espresso-doro-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34984383086745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35883763663001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35883764940953"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "3fad0c1cd44498f8",
+  "first_seen": "2026-10-26",
+  "handle": "mozarts-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-177_edits.png?v=1763746808",
+  "platform": "shopify",
+  "product_id": "5350133465241",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Classic Blends"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://mozartscoffee.com/products/mozarts-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34985860235417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35900835791001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35900954607769"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Classic Blends"
+ },
+ {
+  "body_hash": "342695559c3ad672",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-natural-la-illusion",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/ColumbiaMedium_Dark.jpg?v=1791910680",
+  "platform": "shopify",
+  "product_id": "5350134055065",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Colombia",
+  "url": "https://mozartscoffee.com/products/colombia-natural-la-illusion",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "35221915631769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "36495384936601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "36495391096985"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "5ec93bfcbf750221",
+  "first_seen": "2026-10-26",
+  "handle": "texas-honey-heritage-campfire-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-146-_edits.png?v=1763747149",
+  "platform": "shopify",
+  "product_id": "5350143066265",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Texas Heritage Campfire Pecan",
+  "url": "https://mozartscoffee.com/products/texas-honey-heritage-campfire-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34986560553113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35905947369625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35905954152601"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Flavored Blends"
+ },
+ {
+  "body_hash": "abe185e138df5313",
+  "first_seen": "2026-10-26",
+  "handle": "french-mexican-vanilla-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-165-_edits.png?v=1763747149",
+  "platform": "shopify",
+  "product_id": "5350143099033",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Mexican Vanilla Bean",
+  "url": "https://mozartscoffee.com/products/french-mexican-vanilla-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34984989884569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35883803017369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35883810160793"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Flavored Blends"
+ },
+ {
+  "body_hash": "1cb0f6521338821b",
+  "first_seen": "2026-10-26",
+  "handle": "mozarts-best-colombian-chocolate-brownie",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-149-_edits.png?v=1763746857",
+  "platform": "shopify",
+  "product_id": "5350143852697",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Flavored Blends"
+  ],
+  "title": "Colombian Chocolate Brownie",
+  "url": "https://mozartscoffee.com/products/mozarts-best-colombian-chocolate-brownie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "34985517547673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "35900779856025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "35900782313625"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Flavored Blends"
+ },
+ {
+  "body_hash": "51688f005129d437",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-kernici-palompek",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Sumatra_Dark-4.jpg?v=1791906980",
+  "platform": "shopify",
+  "product_id": "5574878691481",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Sumatra: Dark Roast",
+  "url": "https://mozartscoffee.com/products/sumatra-kernici-palompek",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35845004001433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12 oz / Ground (Auto Drip)",
+    "variant_id": "35905832321177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12 oz / Ground (French Press)",
+    "variant_id": "35905854472345"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "1908a2bfb195ba4d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-bella-carmona",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Guatemala_Light_Medium-3.jpg?v=1791907077",
+  "platform": "shopify",
+  "product_id": "5967124365465",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [],
+  "title": "Guatemala: Light Medium Roast",
+  "url": "https://mozartscoffee.com/products/guatemala-antigua-bella-carmona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37299442188441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "37299442253977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "37299442286745"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "a9d0557430c2af11",
+  "first_seen": "2026-10-26",
+  "handle": "brasil-light-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-143_edits.png?v=1763746929",
+  "platform": "shopify",
+  "product_id": "6784802816153",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Brazil: Light Medium Roast",
+  "url": "https://mozartscoffee.com/products/brasil-light-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40126271520921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "40126271553689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "40126271586457"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "f66ade874a4eca3c",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-118_Edits.png?v=1763746952",
+  "platform": "shopify",
+  "product_id": "7025264525465",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "French Roast",
+  "url": "https://mozartscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "40972888506521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 lb / Ground (Auto Drip)",
+    "variant_id": "40972888572057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1 lb / Ground (French Press)",
+    "variant_id": "40972888637593"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "e6f3460c203b35a5",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Costa_Rica_Medium-3.jpg?v=1791907004",
+  "platform": "shopify",
+  "product_id": "7526458753177",
+  "product_type": "variable",
+  "roaster_slug": "mozartscoffee",
+  "tags": [
+   "Single Origins"
+  ],
+  "title": "Costa Rica: Medium Roast",
+  "url": "https://mozartscoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42637588758681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (Auto Drip)",
+    "variant_id": "42637588791449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Ground (French Press)",
+    "variant_id": "42637588824217"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters Single Origins"
+ },
+ {
+  "body_hash": "9d0b7963dfdf9ad7",
+  "first_seen": "2026-10-26",
+  "handle": "mozarts-premium-ground-coffee-can",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/Studio-Session-2-201_edits.png?v=1763654607",
+  "platform": "shopify",
+  "product_id": "7687521665177",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [],
+  "title": "Mozart's Collectible Ground Coffee Tins",
+  "url": "https://mozartscoffee.com/products/mozarts-premium-ground-coffee-can",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Light",
+    "variant_id": "43250758156441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Medium",
+    "variant_id": "43250758189209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.95,
+    "title": "Dark",
+    "variant_id": "43250758221977"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "2lbs-mozart-s-blend-and-1lb-roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0417/5072/4761/files/coffee-1324126_640_848634c3-c49d-462d-9681-9d2e3fa5e8d8.jpg?v=1706740405",
+  "platform": "shopify",
+  "product_id": "7842477932697",
+  "product_type": "",
+  "roaster_slug": "mozartscoffee",
+  "tags": [],
+  "title": "SILENT AUCTION - 2lbs Mozart’s blend and 1lb Roaster's Choice",
+  "url": "https://mozartscoffee.com/products/2lbs-mozart-s-blend-and-1lb-roasters-choice",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "43793746722969"
+   }
+  ],
+  "vendor": "Mozart's Coffee Roasters"
+ }
+]

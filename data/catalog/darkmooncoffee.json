@@ -1,0 +1,379 @@
+[
+ {
+  "body_hash": "13eeabd40137f919",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Colombia-Natural-Tolima.png",
+  "platform": "woocommerce",
+  "product_id": "6054",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "COLOMBIA TOLIMA VERGEL ESTATE ANAEROBIC NATURAL",
+  "url": "https://darkmooncoffee.com/product/colombia-tolima-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "6054:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lb",
+    "variant_id": "6054:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "49f44d65ea3a1915",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee-6-pack",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/2.14.25-DARKMOON-55.jpg",
+  "platform": "woocommerce",
+  "product_id": "6058",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Coffee 6-Pack",
+  "url": "https://darkmooncoffee.com/product/cold-brew-coffee-6-pack/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 34.0,
+    "title": "6-pack",
+    "variant_id": "6058:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0090f36735bc770",
+  "first_seen": "2026-10-26",
+  "handle": "nova-blend",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Nova-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "6214",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "NOVA BLEND",
+  "url": "https://darkmooncoffee.com/product/nova-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6214:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "6214:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1de116768b0ee44",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-pantan-musara-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Sumatra-Natural.png",
+  "platform": "woocommerce",
+  "product_id": "6217",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "SUMATRA PANTAN MUSARA – NATURAL",
+  "url": "https://darkmooncoffee.com/product/sumatra-pantan-musara-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "6217:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lb",
+    "variant_id": "6217:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e73d0759e888da2",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-sertao-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Brazil-Natural.png",
+  "platform": "woocommerce",
+  "product_id": "6228",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "BRAZIL FAZENDA SERTÃO NATURAL",
+  "url": "https://darkmooncoffee.com/product/brazil-fazenda-sertao-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6228:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "6228:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8c15ecc612f72b9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-west-arsi-worka-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Ethiopia-Natural.png",
+  "platform": "woocommerce",
+  "product_id": "6247",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "ETHIOPIA WEST ARSI WORKA NATURAL",
+  "url": "https://darkmooncoffee.com/product/ethiopia-west-arsi-worka-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "6247:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lb",
+    "variant_id": "6247:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6137cbd7488a112a",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-quindio-tabi-decaf",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Colombia-Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "6252",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "COLOMBIA QUINDIO TABI DECAF",
+  "url": "https://darkmooncoffee.com/product/colombia-quindio-tabi-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz",
+    "variant_id": "6252:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.5,
+    "title": "5lb",
+    "variant_id": "6252:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0cd4bcc29be3b8a7",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tolima-washed",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/Colombia-Tolima-Washed.png",
+  "platform": "woocommerce",
+  "product_id": "6388",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "COLOMBIA TOLIMA – WASHED",
+  "url": "https://darkmooncoffee.com/product/colombia-tolima-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "6388:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "6388:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f1f5bfc5cdf3ebaa",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2025/08/Costa-Rica-DOUBLE-D.png",
+  "platform": "woocommerce",
+  "product_id": "6666",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "COSTA RICA LAS LAJAS DOUBLE DIAMOND NATURAL",
+  "url": "https://darkmooncoffee.com/product/costa-rica-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "6666:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "5lb",
+    "variant_id": "6666:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bd1d83654b88c0c9",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-mauricio-natural",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/12/El-Salvador-Natural-1.png",
+  "platform": "woocommerce",
+  "product_id": "6902",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "EL SALVADOR MAURICIO SALAVERRIA NATURAL",
+  "url": "https://darkmooncoffee.com/product/el-salvador-mauricio-natural/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "6902:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5lb",
+    "variant_id": "6902:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "288568249a733a6a",
+  "first_seen": "2026-10-26",
+  "handle": "sunset-blend-dark",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2024/09/Sunset-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "8037",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "SUNSET BLEND (Dark)",
+  "url": "https://darkmooncoffee.com/product/sunset-blend-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "8037:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lb",
+    "variant_id": "8037:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de8bfd9491814dda",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-honey",
+  "image": "https://darkmooncoffee.com/wp-content/uploads/2026/03/Ethiopia-HONEY-1.png",
+  "platform": "woocommerce",
+  "product_id": "8887",
+  "product_type": "variable",
+  "roaster_slug": "darkmooncoffee",
+  "tags": [
+   "Coffee Bags"
+  ],
+  "title": "ETHIOPIA GUJI KAYON MOUNTAIN HONEY",
+  "url": "https://darkmooncoffee.com/product/ethiopia-guji-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "8887:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5lb",
+    "variant_id": "8887:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

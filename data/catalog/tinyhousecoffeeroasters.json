@@ -1,0 +1,611 @@
+[
+ {
+  "body_hash": "f063e29a99cc99a2",
+  "first_seen": "2026-10-26",
+  "handle": "la-casita",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/bagimagesforshoppage-01.png?v=1692000881",
+  "platform": "shopify",
+  "product_id": "1856011501679",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Blend",
+   "Retail",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "La Casita",
+  "url": "https://tinyhousecoffeeroasters.com/products/la-casita",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "17324569165935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb",
+    "variant_id": "44868129652955"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "0c7629c9e2062e54",
+  "first_seen": "2026-10-26",
+  "handle": "moontower-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-05.png?v=1691992021",
+  "platform": "shopify",
+  "product_id": "1856331350127",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Blend",
+   "Retail",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Moontower",
+  "url": "https://tinyhousecoffeeroasters.com/products/moontower-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "17330338103407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb",
+    "variant_id": "17330338136175"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "86fec10697c72885",
+  "first_seen": "2026-10-26",
+  "handle": "tres-barras",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-15.png?v=1691991892",
+  "platform": "shopify",
+  "product_id": "1856332693615",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Tres Barras",
+  "url": "https://tinyhousecoffeeroasters.com/products/tres-barras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "17330363039855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb",
+    "variant_id": "17330363072623"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "92ecf2cdd4bf5d6c",
+  "first_seen": "2026-10-26",
+  "handle": "el-segoviano",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages_SEgoviano.png?v=1691991583",
+  "platform": "shopify",
+  "product_id": "1856338231407",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "El Segoviano",
+  "url": "https://tinyhousecoffeeroasters.com/products/el-segoviano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "17330436079727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "5 lb",
+    "variant_id": "17330436145263"
+   }
+  ],
+  "vendor": "Nicaragua"
+ },
+ {
+  "body_hash": "e4fd3a48ac358435",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sugar-cane-process",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-11.png?v=1691992145",
+  "platform": "shopify",
+  "product_id": "1856344686703",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Retail",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Tolima Decaf",
+  "url": "https://tinyhousecoffeeroasters.com/products/decaf-sugar-cane-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "17330534776943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 51.0,
+    "title": "5 lb",
+    "variant_id": "17330534842479"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "e8b9642df8290c14",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-13.png?v=1691992245",
+  "platform": "shopify",
+  "product_id": "1863181598831",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Finca San Victor",
+  "url": "https://tinyhousecoffeeroasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "17395899236463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5 lb",
+    "variant_id": "17395899269231"
+   }
+  ],
+  "vendor": "Guatemala"
+ },
+ {
+  "body_hash": "7bb3c9b1f6393fba",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-la-casita-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/lacasitashadowright_55795fb3-8b2f-4d8d-bb36-0af8a8dff2e3.jpg?v=1623355437",
+  "platform": "shopify",
+  "product_id": "6809516343474",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- La Casita 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-la-casita-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40269167853746"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "b4906678cafb5640",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-moontower-espresso-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/moontowerblackright_abec40ca-b335-4661-be33-6f57fd48c61e.jpg?v=1623356050",
+  "platform": "shopify",
+  "product_id": "6809525026994",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- Moontower Espresso 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-moontower-espresso-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40269223329970"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "14611924b6f165e1",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-nicaragua-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/elsegovianoshadowright_ffcb805d-234d-4f4f-90a4-e2a9b0b9bac3.jpg?v=1623869891",
+  "platform": "shopify",
+  "product_id": "6825015771314",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- Nicaragua 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-nicaragua-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40317449240754"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "0a3aa0ec1d68d760",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-guatemala-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/fincasanvictor_3d22bfcf-30a4-4bca-989b-9fcdf3718055.jpg?v=1623873069",
+  "platform": "shopify",
+  "product_id": "6825098510514",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- Guatemala 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-guatemala-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40317916250290"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "68f57b498dc6afe7",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-brazil-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/tresbarrasshadowright_631f2494-8fc1-4df8-8d7e-0d28bdd1f6f3.jpg?v=1626119181",
+  "platform": "shopify",
+  "product_id": "6880815808690",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- Brazil 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-brazil-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2041,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40512092569778"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "5f592c4d28215bf0",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-6-ethiopia-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/products/arichashadowright_f28ed685-2d4b-440c-b405-805e151f0e72.jpg?v=1631037510",
+  "platform": "shopify",
+  "product_id": "7004419489970",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "CASE OF 6- Ethiopia 12oz (WS6)",
+  "url": "https://tinyhousecoffeeroasters.com/products/case-of-6-ethiopia-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "40905721249970"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "12940378a9780a1b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-17.png?v=1691991859",
+  "platform": "shopify",
+  "product_id": "7111792525490",
+  "product_type": "Coffee",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://tinyhousecoffeeroasters.com/products/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "41243265794226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.0,
+    "title": "5 LB",
+    "variant_id": "41243265826994"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ },
+ {
+  "body_hash": "bcec3bb241fb1b7e",
+  "first_seen": "2026-10-26",
+  "handle": "finca-bella-vista",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-21.png?v=1691991651",
+  "platform": "shopify",
+  "product_id": "7944705573083",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans"
+  ],
+  "title": "Finca Bella Vista",
+  "url": "https://tinyhousecoffeeroasters.com/products/finca-bella-vista",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "44868124311771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5 lb",
+    "variant_id": "44868124344539"
+   }
+  ],
+  "vendor": "Nicaragua"
+ },
+ {
+  "body_hash": "6496bf931f0a2514",
+  "first_seen": "2026-10-26",
+  "handle": "bungalow",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-09.png?v=1691991944",
+  "platform": "shopify",
+  "product_id": "8052403732699",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Blend",
+   "Retail",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Bungalow Blend",
+  "url": "https://tinyhousecoffeeroasters.com/products/bungalow",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "44168772124891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb",
+    "variant_id": "44168772157659"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "1578ab1a925ccb98",
+  "first_seen": "2026-10-26",
+  "handle": "cabana-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-07.png?v=1691991993",
+  "platform": "shopify",
+  "product_id": "8054130180315",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Blend",
+   "Retail",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Cabana Blend",
+  "url": "https://tinyhousecoffeeroasters.com/products/cabana-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12 oz",
+    "variant_id": "44173185614043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb",
+    "variant_id": "44173185646811"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "a6e4a3591de24ad8",
+  "first_seen": "2026-10-26",
+  "handle": "finca-por-venir",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-19.png?v=1691991692",
+  "platform": "shopify",
+  "product_id": "8054707126491",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "Retail",
+   "Single Origin",
+   "Whole Beans",
+   "retail-only"
+  ],
+  "title": "Finca Por Venir",
+  "url": "https://tinyhousecoffeeroasters.com/products/finca-por-venir",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz",
+    "variant_id": "44174710636763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5 lb",
+    "variant_id": "44174710669531"
+   }
+  ],
+  "vendor": "Nicaragua"
+ },
+ {
+  "body_hash": "1578ab1a925ccb98",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-cabana-blend-ws5",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-07_8fe2cda9-5411-48f8-ac62-e48e0b09ca47.png?v=1705295355",
+  "platform": "shopify",
+  "product_id": "8229140332763",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Cabana Blend 5lb (WS5)",
+  "url": "https://tinyhousecoffeeroasters.com/products/5lb-cabana-blend-ws5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5 lb Bag",
+    "variant_id": "44736734298331"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "6496bf931f0a2514",
+  "first_seen": "2026-10-26",
+  "handle": "bungalow-blend-5lb-ws5",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-09_eee2b7b0-67fa-41cf-9b40-0c2b5a7f0626.png?v=1705295579",
+  "platform": "shopify",
+  "product_id": "8229141643483",
+  "product_type": "Whole Bean",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Bungalow Blend 5lb (WS5)",
+  "url": "https://tinyhousecoffeeroasters.com/products/bungalow-blend-5lb-ws5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.0,
+    "title": "5 lb Bag",
+    "variant_id": "44736736657627"
+   }
+  ],
+  "vendor": "Blend"
+ },
+ {
+  "body_hash": "12940378a9780a1b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-5lb-ws5",
+  "image": "https://cdn.shopify.com/s/files/1/0078/2545/7263/files/newbaganimationimages-17_6de41f80-5bec-4792-a9a1-e982f38a1a0d.png?v=1705295834",
+  "platform": "shopify",
+  "product_id": "8229142888667",
+  "product_type": "Coffee",
+  "roaster_slug": "tinyhousecoffeeroasters",
+  "tags": [
+   "wholesale-only"
+  ],
+  "title": "Mexico Chiapas 5lb (WS5)",
+  "url": "https://tinyhousecoffeeroasters.com/products/mexico-chiapas-5lb-ws5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 50.0,
+    "title": "5LB",
+    "variant_id": "44736739475675"
+   }
+  ],
+  "vendor": "Tiny House Coffee Roasters"
+ }
+]

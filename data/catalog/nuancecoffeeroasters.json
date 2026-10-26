@@ -1,0 +1,636 @@
+[
+ {
+  "body_hash": "09e181d17442f79c",
+  "first_seen": "2026-10-26",
+  "handle": "conviction-blend",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-conviction-studio.png",
+  "platform": "woocommerce",
+  "product_id": "2188",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Heritage Series"
+  ],
+  "title": "Conviction Blend",
+  "url": "https://nuancecoffeeroasters.com/product/conviction-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz",
+    "variant_id": "2188:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.0,
+    "title": "5 lb",
+    "variant_id": "2188:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d9c6acfdecf6212",
+  "first_seen": "2026-10-26",
+  "handle": "lighthouse-conviction-blend-bulk",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "2761",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Lighthouse"
+  ],
+  "title": "Conviction Blend (85% Guatemala La Morena / 15% Ethiopia Uraga) — Bulk Green (Lighthouse)",
+  "url": "https://nuancecoffeeroasters.com/product/lighthouse-conviction-blend-bulk/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.5,
+    "title": "Conviction Blend (85% Guatemala La Morena / 15% Ethiopia Uraga) — Bulk Green (Lighthouse)",
+    "variant_id": "2761:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "769abfca63e62ed8",
+  "first_seen": "2026-10-26",
+  "handle": "lighthouse-conviction-blend-12oz",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-conviction-studio.png",
+  "platform": "woocommerce",
+  "product_id": "2762",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Lighthouse"
+  ],
+  "title": "Conviction Blend (85% Guatemala La Morena / 15% Ethiopia Uraga) — 12oz Bags (Lighthouse)",
+  "url": "https://nuancecoffeeroasters.com/product/lighthouse-conviction-blend-12oz/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "Conviction Blend (85% Guatemala La Morena / 15% Ethiopia Uraga) — 12oz Bags (Lighthouse)",
+    "variant_id": "2762:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eb10bd0b44551db6",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-nemba",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-burundi-nemba-studio.png",
+  "platform": "woocommerce",
+  "product_id": "3146",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Burundi",
+   "Coffee",
+   "Kayanza",
+   "Natural",
+   "Single Origin",
+   "Venture Series"
+  ],
+  "title": "Burundi Nemba",
+  "url": "https://nuancecoffeeroasters.com/product/burundi-nemba/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "3146:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5 lb",
+    "variant_id": "3146:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-nemba-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3151",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Lighthouse"
+  ],
+  "title": "Burundi Nemba — Bulk Green (Lighthouse) — per lb",
+  "url": "https://nuancecoffeeroasters.com/product/burundi-nemba-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.5,
+    "title": "Burundi Nemba — Bulk Green (Lighthouse) — per lb",
+    "variant_id": "3151:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cfd0d13e3ba63fd8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gerba-dogo",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-ethiopia-guji-gerba-dogo-studio.png",
+  "platform": "woocommerce",
+  "product_id": "3165",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji Gerba Dogo",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-gerba-dogo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz",
+    "variant_id": "3165:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "5 lb",
+    "variant_id": "3165:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gerba-dogo-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3170",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji Gerba Dogo — Bulk Green (Lighthouse) — per lb",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-gerba-dogo-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Ethiopia Guji Gerba Dogo — Bulk Green (Lighthouse) — per lb",
+    "variant_id": "3170:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8655c1f347b0d51",
+  "first_seen": "2026-10-26",
+  "handle": "conviction-blend-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-conviction-studio.png",
+  "platform": "woocommerce",
+  "product_id": "3242",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "5-lb",
+   "Wholesale",
+   "whole-bean",
+   "wholesale"
+  ],
+  "title": "Conviction Blend — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/conviction-blend-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Conviction Blend — 5 lb Whole Bean",
+    "variant_id": "3242:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gerba-dogo-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-ethiopia-guji-gerba-dogo-studio.png",
+  "platform": "woocommerce",
+  "product_id": "3243",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji Gerba Dogo — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-gerba-dogo-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "Ethiopia Guji Gerba Dogo — 5 lb Whole Bean",
+    "variant_id": "3243:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1d56827f144db52",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-nemba-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-burundi-nemba-studio.png",
+  "platform": "woocommerce",
+  "product_id": "3244",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "5-lb",
+   "Wholesale",
+   "whole-bean",
+   "wholesale"
+  ],
+  "title": "Burundi Nemba — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/burundi-nemba-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "Burundi Nemba — 5 lb Whole Bean",
+    "variant_id": "3244:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "671e4069bff44f4e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-uraga",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-ethiopia-guji-uraga-studio-mockup-v1.png",
+  "platform": "woocommerce",
+  "product_id": "3365",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Ethiopia",
+   "Guji",
+   "Natural",
+   "Single Origin",
+   "Uraga",
+   "Venture Series"
+  ],
+  "title": "Ethiopia Guji Uraga",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-uraga/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "3365:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5 lb",
+    "variant_id": "3365:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42040ff7b38f89ac",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-uraga-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/08/nuance-ethiopia-guji-uraga-5lb-studio-v1.png",
+  "platform": "woocommerce",
+  "product_id": "3372",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "5-lb",
+   "Wholesale",
+   "whole-bean",
+   "wholesale"
+  ],
+  "title": "Ethiopia Guji Uraga – 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-uraga-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ethiopia Guji Uraga &#8211; 5 lb Whole Bean",
+    "variant_id": "3372:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "63f7141ad145ff18",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-uraga-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3373",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Ethiopia",
+   "Guji",
+   "Lighthouse",
+   "Uraga"
+  ],
+  "title": "Ethiopia Guji Uraga – Bulk Green (Lighthouse) – per lb",
+  "url": "https://nuancecoffeeroasters.com/product/ethiopia-guji-uraga-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ethiopia Guji Uraga &#8211; Bulk Green (Lighthouse) &#8211; per lb",
+    "variant_id": "3373:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "38d2da2e13a2a619",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-productores-de-buesaco",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/09/nuance-colombia-buesaco-black-v3.png",
+  "platform": "woocommerce",
+  "product_id": "3665",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "Symmetry Series"
+  ],
+  "title": "Colombia Productores de Buesaco",
+  "url": "https://nuancecoffeeroasters.com/product/colombia-productores-de-buesaco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12 oz",
+    "variant_id": "3665:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 26.0,
+    "title": "5 lb",
+    "variant_id": "3665:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "94345e83f32dfec6",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kapchorwa-kabeywa",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/09/uganda-kabeywa-12oz-black-bag-v3.png",
+  "platform": "woocommerce",
+  "product_id": "3671",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Single Origin",
+   "Symmetry Series"
+  ],
+  "title": "Uganda Kapchorwa Kabeywa",
+  "url": "https://nuancecoffeeroasters.com/product/uganda-kapchorwa-kabeywa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "3671:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5 lb",
+    "variant_id": "3671:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3668b987575a33d6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-productores-de-buesaco-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/09/nuance-colombia-buesaco-black-v3.png",
+  "platform": "woocommerce",
+  "product_id": "3679",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Hidden",
+   "Wholesale"
+  ],
+  "title": "Colombia Productores de Buesaco — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/colombia-productores-de-buesaco-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Colombia Productores de Buesaco — 5 lb Whole Bean",
+    "variant_id": "3679:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aa22e6b1539560cf",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kapchorwa-kabeywa-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/09/uganda-kabeywa-12oz-black-bag-v3.png",
+  "platform": "woocommerce",
+  "product_id": "3680",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Hidden",
+   "Wholesale"
+  ],
+  "title": "Uganda Kapchorwa Kabeywa — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/uganda-kapchorwa-kabeywa-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Uganda Kapchorwa Kabeywa — 5 lb Whole Bean",
+    "variant_id": "3680:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b797fe82c7ab081",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-productores-de-buesaco-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3695",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Lighthouse"
+  ],
+  "title": "Colombia Productores de Buesaco — Bulk Green (Lighthouse) — per lb",
+  "url": "https://nuancecoffeeroasters.com/product/colombia-productores-de-buesaco-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Colombia Productores de Buesaco — Bulk Green (Lighthouse) — per lb",
+    "variant_id": "3695:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9b797fe82c7ab081",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-kapchorwa-kabeywa-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3697",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Lighthouse"
+  ],
+  "title": "Uganda Kapchorwa Kabeywa — Bulk Green (Lighthouse) — per lb",
+  "url": "https://nuancecoffeeroasters.com/product/uganda-kapchorwa-kabeywa-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Uganda Kapchorwa Kabeywa — Bulk Green (Lighthouse) — per lb",
+    "variant_id": "3697:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a612892041329c2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena-huehuetenango",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/10/guatemala-la-morena-12oz-black-bag-v3.png",
+  "platform": "woocommerce",
+  "product_id": "3850",
+  "product_type": "variable",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Heritage Series",
+   "Single Origin"
+  ],
+  "title": "Guatemala — La Morena Huehuetenango",
+  "url": "https://nuancecoffeeroasters.com/product/guatemala-la-morena-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "3850:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.0,
+    "title": "5 lb",
+    "variant_id": "3850:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6b2cf2c5b4179d8d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena-huehuetenango-5-lb-whole-bean",
+  "image": "https://nuancecoffeeroasters.com/wp-content/uploads/2026/10/guatemala-la-morena-12oz-black-bag-v1.png",
+  "platform": "woocommerce",
+  "product_id": "3860",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Guatemala",
+   "Hidden",
+   "Huehuetenango",
+   "La Morena",
+   "Wholesale",
+   "wholesale"
+  ],
+  "title": "Guatemala La Morena Huehuetenango — 5 lb Whole Bean",
+  "url": "https://nuancecoffeeroasters.com/product/guatemala-la-morena-huehuetenango-5-lb-whole-bean/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Guatemala La Morena Huehuetenango — 5 lb Whole Bean",
+    "variant_id": "3860:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0333c49810fa5c57",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-morena-huehuetenango-bulk-green-lighthouse-per-lb",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "3861",
+  "product_type": "simple",
+  "roaster_slug": "nuancecoffeeroasters",
+  "tags": [
+   "Guatemala",
+   "Huehuetenango",
+   "La Morena",
+   "Lighthouse"
+  ],
+  "title": "Guatemala La Morena Huehuetenango — Bulk Green (Lighthouse) — per lb",
+  "url": "https://nuancecoffeeroasters.com/product/guatemala-la-morena-huehuetenango-bulk-green-lighthouse-per-lb/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.5,
+    "title": "Guatemala La Morena Huehuetenango — Bulk Green (Lighthouse) — per lb",
+    "variant_id": "3861:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

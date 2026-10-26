@@ -1,0 +1,4145 @@
+[
+ {
+  "body_hash": "8fb817247c0268e8",
+  "first_seen": "2026-10-26",
+  "handle": "candy-cane",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/candy-cane-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254199039",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Candy Cane",
+  "url": "https://www.biggunscoffee.com/products/candy-cane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944458658047"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944458690815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944458723583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944458756351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944458789119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944458821887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944458854655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944458887423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944458920191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944458952959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944458985727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944459018495"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "53303843998cbc0e",
+  "first_seen": "2026-10-26",
+  "handle": "blonde",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/blonde-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254330111",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Blonde",
+  "url": "https://www.biggunscoffee.com/products/blonde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944459510015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944459542783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944459575551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944459608319"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944459641087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944459673855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944459706623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944459739391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944459772159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944459804927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944459837695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944459870463"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "cd6c8eef0125e092",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/holiday-blend-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254362879",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Holiday Blend",
+  "url": "https://www.biggunscoffee.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Standard",
+    "variant_id": "41944459903231"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Espresso",
+    "variant_id": "41944459935999"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944459968767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Standard",
+    "variant_id": "41944460001535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944460034303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944460067071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Standard",
+    "variant_id": "41944460099839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944460132607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944460165375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Standard",
+    "variant_id": "41944460198143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944460230911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944460263679"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "586a10afdb9cb692",
+  "first_seen": "2026-10-26",
+  "handle": "gourmet-donut-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/gourmet-donut-shop-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254461183",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Gourmet Donut Shop",
+  "url": "https://www.biggunscoffee.com/products/gourmet-donut-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Standard",
+    "variant_id": "41944460984575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Espresso",
+    "variant_id": "41944461017343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944461050111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944461082879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944461115647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944461148415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Standard",
+    "variant_id": "41944461181183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944461213951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944461246719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944461279487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944461312255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944461345023"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "8b3162763f9c2c1c",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/house-blend-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254493951",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "House Blend",
+  "url": "https://www.biggunscoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Standard",
+    "variant_id": "41944461377791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Espresso",
+    "variant_id": "41944461410559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944461443327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944461476095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944461508863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944461541631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Standard",
+    "variant_id": "41944461574399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944461607167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944461639935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944461672703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944461705471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944461738239"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "f9a886f0974cb58f",
+  "first_seen": "2026-10-26",
+  "handle": "african-kahawa-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/african-kahawa-blend-cherry-agtech-hero.png?v=1791062945",
+  "platform": "shopify",
+  "product_id": "7430254526719",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "African Kahawa Blend",
+  "url": "https://www.biggunscoffee.com/products/african-kahawa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Standard",
+    "variant_id": "41944461771007"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Espresso",
+    "variant_id": "41944461803775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944461836543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944461869311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944461902079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944461934847"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Standard",
+    "variant_id": "41944461967615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944462000383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944462033151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944462065919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944462098687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944462131455"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "dec75c07c6a17b5c",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/pumpkin-spice-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254592255",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Pumpkin Spice",
+  "url": "https://www.biggunscoffee.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944462196991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944462229759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944462262527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944462295295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944462328063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944462360831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944462393599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944462426367"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944462459135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944462491903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944462524671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944462557439"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "980ef614c7fd14b1",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/chocolate-hazelnut-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254625023",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Chocolate Hazelnut",
+  "url": "https://www.biggunscoffee.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944462590207"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944462622975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944462655743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944462688511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944462721279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944462754047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944462786815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944462819583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944462852351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944462885119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944462917887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944462950655"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "334c1a1316cdae66",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/cinnamon-hazelnut-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254657791",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://www.biggunscoffee.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944462983423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944463016191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944463048959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944463081727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944463114495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944463147263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944463180031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944463212799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944463245567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944463278335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944463311103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944463343871"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "8475bb1d86c8006a",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/mexican-chocolate-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254690559",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Mexican Chocolate",
+  "url": "https://www.biggunscoffee.com/products/mexican-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944463376639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944463409407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944463442175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944463474943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944463507711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944463540479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944463573247"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944463606015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944463638783"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944463671551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944463704319"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944463737087"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "bfc7ac6109655d96",
+  "first_seen": "2026-10-26",
+  "handle": "6-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/6-bean-blend-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430254756095",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "6 Bean Blend",
+  "url": "https://www.biggunscoffee.com/products/6-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Standard",
+    "variant_id": "41944464163071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Espresso",
+    "variant_id": "41944464195839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944464228607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Standard",
+    "variant_id": "41944464261375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944464294143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944464326911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Standard",
+    "variant_id": "41944464359679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944464392447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944464425215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Standard",
+    "variant_id": "41944464457983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944464490751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944464523519"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "18c1ccf14dd51a18",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/peru-decaf-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254854399",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Peru Decaf",
+  "url": "https://www.biggunscoffee.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944464687359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944464720127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944464752895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "1 LB / Standard",
+    "variant_id": "41944464785663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944464818431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944464851199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.19,
+    "title": "2 LB / Standard",
+    "variant_id": "41944464883967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.19,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944464916735"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.19,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944464949503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.91,
+    "title": "5 LB / Standard",
+    "variant_id": "41944464982271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.91,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944465015039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.91,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944465047807"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "5f1c51e63bd6913e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/nicaragua-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430254887167",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Nicaragua",
+  "url": "https://www.biggunscoffee.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944465080575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944465113343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944465146111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944465178879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944465211647"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944465244415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944465277183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944465309951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944465342719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944465375487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944465408255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944465441023"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "f0bd7233014543bc",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/costa-rica-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254919935",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.biggunscoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944465473791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944465506559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944465539327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944465572095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944465604863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944465637631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944465703167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944465768703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944465834239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944465899775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944465965311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944466030847"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "1f7678825a877f44",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/colombia-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430254952703",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.biggunscoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944465670399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944465735935"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944465801471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.31,
+    "title": "1 LB / Standard",
+    "variant_id": "41944465867007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.31,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944465932543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.31,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944465998079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.93,
+    "title": "2 LB / Standard",
+    "variant_id": "41944466063615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.93,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944466096383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.93,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944466129151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.24,
+    "title": "5 LB / Standard",
+    "variant_id": "41944466161919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.24,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944466194687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944466227455"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "a91cbca159a72e35",
+  "first_seen": "2026-10-26",
+  "handle": "best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255051007",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Best Sellers Sample Pack: 6Bean, Cowboy, Breakfast, Peru, Mexico, Bali",
+  "url": "https://www.biggunscoffee.com/products/best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.73,
+    "title": "Default Title",
+    "variant_id": "41944466325759"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "64371595c0a8b914",
+  "first_seen": "2026-10-26",
+  "handle": "turtle",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/turtle-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255083775",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Turtle",
+  "url": "https://www.biggunscoffee.com/products/turtle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944466391295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944466424063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944466456831"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944466489599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944466522367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944466555135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944466587903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944466620671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944466653439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944466686207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944466718975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944466751743"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "a65c9d23ecf6e566",
+  "first_seen": "2026-10-26",
+  "handle": "asian-plateau-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/asian-plateau-blend-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255182079",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Asian Plateau Blend",
+  "url": "https://www.biggunscoffee.com/products/asian-plateau-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Standard",
+    "variant_id": "41944467210495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Espresso",
+    "variant_id": "41944467243263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.82,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944467276031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944467308799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944467341567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944467374335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Standard",
+    "variant_id": "41944467407103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944467439871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.82,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944467472639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944467505407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944467538175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944467570943"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "4a3170ec6e92ac7f",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-1",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/italian-roast-1-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255247615",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://www.biggunscoffee.com/products/italian-roast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Standard",
+    "variant_id": "41944468160767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Espresso",
+    "variant_id": "41944468193535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944468226303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Standard",
+    "variant_id": "41944468259071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944468291839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944468324607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Standard",
+    "variant_id": "41944468357375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944468390143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944468422911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Standard",
+    "variant_id": "41944468455679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944468488447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944468521215"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "0c53a8e85e194aee",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/french-roast-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255378687",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://www.biggunscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Standard",
+    "variant_id": "41944468979967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Espresso",
+    "variant_id": "41944469012735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944469045503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Standard",
+    "variant_id": "41944469078271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944469111039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944469143807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Standard",
+    "variant_id": "41944469176575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944469209343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944469242111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Standard",
+    "variant_id": "41944469274879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944469307647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944469340415"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "b3a0c71868d0c182",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/half-caff-blend-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255411455",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Half Caff Blend",
+  "url": "https://www.biggunscoffee.com/products/half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Standard",
+    "variant_id": "41944469373183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Espresso",
+    "variant_id": "41944469405951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944469438719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 LB / Standard",
+    "variant_id": "41944469471487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944469504255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944469537023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.99,
+    "title": "2 LB / Standard",
+    "variant_id": "41944469569791"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944469602559"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944469635327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Standard",
+    "variant_id": "41944469668095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944469700863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944469733631"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "b4ff1520b290422a",
+  "first_seen": "2026-10-26",
+  "handle": "cinnabun",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/cinnabun-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255444223",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Cinnabun",
+  "url": "https://www.biggunscoffee.com/products/cinnabun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944469766399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944469799167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944469831935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944469864703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944469897471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944469930239"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944469963007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944469995775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944470028543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944470061311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944470094079"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944470126847"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "5445495c020ae0de",
+  "first_seen": "2026-10-26",
+  "handle": "african-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/african-espresso-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255476991",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "African Espresso",
+  "url": "https://www.biggunscoffee.com/products/african-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944470159615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944470192383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944470225151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944470257919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944470290687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944470323455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944470356223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944470388991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944470421759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944470454527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944470487295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944470520063"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "6056d8d0cd722d11",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/hazelnut-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255509759",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Hazelnut",
+  "url": "https://www.biggunscoffee.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944470585599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944470618367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944470651135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944470683903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944470716671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944470749439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944470782207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944470814975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944470847743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944470880511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944470913279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944470946047"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "562613eaebcbffae",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/cowboy-blend-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255542527",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Cowboy Blend",
+  "url": "https://www.biggunscoffee.com/products/cowboy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Standard",
+    "variant_id": "41944470978815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Espresso",
+    "variant_id": "41944471011583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.19,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944471044351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Standard",
+    "variant_id": "41944471077119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944471109887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.82,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944471142655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Standard",
+    "variant_id": "41944471175423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944471208191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.64,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944471240959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Standard",
+    "variant_id": "41944471273727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944471306495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.73,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944471339263"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "3c1e4fe0e57a7ab0",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/french-vanilla-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255575295",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "French Vanilla",
+  "url": "https://www.biggunscoffee.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944471372031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944471404799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944471437567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944471470335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944471503103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944471535871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944471568639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944471601407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944471634175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944471666943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944471699711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944471732479"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "4b0339fac555dab5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/mexico-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430255608063",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Mexico",
+  "url": "https://www.biggunscoffee.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944471765247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944471798015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944471830783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944471863551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944471896319"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944471929087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944471961855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944471994623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944472027391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944472060159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944472092927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944472125695"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "ba9ef9bf4c6ae29c",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/bali-blue-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255640831",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Bali Blue",
+  "url": "https://www.biggunscoffee.com/products/bali-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944472158463"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944472191231"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944472223999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Standard",
+    "variant_id": "41944472256767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944472289535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944472322303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Standard",
+    "variant_id": "41944472355071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944472387839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944472420607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Standard",
+    "variant_id": "41944472453375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944472486143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944472518911"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "0aeaa226fea27bd4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/honduras-cherry-agtech-hero.png?v=1791062946",
+  "platform": "shopify",
+  "product_id": "7430255706367",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Honduras",
+  "url": "https://www.biggunscoffee.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944472617215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944472649983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944472682751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944472715519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944472748287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944472781055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944472813823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944472846591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944472879359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944472912127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944472944895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944472977663"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "4c3088d4fc6ba41e",
+  "first_seen": "2026-10-26",
+  "handle": "mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/mocha-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256165119",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Mocha",
+  "url": "https://www.biggunscoffee.com/products/mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944473633023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944473665791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944473698559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944473731327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944473764095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944473796863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944473829631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944473862399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944473895167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944473927935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944473960703"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944473993471"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "3425d8a36b4cc6df",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/caramel-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256197887",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Caramel",
+  "url": "https://www.biggunscoffee.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944474026239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944474059007"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944474091775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Standard",
+    "variant_id": "41944474124543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944474157311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 37.28,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944474190079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Standard",
+    "variant_id": "41944474222847"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944474255615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.46,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944474288383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Standard",
+    "variant_id": "41944474321151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944474353919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.46,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944474386687"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "0e376c71e196f8a3",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/tanzania-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256492799",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Tanzania",
+  "url": "https://www.biggunscoffee.com/products/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944474648831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944474681599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944474714367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944474747135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944474779903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944474812671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944474845439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944474878207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944474910975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944474943743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944474976511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944475009279"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "a761eaae48b6666d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/guatemala-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256656639",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://www.biggunscoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944475369727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944475402495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944475435263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944475468031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944475500799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944475533567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944475566335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944475599103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944475631871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944475664639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944475697407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944475730175"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "e477c6d5ee9ba8a8",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/brazil-santos-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256754943",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Brazil Santos",
+  "url": "https://www.biggunscoffee.com/products/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Standard",
+    "variant_id": "41944475828479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Espresso",
+    "variant_id": "41944475861247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944475894015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Standard",
+    "variant_id": "41944475926783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944475959551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.66,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944475992319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Standard",
+    "variant_id": "41944476025087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944476057855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.4,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944476090623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Standard",
+    "variant_id": "41944476123391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944476156159"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.88,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944476188927"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "26bd60dfa1d068f9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/ethiopia-natural-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430256951551",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Ethiopia Natural",
+  "url": "https://www.biggunscoffee.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944476451071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944476483839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944476516607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944476549375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944476582143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944476614911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944476647679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944476680447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944476713215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944476745983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944476778751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944476811519"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "cddf02ecf3c459fd",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/peru-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430257017087",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Peru",
+  "url": "https://www.biggunscoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944476877055"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944476909823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944476942591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944476975359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944477008127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944477040895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944477073663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944477106431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944477139199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944477171967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944477204735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944477237503"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "52cd684a5e18b033",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/cold-brew-coffee-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430258295039",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Cold Brew Coffee",
+  "url": "https://www.biggunscoffee.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.28,
+    "title": "12oz / Coarse",
+    "variant_id": "41944478777599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.51,
+    "title": "1 LB / Coarse",
+    "variant_id": "41944478810367"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.73,
+    "title": "2 LB / Coarse",
+    "variant_id": "41944478843135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.37,
+    "title": "5 LB / Coarse",
+    "variant_id": "41944478875903"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "8f993e6f06d0164e",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-2",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/breakfast-blend-2-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "7430258458879",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://www.biggunscoffee.com/products/breakfast-blend-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Standard",
+    "variant_id": "41944479039743"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Espresso",
+    "variant_id": "41944479072511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.85,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944479105279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Standard",
+    "variant_id": "41944479138047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944479170815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.16,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944479203583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Standard",
+    "variant_id": "41944479236351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944479269119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.85,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944479301887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Standard",
+    "variant_id": "41944479334655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944479367423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.85,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944479400191"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "8002867917b303c8",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/papua-new-guinea-cherry-agtech-hero.png?v=1791062948",
+  "platform": "shopify",
+  "product_id": "7430258557183",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://www.biggunscoffee.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Standard",
+    "variant_id": "41944479498495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Espresso",
+    "variant_id": "41944479531263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41944479564031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Standard",
+    "variant_id": "41944479596799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Espresso",
+    "variant_id": "41944479629567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.19,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "41944479662335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Standard",
+    "variant_id": "41944479695103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Espresso",
+    "variant_id": "41944479727871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.28,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "41944479760639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Standard",
+    "variant_id": "41944479793407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Espresso",
+    "variant_id": "41944479826175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.1,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41944479858943"
+   }
+  ],
+  "vendor": "Drippy"
+ },
+ {
+  "body_hash": "0b3492fe55dfeded",
+  "first_seen": "2026-10-26",
+  "handle": "hydroponic-coffee-pre-order",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/hydroponic-coffee-pre-order-cherry-agtech-hero.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "8159546704127",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "farm",
+   "preorder"
+  ],
+  "title": "Hydroponic Coffee (Pre-Order)",
+  "url": "https://www.biggunscoffee.com/products/hydroponic-coffee-pre-order",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 119.0,
+    "title": "8oz Bag",
+    "variant_id": "44175510536447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 200.0,
+    "title": "16oz Bag",
+    "variant_id": "44175510569215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 375.0,
+    "title": "2lb Bag",
+    "variant_id": "44175510601983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 550.0,
+    "title": "5lb Bag",
+    "variant_id": "44175510634751"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "d04486a8955ceb1c",
+  "first_seen": "2026-10-26",
+  "handle": "charlis-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/charlis-blend-green-orange-agtech-hero_babe5b51-7e62-4f20-b914-7631693d6a00.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "8388003889407",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "All natural product",
+   "Eco-friendly packing",
+   "No artificial colours",
+   "Not sourced from China"
+  ],
+  "title": "Charli's Blend Dark Roast Coffee | Big Guns Coffee",
+  "url": "https://www.biggunscoffee.com/products/charlis-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Standard",
+    "variant_id": "44817039196415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Espresso",
+    "variant_id": "46485164916991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46485164949759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LB / Standard",
+    "variant_id": "46485164982527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "46485165015295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "46485165048063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LB / Standard",
+    "variant_id": "46485165080831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LB / Espresso",
+    "variant_id": "46485165113599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "46485165146367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LB / Standard",
+    "variant_id": "46485165179135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LB / Espresso",
+    "variant_id": "46485165211903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "46485165244671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case =6-12oz Bags / Standard",
+    "variant_id": "46516590018815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case =6-12oz Bags / Espresso",
+    "variant_id": "46516590051583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case =6-12oz Bags / Whole Bean",
+    "variant_id": "46516590084351"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "f83f4c72aeb34cee",
+  "first_seen": "2026-10-26",
+  "handle": "the-motivator",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/motivator-purple-agtech-hero_42fc6e26-824e-4504-aa70-8d38184196a0.png?v=1791062947",
+  "platform": "shopify",
+  "product_id": "8388005921023",
+  "product_type": "Coffee",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "All natural product",
+   "Eco-friendly packing",
+   "Made in small-batches",
+   "No artificial colours",
+   "Not sourced from China",
+   "farm"
+  ],
+  "title": "The Motivator Medium Roast Coffee | Big Guns Coffee",
+  "url": "https://www.biggunscoffee.com/products/the-motivator",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44817074258175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Drip Grind",
+    "variant_id": "44817096540415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz / Espresso Grind",
+    "variant_id": "44817096573183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LBS / Whole Bean",
+    "variant_id": "46516603388159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LBS / Drip Grind",
+    "variant_id": "46516603420927"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 LBS / Espresso Grind",
+    "variant_id": "46516603453695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LBS / Whole Bean",
+    "variant_id": "46516603486463"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LBS / Drip Grind",
+    "variant_id": "46516603519231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2 LBS / Espresso Grind",
+    "variant_id": "46516603551999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LBS / Whole Bean",
+    "variant_id": "46516603584767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LBS / Drip Grind",
+    "variant_id": "46516603617535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.0,
+    "title": "5 LBS / Espresso Grind",
+    "variant_id": "46516603650303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case=6-12oz Bags / Whole Bean",
+    "variant_id": "46516603683071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case=6-12oz Bags / Drip Grind",
+    "variant_id": "46516603715839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.0,
+    "title": "Case=6-12oz Bags / Espresso Grind",
+    "variant_id": "46516603748607"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "71fa26089fbcb924",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-butter",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/Mango_Papaya_Soap_Pic_Big_Guns.webp?v=1726139498",
+  "platform": "shopify",
+  "product_id": "8502018932991",
+  "product_type": "soap-mango",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "subscriber"
+  ],
+  "title": "Big Guns Coffee Farm's Mango Papaya Cold Process Soap",
+  "url": "https://www.biggunscoffee.com/products/coconut-butter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 120,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45160281866495"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "58270a43b4e0f672",
+  "first_seen": "2026-10-26",
+  "handle": "soap-lavender",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/Lavendar_and_Lemon_Grass_Cold_Process_Soap_Pic.jpg?v=1726140110",
+  "platform": "shopify",
+  "product_id": "8502019162367",
+  "product_type": "soap-lavender",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "subscriber"
+  ],
+  "title": "Big Guns Coffee Farm Lavendar and Lemon Grass Cold Process Soap",
+  "url": "https://www.biggunscoffee.com/products/soap-lavender",
+  "variants": [
+   {
+    "available": true,
+    "grams": 120,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45160282095871"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ },
+ {
+  "body_hash": "56bdb71da11a09cd",
+  "first_seen": "2026-10-26",
+  "handle": "soap-rose-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0607/5803/2639/files/soap-rose-honey-D98366.jpg?v=1712771924",
+  "platform": "shopify",
+  "product_id": "8502019195135",
+  "product_type": "soap-rose-honey",
+  "roaster_slug": "biggunscoffee",
+  "tags": [
+   "subscriber"
+  ],
+  "title": "Soap Rose & Honey",
+  "url": "https://www.biggunscoffee.com/products/soap-rose-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 120,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "45160282128639"
+   }
+  ],
+  "vendor": "Big Guns Coffee"
+ }
+]

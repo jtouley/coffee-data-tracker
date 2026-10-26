@@ -1,0 +1,240 @@
+[
+ {
+  "body_hash": "5bf888bf0eedace2",
+  "first_seen": "2026-10-26",
+  "handle": "big-shot-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/BigShot2024.png?v=1733450502",
+  "platform": "shopify",
+  "product_id": "8853780168981",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "BIG SHOT Blend",
+  "url": "https://resident.coffee/products/big-shot-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb",
+    "variant_id": "47383436034325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lb",
+    "variant_id": "48239847244053"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.5,
+    "title": "10oz",
+    "variant_id": "49824936558869"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "cb807af9245dc5bf",
+  "first_seen": "2026-10-26",
+  "handle": "a-love-letter-to-gainesville",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/LoveLetter.png?v=1697234953",
+  "platform": "shopify",
+  "product_id": "8853780627733",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "A Love Letter To Gainesville",
+  "url": "https://resident.coffee/products/a-love-letter-to-gainesville",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "47383436853525"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.5,
+    "title": "10oz",
+    "variant_id": "49824936591637"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "0a6c5035b02ce431",
+  "first_seen": "2026-10-26",
+  "handle": "heatwave-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/HeatwaveRender.png?v=1778688244",
+  "platform": "shopify",
+  "product_id": "9526026567957",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "Heatwave Cold Brew Blend",
+  "url": "https://resident.coffee/products/heatwave-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10oz",
+    "variant_id": "49917472178453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb",
+    "variant_id": "49917472211221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb",
+    "variant_id": "49917472243989"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "b1bd5154c0a5d70f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-juan-puerta-mango-2",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/ColombiaJuanPuertaMangoRender_747a6a05-b66b-4990-bd93-6f9e7a9e3e82.png?v=1787073019",
+  "platform": "shopify",
+  "product_id": "9594088522005",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "Colombia Juan Puerta Mango",
+  "url": "https://resident.coffee/products/colombia-juan-puerta-mango-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "10oz",
+    "variant_id": "50102379577621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 90.0,
+    "title": "2lb",
+    "variant_id": "50102379610389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 209.0,
+    "title": "5lb",
+    "variant_id": "50102379643157"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "1c2e4d8c6f2c9f91",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nery-lopez-1",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/GuatemalaNeryLopez2026render_jpg.png?v=1790613414",
+  "platform": "shopify",
+  "product_id": "9616335470869",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "Guatemala Nery Lopez",
+  "url": "https://resident.coffee/products/guatemala-nery-lopez-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10oz",
+    "variant_id": "50210702360853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.0,
+    "title": "2lb",
+    "variant_id": "50210702393621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb",
+    "variant_id": "50210702426389"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "96e3d3cbf61f1619",
+  "first_seen": "2026-10-26",
+  "handle": "juicebox-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/JuiceboxRender.png?v=1791393591",
+  "platform": "shopify",
+  "product_id": "9623917560085",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "Juicebox Blend",
+  "url": "https://resident.coffee/products/juicebox-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz",
+    "variant_id": "50233468682517"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2lb",
+    "variant_id": "50233468715285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb",
+    "variant_id": "50233468748053"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ },
+ {
+  "body_hash": "c1efefdf447da7f3",
+  "first_seen": "2026-10-26",
+  "handle": "peru-edwin-dwight-double-feature",
+  "image": "https://cdn.shopify.com/s/files/1/0767/0805/3269/files/PeruDoubleFeatureRender_abca9016-1910-4a45-b3d1-3fa2108df584.png?v=1792674700",
+  "platform": "shopify",
+  "product_id": "9635798483221",
+  "product_type": "",
+  "roaster_slug": "resident",
+  "tags": [],
+  "title": "Peru Edwin & Dwight<br>(Double Feature)",
+  "url": "https://resident.coffee/products/peru-edwin-dwight-double-feature",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 26.0,
+    "title": "2 x 100g",
+    "variant_id": "50271962693909"
+   }
+  ],
+  "vendor": "Resident Coffee"
+ }
+]

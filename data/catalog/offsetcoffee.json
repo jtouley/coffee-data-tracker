@@ -1,0 +1,368 @@
+[
+ {
+  "body_hash": "c836478eb81de320",
+  "first_seen": "2026-10-26",
+  "handle": "rwanada-gisagara-district-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/766A9952-9A6A-4E5C-B371-38613AB95261.png?v=1790874663",
+  "platform": "shopify",
+  "product_id": "10336368722145",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Rwanda Gisagara District Washed",
+  "url": "https://www.offsetcoffee.com/products/rwanada-gisagara-district-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "50666522869985"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "84d5a4a431641a2e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino-buesaco-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/439FFB4D-EA10-4945-9B6C-BF91A927A1EF.png?v=1790874924",
+  "platform": "shopify",
+  "product_id": "10336372392161",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Colombia Narino Buesaco Natural LIMITED RELEASE",
+  "url": "https://www.offsetcoffee.com/products/colombia-narino-buesaco-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "50666531684577"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "166ea0cc0704a844",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-bella-alejandria-gesha-limited-release",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/7C78F862-6353-4739-B62F-97E073C3FB06.png?v=1790891903",
+  "platform": "shopify",
+  "product_id": "10336633716961",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Colombia Bella Alejandria Gesha LIMITED RELEASE",
+  "url": "https://www.offsetcoffee.com/products/colombia-bella-alejandria-gesha-limited-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 32.0,
+    "title": "Default Title",
+    "variant_id": "50668028920033"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "4b1381962265e67c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-dulima-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/SWATCHMATCHES2.jpg?v=1725247558",
+  "platform": "shopify",
+  "product_id": "8175471558881",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Peru Decaf FTO Swiss Water Process",
+  "url": "https://www.offsetcoffee.com/products/colombia-decaf-dulima-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "45814078079201"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz / Ground",
+    "variant_id": "45816615174369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45816615207137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Ground",
+    "variant_id": "45816615239905"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "9241b02198a7c40c",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-coast-colombia-washed-guatemala-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/OFFSETPRODUCTUPDATEAUG24100293-Recovered.jpg?v=1762821415",
+  "platform": "shopify",
+  "product_id": "8749729054945",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Pacific Coast (Colombia Washed / Kenya Washed)",
+  "url": "https://www.offsetcoffee.com/products/pacific-coast-colombia-washed-guatemala-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "45816609571041"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Ground",
+    "variant_id": "45816609603809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45816609636577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "45816609669345"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "24ec431cdf78357c",
+  "first_seen": "2026-10-26",
+  "handle": "the-shaw-colombia-washed-guatemala-natural-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/OFFSETPRODUCTUPDATEAUG24100293.jpg?v=1725247610",
+  "platform": "shopify",
+  "product_id": "8749733019873",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "The Shaw (Colombia Washed /Ethiopia Natural)",
+  "url": "https://www.offsetcoffee.com/products/the-shaw-colombia-washed-guatemala-natural-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "45816626348257"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Ground",
+    "variant_id": "45816626381025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45816626413793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "45816626446561"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "a8602723990d0631",
+  "first_seen": "2026-10-26",
+  "handle": "offset-espresso-bucket-15lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/IMG_4397.jpg?v=1781800504",
+  "platform": "shopify",
+  "product_id": "9402680082657",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [
+   "Wholesale-only"
+  ],
+  "title": "OFFSET Espresso Bucket (15lbs)",
+  "url": "https://www.offsetcoffee.com/products/offset-espresso-bucket-15lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "48052299038945"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ric-flair-drip-march-ethiopia-washed-2lbs",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/IMG_0257_89cccd16-b370-421e-86f5-a9ff08b42662.jpg?v=1789672143",
+  "platform": "shopify",
+  "product_id": "9402683621601",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [
+   "Wholesale-only"
+  ],
+  "title": "Ric Flair Drip SEP-OCT (MEXICO OAXACA) 2.5lbs",
+  "url": "https://www.offsetcoffee.com/products/ric-flair-drip-march-ethiopia-washed-2lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "48052309491937"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "6c6a0c898cc2e48a",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-caranavi-rosita-catuai-anaerobic-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/IMG_4228.jpg?v=1780441460",
+  "platform": "shopify",
+  "product_id": "9506607595745",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Bolivia Caranavi Rosita Catuai Anaerobic Natural",
+  "url": "https://www.offsetcoffee.com/products/bolivia-caranavi-rosita-catuai-anaerobic-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole",
+    "variant_id": "48437198946529"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Ground",
+    "variant_id": "48437198979297"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "moc-espresso-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9666637267169",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [
+   "Wholesale-only"
+  ],
+  "title": "MOC Espresso Beans",
+  "url": "https://www.offsetcoffee.com/products/moc-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 62.0,
+    "title": "5lb",
+    "variant_id": "48888874074337"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "5b9d531fb59f7e2e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-gogogu-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/IMG_0259.jpg?v=1789670457",
+  "platform": "shopify",
+  "product_id": "9731446309089",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Ethiopia Guji Gogogu Washed",
+  "url": "https://www.offsetcoffee.com/products/ethiopia-guji-gogogu-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Ground",
+    "variant_id": "49148123513057"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Whole",
+    "variant_id": "49148123545825"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ },
+ {
+  "body_hash": "88466b9a7ee7100f",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-oaxaca-san-pedro-sochiapam-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0603/9240/7265/files/IMG_0257.jpg?v=1789671244",
+  "platform": "shopify",
+  "product_id": "9731455123681",
+  "product_type": "",
+  "roaster_slug": "offsetcoffee",
+  "tags": [],
+  "title": "Mexico Oaxaca San Pedro Sochiapam Washed",
+  "url": "https://www.offsetcoffee.com/products/mexico-oaxaca-san-pedro-sochiapam-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Ground",
+    "variant_id": "49148178104545"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "Whole",
+    "variant_id": "49148178137313"
+   }
+  ],
+  "vendor": "Offset Coffee"
+ }
+]

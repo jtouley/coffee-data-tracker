@@ -1,0 +1,1748 @@
+[
+ {
+  "body_hash": "9bf8ca0c1f35185d",
+  "first_seen": "2026-10-26",
+  "handle": "barolo-aerobic-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo_Barolosmall2026.jpg?v=1768348058",
+  "platform": "shopify",
+  "product_id": "10085565628722",
+  "product_type": "Coffee",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin"
+  ],
+  "title": "Barolo Aerobic Honey",
+  "url": "https://www.chromaticcoffee.com/products/barolo-aerobic-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / Whole Bean",
+    "variant_id": "50809824903474"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / Espresso",
+    "variant_id": "50809824969010"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / Aeropress",
+    "variant_id": "50809825001778"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / Drip",
+    "variant_id": "50809825034546"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / French Press",
+    "variant_id": "50809825100082"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 31.99,
+    "title": "8oz / Cold Brew",
+    "variant_id": "50809825132850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50809825165618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / Espresso",
+    "variant_id": "50809825231154"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "50809825263922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / Drip",
+    "variant_id": "50809825296690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / French Press",
+    "variant_id": "50809825362226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 116.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50809825394994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50809825427762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / Espresso",
+    "variant_id": "50809825493298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "50809825526066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / Drip",
+    "variant_id": "50809825558834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / French Press",
+    "variant_id": "50809825624370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 287.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "50809825657138"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "b976eefcf6c2f81a",
+  "first_seen": "2026-10-26",
+  "handle": "munkaze-double-ferment-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo_Munkazesmall2026.png?v=1785358169",
+  "platform": "shopify",
+  "product_id": "10254213316914",
+  "product_type": "Coffee",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin"
+  ],
+  "title": "Munkaze Double Ferment Washed",
+  "url": "https://www.chromaticcoffee.com/products/munkaze-double-ferment-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "51520953778482"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Espresso",
+    "variant_id": "51520953811250"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "51520953844018"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Drip",
+    "variant_id": "51520953876786"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / French Press",
+    "variant_id": "51520953909554"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "51520953942322"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51520953975090"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Espresso",
+    "variant_id": "51520954007858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "51520954040626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Drip",
+    "variant_id": "51520954073394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / French Press",
+    "variant_id": "51520954106162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "51520954138930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51520954171698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Espresso",
+    "variant_id": "51520954204466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "51520954237234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Drip",
+    "variant_id": "51520954270002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / French Press",
+    "variant_id": "51520954302770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "51520954335538"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "cd1aa40fc882dbb3",
+  "first_seen": "2026-10-26",
+  "handle": "gondo-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo_GondoABsmall2026.jpg?v=1787075413",
+  "platform": "shopify",
+  "product_id": "10277152850226",
+  "product_type": "Coffee",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin"
+  ],
+  "title": "Gondo AB",
+  "url": "https://www.chromaticcoffee.com/products/gondo-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "51606352167218"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Espresso",
+    "variant_id": "51606352199986"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "51606352232754"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Drip",
+    "variant_id": "51606352265522"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / French Press",
+    "variant_id": "51606352298290"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "51606352331058"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51606352363826"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Espresso",
+    "variant_id": "51606352396594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "51606352429362"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Drip",
+    "variant_id": "51606352462130"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / French Press",
+    "variant_id": "51606352494898"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "51606352527666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51606352560434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Espresso",
+    "variant_id": "51606352593202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "51606352625970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Drip",
+    "variant_id": "51606352658738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / French Press",
+    "variant_id": "51606352691506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "51606352724274"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "50a4e4c317742a4a",
+  "first_seen": "2026-10-26",
+  "handle": "gondo-ab-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo_KamwangiPeaberrysmall2026.jpg?v=1787076229",
+  "platform": "shopify",
+  "product_id": "10277189943602",
+  "product_type": "Coffee",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin"
+  ],
+  "title": "Kamwangi Peaberry",
+  "url": "https://www.chromaticcoffee.com/products/gondo-ab-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "51606409904434"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Espresso",
+    "variant_id": "51606409937202"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "51606409969970"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Drip",
+    "variant_id": "51606410002738"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / French Press",
+    "variant_id": "51606410035506"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 37.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "51606410068274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51606410101042"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Espresso",
+    "variant_id": "51606410133810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "51606410166578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Drip",
+    "variant_id": "51606410199346"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / French Press",
+    "variant_id": "51606410232114"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 117.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "51606410264882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51606410297650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Espresso",
+    "variant_id": "51606410330418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "51606410363186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Drip",
+    "variant_id": "51606410395954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / French Press",
+    "variant_id": "51606410428722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 293.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "51606410461490"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "c513989ab2520a5c",
+  "first_seen": "2026-10-26",
+  "handle": "san-vicente-yogondoy",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo_Yogondoysmall2026.jpg?v=1788903910",
+  "platform": "shopify",
+  "product_id": "10358121562418",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin"
+  ],
+  "title": "San Vicente Yogondoy",
+  "url": "https://www.chromaticcoffee.com/products/san-vicente-yogondoy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "51749273338162"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Drip",
+    "variant_id": "51749273370930"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Espresso",
+    "variant_id": "51749273403698"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / French Press",
+    "variant_id": "51749273436466"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "51749273469234"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 36.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "51749273502002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51749273534770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Drip",
+    "variant_id": "51749273567538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Espresso",
+    "variant_id": "51749273600306"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / French Press",
+    "variant_id": "51749273633074"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "51749273665842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 115.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "51749273698610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51749273731378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Drip",
+    "variant_id": "51749273764146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Espresso",
+    "variant_id": "51749273796914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / French Press",
+    "variant_id": "51749273829682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "51749273862450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 288.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "51749273895218"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "fd7925a83dd2c783",
+  "first_seen": "2026-10-26",
+  "handle": "parainema-reunion-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo_parainemareunionsmall2026.jpg?v=1790125392",
+  "platform": "shopify",
+  "product_id": "10419030622514",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "sub"
+  ],
+  "title": "Parainema Reunión",
+  "url": "https://www.chromaticcoffee.com/products/parainema-reunion-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "52158003511602"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Espresso",
+    "variant_id": "52158003544370"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "52158003577138"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Drip",
+    "variant_id": "52158003609906"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / French Press",
+    "variant_id": "52158003642674"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "52158003675442"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52158003708210"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Espresso",
+    "variant_id": "52158003740978"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "52158003773746"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Drip",
+    "variant_id": "52158003806514"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / French Press",
+    "variant_id": "52158003839282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52158003872050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52158003904818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Espresso",
+    "variant_id": "52158003937586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "52158003970354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Drip",
+    "variant_id": "52158004003122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / French Press",
+    "variant_id": "52158004035890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "52158004068658"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "59e522328da57a81",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-pony-14-anniversary-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo_unicornponysmall2026.jpg?v=1790795448",
+  "platform": "shopify",
+  "product_id": "15405381189938",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Unicorn Pony 14 - Anniversary Blend",
+  "url": "https://www.chromaticcoffee.com/products/unicorn-pony-14-anniversary-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Whole Bean",
+    "variant_id": "67891534725426"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Espresso",
+    "variant_id": "67891534758194"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Aeropress",
+    "variant_id": "67891534790962"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Drip",
+    "variant_id": "67891534823730"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / French Press",
+    "variant_id": "67891534856498"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 38.99,
+    "title": "10oz / Cold Brew",
+    "variant_id": "67891534889266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Whole Bean",
+    "variant_id": "67891534922034"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Espresso",
+    "variant_id": "67891534954802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Aeropress",
+    "variant_id": "67891534987570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Drip",
+    "variant_id": "67891535020338"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / French Press",
+    "variant_id": "67891535053106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 121.99,
+    "title": "2lb / Cold Brew",
+    "variant_id": "67891535085874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Whole Bean",
+    "variant_id": "67891535118642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Espresso",
+    "variant_id": "67891535151410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Aeropress",
+    "variant_id": "67891535184178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Drip",
+    "variant_id": "67891535216946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / French Press",
+    "variant_id": "67891535249714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 304.99,
+    "title": "5lb / Cold Brew",
+    "variant_id": "67891535282482"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "09f03b9ea8945fd9",
+  "first_seen": "2026-10-26",
+  "handle": "gamut",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo_gamutsmall2025.jpg?v=1736453069",
+  "platform": "shopify",
+  "product_id": "9741213991218",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "blend",
+   "coffee",
+   "sub"
+  ],
+  "title": "Gamut",
+  "url": "https://www.chromaticcoffee.com/products/gamut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49668116447538"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / Drip",
+    "variant_id": "49668116480306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / Espresso",
+    "variant_id": "49668116513074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / French Press",
+    "variant_id": "49668116545842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / Aeropress",
+    "variant_id": "49668116578610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz / Cold Brew",
+    "variant_id": "49668116611378"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49668116644146"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / Drip",
+    "variant_id": "49668116676914"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / Espresso",
+    "variant_id": "49668116709682"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / French Press",
+    "variant_id": "49668116742450"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / Aeropress",
+    "variant_id": "49668116775218"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 61.84,
+    "title": "2lb / Cold Brew",
+    "variant_id": "49668116807986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49668116840754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / Drip",
+    "variant_id": "49668116873522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / Espresso",
+    "variant_id": "49668116906290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / French Press",
+    "variant_id": "49668116939058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / Aeropress",
+    "variant_id": "49668116971826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 149.9,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49668117004594"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "94d18a96d209be3b",
+  "first_seen": "2026-10-26",
+  "handle": "keynote",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo_keynote2022.jpg?v=1736454660",
+  "platform": "shopify",
+  "product_id": "9741214023986",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin",
+   "sub"
+  ],
+  "title": "Keynote",
+  "url": "https://www.chromaticcoffee.com/products/keynote",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49668117070130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / Drip",
+    "variant_id": "49668117102898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / Espresso",
+    "variant_id": "49668117135666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / French Press",
+    "variant_id": "49668117168434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / Aeropress",
+    "variant_id": "49668117201202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz / Cold Brew",
+    "variant_id": "49668117233970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49668117266738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / Drip",
+    "variant_id": "49668117299506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / Espresso",
+    "variant_id": "49668117332274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / French Press",
+    "variant_id": "49668117365042"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / Aeropress",
+    "variant_id": "49668117397810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.89,
+    "title": "2lb / Cold Brew",
+    "variant_id": "49668117430578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49668117463346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / Drip",
+    "variant_id": "49668117496114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / Espresso",
+    "variant_id": "49668117528882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / French Press",
+    "variant_id": "49668117561650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / Aeropress",
+    "variant_id": "49668117594418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.9,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49668117627186"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "59b848cf7693cc71",
+  "first_seen": "2026-10-26",
+  "handle": "kunjin",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo__Kunjin_2022.jpg?v=1736376355",
+  "platform": "shopify",
+  "product_id": "9741214089522",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin",
+   "sub"
+  ],
+  "title": "Kunjin Wet Process",
+  "url": "https://www.chromaticcoffee.com/products/kunjin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49668118315314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Drip",
+    "variant_id": "49668118348082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Espresso",
+    "variant_id": "49668118380850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / French Press",
+    "variant_id": "49668118413618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Aeropress",
+    "variant_id": "49668118446386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Cold Brew",
+    "variant_id": "49668118479154"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49668118511922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Drip",
+    "variant_id": "49668118544690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Espresso",
+    "variant_id": "49668118577458"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / French Press",
+    "variant_id": "49668118610226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Aeropress",
+    "variant_id": "49668118642994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Cold Brew",
+    "variant_id": "49668118675762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49668118708530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Drip",
+    "variant_id": "49668118741298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Espresso",
+    "variant_id": "49668118774066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / French Press",
+    "variant_id": "49668118806834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Aeropress",
+    "variant_id": "49668118839602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49668118872370"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "37d3ef4c138e2fb7",
+  "first_seen": "2026-10-26",
+  "handle": "sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/photo__SugarCane_DECAF_small_2025.jpg?v=1736376115",
+  "platform": "shopify",
+  "product_id": "9741214155058",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin",
+   "sub"
+  ],
+  "title": "Sugarcane Decaf",
+  "url": "https://www.chromaticcoffee.com/products/sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49668119757106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Drip",
+    "variant_id": "49668119789874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Espresso",
+    "variant_id": "49668119822642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / French Press",
+    "variant_id": "49668119855410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Aeropress",
+    "variant_id": "49668119888178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.99,
+    "title": "12oz / Cold Brew",
+    "variant_id": "49668119920946"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49668119953714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Drip",
+    "variant_id": "49668119986482"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Espresso",
+    "variant_id": "49668120019250"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / French Press",
+    "variant_id": "49668120052018"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Aeropress",
+    "variant_id": "49668120084786"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 72.59,
+    "title": "2lb / Cold Brew",
+    "variant_id": "49668120117554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49668120150322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Drip",
+    "variant_id": "49668120183090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Espresso",
+    "variant_id": "49668120215858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / French Press",
+    "variant_id": "49668120248626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Aeropress",
+    "variant_id": "49668120281394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.98,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49668120314162"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ },
+ {
+  "body_hash": "e8cdcb26a21cf821",
+  "first_seen": "2026-10-26",
+  "handle": "opus",
+  "image": "https://cdn.shopify.com/s/files/1/0911/6080/5682/files/Photo__Opus_tierra_lenca_2025.jpg?v=1736450515",
+  "platform": "shopify",
+  "product_id": "9741214220594",
+  "product_type": "",
+  "roaster_slug": "chromaticcoffee",
+  "tags": [
+   "coffee",
+   "single-origin",
+   "sub"
+  ],
+  "title": "Opus Dark Roast",
+  "url": "https://www.chromaticcoffee.com/products/opus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49668121035058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Drip",
+    "variant_id": "49668121067826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "49668121100594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / French Press",
+    "variant_id": "49668121133362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Aeropress",
+    "variant_id": "49668121166130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Cold Brew",
+    "variant_id": "49668121198898"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / Whole Bean",
+    "variant_id": "49668121231666"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / Drip",
+    "variant_id": "49668121264434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / Espresso",
+    "variant_id": "49668121297202"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / French Press",
+    "variant_id": "49668121329970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / Aeropress",
+    "variant_id": "49668121362738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.03,
+    "title": "2lb / Cold Brew",
+    "variant_id": "49668121395506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49668121428274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / Drip",
+    "variant_id": "49668121461042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / Espresso",
+    "variant_id": "49668121493810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / French Press",
+    "variant_id": "49668121526578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / Aeropress",
+    "variant_id": "49668121559346"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.38,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49668121592114"
+   }
+  ],
+  "vendor": "Chromatic Coffee"
+ }
+]

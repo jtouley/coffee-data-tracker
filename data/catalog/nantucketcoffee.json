@@ -1,0 +1,548 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "organic-roastd-reserva-specialty-coffee-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Organic_Colombia_-_Light_-_12_OZ.jpg?v=1792766413",
+  "platform": "shopify",
+  "product_id": "15460066132131",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [],
+  "title": "Organic Colombia (Roastd Private Label) - Single Origin Specialty Coffee",
+  "url": "https://www.nantucketcoffee.com/products/organic-roastd-reserva-specialty-coffee-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "67765469970595"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / Ground",
+    "variant_id": "67765470003363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "67765470036131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "67765470068899"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cafe",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/2_Cafe_-_M.png?v=1783703162",
+  "platform": "shopify",
+  "product_id": "8035063169187",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Café - Specialty Coffee Blend",
+  "url": "https://www.nantucketcoffee.com/products/cafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "43429444288675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "43429444354211"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Ground",
+    "variant_id": "43811680092323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Ground",
+    "variant_id": "43811680125091"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "1fbdb593d0ee530f",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-2023-label",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Decaf_Colombia_Mountain_Water_Process.jpg?v=1783702795",
+  "platform": "shopify",
+  "product_id": "8035063234723",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [],
+  "title": "Decaf Colombia (Mountain Water Process) - Single Origin Specialty Coffee",
+  "url": "https://www.nantucketcoffee.com/products/decaf-espresso-blend-2023-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429446058147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429446090915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground for Drip",
+    "variant_id": "46496880623779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground for Espresso",
+    "variant_id": "46496880656547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground for Drip",
+    "variant_id": "46496880689315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground for Espresso",
+    "variant_id": "46496880722083"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Espresso_-_Specialty_Coffee_Blend_12_OZ.png?v=1726768088",
+  "platform": "shopify",
+  "product_id": "8035063464099",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Espresso - Specialty Coffee Blend",
+  "url": "https://www.nantucketcoffee.com/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "43429446975651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "43429447008419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Ground for Espresso",
+    "variant_id": "43811701588131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Ground for Espresso",
+    "variant_id": "43811701620899"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-2023-label",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Organic_Reserva_-_Light_-_12_OZ.jpg?v=1792766298",
+  "platform": "shopify",
+  "product_id": "8035063496867",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [],
+  "title": "Organic Reserva (Roastd Private Label) - Specialty Coffee Blend",
+  "url": "https://www.nantucketcoffee.com/products/flagship-2023-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429448155299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429448188067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounces / Ground",
+    "variant_id": "46496861552803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "46496861585571"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "df64d51fa73e9786",
+  "first_seen": "2026-10-26",
+  "handle": "french",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/French_Roast_-_Specialty_Coffee_Blend_12_OZ.png?v=1726768129",
+  "platform": "shopify",
+  "product_id": "8035063529635",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "French Roast",
+  "url": "https://www.nantucketcoffee.com/products/french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429448220835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429448253603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "43811723968675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "43811724001443"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "b6bd7ca56cd3d5b2",
+  "first_seen": "2026-10-26",
+  "handle": "island-blend-2023-label",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/NEL.jpg?v=1783702700",
+  "platform": "shopify",
+  "product_id": "8035063595171",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Islander's Blend",
+  "url": "https://www.nantucketcoffee.com/products/island-blend-2023-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429450023075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429450055843"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "46496874234019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "46496874266787"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "dionis",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Dionis_-_Specialty_Coffee_Blend_12_OZ.png?v=1726768046",
+  "platform": "shopify",
+  "product_id": "8035063824547",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Dionis Dark - Specialty Coffee Blend",
+  "url": "https://www.nantucketcoffee.com/products/dionis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429446811811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429446844579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "43811790454947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "43811790487715"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "8432e505fc1d53ea",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-santa-barbara-estate-excelso-2023-label",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Colombia-SIngleOriginSpecialtyCoffee_12OZ_TextCOFFEENormalBarcode.png?v=1762638085",
+  "platform": "shopify",
+  "product_id": "8035072671907",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Colombia",
+  "url": "https://www.nantucketcoffee.com/products/colombia-santa-barbara-estate-excelso-2023-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429444911267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "43429444944035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "46496862568611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "46496862601379"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "b443b13ec271f913",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-guji-2023-label",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/EthiopiaGuji-SingleOriginSpecialtyCoffee_12OZ.png?v=1762637227",
+  "platform": "shopify",
+  "product_id": "8035085222051",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Ethiopia Guji - Single Origin Specialty Coffee",
+  "url": "https://www.nantucketcoffee.com/products/ethiopia-sidamo-guji-2023-label",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "43429447106723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "46496846512291"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "78c0d80550a9eca6",
+  "first_seen": "2026-10-26",
+  "handle": "sconset",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/Sconset_-_Specialty_Coffee_Blend_12_OZ.png?v=1726767828",
+  "platform": "shopify",
+  "product_id": "8035103309987",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "Medium roast"
+  ],
+  "title": "'Sconset Blend",
+  "url": "https://www.nantucketcoffee.com/products/sconset",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Whole Bean",
+    "variant_id": "43429452906659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Whole Bean",
+    "variant_id": "43429452939427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 Ounces / Ground",
+    "variant_id": "43811783213219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 Pounds / Ground",
+    "variant_id": "43811783245987"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-single-origin-specialty-coffee-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0161/3960/files/9_Sumatra_WH_-_D.png?v=1783703261",
+  "platform": "shopify",
+  "product_id": "9180141387939",
+  "product_type": "coffee",
+  "roaster_slug": "nantucketcoffee",
+  "tags": [
+   "2023 Offerings"
+  ],
+  "title": "Sumatra Dark - Single Origin Specialty Coffee",
+  "url": "https://www.nantucketcoffee.com/products/colombia-single-origin-specialty-coffee-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Whole Bean",
+    "variant_id": "47861079048355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 ounces / Ground",
+    "variant_id": "47861079081123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "47861079113891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.75,
+    "title": "5 pounds / Ground",
+    "variant_id": "47861079146659"
+   }
+  ],
+  "vendor": "Nantucket Coffee Roasters"
+ }
+]

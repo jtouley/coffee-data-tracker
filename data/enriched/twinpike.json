@@ -1,0 +1,230 @@
+{
+ "1704475918426": {
+  "body_hash": "d372d7987cb0c794",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "nutty",
+   "caramel",
+   "cocoa"
+  ],
+  "varietals": []
+ },
+ "1705640591450": {
+  "body_hash": "af7758b3522f32c1",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "syrupy sweet",
+   "cherry",
+   "raisin",
+   "cashew",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "1705653207130": {
+  "body_hash": "12dfe96997df8454",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "lemon",
+   "toffee",
+   "peanut"
+  ],
+  "varietals": []
+ },
+ "1705667362906": {
+  "body_hash": "3bbf1f7e5bee865a",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet lemon",
+   "dark chocolate",
+   "toffee",
+   "almond",
+   "caramel"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "1705683320922": {
+  "body_hash": "ebc0a335471c8148",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "sweet chocolate",
+   "blackberry",
+   "honeycomb"
+  ],
+  "varietals": [
+   "Geisha"
+  ]
+ },
+ "1705693216858": {
+  "body_hash": "009e50b3fd2c021a",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1700,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "creamy mouthfeel",
+   "big toffee"
+  ],
+  "varietals": []
+ },
+ "4657790419034": {
+  "body_hash": "dc57815c6ce6161e",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Panama",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet vanilla",
+   "brown sugar",
+   "malty dark chocolate"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra",
+   "Typica"
+  ]
+ },
+ "8073104162978": {
+  "body_hash": "71677387bf5a9123",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "red wine"
+  ],
+  "varietals": []
+ },
+ "8075756667042": {
+  "body_hash": "88df374eeec5372c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hazelnut",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "8476957343906": {
+  "body_hash": "1a8c646c5f3acead",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "8575536890018": {
+  "body_hash": "c520ac6075d588c0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "toasted caramel"
+  ],
+  "varietals": []
+ },
+ "8777183887522": {
+  "body_hash": "b7f11f3d3248445c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

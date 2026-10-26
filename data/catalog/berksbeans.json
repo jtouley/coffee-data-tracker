@@ -1,0 +1,2380 @@
+[
+ {
+  "body_hash": "37986bcdaa29f58a",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-blue-mountain-coffee-wallenford-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/JBM.webp",
+  "platform": "woocommerce",
+  "product_id": "17762",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Jamaica Blue Mountain Coffee, Wallenford Estate",
+  "url": "https://berksbeans.com/product/jamaica-blue-mountain-coffee-wallenford-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 55.0,
+    "title": "6 oz Bag",
+    "variant_id": "17762:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12 oz Bag",
+    "variant_id": "17762:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 55.0,
+    "title": "5 lb Bag",
+    "variant_id": "17762:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "59ad199dd6a0ba19",
+  "first_seen": "2026-10-26",
+  "handle": "kona-private-reserve-extra-fancy-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/kona-extra-fancy-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "17766",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Kona Private Reserve Extra Fancy Coffee, Kona District",
+  "url": "https://berksbeans.com/product/kona-private-reserve-extra-fancy-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 50.0,
+    "title": "6 oz Bag",
+    "variant_id": "17766:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 50.0,
+    "title": "12 oz Bag",
+    "variant_id": "17766:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a7e2d8a92cb0d707",
+  "first_seen": "2026-10-26",
+  "handle": "kona-peaberry-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/kona-peaberry-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "17769",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Kona Peaberry Coffee, Kona District",
+  "url": "https://berksbeans.com/product/kona-peaberry-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 55.0,
+    "title": "6 oz Bag",
+    "variant_id": "17769:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "12 oz Bag",
+    "variant_id": "17769:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "571c0cc70d2cc414",
+  "first_seen": "2026-10-26",
+  "handle": "kona-premium-estate-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/kona-premium-estate-bag.jpg",
+  "platform": "woocommerce",
+  "product_id": "17772",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Kona Premium Estate Coffee, Kona District",
+  "url": "https://berksbeans.com/product/kona-premium-estate-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 45.0,
+    "title": "6 oz Bag",
+    "variant_id": "17772:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 45.0,
+    "title": "12 oz Bag",
+    "variant_id": "17772:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1add279ea3ef91b5",
+  "first_seen": "2026-10-26",
+  "handle": "yemen-mocha-mattari-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/Yemen.webp",
+  "platform": "woocommerce",
+  "product_id": "17775",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Yemen Mocha Mattari Coffee, Sana’a Governorate",
+  "url": "https://berksbeans.com/product/yemen-mocha-mattari-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 30.0,
+    "title": "6 oz Bag",
+    "variant_id": "17775:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 oz Bag",
+    "variant_id": "17775:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dba921b5e548bb10",
+  "first_seen": "2026-10-26",
+  "handle": "kauai-coffee-kalaheo-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/Kuaui.webp",
+  "platform": "woocommerce",
+  "product_id": "17784",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Kauai Prime Coffee, Kalaheo Estate",
+  "url": "https://berksbeans.com/product/kauai-coffee-kalaheo-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 22.0,
+    "title": "6 oz Bag",
+    "variant_id": "17784:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz Bag",
+    "variant_id": "17784:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8128f945939240c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-finca-el-diviso-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/Colombia-Finca-EL-Diviso.webp",
+  "platform": "woocommerce",
+  "product_id": "17787",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Premium Coffee"
+  ],
+  "title": "Colombia Finca El Diviso Coffee",
+  "url": "https://berksbeans.com/product/colombia-finca-el-diviso-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 16.0,
+    "title": "6 oz Bag",
+    "variant_id": "17787:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Bag",
+    "variant_id": "17787:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "83edff2396943f3c",
+  "first_seen": "2026-10-26",
+  "handle": "start-your-own-coffee-brand",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/01-cover.jpg",
+  "platform": "woocommerce",
+  "product_id": "18278",
+  "product_type": "simple",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Coffee Business Guides",
+   "coffee business",
+   "digital download",
+   "private label coffee",
+   "side hustle",
+   "start a coffee brand"
+  ],
+  "title": "Start Your Own Coffee Brand: The Private Label Playbook",
+  "url": "https://berksbeans.com/product/start-your-own-coffee-brand/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "Start Your Own Coffee Brand: The Private Label Playbook",
+    "variant_id": "18278:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9ccd88c2a63c9da9",
+  "first_seen": "2026-10-26",
+  "handle": "morning-motivation-breakfast-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_02_Morning_Motivation_Breakfast_Blend-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18368",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Morning Motivation Breakfast Blend Coffee",
+  "url": "https://berksbeans.com/product/morning-motivation-breakfast-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz",
+    "variant_id": "18368:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "18368:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz",
+    "variant_id": "18368:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "2 lb",
+    "variant_id": "18368:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb",
+    "variant_id": "18368:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da98a59249e82ecf",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-espresso-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_03_Espresso_Blend-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18375",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Berk’s Beans Espresso Blend Coffee",
+  "url": "https://berksbeans.com/product/berks-beans-espresso-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz",
+    "variant_id": "18375:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "18375:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz",
+    "variant_id": "18375:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "2 lb",
+    "variant_id": "18375:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb",
+    "variant_id": "18375:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "42eb137d974b035d",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-in-paris-french-roast-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_01_Breakfast_in_Paris_French_Roast-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18382",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Breakfast in Paris French Roast Coffee",
+  "url": "https://berksbeans.com/product/breakfast-in-paris-french-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz",
+    "variant_id": "18382:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "18382:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz",
+    "variant_id": "18382:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "2 lb",
+    "variant_id": "18382:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb",
+    "variant_id": "18382:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a35ab52a4ec7706d",
+  "first_seen": "2026-10-26",
+  "handle": "italian-stallion-italian-roast-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_05_Italian_Stallion_Italian_Roast-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18389",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Italian Stallion Italian Roast Coffee",
+  "url": "https://berksbeans.com/product/italian-stallion-italian-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz",
+    "variant_id": "18389:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "18389:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz",
+    "variant_id": "18389:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "2 lb",
+    "variant_id": "18389:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb",
+    "variant_id": "18389:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "431f63314dafd20a",
+  "first_seen": "2026-10-26",
+  "handle": "decoy-coffee-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_06_Decoy-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18396",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Decoy Coffee Blend",
+  "url": "https://berksbeans.com/product/decoy-coffee-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz",
+    "variant_id": "18396:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz",
+    "variant_id": "18396:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz",
+    "variant_id": "18396:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "2 lb",
+    "variant_id": "18396:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb",
+    "variant_id": "18396:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3cfc96af28d543d1",
+  "first_seen": "2026-10-26",
+  "handle": "reserva-andina-tuxedo-roast-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/09/IMG_7167.jpeg",
+  "platform": "woocommerce",
+  "product_id": "18403",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Reserva Andina South American Tuxedo Roast Coffee",
+  "url": "https://berksbeans.com/product/reserva-andina-tuxedo-roast-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 13.0,
+    "title": "6 oz",
+    "variant_id": "18403:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz",
+    "variant_id": "18403:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 13.0,
+    "title": "24 oz",
+    "variant_id": "18403:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2 lb",
+    "variant_id": "18403:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lb",
+    "variant_id": "18403:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "056fadb60a9c8467",
+  "first_seen": "2026-10-26",
+  "handle": "springtime-serenade-kona-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Springtime.jpg",
+  "platform": "woocommerce",
+  "product_id": "18410",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Springtime Serenade Kona Blend Coffee",
+  "url": "https://berksbeans.com/product/springtime-serenade-kona-blend-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 13.0,
+    "title": "6 oz",
+    "variant_id": "18410:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz",
+    "variant_id": "18410:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 13.0,
+    "title": "24 oz",
+    "variant_id": "18410:2"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2 lb",
+    "variant_id": "18410:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lb",
+    "variant_id": "18410:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d54c77b1a2266b1d",
+  "first_seen": "2026-10-26",
+  "handle": "summertime-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/BerksBeans_04_Summertime_Blend-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "18417",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Summertime Blend Coffee",
+  "url": "https://berksbeans.com/product/summertime-blend-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 13.0,
+    "title": "6 oz",
+    "variant_id": "18417:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz",
+    "variant_id": "18417:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 13.0,
+    "title": "24 oz",
+    "variant_id": "18417:2"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2 lb",
+    "variant_id": "18417:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lb",
+    "variant_id": "18417:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5313d9e21d9772bb",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/IMG_3016.jpeg",
+  "platform": "woocommerce",
+  "product_id": "18424",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Harvest Blend Coffee",
+  "url": "https://berksbeans.com/product/harvest-blend-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 13.0,
+    "title": "6 oz",
+    "variant_id": "18424:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz",
+    "variant_id": "18424:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 13.0,
+    "title": "24 oz",
+    "variant_id": "18424:2"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2 lb",
+    "variant_id": "18424:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lb",
+    "variant_id": "18424:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "faa94cda9b42d5a5",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Holiday20Blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "18431",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends &amp; Seasonal Coffees"
+  ],
+  "title": "Holiday Blend Coffee",
+  "url": "https://berksbeans.com/product/holiday-blend-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 13.0,
+    "title": "6 oz",
+    "variant_id": "18431:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.0,
+    "title": "12 oz",
+    "variant_id": "18431:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 13.0,
+    "title": "24 oz",
+    "variant_id": "18431:2"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "2 lb",
+    "variant_id": "18431:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 13.0,
+    "title": "5 lb",
+    "variant_id": "18431:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd09679208a3c856",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/colombia-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18502",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Colombia Swiss Water Process Decaf Coffee",
+  "url": "https://berksbeans.com/product/colombia-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18502:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18502:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18502:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eea3226e1d1d784c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/brazil-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18506",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Brazil Mogiana Decaf Coffee",
+  "url": "https://berksbeans.com/product/brazil-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18506:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18506:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18506:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97e8d76fcd9e8228",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/costa-rica-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18510",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Costa Rica El Indio Swiss Water Process Decaf Coffee",
+  "url": "https://berksbeans.com/product/costa-rica-decaf-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18510:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18510:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18510:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bf5f658a51d3fcb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/ethiopia-sidamo-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18514",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Ethiopia Sidamo Natural Decaf Coffee",
+  "url": "https://berksbeans.com/product/ethiopia-sidamo-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18514:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18514:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18514:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b21bd61c592e2d30",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-royal-select-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/ethiopia-royal-select-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18518",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Ethiopia Royal Select Natural Decaf Coffee",
+  "url": "https://berksbeans.com/product/ethiopia-royal-select-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18518:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18518:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18518:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a66e1c076bd2305",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-uraga-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/ethiopia-uraga-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18522",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Ethiopia Uraga Decaf Coffee",
+  "url": "https://berksbeans.com/product/ethiopia-uraga-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18522:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18522:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18522:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da34d700c7f7f9e9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/guatemala-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18526",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Guatemala HHT Royal Select Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/guatemala-decaf-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18526:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18526:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18526:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "771abb659fa6ef89",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/honduras-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18530",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Honduras COMSA Royal Select Decaf Coffee",
+  "url": "https://berksbeans.com/product/honduras-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18530:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18530:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18530:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39bd1986d36abfa1",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsoon-malabar-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/india-monsoon-malabar-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18534",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "India Monsoon Malabar Decaf Coffee",
+  "url": "https://berksbeans.com/product/india-monsoon-malabar-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18534:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18534:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18534:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa98cad816c05d4a",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/mexico-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18538",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Mexico Chiapas Mountain Water Process Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/mexico-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18538:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18538:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18538:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a52194a2dab89580",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/papua-new-guinea-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18542",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Papua New Guinea Purosa A/X Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/papua-new-guinea-decaf-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18542:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18542:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18542:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7e129f25c1bcdead",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/peru-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18546",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Peru Sol y Cafe Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/peru-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18546:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18546:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18546:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b513ecc3e6c989de",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/sumatra-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18550",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Sumatra Mandheling Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/sumatra-decaf-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18550:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18550:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18550:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a69bf3701a35d13b",
+  "first_seen": "2026-10-26",
+  "handle": "timor-decaf-coffee",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/timor-decaf-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "18554",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Timor Cafe Timor Coop Organic Decaf Coffee",
+  "url": "https://berksbeans.com/product/timor-decaf-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18554:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18554:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18554:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5d4d2acb42928194",
+  "first_seen": "2026-10-26",
+  "handle": "morning-glory-decaf-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/morning-glory-decaf-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "18558",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Morning Glory Organic Decaf Blend",
+  "url": "https://berksbeans.com/product/morning-glory-decaf-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18558:0"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18558:1"
+   },
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18558:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ccd69d2e6df26b9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/espresso-blend-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "18562",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Espresso Blend Decaf",
+  "url": "https://berksbeans.com/product/decaf-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18562:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18562:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18562:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "850d10e53b4f0b70",
+  "first_seen": "2026-10-26",
+  "handle": "reserva-andina-decaf",
+  "image": "https://berksbeans.com/wp-content/uploads/2026/10/reserva-andina-decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "18569",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Decaffeinated Selections"
+  ],
+  "title": "Reserva Andina Tuxedo Roast Decaf Coffee",
+  "url": "https://berksbeans.com/product/reserva-andina-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 12.0,
+    "title": "6 oz Bag",
+    "variant_id": "18569:0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz Bag",
+    "variant_id": "18569:1"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 12.0,
+    "title": "24 oz Bag",
+    "variant_id": "18569:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7bc6d86d97fcbe6b",
+  "first_seen": "2026-10-26",
+  "handle": "berks-treats",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/cn15__328331542053866.jpg",
+  "platform": "woocommerce",
+  "product_id": "4019",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gift Sets"
+  ],
+  "title": "Berk’s Chocolate Covered Espresso Beans",
+  "url": "https://berksbeans.com/product/berks-treats/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Berk&#8217;s Chocolate Covered Espresso Beans",
+    "variant_id": "4019:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6342144dd810f7b3",
+  "first_seen": "2026-10-26",
+  "handle": "airscape-stainless-steel-coffee-canister",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/twoairscapes.webp",
+  "platform": "woocommerce",
+  "product_id": "4033",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Airscape stainless steel coffee canister",
+   "Coffee Products",
+   "airtight coffee canister",
+   "coffee storage",
+   "coffee storage canister",
+   "stainless steel coffee canister",
+   "whole bean storage"
+  ],
+  "title": "Airscape® stainless steel coffee and food storage canister (7″ Only)",
+  "url": "https://berksbeans.com/product/airscape-stainless-steel-coffee-canister/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "Airscape® stainless steel coffee and food storage canister (7&#8243; Only)",
+    "variant_id": "4033:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca2a5d0d7e7d316c",
+  "first_seen": "2026-10-26",
+  "handle": "blends-seasonal-coffees",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/iStock-912278100.jpg",
+  "platform": "woocommerce",
+  "product_id": "4048",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [],
+  "title": "Berk’s Beans Blends & Seasonal Coffees",
+  "url": "https://berksbeans.com/product/blends-seasonal-coffees/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Berk&#8217;s Beans Blends &amp; Seasonal Coffees",
+    "variant_id": "4048:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2de83d61edc8aa31",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-north-american-and-central-america-single-origin",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-63c65d4.jpg",
+  "platform": "woocommerce",
+  "product_id": "4051",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gourmet Coffee"
+  ],
+  "title": "Berk’s Beans North American & Central America – Single Origin",
+  "url": "https://berksbeans.com/product/berks-beans-north-american-and-central-america-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Berk&#8217;s Beans North American &amp; Central America &#8211; Single Origin",
+    "variant_id": "4051:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "65a83cad2ca6afac",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-south-america-single-origin",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-d97e5d1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4052",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gourmet Coffee"
+  ],
+  "title": "Berk’s Beans South America – Single Origin",
+  "url": "https://berksbeans.com/product/berks-beans-south-america-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Berk&#8217;s Beans South America &#8211; Single Origin",
+    "variant_id": "4052:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d509efc5ad4601db",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-africa-single-origin",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-6537f57.png",
+  "platform": "woocommerce",
+  "product_id": "4053",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gourmet Coffee"
+  ],
+  "title": "Berk’s Beans Africa – Single Origin",
+  "url": "https://berksbeans.com/product/berks-beans-africa-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Berk&#8217;s Beans Africa &#8211; Single Origin",
+    "variant_id": "4053:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc659c04c7582f6c",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-asia-single-origin",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-317a7cf.png",
+  "platform": "woocommerce",
+  "product_id": "4054",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gourmet Coffee"
+  ],
+  "title": "Berk’s Beans Asia – Single Origin",
+  "url": "https://berksbeans.com/product/berks-beans-asia-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Berk&#8217;s Beans Asia &#8211; Single Origin",
+    "variant_id": "4054:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a1b433a1eb5faa71",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-premium-selection-single-origin",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-5173b21.jpg",
+  "platform": "woocommerce",
+  "product_id": "4055",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Gourmet Coffee",
+   "Premium Coffee",
+   "Reserve, Rare &amp; Limited"
+  ],
+  "title": "Berk’s Beans Premium Selection – Single Origin",
+  "url": "https://berksbeans.com/product/berks-beans-premium-selection-single-origin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Berk&#8217;s Beans Premium Selection &#8211; Single Origin",
+    "variant_id": "4055:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c3def32d75d698ca",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Colombia_Supremo_Bunched.jpg",
+  "platform": "woocommerce",
+  "product_id": "4064",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "South America"
+  ],
+  "title": "Colombia Supremo | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/colombia-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.75,
+    "title": "Colombia Supremo | Green Coffee (Unroasted)",
+    "variant_id": "4064:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3d94aac0509d5cac",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-washed",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Ethiopia20Yirga20Natural.jpg",
+  "platform": "woocommerce",
+  "product_id": "4065",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Africa",
+   "Greens"
+  ],
+  "title": "Ethiopia Yirgacheffe – Washed | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/ethiopia-yirgacheffe-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.5,
+    "title": "Ethiopia Yirgacheffe &#8211; Washed | Green Coffee (Unroasted)",
+    "variant_id": "4065:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52d5c90b09402dc4",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-coffee-da-lat-shg-robusta-honey-process",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Vientam20Honey20Robusta.jpg",
+  "platform": "woocommerce",
+  "product_id": "4066",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Asia",
+   "Greens"
+  ],
+  "title": "Vietnam Coffee Da Lat SHG Robusta Honey Process | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/vietnam-coffee-da-lat-shg-robusta-honey-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Vietnam Coffee Da Lat SHG Robusta Honey Process | Green Coffee (Unroasted)",
+    "variant_id": "4066:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ace4a79dac543e5",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-la-pastora-shb-ep",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/Costa20Rica20Tarrazu.jpg",
+  "platform": "woocommerce",
+  "product_id": "4067",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Central America",
+   "Greens"
+  ],
+  "title": "Costa Rica Tarrazu La Pastora SHB EP | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/costa-rica-tarrazu-la-pastora-shb-ep/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.75,
+    "title": "Costa Rica Tarrazu La Pastora SHB EP | Green Coffee (Unroasted)",
+    "variant_id": "4067:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "11a5c13b66e592b6",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-7f59d7c.jpg",
+  "platform": "woocommerce",
+  "product_id": "4069",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Africa",
+   "Greens"
+  ],
+  "title": "Kenya AA Plus | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/kenya-aa-plus/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Kenya AA Plus | Green Coffee (Unroasted)",
+    "variant_id": "4069:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "149c22aea1d223be",
+  "first_seen": "2026-10-26",
+  "handle": "bali-organic-blue-moon",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-e486dd8.png",
+  "platform": "woocommerce",
+  "product_id": "4070",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Asia",
+   "Greens"
+  ],
+  "title": "Bali Organic Blue Moon | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/bali-organic-blue-moon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Bali Organic Blue Moon | Green Coffee (Unroasted)",
+    "variant_id": "4070:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a07960290b472246",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-natural-organic",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-f49e404.png",
+  "platform": "woocommerce",
+  "product_id": "4071",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Africa",
+   "Greens"
+  ],
+  "title": "Ethiopia Sidamo – Natural, Organic | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/ethiopia-sidamo-natural-organic/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.5,
+    "title": "Ethiopia Sidamo &#8211; Natural, Organic | Green Coffee (Unroasted)",
+    "variant_id": "4071:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fb98329c5b3ed637",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-blue-mountain-gr-1-wallenford-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-9e05674.png",
+  "platform": "woocommerce",
+  "product_id": "4072",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "Premium Greens",
+   "Reserve, Rare &amp; Limited"
+  ],
+  "title": "Jamaican Blue Mountain Gr. 1 – Wallenford Estate | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/jamaican-blue-mountain-gr-1-wallenford-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 57.0,
+    "title": "Jamaican Blue Mountain Gr. 1 &#8211; Wallenford Estate | Green Coffee (Unroasted)",
+    "variant_id": "4072:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4740fb3bb7c05d4f",
+  "first_seen": "2026-10-26",
+  "handle": "kona-extra-fancy-mount-hualalai-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-1504946.jpg",
+  "platform": "woocommerce",
+  "product_id": "4073",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "Premium Greens",
+   "Reserve, Rare &amp; Limited"
+  ],
+  "title": "Kona Extra Fancy – Mount Hualalai Estate | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/kona-extra-fancy-mount-hualalai-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "Kona Extra Fancy &#8211; Mount Hualalai Estate | Green Coffee (Unroasted)",
+    "variant_id": "4073:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "da0e447f96472851",
+  "first_seen": "2026-10-26",
+  "handle": "kona-premium-estate-mount-hualalai-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-ef77ea4.jpg",
+  "platform": "woocommerce",
+  "product_id": "4074",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "Premium Greens",
+   "Reserve, Rare &amp; Limited"
+  ],
+  "title": "Kona Premium Estate – Mount Hualalai Estate | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/kona-premium-estate-mount-hualalai-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 43.0,
+    "title": "Kona Premium Estate &#8211; Mount Hualalai Estate | Green Coffee (Unroasted)",
+    "variant_id": "4074:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20d53200f142319f",
+  "first_seen": "2026-10-26",
+  "handle": "kona-peaberry-mount-hualalai-estate",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-cbf069c.jpg",
+  "platform": "woocommerce",
+  "product_id": "4075",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "Premium Greens",
+   "Reserve, Rare &amp; Limited"
+  ],
+  "title": "Kona Peaberry – Mount Hualalai Estate | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/kona-peaberry-mount-hualalai-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Kona Peaberry &#8211; Mount Hualalai Estate | Green Coffee (Unroasted)",
+    "variant_id": "4075:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a83e2302fbc55d9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-organic-san-marcos",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-61ec13e.jpg",
+  "platform": "woocommerce",
+  "product_id": "4076",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Central America",
+   "Greens"
+  ],
+  "title": "Guatemala Organic San Marcos | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/guatemala-organic-san-marcos/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.75,
+    "title": "Guatemala Organic San Marcos | Green Coffee (Unroasted)",
+    "variant_id": "4076:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef4d58d882ed1fb1",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gr1",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-ec63f37.jpg",
+  "platform": "woocommerce",
+  "product_id": "4077",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Asia",
+   "Greens"
+  ],
+  "title": "Sumatra Mandheling Gr1 | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/sumatra-mandheling-gr1/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "Sumatra Mandheling Gr1 | Green Coffee (Unroasted)",
+    "variant_id": "4077:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64c5300a8a1c4d08",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-alta-mogiana-ss-fc-15-16",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-8f71c1d.jpg",
+  "platform": "woocommerce",
+  "product_id": "4078",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Greens",
+   "South America"
+  ],
+  "title": "Brazil Alta Mogiana SS FC 15/16 | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/brazil-alta-mogiana-ss-fc-15-16/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Brazil Alta Mogiana SS FC 15/16 | Green Coffee (Unroasted)",
+    "variant_id": "4078:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "13d8e545ec6a63ad",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete-finca-la-santa",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-b9e1074.jpg",
+  "platform": "woocommerce",
+  "product_id": "4079",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Central America",
+   "Greens"
+  ],
+  "title": "Panama Boquete Finca La Santa | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/panama-boquete-finca-la-santa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.0,
+    "title": "Panama Boquete Finca La Santa | Green Coffee (Unroasted)",
+    "variant_id": "4079:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6fbf8071d62ee119",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-psc-washed",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-c193e6b.jpg",
+  "platform": "woocommerce",
+  "product_id": "4080",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Asia",
+   "Greens"
+  ],
+  "title": "Papua New Guinea – PSC Washed | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/papua-new-guinea-psc-washed/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.25,
+    "title": "Papua New Guinea &#8211; PSC Washed | Green Coffee (Unroasted)",
+    "variant_id": "4080:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9f87f14e0c604ca4",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-espresso-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-f4b7cfb.jpg",
+  "platform": "woocommerce",
+  "product_id": "4081",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Espresso Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Espresso Blend | Green Coffee (Unroasted)",
+    "variant_id": "4081:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8462e9e441544c2f",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-brazilian-espresso-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-d8d9589.jpg",
+  "platform": "woocommerce",
+  "product_id": "4082",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Brazilian Espresso Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-brazilian-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Brazilian Espresso Blend | Green Coffee (Unroasted)",
+    "variant_id": "4082:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ea41612a6c0df1b",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-french-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-cb31ab7.jpg",
+  "platform": "woocommerce",
+  "product_id": "4083",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans French Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-french-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans French Blend | Green Coffee (Unroasted)",
+    "variant_id": "4083:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ded8fe8760182be3",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-italian-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-2a71e40.jpg",
+  "platform": "woocommerce",
+  "product_id": "4084",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Italian Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-italian-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Italian Blend | Green Coffee (Unroasted)",
+    "variant_id": "4084:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c62d846f481a496f",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-holiday-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-ee4bcc2.jpg",
+  "platform": "woocommerce",
+  "product_id": "4085",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Holiday Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-holiday-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Holiday Blend | Green Coffee (Unroasted)",
+    "variant_id": "4085:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5af1f6a6efccbce7",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-kona-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-71b4b7b.jpg",
+  "platform": "woocommerce",
+  "product_id": "4086",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Kona Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-kona-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Kona Blend | Green Coffee (Unroasted)",
+    "variant_id": "4086:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "76c02842907b8ddc",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-breakfast-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-462b6e1.jpg",
+  "platform": "woocommerce",
+  "product_id": "4087",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Breakfast Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Breakfast Blend | Green Coffee (Unroasted)",
+    "variant_id": "4087:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d37a7fb21664fcdf",
+  "first_seen": "2026-10-26",
+  "handle": "berks-beans-decoy-blend",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/blob-b6732ea.jpg",
+  "platform": "woocommerce",
+  "product_id": "4088",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Blends",
+   "Greens"
+  ],
+  "title": "Berk’s Beans Decoy Blend | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/berks-beans-decoy-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Berk&#8217;s Beans Decoy Blend | Green Coffee (Unroasted)",
+    "variant_id": "4088:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44dffa7b9d8e9f83",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-organic-aguila",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/16B-CoffeeImageWebsitecopy_700x700.png",
+  "platform": "woocommerce",
+  "product_id": "4089",
+  "product_type": "variable",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Central America",
+   "Greens"
+  ],
+  "title": "Mexico Chiapas Organic Aguila | Green Coffee (Unroasted)",
+  "url": "https://berksbeans.com/product/mexico-chiapas-organic-aguila/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "Mexico Chiapas Organic Aguila | Green Coffee (Unroasted)",
+    "variant_id": "4089:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e62ee15b26869339",
+  "first_seen": "2026-10-26",
+  "handle": "aiden-precision-coffee-maker",
+  "image": "https://berksbeans.com/wp-content/uploads/2025/11/AidenBrewer_MB_PDP_Image1.png",
+  "platform": "woocommerce",
+  "product_id": "4526",
+  "product_type": "simple",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Aiden Precision Coffee Maker",
+   "Coffee Products",
+   "Fellow Aiden",
+   "automatic pour over coffee maker",
+   "batch brew coffee maker",
+   "drip coffee maker",
+   "precision coffee maker"
+  ],
+  "title": "Aiden Precision Coffee Maker",
+  "url": "https://berksbeans.com/product/aiden-precision-coffee-maker/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 365.0,
+    "title": "Aiden Precision Coffee Maker",
+    "variant_id": "4526:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9525103300752ede",
+  "first_seen": "2026-10-26",
+  "handle": "raw-local-honey",
+  "image": "https://berksbeans.com/wp-content/uploads/ele-custom-shapes/tbtb-raw-local-honey.jpg",
+  "platform": "woocommerce",
+  "product_id": "4540",
+  "product_type": "simple",
+  "roaster_slug": "berksbeans",
+  "tags": [
+   "Coffee Products",
+   "Gift Sets",
+   "Pleasant Hill CA",
+   "Supporting Your Community",
+   "The Birds and The Bees",
+   "handmade",
+   "local honey",
+   "raw local honey",
+   "unfiltered honey"
+  ],
+  "title": "Raw Local Honey, Unfiltered (1 lb Jar) – The Birds & The Bees",
+  "url": "https://berksbeans.com/product/raw-local-honey/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Raw Local Honey, Unfiltered (1 lb Jar) &#8211; The Birds &#038; The Bees",
+    "variant_id": "4540:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

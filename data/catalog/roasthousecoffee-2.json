@@ -1,0 +1,1917 @@
+[
+ {
+  "body_hash": "f70a131df3e3b357",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-gayo",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Sumatra_Gayo_Tri_ple_Picked.jpg?v=1792166329",
+  "platform": "shopify",
+  "product_id": "10222008598631",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Sumatra Gayo Anaerobic Natural",
+  "url": "https://roasthousecoffee.com/products/sumatra-gayo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50314824843367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "50314824876135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "50314824908903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "50314824941671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Drip",
+    "variant_id": "50314824974439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / French Press",
+    "variant_id": "50314825007207"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 40.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "50314825039975"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 40.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "50314825072743"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 40.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "50314825105511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50314825138279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "50314825171047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "50314825203815"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "23de3cd8ea145421",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopia-suke-quto",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/EthiopiaSukeQuot.jpg?v=1746050582",
+  "platform": "shopify",
+  "product_id": "312072372265",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Suke Quto",
+  "url": "https://roasthousecoffee.com/products/organic-ethiopia-suke-quto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496797708391"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496797741159"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496797773927"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "5345829290025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "5345833320489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "5345833353257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "5345833451561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Drip",
+    "variant_id": "5345833484329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / French Press",
+    "variant_id": "5345833517097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "5345833615401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "5345833648169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "5345833680937"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "26600320ae7186ee",
+  "first_seen": "2026-10-26",
+  "handle": "coast-to-coast",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Coast_to_Coast.jpg?v=1750795277",
+  "platform": "shopify",
+  "product_id": "332928188457",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Coast To Coast",
+  "url": "https://roasthousecoffee.com/products/coast-to-coast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496795807847"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496795840615"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496795873383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "5345773748265"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "5345776893993"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "5345776926761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "5345777025065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Drip",
+    "variant_id": "5345777057833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / French Press",
+    "variant_id": "5345777090601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "5345777188905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "5345777221673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "5345777254441"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "de164e356c0ed626",
+  "first_seen": "2026-10-26",
+  "handle": "organic-cafe-de-americas",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/CafeDeAmericas.jpg?v=1746050661",
+  "platform": "shopify",
+  "product_id": "332981338153",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Café de Americas",
+  "url": "https://roasthousecoffee.com/products/organic-cafe-de-americas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "33166030143591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "33166030372967"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496795480167"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496795512935"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496795545703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "4310916923433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Drip",
+    "variant_id": "4310916956201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / French Press",
+    "variant_id": "4310916988969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "4310917087273"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "4310917120041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "4310917152809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "5345759199273"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "f5a312c7d9d8c2fe",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-swiss-water-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/FrenchDecaf.jpg?v=1746051223",
+  "platform": "shopify",
+  "product_id": "338652823593",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Blends"
+  ],
+  "title": "French Decaf, Swiss Water Process",
+  "url": "https://roasthousecoffee.com/products/organic-french-swiss-water-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496785616999"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496785649767"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496785682535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "5355912003625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "5355918393385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "5355918426153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "5355918524457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "5355918557225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "5355918589993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "5355918688297"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "5355918721065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "5355918753833"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "e017aba9ee7b7174",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/MochaJava_a31b4160-a0b3-4890-92d4-39eb311b9ef2.jpg?v=1746051355",
+  "platform": "shopify",
+  "product_id": "338873450537",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Mocha Java",
+  "url": "https://roasthousecoffee.com/products/organic-mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496756519015"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496756551783"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496756584551"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "5355986780201"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "5355997200425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "5355997233193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "5355997331497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "5355997364265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "5355997397033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "5355997495337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "5355997528105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "5355997560873"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "d067c3a0b7e89d95",
+  "first_seen": "2026-10-26",
+  "handle": "organic-house-decaf-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/HouseDecaf_b370ef4b-4227-4628-bd99-569c4c05b5da.jpg?v=1746051866",
+  "platform": "shopify",
+  "product_id": "4513231831143",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "House Decaf, Swiss Water Process",
+  "url": "https://roasthousecoffee.com/products/organic-house-decaf-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "32020078461031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "32020078493799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "32020078526567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "32020078592103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "32020078624871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "32020078657639"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "32020078723175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "32020078755943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "32020078788711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12oz + 6 cup box of instant / Whole Bean",
+    "variant_id": "41084433956967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12oz + 6 cup box of instant / Drip",
+    "variant_id": "41084433989735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "12oz + 6 cup box of instant / French Press",
+    "variant_id": "41084434022503"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496681611367"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496681644135"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496681676903"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "57179a3727c2d031",
+  "first_seen": "2026-10-26",
+  "handle": "booeys-vaquero-rub",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Booeys_Rub.png?v=1697836249",
+  "platform": "shopify",
+  "product_id": "6591141314663",
+  "product_type": "",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "Booey's Vaquero Rub x Viva La Noche Coffee",
+  "url": "https://roasthousecoffee.com/products/booeys-vaquero-rub",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 13.99,
+    "title": "Vaquero Rub (11oz)",
+    "variant_id": "39472381427815"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "a1bee586123baf1a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-aquiares-esperanza-red-honey",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/EsperanzaRedHoney_1a4d1197-11c4-41fd-89d4-8af22c466ae1.jpg?v=1746051964",
+  "platform": "shopify",
+  "product_id": "6655511593063",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Costa Rica Esperanza",
+  "url": "https://roasthousecoffee.com/products/costa-rica-aquiares-esperanza-red-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39692457640039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "39692457672807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "39692457705575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "39692457836647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "39692457869415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "39692457902183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "39995287044199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Drip",
+    "variant_id": "39995287076967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / French Press",
+    "variant_id": "39995287109735"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41814920200295"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41814920233063"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41814920265831"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "31f5b2b4c25480de",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-encore",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/IMG-4393.jpg?v=1704208125",
+  "platform": "shopify",
+  "product_id": "6869334622311",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "Baratza Encore",
+  "url": "https://roasthousecoffee.com/products/baratza-encore",
+  "variants": [
+   {
+    "available": false,
+    "grams": 3311,
+    "price_usd": 149.95,
+    "title": "Black",
+    "variant_id": "40352304365671"
+   },
+   {
+    "available": true,
+    "grams": 3311,
+    "price_usd": 149.95,
+    "title": "White",
+    "variant_id": "41950787895399"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "d99619b272b4bf15",
+  "first_seen": "2026-10-26",
+  "handle": "f-bomb-cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/DSC08379.jpg?v=1758063904",
+  "platform": "shopify",
+  "product_id": "7023341994087",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "F-Bomb Cold Brew Coffee",
+  "url": "https://roasthousecoffee.com/products/f-bomb-cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 4.5,
+    "title": "12oz can",
+    "variant_id": "40791073783911"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "4 pack",
+    "variant_id": "40791073816679"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 84.0,
+    "title": "1 case of 24",
+    "variant_id": "40791073849447"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "c586d1bc1b7aedd9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo-beriti",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Beriti.jpg?v=1784065712",
+  "platform": "shopify",
+  "product_id": "7212182503527",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Halo Beriti",
+  "url": "https://roasthousecoffee.com/products/ethiopia-halo-beriti",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41214121082983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / Drip",
+    "variant_id": "41214121115751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz / French Press",
+    "variant_id": "41214121148519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41214121181287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41214121214055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41214121246823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41214121279591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41214121312359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41214121345127"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496670306407"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496670339175"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 39.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496670371943"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "683e0b270fc7cf14",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-suke-quto-decaf-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Suke_Decaf_0655da8b-7cf7-4323-88e1-026861a1f9e6.jpg?v=1775053059",
+  "platform": "shopify",
+  "product_id": "7243976245351",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Suke Quto Decaf, Swiss Water Process",
+  "url": "https://roasthousecoffee.com/products/ethiopia-suke-quto-decaf-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41294747631719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / Drip",
+    "variant_id": "41294747664487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz / French Press",
+    "variant_id": "41294747697255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41294747730023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41294747762791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41294747795559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41294747828327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41294747861095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41294747893863"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496665161831"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496665194599"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496665227367"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "ca31c6fbbdbe9394",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-dukendakawa",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Dukundekawa.jpg?v=1785160679",
+  "platform": "shopify",
+  "product_id": "7268949885031",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Rwanda Dukundekawa",
+  "url": "https://roasthousecoffee.com/products/rwanda-dukendakawa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41352248950887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "41352248983655"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "41352249016423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41352249049191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41352249081959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41352249114727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41352249147495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41352249180263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 104.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41352249213031"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496659591271"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496659624039"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496659656807"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "e9e5cba164b55f0f",
+  "first_seen": "2026-10-26",
+  "handle": "peru-rutas-del-inca-community-lot",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Peru_Paric.jpg?v=1773766842",
+  "platform": "shopify",
+  "product_id": "7268990517351",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru Paric Community Lot",
+  "url": "https://roasthousecoffee.com/products/peru-rutas-del-inca-community-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41352367308903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "41352367341671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "41352367374439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41352367407207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41352367439975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41352367472743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41352367505511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41352367538279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41352367571047"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496658215015"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496658247783"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496658280551"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "fb3c4adaab8bc9d2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-pradera-castillo-washed",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Castillo.jpg?v=1758063193",
+  "platform": "shopify",
+  "product_id": "7382448734311",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Limited Release",
+   "Single Origin"
+  ],
+  "title": "Colombia La Pradera Castillo Washed",
+  "url": "https://roasthousecoffee.com/products/colombia-la-pradera-castillo-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41677302628455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "41677302661223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "41677302693991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41677302726759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41677302759527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41677302792295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41677302825063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41677302857831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41677302890599"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41679265595495"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41679265628263"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41679265661031"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "fbc3ea04835aa653",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-corrales",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Corrales_9f35e7e1-e4fd-4da3-a4ae-c7911eebb5db.jpg?v=1761673076",
+  "platform": "shopify",
+  "product_id": "7423148621927",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Nicaragua Corrales",
+  "url": "https://roasthousecoffee.com/products/nicaragua-corrales",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41816771330151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "41816771362919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "41816771395687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "41816771428455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 pound / Drip",
+    "variant_id": "41816771461223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1 pound / French Press",
+    "variant_id": "41816771493991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "41816771526759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "41816771559527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "41816771592295"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41816772083815"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41816772116583"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41816772149351"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "631f3275e05531bc",
+  "first_seen": "2026-10-26",
+  "handle": "winter-brew-ceramic-coated-nomad",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Winter_Tumbler2.jpg?v=1766000663",
+  "platform": "shopify",
+  "product_id": "7471909929063",
+  "product_type": "Coffee Mugs",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "Winter Brew Ceramic-Coated Nomad",
+  "url": "https://roasthousecoffee.com/products/winter-brew-ceramic-coated-nomad",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.99,
+    "title": "Default Title",
+    "variant_id": "41996685869159"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "18b341b63cddb8b1",
+  "first_seen": "2026-10-26",
+  "handle": "peru-coya-women-produced",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Coya.jpg?v=1776979686",
+  "platform": "shopify",
+  "product_id": "7595262214247",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru Coya Women-Produced",
+  "url": "https://roasthousecoffee.com/products/peru-coya-women-produced",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42362183614567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42362183647335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "42362183680103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "42362183712871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "42362183745639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "42362183778407"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "42362183811175"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "42362183843943"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "42362183876711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "42362183909479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "42362183942247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "42362183975015"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "044e6bc3e1c807a4",
+  "first_seen": "2026-10-26",
+  "handle": "1kg-airscape-coffee-container-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/DSC01583.jpg?v=1778795171",
+  "platform": "shopify",
+  "product_id": "7625252274279",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "1kg Airscape Coffee Container",
+  "url": "https://roasthousecoffee.com/products/1kg-airscape-coffee-container-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg Airscape",
+    "variant_id": "43767808098407"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "9bfeea43107d00a5",
+  "first_seen": "2026-10-26",
+  "handle": "peace-paw-airscape-coffee-container-copy",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/DSC01580.jpg?v=1778795599",
+  "platform": "shopify",
+  "product_id": "7625252733031",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [],
+  "title": "Roast House Classic Airscape Coffee Container",
+  "url": "https://roasthousecoffee.com/products/peace-paw-airscape-coffee-container-copy",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "43767809278055"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "baebade0a9471dcb",
+  "first_seen": "2026-10-26",
+  "handle": "peru-don-celso",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/Don_Celso.jpg?v=1785963620",
+  "platform": "shopify",
+  "product_id": "7663237070951",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Peru Don Celso",
+  "url": "https://roasthousecoffee.com/products/peru-don-celso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44103904559207"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "44103904591975"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "44103904624743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "44103904657511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "44103904690279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "44103904723047"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "44103904755815"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "44103904788583"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 37.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "44103904821351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "44103904854119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "44103904886887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "44103904919655"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ },
+ {
+  "body_hash": "24954f2b92ab6e4b",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-daterra-sweet-blue",
+  "image": "https://cdn.shopify.com/s/files/1/2613/9964/files/SweetBlue.jpg?v=1746051374",
+  "platform": "shopify",
+  "product_id": "776129052775",
+  "product_type": "Craft Coffee",
+  "roaster_slug": "roasthousecoffee-2",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Brazil Daterra Sweet Blue",
+  "url": "https://roasthousecoffee.com/products/brazil-daterra-sweet-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Whole Bean",
+    "variant_id": "41496753963111"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / Drip",
+    "variant_id": "41496753995879"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 36.0,
+    "title": "1.5 pound family size / French Press",
+    "variant_id": "41496754028647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "8302383366247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "8302383399015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "8302383431783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Whole Bean",
+    "variant_id": "8302383530087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / Drip",
+    "variant_id": "8302383562855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "1 pound / French Press",
+    "variant_id": "8302383595623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "8302383693927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / Drip",
+    "variant_id": "8302383726695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 pounds / French Press",
+    "variant_id": "8302383759463"
+   }
+  ],
+  "vendor": "Roast House Coffee"
+ }
+]

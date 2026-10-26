@@ -1,0 +1,2360 @@
+[
+ {
+  "body_hash": "b04820c7349cb250",
+  "first_seen": "2026-10-26",
+  "handle": "headshot",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/headshotfront.png?v=1790020107",
+  "platform": "shopify",
+  "product_id": "10268184609082",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core",
+   "subscription"
+  ],
+  "title": "Headshot",
+  "url": "https://boxwoodcoffee.com/products/headshot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53313572766010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "53313572798778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53313572831546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "53313572864314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53313572897082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53313572929850"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53313572962618"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Drip",
+    "variant_id": "53313572995386"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53313573028154"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / French Press",
+    "variant_id": "53313573060922"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53313573093690"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53313573126458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53313573159226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Drip",
+    "variant_id": "53313573191994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53313573224762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / French Press",
+    "variant_id": "53313573257530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53313573290298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53313573323066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53313573355834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53313573388602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53313573421370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53313573454138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53313573486906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "53313573519674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53313573552442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53313573585210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53313573617978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53313573650746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53313573683514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 63.58,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53313573716282"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "d157e40769e6a6dd",
+  "first_seen": "2026-10-26",
+  "handle": "future-youth",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/FyFront.png?v=1790021967",
+  "platform": "shopify",
+  "product_id": "10268273377594",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core"
+  ],
+  "title": "Future Youth",
+  "url": "https://boxwoodcoffee.com/products/future-youth",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53314191098170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Drip",
+    "variant_id": "53314191130938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53314191163706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / French Press",
+    "variant_id": "53314191196474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53314191229242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53314191262010"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53314191294778"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / Drip",
+    "variant_id": "53314191327546"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53314191360314"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / French Press",
+    "variant_id": "53314191393082"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53314191425850"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 66.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53314191458618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53314191491386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / Drip",
+    "variant_id": "53314191524154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53314191556922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / French Press",
+    "variant_id": "53314191589690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53314191622458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53314191655226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53314191687994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53314191720762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53314191753530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53314191786298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53314191819066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 102.0,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "53314191851834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53314191884602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53314191917370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53314191950138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53314191982906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53314192015674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.75,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53314192048442"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "7092673fbc4c52f9",
+  "first_seen": "2026-10-26",
+  "handle": "purple-rain",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/PRfront.png?v=1790020729",
+  "platform": "shopify",
+  "product_id": "10268273901882",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core"
+  ],
+  "title": "Purple Rain",
+  "url": "https://boxwoodcoffee.com/products/purple-rain",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53314195882298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Drip",
+    "variant_id": "53314195915066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53314195947834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / French Press",
+    "variant_id": "53314195980602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53314196013370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53314196046138"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53314196078906"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / Drip",
+    "variant_id": "53314196111674"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53314196144442"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / French Press",
+    "variant_id": "53314196177210"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53314196209978"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 78.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53314196242746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53314196275514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / Drip",
+    "variant_id": "53314196308282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53314196341050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / French Press",
+    "variant_id": "53314196373818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53314196406586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 172.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53314196439354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53314196472122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53314196504890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53314196537658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53314196570426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53314196603194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 125.16,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "53314196635962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53314196668730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53314196701498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53314196734266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53314196767034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53314196799802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.5,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53314196832570"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "1dec8c4202b11372",
+  "first_seen": "2026-10-26",
+  "handle": "guavabanana",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/GbFront.png?v=1790022441",
+  "platform": "shopify",
+  "product_id": "10322920505658",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core"
+  ],
+  "title": "Guavabanana",
+  "url": "https://boxwoodcoffee.com/products/guavabanana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53569392738618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Drip",
+    "variant_id": "53569392771386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53569392804154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / French Press",
+    "variant_id": "53569392836922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53569392869690"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53569392902458"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53569392935226"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / Drip",
+    "variant_id": "53569392967994"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53569393000762"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / French Press",
+    "variant_id": "53569393033530"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53569393066298"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 75.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53569393099066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53569393131834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Drip",
+    "variant_id": "53569393164602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53569393197370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / French Press",
+    "variant_id": "53569393230138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53569393262906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53569393295674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53569393328442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53569393361210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53569393393978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53569393426746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53569393459514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 115.0,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "53569393492282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53569393525050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53569393557818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53569393590586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53569393623354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53569393656122"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53569393688890"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "2f287f7c01582a6e",
+  "first_seen": "2026-10-26",
+  "handle": "white-rabbit",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/whiterabbitfront.png?v=1790016266",
+  "platform": "shopify",
+  "product_id": "10322923487546",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Seasonal"
+  ],
+  "title": "White Rabbit",
+  "url": "https://boxwoodcoffee.com/products/white-rabbit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53569425899834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Drip",
+    "variant_id": "53569425932602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53569425965370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / French Press",
+    "variant_id": "53569425998138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53569426030906"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53569426063674"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Drip",
+    "variant_id": "53569426096442"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53569426129210"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / French Press",
+    "variant_id": "53569426161978"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53569426194746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53569426227514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip",
+    "variant_id": "53569426260282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53569426293050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "53569426325818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53569426358586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53569426391354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53569426424122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53569426456890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53569426489658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53569426522426"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "3fffe0f0c8813f79",
+  "first_seen": "2026-10-26",
+  "handle": "pinada",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/pinadaclear.png?v=1790016072",
+  "platform": "shopify",
+  "product_id": "10322926797114",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Seasonal"
+  ],
+  "title": "Pinàda",
+  "url": "https://boxwoodcoffee.com/products/pinada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53569459192122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Drip",
+    "variant_id": "53569459224890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53569459257658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / French Press",
+    "variant_id": "53569459290426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53569459323194"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53569459355962"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Drip",
+    "variant_id": "53569459388730"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53569459421498"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / French Press",
+    "variant_id": "53569459454266"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 57.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53569459487034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53569459519802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip",
+    "variant_id": "53569459552570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53569459585338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "53569459618106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53569459650874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53569459683642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53569459716410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53569459749178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53569459781946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 76.0,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53569459814714"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "244883eae7542827",
+  "first_seen": "2026-10-26",
+  "handle": "pomelo-brulee",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/BOXWOOD-29.8.2644833-LR.png?v=1790015131",
+  "platform": "shopify",
+  "product_id": "10358075752762",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Seasonal"
+  ],
+  "title": "Pomelo Brûlée",
+  "url": "https://boxwoodcoffee.com/products/pomelo-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53729430798650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Drip",
+    "variant_id": "53729430831418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53729430864186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / French Press",
+    "variant_id": "53729430896954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53729430929722"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53729430962490"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1kg / Drip",
+    "variant_id": "53729430995258"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53729431028026"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1kg / French Press",
+    "variant_id": "53729431060794"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 63.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53729431093562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53729431126330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Drip",
+    "variant_id": "53729431159098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53729431191866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / French Press",
+    "variant_id": "53729431224634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53729431257402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 104.0,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "53729431290170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 104.0,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53729431322938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 104.0,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53729431355706"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 104.0,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53729431388474"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 104.0,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53729431421242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.97,
+    "title": "Wholesale: 5lb / Whole Bean",
+    "variant_id": "53892497998138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.97,
+    "title": "Wholesale: 5lb / Drip",
+    "variant_id": "53892498030906"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.97,
+    "title": "Wholesale: 5lb / Pourover/V60",
+    "variant_id": "53892498063674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.97,
+    "title": "Wholesale: 5lb / French Press",
+    "variant_id": "53892498096442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 91.97,
+    "title": "Wholesale: 5lb / Espresso",
+    "variant_id": "53892498129210"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "a2055db12d8a1e99",
+  "first_seen": "2026-10-26",
+  "handle": "hill-city",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/hillcityfront.png?v=1790017807",
+  "platform": "shopify",
+  "product_id": "9923382346042",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core",
+   "subscription"
+  ],
+  "title": "Hill City",
+  "url": "https://boxwoodcoffee.com/products/hill-city",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "51397278695738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "51401895280954"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "51401896722746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53288393769274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "53288393802042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53288393834810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "53288393867578"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53288393900346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53288393933114"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53288393965882"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Drip",
+    "variant_id": "53288393998650"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53288394031418"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / French Press",
+    "variant_id": "53288394064186"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53288394096954"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 54.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53288394129722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53288394162490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Drip",
+    "variant_id": "53288394195258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53288394228026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / French Press",
+    "variant_id": "53288394260794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53288394293562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53288394326330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53288394457402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53288394490170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 72.78,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53288394522938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53292463784250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53292463817018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53292463849786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53292463882554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53292463915322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 59.11,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53292463948090"
+   }
+  ],
+  "vendor": "Boxwood Coffee Roasters"
+ },
+ {
+  "body_hash": "6da8f1e4e207bb3f",
+  "first_seen": "2026-10-26",
+  "handle": "el-jefe",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/jefefront_063b4ce1-3c73-4a62-9fdc-89673c090be1.png?v=1790018877",
+  "platform": "shopify",
+  "product_id": "9923450995002",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core",
+   "subscription"
+  ],
+  "title": "El Jefe",
+  "url": "https://boxwoodcoffee.com/products/el-jefe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "51397860983098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "51401909109050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "51401909141818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53288358379834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "53288358412602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53288358445370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / French Press",
+    "variant_id": "53288358478138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53288358510906"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53288358543674"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Drip",
+    "variant_id": "53288358576442"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53288358609210"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / French Press",
+    "variant_id": "53288358641978"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53288358674746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53288358707514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Drip",
+    "variant_id": "53288358740282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53288358773050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / French Press",
+    "variant_id": "53288358805818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53288358838586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53288358936890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53288358969658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53290973626682"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 53.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53290973659450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53290973692218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 71.58,
+    "title": "12oz (x6) - Wholesale / Cold Brew",
+    "variant_id": "53290973724986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "53292452020538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53292452053306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53292452086074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53292452118842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53292452151610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.19,
+    "title": "5lb - Wholesale / Cold Brew",
+    "variant_id": "53292452184378"
+   }
+  ],
+  "vendor": "Boxwood Coffee Wholesale"
+ },
+ {
+  "body_hash": "033b935796a05123",
+  "first_seen": "2026-10-26",
+  "handle": "tempo-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/tempofront.png?v=1790019477",
+  "platform": "shopify",
+  "product_id": "9923474587962",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core",
+   "subscription"
+  ],
+  "title": "Tempo Espresso",
+  "url": "https://boxwoodcoffee.com/products/tempo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.98,
+    "title": "12oz (x6) - Wholesale / Whole Bean",
+    "variant_id": "51398070698298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.87,
+    "title": "5lb - Wholesale / Whole Bean",
+    "variant_id": "51398070731066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53288355791162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Drip",
+    "variant_id": "53288355823930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53288355856698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / French Press",
+    "variant_id": "53288355889466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53288355922234"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53288355955002"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Drip",
+    "variant_id": "53288355987770"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53288356020538"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / French Press",
+    "variant_id": "53288356053306"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53288356086074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53288356118842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5lb / Drip",
+    "variant_id": "53288356151610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53288356184378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5lb / French Press",
+    "variant_id": "53288356217146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53288356249914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.87,
+    "title": "5lb - Wholesale / Drip",
+    "variant_id": "53288356282682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.87,
+    "title": "5lb - Wholesale / Pourover/V60",
+    "variant_id": "53288356315450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.87,
+    "title": "5lb - Wholesale / French Press",
+    "variant_id": "53288356348218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 57.87,
+    "title": "5lb - Wholesale / Espresso",
+    "variant_id": "53288356380986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.98,
+    "title": "12oz (x6) - Wholesale / Drip",
+    "variant_id": "53288356413754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.98,
+    "title": "12oz (x6) - Wholesale / Pourover/V60",
+    "variant_id": "53288356446522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.98,
+    "title": "12oz (x6) - Wholesale / French Press",
+    "variant_id": "53288356479290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.98,
+    "title": "12oz (x6) - Wholesale / Espresso",
+    "variant_id": "53288356512058"
+   }
+  ],
+  "vendor": "Boxwood Coffee Wholesale"
+ },
+ {
+  "body_hash": "b3457ed2b3946347",
+  "first_seen": "2026-10-26",
+  "handle": "silver-lining-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/decaffront.png?v=1790019842",
+  "platform": "shopify",
+  "product_id": "9923474915642",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Core",
+   "subscription"
+  ],
+  "title": "Silver Lining Decaf",
+  "url": "https://boxwoodcoffee.com/products/silver-lining-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / Whole Bean",
+    "variant_id": "51398074040634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51398074073402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "53288330461498"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Whole Bean",
+    "variant_id": "53288420999482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / Whole Bean",
+    "variant_id": "53292449169722"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Espresso",
+    "variant_id": "53292486721850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "53292486754618"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pourover/V60",
+    "variant_id": "53292486787386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / French Press",
+    "variant_id": "53292486820154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "53292486852922"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Espresso",
+    "variant_id": "53292486885690"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Drip",
+    "variant_id": "53292486918458"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Pourover/V60",
+    "variant_id": "53292486951226"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / French Press",
+    "variant_id": "53292486983994"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 51.0,
+    "title": "1kg / Cold Brew",
+    "variant_id": "53292487016762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / Espresso",
+    "variant_id": "53292487049530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / Drip",
+    "variant_id": "53292487082298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / Pourover/V60",
+    "variant_id": "53292487115066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / French Press",
+    "variant_id": "53292487147834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53292487180602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / Espresso",
+    "variant_id": "53292487213370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / Drip",
+    "variant_id": "53292487246138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / Pourover/V60",
+    "variant_id": "53292487278906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / French Press",
+    "variant_id": "53292487311674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 73.2,
+    "title": "Wholesale: 12oz (x6) / Cold Brew",
+    "variant_id": "53292487344442"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / Espresso",
+    "variant_id": "53292487377210"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / Drip",
+    "variant_id": "53292487409978"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / Pourover/V60",
+    "variant_id": "53292487442746"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / French Press",
+    "variant_id": "53292487475514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 64.63,
+    "title": "Wholesale: 5lb / Cold Brew",
+    "variant_id": "53292487508282"
+   }
+  ],
+  "vendor": "Boxwood Coffee Wholesale"
+ },
+ {
+  "body_hash": "8c2709b05af2ea75",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0949/2021/2794/files/RTD_NoS.png?v=1752856402",
+  "platform": "shopify",
+  "product_id": "9923496378682",
+  "product_type": "Coffee",
+  "roaster_slug": "boxwoodcoffee",
+  "tags": [
+   "Cold Brew",
+   "wholesale",
+   "wholesale supplies"
+  ],
+  "title": "El Jefe Cold Brew",
+  "url": "https://boxwoodcoffee.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.5,
+    "title": "64oz Diluted (Ready to serve)",
+    "variant_id": "51398310756666"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 32.04,
+    "title": "64oz Concentrate",
+    "variant_id": "51398310789434"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.5,
+    "title": "32oz Concentrate",
+    "variant_id": "51610385350970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 41.28,
+    "title": "16oz Ready To Drink Bottles (x12)",
+    "variant_id": "51848396669242"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 299.5,
+    "title": "5 Gallon Keg",
+    "variant_id": "51848535834938"
+   }
+  ],
+  "vendor": "Boxwood Coffee Wholesale"
+ }
+]

@@ -1,0 +1,358 @@
+[
+ {
+  "body_hash": "2a69701c5f35ecca",
+  "first_seen": "2026-10-26",
+  "handle": "san-fernando",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettySanFernandoFront.jpg?v=1593572721",
+  "platform": "shopify",
+  "product_id": "10665341260",
+  "product_type": "Chiapas, Mexico",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "San Fernando FTO",
+  "url": "https://jettycoffeeroasters.com/products/san-fernando",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz.",
+    "variant_id": "39556700812"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "c8835eab91acdf61",
+  "first_seen": "2026-10-26",
+  "handle": "el-jefe",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyElJefeFront.jpg?v=1593570276",
+  "platform": "shopify",
+  "product_id": "10665373388",
+  "product_type": "Jetty's Signature Dark Roast",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "dark roast"
+  ],
+  "title": "El Jefe",
+  "url": "https://jettycoffeeroasters.com/products/el-jefe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "39556810956"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "8dca7d4a764f4767",
+  "first_seen": "2026-10-26",
+  "handle": "jetty-organic-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyDecafFront.jpg?v=1593572916",
+  "platform": "shopify",
+  "product_id": "10678358412",
+  "product_type": "Mexico Altura",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "coffee",
+   "decaf",
+   "single origin"
+  ],
+  "title": "Jetty Organic Decaf",
+  "url": "https://jettycoffeeroasters.com/products/jetty-organic-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz.",
+    "variant_id": "39611273548"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "40a5d83bee902f68",
+  "first_seen": "2026-10-26",
+  "handle": "angeleno",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyAngelinoFront_653b2882-af63-4540-8215-e599220f29c8.jpg?v=1593569949",
+  "platform": "shopify",
+  "product_id": "10678365132",
+  "product_type": "Jetty's House Blend",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Angeleno",
+  "url": "https://jettycoffeeroasters.com/products/angeleno",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "41634539340"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "a43a8f1b950db3cb",
+  "first_seen": "2026-10-26",
+  "handle": "breakwater",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyBreakwaterFront.jpg?v=1593570195",
+  "platform": "shopify",
+  "product_id": "10716004236",
+  "product_type": "Jetty's Espresso Blend",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Breakwater",
+  "url": "https://jettycoffeeroasters.com/products/breakwater",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "39759105420"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "88c347fb7097cd81",
+  "first_seen": "2026-10-26",
+  "handle": "kochere",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyKochereFront.jpg?v=1593572448",
+  "platform": "shopify",
+  "product_id": "11051317644",
+  "product_type": "Ethiopia Yirgacheffe",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "coffee",
+   "single origin"
+  ],
+  "title": "Kochere",
+  "url": "https://jettycoffeeroasters.com/products/kochere",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz.",
+    "variant_id": "41602245388"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "fc384f8edeb860b7",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-angeleno",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/products/JettyBlackbirdFront-3.jpg?v=1593570093",
+  "platform": "shopify",
+  "product_id": "4489832955973",
+  "product_type": "Jetty's Dark Espresso",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee"
+  ],
+  "title": "Blackbird",
+  "url": "https://jettycoffeeroasters.com/products/copy-of-angeleno",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz.",
+    "variant_id": "31686890618949"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "cfa62c3c3aa2cfd1",
+  "first_seen": "2026-10-26",
+  "handle": "short-sleeve-t-shirt-2",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/files/unisex-tri-blend-t-shirt-oatmeal-triblend-front-64d4314f12cd4.png?v=1691627863",
+  "platform": "shopify",
+  "product_id": "7405059047604",
+  "product_type": "merchandise",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [],
+  "title": "Jetty Circle T",
+  "url": "https://jettycoffeeroasters.com/products/short-sleeve-t-shirt-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 108,
+    "price_usd": 35.0,
+    "title": "Athletic Grey Triblend / XS",
+    "variant_id": "42341030625460"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 35.0,
+    "title": "Athletic Grey Triblend / S",
+    "variant_id": "42341030658228"
+   },
+   {
+    "available": true,
+    "grams": 139,
+    "price_usd": 35.0,
+    "title": "Athletic Grey Triblend / M",
+    "variant_id": "42341030690996"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 35.0,
+    "title": "Athletic Grey Triblend / L",
+    "variant_id": "42341030723764"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 35.0,
+    "title": "Athletic Grey Triblend / XL",
+    "variant_id": "42341030756532"
+   },
+   {
+    "available": true,
+    "grams": 108,
+    "price_usd": 35.0,
+    "title": "Oatmeal Triblend / XS",
+    "variant_id": "42341030789300"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 35.0,
+    "title": "Oatmeal Triblend / S",
+    "variant_id": "42341030822068"
+   },
+   {
+    "available": true,
+    "grams": 139,
+    "price_usd": 35.0,
+    "title": "Oatmeal Triblend / M",
+    "variant_id": "42341030854836"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 35.0,
+    "title": "Oatmeal Triblend / L",
+    "variant_id": "42341030887604"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 35.0,
+    "title": "Oatmeal Triblend / XL",
+    "variant_id": "42341030920372"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ },
+ {
+  "body_hash": "cfa62c3c3aa2cfd1",
+  "first_seen": "2026-10-26",
+  "handle": "jetty-short-sleeve-t-shirt-1",
+  "image": "https://cdn.shopify.com/s/files/1/1997/3205/files/unisex-tri-blend-t-shirt-charcoal-black-triblend-front-6502400a5d0ef.png?v=1694646294",
+  "platform": "shopify",
+  "product_id": "7416184012980",
+  "product_type": "merchandise",
+  "roaster_slug": "jettycoffeeroasters",
+  "tags": [],
+  "title": "Jetty Short-Sleeve T",
+  "url": "https://jettycoffeeroasters.com/products/jetty-short-sleeve-t-shirt-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 108,
+    "price_usd": 35.0,
+    "title": "Charcoal-Black Triblend / XS",
+    "variant_id": "42369829273780"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 35.0,
+    "title": "Charcoal-Black Triblend / S",
+    "variant_id": "42369829306548"
+   },
+   {
+    "available": true,
+    "grams": 139,
+    "price_usd": 35.0,
+    "title": "Charcoal-Black Triblend / M",
+    "variant_id": "42369829339316"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 35.0,
+    "title": "Charcoal-Black Triblend / L",
+    "variant_id": "42369829372084"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 35.0,
+    "title": "Charcoal-Black Triblend / XL",
+    "variant_id": "42369829404852"
+   },
+   {
+    "available": true,
+    "grams": 108,
+    "price_usd": 35.0,
+    "title": "Grey Triblend / XS",
+    "variant_id": "42369829437620"
+   },
+   {
+    "available": true,
+    "grams": 122,
+    "price_usd": 35.0,
+    "title": "Grey Triblend / S",
+    "variant_id": "42369829470388"
+   },
+   {
+    "available": true,
+    "grams": 139,
+    "price_usd": 35.0,
+    "title": "Grey Triblend / M",
+    "variant_id": "42369829503156"
+   },
+   {
+    "available": true,
+    "grams": 150,
+    "price_usd": 35.0,
+    "title": "Grey Triblend / L",
+    "variant_id": "42369829535924"
+   },
+   {
+    "available": true,
+    "grams": 164,
+    "price_usd": 35.0,
+    "title": "Grey Triblend / XL",
+    "variant_id": "42369829568692"
+   }
+  ],
+  "vendor": "Jetty Coffee Roasters"
+ }
+]

@@ -1,0 +1,417 @@
+[
+ {
+  "body_hash": "4efef9383affb580",
+  "first_seen": "2026-10-26",
+  "handle": "paupau-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/Screenshot_20201103-162336_2.png?v=1604442363",
+  "platform": "shopify",
+  "product_id": "5729156235427",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Paupau New Guinea Roast 12 oz",
+  "url": "https://revelationroasterycoffee.com/products/paupau-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "40499745947811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "40499796410531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb",
+    "variant_id": "40499819970723"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "6e66fd5fb1b7fa74",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/00100lrPORTRAIT_00100_BURST20201003095931600_COVER.jpg?v=1606167199",
+  "platform": "shopify",
+  "product_id": "5880881479843",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://revelationroasterycoffee.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "40498425069731"
+   },
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "40498900992163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "40498958467235"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "ab5f58155f5f61d4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/IMG_1471_1.jpg?v=1613502689",
+  "platform": "shopify",
+  "product_id": "6085167120547",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://revelationroasterycoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "40499212124323"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "40499247677603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "40499279462563"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "cbdc240a217628fd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/IMG_0079_1.jpg?v=1613502532",
+  "platform": "shopify",
+  "product_id": "6085179310243",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Guatemala El Morito Estate",
+  "url": "https://revelationroasterycoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "40499421642915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "40499421675683"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "40499482263715"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "929e9666e718480d",
+  "first_seen": "2026-10-26",
+  "handle": "risen-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/IMG_0036_1.jpg?v=1617451720",
+  "platform": "shopify",
+  "product_id": "6635072749731",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Risen Blend",
+  "url": "https://revelationroasterycoffee.com/products/risen-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 42.0,
+    "title": "2.5 lbs",
+    "variant_id": "40499847135395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "40499903234211"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz",
+    "variant_id": "40499943178403"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "0244670afa9ea26f",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-10oz",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_9e6fb479-5aab-49a7-b1cd-ea18c6f778c6.jpg?v=1624976483",
+  "platform": "shopify",
+  "product_id": "7068879782051",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Cold brew 12oz",
+  "url": "https://revelationroasterycoffee.com/products/cold-brew-10oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "40876249120931"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "89f5c36c54c93613",
+  "first_seen": "2026-10-26",
+  "handle": "buffalo-trace-bourbon-infused-coffee-6oz",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_775270af-d983-4c67-a59c-0e2f948a7d63.heic?v=1671919159",
+  "platform": "shopify",
+  "product_id": "7379800424611",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Bourbon infused Coffee 6oz",
+  "url": "https://revelationroasterycoffee.com/products/buffalo-trace-bourbon-infused-coffee-6oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 11.0,
+    "title": "Default Title",
+    "variant_id": "41875299434659"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "61c88d1f07ad20e3",
+  "first_seen": "2026-10-26",
+  "handle": "zambia-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_2530ea73-3520-491d-b382-6276ceb2ae59.jpg?v=1644021498",
+  "platform": "shopify",
+  "product_id": "7489650753699",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Zambia Roast",
+  "url": "https://revelationroasterycoffee.com/products/zambia-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "42192731930787"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "0ffa6c8990b89d5d",
+  "first_seen": "2026-10-26",
+  "handle": "anaerobic-process-columobia",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_f383a87d-2d95-4c1b-aed1-907e3d5787d0.jpg?v=1646067171",
+  "platform": "shopify",
+  "product_id": "7514624491683",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Anaerobic Columbia Microlot",
+  "url": "https://revelationroasterycoffee.com/products/anaerobic-process-columobia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "42268980084899"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "fee8ff300abdfbc9",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_088a7b2e-e69e-4b75-b66f-c4689508df86.jpg?v=1669059090",
+  "platform": "shopify",
+  "product_id": "7911957135523",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Fair Trade Organic Indonesia Sumatra",
+  "url": "https://revelationroasterycoffee.com/products/indonesia-sumatra",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "43083989680291"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "3f8c78eaef6b499c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_54166583-f763-4848-9bad-64ccb5e31fb0.jpg?v=1669058549",
+  "platform": "shopify",
+  "product_id": "7911971160227",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://revelationroasterycoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "43084028084387"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "8c36821cf2048ef4",
+  "first_seen": "2026-10-26",
+  "handle": "la-esmeralda-72-hr-double-fermentation",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/products/image_17fb78af-ea23-4f83-976b-fa2ea3ea49e2.jpg?v=1669059636",
+  "platform": "shopify",
+  "product_id": "7911982497955",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "La Esmeralda 72 hr Double Fermentation",
+  "url": "https://revelationroasterycoffee.com/products/la-esmeralda-72-hr-double-fermentation",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "43084069896355"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "c0c164fa4b3b10b5",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/files/01E39CE8-3DA2-428D-9D81-C9B220D427EE.jpg?v=1706827213",
+  "platform": "shopify",
+  "product_id": "8210561335459",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Burundi Washed Microlot",
+  "url": "https://revelationroasterycoffee.com/products/burundi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "43975788626083"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "b35bfecb546a34cd",
+  "first_seen": "2026-10-26",
+  "handle": "natural-process-columbia",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/files/FullSizeRender.jpg?v=1708629058",
+  "platform": "shopify",
+  "product_id": "8210563956899",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Natural process Columbia",
+  "url": "https://revelationroasterycoffee.com/products/natural-process-columbia",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "43975794622627"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ },
+ {
+  "body_hash": "0640c209e7516718",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0496/3447/6195/files/Screenshot_20201001-114053.png?v=1614306446",
+  "platform": "shopify",
+  "product_id": "9027010953379",
+  "product_type": "",
+  "roaster_slug": "revelationroasterycoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://revelationroasterycoffee.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Tanzania",
+    "variant_id": "47340962545827"
+   }
+  ],
+  "vendor": "Revelation Roastery"
+ }
+]

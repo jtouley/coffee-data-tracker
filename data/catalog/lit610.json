@@ -1,0 +1,459 @@
+[
+ {
+  "body_hash": "16c70f95a429cd13",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sheka-haile-gebrselassie",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/monocacy_ehtiopia_sheka_Ethiopia-Sheka-2.png",
+  "platform": "woocommerce",
+  "product_id": "10483",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Ethiopia",
+   "Heirloom",
+   "Masha",
+   "Natural process",
+   "Roasted Coffee",
+   "Sheka - Haile Gebrselassie",
+   "Sheka Zone",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Sheka – Haile Gebrselassie",
+  "url": "https://monocacycoffee.com/product/ethiopia-sheka-haile-gebrselassie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "10483:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.0,
+    "title": "5lb",
+    "variant_id": "10483:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c45f462cd30e1180",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-mauricio-bravo-lote-especial",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/10/Guatamala-BravoLoteEspecial-1.png",
+  "platform": "woocommerce",
+  "product_id": "10537",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Catimor",
+   "Guatemala",
+   "Huehuetenango",
+   "Mauricio Bravo Lote Especial",
+   "Roasted Coffee",
+   "Single Origin",
+   "Tectitán",
+   "Washed process"
+  ],
+  "title": "Guatemala Mauricio Bravo Lote Especial",
+  "url": "https://monocacycoffee.com/product/guatemala-mauricio-bravo-lote-especial",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "10537:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lb",
+    "variant_id": "10537:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f0e26b9efa1a447e",
+  "first_seen": "2026-10-26",
+  "handle": "bound-for-glory-12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/BFG-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "4220",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Blended Coffee",
+   "Bound for Glory",
+   "Indonesia",
+   "Roasted Coffee",
+   "South America",
+   "Washed, Wet-Hulled process"
+  ],
+  "title": "Bound for Glory",
+  "url": "https://monocacycoffee.com/product/bound-for-glory-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "4220:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "4220:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e6df0f3d9e2a5f8",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/DecafColombia-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "4223",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Castillo, Caturra",
+   "Colombia",
+   "Decaf",
+   "Natural process",
+   "Roasted Coffee",
+   "Single Origin",
+   "Valle de Cauca"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://monocacycoffee.com/product/decaf-colombia12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz",
+    "variant_id": "4223:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb",
+    "variant_id": "4223:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a09ea04b0023a12e",
+  "first_seen": "2026-10-26",
+  "handle": "ironman-12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/IronM-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "4227",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Blended Coffee",
+   "Brazil",
+   "Catuai, Typica, Heirloom",
+   "Ethiopia",
+   "Ironman",
+   "Mexico",
+   "Roasted Coffee",
+   "Washed, Natural process"
+  ],
+  "title": "Ironman",
+  "url": "https://monocacycoffee.com/product/ironman-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "4227:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.0,
+    "title": "5lb",
+    "variant_id": "4227:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4819b6c9f6e06495",
+  "first_seen": "2026-10-26",
+  "handle": "jumbars-12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/JumJava-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "4229",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Blended Coffee",
+   "Brazil",
+   "Catuai, Tim-Tim",
+   "Indonesia",
+   "Jumbars",
+   "Natural, Wet-Hulled process",
+   "Roasted Coffee"
+  ],
+  "title": "Jumbars",
+  "url": "https://monocacycoffee.com/product/jumbars-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz",
+    "variant_id": "4229:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "5lb",
+    "variant_id": "4229:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa6387765ce426cd",
+  "first_seen": "2026-10-26",
+  "handle": "parallax-12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/monocacy_parallax-1.png",
+  "platform": "woocommerce",
+  "product_id": "4230",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Blended Coffee",
+   "Brazil",
+   "Ethiopia",
+   "Heirloom, Catuai",
+   "Natural process",
+   "Parallax",
+   "Roasted Coffee"
+  ],
+  "title": "Parallax",
+  "url": "https://monocacycoffee.com/product/parallax-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "4230:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "4230:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "799fcaa6ca2a8aa4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/BrazilMogiana-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "7502",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Bourbon &amp; Mondo Novo",
+   "Brazil",
+   "Mogiana",
+   "Natural process",
+   "Roasted Coffee",
+   "Single Origin",
+   "São Paulo"
+  ],
+  "title": "Brazil Mogiana",
+  "url": "https://monocacycoffee.com/product/brazil-mogiana12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz",
+    "variant_id": "7502:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5lb",
+    "variant_id": "7502:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1c5b176ccca92ab9",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-blend-12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/Lodge-Cafe-Blend-Square-1.png",
+  "platform": "woocommerce",
+  "product_id": "7640",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Blended Coffee",
+   "Brazil",
+   "Cafe Blend",
+   "Catuai, Catimor",
+   "Indonesia",
+   "Natural, Wet-Hulled process",
+   "Roasted Coffee"
+  ],
+  "title": "Cafe Blend",
+  "url": "https://monocacycoffee.com/product/cafe-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "12oz",
+    "variant_id": "7640:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "5lb",
+    "variant_id": "7640:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e729ffa438b5e1c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/SumatraMand-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "7715",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Aceh",
+   "Catimor &amp; Typica",
+   "Mandheling",
+   "Roasted Coffee",
+   "Single Origin",
+   "Sumatra",
+   "Wet-Hulled Process"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://monocacycoffee.com/product/sumatra-mandheling12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "7715:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.0,
+    "title": "5lb",
+    "variant_id": "7715:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5a92915c1dbfefab",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-santa-maria12-oz",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/ColombiaSantaMaria-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "8546",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Castillo, Caturra",
+   "Colombia",
+   "Huila",
+   "Roasted Coffee",
+   "Santa Maria",
+   "Single Origin",
+   "Washed process"
+  ],
+  "title": "Colombia Santa Maria",
+  "url": "https://monocacycoffee.com/product/colombia-santa-maria12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "8546:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5lb",
+    "variant_id": "8546:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9127a43d685db66c",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani",
+  "image": "https://monocacycoffee.com/wp-content/uploads/2026/09/BaliKint-1-1.png",
+  "platform": "woocommerce",
+  "product_id": "9947",
+  "product_type": "variable",
+  "roaster_slug": "lit610",
+  "tags": [
+   "Bali",
+   "Kintamani",
+   "Kintamani Highlands",
+   "Natural process",
+   "Roasted Coffee",
+   "Single Origin"
+  ],
+  "title": "Bali Kintamani",
+  "url": "https://monocacycoffee.com/product/bali-kintamani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "9947:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5lb",
+    "variant_id": "9947:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

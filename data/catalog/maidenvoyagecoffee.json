@@ -1,0 +1,397 @@
+[
+ {
+  "body_hash": "728e0b44211d1175",
+  "first_seen": "2026-10-26",
+  "handle": "test-2",
+  "image": "https://images.squarespace-cdn.com/content/v1/661dd91d82f60347db2a8573/47590328-23ad-4e69-baf9-3391a7a2fe92/Thumbnails_Brazil.png",
+  "platform": "squarespace",
+  "product_id": "6807d3abaa04043fdb218d71",
+  "product_type": "",
+  "roaster_slug": "maidenvoyagecoffee",
+  "tags": [],
+  "title": "Brazil",
+  "url": "https://www.maidenvoyagecoffee.com/store/p/test-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 45.0,
+    "title": "2.2lb Cold Brew",
+    "variant_id": "0275a5b2-e088-475b-a4ec-dca464e06956"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 16.0,
+    "title": "9oz Whole Bean",
+    "variant_id": "3058b366-0edd-44c6-8956-0682dff8a63b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Cold Brew",
+    "variant_id": "3979c4b9-3d24-4040-b5ff-59d4c5c3ae04"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 45.0,
+    "title": "2.2lb Pourover",
+    "variant_id": "458c2b8c-f791-4c30-b17e-7ed0e3fad00b"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 16.0,
+    "title": "9oz Cold Brew",
+    "variant_id": "7e2cbb3f-c2a0-43e6-aeef-386c5bc85c48"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 16.0,
+    "title": "9oz Pourover",
+    "variant_id": "b4626d9e-9801-4fe7-b6e3-a346e860041b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Pourover",
+    "variant_id": "c41ee504-3a86-45f4-85fb-f1059afeb6f7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "ce110339-19af-46be-8b61-55445e984122"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 45.0,
+    "title": "2.2lb Whole Bean",
+    "variant_id": "cfa75366-d77e-43f8-ba7e-c53719873a24"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1d93678e265b6367",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://images.squarespace-cdn.com/content/v1/661dd91d82f60347db2a8573/4fea80de-902f-490b-bb7c-42ad529a1ed7/Thumbnails_Ethiopia.png",
+  "platform": "squarespace",
+  "product_id": "680c0dae0020954130374f0f",
+  "product_type": "",
+  "roaster_slug": "maidenvoyagecoffee",
+  "tags": [],
+  "title": "Ethiopia",
+  "url": "https://www.maidenvoyagecoffee.com/store/p/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "2c884fd0-3639-4606-ba35-e536bcd629bd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Filter 5lb",
+    "variant_id": "3f0a2b15-8da3-4b75-83a9-1f18723fa187"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 19.0,
+    "title": "Filter 9oz",
+    "variant_id": "6d98646e-80a2-46cf-abff-e8df18c17ff6"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Filter 2.2lb",
+    "variant_id": "9af7f5d4-3dd0-4dd9-911d-d82daa7546d8"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Whole Bean 2.2lb",
+    "variant_id": "a648f95c-fff5-44e3-8704-6c8808592e1f"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "French Press 2.2lb",
+    "variant_id": "b6d72b0f-8bd6-4312-88db-3e378c80d65c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "French Press 5lb",
+    "variant_id": "c8b5b1d4-a2ad-4957-998e-2730a937ad83"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 19.0,
+    "title": "French Press 9oz",
+    "variant_id": "d25f4bcc-4229-4274-9ede-ecac3aa14f85"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 19.0,
+    "title": "Whole Bean 9oz",
+    "variant_id": "f41734dd-83f2-4bde-ab5c-9c87ce718ec2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "31f817d1e7babd92",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas",
+  "image": "https://images.squarespace-cdn.com/content/v1/661dd91d82f60347db2a8573/b59101cf-3a5c-4904-9b0c-6bf58260522d/Thumbnails_Mexico+Chiapas.png",
+  "platform": "squarespace",
+  "product_id": "680c0dd20020954130374f24",
+  "product_type": "",
+  "roaster_slug": "maidenvoyagecoffee",
+  "tags": [],
+  "title": "Mexico Chiapas",
+  "url": "https://www.maidenvoyagecoffee.com/store/p/mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Filter 9oz",
+    "variant_id": "5c9567e2-db20-44e9-b168-7eb8b383ca49"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5lb",
+    "variant_id": "5defaf54-0b89-49d9-a9b5-fd0036cfa20e"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 48.0,
+    "title": "Filter 2.2lb",
+    "variant_id": "6a90d415-637a-423d-be1b-e4f21d43aada"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 48.0,
+    "title": "French Press 2.2lb",
+    "variant_id": "70380d17-f979-4220-bd7a-d7c80abef9a4"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Whole Bean 9oz",
+    "variant_id": "812e3722-4e87-4f1a-aa67-eb38a9716c4c"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 48.0,
+    "title": "Whole Bean 2.2lb",
+    "variant_id": "97a8002c-e0bd-4f18-8143-4801da33ba65"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "9a985ef0-4ecd-4047-8609-0b9dec4588cc"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "French Press 9oz",
+    "variant_id": "d7cf7fab-c4bb-4865-9c9a-427d6e6be9d2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Filter 5lb",
+    "variant_id": "db834181-cc2c-4ef7-9666-fa9931ddbd51"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9afc80103930cc8",
+  "first_seen": "2026-10-26",
+  "handle": "voyager-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/661dd91d82f60347db2a8573/878a3717-7722-4d21-bc2e-9d2810e8f80e/Thumbnails_Voyager+Blend.png",
+  "platform": "squarespace",
+  "product_id": "680c0de5aa04043fdb2520bf",
+  "product_type": "",
+  "roaster_slug": "maidenvoyagecoffee",
+  "tags": [],
+  "title": "Voyager Blend",
+  "url": "https://www.maidenvoyagecoffee.com/store/p/voyager-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 17.0,
+    "title": "Filter 9oz",
+    "variant_id": "2a4a054f-2578-4c13-a870-1e01f36c7686"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "French Press 2.2lb",
+    "variant_id": "32b09047-367b-4c06-bb90-3e5ea4c2d2a4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Filter 5lb",
+    "variant_id": "39e57854-ab44-4a4d-b21b-11c18f7f0371"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 17.0,
+    "title": "Whole Bean 9oz",
+    "variant_id": "44a5b372-1ce5-48b9-88b7-e5a79348acd2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5lb",
+    "variant_id": "7725174b-c919-48b5-beef-23e9178c381a"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Filter 2.2lb",
+    "variant_id": "cf4c36b5-68af-4705-952b-e922b5d9a89a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "e5f4f0ee-b22f-4bc6-a090-7c44948b69ab"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 17.0,
+    "title": "French Press 9oz",
+    "variant_id": "e6e64692-98d3-4501-bde5-27130c83ca9f"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Whole Bean 2.2lb",
+    "variant_id": "f25fb9b8-480e-45f2-9bd6-6f5572d58480"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aae52e7ae207e225",
+  "first_seen": "2026-10-26",
+  "handle": "voyager-blend-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/661dd91d82f60347db2a8573/edff8da7-cd05-4742-b7a0-b808878e0eae/Thumbnails_Voyager+Decaf.png",
+  "platform": "squarespace",
+  "product_id": "680c0df98099fc548e738cd4",
+  "product_type": "",
+  "roaster_slug": "maidenvoyagecoffee",
+  "tags": [],
+  "title": "Voyager Blend Decaf",
+  "url": "https://www.maidenvoyagecoffee.com/store/p/voyager-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Whole Bean 2.2lb",
+    "variant_id": "0591ddd1-049e-439a-a343-e2b6bad5e295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "0e781ccd-405b-4d27-b122-23e36e29819f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Filter 5lb",
+    "variant_id": "49cde84e-846d-40cf-93b8-1b9f717266ae"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "French Press 9oz",
+    "variant_id": "8477b5d4-4f29-4b7a-b85b-096059ab1e6f"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "French Press 2.2lb",
+    "variant_id": "9084feff-526a-4f0f-ad9c-db442f844619"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Whole Bean 9oz",
+    "variant_id": "af2d4509-5616-4adc-9c1f-51f73aacbf96"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "French Press 5lb",
+    "variant_id": "c091763b-bde0-4999-b847-3020228c6e2a"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 50.0,
+    "title": "Filter 2.2lb",
+    "variant_id": "d4e750ff-af17-4163-8c3b-68f7bcbdd161"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 18.0,
+    "title": "Filter 9oz",
+    "variant_id": "e2eb0ad4-6686-459f-b7e3-3bdebbfca187"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,785 @@
+[
+ {
+  "body_hash": "c6a518fa8c5e1e9c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-serra-negra",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/12oz_Front_Brazil_Serra_Negra.png?v=1711620709",
+  "platform": "shopify",
+  "product_id": "7048660779157",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Brazil, Serra Negra",
+  "url": "https://bedrockcoffee.com/products/brazil-serra-negra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean / Dark",
+    "variant_id": "40892605628565"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Coarse (French Press) / Dark",
+    "variant_id": "40892605694101"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Medium (Drip) / Dark",
+    "variant_id": "40892605759637"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Fine (Espresso) / Dark",
+    "variant_id": "40892605825173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "40892605890709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12oz / Coarse (French Press) / Dark",
+    "variant_id": "40892605923477"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12oz / Medium (Drip) / Dark",
+    "variant_id": "40892605989013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.75,
+    "title": "12oz / Fine (Espresso) / Dark",
+    "variant_id": "40892606054549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "40892606087317"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Whole Bean / Dark",
+    "variant_id": "41998442954901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5lbs / Medium (Drip) / Dark",
+    "variant_id": "43007562776725"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 67.25,
+    "title": "3lbs / Whole Bean / Dark",
+    "variant_id": "43330941190293"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 67.25,
+    "title": "3lbs / Medium (Drip) / Dark",
+    "variant_id": "43330941223061"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Medium (Drip) / Dark",
+    "variant_id": "47738936492181"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ },
+ {
+  "body_hash": "3546f0e3d83d339b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-gran-galope",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/12oz_Front_Colombia_Gran_Galope.png?v=1711621384",
+  "platform": "shopify",
+  "product_id": "7197327360149",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Colombia, Gran Galope",
+  "url": "https://bedrockcoffee.com/products/colombia-gran-galope",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean / Medium",
+    "variant_id": "41358499807381"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Coarse (French Press) / Medium",
+    "variant_id": "41358499872917"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4oz / Medium (Drip) / Medium",
+    "variant_id": "41358499938453"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Fine (Espresso) / Medium",
+    "variant_id": "41358500003989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "41358500069525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "41358500135061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Medium (Drip) / Medium",
+    "variant_id": "41358500200597"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "41358500266133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "41358500331669"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.0,
+    "title": "2oz / Whole Bean / Medium",
+    "variant_id": "41998049837205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.5,
+    "title": "5lbs / Medium (Drip) / Medium",
+    "variant_id": "43262548017301"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 66.0,
+    "title": "3lbs / Whole Bean / Medium",
+    "variant_id": "43330951348373"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 66.0,
+    "title": "3lbs / Medium (Drip) / Medium",
+    "variant_id": "43330951381141"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 66.0,
+    "title": "3lbs / Coarse (French Press) / Medium",
+    "variant_id": "43441792254101"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 10.5,
+    "title": "8 oz / Whole Bean / Medium",
+    "variant_id": "45042327191701"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 10.75,
+    "title": "8 oz / Coarse (French Press) / Medium",
+    "variant_id": "45042327224469"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 10.75,
+    "title": "8 oz / Medium (Drip) / Medium",
+    "variant_id": "45042327257237"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 10.75,
+    "title": "8 oz / Fine (Espresso) / Medium",
+    "variant_id": "45042327290005"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Medium (Drip) / Medium",
+    "variant_id": "46481568759957"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ },
+ {
+  "body_hash": "43029eef5bb922c8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/12oz_Front_Colombia_Decaf.png?v=1711622354",
+  "platform": "shopify",
+  "product_id": "7197358588053",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Colombia, Decaf",
+  "url": "https://bedrockcoffee.com/products/colombia-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean / Medium",
+    "variant_id": "41358680686741"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Coarse (French Press) / Medium",
+    "variant_id": "41358680719509"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Medium (Drip) / Medium",
+    "variant_id": "41358680752277"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Fine (Espresso) / Medium",
+    "variant_id": "41358680785045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "41358680817813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "41358680850581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip) / Medium",
+    "variant_id": "41358680883349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "41358680916117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "41358680948885"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Whole Bean / Medium",
+    "variant_id": "41998476902549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Medium (Drip) / Medium",
+    "variant_id": "43262547034261"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Whole Bean / Medium",
+    "variant_id": "43330942271637"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Medium (Drip) / Medium",
+    "variant_id": "43330942304405"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Medium (Drip) / Medium",
+    "variant_id": "47738933018773"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ },
+ {
+  "body_hash": "4b7799569350e1c7",
+  "first_seen": "2026-10-26",
+  "handle": "obsidian-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/12oz_Front_Obsidian_Espresso.png?v=1711621888",
+  "platform": "shopify",
+  "product_id": "7197365797013",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Obsidian, Espresso",
+  "url": "https://bedrockcoffee.com/products/obsidian-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.25,
+    "title": "4oz / Whole Bean / Espresso",
+    "variant_id": "41358747140245"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.25,
+    "title": "4oz / Fine (Espresso) / Espresso",
+    "variant_id": "41358747336853"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.25,
+    "title": "12oz / Whole Bean / Espresso",
+    "variant_id": "41358747402389"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Fine (Espresso) / Espresso",
+    "variant_id": "41358747598997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 93.75,
+    "title": "5lbs / Whole Bean / Espresso",
+    "variant_id": "41358747664533"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.0,
+    "title": "2oz / Whole Bean / Espresso",
+    "variant_id": "41998481490069"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 65.5,
+    "title": "3lbs / Whole Bean / Espresso",
+    "variant_id": "43330943811733"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.0,
+    "title": "2oz / Fine (Espresso) / Espresso",
+    "variant_id": "47738942062741"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.5,
+    "title": "12oz / Medium (Drip) / Espresso",
+    "variant_id": "47738945994901"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.0,
+    "title": "2oz / Medium (Drip) / Espresso",
+    "variant_id": "47738946027669"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.25,
+    "title": "4oz / Medium (Drip) / Espresso",
+    "variant_id": "47738946060437"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ },
+ {
+  "body_hash": "bd40fee161009e83",
+  "first_seen": "2026-10-26",
+  "handle": "technivorum-moccamaster-kbt",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/products/technivorm-moccamaster-KBT-stone-grey-500px.jpg?v=1641334718",
+  "platform": "shopify",
+  "product_id": "7304021377173",
+  "product_type": "Drip Coffee Machines",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [],
+  "title": "Technivorm, Moccamaster KBT",
+  "url": "https://bedrockcoffee.com/products/technivorum-moccamaster-kbt",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 349.0,
+    "title": "Stone Grey",
+    "variant_id": "41735954661525"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 349.0,
+    "title": "Black",
+    "variant_id": "41737832759445"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 349.0,
+    "title": "Polished Silver",
+    "variant_id": "41737839575189"
+   }
+  ],
+  "vendor": "Technivorm"
+ },
+ {
+  "body_hash": "299d6b71f4e7acd2",
+  "first_seen": "2026-10-26",
+  "handle": "baratza-single-dose-hopper",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/products/1Baratza4.jpg?v=1641489247",
+  "platform": "shopify",
+  "product_id": "7307583193237",
+  "product_type": "Parts & Accessories",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [],
+  "title": "Baratza Single Dose Hopper",
+  "url": "https://bedrockcoffee.com/products/baratza-single-dose-hopper",
+  "variants": [
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 24.0,
+    "title": "White",
+    "variant_id": "41747797999765"
+   },
+   {
+    "available": false,
+    "grams": 170,
+    "price_usd": 24.0,
+    "title": "Black",
+    "variant_id": "41747798032533"
+   }
+  ],
+  "vendor": "Baratza"
+ },
+ {
+  "body_hash": "8474913b45ad32be",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/12oz_Decaf_Espresso_Front.png?v=1754598517",
+  "platform": "shopify",
+  "product_id": "8861492773013",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://bedrockcoffee.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean / Dark",
+    "variant_id": "46291828703381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press) / Dark",
+    "variant_id": "46291828736149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip) / Dark",
+    "variant_id": "46291828768917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso) / Dark",
+    "variant_id": "46291828801685"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean / Dark",
+    "variant_id": "46291828834453"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Coarse (French Press) / Dark",
+    "variant_id": "46291828867221"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Medium (Drip) / Dark",
+    "variant_id": "46291828899989"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Fine (Espresso) / Dark",
+    "variant_id": "46291828932757"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Whole Bean / Dark",
+    "variant_id": "46291828965525"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Whole Bean / Dark",
+    "variant_id": "46291828998293"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Medium (Drip) / Dark",
+    "variant_id": "46291829031061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Whole Bean / Dark",
+    "variant_id": "46291829063829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Medium (Drip) / Dark",
+    "variant_id": "46291829096597"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Medium (Drip) / Dark",
+    "variant_id": "47738933149845"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ },
+ {
+  "body_hash": "c3c63e8294870258",
+  "first_seen": "2026-10-26",
+  "handle": "relaxed-blend-half-caffeine",
+  "image": "https://cdn.shopify.com/s/files/1/0419/3425/8325/files/Relaxed_Blend_12oz_Front.png?v=1755114528",
+  "platform": "shopify",
+  "product_id": "8868977508501",
+  "product_type": "Coffee",
+  "roaster_slug": "bedrockcoffee",
+  "tags": [
+   "Retail Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Relaxed Blend (Half Caffeine)",
+  "url": "https://bedrockcoffee.com/products/relaxed-blend-half-caffeine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean / Medium",
+    "variant_id": "46307100786837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press) / Medium",
+    "variant_id": "46307100819605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip) / Medium",
+    "variant_id": "46307100852373"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso) / Medium",
+    "variant_id": "46307100885141"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Whole Bean / Medium",
+    "variant_id": "46307100917909"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Coarse (French Press) / Medium",
+    "variant_id": "46307100950677"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Medium (Drip) / Medium",
+    "variant_id": "46307100983445"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4oz / Fine (Espresso) / Medium",
+    "variant_id": "46307101016213"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Whole Bean / Medium",
+    "variant_id": "46307101048981"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Whole Bean / Medium",
+    "variant_id": "46307101081749"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 68.0,
+    "title": "3lbs / Medium (Drip) / Medium",
+    "variant_id": "46307101114517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Whole Bean / Medium",
+    "variant_id": "46307101147285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lbs / Medium (Drip) / Medium",
+    "variant_id": "46307101180053"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.25,
+    "title": "2oz / Medium (Drip) / Medium",
+    "variant_id": "47738939998357"
+   }
+  ],
+  "vendor": "Bedrock Coffee Roasters"
+ }
+]

@@ -1,0 +1,140 @@
+[
+ {
+  "body_hash": "031e94cc09e4330b",
+  "first_seen": "2026-10-26",
+  "handle": "coconino-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5b865d8a37a6",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Coconino Blend",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/coconino-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1cf9484e229747d9",
+  "first_seen": "2026-10-26",
+  "handle": "navajo-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "859e78fa2c88",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Navajo Blend",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/navajo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "94b8aff59cc6aa77",
+  "first_seen": "2026-10-26",
+  "handle": "apache-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "863d0b27424b",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Apache Blend",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/apache-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f90db31f9ea1fe5b",
+  "first_seen": "2026-10-26",
+  "handle": "maricopa-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8d34f16cf9db",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Maricopa Blend",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/maricopa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5db257932e927efa",
+  "first_seen": "2026-10-26",
+  "handle": "cochise-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9c814ce5c47a",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Cochise Blend",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/cochise-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "39d32fc9f8c00d43",
+  "first_seen": "2026-10-26",
+  "handle": "yavapai-blend-medium-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fb30d487667b",
+  "product_type": "",
+  "roaster_slug": "pinetopcoffeehouse",
+  "tags": [],
+  "title": "Yavapai Blend Medium Roast",
+  "url": "https://www.pinetopcoffeehouse.com/product-page/yavapai-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

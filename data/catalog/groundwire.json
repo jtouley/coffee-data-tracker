@@ -1,0 +1,447 @@
+[
+ {
+  "body_hash": "58c50adaa53ec970",
+  "first_seen": "2026-10-26",
+  "handle": "superconductor-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/products/DSC_0651.jpg?v=1672980051",
+  "platform": "shopify",
+  "product_id": "332028936233",
+  "product_type": "coffee",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Superconductor Espresso",
+  "url": "https://groundwire.coffee/products/superconductor-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33223239499914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "33223239532682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33223239598218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Drip",
+    "variant_id": "33223239630986"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1 KILO/ 2.2LB / Whole Bean",
+    "variant_id": "37189265850523"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1 KILO/ 2.2LB / Drip",
+    "variant_id": "37189480677531"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "a34df93a62815809",
+  "first_seen": "2026-10-26",
+  "handle": "no-coast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/products/DSC_0653.jpg?v=1672979998",
+  "platform": "shopify",
+  "product_id": "4349460906122",
+  "product_type": "coffee",
+  "roaster_slug": "groundwire",
+  "tags": [
+   "Coffee Roaster",
+   "Dark Roast",
+   "MN",
+   "Minnesota",
+   "Northfield",
+   "Specialty Coffee"
+  ],
+  "title": "No Coast Dark Roast",
+  "url": "https://groundwire.coffee/products/no-coast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12OZ / Whole Bean",
+    "variant_id": "33223168983178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12OZ / Drip",
+    "variant_id": "33223169048714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33223169179786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Drip",
+    "variant_id": "33223169245322"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "7e83284e85580079",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/products/DSC_0661.jpg?v=1672980140",
+  "platform": "shopify",
+  "product_id": "4349466935434",
+  "product_type": "Coffee",
+  "roaster_slug": "groundwire",
+  "tags": [
+   "Coffee Roaster",
+   "Decaf",
+   "Minnesota Coffee",
+   "Northfield MN",
+   "Single Origin",
+   "Specialty Coffee"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://groundwire.coffee/products/decaf-peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12OZ / Whole Bean",
+    "variant_id": "31265426014346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12OZ / Drip",
+    "variant_id": "33222512541834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "33222770229386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5LB / Drip",
+    "variant_id": "33222781501578"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "b7d5e4bce1ed1fbb",
+  "first_seen": "2026-10-26",
+  "handle": "lj-townie-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/hapy_png_Large_a89e9472-bef1-4371-9860-caed2f7b72c1.png?v=1767821579",
+  "platform": "shopify",
+  "product_id": "4798752161930",
+  "product_type": "Coffee",
+  "roaster_slug": "groundwire",
+  "tags": [
+   "Coffee Roaster",
+   "Ethiopia",
+   "Minnesota Coffee",
+   "Northfield MN",
+   "Single Origin",
+   "Specialty Coffee"
+  ],
+  "title": "Happy Medium House Blend",
+  "url": "https://groundwire.coffee/products/lj-townie-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "33223316603018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "33223316635786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "33223316799626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Drip",
+    "variant_id": "33223316832394"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "c89debe766671f3e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-aguilera-bros-finca-tono-natural",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/WebImageROGER.png?v=1757622454",
+  "platform": "shopify",
+  "product_id": "7708326428827",
+  "product_type": "",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Honduras Roger Dominguez Natural",
+  "url": "https://groundwire.coffee/products/costa-rica-aguilera-bros-finca-tono-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Drip",
+    "variant_id": "43561106669723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43561106702491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Drip",
+    "variant_id": "43561106800795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43561106833563"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "8397b50e34ac85f5",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-ethiopia-hambela-washed",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/Idido_web_image_Large_6d4a12b8-5a88-4225-bb22-8e3e2f7a29c9.png?v=1778105396",
+  "platform": "shopify",
+  "product_id": "7733378744475",
+  "product_type": "",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Ethiopia Idido Washed",
+  "url": "https://groundwire.coffee/products/copy-of-ethiopia-hambela-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip",
+    "variant_id": "43652073357467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43652073390235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "43652073488539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43652073521307"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "3e17b35b8b8b4b07",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karamikui",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/WebImageMedium.jpg?v=1757518540",
+  "platform": "shopify",
+  "product_id": "8651927158939",
+  "product_type": "",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Kenya Karimikui",
+  "url": "https://groundwire.coffee/products/kenya-karamikui",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47164696920219"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Drip",
+    "variant_id": "47164696952987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47164697182363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Drip",
+    "variant_id": "47164697215131"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "85261736870f83a3",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-el-venado-sl28",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/WebImageCOSTASL28.png?v=1757520198",
+  "platform": "shopify",
+  "product_id": "8652013011099",
+  "product_type": "",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Costa Rica Finca El Venado SL28",
+  "url": "https://groundwire.coffee/products/el-salvador-finca-el-venado-sl28",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47164860039323"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz / Drip",
+    "variant_id": "47164860072091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47164860301467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Drip",
+    "variant_id": "47164860334235"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ },
+ {
+  "body_hash": "948fa84ca2c0450d",
+  "first_seen": "2026-10-26",
+  "handle": "small-hours-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1779/3263/files/DSC_0064-Edit.png?v=1767821587",
+  "platform": "shopify",
+  "product_id": "8849204707483",
+  "product_type": "coffee",
+  "roaster_slug": "groundwire",
+  "tags": [],
+  "title": "Small Hours Espresso",
+  "url": "https://groundwire.coffee/products/small-hours-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47810527264923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Drip",
+    "variant_id": "47810527330459"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1 KILO/ 2.2LB / Whole Bean",
+    "variant_id": "47810527395995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47810527428763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb / Drip",
+    "variant_id": "47810527494299"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1 KILO/ 2.2LB / Drip",
+    "variant_id": "47810527592603"
+   }
+  ],
+  "vendor": "Groundwire Coffee Roasters"
+ }
+]

@@ -1,0 +1,587 @@
+{
+ "10306304180520": {
+  "body_hash": "0374f5e835f97c34",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "arnold palmer",
+   "cranberry"
+  ],
+  "varietals": []
+ },
+ "10306307129640": {
+  "body_hash": "0374f5e835f97c34",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "arnold palmer",
+   "cranberry"
+  ],
+  "varietals": []
+ },
+ "10306310340904": {
+  "body_hash": "0374f5e835f97c34",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "arnold palmer",
+   "cranberry"
+  ],
+  "varietals": []
+ },
+ "10322815942952": {
+  "body_hash": "4c3c359e4ad4c7cf",
+  "elevation_masl_max": 1980,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricot marmalade",
+   "rose"
+  ],
+  "varietals": []
+ },
+ "10322828460328": {
+  "body_hash": "4c3c359e4ad4c7cf",
+  "elevation_masl_max": 1980,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricot marmalade",
+   "rose"
+  ],
+  "varietals": []
+ },
+ "10322833801512": {
+  "body_hash": "4c3c359e4ad4c7cf",
+  "elevation_masl_max": 1980,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricot marmalade",
+   "rose"
+  ],
+  "varietals": []
+ },
+ "10351053701416": {
+  "body_hash": "ecf7e61381f6c774",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1570,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mango",
+   "blackberry",
+   "panela"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Sidra"
+  ]
+ },
+ "10404243964200": {
+  "body_hash": "79aab7dc7cefe682",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1765,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pomelo",
+   "jasmine",
+   "sweet tea"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "10404797940008": {
+  "body_hash": "79aab7dc7cefe682",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1765,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pomelo",
+   "jasmine",
+   "sweet tea"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "10404800233768": {
+  "body_hash": "79aab7dc7cefe682",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1765,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pomelo",
+   "jasmine",
+   "sweet tea"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "1585701060650": {
+  "body_hash": "1ee1e0612f27ee8c",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark roast",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "1585702273066": {
+  "body_hash": "c5a36652831b1de4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "dark cherry",
+   "lavender"
+  ],
+  "varietals": []
+ },
+ "1585717608490": {
+  "body_hash": "25a6972cbd376d87",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "toffee",
+   "citrus"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "4407138156586": {
+  "body_hash": "af17cb1353fcca27",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark roast",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "4407150968874": {
+  "body_hash": "c5a36652831b1de4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "dark cherry",
+   "lavender"
+  ],
+  "varietals": []
+ },
+ "4407156408362": {
+  "body_hash": "af17cb1353fcca27",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark roast",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "4407157129258": {
+  "body_hash": "c5a36652831b1de4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "dark cherry",
+   "lavender"
+  ],
+  "varietals": []
+ },
+ "4407245766698": {
+  "body_hash": "dd69fc8c8e94a2a6",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "toffee",
+   "citrus"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "4407246684202": {
+  "body_hash": "dd69fc8c8e94a2a6",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "toffee",
+   "citrus"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "4407248125994": {
+  "body_hash": "e750a005fab79509",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4407248584746": {
+  "body_hash": "e750a005fab79509",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4409802555434": {
+  "body_hash": "08cef5bf8eae6dc4",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark roast",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "4409809043498": {
+  "body_hash": "aea047dbda507808",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4516847714346": {
+  "body_hash": "08cef5bf8eae6dc4",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark roast",
+   "cocoa",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "603672641578": {
+  "body_hash": "e750a005fab79509",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9362995872040": {
+  "body_hash": "f51ada666a33e86d",
+  "elevation_masl_max": 1236,
+  "elevation_masl_min": 1236,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pink lady apple",
+   "toffee",
+   "baking spices"
+  ],
+  "varietals": []
+ },
+ "9362997149992": {
+  "body_hash": "f51ada666a33e86d",
+  "elevation_masl_max": 1236,
+  "elevation_masl_min": 1236,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pink lady apple",
+   "toffee",
+   "baking spices"
+  ],
+  "varietals": []
+ },
+ "9363002392872": {
+  "body_hash": "f51ada666a33e86d",
+  "elevation_masl_max": 1236,
+  "elevation_masl_min": 1236,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pink lady apple",
+   "toffee",
+   "baking spices"
+  ],
+  "varietals": []
+ },
+ "9372622815528": {
+  "body_hash": "bc49a7796c7c311e",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "toasted coconut",
+   "vanilla"
+  ],
+  "varietals": []
+ },
+ "9372629008680": {
+  "body_hash": "bc49a7796c7c311e",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "toasted coconut",
+   "vanilla"
+  ],
+  "varietals": []
+ },
+ "9372632678696": {
+  "body_hash": "bc49a7796c7c311e",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cola",
+   "toasted coconut",
+   "vanilla"
+  ],
+  "varietals": []
+ }
+}

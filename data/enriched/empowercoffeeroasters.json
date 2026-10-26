@@ -1,0 +1,95 @@
+{
+ "4418348482694": {
+  "body_hash": "645acc13c968c33d",
+  "elevation_masl_max": 1750,
+  "elevation_masl_min": 1715,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "5219188605062": {
+  "body_hash": "b18d723b99b6b295",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smooth",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "6622531190918": {
+  "body_hash": "85fc1c929822099c",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6699927732358": {
+  "body_hash": "01aad1b90f8c1a7c",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1300,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "dark chocolate",
+   "plum"
+  ],
+  "varietals": []
+ },
+ "6785563984006": {
+  "body_hash": "319a292b09dfb4cf",
+  "elevation_masl_max": 1245,
+  "elevation_masl_min": 1245,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Nicaragua",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "nutty",
+   "balanced body"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Caturra",
+   "Parainema",
+   "Typica"
+  ]
+ }
+}

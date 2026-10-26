@@ -1,0 +1,395 @@
+[
+ {
+  "body_hash": "eed58ada040391fb",
+  "first_seen": "2026-10-26",
+  "handle": "fto-guatemala-huehuetenango",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa286a8adb3114ca8c2985/1743169574202/",
+  "platform": "squarespace",
+  "product_id": "5eaa286a8adb3114ca8c2985",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "FTO Guatemala Huehuetenango 16oz",
+  "url": "https://giovannitticoffee.com/coffees/fto-guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "01320d77-8bb6-45af-9368-399eadb894ef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "09bb0cd9-bf07-4f9b-9fe4-267b7b37245b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "e40d7997-5a16-4403-a5e5-86ae7db726af"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f3d371436a61e61a",
+  "first_seen": "2026-10-26",
+  "handle": "fto-colombia-cauca-amucc-womens-co-op",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa2b1ac456482814030db1/1743169760580/",
+  "platform": "squarespace",
+  "product_id": "5eaa2b1ac456482814030db1",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "FTO Colombia CAUCA AMUCC Women's Co-Op 16oz",
+  "url": "https://giovannitticoffee.com/coffees/fto-colombia-cauca-amucc-womens-co-op",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "32f2c34f-57ad-4157-aa26-4d691a9349cd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "7ebda433-0fe7-4a6e-99d7-6897513749fb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "a1dd80cd-cae3-47c7-8cc2-4b3312752092"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "229d07b828d8b7e7",
+  "first_seen": "2026-10-26",
+  "handle": "fto-ethiopia-yirgacheffe-2",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa2bd03109520ce16a0749/1680122445562/",
+  "platform": "squarespace",
+  "product_id": "5eaa2bd03109520ce16a0749",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "FTO Ethiopia Yirgacheffe 16oz",
+  "url": "https://giovannitticoffee.com/coffees/fto-ethiopia-yirgacheffe-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Whole Bean",
+    "variant_id": "17d212d9-08b8-46f1-b04f-23b45fe458bb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "Drip",
+    "variant_id": "6bf62079-ba96-4a69-a1b4-7930328eda78"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "French Press",
+    "variant_id": "d2bce614-053c-48c6-8d0b-09037fd598e5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ad6a6ea7eca6aa31",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-mandheling",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa33cbb0caa85f5c42e8c6/1743170207645/",
+  "platform": "squarespace",
+  "product_id": "5eaa33cbb0caa85f5c42e8c6",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "Organic Sumatra Mandheling 16oz",
+  "url": "https://giovannitticoffee.com/coffees/organic-sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "French Press",
+    "variant_id": "46ad4db3-2925-4850-8f76-0191b457f33d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "Drip",
+    "variant_id": "6e43c456-5e39-4e2a-8aa7-a87a656a6f1f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "Whole Bean",
+    "variant_id": "750e3505-be0c-4ad6-97e6-a2ce313906a0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "869761f3e4ff12de",
+  "first_seen": "2026-10-26",
+  "handle": "organic-french-roast",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa34e0a8484054ef0b62f6/1743170251429/",
+  "platform": "squarespace",
+  "product_id": "5eaa34e0a8484054ef0b62f6",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "Organic French Roast 16oz",
+  "url": "https://giovannitticoffee.com/coffees/organic-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "36654793-666d-4dcc-8d90-1e17e69d4439"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "6369e3db-8267-45e2-9172-4b1ec10e0910"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "eb4ff827-1656-4a4b-a652-9d33354d9c2c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9749f4d5766bc70b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa36f031ac8a0301502f64/1743170295689/",
+  "platform": "squarespace",
+  "product_id": "5eaa36f031ac8a0301502f64",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "Organic Espresso 16oz",
+  "url": "https://giovannitticoffee.com/coffees/organic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Espresso",
+    "variant_id": "58c17cfb-76a1-4de7-a6d2-5894b504df52"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "78e9a7c6-5037-4182-befe-ea5e56bda645"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1482c40de208bf59",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-fto-ethiopia-sidamo",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa3ad580320e177b2b8a2d/1743170349535/",
+  "platform": "squarespace",
+  "product_id": "5eaa3ad580320e177b2b8a2d",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "DECAF FTO Ethiopia Sidamo 16oz",
+  "url": "https://giovannitticoffee.com/coffees/decaf-fto-ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "Whole Bean",
+    "variant_id": "4ce6133c-0ee5-45d3-9f34-69e026d79b84"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "French Press",
+    "variant_id": "67b2a47d-c99f-402d-af39-a47db1affab2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.99,
+    "title": "Drip",
+    "variant_id": "e188dea3-75a4-4ba6-93f7-1eefa1356089"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "05417bfbe9304a5c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-fto-sumatra",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa3bfa525cf600be5d4a56/1714493262708/",
+  "platform": "squarespace",
+  "product_id": "5eaa3bfa525cf600be5d4a56",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "DECAF FTO Sumatra 16oz",
+  "url": "https://giovannitticoffee.com/coffees/decaf-fto-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Drip",
+    "variant_id": "694da713-ad7d-4f43-8791-b7db7c59f05b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "French Press",
+    "variant_id": "c254f735-49c0-44a1-a1b9-0a91d0b9d4c2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Whole Bean",
+    "variant_id": "dbd7246c-d30c-46e6-8561-74eef5891622"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff9dbaa815ee2946",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-fto-espresso",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/5eaa3cf48aa0b52dec50fe7a/1714493303017/",
+  "platform": "squarespace",
+  "product_id": "5eaa3cf48aa0b52dec50fe7a",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "DECAF FTO Espresso 16oz",
+  "url": "https://giovannitticoffee.com/coffees/decaf-fto-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Espresso",
+    "variant_id": "e3852dc3-453a-416d-be2e-fc7fcbcb9e85"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.99,
+    "title": "Whole Bean",
+    "variant_id": "efab5567-e63b-4f88-ac2f-37cb88908818"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "becd8d2a4a4a8bed",
+  "first_seen": "2026-10-26",
+  "handle": "swaq4nf9mkzsyb78ma8iwxkejcpeh6",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/6019797bac4c5145988dd98a/1743169819362/",
+  "platform": "squarespace",
+  "product_id": "6019797bac4c5145988dd98a",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "FTO Congo Umoja",
+  "url": "https://giovannitticoffee.com/coffees/swaq4nf9mkzsyb78ma8iwxkejcpeh6",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "1041ecdf-7b22-486d-a097-ccd43aa15112"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "1776cec9-9425-4106-a56c-d89a7784bcc0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "e191af3a-1829-4093-bf15-6ea80cc54da3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "435bc114c6c5ccfb",
+  "first_seen": "2026-10-26",
+  "handle": "organic-ethiopia-sidamo",
+  "image": "https://static1.squarespace.com/static/5d7933a76e273f425b42acd0/5ea9fc43330bc9109f1f6a1f/6019829e81e12d66b4f22d9f/1743170152929/",
+  "platform": "squarespace",
+  "product_id": "6019829e81e12d66b4f22d9f",
+  "product_type": "",
+  "roaster_slug": "giovannitticoffee",
+  "tags": [],
+  "title": "Organic Ethiopia Sidamo",
+  "url": "https://giovannitticoffee.com/coffees/organic-ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "French Press",
+    "variant_id": "3373490e-2e1f-4932-80f2-accf7e797ec9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "52585dc4-fc0e-4ebc-9aac-f80b07cdb84c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "6ecd6fbf-c9aa-4175-9dbf-7aca2d0bfad1"
+   }
+  ],
+  "vendor": ""
+ }
+]

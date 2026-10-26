@@ -1,0 +1,998 @@
+[
+ {
+  "body_hash": "7f1bad9d5001bd9c",
+  "first_seen": "2026-10-26",
+  "handle": "smith-bridge-road-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/smithbridgeomfyBG_1_f64c6d23-f927-4950-8da7-27454cacba67.jpg?v=1730467749",
+  "platform": "shopify",
+  "product_id": "2029575363",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Brazil",
+   "blend",
+   "central america",
+   "columbian",
+   "costa rican",
+   "dark",
+   "full-bodied",
+   "light",
+   "low acidity",
+   "medium",
+   "sweet"
+  ],
+  "title": "Smith Bridge Road Blend",
+  "url": "https://www.brandywinecoffeeroasters.com/products/smith-bridge-road-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Coarse (French Press/Cold Brew)",
+    "variant_id": "31687210532951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Medium (Drip/Pour Over)",
+    "variant_id": "31687213645911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "31687222362199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "40138560569431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "7646761222174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "7646763384862"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "40d399aab25447e8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-santa-barbara-estate-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/sbecomfycoffeebg2023_8bdad931-1e4e-46d9-86d8-38423e825756.jpg?v=1730467857",
+  "platform": "shopify",
+  "product_id": "3072408579",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "columbian",
+   "santa barbara"
+  ],
+  "title": "Colombia - Santa Barbara Estate - WASHED",
+  "url": "https://www.brandywinecoffeeroasters.com/products/colombia-santa-barbara-estate-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "40196126048343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40196126244951"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "6706916261918"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "3cf3b87eeffef5e4",
+  "first_seen": "2026-10-26",
+  "handle": "orbital-motion-espresso-blend-12oz-16-00",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/orbitalmotion2023update.jpg?v=1684951937",
+  "platform": "shopify",
+  "product_id": "540997812254",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Espresso"
+  ],
+  "title": "Orbital Motion",
+  "url": "https://www.brandywinecoffeeroasters.com/products/orbital-motion-espresso-blend-12oz-16-00",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse (French Press/Cold Brew)",
+    "variant_id": "31687268401239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium (Drip/Pour Over)",
+    "variant_id": "31687280853079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "31687283572823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2LB / Whole Bean",
+    "variant_id": "39422517674071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5LB / Whole Bean",
+    "variant_id": "7556643815454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "7646766497822"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "66f73ceda1bcac4c",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-magic-sample-bog",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/products/samplebox2023.jpg?v=1679360795",
+  "platform": "shopify",
+  "product_id": "6867017990231",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Coffee Magic Sample Box! (ships free!)",
+  "url": "https://www.brandywinecoffeeroasters.com/products/coffee-magic-sample-bog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 451,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "40143757508695"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "9689f69446df3c88",
+  "first_seen": "2026-10-26",
+  "handle": "cosmic-hibiscus-berry",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/cosmicHibicus.jpg?v=1701446249",
+  "platform": "shopify",
+  "product_id": "6960845094999",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Cosmic Hibiscus Berry",
+  "url": "https://www.brandywinecoffeeroasters.com/products/cosmic-hibiscus-berry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 40,
+    "price_usd": 13.0,
+    "title": "16 ct Sachets",
+    "variant_id": "40378246332503"
+   },
+   {
+    "available": true,
+    "grams": 40,
+    "price_usd": 13.0,
+    "title": "40g Loose Leaf Tea",
+    "variant_id": "40378246365271"
+   },
+   {
+    "available": true,
+    "grams": 40,
+    "price_usd": 16.0,
+    "title": "40g Loose Leaf Tea + Biodegradable Filters",
+    "variant_id": "40378246398039"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "8eaf582c6091ed04",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-classic-light-roast-profile-1-gallon-2pack",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/pic1.jpg?v=1713281255",
+  "platform": "shopify",
+  "product_id": "7089778491479",
+  "product_type": "",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Third Wave Water: Classic Light Roast Profile (1 Gallon 2Pack)",
+  "url": "https://www.brandywinecoffeeroasters.com/products/third-wave-water-classic-light-roast-profile-1-gallon-2pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 4.0,
+    "title": "Default Title",
+    "variant_id": "40787013697623"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "1e1ca624a6c3a4eb",
+  "first_seen": "2026-10-26",
+  "handle": "third-wave-water-classic-light-roast-profile-12-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/Thhirdwavewaterpacks.jpg?v=1729261896",
+  "platform": "shopify",
+  "product_id": "7309502021719",
+  "product_type": "",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Third Wave Water - Classic Light Roast Profile - 12 Pack",
+  "url": "https://www.brandywinecoffeeroasters.com/products/third-wave-water-classic-light-roast-profile-12-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "41320891449431"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "ee283a5ba0463cd9",
+  "first_seen": "2026-10-26",
+  "handle": "upcycled-spoon-rest",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/Proodtctlist3.jpg?v=1744997730",
+  "platform": "shopify",
+  "product_id": "7401435234391",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Upcycled Spoon Rest (BCR)",
+  "url": "https://www.brandywinecoffeeroasters.com/products/upcycled-spoon-rest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "41669744328791"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "13e25abcdc72a451",
+  "first_seen": "2026-10-26",
+  "handle": "cola-bear-crewnecks",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/colabearcrewneck2025.jpg?v=1764786883",
+  "platform": "shopify",
+  "product_id": "7528246313047",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Coferment Bear Crewnecks!",
+  "url": "https://www.brandywinecoffeeroasters.com/products/cola-bear-crewnecks",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "XL",
+    "variant_id": "42211227566167"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "f031a188faafd821",
+  "first_seen": "2026-10-26",
+  "handle": "galactic-standard-espresso-blend-16-00",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/galaticstandard2023update.jpg?v=1684951902",
+  "platform": "shopify",
+  "product_id": "761129009239",
+  "product_type": "coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "blend"
+  ],
+  "title": "Galactic Standard",
+  "url": "https://www.brandywinecoffeeroasters.com/products/galactic-standard-espresso-blend-16-00",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Coarse (French Press/Cold Brew)",
+    "variant_id": "31687305134167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Medium (Drip/Pour Over)",
+    "variant_id": "31687308378199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Fine (Espresso)",
+    "variant_id": "31687308574807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "32315548205143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "8194252472407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "8194252505175"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "32abe42fb6cf8608",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-esmeralda-ea-decaf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/mexicodecaf2025.jpg?v=1776254985",
+  "platform": "shopify",
+  "product_id": "7626256777303",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Decaf",
+   "coffee"
+  ],
+  "title": "DECAF - Mexico - Esmeralda - EA Decaf",
+  "url": "https://www.brandywinecoffeeroasters.com/products/decaf-mexico-esmeralda-ea-decaf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12oz",
+    "variant_id": "42702959280215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5LB",
+    "variant_id": "42702959312983"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "4434871db4b5a623",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-kanzu-washed-1",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/kamnzuwashed2026.jpg?v=1776702339",
+  "platform": "shopify",
+  "product_id": "7628050595927",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Rwanda - Kanzu - Washed",
+  "url": "https://www.brandywinecoffeeroasters.com/products/rwanda-kanzu-washed-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz",
+    "variant_id": "42713987940439"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2lb",
+    "variant_id": "42713987973207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb",
+    "variant_id": "42713988005975"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "8d9ee78bab4b8da2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-ombligon-natural-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/ombligonnaturaldecaf2026.jpg?v=1783345361",
+  "platform": "shopify",
+  "product_id": "7687305134167",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "DECAF - Colombia - Ombligon - Natural - Decaf",
+  "url": "https://www.brandywinecoffeeroasters.com/products/colombia-ombligon-natural-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12oz",
+    "variant_id": "44569436651607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 68.5,
+    "title": "2LB",
+    "variant_id": "44569436684375"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "7c05961b68739fb1",
+  "first_seen": "2026-10-26",
+  "handle": "beatriz-velez-auction-lot-gesha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/auctiongeshainfocard2026.jpg?v=1785940606",
+  "platform": "shopify",
+  "product_id": "7722432626775",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Beatriz Velez - Auction Lot Gesha - Natural - 5oz - ships free!",
+  "url": "https://www.brandywinecoffeeroasters.com/products/beatriz-velez-auction-lot-gesha-natural",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 35.0,
+    "title": "Default Title",
+    "variant_id": "44103304085591"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "ed23bfbc86784e2c",
+  "first_seen": "2026-10-26",
+  "handle": "big-league-coffee-bubblegum-co-ferment-fun",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/IMG_8438.jpg?v=1786985509",
+  "platform": "shopify",
+  "product_id": "7739781840983",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Big League Coffee - Bubblegum Co-Ferment Fun!- 8oz",
+  "url": "https://www.brandywinecoffeeroasters.com/products/big-league-coffee-bubblegum-co-ferment-fun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 29.0,
+    "title": "Default Title",
+    "variant_id": "44174244151383"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "cc74db890fe02b00",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kamwangi-ab-1",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/kenyakamwangiAB.jpg?v=1787570840",
+  "platform": "shopify",
+  "product_id": "7743380193367",
+  "product_type": "coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya - Kamwangi - AB",
+  "url": "https://www.brandywinecoffeeroasters.com/products/kenya-kamwangi-ab-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "44569300664407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.25,
+    "title": "2LB",
+    "variant_id": "44569300697175"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "668ab254e162af8b",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-decaf-evvw-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/uvvwdecaf2026.jpg?v=1787761092",
+  "platform": "shopify",
+  "product_id": "7746130051159",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ethiopia - Decaf UVVW - Natural",
+  "url": "https://www.brandywinecoffeeroasters.com/products/ethiopia-decaf-evvw-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 26.0,
+    "title": "Default Title",
+    "variant_id": "44199362068567"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "444472886370f2e6",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas-black-honey-2",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/blackhoneylaslajas2026.jpg?v=1788188223",
+  "platform": "shopify",
+  "product_id": "7754934583383",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Costa Rica - Las Lajas - Black Honey",
+  "url": "https://www.brandywinecoffeeroasters.com/products/costa-rica-las-lajas-black-honey-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 28.0,
+    "title": "12oz",
+    "variant_id": "44372418920535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb",
+    "variant_id": "44372418953303"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "610d266aba1763b8",
+  "first_seen": "2026-10-26",
+  "handle": "spooky-coffee-club-2026-t-g-i-s",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/dinosaursnowax2026_91be4a99-64d5-4a46-acc3-1a7ab695d4a4.jpg?v=1788528919",
+  "platform": "shopify",
+  "product_id": "7763991658583",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Thank Goodness It's Spooky Coffee Club - T.G.I.S 2026",
+  "url": "https://www.brandywinecoffeeroasters.com/products/spooky-coffee-club-2026-t-g-i-s",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "SMALL SHIRT - (S)",
+    "variant_id": "44234166566999"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "MEDIUM SHIRT - (M)",
+    "variant_id": "44234166599767"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "LARGE SHIRT - (L)",
+    "variant_id": "44234166632535"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "X-LARGE SHIRT - (XL)",
+    "variant_id": "44234166665303"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "2X-LARGE SHIRT (XXL)",
+    "variant_id": "44234166698071"
+   },
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 198.0,
+    "title": "3X-LARGE SHIRT (3XL)",
+    "variant_id": "44234166730839"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "2320f0d6475ac6ad",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-san-pedro-sochiapam-1-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/mexicosanpedrowashed2026.jpg?v=1788864159",
+  "platform": "shopify",
+  "product_id": "7768576983127",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico - San Pedro Sochiapam #1 - Washed",
+  "url": "https://www.brandywinecoffeeroasters.com/products/mexico-san-pedro-sochiapam-1-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "44374584164439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.5,
+    "title": "2LB",
+    "variant_id": "44569427574871"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "53447330202269b9",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiangoi-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/kenyakiangoiaa2026.jpg?v=1788980377",
+  "platform": "shopify",
+  "product_id": "7769738739799",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya - Kiangoi - AA",
+  "url": "https://www.brandywinecoffeeroasters.com/products/kenya-kiangoi-aa",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 28.0,
+    "title": "Default Title",
+    "variant_id": "44261332811863"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "264d937d3b6a3adc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bochessa-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/bochessanatural2026.jpg?v=1789396884",
+  "platform": "shopify",
+  "product_id": "7773565222999",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Ethiopia - Bochessa - Natural",
+  "url": "https://www.brandywinecoffeeroasters.com/products/ethiopia-bochessa-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 29.0,
+    "title": "12oz",
+    "variant_id": "44569424527447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.75,
+    "title": "2LB",
+    "variant_id": "44569424560215"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "7d24f06155c5bfa5",
+  "first_seen": "2026-10-26",
+  "handle": "scary-coffee-to-drink-in-the-dark-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/scarycoffeetodrinkinthedark2026.jpg?v=1789583552",
+  "platform": "shopify",
+  "product_id": "7782224658519",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Scary Coffee To Drink In The Dark 2026",
+  "url": "https://www.brandywinecoffeeroasters.com/products/scary-coffee-to-drink-in-the-dark-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "44373981495383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2lbs",
+    "variant_id": "44373981528151"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "b7b35cd864b1958b",
+  "first_seen": "2026-10-26",
+  "handle": "stellar-collisions-orange-melon",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/SCstellarcollisions2026.jpg?v=1790179789",
+  "platform": "shopify",
+  "product_id": "7791426568279",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Stellar Collisions - Orange Melon",
+  "url": "https://www.brandywinecoffeeroasters.com/products/stellar-collisions-orange-melon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "44374788178007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2lb",
+    "variant_id": "44374788210775"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "51b91a5e5ece3624",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-sun-fruit-punch-co-ferment",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/coffeesunfruitpunch2026.jpg?v=1790613460",
+  "platform": "shopify",
+  "product_id": "7797935112279",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Coffee Sun - Fruit Punch Co-Ferment - 8oz Whole Bean Coffee",
+  "url": "https://www.brandywinecoffeeroasters.com/products/coffee-sun-fruit-punch-co-ferment",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 29.0,
+    "title": "Default Title",
+    "variant_id": "44360181874775"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "61c877493a3b8c71",
+  "first_seen": "2026-10-26",
+  "handle": "halloweenie-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/halloweenie2026.jpg?v=1790780774",
+  "platform": "shopify",
+  "product_id": "7803060158551",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [],
+  "title": "Halloweenie 2026",
+  "url": "https://www.brandywinecoffeeroasters.com/products/halloweenie-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "44385297596503"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "08b6ac07ef5ad3c3",
+  "first_seen": "2026-10-26",
+  "handle": "haunted-ghost-box-liminal-las-lajas-coffee-collection",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/ghostbox2026.jpg?v=1791207506",
+  "platform": "shopify",
+  "product_id": "7811386441815",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Haunted Ghost Box - Liminal Las Lajas Coffee Collection",
+  "url": "https://www.brandywinecoffeeroasters.com/products/haunted-ghost-box-liminal-las-lajas-coffee-collection",
+  "variants": [
+   {
+    "available": false,
+    "grams": 680,
+    "price_usd": 47.0,
+    "title": "Default Title",
+    "variant_id": "44413503340631"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "2ba33db83ae93d90",
+  "first_seen": "2026-10-26",
+  "handle": "creepy-co-ferment-skittles-slasher",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/skitttlesslasher2026.jpg?v=1791992129",
+  "platform": "shopify",
+  "product_id": "7821761773655",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Creepy Co-Ferment - Skittles Slasher",
+  "url": "https://www.brandywinecoffeeroasters.com/products/creepy-co-ferment-skittles-slasher",
+  "variants": [
+   {
+    "available": true,
+    "grams": 425,
+    "price_usd": 29.0,
+    "title": "Default Title",
+    "variant_id": "44458616291415"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "3e23e396a41015a9",
+  "first_seen": "2026-10-26",
+  "handle": "halloween-night-2026",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/9E90F87C-2C89-44B0-B8B4-32669506A76A.jpg?v=1792418868",
+  "platform": "shopify",
+  "product_id": "7830713499735",
+  "product_type": "Coffee",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Halloween Night 2026",
+  "url": "https://www.brandywinecoffeeroasters.com/products/halloween-night-2026",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.0,
+    "title": "Default Title",
+    "variant_id": "44501606629463"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ },
+ {
+  "body_hash": "c05fc888db4f7049",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-kiambu-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0946/2742/files/4D99F3C6-AF4E-48F3-BEEE-0C7CAFA1D460.jpg?v=1792591771",
+  "platform": "shopify",
+  "product_id": "7833138593879",
+  "product_type": "",
+  "roaster_slug": "brandywinecoffeeroasters",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Kenya Kiambu AB",
+  "url": "https://www.brandywinecoffeeroasters.com/products/kenya-kiambu-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 26.0,
+    "title": "12oz",
+    "variant_id": "44569403686999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2LB",
+    "variant_id": "44569403719767"
+   }
+  ],
+  "vendor": "Brandywine Coffee Roasters"
+ }
+]

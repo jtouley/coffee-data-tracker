@@ -1,0 +1,72 @@
+{
+ "6760a06e678879710b3de1cf": {
+  "body_hash": "3067afec81881eee",
+  "elevation_masl_max": 1650,
+  "elevation_masl_min": 1350,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catimor",
+   "Catuai"
+  ]
+ },
+ "6760a2ff22ed9d651a86ecba": {
+  "body_hash": "e5bf364d58cea18c",
+  "elevation_masl_max": 1000,
+  "elevation_masl_min": 900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6760a55698b4cc34012d19bc": {
+  "body_hash": "4a6569bbeb421653",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai"
+  ]
+ },
+ "6760a6611775181eea285f8b": {
+  "body_hash": "bd82cf9abf23c3a0",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Bourbon",
+   "Catuai"
+  ]
+ }
+}

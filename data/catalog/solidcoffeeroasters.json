@@ -1,0 +1,1106 @@
+[
+ {
+  "body_hash": "12d54ad6be3ce353",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_23.jpg?v=1754677066",
+  "platform": "shopify",
+  "product_id": "7033521963208",
+  "product_type": "Decaf",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Decaf",
+   "Medium Roast",
+   "Peru",
+   "Single Origin"
+  ],
+  "title": "Peru - Decaf",
+  "url": "https://solidcoffeeroasters.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "Whole Bean - Best option need grinder / 10oz",
+    "variant_id": "40866340536520"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "Course Grind - For traditional drip coffee / pourovers / 10oz",
+    "variant_id": "40866340569288"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "Fine Grind - For espresso / 10oz",
+    "variant_id": "40866340602056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean - Best option need grinder / 5lb",
+    "variant_id": "44578450768072"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 205.0,
+    "title": "Whole Bean - Best option need grinder / 10lb",
+    "variant_id": "44578450800840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Course Grind - For traditional drip coffee / pourovers / 5lb",
+    "variant_id": "44578450833608"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 205.0,
+    "title": "Course Grind - For traditional drip coffee / pourovers / 10lb",
+    "variant_id": "44578450866376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Fine Grind - For espresso / 5lb",
+    "variant_id": "44578450899144"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 205.0,
+    "title": "Fine Grind - For espresso / 10lb",
+    "variant_id": "44578450931912"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "c773a7f42b5876ce",
+  "first_seen": "2026-10-26",
+  "handle": "bam-bam-bold-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_11.jpg?v=1754677063",
+  "platform": "shopify",
+  "product_id": "7033522520264",
+  "product_type": "Seasonal Blend",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Coffee",
+   "Dark Roast",
+   "Seasonal"
+  ],
+  "title": "Bam Bam - Bold Blend",
+  "url": "https://solidcoffeeroasters.com/products/bam-bam-bold-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "40866342437064"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "40866342469832"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "40866342502600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578449817800"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578449850568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578449883336"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578449916104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578449948872"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578449981640"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "385923bf41f317f1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-salgar",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_32.jpg?v=1754677060",
+  "platform": "shopify",
+  "product_id": "7033522585800",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Colombia",
+   "Medium Roast",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "Colombia - Nariño",
+  "url": "https://solidcoffeeroasters.com/products/colombia-salgar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "40866342568136"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "40866342600904"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "40866342633672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578457452744"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578457485512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578457518280"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578457551048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578457583816"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578457616584"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "767894d89d8241b4",
+  "first_seen": "2026-10-26",
+  "handle": "luz-gunn-light-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_5.jpg?v=1754677056",
+  "platform": "shopify",
+  "product_id": "7033522716872",
+  "product_type": "Seasonal Blend",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Coffee",
+   "Medium Roast",
+   "Seasonal"
+  ],
+  "title": "Luz Gunn - Light Blend",
+  "url": "https://solidcoffeeroasters.com/products/luz-gunn-light-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "40866342895816"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "40866342928584"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "40866342961352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578450571464"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578450604232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578450637000"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578450669768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578450702536"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578450735304"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "703f80e9177a8f37",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-mineiro-do",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_45.jpg?v=1754677053",
+  "platform": "shopify",
+  "product_id": "7098240729288",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Brazil",
+   "Coffee",
+   "Medium Roast",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Brazil - Cerrado Mineiro Do",
+  "url": "https://solidcoffeeroasters.com/products/brazil-cerrado-mineiro-do",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "41099203346632"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "41099203379400"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "41099203412168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578457223368"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578457256136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578457288904"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578457321672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578457354440"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578457387208"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "dbeba86b2fbd1e0d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-hambela",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_30.jpg?v=1754677050",
+  "platform": "shopify",
+  "product_id": "7106401861832",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Ethiopia",
+   "Light Roast",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Ethiopia - Guji, Hambela",
+  "url": "https://solidcoffeeroasters.com/products/ethiopia-guji-hambela",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "41132160090312"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "41132160123080"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 30.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "41132160155848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578456862920"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 230.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578456895688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578456928456"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 230.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578456961224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578456993992"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 230.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578457026760"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "2c8971967ef8f391",
+  "first_seen": "2026-10-26",
+  "handle": "casa-keopi-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_16.jpg?v=1754677046",
+  "platform": "shopify",
+  "product_id": "7106416115912",
+  "product_type": "Seasonal Blend",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Coffee",
+   "Espresso",
+   "Medium Roast",
+   "Seasonal"
+  ],
+  "title": "Casa Keopi - House Blend",
+  "url": "https://solidcoffeeroasters.com/products/casa-keopi-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "41132204654792"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "41132204687560"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "41132204720328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578450079944"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578450112712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578450145480"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578450178248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578450211016"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578450243784"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "410b08d5a289904e",
+  "first_seen": "2026-10-26",
+  "handle": "fist-bump-medium-blend-12-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_1.jpg?v=1754677029",
+  "platform": "shopify",
+  "product_id": "7734335111368",
+  "product_type": "Seasonal Blend",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Coffee",
+   "Light Roast",
+   "Medium Roast",
+   "Seasonal"
+  ],
+  "title": "Fist Bump - Light/Medium Blend",
+  "url": "https://solidcoffeeroasters.com/products/fist-bump-medium-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "43295084609736"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "43295084642504"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "43295084675272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578450342088"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578450374856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578450407624"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578450440392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578450473160"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 225.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578450505928"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "19b3b639963b502d",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-10-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10ozLifestyleRoastery_20.jpg?v=1754677018",
+  "platform": "shopify",
+  "product_id": "8182529130696",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Guatemala",
+   "Medium Roast",
+   "Single Origin",
+   "Washed"
+  ],
+  "title": "Guatemala - Huehuetenango",
+  "url": "https://solidcoffeeroasters.com/products/guatemala-huehuetenango-10-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "44531058606280"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "44531058639048"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "44531058671816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578449490120"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578449522888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578449555656"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578449588424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578449621192"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 210.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578449653960"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "36c5fdb7f26f1f4f",
+  "first_seen": "2026-10-26",
+  "handle": "vietnam-lam-dong-10-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_43.jpg?v=1754677013",
+  "platform": "shopify",
+  "product_id": "8182529261768",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Dark Roast",
+   "Single Origin",
+   "Vietnam",
+   "Wet Polished"
+  ],
+  "title": "Vietnam - Lam Dong",
+  "url": "https://solidcoffeeroasters.com/products/vietnam-lam-dong-10-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "44531062276296"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "44531062309064"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "44531062341832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578447327432"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578447360200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578447392968"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578447425736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578447458504"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 190.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578447491272"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "a97054ce43500755",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-10-oz",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_37.jpg?v=1754677008",
+  "platform": "shopify",
+  "product_id": "8182529458376",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Anaerobic Natural",
+   "Beans",
+   "Coffee",
+   "Indonesia",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Indonesia - Sumatra",
+  "url": "https://solidcoffeeroasters.com/products/indonesia-sumatra-10-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "44531064045768"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "44531064078536"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 28.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "44531064111304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44578446868680"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44578446901448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44578446934216"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44578446966984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44578446999752"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 215.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44578447032520"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "729a757ef0516f15",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-west-arsi",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/10oz_Lifestyle_Roastery_west_arsi.jpg?v=1760127077",
+  "platform": "shopify",
+  "product_id": "8244457341128",
+  "product_type": "Single Origin",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [
+   "Beans",
+   "Coffee",
+   "Ethiopia",
+   "Light Roast",
+   "Natural",
+   "Single Origin"
+  ],
+  "title": "Ethiopia - West Arsi",
+  "url": "https://solidcoffeeroasters.com/products/ethiopia-west-arsi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Whole Bean / 10oz",
+    "variant_id": "44781863370952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44781863403720"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 200.0,
+    "title": "Whole Bean / 10lb",
+    "variant_id": "44781863436488"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Course Grind / 10oz",
+    "variant_id": "44781863469256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Course Grind / 5lb",
+    "variant_id": "44781863502024"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 200.0,
+    "title": "Course Grind / 10lb",
+    "variant_id": "44781863534792"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.0,
+    "title": "Fine Grind / 10oz",
+    "variant_id": "44781863567560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Fine Grind / 5lb",
+    "variant_id": "44781863600328"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 200.0,
+    "title": "Fine Grind / 10lb",
+    "variant_id": "44781863633096"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "ae13ef11b43aea31",
+  "first_seen": "2026-10-26",
+  "handle": "the-1-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/RoastersChoiceOne_cd5145e6-a478-4460-ac28-5db6c1abc57c.png?v=1776982943",
+  "platform": "shopify",
+  "product_id": "8312464736456",
+  "product_type": "",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [],
+  "title": "The 1 Bag",
+  "url": "https://solidcoffeeroasters.com/products/the-1-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole Bean",
+    "variant_id": "45063588217032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Course Grind",
+    "variant_id": "45063588249800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Fine Grind",
+    "variant_id": "45063588282568"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ },
+ {
+  "body_hash": "63704b46b34be4e8",
+  "first_seen": "2026-10-26",
+  "handle": "the-2-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0595/2474/3368/files/Roasters_Choice_Two.png?v=1776982909",
+  "platform": "shopify",
+  "product_id": "8312464769224",
+  "product_type": "",
+  "roaster_slug": "solidcoffeeroasters",
+  "tags": [],
+  "title": "The 2 Bag",
+  "url": "https://solidcoffeeroasters.com/products/the-2-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Whole Bean",
+    "variant_id": "45063588380872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Fine Grind",
+    "variant_id": "45063588413640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "Course Grind",
+    "variant_id": "45063588446408"
+   }
+  ],
+  "vendor": "Solid Coffee Roasters"
+ }
+]

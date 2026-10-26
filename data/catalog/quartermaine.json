@@ -1,0 +1,6021 @@
+[
+ {
+  "body_hash": "85fd7b6f34a5d7bc",
+  "first_seen": "2026-10-26",
+  "handle": "aromatica-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/98550c2a52adab3f26fda4183b37ea61.png?v=1500866900",
+  "platform": "shopify",
+  "product_id": "10127454153",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Aromatica (Our Lighter Roast)"
+  ],
+  "title": "Aromatica Blend",
+  "url": "https://quartermaine.com/products/aromatica-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "28019611074647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352071561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352071689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197455577175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197455609943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197455642711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197455675479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197455708247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197455741015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197456527447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197456625751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197456658519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197458165847"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197458198615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197459050583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197459214423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197459640407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197460623447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197462687831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197463703639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197487493207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197488312407"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "e7601a9ac9ae5abf",
+  "first_seen": "2026-10-26",
+  "handle": "keemun-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/b11cc6aa85b9c5b8ffdd94b2666a6c92.png?v=1500867579",
+  "platform": "shopify",
+  "product_id": "10127455945",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "China Black Tea"
+  ],
+  "title": "Keemun Choice",
+  "url": "https://quartermaine.com/products/keemun-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.95,
+    "title": "1/4 Lb",
+    "variant_id": "41352146889"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "61c6b1514e99ab6c",
+  "first_seen": "2026-10-26",
+  "handle": "chicory",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/qmaine_chicory.png?v=1504754706",
+  "platform": "shopify",
+  "product_id": "10127456585",
+  "product_type": "Coffee Extras",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Chicory - 1 lb",
+  "url": "https://quartermaine.com/products/chicory",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "41352165513"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "249e119e5f7f242a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/400ba29ff4732f527f2c30bc7dad14e4.png?v=1500860568",
+  "platform": "shopify",
+  "product_id": "10127456777",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Decaf Espresso Roast",
+  "url": "https://quartermaine.com/products/decaf-espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Espresso #2",
+    "variant_id": "31815943487575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Espresso #2",
+    "variant_id": "31815950106711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352167241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352167369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197562728535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197563187287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197563220055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197563285591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197564235863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197564268631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197564563543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197564858455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197565317207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197566103639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197566169175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197566201943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197566234711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197566267479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197566562391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197566955607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197568168023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197568528471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197568921687"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197568954455"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "4bbe124935e9ec67",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/f15437cecec883b578f788e868810262.png?v=1500867279",
+  "platform": "shopify",
+  "product_id": "10127456905",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://quartermaine.com/products/decaf-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Espresso #2",
+    "variant_id": "32437969387607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Espresso #2",
+    "variant_id": "32437970403415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352171529"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352171593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197576786007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197576818775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197576851543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197576884311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197576917079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197577048151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197577801815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197577834583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197577867351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197577900119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197577932887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197577965655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197578358871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197578752087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197578784855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197578817623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197579046999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197579866199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197579931735"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197579964503"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "8b788336450d0015",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/0615329677aaf15e024ee5a099bf3fed.png?v=1500867371",
+  "platform": "shopify",
+  "product_id": "10127456969",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "East Africa and Arabia"
+  ],
+  "title": "Ethiopia",
+  "url": "https://quartermaine.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352171657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352171721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197617352791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197617385559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197618106455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197618139223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197618204759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197618270295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197618303063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197618368599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197619089495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197619155031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197619220567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197619286103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197619318871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197619351639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197619581015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197620301911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197620334679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197620400215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197620432983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197620465751"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "75b693f623c38d7f",
+  "first_seen": "2026-10-26",
+  "handle": "quartermaine-quartet",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/files/Quartermaine_Quartet_bf922284-928d-4230-843a-2a3e28277348.jpg?v=1764686627",
+  "platform": "shopify",
+  "product_id": "10127457545",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Quartermaine Quartet",
+  "url": "https://quartermaine.com/products/quartermaine-quartet",
+  "variants": [
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Whole Bean",
+    "variant_id": "43465955209"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Turkish #1",
+    "variant_id": "8197822349399"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Espresso #3",
+    "variant_id": "8197822447703"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Finer Cone #4",
+    "variant_id": "8197822480471"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Cone #5",
+    "variant_id": "8197822513239"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Gold Cone #6",
+    "variant_id": "8197823266903"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Flat Bottom #7",
+    "variant_id": "8197823299671"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197823332439"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Siphon #10",
+    "variant_id": "8197823365207"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "French Press #12",
+    "variant_id": "8197823529047"
+   },
+   {
+    "available": true,
+    "grams": 903,
+    "price_usd": 45.95,
+    "title": "Percolator #13",
+    "variant_id": "8197824413783"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "424f4300e689c349",
+  "first_seen": "2026-10-26",
+  "handle": "young-hyson",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/d8ce03fcf71e4a6825433c5e1bade639.png?v=1500867746",
+  "platform": "shopify",
+  "product_id": "10127459721",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Green Tea"
+  ],
+  "title": "Young Hyson",
+  "url": "https://quartermaine.com/products/young-hyson",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.95,
+    "title": "1/4 Lb",
+    "variant_id": "41352258569"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "9df71d5eb2501a1f",
+  "first_seen": "2026-10-26",
+  "handle": "clydes-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/820b96143e4bd4cf66d97fc68f59728d.png?v=1500867236",
+  "platform": "shopify",
+  "product_id": "10127460617",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "Clyde's Blend",
+  "url": "https://quartermaine.com/products/clydes-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352268041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352268105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197524160599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197524193367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197524258903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197524291671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197524717655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197525504087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197525569623"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197525733463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197525831767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197525995607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197526028375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197526749271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197526782039"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197526814807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197526913111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197527076951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197527437399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197528158295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197528191063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197528354903"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "951966aa63b350ea",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-earl-grey",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/ca01daa87df1bda23fb7cfee8ebf55a2.png?v=1500867270",
+  "platform": "shopify",
+  "product_id": "10127461449",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Tea Blends"
+  ],
+  "title": "Decaf Earl Grey",
+  "url": "https://quartermaine.com/products/decaf-earl-grey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 7.65,
+    "title": "1/4 Lb",
+    "variant_id": "41352299209"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "88910bf5a4a7059c",
+  "first_seen": "2026-10-26",
+  "handle": "moroccan-mint",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/8d184a17cff947fb29f9409c9514a1bc.png?v=1500867602",
+  "platform": "shopify",
+  "product_id": "10127461833",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Tea Blends"
+  ],
+  "title": "Moroccan Mint",
+  "url": "https://quartermaine.com/products/moroccan-mint",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.25,
+    "title": "1/4 Lb",
+    "variant_id": "41352305481"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "98a3c396e01c086f",
+  "first_seen": "2026-10-26",
+  "handle": "quartermaine-special-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/891333186b7f589519a36b2cc9fbc6ac.png?v=1500867695",
+  "platform": "shopify",
+  "product_id": "10127461961",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Tea Blends"
+  ],
+  "title": "Quartermaine Special Blend",
+  "url": "https://quartermaine.com/products/quartermaine-special-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 8.95,
+    "title": "1/4 Lb",
+    "variant_id": "41352308169"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "0c59d77eb7d766b0",
+  "first_seen": "2026-10-26",
+  "handle": "ceylon-orange-pekoe",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/3a5df431a2650af79f7186c00d5cfe2c.png?v=1500867102",
+  "platform": "shopify",
+  "product_id": "10127462345",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Sri Lanka Black Tea"
+  ],
+  "title": "Ceylon Orange Pekoe",
+  "url": "https://quartermaine.com/products/ceylon-orange-pekoe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 10.25,
+    "title": "1/4 Lb",
+    "variant_id": "41352316233"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "4d93e064cbf7715c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-special-estate",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/6c7e7c93cadd5a5d4e4d0dc0850d1e23.png?v=1500867251",
+  "platform": "shopify",
+  "product_id": "10127462537",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Americas"
+  ],
+  "title": "Costa Rica",
+  "url": "https://quartermaine.com/products/costa-rica-special-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352318985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352319049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197535891543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197535924311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197536055383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197536088151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197536153687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197536186455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197536546903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197537267799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197537333335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197537366103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197543886935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197543919703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197544673367"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197544706135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197544738903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197544771671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197544869975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197544902743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197545623639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197545656407"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "8c2fd6fac785aeac",
+  "first_seen": "2026-10-26",
+  "handle": "arabian-moka-java",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/c9d434148ecd2d64f9cc62eeca98de12.png?v=1718720765",
+  "platform": "shopify",
+  "product_id": "10127462729",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Featured Coffees",
+   "Quartermaine Blends"
+  ],
+  "title": "Arabian Moka-Java",
+  "url": "https://quartermaine.com/products/arabian-moka-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352319433"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352319497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197417173079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197420515415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197420580951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197420613719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197426249815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197426282583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197430313047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197430476887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197430509655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197437292631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197437358167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197437390935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197437423703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197444206679"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197444436055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197446303831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197447254103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197447909463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.75,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197486542935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.88,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197486641239"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "f816551169935215",
+  "first_seen": "2026-10-26",
+  "handle": "assam-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/f9b3ec2ebeddd7fe7303c394f82b6ea2.png?v=1500866930",
+  "platform": "shopify",
+  "product_id": "10127462921",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "India Black Tea"
+  ],
+  "title": "Assam Choice",
+  "url": "https://quartermaine.com/products/assam-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.95,
+    "title": "1/4 Lb",
+    "variant_id": "41352320585"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "bc7e45655fea3738",
+  "first_seen": "2026-10-26",
+  "handle": "barista-brava-barista-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/BaristaBravaCoffee_BaristaBlend_GlamourLeft.jpg?v=1617293464",
+  "platform": "shopify",
+  "product_id": "10127463177",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Barista Brava Brand Coffees"
+  ],
+  "title": "Barista Brava Barista Blend",
+  "url": "https://quartermaine.com/products/barista-brava-barista-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41352323337"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Whole Bean",
+    "variant_id": "41352323401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Turkish #1",
+    "variant_id": "8197479432279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Espresso #3",
+    "variant_id": "8197479497815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Finer Cone #4",
+    "variant_id": "8197479530583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Cone #5",
+    "variant_id": "8197481234519"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Gold Cone #6",
+    "variant_id": "8197481267287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Flat Bottom #7",
+    "variant_id": "8197481300055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197481332823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / French Press #12",
+    "variant_id": "8197481398359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Percolator #13",
+    "variant_id": "8197482119255"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Turkish #1",
+    "variant_id": "8197482184791"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Espresso #3",
+    "variant_id": "8197482283095"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Finer Cone #4",
+    "variant_id": "8197482512471"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Cone #5",
+    "variant_id": "8197482545239"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Cone #6",
+    "variant_id": "8197482610775"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Flat Bottom #7",
+    "variant_id": "8197483364439"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197483790423"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / French Press #12",
+    "variant_id": "8197484019799"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Percolator #13",
+    "variant_id": "8197484085335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Siphon #10",
+    "variant_id": "8197490049111"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Siphon #10",
+    "variant_id": "8197490114647"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "08cb7c93834698a4",
+  "first_seen": "2026-10-26",
+  "handle": "barista-brava-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/BaristaBravaCoffee_BreakfastBlend_GlamourLeft.jpg?v=1617295118",
+  "platform": "shopify",
+  "product_id": "10127465289",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Barista Brava Brand Coffees"
+  ],
+  "title": "Barista Brava Breakfast Blend",
+  "url": "https://quartermaine.com/products/barista-brava-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41352390985"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Whole Bean",
+    "variant_id": "41352391049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Turkish #1",
+    "variant_id": "8197494145111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Espresso #3",
+    "variant_id": "8197494210647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Finer Cone #4",
+    "variant_id": "8197494308951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Cone #5",
+    "variant_id": "8197494341719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Gold Cone #6",
+    "variant_id": "8197494374487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Flat Bottom #7",
+    "variant_id": "8197495095383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197495160919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Siphon #10",
+    "variant_id": "8197495226455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / French Press #12",
+    "variant_id": "8197495291991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.95,
+    "title": "2 lb / Percolator #13",
+    "variant_id": "8197495357527"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Turkish #1",
+    "variant_id": "8197496143959"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Espresso #3",
+    "variant_id": "8197496176727"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Finer Cone #4",
+    "variant_id": "8197496209495"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Cone #5",
+    "variant_id": "8197496242263"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Cone #6",
+    "variant_id": "8197496275031"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Flat Bottom #7",
+    "variant_id": "8197496340567"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197496438871"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Siphon #10",
+    "variant_id": "8197497225303"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / French Press #12",
+    "variant_id": "8197497258071"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Percolator #13",
+    "variant_id": "8197497323607"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "b8391c7834866c54",
+  "first_seen": "2026-10-26",
+  "handle": "barista-brava-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/BaristaBravaCoffee_Hazelnut_GlamourLeft.jpg?v=1617295820",
+  "platform": "shopify",
+  "product_id": "10127465481",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Barista Brava Brand Coffees"
+  ],
+  "title": "Barista Brava Hazelnut",
+  "url": "https://quartermaine.com/products/barista-brava-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Whole Bean",
+    "variant_id": "41352394121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41352394185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Turkish #1",
+    "variant_id": "8197503025239"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Espresso #3",
+    "variant_id": "8197503123543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Finer Cone #4",
+    "variant_id": "8197503189079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Cone #5",
+    "variant_id": "8197503942743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Gold Cone #6",
+    "variant_id": "8197503975511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Flat Bottom #7",
+    "variant_id": "8197504008279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197504073815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Siphon #10",
+    "variant_id": "8197504106583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / French Press #12",
+    "variant_id": "8197504893015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.95,
+    "title": "2 lb / Percolator #13",
+    "variant_id": "8197504925783"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Turkish #1",
+    "variant_id": "8197504991319"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Espresso #3",
+    "variant_id": "8197505024087"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Finer Cone #4",
+    "variant_id": "8197505089623"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Cone #5",
+    "variant_id": "8197505122391"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Gold Cone #6",
+    "variant_id": "8197505908823"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Flat Bottom #7",
+    "variant_id": "8197506007127"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197506039895"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Siphon #10",
+    "variant_id": "8197506990167"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / French Press #12",
+    "variant_id": "8197508038743"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.5,
+    "title": "3/4 Lb / Percolator #13",
+    "variant_id": "8197508792407"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "706c2997ec759e7c",
+  "first_seen": "2026-10-26",
+  "handle": "ceylon-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/eecfeebe1141c50245e3dc8f8d294346.png?v=1500867097",
+  "platform": "shopify",
+  "product_id": "10127465801",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Sri Lanka Black Tea"
+  ],
+  "title": "Ceylon Choice",
+  "url": "https://quartermaine.com/products/ceylon-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 4.95,
+    "title": "1/4 Lb",
+    "variant_id": "41352399433"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "53d17262d4f19ad0",
+  "first_seen": "2026-10-26",
+  "handle": "china-jasmine",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/d3d670a8aa94bb0335de4813e58cee63.png?v=1500867231",
+  "platform": "shopify",
+  "product_id": "10127466505",
+  "product_type": "Teas",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Green Tea"
+  ],
+  "title": "China Jasmine",
+  "url": "https://quartermaine.com/products/china-jasmine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 6.25,
+    "title": "1/4 Lb",
+    "variant_id": "41352416585"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "073102615e1f5a20",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/8c0be7076bb0b46ef40460dc2b1fc0b5.png?v=1500867240",
+  "platform": "shopify",
+  "product_id": "10127466569",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Americas"
+  ],
+  "title": "Colombia",
+  "url": "https://quartermaine.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352416649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352416713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197530583127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197530615895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197530648663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197530681431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197530714199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197531533399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197531566167"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Siphon/Cold Brew #10",
+    "variant_id": "8197531631703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197531697239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197531730007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197532778583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197532811351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197532876887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197532909655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197533040727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197533106263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197533892695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Siphon/Cold Brew #10",
+    "variant_id": "8197534023767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197534122071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197534154839"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "afa1126eecf30cc9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-clydes-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/76786876c0268e6973a1dc009823bb2a.png?v=1500867266",
+  "platform": "shopify",
+  "product_id": "10127466761",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Decaf Clyde's Blend",
+  "url": "https://quartermaine.com/products/decaf-clydes-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352418057"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352418121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197548277847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197548310615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197548376151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197548474455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197548605527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197548638295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197549391959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197549424727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197549457495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197549490263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197549555799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197549850711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197550571607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197550604375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197550637143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197551620183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197551784023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197551849559"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197551882327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197552635991"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "80ecd845ce9be150",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/74d752addf8f5ba1041fb603e6f59f8c.png?v=1500867350",
+  "platform": "shopify",
+  "product_id": "10127467209",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Decaf House Blend",
+  "url": "https://quartermaine.com/products/decaf-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "12591134343255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "28019787497559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352431817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "41352431881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197581832279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197581930583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197581963351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197582684247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197582848087"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197582880855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197582946391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197582979159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197584715863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197584748631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197584781399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197585731671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197586223191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197586518103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197587271767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197587337303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197589368919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197589401687"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "7f749004f7830bb5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vine-street-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/42213eaa913aeaf1790f5bf68dff8c0d.png?v=1500867360",
+  "platform": "shopify",
+  "product_id": "10127468681",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Decaf Vine Street Blend",
+  "url": "https://quartermaine.com/products/decaf-vine-street-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "28019814137943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352502537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352502601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197597724759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197598445655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197598543959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197598642263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197598707799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197598838871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197599592535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197599658071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197599690839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197599723607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197599952983"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197600673879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197600739415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197600804951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197600837719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197600903255"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197600936023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197601656919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197601722455"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "347fcba58acac415",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/909af1ed2c70a9c70da5f6e3aa7b9b30.png?v=1500867368",
+  "platform": "shopify",
+  "product_id": "10127469065",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Dark Roast Coffees"
+  ],
+  "title": "Espresso Roast",
+  "url": "https://quartermaine.com/products/espresso-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Espresso #2",
+    "variant_id": "31815935328343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Espresso #2",
+    "variant_id": "31815949156439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352512585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352512713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197606998103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197607129175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197607161943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197608013911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197608177751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197608374359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197608505431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197608570967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197609029719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197609947223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197610176599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197610242135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197610668119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197610799191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197611094103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197612175447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197612503127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197612830807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197613125719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197613256791"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "7fd90d3874f66afc",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/eeb7608220cf14b0cf89f4761dc3ec57.png?v=1500867465",
+  "platform": "shopify",
+  "product_id": "10127469193",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Dark Roast Coffees"
+  ],
+  "title": "French Roast",
+  "url": "https://quartermaine.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352515849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352515913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197693734999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197693898839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197694095447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197694718039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197694750807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197694783575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197695537239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197695635543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197697110103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197697241175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197698027607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197698060375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197701632087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197702647895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197702680663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197702877271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197703106647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197703172183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197703237719"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197705334871"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "8b31e9abe970a9ed",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/850e5ca65c93d800b7b01b3c150d1940.png?v=1500867480",
+  "platform": "shopify",
+  "product_id": "10127469321",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Americas"
+  ],
+  "title": "Guatemala",
+  "url": "https://quartermaine.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352516105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352516169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197708808279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197708906583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197709037655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197709660247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197710413911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197710446679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197710938199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197712642135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197713461335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197713821783"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197714804823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197714837591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197715034199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197715165271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197715230807"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197715263575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197715394647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197716148311"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197716181079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197716246615"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "084f5e3f78c3ba25",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/9544d9c61e1bf16d0070d18ec6bd104c.png?v=1500867490",
+  "platform": "shopify",
+  "product_id": "10127469513",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Half-Caf House Blend",
+  "url": "https://quartermaine.com/products/half-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352524041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197720440919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197720506455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197720834135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197720866903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197721587799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197721784407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197721849943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197721882711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197722636375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.36,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197722734679"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "b8a7a5562c8af769",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/d1059d90e4cdf10d380a2c95be647920.png?v=1500867561",
+  "platform": "shopify",
+  "product_id": "10127469897",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "House Blend",
+  "url": "https://quartermaine.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352533065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352533129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197728632919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197729419351"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197729452119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197729484887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197730074711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197730369623"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197730500695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197731287127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197731418199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.75,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197731450967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197731745879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197731778647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197733122135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197733843031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197733875799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197734006871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197734039639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197735874647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197735907415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.88,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197736628311"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "082dd4851643e4c0",
+  "first_seen": "2026-10-26",
+  "handle": "java",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/0cfd5c59f48a6a18aa55b4737dbd0cb9.png?v=1500867575",
+  "platform": "shopify",
+  "product_id": "10127469961",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Pacific"
+  ],
+  "title": "Java",
+  "url": "https://quartermaine.com/products/java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352533257"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352533321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197741445207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197741510743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197742428247"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197742461015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197743738967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197744001111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197744164951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197744328791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197744754775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197744787543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197745541207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197745934423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197748129879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197748654167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197748719703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197748752471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197750063191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197750095959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197750227031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.25,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197750456407"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "b0bcc670b9d64435",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/cc0fd8066ae7db4ee7c1b33a407d36d0.png?v=1500867583",
+  "platform": "shopify",
+  "product_id": "10127470089",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "East Africa and Arabia"
+  ],
+  "title": "Kenya",
+  "url": "https://quartermaine.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352536137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352536201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197759402071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197759434839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197759729751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197759795287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197760548951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197760581719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197760614487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197760647255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197760843863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.45,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197761007703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197761728599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197761761367"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197761794135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197761826903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197761859671"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197762023511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197762056279"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197762777175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197762842711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.23,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197762908247"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "52c446ffcdebc02b",
+  "first_seen": "2026-10-26",
+  "handle": "quartermaine-orleans-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/67b8f42b605c771d31ebeac6a6615481.png?v=1500867685",
+  "platform": "shopify",
+  "product_id": "10127470153",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "Q Orleans Blend",
+  "url": "https://quartermaine.com/products/quartermaine-orleans-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352536329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352536393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197812256855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197816025175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197816746071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197816975447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197817008215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197817139287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197817172055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197817204823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197817270359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197818810455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197818843223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197818875991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197818941527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197818974295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197819039831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197819793495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197819859031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197820088407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197820186711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.48,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197820219479"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "2640c603981d5862",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/2e995e6387d6c6340ccb6c3a4b5dbeac.png?v=1500867608",
+  "platform": "shopify",
+  "product_id": "10127470409",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Pacific"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://quartermaine.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352536713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352536777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197771657303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197772378199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197772640343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197772673111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197772705879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197773590615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197773623383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197775163479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197775458391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197775491159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197775523927"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197775654999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197781520471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197783879767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197784207447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197784240215"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197784567895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197784993879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197790826583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197790859351"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "42914ee5fae8383d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/5c040532d3884329ad689e0bb62629d9.png?v=1500867717",
+  "platform": "shopify",
+  "product_id": "10127472393",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "The Pacific"
+  ],
+  "title": "Sumatra",
+  "url": "https://quartermaine.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352617289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352617417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197838635095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197838667863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197838962775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197842305111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197844664407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197845123159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197846007895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197846237271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197846630487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.25,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197848105047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197849579607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197850136663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197851414615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197852004439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197853380695"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197854036055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197854593111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197855608919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197857017943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.13,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197858132055"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "913c37146b4dacd9",
+  "first_seen": "2026-10-26",
+  "handle": "viennese-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/65245f6d2fd2e17065e1746a248aee57.png?v=1500867721",
+  "platform": "shopify",
+  "product_id": "10127472713",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Dark Roast Coffees",
+   "Quartermaine Blends"
+  ],
+  "title": "Viennese Blend",
+  "url": "https://quartermaine.com/products/viennese-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352618249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352618313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197866553431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197868126295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197869076567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197869600855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197871009879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197871796311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197872648279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197872943191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197873762391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197874745431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197875728471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197876678743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197877629015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197878087767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197878415447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197879660631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197880610903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197881233495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197882314839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.25,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197882642519"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "40e391d39526de89",
+  "first_seen": "2026-10-26",
+  "handle": "vine-street-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/064d048bc5d47b057a18602b4ed2435f.png?v=1500867733",
+  "platform": "shopify",
+  "product_id": "10127473033",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "Vine Street Blend",
+  "url": "https://quartermaine.com/products/vine-street-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41352620233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41352620297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "8197891457111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "8197892112471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "8197892964439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Cone #5",
+    "variant_id": "8197894635607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "8197895159895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "8197895749719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197896929367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "8197897879639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / French Press #12",
+    "variant_id": "8197898272855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.25,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "8197898731607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "8197900697687"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "8197901189207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "8197901975639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "8197902073943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "8197902336087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "8197902434391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "8197903155287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "8197903220823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "8197903319127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.13,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "8197903548503"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "d9a1a34ead892dbf",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-clydes-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/9544d9c61e1bf16d0070d18ec6bd104c_514ddc45-56df-49ac-98f6-6d796a2b2e04.png?v=1536943506",
+  "platform": "shopify",
+  "product_id": "1380683743319",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Half-Caf Clyde's Blend",
+  "url": "https://quartermaine.com/products/half-caf-clydes-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "12614673465431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "12614673498199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "12614673530967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "12614673563735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Cone #5",
+    "variant_id": "12614673596503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "12614673629271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "12614673662039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "12614673694807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "12614673727575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / French Press #12",
+    "variant_id": "12614673760343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.46,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "12614673793111"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "6d78b29b5e36c726",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/9544d9c61e1bf16d0070d18ec6bd104c_6e449c8a-2b12-4218-91cf-d50551ca29a6.png?v=1536944358",
+  "platform": "shopify",
+  "product_id": "1380685643863",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Half-Caf French Roast",
+  "url": "https://quartermaine.com/products/half-caf-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "12614686900311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "12614686933079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "12614686965847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "12614686998615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Cone #5",
+    "variant_id": "12614687031383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "12614687064151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "12614687096919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "12614687129687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "12614687162455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / French Press #12",
+    "variant_id": "12614687195223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.23,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "12614687227991"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "d3dae149a83215de",
+  "first_seen": "2026-10-26",
+  "handle": "red-line-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/beans.png?v=1611761825",
+  "platform": "shopify",
+  "product_id": "4500811022423",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "Red Line Blend",
+  "url": "https://quartermaine.com/products/red-line-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "31923770916951"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "31923770949719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "31923770982487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "31923771015255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "31923771048023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "31923771080791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "31923771113559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "31923771146327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "31923771179095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "31923771244631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "31923771277399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "31923771310167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "31923771342935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "31923771375703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "31923771408471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "31923771441239"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "31923771474007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "31923771506775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "31923771539543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "31923771572311"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "31923771605079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.75,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "31923771637847"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "09cd1061552854ba",
+  "first_seen": "2026-10-26",
+  "handle": "micheles-granola-original",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/Michele_sGranola.png?v=1592333920",
+  "platform": "shopify",
+  "product_id": "4552540389463",
+  "product_type": "Coffee Extras",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Michele's Granola - Original",
+  "url": "https://quartermaine.com/products/micheles-granola-original",
+  "variants": [
+   {
+    "available": true,
+    "grams": 343,
+    "price_usd": 10.25,
+    "title": "Default Title",
+    "variant_id": "32175036956759"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "ed78a86b06d92308",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-vine-street-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/9544d9c61e1bf16d0070d18ec6bd104c_c9841ca1-6e87-4075-b434-dd8f094f532e.png?v=1594138179",
+  "platform": "shopify",
+  "product_id": "4567165730903",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees"
+  ],
+  "title": "Half-Caf Vine Street Blend",
+  "url": "https://quartermaine.com/products/half-caf-vine-street-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "32242831654999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "32242831687767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "32242831720535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "32242831753303"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Cone #5",
+    "variant_id": "32242831786071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "32242831818839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "32242831851607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "32242831884375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "32242831917143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / French Press #12",
+    "variant_id": "32242831949911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.88,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "32242831982679"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "810a3420f82542b2",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-espresso-beans-0-5-lbs",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/ChocolateCoveredEspressoBeans_6d3ae289-19d7-4a74-95e7-ac1555dc4734.jpg?v=1600880440",
+  "platform": "shopify",
+  "product_id": "4622622097495",
+  "product_type": "Coffee Extras",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Chocolate Covered Espresso Beans, 0.5 lbs",
+  "url": "https://quartermaine.com/products/chocolate-covered-espresso-beans-0-5-lbs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 222,
+    "price_usd": 8.95,
+    "title": "Default Title",
+    "variant_id": "32356342431831"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "5b5f8d6c2b6b815d",
+  "first_seen": "2026-10-26",
+  "handle": "barista-brava-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/files/FrenchRoast.jpg?v=1687198504",
+  "platform": "shopify",
+  "product_id": "6887971455063",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Barista Brava Brand Coffees"
+  ],
+  "title": "Barista Brava French Roast",
+  "url": "https://quartermaine.com/products/barista-brava-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "40201133326423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Turkish #1",
+    "variant_id": "40201133359191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Espresso #3",
+    "variant_id": "40201133391959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Finer Cone #4",
+    "variant_id": "40201133424727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Cone #5",
+    "variant_id": "40201133457495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Gold Cone #6",
+    "variant_id": "40201133490263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Flat Bottom #7",
+    "variant_id": "40201133523031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "40201133555799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Siphon #10",
+    "variant_id": "40201133588567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / French Press #12",
+    "variant_id": "40201133621335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.95,
+    "title": "2 lb / Percolator #13",
+    "variant_id": "40201133654103"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Whole Bean",
+    "variant_id": "40201133686871"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Turkish #1",
+    "variant_id": "40201133719639"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Espresso #3",
+    "variant_id": "40201133752407"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Finer Cone #4",
+    "variant_id": "40201133785175"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Cone #5",
+    "variant_id": "40201133817943"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Cone #6",
+    "variant_id": "40201133850711"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Flat Bottom #7",
+    "variant_id": "40201133883479"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "40201133916247"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Siphon #10",
+    "variant_id": "40201133949015"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / French Press #12",
+    "variant_id": "40201133981783"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.0,
+    "title": "3/4 Lb / Percolator #13",
+    "variant_id": "40201134014551"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "3391b810f3b9494b",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/files/eb4efd20eb06532ba2a619d8b5c781d3_4464e0e4-5d95-43d5-86aa-18e555366aa6.jpg?v=1694110641",
+  "platform": "shopify",
+  "product_id": "6906423083095",
+  "product_type": "Hidden Products",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Aromatica (Our Lighter Roast)",
+   "The Americas"
+  ],
+  "title": "El Salvador Aromatica",
+  "url": "https://quartermaine.com/products/copy-of-rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "40242954698839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "40242954731607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "40242954764375"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "40242954797143"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "40242954829911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Cone #5",
+    "variant_id": "40242954862679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "40242954895447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "40242954928215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "40242954960983"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "40242954993751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / French Press #12",
+    "variant_id": "40242955026519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.5,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "40242955059287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "40242955092055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "40242955124823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "40242955157591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "40242955190359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "40242955223127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "40242955255895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "40242955288663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "40242955321431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "40242955354199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.75,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "40242955386967"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "96376776b309b3f4",
+  "first_seen": "2026-10-26",
+  "handle": "airscape-coffee-canister",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/files/Black_1_lb_Airscape.jpg?v=1723061032",
+  "platform": "shopify",
+  "product_id": "7266236170327",
+  "product_type": "Coffee Extras",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Airscape Airtight Canister - Black",
+  "url": "https://quartermaine.com/products/airscape-coffee-canister",
+  "variants": [
+   {
+    "available": true,
+    "grams": 603,
+    "price_usd": 39.36,
+    "title": "Default Title",
+    "variant_id": "41177372983383"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "fb63876e7f8680f3",
+  "first_seen": "2026-10-26",
+  "handle": "red-line-blend-copy",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/beans.png?v=1611761825",
+  "platform": "shopify",
+  "product_id": "7345101340759",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Decaffeinated Coffees",
+   "East Africa and Arabia"
+  ],
+  "title": "Decaf Ethiopia",
+  "url": "https://quartermaine.com/products/red-line-blend-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41447381827671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "41447381860439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "41447381893207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "41447381925975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Cone #5",
+    "variant_id": "41447381958743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "41447381991511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "41447382024279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "41447382057047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Siphon #10",
+    "variant_id": "41447382089815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / French Press #12",
+    "variant_id": "41447382122583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.95,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "41447382155351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41447382188119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "41447382220887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "41447382253655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "41447382286423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "41447382319191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "41447382351959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "41447382384727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "41447382417495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Siphon #10",
+    "variant_id": "41447382450263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "41447382483031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.98,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "41447382515799"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "96376776b309b3f4",
+  "first_seen": "2026-10-26",
+  "handle": "airscape-airtight-canister-white",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/files/white.jpg?v=1735841049",
+  "platform": "shopify",
+  "product_id": "7350010216535",
+  "product_type": "Coffee Extras",
+  "roaster_slug": "quartermaine",
+  "tags": [],
+  "title": "Airscape Airtight Canister - White",
+  "url": "https://quartermaine.com/products/airscape-airtight-canister-white",
+  "variants": [
+   {
+    "available": true,
+    "grams": 603,
+    "price_usd": 39.36,
+    "title": "Default Title",
+    "variant_id": "41466851983447"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ },
+ {
+  "body_hash": "6d82f745c49c2020",
+  "first_seen": "2026-10-26",
+  "handle": "quartermaine-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1890/2607/products/ad14375f006ccfa39a70edab3726d18d.jpg?v=1500867240",
+  "platform": "shopify",
+  "product_id": "7401577906263",
+  "product_type": "Coffees",
+  "roaster_slug": "quartermaine",
+  "tags": [
+   "Quartermaine Blends"
+  ],
+  "title": "Quartermaine Cold Brew",
+  "url": "https://quartermaine.com/products/quartermaine-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "41670077218903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Turkish #1",
+    "variant_id": "41670077251671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Espresso #3",
+    "variant_id": "41670077284439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Finer Cone #4",
+    "variant_id": "41670077317207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Cone #5",
+    "variant_id": "41670077349975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Gold Cone #6",
+    "variant_id": "41670077382743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Flat Bottom #7",
+    "variant_id": "41670077415511"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "41670077448279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Siphon/Cold Brew #10",
+    "variant_id": "41670077481047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / French Press #12",
+    "variant_id": "41670077513815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.25,
+    "title": "1 lb / Percolator #13",
+    "variant_id": "41670077546583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Whole Bean",
+    "variant_id": "41670077579351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Turkish #1",
+    "variant_id": "41670077612119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Espresso #3",
+    "variant_id": "41670077644887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Finer Cone #4",
+    "variant_id": "41670077677655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Cone #5",
+    "variant_id": "41670077710423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Gold Cone #6",
+    "variant_id": "41670077743191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Flat Bottom #7",
+    "variant_id": "41670077775959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Gold Flat Bottom/Keurig #8",
+    "variant_id": "41670077808727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Siphon/Cold Brew #10",
+    "variant_id": "41670077841495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / French Press #12",
+    "variant_id": "41670077874263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 11.13,
+    "title": "1/2 lb / Percolator #13",
+    "variant_id": "41670077907031"
+   }
+  ],
+  "vendor": "vendor-unknown"
+ }
+]

@@ -1,0 +1,134 @@
+[
+ {
+  "body_hash": "9ccb24b64e77b099",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-finca-la-unica-red-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0529/9729/2208/files/Untitled_Project_-_honduras_can_1_2.jpg?v=1762276257",
+  "platform": "shopify",
+  "product_id": "7489715306672",
+  "product_type": "",
+  "roaster_slug": "brewxcoffee",
+  "tags": [
+   "beans"
+  ],
+  "title": "Honduras Finca La Unica, Red Honey - Light Roast",
+  "url": "https://brewxcoffee.com/products/honduras-finca-la-unica-red-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "43243936055472"
+   }
+  ],
+  "vendor": "Brew X Coffee Roasting"
+ },
+ {
+  "body_hash": "f10b1faa22eecb70",
+  "first_seen": "2026-10-26",
+  "handle": "house-roast-colombian-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0529/9729/2208/files/UntitledProject-house_1.jpg?v=1762276421",
+  "platform": "shopify",
+  "product_id": "7589680480432",
+  "product_type": "",
+  "roaster_slug": "brewxcoffee",
+  "tags": [
+   "beans"
+  ],
+  "title": "House Roast, Colombian Blend, Washed - Medium Roast",
+  "url": "https://brewxcoffee.com/products/house-roast-colombian-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Whole Bean 1lb",
+    "variant_id": "43498970874032"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 12.0,
+    "title": "Ground 250g",
+    "variant_id": "43498970906800"
+   }
+  ],
+  "vendor": "Brew X Coffee Roasting"
+ },
+ {
+  "body_hash": "f5f6d331a93ba859",
+  "first_seen": "2026-10-26",
+  "handle": "condor-decaf-el-vergel-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0529/9729/2208/files/UntitledProject-DecafCan_1.jpg?v=1762276128",
+  "platform": "shopify",
+  "product_id": "7589700731056",
+  "product_type": "",
+  "roaster_slug": "brewxcoffee",
+  "tags": [
+   "beans"
+  ],
+  "title": "Condor Decaf El Vergel Estate, EA Sugarcane - Medium Roast",
+  "url": "https://brewxcoffee.com/products/condor-decaf-el-vergel-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.0,
+    "title": "Whole Bean",
+    "variant_id": "43498976051376"
+   }
+  ],
+  "vendor": "Brew X Coffee Roasting"
+ },
+ {
+  "body_hash": "b49eeedc39fd27e2",
+  "first_seen": "2026-10-26",
+  "handle": "marta-rubi",
+  "image": "https://cdn.shopify.com/s/files/1/0529/9729/2208/files/CustomCoffeeCan-marta.jpg?v=1768670422",
+  "platform": "shopify",
+  "product_id": "7999046844592",
+  "product_type": "",
+  "roaster_slug": "brewxcoffee",
+  "tags": [
+   "beans"
+  ],
+  "title": "Marta Rubi, Natural Anaerobic - Light Roast",
+  "url": "https://brewxcoffee.com/products/marta-rubi",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "44925495705776"
+   }
+  ],
+  "vendor": "Brew X Coffee Roasting"
+ },
+ {
+  "body_hash": "5c537a324f57091d",
+  "first_seen": "2026-10-26",
+  "handle": "montana-organic-honduras-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0529/9729/2208/files/CustomCoffeeCan-montana1.jpg?v=1768949950",
+  "platform": "shopify",
+  "product_id": "7999970771120",
+  "product_type": "",
+  "roaster_slug": "brewxcoffee",
+  "tags": [
+   "beans"
+  ],
+  "title": "Montana, Organic Honduras - Medium Roast",
+  "url": "https://brewxcoffee.com/products/montana-organic-honduras-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "44930066841776"
+   }
+  ],
+  "vendor": "Brew X Coffee Roasting"
+ }
+]

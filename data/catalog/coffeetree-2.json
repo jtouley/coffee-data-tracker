@@ -1,0 +1,944 @@
+[
+ {
+  "body_hash": "b6af3f805808ceb3",
+  "first_seen": "2026-10-26",
+  "handle": "spv8moy6q46tfs3q0wakej255w41d5",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e8230fe72aa99214c688456/1771955325033/",
+  "platform": "squarespace",
+  "product_id": "5e8230fe72aa99214c688456",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Colombia Abuelo",
+  "url": "https://coffeetree.store/coffee-beans/spv8moy6q46tfs3q0wakej255w41d5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Espresso)",
+    "variant_id": "24dca80b-9a53-4454-917d-8c226eac6ac3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.45,
+    "title": "5LB Bulk Whole Bean",
+    "variant_id": "4e854334-c45c-4be8-a744-ecc77a9e6735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Fine)",
+    "variant_id": "72a96d89-8f3d-4e04-8e62-8146677619e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Turkish)",
+    "variant_id": "83d5f034-75f4-491b-b5c8-d9bc748bf60d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Autodrip)",
+    "variant_id": "8fae3c19-5d01-4fab-b936-cd7f3b082cd3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Whole Bean",
+    "variant_id": "a9f9b3b4-c2cd-495d-b74a-b0bba8a00608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Drip)",
+    "variant_id": "aa64577a-2664-4529-b51d-17cda90b9d6c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Ground (Coarse)",
+    "variant_id": "bd0eb0f6-db58-48f6-9390-96f983a1c844"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8eaf0059567215de",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e839dfde7e8d95d0b033830/1771955323212/",
+  "platform": "squarespace",
+  "product_id": "5e839dfde7e8d95d0b033830",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://coffeetree.store/coffee-beans/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "032fcfce-c507-4a0a-8001-2b4d784ab1fb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "36745f11-78f1-49e6-bcf7-83bb8b18924c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.45,
+    "title": "5lb Bulk Whole Bean",
+    "variant_id": "41522629-3e05-421b-a0c7-a39d58cfb0af"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "56dd2b60-54d6-4647-98c8-d11d1c127db3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "572a99dc-28ee-4761-a93a-e5ff8f08e0cd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "a4fd306f-0a43-4f9c-8c3c-0d5298671780"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "bcd2de83-8905-483a-ad69-bd2c5d170f4a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "bf53ef94-fce0-4968-baeb-efe7fe002614"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e839e802bdce735b5f447c1/1771955323262/",
+  "platform": "squarespace",
+  "product_id": "5e839e802bdce735b5f447c1",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://coffeetree.store/coffee-beans/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "29fd80f6-9ce0-42e4-9b7f-6d3c0cc606fa"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "455ebd92-0527-4cfb-afb5-b72af0a5ca67"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "51468f1c-8ca0-4ac5-9003-a02295109756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "71598d2e-802b-4c73-9b8e-008cd9498edb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "71ad13fe-6d34-44d6-a594-5f6986619cd6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "cc60149e-803f-476b-965d-0e097bc391ed"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.95,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "cdc261b4-4c69-49ea-a490-b92ec3c64bc2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "ff52f709-1723-47c1-b8d8-79b590b59447"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6a17a89aa4e3dcc2",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-el-indio-1",
+  "image": "https://images.squarespace-cdn.com/content/v1/5bf1e93b50a54f7ad91384ea/be47caff-ff5d-446d-b40c-f33882c1a8fd/La+Minita.jpg",
+  "platform": "squarespace",
+  "product_id": "5e83a0331dd0bc2d0a42140a",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Costa Rica El Indio (Rain Forest Alliance Certified)",
+  "url": "https://coffeetree.store/coffee-beans/costa-rica-el-indio-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Espresso)",
+    "variant_id": "13b5089d-5284-4b8b-ae17-3a25a8bf6e2a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 71.95,
+    "title": "5lb. Bulk Whole Bean",
+    "variant_id": "32443e66-30c5-4a4f-82f7-0e885136ae80"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Autodrip)",
+    "variant_id": "38225bf8-4dfa-4c7e-b6b5-df4290ab1aad"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Fine)",
+    "variant_id": "48d02440-d6c1-4f29-ad00-afee1e9afb78"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Drip)",
+    "variant_id": "69787215-0958-4986-b05b-16010ce77cbc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Whole Bean",
+    "variant_id": "8afb6e8d-0636-4445-9646-4b2271fdca1f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Coarse)",
+    "variant_id": "ea8d6aa4-570f-47b0-9b61-bad144db02c8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz. Ground (Turkish)",
+    "variant_id": "f1e75a78-5131-457d-86cf-f05efef87861"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0fe6d5b4fcae2f0",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83a0d5f902371d425a4a9a/1771955324598/",
+  "platform": "squarespace",
+  "product_id": "5e83a0d5f902371d425a4a9a",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Vienna Roast La Minita (Rain Forest Allliance)",
+  "url": "https://coffeetree.store/coffee-beans/vienna-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "12ef09f0-89a5-431c-96f1-6a4fb7143b33"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "131af122-0b6b-478f-b784-f911736b690b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "383d362d-7c85-4cfb-8980-580865c821d8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "4a3ba1e6-219d-4fe2-a449-128b359069ad"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "4d3f48c9-4bd0-4fc5-aa46-03005c8da0d7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "6da4f0fe-94e4-4613-9379-e28fb68e61b2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "acede93a-92f9-4979-b788-96983b40f6ad"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.96,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "d987e4e8-10c7-4728-a715-b1beabcb8ead"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc1a922e882df64a",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-classico",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83a15b154ca00c36bc9c1a/1771950299415/",
+  "platform": "squarespace",
+  "product_id": "5e83a15b154ca00c36bc9c1a",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Espresso Classico",
+  "url": "https://coffeetree.store/coffee-beans/espresso-classico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "252590db-1cf5-42dd-be23-5100689a3cee"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.95,
+    "title": "5lb Bulk Whole Bean",
+    "variant_id": "6f29cd21-24ab-417f-94d3-57a0c86b2491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "7cbedd56-aef5-486f-85fb-0f4ac50c2a01"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "8248a697-0c8f-4ce7-97fb-a9f8d0eaa53d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "951dfa3e-3174-4b38-9d86-1d635c4b3e99"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "98445158-8bff-4118-bddd-3ab3fd0ee859"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "bd2661a0-bdde-4a27-a96a-c4ef3efc8b35"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "bec363b7-3653-4f1e-b668-70cee9c31508"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf59fe72bfd5e2ac",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83a3a47a45082de418dba0/1771955323194/",
+  "platform": "squarespace",
+  "product_id": "5e83a3a47a45082de418dba0",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Italian Roast",
+  "url": "https://coffeetree.store/coffee-beans/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "0a8ba30c-402d-4dcf-8373-9a831cf4fa0d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "2efa9a95-fbef-4f60-bde3-fd444ed066cf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "3cda20f5-99f6-4cbe-bd66-8dc518a1dfdb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "6f22bcfc-1db4-4221-9438-64cdba402b23"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "8c4ebde6-5d03-45bb-a415-701ea89c1a73"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "97fbee46-5a51-4f76-8a13-805c3cab9f45"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.45,
+    "title": "5LB Bulk Whole Bean",
+    "variant_id": "c0fa426a-3a03-4a45-8164-4a7e438c68a4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "f649fbff-d18a-44e5-bb36-1b6b520f42c3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09fb59c877ce87f4",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-minita-del-sol",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83a7c7e8df63239319a328/1788972363266/",
+  "platform": "squarespace",
+  "product_id": "5e83a7c7e8df63239319a328",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [
+   "Central America",
+   "Rain Forest Alliance"
+  ],
+  "title": "Costa Rica La Minita del Sol (Rain Forest Alliance Certified)",
+  "url": "https://coffeetree.store/coffee-beans/costa-rica-la-minita-del-sol",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground (Turkish)",
+    "variant_id": "079074cd-4b8e-48f6-b375-cd845879f6cd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz  Ground (Autodrip)",
+    "variant_id": "0b453e2c-df82-406d-88d9-4adf5320567b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.46,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "83c8ec42-a2f6-4c65-9dd1-9df6d01298cb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground (Espresso)",
+    "variant_id": "9cc0322e-ded1-4ad5-8cff-1fd6231103e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Whole Bean",
+    "variant_id": "be72c4b6-71ef-4c9b-b16d-adf3968f0c32"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground (Coarse)",
+    "variant_id": "c8f596c0-e1d0-451e-9f10-ca1fdfd70c95"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground (Drip)",
+    "variant_id": "d27d2579-4ecf-43f2-920c-335a8afc4927"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz Ground (Fine)",
+    "variant_id": "e17d2205-cfbd-48cd-ba6a-c0f6f2607725"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "32f4353383d00286",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-flor",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83ab61e7e8d95d0b06c68b/1771955324971/",
+  "platform": "squarespace",
+  "product_id": "5e83ab61e7e8d95d0b06c68b",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Guatemala La Flor",
+  "url": "https://coffeetree.store/coffee-beans/guatemala-la-flor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "05801563-3699-4b1a-9b08-8b9178c16e77"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "06fd77b0-1b2a-43cb-b84e-a85f3bf4ae93"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "1ccf8449-2c8d-42ad-9fe2-a06ed07f573e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "3657d04e-32f4-45aa-ab75-f0857246cc85"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "715f2222-e287-4d6e-930b-e316eeb28a9c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.95,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "8ec5b657-d7b9-4ac4-ae33-111c3a6b8885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "ce297042-fecf-4752-bb6b-a7342a84b13f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "f4650a2f-5e5f-4011-8c84-1001860af83c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e83abcef44bba1193585f6d/1771955323322/",
+  "platform": "squarespace",
+  "product_id": "5e83abcef44bba1193585f6d",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://coffeetree.store/coffee-beans/decaf-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "12620935-4484-4840-9072-9ceee82e91ee"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.95,
+    "title": "5LB Bulk Whole Bean",
+    "variant_id": "14b6abbc-2b86-4c06-b8fc-57bc389d8363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "2422e36f-39f9-42e1-8f1d-2662c4a6e022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "311d3550-e295-4d94-aaab-d5b85570974a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "32cc2d2e-69f0-4d08-9cba-0dcb32a0f6d7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "539a6142-b09e-40a7-9c5c-9454a40d08cc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "79d2a33f-63f5-4653-816b-98fba08c9efe"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "c69b4e3f-d542-40fe-a616-d1b14cc93aa2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-breakfast-blend",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e84a461a5dfdd3303f46821/1771955323278/",
+  "platform": "squarespace",
+  "product_id": "5e84a461a5dfdd3303f46821",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Decaf Breakfast Blend",
+  "url": "https://coffeetree.store/coffee-beans/decaf-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.95,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "14e1e682-90c1-4cb3-9593-f678985b6b08"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "3069415e-3f98-4c3a-8b36-7a613abfcdda"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "457e7a2f-8649-4926-a760-92d64874eaf5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "5a51bca6-4187-47d4-9e5b-cd99667bff5b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "a0c00a7b-f84f-4742-9635-d181757cd625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Coarse)",
+    "variant_id": "c933ada0-bd33-471d-a583-5458d2a5dc09"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "f16090c6-39d2-47b3-80cd-503ba2631abd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "f73fc9de-df46-401a-9637-8cb743e80374"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/5e9dce5cca3b0a7a61572346/1771951433524/",
+  "platform": "squarespace",
+  "product_id": "5e9dce5cca3b0a7a61572346",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Decaf Espresso",
+  "url": "https://coffeetree.store/coffee-beans/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Autodrip)",
+    "variant_id": "05ea98f2-4e6c-47fb-a954-cb9827ae8ef5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Whole Bean",
+    "variant_id": "594dd9e5-9645-424d-bc7a-eec4289a6eba"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Fine)",
+    "variant_id": "76c84627-1eaf-4d8e-b9fa-91e1da2937f7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.95,
+    "title": "5 lb Bulk Whole Bean",
+    "variant_id": "9e732c08-2cd7-4555-81f9-caeedf5e24e2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Drip)",
+    "variant_id": "d540fec7-ee11-47de-a8cd-145d25ddfa1f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Espresso)",
+    "variant_id": "dad7c51d-af77-4279-b00d-bcedc005a0c6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Turkish)",
+    "variant_id": "f73ddc60-d05d-46f8-8972-6c6fd10dbae8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz Bag Ground (Course)",
+    "variant_id": "fc0a6530-7341-48f3-9060-11872caed4da"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "caa08910b51b8140",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-melaku-clyt4-95wp4-rseyz-xftwp",
+  "image": "https://static1.squarespace.com/static/5bf1e93b50a54f7ad91384ea/5bf4af2240ec9ae6a2879073/67e179f3eea37b219a9ca440/1771955325048/",
+  "platform": "squarespace",
+  "product_id": "67e179f3eea37b219a9ca440",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Colombia Juan Dario Gomez Finca La Villa Anaerobic Washed Gesha",
+  "url": "https://coffeetree.store/coffee-beans/ethiopia-yirgacheffe-melaku-clyt4-95wp4-rseyz-xftwp",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.33,
+    "title": "",
+    "variant_id": "56a97072-4d5a-4f78-8e9f-174cfd6db567"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "caa08910b51b8140",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-melaku-clyt4-95wp4-t6822",
+  "image": "https://images.squarespace-cdn.com/content/v1/5bf1e93b50a54f7ad91384ea/7d40a371-0177-49c1-b222-c0de2d2fbc49/Bolivia.jpg",
+  "platform": "squarespace",
+  "product_id": "68093b838af8950a87b87ddc",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Bolivia Caravani Bio Arabica Fair Trade Organic",
+  "url": "https://coffeetree.store/coffee-beans/ethiopia-yirgacheffe-melaku-clyt4-95wp4-t6822",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.99,
+    "title": "",
+    "variant_id": "f6abee7f-19af-4d7b-9ea9-840f5c16dc08"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "caa08910b51b8140",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-melaku-clyt4-95wp4-t6822-3jhhe",
+  "image": "https://images.squarespace-cdn.com/content/v1/5bf1e93b50a54f7ad91384ea/5b8a0a35-be2d-43c8-ad00-1e7c572e210a/Colombia+2.jpg",
+  "platform": "squarespace",
+  "product_id": "68093c75fd24a7263e6ab586",
+  "product_type": "",
+  "roaster_slug": "coffeetree-2",
+  "tags": [],
+  "title": "Colombia Tolima Multicoop Regenerative Organic",
+  "url": "https://coffeetree.store/coffee-beans/ethiopia-yirgacheffe-melaku-clyt4-95wp4-t6822-3jhhe",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.99,
+    "title": "",
+    "variant_id": "49aa0aa2-9b19-485a-9132-168f424c1fa2"
+   }
+  ],
+  "vendor": ""
+ }
+]

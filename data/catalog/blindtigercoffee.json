@@ -1,0 +1,280 @@
+[
+ {
+  "body_hash": "aeb33fddcb444d5b",
+  "first_seen": "2026-10-26",
+  "handle": "blind-tiger-coffee-culture-quarterly-zinetapecoffee-summer-2015",
+  "image": "https://images.squarespace-cdn.com/content/v1/54453f62e4b0cad232dc7bcc/1429144545538-WHXJP5CFZ9HI1DV8U1XU/image-asset.jpeg",
+  "platform": "squarespace",
+  "product_id": "552effdde4b0bd2fafcdf104",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [],
+  "title": "BLIND TIGER [COFFEE & CULTURE] QUARTERLY (ZINE/TAPE/COFFEE) SUMMER 2015",
+  "url": "https://www.blindtigercoffee.com/coffee/blind-tiger-coffee-culture-quarterly-zinetapecoffee-summer-2015",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 46.0,
+    "title": "",
+    "variant_id": "c52bd79c-17a3-44b3-8147-828b6006c98e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d91d0deb6810b649",
+  "first_seen": "2026-10-26",
+  "handle": "happy-lamp",
+  "image": "https://static1.squarespace.com/static/54453f62e4b0cad232dc7bcc/54454030e4b0cad232dc7e6f/5ba2a939aa4a99f87a066baa/1787918626526/",
+  "platform": "squarespace",
+  "product_id": "5ba2a939aa4a99f87a066baa",
+  "product_type": "BAGS OF BEANS",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [
+   "BAGS OF BEANS"
+  ],
+  "title": "HAPPY LAMP BLEND | CARAMEL, ZESTY, FLORAL.",
+  "url": "https://www.blindtigercoffee.com/coffee/happy-lamp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "1/2 lbs",
+    "variant_id": "2c2d63cb-a007-49f7-a932-233733b43d61"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lbs",
+    "variant_id": "3c50902f-1e36-490d-88f4-ce98716ad6ba"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs",
+    "variant_id": "3f338299-1b9c-433b-b7d6-ae2fee769fa7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2af96c89767a6615",
+  "first_seen": "2026-10-26",
+  "handle": "stoop-sitter",
+  "image": "https://static1.squarespace.com/static/54453f62e4b0cad232dc7bcc/54454030e4b0cad232dc7e6f/5ba2ab5d4d7a9c749ff87884/1787918669227/",
+  "platform": "squarespace",
+  "product_id": "5ba2ab5d4d7a9c749ff87884",
+  "product_type": "BAGS OF BEANS",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [
+   "BAGS OF BEANS"
+  ],
+  "title": "STOOP SITTER BLEND | CHOCOLATE, COLA, PLUM.",
+  "url": "https://www.blindtigercoffee.com/coffee/stoop-sitter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs",
+    "variant_id": "24870409-268e-4d8f-bc31-6e69b51527c9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "1/2 lbs",
+    "variant_id": "bc1447f0-30eb-484a-8864-778ba3aa13f6"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lbs",
+    "variant_id": "d47fdc75-fc9a-4169-b257-8ed770a055c6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cb914cec14b506c1",
+  "first_seen": "2026-10-26",
+  "handle": "flavor-drinker",
+  "image": "https://static1.squarespace.com/static/54453f62e4b0cad232dc7bcc/54454030e4b0cad232dc7e6f/5ba2c764f950b72c07a0e569/1767901018910/",
+  "platform": "squarespace",
+  "product_id": "5ba2c764f950b72c07a0e569",
+  "product_type": "BAGS OF BEANS",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [
+   "BAGS OF BEANS"
+  ],
+  "title": "FLAVOR  DRINKER. COLOMBIA. DECAF | APPLE PIE, MALT CHOCOLATE, & CHERRY.",
+  "url": "https://www.blindtigercoffee.com/coffee/flavor-drinker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2 lbs",
+    "variant_id": "467278dd-52fe-4892-8ed5-98296145f005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 lbs",
+    "variant_id": "9a9d6b94-6356-4d30-b529-6e8aaafcf85c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.5,
+    "title": "1/2 lbs",
+    "variant_id": "b19f5608-ebb1-4a19-b46b-ec5d3379cf25"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8ed6656f55561bb",
+  "first_seen": "2026-10-26",
+  "handle": "barth-coffee-roaster-novo-cito-75kg",
+  "image": "https://images.squarespace-cdn.com/content/v1/54453f62e4b0cad232dc7bcc/6b064dd1-53d8-40b0-b876-0fa2719de68d/IMG_3953.JPG",
+  "platform": "squarespace",
+  "product_id": "697d1cb56504d0400fb0acc7",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [],
+  "title": "BARTH COFFEE ROASTER | NOVO CITO | 7.5KG",
+  "url": "https://www.blindtigercoffee.com/coffee/barth-coffee-roaster-novo-cito-75kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18000.0,
+    "title": "",
+    "variant_id": "14d7bf25-9ca4-47b2-857c-038325940974"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd77ff66cbeadd79",
+  "first_seen": "2026-10-26",
+  "handle": "alva-marina-alvarado-honduras-santa-barbara-blank-blank-and-blank",
+  "image": "https://images.squarespace-cdn.com/content/v1/54453f62e4b0cad232dc7bcc/67340da7-2a0d-4df8-9b0d-aa12e2619bd8/ALVA2+4x4.png",
+  "platform": "squarespace",
+  "product_id": "69bc6c02d92118301160d47a",
+  "product_type": "BAGS OF BEANS",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [
+   "BAGS OF BEANS"
+  ],
+  "title": "ALVA MARINA ALVARADO. HONDURAS. SANTA BARBARA | CRANBERRY LEMON CURD, TANGERINE, & HIBISCUS.",
+  "url": "https://www.blindtigercoffee.com/coffee/alva-marina-alvarado-honduras-santa-barbara-blank-blank-and-blank",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "23ee9355-dbea-4633-8589-d32a7c6c0c39"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.5,
+    "title": "1/2 lbs",
+    "variant_id": "41a1846d-8dc4-4d25-abfb-2ff4aef25292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lbs",
+    "variant_id": "d0e456a9-24aa-4cf7-bd81-b8bb285f4e7f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4bf314c4b4ec2b5e",
+  "first_seen": "2026-10-26",
+  "handle": "danche-ethiopia-gedeb-zone-blueberry-pineapple-kiwi-lemon-lime",
+  "image": "https://images.squarespace-cdn.com/content/v1/54453f62e4b0cad232dc7bcc/3fd21921-2820-4000-ab62-97ff813f9765/Danche+Natural+FRONT.png",
+  "platform": "squarespace",
+  "product_id": "6a6fddaa2863cf53bc50c222",
+  "product_type": "BAGS OF BEANS",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [
+   "BAGS OF BEANS"
+  ],
+  "title": "DANCHE. ETHIOPIA. GEDEB ZONE | BLUEBERRY, PINEAPPLE, KIWI, & PEACH.",
+  "url": "https://www.blindtigercoffee.com/coffee/danche-ethiopia-gedeb-zone-blueberry-pineapple-kiwi-lemon-lime",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "1/2 lbs",
+    "variant_id": "8c9515c9-31d5-48ae-93ef-11b3c7641668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lbs",
+    "variant_id": "b00e8fa8-db36-4c5d-b90a-db7b3d2e4c18"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 lbs",
+    "variant_id": "ea83ac8d-6543-4ea8-8bba-9e08e8402931"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c66aab5f4136a91c",
+  "first_seen": "2026-10-26",
+  "handle": "tzunwitz-guatemala-huehuetenango-blueberry-waffles-strawberry-nougat-pear",
+  "image": "https://images.squarespace-cdn.com/content/v1/54453f62e4b0cad232dc7bcc/56f8d262-855e-48f4-bef7-0db1740dce87/Tzunwitz+.png",
+  "platform": "squarespace",
+  "product_id": "6ac69da7ae48757ac41b0e6f",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffee",
+  "tags": [],
+  "title": "TZUNWITZ. GUATEMALA. HUEHUETENANGO | BLUEBERRY WAFFLES, STRAWBERRY NOUGAT, & PEAR.",
+  "url": "https://www.blindtigercoffee.com/coffee/tzunwitz-guatemala-huehuetenango-blueberry-waffles-strawberry-nougat-pear",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lbs",
+    "variant_id": "6abf226f-6c57-4290-a5a4-fdefaf522075"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "1/2 lbs",
+    "variant_id": "dfd255f1-fb20-4cd2-a1bf-a63746b2c808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lbs",
+    "variant_id": "eb6f992a-a80e-4d00-8e2e-6932f9ff5f2e"
+   }
+  ],
+  "vendor": ""
+ }
+]

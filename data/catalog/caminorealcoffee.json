@@ -1,0 +1,222 @@
+[
+ {
+  "body_hash": "c6c76eacad1d0762",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirg-z",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/07/YirgZ-Edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "25439",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [
+   "Altitude 1900 - 2000 M",
+   "Cultivar Heirloom",
+   "Grade 1",
+   "Process Washed",
+   "Various small producers",
+   "Yirgacheffe"
+  ],
+  "title": "Ethiopia Yirg Z",
+  "url": "https://www.caminorealcoffee.com/product/ethiopia-yirg-z/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Ethiopia Yirg Z",
+    "variant_id": "25439:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e902d2428c6c418",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-holong-batak",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/07/Sumatra-Edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "25452",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [
+   "Altitude 1500-1700M M",
+   "Cultivar typica",
+   "Lintong",
+   "Process Washed",
+   "Sumatra Dolok",
+   "Various small producers"
+  ],
+  "title": "Sumatra Holong Batak",
+  "url": "https://www.caminorealcoffee.com/product/sumatra-holong-batak/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Sumatra Holong Batak",
+    "variant_id": "25452:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b7320b3d7638765",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-fincas-mierisch",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/07/Nicaragua-Edit.jpg",
+  "platform": "woocommerce",
+  "product_id": "25520",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [
+   "Altitude - 1100-1300M",
+   "Cultivar - javanica",
+   "Farm - el limoncillo",
+   "Nicaragua Fincas Mierisch",
+   "Process Washed",
+   "Producer - mierisch family"
+  ],
+  "title": "Nicaragua Fincas Mierisch",
+  "url": "https://www.caminorealcoffee.com/product/nicaragua-fincas-mierisch/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Nicaragua Fincas Mierisch",
+    "variant_id": "25520:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a663c795e1262d6c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-cafa-rivense",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/02/Rivense-Product.jpg",
+  "platform": "woocommerce",
+  "product_id": "25528",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [
+   "Altitude - 1450 - 1500m",
+   "Costa Rica Cafa Rivense",
+   "Cultivar - Red cAtuai- caturra",
+   "Farm - EL Mango",
+   "Process - BLack Honey",
+   "Producer - UreÑa Rojas Family"
+  ],
+  "title": "Costa Rica Cafe Rivense",
+  "url": "https://www.caminorealcoffee.com/product/costa-rica-cafa-rivense/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Costa Rica Cafe Rivense",
+    "variant_id": "25528:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e191820c247b6b86",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-santa-maria",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/07/Colombia-SM.jpg",
+  "platform": "woocommerce",
+  "product_id": "25584",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [
+   "Altitude - 1000 - 1150m",
+   "Brazil Força Cafe",
+   "Cultivar - yellow bourbon",
+   "Farm - Sao Felix",
+   "Process - Semi Washed",
+   "Producer - Joaquim carmelito",
+   "Roast - Medium"
+  ],
+  "title": "Colombia Santa Maria",
+  "url": "https://www.caminorealcoffee.com/product/colombia-santa-maria/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Colombia Santa Maria",
+    "variant_id": "25584:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7106c041d8f77809",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-el-manzano-2",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/08/Manzano-Product.jpg",
+  "platform": "woocommerce",
+  "product_id": "25612",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [],
+  "title": "El Salvador El Manzano",
+  "url": "https://www.caminorealcoffee.com/product/el-salvador-el-manzano-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "El Salvador El Manzano",
+    "variant_id": "25612:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1efba65766de57fe",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-woolly-rhino",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/09/Sumatra-Woolly-Rhino.jpg",
+  "platform": "woocommerce",
+  "product_id": "25632",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [],
+  "title": "Sumatra Woolly Rhino",
+  "url": "https://www.caminorealcoffee.com/product/sumatra-woolly-rhino/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Sumatra Woolly Rhino",
+    "variant_id": "25632:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "077b47cd1af61c5f",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-cumbre",
+  "image": "https://www.caminorealcoffee.com/wp-content/uploads/2018/02/Cumbre-Product.jpg",
+  "platform": "woocommerce",
+  "product_id": "25923",
+  "product_type": "variable",
+  "roaster_slug": "caminorealcoffee",
+  "tags": [],
+  "title": "El Salvador La Cumbre",
+  "url": "https://www.caminorealcoffee.com/product/el-salvador-la-cumbre/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "El Salvador La Cumbre",
+    "variant_id": "25923:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

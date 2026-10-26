@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "0978ac91965737af",
+  "first_seen": "2026-10-26",
+  "handle": "emerald-sun",
+  "image": "https://images.squarespace-cdn.com/content/v1/62adfc55503ac220b3e859fd/0349152a-48be-4048-b00d-4de7d11fab0e/between+rivers.png",
+  "platform": "squarespace",
+  "product_id": "6508554037745c76accca9d6",
+  "product_type": "",
+  "roaster_slug": "omiescoffee",
+  "tags": [],
+  "title": "Between Rivers, 12 oz",
+  "url": "https://www.omiescoffee.com/coffee-roastery-merchandise/p/emerald-sun",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "b386d8c8-668c-4587-a3c8-e7f4d3594d4a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c207a99ebf8c70e",
+  "first_seen": "2026-10-26",
+  "handle": "honey-im-home-12-oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/62adfc55503ac220b3e859fd/e5b2078e-630d-41b0-87d4-abc372a03411/tiny+cherries.png",
+  "platform": "squarespace",
+  "product_id": "6508559137745c76acccaa12",
+  "product_type": "",
+  "roaster_slug": "omiescoffee",
+  "tags": [],
+  "title": "Tiny Cherries, 12 oz",
+  "url": "https://www.omiescoffee.com/coffee-roastery-merchandise/p/honey-im-home-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0c2cc795-72ce-4dce-9032-9bf7d1daa029"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ef92464da13eea4d",
+  "first_seen": "2026-10-26",
+  "handle": "omies-house-blend-12-oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/62adfc55503ac220b3e859fd/18f26c26-380f-4902-be89-8120273c632d/house+blend.png",
+  "platform": "squarespace",
+  "product_id": "650857349b7df46691c36b15",
+  "product_type": "",
+  "roaster_slug": "omiescoffee",
+  "tags": [],
+  "title": "Omie's House Blend, 12 oz",
+  "url": "https://www.omiescoffee.com/coffee-roastery-merchandise/p/omies-house-blend-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "b4201c72-cedf-4947-bcb5-fe1c4c386649"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc305ac0089026a2",
+  "first_seen": "2026-10-26",
+  "handle": "figgy-pudding-12-oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/62adfc55503ac220b3e859fd/9fcf7860-5ef2-4dea-8442-fc87f3f842ed/figgy+pudding.png",
+  "platform": "squarespace",
+  "product_id": "68caaa0b9f62a20a3fe204da",
+  "product_type": "",
+  "roaster_slug": "omiescoffee",
+  "tags": [],
+  "title": "Figgy Pudding, 12 oz",
+  "url": "https://www.omiescoffee.com/coffee-roastery-merchandise/p/figgy-pudding-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.5,
+    "title": "",
+    "variant_id": "f1b5c188-75f7-402e-8e8e-28becb4ca494"
+   }
+  ],
+  "vendor": ""
+ }
+]

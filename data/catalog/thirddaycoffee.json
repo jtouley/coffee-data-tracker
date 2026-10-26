@@ -1,0 +1,1540 @@
+[
+ {
+  "body_hash": "ac22ed0021342d8c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Brazil_Cerrado.jpg?v=1683231522",
+  "platform": "shopify",
+  "product_id": "5664540000410",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "brazil",
+   "coffee",
+   "espresso",
+   "natural",
+   "single origin",
+   "south america"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://www.thirddaycoffee.com/products/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35918796030106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35918796095642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35918796128410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35918796193946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35918796226714"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465384591514"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465384624282"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465384657050"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465384689818"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "4ffc9d029962b547",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/files/12oz_Ethiopia_Yirgacheffe.jpg?v=1683231572",
+  "platform": "shopify",
+  "product_id": "5667033120922",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "africa",
+   "berry",
+   "black tea",
+   "citrus",
+   "coffee",
+   "espresso",
+   "ethiopia",
+   "fruit",
+   "single origin",
+   "washed",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://www.thirddaycoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35930978943130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35930978975898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35930979008666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35930979041434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35930979074202"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465411788954"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465411821722"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465411854490"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465411887258"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "7493f11f61fa0351",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Brazil_Mogiana.jpg?v=1683231526",
+  "platform": "shopify",
+  "product_id": "5667220488346",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "apple",
+   "brazil",
+   "chocolate",
+   "coffee",
+   "natural",
+   "nuts",
+   "single origin",
+   "south america"
+  ],
+  "title": "Brazil Mogiana",
+  "url": "https://www.thirddaycoffee.com/products/brazil-mogiana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35932010250394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35932010283162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35932010315930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35932010348698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35932010381466"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465390981274"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465391014042"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465391046810"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465391079578"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "86f33df1df435199",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-nahuala",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Guatemala_Nahuala.jpg?v=1683231575",
+  "platform": "shopify",
+  "product_id": "5671146487962",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "berry",
+   "central america",
+   "chocolate",
+   "coffee",
+   "fairtrade",
+   "fruit",
+   "guatemala",
+   "organic",
+   "single origin",
+   "washed"
+  ],
+  "title": "Guatemala Nahuala",
+  "url": "https://www.thirddaycoffee.com/products/guatemala-nahuala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35952123445402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35952123478170"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35952123510938"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35952123543706"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35952123576474"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465414213786"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465414246554"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465414279322"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465414312090"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "26a3f6bd691c8dff",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Honduras_Organic.jpg?v=1683231592",
+  "platform": "shopify",
+  "product_id": "5671181713562",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium-Dark",
+   "central america",
+   "chocolate",
+   "citrus",
+   "coffee",
+   "fairtrade",
+   "fruit",
+   "honduras",
+   "natural",
+   "organic",
+   "single origin",
+   "washed"
+  ],
+  "title": "Honduras Organic",
+  "url": "https://www.thirddaycoffee.com/products/honduras-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35952322150554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35952322183322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35952322216090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35952322248858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.14,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35952322281626"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465423978650"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465424011418"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465424044186"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465424076954"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "357604c7b100b8b9",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Sumatra_Aceh.jpg?v=1711549500",
+  "platform": "shopify",
+  "product_id": "5671216840858",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Dark",
+   "black cherry",
+   "chocolate",
+   "coffee",
+   "fairtrade",
+   "fruit",
+   "indonesia",
+   "organic",
+   "papaya",
+   "single origin",
+   "sumatra",
+   "tobacco",
+   "washed"
+  ],
+  "title": "Sumatra Aceh",
+  "url": "https://www.thirddaycoffee.com/products/sumatra-aceh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35952440639642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35952440672410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35952440705178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35952440737946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35952440770714"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465429778586"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465429811354"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465429844122"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465429876890"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "753e6e049876b40c",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Mexico_Organic_Decaf.jpg?v=1683231603",
+  "platform": "shopify",
+  "product_id": "5671277396122",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "apple",
+   "brown sugar",
+   "central america",
+   "chocolate",
+   "coffee",
+   "decaf",
+   "fairtrade",
+   "fruit",
+   "lemon",
+   "mexico",
+   "organic",
+   "single origin",
+   "washed"
+  ],
+  "title": "Mexico Organic Decaf",
+  "url": "https://www.thirddaycoffee.com/products/mexico-organic-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35952707666074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35952707698842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35952707731610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35952707764378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35952707797146"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465428304026"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465428336794"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465428369562"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465428402330"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "fbd9d5e34581f18e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Colombia_Supremo.jpg?v=1683231540",
+  "platform": "shopify",
+  "product_id": "5671862599834",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "chocolate",
+   "coffee",
+   "colombia",
+   "fruit",
+   "single origin",
+   "south america",
+   "washed"
+  ],
+  "title": "Colombia Supremo",
+  "url": "https://www.thirddaycoffee.com/products/colombia-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35955095306394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35955095339162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35955095371930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35955095404698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35955095437466"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465405694106"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465405726874"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465405759642"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465405792410"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "f4a6e51cf15ba549",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-swisswater-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Colombia_Supremo_Decaf.jpg?v=1683231558",
+  "platform": "shopify",
+  "product_id": "5671888158874",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "apple",
+   "caramel",
+   "chocolate",
+   "coffee",
+   "colombia",
+   "decaf",
+   "fruit",
+   "single origin",
+   "south america",
+   "washed"
+  ],
+  "title": "Colombia Supremo Swiss Water Decaf",
+  "url": "https://www.thirddaycoffee.com/products/colombia-swisswater-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35955192823962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35955192856730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35955192889498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35955192922266"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35955192955034"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465410248858"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465410281626"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465410314394"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465410347162"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "a75eec2b6963629f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Costa_Rica_Terrazu.jpg?v=1683231561",
+  "platform": "shopify",
+  "product_id": "5671938719898",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Dark",
+   "central america",
+   "chocolate",
+   "coffee",
+   "costa rica",
+   "espresso",
+   "fruit",
+   "nuts",
+   "single origin",
+   "vanilla",
+   "washed"
+  ],
+  "title": "Costa Rica Tarrazú",
+  "url": "https://www.thirddaycoffee.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.8,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "35955341852826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.8,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "35955341918362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.8,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "35955341951130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.8,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "35955341983898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "35955342016666"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465410707610"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465410740378"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465410773146"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465410805914"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "279b1fecc9b895cb",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-muranga-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Kenya_Murang_aAA.jpg?v=1683231599",
+  "platform": "shopify",
+  "product_id": "5706428612762",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Light-Medium",
+   "africa",
+   "brown sugar",
+   "coffee",
+   "fruit",
+   "grapefruit",
+   "kenya",
+   "peach",
+   "single origin",
+   "washed"
+  ],
+  "title": "Kenya Murang'a AA",
+  "url": "https://www.thirddaycoffee.com/products/kenya-muranga-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "36096085393562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "36096085426330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "36096085459098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.25,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "36096085491866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "36096085524634"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465426337946"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465426370714"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465426403482"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465426436250"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "ecd9fe153aeced49",
+  "first_seen": "2026-10-26",
+  "handle": "half-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Half_Caf_Blend.jpg?v=1683231592",
+  "platform": "shopify",
+  "product_id": "5926029557914",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "apple",
+   "caramel",
+   "chocolate",
+   "colombia",
+   "decaf",
+   "fruit",
+   "natural",
+   "south america",
+   "washed"
+  ],
+  "title": "Half-Caf Blend",
+  "url": "https://www.thirddaycoffee.com/products/half-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.9,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "37051325448346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.9,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "37051325481114"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.9,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "37051325513882"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.9,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "37051325546650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 74.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "37051325579418"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465420931226"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465420963994"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465420996762"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465421029530"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "d46a190843221f1d",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Breakfast_Blend.jpg?v=1683231535",
+  "platform": "shopify",
+  "product_id": "6176780812442",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Light-Medium",
+   "brazil",
+   "breakfast",
+   "central america",
+   "coffee",
+   "espresso",
+   "mexico",
+   "natural",
+   "south america",
+   "washed"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.thirddaycoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "37953203077274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "37953203110042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "37953203142810"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "37953203175578"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "37953203208346"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465398911130"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465398943898"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465398976666"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465399009434"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "75621ecc6c983a28",
+  "first_seen": "2026-10-26",
+  "handle": "black-lab-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Black_Lab_Espresso.jpg?v=1683231519",
+  "platform": "shopify",
+  "product_id": "6692433330330",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium-Dark",
+   "brazil",
+   "chocolate",
+   "coffee",
+   "espresso",
+   "fruit",
+   "natural",
+   "south america",
+   "washed"
+  ],
+  "title": "Black Lab Espresso",
+  "url": "https://www.thirddaycoffee.com/products/black-lab-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39712937574554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "39712937607322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "39712937640090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "39712937672858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "39712937705626"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465369387162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465369419930"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465369452698"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465369485466"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "aa0e9201ce4d8b20",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_House_Blend.jpg?v=1683231596",
+  "platform": "shopify",
+  "product_id": "7192798691482",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "blend",
+   "brazil",
+   "central america",
+   "coffee",
+   "ethiopia",
+   "guatemala",
+   "honduras",
+   "mexico",
+   "washed"
+  ],
+  "title": "House Blend",
+  "url": "https://www.thirddaycoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.85,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41446437257370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.85,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "41446437290138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.85,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "41446437322906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.85,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "41446437355674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41446437421210"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465425518746"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465425551514"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465425584282"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465425617050"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "8df6ae16c42c5a06",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-mogiana-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Brazil_Mogiana_Decaf.jpg?v=1683231529",
+  "platform": "shopify",
+  "product_id": "7322341867674",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Medium",
+   "brazil",
+   "chocolate",
+   "coffee",
+   "decaf",
+   "natural",
+   "nuts",
+   "single origin",
+   "south america"
+  ],
+  "title": "Brazil Mogiana Decaf",
+  "url": "https://www.thirddaycoffee.com/products/brazil-mogiana-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41920728465562"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "41920728498330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "41920728531098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.99,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "41920728563866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.74,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41920728596634"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465393864858"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465393897626"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465393963162"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465394028698"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ },
+ {
+  "body_hash": "6a8f38d2370c80a7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0469/3370/4858/products/12oz_Ethiopia_Sidamo_Guji.jpg?v=1683231568",
+  "platform": "shopify",
+  "product_id": "7322394755226",
+  "product_type": "Coffee",
+  "roaster_slug": "thirddaycoffee",
+  "tags": [
+   "Light-Medium",
+   "africa",
+   "berry",
+   "coffee",
+   "dark chocolate",
+   "ethiopia",
+   "fairtrade",
+   "graham cracker",
+   "natural",
+   "sidamo",
+   "single origin",
+   "strawberry"
+  ],
+  "title": "Ethiopia Sidamo Guji",
+  "url": "https://www.thirddaycoffee.com/products/ethiopia-sidamo-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41921007812762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - Drip",
+    "variant_id": "41921007845530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - Espresso",
+    "variant_id": "41921007878298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.45,
+    "title": "12 oz / Ground - French Press",
+    "variant_id": "41921007911066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.24,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41921007943834"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Whole Bean",
+    "variant_id": "43465411362970"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Drip",
+    "variant_id": "43465411395738"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - Espresso",
+    "variant_id": "43465411428506"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 4.79,
+    "title": "4 oz / Ground - French Press",
+    "variant_id": "43465411461274"
+   }
+  ],
+  "vendor": "Third Day Coffee Roasters"
+ }
+]

@@ -1,0 +1,248 @@
+[
+ {
+  "body_hash": "6c1f8a8e2b5cddaf",
+  "first_seen": "2026-10-26",
+  "handle": "whole-bean-italian-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/ESPRESSOWEB_29e504a0-7e57-4423-813a-8251ef6c9029.png?v=1629557354",
+  "platform": "shopify",
+  "product_id": "6231269277875",
+  "product_type": "Espresso Beans",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "WHOLE BEAN",
+   "sleeve_1 kg",
+   "specials"
+  ],
+  "title": "35 Year Anniversary Italian Blend - 2.lb",
+  "url": "https://forzacoffee.co/products/whole-bean-italian-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 36.0,
+    "title": "1kg",
+    "variant_id": "39291662827699"
+   }
+  ],
+  "vendor": "Espresso Beans"
+ },
+ {
+  "body_hash": "3c62f39d45f9a4f2",
+  "first_seen": "2026-10-26",
+  "handle": "organic-colombian-ground-10pk",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/ORGANIC_WEB_4a5b4816-4c82-4143-8dd9-2bc6471fb2c0.png?v=1633183142",
+  "platform": "shopify",
+  "product_id": "6750532501683",
+  "product_type": "Colombian Ground",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Organic Colombian Ground -12oz",
+  "url": "https://forzacoffee.co/products/organic-colombian-ground-10pk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 15.99,
+    "title": "1 bag",
+    "variant_id": "40425782247603"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.89,
+    "title": "3 bags",
+    "variant_id": "40425782280371"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.99,
+    "title": "5 bags",
+    "variant_id": "40425782313139"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ },
+ {
+  "body_hash": "1c9f0f3bf4b716dc",
+  "first_seen": "2026-10-26",
+  "handle": "traditional-colombian-ground-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/COLOMBIANGROUNDWEB.png?v=1633183176",
+  "platform": "shopify",
+  "product_id": "6750536401075",
+  "product_type": "Colombian Ground",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Traditional Colombian Ground  -12oz",
+  "url": "https://forzacoffee.co/products/traditional-colombian-ground-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "1 bag",
+    "variant_id": "40430518829235"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.99,
+    "title": "3 bags",
+    "variant_id": "40430518862003"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 68.99,
+    "title": "5 bags",
+    "variant_id": "40430518894771"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ },
+ {
+  "body_hash": "48f74ba5fb216865",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian-ground-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/DECAFCOLOMBIANWEB_925557de-ddd7-413e-8a27-bee743a1a236.png?v=1633183012",
+  "platform": "shopify",
+  "product_id": "6750540431539",
+  "product_type": "Colombian Ground",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "Ground",
+   "shop"
+  ],
+  "title": "Decaf Colombian Ground - 12oz",
+  "url": "https://forzacoffee.co/products/decaf-colombian-ground-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "1 bag",
+    "variant_id": "40425757278387"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.99,
+    "title": "3 bags",
+    "variant_id": "40425757311155"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "5 bags",
+    "variant_id": "40425757343923"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ },
+ {
+  "body_hash": "30e829384f25c1ef",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-ground-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/DECAFESPGROUNDWEB.png?v=1633183038",
+  "platform": "shopify",
+  "product_id": "6750543904947",
+  "product_type": "Espresso Ground",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Decaf Espresso Ground - 12oz",
+  "url": "https://forzacoffee.co/products/decaf-espresso-ground-12oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "1 bag",
+    "variant_id": "40425763635379"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 36.99,
+    "title": "3 bags",
+    "variant_id": "40425763668147"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 69.99,
+    "title": "5 bags",
+    "variant_id": "40425763700915"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ },
+ {
+  "body_hash": "f6d66e4241a81d29",
+  "first_seen": "2026-10-26",
+  "handle": "traditional-espresso-ground-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0534/4487/0323/products/ESPRGROUNDWEB.png?v=1633183212",
+  "platform": "shopify",
+  "product_id": "6750546493619",
+  "product_type": "Espresso Ground",
+  "roaster_slug": "forzacoffee",
+  "tags": [
+   "Ground"
+  ],
+  "title": "Traditional Espresso Ground - 12oz",
+  "url": "https://forzacoffee.co/products/traditional-espresso-ground-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 408,
+    "price_usd": 14.99,
+    "title": "1 bag",
+    "variant_id": "40430537638067"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 38.99,
+    "title": "3 bags",
+    "variant_id": "40430537670835"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.99,
+    "title": "5 bags",
+    "variant_id": "40430537703603"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ },
+ {
+  "body_hash": "9afcecff58fe7928",
+  "first_seen": "2026-10-26",
+  "handle": "traditional-espresso-beans-2lb",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "6750551474355",
+  "product_type": "Espresso Beans",
+  "roaster_slug": "forzacoffee",
+  "tags": [],
+  "title": "Traditional Espresso Beans - 2lb",
+  "url": "https://forzacoffee.co/products/traditional-espresso-beans-2lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 29.99,
+    "title": "Default Title",
+    "variant_id": "40019479167155"
+   }
+  ],
+  "vendor": "Forza Coffee Co."
+ }
+]

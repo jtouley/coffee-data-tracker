@@ -1,0 +1,4883 @@
+[
+ {
+  "body_hash": "e472b7282120a42b",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/13.jpg",
+  "platform": "woocommerce",
+  "product_id": "10000",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Mocha Java” Blend",
+  "url": "https://lavantacoffee.com/product/mocha-java-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "10000:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "10000:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "10000:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "10000:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "10000:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "10000:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10000:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6813fe8c9ef0d420",
+  "first_seen": "2026-10-26",
+  "handle": "457-decaf-turbo",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/12.jpg",
+  "platform": "woocommerce",
+  "product_id": "10212",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“457 Decaf Turbo” Blend",
+  "url": "https://lavantacoffee.com/product/457-decaf-turbo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "10212:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "10212:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "10212:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "10212:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "10212:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "10212:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10212:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0c0792e232d4882d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/11.jpg",
+  "platform": "woocommerce",
+  "product_id": "10297",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://lavantacoffee.com/product/brazil-cerrado-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "10297:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "10297:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "10297:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "10297:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "10297:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "10297:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10297:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "243a4cf0717eab83",
+  "first_seen": "2026-10-26",
+  "handle": "it-takes-two-1-2-caffeine-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/10.jpg",
+  "platform": "woocommerce",
+  "product_id": "10459",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“It Takes Two” 1/2 Caffeine Blend",
+  "url": "https://lavantacoffee.com/product/it-takes-two-1-2-caffeine-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.49,
+    "title": "12oz",
+    "variant_id": "10459:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1lb",
+    "variant_id": "10459:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.49,
+    "title": "2lbs",
+    "variant_id": "10459:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.49,
+    "title": "3lbs",
+    "variant_id": "10459:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.49,
+    "title": "4lbs",
+    "variant_id": "10459:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs",
+    "variant_id": "10459:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10459:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3731aa33672c0851",
+  "first_seen": "2026-10-26",
+  "handle": "bali-paradise-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/9.jpg",
+  "platform": "woocommerce",
+  "product_id": "10540",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Bali Paradise",
+  "url": "https://lavantacoffee.com/product/bali-paradise-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "10540:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lbs",
+    "variant_id": "10540:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "10540:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "10540:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "10540:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "10540:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10540:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5055e88978e9a330",
+  "first_seen": "2026-10-26",
+  "handle": "peru-shb-ep-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/8.jpg",
+  "platform": "woocommerce",
+  "product_id": "10625",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Peru",
+  "url": "https://lavantacoffee.com/product/peru-shb-ep-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "10625:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "10625:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "10625:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "10625:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "10625:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "10625:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10625:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "97f49cc5bacbb929",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-guatemala-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/7.jpg",
+  "platform": "woocommerce",
+  "product_id": "10792",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Decaf Guatemala",
+  "url": "https://lavantacoffee.com/product/decaf-guatemala-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.49,
+    "title": "12oz",
+    "variant_id": "10792:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1lb",
+    "variant_id": "10792:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.49,
+    "title": "2lbs",
+    "variant_id": "10792:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.49,
+    "title": "3lbs",
+    "variant_id": "10792:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.49,
+    "title": "4lbs",
+    "variant_id": "10792:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs",
+    "variant_id": "10792:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10792:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6b7b34d9ee3d8728",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/6.jpg",
+  "platform": "woocommerce",
+  "product_id": "10959",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Decaf Sumatra",
+  "url": "https://lavantacoffee.com/product/decaf-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.49,
+    "title": "12oz",
+    "variant_id": "10959:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1lb",
+    "variant_id": "10959:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.49,
+    "title": "2lbs",
+    "variant_id": "10959:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.49,
+    "title": "3lbs",
+    "variant_id": "10959:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.49,
+    "title": "4lbs",
+    "variant_id": "10959:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs",
+    "variant_id": "10959:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "10959:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b9733fb545daad5e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/5-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "11129",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Decaf Brazil",
+  "url": "https://lavantacoffee.com/product/decaf-brazil-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.49,
+    "title": "12oz",
+    "variant_id": "11129:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1lb",
+    "variant_id": "11129:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.49,
+    "title": "2lbs",
+    "variant_id": "11129:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.49,
+    "title": "3lbs",
+    "variant_id": "11129:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.49,
+    "title": "4lbs",
+    "variant_id": "11129:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs",
+    "variant_id": "11129:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "11129:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bfb71e9d91eb4741",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/4-18.jpg",
+  "platform": "woocommerce",
+  "product_id": "11211",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Breakfast” Blend",
+  "url": "https://lavantacoffee.com/product/breakfast-blend-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "11211:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "11211:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "11211:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "11211:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "11211:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "11211:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "11211:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf83c57b37ea379d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/2-21.jpg",
+  "platform": "woocommerce",
+  "product_id": "11296",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Espresso” Blend",
+  "url": "https://lavantacoffee.com/product/espresso-blend-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "11296:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "11296:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "11296:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "11296:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "11296:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "11296:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "11296:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3863d853aa03bedb",
+  "first_seen": "2026-10-26",
+  "handle": "roast-masters-specialty-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/3-20.jpg",
+  "platform": "woocommerce",
+  "product_id": "11470",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Roast Master’s Specialty” Blend",
+  "url": "https://lavantacoffee.com/product/roast-masters-specialty-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "11470:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "11470:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "11470:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "11470:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "11470:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "11470:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "11470:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0aa1805123402452",
+  "first_seen": "2026-10-26",
+  "handle": "black-stallion-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/1-5.jpg",
+  "platform": "woocommerce",
+  "product_id": "11887",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Black Stallion” Blend",
+  "url": "https://lavantacoffee.com/product/black-stallion-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "11887:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "11887:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "11887:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "11887:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "11887:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "11887:5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "11887:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed70fe6f00cf03e7",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-sigri-estate",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/19.jpg",
+  "platform": "woocommerce",
+  "product_id": "1217",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://lavantacoffee.com/product/papua-new-guinea-sigri-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "1217:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "1217:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "1217:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "1217:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "1217:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "1217:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "1217:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "10f1760b0b7890cb",
+  "first_seen": "2026-10-26",
+  "handle": "india-monsooned-malabar-aa",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/32.jpg",
+  "platform": "woocommerce",
+  "product_id": "1391",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "India Monsooned Malabar",
+  "url": "https://lavantacoffee.com/product/india-monsooned-malabar-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "1391:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "1391:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "1391:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "1391:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "1391:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "1391:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "1391:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "471b076148eee88c",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-beneficias-shg-ep-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/24.jpg",
+  "platform": "woocommerce",
+  "product_id": "1447",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Honduras Beneficias",
+  "url": "https://lavantacoffee.com/product/honduras-beneficias-shg-ep-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "1447:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "1447:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "1447:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "1447:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "1447:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "1447:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "1447:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f37eba90cfc09193",
+  "first_seen": "2026-10-26",
+  "handle": "457-turbo-blend-regular-or-decaf",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7014.jpg",
+  "platform": "woocommerce",
+  "product_id": "15341",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“457 Turbo” Blend Regular or Decaf coffee",
+  "url": "https://lavantacoffee.com/product/457-turbo-blend-regular-or-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "15341:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "15341:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "15341:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "15341:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "15341:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d9f73822e0d0a39c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/20.jpg",
+  "platform": "woocommerce",
+  "product_id": "1563",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://lavantacoffee.com/product/guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "1563:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "1563:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "1563:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "1563:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "1563:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "1563:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "1563:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e89a1c059daac523",
+  "first_seen": "2026-10-26",
+  "handle": "2-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2022/11/37.jpg",
+  "platform": "woocommerce",
+  "product_id": "16953",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [],
+  "title": "2 oz 100% Kopi Luwak Arabica Coffee With Certificate of Authenticity",
+  "url": "https://lavantacoffee.com/product/2-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 29.99,
+    "title": "2 oz 100% Kopi Luwak Arabica Coffee With Certificate of Authenticity",
+    "variant_id": "16953:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6008cbbe5f9952a5",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-shg",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/25.jpg",
+  "platform": "woocommerce",
+  "product_id": "1864",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Nicaragua Jinotega",
+  "url": "https://lavantacoffee.com/product/nicaragua-jinotega-shg/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "1864:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "1864:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "1864:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "1864:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "1864:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "1864:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "1864:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d720d203da4929a",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-malawi-mzuzu",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/31.jpg",
+  "platform": "woocommerce",
+  "product_id": "2009",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Malawi Mzuzu",
+  "url": "https://lavantacoffee.com/product/fair-trade-malawi-mzuzu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "2009:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "2009:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "2009:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "2009:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "2009:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "2009:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "2009:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f76cd81267ad2160",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-of-the-month-club",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2025/07/COFFEE-PICTURES-5.jpg",
+  "platform": "woocommerce",
+  "product_id": "20175",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee",
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "Coffee of the Month Club",
+  "url": "https://lavantacoffee.com/product/coffee-of-the-month-club/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.99,
+    "title": "2lbs",
+    "variant_id": "20175:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 35.99,
+    "title": "5lbs",
+    "variant_id": "20175:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1d5298e675843da2",
+  "first_seen": "2026-10-26",
+  "handle": "jet-fuel-highly-caffeinated-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7064.jpg",
+  "platform": "woocommerce",
+  "product_id": "2100",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Jet Fuel” Highly Caffeinated Blend",
+  "url": "https://lavantacoffee.com/product/jet-fuel-highly-caffeinated-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "2100:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "2100:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "2100:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "2100:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "2100:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfa050b90f094608",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-peaberry-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p7-7.jpg",
+  "platform": "woocommerce",
+  "product_id": "2158",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Sumatra Peaberry",
+  "url": "https://lavantacoffee.com/product/sumatra-peaberry-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "2158:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "2158:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "2158:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "2158:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "2158:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0d54bc9b6f1309b",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-white-eagle-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6998.jpg",
+  "platform": "woocommerce",
+  "product_id": "2182",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Sulawesi Toraja “White Eagle”",
+  "url": "https://lavantacoffee.com/product/sulawesi-toraja-white-eagle-2/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "2182:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "2182:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "2182:2"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "2182:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "2182:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1966ea740d51caf8",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p11-8.jpg",
+  "platform": "woocommerce",
+  "product_id": "22780",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Flavored Coffee"
+  ],
+  "title": "FLAVORED COFFEE",
+  "url": "https://lavantacoffee.com/product/flavored-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb",
+    "variant_id": "22780:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.99,
+    "title": "2lbs",
+    "variant_id": "22780:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 23.99,
+    "title": "3lbs",
+    "variant_id": "22780:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 23.99,
+    "title": "4lbs",
+    "variant_id": "22780:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.99,
+    "title": "5lbs",
+    "variant_id": "22780:4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "12oz",
+    "variant_id": "22780:5"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.99,
+    "title": "2lbs",
+    "variant_id": "22780:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d4cc905cce58b285",
+  "first_seen": "2026-10-26",
+  "handle": "kopi-luwak-arabica-coffee-with-certificate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2022/11/37.jpg",
+  "platform": "woocommerce",
+  "product_id": "22957",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "100% Kopi Luwak Arabica Coffee",
+  "url": "https://lavantacoffee.com/product/kopi-luwak-arabica-coffee-with-certificate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 29.99,
+    "title": "2oz",
+    "variant_id": "22957:0"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 29.99,
+    "title": "4oz",
+    "variant_id": "22957:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 29.99,
+    "title": "8oz",
+    "variant_id": "22957:2"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 29.99,
+    "title": "16oz",
+    "variant_id": "22957:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bec604e742d0e917",
+  "first_seen": "2026-10-26",
+  "handle": "100-aged-kopi-luwak-arabica-coffee",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2022/11/37.jpg",
+  "platform": "woocommerce",
+  "product_id": "24639",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "100% AGED Kopi Luwak Special Reserve Lot 2018",
+  "url": "https://lavantacoffee.com/product/100-aged-kopi-luwak-arabica-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 57,
+    "price_usd": 34.99,
+    "title": "2oz",
+    "variant_id": "24639:0"
+   },
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 34.99,
+    "title": "4oz",
+    "variant_id": "24639:1"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 34.99,
+    "title": "8oz",
+    "variant_id": "24639:2"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 34.99,
+    "title": "16oz",
+    "variant_id": "24639:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16ef48217fe3d58c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-peaberry-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/29.jpg",
+  "platform": "woocommerce",
+  "product_id": "2649",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Sumatra Peaberry",
+  "url": "https://lavantacoffee.com/product/sumatra-peaberry-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "2649:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "2649:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "2649:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "2649:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "2649:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "2649:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "2649:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a01ba8e77a9eecff",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-white-eagle",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/06/36.jpg",
+  "platform": "woocommerce",
+  "product_id": "275",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Paper Bag",
+   "Roasted Coffee"
+  ],
+  "title": "Sulawesi Toraja “White Eagle”",
+  "url": "https://lavantacoffee.com/product/sulawesi-toraja-white-eagle/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "275:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "275:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "275:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "275:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "275:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "275:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "275:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6bf1a78ccf1e2de7",
+  "first_seen": "2026-10-26",
+  "handle": "buddy-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2025/05/COFFEE-PICTURES-3.png",
+  "platform": "woocommerce",
+  "product_id": "28142",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "Battle Buddy Signature Blend",
+  "url": "https://lavantacoffee.com/product/buddy-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1lb",
+    "variant_id": "28142:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1lb with Tumbler",
+    "variant_id": "28142:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.99,
+    "title": "5lbs",
+    "variant_id": "28142:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.99,
+    "title": "5lbs with Tumbler",
+    "variant_id": "28142:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb9a20a1bfcd50c5",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7101.jpg",
+  "platform": "woocommerce",
+  "product_id": "3061",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Kenya AA Plus",
+  "url": "https://lavantacoffee.com/product/kenya-aa-plus-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "3061:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "3061:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "3061:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "3061:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "3061:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b7ba885363a83aa",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-organic-swiss-water-processed-decaf-sumatra-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/Decaf-Sumatra.jpg",
+  "platform": "woocommerce",
+  "product_id": "3076",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Swiss Water Processed Decaf Sumatra",
+  "url": "https://lavantacoffee.com/product/fair-trade-organic-swiss-water-processed-decaf-sumatra-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "1lb",
+    "variant_id": "3076:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.49,
+    "title": "2lbs",
+    "variant_id": "3076:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.49,
+    "title": "3lbs",
+    "variant_id": "3076:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.49,
+    "title": "4lbs",
+    "variant_id": "3076:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.49,
+    "title": "5lbs",
+    "variant_id": "3076:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6abc38a36b900bf0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6917.jpg",
+  "platform": "woocommerce",
+  "product_id": "3096",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://lavantacoffee.com/product/ethiopia-yirgacheffe-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "3096:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "3096:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "3096:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "3096:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "3096:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dfa2a50641afb91d",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2025/06/COFFEE-PICTURES-4.jpg",
+  "platform": "woocommerce",
+  "product_id": "31158",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "Lavanta Cold Brew",
+  "url": "https://lavantacoffee.com/product/cold-brew-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "1lb",
+    "variant_id": "31158:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.99,
+    "title": "2lb",
+    "variant_id": "31158:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.99,
+    "title": "5lbs",
+    "variant_id": "31158:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8ba581cffddd660",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6923.jpg",
+  "platform": "woocommerce",
+  "product_id": "3124",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://lavantacoffee.com/product/ethiopia-sidamo-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "3124:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "3124:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "3124:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "3124:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "3124:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0b0f3586a4dc71d6",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7115.jpg",
+  "platform": "woocommerce",
+  "product_id": "3192",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://lavantacoffee.com/product/tanzania-peaberry-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "3192:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "3192:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "3192:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "3192:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "3192:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "360c3628847573a8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/07/35.jpg",
+  "platform": "woocommerce",
+  "product_id": "509",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://lavantacoffee.com/product/ethiopia-sidamo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "509:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "509:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "509:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "509:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "509:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "509:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "509:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "92b63d809da9a47b",
+  "first_seen": "2026-10-26",
+  "handle": "457-turbo",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/07/34.jpg",
+  "platform": "woocommerce",
+  "product_id": "586",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“457 Turbo” Blend",
+  "url": "https://lavantacoffee.com/product/457-turbo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "586:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "586:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "586:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "586:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "586:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "586:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "586:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "27318f9d2ca7c298",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/07/33.jpg",
+  "platform": "woocommerce",
+  "product_id": "643",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://lavantacoffee.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "643:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "643:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "643:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "643:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "643:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "643:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "643:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e94f37b06a819094",
+  "first_seen": "2026-10-26",
+  "handle": "fair-trade-malawi-mzuzu-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6919.jpg",
+  "platform": "woocommerce",
+  "product_id": "6798",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Malawi Mzuzu",
+  "url": "https://lavantacoffee.com/product/fair-trade-malawi-mzuzu-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "6798:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "6798:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "6798:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "6798:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "6798:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ef71852dffbb5b4",
+  "first_seen": "2026-10-26",
+  "handle": "4-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/Kopi-Medium-Ground-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7225",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [],
+  "title": "4 oz 100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+  "url": "https://lavantacoffee.com/product/4-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 49.99,
+    "title": "4 oz 100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+    "variant_id": "7225:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9c3d65711f055a7",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega-shg-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6951.jpg",
+  "platform": "woocommerce",
+  "product_id": "7234",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Nicaragua Jinotega SHG",
+  "url": "https://lavantacoffee.com/product/nicaragua-jinotega-shg-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "7234:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "7234:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "7234:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "7234:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "7234:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "058320a1c3d9bbaa",
+  "first_seen": "2026-10-26",
+  "handle": "100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/Kopi-Medium-Ground-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7254",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [],
+  "title": "100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+  "url": "https://lavantacoffee.com/product/100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity-2/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 139.99,
+    "title": "100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+    "variant_id": "7254:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c88c54e889bf9787",
+  "first_seen": "2026-10-26",
+  "handle": "25-kopi-luwak-arabica-coffee-with-certficate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p8-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7271",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "25% Kopi Luwak Arabica Coffee With Certficate of Authenticity",
+  "url": "https://lavantacoffee.com/product/25-kopi-luwak-arabica-coffee-with-certficate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 54.99,
+    "title": "25% Kopi Luwak Arabica Coffee With Certficate of Authenticity",
+    "variant_id": "7271:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4c42224171c7b3c5",
+  "first_seen": "2026-10-26",
+  "handle": "flores-komodo",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6977.jpg",
+  "platform": "woocommerce",
+  "product_id": "7288",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Flores Komodo Dragon",
+  "url": "https://lavantacoffee.com/product/flores-komodo/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "7288:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "7288:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "7288:2"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "7288:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "7288:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9009156986f3c629",
+  "first_seen": "2026-10-26",
+  "handle": "10-kopi-luwak-arabica-coffee-with-certficate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p4-5.jpg",
+  "platform": "woocommerce",
+  "product_id": "7295",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "10% Kopi Luwak Arabica Coffee With Certficate of Authenticity",
+  "url": "https://lavantacoffee.com/product/10-kopi-luwak-arabica-coffee-with-certficate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 29.99,
+    "title": "10% Kopi Luwak Arabica Coffee With Certficate of Authenticity",
+    "variant_id": "7295:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "153ca031bca950bd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6953.jpg",
+  "platform": "woocommerce",
+  "product_id": "7320",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://lavantacoffee.com/product/guatemala-huehuetenango-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "1lb",
+    "variant_id": "7320:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.25,
+    "title": "2lbs",
+    "variant_id": "7320:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.25,
+    "title": "3lbs",
+    "variant_id": "7320:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.25,
+    "title": "4lbs",
+    "variant_id": "7320:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lbs",
+    "variant_id": "7320:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec4aa2f945ad4528",
+  "first_seen": "2026-10-26",
+  "handle": "8-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2022/11/37.jpg",
+  "platform": "woocommerce",
+  "product_id": "7334",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [],
+  "title": "8 oz 100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+  "url": "https://lavantacoffee.com/product/8-oz-100-kopi-luwak-arabica-coffee-with-certificate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 87.99,
+    "title": "8 oz 100% Kopi Luwak Arabica Coffee With certificate of authenticity",
+    "variant_id": "7334:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c5e6ab197d40247d",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6946.jpg",
+  "platform": "woocommerce",
+  "product_id": "7351",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://lavantacoffee.com/product/costa-rica-tarrazu-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.49,
+    "title": "1lb",
+    "variant_id": "7351:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.49,
+    "title": "2lbs",
+    "variant_id": "7351:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.49,
+    "title": "3lbs",
+    "variant_id": "7351:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.49,
+    "title": "4lbs",
+    "variant_id": "7351:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "7351:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "277452b38462dc37",
+  "first_seen": "2026-10-26",
+  "handle": "50-kopi-luwak-arabica-coffee-with-certficate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p8-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7359",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Coffee Bundles &amp; Gifts",
+   "Roasted Coffee"
+  ],
+  "title": "50% Kopi Luwak Arabica Blended Coffee",
+  "url": "https://lavantacoffee.com/product/50-kopi-luwak-arabica-coffee-with-certficate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 85.99,
+    "title": "50% Kopi Luwak Arabica Blended Coffee",
+    "variant_id": "7359:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b383a50a55a2e6ab",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7114.jpg",
+  "platform": "woocommerce",
+  "product_id": "7406",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Java Estate",
+  "url": "https://lavantacoffee.com/product/java-estate/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "7406:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "7406:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "7406:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "7406:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "7406:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74d37c00d8f99c0d",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-green",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6939.jpg",
+  "platform": "woocommerce",
+  "product_id": "7413",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Mexico",
+  "url": "https://lavantacoffee.com/product/mexican-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "7413:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "7413:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "7413:2"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "7413:3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "7413:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d8a99ccaef1a2003",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6991.jpg",
+  "platform": "woocommerce",
+  "product_id": "7427",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Sulawesi Toraja",
+  "url": "https://lavantacoffee.com/product/sulawesi-toraja/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "1lb",
+    "variant_id": "7427:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 17.25,
+    "title": "2lbs",
+    "variant_id": "7427:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 17.25,
+    "title": "3lbs",
+    "variant_id": "7427:2"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 17.25,
+    "title": "4lbs",
+    "variant_id": "7427:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lbs",
+    "variant_id": "7427:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "deb24625589b66ce",
+  "first_seen": "2026-10-26",
+  "handle": "25-kopi-luwak-green-arabica-coffee-with-certficate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6985.jpg",
+  "platform": "woocommerce",
+  "product_id": "7465",
+  "product_type": "simple",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "25% Kopi Luwak Green Arabica Coffee With Certficate of Authenticity",
+  "url": "https://lavantacoffee.com/product/25-kopi-luwak-green-arabica-coffee-with-certficate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 49.99,
+    "title": "25% Kopi Luwak Green Arabica Coffee With Certficate of Authenticity",
+    "variant_id": "7465:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c897f9f09be92c9",
+  "first_seen": "2026-10-26",
+  "handle": "10-kopi-luwak-green-arabica-coffee-with-certficate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6985.jpg",
+  "platform": "woocommerce",
+  "product_id": "7467",
+  "product_type": "simple",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "10% Kopi Luwak Green Arabica Coffee With Certficate of Authenticity",
+  "url": "https://lavantacoffee.com/product/10-kopi-luwak-green-arabica-coffee-with-certficate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 24.99,
+    "title": "10% Kopi Luwak Green Arabica Coffee With Certficate of Authenticity",
+    "variant_id": "7467:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a578b500a181837d",
+  "first_seen": "2026-10-26",
+  "handle": "100-kopi-luwak-green-arabica-coffee-with-certificate-of-authenticity",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6985.jpg",
+  "platform": "woocommerce",
+  "product_id": "7468",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "100% Kopi Luwak Green Arabica Coffee With Certificate of Authenticity",
+  "url": "https://lavantacoffee.com/product/100-kopi-luwak-green-arabica-coffee-with-certificate-of-authenticity/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 44.99,
+    "title": "4 ounce",
+    "variant_id": "7468:0"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 44.99,
+    "title": "8 ounce",
+    "variant_id": "7468:1"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 44.99,
+    "title": "16 ounce",
+    "variant_id": "7468:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a39b63789138456b",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-kalossie-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6981.jpg",
+  "platform": "woocommerce",
+  "product_id": "7574",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Sulawesi Kalossie",
+  "url": "https://lavantacoffee.com/product/sulawesi-kalossie-2/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 17.25,
+    "title": "1lb",
+    "variant_id": "7574:0"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 17.25,
+    "title": "2lbs",
+    "variant_id": "7574:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 17.25,
+    "title": "3lbs",
+    "variant_id": "7574:2"
+   },
+   {
+    "available": false,
+    "grams": 1814,
+    "price_usd": 17.25,
+    "title": "4lbs",
+    "variant_id": "7574:3"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 17.25,
+    "title": "5lbs",
+    "variant_id": "7574:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c941de297c44a4d3",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-sigri-estate-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6911.jpg",
+  "platform": "woocommerce",
+  "product_id": "7627",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Papua New Guinea Sigri Estate",
+  "url": "https://lavantacoffee.com/product/papua-new-guinea-sigri-estate-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7627:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7627:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7627:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7627:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7627:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "abc7bc50895e0944",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/Colombia.jpg",
+  "platform": "woocommerce",
+  "product_id": "7635",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Colombia Supremo",
+  "url": "https://lavantacoffee.com/product/colombia-supremo-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7635:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7635:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7635:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7635:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7635:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "295f920a9070ca6b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-beneficias-shg-ep-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6936.jpg",
+  "platform": "woocommerce",
+  "product_id": "7642",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Honduras Beneficias SHG EP",
+  "url": "https://lavantacoffee.com/product/honduras-beneficias-shg-ep-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7642:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7642:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7642:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7642:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7642:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf4b9a54be51a618",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p8-3.jpg",
+  "platform": "woocommerce",
+  "product_id": "7648",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://lavantacoffee.com/product/brazil-cerrado/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7648:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7648:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7648:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7648:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7648:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bb77336d72dca639",
+  "first_seen": "2026-10-26",
+  "handle": "bali-paradise-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p6-4.jpg",
+  "platform": "woocommerce",
+  "product_id": "7663",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Bali Paradise",
+  "url": "https://lavantacoffee.com/product/bali-paradise-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7663:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7663:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7663:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7663:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7663:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "64ea86ca29e80eb9",
+  "first_seen": "2026-10-26",
+  "handle": "peru-shb-ep",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6966.jpg",
+  "platform": "woocommerce",
+  "product_id": "7671",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Peru SHB EP",
+  "url": "https://lavantacoffee.com/product/peru-shb-ep/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7671:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7671:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7671:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7671:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7671:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c0d53f6768f96ad",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-guatemala",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7020.jpg",
+  "platform": "woocommerce",
+  "product_id": "7678",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Decaf Guatemala",
+  "url": "https://lavantacoffee.com/product/decaf-guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7678:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7678:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7678:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7678:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7678:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "52e8060c3c1d36e5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7008.jpg",
+  "platform": "woocommerce",
+  "product_id": "7686",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Decaf Sumatra",
+  "url": "https://lavantacoffee.com/product/decaf-sumatra-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7686:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7686:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7686:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7686:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7686:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cf75c774862cad63",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7029.jpg",
+  "platform": "woocommerce",
+  "product_id": "7693",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Decaf Brazil",
+  "url": "https://lavantacoffee.com/product/decaf-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "1Ib",
+    "variant_id": "7693:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "2Ibs",
+    "variant_id": "7693:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "3Ibs",
+    "variant_id": "7693:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "4Ibs",
+    "variant_id": "7693:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "5Ibs",
+    "variant_id": "7693:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43bb83e594dbddf3",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7059.jpg",
+  "platform": "woocommerce",
+  "product_id": "7700",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Espresso” Blend",
+  "url": "https://lavantacoffee.com/product/espresso-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7700:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7700:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7700:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7700:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7700:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5aaff70616f80c9d",
+  "first_seen": "2026-10-26",
+  "handle": "triple-crown-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p12-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7707",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Triple Crown” Blend",
+  "url": "https://lavantacoffee.com/product/triple-crown-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "1Ib",
+    "variant_id": "7707:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "2Ibs",
+    "variant_id": "7707:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "3Ibs",
+    "variant_id": "7707:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "4Ibs",
+    "variant_id": "7707:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "5Ibs",
+    "variant_id": "7707:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec0d962976cd16b2",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7054.jpg",
+  "platform": "woocommerce",
+  "product_id": "7714",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“House” Blend",
+  "url": "https://lavantacoffee.com/product/house-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7714:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7714:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7714:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7714:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7714:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cead8327eaa816bb",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/p9-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "7721",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Mocha Java” Blend",
+  "url": "https://lavantacoffee.com/product/mocha-java-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "1Ib",
+    "variant_id": "7721:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "2Ibs",
+    "variant_id": "7721:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "3Ibs",
+    "variant_id": "7721:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "4Ibs",
+    "variant_id": "7721:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "5Ibs",
+    "variant_id": "7721:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "02a929cf34f16b96",
+  "first_seen": "2026-10-26",
+  "handle": "it-takes-two-1-2-caffeine-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7033.jpg",
+  "platform": "woocommerce",
+  "product_id": "7728",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“It Takes Two” 1/2 Caffeine Blend",
+  "url": "https://lavantacoffee.com/product/it-takes-two-1-2-caffeine-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7728:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7728:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7728:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7728:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7728:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dc213fe3ecd8ce53",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7037.jpg",
+  "platform": "woocommerce",
+  "product_id": "7756",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Breakfast” Blend",
+  "url": "https://lavantacoffee.com/product/breakfast-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.49,
+    "title": "1Ib",
+    "variant_id": "7756:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.49,
+    "title": "2Ibs",
+    "variant_id": "7756:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.49,
+    "title": "3Ibs",
+    "variant_id": "7756:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.49,
+    "title": "4Ibs",
+    "variant_id": "7756:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.49,
+    "title": "5Ibs",
+    "variant_id": "7756:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87fc884809dc2855",
+  "first_seen": "2026-10-26",
+  "handle": "roast-masters-specialty-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7048.jpg",
+  "platform": "woocommerce",
+  "product_id": "7763",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Roast Master’s Specialty” Blend",
+  "url": "https://lavantacoffee.com/product/roast-masters-specialty-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7763:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7763:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7763:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7763:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7763:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44d374e6ef453c51",
+  "first_seen": "2026-10-26",
+  "handle": "black-stallion-blend",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_7055.jpg",
+  "platform": "woocommerce",
+  "product_id": "7777",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "“Black Stallion” Blend",
+  "url": "https://lavantacoffee.com/product/black-stallion-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "1Ib",
+    "variant_id": "7777:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "2Ibs",
+    "variant_id": "7777:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "3Ibs",
+    "variant_id": "7777:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "4Ibs",
+    "variant_id": "7777:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.99,
+    "title": "5Ibs",
+    "variant_id": "7777:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c64342e18d1cb171",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gayo-mountain-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/RM2_6973.jpg",
+  "platform": "woocommerce",
+  "product_id": "7796",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Green Coffee"
+  ],
+  "title": "Sumatra Mandheling Gayo Mountain",
+  "url": "https://lavantacoffee.com/product/sumatra-mandheling-gayo-mountain-2/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "1Ib",
+    "variant_id": "7796:0"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "2Ibs",
+    "variant_id": "7796:1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "3Ibs",
+    "variant_id": "7796:2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "4Ibs",
+    "variant_id": "7796:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.49,
+    "title": "5Ibs",
+    "variant_id": "7796:4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3edb3a47e148d054",
+  "first_seen": "2026-10-26",
+  "handle": "jet-fuel-highly-caffeinated-blend-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/30.jpg",
+  "platform": "woocommerce",
+  "product_id": "7816",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee",
+   "Signature Blends"
+  ],
+  "title": "“Jet Fuel” Highly Caffeinated Blend",
+  "url": "https://lavantacoffee.com/product/jet-fuel-highly-caffeinated-blend-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "7816:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "7816:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "7816:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "7816:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "7816:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "7816:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "7816:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24c889f573441a47",
+  "first_seen": "2026-10-26",
+  "handle": "swiss-water-processed-decaf-sumatra",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/28.jpg",
+  "platform": "woocommerce",
+  "product_id": "8166",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Decaf Coffee",
+   "Roasted Coffee"
+  ],
+  "title": "Decaf Sumatra Water Processed",
+  "url": "https://lavantacoffee.com/product/swiss-water-processed-decaf-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.49,
+    "title": "12oz",
+    "variant_id": "8166:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.49,
+    "title": "1lb",
+    "variant_id": "8166:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.49,
+    "title": "2lbs",
+    "variant_id": "8166:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 20.49,
+    "title": "3lbs",
+    "variant_id": "8166:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 20.49,
+    "title": "4lbs",
+    "variant_id": "8166:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.49,
+    "title": "5lbs",
+    "variant_id": "8166:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.49,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "8166:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf81876112daefef",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/COFFEE-PICTURES-1.png",
+  "platform": "woocommerce",
+  "product_id": "8329",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Paper Bag",
+   "Roasted Coffee"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://lavantacoffee.com/product/ethiopia-yirgacheffe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "8329:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "8329:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "8329:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "8329:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "8329:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "8329:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "8329:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3747584fff4ac81a",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/27.jpg",
+  "platform": "woocommerce",
+  "product_id": "8411",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Paper Bag",
+   "Roasted Coffee"
+  ],
+  "title": "Kenya AA Plus",
+  "url": "https://lavantacoffee.com/product/kenya-aa-plus/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "8411:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "8411:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "8411:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "8411:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "8411:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "8411:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "8411:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "94a3163c7a5c27b8",
+  "first_seen": "2026-10-26",
+  "handle": "flores-komodo-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/26.jpg",
+  "platform": "woocommerce",
+  "product_id": "8702",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Flores Komodo Dragon",
+  "url": "https://lavantacoffee.com/product/flores-komodo-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "8702:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "8702:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "8702:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "8702:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "8702:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "8702:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "8702:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e21630467ae0b7da",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/22.jpg",
+  "platform": "woocommerce",
+  "product_id": "9096",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://lavantacoffee.com/product/costa-rica-tarrazu/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "9096:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "9096:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "9096:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "9096:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "9096:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "9096:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9096:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "88c878b9cdceecce",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/21.jpg",
+  "platform": "woocommerce",
+  "product_id": "9181",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Java Estate",
+  "url": "https://lavantacoffee.com/product/java-estate-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "9181:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "9181:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "9181:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "9181:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "9181:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "9181:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9181:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c8ce945e2d25776",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-kalossie-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/18.jpg",
+  "platform": "woocommerce",
+  "product_id": "9490",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Sulawesi Kalossie",
+  "url": "https://lavantacoffee.com/product/sulawesi-kalossie-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "9490:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "9490:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "9490:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "9490:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "9490:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "9490:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9490:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9350843f9fed322b",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-toraja-2",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/17.jpg",
+  "platform": "woocommerce",
+  "product_id": "9575",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Sulawesi Toraja",
+  "url": "https://lavantacoffee.com/product/sulawesi-toraja-2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "9575:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "9575:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "9575:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "9575:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "9575:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "9575:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9575:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3e99244b7ffdc798",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-roasted",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/16.jpg",
+  "platform": "woocommerce",
+  "product_id": "9660",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Mexico",
+  "url": "https://lavantacoffee.com/product/mexico-roasted/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "9660:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "1lb",
+    "variant_id": "9660:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.99,
+    "title": "2lbs",
+    "variant_id": "9660:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.99,
+    "title": "3lbs",
+    "variant_id": "9660:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 16.99,
+    "title": "4lbs",
+    "variant_id": "9660:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "9660:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9660:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33ea557170800fd5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-supremo",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/15.jpg",
+  "platform": "woocommerce",
+  "product_id": "9830",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://lavantacoffee.com/product/colombia-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz",
+    "variant_id": "9830:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.99,
+    "title": "1lb",
+    "variant_id": "9830:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.99,
+    "title": "2lbs",
+    "variant_id": "9830:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 17.99,
+    "title": "3lbs",
+    "variant_id": "9830:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 17.99,
+    "title": "4lbs",
+    "variant_id": "9830:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs",
+    "variant_id": "9830:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9830:6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1959e2fb8bdc7963",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gayo-mountain-3",
+  "image": "https://lavantacoffee.com/wp-content/uploads/2018/08/14.jpg",
+  "platform": "woocommerce",
+  "product_id": "9915",
+  "product_type": "variable",
+  "roaster_slug": "lavantacoffee",
+  "tags": [
+   "Roasted Coffee"
+  ],
+  "title": "Sumatra Mandheling Gayo Mountain",
+  "url": "https://lavantacoffee.com/product/sumatra-mandheling-gayo-mountain-3/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "12oz",
+    "variant_id": "9915:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "1lb",
+    "variant_id": "9915:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.99,
+    "title": "2lbs",
+    "variant_id": "9915:2"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 18.99,
+    "title": "3lbs",
+    "variant_id": "9915:3"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 18.99,
+    "title": "4lbs",
+    "variant_id": "9915:4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs",
+    "variant_id": "9915:5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 18.99,
+    "title": "5lbs (packed in separate 1lb bags)",
+    "variant_id": "9915:6"
+   }
+  ],
+  "vendor": ""
+ }
+]

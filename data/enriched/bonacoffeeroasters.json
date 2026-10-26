@@ -1,0 +1,242 @@
+{
+ "13426": {
+  "body_hash": "2c9f9574c99b7ff1",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "creamy body",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "6231": {
+  "body_hash": "21b6b1ba902eebfb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "bourbon"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "6248": {
+  "body_hash": "d6d1b35d0891dbbc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "crema",
+   "chocolate and fruit"
+  ],
+  "varietals": []
+ },
+ "6265": {
+  "body_hash": "744d7436e3353263",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "6271": {
+  "body_hash": "b339bf597bd0a882",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "creamy body",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "76": {
+  "body_hash": "b403758f78fab763",
+  "elevation_masl_max": 2100,
+  "elevation_masl_min": 1400,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "sweet",
+   "full body"
+  ],
+  "varietals": []
+ },
+ "79": {
+  "body_hash": "0d820de3f9a7dbd4",
+  "elevation_masl_max": 1550,
+  "elevation_masl_min": 1550,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "full body"
+  ],
+  "varietals": []
+ },
+ "8693": {
+  "body_hash": "11ee8f567a04a049",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "87": {
+  "body_hash": "c2b5cc60606476b1",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "dark chocolate"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "8971": {
+  "body_hash": "508572524d45a47f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet",
+   "grapefruit",
+   "juicy"
+  ],
+  "varietals": []
+ },
+ "9155": {
+  "body_hash": "4e112d50d9f7a540",
+  "elevation_masl_max": 2200,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "toffee"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "93": {
+  "body_hash": "31b016bb0eae4080",
+  "elevation_masl_max": 1400,
+  "elevation_masl_min": 1200,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "hazelnut",
+   "dark chocolate",
+   "caramel and lemon"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "99": {
+  "body_hash": "dc0930d6ff32dde9",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "blueberry"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ }
+}

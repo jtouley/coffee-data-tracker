@@ -1,0 +1,209 @@
+[
+ {
+  "body_hash": "76a53ad03ef4d86b",
+  "first_seen": "2026-10-26",
+  "handle": "la-finca-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1cb02f4a4cb0",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "La Finca Microlot",
+  "url": "https://www.recreocoffee.com/product-page/la-finca-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cfb5a10ca7168dce",
+  "first_seen": "2026-10-26",
+  "handle": "mariana-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2cb07dfee352",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Mariana Microlot",
+  "url": "https://www.recreocoffee.com/product-page/mariana-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5c717c0f96587081",
+  "first_seen": "2026-10-26",
+  "handle": "swp-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3ff057b4e015",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "SWP Decaf",
+  "url": "https://www.recreocoffee.com/product-page/swp-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eae08e090d50a998",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-covered-coffee-beans",
+  "image": null,
+  "platform": "generic",
+  "product_id": "65f7692a9990",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Chocolate Covered Coffee Beans",
+  "url": "https://www.recreocoffee.com/product-page/chocolate-covered-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b4b25f5ffd3cbcb",
+  "first_seen": "2026-10-26",
+  "handle": "honey-catuai-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "77ac7161390b",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Catuai Microlot",
+  "url": "https://www.recreocoffee.com/product-page/honey-catuai-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd212a1fb3e537b7",
+  "first_seen": "2026-10-26",
+  "handle": "don-carlos-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "822692981589",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Don Carlos Microlot",
+  "url": "https://www.recreocoffee.com/product-page/don-carlos-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7634e8929fbe6e5e",
+  "first_seen": "2026-10-26",
+  "handle": "java-microlot-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a79d56c863d5",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Java Microlot",
+  "url": "https://www.recreocoffee.com/product-page/java-microlot-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "097ae7e2737c8fd2",
+  "first_seen": "2026-10-26",
+  "handle": "honey-paraneima-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b85ca24a79e5",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Parainema Microlot",
+  "url": "https://www.recreocoffee.com/product-page/honey-paraneima-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1b12e6d4800267ec",
+  "first_seen": "2026-10-26",
+  "handle": "marsellesa-microlot",
+  "image": null,
+  "platform": "generic",
+  "product_id": "cd8f885fab22",
+  "product_type": "",
+  "roaster_slug": "recreocoffee",
+  "tags": [],
+  "title": "Marsellesa Microlot",
+  "url": "https://www.recreocoffee.com/product-page/marsellesa-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "body_hash": "b44bfb86e0b8ffbb",
+  "first_seen": "2026-10-26",
+  "handle": "monksblend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5f077f64f793cb5ea77e800c/1594999185074-K63OK7QJRW72K7LHRKHA/Monk%27sblend.jpg",
+  "platform": "squarespace",
+  "product_id": "5f0e431b763da63047b5b34d",
+  "product_type": "",
+  "roaster_slug": "bosqueroasters",
+  "tags": [],
+  "title": "Monk's Blend",
+  "url": "https://www.bosquecoffeeroasters.com/black-teas/p/monksblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 16.0,
+    "title": "4oz",
+    "variant_id": "59cf05d3-565b-44f4-a450-77bb0b096656"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2oz",
+    "variant_id": "667973e6-dd5f-4fbb-bf01-c0a935fb7d8d"
+   }
+  ],
+  "vendor": ""
+ }
+]

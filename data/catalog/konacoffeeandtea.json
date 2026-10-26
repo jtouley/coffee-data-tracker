@@ -1,0 +1,942 @@
+[
+ {
+  "body_hash": "db169030f67dacc5",
+  "first_seen": "2026-10-26",
+  "handle": "kona-single-serve-pour-over-box-of-5",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/SingleServePourOver.png?v=1786491529",
+  "platform": "shopify",
+  "product_id": "10376045723928",
+  "product_type": "100% Kona Coffee",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Kona Single-Serve Pour Over",
+  "url": "https://www.konacoffeeandtea.com/products/kona-single-serve-pour-over-box-of-5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 29.0,
+    "title": "5-Bag Box",
+    "variant_id": "52509078880536"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Single Bag",
+    "variant_id": "52509078913304"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "b775d545a70dd8ed",
+  "first_seen": "2026-10-26",
+  "handle": "medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/14oz-Medium-Roast.jpg?v=1692736308",
+  "platform": "shopify",
+  "product_id": "8454275825944",
+  "product_type": "LP",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Medium Roast - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz. / Drip Grind",
+    "variant_id": "45785164644632"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Whole Bean",
+    "variant_id": "45785164710168"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Whole Bean",
+    "variant_id": "45785164742936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45785164775704"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Fine Grind",
+    "variant_id": "45785164808472"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Drip Grind",
+    "variant_id": "45785164841240"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Coarse Grind",
+    "variant_id": "45785164874008"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Fine Grind",
+    "variant_id": "45785164906776"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Drip Grind",
+    "variant_id": "45785164939544"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Coarse Grind",
+    "variant_id": "45785164972312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Fine Grind",
+    "variant_id": "45785165005080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Drip Grind",
+    "variant_id": "45785165037848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Coarse Grind",
+    "variant_id": "45785165070616"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "7146ed66e9b574c3",
+  "first_seen": "2026-10-26",
+  "handle": "peaberry-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/14ozPeaberry.jpg?v=1705367741",
+  "platform": "shopify",
+  "product_id": "8454276383000",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Peaberry - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/peaberry-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 43.0,
+    "title": "7 oz. / Whole Bean",
+    "variant_id": "45785165857048"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14 oz. / Whole Bean",
+    "variant_id": "45785165889816"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 43.0,
+    "title": "7 oz. / Fine Grind",
+    "variant_id": "45785165955352"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 43.0,
+    "title": "7 oz. / Drip Grind",
+    "variant_id": "45785165988120"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 43.0,
+    "title": "7 oz. / Coarse Grind",
+    "variant_id": "45785166020888"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14 oz. / Fine Grind",
+    "variant_id": "45785166053656"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14 oz. / Drip Grind",
+    "variant_id": "45785166086424"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14 oz. / Coarse Grind",
+    "variant_id": "45785166119192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 365.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "47243150885144"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 13.0,
+    "title": "2 oz. / Drip Grind",
+    "variant_id": "47243150917912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 365.0,
+    "title": "5 lb. / Drip Grind",
+    "variant_id": "47253768274200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 365.0,
+    "title": "5 lb. / Coarse Grind",
+    "variant_id": "47253777580312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 365.0,
+    "title": "5 lb. / Fine Grind",
+    "variant_id": "47253778661656"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "5cb3ca2c6221bc96",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/14oz-Dark-Roast_0317856f-47dc-4f01-8fd8-370d1dd1e5ee.jpg?v=1692736070",
+  "platform": "shopify",
+  "product_id": "8454276841752",
+  "product_type": "LP",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Dark Roast - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz. / Drip Grind",
+    "variant_id": "45785167200536"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Whole Bean",
+    "variant_id": "45785167266072"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Whole Bean",
+    "variant_id": "45785167298840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45785167364376"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Fine Grind",
+    "variant_id": "45785167397144"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Drip Grind",
+    "variant_id": "45785167429912"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Coarse Grind",
+    "variant_id": "45785167462680"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Fine Grind",
+    "variant_id": "45785167495448"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Drip Grind",
+    "variant_id": "45785167528216"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Coarse Grind",
+    "variant_id": "45785167560984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Fine Grind",
+    "variant_id": "45785167593752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Drip Grind",
+    "variant_id": "45785167626520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Coarse Grind",
+    "variant_id": "45785167659288"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "6542be975e9eb44f",
+  "first_seen": "2026-10-26",
+  "handle": "light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/14oz-Light-Roast_070b3740-1a5d-4467-aa8f-eea47ca80237.jpg?v=1692736131",
+  "platform": "shopify",
+  "product_id": "8454277366040",
+  "product_type": "LP",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Light Roast - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz. / Drip Grind",
+    "variant_id": "45785170968856"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Whole Bean",
+    "variant_id": "45785171034392"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Whole Bean",
+    "variant_id": "45785171067160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "45785171132696"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Fine Grind",
+    "variant_id": "45785171165464"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Drip Grind",
+    "variant_id": "45785171198232"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz. / Coarse Grind",
+    "variant_id": "45785171231000"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Fine Grind",
+    "variant_id": "45785171263768"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Drip Grind",
+    "variant_id": "45785171296536"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz. / Coarse Grind",
+    "variant_id": "45785171329304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Fine Grind",
+    "variant_id": "45785171362072"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Drip Grind",
+    "variant_id": "45785171394840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 lbs / Coarse Grind",
+    "variant_id": "45785171427608"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "aa8bc306db83ba66",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/KCTC-Decaf.jpg?v=1692994371",
+  "platform": "shopify",
+  "product_id": "8454278218008",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Decaf - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/decaf-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 39.0,
+    "title": "7 oz. / Whole Bean",
+    "variant_id": "45785172377880"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 39.0,
+    "title": "7 oz. / Fine Grind",
+    "variant_id": "45785172410648"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 39.0,
+    "title": "7 oz. / Drip Grind",
+    "variant_id": "45785172443416"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 39.0,
+    "title": "7 oz. / Coarse Grind",
+    "variant_id": "45785172476184"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14oz / Whole Bean",
+    "variant_id": "45785172508952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 345.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45785172541720"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14oz / Fine Grind",
+    "variant_id": "45785172574488"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14oz / Drip Grind",
+    "variant_id": "45785172607256"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 72.0,
+    "title": "14oz / Coarse Grind",
+    "variant_id": "45785172640024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 345.0,
+    "title": "5lb / Fine Grind",
+    "variant_id": "45785172672792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 345.0,
+    "title": "5lb / Drip Grind",
+    "variant_id": "45785172705560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 345.0,
+    "title": "5lb / Coarse Grind",
+    "variant_id": "45785172738328"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "3a37b4b5af9dc152",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee-burlap-sack",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/LogoBurlapSack-2_8e3fe55e-d82a-46a3-9aa1-ebecf8d2ea93.jpg?v=1692738938",
+  "platform": "shopify",
+  "product_id": "8454278775064",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts",
+   "Merchandise"
+  ],
+  "title": "Vintage Logo Burlap Sack",
+  "url": "https://www.konacoffeeandtea.com/products/kona-coffee-burlap-sack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "45785175490840"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "b36cc56029c5f5da",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-air-roasted-macadamia-nuts",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/KCT24-Mac-Nuts_7c820097-3ba0-4b27-8905-ace8f53edcda.jpg?v=1715640212",
+  "platform": "shopify",
+  "product_id": "8454279790872",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Air-Roasted Macadamia Nuts",
+  "url": "https://www.konacoffeeandtea.com/products/hawaiian-air-roasted-macadamia-nuts",
+  "variants": [
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45785179324696"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "2ef1087a395adcac",
+  "first_seen": "2026-10-26",
+  "handle": "ka-hale",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/14ozKaHale.jpg?v=1705367671",
+  "platform": "shopify",
+  "product_id": "8454279856408",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Ka Hale - 100% Kona",
+  "url": "https://www.konacoffeeandtea.com/products/ka-hale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz / Whole Bean",
+    "variant_id": "45785179455768"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz / Fine Grind",
+    "variant_id": "45785179488536"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz / Drip Grind",
+    "variant_id": "45785179521304"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 54.0,
+    "title": "14 oz / Coarse Grind",
+    "variant_id": "45785179554072"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz / Whole Bean",
+    "variant_id": "45785179586840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "45785179619608"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz / Fine Grind",
+    "variant_id": "45785179685144"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz / Drip Grind",
+    "variant_id": "45785179717912"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 33.0,
+    "title": "7 oz / Coarse Grind",
+    "variant_id": "45785179750680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 LB / Fine Grind",
+    "variant_id": "45785179783448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 LB / Drip Grind",
+    "variant_id": "45785179816216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 247.0,
+    "title": "5 LB / Coarse Grind",
+    "variant_id": "45785179848984"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 12.0,
+    "title": "2 oz / Drip Grind",
+    "variant_id": "47504867819800"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "a0a529e7b9ef1c97",
+  "first_seen": "2026-10-26",
+  "handle": "mixed-blossom-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/Honey-MixedBlossom12oz_18af928c-b80e-4357-8d93-6bd9ca056bb9.jpg?v=1692737645",
+  "platform": "shopify",
+  "product_id": "8454280184088",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Hawaiian Mixed Blossom Honey",
+  "url": "https://www.konacoffeeandtea.com/products/mixed-blossom-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 6.0,
+    "title": "3oz",
+    "variant_id": "45785180602648"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz",
+    "variant_id": "45785180635416"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "c110327346810315",
+  "first_seen": "2026-10-26",
+  "handle": "kona-snow-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/Honey-KonaSnow12oz_82533eb5-5e99-4816-bd3c-2e6b50c9188a.jpg?v=1692744656",
+  "platform": "shopify",
+  "product_id": "8454280544536",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Kona Snow Honey (Limited)",
+  "url": "https://www.konacoffeeandtea.com/products/kona-snow-honey",
+  "variants": [
+   {
+    "available": false,
+    "grams": 85,
+    "price_usd": 7.0,
+    "title": "3oz",
+    "variant_id": "45785183387928"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz",
+    "variant_id": "45785183420696"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "ac4eacccd1258aaa",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-and-chocolate-covered-macnuts",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/chocmac825_ce77bc9f-0447-4269-bde0-5bac1314900f.png?v=1692997003",
+  "platform": "shopify",
+  "product_id": "8454281068824",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Chocolate Espresso Covered Macadamia Nuts",
+  "url": "https://www.konacoffeeandtea.com/products/espresso-and-chocolate-covered-macnuts",
+  "variants": [
+   {
+    "available": false,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "45785183977752"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "e163cc47389e0386",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coffee-and-macadamia-nut-granola",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/100KonaandMacnutGranola.jpg?v=1692739156",
+  "platform": "shopify",
+  "product_id": "8454281101592",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Kona Coffee Granola",
+  "url": "https://www.konacoffeeandtea.com/products/kona-coffee-and-macadamia-nut-granola",
+  "variants": [
+   {
+    "available": false,
+    "grams": 425,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "45785184010520"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "44ac42b154c09778",
+  "first_seen": "2026-10-26",
+  "handle": "quick-brew-instant-kona-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/KCT24-Steep-1_ec809d9f-e38c-47c5-8980-c86c40222724.jpg?v=1715640541",
+  "platform": "shopify",
+  "product_id": "8454289064216",
+  "product_type": "100% Kona Coffee",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "100% Kona Coffee"
+  ],
+  "title": "Kona Quick Brew",
+  "url": "https://www.konacoffeeandtea.com/products/quick-brew-instant-kona-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Single Bag (add on only)",
+    "variant_id": "45785214124312"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 26.0,
+    "title": "5-Bag Box",
+    "variant_id": "45785214157080"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "a34a6334401b6201",
+  "first_seen": "2026-10-26",
+  "handle": "handmade-hawaiian-soap",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/products/Soapgiftset.png?v=1692741269",
+  "platform": "shopify",
+  "product_id": "8571736654104",
+  "product_type": "",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Gifts"
+  ],
+  "title": "Handmade Hawaiian Soaps - Click for Options",
+  "url": "https://www.konacoffeeandtea.com/products/handmade-hawaiian-soap",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Mamaki Mint",
+    "variant_id": "46437048221976"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "100% Kona Latte",
+    "variant_id": "46437048287512"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.0,
+    "title": "Estate Mixed Blossom Honey",
+    "variant_id": "46437113692440"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ },
+ {
+  "body_hash": "163fbdd564db8cbd",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-scoop",
+  "image": "https://cdn.shopify.com/s/files/1/0751/1657/7048/files/KCT24-Coffee-Scoop-1_4cc3ba56-281f-4fbd-882c-fbb31af4626e.jpg?v=1716262171",
+  "platform": "shopify",
+  "product_id": "9239105798424",
+  "product_type": "gift",
+  "roaster_slug": "konacoffeeandtea",
+  "tags": [
+   "Merchandise"
+  ],
+  "title": "Coffee Scoop",
+  "url": "https://www.konacoffeeandtea.com/products/coffee-scoop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 34,
+    "price_usd": 8.5,
+    "title": "Default Title",
+    "variant_id": "48498264637720"
+   }
+  ],
+  "vendor": "Kona Coffee & Tea"
+ }
+]

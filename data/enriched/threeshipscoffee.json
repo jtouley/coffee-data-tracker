@@ -1,0 +1,193 @@
+{
+ "10320793862232": {
+  "body_hash": "14a8a737ae5a4d52",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "tres leches cake",
+   "blueberry",
+   "milk chocolate bar"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Typica"
+  ]
+ },
+ "15400780660824": {
+  "body_hash": "d6e426fc5c4284e1",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Burundi",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cinnamon bun",
+   "honeycrisp apple",
+   "red grape"
+  ],
+  "varietals": [
+   "Red Bourbon"
+  ]
+ },
+ "7468594692184": {
+  "body_hash": "33d1cfd9a3f7c933",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "berry",
+   "brightness"
+  ],
+  "varietals": []
+ },
+ "8440001724504": {
+  "body_hash": "fea85113f43f95a0",
+  "elevation_masl_max": 400,
+  "elevation_masl_min": 400,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "butterscotch",
+   "mixed berries",
+   "sticky honey"
+  ],
+  "varietals": [
+   "Catuai",
+   "Caturra"
+  ]
+ },
+ "8951958667352": {
+  "body_hash": "8e53fd86a112ffbe",
+  "elevation_masl_max": 1660,
+  "elevation_masl_min": 1660,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apple juice",
+   "mango tart",
+   "hibiscus"
+  ],
+  "varietals": [
+   "Gesha",
+   "Pacamara",
+   "Pacas"
+  ]
+ },
+ "8953501417560": {
+  "body_hash": "47cc164666ee638d",
+  "elevation_masl_max": 1820,
+  "elevation_masl_min": 1820,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red grape",
+   "sweet cherry",
+   "green tea"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8958601756760": {
+  "body_hash": "a94dbd8f5cd9eb40",
+  "elevation_masl_max": 2220,
+  "elevation_masl_min": 1800,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "crisp red apple",
+   "chocolate cream",
+   "toffee bits"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "9033154035800": {
+  "body_hash": "85cfa651dd35f37d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lime-aid",
+   "grape soda",
+   "tropical candies"
+  ],
+  "varietals": [
+   "Heirloom",
+   "Villa Sarchi"
+  ]
+ },
+ "9038561837144": {
+  "body_hash": "c7e3defae598771b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cherry",
+   "crisp red apple",
+   "raspberry tea"
+  ],
+  "varietals": []
+ }
+}

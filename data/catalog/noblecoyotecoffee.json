@@ -1,0 +1,597 @@
+[
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "rise-n-grind-breakfast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/67b2e192-b26a-4916-a4d1-c68829051de0/Rise+and+Grind.png",
+  "platform": "squarespace",
+  "product_id": "5971160a414fb5fc9d1414df",
+  "product_type": "Whole Bean | Blends",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Whole Bean | Blends",
+   "sweet"
+  ],
+  "title": "Rise 'N Grind - Dried Plum, Toasted Marshmallow, Cozy",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/rise-n-grind-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.5,
+    "title": "10 oz",
+    "variant_id": "9a453a77-6c61-4c86-889f-3c948b7a0125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb",
+    "variant_id": "ebccef7f-95a9-407b-9799-4ee504f1ed9d"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.25,
+    "title": "4 oz",
+    "variant_id": "ec43840c-00b0-44a5-a789-7240a93db5c3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "barking-dog-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/17b0db20-7109-4c5a-be65-d7d2eac337de/Barking+Dog+Honorable+Mention+GCA.png",
+  "platform": "squarespace",
+  "product_id": "5d0551ea382dd2000165216f",
+  "product_type": "Whole Bean | Blends",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Whole Bean | Blends",
+   "chocolate",
+   "dark",
+   "espresso",
+   "sweet"
+  ],
+  "title": "Barking Dog Espresso - Chocolate, Caramel, Balanced, Smooth",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/barking-dog-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.5,
+    "title": "10 oz",
+    "variant_id": "42db0acf-a136-4b3a-a39d-6bbb13162f8f"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.25,
+    "title": "4 oz",
+    "variant_id": "64e9a7cb-c482-4ea6-b8ab-357fd07957ca"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 lb",
+    "variant_id": "e42d10fc-989a-4414-8235-07c9a5c97815"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-momentum-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/e288debf-ad98-4149-a090-38a1ec039084/Cafe+Momentum.png",
+  "platform": "squarespace",
+  "product_id": "5d13bb9652113b0001b30999",
+  "product_type": "Whole Bean | Blends",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Whole Bean | Blends",
+   "nutty",
+   "sweet"
+  ],
+  "title": "Café Momentum - Raisin, Nutty, Milk Chocolate",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/cafe-momentum-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "04fffa3b-4125-4f3d-a280-4df1d2cbbb77"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4 oz",
+    "variant_id": "c6fb7f80-2adc-4c62-a08c-a2b802a51434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb",
+    "variant_id": "ed499a20-e338-46ee-87b9-2dd02d3d80bf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "mexicolachilana",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/f0638c3e-9c3b-43ca-9361-38dc7a927875/Mexico+La+Chilana.png",
+  "platform": "squarespace",
+  "product_id": "5d5d6c93b200a10001fbab86",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Mexico",
+   "caramel",
+   "chiapas",
+   "chocolate",
+   "creamy",
+   "fudge",
+   "nutty"
+  ],
+  "title": "Mexico La Chilana - Fudge, Caramel, Toffee",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/mexicolachilana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb",
+    "variant_id": "82a12a98-c98b-4a6d-98a8-b2b0f43ca9b4"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "93a0b768-398f-4b6a-aed4-83a1dc4be260"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4 oz",
+    "variant_id": "bce7052f-9139-4f2b-9a7d-89dfbf523511"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "coldbrewbeans",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/4a513206-4616-420f-b5cd-f426a37ae686/Cold+Brew+Blend.png",
+  "platform": "squarespace",
+  "product_id": "5ef3baf81e821a77072f71ab",
+  "product_type": "Whole Bean | Blends",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Whole Bean | Blends",
+   "cold brew"
+  ],
+  "title": "Cold Brew Blend - Chocolate, Smooth, Sweet",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/coldbrewbeans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5 lb",
+    "variant_id": "12895ef0-42eb-457b-93c6-a416a57f10c8"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz",
+    "variant_id": "6d1c2350-33bf-429c-86a5-640dc2f79c94"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.5,
+    "title": "4 oz",
+    "variant_id": "a4158e49-3ba0-4f45-bfe5-1a2e6a72cb4c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "655ca48a56738ab3",
+  "first_seen": "2026-10-26",
+  "handle": "harvest",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/1d3a71b9-6e29-4d8b-a085-77c9b952cbc3/Harvest+2026.png",
+  "platform": "squarespace",
+  "product_id": "63068896c633be34e28878ba",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Allspice",
+   "Harvest",
+   "Marshmallow Cream",
+   "Pecan Pie",
+   "Seasonal"
+  ],
+  "title": "Harvest Autumn Blend - Marshmallow Cream, Allspice, Pecan Pie",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "0014843f-c1d6-40e0-bf61-e2350a599a14"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb",
+    "variant_id": "1aa84408-374f-4582-bceb-896380cfeb45"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4 oz",
+    "variant_id": "29e01ee0-9baf-4a2f-b489-3f1d414e5b65"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a2096eeca7d9f7f7",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kayon-mountain-farm-shakiso-",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/a3af642a-527a-49e0-9218-6d9dcc4a6c73/Logos-GoodFoodAwards_Winner_2026_Logo.png",
+  "platform": "squarespace",
+  "product_id": "64837abb388c793aabc286fa",
+  "product_type": "Whole Bean | Natural",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Baking Spice",
+   "Blueberry",
+   "Ethiopia",
+   "Guji",
+   "Kayon Mountain Farm",
+   "Maple",
+   "Whole Bean | Natural"
+  ],
+  "title": "Ethiopia Guji Kayon Mountain Farm Natural Process Organic - 2026 Good Food Award Winner 🏅 - (Sold Out)",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/ethiopia-guji-kayon-mountain-farm-shakiso-",
+  "variants": [
+   {
+    "available": false,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz",
+    "variant_id": "423306c5-1a82-4fd6-bd14-47aeec5a3707"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5379c21e5f3e4113",
+  "first_seen": "2026-10-26",
+  "handle": "trailmagic",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/bc4db6e7-0692-4f75-98da-663695863011/Trail+Magic+2026.png",
+  "platform": "squarespace",
+  "product_id": "66a29ef92db0a05b58ff4dfa",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Fundraising",
+   "Meat Fight"
+  ],
+  "title": "Trail Magic - Dried Fruit, Honey, Nutty",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/trailmagic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "147b159b-2802-4f12-98a8-9f3fb6409846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb",
+    "variant_id": "457c6bee-d4bd-42e0-a192-fb29969794fb"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4 oz",
+    "variant_id": "526aa760-0750-4dde-8474-1bf27cfe6076"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fecff99b80c6dcbc",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-alianza-cafe-certified-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/c01dcc97-9ab5-4641-a476-1c6755cc4453/Colombia+Alianza+Cafe.png",
+  "platform": "squarespace",
+  "product_id": "67e2b9423dddb148755ffb11",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Certified Organic",
+   "Colombia",
+   "Dark Chocolate Mousse",
+   "Fall Spice",
+   "Nectarine",
+   "Washed"
+  ],
+  "title": "Colombia Alianza Cafe Certified Organic - Fall Spice, Nectarine, Dark Chocolate Mousse",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/colombia-alianza-cafe-certified-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "52008876-afbb-48d9-98cd-bfa8376e2f8f"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "7c3f3172-4e7a-4878-9181-228582c3069b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "e9f924ed-9fe2-4ad7-ac97-25fd612b3a9b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "decafcolombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/f4ae7efc-637f-4d18-8d5c-35ef0289c5c8/Decaf+Colombia.png",
+  "platform": "squarespace",
+  "product_id": "68d6d3dfca87863ba29c4838",
+  "product_type": "Whole Bean | Washed",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Whole Bean | Washed",
+   "decaf",
+   "ea",
+   "nougat",
+   "praline",
+   "sugarcane",
+   "sweet",
+   "washed"
+  ],
+  "title": "Decaf Colombia - Sugarcane EA Washed",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/decafcolombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "8990e317-7898-4609-b07a-f573f82f1980"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "91fee3b9-7df1-44ca-b6c4-f7d05f00c8d0"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "ee00a62c-0655-46ef-809d-0ec59961e97f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "midnight",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/c7b00404-1fcb-4672-9d46-71bbe5298d5d/Midnight+Mexico+La+Chilana.png",
+  "platform": "squarespace",
+  "product_id": "69178b6d3bfa7520aa1f4f4d",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Black Cocoa",
+   "Caramelized Sugar",
+   "Dark Chocolate",
+   "Dark Roast",
+   "Midnight",
+   "Oreo"
+  ],
+  "title": "Midnight - Oreo, Black Cocoa, Caramelized Sugar",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/midnight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "1f7ee617-24a6-4cfe-8c33-0b29b8480793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 116.0,
+    "title": "5 lb",
+    "variant_id": "2fe67e65-092c-492a-ad6a-45eff9049e81"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.75,
+    "title": "4 oz",
+    "variant_id": "d1cc68be-3305-4198-a575-e538851d04fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "zephyrespresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/f29e2d1b-59eb-467a-9af6-ea31e7ead223/Zephyr+Espresso.png",
+  "platform": "squarespace",
+  "product_id": "69f1168f475ed40a6625d4fa",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Cream",
+   "Espresso",
+   "Natural",
+   "Strawberry",
+   "Washed",
+   "White Chocolate",
+   "Zephyr"
+  ],
+  "title": "Zephyr Espresso - Strawberry, White Chocolate, Cream",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/zephyrespresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "238941e7-9e70-448d-8ac4-5d0ff3f38222"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "71543f84-ca22-430e-8ac9-4b75646b4ee7"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "c3b09292-cb1e-4de0-9047-a411a0c039fe"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-sholi-natural",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/3dd2ff21-e3f0-41d5-bb54-7a5796a778ca/Rwanda+Sholi+Natural.png",
+  "platform": "squarespace",
+  "product_id": "6a3aa3eaae5dc31a01042bdd",
+  "product_type": "Whole Bean | Natural",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "Fair Trade",
+   "Jasmine",
+   "Lemon",
+   "Natural",
+   "Organic",
+   "Peach",
+   "Rain Forest Alliance",
+   "Rwanda",
+   "Sholi",
+   "Whole Bean | Natural"
+  ],
+  "title": "Rwanda Sholi Natural - Peach, Lemon, Jasmine",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/rwanda-sholi-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "14f18cb6-3d94-4dc9-9a80-bfe17c3b9f22"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "5089a704-7518-459c-9f90-284fc73f3587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb",
+    "variant_id": "6c170e93-74de-4ac6-867f-3ba9280b4e40"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d830423bff16b33c",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-thirikwa-aa",
+  "image": "https://images.squarespace-cdn.com/content/v1/58101b6a414fb5635ebd47ba/54226bf9-970c-4200-986d-79929a83369f/Kenya+Thirikwa+AA.png",
+  "platform": "squarespace",
+  "product_id": "6a7ca889a78b8829661426e2",
+  "product_type": "",
+  "roaster_slug": "noblecoyotecoffee",
+  "tags": [
+   "AA",
+   "Kenya",
+   "Lemon",
+   "Mango",
+   "Tamarind",
+   "Thirikwa",
+   "Washed"
+  ],
+  "title": "Kenya Thirikwa AA - Mango, Lemon, Tamarind",
+  "url": "https://www.noblecoyotecoffee.com/shop/p/kenya-thirikwa-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb",
+    "variant_id": "0fdba462-21a3-44b5-8c63-dd09eb7418c2"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 25.0,
+    "title": "10 oz",
+    "variant_id": "5e2c21a2-e3b0-480c-af80-3864c174368d"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 10.0,
+    "title": "4 oz",
+    "variant_id": "98bfa722-b43b-4a31-8c22-d27ac519c827"
+   }
+  ],
+  "vendor": ""
+ }
+]

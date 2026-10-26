@@ -1,0 +1,516 @@
+[
+ {
+  "body_hash": "c678317452f2372e",
+  "first_seen": "2026-10-26",
+  "handle": "basic-beast-1",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/Basic-Beast_2e43e729-e26b-46a4-b65f-fcefae1c0391.jpg?v=1700549631",
+  "platform": "shopify",
+  "product_id": "8361034809574",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Basic Beast",
+  "url": "https://mightybeast.coffee/products/basic-beast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069934399718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422627492070"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "5fd264efc4e55017",
+  "first_seen": "2026-10-26",
+  "handle": "la-brea-1",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/La-Brea.jpg?v=1700549676",
+  "platform": "shopify",
+  "product_id": "8361036054758",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "La Brea",
+  "url": "https://mightybeast.coffee/products/la-brea-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069938069734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422634078438"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "38a09639b2f846fa",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-horn-1",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/UnicornHorn.jpg?v=1700549722",
+  "platform": "shopify",
+  "product_id": "8361037627622",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Unicorn Horn",
+  "url": "https://mightybeast.coffee/products/unicorn-horn-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069940658406"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422637551846"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "4a78aecb412f585f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/Brazil-Natural.jpg?v=1700549748",
+  "platform": "shopify",
+  "product_id": "8361038315750",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Brazil Natural",
+  "url": "https://mightybeast.coffee/products/brazil-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069942395110"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422629130470"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "e0c702d283ea3efd",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-castillo",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/Colombia-Castillo.jpg?v=1700549781",
+  "platform": "shopify",
+  "product_id": "8361038938342",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Colombia Castillo",
+  "url": "https://mightybeast.coffee/products/colombia-castillo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069942984934"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422629359846"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "bddfe818b585dab7",
+  "first_seen": "2026-10-26",
+  "handle": "sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/SugercaneDecaf.jpg?v=1700549807",
+  "platform": "shopify",
+  "product_id": "8361039560934",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Sugarcane Decaf",
+  "url": "https://mightybeast.coffee/products/sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069943902438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "80oz.",
+    "variant_id": "44422636830950"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "cce3e3ed112cebb0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/Guatamela-Huehuetenango.jpg?v=1700549855",
+  "platform": "shopify",
+  "product_id": "8361040773350",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://mightybeast.coffee/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069946786022"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422631489766"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "d883e3074a363884",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-aceh",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/SumatraAceh.jpg?v=1700549873",
+  "platform": "shopify",
+  "product_id": "8361041330406",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Sumatra Aceh",
+  "url": "https://mightybeast.coffee/products/sumatra-aceh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44069947932902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422637060326"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "abd11c009bae8f4b",
+  "first_seen": "2026-10-26",
+  "handle": "lite-bite-1",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/Lite-BIte_8ac8dd55-492c-4325-b695-a64378bb50ab.jpg?v=1700584237",
+  "platform": "shopify",
+  "product_id": "8361724739814",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Lite Bite",
+  "url": "https://mightybeast.coffee/products/lite-bite-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44071434813670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422625165542"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "5a46e8e7355c04ec",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0638/7479/3702/files/EthiopiaYirgacheffe.jpg?v=1700600071",
+  "platform": "shopify",
+  "product_id": "8361899753702",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://mightybeast.coffee/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz.",
+    "variant_id": "44071940751590"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "80oz.",
+    "variant_id": "44422631063782"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "fd54bc6a391ecff2",
+  "first_seen": "2026-10-26",
+  "handle": "honey-badger",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9836886393062",
+  "product_type": "",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Honey Badger",
+  "url": "https://mightybeast.coffee/products/honey-badger",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Hot",
+    "variant_id": "48283562868966"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.5,
+    "title": "Iced",
+    "variant_id": "48283562901734"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ },
+ {
+  "body_hash": "c67b0784ac5ef333",
+  "first_seen": "2026-10-26",
+  "handle": "latte",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9836889243878",
+  "product_type": "Coffee",
+  "roaster_slug": "mightybeast",
+  "tags": [],
+  "title": "Latte",
+  "url": "https://mightybeast.coffee/products/latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Vanilla / Dairy milk",
+    "variant_id": "48283913814246"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Vanilla / Oat milk",
+    "variant_id": "48283913847014"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Mexican Chile / Dairy milk",
+    "variant_id": "48283913879782"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Mexican Chile / Oat milk",
+    "variant_id": "48283913912550"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Cinnamon Roll / Dairy milk",
+    "variant_id": "48283913945318"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Cinnamon Roll / Oat milk",
+    "variant_id": "48283913978086"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Maple / Dairy milk",
+    "variant_id": "48283914010854"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Maple / Oat milk",
+    "variant_id": "48283914043622"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Chocolate / Dairy milk",
+    "variant_id": "48283914076390"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Chocolate / Oat milk",
+    "variant_id": "48283914109158"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Hot / Caramel / Dairy milk",
+    "variant_id": "48283914141926"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Hot / Caramel / Oat milk",
+    "variant_id": "48283914174694"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Vanilla / Dairy milk",
+    "variant_id": "48283914207462"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Vanilla / Oat milk",
+    "variant_id": "48283914240230"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Mexican Chile / Dairy milk",
+    "variant_id": "48283914272998"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Mexican Chile / Oat milk",
+    "variant_id": "48283914305766"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Cinnamon Roll / Dairy milk",
+    "variant_id": "48283914338534"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Cinnamon Roll / Oat milk",
+    "variant_id": "48283914371302"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Maple / Dairy milk",
+    "variant_id": "48283914404070"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Maple / Oat milk",
+    "variant_id": "48283914436838"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Chocolate / Dairy milk",
+    "variant_id": "48283914469606"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Chocolate / Oat milk",
+    "variant_id": "48283914502374"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 6.0,
+    "title": "Iced / Caramel / Dairy milk",
+    "variant_id": "48283914535142"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "Iced / Caramel / Oat milk",
+    "variant_id": "48283914567910"
+   }
+  ],
+  "vendor": "Mighty Beast Coffee Roasters"
+ }
+]

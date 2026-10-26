@@ -1,0 +1,94 @@
+[
+ {
+  "body_hash": "0dd7ccb59b1351af",
+  "first_seen": "2026-10-26",
+  "handle": "the-signature-dark-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0670/5482/9768/files/bicacoffeethe-signature.webp?v=1742797374",
+  "platform": "shopify",
+  "product_id": "8189066182856",
+  "product_type": "",
+  "roaster_slug": "bicacoffee",
+  "tags": [],
+  "title": "The Signature - Dark Coffee",
+  "url": "https://www.bicacoffee.com/products/the-signature-dark-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44555882168520"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "997abefc81e3f5f9",
+  "first_seen": "2026-10-26",
+  "handle": "bica-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0670/5482/9768/files/bicacoffeebica-blend.webp?v=1742797476",
+  "platform": "shopify",
+  "product_id": "8189066248392",
+  "product_type": "",
+  "roaster_slug": "bicacoffee",
+  "tags": [],
+  "title": "Bica Blend",
+  "url": "https://www.bicacoffee.com/products/bica-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44555882397896"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "305857b4b07d0bee",
+  "first_seen": "2026-10-26",
+  "handle": "life-source-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0670/5482/9768/files/bicacoffeelife-source.webp?v=1742797530",
+  "platform": "shopify",
+  "product_id": "8189066412232",
+  "product_type": "",
+  "roaster_slug": "bicacoffee",
+  "tags": [],
+  "title": "Life Source - Medium Roast",
+  "url": "https://www.bicacoffee.com/products/life-source-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44555882987720"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "4933162823c85f7c",
+  "first_seen": "2026-10-26",
+  "handle": "classic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0670/5482/9768/files/bicacoffeeclassic-espresso.webp?v=1742797577",
+  "platform": "shopify",
+  "product_id": "8189066477768",
+  "product_type": "",
+  "roaster_slug": "bicacoffee",
+  "tags": [],
+  "title": "Classic Espresso",
+  "url": "https://www.bicacoffee.com/products/classic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "44555883348168"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

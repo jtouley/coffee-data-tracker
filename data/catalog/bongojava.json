@@ -1,0 +1,2856 @@
+[
+ {
+  "body_hash": "b7e4b76831541da6",
+  "first_seen": "2026-10-26",
+  "handle": "bongo-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/bongo-blend-gift-subscription-7099223.png?v=1781567830",
+  "platform": "shopify",
+  "product_id": "5742318223521",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "best-seller",
+   "top-10",
+   "top-5"
+  ],
+  "title": "Bongo Blend",
+  "url": "https://www.bongojava.com/products/bongo-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36526495400097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36526495432865"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763219099809"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763234959521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763238465697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36763242168481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763251507361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763253768353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36763257634977"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (Fine) / 12 oz",
+    "variant_id": "46434774614273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for Espresso (Fine) / 2 lb",
+    "variant_id": "46434774647041"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for Espresso (Fine) / 5 lb",
+    "variant_id": "46434774679809"
+   }
+  ],
+  "vendor": "Blend | Medium Roast"
+ },
+ {
+  "body_hash": "907580f7f7daafe4",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/cold-brew-7422789.png?v=1781567889",
+  "platform": "shopify",
+  "product_id": "5742326087841",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Cold Brew",
+  "url": "https://www.bongojava.com/products/cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36526516830369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36526516863137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew/French Press (coarse) / 12 oz",
+    "variant_id": "36763438514337"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763478851745"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763482226849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for Cold Brew/French Press (coarse) / 2 lb",
+    "variant_id": "36763485700257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763491795105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763492974753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for Cold Brew/French Press (coarse) / 5 lb",
+    "variant_id": "36763495760033"
+   }
+  ],
+  "vendor": "Blend | Dark Roast"
+ },
+ {
+  "body_hash": "f8349bc87fb71c4d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/cauca-8144928.png?v=1781567889",
+  "platform": "shopify",
+  "product_id": "5742328086689",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Cauca",
+  "url": "https://www.bongojava.com/products/colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36526526562465"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36526526595233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763524792481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763547336865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763550351521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36763553366177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763557986465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763560640673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36763562999969"
+   }
+  ],
+  "vendor": "Colombia | Medium Roast"
+ },
+ {
+  "body_hash": "40ac7fa72185ecb5",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-fondo-paez-premium-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/fondo-paez-6684637.png?v=1781567888",
+  "platform": "shopify",
+  "product_id": "5742412759201",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Premium Lot"
+  ],
+  "title": "Fondo Paez",
+  "url": "https://www.bongojava.com/products/colombia-fondo-paez-premium-lot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for Drip / 12 oz",
+    "variant_id": "36526918697121"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36526918729889"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763570798753"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "43740044230913"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43740044263681"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for Drip / 2lb",
+    "variant_id": "43740044296449"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for Drip / 5lb",
+    "variant_id": "43740044329217"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2lb",
+    "variant_id": "43740044361985"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "43740044394753"
+   }
+  ],
+  "vendor": "Colombia | Medium Roast"
+ },
+ {
+  "body_hash": "3b47536eee12c862",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cenfrocafe",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_LightPeru_12oz_b7d6110d-754b-40be-97d2-a95fc2336d14.png?v=1783971066",
+  "platform": "shopify",
+  "product_id": "5742430781601",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Light Peru",
+  "url": "https://www.bongojava.com/products/peru-cenfrocafe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527010087073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527010119841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763726381217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763746435233"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763748040865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36763752071329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763761082529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763764981921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36763768127649"
+   }
+  ],
+  "vendor": "South America | Light Roast"
+ },
+ {
+  "body_hash": "edcc0666d5aeeb52",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/decaf-espresso-6894734.png?v=1781567888",
+  "platform": "shopify",
+  "product_id": "5742443528353",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Espresso"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://www.bongojava.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527055765665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527055798433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763864400033"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for espresso (fine) / 12 oz",
+    "variant_id": "36763866202273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763871936673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763874721953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36763877441697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for espresso (fine) / 2 lb",
+    "variant_id": "36763882094753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763883864225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763885830305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36763887861921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for espresso (fine) / 5 lb",
+    "variant_id": "36763889238177"
+   }
+  ],
+  "vendor": "Decaf | Dark"
+ },
+ {
+  "body_hash": "4ec7a57e6d8ed120",
+  "first_seen": "2026-10-26",
+  "handle": "light-decaf-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/light-decaf-5818358.png?v=1781567887",
+  "platform": "shopify",
+  "product_id": "5742445953185",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Light Decaf",
+  "url": "https://www.bongojava.com/products/light-decaf-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527065727137"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527065759905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36763905753249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36763915911329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36763924201633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36763925151905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for French Press (Coarse) / 2 lb",
+    "variant_id": "42496313557249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for French Press (Coarse) / 5 lb",
+    "variant_id": "42496320143617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (Coarse) / 12 oz",
+    "variant_id": "42496324239617"
+   }
+  ],
+  "vendor": "Decaf | Light"
+ },
+ {
+  "body_hash": "915432609fb993dd",
+  "first_seen": "2026-10-26",
+  "handle": "natural-ethiopia-sidama-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/natural-sidama-6270712.png?v=1781567886",
+  "platform": "shopify",
+  "product_id": "5742470987937",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "best-seller",
+   "top-10",
+   "top-5",
+   "top10",
+   "top5"
+  ],
+  "title": "Natural Sidama",
+  "url": "https://www.bongojava.com/products/natural-ethiopia-sidama-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527104917665"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527104950433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36763982364833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36764008415393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36764017787041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36764024799393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36764033056929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36764036235425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 129.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36764039446689"
+   }
+  ],
+  "vendor": "Ethiopia | Light Roast"
+ },
+ {
+  "body_hash": "e62b2617a3438683",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/yirgacheffe-4624476.png?v=1781567887",
+  "platform": "shopify",
+  "product_id": "5742473347233",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "best-seller",
+   "top-10",
+   "top-5",
+   "top10",
+   "top5"
+  ],
+  "title": "Yirgacheffe",
+  "url": "https://www.bongojava.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36764066545825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36764069822625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36764073164961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36764081520801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36764083355809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36764085911713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42230664888577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "42230664921345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "42230664954113"
+   }
+  ],
+  "vendor": "Ethiopia | Light Roast"
+ },
+ {
+  "body_hash": "521f09ba6631a067",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-chajulense",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/chajulense-2252553.png?v=1781567886",
+  "platform": "shopify",
+  "product_id": "5742477115553",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Chajulense",
+  "url": "https://www.bongojava.com/products/guatemala-chajulense",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527124152481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527124185249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36764167372961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36764203909281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36764208824481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36764210790561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36764225667233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36764228681889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36764231237793"
+   }
+  ],
+  "vendor": "Guatemala | Medium Roast"
+ },
+ {
+  "body_hash": "d7442544703caa54",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-rio-azul",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/rio-azul-6234828.png?v=1781567886",
+  "platform": "shopify",
+  "product_id": "5742478655649",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Rio Azul",
+  "url": "https://www.bongojava.com/products/guatemala-rio-azul",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527128772769"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527128805537"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36764249030817"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36764274426017"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36764280684705"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36764285075617"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36764292481185"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36764296446113"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36764299165857"
+   }
+  ],
+  "vendor": "Guatemala | Medium Roast"
+ },
+ {
+  "body_hash": "52819e7cc3fe8569",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_Marcala_12oz.png?v=1781515636",
+  "platform": "shopify",
+  "product_id": "5742486945953",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Marcala",
+  "url": "https://www.bongojava.com/products/honduras-marcala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527158526113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527158591649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36764461957281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36764536307873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36764537356449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36764540010657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36764547645601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36764552855713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36764560752801"
+   }
+  ],
+  "vendor": "Honduras | Medium Roast"
+ },
+ {
+  "body_hash": "27d00cc63d79effc",
+  "first_seen": "2026-10-26",
+  "handle": "mystic-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/mystic-brew-gift-subscription-2752152.png?v=1781567828",
+  "platform": "shopify",
+  "product_id": "5742529773729",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "best-seller",
+   "top-10",
+   "top-5",
+   "top10",
+   "top5"
+  ],
+  "title": "Mystic Brew",
+  "url": "https://www.bongojava.com/products/mystic-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527258599585"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527258632353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36774117081249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36774120358049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36774121308321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36774121734305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "36774123339937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "36774124060833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "36774124978337"
+   }
+  ],
+  "vendor": "Blend | Dark Roast"
+ },
+ {
+  "body_hash": "babcad0b5ae81fdd",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/dark-peru-6246236.png?v=1781567887",
+  "platform": "shopify",
+  "product_id": "5742533738657",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Dark Peru",
+  "url": "https://www.bongojava.com/products/peru-cajamarca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527269183649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527269216417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36774132777121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "36774136021153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "36774143623329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2 lbs",
+    "variant_id": "36774144082081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "36774147031201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "36774147489953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5 lbs",
+    "variant_id": "36774148309153"
+   }
+  ],
+  "vendor": "South America | Dark Roast"
+ },
+ {
+  "body_hash": "3488b58b117754bd",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/RwandaCoko-12oz.png?v=1785773501",
+  "platform": "shopify",
+  "product_id": "5742548582561",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Coko",
+   "New Release",
+   "Seasonal Picks",
+   "Single Origin"
+  ],
+  "title": "Coko",
+  "url": "https://www.bongojava.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "36774218629281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "36774219055265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "36774219579553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43809571045633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "43809571078401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "43809571111169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "43809571143937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "43809571176705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "43809571209473"
+   }
+  ],
+  "vendor": "Rwanda | Light Roast"
+ },
+ {
+  "body_hash": "df72db457c4cbb1c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_GayoMountain_12oz.png?v=1781534385",
+  "platform": "shopify",
+  "product_id": "5742552744097",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Gayo Mountain",
+  "url": "https://www.bongojava.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "36527326429345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "36527326462113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "36774160040097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "36774223642785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "36774223937697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.99,
+    "title": "Ground for French Press (coarse) / 2 lbs",
+    "variant_id": "36774234456225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "36774236651681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "36774237765793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5 lbs",
+    "variant_id": "36774238060705"
+   }
+  ],
+  "vendor": "Southeast Asia | Medium Roast"
+ },
+ {
+  "body_hash": "acc5253561b13f6e",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/espresso-blend-6522134.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "6066993201313",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Espresso",
+   "best-seller",
+   "top-10",
+   "top-5",
+   "top10",
+   "top5"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.bongojava.com/products/espresso-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39307283628193"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "39307283660961"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "39307283693729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "39307283759265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "39307283792033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "39307283824801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "39307283890337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "39307283923105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "39307283955873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Ground for Espresso",
+    "variant_id": "46402364375297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "2 lbs / Ground for Espresso",
+    "variant_id": "46402364408065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "5 lbs / Ground for Espresso",
+    "variant_id": "46402364440833"
+   }
+  ],
+  "vendor": "Blend l Medium Roast"
+ },
+ {
+  "body_hash": "74ec1eaa6285c1dc",
+  "first_seen": "2026-10-26",
+  "handle": "hair-of-the-dog-2",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_HairOfTheDog_12oz.png?v=1779871580",
+  "platform": "shopify",
+  "product_id": "6549072248993",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Hair of the Dog",
+  "url": "https://www.bongojava.com/products/hair-of-the-dog-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39300239360161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "39300239392929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "39300239425697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "39300239458465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "39300239491233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "39300239524001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press / 12 oz",
+    "variant_id": "39359245680801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for French Press / 2 lbs",
+    "variant_id": "39359251480737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press / 5 lbs",
+    "variant_id": "39359256035489"
+   }
+  ],
+  "vendor": "Blend | Medium Roast"
+ },
+ {
+  "body_hash": "babcad0b5ae81fdd",
+  "first_seen": "2026-10-26",
+  "handle": "10-for-tenn",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/10-for-tenn-8048674.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "6557643243681",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "TennGreen",
+   "coffee",
+   "local",
+   "organic",
+   "subscription"
+  ],
+  "title": "10 for TENN",
+  "url": "https://www.bongojava.com/products/10-for-tenn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39323253866657"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "39323253899425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "39323253932193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "39323253997729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "39323254030497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "39323254063265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "39323254128801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "39323254161569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "39323254194337"
+   }
+  ],
+  "vendor": "Blend | Dark Roast"
+ },
+ {
+  "body_hash": "acf784396ffe35f2",
+  "first_seen": "2026-10-26",
+  "handle": "leipers-fork-bourbon-barrel-aged-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/leipers-fork-bourbon-barrel-aged-coffee-8930025.png?v=1781532522",
+  "platform": "shopify",
+  "product_id": "6615278551201",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Bourbon"
+  ],
+  "title": "Leiper's Fork Bourbon Barrel Aged Coffee",
+  "url": "https://www.bongojava.com/products/leipers-fork-bourbon-barrel-aged-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39473524342945"
+   }
+  ],
+  "vendor": "Blend | Medium Roast"
+ },
+ {
+  "body_hash": "3e408d9de807eef1",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/washed-sidama-8834462.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "6718748262561",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Washed Sidama",
+  "url": "https://www.bongojava.com/products/ethiopia-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39873770291361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "39873770389665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "42230917955841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "42230917988609"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "42230918021377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "42230918054145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "42230920610049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2 lbs",
+    "variant_id": "42230920642817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5 lbs",
+    "variant_id": "42230920675585"
+   }
+  ],
+  "vendor": "Ethiopia | Light Roast"
+ },
+ {
+  "body_hash": "fa82f58711516bf8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-las-diosas-the-goddesses",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/las-diosas-the-goddesses-8167784.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "7097726730401",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Las Diosas (The Goddesses)",
+  "url": "https://www.bongojava.com/products/nicaragua-las-diosas-the-goddesses",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41143369892001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "41143369924769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "41143369957537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "41143369990305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "41143370023073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5 lbs",
+    "variant_id": "41143370055841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.99,
+    "title": "Ground for French Press (coarse) / 2 lbs",
+    "variant_id": "41143370154145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "41143370186913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "41143370252449"
+   }
+  ],
+  "vendor": "Nicaragua | Light Roast"
+ },
+ {
+  "body_hash": "ac7dcdfdf7e898b1",
+  "first_seen": "2026-10-26",
+  "handle": "uncle-nearest-whiskey-barrel-aged-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/uncle-nearest-whiskey-barrel-aged-coffee-4461319.png?v=1781532326",
+  "platform": "shopify",
+  "product_id": "7584194396417",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Local Gift"
+  ],
+  "title": "Uncle Nearest Whiskey Barrel Aged Coffee",
+  "url": "https://www.bongojava.com/products/uncle-nearest-whiskey-barrel-aged-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42487796891905"
+   }
+  ],
+  "vendor": "Blend | Medium Roast"
+ },
+ {
+  "body_hash": "9922ce2beda18b59",
+  "first_seen": "2026-10-26",
+  "handle": "dark-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/dark-decaf-9989125.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "7634878234881",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Dark Decaf",
+  "url": "https://www.bongojava.com/products/dark-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42650913538305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "42650913571073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "42650913603841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for Drip / 12 oz",
+    "variant_id": "42650913636609"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for Drip / 2 lbs",
+    "variant_id": "42650913669377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for Drip / 5 lbs",
+    "variant_id": "42650913702145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press / 12 oz",
+    "variant_id": "42650913734913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for French Press / 2 lbs",
+    "variant_id": "42650913767681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for French Press / 5 lbs",
+    "variant_id": "42650913800449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for Espresso / 12 oz",
+    "variant_id": "46402372075777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "Ground for Espresso / 2 lbs",
+    "variant_id": "46402372108545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.99,
+    "title": "Ground for Espresso / 5 lbs",
+    "variant_id": "46402372141313"
+   }
+  ],
+  "vendor": "Decaf | Dark"
+ },
+ {
+  "body_hash": "42b9d6588c0a25a5",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-triunfo-verde",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/triunfo-verde-4988108.png?v=1781567841",
+  "platform": "shopify",
+  "product_id": "7910406717697",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [],
+  "title": "Triunfo Verde",
+  "url": "https://www.bongojava.com/products/mexico-triunfo-verde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43573213397249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Whole Bean / 2 lbs",
+    "variant_id": "43573213430017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Whole Bean / 5 lbs",
+    "variant_id": "43573213462785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "43573213495553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for drip / 2 lbs",
+    "variant_id": "43573213528321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for drip / 5 lbs",
+    "variant_id": "43573213561089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "43573213593857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for French Press (coarse) / 2 lbs",
+    "variant_id": "43573213626625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.99,
+    "title": "Ground for French Press (coarse) / 5 lbs",
+    "variant_id": "43573213659393"
+   }
+  ],
+  "vendor": "Mexico | Medium Roast"
+ },
+ {
+  "body_hash": "e0258fe42eef4acc",
+  "first_seen": "2026-10-26",
+  "handle": "howl",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/0022-4970201628504976063.png?v=1758861369",
+  "platform": "shopify",
+  "product_id": "8044742836481",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "coffee",
+   "halloween"
+  ],
+  "title": "HOWL- Limited Seasonal",
+  "url": "https://www.bongojava.com/products/howl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "5 lbs / Whole Bean",
+    "variant_id": "44032290685185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "5 lbs / Ground for Drip",
+    "variant_id": "44032290717953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.99,
+    "title": "5 lbs / Ground for French Press",
+    "variant_id": "44032290750721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.99,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44032291307777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.99,
+    "title": "2 lbs / Ground for Drip",
+    "variant_id": "44032291340545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.99,
+    "title": "2 lbs / Ground for French Press",
+    "variant_id": "44032291373313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45634348941569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "45634349891841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "45634350350593"
+   }
+  ],
+  "vendor": "Seasonal Release"
+ },
+ {
+  "body_hash": "2e63214e50e5341e",
+  "first_seen": "2026-10-26",
+  "handle": "bongo-java-16-oz-flip-traveler",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/bongo-java-16-oz-flip-traveler-4437147.png?v=1763665060",
+  "platform": "shopify",
+  "product_id": "8563282706689",
+  "product_type": "Merchandise",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Merchandise",
+   "Mug",
+   "Thermos"
+  ],
+  "title": "Bongo Java 16 oz Flip Traveler",
+  "url": "https://www.bongojava.com/products/bongo-java-16-oz-flip-traveler",
+  "variants": [
+   {
+    "available": true,
+    "grams": 281,
+    "price_usd": 32.95,
+    "title": "Default Title",
+    "variant_id": "45485492371713"
+   }
+  ],
+  "vendor": "Merchandise"
+ },
+ {
+  "body_hash": "3728dcdc762e8f57",
+  "first_seen": "2026-10-26",
+  "handle": "grounds-for-innocence-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/grounds-for-innocence-12oz-office-subscription-3572572.png?v=1763664972",
+  "platform": "shopify",
+  "product_id": "8691164283137",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "coffee",
+   "local"
+  ],
+  "title": "Grounds for Innocence Blend",
+  "url": "https://www.bongojava.com/products/grounds-for-innocence-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45995156078849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground for Drip",
+    "variant_id": "45995156111617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Ground for French Press",
+    "variant_id": "45995156144385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.75,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46309066604801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.75,
+    "title": "2 lb / Ground for Drip",
+    "variant_id": "46309066637569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.75,
+    "title": "2 lb / Ground for French Press",
+    "variant_id": "46309066670337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46309066703105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb / Ground for Drip",
+    "variant_id": "46309066735873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "5 lb / Ground for French Press",
+    "variant_id": "46309066768641"
+   }
+  ],
+  "vendor": "Blend | Medium Roast"
+ },
+ {
+  "body_hash": "2e63214e50e5341e",
+  "first_seen": "2026-10-26",
+  "handle": "bongo-java-16-oz-flip-traveler-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/bongo-java-16-oz-flip-traveler-7172364.png?v=1763664972",
+  "platform": "shopify",
+  "product_id": "8948743274753",
+  "product_type": "Merchandise",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Merchandise",
+   "Mug",
+   "Thermos"
+  ],
+  "title": "Bongo Java 16 oz Flip Traveler",
+  "url": "https://www.bongojava.com/products/bongo-java-16-oz-flip-traveler-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 281,
+    "price_usd": 32.95,
+    "title": "Default Title",
+    "variant_id": "46863554183425"
+   }
+  ],
+  "vendor": "Merchandise"
+ },
+ {
+  "body_hash": "287dd80f1a030e47",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/roasters-choice-3451809.png?v=1781567828",
+  "platform": "shopify",
+  "product_id": "8985083740417",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://www.bongojava.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "47009214431489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "47009214464257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "47009214497025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "47009267974401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "47009268007169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "47009268039937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "48236508250369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for drip / 2lb",
+    "variant_id": "48236508283137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.99,
+    "title": "Ground for French Press (coarse) / 2lb",
+    "variant_id": "48236508315905"
+   }
+  ],
+  "vendor": "Subscription"
+ },
+ {
+  "body_hash": "e11a7e41fdec6d20",
+  "first_seen": "2026-10-26",
+  "handle": "barista-boy-bongo-baby-wham-zap-boom",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/WhamZap.png?v=1781541025",
+  "platform": "shopify",
+  "product_id": "9014275113217",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "10oz",
+   "Barista Boy & Bongo Baby",
+   "coffee"
+  ],
+  "title": "Barista Boy & Bongo Baby: Vol. 1",
+  "url": "https://www.bongojava.com/products/barista-boy-bongo-baby-wham-zap-boom",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "50340464525569"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "50340464558337"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Coarse",
+    "variant_id": "50340464591105"
+   }
+  ],
+  "vendor": "Blend l Medium Roast"
+ },
+ {
+  "body_hash": "ddcd90cd9bf9a1d6",
+  "first_seen": "2026-10-26",
+  "handle": "barista-boy-bongo-baby-vol-2",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/KapowCool.png?v=1781541025",
+  "platform": "shopify",
+  "product_id": "9189701484801",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "10oz",
+   "Barista Boy & Bongo Baby",
+   "coffee"
+  ],
+  "title": "Barista Boy & Bongo Baby: Vol. 2",
+  "url": "https://www.bongojava.com/products/barista-boy-bongo-baby-vol-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Whole Bean",
+    "variant_id": "50340474814721"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Drip",
+    "variant_id": "50340474847489"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Course",
+    "variant_id": "50340474880257"
+   }
+  ],
+  "vendor": "Blend | Dark Roast"
+ },
+ {
+  "body_hash": "58b31457eed3b54d",
+  "first_seen": "2026-10-26",
+  "handle": "telar-alto",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_TelarAlto_12oz_da801c4a-fccd-4f33-86bd-9addde6751fb.png?v=1787154619",
+  "platform": "shopify",
+  "product_id": "9317494784257",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "New Release",
+   "Regenerative Organic"
+  ],
+  "title": "Telar Alto",
+  "url": "https://www.bongojava.com/products/telar-alto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50203112210689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "50203112243457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50203112276225"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "50203112308993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "50203112341761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "50203112374529"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "50203112407297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "50203112440065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "50203112472833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso / 12oz",
+    "variant_id": "50222129643777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for Espresso / 2 lb",
+    "variant_id": "50222129676545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for Espresso / 5lb",
+    "variant_id": "50222129709313"
+   }
+  ],
+  "vendor": "Blend | Regenerative Organic"
+ },
+ {
+  "body_hash": "616ba1d510b2a235",
+  "first_seen": "2026-10-26",
+  "handle": "elliston-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_Elliston_12oz_8f2938bf-65cf-4177-92e9-27523a9fd459.png?v=1787196105",
+  "platform": "shopify",
+  "product_id": "9318294028545",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "New Release",
+   "Regenerative Organic"
+  ],
+  "title": "Elliston Blend",
+  "url": "https://www.bongojava.com/products/elliston-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50204814344449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "50204814377217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50204814409985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "50204814442753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "50204814475521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "50204814508289"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "50204814541057"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "50204814573825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 118.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "50204814606593"
+   }
+  ],
+  "vendor": "Blend | Regenerative Organic"
+ },
+ {
+  "body_hash": "08f49d21b5260071",
+  "first_seen": "2026-10-26",
+  "handle": "churupampa",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Bongo_Churupampa_12oz_b24abf5a-9f8e-424f-8773-68dc4805038a.png?v=1787196115",
+  "platform": "shopify",
+  "product_id": "9318311887105",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "New Release",
+   "Regenerative Organic"
+  ],
+  "title": "Churupampa",
+  "url": "https://www.bongojava.com/products/churupampa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50204851142913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "50204851175681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50204851208449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "50204851241217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "50204851273985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "50204851306753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "50204851339521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "50204851372289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "50204851405057"
+   }
+  ],
+  "vendor": "Peru | Regenerative Organic"
+ },
+ {
+  "body_hash": "aa43445d2700035c",
+  "first_seen": "2026-10-26",
+  "handle": "tolima",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/RoC_Tolima_12oz_Mockup_1.png?v=1787197574",
+  "platform": "shopify",
+  "product_id": "9318315098369",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "New Release",
+   "Regenerative Organic"
+  ],
+  "title": "Tolima",
+  "url": "https://www.bongojava.com/products/tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50204859105537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "50204859138305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50204859171073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for drip / 12oz",
+    "variant_id": "50204859203841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "50204859236609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for drip / 5lb",
+    "variant_id": "50204859269377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Ground for French Press (coarse) / 12oz",
+    "variant_id": "50204859302145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "50204859334913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.99,
+    "title": "Ground for French Press (coarse) / 5lb",
+    "variant_id": "50204859367681"
+   }
+  ],
+  "vendor": "Colombia | Regenerative Organic"
+ },
+ {
+  "body_hash": "2d896c40032f37c5",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-series-1",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Fellow_Series1_Presale_Lifestyle_Digital-7-NoScreen_1_1.jpg?v=1788541963",
+  "platform": "shopify",
+  "product_id": "9339971010817",
+  "product_type": "",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "Fellow Wholesale",
+   "Shopify Collective"
+  ],
+  "title": "Espresso Series 1",
+  "url": "https://www.bongojava.com/products/espresso-series-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1499.95,
+    "title": "Black",
+    "variant_id": "50279275168001"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Malted Chocolate + Maple",
+    "variant_id": "50279275200769"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Cherry Red + Walnut",
+    "variant_id": "50279275233537"
+   }
+  ],
+  "vendor": "Fellow Wholesale"
+ },
+ {
+  "body_hash": "0bc904c7067f6c67",
+  "first_seen": "2026-10-26",
+  "handle": "yirgacheffe-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0480/8484/4705/files/Shefina-12oz_Mockup_1.png?v=1791428698",
+  "platform": "shopify",
+  "product_id": "9490363220225",
+  "product_type": "coffee",
+  "roaster_slug": "bongojava",
+  "tags": [
+   "best-seller",
+   "top-10",
+   "top-5",
+   "top10",
+   "top5"
+  ],
+  "title": "Shefina",
+  "url": "https://www.bongojava.com/products/yirgacheffe-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "50589319758081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.99,
+    "title": "Whole Bean / 2 lb",
+    "variant_id": "50589319790849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.99,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "50589319823617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Ground for drip / 12 oz",
+    "variant_id": "50589319856385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.99,
+    "title": "Ground for drip / 2 lb",
+    "variant_id": "50589319889153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.99,
+    "title": "Ground for drip / 5 lb",
+    "variant_id": "50589319921921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.99,
+    "title": "Ground for French Press (coarse) / 12 oz",
+    "variant_id": "50589319954689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.99,
+    "title": "Ground for French Press (coarse) / 2 lb",
+    "variant_id": "50589319987457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.99,
+    "title": "Ground for French Press (coarse) / 5 lb",
+    "variant_id": "50589320020225"
+   }
+  ],
+  "vendor": "Ethiopia | Light Roast"
+ }
+]

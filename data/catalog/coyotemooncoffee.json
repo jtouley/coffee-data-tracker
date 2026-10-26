@@ -1,0 +1,639 @@
+[
+ {
+  "body_hash": "3a5276751c2d017f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/B-C-CR-G-blue-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2210",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Coffee",
+   "Floral",
+   "Honeyed",
+   "Medium-Dark Roast",
+   "Nutty",
+   "Single Origin"
+  ],
+  "title": "Brazil",
+  "url": "https://coyotemooncoffee.com/product/brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Brazil",
+    "variant_id": "2210:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6e3d0c06cd7e4d89",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2220",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Citric",
+   "Coffee",
+   "Floral",
+   "Herbal",
+   "Medium-Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Colombia",
+  "url": "https://coyotemooncoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Colombia",
+    "variant_id": "2220:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b6bb812c547b371f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C.jpg",
+  "platform": "woocommerce",
+  "product_id": "2230",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Balanced",
+   "Coffee",
+   "Medium Roast",
+   "Single Origin",
+   "Tart",
+   "Toffee"
+  ],
+  "title": "Costa Rica",
+  "url": "https://coyotemooncoffee.com/product/costa-rica/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Costa Rica",
+    "variant_id": "2230:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b55bf3ed49f4c70",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C.jpg",
+  "platform": "woocommerce",
+  "product_id": "2254",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Chocolate",
+   "Coffee",
+   "Floral",
+   "Lime",
+   "Medium-Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://coyotemooncoffee.com/product/ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Ethiopia",
+    "variant_id": "2254:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "09a063fefc483725",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/B-C-CR-G-blue-1-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2264",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Chocolate",
+   "Coffee",
+   "Creamy",
+   "Medium Roast",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "Guatemala",
+  "url": "https://coyotemooncoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Guatemala",
+    "variant_id": "2264:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d065e28cadaa0b8",
+  "first_seen": "2026-10-26",
+  "handle": "perfect-sunset-decaf",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/B-C-CR-G-blue-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2274",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Coffee",
+   "Dark Roast",
+   "Decaf",
+   "French Roast"
+  ],
+  "title": "Perfect Sunset Decaf",
+  "url": "https://coyotemooncoffee.com/product/perfect-sunset-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Perfect Sunset Decaf",
+    "variant_id": "2274:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "020ef80697ebb764",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2284",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Cedar",
+   "Coffee",
+   "Medium-Dark Roast",
+   "Nutty",
+   "Single Origin"
+  ],
+  "title": "Peru",
+  "url": "https://coyotemooncoffee.com/product/peru/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Peru",
+    "variant_id": "2284:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7340aba6bffc62df",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/07/beans-nat.jpg",
+  "platform": "woocommerce",
+  "product_id": "2304",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Coffee",
+   "Creamy",
+   "Floral",
+   "Medium Roast",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "Rwanda",
+  "url": "https://coyotemooncoffee.com/product/rwanda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Rwanda",
+    "variant_id": "2304:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43c27240f1c387f4",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "2314",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Cedar",
+   "Coffee",
+   "Earth",
+   "Heavy",
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Sumatra",
+  "url": "https://coyotemooncoffee.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Sumatra",
+    "variant_id": "2314:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e3ad8a8cc947143",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2013/10/Tanzania.jpg",
+  "platform": "woocommerce",
+  "product_id": "2326",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Cedar",
+   "Coffee",
+   "Medium-Dark Roast",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://coyotemooncoffee.com/product/tanzania-peaberry/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Tanzania Peaberry",
+    "variant_id": "2326:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc97a724126f53bb",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-sample-pack",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/DE-3-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2386",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Samplers"
+  ],
+  "title": "Coffee Sample Pack",
+  "url": "https://coyotemooncoffee.com/product/coffee-sample-pack/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.0,
+    "title": "Coffee Sample Pack",
+    "variant_id": "2386:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e8a75d0df722eaa8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2395",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Samplers"
+  ],
+  "title": "Colombia Sample",
+  "url": "https://coyotemooncoffee.com/product/colombia-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Colombia Sample",
+    "variant_id": "2395:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-4-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2398",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Samplers"
+  ],
+  "title": "Tanzania Peaberry Sample",
+  "url": "https://coyotemooncoffee.com/product/tanzania-peaberry-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Tanzania Peaberry Sample",
+    "variant_id": "2398:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7dbd8ede6d55ec3e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-7-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2399",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Clean",
+   "Clean cup",
+   "Earthy",
+   "Samplers",
+   "Smoky",
+   "Sweet Profile"
+  ],
+  "title": "Sumatra Sample",
+  "url": "https://coyotemooncoffee.com/product/sumatra-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Sumatra Sample",
+    "variant_id": "2399:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a9fa604fd2bd922",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2020/05/sample-bags-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2400",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Bourbon",
+   "Creamy",
+   "Floral",
+   "Light Fruity overtones",
+   "Organic",
+   "Samplers"
+  ],
+  "title": "Rwanda Sample",
+  "url": "https://coyotemooncoffee.com/product/rwanda-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Rwanda Sample",
+    "variant_id": "2400:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd5c21d0ed97186b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/DE-3-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2401",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Cedar",
+   "Hint of Cocoa",
+   "Nutty",
+   "Organic",
+   "Samplers"
+  ],
+  "title": "Peru Sample",
+  "url": "https://coyotemooncoffee.com/product/peru-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Peru Sample",
+    "variant_id": "2401:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b0ef071a35f59c31",
+  "first_seen": "2026-10-26",
+  "handle": "perfect-sunset-decaf-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2402",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Earthy",
+   "Flavorful",
+   "Floral",
+   "Samplers",
+   "Smooth",
+   "Water Method"
+  ],
+  "title": "Perfect Sunset Decaf Sample",
+  "url": "https://coyotemooncoffee.com/product/perfect-sunset-decaf-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Perfect Sunset Decaf Sample",
+    "variant_id": "2402:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b942d1b7acb01018",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-3-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2403",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Chocolatey Medium-Dark Roast",
+   "Creamy",
+   "Samplers",
+   "Sweet"
+  ],
+  "title": "Guatemala Sample",
+  "url": "https://coyotemooncoffee.com/product/guatemala-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Guatemala Sample",
+    "variant_id": "2403:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0c25a7b3bed8cee",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/B-C-CR-G-blue-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2406",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Bold",
+   "Floral",
+   "Honeyed",
+   "Medium Dark",
+   "Nutty",
+   "Samplers"
+  ],
+  "title": "Brazil Sample",
+  "url": "https://coyotemooncoffee.com/product/brazil-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Brazil Sample",
+    "variant_id": "2406:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4902c4f43f4a0358",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2016/12/CR-C.jpg",
+  "platform": "woocommerce",
+  "product_id": "2407",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Peanut Taste",
+   "Samplers",
+   "Tartness",
+   "Toffee"
+  ],
+  "title": "Costa Rica Sample",
+  "url": "https://coyotemooncoffee.com/product/costa-rica-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Costa Rica Sample",
+    "variant_id": "2407:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf35aefd518a3b7d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sample",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-7-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2409",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "Apricots",
+   "Coffees Country of Origin",
+   "Floral",
+   "Peaches",
+   "Samplers",
+   "Yirgacheffe"
+  ],
+  "title": "Ethiopia Sample",
+  "url": "https://coyotemooncoffee.com/product/ethiopia-sample/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "Ethiopia Sample",
+    "variant_id": "2409:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a4f3227a98a5e5c6",
+  "first_seen": "2026-10-26",
+  "handle": "coyote-moon-coffee-sample-tour",
+  "image": "https://coyotemooncoffee.com/wp-content/uploads/2017/11/sample-bags-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2610",
+  "product_type": "simple",
+  "roaster_slug": "coyotemooncoffee",
+  "tags": [
+   "6 oz samples",
+   "Africa",
+   "Black Friday",
+   "Central America",
+   "Gift Ideas",
+   "Indonesia",
+   "Sample Subscriptions"
+  ],
+  "title": "Coyote Moon Coffee Sample Tour",
+  "url": "https://coyotemooncoffee.com/product/coyote-moon-coffee-sample-tour/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 160.0,
+    "title": "Coyote Moon Coffee Sample Tour",
+    "variant_id": "2610:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

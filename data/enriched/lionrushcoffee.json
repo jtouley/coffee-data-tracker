@@ -1,0 +1,186 @@
+{
+ "7689969926319": {
+  "body_hash": "2837447f274f020e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "earthy",
+   "full-bodied",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "7690024321199": {
+  "body_hash": "7806a2c84813c333",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cane sugar",
+   "cacao",
+   "sweet citrus"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "7690046308527": {
+  "body_hash": "22b3f0e9c2604d15",
+  "elevation_masl_max": 1200,
+  "elevation_masl_min": 1100,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "almond",
+   "chocolate",
+   "cherry"
+  ],
+  "varietals": [
+   "Yellow Bourbon"
+  ]
+ },
+ "7690047422639": {
+  "body_hash": "7d4013a1c0b3a06f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "toffee",
+   "brown sugar"
+  ],
+  "varietals": [
+   "Castillo",
+   "Caturra",
+   "Yellow Bourbon"
+  ]
+ },
+ "7695134785711": {
+  "body_hash": "590e4b217efd4b64",
+  "elevation_masl_max": 2400,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "peach",
+   "blueberry",
+   "honey"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "8609393737903": {
+  "body_hash": "f7183c98cd166627",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 1600,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": [
+   "Pink Bourbon"
+  ]
+ },
+ "8609440039087": {
+  "body_hash": "e567996f54cade14",
+  "elevation_masl_max": 2000,
+  "elevation_masl_min": 2000,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [],
+  "varietals": [
+   "Castillo",
+   "Caturra"
+  ]
+ },
+ "8692673249455": {
+  "body_hash": "735bb7f36d6c993d",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "jasmine",
+   "bergamot",
+   "lime"
+  ],
+  "varietals": [
+   "Geisha",
+   "Gesha"
+  ]
+ },
+ "8692687732911": {
+  "body_hash": "4e1fa021dfed13ee",
+  "elevation_masl_max": 1900,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "lime",
+   "caramel",
+   "cacao"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ }
+}

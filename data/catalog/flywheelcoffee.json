@@ -1,0 +1,56 @@
+[
+ {
+  "body_hash": "4cd494bf3ac645d2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-masha-natural-rfa-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7300/products/IMG_0510_82e7e03a-d81d-458d-9787-a0adf4d25645.jpg?v=1608676489",
+  "platform": "shopify",
+  "product_id": "3735154305",
+  "product_type": "coffee",
+  "roaster_slug": "flywheelcoffee",
+  "tags": [
+   "Blueberry",
+   "Dark Chocolate",
+   "Ethiopia",
+   "Fruity",
+   "Juicy",
+   "Natural processed",
+   "Strawberry"
+  ],
+  "title": "Ethiopia Guji Natural",
+  "url": "https://flywheelcoffee.com/products/ethiopia-masha-natural-rfa-organic",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz | Whole Bean",
+    "variant_id": "17353628289"
+   }
+  ],
+  "vendor": "Flywheel Coffee Roasters"
+ },
+ {
+  "body_hash": "a55b5a70c141ffa7",
+  "first_seen": "2026-10-26",
+  "handle": "flywheel-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1080/7300/products/IMG_0510_b40a5d84-80d8-49b1-a765-d4fdb9ea9bad.jpg?v=1608676776",
+  "platform": "shopify",
+  "product_id": "5943738177",
+  "product_type": "coffee",
+  "roaster_slug": "flywheelcoffee",
+  "tags": [],
+  "title": "Flyblend - Espresso",
+  "url": "https://flywheelcoffee.com/products/flywheel-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz | Whole Bean",
+    "variant_id": "18282776449"
+   }
+  ],
+  "vendor": "Flywheel Coffee Roasters"
+ }
+]

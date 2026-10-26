@@ -1,0 +1,644 @@
+[
+ {
+  "body_hash": "9efb7427391fc0f6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/5945453f4f14bc038bec8cac/1763671112313/",
+  "platform": "squarespace",
+  "product_id": "5945453f4f14bc038bec8cac",
+  "product_type": "Central America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Central America",
+   "Clean",
+   "Lemons",
+   "Single Origin",
+   "Sweet"
+  ],
+  "title": "Decaf Blend",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "042420d7-e876-4838-9934-1979cfb3f817"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "25a957fd-5867-4aab-a8f3-fc48837b6625"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "55190eeb-3289-4d09-872a-2c7cb0de068b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "7616036b-d4a4-437c-9ec9-ae1707b1e166"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e4c401d1826afd1f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/595d4e592cba5e2cf2498f60/1763671377949/",
+  "platform": "squarespace",
+  "product_id": "595d4e592cba5e2cf2498f60",
+  "product_type": "Africa",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Africa",
+   "Berries",
+   "Brown Spice",
+   "Grapefruit",
+   "Medium/Dark",
+   "Single Origin"
+  ],
+  "title": "Kenya",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "436e747a-a28e-4681-b8ba-fbb9d8be87d1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "61237762-6e57-448f-b003-6c976a7fb182"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "a79ac760-d0ce-4eb2-8083-dbbd7d29e8d1"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "fd0d1cc6-ba4d-4182-9ad0-d0c8150b6d16"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3528e399456cbb23",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e706120099e3725c67777/1763671290114/",
+  "platform": "squarespace",
+  "product_id": "596e706120099e3725c67777",
+  "product_type": "Africa",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Africa",
+   "Complex",
+   "Floral Aroma",
+   "Lemon",
+   "Tea-Like Body"
+  ],
+  "title": "Ethiopia - Washed",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "209a2527-d928-44d2-9835-b1eb73f58066"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "8965fad6-42b1-4600-9c99-dd41910020fa"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "a0da127a-62af-42ee-bdaa-71acc22225b9"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "ee6e3385-705c-43a3-861b-7da8e5c44820"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8b74a261da13286b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-dl3c7",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e71a6ff7c50deff6eef7a/1763671493343/",
+  "platform": "squarespace",
+  "product_id": "596e71a6ff7c50deff6eef7a",
+  "product_type": "Africa",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Africa",
+   "Cinnamon",
+   "Light Body",
+   "Raw Brown Sugar"
+  ],
+  "title": "Cameroon / 12oz",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-dl3c7",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "249edaed-62ad-4b49-a5a5-2ccdd4f28959"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "7af08d46-b4b4-4fff-a119-9755659e59ca"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "9bc59cff-b159-4a53-b9b7-e9433e39b9d0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "c6bb1898-414e-4cd8-ab3c-ca7568d50064"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f802d9819082c197",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-p9jya",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e72426f4ca31c1123ed26/1771858092227/",
+  "platform": "squarespace",
+  "product_id": "596e72426f4ca31c1123ed26",
+  "product_type": "South America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Caramel",
+   "Chocolate",
+   "Fruits",
+   "South America"
+  ],
+  "title": "Colombia / 12oz",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-p9jya",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "0b3135ac-d6cb-42a2-889b-655c1c12e5bd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "5cd82f8d-18b5-4588-be7a-9492da263bf2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "7a8794f5-02a6-425b-96a8-4dc261cc099f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "9e024a6a-21ee-481d-8c4e-4695a880cccc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0503d174a35b159a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-883t7",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7878414fb5fdff9ee07b/1776904445815/",
+  "platform": "squarespace",
+  "product_id": "596e7878414fb5fdff9ee07b",
+  "product_type": "South America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Milk Chocolate",
+   "South America",
+   "Spice"
+  ],
+  "title": "Brazil /                                   12oz",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-883t7",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "2a2970c6-fe02-40a7-a953-1bdc5cc33ff2"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "36b708dd-0c8e-48cd-b17b-4e46e57c5948"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "40a50c56-e61e-4a0e-8f07-8bd5eef49142"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "9ea2957e-1b9d-4ace-a601-0dbf85daa45c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "384034cb173e2ee7",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-xa3rc",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e788315d5db8bf9c1aa66/1763671438953/",
+  "platform": "squarespace",
+  "product_id": "596e788315d5db8bf9c1aa66",
+  "product_type": "Central America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Apple",
+   "Central America",
+   "Chocolate",
+   "Sweet"
+  ],
+  "title": "Costa Rica / 12oz",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-xa3rc",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "384b39f7-13d4-4d16-ae4a-b8ec1a869ca8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "4751c5ca-8789-4a4c-a848-ea8300fc71e6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "eb3c5093-1e7f-476e-bde1-7a4d60fbd834"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "f4a8e966-afc5-4798-a540-569a90f52791"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d4c753edf5350950",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-8cew6",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e78c0cf81e0931eac2945/1763671431212/",
+  "platform": "squarespace",
+  "product_id": "596e78c0cf81e0931eac2945",
+  "product_type": "Central America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Central America",
+   "Graham Cracker",
+   "Marshmallow",
+   "Milk Chocolate"
+  ],
+  "title": "Guatemala",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-8cew6",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "031da491-9b9c-4cf0-80fd-4e57356a195f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "33a5389a-1816-4a2d-9fd0-44e1a7c65a3a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "8365e9e2-7b08-4c1b-ab66-5f3d4d25228b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "fec1505d-d9ae-454e-89d1-2e2cfaca95ea"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "feae85a1f788533f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-tt6gb",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7906893fc0d16a3de754/1763671262898/",
+  "platform": "squarespace",
+  "product_id": "596e7906893fc0d16a3de754",
+  "product_type": "Africa",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Africa",
+   "Bright",
+   "Citrus",
+   "Fruity"
+  ],
+  "title": "Ethiopia-Natural",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-tt6gb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "66ca1970-61c3-4b9a-bde2-bda5a3276ffb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "6f6a1e57-c398-4767-9e97-a74acd7513d6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "ba5c4769-50a2-4b18-bdb5-49efa05d685f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "bec78ed2-1403-4f69-b819-5292048b388a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "802b85ce08e91388",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-dl3c7-yjgxa",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7b88e45a7cff0ee0fbdc/1763671355134/",
+  "platform": "squarespace",
+  "product_id": "596e7b88e45a7cff0ee0fbdc",
+  "product_type": "Central America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Bright",
+   "Central America",
+   "Fruits",
+   "Fruity",
+   "Milk Chocolate"
+  ],
+  "title": "Nicaragua",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-dl3c7-yjgxa",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "0e7b3812-d879-4ef0-be24-36ef0e4117bf"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "0e91dda4-52cc-483a-8129-f18b7f851912"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "39f452e4-c6ca-4330-8f8f-15a2fca9c84f"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "52e27241-a688-4547-9a90-632d2180fdb9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ba7994791031cc5a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-dl3c7-wa32g",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7bf4f14aa198a9c018a7/1763671299811/",
+  "platform": "squarespace",
+  "product_id": "596e7bf4f14aa198a9c018a7",
+  "product_type": "Central America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Central America",
+   "Cherries",
+   "Dark Chocolate",
+   "Floral"
+  ],
+  "title": "Panama",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-dl3c7-wa32g",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "0518e4a4-1e15-4371-b585-dc696f27c40f"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "839dce7b-67cc-46e8-9c00-626a394a55ad"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "bb60d082-8869-403d-80ec-b4d35ef6b5ce"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "d5fc3bf3-c195-4b48-ab25-184522c150b7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8332a5a609894197",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-dl3c7-wdxd2",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7c9bd1758efdac0e5078/1763671346561/",
+  "platform": "squarespace",
+  "product_id": "596e7c9bd1758efdac0e5078",
+  "product_type": "South America",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Citrus",
+   "Cocoa",
+   "Rich Body",
+   "South America",
+   "Toasted Almond"
+  ],
+  "title": "Peru",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-dl3c7-wdxd2",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "04c6a202-07fb-43a8-abbf-178916fef39d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "4e2ff115-a2c7-42d3-8215-53225814df3d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "e4d5b892-2c51-46d8-9b57-6f34ceeeb02a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "f982d5a4-7fc8-41e9-b3b8-72863989e6aa"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e992841486ef6dca",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-g9fdz-l3fbp-883t7-a57fa",
+  "image": "https://static1.squarespace.com/static/5942d62c5016e1f67fa60ea9/597271eaf14aa1811d01c57e/596e7dd046c3c4bc2fcfb480/1776904507955/",
+  "platform": "squarespace",
+  "product_id": "596e7dd046c3c4bc2fcfb480",
+  "product_type": "Indonesia",
+  "roaster_slug": "whisperingbean",
+  "tags": [
+   "Dark Chocolate",
+   "Earthy",
+   "Indonesia",
+   "Syrupy"
+  ],
+  "title": "Sumatra - Aceh Mandeling",
+  "url": "https://www.whisperingbean.com/single-origin/guatemala-g9fdz-l3fbp-883t7-a57fa",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Whole Bean",
+    "variant_id": "229f3c3a-e1fa-4fd0-a0b0-f523da80b18d"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Espresso (Fine)",
+    "variant_id": "2997b481-4c3d-4604-9410-77cf59241d34"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "French Press (Coarse)",
+    "variant_id": "a88b00b7-b2f4-41ba-b219-995a87ecda85"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 21.89,
+    "title": "Drip Brew (Medium)",
+    "variant_id": "facaa0d8-bccc-4be4-bc93-94dd1234309c"
+   }
+  ],
+  "vendor": ""
+ }
+]

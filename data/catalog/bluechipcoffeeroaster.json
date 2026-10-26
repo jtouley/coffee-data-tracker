@@ -1,0 +1,7196 @@
+[
+ {
+  "body_hash": "39b3b263bde03f5b",
+  "first_seen": "2026-10-26",
+  "handle": "manuka-honey-coffee-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682111693876-generated-label-image-1.jpg?v=1682111700",
+  "platform": "shopify",
+  "product_id": "8202046636352",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee"
+  ],
+  "title": "Manuka Honey Coffee 4oz",
+  "url": "https://bluechipcoffeeroaster.com/products/manuka-honey-coffee-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "44882266980672"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "e14763c92b54fa3e",
+  "first_seen": "2026-10-26",
+  "handle": "manuka-honey-coffee-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682111965503-generated-label-image-2.jpg?v=1682111971",
+  "platform": "shopify",
+  "product_id": "8202058957120",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee"
+  ],
+  "title": "Manuka Honey Coffee 16oz",
+  "url": "https://bluechipcoffeeroaster.com/products/manuka-honey-coffee-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "44882275762496"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "89382bfb400285ec",
+  "first_seen": "2026-10-26",
+  "handle": "mushroom-coffee-fusion-lion-s-mane-chaga-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682111887418-generated-label-image-1.jpg?v=1682111893",
+  "platform": "shopify",
+  "product_id": "8202060726592",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Mushroom Coffee",
+   "single origin"
+  ],
+  "title": "Mushroom Coffee Fusion - Lion’s Mane & Chaga 16oz",
+  "url": "https://bluechipcoffeeroaster.com/products/mushroom-coffee-fusion-lion-s-mane-chaga-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44882273337664"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "d197ccbb82f7ce90",
+  "first_seen": "2026-10-26",
+  "handle": "organic-hemp-coffee-blend-medium-roast-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682112202476-generated-label-image-0.jpg?v=1682112209",
+  "platform": "shopify",
+  "product_id": "8202063479104",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Organic Coffee",
+   "single origin"
+  ],
+  "title": "Hemp Protein Coffee Blend - Medium Roast 4oz",
+  "url": "https://bluechipcoffeeroaster.com/products/organic-hemp-coffee-blend-medium-roast-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "44882285068608"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "e67e3e2aa4f85368",
+  "first_seen": "2026-10-26",
+  "handle": "organic-hemp-coffee-blend-medium-roast-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682112044350-generated-label-image-2.jpg?v=1682112050",
+  "platform": "shopify",
+  "product_id": "8202069082432",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Organic Coffee",
+   "single origin"
+  ],
+  "title": "Hemp Protein Coffee Blend - Medium Roast 16oz",
+  "url": "https://bluechipcoffeeroaster.com/products/organic-hemp-coffee-blend-medium-roast-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "44882278809920"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "b327ba47b5266a08",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-blend-16oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/files/1682112339811-generated-label-image-0.jpg?v=1727969887",
+  "platform": "shopify",
+  "product_id": "8202129080640",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Brazilian Blend 16oz",
+  "url": "https://bluechipcoffeeroaster.com/products/brazilian-blend-16oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Default Title",
+    "variant_id": "49759759204672"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "beecdcef500337d0",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-blend-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/files/1682112436277-generated-label-image-0.jpg?v=1727969961",
+  "platform": "shopify",
+  "product_id": "8202131046720",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Brazilian Blend 4oz",
+  "url": "https://bluechipcoffeeroaster.com/products/brazilian-blend-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.0,
+    "title": "Default Title",
+    "variant_id": "49759762317632"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "fe2ed7e7a4b931e8",
+  "first_seen": "2026-10-26",
+  "handle": "mushroom-coffee-fusion-lion-s-mane-chaga-4oz",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/1682111793642-generated-label-image-0.jpg?v=1682111800",
+  "platform": "shopify",
+  "product_id": "8202139763008",
+  "product_type": "Food & Beverages",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Mushroom Coffee",
+   "single origin"
+  ],
+  "title": "Mushroom Coffee Fusion - Lion’s Mane & Chaga 4oz",
+  "url": "https://bluechipcoffeeroaster.com/products/mushroom-coffee-fusion-lion-s-mane-chaga-4oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "44882270159168"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "671cf18ae3fabf4f",
+  "first_seen": "2026-10-26",
+  "handle": "candy-cane",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag.jpg?v=1682348613",
+  "platform": "shopify",
+  "product_id": "8277021131072",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Candy Cane",
+  "url": "https://bluechipcoffeeroaster.com/products/candy-cane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903491207488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903491240256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903491273024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903491305792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903491338560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903491371328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903491404096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903491436864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903491469632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903491502400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903491535168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903491567936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903491600704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903491633472"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903491666240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903491699008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903491731776"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "671cf18ae3fabf4f",
+  "first_seen": "2026-10-26",
+  "handle": "mint",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_a2bc4b02-bd08-4ef7-b82f-c32ed9f52a49.jpg?v=1682348621",
+  "platform": "shopify",
+  "product_id": "8277021393216",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Mint",
+  "url": "https://bluechipcoffeeroaster.com/products/mint",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903491993920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903492026688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903492059456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903492092224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903492124992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903492157760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903492190528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903492223296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903492256064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903492288832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903492321600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903492354368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903492387136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903492419904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903492452672"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903492485440"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903492518208"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "d7c33d84abc9e760",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_daf762cc-3747-458d-bf1a-ff4aebeb06a6.jpg?v=1682349354",
+  "platform": "shopify",
+  "product_id": "8277052555584",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "French Vanilla",
+  "url": "https://bluechipcoffeeroaster.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903558545728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903558578496"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903558611264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903558644032"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903558676800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903558709568"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903558742336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903558775104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903558807872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903558840640"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903558873408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903558906176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903558938944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903558971712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903559004480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903559037248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903559070016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903559102784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903559135552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903559168320"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "4d422ab093b81254",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_8e4f0954-9bfd-4fbb-a6ec-81fc8c2389f3.jpg?v=1682349383",
+  "platform": "shopify",
+  "product_id": "8277053669696",
+  "product_type": "coffee",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Hazelnut",
+  "url": "https://bluechipcoffeeroaster.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903560773952"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903560806720"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903560839488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903560872256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903560905024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903560937792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903560970560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903561003328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903561036096"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903561068864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903561101632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903561134400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903561167168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903561199936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903561232704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903561265472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903561298240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903561331008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903561363776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903561396544"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "51b6ed8e3bcd0601",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_2fdc4166-42d8-4b52-89cf-2b5a89d2a02e.jpg?v=1682349436",
+  "platform": "shopify",
+  "product_id": "8277055603008",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Mexican Chocolate",
+  "url": "https://bluechipcoffeeroaster.com/products/mexican-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903563821376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903563854144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903563886912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903563919680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903563952448"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903564017984"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903564050752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903564083520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903564116288"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903564149056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903564181824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903564214592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903564247360"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903564280128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903564312896"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903564345664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903564378432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903564411200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903564443968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903564476736"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "1dec0fc48beb1488",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_b3c82b76-0c1a-44b1-8e33-343e96f6a737.jpg?v=1682349447",
+  "platform": "shopify",
+  "product_id": "8277055996224",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Chocolate Hazelnut",
+  "url": "https://bluechipcoffeeroaster.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903565033792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903565066560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903565099328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903565132096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903565164864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903565197632"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903565230400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903565263168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903565295936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903565328704"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903565361472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903565394240"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903565427008"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903565459776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903565492544"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903565525312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903565558080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903565590848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903565623616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903565656384"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "8f7ffc02948a3808",
+  "first_seen": "2026-10-26",
+  "handle": "cinnabun",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_448cc92d-a675-43d6-b47b-567036ede15e.jpg?v=1682349476",
+  "platform": "shopify",
+  "product_id": "8277057143104",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Cinnabun",
+  "url": "https://bluechipcoffeeroaster.com/products/cinnabun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903567229248"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903567262016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903567294784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903567327552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903567360320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903567393088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903567425856"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903567458624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903567491392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903567524160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903567556928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903567589696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903567622464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903567655232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903567688000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903567720768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903567753536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903567786304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903567819072"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903567851840"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "0601380925849fca",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_3401c6c1-9821-4443-a06e-245c05e95b0f.jpg?v=1682349501",
+  "platform": "shopify",
+  "product_id": "8277057896768",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://bluechipcoffeeroaster.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903568605504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903568638272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903568671040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903568703808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903568736576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903568769344"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903568802112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903568834880"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903568867648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903568900416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903568933184"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903568965952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903568998720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903569031488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903569064256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903569097024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903569129792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903569162560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903569195328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903569228096"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "93fdd47b1f7953c4",
+  "first_seen": "2026-10-26",
+  "handle": "caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_b95b88a6-cb4e-4a97-a5a1-0b8d2764d164.jpg?v=1682349518",
+  "platform": "shopify",
+  "product_id": "8277058486592",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Caramel",
+  "url": "https://bluechipcoffeeroaster.com/products/caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903569981760"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903570014528"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903570047296"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903570080064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903570112832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903570145600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903570178368"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903570211136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903570243904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903570276672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903570309440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903570342208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903570374976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903570407744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903570440512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903570473280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903570506048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903570538816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903570571584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903570604352"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "00cfe7d8a97ffba2",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_43845a38-7c2b-40d6-b348-9a458224ea1b.jpg?v=1682349547",
+  "platform": "shopify",
+  "product_id": "8277059567936",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://bluechipcoffeeroaster.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903572898112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903572930880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903572963648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903572996416"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903573029184"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903573061952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903573094720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903573127488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903573160256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903573193024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903573225792"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903573258560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903573291328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903573324096"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903573356864"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903573389632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903573422400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903573455168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903573487936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903573520704"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "87e54d1f6e32c549",
+  "first_seen": "2026-10-26",
+  "handle": "mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_28f22d4e-23d8-42e5-af33-fea20268c3ce.jpg?v=1682349576",
+  "platform": "shopify",
+  "product_id": "8277060550976",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Mocha",
+  "url": "https://bluechipcoffeeroaster.com/products/mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903575028032"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903575060800"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903575093568"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903575126336"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903575159104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903575191872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903575224640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903575257408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903575290176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903575322944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903575355712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903575388480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903575421248"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903575454016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903575486784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903575519552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903575552320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903575585088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903575617856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903575650624"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "00ea89bbc2a5ae4b",
+  "first_seen": "2026-10-26",
+  "handle": "turtle",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_545c69c1-de64-4a81-a1af-59ce336e4806.jpg?v=1682349605",
+  "platform": "shopify",
+  "product_id": "8277061697856",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Turtle",
+  "url": "https://bluechipcoffeeroaster.com/products/turtle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903576961344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903576994112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903577026880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903577059648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903577092416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903577125184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903577157952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903577190720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903577223488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903577256256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903577289024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903577321792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903577354560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903577387328"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903577420096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903577452864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903577485632"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "f1ab191a6f3de79e",
+  "first_seen": "2026-10-26",
+  "handle": "blonde",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_e00b89ae-f470-45fe-a1e6-a234a490becd.jpg?v=1682349627",
+  "platform": "shopify",
+  "product_id": "8277062680896",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Blonde",
+  "url": "https://bluechipcoffeeroaster.com/products/blonde",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903579156800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903579189568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903579222336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903579255104"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903579287872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903579320640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903579353408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903579386176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903579418944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903579451712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903579484480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903579517248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903579550016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903579582784"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903579615552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903579648320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903579681088"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "42e5e928485836dc",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_8d8a6279-70a7-4ca2-be4b-334ebebddaf7.jpg?v=1682349661",
+  "platform": "shopify",
+  "product_id": "8277063958848",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Italian Roast",
+  "url": "https://bluechipcoffeeroaster.com/products/italian-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903581548864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903581581632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903581614400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903581647168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903581679936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903581712704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903581745472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903581778240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903581811008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903581843776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903581876544"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903581909312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903581942080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903581974848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903582007616"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903582040384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903582073152"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "81b48593c4b73f86",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_f32d701d-c674-478b-8341-0e9500263018.jpg?v=1682349751",
+  "platform": "shopify",
+  "product_id": "8277067170112",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Cold Brew Coffee",
+  "url": "https://bluechipcoffeeroaster.com/products/cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903585972544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903586005312"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903586038080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903586070848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903586103616"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "9de8c8f6d1a02e6d",
+  "first_seen": "2026-10-26",
+  "handle": "6-bean-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_3d857898-a408-4438-ba51-d5b8fb06df0e.jpg?v=1682350028",
+  "platform": "shopify",
+  "product_id": "8277078901056",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "blend"
+  ],
+  "title": "6 Bean Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/6-bean-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903602291008"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903602323776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903602356544"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903602389312"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903602422080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903602454848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903602487616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903602520384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903602553152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903602585920"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903602618688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903602651456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903602684224"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.99,
+    "title": "12 Pack / Standard",
+    "variant_id": "44903602716992"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903602749760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903602815296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903602848064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903602880832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903602913600"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903602946368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903602979136"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "a2f64f6a72cf4004",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_f710e00f-a22b-4e0c-a41a-7138d3370d29.jpg?v=1682350350",
+  "platform": "shopify",
+  "product_id": "8277091418432",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903632568640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903632601408"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903632634176"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903632666944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903632699712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903632732480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903632798016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903632863552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903632896320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903632961856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903632994624"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903633060160"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.99,
+    "title": "12 Pack / Standard",
+    "variant_id": "44903633092928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903633158464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903633191232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903633256768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903633322304"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903633355072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903633387840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903633453376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903633518912"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "1530d6d4a0257dd8",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_322a7fba-5369-45c0-9d9a-a7d137e7abb4.jpg?v=1682350363",
+  "platform": "shopify",
+  "product_id": "8277091975488",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Breakfast Blend +",
+  "url": "https://bluechipcoffeeroaster.com/products/breakfast-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903634796864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903634829632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903634862400"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903634895168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903634927936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903634960704"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903634993472"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903635026240"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903635059008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903635091776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903635124544"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903635157312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903635190080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903635222848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903635255616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903635288384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903635321152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903635353920"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903635386688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903635419456"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "3a800cb9adf260a2",
+  "first_seen": "2026-10-26",
+  "handle": "african-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_c4778bd4-ee07-48e9-9fc1-bad4c4a54718.jpg?v=1682350390",
+  "platform": "shopify",
+  "product_id": "8277093024064",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "African Espresso",
+  "url": "https://bluechipcoffeeroaster.com/products/african-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903640924480"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903640957248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903640990016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903641022784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903641055552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903641088320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903641121088"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903641153856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903641186624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903641219392"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903641252160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903641284928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903641317696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903641350464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903641383232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903641416000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903641448768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903641481536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903641514304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903641547072"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "735d9bd35a3ffec2",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_d153ba7a-c3ec-4c4b-b323-1a73d639e0d4.jpg?v=1682350413",
+  "platform": "shopify",
+  "product_id": "8277094007104",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Cowboy Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/cowboy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903644332352"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903644365120"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903644397888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903644430656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903644463424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903644496192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903644528960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903644561728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903644594496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903644627264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903644660032"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903644725568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903644758336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903644823872"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.99,
+    "title": "12 Pack / Standard",
+    "variant_id": "44903644889408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903644922176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903644954944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903645020480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903645086016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903645118784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903645184320"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "c1f21d203933e64c",
+  "first_seen": "2026-10-26",
+  "handle": "latin-american-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_19186277-ce64-4848-ac09-743bd3eee0a2.jpg?v=1682350444",
+  "platform": "shopify",
+  "product_id": "8277095317824",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Latin American Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/latin-american-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903649083712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903649116480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903649149248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903649182016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903649214784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903649247552"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903649280320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903649313088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903649345856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903649378624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903649411392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903649444160"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "155fe32f081e8990",
+  "first_seen": "2026-10-26",
+  "handle": "asian-plateau-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_5f96be80-9f63-48ec-8cfb-48577dbda222.jpg?v=1682350459",
+  "platform": "shopify",
+  "product_id": "8277096005952",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Asian Plateau Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/asian-plateau-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903652426048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903652458816"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903652491584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903652524352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903652557120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903652589888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903652622656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903652655424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903652720960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903652753728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903652819264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903652884800"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "11311edd9d18351e",
+  "first_seen": "2026-10-26",
+  "handle": "african-kahawa-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_a50f9291-230f-4061-82e7-7228bb537ce9.jpg?v=1682350473",
+  "platform": "shopify",
+  "product_id": "8277096661312",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "African Kahawa Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/african-kahawa-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903654687040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903654719808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903654752576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903654785344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903654818112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903654850880"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903654883648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903654916416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903654949184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903654981952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903655014720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903655047488"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "ccf68bf5356ca785",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_f18338c5-291a-415e-b10b-8e398ec409f8.jpg?v=1682350481",
+  "platform": "shopify",
+  "product_id": "8277097021760",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "House Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903657963840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903657996608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903658029376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903658062144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903658094912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903658127680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903658160448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903658193216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903658225984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903658258752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903658291520"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903658324288"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "3ee05db4f03d751c",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-2",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_bf23404e-134f-4fe4-a160-5a3adab449bf.jpg?v=1682350496",
+  "platform": "shopify",
+  "product_id": "8277097611584",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/breakfast-blend-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903659012416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903659045184"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903659077952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903659110720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903659143488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903659176256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903659209024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903659241792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903659274560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903659307328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903659340096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903659372864"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "835c01689d7dcb47",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_62441bac-f70a-45b7-ac03-4499b2c9f1c5.jpg?v=1682350506",
+  "platform": "shopify",
+  "product_id": "8277098004800",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Half Caff Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903659864384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903659897152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903659929920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903659962688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903659995456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903660028224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903660060992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903660093760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903660126528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903660159296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903660192064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903660224832"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "52e4b58c39dc7632",
+  "first_seen": "2026-10-26",
+  "handle": "gourmet-donut-shop",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_5b51e0c3-d203-47fa-8ee0-7474071697fc.jpg?v=1682350515",
+  "platform": "shopify",
+  "product_id": "8277098365248",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Gourmet Donut Shop",
+  "url": "https://bluechipcoffeeroaster.com/products/gourmet-donut-shop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903660650816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903660683584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903660716352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903660749120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903660781888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903660814656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903660847424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903660880192"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903660912960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903660945728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903660978496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903661011264"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "70d10a1e0d260959",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_577c3d33-47f6-455d-a8e6-773408555d9c.jpg?v=1682350530",
+  "platform": "shopify",
+  "product_id": "8277099086144",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "French Roast",
+  "url": "https://bluechipcoffeeroaster.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903662321984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903662354752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903662387520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903662420288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903662453056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903662485824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903662518592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903662551360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903662584128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903662616896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903662649664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903662682432"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "7c301de3d9ab41ca",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-1",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_fb2fc0a5-fe9c-4f55-923a-790466959164.jpg?v=1682350543",
+  "platform": "shopify",
+  "product_id": "8277099577664",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Italian Roast",
+  "url": "https://bluechipcoffeeroaster.com/products/italian-roast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903663206720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903663239488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903663272256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903663305024"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903663337792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903663370560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903663403328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903663436096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903663468864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903663501632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903663534400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903663567168"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "fd5cdf312d571368",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_00a1157b-bf0d-4d94-8206-f47ce0fb5e68.jpg?v=1682350557",
+  "platform": "shopify",
+  "product_id": "8277100265792",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Holiday Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903665697088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903665729856"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903665762624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903665795392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903665828160"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903665860928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903665893696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903665926464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903665959232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903665992000"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903666024768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903666057536"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903666090304"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903666123072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903666155840"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903666188608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903666221376"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "c0f6227dd813f62b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_a8b3aee2-56e8-41c9-ac65-ef15e11e0cff.jpg?v=1682350572",
+  "platform": "shopify",
+  "product_id": "8277101019456",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Cold Brew Coffee",
+  "url": "https://bluechipcoffeeroaster.com/products/cold-brew-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903670022464"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903670055232"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903670088000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903670120768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903670153536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903670186304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903670219072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903670251840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903670284608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903670317376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903670350144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903670382912"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903670415680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903670448448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903670481216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903670513984"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903670546752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903670579520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903670612288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903670645056"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "561c5725e088a1c3",
+  "first_seen": "2026-10-26",
+  "handle": "whiskey-barrel-aged",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_a53e29f3-5795-4a87-83a9-fc443516cd56.jpg?v=1682350596",
+  "platform": "shopify",
+  "product_id": "8277102068032",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Whiskey Barrel Aged",
+  "url": "https://bluechipcoffeeroaster.com/products/whiskey-barrel-aged",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903673758016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903673790784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903673823552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903673856320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903673889088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903673921856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903673954624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903673987392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903674020160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903674052928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903674085696"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903674118464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903674151232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903674184000"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903674216768"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903674249536"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903674282304"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903674315072"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903674347840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903674380608"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "1535d188bda9e4f1",
+  "first_seen": "2026-10-26",
+  "handle": "max-caf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_27282dfc-ac16-4f8f-87df-430c9e1ef29b.jpg?v=1682350606",
+  "platform": "shopify",
+  "product_id": "8277102494016",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Max Caf Blend",
+  "url": "https://bluechipcoffeeroaster.com/products/max-caf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903675724096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903675756864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903675789632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903675822400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903675855168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903675887936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903675920704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903675953472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903675986240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903676019008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903676051776"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903676084544"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903676117312"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903676150080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903676182848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903676215616"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903676248384"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903676281152"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903676313920"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903676346688"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "e9ed19a330caecd2",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_8437e206-b95c-4e74-820d-0d187c781524.jpg?v=1682350616",
+  "platform": "shopify",
+  "product_id": "8277102985536",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Bali Blue",
+  "url": "https://bluechipcoffeeroaster.com/products/bali-blue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903677493568"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 230.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903677526336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903677559104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903677591872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903677624640"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903677657408"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903677690176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903677722944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903677755712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903677788480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903677821248"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903677854016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903677886784"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903677919552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903677952320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903677985088"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903678017856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903678050624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903678083392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903678116160"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "669ff5d9456a826c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_80d235ec-d610-4209-9b44-453bacdd0a07.jpg?v=1682350631",
+  "platform": "shopify",
+  "product_id": "8277103608128",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Brazil Santos",
+  "url": "https://bluechipcoffeeroaster.com/products/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903679197504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903679230272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903679263040"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903679295808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903679328576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903679361344"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903679394112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903679426880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903679459648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903679492416"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903679525184"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903679557952"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903679590720"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903679623488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903679656256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903679689024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903679721792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903679754560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903679787328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903679820096"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "e29479b1d9ef6ed6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_e645338d-f29c-47b4-b1b9-12c2fe08b54b.jpg?v=1682350641",
+  "platform": "shopify",
+  "product_id": "8277103903040",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Colombia",
+  "url": "https://bluechipcoffeeroaster.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903680540992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903680573760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903680606528"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903680639296"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903680672064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903680704832"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903680737600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903680770368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903680803136"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903680835904"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903680868672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903680901440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903680934208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903680966976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903680999744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903681032512"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903681065280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903681098048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903681130816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903681163584"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "7f6eafe966eeae70",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_9f3c24d7-768c-4c97-8b5e-3a7a501d42d5.jpg?v=1682350650",
+  "platform": "shopify",
+  "product_id": "8277104296256",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Costa Rica",
+  "url": "https://bluechipcoffeeroaster.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903681753408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903681786176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903681818944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903681851712"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903681884480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903681917248"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903681950016"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903681982784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903682048320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903682081088"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903682113856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903682179392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903682212160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903682244928"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903682277696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903682310464"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903682343232"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903682376000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903682408768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903682441536"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "f5f7e93dbd76ba4d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_eff7b18e-36fe-48d6-abb7-fcdf8a520fa8.jpg?v=1682350668",
+  "platform": "shopify",
+  "product_id": "8277105049920",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Ethiopia Natural",
+  "url": "https://bluechipcoffeeroaster.com/products/ethiopia-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903683359040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903683391808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903683424576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903683457344"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903683490112"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903683522880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903683555648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903683588416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903683621184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903683653952"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903683686720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903683719488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903683752256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903683785024"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903683817792"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903683850560"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903683883328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903683916096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903683948864"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903683981632"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "96cd050350a6ae3e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_db881e11-acfd-4e49-87e7-fd30d49a0d15.jpg?v=1682350676",
+  "platform": "shopify",
+  "product_id": "8277105344832",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Guatemala",
+  "url": "https://bluechipcoffeeroaster.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903684374848"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903684407616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903684440384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903684473152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903684505920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903684538688"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903684571456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903684604224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903684636992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903684669760"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903684702528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903684735296"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903684768064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903684800832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903684833600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903684866368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903684899136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903684931904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903684964672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903684997440"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "b630b05ebf6448f3",
+  "first_seen": "2026-10-26",
+  "handle": "honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_a248d3ee-eb2d-4afb-b9b0-45057ecdb132.jpg?v=1682350687",
+  "platform": "shopify",
+  "product_id": "8277105803584",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Honduras",
+  "url": "https://bluechipcoffeeroaster.com/products/honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903687225664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903687258432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903687291200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903687323968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903687356736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903687389504"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903687422272"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903687455040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903687487808"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903687520576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903687553344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903687586112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903687618880"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903687651648"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903687684416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903687717184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903687749952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903687782720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903687815488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903687848256"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "00eb56329466d997",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_fcd6477c-9e2a-4ae1-b6d2-cdb39395fdde.jpg?v=1682350702",
+  "platform": "shopify",
+  "product_id": "8277106360640",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Mexico",
+  "url": "https://bluechipcoffeeroaster.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903690076480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903690109248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903690142016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903690174784"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903690207552"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903690240320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903690273088"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903690305856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903690338624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903690371392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903690404160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903690436928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903690469696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903690502464"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903690535232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903690568000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903690600768"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903690633536"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903690666304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903690699072"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "62e2cc5d403e01a0",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_17cbfe43-a09a-4621-a660-91fa78214bd2.jpg?v=1682350713",
+  "platform": "shopify",
+  "product_id": "8277106884928",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Nicaragua",
+  "url": "https://bluechipcoffeeroaster.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903691518272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903691551040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903691583808"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903691616576"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903691649344"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903691682112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903691747648"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903691780416"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903691813184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903691845952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903691878720"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903691911488"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903691944256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903691977024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903692009792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903692042560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903692075328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903692108096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903692140864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903692173632"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "feadfddfff257bdc",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_65b9bde9-bbe8-4e02-a23f-430b7394b80f.jpg?v=1682350725",
+  "platform": "shopify",
+  "product_id": "8277107409216",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://bluechipcoffeeroaster.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903693189440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903693222208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903693254976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903693287744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903693320512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903693353280"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903693386048"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903693418816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903693451584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903693484352"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903693517120"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903693549888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903693582656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903693615424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903693648192"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903693680960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903693713728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903693746496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903693779264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903693812032"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "f77195c65a8f2923",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_247e755c-508c-451e-80f8-60cf141abc4a.jpg?v=1682350738",
+  "platform": "shopify",
+  "product_id": "8277107933504",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Peru",
+  "url": "https://bluechipcoffeeroaster.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903699022144"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903699054912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903699087680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903699120448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903699153216"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903699185984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903699218752"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903699251520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903699284288"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903699317056"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903699349824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903699382592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903699415360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903699448128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903699480896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903699513664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903699546432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903699579200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903699611968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903699644736"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "48893c63a6bed3a7",
+  "first_seen": "2026-10-26",
+  "handle": "peru-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_e0e6e353-5a67-4d38-938c-411b07ada69c.jpg?v=1682350758",
+  "platform": "shopify",
+  "product_id": "8277108654400",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Peru Decaf",
+  "url": "https://bluechipcoffeeroaster.com/products/peru-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903701414208"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903701446976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903701479744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903701512512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903701545280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903701578048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903701610816"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903701643584"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 27.99,
+    "title": "12 Pack / Standard",
+    "variant_id": "44903701676352"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903701709120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903701741888"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903701774656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903701807424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903701840192"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903701872960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903701905728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903701938496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903701971264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903702004032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903702036800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903702069568"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "f52c4f7cfc73108e",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_27955050-deb5-4735-b26c-f4ef97de6b7e.jpg?v=1682350775",
+  "platform": "shopify",
+  "product_id": "8277109408064",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Tanzania",
+  "url": "https://bluechipcoffeeroaster.com/products/tanzania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Espresso",
+    "variant_id": "44903703478592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Standard",
+    "variant_id": "44903703511360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44903703544128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Espresso",
+    "variant_id": "44903703576896"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Whole Bean",
+    "variant_id": "44903703609664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Espresso",
+    "variant_id": "44903703642432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Standard",
+    "variant_id": "44903703675200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Standard",
+    "variant_id": "44903703707968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Coarse",
+    "variant_id": "44903703740736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44903703773504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44903703806272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "12oz / Espresso",
+    "variant_id": "44903703839040"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Standard",
+    "variant_id": "44903703871808"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44903703904576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.99,
+    "title": "2 LB / Coarse",
+    "variant_id": "44903703937344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Coarse",
+    "variant_id": "44903703970112"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 LB / Coarse",
+    "variant_id": "44903704002880"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Coarse",
+    "variant_id": "44903704035648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.99,
+    "title": "1 LB / Standard",
+    "variant_id": "44903704068416"
+   },
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 239.99,
+    "title": "12 LB / Espresso",
+    "variant_id": "44903704101184"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "74972f782a4ecd2e",
+  "first_seen": "2026-10-26",
+  "handle": "best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_d5a9b81e-8bd4-4c28-be10-71b7a84c025f.jpg?v=1682350796",
+  "platform": "shopify",
+  "product_id": "8277110260032",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "sample pack"
+  ],
+  "title": "Best Sellers Sample Pack: 6Bean, Cowboy, Breakfast, Peru, Mexico, Bali",
+  "url": "https://bluechipcoffeeroaster.com/products/best-sellers-sample-pack-6bean-cowboy-breakfast-peru-mexico-bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 28.99,
+    "title": "6-count 2oz sample packs / Standard",
+    "variant_id": "44903705346368"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "3a63e941cf54deaa",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffees-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_64dec013-378c-40ab-8cd4-cc4a451b9870.jpg?v=1682350813",
+  "platform": "shopify",
+  "product_id": "8277110849856",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Flavored Coffees Sample Pack",
+  "url": "https://bluechipcoffeeroaster.com/products/flavored-coffees-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 28.99,
+    "title": "6-count 2oz sample packs / Standard",
+    "variant_id": "44903707279680"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "c47e9d33d2e2ac35",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-favorites-sample-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0730/9380/8448/products/LABEL2_12oz_on_bag_bb00b41c-33fb-4f48-9589-efaea47e63aa.jpg?v=1682350828",
+  "platform": "shopify",
+  "product_id": "8277111374144",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [
+   "Manuka Coffee",
+   "Manuka Honey Coffee",
+   "Mushroom Coffee",
+   "Organic Coffee",
+   "blend",
+   "flavored",
+   "sample pack",
+   "single origin"
+  ],
+  "title": "Single Origin Favorites Sample Pack",
+  "url": "https://bluechipcoffeeroaster.com/products/single-origin-favorites-sample-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 31.99,
+    "title": "6-count 2oz sample packs / Standard",
+    "variant_id": "44903707902272"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "blends-single-origin-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942233747776",
+  "product_type": "",
+  "roaster_slug": "bluechipcoffeeroaster",
+  "tags": [],
+  "title": "Blends, Single Origin coffee!",
+  "url": "https://bluechipcoffeeroaster.com/products/blends-single-origin-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Default Title",
+    "variant_id": "47429729616192"
+   }
+  ],
+  "vendor": "Blue Chip Coffee Roasters"
+ }
+]

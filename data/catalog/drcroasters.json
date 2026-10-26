@@ -1,0 +1,365 @@
+[
+ {
+  "body_hash": "f9cec42d3aa00e35",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-excelso-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/12/Colombia-FRONT.png",
+  "platform": "woocommerce",
+  "product_id": "1124",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee",
+   "Dusty Rose Subscriptions",
+   "Quiz Coffee"
+  ],
+  "title": "Colombia Pitalito Excelso",
+  "url": "https://dustyrosecoffeeroasters.com/product/colombian-excelso-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Colombia Pitalito Excelso",
+    "variant_id": "1124:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9716803053c3f0c4",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-organic-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/08/Peru-FRONT.png",
+  "platform": "woocommerce",
+  "product_id": "1180",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee",
+   "Dusty Rose Subscriptions",
+   "Quiz Coffee"
+  ],
+  "title": "Peruvian Jaén – Pesticide-Free Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/peruvian-organic-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4oz",
+    "variant_id": "1180:0"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 8.0,
+    "title": "7oz",
+    "variant_id": "1180:1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12oz",
+    "variant_id": "1180:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c01de717ec803020",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-royal-select-decaf-mwp",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Brazil-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "1186",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Brazilian Decaf",
+   "Coffee Beans",
+   "Quiz Coffee"
+  ],
+  "title": "Brazilian Royal Select Decaf – Mountain Water Process",
+  "url": "https://dustyrosecoffeeroasters.com/product/brazil-royal-select-decaf-mwp/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "1186:0"
+   },
+   {
+    "available": true,
+    "grams": 198,
+    "price_usd": 8.0,
+    "title": "7 oz",
+    "variant_id": "1186:1"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz",
+    "variant_id": "1186:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e745b7c6fd639ae",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Indonesia-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "1487",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee",
+   "Quiz Coffee",
+   "Sumatra"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://dustyrosecoffeeroasters.com/product/sumatra-mandheling-coffee/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz",
+    "variant_id": "1487:0"
+   },
+   {
+    "available": false,
+    "grams": 198,
+    "price_usd": 8.0,
+    "title": "7 oz",
+    "variant_id": "1487:1"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz",
+    "variant_id": "1487:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0805b5e9da0a2e71",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-pick-3-option",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Indonesia-FRONT-1.png",
+  "platform": "woocommerce",
+  "product_id": "2215",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Sumatra – Pick-3 Option",
+  "url": "https://dustyrosecoffeeroasters.com/product/sumatra-pick-3-option/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Sumatra – Pick-3 Option",
+    "variant_id": "2215:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ddeb1bfa1649df21",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-decaf-pick-3-option",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Brazil-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "2219",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Brazilian Decaf – Pick-3 Option",
+  "url": "https://dustyrosecoffeeroasters.com/product/brazilian-decaf-pick-3-option/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Brazilian Decaf – Pick-3 Option",
+    "variant_id": "2219:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b89a842f5c81279",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Brazil-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "5299",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Ethiopian Natural Organic",
+   "Quiz Coffee"
+  ],
+  "title": "Brazilian Mata de Minas Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/brazilian-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Brazilian Mata de Minas Coffee",
+    "variant_id": "5299:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3133e8d7648b7b43",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2024/07/El-Salvador-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "5330",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee",
+   "Ethiopian Natural Organic"
+  ],
+  "title": "El Salvador Santa Ana Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/el-salvador-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "El Salvador Santa Ana Coffee",
+    "variant_id": "5330:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8444b23f0fde826e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/12/Ethiopa-FRONT.png",
+  "platform": "woocommerce",
+  "product_id": "5361",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Ethiopian Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/ethiopian-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Ethiopian Coffee",
+    "variant_id": "5361:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f67e802484fe2681",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/12/Guatemala-FRONT.png",
+  "platform": "woocommerce",
+  "product_id": "5437",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Guatemalan Coffee | Acatenango",
+  "url": "https://dustyrosecoffeeroasters.com/product/guatemalan-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Guatemalan Coffee | Acatenango",
+    "variant_id": "5437:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c15edd7a54121f9b",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2024/07/Papua-New-Guinea-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "5472",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Papua New Guinea Peaberry Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/papua-new-guinea-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Papua New Guinea Peaberry Coffee",
+    "variant_id": "5472:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5cd0346ef56ab4a2",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-coffee",
+  "image": "https://dustyrosecoffeeroasters.com/wp-content/uploads/2025/10/Mexico-FRONT-.png",
+  "platform": "woocommerce",
+  "product_id": "5506",
+  "product_type": "variable",
+  "roaster_slug": "drcroasters",
+  "tags": [
+   "Coffee Beans",
+   "Dusty Rose Coffee"
+  ],
+  "title": "Mexican Chiapas Coffee",
+  "url": "https://dustyrosecoffeeroasters.com/product/mexican-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 8.0,
+    "title": "Mexican Chiapas Coffee",
+    "variant_id": "5506:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

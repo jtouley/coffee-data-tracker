@@ -1,0 +1,583 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/TT_UL_studio-70.jpg?v=1695052058",
+  "platform": "shopify",
+  "product_id": "10490820231455",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee Club"
+  ],
+  "title": "Monthly Coffee Club   Roaster's Choice",
+  "url": "https://upperleftroasters.com/products/roasters-choice-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Core Favorites / 285g",
+    "variant_id": "52612079583519"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Core Favorites / 1.1 kg",
+    "variant_id": "52612079812895"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Core Favorites / 2.2 kg",
+    "variant_id": "52612080042271"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 28.0,
+    "title": "Limited Single-Origin (Black Bag) / 285g",
+    "variant_id": "52668334637343"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 90.0,
+    "title": "Limited Single-Origin (Black Bag) / 1.1 kg",
+    "variant_id": "52668334670111"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "b00e78288786f6a5",
+  "first_seen": "2026-10-26",
+  "handle": "brazuca-brazil-1",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/BrazucaWeb.png?v=1784657078",
+  "platform": "shopify",
+  "product_id": "10544235774239",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Brazuca, Brazil",
+  "url": "https://upperleftroasters.com/products/brazuca-brazil-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "285 g",
+    "variant_id": "52678664519967"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 68.0,
+    "title": "1.1 kg",
+    "variant_id": "52678664552735"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 120.0,
+    "title": "2.2 kg",
+    "variant_id": "52678664585503"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "monthly-coffee-club-member-choice",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/TT_UL_studio-70.jpg?v=1695052058",
+  "platform": "shopify",
+  "product_id": "10560420872479",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee Club"
+  ],
+  "title": "Monthly Coffee Club   Member's Choice",
+  "url": "https://upperleftroasters.com/products/monthly-coffee-club-member-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Abyssinian / 285g",
+    "variant_id": "52737786642719"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Abyssinian / 1.1 kg",
+    "variant_id": "52737786675487"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Abyssinian / 2.2 kg",
+    "variant_id": "52737786708255"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Chapina / 285g",
+    "variant_id": "52737791361311"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Chapina / 1.1 kg",
+    "variant_id": "52737791394079"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Chapina / 2.2 kg",
+    "variant_id": "52737791426847"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Espresso / 285g",
+    "variant_id": "52737791459615"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Espresso / 1.1 kg",
+    "variant_id": "52737791492383"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Espresso / 2.2 kg",
+    "variant_id": "52737791525151"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Decaf / 285g",
+    "variant_id": "52737791557919"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Decaf / 1.1 kg",
+    "variant_id": "52737791590687"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Decaf / 2.2 kg",
+    "variant_id": "52737791623455"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "Andino / 285g",
+    "variant_id": "52737820459295"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 66.0,
+    "title": "Andino / 1.1 kg",
+    "variant_id": "52737820492063"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 105.0,
+    "title": "Andino / 2.2 kg",
+    "variant_id": "52737820524831"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "la-yerba-mujeres-mexico-copy",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/HafiWebsite_a873e458-804c-4aac-b841-70aa830477fb.png?v=1786556939",
+  "platform": "shopify",
+  "product_id": "10573313474847",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee",
+   "Washed Process"
+  ],
+  "title": "Hafi, Burundi",
+  "url": "https://upperleftroasters.com/products/la-yerba-mujeres-mexico-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 27.0,
+    "title": "285 g",
+    "variant_id": "52772041589023"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 78.0,
+    "title": "1.1 kg",
+    "variant_id": "52772041621791"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 150.0,
+    "title": "2.2 kg",
+    "variant_id": "52772041654559"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "beanz2lb",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "10579893518623",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [],
+  "title": "Beanz - 2 LB Kraft",
+  "url": "https://upperleftroasters.com/products/beanz2lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 65.0,
+    "title": "Ladd's",
+    "variant_id": "52792821121311"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 65.0,
+    "title": "Espresso",
+    "variant_id": "52792822235423"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/SeasonalBlend.png?v=1788989865",
+  "platform": "shopify",
+  "product_id": "10604552192287",
+  "product_type": "",
+  "roaster_slug": "upperleftroasters",
+  "tags": [],
+  "title": "Seasonal Blend",
+  "url": "https://upperleftroasters.com/products/seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 25.0,
+    "title": "285g",
+    "variant_id": "52866011267359"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "b21f614785f6a714",
+  "first_seen": "2026-10-26",
+  "handle": "abyssinian",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/AbyWeb.png?v=1784657346",
+  "platform": "shopify",
+  "product_id": "1495119036500",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Abyssinian, Ethiopia",
+  "url": "https://upperleftroasters.com/products/abyssinian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 145.0,
+    "title": "2.2 kg",
+    "variant_id": "32060394242132"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 78.0,
+    "title": "1.1 kg",
+    "variant_id": "32060394274900"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 24.0,
+    "title": "285 g",
+    "variant_id": "32060394307668"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "f65212d0303df408",
+  "first_seen": "2026-10-26",
+  "handle": "chapina",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/ChapinaWeb.png?v=1784657337",
+  "platform": "shopify",
+  "product_id": "1498986479700",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Chapina, Guatemala",
+  "url": "https://upperleftroasters.com/products/chapina",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285 g.",
+    "variant_id": "32060451913812"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 70.0,
+    "title": "1.1 kg.",
+    "variant_id": "32060451946580"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 130.0,
+    "title": "2.2 kg.",
+    "variant_id": "32060451979348"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "41ad3c1ebc51aa5c",
+  "first_seen": "2026-10-26",
+  "handle": "industrial-dark",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/DarkRoast.png?v=1784657325",
+  "platform": "shopify",
+  "product_id": "2348119425108",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Dark Roast",
+  "url": "https://upperleftroasters.com/products/industrial-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 22.0,
+    "title": "285 g.",
+    "variant_id": "32060455551060"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 68.0,
+    "title": "1.1 kg.",
+    "variant_id": "32060455583828"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 125.0,
+    "title": "2.2 kg.",
+    "variant_id": "32060455616596"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "403c544cb8b7acea",
+  "first_seen": "2026-10-26",
+  "handle": "andino-peru",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/AndinoWeb.png?v=1784657314",
+  "platform": "shopify",
+  "product_id": "2351264858196",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Andino, Peru",
+  "url": "https://upperleftroasters.com/products/andino-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285 g.",
+    "variant_id": "32060424781908"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 70.0,
+    "title": "1.1 kg.",
+    "variant_id": "32060424814676"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 130.0,
+    "title": "2.2 kg",
+    "variant_id": "32060424847444"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "7899b21de3cd7bba",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/DecafWeb.png?v=1784657364",
+  "platform": "shopify",
+  "product_id": "8237931144",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://upperleftroasters.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 130.0,
+    "title": "2.2 kg.",
+    "variant_id": "32044034195540"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 75.0,
+    "title": "1.1 kg.",
+    "variant_id": "32044034228308"
+   },
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285 g.",
+    "variant_id": "32044042059860"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "9c89409d20586c42",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/EspWeb.png?v=1784657356",
+  "platform": "shopify",
+  "product_id": "8439596625",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Espresso",
+  "url": "https://upperleftroasters.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285 g.",
+    "variant_id": "32060539207764"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 75.0,
+    "title": "1.1 kg.",
+    "variant_id": "32060539240532"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 140.0,
+    "title": "2.2 kg.",
+    "variant_id": "32060539273300"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ },
+ {
+  "body_hash": "b96a45fc14ce59c4",
+  "first_seen": "2026-10-26",
+  "handle": "drip-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1586/3289/files/LaddsWeb.png?v=1784657078",
+  "platform": "shopify",
+  "product_id": "8574489233",
+  "product_type": "Coffee",
+  "roaster_slug": "upperleftroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Ladd's",
+  "url": "https://upperleftroasters.com/products/drip-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 285,
+    "price_usd": 23.0,
+    "title": "285 g.",
+    "variant_id": "32060458008660"
+   },
+   {
+    "available": true,
+    "grams": 1100,
+    "price_usd": 70.0,
+    "title": "1.1 kg.",
+    "variant_id": "32060458041428"
+   },
+   {
+    "available": true,
+    "grams": 2200,
+    "price_usd": 130.0,
+    "title": "2.2 kg.",
+    "variant_id": "32060458074196"
+   }
+  ],
+  "vendor": "Upper Left Roasters"
+ }
+]

@@ -1,0 +1,850 @@
+[
+ {
+  "body_hash": "e54b4945e17fbc1d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Ethiopian-Dawn-Kick-with-background.png?v=1723408071",
+  "platform": "shopify",
+  "product_id": "9145528156435",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "New Arrival",
+   "Subscription"
+  ],
+  "title": "Ethiopian Dawn Kick Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300181061907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48300181127443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48300181225747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs / Ground",
+    "variant_id": "48300181258515"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "c07b5323d48b679c",
+  "first_seen": "2026-10-26",
+  "handle": "hawksbill-coffee-blen",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/HAWKSBILL-HOUSE-ROAST.png?v=1723190049",
+  "platform": "shopify",
+  "product_id": "9145561743635",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription"
+  ],
+  "title": "Hawksbill House Roast Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/hawksbill-coffee-blen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300359713043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground",
+    "variant_id": "48300359745811"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "48300359778579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Ground",
+    "variant_id": "48300359811347"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "29409fe371050290",
+  "first_seen": "2026-10-26",
+  "handle": "big-meadows-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Big-Meadows.png?v=1723188802",
+  "platform": "shopify",
+  "product_id": "9145563250963",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Best Seller",
+   "Subscription"
+  ],
+  "title": "Big Meadows Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/big-meadows-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300368625939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground",
+    "variant_id": "48300368658707"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "48300368691475"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Ground",
+    "variant_id": "48300368724243"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "3836700af1dcd77d",
+  "first_seen": "2026-10-26",
+  "handle": "bearfence-breakfast-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Bearfence_Breakfast.png?v=1727914216",
+  "platform": "shopify",
+  "product_id": "9145564266771",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Best Seller",
+   "Subscription"
+  ],
+  "title": "Bearfence Breakfast",
+  "url": "https://blueridgecoffeecrafters.com/products/bearfence-breakfast-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300375965971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground",
+    "variant_id": "48300375998739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48300376031507"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Ground",
+    "variant_id": "48300376064275"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "c14f9902395f0c70",
+  "first_seen": "2026-10-26",
+  "handle": "dark-hollow-falls-coffee-blends",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Dark-Hollow-Falls.png?v=1723189341",
+  "platform": "shopify",
+  "product_id": "9145565085971",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Best Seller"
+  ],
+  "title": "Dark Hollow Falls Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/dark-hollow-falls-coffee-blends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300381470995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground",
+    "variant_id": "48300381503763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "48300381536531"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1lb / Ground",
+    "variant_id": "48300381569299"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "05ae52c8e97d924e",
+  "first_seen": "2026-10-26",
+  "handle": "lynns-smokey-mountain-morning-coffee-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Lynn_s_Smokey_Mountain_Morning_Coffee.png?v=1727915487",
+  "platform": "shopify",
+  "product_id": "9145566757139",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC"
+  ],
+  "title": "Lynn's Smokey Mountain Morning Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/lynns-smokey-mountain-morning-coffee-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48300394742035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Ground",
+    "variant_id": "48300394774803"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48300394807571"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Ground",
+    "variant_id": "48300394840339"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "1e02748d6a51aab9",
+  "first_seen": "2026-10-26",
+  "handle": "hebrews-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Caramel.png?v=1723183052",
+  "platform": "shopify",
+  "product_id": "9194368631059",
+  "product_type": "Partners - Hebrew",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [],
+  "title": "Hebrews Flavor Coffee",
+  "url": "https://blueridgecoffeecrafters.com/products/hebrews-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean / Caramel",
+    "variant_id": "48471293264147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground / Caramel",
+    "variant_id": "48471293296915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean / Chocolate Fudge",
+    "variant_id": "48471472734483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean / Hawaiian Hazelnut",
+    "variant_id": "48471472767251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean / French Vanilla",
+    "variant_id": "48471472800019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground / Chocolate Fudge",
+    "variant_id": "48471472832787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground / Hawaiian Hazelnut",
+    "variant_id": "48471472865555"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground / French Vanilla",
+    "variant_id": "48471472898323"
+   }
+  ],
+  "vendor": "Hebrews"
+ },
+ {
+  "body_hash": "68b6a23bff4d1282",
+  "first_seen": "2026-10-26",
+  "handle": "hebews-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Hebrews-blend.png?v=1723181515",
+  "platform": "shopify",
+  "product_id": "9194507927827",
+  "product_type": "Partners - Hebrew",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "blog"
+  ],
+  "title": "Hebrews Blend",
+  "url": "https://blueridgecoffeecrafters.com/products/hebews-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48471897735443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48471897768211"
+   }
+  ],
+  "vendor": "Hebrews"
+ },
+ {
+  "body_hash": "46a39af1c4a1c006",
+  "first_seen": "2026-10-26",
+  "handle": "hebews-bali",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Bali-Blue-Moon.png?v=1723182410",
+  "platform": "shopify",
+  "product_id": "9194510090515",
+  "product_type": "Partners - Hebrew",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "blog"
+  ],
+  "title": "Hebrews Bali",
+  "url": "https://blueridgecoffeecrafters.com/products/hebews-bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48471912808723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48471912841491"
+   }
+  ],
+  "vendor": "Hebrews"
+ },
+ {
+  "body_hash": "9ea069c8774eaea4",
+  "first_seen": "2026-10-26",
+  "handle": "hebrews-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Colombian_Dark.png?v=1723181332",
+  "platform": "shopify",
+  "product_id": "9194512154899",
+  "product_type": "Partners - Hebrew",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "blog"
+  ],
+  "title": "Hebrews Colombian Dark",
+  "url": "https://blueridgecoffeecrafters.com/products/hebrews-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48471929356563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48471929389331"
+   }
+  ],
+  "vendor": "Hebrews"
+ },
+ {
+  "body_hash": "063abb1e50397ce1",
+  "first_seen": "2026-10-26",
+  "handle": "hebrews-colombian-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Colombian-medium.png?v=1723182034",
+  "platform": "shopify",
+  "product_id": "9194513531155",
+  "product_type": "Partners - Hebrew",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "blog"
+  ],
+  "title": "Hebrews Colombian Medium",
+  "url": "https://blueridgecoffeecrafters.com/products/hebrews-colombian-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48471939121427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48471939154195"
+   }
+  ],
+  "vendor": "Hebrews"
+ },
+ {
+  "body_hash": "bf8d71063cfe076e",
+  "first_seen": "2026-10-26",
+  "handle": "435-roast-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/435-Roast-Decaf.png?v=1723185986",
+  "platform": "shopify",
+  "product_id": "9202922389779",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Best Seller",
+   "Subscription",
+   "blog",
+   "client:Trump-corp",
+   "wholesale"
+  ],
+  "title": "435 Roast Decaf",
+  "url": "https://blueridgecoffeecrafters.com/products/435-roast-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48501911683347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "48501911716115"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "48501911748883"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 lb / Ground",
+    "variant_id": "48501911781651"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "5adc113b2c813d73",
+  "first_seen": "2026-10-26",
+  "handle": "kafe-gou-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/bag-Kafe-Gou-Final.png?v=1723180609",
+  "platform": "shopify",
+  "product_id": "9591361339667",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription"
+  ],
+  "title": "Kafe Gou",
+  "url": "https://blueridgecoffeecrafters.com/products/kafe-gou-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49516236636435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "49516236669203"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49516236701971"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Ground",
+    "variant_id": "49516236734739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49516236767507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 119.99,
+    "title": "5 lb / Ground",
+    "variant_id": "49516236800275"
+   }
+  ],
+  "vendor": "TFE"
+ },
+ {
+  "body_hash": "d1e650abb297bf1c",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Bali-Blue-moon_8320c8ee-464b-4403-824a-3c32563d1300.png?v=1729003283",
+  "platform": "shopify",
+  "product_id": "9710409154835",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription",
+   "blog"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://blueridgecoffeecrafters.com/products/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49913090474259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12 oz / Ground",
+    "variant_id": "49913090507027"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "49913090539795"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.99,
+    "title": "1 lb / Ground",
+    "variant_id": "49913090572563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49913090605331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5 lb / Ground",
+    "variant_id": "49913090638099"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "t-espresso",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9731903488275",
+  "product_type": "Hidden",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "client:Trump-corp"
+  ],
+  "title": "T Espresso",
+  "url": "https://blueridgecoffeecrafters.com/products/t-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "50013893394707"
+   }
+  ],
+  "vendor": "Blue Ridge Coffee Crafters"
+ },
+ {
+  "body_hash": "4716d8333366ec5e",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/Single-Origin-Pack.png?v=1731076236",
+  "platform": "shopify",
+  "product_id": "9732085612819",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription",
+   "blog",
+   "client:Trump-corp"
+  ],
+  "title": "Single Origin Pack",
+  "url": "https://blueridgecoffeecrafters.com/products/single-origin-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "50014939742483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "Ground",
+    "variant_id": "50014939775251"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "29ab7e2f1260a8cc",
+  "first_seen": "2026-10-26",
+  "handle": "435-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/435-Roast-BAGS_37154de1-0b12-48eb-bcff-6da39fdbfc4f.png?v=1723180181",
+  "platform": "shopify",
+  "product_id": "9757308551443",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription",
+   "blog",
+   "client:Trump-corp"
+  ],
+  "title": "435 Roast",
+  "url": "https://blueridgecoffeecrafters.com/products/435-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50149728321811"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12 oz / Ground",
+    "variant_id": "50149728354579"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50149728387347"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.99,
+    "title": "1 lb / Ground",
+    "variant_id": "50149728420115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.95,
+    "title": "5L LB / Whole Bean",
+    "variant_id": "52283248935187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 124.95,
+    "title": "5L LB / Ground",
+    "variant_id": "52283249164563"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "fad49cf65ab5e932",
+  "first_seen": "2026-10-26",
+  "handle": "little-stony-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/LittleStonyColdBew.png?v=1738588599",
+  "platform": "shopify",
+  "product_id": "9792492732691",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription"
+  ],
+  "title": "Little Stony Cold Brew",
+  "url": "https://blueridgecoffeecrafters.com/products/little-stony-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Whole Bean",
+    "variant_id": "50305186365715"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "1 lb / Coarse Grind",
+    "variant_id": "50305186398483"
+   }
+  ],
+  "vendor": "BRCC"
+ },
+ {
+  "body_hash": "a4e8af3e43f8fa22",
+  "first_seen": "2026-10-26",
+  "handle": "brcc-blend-collection",
+  "image": "https://cdn.shopify.com/s/files/1/0743/7212/0851/files/blends_6461887f-60bd-453f-8924-c2d886e249b3.png?v=1723217682",
+  "platform": "shopify",
+  "product_id": "9839588835603",
+  "product_type": "",
+  "roaster_slug": "blueridgecoffeecrafters",
+  "tags": [
+   "BRCC",
+   "Subscription",
+   "blog"
+  ],
+  "title": "BRCC Blend Collection",
+  "url": "https://blueridgecoffeecrafters.com/products/brcc-blend-collection",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "50478796833043"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 55.0,
+    "title": "Ground",
+    "variant_id": "50478796865811"
+   }
+  ],
+  "vendor": "BRCC"
+ }
+]

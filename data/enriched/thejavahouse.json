@@ -1,0 +1,192 @@
+{
+ "12396": {
+  "body_hash": "b0ea898831689624",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cocoa",
+   "cinnamon",
+   "lemon candy"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "24106": {
+  "body_hash": "143b1a7c1b49a10b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "28808": {
+  "body_hash": "332315a83cb44f20",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "apricot"
+  ],
+  "varietals": []
+ },
+ "357": {
+  "body_hash": "24fc443ecd001c7e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "smoky",
+   "chocolate",
+   "molasses"
+  ],
+  "varietals": []
+ },
+ "365": {
+  "body_hash": "84e473c9773e356a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "cocoa",
+   "toasted nut",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "370": {
+  "body_hash": "a56f67b8af05c90c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "El Salvador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "caramel",
+   "black tea",
+   "citrus"
+  ],
+  "varietals": []
+ },
+ "381": {
+  "body_hash": "262056685b7df5d3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "smooth",
+   "chocolaty"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "3906": {
+  "body_hash": "b3a5087dd5d3d765",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cocoa nibs",
+   "raisins",
+   "syrupy body"
+  ],
+  "varietals": []
+ },
+ "5921": {
+  "body_hash": "940b12da779de597",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "rich",
+   "nutty"
+  ],
+  "varietals": []
+ },
+ "923": {
+  "body_hash": "f1d93979f9b5d124",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "full body",
+   "dark chocolate",
+   "mild acidity"
+  ],
+  "varietals": []
+ }
+}

@@ -1,0 +1,209 @@
+[
+ {
+  "body_hash": "205e7b89f113ca7e",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": null,
+  "platform": "generic",
+  "product_id": "72dbe7bd73a2",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.originessenceroastingco.com/product-page/ethiopia-sidamo",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f62a940f516c5835",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "932923e5513f",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.originessenceroastingco.com/product-page/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91f27fb46e24b0b7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-esmeralda",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9659609ce73f",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Decaf Mexico Esmeralda",
+  "url": "https://www.originessenceroastingco.com/product-page/decaf-mexico-esmeralda",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c5c01a8c2d5f250e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": null,
+  "platform": "generic",
+  "product_id": "997bf85add47",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.originessenceroastingco.com/product-page/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "caf20bc34f30f051",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-rosa",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b814d01f3ffa",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Guatemala Santa Rosa",
+  "url": "https://www.originessenceroastingco.com/product-page/guatemala-santa-rosa",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43462425563acfed",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-san-martin",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bccfe4e08208",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Organic Peru San Martin",
+  "url": "https://www.originessenceroastingco.com/product-page/organic-peru-san-martin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e229dc262d70431d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f463925edfe1",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Brazil Cerrado",
+  "url": "https://www.originessenceroastingco.com/product-page/brazil-cerrado",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "beec05c517e56e44",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-excelso",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fad2cb077b20",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Colombia Excelso",
+  "url": "https://www.originessenceroastingco.com/product-page/columbia-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b5f7da340942822f",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexico-chiapas",
+  "image": null,
+  "platform": "generic",
+  "product_id": "fe3657173a5b",
+  "product_type": "",
+  "roaster_slug": "originessenceroastingco",
+  "tags": [],
+  "title": "Organic Mexico Chiapas",
+  "url": "https://www.originessenceroastingco.com/product-page/organic-mexico-chiapas",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1386 @@
+[
+ {
+  "body_hash": "5122fe842f956531",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-santa-lucia",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_-2_d73e81bb-e999-4c88-a382-3f788825973e.png?v=1773581260",
+  "platform": "shopify",
+  "product_id": "9247628132581",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Honduras Santa Lucia",
+  "url": "https://cherryrivercoffee.com/products/honduras-santa-lucia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47560832647397"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47560832680165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47560832712933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47560832745701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47560832778469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47560832811237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47560832844005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47560832876773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47560832909541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47560832942309"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "8c44f1b355c52973",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_ea78531b-8161-4e0b-a11d-c8aadd55cb7e.png?v=1774625631",
+  "platform": "shopify",
+  "product_id": "9258147676389",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://cherryrivercoffee.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47601679368421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47601679401189"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47601679433957"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47601679466725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601679499493"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47601679532261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47601679565029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47601679597797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47601679630565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601679663333"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "d82668a9f92bf563",
+  "first_seen": "2026-10-26",
+  "handle": "cherry-river-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_-5_8e5e585d-04b1-48d0-84a5-ee8116ad636a.png?v=1783603159",
+  "platform": "shopify",
+  "product_id": "9258150592741",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Cherry River Blend",
+  "url": "https://cherryrivercoffee.com/products/cherry-river-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47601687363813"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47601687396581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47601687429349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47601687462117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601687494885"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47601687527653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47601687560421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47601687593189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47601687625957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601687658725"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "f35251f7b9dbcbd4",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-minas-gerais",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_-6.png?v=1773662486",
+  "platform": "shopify",
+  "product_id": "9258151674085",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Brazil Minas Gerais",
+  "url": "https://cherryrivercoffee.com/products/brazil-minas-gerais",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47601691492581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47601691525349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47601691558117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47601691590885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601691623653"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47601691656421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47601691689189"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47601691721957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47601691754725"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601691787493"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "94544980b351a2b2",
+  "first_seen": "2026-10-26",
+  "handle": "big-foot-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_02610d6b-8b5b-4a50-9f81-2d20c9dd31c7.png?v=1773580649",
+  "platform": "shopify",
+  "product_id": "9258154393829",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Bigfoot Blend",
+  "url": "https://cherryrivercoffee.com/products/big-foot-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47601702535397"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47601702568165"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47601702600933"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47601702633701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601702666469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47601702699237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47601702732005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47601702764773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47601702797541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47601702830309"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "9ae11e4e0b84cee9",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/New_Web_Images_5_x_5_in_-4.png?v=1773582239",
+  "platform": "shopify",
+  "product_id": "9274557759717",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Decaf Colombia Huila",
+  "url": "https://cherryrivercoffee.com/products/colombia-huila-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47662911389925"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47662911422693"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47662911455461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47662911488229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47662911520997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47662911553765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47662911586533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47662911619301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47662911652069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47662911684837"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "f0732586dc7c1f08",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-cristal",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_-7.png?v=1785240550",
+  "platform": "shopify",
+  "product_id": "9274634666213",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Mexico Cristal",
+  "url": "https://cherryrivercoffee.com/products/mexico-cristal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47663032041701"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47663032074469"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47663032107237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47663032140005"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47663032172773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47663032205541"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47663032238309"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47663032271077"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47663032303845"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47663032336613"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "7bd80297d221e711",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/R0000103.jpg?v=1771175035",
+  "platform": "shopify",
+  "product_id": "9292196282597",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://cherryrivercoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47775302254821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47775302287589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47775302320357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47775302353125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47775302385893"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "47775302418661"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "47775302451429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "47775302484197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "47775302516965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "47775302549733"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "00dc6f889ad095ad",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-wush-wush",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_4x4in_Tags_Square_-6_667a3977-2c8e-430d-9948-639e5f721ca7.png?v=1791291264",
+  "platform": "shopify",
+  "product_id": "9292477137125",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Ethiopia Wush Wush",
+  "url": "https://cherryrivercoffee.com/products/ethiopia-wush-wush",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "47776127025381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "47776127058149"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "47776127090917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "47776127123685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "47776127156453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "67618361934053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "67618361966821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "67618361999589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "67618362032357"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "67618362065125"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "5c8abc69abc26616",
+  "first_seen": "2026-10-26",
+  "handle": "jamsession",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_-2.png?v=1775215989",
+  "platform": "shopify",
+  "product_id": "9547641192677",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Jam Session",
+  "url": "https://cherryrivercoffee.com/products/jamsession",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48704391119077"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "48704391151845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "48704391184613"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "48704391217381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "48704391250149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48704391282917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "48704391315685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "48704391348453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "48704391381221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 108.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "48704391413989"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "8739d8d3a65689a6",
+  "first_seen": "2026-10-26",
+  "handle": "coldbrewblend",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_-3.png?v=1775408436",
+  "platform": "shopify",
+  "product_id": "9554271142117",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Cold Brew Blend",
+  "url": "https://cherryrivercoffee.com/products/coldbrewblend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "48751346516197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "48751346548965"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "48751346581733"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "48751346614501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "48751346647269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "48751346680037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "48751346712805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "48751346745573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "48751346778341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "48751346811109"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "10f76313ee8cdc08",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-gogogu",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_-10.png?v=1787491966",
+  "platform": "shopify",
+  "product_id": "9607387939045",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Gogogu",
+  "url": "https://cherryrivercoffee.com/products/ethiopia-gogogu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49058020950245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "49058020983013"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "49058021015781"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "49058021048549"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "49058021081317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49058021114085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "49058021146853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "49058021179621"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "49058021212389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "49058021245157"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "d32f9d613c7e857e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_4x4in_Tags_Square_-5.png?v=1791289669",
+  "platform": "shopify",
+  "product_id": "9621283864805",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Colombia Cauca",
+  "url": "https://cherryrivercoffee.com/products/colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "49320997552357"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "49320997585125"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "49320997617893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "49320997650661"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "49320997683429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "49320997716197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "49320997748965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "49320997781733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "49320997814501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "49320997847269"
+   }
+  ],
+  "vendor": "Cherry River Roasting Company"
+ },
+ {
+  "body_hash": "778b94081f4a7193",
+  "first_seen": "2026-10-26",
+  "handle": "endless-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_-6.png?v=1784828243",
+  "platform": "shopify",
+  "product_id": "9720371740901",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [],
+  "title": "Endless Espresso",
+  "url": "https://cherryrivercoffee.com/products/endless-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "50598871072997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "50598871105765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "50598871138533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "50598871171301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "50598871204069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50598871236837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "50598871269605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "50598871302373"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "50598871335141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 99.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "50598871367909"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "d773ca5158824e32",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-idido",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/NewWebImages_5x5in_4x4in_Tags_Square.png?v=1778849084",
+  "platform": "shopify",
+  "product_id": "9771782439141",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Ethiopia Idido",
+  "url": "https://cherryrivercoffee.com/products/ethiopia-idido",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52156593438949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "52156593471717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "52156593504485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "52156593537253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "52156593570021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52156593602789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "52156593635557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "52156593668325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "52156593701093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "52156593733861"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ },
+ {
+  "body_hash": "a7849450ad1b3938",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-gakundu",
+  "image": "https://cdn.shopify.com/s/files/1/0766/9510/9861/files/Kenya.png?v=1788275717",
+  "platform": "shopify",
+  "product_id": "9782540730597",
+  "product_type": "",
+  "roaster_slug": "cherryrivercoffee",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Kenya Gakundu",
+  "url": "https://cherryrivercoffee.com/products/kenya-gakundu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "52749837435109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Coarse/French Press",
+    "variant_id": "52749837467877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium/Drip Coffee",
+    "variant_id": "52749837500645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Medium-Fine/Pour Over",
+    "variant_id": "52749837533413"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "12 oz / Fine/Espresso or Mohka Pot",
+    "variant_id": "52749837566181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "52749837598949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Coarse/French Press",
+    "variant_id": "52749837631717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Medium/Drip Coffee",
+    "variant_id": "52749837664485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Medium-Fine/Pour Over",
+    "variant_id": "52749837697253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lb / Fine/Espresso or Mohka Pot",
+    "variant_id": "52749837730021"
+   }
+  ],
+  "vendor": "Cherry River Coffee Roasters"
+ }
+]

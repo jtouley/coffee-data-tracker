@@ -1,0 +1,1217 @@
+[
+ {
+  "body_hash": "f855204337212e5b",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-ep",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/honduran-ep-1lb-the-grind-roasters.jpg",
+  "platform": "woocommerce",
+  "product_id": "1034",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Central America",
+   "Coffee",
+   "Honduras",
+   "Light Roast",
+   "Organic"
+  ],
+  "title": "Honduran EP Coffee",
+  "url": "https://thegrindroasters.com/product/honduran-ep/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "1034:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "1 lb.",
+    "variant_id": "1034:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 12.0,
+    "title": "3 lb.",
+    "variant_id": "1034:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb.",
+    "variant_id": "1034:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 pack",
+    "variant_id": "1034:4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "24 pack",
+    "variant_id": "1034:5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "48 pack",
+    "variant_id": "1034:6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "10 pack",
+    "variant_id": "1034:7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "20 pack",
+    "variant_id": "1034:8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "30 pack",
+    "variant_id": "1034:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4ee3742e5ab47332",
+  "first_seen": "2026-10-26",
+  "handle": "house-espresso",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/house-espresso-1lb-the-grind-roasters.jpg",
+  "platform": "woocommerce",
+  "product_id": "1061",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "Organic",
+   "South America"
+  ],
+  "title": "House Espresso Coffee",
+  "url": "https://thegrindroasters.com/product/house-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "1061:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "1061:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "1061:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "1061:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "1061:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "1061:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "1061:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "1061:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "1061:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "1061:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "063a2680a0151434",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-nyeri-aa",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Group-of-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1089",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Africa",
+   "Caffeinated",
+   "Coffee",
+   "Dark Roast",
+   "Kenya",
+   "Organic",
+   "Shade Grown"
+  ],
+  "title": "Kenya Nyeri AA",
+  "url": "https://thegrindroasters.com/product/kenya-nyeri-aa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.5,
+    "title": "12 oz.",
+    "variant_id": "1089:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.5,
+    "title": "1 lb.",
+    "variant_id": "1089:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.5,
+    "title": "3 lb.",
+    "variant_id": "1089:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.5,
+    "title": "5 lb.",
+    "variant_id": "1089:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "12 pack",
+    "variant_id": "1089:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "24 pack",
+    "variant_id": "1089:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "48 pack",
+    "variant_id": "1089:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "10 pack",
+    "variant_id": "1089:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "20 pack",
+    "variant_id": "1089:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.5,
+    "title": "30 pack",
+    "variant_id": "1089:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "66e38d7cf6f9d0cd",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-jinotega",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/nicaragua-jinotega-1lb-the-grind-roasters.jpg",
+  "platform": "woocommerce",
+  "product_id": "1116",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "All Women-Owned Farm Co-op",
+   "Caffeinated",
+   "Central America",
+   "Coffee",
+   "Dark Roast",
+   "Nicaragua",
+   "Organic"
+  ],
+  "title": "Nicaragua Jinotega Coffee",
+  "url": "https://thegrindroasters.com/product/nicaragua-jinotega/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "1116:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "1116:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "1116:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "1116:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "1116:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "1116:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "1116:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "1116:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "1116:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "1116:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e30a7aa50c1b5dbd",
+  "first_seen": "2026-10-26",
+  "handle": "kona-100-pure",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/kona-1lb-the-grind-roasters.jpg",
+  "platform": "woocommerce",
+  "product_id": "1224",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Direct Trade",
+   "Hawaii",
+   "Medium Roast",
+   "Pacific Islands",
+   "Specialty"
+  ],
+  "title": "Kona – 100% Pure",
+  "url": "https://thegrindroasters.com/product/kona-100-pure/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 oz.",
+    "variant_id": "1224:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb.",
+    "variant_id": "1224:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 30.0,
+    "title": "3 lb.",
+    "variant_id": "1224:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 30.0,
+    "title": "5 lb.",
+    "variant_id": "1224:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "12 pack",
+    "variant_id": "1224:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "24 pack",
+    "variant_id": "1224:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "48 pack",
+    "variant_id": "1224:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "10 pack",
+    "variant_id": "1224:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "20 pack",
+    "variant_id": "1224:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "30 pack",
+    "variant_id": "1224:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f938677017d79b0",
+  "first_seen": "2026-10-26",
+  "handle": "lip-twitcher",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Group-of-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1265",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Colombia",
+   "Organic",
+   "South America",
+   "Ultra Light Roast"
+  ],
+  "title": "Lip Twitcher Coffee",
+  "url": "https://thegrindroasters.com/product/lip-twitcher/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "1265:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "1265:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "1265:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "1265:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "1265:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "1265:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "1265:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "1265:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "1265:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "1265:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "72d76977bfaba02f",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-sul-de-minas",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Group-of-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "1460",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Brazil",
+   "Caffeinated",
+   "Coffee",
+   "Fair Trade",
+   "Medium Roast",
+   "South America"
+  ],
+  "title": "Brazil Sul de Minas Coffee",
+  "url": "https://thegrindroasters.com/product/brazil-sul-de-minas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "1460:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "1 lb.",
+    "variant_id": "1460:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.0,
+    "title": "3 lb.",
+    "variant_id": "1460:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb.",
+    "variant_id": "1460:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 pack",
+    "variant_id": "1460:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "24 pack",
+    "variant_id": "1460:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "48 pack",
+    "variant_id": "1460:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "10 pack",
+    "variant_id": "1460:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "20 pack",
+    "variant_id": "1460:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "30 pack",
+    "variant_id": "1460:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a30368719606d26e",
+  "first_seen": "2026-10-26",
+  "handle": "burnt-church-barrel-coffee",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2021/03/Burnt-Church-bags-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "2679",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Direct Trade",
+   "Hawaii",
+   "Medium Roast",
+   "Pacific Islands",
+   "Specialty"
+  ],
+  "title": "Burnt Church Distillery Whiskey Coffee",
+  "url": "https://thegrindroasters.com/product/burnt-church-barrel-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12 oz.",
+    "variant_id": "2679:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "1 lb.",
+    "variant_id": "2679:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 30.0,
+    "title": "3 lb.",
+    "variant_id": "2679:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 30.0,
+    "title": "5 lb.",
+    "variant_id": "2679:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "12 pack",
+    "variant_id": "2679:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "24 pack",
+    "variant_id": "2679:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "48 pack",
+    "variant_id": "2679:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "10 pack",
+    "variant_id": "2679:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "20 pack",
+    "variant_id": "2679:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 30.0,
+    "title": "30 pack",
+    "variant_id": "2679:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "56c059b4879f3d93",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-gitesi",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2024/01/20240103_121026-scaled-e1704302066792.jpg",
+  "platform": "woocommerce",
+  "product_id": "3158",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Caribbean Islands",
+   "Coffee",
+   "Fair Trade",
+   "Haiti",
+   "Medium Roast",
+   "Organic",
+   "Specialty"
+  ],
+  "title": "Rwanda GITESI",
+  "url": "https://thegrindroasters.com/product/rwanda-gitesi/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 13.5,
+    "title": "12 oz.",
+    "variant_id": "3158:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 13.5,
+    "title": "1 lb.",
+    "variant_id": "3158:1"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 13.5,
+    "title": "3 lb.",
+    "variant_id": "3158:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 13.5,
+    "title": "5 lb.",
+    "variant_id": "3158:3"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "12 pack",
+    "variant_id": "3158:4"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "24 pack",
+    "variant_id": "3158:5"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "48 pack",
+    "variant_id": "3158:6"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "10 pack",
+    "variant_id": "3158:7"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "20 pack",
+    "variant_id": "3158:8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 13.5,
+    "title": "30 pack",
+    "variant_id": "3158:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2bce0840c24d18d8",
+  "first_seen": "2026-10-26",
+  "handle": "unicorn-poop",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2024/11/20241115_140423-scaled.jpg",
+  "platform": "woocommerce",
+  "product_id": "3452",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "Organic",
+   "South America"
+  ],
+  "title": "Unicorn Poop",
+  "url": "https://thegrindroasters.com/product/unicorn-poop/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "12 oz.",
+    "variant_id": "3452:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.0,
+    "title": "1 lb.",
+    "variant_id": "3452:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 12.0,
+    "title": "3 lb.",
+    "variant_id": "3452:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 12.0,
+    "title": "5 lb.",
+    "variant_id": "3452:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "12 pack",
+    "variant_id": "3452:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "24 pack",
+    "variant_id": "3452:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "48 pack",
+    "variant_id": "3452:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "10 pack",
+    "variant_id": "3452:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "20 pack",
+    "variant_id": "3452:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.0,
+    "title": "30 pack",
+    "variant_id": "3452:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8f2f3edf50498e29",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-swiss-water-decaf",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Columbian-swiss-water-decaf-1lb-the-grind-roasters.jpg",
+  "platform": "woocommerce",
+  "product_id": "816",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Decaf",
+   "Decaffeinated",
+   "Medium Roast",
+   "Organic",
+   "South America"
+  ],
+  "title": "Colombian Swiss Water Decaf Coffee",
+  "url": "https://thegrindroasters.com/product/colombian-swiss-water-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "816:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "816:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "816:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "816:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "816:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "816:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "816:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "816:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "816:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "816:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0921eb8d0a62b82",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Group-of-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "843",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Colombia",
+   "Medium Roast",
+   "Organic",
+   "South America"
+  ],
+  "title": "Colombian Supremo Coffee",
+  "url": "https://thegrindroasters.com/product/colombian-supremo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "843:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "843:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "843:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "843:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "843:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "843:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "843:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "843:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "843:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "843:9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "86c4abfa5313a88e",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://thegrindroasters.com/wp-content/uploads/2020/07/Group-of-coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "873",
+  "product_type": "variable",
+  "roaster_slug": "thegrindroasters",
+  "tags": [
+   "Caffeinated",
+   "Coffee",
+   "Colombia",
+   "Dark Roast",
+   "South America"
+  ],
+  "title": "French Roast Coffee",
+  "url": "https://thegrindroasters.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.0,
+    "title": "12 oz.",
+    "variant_id": "873:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1 lb.",
+    "variant_id": "873:1"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 7.0,
+    "title": "3 lb.",
+    "variant_id": "873:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 7.0,
+    "title": "5 lb.",
+    "variant_id": "873:3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "12 pack",
+    "variant_id": "873:4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "24 pack",
+    "variant_id": "873:5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "48 pack",
+    "variant_id": "873:6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "10 pack",
+    "variant_id": "873:7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "20 pack",
+    "variant_id": "873:8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 7.0,
+    "title": "30 pack",
+    "variant_id": "873:9"
+   }
+  ],
+  "vendor": ""
+ }
+]

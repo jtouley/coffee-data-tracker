@@ -1,0 +1,124 @@
+{
+ "5e724ed5917eaf13a1c5570f": {
+  "body_hash": "1f31697bd9bd5d86",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "traditional",
+   "chocolate",
+   "vanilla"
+  ],
+  "varietals": []
+ },
+ "68ade97846c6975f3cedf678": {
+  "body_hash": "eb7ae48217bc689d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "almond",
+   "papaya",
+   "yuzu"
+  ],
+  "varietals": []
+ },
+ "68fa83846672886f789e8b34": {
+  "body_hash": "cf4810a458e425ab",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "strawberry compote",
+   "bubble-gum",
+   "grapefruit ipa",
+   "citra hops"
+  ],
+  "varietals": [
+   "Pink Bourbon",
+   "Red Bourbon"
+  ]
+ },
+ "6946bb6f40a3a708c06ef536": {
+  "body_hash": "ff8b6a98b7963233",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cranberry",
+   "navel orange",
+   "praline"
+  ],
+  "varietals": []
+ },
+ "69c5f13934a5fa1d04f5edf8": {
+  "body_hash": "f83caf2efd1ee449",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mulled wine",
+   "citrus",
+   "nutty"
+  ],
+  "varietals": [
+   "Bourbon",
+   "Mundo Novo",
+   "Typica"
+  ]
+ },
+ "6a80adedd0606b1d04a4aa6b": {
+  "body_hash": "6c7976db5dce0a02",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "red apple",
+   "nutmeg",
+   "stone fruit"
+  ],
+  "varietals": []
+ }
+}

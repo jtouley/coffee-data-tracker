@@ -1,0 +1,5250 @@
+[
+ {
+  "body_hash": "ac769cf99bdd0d9a",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-love-mema-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/rn-image_picker_lib_temp_68b298f8-1a4c-44cf-9192-64e51351e64d.png?v=1791129219",
+  "platform": "shopify",
+  "product_id": "15401970467049",
+  "product_type": "",
+  "roaster_slug": "weekend-roasters",
+  "tags": [],
+  "title": "12oz. Love, Mema Blend",
+  "url": "https://www.weekend-roasters.com/products/12oz-love-mema-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "67617468023017"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Drip",
+    "variant_id": "67617468055785"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "01b9b84504d032cc",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Mexico_Chiapas_Display_1.png?v=1733251133",
+  "platform": "shopify",
+  "product_id": "6133980987575",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Mexico: Chiapas Coffee Beans",
+  "url": "https://www.weekend-roasters.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "37757443178679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "37757443244215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "37757443276983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "37757443309751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "37757443342519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "37757443375287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40165870764215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40165870829751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40165870862519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40165870895287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40165871059127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40165871222967"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872271543"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872369847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872435383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872468151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872500919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165872599223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40165876826295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40165876859063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40165876957367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40165876990135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40165877055671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40165877088439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40165878366391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40165878399159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40165878464695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40165878497463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40165878530231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40165878562999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40165882790071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40165882953911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40165882986679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40165883019447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40165883084983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40165883150519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40165887115447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40165887148215"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40165887246519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40165887279287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40165887344823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40165887377591"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "674419b59c63b107",
+  "first_seen": "2026-10-26",
+  "handle": "brazil",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Brazil_Cerrado_Display.png?v=1732239936",
+  "platform": "shopify",
+  "product_id": "6133984493751",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Brazil: Cerrado Coffee Beans",
+  "url": "https://www.weekend-roasters.com/products/brazil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "37757451337911"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "37757451370679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "37757451403447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "37757451436215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "37757451468983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "37757451501751"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40165970837687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40165970870455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40165970903223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40165970935991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40165970968759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40165971067063"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972181175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972213943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972246711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972279479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972345015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165972377783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40165977489591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40165977555127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40165977587895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40165977620663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40165977817271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40165977882807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40165979914423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40165979947191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40165980012727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40165980045495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40165980078263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40165980143799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40165985222839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40165985255607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40165985288375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40165985353911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40165985386679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40165985419447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40165992202423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40165992235191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40165992267959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40165992333495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40165992431799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40165992497335"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "3685c45195c53a32",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Peru_San_Martin_Display.png?v=1732246293",
+  "platform": "shopify",
+  "product_id": "6133988786359",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Peru: Chonta Coffee Beans",
+  "url": "https://www.weekend-roasters.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "37757463298231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "37757463330999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "37757463363767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "37757463396535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "37757463429303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "37757463462071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40166001180855"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40166001246391"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40166001311927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40166001344695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40166001377463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40166001410231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166002983095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166003015863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166003245239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166003278007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166003310775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166003376311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40166006194359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40166006227127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40166006358199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40166006456503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40166006489271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40166006522039"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40166007701687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40166007734455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40166007767223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40166007832759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40166007865527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40166007898295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40166009962679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40166009995447"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40166010028215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40166010060983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40166010126519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40166010192055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40166013010103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40166013042871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40166013108407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40166013141175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40166013173943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40166013206711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Whole Bean",
+    "variant_id": "45539789635817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Espresso",
+    "variant_id": "45539789668585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Aeropress/ Moka Pot/ V60",
+    "variant_id": "45539789701353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Pour Over/ Chemex",
+    "variant_id": "45539789799657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Drip Machine",
+    "variant_id": "45539789832425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / French Press/ Percolator",
+    "variant_id": "45539789897961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / White Espresso / Cold Brew",
+    "variant_id": "45539789963497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Whole Bean",
+    "variant_id": "45539789996265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Espresso",
+    "variant_id": "45539790029033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Aeropress/ Moka Pot/ V60",
+    "variant_id": "45539790061801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Pour Over/ Chemex",
+    "variant_id": "45539790160105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Drip Machine",
+    "variant_id": "45539790192873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / French Press/ Percolator",
+    "variant_id": "45539790258409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / White Espresso / Cold Brew",
+    "variant_id": "45539790323945"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "6c1c836c4d0f63fa",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-1",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Colombia_Decaf_Display.png?v=1731434878",
+  "platform": "shopify",
+  "product_id": "6181896421559",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Colombia: Sugarcane Decaf",
+  "url": "https://www.weekend-roasters.com/products/brazil-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "37906283331767"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "37906283364535"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "37906283397303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "37906283430071"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "37906283462839"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "37906283495607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40169559621815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40169559654583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40169559851191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40169559949495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40169559982263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40169560047799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169607758007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169608183991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169608216759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169608315063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169608380599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40169608413367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "46419357008105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "46419357040873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "46419357106409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "46419357171945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "46419357270249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "46419357303017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "46419357368553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "46419357434089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "46419357532393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "46419357565161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "46419357630697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "46419357696233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "46419357794537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "46419357827305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "46419357892841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "46419357958377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "46419358056681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "46419358089449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "46419358154985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "46419358220521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "46419358318825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "46419358351593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "46419358417129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "46419358482665"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "e62a50caca969bc2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Guatemala_Santa_Rosa.png?v=1772156578",
+  "platform": "shopify",
+  "product_id": "6301404954807",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Guatemala: Santa Rosa Coffee Beans",
+  "url": "https://www.weekend-roasters.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "38202291191991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "38202291224759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "38202291290295"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "38202291323063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "38202291355831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "38202291388599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40166167511223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40166167576759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40166167675063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40166167707831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40166167773367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40166167904439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166168789175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166168887479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166169116855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166169149623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166169182391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166169215159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40166171836599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40166171869367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40166171902135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40166172000439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40166172033207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40166172065975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40166174621879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40166174687415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40166174720183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40166174752951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40166174785719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40166174818487"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40166178226359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40166178259127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40166178291895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40166178324663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40166178357431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40166178390199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40166181568695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40166181634231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40166181666999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40166181699767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40166181765303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40166181863607"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "6915d3b1edf8a112",
+  "first_seen": "2026-10-26",
+  "handle": "cacao-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Cacao_Blend_Display.png?v=1733244783",
+  "platform": "shopify",
+  "product_id": "6602418487479",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Cacao Blend",
+  "url": "https://www.weekend-roasters.com/products/cacao-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "39399371964599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "39399371997367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "39399372030135"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "39399372062903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "39399372095671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "39399372128439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40166141362359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40166141460663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40166141526199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40166141558967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40166141591735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40166141657271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166143131831"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166143819959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166143918263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166143983799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166144016567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40166144049335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40166147326135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40166147358903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40166147391671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40166147522743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40166147555511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40166147588279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40166148276407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40166148309175"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40166148374711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40166148407479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40166148440247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40166148473015"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40166150996151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40166151028919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40166151061687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40166151094455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40166151127223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40166151159991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40166155518135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40166155550903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40166155583671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40166155616439"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40166155649207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40166155780279"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "293021580835326e",
+  "first_seen": "2026-10-26",
+  "handle": "rise-n-shine",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Rise_N_Shine_Display_2.png?v=1733251340",
+  "platform": "shopify",
+  "product_id": "6602442440887",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Rise 'N’ Shine Blend",
+  "url": "https://www.weekend-roasters.com/products/rise-n-shine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "40165285167287"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "40165285200055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "40165285232823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "40165285265591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "40165285298359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "40165285331127"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "40165814960311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "40165814993079"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "40165815025847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "40165815058615"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "40165815156919"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "40165815255223"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819154615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819252919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819285687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819318455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819383991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "40165819416759"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "40165824921783"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "40165824954551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "40165825020087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "40165825052855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "40165825085623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "40165825151159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "40165828395191"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "40165828460727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "40165828493495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "40165828526263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "40165828591799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "40165828624567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "40165831868599"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "40165831901367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "40165831966903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "40165831999671"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "40165832065207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "40165832097975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "40165836062903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "40165836095671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "40165836193975"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "40165836226743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "40165836259511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "40165836292279"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "117bd1e60e762d20",
+  "first_seen": "2026-10-26",
+  "handle": "single-pour-overs",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/products/WeekendRoasters-148_c3ebc63b-0579-4d5a-9e9b-97662ee8a84c.jpg?v=1630987676",
+  "platform": "shopify",
+  "product_id": "6872454824119",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over"
+  ],
+  "title": "Single Pour Over",
+  "url": "https://www.weekend-roasters.com/products/single-pour-overs",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Brazil / Light",
+    "variant_id": "40250179420343"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Cacoa (Mex/Gua) / Light",
+    "variant_id": "40250179453111"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Guatemala / Light",
+    "variant_id": "40250179485879"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Mexico / Light",
+    "variant_id": "40250179518647"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Rise N' Shine (Mex/Bra) / Light",
+    "variant_id": "40250179584183"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Vietnamese / Light",
+    "variant_id": "40250179616951"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Colombia (Decaf) / Light",
+    "variant_id": "40250179649719"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Brazil / Medium",
+    "variant_id": "40250297057463"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Cacoa (Mex/Gua) / Medium",
+    "variant_id": "40250297090231"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Guatemala / Medium",
+    "variant_id": "40250297122999"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Mexico / Medium",
+    "variant_id": "40250297188535"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Rise N' Shine (Mex/Bra) / Medium",
+    "variant_id": "40250297286839"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Vietnamese / Medium",
+    "variant_id": "40250297319607"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Colombia (Decaf) / Medium",
+    "variant_id": "40250297352375"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Brazil / Dark",
+    "variant_id": "40250297974967"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Cacoa (Mex/Gua) / Dark",
+    "variant_id": "40250298007735"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Guatemala / Dark",
+    "variant_id": "40250298073271"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Mexico / Dark",
+    "variant_id": "40250298171575"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Rise N' Shine (Mex/Bra) / Dark",
+    "variant_id": "40250298237111"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Vietnamese / Dark",
+    "variant_id": "40250298269879"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 4.0,
+    "title": "Colombia (Decaf) / Dark",
+    "variant_id": "40250298302647"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "7d976404572205a0",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-in-a-pouch-1-gal",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/20250617-160839.png?v=1750204038",
+  "platform": "shopify",
+  "product_id": "6947562979511",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Beverages",
+   "cold Brew"
+  ],
+  "title": "Cold Brew: Brazil Peaberry",
+  "url": "https://www.weekend-roasters.com/products/cold-brew-in-a-pouch-1-gal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 22.0,
+    "title": "1/2 gallon",
+    "variant_id": "46579880296681"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 110.0,
+    "title": "2.5 gallon",
+    "variant_id": "51152052650217"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "361ab227075c2b6c",
+  "first_seen": "2026-10-26",
+  "handle": "16oz-daisys-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Daisy_s_Blend_Display.png?v=1732245895",
+  "platform": "shopify",
+  "product_id": "7675450392809",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Pour Over",
+   "Specialty Coffee",
+   "Whole Coffee Bean"
+  ],
+  "title": "Daisy's Blend",
+  "url": "https://www.weekend-roasters.com/products/16oz-daisys-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Whole Bean",
+    "variant_id": "43464551268585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Espresso",
+    "variant_id": "43464551301353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464551334121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Pour Over/ Chemex",
+    "variant_id": "43464551465193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Drip Machine",
+    "variant_id": "43464551497961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / French Press/ Percolator",
+    "variant_id": "43464551563497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Whole Bean",
+    "variant_id": "43464551629033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Espresso",
+    "variant_id": "43464551661801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464551694569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Pour Over/ Chemex",
+    "variant_id": "43464551825641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Drip Machine",
+    "variant_id": "43464551858409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / French Press/ Percolator",
+    "variant_id": "43464551923945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Whole Bean",
+    "variant_id": "43464551989481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Espresso",
+    "variant_id": "43464552022249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464552055017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Pour Over/ Chemex",
+    "variant_id": "43464552186089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Drip Machine",
+    "variant_id": "43464552218857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / French Press/ Percolator",
+    "variant_id": "43464552284393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Whole Bean",
+    "variant_id": "43464552349929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Espresso",
+    "variant_id": "43464552382697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464552415465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Pour Over/ Chemex",
+    "variant_id": "43464552546537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Drip Machine",
+    "variant_id": "43464552579305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / French Press/ Percolator",
+    "variant_id": "43464552644841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Whole Bean",
+    "variant_id": "43464552710377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Espresso",
+    "variant_id": "43464552743145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464552775913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Pour Over/ Chemex",
+    "variant_id": "43464552906985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Drip Machine",
+    "variant_id": "43464552939753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / French Press/ Percolator",
+    "variant_id": "43464553005289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Whole Bean",
+    "variant_id": "43464553070825"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Espresso",
+    "variant_id": "43464553103593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464553136361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Pour Over/ Chemex",
+    "variant_id": "43464553267433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Drip Machine",
+    "variant_id": "43464553300201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / French Press/ Percolator",
+    "variant_id": "43464553365737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Cold Brew",
+    "variant_id": "46419373523177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Cold Brew",
+    "variant_id": "46419373555945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Cold Brew",
+    "variant_id": "46419373588713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Cold Brew",
+    "variant_id": "46419373621481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Cold Brew",
+    "variant_id": "46419373654249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Cold Brew",
+    "variant_id": "46419373687017"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "621ab51348bb3804",
+  "first_seen": "2026-10-26",
+  "handle": "summer-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Summer_Blend_Display.png?v=1733246616",
+  "platform": "shopify",
+  "product_id": "7816753447145",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "New",
+   "Specialty Coffee",
+   "Whole Coffee Bean"
+  ],
+  "title": "Summer Blend",
+  "url": "https://www.weekend-roasters.com/products/summer-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Whole Bean",
+    "variant_id": "43464410398953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Espresso",
+    "variant_id": "43464410431721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464410464489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Pour Over/ Chemex",
+    "variant_id": "43464410562793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Drip Machine",
+    "variant_id": "43464410595561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / French Press/ Percolator",
+    "variant_id": "43464410661097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Light / Cold Brew",
+    "variant_id": "43464410759401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Whole Bean",
+    "variant_id": "43464410824937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Espresso",
+    "variant_id": "43464410923241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464410988777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Pour Over/ Chemex",
+    "variant_id": "43464411087081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Drip Machine",
+    "variant_id": "43464411119849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / French Press/ Percolator",
+    "variant_id": "43464411185385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Medium / Cold Brew",
+    "variant_id": "43464411250921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Whole Bean",
+    "variant_id": "43464411283689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Espresso",
+    "variant_id": "43464411316457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464411349225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Pour Over/ Chemex",
+    "variant_id": "43464411447529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Drip Machine",
+    "variant_id": "43464411480297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / French Press/ Percolator",
+    "variant_id": "43464411545833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz. / Dark / Cold Brew",
+    "variant_id": "43464411611369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Whole Bean",
+    "variant_id": "43464411644137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Espresso",
+    "variant_id": "43464411676905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464411709673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Pour Over/ Chemex",
+    "variant_id": "43464411807977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Drip Machine",
+    "variant_id": "43464411840745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / French Press/ Percolator",
+    "variant_id": "43464411906281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Light / Cold Brew",
+    "variant_id": "43464411971817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Whole Bean",
+    "variant_id": "43464412004585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Espresso",
+    "variant_id": "43464412037353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464412070121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Pour Over/ Chemex",
+    "variant_id": "43464412168425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Drip Machine",
+    "variant_id": "43464412201193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / French Press/ Percolator",
+    "variant_id": "43464412266729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Medium / Cold Brew",
+    "variant_id": "43464412332265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Whole Bean",
+    "variant_id": "43464412365033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Espresso",
+    "variant_id": "43464412397801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "43464412430569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Pour Over/ Chemex",
+    "variant_id": "43464412528873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Drip Machine",
+    "variant_id": "43464412561641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / French Press/ Percolator",
+    "variant_id": "43464412627177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lbs. / Dark / Cold Brew",
+    "variant_id": "43464412692713"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "86504d63a97ec075",
+  "first_seen": "2026-10-26",
+  "handle": "5-gal-cold-brew-nitro",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/cofee_keg.jpg?v=1696793096",
+  "platform": "shopify",
+  "product_id": "8058557825257",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Beverages",
+   "New",
+   "Wholesale",
+   "cold Brew"
+  ],
+  "title": "Nitro Cold Brew: Brazil Peaberry (5 gal)",
+  "url": "https://www.weekend-roasters.com/products/5-gal-cold-brew-nitro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 20865,
+    "price_usd": 275.0,
+    "title": "Default Title",
+    "variant_id": "44416745079017"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "f58072320a78b15f",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-five-gallon-espresso-cold-brew-nitro",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Esspreso-Nitro-Coffee.png?v=1704310193",
+  "platform": "shopify",
+  "product_id": "8288069648617",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Beverages",
+   "New",
+   "Wholesale",
+   "cold Brew"
+  ],
+  "title": "Nitro Organic Cold Brew: Espresso (5 gal)",
+  "url": "https://www.weekend-roasters.com/products/copy-of-five-gallon-espresso-cold-brew-nitro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 20412,
+    "price_usd": 275.0,
+    "title": "Default Title",
+    "variant_id": "46297939804393"
+   }
+  ],
+  "vendor": "Bona fide Nitro"
+ },
+ {
+  "body_hash": "6bd38d376f12817c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-green-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BurlapBrazilCerrado.png?v=1708624749",
+  "platform": "shopify",
+  "product_id": "8297452142825",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Fair-Trade",
+   "Raw",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Brazil: Cerrado Green Beans",
+  "url": "https://www.weekend-roasters.com/products/brazil-cerrado-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 90.0,
+    "title": "10lbs",
+    "variant_id": "46397326000361"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 180.0,
+    "title": "20lbs",
+    "variant_id": "46397326033129"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 360.0,
+    "title": "40lbs",
+    "variant_id": "46397326065897"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 720.0,
+    "title": "80lbs",
+    "variant_id": "46397326098665"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "10b8afbe52791801",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-peaberry-green-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BurlapBrazilPeaberry.png?v=1708624796",
+  "platform": "shopify",
+  "product_id": "8297471541481",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Fair-Trade",
+   "Raw",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Brazil: Peaberry Green Beans",
+  "url": "https://www.weekend-roasters.com/products/brazil-peaberry-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 91.0,
+    "title": "10lbs",
+    "variant_id": "46397686972649"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 182.0,
+    "title": "20lbs",
+    "variant_id": "46397687005417"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 364.0,
+    "title": "40lbs",
+    "variant_id": "46397687038185"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 720.0,
+    "title": "80lbs",
+    "variant_id": "46397687070953"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "361ab227075c2b6c",
+  "first_seen": "2026-10-26",
+  "handle": "daisys-blend-green-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8297515679977",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Daisy's Blend: Green Beans",
+  "url": "https://www.weekend-roasters.com/products/daisys-blend-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 92.0,
+    "title": "10lbs",
+    "variant_id": "46397749330153"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 166.0,
+    "title": "20lbs",
+    "variant_id": "46397749362921"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 294.0,
+    "title": "40lbs",
+    "variant_id": "46397749461225"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 551.0,
+    "title": "80lbs",
+    "variant_id": "46397749493993"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "e62a50caca969bc2",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-rosa-green-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BurlapGuatemalaSantaRosa.png?v=1708624916",
+  "platform": "shopify",
+  "product_id": "8297530261737",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Fair-Trade",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Guatemala: Santa Rosa Green Beans",
+  "url": "https://www.weekend-roasters.com/products/guatemala-santa-rosa-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 94.0,
+    "title": "10lbs",
+    "variant_id": "46397770989801"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 188.0,
+    "title": "20lbs",
+    "variant_id": "46397771022569"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 376.0,
+    "title": "40lbs",
+    "variant_id": "46397771055337"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 752.0,
+    "title": "80lbs",
+    "variant_id": "46397771088105"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "731a63992959aaa0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-green-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BurlapMexicoChiapas.png?v=1708624998",
+  "platform": "shopify",
+  "product_id": "8297542025449",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Fair-Trade",
+   "Organic",
+   "Raw",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Mexico: Chiapas Green Beans",
+  "url": "https://www.weekend-roasters.com/products/mexico-chiapas-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 92.0,
+    "title": "10lbs",
+    "variant_id": "46397785833705"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 184.0,
+    "title": "20lbs",
+    "variant_id": "46397785866473"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 368.0,
+    "title": "40lbs",
+    "variant_id": "46397785899241"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 736.0,
+    "title": "80lbs",
+    "variant_id": "46397785932009"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "2b41ef91ee261872",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-martin-green-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BurlapPeruSanMartin.png?v=1708625034",
+  "platform": "shopify",
+  "product_id": "8297551921385",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Fair-Trade",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Peru: San Martin Green Beans",
+  "url": "https://www.weekend-roasters.com/products/peru-san-martin-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 94.0,
+    "title": "10lbs",
+    "variant_id": "46397797695721"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 188.0,
+    "title": "20lbs",
+    "variant_id": "46397797728489"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 376.0,
+    "title": "40lbs",
+    "variant_id": "46397797761257"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 752.0,
+    "title": "80lbs",
+    "variant_id": "46397797794025"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "8689c394338cbe8b",
+  "first_seen": "2026-10-26",
+  "handle": "peru-swiss-water-decaf-green-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8297557000425",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Peru: Swiss Water Decaf Green Beans",
+  "url": "https://www.weekend-roasters.com/products/peru-swiss-water-decaf-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 104.0,
+    "title": "10lbs",
+    "variant_id": "46397806608617"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 208.0,
+    "title": "20lbs",
+    "variant_id": "46397806641385"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 416.0,
+    "title": "40lbs",
+    "variant_id": "46397806674153"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 832.0,
+    "title": "80lbs",
+    "variant_id": "46397806706921"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "293021580835326e",
+  "first_seen": "2026-10-26",
+  "handle": "rise-n-shine-blend-green-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8297559490793",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Rise 'N' Shine Blend: Green Beans",
+  "url": "https://www.weekend-roasters.com/products/rise-n-shine-blend-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 96.0,
+    "title": "10lbs",
+    "variant_id": "46397814505705"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 192.0,
+    "title": "20lbs",
+    "variant_id": "46397814538473"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 384.0,
+    "title": "40lbs",
+    "variant_id": "46397814571241"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 768.0,
+    "title": "80lbs",
+    "variant_id": "46397814604009"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "621ab51348bb3804",
+  "first_seen": "2026-10-26",
+  "handle": "summer-blend-green-beans",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8297560670441",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Raw",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Summer Blend: Green Beans",
+  "url": "https://www.weekend-roasters.com/products/summer-blend-green-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 92.0,
+    "title": "10lbs",
+    "variant_id": "46397819191529"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 184.0,
+    "title": "20lbs",
+    "variant_id": "46397819224297"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 368.0,
+    "title": "40lbs",
+    "variant_id": "46397819257065"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 736.0,
+    "title": "80lbs",
+    "variant_id": "46397819289833"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "2c1a7659b62d5fe5",
+  "first_seen": "2026-10-26",
+  "handle": "black-belt-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/4.png?v=1782420612",
+  "platform": "shopify",
+  "product_id": "8300276089065",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Specialty Coffee",
+   "Whole Coffee Bean"
+  ],
+  "title": "Black Belt Coffee",
+  "url": "https://www.weekend-roasters.com/products/black-belt-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 Lb / Whole Bean",
+    "variant_id": "46419144638697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "1 Lb / Drip Machine",
+    "variant_id": "46419144835305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 Lb / Whole Bean",
+    "variant_id": "46419145031913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5 Lb / Drip Machine",
+    "variant_id": "46419145228521"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "d05310cdca616560",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-truffle",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BourbonTruffleProduct_1.png?v=1706299335",
+  "platform": "shopify",
+  "product_id": "8302714585321",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over",
+   "Specialty Coffee",
+   "Whole Coffee Bean"
+  ],
+  "title": "Bourbon Truffle Blend",
+  "url": "https://www.weekend-roasters.com/products/bourbon-truffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Whole Bean",
+    "variant_id": "46450712903913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Espresso",
+    "variant_id": "46450712936681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "46450713002217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Pour Over/ Chemex",
+    "variant_id": "46450713067753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Drip Machine",
+    "variant_id": "46450713100521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / French Press/ Percolator",
+    "variant_id": "46450713166057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz / Medium-Dark / Cold Brew",
+    "variant_id": "46450713231593"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "d1a9773e5a24c112",
+  "first_seen": "2026-10-26",
+  "handle": "impact-of-glory",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/ImpactofGlory.png?v=1707342874",
+  "platform": "shopify",
+  "product_id": "8344977441001",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean"
+  ],
+  "title": "Impact of Glory",
+  "url": "https://www.weekend-roasters.com/products/impact-of-glory",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "46636158714089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "46636158877929"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "3ce9175587cf01bb",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-latte-copy-1",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8772516151529",
+  "product_type": "beverage",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "white chocolate"
+  ],
+  "title": "Cafe Con Leche",
+  "url": "https://www.weekend-roasters.com/products/vanilla-latte-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.0,
+    "title": "Regular / Hot- 16oz",
+    "variant_id": "47829096104169"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 6.0,
+    "title": "Regular / Cold- 20oz",
+    "variant_id": "47829096235241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.0,
+    "title": "Decaf / Hot- 16oz",
+    "variant_id": "47829096366313"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 6.0,
+    "title": "Decaf / Cold- 20oz",
+    "variant_id": "47829096530153"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "466bd4258177e781",
+  "first_seen": "2026-10-26",
+  "handle": "timmys-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8772782031081",
+  "product_type": "beverage",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "white chocolate"
+  ],
+  "title": "Iced Timmy's Blend",
+  "url": "https://www.weekend-roasters.com/products/timmys-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.5,
+    "title": "Default Title",
+    "variant_id": "47830079602921"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "bd5c87b33ec029a0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-el-tiple-coffee-beans-12oz",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/ColombiaHuilaDisplay_1.png?v=1737762907",
+  "platform": "shopify",
+  "product_id": "8844352651497",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "Organic",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Colombia: Huila El Tiple Coffee Beans",
+  "url": "https://www.weekend-roasters.com/products/colombia-huila-el-tiple-coffee-beans-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "48077654163689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "48077654196457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48077654229225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "48077654261993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "48077654294761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "48077654327529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "48077654360297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "48077654393065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "48077654425833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48077654458601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "48077654491369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "48077654524137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "48077654556905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "48077654589673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "48077654622441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "48077654655209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48077654687977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "48077654720745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "48077654753513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "48077654786281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "48077654819049"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "48576456392937"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "48576456425705"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48576456458473"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "48576456491241"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "48576456524009"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "48576456556777"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "48576456589545"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "48576456622313"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "48576456655081"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48576456687849"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "48576456720617"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "48576456753385"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "48576456786153"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "48576456818921"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "48576456851689"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "48576456884457"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48576456917225"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "48576456949993"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "48576456982761"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "48576457015529"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "48576457048297"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "841e4262869060de",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/TanzaniaDisplay.png?v=1748877665",
+  "platform": "shopify",
+  "product_id": "8951365140713",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Tanzania: Peaberry",
+  "url": "https://www.weekend-roasters.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Whole Bean",
+    "variant_id": "48458932846825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Espresso",
+    "variant_id": "48458932879593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458932912361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Pour Over/ Chemex",
+    "variant_id": "48458932945129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Drip Machine",
+    "variant_id": "48458932977897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / French Press/ Percolator",
+    "variant_id": "48458933010665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Light / Cold Brew",
+    "variant_id": "48458933043433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Whole Bean",
+    "variant_id": "48458933076201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Espresso",
+    "variant_id": "48458933108969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458933141737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Pour Over/ Chemex",
+    "variant_id": "48458933174505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Drip Machine",
+    "variant_id": "48458933207273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / French Press/ Percolator",
+    "variant_id": "48458933240041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Medium / Cold Brew",
+    "variant_id": "48458933272809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Whole Bean",
+    "variant_id": "48458933305577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Espresso",
+    "variant_id": "48458933338345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458933371113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Pour Over/ Chemex",
+    "variant_id": "48458933403881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Drip Machine",
+    "variant_id": "48458933436649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / French Press/ Percolator",
+    "variant_id": "48458933469417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Dark / Cold Brew",
+    "variant_id": "48458933502185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Whole Bean",
+    "variant_id": "48458933534953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Espresso",
+    "variant_id": "48458933567721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458933600489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Pour Over/ Chemex",
+    "variant_id": "48458933633257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Drip Machine",
+    "variant_id": "48458933666025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / French Press/ Percolator",
+    "variant_id": "48458933698793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Light / Cold Brew",
+    "variant_id": "48458933731561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Whole Bean",
+    "variant_id": "48458933764329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Espresso",
+    "variant_id": "48458933797097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458933829865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Pour Over/ Chemex",
+    "variant_id": "48458933862633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Drip Machine",
+    "variant_id": "48458933895401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / French Press/ Percolator",
+    "variant_id": "48458933928169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Medium / Cold Brew",
+    "variant_id": "48458933960937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Whole Bean",
+    "variant_id": "48458933993705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Espresso",
+    "variant_id": "48458934026473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458934059241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Pour Over/ Chemex",
+    "variant_id": "48458934092009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Drip Machine",
+    "variant_id": "48458934124777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / French Press/ Percolator",
+    "variant_id": "48458934157545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Dark / Cold Brew",
+    "variant_id": "48458934190313"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "f4584bd8ba2a8658",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/BreakfastBlendDisplay.png?v=1748878296",
+  "platform": "shopify",
+  "product_id": "8951367958761",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Weekend Coffee Roaster's: Breakfast Blend",
+  "url": "https://www.weekend-roasters.com/products/tanzania-peaberry-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "48458956308713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Espresso",
+    "variant_id": "48458956341481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458956374249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Pour Over/ Chemex",
+    "variant_id": "48458956407017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Drip Machine",
+    "variant_id": "48458956439785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / French Press/ Percolator",
+    "variant_id": "48458956472553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Cold Brew",
+    "variant_id": "48458956505321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48458956996841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "48458957029609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458957062377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Pour Over/ Chemex",
+    "variant_id": "48458957095145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Drip Machine",
+    "variant_id": "48458957127913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / French Press/ Percolator",
+    "variant_id": "48458957160681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "48458957193449"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "f4584bd8ba2a8658",
+  "first_seen": "2026-10-26",
+  "handle": "weekend-coffee-roasters-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/HouseBlendDisplay.png?v=1748878856",
+  "platform": "shopify",
+  "product_id": "8951373562089",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Weekend Coffee Roaster's: House Blend",
+  "url": "https://www.weekend-roasters.com/products/weekend-coffee-roasters-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "48458980458729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Espresso",
+    "variant_id": "48458980491497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458980524265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Pour Over/ Chemex",
+    "variant_id": "48458980557033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Drip Machine",
+    "variant_id": "48458980589801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / French Press/ Percolator",
+    "variant_id": "48458980622569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Cold Brew",
+    "variant_id": "48458980655337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48458980688105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "48458980720873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458980753641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Pour Over/ Chemex",
+    "variant_id": "48458980786409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Drip Machine",
+    "variant_id": "48458980819177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / French Press/ Percolator",
+    "variant_id": "48458980851945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "48458980884713"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "f4584bd8ba2a8658",
+  "first_seen": "2026-10-26",
+  "handle": "weekend-coffee-roasters-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/EspressoBlendDisplay.png?v=1748879097",
+  "platform": "shopify",
+  "product_id": "8951374381289",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Coffee",
+   "New",
+   "Pour Over",
+   "Single-Origin",
+   "Specialty Coffee",
+   "Whole Coffee Bean",
+   "Wholesale"
+  ],
+  "title": "Weekend Coffee Roaster's: Espresso Blend",
+  "url": "https://www.weekend-roasters.com/products/weekend-coffee-roasters-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "48458983276777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Espresso",
+    "variant_id": "48458983309545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458983342313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Pour Over/ Chemex",
+    "variant_id": "48458983375081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Drip Machine",
+    "variant_id": "48458983407849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / French Press/ Percolator",
+    "variant_id": "48458983440617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16oz / Cold Brew",
+    "variant_id": "48458983473385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "48458983506153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Espresso",
+    "variant_id": "48458983538921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Aeropress/ Moka Pot/ V60",
+    "variant_id": "48458983571689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Pour Over/ Chemex",
+    "variant_id": "48458983604457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Drip Machine",
+    "variant_id": "48458983637225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / French Press/ Percolator",
+    "variant_id": "48458983669993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs / Cold Brew",
+    "variant_id": "48458983702761"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "c1bc3751d5c83bf3",
+  "first_seen": "2026-10-26",
+  "handle": "oreo-mosaic-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Screenshot_2025-11-09_at_1.31.34_AM.png?v=1769318032",
+  "platform": "shopify",
+  "product_id": "9182451171561",
+  "product_type": "Cakes",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Mosaic Cakes",
+   "Shopify Collective"
+  ],
+  "title": "Oreo Mosaic Cake",
+  "url": "https://www.weekend-roasters.com/products/oreo-mosaic-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "50069525397737"
+   }
+  ],
+  "vendor": "Mosaic Cakes"
+ },
+ {
+  "body_hash": "b0e11264539a848c",
+  "first_seen": "2026-10-26",
+  "handle": "pistachio-mosaic-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/ME42YOFILPENCQCF2DSNIIRV.webp?v=1769318031",
+  "platform": "shopify",
+  "product_id": "9182451204329",
+  "product_type": "Cakes",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Mosaic Cakes",
+   "Shopify Collective"
+  ],
+  "title": "Pistachio Mosaic Cake",
+  "url": "https://www.weekend-roasters.com/products/pistachio-mosaic-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "50069525430505"
+   }
+  ],
+  "vendor": "Mosaic Cakes"
+ },
+ {
+  "body_hash": "a7d36b63ae415f56",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-mosaic-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/DRGAXV3K3XWHHYMPQN7MFLGK_2.webp?v=1769318031",
+  "platform": "shopify",
+  "product_id": "9182451237097",
+  "product_type": "Cakes",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Mosaic Cakes",
+   "Shopify Collective"
+  ],
+  "title": "Raspberry Mosaic Cake",
+  "url": "https://www.weekend-roasters.com/products/raspberry-mosaic-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "50069525463273"
+   }
+  ],
+  "vendor": "Mosaic Cakes"
+ },
+ {
+  "body_hash": "b9e3fc07a865262f",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-cream-mosaic-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/JX4N5GIMJIWE4MF74PCHSQMF.webp?v=1769318030",
+  "platform": "shopify",
+  "product_id": "9182451269865",
+  "product_type": "Cakes",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Mosaic Cakes",
+   "Shopify Collective"
+  ],
+  "title": "Hazelnut Cream Mosaic Cake",
+  "url": "https://www.weekend-roasters.com/products/hazelnut-cream-mosaic-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "50069525496041"
+   }
+  ],
+  "vendor": "Mosaic Cakes"
+ },
+ {
+  "body_hash": "56774da9df7e301f",
+  "first_seen": "2026-10-26",
+  "handle": "dubai-chocolate-mosaic-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Screenshot2025-11-09at1.19.37AM.png?v=1769318034",
+  "platform": "shopify",
+  "product_id": "9182451335401",
+  "product_type": "Cakes",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "Mosaic Cakes",
+   "Shopify Collective"
+  ],
+  "title": "Dubai Chocolate Mosaic Cake",
+  "url": "https://www.weekend-roasters.com/products/dubai-chocolate-mosaic-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1134,
+    "price_usd": 60.0,
+    "title": "Default Title",
+    "variant_id": "50069525561577"
+   }
+  ],
+  "vendor": "Mosaic Cakes"
+ },
+ {
+  "body_hash": "e1cfe8f9c123da57",
+  "first_seen": "2026-10-26",
+  "handle": "half-caff-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/use-my-label-and-add-roasted-coffee-on-the-back-ground.png?v=1773178950",
+  "platform": "shopify",
+  "product_id": "9219830415593",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "New"
+  ],
+  "title": "Half Caff Blend",
+  "url": "https://www.weekend-roasters.com/products/half-caff-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Light / Ground / 16oz (1 lb)",
+    "variant_id": "50618705903849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Light / Ground / 80oz (5 lb)",
+    "variant_id": "50618705936617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Light / Whole Bean / 16oz (1 lb)",
+    "variant_id": "50618705969385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Light / Whole Bean / 80oz (5 lb)",
+    "variant_id": "50618706002153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Medium / Ground / 16oz (1 lb)",
+    "variant_id": "50618706034921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Medium / Ground / 80oz (5 lb)",
+    "variant_id": "50618706067689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Medium / Whole Bean / 16oz (1 lb)",
+    "variant_id": "50618706100457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Medium / Whole Bean / 80oz (5 lb)",
+    "variant_id": "50618706133225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Medium-dark / Ground / 16oz (1 lb)",
+    "variant_id": "50618706165993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Medium-dark / Ground / 80oz (5 lb)",
+    "variant_id": "50618706198761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Medium-dark / Whole Bean / 16oz (1 lb)",
+    "variant_id": "50618706231529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Medium-dark / Whole Bean / 80oz (5 lb)",
+    "variant_id": "50618706264297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Dark / Ground / 16oz (1 lb)",
+    "variant_id": "50618706297065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Dark / Ground / 80oz (5 lb)",
+    "variant_id": "50618706329833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "Dark / Whole Bean / 16oz (1 lb)",
+    "variant_id": "50618706362601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Dark / Whole Bean / 80oz (5 lb)",
+    "variant_id": "50618706395369"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "b217b76d2c6ded27",
+  "first_seen": "2026-10-26",
+  "handle": "white-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/perfect-now-make-the-label-bigger-and-keep-in-the-center.png?v=1773261644",
+  "platform": "shopify",
+  "product_id": "9220805951721",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [
+   "New"
+  ],
+  "title": "White Coffee",
+  "url": "https://www.weekend-roasters.com/products/white-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "16oz (1lb) / Espresso Grind",
+    "variant_id": "50621444849897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "80oz (5lbs) / Espresso Grind",
+    "variant_id": "50621444882665"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ },
+ {
+  "body_hash": "2cc55be41dcfd574",
+  "first_seen": "2026-10-26",
+  "handle": "2-5-gallon-cold-brew-bib",
+  "image": "https://cdn.shopify.com/s/files/1/0523/8158/1495/files/Photoroom-20260713-204806253.jpg?v=1784001603",
+  "platform": "shopify",
+  "product_id": "9343220875497",
+  "product_type": "Coffee",
+  "roaster_slug": "weekend-roasters",
+  "tags": [],
+  "title": "2.5 gallon Cold Brew bib.",
+  "url": "https://www.weekend-roasters.com/products/2-5-gallon-cold-brew-bib",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9979,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "51514684539113"
+   }
+  ],
+  "vendor": "Weekend Coffee Roasters"
+ }
+]

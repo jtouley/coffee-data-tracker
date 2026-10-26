@@ -1,0 +1,3471 @@
+[
+ {
+  "body_hash": "e37bde0ef0d12fbb",
+  "first_seen": "2026-10-26",
+  "handle": "grinding-gears",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/GrindingGears_WB.png?v=1673034638",
+  "platform": "shopify",
+  "product_id": "7341588316409",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Extra Dark"
+  ],
+  "title": "Grinding Gears X-Dark",
+  "url": "https://mountainroaster.com/products/grinding-gears",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41901120389369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41901120422137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41953795637497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41953795670265"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "1421a209ad97353b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Colombia_WB.png?v=1672930717",
+  "platform": "shopify",
+  "product_id": "7341593002233",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Colombia",
+  "url": "https://mountainroaster.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41901190578425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41901190611193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41901190643961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41901190676729"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "c3e3d7aa94b52216",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/CostaRica_WB.png?v=1672930800",
+  "platform": "shopify",
+  "product_id": "7341593231609",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Costa Rica",
+  "url": "https://mountainroaster.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41901191758073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41901191790841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41901191823609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41901191856377"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "90a48db8e1549a14",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Sumatra_WB.png?v=1672931061",
+  "platform": "shopify",
+  "product_id": "7351275323641",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Sumatra",
+  "url": "https://mountainroaster.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41953768243449"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41953768276217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41953768308985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41953768341753"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "c031f66a0a963ba0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Guatemala_WB.png?v=1672930867",
+  "platform": "shopify",
+  "product_id": "7351276437753",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Guatemala",
+  "url": "https://mountainroaster.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41953787904249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41953787937017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41953787969785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41953788002553"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "1334d5f7f3ddd092",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-white-chocolate-sauce",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-WHITE-CHOCOLATE-SAUCE-64oz-Mountain-Roaster-Coffee-558.png?v=1663972583",
+  "platform": "shopify",
+  "product_id": "7352471453945",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 sauces"
+  ],
+  "title": "Barista 22 White Chocolate Sauce 64oz",
+  "url": "https://mountainroaster.com/products/barista-22-white-chocolate-sauce",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "41960507572473"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "315be8a7372c73f3",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-whispers",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/MountainWhispers_WB.png?v=1672928741",
+  "platform": "shopify",
+  "product_id": "7354636501241",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Light Roast"
+  ],
+  "title": "Mountain Whispers",
+  "url": "https://mountainroaster.com/products/mountain-whispers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965221511417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965221544185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965221576953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965221609721"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "52af13bc960b29cf",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-mornings",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/MountainMornings_WB.png?v=1741381845",
+  "platform": "shopify",
+  "product_id": "7354640400633",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Medium Roast"
+  ],
+  "title": "Mountain Mornings",
+  "url": "https://mountainroaster.com/products/mountain-mornings",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965254213881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965254246649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965254279417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965254312185"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "474745c0969733ff",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mexico_WB.png?v=1672930923",
+  "platform": "shopify",
+  "product_id": "7354641678585",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Central America",
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Mexico",
+  "url": "https://mountainroaster.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965258899705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965258932473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965258965241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965258998009"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "bf7b2b4ec2aba85a",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-evenings-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/MountainEvenings_WB.png?v=1672928197",
+  "platform": "shopify",
+  "product_id": "7354641940729",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Mountain Evenings Decaf",
+  "url": "https://mountainroaster.com/products/mountain-evenings-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965260210425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965260243193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965260275961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965260308729"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "05a2e532288c6a6a",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-treasures",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountaintreasures_WB.png?v=1672928678",
+  "platform": "shopify",
+  "product_id": "7354642170105",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Dark Roast"
+  ],
+  "title": "Mountain Treasures",
+  "url": "https://mountainroaster.com/products/mountain-treasures",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965265846521"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965265879289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965265912057"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965265944825"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "c0a274e2cb8f6d2e",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Yirgacheffe_WB.png?v=1672930374",
+  "platform": "shopify",
+  "product_id": "7354644922617",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "African",
+   "Dark Roast",
+   "Single Origins"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://mountainroaster.com/products/copy-of-ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965272105209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965272137977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965272170745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965272203513"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "015642c5bb40693d",
+  "first_seen": "2026-10-26",
+  "handle": "hair-of-the-dog",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/HairoftheDog_WB.png?v=1673034582",
+  "platform": "shopify",
+  "product_id": "7354646233337",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Extra Dark"
+  ],
+  "title": "Hair of the Dog",
+  "url": "https://mountainroaster.com/products/hair-of-the-dog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41965273579769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "41965273612537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "41965273645305"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "41965273678073"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "e70fc6e27bc13c8e",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-morning-fog",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/MountainMorningFog_WB.png?v=1672931545",
+  "platform": "shopify",
+  "product_id": "7354765410553",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors"
+  ],
+  "title": "Mountain Morning Fog",
+  "url": "https://mountainroaster.com/products/mountain-morning-fog",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966054572281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966054768889"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "300a6fba59f51596",
+  "first_seen": "2026-10-26",
+  "handle": "black-mountain-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BlackMountainGrogg_WB.png?v=1672931490",
+  "platform": "shopify",
+  "product_id": "7354768949497",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors"
+  ],
+  "title": "Black Mountain Grogg",
+  "url": "https://mountainroaster.com/products/black-mountain-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966073970937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966074003705"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "e0f32cba20927f9f",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-creek",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/CaramelCreek_WB.png?v=1672931440",
+  "platform": "shopify",
+  "product_id": "7354769146105",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors"
+  ],
+  "title": "Caramel Creek",
+  "url": "https://mountainroaster.com/products/caramel-creek",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966075543801"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966075576569"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "21fd5d4e8111db2d",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Hazelnut_WB.png?v=1672931630",
+  "platform": "shopify",
+  "product_id": "7354769375481",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors"
+  ],
+  "title": "Hazelnut Flavored Coffee",
+  "url": "https://mountainroaster.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966076330233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966076363001"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "945138c83d9e9ffb",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Vanilla_WB.png?v=1672931586",
+  "platform": "shopify",
+  "product_id": "7354769998073",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors"
+  ],
+  "title": "Vanilla Bean Flavored Coffee",
+  "url": "https://mountainroaster.com/products/vanilla-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966080000249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966080033017"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "a7fd1336f3154253",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/HolidayGrogg_WB.png?v=1672931780",
+  "platform": "shopify",
+  "product_id": "7354770129145",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors",
+   "Holiday Flavors"
+  ],
+  "title": "Holiday Grogg",
+  "url": "https://mountainroaster.com/products/holiday-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966080491769"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966080524537"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "6c6372e0b8ccf4ad",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/files/PumpkinSpice_GR.png?v=1694710179",
+  "platform": "shopify",
+  "product_id": "7354770391289",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors",
+   "Holiday Flavors"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://mountainroaster.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966082883833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966082916601"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "f7dc84122079a9f7",
+  "first_seen": "2026-10-26",
+  "handle": "sleigh-ride",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/SleighRide_WB.png?v=1672931723",
+  "platform": "shopify",
+  "product_id": "7354770522361",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors",
+   "Holiday Flavors"
+  ],
+  "title": "Sleigh Ride Flavored coffee",
+  "url": "https://mountainroaster.com/products/sleigh-ride",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966083178745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966083211513"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "3e5aced41433ad05",
+  "first_seen": "2026-10-26",
+  "handle": "winter-mt-truffle",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WinterMountainTruffle_WB.png?v=1672931886",
+  "platform": "shopify",
+  "product_id": "7354770653433",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors",
+   "Holiday Flavors"
+  ],
+  "title": "Winter Mt. Truffle",
+  "url": "https://mountainroaster.com/products/winter-mt-truffle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966083506425"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "41966083539193"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "fe76032a006428f2",
+  "first_seen": "2026-10-26",
+  "handle": "restaurant-pack-2-5oz-pillow-packs-box-of-48-with-filters-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Treasures-2-5-oz-Restaurant-Pack-box-of-48-Mountain-Roaster-Coffee-467.png?v=1663972695",
+  "platform": "shopify",
+  "product_id": "7354774323449",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Treasures 2.5 oz. Restaurant Pack box of 48",
+  "url": "https://mountainroaster.com/products/restaurant-pack-2-5oz-pillow-packs-box-of-48-with-filters-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 86.0,
+    "title": "Default Title",
+    "variant_id": "41966114111737"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "9b51ec210e53bb14",
+  "first_seen": "2026-10-26",
+  "handle": "restaurant-pack-2-2oz-pillow-packs-box-of-48-with-filters-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Evenings-DECAF-2-2-oz-Restaurant-Packs-box-of-48-Mountain-Roaster-Coffee-723.png?v=1663972705",
+  "platform": "shopify",
+  "product_id": "7354788151545",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Evenings (DECAF) 2.2 oz. Restaurant Packs box of 48",
+  "url": "https://mountainroaster.com/products/restaurant-pack-2-2oz-pillow-packs-box-of-48-with-filters-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Default Title",
+    "variant_id": "41966195015929"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "7a0a096a2e57b17a",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-restaurant-packs-8oz-pillow-packs-box-of-24-with-filters-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Mornings-Medium-Roast-8oz-box-of-24-Mountain-Roaster-Coffee-217.jpg?v=1663972719",
+  "platform": "shopify",
+  "product_id": "7354794410233",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Mornings Medium Roast 8oz box of 24",
+  "url": "https://mountainroaster.com/products/copy-of-restaurant-packs-8oz-pillow-packs-box-of-24-with-filters-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6123,
+    "price_usd": 136.0,
+    "title": "Default Title",
+    "variant_id": "41966227259641"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "5a3fe38be4c13fa5",
+  "first_seen": "2026-10-26",
+  "handle": "restaurant-packs-8oz-pillow-packs-box-of-24-with-filters-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Evenings-DECAF-Medium-Roast-8oz-box-of-24-Mountain-Roaster-Coffee-28.png?v=1663972723",
+  "platform": "shopify",
+  "product_id": "7354794868985",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Evenings (DECAF) Medium Roast 8oz box of 24",
+  "url": "https://mountainroaster.com/products/restaurant-packs-8oz-pillow-packs-box-of-24-with-filters-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 6123,
+    "price_usd": 136.0,
+    "title": "Default Title",
+    "variant_id": "41966229291257"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "013589003dcb5970",
+  "first_seen": "2026-10-26",
+  "handle": "wvsp-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WVSP-Dark-Roast-Mountain-Roaster-Coffee-844.jpg?v=1663972789",
+  "platform": "shopify",
+  "product_id": "7354795163897",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP"
+  ],
+  "title": "WVSP Dark Roast",
+  "url": "https://mountainroaster.com/products/wvsp-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "41966231290105"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966231322873"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 13.5,
+    "title": "Box of 12 Single Serve Pods",
+    "variant_id": "41966231355641"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 95.0,
+    "title": "Box of 100 Single Serve Pods",
+    "variant_id": "41966231388409"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "cb77c2a71fec2218",
+  "first_seen": "2026-10-26",
+  "handle": "wvsp-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WVSP-Medium-Roast-Mountain-Roaster-Coffee-214.jpg?v=1663972885",
+  "platform": "shopify",
+  "product_id": "7354797359353",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP"
+  ],
+  "title": "WVSP Medium Roast",
+  "url": "https://mountainroaster.com/products/wvsp-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "41966237319417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966237352185"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 13.5,
+    "title": "Box of 12 Single Serve Pods",
+    "variant_id": "41966237384953"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 95.0,
+    "title": "Box of 100 Single Serve Pods",
+    "variant_id": "41966237417721"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "d67f97f292ebb43a",
+  "first_seen": "2026-10-26",
+  "handle": "wvsp-decaf-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WVSP-Decaf-Roast-Mountain-Roaster-Coffee-326.jpg?v=1663972889",
+  "platform": "shopify",
+  "product_id": "7354797785337",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP"
+  ],
+  "title": "WVSP Decaf Roast",
+  "url": "https://mountainroaster.com/products/wvsp-decaf-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "41966240170233"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966240203001"
+   },
+   {
+    "available": true,
+    "grams": 318,
+    "price_usd": 13.5,
+    "title": "Box of 12 Single serve pods",
+    "variant_id": "41966240235769"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 95.0,
+    "title": "Box of 100 Single serve pods",
+    "variant_id": "41966240268537"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "cf06080c1f1e6e7d",
+  "first_seen": "2026-10-26",
+  "handle": "wvsp-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WVSP-Light-Roast-Mountain-Roaster-Coffee-601.jpg?v=1663972893",
+  "platform": "shopify",
+  "product_id": "7354798375161",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP"
+  ],
+  "title": "WVSP Light Roast",
+  "url": "https://mountainroaster.com/products/wvsp-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "41966245282041"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Whole Bean",
+    "variant_id": "41966245314809"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "d6530b5d11cb071b",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-caramel-sauce-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-CARAMEL-SAUCE-64oz-Mountain-Roaster-Coffee-688.png?v=1663971348",
+  "platform": "shopify",
+  "product_id": "7354820264185",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 sauces"
+  ],
+  "title": "Barista 22 Caramel Sauce 64oz.",
+  "url": "https://mountainroaster.com/products/barista-22-caramel-sauce-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "41966319534329"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "1a5b6e16c5507930",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-pumpkin-sauce-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-PUMPKIN-PIE-SAUCE-64oz-Mountain-Roaster-Coffee-542.png?v=1663972434",
+  "platform": "shopify",
+  "product_id": "7354820559097",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 sauce"
+  ],
+  "title": "Barista 22 Pumpkin Pie Sauce 64oz.",
+  "url": "https://mountainroaster.com/products/barista-22-pumpkin-sauce-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2722,
+    "price_usd": 27.5,
+    "title": "Default Title",
+    "variant_id": "41966322123001"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "1-5oz-sample-packs-box-of-12",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/1-5oz-Sample-Packs-Box-of-12-Mountain-Roaster-Coffee-684.png?v=1663971362",
+  "platform": "shopify",
+  "product_id": "7354820722937",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Wholesale"
+  ],
+  "title": "1.5oz Sample Packs  (Box of 12).",
+  "url": "https://mountainroaster.com/products/1-5oz-sample-packs-box-of-12",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Colombia",
+    "variant_id": "41966323761401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Costa Rica",
+    "variant_id": "41966323794169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Grinding Gears",
+    "variant_id": "41966323826937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Guatemala",
+    "variant_id": "41966323859705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Hair of the Dog",
+    "variant_id": "41966323892473"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Ethiopia Limu",
+    "variant_id": "41966323925241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Ethiopia Yirgacheffe",
+    "variant_id": "41966323958009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Mexcian",
+    "variant_id": "41966323990777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Mt. Mornings",
+    "variant_id": "41966324023545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Mt. Treasures",
+    "variant_id": "41966324056313"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Mt. Whispers",
+    "variant_id": "41966324089081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Mt. Evenings (Decaf)",
+    "variant_id": "41966324121849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Sumatra",
+    "variant_id": "41966324154617"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "523f94db1146fe07",
+  "first_seen": "2026-10-26",
+  "handle": "12oz-bags-of-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/4-12oz-Bags-of-Flavored-Coffee-Mountain-Roaster-Coffee-642.png?v=1663971369",
+  "platform": "shopify",
+  "product_id": "7354831241465",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "4 - 12oz Bags of Flavored Coffee",
+  "url": "https://mountainroaster.com/products/12oz-bags-of-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Black Mt. Grogg / All Ground",
+    "variant_id": "41966359019769"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Caramel Creek / All Ground",
+    "variant_id": "41966359052537"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Hazelnut / All Ground",
+    "variant_id": "41966359085305"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Holiday Grogg / All Ground",
+    "variant_id": "41966359118073"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Mt. Morning Fog / All Ground",
+    "variant_id": "41966359183609"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Pumpkin Spice / All Ground",
+    "variant_id": "41966359216377"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Sleigh Ride / All Ground",
+    "variant_id": "41966359249145"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Vanilla Bean / All Ground",
+    "variant_id": "41966359281913"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Black Mt. Grogg / All Whole Bean",
+    "variant_id": "41966379106553"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Black Mt. Grogg / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379139321"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Caramel Creek / All Whole Bean",
+    "variant_id": "41966379172089"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Caramel Creek / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379204857"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Hazelnut / All Whole Bean",
+    "variant_id": "41966379237625"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Hazelnut / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379270393"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Holiday Grogg / All Whole Bean",
+    "variant_id": "41966379303161"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Holiday Grogg / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379335929"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Mt. Morning Fog / All Whole Bean",
+    "variant_id": "41966379434233"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Mt. Morning Fog / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379467001"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Pumpkin Spice / All Whole Bean",
+    "variant_id": "41966379499769"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Pumpkin Spice / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379532537"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Sleigh Ride / All Whole Bean",
+    "variant_id": "41966379565305"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Sleigh Ride / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379598073"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Vanilla Bean / All Whole Bean",
+    "variant_id": "41966379630841"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 54.0,
+    "title": "Vanilla Bean / 50% Ground / 50% Whole Bean",
+    "variant_id": "41966379663609"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "9077cf0d567494d8",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-vanilla-beverage-base-3-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-VANILLA-BEVERAGE-BASE-3-5-LB-Mountain-Roaster-Coffee-381.png?v=1774890248",
+  "platform": "shopify",
+  "product_id": "7354846937337",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 powders"
+  ],
+  "title": "Barista 22 Vanilla Beverage Base (3.5 LB)",
+  "url": "https://mountainroaster.com/products/barista-22-vanilla-beverage-base-3-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1588,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "41966501921017"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "2489086210102117",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-wvsp-decaf-12oz-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/WVSP-Light-Roast12oz-Bag-Mountain-Roaster-Coffee-806.jpg?v=1663972909",
+  "platform": "shopify",
+  "product_id": "7354851819769",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "WVSP Light Roast12oz Bag",
+  "url": "https://mountainroaster.com/products/copy-of-wvsp-decaf-12oz-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 12.0,
+    "title": "Ground",
+    "variant_id": "41966539669753"
+   },
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 12.0,
+    "title": "Whole Bean",
+    "variant_id": "41966539702521"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "ddaef59ce042986b",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-treasures-dark-1-8-oz-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Treasures-Dark-Roast-48-1-8oz-packs-Mountain-Roaster-Coffee-49.png?v=1663972736",
+  "platform": "shopify",
+  "product_id": "7453580853497",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Treasures Dark Roast  48 1.8oz packs",
+  "url": "https://mountainroaster.com/products/mountain-treasures-dark-1-8-oz-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2948,
+    "price_usd": 61.5,
+    "title": "Default Title",
+    "variant_id": "42102743499001"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "018b0832f6648772",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mountain-treasures-dark-roast-48-1-8oz-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Mornings-Medium-Roast-48-1-8oz-packs-Mountain-Roaster-Coffee-546.png?v=1663972738",
+  "platform": "shopify",
+  "product_id": "7453590225145",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Mornings Medium Roast  48 1.8oz packs",
+  "url": "https://mountainroaster.com/products/copy-of-mountain-treasures-dark-roast-48-1-8oz-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2948,
+    "price_usd": 61.5,
+    "title": "Default Title",
+    "variant_id": "42102773317881"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "bdce965a3f66d529",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mountain-mornings-medium-roast-48-1-8oz-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Evenings-Decaf-Medium-Roast-48-1-8oz-packs-Mountain-Roaster-Coffee-360.png?v=1663972741",
+  "platform": "shopify",
+  "product_id": "7453590356217",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Twin Falls",
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Evenings Decaf Medium Roast  48 1.8oz packs",
+  "url": "https://mountainroaster.com/products/copy-of-mountain-mornings-medium-roast-48-1-8oz-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2948,
+    "price_usd": 61.5,
+    "title": "Default Title",
+    "variant_id": "42102776758521"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "87b40eb4cf762a8a",
+  "first_seen": "2026-10-26",
+  "handle": "your-way-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/mountainroaster_mk2_3.png?v=1674666169",
+  "platform": "shopify",
+  "product_id": "7527899758841",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Dark Roast",
+   "Extra Dark",
+   "Light Roast",
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Your Way Coffee",
+  "url": "https://mountainroaster.com/products/your-way-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Light / Whole Bean",
+    "variant_id": "42378079699193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Light / Whole Bean",
+    "variant_id": "42378079731961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Light / Whole Bean",
+    "variant_id": "42378079764729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Light / Whole Bean",
+    "variant_id": "42378087989497"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Light / Whole Bean",
+    "variant_id": "42378088022265"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sumatran / Light / Whole Bean",
+    "variant_id": "42378088055033"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Light / Whole Bean",
+    "variant_id": "42378088120569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Light/medium / Whole Bean",
+    "variant_id": "42378097426681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Dark / Whole Bean",
+    "variant_id": "42378097524985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Extra Dark / Whole Bean",
+    "variant_id": "42378097557753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Light/medium / Whole Bean",
+    "variant_id": "42378097590521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Dark / Whole Bean",
+    "variant_id": "42378097688825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Extra Dark / Whole Bean",
+    "variant_id": "42378097721593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Light/medium / Whole Bean",
+    "variant_id": "42378097754361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Dark / Whole Bean",
+    "variant_id": "42378097852665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Extra Dark / Whole Bean",
+    "variant_id": "42378097885433"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kenyan / Light/medium / Whole Bean",
+    "variant_id": "42378097918201"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kenyan / Dark / Whole Bean",
+    "variant_id": "42378098016505"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Kenyan / Extra Dark / Whole Bean",
+    "variant_id": "42378098049273"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Light/medium / Whole Bean",
+    "variant_id": "42378098082041"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Dark / Whole Bean",
+    "variant_id": "42378098180345"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Extra Dark / Whole Bean",
+    "variant_id": "42378098213113"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sumatran / Light/medium / Whole Bean",
+    "variant_id": "42378098245881"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sumatran / Dark / Whole Bean",
+    "variant_id": "42378098344185"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Sumatran / Extra Dark / Whole Bean",
+    "variant_id": "42378098376953"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Light/medium / Whole Bean",
+    "variant_id": "42378098573561"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Extra Dark / Whole Bean",
+    "variant_id": "42378098704633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Light / Drip Ground",
+    "variant_id": "42393663701241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Light/medium / Drip Ground",
+    "variant_id": "42393663734009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Dark / Drip Ground",
+    "variant_id": "42393663799545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Extra Dark / Drip Ground",
+    "variant_id": "42393663832313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Light / Drip Ground",
+    "variant_id": "42393663865081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Light/medium / Drip Ground",
+    "variant_id": "42393663897849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Dark / Drip Ground",
+    "variant_id": "42393663963385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Extra Dark / Drip Ground",
+    "variant_id": "42393663996153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Light / Drip Ground",
+    "variant_id": "42393664028921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Light/medium / Drip Ground",
+    "variant_id": "42393664061689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Dark / Drip Ground",
+    "variant_id": "42393664127225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Extra Dark / Drip Ground",
+    "variant_id": "42393664159993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Light / Drip Ground",
+    "variant_id": "42393664192761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Light/medium / Drip Ground",
+    "variant_id": "42393664225529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Dark / Drip Ground",
+    "variant_id": "42393664291065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Extra Dark / Drip Ground",
+    "variant_id": "42393664323833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Light / Drip Ground",
+    "variant_id": "42393664389369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Light/medium / Drip Ground",
+    "variant_id": "42393664422137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Dark / Drip Ground",
+    "variant_id": "42393664487673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Extra Dark / Drip Ground",
+    "variant_id": "42393664520441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Light / Drip Ground",
+    "variant_id": "42393664585977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Light/medium / Drip Ground",
+    "variant_id": "42393664618745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Dark / Drip Ground",
+    "variant_id": "42393664684281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Extra Dark / Drip Ground",
+    "variant_id": "42393664717049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Light / Drip Ground",
+    "variant_id": "42393664913657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Light/medium / Drip Ground",
+    "variant_id": "42393664946425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Extra Dark / Drip Ground",
+    "variant_id": "42393665011961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911800873209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911800905977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911800938745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911800971513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911801004281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911801037049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911801069817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911801102585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911801135353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911801168121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911801200889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911801233657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Extremely Dark   (black oily surface) / Whole Bean",
+    "variant_id": "45911801266425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Extremely Dark   (black oily surface) / Drip Ground",
+    "variant_id": "45911801299193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Medium / Whole Bean",
+    "variant_id": "45911801594105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Colombia / Medium / Drip Ground",
+    "variant_id": "45911801626873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Medium / Whole Bean",
+    "variant_id": "45911801659641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Costa Rican / Medium / Drip Ground",
+    "variant_id": "45911801692409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Medium / Whole Bean",
+    "variant_id": "45911801725177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Guatemalan / Medium / Drip Ground",
+    "variant_id": "45911801757945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Medium / Whole Bean",
+    "variant_id": "45911801790713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Kenyan / Medium / Drip Ground",
+    "variant_id": "45911801823481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Medium / Whole Bean",
+    "variant_id": "45911801856249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Nicaraguan / Medium / Drip Ground",
+    "variant_id": "45911801889017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Medium / Whole Bean",
+    "variant_id": "45911801921785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Sumatran / Medium / Drip Ground",
+    "variant_id": "45911801954553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Medium / Whole Bean",
+    "variant_id": "45911801987321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ethiopian Yirgacheffe / Medium / Drip Ground",
+    "variant_id": "45911802020089"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "bb1a144500e08843",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-roaster-branded-12oz-retail-bags-eighth-of-a-case-3-bags",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Roaster-Branded-12oz-Retail-Bags-Eighth-of-a-Case-3-bags-Mountain-Roaster-Coffee-946.png?v=1663972745",
+  "platform": "shopify",
+  "product_id": "7532240568569",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Roaster Branded 12oz Retail Bags ( Eighth of a  Case  3 bags )",
+  "url": "https://mountainroaster.com/products/mountain-roaster-branded-12oz-retail-bags-eighth-of-a-case-3-bags",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Mornings  (medium roast) / All Ground",
+    "variant_id": "42393773539577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Mornings  (medium roast) / All Whole Bean",
+    "variant_id": "42393773572345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Treasures (dark Roast) / All Ground",
+    "variant_id": "42393773605113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Treasures (dark Roast) / All Whole Bean",
+    "variant_id": "42393773637881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Evenings (decaf) / All Ground",
+    "variant_id": "42393773670649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Evenings (decaf) / All Whole Bean",
+    "variant_id": "42393773703417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Whispers (light roast) / All Ground",
+    "variant_id": "42393773736185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.0,
+    "title": "Mt. Whispers (light roast) / All Whole Bean",
+    "variant_id": "42393773768953"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Colombia (medium roast) / All Ground",
+    "variant_id": "42393773801721"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Colombia (medium roast) / All Whole Bean",
+    "variant_id": "42393773834489"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Costa Rica (medium roast) / All Ground",
+    "variant_id": "42393773867257"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Costa Rica (medium roast) / All Whole Bean",
+    "variant_id": "42393773932793"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Grinding Gears (extra dark roast) / All Ground",
+    "variant_id": "42393773965561"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Grinding Gears (extra dark roast) / All Whole Bean",
+    "variant_id": "42393773998329"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Guatemala (medium roast) / All Ground",
+    "variant_id": "42393774031097"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Guatemala (medium roast) / All Whole Bean",
+    "variant_id": "42393774063865"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Hair of the Dog (extra dark roast) / All Ground",
+    "variant_id": "42393774096633"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Hair of the Dog (extra dark roast) / All Whole Bean",
+    "variant_id": "42393774129401"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Ethiopian Limu (dark roast) / All Ground",
+    "variant_id": "42393774162169"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Ethiopian Limu (dark roast) / All Whole Bean",
+    "variant_id": "42393774194937"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Ethiopian Yirgacheffe (dark roast) / All Ground",
+    "variant_id": "42393774227705"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Ethiopian Yirgacheffe (dark roast) / All Whole Bean",
+    "variant_id": "42393774260473"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Mexican (medium roast) / All Ground",
+    "variant_id": "42393774293241"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Mexican (medium roast) / All Whole Bean",
+    "variant_id": "42393774326009"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Sumatra (medium roast) / All Ground",
+    "variant_id": "42393774358777"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 36.0,
+    "title": "Sumatra (medium roast) / All Whole Bean",
+    "variant_id": "42393774391545"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "765c3d972f9770b2",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-roaster-branded-12oz-retail-bags-quarter-case-of-6",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Roaster-Branded-12oz-Retail-Bags-Quarter-Case-of-6-Mountain-Roaster-Coffee-806.png?v=1663972749",
+  "platform": "shopify",
+  "product_id": "7532242862329",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Roaster Branded 12oz Retail Bags ( Quarter Case of 6)",
+  "url": "https://mountainroaster.com/products/mountain-roaster-branded-12oz-retail-bags-quarter-case-of-6",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Mornings  (medium roast) / 50 / 50",
+    "variant_id": "42393779208441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Mornings  (medium roast) / All Ground",
+    "variant_id": "42393779241209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Mornings  (medium roast) / All Whole Bean",
+    "variant_id": "42393779273977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Treasures (dark Roast) / 50 / 50",
+    "variant_id": "42393779306745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Treasures (dark Roast) / All Ground",
+    "variant_id": "42393779339513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Treasures (dark Roast) / All Whole Bean",
+    "variant_id": "42393779405049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Evenings (decaf) / 50 / 50",
+    "variant_id": "42393779437817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Evenings (decaf) / All Ground",
+    "variant_id": "42393779470585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Evenings (decaf) / All Whole Bean",
+    "variant_id": "42393779503353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Whispers (light roast) / 50 / 50",
+    "variant_id": "42393779536121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Whispers (light roast) / All Ground",
+    "variant_id": "42393779568889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Whispers (light roast) / All Whole Bean",
+    "variant_id": "42393779601657"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Colombia (medium roast) / 50 / 50",
+    "variant_id": "42393779634425"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Colombia (medium roast) / All Ground",
+    "variant_id": "42393779667193"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Colombia (medium roast) / All Whole Bean",
+    "variant_id": "42393779699961"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Costa Rica (medium roast) / 50 / 50",
+    "variant_id": "42393779732729"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Costa Rica (medium roast) / All Ground",
+    "variant_id": "42393779765497"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Costa Rica (medium roast) / All Whole Bean",
+    "variant_id": "42393779798265"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Grinding Gears (extra dark roast) / 50 / 50",
+    "variant_id": "42393779831033"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Grinding Gears (extra dark roast) / All Ground",
+    "variant_id": "42393779863801"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Grinding Gears (extra dark roast) / All Whole Bean",
+    "variant_id": "42393779896569"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Guatemala (medium roast) / 50 / 50",
+    "variant_id": "42393779929337"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Guatemala (medium roast) / All Ground",
+    "variant_id": "42393779962105"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Guatemala (medium roast) / All Whole Bean",
+    "variant_id": "42393779994873"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Hair of the Dog (extra dark roast) / 50 / 50",
+    "variant_id": "42393780027641"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Hair of the Dog (extra dark roast) / All Ground",
+    "variant_id": "42393780060409"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Hair of the Dog (extra dark roast) / All Whole Bean",
+    "variant_id": "42393780093177"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Limu (dark roast) / 50 / 50",
+    "variant_id": "42393780125945"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Limu (dark roast) / All Ground",
+    "variant_id": "42393780158713"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Limu (dark roast) / All Whole Bean",
+    "variant_id": "42393780191481"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Yirgacheffe (dark roast) / 50 / 50",
+    "variant_id": "42393780224249"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Yirgacheffe (dark roast) / All Ground",
+    "variant_id": "42393780257017"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Ethiopian Yirgacheffe (dark roast) / All Whole Bean",
+    "variant_id": "42393780289785"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Mexican (medium roast) / 50 / 50",
+    "variant_id": "42393780322553"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Mexican (medium roast) / All Ground",
+    "variant_id": "42393780355321"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Mexican (medium roast) / All Whole Bean",
+    "variant_id": "42393780388089"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Sumatra (medium roast) / 50 / 50",
+    "variant_id": "42393780420857"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Sumatra (medium roast) / All Ground",
+    "variant_id": "42393780453625"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 72.0,
+    "title": "Sumatra (medium roast) / All Whole Bean",
+    "variant_id": "42393780486393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Rumors (lite/medium roast) / 50 / 50",
+    "variant_id": "44488512962809"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Rumors (lite/medium roast) / All Ground",
+    "variant_id": "44488512995577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Mt. Rumors (lite/medium roast) / All Whole Bean",
+    "variant_id": "44488513028345"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "179a5f1b7d2462a4",
+  "first_seen": "2026-10-26",
+  "handle": "brundi",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Burundi_WB.png?v=1672930547",
+  "platform": "shopify",
+  "product_id": "7621123375353",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "African",
+   "Dark Roast",
+   "Single Origins"
+  ],
+  "title": "Burundi",
+  "url": "https://mountainroaster.com/products/brundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "42758179717369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "42758179750137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 65.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "42758179782905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "42758179815673"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "96402f99eb5c1d19",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Kenya_WB.png?v=1672930607",
+  "platform": "shopify",
+  "product_id": "7638668280057",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "African",
+   "Dark Roast",
+   "Single Origins"
+  ],
+  "title": "Kenya",
+  "url": "https://mountainroaster.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "42827029610745"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "42827029676281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "42827029774585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "42827029807353"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "4d9f989b96a91603",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragura",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Nicaragua_WB.png?v=1672930987",
+  "platform": "shopify",
+  "product_id": "7638673654009",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Medium Roast",
+   "Single Origins"
+  ],
+  "title": "Nicaragura",
+  "url": "https://mountainroaster.com/products/nicaragura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "42827051729145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "42827051761913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "42827051794681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "42827051827449"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "a689b3b9ec1abac9",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-white-chocolate-power",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-White-Chocolate-Powder-Mountain-Roaster-Coffee-187.png?v=1663972651",
+  "platform": "shopify",
+  "product_id": "7671567745273",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 powders"
+  ],
+  "title": "BARISTA 22 White Chocolate Powder",
+  "url": "https://mountainroaster.com/products/barista-22-white-chocolate-power",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1417,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "42942889885945"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "323d1c78d2674954",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-sugar-free-white-chocolate-power",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-Sugar-Free-White-Chocolate-Powder-Mountain-Roaster-Coffee-109.png?v=1663972507",
+  "platform": "shopify",
+  "product_id": "7671573905657",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 powders"
+  ],
+  "title": "Barista 22  Sugar-Free White Chocolate Powder",
+  "url": "https://mountainroaster.com/products/barista-22-sugar-free-white-chocolate-power",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "42942925570297"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "4e1b2e429f3c7d10",
+  "first_seen": "2026-10-26",
+  "handle": "barista-22-sugar-free-chocolate-power",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/BARISTA-22-Sugar-Free-Chocolate-Powder-Mountain-Roaster-Coffee-918.png?v=1663972512",
+  "platform": "shopify",
+  "product_id": "7671577411833",
+  "product_type": "Barista Flavors",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 powders"
+  ],
+  "title": "Barista 22 Sugar-Free Chocolate Powder",
+  "url": "https://mountainroaster.com/products/barista-22-sugar-free-chocolate-power",
+  "variants": [
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "42942955880697"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "8296999750265621",
+  "first_seen": "2026-10-26",
+  "handle": "4-12oz-bags-of-pumpkin-spice-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/4-12oz-Bags-of-Pumpkin-Spice-Coffee-Mountain-Roaster-Coffee-288.jpg?v=1663971650",
+  "platform": "shopify",
+  "product_id": "7757450477817",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "4 - 12oz Bags of Pumpkin Spice Coffee",
+  "url": "https://mountainroaster.com/products/4-12oz-bags-of-pumpkin-spice-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Pumpkin Spice / All Ground",
+    "variant_id": "43244754141433"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Pumpkin Spice / All Whole Bean",
+    "variant_id": "43244754174201"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 52.0,
+    "title": "Pumpkin Spice / 50% Ground / 50% Whole Bean",
+    "variant_id": "43244754206969"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 70.0,
+    "title": "Pumpkin Spice / Compostable Pods   6 boxes of 12",
+    "variant_id": "43244768821497"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "01b9ab965dd726d1",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-rumors",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/mountainroaster_mk2_1.png?v=1674663530",
+  "platform": "shopify",
+  "product_id": "7876372562169",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "Mountain Rumors (Light/Medium roast)",
+  "url": "https://mountainroaster.com/products/mountain-rumors",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "43657863102713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "43657863168249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "43657863201017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "43657863233785"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "42efee5900c25edd",
+  "first_seen": "2026-10-26",
+  "handle": "strawberry-barista-22-fruit-beverage-base-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Strawberry.png?v=1681408737",
+  "platform": "shopify",
+  "product_id": "7913135374585",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 fruit",
+   "Baristra 22"
+  ],
+  "title": "Strawberry Barista 22 Fruit Beverage Base: 64oz",
+  "url": "https://mountainroaster.com/products/strawberry-barista-22-fruit-beverage-base-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 24.5,
+    "title": "Default Title",
+    "variant_id": "43788444631289"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "77bcac99e460dd44",
+  "first_seen": "2026-10-26",
+  "handle": "raspberry-barista-22-fruit-beverage-base-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Raspberry.png?v=1681408732",
+  "platform": "shopify",
+  "product_id": "7913136488697",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 fruit",
+   "Baristra 22"
+  ],
+  "title": "Raspberry Barista 22 Fruit Beverage Base: 64oz",
+  "url": "https://mountainroaster.com/products/raspberry-barista-22-fruit-beverage-base-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 24.5,
+    "title": "Default Title",
+    "variant_id": "43788447351033"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "2d135c0d6713b5a3",
+  "first_seen": "2026-10-26",
+  "handle": "peach-barista-22-fruit-beverage-base-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Peach.png?v=1681408722",
+  "platform": "shopify",
+  "product_id": "7913139044601",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 fruit",
+   "Baristra 22"
+  ],
+  "title": "Peach Barista 22 Fruit Beverage Base: 64oz",
+  "url": "https://mountainroaster.com/products/peach-barista-22-fruit-beverage-base-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 24.5,
+    "title": "Default Title",
+    "variant_id": "43788451774713"
+   }
+  ],
+  "vendor": "Barista 22"
+ },
+ {
+  "body_hash": "688bc39685a1536a",
+  "first_seen": "2026-10-26",
+  "handle": "lemon-barista-22-fruit-beverage-base-64oz",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Lemonade.png?v=1681408689",
+  "platform": "shopify",
+  "product_id": "7913139306745",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "22 fruit",
+   "Baristra 22"
+  ],
+  "title": "Lemonade Barista 22 Fruit Beverage Base: 64oz",
+  "url": "https://mountainroaster.com/products/lemon-barista-22-fruit-beverage-base-64oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2495,
+    "price_usd": 24.5,
+    "title": "Default Title",
+    "variant_id": "43788456198393"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "2e2bb63e6a3ee42f",
+  "first_seen": "2026-10-26",
+  "handle": "whitewater",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/files/Whitewater_GR.png?v=1722515289",
+  "platform": "shopify",
+  "product_id": "8470466199801",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "Whitewater (Light/Medium roast)",
+  "url": "https://mountainroaster.com/products/whitewater",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "45357565444345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "45357565477113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "45357565509881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "45357565542649"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "bb46941a3b13a6ce",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-apple-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/files/Apple_GR.png?v=1727980180",
+  "platform": "shopify",
+  "product_id": "8548535992569",
+  "product_type": "Fresh Roasted Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Flavors",
+   "Holiday Flavors"
+  ],
+  "title": "Harvest Apple Pie",
+  "url": "https://mountainroaster.com/products/harvest-apple-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "45561431523577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz Ground",
+    "variant_id": "45561431556345"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "a168543bc431c85e",
+  "first_seen": "2026-10-26",
+  "handle": "whitewater-ultra",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/files/Whitewater___5LBS____WB.png?v=1740527131",
+  "platform": "shopify",
+  "product_id": "8729270190329",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "Whitewater Ultra (Light roast)",
+  "url": "https://mountainroaster.com/products/whitewater-ultra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Whole Bean",
+    "variant_id": "46279919894777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz Ground",
+    "variant_id": "46279919927545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Whole Bean",
+    "variant_id": "46279919960313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5Lb Ground",
+    "variant_id": "46279919993081"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "bd52de33af7f559c",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-mornings-3oz-restaurant-packs-box-of-48",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/Mountain-Mornings-Medium-Roast-48-1-8oz-packs-Mountain-Roaster-Coffee-546.png?v=1663972738",
+  "platform": "shopify",
+  "product_id": "8785858756857",
+  "product_type": "",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "WVSP Wholesale",
+   "Wholesale"
+  ],
+  "title": "Mountain Mornings 3oz. Restaurant Packs box of 48",
+  "url": "https://mountainroaster.com/products/mountain-mornings-3oz-restaurant-packs-box-of-48",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 100.0,
+    "title": "Default Title",
+    "variant_id": "46420762886393"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sm-mountain-roaster-grinding-gears-espresso-5-lbs-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/5lbs.GrindingGears_WB.png?v=1673034638",
+  "platform": "shopify",
+  "product_id": "9216375685369",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Swiftmart"
+  ],
+  "title": "SM  Grinding Gears  X-Dark | ESPRESSO | 5 lbs. | Whole Bean",
+  "url": "https://mountainroaster.com/products/sm-mountain-roaster-grinding-gears-espresso-5-lbs-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "East Palestine",
+    "variant_id": "47358890803449"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "New Springfield",
+    "variant_id": "47358901649657"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "Taggart",
+    "variant_id": "48395567137017"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "Market",
+    "variant_id": "48395567169785"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sm-mountain-roaster-mountain-treasures-dark-5-lbs-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/5lbs.Mountaintreasures_WB.png?v=1672928678",
+  "platform": "shopify",
+  "product_id": "9216375947513",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "swiftmart"
+  ],
+  "title": "SM  Mountain Treasures | DARK | 5 lbs. | Whole Bean",
+  "url": "https://mountainroaster.com/products/sm-mountain-roaster-mountain-treasures-dark-5-lbs-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "East Palestine",
+    "variant_id": "47358898569465"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "New Springfield",
+    "variant_id": "47358904434937"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "Taggart",
+    "variant_id": "48395585061113"
+   },
+   {
+    "available": true,
+    "grams": 9072,
+    "price_usd": 75.0,
+    "title": "Market",
+    "variant_id": "48395585093881"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sm-mountain-roaster-mountain-mornings-medium-5-lbs-wholesale",
+  "image": "https://cdn.shopify.com/s/files/1/0600/2314/4697/products/MountainMornings_WB.png?v=1741381845",
+  "platform": "shopify",
+  "product_id": "9216376701177",
+  "product_type": "Coffee",
+  "roaster_slug": "mountainroaster",
+  "tags": [
+   "Swiftmart"
+  ],
+  "title": "SM  Mountain Mornings | MEDIUM | 5 lbs. | Whole Bean",
+  "url": "https://mountainroaster.com/products/sm-mountain-roaster-mountain-mornings-medium-5-lbs-wholesale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "East Palestine",
+    "variant_id": "47358900764921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "New Springfield",
+    "variant_id": "47358904697081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Taggart",
+    "variant_id": "48395571003641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Market",
+    "variant_id": "48395571036409"
+   }
+  ],
+  "vendor": "Mountain Roaster Coffee"
+ }
+]

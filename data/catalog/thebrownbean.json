@@ -1,0 +1,618 @@
+[
+ {
+  "body_hash": "c097b1f78e6bb1ac",
+  "first_seen": "2026-10-26",
+  "handle": "morning-glory",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e790e2630ccf2623ec434c6/1787689260705/",
+  "platform": "squarespace",
+  "product_id": "5e790e2630ccf2623ec434c6",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "PISGAH BLEND",
+  "url": "https://www.thebrownbean.net/order/p/morning-glory",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "8c175e1c-c0d4-4076-b5e2-ce84bd5568ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "c47087cb-c078-4cee-99a8-2c46522233d7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "dc6a56d2-80ee-4039-a63e-2a54639088ba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "dfddadac-4460-46b7-8f70-63b444bd3931"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "68608331088db927",
+  "first_seen": "2026-10-26",
+  "handle": "sylvan-valley-blend",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e790f6f7344c9353bc41b8b/1787689260760/",
+  "platform": "squarespace",
+  "product_id": "5e790f6f7344c9353bc41b8b",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Sylvan Valley Blend",
+  "url": "https://www.thebrownbean.net/order/p/sylvan-valley-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "3ccff373-fe51-4a45-a3f6-04f1ad6b0d14"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "671e4cd5-1183-4f36-9062-8a42d041b266"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "70495d69-c3cc-4531-9d76-75d999df1880"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator))",
+    "variant_id": "fb0c31ce-813a-431d-be4e-b5808efb49b1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f7d3e47ec79a3c35",
+  "first_seen": "2026-10-26",
+  "handle": "black-mountain-blend",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e7910a65a074a421366e9ff/1787689260826/",
+  "platform": "squarespace",
+  "product_id": "5e7910a65a074a421366e9ff",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Black Mountain Blend",
+  "url": "https://www.thebrownbean.net/order/p/black-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "76a053e9-6f34-4044-944b-6e29e3cdc30c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "7ea7220c-c1f4-47e3-9616-1b173092d397"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "856e1fe3-0c95-4ce0-8ac4-b3ecef21e0ce"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "d594f02c-d356-4bb0-8790-06ca4b8b5d71"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fe774e60ae33d49e",
+  "first_seen": "2026-10-26",
+  "handle": "black-throated-blend",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e7910cd5404f11feff8c7bb/1787689260841/",
+  "platform": "squarespace",
+  "product_id": "5e7910cd5404f11feff8c7bb",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Black Throated Blend",
+  "url": "https://www.thebrownbean.net/order/p/black-throated-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "0bd1ea56-7801-4807-b07c-30f92b208875"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "28e74550-0a1e-4706-81ac-336d6763d438"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "ad32d7db-8ef0-4870-a14d-2059b0433e45"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "fa0f6796-eb09-48eb-a098-e3e0df78cae5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85b830a4bd22cba1",
+  "first_seen": "2026-10-26",
+  "handle": "brevard-nc-blend",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e79111347777c1c14a4d121/1787689260860/",
+  "platform": "squarespace",
+  "product_id": "5e79111347777c1c14a4d121",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Brevard NC Blend",
+  "url": "https://www.thebrownbean.net/order/p/brevard-nc-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "08aa468e-8ce6-442c-a8f5-a2c3b0a1533c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator))",
+    "variant_id": "a7faa0e7-fc77-4948-97cd-0da21798f91a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "ae705990-7540-4168-8f00-78f64ee8f8d4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "e0b30d0d-c0df-4c53-a000-93ce317f15f1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e30c8f0e031e65c2",
+  "first_seen": "2026-10-26",
+  "handle": "morning-glory-decaf",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e7f56a6844cdb3584281611/1787689343532/",
+  "platform": "squarespace",
+  "product_id": "5e7f56a6844cdb3584281611",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Morning Glory Decaf",
+  "url": "https://www.thebrownbean.net/order/p/morning-glory-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "d2052e8a-c4fe-4a86-8c87-9bd4ed2cad3c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "dba8eada-83b8-42ec-9600-fa1b9815e9cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "eb24db4e-8733-49ec-bbce-12a32ff29154"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "fdd07741-d14d-4f7d-b01c-d506f6132afb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a69ee7182a478de4",
+  "first_seen": "2026-10-26",
+  "handle": "black-mountain-decaf",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e7f57b3844cdb3584282b27/1787689343563/",
+  "platform": "squarespace",
+  "product_id": "5e7f57b3844cdb3584282b27",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Black Mountain Decaf",
+  "url": "https://www.thebrownbean.net/order/p/black-mountain-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "581c9e0c-97b8-483d-9933-bbef438f17ed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "695bc0fd-1104-4e64-92db-fa79fe657365"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "af7aea81-1fe2-4654-9f77-2a7850799dc3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "c470e6c7-6532-4e9c-b1fc-3d0a19e9c57b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f6bb1bc326b52149",
+  "first_seen": "2026-10-26",
+  "handle": "firenze-espresso-blend",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5e7f583b971cba01a85e65df/1787689343676/",
+  "platform": "squarespace",
+  "product_id": "5e7f583b971cba01a85e65df",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Firenze Espresso Blend",
+  "url": "https://www.thebrownbean.net/order/p/firenze-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "04c27809-1b3a-4d56-90c9-290ff8128ad2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "1d00b97c-6332-4911-a643-9fb99248b766"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "2d1ecdf8-5604-4634-a9d3-4abc1c1b0beb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Ground (Press/Percolator)",
+    "variant_id": "fba376e3-884c-4267-ace6-296be2bacd6a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "207b6f28809558e3",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gayo-co-op",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5f29849058dc421ae402059c/1787753226284/",
+  "platform": "squarespace",
+  "product_id": "5f29849058dc421ae402059c",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://www.thebrownbean.net/order/p/sumatra-mandheling-gayo-co-op",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "241cad31-8e6f-436f-b54c-65f969101f90"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "605177fc-0b1a-4f89-98fe-0fb6fde8a7b6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "64df112f-34ba-4f92-8f4b-dfb6998997aa"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Press/Percolator))",
+    "variant_id": "cfdee581-67bc-4eee-b5cb-7e5c23282c49"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "de7a1909ea64e63d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gayo-co-op-macwc",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5f29e6aa821e4634d3ac51e5/1787753282596/",
+  "platform": "squarespace",
+  "product_id": "5f29e6aa821e4634d3ac51e5",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Nicaraugua La Bastilla Natural",
+  "url": "https://www.thebrownbean.net/order/p/sumatra-mandheling-gayo-co-op-macwc",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "2eb50713-9517-4ce5-a05f-2b8dd7b75f08"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Whole Bean",
+    "variant_id": "91bc3a23-7b03-46b2-9b31-98c15f35c125"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "b64323e2-90e2-4533-90b2-c2db4566204b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 23.0,
+    "title": "Ground (Press/Percolator))",
+    "variant_id": "ce28db73-c249-4da9-8859-d9a71e33bf23"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ee23ef325898a62",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-gayo-co-op-tcr6d",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/5f29e6f16d28c31292514599/1787753301926/",
+  "platform": "squarespace",
+  "product_id": "5f29e6f16d28c31292514599",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://www.thebrownbean.net/order/p/sumatra-mandheling-gayo-co-op-tcr6d",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "26bc89ce-414e-4159-a807-299ae16d3411"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "48a9a0a9-0796-415e-bcd2-f1bf3c4fca65"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground (Press/Percolator))",
+    "variant_id": "8b31a4f3-802f-4967-abb5-e373109e96ed"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Ground (Automatic Drip)",
+    "variant_id": "e9202cfb-fa92-42b9-9d54-46f08533f601"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e741b307644357db",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-mia-flores",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/621128c1f2baeb55b98160cf/1787798694262/",
+  "platform": "squarespace",
+  "product_id": "621128c1f2baeb55b98160cf",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Honduras Reserva Pacavita",
+  "url": "https://www.thebrownbean.net/order/p/honduras-mia-flores",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Drip Grind",
+    "variant_id": "20a5485e-0797-4131-9eec-a3b4f7ee528a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Press/Perc Grind",
+    "variant_id": "62754c4b-84ee-48ed-9b9a-25950773310a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Whole Bean",
+    "variant_id": "668de450-7b48-4e49-b7cf-a0cb82365ccf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Espresso Grind",
+    "variant_id": "fce807d5-4d0a-43e2-b50a-c54cf401eb97"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "920ff877361f6fcd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hue-hue-tenango-dark-roast",
+  "image": "https://static1.squarespace.com/static/53209605e4b050045124ac16/5e790df9457eda6759c56f77/62113a9c8250a33ead9d3ea4/1787798699126/",
+  "platform": "squarespace",
+  "product_id": "62113a9c8250a33ead9d3ea4",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Guatemala Hue Hue Tenango Dark Roast",
+  "url": "https://www.thebrownbean.net/order/p/guatemala-hue-hue-tenango-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "press/perc grind",
+    "variant_id": "494d9058-efa1-446f-9505-d2934a84c5e8"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "drip grind",
+    "variant_id": "ece1fd6f-345a-454e-9b8b-4ac21259b4de"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "espresso grind",
+    "variant_id": "ff23eeb0-9a9d-44f6-a5bd-ace828e492fe"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 14.99,
+    "title": "whole bean",
+    "variant_id": "ffdc73dc-0752-4b70-96f3-cf2c52e65448"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1bbaf146f0bfafde",
+  "first_seen": "2026-10-26",
+  "handle": "sorbasendblendcoffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/53209605e4b050045124ac16/1701275547480-VUZCQ29HNNDS6RB8FUR8/SEND+BLEND+%282%29.png",
+  "platform": "squarespace",
+  "product_id": "65676711337af458e13756bb",
+  "product_type": "",
+  "roaster_slug": "thebrownbean",
+  "tags": [],
+  "title": "Send Blend",
+  "url": "https://www.thebrownbean.net/order/p/sorbasendblendcoffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Course Grind",
+    "variant_id": "1221b9dc-2d83-444f-8561-2f99d9aabe82"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Espresso Grind",
+    "variant_id": "8b281787-dc99-4f6a-8dc6-e9ccaca77edf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Drip Grind",
+    "variant_id": "ebec7f82-2047-4084-af94-7165f43ab838"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Whole Bean",
+    "variant_id": "f5f0f6aa-7476-45ad-b2eb-5b69af6b1d00"
+   }
+  ],
+  "vendor": ""
+ }
+]

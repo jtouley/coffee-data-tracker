@@ -1,0 +1,483 @@
+[
+ {
+  "body_hash": "24aac2be185ca003",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural-xc7nr",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/eb1bba58-3b63-4ffb-9170-4769c1d6c37c/Honduras.png",
+  "platform": "squarespace",
+  "product_id": "68a6383ae825c00d90e0a541",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC HONDURAS COMSA",
+  "url": "https://www.highnooncoffee.com/shop/p/honduras-natural-xc7nr",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "5ad824cc-4370-47f8-9872-ac56026a4726"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "63a90a6f-7702-4c3e-a7c1-49f7d4a9ef6d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "8d088090-b0e8-4297-9b9d-9723e2941c14"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0806b1de28ae344d",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-washed-bp43b",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/f711e0cf-dc9f-4f8d-87cf-d62c72691476/Sumatra+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "68a6383ae825c00d90e0a54f",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "SUMATRA",
+  "url": "https://www.highnooncoffee.com/shop/p/sumatra-washed-bp43b",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "6b8fc635-b823-4314-8ffc-9682d0d8c87f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "6cab56f1-ea2a-48dd-bce4-bab60c3c7069"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "c3b9bd2b-1bba-4dc0-954c-275d8c8cd7a5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "043585295fc91a4a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-mexico-p7jhf",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/e1197eec-301e-465d-9165-0f3747e52dc7/Costa+Rica+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "68a6383ae825c00d90e0a556",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC DARK ROAST",
+  "url": "https://www.highnooncoffee.com/shop/p/dark-roast-mexico-p7jhf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lbs",
+    "variant_id": "59518544-3cc9-47e6-9cbe-82be7d54f0ee"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lbs",
+    "variant_id": "6eefd3ce-40af-47c9-8dfd-91a984f059b1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lbs",
+    "variant_id": "f884c734-30cd-4063-8dd5-246a4f937079"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1a41d486e3a152ad",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-25zzc",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/528f9247-96df-409a-8305-74f9b0cda63b/Espresso.png",
+  "platform": "squarespace",
+  "product_id": "68a6383ae825c00d90e0a55d",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC ESPRESSO BLEND",
+  "url": "https://www.highnooncoffee.com/shop/p/espresso-blend-25zzc",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "2 lbs",
+    "variant_id": "6b45784f-89fc-4bd1-8cb1-659d8041f7dc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "b8a5a0fe-9baa-49b7-a462-9faa9814bc0c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lbs",
+    "variant_id": "d0646615-ae18-444f-a955-222424c5c749"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "12410f0364c12572",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural-xc7nr-6p4wg",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/6dc1e78e-c08b-4b9a-b1e4-de8b481ad803/Espresso+%282%29.png",
+  "platform": "squarespace",
+  "product_id": "6959761e27a39922ded1f57d",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC: A BLEND ABOUT SHORT POEMS",
+  "url": "https://www.highnooncoffee.com/shop/p/honduras-natural-xc7nr-6p4wg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lbs",
+    "variant_id": "3b3c6f26-d43d-4a6a-9b07-e7beea68d99f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1 lbs",
+    "variant_id": "77a1a260-906d-4297-91a7-5fe5755a4d75"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2 lbs",
+    "variant_id": "7b6f2f28-7ca7-4b34-9ef3-30daad16f6cc"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d923f9b533c23838",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-25zzc-87zt5-4msjl",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/8007cc8f-4f64-4597-9c1b-2bb3e8872bf0/Colombia+%283%29.png",
+  "platform": "squarespace",
+  "product_id": "695af5b00f02877b4d511309",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "DECAF COLOMBIA",
+  "url": "https://www.highnooncoffee.com/shop/p/espresso-blend-25zzc-87zt5-4msjl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lbs",
+    "variant_id": "7ec40a79-7af2-4c6c-b5a9-e42e5dde4c63"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lbs",
+    "variant_id": "8292b409-5f5a-418e-b654-3245ac34938e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.0,
+    "title": "2 lbs",
+    "variant_id": "aeef53de-c627-454c-9b9e-97531d6a4ce3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5328efbf9e513ffe",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-25zzc-95w2y",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/805e40cb-c32f-4111-a12f-8cd894c70159/Copy+of+Ethiopia.png",
+  "platform": "squarespace",
+  "product_id": "698262f2bcc9c045e5dce690",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC: VIENEESE BLEND",
+  "url": "https://www.highnooncoffee.com/shop/p/espresso-blend-25zzc-95w2y",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "2 lbs",
+    "variant_id": "64a736f2-6bf8-47d9-881f-0c178a012328"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "dc29733b-a7e1-4d73-9461-b9865f1fc641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lbs",
+    "variant_id": "dfc5506b-f7fe-446d-9b01-fad5c171726d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "faac2086d640a237",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed-fygm4-ml324",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/1ad78d31-a93e-4db9-9e6a-0c4908012b43/Sumatra-5.png",
+  "platform": "squarespace",
+  "product_id": "6982635822b9df123bfa5740",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC COLOMBIA: Sierra Nevada Sol Naciente",
+  "url": "https://www.highnooncoffee.com/shop/p/colombia-washed-fygm4-ml324",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "561841a2-0b32-473a-93ff-aea1e4d824d1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "b370325b-29d7-40a1-9422-ac4622cc2a35"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "e762e905-1997-4725-b2e4-86d459ff37f1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ecdd64c4b996b3cb",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-natural-xc7nr-6p4wg-6mwk4",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/984018cc-d798-4a74-8116-370b70898606/Copy+of+Espresso.png",
+  "platform": "squarespace",
+  "product_id": "69d7d23784743b7478260298",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC: A BLEND ABOUT HOUSE PLANTS",
+  "url": "https://www.highnooncoffee.com/shop/p/honduras-natural-xc7nr-6p4wg-6mwk4",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 33.0,
+    "title": "2 lbs",
+    "variant_id": "332edb55-e7da-470c-907c-b87a6f2d2b62"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lbs",
+    "variant_id": "3eb48bcc-2682-4f47-a613-635ebf79a39e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "1 lbs",
+    "variant_id": "9414890d-edbb-4f8e-9640-989ed2ab24b5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90b90f019735a561",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-mexico-p7jhf-n8hpy-9df4l",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/aea8f298-0745-43f8-9e3e-db1c77e705a9/guat.png",
+  "platform": "squarespace",
+  "product_id": "6a15b2cb62db56016460dda6",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC GUATEMALA: SAN MARCOS ENTRE RIOS",
+  "url": "https://www.highnooncoffee.com/shop/p/dark-roast-mexico-p7jhf-n8hpy-9df4l",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "66068f3e-ccce-4588-a3f2-510e28092987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "897e7c85-d708-4b9d-9f47-96b2ab025e42"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "d6411079-2b48-45a4-86c1-76d9472a7471"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3ebe84b02b604966",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-natural-rxll6-wwcpx",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/638c2ee3-1d93-49ac-9df0-a85fbf469ed4/Sumatra-8.png",
+  "platform": "squarespace",
+  "product_id": "6a7cac6ba274ca6cfc7105b7",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ETHIOPIA NATURAL: Gera Estate",
+  "url": "https://www.highnooncoffee.com/shop/p/ethiopia-natural-rxll6-wwcpx",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "3f4d8685-a8b8-4a30-8d85-7caeb01bc8df"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "aa09efc2-d6a4-4cac-88c7-8a95eba19b27"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "df4aa90a-9bf9-463d-a519-199cbeae1377"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "263efb1b93141131",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed-fygm4-7zdbc-kmkre",
+  "image": "https://static1.squarespace.com/static/68a63836e825c00d90e0a40c/68a6383ae825c00d90e0a51e/6a92ed3eaa50601f68b565bb/1788269034399/",
+  "platform": "squarespace",
+  "product_id": "6a92ed3eaa50601f68b565bb",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC COSTA RICA: El Poeta",
+  "url": "https://www.highnooncoffee.com/shop/p/colombia-washed-fygm4-7zdbc-kmkre",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "04b157fe-810d-4258-acb1-fcf08ec7669e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "3e513cb1-cf87-410c-a64e-8471699b2dcb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "e5c475a2-8fce-42eb-b504-1e886b0adc32"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ac46e876cb01a2a",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast-mexico-p7jhf-n8hpy-lbref",
+  "image": "https://images.squarespace-cdn.com/content/v1/68a63836e825c00d90e0a40c/f521a054-838e-40e1-995a-26c29c20aa08/Sumatra-10.png",
+  "platform": "squarespace",
+  "product_id": "6a92f26711d3d07b37ac18e9",
+  "product_type": "",
+  "roaster_slug": "highnooncoffee",
+  "tags": [],
+  "title": "ORGANIC MEXICO CHIPAS: Tzeltal Tzotzil",
+  "url": "https://www.highnooncoffee.com/shop/p/dark-roast-mexico-p7jhf-n8hpy-lbref",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2 lbs",
+    "variant_id": "56780187-e29f-474d-a2a4-6ecbdada3caa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "5 lbs",
+    "variant_id": "6f474a1d-e834-43ce-aa95-8a9363c10179"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1 lbs",
+    "variant_id": "bec83e26-7895-464e-bf6a-70b8264d86db"
+   }
+  ],
+  "vendor": ""
+ }
+]

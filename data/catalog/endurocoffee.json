@@ -1,0 +1,678 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://endurocoffee.com/wp-content/uploads/2026/02/Enduro-Coffee-Mascot-White-Vert-m4v-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "10339",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Price Tier 01"
+  ],
+  "title": "French Roast",
+  "url": "https://endurocoffee.com/home/shop/coffees/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "10339:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "10339:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "10339:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "10339:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dbb64191e9ed25c0",
+  "first_seen": "2026-10-26",
+  "handle": "drop-of-golden-sun",
+  "image": "https://endurocoffee.com/wp-content/uploads/2024/08/New-August-Coffee-Labels_Golden12.png",
+  "platform": "woocommerce",
+  "product_id": "10372",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Enduro Signature Coffees",
+   "Price Tier 02"
+  ],
+  "title": "Drop of Golden Sun",
+  "url": "https://endurocoffee.com/home/shop/coffees/enduro-signature-coffees/drop-of-golden-sun/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "10372:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "10372:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "10372:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "10372:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b10ac7d04d84dc26",
+  "first_seen": "2026-10-26",
+  "handle": "circuit-espresso",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Circuit.png",
+  "platform": "woocommerce",
+  "product_id": "10405",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Espresso",
+   "Price Tier 02"
+  ],
+  "title": "Circuit Espresso",
+  "url": "https://endurocoffee.com/home/shop/coffees/circuit-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "10405:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "10405:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "10405:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "10405:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4fadcf63587f3c4b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Sumatra.png",
+  "platform": "woocommerce",
+  "product_id": "1205",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Price Tier 01",
+   "Sumatran"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://endurocoffee.com/home/shop/coffees/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "1205:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "1205:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "1205:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "1205:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0f66808842d87735",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://endurocoffee.com/wp-content/uploads/2026/02/Enduro-Coffee-Mascot-White-Vert-m4v-image.jpg",
+  "platform": "woocommerce",
+  "product_id": "2245",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Espresso",
+   "Price Tier 01"
+  ],
+  "title": "Espresso Blend …our house espresso",
+  "url": "https://endurocoffee.com/home/shop/coffees/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "2245:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "2245:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "2245:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "2245:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7a3835958610ff82",
+  "first_seen": "2026-10-26",
+  "handle": "550-espresso",
+  "image": "https://endurocoffee.com/wp-content/uploads/2020/02/550-Espresso.png",
+  "platform": "woocommerce",
+  "product_id": "6280",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Espresso",
+   "Price Tier 01"
+  ],
+  "title": "550 Espresso Blend",
+  "url": "https://endurocoffee.com/home/shop/coffees/550-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "6280:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "6280:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "6280:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "6280:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "16815d1b24f4035b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Cold-Brew.png",
+  "platform": "woocommerce",
+  "product_id": "6664",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Cold Brew",
+   "House Blend",
+   "Price Tier 01"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://endurocoffee.com/home/shop/coffees/cold-brew/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "6664:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "6664:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "6664:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "6664:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3c331b05a1fd75f9",
+  "first_seen": "2026-10-26",
+  "handle": "blue-smoke-blend",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Blue-Smoke.png",
+  "platform": "woocommerce",
+  "product_id": "784",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "House Blend",
+   "Price Tier 01"
+  ],
+  "title": "Blue Smoke Blend… our house blend",
+  "url": "https://endurocoffee.com/home/shop/coffees/blue-smoke-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "784:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "784:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "784:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "784:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82bc01356de925a8",
+  "first_seen": "2026-10-26",
+  "handle": "fort-worth-blend",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Fort-Worth-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "8003",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "African",
+   "Coffees",
+   "House Blend",
+   "Indonesian",
+   "Price Tier 01"
+  ],
+  "title": "Fort Worth Blend",
+  "url": "https://endurocoffee.com/home/shop/african/fort-worth-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "8003:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "8003:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "8003:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "8003:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d91d5547c70e04c4",
+  "first_seen": "2026-10-26",
+  "handle": "la-colombia-washed-coffee",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Colombia.png",
+  "platform": "woocommerce",
+  "product_id": "8992",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Colombian",
+   "Enduro Signature Coffees",
+   "Price Tier 01"
+  ],
+  "title": "La Colombia Washed Coffee",
+  "url": "https://endurocoffee.com/home/shop/coffees/enduro-signature-coffees/la-colombia-washed-coffee/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "8992:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "8992:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "8992:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "8992:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "db2c9ab9e9171171",
+  "first_seen": "2026-10-26",
+  "handle": "fazenda-do-salto-peaberry-brazil",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Brazil.png",
+  "platform": "woocommerce",
+  "product_id": "9157",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Brazilian",
+   "Coffees",
+   "Enduro Signature Coffees",
+   "Price Tier 01"
+  ],
+  "title": "Fazenda do Salto, Peaberry, Brazil",
+  "url": "https://endurocoffee.com/home/shop/coffees/enduro-signature-coffees/fazenda-do-salto-peaberry-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "9157:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "9157:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "9157:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "9157:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ec0fb60cebaef3ff",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Guatemala.png",
+  "platform": "woocommerce",
+  "product_id": "9223",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Enduro Signature Coffees",
+   "Guatemalan",
+   "Price Tier 01"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://endurocoffee.com/home/shop/coffees/enduro-signature-coffees/guatemala-huehuetenango/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "9223:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "9223:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "9223:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "9223:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "volcan-swiss-water-process-decaf",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Decaf.png",
+  "platform": "woocommerce",
+  "product_id": "9747",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Decaf",
+   "Price Tier 02"
+  ],
+  "title": "Volcan Swiss Water Process Decaf",
+  "url": "https://endurocoffee.com/home/shop/coffees/volcan-swiss-water-process-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 Ounce",
+    "variant_id": "9747:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 Ounce",
+    "variant_id": "9747:1"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "32 Ounce",
+    "variant_id": "9747:2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "5 Pound",
+    "variant_id": "9747:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf06b2ee674888d7",
+  "first_seen": "2026-10-26",
+  "handle": "24-hour-blend",
+  "image": "https://endurocoffee.com/wp-content/uploads/2023/04/Mesa-Blend.png",
+  "platform": "woocommerce",
+  "product_id": "9780",
+  "product_type": "variable",
+  "roaster_slug": "endurocoffee",
+  "tags": [
+   "Coffees",
+   "Price Tier 01"
+  ],
+  "title": "Mesa Blend",
+  "url": "https://endurocoffee.com/home/shop/coffees/24-hour-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 0.0,
+    "title": "12 Ounce",
+    "variant_id": "9780:0"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "16 Ounce",
+    "variant_id": "9780:1"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 0.0,
+    "title": "32 Ounce",
+    "variant_id": "9780:2"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5 Pound",
+    "variant_id": "9780:3"
+   }
+  ],
+  "vendor": ""
+ }
+]

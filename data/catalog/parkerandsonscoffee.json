@@ -1,0 +1,771 @@
+[
+ {
+  "body_hash": "1a243a88a9725d94",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Burundi_Logo_41c646ec-4f70-42b6-a714-8a50a7b9667a.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7937231290551",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "coffee",
+   "origin",
+   "rich",
+   "single",
+   "smooth"
+  ],
+  "title": "Burundi Single Origin Coffee– Smooth, Rich & Bold Coffee Beans",
+  "url": "https://parkerandsonscoffee.com/products/single-origin-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44291088416951"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44443139244215"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461360447671"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461363232951"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521441427639"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534720528567"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534720561335"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "74e101eaa811d0e0",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-coffeee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Colombia_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7937236959415",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "bold",
+   "coffee",
+   "colombian",
+   "flavor",
+   "smooth"
+  ],
+  "title": "Premium Colombian Coffee – Freshly Roasted, Bold Flavor, Medium Roast",
+  "url": "https://parkerandsonscoffee.com/products/colombian-coffeee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44291132588215"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461337411767"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461340852407"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44461342163127"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521436512439"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534722691255"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534722724023"
+   }
+  ],
+  "vendor": "Parker and Sons"
+ },
+ {
+  "body_hash": "d6a49fa36a194b62",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Costa_Rica_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939928719543",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [],
+  "title": "Best Costa Rica Coffee at Parker and Sons Coffee",
+  "url": "https://parkerandsonscoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Coarse / 12 ounces",
+    "variant_id": "44307719749815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Espresso / 12 ounces",
+    "variant_id": "44461321912503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "All purpose / 12 ounces",
+    "variant_id": "44461324107959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 12 ounces",
+    "variant_id": "44461325549751"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "French Press / 12 ounces",
+    "variant_id": "44521429565623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Turkish / 12 ounces",
+    "variant_id": "44534720200887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "Fine / 12 ounces",
+    "variant_id": "44534720233655"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "55d2b055b4110a3a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Decaf_Honduras_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939933601975",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [],
+  "title": "Premium Decaf Honduras Coffee | Single-Origin, Shade-Grown Beans",
+  "url": "https://parkerandsonscoffee.com/products/decaf-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 11 ounces",
+    "variant_id": "44461266600119"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "Coarse / 11 ounces",
+    "variant_id": "44461266632887"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "All purpose / 11 ounces",
+    "variant_id": "44461266665655"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "Espresso / 11 ounces",
+    "variant_id": "44461266698423"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "French Press / 11 ounces",
+    "variant_id": "44534720102583"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "Turkish / 11 ounces",
+    "variant_id": "44534720135351"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 17.99,
+    "title": "Fine / 11 ounces",
+    "variant_id": "44534720168119"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "562f85405d290860",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Decaf_Sumatra_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939938386103",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "coffee",
+   "decaf",
+   "flavor",
+   "smoky",
+   "smooth"
+  ],
+  "title": "Best Decaf Coffee: Decaf Sumatra Flavorful, Smooth  Dark Roast",
+  "url": "https://parkerandsonscoffee.com/products/decaf-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44461260669111"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44461260701879"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461260734647"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461260767415"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521425174711"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534719873207"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534719905975"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "191d7dd5e638d580",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Farmhouse_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939942777015",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "balanced",
+   "blend",
+   "coffee",
+   "flavor",
+   "smooth"
+  ],
+  "title": "Farmhouse Blend Coffee – Rich, Smooth & Balanced Flavor",
+  "url": "https://parkerandsonscoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 11 ounces",
+    "variant_id": "44461251723447"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "Coarse / 11 ounces",
+    "variant_id": "44461251756215"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "All purpose / 11 ounces",
+    "variant_id": "44461251788983"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "Espresso / 11 ounces",
+    "variant_id": "44461251821751"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "French Press / 11 ounces",
+    "variant_id": "44521421799607"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "Turkish / 11 ounces",
+    "variant_id": "44534719447223"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 15.99,
+    "title": "Fine / 11 ounces",
+    "variant_id": "44534719479991"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "4ba2bdcf2ac8a931",
+  "first_seen": "2026-10-26",
+  "handle": "whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Midnight_Oil_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939945857207",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "bean",
+   "bold",
+   "coffee",
+   "dark",
+   "rich"
+  ],
+  "title": "Midnight Oil Premium Blend Whole Bean Coffee – Freshly Roasted for Rich Flavor",
+  "url": "https://parkerandsonscoffee.com/products/whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44461241565367"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44461241598135"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461241630903"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461241663671"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521417703607"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534719152311"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 15.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534719185079"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "1e2eb0d60ffcca45",
+  "first_seen": "2026-10-26",
+  "handle": "peru-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Peru_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939948970167",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "bold",
+   "coffee",
+   "dark",
+   "peru",
+   "roast"
+  ],
+  "title": "Enjoy the Rich Flavor of Peru Coffee: Premium Arabica Beans",
+  "url": "https://parkerandsonscoffee.com/products/peru-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 9 ounces",
+    "variant_id": "44461230915767"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Coarse / 9 ounces",
+    "variant_id": "44461230948535"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "All purpose / 9 ounces",
+    "variant_id": "44461230981303"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Espresso / 9 ounces",
+    "variant_id": "44461231014071"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "French Press / 9 ounces",
+    "variant_id": "44521415344311"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Turkish / 9 ounces",
+    "variant_id": "44534718693559"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Fine / 9 ounces",
+    "variant_id": "44534718726327"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "26ac5f7b0fc85b1d",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Sulawesi_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939950543031",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "coffee",
+   "origin",
+   "single",
+   "sulawesi",
+   "with"
+  ],
+  "title": "Premium Sulawesi Coffee  Beans |  Single-Origin Coffee  |  BUY NOW",
+  "url": "https://parkerandsonscoffee.com/products/sulawesi-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44461211386039"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44461211418807"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461211451575"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461211484343"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521414164663"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534718070967"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534718103735"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "ff7a05e9f074e3a5",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Sumatra_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939952607415",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "bold",
+   "coffee",
+   "french",
+   "roast",
+   "sumatra"
+  ],
+  "title": "Premium Sumatra Coffee: A Dark Roast Lover’s Dream",
+  "url": "https://parkerandsonscoffee.com/products/sumatra-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Whole Bean / 9 ounces",
+    "variant_id": "44461197328567"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Coarse / 9 ounces",
+    "variant_id": "44461197361335"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "All purpose / 9 ounces",
+    "variant_id": "44461197394103"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Espresso / 9 ounces",
+    "variant_id": "44461197426871"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "French Press / 9 ounces",
+    "variant_id": "44521413705911"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Fine / 9 ounces",
+    "variant_id": "44534717972663"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 15.99,
+    "title": "Turkish / 9 ounces",
+    "variant_id": "44534718005431"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ },
+ {
+  "body_hash": "4c9266be40230c84",
+  "first_seen": "2026-10-26",
+  "handle": "robusta-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0677/2545/9639/files/Robusta_Logo.png?v=1774392076",
+  "platform": "shopify",
+  "product_id": "7939954507959",
+  "product_type": "",
+  "roaster_slug": "parkerandsonscoffee",
+  "tags": [
+   "caffeine",
+   "coffee",
+   "flavor",
+   "robusta",
+   "strong"
+  ],
+  "title": "Dark Roast Robusta Coffee Beans – Strong Flavor & High Caffeine",
+  "url": "https://parkerandsonscoffee.com/products/robusta-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 10 ounces",
+    "variant_id": "44461152501943"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Coarse / 10 ounces",
+    "variant_id": "44461152567479"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Espresso / 10 ounces",
+    "variant_id": "44461152600247"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "All purpose / 10 ounces",
+    "variant_id": "44461160726711"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "French Press / 10 ounces",
+    "variant_id": "44521410592951"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Fine / 10 ounces",
+    "variant_id": "44534715744439"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.99,
+    "title": "Turkish / 10 ounces",
+    "variant_id": "44534715777207"
+   }
+  ],
+  "vendor": "Parker and Sons "
+ }
+]

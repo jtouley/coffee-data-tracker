@@ -1,0 +1,1774 @@
+[
+ {
+  "body_hash": "0750743a428b50b1",
+  "first_seen": "2026-10-26",
+  "handle": "winnipeg-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20210118_193717462.PORTRAIT.jpg?v=1611006031",
+  "platform": "shopify",
+  "product_id": "1312343818358",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Winnipeg Blend (Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/winnipeg-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Whole Bean",
+    "variant_id": "12172347080822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "12172347113590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "12172347146358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "12172347179126"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "12172347211894"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "12172347244662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "12172347277430"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "12172347310198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "22297477185654"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "22297479282806"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "39648434094211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "39648434126979"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "a04d3126b1d42a10",
+  "first_seen": "2026-10-26",
+  "handle": "toronto-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260916_184752162.PORTRAIT.jpg?v=1789678840",
+  "platform": "shopify",
+  "product_id": "1312421085302",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Toronto Blend (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/toronto-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Whole Bean",
+    "variant_id": "12172373819510"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "12172373852278"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "12172373885046"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "12172373917814"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "12172373950582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "12172373983350"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "12172374016118"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "12172374048886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "22297477415030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "22297480036470"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "39648431046787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "39648431079555"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "fd987486496320ab",
+  "first_seen": "2026-10-26",
+  "handle": "hartford-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260422_180651369.PORTRAIT.jpg?v=1776971012",
+  "platform": "shopify",
+  "product_id": "1312428851318",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast",
+   "Espresso"
+  ],
+  "title": "Hartford Blend (Espresso, Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/hartford-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Whole Bean",
+    "variant_id": "12172387778678"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "12172387811446"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "12172387844214"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 13.79,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "12172387909750"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "12172387942518"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "12172387975286"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "12172388008054"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "12172388040822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "22297477349494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "22297479610486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "39648434225283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "39648434258051"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "4c7552f33d475992",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-eastern-highlands-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/coffee_47525e43-407e-41b8-b964-d5ce2ceaae85.jpg?v=1791057270",
+  "platform": "shopify",
+  "product_id": "15406231388291",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Papua New Guinea Eastern Highlands (Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/papua-new-guinea-eastern-highlands-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "67653388599427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "67653388632195"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "67653388664963"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "67653388697731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "67653388730499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "67653388763267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "67653388796035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "67653388828803"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "1c6fa2de28fc1a6c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20220612_151038899.PORTRAIT.jpg?v=1655047003",
+  "platform": "shopify",
+  "product_id": "2451967082614",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Guatemala Huehue (Light Roast)",
+  "url": "https://mapleleafroasters.com/products/guatemala-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "21891242426486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "21891242459254"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "21891242492022"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "21891242524790"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "e7b7b3570e569112",
+  "first_seen": "2026-10-26",
+  "handle": "red-line-half-caff-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20211020_003419103.PORTRAIT.jpg?v=1634773438",
+  "platform": "shopify",
+  "product_id": "2535243415670",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Red Line Half Caff Blend (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/red-line-half-caff-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "22191601418358"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "22191601451126"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "22191601483894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "22191601516662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "16oz / Whole Bean",
+    "variant_id": "22191601549430"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "22191601582198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "22191601614966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.49,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "22191601647734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45464117117059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "45464117149827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "45464117182595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "45464117215363"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "52a40173d3daa95c",
+  "first_seen": "2026-10-26",
+  "handle": "pond-hockey-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20211017_150032887.PORTRAIT.jpg?v=1634773319",
+  "platform": "shopify",
+  "product_id": "4339826327670",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Pond Hockey Blend (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/pond-hockey-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31201367883894"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "31201367916662"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "31201367949430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "31201367982198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Whole Bean",
+    "variant_id": "34164574519427"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "34164575142019"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "34164575404163"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "34164575436931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39648431210627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "39648431243395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "39648431276163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "39648431308931"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "c832add5a631824e",
+  "first_seen": "2026-10-26",
+  "handle": "fireside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20211017_151202936.PORTRAIT.jpg?v=1634601411",
+  "platform": "shopify",
+  "product_id": "4339827015798",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Fireside Blend (Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/fireside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31201384497270"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "31201384530038"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "31201384562806"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.29,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "31201384595574"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Whole Bean",
+    "variant_id": "34164571340931"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "34164571734147"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "34164572356739"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.79,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "34164572553347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39648434290819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "39648434323587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "39648434356355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "39648434389123"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "e775ac24e33ebdc6",
+  "first_seen": "2026-10-26",
+  "handle": "fall-blend-2026-edition-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260926_152455008.PORTRAIT.jpg?v=1790544466",
+  "platform": "shopify",
+  "product_id": "6630802489475",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Fall Blend - 2026 Edition (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/fall-blend-2026-edition-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39506076663939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "39506076696707"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "39506076729475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "39506076762243"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "b88bba60065909c7",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-fuel-blend-ride-illinois-fundraiser-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/products/PXL_20221113_183703315.PORTRAIT.jpg?v=1668384304",
+  "platform": "shopify",
+  "product_id": "7792185114755",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Rocket Fuel Blend / Ride Illinois Fundraiser (Light Roast)",
+  "url": "https://mapleleafroasters.com/products/rocket-fuel-blend-ride-illinois-fundraiser-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "No / 12oz / Whole Bean",
+    "variant_id": "42980207165571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "No / 12oz / Ground - Drip",
+    "variant_id": "42980207198339"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "No / 12oz / Ground - French Press",
+    "variant_id": "42980207231107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "No / 12oz / Ground - Espresso",
+    "variant_id": "42980207263875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Yes / 12oz / Whole Bean",
+    "variant_id": "42980282466435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Yes / 12oz / Ground - Drip",
+    "variant_id": "42980282499203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Yes / 12oz / Ground - French Press",
+    "variant_id": "42980282531971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.99,
+    "title": "Yes / 12oz / Ground - Espresso",
+    "variant_id": "42980282564739"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "9a38533a57718364",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-ea-natural-decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20241127_165720545.PORTRAIT.jpg?v=1732729838",
+  "platform": "shopify",
+  "product_id": "8512296255619",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Mexico EA Natural Decaf (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/mexico-ea-natural-decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45005625000067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "45005625032835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "45005625065603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "45005625098371"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45005625131139"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "45005625163907"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "45005625196675"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "45005625229443"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "a62400e878e7bb79",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20250521_190321090.PORTRAIT.ORIGINAL_1b83c78b-9c0d-4119-8e7d-7ce751f7c5b2.jpg?v=1747939052",
+  "platform": "shopify",
+  "product_id": "8612182327427",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Decaf",
+   "Year Round Coffee"
+  ],
+  "title": "Decaf Espresso Blend (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/decaf-espresso-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45361800085635"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "45361800118403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "45361800151171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "45361800183939"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "1b429b2c5d4a63c0",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-san-isidro-honey-processed-2026-edition-direct-source-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/coffee_964ea77d-f235-43c5-9f73-d87f9698024f.jpg?v=1782327241",
+  "platform": "shopify",
+  "product_id": "8698379894915",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Medium Roast",
+   "Special Edition"
+  ],
+  "title": "Costa Rica San Isidro Honey Processed - 2026 Edition | Direct Source (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/costa-rica-san-isidro-honey-processed-2026-edition-direct-source-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45639248511107"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "45639248543875"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "45639248576643"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "45639248609411"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.79,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45639248642179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.79,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "45639248674947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.79,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "45639248707715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.79,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "45639248740483"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "757bd40734913fe7",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-selva-negra-rfa-washed-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20251001_233253209.PORTRAIT.jpg?v=1759451445",
+  "platform": "shopify",
+  "product_id": "8720630710403",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Nicaragua Selva Negra RFA Washed (Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/nicaragua-selva-negra-rfa-washed-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45707999281283"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "45707999314051"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "45707999346819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "45707999379587"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "45707999412355"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "45707999445123"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "45707999477891"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "45707999510659"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "blend-a-fireside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8814740734083",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-crema"
+  ],
+  "title": "Blend A - Fireside Blend - $11.50/lb",
+  "url": "https://mapleleafroasters.com/products/blend-a-fireside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb",
+    "variant_id": "46330402209923"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "blend-b-pond-hockey-blend-11-00-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8815111733379",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-crema"
+  ],
+  "title": "Blend B - Pond Hockey Blend - $11.00/lb",
+  "url": "https://mapleleafroasters.com/products/blend-b-pond-hockey-blend-11-00-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb",
+    "variant_id": "46330402078851"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "blend-c-breakfast-blend-11-50-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8815111766147",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-crema"
+  ],
+  "title": "Blend C - Breakfast Blend - $11.50/lb",
+  "url": "https://mapleleafroasters.com/products/blend-c-breakfast-blend-11-50-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb",
+    "variant_id": "46330401915011"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "hartford-espresso-blend-11-00-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8815111864451",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-crema",
+   "wholesale-elijahs",
+   "wholesale-irenes",
+   "wholesale-milkandmanna",
+   "wholesale-schlees"
+  ],
+  "title": "Hartford Espresso Blend - $11.00/lb (Early 2026 Pricing)",
+  "url": "https://mapleleafroasters.com/products/hartford-espresso-blend-11-00-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46330401423491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Coarse (Cold Brew)",
+    "variant_id": "46357921366147"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-blend-11-00-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8815111929987",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-crema",
+   "wholesale-elijahs",
+   "wholesale-irenes",
+   "wholesale-kattea-boba",
+   "wholesale-milkandmanna",
+   "wholesale-schlees"
+  ],
+  "title": "Decaf Espresso Blend - $11.00/lb",
+  "url": "https://mapleleafroasters.com/products/decaf-espresso-blend-11-00-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "1lb / Coarse (Cold Brew)",
+    "variant_id": "46330401030275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Coarse (Cold Brew)",
+    "variant_id": "46330401063043"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "1lb / Whole Bean",
+    "variant_id": "46394842153091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "1lb / Drip",
+    "variant_id": "46394842185859"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 0.0,
+    "title": "1lb / Espresso",
+    "variant_id": "46394842218627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46394842251395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Drip",
+    "variant_id": "46394842284163"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46394842316931"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "toronto-espresso-blend-11-00-lb-early-2026-pricing",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "8822324625539",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-elijahs",
+   "wholesale-irenes",
+   "wholesale-milkandmanna",
+   "wholesale-schlees"
+  ],
+  "title": "Toronto Blend - $11.00/lb (Early 2026 Pricing)",
+  "url": "https://mapleleafroasters.com/products/toronto-espresso-blend-11-00-lb-early-2026-pricing",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb",
+    "variant_id": "46357913206915"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "13b85f73398ea07d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-riosierra-washed-processed-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260211_200021825.PORTRAIT.jpg?v=1771102331",
+  "platform": "shopify",
+  "product_id": "8939321917571",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Dark Roast"
+  ],
+  "title": "Colombia RioSierra Washed Processed (Dark Roast)",
+  "url": "https://mapleleafroasters.com/products/colombia-riosierra-washed-processed-dark-roast",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "46590588780675"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "46590588813443"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "46590588846211"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "46590588878979"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46590588911747"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "46590588944515"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "46590588977283"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "46590589010051"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46590589042819"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground - Drip",
+    "variant_id": "46590589075587"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground - French Press",
+    "variant_id": "46590589108355"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground - Espresso",
+    "variant_id": "46590589141123"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "71cbe3e21d3f020d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-medina-galeas-2026-edition-direct-source-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260916_184117029.PORTRAIT.jpg?v=1791661434",
+  "platform": "shopify",
+  "product_id": "9018712981635",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Light Roast",
+   "Special Edition"
+  ],
+  "title": "Honduras Medina Galeas - 2026 Edition | Direct Source (Light Roast)",
+  "url": "https://mapleleafroasters.com/products/honduras-medina-galeas-2026-edition-direct-source-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "46960395780227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "46960395812995"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "46960395845763"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "46960395878531"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46960395911299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "46960395944067"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "46960395976835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "46960396009603"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "fb8f1331b374249b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-honey-ea-decaf-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/PXL_20260520_182539926.PORTRAIT.jpg?v=1779308665",
+  "platform": "shopify",
+  "product_id": "9077111619715",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Honey EA Decaf (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/colombia-honey-ea-decaf-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.49,
+    "title": "16oz / Whole Bean",
+    "variant_id": "47168378568835"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.49,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "47168378601603"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.49,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "47168378634371"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.49,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "47168378667139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47168378699907"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "47168378732675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "47168378765443"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.49,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "47168378798211"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "35be5958762a8c94",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-kigoma-washed-processed-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/coffee_fdc6c2e0-02b5-4f27-b8f8-82a49a6b22bf.jpg?v=1782327452",
+  "platform": "shopify",
+  "product_id": "9115641774211",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Light Roast"
+  ],
+  "title": "Rwanda Kigoma Washed Processed (Light Roast)",
+  "url": "https://mapleleafroasters.com/products/rwanda-kigoma-washed-processed-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "47316577779843"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "47316577812611"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "47316577845379"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "47316577878147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47316577910915"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "47316577943683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "47316577976451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "47316578009219"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "8f2811090ac7c306",
+  "first_seen": "2026-10-26",
+  "handle": "peru-san-jose-de-lourdes-washed-processed-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/coffee_d632f146-f06c-453d-99ea-45f7220d27a4.jpg?v=1782327429",
+  "platform": "shopify",
+  "product_id": "9117630562435",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Peru San Jose de Lourdes Washed Processed (Medium Roast)",
+  "url": "https://mapleleafroasters.com/products/peru-san-jose-de-lourdes-washed-processed-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Whole Bean",
+    "variant_id": "47324609544323"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Drip",
+    "variant_id": "47324609577091"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - French Press",
+    "variant_id": "47324609609859"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.99,
+    "title": "16oz / Ground - Espresso",
+    "variant_id": "47324609642627"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47324609675395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Drip",
+    "variant_id": "47324609708163"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - French Press",
+    "variant_id": "47324609740931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.99,
+    "title": "12oz / Ground - Espresso",
+    "variant_id": "47324609773699"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pond-hockey-blend-11-50-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0010/3782/8214/files/make-it-only-coffee-beans-top-down.png?v=1768601340",
+  "platform": "shopify",
+  "product_id": "9216546570371",
+  "product_type": "",
+  "roaster_slug": "mapleleafroasters",
+  "tags": [
+   "wholesale",
+   "wholesale-kattea-boba"
+  ],
+  "title": "Pond Hockey Blend - $11.50/lb",
+  "url": "https://mapleleafroasters.com/products/pond-hockey-blend-11-50-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 0.0,
+    "title": "5lb",
+    "variant_id": "47757103464579"
+   }
+  ],
+  "vendor": "Maple Leaf Coffee Roasters"
+ }
+]

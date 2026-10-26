@@ -1,0 +1,1322 @@
+[
+ {
+  "body_hash": "ab3b37641decd9e2",
+  "first_seen": "2026-10-26",
+  "handle": "whiteswan",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1706222400844-02S1MDAB1PUHIW9CNSRI/297D5FD3-92CB-467E-BCFC-D807B3FAB345",
+  "platform": "squarespace",
+  "product_id": "5941c05d2994ca9f066016d4",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "ESPRESSO",
+   "french press",
+   "fruity",
+   "natural",
+   "nutty",
+   "pour over",
+   "signature blend"
+  ],
+  "title": "WHITE SWAN BLEND™ | Our Signature Blend for Fruit & Nut Lovers!",
+  "url": "https://ethosroasters.com/coffee/whiteswan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "0afae923-cf44-4bcd-bc15-bcb4cc293109"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "11dc2404-4ef1-4b00-a5fa-e3d71b716666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "2067aa2c-2449-4c93-83ce-4b697d709e7c"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "2ec68b11-4a20-4ab0-8680-407e454abb19"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "3a6b5084-0a32-40c5-bec1-4f77a5b26ef7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "84e5081d-6325-49c9-bbf7-084b0051cb6a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "878aaa2f-47cb-416d-a5d6-ef37d5fad8c5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "8c55ac3a-f32b-4eae-a50f-691408d31384"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "a1d067dd-02d2-4bcd-a214-d044f6784e76"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "bd89319b-c41a-4aa3-b41d-d1b8fed442ef"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "da142c6d-95a1-4473-9181-ff6a484405a9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "fabac85b-1541-41b1-aced-2aa8398df801"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f98747f98e015d6a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1706456075804-D8K5B6ZPTXK924L37N4D/2A235785-3BC3-4DE6-A103-BD6459FE925C",
+  "platform": "squarespace",
+  "product_id": "5941c27229687fe9d254ff19",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "fair trade",
+   "low acid",
+   "organic",
+   "water decaf"
+  ],
+  "title": "MAYAN DECAF | Mexico | Water Processed",
+  "url": "https://ethosroasters.com/coffee/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "044000e2-2e0a-48cf-8ad4-289a0fb8623e"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "09bc48e3-febc-40f8-aefc-2e4f642662fb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "2d64811f-d8c4-4487-bfc5-99f68f629730"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "42188fa4-382f-4313-ae84-c150ef70eadb"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "5fa2f552-7100-4cb9-90f7-08b107d4bb4d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "742a942f-33aa-436b-944d-2437edb7e44f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "ace7dd87-8baf-4b54-b676-cbc954cc06c6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "c59f10fa-c3e3-4b0e-bd76-082e8de6abf3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "c9bb0987-234d-445c-8ec6-b775f455dbb8"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "d5c6ce30-e655-42b4-a67f-48496b1d59f5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "ddb65655-f6fa-4f2e-b7c7-f46a3e7a3b20"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "e5a574c3-42b9-47d9-a9ae-e5676fb0a8d1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "434ac981150354b7",
+  "first_seen": "2026-10-26",
+  "handle": "crema",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1647608445689-WQB5O4I096M1JKRCL1N0/CREMA.png",
+  "platform": "squarespace",
+  "product_id": "5941cf081b10e3d99c322f53",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "chocolaty",
+   "creamy",
+   "espresso",
+   "impactful",
+   "intense",
+   "silky"
+  ],
+  "title": "C R E M A | Classic Espresso Blend",
+  "url": "https://ethosroasters.com/coffee/crema",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "139236c7-db43-452f-8b92-b40f7459d8e9"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "1e2c0707-5acc-4eb7-9bde-8cb7700b28bc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "3937fd18-c6c3-4fb2-9c23-56b4cb64a736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "43e2b521-094b-4d52-81a0-7ba19509c2e7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "51e4bcd7-e223-48d6-87d9-99e74f57fc4e"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "5a56b251-6a40-4788-9439-b3ea53aa6d26"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "743a81c1-88fe-4fcd-bb30-1816783c1abf"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "75b85f1b-e979-43c1-81bd-ef75a6c44d07"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "7795320b-b362-4674-a19d-5d9086fc63fb"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "a6b3a7cd-5df1-4ac3-b006-de645f43d07c"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "cba71322-947f-4c92-ad9c-1f70a2920b1b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "d76d4dbf-1216-4048-8d12-a4e5b3b70c7b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "837c3f7a3732df6f",
+  "first_seen": "2026-10-26",
+  "handle": "poaquil",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/d739a42e-e6bc-4d66-98a4-4b3abd97398f/Square+Poaquil+label.png",
+  "platform": "squarespace",
+  "product_id": "5aa9cabc53450a6f4ddab834",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "chocolaty",
+   "cold brew",
+   "guatemala",
+   "high altitude",
+   "high impact",
+   "red bourbon",
+   "women-farmed"
+  ],
+  "title": "New crop! POAQUIL | Guatemala | High-Impact",
+  "url": "https://ethosroasters.com/coffee/poaquil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "1a1a4b56-81b3-4c14-9542-2d9e2390040c"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "38db406b-c3d0-4bba-b718-520670001d75"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "49e55a7a-668a-45de-84e7-40f7d318b9c0"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "7c74ddec-cba4-4344-8756-46a8d8cfcae2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "82b71dfb-99d2-484f-962b-6b245855bc26"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "8dca629b-a741-4424-8141-6f2e9a2fa9ab"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "93b85213-b862-49ab-8ee9-a27a51f6f606"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "9f7a1890-0048-4d27-9475-f8ec659ea616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "b72ce2d0-64fb-41dc-a2e5-0a982d8913b9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "bfa04ad7-6c6a-4672-bd6a-2d70e70d4bbd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "cddd0f23-8784-4b24-bf1b-25106ccc190a"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "eb8be9fb-4c4f-4c26-8098-281376ec35a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "85b9a4f1d473beca",
+  "first_seen": "2026-10-26",
+  "handle": "blackswan",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1706222355962-BVDW05B5B18XA5RW0K63/A13FE527-D376-49AA-A224-0B80C571599C",
+  "platform": "squarespace",
+  "product_id": "5ab137cc03ce640c3c572957",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "ESPRESSO",
+   "chocolate",
+   "more chocolate",
+   "pour over"
+  ],
+  "title": "BLACK SWAN BLEND™ | Our Signature Blend for Chocolate Lovers!",
+  "url": "https://ethosroasters.com/coffee/blackswan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "0f1ca8d2-418c-4215-a1ab-e8991c0b19a1"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "183b3d4c-137c-4da9-8eb2-9fbfad8aa9d0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "1e398df5-da18-4e03-a777-d05bb857c094"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "35571b2c-0c0c-4e07-90eb-3dfa96e4c409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "71cd2661-9112-4914-8fed-2842bc0d4068"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "a72cfbb0-d454-461c-b9ce-d1658492bc61"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "af375ad6-6976-4c43-99a8-4947305fbc5e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "bb8ed9a9-e1dc-4d4d-a768-f5b0abcc4ee9"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "ce38216b-762a-4267-bccf-04d876956298"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "d0110b9e-c641-4e12-809e-4c807e8e0781"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "ddc9fc12-f174-4481-8efe-dedeb8d56849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "ea187da1-6cf7-49b9-ab96-42c453fd3d49"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82a1d6693dc8d382",
+  "first_seen": "2026-10-26",
+  "handle": "halfcaff",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/a06059c2-eb77-47bf-88a4-e37d22aced87/Half+Caff+%281650+x+1650+px%29.png",
+  "platform": "squarespace",
+  "product_id": "5b8c3c6340ec9a2651e1c7ad",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "low acid",
+   "low caffeine",
+   "smooth",
+   "sweet"
+  ],
+  "title": "HALF CAFF | Low Acid, Low Caffeine Blend",
+  "url": "https://ethosroasters.com/coffee/halfcaff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "0ca5315f-5429-4885-b829-ba017f52f184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "21c0b834-201b-422f-8842-2c5c5fe913ca"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "2f8b35c5-dbb6-4b3f-889d-9cc5b690d998"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "864e3d1b-8aa0-4c12-a2d3-a7ba7331a056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "98a2ff8e-6fe2-4304-aa76-45fcb7a528fd"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "b59153e9-458d-4779-95c1-dad3ff290d0f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "caf78de8-deeb-41d2-848f-b0d3168042fd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "d2f07e05-aa9a-45e5-83de-476559f20b6b"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "e267b7e3-0943-4c76-ab09-33d58f677d5a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7146d0326080e1f4",
+  "first_seen": "2026-10-26",
+  "handle": "poaquilanaerobic",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/5fdfa1d1-c0cf-4946-aac5-4342a0072136/Square+Poaquil+Anaerobic.png",
+  "platform": "squarespace",
+  "product_id": "5db6185e6255474d7f44d3ed",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "anaerobic",
+   "cherry",
+   "cocoa",
+   "direct trade",
+   "guatemala",
+   "honey",
+   "yellow bourbon"
+  ],
+  "title": "Poaquil ANAEROBIC | Guatemala",
+  "url": "https://ethosroasters.com/coffee/poaquilanaerobic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "0a5adca3-5772-4b24-b51d-a6cad9022781"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "27b704e8-3a58-4b52-9849-b25791de8321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "348cfc06-0bec-4c36-a0b9-04c709dd7a32"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "379e97b3-09fe-4e4d-88c2-92e8f6c3b911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "6ae8bd84-5e78-46e7-882b-7da4795a9966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "75d7e1e1-59ee-4330-a777-04954212d9ea"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "9bd5570e-3657-4579-88d2-285f80910b95"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "a3ffc8fe-401c-442b-84f0-127cea051bf3"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "c058045a-60df-4d26-990a-dad8153ff43f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "d9af42c0-b77f-4ecd-af1a-67ff19930e0c"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "daa05c56-8dab-449b-be76-e1b009f91d19"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "eb77720a-523d-467c-9bb0-e27b35dfdfdf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ed22927726a524f7",
+  "first_seen": "2026-10-26",
+  "handle": "poaquilnatural",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/9b5c3731-063d-4a46-a4e5-2ececbec0fb4/Square+Poaquil+Natural.png",
+  "platform": "squarespace",
+  "product_id": "5db61d12118b996830021ae5",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "chocolaty",
+   "direct trade",
+   "guatemala",
+   "natural",
+   "red bourbon",
+   "yellow bourbon"
+  ],
+  "title": "POAQUIL NATURAL | Guatemala",
+  "url": "https://ethosroasters.com/coffee/poaquilnatural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "1a425a11-c608-46ed-8d45-e674a2778784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "368cebc0-6c4c-4014-ae93-28ce5cb52976"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "37117b91-2315-4c47-b262-a244c642822f"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "442028f8-21c5-4ed1-8e6e-47c63378c2f5"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "536137c5-e2f2-467a-9cce-0fc80f2777c5"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "54bc962a-987f-4684-a6bc-897fd9c7a33d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "5f7997e8-70c1-4929-ad90-7ec06e74bfa9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "63d7c1f3-2509-42ca-a39a-00165d560dff"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "7ff1b8fa-16c9-4fe1-b8f5-f30fadf40904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "82990b54-ffa1-437d-9ef8-165afb6785f5"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "855197ee-63d9-4649-8eab-5ce2cbef7226"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "dce5a32a-0c6e-411a-bb7e-713d95087072"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "703ab217b35983dd",
+  "first_seen": "2026-10-26",
+  "handle": "planadas",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/3d9225a8-8974-499e-ae1a-ae080e9af669/Square+Planadas+label.png",
+  "platform": "squarespace",
+  "product_id": "5ea48ea889503f2e4814f65e",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "balanced",
+   "bold",
+   "caramel",
+   "citrus",
+   "colombia",
+   "organic",
+   "sweet",
+   "washed"
+  ],
+  "title": "PLANADAS | Colombia",
+  "url": "https://ethosroasters.com/coffee/planadas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "3da481f2-78f2-4f6b-9a19-f89662b28001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "67c7e4fd-f1f3-4ad5-b7ca-a8632a3a9b0b"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "86ed96e4-3c39-44bd-b396-5e071cc850f6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "8af08587-61c5-4e24-add6-053b584ecc9d"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "b6c1bf95-e7d7-47b0-a64e-a8a2c90c39ff"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "c55b62c6-28b8-426c-92a3-816b09e6a991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "d5b45dbd-57a6-4b60-a2b5-bb4fcad0416d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "d848e5b2-535d-48b6-a8cf-a2baf8fbc402"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "e875ee16-1c6d-4fd8-be31-2e48195000c7"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "f1358d4e-3b71-4fab-9574-87fa35e985c9"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "f24999aa-e65b-44ae-b8c3-19559e1cb4b5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "f83782cc-4dd5-4477-8459-7b1d3b7eaea7"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9be7e7486047aac",
+  "first_seen": "2026-10-26",
+  "handle": "eclipse",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1712324727446-GFDUWIT4PL4G6A2VH783/Eclipse+SQ+%281650+x+1650+px%29.png",
+  "platform": "squarespace",
+  "product_id": "5f2a170db26601170a5fb4d0",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "bold",
+   "dark roast",
+   "organic"
+  ],
+  "title": "E C L I P S E | Signature Dark",
+  "url": "https://ethosroasters.com/coffee/eclipse",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "0960905c-fb2b-479b-b94c-618072601f7e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "3762ae85-f254-4c4a-bbe4-ee956a71c128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "3e7394a5-c6dd-4753-af2e-423584ed3f44"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "4cced746-a2f9-46a7-b9a1-66451d2552ec"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "6d3983c3-31e8-478e-b45d-e01c5e9d3a0b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 103.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "6fc8fa24-a9f6-4b6c-bfb3-375392740362"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "8399e410-a6f2-4edd-8bd4-70ca4a8e58e1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Whole bean 8 oz",
+    "variant_id": "8ead4f26-e2ff-447b-abbe-e129d718b37a"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "b094a771-c653-43cc-8d2f-d70c85161950"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "e43e28eb-62be-491c-98db-d04cd7ca215d"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "f2591aae-f3a1-4f12-b7b6-5fb7a03dce80"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "f6ff15fe-37e1-48d0-b863-9e8909545a0c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2c99d561b42c1406",
+  "first_seen": "2026-10-26",
+  "handle": "harmony",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/3bdea93a-f117-4734-87d5-cc6218fa3122/Harmony+label+%281650+x+1650+px%29.png",
+  "platform": "squarespace",
+  "product_id": "609d9bad5725c34231b72289",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "espresso",
+   "fruity",
+   "full body",
+   "modern",
+   "sweet"
+  ],
+  "title": "HARMONY | Modern Espresso Blend",
+  "url": "https://ethosroasters.com/coffee/harmony",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "1c75907c-7ae6-4c0d-90eb-1d024b286a6d"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "1e022837-11b4-4b64-a9bb-6e7758256980"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "27cc37d0-9579-44cc-af04-4994d13b951e"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 13.5,
+    "title": "Whole bean 8 oz",
+    "variant_id": "3be85d86-c187-4ef5-a42f-151f3d4f8ba4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "5998b44b-4345-4139-9da1-a97093f854bb"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "5f342b44-d667-4db2-ad02-44d7e410ba85"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "68795a78-4e29-439d-beae-b4a9fb954913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "6bca0039-a359-470b-8d81-86a26b634311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "b722200d-b427-4900-815d-a45993b8bb58"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "d7a7dd2c-f140-4d59-9d67-95fc2c961834"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "db2f5641-f54f-48c2-9b87-ad84f76b5edd"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 47.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "e1ea07d2-08d9-40ce-b5a3-33d015253aee"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f054946f68a72bd",
+  "first_seen": "2026-10-26",
+  "handle": "varietypack",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/1662915575516-2JVMS5HPN78ARU533COT/8DAEDD94-B311-47AD-AE22-1C799AB59C9D",
+  "platform": "squarespace",
+  "product_id": "63b33ca9700b111ec39142e6",
+  "product_type": "COFFEE,Gifts",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "Gifts",
+   "Holiday",
+   "coffee gift",
+   "coffee sampler",
+   "espresso",
+   "espresso sampler",
+   "gifts",
+   "sampler",
+   "the ethos sampler",
+   "variety pack",
+   "washed honey natural"
+  ],
+  "title": "V A R I E T Y  B O X",
+  "url": "https://ethosroasters.com/coffee/varietypack",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Ground (medium-fine)",
+    "variant_id": "83b12767-7b5a-44c6-b42e-ff92a045da38"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Whole Bean",
+    "variant_id": "e4e130d5-a6ae-4d82-944c-4235a02c0330"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "Ground (coarse)",
+    "variant_id": "fdde714c-52de-4fd4-b575-9a89b743233b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "274929f3ad7baf79",
+  "first_seen": "2026-10-26",
+  "handle": "guacamaya",
+  "image": "https://images.squarespace-cdn.com/content/v1/592794bedb29d63a65df31a0/2e74fa4c-10d2-4049-b610-72454c55e166/Guacamaya+label+%281650+x+1650+px%29.png",
+  "platform": "squarespace",
+  "product_id": "6ac51013a61b6508b2c2ff42",
+  "product_type": "COFFEE",
+  "roaster_slug": "ethosroasters",
+  "tags": [
+   "COFFEE",
+   "best of the best",
+   "bold",
+   "hazelnut",
+   "honduras",
+   "panela",
+   "sweet"
+  ],
+  "title": "New! GUACAMAYA | Honduras",
+  "url": "https://ethosroasters.com/coffee/guacamaya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (medium-fine) 16 oz",
+    "variant_id": "16e87936-652d-4850-9cd2-1e3acbd39bc3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (medium-fine) 5 lb (80 oz)",
+    "variant_id": "42892b56-82aa-413f-afd6-e83306fdb8f1"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "Whole bean 8 oz",
+    "variant_id": "43a15dfb-01eb-42bd-b411-71a340da5182"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (coarse) 8 oz",
+    "variant_id": "511c26b1-502f-4ed4-a25c-571fce06d6b7"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.5,
+    "title": "Ground (medium-fine) 8 oz",
+    "variant_id": "55d2dbcb-9e78-4b85-b1cf-3ac0667698fa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole bean 5 lb (80 oz)",
+    "variant_id": "60bef426-e5ef-4d79-af8b-9517842f2f9e"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (coarse) 2 lb (TWO 16 oz)",
+    "variant_id": "61ad9125-ffa3-4762-8db7-6614659d37c9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground (coarse) 5 lb (80 oz)",
+    "variant_id": "688ac627-8fb2-4299-9a92-916c516220aa"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "Whole bean 2 lb (TWO 16 oz)",
+    "variant_id": "8361844a-e45a-4aa7-a88b-71ed56ec3de4"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "Ground (medium-fine) 2 lb (TWO 16 oz)",
+    "variant_id": "83fd3c97-bf5f-4516-a022-c5a5b8d9791f"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Whole bean 16 oz",
+    "variant_id": "b2d26e3e-2cd5-4c7e-8bea-25f36e9dd4ec"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground (coarse) 16 oz",
+    "variant_id": "c792cb81-5104-4b66-aecc-bd762c1c43a1"
+   }
+  ],
+  "vendor": ""
+ }
+]

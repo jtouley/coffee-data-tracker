@@ -1,0 +1,102 @@
+[
+ {
+  "body_hash": "af481a238fa17bd0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brazil",
+  "image": "https://armisticecoffeeco.com/wp-content/uploads/2024/02/decaf_brazil.jpg",
+  "platform": "woocommerce",
+  "product_id": "324",
+  "product_type": "variable",
+  "roaster_slug": "armisticecoffeeco",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Decaf Brazil",
+  "url": "https://armisticecoffeeco.com/decaf-brazil/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Decaf Brazil",
+    "variant_id": "324:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2d1e109ec32bcbeb",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-yerba-womens-reserva",
+  "image": "https://armisticecoffeeco.com/wp-content/uploads/2024/02/mexico_la_yerba_womens_reserva.jpg",
+  "platform": "woocommerce",
+  "product_id": "329",
+  "product_type": "variable",
+  "roaster_slug": "armisticecoffeeco",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Mexico La Yerba Women’s Reserva",
+  "url": "https://armisticecoffeeco.com/mexico-la-yerba-womens-reserva/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Mexico La Yerba Women’s Reserva",
+    "variant_id": "329:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0ffa5ab6918f5088",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-blend",
+  "image": "https://armisticecoffeeco.com/wp-content/uploads/2024/02/costa_rica.jpg",
+  "platform": "woocommerce",
+  "product_id": "334",
+  "product_type": "variable",
+  "roaster_slug": "armisticecoffeeco",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Costa Rica Blend",
+  "url": "https://armisticecoffeeco.com/costa-rica-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Costa Rica Blend",
+    "variant_id": "334:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f0ccdfb4c235def",
+  "first_seen": "2026-10-26",
+  "handle": "precursor-house-blend",
+  "image": "https://armisticecoffeeco.com/wp-content/uploads/2024/02/precursor_house_blend-1.jpg",
+  "platform": "woocommerce",
+  "product_id": "339",
+  "product_type": "variable",
+  "roaster_slug": "armisticecoffeeco",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Precursor House Blend",
+  "url": "https://armisticecoffeeco.com/precursor-house-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Precursor House Blend",
+    "variant_id": "339:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

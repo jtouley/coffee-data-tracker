@@ -1,0 +1,645 @@
+[
+ {
+  "body_hash": "9c531dbc54386b66",
+  "first_seen": "2026-10-26",
+  "handle": "seasonal-release",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_Strawberry_Fields-062226.png?v=1782492572",
+  "platform": "shopify",
+  "product_id": "10040431509636",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Strawberry Fields Forever (seasonal release)",
+  "url": "https://www.downeastcoffee.com/products/seasonal-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "50744992497796"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "19ecf68ebe538ce5",
+  "first_seen": "2026-10-26",
+  "handle": "pacayal-honey-limited-release",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_PacayalHoney.png?v=1785419746",
+  "platform": "shopify",
+  "product_id": "10421433041028",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Pacayal Honey - Limited Release",
+  "url": "https://www.downeastcoffee.com/products/pacayal-honey-limited-release",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "52577614397572"
+   }
+  ],
+  "vendor": "Downeast Coffee Roasters"
+ },
+ {
+  "body_hash": "0eef11ad0233358f",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_MorningDecaf.png?v=1711587201",
+  "platform": "shopify",
+  "product_id": "6705626022020",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Morning Blend Decaf",
+  "url": "https://www.downeastcoffee.com/products/morning-blend-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929544324"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "7ebc1d35c44c55f1",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_FrenchVanilla.png?v=1711587124",
+  "platform": "shopify",
+  "product_id": "6705626054788",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature"
+  ],
+  "title": "French Vanilla",
+  "url": "https://www.downeastcoffee.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929577092"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "d14dc22f5a18a832",
+  "first_seen": "2026-10-26",
+  "handle": "dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_DarkRoast.png?v=1711587091",
+  "platform": "shopify",
+  "product_id": "6705626087556",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature"
+  ],
+  "title": "Dark Roast",
+  "url": "https://www.downeastcoffee.com/products/dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929609860"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "46376de27e9189dd",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_MorningBlend.png?v=1711587180",
+  "platform": "shopify",
+  "product_id": "6705626120324",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Morning Blend",
+  "url": "https://www.downeastcoffee.com/products/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929642628"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "35c0a97c571f93a4",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_CinnHazelnut.png?v=1711587029",
+  "platform": "shopify",
+  "product_id": "6705626153092",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature"
+  ],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://www.downeastcoffee.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929675396"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "d0db7952b285448c",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_100Colombian.png?v=1711586986",
+  "platform": "shopify",
+  "product_id": "6705626185860",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature",
+   "best-sellers"
+  ],
+  "title": "100% Colombian",
+  "url": "https://www.downeastcoffee.com/products/colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929708164"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "ee2f8798f3356abd",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Signature_Hazelnut.png?v=1711587145",
+  "platform": "shopify",
+  "product_id": "6705626218628",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Hazelnut",
+  "url": "https://www.downeastcoffee.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "39956929740932"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "f2e83e7ab4e5b546",
+  "first_seen": "2026-10-26",
+  "handle": "admirals-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_AdmiralsBlend.png?v=1711561534",
+  "platform": "shopify",
+  "product_id": "6705626251396",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Admiral's Blend",
+  "url": "https://www.downeastcoffee.com/products/admirals-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "39956929773700"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "c3e2c4b1714d6c7e",
+  "first_seen": "2026-10-26",
+  "handle": "deep-sea-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_DeepSeaDark.png?v=1711562734",
+  "platform": "shopify",
+  "product_id": "6705626284164",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Deep Sea Dark Roast",
+  "url": "https://www.downeastcoffee.com/products/deep-sea-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "39956929806468"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "286ec658c1455b06",
+  "first_seen": "2026-10-26",
+  "handle": "12meter",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_12_Meter_Espresso.png?v=1754673954",
+  "platform": "shopify",
+  "product_id": "6705626349700",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "12 Meter Espresso",
+  "url": "https://www.downeastcoffee.com/products/12meter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39956929872004"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "916a1d220ea6c36d",
+  "first_seen": "2026-10-26",
+  "handle": "swp-guatemala-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_WPDecafGuatemala.png?v=1711563033",
+  "platform": "shopify",
+  "product_id": "6705626382468",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Swiss Water Process Decaf Guatemala",
+  "url": "https://www.downeastcoffee.com/products/swp-guatemala-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "Default Title",
+    "variant_id": "39956929904772"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "ea9a7bcd526e8601",
+  "first_seen": "2026-10-26",
+  "handle": "flagship-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_FlagshipEspresso.png?v=1711562806",
+  "platform": "shopify",
+  "product_id": "6705626415236",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Flagship Espresso",
+  "url": "https://www.downeastcoffee.com/products/flagship-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "39956929937540"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "9776833de8fc4cfe",
+  "first_seen": "2026-10-26",
+  "handle": "fto-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_SumatraMandheling.png?v=1711563011",
+  "platform": "shopify",
+  "product_id": "6705626480772",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.downeastcoffee.com/products/fto-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "39956930003076"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "48f55d6ae0e949d2",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_Costa_Rica_Santa_Maria.png?v=1785423290",
+  "platform": "shopify",
+  "product_id": "6705626513540",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Costa Rica Santa Maria",
+  "url": "https://www.downeastcoffee.com/products/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39956930035844"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "05057af321044e5e",
+  "first_seen": "2026-10-26",
+  "handle": "little-italy",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_LittleItaly.png?v=1711562873",
+  "platform": "shopify",
+  "product_id": "6705626546308",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Little Italy",
+  "url": "https://www.downeastcoffee.com/products/little-italy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39956930068612"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "1c7336011b1e98b9",
+  "first_seen": "2026-10-26",
+  "handle": "north-woods",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_North_Woods.jpg?v=1755881808",
+  "platform": "shopify",
+  "product_id": "6705626611844",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "North Woods Blend",
+  "url": "https://www.downeastcoffee.com/products/north-woods",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39956930134148"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "63012c1a6bfd66d5",
+  "first_seen": "2026-10-26",
+  "handle": "ocean-state",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_OceanState.png?v=1711562989",
+  "platform": "shopify",
+  "product_id": "6705626644612",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Ocean State Blend",
+  "url": "https://www.downeastcoffee.com/products/ocean-state",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "39956930166916"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "8f1be1c878578cd4",
+  "first_seen": "2026-10-26",
+  "handle": "ground-coffee-for-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_ColdBrew.png?v=1711563681",
+  "platform": "shopify",
+  "product_id": "6705626841220",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "Signature",
+   "Wholesale"
+  ],
+  "title": "Ground Coffee for Cold Brew",
+  "url": "https://www.downeastcoffee.com/products/ground-coffee-for-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 60.0,
+    "title": "5lbs",
+    "variant_id": "41782291366020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12oz",
+    "variant_id": "41782291398788"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "ad6acf7ebeee8eca",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-small-farms-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_GuatemalaSmallFarms.png?v=1711562830",
+  "platform": "shopify",
+  "product_id": "6811037139076",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Guatemala Small Farms Lot",
+  "url": "https://www.downeastcoffee.com/products/guatemala-small-farms-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "40400121102468"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "61464757627a60e6",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_Colombia_Huila.png?v=1757001279",
+  "platform": "shopify",
+  "product_id": "7063350083716",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop"
+  ],
+  "title": "Colombia Huila",
+  "url": "https://www.downeastcoffee.com/products/colombia-huila",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "41301270200452"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "4f5661220f4ecb1e",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffee_Reserve_KenyaKiambuAA.png?v=1717181381",
+  "platform": "shopify",
+  "product_id": "7177831448708",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Reserve",
+   "Shop",
+   "import_2022_01_15_172746"
+  ],
+  "title": "Kenya Kiambu AA",
+  "url": "https://www.downeastcoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "41611775115396"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ },
+ {
+  "body_hash": "1dda38d022e21d53",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0565/9200/7300/files/DowneastCoffe_Signature_Pumpkin_Spice.png?v=1727373693",
+  "platform": "shopify",
+  "product_id": "7302461554820",
+  "product_type": "",
+  "roaster_slug": "oceancoffee",
+  "tags": [
+   "Shop",
+   "Signature"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://www.downeastcoffee.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "41926594035844"
+   }
+  ],
+  "vendor": "Downeast Coffee"
+ }
+]

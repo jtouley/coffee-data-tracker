@@ -1,0 +1,385 @@
+[
+ {
+  "body_hash": "23ed9cf371440eb7",
+  "first_seen": "2026-10-26",
+  "handle": "standard-issue",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/files/Standard_Issue_November_2025.png?v=1771098756",
+  "platform": "shopify",
+  "product_id": "4829611458638",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Standard Issue",
+  "url": "https://pennycoffeeroasters.com/products/standard-issue",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "39912680816718"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 kg.",
+    "variant_id": "39912680849486"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb.",
+    "variant_id": "39912680882254"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "f71d2e81e1639887",
+  "first_seen": "2026-10-26",
+  "handle": "bookissa",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/products/Bookissa_6bf4dcc6-dd04-4b06-9920-9ae66b4f4565.png?v=1659048312",
+  "platform": "shopify",
+  "product_id": "6775072653390",
+  "product_type": "",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Bookissa, Ethiopia",
+  "url": "https://pennycoffeeroasters.com/products/bookissa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz.",
+    "variant_id": "39912684552270"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg.",
+    "variant_id": "39912684585038"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb.",
+    "variant_id": "39912684617806"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "c2c3caadd2cc4446",
+  "first_seen": "2026-10-26",
+  "handle": "daypack",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/files/DaypackThairAbaMecha.png?v=1771098411",
+  "platform": "shopify",
+  "product_id": "6895616098382",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Daypack",
+  "url": "https://pennycoffeeroasters.com/products/daypack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "40314890518606"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg",
+    "variant_id": "40314890551374"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "40314890584142"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "d7c1073b6b868c33",
+  "first_seen": "2026-10-26",
+  "handle": "yukro-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/files/Yukro_24.png?v=1763856776",
+  "platform": "shopify",
+  "product_id": "7770231210062",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Yukro, Ethiopia",
+  "url": "https://pennycoffeeroasters.com/products/yukro-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "43175470596174"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 kg.",
+    "variant_id": "43175470628942"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb.",
+    "variant_id": "43175470661710"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "8a8885fc14fe45a4",
+  "first_seen": "2026-10-26",
+  "handle": "san-pedro-yosotatu-mexico",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/files/yosotatu.png?v=1763857304",
+  "platform": "shopify",
+  "product_id": "7770232324174",
+  "product_type": "",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "San Pedro Yosotatu, Mexico",
+  "url": "https://pennycoffeeroasters.com/products/san-pedro-yosotatu-mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz.",
+    "variant_id": "43175477510222"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 68.0,
+    "title": "1 kg.",
+    "variant_id": "43175477542990"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5 lb.",
+    "variant_id": "43175477575758"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "d2ff07a98a12c3d7",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-burundi",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7813386698830",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Decaf Huila",
+  "url": "https://pennycoffeeroasters.com/products/decaf-burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "43883817205838"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg",
+    "variant_id": "43883817238606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "43883817271374"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "b1e7260c76852956",
+  "first_seen": "2026-10-26",
+  "handle": "standard-issue-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0294/2792/5070/files/Packs_of_Penny_Coffee_on_a_shelf_with_colorful_labels..jpg?v=1774827798",
+  "platform": "shopify",
+  "product_id": "7864587649102",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Roasters Choice",
+  "url": "https://pennycoffeeroasters.com/products/standard-issue-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz.",
+    "variant_id": "43586459533390"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1 kg.",
+    "variant_id": "43586459566158"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb.",
+    "variant_id": "43586459598926"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "4f35180745f72549",
+  "first_seen": "2026-10-26",
+  "handle": "maryi-yaneth-gesha-colombia",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7864596463694",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Gesha",
+   "Single Origin"
+  ],
+  "title": "Maryi Yaneth Gesha, Colombia",
+  "url": "https://pennycoffeeroasters.com/products/maryi-yaneth-gesha-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 36.0,
+    "title": "12oz",
+    "variant_id": "43883796299854"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 80.0,
+    "title": "1kg",
+    "variant_id": "43883796332622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 238.0,
+    "title": "5lb",
+    "variant_id": "43883796365390"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "9c953cd2677c8d81",
+  "first_seen": "2026-10-26",
+  "handle": "maryi-yaneth-pink-bourbon-colombia",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7864596561998",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Colombia",
+   "Exceptional",
+   "Pink Bourbon",
+   "Single Origin"
+  ],
+  "title": "Maryi Yaneth Pink Bourbon, Colombia",
+  "url": "https://pennycoffeeroasters.com/products/maryi-yaneth-pink-bourbon-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 31.0,
+    "title": "12oz",
+    "variant_id": "43883795775566"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 70.0,
+    "title": "1kg",
+    "variant_id": "43883795808334"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 207.0,
+    "title": "5lb",
+    "variant_id": "43883795841102"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "jaminton-guaraca",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7866164215886",
+  "product_type": "Coffee",
+  "roaster_slug": "pennycoffeeroasters",
+  "tags": [],
+  "title": "Jaminton Guaraca, Colombia",
+  "url": "https://pennycoffeeroasters.com/products/jaminton-guaraca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz.",
+    "variant_id": "43592449359950"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 60.0,
+    "title": "1 kg.",
+    "variant_id": "43592449392718"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "5 lb.",
+    "variant_id": "43592449425486"
+   }
+  ],
+  "vendor": "Penny Coffee Roasters"
+ }
+]

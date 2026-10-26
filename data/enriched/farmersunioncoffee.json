@@ -1,0 +1,229 @@
+{
+ "3960164286528": {
+  "body_hash": "a9da4a4731cd2a66",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "oatmeal raisin cookies"
+  ],
+  "varietals": []
+ },
+ "3960217043008": {
+  "body_hash": "5f495b2c12cae30f",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "deep chocolates",
+   "molasses",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "3960265932864": {
+  "body_hash": "4c3c196781a61e19",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "so smooth",
+   "very bold"
+  ],
+  "varietals": []
+ },
+ "4496183459906": {
+  "body_hash": "d12d36a8d7ea5233",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4661366292546": {
+  "body_hash": "9c00038ca56c6e28",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peach",
+   "honeysuckle",
+   "jasmine"
+  ],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6779685634114": {
+  "body_hash": "e142fc9233f8125b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dried apricot",
+   "raisin",
+   "chocolate",
+   "dense sweetness"
+  ],
+  "varietals": []
+ },
+ "6991922233410": {
+  "body_hash": "0ddf2a3823600a48",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "honey",
+   "orange blossom"
+  ],
+  "varietals": []
+ },
+ "7383884857410": {
+  "body_hash": "3d974d43d0d03efb",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "campari",
+   "grape juice",
+   "floral bouquet"
+  ],
+  "varietals": []
+ },
+ "7520883703874": {
+  "body_hash": "a3647b554759b526",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "maple syrup",
+   "tangerine",
+   "berry"
+  ],
+  "varietals": []
+ },
+ "7707774255170": {
+  "body_hash": "57eac0627b34b44c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "soft apricot",
+   "creamy wildflower honey",
+   "distinct candy nougat"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "8377476644930": {
+  "body_hash": "596c29886e7f4649",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "anaerobic",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chilled pino grigio",
+   "fruit rollup",
+   "yogurt parfait"
+  ],
+  "varietals": []
+ },
+ "8424073953346": {
+  "body_hash": "37677b0cb1fa2040",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pear",
+   "cantaloupe",
+   "toasted cacao"
+  ],
+  "varietals": []
+ }
+}

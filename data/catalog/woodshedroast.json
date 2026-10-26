@@ -1,0 +1,7604 @@
+[
+ {
+  "body_hash": "433f7c6b732cc4cc",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/guatemala.jpg?v=1715978054",
+  "platform": "shopify",
+  "product_id": "8291412541603",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Guatemala | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241361043619"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361076387"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241361109155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241361141923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361174691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241361207459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241361240227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241361272995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241361305763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241361338531"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361371299"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241361404067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241361436835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361469603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241361502371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241361535139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241361567907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241361600675"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241361633443"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361666211"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241361698979"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241361731747"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361764515"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241361797283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241361830051"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241361862819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241361895587"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241361928355"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241361961123"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241361993891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241362026659"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362059427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241362092195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241362124963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241362157731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241362190499"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241362223267"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362256035"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241362288803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241362321571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362354339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241362387107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241362419875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241362452643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241362485411"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563812778147"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563812810915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563812843683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563812876451"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563812909219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563812941987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563812974755"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563813007523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563813040291"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563813073059"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563813105827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563813138595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563813171363"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563813204131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563813236899"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "eee2ddcd31bab0e4",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/peru.jpg?v=1715978037",
+  "platform": "shopify",
+  "product_id": "8291412574371",
+  "product_type": "",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Peru | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241362518179"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362550947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241362583715"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241362616483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362649251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241362682019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241362714787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241362747555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241362780323"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241362813091"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362845859"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241362878627"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241362911395"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241362944163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241362976931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241363009699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241363042467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241363075235"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241363108003"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363140771"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241363173539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241363206307"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363239075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241363271843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241363304611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241363337379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241363370147"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241363402915"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363435683"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241363468451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241363501219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363533987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241363566755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241363599523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241363632291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241363665059"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241363697827"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363730595"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241363763363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241363796131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241363828899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241363861667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241363894435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241363927203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241363959971"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563814809763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563814842531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563814875299"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563814908067"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563814940835"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 14.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563814973603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563815006371"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563815039139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563815071907"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563815104675"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563815137443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563815170211"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 10.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563815202979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563815235747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563815268515"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "0df2369a78daa2e8",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinnea",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/papua-new-guinea.jpg?v=1715978021",
+  "platform": "shopify",
+  "product_id": "8291412672675",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Papua New Guinnea | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/papua-new-guinnea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241364254883"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241364287651"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241364320419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241364353187"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241364385955"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241364418723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241364451491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241364484259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241364517027"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241364549795"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241364582563"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241364615331"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241364648099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241364680867"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241364713635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241364746403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241364779171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241364811939"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241364844707"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241364877475"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241364910243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241364943011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241364975779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365008547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241365041315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241365074083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241365106851"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241365139619"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241365172387"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365205155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241365237923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241365270691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365303459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241365336227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241365368995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241365401763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241365434531"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241365467299"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365500067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241365532835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241365565603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365598371"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241365631139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241365663907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241365696675"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563814056099"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563814088867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563814121635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563814154403"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563814187171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563814219939"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563814252707"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563814285475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563814318243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563814351011"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563814383779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563814416547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563814449315"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563814482083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563814514851"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "996eaa96f0dcbf32",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/sumatra-mandheling.jpg?v=1715978003",
+  "platform": "shopify",
+  "product_id": "8291412738211",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Sumatra Mandheling | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241365794979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365827747"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241365860515"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241365893283"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241365926051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241365958819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241365991587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241366024355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241366057123"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241366089891"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366122659"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241366155427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241366188195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366220963"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241366253731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241366286499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241366319267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241366352035"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241366384803"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366417571"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241366450339"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241366483107"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366515875"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241366548643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241366581411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241366614179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241366646947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241366679715"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366712483"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241366745251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241366778019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241366810787"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241366843555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241366876323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241366909091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241366941859"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241366974627"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367007395"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241367040163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241367072931"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367105699"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241367138467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241367171235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241367204003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241367236771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563816382627"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563816415395"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563816448163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563816480931"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563816513699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563816546467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563816579235"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563816612003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563816644771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563816677539"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563816710307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563816743075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563816775843"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563816808611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563816841379"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "e321f2dadfc4070d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/ethiopian.jpg?v=1715977968",
+  "platform": "shopify",
+  "product_id": "8291412803747",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Ethiopian | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44241367302307"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241367335075"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367367843"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 14.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241367400611"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44241367433379"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241367466147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367498915"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241367531683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb Bag / Light Roast",
+    "variant_id": "44241367564451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb Bag / Medium Roast",
+    "variant_id": "44241367597219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb Bag / Medium-Dark Roast",
+    "variant_id": "44241367629987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5lb Bag / Dark Roast",
+    "variant_id": "44241367662755"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241367695523"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241367728291"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367761059"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241367793827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241367826595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241367859363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241367892131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241367924899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5lb Bag / Light Roast",
+    "variant_id": "44241367957667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5lb Bag / Medium Roast",
+    "variant_id": "44241367990435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5lb Bag / Medium-Dark Roast",
+    "variant_id": "44241368023203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5lb Bag / Dark Roast",
+    "variant_id": "44241368055971"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241368088739"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241368121507"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241368154275"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241368187043"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241368219811"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241368252579"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241368285347"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241368318115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5lb Bag / Light Roast",
+    "variant_id": "44241368350883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5lb Bag / Medium Roast",
+    "variant_id": "44241368383651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5lb Bag / Medium-Dark Roast",
+    "variant_id": "44241368416419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5lb Bag / Dark Roast",
+    "variant_id": "44241368449187"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241368481955"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241368514723"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241368547491"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241368580259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241368613027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241368645795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241368678563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241368711331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5lb Bag / Light Roast",
+    "variant_id": "44241368744099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5lb Bag / Medium Roast",
+    "variant_id": "44241368776867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5lb Bag / Medium-Dark Roast",
+    "variant_id": "44241368809635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5lb Bag / Dark Roast",
+    "variant_id": "44241368842403"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241368875171"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241368907939"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241368940707"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241368973475"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241369006243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241369039011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241369071779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241369104547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb Bag / Light Roast",
+    "variant_id": "44241369137315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb Bag / Medium Roast",
+    "variant_id": "44241369170083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb Bag / Medium-Dark Roast",
+    "variant_id": "44241369202851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5lb Bag / Dark Roast",
+    "variant_id": "44241369235619"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "f2c24bec2a6de8fc",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/tanzanian-peaberry.jpg?v=1715977861",
+  "platform": "shopify",
+  "product_id": "8291412869283",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Tanzania Peaberry | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241370742947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241370775715"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241370808483"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44241370841251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241370874019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241370906787"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241370939555"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44241370972323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241371005091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241371037859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241371070627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44241371103395"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241371136163"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241371168931"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241371201699"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241371234467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241371267235"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241371300003"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241371332771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241371365539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241371398307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241371431075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241371463843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241371496611"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241371529379"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241371562147"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241371594915"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241371627683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241371660451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241371693219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241371725987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241371758755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241371791523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241371824291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241371857059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241371889827"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241371922595"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241371955363"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241371988131"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241372020899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241372053667"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241372086435"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241372119203"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241372151971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241372184739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241372217507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241372250275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241372283043"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241372315811"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241372348579"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241372381347"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241372414115"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241372446883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241372479651"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241372512419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241372545187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241372577955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241372610723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241372643491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241372676259"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "dc8e4f5e93ae616b",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/colombian-supremo.jpg?v=1715977952",
+  "platform": "shopify",
+  "product_id": "8291412967587",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Colombian Supremo | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241372807331"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241372840099"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241372872867"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44241372905635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241372938403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241372971171"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241373003939"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44241373036707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241373069475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241373102243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241373135011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44241373167779"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241373200547"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241373233315"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241373266083"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241373298851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241373331619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241373364387"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241373397155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241373429923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241373462691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241373495459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241373528227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241373560995"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241373593763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241373626531"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241373659299"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241373692067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241373724835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241373757603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241373790371"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241373823139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241373855907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241373888675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241373921443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241373954211"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241373986979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374019747"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241374052515"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241374085283"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241374118051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374150819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241374183587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241374216355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241374249123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241374281891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241374314659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241374347427"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241374380195"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374412963"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241374445731"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241374478499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241374511267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374544035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241374576803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241374609571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241374642339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241374675107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241374707875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241374740643"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "ecfddc9d1d2d82c7",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/brazil.jpg?v=1715977896",
+  "platform": "shopify",
+  "product_id": "8291413033123",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Brazil | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/brazilian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44241374806179"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374838947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44241374871715"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44241374904483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241374937251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44241374970019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44241375002787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241375035555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44241375068323"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241375101091"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375133859"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241375166627"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241375199395"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375232163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241375264931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241375297699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241375330467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241375363235"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241375396003"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375428771"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241375461539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241375494307"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375527075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241375559843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241375592611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241375625379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241375658147"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241375690915"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375723683"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241375756451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241375789219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241375821987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241375854755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241375887523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241375920291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241375953059"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44241375985827"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44241376018595"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44241376051363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44241376084131"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44241376116899"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44241376149667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44241376182435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44241376215203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44241376247971"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563809173667"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563809206435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563809239203"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563809271971"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563809304739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563809337507"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563809370275"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563809403043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563809435811"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563809468579"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563809501347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563809534115"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563809566883"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563809599651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563809632419"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "60c3400b1c764e1d",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/colombian.jpg?v=1715966110",
+  "platform": "shopify",
+  "product_id": "8291413098659",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Woodshed Single Origin"
+  ],
+  "title": "Colombian Decaf | Swiss Water® Processed Decaf",
+  "url": "https://www.woodshedroast.com/products/colombian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44241376346275"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44241376379043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44241376411811"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241376444579"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241376477347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241376510115"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241376542883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241376575651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241376608419"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241376641187"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241376673955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241376706723"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44241376739491"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44241376772259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44241376805027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44563845284003"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44563845316771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44563845349539"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44563845382307"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44563845415075"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44563845447843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44563845480611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44563845513379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44563845546147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44563845578915"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44563845611683"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44563845644451"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44563845677219"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44563845709987"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44563845742755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44563845775523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44563845808291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44563845841059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44563845873827"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44563845906595"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44563845939363"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44563845972131"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44563846004899"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44563846037667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44563846070435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44563846103203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44563846135971"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44563846168739"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44563846201507"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44563846234275"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44563846267043"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44563846299811"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44563846332579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44563846365347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44563846398115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44563846430883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44563846463651"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44563846496419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44563846529187"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44563846561955"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44563846594723"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44563846627491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44563846660259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44563846693027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44563846725795"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "317e9aa06c1beea0",
+  "first_seen": "2026-10-26",
+  "handle": "signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/signature-blend.jpg?v=1715978545",
+  "platform": "shopify",
+  "product_id": "8291413131427",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Signature Blend",
+  "url": "https://www.woodshedroast.com/products/signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241376837795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241376870563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241376903331"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241376936099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241376968867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241377001635"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241377034403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241377067171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241377099939"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241377132707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241377165475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241377198243"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241377231011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241377263779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241377296547"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "3c0c5833600f8391",
+  "first_seen": "2026-10-26",
+  "handle": "morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/morning-blend.jpg?v=1715978526",
+  "platform": "shopify",
+  "product_id": "8291413164195",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Morning Blend",
+  "url": "https://www.woodshedroast.com/products/morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241377329315"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241377362083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241377394851"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241377427619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241377460387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241377493155"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241377525923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241377558691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241377591459"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241377624227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241377656995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241377689763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241377722531"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241377755299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241377788067"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "6c7de0a1563bc16c",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/espresso-blend.jpg?v=1729176402",
+  "platform": "shopify",
+  "product_id": "8291413196963",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.woodshedroast.com/products/espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241377820835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241377853603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241377886371"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241377919139"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241377951907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241377984675"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241378017443"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241378050211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241378082979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241378115747"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241378148515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241378181283"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241378214051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241378246819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241378279587"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "5dcc179ce48b2472",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/french-roast.jpg?v=1715978568",
+  "platform": "shopify",
+  "product_id": "8291413229731",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "French Roast Blend",
+  "url": "https://www.woodshedroast.com/products/french-roast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "14 oz Package / Whole Bean",
+    "variant_id": "44241378312355"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "14 oz Package / Percolator Grind",
+    "variant_id": "44241378345123"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "14 oz Package / French Press Grind",
+    "variant_id": "44241378377891"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "14 oz Package / Fine Grind",
+    "variant_id": "44241378410659"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "14 oz Package / Drip Grind",
+    "variant_id": "44241378443427"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "10 oz Package / Whole Bean",
+    "variant_id": "44241378476195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "10 oz Package / Percolator Grind",
+    "variant_id": "44241378508963"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "10 oz Package / French Press Grind",
+    "variant_id": "44241378541731"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "10 oz Package / Fine Grind",
+    "variant_id": "44241378574499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "10 oz Package / Drip Grind",
+    "variant_id": "44241378607267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Package / Whole Bean",
+    "variant_id": "44241378640035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Package / Percolator Grind",
+    "variant_id": "44241378672803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Package / French Press Grind",
+    "variant_id": "44241378705571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Package / Fine Grind",
+    "variant_id": "44241378738339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5 lb Package / Drip Grind",
+    "variant_id": "44241378771107"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "c23e50bf81219d55",
+  "first_seen": "2026-10-26",
+  "handle": "winnipesaukee-weekend-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/p_winnipesaukee_748e8e14-ecb0-485b-a8c2-36ad0b10a194.jpg?v=1715978207",
+  "platform": "shopify",
+  "product_id": "8291413295267",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Winnipesaukee Weekend Blend",
+  "url": "https://www.woodshedroast.com/products/winnipesaukee-weekend-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241378836643"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241378869411"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241378902179"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241378934947"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241378967715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241379000483"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241379033251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241379066019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241379098787"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241379131555"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241379164323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241379197091"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241379229859"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241379262627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241379295395"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "983d3ca3979d75d7",
+  "first_seen": "2026-10-26",
+  "handle": "fat-tire-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/fat-tire_394d1613-52e3-4ba8-ab0c-f5fcb6261e99.jpg?v=1715978493",
+  "platform": "shopify",
+  "product_id": "8291413328035",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Fat Tire Blend",
+  "url": "https://www.woodshedroast.com/products/fat-tire-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241379328163"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241379360931"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241379393699"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241379426467"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241379459235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241379492003"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241379524771"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241379557539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241379590307"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241379623075"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241379655843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241379688611"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241379721379"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241379754147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241379786915"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "5608ffc21a70f607",
+  "first_seen": "2026-10-26",
+  "handle": "lakehouse-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/lake-house.jpg?v=1715978314",
+  "platform": "shopify",
+  "product_id": "8291413393571",
+  "product_type": "Our Own Blends",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Our Own Blends"
+  ],
+  "title": "Lakehouse Blend",
+  "url": "https://www.woodshedroast.com/products/lakehouse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44241379852451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44241379885219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44241379917987"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44241379950755"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44241379983523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44241380016291"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44241380049059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44241380081827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44241380114595"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44241380147363"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44241380180131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44241380212899"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44241380245667"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44241380278435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44241380311203"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "e3295754c8adaf4a",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffee-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/decaf-flavored_39a939d0-2efc-4d19-9285-5accb9452443.jpg?v=1715975885",
+  "platform": "shopify",
+  "product_id": "8291414245539",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Flavored Coffee"
+  ],
+  "title": "Decaf Flavored Coffee 14oz | Swiss Water® Processed",
+  "url": "https://www.woodshedroast.com/products/flavored-coffee-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Cappuccino",
+    "variant_id": "44241385947299"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Banana",
+    "variant_id": "44241385980067"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / German Chocolate",
+    "variant_id": "44241386012835"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Blueberry",
+    "variant_id": "44241386045603"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Piña Colada",
+    "variant_id": "44241386078371"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Blueberry Cinnamon Crumble",
+    "variant_id": "44241386111139"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / French Vanilla",
+    "variant_id": "44241386143907"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Cinnamon Bun",
+    "variant_id": "44241386176675"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Rainforest Crunch",
+    "variant_id": "44241386209443"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Peaches & Cream",
+    "variant_id": "44241386242211"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Hawaiian Coconut",
+    "variant_id": "44241386274979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Amaretto",
+    "variant_id": "44241386340515"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / NH Maple",
+    "variant_id": "44241386373283"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Pumpkin Spice",
+    "variant_id": "44241386406051"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Hazelnut",
+    "variant_id": "44241386438819"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Banana Mocha",
+    "variant_id": "44241386471587"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Toasted Almond",
+    "variant_id": "44241386504355"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Vanilla Caramel",
+    "variant_id": "44241386537123"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Vanilla Cupcake",
+    "variant_id": "44241386569891"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Cheesecake",
+    "variant_id": "44241386602659"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Red Velvet Cake",
+    "variant_id": "44241386635427"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Peppermint",
+    "variant_id": "44241386668195"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Hawaiian Hazelnut",
+    "variant_id": "44241386733731"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Chocolate Peanut Butter",
+    "variant_id": "44241386766499"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Eggnog",
+    "variant_id": "44241386799267"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Sea Salt Caramel",
+    "variant_id": "44241386832035"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Strawberry Cheesecake",
+    "variant_id": "44241386864803"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Butternut",
+    "variant_id": "44241386897571"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Caramel Crunch",
+    "variant_id": "44241386930339"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Jamaican Me Crazy",
+    "variant_id": "44241386963107"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / White Russian",
+    "variant_id": "44241386995875"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / English Toffee",
+    "variant_id": "44241387028643"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Creme Brulee",
+    "variant_id": "44241387061411"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Butterscotch Toffee",
+    "variant_id": "44241387094179"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Cookies and Cream",
+    "variant_id": "44241387126947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Gingerbread",
+    "variant_id": "44241387159715"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Honey Nut",
+    "variant_id": "44241387192483"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / S'mores",
+    "variant_id": "44241387225251"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Toasted Prailine",
+    "variant_id": "44241387258019"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Chocolate Raspberry",
+    "variant_id": "44241387290787"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Apple Cinnamon",
+    "variant_id": "44536598659235"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Caramel Apple",
+    "variant_id": "44536598692003"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Chocolate Cherry Cordial",
+    "variant_id": "44536598724771"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Double Chocolate Nut Fudge",
+    "variant_id": "44536598757539"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Mint Chocolate",
+    "variant_id": "44536598790307"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Pistachio",
+    "variant_id": "44536598823075"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Southern Pecan",
+    "variant_id": "44536598855843"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Butterscotch",
+    "variant_id": "44549268045987"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 16.0,
+    "title": "14 oz Package / Irish Cream",
+    "variant_id": "44549268078755"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "1afc360b7cfba6c0",
+  "first_seen": "2026-10-26",
+  "handle": "timor-decaf-swiss-water-process",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/sumatra.jpg?v=1715966366",
+  "platform": "shopify",
+  "product_id": "8291414376611",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Woodshed Single Origin"
+  ],
+  "title": "Sumatra Decaf | Swiss Water® Process",
+  "url": "https://www.woodshedroast.com/products/timor-decaf-swiss-water-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44241392664739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44241392730275"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44241392763043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44241392828579"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44241392861347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44241392926883"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44241392959651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44241393025187"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44241393057955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44241393123491"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium-Dark Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44241393156259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.0,
+    "title": "Medium-Dark Roast / Whole Bean / 10 oz Package",
+    "variant_id": "44241393189027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium-Dark Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44241393221795"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium-Dark Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44241393254563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.0,
+    "title": "Medium-Dark Roast / Drip Grind / 10 oz Package",
+    "variant_id": "44241393287331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium-Dark Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44241393320099"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44241393352867"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 10 oz Package",
+    "variant_id": "44241393385635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44241393418403"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium-Dark Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44241393451171"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.0,
+    "title": "Medium-Dark Roast / French Press Grind / 10 oz Package",
+    "variant_id": "44241393483939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium-Dark Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44241393516707"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Medium-Dark Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44241393549475"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 14.0,
+    "title": "Medium-Dark Roast / Fine Grind / 10 oz Package",
+    "variant_id": "44241393582243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Medium-Dark Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44241393615011"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Dark Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44241393647779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Dark Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44241393713315"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Dark Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44241393746083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Dark Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44241393811619"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Dark Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44241393844387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Dark Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44241393909923"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Dark Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44241393942691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Dark Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44241394008227"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 18.0,
+    "title": "Dark Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44241394040995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Dark Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44241394106531"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "207e9db6a938d9a5",
+  "first_seen": "2026-10-26",
+  "handle": "bolivian",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/bolivia.jpg?v=1715977838",
+  "platform": "shopify",
+  "product_id": "8291415326883",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Bolivia | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/bolivian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 ounce / Light Roast",
+    "variant_id": "44241401905315"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 ounce / Medium Roast",
+    "variant_id": "44241401938083"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 ounce / Medium-Dark Roast",
+    "variant_id": "44241401970851"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 ounce / Dark Roast",
+    "variant_id": "44241402003619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 ounce / Light Roast",
+    "variant_id": "44241402036387"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 ounce / Medium Roast",
+    "variant_id": "44241402069155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 ounce / Medium-Dark Roast",
+    "variant_id": "44241402101923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 ounce / Dark Roast",
+    "variant_id": "44241402134691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Fine Grind / 5 Lb Bulk / Light Roast",
+    "variant_id": "44241402167459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Fine Grind / 5 Lb Bulk / Medium Roast",
+    "variant_id": "44241402200227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Fine Grind / 5 Lb Bulk / Medium-Dark Roast",
+    "variant_id": "44241402232995"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Fine Grind / 5 Lb Bulk / Dark Roast",
+    "variant_id": "44241402265763"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 ounce / Light Roast",
+    "variant_id": "44241402298531"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 ounce / Medium Roast",
+    "variant_id": "44241402331299"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 ounce / Medium-Dark Roast",
+    "variant_id": "44241402364067"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 ounce / Dark Roast",
+    "variant_id": "44241402396835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 ounce / Light Roast",
+    "variant_id": "44241402429603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 ounce / Medium Roast",
+    "variant_id": "44241402462371"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 ounce / Medium-Dark Roast",
+    "variant_id": "44241402495139"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 ounce / Dark Roast",
+    "variant_id": "44241402527907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Drip Grind / 5 Lb Bulk / Light Roast",
+    "variant_id": "44241402560675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Drip Grind / 5 Lb Bulk / Medium Roast",
+    "variant_id": "44241402593443"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Drip Grind / 5 Lb Bulk / Medium-Dark Roast",
+    "variant_id": "44241402626211"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Drip Grind / 5 Lb Bulk / Dark Roast",
+    "variant_id": "44241402658979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 ounce / Light Roast",
+    "variant_id": "44241402691747"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 ounce / Medium Roast",
+    "variant_id": "44241402724515"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 ounce / Medium-Dark Roast",
+    "variant_id": "44241402757283"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 ounce / Dark Roast",
+    "variant_id": "44241402790051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 ounce / Light Roast",
+    "variant_id": "44241402822819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 ounce / Medium Roast",
+    "variant_id": "44241402855587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 ounce / Medium-Dark Roast",
+    "variant_id": "44241402888355"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 ounce / Dark Roast",
+    "variant_id": "44241402921123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "French Press Grind / 5 Lb Bulk / Light Roast",
+    "variant_id": "44241402953891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "French Press Grind / 5 Lb Bulk / Medium Roast",
+    "variant_id": "44241402986659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "French Press Grind / 5 Lb Bulk / Medium-Dark Roast",
+    "variant_id": "44241403019427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "French Press Grind / 5 Lb Bulk / Dark Roast",
+    "variant_id": "44241403052195"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole bean / 14 ounce / Light Roast",
+    "variant_id": "44241403084963"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole bean / 14 ounce / Medium Roast",
+    "variant_id": "44241403117731"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole bean / 14 ounce / Medium-Dark Roast",
+    "variant_id": "44241403150499"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole bean / 14 ounce / Dark Roast",
+    "variant_id": "44241403183267"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole bean / 10 ounce / Light Roast",
+    "variant_id": "44241403216035"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole bean / 10 ounce / Medium Roast",
+    "variant_id": "44241403248803"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole bean / 10 ounce / Medium-Dark Roast",
+    "variant_id": "44241403281571"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole bean / 10 ounce / Dark Roast",
+    "variant_id": "44241403314339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Whole bean / 5 Lb Bulk / Light Roast",
+    "variant_id": "44241403347107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Whole bean / 5 Lb Bulk / Medium Roast",
+    "variant_id": "44241403379875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Whole bean / 5 Lb Bulk / Medium-Dark Roast",
+    "variant_id": "44241403412643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Whole bean / 5 Lb Bulk / Dark Roast",
+    "variant_id": "44241403445411"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 ounce / Light Roast",
+    "variant_id": "44241403478179"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 ounce / Medium Roast",
+    "variant_id": "44241403510947"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 ounce / Medium-Dark Roast",
+    "variant_id": "44241403543715"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 ounce / Dark Roast",
+    "variant_id": "44241403576483"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 ounce / Light Roast",
+    "variant_id": "44241403609251"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 ounce / Medium Roast",
+    "variant_id": "44241403642019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 ounce / Medium-Dark Roast",
+    "variant_id": "44241403674787"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 ounce / Dark Roast",
+    "variant_id": "44241403707555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Percolator Grind / 5 Lb Bulk / Light Roast",
+    "variant_id": "44241403740323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Percolator Grind / 5 Lb Bulk / Medium Roast",
+    "variant_id": "44241403773091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Percolator Grind / 5 Lb Bulk / Medium-Dark Roast",
+    "variant_id": "44241403805859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "Percolator Grind / 5 Lb Bulk / Dark Roast",
+    "variant_id": "44241403838627"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "1fc9a4bd2add417e",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/costa-rica.jpg?v=1715977879",
+  "platform": "shopify",
+  "product_id": "8413211394211",
+  "product_type": "Single Origin Offerings",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "International",
+   "Woodshed Single Origin"
+  ],
+  "title": "Costa Rica | Single Origin Coffee",
+  "url": "https://www.woodshedroast.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium Roast",
+    "variant_id": "44536480333987"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44536480465059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Dark Roast",
+    "variant_id": "44536480563363"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium Roast",
+    "variant_id": "44536480661667"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44536480759971"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package / Dark Roast",
+    "variant_id": "44536480891043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium Roast",
+    "variant_id": "44536480989347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44536481087651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Dark Roast",
+    "variant_id": "44536481185955"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44536481317027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44536481415331"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44536481513635"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44536481611939"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44536481710243"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44536481808547"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44536481906851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44536482005155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44536482136227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44536482201763"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44536482300067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44536482398371"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44536482496675"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44536482594979"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44536482627747"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44536482660515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44536482693283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44536482726051"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44536482758819"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44536482791587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44536482824355"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44536482857123"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44536482889891"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44536482922659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44536482955427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44536482988195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44536483020963"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium Roast",
+    "variant_id": "44536483053731"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Medium-Dark Roast",
+    "variant_id": "44536483086499"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Dark Roast",
+    "variant_id": "44536483119267"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium Roast",
+    "variant_id": "44536483152035"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Medium-Dark Roast",
+    "variant_id": "44536483184803"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Dark Roast",
+    "variant_id": "44536483217571"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium Roast",
+    "variant_id": "44536483250339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Medium-Dark Roast",
+    "variant_id": "44536483283107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Dark Roast",
+    "variant_id": "44536483315875"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 10 oz Package / Light Roast",
+    "variant_id": "44563810255011"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 11.0,
+    "title": "Whole Bean / 14 oz Package / Light Roast",
+    "variant_id": "44563810287779"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Whole Bean / 5 lb Package / Light Roast",
+    "variant_id": "44563810320547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Drip Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563810353315"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563810386083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Drip Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563810418851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Percolator Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563810451619"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563810484387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Percolator Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563810549923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "French Press Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563810582691"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563810615459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "French Press Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563810648227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 11.0,
+    "title": "Fine Grind / 10 oz Package / Light Roast",
+    "variant_id": "44563810680995"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package / Light Roast",
+    "variant_id": "44563810713763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Fine Grind / 5 lb Package / Light Roast",
+    "variant_id": "44563810746531"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "6442eacdd4b32fcd",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-decaf-swiss-water®-processed-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/honduran_b94c75ee-9695-497d-977f-dc9a957afaad.jpg?v=1715976743",
+  "platform": "shopify",
+  "product_id": "8413228859555",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated"
+  ],
+  "title": "Honduran Decaf | Swiss Water® Processed Decaf",
+  "url": "https://www.woodshedroast.com/products/honduran-decaf-swiss-water®-processed-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Whole Bean / 10 oz Package",
+    "variant_id": "44536564547747"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Whole Bean / 14 oz Package",
+    "variant_id": "44536564580515"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean / 5 lb Package",
+    "variant_id": "44536564613283"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Percolator Grind / 10 oz Package",
+    "variant_id": "44536564646051"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Percolator Grind / 14 oz Package",
+    "variant_id": "44536564678819"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Percolator Grind / 5 lb Package",
+    "variant_id": "44536564711587"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "French Press Grind / 10 oz Package",
+    "variant_id": "44536564744355"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "French Press Grind / 14 oz Package",
+    "variant_id": "44536564777123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press Grind / 5 lb Package",
+    "variant_id": "44536564809891"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Fine Grind / 10 oz Package",
+    "variant_id": "44536564842659"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Fine Grind / 14 oz Package",
+    "variant_id": "44536564875427"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Fine Grind / 5 lb Package",
+    "variant_id": "44536564908195"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Drip Grind / 10 oz Package",
+    "variant_id": "44536564940963"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Drip Grind / 14 oz Package",
+    "variant_id": "44536564973731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Drip Grind / 5 lb Package",
+    "variant_id": "44536565006499"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "d7743349ab4a13d4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored-coffee-swiss-water®-processed",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/decaf-flavor-large-bag.jpg?v=1715976236",
+  "platform": "shopify",
+  "product_id": "8413239279779",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Flavored Coffee"
+  ],
+  "title": "Decaf Flavored Coffee 5lb | Swiss Water® Processed",
+  "url": "https://www.woodshedroast.com/products/decaf-flavored-coffee-swiss-water®-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Amaretto",
+    "variant_id": "44536602689699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Apple Cinnamon",
+    "variant_id": "44536602722467"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Banana",
+    "variant_id": "44536602755235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Banana Mocha",
+    "variant_id": "44536602788003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Blueberry",
+    "variant_id": "44536602820771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Blueberry Cinnamon Crumble",
+    "variant_id": "44536602853539"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Butternut",
+    "variant_id": "44536602886307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Butterscotch Toffee",
+    "variant_id": "44536602919075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Cappuccino",
+    "variant_id": "44536602951843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Caramel Apple",
+    "variant_id": "44536602984611"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Caramel Crunch",
+    "variant_id": "44536603017379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Cheesecake",
+    "variant_id": "44536603050147"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Chocolate Cherry Cordial",
+    "variant_id": "44536603082915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Chocolate Peanut Butter",
+    "variant_id": "44536603115683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Chocolate Raspberry",
+    "variant_id": "44536603148451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Cinnamon Bun",
+    "variant_id": "44536603181219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Cookies and Cream",
+    "variant_id": "44536603213987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Creme Brulee",
+    "variant_id": "44536603246755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Double Chocolate Nut Fudge",
+    "variant_id": "44536603279523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Eggnog",
+    "variant_id": "44536603312291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / English Toffee",
+    "variant_id": "44536603345059"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / French Vanilla",
+    "variant_id": "44536603377827"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / German Chocolate",
+    "variant_id": "44536603410595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Gingerbread",
+    "variant_id": "44536603443363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Hawaiian Coconut",
+    "variant_id": "44536603476131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Hawaiian Hazelnut",
+    "variant_id": "44536603508899"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Hazelnut",
+    "variant_id": "44536603541667"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Honey Nut",
+    "variant_id": "44536603574435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Jamaican Me Crazy",
+    "variant_id": "44536603607203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Mint Chocolate",
+    "variant_id": "44536603639971"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / NH Maple",
+    "variant_id": "44536603672739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Peaches & Cream",
+    "variant_id": "44536603705507"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Peppermint",
+    "variant_id": "44536603738275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Piña Colada",
+    "variant_id": "44536603771043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Pistachio",
+    "variant_id": "44536603803811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Pumpkin Spice",
+    "variant_id": "44536603836579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Rainforest Crunch",
+    "variant_id": "44536603869347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Red Velvet Cake",
+    "variant_id": "44536603902115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / S'mores",
+    "variant_id": "44536603934883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Sea Salt Caramel",
+    "variant_id": "44536603967651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Southern Pecan",
+    "variant_id": "44536604000419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Strawberry Cheesecake",
+    "variant_id": "44536604033187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Toasted Almond",
+    "variant_id": "44536604065955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Toasted Prailine",
+    "variant_id": "44536604098723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Vanilla Caramel",
+    "variant_id": "44536604131491"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Vanilla Cupcake",
+    "variant_id": "44536604164259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / White Russian",
+    "variant_id": "44536604262563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Butterscotch",
+    "variant_id": "44549280039075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Package / Irish Cream",
+    "variant_id": "44549280071843"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "49ca27d24c0ec45d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honduran-swiss-water®-process-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/honduran.jpg?v=1715966130",
+  "platform": "shopify",
+  "product_id": "8417104330915",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Woodshed Single Origin"
+  ],
+  "title": "Honduran Decaf | Swiss Water® Processed",
+  "url": "https://www.woodshedroast.com/products/decaf-honduran-swiss-water®-process-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium Roast / Whole Bean / 10 oz Package",
+    "variant_id": "44548931748003"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44548931780771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44548931813539"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium Roast / Drip Grind / 10 oz Package",
+    "variant_id": "44548931846307"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44548931879075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44548931911843"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium Roast / Percolator Grind / 10 oz Package",
+    "variant_id": "44548931944611"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44548931977379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44548932010147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium Roast / French Press Grind / 10 oz Package",
+    "variant_id": "44548932042915"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44548932108451"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44548932141219"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium Roast / Fine Grind / 10 oz Package",
+    "variant_id": "44548932173987"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44548932206755"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44548932272291"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium-Dark Roast / Whole Bean / 10 oz Package",
+    "variant_id": "44548932337827"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium-Dark Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44548932436131"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Medium-Dark Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44548932534435"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium-Dark Roast / Drip Grind / 10 oz Package",
+    "variant_id": "44548932599971"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium-Dark Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44548932698275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium-Dark Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44548932763811"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 10 oz Package",
+    "variant_id": "44548932796579"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44548932829347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium-Dark Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44548932862115"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium-Dark Roast / French Press Grind / 10 oz Package",
+    "variant_id": "44548932894883"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium-Dark Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44548932927651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium-Dark Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44548932960419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Medium-Dark Roast / Fine Grind / 10 oz Package",
+    "variant_id": "44548932993187"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Medium-Dark Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44548933025955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Medium-Dark Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44548933058723"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Dark Roast / Whole Bean / 10 oz Package",
+    "variant_id": "44548933091491"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Dark Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44548933124259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Dark Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44548933189795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Dark Roast / Drip Grind / 10 oz Package",
+    "variant_id": "44548933222563"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Dark Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44548933255331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Dark Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44548933288099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Dark Roast / Percolator Grind / 10 oz Package",
+    "variant_id": "44548933320867"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Dark Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44548933353635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Dark Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44548933386403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Dark Roast / French Press Grind / 10 oz Package",
+    "variant_id": "44548933419171"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Dark Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44548933451939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Dark Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44548933484707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Dark Roast / Fine Grind / 10 oz Package",
+    "variant_id": "44548933517475"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Dark Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44548933550243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Dark Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44548933583011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Light Roast / Whole Bean / 10 oz Package",
+    "variant_id": "44563849576611"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Light Roast / Whole Bean / 14 oz Package",
+    "variant_id": "44563849609379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Light Roast / Whole Bean / 5 lb Package",
+    "variant_id": "44563849642147"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Light Roast / Drip Grind / 10 oz Package",
+    "variant_id": "44563849674915"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Light Roast / Drip Grind / 14 oz Package",
+    "variant_id": "44563849707683"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Light Roast / Drip Grind / 5 lb Package",
+    "variant_id": "44563849740451"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Light Roast / Percolator Grind / 10 oz Package",
+    "variant_id": "44563849773219"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Light Roast / Percolator Grind / 14 oz Package",
+    "variant_id": "44563849805987"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Light Roast / Percolator Grind / 5 lb Package",
+    "variant_id": "44563849838755"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Light Roast / French Press Grind / 10 oz Package",
+    "variant_id": "44563849871523"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Light Roast / French Press Grind / 14 oz Package",
+    "variant_id": "44563849904291"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Light Roast / French Press Grind / 5 lb Package",
+    "variant_id": "44563849937059"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "Light Roast / Fine Grind / 10 oz Package",
+    "variant_id": "44563849969827"
+   },
+   {
+    "available": true,
+    "grams": 397,
+    "price_usd": 15.0,
+    "title": "Light Roast / Fine Grind / 14 oz Package",
+    "variant_id": "44563850002595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "Light Roast / Fine Grind / 5 lb Package",
+    "variant_id": "44563850035363"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ },
+ {
+  "body_hash": "a8801997bd74e5de",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored-coffee-10oz-swiss-water®-processed",
+  "image": "https://cdn.shopify.com/s/files/1/0641/3533/2003/files/decaf-flavored.jpg?v=1715966710",
+  "platform": "shopify",
+  "product_id": "8417181696163",
+  "product_type": "Flavored Coffee",
+  "roaster_slug": "woodshedroast",
+  "tags": [
+   "Decaffeinated",
+   "Flavored Coffee"
+  ],
+  "title": "Decaf Flavored Coffee 10oz | Swiss Water® Processed",
+  "url": "https://www.woodshedroast.com/products/decaf-flavored-coffee-10oz-swiss-water®-processed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Amaretto",
+    "variant_id": "44549211422883"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Apple Cinnamon",
+    "variant_id": "44549211455651"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Banana",
+    "variant_id": "44549211488419"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Banana Mocha",
+    "variant_id": "44549211521187"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Blueberry",
+    "variant_id": "44549211553955"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Blueberry Cinnamon Crumble",
+    "variant_id": "44549211586723"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Butternut",
+    "variant_id": "44549211619491"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Butterscotch Toffee",
+    "variant_id": "44549211652259"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Cappuccino",
+    "variant_id": "44549211685027"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Caramel Apple",
+    "variant_id": "44549211717795"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Caramel Crunch",
+    "variant_id": "44549211750563"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Cheesecake",
+    "variant_id": "44549211783331"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Chocolate Cherry Cordial",
+    "variant_id": "44549211816099"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Chocolate Peanut Butter",
+    "variant_id": "44549211848867"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Chocolate Raspberry",
+    "variant_id": "44549211881635"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Cinnamon Bun",
+    "variant_id": "44549211914403"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Cookies and Cream",
+    "variant_id": "44549211947171"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Creme Brulee",
+    "variant_id": "44549211979939"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Double Chocolate Nut Fudge",
+    "variant_id": "44549212012707"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Eggnog",
+    "variant_id": "44549212045475"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / English Toffee",
+    "variant_id": "44549212078243"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / French Vanilla",
+    "variant_id": "44549212111011"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / German Chocolate",
+    "variant_id": "44549212143779"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Gingerbread",
+    "variant_id": "44549212176547"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Hawaiian Coconut",
+    "variant_id": "44549212209315"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Hawaiian Hazelnut",
+    "variant_id": "44549212242083"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Hazelnut",
+    "variant_id": "44549212274851"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Honey Nut",
+    "variant_id": "44549212307619"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Jamaican Me Crazy",
+    "variant_id": "44549212340387"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Mint Chocolate",
+    "variant_id": "44549212373155"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / NH Maple",
+    "variant_id": "44549212405923"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Peaches & Cream",
+    "variant_id": "44549212438691"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Peppermint",
+    "variant_id": "44549212471459"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Piña Colada",
+    "variant_id": "44549212504227"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Pistachio",
+    "variant_id": "44549212536995"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Pumpkin Spice",
+    "variant_id": "44549212569763"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Rainforest Crunch",
+    "variant_id": "44549212602531"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Red Velvet Cake",
+    "variant_id": "44549212635299"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / S'mores",
+    "variant_id": "44549212668067"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Sea Salt Caramel",
+    "variant_id": "44549212700835"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Southern Pecan",
+    "variant_id": "44549212733603"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Strawberry Cheesecake",
+    "variant_id": "44549212766371"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Toasted Almond",
+    "variant_id": "44549212799139"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Toasted Praline",
+    "variant_id": "44549212831907"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Vanilla Caramel",
+    "variant_id": "44549212864675"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Vanilla Cupcake",
+    "variant_id": "44549212897443"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / White Russian",
+    "variant_id": "44549212995747"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Butterscotch",
+    "variant_id": "44549250810019"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 12.0,
+    "title": "10 oz Package / Irish Cream",
+    "variant_id": "44549250842787"
+   }
+  ],
+  "vendor": "Woodshed Roast Coffee"
+ }
+]

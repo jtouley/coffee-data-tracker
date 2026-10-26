@@ -1,0 +1,474 @@
+[
+ {
+  "body_hash": "dc893a6565d154bc",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-cerrado-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/a_cafe_do_Brazil_Cerrado_Blind_Tiger.png?v=1777913669",
+  "platform": "shopify",
+  "product_id": "8766214471878",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Caramel",
+   "Cocoa",
+   "Coffee",
+   "Coffee > Single Origin",
+   "Medium Roast"
+  ],
+  "title": "Brazil Cerrado",
+  "url": "https://blindtigercoffeeroasters.com/products/brazil-cerrado-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615575750"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "b28ec54462021efd",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_Espresso_Blend_coffee_bag.png?v=1777913489",
+  "platform": "shopify",
+  "product_id": "8766214537414",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > House Blends",
+   "Dark Roast"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://blindtigercoffeeroasters.com/products/espresso-blend-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615870662"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "fbe2fe60b7cacbb0",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Cafe_de_Mexico_Blind_Tiger_Coffee_bag.png?v=1777913431",
+  "platform": "shopify",
+  "product_id": "8766214570182",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Citrus",
+   "Coffee > Single Origin",
+   "Light Roast",
+   "coffee",
+   "mexican chiapas",
+   "whole bean"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://blindtigercoffeeroasters.com/products/mexico-chiapas-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615936198"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "f600089f575ac332",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_decaf_blend.png?v=1777913008",
+  "platform": "shopify",
+  "product_id": "8766214602950",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > House Blends",
+   "Coffee > Single Origin",
+   "Medium Roast"
+  ],
+  "title": "Decaf Whole Bean",
+  "url": "https://blindtigercoffeeroasters.com/products/decaf-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615706822"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "3ed9c6f3c2de8dbd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe-8oz-whole-bean-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Ethiopia_single_origin_Blind_Tiger.png?v=1777912871",
+  "platform": "shopify",
+  "product_id": "8766214668486",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Citrus",
+   "Coffee",
+   "Coffee > Single Origin",
+   "Light Roast"
+  ],
+  "title": "Ethiopia Yirgacheffe",
+  "url": "https://blindtigercoffeeroasters.com/products/ethiopia-yirgacheffe-8oz-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615805126"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "0150f33132dabad1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-anserma-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_Colombia_Anserma_bag.png?v=1777908130",
+  "platform": "shopify",
+  "product_id": "8766214832326",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Caramel",
+   "Coffee",
+   "Coffee > Single Origin",
+   "Medium Roast"
+  ],
+  "title": "Colombia Anserma",
+  "url": "https://blindtigercoffeeroasters.com/products/colombia-anserma-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480615968966"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "f0ab36170e0060f1",
+  "first_seen": "2026-10-26",
+  "handle": "florida-man-blend-2025-edition-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Florida_Man_Blind_Tiger_coffee_roasters_one.webp?v=1779109624",
+  "platform": "shopify",
+  "product_id": "8766215389382",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Limited Edition Blends",
+   "blend",
+   "coffee",
+   "whole bean"
+  ],
+  "title": "Florida Man Blend",
+  "url": "https://blindtigercoffeeroasters.com/products/florida-man-blend-2025-edition-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480616788166"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "abf4f0499bed9015",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-vanilla-12-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Mexican_Vanilla_Blind_Tiger.png?v=1777906642",
+  "platform": "shopify",
+  "product_id": "8766215520454",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > Flavored",
+   "Coffee > K-cup Pods",
+   "Featured Coffee"
+  ],
+  "title": "Mexican Vanilla - 12 Cups",
+  "url": "https://blindtigercoffeeroasters.com/products/mexican-vanilla-12-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45480616591558"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "6284a185af038f8f",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-12-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_Hazelnut_K-Cups.png?v=1777906555",
+  "platform": "shopify",
+  "product_id": "8766215585990",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > Flavored",
+   "Coffee > K-cup Pods"
+  ],
+  "title": "Hazelnut - 12 Cups",
+  "url": "https://blindtigercoffeeroasters.com/products/hazelnut-12-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45480616722630"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "28d31f29010315f0",
+  "first_seen": "2026-10-26",
+  "handle": "blind-tiger-house-blend-coffee-whole-bean-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_house_blend_coffee.webp?v=1779107781",
+  "platform": "shopify",
+  "product_id": "8766215618758",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Chocolate",
+   "Citrus",
+   "Coffee",
+   "Coffee > House Blends",
+   "Smooth"
+  ],
+  "title": "Blind Tiger House Blend Coffee",
+  "url": "https://blindtigercoffeeroasters.com/products/blind-tiger-house-blend-coffee-whole-bean-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480616526022"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "2a5698e12c5c61e3",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-mocha-12-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Peppermint_mocha_K_Cups.png?v=1777906429",
+  "platform": "shopify",
+  "product_id": "8766215651526",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > Flavored",
+   "Coffee > K-cup Pods",
+   "Flavored Coffee"
+  ],
+  "title": "Peppermint Mocha - 12 Cups",
+  "url": "https://blindtigercoffeeroasters.com/products/peppermint-mocha-12-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45480616820934"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "31e0814bc6dd1dab",
+  "first_seen": "2026-10-26",
+  "handle": "pirates-plunder-whole-bean-coffee-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Pirates_Plunder_Blind_Tiger_Coffee_Roasters.webp?v=1779107646",
+  "platform": "shopify",
+  "product_id": "8766215684294",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Caramel",
+   "Citrus",
+   "Cocoa",
+   "Coffee",
+   "Coffee > House Blends",
+   "Limited Edition Blends"
+  ],
+  "title": "Pirate's Plunder",
+  "url": "https://blindtigercoffeeroasters.com/products/pirates-plunder-whole-bean-coffee-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480616624326"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "674f20e2e319820f",
+  "first_seen": "2026-10-26",
+  "handle": "third-quarter-blend-coffee-whole-bean-8oz",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Third_Quarter_Coffee_Blend._Blind_Tiger.png?v=1777905837",
+  "platform": "shopify",
+  "product_id": "8766215717062",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Limited Edition Blends",
+   "New",
+   "third quarter blend",
+   "whole bean"
+  ],
+  "title": "Third Quarter Blend Coffee",
+  "url": "https://blindtigercoffeeroasters.com/products/third-quarter-blend-coffee-whole-bean-8oz",
+  "variants": [
+   {
+    "available": false,
+    "grams": 36,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45827466985670"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "4090c5e5876d9a47",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-12-cups",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Pumpkin_Spice_Blind_Tiger_Coffee_Roasters.png?v=1777905426",
+  "platform": "shopify",
+  "product_id": "8766215782598",
+  "product_type": "Coffee",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Coffee > Flavored",
+   "Coffee > K-cup Pods",
+   "Featured Coffee"
+  ],
+  "title": "Pumpkin Spice - 12 Cups",
+  "url": "https://blindtigercoffeeroasters.com/products/pumpkin-spice-12-cups",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "45480616886470"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "ccd99dc1b531e790",
+  "first_seen": "2026-10-26",
+  "handle": "tasters-collection-mug",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/Blind_Tiger_Travel_Collection.png?v=1777905111",
+  "platform": "shopify",
+  "product_id": "8766215880902",
+  "product_type": "Coffee",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Holiday Gifts"
+  ],
+  "title": "Travel Collection",
+  "url": "https://blindtigercoffeeroasters.com/products/tasters-collection-mug",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 70.0,
+    "title": "Default Title",
+    "variant_id": "45480617083078"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "d55d0b7f67dedb16",
+  "first_seen": "2026-10-26",
+  "handle": "white-walker-2025-edition",
+  "image": "https://cdn.shopify.com/s/files/1/0723/9778/3238/files/White-Walker-Blind-Tiger.png?v=1777902333",
+  "platform": "shopify",
+  "product_id": "8766215979206",
+  "product_type": "Coffee",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Limited Edition Blends",
+   "Limited Release"
+  ],
+  "title": "White Walker",
+  "url": "https://blindtigercoffeeroasters.com/products/white-walker-2025-edition",
+  "variants": [
+   {
+    "available": false,
+    "grams": 36,
+    "price_usd": 23.0,
+    "title": "Default Title",
+    "variant_id": "45480617115846"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "panama-relief-donation",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9110824091846",
+  "product_type": "",
+  "roaster_slug": "blindtigercoffeeroasters",
+  "tags": [],
+  "title": "Panama Relief Donation",
+  "url": "https://blindtigercoffeeroasters.com/products/panama-relief-donation",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "Default Title",
+    "variant_id": "48305901994182"
+   }
+  ],
+  "vendor": "Blind Tiger Coffee Roasters"
+ }
+]

@@ -1,0 +1,616 @@
+[
+ {
+  "body_hash": "77e4aba980e34862",
+  "first_seen": "2026-10-26",
+  "handle": "element-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/ELEMENT-text.jpg?v=1722879539",
+  "platform": "shopify",
+  "product_id": "1308312928319",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Medium Light",
+   "Subscription"
+  ],
+  "title": "Element",
+  "url": "https://www.lamillcoffee.com/products/element-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "32034116042815"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "40200968667199"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "1d4545bc884470f1",
+  "first_seen": "2026-10-26",
+  "handle": "bliss-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/BLISS-TEXT.jpg?v=1722879398",
+  "platform": "shopify",
+  "product_id": "1308323643455",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium",
+   "Subscription"
+  ],
+  "title": "Bliss",
+  "url": "https://www.lamillcoffee.com/products/bliss-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "32034055094335"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "40200956608575"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "e1d6450aa55cebef",
+  "first_seen": "2026-10-26",
+  "handle": "reservoir-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/RESERVOIR_Text.jpg?v=1722879672",
+  "platform": "shopify",
+  "product_id": "1308367880255",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium Dark",
+   "Subscription"
+  ],
+  "title": "Reservoir",
+  "url": "https://www.lamillcoffee.com/products/reservoir-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.0,
+    "title": "2 lbs",
+    "variant_id": "32034148417599"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10 oz",
+    "variant_id": "40200987050047"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "af1038d2c1f149e0",
+  "first_seen": "2026-10-26",
+  "handle": "velvet",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/VELVET_Text.jpg?v=1722879698",
+  "platform": "shopify",
+  "product_id": "1315332751423",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Medium",
+   "Subscription"
+  ],
+  "title": "Velvet",
+  "url": "https://www.lamillcoffee.com/products/velvet",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lbs",
+    "variant_id": "32034185510975"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "40200991080511"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "195ea6780f0c7e25",
+  "first_seen": "2026-10-26",
+  "handle": "black-onyx",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/BLACKONYX-text.jpg?v=1721253916",
+  "platform": "shopify",
+  "product_id": "1315342680127",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Dark",
+   "Subscription"
+  ],
+  "title": "Black Onyx",
+  "url": "https://www.lamillcoffee.com/products/black-onyx",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 53.0,
+    "title": "2 lbs",
+    "variant_id": "32034223423551"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10 oz",
+    "variant_id": "40200953036863"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "8cec6107abc54772",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-obscura",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/DEDCAFOBSCURACoffeeTiles202672DPI.jpg?v=1772489020",
+  "platform": "shopify",
+  "product_id": "1315359948863",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Decaf",
+   "Medium Dark",
+   "Subscription"
+  ],
+  "title": "Decaf Obscura",
+  "url": "https://www.lamillcoffee.com/products/decaf-obscura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "32034127282239"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "40200965849151"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "b1ea875ec5620735",
+  "first_seen": "2026-10-26",
+  "handle": "ratio",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/RATIO-text.jpg?v=1722879644",
+  "platform": "shopify",
+  "product_id": "4489829515327",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Espresso",
+   "Medium Light",
+   "Subscription"
+  ],
+  "title": "Ratio",
+  "url": "https://www.lamillcoffee.com/products/ratio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "32034157166655"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "40200976859199"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "145167322efbe33d",
+  "first_seen": "2026-10-26",
+  "handle": "lamill-porcelain-espresso-cups-and-saucers",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/products/KwangJuYo_E_aa35506a-c8b3-4459-b6e3-4d8acd68edcb.jpg?v=1643911952",
+  "platform": "shopify",
+  "product_id": "6868108279871",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Accessories",
+   "Drinkware"
+  ],
+  "title": "LAMILL Espresso Cups and Saucers",
+  "url": "https://www.lamillcoffee.com/products/lamill-porcelain-espresso-cups-and-saucers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 18.0,
+    "title": "3oz Espresso - Single Cup & Saucer",
+    "variant_id": "39587428565055"
+   },
+   {
+    "available": true,
+    "grams": 85,
+    "price_usd": 103.0,
+    "title": "3oz Espresso - Case of 6 Cups & Saucers",
+    "variant_id": "39587428663359"
+   }
+  ],
+  "vendor": "Kwangjuyo"
+ },
+ {
+  "body_hash": "145167322efbe33d",
+  "first_seen": "2026-10-26",
+  "handle": "lamill-porcelain-cappuccino-cups-and-saucers",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/products/KwangJuYo_C_91e945cc-6dd8-4fa3-b7bb-8037eb54d565.jpg?v=1643912171",
+  "platform": "shopify",
+  "product_id": "6868110147647",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Accessories",
+   "Drinkware"
+  ],
+  "title": "LAMILL Cappuccino Cups and Saucers",
+  "url": "https://www.lamillcoffee.com/products/lamill-porcelain-cappuccino-cups-and-saucers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 19.0,
+    "title": "6oz Cappuccino - Single Cup & Saucer",
+    "variant_id": "39587429810239"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 108.0,
+    "title": "6oz Cappuccino - Case of 6 Cups & Saucers",
+    "variant_id": "39587429908543"
+   }
+  ],
+  "vendor": "Kwangjuyo"
+ },
+ {
+  "body_hash": "145167322efbe33d",
+  "first_seen": "2026-10-26",
+  "handle": "lamill-porcelain-latte-cups-and-saucers",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/products/KwangJuYo_L_6b89efab-a3d3-4c23-b2ce-d29b4846b165.jpg?v=1643912213",
+  "platform": "shopify",
+  "product_id": "6868110966847",
+  "product_type": "Coffee Accessories",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Accessories",
+   "Drinkware"
+  ],
+  "title": "LAMILL Latte Cups and Saucers",
+  "url": "https://www.lamillcoffee.com/products/lamill-porcelain-latte-cups-and-saucers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz Latte - Single Cup & Saucer",
+    "variant_id": "39587430924351"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 114.0,
+    "title": "8oz Latte - Case of 6 Cups & Saucers",
+    "variant_id": "39587431022655"
+   }
+  ],
+  "vendor": "Kwangjuyo"
+ },
+ {
+  "body_hash": "f51716d601241864",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ratio",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/decaff-ratio-1x1text.jpg?v=1755817076",
+  "platform": "shopify",
+  "product_id": "7880875212863",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Decaf",
+   "Medium Light",
+   "Subscription",
+   "blends"
+  ],
+  "title": "Decaf Ratio",
+  "url": "https://www.lamillcoffee.com/products/decaf-ratio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "41973546876991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "41973546909759"
+   }
+  ],
+  "vendor": "LAMILL Wholesale"
+ },
+ {
+  "body_hash": "9adb38386a1da9c4",
+  "first_seen": "2026-10-26",
+  "handle": "mosaic",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/Mosaic-1x1TEXT.jpg?v=1756483193",
+  "platform": "shopify",
+  "product_id": "7885150617663",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Blends",
+   "Light Roast",
+   "Subscription"
+  ],
+  "title": "Mosaic",
+  "url": "https://www.lamillcoffee.com/products/mosaic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10 oz",
+    "variant_id": "41988919099455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.0,
+    "title": "2 lbs",
+    "variant_id": "41988919132223"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "9ec30e224d6829d1",
+  "first_seen": "2026-10-26",
+  "handle": "el-amaton-el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/ElAmaton.jpg?v=1764114467",
+  "platform": "shopify",
+  "product_id": "7968920469567",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Central America",
+   "Honey Process",
+   "Single Origin"
+  ],
+  "title": "El Amaton - El Salvador",
+  "url": "https://www.lamillcoffee.com/products/el-amaton-el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz",
+    "variant_id": "42555985100863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 65.0,
+    "title": "2 lbs",
+    "variant_id": "42555985133631"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "9f9925b0822e7408",
+  "first_seen": "2026-10-26",
+  "handle": "finca-juan-martin-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/FINCAJUANMARTINCoffeeTile_1-1Tile1200x1200.jpg?v=1769220886",
+  "platform": "shopify",
+  "product_id": "8057291341887",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Single Origin",
+   "South America",
+   "Washed Process"
+  ],
+  "title": "Finca Juan Martín - Colombia",
+  "url": "https://www.lamillcoffee.com/products/finca-juan-martin-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "10 oz",
+    "variant_id": "42769775919167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2 lbs",
+    "variant_id": "42769775951935"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "8cc9a2df2c3b036a",
+  "first_seen": "2026-10-26",
+  "handle": "el-cedro-peru",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/ELCEDROCoffeeTileswtext.jpg?v=1776264838",
+  "platform": "shopify",
+  "product_id": "8121121243199",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Single Origin",
+   "South America",
+   "Washed Process"
+  ],
+  "title": "El Cedro - Peru",
+  "url": "https://www.lamillcoffee.com/products/el-cedro-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "43069350903871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 62.0,
+    "title": "2 lbs",
+    "variant_id": "43069350936639"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "735e4737c89ba919",
+  "first_seen": "2026-10-26",
+  "handle": "idido-ethiopia-1",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/IdidoEthopiaCoffeeTile1-1.png?v=1781818272",
+  "platform": "shopify",
+  "product_id": "8208660529215",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Africa",
+   "Single Origin",
+   "Washed Process"
+  ],
+  "title": "Idido - Ethiopia",
+  "url": "https://www.lamillcoffee.com/products/idido-ethiopia-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10 oz",
+    "variant_id": "43400561655871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs",
+    "variant_id": "43400561688639"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "2aebd6686bb40506",
+  "first_seen": "2026-10-26",
+  "handle": "la-alqiumia-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/LaAlquimiaCoffeeTile1-1.jpg?v=1785507763",
+  "platform": "shopify",
+  "product_id": "8257057685567",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Central America",
+   "Honey Process",
+   "Single Origin"
+  ],
+  "title": "La Alquimia - Costa Rica",
+  "url": "https://www.lamillcoffee.com/products/la-alqiumia-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 oz",
+    "variant_id": "43528058372159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 lbs",
+    "variant_id": "43528058404927"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ },
+ {
+  "body_hash": "bfd4a35a3ce809f9",
+  "first_seen": "2026-10-26",
+  "handle": "gichathaini-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/1507/4926/files/GichathainiCoffeeTile1-1.png?v=1787926560",
+  "platform": "shopify",
+  "product_id": "8330515284031",
+  "product_type": "Coffee",
+  "roaster_slug": "lamillcoffee",
+  "tags": [
+   "Africa",
+   "Single Origin",
+   "Washed Process"
+  ],
+  "title": "Gichathaini - Kenya",
+  "url": "https://www.lamillcoffee.com/products/gichathaini-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.0,
+    "title": "10 oz",
+    "variant_id": "43805139435583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "2 lbs",
+    "variant_id": "43805139468351"
+   }
+  ],
+  "vendor": "LAMILL Coffee"
+ }
+]

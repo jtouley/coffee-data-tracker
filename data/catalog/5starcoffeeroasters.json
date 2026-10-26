@@ -1,0 +1,1632 @@
+[
+ {
+  "body_hash": "d2e8ba1f1fb7822f",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-chayote",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Chayote-FVSBagMockup-12oz_c84b674c-ccb0-4832-b5fa-426ec0a2d7e0.png?v=1783103333",
+  "platform": "shopify",
+  "product_id": "1328630530144",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "Origin: Honduras",
+   "Process: Honey",
+   "Roast: Medium",
+   "espresso"
+  ],
+  "title": "Chayote | Honduras",
+  "url": "https://5starcoffeeroasters.com/products/honduras-chayote",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39601682579552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39601683103840"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39601683202144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39601683234912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39601683267680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39601683300448"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "3dcdf93309b8642e",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/ColdBrewBlend-FVSBagMockup-12oz.png?v=1783104287",
+  "platform": "shopify",
+  "product_id": "1479590051936",
+  "product_type": "Cold Brew",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "cold brew"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://5starcoffeeroasters.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "13553224974432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "13553225007200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39601683365984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39601683398752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39601683431520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39601683464288"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "bc6cf7a0e26ceb96",
+  "first_seen": "2026-10-26",
+  "handle": "100-pure-honey-honduras",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/honey-508801.jpg?v=1711562144",
+  "platform": "shopify",
+  "product_id": "1923201597536",
+  "product_type": "Honey",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Honey",
+   "sweets and treats"
+  ],
+  "title": "Coffee Honey",
+  "url": "https://5starcoffeeroasters.com/products/100-pure-honey-honduras",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 12.0,
+    "title": "Default Title",
+    "variant_id": "18556375433312"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "e2c20e2a45d34f4d",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Hazelnut-FVSBagMockup-12oz.png?v=1783104543",
+  "platform": "shopify",
+  "product_id": "2105503121504",
+  "product_type": "Flavored",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "flavored coffee"
+  ],
+  "title": "Hazelnut Flavored Coffee",
+  "url": "https://5starcoffeeroasters.com/products/hazelnut-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "19312843391072"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "42d777c9e09432be",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-las-lomas",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/LasLomas-FVSBagMockup-12oz.png?v=1782442914",
+  "platform": "shopify",
+  "product_id": "4296584724576",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "Origin: Guatemala",
+   "Process: Washed",
+   "Roast: Medium",
+   "espresso"
+  ],
+  "title": "Las Lomas | Guatemala",
+  "url": "https://5starcoffeeroasters.com/products/guatemala-las-lomas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602393088096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602393120864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602393153632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602393186400"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602393219168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602393251936"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "e74fa60dce663c8b",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/OrganicEspresso-FVSBagMockup-12oz.png?v=1782442457",
+  "platform": "shopify",
+  "product_id": "449530396713",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: 100% Organic",
+   "Certifications: Direct Trade",
+   "espresso"
+  ],
+  "title": "Organic Espresso Blend",
+  "url": "https://5starcoffeeroasters.com/products/organic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602395021408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602395054176"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602395086944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602395119712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602395152480"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602395185248"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "6acf9d23b16abd10",
+  "first_seen": "2026-10-26",
+  "handle": "ethipoia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Yirgacheffe-FVSBagMockup-12oz.png?v=1782442929",
+  "platform": "shopify",
+  "product_id": "449559953449",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Origin: Ethiopia",
+   "Process: Washed",
+   "Roast: Light"
+  ],
+  "title": "Yirgacheffe | Ethiopia",
+  "url": "https://5starcoffeeroasters.com/products/ethipoia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39601683988576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "39601684021344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / 12oz",
+    "variant_id": "39601684054112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Ground / 2lb",
+    "variant_id": "39601684086880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Ground / 5lb",
+    "variant_id": "39601684119648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "4910729363497"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "abc6ae1d15da01b6",
+  "first_seen": "2026-10-26",
+  "handle": "h-town-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/HTown-FVSBagMockup-12oz.png?v=1783103673",
+  "platform": "shopify",
+  "product_id": "6645292007520",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Bird Friendly",
+   "Roast: Medium"
+  ],
+  "title": "H-Town Blend",
+  "url": "https://5starcoffeeroasters.com/products/h-town-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602357665888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602357698656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602357731424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602357764192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602357796960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602357829728"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "bc35a7b174c3c786",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-havana-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Havana-FVSBagMockup-12oz.png?v=1783103619",
+  "platform": "shopify",
+  "product_id": "6645292073056",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Dark",
+   "Roast: French"
+  ],
+  "title": "Havana Blend - French Roast",
+  "url": "https://5starcoffeeroasters.com/products/french-roast-havana-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602358255712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602358288480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602358321248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602358354016"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602358386784"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602358419552"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "3e1b41fccd0baabd",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Midnight-FVSBagMockup-12oz.png?v=1783103640",
+  "platform": "shopify",
+  "product_id": "6645292925024",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Dark"
+  ],
+  "title": "Midnight Blend",
+  "url": "https://5starcoffeeroasters.com/products/midnight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602371461216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602371493984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602371526752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602371559520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602371592288"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602371625056"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "74ed8d48855a431b",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/FrenchVanilla-FVSBagMockup-12oz.png?v=1783104499",
+  "platform": "shopify",
+  "product_id": "6645367898208",
+  "product_type": "Flavored",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "flavored coffee"
+  ],
+  "title": "French Vanilla Flavored Coffee",
+  "url": "https://5starcoffeeroasters.com/products/french-vanilla-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "39602687115360"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "8d7bfbf26d665189",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice-flavored-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/PumpkinSpice-FVSBagMockup-12oz.png?v=1783104570",
+  "platform": "shopify",
+  "product_id": "6645368291424",
+  "product_type": "Coffee",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "flavored coffee"
+  ],
+  "title": "Pumpkin Spice",
+  "url": "https://5starcoffeeroasters.com/products/pumpkin-spice-flavored-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.0,
+    "title": "Default Title",
+    "variant_id": "39602688163936"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "99e5e90f2d394792",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-los-andes",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/LosAndes-Peru-FVSBagMockup-12oz.png?v=1782404133",
+  "platform": "shopify",
+  "product_id": "6645628829792",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: 100% Organic",
+   "Origin: Peru",
+   "Process: Washed",
+   "Roast: Medium"
+  ],
+  "title": "Los Andes | Peru",
+  "url": "https://5starcoffeeroasters.com/products/organic-peru-los-andes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39603628277856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39603628310624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39603628343392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39603628376160"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39603628408928"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39603628441696"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "ac9c8661d69fd2aa",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-spotlight",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Spotlight-FVSBagMockup-12oz_GoldenBean_ba02d250-3588-48b9-b228-bbc9242e8359.png?v=1783433442",
+  "platform": "shopify",
+  "product_id": "6645631975520",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "Origin: Honduras",
+   "Process: Natural",
+   "Roast: Medium"
+  ],
+  "title": "Spotlight | Honduras",
+  "url": "https://5starcoffeeroasters.com/products/honduras-spotlight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39603652788320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39603652821088"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39603652853856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39603652886624"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39603652919392"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39603652952160"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "a2a94ddf43aad836",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Sumatra-FVSBagMockup-12oz.png?v=1783104334",
+  "platform": "shopify",
+  "product_id": "6645636759648",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Origin: Indonesia",
+   "Process: Semi-Washed",
+   "Process: Washed",
+   "Roast: Dark"
+  ],
+  "title": "Sumatra | Indonesia",
+  "url": "https://5starcoffeeroasters.com/products/indonesia-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39603668353120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39603668385888"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39603668418656"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39603668451424"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39603668484192"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39603668516960"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "d2269b6a1d1284ce",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-honey-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/HoneyDecaf-FVSBagMockup-12oz_GoldenBean.png?v=1782231459",
+  "platform": "shopify",
+  "product_id": "6647107289184",
+  "product_type": "Decaf",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Bird Friendly",
+   "Certifications: Direct Trade",
+   "Family Member Farm",
+   "Golden Bean Award",
+   "Origin: Honduras",
+   "Process: Honey",
+   "Roast: Medium",
+   "decaf"
+  ],
+  "title": "Honey Decaf | Honduras",
+  "url": "https://5starcoffeeroasters.com/products/honduras-honey-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39608859754592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39608859787360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39608859820128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39608859852896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39608859885664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39608859918432"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "63970718be3d12f3",
+  "first_seen": "2026-10-26",
+  "handle": "airscape-coffee-storage-container",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/IMG_7976_1-305041.jpg?v=1711562144",
+  "platform": "shopify",
+  "product_id": "6656579436640",
+  "product_type": "Coffee Brewing Equipment",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [],
+  "title": "Airscape Coffee Storage Container",
+  "url": "https://5starcoffeeroasters.com/products/airscape-coffee-storage-container",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "1lb",
+    "variant_id": "39638100574304"
+   },
+   {
+    "available": false,
+    "grams": 1361,
+    "price_usd": 40.0,
+    "title": "3lb",
+    "variant_id": "39638100607072"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "29da72deb7a1bc8f",
+  "first_seen": "2026-10-26",
+  "handle": "midway-blend-half-caff",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Midway-FVSBagMockup-12oz.png?v=1783104075",
+  "platform": "shopify",
+  "product_id": "6657570111584",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "Midway Blend (Half-Caff)",
+  "url": "https://5starcoffeeroasters.com/products/midway-blend-half-caff",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39641614975072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39641615007840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39641615040608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39641615073376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39641615106144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39641615138912"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "4986e54ac25802b8",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-explorer",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/CoffeeExplorer.png?v=1783104816",
+  "platform": "shopify",
+  "product_id": "6658849800288",
+  "product_type": "",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [],
+  "title": "Coffee Explorer (Rotating)",
+  "url": "https://5starcoffeeroasters.com/products/coffee-explorer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "39645844471904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / 12oz",
+    "variant_id": "39645844504672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Whole Bean / 2lb",
+    "variant_id": "39648426786912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "Ground / 2lb",
+    "variant_id": "39648426819680"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "fa1ba02a679af3dc",
+  "first_seen": "2026-10-26",
+  "handle": "sweater-weather",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/SweaterWeather-FVSBag-12oz.png?v=1791979582",
+  "platform": "shopify",
+  "product_id": "6677458124896",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "Sweater Weather",
+  "url": "https://5starcoffeeroasters.com/products/sweater-weather",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39766944809056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground",
+    "variant_id": "39766944841824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39766944874592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground",
+    "variant_id": "39766944907360"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "fd4fc843b6d3b454",
+  "first_seen": "2026-10-26",
+  "handle": "fireside",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Fireside-FVSBag-12oz.png?v=1791979658",
+  "platform": "shopify",
+  "product_id": "6677469200480",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "Fireside",
+  "url": "https://5starcoffeeroasters.com/products/fireside",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39766977511520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground",
+    "variant_id": "39766977544288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39766977577056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lb / Ground",
+    "variant_id": "39766977609824"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "0554edd83315d2e9",
+  "first_seen": "2026-10-26",
+  "handle": "central-american-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/CentralEspresso-FVSBagMockup-12oz_04b8fde7-1aae-4425-92e9-1d6e7f3c52af.png?v=1783104049",
+  "platform": "shopify",
+  "product_id": "6736238149728",
+  "product_type": "Coffee",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "espresso"
+  ],
+  "title": "Central Espresso Blend",
+  "url": "https://5starcoffeeroasters.com/products/central-american-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39924991197280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39924991230048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39924991262816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39924991295584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39924991328352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39924991361120"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "eed2922adc412c6e",
+  "first_seen": "2026-10-26",
+  "handle": "il-gatopardo-italian-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/IlGattopardo-FVSBagMockup-12oz.png?v=1783103963",
+  "platform": "shopify",
+  "product_id": "7065064538208",
+  "product_type": "Coffee",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "espresso"
+  ],
+  "title": "Il Gattopardo Italian Espresso",
+  "url": "https://5starcoffeeroasters.com/products/il-gatopardo-italian-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "40878972960864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "40878972993632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "40878973026400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "40878973059168"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "40878973091936"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "40878973124704"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "865490fb27b3c385",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-single-origin-nossa-senhora",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/NossaSenhora-FVSBagMockup-12oz.png?v=1783104246",
+  "platform": "shopify",
+  "product_id": "7135068913760",
+  "product_type": "Coffee",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: Direct Trade",
+   "Origin: Brazil",
+   "Process: Washed"
+  ],
+  "title": "Nossa Senhora | Brazil",
+  "url": "https://5starcoffeeroasters.com/products/brazil-single-origin-nossa-senhora",
+  "variants": [
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 17.0,
+    "title": "Whole Bean",
+    "variant_id": "41415444103264"
+   },
+   {
+    "available": true,
+    "grams": 354,
+    "price_usd": 17.0,
+    "title": "Ground",
+    "variant_id": "41415444136032"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "238cee97f3747cd0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/DecafEspresso-FVSBagMockup-12oz.png?v=1782442783",
+  "platform": "shopify",
+  "product_id": "7388240183392",
+  "product_type": "Decaf",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: 100% Organic",
+   "Certifications: Bird Friendly",
+   "Certifications: Direct Trade",
+   "Family Member Farm",
+   "Golden Bean Award",
+   "Origin: Honduras",
+   "Process: Honey",
+   "Roast: Medium",
+   "decaf"
+  ],
+  "title": "Decaf Espresso",
+  "url": "https://5starcoffeeroasters.com/products/decaf-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "41861790892128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "41861790924896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "41861790957664"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "41861790990432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41861791023200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "41861791055968"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "b4b279ee162ee45f",
+  "first_seen": "2026-10-26",
+  "handle": "sol-de-otono-fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/SoldeOtono-FVSBag-12oz.png?v=1791979496",
+  "platform": "shopify",
+  "product_id": "7523945250912",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "Sol de Otoño - Fall Blend",
+  "url": "https://5starcoffeeroasters.com/products/sol-de-otono-fall-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42345898901600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground",
+    "variant_id": "42345898934368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Whole Bean",
+    "variant_id": "67660270076000"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "2lbs / Ground",
+    "variant_id": "67660270108768"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "dce9ad79a2b5592d",
+  "first_seen": "2026-10-26",
+  "handle": "mayan-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Mayan_Blend_-_FVS_Bag_Mockup_-_12oz.png?v=1782243750",
+  "platform": "shopify",
+  "product_id": "7651381608544",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "Mayan Blend",
+  "url": "https://5starcoffeeroasters.com/products/mayan-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42588388491360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "42588388524128"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "42588388556896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "42588388589664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42588388622432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "42588388655200"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "6defa34fff46e633",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-washed-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/GeishaColombia-FVSBagMockup-12oz.png?v=1782240112",
+  "platform": "shopify",
+  "product_id": "7665016111200",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Origin: Colombia",
+   "Process: Washed",
+   "Roast: Medium"
+  ],
+  "title": "Geisha | Colombia",
+  "url": "https://5starcoffeeroasters.com/products/colombia-washed-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42634037133408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 30.0,
+    "title": "12oz / Ground",
+    "variant_id": "42634037166176"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "c5effa4d378609de",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-kit",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Cold_Brew_Kit_-_Five_Star_Coffee_Roasters.png?v=1774926559",
+  "platform": "shopify",
+  "product_id": "7674235191392",
+  "product_type": "",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [],
+  "title": "Cold Brew Kit",
+  "url": "https://5starcoffeeroasters.com/products/cold-brew-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1656,
+    "price_usd": 74.0,
+    "title": "Whole Bean",
+    "variant_id": "42670343159904"
+   },
+   {
+    "available": true,
+    "grams": 1633,
+    "price_usd": 74.0,
+    "title": "Ground (Coarse)",
+    "variant_id": "42670343192672"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "ea7dc98151392c31",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-bloom",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/VelvetBloom-FVSBagMockup-12oz.png?v=1782239864",
+  "platform": "shopify",
+  "product_id": "7687965311072",
+  "product_type": "",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Seasonal"
+  ],
+  "title": "Velvet Bloom",
+  "url": "https://5starcoffeeroasters.com/products/velvet-bloom",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "42718581391456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "42718581424224"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "7b2a9ea4ce59487f",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/HouseBlend-FVSBagMockup-12oz.png?v=1782442738",
+  "platform": "shopify",
+  "product_id": "8940432135",
+  "product_type": "Blend",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Roast: Medium"
+  ],
+  "title": "House Blend",
+  "url": "https://5starcoffeeroasters.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "29649307463"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602357469280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602357502048"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602357534816"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602357567584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602357600352"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ },
+ {
+  "body_hash": "67c8a41d7a3ab8e4",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-santa-lucia",
+  "image": "https://cdn.shopify.com/s/files/1/1323/4661/files/Santa_Lucia_-_FVS_Bag_Mockup_-_12oz_Golden_Bean.png?v=1782231980",
+  "platform": "shopify",
+  "product_id": "8940471815",
+  "product_type": "Single Origin",
+  "roaster_slug": "5starcoffeeroasters",
+  "tags": [
+   "Certifications: 100% Organic",
+   "Certifications: Bird Friendly",
+   "Certifications: Direct Trade",
+   "Family Member Farm",
+   "Golden Bean Award",
+   "Origin: Honduras",
+   "Process: Washed",
+   "Roast: Dark"
+  ],
+  "title": "Organic Santa Lucia | Honduras",
+  "url": "https://5starcoffeeroasters.com/products/honduras-santa-lucia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "39602357010528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "39602357043296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "39602357076064"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 35.0,
+    "title": "2lb / Ground",
+    "variant_id": "39602357108832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "39602357141600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb / Ground",
+    "variant_id": "39602357174368"
+   }
+  ],
+  "vendor": "Five Star Coffee Roasters"
+ }
+]

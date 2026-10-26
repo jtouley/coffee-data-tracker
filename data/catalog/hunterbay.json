@@ -1,0 +1,997 @@
+[
+ {
+  "body_hash": "38949da15a7c133c",
+  "first_seen": "2026-10-26",
+  "handle": "big-sky-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/big-sky-organic-956180.jpg?v=1710863992",
+  "platform": "shopify",
+  "product_id": "9770509533474",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Big Sky Organic",
+  "url": "https://www.hunterbay.com/products/big-sky-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50070636101922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip",
+    "variant_id": "50070636134690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50070636167458"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2lb / Drip",
+    "variant_id": "50070636200226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50070636232994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Drip",
+    "variant_id": "50070636265762"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "58348be0f621a7cb",
+  "first_seen": "2026-10-26",
+  "handle": "back-country",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/back-country-597373.jpg?v=1710863992",
+  "platform": "shopify",
+  "product_id": "9770515267874",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Back Country",
+  "url": "https://www.hunterbay.com/products/back-country",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50070657401122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip",
+    "variant_id": "50070657433890"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50070657466658"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2lb / Drip",
+    "variant_id": "50070657499426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50070657532194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Drip",
+    "variant_id": "50070657564962"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "81a22d9d2c998510",
+  "first_seen": "2026-10-26",
+  "handle": "montana-premium",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/montana-premium-278105.jpg?v=1710863999",
+  "platform": "shopify",
+  "product_id": "9770516545826",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Montana Premium",
+  "url": "https://www.hunterbay.com/products/montana-premium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50070664741154"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip",
+    "variant_id": "50070664773922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50070664806690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2lb / Drip",
+    "variant_id": "50070664839458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50070664872226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Drip",
+    "variant_id": "50070664904994"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "fe545aea3fa85ad5",
+  "first_seen": "2026-10-26",
+  "handle": "bernices-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/bernices-blend-292404.jpg?v=1710863992",
+  "platform": "shopify",
+  "product_id": "9770522050850",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Bernice's Blend",
+  "url": "https://www.hunterbay.com/products/bernices-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "50070705570082"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12oz / Drip",
+    "variant_id": "50070705602850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50070705635618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2lb / Drip",
+    "variant_id": "50070705668386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50070705701154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Drip",
+    "variant_id": "50070705733922"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "e07a1e7bad09fd39",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/costa-rica-tarrazu-498543.jpg?v=1710863994",
+  "platform": "shopify",
+  "product_id": "9792440828194",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Costa Rica Santa Maria de Dota",
+  "url": "https://www.hunterbay.com/products/costa-rica-tarrazu-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126054850850"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50126054883618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50126054916386"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50126054949154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50126054981922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50126055014690"
+   }
+  ],
+  "vendor": "Single Origin Coffees"
+ },
+ {
+  "body_hash": "33d03b1e6f145c89",
+  "first_seen": "2026-10-26",
+  "handle": "half-calf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/half-calf-652536.jpg?v=1765907188",
+  "platform": "shopify",
+  "product_id": "9792687866146",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Half-Calf",
+  "url": "https://www.hunterbay.com/products/half-calf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126550499618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50126550532386"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50126568161570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50126568194338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pound / Whole Bean",
+    "variant_id": "51497353281826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pound / Drip",
+    "variant_id": "51497353314594"
+   }
+  ],
+  "vendor": "Hunter Bay Coffee"
+ },
+ {
+  "body_hash": "50d9476ad02d8b33",
+  "first_seen": "2026-10-26",
+  "handle": "colorado-organic-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/colorado-organic-241215.jpg?v=1710863992",
+  "platform": "shopify",
+  "product_id": "9792692289826",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [
+   "Arvada",
+   "Colorado"
+  ],
+  "title": "Colorado Organic",
+  "url": "https://www.hunterbay.com/products/colorado-organic-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126574321954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pound / Whole Bean",
+    "variant_id": "50126574354722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pound / Drip",
+    "variant_id": "50126574387490"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 Pound / Whole Bean",
+    "variant_id": "50126574420258"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 Pound / Drip",
+    "variant_id": "51497288368418"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "51497401024802"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "3222b1a50a87cde8",
+  "first_seen": "2026-10-26",
+  "handle": "expedition-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/expedition-862169.jpg?v=1710863994",
+  "platform": "shopify",
+  "product_id": "9792698286370",
+  "product_type": "Dark Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Expedition",
+  "url": "https://www.hunterbay.com/products/expedition-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126594769186"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50126594801954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50126594834722"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50126594867490"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "51497324839202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "51497326838050"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "58470a8df261efe9",
+  "first_seen": "2026-10-26",
+  "handle": "moose-drool-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/moose-drool-841616.jpg?v=1710864000",
+  "platform": "shopify",
+  "product_id": "9792746029346",
+  "product_type": "Dark Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Moose Drool",
+  "url": "https://www.hunterbay.com/products/moose-drool-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126850883874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50126850916642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50126850949410"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50126850982178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50126851014946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50126851047714"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "7b2b3c138e6bc5e6",
+  "first_seen": "2026-10-26",
+  "handle": "smoke-jumper-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/smoke-jumper-407670.jpg?v=1710864001",
+  "platform": "shopify",
+  "product_id": "9792746553634",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Smoke Jumper",
+  "url": "https://www.hunterbay.com/products/smoke-jumper-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50126855110946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50126855143714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50126855176482"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50126855209250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50126855242018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50126855274786"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "bedc0e6091fc868d",
+  "first_seen": "2026-10-26",
+  "handle": "montanaro-espresso-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/montanaro-espresso-141578.jpg?v=1710864000",
+  "platform": "shopify",
+  "product_id": "9792776110370",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Montanaro Espresso",
+  "url": "https://www.hunterbay.com/products/montanaro-espresso-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50127006335266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50127006368034"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50127006400802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50127006433570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50127006466338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50127006499106"
+   }
+  ],
+  "vendor": "Espresso"
+ },
+ {
+  "body_hash": "239924af1bda9bdd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/ethiopian-sidamo-519377.jpg?v=1710863994",
+  "platform": "shopify",
+  "product_id": "9793897922850",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [
+   "SOLO"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.hunterbay.com/products/ethiopian-sidamo-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50131950010658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50131950043426"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50131950076194"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50131950108962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50131950141730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50131950174498"
+   }
+  ],
+  "vendor": "Single Origin Coffees"
+ },
+ {
+  "body_hash": "f5ed029abef417ba",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/guatemala-huehuetenango-568093.jpg?v=1710863995",
+  "platform": "shopify",
+  "product_id": "9793906802978",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [
+   "SOLO"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://www.hunterbay.com/products/guatemala-huehuetenango-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50131974947106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50131974979874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50131975012642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50131975045410"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "51497413214498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "51497413247266"
+   }
+  ],
+  "vendor": "Single Origin Coffees"
+ },
+ {
+  "body_hash": "a5e9f496aaf4a62e",
+  "first_seen": "2026-10-26",
+  "handle": "uganda-sipi-falls-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/uganda-sipi-falls-159963.jpg?v=1710864001",
+  "platform": "shopify",
+  "product_id": "9794032599330",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [
+   "SOLO"
+  ],
+  "title": "Uganda Sipi Falls",
+  "url": "https://www.hunterbay.com/products/uganda-sipi-falls-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50132559429922"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50132559462690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50132559495458"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50132559528226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pound / Whole Bean",
+    "variant_id": "51497398042914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pound / Drip",
+    "variant_id": "51497398075682"
+   }
+  ],
+  "vendor": "Single Origin Coffees"
+ },
+ {
+  "body_hash": "437f360d7e97539b",
+  "first_seen": "2026-10-26",
+  "handle": "harmony-decaf-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/harmony-decaf-790292.jpg?v=1710863997",
+  "platform": "shopify",
+  "product_id": "9794620490018",
+  "product_type": "Medium Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Harmony Decaf",
+  "url": "https://www.hunterbay.com/products/harmony-decaf-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50134734143778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50134734176546"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50134734209314"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50134734242082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50134734274850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50134734307618"
+   }
+  ],
+  "vendor": "Decaf"
+ },
+ {
+  "body_hash": "91b9807f05d4afc3",
+  "first_seen": "2026-10-26",
+  "handle": "praying-monk-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/praying-monk-210943.jpg?v=1710864000",
+  "platform": "shopify",
+  "product_id": "9794632941858",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Praying Monk",
+  "url": "https://www.hunterbay.com/products/praying-monk-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50134835527970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50134835560738"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50134835593506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50134835626274"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50134835659042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "51497342992674"
+   }
+  ],
+  "vendor": "Coffee Blends"
+ },
+ {
+  "body_hash": "dee9230b16295d8a",
+  "first_seen": "2026-10-26",
+  "handle": "powder-hound-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0004/1851/products/powder-hound-728312.jpg?v=1710864000",
+  "platform": "shopify",
+  "product_id": "9890005188898",
+  "product_type": "Light Roast",
+  "roaster_slug": "hunterbay",
+  "tags": [],
+  "title": "Powder Hound",
+  "url": "https://www.hunterbay.com/products/powder-hound-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 ounce / Whole Bean",
+    "variant_id": "50459414790434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 ounce / Drip",
+    "variant_id": "50459414823202"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2 pounds / Whole Bean",
+    "variant_id": "50459414855970"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.5,
+    "title": "2 pounds / Drip",
+    "variant_id": "50459414888738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5 pounds / Whole Bean",
+    "variant_id": "50459414921506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5 pounds / Drip",
+    "variant_id": "50459414954274"
+   }
+  ],
+  "vendor": "Hunter Bay Coffee"
+ }
+]

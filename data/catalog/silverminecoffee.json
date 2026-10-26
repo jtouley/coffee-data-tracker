@@ -1,0 +1,5846 @@
+[
+ {
+  "body_hash": "65ff53897b2e117c",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/products/GEN18BRD.1.salmo-plus.png?v=1734670189",
+  "platform": "shopify",
+  "product_id": "1887441387577",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Brazil Salmo Plus",
+  "url": "https://silverminecoffee.com/products/brazil-salmo-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "18318418804793"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "18589185179705"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "18589185212473"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "18589185245241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "40613698371607"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "40613698404375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "40613698437143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "40613698469911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860867063831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860867096599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860867129367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860867162135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860867194903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860867227671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860867260439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860867293207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860867325975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860867358743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860867391511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860867424279"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "4096b9e2098b080c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-sugarcane-decaf-valle-del-cauca",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/products/GEN18CLD01.1.valle_cauca.png?v=1734670190",
+  "platform": "shopify",
+  "product_id": "1887452299321",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Colombia Sugarcane Decaf - Valle Del Cauca",
+  "url": "https://silverminecoffee.com/products/colombia-sugarcane-decaf-valle-del-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "18318447247417"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "18589165584441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "18589165617209"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "18589165649977"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "40654732754967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "40654732820503"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "40654732886039"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "40654732951575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860867522583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860867555351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860867588119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860867620887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860867653655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860867686423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860867719191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860867751959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860867784727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860867817495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860867850263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860867883031"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "392bc2d6aa7a76a4",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-el-tiple-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/ColombiaHuilaPitalitoeltipleSupremo2024.jpg?v=1734670193",
+  "platform": "shopify",
+  "product_id": "4400378413079",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Drip",
+   "Single Origin"
+  ],
+  "title": "Colombia Huila Pitalito El Tiple Supremo",
+  "url": "https://silverminecoffee.com/products/colombia-huila-el-tiple-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "31319086170135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "31319086235671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "31319086301207"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "31319086333975"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "40654728822807"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "40654728888343"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "40654728953879"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "40654729019415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860868374551"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860868407319"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860868440087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860868472855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860868505623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860868538391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860868571159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860868603927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860868636695"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860868669463"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860868702231"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860868734999"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "bc53d3ae460a1b97",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehue-candelaria",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/products/GEN19GTA.1.guatemala.candelaria.png?v=1734670194",
+  "platform": "shopify",
+  "product_id": "4400404267031",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango Candelaria SHB",
+  "url": "https://silverminecoffee.com/products/guatemala-huehue-candelaria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "31319161077783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "31319161208855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "31319161307159"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "31319161372695"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "40654744485911"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "40654744551447"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "40654744616983"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "40654744682519"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860868767767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860868800535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860868833303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860868866071"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860868898839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860868931607"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860868964375"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860868997143"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860869029911"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860869062679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860869095447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860869128215"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "876bdc13b8f10bb8",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-g1",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/products/organic-sumatra-gayo_b2e7eb30-b92a-4c5c-ba57-a473fd354ffb.jpg?v=1734670197",
+  "platform": "shopify",
+  "product_id": "6539562549271",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Sumatra Mandheling G1 TP",
+  "url": "https://silverminecoffee.com/products/sumatra-mandheling-g1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39258552467479"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "39258552500247"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "39258552533015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "39258552565783"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "40654757068823"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "40654757134359"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "40654757199895"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "40654757265431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860869652503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860869685271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860869718039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860869750807"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860869783575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860869816343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860869849111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860869881879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860869914647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860869947415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860869980183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860870012951"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "ec4497fcb28bc76b",
+  "first_seen": "2026-10-26",
+  "handle": "tnt-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/TNT.jpg?v=1734670198",
+  "platform": "shopify",
+  "product_id": "6705555537943",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Limited Availability"
+  ],
+  "title": "TNT Blend",
+  "url": "https://silverminecoffee.com/products/tnt-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "39955105382423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "39955105415191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "39955105447959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "39955105480727"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "40654758346775"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "40654758412311"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "40654758477847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "40654758543383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860870045719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860870078487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860870111255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860870144023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860870176791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860870209559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860870242327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860870275095"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860870307863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860870340631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860870373399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860870406167"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "73ad80d775414d52",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-san-diego-jaguar-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/CostaRicaELJAGUARVolcafe_78f0a507-a3e7-4fb3-9f4b-405ca1d2db9d.jpg?v=1734670201",
+  "platform": "shopify",
+  "product_id": "7209116237847",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Limited Availability"
+  ],
+  "title": "Costa Rica Tarrazú San Diego JAGUAR Honey",
+  "url": "https://silverminecoffee.com/products/costa-rica-tarrazu-san-diego-jaguar-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41420996050967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "41420996083735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "41420996149271"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "41420996182039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "41420996247575"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "41420996280343"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41420996345879"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "41420996378647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860871159831"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860871192599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860871225367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860871258135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860871290903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860871323671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860871356439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860871389207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860871421975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860871454743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860871487511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860871520279"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "fc7697b961ad9b0a",
+  "first_seen": "2026-10-26",
+  "handle": "red-sea-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Red_Sea_Blend2.png?v=1727274677",
+  "platform": "shopify",
+  "product_id": "7349023211543",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Red Sea Blend",
+  "url": "https://silverminecoffee.com/products/red-sea-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41684048576535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "41684048674839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "41684048773143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41684048871447"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "74cfb9f824a2cd77",
+  "first_seen": "2026-10-26",
+  "handle": "the-blend-with-no-name",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/blendwithnoname_a2fd6a05-8043-4158-a283-2ee8800a11cf.jpg?v=1734670206",
+  "platform": "shopify",
+  "product_id": "7396816584727",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "The Blend with No Name",
+  "url": "https://silverminecoffee.com/products/the-blend-with-no-name",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41775875686423"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "41775875719191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "41775875784727"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "41775875817495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "41775875883031"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "41775875915799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41775875981335"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "41775876014103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41860871880727"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41860871913495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41860871946263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41860871979031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41860872011799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41860872044567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41860872077335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41860872110103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41860872142871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41860872175639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41860872208407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41860872241175"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "be7abc52ae433fa5",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry-plus",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/TanzaniaPeaberryPlus.jpg?v=1737054256",
+  "platform": "shopify",
+  "product_id": "7457909899287",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Tanzania Peaberry Plus",
+  "url": "https://silverminecoffee.com/products/tanzania-peaberry-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "41930441097239"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "41930441130007"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "41930441162775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "41930441195543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "41930441228311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "41930441261079"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "41930441293847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "41930441326615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "41930441359383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "41930441392151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "41930441424919"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "41930441457687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "41930441490455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "41930441523223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "41930441555991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "41930441588759"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "41930441621527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "41930441654295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "41930441687063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "41930441719831"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "82ddddfc9073c758",
+  "first_seen": "2026-10-26",
+  "handle": "maritime-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/MaritimeBlend.png?v=1741492158",
+  "platform": "shopify",
+  "product_id": "7532497666071",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Maritime Blend",
+  "url": "https://silverminecoffee.com/products/maritime-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42085523456023"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42085523488791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42085523521559"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42085523554327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42085523587095"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42085523619863"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42085523652631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42085523685399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42085523718167"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42085523750935"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42085523783703"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42085523816471"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42085523849239"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42085523882007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42085523914775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42085523947543"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42085523980311"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42085524013079"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42085524045847"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42085524078615"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "77848648e0b37bd1",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-huila-pitalito-el-tiple-excelso",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/ElTipleExcelso.png?v=1744131239",
+  "platform": "shopify",
+  "product_id": "7583129993239",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Drip",
+   "Single Origin"
+  ],
+  "title": "Colombia Huila Pitalito El Tiple EXCELSO",
+  "url": "https://silverminecoffee.com/products/colombia-huila-pitalito-el-tiple-excelso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Medium",
+    "variant_id": "42224458170391"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Medium",
+    "variant_id": "42224458203159"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Medium",
+    "variant_id": "42224458235927"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Medium",
+    "variant_id": "42224458268695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Medium",
+    "variant_id": "42224458301463"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Medium",
+    "variant_id": "42224458334231"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Medium",
+    "variant_id": "42224458366999"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Medium",
+    "variant_id": "42224458399767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Medium",
+    "variant_id": "42224458432535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Medium",
+    "variant_id": "42224458465303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Medium",
+    "variant_id": "42224458498071"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Medium",
+    "variant_id": "42224458530839"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Medium",
+    "variant_id": "42224458563607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Medium",
+    "variant_id": "42224458596375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Medium",
+    "variant_id": "42224458629143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Medium",
+    "variant_id": "42224458661911"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Medium",
+    "variant_id": "42224458694679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Medium",
+    "variant_id": "42224458727447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Medium",
+    "variant_id": "42224458760215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Medium",
+    "variant_id": "42224458792983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Dark",
+    "variant_id": "42224489725975"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Dark",
+    "variant_id": "42224489758743"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Dark",
+    "variant_id": "42224489791511"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Dark",
+    "variant_id": "42224489824279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Dark",
+    "variant_id": "42224489857047"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Dark",
+    "variant_id": "42224489889815"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Dark",
+    "variant_id": "42224489922583"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Dark",
+    "variant_id": "42224489955351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Dark",
+    "variant_id": "42224489988119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Dark",
+    "variant_id": "42224490020887"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Dark",
+    "variant_id": "42224490053655"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Dark",
+    "variant_id": "42224490086423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Dark",
+    "variant_id": "42224490119191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Dark",
+    "variant_id": "42224490151959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Dark",
+    "variant_id": "42224490184727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Dark",
+    "variant_id": "42224490217495"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Dark",
+    "variant_id": "42224490250263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Dark",
+    "variant_id": "42224490283031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Dark",
+    "variant_id": "42224490315799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Dark",
+    "variant_id": "42224490348567"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "c24e8f6db8ab15ce",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-aa-usawa-kahawa-project",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/TANZANIAAA.png?v=1747771385",
+  "platform": "shopify",
+  "product_id": "7647905021975",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Decaf"
+  ],
+  "title": "Tanzania AA Usawa Kahawa Project",
+  "url": "https://silverminecoffee.com/products/tanzania-aa-usawa-kahawa-project",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42368065110039"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42368065142807"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42368065175575"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42368065208343"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42368065241111"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42368065273879"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42368065306647"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42368065339415"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42368065372183"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42368065404951"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42368065437719"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42368065470487"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42368065503255"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42368065536023"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42368065568791"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42368065601559"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42368065634327"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42368065667095"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42368065699863"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42368065732631"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "bccdf209712fc05e",
+  "first_seen": "2026-10-26",
+  "handle": "hangover-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/HANGOVERBLEND.png?v=1747771812",
+  "platform": "shopify",
+  "product_id": "7647908200471",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Hangover Blend",
+  "url": "https://silverminecoffee.com/products/hangover-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42368086736919"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42368086769687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42368086802455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42368086835223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42368086867991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42368086900759"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42368086933527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42368086966295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42368086999063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42368087031831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42368087064599"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42368087097367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42368087130135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42368087162903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42368087195671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42368087228439"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42368087261207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42368087293975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42368087326743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42368087359511"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "ab5de4188851b829",
+  "first_seen": "2026-10-26",
+  "handle": "big-budys-bold-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/BIGBUDY_SBOLDBLEND.png?v=1747833329",
+  "platform": "shopify",
+  "product_id": "7648660488215",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Big Budy's Bold Blend",
+  "url": "https://silverminecoffee.com/products/big-budys-bold-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42370017034263"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42370017067031"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42370017099799"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42370017132567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42370017165335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42370017198103"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42370017230871"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42370017263639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42370017296407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42370017329175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42370017361943"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42370017394711"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42370017427479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42370017460247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42370017493015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42370017525783"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42370017558551"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42370017591319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42370017624087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42370017656855"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "4304965787428d71",
+  "first_seen": "2026-10-26",
+  "handle": "og-blend-2-0",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/BoppyScaringTommy.jpg?v=1752678764",
+  "platform": "shopify",
+  "product_id": "7738208518167",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "OG Blend 2.0",
+  "url": "https://silverminecoffee.com/products/og-blend-2-0",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42566235455511"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42566235488279"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42566235521047"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42566235553815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42566235586583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42566235619351"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42566235652119"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42566235684887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42566235717655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42566235750423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42566235783191"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42566235815959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42566235848727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42566235881495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42566235914263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42566235947031"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42566235979799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42566236012567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42566236045335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42566236078103"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "dc35a669bfa36f4c",
+  "first_seen": "2026-10-26",
+  "handle": "red-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/RedHoney_45c255e5-d478-43a6-9513-d57412fa61cd.png?v=1752681889",
+  "platform": "shopify",
+  "product_id": "7738313867287",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Colombia Red Honey",
+  "url": "https://silverminecoffee.com/products/red-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "42566368165911"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "42566368198679"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "42566368231447"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "42566368264215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "42566368296983"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "42566368329751"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "42566368362519"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "42566368395287"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "42566368428055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "42566368460823"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "42566368493591"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "42566368526359"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "42566368559127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "42566368591895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "42566368624663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "42566368657431"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "42566368690199"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "42566368722967"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "42566368755735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "42566368788503"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "ebbe24473a3b7fa1",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-highlands",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/ChiapasHighlandsWashed.png?v=1758038635",
+  "platform": "shopify",
+  "product_id": "7994458570775",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Mexico Chiapas Highlands",
+  "url": "https://silverminecoffee.com/products/mexico-chiapas-highlands",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43267118727191"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "43267118759959"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "43267118792727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "43267118825495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "43267118858263"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "43267118891031"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "43267118923799"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "43267118956567"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "43267118989335"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "43267119022103"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "43267119054871"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "43267119087639"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "43267119120407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "43267119153175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "43267119185943"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "43267119218711"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "43267119251479"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "43267119284247"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "43267119317015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "43267119349783"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "dc77ee9cf20beefa",
+  "first_seen": "2026-10-26",
+  "handle": "bang-bang-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/BANGBANGBlend.jpg?v=1759257666",
+  "platform": "shopify",
+  "product_id": "8188646621207",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend"
+  ],
+  "title": "BANG BANG Blend",
+  "url": "https://silverminecoffee.com/products/bang-bang-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "43479647092759"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "43479647125527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "43479647158295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "43479647191063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "43479647223831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "43479647256599"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "43479647289367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "43479647322135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "43479647354903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "43479647387671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "43479647420439"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "43479647453207"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "43479647485975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "43479647518743"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "43479647551511"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "43479647584279"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "43479647617047"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "43479647649815"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "43479647682583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "43479647715351"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "c781d6f3cbe76d6b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-yellow-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/yellowhoney.png?v=1771427809",
+  "platform": "shopify",
+  "product_id": "8706406547479",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Colombia Yellow Honey",
+  "url": "https://silverminecoffee.com/products/colombia-yellow-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44596554924055"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44596554956823"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44596554989591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44596555022359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44596555055127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44596555087895"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44596555120663"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44596555153431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44596555186199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "44596555218967"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44596555251735"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44596555284503"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44596555317271"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44596555350039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "44596555382807"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44596555415575"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44596555448343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44596555481111"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44596555513879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "44596555546647"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "d55e964fce98a918",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-caicedo",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/DECAF_Caicedo.png?v=1771428747",
+  "platform": "shopify",
+  "product_id": "8706489548823",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "DECAF Colombia Caicedo",
+  "url": "https://silverminecoffee.com/products/decaf-colombia-caicedo",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44596681179159"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44596681211927"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44596681244695"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44596681277463"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44596681310231"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44596681342999"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44596681375767"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44596681408535"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44596681441303"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "44596681474071"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44596681506839"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44596681539607"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44596681572375"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44596681605143"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "44596681637911"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44596681670679"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44596681703447"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44596681736215"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44596681768983"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "44596681801751"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "67b3612d7362c13c",
+  "first_seen": "2026-10-26",
+  "handle": "paula-20-brix",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Paula20Brix.png?v=1771432238",
+  "platform": "shopify",
+  "product_id": "8706507898903",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Paula 20 Brix",
+  "url": "https://silverminecoffee.com/products/paula-20-brix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44596702674967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44596702707735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44596702740503"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44596702773271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44596702806039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44596702838807"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44596702871575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44596702904343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44596702937111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "44596702969879"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44596703002647"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44596703035415"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44596703068183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44596703100951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "44596703133719"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44596703166487"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44596703199255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44596703232023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44596703264791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "44596703297559"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "be8f0d9d7fe12630",
+  "first_seen": "2026-10-26",
+  "handle": "lightweight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/MaritimeLightweight.png?v=1771439663",
+  "platform": "shopify",
+  "product_id": "8706930507799",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Lightweight Blend",
+  "url": "https://silverminecoffee.com/products/lightweight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44597320908823"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44597320941591"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44597320974359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44597321007127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44597321039895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44597321072663"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44597321105431"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44597321138199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44597321170967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "44597321203735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44597321236503"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44597321269271"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44597321302039"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44597321334807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "44597321367575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44597321400343"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44597321433111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44597321465879"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44597321498647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "44597321531415"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "aaadf590ddfff6f5",
+  "first_seen": "2026-10-26",
+  "handle": "heavyweight-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/MaritimeHeavyweight.png?v=1771440022",
+  "platform": "shopify",
+  "product_id": "8706943942679",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "Heavyweight Blend",
+  "url": "https://silverminecoffee.com/products/heavyweight-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44597338767383"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44597338800151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44597338832919"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44597338865687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "44597338898455"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44597338931223"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44597338963991"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44597338996759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44597339029527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "44597339062295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44597339095063"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44597339127831"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44597339160599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44597339193367"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "44597339226135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44597339258903"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44597339291671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44597339324439"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44597339357207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "44597339389975"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "aeb973cf0ee82e6e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Honduras_Geisha_1.jpg?v=1776450734",
+  "platform": "shopify",
+  "product_id": "8775952433175",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Honduras Geisha",
+  "url": "https://silverminecoffee.com/products/honduras-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "44850452037655"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "44850452070423"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "44850452103191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "44850452135959"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 4 oz",
+    "variant_id": "44850452168727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "44850452201495"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "44850452234263"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "44850452267031"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "44850452299799"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Fine / 4 oz",
+    "variant_id": "44850452332567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "44850452365335"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "44850452398103"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "44850452430871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "44850452463639"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Medium / 4 oz",
+    "variant_id": "44850452496407"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "44850452529175"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "44850452561943"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "44850452594711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "44850452627479"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Coarse / 4 oz",
+    "variant_id": "44850452660247"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "1610f86aa32b8c07",
+  "first_seen": "2026-10-26",
+  "handle": "prospectors-pick",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Prospectors_Pick.png?v=1778530222",
+  "platform": "shopify",
+  "product_id": "8821342306327",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Decaf",
+   "Single Origin"
+  ],
+  "title": "Prospector's Pick!",
+  "url": "https://silverminecoffee.com/products/prospectors-pick",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Any!",
+    "variant_id": "45128435204119"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Any!",
+    "variant_id": "45128435236887"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Any!",
+    "variant_id": "45128435269655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Any!",
+    "variant_id": "45128435302423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Any!",
+    "variant_id": "45128435335191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Any!",
+    "variant_id": "45128435367959"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Any!",
+    "variant_id": "45128435400727"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Any!",
+    "variant_id": "45128435433495"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Any!",
+    "variant_id": "45128435466263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Any!",
+    "variant_id": "45128435499031"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Any!",
+    "variant_id": "45128435531799"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Any!",
+    "variant_id": "45128435564567"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Any!",
+    "variant_id": "45128435597335"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Any!",
+    "variant_id": "45128435630103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Any!",
+    "variant_id": "45128435662871"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Any!",
+    "variant_id": "45128435695639"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Any!",
+    "variant_id": "45128435728407"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Any!",
+    "variant_id": "45128435761175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Any!",
+    "variant_id": "45128435793943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Any!",
+    "variant_id": "45128435826711"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Dark",
+    "variant_id": "45128465940503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Medium",
+    "variant_id": "45128465973271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Light",
+    "variant_id": "45128466006039"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Dark",
+    "variant_id": "45128466038807"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Medium",
+    "variant_id": "45128466071575"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Light",
+    "variant_id": "45128466104343"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Dark",
+    "variant_id": "45128466137111"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Medium",
+    "variant_id": "45128466169879"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Light",
+    "variant_id": "45128466202647"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Dark",
+    "variant_id": "45128466235415"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Medium",
+    "variant_id": "45128466268183"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Light",
+    "variant_id": "45128466300951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Dark",
+    "variant_id": "45128466333719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Medium",
+    "variant_id": "45128466366487"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Light",
+    "variant_id": "45128466399255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Dark",
+    "variant_id": "45128466432023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Medium",
+    "variant_id": "45128466464791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Light",
+    "variant_id": "45128466497559"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Dark",
+    "variant_id": "45128466530327"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Medium",
+    "variant_id": "45128466563095"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Light",
+    "variant_id": "45128466595863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Dark",
+    "variant_id": "45128466628631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Medium",
+    "variant_id": "45128466661399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Light",
+    "variant_id": "45128466694167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Dark",
+    "variant_id": "45128466726935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Medium",
+    "variant_id": "45128466759703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Light",
+    "variant_id": "45128466792471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Dark",
+    "variant_id": "45128466825239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Medium",
+    "variant_id": "45128466858007"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Light",
+    "variant_id": "45128466890775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Dark",
+    "variant_id": "45128466923543"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Medium",
+    "variant_id": "45128466956311"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Light",
+    "variant_id": "45128466989079"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Dark",
+    "variant_id": "45128467021847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Medium",
+    "variant_id": "45128467054615"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Light",
+    "variant_id": "45128467087383"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Dark",
+    "variant_id": "45128467120151"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Medium",
+    "variant_id": "45128467152919"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Light",
+    "variant_id": "45128467185687"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Dark",
+    "variant_id": "45128467218455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Medium",
+    "variant_id": "45128467251223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Light",
+    "variant_id": "45128467283991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Dark",
+    "variant_id": "45128467316759"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Medium",
+    "variant_id": "45128467349527"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Light",
+    "variant_id": "45128467382295"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Dark",
+    "variant_id": "45128467415063"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Medium",
+    "variant_id": "45128467447831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Light",
+    "variant_id": "45128467480599"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Dark",
+    "variant_id": "45128467513367"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Medium",
+    "variant_id": "45128467546135"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Light",
+    "variant_id": "45128467578903"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Dark",
+    "variant_id": "45128467611671"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Medium",
+    "variant_id": "45128467644439"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Light",
+    "variant_id": "45128467677207"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Dark",
+    "variant_id": "45128467709975"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Medium",
+    "variant_id": "45128467742743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Light",
+    "variant_id": "45128467775511"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Dark",
+    "variant_id": "45128467808279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Medium",
+    "variant_id": "45128467841047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Light",
+    "variant_id": "45128467873815"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "d1f05b0d92c71849",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-parainema",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/parainema.webp?v=1778682483",
+  "platform": "shopify",
+  "product_id": "8822424600599",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Honduras Parainema",
+  "url": "https://silverminecoffee.com/products/honduras-parainema",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45132619579415"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45132619612183"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45132619644951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45132619677719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "45132619710487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45132619743255"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45132619776023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45132619808791"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45132619841559"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "45132619874327"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45132619907095"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45132619939863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45132619972631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45132620005399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "45132620038167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45132620070935"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45132620103703"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45132620136471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45132620169239"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "45132620202007"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "1d61c088b85c08e6",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-yellow-catuai",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/yellowcatuai.webp?v=1778683037",
+  "platform": "shopify",
+  "product_id": "8822428958743",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Honduras Yellow Catuaí",
+  "url": "https://silverminecoffee.com/products/honduras-yellow-catuai",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45132631998487"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45132632031255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45132632064023"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45132632096791"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "45132632129559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45132632162327"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45132632195095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45132632227863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45132632260631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "45132632293399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45132632326167"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45132632358935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45132632391703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45132632424471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "45132632457239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45132632490007"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45132632522775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45132632555543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45132632588311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "45132632621079"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "f332c52c6a86352b",
+  "first_seen": "2026-10-26",
+  "handle": "king-midas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/King_Midas_Blend_White.png?v=1781275790",
+  "platform": "shopify",
+  "product_id": "8833806696471",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "King Midas Blend",
+  "url": "https://silverminecoffee.com/products/king-midas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45154039169047"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45154039201815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45154039234583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45154039267351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "45154039300119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45154039332887"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45154039365655"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45154039398423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45154039431191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "45154039463959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45154039496727"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45154039529495"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45154039562263"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45154039595031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "45154039627799"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45154039660567"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45154039693335"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45154039726103"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45154039758871"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "45154039791639"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "3a818a5754b017e2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-chiroso",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Chiroso.png?v=1786114638",
+  "platform": "shopify",
+  "product_id": "8908784697367",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [],
+  "title": "Colombia Chiroso",
+  "url": "https://silverminecoffee.com/products/colombia-chiroso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45379611787287"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45379611820055"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45379611852823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45379611885591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "45379611918359"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45379611951127"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45379611983895"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45379612016663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45379612049431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "45379612082199"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45379612114967"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45379612147735"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45379612180503"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45379612213271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "45379612246039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45379612278807"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45379612311575"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45379612344343"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45379612377111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "45379612409879"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "b280589c77de0dc8",
+  "first_seen": "2026-10-26",
+  "handle": "cafe-exotica",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Cafe_Exotica.png?v=1787155488",
+  "platform": "shopify",
+  "product_id": "8919824629783",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Cafe Exotica",
+  "url": "https://silverminecoffee.com/products/cafe-exotica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45419639701527"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45419639734295"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45419639767063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45419639799831"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Whole Bean / 4 oz",
+    "variant_id": "45419639832599"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45419639865367"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45419639898135"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45419639930903"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45419639963671"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Fine / 4 oz",
+    "variant_id": "45419639996439"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45419640029207"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45419640061975"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45419640094743"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45419640127511"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Medium / 4 oz",
+    "variant_id": "45419640160279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 42.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45419640193047"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 28.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45419640225815"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 54.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45419640258583"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 103.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45419640291351"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 14.99,
+    "title": "Coarse / 4 oz",
+    "variant_id": "45419640324119"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "b6aa6f9a86ef5e26",
+  "first_seen": "2026-10-26",
+  "handle": "high-altitude-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/highaltitude.png?v=1788377492",
+  "platform": "shopify",
+  "product_id": "8935995113495",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Blend",
+   "Cold Brew",
+   "Drip",
+   "Espresso"
+  ],
+  "title": "High-Altitude Blend",
+  "url": "https://silverminecoffee.com/products/high-altitude-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz",
+    "variant_id": "45479117062167"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz",
+    "variant_id": "45479117094935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb",
+    "variant_id": "45479117127703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb",
+    "variant_id": "45479117160471"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb",
+    "variant_id": "45479117193239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz",
+    "variant_id": "45479117226007"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz",
+    "variant_id": "45479117258775"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb",
+    "variant_id": "45479117291543"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb",
+    "variant_id": "45479117324311"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb",
+    "variant_id": "45479117357079"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz",
+    "variant_id": "45479117389847"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz",
+    "variant_id": "45479117422615"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb",
+    "variant_id": "45479117455383"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb",
+    "variant_id": "45479117488151"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb",
+    "variant_id": "45479117520919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz",
+    "variant_id": "45479117553687"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz",
+    "variant_id": "45479117586455"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb",
+    "variant_id": "45479117619223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb",
+    "variant_id": "45479117651991"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb",
+    "variant_id": "45479117684759"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ },
+ {
+  "body_hash": "c7270f36341d768c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guji-hambela-g1-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0092/3389/1385/files/Ethiopia_Guji_Final.png?v=1790867988",
+  "platform": "shopify",
+  "product_id": "8970413932567",
+  "product_type": "Coffee",
+  "roaster_slug": "silverminecoffee",
+  "tags": [
+   "Cold Brew",
+   "Drip",
+   "Espresso",
+   "Single Origin"
+  ],
+  "title": "Ethiopia Guji Hambela G1",
+  "url": "https://silverminecoffee.com/products/organic-guji-hambela-g1-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Light",
+    "variant_id": "45657210748951"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Light",
+    "variant_id": "45657210781719"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Light",
+    "variant_id": "45657210814487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Light",
+    "variant_id": "45657210847255"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Light",
+    "variant_id": "45657210880023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Light",
+    "variant_id": "45657210912791"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Light",
+    "variant_id": "45657210945559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Light",
+    "variant_id": "45657210978327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Light",
+    "variant_id": "45657211011095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Light",
+    "variant_id": "45657211043863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Light",
+    "variant_id": "45657211076631"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Light",
+    "variant_id": "45657211109399"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Light",
+    "variant_id": "45657211142167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Light",
+    "variant_id": "45657211174935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Light",
+    "variant_id": "45657211207703"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Light",
+    "variant_id": "45657211240471"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Light",
+    "variant_id": "45657211273239"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Light",
+    "variant_id": "45657211306007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Light",
+    "variant_id": "45657211338775"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Light",
+    "variant_id": "45657211371543"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12 oz / Medium",
+    "variant_id": "45657317933079"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Whole Bean / 8 oz / Medium",
+    "variant_id": "45657317965847"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / 1 Lb / Medium",
+    "variant_id": "45657317998615"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Whole Bean / 2 Lb / Medium",
+    "variant_id": "45657318031383"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Whole Bean / 5 Lb / Medium",
+    "variant_id": "45657318064151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Fine / 12 oz / Medium",
+    "variant_id": "45657318096919"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Fine / 8 oz / Medium",
+    "variant_id": "45657318129687"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Fine / 1 Lb / Medium",
+    "variant_id": "45657318162455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Fine / 2 Lb / Medium",
+    "variant_id": "45657318195223"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Fine / 5 Lb / Medium",
+    "variant_id": "45657318227991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Medium / 12 oz / Medium",
+    "variant_id": "45657318260759"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Medium / 8 oz / Medium",
+    "variant_id": "45657318293527"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Medium / 1 Lb / Medium",
+    "variant_id": "45657318326295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Medium / 2 Lb / Medium",
+    "variant_id": "45657318359063"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Medium / 5 Lb / Medium",
+    "variant_id": "45657318391831"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Coarse / 12 oz / Medium",
+    "variant_id": "45657318424599"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.99,
+    "title": "Coarse / 8 oz / Medium",
+    "variant_id": "45657318457367"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Coarse / 1 Lb / Medium",
+    "variant_id": "45657318490135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.99,
+    "title": "Coarse / 2 Lb / Medium",
+    "variant_id": "45657318522903"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.99,
+    "title": "Coarse / 5 Lb / Medium",
+    "variant_id": "45657318555671"
+   }
+  ],
+  "vendor": "Silvermine Coffee Roasters"
+ }
+]

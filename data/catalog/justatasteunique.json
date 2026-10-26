@@ -1,0 +1,48 @@
+[
+ {
+  "body_hash": "984446b85bd84b17",
+  "first_seen": "2026-10-26",
+  "handle": "cuturra",
+  "image": null,
+  "platform": "generic",
+  "product_id": "021eff62b100",
+  "product_type": "",
+  "roaster_slug": "justatasteunique",
+  "tags": [],
+  "title": "Caturra",
+  "url": "https://www.justatasteunique.com/product-page/cuturra",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0201585255091d12",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-honey",
+  "image": null,
+  "platform": "generic",
+  "product_id": "6019afea5044",
+  "product_type": "",
+  "roaster_slug": "justatasteunique",
+  "tags": [],
+  "title": "Honey Bourbon",
+  "url": "https://www.justatasteunique.com/product-page/pink-bourbon-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 9.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

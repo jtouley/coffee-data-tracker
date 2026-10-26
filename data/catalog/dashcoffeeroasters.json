@@ -1,0 +1,222 @@
+[
+ {
+  "body_hash": "fca2d59a0c9a13a6",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b02f36c5ffd20d072d0b3d0/4bb3cc16-737f-4c78-9f00-c3db1377a894/IMG_9873.jpeg",
+  "platform": "squarespace",
+  "product_id": "5b4cb0b00e2e7286ed958893",
+  "product_type": "",
+  "roaster_slug": "dashcoffeeroasters",
+  "tags": [],
+  "title": "Decaf Colombia",
+  "url": "https://www.dashcoffeeroasters.com/shop-1/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Ground 12oz",
+    "variant_id": "2c558e10-7c3d-490d-9161-94f8fab15599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "364f5b9c-737c-41ad-b788-4bc38cef5049"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "7e84faaf-02d2-4e02-a272-8fd57c41c24c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "Ground 5lb",
+    "variant_id": "b01f1577-546e-4dc9-a482-ed099dad0893"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "383de3cfb66f8889",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b02f36c5ffd20d072d0b3d0/541e60cd-ca5a-422d-8ab8-8235d5b9db5c/PXL_20260810_222142356.jpg",
+  "platform": "squarespace",
+  "product_id": "5bc4a71f0852293bddfa82c5",
+  "product_type": "",
+  "roaster_slug": "dashcoffeeroasters",
+  "tags": [],
+  "title": "Seasonal Espresso: Guatemala Blue Ayarza",
+  "url": "https://www.dashcoffeeroasters.com/shop-1/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Ground 12oz",
+    "variant_id": "00548611-dab5-4c5a-8938-8f94a36bc809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "2bcafd48-ea26-4a6f-aef9-ea9db1bd9bf3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "4bff8e5c-51a2-4596-988c-fabbe427d6c3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "Ground 5lb",
+    "variant_id": "7c97f6b5-da3d-4428-8954-4ec9cce582dd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5524f63e982d3041",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-cauca",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b02f36c5ffd20d072d0b3d0/159ba59d-1016-441d-8362-c83326b35a90/PXL_20260810_222227805.jpg",
+  "platform": "squarespace",
+  "product_id": "5ff890852374d22fa76f0cc5",
+  "product_type": "",
+  "roaster_slug": "dashcoffeeroasters",
+  "tags": [],
+  "title": "Costa Rica Chirripo",
+  "url": "https://www.dashcoffeeroasters.com/shop-1/colombia-cauca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Ground 5 lb",
+    "variant_id": "018061ae-e73e-4ca0-9233-0b7d9a8e74e0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground 12oz",
+    "variant_id": "70812b72-a42c-4bd6-ad65-2225bfa39fbb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "9ff39015-5fbd-42b9-909a-7b9107f32a9b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "fb794917-20e5-4a0b-b859-5e23d6529c8a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24edf69c00727052",
+  "first_seen": "2026-10-26",
+  "handle": "sweaterweather-34czm-5rhrp",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b02f36c5ffd20d072d0b3d0/42889829-9395-46c8-8b99-cdf4eb5c2ec6/PXL_20260810_222210099.jpg",
+  "platform": "squarespace",
+  "product_id": "620570817f31e76bed465e0c",
+  "product_type": "",
+  "roaster_slug": "dashcoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Guji",
+  "url": "https://www.dashcoffeeroasters.com/shop-1/sweaterweather-34czm-5rhrp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Ground 5lb",
+    "variant_id": "154c78ed-5b39-4efc-903a-46c2e244679f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "776b8249-5591-4760-ac23-f1fe87bcc175"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground 12oz",
+    "variant_id": "db7b8146-c362-4d73-ad7e-95be5898b8fc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "dbe82011-607a-49af-a324-4e7887471dfd"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b788c51e5314b664",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-ardi-2k33d",
+  "image": "https://images.squarespace-cdn.com/content/v1/5b02f36c5ffd20d072d0b3d0/8bed1fc5-5933-4b32-a4b9-da92f7e0aebe/PXL_20260811_165427164.jpg",
+  "platform": "squarespace",
+  "product_id": "63699dea9b383077e44424e7",
+  "product_type": "",
+  "roaster_slug": "dashcoffeeroasters",
+  "tags": [],
+  "title": "Peru Cajamarca",
+  "url": "https://www.dashcoffeeroasters.com/shop-1/ethiopia-ardi-2k33d",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "299a04f2-d35b-440b-b55e-f5bec272e5b3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground 5lb",
+    "variant_id": "69dae92e-09f0-42ff-bff1-3dbb2cadfb49"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean 12oz",
+    "variant_id": "9c28b45c-5fe9-43e7-9689-c2cdf39d9bd8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground 12oz",
+    "variant_id": "a603e0b8-4241-419f-a9e7-7a005f35c34e"
+   }
+  ],
+  "vendor": ""
+ }
+]

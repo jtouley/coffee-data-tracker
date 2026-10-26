@@ -1,0 +1,482 @@
+{
+ "15457642840287": {
+  "body_hash": "165ccf81e1a6470d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blueberry",
+   "hazelnut",
+   "bright",
+   "medium-body"
+  ],
+  "varietals": []
+ },
+ "5962406396066": {
+  "body_hash": "7a41df0171f55572",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "medium-bodied",
+   "nutty",
+   "caramel",
+   "clean",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5962411999394": {
+  "body_hash": "47f6c1bf5efeae23",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "low acidity",
+   "full-bodied",
+   "chocolatey",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5962414751906": {
+  "body_hash": "5c1be27a5de4660a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "clean"
+  ],
+  "varietals": []
+ },
+ "5962418749602": {
+  "body_hash": "cd827af0e6b806d9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "medium-bodied",
+   "buttery mouth-feel",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5962421764258": {
+  "body_hash": "60eebc049dcbf90e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "sweet",
+   "caramelly",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5962425073826": {
+  "body_hash": "53fca4461b2609c8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "nutty",
+   "chocolatey",
+   "natural"
+  ],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "5962427859106": {
+  "body_hash": "936e6d3e110d9a65",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Indonesia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "intense smoky",
+   "sweet tobacco",
+   "nutty",
+   "juicy orange citrus",
+   "fully washed",
+   "giling basah wet-hulled"
+  ],
+  "varietals": []
+ },
+ "5962430644386": {
+  "body_hash": "0b1bf32f6dcb54e2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "vibrant acidity",
+   "rich-bodied",
+   "complex",
+   "wine",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5962433331362": {
+  "body_hash": "8d8276458bbf6ebe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "sweet",
+   "honey",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5973631107234": {
+  "body_hash": "6a47a198c76e3d61",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "citrusy",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5973635891362": {
+  "body_hash": "4e4c4ad978425ff8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Costa Rica",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "dark chocolate",
+   "sweet",
+   "acidity",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5973637562530": {
+  "body_hash": "70443844fe51f47a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "full body",
+   "medium acidity",
+   "dark chocolate",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5973640839330": {
+  "body_hash": "38e42bd2835d781e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "citrus",
+   "toffee",
+   "fully washed"
+  ],
+  "varietals": []
+ },
+ "5973645852834": {
+  "body_hash": "d3208f2bfaac32b5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Kenya",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "clean",
+   "acidity",
+   "apricot",
+   "peach",
+   "full-bodied",
+   "sweet",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "6148787732642": {
+  "body_hash": "b963b066f1dd391a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "blueberry",
+   "vanilla",
+   "clean",
+   "complex",
+   "juicy acidity",
+   "smooth body"
+  ],
+  "varietals": []
+ },
+ "6162528436386": {
+  "body_hash": "b6ec34143aeb18d9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6162532827298": {
+  "body_hash": "095d7442a6905b8e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6540524912802": {
+  "body_hash": "393b742548025ef7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6540541395106": {
+  "body_hash": "83b0a5cabcec8565",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "6621438804130": {
+  "body_hash": "d2fc9b61186870c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "brown sugar",
+   "floral",
+   "stone fruit",
+   "coconut",
+   "bright"
+  ],
+  "varietals": []
+ },
+ "7464589656287": {
+  "body_hash": "e3ec020872136b8a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ecuador",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Heirloom"
+  ]
+ },
+ "9074550800607": {
+  "body_hash": "7669ec8eb49a6052",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "nutty",
+   "toffee",
+   "citrus",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "9152900333791": {
+  "body_hash": "6a9ba2b7923b9361",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "United States",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "subtlety-sweet",
+   "earthy",
+   "full-bodied",
+   "citrus fruit",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "9283517841631": {
+  "body_hash": "98620e4798bf7cec",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "smooth",
+   "nutty"
+  ],
+  "varietals": []
+ }
+}

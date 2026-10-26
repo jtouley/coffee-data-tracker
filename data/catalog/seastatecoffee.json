@@ -1,0 +1,1216 @@
+[
+ {
+  "body_hash": "fbe1d72e214eb0cc",
+  "first_seen": "2026-10-26",
+  "handle": "morning-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/MB_G.png?v=1784403284",
+  "platform": "shopify",
+  "product_id": "1753825771633",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "medium",
+   "morning-brew"
+  ],
+  "title": "Morning Brew | Honduran",
+  "url": "https://www.seastatecoffee.com/products/morning-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "31603399360625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31603399393393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31603399426161"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31603399458929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Ground",
+    "variant_id": "44321632223414"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321632256182"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321632288950"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321632321718"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "4dcf0414dcc79c60",
+  "first_seen": "2026-10-26",
+  "handle": "black-gold",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/BG_G.jpg?v=1784402962",
+  "platform": "shopify",
+  "product_id": "1753832325233",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "black",
+   "black-gold",
+   "coffee",
+   "medium-dark",
+   "sea-state-coffee"
+  ],
+  "title": "Black & Gold | Peru",
+  "url": "https://www.seastatecoffee.com/products/black-gold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "31561873293425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31561873326193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31561873358961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31561873391729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Ground",
+    "variant_id": "44321631862966"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321631895734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321631928502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321631961270"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "50c847ce1b75b786",
+  "first_seen": "2026-10-26",
+  "handle": "dark",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/D_G.jpg?v=1784402522",
+  "platform": "shopify",
+  "product_id": "1753864208497",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "dark"
+  ],
+  "title": "Dark | Sumatran",
+  "url": "https://www.seastatecoffee.com/products/dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "31561959178353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31561959211121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31561959243889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31561959276657"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 13.99,
+    "title": "9 OZ / Whole Bean",
+    "variant_id": "41830811664566"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 13.99,
+    "title": "9 OZ / Ground",
+    "variant_id": "44321631109302"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Ground",
+    "variant_id": "44321631142070"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321631174838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321631207606"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321631240374"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "444609fb5bf92e9f",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-bundle",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/12oz_bunudle.png?v=1791480469",
+  "platform": "shopify",
+  "product_id": "2206842519665",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "3",
+   "3-pack",
+   "black-gold",
+   "bundle",
+   "coffee",
+   "coffee-bundle",
+   "dark",
+   "morning-brew",
+   "sample-pack",
+   "sea-state-coffee"
+  ],
+  "title": "Sea State 3",
+  "url": "https://www.seastatecoffee.com/products/coffee-bundle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 44.99,
+    "title": "Whole Bean",
+    "variant_id": "67564013748406"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 44.99,
+    "title": "Ground",
+    "variant_id": "67564013781174"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "b233f8675fe46df4",
+  "first_seen": "2026-10-26",
+  "handle": "light-house-1",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/LH_WB_12oz.png?v=1784404268",
+  "platform": "shopify",
+  "product_id": "4431905456241",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "lighthouse",
+   "medium-light"
+  ],
+  "title": "Light House | Costa Rica",
+  "url": "https://www.seastatecoffee.com/products/light-house-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "31509241561201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31509241593969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31509241626737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31509241659505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Ground",
+    "variant_id": "44321630453942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321630486710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321630519478"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321630552246"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "11cf12367d8c4a7a",
+  "first_seen": "2026-10-26",
+  "handle": "captains-roast-ethiopian-guji",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/CR_WB_12oz.png?v=1784405873",
+  "platform": "shopify",
+  "product_id": "4431907127409",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "light"
+  ],
+  "title": "Captain’s Roast | Ethiopia",
+  "url": "https://www.seastatecoffee.com/products/captains-roast-ethiopian-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "31509249982577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31509250015345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31509250048113"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31509250080881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Ground",
+    "variant_id": "44321630224566"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321630257334"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321630290102"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321630322870"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "645fce5a8dc278b3",
+  "first_seen": "2026-10-26",
+  "handle": "full-sail-guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/FS_WB_12oz.png?v=1784406114",
+  "platform": "shopify",
+  "product_id": "4431907881073",
+  "product_type": "",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "medium-light"
+  ],
+  "title": "Full Sail | Guatemalan",
+  "url": "https://www.seastatecoffee.com/products/full-sail-guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Ground",
+    "variant_id": "31509255487601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "31509255520369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "31509255553137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "31509255585905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "44321624719542"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "44321624752310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "44321624785078"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "44321624817846"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "30458caaf03fbcd2",
+  "first_seen": "2026-10-26",
+  "handle": "deep-sea-tanzanian",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/products/image_02a7a613-0928-4e5f-bc1a-ed3fd216e9ef.png?v=1762525751",
+  "platform": "shopify",
+  "product_id": "4431908896881",
+  "product_type": "",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "deep-sea",
+   "light"
+  ],
+  "title": "Deep Sea | Tanzanian Peaberry",
+  "url": "https://www.seastatecoffee.com/products/deep-sea-tanzanian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "31509262925937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31509262958705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31509262991473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "31509263024241"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 Oz / Ground",
+    "variant_id": "44321629929654"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321629962422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321629995190"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321630027958"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "6b11298f37ed06d8",
+  "first_seen": "2026-10-26",
+  "handle": "mrf-recon-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/RR_WB_12oz.png?v=1784404604",
+  "platform": "shopify",
+  "product_id": "4468591394929",
+  "product_type": "",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "MRF",
+   "Recon",
+   "Recon foundation",
+   "coffee",
+   "marine recon foundation",
+   "medium",
+   "recon-roast"
+  ],
+  "title": "Recon Roast | Sumatra",
+  "url": "https://www.seastatecoffee.com/products/mrf-recon-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "31636575060081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "31636575092849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "32086909812849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "41271217225910"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Ground",
+    "variant_id": "44321629798582"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321629831350"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321629864118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321629896886"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "66a5a199d20d1c34",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-colombian",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/TN_G_12oz.png?v=1784403804",
+  "platform": "shopify",
+  "product_id": "7004956590262",
+  "product_type": "",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "coffee",
+   "dark"
+  ],
+  "title": "True North Espresso | Colombian",
+  "url": "https://www.seastatecoffee.com/products/espresso-colombian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Whole Bean",
+    "variant_id": "40510826381494"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Whole Bean",
+    "variant_id": "40510826414262"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Whole Bean",
+    "variant_id": "40510826447030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Whole Bean",
+    "variant_id": "40510826479798"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12 OZ / Ground",
+    "variant_id": "44321625866422"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "1 LB / Ground",
+    "variant_id": "44321625899190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "2 LB / Ground",
+    "variant_id": "44321625931958"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.99,
+    "title": "5 LB / Ground",
+    "variant_id": "44321625964726"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "31b74a757dcab670",
+  "first_seen": "2026-10-26",
+  "handle": "nitro-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/products/SEA-STATE-COFFEE-CANNED-NITRO-FRONT.png?v=1763060287",
+  "platform": "shopify",
+  "product_id": "7341114065078",
+  "product_type": "nitro cold brew",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "12-pack",
+   "12oz-can",
+   "6-pack",
+   "RTD",
+   "canned",
+   "canned-coffee",
+   "canned-nitro",
+   "cold-brew",
+   "nitro",
+   "nitro-cold-brew",
+   "sea-state-coffee"
+  ],
+  "title": "Nitro Cold Brew",
+  "url": "https://www.seastatecoffee.com/products/nitro-cold-brew",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "6 Pack",
+    "variant_id": "41461329658038"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 45.0,
+    "title": "12 Pack",
+    "variant_id": "41461329690806"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "9132e4038c19b7a3",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-cold-brew-1",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/958804B3-9762-4646-8424-8F2597179C79.png?v=1763060290",
+  "platform": "shopify",
+  "product_id": "7803865858230",
+  "product_type": "cold brew",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "12-pack",
+   "12oz-can",
+   "6-pack",
+   "Canned-cold_brew",
+   "RTD",
+   "canned",
+   "canned-coffee",
+   "canned-nitro",
+   "cold-brew",
+   "cold-brew-family",
+   "nitro"
+  ],
+  "title": "Vanilla Cold Brew",
+  "url": "https://www.seastatecoffee.com/products/vanilla-cold-brew-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "6 Pack",
+    "variant_id": "42791128203446"
+   },
+   {
+    "available": true,
+    "grams": 4536,
+    "price_usd": 45.0,
+    "title": "12 Pack",
+    "variant_id": "42791128236214"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "06a5286798bf2f81",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/0C297C0B-91E7-4C10-AE6C-AF0E83B94512.png?v=1763060289",
+  "platform": "shopify",
+  "product_id": "7808597196982",
+  "product_type": "cold brew",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "12-pack",
+   "6-pack",
+   "Canned-cold_brew",
+   "RTD",
+   "canned",
+   "canned-coffee",
+   "canned-nitro",
+   "cold-brew",
+   "cold-brew-family",
+   "nitro",
+   "nitro-cold-brew"
+  ],
+  "title": "Chocolate Cold Brew",
+  "url": "https://www.seastatecoffee.com/products/chocolate-cold-brew",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "6 Pack",
+    "variant_id": "42810029179062"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 45.0,
+    "title": "12 Pack",
+    "variant_id": "42810029211830"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "be2637734a670ce7",
+  "first_seen": "2026-10-26",
+  "handle": "sweetened-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/IMG_9088.png?v=1763060291",
+  "platform": "shopify",
+  "product_id": "7957412053174",
+  "product_type": "cold brew",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "12-pack",
+   "12oz-can",
+   "6-pack",
+   "Canned-cold_brew",
+   "RTD",
+   "canned",
+   "canned-coffee",
+   "canned-nitro",
+   "cold-brew",
+   "nitro",
+   "nitro-cold-brew",
+   "sea-state-coffee"
+  ],
+  "title": "Sweetened Cold Brew",
+  "url": "https://www.seastatecoffee.com/products/sweetened-cold-brew",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 27.0,
+    "title": "6 Pack",
+    "variant_id": "43175714095286"
+   },
+   {
+    "available": false,
+    "grams": 4536,
+    "price_usd": 45.0,
+    "title": "12 Pack",
+    "variant_id": "43175714128054"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "7b96c7ba21ce4f42",
+  "first_seen": "2026-10-26",
+  "handle": "recon-sniper-foundation-support-kit",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/RSF_Bundle.png?v=1773803225",
+  "platform": "shopify",
+  "product_id": "8760383471798",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "Captain's Roast",
+   "MRF",
+   "Recon",
+   "Recon foundation",
+   "black",
+   "black-and-gold",
+   "black-gold",
+   "ceramic",
+   "ceramic-mug",
+   "coffee",
+   "coffee-bundle",
+   "drinkware",
+   "espresso",
+   "full-sail",
+   "light",
+   "marine recon foundation",
+   "medium-dark",
+   "medium-light",
+   "morning-brew",
+   "mug",
+   "recon-roast",
+   "sea-state-coffee",
+   "true-north"
+  ],
+  "title": "Recon & Sniper Foundation Support Kit",
+  "url": "https://www.seastatecoffee.com/products/recon-sniper-foundation-support-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Recon / Whole Bean",
+    "variant_id": "44982464676022"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "True North / Whole Bean",
+    "variant_id": "44982464708790"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Black & Gold / Whole Bean",
+    "variant_id": "44982464741558"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Full Sail / Whole Bean",
+    "variant_id": "44982464774326"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Lighthouse / Whole Bean",
+    "variant_id": "44982464807094"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Morning Brew / Whole Bean",
+    "variant_id": "44982464839862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Dark / Whole Bean",
+    "variant_id": "44982464872630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Captain's Roast / Whole Bean",
+    "variant_id": "44982464905398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Recon / Ground",
+    "variant_id": "44984697520310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "True North / Ground",
+    "variant_id": "44984697553078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Black & Gold / Ground",
+    "variant_id": "44984697585846"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Full Sail / Ground",
+    "variant_id": "44984697618614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Lighthouse / Ground",
+    "variant_id": "44984697651382"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Morning Brew / Ground",
+    "variant_id": "44984697684150"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Dark / Ground",
+    "variant_id": "44984697716918"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Captain's Roast / Ground",
+    "variant_id": "44984697749686"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ },
+ {
+  "body_hash": "46077ae08f6f8c7e",
+  "first_seen": "2026-10-26",
+  "handle": "force-recon-association-support-kit",
+  "image": "https://cdn.shopify.com/s/files/1/1365/9641/files/RSF_Bundle_ee592577-0e5e-4c13-97bb-0cb125bf8012.png?v=1774898155",
+  "platform": "shopify",
+  "product_id": "8768501874870",
+  "product_type": "Coffee",
+  "roaster_slug": "seastatecoffee",
+  "tags": [
+   "Captain's Roast",
+   "MRF",
+   "Recon",
+   "Recon foundation",
+   "black",
+   "black-and-gold",
+   "black-gold",
+   "ceramic",
+   "ceramic-mug",
+   "coffee",
+   "coffee-bundle",
+   "drinkware",
+   "espresso",
+   "full-sail",
+   "light",
+   "marine recon foundation",
+   "medium-dark",
+   "medium-light",
+   "morning-brew",
+   "mug",
+   "recon-roast",
+   "sea-state-coffee",
+   "true-north"
+  ],
+  "title": "Force Recon Association Support Kit",
+  "url": "https://www.seastatecoffee.com/products/force-recon-association-support-kit",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Recon / Whole Bean",
+    "variant_id": "45011611975862"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Recon / Ground",
+    "variant_id": "45011612008630"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "True North / Whole Bean",
+    "variant_id": "45011612041398"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "True North / Ground",
+    "variant_id": "45011612074166"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Black & Gold / Whole Bean",
+    "variant_id": "45011612106934"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Black & Gold / Ground",
+    "variant_id": "45011612139702"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Full Sail / Whole Bean",
+    "variant_id": "45011612172470"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Full Sail / Ground",
+    "variant_id": "45011612205238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Lighthouse / Whole Bean",
+    "variant_id": "45011612238006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Lighthouse / Ground",
+    "variant_id": "45011612270774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Morning Brew / Whole Bean",
+    "variant_id": "45011612303542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Morning Brew / Ground",
+    "variant_id": "45011612336310"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Dark / Whole Bean",
+    "variant_id": "45011612369078"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Dark / Ground",
+    "variant_id": "45011612401846"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Captain's Roast / Whole Bean",
+    "variant_id": "45011612434614"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 34.99,
+    "title": "Captain's Roast / Ground",
+    "variant_id": "45011612467382"
+   }
+  ],
+  "vendor": "Sea State Coffee"
+ }
+]

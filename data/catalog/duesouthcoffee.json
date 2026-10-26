@@ -1,0 +1,385 @@
+[
+ {
+  "body_hash": "5f69f44277c6d8cd",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-paubrasil",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Brazil_1.png?v=1781040158",
+  "platform": "shopify",
+  "product_id": "1527556079725",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Brazil | Cerrado Mineiro (formerly Paubrasil)",
+  "url": "https://duesouthcoffee.com/products/brazil-paubrasil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Whole bean",
+    "variant_id": "14132523696237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "15618492989549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.5,
+    "title": "5lb / Ground",
+    "variant_id": "15618493022317"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Ground",
+    "variant_id": "15637308276845"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "06ea79f56450ac32",
+  "first_seen": "2026-10-26",
+  "handle": "waxwing-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Waxwing_1.png?v=1781040075",
+  "platform": "shopify",
+  "product_id": "3851563008109",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Waxwing Blend",
+  "url": "https://duesouthcoffee.com/products/waxwing-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "10oz / Whole bean",
+    "variant_id": "29141232189549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "29141232222317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Ground",
+    "variant_id": "29141232255085"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground",
+    "variant_id": "29141232287853"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "762009fc95a96a09",
+  "first_seen": "2026-10-26",
+  "handle": "longspur-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Longspur_1.png?v=1781039869",
+  "platform": "shopify",
+  "product_id": "4785861918829",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Longspur Blend",
+  "url": "https://duesouthcoffee.com/products/longspur-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "10oz / Whole bean",
+    "variant_id": "32973419774061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "32973419806829"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Ground",
+    "variant_id": "32973419839597"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground",
+    "variant_id": "32973419872365"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "c0ecc8369ed52518",
+  "first_seen": "2026-10-26",
+  "handle": "nightjar-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Nightjar_1.png?v=1781039797",
+  "platform": "shopify",
+  "product_id": "4785866571885",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Nightjar Blend",
+  "url": "https://duesouthcoffee.com/products/nightjar-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.5,
+    "title": "10oz / Whole bean",
+    "variant_id": "32973430653037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "32973430685805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.5,
+    "title": "5lb / Ground",
+    "variant_id": "32973430718573"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Ground",
+    "variant_id": "32973430751341"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "db4235fd5e150f4a",
+  "first_seen": "2026-10-26",
+  "handle": "selva-negra-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Nicaragua_Selva_Negra_1.png?v=1781038478",
+  "platform": "shopify",
+  "product_id": "8005991399606",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [
+   "coffee",
+   "colombia",
+   "single origin"
+  ],
+  "title": "Selva Negra | Nicaragua",
+  "url": "https://duesouthcoffee.com/products/selva-negra-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.85,
+    "title": "10oz / Whole bean",
+    "variant_id": "43290387939510"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 96.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "43290388005046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.5,
+    "title": "5lb / Ground",
+    "variant_id": "43290388070582"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.35,
+    "title": "10oz / Ground",
+    "variant_id": "43290388103350"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "18a47feeb0b7f760",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-odo-shakiso-ehiopia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Decaf_Warbler_1.png?v=1781039232",
+  "platform": "shopify",
+  "product_id": "8154617282742",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Decaf Warbler",
+  "url": "https://duesouthcoffee.com/products/decaf-odo-shakiso-ehiopia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.5,
+    "title": "10oz / Whole bean",
+    "variant_id": "43792602759350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "43792602792118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Ground",
+    "variant_id": "43792602824886"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 18.0,
+    "title": "10oz / Ground",
+    "variant_id": "43792602857654"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "2bccef6f377d8073",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-aponte-reserve",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Colombia_Aponte_1.png?v=1781038989",
+  "platform": "shopify",
+  "product_id": "8344063705270",
+  "product_type": "Coffee",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [
+   "Coffee",
+   "colombia",
+   "single origin"
+  ],
+  "title": "Colombia Aponte Reserve",
+  "url": "https://duesouthcoffee.com/products/colombia-aponte-reserve",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "44916646510774"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 111.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44916646543542"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.75,
+    "title": "10oz / Ground",
+    "variant_id": "45004911280310"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb / Ground",
+    "variant_id": "45004911313078"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "a0ca05ed32b88043",
+  "first_seen": "2026-10-26",
+  "handle": "toucan-series-colombia-mariana-geisha",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/Toucan.png?v=1781040242",
+  "platform": "shopify",
+  "product_id": "8355516776630",
+  "product_type": "",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Toucan Series 2.0 │ Colombia Pompeya Geisha Washed",
+  "url": "https://duesouthcoffee.com/products/toucan-series-colombia-mariana-geisha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "44389820793014"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ },
+ {
+  "body_hash": "54fa14df9e1dcd3c",
+  "first_seen": "2026-10-26",
+  "handle": "ardi-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0020/7169/1373/files/2_2.png?v=1788987689",
+  "platform": "shopify",
+  "product_id": "8767043338422",
+  "product_type": "",
+  "roaster_slug": "duesouthcoffee",
+  "tags": [],
+  "title": "Ethiopia ARDI",
+  "url": "https://duesouthcoffee.com/products/ardi-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.8,
+    "title": "10oz / Whole Bean",
+    "variant_id": "45004888637622"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45004888670390"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.8,
+    "title": "10oz / Ground",
+    "variant_id": "45004894339254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 122.8,
+    "title": "5lb / Ground",
+    "variant_id": "45004894372022"
+   }
+  ],
+  "vendor": "Due South Coffee Roasters"
+ }
+]

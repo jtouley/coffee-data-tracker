@@ -1,0 +1,824 @@
+[
+ {
+  "body_hash": "463ecc1848f973fa",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-mornings",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/AutumnMorningsWB-1200.jpg?v=1739665538",
+  "platform": "shopify",
+  "product_id": "10392725833",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Featured Farmer Brews",
+   "subtitle_Seasonal Release"
+  ],
+  "title": "Autumn Mornings",
+  "url": "https://greatlakescoffee.com/products/autumn-mornings",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "44831303689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "44831303753"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "9a98eb9bcce8ba20",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/ColombiaWB-1200.jpg?v=1739665751",
+  "platform": "shopify",
+  "product_id": "2400086523988",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Colombia",
+   "Single Origin",
+   "subtitle_Single Origin | Colombia"
+  ],
+  "title": "Colombia",
+  "url": "https://greatlakescoffee.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "21488027533396"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "21488027566164"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "fda7e4b6dc175a89",
+  "first_seen": "2026-10-26",
+  "handle": "peru",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/PeruWB-1200.jpg?v=1739665802",
+  "platform": "shopify",
+  "product_id": "2409349185620",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Peru",
+   "Single Origin",
+   "subtitle_Single Origin | Peru"
+  ],
+  "title": "Peru Organic",
+  "url": "https://greatlakescoffee.com/products/peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "21522223235156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "21522223267924"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "9d15a885426d45a1",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/GuatemalaWB-1200.jpg?v=1739665670",
+  "platform": "shopify",
+  "product_id": "242522193929",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Single Origin",
+   "subtitle_Single Origin | Guatemala"
+  ],
+  "title": "Guatemala",
+  "url": "https://greatlakescoffee.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz - Whole Bean",
+    "variant_id": "21571321954388"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "2336077676553"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "bcaf14b46908fa50",
+  "first_seen": "2026-10-26",
+  "handle": "house-organic-decaffeinated",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/HouseDecafWB-1200.jpg?v=1739662901",
+  "platform": "shopify",
+  "product_id": "2762639365",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Decaffeinated",
+   "Organic",
+   "Single Origin",
+   "subtitle_Single Origin"
+  ],
+  "title": "House Decaf Organic",
+  "url": "https://greatlakescoffee.com/products/house-organic-decaffeinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341219017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28341233609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042270725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Ground",
+    "variant_id": "8044441541"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8d70aa9c575f0ee2",
+  "first_seen": "2026-10-26",
+  "handle": "detroit-french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/French_Roast_WB_jpg.jpg?v=1759790103",
+  "platform": "shopify",
+  "product_id": "2762639493",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Organic",
+   "subtitle_Signature Blend | Fair Trade | Organic"
+  ],
+  "title": "French Roast Organic",
+  "url": "https://greatlakescoffee.com/products/detroit-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341205321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28341250889"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042271109"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Ground",
+    "variant_id": "8044064389"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "d814889023d80e3d",
+  "first_seen": "2026-10-26",
+  "handle": "hydro-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/HydroWB-1200.jpg?v=1739663534",
+  "platform": "shopify",
+  "product_id": "2762639621",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "espresso",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Hydro Espresso",
+  "url": "https://greatlakescoffee.com/products/hydro-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341205065"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042271493"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "f51e0343e7138e3c",
+  "first_seen": "2026-10-26",
+  "handle": "dark-horse-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/DarkHorseWB-1200.jpg?v=1739663694",
+  "platform": "shopify",
+  "product_id": "2762639813",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "espresso",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Dark Horse Espresso",
+  "url": "https://greatlakescoffee.com/products/dark-horse-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341205129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042271941"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "bcae90888d33d984",
+  "first_seen": "2026-10-26",
+  "handle": "corktown-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/CorktownWB-1200.jpg?v=1739663764",
+  "platform": "shopify",
+  "product_id": "2762639941",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Corktown",
+  "url": "https://greatlakescoffee.com/products/corktown-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341205641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28341248649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042272197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Ground",
+    "variant_id": "8044188165"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "e8a1036f2345fda0",
+  "first_seen": "2026-10-26",
+  "handle": "motor-city-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/MotorCityWB-1200.jpg?v=1739664864",
+  "platform": "shopify",
+  "product_id": "2762640069",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Motor City",
+  "url": "https://greatlakescoffee.com/products/motor-city-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341205257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28341253001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8042272453"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Ground",
+    "variant_id": "8043933381"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "36c0f8b6de6bd783",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-organic",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/SumatraWB-1200.jpg?v=1739665005",
+  "platform": "shopify",
+  "product_id": "2849703749",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Organic",
+   "Single Origin",
+   "subtitle_Single Origin | Fair Trade"
+  ],
+  "title": "Sumatra Organic",
+  "url": "https://greatlakescoffee.com/products/sumatra-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28341402633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "8364076677"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "ea3d234b5c7a078a",
+  "first_seen": "2026-10-26",
+  "handle": "h-o-m-e-s",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/HOMESWB-1200.jpg?v=1739665909",
+  "platform": "shopify",
+  "product_id": "3609818464340",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "house blend",
+   "subtitle_Signature Blend"
+  ],
+  "title": "H.O.M.E.S",
+  "url": "https://greatlakescoffee.com/products/h-o-m-e-s",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "28464878518356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Ground",
+    "variant_id": "28464878551124"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28464878583892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28464878616660"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a4cf1e25c460db1f",
+  "first_seen": "2026-10-26",
+  "handle": "fresh-coast",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/FreshCoastWB-1200.jpg?v=1739665985",
+  "platform": "shopify",
+  "product_id": "3609944129620",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Fresh Coast",
+  "url": "https://greatlakescoffee.com/products/fresh-coast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "28465784258644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz - Ground",
+    "variant_id": "28465784291412"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "28465784324180"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 113.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "28465784356948"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "43c9f988dfc2c38e",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/ColdBrewGD-1200.jpg?v=1739666243",
+  "platform": "shopify",
+  "product_id": "8400367059201",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://greatlakescoffee.com/products/cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Ground",
+    "variant_id": "45069385892097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 137.5,
+    "title": "Case (6/12oz bags) - Ground",
+    "variant_id": "45069385924865"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "761dc5b177d1330b",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-latte",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Image_1_2.jpg?v=1743621235",
+  "platform": "shopify",
+  "product_id": "8525718749441",
+  "product_type": "Cold Brew",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Mocha Latte",
+  "url": "https://greatlakescoffee.com/products/mocha-latte",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 39.99,
+    "title": "12-Pack Case of 11oz Cans",
+    "variant_id": "45369460326657"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "a72ce508d8f6ee41",
+  "first_seen": "2026-10-26",
+  "handle": "great-lakes-coffee-roastery-experience",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/RoasteryTour1.jpg?v=1732319302",
+  "platform": "shopify",
+  "product_id": "8652181405953",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Great Lakes Coffee Roastery Experience",
+  "url": "https://greatlakescoffee.com/products/great-lakes-coffee-roastery-experience",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 50.0,
+    "title": "Default Title",
+    "variant_id": "45786802979073"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "64ed154634d4a5e2",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-latte-2025-website",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Mocha_-_Amazon.jpg?v=1762294302",
+  "platform": "shopify",
+  "product_id": "8689941414145",
+  "product_type": "Cold Brew",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Mocha Latte",
+  "url": "https://greatlakescoffee.com/products/mocha-latte-2025-website",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 39.99,
+    "title": "12-Pack Case of 11oz Cans",
+    "variant_id": "45990905479425"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "64ed154634d4a5e2",
+  "first_seen": "2026-10-26",
+  "handle": "lavender-latte-2025-website",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Lavender_-_Amazon.jpg?v=1762294403",
+  "platform": "shopify",
+  "product_id": "8689941938433",
+  "product_type": "Cold Brew",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Lavender Latte",
+  "url": "https://greatlakescoffee.com/products/lavender-latte-2025-website",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 39.99,
+    "title": "12-Pack Case of 11oz Cans",
+    "variant_id": "45990907281665"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "9c7ce198a26a2e7b",
+  "first_seen": "2026-10-26",
+  "handle": "fausto-romo",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Fausto_Romo_L_Shopify.jpg?v=1792701510",
+  "platform": "shopify",
+  "product_id": "9034710122753",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Fausto Romo",
+  "url": "https://greatlakescoffee.com/products/fausto-romo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "8oz",
+    "variant_id": "48144280027393"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 13.0,
+    "title": "4oz",
+    "variant_id": "50926925250817"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.5,
+    "title": "2oz",
+    "variant_id": "50926961590529"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "0bf9c029932b9a6d",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Tanzania_Peaberry_L_Shopify.jpg?v=1792700749",
+  "platform": "shopify",
+  "product_id": "9040059433217",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Tanzania Peaberry",
+  "url": "https://greatlakescoffee.com/products/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 18.0,
+    "title": "8oz",
+    "variant_id": "48144451502337"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 11.0,
+    "title": "4oz",
+    "variant_id": "50926885503233"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 6.5,
+    "title": "2oz",
+    "variant_id": "50926895464705"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "8829e94bc79c5e46",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/Papua_New_Guinea_L_Shopify.jpg?v=1792699685",
+  "platform": "shopify",
+  "product_id": "9040075849985",
+  "product_type": "",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [],
+  "title": "Papua New Guinea",
+  "url": "https://greatlakescoffee.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 20.0,
+    "title": "8oz",
+    "variant_id": "48144429318401"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 12.0,
+    "title": "4oz",
+    "variant_id": "50926668579073"
+   },
+   {
+    "available": true,
+    "grams": 57,
+    "price_usd": 7.0,
+    "title": "2oz",
+    "variant_id": "50926817673473"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ },
+ {
+  "body_hash": "3881877c5493e662",
+  "first_seen": "2026-10-26",
+  "handle": "mackinaw",
+  "image": "https://cdn.shopify.com/s/files/1/1052/2476/files/MackinacIslandWB-1200.jpg?v=1739665286",
+  "platform": "shopify",
+  "product_id": "9833659401",
+  "product_type": "Coffee",
+  "roaster_slug": "greatlakescoffee",
+  "tags": [
+   "Beans",
+   "Blend",
+   "subtitle_Signature Blend"
+  ],
+  "title": "Mackinac Island",
+  "url": "https://greatlakescoffee.com/products/mackinaw",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Whole Bean",
+    "variant_id": "38623919369"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz - Ground",
+    "variant_id": "38623919433"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Whole Bean",
+    "variant_id": "38623919497"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 107.95,
+    "title": "Case (6, 12oz bags) - Ground",
+    "variant_id": "38623919561"
+   }
+  ],
+  "vendor": "Great Lakes Coffee Roasting Company"
+ }
+]

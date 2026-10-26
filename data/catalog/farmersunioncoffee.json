@@ -1,0 +1,446 @@
+[
+ {
+  "body_hash": "a9da4a4731cd2a66",
+  "first_seen": "2026-10-26",
+  "handle": "frutado",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/Frutado.png?v=1687621716",
+  "platform": "shopify",
+  "product_id": "3960164286528",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Frutado, Brazil",
+  "url": "https://www.farmersunioncoffee.com/products/frutado",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "31728441884738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.0,
+    "title": "5lbs",
+    "variant_id": "31728441917506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lbs",
+    "variant_id": "32043408654402"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "5f495b2c12cae30f",
+  "first_seen": "2026-10-26",
+  "handle": "cultivator-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/products/Cultivator.png?v=1679348326",
+  "platform": "shopify",
+  "product_id": "3960217043008",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Cultivator Blend",
+  "url": "https://www.farmersunioncoffee.com/products/cultivator-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "31728427991106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lbs",
+    "variant_id": "31728428023874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lbs",
+    "variant_id": "31865296224322"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "4c3c196781a61e19",
+  "first_seen": "2026-10-26",
+  "handle": "planadas-sugar-cane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/products/sugarcanedecaf.png?v=1679349418",
+  "platform": "shopify",
+  "product_id": "3960265932864",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Sugar Cane Decaf, Colombia",
+  "url": "https://www.farmersunioncoffee.com/products/planadas-sugar-cane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "31728474652738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lbs",
+    "variant_id": "31728474685506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lbs",
+    "variant_id": "31865310609474"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "d12d36a8d7ea5233",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/products/FUCR_20230222_hero_images0050square.jpg?v=1679349519",
+  "platform": "shopify",
+  "product_id": "4496183459906",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://www.farmersunioncoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "31775787843650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs",
+    "variant_id": "31775787876418"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2lbs",
+    "variant_id": "31865312378946"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "9c00038ca56c6e28",
+  "first_seen": "2026-10-26",
+  "handle": "yirgz-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/products/yirgz.png?v=1679349588",
+  "platform": "shopify",
+  "product_id": "4661366292546",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "YirgZ, Ethiopia",
+  "url": "https://www.farmersunioncoffee.com/products/yirgz-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "32380806037570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lbs",
+    "variant_id": "32380806070338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5lbs",
+    "variant_id": "32380806103106"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "e142fc9233f8125b",
+  "first_seen": "2026-10-26",
+  "handle": "clodhopper-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/products/Clodhopper.png?v=1679347792",
+  "platform": "shopify",
+  "product_id": "6779685634114",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Clodhopper Espresso Blend",
+  "url": "https://www.farmersunioncoffee.com/products/clodhopper-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "39871817252930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lbs",
+    "variant_id": "39871817285698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs",
+    "variant_id": "39871817318466"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "0ddf2a3823600a48",
+  "first_seen": "2026-10-26",
+  "handle": "finca-patzibir-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/patzibir_61387789-ca8a-42f7-a9b9-a4ab9a9cedf9.png?v=1775582456",
+  "platform": "shopify",
+  "product_id": "6991922233410",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Finca Patzibir, Guatemala",
+  "url": "https://www.farmersunioncoffee.com/products/finca-patzibir-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "40529182818370"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lbs",
+    "variant_id": "40529182851138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs",
+    "variant_id": "40529182883906"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "3d974d43d0d03efb",
+  "first_seen": "2026-10-26",
+  "handle": "amargo-st-isabel-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/amargo_st._isabel.png?v=1731538599",
+  "platform": "shopify",
+  "product_id": "7383884857410",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Amargo, St. Isabel, Guatemala",
+  "url": "https://www.farmersunioncoffee.com/products/amargo-st-isabel-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "41804978257986"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2lbs",
+    "variant_id": "41804978290754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5lbs",
+    "variant_id": "41804978323522"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "a3647b554759b526",
+  "first_seen": "2026-10-26",
+  "handle": "la-minita-costa-rica",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/la_minita.png?v=1753894075",
+  "platform": "shopify",
+  "product_id": "7520883703874",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "La Minita, Costa Rica",
+  "url": "https://www.farmersunioncoffee.com/products/la-minita-costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12oz",
+    "variant_id": "42351159377986"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.0,
+    "title": "2lbs",
+    "variant_id": "42351159410754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lbs",
+    "variant_id": "42351159443522"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "57eac0627b34b44c",
+  "first_seen": "2026-10-26",
+  "handle": "san-carlos-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/san_carlos.png?v=1771541701",
+  "platform": "shopify",
+  "product_id": "7707774255170",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "San Carlos, Guatemala",
+  "url": "https://www.farmersunioncoffee.com/products/san-carlos-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "43010664792130"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lbs",
+    "variant_id": "43010664824898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lbs",
+    "variant_id": "43010664857666"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "596c29886e7f4649",
+  "first_seen": "2026-10-26",
+  "handle": "chelchele-anaerobic-supernatural-ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/chelchele.png?v=1788202611",
+  "platform": "shopify",
+  "product_id": "8377476644930",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Chelchele Anaerobic \"Supernatural\", Ethiopia",
+  "url": "https://www.farmersunioncoffee.com/products/chelchele-anaerobic-supernatural-ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "45122854649922"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2lbs",
+    "variant_id": "45122854682690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lbs",
+    "variant_id": "45122854715458"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ },
+ {
+  "body_hash": "37677b0cb1fa2040",
+  "first_seen": "2026-10-26",
+  "handle": "relampago-antigua-guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0068/0941/9840/files/FUCR_-_product_image_template_update_-2025.png?v=1790890346",
+  "platform": "shopify",
+  "product_id": "8424073953346",
+  "product_type": "Coffee",
+  "roaster_slug": "farmersunioncoffee",
+  "tags": [],
+  "title": "Relampago, Antigua Guatemala",
+  "url": "https://www.farmersunioncoffee.com/products/relampago-antigua-guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12oz",
+    "variant_id": "45296817307714"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 49.0,
+    "title": "2lbs",
+    "variant_id": "45296817340482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 112.0,
+    "title": "5lbs",
+    "variant_id": "45296817373250"
+   }
+  ],
+  "vendor": "Farmers Union Coffee Roasters"
+ }
+]

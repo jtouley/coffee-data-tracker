@@ -1,0 +1,1238 @@
+[
+ {
+  "body_hash": "929bd86b6433e53c",
+  "first_seen": "2026-10-26",
+  "handle": "david-solano-pineapple-yeast-secret-stash-54",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/NEW_BAGS-26.png?v=1792183145",
+  "platform": "shopify",
+  "product_id": "15409411948733",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Secret Stash",
+   "all coffee",
+   "coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "DAVID SOLANO PINEAPPLE YEAST - SECRET STASH #54",
+  "url": "https://goshencoffee.com/products/david-solano-pineapple-yeast-secret-stash-54",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 32.0,
+    "title": "10 OZ BOX",
+    "variant_id": "67679986778301"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 57.6,
+    "title": "2 x 10 OZ BOXES (SAVE 10%)",
+    "variant_id": "67679986811069"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "02a133b61dc1b434",
+  "first_seen": "2026-10-26",
+  "handle": "black-dog-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/BLACKDOG.png?v=1753741704",
+  "platform": "shopify",
+  "product_id": "6181203378365",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-1",
+   "Fan fave",
+   "all coffee",
+   "blends",
+   "dark roast"
+  ],
+  "title": "BLACK DOG ESPRESSO",
+  "url": "https://goshencoffee.com/products/black-dog-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "41281897627837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "41281897660605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "41281897693373"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / DRIP",
+    "variant_id": "41281897726141"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "41281897758909"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "7415e355b01f46bd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-biruhi",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/BIRUHI_f332cb10-7347-45ed-a5a1-aca714994d54.png?v=1753741091",
+  "platform": "shopify",
+  "product_id": "6181220253885",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "ETHIOPIA BIRUHI",
+  "url": "https://goshencoffee.com/products/ethiopia-biruhi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37951838322877"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37951838355645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37951838453949"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "37951838486717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 117.5,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37951838585021"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "a7b7dbd2b8405f23",
+  "first_seen": "2026-10-26",
+  "handle": "bona-fide",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/BONAFIDE_92df6650-2462-4f6c-8502-0050f18fca49.png?v=1753741300",
+  "platform": "shopify",
+  "product_id": "6181235720381",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-1",
+   "Fan fave",
+   "all coffee",
+   "blends",
+   "medium roast"
+  ],
+  "title": "BONA FIDE",
+  "url": "https://goshencoffee.com/products/bona-fide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37951926141117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37951926304957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37951926436029"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / DRIP",
+    "variant_id": "37951926567101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37951926698173"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "5f1ab1bf66823000",
+  "first_seen": "2026-10-26",
+  "handle": "old-school-tattoo",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/OLDSCHOOL_2208b9d1-206f-4e74-93b4-e79c65daccf2.png?v=1753741342",
+  "platform": "shopify",
+  "product_id": "6181239128253",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-1",
+   "Fan fave",
+   "all coffee",
+   "blends",
+   "medium roast"
+  ],
+  "title": "OLD SCHOOL TATTOO",
+  "url": "https://goshencoffee.com/products/old-school-tattoo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37951951700157"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37951951732925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37951951831229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / DRIP",
+    "variant_id": "37951951863997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37951951962301"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "997c5b99f96d37c1",
+  "first_seen": "2026-10-26",
+  "handle": "bright-eyed-breakfast",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/amazon.png?v=1761257843",
+  "platform": "shopify",
+  "product_id": "6181242077373",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-1",
+   "Fan fave",
+   "Fan faves",
+   "all coffee",
+   "blends",
+   "light roast"
+  ],
+  "title": "BRIGHT EYED BREAKFAST",
+  "url": "https://goshencoffee.com/products/bright-eyed-breakfast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37951996068029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37951996133565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37951996330173"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.9,
+    "title": "2 LB / DRIP",
+    "variant_id": "37951996395709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 106.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37951996592317"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "0ba007b8a116a77f",
+  "first_seen": "2026-10-26",
+  "handle": "tired-eye-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/DECAF.png?v=1753741756",
+  "platform": "shopify",
+  "product_id": "6181243289789",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-3",
+   "all coffee",
+   "blends",
+   "dark roast",
+   "decaf"
+  ],
+  "title": "TIRED EYE DECAF",
+  "url": "https://goshencoffee.com/products/tired-eye-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952017334461"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952017367229"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952017465533"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952017498301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.5,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952017596605"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "bc66b2373ce88300",
+  "first_seen": "2026-10-26",
+  "handle": "mokha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/MOKHAJAVA_59e94e11-da1c-48b9-be46-82aacc4a7c13.png?v=1753741544",
+  "platform": "shopify",
+  "product_id": "6181243912381",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-3",
+   "all coffee",
+   "blends",
+   "medium roast"
+  ],
+  "title": "MOKHA JAVA",
+  "url": "https://goshencoffee.com/products/mokha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952020971709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952021004477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952021102781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952021135549"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.5,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952021233853"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "3648100dca5fdc53",
+  "first_seen": "2026-10-26",
+  "handle": "moonstone",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/MOONSTONE.png?v=1753741625",
+  "platform": "shopify",
+  "product_id": "6181244371133",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-2",
+   "all coffee",
+   "blends",
+   "medium roast"
+  ],
+  "title": "MOONSTONE",
+  "url": "https://goshencoffee.com/products/moonstone",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952022773949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952022806717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952022905021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952022937789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952023036093"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "84162fc2ca9cbf21",
+  "first_seen": "2026-10-26",
+  "handle": "founders",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/FOUNDER_0ebc2a1c-6598-4e11-b11e-b72b203bd994.png?v=1753741178",
+  "platform": "shopify",
+  "product_id": "6181244534973",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-2",
+   "all coffee",
+   "blends",
+   "light roast"
+  ],
+  "title": "FOUNDERS",
+  "url": "https://goshencoffee.com/products/founders",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952023560381"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952023625917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952023724221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952023756989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952023855293"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "7a70daa1bb16f6c6",
+  "first_seen": "2026-10-26",
+  "handle": "heavy-feels-french",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/French.png?v=1753741811",
+  "platform": "shopify",
+  "product_id": "6181245157565",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Blend-price-2",
+   "all coffee",
+   "blends",
+   "dark roast"
+  ],
+  "title": "HEAVY FEELS FRENCH",
+  "url": "https://goshencoffee.com/products/heavy-feels-french",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952026771645"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952026804413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952026902717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.5,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952026935485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 109.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952027328701"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "9088dd1b11092d2c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-pelota",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/COLOMBIA_8fed06e2-2569-4349-9aee-4003dfade15e.png?v=1753741483",
+  "platform": "shopify",
+  "product_id": "6181247549629",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "COLOMBIA LA PELOTA",
+  "url": "https://goshencoffee.com/products/colombia-la-pelota",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952040927421"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952040960189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952041058493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952041091261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952041189565"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "ca40d469fe292b6e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-cachito",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/GUATAMALA.png?v=1753739598",
+  "platform": "shopify",
+  "product_id": "6181248925885",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "GUATEMALA CACHITO",
+  "url": "https://goshencoffee.com/products/guatemala-cachito",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952044630205"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952044662973"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952044761277"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952044794045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952044892349"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "d612009f47f83559",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-frutas",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/BRAZIL_716a0b49-3391-494f-a2a5-79cea54c370a.png?v=1753741418",
+  "platform": "shopify",
+  "product_id": "6181249515709",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "BRAZIL FAZENDA FRUTAS",
+  "url": "https://goshencoffee.com/products/brazil-fazenda-frutas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952046792893"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952046825661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952046923965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.75,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952047055037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.2,
+    "title": "2 LB / DRIP",
+    "variant_id": "38075752218813"
+   }
+  ],
+  "vendor": "Goshen Coffee Co"
+ },
+ {
+  "body_hash": "9507c795d3aa683c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-bebagi-kepada",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/sumatra.png?v=1753741856",
+  "platform": "shopify",
+  "product_id": "6181251285181",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "dark roast",
+   "single origin"
+  ],
+  "title": "SUMATRA BEBAGI KEPADA",
+  "url": "https://goshencoffee.com/products/sumatra-bebagi-kepada",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "37952057147581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "37952057180349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "37952057278653"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / DRIP",
+    "variant_id": "37952057311421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "37952057409725"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "4f7c65c223da7b9c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yebesele-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/YESEBELENATURAL_9f2b445d-3109-44a3-b9aa-0298aa8da265.png?v=1753740630",
+  "platform": "shopify",
+  "product_id": "7120627957949",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "ETHIOPIA YEBESELE NATURAL",
+  "url": "https://goshencoffee.com/products/ethiopia-yebesele-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "41281485275325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "41281485308093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "41281485340861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / DRIP",
+    "variant_id": "41281485373629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "41281485406397"
+   }
+  ],
+  "vendor": "Goshen Coffee Co"
+ },
+ {
+  "body_hash": "9154df4ed56bb8d4",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-mbegu-ndogo",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/KENYAMBEGU_e7b2df42-274d-4f55-9913-2afb5163784d.png?v=1753741218",
+  "platform": "shopify",
+  "product_id": "7120633692349",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "KENYA MBEGU NDOGO",
+  "url": "https://goshencoffee.com/products/kenya-mbegu-ndogo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / WHOLE BEAN",
+    "variant_id": "41281517125821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 OZ / DRIP",
+    "variant_id": "41281517158589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "41281517191357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 51.25,
+    "title": "2 LB / DRIP",
+    "variant_id": "41281517224125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "41281517256893"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "0c94c38e1b0e78b5",
+  "first_seen": "2026-10-26",
+  "handle": "edinson-argote-sl-28-natural-secret-stash-50",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/2025-10-13GoldenBeanAwards0033.jpg?v=1776268682",
+  "platform": "shopify",
+  "product_id": "8068205805757",
+  "product_type": "Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Secret Stash",
+   "all coffee",
+   "coffee",
+   "light roast",
+   "single origin"
+  ],
+  "title": "EDINSON ARGOTE SL-28 NATURAL - SECRET STASH #50",
+  "url": "https://goshencoffee.com/products/edinson-argote-sl-28-natural-secret-stash-50",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 31.0,
+    "title": "8 OZ BOX",
+    "variant_id": "45337666224317"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "58cff20fc7f66bde",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-jhoan-vergara-pink-bourbon-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/NEWBAGS-24.png?v=1784048731",
+  "platform": "shopify",
+  "product_id": "8296116027581",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "COLOMBIA JHOAN VERGARA PINK BOURBON DECAF",
+  "url": "https://goshencoffee.com/products/colombia-jhoan-vergara-pink-bourbon-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.5,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "46747503722685"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 29.5,
+    "title": "10 OZ / DRIP",
+    "variant_id": "46747503755453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 90.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "46747503788221"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 90.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "46747503820989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "46747503853757"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "249670927c99b182",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-katia-duke-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/35.png?v=1788192898",
+  "platform": "shopify",
+  "product_id": "8464879583421",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "HONDURAS KATIA DUKE NATURAL",
+  "url": "https://goshencoffee.com/products/honduras-katia-duke-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "48302223130813"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.0,
+    "title": "10 OZ / DRIP",
+    "variant_id": "48302223163581"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "48302223196349"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 78.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "48302223229117"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 193.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "48302223261885"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "315b550ff7299f14",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-diego-robelo-jardin-red-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/34_d6aaf5fa-3ce8-4025-9d4d-b132bedcafdf.png?v=1788192865",
+  "platform": "shopify",
+  "product_id": "8464991879357",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "COSTA RICA DIEGO ROBELO JARDÍN RED HONEY",
+  "url": "https://goshencoffee.com/products/costa-rica-diego-robelo-jardin-red-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.5,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "48302457028797"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 26.5,
+    "title": "10 OZ / DRIP",
+    "variant_id": "48302457061565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "48302457094333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 80.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "48302457127101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 198.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "48302457159869"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "f33f8bc3ac53deac",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-habtamu-goro",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/33_9fa9db62-0e66-4378-a65e-4450ccc4d8d6.png?v=1788192847",
+  "platform": "shopify",
+  "product_id": "8473651118269",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "all coffee",
+   "seasonal",
+   "single origin"
+  ],
+  "title": "ETHIOPIA HABTAMU GORO",
+  "url": "https://goshencoffee.com/products/ethiopia-habtamu-goro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.5,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "48327835713725"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.5,
+    "title": "10 OZ / DRIP",
+    "variant_id": "48327835746493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.5,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "48327835779261"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.5,
+    "title": "2 LB / DRIP",
+    "variant_id": "48327835812029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "48327835844797"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ },
+ {
+  "body_hash": "a20db15f6f6dd547",
+  "first_seen": "2026-10-26",
+  "handle": "harvestmoon",
+  "image": "https://cdn.shopify.com/s/files/1/0526/0954/8477/files/NEWBAGS-25_31680559-e17b-45d5-b432-0dfa27a29aa3.png?v=1788193257",
+  "platform": "shopify",
+  "product_id": "8479928680637",
+  "product_type": "Food & Beverage → Pantry → Coffee → Coffee Beans / Ground Coffee",
+  "roaster_slug": "goshencoffee",
+  "tags": [
+   "Fan fave",
+   "all coffee",
+   "blends",
+   "seasonal"
+  ],
+  "title": "HARVEST MOON",
+  "url": "https://goshencoffee.com/products/harvestmoon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / WHOLE BEAN",
+    "variant_id": "48352290111677"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 OZ / DRIP",
+    "variant_id": "48352290144445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 LB / WHOLE BEAN",
+    "variant_id": "48352290177213"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.0,
+    "title": "2 LB / DRIP",
+    "variant_id": "48352290209981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 144.0,
+    "title": "5 LB / WHOLE BEAN",
+    "variant_id": "48352290242749"
+   }
+  ],
+  "vendor": "Goshen Coffee Roasters"
+ }
+]

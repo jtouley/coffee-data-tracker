@@ -1,0 +1,763 @@
+[
+ {
+  "body_hash": "4a7051d4d55a6718",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-fazenda-esperanca",
+  "image": "https://littlecity.com/wp-content/uploads/2024/12/Little-city-coffee-austin-microlot-brazil-faz-esperanca.png",
+  "platform": "woocommerce",
+  "product_id": "19341",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Brazil Fazenda Esperança",
+  "url": "https://littlecity.com/product/brazil-fazenda-esperanca/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "19341:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "19341:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1e2fb524f57db9d7",
+  "first_seen": "2026-10-26",
+  "handle": "congress-avenue",
+  "image": "https://littlecity.com/wp-content/uploads/2023/06/Little-City-Coffee-Roasters-Austin-Congress-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "19693",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Blends",
+   "coffee"
+  ],
+  "title": "Congress Avenue",
+  "url": "https://littlecity.com/product/congress-avenue/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "19693:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "19693:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5ff648a106949222",
+  "first_seen": "2026-10-26",
+  "handle": "violet-crown",
+  "image": "https://littlecity.com/wp-content/uploads/2023/06/Little-City-Coffee-Roasters-Austin-Violet-light-roast.png",
+  "platform": "woocommerce",
+  "product_id": "19711",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Blends",
+   "coffee"
+  ],
+  "title": "Violet Crown",
+  "url": "https://littlecity.com/product/violet-crown/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "19711:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "19711:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efc33c4c95cf5968",
+  "first_seen": "2026-10-26",
+  "handle": "messenger-espresso",
+  "image": "https://littlecity.com/wp-content/uploads/2023/06/Little-City-Coffee-Roasters-Austin-MEssenger-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "19714",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Blends",
+   "coffee"
+  ],
+  "title": "Messenger Espresso",
+  "url": "https://littlecity.com/product/messenger-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "19714:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "19714:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acc0b219425a22bc",
+  "first_seen": "2026-10-26",
+  "handle": "slacker-decaf",
+  "image": "https://littlecity.com/wp-content/uploads/2023/06/Little-City-Coffee-Roasters-Austin-Slacker-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "19718",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Blends",
+   "coffee"
+  ],
+  "title": "Slacker Decaf",
+  "url": "https://littlecity.com/product/slacker-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.49,
+    "title": "12oz",
+    "variant_id": "19718:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.49,
+    "title": "5lbs",
+    "variant_id": "19718:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "aac87cbe9fa70707",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://littlecity.com/wp-content/uploads/2023/06/Little-City-Coffee-Roasters-Austin-cold-brew-medium-roast.png",
+  "platform": "woocommerce",
+  "product_id": "19726",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Blends",
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://littlecity.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz",
+    "variant_id": "19726:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 16.99,
+    "title": "5lbs",
+    "variant_id": "19726:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f08bec02cb66847",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-growler",
+  "image": "https://littlecity.com/wp-content/uploads/2021/08/lc-product-cold-brew-growler-1400x1400-1.png",
+  "platform": "woocommerce",
+  "product_id": "19734",
+  "product_type": "simple",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Cold Brew",
+   "cold brew coffee"
+  ],
+  "title": "Cold Brew Growler (64oz)",
+  "url": "https://littlecity.com/product/cold-brew-growler/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 19.99,
+    "title": "Cold Brew Growler (64oz)",
+    "variant_id": "19734:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e1fad70b76063910",
+  "first_seen": "2026-10-26",
+  "handle": "finca-fatima-mexico",
+  "image": "https://littlecity.com/wp-content/uploads/2024/12/Little-city-coffee-austin-microlot-mexico-finca-fatima-washed.png",
+  "platform": "woocommerce",
+  "product_id": "19786",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Mexico Finca Fatima",
+  "url": "https://littlecity.com/product/finca-fatima-mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "19786:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "19786:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "def59a78f0c2ae24",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-la-perla",
+  "image": "https://littlecity.com/wp-content/uploads/2025/01/lc-product-microlot-mexico-la-perla-1000px.png",
+  "platform": "woocommerce",
+  "product_id": "24105",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Mexico La Perla",
+  "url": "https://littlecity.com/product/mexico-la-perla/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "24105:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "24105:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1667f9f907e92f9e",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://littlecity.com/wp-content/uploads/2025/03/lc-tea-breakfast-blend.png",
+  "platform": "woocommerce",
+  "product_id": "24511",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://littlecity.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.99,
+    "title": "1 Lb (453.6g)",
+    "variant_id": "24511:0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "100 count",
+    "variant_id": "24511:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "20 count",
+    "variant_id": "24511:2"
+   },
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 12.99,
+    "title": "3.5oz (100g)",
+    "variant_id": "24511:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4f514f46293df42a",
+  "first_seen": "2026-10-26",
+  "handle": "little-city-tea-moroccan-mint",
+  "image": "https://littlecity.com/wp-content/uploads/2025/03/lc-tea-morrocan-mint.png",
+  "platform": "woocommerce",
+  "product_id": "24580",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Moroccan Mint",
+  "url": "https://littlecity.com/product/little-city-tea-moroccan-mint/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 12.99,
+    "title": "3.5oz (100g)",
+    "variant_id": "24580:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.99,
+    "title": "1 Lb (453.6g)",
+    "variant_id": "24580:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "20 count",
+    "variant_id": "24580:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 12.99,
+    "title": "100 count",
+    "variant_id": "24580:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f758425b56b1147a",
+  "first_seen": "2026-10-26",
+  "handle": "little-city-tea-jasmine-green",
+  "image": "https://littlecity.com/wp-content/uploads/2025/03/lc-tea-jasmine-green.png",
+  "platform": "woocommerce",
+  "product_id": "24590",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Tea"
+  ],
+  "title": "Jasmine Green",
+  "url": "https://littlecity.com/product/little-city-tea-jasmine-green/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 13.49,
+    "title": "3.5oz (100g)",
+    "variant_id": "24590:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.49,
+    "title": "1 Lb (453.6g)",
+    "variant_id": "24590:1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.49,
+    "title": "20 count",
+    "variant_id": "24590:2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.49,
+    "title": "100 count",
+    "variant_id": "24590:3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f5523cb17915a5dd",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-chorongi",
+  "image": "https://littlecity.com/wp-content/uploads/2022/03/lc-product-microlot-kenya-chorongi.png",
+  "platform": "woocommerce",
+  "product_id": "26655",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Kenya Chorongi",
+  "url": "https://littlecity.com/product/kenya-chorongi/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "12oz",
+    "variant_id": "26655:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 22.99,
+    "title": "5lbs",
+    "variant_id": "26655:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9d4b43c6cc5b8b56",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-santa-felisa-orange-honey",
+  "image": "https://littlecity.com/wp-content/uploads/2025/07/lc-product-m-prem-sta-fel-honey-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "27579",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Guatemala Santa Felisa",
+  "url": "https://littlecity.com/product/guatemala-santa-felisa-orange-honey/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 32.99,
+    "title": "12oz",
+    "variant_id": "27579:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 32.99,
+    "title": "5lbs",
+    "variant_id": "27579:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fa53c22bb2fc23d4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-hambela-buleye",
+  "image": "https://littlecity.com/wp-content/uploads/2025/09/lc-product-microlot-ethiopia-hambela-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "28120",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Microlot",
+   "ethiopia",
+   "natural"
+  ],
+  "title": "Ethiopia Hambela Buleye",
+  "url": "https://littlecity.com/product/ethiopia-hambela-buleye/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz",
+    "variant_id": "28120:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 21.99,
+    "title": "5lbs",
+    "variant_id": "28120:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "febf6991914c1037",
+  "first_seen": "2026-10-26",
+  "handle": "myanmar-myin-dwin",
+  "image": "https://littlecity.com/wp-content/uploads/2025/10/lc-product-microlot-myanmar-myin-dwin-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "28365",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Myanmar Myin Dwin",
+  "url": "https://littlecity.com/product/myanmar-myin-dwin/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz",
+    "variant_id": "28365:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.99,
+    "title": "5lbs",
+    "variant_id": "28365:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f8e6ffa74dd6af24",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-fatima-gesha",
+  "image": "https://littlecity.com/wp-content/uploads/2025/12/lc-product-microlot-mexico-finca-fatima-04-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "29366",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Mexico Finca Fatima Gesha",
+  "url": "https://littlecity.com/product/mexico-fatima-gesha/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 29.99,
+    "title": "12oz",
+    "variant_id": "29366:0"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 29.99,
+    "title": "5lbs",
+    "variant_id": "29366:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7d9b0bf9a99ed8ff",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-nyungwe",
+  "image": "https://littlecity.com/wp-content/uploads/2026/05/lc-product-microlot-rwanda-nyungwe-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "31317",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Rwanda Nyungwe",
+  "url": "https://littlecity.com/product/rwanda-nyungwe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "31317:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "31317:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "87fbe0db31a473eb",
+  "first_seen": "2026-10-26",
+  "handle": "finca-terrerito",
+  "image": "https://littlecity.com/wp-content/uploads/2026/07/lc-product-microlot-honduras-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "33765",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Honduras Finca Terrerito",
+  "url": "https://littlecity.com/product/finca-terrerito/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "33765:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "33765:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "792793ea4da6df32",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-girma",
+  "image": "https://littlecity.com/wp-content/uploads/2026/09/LC-micro-ETHIOPIA-g-girma-1-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "34428",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Microlot",
+   "ethiopia",
+   "natural"
+  ],
+  "title": "Ethiopia Getaneh Girma",
+  "url": "https://littlecity.com/product/ethiopia-girma/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz",
+    "variant_id": "34428:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.99,
+    "title": "5lbs",
+    "variant_id": "34428:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ca3b38366d57bdc8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-zelelu-moke",
+  "image": "https://littlecity.com/wp-content/uploads/2026/09/LC-micro-ethiopia-zelelu-scaled.png",
+  "platform": "woocommerce",
+  "product_id": "34468",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [
+   "Microlot",
+   "ethiopia",
+   "natural"
+  ],
+  "title": "Ethiopia Zelelu Moke",
+  "url": "https://littlecity.com/product/ethiopia-zelelu-moke/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "12oz",
+    "variant_id": "34468:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.99,
+    "title": "5lbs",
+    "variant_id": "34468:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35c7b6faf695eee4",
+  "first_seen": "2026-10-26",
+  "handle": "sitio-dos-cedros",
+  "image": "https://littlecity.com/wp-content/uploads/2024/12/Little-city-coffee-austin-microlot-brazil-sitio-dos-cedros.png",
+  "platform": "woocommerce",
+  "product_id": "70",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Brazil Sítio Dos Cedros",
+  "url": "https://littlecity.com/product/sitio-dos-cedros/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "70:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "70:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3868f9b793779546",
+  "first_seen": "2026-10-26",
+  "handle": "finca-los-jazmines-colombia",
+  "image": "https://littlecity.com/wp-content/uploads/2024/12/Little-city-coffee-austin-microlot-colombia-los-jazmines.png",
+  "platform": "woocommerce",
+  "product_id": "969",
+  "product_type": "variable",
+  "roaster_slug": "littlecity",
+  "tags": [],
+  "title": "Colombia Los Jazmines",
+  "url": "https://littlecity.com/product/finca-los-jazmines-colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "12oz",
+    "variant_id": "969:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.99,
+    "title": "5lbs",
+    "variant_id": "969:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

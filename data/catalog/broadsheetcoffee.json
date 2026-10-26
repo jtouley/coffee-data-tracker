@@ -1,0 +1,2665 @@
+[
+ {
+  "body_hash": "9794dfeb3b6b6705",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-la-roca-extended",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/rocaextwebonly.webp?v=1783095652",
+  "platform": "shopify",
+  "product_id": "10845054206263",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "colombia",
+   "funky",
+   "single-origin",
+   "so"
+  ],
+  "title": "Colombia: La Roca Extended",
+  "url": "https://broadsheetcoffee.com/products/colombia-la-roca-extended",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "52602640859447"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "52602640892215"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Pour Over",
+    "variant_id": "52602640924983"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Aeropress",
+    "variant_id": "52602640957751"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "52602640990519"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / French Press",
+    "variant_id": "52602641023287"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Percolator",
+    "variant_id": "52602641056055"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "52602641088823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52602641121591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52602641154359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "52602641187127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "52602641219895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52602641252663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / French Press",
+    "variant_id": "52602641285431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Percolator",
+    "variant_id": "52602641318199"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52602641350967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52602641383735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "52602641416503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "52602641449271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "52602641482039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "52602641514807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / French Press",
+    "variant_id": "52602641547575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Percolator",
+    "variant_id": "52602641580343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "52602641613111"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "9b7d33d68e500c1b",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-concepcion-huista",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/concepcion.webp?v=1785952636",
+  "platform": "shopify",
+  "product_id": "10903301882167",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "chocolatey",
+   "guatemala",
+   "single-origin"
+  ],
+  "title": "Guatemala: Concepción Huista",
+  "url": "https://broadsheetcoffee.com/products/guatemala-concepcion-huista",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Whole Bean",
+    "variant_id": "52790904684855"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "52790904717623"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Aeropress",
+    "variant_id": "52790904750391"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Pour Over",
+    "variant_id": "52790904783159"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Drip Brewer",
+    "variant_id": "52790904815927"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / French Press",
+    "variant_id": "52790904848695"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Percolator",
+    "variant_id": "52790904881463"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.5,
+    "title": "310g / Cold Brew",
+    "variant_id": "52790904914231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52790904946999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52790904979767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Aeropress",
+    "variant_id": "52790905012535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Pour Over",
+    "variant_id": "52790905045303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52790905078071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / French Press",
+    "variant_id": "52790905110839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Percolator",
+    "variant_id": "52790905143607"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 58.75,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52790905176375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52790905209143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "52790905241911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "52790905274679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "52790905307447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "52790905340215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / French Press",
+    "variant_id": "52790905372983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Percolator",
+    "variant_id": "52790905405751"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 127.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "52790905438519"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "db6959b9bfc66406",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-bishan-wate",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/bishanwate.webp?v=1786547543",
+  "platform": "shopify",
+  "product_id": "10913288913207",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#NEW",
+   "#floral",
+   "ethiopia",
+   "single-origin",
+   "so"
+  ],
+  "title": "Ethiopia: Bishan Wate",
+  "url": "https://broadsheetcoffee.com/products/ethiopia-bishan-wate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Whole Bean",
+    "variant_id": "52825089540407"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "52825089573175"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Pour Over",
+    "variant_id": "52825089605943"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Aeropress",
+    "variant_id": "52825089638711"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Drip Brewer",
+    "variant_id": "52825089671479"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / French Press",
+    "variant_id": "52825089704247"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Percolator",
+    "variant_id": "52825089737015"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 25.5,
+    "title": "310g / Cold Brew",
+    "variant_id": "52825089769783"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52825089802551"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52825089835319"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Pour Over",
+    "variant_id": "52825089868087"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Aeropress",
+    "variant_id": "52825089900855"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52825089933623"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / French Press",
+    "variant_id": "52825089966391"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Percolator",
+    "variant_id": "52825089999159"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.75,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52825090031927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52825090064695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "52825090097463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "52825090130231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "52825090162999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "52825090195767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / French Press",
+    "variant_id": "52825090228535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Percolator",
+    "variant_id": "52825090261303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 137.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "52825090294071"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "576205b8b088ba58",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-pedro-perez-domingo",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/perez.webp?v=1787063460",
+  "platform": "shopify",
+  "product_id": "10924894388535",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#NEW",
+   "chocolatey",
+   "guatemala",
+   "single-origin"
+  ],
+  "title": "Guatemala: Pedro Perez Domingo",
+  "url": "https://broadsheetcoffee.com/products/guatemala-pedro-perez-domingo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "52861077324087"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "52861077356855"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Aeropress",
+    "variant_id": "52861077389623"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Pour Over",
+    "variant_id": "52861077422391"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "52861077455159"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / French Press",
+    "variant_id": "52861077487927"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Percolator",
+    "variant_id": "52861077520695"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "52861077553463"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52861077586231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52861077618999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "52861077651767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Pour Over",
+    "variant_id": "52861077684535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52861077717303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / French Press",
+    "variant_id": "52861077750071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Percolator",
+    "variant_id": "52861077782839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52861077815607"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52861077848375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "52861077881143"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "52861077913911"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "52861077946679"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "52861077979447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / French Press",
+    "variant_id": "52861078012215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Percolator",
+    "variant_id": "52861078044983"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "52861078077751"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "83b35f425f0a774f",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-bavyeyi",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/bavw.webp?v=1790104942",
+  "platform": "shopify",
+  "product_id": "10981784027447",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "Burundi",
+   "elegant",
+   "single-origin",
+   "so"
+  ],
+  "title": "Burundi: Bavyeyi",
+  "url": "https://broadsheetcoffee.com/products/burundi-bavyeyi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "53025960198455"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "53025960231223"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Pour Over",
+    "variant_id": "53025960263991"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Aeropress",
+    "variant_id": "53025960296759"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "53025960329527"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / French Press",
+    "variant_id": "53025960362295"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Percolator",
+    "variant_id": "53025960395063"
+   },
+   {
+    "available": false,
+    "grams": 310,
+    "price_usd": 25.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "53025960427831"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "53025960460599"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "53025960493367"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "53025960526135"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "53025960558903"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "53025960591671"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / French Press",
+    "variant_id": "53025960624439"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Percolator",
+    "variant_id": "53025960657207"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 62.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "53025960689975"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53025960722743"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "53025960755511"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "53025960788279"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "53025960821047"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "53025960853815"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / French Press",
+    "variant_id": "53025960886583"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Percolator",
+    "variant_id": "53025960919351"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53025960952119"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "0808af7cbe4f9fec",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-ushirika-ab",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/ushirika.webp?v=1791986057",
+  "platform": "shopify",
+  "product_id": "11015943618871",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#NEW",
+   "Kenya",
+   "elegant",
+   "single-origin",
+   "so"
+  ],
+  "title": "Kenya: Ushirika AB",
+  "url": "https://broadsheetcoffee.com/products/kenya-ushirika-ab",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Whole Bean",
+    "variant_id": "53306845626679"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "53306845659447"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Pour Over",
+    "variant_id": "53306845692215"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Aeropress",
+    "variant_id": "53306845724983"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Drip Brewer",
+    "variant_id": "53306845757751"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / French Press",
+    "variant_id": "53306845790519"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Percolator",
+    "variant_id": "53306845823287"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Cold Brew",
+    "variant_id": "53306845856055"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "53306845888823"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "53306845921591"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "53306845954359"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "53306845987127"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "53306846019895"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / French Press",
+    "variant_id": "53306846052663"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Percolator",
+    "variant_id": "53306846085431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "53306846118199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "53306846150967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "53306846183735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Pour Over",
+    "variant_id": "53306846216503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Aeropress",
+    "variant_id": "53306846249271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "53306846282039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / French Press",
+    "variant_id": "53306846314807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Percolator",
+    "variant_id": "53306846347575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Cold Brew",
+    "variant_id": "53306846380343"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "d9ed2d6ec377f4d1",
+  "first_seen": "2026-10-26",
+  "handle": "headliner-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/hdlr.webp?v=1784300533",
+  "platform": "shopify",
+  "product_id": "8968406040887",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#classic",
+   "blend"
+  ],
+  "title": "Headliner - Seasonal Blend",
+  "url": "https://broadsheetcoffee.com/products/headliner-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Whole Bean",
+    "variant_id": "47432272216375"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47432272249143"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49977271615799"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Pour Over",
+    "variant_id": "49977271648567"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Aeropress",
+    "variant_id": "49977271681335"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49977271714103"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / French Press",
+    "variant_id": "49977271746871"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Percolator",
+    "variant_id": "49977271779639"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Cold Brew",
+    "variant_id": "49977271812407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49977271845175"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "49977271877943"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "49977271910711"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49977271943479"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / French Press",
+    "variant_id": "49977271976247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Percolator",
+    "variant_id": "49977272009015"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49977272041783"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50910527226167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "50910527258935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Aeropress",
+    "variant_id": "50910527291703"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Pour Over",
+    "variant_id": "50910527324471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "50910527357239"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / French Press",
+    "variant_id": "50910527390007"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Percolator",
+    "variant_id": "50910527422775"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50910527455543"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "47fb07c5ddaf5c59",
+  "first_seen": "2026-10-26",
+  "handle": "bulletin-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/bully.webp?v=1784300533",
+  "platform": "shopify",
+  "product_id": "8969316532535",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "blend",
+   "chocolatey"
+  ],
+  "title": "Bulletin Blend",
+  "url": "https://broadsheetcoffee.com/products/bulletin-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Whole Bean",
+    "variant_id": "47436780372279"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47436780405047"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49594346504503"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Pour Over",
+    "variant_id": "49594346537271"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Aeropress",
+    "variant_id": "49594346570039"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49594346602807"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / French Press",
+    "variant_id": "49594346635575"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Percolator",
+    "variant_id": "49594346668343"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 18.5,
+    "title": "310g / Cold Brew",
+    "variant_id": "49594346701111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49594346733879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "49594346766647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "49594346799415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49594346832183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / French Press",
+    "variant_id": "49594346864951"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Percolator",
+    "variant_id": "49594346897719"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49594346930487"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50910528471351"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "50910528504119"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Aeropress",
+    "variant_id": "50910528536887"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Pour Over",
+    "variant_id": "50910528569655"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "50910528602423"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / French Press",
+    "variant_id": "50910528635191"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Percolator",
+    "variant_id": "50910528667959"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 44.4,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50910528700727"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "05c09b862692b61b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-los-altos",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/altos_26.webp?v=1782237851",
+  "platform": "shopify",
+  "product_id": "9924151345463",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "Mexico",
+   "chocolatey",
+   "single-origin"
+  ],
+  "title": "Mexico: Los Altos",
+  "url": "https://broadsheetcoffee.com/products/mexico-los-altos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "49870919270711"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49870919303479"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Pour Over",
+    "variant_id": "49870919336247"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49870919401783"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / French Press",
+    "variant_id": "49870919434551"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Percolator",
+    "variant_id": "49870919467319"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "49870919500087"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49870919532855"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49870919565623"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "49870919598391"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49870919663927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "49870919696695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Percolator",
+    "variant_id": "49870919729463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49870919762231"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Aeropress",
+    "variant_id": "51067801862455"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "51067801895223"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "51067801927991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "51067801960759"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "51067801993527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "51067802026295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / French Press",
+    "variant_id": "51067802059063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Percolator",
+    "variant_id": "51067802091831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "51067802124599"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "51067802157367"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "2377bf213dce30f4",
+  "first_seen": "2026-10-26",
+  "handle": "brattle-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/Brattle.webp?v=1784300533",
+  "platform": "shopify",
+  "product_id": "9941759656247",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#fruity",
+   "blend"
+  ],
+  "title": "Brattle Blend",
+  "url": "https://broadsheetcoffee.com/products/brattle-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "49940538065207"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49940538097975"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Pour Over",
+    "variant_id": "49940538130743"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Aeropress",
+    "variant_id": "49940538163511"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49940538196279"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / French Press",
+    "variant_id": "49940538229047"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Percolator",
+    "variant_id": "49940538261815"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 24.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "49940538294583"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49940538327351"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49940538360119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "49940538392887"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "49940538425655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49940538458423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / French Press",
+    "variant_id": "49940538491191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Percolator",
+    "variant_id": "49940538523959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49940538556727"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50910522966327"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "50910522999095"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Aeropress",
+    "variant_id": "50910523031863"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Pour Over",
+    "variant_id": "50910523064631"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "50910523097399"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / French Press",
+    "variant_id": "50910523130167"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Percolator",
+    "variant_id": "50910523162935"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.6,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50910523195703"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "64a476cc86a486da",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-e-a-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/decaf.jpg?v=1731611927",
+  "platform": "shopify",
+  "product_id": "9941820801335",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#classic",
+   "Decaf",
+   "colombia"
+  ],
+  "title": "Colombia: E.A. Decaf",
+  "url": "https://broadsheetcoffee.com/products/colombia-e-a-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Whole Bean",
+    "variant_id": "49940811514167"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49940811546935"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Pour Over",
+    "variant_id": "49940811579703"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Aeropress",
+    "variant_id": "49940811612471"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49940811645239"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / French Press",
+    "variant_id": "49940811678007"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Percolator",
+    "variant_id": "49940811710775"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 19.5,
+    "title": "310g / Cold Brew",
+    "variant_id": "49940811743543"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49942060171575"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49942060204343"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Pour Over",
+    "variant_id": "49942060237111"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Aeropress",
+    "variant_id": "49942060269879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49942060302647"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / French Press",
+    "variant_id": "49942060335415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Percolator",
+    "variant_id": "49942060368183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.5,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49942060400951"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50910516674871"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "50910516707639"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Aeropress",
+    "variant_id": "50910516740407"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Pour Over",
+    "variant_id": "50910516773175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "50910516805943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / French Press",
+    "variant_id": "50910516838711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Percolator",
+    "variant_id": "50910516871479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.8,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50910516904247"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "dcead109c113771f",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-las-perlitas",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/perlitas.webp?v=1784731208",
+  "platform": "shopify",
+  "product_id": "9942004826423",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "colombia",
+   "elegant",
+   "single-origin",
+   "so"
+  ],
+  "title": "Colombia: Las Perlitas",
+  "url": "https://broadsheetcoffee.com/products/colombia-las-perlitas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "49941756576055"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49941756608823"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Pour Over",
+    "variant_id": "49941756641591"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Aeropress",
+    "variant_id": "49941756674359"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49941756707127"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / French Press",
+    "variant_id": "49941756739895"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Percolator",
+    "variant_id": "49941756772663"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 27.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "49941756805431"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49941756838199"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49941756870967"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "49941756903735"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "49941756936503"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49941756969271"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / French Press",
+    "variant_id": "49941757002039"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Percolator",
+    "variant_id": "49941757034807"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49941757067575"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52640729170231"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52640729202999"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "52640729235767"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "52640729268535"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52640729301303"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / French Press",
+    "variant_id": "52640729334071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Percolator",
+    "variant_id": "52640729366839"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 67.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52640729399607"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "6416e60e9a865368",
+  "first_seen": "2026-10-26",
+  "handle": "e-a-decaf-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/Hambela.jpg?v=1777989571",
+  "platform": "shopify",
+  "product_id": "9942952149303",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#fruity",
+   "Decaf",
+   "ethiopia",
+   "single-origin",
+   "so"
+  ],
+  "title": "Ethiopia: Hambela E.A. Decaf",
+  "url": "https://broadsheetcoffee.com/products/e-a-decaf-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Whole Bean",
+    "variant_id": "49946761625911"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49946761658679"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Pour Over",
+    "variant_id": "49946761691447"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Aeropress",
+    "variant_id": "49946761724215"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49946761756983"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / French Press",
+    "variant_id": "49946761789751"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Percolator",
+    "variant_id": "49946761822519"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.0,
+    "title": "310g / Cold Brew",
+    "variant_id": "49946761855287"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49946761888055"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49946761920823"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Pour Over",
+    "variant_id": "49946761953591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "49946761986359"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49946762019127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "49946762051895"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Percolator",
+    "variant_id": "49946762084663"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49946762117431"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "52085868069175"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "52085868101943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "52085868134711"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "52085868167479"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "52085868200247"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / French Press",
+    "variant_id": "52085868233015"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Percolator",
+    "variant_id": "52085868265783"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 57.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "52085868298551"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "4b03c07608b379cc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-halo-hartume",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/haloopt2.png?v=1781190767",
+  "platform": "shopify",
+  "product_id": "9943173529911",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [
+   "#floral",
+   "ethiopia",
+   "single-origin",
+   "so"
+  ],
+  "title": "Ethiopia: Halo Hartume",
+  "url": "https://broadsheetcoffee.com/products/ethiopia-halo-hartume",
+  "variants": [
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Whole Bean",
+    "variant_id": "49947420426551"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Stovetop Espresso",
+    "variant_id": "49947420459319"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Pour Over",
+    "variant_id": "49947420492087"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Aeropress",
+    "variant_id": "49947420524855"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Drip Brewer",
+    "variant_id": "49947420557623"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / French Press",
+    "variant_id": "49947420590391"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Percolator",
+    "variant_id": "49947420623159"
+   },
+   {
+    "available": true,
+    "grams": 310,
+    "price_usd": 23.75,
+    "title": "310g / Cold Brew",
+    "variant_id": "49947420655927"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Whole Bean",
+    "variant_id": "49947420688695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Stovetop Espresso",
+    "variant_id": "49947420721463"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Pour Over",
+    "variant_id": "49947420754231"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Aeropress",
+    "variant_id": "49947420786999"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Drip Brewer",
+    "variant_id": "49947420819767"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / French Press",
+    "variant_id": "49947420852535"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Percolator",
+    "variant_id": "49947420885303"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.75,
+    "title": "5lb / Cold Brew",
+    "variant_id": "49947420918071"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50910511497527"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Stovetop Espresso",
+    "variant_id": "50910511530295"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Pour Over",
+    "variant_id": "50910511563063"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Aeropress",
+    "variant_id": "50910511595831"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Drip Brewer",
+    "variant_id": "50910511628599"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / French Press",
+    "variant_id": "50910511661367"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Percolator",
+    "variant_id": "50910511694135"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 59.5,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50910511726903"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ },
+ {
+  "body_hash": "5c845307db183082",
+  "first_seen": "2026-10-26",
+  "handle": "loma-youk",
+  "image": "https://cdn.shopify.com/s/files/1/0842/7601/9511/files/LOMA-YouksBlend.jpg?v=1732202910",
+  "platform": "shopify",
+  "product_id": "9948206498103",
+  "product_type": "Retail Coffee",
+  "roaster_slug": "broadsheetcoffee",
+  "tags": [],
+  "title": "LOMA: Youk's Blend",
+  "url": "https://broadsheetcoffee.com/products/loma-youk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 325,
+    "price_usd": 16.5,
+    "title": "325g",
+    "variant_id": "49961143304503"
+   }
+  ],
+  "vendor": "Broadsheet Coffee Roasters"
+ }
+]

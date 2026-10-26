@@ -1,0 +1,888 @@
+[
+ {
+  "body_hash": "d3385cf14c72fe4e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-marcos",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Guatemala_1b0122b5-f9e1-459b-9928-5b6f530c800a.png?v=1696256578",
+  "platform": "shopify",
+  "product_id": "6773998059635",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Guatemala San Marcos",
+  "url": "https://heinebroscoffee.com/products/guatemala-san-marcos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39863238819955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39863238918259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39863239016563"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113353449587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113353482355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113353515123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488046452851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488046485619"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "130a9863820f8c8e",
+  "first_seen": "2026-10-26",
+  "handle": "longest-94",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Longest-94.png?v=1696257399",
+  "platform": "shopify",
+  "product_id": "6782962204787",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Longest ’94",
+  "url": "https://heinebroscoffee.com/products/longest-94",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894657171571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894657269875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894657368179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113359380595"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113359413363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113359446131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488574345331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488574378099"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "60bd0d265d476fe2",
+  "first_seen": "2026-10-26",
+  "handle": "natural-ethiopia-sidama",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Ethiopia.png?v=1696257330",
+  "platform": "shopify",
+  "product_id": "6782962860147",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Natural Ethiopia Sidama",
+  "url": "https://heinebroscoffee.com/products/natural-ethiopia-sidama",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894658646131"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894658744435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894658842739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113382318195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113382416499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113382449267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488581685363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488581718131"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "0cf086a0091d7895",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Decaf_341f22ef-fc5b-4edd-af34-56ed0c08a6f5.png?v=1696256611",
+  "platform": "shopify",
+  "product_id": "6782981570675",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "Decaf",
+   "Subscription"
+  ],
+  "title": "Decaf",
+  "url": "https://heinebroscoffee.com/products/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894696394867"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894696493171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894696591475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113327792243"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113327825011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113327857779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488037048435"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488037081203"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "cb9e017e537f153a",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-sumatra-gayo-mountain-1",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Espresso.png?v=1696256628",
+  "platform": "shopify",
+  "product_id": "6782984421491",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "Espresso",
+   "Subscription"
+  ],
+  "title": "Espresso",
+  "url": "https://heinebroscoffee.com/products/copy-of-sumatra-gayo-mountain-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 cups)",
+    "variant_id": "39894701965427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 cups)",
+    "variant_id": "39894702063731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 cups)",
+    "variant_id": "42113342603379"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 cups)",
+    "variant_id": "42113342636147"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 cups)",
+    "variant_id": "42247464353907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 cups)",
+    "variant_id": "42247464386675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 cups)",
+    "variant_id": "42488038621299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 cups)",
+    "variant_id": "42488038654067"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "0116db8020329fbc",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Grandads-Blend.png?v=1696257548",
+  "platform": "shopify",
+  "product_id": "6782985470067",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "French Roast",
+  "url": "https://heinebroscoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894704455795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894704554099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894704652403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113348829299"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113348862067"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113348894835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488044224627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488044257395"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "f2ca86ca3d32ac41",
+  "first_seen": "2026-10-26",
+  "handle": "good-morning-1",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Good-Morning.png?v=1696257129",
+  "platform": "shopify",
+  "product_id": "6782986780787",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Good Morning",
+  "url": "https://heinebroscoffee.com/products/good-morning-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894707077235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894707175539"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894707273843"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42090673307763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42090673340531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42090673373299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488041963635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488041996403"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "5e78d7c220db1f6c",
+  "first_seen": "2026-10-26",
+  "handle": "mary-catherine-s",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Late-Night-Diner.png?v=1709575006",
+  "platform": "shopify",
+  "product_id": "6782988091507",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Late Night Diner",
+  "url": "https://heinebroscoffee.com/products/mary-catherine-s",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894709862515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894709960819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894710059123"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113356038259"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113356071027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113356103795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488049041523"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488049074291"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "3e02d4e5e304dd66",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Mocha-Java.png?v=1696257667",
+  "platform": "shopify",
+  "product_id": "6782988910707",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Subscription"
+  ],
+  "title": "Mocha Java",
+  "url": "https://heinebroscoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894711795827"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894711992435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894712090739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113372455027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113372487795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113372520563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488577589363"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488577622131"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "f19c64848da182ca",
+  "first_seen": "2026-10-26",
+  "handle": "traveler-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Traveler_df9e8147-efad-4587-bc5a-5e8e266cca16.png?v=1696257754",
+  "platform": "shopify",
+  "product_id": "6782991958131",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Espresso",
+   "Impact Products",
+   "Subscription"
+  ],
+  "title": "Traveler Blend",
+  "url": "https://heinebroscoffee.com/products/traveler-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894719103091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894719201395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "39894719299699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113390674035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113390706803"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "42113390739571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488588370035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "42488588402803"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "8bb22dd897a870ba",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Roasters-Choice.png?v=1696262897",
+  "platform": "shopify",
+  "product_id": "6978816901235",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Blends",
+   "Coffee",
+   "Espresso",
+   "Impact Products",
+   "RetailOnly",
+   "Subscription"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://heinebroscoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12 oz Bag (24 brewed cups)",
+    "variant_id": "40468306296947"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz Bag (24 brewed cups)",
+    "variant_id": "40468306329715"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12 oz Bag (24 brewed cups)",
+    "variant_id": "40468306362483"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12 oz Bag (24 brewed cups)",
+    "variant_id": "42488582897779"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ },
+ {
+  "body_hash": "8a19eef53c7c2584",
+  "first_seen": "2026-10-26",
+  "handle": "belly-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0560/4668/2227/files/Retail-Coffee_Biscuit-Belly.png?v=1714998821",
+  "platform": "shopify",
+  "product_id": "7565145866355",
+  "product_type": "",
+  "roaster_slug": "heinebroscoffee",
+  "tags": [
+   "Coffee",
+   "RetailOnly",
+   "Subscription"
+  ],
+  "title": "Belly Blend",
+  "url": "https://heinebroscoffee.com/products/belly-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Drip / 12oz Bag (24 brewed cups)",
+    "variant_id": "41747908558963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12oz Bag (24 brewed cups)",
+    "variant_id": "41747908591731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press / 12oz Bag (24 brewed cups)",
+    "variant_id": "41747908624499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Espresso / 12oz Bag (24 brewed cups)",
+    "variant_id": "42488034492531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb Bag (160 brewed cups)",
+    "variant_id": "44558375420019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip / 5lb Bag (160 brewed cups)",
+    "variant_id": "44558375452787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "French Press / 5lb Bag (160 brewed cups)",
+    "variant_id": "44558375485555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Espresso / 5lb Bag (160 brewed cups)",
+    "variant_id": "44558375518323"
+   }
+  ],
+  "vendor": "Heine Brothers Coffee"
+ }
+]

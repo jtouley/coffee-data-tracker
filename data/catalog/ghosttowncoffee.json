@@ -1,0 +1,3896 @@
+[
+ {
+  "body_hash": "f26e08ef0224d63d",
+  "first_seen": "2026-10-26",
+  "handle": "1889",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/1889.png?v=1706132619",
+  "platform": "shopify",
+  "product_id": "2030123319358",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "1889",
+  "url": "https://www.ghosttowncoffee.com/products/1889",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910103289989"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Fine",
+    "variant_id": "30910103322757"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Medium",
+    "variant_id": "30910103388293"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Coarse",
+    "variant_id": "30910103453829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910103486597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Fine",
+    "variant_id": "30910103519365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Medium",
+    "variant_id": "30910103584901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Coarse",
+    "variant_id": "30910103650437"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910103683205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Fine",
+    "variant_id": "30910103715973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Medium",
+    "variant_id": "30910103781509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Coarse",
+    "variant_id": "30910103847045"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "637e2c75b169ad03",
+  "first_seen": "2026-10-26",
+  "handle": "bold",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Bold.png?v=1706132777",
+  "platform": "shopify",
+  "product_id": "2030124073022",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Bold",
+  "url": "https://www.ghosttowncoffee.com/products/bold",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910108008581"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "30910108041349"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "30910108106885"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "30910108172421"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910108205189"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "30910108237957"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "30910108303493"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "30910108369029"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910108401797"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "30910108434565"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "30910108500101"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "30910108565637"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "43ae7bca02be71ed",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-conditioned",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/BourbonBarrel.png?v=1706218100",
+  "platform": "shopify",
+  "product_id": "2030125285438",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Bourbon Barrel",
+  "url": "https://www.ghosttowncoffee.com/products/bourbon-barrel-conditioned",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.1,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910110105733"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.1,
+    "title": "12oz / Fine",
+    "variant_id": "30910110138501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.1,
+    "title": "12oz / Medium",
+    "variant_id": "30910110204037"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.1,
+    "title": "12oz / Coarse",
+    "variant_id": "30910110269573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.65,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910110302341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.65,
+    "title": "2lb / Fine",
+    "variant_id": "30910110335109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.65,
+    "title": "2lb / Medium",
+    "variant_id": "30910110400645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.65,
+    "title": "2lb / Coarse",
+    "variant_id": "30910110466181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50542334181630"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Fine",
+    "variant_id": "50542334312702"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Medium",
+    "variant_id": "50542334574846"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "5lb / Coarse",
+    "variant_id": "50542336770302"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "adf4853093db4756",
+  "first_seen": "2026-10-26",
+  "handle": "mocha-java",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/MochaJava.png?v=1706134795",
+  "platform": "shopify",
+  "product_id": "2082388181054",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Mocha Java",
+  "url": "https://www.ghosttowncoffee.com/products/mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30912076578949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Fine",
+    "variant_id": "30912076611717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Medium",
+    "variant_id": "30912076677253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Coarse",
+    "variant_id": "30912076742789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30912076775557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Fine",
+    "variant_id": "30912076808325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Medium",
+    "variant_id": "30912076873861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Coarse",
+    "variant_id": "30912076939397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30912076972165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Fine",
+    "variant_id": "30912077004933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Medium",
+    "variant_id": "30912077070469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Coarse",
+    "variant_id": "30912077136005"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "52d488b18a1d428b",
+  "first_seen": "2026-10-26",
+  "handle": "stonehouse-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Stonehouse.png?v=1706137731",
+  "platform": "shopify",
+  "product_id": "2082397323326",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Stonehouse Espresso",
+  "url": "https://www.ghosttowncoffee.com/products/stonehouse-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30912130449541"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Fine",
+    "variant_id": "30912130482309"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Medium",
+    "variant_id": "30912130547845"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Coarse",
+    "variant_id": "30912130613381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30912130646149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Fine",
+    "variant_id": "30912130678917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Medium",
+    "variant_id": "30912130744453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Coarse",
+    "variant_id": "30912130809989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30912130842757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Fine",
+    "variant_id": "30912130875525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Medium",
+    "variant_id": "30912130941061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Coarse",
+    "variant_id": "30912131006597"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "f3cb234cc552c445",
+  "first_seen": "2026-10-26",
+  "handle": "pebble-creek-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/PebbleCreek.png?v=1706201198",
+  "platform": "shopify",
+  "product_id": "2082402140222",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Pebble Creek Espresso",
+  "url": "https://www.ghosttowncoffee.com/products/pebble-creek-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30912082804869"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Fine",
+    "variant_id": "30912082837637"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Medium",
+    "variant_id": "30912082903173"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Coarse",
+    "variant_id": "30912082968709"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30912083001477"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Fine",
+    "variant_id": "30912083034245"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Medium",
+    "variant_id": "30912083099781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Coarse",
+    "variant_id": "30912083165317"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30912083198085"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Fine",
+    "variant_id": "30912083230853"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Medium",
+    "variant_id": "30912083296389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Coarse",
+    "variant_id": "30912083361925"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "7d88dee809d00383",
+  "first_seen": "2026-10-26",
+  "handle": "emerald-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Emerald.png?v=1706137998",
+  "platform": "shopify",
+  "product_id": "2082409021502",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Emerald Espresso",
+  "url": "https://www.ghosttowncoffee.com/products/emerald-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910126522501"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Fine",
+    "variant_id": "30910126555269"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Medium",
+    "variant_id": "30910126620805"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.95,
+    "title": "12oz / Coarse",
+    "variant_id": "30910126686341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910126719109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Fine",
+    "variant_id": "30910126751877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Medium",
+    "variant_id": "30910126817413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.0,
+    "title": "2lb / Coarse",
+    "variant_id": "30910126882949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.55,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910126915717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.55,
+    "title": "5lb / Fine",
+    "variant_id": "30910126948485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.55,
+    "title": "5lb / Medium",
+    "variant_id": "30910127014021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.55,
+    "title": "5lb / Coarse",
+    "variant_id": "30910127079557"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "a8e4292ffe28dffd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-kercha-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/EthiopiaGuji.png?v=1706136205",
+  "platform": "shopify",
+  "product_id": "2082418622526",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Ethiopia - Guji 'Natural'",
+  "url": "https://www.ghosttowncoffee.com/products/ethiopia-guji-kercha-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19161520341054"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12oz / Medium Grind",
+    "variant_id": "19161520373822"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12oz / Course Grind",
+    "variant_id": "19161520406590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.85,
+    "title": "12oz / Fine Grind",
+    "variant_id": "19161520439358"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.1,
+    "title": "2lb / Whole Bean",
+    "variant_id": "19161520472126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.1,
+    "title": "2lb / Medium Grind",
+    "variant_id": "19161520504894"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.1,
+    "title": "2lb / Course Grind",
+    "variant_id": "19161520537662"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 41.1,
+    "title": "2lb / Fine Grind",
+    "variant_id": "19161520570430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.8,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19161520603198"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.8,
+    "title": "5lb / Medium Grind",
+    "variant_id": "19161520635966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.8,
+    "title": "5lb / Course Grind",
+    "variant_id": "19161520668734"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.8,
+    "title": "5lb / Fine Grind",
+    "variant_id": "19161520701502"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "0db435c89da97427",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/SumatraMand.png?v=1706136000",
+  "platform": "shopify",
+  "product_id": "2082421506110",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "organic"
+  ],
+  "title": "Sumatra - Mandheling",
+  "url": "https://www.ghosttowncoffee.com/products/sumatra-mandheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.25,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30912136511621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.25,
+    "title": "2lb / Fine",
+    "variant_id": "30912136544389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.25,
+    "title": "2lb / Medium",
+    "variant_id": "30912136609925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 46.25,
+    "title": "2lb / Coarse",
+    "variant_id": "30912136708229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30912136740997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "5lb / Fine",
+    "variant_id": "30912136773765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "5lb / Medium",
+    "variant_id": "30912136839301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.5,
+    "title": "5lb / Coarse",
+    "variant_id": "30912136904837"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.1,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45915520565502"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.1,
+    "title": "12oz / Coarse",
+    "variant_id": "45915528462590"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.1,
+    "title": "12oz / Medium",
+    "variant_id": "45915539144958"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.1,
+    "title": "12oz / Fine",
+    "variant_id": "45915551400190"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "388663a95bab8690",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/CostaRicaTarrazu.png?v=1706201130",
+  "platform": "shopify",
+  "product_id": "4287602000005",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Costa Rica - Tarrazu",
+  "url": "https://www.ghosttowncoffee.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910117412997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Fine",
+    "variant_id": "30910117445765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Medium",
+    "variant_id": "30910117511301"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.7,
+    "title": "12oz / Coarse",
+    "variant_id": "30910117576837"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.05,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910117609605"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.05,
+    "title": "2lb / Fine",
+    "variant_id": "30910117642373"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.05,
+    "title": "2lb / Medium",
+    "variant_id": "30910117707909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 43.05,
+    "title": "2lb / Coarse",
+    "variant_id": "30910117773445"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.85,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910117806213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.85,
+    "title": "5lb / Fine",
+    "variant_id": "30910117838981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.85,
+    "title": "5lb / Medium",
+    "variant_id": "30910117904517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 88.85,
+    "title": "5lb / Coarse",
+    "variant_id": "30910117970053"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "29874bf49891621b",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-dana-montana",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/MexicoDanaMT.png?v=1706136150",
+  "platform": "shopify",
+  "product_id": "4287614484613",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Mexico - Dana Montana",
+  "url": "https://www.ghosttowncoffee.com/products/mexico-dana-montana",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30912072581253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Fine",
+    "variant_id": "30912072614021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Medium",
+    "variant_id": "30912072679557"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.8,
+    "title": "12oz / Coarse",
+    "variant_id": "30912072745093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.35,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30912072777861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.35,
+    "title": "2lb / Fine",
+    "variant_id": "30912072810629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.35,
+    "title": "2lb / Medium",
+    "variant_id": "30912072876165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.35,
+    "title": "2lb / Coarse",
+    "variant_id": "30912072941701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.05,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30912072974469"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.05,
+    "title": "5lb / Fine",
+    "variant_id": "30912073007237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.05,
+    "title": "5lb / Medium",
+    "variant_id": "30912073072773"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.05,
+    "title": "5lb / Coarse",
+    "variant_id": "30912073138309"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "9254ca56d3cbd2ee",
+  "first_seen": "2026-10-26",
+  "handle": "clean",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Clean.png?v=1706132840",
+  "platform": "shopify",
+  "product_id": "4287619727493",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Clean",
+  "url": "https://www.ghosttowncoffee.com/products/clean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910100078725"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Fine",
+    "variant_id": "30910100111493"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Medium",
+    "variant_id": "30910100177029"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Coarse",
+    "variant_id": "30910100242565"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910100275333"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Fine",
+    "variant_id": "30910100308101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Medium",
+    "variant_id": "30910100373637"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Coarse",
+    "variant_id": "30910100439173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910100471941"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Fine",
+    "variant_id": "30910100504709"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Medium",
+    "variant_id": "30910100570245"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Coarse",
+    "variant_id": "30910100635781"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "f2f9484fb3286683",
+  "first_seen": "2026-10-26",
+  "handle": "dawn",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Dawn.png?v=1706132922",
+  "platform": "shopify",
+  "product_id": "4287620907141",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Dawn",
+  "url": "https://www.ghosttowncoffee.com/products/dawn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Whole Bean",
+    "variant_id": "30910120951941"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Fine",
+    "variant_id": "30910120984709"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Medium",
+    "variant_id": "30910121050245"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.65,
+    "title": "12oz / Coarse",
+    "variant_id": "30910121115781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Whole Bean",
+    "variant_id": "30910121148549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Fine",
+    "variant_id": "30910121181317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Medium",
+    "variant_id": "30910121246853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.3,
+    "title": "2lb / Coarse",
+    "variant_id": "30910121312389"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Whole Bean",
+    "variant_id": "30910121345157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Fine",
+    "variant_id": "30910121377925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Medium",
+    "variant_id": "30910121443461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.1,
+    "title": "5lb / Coarse",
+    "variant_id": "30910121508997"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "eb9f37b919ba27c1",
+  "first_seen": "2026-10-26",
+  "handle": "columbia-monseratte-green",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/green-coffee-beans.jpg?v=1733781494",
+  "platform": "shopify",
+  "product_id": "4290988572805",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Green Coffee",
+  "url": "https://www.ghosttowncoffee.com/products/columbia-monseratte-green",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.8,
+    "title": "Colombia - Caramanta / 1 lb",
+    "variant_id": "30910085890181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 44.0,
+    "title": "Colombia - Caramanta / 5 lb",
+    "variant_id": "30910085922949"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.1,
+    "title": "Costa Rica - Tarrazu / 1 lb",
+    "variant_id": "46083284205822"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 40.5,
+    "title": "Costa Rica - Tarrazu / 5 lb",
+    "variant_id": "46083284238590"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.3,
+    "title": "Mexico - Dana Montana (ORGANIC) / 1 lb",
+    "variant_id": "46083284336894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 36.25,
+    "title": "Mexico - Dana Montana (ORGANIC) / 5 lb",
+    "variant_id": "46083284369662"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.55,
+    "title": "Ethiopia - Guji / 1 lb",
+    "variant_id": "46083284402430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.75,
+    "title": "Ethiopia - Guji / 5 lb",
+    "variant_id": "46083284435198"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.7,
+    "title": "El Salvador - La Providencia / 1 lb",
+    "variant_id": "46083284467966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 43.5,
+    "title": "El Salvador - La Providencia / 5 lb",
+    "variant_id": "46083284500734"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.1,
+    "title": "Colombia - Caramanta / 2 lb",
+    "variant_id": "47931199914238"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.7,
+    "title": "Costa Rica - Tarrazu / 2 lb",
+    "variant_id": "47931199947006"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.9,
+    "title": "El Salvador - La Providencia / 2 lb",
+    "variant_id": "47931199979774"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.6,
+    "title": "Ethiopia - Guji / 2 lb",
+    "variant_id": "47931200012542"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.1,
+    "title": "Mexico - Dana Montana (ORGANIC) / 2 lb",
+    "variant_id": "47931200045310"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 8.45,
+    "title": "Brazil -Ipe Amarelo / 1 lb",
+    "variant_id": "47931254079742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.4,
+    "title": "Brazil -Ipe Amarelo / 2 lb",
+    "variant_id": "47931254112510"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 23.9,
+    "title": "Brazil -Ipe Amarelo / 3 lb",
+    "variant_id": "47931254145278"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 30.85,
+    "title": "Brazil -Ipe Amarelo / 4 lb",
+    "variant_id": "47931254178046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 37.3,
+    "title": "Brazil -Ipe Amarelo / 5 lb",
+    "variant_id": "47931254210814"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 27.9,
+    "title": "Colombia - Caramanta / 3 lb",
+    "variant_id": "47931254243582"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 36.2,
+    "title": "Colombia - Caramanta / 4 lb",
+    "variant_id": "47931254276350"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.8,
+    "title": "Costa Rica - Tarrazu / 3 lb",
+    "variant_id": "47931254309118"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 33.4,
+    "title": "Costa Rica - Tarrazu / 4 lb",
+    "variant_id": "47931254341886"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 27.6,
+    "title": "El Salvador - La Providencia / 3 lb",
+    "variant_id": "47931254702334"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 35.8,
+    "title": "El Salvador - La Providencia / 4 lb",
+    "variant_id": "47931254735102"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 24.15,
+    "title": "Ethiopia - Guji / 3 lb",
+    "variant_id": "47931254767870"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 31.2,
+    "title": "Ethiopia - Guji / 4 lb",
+    "variant_id": "47931254800638"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 9.25,
+    "title": "Ethiopia - Yirgacheffe / 1 lb",
+    "variant_id": "47931254833406"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Ethiopia - Yirgacheffe / 2 lb",
+    "variant_id": "47931254866174"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 26.25,
+    "title": "Ethiopia - Yirgacheffe / 3 lb",
+    "variant_id": "47931254898942"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 34.0,
+    "title": "Ethiopia - Yirgacheffe / 4 lb",
+    "variant_id": "47931254931710"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 41.25,
+    "title": "Ethiopia - Yirgacheffe / 5 lb",
+    "variant_id": "47931254964478"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 23.4,
+    "title": "Mexico - Dana Montana (ORGANIC) / 3 lb",
+    "variant_id": "47931255161086"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 30.2,
+    "title": "Mexico - Dana Montana (ORGANIC) / 4 lb",
+    "variant_id": "47931255193854"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "5319529e9e9e5b8a",
+  "first_seen": "2026-10-26",
+  "handle": "sapphire-decaf-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Sapphire.png?v=1706201599",
+  "platform": "shopify",
+  "product_id": "4373672493189",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Sapphire Decaf",
+  "url": "https://www.ghosttowncoffee.com/products/sapphire-decaf-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Fine",
+    "variant_id": "31291506491525"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Medium",
+    "variant_id": "31291506557061"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Coarse",
+    "variant_id": "31291506655365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Fine",
+    "variant_id": "31291506688133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Medium",
+    "variant_id": "31291506753669"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Coarse",
+    "variant_id": "31291506819205"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Fine",
+    "variant_id": "31291506851973"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Medium",
+    "variant_id": "31291506917509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Coarse",
+    "variant_id": "31291506983045"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.4,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31461717475461"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.4,
+    "title": "2lb / Whole Bean",
+    "variant_id": "31461727862917"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.55,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31461732810885"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "eca9b34c2f16a626",
+  "first_seen": "2026-10-26",
+  "handle": "marla-joy-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/CoffeeTemplateforWeb_1_8bc2395b-8756-49b9-8c47-616b31b895b5.png?v=1761770652",
+  "platform": "shopify",
+  "product_id": "4373751070853",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Marla Joy Blend",
+  "url": "https://www.ghosttowncoffee.com/products/marla-joy-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "31294762647685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "31294762713221"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "31294762778757"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "31294762811525"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "31294762877061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "31294762942597"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "31294762975365"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "31294763040901"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "31294763106437"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31365078712453"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "31365123408005"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31365170888837"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "b479e80dcc2134aa",
+  "first_seen": "2026-10-26",
+  "handle": "drinking-horse-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/CoffeeTemplateforWeb_d1f92fe2-90c6-4a98-bb06-49737ba83836.png?v=1761771025",
+  "platform": "shopify",
+  "product_id": "4374142681221",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Drinking Horse Blend",
+  "url": "https://www.ghosttowncoffee.com/products/drinking-horse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "31294834344069"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "31294834409605"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "31294834475141"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "31294834507909"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "31294834573445"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "31294834638981"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "31294834671749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "31294834737285"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "31294834802821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31364815388805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "31364845109381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "31461780127877"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "6b189d41dde6aa5b",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-can-tips",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/CoffeeTemplateforWeb_1_b8d6088a-6c56-412b-9f01-5d0ba7bbdcd4.png?v=1759261067",
+  "platform": "shopify",
+  "product_id": "4800214466693",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "PNKBZN and Cancer Support Community Fundraiser",
+  "url": "https://www.ghosttowncoffee.com/products/coffee-can-tips",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 5.0,
+    "title": "$5 / Cancer Support Community Montana",
+    "variant_id": "47082436690174"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 10.0,
+    "title": "$10 / Cancer Support Community Montana",
+    "variant_id": "47082436722942"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "$20 / Cancer Support Community Montana",
+    "variant_id": "47082436755710"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 35.0,
+    "title": "$35 / Cancer Support Community Montana",
+    "variant_id": "47082436788478"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 50.0,
+    "title": "$50 / Cancer Support Community Montana",
+    "variant_id": "47082436821246"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 75.0,
+    "title": "$75 / Cancer Support Community Montana",
+    "variant_id": "47082436854014"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 100.0,
+    "title": "$100 / Cancer Support Community Montana",
+    "variant_id": "47082436886782"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 150.0,
+    "title": "$150 / Cancer Support Community Montana",
+    "variant_id": "47082436919550"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 200.0,
+    "title": "$200 / Cancer Support Community Montana",
+    "variant_id": "47082436952318"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 250.0,
+    "title": "$250 / Cancer Support Community Montana",
+    "variant_id": "47082436985086"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 350.0,
+    "title": "$350 / Cancer Support Community Montana",
+    "variant_id": "47082437017854"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 500.0,
+    "title": "$500 / Cancer Support Community Montana",
+    "variant_id": "47082437050622"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 750.0,
+    "title": "$750 / Cancer Support Community Montana",
+    "variant_id": "47082437083390"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1000.0,
+    "title": "$1000 / Cancer Support Community Montana",
+    "variant_id": "47082437116158"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1500.0,
+    "title": "$1500 / Cancer Support Community Montana",
+    "variant_id": "47082437148926"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 2000.0,
+    "title": "$2000 / Cancer Support Community Montana",
+    "variant_id": "47082437181694"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "0386a8bf715a780b",
+  "first_seen": "2026-10-26",
+  "handle": "specter-seasonal-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Specter.png?v=1706137808",
+  "platform": "shopify",
+  "product_id": "5685545140376",
+  "product_type": "Espresso Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Specter Seasonal Espresso",
+  "url": "https://www.ghosttowncoffee.com/products/specter-seasonal-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.3,
+    "title": "12oz / Whole Bean",
+    "variant_id": "35961934119064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.3,
+    "title": "12oz / Fine",
+    "variant_id": "35961934151832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.3,
+    "title": "12oz / Medium",
+    "variant_id": "35961934217368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.3,
+    "title": "12oz / Coarse",
+    "variant_id": "35961934282904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2lb / Whole Bean",
+    "variant_id": "35961934315672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2lb / Fine",
+    "variant_id": "35961934348440"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2lb / Medium",
+    "variant_id": "35961934413976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 42.1,
+    "title": "2lb / Coarse",
+    "variant_id": "35961934479512"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "35961934512280"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.95,
+    "title": "5lb / Fine",
+    "variant_id": "35961934545048"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.95,
+    "title": "5lb / Medium",
+    "variant_id": "35961934610584"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.95,
+    "title": "5lb / Coarse",
+    "variant_id": "35961934676120"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "56facadf44a02104",
+  "first_seen": "2026-10-26",
+  "handle": "homestead",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Homestead.png?v=1706135711",
+  "platform": "shopify",
+  "product_id": "5863951237272",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Homestead",
+  "url": "https://www.ghosttowncoffee.com/products/homestead",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "36670422548632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "36670422581400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "36670422646936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "36670422712472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "36670422745240"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "36670422778008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "36670422843544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "36670422909080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "36670422941848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "36670422974616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "36670423040152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "36670423105688"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "08b99d23de07d191",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-db-pride-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Allegro.png?v=1695839944",
+  "platform": "shopify",
+  "product_id": "6005264875672",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Chief Joseph"
+  ],
+  "title": "Chief Joseph Allegro-Medium Blend",
+  "url": "https://www.ghosttowncoffee.com/products/copy-of-db-pride-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37139456622744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground",
+    "variant_id": "37139456655512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37139456819352"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Ground",
+    "variant_id": "37139456852120"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "d8cda6a4ac429db5",
+  "first_seen": "2026-10-26",
+  "handle": "chief-joseph-band-presto-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Allegro_2.png?v=1695840554",
+  "platform": "shopify",
+  "product_id": "6007251140760",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Chief Joseph"
+  ],
+  "title": "Chief Joseph Presto-Dark Blend",
+  "url": "https://www.ghosttowncoffee.com/products/chief-joseph-band-presto-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37145551896728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground",
+    "variant_id": "37145551929496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37145552093336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Ground",
+    "variant_id": "37145552126104"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "dd4498682f550692",
+  "first_seen": "2026-10-26",
+  "handle": "chief-joseph-band-lento-decaffeinated-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Allegro_1.png?v=1695840389",
+  "platform": "shopify",
+  "product_id": "6007253631128",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "chief joseph"
+  ],
+  "title": "Chief Joseph Lento-Decaffeinated Blend",
+  "url": "https://www.ghosttowncoffee.com/products/chief-joseph-band-lento-decaffeinated-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "37145569460376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12oz / Ground",
+    "variant_id": "37145569493144"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "37145569656984"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 36.0,
+    "title": "2lb / Ground",
+    "variant_id": "37145569689752"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "33b1be4376d6c6b7",
+  "first_seen": "2026-10-26",
+  "handle": "velvet-thunder",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/VT.png?v=1706134865",
+  "platform": "shopify",
+  "product_id": "6237656678552",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Velvet Thunder",
+  "url": "https://www.ghosttowncoffee.com/products/velvet-thunder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "38011864907928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "38011864973464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "38011865170072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "38011865333912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "38011865399448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "38011865497752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "38011865661592"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "38011865825432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "38011865923736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "38011866022040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "38011866185880"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "38011866349720"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "97a52f3a45f2ab9d",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-providencia",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Coffee_1_29711bf1-a49c-4e14-93e9-7f99f4e7eb9a.png?v=1752703773",
+  "platform": "shopify",
+  "product_id": "7555163717886",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Ethiopia - Yirgacheffe Edido",
+  "url": "https://www.ghosttowncoffee.com/products/el-salvador-la-providencia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42422777381118"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Fine",
+    "variant_id": "42422777413886"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Medium",
+    "variant_id": "42422777446654"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Coarse",
+    "variant_id": "42422777479422"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Whole Bean",
+    "variant_id": "42422777512190"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Fine",
+    "variant_id": "42422777544958"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Medium",
+    "variant_id": "42422777577726"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Coarse",
+    "variant_id": "42422777610494"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42422777643262"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Fine",
+    "variant_id": "42422777676030"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Medium",
+    "variant_id": "42422777708798"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Coarse",
+    "variant_id": "42422777741566"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "98d023e909cd81c7",
+  "first_seen": "2026-10-26",
+  "handle": "glacier",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Alpine.png?v=1710958927",
+  "platform": "shopify",
+  "product_id": "7757068075262",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Alpine",
+  "url": "https://www.ghosttowncoffee.com/products/glacier",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Whole Bean",
+    "variant_id": "43092671037694"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Fine",
+    "variant_id": "43092671135998"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Medium",
+    "variant_id": "43092671299838"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Cold Brew Grind",
+    "variant_id": "43092671398142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.1,
+    "title": "12oz / Coarse",
+    "variant_id": "43092671463678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Whole Bean",
+    "variant_id": "43092671529214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Fine",
+    "variant_id": "43092671594750"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Medium",
+    "variant_id": "43092671725822"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Cold Brew Grind",
+    "variant_id": "43092671824126"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 37.05,
+    "title": "2lb / Coarse",
+    "variant_id": "43092671856894"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "43092671922430"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Fine",
+    "variant_id": "43092671987966"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Medium",
+    "variant_id": "43092672053502"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Cold Brew Grind",
+    "variant_id": "43092672086270"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5lb / Coarse",
+    "variant_id": "43092672119038"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "1f14f9600926831e",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-velvet-thunder",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Untitleddesign_46.png?v=1688753582",
+  "platform": "shopify",
+  "product_id": "8085301985534",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "BYEP - Pete's Blend - Decaf Blend",
+  "url": "https://www.ghosttowncoffee.com/products/copy-of-velvet-thunder",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Whole Bean",
+    "variant_id": "44109340639486"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Fine",
+    "variant_id": "44109340672254"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Medium",
+    "variant_id": "44109340705022"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Coarse",
+    "variant_id": "44109340737790"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "1f14f9600926831e",
+  "first_seen": "2026-10-26",
+  "handle": "byep-sip-it-n-rip-it-dark-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Untitleddesign_44.png?v=1688754027",
+  "platform": "shopify",
+  "product_id": "8085313126654",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "BYEP - Sip It 'N' Rip It - Dark Blend",
+  "url": "https://www.ghosttowncoffee.com/products/byep-sip-it-n-rip-it-dark-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Whole Bean",
+    "variant_id": "44109356663038"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Fine",
+    "variant_id": "44109356695806"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Medium",
+    "variant_id": "44109356728574"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Coarse",
+    "variant_id": "44109356761342"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "1f14f9600926831e",
+  "first_seen": "2026-10-26",
+  "handle": "byep-empowered-up-medium-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Untitleddesign_45.png?v=1688754143",
+  "platform": "shopify",
+  "product_id": "8085315354878",
+  "product_type": "Cause Coffee",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "BYEP - Empowered Up - Medium Blend",
+  "url": "https://www.ghosttowncoffee.com/products/byep-empowered-up-medium-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Whole Bean",
+    "variant_id": "44109359382782"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Fine",
+    "variant_id": "44109359415550"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Medium",
+    "variant_id": "44109359448318"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.25,
+    "title": "Coarse",
+    "variant_id": "44109359481086"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "9bf3d6f1664bf2f8",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-colombia-monserrate",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/ColoCaramanta.png?v=1710956809",
+  "platform": "shopify",
+  "product_id": "8310813032702",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Colombia Caramanta",
+  "url": "https://www.ghosttowncoffee.com/products/copy-of-colombia-monserrate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.7,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44853853028606"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.7,
+    "title": "12oz / Fine",
+    "variant_id": "44853853061374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.7,
+    "title": "12oz / Medium",
+    "variant_id": "44853853094142"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.7,
+    "title": "12oz / Coarse",
+    "variant_id": "44853853126910"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.45,
+    "title": "2lb / Whole Bean",
+    "variant_id": "44853853159678"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.45,
+    "title": "2lb / Fine",
+    "variant_id": "44853853192446"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.45,
+    "title": "2lb / Medium",
+    "variant_id": "44853853225214"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 38.45,
+    "title": "2lb / Coarse",
+    "variant_id": "44853853257982"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.35,
+    "title": "5lb / Whole Bean",
+    "variant_id": "44853853290750"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.35,
+    "title": "5lb / Fine",
+    "variant_id": "44853853323518"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.35,
+    "title": "5lb / Medium",
+    "variant_id": "44853853356286"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.35,
+    "title": "5lb / Coarse",
+    "variant_id": "44853853389054"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "457903c8d45362b0",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-sholi-coop-natural-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Rwanda_Sholi_Washed.jpg?v=1785879979",
+  "platform": "shopify",
+  "product_id": "8482832417022",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Rwanda - Sholi Cooperative - Washed",
+  "url": "https://www.ghosttowncoffee.com/products/rwanda-sholi-coop-natural-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.8,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45299041206526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.8,
+    "title": "12oz / Fine",
+    "variant_id": "45299041239294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.8,
+    "title": "12oz / Medium",
+    "variant_id": "45299041272062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.8,
+    "title": "12oz / Coarse",
+    "variant_id": "45299041304830"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.9,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45299041337598"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.9,
+    "title": "2lb / Fine",
+    "variant_id": "45299041370366"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.9,
+    "title": "2lb / Medium",
+    "variant_id": "45299041403134"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.9,
+    "title": "2lb / Coarse",
+    "variant_id": "45299041435902"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.4,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45299041468670"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.4,
+    "title": "5lb / Fine",
+    "variant_id": "45299041501438"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.4,
+    "title": "5lb / Medium",
+    "variant_id": "45299041534206"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 84.4,
+    "title": "5lb / Coarse",
+    "variant_id": "45299041566974"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "29d17d3f6800e478",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-espresso-appartamento",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/rocket_appartamento_front.jpg?v=1716409412",
+  "platform": "shopify",
+  "product_id": "8495663055102",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Rocket Espresso Appartamento",
+  "url": "https://www.ghosttowncoffee.com/products/rocket-espresso-appartamento",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 1950.0,
+    "title": "Copper Panels",
+    "variant_id": "45338589659390"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 1950.0,
+    "title": "White Panels",
+    "variant_id": "45338589692158"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "29d17d3f6800e478",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-espresso-appartamento-nera",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/dsc04535-edit.jpg?v=1716410204",
+  "platform": "shopify",
+  "product_id": "8495682322686",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Rocket Espresso Appartamento Nera",
+  "url": "https://www.ghosttowncoffee.com/products/rocket-espresso-appartamento-nera",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2000.0,
+    "title": "Copper Panels",
+    "variant_id": "45338618855678"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2000.0,
+    "title": "White Panels",
+    "variant_id": "45338618888446"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "17f6d35082a56339",
+  "first_seen": "2026-10-26",
+  "handle": "rocket-espresso-appartamento-tca",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/rocket_appartamento_front_8a7b5c99-d510-4615-9ec8-eb7657ae3499.jpg?v=1717529269",
+  "platform": "shopify",
+  "product_id": "8495687663870",
+  "product_type": "",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "Rocket Espresso Appartamento TCA",
+  "url": "https://www.ghosttowncoffee.com/products/rocket-espresso-appartamento-tca",
+  "variants": [
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2150.0,
+    "title": "Black",
+    "variant_id": "45338625310974"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2150.0,
+    "title": "Black and Copper",
+    "variant_id": "45338625343742"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2150.0,
+    "title": "Stainless and Black",
+    "variant_id": "45338639696126"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2150.0,
+    "title": "Stainless and Copper",
+    "variant_id": "45338639728894"
+   },
+   {
+    "available": true,
+    "grams": 4286,
+    "price_usd": 2150.0,
+    "title": "Stainless and White",
+    "variant_id": "45338639761662"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "a72df1cd462e6c40",
+  "first_seen": "2026-10-26",
+  "handle": "the-thoroughgood-espresso-tamp",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/the-thoroughgood-espresso-tamp-613409.jpg?v=1734037276",
+  "platform": "shopify",
+  "product_id": "8724559495422",
+  "product_type": "tamps",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The Thoroughgood Espresso Tamp",
+  "url": "https://www.ghosttowncoffee.com/products/the-thoroughgood-espresso-tamp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Walnut / 58.3mm",
+    "variant_id": "46092666798334"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Cherry / 58.3mm",
+    "variant_id": "46092666831102"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Hard Maple / 58.3mm",
+    "variant_id": "46092666863870"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 194.0,
+    "title": "True Black Walnut / 58.3mm",
+    "variant_id": "46092666896638"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "fd5513c214ff2713",
+  "first_seen": "2026-10-26",
+  "handle": "bt-wedge-espresso-preparation-distribution-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/bt-wedge-espresso-preparation-distribution-tool-250189.jpg?v=1734037277",
+  "platform": "shopify",
+  "product_id": "8724559560958",
+  "product_type": "tools",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "BT Wedge Espresso Preparation Distribution Tool",
+  "url": "https://www.ghosttowncoffee.com/products/bt-wedge-espresso-preparation-distribution-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Walnut / 58.3mm",
+    "variant_id": "46092667060478"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Walnut / 53.3mm",
+    "variant_id": "46092667093246"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Cherry / 58.3mm",
+    "variant_id": "46092667126014"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Cherry / 53.3mm",
+    "variant_id": "46092667158782"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 58.3mm",
+    "variant_id": "46092667191550"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 53.3mm",
+    "variant_id": "46092667224318"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 58.3mm",
+    "variant_id": "46092667257086"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 53.3mm",
+    "variant_id": "46092667289854"
+   },
+   {
+    "available": true,
+    "grams": 624,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 58.3mm",
+    "variant_id": "46092667453694"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 53.3mm",
+    "variant_id": "47462613614846"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "7ad95314e4b78b24",
+  "first_seen": "2026-10-26",
+  "handle": "the-statesman-espresso-tamp",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/the-statesman-espresso-tamp-215946.jpg?v=1734037276",
+  "platform": "shopify",
+  "product_id": "8724559593726",
+  "product_type": "tamps",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The Statesman Espresso Tamp",
+  "url": "https://www.ghosttowncoffee.com/products/the-statesman-espresso-tamp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Walnut / 58.3mm",
+    "variant_id": "46092666929406"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Cherry / 58.3mm",
+    "variant_id": "46092666962174"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 179.0,
+    "title": "Hard Maple / 58.3mm",
+    "variant_id": "46092666994942"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 194.0,
+    "title": "True Black Walnut / 58.3mm",
+    "variant_id": "46092667027710"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "d8c9303e59503c4d",
+  "first_seen": "2026-10-26",
+  "handle": "the-shot-collar-espresso-preparation-funnel-distribution-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/the-shot-collar-espresso-preparation-funnel-distribution-tool-190812.jpg?v=1734037277",
+  "platform": "shopify",
+  "product_id": "8724559692030",
+  "product_type": "tools",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The Shot Collar Espresso Preparation Funnel + Distribution Tool",
+  "url": "https://www.ghosttowncoffee.com/products/the-shot-collar-espresso-preparation-funnel-distribution-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": 481,
+    "price_usd": 97.0,
+    "title": "Default Title",
+    "variant_id": "46092667617534"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "688cbe6552ed4eaa",
+  "first_seen": "2026-10-26",
+  "handle": "model-s-model-t-espresso-tamp",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/model-s-model-t-espresso-tamp-366539.jpg?v=1734037281",
+  "platform": "shopify",
+  "product_id": "8724559724798",
+  "product_type": "tamps",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "Model S & Model T Espresso Tamp",
+  "url": "https://www.ghosttowncoffee.com/products/model-s-model-t-espresso-tamp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Walnut / 58.3mm",
+    "variant_id": "46092667781374"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Walnut / 53.3mm",
+    "variant_id": "46092667814142"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Maple / 58.3mm",
+    "variant_id": "46092667846910"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Maple / 53.3mm",
+    "variant_id": "46092667879678"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Cherry / 58.3mm",
+    "variant_id": "46092667912446"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model S / Cherry / 53.3mm",
+    "variant_id": "46092667945214"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 87.0,
+    "title": "Model S / Aluminium / 58.3mm",
+    "variant_id": "46092667977982"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 87.0,
+    "title": "Model S / Aluminium / 53.3mm",
+    "variant_id": "46092668010750"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Walnut / 58.3mm",
+    "variant_id": "46092668043518"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Walnut / 53.3mm",
+    "variant_id": "46092668076286"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Maple / 58.3mm",
+    "variant_id": "46092668109054"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Maple / 53.3mm",
+    "variant_id": "46092668141822"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Cherry / 58.3mm",
+    "variant_id": "46092668174590"
+   },
+   {
+    "available": true,
+    "grams": 170,
+    "price_usd": 87.0,
+    "title": "Model T / Cherry / 53.3mm",
+    "variant_id": "46092668207358"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 87.0,
+    "title": "Model T / Aluminium / 58.3mm",
+    "variant_id": "46092668240126"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 87.0,
+    "title": "Model T / Aluminium / 53.3mm",
+    "variant_id": "46092668272894"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "5ad5e2e50b64b027",
+  "first_seen": "2026-10-26",
+  "handle": "the-bloc-espresso-knock-box-tamp-station",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/the-bloc-espresso-knock-box-tamp-station-237353.jpg?v=1734037280",
+  "platform": "shopify",
+  "product_id": "8724559757566",
+  "product_type": "bloc",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The Bloc Espresso Knock Box + Tamp Station",
+  "url": "https://www.ghosttowncoffee.com/products/the-bloc-espresso-knock-box-tamp-station",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Walnut",
+    "variant_id": "46092667650302"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Maple",
+    "variant_id": "46092667683070"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 109.0,
+    "title": "Walnut-Maple-Walnut-Stack",
+    "variant_id": "46092667715838"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 149.0,
+    "title": "True Black Walnut",
+    "variant_id": "46092667748606"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "e03c68df855aae66",
+  "first_seen": "2026-10-26",
+  "handle": "the-new-levy-precision-espresso-tamping-tool",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/the-new-levy-precision-espresso-tamping-tool-963070.jpg?v=1734037282",
+  "platform": "shopify",
+  "product_id": "8724559790334",
+  "product_type": "tamps",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "The New Levy Precision Espresso Tamping Tool",
+  "url": "https://www.ghosttowncoffee.com/products/the-new-levy-precision-espresso-tamping-tool",
+  "variants": [
+   {
+    "available": true,
+    "grams": 652,
+    "price_usd": 169.0,
+    "title": "Walnut / 58.3mm",
+    "variant_id": "46092668403966"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Walnut / 53.3mm",
+    "variant_id": "46092668436734"
+   },
+   {
+    "available": true,
+    "grams": 652,
+    "price_usd": 169.0,
+    "title": "Cherry / 58.3mm",
+    "variant_id": "46092668469502"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Cherry / 53.3mm",
+    "variant_id": "46092668502270"
+   },
+   {
+    "available": true,
+    "grams": 652,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 58.3mm",
+    "variant_id": "46092668535038"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 169.0,
+    "title": "Hard Maple / 53.3mm",
+    "variant_id": "46092668567806"
+   },
+   {
+    "available": true,
+    "grams": 652,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 58.3mm",
+    "variant_id": "46092668600574"
+   },
+   {
+    "available": true,
+    "grams": 567,
+    "price_usd": 179.0,
+    "title": "True Black Walnut / 53.3mm",
+    "variant_id": "46092668633342"
+   },
+   {
+    "available": true,
+    "grams": 652,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 58.3mm",
+    "variant_id": "46092668797182"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 154.0,
+    "title": "Matte Stainless Steel / 53.3mm",
+    "variant_id": "47462606176510"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "da2753aa03032a47",
+  "first_seen": "2026-10-26",
+  "handle": "model-b-espresso-tamp-for-breville",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/model-b-espresso-tamp-for-breville-741373.jpg?v=1734037282",
+  "platform": "shopify",
+  "product_id": "8724559855870",
+  "product_type": "tamps",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "Saint Anthony Industries",
+   "Shopify Collective"
+  ],
+  "title": "Model B Espresso Tamp for Breville",
+  "url": "https://www.ghosttowncoffee.com/products/model-b-espresso-tamp-for-breville",
+  "variants": [
+   {
+    "available": true,
+    "grams": 142,
+    "price_usd": 87.0,
+    "title": "Walnut",
+    "variant_id": "46092668829950"
+   },
+   {
+    "available": true,
+    "grams": 142,
+    "price_usd": 87.0,
+    "title": "Maple",
+    "variant_id": "46092668862718"
+   }
+  ],
+  "vendor": "Saint Anthony Industries"
+ },
+ {
+  "body_hash": "b667a3232f41d0b1",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-la-providencia-real",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Coffee_3.png?v=1752704742",
+  "platform": "shopify",
+  "product_id": "8940234801406",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "El Salvador - La Providencia",
+  "url": "https://www.ghosttowncoffee.com/products/el-salvador-la-providencia-real",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47089488691454"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Fine",
+    "variant_id": "47089488724222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Medium",
+    "variant_id": "47089488756990"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.9,
+    "title": "12oz / Coarse",
+    "variant_id": "47089488789758"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47089488822526"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Fine",
+    "variant_id": "47089488855294"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Medium",
+    "variant_id": "47089488888062"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.8,
+    "title": "2lb / Coarse",
+    "variant_id": "47089488920830"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47089488953598"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Fine",
+    "variant_id": "47089488986366"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Medium",
+    "variant_id": "47089489019134"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 94.55,
+    "title": "5lb / Coarse",
+    "variant_id": "47089489051902"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "6f372645164bd9f1",
+  "first_seen": "2026-10-26",
+  "handle": "pnkbzn",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/PNKBZN.jpg?v=1790792880",
+  "platform": "shopify",
+  "product_id": "9007454650622",
+  "product_type": "Signature Blend",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [],
+  "title": "PNKBZN",
+  "url": "https://www.ghosttowncoffee.com/products/pnkbzn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47363905552638"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Fine",
+    "variant_id": "47363905585406"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Medium",
+    "variant_id": "47363905618174"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.25,
+    "title": "12oz / Coarse",
+    "variant_id": "47363905650942"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Whole Bean",
+    "variant_id": "47363905683710"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Fine",
+    "variant_id": "47363905716478"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Medium",
+    "variant_id": "47363905749246"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 39.7,
+    "title": "2lb / Coarse",
+    "variant_id": "47363905782014"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47363905814782"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Fine",
+    "variant_id": "47363905847550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Medium",
+    "variant_id": "47363905880318"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.95,
+    "title": "5lb / Coarse",
+    "variant_id": "47363905913086"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "f5bb404d26df8918",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-el-retiro-honey-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Colombia_Mist_94394217-6016-4c44-af7e-8a3d69ed0e72.jpg?v=1786378359",
+  "platform": "shopify",
+  "product_id": "9404476293374",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "dup-review-publication"
+  ],
+  "title": "Colombia Mist - Gesha",
+  "url": "https://www.ghosttowncoffee.com/products/el-salvador-el-retiro-honey-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.35,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48684081053950"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.35,
+    "title": "12oz / Fine",
+    "variant_id": "48684081086718"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.35,
+    "title": "12oz / Medium",
+    "variant_id": "48684081119486"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.35,
+    "title": "12oz / Coarse",
+    "variant_id": "48684081152254"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ },
+ {
+  "body_hash": "f467cd2e71357cc0",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-mist-juan-carlos-quinchia-washed-gesha-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0086/3191/0462/files/Colombia_Mikilillo_6f6390d3-439d-420c-8971-b699ab6550cf.jpg?v=1786378354",
+  "platform": "shopify",
+  "product_id": "9404480848126",
+  "product_type": "Single Origin",
+  "roaster_slug": "ghosttowncoffee",
+  "tags": [
+   "dup-review-publication"
+  ],
+  "title": "Colombia Mikilillo - Caturra Chiroso",
+  "url": "https://www.ghosttowncoffee.com/products/colombia-mist-juan-carlos-quinchia-washed-gesha-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48684101042430"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Fine",
+    "variant_id": "48684101075198"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Medium",
+    "variant_id": "48684101107966"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12oz / Coarse",
+    "variant_id": "48684101140734"
+   }
+  ],
+  "vendor": "Ghost Town Coffee Roasters"
+ }
+]

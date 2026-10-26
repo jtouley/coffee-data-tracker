@@ -1,0 +1,117 @@
+{
+ "2908973760612": {
+  "body_hash": "bc47ddb8516771d4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Honduras",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "almond",
+   "dark chocolate",
+   "nutmeg",
+   "lemon"
+  ],
+  "varietals": []
+ },
+ "3208963588196": {
+  "body_hash": "bfe27454db685626",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "cocoa",
+   "molasses",
+   "toasted walnut",
+   "subtle smoke"
+  ],
+  "varietals": []
+ },
+ "4696702451852": {
+  "body_hash": "dd5acfe4b60a3a38",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "caramel",
+   "nutmeg"
+  ],
+  "varietals": []
+ },
+ "6270887624897": {
+  "body_hash": "1d32ca9d47916592",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "toffee"
+  ],
+  "varietals": []
+ },
+ "7021540212929": {
+  "body_hash": "e031ddc6428f6de4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "brown sugar",
+   "dark chocolate",
+   "caramel"
+  ],
+  "varietals": []
+ },
+ "7612706488513": {
+  "body_hash": "8962752034798fd2",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "caramel",
+   "lemon",
+   "orange"
+  ],
+  "varietals": []
+ }
+}

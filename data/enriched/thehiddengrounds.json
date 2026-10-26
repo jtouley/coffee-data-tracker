@@ -1,0 +1,170 @@
+{
+ "10292984512822": {
+  "body_hash": "fa789ed5987c1b38",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honeysuckle",
+   "panela",
+   "peach"
+  ],
+  "varietals": []
+ },
+ "10292992409910": {
+  "body_hash": "ea44ba604318c998",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "red berries",
+   "plum",
+   "tropical fruit"
+  ],
+  "varietals": []
+ },
+ "10397701931318": {
+  "body_hash": "d4a4c5a83492f270",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "citrus",
+   "berries",
+   "floral"
+  ],
+  "varietals": []
+ },
+ "8511040258358": {
+  "body_hash": "456940ab0897aa77",
+  "elevation_masl_max": 2150,
+  "elevation_masl_min": 2150,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "orange",
+   "raspberry",
+   "red apple"
+  ],
+  "varietals": [
+   "Caturra"
+  ]
+ },
+ "8511052808502": {
+  "body_hash": "7de307c9bb3b9b1e",
+  "elevation_masl_max": 2101,
+  "elevation_masl_min": 2101,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": "light",
+  "tasting_notes": [
+   "cocoa",
+   "orange",
+   "strawberry"
+  ],
+  "varietals": []
+ },
+ "8511063327030": {
+  "body_hash": "308a4321aa3a8888",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "brown sugar",
+   "subtle red fruit"
+  ],
+  "varietals": []
+ },
+ "8527630369078": {
+  "body_hash": "2f35401a535a1373",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "9902216905014": {
+  "body_hash": "0797d9d3e87b8522",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": [
+   "Java"
+  ]
+ },
+ "9928004075830": {
+  "body_hash": "797be9ec4f9fa37a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "full-bodied",
+   "smooth",
+   "naturally sweet"
+  ],
+  "varietals": []
+ }
+}

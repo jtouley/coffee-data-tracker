@@ -1,0 +1,6925 @@
+[
+ {
+  "body_hash": "8b32fe4b68a79d5c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/ethiopia.jpg?v=1710694739",
+  "platform": "shopify",
+  "product_id": "8155407352024",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Single Source Coffee",
+   "africanbeans"
+  ],
+  "title": "Ethiopia",
+  "url": "https://cjroasting.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320565100760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565133528"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565166296"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565199064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320565231832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320565264600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320565297368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565330136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565362904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565395672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565428440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565461208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565493976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565526744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565559512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320565592280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320565625048"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320565657816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565690584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565723352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565756120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565788888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565821656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320565854424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435217907928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217940696"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435217973464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218006232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435218039000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218071768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435218104536"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218137304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435218170072"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218202840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435218235608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218268376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435218301144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218333912"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435218366680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435218399448"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "d86813117301df04",
+  "first_seen": "2026-10-26",
+  "handle": "sulawesi",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/7.jpg?v=1710621378",
+  "platform": "shopify",
+  "product_id": "8155407515864",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Sulawesi",
+  "url": "https://cjroasting.com/products/sulawesi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320567001304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567034072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567066840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567099608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320567132376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320567165144"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320567197912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567230680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567263448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567296216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567328984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567361752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567394520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567427288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567460056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320567492824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320567525592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320567558360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567591128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567623896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567656664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567689432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567722200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320567754968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435229180120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229212888"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435229245656"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229278424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435229311192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229343960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435229376728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229409496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435229442264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229475032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435229507800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229540568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435229573336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229606104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435229638872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229671640"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "ebaecd5d0009c402",
+  "first_seen": "2026-10-26",
+  "handle": "47-not-46",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/47n46D.png?v=1743449353",
+  "platform": "shopify",
+  "product_id": "8155407581400",
+  "product_type": "blend",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Central & South American Coffee",
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "47 not 46",
+  "url": "https://cjroasting.com/products/47-not-46",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320568344792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568377560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568410328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568443096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320568475864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320568508632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320568541400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568574168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568606936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568639704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568672472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568705240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568738008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568770776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568803544"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320568836312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320568869080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320568901848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568934616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320568967384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320569000152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320569032920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320569065688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320569098456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435225510104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225542872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435225575640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225608408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435225641176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225673944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435225706712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225739480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435225772248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225805016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435225837784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225870552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435225903320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435225936088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435225968856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226001624"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "1405e37cbe8e704e",
+  "first_seen": "2026-10-26",
+  "handle": "thailand",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/2_64a0c029-21c7-4418-9486-73ebe543f038.jpg?v=1710621509",
+  "platform": "shopify",
+  "product_id": "8155407778008",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Thailand",
+  "url": "https://cjroasting.com/products/thailand",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320570114264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570147032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570179800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570212568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320570245336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320570278104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320570310872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570343640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570376408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570409176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570441944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570474712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570507480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570540248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570573016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320570605784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320570638552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320570671320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570704088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570736856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570769624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570802392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570835160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320570867928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435231506648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231539416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435231572184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231604952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231637720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231670488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231703256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231736024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435231768792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231801560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435231834328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231867096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231899864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231932632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231965400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231998168"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "da37406a4ec11321",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/tanzania.jpg?v=1710695112",
+  "platform": "shopify",
+  "product_id": "8155407876312",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Single Source Coffee",
+   "africanbeans"
+  ],
+  "title": "Tanzanian Peaberry",
+  "url": "https://cjroasting.com/products/tanzanian-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320573128920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573161688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573194456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573227224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320573259992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320573292760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320573325528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573358296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573391064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573423832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573456600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573489368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573522136"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573554904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573587672"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320573620440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320573653208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320573685976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573718744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573751512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573784280"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573817048"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573849816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320573882584"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435230752984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230785752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435230818520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230851288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230884056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230916824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230949592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230982360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435231015128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231047896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435231080664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231113432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231146200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231178968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435231211736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435231244504"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "9d4740ed17922597",
+  "first_seen": "2026-10-26",
+  "handle": "brazillian-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/BrazilPeaberry.jpg?v=1710772638",
+  "platform": "shopify",
+  "product_id": "8155408040152",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Central & South American Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Brazil Peaberry",
+  "url": "https://cjroasting.com/products/brazillian-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320575389912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575422680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575455448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575488216"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320575520984"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320575553752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320575586520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575619288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575652056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575684824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575717592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575750360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575783128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575815896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575848664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320575881432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320575914200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320575946968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320575979736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576012504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576045272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576078040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576110808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576143576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435212107992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212140760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435212173528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212206296"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435212239064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212271832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435212304600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212337368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435212370136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212402904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435212435672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212468440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435212501208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212533976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435212566744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212599512"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "88f9c9e40fb35b4c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/Guatemala.jpg?v=1710694793",
+  "platform": "shopify",
+  "product_id": "8155408105688",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Central & South American Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Guatemala",
+  "url": "https://cjroasting.com/products/guatemala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320576733400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576766168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320576798936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320576831704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320576864472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320576897240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320576930008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576962776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320576995544"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577028312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577061080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577093848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320577126616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320577159384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320577192152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320577224920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320577257688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320577290456"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577323224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577355992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577388760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577421528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577454296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320577487064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435221086424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221119192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435221151960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221184728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435221217496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221250264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435221283032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221315800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435221348568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221381336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435221414104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221446872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435221479640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221512408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435221545176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435221577944"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "2cbfd5709e0940b2",
+  "first_seen": "2026-10-26",
+  "handle": "bunoffee",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/bunoffee.jpg?v=1710784385",
+  "platform": "shopify",
+  "product_id": "8155408171224",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "BuNoffee",
+  "url": "https://cjroasting.com/products/bunoffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320578142424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578175192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578207960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578240728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320578273496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320578306264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320578339032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578371800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578404568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578437336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578470104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578502872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578535640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578568408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578601176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320578633944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320578666712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320578699480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578732248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578765016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578797784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578830552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578863320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320578896088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435212828888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212861656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435212894424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212927192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435212959960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435212992728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435213025496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435213058264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435213091032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435213123800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435213156568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435213189336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435213222104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435213254872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435213287640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435213320408"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "e81e7d156589fb3c",
+  "first_seen": "2026-10-26",
+  "handle": "black-tan",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/black_tan.jpg?v=1710784301",
+  "platform": "shopify",
+  "product_id": "8155408236760",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "Black & Tan",
+  "url": "https://cjroasting.com/products/black-tan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320579518680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320579551448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320579584216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320579616984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320579649752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320579682520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44429142163672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44429142196440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44429142229208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44429142261976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44438256582872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256615640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438256648408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256681176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438256713944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256746712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44438256779480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256812248"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438256845016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256877784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438256910552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438256943320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44438256976088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257008856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438257041624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257074392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438257107160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257205464"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44438257303768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257402072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438257467608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257565912"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438257696984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257762520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44438257860824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438257959128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438258057432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438258122968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44438258221272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44438258319576"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "2bd2e653d0c8e4cf",
+  "first_seen": "2026-10-26",
+  "handle": "across-the-sea",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/acrossthesea.jpg?v=1710784228",
+  "platform": "shopify",
+  "product_id": "8155408367832",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "Across The Sea",
+  "url": "https://cjroasting.com/products/across-the-sea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320580403416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580436184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580468952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580501720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320580534488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320580567256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320580600024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580632792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580665560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580698328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580731096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580763864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580796632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580829400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580862168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320580894936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320580927704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320580960472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320580993240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320581026008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320581058776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320581091544"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320581124312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320581157080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44409686851800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409686917336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44409686982872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687048408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44409687081176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687113944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44409687146712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687179480"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44409687212248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687245016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44409687277784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687310552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44409687343320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687376088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44409687408856"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44409687441624"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "c287eb7cf57f71ce",
+  "first_seen": "2026-10-26",
+  "handle": "three-brothers",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/threebrother.jpg?v=1710784601",
+  "platform": "shopify",
+  "product_id": "8155408564440",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "Three Brothers",
+  "url": "https://cjroasting.com/products/three-brothers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320582598872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582631640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320582664408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320582697176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320582729944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320582762712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320582795480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582828248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582861016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582893784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582926552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320582959320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320582992088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320583024856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320583057624"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320583090392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320583123160"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320583155928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583188696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583221464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583254232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583287000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583319768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320583352536"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "bd5bbaefb1f6b36b",
+  "first_seen": "2026-10-26",
+  "handle": "renton",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/renton.jpg?v=1710784528",
+  "platform": "shopify",
+  "product_id": "8155408695512",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "Renton",
+  "url": "https://cjroasting.com/products/renton",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320584368344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584401112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584433880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584466648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320584499416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320584532184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320584564952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584597720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584630488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584663256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584696024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584728792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584761560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584794328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584827096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320584859864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320584892632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320584925400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584958168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320584990936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320585023704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320585056472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320585089240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320585122008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435226460376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226493144"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435226525912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226558680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435226591448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226624216"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435226656984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226689752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435226722520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226755288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435226788056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226820824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435226853592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226886360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435226919128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435226951896"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "894b566806ebf6eb",
+  "first_seen": "2026-10-26",
+  "handle": "veterans",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/veterans.jpg?v=1710784648",
+  "platform": "shopify",
+  "product_id": "8155408793816",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends"
+  ],
+  "title": "Veterans",
+  "url": "https://cjroasting.com/products/veterans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320585941208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320585973976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586006744"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586039512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320586072280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320586105048"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320586137816"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586170584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586203352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586236120"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586268888"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586301656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586334424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586367192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586399960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320586432728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320586465496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320586498264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586531032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586563800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586596568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586629336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586662104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320586694872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over/ French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44439594172632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over/ French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594205400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over/ French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44439594238168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over/ French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594270936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over/ French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44439594303704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over/ French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594336472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Pour Over/ French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44439594369240"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Pour Over/ French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594402008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44439594434776"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594467544"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44439594500312"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594533080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44439594565848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594598616"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44439594664152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44439594696920"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "72e84097f1cf843b",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/4.jpg?v=1710621423",
+  "platform": "shopify",
+  "product_id": "8155409055960",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Sumatra",
+  "url": "https://cjroasting.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320598655192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320598753496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320598819032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320598917336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320599015640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320599146712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320599277784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320599376088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320599441624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320599539928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320599605464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320599671000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320599769304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320599867608"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320599965912"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320600031448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320600129752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320600162520"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600260824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600359128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600424664"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600490200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600522968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320600588504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435229966552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435229999320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435230032088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230064856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230097624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230130392"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230163160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230195928"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435230228696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230261464"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435230294232"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230327000"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230359768"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230392536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435230425304"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435230458072"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "16651fdbb5f2ca8e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/ModernCreativeCoffeePackageMockupInstagramPost.jpg?v=1710553406",
+  "platform": "shopify",
+  "product_id": "8155409219800",
+  "product_type": "Single Origin",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Central & South American Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Colombia",
+  "url": "https://cjroasting.com/products/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320602751192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320602783960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320602816728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320602849496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320602882264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320602915032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320602947800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320602980568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320603013336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320603046104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603078872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320603111640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320603144408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603177176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320603209944"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320603242712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603275480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603308248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603341016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603373784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603406552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603439320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603472088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320603504856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435216105688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435216138456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435216171224"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435216203992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216236760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216269528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216302296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216335064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435216367832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435216400600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435216433368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435216466136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216498904"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216531672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216564440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435216597208"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "d62ae627e0d55a56",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/Rwanda.jpg?v=1710694992",
+  "platform": "shopify",
+  "product_id": "8155409776856",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Single Source Coffee",
+   "africanbeans"
+  ],
+  "title": "Rwanda",
+  "url": "https://cjroasting.com/products/rwanda",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320605176024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605208792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605241560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605274328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320605307096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320605339864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320605372632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605405400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605438168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605470936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605503704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605536472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605569240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605602008"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605634776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320605667544"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320605700312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320605733080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605765848"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605798616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605831384"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605864152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605896920"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320605929688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435228262616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228295384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435228328152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228360920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435228393688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228426456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435228459224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228491992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435228524760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228557528"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435228590296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228623064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435228655832"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228688600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435228721368"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435228754136"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "b87069afabd85f1d",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/kenyaaa.jpg?v=1710694853",
+  "platform": "shopify",
+  "product_id": "8155409875160",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Single Source Coffee",
+   "africanbeans"
+  ],
+  "title": "Kenya AA",
+  "url": "https://cjroasting.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320607076568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607109336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607142104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607174872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320607207640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320607240408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320607273176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607305944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607338712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607371480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607404248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607437016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607469784"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607502552"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607535320"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320607568088"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320607600856"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320607633624"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607666392"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607699160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607731928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607764696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607797464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320607830232"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435223281880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223314648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435223347416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223380184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435223412952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223445720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435223478488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223511256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435223544024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223576792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435223609560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223642328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435223675096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223707864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435223740632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223773400"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "9304aa1ce0083d9a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/CostaRica.jpg?v=1710694674",
+  "platform": "shopify",
+  "product_id": "8155409973464",
+  "product_type": "Single Origin",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Central & South American Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://cjroasting.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320608485592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608518360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608551128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608583896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320608616664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320608649432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320608682200"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608714968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608747736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608780504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608813272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320608846040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608878808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608911576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608944344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320608977112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320609009880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320609042648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609075416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609108184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609140952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609173720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609206488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609239256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435217088728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217121496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435217154264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217187032"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435217219800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217252568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435217285336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217318104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435217350872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217383640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435217416408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217449176"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435217481944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217514712"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435217547480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435217580248"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "5ec27ceb0b8a51cc",
+  "first_seen": "2026-10-26",
+  "handle": "burundi",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/burundi.jpg?v=1710693848",
+  "platform": "shopify",
+  "product_id": "8155410071768",
+  "product_type": "Single Origin",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "African Coffee",
+   "Single Source Coffee",
+   "africanbeans"
+  ],
+  "title": "Burundi",
+  "url": "https://cjroasting.com/products/burundi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320609894616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320609927384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320609960152"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320609992920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320610025688"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320610058456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320610091224"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610123992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610156760"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610189528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610222296"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610255064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320610287832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320610320600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320610353368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320610386136"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320610418904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320610451672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610484440"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610517208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610549976"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610582744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610615512"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320610648280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435215220952"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215253720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435215286488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215319256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435215352024"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215384792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435215417560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215450328"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435215483096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215515864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435215548632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215581400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435215614168"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215646936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435215679704"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435215712472"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "2329156c568a0169",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/5.jpg?v=1710621118",
+  "platform": "shopify",
+  "product_id": "8155410202840",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://cjroasting.com/products/bali-blue-moon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320611959000"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320611991768"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612024536"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612057304"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320612090072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320612122840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320612155608"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612188376"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612221144"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612253912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612286680"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612319448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612352216"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612384984"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612417752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612450520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320612483288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320612516056"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612548824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612581592"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612614360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612647128"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612679896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612712664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435202539736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202572504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435202605272"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202638040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435202670808"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202703576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435202736344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202769112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435202801880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202834648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435202867416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435202932952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435202998488"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435203031256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435203096792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435203129560"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "87f7cdde789c9f4e",
+  "first_seen": "2026-10-26",
+  "handle": "java-dutch-estate",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/10.jpg?v=1710621196",
+  "platform": "shopify",
+  "product_id": "8155410301144",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Java Dutch Estate",
+  "url": "https://cjroasting.com/products/java-dutch-estate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320612843736"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320612876504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612909272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320612942040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320612974808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320613007576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320613040344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613073112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613105880"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613138648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613171416"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613204184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320613236952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320613269720"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320613302488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320613335256"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320613368024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320613400792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613433560"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613466328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613499096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613531864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613564632"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320613597400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435222528216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222560984"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435222593752"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222626520"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435222659288"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222692056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435222724824"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222757592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435222790360"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222823128"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435222855896"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222888664"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435222921432"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435222954200"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435222986968"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435223019736"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "9472624a54e121bd",
+  "first_seen": "2026-10-26",
+  "handle": "monsooned-malabar",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/3.jpg?v=1710621289",
+  "platform": "shopify",
+  "product_id": "8155410464984",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Asian Coffee",
+   "Single Source Coffee"
+  ],
+  "title": "Monsoon Malabar",
+  "url": "https://cjroasting.com/products/monsooned-malabar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320614875352"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320614908120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320614940888"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320614973656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320615006424"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320615039192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44320615071960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615104728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615137496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615170264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615203032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615235800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320615268568"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320615301336"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320615334104"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44320615366872"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320615399640"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44320615432408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615465176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615497944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615530712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615563480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615596248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44320615629016"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435224395992"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224428760"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435224461528"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224494296"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435224527064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224559832"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435224592600"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224625368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44435224658136"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224690904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44435224723672"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224756440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435224789208"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224821976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44435224854744"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44435224887512"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "a6c5a8ae986f3854",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-3",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/decaf.jpg?v=1710696746",
+  "platform": "shopify",
+  "product_id": "8178116821208",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Custom Joe Roasting Blends",
+   "Single Source Coffee"
+  ],
+  "title": "Decaf",
+  "url": "https://cjroasting.com/products/decaf-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Whole Bean / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44411838988504"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839021272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Whole Bean / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44411839054040"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839086808"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Whole Bean / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839119576"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839152344"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Whole Bean / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839185112"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839217880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Automatic Drip / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44411839250648"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839283416"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Automatic Drip / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44411839316184"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839348952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Automatic Drip / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839381720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839414488"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Automatic Drip / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839447256"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839480024"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Pour Over / French Press / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44411839512792"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839545560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Pour Over / French Press / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44411839578328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839611096"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839643864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839676632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Pour Over / French Press / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839709400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839742168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Keurig / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44411839774936"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839807704"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Keurig / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44411839840472"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839873240"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Keurig / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839906008"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411839938776"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Keurig / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411839971544"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411840004312"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Espresso / Light Roast / Full Pound (16 oz)",
+    "variant_id": "44411840037080"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411840069848"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Espresso / Medium Roast / Full Pound (16 oz)",
+    "variant_id": "44411840102616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411840135384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Espresso / Medium Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411840168152"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411840200920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.99,
+    "title": "Espresso / Dark Roast / Full Pound (16 oz)",
+    "variant_id": "44411840233688"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44411840266456"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ },
+ {
+  "body_hash": "b6300626bdd8fee9",
+  "first_seen": "2026-10-26",
+  "handle": "kona",
+  "image": "https://cdn.shopify.com/s/files/1/0683/0873/0072/files/kona.jpg?v=1710772706",
+  "platform": "shopify",
+  "product_id": "8178117673176",
+  "product_type": "",
+  "roaster_slug": "cjroasting",
+  "tags": [
+   "Single Source Coffee"
+  ],
+  "title": "Kona",
+  "url": "https://cjroasting.com/products/kona",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Whole Bean / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909760728"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Whole Bean / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909793496"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Whole Bean / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909826264"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Whole Bean / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909859032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Automatic Drip / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909891800"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Automatic Drip / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909924568"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Automatic Drip / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909957336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Automatic Drip / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420909990104"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Pour Over / French Press / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910022872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Pour Over / French Press / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910055640"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Pour Over / French Press / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910088408"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Pour Over / French Press / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910121176"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Keurig / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910153944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Keurig / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910186712"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Keurig / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910219480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Keurig / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910252248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Espresso / Light Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910285016"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Espresso / Medium Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910317784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Espresso / Medium Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910350552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 49.99,
+    "title": "Espresso / Dark Roast / Three-Fourths Pound (12 oz)",
+    "variant_id": "44420910383320"
+   }
+  ],
+  "vendor": "Custom Joe Roasting"
+ }
+]

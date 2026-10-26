@@ -1,0 +1,353 @@
+[
+ {
+  "body_hash": "bf5a7652250cbb8d",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/BrazilDarkBag_58b2024f-c07a-4753-852e-ee7328184710.png?v=1785725668",
+  "platform": "shopify",
+  "product_id": "9005685407971",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Brazil",
+   "chocolate",
+   "dark roast",
+   "nutty",
+   "single origin"
+  ],
+  "title": "Brazil Dark",
+  "url": "https://giddygoat.com/products/brazil-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47808617021667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "47808617218275"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47808640975075"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "47808641007843"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "8c7c6d5d5c69b318",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medium",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/ColombiaMediumBag_0178279c-870a-4a65-9bf3-63c74017d4e8.png?v=1785727800",
+  "platform": "shopify",
+  "product_id": "9005685473507",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Colombia",
+   "Rainforest Alliance",
+   "hazelnut",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Colombia Medium",
+  "url": "https://giddygoat.com/products/colombia-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole bean",
+    "variant_id": "47426246836451"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Ground",
+    "variant_id": "47426246869219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Whole bean",
+    "variant_id": "47808791183587"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb / Ground",
+    "variant_id": "47808791216355"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "0fa09df0015e4d3f",
+  "first_seen": "2026-10-26",
+  "handle": "giddy-up-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/GiddyUpEspressoBag_ae23c257-ac78-4d84-97b7-e0ebecd79edc.png?v=1785725135",
+  "platform": "shopify",
+  "product_id": "9108830159075",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Colombia",
+   "Ethiopia",
+   "blend",
+   "cocoa",
+   "espresso",
+   "medium-dark roast"
+  ],
+  "title": "Giddy Up Espresso",
+  "url": "https://giddygoat.com/products/giddy-up-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "47851685609699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "47851685642467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "47851685675235"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb / Ground",
+    "variant_id": "47851685708003"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "5dcfdea3cb6694e6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-goat",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/DecaffeinatedGoatBag.png?v=1785727446",
+  "platform": "shopify",
+  "product_id": "9139749814499",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Central America",
+   "Swiss Water Process",
+   "decaf",
+   "medium roast",
+   "mocha"
+  ],
+  "title": "Decaffeinated Goat",
+  "url": "https://giddygoat.com/products/decaffeinated-goat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48032985383139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground",
+    "variant_id": "48032985415907"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48032985448675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "48032985481443"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "d0c2d587bcc680a4",
+  "first_seen": "2026-10-26",
+  "handle": "shaka-sunrise",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/ShakaSunriseBag.png?v=1785727400",
+  "platform": "shopify",
+  "product_id": "9139751354595",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Central America",
+   "blend",
+   "citrus",
+   "floral",
+   "medium-light roast"
+  ],
+  "title": "Shaka Sunrise",
+  "url": "https://giddygoat.com/products/shaka-sunrise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48032992723171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48032992755939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48032992788707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground",
+    "variant_id": "48032992821475"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "0c2399d90873a8a7",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-lite",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/CostaRicaLiteBag.png?v=1785725497",
+  "platform": "shopify",
+  "product_id": "9139752272099",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Costa Rica",
+   "light roast",
+   "single origin",
+   "vanilla",
+   "washed process"
+  ],
+  "title": "Costa Rica Lite",
+  "url": "https://giddygoat.com/products/costa-rica-lite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48032998097123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "48032998129891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48032998162659"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground",
+    "variant_id": "48032998195427"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ },
+ {
+  "body_hash": "41fee31e976dca1c",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0737/9396/2211/files/EthiopiaLiteBag_55eb1459-8ed4-4ee4-8862-be06570c081e.png?v=1785727182",
+  "platform": "shopify",
+  "product_id": "9139753222371",
+  "product_type": "",
+  "roaster_slug": "giddygoat",
+  "tags": [
+   "Ethiopia",
+   "fruity",
+   "light roast",
+   "natural process",
+   "single origin"
+  ],
+  "title": "Ethiopia",
+  "url": "https://giddygoat.com/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48033004585187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Ground",
+    "variant_id": "48033004617955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48033004650723"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "5lb / Ground",
+    "variant_id": "48033004683491"
+   }
+  ],
+  "vendor": "Giddy Goat"
+ }
+]

@@ -1,0 +1,2912 @@
+[
+ {
+  "body_hash": "bff5d79f18d481e8",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Nicaragua.Site.Pic.png?v=1787328904",
+  "platform": "shopify",
+  "product_id": "6778347880603",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "Nicaragua Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609265418395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609265483931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609265549467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609265582235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609265647771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267246129307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510470897819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Stove Top Espresso",
+    "variant_id": "47841000226971"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "ff2052b6a2972ccd",
+  "first_seen": "2026-10-26",
+  "handle": "85601",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/PF.Image.png?v=1787324307",
+  "platform": "shopify",
+  "product_id": "6783064277147",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Dark Roast",
+   "French Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Philly French Roast Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/85601",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609271775387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609271840923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609271906459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609271939227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "12 oz French Press",
+    "variant_id": "40609272004763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267251208347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510472110235"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "532e76609874d80d",
+  "first_seen": "2026-10-26",
+  "handle": "86602",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/peru.site.pic.png?v=1787756281",
+  "platform": "shopify",
+  "product_id": "6783064342683",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Dark Roast",
+   "French Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Peru Coffee (Organic, Fairtrade, Dark Roast)",
+  "url": "https://phillyfairtrade.com/products/86602",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609268498587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609268564123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609268629659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609268662427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609268727963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267248095387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510471618715"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "057f9d6e64e55a04",
+  "first_seen": "2026-10-26",
+  "handle": "87437",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/mex.bigger.bag.png?v=1786714063",
+  "platform": "shopify",
+  "product_id": "6783064473755",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "Vienna Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Mexico Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/87437",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609245888667"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609245954203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609246019739"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609246052507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609246118043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267245932699"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510468276379"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "c091931dc1a8d873",
+  "first_seen": "2026-10-26",
+  "handle": "87938",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Joesbag.jpg?v=1787324008",
+  "platform": "shopify",
+  "product_id": "6783064604827",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Joe's House Blend Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/87938",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609243988123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609244053659"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609244119195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609244151963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz French Press",
+    "variant_id": "40609244217499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267245736091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510467588251"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "549b498d30644f0d",
+  "first_seen": "2026-10-26",
+  "handle": "88439",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/honduras.bag.png?v=1787324551",
+  "platform": "shopify",
+  "product_id": "6783064637595",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Honduras Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/88439",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609243332763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609243398299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609243463835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609243496603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "French Press",
+    "variant_id": "40609243562139"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267244392603"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510466474139"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "56ebebedafbb870e",
+  "first_seen": "2026-10-26",
+  "handle": "88940",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Guatemala.site.bag.png?v=1787328370",
+  "platform": "shopify",
+  "product_id": "6783064703131",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "Vienna Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Guatemala Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/88940",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609242874011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609242939547"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609243005083"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609243037851"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609243103387"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "44548996137115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44548996169883"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "977d3955d5eb22f2",
+  "first_seen": "2026-10-26",
+  "handle": "89441",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Ethiopia_Fair_Trade_Coffee_Bag_1.png?v=1791318187",
+  "platform": "shopify",
+  "product_id": "6783064801435",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "import_2021_05_21_174643",
+   "light roast"
+  ],
+  "title": "Ethiopia Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/89441",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Whole Bean",
+    "variant_id": "40609242251419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Electric Espresso",
+    "variant_id": "40609242316955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Melitta Drip",
+    "variant_id": "40609242382491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "Regular Drip – Paper Filter",
+    "variant_id": "40609242415259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.5,
+    "title": "French Press",
+    "variant_id": "40609242480795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb Whole Bean",
+    "variant_id": "44548995317915"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 102.5,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44548995350683"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "693ab07b87b4f951",
+  "first_seen": "2026-10-26",
+  "handle": "89942",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/espresso.site.bag.png?v=1787328069",
+  "platform": "shopify",
+  "product_id": "6783064834203",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Espresso Blend Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/89942",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609240842395"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609240907931"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609240973467"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609241006235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "12 oz French Press",
+    "variant_id": "40609241071771"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267244064923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510460379291"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.25,
+    "title": "Stove Top Espresso",
+    "variant_id": "48185198936219"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "004bb743457f07ea",
+  "first_seen": "2026-10-26",
+  "handle": "90443",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/decaf.Peru.Site.png?v=1787327780",
+  "platform": "shopify",
+  "product_id": "6783064932507",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Dark Roast",
+   "Decaf",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Decaf Peru Coffee (Organic, Fairtrade, Swiss Water Process)",
+  "url": "https://phillyfairtrade.com/products/90443",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609239859355"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609239924891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609239990427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609240023195"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12 oz French Press",
+    "variant_id": "40609240088731"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267251273883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510459232411"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "82bf7d8865d13657",
+  "first_seen": "2026-10-26",
+  "handle": "90944",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Decaf.Mex.Site.Pic.png?v=1787328613",
+  "platform": "shopify",
+  "product_id": "6783064998043",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Decaf Mexico Coffee (Organic, Fairtrade, Mountain Water Process Decaf)",
+  "url": "https://phillyfairtrade.com/products/90944",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609239302299"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609239367835"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609239433371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609239466139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "12 oz French Press",
+    "variant_id": "40609239531675"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267251339419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510458052763"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "965d9a285276a673",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-retail",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/decaf.espresso.site.oic.png?v=1787755181",
+  "platform": "shopify",
+  "product_id": "6783065063579",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Decaf",
+   "Full City Roast",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Decaf Espresso Coffee (Organic, Fairtrade, Mountain Water Process Decaf)",
+  "url": "https://phillyfairtrade.com/products/decaf-espresso-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609237991579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609238057115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609238122651"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609238155419"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609238220955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267251798171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510457004187"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "407e9cdb759424ea",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-retail",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/La.Amistad.Site.Pic.Corrected.png?v=1788971789",
+  "platform": "shopify",
+  "product_id": "6783065129115",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "Vienna Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Costa Rica Coffee - La Amistad (Organic, Bird Friendly)",
+  "url": "https://phillyfairtrade.com/products/costa-rica-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609237598363"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609237663899"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609237729435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609237762203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609237827739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267251863707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510456578203"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "1c093f9d5e8932ea",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-retail",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Colombia.Site.Pic.Corrected.png?v=1788971458",
+  "platform": "shopify",
+  "product_id": "6783065194651",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "Regular",
+   "retail"
+  ],
+  "title": "Colombia Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/colombia-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40609234550939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40609234616475"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40609234682011"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40609234714779"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "12 oz French Press",
+    "variant_id": "40609234780315"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267239084187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510452908187"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "795dd2dd2d845c74",
+  "first_seen": "2026-10-26",
+  "handle": "burundi-retail",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/burundi.site.iamge.png?v=1787672813",
+  "platform": "shopify",
+  "product_id": "6783065292955",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Premium",
+   "light roast",
+   "retail"
+  ],
+  "title": "Burundi Ninga Hill Coffee",
+  "url": "https://phillyfairtrade.com/products/burundi-retail",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz Whole Bean",
+    "variant_id": "40606950260891"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "40606950326427"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "40606950391963"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "40606950424731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.5,
+    "title": "12 oz French Press",
+    "variant_id": "40606950490267"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43267252256923"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "44510444257435"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "99683a5a543929cc",
+  "first_seen": "2026-10-26",
+  "handle": "aztec-hot-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Aztec.Hot.Choc.jpg?v=1728664695",
+  "platform": "shopify",
+  "product_id": "6792594882715",
+  "product_type": "Chocolate",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [],
+  "title": "Aztec Hot Chocolate",
+  "url": "https://phillyfairtrade.com/products/aztec-hot-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "40099909075099"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "8f4b70fade5a9d62",
+  "first_seen": "2026-10-26",
+  "handle": "awesome-hot-chocolate",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Awesome.Hot.Choc.jpg?v=1728664585",
+  "platform": "shopify",
+  "product_id": "6792595767451",
+  "product_type": "Chocolate",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [],
+  "title": "Awesome Hot Chocolate",
+  "url": "https://phillyfairtrade.com/products/awesome-hot-chocolate",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "40099917103259"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "batter-crumbs-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_B_CBlend.jpg?v=1629907335",
+  "platform": "shopify",
+  "product_id": "7018883088539",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "batter-crumbs",
+   "exclusive"
+  ],
+  "title": "Batter & Crumbs Blend",
+  "url": "https://phillyfairtrade.com/products/batter-crumbs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41091968467099"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Turkish",
+    "variant_id": "41091968499867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Electric Espresso",
+    "variant_id": "41091968532635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Stove Top Espresso",
+    "variant_id": "41091968565403"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Melitta Drip",
+    "variant_id": "41091968598171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Regular Drip – Paper Filter",
+    "variant_id": "41091968630939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Percolator/Gold Cone",
+    "variant_id": "41091968663707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / French Press",
+    "variant_id": "41091968729243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.5,
+    "title": "12 Oz / Whole Bean",
+    "variant_id": "44360379564187"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "bella-vista-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_BellaVistaBlend.jpg?v=1629964231",
+  "platform": "shopify",
+  "product_id": "7021473792155",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "bella-vista",
+   "exclusive"
+  ],
+  "title": "Bella Vista Blend",
+  "url": "https://phillyfairtrade.com/products/bella-vista-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41091993960603"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "cosmic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_CosmicBlend.jpg?v=1629965331",
+  "platform": "shopify",
+  "product_id": "7021496631451",
+  "product_type": "",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "cosmic-blend",
+   "exclusive"
+  ],
+  "title": "Cosmic Blend",
+  "url": "https://phillyfairtrade.com/products/cosmic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 45.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41092038819995"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "eves-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_EveBlend.png?v=1629965272",
+  "platform": "shopify",
+  "product_id": "7021507707035",
+  "product_type": "",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "operant-coffee"
+  ],
+  "title": "Eve's Blend",
+  "url": "https://phillyfairtrade.com/products/eves-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.75,
+    "title": "Default Title",
+    "variant_id": "40975762129051"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "jennings-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_JenningsBlend.jpg?v=1629965531",
+  "platform": "shopify",
+  "product_id": "7021516521627",
+  "product_type": "",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Jennings-blend",
+   "exclusive"
+  ],
+  "title": "Jennings Blend",
+  "url": "https://phillyfairtrade.com/products/jennings-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "40975786999963"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "ogs-blend",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7021522124955",
+  "product_type": "",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "exclusive",
+   "operant-coffee"
+  ],
+  "title": "OG's Blend",
+  "url": "https://phillyfairtrade.com/products/ogs-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.75,
+    "title": "Default Title",
+    "variant_id": "40975801385115"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "c318e501725b9ef3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-12oz-case-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Colombia-Staged-A.jpg?v=1742674194",
+  "platform": "shopify",
+  "product_id": "7053307871387",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Full City Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Colombia 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/colombia-12oz-case-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 90.0,
+    "title": "Default Title",
+    "variant_id": "41088117899419"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "1dde0c5c1a906db8",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005037_c7c5baf9-304a-4e63-8e82-983b3ac94d34.png?v=1631694553",
+  "platform": "shopify",
+  "product_id": "7054093418651",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Vienna Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Guatemala 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/guatemala-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 85.0,
+    "title": "Default Title",
+    "variant_id": "41279047303323"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "300e4341b2657d3d",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005044_f8818447-f47d-4c0a-804c-1a0f92ba3f2b.png?v=1631694630",
+  "platform": "shopify",
+  "product_id": "7054098366619",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Vienna Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Mexico 12oz – Case of 10 (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/mexico-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "41091780542619"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "a0f2dbd2bc0ea6d3",
+  "first_seen": "2026-10-26",
+  "handle": "philly-french-roast-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005341_665df2c0-de76-4009-bc87-7a94b5b95f19.png?v=1631694748",
+  "platform": "shopify",
+  "product_id": "7054101348507",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "French Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Philly French Roast 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/philly-french-roast-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 82.5,
+    "title": "Default Title",
+    "variant_id": "41091796533403"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "dec1ae1d91a1918c",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005068_036c2fbb-6510-4c72-9ccc-cc11ab2ff321.png?v=1631694445",
+  "platform": "shopify",
+  "product_id": "7054104264859",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Decaf",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Decaf Mexico 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/decaf-mexico-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "41091807772827"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "062c4800621faa42",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005020_b6aedfb6-c511-450a-91b1-21e7a9cd4757.png?v=1631694575",
+  "platform": "shopify",
+  "product_id": "7054106460315",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Full City Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Honduras 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/honduras-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "41091817537691"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "6e9a00b218f5ed85",
+  "first_seen": "2026-10-26",
+  "handle": "joes-house-blend-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005105_e311325b-f34d-4453-9907-9f3cf9ae9d04.png?v=1631694606",
+  "platform": "shopify",
+  "product_id": "7054109376667",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Full City Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Joe's House Blend 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/joes-house-blend-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 82.5,
+    "title": "Default Title",
+    "variant_id": "41091833069723"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "397e082e3481264e",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/NicaraguaPhillyFairTrade_a70c255d-7a16-412b-84d5-8ad52c44a7e2.png?v=1631694709",
+  "platform": "shopify",
+  "product_id": "7054112325787",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case"
+  ],
+  "title": "Nicaragua 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/nicaragua-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 90.0,
+    "title": "Default Title",
+    "variant_id": "41091845816475"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "f01bfb711e2a1345",
+  "first_seen": "2026-10-26",
+  "handle": "peru-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005006_d89246f4-3f64-4a6e-a24c-d9fd844132cd.png?v=1631694726",
+  "platform": "shopify",
+  "product_id": "7054113865883",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "French Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Peru 12oz – Case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/peru-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "41091855188123"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "b7e351024cc7c380",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PFT_855869005013_4bd48af1-2be6-4243-b5ad-da3d58542d97.png?v=1631694522",
+  "platform": "shopify",
+  "product_id": "7054117273755",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Full City Roast",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Espresso Blend 12oz – Case of 10 (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/espresso-blend-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 82.5,
+    "title": "Default Title",
+    "variant_id": "41091872456859"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "5330981748459983",
+  "first_seen": "2026-10-26",
+  "handle": "philly-co-op-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/products/PhillyCoopCoffeefinal3x52020_1.png?v=1634751137",
+  "platform": "shopify",
+  "product_id": "7169741684891",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "coop"
+  ],
+  "title": "Philly Co-op Coffee",
+  "url": "https://phillyfairtrade.com/products/philly-co-op-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41396608008347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Turkish",
+    "variant_id": "41396608041115"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Electric Espresso",
+    "variant_id": "41396608073883"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Stove Top Espresso",
+    "variant_id": "41396608106651"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Melitta Drip",
+    "variant_id": "41396608139419"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Regular Drip – Paper Filter",
+    "variant_id": "41396608172187"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / Percolator/Gold Cone",
+    "variant_id": "41396608204955"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 47.5,
+    "title": "5lb / French Press",
+    "variant_id": "41396608237723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz / Whole Bean / 12 oz/ Whole Bean",
+    "variant_id": "44462184366235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz /French Press / 12 oz/French Press",
+    "variant_id": "44462186692763"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 Oz/ Turkish / 12 Oz/ Turkish",
+    "variant_id": "44462195998875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 Oz / Electric Espresso",
+    "variant_id": "44462197014683"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz / Stove Top Espresso",
+    "variant_id": "44462198489243"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 oz / Melitta Drip",
+    "variant_id": "44462200881307"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 Oz / Regular Drip - Paper Filter",
+    "variant_id": "44462202126491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.0,
+    "title": "12 Oz / Percolator/Gold Cone",
+    "variant_id": "44462202585243"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "south-square-bulk-1",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7226792804507",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "south-square"
+  ],
+  "title": "South Square Bulk",
+  "url": "https://phillyfairtrade.com/products/south-square-bulk-1",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Burundi",
+    "variant_id": "41625265438875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Ethiopia",
+    "variant_id": "41625265471643"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Nicaragua",
+    "variant_id": "41625265537179"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Honduras",
+    "variant_id": "41625265569947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Colombia",
+    "variant_id": "41625265602715"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Espresso Blend",
+    "variant_id": "41625265635483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Joe's House Blend",
+    "variant_id": "41625265668251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Mexico",
+    "variant_id": "41625265701019"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Guatemala",
+    "variant_id": "41625265733787"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Costa Rica",
+    "variant_id": "41625265766555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Philly French Roast",
+    "variant_id": "41625265799323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Peru",
+    "variant_id": "41625265832091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Decaf Peru",
+    "variant_id": "41625265864859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Decaf Mexico",
+    "variant_id": "41625265897627"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.5,
+    "title": "Decaf Espresso",
+    "variant_id": "41625265930395"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "c761fa321bcd1cd2",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-half-caf",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Half.Caf.Site.Pic.Corrected.png?v=1788973137",
+  "platform": "shopify",
+  "product_id": "7704189403291",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "Mexico Half-Caf Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/mexico-half-caf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Whole Bean",
+    "variant_id": "43549659037851"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 81.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "43549659070619"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "43549659136155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "43549659201691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "43549659234459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz French Press",
+    "variant_id": "43549659299995"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "dfaaed5d5cd9b930",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mexico-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/PFTR-Generic-LaAmistad.jpg?v=1749839455",
+  "platform": "shopify",
+  "product_id": "7705621299355",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Vienna Roast"
+  ],
+  "title": "Costa Rica 12oz - Case of 10",
+  "url": "https://phillyfairtrade.com/products/copy-of-mexico-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 92.5,
+    "title": "Default Title",
+    "variant_id": "43555179495579"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "5330981748459983",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-decaf-mexico-12oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/PhillyCoopCoffeefinal3x52020.png?v=1698239815",
+  "platform": "shopify",
+  "product_id": "7705621725339",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case"
+  ],
+  "title": "Philly Co-op 12oz – Case of 10",
+  "url": "https://phillyfairtrade.com/products/copy-of-decaf-mexico-12oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 72.5,
+    "title": "Default Title",
+    "variant_id": "43555179954331"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "188b5c44bf380d29",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-peru-12-oz-case-of-10",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Decaf.Peru.Lable.peg.jpg?v=1698239061",
+  "platform": "shopify",
+  "product_id": "7724328812699",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "12oz Case",
+   "Decaf",
+   "import_2021_05_21_174643"
+  ],
+  "title": "Decaf Peru 12 oz - case of 10 (Organic)",
+  "url": "https://phillyfairtrade.com/products/decaf-peru-12-oz-case-of-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3538,
+    "price_usd": 95.0,
+    "title": "Default Title",
+    "variant_id": "43618825339035"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "a644bb1a198d87d7",
+  "first_seen": "2026-10-26",
+  "handle": "family-favorite",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/ff.sitefinal.png?v=1787673874",
+  "platform": "shopify",
+  "product_id": "8125075652763",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "Premium",
+   "retail"
+  ],
+  "title": "Family Favorite Coffee Blend (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/family-favorite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Whole Bean",
+    "variant_id": "45021986062491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "45021986128027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "45021986193563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "45021986226331"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.75,
+    "title": "12 oz French Press",
+    "variant_id": "45021986291867"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lb Regular Drip/Paper Filter",
+    "variant_id": "48498193268891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 79.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "48498194776219"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "7aeaef2371ee3bab",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Huehue.Site.Pic.Corrected.png?v=1788972875",
+  "platform": "shopify",
+  "product_id": "8270171340955",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "Regular",
+   "retail"
+  ],
+  "title": "Guatemala Huehuetenango Coffee (Organic, Fairtrade, Bird Friendly)",
+  "url": "https://phillyfairtrade.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "45530528481435"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "45530528546971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "45530528612507"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Regular Drip – Paper Filter",
+    "variant_id": "45530528645275"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz French Press",
+    "variant_id": "45530528710811"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Whole Bean",
+    "variant_id": "45530528743579"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Regular Drip - Paper Filter",
+    "variant_id": "45530528776347"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "8de1049d67f59668",
+  "first_seen": "2026-10-26",
+  "handle": "1-wide-flat-brush-with-natural-bristles-and-wooden-handle",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/grinder-brush-1in_1.jpg?v=1737738627",
+  "platform": "shopify",
+  "product_id": "8387865641115",
+  "product_type": "WARES",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective",
+   "retail"
+  ],
+  "title": "1\" Wide Flat Brush with Natural Bristles and Wooden Handle",
+  "url": "https://phillyfairtrade.com/products/1-wide-flat-brush-with-natural-bristles-and-wooden-handle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 4.0,
+    "title": "Default Title",
+    "variant_id": "46004627570843"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "53a43b4b9417827d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-distribution-tool-leveler-black-58mm",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/ep-leveler_hero_02241f1b-3c29-48f0-a707-667ebef85f2f.jpg?v=1737749784",
+  "platform": "shopify",
+  "product_id": "8388068049051",
+  "product_type": "WARES",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Espresso Distribution Tool & Leveler - Black, 58mm",
+  "url": "https://phillyfairtrade.com/products/espresso-distribution-tool-leveler-black-58mm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "Default Title",
+    "variant_id": "46005254291611"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "9eaa62e2da54373d",
+  "first_seen": "2026-10-26",
+  "handle": "life-is-beautiful-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/life.site.pic.png?v=1787755992",
+  "platform": "shopify",
+  "product_id": "8437437694107",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "light roast"
+  ],
+  "title": "Life is Beautiful Blend Colombia El Vergel Estate Coffee",
+  "url": "https://phillyfairtrade.com/products/life-is-beautiful-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "46231936172187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz French Press",
+    "variant_id": "46231936204955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "46231936270491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "46231936336027"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz Regular Drip - Paper Filter",
+    "variant_id": "46231936368795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "46231936434331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb Regular Drip-Paper Filter",
+    "variant_id": "46231936467099"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "c2f78e8cbbeecc45",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-la-paz",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Bolivia.Site.Pic.Corrected.png?v=1788971103",
+  "platform": "shopify",
+  "product_id": "8437438611611",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Bolivia La Paz Coffee (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/bolivia-la-paz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Regular Drip/Paper Filter",
+    "variant_id": "46626127052955"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "46626127085723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "46626127151259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "46626127184027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "46626127282331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb Regular Drip/Paper Filter",
+    "variant_id": "46626127315099"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "46626218311835"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "83001fb6e3220376",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-kirorero",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/rwanda.site.image_867db3f7-63a9-4845-ba9b-304047acfedb.png?v=1787756582",
+  "platform": "shopify",
+  "product_id": "8437441069211",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "light roast",
+   "retail"
+  ],
+  "title": "Rwanda Kirorero (Organic, Fairtrade)",
+  "url": "https://phillyfairtrade.com/products/rwanda-kirorero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "46604325912731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz French Press",
+    "variant_id": "46604325945499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Regular Drip/Paper Filter",
+    "variant_id": "46604325978267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "46604326076571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "46604326142107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5-lb Whole Bean",
+    "variant_id": "46604326174875"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 85.0,
+    "title": "5-lb Regular Drip/Paper Filter",
+    "variant_id": "46604326207643"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "ae45f59cbc8d98aa",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-mong",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Mong.Site.Corrected.png?v=1788973410",
+  "platform": "shopify",
+  "product_id": "8440996823195",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [],
+  "title": "Papua New Guinea Mong",
+  "url": "https://phillyfairtrade.com/products/papua-new-guinea-mong",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Regular Drip/Paper Filter",
+    "variant_id": "48168640512155"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz French Press",
+    "variant_id": "48168640544923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "48168640577691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5 lb Whole Bean",
+    "variant_id": "48168640610459"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 76.5,
+    "title": "5 lb Regular Drip/Paper Filter",
+    "variant_id": "48168640643227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "48168643756187"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "701d2f451cbe4850",
+  "first_seen": "2026-10-26",
+  "handle": "hario-skerton-plus-ceramic-coffee-mill",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/skerton-plus-grinder.jpg?v=1752683177",
+  "platform": "shopify",
+  "product_id": "8571262730395",
+  "product_type": "WARES",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Espresso Parts",
+   "Shopify Collective"
+  ],
+  "title": "Hario Skerton Plus Ceramic Coffee Mill",
+  "url": "https://phillyfairtrade.com/products/hario-skerton-plus-ceramic-coffee-mill",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "46837619097755"
+   }
+  ],
+  "vendor": "Espresso Parts"
+ },
+ {
+  "body_hash": "d8b7dd0b1fcfe75a",
+  "first_seen": "2026-10-26",
+  "handle": "baklava-mango-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Baklava_Mango_Coffee_Pouch.png?v=1792236019",
+  "platform": "shopify",
+  "product_id": "8656392814747",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Baklava Mango - (Limited Time Roast)",
+  "url": "https://phillyfairtrade.com/products/baklava-mango-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Default Title",
+    "variant_id": "47175189463195"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "3163a9592c20c50c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-la-amistad-espresso",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8756588871835",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Costa Rica La Amistad Espresso",
+   "exclusive"
+  ],
+  "title": "Costa Rica La Amistad Espresso",
+  "url": "https://phillyfairtrade.com/products/costa-rica-la-amistad-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 52.5,
+    "title": "Default Title",
+    "variant_id": "47508602257563"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "4d56b1909f0fd868",
+  "first_seen": "2026-10-26",
+  "handle": "finca-pensilvania",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/finca.pa.png?v=1787672029",
+  "platform": "shopify",
+  "product_id": "8804147658907",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Finca Pensilvania - Colombia Edison Muñoz – Washed Geisha",
+  "url": "https://phillyfairtrade.com/products/finca-pensilvania",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 27.0,
+    "title": "Default Title",
+    "variant_id": "47655791263899"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "cdc00face3800146",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-rogicha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/ethipoia.site.correct.png?v=1787757060",
+  "platform": "shopify",
+  "product_id": "8849087660187",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Ethiopia Rogicha (Washed)",
+  "url": "https://phillyfairtrade.com/products/ethiopia-rogicha-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 286,
+    "price_usd": 20.5,
+    "title": "Default Title",
+    "variant_id": "47809758265499"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "b7984fcb185c3b60",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-las-lajas",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/laslajas.site.pic.png?v=1787670909",
+  "platform": "shopify",
+  "product_id": "8968213627035",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Medium Roast",
+   "retail"
+  ],
+  "title": "Costa Rica Las Lajas",
+  "url": "https://phillyfairtrade.com/products/costa-rica-las-lajas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "10 oz Whole Bean",
+    "variant_id": "48231846838427"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "28b680976c7e681a",
+  "first_seen": "2026-10-26",
+  "handle": "ferney-mendez-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/ferney.site.pic.fix.png?v=1787403861",
+  "platform": "shopify",
+  "product_id": "9058443002011",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Medium Roast",
+   "Regular",
+   "Vienna Roast",
+   "retail"
+  ],
+  "title": "Ferney Mendez (Colombia)",
+  "url": "https://phillyfairtrade.com/products/ferney-mendez-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz French Press",
+    "variant_id": "48603055620251"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz Regular Drip/Paper Filter",
+    "variant_id": "48603055653019"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "48603055685787"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "48603055718555"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "48603055751323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.0,
+    "title": "5 lb Regular Drip/Paper Filter",
+    "variant_id": "48603055784091"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "12 oz Whole Bean",
+    "variant_id": "48603657732251"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "483eb21c26aae00e",
+  "first_seen": "2026-10-26",
+  "handle": "finca-las-angeles-el-salvador",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/finaLA.Sitepic.png?v=1787755507",
+  "platform": "shopify",
+  "product_id": "9108329070747",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "retail"
+  ],
+  "title": "Finca Las Angeles, El Salvador",
+  "url": "https://phillyfairtrade.com/products/finca-las-angeles-el-salvador",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.5,
+    "title": "Default Title",
+    "variant_id": "48802077868187"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "2d6cb41eaf746020",
+  "first_seen": "2026-10-26",
+  "handle": "finca-el-casino-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/finca.el.casino.site_pic.png?v=1787669344",
+  "platform": "shopify",
+  "product_id": "9108393263259",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "retail"
+  ],
+  "title": "Finca El Casino, Colombia",
+  "url": "https://phillyfairtrade.com/products/finca-el-casino-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "48802194194587"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "ee254162dd566f30",
+  "first_seen": "2026-10-26",
+  "handle": "reel-to-reel-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Reel.2.Reel.Gold.png?v=1790878986",
+  "platform": "shopify",
+  "product_id": "9179974008987",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "retail"
+  ],
+  "title": "Reel to Reel Blend - Gold Medal Winner",
+  "url": "https://phillyfairtrade.com/products/reel-to-reel-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Whole Bean",
+    "variant_id": "49039917121691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz French Press",
+    "variant_id": "49039917154459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Paper Filter/Regular Drip",
+    "variant_id": "49039917187227"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Electric Espresso",
+    "variant_id": "49039917219995"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz Melitta Drip",
+    "variant_id": "49039917252763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "49039917285531"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "5 lb Paper Filter/Regular Drip",
+    "variant_id": "49039917318299"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "2703216d00d15549",
+  "first_seen": "2026-10-26",
+  "handle": "india-ratnagiri-estate-hemavathi",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Ratnari.Bronze.png?v=1790879086",
+  "platform": "shopify",
+  "product_id": "9250801254555",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast",
+   "Vienna Roast"
+  ],
+  "title": "India Ratnagiri Estate – Chikmagalur - Bronze Medal Winner",
+  "url": "https://phillyfairtrade.com/products/india-ratnagiri-estate-hemavathi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 21.5,
+    "title": "Default Title",
+    "variant_id": "49227030724763"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "6b3ca9e176c603bd",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-shoondhisa-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/shon.png?v=1787664150",
+  "platform": "shopify",
+  "product_id": "9250801680539",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Full City Roast"
+  ],
+  "title": "Ethiopia Shoondhisa – Guji",
+  "url": "https://phillyfairtrade.com/products/ethiopia-shoondhisa-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "49227034198171"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "e790eeaaaa69b99b",
+  "first_seen": "2026-10-26",
+  "handle": "maragogype-flowers-nicaragua",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Mag_Flowers.png?v=1790083000",
+  "platform": "shopify",
+  "product_id": "9370621182107",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "light roast",
+   "washed"
+  ],
+  "title": "Maragogype Flowers (Nicaragua)",
+  "url": "https://phillyfairtrade.com/products/maragogype-flowers-nicaragua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 22.0,
+    "title": "10 oz Whole Bean",
+    "variant_id": "49613141508251"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "49613141541019"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "701730b134372bb5",
+  "first_seen": "2026-10-26",
+  "handle": "maragogype-flowers-nicaragua-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/Blueberry_Jelly_Coffee_Bag_Product_Shot.png?v=1792181002",
+  "platform": "shopify",
+  "product_id": "9407409324187",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "light roast",
+   "washed"
+  ],
+  "title": "Blueberry Jelly (Nicaragua)",
+  "url": "https://phillyfairtrade.com/products/maragogype-flowers-nicaragua-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 24.0,
+    "title": "10 oz Whole Bean",
+    "variant_id": "49762171912347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5 lb Whole Bean",
+    "variant_id": "49762171945115"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ },
+ {
+  "body_hash": "10206bf46b9c3fc3",
+  "first_seen": "2026-10-26",
+  "handle": "natalia-hernandez-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0527/5703/7211/files/ArtisanalColombianCoffeePouch.png?v=1792236404",
+  "platform": "shopify",
+  "product_id": "9429414903963",
+  "product_type": "Coffee",
+  "roaster_slug": "phillyfairtrade",
+  "tags": [
+   "Regular",
+   "Vienna Roast",
+   "retail"
+  ],
+  "title": "Natalia Hernandez (Colombia)",
+  "url": "https://phillyfairtrade.com/products/natalia-hernandez-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "49843606257819"
+   }
+  ],
+  "vendor": "Philly Fair Trade Roasters"
+ }
+]

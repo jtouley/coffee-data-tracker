@@ -1,0 +1,202 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1170",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Decaf Colombian",
+  "url": "https://beanjuicecoffee.com/product/decaf-colombian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Decaf Colombian",
+    "variant_id": "1170:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1171",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Decaf French Roast",
+  "url": "https://beanjuicecoffee.com/product/decaf-french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Decaf French Roast",
+    "variant_id": "1171:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1172",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Espresso",
+  "url": "https://beanjuicecoffee.com/product/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Espresso",
+    "variant_id": "1172:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1174",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "French Roast",
+  "url": "https://beanjuicecoffee.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "French Roast",
+    "variant_id": "1174:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1176",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Guatemala",
+  "url": "https://beanjuicecoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Guatemala",
+    "variant_id": "1176:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "harvest-blend",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1177",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Harvest Blend",
+  "url": "https://beanjuicecoffee.com/product/harvest-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Harvest Blend",
+    "variant_id": "1177:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1184",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Papua New Guinea",
+  "url": "https://beanjuicecoffee.com/product/papua-new-guinea/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Papua New Guinea",
+    "variant_id": "1184:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": null,
+  "platform": "woocommerce",
+  "product_id": "1189",
+  "product_type": "simple",
+  "roaster_slug": "beanjuicecoffee",
+  "tags": [
+   "WHOLE BEAN"
+  ],
+  "title": "Sumatra",
+  "url": "https://beanjuicecoffee.com/product/sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.0,
+    "title": "Sumatra",
+    "variant_id": "1189:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

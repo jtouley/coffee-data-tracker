@@ -1,0 +1,238 @@
+[
+ {
+  "body_hash": "448c3707038e378a",
+  "first_seen": "2026-10-26",
+  "handle": "switchback",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/6158182-00854596008502_C1R1.png?v=1759709252",
+  "platform": "shopify",
+  "product_id": "6601026207917",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Nicaragua",
+   "Shop Trail",
+   "Single Origin",
+   "Specialty",
+   "Trail Coffee",
+   "Whole Bean"
+  ],
+  "title": "Switchback",
+  "url": "https://trailcoffeeroasters.com/products/switchback",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "39522572763309"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "588e8f44cc15236e",
+  "first_seen": "2026-10-26",
+  "handle": "buckeye",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/6158566-00854596008854_C1R1.png?v=1759708824",
+  "platform": "shopify",
+  "product_id": "6601026240685",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Nicaragua",
+   "Shop Trail",
+   "Single Origin",
+   "Specialty",
+   "Trail Coffee",
+   "Whole Bean"
+  ],
+  "title": "Buckeye",
+  "url": "https://trailcoffeeroasters.com/products/buckeye",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "39588822712493"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "11f455e170a172ad",
+  "first_seen": "2026-10-26",
+  "handle": "sugarpine",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/6158555-00854596008809_C1R1.png?v=1759709112",
+  "platform": "shopify",
+  "product_id": "6601026273453",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Nicaragua",
+   "Shop Trail",
+   "Single Origin",
+   "Specialty",
+   "Whole Bean"
+  ],
+  "title": "Sugar Pine",
+  "url": "https://trailcoffeeroasters.com/products/sugarpine",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "39522572828845"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "6388233a9f65781c",
+  "first_seen": "2026-10-26",
+  "handle": "trailblazer",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/6158158-00854596008908_C1R1.png?v=1759709041",
+  "platform": "shopify",
+  "product_id": "6601026306221",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Shop Trail",
+   "Single Origin",
+   "Whole Bean"
+  ],
+  "title": "Trailblazer",
+  "url": "https://trailcoffeeroasters.com/products/trailblazer",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "39522572861613"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "22bb9596523aa2f8",
+  "first_seen": "2026-10-26",
+  "handle": "black-diamond",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/6158161-00854596008953_C1R12.png?v=1770392722",
+  "platform": "shopify",
+  "product_id": "6601026338989",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Coffee",
+   "Nicaragua",
+   "Shop Trail",
+   "Single Origin",
+   "Specialty",
+   "Trail Coffee",
+   "Whole Bean"
+  ],
+  "title": "Black Diamond",
+  "url": "https://trailcoffeeroasters.com/products/black-diamond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "39522572894381"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "c5838999d0fbd8ee",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/products/Product_generic.png?v=1770392798",
+  "platform": "shopify",
+  "product_id": "6601027027117",
+  "product_type": "",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Shop Trail",
+   "Single Origin",
+   "Whole Bean"
+  ],
+  "title": "Guatemala Decaf",
+  "url": "https://trailcoffeeroasters.com/products/guatemala-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "39522575057069"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "b410886ecd7e9f40",
+  "first_seen": "2026-10-26",
+  "handle": "catuai-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/files/E59CD627-03EC-4CA1-8726-CF0B0932B634.png?v=1738421926",
+  "platform": "shopify",
+  "product_id": "7254384410797",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Medium Roast",
+   "Natural",
+   "Nicaragua",
+   "Shop Trail",
+   "Single Origin",
+   "Specialty",
+   "Whole Bean"
+  ],
+  "title": "Catuai Natural",
+  "url": "https://trailcoffeeroasters.com/products/catuai-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "41886785798317"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ },
+ {
+  "body_hash": "bea2f54ec29f799b",
+  "first_seen": "2026-10-26",
+  "handle": "pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0559/6361/5405/products/B3D6065F-ED69-466F-982E-49A3E8079EC1_1_105_c.jpg?v=1664477505",
+  "platform": "shopify",
+  "product_id": "7254422257837",
+  "product_type": "Coffee",
+  "roaster_slug": "trailcoffeeroasters",
+  "tags": [
+   "Single Origin",
+   "Specialty",
+   "Whole Bean"
+  ],
+  "title": "Pacamara",
+  "url": "https://trailcoffeeroasters.com/products/pacamara",
+  "variants": [
+   {
+    "available": true,
+    "grams": 363,
+    "price_usd": 25.0,
+    "title": "Default Title",
+    "variant_id": "41887025266861"
+   }
+  ],
+  "vendor": "Trail Coffee Roasters"
+ }
+]

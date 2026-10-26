@@ -1,0 +1,116 @@
+[
+ {
+  "body_hash": "8b774c662a8baf29",
+  "first_seen": "2026-10-26",
+  "handle": "chiapas-xixintonil",
+  "image": "https://cdn.shopify.com/s/files/1/0500/4283/1013/files/chiapas-1x1.png?v=1786653026",
+  "platform": "shopify",
+  "product_id": "7004496593061",
+  "product_type": "Single Bag",
+  "roaster_slug": "florandseed",
+  "tags": [
+   "chiapas",
+   "coffee",
+   "ground beans",
+   "roasters choice",
+   "single bag",
+   "whole beans"
+  ],
+  "title": "Chiapas Familia Meza",
+  "url": "https://florandseedcoffee.com/products/chiapas-xixintonil",
+  "variants": [
+   {
+    "available": true,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "40667540979877"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Ground Bean",
+    "variant_id": "40667541012645"
+   }
+  ],
+  "vendor": "Flor & Seed Coffee Roasters"
+ },
+ {
+  "body_hash": "82872d54abca8af2",
+  "first_seen": "2026-10-26",
+  "handle": "blend-lucha",
+  "image": "https://cdn.shopify.com/s/files/1/0500/4283/1013/files/lucha-1x1.png?v=1786653025",
+  "platform": "shopify",
+  "product_id": "7559657750693",
+  "product_type": "Single Bag",
+  "roaster_slug": "florandseed",
+  "tags": [
+   "chiapas",
+   "coffee",
+   "ground beans",
+   "oaxaca",
+   "roasters choice",
+   "single bag",
+   "whole beans"
+  ],
+  "title": "Lucha BLEND",
+  "url": "https://florandseedcoffee.com/products/blend-lucha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "41424946954405"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Ground Bean",
+    "variant_id": "41424946987173"
+   }
+  ],
+  "vendor": "Flor & Seed Coffee Roasters"
+ },
+ {
+  "body_hash": "799a84ba7645b125",
+  "first_seen": "2026-10-26",
+  "handle": "blend-catrina",
+  "image": "https://cdn.shopify.com/s/files/1/0500/4283/1013/files/catrina-1x1.png?v=1786653025",
+  "platform": "shopify",
+  "product_id": "8057540444325",
+  "product_type": "Single Bag",
+  "roaster_slug": "florandseed",
+  "tags": [
+   "catrina",
+   "coffee",
+   "ground beans",
+   "guerrro",
+   "oaxaca",
+   "roasters choice",
+   "single bag",
+   "whole beans"
+  ],
+  "title": "Catrina BLEND",
+  "url": "https://florandseedcoffee.com/products/blend-catrina",
+  "variants": [
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "42007711580325"
+   },
+   {
+    "available": false,
+    "grams": 482,
+    "price_usd": 19.0,
+    "title": "Ground Bean",
+    "variant_id": "42007711613093"
+   }
+  ],
+  "vendor": "Flor & Seed Coffee Roasters"
+ }
+]

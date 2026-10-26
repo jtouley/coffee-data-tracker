@@ -1,0 +1,48 @@
+[
+ {
+  "body_hash": "187e8213ea6e3349",
+  "first_seen": "2026-10-26",
+  "handle": "the-blend-box",
+  "image": "https://pumphousecoffee.com/cdn/shop/files/Blend_Box_on_White-2.jpg?v=1771273849&width=1920",
+  "platform": "generic",
+  "product_id": "7fba84fbb537",
+  "product_type": "Coffee",
+  "roaster_slug": "pumphousecoffeeroasters",
+  "tags": [],
+  "title": "The Blend Box",
+  "url": "https://pumphousecoffee.com/products/the-blend-box",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8a72e1284a4a99ad",
+  "first_seen": "2026-10-26",
+  "handle": "pumpd-cold-brew-coffee-with-kick",
+  "image": "https://pumphousecoffee.com/cdn/shop/files/Pump_d-Boxes.jpg?v=1687199504&width=1920",
+  "platform": "generic",
+  "product_id": "Pump'd-1G",
+  "product_type": "",
+  "roaster_slug": "pumphousecoffeeroasters",
+  "tags": [],
+  "title": "Pump'd - Cold Brew Coffee",
+  "url": "https://pumphousecoffee.com/products/pumpd-cold-brew-coffee-with-kick",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 39.99,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

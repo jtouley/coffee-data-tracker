@@ -1,0 +1,4921 @@
+[
+ {
+  "body_hash": "1b8d427b2b133a4f",
+  "first_seen": "2026-10-26",
+  "handle": "blue-mountain-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4corner_Metalic_BlueMountainBlend.webp?v=1754940584",
+  "platform": "shopify",
+  "product_id": "8623698280705",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Blue Mountain Blend",
+  "url": "https://shop.magnumcoffee.com/products/blue-mountain-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.29,
+    "title": "12oz / Ground",
+    "variant_id": "45670813040897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Ground",
+    "variant_id": "45670813073665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Whole Bean",
+    "variant_id": "46568498364673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.29,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617666814209"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "634118704e8fa1fd",
+  "first_seen": "2026-10-26",
+  "handle": "organic-fogcutter",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MEOrganicFogcutter_GROUND_2lb4cornermockupcopy.webp?v=1732307654",
+  "platform": "shopify",
+  "product_id": "8623744680193",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Fogcutter",
+  "url": "https://shop.magnumcoffee.com/products/organic-fogcutter",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "45670942048513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "45670942081281"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "8fcc7dfac7124fcd",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MESumatra16oz_Groundcopy.webp?v=1732308719",
+  "platform": "shopify",
+  "product_id": "8623744745729",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://shop.magnumcoffee.com/products/sumatra",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.89,
+    "title": "16oz / Ground",
+    "variant_id": "45670942245121"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 9.89,
+    "title": "16oz / Whole",
+    "variant_id": "45670942277889"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "02eaac64030a4594",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MEOrganicSumatra_GROUND_2lb4cornermockupcopy.webp?v=1732308118",
+  "platform": "shopify",
+  "product_id": "8623744778497",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Sumatra",
+  "url": "https://shop.magnumcoffee.com/products/organic-sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "45670942310657"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "45670942343425"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "12c49b136e3572d6",
+  "first_seen": "2026-10-26",
+  "handle": "big-island-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4corner_Metalic_BigIslandBlend.png?v=1754940686",
+  "platform": "shopify",
+  "product_id": "8623744844033",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Big Island Blend",
+  "url": "https://shop.magnumcoffee.com/products/big-island-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.29,
+    "title": "12oz / Ground",
+    "variant_id": "45670942441729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 8.29,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617676382465"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "55adf0e5e820252b",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-summer-cherry-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/TOE_TasteoftheSeason_SweetSummerCherryPie_12oz_4corner_GlossBagFrontcopy.webp?v=1732308790",
+  "platform": "shopify",
+  "product_id": "8623745204481",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Sweet Summer Cherry Pie",
+  "url": "https://shop.magnumcoffee.com/products/sweet-summer-cherry-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "45670942966017"
+   }
+  ],
+  "vendor": "Taste of the Exotic"
+ },
+ {
+  "body_hash": "e64eeb403704a437",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-mudslide",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/TOE_TasteoftheSeason_ChocolateMudslide_12oz_4corner_GlossBagFrontcopy.webp?v=1732309042",
+  "platform": "shopify",
+  "product_id": "8623745237249",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Mudslide",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-mudslide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "45670942998785"
+   }
+  ],
+  "vendor": "Taste of the Exotic"
+ },
+ {
+  "body_hash": "413659d913c435c9",
+  "first_seen": "2026-10-26",
+  "handle": "honey-lavender",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_HoneyLavender_172cdf60-67dc-4c50-9c9f-14ef2ad425f0.webp?v=1747747569",
+  "platform": "shopify",
+  "product_id": "8623745794305",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Honey Lavender",
+  "url": "https://shop.magnumcoffee.com/products/honey-lavender",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532475649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900261261569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907306676481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907306709249"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "2172bf21e5d12e12",
+  "first_seen": "2026-10-26",
+  "handle": "texas-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_TexasPecan_b38a1b9d-15e0-4ced-962c-697d7011b730.webp?v=1747747368",
+  "platform": "shopify",
+  "product_id": "8623745859841",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Texas Pecan",
+  "url": "https://shop.magnumcoffee.com/products/texas-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532508417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45901001228545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907406487809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907406520577"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "9b96a82aa214d891",
+  "first_seen": "2026-10-26",
+  "handle": "maple-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_MapleBourbon_08f8e99d-ea99-404f-ac33-6c49351ae317.webp?v=1747744742",
+  "platform": "shopify",
+  "product_id": "8623745958145",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Maple Bourbon",
+  "url": "https://shop.magnumcoffee.com/products/maple-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532541185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900318736641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907311034625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907311067393"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "9b60f4a60951c706",
+  "first_seen": "2026-10-26",
+  "handle": "sand-castle",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_SandCastle_8c3c4534-f510-4ed2-87a4-c18a5fb0799d.webp?v=1747747231",
+  "platform": "shopify",
+  "product_id": "8623745990913",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Sand Castle",
+  "url": "https://shop.magnumcoffee.com/products/sand-castle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532606721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900715557121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907387351297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907387384065"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "cc4bae15d59d5cd1",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-island",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ChocolateIsland_d71af380-cfa7-49ff-8fdd-8a690d6b6c77.webp?v=1747746935",
+  "platform": "shopify",
+  "product_id": "8623746023681",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Island",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-island",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532639489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900089032961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907304677633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907304710401"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "14b9087c39fda780",
+  "first_seen": "2026-10-26",
+  "handle": "summer-seaside",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_SummerSeaside_72bdec8d-90b1-4b80-914c-d30c68d3e3b5.webp?v=1747748010",
+  "platform": "shopify",
+  "product_id": "8623746056449",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Summer Seaside",
+  "url": "https://shop.magnumcoffee.com/products/summer-seaside",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532672257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900984811777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907406094593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907406127361"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "cb3c209db38a8fc3",
+  "first_seen": "2026-10-26",
+  "handle": "park-playgrounds",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ParksPlayground_9ffc711e-f79b-4c12-ba80-e21b5f711a80.webp?v=1747746152",
+  "platform": "shopify",
+  "product_id": "8623746154753",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Park Playgrounds",
+  "url": "https://shop.magnumcoffee.com/products/park-playgrounds",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532737793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900648775937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907385614593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907385647361"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "a59e52e7144821ea",
+  "first_seen": "2026-10-26",
+  "handle": "swirled-turtle",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_SwirledTurtle_a99a8e95-5188-4c44-a189-ac8555538fef.webp?v=1747744621",
+  "platform": "shopify",
+  "product_id": "8623746253057",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Swirled Turtle",
+  "url": "https://shop.magnumcoffee.com/products/swirled-turtle",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532803329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900992086273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907406291201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907406323969"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "dcdc2c70ca66ae09",
+  "first_seen": "2026-10-26",
+  "handle": "nutty-leprechaun",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_NuttyLeprechaun_15992cf6-3ce4-4e79-aa8a-71cd2ed212ed.webp?v=1747746304",
+  "platform": "shopify",
+  "product_id": "8623746318593",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Nutty Leprechaun",
+  "url": "https://shop.magnumcoffee.com/products/nutty-leprechaun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532868865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900381454593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907385385217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907385417985"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e20aca6109ead230",
+  "first_seen": "2026-10-26",
+  "handle": "white-heather",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_WhiteHeather_37dcf2d4-a111-4547-ae10-264c553b7cc9.webp?v=1747745254",
+  "platform": "shopify",
+  "product_id": "8623746384129",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "White Heather",
+  "url": "https://shop.magnumcoffee.com/products/white-heather",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532934401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45901021118721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907409633537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907409666305"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "f77820806c0a700c",
+  "first_seen": "2026-10-26",
+  "handle": "noisemaker",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Noisemaker_5a4b0812-0fba-496a-a5b8-5fde9d57ca71.webp?v=1747745848",
+  "platform": "shopify",
+  "product_id": "8623746416897",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Noisemaker",
+  "url": "https://shop.magnumcoffee.com/products/noisemaker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781532967169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900373000449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907361267969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907361300737"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "539e62217b75d8fe",
+  "first_seen": "2026-10-26",
+  "handle": "brown-sugar-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_BrownSugarPecan_c7d8dcf8-d4c6-4ea0-a497-0ce1032beaf7.webp?v=1741189621",
+  "platform": "shopify",
+  "product_id": "8623746515201",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Brown Sugar Pecan",
+  "url": "https://shop.magnumcoffee.com/products/brown-sugar-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533065473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45899920015617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907296354561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907296387329"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "7160f5c979c37869",
+  "first_seen": "2026-10-26",
+  "handle": "firecracker",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Firecracker_1.webp?v=1747832238",
+  "platform": "shopify",
+  "product_id": "8623746613505",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Firecracker",
+  "url": "https://shop.magnumcoffee.com/products/firecracker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533098241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900113379585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907305169153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907305201921"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "0cf1466c01bc2668",
+  "first_seen": "2026-10-26",
+  "handle": "stars-stripes",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Stars_Stripes.webp?v=1747747850",
+  "platform": "shopify",
+  "product_id": "8623746646273",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Stars & Stripes",
+  "url": "https://shop.magnumcoffee.com/products/stars-stripes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533131009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900787253505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907388104961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907388137729"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "65887166aa717240",
+  "first_seen": "2026-10-26",
+  "handle": "red-white-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_RedWhite_Blueberry.webp?v=1747748261",
+  "platform": "shopify",
+  "product_id": "8623746679041",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Red White & Blueberry",
+  "url": "https://shop.magnumcoffee.com/products/red-white-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533163777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900700385537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907386990849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907387023617"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "5d814e6a49b703e4",
+  "first_seen": "2026-10-26",
+  "handle": "starry-night",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_StarryNight_2f6cca98-5095-427f-9df3-abddcfa7f48b.webp?v=1747746864",
+  "platform": "shopify",
+  "product_id": "8623746711809",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Starry Night",
+  "url": "https://shop.magnumcoffee.com/products/starry-night",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533196545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900774375681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907387973889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907388006657"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "52fdc24258f676e6",
+  "first_seen": "2026-10-26",
+  "handle": "three-layer-delight",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ThreeLayerDelight_bdd1fdcd-5828-487e-8a89-63183cd44ebb.webp?v=1747748450",
+  "platform": "shopify",
+  "product_id": "8623746744577",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Three Layer Delight",
+  "url": "https://shop.magnumcoffee.com/products/three-layer-delight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533229313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45901009027329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907406749953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907406782721"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "972636877232311a",
+  "first_seen": "2026-10-26",
+  "handle": "mothers-day-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Mother_sDayBlend_8f913e76-3205-43d1-8eb8-e8de1b5493c1.webp?v=1747747499",
+  "platform": "shopify",
+  "product_id": "8623746810113",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Mother's Day Blend",
+  "url": "https://shop.magnumcoffee.com/products/mothers-day-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533262081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900351701249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907350880513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907350913281"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "943cf6116c8b1846",
+  "first_seen": "2026-10-26",
+  "handle": "storm-a-brewing",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Storm-A-Brewing.webp?v=1747747754",
+  "platform": "shopify",
+  "product_id": "8623746842881",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Storm-A-Brewing",
+  "url": "https://shop.magnumcoffee.com/products/storm-a-brewing",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533327617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900966854913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907402850561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907402883329"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "2a05b736d2bd92c4",
+  "first_seen": "2026-10-26",
+  "handle": "spring-fever",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_SpringFever_244d966b-eecb-4c08-8d93-1f55d4f6ea36.webp?v=1747748157",
+  "platform": "shopify",
+  "product_id": "8623746875649",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Spring Fever",
+  "url": "https://shop.magnumcoffee.com/products/spring-fever",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533360385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900753338625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907387810049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907387842817"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "afd8ec80087b2fa4",
+  "first_seen": "2026-10-26",
+  "handle": "irish-apple-cake",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_IrishAppleCake_edd809a1-cb9a-48e2-bb60-69d51851ee05.webp?v=1747747662",
+  "platform": "shopify",
+  "product_id": "8623746941185",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Irish Apple Cake",
+  "url": "https://shop.magnumcoffee.com/products/irish-apple-cake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533393153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900288950529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907309592833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907309625601"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "9cf871ef7c555b6c",
+  "first_seen": "2026-10-26",
+  "handle": "top-o-the-morning",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_TopO_TheMorning.webp?v=1747744825",
+  "platform": "shopify",
+  "product_id": "8623746973953",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Top O' The Morning",
+  "url": "https://shop.magnumcoffee.com/products/top-o-the-morning",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533425921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45901014925569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907406881025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907406913793"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e9e74e689a341dd4",
+  "first_seen": "2026-10-26",
+  "handle": "shamrock-shaker",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ShamrockShaker_205769e3-72fe-4fe6-ae82-ffdf6cd54ec0.webp?v=1747747145",
+  "platform": "shopify",
+  "product_id": "8623747006721",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Shamrock Shaker",
+  "url": "https://shop.magnumcoffee.com/products/shamrock-shaker",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533458689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900739838209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907387646209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907387678977"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "c49cb9273fe89f05",
+  "first_seen": "2026-10-26",
+  "handle": "summer-berry-crisp",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_SummerBerryCrisp_be72f9d1-c0ed-4554-8c23-64bf71937e7c.webp?v=1747748369",
+  "platform": "shopify",
+  "product_id": "8623747039489",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Summer Berry Crisp",
+  "url": "https://shop.magnumcoffee.com/products/summer-berry-crisp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533524225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900975636737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907405308161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907405340929"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "aafd7680e80a8baa",
+  "first_seen": "2026-10-26",
+  "handle": "reindeer-trax",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ReindeerTrax_a9f056fc-0ebb-44d7-9407-274238603bc3.webp?v=1747743078",
+  "platform": "shopify",
+  "product_id": "8623747105025",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Holiday Flavors"
+  ],
+  "title": "Reindeer Trax",
+  "url": "https://shop.magnumcoffee.com/products/reindeer-trax",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533556993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900709527809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907387121921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907387154689"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "8fd688e8c4ddbad2",
+  "first_seen": "2026-10-26",
+  "handle": "mudslide",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Mudslide_cce26e58-fb60-4ef9-a589-b11830885a73.webp?v=1747743120",
+  "platform": "shopify",
+  "product_id": "8623747137793",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Mudslide",
+  "url": "https://shop.magnumcoffee.com/products/mudslide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533589761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900362318081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907352224001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907352256769"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "c4b69b1de23aae9c",
+  "first_seen": "2026-10-26",
+  "handle": "christmas-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ChristmasBlend_1703cab1-1a9b-4a8d-844e-3cf2c4601cc5.webp?v=1747745941",
+  "platform": "shopify",
+  "product_id": "8623747236097",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Holiday Flavors"
+  ],
+  "title": "Christmas Blend",
+  "url": "https://shop.magnumcoffee.com/products/christmas-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533622529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900101681409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907304808705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907304841473"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "1d1a98d4eabae387",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-cheesecake",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_PumpkinCheesecake_487967e6-3000-4501-8d3b-7044231c32b9.webp?v=1747748528",
+  "platform": "shopify",
+  "product_id": "8623747268865",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Pumpkin Cheesecake",
+  "url": "https://shop.magnumcoffee.com/products/pumpkin-cheesecake",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533655297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900682002689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907386007809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907386040577"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "ecf3a57ec2a3ef4e",
+  "first_seen": "2026-10-26",
+  "handle": "hot-butter-rum",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_HotButterRum.webp?v=1747746074",
+  "platform": "shopify",
+  "product_id": "8623747301633",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Hot Butter Rum",
+  "url": "https://shop.magnumcoffee.com/products/hot-butter-rum",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533688065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900274434305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907306774785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907306807553"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "43743f65578d4a67",
+  "first_seen": "2026-10-26",
+  "handle": "michigan-cherry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_MichiganCherry_06b36fda-4063-4a53-b80b-ee5e17460adf.webp?v=1741189346",
+  "platform": "shopify",
+  "product_id": "8623747334401",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Michigan Cherry",
+  "url": "https://shop.magnumcoffee.com/products/michigan-cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533753601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900341444865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907345867009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907345899777"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "472e7f1557f02d91",
+  "first_seen": "2026-10-26",
+  "handle": "home-for-the-holidays",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_HomeforTheHolidays_215a5a2c-c867-4fb9-8389-9a37dbfc31e4.webp?v=1747745439",
+  "platform": "shopify",
+  "product_id": "8623747399937",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Holiday Flavors"
+  ],
+  "title": "Home For The Holidays",
+  "url": "https://shop.magnumcoffee.com/products/home-for-the-holidays",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533786369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900230885633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907305726209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907305758977"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e5ea5fd1d863bdd8",
+  "first_seen": "2026-10-26",
+  "handle": "michigan-blueberry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_MichiganBlueberry_c9a249b9-255c-4d28-ad45-8a4d94696c53.webp?v=1747745355",
+  "platform": "shopify",
+  "product_id": "8623747465473",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Michigan Blueberry",
+  "url": "https://shop.magnumcoffee.com/products/michigan-blueberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533851905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45900329124097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907344752897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907344785665"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "086ccbcfb4da5367",
+  "first_seen": "2026-10-26",
+  "handle": "blend-for-the-holidays",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_BlendforTheHolidays_f8416837-9b88-4eb3-8747-3f22a4a639f6.webp?v=1747746577",
+  "platform": "shopify",
+  "product_id": "8623747498241",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Holiday Flavors"
+  ],
+  "title": "Blend for the Holidays",
+  "url": "https://shop.magnumcoffee.com/products/blend-for-the-holidays",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45781533884673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45899994464513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907294454017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907294486785"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "f8510e902753748b",
+  "first_seen": "2026-10-26",
+  "handle": "apple-pie-donut-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ApplePieDonut_8f54ee1f-7d05-4ad9-8fe3-33a5ce96f4b5.webp?v=1747747918",
+  "platform": "shopify",
+  "product_id": "8638237704449",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Apple Pie Donut",
+  "url": "https://shop.magnumcoffee.com/products/apple-pie-donut-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45939106218241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45939106251009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45939106283777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45939106316545"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "da9aa7d594a45654",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-crumble",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/TOE_TasteoftheSeason_BlueberryCrumble_12oz_4corner_GlossBagFrontcopy.webp?v=1732309082",
+  "platform": "shopify",
+  "product_id": "8638246191361",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Blueberry Crumble",
+  "url": "https://shop.magnumcoffee.com/products/blueberry-crumble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "45722080084225"
+   }
+  ],
+  "vendor": "Taste of the Exotic"
+ },
+ {
+  "body_hash": "624541365f7899a4",
+  "first_seen": "2026-10-26",
+  "handle": "organic-rainforest-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MEOrganicRainforest_GROUND_32oz_Bag_Mockup_front_r2copy.webp?v=1732308071",
+  "platform": "shopify",
+  "product_id": "8638262116609",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Rainforest Blend",
+  "url": "https://shop.magnumcoffee.com/products/organic-rainforest-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "45722119864577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "45722119897345"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "b5d0c85b0122eaa7",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4corner_Metalic_Rainforest.webp?v=1754940731",
+  "platform": "shopify",
+  "product_id": "8638290133249",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Rainforest Blend",
+  "url": "https://shop.magnumcoffee.com/products/rainforest-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "45722176422145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617684705537"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "ce24b643529eb843",
+  "first_seen": "2026-10-26",
+  "handle": "12-coffees-of-christmas",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_Holiday_12_Coffees_copy.webp?v=1732570022",
+  "platform": "shopify",
+  "product_id": "8652161024257",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "12 Coffees of Christmas",
+  "url": "https://shop.magnumcoffee.com/products/12-coffees-of-christmas",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 6.99,
+    "title": "12ct / Ground",
+    "variant_id": "45786680492289"
+   }
+  ],
+  "vendor": "Holiday Flavors"
+ },
+ {
+  "body_hash": "4bf802def9038094",
+  "first_seen": "2026-10-26",
+  "handle": "100-jamaican-blue-mountain-2",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/100_JamaicanBlueMountain_16oz.webp?v=1747935954",
+  "platform": "shopify",
+  "product_id": "8668378661121",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "100% Jamaican Blue Mountain",
+  "url": "https://shop.magnumcoffee.com/products/100-jamaican-blue-mountain-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 61.99,
+    "title": "1lb / Whole Bean",
+    "variant_id": "45901470662913"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "0f2b988324208525",
+  "first_seen": "2026-10-26",
+  "handle": "love-potion-9",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_DecafLovePotion9_R2.webp?v=1764689808",
+  "platform": "shopify",
+  "product_id": "8669761372417",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Love Potion #9",
+  "url": "https://shop.magnumcoffee.com/products/love-potion-9",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45907386237185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45907386302721"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "7d82798df7b8d1e3",
+  "first_seen": "2026-10-26",
+  "handle": "painted-black",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Magnum_16oz_DecafPaintedBlack.webp?v=1764689900",
+  "platform": "shopify",
+  "product_id": "8681119973633",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Painted Black",
+  "url": "https://shop.magnumcoffee.com/products/painted-black",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45955444572417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45955444637953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45960217624833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45960217690369"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "86da9d93c2f599dc",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_Ethiopian.webp?v=1737131065",
+  "platform": "shopify",
+  "product_id": "8682104324353",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Ethiopian",
+  "url": "https://shop.magnumcoffee.com/products/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959553483009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959553548545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959553614081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959553679617"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "258748a9baa8f71a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_OrganicEspresso.webp?v=1737131473",
+  "platform": "shopify",
+  "product_id": "8682117300481",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Espresso",
+  "url": "https://shop.magnumcoffee.com/products/organic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959660896513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Ground / Decaf SWP",
+    "variant_id": "45959660929281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959660962049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Whole Bean / Decaf SWP",
+    "variant_id": "45959660994817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959661027585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Ground / Decaf SWP",
+    "variant_id": "45959661060353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959661093121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Whole Bean / Decaf SWP",
+    "variant_id": "45959661125889"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "dade5416f8d60d21",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_FrenchRoast.webp?v=1737131086",
+  "platform": "shopify",
+  "product_id": "8682125787393",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "French Roast",
+  "url": "https://shop.magnumcoffee.com/products/french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959714799873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45959714832641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959714865409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45959714898177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959714930945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45959714963713"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959714996481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45959715029249"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "cfded0e300b3bf4a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_CostaRican.webp?v=1769109477",
+  "platform": "shopify",
+  "product_id": "8682129817857",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Costa Rican",
+  "url": "https://shop.magnumcoffee.com/products/costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959739998465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959740064001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959740129537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959740195073"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "365e18f395042f28",
+  "first_seen": "2026-10-26",
+  "handle": "organic-sumatra-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_OrganicSumatra.webp?v=1737131552",
+  "platform": "shopify",
+  "product_id": "8682135879937",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Sumatra",
+  "url": "https://shop.magnumcoffee.com/products/organic-sumatra-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Ground / Decaf SWP",
+    "variant_id": "45960214610177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Whole Bean / Decaf SWP",
+    "variant_id": "45960214642945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46826314858753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46826315350273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Whole Bean / Decaf SWP",
+    "variant_id": "47561672524033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Ground / Decaf SWP",
+    "variant_id": "47561675342081"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "d41caf71e5b02164",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_BreakfastBlend.webp?v=1737130888",
+  "platform": "shopify",
+  "product_id": "8682144497921",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Breakfast Blend",
+  "url": "https://shop.magnumcoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959831716097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959831748865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959831781633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959831814401"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "194496f8a1cb0182",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_KenyaAA.webp?v=1737131375",
+  "platform": "shopify",
+  "product_id": "8682147512577",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://shop.magnumcoffee.com/products/kenya-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular - Medium Roast",
+    "variant_id": "45959856783617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular - Medium Roast",
+    "variant_id": "45959856816385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular - Medium Roast",
+    "variant_id": "45959856849153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular - Medium Roast",
+    "variant_id": "45959856881921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular - Light Roast",
+    "variant_id": "46362154336513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular - Dark Roast",
+    "variant_id": "46362156171521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular - Light Roast",
+    "variant_id": "46362158366977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular - Dark Roast",
+    "variant_id": "46362159776001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular - Light Roast",
+    "variant_id": "46362162102529"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular - Dark Roast",
+    "variant_id": "46362162299137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular - Light Roast",
+    "variant_id": "46362167542017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular - Dark Roast",
+    "variant_id": "46362167574785"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e2c1921bf98b69b5",
+  "first_seen": "2026-10-26",
+  "handle": "boulevard-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_BoulevardBlend.webp?v=1737130856",
+  "platform": "shopify",
+  "product_id": "8682161373441",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Boulevard Blend",
+  "url": "https://shop.magnumcoffee.com/products/boulevard-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45959947485441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45959947518209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45959947550977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45959947583745"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "876f5c44245f565c",
+  "first_seen": "2026-10-26",
+  "handle": "organic-guatemalan",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_OrganicGuatemalan.webp?v=1737131502",
+  "platform": "shopify",
+  "product_id": "8682174284033",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Guatemalan",
+  "url": "https://shop.magnumcoffee.com/products/organic-guatemalan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960031437057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960031469825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960031502593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960031535361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Ground / Decaf SWP",
+    "variant_id": "45960216445185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Whole Bean / Decaf SWP",
+    "variant_id": "45960216477953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Ground / Decaf SWP",
+    "variant_id": "45960216510721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Whole Bean / Decaf SWP",
+    "variant_id": "45960216543489"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "17ed69b48e5ac645",
+  "first_seen": "2026-10-26",
+  "handle": "midnight-madness",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_MidnightMadness.webp?v=1737131403",
+  "platform": "shopify",
+  "product_id": "8682175725825",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Midnight Madness",
+  "url": "https://shop.magnumcoffee.com/products/midnight-madness",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960054407425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960054440193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960054472961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960054505729"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "d107c242862c6bcd",
+  "first_seen": "2026-10-26",
+  "handle": "tanzinian-peaberry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_TanzaniaPeaberry.webp?v=1737131612",
+  "platform": "shopify",
+  "product_id": "8682179068161",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Tanzanian Peaberry",
+  "url": "https://shop.magnumcoffee.com/products/tanzinian-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960097595649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960097628417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960097661185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960097693953"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "0da1d35196278430",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_Sumatra.webp?v=1748889317",
+  "platform": "shopify",
+  "product_id": "8682181067009",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://shop.magnumcoffee.com/products/sumatra-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960133083393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960133116161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960133148929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960133181697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45960219721985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45960219754753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45960219787521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45960219820289"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "811be45910dfce0a",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_OrganicPeru.webp?v=1737131523",
+  "platform": "shopify",
+  "product_id": "8682182574337",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Peru",
+  "url": "https://shop.magnumcoffee.com/products/organic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960157004033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960157036801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Ground / Decaf SWP",
+    "variant_id": "45960216740097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 15.99,
+    "title": "16oz / Whole Bean / Decaf SWP",
+    "variant_id": "45960216772865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Ground / Decaf SWP",
+    "variant_id": "47050222502145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.98,
+    "title": "32oz / Whole Bean / Decaf SWP",
+    "variant_id": "47050222829825"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "b6b144f9efc6c1c9",
+  "first_seen": "2026-10-26",
+  "handle": "celebes",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_Celebes.webp?v=1737130942",
+  "platform": "shopify",
+  "product_id": "8682184999169",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Celebes",
+  "url": "https://shop.magnumcoffee.com/products/celebes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960189903105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960189935873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960189968641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960190001409"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "f8baef0d0b69b8bc",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_ColombiaSupremoTraditionalRoast.webp?v=1737130978",
+  "platform": "shopify",
+  "product_id": "8682185523457",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Colombian Supremo",
+  "url": "https://shop.magnumcoffee.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960191705345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960191738113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960191770881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960191803649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45960220705025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45960220737793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45960220770561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45960220803329"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "cc1d90f41aa73851",
+  "first_seen": "2026-10-26",
+  "handle": "island-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Pouch16.0_rollovercopy.webp?v=1747858358",
+  "platform": "shopify",
+  "product_id": "8682188931329",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Island Blonde",
+  "url": "https://shop.magnumcoffee.com/products/island-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960199930113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960199962881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960199995649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960200028417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45960204189953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45960204222721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45960204255489"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45960204288257"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "a1f93c2f6b54ec7b",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-italiano",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_EspressoItaliano.webp?v=1737131043",
+  "platform": "shopify",
+  "product_id": "8682189488385",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Espresso Italiano",
+  "url": "https://shop.magnumcoffee.com/products/espresso-italiano",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960205009153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "45960205041921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960205074689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "45960205107457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960205140225"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "45960205172993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960205205761"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "45960205238529"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "13b1018acd2fe667",
+  "first_seen": "2026-10-26",
+  "handle": "organic-dark-notes",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_OrganicDarkNotes.webp?v=1737131453",
+  "platform": "shopify",
+  "product_id": "8682190078209",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Dark Notes",
+  "url": "https://shop.magnumcoffee.com/products/organic-dark-notes",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "45960209694977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 13.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "45960209760513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "45960209826049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "45960209891585"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "2d12cc542a72abc7",
+  "first_seen": "2026-10-26",
+  "handle": "island-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4corner_Metalic_IslandHazelnut.webp?v=1754940637",
+  "platform": "shopify",
+  "product_id": "8686080786689",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Island Hazelnut",
+  "url": "https://shop.magnumcoffee.com/products/island-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Ground",
+    "variant_id": "45976421564673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46569080619265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Whole Bean",
+    "variant_id": "46570679795969"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617697976577"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "596274373f4b2270",
+  "first_seen": "2026-10-26",
+  "handle": "honduran",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MEOrganicHonduran_GROUND_2lb4cornermockupcopy.webp?v=1738849788",
+  "platform": "shopify",
+  "product_id": "8691372130561",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Honduran",
+  "url": "https://shop.magnumcoffee.com/products/honduran",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "45995677450497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "45995677483265"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "fbe630059c2e356c",
+  "first_seen": "2026-10-26",
+  "handle": "hot-cocoa",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumStrudelCake_16oz_Pouch2.0_1647b42e-a988-4a4d-b8ff-e65b49256747.webp?v=1738855728",
+  "platform": "shopify",
+  "product_id": "8691932233985",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Hot Cocoa",
+  "url": "https://shop.magnumcoffee.com/products/hot-cocoa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 6.25,
+    "title": "1lb",
+    "variant_id": "45997776371969"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 16.5,
+    "title": "3lb",
+    "variant_id": "46308175216897"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "5fdf51920406f970",
+  "first_seen": "2026-10-26",
+  "handle": "macadamia-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_MacadamiaNut_0c6ef946-4de2-4b59-b487-e72dfdd924eb.webp?v=1741189784",
+  "platform": "shopify",
+  "product_id": "8723423133953",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Macadamia Nut",
+  "url": "https://shop.magnumcoffee.com/products/macadamia-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46044373516545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46044373549313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46044373582081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46044373614849"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "ae779ceaf6fb7833",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Hazelnut_7924d498-81b9-4497-b8fc-4939558a4400.webp?v=1741187217",
+  "platform": "shopify",
+  "product_id": "8723444859137",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Hazelnut Crème",
+  "url": "https://shop.magnumcoffee.com/products/hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46044485091585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46044485124353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46044485157121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46044485189889"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "ddd19c29a48565d4",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MEOrganicPeru_WB_32oz_Bag_Mockup_front_r2copy.webp?v=1740489395",
+  "platform": "shopify",
+  "product_id": "8733118759169",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Peru",
+  "url": "https://shop.magnumcoffee.com/products/organic-peru-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "46077983654145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "46077983686913"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "86cfb9341b3a69ce",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/TOE_TasteoftheSeason_12oz_4corner_GlossBagFront_r2_ChocolateRaspberry.webp?v=1741787653",
+  "platform": "shopify",
+  "product_id": "8743856767233",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Raspberry",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46124054282497"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "3187c3a4cc0a234d",
+  "first_seen": "2026-10-26",
+  "handle": "shady-lady",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_ShadyLady.webp?v=1753731300",
+  "platform": "shopify",
+  "product_id": "8754079006977",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Shady Lady",
+  "url": "https://shop.magnumcoffee.com/products/shady-lady",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46162638635265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46162638668033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46162638700801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46162638733569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "46162638766337"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "46162638799105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole Bean / Regular",
+    "variant_id": "46162638831873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "46162638864641"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "1f7c04e9a97e1f80",
+  "first_seen": "2026-10-26",
+  "handle": "almond-french-toast-mini",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/SweetSunrise_Almond_French_Toast_1.5oz_Mini_glossy_frontcopy.webp?v=1747319469",
+  "platform": "shopify",
+  "product_id": "8788825178369",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Almond French Toast Mini",
+  "url": "https://shop.magnumcoffee.com/products/almond-french-toast-mini",
+  "variants": [
+   {
+    "available": true,
+    "grams": 43,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "46295190339841"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "4ed2650b2d608a78",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-fudge-brownie-mini",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/SweetSunrise_Choco_Fudge_Brownie_1.5oz_Mini_glossy_frontcopy.webp?v=1747319322",
+  "platform": "shopify",
+  "product_id": "8788826915073",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Fudge Brownie Mini",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-fudge-brownie-mini",
+  "variants": [
+   {
+    "available": false,
+    "grams": 43,
+    "price_usd": 1.0,
+    "title": "Default Title",
+    "variant_id": "46295215079681"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "eb82459c6d7ec4ab",
+  "first_seen": "2026-10-26",
+  "handle": "monin-strawberry-fruit-smoothie-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Monin_SmoothieMix_Strawberry_8c399ed3-8585-4dd8-8371-d5b51ed1b1dc.webp?v=1747770871",
+  "platform": "shopify",
+  "product_id": "8792101191937",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Monin Strawberry Fruit Smoothie Mix",
+  "url": "https://shop.magnumcoffee.com/products/monin-strawberry-fruit-smoothie-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1304,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46308770218241"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "4679a65ad6c7b2c6",
+  "first_seen": "2026-10-26",
+  "handle": "monin-strawberry-banana-fruit-smoothie-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Monin_SmoothieMix_StrawberryBananas.webp?v=1747770860",
+  "platform": "shopify",
+  "product_id": "8792101355777",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Monin Strawberry Banana Fruit Smoothie Mix",
+  "url": "https://shop.magnumcoffee.com/products/monin-strawberry-banana-fruit-smoothie-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1304,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46308775198977"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "0d37cfbff8abaa43",
+  "first_seen": "2026-10-26",
+  "handle": "monin-pina-colada-fruit-smoothie-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Monin_SmoothieMix_PinaColada.webp?v=1747770785",
+  "platform": "shopify",
+  "product_id": "8792103059713",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Monin Pina Colada Fruit Smoothie Mix",
+  "url": "https://shop.magnumcoffee.com/products/monin-pina-colada-fruit-smoothie-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1304,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46308797481217"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "8b990438c2b5ec32",
+  "first_seen": "2026-10-26",
+  "handle": "monin-peach-fruit-smoothie-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Monin_SmoothieMix_Peach.webp?v=1747770747",
+  "platform": "shopify",
+  "product_id": "8792103321857",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Monin Peach Fruit Smoothie Mix",
+  "url": "https://shop.magnumcoffee.com/products/monin-peach-fruit-smoothie-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1304,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46308798726401"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "2c67c003c261d29d",
+  "first_seen": "2026-10-26",
+  "handle": "monin-mango-fruit-smoothie-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Monin_SmoothieMix_Mango.webp?v=1747770715",
+  "platform": "shopify",
+  "product_id": "8792103420161",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Monin Mango Fruit Smoothie Mix",
+  "url": "https://shop.magnumcoffee.com/products/monin-mango-fruit-smoothie-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1304,
+    "price_usd": 9.95,
+    "title": "Default Title",
+    "variant_id": "46308799643905"
+   }
+  ],
+  "vendor": "magnumcoffee"
+ },
+ {
+  "body_hash": "1cdc2a034a279f03",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Cinnamon.webp?v=1747920452",
+  "platform": "shopify",
+  "product_id": "8793575162113",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Cinnamon",
+  "url": "https://shop.magnumcoffee.com/products/cinnamon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46316117655809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46316117688577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46316117721345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46316117754113"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "5e2ebf23eaa791fb",
+  "first_seen": "2026-10-26",
+  "handle": "park-playgrounds-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_IcedOatmealCookie.webp?v=1749216952",
+  "platform": "shopify",
+  "product_id": "8810056515841",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Iced Oatmeal Cookie",
+  "url": "https://shop.magnumcoffee.com/products/park-playgrounds-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46371360604417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46371360637185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46371360669953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46371360702721"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "4b7c63eb10bca513",
+  "first_seen": "2026-10-26",
+  "handle": "big-island-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Decaf_Big_Island_Blend.webp?v=1764690310",
+  "platform": "shopify",
+  "product_id": "8813609091329",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Big Island Blend",
+  "url": "https://shop.magnumcoffee.com/products/big-island-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46381973504257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46381979435265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "46387050742017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole Bean / Decaf",
+    "variant_id": "46568495579393"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "72855a09e532bc85",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Vanilla_Hazelnut.webp?v=1749585058",
+  "platform": "shopify",
+  "product_id": "8813620003073",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Vanilla Hazelnut",
+  "url": "https://shop.magnumcoffee.com/products/vanilla-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46382012236033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46382012268801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46382012301569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46382012334337"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "99cb107f9eac3319",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-creme-pie",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Coconut_Creme_Pie.webp?v=1750770646",
+  "platform": "shopify",
+  "product_id": "8822360867073",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Coconut Creme Pie",
+  "url": "https://shop.magnumcoffee.com/products/coconut-creme-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46414387937537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46414387970305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46414388003073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46414388035841"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "06918cd5a3875554",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Caramel_Creme_4602198d-aa66-4ed9-be04-d923b9dfce92.webp?v=1750770591",
+  "platform": "shopify",
+  "product_id": "8822364307713",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Caramel Creme",
+  "url": "https://shop.magnumcoffee.com/products/caramel-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46414409662721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46414409695489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46414409728257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46414409761025"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "a18734009b142453",
+  "first_seen": "2026-10-26",
+  "handle": "marshmallow-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Marshmallow_Mocha.webp?v=1750768264",
+  "platform": "shopify",
+  "product_id": "8822368305409",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Marshmallow Mocha",
+  "url": "https://shop.magnumcoffee.com/products/marshmallow-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46414440661249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46414440694017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46414440726785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46414440759553"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "c9abe403c77ac24b",
+  "first_seen": "2026-10-26",
+  "handle": "peppermint-mocha",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Peppermint_Mocha.webp?v=1752671043",
+  "platform": "shopify",
+  "product_id": "8858444169473",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Holiday Flavors"
+  ],
+  "title": "Peppermint Mocha",
+  "url": "https://shop.magnumcoffee.com/products/peppermint-mocha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46528138576129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46528138608897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46528138641665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46528138674433"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "328a51daca4142d7",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Chocolate_Hazelnut.webp?v=1752671495",
+  "platform": "shopify",
+  "product_id": "8858444431617",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Hazelnut",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46528139559169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46528139591937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46528139624705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46528139657473"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "1dc3d8e1dc3ab0f7",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Highlander_Grogg.webp?v=1752672334",
+  "platform": "shopify",
+  "product_id": "8858444595457",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Highlander Grogg",
+  "url": "https://shop.magnumcoffee.com/products/highlander-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46528140411137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46528140443905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46528140476673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46528140509441"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "3a8304ce78e77ca7",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumHandPackedLabels_16oz_HouseBlend.webp?v=1753884438",
+  "platform": "shopify",
+  "product_id": "8866275524865",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Magnum Coffee House Blend",
+  "url": "https://shop.magnumcoffee.com/products/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46564245209345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46564245242113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 10.99,
+    "title": "16oz / Whole bean / Regular",
+    "variant_id": "46564245274881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole bean / Decaf",
+    "variant_id": "46564245307649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Ground / Regular",
+    "variant_id": "46564245340417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Ground / Decaf",
+    "variant_id": "46564245373185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.98,
+    "title": "32oz / Whole bean / Regular",
+    "variant_id": "46564245405953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 22.98,
+    "title": "32oz / Whole bean / Decaf",
+    "variant_id": "46564245438721"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "8dad081474051503",
+  "first_seen": "2026-10-26",
+  "handle": "blonde-costa-rican",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4_corner_Metalic_Blonde_Costa_Blend_GRD.webp?v=1755263026",
+  "platform": "shopify",
+  "product_id": "8881189683457",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Blonde Costa Rican",
+  "url": "https://shop.magnumcoffee.com/products/blonde-costa-rican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46617619988737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617626247425"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "42825f7155d92d59",
+  "first_seen": "2026-10-26",
+  "handle": "peak-peru-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4_corner_Metalic_Peak_Peru_GRD.webp?v=1755262825",
+  "platform": "shopify",
+  "product_id": "8881191715073",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Peak Peru Blend",
+  "url": "https://shop.magnumcoffee.com/products/peak-peru-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46617627296001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46617627328769"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "f02dc2049ef20222",
+  "first_seen": "2026-10-26",
+  "handle": "painted-black-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4_corner_Metalic_Painted_Black_GRD_526e5893-106c-4a42-b718-5babaac7e8d7.webp?v=1755784724",
+  "platform": "shopify",
+  "product_id": "8888207638785",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Painted Black",
+  "url": "https://shop.magnumcoffee.com/products/painted-black-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46642244354305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46642244387073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Ground",
+    "variant_id": "46642254643457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Whole Bean",
+    "variant_id": "46642254676225"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "6168260fba786fdc",
+  "first_seen": "2026-10-26",
+  "handle": "love-potion-10",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_12oz_4corner_Metalic_LovePotion_GRD.webp?v=1755785235",
+  "platform": "shopify",
+  "product_id": "8888214552833",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Love Potion #9",
+  "url": "https://shop.magnumcoffee.com/products/love-potion-10",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "46642286887169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46642286919937"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Ground",
+    "variant_id": "46642286952705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.99,
+    "title": "32oz / Whole Bean",
+    "variant_id": "46642286985473"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "500b6b82218c5b2d",
+  "first_seen": "2026-10-26",
+  "handle": "bloomin-flowers",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Bloomin_Flowers.webp?v=1756219274",
+  "platform": "shopify",
+  "product_id": "8896218333441",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Bloomin Flowers",
+  "url": "https://shop.magnumcoffee.com/products/bloomin-flowers",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46663363592449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46663363625217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46663363657985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46663363690753"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "3ba106244db58d82",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-spice",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/Magnum_Flavor_Labels_16oz_Pumpkin_Spice.webp?v=1759259893",
+  "platform": "shopify",
+  "product_id": "8923835138305",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Pumpkin Spice",
+  "url": "https://shop.magnumcoffee.com/products/pumpkin-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46779945812225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46779945844993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46779945877761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46779945910529"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "a2be9da23180d7ca",
+  "first_seen": "2026-10-26",
+  "handle": "pumpkin-pie-1",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Pumpkinpie.webp?v=1759260075",
+  "platform": "shopify",
+  "product_id": "8923837071617",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Pumpkin Pie",
+  "url": "https://shop.magnumcoffee.com/products/pumpkin-pie-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "46779962130689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46779962163457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "46779962196225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46779962228993"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "fcba0b98fe1e1339",
+  "first_seen": "2026-10-26",
+  "handle": "blue-mountain-krown-cups-42ct",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_42ctSingleServe_BlueMountainBlend.webp?v=1765223011",
+  "platform": "shopify",
+  "product_id": "8977504600321",
+  "product_type": "",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Blue Mountain Blend Krown Cups- 42ct.",
+  "url": "https://shop.magnumcoffee.com/products/blue-mountain-krown-cups-42ct",
+  "variants": [
+   {
+    "available": true,
+    "grams": 142,
+    "price_usd": 15.99,
+    "title": "42 ct / Single Serve Cups",
+    "variant_id": "46981631508737"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "512e379d98cfcaf0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_DecafVanilla_20c70df9-9869-411b-b65a-fff5f0a6a0a1.webp?v=1765548839",
+  "platform": "shopify",
+  "product_id": "8980284506369",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Vanilla",
+  "url": "https://shop.magnumcoffee.com/products/decaf-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46991597666561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46991597699329"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "016c46a9521e3e81",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-blueberry-crumble",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_DecafBlueberryCrumble.webp?v=1765548499",
+  "platform": "shopify",
+  "product_id": "8980285423873",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Blueberry Crumble",
+  "url": "https://shop.magnumcoffee.com/products/decaf-blueberry-crumble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46991598747905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46991598780673"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "42d5649cac171c92",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-chocolate-mudslide",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_DecafChocolateMudslide.webp?v=1765548471",
+  "platform": "shopify",
+  "product_id": "8980285620481",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Chocolate Mudslide",
+  "url": "https://shop.magnumcoffee.com/products/decaf-chocolate-mudslide",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46991599206657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46991599239425"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "a1986d9e150d7a7a",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-pecan-praline",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_DecafPecanPraline.webp?v=1765548380",
+  "platform": "shopify",
+  "product_id": "8980286144769",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Decaf Pecan Praline",
+  "url": "https://shop.magnumcoffee.com/products/decaf-pecan-praline",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "46991609856257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "46991609889025"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e670684e96e73892",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Salted_Caramel.webp?v=1768576081",
+  "platform": "shopify",
+  "product_id": "9002574315777",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Salted Caramel",
+  "url": "https://shop.magnumcoffee.com/products/salted-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "47381967798529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "47381967831297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "47381967864065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "47381967896833"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "af5afa633397ade5",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Chocolate_Caramel.webp?v=1768576041",
+  "platform": "shopify",
+  "product_id": "9002574840065",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Caramel",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "47381978185985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "47381978218753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "47381978251521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "47381978284289"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "7227e5d74763b9cd",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_English_Toffee.webp?v=1768575942",
+  "platform": "shopify",
+  "product_id": "9002575266049",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "English Toffee",
+  "url": "https://shop.magnumcoffee.com/products/english-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "47381993521409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "47381993554177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "47381993586945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "47381993619713"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "e663084ad812ff9c",
+  "first_seen": "2026-10-26",
+  "handle": "whole-latte-love",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Whole_Latte_Love_386ef9e0-9f8b-45fe-9afa-49262c81d708.webp?v=1774879211",
+  "platform": "shopify",
+  "product_id": "9002575790337",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Whole Latte Love",
+  "url": "https://shop.magnumcoffee.com/products/whole-latte-love",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "47382000206081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "47382000238849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "47382000271617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "47382000304385"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "4ed7b127f6905060",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-happy",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_JamaicanMeHappy.webp?v=1774879172",
+  "platform": "shopify",
+  "product_id": "9099220484353",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Jamaican Me Happy",
+  "url": "https://shop.magnumcoffee.com/products/jamaican-me-happy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271290204417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271290237185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271290269953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271290302721"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "b8723bce7addb758",
+  "first_seen": "2026-10-26",
+  "handle": "dulce-de-leche",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_Dulce_De_Leche.webp?v=1774879057",
+  "platform": "shopify",
+  "product_id": "9099221106945",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Dulce De Leche",
+  "url": "https://shop.magnumcoffee.com/products/dulce-de-leche",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271292793089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271292825857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271292858625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271292891393"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "bff06090a844aaea",
+  "first_seen": "2026-10-26",
+  "handle": "rain-drops",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_RainDrops.webp?v=1774879022",
+  "platform": "shopify",
+  "product_id": "9099221434625",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Rain Drops",
+  "url": "https://shop.magnumcoffee.com/products/rain-drops",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271294300417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271294333185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271294365953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271294398721"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "3439d1d101c52a77",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_IrishCreme.webp?v=1774878788",
+  "platform": "shopify",
+  "product_id": "9099222876417",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Irish Creme",
+  "url": "https://shop.magnumcoffee.com/products/irish-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271300591873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271300624641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271300657409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271300690177"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "6a8cc1cb33794159",
+  "first_seen": "2026-10-26",
+  "handle": "toasted-almond",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ToastedAlmond.webp?v=1774878732",
+  "platform": "shopify",
+  "product_id": "9099223597313",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Toasted Almond",
+  "url": "https://shop.magnumcoffee.com/products/toasted-almond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271310127361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271310160129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271310192897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271310225665"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "d073ea4e725e7d1f",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-cherry",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/MagnumFlavorLabels_16oz_ChocolateCherry.webp?v=1774878656",
+  "platform": "shopify",
+  "product_id": "9099224940801",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Chocolate Cherry",
+  "url": "https://shop.magnumcoffee.com/products/chocolate-cherry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Ground / Regular",
+    "variant_id": "48271322743041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Ground / Decaf",
+    "variant_id": "48271322775809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.49,
+    "title": "16oz / Whole Bean / Regular",
+    "variant_id": "48271322808577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 11.99,
+    "title": "16oz / Whole Bean / Decaf",
+    "variant_id": "48271322841345"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ },
+ {
+  "body_hash": "cd15e58935dd3e5e",
+  "first_seen": "2026-10-26",
+  "handle": "organic-mexican",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/ME_Organic_Mexican_GRD_32oz_Bag_Mockup_front_r2.webp?v=1775565697",
+  "platform": "shopify",
+  "product_id": "9112186618113",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [
+   "Organic Flavors"
+  ],
+  "title": "Organic Mexican",
+  "url": "https://shop.magnumcoffee.com/products/organic-mexican",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Ground",
+    "variant_id": "48469113372929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.99,
+    "title": "32oz / Whole",
+    "variant_id": "48469113405697"
+   }
+  ],
+  "vendor": "Magnum Exotics"
+ },
+ {
+  "body_hash": "967d0b8f77529b59",
+  "first_seen": "2026-10-26",
+  "handle": "mackinaw-island-fudge",
+  "image": "https://cdn.shopify.com/s/files/1/0705/9950/8225/files/TOE_12oz_Mackinac_Island_Fudge_4corner_GlossBagFront_r2.webp?v=1776194901",
+  "platform": "shopify",
+  "product_id": "9118202626305",
+  "product_type": "bag",
+  "roaster_slug": "javaboulevard",
+  "tags": [],
+  "title": "Mackinaw Island  Fudge",
+  "url": "https://shop.magnumcoffee.com/products/mackinaw-island-fudge",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 7.99,
+    "title": "12oz / Ground",
+    "variant_id": "48504891113729"
+   }
+  ],
+  "vendor": "Specialty Flavors"
+ }
+]

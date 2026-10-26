@@ -1,0 +1,295 @@
+[
+ {
+  "body_hash": "1e7711248aabfbbd",
+  "first_seen": "2026-10-26",
+  "handle": "motorboatin",
+  "image": "https://images.squarespace-cdn.com/content/v1/612686601b668d7b1c875567/1660057108788-2F10Z3OF9W46C6GA6UQ6/DSC03891.jpg",
+  "platform": "squarespace",
+  "product_id": "62f28af1bb26a94e6ee56c04",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Arabica",
+   "Blend",
+   "Coffee",
+   "Custom Blend",
+   "Fresh Coffee",
+   "Medium Roast",
+   "Roasted",
+   "Specialty Coffee"
+  ],
+  "title": "Motor Boatin' Medium Blend",
+  "url": "https://www.riverroasters.co/shop/p/motorboatin",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew (course)",
+    "variant_id": "25bf1c5c-c93e-44ef-b56b-22d8e2237433"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "a95d4821-8703-4b6c-8a13-ff1b4aa41d9e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (fine)",
+    "variant_id": "c5eeb95e-c740-4a4f-862b-90e9c5f99735"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Drip",
+    "variant_id": "cd76af07-a8b6-4e8a-a832-09e4506c2130"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fad92bc5025e46ee",
+  "first_seen": "2026-10-26",
+  "handle": "motorboatin-hd4hg",
+  "image": "https://images.squarespace-cdn.com/content/v1/612686601b668d7b1c875567/1701783436243-Y2VQCVMFA3LKPLC8BMQA/CoffeeBagLabelsDarkWatersPRINT.png",
+  "platform": "squarespace",
+  "product_id": "62f2918b27fc400517a0a327",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Arabica",
+   "Blend",
+   "Coffee",
+   "Custom Blend",
+   "Fresh Coffee",
+   "Medium Roast",
+   "Roasted",
+   "Specialty Coffee"
+  ],
+  "title": "Dark Waters Dark Blend",
+  "url": "https://www.riverroasters.co/shop/p/motorboatin-hd4hg",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (fine)",
+    "variant_id": "098b01bd-c522-43cb-b241-33a860d69f62"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "3d8b1f8e-a247-4c53-9d08-a8b412af64a2"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Drip",
+    "variant_id": "53a1c7b9-bb6e-493d-bab1-34de74e307b1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew (course)",
+    "variant_id": "8073124b-6b4f-4487-b027-8e32b1cb2b04"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6ff2d3dc5957b4a6",
+  "first_seen": "2026-10-26",
+  "handle": "motorboatin-hd4hg-tysg3",
+  "image": "https://static1.squarespace.com/static/612686601b668d7b1c875567/61268e61d6e6da7c768f1aa7/62f2acd9a982a34427c7ba2f/1787811870487/",
+  "platform": "squarespace",
+  "product_id": "62f2acd9a982a34427c7ba2f",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Arabica",
+   "Blend",
+   "Coffee",
+   "Custom Blend",
+   "Fresh Coffee",
+   "Medium Roast",
+   "Roasted",
+   "Specialty Coffee"
+  ],
+  "title": "Smooth Sailing Light Roast (Single Bean Origin)",
+  "url": "https://www.riverroasters.co/shop/p/motorboatin-hd4hg-tysg3",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "97bd31c5-02db-4025-b76d-e2e9f8becb42"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew (course)",
+    "variant_id": "a6a7ff21-960f-4aff-9b9a-e36acd97b22f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Drip",
+    "variant_id": "e94440f4-b680-4b15-819f-76fde187a9d7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (fine)",
+    "variant_id": "f408cf66-ee10-494d-86f7-10066059caa1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "539a3e2c7f25549c",
+  "first_seen": "2026-10-26",
+  "handle": "motorboatin-hd4hg-rytxz",
+  "image": "https://images.squarespace-cdn.com/content/v1/612686601b668d7b1c875567/1701783402953-E0P611AV5041QT9QEN99/CoffeeBagLabelselectricoaguaPRINT.png",
+  "platform": "squarespace",
+  "product_id": "62f2ae146460c407e937c416",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Arabica",
+   "Blend",
+   "Coffee",
+   "Custom Blend",
+   "Fresh Coffee",
+   "Medium Roast",
+   "Roasted",
+   "Specialty Coffee"
+  ],
+  "title": "Agua Electrica Light Blend",
+  "url": "https://www.riverroasters.co/shop/p/motorboatin-hd4hg-rytxz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew (course)",
+    "variant_id": "15192ace-889d-475f-a743-64bee2dddb21"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (fine)",
+    "variant_id": "7a37c842-7d55-4e75-ac00-50dc64bd39fe"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "8173a28e-a7e6-425b-8555-41d07d8e9fb6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Drip",
+    "variant_id": "822f5577-e5ee-4d0d-94b0-409e24233919"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff30214fdc0190b1",
+  "first_seen": "2026-10-26",
+  "handle": "motorboatin-ew8yy",
+  "image": "https://static1.squarespace.com/static/612686601b668d7b1c875567/61268e61d6e6da7c768f1aa7/62f2af5338eeb609e4d6b66b/1787811871499/",
+  "platform": "squarespace",
+  "product_id": "62f2af5338eeb609e4d6b66b",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Arabica",
+   "Blend",
+   "Coffee",
+   "Custom Blend",
+   "Fresh Coffee",
+   "Medium Roast",
+   "Roasted",
+   "Specialty Coffee"
+  ],
+  "title": "Cold as Ice Medium Blend (Cold Brew)",
+  "url": "https://www.riverroasters.co/shop/p/motorboatin-ew8yy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Espresso (fine)",
+    "variant_id": "005e0e6c-5b41-455b-8b68-94b644552108"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Whole Bean",
+    "variant_id": "1df3d38d-066d-4c12-aebb-622336252642"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Drip",
+    "variant_id": "af6df399-c51a-44e4-beeb-e979668e6b9d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Ground for Cold Brew (course)",
+    "variant_id": "f5fab78c-3588-4698-a0ed-18f43b41fa8d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "805c929f403e6227",
+  "first_seen": "2026-10-26",
+  "handle": "house-granola-16-oz",
+  "image": "https://static1.squarespace.com/static/612686601b668d7b1c875567/61268e61d6e6da7c768f1aa7/6602d6aeaa1d0858f5b21548/1787881907831/",
+  "platform": "squarespace",
+  "product_id": "6602d6aeaa1d0858f5b21548",
+  "product_type": "",
+  "roaster_slug": "riverroasters",
+  "tags": [
+   "Granola",
+   "breakfast",
+   "fresh",
+   "rolled oats"
+  ],
+  "title": "House Granola (16 oz.)",
+  "url": "https://www.riverroasters.co/shop/p/house-granola-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 13.99,
+    "title": "",
+    "variant_id": "746ead0a-4164-42f9-9803-33f546c00769"
+   }
+  ],
+  "vendor": ""
+ }
+]

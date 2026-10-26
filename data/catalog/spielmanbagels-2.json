@@ -1,0 +1,46 @@
+[
+ {
+  "body_hash": "153769939e821479",
+  "first_seen": "2026-10-26",
+  "handle": "thornton-family-coffee",
+  "image": "https://static1.squarespace.com/static/596e7926579fb3253cc46eaf/598cf48f4c0dbfe39b3654f1/5e8ce1d19f434d0475a0df2a/1702508618851/",
+  "platform": "squarespace",
+  "product_id": "5e8ce1d19f434d0475a0df2a",
+  "product_type": "",
+  "roaster_slug": "spielmanbagels-2",
+  "tags": [],
+  "title": "Thornton Family Coffee",
+  "url": "https://www.spielmanbagels.com/shop/thornton-family-coffee",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Concord",
+    "variant_id": "094e40fb-fb8d-4e9b-89a0-f4c515dc3788"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Costa Rica",
+    "variant_id": "52e0f816-cc89-478c-8796-0de928463e15"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Dad's House",
+    "variant_id": "69cc12d5-178e-42b6-a804-aff826edc6ab"
+   },
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Columbia",
+    "variant_id": "7e91a518-9983-4df6-b36b-1e9b2d158083"
+   }
+  ],
+  "vendor": ""
+ }
+]

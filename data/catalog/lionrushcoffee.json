@@ -1,0 +1,789 @@
+[
+ {
+  "body_hash": "2837447f274f020e",
+  "first_seen": "2026-10-26",
+  "handle": "smart-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Smart_Coffee_1_1.png?v=1779394139",
+  "platform": "shopify",
+  "product_id": "7689969926319",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:ground",
+   "line:smart-coffee",
+   "origin:functional",
+   "process:blend",
+   "roast:dark"
+  ],
+  "title": "Smart Coffee",
+  "url": "https://lionrushcoffee.com/products/smart-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK",
+    "variant_id": "43193781354671"
+   },
+   {
+    "available": true,
+    "grams": 680,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF)",
+    "variant_id": "43205082480815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF)",
+    "variant_id": "46955748786351"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "7806a2c84813c333",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-exclusivo-light-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Colombia_edit.png?v=1779477775",
+  "platform": "shopify",
+  "product_id": "7690024321199",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:ground",
+   "format:whole-bean",
+   "line:back-to-the-essence",
+   "origin:colombia",
+   "process:washed",
+   "roast:medium-light"
+  ],
+  "title": "Colombia",
+  "url": "https://lionrushcoffee.com/products/colombia-exclusivo-light-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Whole bean",
+    "variant_id": "43029105672367"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "43029105705135"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "43029105737903"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Espresso)",
+    "variant_id": "43029105770671"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Whole bean",
+    "variant_id": "44256239780015"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Cold Brew & French Press)",
+    "variant_id": "44256239812783"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Drip & Pour Over)",
+    "variant_id": "44256239845551"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Espresso)",
+    "variant_id": "44256239878319"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Moka)",
+    "variant_id": "46791748419759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Moka)",
+    "variant_id": "46791748452527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Whole bean",
+    "variant_id": "46955748098223"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "46955748130991"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "46955748163759"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Espresso)",
+    "variant_id": "46955748196527"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Moka)",
+    "variant_id": "46955748229295"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "22b3f0e9c2604d15",
+  "first_seen": "2026-10-26",
+  "handle": "brazilian-cacao-medium-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Brazil_edit.png?v=1779475026",
+  "platform": "shopify",
+  "product_id": "7690046308527",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:ground",
+   "format:whole-bean",
+   "line:back-to-the-essence",
+   "origin:brazil",
+   "process:natural",
+   "roast:medium-dark"
+  ],
+  "title": "Brazil",
+  "url": "https://lionrushcoffee.com/products/brazilian-cacao-medium-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Whole bean",
+    "variant_id": "43029152628911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Cold Brew & French Press)",
+    "variant_id": "43029152661679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Drip & Pour Over)",
+    "variant_id": "43029152694447"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Espresso)",
+    "variant_id": "43029152727215"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Whole bean",
+    "variant_id": "44258195570863"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "44258195603631"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "44258195636399"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Espresso)",
+    "variant_id": "44258195669167"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Moka)",
+    "variant_id": "46791749271727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Moka)",
+    "variant_id": "46791749304495"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Whole bean",
+    "variant_id": "46955736432815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "46955736465583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "46955736498351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Espresso)",
+    "variant_id": "46955736531119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Moka)",
+    "variant_id": "46955736563887"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "7d4013a1c0b3a06f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-italiano-dark-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Espresso_Italiano_edit.png?v=1779477775",
+  "platform": "shopify",
+  "product_id": "7690047422639",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:ground",
+   "format:whole-bean",
+   "line:back-to-the-essence",
+   "origin:blend",
+   "origin:brazil",
+   "origin:colombia",
+   "process:blend",
+   "roast:dark"
+  ],
+  "title": "Espresso Italiano",
+  "url": "https://lionrushcoffee.com/products/espresso-italiano-dark-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Whole bean",
+    "variant_id": "43029153218735"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Cold Brew & French Press)",
+    "variant_id": "43029153251503"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Drip & Pour Over)",
+    "variant_id": "43029153284271"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Espresso)",
+    "variant_id": "43029153317039"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Whole bean",
+    "variant_id": "44258197766319"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "44258197799087"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "44258197831855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Espresso)",
+    "variant_id": "44258197864623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Moka)",
+    "variant_id": "46791748255919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Moka)",
+    "variant_id": "46791748288687"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Whole bean",
+    "variant_id": "46955746099375"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "46955746132143"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "46955746164911"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Espresso)",
+    "variant_id": "46955746197679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Moka)",
+    "variant_id": "46955746230447"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "590e4b217efd4b64",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-citrus-medium-roast-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Ethiopia_edit.png?v=1779477775",
+  "platform": "shopify",
+  "product_id": "7695134785711",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:ground",
+   "format:whole-bean",
+   "line:back-to-the-essence",
+   "origin:ethiopia",
+   "process:natural",
+   "roast:medium-light"
+  ],
+  "title": "Ethiopia",
+  "url": "https://lionrushcoffee.com/products/ethiopian-citrus-medium-roast-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Whole bean",
+    "variant_id": "43049384247471"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Cold Brew & French Press)",
+    "variant_id": "43049384280239"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Drip & Pour Over)",
+    "variant_id": "43049384313007"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Espresso)",
+    "variant_id": "43049384345775"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Whole bean",
+    "variant_id": "44258190590127"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "44258190622895"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "44258190655663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "2-PACK ($2 OFF) / Ground (Espresso)",
+    "variant_id": "44258190688431"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "1-PACK / Ground (Moka)",
+    "variant_id": "46791749009583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "2-PACK ($2 OFF) / Ground (Moka)",
+    "variant_id": "46791749042351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Whole bean",
+    "variant_id": "46955747016879"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Cold Brew & French Press)",
+    "variant_id": "46955747049647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Drip & Pour Over)",
+    "variant_id": "46955747082415"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Espresso)",
+    "variant_id": "46955747115183"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 54.0,
+    "title": "3-PACK ($6 OFF) / Ground (Moka)",
+    "variant_id": "46955747147951"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "f7183c98cd166627",
+  "first_seen": "2026-10-26",
+  "handle": "pink-bourbon-divisa",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/MockupDiafanorRuiz_0_5x_d245d10c-501c-467e-80d9-bacd89d03c33.png?v=1781289450",
+  "platform": "shopify",
+  "product_id": "8609393737903",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:whole-bean",
+   "line:limited",
+   "origin:colombia",
+   "process:washed",
+   "roast:light"
+  ],
+  "title": "La Divisa — Pink Bourbon",
+  "url": "https://lionrushcoffee.com/products/pink-bourbon-divisa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "Whole bean",
+    "variant_id": "47026769264815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "Ground (Cold Brew & French Press)",
+    "variant_id": "47026769297583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "Ground (Drip & Pour Over)",
+    "variant_id": "47026769330351"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "47026769363119"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 37.0,
+    "title": "Ground (Moka)",
+    "variant_id": "47464647426223"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "e567996f54cade14",
+  "first_seen": "2026-10-26",
+  "handle": "huila-decaf-sugarcane",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/MockupDecaf.png?v=1781352486",
+  "platform": "shopify",
+  "product_id": "8609440039087",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:whole-bean",
+   "line:limited",
+   "origin:colombia",
+   "process:washed",
+   "roast:medium"
+  ],
+  "title": "HUILA DECAF — SUGARCANE PROCESS",
+  "url": "https://lionrushcoffee.com/products/huila-decaf-sugarcane",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole bean",
+    "variant_id": "47027126894767"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground (Cold Brew & French Press)",
+    "variant_id": "47027126927535"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground (Drip & Pour Over)",
+    "variant_id": "47027126960303"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "47027126993071"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground (Moka)",
+    "variant_id": "47216291545263"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "735bb7f36d6c993d",
+  "first_seen": "2026-10-26",
+  "handle": "la-roca-gesha-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Mockup_Gesha_Washed.png?v=1788901854",
+  "platform": "shopify",
+  "product_id": "8692673249455",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:whole-bean",
+   "line:limited",
+   "origin:colombia",
+   "process:washed",
+   "roast:light",
+   "variety:gesha"
+  ],
+  "title": "La Roca — Gesha Washed",
+  "url": "https://lionrushcoffee.com/products/la-roca-gesha-washed",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 64.0,
+    "title": "Whole bean",
+    "variant_id": "47464452849839"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 64.0,
+    "title": "Ground (Drip & Pour Over)",
+    "variant_id": "47464452882607"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.0,
+    "title": "Ground (Cold Brew & French Press)",
+    "variant_id": "47464452915375"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "47464452948143"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 64.0,
+    "title": "Ground (Moka)",
+    "variant_id": "47464637563055"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ },
+ {
+  "body_hash": "4e1fa021dfed13ee",
+  "first_seen": "2026-10-26",
+  "handle": "el-silencio-chiroso-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0631/2447/1983/files/Mockup_Chiroso.png?v=1788901900",
+  "platform": "shopify",
+  "product_id": "8692687732911",
+  "product_type": "Coffee",
+  "roaster_slug": "lionrushcoffee",
+  "tags": [
+   "format:whole-bean",
+   "line:limited",
+   "origin:colombia",
+   "process:washed",
+   "roast:light",
+   "variety:chiroso"
+  ],
+  "title": "El Silencio — Chiroso Washed",
+  "url": "https://lionrushcoffee.com/products/el-silencio-chiroso-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "Whole bean",
+    "variant_id": "47464584544431"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "Ground (Drip & Pour Over)",
+    "variant_id": "47464584577199"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "Ground (Cold Brew & French Press)",
+    "variant_id": "47464584609967"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "Ground (Espresso)",
+    "variant_id": "47464584642735"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.0,
+    "title": "Ground (Moka)",
+    "variant_id": "47464637956271"
+   }
+  ],
+  "vendor": "Lionrush Coffee"
+ }
+]

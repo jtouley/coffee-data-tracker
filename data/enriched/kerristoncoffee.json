@@ -1,0 +1,133 @@
+{
+ "653f188a874d35115dbf4c7f": {
+  "body_hash": "496e598971b99e48",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "honey",
+   "nutty",
+   "oak"
+  ],
+  "varietals": []
+ },
+ "65495d3e7002d966760710f1": {
+  "body_hash": "9971a0ad4f5165a3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "nutty",
+   "currant"
+  ],
+  "varietals": []
+ },
+ "654961bc24bf9f39d3724717": {
+  "body_hash": "33dffea951f353d4",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "bright",
+   "nutty",
+   "zest",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "654aa4a0f509b15129ed4351": {
+  "body_hash": "f9daa079b4a550ac",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "654aa57dbe71133501c3d553": {
+  "body_hash": "66582d2a0cfa6412",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "nutty",
+   "chocolatey",
+   "bourbon",
+   "oak"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "654aa6e636da59130a350f4b": {
+  "body_hash": "087825e53d062a70",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "smoke",
+   "blackberry",
+   "chocolate",
+   "cherry tobacco"
+  ],
+  "varietals": []
+ },
+ "681badd4dfb18377b4bed503": {
+  "body_hash": "18d6164bc6221c89",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

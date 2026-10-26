@@ -1,0 +1,3832 @@
+[
+ {
+  "body_hash": "a6fbbbc99dc8fdf9",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-karinga-aa",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/KenyaKaringa_AA_2.png?v=1786642721",
+  "platform": "shopify",
+  "product_id": "15193241551101",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Kenya AAA",
+   "Kenyan Coffee",
+   "Kenyan Cooperative",
+   "brewed coffee",
+   "coffee",
+   "coffee bag",
+   "coffee first",
+   "coffee life",
+   "coffee time",
+   "ethical coffee",
+   "ethically source coffee",
+   "ethically sourced coffee",
+   "kenya",
+   "kenya coffee industry",
+   "limited edition kenya",
+   "single origin",
+   "single origin coffee",
+   "single-orgin",
+   "snowy owl coffee",
+   "snowy owl coffee cape cod",
+   "snowy owl coffee roasters",
+   "specialty coffee",
+   "specialty coffee roaster",
+   "specialty grade coffee",
+   "washed coffee"
+  ],
+  "title": "Kenya Karinga AA",
+  "url": "https://socoffee.co/products/kenya-karinga-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "70995004817661"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "70995004850429"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "70995004883197"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Aeropress",
+    "variant_id": "70995004915965"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "70995004948733"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex / Pour Over",
+    "variant_id": "70995004981501"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Moka Pot",
+    "variant_id": "70995005014269"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Auto-drip",
+    "variant_id": "70995005047037"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "70995005079805"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / French Press",
+    "variant_id": "70995005112573"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "70995005145341"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "70995005178109"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Espresso",
+    "variant_id": "70995005210877"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "70995005243645"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "70995005276413"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "70995005309181"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "70995005341949"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / French Press",
+    "variant_id": "70995005374717"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "70995005407485"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "70995005440253"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Espresso",
+    "variant_id": "70995005473021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "70995005505789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "70995005538557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 174.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "70995005571325"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "1b882c7ac7e4c4f0",
+  "first_seen": "2026-10-26",
+  "handle": "geometric-owl-espresso-crewneck",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Espresso_Crewneck_GeoOwl.png?v=1789669229",
+  "platform": "shopify",
+  "product_id": "15347433832701",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [],
+  "title": "Geometric Owl Espresso Crewneck",
+  "url": "https://socoffee.co/products/geometric-owl-espresso-crewneck",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "S",
+    "variant_id": "71324473360637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "M",
+    "variant_id": "71324473393405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "L",
+    "variant_id": "71324473426173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "XL",
+    "variant_id": "71324473458941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 55.0,
+    "title": "XXL",
+    "variant_id": "71324473491709"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "3d87f530bb0ae7ce",
+  "first_seen": "2026-10-26",
+  "handle": "pepper-grey-sweatpants",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/CC_Grey_Sweatpants.png?v=1790007471",
+  "platform": "shopify",
+  "product_id": "15352697716989",
+  "product_type": "Sweatpants",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "100% Cotton",
+   "comfort clothing",
+   "comfort colors",
+   "logo",
+   "snowy owl coffee logo",
+   "snowy owl coffee roasters logo",
+   "snowy owl logo"
+  ],
+  "title": "Pepper Grey Sweatpants",
+  "url": "https://socoffee.co/products/pepper-grey-sweatpants",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 55.0,
+    "title": "S",
+    "variant_id": "71345766695165"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 55.0,
+    "title": "M",
+    "variant_id": "71345766727933"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 55.0,
+    "title": "L",
+    "variant_id": "71345766760701"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 55.0,
+    "title": "XL",
+    "variant_id": "71345766793469"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "e00916affc12813d",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-aricha-adorsi",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Ethiopia_Aricha_Adorsi_bag.png?v=1790618129",
+  "platform": "shopify",
+  "product_id": "15382916759805",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Afrikan Coffee",
+   "Afrikan Coffees",
+   "Cape Cod Gifts",
+   "EA natural decaf",
+   "Single-bags",
+   "african coffee",
+   "cape cod life",
+   "cape cod made",
+   "cape made",
+   "coffee",
+   "dried coffee",
+   "east africa",
+   "ethical buying",
+   "ethical coffee",
+   "ethical sourcing",
+   "ethical trade",
+   "ethically source coffee",
+   "ethically sourced",
+   "ethically sourced coffee",
+   "ethiopia",
+   "ethiopian coffee",
+   "snowy owl coffee",
+   "specialty coffee"
+  ],
+  "title": "Ethiopia Aricha Adorsi",
+  "url": "https://socoffee.co/products/ethiopia-aricha-adorsi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "71407074607357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "71407074640125"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "71407074672893"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Auto-drip",
+    "variant_id": "71707459879165"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Chemex / Pour Over",
+    "variant_id": "71707459911933"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Moka Pot",
+    "variant_id": "71707459944701"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Espresso",
+    "variant_id": "71707459977469"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Aeropress",
+    "variant_id": "71707460010237"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "71707460043005"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 23.0,
+    "title": "10oz / French Press",
+    "variant_id": "71707460075773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "71707460108541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "71707460141309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "71707460174077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Espresso",
+    "variant_id": "71707460206845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "71707460239613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "71707460272381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb / French Press",
+    "variant_id": "71707460305149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "71707460337917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "71707460370685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "71707460403453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Espresso",
+    "variant_id": "71707460436221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "71707460468989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "71707460501757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 178.0,
+    "title": "5lb / French Press",
+    "variant_id": "71707460534525"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "c0b3f4c291ee8de4",
+  "first_seen": "2026-10-26",
+  "handle": "brewster-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/brewsterBlend.png?v=1748890432",
+  "platform": "shopify",
+  "product_id": "8614837387517",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Single-bags",
+   "blend",
+   "blends",
+   "coffee",
+   "signature blend",
+   "subscription product"
+  ],
+  "title": "Brewster Blend",
+  "url": "https://socoffee.co/products/brewster-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "45376879165693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45376879198461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45376879231229"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "46663446954237"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663446987005"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663447019773"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663447052541"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663447085309"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663447118077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press",
+    "variant_id": "46663447150845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "46663447183613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Espresso",
+    "variant_id": "46663447216381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "46663447249149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "46663447281917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46663447314685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "46663447347453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46663447380221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46663447412989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "46663447445757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "46663447478525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46663447511293"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46685954179325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "46685954212093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "46685954244861"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "bdcda61effad85dc",
+  "first_seen": "2026-10-26",
+  "handle": "jaws-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Jaws_new_label_8d2f7bd8-a36c-4442-8ba0-82acfe8630e3.png?v=1758756870",
+  "platform": "shopify",
+  "product_id": "8614837551357",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Single-bags",
+   "blend",
+   "blends",
+   "coffee",
+   "coffee blend",
+   "subscription product"
+  ],
+  "title": "Jaws Blend",
+  "url": "https://socoffee.co/products/jaws-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "45376879395069"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45376879427837"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45376879460605"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "46663444562173"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663444594941"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663444627709"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663444660477"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663444693245"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663444726013"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663444758781"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press",
+    "variant_id": "46663444791549"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46663444824317"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "46663444857085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "46663444889853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Espresso",
+    "variant_id": "46663444922621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "46663444955389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "46663444988157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "46663445020925"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46663445053693"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46663445086461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "46663445119229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46663445151997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "46663445184765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "46663445217533"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "1b94ee5e5c50f345",
+  "first_seen": "2026-10-26",
+  "handle": "captain-crosby-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/CaptainCrosby_2d3cd40e-4a39-4b1d-9637-fe32888a3794.png?v=1748890471",
+  "platform": "shopify",
+  "product_id": "8614838141181",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Single-bags",
+   "blend",
+   "blends",
+   "coffee",
+   "subscription product"
+  ],
+  "title": "Captain Crosby Blend",
+  "url": "https://socoffee.co/products/captain-crosby-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "45376880705789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "45376880738557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45376880771325"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "46663440564477"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663440597245"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663440630013"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663440662781"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663440695549"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663440728317"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 16.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663440761085"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / French Press",
+    "variant_id": "46663440793853"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46663440826621"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "46663440859389"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Espresso",
+    "variant_id": "46663440892157"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "46663440924925"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "46663440957693"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "46663440990461"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / French Press",
+    "variant_id": "46663441023229"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46663441055997"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46663441088765"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46663441121533"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "46663441154301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "46663441187069"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "46663441219837"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "032f76f63fec0706",
+  "first_seen": "2026-10-26",
+  "handle": "snowy-owl-signature-blend-3pack",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/3pack_newlabel.png?v=1729263498",
+  "platform": "shopify",
+  "product_id": "8616676950269",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Coffee gift packs",
+   "blend",
+   "coffee",
+   "gift pack",
+   "signature blend",
+   "subscription product"
+  ],
+  "title": "Snowy Owl Coffee House Blend 3-Pack",
+  "url": "https://socoffee.co/products/snowy-owl-signature-blend-3pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Whole Bean",
+    "variant_id": "46663438926077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "French Press",
+    "variant_id": "46663438958845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Cold Brew",
+    "variant_id": "46663438991613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Aeropress",
+    "variant_id": "46663439024381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Espresso",
+    "variant_id": "46663439057149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Moka Pot",
+    "variant_id": "46663439089917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Chemex / Pour Over",
+    "variant_id": "46663439122685"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 48.0,
+    "title": "Auto-drip",
+    "variant_id": "46663439155453"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "a9d9c9c24ea0f037",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-3-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Ethiopia_Kenya_and_Peru_coffee_lineup.png?v=1792781378",
+  "platform": "shopify",
+  "product_id": "8616677048573",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "3-pack",
+   "Coffee gift packs",
+   "coffee",
+   "coffee 3-pack",
+   "coffee pack",
+   "gift pack",
+   "holiday",
+   "holiday pack",
+   "single origin",
+   "single origin coffee",
+   "single origin coffee pack",
+   "subscription product"
+  ],
+  "title": "Snowy Owl Coffee Single Origin 3-Pack",
+  "url": "https://socoffee.co/products/single-origin-3-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Whole Bean",
+    "variant_id": "46663438336253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Auto-drip",
+    "variant_id": "46663438369021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Chemex / Pour Over",
+    "variant_id": "46663438401789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Moka Pot",
+    "variant_id": "46663438434557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Espresso",
+    "variant_id": "46663438467325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Aeropress",
+    "variant_id": "46663438500093"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "Cold Brew",
+    "variant_id": "46663438532861"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 63.0,
+    "title": "French Press",
+    "variant_id": "46663438565629"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "da64bbd6ecac1c03",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-sample-bag-6-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/2_b659a8b8-3062-48f3-bf01-23a4754ffa45.png?v=1763493676",
+  "platform": "shopify",
+  "product_id": "8616677146877",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Coffee gift packs",
+   "blend",
+   "blends",
+   "coffee",
+   "gift pack",
+   "holiday",
+   "sample size",
+   "snowy owl coffee",
+   "specialty coffee",
+   "subscription product"
+  ],
+  "title": "6 Sample Bag Gift Pack",
+  "url": "https://socoffee.co/products/holiday-sample-bag-6-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Whole Bean",
+    "variant_id": "46663436697853"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "French Press",
+    "variant_id": "46663436730621"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Cold Brew",
+    "variant_id": "46663436763389"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Aeropress",
+    "variant_id": "46663436796157"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Moka Pot",
+    "variant_id": "46663436828925"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Espresso",
+    "variant_id": "46663436861693"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Chemex / Pour Over",
+    "variant_id": "46663436894461"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 55.0,
+    "title": "Auto-drip",
+    "variant_id": "46663436927229"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "cd17aab2042845fa",
+  "first_seen": "2026-10-26",
+  "handle": "inka-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/InkaEspresso.png?v=1723040816",
+  "platform": "shopify",
+  "product_id": "8616681537789",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Directly Traded",
+   "Inka",
+   "Inka Espresso",
+   "Peru",
+   "Single-bags",
+   "beyond fair trade",
+   "blend",
+   "blended coffee",
+   "blends",
+   "cafe de peru",
+   "cafeperuano",
+   "coffee",
+   "coffee blend",
+   "coffee growers",
+   "direct trade",
+   "direct trade coffee",
+   "ethical trade",
+   "ethically sourced coffee",
+   "fair trade",
+   "fair trade coffee",
+   "naranjas",
+   "next generation",
+   "peruvian",
+   "peruvian coffee",
+   "signature blend",
+   "specialty coffee",
+   "specialty coffee association",
+   "specialty coffee roaster",
+   "subscription product",
+   "washed coffee",
+   "washed process",
+   "women in coffee"
+  ],
+  "title": "Peru: Inka Espresso",
+  "url": "https://socoffee.co/products/inka-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "45384171520253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / French Press",
+    "variant_id": "45435284521213"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / French Press",
+    "variant_id": "45435284553981"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663425786109"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663425818877"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663425851645"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663425884413"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663425917181"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "46663425949949"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663425982717"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Cold Brew",
+    "variant_id": "46663426015485"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Aeropress",
+    "variant_id": "46663426048253"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Espresso",
+    "variant_id": "46663426081021"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Moka Pot",
+    "variant_id": "46663426113789"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Chemex / Pour Over",
+    "variant_id": "46663426146557"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "46663426179325"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.68,
+    "title": "2lb Bag / Auto-drip",
+    "variant_id": "46663426212093"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Cold Brew",
+    "variant_id": "46663426244861"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Aeropress",
+    "variant_id": "46663426277629"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Espresso",
+    "variant_id": "46663426310397"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Moka Pot",
+    "variant_id": "46663426343165"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Chemex / Pour Over",
+    "variant_id": "46663426375933"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "46663426408701"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb Bag / Auto-drip",
+    "variant_id": "46663426441469"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "7e2080c82b5912ac",
+  "first_seen": "2026-10-26",
+  "handle": "peruvian-three-pack",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Perfectly_Aligned_Peruvian_Coffee_Trio.png?v=1791230065",
+  "platform": "shopify",
+  "product_id": "8616681898237",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "3-pack",
+   "Coffee gift packs",
+   "Huanaco",
+   "Inka Espresso",
+   "Peruvian Coffee Signature Blend",
+   "Peruvian coffee",
+   "Peruvian three pack",
+   "Tingo Maria",
+   "cafe de peru",
+   "cafe peruano",
+   "coffee",
+   "coffee 3-pack",
+   "coffee pack",
+   "gift pack",
+   "holiday",
+   "holiday pack",
+   "huadquina",
+   "peruvian coffee pack",
+   "single origin coffee pack",
+   "subscription product"
+  ],
+  "title": "Snowy Owl Coffee Peruvian-3-Pack",
+  "url": "https://socoffee.co/products/peruvian-three-pack",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "French Press",
+    "variant_id": "46663422935293"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Cold Brew",
+    "variant_id": "46663422968061"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Aeropress",
+    "variant_id": "46663423000829"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Espresso",
+    "variant_id": "46663423033597"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Moka Pot",
+    "variant_id": "46663423066365"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Chemex / Pour Over",
+    "variant_id": "46663423099133"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Whole Bean",
+    "variant_id": "46663423131901"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "Auto-drip",
+    "variant_id": "46663423164669"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "a39c5475ff8fdb93",
+  "first_seen": "2026-10-26",
+  "handle": "night-owl",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Night_Owl_10oz_2025_33559864-e74f-4d1a-91a6-df7089f4c350.png?v=1748890317",
+  "platform": "shopify",
+  "product_id": "8616686387453",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Single-bags",
+   "bold coffee",
+   "coffee",
+   "dark roast coffee",
+   "darker roast",
+   "darker roasted coffee",
+   "ethical buying",
+   "ethical coffee",
+   "ethically source coffee",
+   "ethically sourced coffee",
+   "freshly roasted",
+   "night owl",
+   "snowy owl coffee",
+   "snowy owl the night owl",
+   "specialty coffee",
+   "specialty coffee roaster",
+   "specialty grade coffee",
+   "subscription product",
+   "washed coffee"
+  ],
+  "title": "The Night Owl: a Dark(er) Roast",
+  "url": "https://socoffee.co/products/night-owl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "45384179941629"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / French Press",
+    "variant_id": "45443061219581"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / French Press",
+    "variant_id": "45443061252349"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663421100285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663421133053"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663421165821"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663421198589"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663421231357"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "46663421264125"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663421296893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46663421329661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Espresso",
+    "variant_id": "46663421362429"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Aeropress",
+    "variant_id": "46663421395197"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Moka Pot",
+    "variant_id": "46663421427965"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "46663421460733"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46663421493501"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb / Auto-drip",
+    "variant_id": "46663421526269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46663421559037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46663421591805"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46663421624573"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "46663421657341"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "46663421690109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46663421722877"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "46663421755645"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "d557bd15a6453361",
+  "first_seen": "2026-10-26",
+  "handle": "black-label-huadquina-yantile",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Yanatile.png?v=1728597116",
+  "platform": "shopify",
+  "product_id": "8616686452989",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Huadquiña",
+   "Huadquiña cooperative",
+   "La Convencion  valley",
+   "Peru",
+   "Salkantay reserve",
+   "Single-bags",
+   "cafe peruano",
+   "coffee",
+   "cusco",
+   "cusco coffee",
+   "direct trade",
+   "peruvian coffee",
+   "red fox merchants",
+   "single origin",
+   "single-orgin",
+   "subscription product",
+   "valle La Convencion",
+   "washed coffee"
+  ],
+  "title": "Cusco Peru: Yanatile",
+  "url": "https://socoffee.co/products/black-label-huadquina-yantile",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "45384180007165"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / French Press",
+    "variant_id": "45420082823421"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / French Press",
+    "variant_id": "45420082856189"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663416840445"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663416873213"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663416905981"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663416938749"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663416971517"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "46663417004285"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 20.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663417037053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Cold Brew",
+    "variant_id": "46663417069821"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Aeropress",
+    "variant_id": "46663417102589"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Espresso",
+    "variant_id": "46663417135357"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Moka Pot",
+    "variant_id": "46663417168125"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Chemex / Pour Over",
+    "variant_id": "46663417200893"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "46663417233661"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2lb Bag / Auto-drip",
+    "variant_id": "46663417266429"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Cold Brew",
+    "variant_id": "46663417299197"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Aeropress",
+    "variant_id": "46663417331965"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Espresso",
+    "variant_id": "46663417364733"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Moka Pot",
+    "variant_id": "46663417397501"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Chemex / Pour Over",
+    "variant_id": "46663417430269"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "46663417463037"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 158.0,
+    "title": "5lb Bag / Auto-drip",
+    "variant_id": "46663417495805"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "6dcb2c0cf5b91013",
+  "first_seen": "2026-10-26",
+  "handle": "housemade-granola",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/GRANOLA.png?v=1719403032",
+  "platform": "shopify",
+  "product_id": "8616697594109",
+  "product_type": "Granola",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "bakery",
+   "gifts under 30",
+   "goods",
+   "snacks"
+  ],
+  "title": "Housemade Granola",
+  "url": "https://socoffee.co/products/housemade-granola",
+  "variants": [
+   {
+    "available": true,
+    "grams": 175,
+    "price_usd": 7.99,
+    "title": "Default Title",
+    "variant_id": "45384194130173"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "a6bc2f3fe84aca7b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-black-condor-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Decaf_colombia_popayan.png?v=1776277623",
+  "platform": "shopify",
+  "product_id": "8828919546109",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Single-bags",
+   "cafe mexicano",
+   "cape cod life",
+   "cape cod made",
+   "cape made",
+   "coffee",
+   "coffee first",
+   "coffee growers",
+   "coffee roaster",
+   "coffee sourcing",
+   "decaf",
+   "decaffeinated coffee",
+   "snowy owl",
+   "snowy owl coffee",
+   "snowy owl coffee cape cod",
+   "snowy owl coffee roasters",
+   "snowy owl coffee roasters logo",
+   "specialty coffee",
+   "subscription product",
+   "sugarcafe decaf",
+   "sugarcane decaf prcoess",
+   "swp"
+  ],
+  "title": "Decaf Colombia: Popayan",
+  "url": "https://socoffee.co/products/colombia-black-condor-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / French Press",
+    "variant_id": "46063467725053"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / French Press",
+    "variant_id": "46063467757821"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / French Press",
+    "variant_id": "46063467790589"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Cold Brew",
+    "variant_id": "46663414120701"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Aeropress",
+    "variant_id": "46663414153469"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Espresso",
+    "variant_id": "46663414186237"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Moka Pot",
+    "variant_id": "46663414219005"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Chemex / Pour Over",
+    "variant_id": "46663414251773"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Whole Bean",
+    "variant_id": "46663414284541"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 17.0,
+    "title": "10oz Bag / Auto-drip",
+    "variant_id": "46663414317309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Cold Brew",
+    "variant_id": "46663414350077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Aeropress",
+    "variant_id": "46663414382845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Espresso",
+    "variant_id": "46663414415613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Moka Pot",
+    "variant_id": "46663414448381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Chemex / Pour Over",
+    "variant_id": "46663414481149"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Whole Bean",
+    "variant_id": "46663414513917"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2lb Bag / Auto-drip",
+    "variant_id": "46663414546685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Cold Brew",
+    "variant_id": "46663414579453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Aeropress",
+    "variant_id": "46663414612221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Espresso",
+    "variant_id": "46663414644989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Moka Pot",
+    "variant_id": "46663414677757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Chemex / Pour Over",
+    "variant_id": "46663414710525"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Whole Bean",
+    "variant_id": "46663414743293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "5lb Bag / Auto-drip",
+    "variant_id": "46663414776061"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "ecb8ed3be869d4fd",
+  "first_seen": "2026-10-26",
+  "handle": "miir-moka-pot",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/MiirMokaSideView.png?v=1740756889",
+  "platform": "shopify",
+  "product_id": "8830577737981",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "goods",
+   "merchandise"
+  ],
+  "title": "Miir Moka Pot",
+  "url": "https://socoffee.co/products/miir-moka-pot",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 59.95,
+    "title": "Default Title",
+    "variant_id": "46075795996925"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "5562f3360e57cb7f",
+  "first_seen": "2026-10-26",
+  "handle": "peru-cajamarca-2025",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/Cajamarca_2.png?v=1745510401",
+  "platform": "shopify",
+  "product_id": "8874954195197",
+  "product_type": "Coffee Bag",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Peru Coffee",
+   "Peruvian Specialty Coffee",
+   "Single-bags",
+   "cafe peruano",
+   "cajamarca",
+   "cajamarca peru",
+   "coffee",
+   "coffee bag",
+   "peru",
+   "peruvian",
+   "peruvian coffee",
+   "single origin",
+   "single origin coffee",
+   "single-orgin",
+   "snowy owl coffee",
+   "specialty coffee"
+  ],
+  "title": "Peru Cajamarca",
+  "url": "https://socoffee.co/products/peru-cajamarca-2025",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / French Press",
+    "variant_id": "46232197071101"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / French Press",
+    "variant_id": "46232197103869"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / French Press",
+    "variant_id": "46232197136637"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Cold Brew",
+    "variant_id": "46663405863165"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Aeropress",
+    "variant_id": "46663405895933"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Espresso",
+    "variant_id": "46663405928701"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Auto-drip",
+    "variant_id": "46663405961469"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Whole Bean",
+    "variant_id": "46663405994237"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Chemex / Pour Over",
+    "variant_id": "46663406027005"
+   },
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 19.0,
+    "title": "10oz / Moka Pot",
+    "variant_id": "46663406059773"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Cold Brew",
+    "variant_id": "46663406092541"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Aeropress",
+    "variant_id": "46663406125309"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Espresso",
+    "variant_id": "46663406158077"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Auto-drip",
+    "variant_id": "46663406190845"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Whole Bean",
+    "variant_id": "46663406223613"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Chemex / Pour Over",
+    "variant_id": "46663406256381"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.6,
+    "title": "2lb / Moka Pot",
+    "variant_id": "46663406289149"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "46663406321917"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Aeropress",
+    "variant_id": "46663406354685"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Espresso",
+    "variant_id": "46663406387453"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Auto-drip",
+    "variant_id": "46663406420221"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "46663406452989"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Chemex / Pour Over",
+    "variant_id": "46663406485757"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 152.0,
+    "title": "5lb / Moka Pot",
+    "variant_id": "46663406518525"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "ce65fa8d9bea40b1",
+  "first_seen": "2026-10-26",
+  "handle": "hoot-club-light-to-medium-roast-plan",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/3_27bad8d9-8eea-4aff-bfa2-ffd01e5422ad.png?v=1768324335",
+  "platform": "shopify",
+  "product_id": "9109636088061",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Coffee gift packs",
+   "Ethiopian Yirgacheffe",
+   "brew at home",
+   "brewed coffee",
+   "brewster",
+   "coffee",
+   "ethical sourcing",
+   "ethical trade",
+   "ethically source coffee",
+   "ethically sourced",
+   "ethically sourced coffee",
+   "ethiopia",
+   "ethiopian coffee",
+   "ethiopian decaf",
+   "ethiopian koke",
+   "fair trade",
+   "fair trade coffee",
+   "freshly roasted",
+   "gift pack",
+   "snowy owl coffee",
+   "snowy owl gifts",
+   "specialty coffee",
+   "subscription product"
+  ],
+  "title": "Hoot Club - Light to Medium Roast Single-Origin Coffees",
+  "url": "https://socoffee.co/products/hoot-club-light-to-medium-roast-plan",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Whole Bean",
+    "variant_id": "47100357902589"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Chemex / Pour Over",
+    "variant_id": "47100357935357"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Whole Bean",
+    "variant_id": "47100357968125"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Chemex / Pour Over",
+    "variant_id": "47100358000893"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Whole Bean",
+    "variant_id": "47100358033661"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Chemex / Pour Over",
+    "variant_id": "47100358066429"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Whole Bean",
+    "variant_id": "47100358099197"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Chemex / Pour Over",
+    "variant_id": "47100358131965"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Whole Bean",
+    "variant_id": "47100358164733"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Chemex / Pour Over",
+    "variant_id": "47100358197501"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Whole Bean",
+    "variant_id": "47100358230269"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Chemex / Pour Over",
+    "variant_id": "47100358263037"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Whole Bean",
+    "variant_id": "47100358295805"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Chemex / Pour Over",
+    "variant_id": "47100358328573"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / French Press",
+    "variant_id": "47100372189437"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Cold Brew",
+    "variant_id": "47100372222205"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Moka Pot",
+    "variant_id": "47100372254973"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Espresso",
+    "variant_id": "47100372287741"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Auto-drip",
+    "variant_id": "47100372320509"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Aeropress",
+    "variant_id": "47100372353277"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / French Press",
+    "variant_id": "47100372386045"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Cold Brew",
+    "variant_id": "47100372418813"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Moka Pot",
+    "variant_id": "47100372451581"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Espresso",
+    "variant_id": "47100372484349"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Auto-drip",
+    "variant_id": "47100372517117"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Aeropress",
+    "variant_id": "47100372549885"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / French Press",
+    "variant_id": "47100372582653"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Cold Brew",
+    "variant_id": "47100372615421"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Moka Pot",
+    "variant_id": "47100372648189"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Espresso",
+    "variant_id": "47100372680957"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Auto-drip",
+    "variant_id": "47100372713725"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Aeropress",
+    "variant_id": "47100372746493"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / French Press",
+    "variant_id": "47100372779261"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Cold Brew",
+    "variant_id": "47100372812029"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Moka Pot",
+    "variant_id": "47100372844797"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Espresso",
+    "variant_id": "47100372877565"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Auto-drip",
+    "variant_id": "47100372910333"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Aeropress",
+    "variant_id": "47100372943101"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / French Press",
+    "variant_id": "47100372975869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Cold Brew",
+    "variant_id": "47100373008637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Moka Pot",
+    "variant_id": "47100373041405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Espresso",
+    "variant_id": "47100373074173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Auto-drip",
+    "variant_id": "47100373106941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Aeropress",
+    "variant_id": "47100373139709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / French Press",
+    "variant_id": "47100373172477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Cold Brew",
+    "variant_id": "47100373205245"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Moka Pot",
+    "variant_id": "47100373238013"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Espresso",
+    "variant_id": "47100373270781"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Auto-drip",
+    "variant_id": "47100373303549"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Aeropress",
+    "variant_id": "47100373336317"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / French Press",
+    "variant_id": "47100373369085"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Cold Brew",
+    "variant_id": "47100373401853"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Moka Pot",
+    "variant_id": "47100373434621"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Espresso",
+    "variant_id": "47100373467389"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Auto-drip",
+    "variant_id": "47100373500157"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Aeropress",
+    "variant_id": "47100373532925"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "1 bag / Whole Bean",
+    "variant_id": "47306426220797"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.0,
+    "title": "1 Bag / Auto-drip",
+    "variant_id": "71120487907581"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "69d69cc2449a8d60",
+  "first_seen": "2026-10-26",
+  "handle": "hoot-club-medium-to-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/4_d71abdb6-9c1d-4237-b746-13ca1630f8ac.png?v=1768324357",
+  "platform": "shopify",
+  "product_id": "9109650866429",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Coffee gift packs",
+   "Ethiopian Yirgacheffe",
+   "brew at home",
+   "brewed coffee",
+   "brewster",
+   "coffee",
+   "ethical sourcing",
+   "ethical trade",
+   "ethically source coffee",
+   "ethically sourced",
+   "ethically sourced coffee",
+   "ethiopia",
+   "ethiopian coffee",
+   "ethiopian decaf",
+   "ethiopian koke",
+   "fair trade",
+   "fair trade coffee",
+   "freshly roasted",
+   "gift pack",
+   "gift package",
+   "snowy owl coffee",
+   "snowy owl gifts",
+   "specialty coffee",
+   "subscription product"
+  ],
+  "title": "Hoot Club - Medium to Dark Roast Single-Origin Coffees",
+  "url": "https://socoffee.co/products/hoot-club-medium-to-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Whole Bean",
+    "variant_id": "47100405055741"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Chemex / Pour Over",
+    "variant_id": "47100405088509"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / French Press",
+    "variant_id": "47100405121277"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Cold Brew",
+    "variant_id": "47100405154045"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Moka Pot",
+    "variant_id": "47100405186813"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Espresso",
+    "variant_id": "47100405219581"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Auto-drip",
+    "variant_id": "47100405252349"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Aeropress",
+    "variant_id": "47100405285117"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Whole Bean",
+    "variant_id": "47100405317885"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Chemex / Pour Over",
+    "variant_id": "47100405350653"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / French Press",
+    "variant_id": "47100405383421"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Cold Brew",
+    "variant_id": "47100405416189"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Moka Pot",
+    "variant_id": "47100405448957"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Espresso",
+    "variant_id": "47100405481725"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Auto-drip",
+    "variant_id": "47100405514493"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Aeropress",
+    "variant_id": "47100405547261"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Whole Bean",
+    "variant_id": "47100405580029"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Chemex / Pour Over",
+    "variant_id": "47100405612797"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / French Press",
+    "variant_id": "47100405645565"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Cold Brew",
+    "variant_id": "47100405678333"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Moka Pot",
+    "variant_id": "47100405711101"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Espresso",
+    "variant_id": "47100405743869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Auto-drip",
+    "variant_id": "47100405776637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Aeropress",
+    "variant_id": "47100405809405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Whole Bean",
+    "variant_id": "47100405842173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Chemex / Pour Over",
+    "variant_id": "47100405874941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / French Press",
+    "variant_id": "47100405907709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Cold Brew",
+    "variant_id": "47100405940477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Moka Pot",
+    "variant_id": "47100405973245"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Espresso",
+    "variant_id": "47100406006013"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Auto-drip",
+    "variant_id": "47100406038781"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Aeropress",
+    "variant_id": "47100406071549"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Whole Bean",
+    "variant_id": "47100406104317"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Chemex / Pour Over",
+    "variant_id": "47100406137085"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / French Press",
+    "variant_id": "47100406169853"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Cold Brew",
+    "variant_id": "47100406202621"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Moka Pot",
+    "variant_id": "47100406235389"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Espresso",
+    "variant_id": "47100406268157"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Auto-drip",
+    "variant_id": "47100406300925"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Aeropress",
+    "variant_id": "47100406333693"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Whole Bean",
+    "variant_id": "47100406366461"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Chemex / Pour Over",
+    "variant_id": "47100406399229"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / French Press",
+    "variant_id": "47100406431997"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Cold Brew",
+    "variant_id": "47100406464765"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Moka Pot",
+    "variant_id": "47100406497533"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Espresso",
+    "variant_id": "47100406530301"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Auto-drip",
+    "variant_id": "47100406563069"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Aeropress",
+    "variant_id": "47100406595837"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Whole Bean",
+    "variant_id": "47100406628605"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Chemex / Pour Over",
+    "variant_id": "47100406661373"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / French Press",
+    "variant_id": "47100406694141"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Cold Brew",
+    "variant_id": "47100406726909"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Moka Pot",
+    "variant_id": "47100406759677"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Espresso",
+    "variant_id": "47100406792445"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Auto-drip",
+    "variant_id": "47100406825213"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Aeropress",
+    "variant_id": "47100406857981"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ },
+ {
+  "body_hash": "62e5effc275e9617",
+  "first_seen": "2026-10-26",
+  "handle": "hoot-club-mix",
+  "image": "https://cdn.shopify.com/s/files/1/0698/1189/6573/files/5_eddf41ae-1ebb-4b42-a16c-5b7bd0b29df2.png?v=1768324486",
+  "platform": "shopify",
+  "product_id": "9109674721533",
+  "product_type": "",
+  "roaster_slug": "socoffee",
+  "tags": [
+   "Coffee gift packs",
+   "Ethiopian Yirgacheffe",
+   "brew at home",
+   "brewed coffee",
+   "brewster",
+   "coffee",
+   "ethical sourcing",
+   "ethical trade",
+   "ethically source coffee",
+   "ethically sourced",
+   "ethically sourced coffee",
+   "ethiopia",
+   "ethiopian coffee",
+   "ethiopian decaf",
+   "ethiopian koke",
+   "fair trade",
+   "fair trade coffee",
+   "freshly roasted",
+   "gift pack",
+   "gift package",
+   "snowy owl coffee",
+   "specialty coffee",
+   "subscription product"
+  ],
+  "title": "Hoot Club - A Mix of Light, Medium, and Dark Roasted, Single-Origin Coffees",
+  "url": "https://socoffee.co/products/hoot-club-mix",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Whole Bean",
+    "variant_id": "47100527149309"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Chemex / Pour Over",
+    "variant_id": "47100527182077"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / French Press",
+    "variant_id": "47100527214845"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Cold Brew",
+    "variant_id": "47100527247613"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Moka Pot",
+    "variant_id": "47100527280381"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Espresso",
+    "variant_id": "47100527313149"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Auto-drip",
+    "variant_id": "47100527345917"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 44.0,
+    "title": "2 bags / Aeropress",
+    "variant_id": "47100527378685"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Whole Bean",
+    "variant_id": "47100527411453"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Chemex / Pour Over",
+    "variant_id": "47100527444221"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / French Press",
+    "variant_id": "47100527476989"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Cold Brew",
+    "variant_id": "47100527509757"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Moka Pot",
+    "variant_id": "47100527542525"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Espresso",
+    "variant_id": "47100527575293"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Auto-drip",
+    "variant_id": "47100527608061"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 62.0,
+    "title": "3 bags / Aeropress",
+    "variant_id": "47100527640829"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Whole Bean",
+    "variant_id": "47100527673597"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Chemex / Pour Over",
+    "variant_id": "47100527706365"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / French Press",
+    "variant_id": "47100527739133"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Cold Brew",
+    "variant_id": "47100527771901"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Moka Pot",
+    "variant_id": "47100527804669"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Espresso",
+    "variant_id": "47100527837437"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Auto-drip",
+    "variant_id": "47100527870205"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "4 bags / Aeropress",
+    "variant_id": "47100527902973"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Whole Bean",
+    "variant_id": "47100527935741"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Chemex / Pour Over",
+    "variant_id": "47100527968509"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / French Press",
+    "variant_id": "47100528001277"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Cold Brew",
+    "variant_id": "47100528034045"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Moka Pot",
+    "variant_id": "47100528066813"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Espresso",
+    "variant_id": "47100528099581"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Auto-drip",
+    "variant_id": "47100528132349"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 98.0,
+    "title": "5 bags / Aeropress",
+    "variant_id": "47100528165117"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Whole Bean",
+    "variant_id": "47100528197885"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Chemex / Pour Over",
+    "variant_id": "47100528230653"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / French Press",
+    "variant_id": "47100528263421"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Cold Brew",
+    "variant_id": "47100528296189"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Moka Pot",
+    "variant_id": "47100528328957"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Espresso",
+    "variant_id": "47100528361725"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Auto-drip",
+    "variant_id": "47100528394493"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 116.0,
+    "title": "6 bags / Aeropress",
+    "variant_id": "47100528427261"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Whole Bean",
+    "variant_id": "47100528460029"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Chemex / Pour Over",
+    "variant_id": "47100528492797"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / French Press",
+    "variant_id": "47100528525565"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Cold Brew",
+    "variant_id": "47100528558333"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Moka Pot",
+    "variant_id": "47100528591101"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Espresso",
+    "variant_id": "47100528623869"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Auto-drip",
+    "variant_id": "47100528656637"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 134.0,
+    "title": "7 bags / Aeropress",
+    "variant_id": "47100528689405"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Whole Bean",
+    "variant_id": "47100528722173"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Chemex / Pour Over",
+    "variant_id": "47100528754941"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / French Press",
+    "variant_id": "47100528787709"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Cold Brew",
+    "variant_id": "47100528820477"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Moka Pot",
+    "variant_id": "47100528853245"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Espresso",
+    "variant_id": "47100528886013"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Auto-drip",
+    "variant_id": "47100528918781"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 152.0,
+    "title": "8 bags / Aeropress",
+    "variant_id": "47100528951549"
+   }
+  ],
+  "vendor": "Snowy Owl Coffee Roasters"
+ }
+]

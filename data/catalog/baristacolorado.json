@@ -1,0 +1,366 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "java-central-estate",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "396",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Regional"
+  ],
+  "title": "Java Central Estate",
+  "url": "https://baristacolorado.com/product/java-central-estate/",
+  "variants": [
+   {
+    "available": false,
+    "grams": null,
+    "price_usd": 26.95,
+    "title": "Java Central Estate",
+    "variant_id": "396:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "celebes-sulawesi-torojaland",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "398",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Regional"
+  ],
+  "title": "Celebes/ Sulawesi Torojaland",
+  "url": "https://baristacolorado.com/product/celebes-sulawesi-torojaland/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.95,
+    "title": "Celebes/ Sulawesi Torojaland",
+    "variant_id": "398:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-highlands",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "400",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Regional"
+  ],
+  "title": "Papua New Guinea Highlands",
+  "url": "https://baristacolorado.com/product/papua-new-guinea-highlands/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Papua New Guinea Highlands",
+    "variant_id": "400:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "barista-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "469",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Barista Blend",
+  "url": "https://baristacolorado.com/product/barista-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Barista Blend",
+    "variant_id": "469:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "470",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://baristacolorado.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Breakfast Blend",
+    "variant_id": "470:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "471",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "French Roast",
+  "url": "https://baristacolorado.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "French Roast",
+    "variant_id": "471:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pikes-peak-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "472",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Pikes Peak Blend",
+  "url": "https://baristacolorado.com/product/pikes-peak-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Pikes Peak Blend",
+    "variant_id": "472:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "473",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Italian Roast",
+  "url": "https://baristacolorado.com/product/italian-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Italian Roast",
+    "variant_id": "473:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kona-island-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "474",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Kona Island Blend",
+  "url": "https://baristacolorado.com/product/kona-island-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 28.95,
+    "title": "Kona Island Blend",
+    "variant_id": "474:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "biker-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "475",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Biker Blend",
+  "url": "https://baristacolorado.com/product/biker-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Biker Blend",
+    "variant_id": "475:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "java-seven-blend",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "476",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Java Seven Blend",
+  "url": "https://baristacolorado.com/product/java-seven-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Java Seven Blend",
+    "variant_id": "476:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "white-espresso",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "479",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "White Espresso",
+  "url": "https://baristacolorado.com/product/white-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "White Espresso",
+    "variant_id": "479:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-soco",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "480",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Espresso SoCo",
+  "url": "https://baristacolorado.com/product/espresso-soco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Espresso SoCo",
+    "variant_id": "480:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-soco",
+  "image": "https://i0.wp.com/baristacolorado.com/wp-content/uploads/2019/04/Coffee.png?fit=2048%2C2048&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "481",
+  "product_type": "simple",
+  "roaster_slug": "baristacolorado",
+  "tags": [
+   "Coffee",
+   "Specialty"
+  ],
+  "title": "Decaf Espresso SoCo",
+  "url": "https://baristacolorado.com/product/decaf-espresso-soco/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 25.95,
+    "title": "Decaf Espresso SoCo",
+    "variant_id": "481:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,1733 @@
+[
+ {
+  "body_hash": "9694b7d43c49b970",
+  "first_seen": "2026-10-26",
+  "handle": "even-keel-blend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/5679b8bb-Even-Keel.png?v=1757208322",
+  "platform": "shopify",
+  "product_id": "9058077180124",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Specialty coffee",
+   "medium roast blend"
+  ],
+  "title": "Tier 3: Even Keel Blend - Medium Roast",
+  "url": "https://www.ketchcoffee.com/products/even-keel-blend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Standard",
+    "variant_id": "46935763026140"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47044823974108"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47044824072412"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47044824105180"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47044824137948"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47044824170716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Standard",
+    "variant_id": "47044824203484"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47044824236252"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47044824334556"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47044824367324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47044824400092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47044824432860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag / Whole Bean / Standard",
+    "variant_id": "47044824465628"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0b052df244e3adb9",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-first-light-blend-medium-roast-dup",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/c328043f-First-Light-Blend_65f6979f-7667-41cf-a845-eff2a221470f.png?v=1767039048",
+  "platform": "shopify",
+  "product_id": "9199906029788",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Specialty coffee",
+   "medium roast blend"
+  ],
+  "title": "Tier 3: First Light Blend - Medium Roast",
+  "url": "https://www.ketchcoffee.com/products/tier-3-first-light-blend-medium-roast-dup",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405433389276"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405433422044"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405433454812"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405433487580"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405433520348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405433553116"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405433585884"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405433618652"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405433651420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405433684188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405433716956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405433749724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag / Whole Bean / Standard",
+    "variant_id": "47405433782492"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "81d013980050632f",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-espresso-blend-medium-roast-dup",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/412588af-Espresso-Blend_9092beee-7a09-4caf-a6b9-301460862a1f.png?v=1767039667",
+  "platform": "shopify",
+  "product_id": "9199911272668",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Specialty coffee",
+   "espresso blend"
+  ],
+  "title": "Tier 3: Espresso Blend - Medium Roast",
+  "url": "https://www.ketchcoffee.com/products/tier-3-espresso-blend-medium-roast-dup",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405455802588"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405455835356"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405455868124"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405455900892"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405455933660"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405455966428"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405455999196"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405456031964"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405456064732"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405456097500"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405456130268"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405456163036"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag / Whole Bean / Standard",
+    "variant_id": "47405456195804"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "25ef7dbc500033eb",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-decaf-mexico-la-pluma-dup",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/25749ad4-Mexico-3_92df2cae-6e30-443e-9155-d440db09ae15.png?v=1767039965",
+  "platform": "shopify",
+  "product_id": "9199912419548",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Decaf",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium-dark Roast Coffee",
+   "Coffee > Medium-light Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Mountain Water Process Decaf",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "USDA Organic",
+   "decaf"
+  ],
+  "title": "Tier 3: Decaf Mexico La Pluma (30% sale)",
+  "url": "https://www.ketchcoffee.com/products/tier-3-decaf-mexico-la-pluma-dup",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47405458325724"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47405458358492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405458391260"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405458424028"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405458456796"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405458489564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47405458522332"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47405458555100"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405458587868"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405458620636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405458653404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405458686172"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47405458718940"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "d92612203f331a47",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-dark-and-blue-blend-dup",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/45efb43f-Dark-and-Blue_0b68ee59-e49f-4478-ab37-e42be636fef3.png?v=1767045630",
+  "platform": "shopify",
+  "product_id": "9199937650908",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "blueberry",
+   "dark and blue",
+   "dark and tan",
+   "light and dark blend"
+  ],
+  "title": "Tier 2: Dark and Blue Blend",
+  "url": "https://www.ketchcoffee.com/products/tier-3-dark-and-blue-blend-dup",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405546275036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405546307804"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405546340572"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405546373340"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405546406108"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405546438876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405546471644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405546504412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405546537180"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405546569948"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405546602716"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 22.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405546635484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb Bag / Whole Bean / Standard",
+    "variant_id": "47405546668252"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "feb1d280f5dc989d",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-dark-expressions-blend-dup",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/c07aa005-Dark-Expressions-2_a05cc570-0878-42d9-9b65-f6fb910abdae.png?v=1767045889",
+  "platform": "shopify",
+  "product_id": "9199938633948",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Specialty coffee",
+   "medium-dark blend"
+  ],
+  "title": "Tier 3: Dark Expressions Blend",
+  "url": "https://www.ketchcoffee.com/products/tier-3-dark-expressions-blend-dup",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405549191388"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405549224156"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405549256924"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405549289692"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405549322460"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "8 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405549355228"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Standard",
+    "variant_id": "47405549387996"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Whole Bean / Vacuum Sealed",
+    "variant_id": "47405549420764"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Standard",
+    "variant_id": "47405549453532"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Medium (e.g. Filter Coffee) / Vacuum Sealed",
+    "variant_id": "47405549486300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Standard",
+    "variant_id": "47405549519068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "16 oz Bag / Ground Coarse (e.g. French Press) / Vacuum Sealed",
+    "variant_id": "47405549551836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5lb Bag / Whole Bean / Standard",
+    "variant_id": "47405549584604"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "333023b1ec8c9c48",
+  "first_seen": "2026-10-26",
+  "handle": "tier-3-mexico-san-isidro-zoquiapan",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Mexico-2-1.png?v=1767059207",
+  "platform": "shopify",
+  "product_id": "9199985328348",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Mexican coffee",
+   "Single-origin coffee",
+   "Specialty coffee"
+  ],
+  "title": "Tier 3: Mexico San Isidro Zoquiapan",
+  "url": "https://www.ketchcoffee.com/products/tier-3-mexico-san-isidro-zoquiapan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47405765230812"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47405765263580"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405765296348"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405765329116"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405765361884"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 10.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405765394652"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47405765427420"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47405765460188"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405765492956"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405765525724"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405765558492"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405765591260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47405765624028"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Medium-dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315479703772"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3a270213340ff939",
+  "first_seen": "2026-10-26",
+  "handle": "tier-2-legacy-farms-honduras-parainema",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Honduras-Legacy-Farms-2.png?v=1767059611",
+  "platform": "shopify",
+  "product_id": "9199985787100",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Honduras coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee"
+  ],
+  "title": "Tier 2: Legacy Farms Honduras Parainema",
+  "url": "https://www.ketchcoffee.com/products/tier-2-legacy-farms-honduras-parainema",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47405767950556"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47405767983324"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405768016092"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405768048860"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405768081628"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 11.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405768114396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47405768147164"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47405768179932"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405768212700"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47405768245468"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405768278236"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47405768311004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47405768343772"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 86.0,
+    "title": "Medium-Dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315479474396"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "2c4cdd1716c9e645",
+  "first_seen": "2026-10-26",
+  "handle": "tier-1-carlos-fernandez-morera-costa-rica-anaerobic-washed-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Costa-Rica-flag-Instagram-Post.png?v=1767415498",
+  "platform": "shopify",
+  "product_id": "9205666349276",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Anaerobic washed coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Blend",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Costa Rica Coffee",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single Origin",
+   "Single-origin coffee",
+   "Specialty coffee"
+  ],
+  "title": "Tier 1: Carlo Fernadez Morera Costa Rica Anaerobic Washed Coffee (3 pounds left)",
+  "url": "https://www.ketchcoffee.com/products/tier-1-carlos-fernandez-morera-costa-rica-anaerobic-washed-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47417780928732"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47417780961500"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417780994268"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417781027036"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417781059804"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 16.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417781092572"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47417781125340"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47417781158108"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417781190876"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417781223644"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417781256412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417781289180"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 144.8,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47417781321948"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 144.8,
+    "title": "Medium-dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315479081180"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3990b77a2eaae43c",
+  "first_seen": "2026-10-26",
+  "handle": "tier-2-legacy-farms-honduras-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Honduras-Legacy-Farms-3.png?v=1767416026",
+  "platform": "shopify",
+  "product_id": "9205667332316",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Buy coffee online",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Honduras coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "blackberry",
+   "natural processed coffee"
+  ],
+  "title": "Tier 2: Legacy Farms Honduras Natural Process",
+  "url": "https://www.ketchcoffee.com/products/tier-2-legacy-farms-honduras-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47417784074460"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47417784107228"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417784139996"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417784172764"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417784205532"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417784238300"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47417784271068"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47417784303836"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417784336604"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47417784369372"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417784402140"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47417784434908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47417784467676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium-dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315478982876"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "e20b833ca2f18b03",
+  "first_seen": "2026-10-26",
+  "handle": "tier-1-guatemala-finca-la-senda",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/GuatemalaFlag.png?v=1767589500",
+  "platform": "shopify",
+  "product_id": "9206497149148",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Best coffee beans",
+   "Buy coffee online",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Guatemala coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "fruity and floral coffee"
+  ],
+  "title": "Tier 1: Guatemala Finca La Senda",
+  "url": "https://www.ketchcoffee.com/products/tier-1-guatemala-finca-la-senda",
+  "variants": [
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "47420603498716"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "47420603531484"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47420603564252"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47420603597020"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47420603629788"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 14.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47420603662556"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "47420603695324"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "47420603728092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47420603760860"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "47420603793628"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47420603826396"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "47420603859164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "47420603891932"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 121.0,
+    "title": "Medium-dark / 5lb Bag / Whole Bean",
+    "variant_id": "52314899284188"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "0a8963d228bd89af",
+  "first_seen": "2026-10-26",
+  "handle": "tier-2-decaf-colombia-el-vergel-estate-washed-process",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Colombia-3.png?v=1775481523",
+  "platform": "shopify",
+  "product_id": "9294103838940",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "5 pound bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Buy coffee online",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Colombian coffee",
+   "EA Sugarcane Decaf",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Honduras coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "decaf coffee"
+  ],
+  "title": "Tier 2: Decaf Colombia EL Vergel Estate Washed Process",
+  "url": "https://www.ketchcoffee.com/products/tier-2-decaf-colombia-el-vergel-estate-washed-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "48175817621724"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48175817654492"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48175817687260"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "48175817720028"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48175817752796"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48175817785564"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "48175817818332"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "48175817851100"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48175817883868"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48175817916636"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "48175817949404"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48175817982172"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48175818014940"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium-dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315478819036"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "3bf6e43c7f66727c",
+  "first_seen": "2026-10-26",
+  "handle": "tier-2-decaf-colombia-el-vergel-estate-natural-process",
+  "image": "https://cdn.shopify.com/s/files/1/0782/4608/4828/files/Colombia-4.png?v=1775481590",
+  "platform": "shopify",
+  "product_id": "9298867945692",
+  "product_type": "Coffee",
+  "roaster_slug": "ketchcoffee",
+  "tags": [
+   "12-count Hanging Bag",
+   "12-count K-Cup",
+   "16 oz Bag",
+   "5 pound bag",
+   "8 oz Bag",
+   "Alaska Specialty Coffee",
+   "Arabica coffee",
+   "Buy coffee online",
+   "Coffee > Disposable Hanging Brewers",
+   "Coffee > K-Cups",
+   "Coffee > Medium Roast Coffee",
+   "Coffee subscription",
+   "Colombian coffee",
+   "EA Sugarcane Decaf",
+   "Fresh roasted coffee",
+   "Gourmet coffee",
+   "Honduras coffee",
+   "Ketchikan Coffee",
+   "Ketchikan Coffee Roasters",
+   "Ketchikan Specialty Coffee",
+   "Single-origin coffee",
+   "Specialty coffee",
+   "decaf coffee",
+   "natural process decaf"
+  ],
+  "title": "Tier 2: Decaf Colombia EL Vergel Estate Natural Process",
+  "url": "https://www.ketchcoffee.com/products/tier-2-decaf-colombia-el-vergel-estate-natural-process",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Whole Bean",
+    "variant_id": "48323954868444"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48323954901212"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Light / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48323954933980"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Whole Bean",
+    "variant_id": "48323954966748"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48323954999516"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Light / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48323955032284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Light / 5lb Bag / Whole Bean",
+    "variant_id": "48323955065052"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Whole Bean",
+    "variant_id": "48323955097820"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48323955130588"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 12.0,
+    "title": "Medium-dark / 8 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48323955163356"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Whole Bean",
+    "variant_id": "48323955196124"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Medium (e.g. Filter Coffee)",
+    "variant_id": "48323955228892"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "Medium-dark / 16 oz Bag / Ground Coarse (e.g. French Press)",
+    "variant_id": "48323955261660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 87.0,
+    "title": "Medium-Dark / 5lb Bag / Whole Bean",
+    "variant_id": "52315362066652"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

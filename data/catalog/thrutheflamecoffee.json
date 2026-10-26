@@ -1,0 +1,209 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "firehouse-roast",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15422551392504",
+  "product_type": "",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Firehouse Roast",
+  "url": "https://iyzmuu-ky.myshopify.com/products/firehouse-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "67700478476536"
+   }
+  ],
+  "vendor": "Through the Flame Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antiqua",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Guatemala_Label.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9179031568632",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Guatemala Antiqua",
+  "url": "https://iyzmuu-ky.myshopify.com/products/guatemala-antiqua",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "46714586136824"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Costa_Rica_Label.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9179033239800",
+  "product_type": "",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Costa Rica Tarrazu",
+  "url": "https://iyzmuu-ky.myshopify.com/products/costa-rica-tarrazu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "46714589413624"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Kenya_Label.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9279646335224",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Kenya AA",
+  "url": "https://iyzmuu-ky.myshopify.com/products/kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "47336435384568"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Sumatra_Label.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9279653871864",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Sumatra",
+  "url": "https://iyzmuu-ky.myshopify.com/products/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "47336584347896"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "tanzanian-pea-berry",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Tanzania_PB_Label.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9279657083128",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Tanzanian Pea Berry",
+  "url": "https://iyzmuu-ky.myshopify.com/products/tanzanian-pea-berry",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "47336642248952"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Decaf_Colombian_Label.jpg?v=1770155169",
+  "platform": "shopify",
+  "product_id": "9339366768888",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Decaf Colombia",
+  "url": "https://iyzmuu-ky.myshopify.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.95,
+    "title": "Default Title",
+    "variant_id": "47655397359864"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "classic-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Big_House_Blend_Label_6.jpg?v=1765908098",
+  "platform": "shopify",
+  "product_id": "9339367948536",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://iyzmuu-ky.myshopify.com/products/classic-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "Default Title",
+    "variant_id": "47655398801656"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-narino",
+  "image": "https://cdn.shopify.com/s/files/1/0774/0853/4776/files/Colombia_Narino_Label.jpg?v=1770155077",
+  "platform": "shopify",
+  "product_id": "9339491090680",
+  "product_type": "Whole Bean",
+  "roaster_slug": "thrutheflamecoffee",
+  "tags": [],
+  "title": "Colombia Narino",
+  "url": "https://iyzmuu-ky.myshopify.com/products/colombia-narino",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 18.95,
+    "title": "Default Title",
+    "variant_id": "47655585972472"
+   }
+  ],
+  "vendor": "My Store"
+ }
+]

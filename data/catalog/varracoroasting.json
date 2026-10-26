@@ -1,0 +1,138 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-barako-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0760/2683/9063/files/Barako.png?v=1786018174",
+  "platform": "shopify",
+  "product_id": "7735602872343",
+  "product_type": "",
+  "roaster_slug": "varracoroasting",
+  "tags": [],
+  "title": "Single Origin Barako Coffee",
+  "url": "https://varracoroasting.com/products/single-origin-barako-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 45.0,
+    "title": "Default Title",
+    "variant_id": "42559394873367"
+   }
+  ],
+  "vendor": "varracoroasting"
+ },
+ {
+  "body_hash": "db72915665a3bbdb",
+  "first_seen": "2026-10-26",
+  "handle": "dream-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0760/2683/9063/files/SitioSanRoque.png?v=1786018059",
+  "platform": "shopify",
+  "product_id": "8864558809111",
+  "product_type": "",
+  "roaster_slug": "varracoroasting",
+  "tags": [],
+  "title": "Sitio San Roque",
+  "url": "https://varracoroasting.com/products/dream-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 Ounce",
+    "variant_id": "45240382291991"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2 Pounds",
+    "variant_id": "45240382324759"
+   }
+  ],
+  "vendor": "varracoroasting"
+ },
+ {
+  "body_hash": "4b6de27e2821d58d",
+  "first_seen": "2026-10-26",
+  "handle": "sitio-belis",
+  "image": "https://cdn.shopify.com/s/files/1/0760/2683/9063/files/SitioBelis.png?v=1786017707",
+  "platform": "shopify",
+  "product_id": "8864564445207",
+  "product_type": "",
+  "roaster_slug": "varracoroasting",
+  "tags": [],
+  "title": "Sitio Belis",
+  "url": "https://varracoroasting.com/products/sitio-belis",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 Ounce",
+    "variant_id": "45240385896471"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2 Pounds",
+    "variant_id": "45240385929239"
+   }
+  ],
+  "vendor": "varracoroasting"
+ },
+ {
+  "body_hash": "2b83244a76c1e70c",
+  "first_seen": "2026-10-26",
+  "handle": "dream-coffee-1",
+  "image": "https://cdn.shopify.com/s/files/1/0760/2683/9063/files/DreamSultanKudarat-1_0bbd2aab-7605-463a-b0eb-329497532189.png?v=1786017543",
+  "platform": "shopify",
+  "product_id": "8864567001111",
+  "product_type": "",
+  "roaster_slug": "varracoroasting",
+  "tags": [],
+  "title": "Dream Coffee",
+  "url": "https://varracoroasting.com/products/dream-coffee-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 Ounce",
+    "variant_id": "45240408145943"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2 Pounds",
+    "variant_id": "45240408178711"
+   }
+  ],
+  "vendor": "varracoroasting"
+ },
+ {
+  "body_hash": "5ebc319c56810b75",
+  "first_seen": "2026-10-26",
+  "handle": "plantacion-agoncillo-microlot",
+  "image": "https://cdn.shopify.com/s/files/1/0760/2683/9063/files/PlantacionAgoncillo_Microlot.png?v=1786017657",
+  "platform": "shopify",
+  "product_id": "8864569688087",
+  "product_type": "",
+  "roaster_slug": "varracoroasting",
+  "tags": [],
+  "title": "Plantacion Agoncillo, Microlot",
+  "url": "https://varracoroasting.com/products/plantacion-agoncillo-microlot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 283,
+    "price_usd": 40.0,
+    "title": "10 Ounce",
+    "variant_id": "45240426758167"
+   }
+  ],
+  "vendor": "varracoroasting"
+ }
+]

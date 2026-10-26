@@ -1,0 +1,25 @@
+[
+ {
+  "body_hash": "1d109660b32edce7",
+  "first_seen": "2026-10-26",
+  "handle": "amy-good-gorilla",
+  "image": "https://images.squarespace-cdn.com/content/v1/5c40aebdfcf7fd17803d8854/1646089170829-PDEZZ006KVNRY75MQ515/Congo2.jpg",
+  "platform": "squarespace",
+  "product_id": "621d531f5bc207013b305457",
+  "product_type": "",
+  "roaster_slug": "sacoffeeroasters",
+  "tags": [],
+  "title": "Congo",
+  "url": "https://www.sacoffeeroasters.com/pinball/amy-good-gorilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 0.75,
+    "title": "",
+    "variant_id": "39da3d7f-e873-4da5-bb2c-97acc7ecc8b2"
+   }
+  ],
+  "vendor": ""
+ }
+]

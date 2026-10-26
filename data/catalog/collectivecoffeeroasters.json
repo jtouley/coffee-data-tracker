@@ -1,0 +1,411 @@
+[
+ {
+  "body_hash": "b3cfc2d1d88e7b1c",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-valle-del-cauca-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/colombia.jpg?v=1704413406",
+  "platform": "shopify",
+  "product_id": "7626121314504",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Colombia Valle del Cauca Decaf",
+  "url": "https://www.collectivecoffeeroasters.co/products/colombia-valle-del-cauca-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42959145795784"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42959145828552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press",
+    "variant_id": "42959271461064"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42959277588680"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "34afc3925565396e",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-el-diamante",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/guatemala.jpg?v=1704491301",
+  "platform": "shopify",
+  "product_id": "7626153263304",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Guatemala El Diamante",
+  "url": "https://www.collectivecoffeeroasters.co/products/guatemala-el-diamante",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42959206875336"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42959206940872"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press",
+    "variant_id": "42959282667720"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42959283192008"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "eac86c45daf482b3",
+  "first_seen": "2026-10-26",
+  "handle": "humboldt-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/20250516-DSC09827.jpg?v=1759171864",
+  "platform": "shopify",
+  "product_id": "7626246815944",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Cold Brew",
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Humboldt Espresso",
+  "url": "https://www.collectivecoffeeroasters.co/products/humboldt-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42959335162056"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "21073233b8086fd2",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/roasters-choice.jpg?v=1704491520",
+  "platform": "shopify",
+  "product_id": "7626515677384",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [],
+  "title": "Roaster's Choice",
+  "url": "https://www.collectivecoffeeroasters.co/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42960067231944"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "42960067297480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press",
+    "variant_id": "42960067330248"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "42960067363016"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "44161905425d1eba",
+  "first_seen": "2026-10-26",
+  "handle": "juniper-blend",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/Lightbox-Front-Square.jpg?v=1735059722",
+  "platform": "shopify",
+  "product_id": "8076890800328",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Cold Brew",
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Juniper",
+  "url": "https://www.collectivecoffeeroasters.co/products/juniper-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44161410236616"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip",
+    "variant_id": "44202257449160"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Press",
+    "variant_id": "44202257481928"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "44202257514696"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "556b92e9cdfa51df",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-san-jose",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/20250516-DSC09817.jpg?v=1748019145",
+  "platform": "shopify",
+  "product_id": "8211970457800",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Filter",
+   "French Press"
+  ],
+  "title": "Nicaragua San José",
+  "url": "https://www.collectivecoffeeroasters.co/products/nicaragua-san-jose",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44643286581448"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Drip",
+    "variant_id": "44643286614216"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Press",
+    "variant_id": "44643286646984"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "44643286679752"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "8388fc3c2589afac",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-santa-maria",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/CR-Front-square.gif?v=1769017553",
+  "platform": "shopify",
+  "product_id": "8271099658440",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Costa Rica Santa Maria",
+  "url": "https://www.collectivecoffeeroasters.co/products/costa-rica-santa-maria",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "44907649204424"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "44907649237192"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press",
+    "variant_id": "44907649269960"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "44907649302728"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "b57bccc05bf3a286",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-ella",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/20260610-DSCF0496-1-1-square_1.jpg?v=1782766973",
+  "platform": "shopify",
+  "product_id": "8313275121864",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Guatemala Ella",
+  "url": "https://www.collectivecoffeeroasters.co/products/guatemala-ella",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45069202096328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Drip",
+    "variant_id": "45069202129096"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Press",
+    "variant_id": "45069202161864"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "45069202194632"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "merino",
+  "image": "https://cdn.shopify.com/s/files/1/2218/5093/files/20260610-DSCF0500-1-1-square.jpg?v=1782766521",
+  "platform": "shopify",
+  "product_id": "8325315461320",
+  "product_type": "Coffee",
+  "roaster_slug": "collectivecoffeeroasters",
+  "tags": [
+   "Cold Brew",
+   "Espresso",
+   "Filter",
+   "French Press"
+  ],
+  "title": "Merino",
+  "url": "https://www.collectivecoffeeroasters.co/products/merino",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45127580516552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip",
+    "variant_id": "45127580549320"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Press",
+    "variant_id": "45127580582088"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Pour Over",
+    "variant_id": "45127580614856"
+   }
+  ],
+  "vendor": "Collective Coffee Roasters"
+ }
+]

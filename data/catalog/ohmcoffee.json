@@ -1,0 +1,398 @@
+[
+ {
+  "body_hash": "22969aff60dc8789",
+  "first_seen": "2026-10-26",
+  "handle": "full-stack-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsite_e54db301-6b89-426b-a190-13d0ab66e9b7.png?v=1788376016",
+  "platform": "shopify",
+  "product_id": "6039413379",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [
+   "Blueberries",
+   "Dark Chocolate",
+   "Plums",
+   "subscription-notes"
+  ],
+  "title": "Full Stack Blend",
+  "url": "https://www.ohmcoffee.com/products/full-stack-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "30001203203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43041374659"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "3a3a364bb409d77e",
+  "first_seen": "2026-10-26",
+  "handle": "tweed-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsitecopy_eea53503-704e-4097-8d55-df8c5fc8ef65.png?v=1788375927",
+  "platform": "shopify",
+  "product_id": "6178200707",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [
+   "subscription-notes"
+  ],
+  "title": "Tweed Blend",
+  "url": "https://www.ohmcoffee.com/products/tweed-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "19125033795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43041470147"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "f4fd143a440d12bc",
+  "first_seen": "2026-10-26",
+  "handle": "half-stack-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsite_ab73d712-699e-4c30-afa2-e37bac4d7b26.png?v=1788376146",
+  "platform": "shopify",
+  "product_id": "6178242371",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [
+   "subscription-notes"
+  ],
+  "title": "Half Stack Decaf",
+  "url": "https://www.ohmcoffee.com/products/half-stack-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "12 oz",
+    "variant_id": "19125160003"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "5 lbs",
+    "variant_id": "43041397571"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "8552760d970b0360",
+  "first_seen": "2026-10-26",
+  "handle": "handwired-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsite_e13ec87d-c893-4657-98ce-4ace4df972bd.png?v=1788375811",
+  "platform": "shopify",
+  "product_id": "6178255939",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [
+   "subscription-notes"
+  ],
+  "title": "Handwired Espresso",
+  "url": "https://www.ohmcoffee.com/products/handwired-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "19125208963"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43041440899"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "bdc4a27d6514f942",
+  "first_seen": "2026-10-26",
+  "handle": "mount-veeder-morning-cuvee",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/Mt.VeederMorningCuveefinal.jpg?v=1697662476",
+  "platform": "shopify",
+  "product_id": "8073153511612",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Mount Veeder Morning Cuvee",
+  "url": "https://www.ohmcoffee.com/products/mount-veeder-morning-cuvee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "43009373470908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43009373503676"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "f4e34b2a22de5cc3",
+  "first_seen": "2026-10-26",
+  "handle": "rebobs",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/Untitleddesign.jpg?v=1704692685",
+  "platform": "shopify",
+  "product_id": "8174280310972",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Napa Rebobs Full Send Blend",
+  "url": "https://www.ohmcoffee.com/products/rebobs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "43236850991292"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43236851024060"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "55077d3296a95f1f",
+  "first_seen": "2026-10-26",
+  "handle": "the-chaga-company-coffee-alternative-with-chaga-and-adaptogenic-mushrooms",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsite_952da207-00ba-4a29-a5e8-374da14ea3ff.png?v=1788377417",
+  "platform": "shopify",
+  "product_id": "8651693916348",
+  "product_type": "",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "The Chaga Company Coffee Alternative with Chaga and Adaptogenic Mushrooms",
+  "url": "https://www.ohmcoffee.com/products/the-chaga-company-coffee-alternative-with-chaga-and-adaptogenic-mushrooms",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 36.0,
+    "title": "Default Title",
+    "variant_id": "44350250877116"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-2",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8752985637052",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Single Origin - 2",
+  "url": "https://www.ohmcoffee.com/products/single-origin-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "44664001527996"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "44664001560764"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-3",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8752985702588",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Single Origin - 3",
+  "url": "https://www.ohmcoffee.com/products/single-origin-3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "44664001691836"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "44664001724604"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-4",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8752985800892",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Single Origin - 4",
+  "url": "https://www.ohmcoffee.com/products/single-origin-4",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "44664002052284"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "44664002085052"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-5",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8752985899196",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Single Origin - 5",
+  "url": "https://www.ohmcoffee.com/products/single-origin-5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "44664002216124"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "44664002248892"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-6",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8752986030268",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [],
+  "title": "Single Origin - 6",
+  "url": "https://www.ohmcoffee.com/products/single-origin-6",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "44664002445500"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "44664002478268"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ },
+ {
+  "body_hash": "378f6c3ba2462b00",
+  "first_seen": "2026-10-26",
+  "handle": "black-magick-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1240/8508/files/OCRnewpkgwebsite_4b2c1efe-0bf3-4f8c-b646-f7544c8f24df.png?v=1788376640",
+  "platform": "shopify",
+  "product_id": "9244545731",
+  "product_type": "Coffee Blends",
+  "roaster_slug": "ohmcoffee",
+  "tags": [
+   "subscription-notes"
+  ],
+  "title": "Black Magick Blend",
+  "url": "https://www.ohmcoffee.com/products/black-magick-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz",
+    "variant_id": "32671526083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 115.0,
+    "title": "5 lbs",
+    "variant_id": "43041335043"
+   }
+  ],
+  "vendor": "Ohm Coffee Roasters"
+ }
+]

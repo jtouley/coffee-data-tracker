@@ -1,0 +1,87 @@
+[
+ {
+  "body_hash": "88869807f8757da2",
+  "first_seen": "2026-10-26",
+  "handle": "product-3-szb2y-gzh2r-5yw2b",
+  "image": "https://images.squarespace-cdn.com/content/v1/69c94437bf304600630d96ce/0875de5a-a52e-4fab-beb0-8d119a36c87c/1220781.jpg",
+  "platform": "squarespace",
+  "product_id": "69c945e11f9b82115ded2d52",
+  "product_type": "",
+  "roaster_slug": "ashacoffeeroasters",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Sun & Moon Signature Blend",
+  "url": "https://www.ashacoffeeroasters.com/coffee/p/product-3-szb2y-gzh2r-5yw2b",
+  "variants": [
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 43.0,
+    "title": "2lb",
+    "variant_id": "47fc5c4d-735f-4ae8-b482-b1092fce566c"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 15.0,
+    "title": "8oz",
+    "variant_id": "6aec75a6-6b22-403c-88e8-01648cf167a8"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "572e8460cf293064",
+  "first_seen": "2026-10-26",
+  "handle": "bonneville-espresso-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/69c94437bf304600630d96ce/9635ed6b-86d3-447b-b1e7-c5650df33a82/1220824.JPG",
+  "platform": "squarespace",
+  "product_id": "6a5ffd51b545114fe3879372",
+  "product_type": "",
+  "roaster_slug": "ashacoffeeroasters",
+  "tags": [],
+  "title": "Bonneville Espresso Blend",
+  "url": "https://www.ashacoffeeroasters.com/coffee/p/bonneville-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 17.0,
+    "title": "8oz",
+    "variant_id": "ec867eb3-1784-4514-869f-8074d9c89cb8"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 44.0,
+    "title": "2lb",
+    "variant_id": "f9ba2c0f-1408-4710-b146-653bd298dbef"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "78fbd68cd99208eb",
+  "first_seen": "2026-10-26",
+  "handle": "big-island-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/69c94437bf304600630d96ce/0be1a357-5c04-47b4-b73d-1eed3f0cfdbb/IMG_4620.jpg",
+  "platform": "squarespace",
+  "product_id": "6ac6b61dae48757ac41b2ec9",
+  "product_type": "",
+  "roaster_slug": "ashacoffeeroasters",
+  "tags": [],
+  "title": "Big Island Blend",
+  "url": "https://www.ashacoffeeroasters.com/coffee/p/big-island-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.0,
+    "title": "",
+    "variant_id": "6386bb25-0a05-4b03-8d89-82e657fff7ff"
+   }
+  ],
+  "vendor": ""
+ }
+]

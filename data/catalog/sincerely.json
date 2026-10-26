@@ -1,0 +1,1045 @@
+[
+ {
+  "body_hash": "24cd08ae5b948039",
+  "first_seen": "2026-10-26",
+  "handle": "el-zapoteco",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/DSC07480.jpg?v=1759393656",
+  "platform": "shopify",
+  "product_id": "15127584211209",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "espresso",
+   "filter",
+   "mexico"
+  ],
+  "title": "El Zapoteco",
+  "url": "https://sincerely.coffee/products/el-zapoteco",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "55357333700873"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "55357333733641"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "55357333766409"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Filter",
+    "variant_id": "55357333799177"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "55357333831945"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / French Press",
+    "variant_id": "55357333864713"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "55357333897481"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "55357333930249"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "55357333963017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "55357333995785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "55357334028553"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "55357334061321"
+   }
+  ],
+  "vendor": "Mexico"
+ },
+ {
+  "body_hash": "600d14497f674d0d",
+  "first_seen": "2026-10-26",
+  "handle": "50-50-caf-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/DSC04439.jpg?v=1773596332",
+  "platform": "shopify",
+  "product_id": "15147100799241",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "Colombia",
+   "espresso",
+   "filter"
+  ],
+  "title": "50/50 - Caffeine/Decaf",
+  "url": "https://sincerely.coffee/products/50-50-caf-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "55436323193097"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "55436323225865"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "55436323258633"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "55436323291401"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "55436323324169"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "55436323356937"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "55436323389705"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "55436323422473"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "55436323455241"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "55436323488009"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "55436323520777"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "55436323553545"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "electronicas",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15553816133897",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "espresso",
+   "mexico"
+  ],
+  "title": "Electronicas",
+  "url": "https://sincerely.coffee/products/electronicas",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "57011749126409"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "57011749159177"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "57011749191945"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "57011749224713"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "57011749257481"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "57011749290249"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "57011749323017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "57011749355785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "57011749388553"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "57011749421321"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "57011749454089"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "57011749486857"
+   }
+  ],
+  "vendor": "Mexico"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "pinhero",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15565650755849",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "brazil",
+   "espresso",
+   "filter"
+  ],
+  "title": "Pinhero",
+  "url": "https://sincerely.coffee/products/pinhero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "57046646096137"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "57046646128905"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "57046646161673"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Filter",
+    "variant_id": "57046646194441"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "57046646227209"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / French Press",
+    "variant_id": "57046646259977"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "57046646292745"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "57046646325513"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "57046646358281"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "57046646391049"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "57046646423817"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "57046646456585"
+   }
+  ],
+  "vendor": "Brazil"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "villamaria-natural",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "15565650854153",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "colombia",
+   "filter"
+  ],
+  "title": "Villamaria Natural",
+  "url": "https://sincerely.coffee/products/villamaria-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "57046646554889"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "57046646587657"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "57046646620425"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "57046646653193"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "57046646685961"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "57046646718729"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "57046646751497"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "57046646784265"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "57046646817033"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "57046646849801"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "57046646882569"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "57046646915337"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "f7bf2a82e870e87f",
+  "first_seen": "2026-10-26",
+  "handle": "saodomingos",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/Fazenda_Sao_Domingos_2022_7-2.jpg?v=1773596493",
+  "platform": "shopify",
+  "product_id": "6694611943483",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "brazil",
+   "espresso"
+  ],
+  "title": "Fazenda São Domingos",
+  "url": "https://sincerely.coffee/products/saodomingos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "39767392550971"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "39791085912123"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "39791085944891"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "39791085977659"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "39791086010427"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 45.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "39791086043195"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "48423657472265"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "48423657505033"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "48423657537801"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "48423657570569"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "48423657603337"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 13.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "48423657636105"
+   }
+  ],
+  "vendor": "Brazil"
+ },
+ {
+  "body_hash": "7208920b50ac70d4",
+  "first_seen": "2026-10-26",
+  "handle": "elcarmen",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/4350680A-9F13-43CC-8938-0BE490259CCC_1_201_a.jpg?v=1773596225",
+  "platform": "shopify",
+  "product_id": "6851005775931",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "colombia",
+   "espresso"
+  ],
+  "title": "El Carmen",
+  "url": "https://sincerely.coffee/products/elcarmen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "40352436781115"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "40352436813883"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "40352436846651"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "40352436879419"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "40352436912187"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 50.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "40352436944955"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "48423634108681"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "48423634141449"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "48423634174217"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Filter",
+    "variant_id": "48423634206985"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "48423634239753"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / French Press",
+    "variant_id": "48423634272521"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "aed3796b71baa490",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-el-carmen",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/09769A29-E5FF-4E58-81AD-34E90E5A3E55_1_201_a.jpg?v=1759400206",
+  "platform": "shopify",
+  "product_id": "6851005841467",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "colombia",
+   "decaf",
+   "espresso",
+   "filter"
+  ],
+  "title": "Decaf, El Carmen",
+  "url": "https://sincerely.coffee/products/decaf-el-carmen",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "40352437567547"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "40352437600315"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "40352437633083"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "40352437665851"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "40352437698619"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "40352437731387"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "48423623524617"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "48423623557385"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "48423623590153"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "48423623622921"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "48423623655689"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "48423623688457"
+   }
+  ],
+  "vendor": "Colombia"
+ },
+ {
+  "body_hash": "3be539abbe90e22b",
+  "first_seen": "2026-10-26",
+  "handle": "kilimbi-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/0BC627D6-837E-4D99-909A-936874639C6A_1_201_a.jpg?v=1773596161",
+  "platform": "shopify",
+  "product_id": "9162298196233",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "espresso",
+   "filter",
+   "rwanda"
+  ],
+  "title": "Kilimbi Washed",
+  "url": "https://sincerely.coffee/products/kilimbi-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "48058840449289"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "48058840482057"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "48058840514825"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "48058840547593"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "48058840580361"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "48058840613129"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "48423651803401"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "48423651836169"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "48423651868937"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Filter",
+    "variant_id": "48423651901705"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "48423651934473"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 14.5,
+    "title": "250g paper bag / French Press",
+    "variant_id": "48423651967241"
+   }
+  ],
+  "vendor": "Rwanda"
+ },
+ {
+  "body_hash": "6ddc8db522ed947b",
+  "first_seen": "2026-10-26",
+  "handle": "kilimbi-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0552/5946/3739/files/75C05AEF-9258-448C-ACC0-445DB77D7228_1_201_a.jpg?v=1773596131",
+  "platform": "shopify",
+  "product_id": "9162300358921",
+  "product_type": "Coffee",
+  "roaster_slug": "sincerely",
+  "tags": [
+   "filter",
+   "rwanda"
+  ],
+  "title": "Kilimbi Natural",
+  "url": "https://sincerely.coffee/products/kilimbi-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Whole Beans",
+    "variant_id": "48058843595017"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Espresso",
+    "variant_id": "48058843627785"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Moka Pot",
+    "variant_id": "48058843660553"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Filter",
+    "variant_id": "48058843693321"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / Areopress",
+    "variant_id": "48058843726089"
+   },
+   {
+    "available": true,
+    "grams": 1000,
+    "price_usd": 55.0,
+    "title": "1kg paper bag / French Press",
+    "variant_id": "48058843791625"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Whole Beans",
+    "variant_id": "48423642398985"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Espresso",
+    "variant_id": "48423642431753"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Moka Pot",
+    "variant_id": "48423642464521"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Filter",
+    "variant_id": "48423642497289"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / Areopress",
+    "variant_id": "48423642530057"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 16.0,
+    "title": "250g paper bag / French Press",
+    "variant_id": "48423642562825"
+   },
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 18.5,
+    "title": "250g tin / Whole bean",
+    "variant_id": "56918877470985"
+   }
+  ],
+  "vendor": "Rwanda"
+ }
+]

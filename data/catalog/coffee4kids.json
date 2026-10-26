@@ -1,0 +1,807 @@
+[
+ {
+  "body_hash": "119a39fa1d9f6854",
+  "first_seen": "2026-10-26",
+  "handle": "1lb-bag-badass-nurse-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "02bb17a6ed92",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Badass Nurse Blend (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/1lb-bag-badass-nurse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ec17955dc0dfeb5",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-medium",
+  "image": null,
+  "platform": "generic",
+  "product_id": "051c7ea10f7c",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Medium Roast (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/ethiopia-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a67b6324ab15476e",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-stocking-stuffer-holiday-blend-4-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "0fefffdf63b5",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Stocking Stuffer Holiday Blend (4 oz)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-stocking-stuffer-holiday-blend-4-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efba28404c40a390",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-medium-roast-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "27b98aee1492",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K White Coffee (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/rwanda-medium-roast-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b55077c82f2eabe6",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-medium-roast-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3466801055fb",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Light Roast (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/papua-new-guinea-medium-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a67b6324ab15476e",
+  "first_seen": "2026-10-26",
+  "handle": "badass-medical-provider-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3650d07d9d41",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Holiday Blend (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/badass-medical-provider-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ce51a22d30008d55",
+  "first_seen": "2026-10-26",
+  "handle": "peru-light-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3aa29db34b01",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K BADASS GRANDPA BLEND (12 oz Medium Roast)",
+  "url": "https://www.coffee4kids.org/product-page/peru-light-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e94c98481c4eb50",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-water-process-decaf-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "3c6d131a24d6",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Guatemala Water Process Decaf (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-water-process-decaf-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efba28404c40a390",
+  "first_seen": "2026-10-26",
+  "handle": "1lb-bag-badass-essential-worker-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "457a2452490e",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K White Coffee (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/1lb-bag-badass-essential-worker-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44728c00d13b936a",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-brazil-french-roast-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "4dd057788e52",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Brazil French Roast (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/copy-of-brazil-french-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "119a39fa1d9f6854",
+  "first_seen": "2026-10-26",
+  "handle": "badass-nurse-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "5b846ab0887a",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Badass Nurse Blend (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/badass-nurse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44728c00d13b936a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-french-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "785d2614197c",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Brazil French Roast (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/brazil-french-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9998a00bae99fbe",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-new-year-blend-medium-roast-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8555de87d62b",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K New Year Blend (Medium Roast 5lb)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-new-year-blend-medium-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ac74b2fb5b9110",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-dark-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "8597d9ab0fd0",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Guatemala Dark Roast (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-dark-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b55077c82f2eabe6",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-medium-roast-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "938cb2616e97",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Light Roast (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/rwanda-medium-roast-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ec17955dc0dfeb5",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bag-ethiopia-medium",
+  "image": null,
+  "platform": "generic",
+  "product_id": "999348de604d",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Medium Roast (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/5lb-bag-ethiopia-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d2a98aee78b91cf8",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-medium-roast-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "9a067e2a7516",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K BADASS ACCOUNTANT BLEND (Medium 12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/papua-new-guinea-medium-roast-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9998a00bae99fbe",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-new-year-blend-medium-roast-8oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a0979185d82f",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K New Year Blend (Medium Roast 4 oz)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-new-year-blend-medium-roast-8oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ac74b2fb5b9110",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-dark-roast-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a6b219ff34ac",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Guatemala Dark Roast (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-dark-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a67b6324ab15476e",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-12-oz-bag-badass-nurse-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a72f9d08ab0b",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Holiday Blend (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/copy-of-12-oz-bag-badass-nurse-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9998a00bae99fbe",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-holiday-blend-medium-roast-12-oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a8c040b8d662",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K New Year Blend (Medium Roast 12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-holiday-blend-medium-roast-12-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e94c98481c4eb50",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-water-process-decaf-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a9b2b19d0a2e",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Guatemala Water Process Decaf (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-water-process-decaf-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d723f95286a24f60",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medium-roast-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "adfbb8bb2641",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K House Espresso (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-medium-roast-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d6ac74b2fb5b9110",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-dark-roast-12oz-1",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b804c2f6b983",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Guatemala Dark Roast (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-dark-roast-12oz-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e9998a00bae99fbe",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-new-year-blend-medium-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b8196797ecaa",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K New Year Blend (Medium Roast 1lb)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-new-year-blend-medium-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f946c08695fc0fac",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medium-roast-12oz",
+  "image": null,
+  "platform": "generic",
+  "product_id": "b9c405de1392",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K House Espresso (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-medium-roast-12oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8e94c98481c4eb50",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-water-process-decaf",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bb99de4bce77",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Mexico Water Process Decaf (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-water-process-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "efba28404c40a390",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-bag-badass-essential-worker-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bc9555fa158a",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K White Coffee (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/12-oz-bag-badass-essential-worker-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8ec17955dc0dfeb5",
+  "first_seen": "2026-10-26",
+  "handle": "1lb-bag-ethiopia-medium",
+  "image": null,
+  "platform": "generic",
+  "product_id": "bed12c2ec00b",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Medium Roast (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/1lb-bag-ethiopia-medium",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b55077c82f2eabe6",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-medium-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "c207ad1204d7",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Ethiopia Light Roast (12 oz)",
+  "url": "https://www.coffee4kids.org/product-page/papua-new-guinea-medium-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2584ecf1fdef4ca1",
+  "first_seen": "2026-10-26",
+  "handle": "peru-light-roast",
+  "image": null,
+  "platform": "generic",
+  "product_id": "ca5937130ade",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K BADASS GRANDPA BLEND (12 oz French Roast)",
+  "url": "https://www.coffee4kids.org/product-page/peru-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "43292849fa9d7a5b",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-medium-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "de55548c747c",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K House Espresso (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/colombia-medium-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "44728c00d13b936a",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-french-roast-1lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "e826b0cde26a",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Brazil French Roast (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/brazil-french-roast-1lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "119a39fa1d9f6854",
+  "first_seen": "2026-10-26",
+  "handle": "c4k-badass-nurse-blend-5lb",
+  "image": null,
+  "platform": "generic",
+  "product_id": "f3c724dd2726",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Badass Nurse Blend (5lb)",
+  "url": "https://www.coffee4kids.org/product-page/c4k-badass-nurse-blend-5lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 75.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a67b6324ab15476e",
+  "first_seen": "2026-10-26",
+  "handle": "1lb-bag-of-badass-medical-provider-blend",
+  "image": null,
+  "platform": "generic",
+  "product_id": "faafed144aa5",
+  "product_type": "",
+  "roaster_slug": "coffee4kids",
+  "tags": [],
+  "title": "C4K Holiday Blend (1lb)",
+  "url": "https://www.coffee4kids.org/product-page/1lb-bag-of-badass-medical-provider-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

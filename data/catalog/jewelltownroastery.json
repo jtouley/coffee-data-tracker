@@ -1,0 +1,62 @@
+[
+ {
+  "body_hash": "ff67bc3ceed411a2",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-medium-dark-roast",
+  "image": "https://static1.squarespace.com/static/5b69f6d64eddec0e309009a0/5ded39e89778c378d7c931a5/5ded3a0d5704156dcbfebda3/1738337345381/",
+  "platform": "squarespace",
+  "product_id": "5ded3a0d5704156dcbfebda3",
+  "product_type": "",
+  "roaster_slug": "jewelltownroastery",
+  "tags": [],
+  "title": "Honduran FTO Medium Dark Roast",
+  "url": "https://www.jewelltownroastery.com/shop/honduran-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz Whole",
+    "variant_id": "094bc66f-a12f-46ac-88c9-f0ea356f6564"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz Ground",
+    "variant_id": "701e3ec2-568e-4c3b-a9f5-737abe5e7c2e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff67bc3ceed411a2",
+  "first_seen": "2026-10-26",
+  "handle": "columbian-dark-decaf",
+  "image": "https://static1.squarespace.com/static/5b69f6d64eddec0e309009a0/5ded39e89778c378d7c931a5/5ded3eb3ac43c868ac339d01/1738337322514/",
+  "platform": "squarespace",
+  "product_id": "5ded3eb3ac43c868ac339d01",
+  "product_type": "",
+  "roaster_slug": "jewelltownroastery",
+  "tags": [],
+  "title": "Colombian Dark Roast Decaf",
+  "url": "https://www.jewelltownroastery.com/shop/columbian-dark-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz Whole",
+    "variant_id": "b206592d-7702-473d-9953-59e88d7a4dd4"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.0,
+    "title": "16 oz Ground",
+    "variant_id": "f8279714-9c11-4b12-846b-adfaab73bc05"
+   }
+  ],
+  "vendor": ""
+ }
+]

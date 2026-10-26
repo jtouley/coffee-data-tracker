@@ -1,0 +1,227 @@
+[
+ {
+  "body_hash": "00611a8c76cd288b",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-signature-blend",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag-3.png",
+  "platform": "woocommerce",
+  "product_id": "118",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Blends"
+  ],
+  "title": "Sky Roasted ‘Sunrise Embrace’ Signature Blend (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-signature-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Sunrise Embrace&#8217; Signature Blend (12oz)",
+    "variant_id": "118:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e5f98fcd95cf619",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-peruvian-warmi-embrace",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag.png",
+  "platform": "woocommerce",
+  "product_id": "190",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted Peruvian ‘Warm Embrace’ (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-peruvian-warmi-embrace/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted Peruvian &#8216;Warm Embrace&#8217; (12oz)",
+    "variant_id": "190:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "382863576e623139",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-ethiopia-sidama",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag.png",
+  "platform": "woocommerce",
+  "product_id": "197",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted ‘Ethiopia Sidama’ (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-ethiopia-sidama/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Ethiopia Sidama&#8217; (12oz)",
+    "variant_id": "197:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b168f36d55c727c",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-uganda-bugisu-organic-bean",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag.png",
+  "platform": "woocommerce",
+  "product_id": "207",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted ‘Uganda Bugisu’ (Organic Bean) (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-uganda-bugisu-organic-bean/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Uganda Bugisu&#8217; (Organic Bean) (12oz)",
+    "variant_id": "207:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "257ed664458b3eed",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-sumatra-mandheling-beriah-gr1",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag.png",
+  "platform": "woocommerce",
+  "product_id": "220",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted ‘Sumatra Mandheling’ Beriah GR1 (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-sumatra-mandheling-beriah-gr1/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Sumatra Mandheling&#8217; Beriah GR1 (12oz)",
+    "variant_id": "220:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b607a7a513b2d19",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-ethiopia-natural-kembata-g1-gp",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag.png",
+  "platform": "woocommerce",
+  "product_id": "226",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted ‘Ethiopia Natural Kembata G1’ (GP)(12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-ethiopia-natural-kembata-g1-gp/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Ethiopia Natural Kembata G1&#8217; (GP)(12oz)",
+    "variant_id": "226:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "22b352bac896a2dc",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-honduran-terrerito",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag-2.png",
+  "platform": "woocommerce",
+  "product_id": "240",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Single Origin Beans"
+  ],
+  "title": "Sky Roasted ‘Honduran Terrerito’ (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-honduran-terrerito/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Honduran Terrerito&#8217; (12oz)",
+    "variant_id": "240:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f79bdc3f8ec9b453",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-light-espresso-blend",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag-3.png",
+  "platform": "woocommerce",
+  "product_id": "271",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Blends"
+  ],
+  "title": "Sky Roasted ‘Espresso’ Blend (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-light-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Espresso&#8217; Blend (12oz)",
+    "variant_id": "271:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1faf2946ef5630a",
+  "first_seen": "2026-10-26",
+  "handle": "sky-roasted-dark-espresso-blend",
+  "image": "https://skyroastedcoffee.com/wp-content/uploads/2025/07/Beanbag-3.png",
+  "platform": "woocommerce",
+  "product_id": "277",
+  "product_type": "variable",
+  "roaster_slug": "skyroasted",
+  "tags": [
+   "SkyRoasted Blends"
+  ],
+  "title": "Sky Roasted ‘Dark Espresso’ Blend (12oz)",
+  "url": "https://skyroastedcoffee.com/product/sky-roasted-dark-espresso-blend/",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Sky Roasted &#8216;Dark Espresso&#8217; Blend (12oz)",
+    "variant_id": "277:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

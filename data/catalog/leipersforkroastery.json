@@ -1,0 +1,140 @@
+[
+ {
+  "body_hash": "c4385f23c2ba8c15",
+  "first_seen": "2026-10-26",
+  "handle": "southern-pecan",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/44F238BD-237E-4FC1-8E31-B9066DBBD119.jpg?v=1664383012",
+  "platform": "shopify",
+  "product_id": "8035839705253",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Southern Pecan",
+  "url": "https://leipersforkroastery.com/products/southern-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "41981628416165"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ },
+ {
+  "body_hash": "bfff3bb157c2f14f",
+  "first_seen": "2026-10-26",
+  "handle": "leiper-s-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/image.jpg?v=1664743049",
+  "platform": "shopify",
+  "product_id": "8035876667557",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Leiper’s Blend",
+  "url": "https://leipersforkroastery.com/products/leiper-s-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Default Title",
+    "variant_id": "41981706961061"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ },
+ {
+  "body_hash": "64c97339bec5bb4b",
+  "first_seen": "2026-10-26",
+  "handle": "leiper-s-blend-5-lb",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/image_0ec79570-6633-499a-8c79-24660b4178ce.jpg?v=1667397283",
+  "platform": "shopify",
+  "product_id": "8035893379237",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Leiper’s Blend 5 lb",
+  "url": "https://leipersforkroastery.com/products/leiper-s-blend-5-lb",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 80.0,
+    "title": "Default Title",
+    "variant_id": "41981722755237"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ },
+ {
+  "body_hash": "506ba0f2c1f5cac6",
+  "first_seen": "2026-10-26",
+  "handle": "leiper-s-organic-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/image.heic?v=1664742193",
+  "platform": "shopify",
+  "product_id": "8035897933989",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Leiper’s Organic Blend",
+  "url": "https://leipersforkroastery.com/products/leiper-s-organic-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "41981724655781"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ },
+ {
+  "body_hash": "5d9890eedaf48c7d",
+  "first_seen": "2026-10-26",
+  "handle": "leiper-s-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/image_30dfcf2d-cd0f-4559-bf71-0ca903a1d8ba.jpg?v=1667397189",
+  "platform": "shopify",
+  "product_id": "8035898491045",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Leiper’s Decaf",
+  "url": "https://leipersforkroastery.com/products/leiper-s-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "41981725737125"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ },
+ {
+  "body_hash": "c11a5f089ab416a1",
+  "first_seen": "2026-10-26",
+  "handle": "valentine-coffee-bag",
+  "image": "https://cdn.shopify.com/s/files/1/0576/9740/3045/products/image_ab9cccb4-a4ef-464c-b456-806e4e0eaf4c.heic?v=1673272988",
+  "platform": "shopify",
+  "product_id": "8133258870949",
+  "product_type": "",
+  "roaster_slug": "leipersforkroastery",
+  "tags": [],
+  "title": "Valentine Coffee Bag",
+  "url": "https://leipersforkroastery.com/products/valentine-coffee-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 16.0,
+    "title": "Default Title",
+    "variant_id": "42173490790565"
+   }
+  ],
+  "vendor": "Leipersforkroastery"
+ }
+]

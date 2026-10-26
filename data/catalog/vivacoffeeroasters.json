@@ -1,0 +1,873 @@
+[
+ {
+  "body_hash": "a15e804c12ab8896",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/a34d45c3-7366-4a4a-9319-4f5e4fe89c89/DSC_8059.jpeg",
+  "platform": "squarespace",
+  "product_id": "6989faea6f650d022f687738",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Sol • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "05ee1360-f206-40bc-8f25-65d50bc43d2c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "4b53f149-3709-426b-a446-f0d2755b9cc4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "50cc660d-ed4c-4a85-b624-438c5889fb84"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "70cfdde4-8dbf-437f-ab86-38c143be6e16"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "7861915a-95ad-4cbc-93a7-4fd9cbcba4e2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "9e23b69c-4cec-435a-8996-b4888a856313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "d256e3e1-d856-4967-a74b-ca8e417c4589"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "d473b9ef-197e-4bfb-911c-941db0d306c5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82f43e67f7394e80",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/87b6747b-31be-4f74-b7f3-cd607e9e3332/DSC_8063.jpg",
+  "platform": "squarespace",
+  "product_id": "698a283f37348b2d73478fd0",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Azul • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "214eb21d-fcfd-4968-801c-015f43685cd8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "3e4cc5d9-4add-4fb0-8e87-439ab4594e60"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "7118cc8c-7373-466f-9c49-f61255ad7c43"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "74264372-f83e-4bcd-88c8-7555a2dda7f9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "85cdfec8-d828-41ac-8b1d-21c600926032"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "b1c830ba-6ae0-4f6a-89ee-2f0d59cc4400"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "becc7f30-df57-49c6-8373-8205701f1b50"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "edda786d-f260-45cc-8094-4ef49dd51a3a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab84dabf55326c67",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/d6f0c75e-1b6c-48d2-af48-ff73c15ed4a7/DSC_8067.jpeg",
+  "platform": "squarespace",
+  "product_id": "698a29337773275a7e2f63af",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Hola • Light+ (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "273b7183-02b7-44b7-884d-b937fa27e84f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "27f5bab9-6c1d-48d2-b91a-164448dcfb4b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "2c842853-be28-4cd3-8ae9-6485a3252ea5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "2dfe8830-16c3-4e23-9791-12df502acd07"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "334a6246-2f4f-4804-9b83-afbe0fafc639"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "49960f56-5c36-49d9-a76c-ff360ce92334"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "cfc914a1-3f5f-4391-a59e-1d93f8dec4ef"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "da4ea8ad-2b61-4b5d-a742-eec6797a395c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ff91c7bb9410ce94",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523-wehkn",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/4d7301ac-b03a-44a4-8e24-8e5bb0541461/DSC_8069.jpeg",
+  "platform": "squarespace",
+  "product_id": "698a2a6a0455062c38e63d27",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Sierra • Medium (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523-wehkn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "0cd943d1-9f84-4429-aa7d-24d1f4806c96"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "27bfc749-199a-4a30-a2fa-a0b63dfb047b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "392fe0d2-0f40-4d4b-9e7b-733b52b2e553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "4e43b6aa-39be-4735-84b4-6a9aa211d52b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "5d395827-710e-4159-ab45-968567f8dce0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "c5db8e9d-bdcf-4b99-b672-9a15354b2841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "cdf792c7-7f93-4619-b44d-e5119c75be9e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "da1ac910-3368-42f4-8cb5-80ee06328b87"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9e2f50c4c63b3c8c",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-7c7z3",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/d7580562-2c82-41ea-a357-b9e5f1f71e05/DSC_8071.jpeg",
+  "platform": "squarespace",
+  "product_id": "698a9ffd2f4a1e141e9abdef",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Amor • Medium (Washed & Natural)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-7c7z3",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 98.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "051722e3-24c0-41a0-a343-85e7d2d33565"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "26ba0b97-bb02-4f9e-872b-1e79a31b3253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Pour Over",
+    "variant_id": "7fc60632-2bd4-40fa-ad2b-4c1f2ea32e35"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Drip",
+    "variant_id": "928a33dd-254b-4ace-9a5e-5785073df487"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "d5388c6a-715d-419d-9e07-b2003139ff3f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "eed56dfe-9ba7-4a5d-8172-cb0aea4914e6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz French Press",
+    "variant_id": "f23bc821-2029-4dda-be87-bce0dfae9a1a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Espresso",
+    "variant_id": "fab46771-56d8-40d8-9f28-764075082e62"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cadd3e5dd2c7691f",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-275tk",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/5ee9eb92-b27a-4f6d-baa3-51d5553ea773/DSC_8074.jpeg",
+  "platform": "squarespace",
+  "product_id": "698aa1cd9f185411b2fe54e9",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Ramos • Medium+ (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-275tk",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "77abfb40-32fe-4884-bd12-54f9832ce5c4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "9b5360c3-2995-4f23-8abd-f0a57aa53d79"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "a0efcfe0-6c9c-4b9b-9fad-6b84bd5229f7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "a7fab279-a627-401c-b305-0cf0eb88833b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "c5b82a44-4d73-4fb0-8510-c99e0bc93af9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "ce51ab3d-467a-41e0-ab37-d16e7df83dd4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "d5c67c13-aced-4b05-b492-31a199799bbc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "d83a2c4f-6b7f-40f9-b25d-ad4e7a806d13"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "66d3279db641c498",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-275tk-crjzx",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/17191e2e-4c92-43cc-8640-01b4785e1fef/DSC_8076.jpeg",
+  "platform": "squarespace",
+  "product_id": "698aa31dc74c3206099e02af",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Estela • Dark (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-275tk-crjzx",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "0aa45be0-75e4-4eaa-a7f7-f5a8de950b12"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "3e4f6b19-1e46-400d-8f8b-760f266c9679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Drip",
+    "variant_id": "3e558a2b-7096-459d-a929-3cfc0de257e7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz French Press",
+    "variant_id": "4d0e1d59-9243-4b94-940c-e35488349ed9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 89.25,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "8ea1212d-0475-4b0e-a03d-089ca4164daf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Espresso",
+    "variant_id": "9b039ff2-9bdf-4301-8774-4db93d1a6490"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Aero Press",
+    "variant_id": "cad4f2f2-2187-497a-9840-b3526bd59b5e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.85,
+    "title": "12oz Pour Over",
+    "variant_id": "fe302d36-98e2-4548-82b1-6798e582e32a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dcc7affb578ceeeb",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/e9a91863-c40e-496c-aeb1-453a7491d805/DSC_8049.jpg",
+  "platform": "squarespace",
+  "product_id": "698aa6df27a0e518ed76d4e1",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Abeja • Light (Honey)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "224b906d-7e64-46f8-a2c2-21f3643f290d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "36adcb49-6466-4467-9bf8-b00747571df6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e51b74f10dde7ca",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/c7deb793-4506-4cba-878c-d5eb857f421b/IMG_4272.jpeg",
+  "platform": "squarespace",
+  "product_id": "698b526bc8ca364efcb2a5d5",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Manzana • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "5faf3908-039c-405c-9d90-bb08e8268de0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "8cf00d80-cb6b-4473-adca-71a69b2dc64a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "82b38f0df924868a",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/478758b6-1784-44ce-9e44-b1a678a95c59/DSC_8050.jpeg",
+  "platform": "squarespace",
+  "product_id": "698b7efd7aa1605f75bbdebe",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Huertas • Light+ (Natural)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "2725f624-c2a3-4421-83c5-c95cc79ff36e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "bcb8403d-bce7-42f7-95f3-8446c46e7e46"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7397f41734e70808",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/98f51fd9-4270-43cf-9d83-f892057e4299/DSC_8055.jpeg",
+  "platform": "squarespace",
+  "product_id": "698b7fb646796810ef0dd921",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "La Familia • Medium (Natural)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "85c99e47-3fa0-410f-b9c7-f89c1ca95dc6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "bd6e1a29-432c-450b-85cd-7452932739d0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "421ffab2ad03d0a9",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/34766e67-cbcd-4153-9661-c9512c2fab45/2026-09-30+-+Typica+Bag-1.jpg",
+  "platform": "squarespace",
+  "product_id": "698bdfec2cbf1e59018672bb",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Typica • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "aa7e779b-d23e-4152-8dae-b4aee202bf63"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a60ea91b1cfc2d24",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62-r86y5",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/7f4dc6a2-94a4-4507-8a25-6e5d3dcda603/IMG_0268.jpeg",
+  "platform": "squarespace",
+  "product_id": "69b01ecce97abf70984d9d01",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Gesha Landrace • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62-r86y5",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.85,
+    "title": "",
+    "variant_id": "0787d42a-fb5b-4530-8dbd-92728756a63d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b09908d076ed26b",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-26la4",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/eb159347-cd55-4e46-a02c-a82f58721d28/DSC_8045.jpg",
+  "platform": "squarespace",
+  "product_id": "69b7597158ae313318f5f064",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Icatu • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-26la4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 19.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "6b894f1a-0f45-4a73-81fe-aa580a9cf3ee"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "b91efd0d-2420-4e1d-b0ac-bf1fa342d3ef"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4bfd7c8775092451",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-sgzfm",
+  "image": "https://static1.squarespace.com/static/69848f2fc378ce050f13ce47/6989faea6f650d022f6876fb/69b75b35322fa56832208f8f/1788178007574/",
+  "platform": "squarespace",
+  "product_id": "69b75b35322fa56832208f8f",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Moras • Medium (Natural)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-sgzfm",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "002ad6fd-e712-4c7a-971f-eb54039c6009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 124.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "323d92e4-a67e-4326-9b83-2497b98d96c3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e057a41760d117bf",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-6mbma",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/46986e0f-c86d-4a9d-aa17-42e6d123eafc/IMG_3935.jpeg",
+  "platform": "squarespace",
+  "product_id": "69cd47193d10ba5712824f48",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Sin Cafe • Medium - Decaf (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-fxcpm-mx523-wehkn-6mbma",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "2c6622e9-01b7-4a3d-9eb2-40bae897961c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Aero Press",
+    "variant_id": "60169b58-4157-45f0-a817-2039e2b12335"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Drip",
+    "variant_id": "74f5a463-43a2-4bb4-97cf-dd14b0b678bb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz French Press",
+    "variant_id": "8491e393-b3a1-4a7b-b9ae-dfc6ba511552"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Cold Brew",
+    "variant_id": "8fdc68aa-1066-49aa-9fbe-e67dce3f3ab9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Espresso",
+    "variant_id": "acd7ba09-5b7f-4883-a3ba-1594a2b249f5"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.85,
+    "title": "12oz Pour Over",
+    "variant_id": "c13cb77f-51ba-46a1-b352-1995d91e7ed1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74bbecbe114ecce3",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62-cl3tn",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/1777294335030-ONIGSZ9UBUAZJ65LD1DN/E02DEC56-1A81-49E9-BBFF-04BC7C6883E1.jpeg",
+  "platform": "squarespace",
+  "product_id": "69eec17e57fe657140b3f8c4",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Gesha • Light (Washed)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-pty62-cl3tn",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 26.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "5bf70495-a604-4871-acc2-f0db9a9a1288"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "24ad54c0c56ebf98",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-7ffbj",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/78384922-8c9f-48d4-bf19-3402be1b5f06/IMG_4387.jpeg",
+  "platform": "squarespace",
+  "product_id": "69eec2b5d64f5203914b9239",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Huertas Miel • Light+ (Honey)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-7ffbj",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.85,
+    "title": "12oz Whole Beans",
+    "variant_id": "43bbb60f-419d-406e-b55f-529967a815be"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 107.0,
+    "title": "5Lbs Whole Beans",
+    "variant_id": "a90534d2-8d59-46da-ae10-f7edf5572f44"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "26987aa85e422d79",
+  "first_seen": "2026-10-26",
+  "handle": "the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-b794g",
+  "image": "https://images.squarespace-cdn.com/content/v1/69848f2fc378ce050f13ce47/17aed380-017a-4d2f-8366-96177ab8cc2f/2026-09-30+-+Tabora+Bag-1.jpg",
+  "platform": "squarespace",
+  "product_id": "6abd0e285b78833db8cc389b",
+  "product_type": "",
+  "roaster_slug": "vivacoffeeroasters",
+  "tags": [],
+  "title": "Tabora • Light (Honey)",
+  "url": "https://www.vivacoffeeroasters.com/coffee/p/the-haven-vessel-zsr4f-pzpfm-h35pj-2zl8y-mwd2l-b794g",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 24.85,
+    "title": "",
+    "variant_id": "2aa64252-ce0e-4eb9-8e2a-a1312ba81f74"
+   }
+  ],
+  "vendor": ""
+ }
+]

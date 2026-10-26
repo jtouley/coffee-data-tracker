@@ -1,0 +1,271 @@
+[
+ {
+  "body_hash": "4411a838703e42cf",
+  "first_seen": "2026-10-26",
+  "handle": "12-oz-bag-of-beans",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/4a4f284e-0d19-4df8-938a-fb275b49c00a/Hexe-Bag-Blood+Witch.png",
+  "platform": "squarespace",
+  "product_id": "589e07726b8f5bcb0476102e",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "Blood Witch",
+  "url": "https://www.hexecoffee.com/store/p/12-oz-bag-of-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "d06c9d4f-e04e-4575-8a25-875fa2d71683"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "989c0a5c9531de75",
+  "first_seen": "2026-10-26",
+  "handle": "bone-shaker-bourbon",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/b31c79b8-596c-4f54-b313-f5bbd44035d5/Hexe-Bag-Boneshaker.png",
+  "platform": "squarespace",
+  "product_id": "58b824463a0411afee0def8b",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "Boneshaker Bourbon",
+  "url": "https://www.hexecoffee.com/store/p/bone-shaker-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "ca0c5782-3bbe-4a9d-be70-983ae9356ac2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "279224e57cc3af54",
+  "first_seen": "2026-10-26",
+  "handle": "behemoth-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/2fc8e010-8e16-4761-8d6f-55ef65170063/Hexe-Bag-Behemoth+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "5a071771e4966b7f0271862a",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "Behemoth Dark Roast",
+  "url": "https://www.hexecoffee.com/store/p/behemoth-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "c3036fcc-74a1-4468-a749-c76f31a3cc3d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "742b2013ec960cad",
+  "first_seen": "2026-10-26",
+  "handle": "evil-friends",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/06301f94-b205-4b4c-b571-44c241d96f37/Hexe-Bag-Evil+Friends+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "5e93e4e1330a8767998fe507",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "Evil Friends",
+  "url": "https://www.hexecoffee.com/store/p/evil-friends",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "c36c8d05-2e1e-452d-a494-81d210814517"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc3c3b4675e9b722",
+  "first_seen": "2026-10-26",
+  "handle": "eye-for-an-eye-dark-roast",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/e8cb2c95-49fe-4c8f-aad6-b0e75adbe3ca/Hexe-Bag-Eye+for+an+Eye+%282%29.png",
+  "platform": "squarespace",
+  "product_id": "62470f2fe0bf0c0509de0e27",
+  "product_type": "Coffee",
+  "roaster_slug": "hexecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Eye for an Eye",
+  "url": "https://www.hexecoffee.com/store/p/eye-for-an-eye-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "6a3143ad-1e34-4a7e-a1c4-2d113fcf1364"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fc04f29286a42ef1",
+  "first_seen": "2026-10-26",
+  "handle": "fever-dream",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/60bcd9d5-ee81-469d-9185-8cedee0ca492/Hexen-Haus-New-Bag.png",
+  "platform": "squarespace",
+  "product_id": "64f9d7ddc06c9028d2744246",
+  "product_type": "Coffee",
+  "roaster_slug": "hexecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Hexenhaus Roast",
+  "url": "https://www.hexecoffee.com/store/p/fever-dream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "98a1bb17-4074-41bc-8f67-b6825be50b82"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ecba14f96c566d8f",
+  "first_seen": "2026-10-26",
+  "handle": "decafitated-decaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/1695831166317-U0ZDQ0YU22TUHWQUVF03/Decaf-Mockup+%281%29.png",
+  "platform": "squarespace",
+  "product_id": "6514526cca66e47282c1f688",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "Decafitated Decaf",
+  "url": "https://www.hexecoffee.com/store/p/decafitated-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "b9d54719-7125-4191-8e82-0e5002abfef5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b85fc07402afffbd",
+  "first_seen": "2026-10-26",
+  "handle": "5lb-bag-of-whole-bean-coffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/9eb82cd7-8f8d-4eb9-a643-c688e62758a1/5lb.png",
+  "platform": "squarespace",
+  "product_id": "67927b76268ad1226ad24fa6",
+  "product_type": "",
+  "roaster_slug": "hexecoffee",
+  "tags": [],
+  "title": "5lb Bag - Select a Blend",
+  "url": "https://www.hexecoffee.com/store/p/5lb-bag-of-whole-bean-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Painted As Monsters",
+    "variant_id": "09ebd950-9333-48a5-8840-452025ba397c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Inside Voices",
+    "variant_id": "0eff417c-cb81-4ab4-9a2b-b20f908cd740"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Eye For An Eye",
+    "variant_id": "59dede03-5044-44e0-931d-145d4cbcb3e7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "The Dark",
+    "variant_id": "5e9400ef-29bb-4251-b67a-0a1ce4952ff9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Boneshaker Bourbon",
+    "variant_id": "a634c4bd-da20-48f1-b800-9dc335f446a4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Evil Friends",
+    "variant_id": "a6c9ccba-20a5-4a5b-871a-4ed6a59efd8e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Behemoth",
+    "variant_id": "aa53ecbb-d98c-45ef-b072-bae307f0fd32"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Hexenhaus Roast",
+    "variant_id": "bd399cb2-21da-49d6-931d-33646bf3adef"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 85.0,
+    "title": "Decaf",
+    "variant_id": "d3bdbe6d-5d0c-4a03-be28-84d1f0cf6edf"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "inside-voices",
+  "image": "https://images.squarespace-cdn.com/content/v1/575198b35559860b0ffb2f4e/28181d8c-c79a-4ed4-883b-2fa43f4951ea/Hexe-Bag-Inside+Voices+%282%29.png",
+  "platform": "squarespace",
+  "product_id": "68371c945582757bbe4a728e",
+  "product_type": "Coffee",
+  "roaster_slug": "hexecoffee",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Inside Voices",
+  "url": "https://www.hexecoffee.com/store/p/inside-voices",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "",
+    "variant_id": "10fd50d0-755f-42ae-8215-708615af7ce7"
+   }
+  ],
+  "vendor": ""
+ }
+]

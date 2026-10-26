@@ -1,0 +1,233 @@
+{
+ "62b08a26dec5cf0dce20ae68": {
+  "body_hash": "dd094147345d5e21",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "slightly fruity",
+   "balanced",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "6325df9365bc46522036c0ab": {
+  "body_hash": "b0d3fc2b90442e89",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Brazil",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "chocolate",
+   "toasted caramel",
+   "peanut butter"
+  ],
+  "varietals": []
+ },
+ "6325e227e585bd1c020f30fb": {
+  "body_hash": "c3c78f0053da2d60",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark fruits",
+   "chocolate",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "63262b2eb432c955c9abc620": {
+  "body_hash": "15adaaabd381565e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toasted marshmallow",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "645b9b8e47363a27d17a445f": {
+  "body_hash": "94811fa45faf3add",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "black walnut",
+   "grapefruit"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "6849bf4977eb885d4fb70c4b": {
+  "body_hash": "14ac35a871d0d836",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "black walnut",
+   "grapefruit"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "68dac4a3d0579763876be922": {
+  "body_hash": "26da3169a5f3b01f",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pineapple",
+   "caramel",
+   "strawberry"
+  ],
+  "varietals": []
+ },
+ "68f11d69911a273c7a0c70e4": {
+  "body_hash": "a00c23c0195671e3",
+  "elevation_masl_max": 1450,
+  "elevation_masl_min": 1450,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "milk chocolate",
+   "spiced apple",
+   "buttery"
+  ],
+  "varietals": [
+   "Geisha",
+   "Java",
+   "Pink Bourbon"
+  ]
+ },
+ "696e6fd8d20c4168533e244e": {
+  "body_hash": "32dd055ddd97e60f",
+  "elevation_masl_max": 1700,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Peru",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "dark chocolate",
+   "raisin",
+   "pecan"
+  ],
+  "varietals": []
+ },
+ "6a0489540da263242e9c1a62": {
+  "body_hash": "688f29b2a29e9513",
+  "elevation_masl_max": 1500,
+  "elevation_masl_min": 1500,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Guatemala",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "black walnut",
+   "grapefruit"
+  ],
+  "varietals": [
+   "Castillo"
+  ]
+ },
+ "6a10bc0b545e0b202eebe3bb": {
+  "body_hash": "5829575771e2d551",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "natural",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toasted marshmallow"
+  ],
+  "varietals": []
+ },
+ "6a21bfcaf2f64d69b3950092": {
+  "body_hash": "cb00aadf3e2322a3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "honey",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

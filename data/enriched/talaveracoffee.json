@@ -1,0 +1,299 @@
+{
+ "66a2820a62250f54be33095e": {
+  "body_hash": "98e03357dbd8416e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "berry jam",
+   "chocolate cake",
+   "cherry cola"
+  ],
+  "varietals": []
+ },
+ "66eb431aa46d2206e491222a": {
+  "body_hash": "bd260b0d6b90e717",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "pecan pie",
+   "lime",
+   "cranberry"
+  ],
+  "varietals": []
+ },
+ "679bf39c268ad1226ada6214": {
+  "body_hash": "f7c9f6ae0362adfe",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cinnamon",
+   "piloncillo",
+   "mexican chocolate"
+  ],
+  "varietals": []
+ },
+ "679c2c9651efce572cc8c1ec": {
+  "body_hash": "0c18ccddafe086ed",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "6877e20d19274c33d6ec8f4f": {
+  "body_hash": "d5b5967c2a5ee300",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "black berry",
+   "sweet lime",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "688b9c426f6e084af579dfca": {
+  "body_hash": "fd10c42b598c70bc",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Rwanda",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "mandarin",
+   "fig",
+   "citron"
+  ],
+  "varietals": []
+ },
+ "688badb47b1e5e22124e61af": {
+  "body_hash": "398a709ae978f5d8",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "honeycomb",
+   "confectioners sugar",
+   "cocoa powder"
+  ],
+  "varietals": []
+ },
+ "688bc49a5bbb0f619cce4645": {
+  "body_hash": "b43a67b6e82aab5d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "guava",
+   "blueberry",
+   "grapefruit soda"
+  ],
+  "varietals": []
+ },
+ "68e024e7c8fa473a23c2653e": {
+  "body_hash": "e11f842516634c8e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "lavender",
+   "fruity pebbles",
+   "honey"
+  ],
+  "varietals": []
+ },
+ "68e026aa99c136443a97fead": {
+  "body_hash": "ecb87feeb09d4a13",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "raspberry mead",
+   "chocolate liquor"
+  ],
+  "varietals": []
+ },
+ "691bd96d2ec2dd6e67ab7fd3": {
+  "body_hash": "0095f37573dbdd30",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "brownies",
+   "apple cobbler",
+   "choco flan"
+  ],
+  "varietals": []
+ },
+ "69d4193ed4219b18dc366cb5": {
+  "body_hash": "7c7e1626be3bc15b",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "maple bourbon",
+   "blood orange",
+   "bakers chocolate"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ },
+ "6a2af61558b73f530a72b387": {
+  "body_hash": "a8ec99d73dd0684c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "apricots",
+   "mexican vanilla",
+   "cinnamon"
+  ],
+  "varietals": []
+ },
+ "6a568a11ca71f96dee9686cb": {
+  "body_hash": "d67cb5babe1af178",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "peach",
+   "cajeta",
+   "milk chocolate"
+  ],
+  "varietals": []
+ },
+ "6a723d12c52ce903d5ccd463": {
+  "body_hash": "175dfaedc30df9c9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Mexico",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brownies",
+   "pink fruit",
+   "cardamom"
+  ],
+  "varietals": []
+ },
+ "6ab1a82669ed316f099c10a5": {
+  "body_hash": "6c4d66b776173486",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ }
+}

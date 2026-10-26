@@ -1,0 +1,28 @@
+[
+ {
+  "body_hash": "6324879d1f33dcf5",
+  "first_seen": "2026-10-26",
+  "handle": "happy-coffee-blend-16-oz",
+  "image": "https://images.squarespace-cdn.com/content/v1/67c616b978437e1b7dfba34c/f1e6cc12-bc83-400e-a06b-341032fe0d4e/happy-coffee-blend-door-county-16-oz-1.jpg",
+  "platform": "squarespace",
+  "product_id": "67ec9008b9673100d70f66bb",
+  "product_type": "",
+  "roaster_slug": "skipstonecoffee",
+  "tags": [
+   "coffee",
+   "retail"
+  ],
+  "title": "happy coffee blend - 16 oz",
+  "url": "https://www.happycoffeedoco.com/shop/p/happy-coffee-blend-16-oz",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "7c4f492c-fddf-4103-b9a7-d74639157bed"
+   }
+  ],
+  "vendor": ""
+ }
+]

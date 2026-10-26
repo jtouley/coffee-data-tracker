@@ -1,0 +1,224 @@
+[
+ {
+  "body_hash": "f83716f219bb44fb",
+  "first_seen": "2026-10-26",
+  "handle": "tfc-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/75f626_45bf290728fd43b1972ca2629b588188_mv2-Photoroom.png?v=1714958924",
+  "platform": "shopify",
+  "product_id": "8121138184504",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [
+   "coffee",
+   "medium roast"
+  ],
+  "title": "TFC - Medium Roast",
+  "url": "https://titanforgedcoffee.com/products/tfc-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Ground",
+    "variant_id": "44480920486200"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "44480920518968"
+   }
+  ],
+  "vendor": "TitanForgedCoffee"
+ },
+ {
+  "body_hash": "e1036dccb25451fa",
+  "first_seen": "2026-10-26",
+  "handle": "gunnar-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/75f626_04075e18f7e347c49d27b5244ba73705_mv2-Photoroom.png?v=1714959152",
+  "platform": "shopify",
+  "product_id": "8121138250040",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [
+   "coffee",
+   "dark roast"
+  ],
+  "title": "GUNNAR - Dark Roast",
+  "url": "https://titanforgedcoffee.com/products/gunnar-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 14.95,
+    "title": "Ground",
+    "variant_id": "44480920748344"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "44480920781112"
+   }
+  ],
+  "vendor": "TitanForgedCoffee"
+ },
+ {
+  "body_hash": "a930d88156029a51",
+  "first_seen": "2026-10-26",
+  "handle": "legend-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/75f626_7b0f6208807048ebbc0196ecfc210895_mv2-Photoroom.png?v=1714959023",
+  "platform": "shopify",
+  "product_id": "8121138282808",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [
+   "coffee",
+   "medium roast"
+  ],
+  "title": "LEGEND - Medium Roast",
+  "url": "https://titanforgedcoffee.com/products/legend-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Ground",
+    "variant_id": "44480921043256"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "44480921076024"
+   }
+  ],
+  "vendor": "TitanForgedCoffee"
+ },
+ {
+  "body_hash": "cb20fda010acefde",
+  "first_seen": "2026-10-26",
+  "handle": "octane-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/75f626_32faf769625943998859296c9ca9589a_mv2-Photoroom.png?v=1714959189",
+  "platform": "shopify",
+  "product_id": "8121140445496",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [
+   "coffee",
+   "dark roast"
+  ],
+  "title": "OCTANE - Dark Roast",
+  "url": "https://titanforgedcoffee.com/products/octane-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 14.95,
+    "title": "Ground",
+    "variant_id": "44480929694008"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 14.95,
+    "title": "Whole Bean",
+    "variant_id": "44480929726776"
+   }
+  ],
+  "vendor": "TitanForgedCoffee"
+ },
+ {
+  "body_hash": "7d2fe2971187e822",
+  "first_seen": "2026-10-26",
+  "handle": "summit-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/summitpng-Photoroom.png?v=1724980204",
+  "platform": "shopify",
+  "product_id": "9552721379640",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [],
+  "title": "SUMMIT - Medium Roast",
+  "url": "https://titanforgedcoffee.com/products/summit-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "49176488608056"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "49176488640824"
+   }
+  ],
+  "vendor": "Titan Forged Coffee"
+ },
+ {
+  "body_hash": "83492bbbc21728d3",
+  "first_seen": "2026-10-26",
+  "handle": "raven-ops-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/Photoroom-20241003_210838.png?v=1728005477",
+  "platform": "shopify",
+  "product_id": "9598040506680",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [],
+  "title": "RAVEN OPS - Dark Roast",
+  "url": "https://titanforgedcoffee.com/products/raven-ops-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "49310161535288"
+   },
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.95,
+    "title": "Whole Bean",
+    "variant_id": "49310161568056"
+   }
+  ],
+  "vendor": "Titan Forged Coffee"
+ },
+ {
+  "body_hash": "85abdcee2fcbadd1",
+  "first_seen": "2026-10-26",
+  "handle": "kraken-medium-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0721/4281/5544/files/rn-image_picker_lib_temp_4dbb203b-d42e-4e56-8dd8-c25babcdb922.png?v=1751080117",
+  "platform": "shopify",
+  "product_id": "9991004815672",
+  "product_type": "coffee",
+  "roaster_slug": "titanforgedcoffee",
+  "tags": [],
+  "title": "KRAKEN - Medium/Dark Roast",
+  "url": "https://titanforgedcoffee.com/products/kraken-medium-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 15.95,
+    "title": "Ground",
+    "variant_id": "50552702435640"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.95,
+    "title": "Whole bean",
+    "variant_id": "50552702468408"
+   }
+  ],
+  "vendor": "Titan Forged Coffee"
+ }
+]

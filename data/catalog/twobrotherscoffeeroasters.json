@@ -1,0 +1,1507 @@
+[
+ {
+  "body_hash": "998bcad8342fe635",
+  "first_seen": "2026-10-26",
+  "handle": "stomping-ground-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Stomp_12.png?v=1773755784",
+  "platform": "shopify",
+  "product_id": "131037963",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "espresso"
+  ],
+  "title": "Stomping Ground®",
+  "url": "https://twobrotherscoffeeroasters.com/products/stomping-ground-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "296932679"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "296932681"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "296932689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "297021985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "297022293"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Home Espresso Grind / 5lb",
+    "variant_id": "297022717"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "d5693f7031dc955b",
+  "first_seen": "2026-10-26",
+  "handle": "brew-house-dark",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Brewhouse_Dark_Front.jpg?v=1749837808",
+  "platform": "shopify",
+  "product_id": "131075939",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "dark roast",
+   "french roast"
+  ],
+  "title": "Brewhouse Dark®",
+  "url": "https://twobrotherscoffeeroasters.com/products/brew-house-dark",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "297029685"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "297029687"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "297029697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "297029699"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "cab9d8efbb9eea52",
+  "first_seen": "2026-10-26",
+  "handle": "brew-house-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Brewhouse_Front.jpg?v=1749837760",
+  "platform": "shopify",
+  "product_id": "131076813",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [],
+  "title": "Brewhouse Blend®",
+  "url": "https://twobrotherscoffeeroasters.com/products/brew-house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "297032567"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "297032569"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "297032571"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "297032573"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "297032575"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "297032577"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "37950031069376"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "37950031102144"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "b6df5d211025cd46",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-brew-house",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Decaf_12_55cc9f05-1ebb-48cb-8c53-bdc6aaecc9dd.png?v=1789144558",
+  "platform": "shopify",
+  "product_id": "140613345",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "Mountain Water Processed",
+   "decaf",
+   "single origin"
+  ],
+  "title": "Decaf Brewhouse Blend",
+  "url": "https://twobrotherscoffeeroasters.com/products/decaf-brew-house",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32071137919061"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32071138738261"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "321002235"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "321002237"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "321002247"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "321002249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "321002251"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "6faaa7d01b2da311",
+  "first_seen": "2026-10-26",
+  "handle": "sweet-home-chicago",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Sweet_Home_Chicago_Front.jpg?v=1749837849",
+  "platform": "shopify",
+  "product_id": "1445902853",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "fresh coffee",
+   "roaster's choice"
+  ],
+  "title": "Sweet Home Chicago",
+  "url": "https://twobrotherscoffeeroasters.com/products/sweet-home-chicago",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "31831074439253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / Universal Grind",
+    "variant_id": "31831074472021"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "12oz / French Press",
+    "variant_id": "31831074504789"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "31831074537557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / Universal Grind",
+    "variant_id": "31831074570325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / French Press",
+    "variant_id": "31831074603093"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "a7ca82d32d3a8f37",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/PNG_12_b5cad4ca-9db7-418f-b029-2d6ccaffbc1e.png?v=1789146611",
+  "platform": "shopify",
+  "product_id": "167966460",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "dark roast",
+   "roaster's choice",
+   "single origin"
+  ],
+  "title": "Papua New Guinea Seasonal",
+  "url": "https://twobrotherscoffeeroasters.com/products/papua-new-guinea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "386322836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "386322838"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "386322848"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "386322850"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "3c866b9d5b86f03d",
+  "first_seen": "2026-10-26",
+  "handle": "morning-drive",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Morning_Drive_Front.jpg?v=1749837891",
+  "platform": "shopify",
+  "product_id": "2552519000149",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [],
+  "title": "Morning Drive",
+  "url": "https://twobrotherscoffeeroasters.com/products/morning-drive",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "22355886866517"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "22355886899285"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "22355886932053"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "22355886964821"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press / 12oz",
+    "variant_id": "22355886997589"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "French Press / 5lb",
+    "variant_id": "22355887030357"
+   }
+  ],
+  "vendor": "Two Brothers Online Store"
+ },
+ {
+  "body_hash": "ff3b0f25c622fbc7",
+  "first_seen": "2026-10-26",
+  "handle": "white-sky-seasonal",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/White_Sky_12_a0d06182-48d9-4aa6-84f4-8933607f59df.png?v=1759242516",
+  "platform": "shopify",
+  "product_id": "2996270405",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "fresh coffee",
+   "seasonal",
+   "winter"
+  ],
+  "title": "White Sky Seasonal",
+  "url": "https://twobrotherscoffeeroasters.com/products/white-sky-seasonal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Home Espresso Grind",
+    "variant_id": "32792677548117"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "8816816133"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "8816816197"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Universal Grind",
+    "variant_id": "8816816261"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lb / Universal Grind",
+    "variant_id": "8816816325"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press Grind",
+    "variant_id": "8816816453"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "c3c240612e0df044",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/October_2026_social_1080_x_1080_px.png?v=1790773802",
+  "platform": "shopify",
+  "product_id": "3126277637",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [],
+  "title": "Two Brothers Coffee Club",
+  "url": "https://twobrotherscoffeeroasters.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "9218606981"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "9218607045"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "9218607109"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "9218607173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "9218607237"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Home Espresso Grind / 5lb",
+    "variant_id": "9218607301"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "86a12f42ac9e4e85",
+  "first_seen": "2026-10-26",
+  "handle": "maelstrom-cold-brew-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Maelstrom_12.png?v=1789145206",
+  "platform": "shopify",
+  "product_id": "4698188611669",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "roaster's choice"
+  ],
+  "title": "Maelstrom Cold Brew ®",
+  "url": "https://twobrotherscoffeeroasters.com/products/maelstrom-cold-brew-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32448669220949"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "32448669253717"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "32448669286485"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "32448669319253"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "32448669352021"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "32448669417557"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "32448669450325"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Cold Brew Grind / 5lb",
+    "variant_id": "43929985908953"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "1aa95d6563d037cb",
+  "first_seen": "2026-10-26",
+  "handle": "leviathan-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Leviathan_12_7f1b2670-2520-4df2-9786-d71d779a2ac4.png?v=1789145578",
+  "platform": "shopify",
+  "product_id": "4698192183381",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "roaster's choice"
+  ],
+  "title": "Leviathan Cold Brew ®",
+  "url": "https://twobrotherscoffeeroasters.com/products/leviathan-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "32448696582229"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "32448696614997"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "32448696647765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "32448696680533"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "32448696713301"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46432588759257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "46432588792025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "French Press Grind / 5lb",
+    "variant_id": "46432588824793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Cold Brew Grind / 5lb",
+    "variant_id": "46432588857561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Chemex Grind / 5lb",
+    "variant_id": "46432588890329"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "ff8210f2b4b48ade",
+  "first_seen": "2026-10-26",
+  "handle": "brewhouse-dark-single-serve-cups-new",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/products/BHD_3d_7ce24467-b7fc-47c8-b984-76513ce78213.jpg?v=1631885728",
+  "platform": "shopify",
+  "product_id": "4789714157653",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "single serve cup"
+  ],
+  "title": "Brewhouse DARK - Single-Serve Recyclable Cups",
+  "url": "https://twobrotherscoffeeroasters.com/products/brewhouse-dark-single-serve-cups-new",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 27.99,
+    "title": "30 Cup - $0.83 PER CUP",
+    "variant_id": "32818307924053"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 12.99,
+    "title": "12 Cup - $0.91 PER CUP",
+    "variant_id": "43072818184409"
+   },
+   {
+    "available": true,
+    "grams": 1814,
+    "price_usd": 46.0,
+    "title": "60 Cup - $0.75 PER CUP",
+    "variant_id": "47310519206105"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "7cf17b93c96bf6e4",
+  "first_seen": "2026-10-26",
+  "handle": "half-brother-half-caf",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Half_Brother_12_a2375d9b-b2b8-4bca-bfb5-288b59f12c24.png?v=1789146055",
+  "platform": "shopify",
+  "product_id": "67714416649",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "Mountain Water Processed",
+   "decaf"
+  ],
+  "title": "Half Brother (Half Caff)",
+  "url": "https://twobrotherscoffeeroasters.com/products/half-brother-half-caf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "32071147651157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "French Press / 5lb",
+    "variant_id": "32071149256789"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "671134285833"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "671134318601"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "671134351369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "671134384137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "671134416905"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "baf8b989f2ef1e0d",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-arboleda-1",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Colombia_Seasonal_12_1.png?v=1787840126",
+  "platform": "shopify",
+  "product_id": "7471158657241",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [],
+  "title": "Colombia Seasonal",
+  "url": "https://twobrotherscoffeeroasters.com/products/colombia-arboleda-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "42142963368153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "42142963400921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "42142963433689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "42142963466457"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "42142963499225"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "83ed168efc639813",
+  "first_seen": "2026-10-26",
+  "handle": "turning-pointe-breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/TurningPointeBreakfastBlend5x7copy.jpg?v=1696012939",
+  "platform": "shopify",
+  "product_id": "8131391095001",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "roaster's choice"
+  ],
+  "title": "Turning Pointe Breakfast Blend",
+  "url": "https://twobrotherscoffeeroasters.com/products/turning-pointe-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43811249520857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "43811249553625"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "43811249586393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "43811249619161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "43811249651929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "43811249684697"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44644567744729"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Universal Grind / 5 lb",
+    "variant_id": "44644567777497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "French Press Grind / 5 lb",
+    "variant_id": "44644567810265"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Cold Brew Grind / 5 lb",
+    "variant_id": "44644567843033"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Chemex Grind / 5 lb",
+    "variant_id": "44644567875801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Home Espresso Grind / 5 lb",
+    "variant_id": "44644567908569"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "abf4454d79cf6e61",
+  "first_seen": "2026-10-26",
+  "handle": "turning-pointe-bold-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/TurningPointeBlend5x7copy.jpg?v=1696012974",
+  "platform": "shopify",
+  "product_id": "8131391389913",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "roaster's choice"
+  ],
+  "title": "Turning Pointe Bold Blend",
+  "url": "https://twobrotherscoffeeroasters.com/products/turning-pointe-bold-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43811250798809"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "43811250831577"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "43811250864345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "43811250897113"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "43811250929881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "43811250962649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44644587700441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Universal Grind / 5 lb",
+    "variant_id": "44644587733209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "French Press Grind / 5 lb",
+    "variant_id": "44644587765977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Cold Brew Grind / 5 lb",
+    "variant_id": "44644587798745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Chemex Grind / 5 lb",
+    "variant_id": "44644587831513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 73.0,
+    "title": "Home Espresso Grind / 5 lb",
+    "variant_id": "44644587864281"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "42f65dd70f54377c",
+  "first_seen": "2026-10-26",
+  "handle": "turning-pointe-special-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/TurningPointeSpecial5x7copy.jpg?v=1696012910",
+  "platform": "shopify",
+  "product_id": "8131391586521",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "roaster's choice"
+  ],
+  "title": "Turning Pointe Special Blend",
+  "url": "https://twobrotherscoffeeroasters.com/products/turning-pointe-special-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "43811251388633"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "43811251421401"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "43811251454169"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Cold Brew Grind / 12oz",
+    "variant_id": "43811251486937"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Chemex Grind / 12oz",
+    "variant_id": "43811251519705"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "43811251552473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5 lb",
+    "variant_id": "44644559880409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5 lb",
+    "variant_id": "44644559913177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "French Press Grind / 5 lb",
+    "variant_id": "44644559945945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Cold Brew Grind / 5 lb",
+    "variant_id": "44644559978713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Chemex Grind / 5 lb",
+    "variant_id": "44644560011481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Home Espresso Grind / 5 lb",
+    "variant_id": "44644560044249"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "44a04a8a24c18de2",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Ethiopia_12_5c93539b-b7c6-4514-b8fc-0e23e098906d.png?v=1789147354",
+  "platform": "shopify",
+  "product_id": "8311548149977",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [],
+  "title": "Ethiopia Seasonal",
+  "url": "https://twobrotherscoffeeroasters.com/products/ethiopia-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "44145155768537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "44145155801305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "44145155834073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "44145155866841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "44145155899609"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "a145568dcb2f11a9",
+  "first_seen": "2026-10-26",
+  "handle": "radiance-decaf-100-chemical-free",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/radiance_Decaf_12.png?v=1750165730",
+  "platform": "shopify",
+  "product_id": "8845398999257",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "Mountain Water Processed",
+   "decaf",
+   "single origin"
+  ],
+  "title": "Radiance Decaf",
+  "url": "https://twobrotherscoffeeroasters.com/products/radiance-decaf-100-chemical-free",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45421221445849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "45421221478617"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "Home Espresso Grind / 12oz",
+    "variant_id": "45421221511385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45421221544153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "45421221576921"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.99,
+    "title": "French Press / 12oz",
+    "variant_id": "45421221609689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press / 5lb",
+    "variant_id": "45421221642457"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "c17832355f878bec",
+  "first_seen": "2026-10-26",
+  "handle": "montage-seasonal",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/DSC_7031.jpg?v=1758910547",
+  "platform": "shopify",
+  "product_id": "9209429229785",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "blend",
+   "coffee",
+   "fresh coffee",
+   "roaster's choice"
+  ],
+  "title": "Montage",
+  "url": "https://twobrotherscoffeeroasters.com/products/montage-seasonal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Whole Bean",
+    "variant_id": "46701018611929"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / Universal Grind",
+    "variant_id": "46701018644697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "12oz / French Press",
+    "variant_id": "46701018677465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / Whole Bean",
+    "variant_id": "46701018710233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / Universal Grind",
+    "variant_id": "46701018743001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "5lbs / French Press",
+    "variant_id": "46701018775769"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "9126ec7ae5a94589",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-seasonal",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/Brazil_Seasonal_12_0b6a1925-bd6a-4a58-ac04-f222b8d557d4.png?v=1789147034",
+  "platform": "shopify",
+  "product_id": "9645613646041",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "single origin"
+  ],
+  "title": "Brazil Seasonal",
+  "url": "https://twobrotherscoffeeroasters.com/products/brazil-seasonal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48064090144985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "48064090177753"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press Grind / 12oz",
+    "variant_id": "48064090210521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48064090243289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "48064090276057"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "2e50a9c85fc97de3",
+  "first_seen": "2026-10-26",
+  "handle": "jurassic-java-a-field-museum-collaboration",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/1_fd29334c-9b52-4781-9769-5968e06a9949.png?v=1773429228",
+  "platform": "shopify",
+  "product_id": "9645739311321",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "Field Museum",
+   "coffee",
+   "two brothers coffee roasters",
+   "whole bean"
+  ],
+  "title": "Jurassic Java™ - A Field Museum Collaboration",
+  "url": "https://twobrotherscoffeeroasters.com/products/jurassic-java-a-field-museum-collaboration",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "48064835289305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "Universal Grind / 12oz",
+    "variant_id": "48064835322073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "48064835354841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "Universal Grind / 5lb",
+    "variant_id": "48064835387609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.99,
+    "title": "French Press / 12oz",
+    "variant_id": "48064835420377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 78.0,
+    "title": "French Press / 5lb",
+    "variant_id": "48064835453145"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ },
+ {
+  "body_hash": "52b3b57518a2cd9f",
+  "first_seen": "2026-10-26",
+  "handle": "co-ferment-exclusives",
+  "image": "https://cdn.shopify.com/s/files/1/0210/8996/files/2_ee744020-d10a-4b49-ba3d-80024921806c.png?v=1785350655",
+  "platform": "shopify",
+  "product_id": "9810192203993",
+  "product_type": "Roasted Coffee",
+  "roaster_slug": "twobrotherscoffeeroasters",
+  "tags": [
+   "roaster's choice",
+   "single origin"
+  ],
+  "title": "Co-Ferment Exclusives",
+  "url": "https://twobrotherscoffeeroasters.com/products/co-ferment-exclusives",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Colombia Cascade Hop Co-Ferment Whole Bean / 8oz",
+    "variant_id": "48952452120793"
+   },
+   {
+    "available": false,
+    "grams": 227,
+    "price_usd": 22.0,
+    "title": "Colombia Peach Co-Ferment Whole Bean / 8oz",
+    "variant_id": "48952489771225"
+   }
+  ],
+  "vendor": "Two Brothers Coffee Roasters"
+ }
+]

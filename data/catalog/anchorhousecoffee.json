@@ -1,0 +1,163 @@
+[
+ {
+  "body_hash": "b2b4c88bb24fd02d",
+  "first_seen": "2026-10-26",
+  "handle": "buckley-blend-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "1117537ac6af",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Buckley Blend",
+  "url": "https://www.anchorhousecoffee.org/product-page/buckley-blend-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "386b94e99b7fb609",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "2673e20854d0",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Ethiopia Guji",
+  "url": "https://www.anchorhousecoffee.org/product-page/ethiopia-guji-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "25cecdfcfac0a749",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-fairtrade-organic",
+  "image": null,
+  "platform": "generic",
+  "product_id": "363232af3a1b",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Honduras Fairtrade Organic",
+  "url": "https://www.anchorhousecoffee.org/product-page/honduras-fairtrade-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "247adf321ea05ec9",
+  "first_seen": "2026-10-26",
+  "handle": "abolitionist-blend-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "54a6e76a2c98",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Abolitionist Blend",
+  "url": "https://www.anchorhousecoffee.org/product-page/abolitionist-blend-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0fc6d4dae0e95670",
+  "first_seen": "2026-10-26",
+  "handle": "peru-fairtrade-organic-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "a6a3d731d456",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Peru Fairtrade Organic",
+  "url": "https://www.anchorhousecoffee.org/product-page/peru-fairtrade-organic-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b8e5d26116b551b",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "adf48fbbf180",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Decaf Sumatra",
+  "url": "https://www.anchorhousecoffee.org/product-page/decaf-sumatra-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d83736a65bee64ab",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-seriema-blend-1lb-bag",
+  "image": null,
+  "platform": "generic",
+  "product_id": "db7b08c6bc01",
+  "product_type": "",
+  "roaster_slug": "anchorhousecoffee",
+  "tags": [],
+  "title": "Brazil Porta Rossa",
+  "url": "https://www.anchorhousecoffee.org/product-page/brazil-seriema-blend-1lb-bag",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "",
+    "variant_id": "0"
+   }
+  ],
+  "vendor": ""
+ }
+]

@@ -1,0 +1,212 @@
+[
+ {
+  "body_hash": "d10fea18d63addd8",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5aa18dd0e4966b3fcfa75466/1737676650652/",
+  "platform": "squarespace",
+  "product_id": "5aa18dd0e4966b3fcfa75466",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Colombia",
+  "url": "https://www.pacifikcoffee.com/shop/colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb",
+    "variant_id": "1da297c5-abbc-446b-8443-2bd583e01c13"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "b95f171e-45ae-4986-8701-f085ee9c169e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d66d33e11869ef07",
+  "first_seen": "2026-10-26",
+  "handle": "guatamala",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5aa858808165f594c07de829/1737676633245/",
+  "platform": "squarespace",
+  "product_id": "5aa858808165f594c07de829",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Guatemala",
+  "url": "https://www.pacifikcoffee.com/shop/guatamala",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "6246796a-efbe-435b-81e6-88b80cde057c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb",
+    "variant_id": "c83f54ff-b7df-47cb-b2e2-0a891d0b72f1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1faa5b8f47432c64",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5c100b8a2b6a28a3b7f60071/1737676584128/",
+  "platform": "squarespace",
+  "product_id": "5c100b8a2b6a28a3b7f60071",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Decaf- Colombian Natural Organic",
+  "url": "https://www.pacifikcoffee.com/shop/decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "09f01462-054d-477c-9dd0-2eac3710e29b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "72f50fc7-e02e-4823-9775-740d2105d7c1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "91a978c6addcdd60",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-salmo-espresso",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5c10101a6d2a7315fc369c5f/1737676516293/",
+  "platform": "squarespace",
+  "product_id": "5c10101a6d2a7315fc369c5f",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Espresso Blend",
+  "url": "https://www.pacifikcoffee.com/shop/brazil-salmo-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 113.0,
+    "title": "5lb",
+    "variant_id": "71ba7d73-96e4-41ce-9bf6-178733ce87c8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12oz",
+    "variant_id": "f7044f65-168b-4011-ae09-f217b366398f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b2bedb21cefd201f",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-san-diego-honey",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5ee3e0457aeede18e78bdc81/1769094841035/",
+  "platform": "squarespace",
+  "product_id": "5ee3e0457aeede18e78bdc81",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Costa Rica",
+  "url": "https://www.pacifikcoffee.com/shop/costa-rica-san-diego-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "0bf92139-789c-4256-99bd-814c2a1b6b02"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb",
+    "variant_id": "f40da117-ea0d-423a-89c5-0cdeaf674a75"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "cc991ef95aafa1af",
+  "first_seen": "2026-10-26",
+  "handle": "ethopia-sidamo-arfasa",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/5ee3e2882a616e2485e07980/1750794440379/",
+  "platform": "squarespace",
+  "product_id": "5ee3e2882a616e2485e07980",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Ethiopia",
+  "url": "https://www.pacifikcoffee.com/shop/ethopia-sidamo-arfasa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "9b460528-8d2c-411a-9f16-af20f7483937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "c5362a63-b55e-46c8-b5c6-e1170883bc2c"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5b8858748cecdf70",
+  "first_seen": "2026-10-26",
+  "handle": "i2aqavuwi7wepvln2y1gskgtzvasxu",
+  "image": "https://static1.squarespace.com/static/5a4bde94a8b2b071ba7ce1d4/5a58fefc652dea7bdd91bbf7/6364613f52f8781c935c9d25/1737676603417/",
+  "platform": "squarespace",
+  "product_id": "6364613f52f8781c935c9d25",
+  "product_type": "",
+  "roaster_slug": "pacifikcoffee",
+  "tags": [],
+  "title": "Mexico",
+  "url": "https://www.pacifikcoffee.com/shop/i2aqavuwi7wepvln2y1gskgtzvasxu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "140f1538-f7dd-4cb0-9811-5c855d1eb7e8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz",
+    "variant_id": "afb1a7b0-4d48-437f-a082-9747f4acb6e7"
+   }
+  ],
+  "vendor": ""
+ }
+]

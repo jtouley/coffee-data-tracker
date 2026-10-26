@@ -1,0 +1,98 @@
+[
+ {
+  "body_hash": "cc029d969cc11973",
+  "first_seen": "2026-10-26",
+  "handle": "dicafinated",
+  "image": "https://cdn.shopify.com/s/files/1/0783/4799/3281/files/SMALLDICAFINATED_FRONT.png?v=1719453233",
+  "platform": "shopify",
+  "product_id": "10472755560641",
+  "product_type": "Coffee",
+  "roaster_slug": "famcoroasters",
+  "tags": [
+   "bean"
+  ],
+  "title": "Dicafinated",
+  "url": "https://famcoroasters.com/products/dicafinated",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "48418746925249"
+   }
+  ],
+  "vendor": "Famco Coffee Roasters"
+ },
+ {
+  "body_hash": "13361bd73ee0ddee",
+  "first_seen": "2026-10-26",
+  "handle": "espresimo",
+  "image": "https://cdn.shopify.com/s/files/1/0783/4799/3281/files/espressimofront.png?v=1719445148",
+  "platform": "shopify",
+  "product_id": "10472765882561",
+  "product_type": "Coffee",
+  "roaster_slug": "famcoroasters",
+  "tags": [],
+  "title": "Espressimo",
+  "url": "https://famcoroasters.com/products/espresimo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.99,
+    "title": "Default Title",
+    "variant_id": "48418762490049"
+   }
+  ],
+  "vendor": "Famco Coffee Roasters"
+ },
+ {
+  "body_hash": "1028d2cd7b90b079",
+  "first_seen": "2026-10-26",
+  "handle": "gold-cup-duo-30-off-on-2-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0783/4799/3281/files/GOLD_CUPFRONT_abcfe082-7f61-4bc4-8d46-566c95746469.png?v=1720299972",
+  "platform": "shopify",
+  "product_id": "10486599876801",
+  "product_type": "Coffee",
+  "roaster_slug": "famcoroasters",
+  "tags": [
+   "bean"
+  ],
+  "title": "Special Offer",
+  "url": "https://famcoroasters.com/products/gold-cup-duo-30-off-on-2-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 10886,
+    "price_usd": 41.99,
+    "title": "Default Title",
+    "variant_id": "48452878696641"
+   }
+  ],
+  "vendor": "Famco Coffee Roasters"
+ },
+ {
+  "body_hash": "0cc2fe03f44f4c3c",
+  "first_seen": "2026-10-26",
+  "handle": "connoisseur",
+  "image": "https://cdn.shopify.com/s/files/1/0783/4799/3281/files/connoisseurFRONT.png?v=1740101564",
+  "platform": "shopify",
+  "product_id": "10668788252865",
+  "product_type": "",
+  "roaster_slug": "famcoroasters",
+  "tags": [],
+  "title": "Connoisseur",
+  "url": "https://famcoroasters.com/products/connoisseur",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.99,
+    "title": "Default Title",
+    "variant_id": "49000119632065"
+   }
+  ],
+  "vendor": " Famco Coffee Roasters"
+ }
+]

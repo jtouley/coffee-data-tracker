@@ -1,0 +1,65 @@
+{
+ "9fe5d59ef6b3": {
+  "body_hash": "4868528b5de28558",
+  "elevation_masl_max": 2300,
+  "elevation_masl_min": 1900,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Ethiopia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "blueberry",
+   "black cherry",
+   "raspberry",
+   "thyme",
+   "dark chocolate"
+  ],
+  "varietals": []
+ },
+ "a6368ea5d3a1": {
+  "body_hash": "d074e4bc1b70bf8c",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Papua New Guinea",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "chocolate",
+   "raisin",
+   "cola",
+   "cinnamon"
+  ],
+  "varietals": []
+ },
+ "dfc0d08bb393": {
+  "body_hash": "dd31c753e5d66b65",
+  "elevation_masl_max": 1800,
+  "elevation_masl_min": 1650,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Tanzania",
+  "origin_region": null,
+  "process": "washed",
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "pink grapefruit",
+   "cherry",
+   "brown sugar",
+   "sage"
+  ],
+  "varietals": [
+   "Bourbon"
+  ]
+ }
+}

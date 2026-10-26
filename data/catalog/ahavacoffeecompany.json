@@ -1,0 +1,370 @@
+[
+ {
+  "body_hash": "02b91673aed23528",
+  "first_seen": "2026-10-26",
+  "handle": "coffeelipe",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Coffeelipe.png?v=1790310936",
+  "platform": "shopify",
+  "product_id": "10312829567195",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Coffeelipe",
+  "url": "https://ahavacoffeeroasters.com/products/coffeelipe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "50516391100635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50516391133403"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "Ground / 12oz",
+    "variant_id": "50516391166171"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Ground / 5lb",
+    "variant_id": "50516391198939"
+   }
+  ],
+  "vendor": "Ahava Coffee Company"
+ },
+ {
+  "body_hash": "b5b7bdc744a7306c",
+  "first_seen": "2026-10-26",
+  "handle": "dawn",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Dawn_e6682941-83cd-4caa-ba71-0ca1e1eae142.png?v=1790311196",
+  "platform": "shopify",
+  "product_id": "8505516097755",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Dawn",
+  "url": "https://ahavacoffeeroasters.com/products/dawn",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "45579342414043"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "45579342479579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12oz",
+    "variant_id": "45579342512347"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground / 5lb",
+    "variant_id": "45579342577883"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8bbc7fed620be170",
+  "first_seen": "2026-10-26",
+  "handle": "dusk-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Dusk_6ab83a0c-5b49-4b59-a355-4fa801200a63.png?v=1790311199",
+  "platform": "shopify",
+  "product_id": "8753853432027",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Dusk | Decaf",
+  "url": "https://ahavacoffeeroasters.com/products/dusk-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46325996421339"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46325996454107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12oz",
+    "variant_id": "46325996486875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 132.0,
+    "title": "Ground / 5lb",
+    "variant_id": "46325996519643"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "35a6145fb43a9a4f",
+  "first_seen": "2026-10-26",
+  "handle": "haven",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Haven_12531120-617b-4dba-8944-e4240b51c4e1.png?v=1790311206",
+  "platform": "shopify",
+  "product_id": "8753854349531",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Haven",
+  "url": "https://ahavacoffeeroasters.com/products/haven",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46326000091355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46326000124123"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12oz",
+    "variant_id": "46326000156891"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground / 5lb",
+    "variant_id": "46326000189659"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "d95920cd4576cb23",
+  "first_seen": "2026-10-26",
+  "handle": "ember",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Ember_6b03ccd5-fba1-4abf-841b-4a290256906f.png?v=1790311202",
+  "platform": "shopify",
+  "product_id": "8753866932443",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Ember",
+  "url": "https://ahavacoffeeroasters.com/products/ember",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46326068838619"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46326068871387"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12oz",
+    "variant_id": "46326068904155"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Ground / 5lb",
+    "variant_id": "46326068936923"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "1637778e8d049e6f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Ethiopia_ba45f599-6368-49bf-8a7f-c1144ca81786.png?v=1790311209",
+  "platform": "shopify",
+  "product_id": "8757729755355",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Ethiopia Guji",
+  "url": "https://ahavacoffeeroasters.com/products/ethiopia-guji",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46342967722203"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46342967754971"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "Ground / 12oz",
+    "variant_id": "46342967787739"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground / 5lb",
+    "variant_id": "46342967820507"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "7fb6fd43dea9c87a",
+  "first_seen": "2026-10-26",
+  "handle": "san-mateo",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Guatemala_6b4ee3ad-f925-47ce-85e0-7dfc68e4c07a.png?v=1790311212",
+  "platform": "shopify",
+  "product_id": "8758127395035",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "San Mateo",
+  "url": "https://ahavacoffeeroasters.com/products/san-mateo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46344725528795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46344725561563"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Ground / 12oz",
+    "variant_id": "46344725594331"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "Ground / 5lb",
+    "variant_id": "46344725627099"
+   }
+  ],
+  "vendor": "My Store"
+ },
+ {
+  "body_hash": "8b0260cb649f96d9",
+  "first_seen": "2026-10-26",
+  "handle": "finca-chirimoya",
+  "image": "https://cdn.shopify.com/s/files/1/0702/4472/9051/files/Peru_007b4ead-4d53-47fc-b61e-041fcce443d1.png?v=1790311215",
+  "platform": "shopify",
+  "product_id": "9427581370587",
+  "product_type": "",
+  "roaster_slug": "ahavacoffeecompany",
+  "tags": [
+   "Single Origin"
+  ],
+  "title": "Finca Chirimoya",
+  "url": "https://ahavacoffeeroasters.com/products/finca-chirimoya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "49067308220635"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "50516387070171"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.0,
+    "title": "Ground / 12oz",
+    "variant_id": "50516387102939"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 105.0,
+    "title": "Ground / 5lb",
+    "variant_id": "50516387135707"
+   }
+  ],
+  "vendor": "Ahava Coffee Company"
+ }
+]

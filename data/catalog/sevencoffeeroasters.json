@@ -1,0 +1,1259 @@
+[
+ {
+  "body_hash": "c3ec7db229412ed5",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-kona-coffee-espresso-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Hapuna-PDP-Hero-1024-L.jpg?v=1652224395",
+  "platform": "shopify",
+  "product_id": "3950531903553",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Citrus",
+   "Espresso",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Subscription",
+   "Sweet"
+  ],
+  "title": "Hapuna Hawaiian Espresso Blend",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-kona-coffee-espresso-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Whole Bean",
+    "variant_id": "31557583601729"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Press",
+    "variant_id": "32110888124481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Drip",
+    "variant_id": "32110889173057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Espresso",
+    "variant_id": "32110891565121"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "e20d83e0ea04d596",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-coffee-honolulu",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/HonoluluBlend-PDP-Experiment.jpg?v=1652113884",
+  "platform": "shopify",
+  "product_id": "3950535966785",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Best Selling",
+   "Blend",
+   "Fruit",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Smooth",
+   "Subscription"
+  ],
+  "title": "Honolulu Hawaiian Blend",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-coffee-honolulu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Whole Bean",
+    "variant_id": "31557600837697"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Drip",
+    "variant_id": "32110888288321"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Press",
+    "variant_id": "32110889893953"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Espresso",
+    "variant_id": "32110891663425"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "03013f4bbd1d1c48",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-coffee-na-pali",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/NaPali-PDP-Hero-1024-L.jpg?v=1652223343",
+  "platform": "shopify",
+  "product_id": "3950536753217",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Citrus",
+   "Dark",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Subscription",
+   "Tropical"
+  ],
+  "title": "Na Pali Hawaiian Blend",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-coffee-na-pali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Whole Bean",
+    "variant_id": "31557616009281"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Press",
+    "variant_id": "32110962638913"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Drip",
+    "variant_id": "32110963884097"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Espresso",
+    "variant_id": "32110964867137"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "ca504317f7b557a3",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-coffee-nana-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/NanasDecaf-PDP-Hero-1024-L.jpg?v=1652222924",
+  "platform": "shopify",
+  "product_id": "3950537932865",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Decaf",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Nutty",
+   "Subscription",
+   "Sweet",
+   "Swiss Water Processed"
+  ],
+  "title": "Nana's Decaf Blend",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-coffee-nana-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Whole Bean",
+    "variant_id": "31557631443009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Press",
+    "variant_id": "32110963064897"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Drip",
+    "variant_id": "32110964211777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Espresso",
+    "variant_id": "32110965030977"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "fbc8d3b290e5afb1",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-coffee-pano-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Pano-PDP-Hero-1024-L.jpg?v=1652224163",
+  "platform": "shopify",
+  "product_id": "3950538522689",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Nutty",
+   "Spice",
+   "Subscription"
+  ],
+  "title": "Pano Hawaiian Blend",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-coffee-pano-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Whole Bean",
+    "variant_id": "31557634949185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Press",
+    "variant_id": "32110963425345"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Drip",
+    "variant_id": "32110964408385"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.98,
+    "title": "Espresso",
+    "variant_id": "32110965129281"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "98cee3e9773d35f4",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-isles-kona-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Kona-ProductImage-shutterstock_1681233304.jpg?v=1626745860",
+  "platform": "shopify",
+  "product_id": "3950539997249",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Best Selling",
+   "Direct Trade",
+   "Hawaiian",
+   "INCLUDE-GRIND",
+   "Light",
+   "Light-Medium",
+   "Premium Hawaiian",
+   "Single Origin",
+   "Subscription",
+   "Tropical"
+  ],
+  "title": "100% Kona Hawaiian Coffee",
+  "url": "https://sevencoffeeroasters.com/products/hawaiian-isles-kona-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 59.98,
+    "title": "Whole Bean",
+    "variant_id": "31557568659521"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 59.98,
+    "title": "Press",
+    "variant_id": "32110820556865"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 59.98,
+    "title": "Drip",
+    "variant_id": "32110820655169"
+   },
+   {
+    "available": true,
+    "grams": 255,
+    "price_usd": 59.98,
+    "title": "Espresso",
+    "variant_id": "32110820720705"
+   }
+  ],
+  "vendor": "Keala's"
+ },
+ {
+  "body_hash": "0786cd014eafe858",
+  "first_seen": "2026-10-26",
+  "handle": "seven-diner-blend-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/DinerBlend-PDP-1024-Med.jpg?v=1652283263",
+  "platform": "shopify",
+  "product_id": "4660841676865",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Smooth",
+   "Subscription"
+  ],
+  "title": "Diner Blend",
+  "url": "https://sevencoffeeroasters.com/products/seven-diner-blend-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "32371139575873"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32371139969089"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32371140001857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32371140034625"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "9a0d25a0659b9256",
+  "first_seen": "2026-10-26",
+  "handle": "coffee-sample-pack-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/CoffeeSamplePack-Espresso.jpg?v=1635196636",
+  "platform": "shopify",
+  "product_id": "6596267835457",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [],
+  "title": "Espresso Coffee Sample Pack",
+  "url": "https://sevencoffeeroasters.com/products/coffee-sample-pack-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 52.0,
+    "title": "Whole Bean",
+    "variant_id": "39421301686337"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 52.0,
+    "title": "Espresso",
+    "variant_id": "39421301719105"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "e4110c55f56357f1",
+  "first_seen": "2026-10-26",
+  "handle": "fall-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/FallBlend-PDP-2022.jpg?v=1662678595",
+  "platform": "shopify",
+  "product_id": "6612714618945",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Limited Edition",
+   "Nutty",
+   "Seasonal",
+   "Spice",
+   "Sweet"
+  ],
+  "title": "Fall Blend",
+  "url": "https://sevencoffeeroasters.com/products/fall-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Whole Bean",
+    "variant_id": "39441142939713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Press",
+    "variant_id": "39441142972481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Drip",
+    "variant_id": "39441143005249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Espresso",
+    "variant_id": "39441143038017"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "aa1449fcf05a4d61",
+  "first_seen": "2026-10-26",
+  "handle": "sample-pack-best-coffee-pour-over",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/CoffeeSamplePack-PourOver-SevenCoffeeRoasters.jpg?v=1634939574",
+  "platform": "shopify",
+  "product_id": "6618529464385",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Bundle",
+   "hidden"
+  ],
+  "title": "Pour Over Coffee Sample Pack",
+  "url": "https://sevencoffeeroasters.com/products/sample-pack-best-coffee-pour-over",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 52.0,
+    "title": "Whole Bean",
+    "variant_id": "39450745995329"
+   },
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 52.0,
+    "title": "Pour Over",
+    "variant_id": "39450746028097"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "f144722e39cdb44a",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/CandyCaneLaneBlend-ProductImage-v3.jpg?v=1636413943",
+  "platform": "shopify",
+  "product_id": "6654710939713",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Candy Cane Lane Holiday Blend",
+  "url": "https://sevencoffeeroasters.com/products/holiday-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Whole Bean",
+    "variant_id": "39507774406721"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Press",
+    "variant_id": "39507774439489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Drip",
+    "variant_id": "39507774472257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.99,
+    "title": "Espresso",
+    "variant_id": "39507774505025"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "2bcd19a9342f6ab2",
+  "first_seen": "2026-10-26",
+  "handle": "spring-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/SpringBlend-PDP-2022-1024-Med.jpg?v=1652283223",
+  "platform": "shopify",
+  "product_id": "6787152314433",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend"
+  ],
+  "title": "Spring Blend",
+  "url": "https://sevencoffeeroasters.com/products/spring-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.97,
+    "title": "Whole Bean",
+    "variant_id": "39883702927425"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.97,
+    "title": "Press",
+    "variant_id": "39883702960193"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.97,
+    "title": "Drip",
+    "variant_id": "39883702992961"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.97,
+    "title": "Espresso",
+    "variant_id": "39883703025729"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "2a8d90a7c7fe2c31",
+  "first_seen": "2026-10-26",
+  "handle": "winter-blend",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/WinterBlend-PDP-2022.jpg?v=1671031905",
+  "platform": "shopify",
+  "product_id": "6931850231873",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Dark",
+   "Limited Edition",
+   "Nutty",
+   "Seasonal",
+   "Spice",
+   "Sweet"
+  ],
+  "title": "Winter Blend French Roast",
+  "url": "https://sevencoffeeroasters.com/products/winter-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.97,
+    "title": "Whole Bean",
+    "variant_id": "40311853219905"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.97,
+    "title": "Press",
+    "variant_id": "40311853252673"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.97,
+    "title": "Drip",
+    "variant_id": "40311853285441"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.97,
+    "title": "Espresso",
+    "variant_id": "40311853318209"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "b69ecf063483b750",
+  "first_seen": "2026-10-26",
+  "handle": "seven-roasters-choice-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/RoastersChoice-PDPImage-1024-2.jpg?v=1652283155",
+  "platform": "shopify",
+  "product_id": "7485899777",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Bold",
+   "Chocolate",
+   "Dark",
+   "Espresso",
+   "Fruit",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Roasty",
+   "Subscription",
+   "Vanilla"
+  ],
+  "title": "Roasters Choice Espresso Blend",
+  "url": "https://sevencoffeeroasters.com/products/seven-roasters-choice-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "23726392129"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110963523649"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110964506689"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110965588033"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "9c075eb1dc6d8750",
+  "first_seen": "2026-10-26",
+  "handle": "seven-espresso-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/EspressoHuli-PDP.jpg?v=1648689983",
+  "platform": "shopify",
+  "product_id": "7545263745",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Chocolate",
+   "Espresso",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Smooth",
+   "Subscription"
+  ],
+  "title": "Espresso Huli Blend",
+  "url": "https://sevencoffeeroasters.com/products/seven-espresso-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24013108737"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110851326017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110851915841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110852276289"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "2bd7140e5a9865fe",
+  "first_seen": "2026-10-26",
+  "handle": "seven-mexico-organic-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Seven-PDPImage-Mexico-1024-Med.jpg?v=1652283243",
+  "platform": "shopify",
+  "product_id": "7545343681",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Best Selling",
+   "INCLUDE-GRIND",
+   "Latin America",
+   "MCC",
+   "Medium",
+   "Organic",
+   "Roasty",
+   "Single Origin",
+   "Subscription",
+   "Sweet"
+  ],
+  "title": "Organic Mexico Santa Fe",
+  "url": "https://sevencoffeeroasters.com/products/seven-mexico-organic-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24013449985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110888878145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110890582081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110892318785"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "9758cd65d66c6764",
+  "first_seen": "2026-10-26",
+  "handle": "seven-brazil-direct-trade-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Seven-PDPImage-Brazil-1024-2.jpg?v=1651877534",
+  "platform": "shopify",
+  "product_id": "7545379137",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Citrus",
+   "Direct Trade",
+   "INCLUDE-GRIND",
+   "Latin America",
+   "MCC",
+   "Medium",
+   "Nutty",
+   "Single Origin",
+   "Spice",
+   "Subscription"
+  ],
+  "title": "Brazil Carmo De Minas Direct Trade",
+  "url": "https://sevencoffeeroasters.com/products/seven-brazil-direct-trade-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24013605185"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110851227713"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110851752001"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110852210753"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "ea99d35402d6aa2c",
+  "first_seen": "2026-10-26",
+  "handle": "seven-guatemala-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Seven-PDPImage-Guatemala-1024-Med.jpg?v=1652283284",
+  "platform": "shopify",
+  "product_id": "7545410625",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Fruit",
+   "INCLUDE-GRIND",
+   "Latin America",
+   "MCC",
+   "Medium",
+   "Nutty",
+   "Savory",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Guatemala Trapichitos",
+  "url": "https://sevencoffeeroasters.com/products/seven-guatemala-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24013762305"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110888058945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110889041985"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110891401281"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "7a9b4a7f67ae4c8e",
+  "first_seen": "2026-10-26",
+  "handle": "seven-specialty-coffee-sample-pack-builder",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/3-Pack-PDP-Image-2.jpg?v=1668979094",
+  "platform": "shopify",
+  "product_id": "7584735105",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "3 for $35 Infinite Options",
+   "Bundle",
+   "hidden"
+  ],
+  "title": "3-Bag Coffee Sample Pack Builder",
+  "url": "https://sevencoffeeroasters.com/products/seven-specialty-coffee-sample-pack-builder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1021,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "24864278337"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "74e19cae66898a1a",
+  "first_seen": "2026-10-26",
+  "handle": "seven-brazil-decaf-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/DecafBrazil-PDP-2022-1024-2.jpg?v=1651877393",
+  "platform": "shopify",
+  "product_id": "7637880513",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Decaf",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Nutty",
+   "Subscription",
+   "Sweet",
+   "Swiss Water Processed",
+   "Vanilla"
+  ],
+  "title": "Decaf Brazil Cerrado",
+  "url": "https://sevencoffeeroasters.com/products/seven-brazil-decaf-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Whole Bean",
+    "variant_id": "24439205505"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Press",
+    "variant_id": "32111006941249"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Drip",
+    "variant_id": "32111007596609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Espresso",
+    "variant_id": "32111008219201"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "2c45ea277503b619",
+  "first_seen": "2026-10-26",
+  "handle": "seven-ethiopia-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Seven-PDPImage-Ethiopia-1024-Med.jpg?v=1652283178",
+  "platform": "shopify",
+  "product_id": "7637894913",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Africa",
+   "Best Selling",
+   "Floral",
+   "Fruit",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Ethiopia Yirgachefe",
+  "url": "https://sevencoffeeroasters.com/products/seven-ethiopia-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24439266945"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110851489857"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110852014145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110852505665"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "61e313fafb66ebd2",
+  "first_seen": "2026-10-26",
+  "handle": "seven-bitch-blend-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/BiscuitBitch-PDP-1024-v2.jpg?v=1651876593",
+  "platform": "shopify",
+  "product_id": "7637910657",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Best Selling",
+   "Blend",
+   "Bold",
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Spice",
+   "Subscription"
+  ],
+  "title": "Biscuit Bitch Blend",
+  "url": "https://sevencoffeeroasters.com/products/seven-bitch-blend-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24439356353"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32111004811329"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32111007203393"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32111007858753"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "be9e4b734b85c667",
+  "first_seen": "2026-10-26",
+  "handle": "seven-sumatra-mandheling-old-school",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Sumatra-PDP-1024-Med.jpg?v=1652283132",
+  "platform": "shopify",
+  "product_id": "7638018817",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "INCLUDE-GRIND",
+   "MCC",
+   "Medium",
+   "Nutty",
+   "Savory",
+   "Single Origin",
+   "Southeast Asia",
+   "Subscription"
+  ],
+  "title": "Sumatra Mandheling Old School",
+  "url": "https://sevencoffeeroasters.com/products/seven-sumatra-mandheling-old-school",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "24439858177"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110963687489"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110964637761"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110965751873"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "5f0fe4064fa5ce5e",
+  "first_seen": "2026-10-26",
+  "handle": "seven-limited-edition-micro-lot-specialty-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/Seven-PDPImage-Brazil-Microlot.jpg?v=1648247049",
+  "platform": "shopify",
+  "product_id": "8280249345",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Crisp",
+   "Direct Trade",
+   "Floral",
+   "INCLUDE-GRIND",
+   "Latin America",
+   "Light",
+   "Light-Medium",
+   "Limited Edition",
+   "MCC",
+   "Single Origin",
+   "Subscription"
+  ],
+  "title": "Brazil Mantiqueira de Minas",
+  "url": "https://sevencoffeeroasters.com/products/seven-limited-edition-micro-lot-specialty-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Whole Bean",
+    "variant_id": "27739935361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Press",
+    "variant_id": "32110888779841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Drip",
+    "variant_id": "32110890451009"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.97,
+    "title": "Espresso",
+    "variant_id": "32110892154945"
+   }
+  ],
+  "vendor": "Seven"
+ },
+ {
+  "body_hash": "f519ff59025b0467",
+  "first_seen": "2026-10-26",
+  "handle": "summer-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/1443/0438/products/SummerBlend-PDP-2022-1024-Q10.jpg?v=1655335458",
+  "platform": "shopify",
+  "product_id": "8435684225",
+  "product_type": "Coffee",
+  "roaster_slug": "sevencoffeeroasters",
+  "tags": [
+   "Blend",
+   "Fruit",
+   "Light",
+   "Light-Medium",
+   "Limited Edition",
+   "MCC",
+   "Seasonal",
+   "Sweet",
+   "Tropical"
+  ],
+  "title": "Summer Blend",
+  "url": "https://sevencoffeeroasters.com/products/summer-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Whole Bean",
+    "variant_id": "28428081793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Press",
+    "variant_id": "32110946091073"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Drip",
+    "variant_id": "32110947106881"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.97,
+    "title": "Espresso",
+    "variant_id": "32110949892161"
+   }
+  ],
+  "vendor": "Seven"
+ }
+]

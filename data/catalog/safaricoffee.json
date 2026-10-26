@@ -1,0 +1,7770 @@
+[
+ {
+  "body_hash": "db7bcbb5e4cb54c8",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mt-zanzibar-1",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/black-pearl.jpg?v=1688637396",
+  "platform": "shopify",
+  "product_id": "8439684956441",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Black Pearl- Nature Friendly (TOP SELLER SINCE 2008)",
+  "url": "https://safaricoffee.com/products/copy-of-mt-zanzibar-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45637947097369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45637947130137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691153121561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45691153154329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45691153187097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45691153219865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45691153252633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691153285401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45691153318169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45691153350937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45691153383705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45691153449241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47206480314649"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47206480347417"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47206480380185"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47206480412953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47206480445721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47206480478489"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "a3a953ed418b5eff",
+  "first_seen": "2026-10-26",
+  "handle": "continental-europa",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/continental.jpg?v=1689140951",
+  "platform": "shopify",
+  "product_id": "8453189533977",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Continental Europa",
+  "url": "https://safaricoffee.com/products/continental-europa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "45691278426393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691278459161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "45691278491929"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "45691278524697"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "45691278557465"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "45691278590233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "45691278623001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691278655769"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "45691278688537"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "45691278721305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "45691278754073"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "45691278786841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47215677079833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47215677112601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47215677145369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47215677178137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47215677210905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47215677276441"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "6965a6be533e2f21",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast-serengeti",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/french.jpg?v=1689140973",
+  "platform": "shopify",
+  "product_id": "8453190517017",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "French Roast Serengeti",
+  "url": "https://safaricoffee.com/products/french-roast-serengeti",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45691280687385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691280720153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45691280752921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45691280785689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45691280818457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45691280851225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Whole Bean",
+    "variant_id": "45691280883993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691280916761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Drip Grind",
+    "variant_id": "45691280949529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Course French Press",
+    "variant_id": "45691280982297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Course Perculator",
+    "variant_id": "45691281015065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45691281047833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Whole Bean",
+    "variant_id": "47227576516889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "DARK ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47227576549657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "DARK ROAST / 5 LB / Drip Grind",
+    "variant_id": "47227576582425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "DARK ROAST / 5 LB / Course French Press",
+    "variant_id": "47227576615193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "DARK ROAST / 5 LB / Course Perculator",
+    "variant_id": "47227576647961"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "DARK ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47227576680729"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "53cc4383e1b3cca8",
+  "first_seen": "2026-10-26",
+  "handle": "italian-roast-il-caffe-e-il-nero",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/italian.jpg?v=1689140995",
+  "platform": "shopify",
+  "product_id": "8453191631129",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Italian Roast- \"il Caffe e il Nero\"",
+  "url": "https://safaricoffee.com/products/italian-roast-il-caffe-e-il-nero",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45691283046681"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691283079449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45691283112217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45691283144985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45691283177753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "VERY DARK ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45691283210521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "VERY DARK ROAST / 1 LB / Whole Bean",
+    "variant_id": "45691283243289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "VERY DARK ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691283276057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "VERY DARK ROAST / 1 LB / Drip Grind",
+    "variant_id": "45691283308825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "VERY DARK ROAST / 1 LB / Course French Press",
+    "variant_id": "45691283341593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "VERY DARK ROAST / 1 LB / Course Perculator",
+    "variant_id": "45691283374361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "VERY DARK ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45691283407129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "VERY DARK ROAST / 5 LB / Whole Bean",
+    "variant_id": "47241040625945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "VERY DARK ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47241040658713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "VERY DARK ROAST / 5 LB / Drip Grind",
+    "variant_id": "47241040691481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "VERY DARK ROAST / 5 LB / Course French Press",
+    "variant_id": "47241040724249"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "VERY DARK ROAST / 5 LB / Course Perculator",
+    "variant_id": "47241040757017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "VERY DARK ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47241040789785"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "80dfd85d08639a0e",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java-kamarl-a",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mochaJava.jpg?v=1689141019",
+  "platform": "shopify",
+  "product_id": "8453192974617",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Moka Java Kamarl A",
+  "url": "https://safaricoffee.com/products/moka-java-kamarl-a",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45691285405977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691285438745"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45691285471513"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45691285504281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45691285537049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45691285569817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45691285602585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691285635353"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45691285668121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45691285700889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45691285733657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45691285766425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47223199793433"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223199826201"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47223199858969"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47223199891737"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47223199924505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47223199957273"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "a9804cdf021caacb",
+  "first_seen": "2026-10-26",
+  "handle": "mombasa-shimba-hills",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mombasa.jpg?v=1689141041",
+  "platform": "shopify",
+  "product_id": "8453193859353",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mombasa Shimba Hills",
+  "url": "https://safaricoffee.com/products/mombasa-shimba-hills",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45691286847769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691286880537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45691286913305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45691286946073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45691286978841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45691287011609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45691287044377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691287077145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45691287109913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45691287142681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45691287175449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45691287208217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47223246848281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223246881049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47223246913817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47223246946585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47223246979353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47223247012121"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "8cb80105e7644135",
+  "first_seen": "2026-10-26",
+  "handle": "rainforest-santa-rosa-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/rainforrect.jpg?v=1689141064",
+  "platform": "shopify",
+  "product_id": "8453195039001",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Rainforest \"Santa Rosa\"- Nature Friendly",
+  "url": "https://safaricoffee.com/products/rainforest-santa-rosa-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "45691288715545"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691288748313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "45691288781081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "45691288813849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "45691288846617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "45691288879385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "45691288912153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691288944921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "45691288977689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "45691289010457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "45691289043225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "45691289075993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47223286300953"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223286333721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47223286366489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47223286399257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47223286432025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47223286464793"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "547fbbedf58f96df",
+  "first_seen": "2026-10-26",
+  "handle": "safari-java-savanna-blend-best-seller",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/safari-java.jpg?v=1689141083",
+  "platform": "shopify",
+  "product_id": "8453196251417",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Safari Java-\"Savanna Blend\" (BEST SELLER!)",
+  "url": "https://safaricoffee.com/products/safari-java-savanna-blend-best-seller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "45691292057881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691292090649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "45691292123417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "45691292156185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "45691292188953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "45691292221721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "45691292254489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691292287257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "45691292320025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "45691292352793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "45691292385561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "45691292418329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47223291904281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223291937049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47223291969817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47223292002585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47223292035353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47223292068121"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "0695fbcc61ec87d8",
+  "first_seen": "2026-10-26",
+  "handle": "the-dancing-bear-blend-best-seller",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/dancingBear.jpg?v=1689141103",
+  "platform": "shopify",
+  "product_id": "8453197299993",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Dancing Bear (TOP SELLER SINCE 2008)",
+  "url": "https://safaricoffee.com/products/the-dancing-bear-blend-best-seller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45691293729049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691293761817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45691293794585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45691293827353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45691293860121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45691293892889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45691293925657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691293958425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45691293991193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45691294023961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45691294056729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45691294089497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47223421862169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223421894937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47223421927705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47223421960473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47223421993241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47223422026009"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "c54605ae83680b1d",
+  "first_seen": "2026-10-26",
+  "handle": "victoria-falls-kahawa-blend-best-seller",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/victoriaFalls-roast.jpg?v=1689141122",
+  "platform": "shopify",
+  "product_id": "8453198381337",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Victoria Falls \"Kahawa Blend\" ( BEST SELLER!)",
+  "url": "https://safaricoffee.com/products/victoria-falls-kahawa-blend-best-seller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45691295564057"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691295596825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45691295629593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45691295662361"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45691295695129"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45691295727897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45691295760665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691295793433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45691295826201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45691295858969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45691295891737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45691295924505"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47227475853593"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47227475886361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47227475919129"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47227475951897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47227475984665"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47227476017433"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "9029cece1fa6acf2",
+  "first_seen": "2026-10-26",
+  "handle": "vienna-roast-imperial-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/vienna-roast.jpg?v=1689141142",
+  "platform": "shopify",
+  "product_id": "8453199397145",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Vienna Roast-\"Imperial Blend\"",
+  "url": "https://safaricoffee.com/products/vienna-roast-imperial-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "45691297202457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45691297235225"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "45691297267993"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "45691297300761"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "45691297333529"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 13.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "45691297366297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "45691297399065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45691297431833"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "45691297464601"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "45691297497369"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "45691297530137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "45691297562905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47227483357465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47227483390233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47227483423001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47227483455769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47227483488537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47227483521305"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "9b59e38ad81c5035",
+  "first_seen": "2026-10-26",
+  "handle": "celebes-kalossi-toraja-sulawesi",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/pacific-coffee.jpg?v=1689179495",
+  "platform": "shopify",
+  "product_id": "8454833209625",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Celebes Kalossi Toraja (Sulawesi)",
+  "url": "https://safaricoffee.com/products/celebes-kalossi-toraja-sulawesi",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695971787033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695971819801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695971852569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695971885337"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695971918105"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695971950873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "45695971983641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695972016409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "45695972049177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Course French Press",
+    "variant_id": "45695972081945"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Course Perculator",
+    "variant_id": "45695972114713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695972147481"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Whole Bean",
+    "variant_id": "47215494365465"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47215494398233"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Drip Grind",
+    "variant_id": "47215494431001"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Course French Press",
+    "variant_id": "47215494463769"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Course Perculator",
+    "variant_id": "47215494496537"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "Medium Roast / 5 LB / Turkish Grind",
+    "variant_id": "47215494529305"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "8a0b3a0190e49581",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-dark-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/pacific-coffee_e8aac92e-1eba-46bd-97ad-da69332a8e7a.jpg?v=1689179550",
+  "platform": "shopify",
+  "product_id": "8454838092057",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling DARK-",
+  "url": "https://safaricoffee.com/products/sumatra-mandheling-dark-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695981093145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695981125913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695981191449"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695981224217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695981256985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695981289753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45695981322521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695981355289"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45695981388057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45695981420825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45695981453593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695981486361"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47223397220633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223397253401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47223397286169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47223397318937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47223397351705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47223397384473"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "4fbfc3bd44a46d61",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/pacific-coffee_83418bd3-072c-4951-beb0-843f7b49027c.jpg?v=1689179562",
+  "platform": "shopify",
+  "product_id": "8454838812953",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Sumatra Mandheling",
+  "url": "https://safaricoffee.com/products/sumatra-mandheling-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695982305561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695982338329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695982371097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695982403865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695982436633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695982469401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45695982502169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695982534937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45695982567705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45695982600473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45695982633241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695982666009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47223381328153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223381393689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47223381426457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47223381459225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47223381491993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47223381524761"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "b7c598ea69baf0a8",
+  "first_seen": "2026-10-26",
+  "handle": "bolivia-caranavi-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee.jpg?v=1689179602",
+  "platform": "shopify",
+  "product_id": "8454841106713",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Bolivia Caranavi -Nature Friendly",
+  "url": "https://safaricoffee.com/products/bolivia-caranavi-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695985615129"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695985647897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695985680665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695985746201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695985778969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Medium Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695985811737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "45695985844505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695985877273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "45695985910041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Course French Press",
+    "variant_id": "45695985942809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Course Perculator",
+    "variant_id": "45695985975577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 35.0,
+    "title": "Medium Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695986008345"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Whole Bean",
+    "variant_id": "47214494581017"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47214494613785"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Drip Grind",
+    "variant_id": "47214494646553"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Course French Press",
+    "variant_id": "47214494679321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Course Perculator",
+    "variant_id": "47214494712089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 160.0,
+    "title": "Medium Roast / 5 LB / Turkish Grind",
+    "variant_id": "47214494744857"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "5b6d5d5db65d16f5",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee_0ac3956b-a2ae-4e16-9814-08e379a2f7fd.jpg?v=1689179643",
+  "platform": "shopify",
+  "product_id": "8454844219673",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Colombian Supremo",
+  "url": "https://safaricoffee.com/products/colombian-supremo",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45695989743897"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695989776665"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45695989809433"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45695989842201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45695989874969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45695989907737"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45695989940505"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695989973273"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45695990006041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45695990038809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45695990071577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45695990104345"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Whole Bean",
+    "variant_id": "48382298554649"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Ground Fine / Espresso",
+    "variant_id": "48382298652953"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Drip Grind",
+    "variant_id": "48382298718489"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Course French Press",
+    "variant_id": "48382298784025"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Course Perculator",
+    "variant_id": "48382298849561"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5.lb / Turkish Grind",
+    "variant_id": "48382298915097"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "71643dc7c405843c",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica-tarrazu-shb-tigre",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee_e918a86d-1385-4394-89fc-109195276d14.jpg?v=1689179683",
+  "platform": "shopify",
+  "product_id": "8454846611737",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Costa Rica Tarrazu SHB Tigre",
+  "url": "https://safaricoffee.com/products/costa-rica-tarrazu-shb-tigre",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45695993151769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695993184537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45695993217305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45695993250073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45695993282841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45695993315609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45695993348377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695993381145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45695993413913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45695993446681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45695993479449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45695993512217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47215733899545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47215733965081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47215734030617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47215734096153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47215734161689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 130.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47215734227225"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "b7cac88be629058a",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-huehuetenango",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee_2929a3c2-acdf-429b-825b-203d8216a045.jpg?v=1689179697",
+  "platform": "shopify",
+  "product_id": "8454847398169",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Guatemala Huehuetenango- Nature Friendly",
+  "url": "https://safaricoffee.com/products/guatemala-huehuetenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695995085081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695995117849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695995150617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695995183385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695995216153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695995248921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "45695995281689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695995314457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "45695995347225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Course French Press",
+    "variant_id": "45695995379993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Course Perculator",
+    "variant_id": "45695995412761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695995445529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Medium Roast / 5 LB / Whole Bean",
+    "variant_id": "48382521082137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "48382521147673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Roast / 5 LB / Drip Grind",
+    "variant_id": "48382521180441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Roast / 5 LB / Course French Press",
+    "variant_id": "48382521245977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Roast / 5 LB / Course Perculator",
+    "variant_id": "48382521311513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Roast / 5 LB / Turkish Grind",
+    "variant_id": "48382521377049"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "ddbf0d37c8b60cd5",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-dark-shg-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee_8d9212cc-9839-4f1c-819b-626aeda8f857.jpg?v=1689179709",
+  "platform": "shopify",
+  "product_id": "8454848184601",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Honduras Dark SHG / Nature Friendly",
+  "url": "https://safaricoffee.com/products/honduras-dark-shg-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45695996526873"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695996559641"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45695996592409"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45695996625177"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45695996657945"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45695996690713"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45695996723481"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695996756249"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45695996789017"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45695996821785"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45695996854553"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45695996887321"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47223135666457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223135699225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47223135731993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47223135764761"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47223135797529"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47223135830297"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "af5a1c43f103f692",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-chiapas-shg-turquese-nature-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/american-coffee_0f93d580-683d-4b51-a9d9-c1e898e33fc9.jpg?v=1689179724",
+  "platform": "shopify",
+  "product_id": "8454849003801",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mexican Chiapas SHG",
+  "url": "https://safaricoffee.com/products/mexican-chiapas-shg-turquese-nature-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45695998329113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45695998361881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45695998394649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45695998427417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45695998460185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45695998492953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45695998525721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45695998558489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45695998591257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45695998624025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45695998656793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45695998689561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47223185015065"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47223185047833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47223185080601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47223185113369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47223185146137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47223185178905"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "be0fa2232856b619",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombian-excelso-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-columbia.jpg?v=1689180337",
+  "platform": "shopify",
+  "product_id": "8454877643033",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Colombian Excelso Swiss Water",
+  "url": "https://safaricoffee.com/products/decaf-colombian-excelso-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45696056000793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45696056033561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45696056099097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45696056164633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45696056197401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45696056230169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45696056262937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45696056295705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45696056328473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45696056361241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45696056394009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45696056426777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47215906619673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47215906652441"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47215906685209"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47215906717977"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47215906750745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 140.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47215906783513"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "b6b578ea5258e959",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-continental-excelso-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-continental.jpg?v=1689180372",
+  "platform": "shopify",
+  "product_id": "8454880133401",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Continental Excelso Swiss Water",
+  "url": "https://safaricoffee.com/products/decaf-continental-excelso-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45696060391705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45696060424473"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45696060457241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45696060490009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45696060522777"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45696060555545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45696060588313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45696060621081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45696060653849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45696060686617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45696060719385"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45696060752153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47215927951641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47215927984409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47215928017177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47215928049945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47215928082713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47215928115481"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "7cce5261beace280",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-espresso-roast-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-espresso.jpg?v=1689180390",
+  "platform": "shopify",
+  "product_id": "8454881214745",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Espresso Roast Swiss Water",
+  "url": "https://safaricoffee.com/products/decaf-espresso-roast-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Whole Bean",
+    "variant_id": "45696062259481"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45696062292249"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Drip Grind",
+    "variant_id": "45696062325017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Course French Press",
+    "variant_id": "45696062357785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Course Perculator",
+    "variant_id": "45696062390553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Dark / 1/2 LB / Turkish Grind",
+    "variant_id": "45696062423321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Whole Bean",
+    "variant_id": "45696062456089"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45696062488857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Drip Grind",
+    "variant_id": "45696062521625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Course French Press",
+    "variant_id": "45696062554393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Course Perculator",
+    "variant_id": "45696062587161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Medium Dark / 1 LB / Turkish Grind",
+    "variant_id": "45696062619929"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Whole Bean",
+    "variant_id": "47222730686745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Ground Fine / Espresso",
+    "variant_id": "47222730719513"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Drip Grind",
+    "variant_id": "47222730752281"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Course French Press",
+    "variant_id": "47222730785049"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Course Perculator",
+    "variant_id": "47222730817817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Medium Dark / 5 lb / Turkish Grind",
+    "variant_id": "47222730850585"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "dd3b555452240455",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-roast-swiss-water",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-french-roast.jpg?v=1689180411",
+  "platform": "shopify",
+  "product_id": "8454882525465",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf French Roast Swiss Water",
+  "url": "https://safaricoffee.com/products/decaf-french-roast-swiss-water",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45696065700121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45696065732889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45696065765657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "45696065798425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45696065831193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45696065863961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "45696065896729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45696065929497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "45696065962265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "45696065995033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "45696066027801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "45696066060569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47222738616601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47222738649369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47222738682137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47222738714905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47222738747673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47222738780441"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "da33e5389aaa4703",
+  "first_seen": "2026-10-26",
+  "handle": "caramel-royale-vanilla-top-5-seller",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-carmel-royale.jpg?v=1689227274",
+  "platform": "shopify",
+  "product_id": "8456785592601",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Caramel Royale Vanilla (Top 5 Seller)",
+  "url": "https://safaricoffee.com/products/caramel-royale-vanilla-top-5-seller",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "45701802066201"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701802098969"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "45701802131737"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Course French Press",
+    "variant_id": "45701802164505"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Course Perculator",
+    "variant_id": "45701802197273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "Medium Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "45701802230041"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "45701802262809"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701802295577"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "45701802328345"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Course French Press",
+    "variant_id": "45701802361113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "Medium Roast / 1 LB / Course Perculator",
+    "variant_id": "45701802393881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "Medium Roast / 1 LB / Turkish Grind",
+    "variant_id": "45701802426649"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "416717d263703af8",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-almond",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-chocolate-almond.jpg?v=1689227302",
+  "platform": "shopify",
+  "product_id": "8456786182425",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Chocolate Almond",
+  "url": "https://safaricoffee.com/products/chocolate-almond",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701803180313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701803213081"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701803245849"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701803278617"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701803311385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701803344153"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701803376921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701803409689"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701803442457"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701803475225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701803507993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701803540761"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "e8fffec87f4e838c",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-chocolate-caramel.jpg?v=1689227323",
+  "platform": "shopify",
+  "product_id": "8456786673945",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Chocolate Caramel",
+  "url": "https://safaricoffee.com/products/chocolate-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701804196121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701804228889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701804261657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701804294425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701804327193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701804359961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701804392729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701804425497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701804458265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701804491033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701804523801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701804556569"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "978c0cfd327ee642",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-choclate-hazelnut.jpg?v=1689227385",
+  "platform": "shopify",
+  "product_id": "8456788705561",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Chocolate Hazelnut",
+  "url": "https://safaricoffee.com/products/chocolate-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701808193817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701808226585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701808259353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701808292121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701808324889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701808357657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701808390425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701808423193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701808455961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701808488729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701808521497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701808554265"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "5066a56ff099d3d3",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-macadamia",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-macadamia.jpg?v=1689227429",
+  "platform": "shopify",
+  "product_id": "8456789459225",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Chocolate Macadamia",
+  "url": "https://safaricoffee.com/products/chocolate-macadamia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701811896601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701811929369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701811962137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701811994905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701812027673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701812060441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701812093209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701812125977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701812158745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701812191513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701812224281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701812257049"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "9012acd676f8210e",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-cinnamon.jpg?v=1689227470",
+  "platform": "shopify",
+  "product_id": "8456791327001",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Cinnamon Hazelnut",
+  "url": "https://safaricoffee.com/products/cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701815927065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701815959833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701815992601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701816058137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701816090905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701816123673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701816156441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701816189209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701816221977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701816254745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701816287513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701816320281"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "ef1ec86f0c7ebc8f",
+  "first_seen": "2026-10-26",
+  "handle": "coconut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-cococream.jpg?v=1689227492",
+  "platform": "shopify",
+  "product_id": "8456791982361",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Coconut Cream",
+  "url": "https://safaricoffee.com/products/coconut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701817205017"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701817237785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701817270553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701817303321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701817336089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701817368857"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701817401625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701817434393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701817467161"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701817499929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701817532697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701817565465"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "3b7a80b7208eca96",
+  "first_seen": "2026-10-26",
+  "handle": "english-toffee-store-favorite",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-english-toffee.jpg?v=1689227514",
+  "platform": "shopify",
+  "product_id": "8456792572185",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "English Toffee (STORE FAVORITE)",
+  "url": "https://safaricoffee.com/products/english-toffee-store-favorite",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701818941721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701818974489"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701819007257"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701819040025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701819072793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701819105561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701819138329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701819171097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701819203865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701819236633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701819269401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701819302169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "48730998440217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "48730998472985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "48730998505753"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "48730998538521"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "48730998571289"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "48730998604057"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "30d9dc84cc880286",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/hawaii-hazel.jpg?v=1689227641",
+  "platform": "shopify",
+  "product_id": "8456794013977",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Hawaiian Hazelnut",
+  "url": "https://safaricoffee.com/products/hawaiian-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701822775577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701822808345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701822841113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701822873881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701822906649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701822939417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701822972185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701823004953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701823037721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701823070489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701823103257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701823136025"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "c0973e673a58eba2",
+  "first_seen": "2026-10-26",
+  "handle": "hawaiian-macadamia-nut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-hawaii.jpg?v=1689227696",
+  "platform": "shopify",
+  "product_id": "8456796504345",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Hawaiian Macadamia Nut",
+  "url": "https://safaricoffee.com/products/hawaiian-macadamia-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701828608281"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701828641049"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701828673817"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701828706585"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701828739353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701828772121"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701828804889"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701828837657"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701828870425"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701828903193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701828935961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701828968729"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "ba6845fe4fcde4a2",
+  "first_seen": "2026-10-26",
+  "handle": "tahitian-vanilla-rum",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-vanilla-rum.jpg?v=1689227881",
+  "platform": "shopify",
+  "product_id": "8456803549465",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Tahitian Vanilla Rum",
+  "url": "https://safaricoffee.com/products/tahitian-vanilla-rum",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701847613721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701847646489"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701847679257"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701847712025"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701847744793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701847777561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701847810329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701847843097"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701847875865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701847908633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701847941401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701847974169"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "061b7a06af51d650",
+  "first_seen": "2026-10-26",
+  "handle": "vanilla-hazelnut-top-5",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/flavor-vanilla-hazelnut.jpg?v=1689227965",
+  "platform": "shopify",
+  "product_id": "8456807645465",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Vanilla Hazelnut ( TOP 5)",
+  "url": "https://safaricoffee.com/products/vanilla-hazelnut-top-5",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701862850841"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701862883609"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701862916377"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701862949145"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701862981913"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701863014681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701863047449"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701863080217"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701863112985"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701863145753"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701863178521"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 24.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701863211289"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "8e64663b033f6ed0",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-butterscotch-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-butterscotch-toffee.jpg?v=1689228917",
+  "platform": "shopify",
+  "product_id": "8456836841753",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Butterscotch Toffee",
+  "url": "https://safaricoffee.com/products/decaf-butterscotch-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701943066905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701943099673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701943132441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701943165209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701943197977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701943230745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701943263513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701943296281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701943329049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701943361817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701943394585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701943427353"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "2ba4280fbb8c7fc4",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-caramel-royale",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-caramel-royale.jpg?v=1689228942",
+  "platform": "shopify",
+  "product_id": "8456837890329",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Caramel Royale",
+  "url": "https://safaricoffee.com/products/decaf-caramel-royale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701945000217"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701945032985"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701945065753"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701945098521"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701945131289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701945164057"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701945196825"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701945229593"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701945262361"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701945295129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701945327897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701945360665"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "8b7e147316790356",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-chocolate-fudge",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-chocolate-fudge.jpg?v=1689228961",
+  "platform": "shopify",
+  "product_id": "8456838545689",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Chocolate Fudge",
+  "url": "https://safaricoffee.com/products/decaf-chocolate-fudge",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701946048793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701946081561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701946114329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701946147097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701946179865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701946212633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701946245401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701946278169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701946310937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701946343705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701946376473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701946409241"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "46ac7aa315fa973d",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-chocolate-raspberry",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-chocolate-raspberry.jpg?v=1689228978",
+  "platform": "shopify",
+  "product_id": "8456839069977",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Chocolate Raspberry",
+  "url": "https://safaricoffee.com/products/decaf-chocolate-raspberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701947097369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701947130137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701947162905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701947195673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701947228441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701947261209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701947293977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701947326745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701947359513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701947392281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701947425049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701947457817"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "7406c3cecd0e6fcb",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-coconut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-cocnut-cream.jpg?v=1689228995",
+  "platform": "shopify",
+  "product_id": "8456840151321",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Coconut Cream",
+  "url": "https://safaricoffee.com/products/decaf-coconut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701951881497"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701951914265"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701951947033"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701951979801"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701952012569"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701952045337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701952078105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701952110873"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701952143641"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701952176409"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701952209177"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701952241945"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "3b7a80b7208eca96",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-english-toffee",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-choco-macadamia.jpg?v=1689229173",
+  "platform": "shopify",
+  "product_id": "8456840675609",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf English Toffee",
+  "url": "https://safaricoffee.com/products/decaf-english-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701953323289"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701953356057"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701953388825"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701953421593"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701953454361"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701953487129"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701953519897"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701953552665"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701953585433"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701953618201"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701953650969"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701953683737"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "0f546a6257dd97ad",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-french-vanilla.jpg?v=1689229192",
+  "platform": "shopify",
+  "product_id": "8456849785113",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf French Vanilla",
+  "url": "https://safaricoffee.com/products/decaf-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701979734297"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701979767065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701979799833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701979832601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701979865369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701979898137"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701979930905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701979963673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701979996441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701980029209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701980061977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701980094745"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47222743138585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47222743171353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47222743204121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47222743236889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47222743269657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47222743302425"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "30d9dc84cc880286",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-hawaiian-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-hawaiian-hazelnut.jpg?v=1689229213",
+  "platform": "shopify",
+  "product_id": "8456850538777",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Hawaiian Hazelnut",
+  "url": "https://safaricoffee.com/products/decaf-hawaiian-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701981471001"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701981503769"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701981536537"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701981569305"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701981602073"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701981634841"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701981667609"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701981700377"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701981733145"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701981765913"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701981798681"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701981831449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47222758768921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47222758801689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47222758834457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47222758867225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47222758899993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47222758932761"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "061b7a06af51d650",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vanilla-hazelnut",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-vanilla-hazelnut.jpg?v=1689229258",
+  "platform": "shopify",
+  "product_id": "8456851620121",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Vanilla Hazelnut",
+  "url": "https://safaricoffee.com/products/decaf-vanilla-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701983863065"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701983895833"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701983928601"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701983961369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701983994137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701984026905"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701984059673"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701984092441"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701984125209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701984157977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701984190745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701984223513"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "15b571c137274d60",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-vanilla-nut-cream",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/decaf-vanilla-cream.jpg?v=1689229303",
+  "platform": "shopify",
+  "product_id": "8456853717273",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Decaf Vanilla Nut Cream",
+  "url": "https://safaricoffee.com/products/decaf-vanilla-nut-cream",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "45701986681113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "45701986713881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "45701986746649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "45701986779417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "45701986812185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "45701986844953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "45701986877721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "45701986910489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "45701986943257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "45701986976025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "45701987041561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 32.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "45701987074329"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "2adff7d959782f33",
+  "first_seen": "2026-10-26",
+  "handle": "cowboy-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/cowboycoffee_13575c07-be2d-46db-a48b-7d0a841236a4.jpg?v=1698118906",
+  "platform": "shopify",
+  "product_id": "8860947382553",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Cowboy Coffee",
+  "url": "https://safaricoffee.com/products/cowboy-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "47242287972633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242288103705"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "47242288136473"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Course French Press",
+    "variant_id": "47242288169241"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "47242288202009"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "LIGHT ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "47242288234777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Whole Bean",
+    "variant_id": "47242288267545"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242288300313"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Drip Grind",
+    "variant_id": "47242288333081"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Course French Press",
+    "variant_id": "47242288365849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Course Perculator",
+    "variant_id": "47242288398617"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "LIGHT ROAST / 1 LB / Turkish Grind",
+    "variant_id": "47242288431385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "LIGHT ROAST / 5 LB / Whole Bean",
+    "variant_id": "47242288464153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "LIGHT ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242288496921"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "LIGHT ROAST / 5 LB / Drip Grind",
+    "variant_id": "47242288529689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "LIGHT ROAST / 5 LB / Course French Press",
+    "variant_id": "47242288562457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "LIGHT ROAST / 5 LB / Course Perculator",
+    "variant_id": "47242288595225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "LIGHT ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47242288627993"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "976d6f4222f522bb",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-washed-yirgaqcheffe-1",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/african-Coffee_fa0e02d8-d599-40ff-85ab-2b922667a8f3.jpg?v=1698119087",
+  "platform": "shopify",
+  "product_id": "8860950397209",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Ethiopian Washed Yirgaqcheffe",
+  "url": "https://safaricoffee.com/products/ethiopian-washed-yirgaqcheffe-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 17.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "47242298360089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242298392857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "47242298425625"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "47242298458393"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "47242298491161"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 18.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "47242298523929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "47242298556697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242298589465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "47242298622233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "47242298655001"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "47242298753305"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "47242298786073"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47242298818841"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242298851609"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47242298884377"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47242298917145"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47242298949913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47242298982681"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "864d4166b39b88ef",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-black-pearl",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/african-Coffee.jpg?v=1698119192",
+  "platform": "shopify",
+  "product_id": "8860954099993",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Tanzanian Peaberry Select",
+  "url": "https://safaricoffee.com/products/copy-of-black-pearl",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "47242309763353"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242309796121"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "47242309828889"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course French Press",
+    "variant_id": "47242309861657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "47242309894425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "47242309927193"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Whole Bean",
+    "variant_id": "47242309959961"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242309992729"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Drip Grind",
+    "variant_id": "47242310025497"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Course French Press",
+    "variant_id": "47242310058265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Course Perculator",
+    "variant_id": "47242310091033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "MEDIUM ROAST / 1 LB / Turkish Grind",
+    "variant_id": "47242310123801"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM ROAST / 5 LB / Whole Bean",
+    "variant_id": "47242310156569"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242310189337"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Drip Grind",
+    "variant_id": "47242310222105"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course French Press",
+    "variant_id": "47242310254873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 145.0,
+    "title": "MEDIUM ROAST / 5 LB / Course Perculator",
+    "variant_id": "47242310287641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 155.0,
+    "title": "MEDIUM ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47242310320409"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "926969239c7a55e4",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-moka-java-kamarl-a",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mt-java_284cbbbb-5f9a-48f7-9006-80b4ae8fd5dc.jpg?v=1698119391",
+  "platform": "shopify",
+  "product_id": "8860958032153",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Java Reserve",
+  "url": "https://safaricoffee.com/products/copy-of-moka-java-kamarl-a",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "47242325721369"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242325754137"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "47242325786905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "47242325819673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "47242325852441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "47242325885209"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "47242325917977"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242325950745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "47242325983513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "47242326016281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "47242326049049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "47242326081817"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47242326114585"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242326147353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47242326180121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47242326212889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47242326245657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47242326278425"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "3eaf6cc25b28f19c",
+  "first_seen": "2026-10-26",
+  "handle": "mt-kenya",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/bag-sampler_e06d2c9a-a27c-496c-aad9-4d99c9678863.jpg?v=1698119618",
+  "platform": "shopify",
+  "product_id": "8860959899929",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Kenya",
+  "url": "https://safaricoffee.com/products/mt-kenya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "47242332930329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242332995865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "47242333028633"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "47242333061401"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "47242333094169"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "47242333126937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "47242333159705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242333192473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "47242333225241"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "47242333258009"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "47242333290777"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "47242333323545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47242333356313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242333389081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47242333421849"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47242333454617"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47242333487385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 150.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47242333520153"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "5073d1eb86ad24a6",
+  "first_seen": "2026-10-26",
+  "handle": "mt-kilimanjaro-1",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/kilamandaro_acd8b554-0a59-467a-8e8a-922c82c535eb.jpg?v=1698119848",
+  "platform": "shopify",
+  "product_id": "8860965568793",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Kilimanjaro",
+  "url": "https://safaricoffee.com/products/mt-kilimanjaro-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "47242344792345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242344825113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "47242344857881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "47242344890649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "47242344923417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "47242344956185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "47242344988953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242345021721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "47242345054489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "47242345087257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "47242345120025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "47242345152793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47242345185561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242345218329"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47242345251097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47242345283865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47242345316633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47242345349401"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "444a420e33b72bb6",
+  "first_seen": "2026-10-26",
+  "handle": "mt-marrakesh",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mt-meresh_30005ca6-8004-4c2e-bd45-7e851bf23cf4.jpg?v=1698119967",
+  "platform": "shopify",
+  "product_id": "8860972876057",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Marrakesh",
+  "url": "https://safaricoffee.com/products/mt-marrakesh",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "47242365370649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242365403417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "47242365436185"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "47242365468953"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "47242365501721"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "47242365534489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "47242365567257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242365600025"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "47242365632793"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "47242365665561"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "47242365698329"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "47242365731097"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47242365763865"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242365796633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47242365829401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47242365862169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47242365894937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47242365927705"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "72b648d930d12819",
+  "first_seen": "2026-10-26",
+  "handle": "mt-sengal",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mt-segal_ab2a1b94-2af6-4a13-aa26-609d48b1453f.jpg?v=1698120033",
+  "platform": "shopify",
+  "product_id": "8860974842137",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Sengal",
+  "url": "https://safaricoffee.com/products/mt-sengal",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Whole Bean",
+    "variant_id": "47242369728793"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242369761561"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Drip Grind",
+    "variant_id": "47242369794329"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course French Press",
+    "variant_id": "47242369827097"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Course Perculator",
+    "variant_id": "47242369859865"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "MEDIUM DARK / 1/2 LB / Turkish Grind",
+    "variant_id": "47242369892633"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Whole Bean",
+    "variant_id": "47242369925401"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242369958169"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Drip Grind",
+    "variant_id": "47242369990937"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course French Press",
+    "variant_id": "47242370023705"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Course Perculator",
+    "variant_id": "47242370056473"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK / 1 LB / Turkish Grind",
+    "variant_id": "47242370089241"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Whole Bean",
+    "variant_id": "47242370122009"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242370154777"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Drip Grind",
+    "variant_id": "47242370187545"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course French Press",
+    "variant_id": "47242370220313"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Course Perculator",
+    "variant_id": "47242370253081"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK / 5 LB / Turkish Grind",
+    "variant_id": "47242370285849"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "c7b56ec15a8d5ddc",
+  "first_seen": "2026-10-26",
+  "handle": "mt-zanzibar",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/mt-zanzibar.jpg?v=1698120160",
+  "platform": "shopify",
+  "product_id": "8860976611609",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Mt Zanzibar",
+  "url": "https://safaricoffee.com/products/mt-zanzibar",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "47242378543385"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242378576153"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "47242378608921"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Course French Press",
+    "variant_id": "47242378641689"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "47242378674457"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 14.0,
+    "title": "DARK ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "47242378707225"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Whole Bean",
+    "variant_id": "47242378739993"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242378772761"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Drip Grind",
+    "variant_id": "47242378805529"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Course French Press",
+    "variant_id": "47242378838297"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Course Perculator",
+    "variant_id": "47242378871065"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 1 LB / Turkish Grind",
+    "variant_id": "47242378903833"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Whole Bean",
+    "variant_id": "47242378936601"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242378969369"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 25.0,
+    "title": "DARK ROAST / 5 LB / Drip Grind",
+    "variant_id": "47242379002137"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Course French Press",
+    "variant_id": "47242379034905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Course Perculator",
+    "variant_id": "47242379067673"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "DARK ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47242379100441"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "897d5a7d360a0985",
+  "first_seen": "2026-10-26",
+  "handle": "copy-of-mombasa-shimba-hills",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/portofino_sunrise_ea0d9976-e981-4274-8558-f503658f6ffa.jpg?v=1698120250",
+  "platform": "shopify",
+  "product_id": "8860977725721",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Portofino Sunrise",
+  "url": "https://safaricoffee.com/products/copy-of-mombasa-shimba-hills",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 15.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Whole Bean",
+    "variant_id": "47242381656345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47242381689113"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Drip Grind",
+    "variant_id": "47242381721881"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Course French Press",
+    "variant_id": "47242381754649"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Course Perculator",
+    "variant_id": "47242381787417"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "MEDIUM DARK ROAST / 1/2 LB / Turkish Grind",
+    "variant_id": "47242381820185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Whole Bean",
+    "variant_id": "47242381852953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47242381885721"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Drip Grind",
+    "variant_id": "47242381918489"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Course French Press",
+    "variant_id": "47242381951257"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Course Perculator",
+    "variant_id": "47242382147865"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 26.0,
+    "title": "MEDIUM DARK ROAST / 1 LB / Turkish Grind",
+    "variant_id": "47242382180633"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 125.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Whole Bean",
+    "variant_id": "47242382213401"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47242382246169"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Drip Grind",
+    "variant_id": "47242382278937"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Course French Press",
+    "variant_id": "47242382311705"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Course Perculator",
+    "variant_id": "47242382344473"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 135.0,
+    "title": "MEDIUM DARK ROAST / 5 LB / Turkish Grind",
+    "variant_id": "47242382377241"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "0e119a01676de753",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-dark-1",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/african-Coffee_4ccb6261-9967-4fc4-a90d-3926f022af46.jpg?v=1698280848",
+  "platform": "shopify",
+  "product_id": "8867847373081",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Kenya AA Dark",
+  "url": "https://safaricoffee.com/products/kenya-aa-dark-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "47261556506905"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47261556539673"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "47261556572441"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "47261556605209"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "47261556637977"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "47261556670745"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 38.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "47261556703513"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47261556736281"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "47261556769049"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "47261556801817"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "47261556834585"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 39.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "47261556867353"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 185.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47261556900121"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47261556932889"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47261556965657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47261556998425"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47261557031193"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 165.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47261557063961"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "0e119a01676de753",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-select-1",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/african-Coffee_043d6e1c-d957-47f9-9c01-2d91b61ab22e.jpg?v=1698280936",
+  "platform": "shopify",
+  "product_id": "8867854483737",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Kenya AA Select",
+  "url": "https://safaricoffee.com/products/kenya-aa-select-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 19.0,
+    "title": "Dark Roast / 1/2 LB / Whole Bean",
+    "variant_id": "47261569253657"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "47261569286425"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Drip Grind",
+    "variant_id": "47261569319193"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Course French Press",
+    "variant_id": "47261569351961"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Course Perculator",
+    "variant_id": "47261569384729"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 20.0,
+    "title": "Dark Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "47261569450265"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Whole Bean",
+    "variant_id": "47261569483033"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "47261569515801"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Drip Grind",
+    "variant_id": "47261569548569"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Course French Press",
+    "variant_id": "47261569581337"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Course Perculator",
+    "variant_id": "47261569614105"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "Dark Roast / 1 LB / Turkish Grind",
+    "variant_id": "47261569646873"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Whole Bean",
+    "variant_id": "47261569679641"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Ground Fine / Espresso",
+    "variant_id": "47261569712409"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Drip Grind",
+    "variant_id": "47261569745177"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Course French Press",
+    "variant_id": "47261569777945"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Course Perculator",
+    "variant_id": "47261569810713"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "Dark Roast / 5 LB / Turkish Grind",
+    "variant_id": "47261569843481"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "42b3991427c93ee3",
+  "first_seen": "2026-10-26",
+  "handle": "bali",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/pacific-coffee_560243c8-c661-49cb-97c1-398a44af0ccd.jpg?v=1713392617",
+  "platform": "shopify",
+  "product_id": "9310101799193",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Bali",
+  "url": "https://safaricoffee.com/products/bali",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "48596812693785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "48596812726553"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "48596812759321"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Course French Press",
+    "variant_id": "48596812792089"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Course Perculator",
+    "variant_id": "48596812824857"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 16.0,
+    "title": "Medium Roast / 1/2 LB / Turkish Grind",
+    "variant_id": "48596812857625"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "48596812890393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Ground Fine / Espresso",
+    "variant_id": "48596812955929"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "48596812988697"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Course French Press",
+    "variant_id": "48596813021465"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Course Perculator",
+    "variant_id": "48596813054233"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 30.0,
+    "title": "Medium Roast / 1 LB / Turkish Grind",
+    "variant_id": "48596813087001"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "f894e7849675e379",
+  "first_seen": "2026-10-26",
+  "handle": "kona-100",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/kona-pure.jpg?v=1731794353",
+  "platform": "shopify",
+  "product_id": "9310108156185",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Hawaiian  Kona 100%  Pure",
+  "url": "https://safaricoffee.com/products/kona-100",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 40.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "48596823212313"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 45.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "48596823277849"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 90.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "48596823408921"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 95.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "48596823474457"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "1e5c9fa77ea9e9b9",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-blue-mountain-pure",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/jamaican-Blue-mountain.jpg?v=1731744645",
+  "platform": "shopify",
+  "product_id": "9310109106457",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "Jamaican Blue Mountain -Pure 100%",
+  "url": "https://safaricoffee.com/products/jamaican-blue-mountain-pure",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Medium Roast / 1/2 LB / Whole Bean",
+    "variant_id": "48596824981785"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "Medium Roast / 1/2 LB / Drip Grind",
+    "variant_id": "48596825047321"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 120.0,
+    "title": "Medium Roast / 1 LB / Whole Bean",
+    "variant_id": "48596825178393"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 120.0,
+    "title": "Medium Roast / 1 LB / Drip Grind",
+    "variant_id": "48596825243929"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ },
+ {
+  "body_hash": "6d72f890c7500630",
+  "first_seen": "2026-10-26",
+  "handle": "kona-coast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0783/5533/3401/files/kona-coast.jpg?v=1713481727",
+  "platform": "shopify",
+  "product_id": "9310112973081",
+  "product_type": "",
+  "roaster_slug": "safaricoffee",
+  "tags": [],
+  "title": "KONA COAST BLEND (COFFEE OF THE MONTH)",
+  "url": "https://safaricoffee.com/products/kona-coast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Whole Bean",
+    "variant_id": "48596834517273"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Ground Fine / Espresso",
+    "variant_id": "48596834550041"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Drip Grind",
+    "variant_id": "48596834582809"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Course French Press",
+    "variant_id": "48596834615577"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Course Perculator",
+    "variant_id": "48596834648345"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 25.0,
+    "title": "MEDIUM / 1/2 LB / Turkish Grind",
+    "variant_id": "48596834681113"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Whole Bean",
+    "variant_id": "48596834713881"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Ground Fine / Espresso",
+    "variant_id": "48596834746649"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Drip Grind",
+    "variant_id": "48596834779417"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Course French Press",
+    "variant_id": "48596834812185"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Course Perculator",
+    "variant_id": "48596834844953"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 45.0,
+    "title": "MEDIUM / 1 LB / Turkish Grind",
+    "variant_id": "48596834877721"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "MEDIUM / 5 LB / Whole Bean",
+    "variant_id": "48596834910489"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "MEDIUM / 5 LB / Ground Fine / Espresso",
+    "variant_id": "48596834943257"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "MEDIUM / 5 LB / Drip Grind",
+    "variant_id": "48596834976025"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "MEDIUM / 5 LB / Course French Press",
+    "variant_id": "48596835008793"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "MEDIUM / 5 LB / Course Perculator",
+    "variant_id": "48596835041561"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 175.0,
+    "title": "MEDIUM / 5 LB / Turkish Grind",
+    "variant_id": "48596835074329"
+   }
+  ],
+  "vendor": "Safari Coffee Roasters"
+ }
+]

@@ -1,0 +1,3673 @@
+[
+ {
+  "body_hash": "a514b93ae5a25c6b",
+  "first_seen": "2026-10-26",
+  "handle": "2-5-oz-portion-packs-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/products/PORTION-PACKS-2.5-OZ.jpg?v=1787116520",
+  "platform": "shopify",
+  "product_id": "4469252489290",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "portion pack",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "2.5 oz Portion Packs",
+  "url": "https://www.cultivarcoffee.com/products/2-5-oz-portion-packs-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 703,
+    "price_usd": 27.0,
+    "title": "9 / Paper Filter",
+    "variant_id": "31656460877898"
+   },
+   {
+    "available": true,
+    "grams": 703,
+    "price_usd": 27.0,
+    "title": "9 / Metal Filter",
+    "variant_id": "31656460910666"
+   },
+   {
+    "available": true,
+    "grams": 703,
+    "price_usd": 27.0,
+    "title": "9 / Whole Bean",
+    "variant_id": "31656460943434"
+   },
+   {
+    "available": true,
+    "grams": 703,
+    "price_usd": 27.0,
+    "title": "9 / French Press",
+    "variant_id": "31656460976202"
+   },
+   {
+    "available": true,
+    "grams": 1406,
+    "price_usd": 54.0,
+    "title": "18 / Paper Filter",
+    "variant_id": "31656461008970"
+   },
+   {
+    "available": true,
+    "grams": 1406,
+    "price_usd": 54.0,
+    "title": "18 / Metal Filter",
+    "variant_id": "31656461041738"
+   },
+   {
+    "available": true,
+    "grams": 1406,
+    "price_usd": 54.0,
+    "title": "18 / Whole Bean",
+    "variant_id": "31656461074506"
+   },
+   {
+    "available": true,
+    "grams": 1406,
+    "price_usd": 54.0,
+    "title": "18 / French Press",
+    "variant_id": "31656461107274"
+   },
+   {
+    "available": true,
+    "grams": 2767,
+    "price_usd": 108.0,
+    "title": "36 / Paper Filter",
+    "variant_id": "31656461140042"
+   },
+   {
+    "available": true,
+    "grams": 2767,
+    "price_usd": 108.0,
+    "title": "36 / Metal Filter",
+    "variant_id": "31656461172810"
+   },
+   {
+    "available": true,
+    "grams": 2767,
+    "price_usd": 108.0,
+    "title": "36 / Whole Bean",
+    "variant_id": "31656461205578"
+   },
+   {
+    "available": true,
+    "grams": 2767,
+    "price_usd": 108.0,
+    "title": "36 / French Press",
+    "variant_id": "31656461238346"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "530076399ba373ec",
+  "first_seen": "2026-10-26",
+  "handle": "elevation-seasonal-blend-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/elevation_90a5aa64-cc3c-4991-882a-b9f8089955c8.png?v=1787118854",
+  "platform": "shopify",
+  "product_id": "6441857284",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Cerro de Oro",
+   "El Salvador",
+   "Finca Malacara",
+   "Guatemala",
+   "Seasonal Blend",
+   "Volcanes Coffee",
+   "beans",
+   "bourbon",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "red bourbon",
+   "seasonal coffee",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed"
+  ],
+  "title": "Elevation Seasonal Blend",
+  "url": "https://www.cultivarcoffee.com/products/elevation-seasonal-blend-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "22528912388"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "22528912516"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "22528912644"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "22528912836"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "22528912900"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "22528912964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "22528913028"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "22528913092"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "22528913220"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "22528913284"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "22528913348"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / French Press",
+    "variant_id": "22528913412"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "22528913476"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Paper Filter",
+    "variant_id": "22528913604"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Metal Filter",
+    "variant_id": "22528913668"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Chemex",
+    "variant_id": "22528913732"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "22528913796"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Cold Brew",
+    "variant_id": "22528913860"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "50216556164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "50216647492"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "50216687684"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "50216715908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / French Press",
+    "variant_id": "50216768004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "50216798404"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "a8dbd7a124549f23",
+  "first_seen": "2026-10-26",
+  "handle": "cream-sugar-dark-roast-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/creamsanantonio.png?v=1787116013",
+  "platform": "shopify",
+  "product_id": "6566669123770",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "San Antonio la paz",
+   "Seasonal Blend",
+   "bourbon",
+   "caturra",
+   "coffee",
+   "cream and sugar",
+   "cultivar",
+   "cultivar coffee",
+   "espresso",
+   "gomez",
+   "guatemala",
+   "seasonal coffee",
+   "sierra de las minas",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed",
+   "yellow caturra"
+  ],
+  "title": "Cream & Sugar Dark Roast Espresso",
+  "url": "https://www.cultivarcoffee.com/products/cream-sugar-dark-roast-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "39370091757754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "39370091987130"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "39370092216506"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "39370092445882"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "9787dbd7ec48668a",
+  "first_seen": "2026-10-26",
+  "handle": "el-salvador-finca-malacara-red",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/ElSalRed.png?v=1789761053",
+  "platform": "shopify",
+  "product_id": "7059454329018",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Central America",
+   "Direct Trade",
+   "El Salvador",
+   "Finca Malacara",
+   "Seasonal",
+   "beans",
+   "bourbon",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "dumont",
+   "patio dried",
+   "red bourbon",
+   "seasonal coffee",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed"
+  ],
+  "title": "El Salvador Finca Malacara Red",
+  "url": "https://www.cultivarcoffee.com/products/el-salvador-finca-malacara-red",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "41296275931322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "41296275964090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "41296275996858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "41296276029626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "41296276062394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "41296276095162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "41296276127930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "41296276160698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "41296276193466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "41296276226234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / French Press",
+    "variant_id": "41296276259002"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "41296276291770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "41296276324538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "41296276357306"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "41296276390074"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "41296276422842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / French Press",
+    "variant_id": "41296276455610"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 54.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "41296276488378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41296276521146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "41296276553914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "41296276586682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "41296276619450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / French Press",
+    "variant_id": "41296276652218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 133.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "41296276684986"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "171f74a82886e654",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/DecafColombia.png?v=1787115740",
+  "platform": "shopify",
+  "product_id": "7342315897018",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Decaf",
+   "Decaf Coffee",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Decaf Colombia",
+  "url": "https://www.cultivarcoffee.com/products/decaf-colombia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42277275173050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "42277275205818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "42277275238586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "42277275271354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / French Press",
+    "variant_id": "42277275304122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "42277275336890"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42277275369658"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42277275402426"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "42277275435194"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "42277275467962"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / French Press",
+    "variant_id": "42277275500730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42277275533498"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "42277275566266"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Paper Filter",
+    "variant_id": "42277275599034"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Metal Filter",
+    "variant_id": "42277275631802"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Chemex",
+    "variant_id": "42277275664570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "42277275697338"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Cold Brew",
+    "variant_id": "42277275730106"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "e6ef25e2e038bdb9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-colombia-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/DecafColombia_ff2fe8d5-aa06-46d1-ada2-4c8eca6b4c3e.png?v=1787115694",
+  "platform": "shopify",
+  "product_id": "7342324908218",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Decaf",
+   "Decaf Coffee",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled"
+  ],
+  "title": "Decaf Colombia Espresso",
+  "url": "https://www.cultivarcoffee.com/products/decaf-colombia-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42277364891834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42277365088442"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "42277365285050"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "fb6d9ed2005de99f",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/bfast_bdb018e3-3872-480d-a64f-932e4be06241.png?v=1787114696",
+  "platform": "shopify",
+  "product_id": "7395777151162",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Seasonal Blend",
+   "South America",
+   "Specialty Coffee",
+   "beans",
+   "coffee",
+   "coffee subscription",
+   "colombia",
+   "cultivar",
+   "cultivar coffee",
+   "guatemala",
+   "local",
+   "seasonal coffee",
+   "subscription",
+   "washed"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://www.cultivarcoffee.com/products/breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42492001910970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "42492001943738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "42492001976506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "42492002009274"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "42492002042042"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "42492002074810"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42492002107578"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "42492002140346"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "42492002173114"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "42492002205882"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / French Press",
+    "variant_id": "42492002238650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "42492002271418"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42492002304186"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "42492002336954"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "42492002369722"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "42492002402490"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / French Press",
+    "variant_id": "42492002435258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "42492002468026"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42492002500794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "42492002533562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "42492002566330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "42492002599098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / French Press",
+    "variant_id": "42492002631866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "42492002664634"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "2e4b1d9a7ae80e1f",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/bfast.png?v=1787114644",
+  "platform": "shopify",
+  "product_id": "7395781148858",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Seasonal Blend",
+   "South America",
+   "Specialty Coffee",
+   "beans",
+   "coffee",
+   "coffee subscription",
+   "colombia",
+   "cultivar",
+   "cultivar coffee",
+   "espresso",
+   "espresso profile",
+   "espresso subscription",
+   "guatemala",
+   "local",
+   "seasonal coffee",
+   "subscription",
+   "washed"
+  ],
+  "title": "Breakfast Blend Espresso",
+  "url": "https://www.cultivarcoffee.com/products/breakfast-blend-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "42492010430650"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "42492010627258"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "42492010823866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "42492011020474"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "4-oz-coffee-samples",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/BagPhoto_SampleCoffeeBags.png?v=1787114585",
+  "platform": "shopify",
+  "product_id": "7564188745914",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Central America",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Seasonal Blend",
+   "South America",
+   "Specialty Coffee",
+   "beans",
+   "coffee",
+   "coffee subscription",
+   "colombia",
+   "cultivar",
+   "cultivar coffee",
+   "espresso",
+   "espresso profile",
+   "espresso subscription",
+   "guatemala",
+   "local",
+   "seasonal coffee",
+   "subscription",
+   "washed"
+  ],
+  "title": "4 oz Coffee Samples",
+  "url": "https://www.cultivarcoffee.com/products/4-oz-coffee-samples",
+  "variants": [
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Breakfast Blend",
+    "variant_id": "43118457258170"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Cream & Sugar Dark Roast",
+    "variant_id": "43118457290938"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Elevation Seasonal Blend",
+    "variant_id": "43118457323706"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Decaf Colombia",
+    "variant_id": "43118457422010"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4 oz / Whole Bean / Ethiopia Banko Chelchele",
+    "variant_id": "45157759975610"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Berries & Cream Dark Roast",
+    "variant_id": "45737771172026"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Guatemala San Antonio",
+    "variant_id": "45763151003834"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 9.0,
+    "title": "4 oz / Whole Bean / Guatemala Luis Pedro Zelaya",
+    "variant_id": "46309453562042"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 7.0,
+    "title": "4 oz / Whole Bean / Mexico Veracruz",
+    "variant_id": "46488905580730"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean / El Salvador Finca Malacara Red",
+    "variant_id": "46696814248122"
+   },
+   {
+    "available": true,
+    "grams": 113,
+    "price_usd": 8.0,
+    "title": "4 oz / Whole Bean / Ethiopia Dark Roast",
+    "variant_id": "46697020195002"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "2423a38db6f5f2f4",
+  "first_seen": "2026-10-26",
+  "handle": "cream-and-sugar-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/creamsanantonio_ac426644-0a36-4434-af85-051d2153b851.png?v=1787118735",
+  "platform": "shopify",
+  "product_id": "777175498862",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "San Antonio la paz",
+   "Seasonal Blend",
+   "bourbon",
+   "caturra",
+   "coffee",
+   "cream and sugar",
+   "cultivar",
+   "cultivar coffee",
+   "gomez",
+   "guatemala",
+   "seasonal coffee",
+   "sierra de las minas",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed",
+   "yellow caturra"
+  ],
+  "title": "Cream & Sugar Dark Roast",
+  "url": "https://www.cultivarcoffee.com/products/cream-and-sugar-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "8664065048686"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "8664065081454"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "8664065114222"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "8664065179758"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "8664065212526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "8664065245294"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "8664065278062"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "8664065310830"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "8664065376366"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "8664065409134"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "8664065441902"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / French Press",
+    "variant_id": "8664065474670"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "8664065507438"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Paper Filter",
+    "variant_id": "8664065572974"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Metal Filter",
+    "variant_id": "8664065605742"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Chemex",
+    "variant_id": "8664065638510"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "8664065671278"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Cold Brew",
+    "variant_id": "8664065704046"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "8664065736814"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "8664065769582"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "8664065802350"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "8664065835118"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / French Press",
+    "variant_id": "8664065867886"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "8664065900654"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "206f6677cfeb9c20",
+  "first_seen": "2026-10-26",
+  "handle": "threshold-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/threshold_6b502830-bffe-4ebd-aa64-aff0647d002a.png?v=1787114227",
+  "platform": "shopify",
+  "product_id": "8075514708154",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Blend",
+   "Dark Roast",
+   "San Antonio la paz",
+   "Seasonal Blend",
+   "bourbon",
+   "caturra",
+   "coffee",
+   "cream and sugar",
+   "cultivar",
+   "cultivar coffee",
+   "espresso",
+   "espresso profile",
+   "gomez",
+   "guatemala",
+   "seasonal coffee",
+   "sierra de las minas",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed",
+   "yellow caturra"
+  ],
+  "title": "Threshold Espresso",
+  "url": "https://www.cultivarcoffee.com/products/threshold-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "44595125321914"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "44595125518522"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "44595125715130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "44595125911738"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "f9989b202faf5273",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-banko-chelchele",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/Banko_Chelchele.jpg?v=1787113981",
+  "platform": "shopify",
+  "product_id": "8206587756730",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Natural process",
+   "banko chelchele",
+   "beans",
+   "chelchele",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "east africa",
+   "ethiopia",
+   "falcon",
+   "gedeo",
+   "natural",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopia Banko Chelchele",
+  "url": "https://www.cultivarcoffee.com/products/ethiopia-banko-chelchele",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45157237915834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "45157237948602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "45157237981370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "45157238014138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45157238046906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "45157238079674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "45157238112442"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "45157238145210"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "45157238177978"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "45157238210746"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / French Press",
+    "variant_id": "45157238243514"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 31.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "45157238276282"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45157238309050"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "45157238341818"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "45157238374586"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "45157238407354"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / French Press",
+    "variant_id": "45157238440122"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "45157238472890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45157238505658"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "45157238538426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "45157238571194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "45157238603962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45157238636730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 147.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "45157238669498"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "ff87433d9e4e0b0c",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-la-florida-6-2025-coe-winner",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/guatcoe12.png?v=1787113689",
+  "platform": "shopify",
+  "product_id": "8268459737274",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "COE",
+   "Cup of Excellence",
+   "Local Coffee Roaster",
+   "Pacamara",
+   "Seasonal",
+   "Specialty Coffee",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "el progreso",
+   "engelhardt",
+   "guatemala",
+   "natural",
+   "seasonal coffee"
+  ],
+  "title": "Guatemala Finca La Florida #6 2025 COE Winner",
+  "url": "https://www.cultivarcoffee.com/products/guatemala-finca-la-florida-6-2025-coe-winner",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "45346265104570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / Paper Filter",
+    "variant_id": "45346265137338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / Metal Filter",
+    "variant_id": "45346265170106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / Chemex",
+    "variant_id": "45346265202874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / French Press",
+    "variant_id": "45346265235642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 38.0,
+    "title": "12oz / Cold Brew",
+    "variant_id": "45346265268410"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / Whole Bean",
+    "variant_id": "50690279276730"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / Paper Filter",
+    "variant_id": "50690279309498"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / Metal Filter",
+    "variant_id": "50690279342266"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / Chemex",
+    "variant_id": "50690279375034"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / French Press",
+    "variant_id": "50690279407802"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.0,
+    "title": "16oz / Cold Brew",
+    "variant_id": "50690279440570"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / Whole Bean",
+    "variant_id": "50690279473338"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / Paper Filter",
+    "variant_id": "50690279506106"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / Metal Filter",
+    "variant_id": "50690279538874"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / Chemex",
+    "variant_id": "50690279571642"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / French Press",
+    "variant_id": "50690279604410"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2lb / Cold Brew",
+    "variant_id": "50690279637178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "50690279669946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / Paper Filter",
+    "variant_id": "50690279702714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / Metal Filter",
+    "variant_id": "50690279735482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / Chemex",
+    "variant_id": "50690279768250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / French Press",
+    "variant_id": "50690279801018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 216.0,
+    "title": "5lb / Cold Brew",
+    "variant_id": "50690279833786"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "822aaa4a5312bfbf",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/sidamowashed.jpg?v=1787113613",
+  "platform": "shopify",
+  "product_id": "8303712960698",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Bensa",
+   "Natural process",
+   "alo coffee",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "east africa",
+   "ethiopia",
+   "falcon",
+   "gedeo",
+   "sidama",
+   "sidamo",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "tamiru",
+   "washed",
+   "washed coffee"
+  ],
+  "title": "Ethiopia Sidamo Washed",
+  "url": "https://www.cultivarcoffee.com/products/ethiopia-sidamo-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Whole Bean",
+    "variant_id": "45479909654714"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Paper Filter",
+    "variant_id": "45479909687482"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Metal Filter",
+    "variant_id": "45479909720250"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Chemex",
+    "variant_id": "45479909753018"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / French Press",
+    "variant_id": "45479909785786"
+   },
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 24.0,
+    "title": "8 oz / Cold Brew",
+    "variant_id": "45479909818554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "45479909851322"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "45479909884090"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "45479909916858"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "45479909949626"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / French Press",
+    "variant_id": "45479909982394"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 48.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "45479910015162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45479910047930"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "45479910080698"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "45479910113466"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "45479910146234"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / French Press",
+    "variant_id": "45479910179002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 92.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "45479910211770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45479910244538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "45479910277306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "45479910310074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "45479910342842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45479910375610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 195.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "45479910408378"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "57824a0252ec11f6",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-san-antonio",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/sanantonio.jpg?v=1787113227",
+  "platform": "shopify",
+  "product_id": "8367398813882",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Guatemala",
+   "San Antonio la paz",
+   "Seasonal",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "washed"
+  ],
+  "title": "Guatemala San Antonio",
+  "url": "https://www.cultivarcoffee.com/products/guatemala-san-antonio",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "45751522230458"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "45751522263226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "45751522295994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "45751522328762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "45751522361530"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "45751522394298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "45751522427066"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "45751522459834"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "45751522492602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "45751522525370"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / French Press",
+    "variant_id": "45751522558138"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "45751522590906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "45751522623674"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "45751522656442"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "45751522689210"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "45751522721978"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / French Press",
+    "variant_id": "45751522754746"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "45751522787514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "45751522820282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "45751522853050"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "45751522885818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "45751522918586"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / French Press",
+    "variant_id": "45751522951354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "45751522984122"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "d7452723ffbfd822",
+  "first_seen": "2026-10-26",
+  "handle": "peru-yellow-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/yellowgesha.png?v=1787112984",
+  "platform": "shopify",
+  "product_id": "8419661283514",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "COE",
+   "Cup of Excellence",
+   "Geisha",
+   "Gesha",
+   "Local Coffee Roaster",
+   "Seasonal",
+   "Specialty Coffee",
+   "beans",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "cusco",
+   "dwight aguilar",
+   "peru",
+   "seasonal coffee",
+   "washed coffee",
+   "yellow geisha"
+  ],
+  "title": "Peru Yellow Gesha",
+  "url": "https://www.cultivarcoffee.com/products/peru-yellow-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46037079490746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46037079523514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46037079556282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46037079589050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46037079621818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 34.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46037079654586"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46037080703162"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46037080735930"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46037080768698"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46037080801466"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46037080834234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 44.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46037080867002"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46037080899770"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "46037080932538"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "46037080965306"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46037080998074"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46037081030842"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 86.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46037081063610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46037081096378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46037081129146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46037081161914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46037081194682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46037081227450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 210.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46037081260218"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "4d8919205560a13f",
+  "first_seen": "2026-10-26",
+  "handle": "single-origin-coffee-tasting-roastery-tour",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8434473500858",
+  "product_type": "Event",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [],
+  "title": "11AM Single Origin Coffee Tasting & Roastery Tour",
+  "url": "https://www.cultivarcoffee.com/products/single-origin-coffee-tasting-roastery-tour",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 15.0,
+    "title": "Souvenir Cupping Spoon",
+    "variant_id": "46112519291066"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "e2d162dd8a5259df",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-luis-pedro-zelaya",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/guatemalabella.png?v=1787111891",
+  "platform": "shopify",
+  "product_id": "8476437872826",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Antigua",
+   "LPZ",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "antigua valley",
+   "beans",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "guatemala",
+   "luis pedro zelaya",
+   "sacatepequez department",
+   "seasonal coffee",
+   "washed",
+   "washed coffee",
+   "zelaya"
+  ],
+  "title": "Guatemala Luis Pedro Zelaya",
+  "url": "https://www.cultivarcoffee.com/products/guatemala-luis-pedro-zelaya",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46299189805242"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46299189838010"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46299189870778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46299189903546"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46299189936314"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46299189969082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46299190001850"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46299190034618"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46299190067386"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46299190100154"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46299190132922"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46299190165690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46299190198458"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "46299190231226"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "46299190263994"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46299190296762"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46299190329530"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46299190362298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46299190395066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46299190427834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46299190460602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46299190493370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46299190526138"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46299190558906"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "7edf06ff2528e513",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-samuel",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/MexicoSamuel.png?v=1787849590",
+  "platform": "shopify",
+  "product_id": "8504422662330",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Geisha",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "altamirano",
+   "beans",
+   "bourbon",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "honey",
+   "honey process",
+   "mexico",
+   "nepopoalco",
+   "sarchimor",
+   "seasonal coffee",
+   "veracruz"
+  ],
+  "title": "Mexico Samuel Altamirano",
+  "url": "https://www.cultivarcoffee.com/products/mexico-samuel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46488447942842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46488447975610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46488448008378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46488448041146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46488448073914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46488448106682"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46488448139450"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46488448172218"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46488448204986"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46488448237754"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46488448270522"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46488448303290"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46488448336058"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "46488448368826"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "46488448401594"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46488448434362"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46488448467130"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46488448499898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46488448532666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46488448565434"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46488448598202"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46488448630970"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46488448663738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46488448696506"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "fef22398d05eedef",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-veracruz",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/MexicoVeracruz.png?v=1787854829",
+  "platform": "shopify",
+  "product_id": "8504582013114",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Geisha",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "altamirano",
+   "beans",
+   "bourbon",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "honey",
+   "honey process",
+   "mexico",
+   "nepopoalco",
+   "sarchimor",
+   "seasonal coffee",
+   "veracruz"
+  ],
+  "title": "Mexico Veracruz",
+  "url": "https://www.cultivarcoffee.com/products/mexico-veracruz",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46488841552058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46488841584826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46488841617594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46488841650362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46488841683130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46488841715898"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46488841748666"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46488841781434"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46488841814202"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46488841846970"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46488841879738"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46488841912506"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46488841945274"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "46488841978042"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "46488842010810"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46488842043578"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46488842076346"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46488842109114"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46488842141882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46488842174650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46488842207418"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46488842240186"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46488842272954"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46488842305722"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "5eac693391bce5cd",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-luis-pedro-zelaya-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/guatemalabella.png?v=1787111891",
+  "platform": "shopify",
+  "product_id": "8513896480954",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Antigua",
+   "LPZ",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "antigua valley",
+   "beans",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "guatemala",
+   "luis pedro zelaya",
+   "sacatepequez department",
+   "seasonal coffee",
+   "washed",
+   "washed coffee",
+   "zelaya"
+  ],
+  "title": "Guatemala Luis Pedro Zelaya Espresso",
+  "url": "https://www.cultivarcoffee.com/products/guatemala-luis-pedro-zelaya-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 25.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46536860369082"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 33.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46536860565690"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 64.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46536860762298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 159.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46536860958906"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "53095ae8591eff72",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-samuel-altamirano-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/MexicoSamuel.png?v=1787849590",
+  "platform": "shopify",
+  "product_id": "8513983250618",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Geisha",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "altamirano",
+   "beans",
+   "bourbon",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "honey",
+   "honey process",
+   "mexico",
+   "nepopoalco",
+   "sarchimor",
+   "seasonal coffee",
+   "veracruz"
+  ],
+  "title": "Mexico Samuel Altamirano Espresso",
+  "url": "https://www.cultivarcoffee.com/products/mexico-samuel-altamirano-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 32.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46537086042298"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 42.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46537086238906"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 81.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46537086435514"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 200.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46537086632122"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "b33447af758538de",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-veracruz-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/MexicoVeracruz.png?v=1787854829",
+  "platform": "shopify",
+  "product_id": "8514007072954",
+  "product_type": "Espresso",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Geisha",
+   "Light roast coffee",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "altamirano",
+   "beans",
+   "bourbon",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "honey",
+   "honey process",
+   "mexico",
+   "nepopoalco",
+   "sarchimor",
+   "seasonal coffee",
+   "veracruz"
+  ],
+  "title": "Mexico Veracruz Espresso",
+  "url": "https://www.cultivarcoffee.com/products/mexico-veracruz-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46537143976122"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46537144172730"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 52.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46537144369338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 128.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46537144565946"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "621c67b37a85ef48",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-tierradentro",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/ColombiaTierradentro.png?v=1788566310",
+  "platform": "shopify",
+  "product_id": "8516886986938",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Colombia",
+   "Local Coffee Roaster",
+   "Medium Roast Coffee",
+   "Seasonal",
+   "Specialty Coffee",
+   "asorcafe",
+   "beans",
+   "caturra",
+   "cauca",
+   "coffee",
+   "coffee subscription",
+   "cultivar",
+   "cultivar coffee",
+   "inza",
+   "seasonal coffee",
+   "tierradentro",
+   "typica",
+   "washed"
+  ],
+  "title": "Colombia Tierradentro",
+  "url": "https://www.cultivarcoffee.com/products/colombia-tierradentro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46551556358330"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46551556391098"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46551556423866"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46551556456634"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46551556489402"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 27.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46551556522170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46551556554938"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46551556587706"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46551556620474"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46551556653242"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46551556686010"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46551556718778"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / Whole Bean",
+    "variant_id": "46551556751546"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / Paper Filter",
+    "variant_id": "46551556784314"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / Metal Filter",
+    "variant_id": "46551556817082"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / Chemex",
+    "variant_id": "46551556849850"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / French Press",
+    "variant_id": "46551556882618"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 69.0,
+    "title": "2 lb / Cold Brew",
+    "variant_id": "46551556915386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46551556948154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46551556980922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46551557013690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46551557046458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46551557079226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 171.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46551557111994"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ },
+ {
+  "body_hash": "c2d5682d8419f696",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0324/3801/files/EthiopiaDarkRoast.png?v=1789765183",
+  "platform": "shopify",
+  "product_id": "8543833292986",
+  "product_type": "Coffee",
+  "roaster_slug": "cultivarcoffee",
+  "tags": [
+   "Dark Roast",
+   "Seasonal Blend",
+   "coffee",
+   "cultivar",
+   "cultivar coffee",
+   "ethiopia",
+   "heirloom",
+   "natural",
+   "seasonal coffee",
+   "spo-default",
+   "spo-disabled",
+   "spo-notify-me-disabled",
+   "washed"
+  ],
+  "title": "Ethiopia Dark Roast",
+  "url": "https://www.cultivarcoffee.com/products/ethiopia-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Whole Bean",
+    "variant_id": "46696892530874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Paper Filter",
+    "variant_id": "46696892563642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Metal Filter",
+    "variant_id": "46696892596410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Chemex",
+    "variant_id": "46696892629178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / French Press",
+    "variant_id": "46696892661946"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz / Cold Brew",
+    "variant_id": "46696892694714"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Whole Bean",
+    "variant_id": "46696892727482"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Paper Filter",
+    "variant_id": "46696892760250"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Metal Filter",
+    "variant_id": "46696892793018"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Chemex",
+    "variant_id": "46696892825786"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / French Press",
+    "variant_id": "46696892858554"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "16 oz / Cold Brew",
+    "variant_id": "46696892891322"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Whole Bean",
+    "variant_id": "46696892924090"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Paper Filter",
+    "variant_id": "46696892956858"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Metal Filter",
+    "variant_id": "46696892989626"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Chemex",
+    "variant_id": "46696893022394"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / French Press",
+    "variant_id": "46696893055162"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2 lbs / Cold Brew",
+    "variant_id": "46696893087930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "46696893120698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Paper Filter",
+    "variant_id": "46696893153466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Metal Filter",
+    "variant_id": "46696893186234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Chemex",
+    "variant_id": "46696893219002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / French Press",
+    "variant_id": "46696893251770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 138.0,
+    "title": "5 lb / Cold Brew",
+    "variant_id": "46696893284538"
+   }
+  ],
+  "vendor": "Cultivar Coffee"
+ }
+]

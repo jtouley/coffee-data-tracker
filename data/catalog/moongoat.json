@@ -1,0 +1,1069 @@
+[
+ {
+  "body_hash": "394a396a85933c2c",
+  "first_seen": "2026-10-26",
+  "handle": "paola-trujillo-gesha",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/PaolaTrujilloGesha_1392d9e8-0a04-4d0d-ba6b-36628b2bddea.jpg?v=1790702429",
+  "platform": "shopify",
+  "product_id": "15395731079419",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "Single Origin Selection",
+   "badge-gold",
+   "badge-new",
+   "wholesale"
+  ],
+  "title": "Paola Trujillo Gesha",
+  "url": "https://moongoat.com/products/paola-trujillo-gesha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 30.0,
+    "title": "250g Bag",
+    "variant_id": "67597557137659"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 75.0,
+    "title": "2lb",
+    "variant_id": "67597557170427"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "149d13362a62e94d",
+  "first_seen": "2026-10-26",
+  "handle": "jorge-villanueva-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/JorgeArturoVillanuevaWashed.jpg?v=1790706316",
+  "platform": "shopify",
+  "product_id": "15396867801339",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "badge-new",
+   "wholesale"
+  ],
+  "title": "Jorge Villanueva Washed",
+  "url": "https://moongoat.com/products/jorge-villanueva-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "67601399382267"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "67601399415035"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "67601399447803"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "2e3e5af271836d74",
+  "first_seen": "2026-10-26",
+  "handle": "bryan-adolfo-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/BryanAdolfoHoney.jpg?v=1790706337",
+  "platform": "shopify",
+  "product_id": "15396868882683",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "badge-new",
+   "wholesale"
+  ],
+  "title": "Bryan Adolfo Honey",
+  "url": "https://moongoat.com/products/bryan-adolfo-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "67601403838715"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "67601403871483"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "67601403904251"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "2d896c40032f37c5",
+  "first_seen": "2026-10-26",
+  "handle": "fellow-espresso-series-1",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/Fellow-Espresso-Series-1-B_01.png?v=1792088805",
+  "platform": "shopify",
+  "product_id": "15421734617339",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Fellow Wholesale",
+   "Shopify Collective"
+  ],
+  "title": "Espresso Series 1",
+  "url": "https://moongoat.com/products/fellow-espresso-series-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1499.95,
+    "title": "Black",
+    "variant_id": "68324884381947"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Malted Chocolate + Maple",
+    "variant_id": "68324884414715"
+   },
+   {
+    "available": true,
+    "grams": 15876,
+    "price_usd": 1599.95,
+    "title": "Cherry Red + Walnut",
+    "variant_id": "68324884447483"
+   }
+  ],
+  "vendor": "Fellow Wholesale"
+ },
+ {
+  "body_hash": "4d4be22f824d7953",
+  "first_seen": "2026-10-26",
+  "handle": "cha-botanicals-classic-chunmee-green-tea",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/ClassicChunmeeGreenTea.jpg?v=1779310075",
+  "platform": "shopify",
+  "product_id": "7815080575227",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Tea and Botanicals"
+  ],
+  "title": "Classic Chunmee Green",
+  "url": "https://moongoat.com/products/cha-botanicals-classic-chunmee-green-tea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 17.77,
+    "title": "100G",
+    "variant_id": "49008321069307"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 20.09,
+    "title": "1LB",
+    "variant_id": "49008321102075"
+   }
+  ],
+  "vendor": "Cha Botanicals"
+ },
+ {
+  "body_hash": "f690805bcbbe5764",
+  "first_seen": "2026-10-26",
+  "handle": "cha-botanicals-yunnan-black-tea",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/YunnanBlackTea.jpg?v=1779310054",
+  "platform": "shopify",
+  "product_id": "7815080607995",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Tea and Botanicals"
+  ],
+  "title": "Yunnan Black",
+  "url": "https://moongoat.com/products/cha-botanicals-yunnan-black-tea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 17.58,
+    "title": "100G",
+    "variant_id": "49008315269371"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.04,
+    "title": "1LB",
+    "variant_id": "49008315302139"
+   }
+  ],
+  "vendor": "Cha Botanicals"
+ },
+ {
+  "body_hash": "59c398bc09539bb8",
+  "first_seen": "2026-10-26",
+  "handle": "dark-side-of-the-moongoat",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/DarksideFront.jpg?v=1763411354",
+  "platform": "shopify",
+  "product_id": "7840441893115",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Classic Blends",
+   "Roasted Coffee Seeds",
+   "badge-bestseller",
+   "products"
+  ],
+  "title": "DarkSide of the MoonGoat",
+  "url": "https://moongoat.com/products/dark-side-of-the-moongoat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "43611982790907"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb",
+    "variant_id": "43611982823675"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz 100% Tin Can",
+    "variant_id": "47376193978619"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "90f141d83698f2c1",
+  "first_seen": "2026-10-26",
+  "handle": "case-of-moongoat-water-bottles",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/products/JI8A7341.jpg?v=1664289014",
+  "platform": "shopify",
+  "product_id": "7908395319547",
+  "product_type": "Water Bottles",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "bottle",
+   "products",
+   "wholesale"
+  ],
+  "title": "Case of 24 MoonGoat Water Bottles",
+  "url": "https://moongoat.com/products/case-of-moongoat-water-bottles",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "43789170606331"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "bc1f50d863448edd",
+  "first_seen": "2026-10-26",
+  "handle": "tea-cascara-1",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "7973989482747",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Internal",
+   "Tea and Botanicals",
+   "wholesale"
+  ],
+  "title": "La Hacienda Cascara",
+  "url": "https://moongoat.com/products/tea-cascara-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 12.5,
+    "title": "100G",
+    "variant_id": "49008403808507"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 25.0,
+    "title": "1LB",
+    "variant_id": "49008403841275"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "66550d50e4b5f6d0",
+  "first_seen": "2026-10-26",
+  "handle": "hojicha",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/IMG_8937.jpg?v=1753988875",
+  "platform": "shopify",
+  "product_id": "8371935248635",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Bulk",
+   "Internal",
+   "Tea and Botanicals",
+   "wholesale"
+  ],
+  "title": "MatchaBot Hojicha Kilo",
+  "url": "https://moongoat.com/products/hojicha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1200,
+    "price_usd": 208.0,
+    "title": "Default Title",
+    "variant_id": "45465551569147"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "10c1d79c47c4b55e",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-dark-side-of-the-moongoat",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942112637179",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Bulk",
+   "Roasted Coffee Seeds",
+   "wholesale"
+  ],
+  "title": "Bulk: Dark Side of the MoonGoat",
+  "url": "https://moongoat.com/products/bulk-dark-side-of-the-moongoat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 246.0,
+    "title": "12#",
+    "variant_id": "46892914639099"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1245.0,
+    "title": "60#",
+    "variant_id": "46892915327227"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "10c1d79c47c4b55e",
+  "first_seen": "2026-10-26",
+  "handle": "bulk-dark-side-of-the-moongoat-copy",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942114078971",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Bulk",
+   "Roasted Coffee Seeds",
+   "wholesale"
+  ],
+  "title": "Bulk: MidSide of The MoonGoat",
+  "url": "https://moongoat.com/products/bulk-dark-side-of-the-moongoat-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 5443,
+    "price_usd": 264.0,
+    "title": "12#",
+    "variant_id": "46892917686523"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1320.0,
+    "title": "60#",
+    "variant_id": "46892917719291"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "645e7a9980939575",
+  "first_seen": "2026-10-26",
+  "handle": "pillow-pack-dark-side-of-the-moongoat",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942175781115",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "hospitality"
+  ],
+  "title": "*Pillow Pack*: Dark Side of the MoonGoat",
+  "url": "https://moongoat.com/products/pillow-pack-dark-side-of-the-moongoat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 128,
+    "price_usd": 5.06,
+    "title": "4.5oz",
+    "variant_id": "46893116653819"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "645e7a9980939575",
+  "first_seen": "2026-10-26",
+  "handle": "pillow-pack-decaf",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942176370939",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Roasted Coffee Seeds",
+   "hospitality"
+  ],
+  "title": "*Pillow Pack*: Decaf",
+  "url": "https://moongoat.com/products/pillow-pack-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 128,
+    "price_usd": 5.34,
+    "title": "4.5oz",
+    "variant_id": "46893118324987"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "6de77713a3db2e85",
+  "first_seen": "2026-10-26",
+  "handle": "pillow-pack-single-origin",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "8942176698619",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Roasted Coffee Seeds",
+   "hospitality"
+  ],
+  "title": "*Pillow Pack*: Single Origin",
+  "url": "https://moongoat.com/products/pillow-pack-single-origin",
+  "variants": [
+   {
+    "available": true,
+    "grams": 128,
+    "price_usd": 5.63,
+    "title": "4.5oz",
+    "variant_id": "46893119832315"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "0e5b02946f78b422",
+  "first_seen": "2026-10-26",
+  "handle": "midside-of-the-moongoat",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/MidsideMockUp_b12eda51-be28-4b30-ad03-cd909686eb4f.jpg?v=1759782995",
+  "platform": "shopify",
+  "product_id": "9119607455995",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Roasted Coffee Seeds",
+   "products"
+  ],
+  "title": "MidSide of The MoonGoat",
+  "url": "https://moongoat.com/products/midside-of-the-moongoat",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz 100% Tin Can",
+    "variant_id": "47560241283323"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb",
+    "variant_id": "47560241348859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "47560241381627"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "67ad5be46c187610",
+  "first_seen": "2026-10-26",
+  "handle": "rotating-cold-brew-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9206823977211",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Bulk",
+   "Production",
+   "Roasted Coffee Seeds",
+   "wholesale"
+  ],
+  "title": "Production: Cold Brew Coffee",
+  "url": "https://moongoat.com/products/rotating-cold-brew-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1320.0,
+    "title": "DarkSide of the MoonGoat (60lbs)",
+    "variant_id": "47811712516347"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1320.0,
+    "title": "MidSide of the MoonGoat (60lbs)",
+    "variant_id": "47811712549115"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 1320.0,
+    "title": "Seasonal Blend (60lbs)",
+    "variant_id": "47811712581883"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 1000.0,
+    "title": "Rotating Single Origin (40lbs)",
+    "variant_id": "47811712614651"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 1200.0,
+    "title": "Rotating Gold Series (40lbs)",
+    "variant_id": "47811712647419"
+   },
+   {
+    "available": true,
+    "grams": 18144,
+    "price_usd": 1320.0,
+    "title": "Decaf EA (40lbs)",
+    "variant_id": "47835344503035"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "391cf07d1573f191",
+  "first_seen": "2026-10-26",
+  "handle": "aged-out-coffee",
+  "image": null,
+  "platform": "shopify",
+  "product_id": "9219715662075",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Internal",
+   "Production",
+   "Roasted Coffee Seeds"
+  ],
+  "title": "Aged-out Coffee",
+  "url": "https://moongoat.com/products/aged-out-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 50,
+    "price_usd": 5.0,
+    "title": "50g Sample Bag",
+    "variant_id": "47865969180923"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "12oz Recyclable Bag",
+    "variant_id": "47865972850939"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 29.0,
+    "title": "1lb Bag",
+    "variant_id": "47865972883707"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 56.0,
+    "title": "2lb Bag",
+    "variant_id": "47865972916475"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 114.0,
+    "title": "5lb Bag",
+    "variant_id": "47865972949243"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "f28ccf3c2f52a2f8",
+  "first_seen": "2026-10-26",
+  "handle": "organic-cold-brew",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/PeruvianPunchCan.jpg?v=1771870441",
+  "platform": "shopify",
+  "product_id": "9246114545915",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Roasted Coffee Seeds",
+   "products"
+  ],
+  "title": "Organic Peruvian Punch Cold Brü",
+  "url": "https://moongoat.com/products/organic-cold-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 378,
+    "price_usd": 5.95,
+    "title": "Default Title",
+    "variant_id": "48273989861627"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "ee99f2f854432575",
+  "first_seen": "2026-10-26",
+  "handle": "liquid-espresso-midside",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/LiquidEspressoBottle.jpg?v=1785268887",
+  "platform": "shopify",
+  "product_id": "9250236498171",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "products"
+  ],
+  "title": "Liquid Espresso: MidSide",
+  "url": "https://moongoat.com/products/liquid-espresso-midside",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1500,
+    "price_usd": 48.0,
+    "title": "Default Title",
+    "variant_id": "48283573584123"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "714c7f33009a3794",
+  "first_seen": "2026-10-26",
+  "handle": "cha-botanicals-white-peony-reserve-tea",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/WhitePeonyReserve.jpg?v=1779310038",
+  "platform": "shopify",
+  "product_id": "9268524941563",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Tea and Botanicals"
+  ],
+  "title": "White Peony Reserve",
+  "url": "https://moongoat.com/products/cha-botanicals-white-peony-reserve-tea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 23.0,
+    "title": "100g",
+    "variant_id": "49008267133179"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 36.93,
+    "title": "1lb",
+    "variant_id": "49008267165947"
+   }
+  ],
+  "vendor": "Cha Botanicals"
+ },
+ {
+  "body_hash": "f3ff720ddc87b501",
+  "first_seen": "2026-10-26",
+  "handle": "cha-botanicals-house-earl-grey-tea",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/HouseEarlGrey.jpg?v=1779310007",
+  "platform": "shopify",
+  "product_id": "9274378354939",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Tea and Botanicals"
+  ],
+  "title": "House Earl Grey",
+  "url": "https://moongoat.com/products/cha-botanicals-house-earl-grey-tea",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 20.33,
+    "title": "100G",
+    "variant_id": "49008286335227"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 27.04,
+    "title": "1LB",
+    "variant_id": "49008286367995"
+   }
+  ],
+  "vendor": "Cha Botanicals"
+ },
+ {
+  "body_hash": "a4e72558011ca54d",
+  "first_seen": "2026-10-26",
+  "handle": "cha-botanicals-golden-honey-bush",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/GoldenHoneyBush.jpg?v=1779309988",
+  "platform": "shopify",
+  "product_id": "9274393231611",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Tea and Botanicals"
+  ],
+  "title": "Golden Honey Bush",
+  "url": "https://moongoat.com/products/cha-botanicals-golden-honey-bush",
+  "variants": [
+   {
+    "available": true,
+    "grams": 100,
+    "price_usd": 19.25,
+    "title": "100G",
+    "variant_id": "49008279617787"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 87.4,
+    "title": "1LB",
+    "variant_id": "49008279650555"
+   }
+  ],
+  "vendor": "Cha Botanicals"
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "condor-sugarcane-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/TumbagaSugarcaneDecaf_c0a911ea-df0b-4027-bbdc-afda2ef71b1d.jpg?v=1785875101",
+  "platform": "shopify",
+  "product_id": "9283968729339",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Decaf",
+   "Roasted Coffee Seeds",
+   "Single Origin Selection",
+   "products"
+  ],
+  "title": "Tumbaga Sugarcane Decaf",
+  "url": "https://moongoat.com/products/condor-sugarcane-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12oz",
+    "variant_id": "48833436319995"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2lb",
+    "variant_id": "48833436352763"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5lb",
+    "variant_id": "48833436385531"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "6328f907bd47f85f",
+  "first_seen": "2026-10-26",
+  "handle": "nestor-lasso-community-lot",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/NestorLassoCommunityLot.jpg?v=1779903675",
+  "platform": "shopify",
+  "product_id": "9328029139195",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Internal",
+   "Roasted Coffee Seeds",
+   "Single Origin Selection"
+  ],
+  "title": "Nestor Lasso: Community Lot",
+  "url": "https://moongoat.com/products/nestor-lasso-community-lot",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "12oz",
+    "variant_id": "48900116644091"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 50.0,
+    "title": "2lb",
+    "variant_id": "48900116676859"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 100.0,
+    "title": "5lb",
+    "variant_id": "48900116709627"
+   }
+  ],
+  "vendor": "MoonGoat"
+ },
+ {
+  "body_hash": "683761d10d5b0d05",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-focus-coffee-subscription",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/EspressoFocus.jpg?v=1784759005",
+  "platform": "shopify",
+  "product_id": "9352195604731",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [],
+  "title": "Espresso Focus",
+  "url": "https://moongoat.com/products/espresso-focus-coffee-subscription",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.0,
+    "title": "12 oz",
+    "variant_id": "49007986049275"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 55.0,
+    "title": "2 lb",
+    "variant_id": "49007988179195"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 110.0,
+    "title": "5 lb",
+    "variant_id": "49007988211963"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "7a60eb770cbfd748",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-danche-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/EthiopiaDancheWashed.jpg?v=1788798371",
+  "platform": "shopify",
+  "product_id": "9366990127355",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "wholesale"
+  ],
+  "title": "Ethiopia Danche Washed",
+  "url": "https://moongoat.com/products/ethiopia-danche-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.0,
+    "title": "12oz",
+    "variant_id": "49053764124923"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 60.0,
+    "title": "2lb",
+    "variant_id": "49053764157691"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 120.0,
+    "title": "5lb",
+    "variant_id": "49053764190459"
+   }
+  ],
+  "vendor": "MoonGoat"
+ },
+ {
+  "body_hash": "aae011df337105e2",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-franky-hoyos-pacamara",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/FrankyHoyosPacamara.jpg?v=1787886244",
+  "platform": "shopify",
+  "product_id": "9401443614971",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "Single Origin Selection",
+   "badge-gold",
+   "wholesale"
+  ],
+  "title": "Franky Hoyos Pacamara",
+  "url": "https://moongoat.com/products/colombia-franky-hoyos-pacamara",
+  "variants": [
+   {
+    "available": false,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250g Bag",
+    "variant_id": "49225238380795"
+   },
+   {
+    "available": false,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb Bag",
+    "variant_id": "49225238413563"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roasters"
+ },
+ {
+  "body_hash": "61dfc09642f42c6f",
+  "first_seen": "2026-10-26",
+  "handle": "edinson-argote-maragsha",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/EdinsonArgoteMaragesha_c1da74e3-19d8-40b3-8fa4-5d560500ca16.jpg?v=1790876905",
+  "platform": "shopify",
+  "product_id": "9402608517371",
+  "product_type": "Coffee",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Retail",
+   "Roasted Coffee Seeds",
+   "badge-gold",
+   "wholesale"
+  ],
+  "title": "Edinson Argote Maragesha",
+  "url": "https://moongoat.com/products/edinson-argote-maragsha",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 28.0,
+    "title": "250g Bag",
+    "variant_id": "49229383106811"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 70.0,
+    "title": "2lb Bag",
+    "variant_id": "49229383139579"
+   }
+  ],
+  "vendor": "MoonGoat Coffee Roastery"
+ },
+ {
+  "body_hash": "19db5ee9c0d2314d",
+  "first_seen": "2026-10-26",
+  "handle": "matchabot-qc-level-1-kyoto",
+  "image": "https://cdn.shopify.com/s/files/1/0656/6002/7131/files/QCLevel1CeremonialAichiKilo_f626c5c5-e1e8-4d49-89cf-75a815bf2aa8.jpg?v=1774040484",
+  "platform": "shopify",
+  "product_id": "9414053986555",
+  "product_type": "",
+  "roaster_slug": "moongoat",
+  "tags": [
+   "Matcha",
+   "Tea and Botanicals",
+   "products"
+  ],
+  "title": "MatchaBot QC Level 1 Ceremonial Kyoto",
+  "url": "https://moongoat.com/products/matchabot-qc-level-1-kyoto",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1200,
+    "price_usd": 455.0,
+    "title": "Default Title",
+    "variant_id": "49293353451771"
+   }
+  ],
+  "vendor": "Matcha Bot"
+ }
+]

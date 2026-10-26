@@ -1,0 +1,3766 @@
+[
+ {
+  "body_hash": "efeaee6f5213fe71",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495260514-S38LBVPL77KT7GJCI3ZH/Dark+-+Ethiopian.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b5bbf419202eb15a2db0b",
+  "product_type": "Dark Roast,Africa",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Africa",
+   "Dark Roast"
+  ],
+  "title": "Ethiopian",
+  "url": "https://www.innkeeperscoffee.com/flavored/ethiopian",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Espresso 5 lb",
+    "variant_id": "1dad02e0-f0a6-4642-8a1b-20be4db3ff11"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "2b6d1b41-1f10-4b60-ae10-1729339ee7e4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "French Press 5 lb",
+    "variant_id": "2f7ac025-f6f8-4263-82c0-c158fc3e91e1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Cone 5 lb",
+    "variant_id": "60d5bd17-224e-4798-83b1-f8eb02c425b0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Basket 5 lb",
+    "variant_id": "815c14b6-fb87-4448-8d6b-6b5df85e23a2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "a99cae58-773e-4cf5-afc6-8d3a342438aa"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "b1075043-670a-4286-9040-ae6310d97d51"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "c16b34cf-4170-47c4-8e84-5ca60d1ddfd9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "fa22dede-4df9-4a2d-b774-8a8f8d5f88c2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "fbd64577-e1ee-449f-b42a-e871b3bb2a29"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "e0f91fa1b6311fab",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-organic",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/f938f845-3138-4ec7-a703-6bb66d19f259/Medium+-+Rwanda+Organic.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b5ea58165f576bcb76ba5",
+  "product_type": "",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [],
+  "title": "Rwanda Organic",
+  "url": "https://www.innkeeperscoffee.com/flavored/rwanda-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "031799e4-d39e-452d-9d24-03d8dcaa8ed4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "08dd398b-4767-4c69-81ad-16e968126480"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "421bd38f-ba2a-41b2-a4e2-2a0881fe29da"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "5c96ece7-45a6-4482-9a00-ab61347d0eb5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "62b4adb2-a38a-4222-86a4-a59890e9d0b9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "6c41045e-c31f-4469-8988-491a72ed4364"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "c8a13057-b302-4fee-99cc-3b788907137d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "e7cd9a22-8bec-40ba-bf40-a67c9aa9aacb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "f21e1647-66df-43c9-b4e3-e7dd5fa22610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "fbbf9ebd-6c5f-4ab6-aec0-be7932bea79b"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6c7a4ff547be7626",
+  "first_seen": "2026-10-26",
+  "handle": "tanzania-peaberry",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716494671368-VWVXC8C435ELNMRFXPSV/Medium+-+Tanzania+Peaberry.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b5f578165f576bcb7a73b",
+  "product_type": "Medium Roast,Africa",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Africa",
+   "Medium Roast"
+  ],
+  "title": "Tanzania Peaberry",
+  "url": "https://www.innkeeperscoffee.com/flavored/tanzania-peaberry",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "2558fea7-f096-470d-9676-3ca3154ed346"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "French Press 12 oz",
+    "variant_id": "43c13eeb-8e2a-42e8-8cd1-e432b2f6c1fb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "4ac2a6ec-93e2-4c38-af6e-dc7d72c4b356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "60068b9f-5efd-48da-b791-633ed5687795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Cone 12 oz",
+    "variant_id": "6620e023-d9d6-4e18-a22e-4477ae088323"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "6e8c889b-7827-4f37-a2d7-8ed276641aa7"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "8d76add1-178f-4a6d-8a66-45dcfb1a67b8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Basket 12 oz",
+    "variant_id": "8eeb3f47-5bce-4534-bf7d-c13cbddbeb76"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "da876e6d-5a4e-4b20-ac44-2530ce773c2c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.0,
+    "title": "Espresso 12 oz",
+    "variant_id": "fa7de047-c868-4422-b716-830cefc60bff"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5f50bea7785c85b1",
+  "first_seen": "2026-10-26",
+  "handle": "brazil-santos",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716493420245-D6KYCAS6UR9054DKKMLE/Light+-+Brazil+Santos.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b643553450a8226fc3218",
+  "product_type": "Light Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Brazil Santos",
+  "url": "https://www.innkeeperscoffee.com/flavored/brazil-santos",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "16f4584a-2ec3-4ae1-8917-82537c439ddb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cone 12 oz",
+    "variant_id": "1b20bf7c-feb4-4667-a869-b059ef7f73d6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "22aff47b-1f7d-4678-810d-86737a3f5868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Basket 12 oz",
+    "variant_id": "2ff1183a-cf27-4753-93b8-1bb452dae849"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "French Press 12 oz",
+    "variant_id": "67b67642-bf50-43f7-ad21-465004f82960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "8a2147b9-5faf-430c-a06b-f5ae1a1ffeaa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "9e7f5379-93f3-42a3-bee7-79f08ec973b4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Espresso 12 oz",
+    "variant_id": "bd117e63-25fd-481b-b151-69b963b50fad"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "cc1495e2-496e-4d36-928e-18af751b6b53"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "d5f0b666-5b47-4570-abc5-9c831f13eb7d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1957def761a034e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-supremo-bucaramanga-especial",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716493593997-FA8XM3WJPFUS64CP550U/Light+-+Colombian+Supremo+Bucaramanga+Especial.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b653a53450a8226fc8c70",
+  "product_type": "Light Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Colombian Supremo Bucaramanga Especial",
+  "url": "https://www.innkeeperscoffee.com/flavored/colombian-supremo-bucaramanga-especial",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press 12 oz",
+    "variant_id": "02a59c2d-33fc-4878-ae66-9896f854425f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "941e04b8-a54d-4267-85a2-ec1c376e0cc3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "9776c600-8455-4cb0-9f1c-5eb56871310d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "979f63d8-fef0-4775-96fc-eed791fd06f6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "9dfe504f-882c-4029-bb4a-35d9458b1be0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "a1f69481-6618-4e94-aaa4-9afa0598390a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "a31296d9-c244-44eb-bd2b-029402a7b8dd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "b2806d96-cef9-41fb-8583-9876be260f75"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "e1a55b30-6fda-480e-8486-d27825edd5f2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "fadf0123-2c12-4f05-b6db-105410b59d61"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c1302bd35d01335a",
+  "first_seen": "2026-10-26",
+  "handle": "costa-rica",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716493741164-6C4LQ2YE0N26EF2MKRVA/Light+-+Costa+Rica.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b65d58165f5be9950a553",
+  "product_type": "Light Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Costa Rica",
+  "url": "https://www.innkeeperscoffee.com/flavored/costa-rica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Espresso 12 oz",
+    "variant_id": "0271d706-ef43-42cf-b86c-6d7d439c6488"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "19892af2-822a-4b40-aaa4-15b7a41b9a97"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "27f4bdea-5781-487b-87f0-8960678d3641"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cone 12 oz",
+    "variant_id": "41a2712d-5b22-421b-9ca6-424614bc0e0d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "596c8fa0-00fd-4f12-b730-a23e97589df2"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "70590a32-8553-44a1-bcfc-49ccb11677cd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Basket 12 oz",
+    "variant_id": "828a8d95-7969-4fae-bd80-c7ef97f5043c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "9057bb88-fcbe-472e-bf22-ce384c7d1219"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "aae37f0f-e5d7-473c-8a18-f8f711bf7260"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "French Press 12 oz",
+    "variant_id": "fab69912-7629-46fb-8bd4-dce06ec2df5a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "087cb2cd0b96e277",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-antigua-san-lazaro",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716493852519-I2JBJ1EAZ1HNTIC399NJ/Light+-+Guatemala+Antigua+San+Lazaro.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6643c83025ac29618e7b",
+  "product_type": "Light Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Guatemala Antigua San Lazaro",
+  "url": "https://www.innkeeperscoffee.com/flavored/guatemala-antigua-san-lazaro",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "0f9902db-b078-4149-8f02-95d8d7fd2be1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "429dbbf8-f59e-42d4-8ad4-d113f0885788"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "Basket 12 oz",
+    "variant_id": "58948193-3345-4a52-a809-aa475f2b33ac"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "64e58b15-f1c1-460b-8b38-09c3e02f76b4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "700cff83-36be-4b82-8a6c-1a0ee953769f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "7a8970f9-a6a6-4c67-840b-856c8ee126bc"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "French Press 12 oz",
+    "variant_id": "828278b5-4dfb-498f-81fe-e46be20e3a76"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "Espresso 12 oz",
+    "variant_id": "96bd8de2-2c88-4065-8d58-fc19033b97f3"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "9f3d987b-7cd7-4d83-8cc7-00f440456695"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.25,
+    "title": "Cone 12 oz",
+    "variant_id": "cbdd69d9-bc76-43de-897b-e53a2335ffde"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d1b70ec2a4e73881",
+  "first_seen": "2026-10-26",
+  "handle": "mexican-custapec-superior-altura",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716494124342-N3GAMKQ626EGZJSPWG1E/Light+-+Mexican+Custapec+Superior+Altura.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b673ae4966b05d35182b1",
+  "product_type": "Light Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Light Roast"
+  ],
+  "title": "Mexican Custapec Superior Altura",
+  "url": "https://www.innkeeperscoffee.com/flavored/mexican-custapec-superior-altura",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Basket 12 oz",
+    "variant_id": "0b8c2f76-6972-4e7e-93f5-779cfb492225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "18df9cfb-49d7-4a4c-b630-efeb0cd01b0d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "23933ff7-361d-4710-a18e-6727d11a8912"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "44cfedc2-ab1b-4a79-9370-5d23739b3cbf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "French Press 12 oz",
+    "variant_id": "90efc397-9645-4214-8160-e06244f2e663"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cone 12 oz",
+    "variant_id": "9a387002-e5c4-4497-a93e-fa2c365ab892"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Espresso 12 oz",
+    "variant_id": "ad046b99-d58d-421c-b163-df873f59d244"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "af502e68-a31e-44db-b66b-b8e5f494d550"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "cdb1f47b-6cda-4c5f-aae0-0f605f65a686"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "eb73df39-29c3-4417-9311-4ba82e0c3bab"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4b257f7c8b141de6",
+  "first_seen": "2026-10-26",
+  "handle": "panama-boquete",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495895071-65JALP2NJCAOFC72VRJG/Dark+-+Panama+Boquete.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b67b4085229e27f0adbff",
+  "product_type": "Dark Roast,Americas",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Americas",
+   "Dark Roast"
+  ],
+  "title": "Panama Boquete",
+  "url": "https://www.innkeeperscoffee.com/flavored/panama-boquete",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "0dfb4559-930d-4359-9891-36dce49d5bc8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "2556908e-d1fe-4c18-b254-fd44705c38cd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "6ce53388-4cf7-4de1-b7b1-8e86f7f5aabb"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "776c97b9-deda-433d-8a04-fab31f999957"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "b2141f7c-d1eb-4551-8e38-c675aa408650"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "c0fa0d86-50b4-43de-bd9a-693377e153bf"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "c5265adf-6f13-4348-bfb8-17f9b8fe4374"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "d088886f-a78b-463e-968a-b684f2f598b8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "eab548ce-8ce6-424d-9e01-f6a4d315cee4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "fd52a2a4-a53e-437e-9653-7b4feaf7a421"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "35604057cee1110c",
+  "first_seen": "2026-10-26",
+  "handle": "celebes-kalossi",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495039119-JCUS0J7PSRY1TJ4L3ZRO/Dark+-+Celebes+Kalossi.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6c398165f5be995258da",
+  "product_type": "Dark Roast,Asia",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Asia",
+   "Dark Roast"
+  ],
+  "title": "Celebes Kalossi",
+  "url": "https://www.innkeeperscoffee.com/flavored/celebes-kalossi",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "0661efae-48e1-4e0a-b71b-857512368415"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "09c635f8-00c1-45ae-9e02-b80547ac2787"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "2c35629e-587c-4c99-9301-c21d7a851370"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "321d7098-b1d4-4caf-8932-1710d6e38d09"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "486b0cf4-64cb-4671-bf0a-e448448332ab"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "93bcff90-fc82-4cab-a0c4-04a47db9af27"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "940214d9-0ea0-4efc-a145-b686fdf8fa5c"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "97fb94c9-cc27-4e48-88d2-fff818558f7f"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "c8b2cdf0-376e-49b5-ad53-d7c0ed4f06e7"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "cd5b9b3a-62d0-45e6-9d01-b6630f74222d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "33c67692fb250585",
+  "first_seen": "2026-10-26",
+  "handle": "indian-malabar-monsooned-aa",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495400291-2RB0KRT43BXFX3K587KU/Dark+-+Indian+Malabar+Monsooned+AA.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6d41c83025ef913cce75",
+  "product_type": "Dark Roast,Asia",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Asia",
+   "Dark Roast"
+  ],
+  "title": "Indian Malabar Monsooned AA",
+  "url": "https://www.innkeeperscoffee.com/flavored/indian-malabar-monsooned-aa",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "062d4d05-303b-46ed-8fd3-5d0ff1f3d972"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Espresso 11 oz",
+    "variant_id": "14648e3c-5060-46d3-ae39-9a5279d318b2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "27ba745a-2961-4db6-9c52-c668e8b82cad"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "French Press 11 oz",
+    "variant_id": "4fab461b-d119-4f93-b74a-8bbcef519605"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "716edd60-612e-4ca0-bf1d-b75779b2b00a"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Cone 11 oz",
+    "variant_id": "8c5b0943-7a81-4f17-a8a1-14c3753333f1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "8e39808d-de1a-474c-aedc-c70718b84cd6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "8f5200df-c3e6-4312-8561-82bef4a4b816"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Basket 11 oz",
+    "variant_id": "a20cff53-cfaa-4ede-a42d-dab18c9bb19d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "c947366a-43ed-4264-960b-9736302744c4"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "57532bb773da012d",
+  "first_seen": "2026-10-26",
+  "handle": "java-estate",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495605628-18LERPQ4C0IDYMCDI65D/Dark+-+Java+Estate.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6dde085229e27f0c9535",
+  "product_type": "Dark Roast,Asia",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Asia",
+   "Dark Roast"
+  ],
+  "title": "Java Estate",
+  "url": "https://www.innkeeperscoffee.com/flavored/java-estate",
+  "variants": [
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "695bddff-1c5d-41b0-a187-ecf57b238928"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "6d6dac0a-2f28-447c-b94a-f53bc9155653"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "8f29e643-e561-4722-9b81-29564e78ef83"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "a8e87eec-97d8-42ac-9bad-bba8961040f0"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "b055a785-479f-42db-ae59-abf328929269"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "b649316a-3766-40cd-b9d4-670e1ce3f55f"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "bf05302b-09b0-4d08-bdf5-695bdae70500"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "d02bb0e8-0e38-4ecc-9032-36ad2f426e80"
+   },
+   {
+    "available": false,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "da400fba-4e3f-4281-adeb-6ebe0bbb9b43"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "e6753838-d174-4cf0-96c8-c2652424e7a9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a5eb85faa0bcc78f",
+  "first_seen": "2026-10-26",
+  "handle": "new-guinea-koban-a",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716494421606-C0PG9XJRC922LAGD3BBN/Medium+-+New+Guinea+Koban+A.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6e4f9140b7da44c12761",
+  "product_type": "Medium Roast,Asia",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Asia",
+   "Medium Roast"
+  ],
+  "title": "New Guinea Koban A",
+  "url": "https://www.innkeeperscoffee.com/flavored/new-guinea-koban-a",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "0f6925c8-68de-445e-b341-96299598a173"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "280f5f75-18c2-4b83-84d4-e03c5557725e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press 12 oz",
+    "variant_id": "9bd38dee-3f6c-4d9a-a948-4d22b856a587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "9d35e054-2f6d-462a-b6e4-e6ca3e51aca7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "c99b6cee-548f-4af8-82bc-dec2afb1cd19"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "dcf8b762-8c1d-487a-8975-bfcd372e4db0"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "dd107b52-0f90-46ce-bbc0-b15b33c00204"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "e47fc00b-c708-4ac1-b1d3-d18a8b1f7b27"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "f28761a1-e1a2-460c-9dcc-8b6a77783254"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "f9c482b4-739e-4b1c-b26d-cd587c1f7c97"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "73f48b6b7215eb3c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716494586589-Q9S7NE8C9503STZEJYSN/Medium+-+Sumatra.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b6ec124a6941e715f47cf",
+  "product_type": "Medium Roast,Asia",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Asia",
+   "Medium Roast"
+  ],
+  "title": "Sumatra",
+  "url": "https://www.innkeeperscoffee.com/flavored/sumatra",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "1754996d-c6cd-4a08-88b3-f5243b4e352a"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "199c72b5-8915-4814-ba0f-9e4bd30cd941"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "63099898-921b-4c3a-b4d0-dbd36f96eacc"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "680d0df4-b2b0-4052-9e95-411b0a352c0b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "6c04e4be-6cb4-4172-8ee1-a86d715c2d9f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "84d20e54-fc75-40a8-8121-6437261be577"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "94302573-6c2d-4e44-bcc3-3a5e1a605258"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "9a1f5a98-9d28-46e5-bb29-8558fb62b870"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "e4c35c6c-764d-4a25-9d27-3aad1a53c042"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 82.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "f2a2066a-aebd-4485-a071-44e1a2e811d0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "60e58a86cf730d27",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-breakfast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720817181633-YSRSF0L2F247Y868VJ6O/Decaf+-+Breakfast+Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b73fbf9619a1624899001",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated"
+  ],
+  "title": "Decaffeinated Breakfast Blend",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.14,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "0415fcbd-0d7f-496b-b718-42d9692167c4"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Cone 11 oz",
+    "variant_id": "30812925-63c5-4e15-be9d-6425d81e9278"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.14,
+    "title": "Basket 5 lbs",
+    "variant_id": "5275793a-74ee-4cea-abe2-930e4c57a57e"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Espresso 11 oz",
+    "variant_id": "5cec2e3a-09af-41b6-a834-e55eaf72380b"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Basket 11 oz",
+    "variant_id": "60b5ef83-8416-40f1-aa33-78031bd96db0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.14,
+    "title": "Cone 5 lbs",
+    "variant_id": "a0c4a1d5-6fb3-4033-8ae4-7cce18c12bd9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.14,
+    "title": "Espresso 5 lbs",
+    "variant_id": "a54d19f8-708d-44e6-922f-e32ed409fc37"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.14,
+    "title": "French Press 5 lbs",
+    "variant_id": "cc8bbbb2-c5eb-4663-bbe4-2b060bbcf835"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "French Press 11 oz",
+    "variant_id": "ec19ac3c-ecbe-44db-9f19-fc1539634745"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "f3f2ffb0-d88e-4402-8bff-4f5cd66d4834"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a40195a55f4a43bd",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720816833120-0UNSSW3OA1G2W8MB4LUG/Decaf+-+Espresso.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b76179140b719c701d4bf",
+  "product_type": "Decaffeinated,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "House Favorites"
+  ],
+  "title": "Decaffeinated Espresso",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Espresso 11 oz",
+    "variant_id": "29a48d0b-53ff-462b-925b-ed2b15d2de62"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Cone 11 oz",
+    "variant_id": "30c2eaaa-a101-4b11-8a85-c467f1019149"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "372a5a02-befe-4850-88c8-30d0eaf85443"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "French Press 11 oz",
+    "variant_id": "42c3be4a-e3bc-4826-9ff8-5d66991d7d1d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "62be13c5-2616-4684-9a3f-000c60449a79"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 18.25,
+    "title": "Basket 11 oz",
+    "variant_id": "6dbd12f8-452d-448e-b0cc-2cac5c55fbf2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "94118d84-83f3-4303-b688-bc448ddab749"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "9c3ceb34-8869-4ef4-9c60-73290687dcb1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "cc027a15-abf5-4628-a08c-42d0d846f802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 83.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "f8d332da-c73e-4feb-a4b1-98fade1b1869"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6dd0b27141308a84",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-peru",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720816995539-XRY477TSY4FVOKCRJZ4I/Decaf+-+Peru.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0b7906c830252ee144424b",
+  "product_type": "Decaffeinated",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated"
+  ],
+  "title": "Decaffeinated Peru",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-peru",
+  "variants": [
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "0281445b-12a9-4f39-948e-13c74070ba06"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Espresso 1 lb",
+    "variant_id": "60ef8387-3bec-4757-9fca-a40953a59d45"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "63d8e6e7-b29c-4237-9a86-d77f2b1e6846"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "French Press 1 lb",
+    "variant_id": "73599a6c-bae1-4d3f-9d81-dcc1f396e4ff"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Whole Bean 1 lb",
+    "variant_id": "87cf122d-5d42-49b4-8f85-5e1cac9e7d4b"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "87dbaed1-43f2-42a6-b4e9-d833b39f4d16"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "bd25d206-7f9d-4617-b31e-8cc6926649df"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Cone 1 lb",
+    "variant_id": "c6953ae0-4a09-49ab-b65b-86f3c3fd2e33"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.75,
+    "title": "Basket 1 lb",
+    "variant_id": "cfaff28d-53dd-491c-a751-29f968deaaab"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "f919ff9f-7a58-4793-a48f-6b0c5bd1f82d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "19c0e278eacc469f",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-butterscotch-toffee",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583276311-EVO1O4FIXEL0RS3KTUEC/Decaf+Flavor+-+Butterscotch+Toffee.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0c7ae9f9619a2a36867d30",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Butterscotch Toffee",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-butterscotch-toffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "1215dddc-8666-48b2-9be8-6a5c49a2314c"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "16c4ad1c-98c0-404c-abab-18eb26082879"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "21c2e70c-cc10-49ed-9684-e42a3d5f05c5"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "73949570-4601-4e80-a7b5-523f0db407fd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "7879a1fd-a0e0-4457-bc07-0e4d9bc55476"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "90106da4-b4e3-490a-a12e-99d13fa50f3c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "9bbcf632-d1a1-440a-9df9-5e8610a5b634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "ea606641-161c-41d3-a949-7868edf93efb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "f0ee0d3b-8640-40a2-af12-8e6fb9b046ab"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "fc43ddcd-c091-43a0-adcd-120b46e394d5"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a652564ab0e9cd12",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-cafe-hazelnut",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583165359-0CE5CKMHRZP8I5JLE7DG/Decaf+Flavor+-+Cafe+Hazelnut.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0c7c99f9619a2a3686e051",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Cafe Hazelnut",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-cafe-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "13f57db7-0cbf-41f7-99a8-8bafd09e3183"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "335f8891-6a41-41c0-a161-d7bfc032148c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "3a3e3212-3883-4368-a38b-c02c7bfbbc5e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "9759b0e6-b880-4200-833d-7fd220b39f73"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "d096bf0e-2234-4399-8b20-363426c6351b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "d3a78e6f-53c6-44e8-aac3-b05e78cf2c21"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "e002566a-87aa-438a-8f3c-b45444f25fde"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "e7be0371-54d1-4235-9d6a-6ad870dcbb5b"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "eeb424a1-54da-4cee-8366-f156b3b80a95"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "f7a024a4-dcc5-4bb4-aba1-53298d10bf3e"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "edc552475326b04e",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-caramel-creme",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583397086-WVS4APVNQJPKRRXRYBI7/Decaf+Flavor+-+Caramel+Creme.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0c7d8d4192028d4a9fd520",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Caramel Creme",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-caramel-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "00156cd2-f419-4ef9-977e-0fd0f9a3162e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "1d9956d9-1029-45de-8b1e-801ef607b8d7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "1e65f766-40a6-4e37-8df0-dc080cc3191a"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "22772b13-73b5-4f43-a019-d501dda97546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "3b03e459-a267-4067-b013-e6f917995908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "77e5846c-46e3-4c77-bf4a-9ae7063cc85e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "89b5c530-4fff-4f08-b9a2-e337d19c090c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "942853cb-d3ad-42d6-9124-6d46e0eac861"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "dc6fba52-c3ee-49e4-a0c2-a7a5100b517c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "f0771022-dc0f-4dbf-9e71-79d5d18b0f33"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ab677760a054ccb6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-cinnamon-hazelnut",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583060547-MTSDHY0CUEO2JZZQYTR7/Decaf+Flavor+-+Cinnamon+Hazelnut.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0c7e33e2c483e5b5a1c670",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Cinnamon Hazelnut",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-cinnamon-hazelnut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz ",
+    "variant_id": "092bf25b-cd01-4680-97e0-eda22b06d4fa"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "45c6632e-1b7e-4c9b-9e0e-457ec4488844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "4b3b1793-2725-411e-a8c7-e739cbd0c370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz ",
+    "variant_id": "4e5989eb-0d7f-40c7-9ad1-9d8e8a6c6c10"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz ",
+    "variant_id": "77abf0b9-7a72-44f1-aafd-e9d9f593385f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "7be88ac4-6675-4b44-bff5-eb9e92b5e795"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz ",
+    "variant_id": "8c93c707-db00-4153-ade0-cb860792b696"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "9ca8dd0e-3844-47a9-b1f2-f11a6595e6e2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "a7036231-9562-481e-8052-3c02e261c5a4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "aa81d4b9-fcf3-4787-a491-cfef03f959b4"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "b3a81d60-0121-4f7b-963c-2412619275ca"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz ",
+    "variant_id": "cf9d0b9a-ecc1-424b-9228-f7f9af2ec103"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "d62e12fd-8695-48e4-ad17-fafb7c1b7f68"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f22dcb65-a10d-4570-956d-e9abc78e42dc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "f9308711-8ff3-4d63-ba72-ae45eccb99a0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a6375da0e28135a8",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-cranberry-creme",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583685160-BH4E2NC0UUUJ8EMM5YI8/Decaf+Flavor+-+Cranberry+Creme.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0c7efc08522925f057c318",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Cranberry Creme",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-cranberry-creme",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "17336303-b0a6-4a3d-9b7b-6301ca92f78d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "1b146e27-603d-4a1d-a059-adc9fd80f4e0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "1e8e3c8c-c5cf-4a71-89c5-bf63e76c19db"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "65ae365b-2543-4755-bf62-e4bd22a3c8b2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "75df0010-7384-48e5-ab61-1c881b4149fa"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "7dcb5ed2-2acf-4d27-92d8-aeb6e5099732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "84e8aa0d-a350-4686-93fe-c66bf0d56dc7"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "ceea4a89-13fa-4544-9781-2b5eff63514d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "ed7fb9e6-acb9-4f63-a326-b22d2e9c9c34"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "fbb33636-dcd5-41c8-a430-6d0fd626206a"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f06d76022efecf00",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-creme-brulee",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583772901-OKK5L1RI3DDL28139K77/Decaf+Flavor+-+Creme+Brulee.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0daf3ee4966ba63b12c3f8",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Creme Brulee",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-creme-brulee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "0fbad77a-8a1b-47cb-9086-17a2f0b23526"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "3db7a0bf-fd3d-4f01-a73d-58cd51347011"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "56cf842f-001e-49be-8007-50b2a2784328"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "6e8590e6-4bdb-4cc5-ad72-988a58f2ac4f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "7126dfde-1b14-44e7-86ed-586f149673f0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "853d5805-1bf6-4c94-8100-d3541f5a4a15"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "909311b9-1001-4256-b655-ea451ce278ce"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "95edf493-9499-40fc-aef0-8dd96f60c091"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "a3f78445-28eb-4f22-963a-f98f85d18b2f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "b0671cd1-e1a9-4995-8d6e-d40c39977876"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "619b0cfa68d16fbd",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-french-vanilla",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583577648-FXAZGIP1TN54PT4M6ABE/Decaf+Flavor+-+French+Vanilla.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0db04ae4966ba63b13009c",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated French Vanilla",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "5cf9e0c6-5dce-451a-8faa-a8aeebfca5f9"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "65599aee-4146-4905-8300-9ed536e34e75"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "792a7a10-80ec-4440-83bd-197db6b28509"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "8accfdce-75f2-48d2-b4ad-3f340b0e315c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "b2032323-11a8-45e9-85f9-3236b380d326"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "d73aefff-cdc5-4a98-b441-63f6125f5c4f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "e22ef815-6f9e-4a9d-b1aa-839ff73b86a6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "e5cf6ed8-8c77-4774-99cc-4810d33c0acd"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "e5ee9fa5-fcdd-40ad-ab69-cfe1fb4d224a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f194afc4-3db3-4259-8950-fec14aab2465"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "294228b67c4ef3e6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-irish-creme",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720816292646-GJ7PLZC1K7GT4GSCRNG5/Decaf+Flavor+-+Irish+Creme.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0db12c652deac9ef626ae8",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Irish Creme",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-irish-creme",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Espresso 1 lb",
+    "variant_id": "1240376e-a217-48a1-9e27-188c5fac0941"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Basket 1 lb",
+    "variant_id": "166e4b61-90d6-4292-96f9-8fd4e2f21db6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "25599e5e-cfc7-4f8c-a1d2-dd1eae121c41"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "3df3e9ed-475f-488c-adbc-5ff46cd5532e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "4a0b50e4-43f2-458e-b759-7db9af7d53fe"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole Bean 1 lb",
+    "variant_id": "98ff4755-7246-425d-82a3-394973a1a94a"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "French Press 1 lb",
+    "variant_id": "cb0917da-652f-46fa-93ba-523aa75df8b5"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Cone 1 lb",
+    "variant_id": "ce5527d6-0d22-408f-bf34-702924b717e8"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "d0a20bd3-3143-4618-a585-94b671e99532"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "d2efe30f-9094-41b5-a392-22272038fcb9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "276c309575ef47c6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-pumpkin-pecan",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/11170622-3c8e-4c53-b5f1-fa30a81a8d00/Decaf+Flavor+-+Pumpkin+Pecan.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0db1c5c83025585e22a0a7",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Pumpkin Pecan",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-pumpkin-pecan",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "0bdf29bb-f331-4a04-8b04-3ad11facfd1d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "513a0059-b08b-489c-b4f9-7d9e979e4e91"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "5fa926ec-0ad3-4130-a960-b727140f61ac"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "7a42dfcc-56a4-4afb-a6e4-2d4fd3d1d4c5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "88379d09-7e40-4be7-bdc6-228653b1a2ac"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "a2ea4236-7f4d-47fc-a06a-932710d9663d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "a94c2edf-4cf9-46cd-877d-cbc5c79c1b24"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "b2a58cc0-4568-4908-a881-ff341e435da3"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "b4381ac0-6299-43cc-a517-5b9e5b663a49"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "c7d0ed6e-f256-4d98-830b-e7dd9ea704b0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b5dd57c6961bb9a6",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-tiramisu",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583874754-YC3FITO1FIE4KD25TXRQ/Decaf+Flavor+-+Tiramisu.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0db275419202dab6cd79b9",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Tiramisu",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-tiramisu",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "0170b520-c38b-4500-a74f-78c2b6bfcb38"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "18a51642-0ea4-4dbb-9d80-ef4d9085a68d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "26b52bab-d699-4120-809c-9df139e809a2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "3fd8c84a-e7ed-46b1-8a36-1f84d80e56f4"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "4649724f-ec6b-4099-992c-81f985d815eb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "4f7244d5-493f-4dbd-b22c-7faab82ece64"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "c0ac933e-c67e-443d-93fe-87e031d7968e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "d6b50e4f-3356-43f8-a50c-6bc010bd5f5f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "e91e38c2-ba73-4f94-b1a3-67caf86a2464"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "f8eb687e-bf82-4f6a-9f7c-8ce69f49cb84"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8bed0df17a1b27fd",
+  "first_seen": "2026-10-26",
+  "handle": "house-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716493954447-N5WQIOOHS0RY1INZZPGL/Light+-+House+Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0dc086ec212d87b04345fd",
+  "product_type": "Light Roast,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "House Favorites",
+   "Light Roast"
+  ],
+  "title": "House Blend",
+  "url": "https://www.innkeeperscoffee.com/flavored/house-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "0c759c9a-e722-4824-a488-a5c7870ddd3b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "29cc7422-3f09-44dd-adfa-86ee655edb2d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "4ca87ccc-7887-44c2-b09a-209bfbc62c20"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press 12 oz",
+    "variant_id": "65976ab7-7c3a-4f0a-9924-a6af014155dc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "a77f4846-6f58-4ed5-b074-4ffd034a7f88"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "bb9a0a09-9237-4e7c-84d6-5b76f29fc018"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "bd3e3852-e7ce-4bac-a479-48e50b867083"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "ddcbb22d-359d-4316-b1ac-f3125d7d90af"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "f39fe69d-eb71-4874-a5c7-2417732e908f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f65fa2b7-4787-43ca-b2fd-5b2388aeb708"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "18d6d5f7a84cae80",
+  "first_seen": "2026-10-26",
+  "handle": "victorian-breakfast-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716494275255-ZTP7Q3L2RZR08X52FV77/Light+-+Victorian+Breakfast+Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0dc12324a694de8ecaa469",
+  "product_type": "Light Roast,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "House Favorites",
+   "Light Roast"
+  ],
+  "title": "Victorian Breakfast Blend",
+  "url": "https://www.innkeeperscoffee.com/flavored/victorian-breakfast-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "032032e7-a4f8-4113-b589-b0cbbbd7ca16"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Cone 12 oz",
+    "variant_id": "11c1e3c1-6f1f-482c-a311-522f41338815"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "32e09fe1-23ae-4e10-9460-f769586c3795"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "671a39c8-46a5-4fec-af21-07c924375078"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Espresso 12 oz",
+    "variant_id": "6a1688a2-c263-4f63-82b3-31af5e4c924c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Basket 12 oz",
+    "variant_id": "81b922d8-2dcd-4195-b576-109c6d142277"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "9ca17300-c31f-447d-a3e9-6c0d76b8209d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "French Press 12 oz",
+    "variant_id": "a055bbf7-9bec-41a3-aaa9-1212ee87e44f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.0,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "f07388a1-8edf-4bd1-859c-a9a00168d222"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "f4ded349-a212-468f-b5e5-4b9e6a465e12"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "058769dd230a8e5e",
+  "first_seen": "2026-10-26",
+  "handle": "seminary-street-mocha-java",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495798613-3A03NP5QGMU6UTOFD8I3/Dark+-+Seminary+Street+Mocha+Java.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0dc3708165f5dbfe75fcc5",
+  "product_type": "Medium Roast,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "House Favorites",
+   "Medium Roast"
+  ],
+  "title": "Seminary Street Mocha Java",
+  "url": "https://www.innkeeperscoffee.com/flavored/seminary-street-mocha-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "27f7533b-bbbc-4137-b22f-6f21b0c9ca85"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "2943835d-d265-4def-bf04-f406577f42b5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "3076083d-67a0-4423-9746-5343418272c9"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "747dad54-6510-409e-95ef-c06a0373a7b6"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "7d13916b-a42b-4fda-8dc3-8f88d7e8f881"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "837d4ebd-a25c-4a7c-9b8e-1432009eaf4e"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "85d917fb-18b7-4830-a61c-863eacbb03cd"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "8ddf333d-8368-400f-84d4-edd8626b9b15"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "c405bb17-fad2-4a5a-ac3e-6d83c23bc3cf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "e8f1de69-2102-4205-8ed5-71cb8d499b3f"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "41e375a29229bf87",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495127376-K98PIUZGS9SALGHA59AW/Dark+-+Espresso.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0dc54cf9619ae200fee5d6",
+  "product_type": "Dark Roast,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Dark Roast",
+   "House Favorites"
+  ],
+  "title": "Espresso",
+  "url": "https://www.innkeeperscoffee.com/flavored/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "091b350f-fcd4-4feb-ad10-b84171c13e7f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "271b4010-8cfc-453e-a008-1b7d5779383b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "30cffcea-dc73-46b0-a2cc-2e9410ff39da"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Espresso 11 oz",
+    "variant_id": "5e648152-e769-405e-bbb0-d86e260bdcd5"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Cone 11 oz",
+    "variant_id": "77ef05db-97c9-4e47-9562-ff0fef8420e1"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "French Press 11 oz",
+    "variant_id": "a01ba827-69ad-4a6c-8d83-837e07cb3a39"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "b6a4d174-7c49-4283-a4af-b75edd6400ac"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.0,
+    "title": "Basket 11 oz",
+    "variant_id": "c1fbe733-bcd7-49c8-9cfb-4e8717e218b1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "c9e3d1cc-af83-45c5-af12-8765526f78c5"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 80.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "daa74ce4-1271-4903-a18c-f7b5a68ae5b2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "a081b0cfe87bd9f3",
+  "first_seen": "2026-10-26",
+  "handle": "innkeepers-blend",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716495502902-7AUTPMHQZFCTGN52C91U/Dark+-+Innkeeper%27s+Blend.jpg",
+  "platform": "squarespace",
+  "product_id": "5a0dc5e753450a890b352b60",
+  "product_type": "Dark Roast,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Dark Roast",
+   "House Favorites"
+  ],
+  "title": "Innkeeper's Blend",
+  "url": "https://www.innkeeperscoffee.com/flavored/innkeepers-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "19243e8d-a1d7-4192-8c9a-981b497c66eb"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "French Press 11 oz",
+    "variant_id": "3e741399-72fd-4ed2-95c9-2b788e9bb10e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "4f0260e3-e889-4a5c-9d60-c31a1fa73905"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "5c7ff029-389c-448e-910e-b0896a021a63"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "5daf18e9-cd63-4ac9-8173-1be8af25c1eb"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Basket 11 oz",
+    "variant_id": "6e5b6352-773a-420f-9b11-a257ba89f3f5"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Espresso 11 oz",
+    "variant_id": "a8bb9673-efb8-4dcd-aa2e-f6b2f2c586b2"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Cone 11 oz",
+    "variant_id": "b0d6b20f-a1c7-4850-abad-e954125f34ce"
+   },
+   {
+    "available": true,
+    "grams": 312,
+    "price_usd": 16.5,
+    "title": "Whole Bean 11 oz",
+    "variant_id": "b63c2965-d193-4fc3-a6f0-c958091aef88"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "b80a66da-466d-457b-80f8-54011281b709"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "296094087c1d94aa",
+  "first_seen": "2026-10-26",
+  "handle": "toastedsmores",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720817553751-DLVJJJQFRAEKX4U5SNS2/Flavor+-+Toasted+Smores.jpg",
+  "platform": "squarespace",
+  "product_id": "5dcde097aa5cea2a52124953",
+  "product_type": "Flavored,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored",
+   "House Favorites"
+  ],
+  "title": "Toasted S'Mores",
+  "url": "https://www.innkeeperscoffee.com/flavored/toastedsmores",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "0686ce3b-6d88-4c9c-bcfe-869f8b5c0471"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press 12 oz",
+    "variant_id": "27f6b542-bfaf-4eae-96a2-4eacb0472144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5 lb",
+    "variant_id": "2e724fa4-a90c-4be4-8e62-83a7996a91da"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "5fe9bcb1-db0b-4fe8-ac76-2f4d2e00fc57"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "8c9e6c69-9fb4-40b5-9bc2-1969d2f49ebe"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5 lb",
+    "variant_id": "bdc22b0b-2918-4b5c-a92d-f67973450f71"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5 lb",
+    "variant_id": "e0029b88-5f2a-404f-95a6-451e4473a1e4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "e5dda6d7-47c2-45a0-a650-9ccae0e89b29"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "fb141842-fc42-4fe2-a42d-779236b7e741"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5 lb",
+    "variant_id": "ff1eec15-e910-423c-8035-6ed81fc88bb2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9aa048a54276b419",
+  "first_seen": "2026-10-26",
+  "handle": "toastedsmoresdecaf",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1720817461260-3YN7SNIK6DL36ER7WET2/Decaf+Flavor+-+Toasted+Smores.jpg",
+  "platform": "squarespace",
+  "product_id": "5dcde158a2a8163035f95c62",
+  "product_type": "Decaffeinated,Flavored,House Favorites",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored",
+   "House Favorites"
+  ],
+  "title": "Decaffeinated Toasted S'Mores",
+  "url": "https://www.innkeeperscoffee.com/flavored/toastedsmoresdecaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "French Press 5 lb",
+    "variant_id": "1e9e755f-903f-4fc3-b01b-c40589d9b854"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Cone 5 lb",
+    "variant_id": "584cf410-aed6-4205-a031-906f70f6c20f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Basket 5 lb",
+    "variant_id": "661fc56b-debc-47ba-977f-daeccceb8a67"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "6cb1a6ae-d1ae-4c14-a77f-a019efdee1bc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "8dd9fb80-98e3-4f00-bf37-e73fc32729cf"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "953fda3e-642e-4201-9c5b-b824c8ed8775"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "b9aca51b-4459-40b8-943d-7d2931aa7458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Espresso 5 lb",
+    "variant_id": "be9330ab-7d31-4971-bd54-e8f55dd41f61"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "edfcc671-c7ae-4f4a-a67b-75593a7c62f2"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "f5c9c677-9f58-4292-9c40-90eb56aee238"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "20eba32902c27c54",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-turtle-ms5fr",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716584079161-BPV8GO91GHHQD66U57CV/Decaf+Flavor+-+Chocolate+Turtle.jpg",
+  "platform": "squarespace",
+  "product_id": "61f9a7b5c25dad02bd3bfcde",
+  "product_type": "Flavored,House Favorites,Seasonal",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored",
+   "House Favorites",
+   "Seasonal"
+  ],
+  "title": "Decaffeinated Chocolate Turtle",
+  "url": "https://www.innkeeperscoffee.com/flavored/chocolate-turtle-ms5fr",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "282630e8-65b7-4235-adcb-ac39baebc459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "41de0f20-3478-42d2-b598-a1a10c1cf157"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "French Press 5 lb",
+    "variant_id": "8749da8f-65be-4546-ae8d-9c1909e8b66d"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "8ee2d321-a34e-43dc-9283-36ba91bd5cbc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Basket 5 lb",
+    "variant_id": "b152f652-2342-43bd-a77f-4345174133d6"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "bd57c807-6e3c-4a1a-9b48-46e2c1596107"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Espresso 5 lb",
+    "variant_id": "cc58f51c-1c9c-4d66-812b-563a20622688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "d82c69c0-6228-470d-b4e8-578326c2e695"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.0,
+    "title": "Cone 5 lb",
+    "variant_id": "e3acaedf-d2b8-4b38-a3db-2dce6d185559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "e937fe1d-6e08-4018-bf95-f1d360c7db2d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "f096c98e1b6aeb43",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-cinnamon-apple-pie",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/11f784c9-5b70-41c5-b74c-91cb32ae1fee/Decaf+Flavor+-+Cinnamon+Apple+Pie.jpg",
+  "platform": "squarespace",
+  "product_id": "633b091737d5600607520a17",
+  "product_type": "Flavored,House Favorites,Seasonal",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored",
+   "House Favorites",
+   "Seasonal"
+  ],
+  "title": "Decaf Cinnamon Apple Pie",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaf-cinnamon-apple-pie",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "27939b7e-7b30-4e6e-b877-78c3af702df2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lb",
+    "variant_id": "2d948ce5-51d0-4821-8b4a-4772d820361c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "36fb41e2-580c-40a8-872b-ebcf60c0b4a0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lb",
+    "variant_id": "5ce0f8ea-8449-4e44-8333-291056eac41d"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "676844a0-07a7-4e38-864f-71b88361fb66"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "808479e0-9651-419b-b902-a795735bee3a"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "b2a70ef5-6aab-48e0-b9d1-c08606d1832e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lb",
+    "variant_id": "bb5bbb11-2432-4dea-93ee-9b185af153fb"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lb",
+    "variant_id": "be77b039-d625-4e6c-857f-4dd0663ebe9e"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "cbf3d7f9-5f6d-443c-bf5e-283b07ec025d"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bc5a691133380484",
+  "first_seen": "2026-10-26",
+  "handle": "bananas-foster-wllz4",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716584693829-WB7PIN6RTV3VSH3367EJ/Decaf+Flavor+-+Bananas+Foster.jpg",
+  "platform": "squarespace",
+  "product_id": "6429a090b4bc084d01c5076d",
+  "product_type": "Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Decaf Bananas Foster",
+  "url": "https://www.innkeeperscoffee.com/flavored/bananas-foster-wllz4",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "1197426a-4e19-49a1-9fef-9d710b6ce51a"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "18ab0655-4f60-4fdb-a840-075d71644a96"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "1ba3c4a3-9e68-4541-a7e7-923aa464ed51"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "296709e4-a947-4e60-9cbb-86cd7e0c4216"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "59adff81-9c01-4fb4-9a73-c6d0b7086d61"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "79c6030a-5a02-494a-bcae-7d0ba100f407"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "86d59d72-6b28-4059-ba96-7b78dacd1c27"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "8b553e50-50b9-4fcb-9ea0-d8116dc2a31c"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "a498e60b-3b8b-4b16-95e0-1432b6785e04"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "bbb9afc9-3757-4c46-ba36-b008b12ca733"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "02231f255248714e",
+  "first_seen": "2026-10-26",
+  "handle": "chocolate-turtle-9274d-n8rrr-67s8n",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/955b06bc-fd4d-4be6-b1ec-0edc772242db/Decaf+Flavor+-+Peppermint+Mocha.jpg",
+  "platform": "squarespace",
+  "product_id": "65624c6e7a2e7e19483dbafa",
+  "product_type": "Flavored,House Favorites,Seasonal",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored",
+   "House Favorites",
+   "Seasonal"
+  ],
+  "title": "Decaf Peppermint Mocha",
+  "url": "https://www.innkeeperscoffee.com/flavored/chocolate-turtle-9274d-n8rrr-67s8n",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lb",
+    "variant_id": "14c03f8f-e3ff-41a5-9ae1-cd1f41b13b51"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "16c7d022-585d-49f0-8edf-976d83e54738"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lb",
+    "variant_id": "173b1b08-88ad-4752-845d-6cb2347cbf5e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lb",
+    "variant_id": "273fa56f-eb6d-4882-835b-9848c8c2372d"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "4dfa3a79-13d8-4650-a280-09e6e165552b"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "78e35c77-e596-43f3-bb6d-930b95762656"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lb",
+    "variant_id": "8748bbb2-6c3d-4913-aa8d-89fd7106adaf"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "8e3042e3-f623-4a2e-9a73-d7c046a60ba4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "c6b03d61-c337-4fc9-b852-c2c8a2f899d0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lb",
+    "variant_id": "e4116902-ad88-4fd4-aed0-382bc9309765"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "honey-nut",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716579607730-BMY5965VH4ALHV9HBG45/Flavor+-+Honey+Nut.jpg",
+  "platform": "squarespace",
+  "product_id": "65df627f8003e06bdb369772",
+  "product_type": "",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [],
+  "title": "Honey Nut",
+  "url": "https://www.innkeeperscoffee.com/flavored/honey-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "0d8d4c0b-579c-448a-82f4-0c2738dd8584"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "327e7254-1b88-42a1-b0bf-09686c7f7e71"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French press 12 oz",
+    "variant_id": "3ca93f4f-9285-4ffa-9f6f-2942bc45600e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5lb",
+    "variant_id": "51d46592-19b9-4717-9633-136f449ce35b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "6647cf5f-8060-4896-b1b0-35b8736ca6bf"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5lb",
+    "variant_id": "7e8d979b-78f0-4def-8a39-12001bf5481b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5lb",
+    "variant_id": "d1233dce-c891-475f-a308-5778e390cf5c"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "d5c9077a-0585-40cb-8571-19c3456191b2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French press 5lb",
+    "variant_id": "d6565675-be50-4208-9b6e-e6dbd0b98814"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "df2b7268-f87f-433b-be79-a0ca999fa7d6"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-honey-nut",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/1716583442089-K5TCB90TOP4PULULT51W/Decaf+Flavor+-+Honey+Nut.jpg",
+  "platform": "squarespace",
+  "product_id": "65df64aeb8a01a1d31e5f9e7",
+  "product_type": "",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [],
+  "title": "Decaffeinated Honey Nut",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaf-honey-nut",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5lb",
+    "variant_id": "3b1f008f-791e-4c90-abdc-776dc64e57f2"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5lb",
+    "variant_id": "48e9c380-a6e8-4947-8d2a-9650ffad5c4f"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "532cf4c0-a633-4c13-a174-f0706822ebe8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "70c62f5c-0976-4a27-8815-8995c73e208f"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5lb",
+    "variant_id": "8d7b3f0b-9806-40ce-b4be-726f54fb2f96"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "b39c7895-45e6-4c87-bf9f-9dbb8734c0d8"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "c5216f1e-08b0-42fe-a48d-b7938c465a2b"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5lb",
+    "variant_id": "c75647b4-a02e-42e4-8466-d027a9e25a74"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5lb",
+    "variant_id": "c91d9873-eafa-46f3-a024-4b541660d834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "e95ce537-5e35-450a-891e-f00bcf102026"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b29994d5e6bea189",
+  "first_seen": "2026-10-26",
+  "handle": "irish-creme-5kkz9",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/edd31e14-a645-4548-b87f-b8c8e126a810/Flavor+-+coconut+creme.jpg",
+  "platform": "squarespace",
+  "product_id": "6814e71c2cf1ae44d3b95067",
+  "product_type": "Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Flavored"
+  ],
+  "title": "Coconut Creme",
+  "url": "https://www.innkeeperscoffee.com/flavored/irish-creme-5kkz9",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "117314b2-857f-4415-a1e2-04c054ee10d7"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Basket 12 oz",
+    "variant_id": "2f01d36a-e7a9-4f8b-a8d3-2d679e1ab158"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "603340cb-2f26-4e9b-bfc1-21cbf01b6e40"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Basket 5 lbs",
+    "variant_id": "6d62f9e7-bc07-44d9-9022-75c146ef08fc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "French Press 5 lbs",
+    "variant_id": "7230dc30-f99e-441f-a63f-b0718e08ba28"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "ad35763a-c83a-41fa-bc93-d109937a1657"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Espresso 5 lbs",
+    "variant_id": "b5c82338-50f5-426c-9eff-72e7fec84438"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "French Press 12 oz",
+    "variant_id": "bf71f125-6247-4679-8546-506563b383cc"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 15.5,
+    "title": "Cone 12 oz",
+    "variant_id": "bf7f6f2b-ded6-437f-9cea-57b23995c93e"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "Cone 5 lbs",
+    "variant_id": "e45b7c76-e492-41b5-9650-1ad1d1c87b41"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "b29994d5e6bea189",
+  "first_seen": "2026-10-26",
+  "handle": "decaffeinated-irish-creme-ps5yn",
+  "image": "https://images.squarespace-cdn.com/content/v1/5a077c3aa9db09c5a37d31df/53703138-b7d1-484e-9002-f038785399e9/Decaf+flavor+Coconut+Creme.jpg",
+  "platform": "squarespace",
+  "product_id": "6814e8129a935c5c0e357e0f",
+  "product_type": "Decaffeinated,Flavored",
+  "roaster_slug": "innkeeperscoffee",
+  "tags": [
+   "Decaffeinated",
+   "Flavored"
+  ],
+  "title": "Decaffeinated Coconut creme",
+  "url": "https://www.innkeeperscoffee.com/flavored/decaffeinated-irish-creme-ps5yn",
+  "variants": [
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "French Press 12 oz",
+    "variant_id": "06bec8d8-7b2a-4935-91dc-2e775971d713"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Espresso 12 oz",
+    "variant_id": "11cf6d8a-def3-454a-bf2a-f7ac83c77afd"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Cone 5 lbs",
+    "variant_id": "5130f7b9-5d37-456c-baa5-07fe1c9628b8"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Whole Bean 12 oz",
+    "variant_id": "686bfb5c-e6b0-4b85-9aee-b13e7c801153"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Whole Bean 5 lbs",
+    "variant_id": "99dd44a7-a9a3-4200-8365-29c313f0954c"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Cone 12 oz",
+    "variant_id": "9edd1b9b-cbef-4f54-9b0b-d7189f53dce4"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 16.5,
+    "title": "Basket 12 oz",
+    "variant_id": "a5e32b8f-a114-4257-b3b4-e6c1d5489a34"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Espresso 5 lbs",
+    "variant_id": "a5f129a0-a5b2-42b8-bfc2-20960b12f0bc"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "French Press 5 lbs",
+    "variant_id": "ae542542-2372-43ad-821e-1a559ee2b306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 72.5,
+    "title": "Basket 5 lbs",
+    "variant_id": "b0601c07-32f6-48ad-bc9a-62a1fe7a386b"
+   }
+  ],
+  "vendor": ""
+ }
+]

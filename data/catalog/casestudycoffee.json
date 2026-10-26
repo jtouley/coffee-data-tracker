@@ -1,0 +1,216 @@
+[
+ {
+  "body_hash": "30b6c3d3459f2b78",
+  "first_seen": "2026-10-26",
+  "handle": "finca-apiario-coffee-blossom-honey",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/Frame1000001111.png?v=1789416316",
+  "platform": "shopify",
+  "product_id": "10395495252",
+  "product_type": "Other",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Latin America"
+  ],
+  "title": "Guatemalan Coffee Blossom Honey",
+  "url": "https://www.casestudycoffee.com/products/finca-apiario-coffee-blossom-honey",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title (wholesale)",
+    "variant_id": "18511699869765"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 20.0,
+    "title": "Default Title",
+    "variant_id": "40119233236"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "cd54405a0e1d6c5f",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-finca-el-tambor",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/guatemala-eltambor-01_jpg.png?v=1788651551",
+  "platform": "shopify",
+  "product_id": "10592394388",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Latin America",
+   "Washed Process"
+  ],
+  "title": "Guatemala Finca El Tambor (Washed)",
+  "url": "https://www.casestudycoffee.com/products/guatemala-finca-el-tambor",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 22.5,
+    "title": "Default Title",
+    "variant_id": "41231685652"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "db6be6c128563c70",
+  "first_seen": "2026-10-26",
+  "handle": "burnside-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/burnside-blend-01_jpg.png?v=1788651429",
+  "platform": "shopify",
+  "product_id": "11203251988",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Blends"
+  ],
+  "title": "Burnside Blend",
+  "url": "https://www.casestudycoffee.com/products/burnside-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.5,
+    "title": "Default Title",
+    "variant_id": "46491537044"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "1eff1760df18e48a",
+  "first_seen": "2026-10-26",
+  "handle": "deviation-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/deviation-blend-01.jpg_5.jpg?v=1790453336",
+  "platform": "shopify",
+  "product_id": "445538045",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Blends",
+   "Natural Process",
+   "Washed Process"
+  ],
+  "title": "Deviation Blend",
+  "url": "https://www.casestudycoffee.com/products/deviation-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.5,
+    "title": "Default Title",
+    "variant_id": "1168473161"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "f02f891a7e08f27c",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-santa-teresa-de-mogoton-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/columbiacristalina-01_jpg.png?v=1789335030",
+  "platform": "shopify",
+  "product_id": "7517793288261",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Latin America",
+   "Natural Process"
+  ],
+  "title": "Colombia La Cristalina (Natural)",
+  "url": "https://www.casestudycoffee.com/products/nicaragua-santa-teresa-de-mogoton-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "42390166077509"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "659de743f3ebdfe3",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-zema-ademe-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/ethiopia-zema-01_jpg.png?v=1788651520",
+  "platform": "shopify",
+  "product_id": "8220917170245",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Latin America",
+   "Washed Process"
+  ],
+  "title": "Ethiopia Zema Ademe (Natural)",
+  "url": "https://www.casestudycoffee.com/products/ethiopia-zema-ademe-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "45528081465413"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "a14b30da021372ed",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-guji-bishan-wate-washed",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/ethiopiaguji-01.jpg_5.png?v=1792018947",
+  "platform": "shopify",
+  "product_id": "8279277895749",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Latin America",
+   "Washed Process"
+  ],
+  "title": "Ethiopia Guji Bishan Wate (Washed)",
+  "url": "https://www.casestudycoffee.com/products/ethiopia-guji-bishan-wate-washed",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 23.5,
+    "title": "Default Title",
+    "variant_id": "45729450819653"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ },
+ {
+  "body_hash": "4a3882708db66fa9",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-mexico-cristal-select-mwp",
+  "image": "https://cdn.shopify.com/s/files/1/0805/8047/files/decafmexicochristal-01.jpg_5.png?v=1789851955",
+  "platform": "shopify",
+  "product_id": "8283454439493",
+  "product_type": "Whole Bean Coffee Bags",
+  "roaster_slug": "casestudycoffee",
+  "tags": [
+   "Africa",
+   "Natural Process"
+  ],
+  "title": "Decaf Mexico Cristal Select (MWP)",
+  "url": "https://www.casestudycoffee.com/products/decaf-mexico-cristal-select-mwp",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.5,
+    "title": "Default Title",
+    "variant_id": "45746078122053"
+   }
+  ],
+  "vendor": "Case Study Coffee Roasters"
+ }
+]

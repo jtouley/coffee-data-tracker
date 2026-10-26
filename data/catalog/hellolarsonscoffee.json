@@ -1,0 +1,2177 @@
+[
+ {
+  "body_hash": "02de06e34e76394a",
+  "first_seen": "2026-10-26",
+  "handle": "the-sloan-blend-1",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/files/SM.jpg?v=1749500883",
+  "platform": "shopify",
+  "product_id": "15103084626080",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "The Sloan Blend",
+  "url": "https://hellolarsonscoffee.com/products/the-sloan-blend-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb",
+    "variant_id": "52537291145376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb",
+    "variant_id": "52537291735200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb",
+    "variant_id": "52537292325024"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ },
+ {
+  "body_hash": "88c6c5fc43c6e8ea",
+  "first_seen": "2026-10-26",
+  "handle": "bless-your-heart-1",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/products/CopyofCopyofFlavoredCoffees.png?v=1621613255",
+  "platform": "shopify",
+  "product_id": "5979656159392",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "Bless Your Heart - Brazilian",
+  "url": "https://hellolarsonscoffee.com/products/bless-your-heart-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Medium Ground",
+    "variant_id": "37722198638752"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Medium Whole Bean",
+    "variant_id": "37722198671520"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Ground",
+    "variant_id": "37722198704288"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Whole Bean",
+    "variant_id": "37722198737056"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37722198769824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37722198900896"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Medium Ground",
+    "variant_id": "37722199097504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Dark Ground",
+    "variant_id": "37722199163040"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37722199228576"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37722199294112"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37722199359648"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37722199425184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Medium Ground",
+    "variant_id": "37722199752864"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Medium Whole Bean",
+    "variant_id": "37722199785632"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Ground",
+    "variant_id": "37722199818400"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Whole Bean",
+    "variant_id": "37722199851168"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37722199883936"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37722199949472"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Medium Ground",
+    "variant_id": "37722200146080"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Dark Ground",
+    "variant_id": "37722200244384"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37722200309920"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37722200375456"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37722200440992"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37722200506528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Medium Ground",
+    "variant_id": "37722200834208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Medium Whole Bean",
+    "variant_id": "37722200866976"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Ground",
+    "variant_id": "37722200899744"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Whole Bean",
+    "variant_id": "37722200932512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37722200965280"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37722201030816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Medium Ground",
+    "variant_id": "37722201227424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Dark Ground",
+    "variant_id": "37722201292960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37722201358496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37722201424032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37722201489568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37722201587872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997463593120"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997463756960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997463789728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997463822496"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997463855264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997463888032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "39997481222304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "39997481255072"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "39997481287840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "39997481320608"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "39997481353376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "39997481386144"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Medium Ground",
+    "variant_id": "47189311979680"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Medium Whole Bean",
+    "variant_id": "47189312012448"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Ground",
+    "variant_id": "47189312045216"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Whole Bean",
+    "variant_id": "47189312077984"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "47189312110752"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "47189312143520"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "47189312209056"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "47189312241824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Medium Ground",
+    "variant_id": "47189312274592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Dark Ground",
+    "variant_id": "47189312307360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Medium Ground",
+    "variant_id": "47189312340128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Dark Ground",
+    "variant_id": "47189312372896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Medium Ground",
+    "variant_id": "47189312405664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Dark Ground",
+    "variant_id": "47189312438432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "47189312471200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "47189312503968"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585326219424"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585326284960"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585326350496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585326416032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585326481568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585326547104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585326612640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585326678176"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ },
+ {
+  "body_hash": "a8aa9849208878b2",
+  "first_seen": "2026-10-26",
+  "handle": "hello-darlin-1",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/products/CopyofFlavoredCoffees.png?v=1621613224",
+  "platform": "shopify",
+  "product_id": "5981132685472",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "Hello Darlin' - Papua New Guinea",
+  "url": "https://hellolarsonscoffee.com/products/hello-darlin-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Medium Ground",
+    "variant_id": "37730094710944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Medium Whole Bean",
+    "variant_id": "37730094743712"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Ground",
+    "variant_id": "37730094776480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730094809248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37730094842016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730094907552"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Medium Ground",
+    "variant_id": "37730095104160"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Dark Ground",
+    "variant_id": "37730095169696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37730095235232"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730095300768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37730095366304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730095431840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "37730095628448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730095726752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Medium Ground",
+    "variant_id": "37730095792288"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Medium Whole Bean",
+    "variant_id": "37730095825056"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Ground",
+    "variant_id": "37730095857824"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Whole Bean",
+    "variant_id": "37730095890592"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37730095923360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730095988896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Medium Ground",
+    "variant_id": "37730096185504"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Dark Ground",
+    "variant_id": "37730096251040"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37730096316576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730096382112"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37730096447648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730096513184"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "37730096709792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730096775328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Medium Ground",
+    "variant_id": "37730096840864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Medium Whole Bean",
+    "variant_id": "37730096873632"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Ground",
+    "variant_id": "37730096906400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730096939168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "37730096971936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730097037472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Medium Ground",
+    "variant_id": "37730097234080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Dark Ground",
+    "variant_id": "37730097299616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Medium Ground",
+    "variant_id": "37730097365152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730097430688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "37730097496224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730097561760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "37730097791136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730097856672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997535453344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997535518880"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997535551648"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997535584416"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Medium Ground",
+    "variant_id": "39997535617184"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997535748256"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Medium Ground",
+    "variant_id": "47189347532960"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Medium Whole Bean",
+    "variant_id": "47189347565728"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Ground",
+    "variant_id": "47189347598496"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Whole Bean",
+    "variant_id": "47189347631264"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Medium Ground",
+    "variant_id": "47189347664032"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "47189347696800"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Medium Ground",
+    "variant_id": "47189347729568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Dark Ground",
+    "variant_id": "47189347762336"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Medium Ground",
+    "variant_id": "47189347795104"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Dark Ground",
+    "variant_id": "47189347827872"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Medium Ground",
+    "variant_id": "47189347860640"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Dark Ground",
+    "variant_id": "47189347893408"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Medium Ground",
+    "variant_id": "47189347926176"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "47189347958944"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Medium Ground",
+    "variant_id": "47189347991712"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "47189348024480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585349157024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585349189792"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585349222560"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585349255328"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585349288096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585349320864"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Medium Ground",
+    "variant_id": "51585349353632"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585349386400"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ },
+ {
+  "body_hash": "a39b032ffb123e65",
+  "first_seen": "2026-10-26",
+  "handle": "calm-it-down-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/products/CopyofCopyofCopyofFlavoredCoffees.png?v=1621613283",
+  "platform": "shopify",
+  "product_id": "5981143433376",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "Calm It Down - Mexican DECAF",
+  "url": "https://hellolarsonscoffee.com/products/calm-it-down-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Light/Medium Ground",
+    "variant_id": "37730158084256"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37730158117024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Ground",
+    "variant_id": "37730158149792"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730158182560"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730158248096"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730158379168"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730158608544"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Dark Ground",
+    "variant_id": "37730158674080"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730158739616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730158805152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730158870688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730158936224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730159132832"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730159198368"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Light/Medium Ground",
+    "variant_id": "37730159263904"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37730159296672"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Ground",
+    "variant_id": "37730159329440"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Whole Bean",
+    "variant_id": "37730159362208"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730159394976"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730159460512"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730159657120"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Dark Ground",
+    "variant_id": "37730159722656"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730159788192"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730159853728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730159919264"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730159984800"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730160181408"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730160246944"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Light/Medium Ground",
+    "variant_id": "37730160312480"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Ground",
+    "variant_id": "37730160378016"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730160410784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730160476320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730160574624"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730160836768"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Dark Ground",
+    "variant_id": "37730160902304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730160967840"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730161033376"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730161098912"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730161164448"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730161393824"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730161459360"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37835652432032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997498327200"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997498359968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997498392736"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997498425504"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997498458272"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997498491040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Light/Medium Ground",
+    "variant_id": "47189432402080"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "47189432467616"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Ground",
+    "variant_id": "47189432500384"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Whole Bean",
+    "variant_id": "47189432533152"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "47189432565920"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "47189432598688"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "47189432631456"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Dark Ground",
+    "variant_id": "47189432664224"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Light/Medium Ground",
+    "variant_id": "47189432696992"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Dark Ground",
+    "variant_id": "47189432729760"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "47189432762528"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Dark Ground",
+    "variant_id": "47189432795296"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "47189432828064"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "47189432860832"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "47189432893600"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "47189432926368"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585375076512"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585375109280"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585375142048"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585375174816"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585375207584"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585375240352"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585375273120"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585375305888"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ },
+ {
+  "body_hash": "b4f8cc6e4db077f7",
+  "first_seen": "2026-10-26",
+  "handle": "im-fancy-certified-organic",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/products/FlavoredCoffees_5_47329c98-e60c-44fc-9355-9b1d69a6298c.png?v=1621613322",
+  "platform": "shopify",
+  "product_id": "5981325983904",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "I'm Fancy - (Organic) Colombian",
+  "url": "https://hellolarsonscoffee.com/products/im-fancy-certified-organic",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Light/Medium Ground",
+    "variant_id": "37730860335264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37730860368032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Ground",
+    "variant_id": "37730860400800"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 10.0,
+    "title": "1/2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730860433568"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730860466336"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730860531872"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730860761248"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Caramel King / Dark Ground",
+    "variant_id": "37730860826784"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730860892320"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730860957856"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730861023392"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730861121696"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730861318304"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730861383840"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Light/Medium Ground",
+    "variant_id": "37730861449376"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37730861482144"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Ground",
+    "variant_id": "37730861514912"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 16.0,
+    "title": "1lb / Plain / Dark Whole Bean",
+    "variant_id": "37730861547680"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730861580448"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730861678752"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730861875360"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Caramel King / Dark Ground",
+    "variant_id": "37730861940896"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730862006432"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730862071968"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730862170272"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730862268576"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730862497952"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730862629024"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Light/Medium Ground",
+    "variant_id": "37730862792864"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "37730862858400"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Ground",
+    "variant_id": "37730862923936"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 30.0,
+    "title": "2lb / Plain / Dark Whole Bean",
+    "variant_id": "37730862956704"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "37730862989472"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "37730863055008"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Light/Medium Ground",
+    "variant_id": "37730863251616"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Caramel King / Dark Ground",
+    "variant_id": "37730863317152"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "37730863382688"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Highlander Grogg / Dark Ground",
+    "variant_id": "37730863448224"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "37730863513760"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "37730863579296"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "37730863775904"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "37730863874208"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997521100960"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997521133728"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997521166496"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997521199264"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "39997521232032"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Peanut Butter / Dark Ground",
+    "variant_id": "39997521297568"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Light/Medium Ground",
+    "variant_id": "47189381873824"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Light/Medium Whole Bean",
+    "variant_id": "47189381906592"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Ground",
+    "variant_id": "47189381939360"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 68.0,
+    "title": "5lb / Plain / Dark Whole Bean",
+    "variant_id": "47189381972128"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Light/Medium Ground",
+    "variant_id": "47189382004896"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Blueberry Cobbler / Dark Ground",
+    "variant_id": "47189382037664"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Light/Medium Ground",
+    "variant_id": "47189382070432"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Peanut Butter / Dark Ground",
+    "variant_id": "47189382103200"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Light/Medium Ground",
+    "variant_id": "47189382135968"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Caramel King / Dark Ground",
+    "variant_id": "47189382168736"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Light/Medium Ground",
+    "variant_id": "47189382201504"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Highlander Grogg / Dark Ground",
+    "variant_id": "47189382234272"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Light/Medium Ground",
+    "variant_id": "47189382267040"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Cinnamon Roll / Dark Ground",
+    "variant_id": "47189382299808"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Light/Medium Ground",
+    "variant_id": "47189382332576"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Raspberry White Chocolate / Dark Ground",
+    "variant_id": "47189382365344"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585358266528"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 12.0,
+    "title": "1/2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585358332064"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585358397600"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "1lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585358463136"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585358528672"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 32.0,
+    "title": "2lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585358594208"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Light/Medium Ground",
+    "variant_id": "51585358659744"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 70.0,
+    "title": "5lb / Chocolate Cherry / Dark Ground",
+    "variant_id": "51585358725280"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ },
+ {
+  "body_hash": "73fc5fc613127de6",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-to-go-packs-1",
+  "image": "https://cdn.shopify.com/s/files/1/0256/2637/8312/files/image_b09d7068-8458-413c-bb61-ea046c1eba5f.heic?v=1686532467",
+  "platform": "shopify",
+  "product_id": "9359983313056",
+  "product_type": "Coffee",
+  "roaster_slug": "hellolarsonscoffee",
+  "tags": [],
+  "title": "Cold Brew to-go Packs",
+  "url": "https://hellolarsonscoffee.com/products/cold-brew-to-go-packs-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Caramel",
+    "variant_id": "44988861972640"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Cookie Butter",
+    "variant_id": "44988862038176"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 22.0,
+    "title": "Classic (non-flavored)",
+    "variant_id": "44988862070944"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Vanilla",
+    "variant_id": "45007299969184"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Sugar Free Vanilla",
+    "variant_id": "45007300001952"
+   },
+   {
+    "available": true,
+    "grams": 1361,
+    "price_usd": 25.0,
+    "title": "Sugar Free Caramel",
+    "variant_id": "45007300034720"
+   }
+  ],
+  "vendor": "Hello Larson's Coffee Roastery"
+ }
+]

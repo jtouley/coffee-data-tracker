@@ -1,0 +1,885 @@
+[
+ {
+  "body_hash": "30fd12959dcef4a6",
+  "first_seen": "2026-10-26",
+  "handle": "milk-dip-cup-hcfad-ct93m-ng3wf",
+  "image": "https://static1.squarespace.com/static/63593b6f4e386916825aaa97/63593bf3227cca7a13fe4fde/63593bf3227cca7a13fe4fee/1787818476564/",
+  "platform": "squarespace",
+  "product_id": "63593bf3227cca7a13fe4fee",
+  "product_type": "",
+  "roaster_slug": "bluelioncoffeeroaster",
+  "tags": [
+   "Coffee",
+   "Dark Blend",
+   "Medium Blend"
+  ],
+  "title": "Pirate's Blend",
+  "url": "https://www.bluelioncoffeeroaster.com/shop/p/milk-dip-cup-hcfad-ct93m-ng3wf",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "4c022b5b-54b3-4e62-ace7-f063a401d671"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "992a76eb-e010-44f0-bcc3-4227e7167c52"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "b803df5a-567f-4cc9-9434-90f89e73c9c6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine",
+    "variant_id": "d2bc950b-9e1c-4d2b-9fde-5ebccb53f673"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "36050092a1f3dcb1",
+  "first_seen": "2026-10-26",
+  "handle": "country-feast-set-hx456-cyxkr-23pcw",
+  "image": "https://images.squarespace-cdn.com/content/v1/63593b6f4e386916825aaa97/1674300195825-QMJDI8S3PSW0GAWR62AM/Ranger-Roast_P1240887.jpg",
+  "platform": "squarespace",
+  "product_id": "63593bf3227cca7a13fe4ff3",
+  "product_type": "",
+  "roaster_slug": "bluelioncoffeeroaster",
+  "tags": [
+   "Blend",
+   "Light",
+   "Light Roast"
+  ],
+  "title": "Ranger Roast",
+  "url": "https://www.bluelioncoffeeroaster.com/shop/p/country-feast-set-hx456-cyxkr-23pcw",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "3e6299e0-8d3a-4dc4-abaa-9dd12a08f23a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "bef24d1a-bc4c-4457-9003-7e41aa0ebb3f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine",
+    "variant_id": "d79385a8-4618-4e23-8f3a-259b588a9cfc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "dddecdcd-4cd3-4089-8d78-37affa1f1fbb"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "351b6b6e1f3bbb9b",
+  "first_seen": "2026-10-26",
+  "handle": "earth-sky-planter-r4x7r-3fpah-3lm6p",
+  "image": "https://images.squarespace-cdn.com/content/v1/63593b6f4e386916825aaa97/1676947579881-HG39T9QMLTQNU5GX2JG6/Espresso-In-Maker_Light.jpg",
+  "platform": "squarespace",
+  "product_id": "63593bf3227cca7a13fe4ff8",
+  "product_type": "",
+  "roaster_slug": "bluelioncoffeeroaster",
+  "tags": [
+   "Dark Blend",
+   "Dark Coffee",
+   "Espresso"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://www.bluelioncoffeeroaster.com/shop/p/earth-sky-planter-r4x7r-3fpah-3lm6p",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "1b4acf2f-43c9-435e-99d5-368674052177"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine",
+    "variant_id": "4fefd2bb-5cdc-4715-841e-ab28ba229e4f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "5408e641-8815-48c0-a87e-5b3fb330edf0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "9026bf7f-78f5-4c72-9233-7eed87eefdd9"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "90afb0a749e719cb",
+  "first_seen": "2026-10-26",
+  "handle": "6wexcxb21shqxvj50797ogzux7tl51",
+  "image": "https://static1.squarespace.com/static/63593b6f4e386916825aaa97/63593bf3227cca7a13fe4fde/64821e9a1425d11647bdc7f2/1791550937501/",
+  "platform": "squarespace",
+  "product_id": "64821e9a1425d11647bdc7f2",
+  "product_type": "",
+  "roaster_slug": "bluelioncoffeeroaster",
+  "tags": [],
+  "title": "Flavored Coffee",
+  "url": "https://www.bluelioncoffeeroaster.com/shop/p/6wexcxb21shqxvj50797ogzux7tl51",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream French Press Grind Decaf",
+    "variant_id": "038c2995-a134-4c54-b2bb-8dd0faf3b2ff"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Fine Decaf",
+    "variant_id": "0522c259-9285-4a52-888c-f2001dd65a24"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Whole Bean Regular",
+    "variant_id": "0c4088f0-9710-4bfd-bd83-6fa111c417cd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto French Press Grind Regular",
+    "variant_id": "0f1f60e9-5090-426b-9871-4c467fd937d6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Fine Regular",
+    "variant_id": "111b49c1-40fc-4482-ba86-7aa9a3b8f88c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Whole Bean Regular",
+    "variant_id": "1321c62d-6c51-4ac5-af75-0b8cb0a934c6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Drip Grind Decaf",
+    "variant_id": "15ab8f99-faa9-459b-90fb-04f9a0c0ecff"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Fine Decaf",
+    "variant_id": "15f277e9-7540-48e1-994b-a91f7129e5ea"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Fine Regular",
+    "variant_id": "16af0551-78de-4a45-928a-3bfa93460bf8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer French Press Grind Regular",
+    "variant_id": "19ea5f76-f785-49e6-9efa-629473c25311"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Whole Bean Decaf",
+    "variant_id": "1b73c671-2e4c-4ea0-8c55-7c8ba60bb3c5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Whole Bean Decaf",
+    "variant_id": "1c7b805f-f21d-4ab4-9934-97faa8cecb54"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Whole Bean Decaf",
+    "variant_id": "214790ed-de3b-4c5f-b709-2cb8f4dd7bd6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Whole Bean Regular",
+    "variant_id": "24d578d2-2c57-4949-aafd-4623690d216e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Drip Grind Regular",
+    "variant_id": "25107300-b128-412e-822f-ce5cbf30f34d"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Drip Grind Regular",
+    "variant_id": "260f5d13-d702-43da-a981-a142a4200206"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle French Press Grind Decaf",
+    "variant_id": "263bb464-92b2-4930-98d3-3e410481ad57"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Fine Regular",
+    "variant_id": "27783248-37b1-453f-b0db-fcfc6c728a97"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Drip Grind Regular",
+    "variant_id": "2e51880a-5c4d-49b1-ad40-cea29850d71e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Drip Grind Regular",
+    "variant_id": "33169287-7641-44d5-8a48-7264ac071c5a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla French Press Grind Decaf",
+    "variant_id": "354c12aa-0f8d-461d-922f-a880ad95ba65"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Drip Grind Decaf",
+    "variant_id": "35995aad-665a-468a-b6fd-f40fe815682a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Whole Bean Decaf",
+    "variant_id": "3f7f7deb-d40b-4120-b42a-19c8dd3ad9c0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy French Press Grind Decaf",
+    "variant_id": "3fb5113e-e188-4d60-af18-8fffd2152b8c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel French Press Grind Decaf",
+    "variant_id": "47e1b156-d233-4b56-acd8-d1cb7f93fb54"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream French Press Grind Regular",
+    "variant_id": "482c967a-ac03-4cf2-bd8d-4f789ee114de"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Whole Bean Regular",
+    "variant_id": "499e4352-98be-4c78-9b95-efb3d6577d84"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Whole Bean Decaf",
+    "variant_id": "4d67afea-84a3-44d9-954c-9b5a3ed0d5c9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Whole Bean Regular",
+    "variant_id": "50b38f09-9f69-4b8d-8d35-07665410cf73"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle French Press Grind Regular",
+    "variant_id": "5226222c-d194-44ea-a2f8-dda9e02fa396"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon French Press Grind Decaf",
+    "variant_id": "5a732b90-71aa-49d3-88b2-a669f10091b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Drip Grind Decaf",
+    "variant_id": "5d28f9a7-3855-428d-b9bc-cc71fe1f5467"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Fine Decaf",
+    "variant_id": "5db30974-ec8e-4ab2-b44f-1c17ef8b1400"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Drip Grind Decaf",
+    "variant_id": "5ff475ef-a075-4ec0-b6d7-7ccf5117fda7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Drip Grind Decaf",
+    "variant_id": "62ccda1a-dca3-4607-93e5-3364f95f5f85"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Whole Bean Regular",
+    "variant_id": "645efd19-6407-4752-88e8-aae026f30f90"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Drip Grind Decaf",
+    "variant_id": "67d6b8b5-5ba2-43d3-9958-34bb65f1f16c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Whole Bean Regular",
+    "variant_id": "6b98f07f-18a3-498a-9cc0-a242aa3f4162"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto French Press Grind Decaf",
+    "variant_id": "6c3b1a20-9a47-4ca1-b8da-58f2eb9100c8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Drip Grind Regular",
+    "variant_id": "6e9809a3-28df-4619-82fc-5acf2ac62f1a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Fine Regular",
+    "variant_id": "70376f96-f0ab-44b6-a08c-87a8916a39d6"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Whole Bean Regular",
+    "variant_id": "7399c2fa-3c36-4920-b0bf-d038f5f87fa8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Drip Grind Regular",
+    "variant_id": "78de0956-6e41-4528-ae2e-fe9518104d96"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Whole Bean Regular",
+    "variant_id": "7a7da62a-5986-4fc1-9d92-18e2f8d1051b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Drip Grind Decaf",
+    "variant_id": "7dd63ee1-2a33-4bbb-a6de-50da7551b873"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Drip Grind Regular",
+    "variant_id": "80cdf447-8ca9-46b3-be9c-230202663dbc"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla French Press Grind Regular",
+    "variant_id": "8297d298-b458-4020-b43f-214e87b85ac9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Whole Bean Regular",
+    "variant_id": "8546aa44-6ac3-44f4-a7c8-d583c69f6cb4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Drip Grind Decaf",
+    "variant_id": "8572c43f-fa08-4af7-afca-2927042ac607"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Fine Decaf",
+    "variant_id": "85abf5b3-3c51-47e8-9f52-965b617883ed"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon French Press Grind Regular",
+    "variant_id": "88a80347-6b13-46bd-b475-01b2434c1693"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Whole Bean Decaf",
+    "variant_id": "8d1ed55d-e49a-473e-950f-1875398b5ad1"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream French Press Grind Decaf",
+    "variant_id": "8db4af78-ea1c-4cbb-89a7-57958e0d1e18"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Fine Decaf",
+    "variant_id": "8f0ef781-439c-44e8-a815-51fa34e5a350"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Fine Regular",
+    "variant_id": "924724ea-5bf4-404d-a210-4b88aab3f717"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Fine Decaf",
+    "variant_id": "957e2d91-e649-4588-a5ef-746d0f5b65cf"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty French Press Grind Decaf",
+    "variant_id": "96731cf8-3e09-478d-ad90-c51ff01dee74"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty French Press Grind Regular",
+    "variant_id": "9746c263-8c37-4fa6-9fa6-a9072dc002ab"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg French Press Grind Decaf",
+    "variant_id": "9aaf34ef-8ed0-4427-a26a-3c46105b0421"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Blueberry Cinnamon Whole Bean Decaf",
+    "variant_id": "9aebd8b8-3641-4fe6-a124-a2a0921d7696"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Drip Grind Decaf",
+    "variant_id": "9b886137-39f9-4ca2-969f-13b10429544e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Fine Decaf",
+    "variant_id": "9d6f2092-d1ca-41a8-bc83-c04614957ff8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Fine Decaf",
+    "variant_id": "9df210ed-6f4f-45d8-af35-cd31d0db5f19"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Whole Bean Decaf",
+    "variant_id": "a22a07c6-3f0a-4d5d-a544-ebae59b2917b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Drip Grind Decaf",
+    "variant_id": "a4443baa-ace1-4303-9b42-91e4fe0a99c3"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Whole Bean Regular",
+    "variant_id": "ab3c6a82-4af3-4dce-8e1f-a1be35000b8c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Fine Regular",
+    "variant_id": "b44202d6-f868-4df1-8951-1406966342b9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Drip Grind Regular",
+    "variant_id": "b6255b93-a323-465e-af37-063af85b8c47"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Fine Decaf",
+    "variant_id": "b89ab3e0-88b2-4eec-83b7-8e29db07a285"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy French Press Grind Regular",
+    "variant_id": "bbf58d09-8427-4bfd-99b3-13b9b1ddfcc0"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Fine Regular",
+    "variant_id": "bf062070-2daf-4381-839b-d373d21df321"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream French Press Grind Regular",
+    "variant_id": "c54be82d-4d9a-40f1-a36f-5ffc9ed432cb"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "French Vanilla Whole Bean Decaf",
+    "variant_id": "c7328618-4100-4697-95d7-aa99e6c46ce7"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel French Press Grind Regular",
+    "variant_id": "cbcedc1d-de44-4b4a-9b13-baa5310a36b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Fine Regular",
+    "variant_id": "cccd554f-7812-4fcd-81b6-3b386c9d74ba"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg French Press Grind Regular",
+    "variant_id": "d24603b2-19cd-4ad4-a5cf-ae9e9b944f0f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Irish Cream Drip Grind Decaf",
+    "variant_id": "d2520b65-1471-47fb-96cd-bc4e69fd4106"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Drip Grind Regular",
+    "variant_id": "d6da6bfd-9885-4f56-afa4-eb2c5d81af64"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Fine Regular",
+    "variant_id": "d8d5357c-0ee8-42c3-bc2e-17f720b565f8"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Salty Caramel Drip Grind Decaf",
+    "variant_id": "d90cba23-a252-4f39-b32e-bf33df1554f4"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut French Press Grind Decaf",
+    "variant_id": "dae5280e-652e-424b-ae83-3b3b74d89a3b"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Fine Regular",
+    "variant_id": "dd403eef-952d-454a-a11d-cde3a42c060c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer French Press Grind Decaf",
+    "variant_id": "dd93d3dc-f678-4eca-a3dc-806a5114330e"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Whole Bean Decaf",
+    "variant_id": "ded76edd-fcb6-4b11-a948-0b62abc4c36f"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Fine Decaf",
+    "variant_id": "e35c3e31-dbce-44cf-b33b-4ff1b90d7d02"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Highland Grogg Fine Decaf",
+    "variant_id": "e3afea0e-2ba2-420d-b65f-bd3a7145366a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Peppermint Patty Drip Grind Regular",
+    "variant_id": "e5a267c1-3584-4cb3-a9f8-133dbef9f8e9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut Fine Decaf",
+    "variant_id": "e64db93a-9b4f-4041-a849-c901266ae6a9"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Whole Bean Decaf",
+    "variant_id": "e7cb5b45-1a19-46ca-b81f-40558b235db5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Chocolate Raspberry Truffle Fine Regular",
+    "variant_id": "e8ca89fb-c877-4103-843a-5d510bb5a00c"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Jamaican Me Crazy Whole Bean Regular",
+    "variant_id": "eb564127-7321-4d4d-8763-9aa0b1af5419"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Amaretto Fine Regular",
+    "variant_id": "ed03692c-3ed0-42bc-838e-d564e8d1bedd"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Drip Grind Regular",
+    "variant_id": "f1de3227-1344-4238-ab5c-1b316fb826b5"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Hazelnut Cream Whole Bean Decaf",
+    "variant_id": "f33cc727-6c11-4c66-b2dc-ec92aee44518"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Toasted Coconut French Press Grind Regular",
+    "variant_id": "f3742b83-d09e-4138-98ff-eab70190fb6a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 21.0,
+    "title": "Holiday Cheer Drip Grind Regular",
+    "variant_id": "f6cdd5f7-c25e-463d-bdfa-d9960efa27b3"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2ed6a7030f21bfc2",
+  "first_seen": "2026-10-26",
+  "handle": "spring-bowl-ejmea-23yjf-kbef6-rtrhj-5hgjw",
+  "image": "https://images.squarespace-cdn.com/content/v1/63593b6f4e386916825aaa97/1674088080137-JFQHSR92TBQN37CS4E1T/French-Roast_P1240836.jpg",
+  "platform": "squarespace",
+  "product_id": "662086b152fba754cfafab9f",
+  "product_type": "",
+  "roaster_slug": "bluelioncoffeeroaster",
+  "tags": [
+   "blend",
+   "breakfast",
+   "breakfast blend",
+   "coffee blend",
+   "light",
+   "light roast"
+  ],
+  "title": "French Roast",
+  "url": "https://www.bluelioncoffeeroaster.com/shop/p/spring-bowl-ejmea-23yjf-kbef6-rtrhj-5hgjw",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Whole Bean",
+    "variant_id": "42b13a3f-d892-4e4f-a9a9-40c1a0303512"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "French Press Grind",
+    "variant_id": "66a169a3-c1f2-4d98-ae7f-210895cca60a"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Drip Grind",
+    "variant_id": "66daa023-c0fc-4c5b-aea5-e22aa7947265"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Fine",
+    "variant_id": "b2ee8398-a4d6-4ec6-8599-dbfce276394a"
+   }
+  ],
+  "vendor": ""
+ }
+]

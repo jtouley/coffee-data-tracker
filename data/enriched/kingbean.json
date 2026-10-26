@@ -1,0 +1,279 @@
+{
+ "1797963844": {
+  "body_hash": "a27a267ec501be9d",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "brown sugar",
+   "milk chocolate",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "1798502916": {
+  "body_hash": "22b2a1bfa5eaaf7a",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "citrus",
+   "smooth"
+  ],
+  "varietals": []
+ },
+ "1798514692": {
+  "body_hash": "0409afea7e1a096f",
+  "elevation_masl_max": 1850,
+  "elevation_masl_min": 1850,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": "Colombia",
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "medium",
+  "tasting_notes": [
+   "sweet citrus",
+   "brown sugar",
+   "chocolate"
+  ],
+  "varietals": []
+ },
+ "1798527620": {
+  "body_hash": "8fff31fcd1c75369",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "bold",
+   "intense",
+   "smoky"
+  ],
+  "varietals": []
+ },
+ "1798553156": {
+  "body_hash": "da5796441f0f97d5",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "molasses",
+   "toasted nuts",
+   "sturdy"
+  ],
+  "varietals": []
+ },
+ "1798560836": {
+  "body_hash": "fd49de94e30f64c7",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "buttery",
+   "rich",
+   "fresh roasted pecan"
+  ],
+  "varietals": []
+ },
+ "1798567108": {
+  "body_hash": "b4a9659cbfff6384",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": true,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "cocoa",
+   "toasted walnuts",
+   "brown sugar"
+  ],
+  "varietals": []
+ },
+ "1798573060": {
+  "body_hash": "ec7307ce6c8ac8be",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "dark chocolate",
+   "toasted almonds",
+   "full bodied"
+  ],
+  "varietals": []
+ },
+ "4499896196": {
+  "body_hash": "fa7f4a04a1725e5e",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "4586549149801": {
+  "body_hash": "832226b6926de4be",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "toffee",
+   "baking spices",
+   "well rounded"
+  ],
+  "varietals": []
+ },
+ "6701597458537": {
+  "body_hash": "9278a8ae78038800",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": "dark",
+  "tasting_notes": [
+   "rich",
+   "smooth",
+   "autumn spices"
+  ],
+  "varietals": []
+ },
+ "6723413508201": {
+  "body_hash": "82520e21d1a90466",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [],
+  "varietals": []
+ },
+ "7482232078441": {
+  "body_hash": "d6f480cd89d8cec3",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": true,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "buttery",
+   "rich",
+   "fresh roasted pecan"
+  ],
+  "varietals": []
+ },
+ "7510040608873": {
+  "body_hash": "8ecdf0a158a7adb9",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "honey",
+   "citrus zest",
+   "balanced"
+  ],
+  "varietals": []
+ },
+ "7579656257641": {
+  "body_hash": "45c9bb219435e016",
+  "elevation_masl_max": null,
+  "elevation_masl_min": null,
+  "is_blend": false,
+  "is_decaf": false,
+  "method": "rules",
+  "origin_country": null,
+  "origin_region": null,
+  "process": null,
+  "producer": null,
+  "roast_level": null,
+  "tasting_notes": [
+   "caramel",
+   "nutty",
+   "buttery toffee"
+  ],
+  "varietals": []
+ }
+}

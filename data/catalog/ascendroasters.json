@@ -1,0 +1,254 @@
+[
+ {
+  "body_hash": "87adbf3cf5db2f9d",
+  "first_seen": "2026-10-26",
+  "handle": "loloru-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0674/8500/8171/files/loloru-craft-dark-roast-coffee-628026.jpg?v=1728743718",
+  "platform": "shopify",
+  "product_id": "8808684650795",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "ascendroasters",
+  "tags": [
+   "coffee",
+   "craft dark roast",
+   "dark roast",
+   "female owned coffee",
+   "locally roasted",
+   "single origin"
+  ],
+  "title": "Loloru - Craft Dark Roast Coffee",
+  "url": "https://www.ascendroasters.com/products/loloru-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean",
+    "variant_id": "47238288179499"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for drip/ pour over",
+    "variant_id": "47238288212267"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for cold brew/ french press",
+    "variant_id": "47238288245035"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for espresso",
+    "variant_id": "47238288277803"
+   }
+  ],
+  "vendor": "Ascend Coffee Roasters"
+ },
+ {
+  "body_hash": "dc35f97945f91487",
+  "first_seen": "2026-10-26",
+  "handle": "house-irazu-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0674/8500/8171/files/tarrazu-medium-roast-coffee-3449986.jpg?v=1776429007",
+  "platform": "shopify",
+  "product_id": "8808715813163",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "ascendroasters",
+  "tags": [
+   "coffee",
+   "female owned coffee",
+   "locally roasted",
+   "medium roast",
+   "single origin"
+  ],
+  "title": "Tarrazu - Medium Roast Coffee",
+  "url": "https://www.ascendroasters.com/products/house-irazu-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean",
+    "variant_id": "47238277857579"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for drip/ pour over",
+    "variant_id": "47238277890347"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for cold brew/ french press",
+    "variant_id": "47238277923115"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for espresso",
+    "variant_id": "47238277955883"
+   }
+  ],
+  "vendor": "Ascend Coffee Roasters"
+ },
+ {
+  "body_hash": "af970771c503fa0d",
+  "first_seen": "2026-10-26",
+  "handle": "agaro-light-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0674/8500/8171/files/satima-light-roast-coffee-3767007.jpg?v=1776429007",
+  "platform": "shopify",
+  "product_id": "8808754446635",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "ascendroasters",
+  "tags": [
+   "coffee",
+   "ethiopian coffee",
+   "female owned coffee",
+   "light roast",
+   "locally roasted"
+  ],
+  "title": "Satima - Light Roast Coffee",
+  "url": "https://www.ascendroasters.com/products/agaro-light-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean",
+    "variant_id": "47238269862187"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground drip/ pour over",
+    "variant_id": "47238269927723"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground cold brew/ french press",
+    "variant_id": "47238269960491"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground Espresso",
+    "variant_id": "47238269993259"
+   }
+  ],
+  "vendor": "Ascend Coffee Roasters"
+ },
+ {
+  "body_hash": "ec778021296be06f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0674/8500/8171/files/espresso-dark-roast-coffee-664056.jpg?v=1728743719",
+  "platform": "shopify",
+  "product_id": "8808783806763",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "ascendroasters",
+  "tags": [
+   "coffee",
+   "coffee blend",
+   "craft dark roast",
+   "dark roast",
+   "espresso",
+   "female owned coffee",
+   "home espresso"
+  ],
+  "title": "Espresso - Dark Roast Coffee",
+  "url": "https://www.ascendroasters.com/products/espresso-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Whole Bean",
+    "variant_id": "47238369378603"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for drip/ pour over",
+    "variant_id": "47238369411371"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for cold brew/ french press",
+    "variant_id": "47238369444139"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 21.95,
+    "title": "Ground for espresso",
+    "variant_id": "47238369476907"
+   }
+  ],
+  "vendor": "Ascend Coffee Roasters"
+ },
+ {
+  "body_hash": "957bf78a77f49d94",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dark-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0674/8500/8171/files/indie-decaf-coffee-491867.jpg?v=1728743718",
+  "platform": "shopify",
+  "product_id": "8808833876267",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "ascendroasters",
+  "tags": [
+   "chemical free decaf",
+   "dark roast decaf",
+   "decaf",
+   "swiss water decaf"
+  ],
+  "title": "Indie Decaf Coffee",
+  "url": "https://www.ascendroasters.com/products/decaf-dark-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Whole Bean",
+    "variant_id": "47238611304747"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Ground for drip/ pour over",
+    "variant_id": "47238611435819"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Ground for cold brew/ french press",
+    "variant_id": "47238611468587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 24.95,
+    "title": "Ground for espresso",
+    "variant_id": "47238611501355"
+   }
+  ],
+  "vendor": "Ascend Coffee Roasters"
+ }
+]

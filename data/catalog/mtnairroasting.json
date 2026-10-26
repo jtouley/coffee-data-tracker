@@ -1,0 +1,249 @@
+[
+ {
+  "body_hash": "",
+  "first_seen": "2026-10-26",
+  "handle": "decaf",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2019/11/12-pack.jpg",
+  "platform": "woocommerce",
+  "product_id": "25795",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [],
+  "title": "DECAF",
+  "url": "https://www.mtnairroasting.com/product/decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 120.0,
+    "title": "DECAF",
+    "variant_id": "25795:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "17075411e0a0f9d8",
+  "first_seen": "2026-10-26",
+  "handle": "idido",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2026/07/Idido-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "44521",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Idido",
+  "url": "https://www.mtnairroasting.com/product/idido/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.39,
+    "title": "250g",
+    "variant_id": "44521:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.39,
+    "title": "5lbs",
+    "variant_id": "44521:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f475e6a7211476c",
+  "first_seen": "2026-10-26",
+  "handle": "refisa",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2026/07/Refisa-2.jpg",
+  "platform": "woocommerce",
+  "product_id": "44545",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Refisa",
+  "url": "https://www.mtnairroasting.com/product/refisa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.39,
+    "title": "250g",
+    "variant_id": "44545:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.39,
+    "title": "5lbs",
+    "variant_id": "44545:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b1c4c2c8a76da53",
+  "first_seen": "2026-10-26",
+  "handle": "la-estrella",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2026/10/La-Estrella-IG.jpg",
+  "platform": "woocommerce",
+  "product_id": "44800",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "La Estrella",
+  "url": "https://www.mtnairroasting.com/product/la-estrella/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 33.26,
+    "title": "250g",
+    "variant_id": "44800:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 33.26,
+    "title": "5lbs",
+    "variant_id": "44800:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "eccee078e6f2f154",
+  "first_seen": "2026-10-26",
+  "handle": "kii-ab",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2026/10/Kii-AB.jpg",
+  "platform": "woocommerce",
+  "product_id": "44835",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Kii AB",
+  "url": "https://www.mtnairroasting.com/product/kii-ab/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 24.6,
+    "title": "250g",
+    "variant_id": "44835:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 24.6,
+    "title": "5lbs",
+    "variant_id": "44835:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5572f940aa8061a8",
+  "first_seen": "2026-10-26",
+  "handle": "black-balsam",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2023/01/Black-Balsam.jpg",
+  "platform": "woocommerce",
+  "product_id": "449",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black Balsam",
+  "url": "https://www.mtnairroasting.com/product/black-balsam/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 20.55,
+    "title": "250g",
+    "variant_id": "449:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.55,
+    "title": "5lbs",
+    "variant_id": "449:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "76c12127fff987f3",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-decaf",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2023/01/Colombia-Decaf.jpg",
+  "platform": "woocommerce",
+  "product_id": "67",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Colombia Decaf",
+  "url": "https://www.mtnairroasting.com/product/colombia-decaf/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 21.36,
+    "title": "250g",
+    "variant_id": "67:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.36,
+    "title": "5lbs",
+    "variant_id": "67:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "98f9d7d6eab36d00",
+  "first_seen": "2026-10-26",
+  "handle": "blackmountain",
+  "image": "https://www.mtnairroasting.com/wp-content/uploads/2023/01/Black-Mountain.jpg",
+  "platform": "woocommerce",
+  "product_id": "9181",
+  "product_type": "simple",
+  "roaster_slug": "mtnairroasting",
+  "tags": [
+   "Coffee"
+  ],
+  "title": "Black Mountain",
+  "url": "https://www.mtnairroasting.com/product/blackmountain/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 250,
+    "price_usd": 20.55,
+    "title": "250g",
+    "variant_id": "9181:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 20.55,
+    "title": "5lbs",
+    "variant_id": "9181:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

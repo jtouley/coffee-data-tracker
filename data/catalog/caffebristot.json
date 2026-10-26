@@ -1,0 +1,1042 @@
+[
+ {
+  "body_hash": "5b4c8871f880a922",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-buongusto-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-16T122059.709.png?v=1705425729",
+  "platform": "shopify",
+  "product_id": "6602090545326",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Low Acid",
+   "Medium Roast"
+  ],
+  "title": "BUONGUSTO",
+  "url": "https://www.caffebristot.us/products/bristot-buongusto-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 35.99,
+    "title": "1 BAG",
+    "variant_id": "46417921736878"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 194.34,
+    "title": "6 BAGS",
+    "variant_id": "46417921769646"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "92c2c5608cf5e95f",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-speciale-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/5.png?v=1705602219",
+  "platform": "shopify",
+  "product_id": "6607180398766",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Low Acid",
+   "Medium Roast"
+  ],
+  "title": "SPECIALE",
+  "url": "https://www.caffebristot.us/products/bristot-speciale-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 35.99,
+    "title": "1 BAG",
+    "variant_id": "46418013356206"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 194.34,
+    "title": "6 BAGS",
+    "variant_id": "46418013388974"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "a48521fa239d57ee",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-tiziano-premium-quality-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/2_a5b99f82-548f-472d-b9a0-3fbf38228fb6.png?v=1705602125",
+  "platform": "shopify",
+  "product_id": "6607188885678",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "TIZIANO",
+  "url": "https://www.caffebristot.us/products/bristot-tiziano-premium-quality-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 37.99,
+    "title": "1 BAG",
+    "variant_id": "46417973117102"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 216.54,
+    "title": "6 BAGS",
+    "variant_id": "46417973149870"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "6f93aedaa1bc0cf4",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-sublime-espresso-beans-100-arabica",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/3_06359645-43a5-48c1-a217-f297fcde33ef.png?v=1705602075",
+  "platform": "shopify",
+  "product_id": "6607213166766",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "100% Arabica",
+   "Medium Roast"
+  ],
+  "title": "SUBLIME",
+  "url": "https://www.caffebristot.us/products/bristot-sublime-espresso-beans-100-arabica",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 33.5,
+    "title": "1 BAG",
+    "variant_id": "46417997889710"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 180.9,
+    "title": "6 BAGS",
+    "variant_id": "46417997922478"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "0adb8b57245b0f65",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-decaf-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-18T153624.503.png?v=1705610205",
+  "platform": "shopify",
+  "product_id": "6607277555886",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "DECAFFEINATED",
+  "url": "https://www.caffebristot.us/products/bristot-decaf-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 19.55,
+    "title": "1 BAG",
+    "variant_id": "46420559364270"
+   },
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 211.14,
+    "title": "12 BAGS",
+    "variant_id": "46420559397038"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "5fef0f42455a8324",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-rainforest-espresso-beans-1",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/4_ceeed47a-467e-4fc3-9a3f-16033a95d1e1.png?v=1705602277",
+  "platform": "shopify",
+  "product_id": "6611241795758",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast",
+   "Rainforest"
+  ],
+  "title": "RAINFOREST",
+  "url": "https://www.caffebristot.us/products/bristot-rainforest-espresso-beans-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 37.99,
+    "title": "1 BAG",
+    "variant_id": "46420555923630"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 205.14,
+    "title": "6 BAGS",
+    "variant_id": "46420555956398"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "2dc95c24b940830a",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-espresso-cremoso-italiano-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-18T175544.998.png?v=1705618566",
+  "platform": "shopify",
+  "product_id": "6612617625774",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "ESPRESSO",
+  "url": "https://www.caffebristot.us/products/bristot-espresso-cremoso-italiano-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 11.99,
+    "title": "Default Title",
+    "variant_id": "39519691997358"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "d163567868220c19",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-100-arabica-ground-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-18T172355.530.png?v=1705616656",
+  "platform": "shopify",
+  "product_id": "6612645839022",
+  "product_type": "Ground espresso",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "100% Arabica",
+   "Medium Roast"
+  ],
+  "title": "100% ARABICA",
+  "url": "https://www.caffebristot.us/products/bristot-100-arabica-ground-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 11.99,
+    "title": "Default Title",
+    "variant_id": "39519777849518"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "e021217869df08c2",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-moka-oro-ground-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-22T140309.425.png?v=1705950207",
+  "platform": "shopify",
+  "product_id": "6612661108910",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "MOKA ORO",
+  "url": "https://www.caffebristot.us/products/bristot-moka-oro-ground-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 11.99,
+    "title": "Default Title",
+    "variant_id": "39519836078254"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "63710f00711a5ffd",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-100-arabica-premium-selection-coffee-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-18T152409.634.png?v=1705609494",
+  "platform": "shopify",
+  "product_id": "6615573954734",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "1.1lbs",
+   "100% Arabica",
+   "Medium Roast"
+  ],
+  "title": "100% ARABICA",
+  "url": "https://www.caffebristot.us/products/bristot-100-arabica-premium-selection-coffee-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 20.99,
+    "title": "Default Title",
+    "variant_id": "39531639570606"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "cdee38077ebb9a86",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-organic-italian-coffee-beans-premium-selection-espresso-beans",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._44_a7ebad8e-0d05-4916-95d6-1ab402a1ee75.png?v=1745954468",
+  "platform": "shopify",
+  "product_id": "6651299889326",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "BIO",
+  "url": "https://www.caffebristot.us/products/bristot-organic-italian-coffee-beans-premium-selection-espresso-beans",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 38.99,
+    "title": "1 BAG",
+    "variant_id": "46420534919342"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 210.54,
+    "title": "6 BAGS",
+    "variant_id": "46420534952110"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "1ff0465754db0f28",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-decaf-capsules-compatible-with-lavazza-blue-line",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._7.png?v=1707167746",
+  "platform": "shopify",
+  "product_id": "6655420596398",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "DECAF",
+  "url": "https://www.caffebristot.us/products/bristot-decaf-capsules-compatible-with-lavazza-blue-line",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 31.99,
+    "title": "Default Title",
+    "variant_id": "39670140862638"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "7a24f41257b6d563",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-decaf-filter-coffee-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-23T150426.189.png?v=1706040287",
+  "platform": "shopify",
+  "product_id": "7051464802478",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Decaf",
+   "Low Acid",
+   "Medium Roast"
+  ],
+  "title": "L‘AMERICANO DECAF",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-decaf-filter-coffee-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40377761824942"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "8785cb83d0e83e78",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-filter-coffee-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-23T144846.308.png?v=1706039686",
+  "platform": "shopify",
+  "product_id": "7051500093614",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Low Acid",
+   "Medium Roast"
+  ],
+  "title": "L‘AMERICANO MEDIUM",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-filter-coffee-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40377833291950"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "6f442d8c1184e65b",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-filter-coffee-100-arabica-ground",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-23T152950.176.png?v=1706041796",
+  "platform": "shopify",
+  "product_id": "7051531419822",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "100% Arabica",
+   "Dark Roast"
+  ],
+  "title": "L‘AMERICANO ARABICA",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-filter-coffee-100-arabica-ground",
+  "variants": [
+   {
+    "available": true,
+    "grams": 227,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "40377900859566"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "3e810c4be18badbf",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-decaf-filter-coffee-coffee-beans-medium-roast",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._8.png?v=1706907087",
+  "platform": "shopify",
+  "product_id": "7051614126254",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Decaf",
+   "FILTER",
+   "Medium Roast"
+  ],
+  "title": "L‘AMERICANO DECAF",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-decaf-filter-coffee-coffee-beans-medium-roast",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 33.99,
+    "title": "1 BAG",
+    "variant_id": "46417570660526"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 183.54,
+    "title": "6 BAGS",
+    "variant_id": "46417570693294"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "e1870a1c335180eb",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-filter-coffee-beans-medium-roast-low-acid-2-2lbs-1kg",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-23T165658.132.png?v=1706047050",
+  "platform": "shopify",
+  "product_id": "7051719311534",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "FILTER",
+   "Low Acid",
+   "Medium Roast"
+  ],
+  "title": "L‘AMERICANO MEDIUM",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-filter-coffee-beans-medium-roast-low-acid-2-2lbs-1kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 29.99,
+    "title": "1 BAG",
+    "variant_id": "46417558077614"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 161.94,
+    "title": "6 BAGS",
+    "variant_id": "46417558110382"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "f86ff0e79f5ffdc2",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-l-americano-filter-coffee-beans-100-arabica-dark-roast-2-2lbs-1kg",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._6.png?v=1706905769",
+  "platform": "shopify",
+  "product_id": "7051736907950",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "100% Arabica",
+   "Dark Roast",
+   "FILTER"
+  ],
+  "title": "L‘AMERICANO ARABICA",
+  "url": "https://www.caffebristot.us/products/bristot-l-americano-filter-coffee-beans-100-arabica-dark-roast-2-2lbs-1kg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 33.99,
+    "title": "1 BAG",
+    "variant_id": "46417547886766"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 183.54,
+    "title": "6 BAGS",
+    "variant_id": "46417547919534"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "528a826c6f516aa8",
+  "first_seen": "2026-10-26",
+  "handle": "bristot-double-11-2g-cremoso-capsules-compatible-with-lavazza-blue-machines",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/AmazonShopifyPics.png?v=1782140995",
+  "platform": "shopify",
+  "product_id": "7710889410734",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [],
+  "title": "DOUBLE (11.2g) CREMOSO",
+  "url": "https://www.caffebristot.us/products/bristot-double-11-2g-cremoso-capsules-compatible-with-lavazza-blue-machines",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 37.5,
+    "title": "Default Title",
+    "variant_id": "43039419400366"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "5d3ad02a87faa566",
+  "first_seen": "2026-10-26",
+  "handle": "organic-500g",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/bristot_espresso_blend_coffee_500g_bag.png?v=1750965624",
+  "platform": "shopify",
+  "product_id": "7835880652974",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "1.1lbs",
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "BIO ORGANIC 500G",
+  "url": "https://www.caffebristot.us/products/organic-500g",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 22.99,
+    "title": "Default Title",
+    "variant_id": "43481327730862"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "f2de4cb599b33ec6",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Untitleddesign-2024-01-18T152154.412.png?v=1705609322",
+  "platform": "shopify",
+  "product_id": "7835884224686",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "1.1lbs",
+   "Medium Roast"
+  ],
+  "title": "ESPRESSO",
+  "url": "https://www.caffebristot.us/products/espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 19.99,
+    "title": "Default Title",
+    "variant_id": "43481355714734"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "1602b0c8c4bca70a",
+  "first_seen": "2026-10-26",
+  "handle": "dolomit-espresso-cups-6ct",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._19.png?v=1708103852",
+  "platform": "shopify",
+  "product_id": "7901684760750",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [],
+  "title": "DOLOMIT ESPRESSO CUPS",
+  "url": "https://www.caffebristot.us/products/dolomit-espresso-cups-6ct",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 69.99,
+    "title": "Default Title",
+    "variant_id": "43704412176558"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "94c133d8ea717949",
+  "first_seen": "2026-10-26",
+  "handle": "classico",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._15_b9aa84c5-ee18-463e-b4c5-617b155d6330.png?v=1710445077",
+  "platform": "shopify",
+  "product_id": "8254545723566",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "CLASSICO",
+  "url": "https://www.caffebristot.us/products/classico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 25.99,
+    "title": "1 BAG",
+    "variant_id": "46417540939950"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 140.34,
+    "title": "6 BAGS",
+    "variant_id": "46417540972718"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "4a86d9a5dae67e2f",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-1",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._19_feb5595c-32dd-4c05-82bd-326b505e787f.png?v=1710446408",
+  "platform": "shopify",
+  "product_id": "8254550769838",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast",
+   "Organic"
+  ],
+  "title": "ESPRESSO",
+  "url": "https://www.caffebristot.us/products/espresso-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 25.99,
+    "title": "1 BAG",
+    "variant_id": "46417533698222"
+   },
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 140.34,
+    "title": "6 BAGS",
+    "variant_id": "46417533730990"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "0a86590b8aa97b53",
+  "first_seen": "2026-10-26",
+  "handle": "wellcoffee-stomach-friendly",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._20.png?v=1710789608",
+  "platform": "shopify",
+  "product_id": "8261934416046",
+  "product_type": "Ground espresso",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "100% Arabica",
+   "Medium Roast"
+  ],
+  "title": "WELLCOFFEE STOMACH FRIENDLY",
+  "url": "https://www.caffebristot.us/products/wellcoffee-stomach-friendly",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "44826109575342"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "83eea34468d2f20a",
+  "first_seen": "2026-10-26",
+  "handle": "orientale",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._21_4b15fa76-6208-477b-b988-783de91e3821.png?v=1710790390",
+  "platform": "shopify",
+  "product_id": "8261963677870",
+  "product_type": "Ground espresso",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "L'ORIENTALE",
+  "url": "https://www.caffebristot.us/products/orientale",
+  "variants": [
+   {
+    "available": true,
+    "grams": 200,
+    "price_usd": 8.99,
+    "title": "Default Title",
+    "variant_id": "44826220921006"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "286fdfa5a043a94a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._31.png?v=1721761536",
+  "platform": "shopify",
+  "product_id": "8526883520686",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "SPECIALTY"
+  ],
+  "title": "ETHIOPIA",
+  "url": "https://www.caffebristot.us/products/ethiopia",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 9.99,
+    "title": "1 BAG",
+    "variant_id": "46420329201838"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 155.0,
+    "title": "16 BAGS",
+    "variant_id": "46420329234606"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "ef1f06840c6a1ca8",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._35.png?v=1721763718",
+  "platform": "shopify",
+  "product_id": "8526922776750",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "SPECIALTY"
+  ],
+  "title": "COLOMBIA",
+  "url": "https://www.caffebristot.us/products/ethiopia-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 9.99,
+    "title": "1 BAG",
+    "variant_id": "46420297810094"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 155.25,
+    "title": "16 BAGS",
+    "variant_id": "46420297842862"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "ace46fd788fa6fc4",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._39.png?v=1722278309",
+  "platform": "shopify",
+  "product_id": "8533813821614",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "SPECIALTY"
+  ],
+  "title": "BRAZIL SINGLE ORIGIN",
+  "url": "https://www.caffebristot.us/products/ethiopia-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 9.99,
+    "title": "1 BAG",
+    "variant_id": "46420229161134"
+   },
+   {
+    "available": true,
+    "grams": 225,
+    "price_usd": 155.0,
+    "title": "16 BAGS",
+    "variant_id": "46420229193902"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "1cf2f7ce1583ff57",
+  "first_seen": "2026-10-26",
+  "handle": "classico-2",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._38.png?v=1724183642",
+  "platform": "shopify",
+  "product_id": "8551430750382",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "CLASSICO",
+   "Medium Roast"
+  ],
+  "title": "CLASSICO 250G",
+  "url": "https://www.caffebristot.us/products/classico-2",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "45662674976942"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "b749b017fac20600",
+  "first_seen": "2026-10-26",
+  "handle": "classico-250g-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._39_6d2eda9a-cf55-4644-858d-24244f3fcbc3.png?v=1724184637",
+  "platform": "shopify",
+  "product_id": "8551440482478",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "CLASSICO",
+   "Medium Roast"
+  ],
+  "title": "CLASSICO GROUND BRICK 2.2 LB",
+  "url": "https://www.caffebristot.us/products/classico-250g-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 27.99,
+    "title": "Default Title",
+    "variant_id": "45662708433070"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "1a265cafb38518b8",
+  "first_seen": "2026-10-26",
+  "handle": "classico-2-2-lb-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._40_762cc3f1-b9a9-4667-bc4e-0ecb239969eb.png?v=1724185361",
+  "platform": "shopify",
+  "product_id": "8551447003310",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "CLASSICO",
+   "Medium Roast"
+  ],
+  "title": "CLASSICO GROUND 1.1 LB",
+  "url": "https://www.caffebristot.us/products/classico-2-2-lb-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 499,
+    "price_usd": 13.99,
+    "title": "Default Title",
+    "variant_id": "45662732517550"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "93f9d3418218b2a0",
+  "first_seen": "2026-10-26",
+  "handle": "classico-250g-copy-1",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._41_6963534b-83e3-4cc0-a259-30766758d779.png?v=1724186097",
+  "platform": "shopify",
+  "product_id": "8551450869934",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "CLASSICO",
+   "Medium Roast"
+  ],
+  "title": "CLASSICO ORO 250G",
+  "url": "https://www.caffebristot.us/products/classico-250g-copy-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 249,
+    "price_usd": 9.99,
+    "title": "Default Title",
+    "variant_id": "45662742216878"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "60d0dc1e370f2533",
+  "first_seen": "2026-10-26",
+  "handle": "classico-oro-250g",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._43_1a40f504-881c-4982-b861-bcde17ca0b8c.png?v=1724188611",
+  "platform": "shopify",
+  "product_id": "8551469416622",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "CLASSICO",
+   "Medium Roast"
+  ],
+  "title": "CLASSICO ORO 1.1 LB",
+  "url": "https://www.caffebristot.us/products/classico-oro-250g",
+  "variants": [
+   {
+    "available": true,
+    "grams": 31,
+    "price_usd": 14.99,
+    "title": "Default Title",
+    "variant_id": "45662851760302"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "d67666d1e766e3ba",
+  "first_seen": "2026-10-26",
+  "handle": "classico-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/Mixology_smooth_tasty._44.png?v=1724190112",
+  "platform": "shopify",
+  "product_id": "8551492288686",
+  "product_type": "Coffee Beans",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Medium Roast"
+  ],
+  "title": "CLASSICO ORO",
+  "url": "https://www.caffebristot.us/products/classico-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 998,
+    "price_usd": 25.99,
+    "title": "1 BAG",
+    "variant_id": "46417259954350"
+   },
+   {
+    "available": true,
+    "grams": 3175,
+    "price_usd": 148.14,
+    "title": "6 BAGS",
+    "variant_id": "46417259987118"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ },
+ {
+  "body_hash": "1fa79ce84be153c5",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-grind-copy",
+  "image": "https://cdn.shopify.com/s/files/1/0557/5678/3790/files/61bL35ahSuL._SL1500_55c221f6-edf2-4ea9-9912-f7166e1d2168.png?v=1769460928",
+  "platform": "shopify",
+  "product_id": "8982689841326",
+  "product_type": "",
+  "roaster_slug": "caffebristot",
+  "tags": [
+   "Decaf",
+   "Medium Roast"
+  ],
+  "title": "DECAF GROUND",
+  "url": "https://www.caffebristot.us/products/decaf-grind-copy",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 11.99,
+    "title": "Default Title",
+    "variant_id": "47430130434222"
+   }
+  ],
+  "vendor": "Boutique Bristot"
+ }
+]

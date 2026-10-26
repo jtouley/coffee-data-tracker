@@ -1,0 +1,644 @@
+[
+ {
+  "body_hash": "c780909e9f75070d",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-seasonal2",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/08/Autumn_540px.jpg?fit=540%2C580&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "12610",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "All Stars",
+   "Certified Organic",
+   "Coffee",
+   "Light Roast",
+   "Seasonal",
+   "new"
+  ],
+  "title": "AUTUMN SEASONAL – Finca Liquidambar",
+  "url": "https://www.dynamiteroasting.com/product/autumn-seasonal2/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "12610:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "12610:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "74d36cdd0dd4de5f",
+  "first_seen": "2026-10-26",
+  "handle": "pedro-turcios-experimental-process",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2023/08/Pedro_wash.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "19592",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "All Stars",
+   "Certified Organic",
+   "Coffee",
+   "Light Roast",
+   "Single Origin",
+   "all-star",
+   "microlot",
+   "new"
+  ],
+  "title": "Pedro Turcios – Experimental Process",
+  "url": "https://www.dynamiteroasting.com/product/pedro-turcios-experimental-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "19592:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "19592:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "45f73d7c8d04680d",
+  "first_seen": "2026-10-26",
+  "handle": "espresso",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Esp_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "278",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Espresso",
+   "Medium-Dark Roast"
+  ],
+  "title": "Dynamite Espresso Blend",
+  "url": "https://www.dynamiteroasting.com/product/espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "278:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "278:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "766d268a1978e190",
+  "first_seen": "2026-10-26",
+  "handle": "suplicar-clemencia-dark-roast",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Sup_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "282",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Dark Roast"
+  ],
+  "title": "Suplicar Clemencia Dark Roast",
+  "url": "https://www.dynamiteroasting.com/product/suplicar-clemencia-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "282:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "282:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "55603d3b58dc2744",
+  "first_seen": "2026-10-26",
+  "handle": "daymaker-blend",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Daymaker_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "327",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans"
+  ],
+  "title": "Daymaker Blend",
+  "url": "https://www.dynamiteroasting.com/product/daymaker-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "327:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "327:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "13026c7f34a904ec",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Suma_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "328",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://www.dynamiteroasting.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "328:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "328:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "9c31a12b003c3d5e",
+  "first_seen": "2026-10-26",
+  "handle": "wncw-88-7-fm-mountain-morning-blend",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Wncw_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "330",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Fundraiser"
+  ],
+  "title": "WNCW 88.7 FM Mountain Morning Blend",
+  "url": "https://www.dynamiteroasting.com/product/wncw-88-7-fm-mountain-morning-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "330:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "330:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "71c16f8bf271d738",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-chiapas-altura",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Mex_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "332",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans"
+  ],
+  "title": "Mexico Chiapas Altura",
+  "url": "https://www.dynamiteroasting.com/product/mexico-chiapas-altura/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "332:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "332:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "84daaf28b31da97f",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopia-sidamo",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Eth_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "334",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Light Roast"
+  ],
+  "title": "Ethiopia Sidamo",
+  "url": "https://www.dynamiteroasting.com/product/ethiopia-sidamo/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "334:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "334:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8cd6faaa78b6d76d",
+  "first_seen": "2026-10-26",
+  "handle": "unleaded-decaf-blend",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Unleaded_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "340",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Coffee",
+   "Coffee Beans",
+   "Decaf"
+  ],
+  "title": "Unleaded Decaf Blend",
+  "url": "https://www.dynamiteroasting.com/product/unleaded-decaf-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "340:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "340:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "413a769523f04243",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-dynamite-espresso",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2020/01/Dec_Esp_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "343",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Decaf",
+   "Espresso"
+  ],
+  "title": "Decaf Dynamite Espresso",
+  "url": "https://www.dynamiteroasting.com/product/decaf-dynamite-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "343:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "343:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4e56295ed23ad441",
+  "first_seen": "2026-10-26",
+  "handle": "colombia-montana-negra",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2021/06/Colo_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "3761",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Light Roast"
+  ],
+  "title": "Colombia Montaña Negra",
+  "url": "https://www.dynamiteroasting.com/product/colombia-montana-negra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16oz Bag (One Full Pound!)",
+    "variant_id": "3761:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5lb Bulk Bag (Save 10%!)",
+    "variant_id": "3761:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c15366dd5a7e647d",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-marcala-dark",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/01/HoDk.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "39301",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Dark Roast",
+   "Single Origin"
+  ],
+  "title": "Honduras Marcala Dark",
+  "url": "https://www.dynamiteroasting.com/product/honduras-marcala-dark/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "39301:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "39301:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e173f454495244b",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-blend",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/01/Cold_Brew.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "39309",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic Coffee",
+   "Coffee",
+   "Coffee Beans",
+   "Medium Roast"
+  ],
+  "title": "Cold Brew Blend",
+  "url": "https://www.dynamiteroasting.com/product/cold-brew-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "39309:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "39309:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c0653f177065e31f",
+  "first_seen": "2026-10-26",
+  "handle": "cherry-bomb-espresso",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/01/Untitled-1.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "39316",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic Coffee",
+   "Coffee",
+   "Coffee Beans",
+   "Light Roast"
+  ],
+  "title": "Cherry Bomb Espresso",
+  "url": "https://www.dynamiteroasting.com/product/cherry-bomb-espresso/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "39316:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "39316:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6fcd3e4ee297fd28",
+  "first_seen": "2026-10-26",
+  "handle": "pedro-turcios-washed-process",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/09/Pedro_wash26.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "44046",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "All Stars",
+   "Certified Organic",
+   "Coffee",
+   "Coffee Beans",
+   "Light Roast",
+   "Single Origin",
+   "all-star",
+   "microlot",
+   "new"
+  ],
+  "title": "Pedro Turcios – Washed Process",
+  "url": "https://www.dynamiteroasting.com/product/pedro-turcios-washed-process/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "44046:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "44046:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "58818ed24629c6fd",
+  "first_seen": "2026-10-26",
+  "handle": "thunderstruck-blend",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/10/Thunderstruck-product-page-e1790951788953.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "44650",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "Certified Organic",
+   "Coffee",
+   "Dark Roast",
+   "new"
+  ],
+  "title": "Thunderstruck Blend",
+  "url": "https://www.dynamiteroasting.com/product/thunderstruck-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 17.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "44650:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 17.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "44650:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "51449610d695d416",
+  "first_seen": "2026-10-26",
+  "handle": "finca-cual-bicicleta",
+  "image": "https://i0.wp.com/www.dynamiteroasting.com/wp-content/uploads/2026/02/Cual_16.jpg?fit=600%2C600&ssl=1",
+  "platform": "woocommerce",
+  "product_id": "917",
+  "product_type": "variable",
+  "roaster_slug": "dynamiteroasting",
+  "tags": [
+   "All Stars",
+   "Certified Organic",
+   "Coffee",
+   "Light Roast",
+   "Seasonal",
+   "Single Origin"
+  ],
+  "title": "Finca Cual Bicicleta – Natural Process",
+  "url": "https://www.dynamiteroasting.com/product/finca-cual-bicicleta/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 19.95,
+    "title": "16 oz Bag (One Full Pound!)",
+    "variant_id": "917:0"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 19.95,
+    "title": "5 lb Bulk Bag (Save 10%!)",
+    "variant_id": "917:1"
+   }
+  ],
+  "vendor": ""
+ }
+]

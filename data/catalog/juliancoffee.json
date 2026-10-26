@@ -1,0 +1,3014 @@
+[
+ {
+  "body_hash": "199aa5e663cfd10c",
+  "first_seen": "2026-10-26",
+  "handle": "sunday-morning-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/7.png?v=1697549487",
+  "platform": "shopify",
+  "product_id": "1027742400627",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Sunday Morning",
+  "url": "https://juliancoffee.com/products/sunday-morning-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "10855440973939"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / 12 oz.",
+    "variant_id": "10855441006707"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "43832420171938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / 5 lb.",
+    "variant_id": "43832420204706"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "60eb45b2134e9ea0",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/28.png?v=1697560777",
+  "platform": "shopify",
+  "product_id": "1028474339443",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Light Roast",
+   "Micro-Lot",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://juliancoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "10858178773107"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "10858178805875"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43883651006626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43883651039394"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "da67abc7c77cee04",
+  "first_seen": "2026-10-26",
+  "handle": "flavored-coffees",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/18.png?v=1697549222",
+  "platform": "shopify",
+  "product_id": "1194051666035",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Flavored Coffees",
+  "url": "https://juliancoffee.com/products/flavored-coffees",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Jamaica Me Crazy (Kahlua Caramel & Vanilla) / 12 oz.",
+    "variant_id": "43662726004898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Jamaica Me Crazy (Kahlua Caramel & Vanilla) / 12 oz.",
+    "variant_id": "43662726037666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Highlander Grogg/Holiday Grogg (Butterscotch Butter Rum & Vanilla / 12 oz.",
+    "variant_id": "43662731640994"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Sticky Bun (Caramel Pecan & Cinnamon) / 12 oz.",
+    "variant_id": "43662731673762"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Pumpkin Spice / 12 oz.",
+    "variant_id": "43662731739298"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Hazelnut / 12 oz.",
+    "variant_id": "43662731772066"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Chocolate Raspberry (Chocolate & Raspberry) / 12 oz.",
+    "variant_id": "43662731804834"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Peppermint / 12 oz.",
+    "variant_id": "43662731837602"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Cinnamon Cream (Vanilla & Cinnamon) / 12 oz.",
+    "variant_id": "43662731870370"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Hawaiin Nut (Macadamia Nut & Coconut) / 12 oz.",
+    "variant_id": "43662731903138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Coconut Cream Pie (Coconut & Vanilla) / 12 oz.",
+    "variant_id": "43662731935906"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Nuts About Chocolate (Chocolate Pecan Hazelnut & Macadamia Nut) / 12 oz.",
+    "variant_id": "43662731968674"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / 12 oz.",
+    "variant_id": "43662732001442"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Milky Way (Chocolate Caramel) / 12 oz.",
+    "variant_id": "43662732034210"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Irish Cream / 12 oz.",
+    "variant_id": "43662732066978"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Nutty Irishman (Hazelnut & Irish Cream) / 12 oz.",
+    "variant_id": "43662732099746"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Southern Pecan / 12 oz.",
+    "variant_id": "43662732132514"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Highlander Grogg/Holiday Grogg (Butterscotch Butter Rum & Vanilla / 12 oz.",
+    "variant_id": "43662732165282"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Sticky Bun (Caramel Pecan & Cinnamon) / 12 oz.",
+    "variant_id": "43662732198050"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Pumpkin Spice / 12 oz.",
+    "variant_id": "43662732263586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Hazelnut / 12 oz.",
+    "variant_id": "43662732296354"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Chocolate Raspberry (Chocolate & Raspberry) / 12 oz.",
+    "variant_id": "43662732329122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Peppermint / 12 oz.",
+    "variant_id": "43662732361890"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Cinnamon Cream (Vanilla & Cinnamon) / 12 oz.",
+    "variant_id": "43662732394658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Hawaiin Nut (Macadamia Nut & Coconut) / 12 oz.",
+    "variant_id": "43662732427426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Coconut Cream Pie (Coconut & Vanilla) / 12 oz.",
+    "variant_id": "43662732460194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Nuts About Chocolate (Chocolate Pecan Hazelnut & Macadamia Nut) / 12 oz.",
+    "variant_id": "43662732492962"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / 12 oz.",
+    "variant_id": "43662732525730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Milky Way (Chocolate Caramel) / 12 oz.",
+    "variant_id": "43662732558498"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Irish Cream / 12 oz.",
+    "variant_id": "43662732591266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Nutty Irishman (Hazelnut & Irish Cream) / 12 oz.",
+    "variant_id": "43662732624034"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Southern Pecan / 12 oz.",
+    "variant_id": "43662732656802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Chocolate Raspberry (Chocolate & Raspberry) / 5 lb.",
+    "variant_id": "43832362565794"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Cinnamon Cream (Vanilla & Cinnamon) / 5 lb.",
+    "variant_id": "43832362598562"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Coconut Cream Pie (Coconut & Vanilla) / 5 lb.",
+    "variant_id": "43832362631330"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Hawaiin Nut (Macadamia Nut & Coconut) / 5 lb.",
+    "variant_id": "43832362664098"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Hazelnut / 5 lb.",
+    "variant_id": "43832362696866"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Highlander Grogg/Holiday Grogg (Butterscotch Butter Rum & Vanilla / 5 lb.",
+    "variant_id": "43832362729634"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / 5 lb.",
+    "variant_id": "43832362762402"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Irish Cream / 5 lb.",
+    "variant_id": "43832362795170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Jamaica Me Crazy (Kahlua Caramel & Vanilla) / 5 lb.",
+    "variant_id": "43832362827938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Milky Way (Chocolate Caramel) / 5 lb.",
+    "variant_id": "43832362893474"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Nuts About Chocolate (Chocolate Pecan Hazelnut & Macadamia Nut) / 5 lb.",
+    "variant_id": "43832362926242"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Nutty Irishman (Hazelnut & Irish Cream) / 5 lb.",
+    "variant_id": "43832362959010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Peppermint / 5 lb.",
+    "variant_id": "43832362991778"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Pumpkin Spice / 5 lb.",
+    "variant_id": "43832363024546"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Southern Pecan / 5 lb.",
+    "variant_id": "43832363057314"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Sticky Bun (Caramel Pecan & Cinnamon) / 5 lb.",
+    "variant_id": "43832363090082"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Chocolate Raspberry (Chocolate & Raspberry) / 5 lb.",
+    "variant_id": "43832363122850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Cinnamon Cream (Vanilla & Cinnamon) / 5 lb.",
+    "variant_id": "43832363155618"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Coconut Cream Pie (Coconut & Vanilla) / 5 lb.",
+    "variant_id": "43832363188386"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Hawaiin Nut (Macadamia Nut & Coconut) / 5 lb.",
+    "variant_id": "43832363221154"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Hazelnut / 5 lb.",
+    "variant_id": "43832363253922"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Highlander Grogg/Holiday Grogg (Butterscotch Butter Rum & Vanilla / 5 lb.",
+    "variant_id": "43832363286690"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / 5 lb.",
+    "variant_id": "43832363319458"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Irish Cream / 5 lb.",
+    "variant_id": "43832363352226"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Jamaica Me Crazy (Kahlua Caramel & Vanilla) / 5 lb.",
+    "variant_id": "43832363384994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Milky Way (Chocolate Caramel) / 5 lb.",
+    "variant_id": "43832363450530"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Nuts About Chocolate (Chocolate Pecan Hazelnut & Macadamia Nut) / 5 lb.",
+    "variant_id": "43832363483298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Nutty Irishman (Hazelnut & Irish Cream) / 5 lb.",
+    "variant_id": "43832363516066"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Peppermint / 5 lb.",
+    "variant_id": "43832363548834"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Pumpkin Spice / 5 lb.",
+    "variant_id": "43832363581602"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Southern Pecan / 5 lb.",
+    "variant_id": "43832363614370"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Sticky Bun (Caramel Pecan & Cinnamon) / 5 lb.",
+    "variant_id": "43832363647138"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Almond Joy (Chocolate Amaretto & Coconut) / 12 oz.",
+    "variant_id": "43832364400802"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Almond Joy (Chocolate Amaretto & Coconut) / 5 lb.",
+    "variant_id": "43832364433570"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Blueberry Crumble (Blueberry Cinnamon & Vanilla) / 12 oz.",
+    "variant_id": "43832364466338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Blueberry Crumble (Blueberry Cinnamon & Vanilla) / 5 lb.",
+    "variant_id": "43832364499106"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Almond Joy (Chocolate Amaretto & Coconut) / 12 oz.",
+    "variant_id": "43832364531874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Almond Joy (Chocolate Amaretto & Coconut) / 5 lb.",
+    "variant_id": "43832364564642"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Blueberry Crumble (Blueberry Cinnamon & Vanilla) / 12 oz.",
+    "variant_id": "43832364597410"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Blueberry Crumble (Blueberry Cinnamon & Vanilla) / 5 lb.",
+    "variant_id": "43832364630178"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Chocolate Hazelnut (Chocolate & Hazelnut) / 12 oz.",
+    "variant_id": "43832368070818"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Chocolate Hazelnut (Chocolate & Hazelnut) / 5 lb.",
+    "variant_id": "43832368103586"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / German Chocolate Cake (Chocolate Coconut & Caramel) / 12 oz.",
+    "variant_id": "43832368136354"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / German Chocolate Cake (Chocolate Coconut & Caramel) / 5 lb.",
+    "variant_id": "43832368169122"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Peppermint Patty (Chocolate & Peppermint) / 12 oz.",
+    "variant_id": "43832368201890"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Peppermint Patty (Chocolate & Peppermint) / 5 lb.",
+    "variant_id": "43832368234658"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Pumpkin Roll (Pumpkin Spice & Caramel) / 12 oz.",
+    "variant_id": "43832368267426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Pumpkin Roll (Pumpkin Spice & Caramel) / 5 lb.",
+    "variant_id": "43832368300194"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Chocolate Hazelnut (Chocolate & Hazelnut) / 12 oz.",
+    "variant_id": "43832368464034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Chocolate Hazelnut (Chocolate & Hazelnut) / 5 lb.",
+    "variant_id": "43832368496802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / German Chocolate Cake (Chocolate Coconut & Caramel) / 12 oz.",
+    "variant_id": "43832368529570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / German Chocolate Cake (Chocolate Coconut & Caramel) / 5 lb.",
+    "variant_id": "43832368562338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Peppermint Patty (Chocolate & Peppermint) / 12 oz.",
+    "variant_id": "43832368595106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Peppermint Patty (Chocolate & Peppermint) / 5 lb.",
+    "variant_id": "43832368627874"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Pumpkin Roll (Pumpkin Spice & Caramel) / 12 oz.",
+    "variant_id": "43832368660642"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / Pumpkin Roll (Pumpkin Spice & Caramel) / 5 lb.",
+    "variant_id": "43832368693410"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / Caramel Roll (Caramel Macadamia Nut Pecan / 12 oz.",
+    "variant_id": "46597909184674"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / Caramel Roll (Caramel Macadamia Nut Pecan / 5 lb.",
+    "variant_id": "46597909217442"
+   },
+   {
+    "available": false,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / Caramel Roll (Caramel Macadamia Nut Pecan / 12 oz.",
+    "variant_id": "46597909250210"
+   },
+   {
+    "available": false,
+    "grams": 2268,
+    "price_usd": 17.0,
+    "title": "Ground / Caramel Roll (Caramel Macadamia Nut Pecan / 5 lb.",
+    "variant_id": "46597909282978"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "48132a3005ae9834",
+  "first_seen": "2026-10-26",
+  "handle": "holiday-coffee-flavors",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/19.png?v=1697549252",
+  "platform": "shopify",
+  "product_id": "1677703544947",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends"
+  ],
+  "title": "Holiday Flavors",
+  "url": "https://juliancoffee.com/products/holiday-coffee-flavors",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Christmas Cream (French Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43603885850786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Christmas Cream (French Vanilla) / Ground / 12 oz.",
+    "variant_id": "43603885883554"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Frosty's Favorite (Vanilla Cinnamon Hazelnut) / Whole Bean / 12 oz.",
+    "variant_id": "43603885916322"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Frosty's Favorite (Vanilla Cinnamon Hazelnut) / Ground / 12 oz.",
+    "variant_id": "43603885949090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Sweetheart Blend (Chocolate Raspberry Blueberry & Cherry) / Whole Bean / 12 oz.",
+    "variant_id": "43603885981858"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Sweetheart Blend (Chocolate Raspberry Blueberry & Cherry) / Ground / 12 oz.",
+    "variant_id": "43603886014626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Jingle Bell Java (Butter Rum Caramel Pecan & Cinnamon) / Whole Bean / 12 oz.",
+    "variant_id": "43603886047394"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Jingle Bell Java (Butter Rum Caramel Pecan & Cinnamon) / Ground / 12 oz.",
+    "variant_id": "43603886080162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Love Potion (Chocolate Cinnamon & Hazelnut) / Whole Bean / 12 oz.",
+    "variant_id": "43603886112930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Love Potion (Chocolate Cinnamon & Hazelnut) / Ground / 12 oz.",
+    "variant_id": "43603886145698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Mistletoe Kiss (Chocolate Caramel Kisses) / Whole Bean / 12 oz.",
+    "variant_id": "43603886178466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Mistletoe Kiss (Chocolate Caramel Kisses) / Ground / 12 oz.",
+    "variant_id": "43603886211234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Pumpkin Spice / Whole Bean / 12 oz.",
+    "variant_id": "43603886244002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Pumpkin Spice / Ground / 12 oz.",
+    "variant_id": "43603886276770"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "White Christmas (Coconut Caramel & Nuts) / Whole Bean / 12 oz.",
+    "variant_id": "43603886375074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "White Christmas (Coconut Caramel & Nuts) / Ground / 12 oz.",
+    "variant_id": "43603886407842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Naughty Santa (Tropical Liqueur & Irish Cream) / Whole Bean / 12 oz.",
+    "variant_id": "43603886440610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Naughty Santa (Tropical Liqueur & Irish Cream) / Ground / 12 oz.",
+    "variant_id": "43603886473378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Candy Cane (Peppermint Candy) / Whole Bean / 12 oz.",
+    "variant_id": "43603886506146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Candy Cane (Peppermint Candy) / Ground / 12 oz.",
+    "variant_id": "43603886538914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Black Forest/Cherry Cordial (Cherry Chocolate & Vanilla Cream) / Whole Bean / 12 oz.",
+    "variant_id": "43832304042146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Black Forest/Cherry Cordial (Cherry Chocolate & Vanilla Cream) / Ground / 12 oz.",
+    "variant_id": "43832304074914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Holiday Cookie (Almond & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43832304107682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Holiday Cookie (Almond & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43832304140450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43832304173218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43832304205986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Candy Cane (Peppermint Candy) / Whole Bean / 5 lb.",
+    "variant_id": "43832315838626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Candy Cane (Peppermint Candy) / Ground / 5 lb.",
+    "variant_id": "43832315871394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Christmas Cream (French Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832315969698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Christmas Cream (French Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832316002466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Black Forest/Cherry Cordial (Cherry Chocolate & Vanilla Cream) / Whole Bean / 5 lb.",
+    "variant_id": "43832316035234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Black Forest/Cherry Cordial (Cherry Chocolate & Vanilla Cream) / Ground / 5 lb.",
+    "variant_id": "43832316068002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Frosty's Favorite (Vanilla Cinnamon Hazelnut) / Whole Bean / 5 lb.",
+    "variant_id": "43832316100770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Frosty's Favorite (Vanilla Cinnamon Hazelnut) / Ground / 5 lb.",
+    "variant_id": "43832316133538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Sweetheart Blend (Chocolate Raspberry Blueberry & Cherry) / Whole Bean / 5 lb.",
+    "variant_id": "43832316166306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Sweetheart Blend (Chocolate Raspberry Blueberry & Cherry) / Ground / 5 lb.",
+    "variant_id": "43832316199074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832316231842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832316264610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Jingle Bell Java (Butter Rum Caramel Pecan & Cinnamon) / Whole Bean / 5 lb.",
+    "variant_id": "43832316297378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Jingle Bell Java (Butter Rum Caramel Pecan & Cinnamon) / Ground / 5 lb.",
+    "variant_id": "43832316330146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Love Potion (Chocolate Cinnamon & Hazelnut) / Whole Bean / 5 lb.",
+    "variant_id": "43832316362914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Love Potion (Chocolate Cinnamon & Hazelnut) / Ground / 5 lb.",
+    "variant_id": "43832316395682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Mistletoe Kiss (Chocolate Caramel Kisses) / Whole Bean / 5 lb.",
+    "variant_id": "43832316428450"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Mistletoe Kiss (Chocolate Caramel Kisses) / Ground / 5 lb.",
+    "variant_id": "43832316461218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Naughty Santa (Tropical Liqueur & Irish Cream) / Whole Bean / 5 lb.",
+    "variant_id": "43832316493986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Naughty Santa (Tropical Liqueur & Irish Cream) / Ground / 5 lb.",
+    "variant_id": "43832316526754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Pumpkin Spice / Whole Bean / 5 lb.",
+    "variant_id": "43832316625058"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Pumpkin Spice / Ground / 5 lb.",
+    "variant_id": "43832316657826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "White Christmas (Coconut Caramel & Nuts) / Whole Bean / 5 lb.",
+    "variant_id": "43832316756130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "White Christmas (Coconut Caramel & Nuts) / Ground / 5 lb.",
+    "variant_id": "43832316788898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Holiday Cookie (Almond & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832316821666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Holiday Cookie (Almond & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832316854434"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "3ce1f3f69c33d71e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/17.png?v=1697549198",
+  "platform": "shopify",
+  "product_id": "1772236210291",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Decaf",
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Decaf Signature Blend",
+  "url": "https://juliancoffee.com/products/decaf-signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "17541854232691"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "17541917704307"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832414797986"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832414830754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "45518382923938"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "45518382956706"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "83bf21363c0c239d",
+  "first_seen": "2026-10-26",
+  "handle": "organic-peru",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/Peru.png?v=1699899057",
+  "platform": "shopify",
+  "product_id": "1785115345011",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Organic Peru",
+  "url": "https://juliancoffee.com/products/organic-peru",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "17611765481587"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz / Ground",
+    "variant_id": "17611765514355"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Whole Bean",
+    "variant_id": "45767612891298"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "5lb / Ground",
+    "variant_id": "45767612924066"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "4918037e63b75b69",
+  "first_seen": "2026-10-26",
+  "handle": "moka-java",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/13.png?v=1697549320",
+  "platform": "shopify",
+  "product_id": "1785217384563",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Moka Java",
+  "url": "https://juliancoffee.com/products/moka-java",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "17612300550259"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "17612300583027"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832416043170"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832416075938"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "835e5a301987d32d",
+  "first_seen": "2026-10-26",
+  "handle": "la-crema-espresso",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/14.png?v=1697549276",
+  "platform": "shopify",
+  "product_id": "1785222496371",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Le Crema Espresso",
+  "url": "https://juliancoffee.com/products/la-crema-espresso",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "17612322406515"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "17612322439283"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832415518882"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832415551650"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Espresso Grind",
+    "variant_id": "45518382235810"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Espresso Grind",
+    "variant_id": "45518382268578"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "5ae90c565c690a11",
+  "first_seen": "2026-10-26",
+  "handle": "rage-against-the-bean",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/12.png?v=1697549398",
+  "platform": "shopify",
+  "product_id": "1785232294003",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends",
+   "Light Roast"
+  ],
+  "title": "Rage Against the Bean",
+  "url": "https://juliancoffee.com/products/rage-against-the-bean",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "17612367855731"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "17612367888499"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832416370850"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832416403618"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "a03791f47c821800",
+  "first_seen": "2026-10-26",
+  "handle": "56th-st-thunder",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/9.png?v=1697549072",
+  "platform": "shopify",
+  "product_id": "1785239863411",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends"
+  ],
+  "title": "56th St. Thunder",
+  "url": "https://juliancoffee.com/products/56th-st-thunder",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "17612400984179"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "17612401016947"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832414306466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832414339234"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "06301bd2f835cbfa",
+  "first_seen": "2026-10-26",
+  "handle": "signature-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/10.png?v=1697549447",
+  "platform": "shopify",
+  "product_id": "1785258770547",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Medium Roast"
+  ],
+  "title": "Signature Blend",
+  "url": "https://juliancoffee.com/products/signature-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "17612485689459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Ground / 12 oz.",
+    "variant_id": "17612485722227"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "43832417517730"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "Ground / 5 lb.",
+    "variant_id": "43832417550498"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "db439fed04a30f26",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-growler",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/coldbrew.png?v=1743864999",
+  "platform": "shopify",
+  "product_id": "4163559751795",
+  "product_type": "Cold Brew",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Coffee-Only Available In Store",
+  "url": "https://juliancoffee.com/products/cold-brew-growler",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Le Crema Espresso Blend",
+    "variant_id": "30263099064435"
+   },
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 20.0,
+    "title": "Single-Origin (Rotating)",
+    "variant_id": "30263105814643"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "bb1c14a32ccd5ad2",
+  "first_seen": "2026-10-26",
+  "handle": "white-elephant-seasonal-blend",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/11.png?v=1697549471",
+  "platform": "shopify",
+  "product_id": "4349357817956",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends",
+   "Light Roast",
+   "Medium Roast"
+  ],
+  "title": "White Elephant (Seasonal Blend)",
+  "url": "https://juliancoffee.com/products/white-elephant-seasonal-blend",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12 oz.",
+    "variant_id": "31248707879012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground / 12 oz.",
+    "variant_id": "31248707911780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Whole Bean / 5 lb.",
+    "variant_id": "43832420761762"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Ground / 5 lb.",
+    "variant_id": "43832420794530"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "ed15a7e05fbaa16a",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-sidamo-natural-1",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/37.png?v=1697560937",
+  "platform": "shopify",
+  "product_id": "4458912546916",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Light Roast",
+   "Single Origin"
+  ],
+  "title": "Ethiopian Sidamo - Natural",
+  "url": "https://juliancoffee.com/products/ethiopian-sidamo-natural-1",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "31580356051044"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "31580356083812"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43883502469282"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43883502502050"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "bd9733d1e35b789e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-flavored-coffees",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/21.png?v=1697549136",
+  "platform": "shopify",
+  "product_id": "4727978229860",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends"
+  ],
+  "title": "Flavored Decaf",
+  "url": "https://juliancoffee.com/products/decaf-flavored-coffees",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Jamaica Me Crazy (Kahlua Caramel & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43603881984162"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Jamaica Me Crazy (Kahlua Caramel & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43603882016930"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Highlander Grogg a.k.a Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43603882049698"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Highlander Grogg a.k.a Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43603882082466"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Sticky Bun (Caramel Pecan & Cinnamon) / Whole Bean / 12 oz.",
+    "variant_id": "43603882115234"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Sticky Bun (Caramel Pecan & Cinnamon) / Ground / 12 oz.",
+    "variant_id": "43603882148002"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Spice / Whole Bean / 12 oz.",
+    "variant_id": "43603882246306"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Spice / Ground / 12 oz.",
+    "variant_id": "43603882279074"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hazelnut / Whole Bean / 12 oz.",
+    "variant_id": "43603882311842"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hazelnut / Ground / 12 oz.",
+    "variant_id": "43603882344610"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Chocolate Raspberry / Whole Bean / 12 oz.",
+    "variant_id": "43603882377378"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Chocolate Raspberry / Ground / 12 oz.",
+    "variant_id": "43603882410146"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Peppermint / Whole Bean / 12 oz.",
+    "variant_id": "43603882442914"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Peppermint / Ground / 12 oz.",
+    "variant_id": "43603882475682"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Cinnamon Cream (Vanilla & Cinnamon) / Whole Bean / 12 oz.",
+    "variant_id": "43603882508450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Cinnamon Cream (Vanilla & Cinnamon) / Ground / 12 oz.",
+    "variant_id": "43603882541218"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hawaiin Nut (Macadamia Nut & Coconut) / Whole Bean / 12 oz.",
+    "variant_id": "43603882573986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hawaiin Nut (Macadamia Nut & Coconut) / Ground / 12 oz.",
+    "variant_id": "43603882606754"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Coconut Cream (Coconut & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43603882639522"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Coconut Cream (Coconut & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43603882672290"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Nuts About Chocolate (Choc Pecan Hazelnut & Macadamia Nut) / Whole Bean / 12 oz.",
+    "variant_id": "43603882705058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Nuts About Chocolate (Choc Pecan Hazelnut & Macadamia Nut) / Ground / 12 oz.",
+    "variant_id": "43603882737826"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / Whole Bean / 12 oz.",
+    "variant_id": "43603882770594"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / Ground / 12 oz.",
+    "variant_id": "43603882803362"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Milky Way (Chocolate Caramel) / Whole Bean / 12 oz.",
+    "variant_id": "43603882836130"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Milky Way (Chocolate Caramel) / Ground / 12 oz.",
+    "variant_id": "43603882868898"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Irish Cream / Whole Bean / 12 oz.",
+    "variant_id": "43603882901666"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Irish Cream / Ground / 12 oz.",
+    "variant_id": "43603882934434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Nutty Irishman / Whole Bean / 12 oz.",
+    "variant_id": "43603882967202"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Nutty Irishman / Ground / 12 oz.",
+    "variant_id": "43603882999970"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Southern Pecan 12 oz / Whole Bean / 12 oz.",
+    "variant_id": "43603883032738"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Southern Pecan 12 oz / Ground / 12 oz.",
+    "variant_id": "43603883065506"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Almond Joy (Chocolate Amaretto & Coconut) / Whole Bean / 12 oz.",
+    "variant_id": "43832392908962"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Almond Joy (Chocolate Amaretto & Coconut) / Whole Bean / 5 lb.",
+    "variant_id": "43832392941730"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Almond Joy (Chocolate Amaretto & Coconut) / Ground / 12 oz.",
+    "variant_id": "43832392974498"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Almond Joy (Chocolate Amaretto & Coconut) / Ground / 5 lb.",
+    "variant_id": "43832393007266"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Blueberry Crumble (Blueberry Cinnamon & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43832393040034"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Blueberry Crumble (Blueberry Cinnamon & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832393072802"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Blueberry Crumble (Blueberry Cinnamon & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43832393105570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Blueberry Crumble (Blueberry Cinnamon & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832393138338"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Chocolate Raspberry / Whole Bean / 5 lb.",
+    "variant_id": "43832393302178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Chocolate Raspberry / Ground / 5 lb.",
+    "variant_id": "43832393334946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Coconut Cream (Coconut & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832393367714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Coconut Cream (Coconut & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832393400482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Cinnamon Cream (Vanilla & Cinnamon) / Whole Bean / 5 lb.",
+    "variant_id": "43832393433250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Cinnamon Cream (Vanilla & Cinnamon) / Ground / 5 lb.",
+    "variant_id": "43832393466018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hazelnut / Whole Bean / 5 lb.",
+    "variant_id": "43832393498786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hazelnut / Ground / 5 lb.",
+    "variant_id": "43832393531554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hawaiin Nut (Macadamia Nut & Coconut) / Whole Bean / 5 lb.",
+    "variant_id": "43832393564322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hawaiin Nut (Macadamia Nut & Coconut) / Ground / 5 lb.",
+    "variant_id": "43832393597090"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Highlander Grogg a.k.a Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832393629858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Highlander Grogg a.k.a Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832393662626"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / Whole Bean / 5 lb.",
+    "variant_id": "43832393695394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Hot Toddy (Butter Rum Caramel Pecan Cinnamon) / Ground / 5 lb.",
+    "variant_id": "43832393728162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Irish Cream / Whole Bean / 5 lb.",
+    "variant_id": "43832393760930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Irish Cream / Ground / 5 lb.",
+    "variant_id": "43832393793698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Jamaica Me Crazy (Kahlua Caramel & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832393826466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Jamaica Me Crazy (Kahlua Caramel & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832393859234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Nuts About Chocolate (Choc Pecan Hazelnut & Macadamia Nut) / Whole Bean / 5 lb.",
+    "variant_id": "43832393957538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Nuts About Chocolate (Choc Pecan Hazelnut & Macadamia Nut) / Ground / 5 lb.",
+    "variant_id": "43832393990306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Milky Way (Chocolate Caramel) / Whole Bean / 5 lb.",
+    "variant_id": "43832394023074"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Milky Way (Chocolate Caramel) / Ground / 5 lb.",
+    "variant_id": "43832394055842"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Nutty Irishman / Whole Bean / 5 lb.",
+    "variant_id": "43832394088610"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Nutty Irishman / Ground / 5 lb.",
+    "variant_id": "43832394121378"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Peppermint / Whole Bean / 5 lb.",
+    "variant_id": "43832394154146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Peppermint / Ground / 5 lb.",
+    "variant_id": "43832394186914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Spice / Whole Bean / 5 lb.",
+    "variant_id": "43832394219682"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Spice / Ground / 5 lb.",
+    "variant_id": "43832394252450"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Roll (Pumpkin Spice & Caramel) / Whole Bean / 12 oz.",
+    "variant_id": "43832394285218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Roll (Pumpkin Spice & Caramel) / Whole Bean / 5 lb.",
+    "variant_id": "43832394317986"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Roll (Pumpkin Spice & Caramel) / Ground / 12 oz.",
+    "variant_id": "43832394350754"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Roll (Pumpkin Spice & Caramel) / Ground / 5 lb.",
+    "variant_id": "43832394383522"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Southern Pecan 12 oz / Whole Bean / 5 lb.",
+    "variant_id": "43832394580130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Southern Pecan 12 oz / Ground / 5 lb.",
+    "variant_id": "43832394612898"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Sticky Bun (Caramel Pecan & Cinnamon) / Whole Bean / 5 lb.",
+    "variant_id": "43832394645666"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Sticky Bun (Caramel Pecan & Cinnamon) / Ground / 5 lb.",
+    "variant_id": "43832394678434"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 180090.0,
+    "title": "Decaf Caramel Roll (Caramel Macadamia Nut Pecan / Whole Bean / 12 oz.",
+    "variant_id": "46597907120290"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180090.0,
+    "title": "Decaf Caramel Roll (Caramel Macadamia Nut Pecan / Whole Bean / 5 lb.",
+    "variant_id": "46597907153058"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 180090.0,
+    "title": "Decaf Caramel Roll (Caramel Macadamia Nut Pecan / Ground / 12 oz.",
+    "variant_id": "46597907185826"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 180090.0,
+    "title": "Decaf Caramel Roll (Caramel Macadamia Nut Pecan / Ground / 5 lb.",
+    "variant_id": "46597907218594"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "a1b60dce3b5551bd",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-holiday-coffee-flavors",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/20.png?v=1697549170",
+  "platform": "shopify",
+  "product_id": "4727985209444",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends"
+  ],
+  "title": "Decaf Holiday Flavors",
+  "url": "https://juliancoffee.com/products/decaf-holiday-coffee-flavors",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Christmas Cream (French Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "32192252379236"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Christmas Cream (French Vanilla) / Ground / 12 oz.",
+    "variant_id": "32192252412004"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Cherry Cordial (Cherry, Amaretto, Chocolate & Vanilla Cream) / Whole Bean / 12 oz.",
+    "variant_id": "32192252444772"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Frosty's Favorite (Vanilla, Cinnamon, Hazelnut) / Whole Bean / 12 oz.",
+    "variant_id": "32192252477540"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Frosty's Favorite (Vanilla, Cinnamon, Hazelnut) / Ground / 12 oz.",
+    "variant_id": "32192252510308"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Sweetheart Blend (Chocolate, Raspberry, Blueberry & Cherry) / Whole Bean / 12 oz.",
+    "variant_id": "32192252543076"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Sweetheart Blend (Chocolate, Raspberry, Blueberry & Cherry) / Ground / 12 oz.",
+    "variant_id": "32192252575844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Holiday Cookie (Almond &  Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "32192252608612"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Holiday Cookie (Almond &  Vanilla) / Ground / 12 oz.",
+    "variant_id": "32192252641380"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Jingle Bell Java (Butter Rum, Caramel, Pecan & Cinnamon) / Whole Bean / 12 oz.",
+    "variant_id": "32192252674148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Love Potion (Chocolate, Cinnamon & Hazelnut) / Whole Bean / 12 oz.",
+    "variant_id": "32192252739684"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Love Potion (Chocolate, Cinnamon & Hazelnut) / Ground / 12 oz.",
+    "variant_id": "32192252772452"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Mistletoe Kiss (Chocolate, Caramel Kisses) / Whole Bean / 12 oz.",
+    "variant_id": "32192252805220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Mistletoe Kiss (Chocolate, Caramel Kisses) / Ground / 12 oz.",
+    "variant_id": "32192252837988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Spice / Whole Bean / 12 oz.",
+    "variant_id": "32192252936292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Pumpkin Spice / Ground / 12 oz.",
+    "variant_id": "32192252969060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf White Christmas (Coconut, Caramel & Nuts) / Whole Bean / 12 oz.",
+    "variant_id": "32192253067364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf White Christmas (Coconut, Caramel & Nuts) / Ground / 12 oz.",
+    "variant_id": "32192253100132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Decaf Naughty Santa (Tropical Liqueur & Irish Cream) / Whole Bean / 12 oz.",
+    "variant_id": "32192253165668"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "Decaf Naughty Santa (Tropical Liqueur & Irish Cream) / Ground / 12 oz.",
+    "variant_id": "32192253198436"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Jingle Bell Java (Butter Rum, Caramel, Pecan & Cinnamon) / Ground / 12 oz.",
+    "variant_id": "32192529334372"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Cherry Cordial (Cherry, Amaretto, Chocolate & Vanilla Cream) / Ground / 12 oz.",
+    "variant_id": "32192529956964"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Candy Cane (Peppermint) / Whole Bean / 12 oz.",
+    "variant_id": "43832335761570"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Candy Cane (Peppermint) / Whole Bean / 5 lb.",
+    "variant_id": "43832335794338"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Candy Cane (Peppermint) / Ground / 12 oz.",
+    "variant_id": "43832335827106"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Candy Cane (Peppermint) / Ground / 5 lb.",
+    "variant_id": "43832335859874"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Christmas Cream (French Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832335958178"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Christmas Cream (French Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832335990946"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Cherry Cordial (Cherry, Amaretto, Chocolate & Vanilla Cream) / Whole Bean / 5 lb.",
+    "variant_id": "43832336023714"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Cherry Cordial (Cherry, Amaretto, Chocolate & Vanilla Cream) / Ground / 5 lb.",
+    "variant_id": "43832336056482"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Frosty's Favorite (Vanilla, Cinnamon, Hazelnut) / Whole Bean / 5 lb.",
+    "variant_id": "43832336089250"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Frosty's Favorite (Vanilla, Cinnamon, Hazelnut) / Ground / 5 lb.",
+    "variant_id": "43832336122018"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Sweetheart Blend (Chocolate, Raspberry, Blueberry & Cherry) / Whole Bean / 5 lb.",
+    "variant_id": "43832336154786"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Sweetheart Blend (Chocolate, Raspberry, Blueberry & Cherry) / Ground / 5 lb.",
+    "variant_id": "43832336187554"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Holiday Cookie (Almond &  Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832336220322"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Holiday Cookie (Almond &  Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832336253090"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 12 oz.",
+    "variant_id": "43832336285858"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Whole Bean / 5 lb.",
+    "variant_id": "43832336318626"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Decaf Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 12 oz.",
+    "variant_id": "43832336351394"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Holiday Grogg (Butterscotch Butter Rum & Vanilla) / Ground / 5 lb.",
+    "variant_id": "43832336384162"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Jingle Bell Java (Butter Rum, Caramel, Pecan & Cinnamon) / Whole Bean / 5 lb.",
+    "variant_id": "43832336416930"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Jingle Bell Java (Butter Rum, Caramel, Pecan & Cinnamon) / Ground / 5 lb.",
+    "variant_id": "43832336449698"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Love Potion (Chocolate, Cinnamon & Hazelnut) / Whole Bean / 5 lb.",
+    "variant_id": "43832336482466"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Love Potion (Chocolate, Cinnamon & Hazelnut) / Ground / 5 lb.",
+    "variant_id": "43832336515234"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Mistletoe Kiss (Chocolate, Caramel Kisses) / Whole Bean / 5 lb.",
+    "variant_id": "43832336548002"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Mistletoe Kiss (Chocolate, Caramel Kisses) / Ground / 5 lb.",
+    "variant_id": "43832336580770"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Naughty Santa (Tropical Liqueur & Irish Cream) / Whole Bean / 5 lb.",
+    "variant_id": "43832336613538"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Naughty Santa (Tropical Liqueur & Irish Cream) / Ground / 5 lb.",
+    "variant_id": "43832336646306"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Spice / Whole Bean / 5 lb.",
+    "variant_id": "43832336810146"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf Pumpkin Spice / Ground / 5 lb.",
+    "variant_id": "43832336842914"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf White Christmas (Coconut, Caramel & Nuts) / Whole Bean / 5 lb.",
+    "variant_id": "43832336941218"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 90.0,
+    "title": "Decaf White Christmas (Coconut, Caramel & Nuts) / Ground / 5 lb.",
+    "variant_id": "43832336973986"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "cc65c35f09dd004d",
+  "first_seen": "2026-10-26",
+  "handle": "jamaica-z-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/products/ScreenShot2021-03-17at12.42.23PM.png?v=1621435099",
+  "platform": "shopify",
+  "product_id": "6608047440034",
+  "product_type": "Zombie Joe Coffee",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends"
+  ],
+  "title": "Jamaica \"Z\" Crazy Premium Coffee",
+  "url": "https://juliancoffee.com/products/jamaica-z-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole",
+    "variant_id": "39447902912674"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "39447902945442"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "06a107530b538f6f",
+  "first_seen": "2026-10-26",
+  "handle": "z-bold-premium-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/products/ScreenShot2021-03-17at12.43.00PM.png?v=1621359322",
+  "platform": "shopify",
+  "product_id": "6608122773666",
+  "product_type": "Zombie Joe Coffee",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends"
+  ],
+  "title": "Z-Bold Premium Coffee",
+  "url": "https://juliancoffee.com/products/z-bold-premium-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole",
+    "variant_id": "39447931453602"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "39447931486370"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "da7427563e817ac0",
+  "first_seen": "2026-10-26",
+  "handle": "z-nutz-premium-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/products/ScreenShot2021-03-17at12.43.21PM.png?v=1621359289",
+  "platform": "shopify",
+  "product_id": "6608160489634",
+  "product_type": "Zombie Joe Coffee",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends"
+  ],
+  "title": "Z-Nutz Premium Coffee",
+  "url": "https://juliancoffee.com/products/z-nutz-premium-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Whole",
+    "variant_id": "39448084611234"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "39448084644002"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "4e2872b66378da15",
+  "first_seen": "2026-10-26",
+  "handle": "hotel-tango-bourbon-barrel-aged-coffee",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/old55wheated.png?v=1697551903",
+  "platform": "shopify",
+  "product_id": "6967054205090",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Old 55 Wheated Bourbon Aged",
+  "url": "https://juliancoffee.com/products/hotel-tango-bourbon-barrel-aged-coffee",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Whole Bean",
+    "variant_id": "40504592171170"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 28.0,
+    "title": "Ground",
+    "variant_id": "40504592203938"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "524c3870d433c72e",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-californeo-natural",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/HondoBicicletaNat.png?v=1741712184",
+  "platform": "shopify",
+  "product_id": "7704357273762",
+  "product_type": "Micro-Lot Coffee",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Light Roast",
+   "Micro-Lot",
+   "Single Origin"
+  ],
+  "title": "Honduras Bicicleta -  Natural",
+  "url": "https://juliancoffee.com/products/honduras-californeo-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Whole Bean",
+    "variant_id": "42744827674786"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "Ground",
+    "variant_id": "42744827707554"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "a00b5a51ebceed16",
+  "first_seen": "2026-10-26",
+  "handle": "rwanda-abadatezuka-coop",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/rwandaKawaYacu.png?v=1782752855",
+  "platform": "shopify",
+  "product_id": "8455694844066",
+  "product_type": "Micro-Lot Coffee",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Light Roast",
+   "Micro-Lot",
+   "Single Origin"
+  ],
+  "title": "Rwanda Kawa Yacu",
+  "url": "https://juliancoffee.com/products/rwanda-abadatezuka-coop",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Drip Grind",
+    "variant_id": "44828421062818"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "44828421095586"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "bb197abb219e0889",
+  "first_seen": "2026-10-26",
+  "handle": "wheeler-blend-goes-directly-to-wheeler-mission",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/Photoroom_20250804_120125.jpg?v=1754323466",
+  "platform": "shopify",
+  "product_id": "8735543984290",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "JCR Blends"
+  ],
+  "title": "Wheeler Mission Blend 5 Ibs. (Goes Directly to Wheeler Mission)",
+  "url": "https://juliancoffee.com/products/wheeler-blend-goes-directly-to-wheeler-mission",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 40.0,
+    "title": "Default Title",
+    "variant_id": "45732686626978"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "048e61b39dbd736b",
+  "first_seen": "2026-10-26",
+  "handle": "pacific-rampage",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/8.png?v=1697549343",
+  "platform": "shopify",
+  "product_id": "878270775411",
+  "product_type": "JCR Coffee Blends",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Dark Roast",
+   "JCR Blends"
+  ],
+  "title": "Pacific Rampage",
+  "url": "https://juliancoffee.com/products/pacific-rampage",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Whole Bean",
+    "variant_id": "43832416207010"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 85.0,
+    "title": "5 lb. / Ground",
+    "variant_id": "43832416239778"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Whole Bean",
+    "variant_id": "9653392441459"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.0,
+    "title": "12 oz. / Ground",
+    "variant_id": "9653405483123"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "4e64fc8f92148f9c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-manheling",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/products/SumatraMandheling.jpg?v=1621359632",
+  "platform": "shopify",
+  "product_id": "878343848051",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Medium Roast",
+   "Single Origin"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://juliancoffee.com/products/sumatra-manheling",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean",
+    "variant_id": "9654009561203"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Ground",
+    "variant_id": "9654009593971"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "658cc017cf450417",
+  "first_seen": "2026-10-26",
+  "handle": "bali-kintamani",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/Bali_Kintamani.png?v=1767629708",
+  "platform": "shopify",
+  "product_id": "8884275642530",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Medium Roast",
+   "Micro-Lot",
+   "Single Origin"
+  ],
+  "title": "Bali Kintamani",
+  "url": "https://juliancoffee.com/products/bali-kintamani",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Whole Bean / 12oz",
+    "variant_id": "46446017675426"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "Drip Grind / 12oz",
+    "variant_id": "46446017708194"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Whole Bean / 5lb",
+    "variant_id": "46446019412130"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "Drip Grind / 5lb",
+    "variant_id": "46446019444898"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "fd597a5fecba0a97",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-hueheutenango",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/Guatemala_Huehuetenango.png?v=1774882715",
+  "platform": "shopify",
+  "product_id": "8941244219554",
+  "product_type": "Single Origin",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Light Roast",
+   "Micro-Lot",
+   "Single Origin"
+  ],
+  "title": "Guatemala Huehuetenango",
+  "url": "https://juliancoffee.com/products/guatemala-hueheutenango",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Whole Bean",
+    "variant_id": "46678194520226"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 18.0,
+    "title": "12oz. / Drip Grind",
+    "variant_id": "46678194552994"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Whole Bean",
+    "variant_id": "46678224011426"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 95.0,
+    "title": "5lb. / Drip Grind",
+    "variant_id": "46678224044194"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ },
+ {
+  "body_hash": "e65945e7cd0341c3",
+  "first_seen": "2026-10-26",
+  "handle": "cold-brew-packs",
+  "image": "https://cdn.shopify.com/s/files/1/0016/7441/2147/files/JCR_Cold_Brew_Plain_4x6_2e13ffa9-804c-4844-9076-34e50e10c460.png?v=1780336880",
+  "platform": "shopify",
+  "product_id": "9242190807202",
+  "product_type": "",
+  "roaster_slug": "juliancoffee",
+  "tags": [
+   "Cold Brew"
+  ],
+  "title": "Cold Brew Packs",
+  "url": "https://juliancoffee.com/products/cold-brew-packs",
+  "variants": [
+   {
+    "available": true,
+    "grams": 369,
+    "price_usd": 22.0,
+    "title": "Default Title",
+    "variant_id": "47302950748322"
+   }
+  ],
+  "vendor": "Julian Coffee Roasters"
+ }
+]

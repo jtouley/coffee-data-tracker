@@ -1,0 +1,646 @@
+[
+ {
+  "body_hash": "f2c0bcfcb6cbbc98",
+  "first_seen": "2026-10-26",
+  "handle": "breakfast-blend",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2017/09/breakfast-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "2071",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Breakfast Blend",
+   "Medium Roast"
+  ],
+  "title": "Breakfast Blend",
+  "url": "https://firehouseroastery.com/product/breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "2071:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "2071:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "2071:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2e95d323ec93f15f",
+  "first_seen": "2026-10-26",
+  "handle": "island-blend",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/island-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "3101",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Island Blend",
+   "Medium Roast"
+  ],
+  "title": "Island Blend",
+  "url": "https://firehouseroastery.com/product/island-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3101:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3101:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3101:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4a8029712f550efd",
+  "first_seen": "2026-10-26",
+  "handle": "mountain-morning",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/mountain-morning.jpg",
+  "platform": "woocommerce",
+  "product_id": "3105",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Medium Roast",
+   "Mountain Morning"
+  ],
+  "title": "Mountain Morning",
+  "url": "https://firehouseroastery.com/product/mountain-morning/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3105:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3105:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3105:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "dd0adf84f6a6859d",
+  "first_seen": "2026-10-26",
+  "handle": "artisan-dark-roast",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/artisan-dark-roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "3109",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Artisan Dark Roast",
+   "Dark Roast"
+  ],
+  "title": "Artisan Dark Roast",
+  "url": "https://firehouseroastery.com/product/artisan-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3109:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3109:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3109:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c696c2c09603977b",
+  "first_seen": "2026-10-26",
+  "handle": "summit-dark-roast",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/summit-dark-roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "3113",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Dark Roast",
+   "Summit Dark Roast"
+  ],
+  "title": "Summit Dark Roast",
+  "url": "https://firehouseroastery.com/product/summit-dark-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3113:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3113:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3113:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "199f5e2ce9f239e5",
+  "first_seen": "2026-10-26",
+  "handle": "french-roast",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/french-roast.jpg",
+  "platform": "woocommerce",
+  "product_id": "3117",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Dark Roast",
+   "French Roast"
+  ],
+  "title": "French Roast",
+  "url": "https://firehouseroastery.com/product/french-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3117:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3117:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3117:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0eaf9d3dab9924e1",
+  "first_seen": "2026-10-26",
+  "handle": "espresso-blend",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/espresso-blend.jpg",
+  "platform": "woocommerce",
+  "product_id": "3121",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Espresso",
+   "Espresso Blend"
+  ],
+  "title": "Espresso Blend",
+  "url": "https://firehouseroastery.com/product/espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3121:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3121:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3121:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "4cfbab3ab627868e",
+  "first_seen": "2026-10-26",
+  "handle": "colombian",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/colombian.jpg",
+  "platform": "woocommerce",
+  "product_id": "3137",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Colombian",
+   "Single Origin"
+  ],
+  "title": "Colombian",
+  "url": "https://firehouseroastery.com/product/colombian/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3137:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3137:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3137:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f4f3404bf479722",
+  "first_seen": "2026-10-26",
+  "handle": "peru-la-florida",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/peru-la-florida.jpg",
+  "platform": "woocommerce",
+  "product_id": "3141",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Dark Roast",
+   "Medium Roast",
+   "Peru La Florida",
+   "Single Origin"
+  ],
+  "title": "Peru La Florida",
+  "url": "https://firehouseroastery.com/product/peru-la-florida/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3141:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3141:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3141:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "53816ce5b66b2d42",
+  "first_seen": "2026-10-26",
+  "handle": "nicaragua-reyna-del-cafe",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/nicaragua-reyna-del-cafe.jpg",
+  "platform": "woocommerce",
+  "product_id": "3870",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Nicaragua",
+   "Single Origin"
+  ],
+  "title": "Nicaragua Reyna del Cafe",
+  "url": "https://firehouseroastery.com/product/nicaragua-reyna-del-cafe/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3870:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3870:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3870:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "8d913bea0c020842",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-organic-shg-ep",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/mexico-mocabe-shg-ep.jpg",
+  "platform": "woocommerce",
+  "product_id": "3874",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "Mexico Organic SHG EP",
+  "url": "https://firehouseroastery.com/product/mexico-organic-shg-ep/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3874:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3874:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3874:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2b41098201134327",
+  "first_seen": "2026-10-26",
+  "handle": "mexico-decaf-swp",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/mexico-decaf-swp.jpg",
+  "platform": "woocommerce",
+  "product_id": "3881",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Decaf",
+   "Mexico",
+   "Single Origin"
+  ],
+  "title": "Mexico Decaf SWP",
+  "url": "https://firehouseroastery.com/product/mexico-decaf-swp/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 23.0,
+    "title": "1 lb",
+    "variant_id": "3881:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 23.0,
+    "title": "2 lb",
+    "variant_id": "3881:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 23.0,
+    "title": "5 lb",
+    "variant_id": "3881:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1ddcc30e164a7c1b",
+  "first_seen": "2026-10-26",
+  "handle": "honduras-capucas",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/honduras-capucas.jpg",
+  "platform": "woocommerce",
+  "product_id": "3885",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Honduras",
+   "Single Origin"
+  ],
+  "title": "Honduras Capucas",
+  "url": "https://firehouseroastery.com/product/honduras-capucas/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3885:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3885:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3885:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d0cf4c64eaa440e9",
+  "first_seen": "2026-10-26",
+  "handle": "indonesia-sumatra-mandheling",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/indonesia-sumatra-mandheling.jpg",
+  "platform": "woocommerce",
+  "product_id": "3889",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Indonesia",
+   "Single Origin",
+   "Sumatra"
+  ],
+  "title": "Indonesia Sumatra Mandheling",
+  "url": "https://firehouseroastery.com/product/indonesia-sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3889:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3889:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3889:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "acbf1d2dc6535fdd",
+  "first_seen": "2026-10-26",
+  "handle": "papua-new-guinea-purosa",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/papua-new-guinea-purosa.jpg",
+  "platform": "woocommerce",
+  "product_id": "3893",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Papua New Guinea",
+   "Single Origin"
+  ],
+  "title": "Papua New Guinea Purosa",
+  "url": "https://firehouseroastery.com/product/papua-new-guinea-purosa/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3893:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3893:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3893:2"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "bf77057ea87960b9",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala-la-voz-atitlan",
+  "image": "https://firehouseroastery.com/wp-content/uploads/2020/07/guatemala-la-voz-atitlan.jpg",
+  "platform": "woocommerce",
+  "product_id": "3898",
+  "product_type": "variable",
+  "roaster_slug": "firehouseroastery",
+  "tags": [
+   "Guatemala",
+   "Single Origin"
+  ],
+  "title": "Guatemala La Voz Atitlan",
+  "url": "https://firehouseroastery.com/product/guatemala-la-voz-atitlan/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 21.0,
+    "title": "1 lb",
+    "variant_id": "3898:0"
+   },
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 21.0,
+    "title": "2 lb",
+    "variant_id": "3898:1"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 21.0,
+    "title": "5 lb",
+    "variant_id": "3898:2"
+   }
+  ],
+  "vendor": ""
+ }
+]

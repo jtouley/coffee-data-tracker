@@ -1,0 +1,503 @@
+[
+ {
+  "body_hash": "036304be1e23fd20",
+  "first_seen": "2026-10-26",
+  "handle": "red-planet-refresher",
+  "image": "https://natescoffee.com/wp-content/uploads/2020/07/Product-square-herbal1-copy.jpg",
+  "platform": "woocommerce",
+  "product_id": "13422",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Starship Tea Co."
+  ],
+  "title": "Red Planet Refresher",
+  "url": "https://natescoffee.com/product/red-planet-refresher/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 99,
+    "price_usd": 7.0,
+    "title": "3.5oz (100g)",
+    "variant_id": "13422:0"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 7.0,
+    "title": "1lb (454g)",
+    "variant_id": "13422:1"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7ee71e82f219ace5",
+  "first_seen": "2026-10-26",
+  "handle": "sample-pack",
+  "image": "https://natescoffee.com/wp-content/uploads/2020/12/Sample-Pack-Logo.jpg",
+  "platform": "woocommerce",
+  "product_id": "14955",
+  "product_type": "simple",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags."
+  ],
+  "title": "Nate’s Coffee Sample Packs (4)",
+  "url": "https://natescoffee.com/product/sample-pack/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Nate&#8217;s Coffee Sample Packs (4)",
+    "variant_id": "14955:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "891d675e145a64b0",
+  "first_seen": "2026-10-26",
+  "handle": "guatemala",
+  "image": "https://natescoffee.com/wp-content/uploads/2016/09/Organic-Guatemala-Square.jpg",
+  "platform": "woocommerce",
+  "product_id": "1676",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fair-Trade",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "Guatemala",
+   "Organic",
+   "light roast",
+   "medium roast",
+   "single-origin"
+  ],
+  "title": "Organic Guatemala Huehuetenago",
+  "url": "https://natescoffee.com/product/guatemala/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Organic Guatemala Huehuetenago",
+    "variant_id": "1676:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d207114e74efd5dd",
+  "first_seen": "2026-10-26",
+  "handle": "bali-blue-moon",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Bali-Blue-Moon-Square.jpg",
+  "platform": "woocommerce",
+  "product_id": "2277",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Asia",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "dark roast",
+   "medium roast",
+   "single-origin"
+  ],
+  "title": "Bali Blue Moon",
+  "url": "https://natescoffee.com/product/bali-blue-moon/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Bali Blue Moon",
+    "variant_id": "2277:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "2f51c1a9b307592e",
+  "first_seen": "2026-10-26",
+  "handle": "colombia",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Organic-Colombia-Square.jpg",
+  "platform": "woocommerce",
+  "product_id": "2285",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Colombia",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "medium roast"
+  ],
+  "title": "Colombia Tolima",
+  "url": "https://natescoffee.com/product/colombia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Colombia Tolima",
+    "variant_id": "2285:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "fd873036c075d4d2",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-sumatra",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Decaf-Sumatra-Square.png",
+  "platform": "woocommerce",
+  "product_id": "2293",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Decaf",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "dark roast",
+   "medium roast"
+  ],
+  "title": "Decaf Sumatra",
+  "url": "https://natescoffee.com/product/decaf-sumatra/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Decaf Sumatra",
+    "variant_id": "2293:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "37762e74eb5cd724",
+  "first_seen": "2026-10-26",
+  "handle": "yo-wake-up-breakfast-blend",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Yo-Wake-Up-Square.jpg",
+  "platform": "woocommerce",
+  "product_id": "2295",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "Guatemala",
+   "Latin American",
+   "Mexico",
+   "breakfast blend",
+   "light roast"
+  ],
+  "title": "Yo! Wake Up, a Breakfast Blend but Better",
+  "url": "https://natescoffee.com/product/yo-wake-up-breakfast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Yo! Wake Up, a Breakfast Blend but Better",
+    "variant_id": "2295:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "6f356559824d7a6e",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Sumatra-Circle.png",
+  "platform": "woocommerce",
+  "product_id": "2301",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "Sumatra",
+   "dark roast"
+  ],
+  "title": "Sumatra Mandheling",
+  "url": "https://natescoffee.com/product/sumatra-mandheling/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Sumatra Mandheling",
+    "variant_id": "2301:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "ea3156ccc9e10204",
+  "first_seen": "2026-10-26",
+  "handle": "blue-white-charity-blend",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Circles-and-Squares.png",
+  "platform": "woocommerce",
+  "product_id": "2303",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "blend",
+   "medium/dark roast"
+  ],
+  "title": "Blue & White Charity Blend",
+  "url": "https://natescoffee.com/product/blue-white-charity-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Blue &#038; White Charity Blend",
+    "variant_id": "2303:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "1f727011d8e6a102",
+  "first_seen": "2026-10-26",
+  "handle": "nates-espresso-blend",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/06/Espresso.jpg",
+  "platform": "woocommerce",
+  "product_id": "2307",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Espresso",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "dark roast",
+   "medium roast"
+  ],
+  "title": "Nate’s Espresso Blend",
+  "url": "https://natescoffee.com/product/nates-espresso-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Nate&#8217;s Espresso Blend",
+    "variant_id": "2307:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "5e7284aa8aa94f90",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://natescoffee.com/wp-content/uploads/2022/04/Mexico-Chiapas-Square-from-Nates-Coffee.jpg",
+  "platform": "woocommerce",
+  "product_id": "25886",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "Mexico",
+   "light roast",
+   "medium roast"
+  ],
+  "title": "Mexico Chiapas",
+  "url": "https://natescoffee.com/product/mexico/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Mexico Chiapas",
+    "variant_id": "25886:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b560618856fbe6e",
+  "first_seen": "2026-10-26",
+  "handle": "scary-roast",
+  "image": "https://natescoffee.com/wp-content/uploads/2017/10/newscarysquare.png",
+  "platform": "woocommerce",
+  "product_id": "2963",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags."
+  ],
+  "title": "Scary Roast",
+  "url": "https://natescoffee.com/product/scary-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "Scary Roast",
+    "variant_id": "2963:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "0a34c4fd6ec8dde3",
+  "first_seen": "2026-10-26",
+  "handle": "illuminate-rotating-light-roast",
+  "image": "https://natescoffee.com/wp-content/uploads/2023/01/Illuminate2.png",
+  "platform": "woocommerce",
+  "product_id": "47077",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "light roast"
+  ],
+  "title": "IllumiNate Seasonal Light Roast (Costa Rica)",
+  "url": "https://natescoffee.com/product/illuminate-rotating-light-roast/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "IllumiNate Seasonal Light Roast (Costa Rica)",
+    "variant_id": "47077:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "3b47772296f06a40",
+  "first_seen": "2026-10-26",
+  "handle": "culminate-light-roast-blend",
+  "image": "https://natescoffee.com/wp-content/uploads/2025/05/CulmiNate.png",
+  "platform": "woocommerce",
+  "product_id": "53484",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "light roast"
+  ],
+  "title": "CulmiNate Light Roast Blend",
+  "url": "https://natescoffee.com/product/culminate-light-roast-blend/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 17.0,
+    "title": "CulmiNate Light Roast Blend",
+    "variant_id": "53484:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "d406c43fb5a8d3cc",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-la-esmeralda",
+  "image": "https://natescoffee.com/wp-content/uploads/2026/02/decaf-la-esmeralda.jpg",
+  "platform": "woocommerce",
+  "product_id": "55809",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Decaf",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "light roast"
+  ],
+  "title": "Decaf La Esmeralda",
+  "url": "https://natescoffee.com/product/decaf-la-esmeralda/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Decaf La Esmeralda",
+    "variant_id": "55809:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "7321e16bb05c679a",
+  "first_seen": "2026-10-26",
+  "handle": "make-it-a-half-caff-blend-your-choice",
+  "image": "https://natescoffee.com/wp-content/uploads/2026/04/half-caff-1.png",
+  "platform": "woocommerce",
+  "product_id": "56386",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Decaf",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "bulk",
+   "dark roast",
+   "light roast"
+  ],
+  "title": "Make it a “Half-Caff” Blend (your choice)",
+  "url": "https://natescoffee.com/product/make-it-a-half-caff-blend-your-choice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Make it a &#8220;Half-Caff&#8221; Blend (your choice)",
+    "variant_id": "56386:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "722a783bff6c3879",
+  "first_seen": "2026-10-26",
+  "handle": "2lb-5lb-bulk-coffee-your-choice",
+  "image": "https://natescoffee.com/wp-content/uploads/2026/05/natesticker-bulk.jpg",
+  "platform": "woocommerce",
+  "product_id": "56559",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Decaf",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "bulk",
+   "dark roast",
+   "light roast"
+  ],
+  "title": "2lb-5lb Bulk Coffee (your choice)",
+  "url": "https://natescoffee.com/product/2lb-5lb-bulk-coffee-your-choice/",
+  "variants": [
+   {
+    "available": true,
+    "grams": 907,
+    "price_usd": 31.5,
+    "title": "2lb-5lb Bulk Coffee (your choice)",
+    "variant_id": "56559:0"
+   }
+  ],
+  "vendor": ""
+ },
+ {
+  "body_hash": "c68f2c4cb4bd381e",
+  "first_seen": "2026-10-26",
+  "handle": "decaf-ethiopia",
+  "image": "https://natescoffee.com/wp-content/uploads/2026/06/decaf-ethiopia.jpeg",
+  "platform": "woocommerce",
+  "product_id": "56963",
+  "product_type": "variable",
+  "roaster_slug": "natescoffee",
+  "tags": [
+   "Decaf",
+   "Fresh Roasted - Small Batch - Always One Pound Bags.",
+   "light roast"
+  ],
+  "title": "Decaf Ethiopia",
+  "url": "https://natescoffee.com/product/decaf-ethiopia/",
+  "variants": [
+   {
+    "available": true,
+    "grams": null,
+    "price_usd": 18.0,
+    "title": "Decaf Ethiopia",
+    "variant_id": "56963:0"
+   }
+  ],
+  "vendor": ""
+ }
+]

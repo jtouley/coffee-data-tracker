@@ -1,0 +1,2265 @@
+[
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/JMC.jpg?v=1769013120",
+  "platform": "shopify",
+  "product_id": "10075489337639",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Jamaican Me Crazy",
+  "url": "https://homesteadcoffee.com/products/jamaican-me-crazy",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956224594215"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956224626983"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnute",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Hazelnut.jpg?v=1769022974",
+  "platform": "shopify",
+  "product_id": "10075705049383",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Hazelnut",
+  "url": "https://homesteadcoffee.com/products/hazelnute",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956733612327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956733645095"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "french-vanilla",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/French-Vanilla.jpg?v=1769023120",
+  "platform": "shopify",
+  "product_id": "10075705737511",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "French Vanilla",
+  "url": "https://homesteadcoffee.com/products/french-vanilla",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956736889127"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956736921895"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "cinnamon-bun",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Cinnamon-Bun.jpg?v=1769023164",
+  "platform": "shopify",
+  "product_id": "10075706294567",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Cinnamon Bun",
+  "url": "https://homesteadcoffee.com/products/cinnamon-bun",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956738855207"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956738887975"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "highlander-grogg",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Highlander-Grogg_12e61b27-5133-4167-9162-ef285b6da2dd.jpg?v=1769023305",
+  "platform": "shopify",
+  "product_id": "10075707474215",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Highlander Grogg",
+  "url": "https://homesteadcoffee.com/products/highlander-grogg",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956740657447"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956740690215"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "salted-caramel",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Salted-Caramel.jpg?v=1769023352",
+  "platform": "shopify",
+  "product_id": "10075708064039",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Salted Caramel",
+  "url": "https://homesteadcoffee.com/products/salted-caramel",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956743115047"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956743147815"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "jamaican-me-crazy-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/JMC-DECAF.jpg?v=1769023511",
+  "platform": "shopify",
+  "product_id": "10075711832359",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Jamaican Me Crazy Decaf",
+  "url": "https://homesteadcoffee.com/products/jamaican-me-crazy-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956749701415"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956749734183"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "hazelnut-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Hazelnut-Decaf.jpg?v=1769023569",
+  "platform": "shopify",
+  "product_id": "10075715207463",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Hazelnut Decaf",
+  "url": "https://homesteadcoffee.com/products/hazelnut-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956755829031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956755861799"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "blueberry-crumble",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Blueberry-Crumble.jpg?v=1769023611",
+  "platform": "shopify",
+  "product_id": "10075715895591",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Blueberry Crumble",
+  "url": "https://homesteadcoffee.com/products/blueberry-crumble",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956757303591"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956757336359"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "21ed3f4e9f498b6c",
+  "first_seen": "2026-10-26",
+  "handle": "autumn-spice",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Autumn-Spice.jpg?v=1769023661",
+  "platform": "shopify",
+  "product_id": "10075716190503",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Autumn Spice",
+  "url": "https://homesteadcoffee.com/products/autumn-spice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz Ground",
+    "variant_id": "50956758384935"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb Ground",
+    "variant_id": "50956758417703"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "81aee1bcd648c067",
+  "first_seen": "2026-10-26",
+  "handle": "mexico",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Mexico_2026.png?v=1780940937",
+  "platform": "shopify",
+  "product_id": "10244308468007",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Mexico",
+  "url": "https://homesteadcoffee.com/products/mexico",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "51471016624423"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "51471016657191"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "51471016689959"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "51471016722727"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "51471016755495"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "51471016788263"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "51471016821031"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "51471016853799"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "51471016886567"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "51471016919335"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "74574e02c7398a69",
+  "first_seen": "2026-10-26",
+  "handle": "falling-leaf",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/FallingLeaf2026.png?v=1790955118",
+  "platform": "shopify",
+  "product_id": "10455403790631",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee"
+  ],
+  "title": "Falling Leaf",
+  "url": "https://homesteadcoffee.com/products/falling-leaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "52202470441255"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "52202470474023"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "52202470506791"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "52202470539559"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "52202470572327"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "52202470605095"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "52202470637863"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "52202470670631"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "52202470703399"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "52202470736167"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "4b53b3e31d9e7eb9",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Ethiopian_Decaf_Badge_2025.png?v=1755887990",
+  "platform": "shopify",
+  "product_id": "10921127316",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "decaffeinated",
+   "medium roast"
+  ],
+  "title": "Ethiopian Decaf",
+  "url": "https://homesteadcoffee.com/products/ethiopian-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42963743956"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "42963744020"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42963744084"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42963744148"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42963744468"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42963744660"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "42963744724"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "42963744788"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42963744852"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "42963744980"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "fa09fc2ce1773087",
+  "first_seen": "2026-10-26",
+  "handle": "arise",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Arise_Badge_SALE_2026.png?v=1790963628",
+  "platform": "shopify",
+  "product_id": "11424942612",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Arise",
+  "url": "https://homesteadcoffee.com/products/arise",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48359365844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48359365908"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48359365972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48359366036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48359366164"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48359366356"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48359366420"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48359366548"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48359366676"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48359366804"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "95fd4a13b257b4d2",
+  "first_seen": "2026-10-26",
+  "handle": "dead-mans-brew",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Dead_Man_s_Brew_Badge_2025_77eefda8-1b7d-4095-9015-47ba83e77d31.png?v=1755887774",
+  "platform": "shopify",
+  "product_id": "11425237012",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast"
+  ],
+  "title": "Dead Man's Brew",
+  "url": "https://homesteadcoffee.com/products/dead-mans-brew",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "47107734372647"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48361129940"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48361130068"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48361130132"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48361130260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48361130388"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48361130452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48361130516"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48361130580"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48361130708"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "9207384a4d494936",
+  "first_seen": "2026-10-26",
+  "handle": "lionheart",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Lionheart_Badge_2025.png?v=1755887303",
+  "platform": "shopify",
+  "product_id": "11425831572",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "fruit",
+   "light roast",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Lionheart",
+  "url": "https://homesteadcoffee.com/products/lionheart",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48363211156"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48363211220"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48363211284"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48363211348"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48363211476"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48363211604"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48363211668"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48363211732"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48363211796"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48363211924"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "d2e1425448480ff0",
+  "first_seen": "2026-10-26",
+  "handle": "african-harvest",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/African_Harvest_Badge_2025.png?v=1755887035",
+  "platform": "shopify",
+  "product_id": "11440844180",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "light roast",
+   "natural",
+   "organic"
+  ],
+  "title": "African Harvest",
+  "url": "https://homesteadcoffee.com/products/african-harvest",
+  "variants": [
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "41964534268089"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "41964534300857"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "41964534333625"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "41964534366393"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "41964534399161"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48479942228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48479942292"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48479942356"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48479942420"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48479942548"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "58c4d816ca864cfc",
+  "first_seen": "2026-10-26",
+  "handle": "colombian-tolima",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Colombian_Tolima_Badge_2025.png?v=1755886934",
+  "platform": "shopify",
+  "product_id": "11440999764",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Colombian Tolima",
+  "url": "https://homesteadcoffee.com/products/colombian-tolima",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48481390868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48481390996"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48481391060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48481391188"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48481391380"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48481391572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48481391636"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48481391764"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48481391892"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48481392084"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "4b7020a065bcb5f2",
+  "first_seen": "2026-10-26",
+  "handle": "black-eddys-darkness",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/UBE_Darkness_2025_badge.png?v=1755886798",
+  "platform": "shopify",
+  "product_id": "11441138644",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "dark roast",
+   "french roast"
+  ],
+  "title": "Black Eddy's Darkness",
+  "url": "https://homesteadcoffee.com/products/black-eddys-darkness",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48483101588"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48483101716"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48483101844"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48483101972"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48483102228"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48483102484"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48483102612"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48483102740"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48483102868"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48483103124"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "b22c8ed39e292d7c",
+  "first_seen": "2026-10-26",
+  "handle": "sumatra-mandheling-sipangan-bolon",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Sumatra_Badge_2025.png?v=1755886611",
+  "platform": "shopify",
+  "product_id": "11441189972",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "organic"
+  ],
+  "title": "Sumatra Takengon",
+  "url": "https://homesteadcoffee.com/products/sumatra-mandheling-sipangan-bolon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48484009300"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48484009364"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48484009748"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48484009812"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48484010004"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48484010196"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48484010260"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48484010324"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48484010452"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48484010644"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "d1e1d3cc49627180",
+  "first_seen": "2026-10-26",
+  "handle": "guatemalan-bourbon",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Guat_Bourbon_Badge_2025.png?v=1755886479",
+  "platform": "shopify",
+  "product_id": "11441838036",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Guatemalan Bourbon",
+  "url": "https://homesteadcoffee.com/products/guatemalan-bourbon",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48495884756"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48495884884"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48495885012"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48495885140"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48495885332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48495885588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48495885652"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48495885780"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48495885908"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48495886228"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "a3265527330eb279",
+  "first_seen": "2026-10-26",
+  "handle": "bourbon-barrel-aged",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Bourbon_Barrel_Aged_2025.png?v=1755886321",
+  "platform": "shopify",
+  "product_id": "11442016724",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "barrel aged",
+   "coffee",
+   "medium roast"
+  ],
+  "title": "Bourbon Barrel Aged",
+  "url": "https://homesteadcoffee.com/products/bourbon-barrel-aged",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48500198036"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48500198100"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48500198164"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48500198228"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "48500198356"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "2c63daa9e6778732",
+  "first_seen": "2026-10-26",
+  "handle": "honduran-natural",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Honduras_Natural_Badge_2025.png?v=1755885064",
+  "platform": "shopify",
+  "product_id": "11442049300",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "medium roast",
+   "natural"
+  ],
+  "title": "Honduran Natural",
+  "url": "https://homesteadcoffee.com/products/honduran-natural",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48501254740"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48501254868"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48501254932"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48501255060"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48501255252"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48501255444"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48501255572"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48501255700"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48501255828"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48501256084"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "52f4b61e1279541f",
+  "first_seen": "2026-10-26",
+  "handle": "steady-eddy-decaf",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Steady_Eddy_Badge_2025_3d8d65aa-4de3-48f2-9847-e4814e400d29.png?v=1755882764",
+  "platform": "shopify",
+  "product_id": "11442083604",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "chocolate",
+   "coffee",
+   "dark roast",
+   "decaffeinated"
+  ],
+  "title": "Steady Eddy Decaf",
+  "url": "https://homesteadcoffee.com/products/steady-eddy-decaf",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "48502843924"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "48502843988"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "48502844116"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48502844244"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "48502845012"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "48502845268"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "48502845332"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "48502845460"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "48502845588"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "48502845844"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "f601fd71ba077611",
+  "first_seen": "2026-10-26",
+  "handle": "roasters-choice",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/products/Roasters-Choice-Badge-Resized.jpg?v=1626447364",
+  "platform": "shopify",
+  "product_id": "1383791853655",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "light roast",
+   "medium roast"
+  ],
+  "title": "Roaster's Choice",
+  "url": "https://homesteadcoffee.com/products/roasters-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "12631374102615"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "12631374135383"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "12631374168151"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "12631374200919"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "12631374266455"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Whole Bean",
+    "variant_id": "41258446553273"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Coarse (French Press, Chemex)",
+    "variant_id": "41258452877497"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Drip Coffee",
+    "variant_id": "41258454188217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "41258454515897"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5 lb / Espresso",
+    "variant_id": "41258455924921"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "38c5dc4c59534cd3",
+  "first_seen": "2026-10-26",
+  "handle": "kenya-aa-plus",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Kenya_AA_Badge_2025_f8bdc16a-9249-482b-ab9e-0383ca9e41a5.png?v=1755884545",
+  "platform": "shopify",
+  "product_id": "1972091256919",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "light roast",
+   "natural"
+  ],
+  "title": "Kenya AA Plus",
+  "url": "https://homesteadcoffee.com/products/kenya-aa-plus",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "19669441544279"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "19669441577047"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "19669441609815"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "19669441642583"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "19669441708119"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "19669441773655"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "19669441806423"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "19669441839191"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "19669441871959"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "19669441937495"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "1869b2b24a68c690",
+  "first_seen": "2026-10-26",
+  "handle": "ethiopian-yirgacheffe",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Ethiopian_Yirg_Badge_2025_ecdec5f7-8a0a-4526-bb0e-26dfa074c3f8.png?v=1779287473",
+  "platform": "shopify",
+  "product_id": "352910868521",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "chocolate",
+   "city roast",
+   "coffee",
+   "ethiopian",
+   "fruity",
+   "medium roast",
+   "organic",
+   "yirgacheffe"
+  ],
+  "title": "Ethiopian Yirgacheffe",
+  "url": "https://homesteadcoffee.com/products/ethiopian-yirgacheffe",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Whole Bean",
+    "variant_id": "4395492212777"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "4395492245545"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "4395492278313"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "4395492311081"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 19.0,
+    "title": "12oz / Espresso",
+    "variant_id": "4395492409385"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "4395492507689"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "4395492540457"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "4395492573225"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "4395492605993"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 97.5,
+    "title": "5lb / Espresso",
+    "variant_id": "4395492671529"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "1549d41647cc6707",
+  "first_seen": "2026-10-26",
+  "handle": "dark-knight",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/products/Dark-Knight.jpg?v=1651521616",
+  "platform": "shopify",
+  "product_id": "7305814671545",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Dark Knight",
+  "url": "https://homesteadcoffee.com/products/dark-knight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42245519671481"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42245519737017"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42245519769785"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42245519802553"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press or Chemex)",
+    "variant_id": "42398664360121"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "8bce0817f1c11b21",
+  "first_seen": "2026-10-26",
+  "handle": "red-knight",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/products/Red-Knight.jpg?v=1651669748",
+  "platform": "shopify",
+  "product_id": "7307485282489",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Red Knight",
+  "url": "https://homesteadcoffee.com/products/red-knight",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42250624336057"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "42250624368825"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42250624401593"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42250624434361"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42250624467129"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "f3515f1a78987d1f",
+  "first_seen": "2026-10-26",
+  "handle": "knight-light",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/products/Knight-Light.jpg?v=1651670081",
+  "platform": "shopify",
+  "product_id": "7307494654137",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Knight Light Decaf",
+  "url": "https://homesteadcoffee.com/products/knight-light",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42250662019257"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "42250662052025"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42250662084793"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42250662117561"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42250662150329"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "74d9708d50f7b305",
+  "first_seen": "2026-10-26",
+  "handle": "ready-to-brew-pouches",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/products/Regular-Frac-Pack_9294.jpg?v=1663341523",
+  "platform": "shopify",
+  "product_id": "7488876413113",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "gift box",
+   "light roast",
+   "medium roast",
+   "organic"
+  ],
+  "title": "Ready-To-Brew Pouches",
+  "url": "https://homesteadcoffee.com/products/ready-to-brew-pouches",
+  "variants": [
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 130.0,
+    "title": "8 lb Case (approx. 50 pouches) / Arise",
+    "variant_id": "42820651319481"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 130.0,
+    "title": "8 lb Case (approx. 50 pouches) / Upper Black Eddy's Darkness",
+    "variant_id": "42820651352249"
+   },
+   {
+    "available": true,
+    "grams": 3629,
+    "price_usd": 130.0,
+    "title": "8 lb Case (approx. 50 pouches) / Ethiopian Decaf",
+    "variant_id": "42820651385017"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "1bad3464f8bdc9ec",
+  "first_seen": "2026-10-26",
+  "handle": "nightshade",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Nightshade_Badge_2025_fbe56467-c8e2-4f5f-8a31-4bd814e011f8.png?v=1755874488",
+  "platform": "shopify",
+  "product_id": "7506277728441",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [
+   "coffee",
+   "dark roast",
+   "organic"
+  ],
+  "title": "Nightshade",
+  "url": "https://homesteadcoffee.com/products/nightshade",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "42880211910841"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "42880211943609"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "42880211976377"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42880212009145"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "42880212041913"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Whole Bean",
+    "variant_id": "42880212074681"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Coarse (French Press, Chemex)",
+    "variant_id": "42880212107449"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Drip Coffee",
+    "variant_id": "42880212140217"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "42880212172985"
+   },
+   {
+    "available": true,
+    "grams": 2268,
+    "price_usd": 92.5,
+    "title": "5lb / Espresso",
+    "variant_id": "42880212205753"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "880080eabc385485",
+  "first_seen": "2026-10-26",
+  "handle": "homestead-coffee-zip-ups",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/Homestead-Coffee-Sweatshirt_1.jpg?v=1715796754",
+  "platform": "shopify",
+  "product_id": "9285853217063",
+  "product_type": "Merchandise",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Homestead Coffee Zip-Ups",
+  "url": "https://homesteadcoffee.com/products/homestead-coffee-zip-ups",
+  "variants": [
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Charcoal / S",
+    "variant_id": "48415317000487"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Charcoal / M",
+    "variant_id": "48415317033255"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Charcoal / L",
+    "variant_id": "48415317066023"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Charcoal / XL",
+    "variant_id": "48415317098791"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Charcoal / 2XL",
+    "variant_id": "48415317131559"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Grey / S",
+    "variant_id": "48415317164327"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Grey / M",
+    "variant_id": "48415317197095"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Grey / L",
+    "variant_id": "48415317229863"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Grey / XL",
+    "variant_id": "48415317262631"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Grey / 2XL",
+    "variant_id": "48415317295399"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Maroon / S",
+    "variant_id": "48415317328167"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Maroon / M",
+    "variant_id": "48415317360935"
+   },
+   {
+    "available": true,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Maroon / L",
+    "variant_id": "48415317393703"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Maroon / XL",
+    "variant_id": "48415317426471"
+   },
+   {
+    "available": false,
+    "grams": 454,
+    "price_usd": 49.5,
+    "title": "Maroon / 2XL",
+    "variant_id": "48415317459239"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ },
+ {
+  "body_hash": "4780f1d6df82236a",
+  "first_seen": "2026-10-26",
+  "handle": "sparks-choice",
+  "image": "https://cdn.shopify.com/s/files/1/2083/8265/files/SparksChoiceBadge.png?v=1744813306",
+  "platform": "shopify",
+  "product_id": "9803820204327",
+  "product_type": "Coffee",
+  "roaster_slug": "homesteadcoffee",
+  "tags": [],
+  "title": "Spark's Choice",
+  "url": "https://homesteadcoffee.com/products/sparks-choice",
+  "variants": [
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Whole Bean",
+    "variant_id": "49932469698855"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Coarse (French Press, Chemex)",
+    "variant_id": "49932469731623"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Drip Coffee",
+    "variant_id": "49932469764391"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Fine (K Cup Refill, Pour Over)",
+    "variant_id": "49932469797159"
+   },
+   {
+    "available": true,
+    "grams": 340,
+    "price_usd": 17.5,
+    "title": "12oz / Espresso",
+    "variant_id": "49932469829927"
+   }
+  ],
+  "vendor": "Homestead Coffee"
+ }
+]
